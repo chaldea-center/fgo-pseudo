@@ -18,13 +18,13 @@ void ScriptMessageGestureReciver__FingerGestures_OnGestureEvent(
   UnityEngine_Component_o *v11; // x0
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C58D64 & 1) == 0 )
+  if ( (byte_4CB82E4 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&SwipeGesture_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    sub_1C3E564(&StringLiteral_9970/*"OnSwipeBlockPanel"*/);
-    byte_4C58D64 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&SwipeGesture_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9966/*"OnSwipeBlockPanel"*/);
+    byte_4CB82E4 = 1;
   }
   if ( gesture )
   {
@@ -55,8 +55,8 @@ void ScriptMessageGestureReciver__FingerGestures_OnGestureEvent(
               j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
             v11 = (UnityEngine_Component_o *)this->fields.swipCallback;
             if ( !v11 )
-              sub_1C3E7C0(0, v10);
-            UnityEngine_Component__SendMessage(v11, (System_String_o *)StringLiteral_9970/*"OnSwipeBlockPanel"*/, (Il2CppObject *)gesture, 0);
+              sub_1C6BC60(0, v10);
+            UnityEngine_Component__SendMessage(v11, (System_String_o *)StringLiteral_9966/*"OnSwipeBlockPanel"*/, (Il2CppObject *)gesture, 0);
           }
         }
       }
@@ -69,14 +69,14 @@ void ScriptMessageGestureReciver__OnDestroy(ScriptMessageGestureReciver_o *this,
 {
   Gesture_EventHandler_o *v3; // x20
 
-  if ( (byte_4C58D63 & 1) == 0 )
+  if ( (byte_4CB82E3 & 1) == 0 )
   {
-    sub_1C3E564(&Gesture_EventHandler_TypeInfo);
-    sub_1C3E564(&FingerGestures_TypeInfo);
-    sub_1C3E564(&Method_ScriptMessageGestureReciver_FingerGestures_OnGestureEvent__);
-    byte_4C58D63 = 1;
+    sub_1C6BA08(&Gesture_EventHandler_TypeInfo);
+    sub_1C6BA08(&FingerGestures_TypeInfo);
+    sub_1C6BA08(&Method_ScriptMessageGestureReciver_FingerGestures_OnGestureEvent__);
+    byte_4CB82E3 = 1;
   }
-  v3 = (Gesture_EventHandler_o *)sub_1C3E7B0(Gesture_EventHandler_TypeInfo);
+  v3 = (Gesture_EventHandler_o *)sub_1C6BC54(Gesture_EventHandler_TypeInfo);
   Gesture_EventHandler___ctor(
     v3,
     (Il2CppObject *)this,
@@ -92,14 +92,14 @@ void ScriptMessageGestureReciver__Start(ScriptMessageGestureReciver_o *this, con
 {
   Gesture_EventHandler_o *v3; // x20
 
-  if ( (byte_4C58D62 & 1) == 0 )
+  if ( (byte_4CB82E2 & 1) == 0 )
   {
-    sub_1C3E564(&Gesture_EventHandler_TypeInfo);
-    sub_1C3E564(&FingerGestures_TypeInfo);
-    sub_1C3E564(&Method_ScriptMessageGestureReciver_FingerGestures_OnGestureEvent__);
-    byte_4C58D62 = 1;
+    sub_1C6BA08(&Gesture_EventHandler_TypeInfo);
+    sub_1C6BA08(&FingerGestures_TypeInfo);
+    sub_1C6BA08(&Method_ScriptMessageGestureReciver_FingerGestures_OnGestureEvent__);
+    byte_4CB82E2 = 1;
   }
-  v3 = (Gesture_EventHandler_o *)sub_1C3E7B0(Gesture_EventHandler_TypeInfo);
+  v3 = (Gesture_EventHandler_o *)sub_1C6BC54(Gesture_EventHandler_TypeInfo);
   Gesture_EventHandler___ctor(
     v3,
     (Il2CppObject *)this,

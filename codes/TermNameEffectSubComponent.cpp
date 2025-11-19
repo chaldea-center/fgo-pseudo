@@ -18,13 +18,13 @@ void TermNameEffectSubComponent__RecvParam(
   int32_t v11; // w21
   EventRaceEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C5847B & 1) == 0 )
+  if ( (byte_4CB79EB & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventRaceMaster___);
-    sub_1C3E564(&RaceResultEffectParam_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5847B = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventRaceMaster___);
+    sub_1C6BA08(&RaceResultEffectParam_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB79EB = 1;
   }
   entity = 0;
   if ( param )
@@ -43,12 +43,12 @@ void TermNameEffectSubComponent__RecvParam(
           {
             v10 = *((_DWORD *)monitor + 8);
             v11 = *((_DWORD *)monitor + 10);
-            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                           Instance,
-                                          (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventRaceMaster___);
+                                          (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventRaceMaster___);
             if ( !Instance )
               goto LABEL_18;
             Instance = (DataManager_o *)EventRaceMaster__TryGetEntity(
@@ -69,7 +69,7 @@ void TermNameEffectSubComponent__RecvParam(
                 }
               }
 LABEL_18:
-              sub_1C3E7C0(Instance, param);
+              sub_1C6BC60(Instance, param);
             }
           }
         }

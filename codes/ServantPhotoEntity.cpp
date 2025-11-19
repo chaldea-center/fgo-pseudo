@@ -19,47 +19,47 @@ void ServantPhotoEntity___cctor(const MethodInfo *method)
   int32_t v17; // w2
   const MethodInfo *v18; // x3
 
-  if ( (byte_4C57768 & 1) == 0 )
+  if ( (byte_4CB6CD2 & 1) == 0 )
   {
-    sub_1C3E564(&ServantPhotoEntity_TypeInfo);
-    sub_1C3E564(&StringLiteral_23093/*"restrictionSvtList"*/);
-    sub_1C3E564(&StringLiteral_19582/*"form"*/);
-    sub_1C3E564(&StringLiteral_18663/*"dispFormByFace"*/);
-    sub_1C3E564(&StringLiteral_19392/*"faceIdx"*/);
-    sub_1C3E564(&StringLiteral_23889/*"svtIdx"*/);
-    byte_4C57768 = 1;
+    sub_1C6BA08(&ServantPhotoEntity_TypeInfo);
+    sub_1C6BA08(&StringLiteral_23169/*"restrictionSvtList"*/);
+    sub_1C6BA08(&StringLiteral_19627/*"form"*/);
+    sub_1C6BA08(&StringLiteral_18678/*"dispFormByFace"*/);
+    sub_1C6BA08(&StringLiteral_19435/*"faceIdx"*/);
+    sub_1C6BA08(&StringLiteral_23963/*"svtIdx"*/);
+    byte_4CB6CD2 = 1;
   }
-  ServantPhotoEntity_TypeInfo->static_fields->DISP_FORM_BY_FACE_KEY = (struct System_String_o *)StringLiteral_18663/*"dispFormByFace"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)ServantPhotoEntity_TypeInfo->static_fields, StringLiteral_18663/*"dispFormByFace"*/, v1, v2);
-  v3 = StringLiteral_23889/*"svtIdx"*/;
+  ServantPhotoEntity_TypeInfo->static_fields->DISP_FORM_BY_FACE_KEY = (struct System_String_o *)StringLiteral_18678/*"dispFormByFace"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)ServantPhotoEntity_TypeInfo->static_fields, StringLiteral_18678/*"dispFormByFace"*/, v1, v2);
+  v3 = StringLiteral_23963/*"svtIdx"*/;
   static_fields = ServantPhotoEntity_TypeInfo->static_fields;
-  static_fields->DISP_FORM_BY_FACE_SVTINDEX_KEY = (struct System_String_o *)StringLiteral_23889/*"svtIdx"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->DISP_FORM_BY_FACE_SVTINDEX_KEY, v3, v5, v6);
-  v7 = StringLiteral_19392/*"faceIdx"*/;
+  static_fields->DISP_FORM_BY_FACE_SVTINDEX_KEY = (struct System_String_o *)StringLiteral_23963/*"svtIdx"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->DISP_FORM_BY_FACE_SVTINDEX_KEY, v3, v5, v6);
+  v7 = StringLiteral_19435/*"faceIdx"*/;
   v8 = ServantPhotoEntity_TypeInfo->static_fields;
-  v8->DISP_FORM_BY_FACE_FACEINDEX_KEY = (struct System_String_o *)StringLiteral_19392/*"faceIdx"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8->DISP_FORM_BY_FACE_FACEINDEX_KEY, v7, v9, v10);
-  v11 = (int)StringLiteral_19582/*"form"*/;
+  v8->DISP_FORM_BY_FACE_FACEINDEX_KEY = (struct System_String_o *)StringLiteral_19435/*"faceIdx"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->DISP_FORM_BY_FACE_FACEINDEX_KEY, v7, v9, v10);
+  v11 = (int)StringLiteral_19627/*"form"*/;
   v12 = ServantPhotoEntity_TypeInfo->static_fields;
-  v12->DISP_FORM_BY_FACE_FORM_KEY = (struct System_String_o *)StringLiteral_19582/*"form"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v12->DISP_FORM_BY_FACE_FORM_KEY, v11, v13, v14);
-  v15 = StringLiteral_23093/*"restrictionSvtList"*/;
+  v12->DISP_FORM_BY_FACE_FORM_KEY = (struct System_String_o *)StringLiteral_19627/*"form"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->DISP_FORM_BY_FACE_FORM_KEY, v11, v13, v14);
+  v15 = StringLiteral_23169/*"restrictionSvtList"*/;
   v16 = ServantPhotoEntity_TypeInfo->static_fields;
-  v16->RestrictionSvtList = (struct System_String_o *)StringLiteral_23093/*"restrictionSvtList"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v16->RestrictionSvtList, v15, v17, v18);
+  v16->RestrictionSvtList = (struct System_String_o *)StringLiteral_23169/*"restrictionSvtList"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v16->RestrictionSvtList, v15, v17, v18);
 }
 
 
 void ServantPhotoEntity___ctor(ServantPhotoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C57767 & 1) == 0 )
+  if ( (byte_4CB6CD1 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_long___ctor__);
-    byte_4C57767 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_long___ctor__);
+    byte_4CB6CD1 = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_33B0ABC *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_33F6C40 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -138,30 +138,30 @@ ServantPhotoEntity_FaceData_array *ServantPhotoEntity__GetFaceList(
   __int64 v66; // x0
   __int64 v68; // x0
 
-  if ( (byte_4C57764 & 1) == 0 )
+  if ( (byte_4CB6CCE & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Min_int_____);
-    sub_1C3E564(&Method_System_Linq_Enumerable_SelectMany_int____int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_string__int_____);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToList_int_____);
-    sub_1C3E564(&ServantPhotoEntity_FaceData___TypeInfo);
-    sub_1C3E564(&ServantPhotoEntity_FaceData_TypeInfo);
-    sub_1C3E564(&System_Func_string__int____TypeInfo);
-    sub_1C3E564(&System_Func_int____IEnumerable_int___TypeInfo);
-    sub_1C3E564(&System_Func_int____int__TypeInfo);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerable_ValueTuple_int__int__int___TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_ValueTuple_int__int__int___TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int____get_Count__);
-    sub_1C3E564(&Method_ServantPhotoEntity___c__GetFaceList_b__6_0__);
-    sub_1C3E564(&Method_ServantPhotoEntity___c__GetFaceList_b__6_1__);
-    sub_1C3E564(&Method_ServantPhotoEntity___c__DisplayClass6_0__GetFaceList_b__3__);
-    sub_1C3E564(&ServantPhotoEntity___c__DisplayClass6_0_TypeInfo);
-    sub_1C3E564(&ServantPhotoEntity___c_TypeInfo);
-    byte_4C57764 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Min_int_____);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_SelectMany_int____int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_string__int_____);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_int_____);
+    sub_1C6BA08(&ServantPhotoEntity_FaceData___TypeInfo);
+    sub_1C6BA08(&ServantPhotoEntity_FaceData_TypeInfo);
+    sub_1C6BA08(&System_Func_string__int____TypeInfo);
+    sub_1C6BA08(&System_Func_int____IEnumerable_int___TypeInfo);
+    sub_1C6BA08(&System_Func_int____int__TypeInfo);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerable_ValueTuple_int__int__int___TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_ValueTuple_int__int__int___TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int____get_Count__);
+    sub_1C6BA08(&Method_ServantPhotoEntity___c__GetFaceList_b__6_0__);
+    sub_1C6BA08(&Method_ServantPhotoEntity___c__GetFaceList_b__6_1__);
+    sub_1C6BA08(&Method_ServantPhotoEntity___c__DisplayClass6_0__GetFaceList_b__3__);
+    sub_1C6BA08(&ServantPhotoEntity___c__DisplayClass6_0_TypeInfo);
+    sub_1C6BA08(&ServantPhotoEntity___c_TypeInfo);
+    byte_4CB6CCE = 1;
   }
   v5 = ServantPhotoEntity___c_TypeInfo;
   dispFaceId = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.dispFaceId;
@@ -179,19 +179,19 @@ ServantPhotoEntity_FaceData_array *ServantPhotoEntity__GetFaceList(
       v5 = ServantPhotoEntity___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__6_0 = (System_Func_object__object__o *)sub_1C3E7B0(System_Func_string__int____TypeInfo);
+    _9__6_0 = (System_Func_object__object__o *)sub_1C6BC54(System_Func_string__int____TypeInfo);
     System_Func_object__object____ctor(_9__6_0, v8, Method_ServantPhotoEntity___c__GetFaceList_b__6_0__, 0);
     static_fields = ServantPhotoEntity___c_TypeInfo->static_fields;
     static_fields->__9__6_0 = (struct System_Func_string__int____o *)_9__6_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v10, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v10, v11);
   }
   v12 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                dispFaceId,
                                                                (System_Func_TSource__TResult__o *)_9__6_0,
-                                                               (const MethodInfo_3130218 *)Method_System_Linq_Enumerable_Select_string__int_____);
+                                                               (const MethodInfo_3171B10 *)Method_System_Linq_Enumerable_Select_string__int_____);
   v13 = System_Linq_Enumerable__ToList_object_(
           v12,
-          (const MethodInfo_313DE84 *)Method_System_Linq_Enumerable_ToList_int_____);
+          (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_int_____);
   v14 = ServantPhotoEntity___c_TypeInfo;
   v15 = v13;
   if ( !ServantPhotoEntity___c_TypeInfo->_2.cctor_finished )
@@ -208,18 +208,18 @@ ServantPhotoEntity_FaceData_array *ServantPhotoEntity__GetFaceList(
       v14 = ServantPhotoEntity___c_TypeInfo;
     }
     v17 = (Il2CppObject *)v14->static_fields->__9;
-    _9__6_1 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_int____int__TypeInfo);
+    _9__6_1 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_int____int__TypeInfo);
     System_Func_object__int____ctor(_9__6_1, v17, Method_ServantPhotoEntity___c__GetFaceList_b__6_1__, 0);
     v18 = ServantPhotoEntity___c_TypeInfo->static_fields;
     v18->__9__6_1 = (struct System_Func_int____int__o *)_9__6_1;
-    sub_1C3E508((CGThumbnailListItem_o *)&v18->__9__6_1, (int32_t)_9__6_1, v19, v20);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v18->__9__6_1, (int32_t)_9__6_1, v19, v20);
   }
   v21 = System_Linq_Enumerable__Min_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v15,
           (System_Func_TSource__int__o *)_9__6_1,
-          (const MethodInfo_3128C00 *)Method_System_Linq_Enumerable_Min_int_____);
-  v22 = (ServantPhotoEntity_FaceData_array *)sub_1C3E60C(ServantPhotoEntity_FaceData___TypeInfo, (unsigned int)v21);
-  v23 = sub_1C3E7B0(ServantPhotoEntity___c__DisplayClass6_0_TypeInfo);
+          (const MethodInfo_316A4F8 *)Method_System_Linq_Enumerable_Min_int_____);
+  v22 = (ServantPhotoEntity_FaceData_array *)sub_1C6BAB0(ServantPhotoEntity_FaceData___TypeInfo, (unsigned int)v21);
+  v23 = sub_1C6BC54(ServantPhotoEntity___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v23, 0);
   if ( !v23 )
     goto LABEL_67;
@@ -228,7 +228,7 @@ ServantPhotoEntity_FaceData_array *ServantPhotoEntity__GetFaceList(
   {
     while ( 1 )
     {
-      v26 = (System_Func_object__object__o *)sub_1C3E7B0(System_Func_int____IEnumerable_int___TypeInfo);
+      v26 = (System_Func_object__object__o *)sub_1C6BC54(System_Func_int____IEnumerable_int___TypeInfo);
       System_Func_object__object____ctor(
         v26,
         (Il2CppObject *)v23,
@@ -237,14 +237,14 @@ ServantPhotoEntity_FaceData_array *ServantPhotoEntity__GetFaceList(
       v27 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__int_(
                                                                    (System_Collections_Generic_IEnumerable_TSource__o *)v15,
                                                                    (System_Func_TSource__IEnumerable_TResult___o *)v26,
-                                                                   (const MethodInfo_3132F98 *)Method_System_Linq_Enumerable_SelectMany_int____int___);
+                                                                   (const MethodInfo_3174890 *)Method_System_Linq_Enumerable_SelectMany_int____int___);
       OverrideFormList = (unsigned int *)System_Linq_Enumerable__ToArray_int_(
                                            v27,
-                                           (const MethodInfo_3139050 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                           (const MethodInfo_317B0B0 *)Method_System_Linq_Enumerable_ToArray_int___);
       if ( !v15 )
         break;
       v28 = OverrideFormList;
-      OverrideFormList = (unsigned int *)sub_1C3E60C(int___TypeInfo, (unsigned int)v15->fields._size);
+      OverrideFormList = (unsigned int *)sub_1C6BAB0(int___TypeInfo, (unsigned int)v15->fields._size);
       if ( !OverrideFormList )
         break;
       v29 = OverrideFormList[6];
@@ -259,38 +259,38 @@ ServantPhotoEntity_FaceData_array *ServantPhotoEntity__GetFaceList(
             goto LABEL_23;
         }
 LABEL_66:
-        sub_1C3E7C8(OverrideFormList, v25);
+        sub_1C6BC68(OverrideFormList);
       }
 LABEL_23:
       v32 = *(int *)(v23 + 16);
-      v33 = sub_1C3E7B0(ServantPhotoEntity_FaceData_TypeInfo);
+      v33 = sub_1C6BC54(ServantPhotoEntity_FaceData_TypeInfo);
       System_Object___ctor((Il2CppObject *)v33, 0);
       if ( !v33 )
         break;
       *(_QWORD *)(v33 + 16) = v28;
-      sub_1C3E508((CGThumbnailListItem_o *)(v33 + 16), (int32_t)v28, v34, v35);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v33 + 16), (int32_t)v28, v34, v35);
       *(_QWORD *)(v33 + 24) = v30;
-      sub_1C3E508((CGThumbnailListItem_o *)(v33 + 24), (int32_t)v30, v36, v37);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v33 + 24), (int32_t)v30, v36, v37);
       if ( !v22 )
         break;
-      OverrideFormList = (unsigned int *)sub_1C3E6A0(v33, v22->obj.klass->_1.element_class);
+      OverrideFormList = (unsigned int *)sub_1C6BB44(v33, v22->obj.klass->_1.element_class);
       if ( !OverrideFormList )
       {
-        v68 = sub_1C3E7E4(0);
-        sub_1C3E68C(v68, 0);
+        v68 = sub_1C6BC84(0);
+        sub_1C6BB30(v68, 0);
       }
       if ( (unsigned int)v32 >= LODWORD(v22->max_length) )
         goto LABEL_66;
       v40 = &v22->obj.klass + v32;
       v40[4] = (Il2CppClass *)v33;
-      sub_1C3E508((CGThumbnailListItem_o *)(v40 + 4), v33, v38, v39);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v40 + 4), v33, v38, v39);
       v41 = *(_DWORD *)(v23 + 16) + 1;
       *(_DWORD *)(v23 + 16) = v41;
       if ( v41 >= v21 )
         goto LABEL_28;
     }
 LABEL_67:
-    sub_1C3E7C0(OverrideFormList, v25);
+    sub_1C6BC60(OverrideFormList, v25);
   }
 LABEL_28:
   OverrideFormList = (unsigned int *)ServantPhotoEntity__GetOverrideFormList(this, v25);
@@ -314,11 +314,11 @@ LABEL_28:
   else
   {
 LABEL_33:
-    v46 = sub_1C8ED7C(OverrideFormList, System_Collections_Generic_IEnumerable_ValueTuple_int__int__int___TypeInfo, 0);
+    v46 = sub_1C41D90(OverrideFormList, System_Collections_Generic_IEnumerable_ValueTuple_int__int__int___TypeInfo, 0);
   }
   v48 = (*(__int64 (__fastcall **)(unsigned int *, _QWORD))v46)(v43, *(_QWORD *)(v46 + 8));
   if ( !v48 )
-    sub_1C3E7C0(0, v47);
+    sub_1C6BC60(0, v47);
   while ( 1 )
   {
     v49 = *(_QWORD *)v48;
@@ -338,7 +338,7 @@ LABEL_33:
     else
     {
 LABEL_40:
-      v52 = sub_1C8ED7C(v48, System_Collections_IEnumerator_TypeInfo, 0);
+      v52 = sub_1C41D90(v48, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v52)(v48, *(_QWORD *)(v52 + 8)) & 1) == 0 )
       break;
@@ -359,31 +359,31 @@ LABEL_40:
     else
     {
 LABEL_47:
-      v56 = sub_1C8ED7C(v48, System_Collections_Generic_IEnumerator_ValueTuple_int__int__int___TypeInfo, 0);
+      v56 = sub_1C41D90(v48, System_Collections_Generic_IEnumerator_ValueTuple_int__int__int___TypeInfo, 0);
     }
     v57 = (*(__int64 (__fastcall **)(__int64, _QWORD))v56)(v48, *(_QWORD *)(v56 + 8));
     if ( (v57 & 0x8000000000000000LL) == 0 )
     {
       if ( !v22 )
-        sub_1C3E7C0(v57, v58);
+        sub_1C6BC60(v57, v58);
       max_length = v22->max_length;
       if ( max_length > SHIDWORD(v57) )
       {
         if ( HIDWORD(v57) >= max_length )
-          sub_1C3E7C8(v57, v58);
+          sub_1C6BC68(v57);
         v60 = v22->m_Items[v57 >> 32];
         if ( !v60 )
-          sub_1C3E7C0(v57, v58);
+          sub_1C6BC60(v57, v58);
         if ( (v57 & 0x80000000) == 0 )
         {
           multiForm = v60->fields.multiForm;
           if ( !multiForm )
-            sub_1C3E7C0(v57, v58);
+            sub_1C6BC60(v57, v58);
           v62 = multiForm->max_length;
           if ( v62 > (int)v57 )
           {
             if ( (unsigned int)v57 >= v62 )
-              sub_1C3E7C8(v57, v58);
+              sub_1C6BC68(v57);
             multiForm->m_Items[(int)v57] = v58;
           }
         }
@@ -407,7 +407,7 @@ LABEL_47:
   else
   {
 LABEL_63:
-    v66 = sub_1C8ED7C(v48, System_IDisposable_TypeInfo, 0);
+    v66 = sub_1C41D90(v48, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v66)(v48, *(_QWORD *)(v66 + 8));
   return v22;
@@ -422,17 +422,17 @@ System_Collections_Generic_IEnumerable_ValueTuple_int__int__int___o *ServantPhot
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C57765 & 1) == 0 )
+  if ( (byte_4CB6CCF & 1) == 0 )
   {
-    sub_1C3E564(&ServantPhotoEntity__GetOverrideFormList_d__7_TypeInfo);
-    byte_4C57765 = 1;
+    sub_1C6BA08(&ServantPhotoEntity__GetOverrideFormList_d__7_TypeInfo);
+    byte_4CB6CCF = 1;
   }
-  v3 = sub_1C3E7B0(ServantPhotoEntity__GetOverrideFormList_d__7_TypeInfo);
+  v3 = sub_1C6BC54(ServantPhotoEntity__GetOverrideFormList_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = -2;
   *(_DWORD *)(v3 + 32) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v3 + 40) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 40), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 40), (int32_t)this, v4, v5);
   return (System_Collections_Generic_IEnumerable_ValueTuple_int__int__int___o *)v3;
 }
 
@@ -448,10 +448,10 @@ bool ServantPhotoEntity__TryGetRestrictionSvtList(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C57766 & 1) == 0 )
+  if ( (byte_4CB6CD0 & 1) == 0 )
   {
-    sub_1C3E564(&ServantPhotoEntity_TypeInfo);
-    byte_4C57766 = 1;
+    sub_1C6BA08(&ServantPhotoEntity_TypeInfo);
+    byte_4CB6CD0 = 1;
   }
   v5 = ServantPhotoEntity_TypeInfo;
   extendData = this->fields.extendData;
@@ -462,7 +462,7 @@ bool ServantPhotoEntity__TryGetRestrictionSvtList(
   }
   IntArray = EntityScriptUtil__GetIntArray(extendData, v5->static_fields->RestrictionSvtList, 0, 0);
   *restrictionSvtList = IntArray;
-  sub_1C3E508((CGThumbnailListItem_o *)restrictionSvtList, (int32_t)IntArray, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)restrictionSvtList, (int32_t)IntArray, v8, v9);
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)*restrictionSvtList, 0);
 }
 
@@ -506,10 +506,10 @@ bool ServantPhotoEntity__GetOverrideFormList_d__7__MoveNext(
   __int64 v17; // x9
   ServantPhotoEntity_c *v18; // x0
   System_String_o *DISP_FORM_BY_FACE_SVTINDEX_KEY; // x20
-  int32_t ScriptValue_41004844; // w20
+  int32_t ScriptValue_41190096; // w20
   int32_t v21; // w21
   int32_t v22; // w3
-  const MethodInfo_3B18870 *v23; // x5
+  const MethodInfo_3B6A5E0 *v23; // x5
   ServantPhotoEntity__GetOverrideFormList_d__7_o *v24; // x9
   int32_t index; // w10
   struct System_Collections_Generic_List_T__o *list; // x11
@@ -524,18 +524,18 @@ bool ServantPhotoEntity__GetOverrideFormList_d__7__MoveNext(
 
   v34 = this;
   v2 = this;
-  if ( (byte_4C5776C & 1) == 0 )
+  if ( (byte_4CB6CD6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_object__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_object__get_Current__);
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_object__GetEnumerator__);
-    sub_1C3E564(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1C3E564(&ServantPhotoEntity_TypeInfo);
-    this = (ServantPhotoEntity__GetOverrideFormList_d__7_o *)sub_1C3E564(&Method_System_ValueTuple_int__int__int___ctor__);
-    byte_4C5776C = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_object__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_object__get_Current__);
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_object__GetEnumerator__);
+    sub_1C6BA08(&System_Collections_Generic_List_object__TypeInfo);
+    sub_1C6BA08(&ServantPhotoEntity_TypeInfo);
+    this = (ServantPhotoEntity__GetOverrideFormList_d__7_o *)sub_1C6BA08(&Method_System_ValueTuple_int__int__int___ctor__);
+    byte_4CB6CD6 = 1;
   }
   v32 = &v34;
   value = 0;
@@ -547,7 +547,7 @@ bool ServantPhotoEntity__GetOverrideFormList_d__7__MoveNext(
     _4__this = v2->fields.__4__this;
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     extendData = (System_Collections_Generic_Dictionary_object__object__o *)_4__this->fields.extendData;
     if ( !extendData )
       return 0;
@@ -561,37 +561,37 @@ bool ServantPhotoEntity__GetOverrideFormList_d__7__MoveNext(
             extendData,
             (Il2CppObject *)v6->static_fields->DISP_FORM_BY_FACE_KEY,
             &value,
-            (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+            (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
       return 0;
     v8 = value;
     if ( !value )
 LABEL_27:
-      sub_1C3E7C0(v8, v7);
+      sub_1C6BC60(v8, v7);
     naturalAligment = System_Collections_Generic_List_object__TypeInfo->_2.naturalAligment;
     if ( value->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (System_Collections_Generic_List_object__c *)value->klass->_2.typeHierarchy[naturalAligment - 1] != System_Collections_Generic_List_object__TypeInfo )
     {
 LABEL_26:
-      sub_1C3EA80(v8);
+      sub_1C6BFFC(v8);
       goto LABEL_27;
     }
     System_Collections_Generic_List_object___GetEnumerator(
       &v30,
       (System_Collections_Generic_List_object__o *)value,
-      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_object__GetEnumerator__);
+      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_object__GetEnumerator__);
     v10 = v34;
     v11 = *(_OWORD *)&v30.fields._list;
     p__7__wrap1 = &v34->fields.__7__wrap1;
     v31 = v30;
     v34->fields.__7__wrap1.fields._current = v30.fields._current;
     *(_OWORD *)&v10->fields.__7__wrap1.fields._list = v11;
-    sub_1C3E508((CGThumbnailListItem_o *)p__7__wrap1, 0, v13, v14);
+    sub_1C6B9AC((CGThumbnailListItem_o *)p__7__wrap1, 0, v13, v14);
     v2 = v34;
   }
   v2->fields.__1__state = -3;
   if ( !System_Collections_Generic_List_Enumerator_object___MoveNext(
           &v2->fields.__7__wrap1,
-          (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_object__MoveNext__) )
+          (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_object__MoveNext__) )
   {
     ServantPhotoEntity__GetOverrideFormList_d__7____m__Finally1(v34, v15);
     v28 = v34;
@@ -608,7 +608,7 @@ LABEL_26:
     if ( current->klass->_2.naturalAligment < (unsigned int)v17
       || (System_Collections_Generic_Dictionary_string__object__c *)current->klass->_2.typeHierarchy[v17 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
     {
-      sub_1C3EA80(v34->fields.__7__wrap1.fields._current);
+      sub_1C6BFFC(v34->fields.__7__wrap1.fields._current);
       goto LABEL_26;
     }
   }
@@ -621,17 +621,17 @@ LABEL_26:
   DISP_FORM_BY_FACE_SVTINDEX_KEY = v18->static_fields->DISP_FORM_BY_FACE_SVTINDEX_KEY;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  ScriptValue_41004844 = JsonManager__GetScriptValue_41004844(
+  ScriptValue_41190096 = JsonManager__GetScriptValue_41190096(
                            (System_Collections_Generic_Dictionary_string__object__o *)current,
                            DISP_FORM_BY_FACE_SVTINDEX_KEY,
                            0,
                            0);
-  v21 = JsonManager__GetScriptValue_41004844(
+  v21 = JsonManager__GetScriptValue_41190096(
           (System_Collections_Generic_Dictionary_string__object__o *)current,
           ServantPhotoEntity_TypeInfo->static_fields->DISP_FORM_BY_FACE_FACEINDEX_KEY,
           0,
           0);
-  v22 = JsonManager__GetScriptValue_41004844(
+  v22 = JsonManager__GetScriptValue_41190096(
           (System_Collections_Generic_Dictionary_string__object__o *)current,
           ServantPhotoEntity_TypeInfo->static_fields->DISP_FORM_BY_FACE_FORM_KEY,
           0,
@@ -639,7 +639,7 @@ LABEL_26:
   v31.fields._index = 0;
   v31.fields._list = 0;
   *(_QWORD *)&v35.fields.Item1 = &v31;
-  v35.fields.Item3 = ScriptValue_41004844;
+  v35.fields.Item3 = ScriptValue_41190096;
   System_ValueTuple_int__int__int____ctor(v35, v21, v22, Method_System_ValueTuple_int__int__int___ctor__, v23);
   v24 = v34;
   index = v31.fields._index;
@@ -662,10 +662,10 @@ System_Collections_Generic_IEnumerator_ValueTuple_int__int__int___o *ServantPhot
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C5776F & 1) == 0 )
+  if ( (byte_4CB6CD9 & 1) == 0 )
   {
-    sub_1C3E564(&ServantPhotoEntity__GetOverrideFormList_d__7_TypeInfo);
-    byte_4C5776F = 1;
+    sub_1C6BA08(&ServantPhotoEntity__GetOverrideFormList_d__7_TypeInfo);
+    byte_4CB6CD9 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -675,13 +675,13 @@ System_Collections_Generic_IEnumerator_ValueTuple_int__int__int___o *ServantPhot
   }
   else
   {
-    v4 = sub_1C3E7B0(ServantPhotoEntity__GetOverrideFormList_d__7_TypeInfo);
+    v4 = sub_1C6BC54(ServantPhotoEntity__GetOverrideFormList_d__7_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     *(_DWORD *)(v4 + 16) = 0;
     *(_DWORD *)(v4 + 32) = System_Environment__get_CurrentManagedThreadId(0);
     _4__this = this->fields.__4__this;
     *(_QWORD *)(v4 + 40) = _4__this;
-    sub_1C3E508((CGThumbnailListItem_o *)(v4 + 40), (int32_t)_4__this, v6, v7);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 40), (int32_t)_4__this, v6, v7);
     return (System_Collections_Generic_IEnumerator_ValueTuple_int__int__int___o *)v4;
   }
   return (System_Collections_Generic_IEnumerator_ValueTuple_int__int__int___o *)this;
@@ -713,11 +713,11 @@ void __noreturn ServantPhotoEntity__GetOverrideFormList_d__7__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_ServantPhotoEntity__GetOverrideFormList_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_ServantPhotoEntity__GetOverrideFormList_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -725,25 +725,19 @@ Il2CppObject *ServantPhotoEntity__GetOverrideFormList_d__7__System_Collections_I
         ServantPhotoEntity__GetOverrideFormList_d__7_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  __int64 v9; // x9
-  __int64 v11; // [xsp+0h] [xbp-30h] BYREF
+  __int64 v3; // x9
+  __int64 v5; // [xsp+0h] [xbp-30h] BYREF
   int32_t Item3; // [xsp+8h] [xbp-28h]
 
-  if ( (byte_4C5776E & 1) == 0 )
+  if ( (byte_4CB6CD8 & 1) == 0 )
   {
-    sub_1C3E564(&System_ValueTuple_int__int__int__TypeInfo);
-    byte_4C5776E = 1;
+    sub_1C6BA08(&System_ValueTuple_int__int__int__TypeInfo);
+    byte_4CB6CD8 = 1;
   }
-  v9 = *(_QWORD *)&this->fields.__2__current.fields.Item1;
+  v3 = *(_QWORD *)&this->fields.__2__current.fields.Item1;
   Item3 = this->fields.__2__current.fields.Item3;
-  v11 = v9;
-  return (Il2CppObject *)j_il2cpp_value_box_0(System_ValueTuple_int__int__int__TypeInfo, &v11, v2, v3, v4, v5, v6, v7);
+  v5 = v3;
+  return (Il2CppObject *)j_il2cpp_value_box_0(System_ValueTuple_int__int__int__TypeInfo, &v5);
 }
 
 
@@ -763,15 +757,15 @@ void ServantPhotoEntity__GetOverrideFormList_d__7____m__Finally1(
         ServantPhotoEntity__GetOverrideFormList_d__7_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C5776D & 1) == 0 )
+  if ( (byte_4CB6CD7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
-    byte_4C5776D = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
+    byte_4CB6CD7 = 1;
   }
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &this->fields.__7__wrap1,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
 }
 
 
@@ -781,15 +775,15 @@ void ServantPhotoEntity___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C57769 & 1) == 0 )
+  if ( (byte_4CB6CD3 & 1) == 0 )
   {
-    sub_1C3E564(&ServantPhotoEntity___c_TypeInfo);
-    byte_4C57769 = 1;
+    sub_1C6BA08(&ServantPhotoEntity___c_TypeInfo);
+    byte_4CB6CD3 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(ServantPhotoEntity___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(ServantPhotoEntity___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ServantPhotoEntity___c_TypeInfo->static_fields->__9 = (struct ServantPhotoEntity___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)ServantPhotoEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)ServantPhotoEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -813,30 +807,30 @@ System_Int32_array *ServantPhotoEntity___c___GetFaceList_b__6_0(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C5776A & 1) == 0 )
+  if ( (byte_4CB6CD4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Array_ConvertAll_string__int___);
-    sub_1C3E564(&System_Converter_string__int__TypeInfo);
-    sub_1C3E564(&Method_ServantPhotoEntity___c__GetFaceList_b__6_2__);
-    sub_1C3E564(&ServantPhotoEntity___c_TypeInfo);
-    sub_1C3E564(&StringLiteral_15814/*"["*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    this = (ServantPhotoEntity___c_o *)sub_1C3E564(&StringLiteral_16068/*"]"*/);
-    byte_4C5776A = 1;
+    sub_1C6BA08(&Method_System_Array_ConvertAll_string__int___);
+    sub_1C6BA08(&System_Converter_string__int__TypeInfo);
+    sub_1C6BA08(&Method_ServantPhotoEntity___c__GetFaceList_b__6_2__);
+    sub_1C6BA08(&ServantPhotoEntity___c_TypeInfo);
+    sub_1C6BA08(&StringLiteral_15801/*"["*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    this = (ServantPhotoEntity___c_o *)sub_1C6BA08(&StringLiteral_16051/*"]"*/);
+    byte_4CB6CD4 = 1;
   }
   if ( !s
-    || (this = (ServantPhotoEntity___c_o *)System_String__Replace_63683016(
+    || (this = (ServantPhotoEntity___c_o *)System_String__Replace_64013356(
                                              s,
-                                             (System_String_o *)StringLiteral_15814/*"["*/,
+                                             (System_String_o *)StringLiteral_15801/*"["*/,
                                              (System_String_o *)StringLiteral_1/*""*/,
                                              0)) == 0
-    || (this = (ServantPhotoEntity___c_o *)System_String__Replace_63683016(
+    || (this = (ServantPhotoEntity___c_o *)System_String__Replace_64013356(
                                              (System_String_o *)this,
-                                             (System_String_o *)StringLiteral_16068/*"]"*/,
+                                             (System_String_o *)StringLiteral_16051/*"]"*/,
                                              (System_String_o *)StringLiteral_1/*""*/,
                                              0)) == 0 )
   {
-    sub_1C3E7C0(this, s);
+    sub_1C6BC60(this, s);
   }
   v4 = System_String__Split((System_String_o *)this, 0x2Cu, 0, 0);
   v5 = ServantPhotoEntity___c_TypeInfo;
@@ -855,16 +849,16 @@ System_Int32_array *ServantPhotoEntity___c___GetFaceList_b__6_0(
       v5 = ServantPhotoEntity___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__6_2 = (System_Converter_object__int__o *)sub_1C3E7B0(System_Converter_string__int__TypeInfo);
+    _9__6_2 = (System_Converter_object__int__o *)sub_1C6BC54(System_Converter_string__int__TypeInfo);
     System_Converter_object__int____ctor(_9__6_2, v8, Method_ServantPhotoEntity___c__GetFaceList_b__6_2__, 0);
     static_fields = ServantPhotoEntity___c_TypeInfo->static_fields;
     static_fields->__9__6_2 = (struct System_Converter_string__int__o *)_9__6_2;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__6_2, (int32_t)_9__6_2, v10, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__6_2, (int32_t)_9__6_2, v10, v11);
   }
   return System_Array__ConvertAll_object__int_(
            v6,
            (System_Converter_TInput__TOutput__o *)_9__6_2,
-           (const MethodInfo_31FD230 *)Method_System_Array_ConvertAll_string__int___);
+           (const MethodInfo_323F780 *)Method_System_Array_ConvertAll_string__int___);
 }
 
 
@@ -874,7 +868,7 @@ int32_t ServantPhotoEntity___c___GetFaceList_b__6_1(
         const MethodInfo *method)
 {
   if ( !l )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return l->max_length;
 }
 
@@ -903,18 +897,18 @@ System_Collections_Generic_IEnumerable_int__o *ServantPhotoEntity___c__DisplayCl
 {
   System_Collections_Generic_IEnumerable_TSource__o *v5; // x0
 
-  if ( (byte_4C5776B & 1) == 0 )
+  if ( (byte_4CB6CD5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Skip_int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Take_int___);
-    byte_4C5776B = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Skip_int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Take_int___);
+    byte_4CB6CD5 = 1;
   }
   v5 = System_Linq_Enumerable__Skip_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)l,
          this->fields.i,
-         (const MethodInfo_31373DC *)Method_System_Linq_Enumerable_Skip_int___);
+         (const MethodInfo_31793F4 *)Method_System_Linq_Enumerable_Skip_int___);
   return (System_Collections_Generic_IEnumerable_int__o *)System_Linq_Enumerable__Take_int_(
                                                             v5,
                                                             1,
-                                                            (const MethodInfo_3137A14 *)Method_System_Linq_Enumerable_Take_int___);
+                                                            (const MethodInfo_3179A74 *)Method_System_Linq_Enumerable_Take_int___);
 }

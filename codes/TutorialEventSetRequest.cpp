@@ -7,24 +7,24 @@ void TutorialEventSetRequest__beginRequest(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C589B2 & 1) == 0 )
+  if ( (byte_4CB7F2E & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_19164/*"eventId"*/);
-    sub_1C3E564(&StringLiteral_19496/*"flagId"*/);
-    byte_4C589B2 = 1;
+    sub_1C6BA08(&StringLiteral_19195/*"eventId"*/);
+    sub_1C6BA08(&StringLiteral_19540/*"flagId"*/);
+    byte_4CB7F2E = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19496/*"flagId"*/, flagId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19164/*"eventId"*/, eventId, v7);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19540/*"flagId"*/, flagId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19195/*"eventId"*/, eventId, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
 
 System_String_o *TutorialEventSetRequest__getMockData(TutorialEventSetRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C589B1 & 1) == 0 )
+  if ( (byte_4CB7F2D & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C589B1 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB7F2D = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -34,16 +34,16 @@ System_String_o *TutorialEventSetRequest__getURL(TutorialEventSetRequest_o *this
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C589B0 & 1) == 0 )
+  if ( (byte_4CB7F2C & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_24254/*"tutorial/eventFlagSet"*/);
-    byte_4C589B0 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_24334/*"tutorial/eventFlagSet"*/);
+    byte_4CB7F2C = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_24254/*"tutorial/eventFlagSet"*/, 0);
+  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_24334/*"tutorial/eventFlagSet"*/, 0);
 }
 
 
@@ -57,17 +57,17 @@ void TutorialEventSetRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4C589B3 & 1) == 0 )
+  if ( (byte_4CB7F2F & 1) == 0 )
   {
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    sub_1C3E564(&StringLiteral_22400/*"ok"*/);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    byte_4C589B3 = 1;
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    byte_4CB7F2F = 1;
   }
-  if ( (byte_4C5898A & 1) == 0 )
+  if ( (byte_4CB7F06 & 1) == 0 )
   {
-    sub_1C3E564(&TopHomeRequest_TypeInfo);
-    byte_4C5898A = 1;
+    sub_1C6BA08(&TopHomeRequest_TypeInfo);
+    byte_4CB7F06 = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0;
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -78,14 +78,14 @@ void TutorialEventSetRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22400/*"ok"*/;
+    v8 = &StringLiteral_22471/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22233/*"ng"*/;
+    v8 = &StringLiteral_22301/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

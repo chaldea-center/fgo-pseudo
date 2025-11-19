@@ -28,7 +28,7 @@ void BattleActionEffect_AddChangeMaxHpBuff__PartialAfterEffectProc(
         this = (BattleActionEffect_AddChangeMaxHpBuff_o *)BattleServantData__getMaxHp(svt, 0),
         !svt->fields.buffData) )
   {
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   }
   v6 = (int)this;
   BattleBuffData__AddForceBuff(svt->fields.buffData, v4->fields.buffArray, 0);
@@ -48,7 +48,7 @@ void BattleActionEffect_AddChangeMaxHpBuff__PartialPreActionProc(
 
   subBaseHp = 0;
   if ( !svt || !svt->fields.buffData )
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   BattleBuffData__DelForceBuff(svt->fields.buffData, this->fields.buffArray, 0);
   BattleServantData__CalculateTotalBaseHp(svt, &subBaseHp, 1, 0);
 }
@@ -63,7 +63,7 @@ void BattleActionEffect_AddServantBuff__AfterEffectProc(
   const MethodInfo *v5; // x2
 
   if ( !data )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   ServantData = BattleData__getServantData(data, this->fields.targetId, 0);
   BattleActionEffect_BaseChangeServantBuff__ForceAddBuff(
     (BattleActionEffect_BaseChangeServantBuff_o *)this,
@@ -81,7 +81,7 @@ void BattleActionEffect_AddServantBuff__PreActionProc(
   const MethodInfo *v5; // x2
 
   if ( !data )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   ServantData = BattleData__getServantData(data, this->fields.targetId, 0);
   BattleActionEffect_BaseChangeServantBuff__ForceDelBuff(
     (BattleActionEffect_BaseChangeServantBuff_o *)this,
@@ -123,45 +123,45 @@ void BattleActionEffect_AddSubChangeMaxHpBuff___ctor(
   int32_t v32; // w2
   const MethodInfo *v33; // x3
 
-  if ( (byte_4C59433 & 1) == 0 )
+  if ( (byte_4CB89B6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
-    sub_1C3E564(&System_Func_BattleBuffData_BuffData__bool__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor___78115680);
-    sub_1C3E564(&System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo);
-    sub_1C3E564(&Method_BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0___ctor_b__0__);
-    sub_1C3E564(&Method_BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0___ctor_b__1__);
-    sub_1C3E564(&BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0_TypeInfo);
-    byte_4C59433 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+    sub_1C6BA08(&System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor___78498456);
+    sub_1C6BA08(&System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo);
+    sub_1C6BA08(&Method_BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0___ctor_b__0__);
+    sub_1C6BA08(&Method_BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0___ctor_b__1__);
+    sub_1C6BA08(&BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0_TypeInfo);
+    byte_4CB89B6 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v9 = sub_1C3E7B0(BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0_TypeInfo);
+  v9 = sub_1C6BC54(BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !beforeSvtCache
     || (BuffArray_k__BackingField = (System_Collections_Generic_IEnumerable_T__o *)beforeSvtCache->fields._BuffArray_k__BackingField,
-        v13 = (System_Collections_Generic_HashSet_T__o *)sub_1C3E7B0(System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo),
-        System_Collections_Generic_HashSet_object____ctor_57066940(
+        v13 = (System_Collections_Generic_HashSet_T__o *)sub_1C6BC54(System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo),
+        System_Collections_Generic_HashSet_object____ctor_57373904(
           v13,
           BuffArray_k__BackingField,
-          (const MethodInfo_366C5BC *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor___78115680),
+          (const MethodInfo_36B74D0 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor___78498456),
         !v9)
     || (*(_QWORD *)(v9 + 16) = v13,
-        sub_1C3E508((CGThumbnailListItem_o *)(v9 + 16), (int32_t)v13, v14, v15),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)v13, v14, v15),
         !afterSvtCache) )
   {
-    sub_1C3E7C0(v10, v11);
+    sub_1C6BC60(v10, v11);
   }
   v16 = (System_Collections_Generic_IEnumerable_T__o *)afterSvtCache->fields._BuffArray_k__BackingField;
-  v17 = (System_Collections_Generic_HashSet_T__o *)sub_1C3E7B0(System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo);
-  System_Collections_Generic_HashSet_object____ctor_57066940(
+  v17 = (System_Collections_Generic_HashSet_T__o *)sub_1C6BC54(System_Collections_Generic_HashSet_BattleBuffData_BuffData__TypeInfo);
+  System_Collections_Generic_HashSet_object____ctor_57373904(
     v17,
     v16,
-    (const MethodInfo_366C5BC *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor___78115680);
+    (const MethodInfo_36B74D0 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData___ctor___78498456);
   *(_QWORD *)(v9 + 24) = v17;
-  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 24), (int32_t)v17, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)v17, v18, v19);
   v20 = (System_Collections_Generic_IEnumerable_TSource__o *)afterSvtCache->fields._BuffArray_k__BackingField;
-  v21 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  v21 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v21,
     (Il2CppObject *)v9,
@@ -170,13 +170,13 @@ void BattleActionEffect_AddSubChangeMaxHpBuff___ctor(
   v22 = System_Linq_Enumerable__Where_object_(
           v20,
           (System_Func_TSource__bool__o *)v21,
-          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   v23 = System_Linq_Enumerable__ToArray_object_(
           v22,
-          (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+          (const MethodInfo_317B248 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
   v24 = (System_Collections_Generic_IEnumerable_TSource__o *)beforeSvtCache->fields._BuffArray_k__BackingField;
   v25 = (struct BattleBuffData_BuffData_array *)v23;
-  v26 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  v26 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v26,
     (Il2CppObject *)v9,
@@ -185,17 +185,17 @@ void BattleActionEffect_AddSubChangeMaxHpBuff___ctor(
   v27 = System_Linq_Enumerable__Where_object_(
           v24,
           (System_Func_TSource__bool__o *)v26,
-          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
+          (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_BattleBuffData_BuffData___);
   v28 = System_Linq_Enumerable__ToArray_object_(
           v27,
-          (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
+          (const MethodInfo_317B248 *)Method_System_Linq_Enumerable_ToArray_BattleBuffData_BuffData___);
   this->fields.buffArray = v25;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.buffArray, (int32_t)v25, v29, v30);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.buffArray, (int32_t)v25, v29, v30);
   this->fields._SubBuffArray_k__BackingField = (struct BattleBuffData_BuffData_array *)v28;
   p_SubBuffArray_k__BackingField = &this->fields._SubBuffArray_k__BackingField;
   *((_DWORD *)p_SubBuffArray_k__BackingField - 6) = targetId;
   *((_DWORD *)p_SubBuffArray_k__BackingField - 2) = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)p_SubBuffArray_k__BackingField, (int32_t)v28, v32, v33);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_SubBuffArray_k__BackingField, (int32_t)v28, v32, v33);
   p_SubBuffArray_k__BackingField[1] = (struct BattleBuffData_BuffData_array *)vrev64_s32(
                                                                                 vsub_s32(
                                                                                   *(int32x2_t *)&afterSvtCache->fields._ResultHp_k__BackingField,
@@ -228,21 +228,21 @@ void BattleActionEffect_AddSubChangeMaxHpBuff__PartialAfterEffectProc(
   System_Predicate_int__o *v22; // x23
   int v23; // w0
 
-  if ( (byte_4C59434 & 1) == 0 )
+  if ( (byte_4CB89B7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_BattleBuffData_BuffData__int___);
-    sub_1C3E564(&System_Func_BattleBuffData_BuffData__int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_HashSet_int___ctor___78114696);
-    sub_1C3E564(&System_Collections_Generic_HashSet_int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__RemoveAll__);
-    sub_1C3E564(&System_Predicate_int__TypeInfo);
-    sub_1C3E564(&Method_BattleActionEffect_AddSubChangeMaxHpBuff___c__PartialAfterEffectProc_b__16_0__);
-    sub_1C3E564(&Method_BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass16_0__PartialAfterEffectProc_b__1__);
-    sub_1C3E564(&BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass16_0_TypeInfo);
-    sub_1C3E564(&BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo);
-    byte_4C59434 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_BattleBuffData_BuffData__int___);
+    sub_1C6BA08(&System_Func_BattleBuffData_BuffData__int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_HashSet_int___ctor___78497488);
+    sub_1C6BA08(&System_Collections_Generic_HashSet_int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__RemoveAll__);
+    sub_1C6BA08(&System_Predicate_int__TypeInfo);
+    sub_1C6BA08(&Method_BattleActionEffect_AddSubChangeMaxHpBuff___c__PartialAfterEffectProc_b__16_0__);
+    sub_1C6BA08(&Method_BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass16_0__PartialAfterEffectProc_b__1__);
+    sub_1C6BA08(&BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass16_0_TypeInfo);
+    sub_1C6BA08(&BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo);
+    byte_4CB89B7 = 1;
   }
-  v6 = sub_1C3E7B0(BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass16_0_TypeInfo);
+  v6 = sub_1C6BC54(BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass16_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   if ( !svt )
     goto LABEL_16;
@@ -271,7 +271,7 @@ void BattleActionEffect_AddSubChangeMaxHpBuff__PartialAfterEffectProc(
       v9 = BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo;
     }
     v12 = (Il2CppObject *)v9->static_fields->__9;
-    _9__16_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_BattleBuffData_BuffData__int__TypeInfo);
+    _9__16_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_BattleBuffData_BuffData__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__16_0,
       v12,
@@ -279,23 +279,23 @@ void BattleActionEffect_AddSubChangeMaxHpBuff__PartialAfterEffectProc(
       0);
     static_fields = BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo->static_fields;
     static_fields->__9__16_0 = (struct System_Func_BattleBuffData_BuffData__int__o *)_9__16_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__16_0, (int32_t)_9__16_0, v14, v15);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__16_0, (int32_t)_9__16_0, v14, v15);
   }
   v16 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Select_object__int_(
                                                          buffArray,
                                                          (System_Func_TSource__TResult__o *)_9__16_0,
-                                                         (const MethodInfo_312F93C *)Method_System_Linq_Enumerable_Select_BattleBuffData_BuffData__int___);
-  v17 = (System_Collections_Generic_HashSet_int__o *)sub_1C3E7B0(System_Collections_Generic_HashSet_int__TypeInfo);
-  System_Collections_Generic_HashSet_int____ctor_57040820(
+                                                         (const MethodInfo_3171234 *)Method_System_Linq_Enumerable_Select_BattleBuffData_BuffData__int___);
+  v17 = (System_Collections_Generic_HashSet_int__o *)sub_1C6BC54(System_Collections_Generic_HashSet_int__TypeInfo);
+  System_Collections_Generic_HashSet_int____ctor_57348268(
     v17,
     v16,
-    (const MethodInfo_3665FB4 *)Method_System_Collections_Generic_HashSet_int___ctor___78114696);
+    (const MethodInfo_36B10AC *)Method_System_Collections_Generic_HashSet_int___ctor___78497488);
   if ( !v6
     || (*(_QWORD *)(v6 + 16) = v17,
-        sub_1C3E508((CGThumbnailListItem_o *)(v6 + 16), (int32_t)v17, v18, v19),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 16), (int32_t)v17, v18, v19),
         (v20 = svt->fields.buffData) == 0)
     || (unfixedBuffList = v20->fields.unfixedBuffList,
-        v22 = (System_Predicate_int__o *)sub_1C3E7B0(System_Predicate_int__TypeInfo),
+        v22 = (System_Predicate_int__o *)sub_1C6BC54(System_Predicate_int__TypeInfo),
         System_Predicate_int____ctor(
           v22,
           (Il2CppObject *)v6,
@@ -304,12 +304,12 @@ void BattleActionEffect_AddSubChangeMaxHpBuff__PartialAfterEffectProc(
         !unfixedBuffList) )
   {
 LABEL_16:
-    sub_1C3E7C0(buffData, v8);
+    sub_1C6BC60(buffData, v8);
   }
   System_Collections_Generic_List_int___RemoveAll(
     unfixedBuffList,
     (System_Predicate_T__o *)v22,
-    (const MethodInfo_3799A64 *)Method_System_Collections_Generic_List_int__RemoveAll__);
+    (const MethodInfo_37E4F78 *)Method_System_Collections_Generic_List_int__RemoveAll__);
   v23 = ((__int64 (__fastcall *)(BattleServantData_o *, const MethodInfo *))svt->klass->vtable._9_get_hp.methodPtr)(
           svt,
           svt->klass->vtable._9_get_hp.method);
@@ -338,7 +338,7 @@ void BattleActionEffect_AddSubChangeMaxHpBuff__PartialPreActionProc(
     || (BattleBuffData__DelForceBuff((BattleBuffData_o *)this, v5->fields.buffArray, 0),
         (this = (BattleActionEffect_AddSubChangeMaxHpBuff_o *)svt->fields.buffData) == 0) )
   {
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   }
   BattleBuffData__AddForceBuff((BattleBuffData_o *)this, v5->fields._SubBuffArray_k__BackingField, 0);
 }
@@ -402,7 +402,7 @@ void BattleActionEffect_AddSubChangeMaxHpBuff__set_SubBuffArray(
   const MethodInfo *v3; // x3
 
   this->fields._SubBuffArray_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._SubBuffArray_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._SubBuffArray_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -412,15 +412,15 @@ void BattleActionEffect_AddSubChangeMaxHpBuff___c___cctor(const MethodInfo *meth
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C59435 & 1) == 0 )
+  if ( (byte_4CB89B8 & 1) == 0 )
   {
-    sub_1C3E564(&BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo);
-    byte_4C59435 = 1;
+    sub_1C6BA08(&BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo);
+    byte_4CB89B8 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo->static_fields->__9 = (struct BattleActionEffect_AddSubChangeMaxHpBuff___c_o *)v1;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)BattleActionEffect_AddSubChangeMaxHpBuff___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -442,7 +442,7 @@ int32_t BattleActionEffect_AddSubChangeMaxHpBuff___c___PartialAfterEffectProc_b_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return x->fields.addOrder;
 }
 
@@ -462,18 +462,18 @@ bool BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0____ctor_b__0
 {
   System_Collections_Generic_HashSet_T__o *beforeBuffsHash; // x0
 
-  if ( (byte_4C59436 & 1) == 0 )
+  if ( (byte_4CB89B9 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
-    byte_4C59436 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
+    byte_4CB89B9 = 1;
   }
   beforeBuffsHash = (System_Collections_Generic_HashSet_T__o *)this->fields.beforeBuffsHash;
   if ( !beforeBuffsHash )
-    sub_1C3E7C0(0, x);
+    sub_1C6BC60(0, x);
   return !System_Collections_Generic_HashSet_object___Contains(
             beforeBuffsHash,
             (Il2CppObject *)x,
-            (const MethodInfo_366CBC0 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
+            (const MethodInfo_36B7AD4 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
 }
 
 
@@ -484,18 +484,18 @@ bool BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass14_0____ctor_b__1
 {
   System_Collections_Generic_HashSet_T__o *afterBuffsHash; // x0
 
-  if ( (byte_4C59437 & 1) == 0 )
+  if ( (byte_4CB89BA & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
-    byte_4C59437 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
+    byte_4CB89BA = 1;
   }
   afterBuffsHash = (System_Collections_Generic_HashSet_T__o *)this->fields.afterBuffsHash;
   if ( !afterBuffsHash )
-    sub_1C3E7C0(0, x);
+    sub_1C6BC60(0, x);
   return !System_Collections_Generic_HashSet_object___Contains(
             afterBuffsHash,
             (Il2CppObject *)x,
-            (const MethodInfo_366CBC0 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
+            (const MethodInfo_36B7AD4 *)Method_System_Collections_Generic_HashSet_BattleBuffData_BuffData__Contains__);
 }
 
 
@@ -515,18 +515,18 @@ bool BattleActionEffect_AddSubChangeMaxHpBuff___c__DisplayClass16_0___PartialAft
 {
   System_Collections_Generic_HashSet_int__o *addOrderHashSet; // x0
 
-  if ( (byte_4C59438 & 1) == 0 )
+  if ( (byte_4CB89BB & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_HashSet_int__Contains__);
-    byte_4C59438 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_HashSet_int__Contains__);
+    byte_4CB89BB = 1;
   }
   addOrderHashSet = this->fields.addOrderHashSet;
   if ( !addOrderHashSet )
-    sub_1C3E7C0(0, *(_QWORD *)&x);
+    sub_1C6BC60(0, *(_QWORD *)&x);
   return System_Collections_Generic_HashSet_int___Contains(
            addOrderHashSet,
            x,
-           (const MethodInfo_36665B8 *)Method_System_Collections_Generic_HashSet_int__Contains__);
+           (const MethodInfo_36B16B0 *)Method_System_Collections_Generic_HashSet_int__Contains__);
 }
 
 
@@ -568,10 +568,10 @@ void BattleActionEffect_BaseChangeServantBuff___ctor(
   __int64 v12; // x0
   __int64 v13; // x0
 
-  if ( (byte_4C59439 & 1) == 0 )
+  if ( (byte_4CB89BC & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Array_Empty_BattleBuffData_BuffData___);
-    byte_4C59439 = 1;
+    sub_1C6BA08(&Method_System_Array_Empty_BattleBuffData_BuffData___);
+    byte_4CB89BC = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.targetId = inTargetId;
@@ -581,21 +581,21 @@ void BattleActionEffect_BaseChangeServantBuff___ctor(
     v11 = *((_QWORD *)Method_System_Array_Empty_BattleBuffData_BuffData___ + 7);
     if ( !v11 )
     {
-      sub_1C8ECD4(Method_System_Array_Empty_BattleBuffData_BuffData___);
+      sub_1C41AF8(Method_System_Array_Empty_BattleBuffData_BuffData___);
       v11 = v10[7];
     }
     v12 = *(_QWORD *)(v11 + 16);
     if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-      v12 = sub_1C8EC78(inited);
+      v12 = sub_1C41A9C(inited);
     if ( !*(_DWORD *)(v12 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v12);
     v13 = *(_QWORD *)(v10[7] + 16LL);
     if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-      v13 = sub_1C8EC78(inited);
+      v13 = sub_1C41A9C(inited);
     buffArray = **(BattleBuffData_BuffData_array ***)(v13 + 184);
   }
   this->fields.ChangeBuffArray = buffArray;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.ChangeBuffArray, (int32_t)buffArray, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.ChangeBuffArray, (int32_t)buffArray, v7, v8);
 }
 
 
@@ -611,7 +611,7 @@ void BattleActionEffect_BaseChangeServantBuff__ForceAddBuff(
   {
     BuffData = BattleServantData__get_BuffData(svtData, 0);
     if ( !BuffData )
-      sub_1C3E7C0(0, v5);
+      sub_1C6BC60(0, v5);
     BattleBuffData__AddForceBuff(BuffData, this->fields.ChangeBuffArray, 0);
   }
 }
@@ -629,7 +629,7 @@ void BattleActionEffect_BaseChangeServantBuff__ForceDelBuff(
   {
     BuffData = BattleServantData__get_BuffData(svtData, 0);
     if ( !BuffData )
-      sub_1C3E7C0(0, v5);
+      sub_1C6BC60(0, v5);
     BattleBuffData__DelForceBuff(BuffData, this->fields.ChangeBuffArray, 0);
   }
 }
@@ -647,7 +647,7 @@ void BattleActionEffect_BaseField__AfterEffectProc(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   ((void (__fastcall *)(BattleActionEffect_BaseField_o *, BattleData_o *, struct BattleFieldEnvironmentData_o *, const MethodInfo *))this->klass->vtable._6_PartialAfterEffectProc.methodPtr)(
     this,
     data,
@@ -686,7 +686,7 @@ void BattleActionEffect_BaseServant__AfterEffectProc(
   BattleServantData_o *ServantData; // x0
 
   if ( !data )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   ServantData = BattleData__getServantData(data, this->fields.targetId, 0);
   if ( ServantData )
     ((void (__fastcall *)(BattleActionEffect_BaseServant_o *, BattleData_o *, BattleServantData_o *, const MethodInfo *))this->klass->vtable._6_PartialAfterEffectProc.methodPtr)(
@@ -703,7 +703,7 @@ BattleServantData_o *BattleActionEffect_BaseServant__GetServant(
         const MethodInfo *method)
 {
   if ( !data )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return BattleData__getServantData(data, this->fields.targetId, 0);
 }
 
@@ -730,7 +730,7 @@ void BattleActionEffect_ChangeBgmBuff__AfterEffectProc(
         const MethodInfo *method)
 {
   if ( !data || (this = (BattleActionEffect_ChangeBgmBuff_o *)data->fields.logic) == 0 )
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   BattleLogic__PlayLoadCurrentBgm((BattleLogic_o *)this, 0, 0.0, 0);
 }
 
@@ -766,13 +766,13 @@ void BattleActionEffect_LossHPFunc__PartialAfterEffectProc(
   int32_t v10; // w1
 
   v5 = this;
-  if ( (byte_4C5943A & 1) == 0 )
+  if ( (byte_4CB89BD & 1) == 0 )
   {
-    this = (BattleActionEffect_LossHPFunc_o *)sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C5943A = 1;
+    this = (BattleActionEffect_LossHPFunc_o *)sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB89BD = 1;
   }
   if ( !svt )
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   NowHp = BattleServantData__getNowHp(svt, 0);
   if ( NowHp >= 1 )
   {
@@ -781,7 +781,7 @@ void BattleActionEffect_LossHPFunc__PartialAfterEffectProc(
     lossHp = v5->fields.lossHp;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v10 = System_Math__Max_65159900(v7 - lossHp, isSafe, 0);
+    v10 = System_Math__Max_65488612(v7 - lossHp, isSafe, 0);
     BattleServantData__setHp(svt, v10, 0, 0, 0);
   }
 }
@@ -802,7 +802,7 @@ BattleActionEffect_MaxHpBuffServant_o *BattleActionEffect_MaxHpBuffServant__Init
         const MethodInfo *method)
 {
   this->fields.buffArray = buffArray;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields.buffArray,
     (int32_t)buffArray,
     targetId,
@@ -833,7 +833,7 @@ void BattleActionEffect_MaxHpBuffServant__PreActionProc(
   int32_t NowHp; // w0
 
   if ( !data )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   ServantData = BattleData__getServantData(data, this->fields.targetId, 0);
   if ( ServantData )
   {
@@ -875,7 +875,7 @@ void BattleActionEffect_SubChangeMaxHpBuff__PartialAfterEffectProc(
         this = (BattleActionEffect_SubChangeMaxHpBuff_o *)BattleServantData__getMaxHp(svt, 0),
         !svt->fields.buffData) )
   {
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   }
   v6 = (int)this;
   BattleBuffData__DelForceBuff(svt->fields.buffData, v4->fields.buffArray, 0);
@@ -899,7 +899,7 @@ void BattleActionEffect_SubChangeMaxHpBuff__PartialPreActionProc(
 
   subBaseHp = 0;
   if ( !svt || !svt->fields.buffData )
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   BattleBuffData__AddForceBuff(svt->fields.buffData, this->fields.buffArray, 0);
   BattleServantData__CalculateTotalBaseHp(svt, &subBaseHp, 1, 0);
 }
@@ -918,7 +918,7 @@ void BattleActionEffect_UpdateAllInfo__PartialAfterEffectProc(
         const MethodInfo *method)
 {
   if ( !fieldData )
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   BattleFieldEnvironmentData__UpdateAllView(fieldData, 0);
 }
 
@@ -936,6 +936,6 @@ void BattleActionEffect_UpdateFieldInfo__PartialAfterEffectProc(
         const MethodInfo *method)
 {
   if ( !data || (this = (BattleActionEffect_UpdateFieldInfo_o *)data->fields.perf) == 0 )
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   BattlePerformance__UpdateFieldView((BattlePerformance_o *)this, 0);
 }

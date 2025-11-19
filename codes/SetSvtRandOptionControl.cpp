@@ -12,25 +12,25 @@ void SetSvtRandOptionControl__Init(SetSvtRandOptionControl_o *this, const Method
   UILabel_o *svtRandDispInfoLb; // x20
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C51DB0 & 1) == 0 )
+  if ( (byte_4CB12F8 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&OptionManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_9713/*"OPTION_SVT_RAND_DISP"*/);
-    sub_1C3E564(&StringLiteral_9712/*"OPTION_SVT_EXPLANATION"*/);
-    byte_4C51DB0 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&OptionManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9709/*"OPTION_SVT_RAND_DISP"*/);
+    sub_1C6BA08(&StringLiteral_9708/*"OPTION_SVT_EXPLANATION"*/);
+    byte_4CB12F8 = 1;
   }
   svtRandDispTitle = this->fields.svtRandDispTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9713/*"OPTION_SVT_RAND_DISP"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9709/*"OPTION_SVT_RAND_DISP"*/, 0);
   if ( !svtRandDispTitle
     || (UILabel__set_text(svtRandDispTitle, v4, 0),
         svtRandDispInfoLb = this->fields.svtRandDispInfoLb,
-        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9712/*"OPTION_SVT_EXPLANATION"*/, 0),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9708/*"OPTION_SVT_EXPLANATION"*/, 0),
         !svtRandDispInfoLb) )
   {
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   }
   UILabel__set_text(svtRandDispInfoLb, v4, 0);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -46,15 +46,15 @@ void SetSvtRandOptionControl__OnChangeBtn(SetSvtRandOptionControl_o *this, const
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C51DB3 & 1) == 0 )
+  if ( (byte_4CB12FB & 1) == 0 )
   {
-    sub_1C3E564(&Method_SetSvtRandOptionControl_OnChangeBtn__);
-    byte_4C51DB3 = 1;
+    sub_1C6BA08(&Method_SetSvtRandOptionControl_OnChangeBtn__);
+    byte_4CB12FB = 1;
   }
   v3 = Method_SetSvtRandOptionControl_OnChangeBtn__;
   if ( (*((_BYTE *)Method_SetSvtRandOptionControl_OnChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_SetSvtRandOptionControl_OnChangeBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_SetSvtRandOptionControl_OnChangeBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.isSvtRand, 0, 0);
   this->fields.isSvtRand ^= 1u;
   SetSvtRandOptionControl__setDispValue(this, v5);
@@ -65,10 +65,10 @@ void SetSvtRandOptionControl__Reflection(SetSvtRandOptionControl_o *this, const 
 {
   _BOOL4 isSvtRand; // w19
 
-  if ( (byte_4C51DB2 & 1) == 0 )
+  if ( (byte_4CB12FA & 1) == 0 )
   {
-    sub_1C3E564(&OptionManager_TypeInfo);
-    byte_4C51DB2 = 1;
+    sub_1C6BA08(&OptionManager_TypeInfo);
+    byte_4CB12FA = 1;
   }
   isSvtRand = this->fields.isSvtRand;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -82,18 +82,18 @@ void SetSvtRandOptionControl__setDispValue(SetSvtRandOptionControl_o *this, cons
   UIButton_o *svtRandDispBtn; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4C51DB1 & 1) == 0 )
+  if ( (byte_4CB12F9 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_17524/*"btn_on"*/);
-    sub_1C3E564(&StringLiteral_17523/*"btn_off"*/);
-    byte_4C51DB1 = 1;
+    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
+    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
+    byte_4CB12F9 = 1;
   }
   svtRandDispBtn = this->fields.svtRandDispBtn;
   if ( !svtRandDispBtn )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   if ( this->fields.isSvtRand )
-    v4 = &StringLiteral_17524/*"btn_on"*/;
+    v4 = &StringLiteral_17522/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17523/*"btn_off"*/;
+    v4 = &StringLiteral_17521/*"btn_off"*/;
   UIButton__set_normalSprite(svtRandDispBtn, (System_String_o *)*v4, 0);
 }

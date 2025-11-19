@@ -1,9 +1,9 @@
 void PhotoFrameSelectDialog___ctor(PhotoFrameSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5239E & 1) == 0 )
+  if ( (byte_4CB18EC & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C5239E = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB18EC = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -19,10 +19,10 @@ void PhotoFrameSelectDialog__Init(PhotoFrameSelectDialog_o *this, UIAtlas_o *atl
   struct PhotoFrameListViewManager_o *photoFrameListViewManager; // x8
   UnityEngine_Color_o v9; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C52398 & 1) == 0 )
+  if ( (byte_4CB18E6 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C52398 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB18E6 = 1;
   }
   titleLabel = this->fields.titleLabel;
   this->fields.state = 0;
@@ -44,7 +44,7 @@ void PhotoFrameSelectDialog__Init(PhotoFrameSelectDialog_o *this, UIAtlas_o *atl
   photoFrameListViewManager = this->fields.photoFrameListViewManager;
   if ( !photoFrameListViewManager
     || (photoFrameListViewManager->fields.frameSampleAtlas = atlas,
-        sub_1C3E508(
+        sub_1C6B9AC(
           (CGThumbnailListItem_o *)&photoFrameListViewManager->fields.frameSampleAtlas,
           (int32_t)atlas,
           v6,
@@ -52,7 +52,7 @@ void PhotoFrameSelectDialog__Init(PhotoFrameSelectDialog_o *this, UIAtlas_o *atl
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_9:
-    sub_1C3E7C0(titleLabel, atlas);
+    sub_1C6BC60(titleLabel, atlas);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -65,17 +65,17 @@ void PhotoFrameSelectDialog__OnClickCancel(PhotoFrameSelectDialog_o *this, const
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *cancelCallback; // x1
 
-  if ( (byte_4C5239B & 1) == 0 )
+  if ( (byte_4CB18E9 & 1) == 0 )
   {
-    sub_1C3E564(&Method_PhotoFrameSelectDialog_OnClickCancel__);
-    byte_4C5239B = 1;
+    sub_1C6BA08(&Method_PhotoFrameSelectDialog_OnClickCancel__);
+    byte_4CB18E9 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_PhotoFrameSelectDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_PhotoFrameSelectDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_PhotoFrameSelectDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_PhotoFrameSelectDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     cancelCallback = this->fields.cancelCallback;
     this->fields.state = 3;
@@ -90,22 +90,22 @@ void PhotoFrameSelectDialog__OnClickDecide(PhotoFrameSelectDialog_o *this, const
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C5239A & 1) == 0 )
+  if ( (byte_4CB18E8 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_PhotoFrameSelectDialog_OnClickDecide__);
-    sub_1C3E564(&Method_PhotoFrameSelectDialog__OnClickDecide_b__14_0__);
-    byte_4C5239A = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_PhotoFrameSelectDialog_OnClickDecide__);
+    sub_1C6BA08(&Method_PhotoFrameSelectDialog__OnClickDecide_b__14_0__);
+    byte_4CB18E8 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_PhotoFrameSelectDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_PhotoFrameSelectDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_PhotoFrameSelectDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_PhotoFrameSelectDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
     this->fields.state = 3;
-    v5 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_PhotoFrameSelectDialog__OnClickDecide_b__14_0__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -130,12 +130,12 @@ void PhotoFrameSelectDialog__OnClickFrameSample(
   const MethodInfo *v15; // x3
   const MethodInfo *v16; // x2
 
-  if ( (byte_4C5239C & 1) == 0 )
+  if ( (byte_4CB18EA & 1) == 0 )
   {
-    sub_1C3E564(&PhotoFrameListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
-    sub_1C3E564(&Method_PhotoFrameSelectDialog_OnClickFrameSample__);
-    byte_4C5239C = 1;
+    sub_1C6BA08(&PhotoFrameListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
+    sub_1C6BA08(&Method_PhotoFrameSelectDialog_OnClickFrameSample__);
+    byte_4CB18EA = 1;
   }
   if ( this->fields.state == 2
     && !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.frameList, 0) )
@@ -144,8 +144,8 @@ void PhotoFrameSelectDialog__OnClickFrameSample(
     {
       v6 = Method_PhotoFrameSelectDialog_OnClickFrameSample__;
       if ( (*((_BYTE *)Method_PhotoFrameSelectDialog_OnClickFrameSample__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_1C3E57C(Method_PhotoFrameSelectDialog_OnClickFrameSample__);
-      v7 = (System_Reflection_MethodBase_o *)sub_1C3E548(v6, v6[4]);
+        v6 = (_QWORD *)sub_1C6BA20(Method_PhotoFrameSelectDialog_OnClickFrameSample__);
+      v7 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v6, v6[4]);
       OverwriteAssetSoundName__PlaySystemSe(v7, 0, 0, 0);
     }
     frameList = this->fields.frameList;
@@ -155,11 +155,11 @@ void PhotoFrameSelectDialog__OnClickFrameSample(
           (frameList = System_Collections_Generic_List_object___get_Item(
                          (System_Collections_Generic_List_object__o *)frameList,
                          index,
-                         (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__)) == 0)
+                         (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__)) == 0)
       || !photoFrameListViewManager
       || (PhotoFrameListViewManager__ModifySelectingItem(photoFrameListViewManager, *((_DWORD *)frameList + 4), v10),
           v11 = this->fields.photoFrameListViewManager,
-          v12 = (PhotoFrameListViewManager_CallbackFunc_o *)sub_1C3E7B0(PhotoFrameListViewManager_CallbackFunc_TypeInfo),
+          v12 = (PhotoFrameListViewManager_CallbackFunc_o *)sub_1C6BC54(PhotoFrameListViewManager_CallbackFunc_TypeInfo),
           PhotoFrameListViewManager_CallbackFunc___ctor(
             v12,
             (Il2CppObject *)this,
@@ -167,11 +167,11 @@ void PhotoFrameSelectDialog__OnClickFrameSample(
             v13),
           !v11) )
     {
-      sub_1C3E7C0(frameList, v5);
+      sub_1C6BC60(frameList, v5);
     }
     v11->fields.callbackFunc = v12;
-    sub_1C3E508((CGThumbnailListItem_o *)&v11->fields.callbackFunc, (int32_t)v12, v14, v15);
-    PhotoFrameListViewManager__SetMode_33859048(v11, 2, v16);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v11->fields.callbackFunc, (int32_t)v12, v14, v15);
+    PhotoFrameListViewManager__SetMode_34038664(v11, 2, v16);
   }
 }
 
@@ -180,13 +180,13 @@ void PhotoFrameSelectDialog__OnEnable(PhotoFrameSelectDialog_o *this, const Meth
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C5239D & 1) == 0 )
+  if ( (byte_4CB18EB & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_15659/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4C5239D = 1;
+    sub_1C6BA08(&StringLiteral_15646/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_4CB18EB = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45015816(transform, (System_String_o *)StringLiteral_15659/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45210584(transform, (System_String_o *)StringLiteral_15646/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -227,34 +227,34 @@ void PhotoFrameSelectDialog__Open(
   System_Action_o *v36; // x21
   int32_t firstSelectIndex; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C52399 & 1) == 0 )
+  if ( (byte_4CB18E7 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&PhotoFrameListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMaster_PhotoFrameMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__getEntityList__);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&Method_PhotoFrameSelectDialog_OnClickFrameSample__);
-    sub_1C3E564(&Method_PhotoFrameSelectDialog___c__DisplayClass13_0__Open_b__0__);
-    sub_1C3E564(&PhotoFrameSelectDialog___c__DisplayClass13_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_10358/*"PHOTO_FRAME_SELECT_DIALOG_MESSAGE"*/);
-    sub_1C3E564(&StringLiteral_25454/*"フォトフレーム選択ID保持用のPlayerPrefs名"*/);
-    sub_1C3E564(&StringLiteral_10359/*"PHOTO_FRAME_SELECT_DIALOG_TITLE"*/);
-    sub_1C3E564(&StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C3E564(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
-    byte_4C52399 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&PhotoFrameListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMaster_PhotoFrameMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_PhotoFrameMaster__PhotoFrameEntity__string__getEntityList__);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&Method_PhotoFrameSelectDialog_OnClickFrameSample__);
+    sub_1C6BA08(&Method_PhotoFrameSelectDialog___c__DisplayClass13_0__Open_b__0__);
+    sub_1C6BA08(&PhotoFrameSelectDialog___c__DisplayClass13_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_10354/*"PHOTO_FRAME_SELECT_DIALOG_MESSAGE"*/);
+    sub_1C6BA08(&StringLiteral_25544/*"フォトフレーム選択ID保持用のPlayerPrefs名"*/);
+    sub_1C6BA08(&StringLiteral_10355/*"PHOTO_FRAME_SELECT_DIALOG_TITLE"*/);
+    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
+    byte_4CB18E7 = 1;
   }
   firstSelectIndex = 0;
-  v9 = sub_1C3E7B0(PhotoFrameSelectDialog___c__DisplayClass13_0_TypeInfo);
+  v9 = sub_1C6BC54(PhotoFrameSelectDialog___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_17;
   *(_QWORD *)(v9 + 16) = setMaskMethod;
-  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 16), (int32_t)setMaskMethod, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)setMaskMethod, v12, v13);
   *(_QWORD *)(v9 + 24) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 24), (int32_t)this, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)this, v14, v15);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_17;
@@ -262,45 +262,45 @@ void PhotoFrameSelectDialog__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10359/*"PHOTO_FRAME_SELECT_DIALOG_TITLE"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10355/*"PHOTO_FRAME_SELECT_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_17;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   messageLabel = this->fields.messageLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10358/*"PHOTO_FRAME_SELECT_DIALOG_MESSAGE"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_10354/*"PHOTO_FRAME_SELECT_DIALOG_MESSAGE"*/, 0);
   if ( !messageLabel )
     goto LABEL_17;
   UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
   decideButtonLabel = this->fields.decideButtonLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideButtonLabel )
     goto LABEL_17;
   UILabel__set_text(decideButtonLabel, (System_String_o *)gameObject, 0);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelButtonLabel )
     goto LABEL_17;
   UILabel__set_text(cancelButtonLabel, (System_String_o *)gameObject, 0);
   this->fields.decideCallback = decide;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.decideCallback, (int32_t)decide, v20, v21);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.decideCallback, (int32_t)decide, v20, v21);
   this->fields.cancelCallback = cancel;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.cancelCallback, (int32_t)cancel, v22, v23);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.cancelCallback, (int32_t)cancel, v22, v23);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  gameObject = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_PhotoFrameMaster___);
+  gameObject = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_PhotoFrameMaster___);
   if ( !gameObject )
     goto LABEL_17;
   v24 = (struct System_Collections_Generic_List_PhotoFrameEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                         *((System_Collections_Generic_IEnumerable_TSource__o **)gameObject
                                                                         + 5),
-                                                                        (const MethodInfo_313DE84 *)Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
+                                                                        (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
   this->fields.frameList = v24;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.frameList, (int32_t)v24, v25, v26);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.frameList, (int32_t)v24, v25, v26);
   photoFrameListViewManager = this->fields.photoFrameListViewManager;
   v28 = (System_Collections_Generic_List_PhotoFrameEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.frameList,
-                                                                 (const MethodInfo_313DE84 *)Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
-  gameObject = (void *)UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_25454/*"フォトフレーム選択ID保持用のPlayerPrefs名"*/, 0, 0);
+                                                                 (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
+  gameObject = (void *)UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_25544/*"フォトフレーム選択ID保持用のPlayerPrefs名"*/, 0, 0);
   if ( !photoFrameListViewManager
     || (PhotoFrameListViewManager__CreatePhotoFrameList(
           photoFrameListViewManager,
@@ -310,7 +310,7 @@ void PhotoFrameSelectDialog__Open(
           v29),
         v30 = this->fields.photoFrameListViewManager,
         this->fields.selectedIndex = firstSelectIndex,
-        v31 = (PhotoFrameListViewManager_CallbackFunc_o *)sub_1C3E7B0(PhotoFrameListViewManager_CallbackFunc_TypeInfo),
+        v31 = (PhotoFrameListViewManager_CallbackFunc_o *)sub_1C6BC54(PhotoFrameListViewManager_CallbackFunc_TypeInfo),
         PhotoFrameListViewManager_CallbackFunc___ctor(
           v31,
           (Il2CppObject *)this,
@@ -319,12 +319,12 @@ void PhotoFrameSelectDialog__Open(
         !v30) )
   {
 LABEL_17:
-    sub_1C3E7C0(gameObject, v11);
+    sub_1C6BC60(gameObject, v11);
   }
   v30->fields.callbackFunc = v31;
-  sub_1C3E508((CGThumbnailListItem_o *)&v30->fields.callbackFunc, (int32_t)v31, v33, v34);
-  PhotoFrameListViewManager__SetMode_33859048(v30, 2, v35);
-  v36 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v30->fields.callbackFunc, (int32_t)v31, v33, v34);
+  PhotoFrameListViewManager__SetMode_34038664(v30, 2, v35);
+  v36 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v36, (Il2CppObject *)v9, Method_PhotoFrameSelectDialog___c__DisplayClass13_0__Open_b__0__, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, v36, 0, 0);
 }
@@ -335,12 +335,12 @@ void PhotoFrameSelectDialog___OnClickDecide_b__14_0(PhotoFrameSelectDialog_o *th
   void *frameList; // x0
   struct PhotoFrameSelectDialog_DecideDelegate_o *decideCallback; // x21
 
-  if ( (byte_4C5239F & 1) == 0 )
+  if ( (byte_4CB18ED & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
-    sub_1C3E564(&StringLiteral_25454/*"フォトフレーム選択ID保持用のPlayerPrefs名"*/);
-    byte_4C5239F = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
+    sub_1C6BA08(&StringLiteral_25544/*"フォトフレーム選択ID保持用のPlayerPrefs名"*/);
+    byte_4CB18ED = 1;
   }
   frameList = this->fields.frameList;
   if ( !frameList )
@@ -351,7 +351,7 @@ void PhotoFrameSelectDialog___OnClickDecide_b__14_0(PhotoFrameSelectDialog_o *th
     frameList = System_Collections_Generic_List_object___get_Item(
                   (System_Collections_Generic_List_object__o *)frameList,
                   this->fields.selectedIndex,
-                  (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
+                  (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
     if ( frameList )
     {
       if ( decideCallback )
@@ -366,10 +366,10 @@ void PhotoFrameSelectDialog___OnClickDecide_b__14_0(PhotoFrameSelectDialog_o *th
           frameList = System_Collections_Generic_List_object___get_Item(
                         (System_Collections_Generic_List_object__o *)frameList,
                         this->fields.selectedIndex,
-                        (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
+                        (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
           if ( frameList )
           {
-            UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_25454/*"フォトフレーム選択ID保持用のPlayerPrefs名"*/, *((_DWORD *)frameList + 4), 0);
+            UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_25544/*"フォトフレーム選択ID保持用のPlayerPrefs名"*/, *((_DWORD *)frameList + 4), 0);
             UnityEngine_PlayerPrefs__Save(0);
             return;
           }
@@ -377,7 +377,7 @@ void PhotoFrameSelectDialog___OnClickDecide_b__14_0(PhotoFrameSelectDialog_o *th
       }
     }
 LABEL_11:
-    sub_1C3E7C0(frameList, method);
+    sub_1C6BC60(frameList, method);
   }
 }
 
@@ -398,14 +398,14 @@ void PhotoFrameSelectDialog_DecideDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) != 0 )
+  if ( (sub_1C6BAC8(method) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A7C448;
+      v9 = sub_1A9B070;
 LABEL_8:
       this->fields.invoke_impl = (intptr_t)v9;
       goto LABEL_9;
@@ -415,20 +415,20 @@ LABEL_8:
   {
     if ( !v8 )
     {
-      v9 = sub_1A7C428;
+      v9 = sub_1A9B050;
       goto LABEL_8;
     }
     if ( !object )
     {
-      v11 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v11, 0);
+      v11 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v11, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A7C3E0;
+  this->fields.extra_arg = (intptr_t)sub_1A9B008;
 }
 
 
@@ -442,7 +442,7 @@ System_IAsyncResult_o *PhotoFrameSelectDialog_DecideDelegate__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = spriteName;
-  return (System_IAsyncResult_o *)sub_1C3E518(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v6, callback, object);
 }
 
 
@@ -451,7 +451,7 @@ void PhotoFrameSelectDialog_DecideDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 
@@ -483,17 +483,17 @@ void PhotoFrameSelectDialog___c__DisplayClass13_0___Open_b__0(
   __int64 v4; // x1
   struct PhotoFrameSelectDialog_o *_4__this; // x8
 
-  if ( (byte_4C523A0 & 1) == 0 )
+  if ( (byte_4CB18EE & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_bool___);
-    byte_4C523A0 = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
+    byte_4CB18EE = 1;
   }
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.setMaskMethod,
     0,
-    (const MethodInfo_3046270 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3E7C0(v3, v4);
+    sub_1C6BC60(v3, v4);
   _4__this->fields.state = 2;
 }

@@ -12,31 +12,31 @@ void SampleEventListViewItemDraw___cctor(const MethodInfo *method)
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C54528 & 1) == 0 )
+  if ( (byte_4CB3A7A & 1) == 0 )
   {
-    sub_1C3E564(&SampleEventListViewItemDraw_TypeInfo);
-    sub_1C3E564(&string___TypeInfo);
-    sub_1C3E564(&StringLiteral_16744/*"ai_quest_free"*/);
-    sub_1C3E564(&StringLiteral_16743/*"ai_quest_event"*/);
-    byte_4C54528 = 1;
+    sub_1C6BA08(&SampleEventListViewItemDraw_TypeInfo);
+    sub_1C6BA08(&string___TypeInfo);
+    sub_1C6BA08(&StringLiteral_16740/*"ai_quest_free"*/);
+    sub_1C6BA08(&StringLiteral_16739/*"ai_quest_event"*/);
+    byte_4CB3A7A = 1;
   }
-  v1 = sub_1C3E60C(string___TypeInfo, 2);
+  v1 = sub_1C6BAB0(string___TypeInfo, 2);
   if ( !v1 )
-    sub_1C3E7C0(0, v2);
+    sub_1C6BC60(0, v2);
   v5 = v1;
   if ( !*(_DWORD *)(v1 + 24)
-    || (v6 = StringLiteral_16743/*"ai_quest_event"*/,
-        *(_QWORD *)(v1 + 32) = StringLiteral_16743/*"ai_quest_event"*/,
-        sub_1C3E508((CGThumbnailListItem_o *)(v1 + 32), v6, v3, v4),
+    || (v6 = StringLiteral_16739/*"ai_quest_event"*/,
+        *(_QWORD *)(v1 + 32) = StringLiteral_16739/*"ai_quest_event"*/,
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v1 + 32), v6, v3, v4),
         *(_DWORD *)(v5 + 24) <= 1u) )
   {
-    sub_1C3E7C8(v1, v2);
+    sub_1C6BC68(v1);
   }
-  v9 = StringLiteral_16744/*"ai_quest_free"*/;
-  *(_QWORD *)(v5 + 40) = StringLiteral_16744/*"ai_quest_free"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), v9, v7, v8);
+  v9 = StringLiteral_16740/*"ai_quest_free"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_16740/*"ai_quest_free"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), v9, v7, v8);
   SampleEventListViewItemDraw_TypeInfo->static_fields->eventTypeSpriteList = (struct System_String_array *)v5;
-  sub_1C3E508((CGThumbnailListItem_o *)SampleEventListViewItemDraw_TypeInfo->static_fields, v5, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)SampleEventListViewItemDraw_TypeInfo->static_fields, v5, v10, v11);
 }
 
 
@@ -66,12 +66,12 @@ void SampleEventListViewItemDraw__SetItem(
   float v15; // s2
 
   v5 = item;
-  if ( (byte_4C54527 & 1) == 0 )
+  if ( (byte_4CB3A79 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&SampleEventListViewItemDraw_TypeInfo);
-    byte_4C54527 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&SampleEventListViewItemDraw_TypeInfo);
+    byte_4CB3A79 = 1;
   }
   if ( v5 && mode )
   {
@@ -89,7 +89,7 @@ void SampleEventListViewItemDraw__SetItem(
       if ( !klass )
         goto LABEL_27;
       if ( (unsigned int)eventType >= LODWORD(klass->_1.namespaze) )
-        sub_1C3E7C8(eventTextLabel, item);
+        sub_1C6BC68(eventTextLabel);
       if ( !iconImageSprite )
         goto LABEL_27;
       UISprite__set_spriteName(iconImageSprite, *((System_String_o **)&klass->_1.byval_arg.data + eventType), 0);
@@ -111,7 +111,7 @@ void SampleEventListViewItemDraw__SetItem(
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)eventTextLabel,
-                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         eventTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -136,7 +136,7 @@ void SampleEventListViewItemDraw__SetItem(
       }
     }
 LABEL_27:
-    sub_1C3E7C0(eventTextLabel, item);
+    sub_1C6BC60(eventTextLabel, item);
   }
   this->fields.eventType = -1;
 }

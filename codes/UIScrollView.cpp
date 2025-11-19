@@ -4,17 +4,17 @@ void UIScrollView___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C5B433 & 1) == 0 )
+  if ( (byte_4CBAA10 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_UIScrollView___ctor__);
-    sub_1C3E564(&BetterList_UIScrollView__TypeInfo);
-    sub_1C3E564(&UIScrollView_TypeInfo);
-    byte_4C5B433 = 1;
+    sub_1C6BA08(&Method_BetterList_UIScrollView___ctor__);
+    sub_1C6BA08(&BetterList_UIScrollView__TypeInfo);
+    sub_1C6BA08(&UIScrollView_TypeInfo);
+    byte_4CBAA10 = 1;
   }
-  v1 = (BetterList_T__o *)sub_1C3E7B0(BetterList_UIScrollView__TypeInfo);
-  BetterList_object____ctor(v1, (const MethodInfo_332C5CC *)Method_BetterList_UIScrollView___ctor__);
+  v1 = (BetterList_T__o *)sub_1C6BC54(BetterList_UIScrollView__TypeInfo);
+  BetterList_object____ctor(v1, (const MethodInfo_3372068 *)Method_BetterList_UIScrollView___ctor__);
   UIScrollView_TypeInfo->static_fields->list = (struct BetterList_UIScrollView__o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)UIScrollView_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)UIScrollView_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -33,21 +33,21 @@ void UIScrollView___ctor(UIScrollView_o *this, const MethodInfo *method)
   this->fields.restrictWithinPanel = 1;
   *(_WORD *)&this->fields.smoothDragStart = 257;
   *(_QWORD *)&this->fields.scale.fields.x = 1065353216;
-  if ( !byte_4C5059A )
+  if ( !byte_4CAFAE9 )
   {
-    sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
-    byte_4C5059A = 1;
+    sub_1C6BA08(&UnityEngine_Vector2_TypeInfo);
+    byte_4CAFAE9 = 1;
   }
   this->fields.relativePositionOnReset = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
-  if ( byte_4C506A1 )
+  if ( byte_4CAFC09 )
   {
     v3 = 0;
   }
   else
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
-    v3 = byte_4C5059A == 0;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
+    v3 = byte_4CAFAE9 == 0;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v5 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -57,8 +57,8 @@ void UIScrollView___ctor(UIScrollView_o *this, const MethodInfo *method)
   this->fields.mMomentum.fields.z = z;
   if ( v3 )
   {
-    sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
-    byte_4C5059A = 1;
+    sub_1C6BA08(&UnityEngine_Vector2_TypeInfo);
+    byte_4CAFAE9 = 1;
   }
   this->fields.mDragStartOffset = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
@@ -87,22 +87,22 @@ void UIScrollView__Awake(UIScrollView_o *this, const MethodInfo *method)
   float v20; // s0
   int32_t v21; // w9
 
-  if ( (byte_4C5B422 & 1) == 0 )
+  if ( (byte_4CBA9FF & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4C5B422 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4CBA9FF = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)Component_object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)Component_object, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)Component_object, v7, v8);
   mPanel = this->fields.mPanel;
   if ( !mPanel )
-    sub_1C3E7C0(0, v9);
+    sub_1C6BC60(0, v9);
   if ( !mPanel->fields.mClipping )
     UIPanel__set_clipping(mPanel, 4, 0);
   if ( this->fields.movement != 3 )
@@ -136,10 +136,10 @@ void UIScrollView__Awake(UIScrollView_o *this, const MethodInfo *method)
         this->fields.movement = v13;
       }
 LABEL_19:
-      if ( !byte_4C506A1 )
+      if ( !byte_4CAFC09 )
       {
-        sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-        byte_4C506A1 = 1;
+        sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+        byte_4CAFC09 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       z = static_fields->zeroVector.fields.z;
@@ -150,10 +150,10 @@ LABEL_19:
   if ( !this->fields.contentPivot )
   {
     relativePositionOnReset = this->fields.relativePositionOnReset;
-    if ( !byte_4C5059A )
+    if ( !byte_4CAFAE9 )
     {
-      sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
-      byte_4C5059A = 1;
+      sub_1C6BA08(&UnityEngine_Vector2_TypeInfo);
+      byte_4CAFAE9 = 1;
     }
     v17 = UnityEngine_Vector2_TypeInfo->static_fields;
     v18.n64_u64[0] = vsub_f32((float32x2_t)relativePositionOnReset, (float32x2_t)v17->zeroVector).n64_u64[0];
@@ -213,7 +213,7 @@ LABEL_19:
 void UIScrollView__CheckScrollbars(UIScrollView_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *horizontalScrollBar; // x20
-  EventDelegate_o *v4; // x0
+  __int64 v4; // x0
   __int64 v5; // x1
   struct UIProgressBar_o *v6; // x8
   System_Collections_Generic_List_EventDelegate__o *onChange; // x20
@@ -231,36 +231,36 @@ void UIScrollView__CheckScrollbars(UIScrollView_o *this, const MethodInfo *metho
   UIProgressBar_o *v19; // x20
   float v20; // s0
 
-  if ( (byte_4C5B425 & 1) == 0 )
+  if ( (byte_4CBAA02 & 1) == 0 )
   {
-    sub_1C3E564(&EventDelegate_Callback_TypeInfo);
-    sub_1C3E564(&EventDelegate_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_UIScrollView_OnScrollBar__);
-    byte_4C5B425 = 1;
+    sub_1C6BA08(&EventDelegate_Callback_TypeInfo);
+    sub_1C6BA08(&EventDelegate_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_UIScrollView_OnScrollBar__);
+    byte_4CBAA02 = 1;
   }
   horizontalScrollBar = (UnityEngine_Object_o *)this->fields.horizontalScrollBar;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = (EventDelegate_o *)UnityEngine_Object__op_Inequality(horizontalScrollBar, 0, 0);
-  if ( ((unsigned __int8)v4 & 1) != 0 )
+  v4 = UnityEngine_Object__op_Inequality(horizontalScrollBar, 0, 0);
+  if ( (v4 & 1) != 0 )
   {
     v6 = this->fields.horizontalScrollBar;
     if ( !v6 )
       goto LABEL_26;
     onChange = v6->fields.onChange;
-    v8 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+    v8 = (EventDelegate_Callback_o *)sub_1C6BC54(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(v8, (Il2CppObject *)this, Method_UIScrollView_OnScrollBar__, v9);
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    v4 = EventDelegate__Add(onChange, v8, v10);
+    v4 = (__int64)EventDelegate__Add(onChange, v8, v10);
     v11 = this->fields.horizontalScrollBar;
     if ( !this->fields.showScrollBars
-      || (v4 = (EventDelegate_o *)((__int64 (__fastcall *)(UIScrollView_o *, const MethodInfo *))this->klass->vtable._5_get_shouldMoveHorizontally.methodPtr)(
-                                    this,
-                                    this->klass->vtable._5_get_shouldMoveHorizontally.method),
+      || (v4 = ((__int64 (__fastcall *)(UIScrollView_o *, const MethodInfo *))this->klass->vtable._5_get_shouldMoveHorizontally.methodPtr)(
+                 this,
+                 this->klass->vtable._5_get_shouldMoveHorizontally.method),
           v12 = 0.0,
-          ((unsigned __int8)v4 & 1) != 0) )
+          (v4 & 1) != 0) )
     {
       v12 = 1.0;
     }
@@ -271,25 +271,25 @@ void UIScrollView__CheckScrollbars(UIScrollView_o *this, const MethodInfo *metho
   verticalScrollBar = (UnityEngine_Object_o *)this->fields.verticalScrollBar;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v4 = (EventDelegate_o *)UnityEngine_Object__op_Inequality(verticalScrollBar, 0, 0);
-  if ( ((unsigned __int8)v4 & 1) != 0 )
+  v4 = UnityEngine_Object__op_Inequality(verticalScrollBar, 0, 0);
+  if ( (v4 & 1) != 0 )
   {
     v14 = this->fields.verticalScrollBar;
     if ( v14 )
     {
       v15 = v14->fields.onChange;
-      v16 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+      v16 = (EventDelegate_Callback_o *)sub_1C6BC54(EventDelegate_Callback_TypeInfo);
       EventDelegate_Callback___ctor(v16, (Il2CppObject *)this, Method_UIScrollView_OnScrollBar__, v17);
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      v4 = EventDelegate__Add(v15, v16, v18);
+      v4 = (__int64)EventDelegate__Add(v15, v16, v18);
       v19 = this->fields.verticalScrollBar;
       if ( !this->fields.showScrollBars
-        || (v4 = (EventDelegate_o *)((__int64 (__fastcall *)(UIScrollView_o *, const MethodInfo *))this->klass->vtable._6_get_shouldMoveVertically.methodPtr)(
-                                      this,
-                                      this->klass->vtable._6_get_shouldMoveVertically.method),
+        || (v4 = ((__int64 (__fastcall *)(UIScrollView_o *, const MethodInfo *))this->klass->vtable._6_get_shouldMoveVertically.methodPtr)(
+                   this,
+                   this->klass->vtable._6_get_shouldMoveVertically.method),
             v20 = 0.0,
-            ((unsigned __int8)v4 & 1) != 0) )
+            (v4 & 1) != 0) )
       {
         v20 = 1.0;
       }
@@ -300,7 +300,7 @@ void UIScrollView__CheckScrollbars(UIScrollView_o *this, const MethodInfo *metho
       }
     }
 LABEL_26:
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   }
 }
 
@@ -311,22 +311,22 @@ void UIScrollView__DisableSpring(UIScrollView_o *this, const MethodInfo *method)
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4C5B427 & 1) == 0 )
+  if ( (byte_4CBAA04 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_SpringPanel___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B427 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_SpringPanel___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAA04 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SpringPanel___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_SpringPanel___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( v4 )
   {
     if ( !Component_object )
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Component_object, 0, 0);
   }
 }
@@ -400,11 +400,11 @@ void UIScrollView__Drag(UIScrollView_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B430 & 1) == 0 )
+  if ( (byte_4CBAA0D & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B430 = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBAA0D = 1;
   }
   v3 = UICamera_TypeInfo;
   memset(&v61, 0, sizeof(v61));
@@ -418,7 +418,7 @@ void UIScrollView__Drag(UIScrollView_o *this, const MethodInfo *method)
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  if ( !NGUITools__GetActive_49418336(gameObject, 0) || !this->fields.mShouldMove )
+  if ( !NGUITools__GetActive_49647220(gameObject, 0) || !this->fields.mShouldMove )
     return;
   p_image = &UICamera_TypeInfo->_1.image;
   if ( this->fields.mDragID == -10 )
@@ -478,7 +478,7 @@ void UIScrollView__Drag(UIScrollView_o *this, const MethodInfo *method)
   v12 = *(_QWORD *)(v11 + 160);
   if ( !v12 )
 LABEL_79:
-    sub_1C3E7C0(p_image, v5);
+    sub_1C6BC60(p_image, v5);
   p_image = *(_QWORD **)(v11 + 136);
   v13 = *(float *)(v12 + 16);
   v14 = *(float *)(v12 + 20);
@@ -494,7 +494,7 @@ LABEL_79:
     goto LABEL_79;
   }
   v15 = 0;
-  UnityEngine_Camera__ScreenPointToRay_71148320(v60, (UnityEngine_Camera_o *)p_image, *(UnityEngine_Vector3_o *)&v13, 0);
+  UnityEngine_Camera__ScreenPointToRay_71464736(v60, (UnityEngine_Camera_o *)p_image, *(UnityEngine_Vector3_o *)&v13, 0);
   v60[1] = v60[0];
   v61 = v60[0];
   z = v60[0].fields.m_Origin.fields.z;
@@ -505,10 +505,10 @@ LABEL_79:
   v21 = *(_QWORD *)&v60[0].fields.m_Origin.fields.x;
   v22 = (float)(v60[0].fields.m_Direction.fields.z * v20)
       + (float)((float)(v60[0].fields.m_Direction.fields.x * x) + (float)(v60[0].fields.m_Direction.fields.y * y));
-  if ( !byte_4C506A5 )
+  if ( !byte_4CAFC0D )
   {
-    sub_1C3E564(&UnityEngine_Mathf_TypeInfo);
-    byte_4C506A5 = 1;
+    sub_1C6BA08(&UnityEngine_Mathf_TypeInfo);
+    byte_4CAFC0D = 1;
   }
   v23 = fmaxf(fabsf(v22), 0.0) * 0.000001;
   static_fields = UnityEngine_Mathf_TypeInfo->static_fields;
@@ -581,12 +581,12 @@ LABEL_79:
   }
   else
   {
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
       v58 = v27.n64_u64[0];
-      sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
+      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
       v27.n64_u64[0] = v58;
-      byte_4C506A1 = 1;
+      byte_4CAFC09 = 1;
     }
     v36 = UnityEngine_Vector3_TypeInfo->static_fields;
     v34 = *(_QWORD *)&v36->zeroVector.fields.x;
@@ -625,10 +625,10 @@ LABEL_79:
                        *((float *)&v41 + 1)));
     v45 = v44;
     v47 = v46;
-    if ( !byte_4C506A3 )
+    if ( !byte_4CAFC0B )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C506A3 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CAFC0B = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -674,7 +674,7 @@ LABEL_66:
         v56 = this->fields.customMovement.fields.x != 0.0;
         v57 = this->fields.customMovement.fields.y != 0.0;
 LABEL_77:
-        UIScrollView__RestrictWithinBounds_49301336(this, 1, v56, v57, v48);
+        UIScrollView__RestrictWithinBounds_49530220(this, 1, v56, v57, v48);
         return;
       }
       v56 = 0;
@@ -692,10 +692,10 @@ void UIScrollView__GoToBottom(UIScrollView_o *this, const MethodInfo *method)
   long double v5; // q0
   long double v6; // q8
 
-  if ( (byte_4C5B42C & 1) == 0 )
+  if ( (byte_4CBAA09 & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    byte_4C5B42C = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    byte_4CBAA09 = 1;
   }
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
@@ -742,7 +742,7 @@ bool UIScrollView__IsLimitOverPosition(UIScrollView_o *this, const MethodInfo *m
   ((void (__fastcall *)(__int64 *__return_ptr))this->klass->vtable._4_get_bounds.methodPtr)(&v10);
   mPanel = this->fields.mPanel;
   if ( !mPanel )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   ((void (__fastcall *)(struct UIPanel_o *, const MethodInfo *, float, float, float, float))mPanel->klass->vtable._22_CalculateConstrainOffset.methodPtr)(
     mPanel,
     mPanel->klass->vtable._22_CalculateConstrainOffset.method,
@@ -772,7 +772,7 @@ bool UIScrollView__IsLimitOverPosition2(UIScrollView_o *this, const MethodInfo *
   ((void (__fastcall *)(__int64 *__return_ptr))this->klass->vtable._4_get_bounds.methodPtr)(&v10);
   mPanel = this->fields.mPanel;
   if ( !mPanel )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   ((void (__fastcall *)(struct UIPanel_o *, const MethodInfo *, float, float, float, float))mPanel->klass->vtable._22_CalculateConstrainOffset.methodPtr)(
     mPanel,
     mPanel->klass->vtable._22_CalculateConstrainOffset.method,
@@ -788,7 +788,7 @@ bool UIScrollView__IsLimitOverPosition2(UIScrollView_o *this, const MethodInfo *
 
 
 // local variable allocation has failed, the output may be wrong!
-bool UIScrollView__IsLimitOverPosition2_49310040(
+bool UIScrollView__IsLimitOverPosition2_49538924(
         UIScrollView_o *this,
         UnityEngine_Vector3_o offset,
         const MethodInfo *method)
@@ -814,7 +814,7 @@ bool UIScrollView__IsLimitOverPosition2_49310040(
     *(long double *)&offset.fields.z);
   mPanel = this->fields.mPanel;
   if ( !mPanel )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   ((void (__fastcall *)(struct UIPanel_o *, const MethodInfo *, float, float, float, float))mPanel->klass->vtable._22_CalculateConstrainOffset.methodPtr)(
     mPanel,
     mPanel->klass->vtable._22_CalculateConstrainOffset.method,
@@ -885,13 +885,13 @@ void UIScrollView__LateUpdate(UIScrollView_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
   UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B432 & 1) == 0 )
+  if ( (byte_4CBAA0F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Application_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_SpringPanel___);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B432 = 1;
+    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_SpringPanel___);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAA0F = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -913,10 +913,10 @@ void UIScrollView__LateUpdate(UIScrollView_o *this, const MethodInfo *method)
 LABEL_19:
       if ( this->fields.showScrollBars != 2 || this->fields.mDragID != -10 )
         goto LABEL_20;
-      if ( !byte_4C506A3 )
+      if ( !byte_4CAFC0B )
       {
-        sub_1C3E564(&System_Math_TypeInfo);
-        byte_4C506A3 = 1;
+        sub_1C6BA08(&System_Math_TypeInfo);
+        byte_4CAFC0B = 1;
       }
       x = this->fields.mMomentum.fields.x;
       y = this->fields.mMomentum.fields.y;
@@ -1000,10 +1000,10 @@ LABEL_20:
     NGUIMath__SpringDampen(&this->fields.mMomentum, 9.0, deltaTime, v3);
     return;
   }
-  if ( !byte_4C506A3 )
+  if ( !byte_4CAFC0B )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C506A3 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CAFC0B = 1;
   }
   v26 = this->fields.mMomentum.fields.x;
   v25 = this->fields.mMomentum.fields.y;
@@ -1014,10 +1014,10 @@ LABEL_20:
     && this->fields.mScroll == 0.0 )
   {
     this->fields.mScroll = 0.0;
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
-      sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A1 = 1;
+      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC09 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v29 = static_fields->zeroVector.fields.z;
@@ -1025,7 +1025,7 @@ LABEL_20:
     this->fields.mMomentum.fields.z = v29;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SpringPanel___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_SpringPanel___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     mTrans = (UIProgressBar_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -1047,7 +1047,7 @@ LABEL_97:
       return;
     }
 LABEL_98:
-    sub_1C3E7C0(mTrans, v3);
+    sub_1C6BC60(mTrans, v3);
   }
   movement = this->fields.movement;
   if ( movement == 1 )
@@ -1098,7 +1098,7 @@ LABEL_98:
   v40 = v53.fields.z;
   this->fields.mMomentum.fields.x = v39;
   *(float32x2_t *)&this->fields.mMomentum.fields.y = vsub_f32(v33, *(float32x2_t *)&v53.fields.y);
-  this->fields.mScroll = NGUIMath__SpringLerp_49311844(v53.fields.x, 0.0, 20.0, deltaTime, v41);
+  this->fields.mScroll = NGUIMath__SpringLerp_49540728(v53.fields.x, 0.0, 20.0, deltaTime, v41);
   v54 = NGUIMath__SpringDampen(&this->fields.mMomentum, 9.0, deltaTime, v42);
   UIScrollView__MoveAbsolute(this, v54, v43);
   if ( this->fields.restrictWithinPanel )
@@ -1124,10 +1124,10 @@ LABEL_98:
         }
         else
         {
-          if ( !byte_4C506A1 )
+          if ( !byte_4CAFC09 )
           {
-            sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-            byte_4C506A1 = 1;
+            sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+            byte_4CAFC09 = 1;
           }
           v50 = UnityEngine_Vector3_TypeInfo->static_fields;
           v51 = *(_QWORD *)&v50->zeroVector.fields.x;
@@ -1147,7 +1147,7 @@ LABEL_98:
           v48 = this->fields.customMovement.fields.x != 0.0;
           v49 = this->fields.customMovement.fields.y != 0.0;
 LABEL_95:
-          UIScrollView__RestrictWithinBounds_49301336(this, 0, v48, v49, v46);
+          UIScrollView__RestrictWithinBounds_49530220(this, 0, v48, v49, v46);
           goto LABEL_96;
         }
         v48 = 0;
@@ -1181,14 +1181,14 @@ void UIScrollView__MoveAbsolute(UIScrollView_o *this, UnityEngine_Vector3_o abso
   x = v9.fields.x;
   y = v9.fields.y;
   z = v9.fields.z;
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    mTrans = (UnityEngine_Transform_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    mTrans = (UnityEngine_Transform_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   if ( !v5 )
 LABEL_6:
-    sub_1C3E7C0(mTrans, method);
+    sub_1C6BC60(mTrans, method);
   v10 = UnityEngine_Transform__InverseTransformPoint(v5, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   ((void (__fastcall *)(UIScrollView_o *, const MethodInfo *, float, float, float))this->klass->vtable._10_MoveRelative.methodPtr)(
     this,
@@ -1224,7 +1224,7 @@ void UIScrollView__MoveRelative(UIScrollView_o *this, UnityEngine_Vector3_o rela
   this = v4[19];
   if ( !this )
 LABEL_4:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   v8.fields.x = *((float *)&this[1].fields.verticalScrollBar + 1) - x;
   v8.fields.y = *(float *)&this[1].fields.showScrollBars - y;
   UIPanel__set_clipOffset((UIPanel_o *)this, v8, 0);
@@ -1240,11 +1240,11 @@ void UIScrollView__OnDisable(UIScrollView_o *this, const MethodInfo *method)
   UIScrollView_c *v3; // x0
   BetterList_T__o *list; // x0
 
-  if ( (byte_4C5B426 & 1) == 0 )
+  if ( (byte_4CBAA03 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_UIScrollView__Remove__);
-    sub_1C3E564(&UIScrollView_TypeInfo);
-    byte_4C5B426 = 1;
+    sub_1C6BA08(&Method_BetterList_UIScrollView__Remove__);
+    sub_1C6BA08(&UIScrollView_TypeInfo);
+    byte_4CBAA03 = 1;
   }
   v3 = UIScrollView_TypeInfo;
   if ( !UIScrollView_TypeInfo->_2.cctor_finished )
@@ -1254,11 +1254,11 @@ void UIScrollView__OnDisable(UIScrollView_o *this, const MethodInfo *method)
   }
   list = (BetterList_T__o *)v3->static_fields->list;
   if ( !list )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   BetterList_object___Remove(
     list,
     (Il2CppObject *)this,
-    (const MethodInfo_332C158 *)Method_BetterList_UIScrollView__Remove__);
+    (const MethodInfo_3371BF4 *)Method_BetterList_UIScrollView__Remove__);
 }
 
 
@@ -1268,12 +1268,12 @@ void UIScrollView__OnEnable(UIScrollView_o *this, const MethodInfo *method)
   BetterList_T__o *list; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C5B423 & 1) == 0 )
+  if ( (byte_4CBAA00 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Application_TypeInfo);
-    sub_1C3E564(&Method_BetterList_UIScrollView__Add__);
-    sub_1C3E564(&UIScrollView_TypeInfo);
-    byte_4C5B423 = 1;
+    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
+    sub_1C6BA08(&Method_BetterList_UIScrollView__Add__);
+    sub_1C6BA08(&UIScrollView_TypeInfo);
+    byte_4CBAA00 = 1;
   }
   v3 = UIScrollView_TypeInfo;
   if ( !UIScrollView_TypeInfo->_2.cctor_finished )
@@ -1283,8 +1283,8 @@ void UIScrollView__OnEnable(UIScrollView_o *this, const MethodInfo *method)
   }
   list = (BetterList_T__o *)v3->static_fields->list;
   if ( !list )
-    sub_1C3E7C0(0, method);
-  BetterList_object___Add(list, (Il2CppObject *)this, (const MethodInfo_332BEA0 *)Method_BetterList_UIScrollView__Add__);
+    sub_1C6BC60(0, method);
+  BetterList_object___Add(list, (Il2CppObject *)this, (const MethodInfo_337193C *)Method_BetterList_UIScrollView__Add__);
   if ( this->fields.mStarted )
   {
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -1307,10 +1307,10 @@ void UIScrollView__OnScrollBar(UIScrollView_o *this, const MethodInfo *method)
   long double v10; // q1
   long double v11; // q0
 
-  if ( (byte_4C5B42E & 1) == 0 )
+  if ( (byte_4CBAA0B & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B42E = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAA0B = 1;
   }
   if ( !this->fields.mIgnoreCallbacks )
   {
@@ -1350,7 +1350,7 @@ LABEL_14:
       return;
     }
 LABEL_16:
-    sub_1C3E7C0(v6, v5);
+    sub_1C6BC60(v6, v5);
   }
 }
 
@@ -1439,12 +1439,12 @@ void UIScrollView__Press(UIScrollView_o *this, bool pressed, const MethodInfo *m
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v84; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5B42F & 1) == 0 )
+  if ( (byte_4CBAA0C & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B42F = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBAA0C = 1;
   }
   v5 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -1457,10 +1457,10 @@ void UIScrollView__Press(UIScrollView_o *this, bool pressed, const MethodInfo *m
   if ( pressed && this->fields.smoothDragStart )
   {
     this->fields.mDragStarted = 0;
-    if ( !byte_4C5059A )
+    if ( !byte_4CAFAE9 )
     {
-      sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
-      byte_4C5059A = 1;
+      sub_1C6BA08(&UnityEngine_Vector2_TypeInfo);
+      byte_4CAFAE9 = 1;
     }
     this->fields.mDragStartOffset = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   }
@@ -1469,7 +1469,7 @@ void UIScrollView__Press(UIScrollView_o *this, bool pressed, const MethodInfo *m
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  if ( !NGUITools__GetActive_49418336(gameObject, 0) )
+  if ( !NGUITools__GetActive_49647220(gameObject, 0) )
     return;
   if ( !pressed )
   {
@@ -1494,10 +1494,10 @@ void UIScrollView__Press(UIScrollView_o *this, bool pressed, const MethodInfo *m
   this->fields.mPressed = pressed;
   if ( pressed )
   {
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
-      sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A1 = 1;
+      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC09 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     v13 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -1525,26 +1525,26 @@ void UIScrollView__Press(UIScrollView_o *this, bool pressed, const MethodInfo *m
     y = rotation.fields.y;
     v23 = rotation.fields.z;
     w = rotation.fields.w;
-    if ( !byte_4C53574 )
+    if ( !byte_4CB2AC4 )
     {
-      sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C53574 = 1;
+      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CB2AC4 = 1;
     }
     v84.fields.x = x;
     v84.fields.y = y;
     v84.fields.z = v23;
     v84.fields.w = w;
-    v81 = UnityEngine_Quaternion__op_Multiply_71280864(v84, UnityEngine_Vector3_TypeInfo->static_fields->backVector, 0);
+    v81 = UnityEngine_Quaternion__op_Multiply_71598412(v84, UnityEngine_Vector3_TypeInfo->static_fields->backVector, 0);
     v25 = this->fields.mLastPos.fields.x;
     v26 = this->fields.mLastPos.fields.y;
     v27 = this->fields.mLastPos.fields.z;
     v28 = v81.fields.x;
     v29 = v81.fields.y;
     v30 = v81.fields.z;
-    if ( !byte_4C506A4 )
+    if ( !byte_4CAFC0C )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C506A4 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CAFC0C = 1;
     }
     mTrans = (__int64)System_Math_TypeInfo;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1552,10 +1552,10 @@ void UIScrollView__Press(UIScrollView_o *this, bool pressed, const MethodInfo *m
     v31 = sqrtf((float)(v30 * v30) + (float)((float)(v28 * v28) + (float)(v29 * v29)));
     if ( v31 <= 0.00001 )
     {
-      if ( !byte_4C506A1 )
+      if ( !byte_4CAFC09 )
       {
-        mTrans = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-        byte_4C506A1 = 1;
+        mTrans = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+        byte_4CAFC09 = 1;
       }
       v38 = UnityEngine_Vector3_TypeInfo->static_fields;
       v32 = v38->zeroVector.fields.x;
@@ -1714,10 +1714,10 @@ LABEL_92:
       if ( this->fields.smoothDragStart )
         return;
       this->fields.mDragStarted = 1;
-      if ( !byte_4C5059A )
+      if ( !byte_4CAFAE9 )
       {
-        sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
-        byte_4C5059A = 1;
+        sub_1C6BA08(&UnityEngine_Vector2_TypeInfo);
+        byte_4CAFAE9 = 1;
       }
       onDragStarted = this->fields.onDragStarted;
       this->fields.mDragStartOffset = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
@@ -1726,7 +1726,7 @@ LABEL_92:
       goto LABEL_107;
     }
 LABEL_109:
-    sub_1C3E7C0(mTrans, v15);
+    sub_1C6BC60(mTrans, v15);
   }
   centerOnChild = (UnityEngine_Object_o *)this->fields.centerOnChild;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1760,7 +1760,7 @@ LABEL_108:
           v47 = this->fields.customMovement.fields.x != 0.0;
           v48 = this->fields.customMovement.fields.y != 0.0;
 LABEL_100:
-          UIScrollView__RestrictWithinBounds_49301336(this, this->fields.dragEffect == 0, v47, v48, v36);
+          UIScrollView__RestrictWithinBounds_49530220(this, this->fields.dragEffect == 0, v47, v48, v36);
           goto LABEL_101;
         }
         v47 = 0;
@@ -1800,10 +1800,10 @@ void UIScrollView__ResetPosition(UIScrollView_o *this, const MethodInfo *method)
   UnityEngine_Vector2_o PivotOffset; // kr00_8
   long double v8; // q8
 
-  if ( (byte_4C5B42B & 1) == 0 )
+  if ( (byte_4CBAA08 & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    byte_4C5B42B = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    byte_4CBAA08 = 1;
   }
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
@@ -1835,12 +1835,12 @@ bool UIScrollView__RestrictWithinBounds(UIScrollView_o *this, bool instant, cons
 {
   const MethodInfo *v3; // x4
 
-  return UIScrollView__RestrictWithinBounds_49301336(this, instant, 1, 1, v3);
+  return UIScrollView__RestrictWithinBounds_49530220(this, instant, 1, 1, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool UIScrollView__RestrictWithinBounds_49301336(
+bool UIScrollView__RestrictWithinBounds_49530220(
         UIScrollView_o *this,
         bool instant,
         bool horizontal,
@@ -1928,7 +1928,7 @@ bool UIScrollView__RestrictWithinBounds_49301336(
   mPanel = this->fields.mTrans;
   if ( !mPanel )
 LABEL_44:
-    sub_1C3E7C0(mPanel, v11);
+    sub_1C6BC60(mPanel, v11);
   localPosition = UnityEngine_Transform__get_localPosition(mPanel, 0);
   v17 = *(float *)&v6 + localPosition.fields.x;
   *(double *)&localPosition.fields.x = (float)(*(float *)&v6 + localPosition.fields.x);
@@ -2018,17 +2018,17 @@ void UIScrollView__Scroll(UIScrollView_o *this, float delta, const MethodInfo *m
   float v11; // s3
   float v12; // s0
 
-  if ( (byte_4C5B431 & 1) == 0 )
+  if ( (byte_4CBAA0E & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    byte_4C5B431 = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    byte_4CBAA0E = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49418336(gameObject, 0) && this->fields.scrollWheelFactor != 0.0 )
+    if ( NGUITools__GetActive_49647220(gameObject, 0) && this->fields.scrollWheelFactor != 0.0 )
     {
       UIScrollView__DisableSpring(this, v6);
       mShouldMove = this->fields.mShouldMove;
@@ -2098,11 +2098,11 @@ void UIScrollView__SetDragAmount(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector4_o finalClipRegion; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5B42A & 1) == 0 )
+  if ( (byte_4CBAA07 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B42A = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAA07 = 1;
   }
   p_mPanel = &this->fields.mPanel;
   mPanel = (UnityEngine_Object_o *)this->fields.mPanel;
@@ -2112,9 +2112,9 @@ void UIScrollView__SetDragAmount(
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
     this->fields.mPanel = (struct UIPanel_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)Component_object, v13, v14);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)Component_object, v13, v14);
   }
   UIScrollView__DisableSpring(this, v11);
   ((void (__fastcall *)(__int64 *__return_ptr, UIScrollView_o *, const MethodInfo *))this->klass->vtable._4_get_bounds.methodPtr)(
@@ -2198,7 +2198,7 @@ LABEL_40:
             return;
           }
 LABEL_44:
-          sub_1C3E7C0(mTrans, v15);
+          sub_1C6BC60(mTrans, v15);
         }
         v22 = v36;
         if ( movement != 3 )
@@ -2251,10 +2251,10 @@ void UIScrollView__Start(UIScrollView_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C5B424 & 1) == 0 )
+  if ( (byte_4CBAA01 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Application_TypeInfo);
-    byte_4C5B424 = 1;
+    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
+    byte_4CBAA01 = 1;
   }
   this->fields.mStarted = 1;
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -2287,10 +2287,10 @@ void UIScrollView__UpdatePosition(UIScrollView_o *this, const MethodInfo *method
   long double v15; // q1
   long double v16; // q0
 
-  if ( (byte_4C5B42D & 1) == 0 )
+  if ( (byte_4CBAA0A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B42D = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAA0A = 1;
   }
   if ( !this->fields.mIgnoreCallbacks )
   {
@@ -2350,7 +2350,7 @@ LABEL_21:
         return;
       }
 LABEL_23:
-      sub_1C3E7C0(v12, v11);
+      sub_1C6BC60(v12, v11);
     }
   }
 }
@@ -2365,7 +2365,7 @@ void UIScrollView__UpdateScrollbars(UIScrollView_o *this, const MethodInfo *meth
 }
 
 
-void UIScrollView__UpdateScrollbars_49302180(UIScrollView_o *this, bool recalculateBounds, const MethodInfo *method)
+void UIScrollView__UpdateScrollbars_49531064(UIScrollView_o *this, bool recalculateBounds, const MethodInfo *method)
 {
   UnityEngine_Object_o *mPanel; // x21
   UnityEngine_Object_o *horizontalScrollBar; // x21
@@ -2423,10 +2423,10 @@ void UIScrollView__UpdateScrollbars_49302180(UIScrollView_o *this, bool recalcul
   UnityEngine_Vector4_o finalClipRegion; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Vector4_o v59; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5B428 & 1) == 0 )
+  if ( (byte_4CBAA05 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B428 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAA05 = 1;
   }
   mPanel = (UnityEngine_Object_o *)this->fields.mPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2477,10 +2477,10 @@ void UIScrollView__UpdateScrollbars_49302180(UIScrollView_o *this, bool recalcul
     finalClipRegion = UIPanel__get_finalClipRegion(v16, 0);
     x = finalClipRegion.fields.x;
     z = finalClipRegion.fields.z;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -2547,7 +2547,7 @@ LABEL_47:
       goto LABEL_87;
     if ( v33->fields.mClipping == 3 )
       v31 = v31 - v33->fields.mClipSoftness.fields.x;
-    UIScrollView__UpdateScrollbars_49303428(
+    UIScrollView__UpdateScrollbars_49532312(
       this,
       this->fields.horizontalScrollBar,
       (float)(x - v31) - v12,
@@ -2571,10 +2571,10 @@ LABEL_47:
     v59 = UIPanel__get_finalClipRegion(v16, 0);
     y = v59.fields.y;
     w = v59.fields.w;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -2640,7 +2640,7 @@ LABEL_82:
     {
       if ( v54->fields.mClipping == 3 )
         v52 = v52 - v54->fields.mClipSoftness.fields.y;
-      UIScrollView__UpdateScrollbars_49303428(
+      UIScrollView__UpdateScrollbars_49532312(
         this,
         this->fields.verticalScrollBar,
         (float)(y - v52) - v35,
@@ -2652,12 +2652,12 @@ LABEL_82:
       return;
     }
 LABEL_87:
-    sub_1C3E7C0(v16, v15);
+    sub_1C6BC60(v16, v15);
   }
 }
 
 
-void UIScrollView__UpdateScrollbars_49303428(
+void UIScrollView__UpdateScrollbars_49532312(
         UIScrollView_o *this,
         UIProgressBar_o *slider,
         float contentMin,
@@ -2688,11 +2688,11 @@ void UIScrollView__UpdateScrollbars_49303428(
   float v33; // s1
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C5B429 & 1) == 0 )
+  if ( (byte_4CBAA06 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIScrollBar_TypeInfo);
-    byte_4C5B429 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIScrollBar_TypeInfo);
+    byte_4CBAA06 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2793,7 +2793,7 @@ LABEL_47:
       return;
     }
 LABEL_49:
-    sub_1C3E7C0(v15, v16);
+    sub_1C6BC60(v15, v16);
   }
 }
 
@@ -2818,8 +2818,8 @@ UnityEngine_Bounds_o *UIScrollView__get_bounds(
     this->fields.mCalculatedBounds = 1;
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     v3->fields.mTrans = transform;
-    sub_1C3E508((CGThumbnailListItem_o *)&v3->fields.mTrans, (int32_t)transform, v6, v7);
-    this = (UIScrollView_o *)NGUIMath__CalculateRelativeWidgetBounds_49372908(
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v3->fields.mTrans, (int32_t)transform, v6, v7);
+    this = (UIScrollView_o *)NGUIMath__CalculateRelativeWidgetBounds_49601792(
                                &v12,
                                v3->fields.mTrans,
                                v3->fields.mTrans,
@@ -2916,11 +2916,11 @@ bool UIScrollView__get_shouldMove(UIScrollView_o *this, const MethodInfo *method
   float v22; // [xsp+18h] [xbp-68h]
   UnityEngine_Vector4_o finalClipRegion; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5B421 & 1) == 0 )
+  if ( (byte_4CBA9FE & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B421 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA9FE = 1;
   }
   if ( !this->fields.disableDragIfFits )
     return 1;
@@ -2932,12 +2932,12 @@ bool UIScrollView__get_shouldMove(UIScrollView_o *this, const MethodInfo *method
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
     this->fields.mPanel = (struct UIPanel_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)Component_object, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)Component_object, v7, v8);
   }
   if ( !*p_mPanel )
-    sub_1C3E7C0(0, v5);
+    sub_1C6BC60(0, v5);
   finalClipRegion = UIPanel__get_finalClipRegion(*p_mPanel, 0);
   x = finalClipRegion.fields.x;
   y = finalClipRegion.fields.y;
@@ -3013,15 +3013,15 @@ bool UIScrollView__get_shouldMoveHorizontally(UIScrollView_o *this, const Method
   ((void (__fastcall *)(double *__return_ptr))this->klass->vtable._4_get_bounds.methodPtr)(&iptr);
   mPanel = this->fields.mPanel;
   if ( !mPanel )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   v5 = v15 + v15;
   if ( mPanel->fields.mClipping == 3 )
     v5 = v5 + (float)(mPanel->fields.mClipSoftness.fields.x + mPanel->fields.mClipSoftness.fields.x);
   width = UIPanel__get_width(mPanel, 0);
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   v7 = v5 - width;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3073,15 +3073,15 @@ bool UIScrollView__get_shouldMoveVertically(UIScrollView_o *this, const MethodIn
   ((void (__fastcall *)(double *__return_ptr))this->klass->vtable._4_get_bounds.methodPtr)(iptr);
   mPanel = this->fields.mPanel;
   if ( !mPanel )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   v5 = v15 + v15;
   if ( mPanel->fields.mClipping == 3 )
     v5 = v5 + (float)(mPanel->fields.mClipSoftness.fields.y + mPanel->fields.mClipSoftness.fields.y);
   height = UIPanel__get_height(mPanel, 0);
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   v7 = v5 - height;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3137,15 +3137,15 @@ void UIScrollView_OnDragNotification___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -3157,9 +3157,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A896D8;
+  this->fields.invoke_impl = (intptr_t)sub_1AA8D98;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A89698;
+  this->fields.extra_arg = (intptr_t)sub_1AA8D58;
 }
 
 
@@ -3172,7 +3172,7 @@ System_IAsyncResult_o *UIScrollView_OnDragNotification__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C3E518(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v5, callback, object);
 }
 
 
@@ -3181,7 +3181,7 @@ void UIScrollView_OnDragNotification__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 

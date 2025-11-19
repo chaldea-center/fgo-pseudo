@@ -24,10 +24,10 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5979E & 1) == 0 )
+  if ( (byte_4CB8D37 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5979E = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB8D37 = 1;
   }
   treasureObj = (UnityEngine_Object_o *)this->fields.treasureObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -75,10 +75,10 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
                 if ( localPosition.fields.y > 0.0 )
                   return;
                 v10 = this->fields.rigidbodyComp;
-                if ( !byte_4C506A1 )
+                if ( !byte_4CAFC09 )
                 {
-                  activeSelf = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-                  byte_4C506A1 = 1;
+                  activeSelf = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+                  byte_4CAFC09 = 1;
                 }
                 if ( v10 )
                 {
@@ -92,7 +92,7 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
                     UnityEngine_Transform__set_localPosition(v11, v19, 0);
                     this->fields.overwriteSetting = 0;
                     p_overwriteSetting = &this->fields.overwriteSetting;
-                    sub_1C3E508((CGThumbnailListItem_o *)p_overwriteSetting, 0, v13, v14);
+                    sub_1C6B9AC((CGThumbnailListItem_o *)p_overwriteSetting, 0, v13, v14);
                     *((_BYTE *)p_overwriteSetting - 4) = 0;
                     return;
                   }
@@ -103,10 +103,10 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
           else
           {
             v15 = this->fields.rigidbodyComp;
-            if ( !byte_4C506A1 )
+            if ( !byte_4CAFC09 )
             {
-              activeSelf = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-              byte_4C506A1 = 1;
+              activeSelf = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+              byte_4CAFC09 = 1;
             }
             if ( v15 )
             {
@@ -117,7 +117,7 @@ void BattleDropHighPosition__FixedUpdate(BattleDropHighPosition_o *this, const M
         }
       }
 LABEL_30:
-      sub_1C3E7C0(activeSelf, v5);
+      sub_1C6BC60(activeSelf, v5);
     }
   }
 }
@@ -159,11 +159,11 @@ void BattleDropHighPosition__Initialize(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4C5979D & 1) == 0 )
+  if ( (byte_4CB8D36 & 1) == 0 )
   {
-    sub_1C3E564(&BattleDropHighPositionOverwriteSetting_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5979D = 1;
+    sub_1C6BA08(&BattleDropHighPositionOverwriteSetting_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB8D36 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -176,7 +176,7 @@ void BattleDropHighPosition__Initialize(
         && (BattleDropHighPositionOverwriteSetting_c *)scriptableObject->klass->_2.typeHierarchy[naturalAligment - 1] == BattleDropHighPositionOverwriteSetting_TypeInfo )
       {
         this->fields.overwriteSetting = (struct BattleDropHighPositionOverwriteSetting_o *)scriptableObject;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.overwriteSetting, (int32_t)scriptableObject, v9, v10);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.overwriteSetting, (int32_t)scriptableObject, v9, v10);
       }
     }
   }
@@ -208,10 +208,10 @@ void BattleDropHighPosition__Initialize(
       v23 = StartAcceleration.fields.x;
       v24 = StartAcceleration.fields.y;
       v25 = StartAcceleration.fields.z;
-      if ( !byte_4C506A1 )
+      if ( !byte_4CAFC09 )
       {
-        sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-        byte_4C506A1 = 1;
+        sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+        byte_4CAFC09 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       if ( (float)((float)((float)(v25 - static_fields->zeroVector.fields.z)
@@ -229,7 +229,7 @@ void BattleDropHighPosition__Initialize(
           return;
         }
 LABEL_23:
-        sub_1C3E7C0(transform, v14);
+        sub_1C6BC60(transform, v14);
       }
     }
   }
@@ -244,7 +244,7 @@ void BattleDropHighPosition__StopMoving(BattleDropHighPosition_o *this, const Me
 
   this->fields.overwriteSetting = 0;
   p_overwriteSetting = &this->fields.overwriteSetting;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.overwriteSetting, 0, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.overwriteSetting, 0, v2, v3);
   *((_BYTE *)p_overwriteSetting - 4) = 0;
 }
 
@@ -265,10 +265,10 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_LocalGravity(
   float x; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5979B & 1) == 0 )
+  if ( (byte_4CB8D34 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5979B = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB8D34 = 1;
   }
   overwriteSetting = (UnityEngine_Object_o *)this->fields.overwriteSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -278,7 +278,7 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_LocalGravity(
   {
     v6 = this->fields.overwriteSetting;
     if ( !v6 )
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     p_localGravity = &v6->fields.localGravity;
     p_y = &v6->fields.localGravity.fields.y;
     p_z = &v6->fields.localGravity.fields.z;
@@ -315,10 +315,10 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartAcceleration(
   float x; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5979C & 1) == 0 )
+  if ( (byte_4CB8D35 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5979C = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB8D35 = 1;
   }
   overwriteSetting = (UnityEngine_Object_o *)this->fields.overwriteSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -328,7 +328,7 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartAcceleration(
   {
     v6 = this->fields.overwriteSetting;
     if ( !v6 )
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     p_startAcceleration = &v6->fields.startAcceleration;
     p_y = &v6->fields.startAcceleration.fields.y;
     p_z = &v6->fields.startAcceleration.fields.z;
@@ -363,10 +363,10 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartPos(BattleDropHighPositio
   float x; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5979A & 1) == 0 )
+  if ( (byte_4CB8D33 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5979A = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB8D33 = 1;
   }
   overwriteSetting = (UnityEngine_Object_o *)this->fields.overwriteSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -376,7 +376,7 @@ UnityEngine_Vector3_o BattleDropHighPosition__get_StartPos(BattleDropHighPositio
   {
     v6 = this->fields.overwriteSetting;
     if ( !v6 )
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     p_startPos = &v6->fields.startPos;
     p_y = &v6->fields.startPos.fields.y;
     p_z = &v6->fields.startPos.fields.z;

@@ -1,4 +1,6 @@
-__int64 mono_type_is_reference()
+__int64 __fastcall mono_type_is_reference(__int64 result)
 {
-  return sub_1C72F18() & 1;
+  if ( result )
+    return sub_1C60654() & 1;
+  return result;
 }

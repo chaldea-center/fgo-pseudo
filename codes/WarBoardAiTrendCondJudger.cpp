@@ -14,15 +14,15 @@ bool WarBoardAiTrendCondJudger__IsReplaceTarget(
   WarBoardPieceData_o *basePiece; // x19
 
   v4 = route;
-  if ( (byte_4C54750 & 1) == 0 )
+  if ( (byte_4CB3CA2 & 1) == 0 )
   {
-    route = (WarBoardAIRoute_RouteData_o *)sub_1C3E564(&WarBoardAIManager_TypeInfo);
-    byte_4C54750 = 1;
+    route = (WarBoardAIRoute_RouteData_o *)sub_1C6BA08(&WarBoardAIManager_TypeInfo);
+    byte_4CB3CA2 = 1;
   }
   if ( !targetData )
     return 0;
   if ( !v4 )
-    sub_1C3E7C0(route, targetData);
+    sub_1C6BC60(route, targetData);
   actionPiece = v4->fields.actionPiece;
   if ( !actionPiece || targetData->fields.targetPiece != actionPiece )
     return 0;
@@ -33,7 +33,6 @@ bool WarBoardAiTrendCondJudger__IsReplaceTarget(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool WarBoardAiTrendCondJudger__TargetRangeUnder(
         WarBoardAIRoute_TargetData_o *targetData,
         int32_t value,
@@ -45,7 +44,7 @@ bool WarBoardAiTrendCondJudger__TargetRangeUnder(
   {
     baseRoute = targetData->fields.baseRoute;
     if ( !baseRoute )
-      sub_1C3E7C0(targetData, *(_QWORD *)&value);
+      sub_1C6BC60(targetData, value);
     LOBYTE(targetData) = LODWORD(baseRoute->max_length) - 1 <= value;
   }
   return (char)targetData;

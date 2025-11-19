@@ -6,14 +6,14 @@ void ServantStatusCharaGraphListViewIndicator___ctor(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C5284C & 1) == 0 )
+  if ( (byte_4CB1D9C & 1) == 0 )
   {
-    sub_1C3E564(&UISprite___TypeInfo);
-    byte_4C5284C = 1;
+    sub_1C6BA08(&UISprite___TypeInfo);
+    byte_4CB1D9C = 1;
   }
-  v3 = (struct UISprite_array *)sub_1C3E60C(UISprite___TypeInfo, 4);
+  v3 = (struct UISprite_array *)sub_1C6BAB0(UISprite___TypeInfo, 4);
   this->fields.pageSpriteList = v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.pageSpriteList, (int32_t)v3, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.pageSpriteList, (int32_t)v3, v4, v5);
   ListViewIndicator___ctor((ListViewIndicator_o *)this, 0);
 }
 
@@ -40,11 +40,11 @@ void ServantStatusCharaGraphListViewIndicator__OnClickLeft(
   _QWORD *v10; // x0
   System_Reflection_MethodBase_o *v11; // x0
 
-  if ( (byte_4C5284A & 1) == 0 )
+  if ( (byte_4CB1D9A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
-    byte_4C5284A = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
+    byte_4CB1D9A = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -59,8 +59,8 @@ void ServantStatusCharaGraphListViewIndicator__OnClickLeft(
     {
       v6 = Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__;
       if ( (*((_BYTE *)Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_1C3E57C(Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
-      v7 = (System_Reflection_MethodBase_o *)sub_1C3E548(v6, v6[4]);
+        v6 = (_QWORD *)sub_1C6BA20(Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
+      v7 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v6, v6[4]);
       OverwriteAssetSoundName__PlaySystemSe(v7, 7, 0, 0);
       v5 = this->fields.manager;
       if ( v5 )
@@ -79,8 +79,8 @@ LABEL_19:
     {
       v10 = Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__;
       if ( (*((_BYTE *)Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__ + 83) & 2) != 0 )
-        v10 = (_QWORD *)sub_1C3E57C(Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
-      v11 = (System_Reflection_MethodBase_o *)sub_1C3E548(v10, v10[4]);
+        v10 = (_QWORD *)sub_1C6BA20(Method_ServantStatusCharaGraphListViewIndicator_OnClickLeft__);
+      v11 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v10, v10[4]);
       OverwriteAssetSoundName__PlaySystemSe(v11, 7, 0, 0);
       v5 = this->fields.manager;
       if ( v5 )
@@ -89,7 +89,7 @@ LABEL_19:
         goto LABEL_19;
       }
 LABEL_21:
-      sub_1C3E7C0(v5, v4);
+      sub_1C6BC60(v5, v4);
     }
   }
 }
@@ -110,11 +110,11 @@ void ServantStatusCharaGraphListViewIndicator__OnClickRight(
   _QWORD *v11; // x0
   System_Reflection_MethodBase_o *v12; // x0
 
-  if ( (byte_4C5284B & 1) == 0 )
+  if ( (byte_4CB1D9B & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
-    byte_4C5284B = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
+    byte_4CB1D9B = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -130,8 +130,8 @@ void ServantStatusCharaGraphListViewIndicator__OnClickRight(
     {
       v7 = Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__;
       if ( (*((_BYTE *)Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__ + 83) & 2) != 0 )
-        v7 = (_QWORD *)sub_1C3E57C(Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
-      v8 = (System_Reflection_MethodBase_o *)sub_1C3E548(v7, v7[4]);
+        v7 = (_QWORD *)sub_1C6BA20(Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
+      v8 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v7, v7[4]);
       OverwriteAssetSoundName__PlaySystemSe(v8, 7, 0, 0);
       v5 = this->fields.manager;
       if ( v5 )
@@ -150,8 +150,8 @@ LABEL_20:
     {
       v11 = Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__;
       if ( (*((_BYTE *)Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__ + 83) & 2) != 0 )
-        v11 = (_QWORD *)sub_1C3E57C(Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
-      v12 = (System_Reflection_MethodBase_o *)sub_1C3E548(v11, v11[4]);
+        v11 = (_QWORD *)sub_1C6BA20(Method_ServantStatusCharaGraphListViewIndicator_OnClickRight__);
+      v12 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v11, v11[4]);
       OverwriteAssetSoundName__PlaySystemSe(v12, 7, 0, 0);
       v5 = this->fields.manager;
       if ( v5 )
@@ -160,7 +160,7 @@ LABEL_20:
         goto LABEL_20;
       }
 LABEL_22:
-      sub_1C3E7C0(v5, v4);
+      sub_1C6BC60(v5, v4);
     }
   }
 }
@@ -193,7 +193,7 @@ void ServantStatusCharaGraphListViewIndicator__OnModifyCenterItem(
   p_manager = &this->fields.manager;
   v10 = isRight;
   v11 = isLeft;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields.manager,
     (int32_t)manager,
     (int32_t)item,
@@ -211,7 +211,7 @@ void ServantStatusCharaGraphListViewIndicator__OnModifyCenterItem(
         (leftObject = this->fields.rightObject) == 0) )
   {
 LABEL_13:
-    sub_1C3E7C0(leftObject, v14);
+    sub_1C6BC60(leftObject, v14);
   }
   UnityEngine_GameObject__SetActive(leftObject, (v10 & isEnableArrowObj) != 0, 0);
   if ( item )
@@ -276,7 +276,7 @@ void ServantStatusCharaGraphListViewIndicator__OnModifyPosition(
         (this = (ServantStatusCharaGraphListViewIndicator_o *)v4->fields.rightObject) == 0) )
   {
 LABEL_9:
-    sub_1C3E7C0(this, manager);
+    sub_1C6BC60(this, manager);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, value, 0);
 }
@@ -308,7 +308,7 @@ void ServantStatusCharaGraphListViewIndicator__SetActiveArrowObject(
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)manager, isLeft && v6, 0),
         (manager = (ListViewManager_o *)this->fields.rightObject) == 0) )
   {
-    sub_1C3E7C0(manager, active);
+    sub_1C6BC60(manager, active);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)manager, isRight && v6, 0);
 }
@@ -327,7 +327,7 @@ void ServantStatusCharaGraphListViewIndicator__SetIndexMax(
   if ( !leftObject
     || (UnityEngine_GameObject__SetActive(leftObject, 0, 0), (leftObject = this->fields.rightObject) == 0) )
   {
-    sub_1C3E7C0(leftObject, v4);
+    sub_1C6BC60(leftObject, v4);
   }
   UnityEngine_GameObject__SetActive(leftObject, 0, 0);
 }
@@ -346,11 +346,11 @@ void ServantStatusCharaGraphListViewIndicator__SetPageIndex(
   __int64 *v8; // x8
 
   v4 = this;
-  if ( (byte_4C52849 & 1) == 0 )
+  if ( (byte_4CB1D99 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_20598/*"img_slider_on"*/);
-    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_1C3E564(&StringLiteral_20597/*"img_slider_off"*/);
-    byte_4C52849 = 1;
+    sub_1C6BA08(&StringLiteral_20645/*"img_slider_on"*/);
+    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_1C6BA08(&StringLiteral_20644/*"img_slider_off"*/);
+    byte_4CB1D99 = 1;
   }
   pageMax = v4->fields.pageMax;
   v4->fields.pageIndex = index;
@@ -363,15 +363,15 @@ void ServantStatusCharaGraphListViewIndicator__SetPageIndex(
       if ( !pageSpriteList )
         goto LABEL_13;
       if ( (unsigned int)v6 >= LODWORD(pageSpriteList->max_length) )
-        sub_1C3E7C8(this, *(_QWORD *)&index);
+        sub_1C6BC68(this);
       this = (ServantStatusCharaGraphListViewIndicator_o *)pageSpriteList->m_Items[v6];
       if ( !this )
 LABEL_13:
-        sub_1C3E7C0(this, *(_QWORD *)&index);
+        sub_1C6BC60(this, *(_QWORD *)&index);
       if ( index == (_DWORD)v6 )
-        v8 = &StringLiteral_20598/*"img_slider_on"*/;
+        v8 = &StringLiteral_20645/*"img_slider_on"*/;
       else
-        v8 = &StringLiteral_20597/*"img_slider_off"*/;
+        v8 = &StringLiteral_20644/*"img_slider_off"*/;
       UISprite__set_spriteName((UISprite_o *)this, (System_String_o *)*v8, 0);
       ++v6;
     }
@@ -399,10 +399,10 @@ void ServantStatusCharaGraphListViewIndicator__SetPageMax(
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4C52848 & 1) == 0 )
+  if ( (byte_4CB1D98 & 1) == 0 )
   {
-    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_1C3E564(&StringLiteral_20597/*"img_slider_off"*/);
-    byte_4C52848 = 1;
+    this = (ServantStatusCharaGraphListViewIndicator_o *)sub_1C6BA08(&StringLiteral_20644/*"img_slider_off"*/);
+    byte_4CB1D98 = 1;
   }
   pageSpriteList = v4->fields.pageSpriteList;
   if ( !pageSpriteList )
@@ -420,11 +420,11 @@ void ServantStatusCharaGraphListViewIndicator__SetPageMax(
     while ( 1 )
     {
       if ( v8 >= (unsigned int)max_length )
-        sub_1C3E7C8(this, *(_QWORD *)&max);
+        sub_1C6BC68(this);
       this = (ServantStatusCharaGraphListViewIndicator_o *)pageSpriteList->m_Items[v8];
       if ( !this )
         break;
-      v9 = v8 >= v4->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_20597/*"img_slider_off"*/;
+      v9 = v8 >= v4->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_20644/*"img_slider_off"*/;
       UISprite__set_spriteName((UISprite_o *)this, v9, 0);
       pageSpriteList = v4->fields.pageSpriteList;
       if ( !pageSpriteList )
@@ -434,7 +434,7 @@ void ServantStatusCharaGraphListViewIndicator__SetPageMax(
         goto LABEL_16;
     }
 LABEL_21:
-    sub_1C3E7C0(this, *(_QWORD *)&max);
+    sub_1C6BC60(this, *(_QWORD *)&max);
   }
 LABEL_16:
   this = (ServantStatusCharaGraphListViewIndicator_o *)v4->fields.pageBaseObject;

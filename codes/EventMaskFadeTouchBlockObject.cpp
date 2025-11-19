@@ -19,7 +19,7 @@ void EventMaskFadeTouchBlockObject__OnClickObject(EventMaskFadeTouchBlockObject_
       onClickCallback->fields.method_code,
       onClickCallback->fields.method);
     p_onClickCallback->klass = 0;
-    sub_1C3E508(p_onClickCallback, 0, v4, v5);
+    sub_1C6B9AC(p_onClickCallback, 0, v4, v5);
   }
 }
 
@@ -38,7 +38,7 @@ void EventMaskFadeTouchBlockObject__RemoveCallback(EventMaskFadeTouchBlockObject
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0;
-      sub_1C3E508(p_onClickCallback, 0, v3, v4);
+      sub_1C6B9AC(p_onClickCallback, 0, v3, v4);
     }
   }
 }
@@ -61,7 +61,7 @@ void EventMaskFadeTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (CGThumbnailListItem_c *)callback;
-      sub_1C3E508(p_onClickCallback, (int32_t)callback, v5, v6);
+      sub_1C6B9AC(p_onClickCallback, (int32_t)callback, v5, v6);
     }
   }
 }

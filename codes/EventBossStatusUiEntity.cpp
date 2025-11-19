@@ -1,13 +1,13 @@
 void EventBossStatusUiEntity___ctor(EventBossStatusUiEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56C2A & 1) == 0 )
+  if ( (byte_4CB6193 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C56C2A = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB6193 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -46,14 +46,14 @@ UnityEngine_Color_o EventBossStatusUiEntity__ConvertColorFromStr(
   float v8; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C56C1F & 1) == 0 )
+  if ( (byte_4CB6188 & 1) == 0 )
   {
-    sub_1C3E564(&System_Convert_TypeInfo);
-    byte_4C56C1F = 1;
+    sub_1C6BA08(&System_Convert_TypeInfo);
+    byte_4CB6188 = 1;
   }
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v4 = System_Convert__ToInt32_64733600(value, 16, 0);
+  v4 = System_Convert__ToInt32_65061980(value, 16, 0);
   v5 = (float)BYTE2(v4) / 255.0;
   v6 = (float)BYTE1(v4) / 255.0;
   v7 = (float)(unsigned __int8)v4 / 255.0;
@@ -68,15 +68,15 @@ UnityEngine_Color_o EventBossStatusUiEntity__ConvertColorFromStr(
 
 System_String_o *EventBossStatusUiEntity__CreatePK(int32_t eventId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C56C1B & 1) == 0 )
+  if ( (byte_4CB6184 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C56C1B = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CB6184 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            idx,
-           (const MethodInfo_30F7BF8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_31394F0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -94,14 +94,14 @@ System_String_o *EventBossStatusUiEntity__GetCountFormat(EventBossStatusUiEntity
   System_String_o *v4; // x20
   Il2CppObject *ScriptObj; // x0
 
-  if ( (byte_4C56C25 & 1) == 0 )
+  if ( (byte_4CB618E & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18308/*"count_format"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C56C25 = 1;
+    sub_1C6BA08(&StringLiteral_18315/*"count_format"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB618E = 1;
   }
   v4 = (System_String_o *)StringLiteral_1/*""*/;
-  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_18308/*"count_format"*/, v2);
+  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_18315/*"count_format"*/, v2);
   if ( ScriptObj )
     return (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))ScriptObj->klass->vtable[3].methodPtr)(
                                 ScriptObj,
@@ -121,12 +121,12 @@ int32_t EventBossStatusUiEntity__GetGaugeId(EventBossStatusUiEntity_o *this, con
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C56C24 & 1) == 0 )
+  if ( (byte_4CB618D & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_19772/*"gauge_id"*/);
-    byte_4C56C24 = 1;
+    sub_1C6BA08(&StringLiteral_19817/*"gauge_id"*/);
+    byte_4CB618D = 1;
   }
-  return EventBossStatusUiEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_19772/*"gauge_id"*/, -1, v2);
+  return EventBossStatusUiEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_19817/*"gauge_id"*/, -1, v2);
 }
 
 
@@ -140,12 +140,12 @@ int32_t EventBossStatusUiEntity__GetLastBattleIconId(EventBossStatusUiEntity_o *
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C56C29 & 1) == 0 )
+  if ( (byte_4CB6192 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_21192/*"lastbattle_icon_id"*/);
-    byte_4C56C29 = 1;
+    sub_1C6BA08(&StringLiteral_21252/*"lastbattle_icon_id"*/);
+    byte_4CB6192 = 1;
   }
-  return EventBossStatusUiEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_21192/*"lastbattle_icon_id"*/, -1, v2);
+  return EventBossStatusUiEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_21252/*"lastbattle_icon_id"*/, -1, v2);
 }
 
 
@@ -165,17 +165,17 @@ int32_t EventBossStatusUiEntity__GetScriptIntParam(
   const MethodInfo *v13; // x2
 
   v4 = defVal;
-  if ( (byte_4C56C1C & 1) == 0 )
+  if ( (byte_4CB6185 & 1) == 0 )
   {
-    sub_1C3E564(&long_TypeInfo);
-    byte_4C56C1C = 1;
+    sub_1C6BA08(&long_TypeInfo);
+    byte_4CB6185 = 1;
   }
   ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1C3EA80(ScriptObj);
+  sub_1C6BFFC(ScriptObj);
   return (unsigned int)EventBossStatusUiEntity__GetScriptObj(v11, v12, v13);
 }
 
@@ -188,10 +188,10 @@ Il2CppObject *EventBossStatusUiEntity__GetScriptObj(
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C56C1E & 1) == 0 )
+  if ( (byte_4CB6187 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4C56C1E = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4CB6187 = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -201,7 +201,7 @@ Il2CppObject *EventBossStatusUiEntity__GetScriptObj(
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -242,10 +242,10 @@ int32_t EventBossStatusUiEntity__GetScriptStringParam(
   Il2CppObject *ScriptObj; // x0
   System_String_o *v8; // x19
 
-  if ( (byte_4C56C1D & 1) == 0 )
+  if ( (byte_4CB6186 & 1) == 0 )
   {
-    sub_1C3E564(&System_Convert_TypeInfo);
-    byte_4C56C1D = 1;
+    sub_1C6BA08(&System_Convert_TypeInfo);
+    byte_4CB6186 = 1;
   }
   ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
@@ -255,7 +255,7 @@ int32_t EventBossStatusUiEntity__GetScriptStringParam(
                             ScriptObj->klass->vtable[3].method);
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  return System_Convert__ToInt32_64733600(v8, 16, 0);
+  return System_Convert__ToInt32_65061980(v8, 16, 0);
 }
 
 
@@ -283,12 +283,12 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetStatusBattleColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4C56C21 & 1) == 0 )
+  if ( (byte_4CB618A & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_23708/*"status_battle_color"*/);
-    byte_4C56C21 = 1;
+    sub_1C6BA08(&StringLiteral_23782/*"status_battle_color"*/);
+    byte_4CB618A = 1;
   }
-  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_23708/*"status_battle_color"*/, v3);
+  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_23782/*"status_battle_color"*/, v3);
   if ( ScriptObj )
   {
     v10 = (EventBossStatusUiEntity_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))ScriptObj->klass->vtable[3].methodPtr)(
@@ -316,12 +316,12 @@ int32_t EventBossStatusUiEntity__GetStatusHeight(EventBossStatusUiEntity_o *this
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C56C26 & 1) == 0 )
+  if ( (byte_4CB618F & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_23709/*"status_height"*/);
-    byte_4C56C26 = 1;
+    sub_1C6BA08(&StringLiteral_23783/*"status_height"*/);
+    byte_4CB618F = 1;
   }
-  return EventBossStatusUiEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_23709/*"status_height"*/, -1, v2);
+  return EventBossStatusUiEntity__GetScriptIntParam(this, (System_String_o *)StringLiteral_23783/*"status_height"*/, -1, v2);
 }
 
 
@@ -349,12 +349,12 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetStatusLastColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4C56C22 & 1) == 0 )
+  if ( (byte_4CB618B & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_23710/*"status_last_color"*/);
-    byte_4C56C22 = 1;
+    sub_1C6BA08(&StringLiteral_23784/*"status_last_color"*/);
+    byte_4CB618B = 1;
   }
-  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_23710/*"status_last_color"*/, v3);
+  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_23784/*"status_last_color"*/, v3);
   if ( ScriptObj )
   {
     v10 = (EventBossStatusUiEntity_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))ScriptObj->klass->vtable[3].methodPtr)(
@@ -402,12 +402,12 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetStatusWinColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4C56C23 & 1) == 0 )
+  if ( (byte_4CB618C & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_23717/*"status_win_color"*/);
-    byte_4C56C23 = 1;
+    sub_1C6BA08(&StringLiteral_23791/*"status_win_color"*/);
+    byte_4CB618C = 1;
   }
-  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_23717/*"status_win_color"*/, v3);
+  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_23791/*"status_win_color"*/, v3);
   if ( ScriptObj )
   {
     v10 = (EventBossStatusUiEntity_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))ScriptObj->klass->vtable[3].methodPtr)(
@@ -455,12 +455,12 @@ UnityEngine_Color_o EventBossStatusUiEntity__GetTextEffectColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4C56C20 & 1) == 0 )
+  if ( (byte_4CB6189 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_24069/*"text_effect_color"*/);
-    byte_4C56C20 = 1;
+    sub_1C6BA08(&StringLiteral_24147/*"text_effect_color"*/);
+    byte_4CB6189 = 1;
   }
-  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_24069/*"text_effect_color"*/, v3);
+  ScriptObj = EventBossStatusUiEntity__GetScriptObj(this, (System_String_o *)StringLiteral_24147/*"text_effect_color"*/, v3);
   if ( ScriptObj )
   {
     v10 = (EventBossStatusUiEntity_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))ScriptObj->klass->vtable[3].methodPtr)(
@@ -497,16 +497,16 @@ bool EventBossStatusUiEntity__TryGetGridPos(
   __int64 v10; // x1
   int32x2_t v11; // d0
 
-  if ( (byte_4C56C27 & 1) == 0 )
+  if ( (byte_4CB6190 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_19928/*"grid_pos"*/);
-    byte_4C56C27 = 1;
+    sub_1C6BA08(&StringLiteral_19973/*"grid_pos"*/);
+    byte_4CB6190 = 1;
   }
-  v5 = (System_String_o *)StringLiteral_19928/*"grid_pos"*/;
-  if ( !byte_4C506A1 )
+  v5 = (System_String_o *)StringLiteral_19973/*"grid_pos"*/;
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -517,9 +517,9 @@ bool EventBossStatusUiEntity__TryGetGridPos(
   {
     IntArray = EntityScriptUtil__GetIntArray(this->fields.script, v5, 0, 0);
     if ( !IntArray )
-      sub_1C3E7C0(0, v10);
+      sub_1C6BC60(0, v10);
     if ( LODWORD(IntArray->max_length) < 2 )
-      sub_1C3E7C8(IntArray, v10);
+      sub_1C6BC68(IntArray);
     v11.n64_u64[0] = *(unsigned __int64 *)IntArray->m_Items;
     pos->fields.z = 0.0;
     *(float32x2_t *)&pos->fields.x = vcvt_f32_s32(v11);
@@ -541,16 +541,16 @@ bool EventBossStatusUiEntity__TryGetHpBarPos(
   __int64 v10; // x1
   int32x2_t v11; // d0
 
-  if ( (byte_4C56C28 & 1) == 0 )
+  if ( (byte_4CB6191 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_20038/*"hp_bar_pos"*/);
-    byte_4C56C28 = 1;
+    sub_1C6BA08(&StringLiteral_20084/*"hp_bar_pos"*/);
+    byte_4CB6191 = 1;
   }
-  v5 = (System_String_o *)StringLiteral_20038/*"hp_bar_pos"*/;
-  if ( !byte_4C506A1 )
+  v5 = (System_String_o *)StringLiteral_20084/*"hp_bar_pos"*/;
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -561,9 +561,9 @@ bool EventBossStatusUiEntity__TryGetHpBarPos(
   {
     IntArray = EntityScriptUtil__GetIntArray(this->fields.script, v5, 0, 0);
     if ( !IntArray )
-      sub_1C3E7C0(0, v10);
+      sub_1C6BC60(0, v10);
     if ( LODWORD(IntArray->max_length) < 2 )
-      sub_1C3E7C8(IntArray, v10);
+      sub_1C6BC68(IntArray);
     v11.n64_u64[0] = *(unsigned __int64 *)IntArray->m_Items;
     pos->fields.z = 0.0;
     *(float32x2_t *)&pos->fields.x = vcvt_f32_s32(v11);

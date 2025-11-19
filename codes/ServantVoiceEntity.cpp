@@ -1,28 +1,28 @@
 void ServantVoiceEntity___ctor(ServantVoiceEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C57835 & 1) == 0 )
+  if ( (byte_4CB6DA2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C57835 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB6DA2 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantVoiceEntity__CreatePK(int32_t id, int32_t voicePrefix, int32_t type, const MethodInfo *method)
 {
-  if ( (byte_4C57814 & 1) == 0 )
+  if ( (byte_4CB6D81 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C57814 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4CB6D81 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            voicePrefix,
            type,
-           (const MethodInfo_30F8088 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_3139980 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -53,12 +53,12 @@ int32_t ServantVoiceEntity__FriendShipRankWithVoice(
   ServantVoiceCond_o *v16; // x16
   __int64 value; // x16
 
-  if ( (byte_4C57821 & 1) == 0 )
+  if ( (byte_4CB6D8E & 1) == 0 )
   {
-    sub_1C3E564(&int___TypeInfo);
-    byte_4C57821 = 1;
+    sub_1C6BA08(&int___TypeInfo);
+    byte_4CB6D8E = 1;
   }
-  v5 = sub_1C3E60C(int___TypeInfo, (unsigned int)rankNow);
+  v5 = sub_1C6BAB0(int___TypeInfo, (unsigned int)rankNow);
   if ( !v5 )
     goto LABEL_31;
   v7 = *(_QWORD *)(v5 + 24);
@@ -69,7 +69,7 @@ int32_t ServantVoiceEntity__FriendShipRankWithVoice(
     {
       if ( v8 >= (unsigned int)v7 )
 LABEL_32:
-        sub_1C3E7C8(v5, v6);
+        sub_1C6BC68(v5);
       *(_DWORD *)(v5 + 32 + 4 * v8++) = 0;
     }
     while ( (int)v7 != v8 );
@@ -77,7 +77,7 @@ LABEL_32:
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
 LABEL_31:
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   max_length = scriptJson->max_length;
   if ( max_length < 1 )
     goto LABEL_28;
@@ -153,7 +153,7 @@ int32_t ServantVoiceEntity__GetBoxGachaVoicePriority(
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
 LABEL_18:
-    sub_1C3E7C0(this, *(_QWORD *)&type);
+    sub_1C6BC60(this, *(_QWORD *)&type);
   max_length = scriptJson->max_length;
   if ( max_length < 1 )
     return 0;
@@ -162,7 +162,7 @@ LABEL_18:
   {
     if ( v7 >= max_length )
 LABEL_19:
-      sub_1C3E7C8(this, *(_QWORD *)&type);
+      sub_1C6BC68(this);
     v8 = scriptJson->m_Items[v7];
     if ( !v8 )
       goto LABEL_18;
@@ -186,7 +186,7 @@ LABEL_15:
     v12 = infos->m_Items[v11];
     if ( !v12 || !labelName )
       goto LABEL_18;
-    this = (ServantVoiceEntity_o *)System_String__Equals_63671772(labelName, v12->fields.id, 0);
+    this = (ServantVoiceEntity_o *)System_String__Equals_64002112(labelName, v12->fields.id, 0);
     if ( ((unsigned __int8)this & 1) != 0 )
       return v8->fields.boxGachaPriority;
     v10 = infos->max_length;
@@ -211,7 +211,7 @@ int32_t ServantVoiceEntity__GetChangeLimitVoiceFriendshipLv(ServantVoiceEntity_o
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
 LABEL_23:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   max_length = scriptJson->max_length;
   if ( max_length >= 1 )
   {
@@ -221,7 +221,7 @@ LABEL_23:
     {
       if ( v4 >= max_length )
 LABEL_24:
-        sub_1C3E7C8(this, method);
+        sub_1C6BC68(this);
       v5 = scriptJson->m_Items[v4];
       if ( !v5 )
         goto LABEL_23;
@@ -276,7 +276,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__GetFi
   const MethodInfo *v5; // x5
 
   if ( this->fields.type == 3 && !System_String__IsNullOrEmpty(labelName, 0) )
-    return ServantVoiceEntity__getVoiceList_42851728(this, 3, labelName, 0, 1, v5);
+    return ServantVoiceEntity__getVoiceList_43041808(this, 3, labelName, 0, 1, v5);
   else
     return 0;
 }
@@ -303,7 +303,7 @@ SvtVoiceInfo_o *ServantVoiceEntity__GetPlayVoiceLabelInfo(
     scriptJson = this->fields.scriptJson;
     if ( !scriptJson )
 LABEL_13:
-      sub_1C3E7C0(IsNullOrEmpty, v6);
+      sub_1C6BC60(IsNullOrEmpty, v6);
     v9 = 0;
     while ( 1 )
     {
@@ -311,7 +311,7 @@ LABEL_13:
       if ( (__int64)v9 >= (int)max_length_low )
         return 0;
       if ( v9 >= max_length_low )
-        sub_1C3E7C8(IsNullOrEmpty, v6);
+        sub_1C6BC68(IsNullOrEmpty);
       v7 = scriptJson->m_Items[v9];
       if ( v7 )
       {
@@ -354,21 +354,21 @@ System_String_o *ServantVoiceEntity__GetSummonScriptId(
   ServantVoiceData_o *v13; // x9
   System_String_o *summonScript; // x22
 
-  if ( (byte_4C57834 & 1) == 0 )
+  if ( (byte_4CB6DA1 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57834 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6DA1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
+                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
         (scriptJson = this->fields.scriptJson) == 0) )
   {
 LABEL_16:
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   }
   v8 = (VoicePlayCondMaster_o *)Instance;
   v9 = 0;
@@ -387,7 +387,7 @@ LABEL_16:
       goto LABEL_16;
     if ( !LODWORD(infos->max_length) )
 LABEL_19:
-      sub_1C3E7C8(Instance, v6);
+      sub_1C6BC68(Instance);
     v13 = infos->m_Items[0];
     if ( !v13 || !v8 )
       goto LABEL_16;
@@ -435,15 +435,15 @@ bool ServantVoiceEntity__IsAvailableHomeAndGrowth(
   int32_t v30; // w21
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v31; // 0:x0.16
 
-  if ( (byte_4C5782A & 1) == 0 )
+  if ( (byte_4CB6D97 & 1) == 0 )
   {
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    this = (ServantVoiceEntity_o *)sub_1C3E564(&VoiceCondType_TypeInfo);
-    byte_4C5782A = 1;
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    this = (ServantVoiceEntity_o *)sub_1C6BA08(&VoiceCondType_TypeInfo);
+    byte_4CB6D97 = 1;
   }
   if ( !cond )
 LABEL_45:
-    sub_1C3E7C0(this, cond);
+    sub_1C6BC60(this, cond);
   condType = cond->fields.condType;
   switch ( condType )
   {
@@ -490,7 +490,7 @@ LABEL_45:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v31.fields.currentCryptoKey = v29;
       *(_QWORD *)&v31.fields.fakeValue = v28;
-      v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v31, 0);
+      v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v31, 0);
       if ( !VoiceCondType_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(VoiceCondType_TypeInfo);
       return VoiceCondType__IsSatisfySvtGroupCondition(v27, v30, usrSvtList, 0);
@@ -561,7 +561,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getBa
 {
   const MethodInfo *v3; // x5
 
-  return ServantVoiceEntity__getVoiceList_42851728(this, 6, labelName, 0, 1, v3);
+  return ServantVoiceEntity__getVoiceList_43041808(this, 6, labelName, 0, 1, v3);
 }
 
 
@@ -596,34 +596,34 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getBo
   Il2CppClass **v26; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C5782B & 1) == 0 )
+  if ( (byte_4CB6D98 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C3E564(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C5782B = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D98 = 1;
   }
   entity = 0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventMaster___),
+                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMaster___),
         (scriptJson = this->fields.scriptJson) == 0) )
   {
 LABEL_36:
-    sub_1C3E7C0(Instance, p_obj);
+    sub_1C6BC60(Instance, p_obj);
   }
   v10 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   v11 = 0;
@@ -652,7 +652,7 @@ LABEL_36:
                                        v10,
                                        &entity,
                                        v17->fields.value,
-                                       (const MethodInfo_33B2FA4 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                                       (const MethodInfo_33F9128 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
           if ( ((unsigned __int8)Instance & 1) != 0 )
           {
             if ( !entity )
@@ -676,14 +676,14 @@ LABEL_36:
                   System_Collections_Generic_List_object___AddWithResize(
                     v3,
                     p_obj,
-                    *(const MethodInfo_37B5460 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+                    *(const MethodInfo_3800974 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v22 = &items->obj.klass + size;
                   v3->fields._size = size + 1;
                   v22[4] = (Il2CppClass *)p_obj;
-                  sub_1C3E508((CGThumbnailListItem_o *)(v22 + 4), (int32_t)p_obj, v7, v8);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)(v22 + 4), (int32_t)p_obj, v7, v8);
                 }
               }
             }
@@ -693,7 +693,7 @@ LABEL_36:
             goto LABEL_35;
         }
 LABEL_38:
-        sub_1C3E7C8(Instance, p_obj);
+        sub_1C6BC68(Instance);
       }
     }
     else
@@ -712,14 +712,14 @@ LABEL_38:
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           p_obj,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
       }
       else
       {
         v26 = &v23->obj.klass + v25;
         v3->fields._size = v25 + 1;
         v26[4] = (Il2CppClass *)p_obj;
-        sub_1C3E508((CGThumbnailListItem_o *)(v26 + 4), (int32_t)p_obj, v7, v8);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v26 + 4), (int32_t)p_obj, v7, v8);
       }
     }
 LABEL_35:
@@ -768,31 +768,31 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getCo
   __int64 size; // x10
   Il2CppClass **v22; // x0
 
-  if ( (byte_4C57817 & 1) == 0 )
+  if ( (byte_4CB6D84 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Contains__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57817 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Contains__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D84 = 1;
   }
   if ( this->fields.type != type )
     return 0;
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
+                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
         (scriptJson = this->fields.scriptJson) == 0) )
   {
 LABEL_22:
-    sub_1C3E7C0(Instance, v9);
+    sub_1C6BC60(Instance, v9);
   }
   v11 = (VoicePlayCondMaster_o *)Instance;
   v12 = 0;
@@ -811,7 +811,7 @@ LABEL_22:
       {
         if ( !LODWORD(infos->max_length) )
 LABEL_25:
-          sub_1C3E7C8(Instance, v9);
+          sub_1C6BC68(Instance);
         v16 = infos->m_Items[0];
         if ( v16 )
         {
@@ -825,7 +825,7 @@ LABEL_25:
               Instance = (Il2CppObject *)System_Collections_Generic_List_object___Contains(
                                            v7,
                                            &infos->obj,
-                                           (const MethodInfo_37B57F0 *)Method_System_Collections_Generic_List_ServantVoiceData____Contains__);
+                                           (const MethodInfo_3800D04 *)Method_System_Collections_Generic_List_ServantVoiceData____Contains__);
               if ( ((unsigned __int8)Instance & 1) == 0 )
               {
                 items = v7->fields._items;
@@ -839,14 +839,14 @@ LABEL_25:
                   System_Collections_Generic_List_object___AddWithResize(
                     v7,
                     &infos->obj,
-                    *(const MethodInfo_37B5460 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+                    *(const MethodInfo_3800974 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v22 = &items->obj.klass + size;
                   v7->fields._size = size + 1;
                   v22[4] = (Il2CppClass *)infos;
-                  sub_1C3E508((CGThumbnailListItem_o *)(v22 + 4), (int32_t)infos, v17, v18);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)(v22 + 4), (int32_t)infos, v17, v18);
                 }
               }
             }
@@ -885,30 +885,30 @@ System_Collections_Generic_List_SvtVoiceInfo__o *ServantVoiceEntity__getCondVoic
   __int64 size; // x10
   Il2CppClass **v21; // x0
 
-  if ( (byte_4C57819 & 1) == 0 )
+  if ( (byte_4CB6D86 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57819 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D86 = 1;
   }
   if ( this->fields.type != type )
     return 0;
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
+                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
         (scriptJson = this->fields.scriptJson) == 0) )
   {
 LABEL_21:
-    sub_1C3E7C0(Instance, v9);
+    sub_1C6BC60(Instance, v9);
   }
   v13 = 0;
   while ( 1 )
@@ -929,7 +929,7 @@ LABEL_21:
       {
         if ( !(_DWORD)v16 )
 LABEL_24:
-          sub_1C3E7C8(Instance, v9);
+          sub_1C6BC68(Instance);
         v17 = monitor[4];
         if ( !v17 )
           goto LABEL_21;
@@ -948,14 +948,14 @@ LABEL_24:
             System_Collections_Generic_List_object___AddWithResize(
               v7,
               v9,
-              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+              *(const MethodInfo_3800974 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
           }
           else
           {
             v21 = &items->obj.klass + size;
             v7->fields._size = size + 1;
             v21[4] = (Il2CppClass *)v9;
-            sub_1C3E508((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v9, v10, v11);
+            sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v9, v10, v11);
           }
         }
       }
@@ -988,16 +988,16 @@ ServantVoiceCond_array *ServantVoiceEntity__getConds(
   ServantVoiceData_o *v17; // x8
 
   v6 = this;
-  if ( (byte_4C5781E & 1) == 0 )
+  if ( (byte_4CB6D8B & 1) == 0 )
   {
-    this = (ServantVoiceEntity_o *)sub_1C3E564(&StringLiteral_16140/*"_B050"*/);
-    byte_4C5781E = 1;
+    this = (ServantVoiceEntity_o *)sub_1C6BA08(&StringLiteral_16123/*"_B050"*/);
+    byte_4CB6D8B = 1;
   }
   if ( v6->fields.type == type )
   {
     if ( !labelName )
       goto LABEL_25;
-    this = (ServantVoiceEntity_o *)System_String__EndsWith(labelName, (System_String_o *)StringLiteral_16140/*"_B050"*/, 0);
+    this = (ServantVoiceEntity_o *)System_String__EndsWith(labelName, (System_String_o *)StringLiteral_16123/*"_B050"*/, 0);
     scriptJson = v6->fields.scriptJson;
     if ( ((unsigned __int8)this & 1) != 0 )
     {
@@ -1008,12 +1008,12 @@ ServantVoiceCond_array *ServantVoiceEntity__getConds(
       {
         if ( !(_DWORD)max_length )
 LABEL_28:
-          sub_1C3E7C8(this, *(_QWORD *)&type);
+          sub_1C6BC68(this);
         v9 = scriptJson->m_Items[0];
         if ( v9 )
           return v9->fields.conds;
 LABEL_25:
-        sub_1C3E7C0(this, *(_QWORD *)&type);
+        sub_1C6BC60(this, *(_QWORD *)&type);
       }
     }
     else
@@ -1045,7 +1045,7 @@ LABEL_25:
               v17 = infos->m_Items[v16];
               if ( !v17 )
                 goto LABEL_25;
-              this = (ServantVoiceEntity_o *)System_String__Equals_63671772(labelName, v17->fields.id, 0);
+              this = (ServantVoiceEntity_o *)System_String__Equals_64002112(labelName, v17->fields.id, 0);
               if ( ((unsigned __int8)this & 1) != 0 )
                 return v13->fields.conds;
               v15 = infos->max_length;
@@ -1075,7 +1075,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getCo
 {
   const MethodInfo *v4; // x6
 
-  return ServantVoiceEntity__getVoiceList_42851012(this, 2, 23, costumeId, 0, genderType, v4);
+  return ServantVoiceEntity__getVoiceList_43041092(this, 2, 23, costumeId, 0, genderType, v4);
 }
 
 
@@ -1087,7 +1087,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getCo
 {
   const MethodInfo *v4; // x6
 
-  return ServantVoiceEntity__getVoiceList_42851012(this, 2, 23, costumeId, playVoiceLabel, -1, v4);
+  return ServantVoiceEntity__getVoiceList_43041092(this, 2, 23, costumeId, playVoiceLabel, -1, v4);
 }
 
 
@@ -1134,21 +1134,21 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
   __int64 size; // x10
   Il2CppClass **v19; // x0
 
-  if ( (byte_4C5782D & 1) == 0 )
+  if ( (byte_4CB6D9A & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    byte_4C5782D = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    byte_4CB6D9A = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
 LABEL_23:
-    sub_1C3E7C0(v4, p_obj);
+    sub_1C6BC60(v4, p_obj);
   v9 = 0;
   while ( 1 )
   {
@@ -1157,7 +1157,7 @@ LABEL_23:
       return (System_Collections_Generic_List_ServantVoiceData____o *)v3;
     if ( v9 >= max_length )
 LABEL_25:
-      sub_1C3E7C8(v4, p_obj);
+      sub_1C6BC68(v4);
     v11 = scriptJson->m_Items[v9];
     if ( v11 )
     {
@@ -1193,14 +1193,14 @@ LABEL_25:
                   System_Collections_Generic_List_object___AddWithResize(
                     v3,
                     p_obj,
-                    *(const MethodInfo_37B5460 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+                    *(const MethodInfo_3800974 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v19 = &items->obj.klass + size;
                   v3->fields._size = size + 1;
                   v19[4] = (Il2CppClass *)p_obj;
-                  sub_1C3E508((CGThumbnailListItem_o *)(v19 + 4), (int32_t)p_obj, v6, v7);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)p_obj, v6, v7);
                 }
               }
               LODWORD(v13) = conds->max_length;
@@ -1248,28 +1248,28 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
   __int64 v23; // x10
   Il2CppClass **v24; // x0
 
-  if ( (byte_4C5782C & 1) == 0 )
+  if ( (byte_4CB6D99 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C3E564(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C5782C = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D99 = 1;
   }
-  v2 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  v2 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v2,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = (DataManager_o *)NetworkManager__getTime(0);
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
 LABEL_38:
-    sub_1C3E7C0(Time, p_obj);
+    sub_1C6BC60(Time, p_obj);
   v8 = Time;
   v9 = 0;
   while ( 1 )
@@ -1279,7 +1279,7 @@ LABEL_38:
       return (System_Collections_Generic_List_ServantVoiceData____o *)v2;
     if ( v9 >= max_length )
 LABEL_40:
-      sub_1C3E7C8(Time, p_obj);
+      sub_1C6BC68(Time);
     v11 = scriptJson->m_Items[v9];
     if ( !v11 )
       goto LABEL_38;
@@ -1293,18 +1293,18 @@ LABEL_40:
           if ( (unsigned int)i >= (unsigned int)v13 )
             goto LABEL_40;
           v15 = conds->m_Items[i];
-          Time = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Time = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Time )
             goto LABEL_38;
           Time = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Time,
-                                    (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventMaster___);
+                                    (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMaster___);
           if ( !v15 || !Time )
             goto LABEL_38;
           Time = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Time,
                                     v15->fields.value,
-                                    (const MethodInfo_33B2F58 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+                                    (const MethodInfo_33F90DC *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
           if ( Time )
           {
             condType = v15->fields.condType;
@@ -1331,14 +1331,14 @@ LABEL_40:
               System_Collections_Generic_List_object___AddWithResize(
                 v2,
                 p_obj,
-                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+                *(const MethodInfo_3800974 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
             }
             else
             {
               v20 = &items->obj.klass + size;
               v2->fields._size = size + 1;
               v20[4] = (Il2CppClass *)p_obj;
-              sub_1C3E508((CGThumbnailListItem_o *)(v20 + 4), (int32_t)p_obj, v5, v6);
+              sub_1C6B9AC((CGThumbnailListItem_o *)(v20 + 4), (int32_t)p_obj, v5, v6);
             }
           }
 LABEL_30:
@@ -1362,14 +1362,14 @@ LABEL_30:
         System_Collections_Generic_List_object___AddWithResize(
           v2,
           p_obj,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
       }
       else
       {
         v24 = &v21->obj.klass + v23;
         v2->fields._size = v23 + 1;
         v24[4] = (Il2CppClass *)p_obj;
-        sub_1C3E508((CGThumbnailListItem_o *)(v24 + 4), (int32_t)p_obj, v5, v6);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v24 + 4), (int32_t)p_obj, v5, v6);
       }
     }
     ++v9;
@@ -1380,14 +1380,14 @@ LABEL_30:
 }
 
 
-System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEventRewardVoiceList_42862628(
+System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEventRewardVoiceList_43052708(
         ServantVoiceEntity_o *this,
         System_String_o *labelName,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x5
 
-  return ServantVoiceEntity__getVoiceList_42851728(this, 5, labelName, 0, 1, v3);
+  return ServantVoiceEntity__getVoiceList_43041808(this, 5, labelName, 0, 1, v3);
 }
 
 
@@ -1462,37 +1462,37 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
   System_Collections_Generic_List_Enumerator_object__o v59; // [xsp+50h] [xbp-80h] BYREF
 
   v6 = isEventDateCondOnly;
-  if ( (byte_4C57833 & 1) == 0 )
+  if ( (byte_4CB6DA0 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C3E564(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_VoiceCondType_Type__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_VoiceCondType_Type___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_List_VoiceCondType_Type__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57833 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_VoiceCondType_Type__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_VoiceCondType_Type___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_List_VoiceCondType_Type__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6DA0 = 1;
   }
   memset(&v59, 0, sizeof(v59));
-  v52 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  v52 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v52,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-  v7 = (System_Collections_Generic_List_T__o *)sub_1C3E7B0(System_Collections_Generic_List_VoiceCondType_Type__TypeInfo);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+  v7 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_VoiceCondType_Type__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v7,
-    (const MethodInfo_379A414 *)Method_System_Collections_Generic_List_VoiceCondType_Type___ctor__);
+    (const MethodInfo_37E5928 *)Method_System_Collections_Generic_List_VoiceCondType_Type___ctor__);
   if ( !v7 )
     goto LABEL_54;
   items = v7->fields._items;
@@ -1507,7 +1507,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v7,
       14,
-      *(const MethodInfo_379AC68 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      *(const MethodInfo_37E617C **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
     items = v7->fields._items;
     v11 = Method_System_Collections_Generic_List_VoiceCondType_Type__Add__;
     ++v7->fields._version;
@@ -1526,7 +1526,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v7,
       13,
-      *(const MethodInfo_379AC68 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      *(const MethodInfo_37E617C **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
     items = v7->fields._items;
     v11 = Method_System_Collections_Generic_List_VoiceCondType_Type__Add__;
     ++v7->fields._version;
@@ -1545,17 +1545,17 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v7,
       19,
-      *(const MethodInfo_379AC68 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      *(const MethodInfo_37E617C **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
   }
   else
   {
     v7->fields._size = v14 + 1;
     *((_DWORD *)items->m_Items + v14) = 19;
   }
-  v15 = (System_Collections_Generic_List_T__o *)sub_1C3E7B0(System_Collections_Generic_List_VoiceCondType_Type__TypeInfo);
+  v15 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_VoiceCondType_Type__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v15,
-    (const MethodInfo_379A414 *)Method_System_Collections_Generic_List_VoiceCondType_Type___ctor__);
+    (const MethodInfo_37E5928 *)Method_System_Collections_Generic_List_VoiceCondType_Type___ctor__);
   if ( !v6 )
   {
     if ( !v15 )
@@ -1571,7 +1571,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
       System_Collections_Generic_List_Int32Enum___AddWithResize(
         v15,
         checkCondType,
-        *(const MethodInfo_379AC68 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+        *(const MethodInfo_37E617C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
     }
     else
     {
@@ -1579,10 +1579,10 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
       *((_DWORD *)v16->m_Items + v18) = checkCondType;
     }
   }
-  v53 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
+  v53 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v53,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
@@ -1620,7 +1620,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
             Time = System_Collections_Generic_List_Int32Enum___Contains(
                      v57,
                      v30,
-                     (const MethodInfo_379AFE0 *)Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
+                     (const MethodInfo_37E64F4 *)Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
             if ( (Time & 1) == 0 )
             {
               if ( !v15 )
@@ -1628,29 +1628,29 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
               Time = System_Collections_Generic_List_Int32Enum___Contains(
                        v15,
                        v30,
-                       (const MethodInfo_379AFE0 *)Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
+                       (const MethodInfo_37E64F4 *)Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
               if ( (Time & 1) == 0 )
                 goto LABEL_53;
             }
-            Time = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+            Time = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
             if ( !Time )
               goto LABEL_54;
             Time = (int64_t)DataManager__GetMasterData_object_(
                               (DataManager_o *)Time,
-                              (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventMaster___);
+                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMaster___);
             if ( !Time )
               goto LABEL_54;
             Time = (int64_t)DataMasterBase_object__object__int___GetEntity(
                               (DataMasterBase_TMaster__TEntity__PKType__o *)Time,
                               *(_DWORD *)(v29 + 20),
-                              (const MethodInfo_33B2F58 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+                              (const MethodInfo_33F90DC *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
             if ( !Time || *(_DWORD *)(v29 + 20) != eventId )
               goto LABEL_53;
             v31 = Time;
             Time = System_Collections_Generic_List_Int32Enum___Contains(
                      v57,
                      v30,
-                     (const MethodInfo_379AFE0 *)Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
+                     (const MethodInfo_37E64F4 *)Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
             if ( (Time & 1) != 0 )
             {
               v32 = *(_QWORD *)(v31 + 96) <= v54 ? 13 : 14;
@@ -1664,7 +1664,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEv
               goto LABEL_48;
           }
 LABEL_78:
-          sub_1C3E7C8(Time, v9);
+          sub_1C6BC68(Time);
         }
 LABEL_48:
         if ( !v53 )
@@ -1680,14 +1680,14 @@ LABEL_48:
           System_Collections_Generic_List_object___AddWithResize(
             v53,
             v24,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
         }
         else
         {
           v36 = &v33->obj.klass + v35;
           v53->fields._size = v35 + 1;
           v36[4] = (Il2CppClass *)v24;
-          sub_1C3E508((CGThumbnailListItem_o *)(v36 + 4), (int32_t)v24, v19, v20);
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v36 + 4), (int32_t)v24, v19, v20);
         }
       }
     }
@@ -1701,26 +1701,26 @@ LABEL_53:
   Time = (int64_t)v53;
   if ( !v53 )
 LABEL_54:
-    sub_1C3E7C0(Time, v9);
+    sub_1C6BC60(Time, v9);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v58,
     v53,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SvtVoiceInfo__GetEnumerator__);
   v59 = v58;
 LABEL_57:
   while ( 1 )
   {
     v37 = System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v59,
-            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
+            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__MoveNext__);
     if ( !v37 )
       break;
     current = v59.fields._current;
     if ( !v59.fields._current )
-      sub_1C3E7C0(v37, v38);
+      sub_1C6BC60(v37, v38);
     v42 = v59.fields._current[4].monitor;
     if ( !v42 )
-      sub_1C3E7C0(v37, v38);
+      sub_1C6BC60(v37, v38);
     v43 = v42[6];
     if ( v43 >= 1 )
     {
@@ -1728,18 +1728,18 @@ LABEL_57:
       while ( 1 )
       {
         if ( v44 >= v43 )
-          sub_1C3E7C8(v37, v38);
+          sub_1C6BC68(v37);
         v45 = *(_QWORD *)&v42[2 * v44 + 8];
         if ( !v45 )
-          sub_1C3E7C0(v37, v38);
+          sub_1C6BC60(v37, v38);
         if ( v6 )
           break;
         if ( !v15 )
-          sub_1C3E7C0(v37, v38);
+          sub_1C6BC60(v37, v38);
         v37 = System_Collections_Generic_List_Int32Enum___Contains(
                 v15,
                 *(_DWORD *)(v45 + 16),
-                (const MethodInfo_379AFE0 *)Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
+                (const MethodInfo_37E64F4 *)Method_System_Collections_Generic_List_VoiceCondType_Type__Contains__);
         if ( v37 )
           break;
         v43 = v42[6];
@@ -1747,45 +1747,45 @@ LABEL_57:
           goto LABEL_57;
       }
       if ( !v52 )
-        sub_1C3E7C0(v37, v38);
+        sub_1C6BC60(v37, v38);
       klass = (Il2CppObject *)current[4].klass;
       v47 = v52->fields._items;
       v48 = Method_System_Collections_Generic_List_ServantVoiceData____Add__;
       ++v52->fields._version;
       if ( !v47 )
-        sub_1C3E7C0(v37, klass);
+        sub_1C6BC60(v37, klass);
       v49 = v52->fields._size;
       if ( (unsigned int)v49 >= LODWORD(v47->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v52,
           klass,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
       }
       else
       {
         v50 = &v47->obj.klass + v49;
         v52->fields._size = v49 + 1;
         v50[4] = (Il2CppClass *)klass;
-        sub_1C3E508((CGThumbnailListItem_o *)(v50 + 4), (int32_t)klass, v39, v40);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v50 + 4), (int32_t)klass, v39, v40);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v59,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SvtVoiceInfo__Dispose__);
   return (System_Collections_Generic_List_ServantVoiceData____o *)v52;
 }
 
 
-System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEventShopVoiceList_42865464(
+System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getEventShopVoiceList_43055544(
         ServantVoiceEntity_o *this,
         System_String_o *labelName,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x5
 
-  return ServantVoiceEntity__getVoiceList_42851728(this, 9, labelName, 0, 1, v3);
+  return ServantVoiceEntity__getVoiceList_43041808(this, 9, labelName, 0, 1, v3);
 }
 
 
@@ -1817,29 +1817,29 @@ ServantVoiceData_array *ServantVoiceEntity__getEventVoiceListByName(
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4C57831 & 1) == 0 )
+  if ( (byte_4CB6D9E & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
-    byte_4C57831 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+    byte_4CB6D9E = 1;
   }
   memset(&v16, 0, sizeof(v16));
   EventRewardVoiceList = ServantVoiceEntity__getEventRewardVoiceList(this, (const MethodInfo *)id);
   if ( !EventRewardVoiceList )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v15,
     (System_Collections_Generic_List_object__o *)EventRewardVoiceList,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
   v16 = v15;
   do
   {
 LABEL_5:
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v16,
-           (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
+           (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
     if ( !v7 )
     {
       current = 0;
@@ -1847,7 +1847,7 @@ LABEL_5:
     }
     current = v16.fields._current;
     if ( !v16.fields._current )
-      sub_1C3E7C0(v7, v8);
+      sub_1C6BC60(v7, v8);
     monitor = (int)v16.fields._current[1].monitor;
   }
   while ( monitor < 1 );
@@ -1855,14 +1855,14 @@ LABEL_5:
   while ( 1 )
   {
     if ( v11 >= monitor )
-      sub_1C3E7C8(v7, v8);
+      sub_1C6BC68(v7);
     v12 = *((_QWORD *)&current[2].klass + (int)v11);
     if ( !v12 )
-      sub_1C3E7C0(v7, v8);
+      sub_1C6BC60(v7, v8);
     v13 = *(System_String_o **)(v12 + 16);
     if ( !v13 )
-      sub_1C3E7C0(0, v8);
-    v7 = System_String__Equals_63671772(v13, id, 0);
+      sub_1C6BC60(0, v8);
+    v7 = System_String__Equals_64002112(v13, id, 0);
     if ( v7 )
       break;
     monitor = (int)current[1].monitor;
@@ -1872,7 +1872,7 @@ LABEL_5:
 LABEL_16:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
   return (ServantVoiceData_array *)current;
 }
 
@@ -1901,24 +1901,24 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getHo
   _QWORD *v10; // x9
   __int64 size; // x10
 
-  if ( (byte_4C57822 & 1) == 0 )
+  if ( (byte_4CB6D8F & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_CondType_Kind__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_CondType_Kind___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_CondType_Kind__TypeInfo);
-    byte_4C57822 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_CondType_Kind__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_CondType_Kind___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_CondType_Kind__TypeInfo);
+    byte_4CB6D8F = 1;
   }
-  v5 = (System_Collections_Generic_List_T__o *)sub_1C3E7B0(System_Collections_Generic_List_CondType_Kind__TypeInfo);
+  v5 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_CondType_Kind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v5,
-    (const MethodInfo_379A414 *)Method_System_Collections_Generic_List_CondType_Kind___ctor__);
+    (const MethodInfo_37E5928 *)Method_System_Collections_Generic_List_CondType_Kind___ctor__);
   if ( !v5
     || (items = v5->fields._items,
         v10 = Method_System_Collections_Generic_List_CondType_Kind__Add__,
         ++v5->fields._version,
         !items) )
   {
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   }
   size = v5->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -1926,14 +1926,14 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getHo
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       81,
-      *(const MethodInfo_379AC68 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_37E617C **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
   }
   else
   {
     v5->fields._size = size + 1;
     *((_DWORD *)items->m_Items + size) = 81;
   }
-  return ServantVoiceEntity__getVoiceList_42851728(
+  return ServantVoiceEntity__getVoiceList_43041808(
            this,
            1,
            labelName,
@@ -1951,7 +1951,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getLe
   const MethodInfo *v5; // x5
 
   if ( this->fields.type == 2 && !System_String__IsNullOrEmpty(labelName, 0) )
-    return ServantVoiceEntity__getVoiceList_42851728(this, 2, labelName, 0, 0, v5);
+    return ServantVoiceEntity__getVoiceList_43041808(this, 2, labelName, 0, 0, v5);
   else
     return 0;
 }
@@ -1982,24 +1982,24 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getLi
   _QWORD *v10; // x9
   __int64 size; // x10
 
-  if ( (byte_4C57823 & 1) == 0 )
+  if ( (byte_4CB6D90 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_CondType_Kind__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_CondType_Kind___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_CondType_Kind__TypeInfo);
-    byte_4C57823 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_CondType_Kind__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_CondType_Kind___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_CondType_Kind__TypeInfo);
+    byte_4CB6D90 = 1;
   }
-  v5 = (System_Collections_Generic_List_T__o *)sub_1C3E7B0(System_Collections_Generic_List_CondType_Kind__TypeInfo);
+  v5 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_CondType_Kind__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v5,
-    (const MethodInfo_379A414 *)Method_System_Collections_Generic_List_CondType_Kind___ctor__);
+    (const MethodInfo_37E5928 *)Method_System_Collections_Generic_List_CondType_Kind___ctor__);
   if ( !v5
     || (items = v5->fields._items,
         v10 = Method_System_Collections_Generic_List_CondType_Kind__Add__,
         ++v5->fields._version,
         !items) )
   {
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   }
   size = v5->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -2007,14 +2007,14 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getLi
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       v5,
       81,
-      *(const MethodInfo_379AC68 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_37E617C **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
   }
   else
   {
     v5->fields._size = size + 1;
     *((_DWORD *)items->m_Items + size) = 81;
   }
-  return ServantVoiceEntity__getVoiceList_42851728(
+  return ServantVoiceEntity__getVoiceList_43041808(
            this,
            2,
            labelName,
@@ -2050,17 +2050,17 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getMa
   __int64 size; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_4C5782E & 1) == 0 )
+  if ( (byte_4CB6D9B & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    byte_4C5782E = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    byte_4CB6D9B = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
     goto LABEL_34;
@@ -2072,7 +2072,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getMa
       return (System_Collections_Generic_List_ServantVoiceData____o *)v3;
     if ( v9 >= max_length )
 LABEL_36:
-      sub_1C3E7C8(isQuestClearState, p_obj);
+      sub_1C6BC68(isQuestClearState);
     v11 = scriptJson->m_Items[v9];
     if ( !v11 )
       goto LABEL_34;
@@ -2156,20 +2156,20 @@ LABEL_27:
                     System_Collections_Generic_List_object___AddWithResize(
                       v3,
                       p_obj,
-                      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+                      *(const MethodInfo_3800974 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v23 = &items->obj.klass + size;
                     v3->fields._size = size + 1;
                     v23[4] = (Il2CppClass *)p_obj;
-                    sub_1C3E508((CGThumbnailListItem_o *)(v23 + 4), (int32_t)p_obj, (int32_t)v6, v7);
+                    sub_1C6B9AC((CGThumbnailListItem_o *)(v23 + 4), (int32_t)p_obj, (int32_t)v6, v7);
                   }
                   break;
                 }
               }
 LABEL_34:
-              sub_1C3E7C0(isQuestClearState, p_obj);
+              sub_1C6BC60(isQuestClearState, p_obj);
             }
           }
         }
@@ -2194,14 +2194,14 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getMa
 }
 
 
-System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getMasterMissionVoiceList_42863140(
+System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getMasterMissionVoiceList_43053220(
         ServantVoiceEntity_o *this,
         System_String_o *labelName,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x5
 
-  return ServantVoiceEntity__getVoiceList_42851728(this, 8, labelName, 0, 1, v3);
+  return ServantVoiceEntity__getVoiceList_43041808(this, 8, labelName, 0, 1, v3);
 }
 
 
@@ -2252,41 +2252,41 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getMa
   int32_t id; // w26
   int32_t v50; // w25
 
-  if ( (byte_4C5781A & 1) == 0 )
+  if ( (byte_4CB6D87 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&ServantLimitUpVoiceCache_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C5781A = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&ServantLimitUpVoiceCache_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D87 = 1;
   }
   if ( this->fields.type != type )
     return 0;
-  v13 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  v13 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v13,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   v15 = ServantVoiceEntity__GetChangeLimitVoiceFriendshipLv(this, v14);
   v17 = v15 - 1;
   if ( v15 < 1 )
     goto LABEL_15;
   v18 = v15;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_72;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C50AE2 )
+  if ( !byte_4CB002A )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C50AE2 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB002A = 1;
   }
   Instance = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -2347,14 +2347,14 @@ LABEL_19:
       System_Collections_Generic_List_object___AddWithResize(
         v13,
         p_obj,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
     }
     else
     {
       v30 = &items->obj.klass + size;
       v13->fields._size = size + 1;
       v30[4] = (Il2CppClass *)p_obj;
-      sub_1C3E508((CGThumbnailListItem_o *)(v30 + 4), (int32_t)p_obj, v24, v25);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v30 + 4), (int32_t)p_obj, v24, v25);
     }
   }
   else
@@ -2371,12 +2371,12 @@ LABEL_19:
       if ( v32 >= max_length )
         goto LABEL_73;
       v34 = scriptJson->m_Items[v32];
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_72;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+                   (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
       if ( !v34 )
         goto LABEL_72;
       infos = v34->fields.infos;
@@ -2404,7 +2404,7 @@ LABEL_19:
         {
           if ( !(_DWORD)v38 )
 LABEL_73:
-            sub_1C3E7C8(Instance, p_obj);
+            sub_1C6BC68(Instance);
           v39 = conds->m_Items[0];
           if ( !v39 )
             goto LABEL_72;
@@ -2444,20 +2444,20 @@ LABEL_54:
                         System_Collections_Generic_List_object___AddWithResize(
                           v13,
                           p_obj,
-                          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+                          *(const MethodInfo_3800974 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
                       }
                       else
                       {
                         v47 = &v44->obj.klass + v46;
                         v13->fields._size = v46 + 1;
                         v47[4] = (Il2CppClass *)p_obj;
-                        sub_1C3E508((CGThumbnailListItem_o *)(v47 + 4), (int32_t)p_obj, v24, v25);
+                        sub_1C6B9AC((CGThumbnailListItem_o *)(v47 + 4), (int32_t)p_obj, v24, v25);
                       }
                       goto LABEL_52;
                     }
                   }
 LABEL_72:
-                  sub_1C3E7C0(Instance, p_obj);
+                  sub_1C6BC60(Instance, p_obj);
                 }
                 v43 = 0;
               }
@@ -2506,29 +2506,29 @@ ServantVoiceData_array *ServantVoiceEntity__getMstMissionVoiceListByName(
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4C57832 & 1) == 0 )
+  if ( (byte_4CB6D9F & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
-    byte_4C57832 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+    byte_4CB6D9F = 1;
   }
   memset(&v16, 0, sizeof(v16));
   VoiceList = ServantVoiceEntity__getVoiceList(this, 8, method);
   if ( !VoiceList )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v15,
     (System_Collections_Generic_List_object__o *)VoiceList,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_ServantVoiceData____GetEnumerator__);
   v16 = v15;
   do
   {
 LABEL_5:
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v16,
-           (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
+           (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____MoveNext__);
     if ( !v7 )
     {
       current = 0;
@@ -2536,7 +2536,7 @@ LABEL_5:
     }
     current = v16.fields._current;
     if ( !v16.fields._current )
-      sub_1C3E7C0(v7, v8);
+      sub_1C6BC60(v7, v8);
     monitor = (int)v16.fields._current[1].monitor;
   }
   while ( monitor < 1 );
@@ -2544,14 +2544,14 @@ LABEL_5:
   while ( 1 )
   {
     if ( v11 >= monitor )
-      sub_1C3E7C8(v7, v8);
+      sub_1C6BC68(v7);
     v12 = *((_QWORD *)&current[2].klass + (int)v11);
     if ( !v12 )
-      sub_1C3E7C0(v7, v8);
+      sub_1C6BC60(v7, v8);
     v13 = *(System_String_o **)(v12 + 16);
     if ( !v13 )
-      sub_1C3E7C0(0, v8);
-    v7 = System_String__Equals_63671772(v13, id, 0);
+      sub_1C6BC60(0, v8);
+    v7 = System_String__Equals_64002112(v13, id, 0);
     if ( v7 )
       break;
     monitor = (int)current[1].monitor;
@@ -2561,7 +2561,7 @@ LABEL_5:
 LABEL_16:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_ServantVoiceData____Dispose__);
   return (ServantVoiceData_array *)current;
 }
 
@@ -2595,30 +2595,30 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getMy
   __int64 size; // x10
   Il2CppClass **v28; // x0
 
-  if ( (byte_4C57820 & 1) == 0 )
+  if ( (byte_4CB6D8D & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57820 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D8D = 1;
   }
   if ( this->fields.type != 1 )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
-        v10 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo),
+                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
+        v10 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo),
         System_Collections_Generic_List_object____ctor(
           v10,
-          (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__),
+          (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__),
         (scriptJson = this->fields.scriptJson) == 0) )
   {
 LABEL_34:
-    sub_1C3E7C0(Instance, p_obj);
+    sub_1C6BC60(Instance, p_obj);
   }
   v12 = 0;
   while ( 1 )
@@ -2628,7 +2628,7 @@ LABEL_34:
       return (System_Collections_Generic_List_ServantVoiceData____o *)v10;
     if ( v12 >= max_length )
 LABEL_37:
-      sub_1C3E7C8(Instance, p_obj);
+      sub_1C6BC68(Instance);
     v14 = scriptJson->m_Items[v12];
     if ( v14 )
     {
@@ -2687,14 +2687,14 @@ LABEL_37:
                   System_Collections_Generic_List_object___AddWithResize(
                     v10,
                     p_obj,
-                    *(const MethodInfo_37B5460 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+                    *(const MethodInfo_3800974 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v28 = &items->obj.klass + size;
                   v10->fields._size = size + 1;
                   v28[4] = (Il2CppClass *)p_obj;
-                  sub_1C3E508((CGThumbnailListItem_o *)(v28 + 4), (int32_t)p_obj, v23, v24);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)(v28 + 4), (int32_t)p_obj, v23, v24);
                 }
               }
             }
@@ -2740,30 +2740,30 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getMy
   __int64 size; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_4C5781F & 1) == 0 )
+  if ( (byte_4CB6D8C & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C5781F = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D8C = 1;
   }
   if ( this->fields.type != 1 )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
-        v8 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo),
+                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
+        v8 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo),
         System_Collections_Generic_List_object____ctor(
           v8,
-          (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__),
+          (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__),
         (scriptJson = this->fields.scriptJson) == 0) )
   {
 LABEL_25:
-    sub_1C3E7C0(Instance, p_obj);
+    sub_1C6BC60(Instance, p_obj);
   }
   v10 = 0;
   while ( 1 )
@@ -2784,7 +2784,7 @@ LABEL_25:
       {
         if ( !(_DWORD)v14 )
 LABEL_28:
-          sub_1C3E7C8(Instance, p_obj);
+          sub_1C6BC68(Instance);
         v15 = infos->m_Items[0];
         if ( !v15 || !MasterData_object )
           goto LABEL_25;
@@ -2825,14 +2825,14 @@ LABEL_28:
               System_Collections_Generic_List_object___AddWithResize(
                 v8,
                 p_obj,
-                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+                *(const MethodInfo_3800974 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
             }
             else
             {
               v23 = &items->obj.klass + size;
               v8->fields._size = size + 1;
               v23[4] = (Il2CppClass *)p_obj;
-              sub_1C3E508((CGThumbnailListItem_o *)(v23 + 4), (int32_t)p_obj, v16, v17);
+              sub_1C6B9AC((CGThumbnailListItem_o *)(v23 + 4), (int32_t)p_obj, v16, v17);
             }
           }
         }
@@ -2853,7 +2853,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getNp
 {
   const MethodInfo *v3; // x5
 
-  return ServantVoiceEntity__getVoiceList_42851728(this, 7, labelName, 0, 1, v3);
+  return ServantVoiceEntity__getVoiceList_43041808(this, 7, labelName, 0, 1, v3);
 }
 
 
@@ -2904,24 +2904,24 @@ void ServantVoiceEntity__getOverwriteData(
   System_String_o *v50; // x1
   System_String_o *v51; // x1
 
-  if ( (byte_4C5781D & 1) == 0 )
+  if ( (byte_4CB6D8A & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_16140/*"_B050"*/);
-    byte_4C5781D = 1;
+    sub_1C6BA08(&StringLiteral_16123/*"_B050"*/);
+    byte_4CB6D8A = 1;
   }
   *conds = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)conds, 0, (int32_t)labelName, (const MethodInfo *)conds);
+  sub_1C6B9AC((CGThumbnailListItem_o *)conds, 0, (int32_t)labelName, (const MethodInfo *)conds);
   *isInvalidVoiceList = 0;
   *overwriteName = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)overwriteName, 0, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)overwriteName, 0, v18, v19);
   *overwriteNameDefault = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)overwriteNameDefault, 0, v20, v21);
+  sub_1C6B9AC((CGThumbnailListItem_o *)overwriteNameDefault, 0, v20, v21);
   *overwritePriority = 0;
   if ( this->fields.type != type )
     return;
   if ( !labelName )
     goto LABEL_26;
-  v22 = System_String__EndsWith(labelName, (System_String_o *)StringLiteral_16140/*"_B050"*/, 0);
+  v22 = System_String__EndsWith(labelName, (System_String_o *)StringLiteral_16123/*"_B050"*/, 0);
   scriptJson = this->fields.scriptJson;
   if ( v22 )
   {
@@ -2932,26 +2932,26 @@ void ServantVoiceEntity__getOverwriteData(
         return;
       if ( !(_DWORD)max_length )
 LABEL_33:
-        sub_1C3E7C8(v22, v23);
+        sub_1C6BC68(v22);
       v28 = scriptJson->m_Items[0];
       if ( v28 )
       {
         v29 = v28->fields.conds;
         *conds = v29;
-        sub_1C3E508((CGThumbnailListItem_o *)conds, (int32_t)v29, v24, v25);
+        sub_1C6B9AC((CGThumbnailListItem_o *)conds, (int32_t)v29, v24, v25);
         *isInvalidVoiceList = v28->fields.isInvalidVoiceList;
         v30 = v28->fields.overwriteName;
         *overwriteName = v30;
-        sub_1C3E508((CGThumbnailListItem_o *)overwriteName, (int32_t)v30, v31, v32);
+        sub_1C6B9AC((CGThumbnailListItem_o *)overwriteName, (int32_t)v30, v31, v32);
         v33 = v28->fields.overwriteNameDefault;
         *overwriteNameDefault = v33;
-        sub_1C3E508((CGThumbnailListItem_o *)overwriteNameDefault, (int32_t)v33, v34, v35);
+        sub_1C6B9AC((CGThumbnailListItem_o *)overwriteNameDefault, (int32_t)v33, v34, v35);
         v36 = v28->fields.overwritePriority;
         goto LABEL_31;
       }
     }
 LABEL_26:
-    sub_1C3E7C0(v22, v23);
+    sub_1C6BC60(v22, v23);
   }
   if ( !scriptJson )
     goto LABEL_26;
@@ -2988,7 +2988,7 @@ LABEL_25:
     v43 = infos->m_Items[v41];
     if ( !v43 )
       goto LABEL_26;
-    v22 = System_String__Equals_63671772(labelName, v43->fields.id, 0);
+    v22 = System_String__Equals_64002112(labelName, v43->fields.id, 0);
     if ( v22 )
       break;
     infos = v39->fields.infos;
@@ -2998,21 +2998,21 @@ LABEL_25:
   }
   v46 = v39->fields.conds;
   *conds = v46;
-  sub_1C3E508((CGThumbnailListItem_o *)conds, (int32_t)v46, v44, v45);
+  sub_1C6B9AC((CGThumbnailListItem_o *)conds, (int32_t)v46, v44, v45);
   *isInvalidVoiceList = v39->fields.isInvalidVoiceList;
   if ( !isMaterial
     || (materialOverwriteName = v39->fields.materialOverwriteName,
         *overwriteName = materialOverwriteName,
-        sub_1C3E508((CGThumbnailListItem_o *)overwriteName, (int32_t)materialOverwriteName, v47, v48),
+        sub_1C6B9AC((CGThumbnailListItem_o *)overwriteName, (int32_t)materialOverwriteName, v47, v48),
         System_String__IsNullOrEmpty(*overwriteName, 0)) )
   {
     v50 = v39->fields.overwriteName;
     *overwriteName = v50;
-    sub_1C3E508((CGThumbnailListItem_o *)overwriteName, (int32_t)v50, v47, v48);
+    sub_1C6B9AC((CGThumbnailListItem_o *)overwriteName, (int32_t)v50, v47, v48);
   }
   v51 = v39->fields.overwriteNameDefault;
   *overwriteNameDefault = v51;
-  sub_1C3E508((CGThumbnailListItem_o *)overwriteNameDefault, (int32_t)v51, v47, v48);
+  sub_1C6B9AC((CGThumbnailListItem_o *)overwriteNameDefault, (int32_t)v51, v47, v48);
   v36 = v39->fields.overwritePriority;
 LABEL_31:
   *overwritePriority = v36;
@@ -3026,7 +3026,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getRa
 {
   const MethodInfo *v3; // x6
 
-  return ServantVoiceEntity__getVoiceList_42851012(this, 1, 3, friendShipRank, 0, -1, v3);
+  return ServantVoiceEntity__getVoiceList_43041092(this, 1, 3, friendShipRank, 0, -1, v3);
 }
 
 
@@ -3039,7 +3039,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getSp
 {
   const MethodInfo *v5; // x6
 
-  return ServantVoiceEntity__getVoiceList_42851012(this, 2, 9, limitCount, playVoiceLabel, genderType, v5);
+  return ServantVoiceEntity__getVoiceList_43041092(this, 2, 9, limitCount, playVoiceLabel, genderType, v5);
 }
 
 
@@ -3050,7 +3050,7 @@ int32_t ServantVoiceEntity__getSvtIdfromVoiceAssetName(System_String_o *assetNam
   if ( !assetName
     || (assetName = (System_String_o *)System_String__Split(assetName, 0x5Fu, 0, 0), result = 0, !assetName) )
   {
-    sub_1C3E7C0(assetName, method);
+    sub_1C6BC60(assetName, method);
   }
   if ( LODWORD(assetName[1].klass) != 2 )
     return 0;
@@ -3062,23 +3062,23 @@ int32_t ServantVoiceEntity__getSvtIdfromVoiceAssetName(System_String_o *assetNam
 
 System_String_o *ServantVoiceEntity__getVoiceAssetName(ServantVoiceEntity_o *this, const MethodInfo *method)
 {
-  return ServantVoiceEntity__getVoiceAssetName_42847476(this->fields.id, method);
+  return ServantVoiceEntity__getVoiceAssetName_43037556(this->fields.id, method);
 }
 
 
-System_String_o *ServantVoiceEntity__getVoiceAssetName_42847476(int32_t svtId, const MethodInfo *method)
+System_String_o *ServantVoiceEntity__getVoiceAssetName_43037556(int32_t svtId, const MethodInfo *method)
 {
   System_String_o *v2; // x0
   int32_t v4; // [xsp+Ch] [xbp-14h] BYREF
 
   v4 = svtId;
-  if ( (byte_4C57815 & 1) == 0 )
+  if ( (byte_4CB6D82 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_4424/*"ChrVoice_"*/);
-    byte_4C57815 = 1;
+    sub_1C6BA08(&StringLiteral_4414/*"ChrVoice_"*/);
+    byte_4CB6D82 = 1;
   }
   v2 = System_Int32__ToString((int32_t)&v4, 0);
-  return System_String__Concat_63636468((System_String_o *)StringLiteral_4424/*"ChrVoice_"*/, v2, 0);
+  return System_String__Concat_63966792((System_String_o *)StringLiteral_4414/*"ChrVoice_"*/, v2, 0);
 }
 
 
@@ -3101,23 +3101,23 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVo
   __int64 size; // x10
   Il2CppClass **v17; // x0
 
-  if ( (byte_4C57816 & 1) == 0 )
+  if ( (byte_4CB6D83 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    byte_4C57816 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    byte_4CB6D83 = 1;
   }
   if ( this->fields.type != type )
     return 0;
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
 LABEL_15:
-    sub_1C3E7C0(v6, p_obj);
+    sub_1C6BC60(v6, p_obj);
   v11 = 0;
   while ( 1 )
   {
@@ -3125,7 +3125,7 @@ LABEL_15:
     if ( (int)v11 >= max_length )
       return (System_Collections_Generic_List_ServantVoiceData____o *)v5;
     if ( (unsigned int)v11 >= max_length )
-      sub_1C3E7C8(v6, p_obj);
+      sub_1C6BC68(v6);
     v13 = scriptJson->m_Items[v11];
     if ( v13 )
     {
@@ -3143,14 +3143,14 @@ LABEL_15:
             System_Collections_Generic_List_object___AddWithResize(
               v5,
               p_obj,
-              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+              *(const MethodInfo_3800974 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
           }
           else
           {
             v17 = &items->obj.klass + size;
             v5->fields._size = size + 1;
             v17[4] = (Il2CppClass *)p_obj;
-            sub_1C3E508((CGThumbnailListItem_o *)(v17 + 4), (int32_t)p_obj, v8, v9);
+            sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 4), (int32_t)p_obj, v8, v9);
           }
           scriptJson = this->fields.scriptJson;
           ++v11;
@@ -3199,27 +3199,27 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVo
   __int64 v35; // x10
   Il2CppClass **v36; // x0
 
-  if ( (byte_4C57818 & 1) == 0 )
+  if ( (byte_4CB6D85 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57818 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D85 = 1;
   }
   if ( this->fields.type != type )
     return 0;
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_32;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
   Instance = (DataManager_o *)ServantVoiceEntity__GetPlayVoiceLabelInfo(this, playVoiceLabel, v15);
   if ( Instance )
   {
@@ -3237,20 +3237,20 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVo
           System_Collections_Generic_List_object___AddWithResize(
             v11,
             saveNameList,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
         else
         {
           v21 = &items->obj.klass + size;
           v11->fields._size = size + 1;
           v21[4] = (Il2CppClass *)saveNameList;
-          sub_1C3E508((CGThumbnailListItem_o *)(v21 + 4), (int32_t)saveNameList, v16, v17);
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 4), (int32_t)saveNameList, v16, v17);
         }
         return (System_Collections_Generic_List_ServantVoiceData____o *)v11;
       }
     }
 LABEL_32:
-    sub_1C3E7C0(Instance, saveNameList);
+    sub_1C6BC60(Instance, saveNameList);
   }
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
@@ -3284,7 +3284,7 @@ LABEL_32:
             goto LABEL_32;
           if ( !LODWORD(infos->max_length) )
 LABEL_35:
-            sub_1C3E7C8(Instance, saveNameList);
+            sub_1C6BC68(Instance);
           v30 = infos->m_Items[0];
           if ( !v30 || !MasterData_object )
             goto LABEL_32;
@@ -3313,14 +3313,14 @@ LABEL_35:
               System_Collections_Generic_List_object___AddWithResize(
                 v11,
                 saveNameList,
-                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+                *(const MethodInfo_3800974 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
             }
             else
             {
               v36 = &v33->obj.klass + v35;
               v11->fields._size = v35 + 1;
               v36[4] = (Il2CppClass *)saveNameList;
-              sub_1C3E508((CGThumbnailListItem_o *)(v36 + 4), (int32_t)saveNameList, v31, v32);
+              sub_1C6B9AC((CGThumbnailListItem_o *)(v36 + 4), (int32_t)saveNameList, v31, v32);
             }
           }
         }
@@ -3334,7 +3334,7 @@ LABEL_35:
 }
 
 
-System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVoiceList_42851012(
+System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVoiceList_43041092(
         ServantVoiceEntity_o *this,
         int32_t type,
         int32_t condType,
@@ -3369,27 +3369,27 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVo
   __int64 v36; // x10
   Il2CppClass **v37; // x0
 
-  if ( (byte_4C5781B & 1) == 0 )
+  if ( (byte_4CB6D88 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C5781B = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D88 = 1;
   }
   if ( this->fields.type != type )
     return 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_40;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-  v16 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   Instance = (DataManager_o *)ServantVoiceEntity__GetPlayVoiceLabelInfo(this, playVoiceLabel, v17);
   if ( Instance )
   {
@@ -3407,20 +3407,20 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVo
           System_Collections_Generic_List_object___AddWithResize(
             v16,
             saveNameList,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
         }
         else
         {
           v23 = &items->obj.klass + size;
           v16->fields._size = size + 1;
           v23[4] = (Il2CppClass *)saveNameList;
-          sub_1C3E508((CGThumbnailListItem_o *)(v23 + 4), (int32_t)saveNameList, v18, v19);
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v23 + 4), (int32_t)saveNameList, v18, v19);
         }
         return (System_Collections_Generic_List_ServantVoiceData____o *)v16;
       }
     }
 LABEL_40:
-    sub_1C3E7C0(Instance, saveNameList);
+    sub_1C6BC60(Instance, saveNameList);
   }
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
@@ -3433,7 +3433,7 @@ LABEL_40:
       return (System_Collections_Generic_List_ServantVoiceData____o *)v16;
     if ( v25 >= max_length_low )
 LABEL_43:
-      sub_1C3E7C8(Instance, saveNameList);
+      sub_1C6BC68(Instance);
     v27 = scriptJson->m_Items[v25];
     if ( v27 )
     {
@@ -3491,14 +3491,14 @@ LABEL_46:
                   System_Collections_Generic_List_object___AddWithResize(
                     v16,
                     saveNameList,
-                    *(const MethodInfo_37B5460 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+                    *(const MethodInfo_3800974 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v37 = &v34->obj.klass + v36;
                   v16->fields._size = v36 + 1;
                   v37[4] = (Il2CppClass *)saveNameList;
-                  sub_1C3E508((CGThumbnailListItem_o *)(v37 + 4), (int32_t)saveNameList, v18, v19);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)(v37 + 4), (int32_t)saveNameList, v18, v19);
                 }
               }
             }
@@ -3518,7 +3518,7 @@ LABEL_46:
 }
 
 
-System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVoiceList_42851728(
+System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVoiceList_43041808(
         ServantVoiceEntity_o *this,
         int32_t type,
         System_String_o *labelName,
@@ -3548,31 +3548,31 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVo
   __int64 size; // x10
   Il2CppClass **v31; // x0
 
-  if ( (byte_4C5781C & 1) == 0 )
+  if ( (byte_4CB6D89 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&StringLiteral_16140/*"_B050"*/);
-    byte_4C5781C = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&StringLiteral_16123/*"_B050"*/);
+    byte_4CB6D89 = 1;
   }
   if ( this->fields.type != type )
     return 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_43;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+  v14 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ServantVoiceData____TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v14,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ServantVoiceData_____ctor__);
   if ( !labelName )
     goto LABEL_43;
-  Instance = (Il2CppObject *)System_String__EndsWith(labelName, (System_String_o *)StringLiteral_16140/*"_B050"*/, 0);
+  Instance = (Il2CppObject *)System_String__EndsWith(labelName, (System_String_o *)StringLiteral_16123/*"_B050"*/, 0);
   scriptJson = this->fields.scriptJson;
   if ( ((unsigned __int8)Instance & 1) == 0 )
   {
@@ -3604,7 +3604,7 @@ System_Collections_Generic_List_ServantVoiceData____o *ServantVoiceEntity__getVo
         v27 = infos->m_Items[v25];
         if ( !v27 )
           goto LABEL_43;
-        Instance = (Il2CppObject *)System_String__Equals_63671772(labelName, v27->fields.id, 0);
+        Instance = (Il2CppObject *)System_String__Equals_64002112(labelName, v27->fields.id, 0);
         if ( v21 )
         {
           if ( ((unsigned __int8)Instance & 1) == 0 )
@@ -3638,20 +3638,20 @@ LABEL_38:
                 System_Collections_Generic_List_object___AddWithResize(
                   v14,
                   p_obj,
-                  *(const MethodInfo_37B5460 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+                  *(const MethodInfo_3800974 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
               }
               else
               {
                 v31 = &items->obj.klass + size;
                 v14->fields._size = size + 1;
                 v31[4] = (Il2CppClass *)p_obj;
-                sub_1C3E508((CGThumbnailListItem_o *)(v31 + 4), (int32_t)p_obj, v15, v16);
+                sub_1C6B9AC((CGThumbnailListItem_o *)(v31 + 4), (int32_t)p_obj, v15, v16);
               }
               return (System_Collections_Generic_List_ServantVoiceData____o *)v14;
             }
           }
 LABEL_43:
-          sub_1C3E7C0(Instance, p_obj);
+          sub_1C6BC60(Instance, p_obj);
         }
 LABEL_31:
         infos = v23->fields.infos;
@@ -3673,7 +3673,7 @@ LABEL_34:
     return (System_Collections_Generic_List_ServantVoiceData____o *)v14;
   if ( !(_DWORD)v18 )
 LABEL_44:
-    sub_1C3E7C8(Instance, p_obj);
+    sub_1C6BC68(Instance);
   v19 = scriptJson->m_Items[0];
   if ( !v19 )
     goto LABEL_43;
@@ -3714,27 +3714,27 @@ bool ServantVoiceEntity__isAvailableMyRoomVoice(
   UserGameEntity_o *v25; // x2
   const MethodInfo *v27; // [xsp+0h] [xbp-60h]
 
-  if ( (byte_4C57829 & 1) == 0 )
+  if ( (byte_4CB6D96 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C3E564(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&VoiceCondType_TypeInfo);
-    byte_4C57829 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&VoiceCondType_TypeInfo);
+    byte_4CB6D96 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
-  Instance = (UserServantEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (UserServantEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = (UserServantEntity_array *)DataManager__GetMasterData_object_(
                                           (DataManager_o *)Instance,
-                                          (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                          (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !SelfUserGame
     || (v12 = (UserServantMaster_o *)Instance) == 0
     || (Entity = DataMasterBase_object__object__long___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                    SelfUserGame->fields.favoriteUserSvtId,
-                   (const MethodInfo_33B54B4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__),
+                   (const MethodInfo_33FB638 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__),
         Instance = UserServantMaster__getAllList(v12, 0),
         !Entity)
     || (v14 = Instance,
@@ -3744,7 +3744,7 @@ bool ServantVoiceEntity__isAvailableMyRoomVoice(
     || (conds = info->fields.conds) == 0 )
   {
 LABEL_22:
-    sub_1C3E7C0(Instance, v11);
+    sub_1C6BC60(Instance, v11);
   }
   max_length = conds->max_length;
   if ( max_length < 1 )
@@ -3755,7 +3755,7 @@ LABEL_22:
   do
   {
     if ( v20 >= (unsigned int)max_length )
-      sub_1C3E7C8(Instance, v11);
+      sub_1C6BC68(Instance);
     v22 = conds->m_Items[v20];
     if ( !v22 )
       goto LABEL_22;
@@ -3803,30 +3803,30 @@ bool ServantVoiceEntity__isAvailableVoice(
   Il2CppObject *Entity; // x2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C57827 & 1) == 0 )
+  if ( (byte_4CB6D94 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C3E564(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57827 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D94 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
+                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
   {
-    sub_1C3E7C0(Instance, v8);
+    sub_1C6BC60(Instance, v8);
   }
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              userSvtId,
-             (const MethodInfo_33B54B4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-  return ServantVoiceEntity__isAvailableVoice_42858268(this, info, (UserServantEntity_o *)Entity, v10);
+             (const MethodInfo_33FB638 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+  return ServantVoiceEntity__isAvailableVoice_43048348(this, info, (UserServantEntity_o *)Entity, v10);
 }
 
 
-bool ServantVoiceEntity__isAvailableVoice_42858268(
+bool ServantVoiceEntity__isAvailableVoice_43048348(
         ServantVoiceEntity_o *this,
         SvtVoiceInfo_o *info,
         UserServantEntity_o *userSvtEntity,
@@ -3853,22 +3853,22 @@ bool ServantVoiceEntity__isAvailableVoice_42858268(
   int32_t LimitCount; // w24
   const MethodInfo *v27; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4C57828 & 1) == 0 )
+  if ( (byte_4CB6D95 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&VoiceCondType_TypeInfo);
-    byte_4C57828 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&VoiceCondType_TypeInfo);
+    byte_4CB6D95 = 1;
   }
   if ( !userSvtEntity )
     goto LABEL_27;
   UserGameMaster__getSelfUserGame(0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_28;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserServantMaster___);
+               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !Instance )
     goto LABEL_28;
   AllList = UserServantMaster__getAllList((UserServantMaster_o *)Instance, 0);
@@ -3891,11 +3891,11 @@ LABEL_27:
   while ( 2 )
   {
     if ( v15 >= max_length )
-      sub_1C3E7C8(Instance, v8);
+      sub_1C6BC68(Instance);
     v16 = conds->m_Items[v15];
     if ( !v16 )
 LABEL_28:
-      sub_1C3E7C0(Instance, v8);
+      sub_1C6BC60(Instance, v8);
     condType = v16->fields.condType;
     Instance = 0;
     switch ( condType )
@@ -3976,33 +3976,33 @@ bool ServantVoiceEntity__isEventEndState(
   __int64 v7; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C57830 & 1) == 0 )
+  if ( (byte_4CB6D9D & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C3E564(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57830 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D9D = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventMaster___);
+               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_9;
   Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                &entity,
                                eventId,
-                               (const MethodInfo_33B2FA4 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                               (const MethodInfo_33F9128 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) != 0 )
   {
     if ( entity )
       return (__int64)entity[6].klass <= time;
 LABEL_9:
-    sub_1C3E7C0(Instance, v7);
+    sub_1C6BC60(Instance, v7);
   }
   return 0;
 }
@@ -4015,26 +4015,26 @@ bool ServantVoiceEntity__isQuestClearState(ServantVoiceEntity_o *this, int32_t q
   Il2CppObject *MasterData_object; // x20
   UserQuestEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C5782F & 1) == 0 )
+  if ( (byte_4CB6D9C & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C5782F = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D9C = 1;
   }
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserQuestMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C50AE2 )
+  if ( !byte_4CB002A )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C50AE2 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB002A = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -4055,7 +4055,7 @@ bool ServantVoiceEntity__isQuestClearState(ServantVoiceEntity_o *this, int32_t q
     if ( entity )
       return UserQuestEntity__getClearNum(entity, 0) > 0;
 LABEL_15:
-    sub_1C3E7C0(Instance, v5);
+    sub_1C6BC60(Instance, v5);
   }
   return 0;
 }
@@ -4072,30 +4072,30 @@ ServantVoiceData_array *ServantVoiceEntity__lotteryLevelUpVoice(
   Il2CppObject *Entity; // x1
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C57824 & 1) == 0 )
+  if ( (byte_4CB6D91 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C3E564(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57824 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D91 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
+                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
   {
-    sub_1C3E7C0(Instance, v8);
+    sub_1C6BC60(Instance, v8);
   }
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              userSvtId,
-             (const MethodInfo_33B54B4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-  return ServantVoiceEntity__lotteryLevelUpVoice_42856256(this, (UserServantEntity_o *)Entity, voiceId, v10);
+             (const MethodInfo_33FB638 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+  return ServantVoiceEntity__lotteryLevelUpVoice_43046336(this, (UserServantEntity_o *)Entity, voiceId, v10);
 }
 
 
-ServantVoiceData_array *ServantVoiceEntity__lotteryLevelUpVoice_42856256(
+ServantVoiceData_array *ServantVoiceEntity__lotteryLevelUpVoice_43046336(
         ServantVoiceEntity_o *this,
         UserServantEntity_o *userServantEntity,
         System_String_o *voiceId,
@@ -4152,36 +4152,36 @@ ServantVoiceData_array *ServantVoiceEntity__lotteryLevelUpVoice_42856256(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v56; // [xsp+20h] [xbp-A0h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v57; // [xsp+40h] [xbp-80h]
 
-  if ( (byte_4C57826 & 1) == 0 )
+  if ( (byte_4CB6D93 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo__get_Item__);
-    sub_1C3E564(&System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C3E564(&ServantVoiceData___TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&Method_WeightRate_int___ctor__);
-    sub_1C3E564(&Method_WeightRate_int__getData__);
-    sub_1C3E564(&Method_WeightRate_int__getTotalWeight__);
-    sub_1C3E564(&Method_WeightRate_int__setWeight__);
-    sub_1C3E564(&WeightRate_int__TypeInfo);
-    byte_4C57826 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo__get_Item__);
+    sub_1C6BA08(&System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C6BA08(&ServantVoiceData___TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&Method_WeightRate_int___ctor__);
+    sub_1C6BA08(&Method_WeightRate_int__getData__);
+    sub_1C6BA08(&Method_WeightRate_int__getTotalWeight__);
+    sub_1C6BA08(&Method_WeightRate_int__setWeight__);
+    sub_1C6BA08(&WeightRate_int__TypeInfo);
+    byte_4CB6D93 = 1;
   }
   if ( !userServantEntity || this->fields.type != 2 )
     return 0;
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_78;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
   scriptJson = this->fields.scriptJson;
   if ( !scriptJson )
     goto LABEL_78;
@@ -4229,7 +4229,7 @@ ServantVoiceData_array *ServantVoiceEntity__lotteryLevelUpVoice_42856256(
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
           v56 = v57;
-          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v56, 0);
+          Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v56, 0);
           if ( !MasterData_object )
             goto LABEL_78;
           Instance = VoicePlayCondMaster__isVoicePlay(
@@ -4248,7 +4248,7 @@ ServantVoiceData_array *ServantVoiceEntity__lotteryLevelUpVoice_42856256(
             {
               if ( conds->max_length )
               {
-                Instance = ServantVoiceEntity__isAvailableVoice_42858268(this, v15, userServantEntity, v29);
+                Instance = ServantVoiceEntity__isAvailableVoice_43048348(this, v15, userServantEntity, v29);
                 if ( (Instance & 1) != 0 )
                 {
 LABEL_17:
@@ -4265,14 +4265,14 @@ LABEL_17:
                     System_Collections_Generic_List_object___AddWithResize(
                       v10,
                       (Il2CppObject *)v15,
-                      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+                      *(const MethodInfo_3800974 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
                   }
                   else
                   {
                     v24 = &items->obj.klass + size;
                     v10->fields._size = size + 1;
                     v24[4] = (Il2CppClass *)v15;
-                    sub_1C3E508((CGThumbnailListItem_o *)(v24 + 4), (int32_t)v15, v19, v20);
+                    sub_1C6B9AC((CGThumbnailListItem_o *)(v24 + 4), (int32_t)v15, v19, v20);
                   }
                 }
               }
@@ -4319,7 +4319,7 @@ LABEL_17:
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
             v55 = v57;
-            Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v55, 0);
+            Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v55, 0);
             if ( !MasterData_object )
               goto LABEL_78;
             Instance = VoicePlayCondMaster__isVoicePlay(
@@ -4338,7 +4338,7 @@ LABEL_17:
               {
                 if ( v48->max_length )
                 {
-                  Instance = ServantVoiceEntity__isAvailableVoice_42858268(this, v40, userServantEntity, v47);
+                  Instance = ServantVoiceEntity__isAvailableVoice_43048348(this, v40, userServantEntity, v47);
                   if ( (Instance & 1) != 0 )
                   {
                     v51 = v10->fields._items;
@@ -4352,14 +4352,14 @@ LABEL_17:
                       System_Collections_Generic_List_object___AddWithResize(
                         v10,
                         (Il2CppObject *)v40,
-                        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+                        *(const MethodInfo_3800974 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
                     }
                     else
                     {
                       v54 = &v51->obj.klass + v53;
                       v10->fields._size = v53 + 1;
                       v54[4] = (Il2CppClass *)v40;
-                      sub_1C3E508((CGThumbnailListItem_o *)(v54 + 4), (int32_t)v40, v49, v50);
+                      sub_1C6B9AC((CGThumbnailListItem_o *)(v54 + 4), (int32_t)v40, v49, v50);
                     }
                   }
                 }
@@ -4375,21 +4375,21 @@ LABEL_17:
           goto LABEL_76;
       }
 LABEL_79:
-      sub_1C3E7C8(Instance, v8);
+      sub_1C6BC68(Instance);
     }
 LABEL_76:
     if ( v10->fields._size )
     {
 LABEL_37:
-      v32 = (WeightRate_int__o *)sub_1C3E7B0(WeightRate_int__TypeInfo);
-      WeightRate_int____ctor(v32, (const MethodInfo_3BA6E78 *)Method_WeightRate_int___ctor__);
+      v32 = (WeightRate_int__o *)sub_1C6BC54(WeightRate_int__TypeInfo);
+      WeightRate_int____ctor(v32, (const MethodInfo_3BF8CB8 *)Method_WeightRate_int___ctor__);
       v33 = v10->fields._size;
       if ( v33 >= 1 )
       {
         if ( !v32 )
           goto LABEL_78;
         for ( i = 0; i != v33; ++i )
-          WeightRate_int___setWeight(v32, 1, i, (const MethodInfo_3BA6394 *)Method_WeightRate_int__setWeight__);
+          WeightRate_int___setWeight(v32, 1, i, (const MethodInfo_3BF81D4 *)Method_WeightRate_int__setWeight__);
       }
       Instance = System_String__IsNullOrEmpty(voiceId, 0);
       if ( (Instance & 1) != 0 || v10->fields._size < 1 )
@@ -4397,13 +4397,13 @@ LABEL_37:
 LABEL_50:
         if ( v32 )
         {
-          v38 = UnityEngine_Random__Range_71301784(0, v32->fields.totalweight, 0);
-          Data = WeightRate_int___getData(v32, v38, (const MethodInfo_3BA6808 *)Method_WeightRate_int__getData__);
+          v38 = UnityEngine_Random__Range_71619388(0, v32->fields.totalweight, 0);
+          Data = WeightRate_int___getData(v32, v38, (const MethodInfo_3BF8648 *)Method_WeightRate_int__getData__);
 LABEL_52:
           Instance = (int64_t)System_Collections_Generic_List_object___get_Item(
                                 v10,
                                 Data,
-                                (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SvtVoiceInfo__get_Item__);
+                                (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SvtVoiceInfo__get_Item__);
           if ( Instance )
             return *(ServantVoiceData_array **)(Instance + 64);
         }
@@ -4416,7 +4416,7 @@ LABEL_52:
           Instance = (int64_t)System_Collections_Generic_List_object___get_Item(
                                 v10,
                                 Data,
-                                (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SvtVoiceInfo__get_Item__);
+                                (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SvtVoiceInfo__get_Item__);
           if ( !Instance )
             break;
           v36 = *(_QWORD *)(Instance + 64);
@@ -4435,10 +4435,10 @@ LABEL_52:
         }
       }
 LABEL_78:
-      sub_1C3E7C0(Instance, v8);
+      sub_1C6BC60(Instance, v8);
     }
   }
-  return (ServantVoiceData_array *)sub_1C3E60C(ServantVoiceData___TypeInfo, 0);
+  return (ServantVoiceData_array *)sub_1C6BAB0(ServantVoiceData___TypeInfo, 0);
 }
 
 
@@ -4472,31 +4472,31 @@ System_Collections_Generic_List_SvtVoiceInfo__o *ServantVoiceEntity__randomChang
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v28; // [xsp+0h] [xbp-A0h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v29; // [xsp+20h] [xbp-80h]
 
-  if ( (byte_4C57825 & 1) == 0 )
+  if ( (byte_4CB6D92 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C57825 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_VoicePlayCondMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_SvtVoiceInfo__TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6D92 = 1;
   }
   if ( !userServantEntity || this->fields.type != 2 )
     return 0;
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
-        v8 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_SvtVoiceInfo__TypeInfo),
+                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoicePlayCondMaster___),
+        v8 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SvtVoiceInfo__TypeInfo),
         System_Collections_Generic_List_object____ctor(
           v8,
-          (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__),
+          (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SvtVoiceInfo___ctor__),
         (scriptJson = this->fields.scriptJson) == 0) )
   {
 LABEL_28:
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   }
   v10 = 0;
   while ( 1 )
@@ -4517,7 +4517,7 @@ LABEL_28:
       {
         if ( !(_DWORD)v14 )
 LABEL_31:
-          sub_1C3E7C8(Instance, v6);
+          sub_1C6BC68(Instance);
         v15 = infos->m_Items[0];
         if ( !v15 )
           goto LABEL_28;
@@ -4529,7 +4529,7 @@ LABEL_31:
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         v28 = v29;
-        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v28, 0);
+        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v28, 0);
         if ( !MasterData_object )
           goto LABEL_28;
         Instance = VoicePlayCondMaster__isVoicePlay(
@@ -4548,7 +4548,7 @@ LABEL_31:
           {
             if ( conds->max_length )
             {
-              Instance = ServantVoiceEntity__isAvailableVoice_42858268(this, v12, userServantEntity, v19);
+              Instance = ServantVoiceEntity__isAvailableVoice_43048348(this, v12, userServantEntity, v19);
               if ( (Instance & 1) != 0 )
               {
                 if ( !v8 )
@@ -4564,14 +4564,14 @@ LABEL_31:
                   System_Collections_Generic_List_object___AddWithResize(
                     v8,
                     (Il2CppObject *)v12,
-                    *(const MethodInfo_37B5460 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+                    *(const MethodInfo_3800974 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v26 = &items->obj.klass + size;
                   v8->fields._size = size + 1;
                   v26[4] = (Il2CppClass *)v12;
-                  sub_1C3E508((CGThumbnailListItem_o *)(v26 + 4), (int32_t)v12, v21, v22);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)(v26 + 4), (int32_t)v12, v21, v22);
                 }
               }
             }

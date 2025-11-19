@@ -1,14 +1,14 @@
 void NewsMaster___ctor(NewsMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C572B5 & 1) == 0 )
+  if ( (byte_4CB681E & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_NewsMaster__NewsEntity__int___ctor__);
-    byte_4C572B5 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_NewsMaster__NewsEntity__int___ctor__);
+    byte_4CB681E = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     66,
-    (const MethodInfo_33B0C34 *)Method_DataMasterBase_NewsMaster__NewsEntity__int___ctor__);
+    (const MethodInfo_33F6DB8 *)Method_DataMasterBase_NewsMaster__NewsEntity__int___ctor__);
 }
 
 
@@ -27,30 +27,30 @@ NewsEntity_array *NewsMaster__GetEnableEntitiyList(NewsMaster_o *this, const Met
   __int64 size; // x10
   Il2CppClass **v14; // x0
 
-  if ( (byte_4C572B6 & 1) == 0 )
+  if ( (byte_4CB681F & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_NewsEntity__get_Count__);
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_NewsEntity__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_NewsEntity__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_NewsEntity__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_NewsEntity___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_NewsEntity__TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C572B6 = 1;
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_NewsEntity__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_NewsEntity__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_NewsEntity__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_NewsEntity__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_NewsEntity___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_NewsEntity__TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB681F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_NewsEntity__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_NewsEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_NewsEntity___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_NewsEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_20;
   list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                              list,
-                                                             (const MethodInfo_334C3C8 *)Method_System_Collections_ObjectModel_Collection_NewsEntity__get_Count__);
+                                                             (const MethodInfo_3391E64 *)Method_System_Collections_ObjectModel_Collection_NewsEntity__get_Count__);
   if ( (int)list >= 1 )
   {
     v7 = (int)list;
@@ -63,7 +63,7 @@ NewsEntity_array *NewsMaster__GetEnableEntitiyList(NewsMaster_o *this, const Met
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v8,
-                                                                 (const MethodInfo_334C458 *)Method_System_Collections_ObjectModel_Collection_NewsEntity__get_Item__);
+                                                                 (const MethodInfo_3391EF4 *)Method_System_Collections_ObjectModel_Collection_NewsEntity__get_Item__);
       if ( list )
       {
         v5 = list;
@@ -82,14 +82,14 @@ NewsEntity_array *NewsMaster__GetEnableEntitiyList(NewsMaster_o *this, const Met
             System_Collections_Generic_List_object___AddWithResize(
               v4,
               (Il2CppObject *)list,
-              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+              *(const MethodInfo_3800974 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
           }
           else
           {
             v14 = &items->obj.klass + size;
             v4->fields._size = size + 1;
             v14[4] = (Il2CppClass *)v5;
-            sub_1C3E508((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v5, v9, v10);
+            sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v5, v9, v10);
           }
         }
       }
@@ -97,12 +97,12 @@ NewsEntity_array *NewsMaster__GetEnableEntitiyList(NewsMaster_o *this, const Met
         goto LABEL_18;
     }
 LABEL_20:
-    sub_1C3E7C0(list, v5);
+    sub_1C6BC60(list, v5);
   }
 LABEL_18:
   if ( !v4 )
     goto LABEL_20;
   return (NewsEntity_array *)System_Collections_Generic_List_object___ToArray(
                                v4,
-                               (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_NewsEntity__ToArray__);
+                               (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_NewsEntity__ToArray__);
 }

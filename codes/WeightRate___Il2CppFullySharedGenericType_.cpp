@@ -1,4 +1,4 @@
-void WeightRate___Il2CppFullySharedGenericType____ctor(WeightRate_T__o *this, const MethodInfo_3BA8104 *method)
+void WeightRate___Il2CppFullySharedGenericType____ctor(WeightRate_T__o *this, const MethodInfo_3BF9F44 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -7,7 +7,7 @@ void WeightRate___Il2CppFullySharedGenericType____ctor(WeightRate_T__o *this, co
 bool WeightRate___Il2CppFullySharedGenericType___HasWeight(
         WeightRate_T__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o t,
-        const MethodInfo_3BA72B0 *method)
+        const MethodInfo_3BF90F0 *method)
 {
   _QWORD *monitor; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x24
@@ -33,8 +33,8 @@ bool WeightRate___Il2CppFullySharedGenericType___HasWeight(
   v7 = *(unsigned int *)(*(_QWORD *)(v6 + 24) + 252LL);
   v8 = *(_QWORD *)(v6 + 152);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C8EC78();
-  v9 = sub_1C3E7B0(v8);
+    v8 = sub_1C41A9C();
+  v9 = sub_1C6BC54(v8);
   v10 = *(void (__fastcall ***)(__int64, _QWORD))(*(_QWORD *)(monitor[4] + 192LL) + 160LL);
   (*v10)(v9, v10);
   v11 = monitor[4];
@@ -44,8 +44,8 @@ bool WeightRate___Il2CppFullySharedGenericType___HasWeight(
     v12 = klass;
   v13 = memcpy((char *)v19 - ((v7 + 15) & 0x1FFFFFFF0LL), v12, v7);
   if ( !v9 )
-    sub_1C3E7C0(v13, v14);
-  sub_1C3E58C(
+    sub_1C6BC60(v13, v14);
+  sub_1C6BA30(
     v9,
     *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(v11 + 192) + 152LL) + 128LL),
     (char *)v19 - ((v7 + 15) & 0x1FFFFFFF0LL),
@@ -53,8 +53,8 @@ bool WeightRate___Il2CppFullySharedGenericType___HasWeight(
   list = this->fields.list;
   v16 = *(_QWORD *)(*(_QWORD *)(monitor[4] + 192LL) + 176LL);
   if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-    v16 = sub_1C8EC78();
-  v17 = sub_1C3E7B0(v16);
+    v16 = sub_1C41A9C();
+  v17 = sub_1C6BC54(v16);
   (**(void (__fastcall ***)(__int64, __int64, _QWORD))(*(_QWORD *)(monitor[4] + 192LL) + 184LL))(
     v17,
     v9,
@@ -66,7 +66,7 @@ bool WeightRate___Il2CppFullySharedGenericType___HasWeight(
 }
 
 
-void WeightRate___Il2CppFullySharedGenericType___ReverseWeight(WeightRate_T__o *this, const MethodInfo_3BA7D74 *method)
+void WeightRate___Il2CppFullySharedGenericType___ReverseWeight(WeightRate_T__o *this, const MethodInfo_3BF9BB4 *method)
 {
   WeightRate_T__c **p_klass; // x19
   __int64 _1_System_Collections_Generic_List_WeightRate_WeightSeed_T; // x8
@@ -107,8 +107,8 @@ void WeightRate___Il2CppFullySharedGenericType___ReverseWeight(WeightRate_T__o *
   p_klass = &method->klass;
   _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = (__int64)method->klass->rgctx_data->_1_System_Collections_Generic_List_WeightRate_WeightSeed_T__;
   if ( (*(_BYTE *)(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T + 309) & 1) == 0 )
-    _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C8EC78();
-  v5 = sub_1C3E7B0(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
+    _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C41A9C();
+  v5 = sub_1C6BC54(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
   (*p_klass)->rgctx_data->_2_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor->methodPointer();
   list = this->fields.list;
   if ( !list
@@ -116,39 +116,39 @@ void WeightRate___Il2CppFullySharedGenericType___ReverseWeight(WeightRate_T__o *
         !v5) )
   {
 LABEL_32:
-    sub_1C3E7C0(list, v6);
+    sub_1C6BC60(list, v6);
   }
   ((void (__fastcall *)(__int64, struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *))(*p_klass)->rgctx_data->_34_WeightRate___c_T_->_1.image)(
     v5,
     list);
   _37_WeightRate___c_T___ReverseWeight_b__12_0 = (__int64)(*p_klass)->rgctx_data->_37_WeightRate___c_T___ReverseWeight_b__12_0;
   if ( (*(_BYTE *)(_37_WeightRate___c_T___ReverseWeight_b__12_0 + 309) & 1) == 0 )
-    _37_WeightRate___c_T___ReverseWeight_b__12_0 = sub_1C8EC78();
+    _37_WeightRate___c_T___ReverseWeight_b__12_0 = sub_1C41A9C();
   if ( !*(_DWORD *)(_37_WeightRate___c_T___ReverseWeight_b__12_0 + 224) )
     inited = j_il2cpp_runtime_class_init_0(_37_WeightRate___c_T___ReverseWeight_b__12_0);
   v10 = (__int64)(*p_klass)->rgctx_data->_37_WeightRate___c_T___ReverseWeight_b__12_0;
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C8EC78();
+    v10 = sub_1C41A9C();
   v11 = *(_QWORD *)(*(_QWORD *)(v10 + 184) + 8LL);
   if ( !v11 )
   {
     v12 = (__int64)(*p_klass)->rgctx_data->_37_WeightRate___c_T___ReverseWeight_b__12_0;
     if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-      v12 = sub_1C8EC78();
+      v12 = sub_1C41A9C();
     if ( !*(_DWORD *)(v12 + 224) )
       j_il2cpp_runtime_class_init_0(v12);
     rgctx_data = (*p_klass)->rgctx_data;
     v14 = (__int64)rgctx_data->_37_WeightRate___c_T___ReverseWeight_b__12_0;
     if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
     {
-      v14 = sub_1C8EC78();
+      v14 = sub_1C41A9C();
       rgctx_data = (*p_klass)->rgctx_data;
     }
     _36_WeightRate___c_T = (__int64)rgctx_data->_36_WeightRate___c_T_;
     v16 = **(_QWORD **)(v14 + 184);
     if ( (*(_BYTE *)(_36_WeightRate___c_T + 309) & 1) == 0 )
-      _36_WeightRate___c_T = sub_1C8EC78();
-    v11 = sub_1C3E7B0(_36_WeightRate___c_T);
+      _36_WeightRate___c_T = sub_1C41A9C();
+    v11 = sub_1C6BC54(_36_WeightRate___c_T);
     ((void (__fastcall *)(__int64, __int64, MethodInfo *))(*p_klass)->rgctx_data->_39_System_Collections_Generic_List_WeightRate_WeightSeed_T___Sort->methodPointer)(
       v11,
       v16,
@@ -157,14 +157,14 @@ LABEL_32:
     v20 = (__int64)v19->_37_WeightRate___c_T___ReverseWeight_b__12_0;
     if ( (*(_BYTE *)(v20 + 309) & 1) == 0 )
     {
-      v20 = sub_1C8EC78();
+      v20 = sub_1C41A9C();
       v19 = (*p_klass)->rgctx_data;
     }
     *(_QWORD *)(*(_QWORD *)(v20 + 184) + 8LL) = v11;
     v21 = (__int64)v19->_37_WeightRate___c_T___ReverseWeight_b__12_0;
     if ( (*(_BYTE *)(v21 + 309) & 1) == 0 )
-      v21 = sub_1C8EC78();
-    sub_1C3E508((CGThumbnailListItem_o *)(*(_QWORD *)(v21 + 184) + 8LL), v11, v17, v18);
+      v21 = sub_1C41A9C();
+    sub_1C6B9AC((CGThumbnailListItem_o *)(*(_QWORD *)(v21 + 184) + 8LL), v11, v17, v18);
   }
   ((void (__fastcall *)(__int64, __int64, long double))(*p_klass)->rgctx_data[1]._0_WeightRate_T_->_1.image)(
     v5,
@@ -190,7 +190,7 @@ LABEL_32:
         (void *)v5,
         (void **)&v35,
         &v36);
-      v27 = *(_DWORD *)sub_1C3E588(v36, (*p_klass)->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields);
+      v27 = *(_DWORD *)sub_1C6BA2C(v36, (*p_klass)->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields);
       v28 = (*p_klass)->rgctx_data->_27_System_Activator_CreateInstance_T_;
       v29 = v28->methodPointer;
       v37 = v22;
@@ -202,12 +202,12 @@ LABEL_32:
       v37 = v24;
       v35 = &v37;
       v31->invoker_method(v32, v31, (void *)v5, (void **)&v35, &v36);
-      list = (struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *)sub_1C3E588(
+      list = (struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *)sub_1C6BA2C(
                                                                                      v36,
                                                                                      (*p_klass)->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields);
       if ( !v30 )
         goto LABEL_32;
-      sub_1A8D484(v30, (*p_klass)->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields, LODWORD(list->klass));
+      sub_1AAD2B4(v30, (*p_klass)->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields, LODWORD(list->klass));
       v33 = (*p_klass)->rgctx_data->_27_System_Activator_CreateInstance_T_;
       v34 = v33->methodPointer;
       v37 = v24;
@@ -216,7 +216,7 @@ LABEL_32:
       list = v36;
       if ( !v36 )
         goto LABEL_32;
-      sub_1A8D484(v36, (*p_klass)->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields, v27);
+      sub_1AAD2B4(v36, (*p_klass)->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields, v27);
       ++v22;
       --v23;
     }
@@ -225,7 +225,7 @@ LABEL_32:
 }
 
 
-void WeightRate___Il2CppFullySharedGenericType___SetAdjust(WeightRate_T__o *this, const MethodInfo_3BA744C *method)
+void WeightRate___Il2CppFullySharedGenericType___SetAdjust(WeightRate_T__o *this, const MethodInfo_3BF928C *method)
 {
   struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *list; // x0
   int32_t v5; // w22
@@ -245,7 +245,7 @@ void WeightRate___Il2CppFullySharedGenericType___SetAdjust(WeightRate_T__o *this
   list = this->fields.list;
   if ( !list )
 LABEL_8:
-    sub_1C3E7C0(list, method);
+    sub_1C6BC60(list, method);
   v5 = 0;
   v6 = 0;
   while ( 1 )
@@ -267,12 +267,12 @@ LABEL_8:
         (void **)&v15,
         &v16);
       v10 = v16;
-      list = (struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *)sub_1C3E588(
+      list = (struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *)sub_1C6BA2C(
                                                                                      v16,
                                                                                      method->klass->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields);
       if ( v10 )
       {
-        list = (struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *)sub_1A8D484(
+        list = (struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *)sub_1AAD2B4(
                                                                                        v10,
                                                                                        method->klass->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields,
                                                                                        (unsigned int)(LODWORD(list->klass) + 1));
@@ -284,7 +284,7 @@ LABEL_8:
           v17 = v6;
           v15 = &v17;
           v12->invoker_method(v13, v12, v11, (void **)&v15, &v16);
-          v14 = *(_DWORD *)sub_1C3E588(v16, method->klass->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields);
+          v14 = *(_DWORD *)sub_1C6BA2C(v16, method->klass->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields);
           list = this->fields.list;
           ++v6;
           v5 += v14;
@@ -299,13 +299,13 @@ LABEL_8:
 }
 
 
-bool WeightRate___Il2CppFullySharedGenericType___checkWeight(WeightRate_T__o *this, const MethodInfo_3BA741C *method)
+bool WeightRate___Il2CppFullySharedGenericType___checkWeight(WeightRate_T__o *this, const MethodInfo_3BF925C *method)
 {
   return this->fields.totalweight > 0;
 }
 
 
-int32_t WeightRate___Il2CppFullySharedGenericType___getCount(WeightRate_T__o *this, const MethodInfo_3BA742C *method)
+int32_t WeightRate___Il2CppFullySharedGenericType___getCount(WeightRate_T__o *this, const MethodInfo_3BF926C *method)
 {
   struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *list; // x0
 
@@ -320,7 +320,7 @@ int32_t WeightRate___Il2CppFullySharedGenericType___getCount(WeightRate_T__o *th
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullySharedGenericType___getData(
         WeightRate_T__o *this,
         int32_t keywieght,
-        const MethodInfo_3BA7584 *method)
+        const MethodInfo_3BF93C4 *method)
 {
   __int64 v3; // x3
   __int64 v4; // x22
@@ -366,7 +366,7 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullyS
   v15 = memcpy(v10, v10, v9);
   list = this->fields.list;
   if ( !list )
-    sub_1C3E7C0(v15, v16);
+    sub_1C6BC60(v15, v16);
   v18 = *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(v4 + 32) + 192LL) + 104LL);
   (*(void (__fastcall **)(_QWORD, __int64, struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *, _QWORD, System_Collections_Generic_List_Enumerator_T__o *))(v18 + 16))(
     *(_QWORD *)v18,
@@ -391,24 +391,24 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullyS
       0,
       v30);
     v21 = v30[0];
-    totalweight -= *(_DWORD *)sub_1C3E588(
+    totalweight -= *(_DWORD *)sub_1C6BA2C(
                                 v30[0],
                                 *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(*(_QWORD *)(v4 + 32) + 192LL) + 32LL) + 128LL));
     v22 = *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(*(_QWORD *)(v4 + 32) + 192LL) + 32LL) + 128LL) + 32LL;
     if ( totalweight <= keywieght )
       break;
-    v23 = (const void *)sub_1C3E588(v21, v22);
+    v23 = (const void *)sub_1C6BA2C(v21, v22);
     memcpy(v10, v23, v9);
     memcpy(v10, v10, v9);
   }
-  v25 = (const void *)sub_1C3E588(v21, v22);
+  v25 = (const void *)sub_1C6BA2C(v21, v22);
   memcpy(v10, v25, v9);
   memcpy(v10, v10, v9);
   v24 = 5;
 LABEL_8:
   System_Collections_Generic_List_Enumerator___Il2CppFullySharedGenericType___Dispose(
     &v29,
-    *(const MethodInfo_354AD24 **)(*(_QWORD *)(*(_QWORD *)(v4 + 32) + 192LL) + 144LL));
+    *(const MethodInfo_35915FC **)(*(_QWORD *)(*(_QWORD *)(v4 + 32) + 192LL) + 144LL));
   if ( v24 == 5 )
     v11 = (char *)&v28 - ((v9 + 15) & 0x1FFFFFFF0LL);
   memcpy(v10, v11, v9);
@@ -420,11 +420,11 @@ LABEL_8:
 
 
 // local variable allocation has failed, the output may be wrong!
-Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullySharedGenericType___getData_62552168(
+Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullySharedGenericType___getData_62887592(
         WeightRate_T__o *this,
         int32_t keyWeight,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o skipValue,
-        const MethodInfo_3BA7868 *method)
+        const MethodInfo_3BF96A8 *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x27
   WeightRate_T__RGCTXs *rgctx_data; // x23
@@ -443,100 +443,88 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullyS
   MethodInfo *_15_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___get_Current; // x1
   __int64 v21; // x19
   const void *v22; // x0
-  __int64 v23; // x2
-  __int64 v24; // x3
-  __int64 v25; // x4
-  __int64 v26; // x5
-  __int64 v27; // x6
-  __int64 v28; // x7
-  __int64 v29; // x0
-  WeightRate_T__c *v30; // x25
-  Il2CppObject *v31; // x24
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v32; // x1
-  __int64 v33; // x2
-  __int64 v34; // x3
-  __int64 v35; // x4
-  __int64 v36; // x5
-  __int64 v37; // x6
-  __int64 v38; // x7
-  Il2CppObject *v39; // x1
+  __int64 v23; // x0
+  WeightRate_T__c *v24; // x25
+  Il2CppObject *v25; // x24
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **v26; // x1
+  Il2CppObject *v27; // x1
   MethodInfo *_31_System_Collections_Generic_List_WeightRate_WeightSeed_T___ToArray; // x1
-  void (*v41)(); // x0
-  char *v42; // x24
-  int32_t v43; // w23
+  void (*v29)(); // x0
+  char *v30; // x24
+  int32_t v31; // w23
   MethodInfo *_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator; // x1
-  MethodInfo *v45; // x1
-  MethodInfo *v46; // x1
-  struct System_Collections_Generic_List_T__o *v47; // x19
-  char *v48; // x1
-  const void *v49; // x0
-  int v50; // w23
-  const void *v51; // x0
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v52; // x0
-  void *v53; // x1
-  __int64 v54; // [xsp+0h] [xbp-90h] BYREF
-  char *v55; // [xsp+8h] [xbp-88h]
+  MethodInfo *v33; // x1
+  MethodInfo *v34; // x1
+  struct System_Collections_Generic_List_T__o *v35; // x19
+  char *v36; // x1
+  const void *v37; // x0
+  int v38; // w23
+  const void *v39; // x0
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v40; // x0
+  void *v41; // x1
+  __int64 v42; // [xsp+0h] [xbp-90h] BYREF
+  char *v43; // [xsp+8h] [xbp-88h]
   void *monitor; // [xsp+10h] [xbp-80h]
   unsigned __int64 StatusReg; // [xsp+18h] [xbp-78h]
-  int32_t v58; // [xsp+24h] [xbp-6Ch]
-  char *v59; // [xsp+28h] [xbp-68h]
-  void *v60; // [xsp+30h] [xbp-60h]
-  System_Collections_Generic_List_Enumerator_T__o v61; // [xsp+38h] [xbp-58h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v62; // [xsp+50h] [xbp-40h] BYREF
-  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v63; // [xsp+70h] [xbp-20h] BYREF
-  char v64[4]; // [xsp+7Ch] [xbp-14h] BYREF
-  _QWORD v65[2]; // [xsp+80h] [xbp-10h] BYREF
+  int32_t v46; // [xsp+24h] [xbp-6Ch]
+  char *v47; // [xsp+28h] [xbp-68h]
+  void *v48; // [xsp+30h] [xbp-60h]
+  System_Collections_Generic_List_Enumerator_T__o v49; // [xsp+38h] [xbp-58h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v50; // [xsp+50h] [xbp-40h] BYREF
+  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *v51; // [xsp+70h] [xbp-20h] BYREF
+  char v52[4]; // [xsp+7Ch] [xbp-14h] BYREF
+  _QWORD v53[2]; // [xsp+80h] [xbp-10h] BYREF
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o result; // 0:x0.16
 
-  v58 = keyWeight;
+  v46 = keyWeight;
   monitor = skipValue.monitor;
   StatusReg = _ReadStatusReg(TPIDR_EL0);
   klass = skipValue.klass;
-  v65[1] = *(_QWORD *)(StatusReg + 40);
-  v63 = skipValue.klass;
+  v53[1] = *(_QWORD *)(StatusReg + 40);
+  v51 = skipValue.klass;
   rgctx_data = method->klass->rgctx_data;
   actualSize = rgctx_data->_3_T->_2.actualSize;
-  v9 = (char *)&v54 - ((actualSize + 15) & 0x1FFFFFFF0LL);
+  v9 = (char *)&v42 - ((actualSize + 15) & 0x1FFFFFFF0LL);
   memset(v9, 0, actualSize);
-  memset(&v62, 0, sizeof(v62));
-  v55 = v9;
+  memset(&v50, 0, sizeof(v50));
+  v43 = v9;
   memset(v9, 0, actualSize);
   _28_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor = rgctx_data->_28_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor;
   totalweight = this->fields.totalweight;
   methodPointer = _28_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor->methodPointer;
-  v65[0] = v9;
+  v53[0] = v9;
   _28_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor->invoker_method(
     methodPointer,
     _28_System_Collections_Generic_List_WeightRate_WeightSeed_T____ctor,
     0,
-    (void **)v65,
+    (void **)v53,
     v9);
-  v59 = v9;
+  v47 = v9;
   memcpy(v9, v9, actualSize);
   list = this->fields.list;
   _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = (__int64)method->klass->rgctx_data->_1_System_Collections_Generic_List_WeightRate_WeightSeed_T__;
   if ( (*(_BYTE *)(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T + 309) & 1) == 0 )
-    _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C8EC78();
-  v15 = sub_1C3E7B0(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
+    _1_System_Collections_Generic_List_WeightRate_WeightSeed_T = sub_1C41A9C();
+  v15 = sub_1C6BC54(_1_System_Collections_Generic_List_WeightRate_WeightSeed_T);
   v16 = ((__int64 (__fastcall *)(__int64, struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *))method->klass->rgctx_data->_29_System_Collections_Generic_IEnumerable_WeightRate_WeightSeed_T__->_1.image)(
           v15,
           list);
   if ( !v15 )
-    sub_1C3E7C0(v16, v17);
+    sub_1C6BC60(v16, v17);
   v18 = method->klass->rgctx_data;
-  v60 = (void *)v15;
+  v48 = (void *)v15;
   v18->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator->invoker_method(
     v18->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator->methodPointer,
     v18->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator,
     (void *)v15,
     0,
-    &v61);
-  v62 = v61;
+    &v49);
+  v50 = v49;
   while ( 1 )
   {
     _17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext = method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext;
     if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_Enumerator_T__o *, MethodInfo *))_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext->methodPointer)(
-            &v62,
+            &v50,
             _17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext)
         & 1) == 0 )
       break;
@@ -544,95 +532,95 @@ Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o WeightRate___Il2CppFullyS
     _15_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___get_Current->invoker_method(
       _15_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___get_Current->methodPointer,
       _15_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___get_Current,
-      &v62,
+      &v50,
       0,
-      v65);
-    v21 = v65[0];
-    v22 = (const void *)sub_1C3E588(
-                          v65[0],
+      v53);
+    v21 = v53[0];
+    v22 = (const void *)sub_1C6BA2C(
+                          v53[0],
                           (char *)method->klass->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields + 32);
     memcpy(v9, v22, actualSize);
-    v29 = j_il2cpp_value_box_0(method->klass->rgctx_data->_3_T, v9, v23, v24, v25, v26, v27, v28);
-    v30 = method->klass;
-    v31 = (Il2CppObject *)v29;
-    if ( (v30->rgctx_data->_3_T->_1.byval_arg.bits & 0x80000000) == 0 )
-      v32 = &v63;
+    v23 = j_il2cpp_value_box_0(method->klass->rgctx_data->_3_T, v9);
+    v24 = method->klass;
+    v25 = (Il2CppObject *)v23;
+    if ( (v24->rgctx_data->_3_T->_1.byval_arg.bits & 0x80000000) == 0 )
+      v26 = &v51;
     else
-      v32 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
-    memcpy(v9, v32, actualSize);
-    v39 = (Il2CppObject *)j_il2cpp_value_box_0(v30->rgctx_data->_3_T, v9, v33, v34, v35, v36, v37, v38);
-    if ( System_Object__Equals_65487472(v31, v39, 0) )
+      v26 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
+    memcpy(v9, v26, actualSize);
+    v27 = (Il2CppObject *)j_il2cpp_value_box_0(v24->rgctx_data->_3_T, v9);
+    if ( System_Object__Equals_65816032(v25, v27, 0) )
     {
       _31_System_Collections_Generic_List_WeightRate_WeightSeed_T___ToArray = method->klass->rgctx_data->_31_System_Collections_Generic_List_WeightRate_WeightSeed_T___ToArray;
-      v41 = _31_System_Collections_Generic_List_WeightRate_WeightSeed_T___ToArray->methodPointer;
-      v65[0] = v21;
+      v29 = _31_System_Collections_Generic_List_WeightRate_WeightSeed_T___ToArray->methodPointer;
+      v53[0] = v21;
       _31_System_Collections_Generic_List_WeightRate_WeightSeed_T___ToArray->invoker_method(
-        v41,
+        v29,
         _31_System_Collections_Generic_List_WeightRate_WeightSeed_T___ToArray,
-        v60,
-        (void **)v65,
-        v64);
+        v48,
+        (void **)v53,
+        v52);
       break;
     }
   }
-  v42 = v59;
-  v43 = v58;
+  v30 = v47;
+  v31 = v46;
   System_Collections_Generic_List_Enumerator___Il2CppFullySharedGenericType___Dispose(
-    &v62,
-    (const MethodInfo_354AD24 *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
+    &v50,
+    (const MethodInfo_35915FC *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
   _13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator = method->klass->rgctx_data->_13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator;
   _13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator->invoker_method(
     _13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator->methodPointer,
     _13_System_Collections_Generic_List_WeightRate_WeightSeed_T___GetEnumerator,
-    v60,
+    v48,
     0,
-    &v61);
-  v62 = v61;
+    &v49);
+  v50 = v49;
   while ( 1 )
   {
-    v45 = method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext;
-    if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_Enumerator_T__o *, MethodInfo *))v45->methodPointer)(
-            &v62,
-            v45)
+    v33 = method->klass->rgctx_data->_17_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___MoveNext;
+    if ( (((__int64 (__fastcall *)(System_Collections_Generic_List_Enumerator_T__o *, MethodInfo *))v33->methodPointer)(
+            &v50,
+            v33)
         & 1) == 0 )
     {
-      v50 = 9;
+      v38 = 9;
       goto LABEL_17;
     }
-    v46 = method->klass->rgctx_data->_15_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___get_Current;
-    v46->invoker_method(v46->methodPointer, v46, &v62, 0, &v61);
-    v47 = v61.fields._list;
-    totalweight -= *(_DWORD *)sub_1C3E588(
-                                v61.fields._list,
+    v34 = method->klass->rgctx_data->_15_System_Collections_Generic_List_Enumerator_WeightRate_WeightSeed_T___get_Current;
+    v34->invoker_method(v34->methodPointer, v34, &v50, 0, &v49);
+    v35 = v49.fields._list;
+    totalweight -= *(_DWORD *)sub_1C6BA2C(
+                                v49.fields._list,
                                 method->klass->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields);
-    v48 = (char *)method->klass->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields + 32;
-    if ( totalweight <= v43 )
+    v36 = (char *)method->klass->rgctx_data->_4_WeightRate_WeightSeed_T_->_1.fields + 32;
+    if ( totalweight <= v31 )
       break;
-    v49 = (const void *)sub_1C3E588(v47, v48);
-    memcpy(v9, v49, actualSize);
-    memcpy(v42, v9, actualSize);
+    v37 = (const void *)sub_1C6BA2C(v35, v36);
+    memcpy(v9, v37, actualSize);
+    memcpy(v30, v9, actualSize);
   }
-  v51 = (const void *)sub_1C3E588(v47, v48);
-  memcpy(v9, v51, actualSize);
-  memcpy(v55, v9, actualSize);
-  v50 = 8;
+  v39 = (const void *)sub_1C6BA2C(v35, v36);
+  memcpy(v9, v39, actualSize);
+  memcpy(v43, v9, actualSize);
+  v38 = 8;
 LABEL_17:
   System_Collections_Generic_List_Enumerator___Il2CppFullySharedGenericType___Dispose(
-    &v62,
-    (const MethodInfo_354AD24 *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
-  if ( v50 == 8 )
-    v42 = v55;
-  memcpy(v9, v42, actualSize);
-  v52 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(monitor, v9, actualSize);
-  result.monitor = v53;
-  result.klass = v52;
+    &v50,
+    (const MethodInfo_35915FC *)method->klass->rgctx_data->_19_WeightRate___c__DisplayClass5_0_T_);
+  if ( v38 == 8 )
+    v30 = v43;
+  memcpy(v9, v30, actualSize);
+  v40 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)memcpy(monitor, v9, actualSize);
+  result.monitor = v41;
+  result.klass = v40;
   return result;
 }
 
 
 int32_t WeightRate___Il2CppFullySharedGenericType___getTotalWeight(
         WeightRate_T__o *this,
-        const MethodInfo_3BA7414 *method)
+        const MethodInfo_3BF9254 *method)
 {
   return this->fields.totalweight;
 }
@@ -641,7 +629,7 @@ int32_t WeightRate___Il2CppFullySharedGenericType___getTotalWeight(
 void WeightRate___Il2CppFullySharedGenericType___removeWeight(
         WeightRate_T__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o t,
-        const MethodInfo_3BA7030 *method)
+        const MethodInfo_3BF8E70 *method)
 {
   _QWORD *monitor; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x24
@@ -677,8 +665,8 @@ void WeightRate___Il2CppFullySharedGenericType___removeWeight(
   v26 = t.klass;
   v8 = *(_QWORD *)(v6 + 56);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C8EC78();
-  v9 = sub_1C3E7B0(v8);
+    v8 = sub_1C41A9C();
+  v9 = sub_1C6BC54(v8);
   v10 = *(void (__fastcall ***)(__int64, _QWORD, __int64, __int64))(*(_QWORD *)(monitor[4] + 192LL) + 64LL);
   (*v10)(v9, v10, v11, v12);
   v13 = monitor[4];
@@ -689,7 +677,7 @@ void WeightRate___Il2CppFullySharedGenericType___removeWeight(
   v15 = memcpy((char *)&v25 - ((v7 + 15) & 0x1FFFFFFF0LL), v14, v7);
   if ( !v9 )
     goto LABEL_15;
-  sub_1C3E58C(
+  sub_1C6BA30(
     v9,
     *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(v13 + 192) + 56LL) + 128LL),
     (char *)&v25 - ((v7 + 15) & 0x1FFFFFFF0LL),
@@ -697,8 +685,8 @@ void WeightRate___Il2CppFullySharedGenericType___removeWeight(
   list = this->fields.list;
   v18 = *(_QWORD *)(*(_QWORD *)(monitor[4] + 192LL) + 80LL);
   if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-    v18 = sub_1C8EC78();
-  v19 = sub_1C3E7B0(v18);
+    v18 = sub_1C41A9C();
+  v19 = sub_1C6BC54(v18);
   v15 = (void *)(**(__int64 (__fastcall ***)(__int64, __int64, _QWORD))(*(_QWORD *)(monitor[4] + 192LL) + 88LL))(
                   v19,
                   v9,
@@ -710,7 +698,7 @@ void WeightRate___Il2CppFullySharedGenericType___removeWeight(
         (v20 = this->fields.list) == 0) )
   {
 LABEL_15:
-    sub_1C3E7C0(v15, v16);
+    sub_1C6BC60(v15, v16);
   }
   v21 = *(_QWORD *)(*(_QWORD *)(monitor[4] + 192LL) + 104LL);
   (*(void (__fastcall **)(_QWORD, __int64, struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *, _QWORD, System_Collections_Generic_List_Enumerator_T__o *))(v21 + 16))(
@@ -721,7 +709,7 @@ LABEL_15:
     &v25);
   for ( i = 0;
         ;
-        i += *(_DWORD *)sub_1C3E588(v27[0], *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(monitor[4] + 192LL) + 32LL) + 128LL)) )
+        i += *(_DWORD *)sub_1C6BA2C(v27[0], *(_QWORD *)(*(_QWORD *)(*(_QWORD *)(monitor[4] + 192LL) + 32LL) + 128LL)) )
   {
     v23 = *(__int64 (__fastcall ***)(System_Collections_Generic_List_Enumerator_T__o *, _QWORD))(*(_QWORD *)(monitor[4] + 192LL)
                                                                                                + 136LL);
@@ -737,7 +725,7 @@ LABEL_15:
   }
   System_Collections_Generic_List_Enumerator___Il2CppFullySharedGenericType___Dispose(
     &v25,
-    *(const MethodInfo_354AD24 **)(*(_QWORD *)(monitor[4] + 192LL) + 144LL));
+    *(const MethodInfo_35915FC **)(*(_QWORD *)(monitor[4] + 192LL) + 144LL));
   this->fields.totalweight = i;
 }
 
@@ -746,7 +734,7 @@ void WeightRate___Il2CppFullySharedGenericType___setWeight(
         WeightRate_T__o *this,
         int32_t weight,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o t,
-        const MethodInfo_3BA6E80 *method)
+        const MethodInfo_3BF8CC0 *method)
 {
   _QWORD *monitor; // x19
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x23
@@ -796,11 +784,11 @@ void WeightRate___Il2CppFullySharedGenericType___setWeight(
   {
     v15 = *(_QWORD *)(v9 + 8);
     if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-      v15 = sub_1C8EC78();
-    v16 = sub_1C3E7B0(v15);
+      v15 = sub_1C41A9C();
+    v16 = sub_1C6BC54(v15);
     (**(void (***)(void))(*(_QWORD *)(monitor[4] + 192LL) + 16LL))();
     p_fields->klass = (CGThumbnailListItem_c *)v16;
-    sub_1C3E508(p_fields, v16, v17, v18);
+    sub_1C6B9AC(p_fields, v16, v17, v18);
     v7 = monitor[4];
     list = (struct System_Collections_Generic_List_WeightRate_WeightSeed_T___o *)p_fields->klass;
     totalweight = 0;
@@ -814,8 +802,8 @@ void WeightRate___Il2CppFullySharedGenericType___setWeight(
   memcpy((char *)&v30 - ((v10 + 15) & 0x1FFFFFFF0LL), v19, v10);
   v20 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 32LL);
   if ( (*(_BYTE *)(v20 + 309) & 1) == 0 )
-    v20 = sub_1C8EC78();
-  v21 = sub_1C3E7B0(v20);
+    v20 = sub_1C41A9C();
+  v21 = sub_1C6BC54(v20);
   v22 = *(_QWORD *)(monitor[4] + 192LL);
   v23 = *(__int64 **)(v22 + 40);
   v24 = *(_DWORD *)(*(_QWORD *)(v22 + 24) + 40LL);
@@ -827,7 +815,7 @@ void WeightRate___Il2CppFullySharedGenericType___setWeight(
   v32[1] = v11;
   v26 = ((__int64 (__fastcall *)(__int64, __int64 *, __int64, _QWORD *, _QWORD *))v23[2])(v25, v23, v21, v32, v11);
   if ( !list )
-    sub_1C3E7C0(v26, v27);
+    sub_1C6BC60(v26, v27);
   v28 = *(__int64 **)(*(_QWORD *)(monitor[4] + 192LL) + 48LL);
   v29 = *v28;
   v32[0] = v21;

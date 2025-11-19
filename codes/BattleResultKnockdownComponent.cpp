@@ -5,47 +5,44 @@ void BattleResultKnockdownComponent___ctor(BattleResultKnockdownComponent_o *thi
   int32_t v5; // w2
   const MethodInfo *v6; // x3
   int v7; // w8
-  __int64 v8; // x1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int v16; // w8
-  __int128 v17; // [xsp+0h] [xbp-30h]
+  int32_t v13; // w2
+  const MethodInfo *v14; // x3
+  int v15; // w8
+  __int128 v16; // [xsp+0h] [xbp-30h]
 
-  if ( (byte_4C5A676 & 1) == 0 )
+  if ( (byte_4CB9C47 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Color___TypeInfo);
-    byte_4C5A676 = 1;
+    sub_1C6BA08(&UnityEngine_Color___TypeInfo);
+    byte_4CB9C47 = 1;
   }
-  v3 = sub_1C3E60C(UnityEngine_Color___TypeInfo, 2);
+  v3 = sub_1C6BAB0(UnityEngine_Color___TypeInfo, 2);
   if ( !v3 )
     goto LABEL_11;
   v7 = *(_DWORD *)(v3 + 24);
-  v8 = v3;
   if ( !v7 )
     goto LABEL_10;
   __asm { FMOV            V0.4S, #1.0 }
   *(_OWORD *)(v3 + 32) = _Q0;
   if ( v7 == 1 )
 LABEL_10:
-    sub_1C3E7C8(v3, v8);
+    sub_1C6BC68(v3);
   *(_OWORD *)(v3 + 48) = _Q0;
   this->fields.battleColor = (struct UnityEngine_Color_array *)v3;
-  v17 = _Q0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.battleColor, v3, v5, v6);
-  v3 = sub_1C3E60C(UnityEngine_Color___TypeInfo, 2);
+  v16 = _Q0;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.battleColor, v3, v5, v6);
+  v3 = sub_1C6BAB0(UnityEngine_Color___TypeInfo, 2);
   if ( !v3 )
 LABEL_11:
-    sub_1C3E7C0(v3, v4);
-  v16 = *(_DWORD *)(v3 + 24);
-  v8 = v3;
-  if ( !v16 )
+    sub_1C6BC60(v3, v4);
+  v15 = *(_DWORD *)(v3 + 24);
+  if ( !v15 )
     goto LABEL_10;
-  *(_OWORD *)(v3 + 32) = v17;
-  if ( v16 == 1 )
+  *(_OWORD *)(v3 + 32) = v16;
+  if ( v15 == 1 )
     goto LABEL_10;
-  *(_OWORD *)(v3 + 48) = xmmword_C12BE0;
+  *(_OWORD *)(v3 + 48) = xmmword_CECEA0;
   this->fields.recordColor = (struct UnityEngine_Color_array *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.recordColor, v3, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.recordColor, v3, v13, v14);
   BattleWindowComponent___ctor((BattleWindowComponent_o *)this, 0);
 }
 
@@ -82,7 +79,7 @@ void BattleResultKnockdownComponent__setData(
     goto LABEL_9;
   if ( (unsigned int)isNewRecord >= LODWORD(recordColor->max_length) )
 LABEL_10:
-    sub_1C3E7C8(this, result);
+    sub_1C6BC68(this);
   BattleResultKnockdownComponent__setKnockdownInfoLabel(
     this,
     v5->fields.recordLabels,
@@ -96,7 +93,7 @@ LABEL_10:
                                                      0)) == 0 )
   {
 LABEL_9:
-    sub_1C3E7C0(this, result);
+    sub_1C6BC60(this, result);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, result->fields.isNewRecord, 0);
   v5->fields.isOpenPossible = result->fields.isTrialOpen;
@@ -129,12 +126,12 @@ void BattleResultKnockdownComponent__setKnockdownInfoLabel(
   g = color.fields.g;
   r = color.fields.r;
   v10 = labelArray;
-  if ( (byte_4C5A675 & 1) == 0 )
+  if ( (byte_4CB9C46 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_2798/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/);
-    this = (BattleResultKnockdownComponent_o *)sub_1C3E564(&StringLiteral_396/*"#,#"*/);
-    byte_4C5A675 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_2790/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/);
+    this = (BattleResultKnockdownComponent_o *)sub_1C6BA08(&StringLiteral_395/*"#,#"*/);
+    byte_4CB9C46 = 1;
   }
   if ( !v10 )
     goto LABEL_28;
@@ -146,7 +143,7 @@ void BattleResultKnockdownComponent__setKnockdownInfoLabel(
   if ( info->fields.knockdownNum <= 0 )
     v12 = System_Int64__ToString((int64_t)p_fields, 0);
   else
-    v12 = System_Int64__ToString_65151752((int64_t)p_fields, (System_String_o *)StringLiteral_396/*"#,#"*/, 0);
+    v12 = System_Int64__ToString_65480464((int64_t)p_fields, (System_String_o *)StringLiteral_395/*"#,#"*/, 0);
   labelArray = (UILabel_array *)v12;
   if ( !LODWORD(v10->max_length) )
     goto LABEL_29;
@@ -160,7 +157,7 @@ void BattleResultKnockdownComponent__setKnockdownInfoLabel(
   v14 = v10->m_Items[1];
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this = (BattleResultKnockdownComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2798/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/, 0);
+  this = (BattleResultKnockdownComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2790/*"BATTLE_KNOCKDOWN_COUNT_NAME"*/, 0);
   if ( !v14 )
     goto LABEL_28;
   UILabel__set_text(v14, (System_String_o *)this, 0);
@@ -172,14 +169,14 @@ void BattleResultKnockdownComponent__setKnockdownInfoLabel(
   if ( totalDamage <= 0 )
     v12 = System_Int64__ToString((int64_t)p_totalDamage, 0);
   else
-    v12 = System_Int64__ToString_65151752((int64_t)p_totalDamage, (System_String_o *)StringLiteral_396/*"#,#"*/, 0);
+    v12 = System_Int64__ToString_65480464((int64_t)p_totalDamage, (System_String_o *)StringLiteral_395/*"#,#"*/, 0);
   labelArray = (UILabel_array *)v12;
   if ( LODWORD(v10->max_length) <= 2 )
     goto LABEL_29;
   this = (BattleResultKnockdownComponent_o *)v10->m_Items[2];
   if ( !this )
 LABEL_28:
-    sub_1C3E7C0(this, labelArray);
+    sub_1C6BC60(this, labelArray);
   UILabel__set_text((UILabel_o *)this, (System_String_o *)labelArray, 0);
   max_length = v10->max_length;
 LABEL_22:
@@ -201,6 +198,6 @@ LABEL_22:
         return;
     }
 LABEL_29:
-    sub_1C3E7C8(v12, labelArray);
+    sub_1C6BC68(v12);
   }
 }

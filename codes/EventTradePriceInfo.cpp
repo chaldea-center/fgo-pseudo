@@ -3,26 +3,26 @@ void EventTradePriceInfo___ctor(EventTradePriceInfo_o *this, const MethodInfo *m
   System_Collections_Generic_List_object__o *v3; // x20
   System_Collections_Generic_List_object__o *v4; // x20
 
-  if ( (byte_4C517B0 & 1) == 0 )
+  if ( (byte_4CB0CF8 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_ItemIconComponent___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIIconLabel___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_UIIconLabel__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_List_ItemIconComponent__TypeInfo);
-    byte_4C517B0 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ItemIconComponent___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIIconLabel___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_UIIconLabel__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_List_ItemIconComponent__TypeInfo);
+    byte_4CB0CF8 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_UIIconLabel__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_UIIconLabel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_UIIconLabel___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_UIIconLabel___ctor__);
   this->fields.priceIconLabelList = (struct System_Collections_Generic_List_UIIconLabel__o *)v3;
-  sub_1C3E508(&this->fields.priceIconLabelList, v3);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ItemIconComponent__TypeInfo);
+  sub_1C6B9AC(&this->fields.priceIconLabelList, v3);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ItemIconComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ItemIconComponent___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ItemIconComponent___ctor__);
   this->fields.eventItemIconList = (struct System_Collections_Generic_List_ItemIconComponent__o *)v4;
-  sub_1C3E508(&this->fields.eventItemIconList, v4);
+  sub_1C6B9AC(&this->fields.eventItemIconList, v4);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -38,11 +38,11 @@ void EventTradePriceInfo__Awake(EventTradePriceInfo_o *this, const MethodInfo *m
   int v8; // w9
 
   v2 = this;
-  if ( (byte_4C517AD & 1) == 0 )
+  if ( (byte_4CB0CF5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIIconLabel__get_Count__);
-    this = (EventTradePriceInfo_o *)sub_1C3E564(&Method_System_Collections_Generic_List_ItemIconComponent__get_Count__);
-    byte_4C517AD = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIIconLabel__get_Count__);
+    this = (EventTradePriceInfo_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_ItemIconComponent__get_Count__);
+    byte_4CB0CF5 = 1;
   }
   priceIconLabelList = v2->fields.priceIconLabelList;
   if ( !priceIconLabelList )
@@ -55,7 +55,7 @@ void EventTradePriceInfo__Awake(EventTradePriceInfo_o *this, const MethodInfo *m
   eventItemIconList = v2->fields.eventItemIconList;
   if ( !eventItemIconList )
 LABEL_10:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   v7 = eventItemIconList->fields._size;
   v8 = -1;
   do
@@ -73,10 +73,10 @@ void EventTradePriceInfo__SetItemIcon(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4C517AF & 1) == 0 )
+  if ( (byte_4CB0CF7 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C517AF = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB0CF7 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -91,7 +91,7 @@ void EventTradePriceInfo__SetItemIcon(
         return;
       }
 LABEL_11:
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     }
     if ( !itemIcon )
       goto LABEL_11;
@@ -122,17 +122,17 @@ void EventTradePriceInfo__SetPriceInfo(
   unsigned __int64 v20; // x21
   const MethodInfo *v21; // x3
 
-  if ( (byte_4C517AE & 1) == 0 )
+  if ( (byte_4CB0CF6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BasicHelper_Any_CommonConsumeEntity___);
-    sub_1C3E564(&System_Func_CommonConsumeEntity__bool__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIIconLabel__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ItemIconComponent__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ItemIconComponent__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIIconLabel__get_Item__);
-    sub_1C3E564(&Method_EventTradePriceInfo___c__SetPriceInfo_b__5_0__);
-    sub_1C3E564(&EventTradePriceInfo___c_TypeInfo);
-    byte_4C517AE = 1;
+    sub_1C6BA08(&Method_BasicHelper_Any_CommonConsumeEntity___);
+    sub_1C6BA08(&System_Func_CommonConsumeEntity__bool__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIIconLabel__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ItemIconComponent__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ItemIconComponent__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIIconLabel__get_Item__);
+    sub_1C6BA08(&Method_EventTradePriceInfo___c__SetPriceInfo_b__5_0__);
+    sub_1C6BA08(&EventTradePriceInfo___c_TypeInfo);
+    byte_4CB0CF6 = 1;
   }
   v7 = EventTradePriceInfo___c_TypeInfo;
   if ( !EventTradePriceInfo___c_TypeInfo->_2.cctor_finished )
@@ -149,16 +149,16 @@ void EventTradePriceInfo__SetPriceInfo(
       v7 = EventTradePriceInfo___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__5_0 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_CommonConsumeEntity__bool__TypeInfo);
+    _9__5_0 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_CommonConsumeEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__5_0, v9, Method_EventTradePriceInfo___c__SetPriceInfo_b__5_0__, 0);
     static_fields = EventTradePriceInfo___c_TypeInfo->static_fields;
     static_fields->__9__5_0 = (struct System_Func_CommonConsumeEntity__bool__o *)_9__5_0;
-    sub_1C3E508(&static_fields->__9__5_0, _9__5_0);
+    sub_1C6B9AC(&static_fields->__9__5_0, _9__5_0);
   }
-  if ( !BasicHelper__Any_object__51261116(
+  if ( !BasicHelper__Any_object__51528924(
           (System_Object_array *)consumeEntityList,
           (System_Func_T__bool__o *)_9__5_0,
-          (const MethodInfo_30E2EBC *)Method_BasicHelper_Any_CommonConsumeEntity___) )
+          (const MethodInfo_31244DC *)Method_BasicHelper_Any_CommonConsumeEntity___) )
   {
     priceIconLabelList = (System_Collections_Generic_List_object__o *)this->fields.priceIconLabelList;
     if ( !priceIconLabelList || !consumeEntityList )
@@ -179,10 +179,10 @@ void EventTradePriceInfo__SetPriceInfo(
             Item = System_Collections_Generic_List_object___get_Item(
                      priceIconLabelList,
                      v15,
-                     (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_UIIconLabel__get_Item__);
+                     (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_UIIconLabel__get_Item__);
             if ( v15 >= LODWORD(consumeEntityList->max_length) )
 LABEL_32:
-              sub_1C3E7C8(Item, v11);
+              sub_1C6BC68(Item);
             v17 = (UIIconLabel_o *)Item;
             priceIconLabelList = (System_Collections_Generic_List_object__o *)consumeEntityList->m_Items[v15];
             if ( !priceIconLabelList )
@@ -209,7 +209,7 @@ LABEL_32:
               goto LABEL_25;
           }
 LABEL_30:
-          sub_1C3E7C0(priceIconLabelList, v11);
+          sub_1C6BC60(priceIconLabelList, v11);
         }
 LABEL_25:
         priceIconLabelList = (System_Collections_Generic_List_object__o *)this->fields.eventItemIconList;
@@ -221,7 +221,7 @@ LABEL_25:
           Item = System_Collections_Generic_List_object___get_Item(
                    priceIconLabelList,
                    v20,
-                   (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_ItemIconComponent__get_Item__);
+                   (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_ItemIconComponent__get_Item__);
           if ( v20 >= LODWORD(consumeEntityList->max_length) )
             goto LABEL_32;
           EventTradePriceInfo__SetItemIcon(
@@ -244,10 +244,10 @@ int32_t EventTradePriceInfo__get_DisplayCount(EventTradePriceInfo_o *this, const
 {
   struct System_Collections_Generic_List_UIIconLabel__o *priceIconLabelList; // x8
 
-  if ( (byte_4C517AC & 1) == 0 )
+  if ( (byte_4CB0CF4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIIconLabel__get_Count__);
-    byte_4C517AC = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIIconLabel__get_Count__);
+    byte_4CB0CF4 = 1;
   }
   priceIconLabelList = this->fields.priceIconLabelList;
   if ( priceIconLabelList )
@@ -261,15 +261,15 @@ void EventTradePriceInfo___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C517B1 & 1) == 0 )
+  if ( (byte_4CB0CF9 & 1) == 0 )
   {
-    sub_1C3E564(&EventTradePriceInfo___c_TypeInfo);
-    byte_4C517B1 = 1;
+    sub_1C6BA08(&EventTradePriceInfo___c_TypeInfo);
+    byte_4CB0CF9 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(EventTradePriceInfo___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(EventTradePriceInfo___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventTradePriceInfo___c_TypeInfo->static_fields->__9 = (struct EventTradePriceInfo___c_o *)v1;
-  sub_1C3E508(EventTradePriceInfo___c_TypeInfo->static_fields, v1);
+  sub_1C6B9AC(EventTradePriceInfo___c_TypeInfo->static_fields, v1);
 }
 
 

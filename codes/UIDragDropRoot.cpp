@@ -11,11 +11,11 @@ void UIDragDropRoot__OnDisable(UIDragDropRoot_o *this, const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C5B378 & 1) == 0 )
+  if ( (byte_4CBA955 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIDragDropRoot_TypeInfo);
-    byte_4C5B378 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIDragDropRoot_TypeInfo);
+    byte_4CBA955 = 1;
   }
   root = (UnityEngine_Object_o *)UIDragDropRoot_TypeInfo->static_fields->root;
   transform = (UnityEngine_Object_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
@@ -24,7 +24,7 @@ void UIDragDropRoot__OnDisable(UIDragDropRoot_o *this, const MethodInfo *method)
   if ( UnityEngine_Object__op_Equality(root, transform, 0) )
   {
     UIDragDropRoot_TypeInfo->static_fields->root = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)UIDragDropRoot_TypeInfo->static_fields, 0, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)UIDragDropRoot_TypeInfo->static_fields, 0, v5, v6);
   }
 }
 
@@ -35,12 +35,12 @@ void UIDragDropRoot__OnEnable(UIDragDropRoot_o *this, const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C5B377 & 1) == 0 )
+  if ( (byte_4CBA954 & 1) == 0 )
   {
-    sub_1C3E564(&UIDragDropRoot_TypeInfo);
-    byte_4C5B377 = 1;
+    sub_1C6BA08(&UIDragDropRoot_TypeInfo);
+    byte_4CBA954 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   UIDragDropRoot_TypeInfo->static_fields->root = transform;
-  sub_1C3E508((CGThumbnailListItem_o *)UIDragDropRoot_TypeInfo->static_fields, (int32_t)transform, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)UIDragDropRoot_TypeInfo->static_fields, (int32_t)transform, v4, v5);
 }

@@ -1,9 +1,9 @@
 void UpdateFieldViewActionData___ctor(UpdateFieldViewActionData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C59426 & 1) == 0 )
+  if ( (byte_4CB89A9 & 1) == 0 )
   {
-    sub_1C3E564(&BattleActionData_TypeInfo);
-    byte_4C59426 = 1;
+    sub_1C6BA08(&BattleActionData_TypeInfo);
+    byte_4CB89A9 = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
@@ -18,6 +18,6 @@ void UpdateFieldViewActionData__ExecAction(
         const MethodInfo *method)
 {
   if ( !perf )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   BattlePerformance__UpdateFieldView(perf, 0);
 }

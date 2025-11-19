@@ -1,13 +1,13 @@
 void ServantSkillReleaseEntity___ctor(ServantSkillReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C577D3 & 1) == 0 )
+  if ( (byte_4CB6D3D & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C577D3 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB6D3D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *ServantSkillReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4C577D1 & 1) == 0 )
+  if ( (byte_4CB6D3B & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4C577D1 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4CB6D3B = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            svtId,
            num,
            priority,
            idx,
-           (const MethodInfo_30F8548 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_3139E40 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -44,6 +44,198 @@ System_String_o *ServantSkillReleaseEntity__CreatePrimaryKey(
            this->fields.priority,
            this->fields.idx,
            v2);
+}
+
+
+bool ServantSkillReleaseEntity__IsUseInternal(
+        int32_t dispLimitCount,
+        int32_t beforeClearQuestId,
+        int32_t specificLimitCount,
+        int64_t userSvtId,
+        int32_t currentCondType,
+        int32_t currentCondTargetId,
+        int32_t currentCondNum,
+        const MethodInfo *method)
+{
+  int32_t v15; // w8
+  NetworkManager_c *v17; // x0
+  int64_t userIdNumber; // x20
+  bool IsLimitCountCondType; // w0
+  Il2CppObject *Master_object; // x0
+  __int64 v21; // x1
+  CommonReleaseEntity_array *List; // x24
+  System_Collections_Generic_Dictionary_int__bool__o *v23; // x23
+  int max_length; // w8
+  unsigned int v25; // w26
+  int32_t *v26; // x29
+  const MethodInfo *v27; // x7
+  int32_t v28; // w25
+  bool IsUseInternal; // w0
+  System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *Values; // x19
+  ServantSkillReleaseEntity___c_c *v31; // x8
+  System_Func_bool__bool__o *_9__12_0; // x20
+  Il2CppObject *v33; // x21
+  struct ServantSkillReleaseEntity___c_StaticFields *static_fields; // x0
+  int32_t v35; // w2
+  const MethodInfo *v36; // x3
+  bool value; // [xsp+Ch] [xbp-64h] BYREF
+
+  if ( (byte_4CB6D3C & 1) == 0 )
+  {
+    sub_1C6BA08(&CondType_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__bool__TryGetValue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__bool___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__bool__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_int__bool__TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_bool____78608160);
+    sub_1C6BA08(&System_Func_bool__bool__TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_ServantSkillReleaseEntity___c__IsUseInternal_b__12_0__);
+    sub_1C6BA08(&ServantSkillReleaseEntity___c_TypeInfo);
+    byte_4CB6D3C = 1;
+  }
+  value = 0;
+  if ( currentCondType == 1 )
+  {
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+    if ( !byte_4CB002A )
+    {
+      sub_1C6BA08(&NetworkManager_TypeInfo);
+      byte_4CB002A = 1;
+    }
+    v17 = NetworkManager_TypeInfo;
+    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
+      v17 = NetworkManager_TypeInfo;
+    }
+    userIdNumber = v17->static_fields->userIdNumber;
+    if ( !CondType_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+    return CondType__IsQuestPhaseClear(userIdNumber, currentCondTargetId, currentCondNum, beforeClearQuestId, 0, 0);
+  }
+  else
+  {
+    if ( currentCondType == 70 )
+    {
+      if ( dispLimitCount >= 11 )
+        v15 = dispLimitCount;
+      else
+        v15 = dispLimitCount + 1;
+      return v15 == currentCondNum;
+    }
+    if ( specificLimitCount >= 1 && currentCondType == 7 )
+      return currentCondNum <= specificLimitCount;
+    if ( currentCondType == 7 )
+    {
+      if ( userSvtId < 1 )
+        goto LABEL_52;
+      goto LABEL_28;
+    }
+    if ( !CondType_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+    IsLimitCountCondType = CondType__IsLimitCountCondType(currentCondType, 0);
+    if ( userSvtId >= 1 && IsLimitCountCondType )
+    {
+LABEL_28:
+      if ( !CondType_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+      return CondType__IsOpenForUsrSvt(currentCondType, currentCondNum, userSvtId, 0);
+    }
+    if ( currentCondType != 113 )
+    {
+LABEL_52:
+      if ( !CondType_TypeInfo->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
+      return CondType__IsOpen(currentCondType, currentCondTargetId, currentCondNum, 0, 0, 0);
+    }
+    if ( !DataManager_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+    if ( !Master_object
+      || (List = CommonReleaseMaster__getList((CommonReleaseMaster_o *)Master_object, currentCondTargetId, 0),
+          v23 = (System_Collections_Generic_Dictionary_int__bool__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__bool__TypeInfo),
+          System_Collections_Generic_Dictionary_int__bool____ctor(
+            v23,
+            (const MethodInfo_34432BC *)Method_System_Collections_Generic_Dictionary_int__bool___ctor__),
+          !List) )
+    {
+LABEL_56:
+      sub_1C6BC60(Master_object, v21);
+    }
+    max_length = List->max_length;
+    if ( max_length >= 1 )
+    {
+      v25 = 0;
+      do
+      {
+        if ( v25 >= max_length )
+          sub_1C6BC68(Master_object);
+        v26 = (int32_t *)List->m_Items[v25];
+        if ( !v26 || !v23 )
+          goto LABEL_56;
+        Master_object = (Il2CppObject *)System_Collections_Generic_Dictionary_int__bool___TryGetValue(
+                                          v23,
+                                          v26[6],
+                                          &value,
+                                          (const MethodInfo_3445348 *)Method_System_Collections_Generic_Dictionary_int__bool__TryGetValue__);
+        if ( value || ((unsigned __int8)Master_object & 1) == 0 )
+        {
+          v28 = v26[6];
+          IsUseInternal = ServantSkillReleaseEntity__IsUseInternal(
+                            dispLimitCount,
+                            beforeClearQuestId,
+                            specificLimitCount,
+                            userSvtId,
+                            v26[7],
+                            v26[8],
+                            v26[9],
+                            v27);
+          System_Collections_Generic_Dictionary_int__bool___set_Item(
+            v23,
+            v28,
+            IsUseInternal,
+            (const MethodInfo_3443C7C *)Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
+        }
+        max_length = List->max_length;
+      }
+      while ( (int)++v25 < max_length );
+    }
+    if ( !v23 )
+      goto LABEL_56;
+    Values = System_Collections_Generic_Dictionary_int__bool___get_Values(
+               v23,
+               (const MethodInfo_3443A9C *)Method_System_Collections_Generic_Dictionary_int__bool__get_Values__);
+    v31 = ServantSkillReleaseEntity___c_TypeInfo;
+    if ( !ServantSkillReleaseEntity___c_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(ServantSkillReleaseEntity___c_TypeInfo);
+      v31 = ServantSkillReleaseEntity___c_TypeInfo;
+    }
+    _9__12_0 = v31->static_fields->__9__12_0;
+    if ( !_9__12_0 )
+    {
+      if ( !v31->_2.cctor_finished )
+      {
+        j_il2cpp_runtime_class_init_0(v31);
+        v31 = ServantSkillReleaseEntity___c_TypeInfo;
+      }
+      v33 = (Il2CppObject *)v31->static_fields->__9;
+      _9__12_0 = (System_Func_bool__bool__o *)sub_1C6BC54(System_Func_bool__bool__TypeInfo);
+      System_Func_bool__bool____ctor(_9__12_0, v33, Method_ServantSkillReleaseEntity___c__IsUseInternal_b__12_0__, 0);
+      static_fields = ServantSkillReleaseEntity___c_TypeInfo->static_fields;
+      static_fields->__9__12_0 = _9__12_0;
+      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v35, v36);
+    }
+    return System_Linq_Enumerable__Any_bool__51676192(
+             (System_Collections_Generic_IEnumerable_TSource__o *)Values,
+             (System_Func_TSource__bool__o *)_9__12_0,
+             (const MethodInfo_3148420 *)Method_System_Linq_Enumerable_Any_bool____78608160);
+  }
 }
 
 
@@ -83,52 +275,52 @@ System_String_o *ServantSkillReleaseEntity__getCreatePrimarykey(
   v29 = svtId;
   v26 = idx;
   v27 = priority;
-  if ( (byte_4C577D0 & 1) == 0 )
+  if ( (byte_4CB6D3A & 1) == 0 )
   {
-    sub_1C3E564(&string___TypeInfo);
-    sub_1C3E564(&StringLiteral_1456/*":"*/);
-    byte_4C577D0 = 1;
+    sub_1C6BA08(&string___TypeInfo);
+    sub_1C6BA08(&StringLiteral_1449/*":"*/);
+    byte_4CB6D3A = 1;
   }
-  v5 = sub_1C3E60C(string___TypeInfo, 7);
+  v5 = sub_1C6BAB0(string___TypeInfo, 7);
   v6 = System_Int32__ToString((int32_t)&v29, 0);
   if ( !v5 )
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_12;
   *(_QWORD *)(v5 + 32) = v6;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v6, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v6, v8, v9);
   if ( *(_DWORD *)(v5 + 24) <= 1u )
     goto LABEL_12;
-  v12 = StringLiteral_1456/*":"*/;
-  *(_QWORD *)(v5 + 40) = StringLiteral_1456/*":"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), v12, v10, v11);
+  v12 = StringLiteral_1449/*":"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_1449/*":"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), v12, v10, v11);
   v6 = System_Int32__ToString((int32_t)&v28, 0);
   if ( *(_DWORD *)(v5 + 24) <= 2u )
     goto LABEL_12;
   *(_QWORD *)(v5 + 48) = v6;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 48), (int32_t)v6, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 48), (int32_t)v6, v13, v14);
   if ( *(_DWORD *)(v5 + 24) <= 3u )
     goto LABEL_12;
-  v17 = StringLiteral_1456/*":"*/;
-  *(_QWORD *)(v5 + 56) = StringLiteral_1456/*":"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 56), v17, v15, v16);
+  v17 = StringLiteral_1449/*":"*/;
+  *(_QWORD *)(v5 + 56) = StringLiteral_1449/*":"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 56), v17, v15, v16);
   v6 = System_Int32__ToString((int32_t)&v27, 0);
   if ( *(_DWORD *)(v5 + 24) <= 4u
     || (*(_QWORD *)(v5 + 64) = v6,
-        sub_1C3E508((CGThumbnailListItem_o *)(v5 + 64), (int32_t)v6, v18, v19),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 64), (int32_t)v6, v18, v19),
         *(_DWORD *)(v5 + 24) <= 5u)
-    || (v22 = StringLiteral_1456/*":"*/,
-        *(_QWORD *)(v5 + 72) = StringLiteral_1456/*":"*/,
-        sub_1C3E508((CGThumbnailListItem_o *)(v5 + 72), v22, v20, v21),
+    || (v22 = StringLiteral_1449/*":"*/,
+        *(_QWORD *)(v5 + 72) = StringLiteral_1449/*":"*/,
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 72), v22, v20, v21),
         v6 = System_Int32__ToString((int32_t)&v26, 0),
         *(_DWORD *)(v5 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1C3E7C8(v6, v7);
+    sub_1C6BC68(v6);
   }
   *(_QWORD *)(v5 + 80) = v6;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 80), (int32_t)v6, v23, v24);
-  return System_String__Concat_63676984((System_String_array *)v5, 0);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 80), (int32_t)v6, v23, v24);
+  return System_String__Concat_64007324((System_String_array *)v5, 0);
 }
 
 
@@ -140,84 +332,48 @@ bool ServantSkillReleaseEntity__isUse(
         int64_t userSvtId,
         const MethodInfo *method)
 {
-  int32_t condType; // w23
-  int32_t v12; // w9
-  NetworkManager_c *v14; // x0
-  int32_t condNum; // w19
-  int32_t condTargetId; // w20
-  int64_t userIdNumber; // x22
-  int32_t v18; // w21
-  bool IsLimitCountCondType; // w0
-  int32_t v20; // w19
-  int32_t v21; // w20
-  int64_t v22; // x19
+  const MethodInfo *v6; // x7
 
-  if ( (byte_4C577D2 & 1) == 0 )
+  return ServantSkillReleaseEntity__IsUseInternal(
+           dispLimitCount,
+           beforeClearQuestId,
+           specificLimitCount,
+           userSvtId,
+           this->fields.condType,
+           this->fields.condTargetId,
+           this->fields.condNum,
+           v6);
+}
+
+
+void ServantSkillReleaseEntity___c___cctor(const MethodInfo *method)
+{
+  Il2CppObject *v1; // x19
+  int32_t v2; // w2
+  const MethodInfo *v3; // x3
+
+  if ( (byte_4CB6D3E & 1) == 0 )
   {
-    sub_1C3E564(&CondType_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C577D2 = 1;
+    sub_1C6BA08(&ServantSkillReleaseEntity___c_TypeInfo);
+    byte_4CB6D3E = 1;
   }
-  condType = this->fields.condType;
-  if ( condType == 1 )
-  {
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C50AE2 )
-    {
-      sub_1C3E564(&NetworkManager_TypeInfo);
-      byte_4C50AE2 = 1;
-    }
-    v14 = NetworkManager_TypeInfo;
-    if ( !NetworkManager_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      v14 = NetworkManager_TypeInfo;
-    }
-    condTargetId = this->fields.condTargetId;
-    condNum = this->fields.condNum;
-    userIdNumber = v14->static_fields->userIdNumber;
-    if ( !CondType_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsQuestPhaseClear(userIdNumber, condTargetId, condNum, beforeClearQuestId, 0, 0);
-  }
-  else
-  {
-    if ( condType == 70 )
-    {
-      if ( dispLimitCount >= 11 )
-        v12 = dispLimitCount;
-      else
-        v12 = dispLimitCount + 1;
-      return this->fields.condNum == v12;
-    }
-    if ( specificLimitCount >= 1 && condType == 7 )
-      return this->fields.condNum <= specificLimitCount;
-    if ( condType == 7 )
-    {
-      v18 = 7;
-      if ( userSvtId < 1 )
-      {
-LABEL_31:
-        v21 = this->fields.condTargetId;
-        v22 = this->fields.condNum;
-        if ( !CondType_TypeInfo->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-        return CondType__IsOpen(v18, v21, v22, 0, 0, 0);
-      }
-    }
-    else
-    {
-      if ( !CondType_TypeInfo->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-      IsLimitCountCondType = CondType__IsLimitCountCondType(condType, 0);
-      v18 = this->fields.condType;
-      if ( userSvtId < 1 || !IsLimitCountCondType )
-        goto LABEL_31;
-    }
-    v20 = this->fields.condNum;
-    if ( !CondType_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return CondType__IsOpenForUsrSvt(v18, v20, userSvtId, 0);
-  }
+  v1 = (Il2CppObject *)sub_1C6BC54(ServantSkillReleaseEntity___c_TypeInfo);
+  System_Object___ctor(v1, 0);
+  ServantSkillReleaseEntity___c_TypeInfo->static_fields->__9 = (struct ServantSkillReleaseEntity___c_o *)v1;
+  sub_1C6B9AC((CGThumbnailListItem_o *)ServantSkillReleaseEntity___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+}
+
+
+void ServantSkillReleaseEntity___c___ctor(ServantSkillReleaseEntity___c_o *this, const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+}
+
+
+bool ServantSkillReleaseEntity___c___IsUseInternal_b__12_0(
+        ServantSkillReleaseEntity___c_o *this,
+        bool val,
+        const MethodInfo *method)
+{
+  return val;
 }

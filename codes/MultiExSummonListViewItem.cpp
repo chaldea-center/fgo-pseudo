@@ -17,7 +17,7 @@ void MultiExSummonListViewItem___ctor(
   ListViewItem___ctor((ListViewItem_o *)this, 0);
   v11->fields.info = gachaInfo;
   v11 = (MultiExSummonListViewItem_o *)((char *)v11 + 120);
-  sub_1C3E508((CGThumbnailListItem_o *)v11, (int32_t)gachaInfo, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v11, (int32_t)gachaInfo, v13, v14);
   LOBYTE(v11->monitor) = v12;
   HIDWORD(v11->monitor) = gachaId;
   *(_QWORD *)&v11->fields.selectNum = summonSceneInTime;
@@ -65,14 +65,14 @@ bool MultiExSummonListViewItem__SetSortValue(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
 
   v3 = this;
-  if ( (byte_4C531DA & 1) == 0 )
+  if ( (byte_4CB272A & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_ServantExceedMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    this = (MultiExSummonListViewItem_o *)sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C531DA = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_ServantExceedMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    this = (MultiExSummonListViewItem_o *)sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CB272A = 1;
   }
   entity = 0;
   info = v3->fields.info;
@@ -81,7 +81,7 @@ bool MultiExSummonListViewItem__SetSortValue(
   type = info->fields.type;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (MultiExSummonListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ServantMaster___);
+  this = (MultiExSummonListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantMaster___);
   v6 = v3->fields.info;
   if ( !v6 || !this )
     goto LABEL_44;
@@ -89,7 +89,7 @@ bool MultiExSummonListViewItem__SetSortValue(
                                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                           &entity,
                                           v6->fields.objectId,
-                                          (const MethodInfo_33B2FA4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                          (const MethodInfo_33F9128 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
     v11 = 0;
@@ -98,7 +98,7 @@ bool MultiExSummonListViewItem__SetSortValue(
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (MultiExSummonListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ServantExceedMaster___);
+  this = (MultiExSummonListViewItem_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantExceedMaster___);
   if ( !entity )
     goto LABEL_44;
   v7 = (ServantExceedMaster_o *)this;
@@ -108,10 +108,10 @@ bool MultiExSummonListViewItem__SetSortValue(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v23.fields.currentCryptoKey = klass;
   *(_QWORD *)&v23.fields.fakeValue = monitor;
-  this = (MultiExSummonListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v23, 0);
+  this = (MultiExSummonListViewItem_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v23, 0);
   if ( !v7 || (this = (MultiExSummonListViewItem_o *)ServantExceedMaster__GetRarity(v7, (int32_t)this, 0), !entity) )
 LABEL_44:
-    sub_1C3E7C0(this, sort);
+    sub_1C6BC60(this, sort);
   type = HIDWORD(entity[5].klass);
   v10 = (int)this;
   this = (MultiExSummonListViewItem_o *)ServantEntity__IsPeriodLimitedServantByGachaId(

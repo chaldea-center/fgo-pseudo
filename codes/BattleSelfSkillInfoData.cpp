@@ -8,40 +8,40 @@ System_Int32_array *BattleSelfSkillInfoData__GetRankUpSkillIds(
   __int64 v7; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C59AF8 & 1) == 0 )
+  if ( (byte_4CB90B2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C3E564(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C59AF8 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB90B2 = 1;
   }
   entity = 0;
-  result = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_11;
   result = (System_Int32_array *)DataManager__GetMasterData_object_(
                                    (DataManager_o *)result,
-                                   (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                   (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !result )
     goto LABEL_11;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)result,
          &entity,
          svtId,
-         (const MethodInfo_33B2FA4 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+         (const MethodInfo_33F9128 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
   {
     result = (System_Int32_array *)entity;
     if ( entity )
       return ServantEntity__GetRankUpSkillIds((ServantEntity_o *)entity, baseSkillId, 0);
 LABEL_11:
-    sub_1C3E7C0(result, v7);
+    sub_1C6BC60(result, v7);
   }
-  result = (System_Int32_array *)sub_1C3E60C(int___TypeInfo, 1);
+  result = (System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 1);
   if ( !result )
     goto LABEL_11;
   if ( !LODWORD(result->max_length) )
-    sub_1C3E7C8(result, v7);
+    sub_1C6BC68(result);
   result->m_Items[0] = baseSkillId;
   return result;
 }
@@ -87,13 +87,13 @@ void BattleSelfSkillInfoData__PreAddProcess(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v28; // 0:x0.16
 
   v4 = this;
-  if ( (byte_4C59AF7 & 1) == 0 )
+  if ( (byte_4CB90B1 & 1) == 0 )
   {
-    sub_1C3E564(&BattleSkillInfoData_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleSkillInfoData__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleSkillInfoData__Clear__);
-    this = (BattleSelfSkillInfoData_o *)sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C59AF7 = 1;
+    sub_1C6BA08(&BattleSkillInfoData_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleSkillInfoData__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleSkillInfoData__Clear__);
+    this = (BattleSelfSkillInfoData_o *)sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CB90B1 = 1;
   }
   if ( !svtData )
     goto LABEL_21;
@@ -102,7 +102,7 @@ void BattleSelfSkillInfoData__PreAddProcess(
     goto LABEL_21;
   v7 = *(struct BattleBuffData_SkillRankChangeData_o **)&this->fields.cutInId;
   v4->fields.rankChangeData = v7;
-  sub_1C3E508((CGThumbnailListItem_o *)&v4->fields.rankChangeData, (int32_t)v7, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.rankChangeData, (int32_t)v7, v5, v6);
   rankUpList = v4->fields.rankUpList;
   if ( !rankUpList )
     goto LABEL_21;
@@ -118,7 +118,7 @@ void BattleSelfSkillInfoData__PreAddProcess(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v28.fields.currentCryptoKey = v12;
   *(_QWORD *)&v28.fields.fakeValue = v11;
-  v13 = (BattleSelfSkillInfoData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v28, 0);
+  v13 = (BattleSelfSkillInfoData_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v28, 0);
   this = (BattleSelfSkillInfoData_o *)BattleSelfSkillInfoData__GetRankUpSkillIds(
                                         v13,
                                         (int32_t)v13,
@@ -134,10 +134,10 @@ void BattleSelfSkillInfoData__PreAddProcess(
     while ( 1 )
     {
       if ( v17 >= (unsigned int)v15 )
-        sub_1C3E7C8(this, svtData);
+        sub_1C6BC68(this);
       v18 = *(&v16->fields._skillId + v17);
       v19 = (System_Collections_Generic_List_object__o *)v4->fields.rankUpList;
-      v20 = sub_1C3E7B0(BattleSkillInfoData_TypeInfo);
+      v20 = sub_1C6BC54(BattleSkillInfoData_TypeInfo);
       *(_DWORD *)(v20 + 64) = -1;
       *(_QWORD *)(v20 + 88) = -1;
       *(_QWORD *)(v20 + 96) = -1;
@@ -168,20 +168,20 @@ void BattleSelfSkillInfoData__PreAddProcess(
         System_Collections_Generic_List_object___AddWithResize(
           v19,
           (Il2CppObject *)this,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
       }
       else
       {
         v27 = &items->obj.klass + v25;
         v19->fields._size = v25 + 1;
         v27[4] = (Il2CppClass *)v26;
-        sub_1C3E508((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v26, v21, v22);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v27 + 4), (int32_t)v26, v21, v22);
       }
       LODWORD(v15) = v16->fields.svtUniqueId;
       if ( (__int64)++v17 >= (int)v15 )
         return;
     }
 LABEL_21:
-    sub_1C3E7C0(this, svtData);
+    sub_1C6BC60(this, svtData);
   }
 }

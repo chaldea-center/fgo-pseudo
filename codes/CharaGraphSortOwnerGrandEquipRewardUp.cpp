@@ -4,15 +4,15 @@ void CharaGraphSortOwnerGrandEquipRewardUp___ctor(
 {
   CharaGraphSortManageUnitServantEquip_o *v3; // x20
 
-  if ( (byte_4C51AE7 & 1) == 0 )
+  if ( (byte_4CB102F & 1) == 0 )
   {
-    sub_1C3E564(&CharaGraphSortManageUnitGrandEquipRewardUp_TypeInfo);
-    byte_4C51AE7 = 1;
+    sub_1C6BA08(&CharaGraphSortManageUnitGrandEquipRewardUp_TypeInfo);
+    byte_4CB102F = 1;
   }
-  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_1C3E7B0(CharaGraphSortManageUnitGrandEquipRewardUp_TypeInfo);
+  v3 = (CharaGraphSortManageUnitServantEquip_o *)sub_1C6BC54(CharaGraphSortManageUnitGrandEquipRewardUp_TypeInfo);
   CharaGraphSortManageUnitServantEquip___ctor(v3, 0);
   this->fields._ServantEquipSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1C3E508(&this->fields._ServantEquipSortManageUnit_k__BackingField, v3);
+  sub_1C6B9AC(&this->fields._ServantEquipSortManageUnit_k__BackingField, v3);
   CharaGraphSortOwnerBase___ctor((CharaGraphSortOwnerBase_o *)this, 0);
 }
 
@@ -29,12 +29,12 @@ System_String_o *CharaGraphSortOwnerGrandEquipRewardUp__get_SortSaveKeyPrefix(
         CharaGraphSortOwnerGrandEquipRewardUp_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C51AE6 & 1) == 0 )
+  if ( (byte_4CB102E & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_4393/*"CharaGraphSort_GrandEquip_Reward_Up"*/);
-    byte_4C51AE6 = 1;
+    sub_1C6BA08(&StringLiteral_4383/*"CharaGraphSort_GrandEquip_Reward_Up"*/);
+    byte_4CB102E = 1;
   }
-  return (System_String_o *)StringLiteral_4393/*"CharaGraphSort_GrandEquip_Reward_Up"*/;
+  return (System_String_o *)StringLiteral_4383/*"CharaGraphSort_GrandEquip_Reward_Up"*/;
 }
 
 
@@ -44,5 +44,5 @@ void CharaGraphSortOwnerGrandEquipRewardUp__set_ServantEquipSortManageUnit(
         const MethodInfo *method)
 {
   this->fields._ServantEquipSortManageUnit_k__BackingField = value;
-  sub_1C3E508(&this->fields._ServantEquipSortManageUnit_k__BackingField, value);
+  sub_1C6B9AC(&this->fields._ServantEquipSortManageUnit_k__BackingField, value);
 }

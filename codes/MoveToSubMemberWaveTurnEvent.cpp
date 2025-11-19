@@ -1,4 +1,4 @@
-void MoveToSubMemberWaveTurnEvent___ctor_47167728(
+void MoveToSubMemberWaveTurnEvent___ctor_47393076(
         MoveToSubMemberWaveTurnEvent_o *this,
         int32_t wave,
         int32_t turn,
@@ -19,15 +19,15 @@ MoveToSubMemberWaveTurnEvent_o *MoveToSubMemberWaveTurnEvent__CreateBySaveData(
   Il2CppObject *v4; // x19
 
   v2 = saveData;
-  if ( (byte_4C5A06D & 1) == 0 )
+  if ( (byte_4CB9630 & 1) == 0 )
   {
-    saveData = (ServantWaveTurnEvent_SaveData_o *)sub_1C3E564(&MoveToSubMemberWaveTurnEvent_TypeInfo);
-    byte_4C5A06D = 1;
+    saveData = (ServantWaveTurnEvent_SaveData_o *)sub_1C6BA08(&MoveToSubMemberWaveTurnEvent_TypeInfo);
+    byte_4CB9630 = 1;
   }
   if ( !v2 )
-    sub_1C3E7C0(saveData, method);
+    sub_1C6BC60(saveData, method);
   v3 = *(Il2CppClass **)&v2->fields.Wave;
-  v4 = (Il2CppObject *)sub_1C3E7B0(MoveToSubMemberWaveTurnEvent_TypeInfo);
+  v4 = (Il2CppObject *)sub_1C6BC54(MoveToSubMemberWaveTurnEvent_TypeInfo);
   System_Object___ctor(v4, 0);
   v4[1].klass = v3;
   return (MoveToSubMemberWaveTurnEvent_o *)v4;

@@ -13,7 +13,7 @@ void CombineListViewItem___ctor(
   v6->fields.info = info;
   v6 = (CombineListViewItem_o *)((char *)v6 + 120);
   v6[-1].fields.loopIndex = index;
-  sub_1C3E508((CGThumbnailListItem_o *)v6, (int32_t)info, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v6, (int32_t)info, v7, v8);
 }
 
 
@@ -29,7 +29,7 @@ System_String_o *CombineListViewItem__get_EventData(CombineListViewItem_o *this,
 
   info = this->fields.info;
   if ( !info )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return info->fields.eventData;
 }
 
@@ -46,7 +46,7 @@ System_String_o *CombineListViewItem__get_SpriteName(CombineListViewItem_o *this
 
   info = this->fields.info;
   if ( !info )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return info->fields.spriteName;
 }
 
@@ -57,6 +57,6 @@ int32_t CombineListViewItem__get_Type(CombineListViewItem_o *this, const MethodI
 
   info = this->fields.info;
   if ( !info )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return info->fields.type;
 }

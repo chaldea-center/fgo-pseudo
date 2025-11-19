@@ -2,16 +2,16 @@ void ExpeditionRewardDialogComponent___ctor(ExpeditionRewardDialogComponent_o *t
 {
   struct UnityEngine_Color_array *v3; // x0
 
-  if ( (byte_4C51063 & 1) == 0 )
+  if ( (byte_4CB05AB & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    sub_1C3E564(&UnityEngine_Color___TypeInfo);
-    byte_4C51063 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Color___TypeInfo);
+    byte_4CB05AB = 1;
   }
   this->fields.iconScale = 0.85;
-  v3 = (struct UnityEngine_Color_array *)sub_1C3E60C(UnityEngine_Color___TypeInfo, 2);
+  v3 = (struct UnityEngine_Color_array *)sub_1C6BAB0(UnityEngine_Color___TypeInfo, 2);
   this->fields.viewChangeButtonLabelEffectColors = v3;
-  sub_1C3E508(&this->fields.viewChangeButtonLabelEffectColors, v3);
+  sub_1C6B9AC(&this->fields.viewChangeButtonLabelEffectColors, v3);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -24,23 +24,23 @@ void ExpeditionRewardDialogComponent__EndClose(ExpeditionRewardDialogComponent_o
   struct System_Action_o *v4; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
-  if ( (byte_4C5105F & 1) == 0 )
+  if ( (byte_4CB05A7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_bool___);
-    byte_4C5105F = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
+    byte_4CB05A7 = 1;
   }
   ExpeditionRewardDialogComponent__Init(this, method);
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.eventRootMaskSetActiveAction,
     0,
-    (const MethodInfo_3046270 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
   v4 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     *p_closeCallbackFunc = 0;
-    sub_1C3E508(p_closeCallbackFunc, 0);
+    sub_1C6B9AC(p_closeCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -54,7 +54,7 @@ void ExpeditionRewardDialogComponent__Init(ExpeditionRewardDialogComponent_o *th
   this->fields.state = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
@@ -71,19 +71,19 @@ void ExpeditionRewardDialogComponent__OnClickCloseButton(
   System_Action_o *v7; // x20
   System_Collections_Generic_List_Enumerator_object__o v8; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C5105E & 1) == 0 )
+  if ( (byte_4CB05A6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_bool___);
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C3E564(&Method_ExpeditionRewardDialogComponent_EndClose__);
-    sub_1C3E564(&Method_ExpeditionRewardDialogComponent_OnClickCloseButton__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5105E = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C6BA08(&Method_ExpeditionRewardDialogComponent_EndClose__);
+    sub_1C6BA08(&Method_ExpeditionRewardDialogComponent_OnClickCloseButton__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB05A6 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   if ( this->fields.state == 2 )
@@ -94,30 +94,30 @@ void ExpeditionRewardDialogComponent__OnClickCloseButton(
       goto LABEL_19;
     scrollView = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                               scrollView,
-                                              (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
+                                              (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
     if ( !scrollView )
       goto LABEL_19;
     UIScrollView__ResetPosition((UIScrollView_o *)scrollView, 0);
     ActionExtensions__Call_bool_(
       (System_Action_T__o *)this->fields.eventRootMaskSetActiveAction,
       1,
-      (const MethodInfo_3046270 *)Method_ActionExtensions_Call_bool___);
+      (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
     v4 = Method_ExpeditionRewardDialogComponent_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_ExpeditionRewardDialogComponent_OnClickCloseButton__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C3E57C(Method_ExpeditionRewardDialogComponent_OnClickCloseButton__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C3E548(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C6BA20(Method_ExpeditionRewardDialogComponent_OnClickCloseButton__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, this->fields.closeBtnSe, 0, 0);
     scrollView = (UnityEngine_Component_o *)this->fields.resultItemObjList;
     if ( !scrollView )
 LABEL_19:
-      sub_1C3E7C0(scrollView, method);
+      sub_1C6BC60(scrollView, method);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v8,
       (System_Collections_Generic_List_object__o *)scrollView,
-      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v8,
-              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
     {
       current = v8.fields._current;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -126,13 +126,13 @@ LABEL_19:
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_71341564((UnityEngine_Object_o *)current, 0);
+        UnityEngine_Object__Destroy_71659676((UnityEngine_Object_o *)current, 0);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v8,
-      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    v7 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_ExpeditionRewardDialogComponent_EndClose__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v7, 0);
   }
@@ -160,36 +160,36 @@ void ExpeditionRewardDialogComponent__OnClickSwitchShowMode(
   int32_t v17; // w20
   UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C51060 & 1) == 0 )
+  if ( (byte_4CB05A8 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1C3E564(&Method_ExpeditionRewardDialogComponent_OnClickSwitchShowMode__);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1C3E564(&StringLiteral_24222/*"treasurechest_btn"*/);
-    sub_1C3E564(&StringLiteral_24224/*"treasurechest_btn_on"*/);
-    byte_4C51060 = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1C6BA08(&Method_ExpeditionRewardDialogComponent_OnClickSwitchShowMode__);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    sub_1C6BA08(&StringLiteral_24302/*"treasurechest_btn"*/);
+    sub_1C6BA08(&StringLiteral_24304/*"treasurechest_btn_on"*/);
+    byte_4CB05A8 = 1;
   }
   v3 = Method_ExpeditionRewardDialogComponent_OnClickSwitchShowMode__;
   if ( (*((_BYTE *)Method_ExpeditionRewardDialogComponent_OnClickSwitchShowMode__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_ExpeditionRewardDialogComponent_OnClickSwitchShowMode__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_ExpeditionRewardDialogComponent_OnClickSwitchShowMode__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   isShowPossessionNum = this->fields.isShowPossessionNum;
   viewChangeButton = this->fields.viewChangeButton;
   this->fields.isShowPossessionNum = !isShowPossessionNum;
   if ( !viewChangeButton )
     goto LABEL_26;
-  v8 = isShowPossessionNum ? (System_String_o **)&StringLiteral_24222/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_24224/*"treasurechest_btn_on"*/;
+  v8 = isShowPossessionNum ? (System_String_o **)&StringLiteral_24302/*"treasurechest_btn"*/ : (System_String_o **)&StringLiteral_24304/*"treasurechest_btn_on"*/;
   UIButton__set_normalSprite(viewChangeButton, *v8, 0);
   viewChangeButton = this->fields.viewChangeButton;
   if ( !viewChangeButton )
     goto LABEL_26;
   viewChangeButton = (UIButton_o *)UnityEngine_Component__GetComponent_object_(
                                      (UnityEngine_Component_o *)viewChangeButton,
-                                     (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                                     (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !this->fields.viewChangeButton )
     goto LABEL_26;
   v9 = (UISprite_o *)viewChangeButton;
@@ -200,7 +200,7 @@ void ExpeditionRewardDialogComponent__OnClickSwitchShowMode(
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
 LABEL_26:
-    sub_1C3E7C0(viewChangeButton, v5);
+    sub_1C6BC60(viewChangeButton, v5);
   viewChangeButton = (UIButton_o *)this->fields.viewChangeButtonLabel;
   max_length = viewChangeButtonLabelEffectColors->max_length;
   if ( !this->fields.isShowPossessionNum )
@@ -216,7 +216,7 @@ LABEL_26:
       goto LABEL_20;
     }
 LABEL_28:
-    sub_1C3E7C8(viewChangeButton, v5);
+    sub_1C6BC68(viewChangeButton);
   }
   if ( max_length <= 1 )
     goto LABEL_28;
@@ -241,12 +241,12 @@ LABEL_20:
     viewChangeButton = (UIButton_o *)System_Collections_Generic_List_object___get_Item(
                                        (System_Collections_Generic_List_object__o *)viewChangeButton,
                                        v17,
-                                       (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                       (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( viewChangeButton )
     {
       viewChangeButton = (UIButton_o *)UnityEngine_GameObject__GetComponent_object_(
                                          (UnityEngine_GameObject_o *)viewChangeButton,
-                                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
       if ( viewChangeButton )
       {
         ItemIconComponent__ShowPossession((ItemIconComponent_o *)viewChangeButton, this->fields.isShowPossessionNum, 0);
@@ -293,101 +293,89 @@ void ExpeditionRewardDialogComponent__Open(
   UILabel_o *getTitleLabel; // x26
   UILabel_o *getNumLabel; // x26
   System_String_o *v35; // x27
-  __int64 v36; // x2
-  __int64 v37; // x3
-  __int64 v38; // x4
-  __int64 v39; // x5
-  __int64 v40; // x6
-  __int64 v41; // x7
-  Il2CppObject *v42; // x0
-  System_String_o *v43; // x0
+  Il2CppObject *v36; // x0
+  System_String_o *v37; // x0
   int64_t EventPointNoGroup; // x0
   UILabel_o *totalTitleLabel; // x24
-  int64_t v46; // x26
+  int64_t v40; // x26
   UILabel_o *totalNumLabel; // x24
-  System_String_o *v48; // x27
-  __int64 v49; // x2
-  __int64 v50; // x3
-  __int64 v51; // x4
-  __int64 v52; // x5
-  __int64 v53; // x6
-  __int64 v54; // x7
-  Il2CppObject *v55; // x0
-  Il2CppObject *v56; // x24
-  System_String_o **v57; // x8
-  BattleDropItem_o *v58; // x23
-  int32_t v59; // w8
-  __int64 v60; // x0
+  System_String_o *v42; // x27
+  Il2CppObject *v43; // x0
+  Il2CppObject *v44; // x24
+  System_String_o **v45; // x8
+  BattleDropItem_o *v46; // x23
+  int32_t v47; // w8
+  __int64 v48; // x0
   System_Array_o **p_resultRewardInfos; // x21
   struct BattleDropItem_array *resultRewardInfos; // x24
-  System_Array_o *v63; // x20
-  __int64 v64; // x8
-  int v65; // w21
+  System_Array_o *v51; // x20
+  __int64 v52; // x8
+  int v53; // w21
   void *monitor; // x20
-  System_Action_o *v67; // x20
-  __int64 v68; // x0
-  bool v69; // [xsp+Ch] [xbp-84h]
+  System_Action_o *v55; // x20
+  __int64 v56; // x0
+  bool v57; // [xsp+Ch] [xbp-84h]
   int32_t eventIda; // [xsp+1Ch] [xbp-74h]
-  int64_t v71; // [xsp+20h] [xbp-70h] BYREF
-  int32_t v72; // [xsp+2Ch] [xbp-64h] BYREF
+  int64_t v59; // [xsp+20h] [xbp-70h] BYREF
+  int32_t v60; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C5105C & 1) == 0 )
+  if ( (byte_4CB05A4 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&BattleDropItem___TypeInfo);
-    sub_1C3E564(&BattleDropItem_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____78207296);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Sum_EventExpeditionEntity___);
-    sub_1C3E564(&System_Func_EventExpeditionEntity__int__TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
-    sub_1C3E564(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&Method_ExpeditionRewardDialogComponent___c__Open_b__28_0__);
-    sub_1C3E564(&Method_ExpeditionRewardDialogComponent___c__DisplayClass28_0__Open_b__1__);
-    sub_1C3E564(&ExpeditionRewardDialogComponent___c__DisplayClass28_0_TypeInfo);
-    sub_1C3E564(&ExpeditionRewardDialogComponent___c_TypeInfo);
-    sub_1C3E564(&StringLiteral_13550/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/);
-    sub_1C3E564(&StringLiteral_803/*"+"*/);
-    sub_1C3E564(&StringLiteral_5794/*"EXPEDITION_BOX_EVENT_POINT_REWARD_TITLE"*/);
-    sub_1C3E564(&StringLiteral_24222/*"treasurechest_btn"*/);
-    sub_1C3E564(&StringLiteral_2826/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/);
-    sub_1C3E564(&StringLiteral_5815/*"EXPEDITION_REWARD_DIALOG_VIEW_CHANGE"*/);
-    sub_1C3E564(&StringLiteral_24228/*"treasurechest_img_bg_reward"*/);
-    sub_1C3E564(&StringLiteral_5814/*"EXPEDITION_REWARD_DIALOG_TOTAL_POINT_TITLE"*/);
-    sub_1C3E564(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C3E564(&StringLiteral_5813/*"EXPEDITION_REWARD_DIALOG_TITLE"*/);
-    sub_1C3E564(&StringLiteral_5812/*"EXPEDITION_REWARD_DIALOG_GET_POINT_TITLE"*/);
-    byte_4C5105C = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&BattleDropItem___TypeInfo);
+    sub_1C6BA08(&BattleDropItem_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____78590496);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Sum_EventExpeditionEntity___);
+    sub_1C6BA08(&System_Func_EventExpeditionEntity__int__TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
+    sub_1C6BA08(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&Method_ExpeditionRewardDialogComponent___c__Open_b__28_0__);
+    sub_1C6BA08(&Method_ExpeditionRewardDialogComponent___c__DisplayClass28_0__Open_b__1__);
+    sub_1C6BA08(&ExpeditionRewardDialogComponent___c__DisplayClass28_0_TypeInfo);
+    sub_1C6BA08(&ExpeditionRewardDialogComponent___c_TypeInfo);
+    sub_1C6BA08(&StringLiteral_13543/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/);
+    sub_1C6BA08(&StringLiteral_800/*"+"*/);
+    sub_1C6BA08(&StringLiteral_5784/*"EXPEDITION_BOX_EVENT_POINT_REWARD_TITLE"*/);
+    sub_1C6BA08(&StringLiteral_24302/*"treasurechest_btn"*/);
+    sub_1C6BA08(&StringLiteral_2818/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/);
+    sub_1C6BA08(&StringLiteral_5805/*"EXPEDITION_REWARD_DIALOG_VIEW_CHANGE"*/);
+    sub_1C6BA08(&StringLiteral_24308/*"treasurechest_img_bg_reward"*/);
+    sub_1C6BA08(&StringLiteral_5804/*"EXPEDITION_REWARD_DIALOG_TOTAL_POINT_TITLE"*/);
+    sub_1C6BA08(&StringLiteral_3677/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C6BA08(&StringLiteral_5803/*"EXPEDITION_REWARD_DIALOG_TITLE"*/);
+    sub_1C6BA08(&StringLiteral_5802/*"EXPEDITION_REWARD_DIALOG_GET_POINT_TITLE"*/);
+    byte_4CB05A4 = 1;
   }
-  v16 = (ExpeditionRewardDialogComponent___c__DisplayClass28_0_o *)sub_1C3E7B0(ExpeditionRewardDialogComponent___c__DisplayClass28_0_TypeInfo);
+  v16 = (ExpeditionRewardDialogComponent___c__DisplayClass28_0_o *)sub_1C6BC54(ExpeditionRewardDialogComponent___c__DisplayClass28_0_TypeInfo);
   ExpeditionRewardDialogComponent___c__DisplayClass28_0___ctor(v16, 0);
   if ( !v16 )
     goto LABEL_57;
   v16->fields.__4__this = this;
-  sub_1C3E508(&v16->fields, this);
+  sub_1C6B9AC(&v16->fields, this);
   this->fields.state = 1;
   this->fields.eventRootMaskSetActiveAction = setMaskMethod;
-  sub_1C3E508(&this->fields.eventRootMaskSetActiveAction, setMaskMethod);
+  sub_1C6B9AC(&this->fields.eventRootMaskSetActiveAction, setMaskMethod);
   viewChangeButton = (__int64)this->fields.viewChangeButton;
   if ( !viewChangeButton )
     goto LABEL_57;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)viewChangeButton,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_24222/*"treasurechest_btn"*/, 0);
+  AtlasManager__SetEventUI((UISprite_o *)Component_object, (System_String_o *)StringLiteral_24302/*"treasurechest_btn"*/, 0);
   viewChangeButton = (__int64)this->fields.viewChangeButton;
   this->fields.isShowPossessionNum = 0;
   if ( !viewChangeButton )
     goto LABEL_57;
-  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_24222/*"treasurechest_btn"*/, 0);
+  UIButton__set_normalSprite((UIButton_o *)viewChangeButton, (System_String_o *)StringLiteral_24302/*"treasurechest_btn"*/, 0);
   viewChangeButtonLabelEffectColors = this->fields.viewChangeButtonLabelEffectColors;
   if ( !viewChangeButtonLabelEffectColors )
     goto LABEL_57;
@@ -397,19 +385,19 @@ void ExpeditionRewardDialogComponent__Open(
   if ( !viewChangeButton )
     goto LABEL_57;
   UILabel__set_effectColor((UILabel_o *)viewChangeButton, viewChangeButtonLabelEffectColors->m_Items[0], 0);
-  v21 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_GameObject__TypeInfo);
+  v21 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v21,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.resultItemObjList = (struct System_Collections_Generic_List_GameObject__o *)v21;
-  viewChangeButton = sub_1C3E508(&this->fields.resultItemObjList, v21);
+  viewChangeButton = sub_1C6B9AC(&this->fields.resultItemObjList, v21);
   if ( !eventExpeditionEntities )
     goto LABEL_57;
   v22 = getPointReward;
   viewChangeButton = (__int64)System_Collections_Generic_List_object___get_Item(
                                 (System_Collections_Generic_List_object__o *)eventExpeditionEntities,
                                 0,
-                                (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
+                                (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
   if ( !viewChangeButton )
     goto LABEL_57;
   v23 = *(_DWORD *)(viewChangeButton + 44);
@@ -430,16 +418,16 @@ void ExpeditionRewardDialogComponent__Open(
       v24 = ExpeditionRewardDialogComponent___c_TypeInfo;
     }
     v26 = (Il2CppObject *)v24->static_fields->__9;
-    _9__28_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_EventExpeditionEntity__int__TypeInfo);
+    _9__28_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_EventExpeditionEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__28_0, v26, Method_ExpeditionRewardDialogComponent___c__Open_b__28_0__, 0);
     static_fields = ExpeditionRewardDialogComponent___c_TypeInfo->static_fields;
     static_fields->__9__28_0 = (struct System_Func_EventExpeditionEntity__int__o *)_9__28_0;
-    sub_1C3E508(&static_fields->__9__28_0, _9__28_0);
+    sub_1C6B9AC(&static_fields->__9__28_0, _9__28_0);
   }
   viewChangeButton = System_Linq_Enumerable__Sum_object_(
                        (System_Collections_Generic_IEnumerable_TSource__o *)eventExpeditionEntities,
                        (System_Func_TSource__int__o *)_9__28_0,
-                       (const MethodInfo_31378A0 *)Method_System_Linq_Enumerable_Sum_EventExpeditionEntity___);
+                       (const MethodInfo_3179900 *)Method_System_Linq_Enumerable_Sum_EventExpeditionEntity___);
   if ( !this->fields.getPointRoot )
     goto LABEL_57;
   v28 = viewChangeButton;
@@ -450,14 +438,14 @@ void ExpeditionRewardDialogComponent__Open(
   viewChangeButton = (__int64)this->fields.viewChangeButton;
   if ( !viewChangeButton )
     goto LABEL_57;
-  v69 = v22;
+  v57 = v22;
   viewChangeButton = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)viewChangeButton, 0);
   if ( !viewChangeButton )
     goto LABEL_57;
   viewChangeButton = (__int64)UnityEngine_Component__GetComponentInChildren_object_(
                                 (UnityEngine_Component_o *)viewChangeButton,
                                 1,
-                                (const MethodInfo_30F06C4 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____78207296);
+                                (const MethodInfo_3131FBC *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____78590496);
   if ( !this->fields.closeButton )
     goto LABEL_57;
   v29 = (UILabel_o *)viewChangeButton;
@@ -469,19 +457,19 @@ void ExpeditionRewardDialogComponent__Open(
   ComponentInChildren_object = UnityEngine_Component__GetComponentInChildren_object_(
                                  (UnityEngine_Component_o *)viewChangeButton,
                                  1,
-                                 (const MethodInfo_30F06C4 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____78207296);
+                                 (const MethodInfo_3131FBC *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____78590496);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5815/*"EXPEDITION_REWARD_DIALOG_VIEW_CHANGE"*/, 0);
+  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5805/*"EXPEDITION_REWARD_DIALOG_VIEW_CHANGE"*/, 0);
   if ( !v29 )
     goto LABEL_57;
   UILabel__set_text(v29, (System_String_o *)viewChangeButton, 0);
-  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5794/*"EXPEDITION_BOX_EVENT_POINT_REWARD_TITLE"*/, 0);
+  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5784/*"EXPEDITION_BOX_EVENT_POINT_REWARD_TITLE"*/, 0);
   if ( !ComponentInChildren_object )
     goto LABEL_57;
   UILabel__set_text((UILabel_o *)ComponentInChildren_object, (System_String_o *)viewChangeButton, 0);
   titleLabel = this->fields.titleLabel;
-  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5813/*"EXPEDITION_REWARD_DIALOG_TITLE"*/, 0);
+  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5803/*"EXPEDITION_REWARD_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_57;
   UILabel__set_text(titleLabel, (System_String_o *)viewChangeButton, 0);
@@ -490,34 +478,34 @@ void ExpeditionRewardDialogComponent__Open(
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   AtlasManager__SetItem(totalEventPointIcon, v23, 0);
   AtlasManager__SetItem(this->fields.getEventPointIcon, v23, 0);
-  AtlasManager__SetEventUI(this->fields.totalEventPointBg, (System_String_o *)StringLiteral_24228/*"treasurechest_img_bg_reward"*/, 0);
-  AtlasManager__SetEventUI(this->fields.getEventPointBg, (System_String_o *)StringLiteral_24228/*"treasurechest_img_bg_reward"*/, 0);
+  AtlasManager__SetEventUI(this->fields.totalEventPointBg, (System_String_o *)StringLiteral_24308/*"treasurechest_img_bg_reward"*/, 0);
+  AtlasManager__SetEventUI(this->fields.getEventPointBg, (System_String_o *)StringLiteral_24308/*"treasurechest_img_bg_reward"*/, 0);
   getTitleLabel = this->fields.getTitleLabel;
-  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5812/*"EXPEDITION_REWARD_DIALOG_GET_POINT_TITLE"*/, 0);
+  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5802/*"EXPEDITION_REWARD_DIALOG_GET_POINT_TITLE"*/, 0);
   if ( !getTitleLabel )
     goto LABEL_57;
   UILabel__set_text(getTitleLabel, (System_String_o *)viewChangeButton, 0);
   getNumLabel = this->fields.getNumLabel;
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_2826/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0);
-  v72 = v28;
-  v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v72, v36, v37, v38, v39, v40, v41);
-  v43 = System_String__Format(v35, v42, 0);
-  viewChangeButton = (__int64)System_String__Concat_63636468((System_String_o *)StringLiteral_803/*"+"*/, v43, 0);
+  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_2818/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0);
+  v60 = v28;
+  v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v60);
+  v37 = System_String__Format(v35, v36, 0);
+  viewChangeButton = (__int64)System_String__Concat_63966792((System_String_o *)StringLiteral_800/*"+"*/, v37, 0);
   if ( !getNumLabel )
     goto LABEL_57;
   UILabel__set_text(getNumLabel, (System_String_o *)viewChangeButton, 0);
   EventPointNoGroup = UserEventPointMaster__GetEventPointNoGroup(eventIda, 0);
   totalTitleLabel = this->fields.totalTitleLabel;
-  v46 = EventPointNoGroup;
-  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5814/*"EXPEDITION_REWARD_DIALOG_TOTAL_POINT_TITLE"*/, 0);
+  v40 = EventPointNoGroup;
+  viewChangeButton = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5804/*"EXPEDITION_REWARD_DIALOG_TOTAL_POINT_TITLE"*/, 0);
   if ( !totalTitleLabel )
     goto LABEL_57;
   UILabel__set_text(totalTitleLabel, (System_String_o *)viewChangeButton, 0);
   totalNumLabel = this->fields.totalNumLabel;
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_2826/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0);
-  v71 = v46;
-  v55 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v71, v49, v50, v51, v52, v53, v54);
-  viewChangeButton = (__int64)System_String__Format(v48, v55, 0);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_2818/*"BATTLE_RESULEVENTTITEM_NEXT_POINT"*/, 0);
+  v59 = v40;
+  v43 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v59);
+  viewChangeButton = (__int64)System_String__Format(v42, v43, 0);
   if ( !totalNumLabel )
     goto LABEL_57;
   UILabel__set_text(totalNumLabel, (System_String_o *)viewChangeButton, 0);
@@ -527,69 +515,69 @@ void ExpeditionRewardDialogComponent__Open(
   viewChangeButton = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)viewChangeButton, 0);
   if ( !viewChangeButton )
     goto LABEL_57;
-  v56 = UnityEngine_Component__GetComponentInChildren_object_(
+  v44 = UnityEngine_Component__GetComponentInChildren_object_(
           (UnityEngine_Component_o *)viewChangeButton,
           1,
-          (const MethodInfo_30F06C4 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____78207296);
+          (const MethodInfo_3131FBC *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____78590496);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v57 = (System_String_o **)(v69 ? &StringLiteral_13550/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/ : &StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-  viewChangeButton = (__int64)LocalizationManager__Get(*v57, 0);
-  if ( !v56 )
+  v45 = (System_String_o **)(v57 ? &StringLiteral_13543/*"TUTORIAL_IMAGE_DIALOG_NEXT"*/ : &StringLiteral_3677/*"COMMON_CONFIRM_CLOSE"*/);
+  viewChangeButton = (__int64)LocalizationManager__Get(*v45, 0);
+  if ( !v44 )
     goto LABEL_57;
-  UILabel__set_text((UILabel_o *)v56, (System_String_o *)viewChangeButton, 0);
+  UILabel__set_text((UILabel_o *)v44, (System_String_o *)viewChangeButton, 0);
   this->fields.closeBtnSe = 0;
   this->fields.closeCallbackFunc = closeCallback;
-  sub_1C3E508(&this->fields.closeCallbackFunc, closeCallback);
+  sub_1C6B9AC(&this->fields.closeCallbackFunc, closeCallback);
   viewChangeButton = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !viewChangeButton )
     goto LABEL_57;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)viewChangeButton, 1, 0);
-  v58 = (BattleDropItem_o *)sub_1C3E7B0(BattleDropItem_TypeInfo);
-  BattleDropItem___ctor(v58, 0);
-  if ( !v58 )
+  v46 = (BattleDropItem_o *)sub_1C6BC54(BattleDropItem_TypeInfo);
+  BattleDropItem___ctor(v46, 0);
+  if ( !v46 )
     goto LABEL_57;
-  v58->fields.type = 2;
+  v46->fields.type = 2;
   viewChangeButton = (__int64)System_Collections_Generic_List_object___get_Item(
                                 (System_Collections_Generic_List_object__o *)eventExpeditionEntities,
                                 0,
-                                (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
+                                (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventExpeditionEntity__get_Item__);
   if ( !viewChangeButton )
     goto LABEL_57;
-  v59 = *(_DWORD *)(viewChangeButton + 44);
-  v58->fields.originalNum = v28;
-  v58->fields.objectId = v59;
+  v47 = *(_DWORD *)(viewChangeButton + 44);
+  v46->fields.originalNum = v28;
+  v46->fields.objectId = v47;
   if ( !resultExpeditionRewardInfos
-    || (v60 = sub_1C3E60C(
+    || (v48 = sub_1C6BAB0(
                 BattleDropItem___TypeInfo,
                 (unsigned int)(LODWORD(resultExpeditionRewardInfos->max_length) + 1)),
-        v16->fields.resultRewardInfos = (struct BattleDropItem_array *)v60,
+        v16->fields.resultRewardInfos = (struct BattleDropItem_array *)v48,
         p_resultRewardInfos = (System_Array_o **)&v16->fields.resultRewardInfos,
-        viewChangeButton = sub_1C3E508(&v16->fields.resultRewardInfos, v60),
+        viewChangeButton = sub_1C6B9AC(&v16->fields.resultRewardInfos, v48),
         (resultRewardInfos = v16->fields.resultRewardInfos) == 0) )
   {
 LABEL_57:
-    sub_1C3E7C0(viewChangeButton, v18);
+    sub_1C6BC60(viewChangeButton, v18);
   }
-  viewChangeButton = sub_1C3E6A0(v58, resultRewardInfos->obj.klass->_1.element_class);
+  viewChangeButton = sub_1C6BB44(v46, resultRewardInfos->obj.klass->_1.element_class);
   if ( !viewChangeButton )
   {
-    v68 = sub_1C3E7E4();
-    sub_1C3E68C(v68, 0);
+    v56 = sub_1C6BC84();
+    sub_1C6BB30(v56, 0);
   }
   if ( !LODWORD(resultRewardInfos->max_length) )
 LABEL_58:
-    sub_1C3E7C8(viewChangeButton, v18);
-  resultRewardInfos->m_Items[0] = v58;
-  sub_1C3E508(resultRewardInfos->m_Items, v58);
-  System_Array__Copy_65298516(
+    sub_1C6BC68(viewChangeButton);
+  resultRewardInfos->m_Items[0] = v46;
+  sub_1C6B9AC(resultRewardInfos->m_Items, v46);
+  System_Array__Copy_65627228(
     (System_Array_o *)resultExpeditionRewardInfos,
     0,
     *p_resultRewardInfos,
     1,
     resultExpeditionRewardInfos->max_length,
     0);
-  v63 = *p_resultRewardInfos;
+  v51 = *p_resultRewardInfos;
   if ( !*p_resultRewardInfos )
     goto LABEL_57;
   viewChangeButton = (__int64)this->fields.listRoot;
@@ -597,26 +585,26 @@ LABEL_58:
     goto LABEL_57;
   viewChangeButton = (__int64)UnityEngine_Component__GetComponent_object_(
                                 (UnityEngine_Component_o *)viewChangeButton,
-                                (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
+                                (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIGrid___);
   if ( !viewChangeButton )
     goto LABEL_57;
-  v64 = viewChangeButton;
+  v52 = viewChangeButton;
   viewChangeButton = (__int64)this->fields.scrollBar;
   if ( !viewChangeButton )
     goto LABEL_57;
-  v65 = *(_DWORD *)(v64 + 44);
-  monitor = v63[1].monitor;
+  v53 = *(_DWORD *)(v52 + 44);
+  monitor = v51[1].monitor;
   viewChangeButton = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)viewChangeButton, 0);
   if ( !viewChangeButton )
     goto LABEL_57;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)viewChangeButton, (int)monitor > 2 * v65, 0);
-  v67 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)viewChangeButton, (int)monitor > 2 * v53, 0);
+  v55 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
-    v67,
+    v55,
     (Il2CppObject *)v16,
     Method_ExpeditionRewardDialogComponent___c__DisplayClass28_0__Open_b__1__,
     0);
-  BaseDialog__Open((BaseDialog_o *)this, v67, 0, 0, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v55, 0, 0, 0);
 }
 
 
@@ -631,26 +619,26 @@ void ExpeditionRewardDialogComponent__SetPossession(
   Il2CppObject *MasterData_object; // x21
   UserItemEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C51061 & 1) == 0 )
+  if ( (byte_4CB05A9 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C51061 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB05A9 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   entity = 0;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C50AE2 )
+  if ( !byte_4CB002A )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C50AE2 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB002A = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -670,7 +658,7 @@ void ExpeditionRewardDialogComponent__SetPossession(
     return;
   if ( !entity || !item )
 LABEL_16:
-    sub_1C3E7C0(Instance, v7);
+    sub_1C6BC60(Instance, v7);
   ItemIconComponent__SetPossession(item, entity->fields.num, 0);
 }
 
@@ -702,14 +690,14 @@ void ExpeditionRewardDialogComponent__SetResultData(
   UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4C5105D & 1) == 0 )
+  if ( (byte_4CB05A5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIGrid___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    this = (ExpeditionRewardDialogComponent_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5105D = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIGrid___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    this = (ExpeditionRewardDialogComponent_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB05A5 = 1;
   }
   if ( rewards )
   {
@@ -720,7 +708,7 @@ void ExpeditionRewardDialogComponent__SetResultData(
       do
       {
         if ( (unsigned int)v6 >= max_length )
-          sub_1C3E7C8(this, rewards);
+          sub_1C6BC68(this);
         v7 = rewards->m_Items[v6];
         if ( !v7 )
           goto LABEL_31;
@@ -735,7 +723,7 @@ void ExpeditionRewardDialogComponent__SetResultData(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         this = (ExpeditionRewardDialogComponent_o *)UnityEngine_Object__Instantiate_object_(
                                                       prefabResultItem,
-                                                      (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                      (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         if ( !this )
           goto LABEL_31;
         v13 = this;
@@ -749,10 +737,10 @@ void ExpeditionRewardDialogComponent__SetResultData(
                                                       (UnityEngine_GameObject_o *)v13,
                                                       0);
         v14 = this;
-        if ( !byte_4C506A1 )
+        if ( !byte_4CAFC09 )
         {
-          this = (ExpeditionRewardDialogComponent_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-          byte_4C506A1 = 1;
+          this = (ExpeditionRewardDialogComponent_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+          byte_4CAFC09 = 1;
         }
         if ( !v14 )
           goto LABEL_31;
@@ -771,12 +759,12 @@ void ExpeditionRewardDialogComponent__SetResultData(
         UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v23, 0);
         this = (ExpeditionRewardDialogComponent_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       (UnityEngine_GameObject_o *)v13,
-                                                      (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
+                                                      (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ItemIconComponent___);
         if ( !this )
           goto LABEL_31;
         v15 = v11 <= 1 ? -1 : v11;
         v16 = (ItemIconComponent_o *)this;
-        ItemIconComponent__SetGift_40968388((ItemIconComponent_o *)this, type, objectId, v15, 0, 0);
+        ItemIconComponent__SetGift_41153640((ItemIconComponent_o *)this, type, objectId, v15, 0, 0);
         ExpeditionRewardDialogComponent__SetPossession(v17, v16, objectId, v18);
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)v13, 1, 0);
         this = (ExpeditionRewardDialogComponent_o *)v4->fields.resultItemObjList;
@@ -793,23 +781,23 @@ void ExpeditionRewardDialogComponent__SetResultData(
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             (Il2CppObject *)v13,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
         }
         else
         {
           v22 = m_CachedPtr + 8 * m_CancellationTokenSource_low;
           LODWORD(this->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
           *(_QWORD *)(v22 + 32) = v13;
-          sub_1C3E508(v22 + 32, v13);
+          sub_1C6B9AC(v22 + 32, v13);
         }
         this = (ExpeditionRewardDialogComponent_o *)v4->fields.listRoot;
         if ( !this
           || (this = (ExpeditionRewardDialogComponent_o *)UnityEngine_Component__GetComponent_object_(
                                                             (UnityEngine_Component_o *)this,
-                                                            (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0 )
+                                                            (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIGrid___)) == 0 )
         {
 LABEL_31:
-          sub_1C3E7C0(this, rewards);
+          sub_1C6BC60(this, rewards);
         }
         this = (ExpeditionRewardDialogComponent_o *)((__int64 (__fastcall *)(ExpeditionRewardDialogComponent_o *, const char *))this->klass[1]._1.name)(
                                                       this,
@@ -831,10 +819,10 @@ UnityEngine_GameObject_o *ExpeditionRewardDialogComponent__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4C51062 & 1) == 0 )
+  if ( (byte_4CB05AA & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C51062 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB05AA = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -843,7 +831,7 @@ UnityEngine_GameObject_o *ExpeditionRewardDialogComponent__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }
 
@@ -852,15 +840,15 @@ void ExpeditionRewardDialogComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C51065 & 1) == 0 )
+  if ( (byte_4CB05AD & 1) == 0 )
   {
-    sub_1C3E564(&ExpeditionRewardDialogComponent___c_TypeInfo);
-    byte_4C51065 = 1;
+    sub_1C6BA08(&ExpeditionRewardDialogComponent___c_TypeInfo);
+    byte_4CB05AD = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(ExpeditionRewardDialogComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(ExpeditionRewardDialogComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ExpeditionRewardDialogComponent___c_TypeInfo->static_fields->__9 = (struct ExpeditionRewardDialogComponent___c_o *)v1;
-  sub_1C3E508(ExpeditionRewardDialogComponent___c_TypeInfo->static_fields, v1);
+  sub_1C6B9AC(ExpeditionRewardDialogComponent___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -876,7 +864,7 @@ int32_t ExpeditionRewardDialogComponent___c___Open_b__28_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return x->fields.eventPoint;
 }
 
@@ -896,21 +884,21 @@ void ExpeditionRewardDialogComponent___c__DisplayClass28_0___Open_b__1(
   ExpeditionRewardDialogComponent_o *_4__this; // x0
   struct ExpeditionRewardDialogComponent_o *v4; // x8
 
-  if ( (byte_4C51066 & 1) == 0 )
+  if ( (byte_4CB05AE & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_bool___);
-    byte_4C51066 = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
+    byte_4CB05AE = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (ExpeditionRewardDialogComponent__SetResultData(_4__this, this->fields.resultRewardInfos, 0),
         (v4 = this->fields.__4__this) == 0) )
   {
-    sub_1C3E7C0(_4__this, method);
+    sub_1C6BC60(_4__this, method);
   }
   v4->fields.state = 2;
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)v4->fields.eventRootMaskSetActiveAction,
     0,
-    (const MethodInfo_3046270 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
 }

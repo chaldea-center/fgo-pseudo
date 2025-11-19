@@ -12,18 +12,18 @@ void EventDiggingRequest__beginRequest(
         System_Int32_array *idxY,
         const MethodInfo *method)
 {
-  if ( (byte_4C58884 & 1) == 0 )
+  if ( (byte_4CB7DFE & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_19164/*"eventId"*/);
-    sub_1C3E564(&StringLiteral_20287/*"idxY"*/);
-    sub_1C3E564(&StringLiteral_16884/*"areaNum"*/);
-    sub_1C3E564(&StringLiteral_20286/*"idxX"*/);
-    byte_4C58884 = 1;
+    sub_1C6BA08(&StringLiteral_19195/*"eventId"*/);
+    sub_1C6BA08(&StringLiteral_20333/*"idxY"*/);
+    sub_1C6BA08(&StringLiteral_16881/*"areaNum"*/);
+    sub_1C6BA08(&StringLiteral_20332/*"idxX"*/);
+    byte_4CB7DFE = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19164/*"eventId"*/, eventId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16884/*"areaNum"*/, areaNum, 0);
-  RequestBase__addField_44302936((RequestBase_o *)this, (System_String_o *)StringLiteral_20286/*"idxX"*/, &idxX->obj, 0);
-  RequestBase__addField_44302936((RequestBase_o *)this, (System_String_o *)StringLiteral_20287/*"idxY"*/, &idxY->obj, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19195/*"eventId"*/, eventId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_16881/*"areaNum"*/, areaNum, 0);
+  RequestBase__addField_44469988((RequestBase_o *)this, (System_String_o *)StringLiteral_20332/*"idxX"*/, &idxX->obj, 0);
+  RequestBase__addField_44469988((RequestBase_o *)this, (System_String_o *)StringLiteral_20333/*"idxY"*/, &idxY->obj, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -32,16 +32,16 @@ System_String_o *EventDiggingRequest__getURL(EventDiggingRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C58883 & 1) == 0 )
+  if ( (byte_4CB7DFD & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_19146/*"event/digging"*/);
-    byte_4C58883 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_19177/*"event/digging"*/);
+    byte_4CB7DFD = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_19146/*"event/digging"*/, 0);
+  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_19177/*"event/digging"*/, 0);
 }
 
 
@@ -56,11 +56,11 @@ void EventDiggingRequest__requestCompleted(
   System_String_o *v8; // x1
   Il2CppObject *success; // x20
 
-  if ( (byte_4C58885 & 1) == 0 )
+  if ( (byte_4CB7DFF & 1) == 0 )
   {
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    byte_4C58885 = 1;
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    byte_4CB7DFF = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -68,7 +68,7 @@ void EventDiggingRequest__requestCompleted(
   if ( v5 )
   {
     v6 = v5;
-    v7 = ResponseData__checkError_44298060(v5, 0);
+    v7 = ResponseData__checkError_44468912(v5, 0);
     v8 = 0;
     if ( v7 )
     {

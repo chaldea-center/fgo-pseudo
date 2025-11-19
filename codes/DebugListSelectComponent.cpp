@@ -25,39 +25,33 @@ void DebugListSelectComponent__CheckBattleBGResourceExist(
   BgResourceData_o *v16; // x22
   int32_t v17; // w2
   const MethodInfo *v18; // x3
-  __int64 v19; // x2
-  __int64 v20; // x3
-  __int64 v21; // x4
-  __int64 v22; // x5
-  __int64 v23; // x6
-  __int64 v24; // x7
   struct BgResourceData_o *bgResourceData; // x8
-  Il2CppObject *v26; // x0
-  System_String_o *v27; // x20
-  AssetLoader_LoadEndDataHandler_o *v28; // x21
+  Il2CppObject *v20; // x0
+  System_String_o *v21; // x20
+  AssetLoader_LoadEndDataHandler_o *v22; // x21
   int32_t Id_k__BackingField; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_4C58373 & 1) == 0 )
+  if ( (byte_4CB78E1 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&BgResourceData_TypeInfo);
-    sub_1C3E564(&Method_DebugListSelectComponent_CheckBattleBGResourceExistCallback__);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_string__int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C3E564(&System_Func_string__int__TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C3E564(&Method_DebugListSelectComponent___c__CheckBattleBGResourceExist_b__28_0__);
-    sub_1C3E564(&DebugListSelectComponent___c_TypeInfo);
-    sub_1C3E564(&StringLiteral_3152/*"Bg/{0}"*/);
-    sub_1C3E564(&StringLiteral_1456/*":"*/);
-    this = (DebugListSelectComponent_o *)sub_1C3E564(&StringLiteral_25415/*"アセットが存在しません。"*/);
-    byte_4C58373 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&BgResourceData_TypeInfo);
+    sub_1C6BA08(&Method_DebugListSelectComponent_CheckBattleBGResourceExistCallback__);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_string__int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C6BA08(&System_Func_string__int__TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C6BA08(&Method_DebugListSelectComponent___c__CheckBattleBGResourceExist_b__28_0__);
+    sub_1C6BA08(&DebugListSelectComponent___c_TypeInfo);
+    sub_1C6BA08(&StringLiteral_3144/*"Bg/{0}"*/);
+    sub_1C6BA08(&StringLiteral_1449/*":"*/);
+    this = (DebugListSelectComponent_o *)sub_1C6BA08(&StringLiteral_25505/*"アセットが存在しません。"*/);
+    byte_4CB78E1 = 1;
   }
   if ( !bgid )
     goto LABEL_19;
-  v5 = System_String__Split_63688360(bgid, (System_String_o *)StringLiteral_1456/*":"*/, 0, 0);
+  v5 = System_String__Split_64018700(bgid, (System_String_o *)StringLiteral_1449/*":"*/, 0, 0);
   v6 = DebugListSelectComponent___c_TypeInfo;
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)v5;
   if ( !DebugListSelectComponent___c_TypeInfo->_2.cctor_finished )
@@ -74,7 +68,7 @@ void DebugListSelectComponent__CheckBattleBGResourceExist(
       v6 = DebugListSelectComponent___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__28_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_string__int__TypeInfo);
+    _9__28_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_string__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__28_0,
       v9,
@@ -82,50 +76,50 @@ void DebugListSelectComponent__CheckBattleBGResourceExist(
       0);
     static_fields = DebugListSelectComponent___c_TypeInfo->static_fields;
     static_fields->__9__28_0 = (struct System_Func_string__int__o *)_9__28_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__28_0, (int32_t)_9__28_0, v11, v12);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__28_0, (int32_t)_9__28_0, v11, v12);
   }
   v13 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                v7,
                                                                (System_Func_TSource__TResult__o *)_9__28_0,
-                                                               (const MethodInfo_312F93C *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                               (const MethodInfo_3171234 *)Method_System_Linq_Enumerable_Select_string__int___);
   this = (DebugListSelectComponent_o *)System_Linq_Enumerable__ToArray_int_(
                                          v13,
-                                         (const MethodInfo_3139050 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                         (const MethodInfo_317B0B0 *)Method_System_Linq_Enumerable_ToArray_int___);
   if ( !this )
     goto LABEL_19;
   if ( SLODWORD(this->fields.m_CancellationTokenSource) < 2 )
     return;
   BaseCell = (int32_t)this->fields.BaseCell;
   BaseCell_high = HIDWORD(this->fields.BaseCell);
-  v16 = (BgResourceData_o *)sub_1C3E7B0(BgResourceData_TypeInfo);
+  v16 = (BgResourceData_o *)sub_1C6BC54(BgResourceData_TypeInfo);
   BgResourceData___ctor(v16, BaseCell, BaseCell_high, 0);
   v4->fields.bgResourceData = v16;
-  sub_1C3E508((CGThumbnailListItem_o *)&v4->fields.bgResourceData, (int32_t)v16, v17, v18);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.bgResourceData, (int32_t)v16, v17, v18);
   bgResourceData = v4->fields.bgResourceData;
   if ( !bgResourceData )
     goto LABEL_19;
   Id_k__BackingField = bgResourceData->fields._Id_k__BackingField;
-  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Id_k__BackingField, v19, v20, v21, v22, v23, v24);
-  v27 = System_String__Format((System_String_o *)StringLiteral_3152/*"Bg/{0}"*/, v26, 0);
-  v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Id_k__BackingField);
+  v21 = System_String__Format((System_String_o *)StringLiteral_3144/*"Bg/{0}"*/, v20, 0);
+  v22 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v28,
+    v22,
     (Il2CppObject *)v4,
     Method_DebugListSelectComponent_CheckBattleBGResourceExistCallback__,
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  if ( !AssetManager__loadAssetStorage(v27, v28, 1, 0) )
+  if ( !AssetManager__loadAssetStorage(v21, v22, 1, 0) )
   {
     this = (DebugListSelectComponent_o *)v4->fields.messageLabel;
     v4->fields.showIndex = v4->fields.selectIndex;
     if ( this )
     {
-      UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_25415/*"アセットが存在しません。"*/, 0);
+      UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_25505/*"アセットが存在しません。"*/, 0);
       return;
     }
 LABEL_19:
-    sub_1C3E7C0(this, bgid);
+    sub_1C6BC60(this, bgid);
   }
 }
 
@@ -139,7 +133,7 @@ void DebugListSelectComponent__CheckBattleBGResourceExistCallback(
   DebugListSelectComponent_o *v4; // x19
   struct BgResourceData_o *bgResourceData; // x8
   System_String_o *v6; // x0
-  Il2CppObject *Object_object__51228128; // x21
+  Il2CppObject *Object_object__51495936; // x21
   __int64 *v8; // x8
   struct UILabel_o *selectingItemLabel; // x8
   struct System_Action_string__bool__o *callback; // x9
@@ -147,14 +141,14 @@ void DebugListSelectComponent__CheckBattleBGResourceExistCallback(
 
   v3 = data;
   v4 = this;
-  if ( (byte_4C58374 & 1) == 0 )
+  if ( (byte_4CB78E2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetData_GetObject_GameObject____78185152);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_17152/*"bg"*/);
-    sub_1C3E564(&StringLiteral_25415/*"アセットが存在しません。"*/);
-    this = (DebugListSelectComponent_o *)sub_1C3E564(&StringLiteral_17155/*"bg0"*/);
-    byte_4C58374 = 1;
+    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_17150/*"bg"*/);
+    sub_1C6BA08(&StringLiteral_25505/*"アセットが存在しません。"*/);
+    this = (DebugListSelectComponent_o *)sub_1C6BA08(&StringLiteral_17153/*"bg0"*/);
+    byte_4CB78E2 = 1;
   }
   bgResourceData = v4->fields.bgResourceData;
   v4->fields.showIndex = v4->fields.selectIndex;
@@ -163,39 +157,39 @@ void DebugListSelectComponent__CheckBattleBGResourceExistCallback(
   Type_k__BackingField = bgResourceData->fields._Type_k__BackingField;
   if ( Type_k__BackingField <= 0 )
   {
-    data = (AssetData_o *)StringLiteral_17152/*"bg"*/;
+    data = (AssetData_o *)StringLiteral_17150/*"bg"*/;
     if ( !v3 )
       goto LABEL_23;
   }
   else
   {
     v6 = System_Int32__ToString((int32_t)&Type_k__BackingField, 0);
-    this = (DebugListSelectComponent_o *)System_String__Concat_63636468((System_String_o *)StringLiteral_17152/*"bg"*/, v6, 0);
+    this = (DebugListSelectComponent_o *)System_String__Concat_63966792((System_String_o *)StringLiteral_17150/*"bg"*/, v6, 0);
     data = (AssetData_o *)this;
     if ( !v3 )
       goto LABEL_23;
   }
-  Object_object__51228128 = AssetData__GetObject_object__51228128(
+  Object_object__51495936 = AssetData__GetObject_object__51495936(
                               v3,
                               (System_String_o *)data,
-                              (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_GameObject____78185152);
+                              (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51228128, 0, 0) )
+  if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51495936, 0, 0) )
   {
     if ( Type_k__BackingField <= 0 )
-      v8 = &StringLiteral_17155/*"bg0"*/;
+      v8 = &StringLiteral_17153/*"bg0"*/;
     else
-      v8 = &StringLiteral_17152/*"bg"*/;
-    Object_object__51228128 = AssetData__GetObject_object__51228128(
+      v8 = &StringLiteral_17150/*"bg"*/;
+    Object_object__51495936 = AssetData__GetObject_object__51495936(
                                 v3,
                                 (System_String_o *)*v8,
-                                (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_GameObject____78185152);
+                                (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (DebugListSelectComponent_o *)UnityEngine_Object__op_Inequality(
-                                         (UnityEngine_Object_o *)Object_object__51228128,
+                                         (UnityEngine_Object_o *)Object_object__51495936,
                                          0,
                                          0);
   if ( ((unsigned __int8)this & 1) != 0 )
@@ -215,12 +209,12 @@ void DebugListSelectComponent__CheckBattleBGResourceExistCallback(
       }
     }
 LABEL_23:
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   }
   this = (DebugListSelectComponent_o *)v4->fields.messageLabel;
   if ( !this )
     goto LABEL_23;
-  UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_25415/*"アセットが存在しません。"*/, 0);
+  UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_25505/*"アセットが存在しません。"*/, 0);
 }
 
 
@@ -231,7 +225,7 @@ void DebugListSelectComponent__Close(DebugListSelectComponent_o *this, const Met
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -244,16 +238,16 @@ System_Collections_IEnumerator_o *DebugListSelectComponent__CreateListCoroutine(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C5836E & 1) == 0 )
+  if ( (byte_4CB78DC & 1) == 0 )
   {
-    sub_1C3E564(&DebugListSelectComponent__CreateListCoroutine_d__19_TypeInfo);
-    byte_4C5836E = 1;
+    sub_1C6BA08(&DebugListSelectComponent__CreateListCoroutine_d__19_TypeInfo);
+    byte_4CB78DC = 1;
   }
-  v3 = sub_1C3E7B0(DebugListSelectComponent__CreateListCoroutine_d__19_TypeInfo);
+  v3 = sub_1C6BC54(DebugListSelectComponent__CreateListCoroutine_d__19_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -271,12 +265,12 @@ void DebugListSelectComponent__OnClickNext(DebugListSelectComponent_o *this, con
   struct System_Action_string__bool__o *callback; // x9
 
   v2 = this;
-  if ( (byte_4C58370 & 1) == 0 )
+  if ( (byte_4CB78DE & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Item__);
-    this = (DebugListSelectComponent_o *)sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58370 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Item__);
+    this = (DebugListSelectComponent_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB78DE = 1;
   }
   showIndex = v2->fields.showIndex;
   if ( (showIndex & 0x80000000) == 0 )
@@ -298,7 +292,7 @@ void DebugListSelectComponent__OnClickNext(DebugListSelectComponent_o *this, con
     this = (DebugListSelectComponent_o *)System_Collections_Generic_List_object___get_Item(
                                            (System_Collections_Generic_List_object__o *)this,
                                            v2->fields.selectIndex,
-                                           (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                           (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_string__get_Item__);
     if ( !selectingItemLabel )
       goto LABEL_18;
     UILabel__set_text(selectingItemLabel, (System_String_o *)this, 0);
@@ -311,7 +305,7 @@ void DebugListSelectComponent__OnClickNext(DebugListSelectComponent_o *this, con
         return;
       }
 LABEL_18:
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     }
     v9 = v2->fields.selectingItemLabel;
     v2->fields.showIndex = v2->fields.selectIndex;
@@ -345,12 +339,12 @@ void DebugListSelectComponent__OnClickPrev(DebugListSelectComponent_o *this, con
   struct System_Action_string__bool__o *callback; // x9
 
   v2 = this;
-  if ( (byte_4C58371 & 1) == 0 )
+  if ( (byte_4CB78DF & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Item__);
-    this = (DebugListSelectComponent_o *)sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58371 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Item__);
+    this = (DebugListSelectComponent_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB78DF = 1;
   }
   showIndex = v2->fields.showIndex;
   if ( (showIndex & 0x80000000) == 0 )
@@ -375,7 +369,7 @@ void DebugListSelectComponent__OnClickPrev(DebugListSelectComponent_o *this, con
     this = (DebugListSelectComponent_o *)System_Collections_Generic_List_object___get_Item(
                                            (System_Collections_Generic_List_object__o *)this,
                                            v2->fields.selectIndex,
-                                           (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                           (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_string__get_Item__);
     if ( !selectingItemLabel )
       goto LABEL_21;
     UILabel__set_text(selectingItemLabel, (System_String_o *)this, 0);
@@ -388,7 +382,7 @@ void DebugListSelectComponent__OnClickPrev(DebugListSelectComponent_o *this, con
         return;
       }
 LABEL_21:
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     }
     v12 = v2->fields.selectingItemLabel;
     v2->fields.showIndex = v2->fields.selectIndex;
@@ -414,10 +408,10 @@ void DebugListSelectComponent__OnClickSubmit(DebugListSelectComponent_o *this, c
   struct UILabel_o *v6; // x8
   struct System_Action_string__bool__o *callback; // x9
 
-  if ( (byte_4C5836F & 1) == 0 )
+  if ( (byte_4CB78DD & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5836F = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB78DD = 1;
   }
   if ( this->fields.callback && (this->fields.selectIndex & 0x80000000) == 0 )
   {
@@ -434,7 +428,7 @@ void DebugListSelectComponent__OnClickSubmit(DebugListSelectComponent_o *this, c
         return;
       }
 LABEL_13:
-      sub_1C3E7C0(messageLabel, method);
+      sub_1C6BC60(messageLabel, method);
     }
     v6 = this->fields.selectingItemLabel;
     this->fields.showIndex = this->fields.selectIndex;
@@ -465,12 +459,12 @@ void DebugListSelectComponent__OnSearchLabelChange(DebugListSelectComponent_o *t
   p_createListCoroutine = &this->fields.createListCoroutine;
   createListCoroutine = this->fields.createListCoroutine;
   if ( createListCoroutine )
-    UnityEngine_MonoBehaviour__StopCoroutine_71327756((UnityEngine_MonoBehaviour_o *)this, createListCoroutine, 0);
+    UnityEngine_MonoBehaviour__StopCoroutine_71645488((UnityEngine_MonoBehaviour_o *)this, createListCoroutine, 0);
   DebugListSelectComponent__RemoveList(this, (const MethodInfo *)createListCoroutine);
   ListCoroutine = DebugListSelectComponent__CreateListCoroutine(this, v5);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
   this->fields.createListCoroutine = started;
-  sub_1C3E508((CGThumbnailListItem_o *)p_createListCoroutine, (int32_t)started, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_createListCoroutine, (int32_t)started, v8, v9);
 }
 
 
@@ -562,20 +556,20 @@ void DebugListSelectComponent__Open(
   int32_t v88; // w2
   const MethodInfo *v89; // x3
 
-  if ( (byte_4C5836D & 1) == 0 )
+  if ( (byte_4CB78DB & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C3E564(&EventDelegate_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C3E564(&StringLiteral_9956/*"OnSearchLabelChange"*/);
-    sub_1C3E564(&StringLiteral_9862/*"OnClickNext"*/);
-    sub_1C3E564(&StringLiteral_4509/*"Close"*/);
-    sub_1C3E564(&StringLiteral_9874/*"OnClickSubmit"*/);
-    sub_1C3E564(&StringLiteral_9864/*"OnClickPrev"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5836D = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C6BA08(&EventDelegate_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C6BA08(&StringLiteral_9952/*"OnSearchLabelChange"*/);
+    sub_1C6BA08(&StringLiteral_9858/*"OnClickNext"*/);
+    sub_1C6BA08(&StringLiteral_4499/*"Close"*/);
+    sub_1C6BA08(&StringLiteral_9870/*"OnClickSubmit"*/);
+    sub_1C6BA08(&StringLiteral_9860/*"OnClickPrev"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB78DB = 1;
   }
   gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -586,7 +580,7 @@ void DebugListSelectComponent__Open(
     goto LABEL_71;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   this->fields.callback = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callback, (int32_t)callback, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callback, (int32_t)callback, v13, v14);
   dataList = this->fields.dataList;
   if ( dataList )
   {
@@ -598,7 +592,7 @@ void DebugListSelectComponent__Open(
       System_Array__Clear((System_Array_o *)dataList->fields._items, 0, size, 0);
   }
   this->fields.dataList = list;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.dataList, (int32_t)list, size, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.dataList, (int32_t)list, size, v16);
   gameObject = (__int64)this->fields.selectingItemLabel;
   if ( !gameObject )
     goto LABEL_71;
@@ -633,8 +627,8 @@ void DebugListSelectComponent__Open(
       goto LABEL_71;
   }
   v23 = (System_Collections_Generic_List_object__o *)inputField->fields.onChange;
-  v24 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
-  EventDelegate___ctor_49347676(v24, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9956/*"OnSearchLabelChange"*/, 0);
+  v24 = (EventDelegate_o *)sub_1C6BC54(EventDelegate_TypeInfo);
+  EventDelegate___ctor_49576560(v24, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9952/*"OnSearchLabelChange"*/, 0);
   if ( !v23 )
     goto LABEL_71;
   items = v23->fields._items;
@@ -648,14 +642,14 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v23,
       (Il2CppObject *)v24,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
   }
   else
   {
     v30 = &items->obj.klass + v29;
     v23->fields._size = v29 + 1;
     v30[4] = (Il2CppClass *)v24;
-    sub_1C3E508((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v24, v25, v26);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v24, v25, v26);
   }
   submitButton = this->fields.submitButton;
   if ( !submitButton )
@@ -709,8 +703,8 @@ void DebugListSelectComponent__Open(
   if ( !v47 )
     goto LABEL_71;
   v48 = (System_Collections_Generic_List_object__o *)v47->fields.onClick;
-  v49 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
-  EventDelegate___ctor_49347676(v49, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9874/*"OnClickSubmit"*/, 0);
+  v49 = (EventDelegate_o *)sub_1C6BC54(EventDelegate_TypeInfo);
+  EventDelegate___ctor_49576560(v49, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9870/*"OnClickSubmit"*/, 0);
   if ( !v48 )
     goto LABEL_71;
   v52 = v48->fields._items;
@@ -724,21 +718,21 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v48,
       (Il2CppObject *)v49,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
   }
   else
   {
     v55 = &v52->obj.klass + v54;
     v48->fields._size = v54 + 1;
     v55[4] = (Il2CppClass *)v49;
-    sub_1C3E508((CGThumbnailListItem_o *)(v55 + 4), (int32_t)v49, v50, v51);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v55 + 4), (int32_t)v49, v50, v51);
   }
   v56 = this->fields.closeButton;
   if ( !v56 )
     goto LABEL_71;
   v57 = (System_Collections_Generic_List_object__o *)v56->fields.onClick;
-  v58 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
-  EventDelegate___ctor_49347676(v58, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_4509/*"Close"*/, 0);
+  v58 = (EventDelegate_o *)sub_1C6BC54(EventDelegate_TypeInfo);
+  EventDelegate___ctor_49576560(v58, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_4499/*"Close"*/, 0);
   if ( !v57 )
     goto LABEL_71;
   v61 = v57->fields._items;
@@ -752,21 +746,21 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v57,
       (Il2CppObject *)v58,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v62[4] + 192LL) + 112LL));
   }
   else
   {
     v64 = &v61->obj.klass + v63;
     v57->fields._size = v63 + 1;
     v64[4] = (Il2CppClass *)v58;
-    sub_1C3E508((CGThumbnailListItem_o *)(v64 + 4), (int32_t)v58, v59, v60);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v64 + 4), (int32_t)v58, v59, v60);
   }
   v65 = this->fields.nextButton;
   if ( !v65 )
     goto LABEL_71;
   v66 = (System_Collections_Generic_List_object__o *)v65->fields.onClick;
-  v67 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
-  EventDelegate___ctor_49347676(v67, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9862/*"OnClickNext"*/, 0);
+  v67 = (EventDelegate_o *)sub_1C6BC54(EventDelegate_TypeInfo);
+  EventDelegate___ctor_49576560(v67, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9858/*"OnClickNext"*/, 0);
   if ( !v66 )
     goto LABEL_71;
   v70 = v66->fields._items;
@@ -780,21 +774,21 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v66,
       (Il2CppObject *)v67,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
   }
   else
   {
     v73 = &v70->obj.klass + v72;
     v66->fields._size = v72 + 1;
     v73[4] = (Il2CppClass *)v67;
-    sub_1C3E508((CGThumbnailListItem_o *)(v73 + 4), (int32_t)v67, v68, v69);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v73 + 4), (int32_t)v67, v68, v69);
   }
   v74 = this->fields.prevButton;
   if ( !v74 )
     goto LABEL_71;
   v75 = (System_Collections_Generic_List_object__o *)v74->fields.onClick;
-  v76 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
-  EventDelegate___ctor_49347676(v76, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9864/*"OnClickPrev"*/, 0);
+  v76 = (EventDelegate_o *)sub_1C6BC54(EventDelegate_TypeInfo);
+  EventDelegate___ctor_49576560(v76, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_9860/*"OnClickPrev"*/, 0);
   if ( !v75 )
     goto LABEL_71;
   v79 = v75->fields._items;
@@ -808,24 +802,24 @@ void DebugListSelectComponent__Open(
     System_Collections_Generic_List_object___AddWithResize(
       v75,
       (Il2CppObject *)v76,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v80[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v80[4] + 192LL) + 112LL));
   }
   else
   {
     v82 = &v79->obj.klass + v81;
     v75->fields._size = v81 + 1;
     v82[4] = (Il2CppClass *)v76;
-    sub_1C3E508((CGThumbnailListItem_o *)(v82 + 4), (int32_t)v76, v77, v78);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v82 + 4), (int32_t)v76, v77, v78);
   }
   gameObject = (__int64)this->fields.ScrollView;
   if ( !gameObject )
     goto LABEL_71;
   gameObject = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
   v83 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    gameObject = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    gameObject = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   if ( !v83 )
     goto LABEL_71;
@@ -835,22 +829,22 @@ void DebugListSelectComponent__Open(
     goto LABEL_71;
   gameObject = (__int64)UnityEngine_Component__GetComponent_object_(
                           (UnityEngine_Component_o *)gameObject,
-                          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   v84 = (UIPanel_o *)gameObject;
-  if ( !byte_4C5059A )
+  if ( !byte_4CAFAE9 )
   {
-    gameObject = sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
-    byte_4C5059A = 1;
+    gameObject = sub_1C6BA08(&UnityEngine_Vector2_TypeInfo);
+    byte_4CAFAE9 = 1;
   }
   if ( !v84 )
 LABEL_71:
-    sub_1C3E7C0(gameObject, v12);
+    sub_1C6BC60(gameObject, v12);
   UIPanel__set_clipOffset(v84, UnityEngine_Vector2_TypeInfo->static_fields->zeroVector, 0);
   this->fields.dataType = type;
   ListCoroutine = DebugListSelectComponent__CreateListCoroutine(this, v85);
-  started = UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
+  started = UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
   this->fields.createListCoroutine = started;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.createListCoroutine, (int32_t)started, v88, v89);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.createListCoroutine, (int32_t)started, v88, v89);
 }
 
 
@@ -860,15 +854,15 @@ void DebugListSelectComponent__RemoveList(DebugListSelectComponent_o *this, cons
   int32_t v4; // w20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4C58372 & 1) == 0 )
+  if ( (byte_4CB78E0 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C58372 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB78E0 = 1;
   }
   grid = (UnityEngine_Component_o *)this->fields.grid;
   if ( !grid )
 LABEL_13:
-    sub_1C3E7C0(grid, method);
+    sub_1C6BC60(grid, method);
   v4 = 0;
   while ( 1 )
   {
@@ -889,7 +883,7 @@ LABEL_13:
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(grid, 0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_71341564(gameObject, 0);
+          UnityEngine_Object__Destroy_71659676(gameObject, 0);
           grid = (UnityEngine_Component_o *)this->fields.grid;
           ++v4;
           if ( grid )
@@ -912,7 +906,7 @@ void DebugListSelectComponent__TapItemSelectCallback(
 
   selectingItemLabel = this->fields.selectingItemLabel;
   if ( !selectingItemLabel )
-    sub_1C3E7C0(0, id);
+    sub_1C6BC60(0, id);
   UILabel__set_text(selectingItemLabel, id, 0);
   this->fields.selectIndex = index;
 }
@@ -973,26 +967,26 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   const MethodInfo *v40; // x3
 
   v2 = this;
-  if ( (byte_4C58376 & 1) == 0 )
+  if ( (byte_4CB78E4 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_string__int__TypeInfo);
-    sub_1C3E564(&Method_DebugListSelectComponent_TapItemSelectCallback__);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Count_string___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToList_string___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Where_string___);
-    sub_1C3E564(&System_Func_string__bool__TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_DebugListSelectCellComponent___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string___ctor___78147528);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C3E564(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_DebugListSelectComponent___c__DisplayClass19_0__CreateListCoroutine_b__0__);
-    sub_1C3E564(&DebugListSelectComponent___c__DisplayClass19_0_TypeInfo);
-    this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58376 = 1;
+    sub_1C6BA08(&System_Action_string__int__TypeInfo);
+    sub_1C6BA08(&Method_DebugListSelectComponent_TapItemSelectCallback__);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Count_string___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_string___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_string___);
+    sub_1C6BA08(&System_Func_string__bool__TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_DebugListSelectCellComponent___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor___78530416);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C6BA08(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_DebugListSelectComponent___c__DisplayClass19_0__CreateListCoroutine_b__0__);
+    sub_1C6BA08(&DebugListSelectComponent___c__DisplayClass19_0_TypeInfo);
+    this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB78E4 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -1004,7 +998,7 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   if ( _1__state )
     return 0;
   v2->fields.__1__state = -1;
-  v5 = sub_1C3E7B0(DebugListSelectComponent___c__DisplayClass19_0_TypeInfo);
+  v5 = sub_1C6BC54(DebugListSelectComponent___c__DisplayClass19_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !_4__this )
     goto LABEL_39;
@@ -1016,19 +1010,19 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   if ( !v5 )
     goto LABEL_39;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v6, v7);
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v6, v7);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
   _4__this->fields.filteredList = (struct System_Collections_Generic_List_string__o *)v8;
   p_filteredList = (System_Collections_Generic_IEnumerable_TSource__o **)&_4__this->fields.filteredList;
-  sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.filteredList, (int32_t)v8, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.filteredList, (int32_t)v8, v10, v11);
   v12 = System_String__op_Inequality(*(System_String_o **)(v5 + 16), (System_String_o *)StringLiteral_1/*""*/, 0);
   dataList = (System_Collections_Generic_IEnumerable_TSource__o *)_4__this->fields.dataList;
   if ( !v12 )
     goto LABEL_11;
-  v14 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_string__bool__TypeInfo);
+  v14 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_string__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v14,
     (Il2CppObject *)v5,
@@ -1037,26 +1031,26 @@ bool DebugListSelectComponent__CreateListCoroutine_d__19__MoveNext(
   v15 = System_Linq_Enumerable__Where_object_(
           dataList,
           (System_Func_TSource__bool__o *)v14,
-          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_string___);
+          (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_string___);
   v16 = System_Linq_Enumerable__ToList_object_(
           v15,
-          (const MethodInfo_313DE84 *)Method_System_Linq_Enumerable_ToList_string___);
+          (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_string___);
   *p_filteredList = (System_Collections_Generic_IEnumerable_TSource__o *)v16;
-  sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.filteredList, (int32_t)v16, v17, v18);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.filteredList, (int32_t)v16, v17, v18);
   this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)System_Linq_Enumerable__Count_object_(
                                                                     *p_filteredList,
-                                                                    (const MethodInfo_3119ED4 *)Method_System_Linq_Enumerable_Count_string___);
+                                                                    (const MethodInfo_315B7CC *)Method_System_Linq_Enumerable_Count_string___);
   if ( (int)this <= 0 )
   {
     dataList = (System_Collections_Generic_IEnumerable_TSource__o *)_4__this->fields.dataList;
 LABEL_11:
-    v19 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
-    System_Collections_Generic_List_object____ctor_58412372(
+    v19 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
+    System_Collections_Generic_List_object____ctor_58720872(
       v19,
       (System_Collections_Generic_IEnumerable_T__o *)dataList,
-      (const MethodInfo_37B4D54 *)Method_System_Collections_Generic_List_string___ctor___78147528);
+      (const MethodInfo_3800268 *)Method_System_Collections_Generic_List_string___ctor___78530416);
     *p_filteredList = (System_Collections_Generic_IEnumerable_TSource__o *)v19;
-    sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.filteredList, (int32_t)v19, v20, v21);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.filteredList, (int32_t)v19, v20, v21);
   }
   v22 = 0;
   v2->fields._i_5__4 = 0;
@@ -1091,14 +1085,14 @@ LABEL_11:
         }
       }
 LABEL_39:
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     }
     BaseCell = (Il2CppObject *)_4__this->fields.BaseCell;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)UnityEngine_Object__Instantiate_object_(
                                                                       BaseCell,
-                                                                      (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                                      (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !this )
       goto LABEL_39;
     v25 = this;
@@ -1119,10 +1113,10 @@ LABEL_39:
                                                                       (UnityEngine_GameObject_o *)v25,
                                                                       0);
     v27 = this;
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
-      this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A1 = 1;
+      this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC09 = 1;
     }
     if ( !v27 )
       goto LABEL_39;
@@ -1134,10 +1128,10 @@ LABEL_39:
                                                                       (UnityEngine_GameObject_o *)v25,
                                                                       0);
     v28 = this;
-    if ( !byte_4C506A6 )
+    if ( !byte_4CAFC0E )
     {
-      this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A6 = 1;
+      this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC0E = 1;
     }
     if ( !v28 )
       goto LABEL_39;
@@ -1147,17 +1141,17 @@ LABEL_39:
       0);
     this = (DebugListSelectComponent__CreateListCoroutine_d__19_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                       (UnityEngine_GameObject_o *)v25,
-                                                                      (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_DebugListSelectCellComponent___);
+                                                                      (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_DebugListSelectCellComponent___);
     if ( !_4__this->fields.filteredList )
       goto LABEL_39;
     v29 = (DebugListSelectCellComponent_o *)this;
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)_4__this->fields.filteredList,
              v2->fields._i_5__4,
-             (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
+             (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_string__get_Item__);
     i_5__4 = v2->fields._i_5__4;
     v32 = (System_String_o *)Item;
-    v33 = (System_Action_T1__T2__o *)sub_1C3E7B0(System_Action_string__int__TypeInfo);
+    v33 = (System_Action_T1__T2__o *)sub_1C6BC54(System_Action_string__int__TypeInfo);
     System_Action_object__int____ctor(
       v33,
       (Il2CppObject *)_4__this,
@@ -1184,7 +1178,7 @@ LABEL_29:
     this->klass->vtable._8_System_Collections_IEnumerator_Reset.method);
   v2->fields.__2__current = 0;
   p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1C3E508(p__2__current, 0, v39, v40);
+  sub_1C6B9AC(p__2__current, 0, v39, v40);
   result = 1;
   LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
   return result;
@@ -1207,11 +1201,11 @@ void __noreturn DebugListSelectComponent__CreateListCoroutine_d__19__System_Coll
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_DebugListSelectComponent__CreateListCoroutine_d__19_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_DebugListSelectComponent__CreateListCoroutine_d__19_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -1237,15 +1231,15 @@ void DebugListSelectComponent___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C58375 & 1) == 0 )
+  if ( (byte_4CB78E3 & 1) == 0 )
   {
-    sub_1C3E564(&DebugListSelectComponent___c_TypeInfo);
-    byte_4C58375 = 1;
+    sub_1C6BA08(&DebugListSelectComponent___c_TypeInfo);
+    byte_4CB78E3 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(DebugListSelectComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(DebugListSelectComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   DebugListSelectComponent___c_TypeInfo->static_fields->__9 = (struct DebugListSelectComponent___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)DebugListSelectComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)DebugListSelectComponent___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -1278,6 +1272,6 @@ bool DebugListSelectComponent___c__DisplayClass19_0___CreateListCoroutine_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return System_String__Contains(x, this->fields.searchStr, 0);
 }

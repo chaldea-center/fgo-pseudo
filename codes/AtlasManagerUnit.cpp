@@ -15,13 +15,13 @@ void AtlasManagerUnit___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.assetPath = assetPath;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetPath, (int32_t)assetPath, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetPath, (int32_t)assetPath, v7, v8);
   this->fields.loadWrapper = loadWrapper;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.loadWrapper, (int32_t)loadWrapper, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadWrapper, (int32_t)loadWrapper, v9, v10);
   this->fields.atlasList = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.atlasList, 0, v11, v12);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.atlasList, 0, v11, v12);
   this->fields.assetData = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetData, 0, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetData, 0, v13, v14);
 }
 
 
@@ -43,31 +43,31 @@ UIAtlas_array *AtlasManagerUnit__CreateUIAtlasListFromAssetData(
   __int64 size; // x10
   Il2CppClass **v15; // x0
 
-  if ( (byte_4C55E71 & 1) == 0 )
+  if ( (byte_4CB53D6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetData_GetObjectList_GameObject___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIAtlas__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIAtlas__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_UIAtlas__TypeInfo);
-    this = (AtlasManagerUnit_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C55E71 = 1;
+    sub_1C6BA08(&Method_AssetData_GetObjectList_GameObject___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIAtlas__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIAtlas__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_UIAtlas__TypeInfo);
+    this = (AtlasManagerUnit_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB53D6 = 1;
   }
   if ( !assetData )
     goto LABEL_22;
   ObjectList_object = AssetData__GetObjectList_object_(
                         assetData,
-                        (const MethodInfo_30DAF98 *)Method_AssetData_GetObjectList_GameObject___);
+                        (const MethodInfo_311C5B8 *)Method_AssetData_GetObjectList_GameObject___);
   if ( !ObjectList_object )
     return 0;
   v5 = ObjectList_object;
   if ( !ObjectList_object->max_length )
     return 0;
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_UIAtlas__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_UIAtlas__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_UIAtlas___ctor__);
   max_length = v5->max_length;
   if ( max_length >= 1 )
   {
@@ -75,13 +75,13 @@ UIAtlas_array *AtlasManagerUnit__CreateUIAtlasListFromAssetData(
     while ( 1 )
     {
       if ( (unsigned int)v8 >= max_length )
-        sub_1C3E7C8(this, assetData);
+        sub_1C6BC68(this);
       this = (AtlasManagerUnit_o *)v5->m_Items[v8];
       if ( !this )
         break;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)this,
-                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       this = (AtlasManagerUnit_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -100,14 +100,14 @@ UIAtlas_array *AtlasManagerUnit__CreateUIAtlasListFromAssetData(
           System_Collections_Generic_List_object___AddWithResize(
             v6,
             Component_object,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
         }
         else
         {
           v15 = &items->obj.klass + size;
           v6->fields._size = size + 1;
           v15[4] = (Il2CppClass *)Component_object;
-          sub_1C3E508((CGThumbnailListItem_o *)(v15 + 4), (int32_t)Component_object, v10, v11);
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)Component_object, v10, v11);
         }
       }
       max_length = v5->max_length;
@@ -115,14 +115,14 @@ UIAtlas_array *AtlasManagerUnit__CreateUIAtlasListFromAssetData(
         goto LABEL_19;
     }
 LABEL_22:
-    sub_1C3E7C0(this, assetData);
+    sub_1C6BC60(this, assetData);
   }
 LABEL_19:
   if ( !v6 )
     goto LABEL_22;
   return (UIAtlas_array *)System_Collections_Generic_List_object___ToArray(
                             v6,
-                            (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_UIAtlas__ToArray__);
+                            (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_UIAtlas__ToArray__);
 }
 
 
@@ -143,13 +143,13 @@ void AtlasManagerUnit__Load(
   AssetLoader_LoadEndDataHandler_o *v15; // x22
   const MethodInfo *v16; // x2
 
-  if ( (byte_4C55E6E & 1) == 0 )
+  if ( (byte_4CB53D3 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&Method_AtlasManagerUnit_LoadEnd__);
-    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    byte_4C55E6E = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&Method_AtlasManagerUnit_LoadEnd__);
+    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    byte_4CB53D3 = 1;
   }
   assetData = this->fields.assetData;
   if ( assetData && !AssetData__get_IsEmpty(assetData, 0) )
@@ -165,7 +165,7 @@ void AtlasManagerUnit__Load(
     if ( (System_Action_c *)v9->klass != System_Action_TypeInfo
       || (*p_LoadFinishCallback = (struct System_Action_o *)v9, (System_Action_c *)v9->klass != v12) )
     {
-      sub_1C3EA80(v9);
+      sub_1C6BFFC(v9);
 LABEL_9:
       ActionExtensions__Call(finishCallback, 0);
       return;
@@ -175,13 +175,13 @@ LABEL_9:
   {
     *p_LoadFinishCallback = 0;
   }
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.LoadFinishCallback, (int32_t)v9, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.LoadFinishCallback, (int32_t)v9, v10, v11);
   if ( !this->fields.IsLoading )
   {
     this->fields.IsLoading = 1;
     loadWrapper = this->fields.loadWrapper;
     assetPath = this->fields.assetPath;
-    v15 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v15 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(v15, (Il2CppObject *)this, Method_AtlasManagerUnit_LoadEnd__, 0);
     if ( loadWrapper )
     {
@@ -217,10 +217,10 @@ void AtlasManagerUnit__LoadEnd(AtlasManagerUnit_o *this, AssetData_o *assetData,
   {
     this->fields.IsLoading = 0;
     this->fields.assetData = assetData;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetData, (int32_t)assetData, (int32_t)method, v3);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetData, (int32_t)assetData, (int32_t)method, v3);
     UIAtlasListFromAssetData = AtlasManagerUnit__CreateUIAtlasListFromAssetData(v6, assetData, v7);
     this->fields.atlasList = UIAtlasListFromAssetData;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.atlasList, (int32_t)UIAtlasListFromAssetData, v9, v10);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.atlasList, (int32_t)UIAtlasListFromAssetData, v9, v10);
   }
   LoadFinishCallback = this->fields.LoadFinishCallback;
   p_LoadFinishCallback = (CGThumbnailListItem_o *)&this->fields.LoadFinishCallback;
@@ -228,7 +228,7 @@ void AtlasManagerUnit__LoadEnd(AtlasManagerUnit_o *this, AssetData_o *assetData,
   if ( LoadFinishCallback )
   {
     p_LoadFinishCallback->klass = 0;
-    sub_1C3E508(p_LoadFinishCallback, 0, (int32_t)method, v3);
+    sub_1C6B9AC(p_LoadFinishCallback, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, intptr_t))v12->fields.invoke_impl)(v12->fields.method_code, v12->fields.method);
   }
 }
@@ -244,10 +244,10 @@ void AtlasManagerUnit__Release(AtlasManagerUnit_o *this, const MethodInfo *metho
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C55E6F & 1) == 0 )
+  if ( (byte_4CB53D4 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C55E6F = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB53D4 = 1;
   }
   loadWrapper = this->fields.loadWrapper;
   if ( loadWrapper )
@@ -269,13 +269,13 @@ void AtlasManagerUnit__Release(AtlasManagerUnit_o *this, const MethodInfo *metho
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_40580972(assetData, 0);
+      AssetManager__releaseAsset_40765532(assetData, 0);
     }
   }
   this->fields.atlasList = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.atlasList, 0, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.atlasList, 0, v2, v3);
   this->fields.assetData = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetData, 0, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetData, 0, v8, v9);
 }
 
 
@@ -306,7 +306,7 @@ LABEL_13:
       goto LABEL_14;
     }
 LABEL_17:
-    sub_1C3E7C0(IsNullOrEmpty, v8);
+    sub_1C6BC60(IsNullOrEmpty, v8);
   }
   max_length = atlasList->max_length;
   if ( max_length >= 1 )
@@ -315,7 +315,7 @@ LABEL_17:
     while ( 1 )
     {
       if ( (unsigned int)v11 >= max_length )
-        sub_1C3E7C8(IsNullOrEmpty, v8);
+        sub_1C6BC68(IsNullOrEmpty);
       v12 = atlasList->m_Items[v11];
       if ( !v12 )
         goto LABEL_17;
@@ -364,14 +364,14 @@ bool AtlasManagerUnit__ValidateLoadSprite(
   const MethodInfo *v17; // x3
   System_Collections_Generic_IEnumerable_string__o *v18; // x0
 
-  if ( (byte_4C55E70 & 1) == 0 )
+  if ( (byte_4CB53D5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_UIAtlas__string___);
-    sub_1C3E564(&System_Func_UIAtlas__string__TypeInfo);
-    sub_1C3E564(&Method_AtlasManagerUnit___c__ValidateLoadSprite_b__11_0__);
-    sub_1C3E564(&AtlasManagerUnit___c_TypeInfo);
-    sub_1C3E564(&StringLiteral_811/*","*/);
-    byte_4C55E70 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_UIAtlas__string___);
+    sub_1C6BA08(&System_Func_UIAtlas__string__TypeInfo);
+    sub_1C6BA08(&Method_AtlasManagerUnit___c__ValidateLoadSprite_b__11_0__);
+    sub_1C6BA08(&AtlasManagerUnit___c_TypeInfo);
+    sub_1C6BA08(&StringLiteral_808/*","*/);
+    byte_4CB53D5 = 1;
   }
   IsNullOrEmpty = (UISpriteData_o *)System_String__IsNullOrEmpty(spriteName, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
@@ -390,7 +390,7 @@ LABEL_12:
       v11 = AtlasManagerUnit___c_TypeInfo;
     }
     _9__11_0 = (System_Func_object__object__o *)v11->static_fields->__9__11_0;
-    v13 = (System_String_o *)StringLiteral_811/*","*/;
+    v13 = (System_String_o *)StringLiteral_808/*","*/;
     if ( !_9__11_0 )
     {
       if ( !v11->_2.cctor_finished )
@@ -399,27 +399,27 @@ LABEL_12:
         v11 = AtlasManagerUnit___c_TypeInfo;
       }
       v14 = (Il2CppObject *)v11->static_fields->__9;
-      _9__11_0 = (System_Func_object__object__o *)sub_1C3E7B0(System_Func_UIAtlas__string__TypeInfo);
+      _9__11_0 = (System_Func_object__object__o *)sub_1C6BC54(System_Func_UIAtlas__string__TypeInfo);
       System_Func_object__object____ctor(_9__11_0, v14, Method_AtlasManagerUnit___c__ValidateLoadSprite_b__11_0__, 0);
       static_fields = AtlasManagerUnit___c_TypeInfo->static_fields;
       static_fields->__9__11_0 = (struct System_Func_UIAtlas__string__o *)_9__11_0;
-      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v16, v17);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v16, v17);
     }
     v18 = (System_Collections_Generic_IEnumerable_string__o *)System_Linq_Enumerable__Select_object__object_(
                                                                 (System_Collections_Generic_IEnumerable_TSource__o *)atlasList,
                                                                 (System_Func_TSource__TResult__o *)_9__11_0,
-                                                                (const MethodInfo_3130218 *)Method_System_Linq_Enumerable_Select_UIAtlas__string___);
-    System_String__Join_63679044(v13, v18, 0);
+                                                                (const MethodInfo_3171B10 *)Method_System_Linq_Enumerable_Select_UIAtlas__string___);
+    System_String__Join_64009384(v13, v18, 0);
     return 0;
   }
   v9 = 0;
   while ( 1 )
   {
     if ( (unsigned int)v9 >= max_length )
-      sub_1C3E7C8(IsNullOrEmpty, v6);
+      sub_1C6BC68(IsNullOrEmpty);
     v10 = atlasList->m_Items[v9];
     if ( !v10 )
-      sub_1C3E7C0(0, v6);
+      sub_1C6BC60(0, v6);
     IsNullOrEmpty = UIAtlas__GetSprite(v10, spriteName, 0);
     if ( IsNullOrEmpty )
       return 1;
@@ -439,15 +439,15 @@ void AtlasManagerUnit___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C55E72 & 1) == 0 )
+  if ( (byte_4CB53D7 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManagerUnit___c_TypeInfo);
-    byte_4C55E72 = 1;
+    sub_1C6BA08(&AtlasManagerUnit___c_TypeInfo);
+    byte_4CB53D7 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(AtlasManagerUnit___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(AtlasManagerUnit___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AtlasManagerUnit___c_TypeInfo->static_fields->__9 = (struct AtlasManagerUnit___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)AtlasManagerUnit___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)AtlasManagerUnit___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -463,6 +463,6 @@ System_String_o *AtlasManagerUnit___c___ValidateLoadSprite_b__11_0(
         const MethodInfo *method)
 {
   if ( !atlas )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return UnityEngine_Object__get_name((UnityEngine_Object_o *)atlas, 0);
 }

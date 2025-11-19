@@ -18,10 +18,10 @@ void ShopEventListViewItemDraw__Awake(ShopEventListViewItemDraw_o *this, const M
   struct UISprite_o *v12; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_4C52FAC & 1) == 0 )
+  if ( (byte_4CB24FC & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C52FAC = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB24FC = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -33,14 +33,14 @@ void ShopEventListViewItemDraw__Awake(ShopEventListViewItemDraw_o *this, const M
     if ( !v8
       || (mAtlas = v8->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
+          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
           (v12 = this->fields.baseSprite) == 0) )
     {
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     }
     mSpriteName = v12->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
   }
 }
 
@@ -74,11 +74,11 @@ void ShopEventListViewItemDraw__SetBaseButtonState(
   __int64 v19; // x11
   UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C52FB0 & 1) == 0 )
+  if ( (byte_4CB2500 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICommonButtonColor_TypeInfo);
-    byte_4C52FB0 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICommonButtonColor_TypeInfo);
+    byte_4CB2500 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -133,7 +133,7 @@ void ShopEventListViewItemDraw__SetBaseButtonState(
       }
     }
 LABEL_35:
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -203,11 +203,11 @@ bool ShopEventListViewItemDraw__SetBaseSprite(
   int32_t eventId; // w20
   UnityEngine_Object_o *baseAtlas; // x20
 
-  if ( (byte_4C52FAF & 1) == 0 )
+  if ( (byte_4CB24FF & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C52FAF = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB24FF = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -240,7 +240,7 @@ bool ShopEventListViewItemDraw__SetBaseSprite(
       }
     }
 LABEL_18:
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   }
   return 1;
 }
@@ -279,16 +279,16 @@ void ShopEventListViewItemDraw__SetItem(
   UILabel_o *v30; // x22
 
   v6 = this;
-  if ( (byte_4C52FAD & 1) == 0 )
+  if ( (byte_4CB24FD & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&string_TypeInfo);
-    sub_1C3E564(&StringLiteral_5711/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/);
-    sub_1C3E564(&StringLiteral_15849/*"[000000]"*/);
-    sub_1C3E564(&StringLiteral_5709/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/);
-    sub_1C3E564(&StringLiteral_5712/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/);
-    this = (ShopEventListViewItemDraw_o *)sub_1C3E564(&StringLiteral_5710/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/);
-    byte_4C52FAD = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&string_TypeInfo);
+    sub_1C6BA08(&StringLiteral_5701/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/);
+    sub_1C6BA08(&StringLiteral_15836/*"[000000]"*/);
+    sub_1C6BA08(&StringLiteral_5699/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/);
+    sub_1C6BA08(&StringLiteral_5702/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/);
+    this = (ShopEventListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_5700/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/);
+    byte_4CB24FD = 1;
   }
   rangeSprite = v6->fields.rangeSprite;
   if ( !item )
@@ -313,7 +313,7 @@ void ShopEventListViewItemDraw__SetItem(
     UILabel__set_text(nameTextLabel, NameText, 0);
     messageTextLabel = v6->fields.messageTextLabel;
     DetailText = ShopEventListViewItem__get_DetailText(item, v17);
-    NameText = System_String__Concat_63636468((System_String_o *)StringLiteral_15849/*"[000000]"*/, DetailText, 0);
+    NameText = System_String__Concat_63966792((System_String_o *)StringLiteral_15836/*"[000000]"*/, DetailText, 0);
     if ( !messageTextLabel )
       goto LABEL_45;
     UILabel__set_text(messageTextLabel, NameText, 0);
@@ -347,7 +347,7 @@ void ShopEventListViewItemDraw__SetItem(
       condMessageLabel = v6->fields.condMessageLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5712/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0);
+      NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5702/*"EVENT_SHOP_BANNER_LOCKED_MSG"*/, 0);
       if ( !condMessageLabel )
         goto LABEL_45;
       UILabel__set_text(condMessageLabel, NameText, 0);
@@ -359,7 +359,7 @@ LABEL_48:
         v29 = v6->fields.condMessageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5709/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0);
+        NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5699/*"EVENT_SHOP_BANNER_CLOSED_MSG"*/, 0);
         if ( !v29 )
           goto LABEL_45;
         UILabel__set_text(v29, NameText, 0);
@@ -372,7 +372,7 @@ LABEL_48:
       v30 = v6->fields.condMessageLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5711/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/, 0);
+      NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5701/*"EVENT_SHOP_BANNER_FINISHED_MSG"*/, 0);
       if ( !v30 )
         goto LABEL_45;
       UILabel__set_text(v30, NameText, 0);
@@ -388,7 +388,7 @@ LABEL_41:
             goto LABEL_44;
           }
 LABEL_45:
-          sub_1C3E7C0(NameText, v13);
+          sub_1C6BC60(NameText, v13);
         }
 LABEL_44:
         ShopEventListViewItemDraw__SetBaseButtonState(v6, item, mode, v26);
@@ -400,7 +400,7 @@ LABEL_44:
     v27 = v6->fields.condMessageLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5710/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/, 0);
+    NameText = LocalizationManager__Get((System_String_o *)StringLiteral_5700/*"EVENT_SHOP_BANNER_FINISHED_LOCKED_MSG"*/, 0);
     if ( !v27 )
       goto LABEL_45;
     UILabel__set_text(v27, NameText, 0);
@@ -420,10 +420,10 @@ void ShopEventListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4C52FAE & 1) == 0 )
+  if ( (byte_4CB24FE & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C52FAE = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB24FE = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -431,7 +431,7 @@ void ShopEventListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0)) == 0 )
-      sub_1C3E7C0(gameObject, v7);
+      sub_1C6BC60(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
   }
 }

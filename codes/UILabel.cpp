@@ -16,41 +16,41 @@ void UILabel___cctor(const MethodInfo *method)
   int32_t v14; // w2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C5B66B & 1) == 0 )
+  if ( (byte_4CBAC48 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_Vector3___ctor__);
-    sub_1C3E564(&Method_BetterList_int___ctor__);
-    sub_1C3E564(&Method_BetterList_UILabel___ctor__);
-    sub_1C3E564(&BetterList_Vector3__TypeInfo);
-    sub_1C3E564(&BetterList_int__TypeInfo);
-    sub_1C3E564(&BetterList_UILabel__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Font__int___ctor__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_Font__int__TypeInfo);
-    sub_1C3E564(&UILabel_TypeInfo);
-    byte_4C5B66B = 1;
+    sub_1C6BA08(&Method_BetterList_Vector3___ctor__);
+    sub_1C6BA08(&Method_BetterList_int___ctor__);
+    sub_1C6BA08(&Method_BetterList_UILabel___ctor__);
+    sub_1C6BA08(&BetterList_Vector3__TypeInfo);
+    sub_1C6BA08(&BetterList_int__TypeInfo);
+    sub_1C6BA08(&BetterList_UILabel__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Font__int___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_Font__int__TypeInfo);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    byte_4CBAC48 = 1;
   }
-  v1 = (BetterList_T__o *)sub_1C3E7B0(BetterList_UILabel__TypeInfo);
-  BetterList_object____ctor(v1, (const MethodInfo_332C5CC *)Method_BetterList_UILabel___ctor__);
+  v1 = (BetterList_T__o *)sub_1C6BC54(BetterList_UILabel__TypeInfo);
+  BetterList_object____ctor(v1, (const MethodInfo_3372068 *)Method_BetterList_UILabel___ctor__);
   UILabel_TypeInfo->static_fields->mList = (struct BetterList_UILabel__o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)UILabel_TypeInfo->static_fields, (int32_t)v1, v2, v3);
-  v4 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_Font__int__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)UILabel_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  v4 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_Font__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v4,
-    (const MethodInfo_346C0FC *)Method_System_Collections_Generic_Dictionary_Font__int___ctor__);
+    (const MethodInfo_34B2258 *)Method_System_Collections_Generic_Dictionary_Font__int___ctor__);
   static_fields = UILabel_TypeInfo->static_fields;
   static_fields->mFontUsage = (struct System_Collections_Generic_Dictionary_Font__int__o *)v4;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->mFontUsage, (int32_t)v4, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->mFontUsage, (int32_t)v4, v6, v7);
   UILabel_TypeInfo->static_fields->mTexRebuildAdded = 0;
-  v8 = (BetterList_Vector3__o *)sub_1C3E7B0(BetterList_Vector3__TypeInfo);
-  BetterList_Vector3____ctor(v8, (const MethodInfo_332E4A4 *)Method_BetterList_Vector3___ctor__);
+  v8 = (BetterList_Vector3__o *)sub_1C6BC54(BetterList_Vector3__TypeInfo);
+  BetterList_Vector3____ctor(v8, (const MethodInfo_3373F40 *)Method_BetterList_Vector3___ctor__);
   v9 = UILabel_TypeInfo->static_fields;
   v9->mTempVerts = v8;
-  sub_1C3E508((CGThumbnailListItem_o *)&v9->mTempVerts, (int32_t)v8, v10, v11);
-  v12 = (BetterList_int__o *)sub_1C3E7B0(BetterList_int__TypeInfo);
-  BetterList_int____ctor(v12, (const MethodInfo_332BBF8 *)Method_BetterList_int___ctor__);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v9->mTempVerts, (int32_t)v8, v10, v11);
+  v12 = (BetterList_int__o *)sub_1C6BC54(BetterList_int__TypeInfo);
+  BetterList_int____ctor(v12, (const MethodInfo_3371694 *)Method_BetterList_int___ctor__);
   v13 = UILabel_TypeInfo->static_fields;
   v13->mTempIndices = v12;
-  sub_1C3E508((CGThumbnailListItem_o *)&v13->mTempIndices, (int32_t)v12, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v13->mTempIndices, (int32_t)v12, v14, v15);
 }
 
 
@@ -63,29 +63,29 @@ void UILabel___ctor(UILabel_o *this, const MethodInfo *method)
   UnityEngine_Vector2_c *v7; // x8
   struct UnityEngine_Vector2_o oneVector; // d1
 
-  if ( (byte_4C5B66A & 1) == 0 )
+  if ( (byte_4CBAC47 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B66A = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC47 = 1;
   }
   this->fields.keepCrispWhenShrunk = 1;
   v5 = StringLiteral_1/*""*/;
   this->fields.mText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mText, v5, v2, v3);
-  v6 = (struct UnityEngine_Color_o)xmmword_C132D0;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mText, v5, v2, v3);
+  v6 = (struct UnityEngine_Color_o)xmmword_CED590;
   this->fields.mEncoding = 1;
   this->fields.mSymbols = 1;
   this->fields.mFontSize = 16;
-  this->fields.mEffectColor = (struct UnityEngine_Color_o)xmmword_C132D0;
-  if ( !byte_4C57184 )
+  this->fields.mEffectColor = (struct UnityEngine_Color_o)xmmword_CED590;
+  if ( !byte_4CB66ED )
   {
-    sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
-    v6 = (struct UnityEngine_Color_o)xmmword_C132D0;
-    byte_4C57184 = 1;
+    sub_1C6BA08(&UnityEngine_Vector2_TypeInfo);
+    v6 = (struct UnityEngine_Color_o)xmmword_CED590;
+    byte_4CB66ED = 1;
   }
   v7 = UnityEngine_Vector2_TypeInfo;
   oneVector = UnityEngine_Vector2_TypeInfo->static_fields->oneVector;
-  this->fields.mGradientBottom = (struct UnityEngine_Color_o)xmmword_C12A00;
+  this->fields.mGradientBottom = (struct UnityEngine_Color_o)xmmword_CECCC0;
   __asm { FMOV            V0.4S, #1.0 }
   this->fields.mGradientTop = _Q0;
   this->fields.mEffectDistance = oneVector;
@@ -95,11 +95,11 @@ void UILabel___ctor(UILabel_o *this, const MethodInfo *method)
   this->fields.specificOutline = v6;
   this->fields.mDensity = 1.0;
   this->fields.mShouldBeProcessed = 1;
-  if ( !byte_4C5059A )
+  if ( !byte_4CAFAE9 )
   {
-    sub_1C3E564(&UnityEngine_Vector2_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Vector2_TypeInfo);
     v7 = UnityEngine_Vector2_TypeInfo;
-    byte_4C5059A = 1;
+    byte_4CAFAE9 = 1;
   }
   this->fields.mCalculatedSize = v7->static_fields->zeroVector;
   this->fields.mScale = 1.0;
@@ -113,12 +113,12 @@ void UILabel__AddToDynamicFontList(UILabel_o *this, const MethodInfo *method)
   BetterList_T__o *mList; // x0
   UILabel_c *v5; // x0
 
-  if ( (byte_4C5B64F & 1) == 0 )
+  if ( (byte_4CBAC2C & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_UILabel__Add__);
-    sub_1C3E564(&Method_BetterList_UILabel__Contains__);
-    sub_1C3E564(&UILabel_TypeInfo);
-    byte_4C5B64F = 1;
+    sub_1C6BA08(&Method_BetterList_UILabel__Add__);
+    sub_1C6BA08(&Method_BetterList_UILabel__Contains__);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    byte_4CBAC2C = 1;
   }
   v3 = UILabel_TypeInfo;
   if ( !UILabel_TypeInfo->_2.cctor_finished )
@@ -132,7 +132,7 @@ void UILabel__AddToDynamicFontList(UILabel_o *this, const MethodInfo *method)
   if ( BetterList_object___Contains(
          mList,
          (Il2CppObject *)this,
-         (const MethodInfo_332C048 *)Method_BetterList_UILabel__Contains__) )
+         (const MethodInfo_3371AE4 *)Method_BetterList_UILabel__Contains__) )
   {
     return;
   }
@@ -145,8 +145,8 @@ void UILabel__AddToDynamicFontList(UILabel_o *this, const MethodInfo *method)
   mList = (BetterList_T__o *)v5->static_fields->mList;
   if ( !mList )
 LABEL_11:
-    sub_1C3E7C0(mList, method);
-  BetterList_object___Add(mList, (Il2CppObject *)this, (const MethodInfo_332BEA0 *)Method_BetterList_UILabel__Add__);
+    sub_1C6BC60(mList, method);
+  BetterList_object___Add(mList, (Il2CppObject *)this, (const MethodInfo_337193C *)Method_BetterList_UILabel__Add__);
 }
 
 
@@ -262,14 +262,14 @@ LABEL_26:
     while ( buffer )
     {
       if ( (unsigned int)start >= LODWORD(buffer->max_length) )
-        sub_1C3E7C8(v19, v20);
+        sub_1C6BC68(v19);
       v30 = (float32x2_t *)((char *)buffer + 12 * start++);
       v30[4].n64_u64[0] = vadd_f32((float32x2_t)__PAIR64__(LODWORD(v26), LODWORD(v31)), v30[4]).n64_u64[0];
       if ( size == start )
         goto LABEL_35;
     }
 LABEL_33:
-    sub_1C3E7C0(v19, v20);
+    sub_1C6BC60(v19, v20);
   }
 LABEL_35:
   result.fields.y = v26;
@@ -330,14 +330,14 @@ void UILabel__ApplyShadow(
   long double v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
   v15 = (unsigned int)start;
-  if ( (byte_4C5B65F & 1) == 0 )
+  if ( (byte_4CBAC3C & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_Vector3__Add__);
-    sub_1C3E564(&Method_BetterList_Color32__Add__);
-    sub_1C3E564(&Method_BetterList_Vector2__Add__);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B65F = 1;
+    sub_1C6BA08(&Method_BetterList_Vector3__Add__);
+    sub_1C6BA08(&Method_BetterList_Color32__Add__);
+    sub_1C6BA08(&Method_BetterList_Vector2__Add__);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC3C = 1;
   }
   *(float *)&v9 = this->fields.mEffectColor.fields.r;
   v10.fields.r = this->fields.mEffectColor.fields.g;
@@ -374,7 +374,7 @@ void UILabel__ApplyShadow(
       *(UnityEngine_Color_o *)&v26 = NGUITools__ApplyPMA(v51, 0);
     }
   }
-  v27 = (UIFont_o *)sub_2531AB4(0, v26, v25, v24, v23);
+  v27 = (UIFont_o *)sub_255DA24(0, v26, v25, v24, v23);
   v47 = (int)v27;
   if ( (int)v15 < end )
   {
@@ -397,7 +397,7 @@ void UILabel__ApplyShadow(
         BetterList_Vector3___Add(
           verts,
           *(UnityEngine_Vector3_o *)((char *)&buffer->obj.klass + v33),
-          (const MethodInfo_332DBCC *)Method_BetterList_Vector3__Add__);
+          (const MethodInfo_3373668 *)Method_BetterList_Vector3__Add__);
         if ( !uvs )
           goto LABEL_43;
         v35 = uvs->fields.buffer;
@@ -405,7 +405,7 @@ void UILabel__ApplyShadow(
           goto LABEL_43;
         if ( (unsigned int)v15 >= LODWORD(v35->max_length) )
           goto LABEL_44;
-        BetterList_Vector2___Add(uvs, v35->m_Items[v31], (const MethodInfo_332D140 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v35->m_Items[v31], (const MethodInfo_3372BDC *)Method_BetterList_Vector2__Add__);
         if ( !cols )
           goto LABEL_43;
         v36 = cols->fields.buffer;
@@ -414,7 +414,7 @@ void UILabel__ApplyShadow(
         if ( (unsigned int)v15 >= LODWORD(v36->max_length) )
           goto LABEL_44;
         v37 = (UnityEngine_Color32_o)*((unsigned int *)&v36->obj.klass + v32);
-        BetterList_Color32___Add(cols, v37, (const MethodInfo_332ABF4 *)Method_BetterList_Color32__Add__);
+        BetterList_Color32___Add(cols, v37, (const MethodInfo_3370690 *)Method_BetterList_Color32__Add__);
         v38 = verts->fields.buffer;
         if ( !v38 )
           goto LABEL_43;
@@ -481,15 +481,15 @@ LABEL_41:
       verts = v41;
 LABEL_39:
       cols = v46;
-      v27 = (UIFont_o *)sub_2531AB4(0, v53, *(long double *)((char *)&v53 + 4), *(long double *)((char *)&v53 + 8), v13);
+      v27 = (UIFont_o *)sub_255DA24(0, v53, *(long double *)((char *)&v53 + 4), *(long double *)((char *)&v53 + 8), v13);
       if ( (unsigned int)v15 >= LODWORD(v39->max_length) )
 LABEL_44:
-        sub_1C3E7C8(v27, v22);
+        sub_1C6BC68(v27);
       *(int32_t *)((char *)&v39->m_Items[0].fields.rgba + (v30 >> 30)) = (int)v27;
       goto LABEL_41;
     }
 LABEL_43:
-    sub_1C3E7C0(v27, v22);
+    sub_1C6BC60(v27, v22);
   }
 }
 
@@ -515,10 +515,10 @@ void UILabel__AssumeNaturalSize(UILabel_o *this, const MethodInfo *method)
   int32_t v19; // w8
   double iptr; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C5B658 & 1) == 0 )
+  if ( (byte_4CBAC35 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B658 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC35 = 1;
   }
   ambigiousFont = UILabel__get_ambigiousFont(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -526,12 +526,12 @@ void UILabel__AssumeNaturalSize(UILabel_o *this, const MethodInfo *method)
   if ( UnityEngine_Object__op_Inequality(ambigiousFont, 0, 0) )
   {
     *(int32x2_t *)&this->fields.mWidth = vdup_n_s32(0x186A0u);
-    UILabel__ProcessText_49582056(this, 0, 1, v4);
+    UILabel__ProcessText_49810940(this, 0, 1, v4);
     x = this->fields.mCalculatedSize.fields.x;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -567,10 +567,10 @@ LABEL_21:
       v11 = (int)v8;
     this->fields.mWidth = v11;
     y = this->fields.mCalculatedSize.fields.y;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -638,13 +638,13 @@ void UILabel__Awake(UILabel_o *this, const MethodInfo *method)
   System_String_o *v19; // x1
   const MethodInfo *v20; // x2
 
-  if ( (byte_4C5B666 & 1) == 0 )
+  if ( (byte_4CBAC43 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Font_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UILabel_TypeInfo);
-    sub_1C3E564(&StringLiteral_6804/*"Fonts/FGO-Main-Font"*/);
-    byte_4C5B666 = 1;
+    sub_1C6BA08(&UnityEngine_Font_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    sub_1C6BA08(&StringLiteral_6797/*"Fonts/FGO-Main-Font"*/);
+    byte_4CBAC43 = 1;
   }
   UIWidget__Awake((UIWidget_o *)this, 0);
   trueTypeFont = (UnityEngine_Object_o *)UILabel__get_trueTypeFont(this, v3);
@@ -668,7 +668,7 @@ void UILabel__Awake(UILabel_o *this, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Equality(defaultFont, 0, 0) )
         goto LABEL_22;
-      v10 = UnityEngine_Resources__Load((System_String_o *)StringLiteral_6804/*"Fonts/FGO-Main-Font"*/, 0);
+      v10 = UnityEngine_Resources__Load((System_String_o *)StringLiteral_6797/*"Fonts/FGO-Main-Font"*/, 0);
       if ( !UILabel_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UILabel_TypeInfo);
       if ( v10 )
@@ -682,13 +682,13 @@ void UILabel__Awake(UILabel_o *this, const MethodInfo *method)
           if ( (UnityEngine_Font_c *)v10->klass == v11 )
             goto LABEL_21;
         }
-        sub_1C3EA80(v10);
+        sub_1C6BFFC(v10);
       }
       v14 = UILabel_TypeInfo->static_fields;
       v14->defaultFont = (struct UnityEngine_Font_o *)v10;
       p_defaultFont = (CGThumbnailListItem_o *)&v14->defaultFont;
 LABEL_21:
-      sub_1C3E508(p_defaultFont, (int32_t)v10, v8, v9);
+      sub_1C6B9AC(p_defaultFont, (int32_t)v10, v8, v9);
 LABEL_22:
       v15 = UILabel_TypeInfo;
       if ( !UILabel_TypeInfo->_2.cctor_finished )
@@ -730,10 +730,10 @@ int32_t UILabel__CalculateOffsetToFit(UILabel_o *this, System_String_o *text, co
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C5B660 & 1) == 0 )
+  if ( (byte_4CBAC3D & 1) == 0 )
   {
-    sub_1C3E564(&NGUIText_TypeInfo);
-    byte_4C5B660 = 1;
+    sub_1C6BA08(&NGUIText_TypeInfo);
+    byte_4CBAC3D = 1;
   }
   UILabel__UpdateNGUIText(this, (const MethodInfo *)text);
   v5 = NGUIText_TypeInfo;
@@ -747,10 +747,10 @@ int32_t UILabel__CalculateOffsetToFit(UILabel_o *this, System_String_o *text, co
   static_fields->symbolStyle = 0;
   v7 = NGUIText__CalculateOffsetToFit(text, 0);
   NGUIText_TypeInfo->static_fields->bitmapFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v8, v9);
   v10 = NGUIText_TypeInfo->static_fields;
   v10->dynamicFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&v10->dynamicFont, 0, v11, v12);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v10->dynamicFont, 0, v11, v12);
   return v7;
 }
 
@@ -783,17 +783,17 @@ int32_t UILabel__GetCharacterIndexAtPosition(
   x = worldPos.fields.x;
   cachedTransform = UIRect__get_cachedTransform((UIRect_o *)this, 0);
   if ( !cachedTransform )
-    sub_1C3E7C0(0, v10);
+    sub_1C6BC60(0, v10);
   v13.fields.x = x;
   v13.fields.y = y;
   v13.fields.z = z;
   v14 = UnityEngine_Transform__InverseTransformPoint(cachedTransform, v13, 0);
-  return UILabel__GetCharacterIndexAtPosition_49591768(this, *(UnityEngine_Vector2_o *)&v14.fields.x, precise, v11);
+  return UILabel__GetCharacterIndexAtPosition_49820652(this, *(UnityEngine_Vector2_o *)&v14.fields.x, precise, v11);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t UILabel__GetCharacterIndexAtPosition_49591768(
+int32_t UILabel__GetCharacterIndexAtPosition_49820652(
         UILabel_o *this,
         UnityEngine_Vector2_o localPos,
         bool precise,
@@ -834,13 +834,13 @@ int32_t UILabel__GetCharacterIndexAtPosition_49591768(
 
   y = localPos.fields.y;
   x = localPos.fields.x;
-  if ( (byte_4C5B659 & 1) == 0 )
+  if ( (byte_4CBAC36 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_Vector3__Clear__);
-    sub_1C3E564(&Method_BetterList_int__Clear__);
-    sub_1C3E564(&NGUIText_TypeInfo);
-    sub_1C3E564(&UILabel_TypeInfo);
-    byte_4C5B659 = 1;
+    sub_1C6BA08(&Method_BetterList_Vector3__Clear__);
+    sub_1C6BA08(&Method_BetterList_int__Clear__);
+    sub_1C6BA08(&NGUIText_TypeInfo);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    byte_4CBAC36 = 1;
   }
   if ( !UILabel__get_isValid(this, (const MethodInfo *)precise) )
     return 0;
@@ -872,7 +872,7 @@ int32_t UILabel__GetCharacterIndexAtPosition_49591768(
   v18 = *(struct BetterList_Vector3__o **)(*(_QWORD *)&v17[5].fields.size + 24LL);
   if ( !v18 )
 LABEL_37:
-    sub_1C3E7C0(v17, v18);
+    sub_1C6BC60(v17, v18);
   if ( v18->fields.size < 1 )
   {
     v26 = NGUIText_TypeInfo;
@@ -882,10 +882,10 @@ LABEL_37:
       v26 = NGUIText_TypeInfo;
     }
     v26->static_fields->bitmapFont = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v15, v16);
+    sub_1C6B9AC((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v15, v16);
     v27 = NGUIText_TypeInfo->static_fields;
     v27->dynamicFont = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v27->dynamicFont, 0, v28, v29);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v27->dynamicFont, 0, v28, v29);
     return 0;
   }
   if ( !LODWORD(v17[7].klass) )
@@ -921,11 +921,11 @@ LABEL_37:
   v17 = v32->static_fields->mTempVerts;
   if ( !v17 )
     goto LABEL_37;
-  BetterList_Vector3___Clear(v17, (const MethodInfo_332DBB4 *)Method_BetterList_Vector3__Clear__);
+  BetterList_Vector3___Clear(v17, (const MethodInfo_3373650 *)Method_BetterList_Vector3__Clear__);
   v17 = (BetterList_Vector3__o *)UILabel_TypeInfo->static_fields->mTempIndices;
   if ( !v17 )
     goto LABEL_37;
-  BetterList_int___Clear((BetterList_int__o *)v17, (const MethodInfo_332B580 *)Method_BetterList_int__Clear__);
+  BetterList_int___Clear((BetterList_int__o *)v17, (const MethodInfo_337101C *)Method_BetterList_int__Clear__);
   v35 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
   {
@@ -933,24 +933,24 @@ LABEL_37:
     v35 = NGUIText_TypeInfo;
   }
   v35->static_fields->bitmapFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v33, v34);
+  sub_1C6B9AC((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v33, v34);
   v36 = NGUIText_TypeInfo->static_fields;
   v36->dynamicFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&v36->dynamicFont, 0, v37, v38);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v36->dynamicFont, 0, v37, v38);
   return v30;
 }
 
 
-int32_t UILabel__GetCharacterIndex_49591760(UILabel_o *this, UnityEngine_Vector2_o localPos, const MethodInfo *method)
+int32_t UILabel__GetCharacterIndex_49820644(UILabel_o *this, UnityEngine_Vector2_o localPos, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
 
-  return UILabel__GetCharacterIndexAtPosition_49591768(this, localPos, 0, v3);
+  return UILabel__GetCharacterIndexAtPosition_49820652(this, localPos, 0, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-int32_t UILabel__GetCharacterIndex_49593892(
+int32_t UILabel__GetCharacterIndex_49822776(
         UILabel_o *this,
         int32_t currentIndex,
         int32_t key,
@@ -990,15 +990,15 @@ int32_t UILabel__GetCharacterIndex_49593892(
   UnityEngine_Vector2_o v39; // 0:s0.4,4:s1.4
   UnityEngine_Vector3_o Item; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B65C & 1) == 0 )
+  if ( (byte_4CBAC39 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_Vector3__Clear__);
-    sub_1C3E564(&Method_BetterList_int__Clear__);
-    sub_1C3E564(&Method_BetterList_int__get_Item__);
-    sub_1C3E564(&Method_BetterList_Vector3__get_Item__);
-    sub_1C3E564(&NGUIText_TypeInfo);
-    sub_1C3E564(&UILabel_TypeInfo);
-    byte_4C5B65C = 1;
+    sub_1C6BA08(&Method_BetterList_Vector3__Clear__);
+    sub_1C6BA08(&Method_BetterList_int__Clear__);
+    sub_1C6BA08(&Method_BetterList_int__get_Item__);
+    sub_1C6BA08(&Method_BetterList_Vector3__get_Item__);
+    sub_1C6BA08(&NGUIText_TypeInfo);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    byte_4CBAC39 = 1;
   }
   if ( !UILabel__get_isValid(this, *(const MethodInfo **)&currentIndex) )
     return currentIndex;
@@ -1051,7 +1051,7 @@ int32_t UILabel__GetCharacterIndex_49593892(
         if ( !v19 )
           goto LABEL_60;
       }
-      if ( BetterList_int___get_Item(v19, i, (const MethodInfo_332B394 *)Method_BetterList_int__get_Item__) == currentIndex )
+      if ( BetterList_int___get_Item(v19, i, (const MethodInfo_3370E30 *)Method_BetterList_int__get_Item__) == currentIndex )
         break;
     }
     v23 = UILabel_TypeInfo;
@@ -1066,7 +1066,7 @@ int32_t UILabel__GetCharacterIndex_49593892(
       Item = BetterList_Vector3___get_Item(
                (BetterList_Vector3__o *)v19,
                i,
-               (const MethodInfo_332D9A0 *)Method_BetterList_Vector3__get_Item__);
+               (const MethodInfo_337343C *)Method_BetterList_Vector3__get_Item__);
       x = Item.fields.x;
       y = Item.fields.y;
       switch ( key )
@@ -1124,11 +1124,11 @@ LABEL_43:
         {
           BetterList_Vector3___Clear(
             (BetterList_Vector3__o *)v19,
-            (const MethodInfo_332DBB4 *)Method_BetterList_Vector3__Clear__);
+            (const MethodInfo_3373650 *)Method_BetterList_Vector3__Clear__);
           v19 = UILabel_TypeInfo->static_fields->mTempIndices;
           if ( v19 )
           {
-            BetterList_int___Clear(v19, (const MethodInfo_332B580 *)Method_BetterList_int__Clear__);
+            BetterList_int___Clear(v19, (const MethodInfo_337101C *)Method_BetterList_int__Clear__);
             goto LABEL_48;
           }
         }
@@ -1146,18 +1146,18 @@ LABEL_43:
         {
           BetterList_Vector3___Clear(
             (BetterList_Vector3__o *)v19,
-            (const MethodInfo_332DBB4 *)Method_BetterList_Vector3__Clear__);
+            (const MethodInfo_3373650 *)Method_BetterList_Vector3__Clear__);
           v19 = UILabel_TypeInfo->static_fields->mTempIndices;
           if ( v19 )
           {
-            BetterList_int___Clear(v19, (const MethodInfo_332B580 *)Method_BetterList_int__Clear__);
+            BetterList_int___Clear(v19, (const MethodInfo_337101C *)Method_BetterList_int__Clear__);
             return stringLength;
           }
         }
       }
     }
 LABEL_60:
-    sub_1C3E7C0(v19, v20);
+    sub_1C6BC60(v19, v20);
   }
 LABEL_48:
   v34 = NGUIText_TypeInfo;
@@ -1167,10 +1167,10 @@ LABEL_48:
     v34 = NGUIText_TypeInfo;
   }
   v34->static_fields->bitmapFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v17, v18);
+  sub_1C6B9AC((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v17, v18);
   v35 = NGUIText_TypeInfo->static_fields;
   v35->dynamicFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&v35->dynamicFont, 0, v36, v37);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v35->dynamicFont, 0, v36, v37);
   stringLength = 0;
   switch ( key )
   {
@@ -1198,7 +1198,7 @@ UnityEngine_Vector3_array *UILabel__GetSides(
   const MethodInfo *v3; // x3
 
   if ( this->fields.mShouldBeProcessed )
-    UILabel__ProcessText_49582056(this, 0, 1, v3);
+    UILabel__ProcessText_49810940(this, 0, 1, v3);
   return UIWidget__GetSides((UIWidget_o *)this, relativeTo, 0);
 }
 
@@ -1213,12 +1213,12 @@ System_String_o *UILabel__GetUrlAtCharacterIndex(UILabel_o *this, int32_t charac
   int32_t v9; // w22
   int32_t v10; // w0
 
-  if ( (byte_4C5B65B & 1) == 0 )
+  if ( (byte_4CBAC38 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_15847/*"[/url]"*/);
-    sub_1C3E564(&StringLiteral_16068/*"]"*/);
-    sub_1C3E564(&StringLiteral_16017/*"[url="*/);
-    byte_4C5B65B = 1;
+    sub_1C6BA08(&StringLiteral_15834/*"[/url]"*/);
+    sub_1C6BA08(&StringLiteral_16051/*"]"*/);
+    sub_1C6BA08(&StringLiteral_16000/*"[url="*/);
+    byte_4CBAC38 = 1;
   }
   if ( characterIndex == -1 )
     return 0;
@@ -1255,9 +1255,9 @@ LABEL_28:
     mText = this->fields.mText;
     if ( !mText )
       goto LABEL_25;
-    mText = (System_String_o *)System_String__LastIndexOf_63697560(
+    mText = (System_String_o *)System_String__LastIndexOf_64027900(
                                  mText,
-                                 (System_String_o *)StringLiteral_16017/*"[url="*/,
+                                 (System_String_o *)StringLiteral_16000/*"[url="*/,
                                  characterIndex,
                                  0);
     if ( (_DWORD)mText == -1 )
@@ -1266,21 +1266,21 @@ LABEL_28:
   if ( !this->fields.mText )
     goto LABEL_25;
   v7 = (_DWORD)mText + 5;
-  v8 = System_String__IndexOf_63694860(this->fields.mText, (System_String_o *)StringLiteral_16068/*"]"*/, (_DWORD)mText + 5, 0);
+  v8 = System_String__IndexOf_64025200(this->fields.mText, (System_String_o *)StringLiteral_16051/*"]"*/, (_DWORD)mText + 5, 0);
   if ( v8 == -1 )
     return 0;
   v9 = v8;
   mText = this->fields.mText;
   if ( !mText )
     goto LABEL_25;
-  v10 = System_String__IndexOf_63694860(mText, (System_String_o *)StringLiteral_15847/*"[/url]"*/, v9, 0);
+  v10 = System_String__IndexOf_64025200(mText, (System_String_o *)StringLiteral_15834/*"[/url]"*/, v9, 0);
   if ( v10 != -1 && v10 < characterIndex )
     return 0;
   mText = this->fields.mText;
   if ( !mText )
 LABEL_25:
-    sub_1C3E7C0(mText, *(_QWORD *)&characterIndex);
-  return System_String__Substring_63682392(mText, v7, v9 - v7, 0);
+    sub_1C6BC60(mText, *(_QWORD *)&characterIndex);
+  return System_String__Substring_64012732(mText, v7, v9 - v7, 0);
 }
 
 
@@ -1295,17 +1295,17 @@ System_String_o *UILabel__GetUrlAtPosition(UILabel_o *this, UnityEngine_Vector3_
 }
 
 
-System_String_o *UILabel__GetUrlAtPosition_49593860(
+System_String_o *UILabel__GetUrlAtPosition_49822744(
         UILabel_o *this,
         UnityEngine_Vector2_o localPos,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
-  int32_t CharacterIndexAtPosition_49591768; // w1
+  int32_t CharacterIndexAtPosition_49820652; // w1
   const MethodInfo *v6; // x2
 
-  CharacterIndexAtPosition_49591768 = UILabel__GetCharacterIndexAtPosition_49591768(this, localPos, 1, v3);
-  return UILabel__GetUrlAtCharacterIndex(this, CharacterIndexAtPosition_49591768, v6);
+  CharacterIndexAtPosition_49820652 = UILabel__GetCharacterIndexAtPosition_49820652(this, localPos, 1, v3);
+  return UILabel__GetUrlAtCharacterIndex(this, CharacterIndexAtPosition_49820652, v6);
 }
 
 
@@ -1316,7 +1316,7 @@ System_String_o *UILabel__GetWordAtCharacterIndex(UILabel_o *this, int32_t chara
   UILabel_o *v4; // x19
   System_String_o *mText; // x21
   int m_CancellationTokenSource; // w8
-  int32_t IndexOfAny_63696296; // w0
+  int32_t IndexOfAny_64026636; // w0
   System_String_o *v8; // x22
   int32_t v9; // w21
   System_Array_o *v10; // x23
@@ -1327,12 +1327,12 @@ System_String_o *UILabel__GetWordAtCharacterIndex(UILabel_o *this, int32_t chara
 
   v3 = characterIndex;
   v4 = this;
-  if ( (byte_4C5B65A & 1) == 0 )
+  if ( (byte_4CBAC37 & 1) == 0 )
   {
-    sub_1C3E564(&char___TypeInfo);
-    sub_1C3E564(&NGUIText_TypeInfo);
-    this = (UILabel_o *)sub_1C3E564(&Field__PrivateImplementationDetails__A553BADB17A168A36B44DA9D26F99CB2EEC465BFD5E69C5D695D0F2F66629EF5);
-    byte_4C5B65A = 1;
+    sub_1C6BA08(&char___TypeInfo);
+    sub_1C6BA08(&NGUIText_TypeInfo);
+    this = (UILabel_o *)sub_1C6BA08(&Field__PrivateImplementationDetails__A553BADB17A168A36B44DA9D26F99CB2EEC465BFD5E69C5D695D0F2F66629EF5);
+    byte_4CBAC37 = 1;
   }
   if ( v3 == -1 )
     return 0;
@@ -1341,23 +1341,23 @@ System_String_o *UILabel__GetWordAtCharacterIndex(UILabel_o *this, int32_t chara
     goto LABEL_20;
   if ( mText->fields._stringLength <= v3 )
     return 0;
-  this = (UILabel_o *)sub_1C3E60C(char___TypeInfo, 2);
+  this = (UILabel_o *)sub_1C6BAB0(char___TypeInfo, 2);
   if ( !this )
     goto LABEL_20;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
   if ( !m_CancellationTokenSource || (LOWORD(this->fields.leftAnchor) = 32, m_CancellationTokenSource == 1) )
-    sub_1C3E7C8(this, this);
+    sub_1C6BC68(this);
   WORD1(this->fields.leftAnchor) = 10;
-  IndexOfAny_63696296 = System_String__LastIndexOfAny_63696296(mText, (System_Char_array *)this, v3, 0);
+  IndexOfAny_64026636 = System_String__LastIndexOfAny_64026636(mText, (System_Char_array *)this, v3, 0);
   v8 = v4->fields.mText;
-  v9 = IndexOfAny_63696296;
-  v10 = (System_Array_o *)sub_1C3E60C(char___TypeInfo, 4);
+  v9 = IndexOfAny_64026636;
+  v10 = (System_Array_o *)sub_1C6BAB0(char___TypeInfo, 4);
   v11.fields.value = Field__PrivateImplementationDetails__A553BADB17A168A36B44DA9D26F99CB2EEC465BFD5E69C5D695D0F2F66629EF5;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v10, v11, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v10, v11, 0);
   if ( !v8 )
 LABEL_20:
-    sub_1C3E7C0(this, *(_QWORD *)&characterIndex);
-  this = (UILabel_o *)System_String__IndexOfAny_63694176(v8, (System_Char_array *)v10, v3, 0);
+    sub_1C6BC60(this, *(_QWORD *)&characterIndex);
+  this = (UILabel_o *)System_String__IndexOfAny_64024516(v8, (System_Char_array *)v10, v3, 0);
   if ( (_DWORD)this == -1 )
   {
     v12 = v4->fields.mText;
@@ -1372,7 +1372,7 @@ LABEL_20:
   this = (UILabel_o *)v4->fields.mText;
   if ( !this )
     goto LABEL_20;
-  v14 = System_String__Substring_63682392((System_String_o *)this, characterIndex, v13, 0);
+  v14 = System_String__Substring_64012732((System_String_o *)this, characterIndex, v13, 0);
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUIText_TypeInfo);
   return NGUIText__StripSymbols(v14, 0);
@@ -1390,17 +1390,17 @@ System_String_o *UILabel__GetWordAtPosition(UILabel_o *this, UnityEngine_Vector3
 }
 
 
-System_String_o *UILabel__GetWordAtPosition_49593332(
+System_String_o *UILabel__GetWordAtPosition_49822216(
         UILabel_o *this,
         UnityEngine_Vector2_o localPos,
         const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
-  int32_t CharacterIndexAtPosition_49591768; // w1
+  int32_t CharacterIndexAtPosition_49820652; // w1
   const MethodInfo *v6; // x2
 
-  CharacterIndexAtPosition_49591768 = UILabel__GetCharacterIndexAtPosition_49591768(this, localPos, 1, v3);
-  return UILabel__GetWordAtCharacterIndex(this, CharacterIndexAtPosition_49591768, v6);
+  CharacterIndexAtPosition_49820652 = UILabel__GetCharacterIndexAtPosition_49820652(this, localPos, 1, v3);
+  return UILabel__GetWordAtCharacterIndex(this, CharacterIndexAtPosition_49820652, v6);
 }
 
 
@@ -1459,10 +1459,10 @@ void UILabel__MakePixelPerfect(UILabel_o *this, const MethodInfo *method)
   double iptr; // [xsp+8h] [xbp-58h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B657 & 1) == 0 )
+  if ( (byte_4CBAC34 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B657 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC34 = 1;
   }
   ambigiousFont = UILabel__get_ambigiousFont(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1475,15 +1475,15 @@ void UILabel__MakePixelPerfect(UILabel_o *this, const MethodInfo *method)
   cachedTransform = UIRect__get_cachedTransform((UIRect_o *)this, 0);
   if ( !cachedTransform )
 LABEL_102:
-    sub_1C3E7C0(cachedTransform, v5);
+    sub_1C6BC60(cachedTransform, v5);
   localPosition = UnityEngine_Transform__get_localPosition(cachedTransform, 0);
   x = localPosition.fields.x;
   y = localPosition.fields.y;
   z = localPosition.fields.z;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1517,10 +1517,10 @@ LABEL_22:
     v14 = -2147500000.0;
   else
     v14 = (float)(int)v11;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1554,10 +1554,10 @@ LABEL_39:
     v20 = -2147500000.0;
   else
     v20 = (float)(int)v17;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1602,10 +1602,10 @@ LABEL_56:
   UnityEngine_Transform__set_localPosition(cachedTransform, *(UnityEngine_Vector3_o *)(&v27 - 2), 0);
   cachedTransform = UIRect__get_cachedTransform((UIRect_o *)this, 0);
   v30 = cachedTransform;
-  if ( !byte_4C506A6 )
+  if ( !byte_4CAFC0E )
   {
-    cachedTransform = (UnityEngine_Transform_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A6 = 1;
+    cachedTransform = (UnityEngine_Transform_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC0E = 1;
   }
   if ( !v30 )
     goto LABEL_102;
@@ -1621,13 +1621,13 @@ LABEL_56:
     this->fields.mWidth = 100000;
   this->fields.mHeight = 100000;
   this->fields.mOverflow = 0;
-  UILabel__ProcessText_49582056(this, 0, 1, v32);
+  UILabel__ProcessText_49810940(this, 0, 1, v32);
   this->fields.mOverflow = mOverflow;
   v35 = this->fields.mCalculatedSize.fields.x;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1662,10 +1662,10 @@ LABEL_81:
     v42 = 0x80000000;
   else
     v42 = (int)v38;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1732,10 +1732,10 @@ void UILabel__OnAnchor(UILabel_o *this, const MethodInfo *method)
   UnityEngine_Object_o *v7; // x20
 
   v2 = this;
-  if ( (byte_4C5B652 & 1) == 0 )
+  if ( (byte_4CBAC2F & 1) == 0 )
   {
-    this = (UILabel_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B652 = 1;
+    this = (UILabel_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC2F = 1;
   }
   mOverflow = v2->fields.mOverflow;
   if ( mOverflow != 3 )
@@ -1758,7 +1758,7 @@ LABEL_15:
   bottomAnchor = v2->fields.bottomAnchor;
   if ( !bottomAnchor )
 LABEL_17:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   v7 = (UnityEngine_Object_o *)bottomAnchor->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1776,11 +1776,11 @@ void UILabel__OnDisable(UILabel_o *this, const MethodInfo *method)
   UILabel_c *v5; // x0
   BetterList_T__o *mList; // x0
 
-  if ( (byte_4C5B64C & 1) == 0 )
+  if ( (byte_4CBAC29 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_UILabel__Remove__);
-    sub_1C3E564(&UILabel_TypeInfo);
-    byte_4C5B64C = 1;
+    sub_1C6BA08(&Method_BetterList_UILabel__Remove__);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    byte_4CBAC29 = 1;
   }
   UILabel__SetActiveFont(this, 0, v2);
   v5 = UILabel_TypeInfo;
@@ -1791,11 +1791,11 @@ void UILabel__OnDisable(UILabel_o *this, const MethodInfo *method)
   }
   mList = (BetterList_T__o *)v5->static_fields->mList;
   if ( !mList )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   BetterList_object___Remove(
     mList,
     (Il2CppObject *)this,
-    (const MethodInfo_332C158 *)Method_BetterList_UILabel__Remove__);
+    (const MethodInfo_3371BF4 *)Method_BetterList_UILabel__Remove__);
   UIWidget__OnDisable((UIWidget_o *)this, 0);
 }
 
@@ -1806,12 +1806,12 @@ void UILabel__OnEnable(UILabel_o *this, const MethodInfo *method)
   struct UILabel_StaticFields *static_fields; // x8
   System_Action_object__o *v5; // x19
 
-  if ( (byte_4C5B654 & 1) == 0 )
+  if ( (byte_4CBAC31 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_Font__TypeInfo);
-    sub_1C3E564(&Method_UILabel_OnFontChanged__);
-    sub_1C3E564(&UILabel_TypeInfo);
-    byte_4C5B654 = 1;
+    sub_1C6BA08(&System_Action_Font__TypeInfo);
+    sub_1C6BA08(&Method_UILabel_OnFontChanged__);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    byte_4CBAC31 = 1;
   }
   UIRect__OnEnable((UIRect_o *)this, 0);
   v3 = UILabel_TypeInfo;
@@ -1829,7 +1829,7 @@ void UILabel__OnEnable(UILabel_o *this, const MethodInfo *method)
       static_fields = UILabel_TypeInfo->static_fields;
     }
     static_fields->mTexRebuildAdded = 1;
-    v5 = (System_Action_object__o *)sub_1C3E7B0(System_Action_Font__TypeInfo);
+    v5 = (System_Action_object__o *)sub_1C6BC54(System_Action_Font__TypeInfo);
     System_Action_object____ctor(v5, 0, Method_UILabel_OnFontChanged__, 0);
     UnityEngine_Font__add_textureRebuilt((System_Action_Font__o *)v5, 0);
   }
@@ -1888,12 +1888,12 @@ void UILabel__OnFill(
   UnityEngine_Color_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5B65E & 1) == 0 )
+  if ( (byte_4CBAC3B & 1) == 0 )
   {
-    sub_1C3E564(&NGUIText_TypeInfo);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B65E = 1;
+    sub_1C6BA08(&NGUIText_TypeInfo);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC3B = 1;
   }
   isValid = (UIFont_o *)UILabel__get_isValid(this, (const MethodInfo *)verts);
   if ( ((unsigned __int8)isValid & 1) != 0 )
@@ -1951,10 +1951,10 @@ void UILabel__OnFill(
     static_fields[14] = finalAlpha;
     NGUIText__Print(v20, verts, uvs, cols, 0);
     NGUIText_TypeInfo->static_fields->bitmapFont = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v24, v25);
+    sub_1C6B9AC((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v24, v25);
     v26 = NGUIText_TypeInfo->static_fields;
     v26->dynamicFont = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v26->dynamicFont, 0, v27, v28);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v26->dynamicFont, 0, v27, v28);
     UILabel__ApplyOffset(this, verts, v19, v29);
     v30 = (UnityEngine_Object_o *)this->fields.mFont;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2018,7 +2018,7 @@ LABEL_22:
       goto LABEL_22;
     }
 LABEL_35:
-    sub_1C3E7C0(isValid, v10);
+    sub_1C6BC60(isValid, v10);
   }
 }
 
@@ -2039,14 +2039,14 @@ void UILabel__OnFontChanged(UnityEngine_Font_o *font, const MethodInfo *method)
   UnityEngine_Object_o *v14; // x21
   UIPanel_c *v15; // x0
 
-  if ( (byte_4C5B64E & 1) == 0 )
+  if ( (byte_4CBAC2B & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_UILabel__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_HashSet_UIPanel__Add__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UILabel_TypeInfo);
-    sub_1C3E564(&UIPanel_TypeInfo);
-    byte_4C5B64E = 1;
+    sub_1C6BA08(&Method_BetterList_UILabel__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_HashSet_UIPanel__Add__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    sub_1C6BA08(&UIPanel_TypeInfo);
+    byte_4CBAC2B = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -2059,7 +2059,7 @@ void UILabel__OnFontChanged(UnityEngine_Font_o *font, const MethodInfo *method)
     mList = **(BetterList_T__o ***)&updateAgainPanels[2].fields._freeList;
     if ( !mList )
 LABEL_48:
-      sub_1C3E7C0(updateAgainPanels, method);
+      sub_1C6BC60(updateAgainPanels, method);
     if ( i >= mList->fields.size )
       break;
     if ( !LODWORD(updateAgainPanels[3].monitor) )
@@ -2069,7 +2069,7 @@ LABEL_48:
       if ( !mList )
         goto LABEL_48;
     }
-    Item = BetterList_object___get_Item(mList, i, (const MethodInfo_332BC78 *)Method_BetterList_UILabel__get_Item__);
+    Item = BetterList_object___get_Item(mList, i, (const MethodInfo_3371714 *)Method_BetterList_UILabel__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     updateAgainPanels = (System_Collections_Generic_HashSet_T__o *)UnityEngine_Object__op_Inequality(
@@ -2119,7 +2119,7 @@ LABEL_48:
       if ( !v9 )
         goto LABEL_48;
     }
-    v10 = BetterList_object___get_Item(v9, j, (const MethodInfo_332BC78 *)Method_BetterList_UILabel__get_Item__);
+    v10 = BetterList_object___get_Item(v9, j, (const MethodInfo_3371714 *)Method_BetterList_UILabel__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     updateAgainPanels = (System_Collections_Generic_HashSet_T__o *)UnityEngine_Object__op_Inequality(
@@ -2167,7 +2167,7 @@ LABEL_48:
               System_Collections_Generic_HashSet_object___Add(
                 updateAgainPanels,
                 (Il2CppObject *)v14,
-                (const MethodInfo_366D6B0 *)Method_System_Collections_Generic_HashSet_UIPanel__Add__);
+                (const MethodInfo_36B85C4 *)Method_System_Collections_Generic_HashSet_UIPanel__Add__);
             }
           }
         }
@@ -2190,14 +2190,14 @@ void UILabel__OnInit(UILabel_o *this, const MethodInfo *method)
   System_String_o *v10; // x0
   System_String_o *v11; // x0
 
-  if ( (byte_4C5B64B & 1) == 0 )
+  if ( (byte_4CBAC28 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_UILabel__Add__);
-    sub_1C3E564(&UILabel_TypeInfo);
-    sub_1C3E564(&StringLiteral_10956/*"RANKUP_GRADIENT_BOTTOM"*/);
-    sub_1C3E564(&StringLiteral_10957/*"RANKUP_GRADIENT_TOP"*/);
-    sub_1C3E564(&StringLiteral_10958/*"RANKUP_OUTLINE"*/);
-    byte_4C5B64B = 1;
+    sub_1C6BA08(&Method_BetterList_UILabel__Add__);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    sub_1C6BA08(&StringLiteral_10952/*"RANKUP_GRADIENT_BOTTOM"*/);
+    sub_1C6BA08(&StringLiteral_10953/*"RANKUP_GRADIENT_TOP"*/);
+    sub_1C6BA08(&StringLiteral_10954/*"RANKUP_OUTLINE"*/);
+    byte_4CBAC28 = 1;
   }
   UIWidget__OnInit((UIWidget_o *)this, 0);
   v4 = UILabel_TypeInfo;
@@ -2208,15 +2208,15 @@ void UILabel__OnInit(UILabel_o *this, const MethodInfo *method)
   }
   mList = (BetterList_T__o *)v4->static_fields->mList;
   if ( !mList )
-    sub_1C3E7C0(0, v3);
-  BetterList_object___Add(mList, (Il2CppObject *)this, (const MethodInfo_332BEA0 *)Method_BetterList_UILabel__Add__);
+    sub_1C6BC60(0, v3);
+  BetterList_object___Add(mList, (Il2CppObject *)this, (const MethodInfo_337193C *)Method_BetterList_UILabel__Add__);
   trueTypeFont = UILabel__get_trueTypeFont(this, v6);
   UILabel__SetActiveFont(this, trueTypeFont, v8);
-  v9 = NguiLocalizationManager__Get((System_String_o *)StringLiteral_10957/*"RANKUP_GRADIENT_TOP"*/, 0);
+  v9 = NguiLocalizationManager__Get((System_String_o *)StringLiteral_10953/*"RANKUP_GRADIENT_TOP"*/, 0);
   UnityEngine_ColorUtility__TryParseHtmlString(v9, &this->fields.specificGradientTop, 0);
-  v10 = NguiLocalizationManager__Get((System_String_o *)StringLiteral_10956/*"RANKUP_GRADIENT_BOTTOM"*/, 0);
+  v10 = NguiLocalizationManager__Get((System_String_o *)StringLiteral_10952/*"RANKUP_GRADIENT_BOTTOM"*/, 0);
   UnityEngine_ColorUtility__TryParseHtmlString(v10, &this->fields.specificGradientBottom, 0);
-  v11 = NguiLocalizationManager__Get((System_String_o *)StringLiteral_10958/*"RANKUP_OUTLINE"*/, 0);
+  v11 = NguiLocalizationManager__Get((System_String_o *)StringLiteral_10954/*"RANKUP_OUTLINE"*/, 0);
   UnityEngine_ColorUtility__TryParseHtmlString(v11, &this->fields.specificOutline, 0);
 }
 
@@ -2238,20 +2238,20 @@ void UILabel__OnStart(UILabel_o *this, const MethodInfo *method)
   bool v15; // w0
   double iptr; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C5B655 & 1) == 0 )
+  if ( (byte_4CBAC32 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_10727/*"Premultiplied"*/);
-    byte_4C5B655 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_10723/*"Premultiplied"*/);
+    byte_4CBAC32 = 1;
   }
   UIWidget__OnStart((UIWidget_o *)this, 0);
   mLineWidth = this->fields.mLineWidth;
   if ( mLineWidth <= 0.0 )
     goto LABEL_21;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -2322,9 +2322,9 @@ LABEL_34:
     || (name = (UnityEngine_Material_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)name, 0)) == 0 )
   {
 LABEL_36:
-    sub_1C3E7C0(name, v13);
+    sub_1C6BC60(name, v13);
   }
-  v15 = System_String__Contains((System_String_o *)name, (System_String_o *)StringLiteral_10727/*"Premultiplied"*/, 0);
+  v15 = System_String__Contains((System_String_o *)name, (System_String_o *)StringLiteral_10723/*"Premultiplied"*/, 0);
 LABEL_35:
   this->fields.mPremultiply = v15;
   UILabel__ProcessAndRequest(this, v11);
@@ -2386,12 +2386,12 @@ void UILabel__PrintOverlay(
   v12 = caretColor.fields.a;
   b = caretColor.fields.b;
   v14 = *(long double *)&caretColor.fields.g;
-  if ( (byte_4C5B65D & 1) == 0 )
+  if ( (byte_4CBAC3A & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_Color32__Add__);
-    sub_1C3E564(&Method_BetterList_Vector2__Add__);
-    sub_1C3E564(&NGUIText_TypeInfo);
-    byte_4C5B65D = 1;
+    sub_1C6BA08(&Method_BetterList_Color32__Add__);
+    sub_1C6BA08(&Method_BetterList_Vector2__Add__);
+    sub_1C6BA08(&NGUIText_TypeInfo);
+    byte_4CBAC3A = 1;
   }
   if ( caret )
     UIGeometry__Clear(caret, 0);
@@ -2426,12 +2426,12 @@ void UILabel__PrintOverlay(
   v25 = highlight->fields.verts;
   if ( !v25 )
 LABEL_34:
-    sub_1C3E7C0(uvs, v25);
+    sub_1C6BC60(uvs, v25);
   if ( v25->fields.size > v30 )
   {
     UILabel__ApplyOffset(this, v25, v30, v31);
     *(float *)&v32 = a * finalAlpha;
-    uvs = (BetterList_Vector2__o *)sub_2531AB4(0, *(long double *)&highlightColor, v10, v9, v32);
+    uvs = (BetterList_Vector2__o *)sub_255DA24(0, *(long double *)&highlightColor, v10, v9, v32);
     v33 = highlight->fields.verts;
     if ( !v33 )
       goto LABEL_34;
@@ -2444,7 +2444,7 @@ LABEL_34:
       {
         v50.fields.x = 0.5;
         v50.fields.y = 0.5;
-        BetterList_Vector2___Add(uvs, v50, (const MethodInfo_332D140 *)Method_BetterList_Vector2__Add__);
+        BetterList_Vector2___Add(uvs, v50, (const MethodInfo_3372BDC *)Method_BetterList_Vector2__Add__);
         uvs = (BetterList_Vector2__o *)highlight->fields.cols;
         if ( uvs )
         {
@@ -2452,7 +2452,7 @@ LABEL_34:
           BetterList_Color32___Add(
             (BetterList_Color32__o *)uvs,
             v36,
-            (const MethodInfo_332ABF4 *)Method_BetterList_Color32__Add__);
+            (const MethodInfo_3370690 *)Method_BetterList_Color32__Add__);
           v33 = highlight->fields.verts;
           if ( v33 )
             continue;
@@ -2465,7 +2465,7 @@ LABEL_28:
   UILabel__ApplyOffset(this, caret->fields.verts, size, v31);
   *(float *)&v37 = v49;
   *(float *)&v38 = v12 * finalAlpha;
-  uvs = (BetterList_Vector2__o *)sub_2531AB4(0, *(long double *)&caretColor, v14, v37, v38);
+  uvs = (BetterList_Vector2__o *)sub_255DA24(0, *(long double *)&caretColor, v14, v37, v38);
   v41 = caret->fields.verts;
   if ( !v41 )
     goto LABEL_34;
@@ -2478,7 +2478,7 @@ LABEL_28:
     {
       v51.fields.x = 0.5;
       v51.fields.y = 0.5;
-      BetterList_Vector2___Add(uvs, v51, (const MethodInfo_332D140 *)Method_BetterList_Vector2__Add__);
+      BetterList_Vector2___Add(uvs, v51, (const MethodInfo_3372BDC *)Method_BetterList_Vector2__Add__);
       uvs = (BetterList_Vector2__o *)caret->fields.cols;
       if ( uvs )
       {
@@ -2486,7 +2486,7 @@ LABEL_28:
         BetterList_Color32___Add(
           (BetterList_Color32__o *)uvs,
           v44,
-          (const MethodInfo_332ABF4 *)Method_BetterList_Color32__Add__);
+          (const MethodInfo_3370690 *)Method_BetterList_Color32__Add__);
         v41 = caret->fields.verts;
         if ( v41 )
           continue;
@@ -2501,10 +2501,10 @@ LABEL_28:
     v45 = NGUIText_TypeInfo;
   }
   v45->static_fields->bitmapFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v39, v40);
+  sub_1C6B9AC((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v39, v40);
   static_fields = NGUIText_TypeInfo->static_fields;
   static_fields->dynamicFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->dynamicFont, 0, v47, v48);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->dynamicFont, 0, v47, v48);
 }
 
 
@@ -2513,16 +2513,16 @@ void UILabel__ProcessAndRequest(UILabel_o *this, const MethodInfo *method)
   UnityEngine_Object_o *ambigiousFont; // x20
   const MethodInfo *v4; // x3
 
-  if ( (byte_4C5B653 & 1) == 0 )
+  if ( (byte_4CBAC30 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B653 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC30 = 1;
   }
   ambigiousFont = UILabel__get_ambigiousFont(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(ambigiousFont, 0, 0) )
-    UILabel__ProcessText_49582056(this, 0, 1, v4);
+    UILabel__ProcessText_49810940(this, 0, 1, v4);
 }
 
 
@@ -2530,12 +2530,12 @@ void UILabel__ProcessText(UILabel_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
 
-  UILabel__ProcessText_49582056(this, 0, 1, v2);
+  UILabel__ProcessText_49810940(this, 0, 1, v2);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void UILabel__ProcessText_49582056(UILabel_o *this, bool legacyMode, bool full, const MethodInfo *method)
+void UILabel__ProcessText_49810940(UILabel_o *this, bool legacyMode, bool full, const MethodInfo *method)
 {
   const MethodInfo *v7; // x1
   int32_t mMaxLineWidth; // w22
@@ -2685,12 +2685,12 @@ void UILabel__ProcessText_49582056(UILabel_o *this, bool legacyMode, bool full, 
   char v152; // [xsp+Ch] [xbp-94h]
   double iptr; // [xsp+18h] [xbp-88h] BYREF
 
-  if ( (byte_4C5B656 & 1) == 0 )
+  if ( (byte_4CBAC33 & 1) == 0 )
   {
-    sub_1C3E564(&NGUIText_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B656 = 1;
+    sub_1C6BA08(&NGUIText_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC33 = 1;
   }
   if ( !UILabel__get_isValid(this, (const MethodInfo *)legacyMode) )
     return;
@@ -2759,10 +2759,10 @@ LABEL_18:
     if ( v16 == 1.0 )
       goto LABEL_18;
   }
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   v21 = v16 * (float)rectWidth;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2831,10 +2831,10 @@ LABEL_41:
     if ( v27 == 1.0 )
       goto LABEL_41;
   }
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   v33 = v27 * (float)rectHeight;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -2888,10 +2888,10 @@ LABEL_62:
   if ( !cachedTransform )
     goto LABEL_319;
   LODWORD(v41) = (unsigned int)UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)cachedTransform, 0);
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -2927,10 +2927,10 @@ LABEL_81:
   else
     defaultFontSize = (int)v47;
 LABEL_84:
-  if ( !byte_4C51698 )
+  if ( !byte_4CB0BE0 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51698 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB0BE0 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -2961,7 +2961,7 @@ LABEL_115:
     v61 = StringLiteral_1/*""*/;
     this->fields.mProcessedText = (struct System_String_o *)StringLiteral_1/*""*/;
 LABEL_317:
-    sub_1C3E508((CGThumbnailListItem_o *)p_mProcessedText, v61, v44, v45);
+    sub_1C6B9AC((CGThumbnailListItem_o *)p_mProcessedText, v61, v44, v45);
     return;
   }
   trueTypeFont = (UnityEngine_Object_o *)UILabel__get_trueTypeFont(this, v43);
@@ -3021,22 +3021,22 @@ LABEL_123:
   {
     cachedTransform = (__int64)UIRect__get_cachedTransform((UIRect_o *)this, 0);
     v78 = (UnityEngine_Transform_o *)cachedTransform;
-    if ( !byte_4C506A6 )
+    if ( !byte_4CAFC0E )
     {
-      cachedTransform = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A6 = 1;
+      cachedTransform = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC0E = 1;
     }
     if ( v78 )
     {
       UnityEngine_Transform__set_localScale(v78, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
       v79 = StringLiteral_1/*""*/;
       this->fields.mProcessedText = (struct System_String_o *)StringLiteral_1/*""*/;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mProcessedText, v79, v80, v81);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mProcessedText, v79, v80, v81);
       this->fields.mScale = 1.0;
       goto LABEL_313;
     }
 LABEL_319:
-    sub_1C3E7C0(cachedTransform, v40);
+    sub_1C6BC60(cachedTransform, v40);
   }
   v152 = v18;
   v64 = v30;
@@ -3088,8 +3088,8 @@ LABEL_319:
     }
     if ( !v71->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v71);
-    NGUIText__Update_49383100(0, 0);
-    v75 = NGUIText__WrapText_49398252(this->fields.mText, &this->fields.mProcessedText, 1, 0);
+    NGUIText__Update_49611984(0, 0);
+    v75 = NGUIText__WrapText_49627136(this->fields.mText, &this->fields.mProcessedText, 1, 0);
     v76 = this->fields.mOverflow;
     if ( v75 || v76 )
       break;
@@ -3111,10 +3111,10 @@ LABEL_319:
             klass->vtable._34_get_minWidth.method);
     v86 = this->fields.mCalculatedSize.fields.x;
     v87 = v85;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -3159,10 +3159,10 @@ LABEL_226:
                this->klass->vtable._35_get_minHeight.method);
       v120 = this->fields.mCalculatedSize.fields.y;
       v121 = v119;
-      if ( !byte_4C51E80 )
+      if ( !byte_4CB13C8 )
       {
-        sub_1C3E564(&System_Math_TypeInfo);
-        byte_4C51E80 = 1;
+        sub_1C6BA08(&System_Math_TypeInfo);
+        byte_4CB13C8 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -3202,10 +3202,10 @@ LABEL_240:
       if ( (v64 & 1) != 0 )
         goto LABEL_264;
       v127 = (float)v110;
-      if ( !byte_4C51E80 )
+      if ( !byte_4CB13C8 )
       {
-        sub_1C3E564(&System_Math_TypeInfo);
-        byte_4C51E80 = 1;
+        sub_1C6BA08(&System_Math_TypeInfo);
+        byte_4CB13C8 = 1;
       }
       v128 = v127 / v27;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3249,10 +3249,10 @@ LABEL_264:
       goto LABEL_272;
     }
     v103 = (float)v102;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     v104 = v103 / v16;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3302,10 +3302,10 @@ LABEL_222:
             this->klass->vtable._35_get_minHeight.method);
     v94 = this->fields.mCalculatedSize.fields.y;
     v95 = v93;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -3345,10 +3345,10 @@ LABEL_202:
     if ( (v64 & 1) != 0 )
       goto LABEL_272;
     v111 = (float)v110;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     v112 = v111 / v27;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3392,10 +3392,10 @@ LABEL_272:
   if ( !legacyMode )
     goto LABEL_313;
   v135 = this->fields.mCalculatedSize.fields.x;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -3431,10 +3431,10 @@ LABEL_289:
     v141 = (int)v138;
   UIWidget__set_width((UIWidget_o *)this, v141, 0);
   v142 = this->fields.mCalculatedSize.fields.y;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -3471,10 +3471,10 @@ LABEL_306:
   UIWidget__set_height((UIWidget_o *)this, v148, 0);
   cachedTransform = (__int64)UIRect__get_cachedTransform((UIRect_o *)this, 0);
   v149 = (UnityEngine_Transform_o *)cachedTransform;
-  if ( !byte_4C506A6 )
+  if ( !byte_4CAFC0E )
   {
-    cachedTransform = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A6 = 1;
+    cachedTransform = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC0E = 1;
   }
   if ( !v149 )
     goto LABEL_319;
@@ -3489,7 +3489,7 @@ LABEL_313:
       v150 = NGUIText_TypeInfo;
     }
     v150->static_fields->bitmapFont = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v66, v67);
+    sub_1C6B9AC((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v66, v67);
     v61 = 0;
     v151 = NGUIText_TypeInfo->static_fields;
     v151->dynamicFont = 0;
@@ -3504,11 +3504,11 @@ void UILabel__RemoveFromDynamicFontList(UILabel_o *this, const MethodInfo *metho
   UILabel_c *v3; // x0
   BetterList_T__o *mList; // x0
 
-  if ( (byte_4C5B650 & 1) == 0 )
+  if ( (byte_4CBAC2D & 1) == 0 )
   {
-    sub_1C3E564(&Method_BetterList_UILabel__Remove__);
-    sub_1C3E564(&UILabel_TypeInfo);
-    byte_4C5B650 = 1;
+    sub_1C6BA08(&Method_BetterList_UILabel__Remove__);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    byte_4CBAC2D = 1;
   }
   v3 = UILabel_TypeInfo;
   if ( !UILabel_TypeInfo->_2.cctor_finished )
@@ -3518,11 +3518,11 @@ void UILabel__RemoveFromDynamicFontList(UILabel_o *this, const MethodInfo *metho
   }
   mList = (BetterList_T__o *)v3->static_fields->mList;
   if ( !mList )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   BetterList_object___Remove(
     mList,
     (Il2CppObject *)this,
-    (const MethodInfo_332C158 *)Method_BetterList_UILabel__Remove__);
+    (const MethodInfo_3371BF4 *)Method_BetterList_UILabel__Remove__);
 }
 
 
@@ -3542,14 +3542,14 @@ void UILabel__SetActiveFont(UILabel_o *this, UnityEngine_Font_o *fnt, const Meth
   UILabel_c *v16; // x0
   int32_t value; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C5B64D & 1) == 0 )
+  if ( (byte_4CBAC2A & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Font__int__Remove__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Font__int__TryGetValue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Font__int__set_Item__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UILabel_TypeInfo);
-    byte_4C5B64D = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Font__int__Remove__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Font__int__TryGetValue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Font__int__set_Item__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    byte_4CBAC2A = 1;
   }
   value = 0;
   mActiveTTF = (UnityEngine_Object_o *)this->fields.mActiveTTF;
@@ -3576,7 +3576,7 @@ void UILabel__SetActiveFont(UILabel_o *this, UnityEngine_Font_o *fnt, const Meth
              mFontUsage,
              *p_mActiveTTF,
              &value,
-             (const MethodInfo_346E26C *)Method_System_Collections_Generic_Dictionary_Font__int__TryGetValue__) )
+             (const MethodInfo_34B43C8 *)Method_System_Collections_Generic_Dictionary_Font__int__TryGetValue__) )
       {
         v13 = UILabel_TypeInfo;
         v14 = value - 1;
@@ -3595,7 +3595,7 @@ void UILabel__SetActiveFont(UILabel_o *this, UnityEngine_Font_o *fnt, const Meth
           System_Collections_Generic_Dictionary_object__int___Remove(
             mFontUsage,
             v8,
-            (const MethodInfo_346DF5C *)Method_System_Collections_Generic_Dictionary_Font__int__Remove__);
+            (const MethodInfo_34B40B8 *)Method_System_Collections_Generic_Dictionary_Font__int__Remove__);
         }
         else
         {
@@ -3605,12 +3605,12 @@ void UILabel__SetActiveFont(UILabel_o *this, UnityEngine_Font_o *fnt, const Meth
             mFontUsage,
             v8,
             value,
-            (const MethodInfo_346CA9C *)Method_System_Collections_Generic_Dictionary_Font__int__set_Item__);
+            (const MethodInfo_34B2BF8 *)Method_System_Collections_Generic_Dictionary_Font__int__set_Item__);
         }
       }
     }
     *p_mActiveTTF = (Il2CppObject *)fnt;
-    sub_1C3E508((CGThumbnailListItem_o *)p_mActiveTTF, (int32_t)fnt, v9, v10);
+    sub_1C6B9AC((CGThumbnailListItem_o *)p_mActiveTTF, (int32_t)fnt, v9, v10);
     v15 = *p_mActiveTTF;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -3629,11 +3629,11 @@ void UILabel__SetActiveFont(UILabel_o *this, UnityEngine_Font_o *fnt, const Meth
           mFontUsage,
           *p_mActiveTTF,
           1,
-          (const MethodInfo_346CA9C *)Method_System_Collections_Generic_Dictionary_Font__int__set_Item__);
+          (const MethodInfo_34B2BF8 *)Method_System_Collections_Generic_Dictionary_Font__int__set_Item__);
         return;
       }
 LABEL_28:
-      sub_1C3E7C0(mFontUsage, v8);
+      sub_1C6BC60(mFontUsage, v8);
     }
   }
 }
@@ -3642,12 +3642,12 @@ LABEL_28:
 // local variable allocation has failed, the output may be wrong!
 void UILabel__SetCondensedScale(UILabel_o *this, int32_t maxWidth, int32_t correctWidth, const MethodInfo *method)
 {
-  UILabel__SetCondensedScale_49599236(this, (float)maxWidth, (float)correctWidth, *(const MethodInfo **)&maxWidth);
+  UILabel__SetCondensedScale_49828120(this, (float)maxWidth, (float)correctWidth, *(const MethodInfo **)&maxWidth);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void UILabel__SetCondensedScale_49599236(UILabel_o *this, float maxWidth, float correctWidth, const MethodInfo *method)
+void UILabel__SetCondensedScale_49828120(UILabel_o *this, float maxWidth, float correctWidth, const MethodInfo *method)
 {
   float v5; // s9
   __int64 transform; // x0
@@ -3663,10 +3663,10 @@ void UILabel__SetCondensedScale_49599236(UILabel_o *this, float maxWidth, float 
   v8 = (UnityEngine_Transform_o *)transform;
   if ( v5 <= maxWidth )
   {
-    if ( !byte_4C506A6 )
+    if ( !byte_4CAFC0E )
     {
-      transform = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A6 = 1;
+      transform = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC0E = 1;
     }
     if ( v8 )
     {
@@ -3677,7 +3677,7 @@ void UILabel__SetCondensedScale_49599236(UILabel_o *this, float maxWidth, float 
       goto LABEL_8;
     }
 LABEL_9:
-    sub_1C3E7C0(transform, v7);
+    sub_1C6BC60(transform, v7);
   }
   if ( !transform )
     goto LABEL_9;
@@ -3708,12 +3708,12 @@ void UILabel__SetCurrentPercent(UILabel_o *this, const MethodInfo *method)
   int v17; // [xsp+Ch] [xbp-44h] BYREF
   double iptr; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_4C5B662 & 1) == 0 )
+  if ( (byte_4CBAC3F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIProgressBar_TypeInfo);
-    sub_1C3E564(&StringLiteral_479/*"%"*/);
-    byte_4C5B662 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIProgressBar_TypeInfo);
+    sub_1C6BA08(&StringLiteral_478/*"%"*/);
+    byte_4CBAC3F = 1;
   }
   v17 = 0;
   current = (UnityEngine_Object_o *)UIProgressBar_TypeInfo->static_fields->current;
@@ -3723,12 +3723,12 @@ void UILabel__SetCurrentPercent(UILabel_o *this, const MethodInfo *method)
   {
     v5 = UIProgressBar_TypeInfo->static_fields->current;
     if ( !v5 )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     value = UIProgressBar__get_value(v5, 0);
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     v7 = value * 100.0;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -3766,7 +3766,7 @@ LABEL_21:
       v13 = (int)v10;
     v17 = v13;
     v14 = System_Int32__ToString((int32_t)&v17, 0);
-    v15 = System_String__Concat_63636468(v14, (System_String_o *)StringLiteral_479/*"%"*/, 0);
+    v15 = System_String__Concat_63966792(v14, (System_String_o *)StringLiteral_478/*"%"*/, 0);
     UILabel__set_text(this, v15, v16);
   }
 }
@@ -3780,31 +3780,25 @@ void UILabel__SetCurrentPercentFloat(UILabel_o *this, const MethodInfo *method)
   float value; // s8
   float v7; // s9
   double v8; // d8
-  __int64 v9; // x2
-  __int64 v10; // x3
-  __int64 v11; // x4
-  __int64 v12; // x5
-  __int64 v13; // x6
-  __int64 v14; // x7
-  double v15; // d0
-  double v16; // d0
-  double v17; // d1
-  double v18; // d1
-  bool v19; // zf
-  float v20; // s0
-  Il2CppObject *v21; // x0
-  System_String_o *v22; // x0
-  const MethodInfo *v23; // x2
-  float v24; // [xsp+Ch] [xbp-44h] BYREF
+  double v9; // d0
+  double v10; // d0
+  double v11; // d1
+  double v12; // d1
+  bool v13; // zf
+  float v14; // s0
+  Il2CppObject *v15; // x0
+  System_String_o *v16; // x0
+  const MethodInfo *v17; // x2
+  float v18; // [xsp+Ch] [xbp-44h] BYREF
   double iptr; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_4C5B668 & 1) == 0 )
+  if ( (byte_4CBAC45 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&float_TypeInfo);
-    sub_1C3E564(&UIProgressBar_TypeInfo);
-    sub_1C3E564(&StringLiteral_25078/*"{0:0.0}%"*/);
-    byte_4C5B668 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&float_TypeInfo);
+    sub_1C6BA08(&UIProgressBar_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25168/*"{0:0.0}%"*/);
+    byte_4CBAC45 = 1;
   }
   current = (UnityEngine_Object_o *)UIProgressBar_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3813,51 +3807,51 @@ void UILabel__SetCurrentPercentFloat(UILabel_o *this, const MethodInfo *method)
   {
     v5 = UIProgressBar_TypeInfo->static_fields->current;
     if ( !v5 )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     value = UIProgressBar__get_value(v5, 0);
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     v7 = value * 1000.0;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
     v8 = v7;
-    v15 = modf(v7, &iptr);
+    v9 = modf(v7, &iptr);
     if ( v7 >= 0.0 )
     {
-      if ( v15 == 0.5 )
+      if ( v9 == 0.5 )
       {
-        v16 = iptr;
-        v17 = 1.0;
+        v10 = iptr;
+        v11 = 1.0;
 LABEL_16:
-        v18 = v16 + v17;
-        if ( ((__int64)v16 & 1) != 0 )
-          v16 = v18;
+        v12 = v10 + v11;
+        if ( ((__int64)v10 & 1) != 0 )
+          v10 = v12;
         goto LABEL_21;
       }
-      v16 = floor(v8 + 0.5);
+      v10 = floor(v8 + 0.5);
     }
     else
     {
-      if ( v15 == -0.5 )
+      if ( v9 == -0.5 )
       {
-        v16 = iptr;
-        v17 = -1.0;
+        v10 = iptr;
+        v11 = -1.0;
         goto LABEL_16;
       }
-      v16 = ceil(v8 + -0.5);
+      v10 = ceil(v8 + -0.5);
     }
 LABEL_21:
-    v19 = v16 == INFINITY;
-    v20 = (float)(int)v16 / 10.0;
-    if ( v19 )
-      v20 = -214750000.0;
-    v24 = fminf(v20, 100.0);
-    v21 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v24, v9, v10, v11, v12, v13, v14);
-    v22 = System_String__Format((System_String_o *)StringLiteral_25078/*"{0:0.0}%"*/, v21, 0);
-    UILabel__set_text(this, v22, v23);
+    v13 = v10 == INFINITY;
+    v14 = (float)(int)v10 / 10.0;
+    if ( v13 )
+      v14 = -214750000.0;
+    v18 = fminf(v14, 100.0);
+    v15 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v18);
+    v16 = System_String__Format((System_String_o *)StringLiteral_25168/*"{0:0.0}%"*/, v15, 0);
+    UILabel__set_text(this, v16, v17);
   }
 }
 
@@ -3871,12 +3865,12 @@ void UILabel__SetCurrentProgress(UILabel_o *this, const MethodInfo *method)
   const MethodInfo *v7; // x2
   System_String_o format; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C5B661 & 1) == 0 )
+  if ( (byte_4CBAC3E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIProgressBar_TypeInfo);
-    sub_1C3E564(&StringLiteral_6386/*"F"*/);
-    byte_4C5B661 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIProgressBar_TypeInfo);
+    sub_1C6BA08(&StringLiteral_6378/*"F"*/);
+    byte_4CBAC3E = 1;
   }
   current = (UnityEngine_Object_o *)UIProgressBar_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3885,9 +3879,9 @@ void UILabel__SetCurrentProgress(UILabel_o *this, const MethodInfo *method)
   {
     v5 = UIProgressBar_TypeInfo->static_fields->current;
     if ( !v5 )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     LODWORD(format.klass) = UIProgressBar__get_value(v5, 0);
-    v6 = System_Single__ToString_65231728(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6386/*"F"*/);
+    v6 = System_Single__ToString_65560440(*(float *)&format.klass, &format, (const MethodInfo *)StringLiteral_6378/*"F"*/);
     UILabel__set_text(this, v6, v7);
   }
 }
@@ -3902,12 +3896,12 @@ void UILabel__SetCurrentSelection(UILabel_o *this, const MethodInfo *method)
   struct UIPopupList_o *v7; // x8
   System_String_o *mSelectedItem; // x20
 
-  if ( (byte_4C5B663 & 1) == 0 )
+  if ( (byte_4CBAC40 & 1) == 0 )
   {
-    sub_1C3E564(&Localization_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIPopupList_TypeInfo);
-    byte_4C5B663 = 1;
+    sub_1C6BA08(&Localization_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIPopupList_TypeInfo);
+    byte_4CBAC40 = 1;
   }
   current = (UnityEngine_Object_o *)UIPopupList_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3928,7 +3922,7 @@ void UILabel__SetCurrentSelection(UILabel_o *this, const MethodInfo *method)
     }
     if ( !this )
 LABEL_14:
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     UILabel__set_text(this, mSelectedItem, v6);
   }
 }
@@ -3952,13 +3946,13 @@ void UILabel__SetDefaultFont(UILabel_o *this, const MethodInfo *method)
   const MethodInfo *v16; // x2
   UILabel_c *v17; // x0
 
-  if ( (byte_4C5B667 & 1) == 0 )
+  if ( (byte_4CBAC44 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Font_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UILabel_TypeInfo);
-    sub_1C3E564(&StringLiteral_6804/*"Fonts/FGO-Main-Font"*/);
-    byte_4C5B667 = 1;
+    sub_1C6BA08(&UnityEngine_Font_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UILabel_TypeInfo);
+    sub_1C6BA08(&StringLiteral_6797/*"Fonts/FGO-Main-Font"*/);
+    byte_4CBAC44 = 1;
   }
   trueTypeFont = (UnityEngine_Object_o *)UILabel__get_trueTypeFont(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -3981,7 +3975,7 @@ void UILabel__SetDefaultFont(UILabel_o *this, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Equality(defaultFont, 0, 0) )
         goto LABEL_22;
-      v9 = UnityEngine_Resources__Load((System_String_o *)StringLiteral_6804/*"Fonts/FGO-Main-Font"*/, 0);
+      v9 = UnityEngine_Resources__Load((System_String_o *)StringLiteral_6797/*"Fonts/FGO-Main-Font"*/, 0);
       if ( !UILabel_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UILabel_TypeInfo);
       if ( v9 )
@@ -3995,13 +3989,13 @@ void UILabel__SetDefaultFont(UILabel_o *this, const MethodInfo *method)
           if ( (UnityEngine_Font_c *)v9->klass == v10 )
             goto LABEL_21;
         }
-        sub_1C3EA80(v9);
+        sub_1C6BFFC(v9);
       }
       v13 = UILabel_TypeInfo->static_fields;
       v13->defaultFont = (struct UnityEngine_Font_o *)v9;
       p_defaultFont = (CGThumbnailListItem_o *)&v13->defaultFont;
 LABEL_21:
-      sub_1C3E508(p_defaultFont, (int32_t)v9, v7, v8);
+      sub_1C6B9AC(p_defaultFont, (int32_t)v9, v7, v8);
 LABEL_22:
       v14 = UILabel_TypeInfo;
       if ( !UILabel_TypeInfo->_2.cctor_finished )
@@ -4033,23 +4027,23 @@ void UILabel__UpdateCondensedScaleComponent(UILabel_o *this, const MethodInfo *m
   _BOOL8 v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C5B669 & 1) == 0 )
+  if ( (byte_4CBAC46 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B669 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC46 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_CondensedScaleLabel___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( v4 )
   {
     if ( !Component_object )
-      sub_1C3E7C0(v4, v5);
-    UILabel__SetCondensedScale_49599236(this, (float)SLODWORD(Component_object[3].monitor), 0.0, v5);
+      sub_1C6BC60(v4, v5);
+    UILabel__SetCondensedScale_49828120(this, (float)SLODWORD(Component_object[3].monitor), 0.0, v5);
   }
 }
 
@@ -4149,11 +4143,11 @@ void UILabel__UpdateNGUIText(UILabel_o *this, const MethodInfo *method)
   int v93; // w8
   struct UnityEngine_Color_o iptr; // [xsp+10h] [xbp-70h] BYREF
 
-  if ( (byte_4C5B665 & 1) == 0 )
+  if ( (byte_4CBAC42 & 1) == 0 )
   {
-    sub_1C3E564(&NGUIText_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B665 = 1;
+    sub_1C6BA08(&NGUIText_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC42 = 1;
   }
   trueTypeFont = (UnityEngine_Object_o *)UILabel__get_trueTypeFont(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4174,10 +4168,10 @@ void UILabel__UpdateNGUIText(UILabel_o *this, const MethodInfo *method)
   *(_QWORD *)&static_fields->rectWidth = v9;
   v10 = (float)(int)v9;
   v11 = this->fields.mDrawRegion.fields.z - this->fields.mDrawRegion.fields.x;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   v12 = v11 * v10;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -4214,10 +4208,10 @@ LABEL_21:
   NGUIText_TypeInfo->static_fields->regionWidth = v18;
   v19 = this->fields.mDrawRegion.fields.w - this->fields.mDrawRegion.fields.y;
   mHeight = (float)this->fields.mHeight;
-  if ( !byte_4C51E80 )
+  if ( !byte_4CB13C8 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C51E80 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB13C8 = 1;
   }
   v21 = v19 * mHeight;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -4345,7 +4339,7 @@ LABEL_37:
     do
     {
       *p_bitmapFont = (UIFont_o *)castClass;
-      sub_1C3E508((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, (int32_t)castClass, v42, v43);
+      sub_1C6B9AC((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, (int32_t)castClass, v42, v43);
       bitmapFont = (UIFont_o *)NGUIText_TypeInfo;
       if ( !NGUIText_TypeInfo->_2.cctor_finished )
       {
@@ -4409,11 +4403,11 @@ LABEL_37:
     v62->dynamicFont = (struct UnityEngine_Font_o *)trueTypeFont;
     v60 = (CGThumbnailListItem_o *)&v62->dynamicFont;
   }
-  sub_1C3E508(v60, v58, v42, v43);
+  sub_1C6B9AC(v60, v58, v42, v43);
   NGUIText_TypeInfo->static_fields->bitmapFont = 0;
   p_dynamicFont = (CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields;
 LABEL_86:
-  sub_1C3E508(p_dynamicFont, 0, v52, v53);
+  sub_1C6B9AC(p_dynamicFont, 0, v52, v53);
   if ( v7 && UILabel__get_keepCrisp(this, v64) )
   {
     root = (UnityEngine_Object_o *)UIRect__get_root((UIRect_o *)this, 0);
@@ -4444,7 +4438,7 @@ LABEL_96:
       goto LABEL_102;
     }
 LABEL_159:
-    sub_1C3E7C0(bitmapFont, v29);
+    sub_1C6BC60(bitmapFont, v29);
   }
   v68 = NGUIText_TypeInfo;
   if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -4462,7 +4456,7 @@ LABEL_102:
   }
   if ( mDensity != v68->static_fields->pixelDensity )
   {
-    UILabel__ProcessText_49582056(this, 0, 0, v65);
+    UILabel__ProcessText_49810940(this, 0, 0, v65);
     v70 = NGUIText_TypeInfo;
     mWidth = this->fields.mWidth;
     if ( !NGUIText_TypeInfo->_2.cctor_finished )
@@ -4475,10 +4469,10 @@ LABEL_102:
     v72->rectWidth = mWidth;
     v72->rectHeight = this->fields.mHeight;
     v74 = this->fields.mDrawRegion.fields.z - this->fields.mDrawRegion.fields.x;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     v75 = v74 * v73;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -4515,10 +4509,10 @@ LABEL_122:
     NGUIText_TypeInfo->static_fields->regionWidth = v81;
     v82 = this->fields.mDrawRegion.fields.w - this->fields.mDrawRegion.fields.y;
     v83 = (float)this->fields.mHeight;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     v84 = v82 * v83;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -4622,13 +4616,13 @@ void UILabel__UpgradeFrom265(UILabel_o *this, const MethodInfo *method)
   int32_t v13; // w8
   UnityEngine_GameObject_o *gameObject; // x19
 
-  if ( (byte_4C5B651 & 1) == 0 )
+  if ( (byte_4CBAC2E & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B651 = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC2E = 1;
   }
-  UILabel__ProcessText_49582056(this, 1, 1, v2);
+  UILabel__ProcessText_49810940(this, 1, 1, v2);
   if ( this->fields.mShrinkToFit )
   {
     if ( this->fields.mOverflow )
@@ -4670,7 +4664,7 @@ void UILabel__UpgradeFrom265(UILabel_o *this, const MethodInfo *method)
   {
     v9 = this->fields.mFont;
     if ( !v9 )
-      sub_1C3E7C0(0, v8);
+      sub_1C6BC60(0, v8);
     defaultSize = UIFont__get_defaultSize(v9, v8);
     if ( this->fields.mHeight < defaultSize )
       UIWidget__set_height((UIWidget_o *)this, defaultSize, 0);
@@ -4692,7 +4686,7 @@ void UILabel__UpgradeFrom265(UILabel_o *this, const MethodInfo *method)
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  NGUITools__UpdateWidgetCollider_49421576(gameObject, 1, 0);
+  NGUITools__UpdateWidgetCollider_49650460(gameObject, 1, 0);
 }
 
 
@@ -4700,11 +4694,11 @@ bool UILabel__Wrap(UILabel_o *this, System_String_o *text, System_String_o **fin
 {
   const MethodInfo *v4; // x4
 
-  return UILabel__Wrap_49597932(this, text, final, 1000000, v4);
+  return UILabel__Wrap_49826816(this, text, final, 1000000, v4);
 }
 
 
-bool UILabel__Wrap_49597932(
+bool UILabel__Wrap_49826816(
         UILabel_o *this,
         System_String_o *text,
         System_String_o **final,
@@ -4720,10 +4714,10 @@ bool UILabel__Wrap_49597932(
   int32_t v15; // w2
   const MethodInfo *v16; // x3
 
-  if ( (byte_4C5B664 & 1) == 0 )
+  if ( (byte_4CBAC41 & 1) == 0 )
   {
-    sub_1C3E564(&NGUIText_TypeInfo);
-    byte_4C5B664 = 1;
+    sub_1C6BA08(&NGUIText_TypeInfo);
+    byte_4CBAC41 = 1;
   }
   UILabel__UpdateNGUIText(this, (const MethodInfo *)text);
   v9 = NGUIText_TypeInfo;
@@ -4737,10 +4731,10 @@ bool UILabel__Wrap_49597932(
   static_fields->regionHeight = height;
   v11 = NGUIText__WrapText(text, final, 0);
   NGUIText_TypeInfo->static_fields->bitmapFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)NGUIText_TypeInfo->static_fields, 0, v12, v13);
   v14 = NGUIText_TypeInfo->static_fields;
   v14->dynamicFont = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&v14->dynamicFont, 0, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v14->dynamicFont, 0, v15, v16);
   return v11;
 }
 
@@ -4757,10 +4751,10 @@ UnityEngine_Object_o *UILabel__get_ambigiousFont(UILabel_o *this, const MethodIn
   bool v4; // w0
   __int64 v5; // x8
 
-  if ( (byte_4C5B645 & 1) == 0 )
+  if ( (byte_4CBAC22 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B645 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC22 = 1;
   }
   mFont = (UnityEngine_Object_o *)this->fields.mFont;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4792,10 +4786,10 @@ int32_t UILabel__get_defaultFontSize(UILabel_o *this, const MethodInfo *method)
   const MethodInfo *v6; // x1
   UIFont_o *v7; // x0
 
-  if ( (byte_4C5B648 & 1) == 0 )
+  if ( (byte_4CBAC25 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B648 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC25 = 1;
   }
   trueTypeFont = (UnityEngine_Object_o *)UILabel__get_trueTypeFont(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4809,7 +4803,7 @@ int32_t UILabel__get_defaultFontSize(UILabel_o *this, const MethodInfo *method)
     return 16;
   v7 = this->fields.mFont;
   if ( !v7 )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   return UIFont__get_defaultSize(v7, v6);
 }
 
@@ -4819,7 +4813,7 @@ UnityEngine_Vector4_o UILabel__get_drawingDimensions(UILabel_o *this, const Meth
   const MethodInfo *v2; // x3
 
   if ( this->fields.mShouldBeProcessed )
-    UILabel__ProcessText_49582056(this, 0, 1, v2);
+    UILabel__ProcessText_49810940(this, 0, 1, v2);
   return UIWidget__get_drawingDimensions((UIWidget_o *)this, 0);
 }
 
@@ -4969,10 +4963,10 @@ bool UILabel__get_isValid(UILabel_o *this, const MethodInfo *method)
   UnityEngine_Object_o *mFont; // x20
   UnityEngine_Object_o *mTrueTypeFont; // x19
 
-  if ( (byte_4C5B64A & 1) == 0 )
+  if ( (byte_4CBAC27 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B64A = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC27 = 1;
   }
   mFont = (UnityEngine_Object_o *)this->fields.mFont;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4990,10 +4984,10 @@ bool UILabel__get_keepCrisp(UILabel_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *trueTypeFont; // x20
 
-  if ( (byte_4C5B649 & 1) == 0 )
+  if ( (byte_4CBAC26 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B649 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC26 = 1;
   }
   trueTypeFont = (UnityEngine_Object_o *)UILabel__get_trueTypeFont(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5019,7 +5013,7 @@ UnityEngine_Vector3_array *UILabel__get_localCorners(UILabel_o *this, const Meth
   const MethodInfo *v2; // x3
 
   if ( this->fields.mShouldBeProcessed )
-    UILabel__ProcessText_49582056(this, 0, 1, v2);
+    UILabel__ProcessText_49810940(this, 0, 1, v2);
   return UIWidget__get_localCorners((UIWidget_o *)this, 0);
 }
 
@@ -5033,7 +5027,7 @@ UnityEngine_Vector2_o UILabel__get_localSize(UILabel_o *this, const MethodInfo *
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( this->fields.mShouldBeProcessed )
-    UILabel__ProcessText_49582056(this, 0, 1, v2);
+    UILabel__ProcessText_49810940(this, 0, 1, v2);
   localSize = UIWidget__get_localSize((UIWidget_o *)this, 0);
   y = localSize.fields.y;
   x = localSize.fields.x;
@@ -5053,10 +5047,10 @@ UnityEngine_Material_o *UILabel__get_material(UILabel_o *this, const MethodInfo 
   UnityEngine_Object_o *mTrueTypeFont; // x20
   bool v9; // w8
 
-  if ( (byte_4C5B640 & 1) == 0 )
+  if ( (byte_4CBAC1D & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B640 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC1D = 1;
   }
   mMaterial = (UnityEngine_Object_o *)this->fields.mMaterial;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5084,7 +5078,7 @@ UnityEngine_Material_o *UILabel__get_material(UILabel_o *this, const MethodInfo 
     if ( v7 )
       return UnityEngine_Font__get_material((UnityEngine_Font_o *)v7, 0);
 LABEL_18:
-    sub_1C3E7C0(v7, v6);
+    sub_1C6BC60(v7, v6);
   }
   return result;
 }
@@ -5116,7 +5110,7 @@ UnityEngine_Vector2_o UILabel__get_printedSize(UILabel_o *this, const MethodInfo
   UnityEngine_Vector2_o result; // 0:s0.4,4:s1.4
 
   if ( this->fields.mShouldBeProcessed )
-    UILabel__ProcessText_49582056(this, 0, 1, v2);
+    UILabel__ProcessText_49810940(this, 0, 1, v2);
   x = this->fields.mCalculatedSize.fields.x;
   y = this->fields.mCalculatedSize.fields.y;
   result.fields.y = y;
@@ -5150,7 +5144,7 @@ System_String_o *UILabel__get_processedText(UILabel_o *this, const MethodInfo *m
   this->fields.mLastHeight = mHeight;
   this->fields.mShouldBeProcessed = 1;
 LABEL_7:
-  UILabel__ProcessText_49582056(this, 0, 1, v2);
+  UILabel__ProcessText_49810940(this, 0, 1, v2);
   return this->fields.mProcessedText;
 }
 
@@ -5206,10 +5200,10 @@ UnityEngine_Font_o *UILabel__get_trueTypeFont(UILabel_o *this, const MethodInfo 
   bool v7; // w8
   UIFont_o *v8; // x0
 
-  if ( (byte_4C5B643 & 1) == 0 )
+  if ( (byte_4CBAC20 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B643 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC20 = 1;
   }
   mTrueTypeFont = (UnityEngine_Object_o *)this->fields.mTrueTypeFont;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5225,7 +5219,7 @@ UnityEngine_Font_o *UILabel__get_trueTypeFont(UILabel_o *this, const MethodInfo 
   {
     v8 = this->fields.mFont;
     if ( !v8 )
-      sub_1C3E7C0(0, v6);
+      sub_1C6BC60(0, v6);
     return UIFont__get_dynamicFont(v8, v6);
   }
   return result;
@@ -5243,7 +5237,7 @@ UnityEngine_Vector3_array *UILabel__get_worldCorners(UILabel_o *this, const Meth
   const MethodInfo *v2; // x3
 
   if ( this->fields.mShouldBeProcessed )
-    UILabel__ProcessText_49582056(this, 0, 1, v2);
+    UILabel__ProcessText_49810940(this, 0, 1, v2);
   return UIWidget__get_worldCorners((UIWidget_o *)this, 0);
 }
 
@@ -5268,12 +5262,12 @@ void UILabel__set_ambigiousFont(UILabel_o *this, UnityEngine_Object_o *value, co
   const MethodInfo *v7; // x2
   UnityEngine_Object_o *v8; // x1
 
-  if ( (byte_4C5B646 & 1) == 0 )
+  if ( (byte_4CBAC23 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Font_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIFont_TypeInfo);
-    byte_4C5B646 = 1;
+    sub_1C6BA08(&UnityEngine_Font_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIFont_TypeInfo);
+    byte_4CBAC23 = 1;
   }
   if ( value
     && (naturalAligment = UIFont_TypeInfo->_2.naturalAligment,
@@ -5335,10 +5329,10 @@ void UILabel__set_bitmapFont(UILabel_o *this, UIFont_o *value, const MethodInfo 
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C5B642 & 1) == 0 )
+  if ( (byte_4CBAC1F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B642 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC1F = 1;
   }
   mFont = (UnityEngine_Object_o *)this->fields.mFont;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5347,9 +5341,9 @@ void UILabel__set_bitmapFont(UILabel_o *this, UIFont_o *value, const MethodInfo 
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, 0);
     this->fields.mFont = value;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mFont, (int32_t)value, v6, v7);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mFont, (int32_t)value, v6, v7);
     this->fields.mTrueTypeFont = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrueTypeFont, 0, v8, v9);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrueTypeFont, 0, v8, v9);
     ((void (__fastcall *)(UILabel_o *, const MethodInfo *))this->klass->vtable._30_MarkAsChanged.methodPtr)(
       this,
       this->klass->vtable._30_MarkAsChanged.method);
@@ -5416,10 +5410,10 @@ void UILabel__set_floatSpacingX(UILabel_o *this, float value, const MethodInfo *
   UILabel_c *klass; // x8
 
   mFloatSpacingX = this->fields.mFloatSpacingX;
-  if ( !byte_4C506A5 )
+  if ( !byte_4CAFC0D )
   {
-    sub_1C3E564(&UnityEngine_Mathf_TypeInfo);
-    byte_4C506A5 = 1;
+    sub_1C6BA08(&UnityEngine_Mathf_TypeInfo);
+    byte_4CAFC0D = 1;
   }
   v6 = fabsf(mFloatSpacingX);
   v7 = fabsf(value);
@@ -5450,10 +5444,10 @@ void UILabel__set_floatSpacingY(UILabel_o *this, float value, const MethodInfo *
   UILabel_c *klass; // x8
 
   mFloatSpacingY = this->fields.mFloatSpacingY;
-  if ( !byte_4C506A5 )
+  if ( !byte_4CAFC0D )
   {
-    sub_1C3E564(&UnityEngine_Mathf_TypeInfo);
-    byte_4C506A5 = 1;
+    sub_1C6BA08(&UnityEngine_Mathf_TypeInfo);
+    byte_4CAFC0D = 1;
   }
   v6 = fabsf(mFloatSpacingY);
   v7 = fabsf(value);
@@ -5572,10 +5566,10 @@ void UILabel__set_material(UILabel_o *this, UnityEngine_Material_o *value, const
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C5B641 & 1) == 0 )
+  if ( (byte_4CBAC1E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B641 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC1E = 1;
   }
   mMaterial = (UnityEngine_Object_o *)this->fields.mMaterial;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5584,7 +5578,7 @@ void UILabel__set_material(UILabel_o *this, UnityEngine_Material_o *value, const
   {
     UIWidget__RemoveFromPanel((UIWidget_o *)this, 0);
     this->fields.mMaterial = value;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mMaterial, (int32_t)value, v6, v7);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mMaterial, (int32_t)value, v6, v7);
     ((void (__fastcall *)(UILabel_o *, const MethodInfo *))this->klass->vtable._30_MarkAsChanged.methodPtr)(
       this,
       this->klass->vtable._30_MarkAsChanged.method);
@@ -5724,10 +5718,10 @@ void UILabel__set_text(UILabel_o *this, System_String_o *value, const MethodInfo
   int32_t v9; // w1
   const MethodInfo *v10; // x1
 
-  if ( (byte_4C5B647 & 1) == 0 )
+  if ( (byte_4CBAC24 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B647 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC24 = 1;
   }
   if ( !System_String__op_Equality(this->fields.mText, value, 0) )
   {
@@ -5748,7 +5742,7 @@ void UILabel__set_text(UILabel_o *this, System_String_o *value, const MethodInfo
       v9 = (int)value;
       this->fields.mText = value;
     }
-    sub_1C3E508((CGThumbnailListItem_o *)v8, v9, v6, v7);
+    sub_1C6B9AC((CGThumbnailListItem_o *)v8, v9, v6, v7);
     ((void (__fastcall *)(UILabel_o *, const MethodInfo *))this->klass->vtable._30_MarkAsChanged.methodPtr)(
       this,
       this->klass->vtable._30_MarkAsChanged.method);
@@ -5772,10 +5766,10 @@ void UILabel__set_trueTypeFont(UILabel_o *this, UnityEngine_Font_o *value, const
   const MethodInfo *v12; // x1
   UnityEngine_Object_o *mActiveTTF; // x20
 
-  if ( (byte_4C5B644 & 1) == 0 )
+  if ( (byte_4CBAC21 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B644 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC21 = 1;
   }
   mTrueTypeFont = (UnityEngine_Object_o *)this->fields.mTrueTypeFont;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5785,11 +5779,11 @@ void UILabel__set_trueTypeFont(UILabel_o *this, UnityEngine_Font_o *value, const
     UILabel__SetActiveFont(this, 0, v6);
     UIWidget__RemoveFromPanel((UIWidget_o *)this, 0);
     this->fields.mTrueTypeFont = value;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrueTypeFont, (int32_t)value, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrueTypeFont, (int32_t)value, v7, v8);
     this->fields.mChanged = 1;
     this->fields.mShouldBeProcessed = 1;
     this->fields.mFont = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mFont, 0, v9, v10);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mFont, 0, v9, v10);
     UILabel__SetActiveFont(this, value, v11);
     UILabel__ProcessAndRequest(this, v12);
     mActiveTTF = (UnityEngine_Object_o *)this->fields.mActiveTTF;

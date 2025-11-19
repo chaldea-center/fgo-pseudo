@@ -3,14 +3,14 @@ void FileMergeAndSplit___cctor(const MethodInfo *method)
   int32_t v1; // w2
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C55CAB & 1) == 0 )
+  if ( (byte_4CB5210 & 1) == 0 )
   {
-    sub_1C3E564(&FileMergeAndSplit_TypeInfo);
-    sub_1C3E564(&StringLiteral_10588/*"PathCRC"*/);
-    byte_4C55CAB = 1;
+    sub_1C6BA08(&FileMergeAndSplit_TypeInfo);
+    sub_1C6BA08(&StringLiteral_10584/*"PathCRC"*/);
+    byte_4CB5210 = 1;
   }
-  FileMergeAndSplit_TypeInfo->static_fields->PathCRCFileName = (struct System_String_o *)StringLiteral_10588/*"PathCRC"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)FileMergeAndSplit_TypeInfo->static_fields, StringLiteral_10588/*"PathCRC"*/, v1, v2);
+  FileMergeAndSplit_TypeInfo->static_fields->PathCRCFileName = (struct System_String_o *)StringLiteral_10584/*"PathCRC"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)FileMergeAndSplit_TypeInfo->static_fields, StringLiteral_10584/*"PathCRC"*/, v1, v2);
 }
 
 
@@ -27,75 +27,63 @@ void FileMergeAndSplit__Split(System_String_o *targetFilePath, System_String_o *
   System_IO_StreamWriter_o *v13; // x25
   int v14; // w21
   Il2CppObject *v15; // x24
-  __int64 v16; // x2
-  __int64 v17; // x3
-  __int64 v18; // x4
-  __int64 v19; // x5
-  __int64 v20; // x6
-  __int64 v21; // x7
-  Il2CppObject *v22; // x2
-  Il2CppObject *v23; // x27
-  System_String_o *v24; // x29
-  System_IO_StreamWriter_o *v25; // x20
-  System_IO_FileStream_o *v26; // x28
-  __int64 v27; // x25
-  int32_t v28; // w24
-  __int64 v29; // x3
-  __int64 v30; // x0
-  __int64 v31; // x1
-  int v32; // w26
+  Il2CppObject *v16; // x2
+  Il2CppObject *v17; // x27
+  System_String_o *v18; // x29
+  System_IO_StreamWriter_o *v19; // x20
+  System_IO_FileStream_o *v20; // x28
+  __int64 v21; // x25
+  int32_t v22; // w24
+  __int64 v23; // x3
+  __int64 v24; // x0
+  __int64 v25; // x1
+  int v26; // w26
   System_IO_FileStream_c *klass; // x8
-  __int64 v34; // x9
+  __int64 v28; // x9
   int32_t *p_offset; // x10
-  __int64 v36; // x0
+  __int64 v30; // x0
   System_Byte_array *AllBytes; // x24
-  __int64 v38; // x2
-  __int64 v39; // x3
-  __int64 v40; // x4
-  __int64 v41; // x5
-  __int64 v42; // x6
-  __int64 v43; // x7
-  Il2CppObject *v44; // x2
-  System_String_o *v45; // x0
-  System_IO_StreamWriter_c *v46; // x8
-  __int64 v47; // x9
-  int32_t *v48; // x10
-  __int64 v49; // x0
-  System_IO_FileStream_c *v50; // x8
-  __int64 v51; // x9
-  int32_t *v52; // x10
-  __int64 v53; // x0
+  Il2CppObject *v32; // x2
+  System_String_o *v33; // x0
+  System_IO_StreamWriter_c *v34; // x8
+  __int64 v35; // x9
+  int32_t *v36; // x10
+  __int64 v37; // x0
+  System_IO_FileStream_c *v38; // x8
+  __int64 v39; // x9
+  int32_t *v40; // x10
+  __int64 v41; // x0
   Il2CppObject *arg0; // [xsp+8h] [xbp-88h]
   Il2CppObject *arg1; // [xsp+10h] [xbp-80h]
-  __int64 v56; // [xsp+18h] [xbp-78h]
-  uint32_t v57; // [xsp+24h] [xbp-6Ch] BYREF
-  __int16 v58[2]; // [xsp+28h] [xbp-68h] BYREF
-  int v59; // [xsp+2Ch] [xbp-64h] BYREF
+  __int64 v44; // [xsp+18h] [xbp-78h]
+  uint32_t v45; // [xsp+24h] [xbp-6Ch] BYREF
+  __int16 v46[2]; // [xsp+28h] [xbp-68h] BYREF
+  int v47; // [xsp+2Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C55CAA & 1) == 0 )
+  if ( (byte_4CB520F & 1) == 0 )
   {
-    sub_1C3E564(&byte___TypeInfo);
-    sub_1C3E564(&char_TypeInfo);
-    sub_1C3E564(&Crc32_TypeInfo);
-    sub_1C3E564(&FileMergeAndSplit_TypeInfo);
-    sub_1C3E564(&System_IO_FileStream_TypeInfo);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Math_TypeInfo);
-    sub_1C3E564(&System_IO_Path_TypeInfo);
-    sub_1C3E564(&System_IO_StreamWriter_TypeInfo);
-    sub_1C3E564(&uint_TypeInfo);
-    sub_1C3E564(&StringLiteral_25231/*"{0}{1}{2}"*/);
-    sub_1C3E564(&StringLiteral_13005/*"SplitFile/{0},{1}"*/);
-    sub_1C3E564(&StringLiteral_25176/*"{0}/{1}"*/);
-    sub_1C3E564(&StringLiteral_25181/*"{0}/{1}/{2}"*/);
-    sub_1C3E564(&StringLiteral_25179/*"{0}/{1}/SplitFile"*/);
-    byte_4C55CAA = 1;
+    sub_1C6BA08(&byte___TypeInfo);
+    sub_1C6BA08(&char_TypeInfo);
+    sub_1C6BA08(&Crc32_TypeInfo);
+    sub_1C6BA08(&FileMergeAndSplit_TypeInfo);
+    sub_1C6BA08(&System_IO_FileStream_TypeInfo);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Math_TypeInfo);
+    sub_1C6BA08(&System_IO_Path_TypeInfo);
+    sub_1C6BA08(&System_IO_StreamWriter_TypeInfo);
+    sub_1C6BA08(&uint_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25321/*"{0}{1}{2}"*/);
+    sub_1C6BA08(&StringLiteral_13001/*"SplitFile/{0},{1}"*/);
+    sub_1C6BA08(&StringLiteral_25266/*"{0}/{1}"*/);
+    sub_1C6BA08(&StringLiteral_25271/*"{0}/{1}/{2}"*/);
+    sub_1C6BA08(&StringLiteral_25269/*"{0}/{1}/SplitFile"*/);
+    byte_4CB520F = 1;
   }
-  v59 = 0;
+  v47 = 0;
   if ( !System_IO_Path_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_IO_Path_TypeInfo);
   arg1 = (Il2CppObject *)System_IO_Path__GetFileNameWithoutExtension(targetFilePath, 0);
-  v5 = System_String__Format_63677760((System_String_o *)StringLiteral_25179/*"{0}/{1}/SplitFile"*/, (Il2CppObject *)outputPath, arg1, 0);
+  v5 = System_String__Format_64008100((System_String_o *)StringLiteral_25269/*"{0}/{1}/SplitFile"*/, (Il2CppObject *)outputPath, arg1, 0);
   v6 = FileMergeAndSplit_TypeInfo;
   v7 = v5;
   if ( !FileMergeAndSplit_TypeInfo->_2.cctor_finished )
@@ -103,8 +91,8 @@ void FileMergeAndSplit__Split(System_String_o *targetFilePath, System_String_o *
     j_il2cpp_runtime_class_init_0(FileMergeAndSplit_TypeInfo);
     v6 = FileMergeAndSplit_TypeInfo;
   }
-  v8 = System_String__Format_63677828(
-         (System_String_o *)StringLiteral_25181/*"{0}/{1}/{2}"*/,
+  v8 = System_String__Format_64008168(
+         (System_String_o *)StringLiteral_25271/*"{0}/{1}/{2}"*/,
          (Il2CppObject *)outputPath,
          arg1,
          (Il2CppObject *)v6->static_fields->PathCRCFileName,
@@ -114,18 +102,18 @@ void FileMergeAndSplit__Split(System_String_o *targetFilePath, System_String_o *
   if ( System_IO_Directory__Exists(v7, 0) )
     System_IO_Directory__Delete(v7, 1, 0);
   System_IO_Directory__CreateDirectory(v7, 0);
-  v9 = (System_IO_FileStream_o *)sub_1C3E7B0(System_IO_FileStream_TypeInfo);
-  System_IO_FileStream___ctor_64554940(v9, targetFilePath, 3, 1, 0);
+  v9 = (System_IO_FileStream_o *)sub_1C6BC54(System_IO_FileStream_TypeInfo);
+  System_IO_FileStream___ctor_64883272(v9, targetFilePath, 3, 1, 0);
   if ( !v9 )
-    sub_1C3E7C0(v10, v11);
-  v56 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, const MethodInfo *))v9->klass->vtable._11_get_Length.methodPtr)(
+    sub_1C6BC60(v10, v11);
+  v44 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, const MethodInfo *))v9->klass->vtable._11_get_Length.methodPtr)(
           v9,
           v9->klass->vtable._11_get_Length.method);
   arg0 = (Il2CppObject *)v7;
-  v12 = sub_1C3E60C(byte___TypeInfo, 104857);
-  v13 = (System_IO_StreamWriter_o *)sub_1C3E7B0(System_IO_StreamWriter_TypeInfo);
-  System_IO_StreamWriter___ctor_64482384(v13, v8, 0, 0);
-  if ( v56 < 1 )
+  v12 = sub_1C6BAB0(byte___TypeInfo, 104857);
+  v13 = (System_IO_StreamWriter_o *)sub_1C6BC54(System_IO_StreamWriter_TypeInfo);
+  System_IO_StreamWriter___ctor_64811140(v13, v8, 0, 0);
+  if ( v44 < 1 )
   {
     if ( !v13 )
       goto LABEL_43;
@@ -135,128 +123,128 @@ void FileMergeAndSplit__Split(System_String_o *targetFilePath, System_String_o *
     v14 = 0;
     do
     {
-      v59 = ++v14;
-      v15 = (Il2CppObject *)System_Int32__ToString((int32_t)&v59, 0);
-      v58[0] = 46;
-      v22 = (Il2CppObject *)j_il2cpp_value_box_0(char_TypeInfo, v58, v16, v17, v18, v19, v20, v21);
-      v23 = (Il2CppObject *)System_String__Format_63677828((System_String_o *)StringLiteral_25231/*"{0}{1}{2}"*/, v15, v22, arg1, 0);
-      v24 = System_String__Format_63677760((System_String_o *)StringLiteral_25176/*"{0}/{1}"*/, arg0, v23, 0);
-      v25 = v13;
-      v26 = (System_IO_FileStream_o *)sub_1C3E7B0(System_IO_FileStream_TypeInfo);
-      System_IO_FileStream___ctor_64554940(v26, v24, 2, 2, 0);
-      v27 = v56;
-      v28 = 0x100000;
-      while ( v28 > 0 )
+      v47 = ++v14;
+      v15 = (Il2CppObject *)System_Int32__ToString((int32_t)&v47, 0);
+      v46[0] = 46;
+      v16 = (Il2CppObject *)j_il2cpp_value_box_0(char_TypeInfo, v46);
+      v17 = (Il2CppObject *)System_String__Format_64008168((System_String_o *)StringLiteral_25321/*"{0}{1}{2}"*/, v15, v16, arg1, 0);
+      v18 = System_String__Format_64008100((System_String_o *)StringLiteral_25266/*"{0}/{1}"*/, arg0, v17, 0);
+      v19 = v13;
+      v20 = (System_IO_FileStream_o *)sub_1C6BC54(System_IO_FileStream_TypeInfo);
+      System_IO_FileStream___ctor_64883272(v20, v18, 2, 2, 0);
+      v21 = v44;
+      v22 = 0x100000;
+      while ( v22 > 0 )
       {
         if ( !System_Math_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v29 = (unsigned int)System_Math__Min_65160228(104857, v28, 0);
-        v30 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, __int64, _QWORD, __int64, const MethodInfo *))v9->klass->vtable._31_Read.methodPtr)(
+        v23 = (unsigned int)System_Math__Min_65488940(104857, v22, 0);
+        v24 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, __int64, _QWORD, __int64, const MethodInfo *))v9->klass->vtable._31_Read.methodPtr)(
                 v9,
                 v12,
                 0,
-                v29,
+                v23,
                 v9->klass->vtable._31_Read.method);
-        if ( !v26 )
-          sub_1C3E7C0(v30, v31);
-        v32 = v30;
-        ((void (__fastcall *)(System_IO_FileStream_o *, __int64, _QWORD, _QWORD, const MethodInfo *))v26->klass->vtable._34_Write.methodPtr)(
-          v26,
+        if ( !v20 )
+          sub_1C6BC60(v24, v25);
+        v26 = v24;
+        ((void (__fastcall *)(System_IO_FileStream_o *, __int64, _QWORD, _QWORD, const MethodInfo *))v20->klass->vtable._34_Write.methodPtr)(
+          v20,
           v12,
           0,
-          (unsigned int)v30,
-          v26->klass->vtable._34_Write.method);
-        v27 -= v32;
-        v28 -= v32;
-        if ( !v27 )
+          (unsigned int)v24,
+          v20->klass->vtable._34_Write.method);
+        v21 -= v26;
+        v22 -= v26;
+        if ( !v21 )
         {
-          v56 = 0;
-          v13 = v25;
+          v44 = 0;
+          v13 = v19;
           goto LABEL_22;
         }
       }
-      v56 = v27;
-      v13 = v25;
-      if ( !v26 )
+      v44 = v21;
+      v13 = v19;
+      if ( !v20 )
         goto LABEL_29;
 LABEL_22:
-      klass = v26->klass;
-      v34 = *(unsigned __int16 *)&v26->klass->_2.rank;
-      if ( *(_WORD *)&v26->klass->_2.rank )
+      klass = v20->klass;
+      v28 = *(unsigned __int16 *)&v20->klass->_2.rank;
+      if ( *(_WORD *)&v20->klass->_2.rank )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
         {
-          --v34;
+          --v28;
           p_offset += 4;
-          if ( !v34 )
+          if ( !v28 )
             goto LABEL_26;
         }
-        v36 = (__int64)&klass->vtable + 16 * *p_offset;
+        v30 = (__int64)&klass->vtable + 16 * *p_offset;
       }
       else
       {
 LABEL_26:
-        v36 = sub_1C8ED7C(v26, System_IDisposable_TypeInfo, 0);
+        v30 = sub_1C41D90(v20, System_IDisposable_TypeInfo, 0);
       }
-      (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v36)(v26, *(_QWORD *)(v36 + 8));
+      (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v30)(v20, *(_QWORD *)(v30 + 8));
 LABEL_29:
-      AllBytes = System_IO_File__ReadAllBytes(v24, 0);
+      AllBytes = System_IO_File__ReadAllBytes(v18, 0);
       if ( !Crc32_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
-      v57 = Crc32__Compute(AllBytes, 0);
-      v44 = (Il2CppObject *)j_il2cpp_value_box_0(uint_TypeInfo, &v57, v38, v39, v40, v41, v42, v43);
-      v45 = System_String__Format_63677760((System_String_o *)StringLiteral_13005/*"SplitFile/{0},{1}"*/, v23, v44, 0);
+      v45 = Crc32__Compute(AllBytes, 0);
+      v32 = (Il2CppObject *)j_il2cpp_value_box_0(uint_TypeInfo, &v45);
+      v33 = System_String__Format_64008100((System_String_o *)StringLiteral_13001/*"SplitFile/{0},{1}"*/, v17, v32, 0);
       if ( !v13 )
-        sub_1C3E7C0(v45, v45);
+        sub_1C6BC60(v33, v33);
       ((void (__fastcall *)(System_IO_StreamWriter_o *, System_String_o *, const MethodInfo *))v13->klass->vtable._18_WriteLine.methodPtr)(
         v13,
-        v45,
+        v33,
         v13->klass->vtable._18_WriteLine.method);
     }
-    while ( v56 > 0 );
+    while ( v44 > 0 );
   }
-  v46 = v13->klass;
-  v47 = *(unsigned __int16 *)&v13->klass->_2.rank;
+  v34 = v13->klass;
+  v35 = *(unsigned __int16 *)&v13->klass->_2.rank;
   if ( *(_WORD *)&v13->klass->_2.rank )
   {
-    v48 = &v46->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v48 - 1) != System_IDisposable_TypeInfo )
+    v36 = &v34->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v36 - 1) != System_IDisposable_TypeInfo )
     {
-      --v47;
-      v48 += 4;
-      if ( !v47 )
+      --v35;
+      v36 += 4;
+      if ( !v35 )
         goto LABEL_40;
     }
-    v49 = (__int64)&v46->vtable + 16 * *v48;
+    v37 = (__int64)&v34->vtable + 16 * *v36;
   }
   else
   {
 LABEL_40:
-    v49 = sub_1C8ED7C(v13, System_IDisposable_TypeInfo, 0);
+    v37 = sub_1C41D90(v13, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_IO_StreamWriter_o *, _QWORD))v49)(v13, *(_QWORD *)(v49 + 8));
+  (*(void (__fastcall **)(System_IO_StreamWriter_o *, _QWORD))v37)(v13, *(_QWORD *)(v37 + 8));
 LABEL_43:
-  v50 = v9->klass;
-  v51 = *(unsigned __int16 *)&v9->klass->_2.rank;
+  v38 = v9->klass;
+  v39 = *(unsigned __int16 *)&v9->klass->_2.rank;
   if ( *(_WORD *)&v9->klass->_2.rank )
   {
-    v52 = &v50->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v52 - 1) != System_IDisposable_TypeInfo )
+    v40 = &v38->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v40 - 1) != System_IDisposable_TypeInfo )
     {
-      --v51;
-      v52 += 4;
-      if ( !v51 )
+      --v39;
+      v40 += 4;
+      if ( !v39 )
         goto LABEL_47;
     }
-    v53 = (__int64)&v50->vtable + 16 * *v52;
+    v41 = (__int64)&v38->vtable + 16 * *v40;
   }
   else
   {
 LABEL_47:
-    v53 = sub_1C8ED7C(v9, System_IDisposable_TypeInfo, 0);
+    v41 = sub_1C41D90(v9, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v53)(v9, *(_QWORD *)(v53 + 8));
+  (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v41)(v9, *(_QWORD *)(v41 + 8));
 }
 
 
@@ -275,10 +263,10 @@ void FileMergeAndSplit_CRCChecker___ctor(
   v6 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v6->fields.outputFilePath = outputFilePath;
-  sub_1C3E508((CGThumbnailListItem_o *)&v6->fields, (int32_t)outputFilePath, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v6->fields, (int32_t)outputFilePath, v7, v8);
   v6->fields.crcList = crcList;
   v6 = (FileMergeAndSplit_CRCChecker_o *)((char *)v6 + 24);
-  sub_1C3E508((CGThumbnailListItem_o *)v6, (int32_t)crcList, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v6, (int32_t)crcList, v9, v10);
   LOWORD(v6->monitor) = 0;
 }
 
@@ -303,16 +291,16 @@ System_Collections_IEnumerator_o *FileMergeAndSplit_CRCChecker__Run(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C55CB0 & 1) == 0 )
+  if ( (byte_4CB5215 & 1) == 0 )
   {
-    sub_1C3E564(&FileMergeAndSplit_CRCChecker__Run_d__7_TypeInfo);
-    byte_4C55CB0 = 1;
+    sub_1C6BA08(&FileMergeAndSplit_CRCChecker__Run_d__7_TypeInfo);
+    byte_4CB5215 = 1;
   }
-  v3 = sub_1C3E7B0(FileMergeAndSplit_CRCChecker__Run_d__7_TypeInfo);
+  v3 = sub_1C6BC54(FileMergeAndSplit_CRCChecker__Run_d__7_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -405,16 +393,16 @@ bool FileMergeAndSplit_CRCChecker__Run_d__7__MoveNext(
 
   v2 = this;
   v72 = this;
-  if ( (byte_4C55CB1 & 1) == 0 )
+  if ( (byte_4CB5216 & 1) == 0 )
   {
-    sub_1C3E564(&byte___TypeInfo);
-    sub_1C3E564(&Crc32_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_uint__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_uint__get_Current__);
-    sub_1C3E564(&System_IO_FileStream_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_uint__GetEnumerator__);
-    this = (FileMergeAndSplit_CRCChecker__Run_d__7_o *)sub_1C3E564(&System_Diagnostics_Stopwatch_TypeInfo);
-    byte_4C55CB1 = 1;
+    sub_1C6BA08(&byte___TypeInfo);
+    sub_1C6BA08(&Crc32_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_uint__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_uint__get_Current__);
+    sub_1C6BA08(&System_IO_FileStream_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_uint__GetEnumerator__);
+    this = (FileMergeAndSplit_CRCChecker__Run_d__7_o *)sub_1C6BA08(&System_Diagnostics_Stopwatch_TypeInfo);
+    byte_4CB5216 = 1;
   }
   v71 = &v72;
   _1__state = v2->fields.__1__state;
@@ -424,31 +412,31 @@ bool FileMergeAndSplit_CRCChecker__Run_d__7__MoveNext(
     sw_5__6 = v2->fields._sw_5__6;
     v2->fields.__1__state = -4;
     if ( !sw_5__6 )
-      sub_1C3E7C0(0, method);
+      sub_1C6BC60(0, method);
     System_Diagnostics_Stopwatch__Reset(sw_5__6, 0);
     v33 = v72->fields._sw_5__6;
     if ( !v33 )
-      sub_1C3E7C0(0, v32);
+      sub_1C6BC60(0, v32);
     System_Diagnostics_Stopwatch__Start(v33, 0);
 LABEL_14:
     while ( 1 )
     {
       v34 = System_Collections_Generic_List_Enumerator_uint___MoveNext(
               &v72->fields.__7__wrap6,
-              (const MethodInfo_3546334 *)Method_System_Collections_Generic_List_Enumerator_uint__MoveNext__);
+              (const MethodInfo_358CC0C *)Method_System_Collections_Generic_List_Enumerator_uint__MoveNext__);
       v36 = v72;
       if ( !v34 )
         break;
       if ( v72->fields._leftByte_5__4 < 0 )
       {
         if ( !_4__this )
-          sub_1C3E7C0(v34, v35);
+          sub_1C6BC60(v34, v35);
         _4__this->fields.isCRCCheckEnd = 1;
         goto LABEL_41;
       }
       v37 = v72->fields._sw_5__6;
       if ( !v37 )
-        sub_1C3E7C0(0, v35);
+        sub_1C6BC60(0, v35);
       current = v72->fields.__7__wrap6.fields._current;
       System_Diagnostics_Stopwatch__Start(v37, 0);
       v40 = v72;
@@ -467,7 +455,7 @@ LABEL_14:
         {
           mergeFileStream_5__3 = v40->fields._mergeFileStream_5__3;
           if ( !mergeFileStream_5__3 )
-            sub_1C3E7C0(0, v39);
+            sub_1C6BC60(0, v39);
           if ( v42 - v43 >= 104857 )
             v45 = 104857;
           else
@@ -486,11 +474,11 @@ LABEL_14:
       readBuf_5__5 = v40->fields._readBuf_5__5;
       if ( !Crc32_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
-      v48 = Crc32__Compute_41294464(readBuf_5__5, v43, 0);
+      v48 = Crc32__Compute_41479848(readBuf_5__5, v43, 0);
       if ( current != (_DWORD)v48 )
       {
         if ( !_4__this )
-          sub_1C3E7C0(v48, v35);
+          sub_1C6BC60(v48, v35);
         _4__this->fields.isCRCCheckEnd = 1;
         v36 = v72;
 LABEL_41:
@@ -501,12 +489,12 @@ LABEL_41:
       v49 = v72->fields._sw_5__6;
       v72->fields._leftByte_5__4 -= v43;
       if ( !v49 )
-        sub_1C3E7C0(0, v35);
+        sub_1C6BC60(0, v35);
       if ( System_Diagnostics_Stopwatch__get_ElapsedMilliseconds(v49, 0) >= 301 )
       {
         v52 = v72;
         v72->fields.__2__current = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&v52->fields.__2__current, 0, v50, v51);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v52->fields.__2__current, 0, v50, v51);
         result = 1;
         v72->fields.__1__state = 1;
         return result;
@@ -519,20 +507,20 @@ LABEL_41:
     *(_QWORD *)&v55->fields.__7__wrap6.fields._index = 0;
     *(_QWORD *)&v55->fields.__7__wrap6.fields._current = 0;
     if ( !v56 )
-      sub_1C3E7C0(0, v54);
+      sub_1C6BC60(0, v54);
     System_Diagnostics_Stopwatch__Stop(v56, 0);
     v57 = v72;
     v72->fields._readBuf_5__5 = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v57->fields._readBuf_5__5, 0, v58, v59);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v57->fields._readBuf_5__5, 0, v58, v59);
     v60 = v72;
     v72->fields._sw_5__6 = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v60->fields._sw_5__6, 0, v61, v62);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v60->fields._sw_5__6, 0, v61, v62);
     FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally1(v72, v63);
     v64 = v72;
     v72->fields._mergeFileStream_5__3 = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v64->fields._mergeFileStream_5__3, 0, v65, v66);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v64->fields._mergeFileStream_5__3, 0, v65, v66);
     if ( !_4__this )
-      sub_1C3E7C0(v67, v68);
+      sub_1C6BC60(v67, v68);
     result = 0;
     *(_WORD *)&_4__this->fields.isCRCMatch = 257;
   }
@@ -543,51 +531,51 @@ LABEL_41:
       v2->fields.__1__state = -1;
       v2->fields._readCheckByte_5__2 = 0x100000;
       if ( !_4__this )
-        sub_1C3E7C0(this, method);
+        sub_1C6BC60(this, method);
       if ( System_IO_File__Exists(_4__this->fields.outputFilePath, 0) )
       {
         outputFilePath = _4__this->fields.outputFilePath;
-        v6 = (System_IO_FileStream_o *)sub_1C3E7B0(System_IO_FileStream_TypeInfo);
-        System_IO_FileStream___ctor_64554940(v6, outputFilePath, 3, 1, 0);
+        v6 = (System_IO_FileStream_o *)sub_1C6BC54(System_IO_FileStream_TypeInfo);
+        System_IO_FileStream___ctor_64883272(v6, outputFilePath, 3, 1, 0);
         v7 = v72;
         v72->fields._mergeFileStream_5__3 = v6;
-        sub_1C3E508((CGThumbnailListItem_o *)&v7->fields._mergeFileStream_5__3, (int32_t)v6, v8, v9);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v7->fields._mergeFileStream_5__3, (int32_t)v6, v8, v9);
         v11 = v72->fields._mergeFileStream_5__3;
         v72->fields.__1__state = -3;
         if ( !v11 )
-          sub_1C3E7C0(0, v10);
+          sub_1C6BC60(0, v10);
         v12 = ((__int64 (__fastcall *)(struct System_IO_FileStream_o *, const MethodInfo *))v11->klass->vtable._11_get_Length.methodPtr)(
                 v11,
                 v11->klass->vtable._11_get_Length.method);
         v13 = v72;
         v72->fields._leftByte_5__4 = v12;
-        v14 = (struct System_Byte_array *)sub_1C3E60C(byte___TypeInfo, (unsigned int)v13->fields._readCheckByte_5__2);
+        v14 = (struct System_Byte_array *)sub_1C6BAB0(byte___TypeInfo, (unsigned int)v13->fields._readCheckByte_5__2);
         v15 = v72;
         v72->fields._readBuf_5__5 = v14;
-        sub_1C3E508((CGThumbnailListItem_o *)&v15->fields._readBuf_5__5, (int32_t)v14, v16, v17);
-        v18 = (System_Diagnostics_Stopwatch_o *)sub_1C3E7B0(System_Diagnostics_Stopwatch_TypeInfo);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v15->fields._readBuf_5__5, (int32_t)v14, v16, v17);
+        v18 = (System_Diagnostics_Stopwatch_o *)sub_1C6BC54(System_Diagnostics_Stopwatch_TypeInfo);
         System_Diagnostics_Stopwatch___ctor(v18, 0);
         v19 = v72;
         v72->fields._sw_5__6 = v18;
-        sub_1C3E508((CGThumbnailListItem_o *)&v19->fields._sw_5__6, (int32_t)v18, v20, v21);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v19->fields._sw_5__6, (int32_t)v18, v20, v21);
         v23 = v72->fields._sw_5__6;
         if ( !v23 )
-          sub_1C3E7C0(0, v22);
+          sub_1C6BC60(0, v22);
         System_Diagnostics_Stopwatch__Start(v23, 0);
         crcList = _4__this->fields.crcList;
         if ( !crcList )
-          sub_1C3E7C0(0, v24);
+          sub_1C6BC60(0, v24);
         System_Collections_Generic_List_uint___GetEnumerator(
           v70,
           crcList,
-          (const MethodInfo_38073B8 *)Method_System_Collections_Generic_List_uint__GetEnumerator__);
+          (const MethodInfo_387C028 *)Method_System_Collections_Generic_List_uint__GetEnumerator__);
         v26 = v72;
         v27 = *(_OWORD *)&v70[0].fields._list;
         p__7__wrap6 = &v72->fields.__7__wrap6;
         v70[1] = v70[0];
         *(_QWORD *)&v72->fields.__7__wrap6.fields._current = v70[0].fields._current;
         *(_OWORD *)&v26->fields.__7__wrap6.fields._list = v27;
-        sub_1C3E508((CGThumbnailListItem_o *)p__7__wrap6, 0, v29, v30);
+        sub_1C6B9AC((CGThumbnailListItem_o *)p__7__wrap6, 0, v29, v30);
         v72->fields.__1__state = -4;
         goto LABEL_14;
       }
@@ -614,11 +602,11 @@ void __noreturn FileMergeAndSplit_CRCChecker__Run_d__7__System_Collections_IEnum
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_FileMergeAndSplit_CRCChecker__Run_d__7_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_FileMergeAndSplit_CRCChecker__Run_d__7_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -662,10 +650,10 @@ void FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally1(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4C55CB2 & 1) == 0 )
+  if ( (byte_4CB5217 & 1) == 0 )
   {
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    byte_4C55CB2 = 1;
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    byte_4CB5217 = 1;
   }
   mergeFileStream_5__3 = this->fields._mergeFileStream_5__3;
   this->fields.__1__state = -1;
@@ -688,7 +676,7 @@ void FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally1(
     else
     {
 LABEL_8:
-      v7 = sub_1C8ED7C(mergeFileStream_5__3, System_IDisposable_TypeInfo, 0);
+      v7 = sub_1C41D90(mergeFileStream_5__3, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(struct System_IO_FileStream_o *, _QWORD))v7)(mergeFileStream_5__3, *(_QWORD *)(v7 + 8));
   }
@@ -699,15 +687,15 @@ void FileMergeAndSplit_CRCChecker__Run_d__7____m__Finally2(
         FileMergeAndSplit_CRCChecker__Run_d__7_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C55CB3 & 1) == 0 )
+  if ( (byte_4CB5218 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_uint__Dispose__);
-    byte_4C55CB3 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_uint__Dispose__);
+    byte_4CB5218 = 1;
   }
   this->fields.__1__state = -3;
   System_Collections_Generic_List_Enumerator_uint___Dispose(
     &this->fields.__7__wrap6,
-    (const MethodInfo_3546330 *)Method_System_Collections_Generic_List_Enumerator_uint__Dispose__);
+    (const MethodInfo_358CC08 *)Method_System_Collections_Generic_List_Enumerator_uint__Dispose__);
 }
 
 
@@ -726,10 +714,10 @@ void FileMergeAndSplit_Merge___ctor(
   v6 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v6->fields.splitFileList = splitFileList;
-  sub_1C3E508((CGThumbnailListItem_o *)&v6->fields, (int32_t)splitFileList, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v6->fields, (int32_t)splitFileList, v7, v8);
   v6->fields.outputFilePath = outputFilePath;
   v6 = (FileMergeAndSplit_Merge_o *)((char *)v6 + 24);
-  sub_1C3E508((CGThumbnailListItem_o *)v6, (int32_t)outputFilePath, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v6, (int32_t)outputFilePath, v9, v10);
   LODWORD(v6->monitor) = 0;
   BYTE5(v6->monitor) = 0;
 }
@@ -764,18 +752,18 @@ System_Collections_IEnumerator_o *FileMergeAndSplit_Merge__Run(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C55CAC & 1) == 0 )
+  if ( (byte_4CB5211 & 1) == 0 )
   {
-    sub_1C3E564(&FileMergeAndSplit_Merge__Run_d__9_TypeInfo);
-    byte_4C55CAC = 1;
+    sub_1C6BA08(&FileMergeAndSplit_Merge__Run_d__9_TypeInfo);
+    byte_4CB5211 = 1;
   }
-  v5 = sub_1C3E7B0(FileMergeAndSplit_Merge__Run_d__9_TypeInfo);
+  v5 = sub_1C6BC54(FileMergeAndSplit_Merge__Run_d__9_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v6, v7);
   *(_QWORD *)(v5 + 40) = errorCallBack;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), (int32_t)errorCallBack, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)errorCallBack, v8, v9);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -878,21 +866,21 @@ bool FileMergeAndSplit_Merge__Run_d__9__MoveNext(FileMergeAndSplit_Merge__Run_d_
 
   v2 = this;
   v84 = this;
-  if ( (byte_4C55CAD & 1) == 0 )
+  if ( (byte_4CB5212 & 1) == 0 )
   {
-    sub_1C3E564(&byte___TypeInfo);
-    sub_1C3E564(&CommonServicePluginScript_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
-    sub_1C3E564(&System_Exception_TypeInfo);
-    sub_1C3E564(&System_IO_FileStream_TypeInfo);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C3E564(&System_Math_TypeInfo);
-    sub_1C3E564(&System_Diagnostics_Stopwatch_TypeInfo);
-    this = (FileMergeAndSplit_Merge__Run_d__9_o *)sub_1C3E564(&StringLiteral_5292/*"Disk full"*/);
-    byte_4C55CAD = 1;
+    sub_1C6BA08(&byte___TypeInfo);
+    sub_1C6BA08(&CommonServicePluginScript_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_string__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_string__get_Current__);
+    sub_1C6BA08(&System_Exception_TypeInfo);
+    sub_1C6BA08(&System_IO_FileStream_TypeInfo);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C6BA08(&System_Math_TypeInfo);
+    sub_1C6BA08(&System_Diagnostics_Stopwatch_TypeInfo);
+    this = (FileMergeAndSplit_Merge__Run_d__9_o *)sub_1C6BA08(&StringLiteral_5280/*"Disk full"*/);
+    byte_4CB5212 = 1;
   }
   v82 = 0;
   v83 = &v84;
@@ -903,23 +891,23 @@ bool FileMergeAndSplit_Merge__Run_d__9__MoveNext(FileMergeAndSplit_Merge__Run_d_
     sw_5__5 = v2->fields._sw_5__5;
     v2->fields.__1__state = -4;
     if ( !sw_5__5 )
-      sub_1C3E7C0(0, method);
+      sub_1C6BC60(0, method);
     System_Diagnostics_Stopwatch__Reset(sw_5__5, 0);
     v18 = v84->fields._sw_5__5;
     if ( !v18 )
-      sub_1C3E7C0(0, v17);
+      sub_1C6BC60(0, v17);
     System_Diagnostics_Stopwatch__Start(v18, 0);
 LABEL_25:
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               (System_Collections_Generic_List_Enumerator_object__o *)&v84->fields.__7__wrap5,
-              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
+              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_string__MoveNext__) )
     {
       current = v84->fields.__7__wrap5.fields._current;
       v43 = System_IO_File__Exists(current, 0);
       if ( !v43 )
       {
         if ( !_4__this )
-          sub_1C3E7C0(v43, v44);
+          sub_1C6BC60(v43, v44);
         *(_WORD *)&_4__this->fields.isMerge = 256;
         FileMergeAndSplit_Merge__Run_d__9____m__Finally2(v84, v44);
         FileMergeAndSplit_Merge__Run_d__9____m__Finally1(v84, v79);
@@ -928,15 +916,15 @@ LABEL_25:
       v45 = v84->fields._count_5__4 + 1;
       v84->fields._count_5__4 = v45;
       if ( !_4__this )
-        sub_1C3E7C0(v43, v44);
+        sub_1C6BC60(v43, v44);
       splitFileList = _4__this->fields.splitFileList;
       if ( !splitFileList )
-        sub_1C3E7C0(v43, v44);
+        sub_1C6BC60(v43, v44);
       _4__this->fields.progress = (float)v45 / (float)splitFileList->fields._size;
-      v47 = (System_IO_FileStream_o *)sub_1C3E7B0(System_IO_FileStream_TypeInfo);
-      System_IO_FileStream___ctor_64554940(v47, current, 3, 1, 0);
+      v47 = (System_IO_FileStream_o *)sub_1C6BC54(System_IO_FileStream_TypeInfo);
+      System_IO_FileStream___ctor_64883272(v47, current, 3, 1, 0);
       if ( !v47 )
-        sub_1C3E7C0(v48, v49);
+        sub_1C6BC60(v48, v49);
       v50 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, const MethodInfo *))v47->klass->vtable._11_get_Length.methodPtr)(
               v47,
               v47->klass->vtable._11_get_Length.method);
@@ -947,7 +935,7 @@ LABEL_25:
           readBuf_5__3 = v84->fields._readBuf_5__3;
           if ( !System_Math_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-          v52 = System_Math__Min_65160240(104857, v50, 0);
+          v52 = System_Math__Min_65488952(104857, v50, 0);
           v54 = ((__int64 (__fastcall *)(System_IO_FileStream_o *, struct System_Byte_array *, _QWORD, int64_t, const MethodInfo *))v47->klass->vtable._31_Read.methodPtr)(
                   v47,
                   readBuf_5__3,
@@ -956,7 +944,7 @@ LABEL_25:
                   v47->klass->vtable._31_Read.method);
           mergeFileStream_5__2 = v84->fields._mergeFileStream_5__2;
           if ( !mergeFileStream_5__2 )
-            sub_1C3E7C0(0, v53);
+            sub_1C6BC60(0, v53);
           ((void (__fastcall *)(struct System_IO_FileStream_o *, struct System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))mergeFileStream_5__2->klass->vtable._34_Write.methodPtr)(
             mergeFileStream_5__2,
             v84->fields._readBuf_5__3,
@@ -984,17 +972,17 @@ LABEL_25:
       else
       {
 LABEL_39:
-        v59 = sub_1C8ED7C(v47, System_IDisposable_TypeInfo, 0);
+        v59 = sub_1C41D90(v47, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(System_IO_FileStream_o *, _QWORD))v59)(v47, *(_QWORD *)(v59 + 8));
       v61 = v84->fields._sw_5__5;
       if ( !v61 )
-        sub_1C3E7C0(0, v60);
+        sub_1C6BC60(0, v60);
       if ( System_Diagnostics_Stopwatch__get_ElapsedMilliseconds(v61, 0) >= 301 )
       {
         v80 = v84;
         v84->fields.__2__current = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&v80->fields.__2__current, 0, v62, v63);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v80->fields.__2__current, 0, v62, v63);
         result = 1;
         v84->fields.__1__state = 1;
         return result;
@@ -1007,20 +995,20 @@ LABEL_39:
     *(_QWORD *)&v65->fields.__7__wrap5.fields._index = 0;
     v65->fields.__7__wrap5.fields._current = 0;
     if ( !v66 )
-      sub_1C3E7C0(0, v64);
+      sub_1C6BC60(0, v64);
     System_Diagnostics_Stopwatch__Stop(v66, 0);
     v67 = v84;
     v84->fields._readBuf_5__3 = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v67->fields._readBuf_5__3, 0, v68, v69);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v67->fields._readBuf_5__3, 0, v68, v69);
     v70 = v84;
     v84->fields._sw_5__5 = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v70->fields._sw_5__5, 0, v71, v72);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v70->fields._sw_5__5, 0, v71, v72);
     FileMergeAndSplit_Merge__Run_d__9____m__Finally1(v84, v73);
     v74 = v84;
     v84->fields._mergeFileStream_5__2 = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v74->fields._mergeFileStream_5__2, 0, v75, v76);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v74->fields._mergeFileStream_5__2, 0, v75, v76);
     if ( !_4__this )
-      sub_1C3E7C0(v77, v78);
+      sub_1C6BC60(v77, v78);
     result = 0;
     _4__this->fields.isMerge = 0;
   }
@@ -1032,13 +1020,13 @@ LABEL_39:
   {
     v2->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     if ( System_IO_File__Exists(_4__this->fields.outputFilePath, 0) )
       System_IO_File__Delete(_4__this->fields.outputFilePath, 0);
     Parent = System_IO_Directory__GetParent(_4__this->fields.outputFilePath, 0);
     v7 = Parent;
     if ( !Parent )
-      sub_1C3E7C0(0, v6);
+      sub_1C6BC60(0, v6);
     if ( (((__int64 (__fastcall *)(System_IO_DirectoryInfo_o *, const MethodInfo *))Parent->klass->vtable._10_get_Exists.methodPtr)(
             Parent,
             Parent->klass->vtable._10_get_Exists.method)
@@ -1059,45 +1047,45 @@ LABEL_39:
     {
       v12 = _4__this->fields.splitFileList;
       if ( !v12 )
-        sub_1C3E7C0(FreeSize, v11);
+        sub_1C6BC60(FreeSize, v11);
       if ( FreeSize >= v12->fields._size << 20 )
       {
         _4__this->fields.isMerge = 1;
         outputFilePath = _4__this->fields.outputFilePath;
-        v20 = (System_IO_FileStream_o *)sub_1C3E7B0(System_IO_FileStream_TypeInfo);
-        System_IO_FileStream___ctor_64554940(v20, outputFilePath, 1, 2, 0);
+        v20 = (System_IO_FileStream_o *)sub_1C6BC54(System_IO_FileStream_TypeInfo);
+        System_IO_FileStream___ctor_64883272(v20, outputFilePath, 1, 2, 0);
         v21 = v84;
         v84->fields._mergeFileStream_5__2 = v20;
-        sub_1C3E508((CGThumbnailListItem_o *)&v21->fields._mergeFileStream_5__2, (int32_t)v20, v22, v23);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v21->fields._mergeFileStream_5__2, (int32_t)v20, v22, v23);
         v84->fields.__1__state = -3;
-        v24 = (struct System_Byte_array *)sub_1C3E60C(byte___TypeInfo, 104857);
+        v24 = (struct System_Byte_array *)sub_1C6BAB0(byte___TypeInfo, 104857);
         v25 = v84;
         v84->fields._readBuf_5__3 = v24;
-        sub_1C3E508((CGThumbnailListItem_o *)&v25->fields._readBuf_5__3, (int32_t)v24, v26, v27);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v25->fields._readBuf_5__3, (int32_t)v24, v26, v27);
         v84->fields._count_5__4 = 0;
-        v28 = (System_Diagnostics_Stopwatch_o *)sub_1C3E7B0(System_Diagnostics_Stopwatch_TypeInfo);
+        v28 = (System_Diagnostics_Stopwatch_o *)sub_1C6BC54(System_Diagnostics_Stopwatch_TypeInfo);
         System_Diagnostics_Stopwatch___ctor(v28, 0);
         v29 = v84;
         v84->fields._sw_5__5 = v28;
-        sub_1C3E508((CGThumbnailListItem_o *)&v29->fields._sw_5__5, (int32_t)v28, v30, v31);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v29->fields._sw_5__5, (int32_t)v28, v30, v31);
         v33 = v84->fields._sw_5__5;
         if ( !v33 )
-          sub_1C3E7C0(0, v32);
+          sub_1C6BC60(0, v32);
         System_Diagnostics_Stopwatch__Start(v33, 0);
         v35 = (System_Collections_Generic_List_object__o *)_4__this->fields.splitFileList;
         if ( !v35 )
-          sub_1C3E7C0(0, v34);
+          sub_1C6BC60(0, v34);
         System_Collections_Generic_List_object___GetEnumerator(
           v81,
           v35,
-          (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_string__GetEnumerator__);
+          (const MethodInfo_380146C *)Method_System_Collections_Generic_List_string__GetEnumerator__);
         v36 = v84;
         v37 = *(_OWORD *)&v81[0].fields._list;
         p__7__wrap5 = &v84->fields.__7__wrap5;
         v81[1] = v81[0];
         v84->fields.__7__wrap5.fields._current = (struct System_String_o *)v81[0].fields._current;
         *(_OWORD *)&v36->fields.__7__wrap5.fields._list = v37;
-        sub_1C3E508((CGThumbnailListItem_o *)p__7__wrap5, 0, v39, v40);
+        sub_1C6B9AC((CGThumbnailListItem_o *)p__7__wrap5, 0, v39, v40);
         v84->fields.__1__state = -4;
         goto LABEL_25;
       }
@@ -1105,8 +1093,8 @@ LABEL_39:
     errorCallBack = v84->fields.errorCallBack;
     if ( errorCallBack )
     {
-      v14 = (System_Exception_o *)sub_1C3E7B0(System_Exception_TypeInfo);
-      System_Exception___ctor_65384116(v14, (System_String_o *)StringLiteral_5292/*"Disk full"*/, 0);
+      v14 = (System_Exception_o *)sub_1C6BC54(System_Exception_TypeInfo);
+      System_Exception___ctor_65712884(v14, (System_String_o *)StringLiteral_5280/*"Disk full"*/, 0);
       ((void (__fastcall *)(intptr_t, System_Exception_o *, intptr_t))errorCallBack->fields.invoke_impl)(
         errorCallBack->fields.method_code,
         v14,
@@ -1135,11 +1123,11 @@ void __noreturn FileMergeAndSplit_Merge__Run_d__9__System_Collections_IEnumerato
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_FileMergeAndSplit_Merge__Run_d__9_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_FileMergeAndSplit_Merge__Run_d__9_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -1183,10 +1171,10 @@ void FileMergeAndSplit_Merge__Run_d__9____m__Finally1(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4C55CAE & 1) == 0 )
+  if ( (byte_4CB5213 & 1) == 0 )
   {
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    byte_4C55CAE = 1;
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    byte_4CB5213 = 1;
   }
   mergeFileStream_5__2 = this->fields._mergeFileStream_5__2;
   this->fields.__1__state = -1;
@@ -1209,7 +1197,7 @@ void FileMergeAndSplit_Merge__Run_d__9____m__Finally1(
     else
     {
 LABEL_8:
-      v7 = sub_1C8ED7C(mergeFileStream_5__2, System_IDisposable_TypeInfo, 0);
+      v7 = sub_1C41D90(mergeFileStream_5__2, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(struct System_IO_FileStream_o *, _QWORD))v7)(mergeFileStream_5__2, *(_QWORD *)(v7 + 8));
   }
@@ -1220,13 +1208,13 @@ void FileMergeAndSplit_Merge__Run_d__9____m__Finally2(
         FileMergeAndSplit_Merge__Run_d__9_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C55CAF & 1) == 0 )
+  if ( (byte_4CB5214 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
-    byte_4C55CAF = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    byte_4CB5214 = 1;
   }
   this->fields.__1__state = -3;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap5,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_string__Dispose__);
 }

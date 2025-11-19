@@ -10,16 +10,16 @@ void AudioData___ctor(AudioData_o *this, UnityEngine_AudioClip_o *clip, const Me
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !clip )
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0);
   this->fields.name = name;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v8, v9);
   this->fields.data = clip;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.data, (int32_t)clip, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.data, (int32_t)clip, v10, v11);
 }
 
 
-void AudioData___ctor_40703468(
+void AudioData___ctor_40888028(
         AudioData_o *this,
         System_String_o *name,
         UnityEngine_AudioClip_o *clip,
@@ -32,13 +32,13 @@ void AudioData___ctor_40703468(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.name = name;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v7, v8);
   this->fields.data = clip;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.data, (int32_t)clip, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.data, (int32_t)clip, v9, v10);
 }
 
 
-void AudioData___ctor_40703536(
+void AudioData___ctor_40888096(
         AudioData_o *this,
         System_String_o *name,
         System_Single_array *buf,
@@ -55,17 +55,17 @@ void AudioData___ctor_40703536(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.name = name;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v7, v8);
   if ( !buf
     || (v11 = UnityEngine_AudioClip__Create(name, buf->max_length, 1, 44100, 0, 0),
         this->fields.data = v11,
         p_data = &this->fields.data,
-        sub_1C3E508((CGThumbnailListItem_o *)p_data, (int32_t)v11, v13, v14),
+        sub_1C6B9AC((CGThumbnailListItem_o *)p_data, (int32_t)v11, v13, v14),
         (v9 = *p_data) == 0) )
   {
-    sub_1C3E7C0(v9, v10);
+    sub_1C6BC60(v9, v10);
   }
-  UnityEngine_AudioClip__SetData_71116808(v9, buf, 0, 0);
+  UnityEngine_AudioClip__SetData_71433128(v9, buf, 0, 0);
 }
 
 
@@ -75,8 +75,8 @@ bool AudioData__IsSame(AudioData_o *this, System_String_o *name, const MethodInf
 
   v3 = this->fields.name;
   if ( !v3 )
-    sub_1C3E7C0(0, name);
-  return System_String__Equals_63671772(v3, name, 0);
+    sub_1C6BC60(0, name);
+  return System_String__Equals_64002112(v3, name, 0);
 }
 
 

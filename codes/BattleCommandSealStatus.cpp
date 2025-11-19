@@ -4,23 +4,23 @@ void BattleCommandSealStatus___ctor(BattleCommandSealStatus_o *this, const Metho
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C59CA3 & 1) == 0 )
+  if ( (byte_4CB925E & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_BattleCommandSealStatus_Status__TypeInfo);
-    byte_4C59CA3 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_BattleCommandSealStatus_Status__TypeInfo);
+    byte_4CB925E = 1;
   }
-  v3 = (System_Collections_Generic_List_T__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleCommandSealStatus_Status__TypeInfo);
+  v3 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_BattleCommandSealStatus_Status__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v3,
-    (const MethodInfo_379A414 *)Method_System_Collections_Generic_List_BattleCommandSealStatus_Status___ctor__);
+    (const MethodInfo_37E5928 *)Method_System_Collections_Generic_List_BattleCommandSealStatus_Status___ctor__);
   this->fields.statusList = (struct System_Collections_Generic_List_BattleCommandSealStatus_Status__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.statusList, (int32_t)v3, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.statusList, (int32_t)v3, v4, v5);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void BattleCommandSealStatus___ctor_46658480(
+void BattleCommandSealStatus___ctor_46880252(
         BattleCommandSealStatus_o *this,
         BattleCommandData_o *battleCommandData,
         BattleServantData_o *svtData,
@@ -39,25 +39,25 @@ void BattleCommandSealStatus___ctor_46658480(
   const MethodInfo *v18; // x1
   const MethodInfo *v19; // x1
 
-  if ( (byte_4C59CA4 & 1) == 0 )
+  if ( (byte_4CB925F & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_BattleCommandSealStatus_Status__TypeInfo);
-    byte_4C59CA4 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_BattleCommandSealStatus_Status__TypeInfo);
+    byte_4CB925F = 1;
   }
-  v9 = (System_Collections_Generic_List_T__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleCommandSealStatus_Status__TypeInfo);
+  v9 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_BattleCommandSealStatus_Status__TypeInfo);
   System_Collections_Generic_List_Int32Enum____ctor(
     v9,
-    (const MethodInfo_379A414 *)Method_System_Collections_Generic_List_BattleCommandSealStatus_Status___ctor__);
+    (const MethodInfo_37E5928 *)Method_System_Collections_Generic_List_BattleCommandSealStatus_Status___ctor__);
   this->fields.statusList = (struct System_Collections_Generic_List_BattleCommandSealStatus_Status__o *)v9;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.statusList, (int32_t)v9, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.statusList, (int32_t)v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.battleCommandData = battleCommandData;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.battleCommandData, (int32_t)battleCommandData, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.battleCommandData, (int32_t)battleCommandData, v12, v13);
   this->fields.svtData = svtData;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.svtData, (int32_t)svtData, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.svtData, (int32_t)svtData, v14, v15);
   this->fields.data = data;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.data, (int32_t)data, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.data, (int32_t)data, v16, v17);
   BattleCommandSealStatus__DetectCommonSealStatus(this, v18);
   BattleCommandSealStatus__DetectTreasureDeviceSealStatus(this, v19);
 }
@@ -115,30 +115,30 @@ void BattleCommandSealStatus__DetectCommonSealStatus(BattleCommandSealStatus_o *
   __int64 v50; // x10
   char v51; // [xsp+Ch] [xbp-64h]
 
-  if ( (byte_4C59CA5 & 1) == 0 )
+  if ( (byte_4CB9260 & 1) == 0 )
   {
-    sub_1C3E564(&BuffList_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_1C3E564(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Add__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C59CA5 = 1;
+    sub_1C6BA08(&BuffList_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Add__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB9260 = 1;
   }
   svtData = this->fields.svtData;
   if ( svtData )
   {
     if ( !BattleServantData__isAction(svtData, 0) )
     {
-      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_80;
       Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                     Instance,
-                                    (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_BuffMaster___);
+                                    (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_BuffMaster___);
       v6 = this->fields.svtData;
       if ( !v6 )
         goto LABEL_80;
@@ -146,7 +146,11 @@ void BattleCommandSealStatus__DetectCommonSealStatus(BattleCommandSealStatus_o *
       Instance = (DataManager_o *)v6->fields.buffData;
       if ( !Instance )
         goto LABEL_80;
-      Instance = (DataManager_o *)BattleBuffData__AllBuffValidEnumerablePriorActive((BattleBuffData_o *)Instance, 1, 0);
+      Instance = (DataManager_o *)BattleBuffData__AllBuffValidEnumerablePriorActive(
+                                    (BattleBuffData_o *)Instance,
+                                    1,
+                                    0,
+                                    0);
       if ( !Instance )
         goto LABEL_80;
       klass = Instance->klass;
@@ -167,11 +171,11 @@ void BattleCommandSealStatus__DetectCommonSealStatus(BattleCommandSealStatus_o *
       else
       {
 LABEL_13:
-        v12 = sub_1C8ED7C(Instance, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0);
+        v12 = sub_1C41D90(Instance, System_Collections_Generic_IEnumerable_BattleBuffData_BuffData__TypeInfo, 0);
       }
       v14 = (*(__int64 (__fastcall **)(DataManager_o *, _QWORD))v12)(v9, *(_QWORD *)(v12 + 8));
       if ( !v14 )
-        sub_1C3E7C0(0, v13);
+        sub_1C6BC60(0, v13);
       v51 = 0;
       while ( 1 )
       {
@@ -192,7 +196,7 @@ LABEL_13:
         else
         {
 LABEL_21:
-          v18 = sub_1C8ED7C(v14, System_Collections_IEnumerator_TypeInfo, 0);
+          v18 = sub_1C41D90(v14, System_Collections_IEnumerator_TypeInfo, 0);
         }
         if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v18)(v14, *(_QWORD *)(v18 + 8)) & 1) == 0 )
           break;
@@ -213,20 +217,20 @@ LABEL_21:
         else
         {
 LABEL_28:
-          v22 = sub_1C8ED7C(v14, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0);
+          v22 = sub_1C41D90(v14, System_Collections_Generic_IEnumerator_BattleBuffData_BuffData__TypeInfo, 0);
         }
         v23 = (*(__int64 (__fastcall **)(__int64, _QWORD))v22)(v14, *(_QWORD *)(v22 + 8));
         v25 = (struct BattleBuffData_BuffData_o *)v23;
         if ( !v23 )
-          sub_1C3E7C0(0, v24);
+          sub_1C6BC60(0, v24);
         if ( !*(_BYTE *)(v23 + 528) )
         {
           if ( !v7 )
-            sub_1C3E7C0(v23, v24);
+            sub_1C6BC60(v23, v24);
           Entity = (BuffEntity_o *)DataMasterBase_object__object__int___GetEntity(
                                      v7,
                                      *(_DWORD *)(v23 + 16),
-                                     (const MethodInfo_33B2F58 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                     (const MethodInfo_33F90DC *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
           if ( Entity )
           {
             type = Entity->fields.type;
@@ -240,19 +244,19 @@ LABEL_28:
                 {
                   statusList = (System_Collections_Generic_List_T__o *)this->fields.statusList;
                   if ( !statusList )
-                    sub_1C3E7C0(0, v30);
+                    sub_1C6BC60(0, v30);
                   items = statusList->fields._items;
                   v33 = Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Add__;
                   ++statusList->fields._version;
                   if ( !items )
-                    sub_1C3E7C0(statusList, v30);
+                    sub_1C6BC60(statusList, v30);
                   size = statusList->fields._size;
                   if ( (unsigned int)size >= LODWORD(items->max_length) )
                   {
                     System_Collections_Generic_List_Int32Enum___AddWithResize(
                       statusList,
                       0,
-                      *(const MethodInfo_379AC68 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+                      *(const MethodInfo_37E617C **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
                   }
                   else
                   {
@@ -268,7 +272,7 @@ LABEL_28:
               else
               {
                 this->fields._SleepBuff_k__BackingField = v25;
-                sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)v25, v28, v29);
+                sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v25, v28, v29);
               }
             }
           }
@@ -291,7 +295,7 @@ LABEL_28:
       else
       {
 LABEL_50:
-        v38 = sub_1C8ED7C(v14, System_IDisposable_TypeInfo, 0);
+        v38 = sub_1C41D90(v14, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v38)(v14, *(_QWORD *)(v38 + 8));
       if ( this->fields._SleepBuff_k__BackingField )
@@ -310,7 +314,7 @@ LABEL_50:
           System_Collections_Generic_List_Int32Enum___AddWithResize(
             (System_Collections_Generic_List_T__o *)Instance,
             1,
-            *(const MethodInfo_379AC68 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+            *(const MethodInfo_37E617C **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
         }
         else
         {
@@ -334,7 +338,7 @@ LABEL_50:
           System_Collections_Generic_List_Int32Enum___AddWithResize(
             (System_Collections_Generic_List_T__o *)Instance,
             2,
-            *(const MethodInfo_379AC68 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
+            *(const MethodInfo_37E617C **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
         }
         else
         {
@@ -362,7 +366,7 @@ LABEL_50:
         System_Collections_Generic_List_Int32Enum___AddWithResize(
           (System_Collections_Generic_List_T__o *)Instance,
           9,
-          *(const MethodInfo_379AC68 **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
+          *(const MethodInfo_37E617C **)(*(_QWORD *)(v46[4] + 192LL) + 112LL));
       }
       else
       {
@@ -389,7 +393,7 @@ LABEL_50:
             System_Collections_Generic_List_Int32Enum___AddWithResize(
               (System_Collections_Generic_List_T__o *)Instance,
               8,
-              *(const MethodInfo_379AC68 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+              *(const MethodInfo_37E617C **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
           }
           else
           {
@@ -401,7 +405,7 @@ LABEL_50:
       }
     }
 LABEL_80:
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   }
 }
 
@@ -443,11 +447,11 @@ void BattleCommandSealStatus__DetectTreasureDeviceSealStatus(BattleCommandSealSt
   __int64 v26; // x10
   int32_t invokeAct; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4C59CA6 & 1) == 0 )
+  if ( (byte_4CB9261 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Add__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C59CA6 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Add__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9261 = 1;
   }
   svtData = this->fields.svtData;
   if ( svtData )
@@ -478,7 +482,7 @@ void BattleCommandSealStatus__DetectTreasureDeviceSealStatus(BattleCommandSealSt
         System_Collections_Generic_List_Int32Enum___AddWithResize(
           statusList,
           (int32_t)method,
-          *(const MethodInfo_379AC68 **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
+          *(const MethodInfo_37E617C **)(*(_QWORD *)(v7[4] + 192LL) + 112LL));
       }
       else
       {
@@ -490,7 +494,7 @@ void BattleCommandSealStatus__DetectTreasureDeviceSealStatus(BattleCommandSealSt
     svtData = this->fields.svtData;
     if ( !svtData )
       goto LABEL_48;
-    BattleServantData__isNobleAction_46359680(svtData, &invokeAct, 0);
+    BattleServantData__isNobleAction_46580660(svtData, &invokeAct, 0);
     if ( invokeAct == 82 )
     {
       svtData = (BattleServantData_o *)this->fields.statusList;
@@ -537,7 +541,7 @@ LABEL_31:
             System_Collections_Generic_List_Int32Enum___AddWithResize(
               (System_Collections_Generic_List_T__o *)svtData,
               6,
-              *(const MethodInfo_379AC68 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+              *(const MethodInfo_37E617C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
           }
           else
           {
@@ -564,7 +568,7 @@ LABEL_31:
                 System_Collections_Generic_List_Int32Enum___AddWithResize(
                   (System_Collections_Generic_List_T__o *)svtData,
                   10,
-                  *(const MethodInfo_379AC68 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+                  *(const MethodInfo_37E617C **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
               }
               else
               {
@@ -576,7 +580,7 @@ LABEL_31:
           }
         }
 LABEL_48:
-        sub_1C3E7C0(svtData, method);
+        sub_1C6BC60(svtData, method);
       }
       svtData = (BattleServantData_o *)this->fields.statusList;
       if ( !svtData )
@@ -603,7 +607,7 @@ LABEL_27:
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       (System_Collections_Generic_List_T__o *)svtData,
       v19,
-      *(const MethodInfo_379AC68 **)(*(_QWORD *)(v18 + 192) + 112LL));
+      *(const MethodInfo_37E617C **)(*(_QWORD *)(v18 + 192) + 112LL));
     goto LABEL_31;
   }
 }
@@ -619,13 +623,13 @@ bool BattleCommandSealStatus__get_HasKindOfDontAction(BattleCommandSealStatus_o 
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C59CA2 & 1) == 0 )
+  if ( (byte_4CB925D & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Exists__);
-    sub_1C3E564(&System_Predicate_BattleCommandSealStatus_Status__TypeInfo);
-    sub_1C3E564(&Method_BattleCommandSealStatus___c__get_HasKindOfDontAction_b__6_0__);
-    sub_1C3E564(&BattleCommandSealStatus___c_TypeInfo);
-    byte_4C59CA2 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Exists__);
+    sub_1C6BA08(&System_Predicate_BattleCommandSealStatus_Status__TypeInfo);
+    sub_1C6BA08(&Method_BattleCommandSealStatus___c__get_HasKindOfDontAction_b__6_0__);
+    sub_1C6BA08(&BattleCommandSealStatus___c_TypeInfo);
+    byte_4CB925D = 1;
   }
   v3 = BattleCommandSealStatus___c_TypeInfo;
   statusList = (System_Collections_Generic_List_T__o *)this->fields.statusList;
@@ -643,7 +647,7 @@ bool BattleCommandSealStatus__get_HasKindOfDontAction(BattleCommandSealStatus_o 
       v3 = BattleCommandSealStatus___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__6_0 = (System_Predicate_T__o *)sub_1C3E7B0(System_Predicate_BattleCommandSealStatus_Status__TypeInfo);
+    _9__6_0 = (System_Predicate_T__o *)sub_1C6BC54(System_Predicate_BattleCommandSealStatus_Status__TypeInfo);
     System_Predicate_Int32Enum____ctor(
       _9__6_0,
       v6,
@@ -651,14 +655,14 @@ bool BattleCommandSealStatus__get_HasKindOfDontAction(BattleCommandSealStatus_o 
       0);
     static_fields = BattleCommandSealStatus___c_TypeInfo->static_fields;
     static_fields->__9__6_0 = (struct System_Predicate_BattleCommandSealStatus_Status__o *)_9__6_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v8, v9);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__6_0, (int32_t)_9__6_0, v8, v9);
   }
   if ( !statusList )
-    sub_1C3E7C0(v3, method);
+    sub_1C6BC60(v3, method);
   return System_Collections_Generic_List_Int32Enum___Exists(
            statusList,
            _9__6_0,
-           (const MethodInfo_379B274 *)Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Exists__);
+           (const MethodInfo_37E6788 *)Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Exists__);
 }
 
 
@@ -672,13 +676,13 @@ bool BattleCommandSealStatus__get_HasKindOfSealed(BattleCommandSealStatus_o *thi
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C59CA1 & 1) == 0 )
+  if ( (byte_4CB925C & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Exists__);
-    sub_1C3E564(&System_Predicate_BattleCommandSealStatus_Status__TypeInfo);
-    sub_1C3E564(&Method_BattleCommandSealStatus___c__get_HasKindOfSealed_b__4_0__);
-    sub_1C3E564(&BattleCommandSealStatus___c_TypeInfo);
-    byte_4C59CA1 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Exists__);
+    sub_1C6BA08(&System_Predicate_BattleCommandSealStatus_Status__TypeInfo);
+    sub_1C6BA08(&Method_BattleCommandSealStatus___c__get_HasKindOfSealed_b__4_0__);
+    sub_1C6BA08(&BattleCommandSealStatus___c_TypeInfo);
+    byte_4CB925C = 1;
   }
   v3 = BattleCommandSealStatus___c_TypeInfo;
   statusList = (System_Collections_Generic_List_T__o *)this->fields.statusList;
@@ -696,18 +700,18 @@ bool BattleCommandSealStatus__get_HasKindOfSealed(BattleCommandSealStatus_o *thi
       v3 = BattleCommandSealStatus___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__4_0 = (System_Predicate_T__o *)sub_1C3E7B0(System_Predicate_BattleCommandSealStatus_Status__TypeInfo);
+    _9__4_0 = (System_Predicate_T__o *)sub_1C6BC54(System_Predicate_BattleCommandSealStatus_Status__TypeInfo);
     System_Predicate_Int32Enum____ctor(_9__4_0, v6, Method_BattleCommandSealStatus___c__get_HasKindOfSealed_b__4_0__, 0);
     static_fields = BattleCommandSealStatus___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Predicate_BattleCommandSealStatus_Status__o *)_9__4_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v8, v9);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v8, v9);
   }
   if ( !statusList )
-    sub_1C3E7C0(v3, method);
+    sub_1C6BC60(v3, method);
   return System_Collections_Generic_List_Int32Enum___Exists(
            statusList,
            _9__4_0,
-           (const MethodInfo_379B274 *)Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Exists__);
+           (const MethodInfo_37E6788 *)Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__Exists__);
 }
 
 
@@ -721,21 +725,21 @@ int32_t BattleCommandSealStatus__get_PrioredStatus(BattleCommandSealStatus_o *th
 {
   struct System_Collections_Generic_List_BattleCommandSealStatus_Status__o *statusList; // x0
 
-  if ( (byte_4C59CA0 & 1) == 0 )
+  if ( (byte_4CB925B & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Min_BattleCommandSealStatus_Status___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__get_Count__);
-    byte_4C59CA0 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Min_BattleCommandSealStatus_Status___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCommandSealStatus_Status__get_Count__);
+    byte_4CB925B = 1;
   }
   statusList = this->fields.statusList;
   if ( !statusList )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   if ( statusList->fields._size < 1 )
     return 0x7FFFFFFF;
   else
     return System_Linq_Enumerable__Min_Int32Enum_(
              (System_Collections_Generic_IEnumerable_TSource__o *)statusList,
-             (const MethodInfo_3128038 *)Method_System_Linq_Enumerable_Min_BattleCommandSealStatus_Status___);
+             (const MethodInfo_3169930 *)Method_System_Linq_Enumerable_Min_BattleCommandSealStatus_Status___);
 }
 
 
@@ -755,7 +759,7 @@ void BattleCommandSealStatus__set_SleepBuff(
   const MethodInfo *v3; // x3
 
   this->fields._SleepBuff_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -765,15 +769,15 @@ void BattleCommandSealStatus___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C59CA7 & 1) == 0 )
+  if ( (byte_4CB9262 & 1) == 0 )
   {
-    sub_1C3E564(&BattleCommandSealStatus___c_TypeInfo);
-    byte_4C59CA7 = 1;
+    sub_1C6BA08(&BattleCommandSealStatus___c_TypeInfo);
+    byte_4CB9262 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(BattleCommandSealStatus___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(BattleCommandSealStatus___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleCommandSealStatus___c_TypeInfo->static_fields->__9 = (struct BattleCommandSealStatus___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)BattleCommandSealStatus___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)BattleCommandSealStatus___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 

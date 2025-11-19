@@ -30,80 +30,80 @@ void ServantExceedEntity___ctor(ServantExceedEntity_o *this, const MethodInfo *m
   int32_t v30; // w2
   const MethodInfo *v31; // x3
 
-  if ( (byte_4C57684 & 1) == 0 )
+  if ( (byte_4CB6BED & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    sub_1C3E564(&string___TypeInfo);
-    sub_1C3E564(&StringLiteral_18008/*"class_b_"*/);
-    sub_1C3E564(&StringLiteral_18012/*"class_g_"*/);
-    sub_1C3E564(&StringLiteral_18013/*"class_n_"*/);
-    sub_1C3E564(&StringLiteral_18014/*"class_s_"*/);
-    byte_4C57684 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    sub_1C6BA08(&string___TypeInfo);
+    sub_1C6BA08(&StringLiteral_18008/*"class_b_"*/);
+    sub_1C6BA08(&StringLiteral_18012/*"class_g_"*/);
+    sub_1C6BA08(&StringLiteral_18013/*"class_n_"*/);
+    sub_1C6BA08(&StringLiteral_18014/*"class_s_"*/);
+    byte_4CB6BED = 1;
   }
-  v3 = sub_1C3E60C(string___TypeInfo, 8);
+  v3 = sub_1C6BAB0(string___TypeInfo, 8);
   if ( !v3 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   v7 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_13;
   v8 = StringLiteral_18013/*"class_n_"*/;
   *(_QWORD *)(v3 + 32) = StringLiteral_18013/*"class_n_"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), v8, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), v8, v5, v6);
   if ( *(_DWORD *)(v7 + 24) <= 1u )
     goto LABEL_13;
   v11 = StringLiteral_18008/*"class_b_"*/;
   *(_QWORD *)(v7 + 40) = StringLiteral_18008/*"class_b_"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 40), v11, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 40), v11, v9, v10);
   if ( *(_DWORD *)(v7 + 24) <= 2u )
     goto LABEL_13;
   v14 = StringLiteral_18014/*"class_s_"*/;
   *(_QWORD *)(v7 + 48) = StringLiteral_18014/*"class_s_"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 48), v14, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 48), v14, v12, v13);
   if ( *(_DWORD *)(v7 + 24) <= 3u )
     goto LABEL_13;
   v17 = StringLiteral_18012/*"class_g_"*/;
   *(_QWORD *)(v7 + 56) = StringLiteral_18012/*"class_g_"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 56), v17, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 56), v17, v15, v16);
   if ( *(_DWORD *)(v7 + 24) <= 4u )
     goto LABEL_13;
   v20 = StringLiteral_18012/*"class_g_"*/;
   *(_QWORD *)(v7 + 64) = StringLiteral_18012/*"class_g_"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 64), v20, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 64), v20, v18, v19);
   if ( *(_DWORD *)(v7 + 24) <= 5u
     || (v23 = StringLiteral_18012/*"class_g_"*/,
         *(_QWORD *)(v7 + 72) = StringLiteral_18012/*"class_g_"*/,
-        sub_1C3E508((CGThumbnailListItem_o *)(v7 + 72), v23, v21, v22),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 72), v23, v21, v22),
         *(_DWORD *)(v7 + 24) <= 6u)
     || (v26 = StringLiteral_18013/*"class_n_"*/,
         *(_QWORD *)(v7 + 80) = StringLiteral_18013/*"class_n_"*/,
-        sub_1C3E508((CGThumbnailListItem_o *)(v7 + 80), v26, v24, v25),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 80), v26, v24, v25),
         *(_DWORD *)(v7 + 24) <= 7u) )
   {
 LABEL_13:
-    sub_1C3E7C8(v3, v4);
+    sub_1C6BC68(v3);
   }
   v29 = StringLiteral_18013/*"class_n_"*/;
   *(_QWORD *)(v7 + 88) = StringLiteral_18013/*"class_n_"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 88), v29, v27, v28);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 88), v29, v27, v28);
   this->fields.frameCardFileList = (struct System_String_array *)v7;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, v7, v30, v31);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, v7, v30, v31);
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantExceedEntity__CreatePK(int32_t rarity, int32_t exceedCount, const MethodInfo *method)
 {
-  if ( (byte_4C57683 & 1) == 0 )
+  if ( (byte_4CB6BEC & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C57683 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CB6BEC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            rarity,
            exceedCount,
-           (const MethodInfo_30F7BF8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_31394F0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -144,9 +144,9 @@ System_String_o *ServantExceedEntity__getFrameCardPrefix(ServantExceedEntity_o *
 
   frameCardFileList = this->fields.frameCardFileList;
   if ( !frameCardFileList )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   frameType = this->fields.frameType;
   if ( (unsigned int)frameType >= LODWORD(frameCardFileList->max_length) )
-    sub_1C3E7C8(this, method);
+    sub_1C6BC68(this);
   return frameCardFileList->m_Items[frameType];
 }

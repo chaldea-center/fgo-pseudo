@@ -5,23 +5,22 @@ void ScriptPosition___cctor(const MethodInfo *method)
   int32_t v3; // w2
   const MethodInfo *v4; // x3
   unsigned int v5; // w8
-  struct UnityEngine_Vector2_array *v6; // x1
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  unsigned int v9; // w8
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  unsigned int v8; // w8
+  struct UnityEngine_Vector2_array *v9; // x1
   struct ScriptPosition_StaticFields *static_fields; // x0
 
-  if ( (byte_4C58D9B & 1) == 0 )
+  if ( (byte_4CB831B & 1) == 0 )
   {
-    sub_1C3E564(&ScriptPosition_TypeInfo);
-    sub_1C3E564(&UnityEngine_Vector2___TypeInfo);
-    byte_4C58D9B = 1;
+    sub_1C6BA08(&ScriptPosition_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Vector2___TypeInfo);
+    byte_4CB831B = 1;
   }
-  v1 = sub_1C3E60C(UnityEngine_Vector2___TypeInfo, 7);
+  v1 = sub_1C6BAB0(UnityEngine_Vector2___TypeInfo, 7);
   if ( !v1 )
     goto LABEL_17;
   v5 = *(_DWORD *)(v1 + 24);
-  v6 = (struct UnityEngine_Vector2_array *)v1;
   if ( !v5
     || (*(_QWORD *)(v1 + 32) = 3279945728LL, v5 == 1)
     || (*(_QWORD *)(v1 + 40) = 0, v5 <= 2)
@@ -31,29 +30,29 @@ void ScriptPosition___cctor(const MethodInfo *method)
     || (*(_QWORD *)(v1 + 72) = 1138425856, v5 <= 6) )
   {
 LABEL_16:
-    sub_1C3E7C8(v1, v6);
+    sub_1C6BC68(v1);
   }
   *(_QWORD *)(v1 + 80) = 1140850688;
   ScriptPosition_TypeInfo->static_fields->positionList = (struct UnityEngine_Vector2_array *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)ScriptPosition_TypeInfo->static_fields, v1, v3, v4);
-  v1 = sub_1C3E60C(UnityEngine_Vector2___TypeInfo, 3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)ScriptPosition_TypeInfo->static_fields, v1, v3, v4);
+  v1 = sub_1C6BAB0(UnityEngine_Vector2___TypeInfo, 3);
   if ( !v1 )
 LABEL_17:
-    sub_1C3E7C0(v1, v2);
-  v9 = *(_DWORD *)(v1 + 24);
-  v6 = (struct UnityEngine_Vector2_array *)v1;
-  if ( !v9 )
+    sub_1C6BC60(v1, v2);
+  v8 = *(_DWORD *)(v1 + 24);
+  v9 = (struct UnityEngine_Vector2_array *)v1;
+  if ( !v8 )
     goto LABEL_16;
   *(_QWORD *)(v1 + 32) = 0;
-  if ( v9 == 1 )
+  if ( v8 == 1 )
     goto LABEL_16;
   *(_QWORD *)(v1 + 40) = 0;
-  if ( v9 <= 2 )
+  if ( v8 <= 2 )
     goto LABEL_16;
   *(_QWORD *)(v1 + 48) = 0;
   static_fields = ScriptPosition_TypeInfo->static_fields;
-  static_fields->charaOffsetList = v6;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->charaOffsetList, (int32_t)v6, v7, v8);
+  static_fields->charaOffsetList = v9;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->charaOffsetList, (int32_t)v9, v6, v7);
 }
 
 
@@ -74,10 +73,10 @@ UnityEngine_Vector3_o ScriptPosition__GetCharaOffset(int32_t index, const Method
   float v9; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C58D9A & 1) == 0 )
+  if ( (byte_4CB831A & 1) == 0 )
   {
-    sub_1C3E564(&ScriptPosition_TypeInfo);
-    byte_4C58D9A = 1;
+    sub_1C6BA08(&ScriptPosition_TypeInfo);
+    byte_4CB831A = 1;
   }
   v3 = ScriptPosition_TypeInfo;
   if ( index < 0 )
@@ -90,7 +89,7 @@ UnityEngine_Vector3_o ScriptPosition__GetCharaOffset(int32_t index, const Method
   charaOffsetList = v3->static_fields->charaOffsetList;
   if ( !charaOffsetList )
 LABEL_14:
-    sub_1C3E7C0(v3, method);
+    sub_1C6BC60(v3, method);
   if ( SLODWORD(charaOffsetList->max_length) <= index )
 LABEL_8:
     index = 0;
@@ -103,7 +102,7 @@ LABEL_8:
   if ( !v5 )
     goto LABEL_14;
   if ( (unsigned int)index >= LODWORD(v5->max_length) )
-    sub_1C3E7C8(v3, method);
+    sub_1C6BC68(v3);
   v6 = (float *)(&v5->obj.klass + (unsigned int)index);
   v7 = v6[8];
   v8 = v6[9];
@@ -115,7 +114,7 @@ LABEL_8:
 }
 
 
-UnityEngine_Vector3_o ScriptPosition__GetCharaOffset_44931800(float x, float y, const MethodInfo *method)
+UnityEngine_Vector3_o ScriptPosition__GetCharaOffset_45126568(float x, float y, const MethodInfo *method)
 {
   float v3; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
@@ -139,10 +138,10 @@ UnityEngine_Vector3_o ScriptPosition__GetPosition(int32_t index, const MethodInf
   float v9; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C58D99 & 1) == 0 )
+  if ( (byte_4CB8319 & 1) == 0 )
   {
-    sub_1C3E564(&ScriptPosition_TypeInfo);
-    byte_4C58D99 = 1;
+    sub_1C6BA08(&ScriptPosition_TypeInfo);
+    byte_4CB8319 = 1;
   }
   v3 = ScriptPosition_TypeInfo;
   if ( index < 0 )
@@ -155,7 +154,7 @@ UnityEngine_Vector3_o ScriptPosition__GetPosition(int32_t index, const MethodInf
   positionList = v3->static_fields->positionList;
   if ( !positionList )
 LABEL_14:
-    sub_1C3E7C0(v3, method);
+    sub_1C6BC60(v3, method);
   if ( SLODWORD(positionList->max_length) <= index )
 LABEL_8:
     index = 0;
@@ -168,7 +167,7 @@ LABEL_8:
   if ( !v5 )
     goto LABEL_14;
   if ( (unsigned int)index >= LODWORD(v5->max_length) )
-    sub_1C3E7C8(v3, method);
+    sub_1C6BC68(v3);
   v6 = (float *)(&v5->obj.klass + (unsigned int)index);
   v7 = v6[8];
   v8 = v6[9];
@@ -180,7 +179,7 @@ LABEL_8:
 }
 
 
-UnityEngine_Vector3_o ScriptPosition__GetPosition_44931612(float x, float y, const MethodInfo *method)
+UnityEngine_Vector3_o ScriptPosition__GetPosition_45126380(float x, float y, const MethodInfo *method)
 {
   float v3; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4

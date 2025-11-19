@@ -6,7 +6,7 @@ void WrapBattlePopupControl___ctor(
   const MethodInfo *v3; // x3
 
   if ( !inPerf )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   WrapBaseBattlePopupControl___ctor((WrapBaseBattlePopupControl_o *)this, inPerf->fields.popupTr, inPerf, v3);
 }
 
@@ -26,7 +26,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidResetDamageObject(
   IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0);
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(IsNullOrEmpty, v6);
+    sub_1C6BC60(IsNullOrEmpty, v6);
   if ( IsNullOrEmpty )
     return WrapBaseBattlePopupControl__CreatePopupObject(
              (WrapBaseBattlePopupControl_o *)this,
@@ -53,7 +53,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidanceObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.avoidanceObject,
@@ -72,7 +72,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidanceTextObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.avoidanceTextObject,
@@ -81,7 +81,6 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetAvoidanceTextObject(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextClassIconObject(
         WrapBattlePopupControl_o *this,
         int32_t color,
@@ -91,12 +90,11 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextClassIconObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(this, *(_QWORD *)&color);
+    sub_1C6BC60(this, color);
   return BattleEffectControl__getBuffTextClassIconObject((BattleEffectControl_o *)this, color, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextObject(
         WrapBattlePopupControl_o *this,
         int32_t color,
@@ -106,12 +104,11 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetBuffTextObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(this, *(_QWORD *)&color);
+    sub_1C6BC60(this, color);
   return BattleEffectControl__getBuffTextObject((BattleEffectControl_o *)this, color, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_GameObject_o *WrapBattlePopupControl__GetDamageObject(
         WrapBattlePopupControl_o *this,
         bool critical,
@@ -123,12 +120,11 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetDamageObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(this, critical);
+    sub_1C6BC60(this, critical);
   return BattleEffectControl__getDamageObject((BattleEffectControl_o *)this, critical, week, resist, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_GameObject_o *WrapBattlePopupControl__GetEffectInstantiateLocal(
         WrapBattlePopupControl_o *this,
         int32_t id,
@@ -138,7 +134,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetEffectInstantiateLocal(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(this, *(_QWORD *)&id);
+    sub_1C6BC60(this, id);
   return BattleEffectControl__getEffectInstantiate((BattleEffectControl_o *)this, id, 0);
 }
 
@@ -153,7 +149,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetInvincibleObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields.invincibleObject,
@@ -172,7 +168,7 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__GetSpecialInvincibleObject(
 
   perf = this->fields.perf;
   if ( !perf || (effectcontrol = perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return WrapBaseBattlePopupControl__CreatePopupObject(
            (WrapBaseBattlePopupControl_o *)this,
            effectcontrol->fields._specialInvincibleObject_k__BackingField,
@@ -190,6 +186,6 @@ UnityEngine_GameObject_o *WrapBattlePopupControl__SetBuffIconObject(
 
   perf = this->fields.perf;
   if ( !perf || (this = (WrapBattlePopupControl_o *)perf->fields.effectcontrol) == 0 )
-    sub_1C3E7C0(this, buffList);
+    sub_1C6BC60(this, buffList);
   return BattleEffectControl__SetBuffIconObject((BattleEffectControl_o *)this, buffList, 0);
 }

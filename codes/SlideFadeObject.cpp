@@ -17,32 +17,32 @@ void SlideFadeObject__Awake(SlideFadeObject_o *this, const MethodInfo *method)
   const MethodInfo *v11; // x3
   UnityEngine_Object_o *mPanel; // x21
   const MethodInfo *v13; // x1
-  Il2CppObject *ComponentInChildren_object__51315876; // x0
+  Il2CppObject *ComponentInChildren_object__51584412; // x0
   int32_t v15; // w2
   const MethodInfo *v16; // x3
 
-  if ( (byte_4C537D0 & 1) == 0 )
+  if ( (byte_4CB2D20 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentInChildren_UIPanel___);
-    sub_1C3E564(&Method_GameObjectExtensions_SafeGetComponent_MoveObject___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537D0 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInChildren_UIPanel___);
+    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_MoveObject___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2D20 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3152BB4 *)Method_GameObjectExtensions_SafeGetComponent_MoveObject___);
+                       (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_MoveObject___);
   this->fields.mMoveObject = (struct MoveObject_o *)Component_object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mMoveObject, (int32_t)Component_object, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mMoveObject, (int32_t)Component_object, v5, v6);
   transform = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_10;
   v9 = UnityEngine_GameObject__GetComponent_object_(
          transform,
-         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)v9;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)v9, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)v9, v10, v11);
   mPanel = (UnityEngine_Object_o *)this->fields.mPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -51,19 +51,19 @@ void SlideFadeObject__Awake(SlideFadeObject_o *this, const MethodInfo *method)
     transform = (UnityEngine_GameObject_o *)CachableMonoBehaviour__get_transform((CachableMonoBehaviour_o *)this, v13);
     if ( transform )
     {
-      ComponentInChildren_object__51315876 = UnityEngine_Component__GetComponentInChildren_object__51315876(
+      ComponentInChildren_object__51584412 = UnityEngine_Component__GetComponentInChildren_object__51584412(
                                                (UnityEngine_Component_o *)transform,
-                                               (const MethodInfo_30F04A4 *)Method_UnityEngine_Component_GetComponentInChildren_UIPanel___);
-      this->fields.mPanel = (struct UIPanel_o *)ComponentInChildren_object__51315876;
-      sub_1C3E508(
+                                               (const MethodInfo_3131D9C *)Method_UnityEngine_Component_GetComponentInChildren_UIPanel___);
+      this->fields.mPanel = (struct UIPanel_o *)ComponentInChildren_object__51584412;
+      sub_1C6B9AC(
         (CGThumbnailListItem_o *)&this->fields.mPanel,
-        (int32_t)ComponentInChildren_object__51315876,
+        (int32_t)ComponentInChildren_object__51584412,
         v15,
         v16);
       goto LABEL_9;
     }
 LABEL_10:
-    sub_1C3E7C0(transform, v8);
+    sub_1C6BC60(transform, v8);
   }
 LABEL_9:
   SlideFadeObject__Refresh(this, v13);
@@ -156,7 +156,7 @@ void SlideFadeObject__Skip(SlideFadeObject_o *this, const MethodInfo *method)
 
   mMoveObject = this->fields.mMoveObject;
   if ( !mMoveObject )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   mMoveObject->fields.mIsSkip = 1;
 }
 
@@ -187,11 +187,11 @@ void SlideFadeObject__SlideIn(
   v11.fields.y = *(float *)((char *)&this->klass + v7);
   v11.fields.z = *(float *)((char *)&this->klass + v6);
   v11.fields.x = *(float *)((char *)&this->klass + v8);
-  SlideFadeObject__SlideIn_36191320(this, v11, time, delay, endAct, (const MethodInfo *)endAct);
+  SlideFadeObject__SlideIn_36371168(this, v11, time, delay, endAct, (const MethodInfo *)endAct);
 }
 
 
-void SlideFadeObject__SlideIn_36191320(
+void SlideFadeObject__SlideIn_36371168(
         SlideFadeObject_o *this,
         UnityEngine_Vector3_o startPos,
         float time,
@@ -225,22 +225,22 @@ void SlideFadeObject__SlideIn_36191320(
   z = startPos.fields.z;
   y = startPos.fields.y;
   x = startPos.fields.x;
-  if ( (byte_4C537D1 & 1) == 0 )
+  if ( (byte_4CB2D21 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_SlideFadeObject___c__DisplayClass18_0__SlideIn_b__0__);
-    sub_1C3E564(&Method_SlideFadeObject___c__DisplayClass18_0__SlideIn_b__1__);
-    sub_1C3E564(&SlideFadeObject___c__DisplayClass18_0_TypeInfo);
-    byte_4C537D1 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_SlideFadeObject___c__DisplayClass18_0__SlideIn_b__0__);
+    sub_1C6BA08(&Method_SlideFadeObject___c__DisplayClass18_0__SlideIn_b__1__);
+    sub_1C6BA08(&SlideFadeObject___c__DisplayClass18_0_TypeInfo);
+    byte_4CB2D21 = 1;
   }
-  v13 = sub_1C3E7B0(SlideFadeObject___c__DisplayClass18_0_TypeInfo);
+  v13 = sub_1C6BC54(SlideFadeObject___c__DisplayClass18_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_6;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   *(_QWORD *)(v13 + 24) = endAct;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 24), (int32_t)endAct, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 24), (int32_t)endAct, v18, v19);
   this->fields.mSlideState = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v29.fields.x = x;
@@ -251,13 +251,13 @@ void SlideFadeObject__SlideIn_36191320(
   v23 = this->fields.mInitPos.fields.x;
   v24 = this->fields.mInitPos.fields.y;
   v25 = this->fields.mInitPos.fields.z;
-  v26 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v26 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v26, (Il2CppObject *)v13, Method_SlideFadeObject___c__DisplayClass18_0__SlideIn_b__0__, 0);
-  v27 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v27 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v27, (Il2CppObject *)v13, Method_SlideFadeObject___c__DisplayClass18_0__SlideIn_b__1__, 0);
   if ( !mMoveObject )
 LABEL_6:
-    sub_1C3E7C0(v14, v15);
+    sub_1C6BC60(v14, v15);
   v30.fields.x = x;
   v30.fields.y = y;
   v30.fields.z = z;
@@ -268,7 +268,7 @@ LABEL_6:
 }
 
 
-void SlideFadeObject__SlideIn_36191728(
+void SlideFadeObject__SlideIn_36371576(
         SlideFadeObject_o *this,
         float out_pos_ofs_x,
         float time,
@@ -281,7 +281,7 @@ void SlideFadeObject__SlideIn_36191728(
   v8.fields.z = this->fields.mInitPos.fields.z;
   v8.fields.x = this->fields.mInitPos.fields.x + out_pos_ofs_x;
   v8.fields.y = this->fields.mInitPos.fields.y;
-  SlideFadeObject__SlideIn_36191320(this, v8, time, delay, endAct, method);
+  SlideFadeObject__SlideIn_36371168(this, v8, time, delay, endAct, method);
 }
 
 
@@ -311,11 +311,11 @@ void SlideFadeObject__SlideOut(
   v11.fields.y = *(float *)((char *)&this->klass + v7);
   v11.fields.z = *(float *)((char *)&this->klass + v6);
   v11.fields.x = *(float *)((char *)&this->klass + v8);
-  SlideFadeObject__SlideOut_36192292(this, v11, time, delay, endAct, (const MethodInfo *)endAct);
+  SlideFadeObject__SlideOut_36372140(this, v11, time, delay, endAct, (const MethodInfo *)endAct);
 }
 
 
-void SlideFadeObject__SlideOut_36192292(
+void SlideFadeObject__SlideOut_36372140(
         SlideFadeObject_o *this,
         UnityEngine_Vector3_o endPos,
         float time,
@@ -346,34 +346,34 @@ void SlideFadeObject__SlideOut_36192292(
   z = endPos.fields.z;
   y = endPos.fields.y;
   x = endPos.fields.x;
-  if ( (byte_4C537D3 & 1) == 0 )
+  if ( (byte_4CB2D23 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_SlideFadeObject___c__DisplayClass22_0__SlideOut_b__0__);
-    sub_1C3E564(&Method_SlideFadeObject___c__DisplayClass22_0__SlideOut_b__1__);
-    sub_1C3E564(&SlideFadeObject___c__DisplayClass22_0_TypeInfo);
-    byte_4C537D3 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_SlideFadeObject___c__DisplayClass22_0__SlideOut_b__0__);
+    sub_1C6BA08(&Method_SlideFadeObject___c__DisplayClass22_0__SlideOut_b__1__);
+    sub_1C6BA08(&SlideFadeObject___c__DisplayClass22_0_TypeInfo);
+    byte_4CB2D23 = 1;
   }
-  v13 = sub_1C3E7B0(SlideFadeObject___c__DisplayClass22_0_TypeInfo);
+  v13 = sub_1C6BC54(SlideFadeObject___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_6;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   *(_QWORD *)(v13 + 24) = endAct;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 24), (int32_t)endAct, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 24), (int32_t)endAct, v18, v19);
   this->fields.mSlideState = 0;
   mMoveObject = this->fields.mMoveObject;
   v21 = this->fields.mInitPos.fields.x;
   v22 = this->fields.mInitPos.fields.y;
   v23 = this->fields.mInitPos.fields.z;
-  v24 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v24, (Il2CppObject *)v13, Method_SlideFadeObject___c__DisplayClass22_0__SlideOut_b__0__, 0);
-  v25 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v25 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v25, (Il2CppObject *)v13, Method_SlideFadeObject___c__DisplayClass22_0__SlideOut_b__1__, 0);
   if ( !mMoveObject )
 LABEL_6:
-    sub_1C3E7C0(v14, v15);
+    sub_1C6BC60(v14, v15);
   v27.fields.x = v21;
   v28.fields.x = x;
   v28.fields.y = y;
@@ -384,7 +384,7 @@ LABEL_6:
 }
 
 
-void SlideFadeObject__SlideOut_36192672(
+void SlideFadeObject__SlideOut_36372520(
         SlideFadeObject_o *this,
         float out_pos_ofs_x,
         float time,
@@ -397,7 +397,7 @@ void SlideFadeObject__SlideOut_36192672(
   v8.fields.z = this->fields.mInitPos.fields.z;
   v8.fields.x = this->fields.mInitPos.fields.x + out_pos_ofs_x;
   v8.fields.y = this->fields.mInitPos.fields.y;
-  SlideFadeObject__SlideOut_36192292(this, v8, time, delay, endAct, method);
+  SlideFadeObject__SlideOut_36372140(this, v8, time, delay, endAct, method);
 }
 
 
@@ -414,11 +414,11 @@ void SlideFadeObject__SlideSortIn(
   v8.fields.z = this->fields.mInitPos.fields.z;
   v8.fields.x = this->fields.mInitPos.fields.x + out_pos_ofs_x;
   v8.fields.y = -80.0;
-  SlideFadeObject__SlideSortIn_36191792(this, v8, time, delay, endAct, method);
+  SlideFadeObject__SlideSortIn_36371640(this, v8, time, delay, endAct, method);
 }
 
 
-void SlideFadeObject__SlideSortIn_36191792(
+void SlideFadeObject__SlideSortIn_36371640(
         SlideFadeObject_o *this,
         UnityEngine_Vector3_o startPos,
         float time,
@@ -452,22 +452,22 @@ void SlideFadeObject__SlideSortIn_36191792(
   z = startPos.fields.z;
   y = startPos.fields.y;
   x = startPos.fields.x;
-  if ( (byte_4C537D2 & 1) == 0 )
+  if ( (byte_4CB2D22 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_SlideFadeObject___c__DisplayClass19_0__SlideSortIn_b__0__);
-    sub_1C3E564(&Method_SlideFadeObject___c__DisplayClass19_0__SlideSortIn_b__1__);
-    sub_1C3E564(&SlideFadeObject___c__DisplayClass19_0_TypeInfo);
-    byte_4C537D2 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_SlideFadeObject___c__DisplayClass19_0__SlideSortIn_b__0__);
+    sub_1C6BA08(&Method_SlideFadeObject___c__DisplayClass19_0__SlideSortIn_b__1__);
+    sub_1C6BA08(&SlideFadeObject___c__DisplayClass19_0_TypeInfo);
+    byte_4CB2D22 = 1;
   }
-  v13 = sub_1C3E7B0(SlideFadeObject___c__DisplayClass19_0_TypeInfo);
+  v13 = sub_1C6BC54(SlideFadeObject___c__DisplayClass19_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_6;
   *(_QWORD *)(v13 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)this, v16, v17);
   *(_QWORD *)(v13 + 24) = endAct;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 24), (int32_t)endAct, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 24), (int32_t)endAct, v18, v19);
   this->fields.mSlideState = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v29.fields.x = x;
@@ -478,13 +478,13 @@ void SlideFadeObject__SlideSortIn_36191792(
   v23 = this->fields.sortPos.fields.x;
   v24 = this->fields.sortPos.fields.y;
   v25 = this->fields.sortPos.fields.z;
-  v26 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v26 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v26, (Il2CppObject *)v13, Method_SlideFadeObject___c__DisplayClass19_0__SlideSortIn_b__0__, 0);
-  v27 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v27 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v27, (Il2CppObject *)v13, Method_SlideFadeObject___c__DisplayClass19_0__SlideSortIn_b__1__, 0);
   if ( !mMoveObject )
 LABEL_6:
-    sub_1C3E7C0(v14, v15);
+    sub_1C6BC60(v14, v15);
   v30.fields.x = x;
   v30.fields.y = y;
   v30.fields.z = z;
@@ -531,10 +531,10 @@ void SlideFadeObject___c__DisplayClass18_0___SlideIn_b__0(
   UnityEngine_Object_o *mPanel; // x20
   struct SlideFadeObject_o *v8; // x8
 
-  if ( (byte_4C537D4 & 1) == 0 )
+  if ( (byte_4CB2D24 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537D4 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2D24 = 1;
   }
   _4__this = (UnityEngine_Component_o *)this->fields.__4__this;
   if ( !_4__this )
@@ -573,7 +573,7 @@ void SlideFadeObject___c__DisplayClass18_0___SlideIn_b__0(
       }
     }
 LABEL_14:
-    sub_1C3E7C0(_4__this, method);
+    sub_1C6BC60(_4__this, method);
   }
 }
 
@@ -588,10 +588,10 @@ void SlideFadeObject___c__DisplayClass18_0___SlideIn_b__1(
   struct SlideFadeObject_o *v5; // x8
 
   v2 = this;
-  if ( (byte_4C537D5 & 1) == 0 )
+  if ( (byte_4CB2D25 & 1) == 0 )
   {
-    this = (SlideFadeObject___c__DisplayClass18_0_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537D5 = 1;
+    this = (SlideFadeObject___c__DisplayClass18_0_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2D25 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -617,7 +617,7 @@ void SlideFadeObject___c__DisplayClass18_0___SlideIn_b__1(
       }
     }
 LABEL_11:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
 LABEL_10:
   ActionExtensions__Call(v2->fields.endAct, 0);
@@ -645,10 +645,10 @@ void SlideFadeObject___c__DisplayClass19_0___SlideSortIn_b__0(
   UnityEngine_Object_o *mPanel; // x20
   struct SlideFadeObject_o *v10; // x8
 
-  if ( (byte_4C537D6 & 1) == 0 )
+  if ( (byte_4CB2D26 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537D6 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2D26 = 1;
   }
   _4__this = (UnityEngine_Component_o *)this->fields.__4__this;
   if ( !_4__this )
@@ -698,7 +698,7 @@ void SlideFadeObject___c__DisplayClass19_0___SlideSortIn_b__0(
       }
     }
 LABEL_17:
-    sub_1C3E7C0(_4__this, method);
+    sub_1C6BC60(_4__this, method);
   }
 }
 
@@ -713,10 +713,10 @@ void SlideFadeObject___c__DisplayClass19_0___SlideSortIn_b__1(
   struct SlideFadeObject_o *v5; // x8
 
   v2 = this;
-  if ( (byte_4C537D7 & 1) == 0 )
+  if ( (byte_4CB2D27 & 1) == 0 )
   {
-    this = (SlideFadeObject___c__DisplayClass19_0_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537D7 = 1;
+    this = (SlideFadeObject___c__DisplayClass19_0_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2D27 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -742,7 +742,7 @@ void SlideFadeObject___c__DisplayClass19_0___SlideSortIn_b__1(
       }
     }
 LABEL_11:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
 LABEL_10:
   ActionExtensions__Call(v2->fields.endAct, 0);
@@ -768,10 +768,10 @@ void SlideFadeObject___c__DisplayClass22_0___SlideOut_b__0(
   UnityEngine_Object_o *mPanel; // x20
   struct SlideFadeObject_o *v8; // x8
 
-  if ( (byte_4C537D8 & 1) == 0 )
+  if ( (byte_4CB2D28 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537D8 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2D28 = 1;
   }
   _4__this = (UnityEngine_Component_o *)this->fields.__4__this;
   if ( !_4__this )
@@ -810,7 +810,7 @@ void SlideFadeObject___c__DisplayClass22_0___SlideOut_b__0(
       }
     }
 LABEL_14:
-    sub_1C3E7C0(_4__this, method);
+    sub_1C6BC60(_4__this, method);
   }
 }
 
@@ -823,7 +823,7 @@ void SlideFadeObject___c__DisplayClass22_0___SlideOut_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   _4__this->fields.mSlideState = 2;
   ActionExtensions__Call(this->fields.endAct, 0);
 }

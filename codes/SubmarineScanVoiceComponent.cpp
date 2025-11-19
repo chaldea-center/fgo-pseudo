@@ -23,15 +23,15 @@ void SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o *this, con
   struct System_String_array *v17; // x8
   struct System_String_o *v18; // x1
 
-  if ( (byte_4C53693 & 1) == 0 )
+  if ( (byte_4CB2BE3 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_4424/*"ChrVoice_"*/);
-    byte_4C53693 = 1;
+    sub_1C6BA08(&StringLiteral_4414/*"ChrVoice_"*/);
+    byte_4CB2BE3 = 1;
   }
   this->fields.assetName = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetName, 0, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetName, 0, v2, v3);
   this->fields.vcName = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.vcName, 0, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.vcName, 0, v5, v6);
   p_svtId = &this->fields.svtId;
   if ( this->fields.svtId )
   {
@@ -41,22 +41,22 @@ void SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o *this, con
     if ( !vcNameList->max_length )
       return;
     v10 = System_Int32__ToString((int32_t)p_svtId, 0);
-    v11 = System_String__Concat_63636468((System_String_o *)StringLiteral_4424/*"ChrVoice_"*/, v10, 0);
+    v11 = System_String__Concat_63966792((System_String_o *)StringLiteral_4414/*"ChrVoice_"*/, v10, 0);
     this->fields.assetName = v11;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetName, (int32_t)v11, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetName, (int32_t)v11, v12, v13);
     v14 = this->fields.vcNameList;
     if ( !v14
-      || (p_svtId = (int32_t *)UnityEngine_Random__Range_71301784(0, v14->max_length, 0),
+      || (p_svtId = (int32_t *)UnityEngine_Random__Range_71619388(0, v14->max_length, 0),
           (v17 = this->fields.vcNameList) == 0) )
     {
 LABEL_11:
-      sub_1C3E7C0(p_svtId, v7);
+      sub_1C6BC60(p_svtId, v7);
     }
     if ( (unsigned int)p_svtId >= LODWORD(v17->max_length) )
-      sub_1C3E7C8(p_svtId, v7);
+      sub_1C6BC68(p_svtId);
     v18 = v17->m_Items[(int)p_svtId];
     this->fields.vcName = v18;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.vcName, (int32_t)v18, v15, v16);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.vcName, (int32_t)v18, v15, v16);
   }
 }
 
@@ -78,13 +78,13 @@ void SubmarineScanVoiceComponent__PlayScanVoice(SubmarineScanVoiceComponent_o *t
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C53694 & 1) == 0 )
+  if ( (byte_4CB2BE4 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&SeManager_TypeInfo);
-    sub_1C3E564(&SoundManager_TypeInfo);
-    sub_1C3E564(&Method_SubmarineScanVoiceComponent_StopVoice__);
-    byte_4C53694 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&SeManager_TypeInfo);
+    sub_1C6BA08(&SoundManager_TypeInfo);
+    sub_1C6BA08(&Method_SubmarineScanVoiceComponent_StopVoice__);
+    byte_4CB2BE4 = 1;
   }
   assetName = this->fields.assetName;
   if ( assetName )
@@ -99,13 +99,13 @@ void SubmarineScanVoiceComponent__PlayScanVoice(SubmarineScanVoiceComponent_o *t
         v5 = SeManager_TypeInfo;
       }
       DEFAULT_VOLUME = v5->static_fields->DEFAULT_VOLUME;
-      v7 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
       System_Action___ctor(v7, (Il2CppObject *)this, Method_SubmarineScanVoiceComponent_StopVoice__, 0);
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-      v8 = SoundManager__playVoice_41566940(assetName, vcName, DEFAULT_VOLUME, v7, 0, 0);
+      v8 = SoundManager__playVoice_41752360(assetName, vcName, DEFAULT_VOLUME, v7, 0, 0);
       this->fields.sePlayer = v8;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.sePlayer, (int32_t)v8, v9, v10);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.sePlayer, (int32_t)v8, v9, v10);
     }
   }
 }
@@ -120,10 +120,10 @@ void SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceComponent_o *this,
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C53695 & 1) == 0 )
+  if ( (byte_4CB2BE5 & 1) == 0 )
   {
-    sub_1C3E564(&SoundManager_TypeInfo);
-    byte_4C53695 = 1;
+    sub_1C6BA08(&SoundManager_TypeInfo);
+    byte_4CB2BE5 = 1;
   }
   p_sePlayer = (CGThumbnailListItem_o *)&this->fields.sePlayer;
   if ( this->fields.sePlayer )
@@ -135,6 +135,6 @@ void SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceComponent_o *this,
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__stopVoice(v5, vcName, 0.0, 0);
     p_sePlayer->klass = 0;
-    sub_1C3E508(p_sePlayer, 0, v7, v8);
+    sub_1C6B9AC(p_sePlayer, 0, v7, v8);
   }
 }

@@ -9,7 +9,7 @@ void BaseBattleInfoPosData__Init(BaseBattleInfoPosData_o *this, BattlePerformanc
   const MethodInfo *v3; // x3
 
   this->fields._Perf_k__BackingField = perf;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)perf, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)perf, (int32_t)method, v3);
 }
 
 
@@ -46,10 +46,10 @@ UnityEngine_Vector3_o BaseBattleInfoPosData__get_SkillSkipTrLocalPos(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -70,5 +70,5 @@ void BaseBattleInfoPosData__set_Perf(
   const MethodInfo *v3; // x3
 
   this->fields._Perf_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
 }

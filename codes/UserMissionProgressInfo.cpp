@@ -4,7 +4,7 @@ void UserMissionProgressInfo___ctor(UserMissionProgressInfo_o *this, const Metho
 }
 
 
-void UserMissionProgressInfo___ctor_43600292(
+void UserMissionProgressInfo___ctor_43790908(
         UserMissionProgressInfo_o *this,
         int32_t eventId,
         int32_t missionId,
@@ -34,18 +34,18 @@ void UserMissionProgressInfo__checkMissionCond(UserMissionProgressInfo_o *this, 
   __int64 v7; // x22
   EventMissionConditionEntity_o *v8; // x21
 
-  if ( (byte_4C58209 & 1) == 0 )
+  if ( (byte_4CB7777 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventMissionConditionMaster___);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C58209 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB7777 = 1;
   }
   this->fields.currentProgressType = 4;
-  Instance = (EventMissionConditionEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (EventMissionConditionEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (EventMissionConditionEntity_array *)DataManager__GetMasterData_object_(
                                                           (DataManager_o *)Instance,
-                                                          (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___)) == 0
+                                                          (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___)) == 0
     || (Instance = EventMissionConditionMaster__getMissionCondList(
                      (EventMissionConditionMaster_o *)Instance,
                      this->fields.eventId,
@@ -53,7 +53,7 @@ void UserMissionProgressInfo__checkMissionCond(UserMissionProgressInfo_o *this, 
                      0)) == 0 )
   {
 LABEL_17:
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   }
   max_length = Instance->max_length;
   v6 = Instance;
@@ -65,7 +65,7 @@ LABEL_17:
       while ( 1 )
       {
         if ( (unsigned int)v7 >= (unsigned int)max_length )
-          sub_1C3E7C8(Instance, v4);
+          sub_1C6BC68(Instance);
         v8 = v6->m_Items[v7];
         if ( !v8 )
           goto LABEL_17;
@@ -108,25 +108,25 @@ void UserMissionProgressInfo__setMissionCondInfo(UserMissionProgressInfo_o *this
   __int64 v20; // x8
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C5820A & 1) == 0 )
+  if ( (byte_4CB7778 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventMissionConditionMaster___);
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C5820A = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserEventMissionMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventMissionConditionEntity__get_Count__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB7778 = 1;
   }
   memset(&v21, 0, sizeof(v21));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
+               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserEventMissionMaster___);
   if ( !Instance )
     goto LABEL_41;
   Instance = UserEventMissionMaster__getUserEventMissionList(
@@ -147,7 +147,7 @@ void UserMissionProgressInfo__setMissionCondInfo(UserMissionProgressInfo_o *this
       while ( 1 )
       {
         if ( (unsigned int)v9 >= v8 )
-          sub_1C3E7C8(Instance, v4);
+          sub_1C6BC68(Instance);
         v10 = *((_QWORD *)Instance + v9 + 4);
         if ( !v10 )
           break;
@@ -163,7 +163,7 @@ void UserMissionProgressInfo__setMissionCondInfo(UserMissionProgressInfo_o *this
           goto LABEL_24;
       }
 LABEL_41:
-      sub_1C3E7C0(Instance, v4);
+      sub_1C6BC60(Instance, v4);
     case 3:
       v6 = 2;
       v7 = 4;
@@ -181,12 +181,12 @@ LABEL_10:
 LABEL_24:
   if ( this->fields.currentProgStatus == 2 )
     this->fields.currentProgStatus = 5;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_41;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
+               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMissionConditionMaster___);
   if ( !Instance )
     goto LABEL_41;
   Instance = EventMissionConditionMaster__getMissionCondListByType(
@@ -206,19 +206,19 @@ LABEL_24:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v21,
       (System_Collections_Generic_List_object__o *)Instance,
-      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
+      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_EventMissionConditionEntity__GetEnumerator__);
     while ( 1 )
     {
       v14 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v21,
-              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
+              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__MoveNext__);
       if ( !v14 )
         break;
       if ( this->fields.currentProgStatus )
       {
         current = v21.fields._current;
         if ( !v21.fields._current )
-          sub_1C3E7C0(v14, v15);
+          sub_1C6BC60(v14, v15);
         v17 = *p_progNum;
         if ( *(_DWORD *)((char *)&v21.fields._current->klass + (unsigned __int64)&qword_28) == 12 )
         {
@@ -243,6 +243,6 @@ LABEL_24:
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v21,
-      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
+      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_EventMissionConditionEntity__Dispose__);
   }
 }

@@ -23,12 +23,12 @@ void CharaCutEffectComponent__CutinResume(CharaCutEffectComponent_o *this, const
   const MethodInfo *v17; // x3
   UnityEngine_Color_o v18; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C583B0 & 1) == 0 )
+  if ( (byte_4CB791E & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetData_GetObject_Texture2D___);
-    sub_1C3E564(&StringLiteral_9899/*"OnEndCutinEffect"*/);
-    sub_1C3E564(&StringLiteral_4922/*"Custom/Sprite-ScriptActionFigureCut"*/);
-    byte_4C583B0 = 1;
+    sub_1C6BA08(&Method_AssetData_GetObject_Texture2D___);
+    sub_1C6BA08(&StringLiteral_9895/*"OnEndCutinEffect"*/);
+    sub_1C6BA08(&StringLiteral_4912/*"Custom/Sprite-ScriptActionFigureCut"*/);
+    byte_4CB791E = 1;
   }
   duration = this->fields.duration;
   this->fields.isPause = 0;
@@ -50,14 +50,14 @@ void CharaCutEffectComponent__CutinResume(CharaCutEffectComponent_o *this, const
   this->fields.addVolume = v6;
   if ( !image )
     goto LABEL_19;
-  UIImageRender__SetSharder(image, (System_String_o *)StringLiteral_4922/*"Custom/Sprite-ScriptActionFigureCut"*/, 0);
+  UIImageRender__SetSharder(image, (System_String_o *)StringLiteral_4912/*"Custom/Sprite-ScriptActionFigureCut"*/, 0);
   wipeData = this->fields.wipeData;
   if ( wipeData )
   {
     v8 = (UIImageRender_o *)this->fields.image;
     image = (UIImageRender_o *)AssetData__GetObject_object_(
                                  wipeData,
-                                 (const MethodInfo_30DACD8 *)Method_AssetData_GetObject_Texture2D___);
+                                 (const MethodInfo_311C2F8 *)Method_AssetData_GetObject_Texture2D___);
     if ( !v8 )
       goto LABEL_19;
     UIImageRender__SetWipeTexture(v8, (UnityEngine_Texture_o *)image, 0);
@@ -72,7 +72,7 @@ void CharaCutEffectComponent__CutinResume(CharaCutEffectComponent_o *this, const
         (image = (UIImageRender_o *)this->fields.image) == 0) )
   {
 LABEL_19:
-    sub_1C3E7C0(image, method);
+    sub_1C6BC60(image, method);
   }
   *(float *)&v2 = v6 + 1.0039;
   UIImageRender__SetGradation(image, v6, 0);
@@ -92,10 +92,10 @@ LABEL_19:
       LODWORD(image->fields.leftAnchor) = 1;
       v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       v11->fields.mTrans = (struct UnityEngine_Transform_o *)v12;
-      sub_1C3E508((CGThumbnailListItem_o *)&v11->fields.mTrans, (int32_t)v12, v13, v14);
-      v15 = StringLiteral_9899/*"OnEndCutinEffect"*/;
-      v11->fields.mChildren = (struct BetterList_UIRect__o *)StringLiteral_9899/*"OnEndCutinEffect"*/;
-      sub_1C3E508((CGThumbnailListItem_o *)&v11->fields.mChildren, v15, v16, v17);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v11->fields.mTrans, (int32_t)v12, v13, v14);
+      v15 = StringLiteral_9895/*"OnEndCutinEffect"*/;
+      v11->fields.mChildren = (struct BetterList_UIRect__o *)StringLiteral_9895/*"OnEndCutinEffect"*/;
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v11->fields.mChildren, v15, v16, v17);
       return;
     }
     goto LABEL_19;
@@ -118,20 +118,20 @@ void CharaCutEffectComponent__CutinStart(
   System_String_o *v9; // x20
   AssetLoader_LoadEndDataHandler_o *v10; // x21
 
-  if ( (byte_4C583AE & 1) == 0 )
+  if ( (byte_4CB791C & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&Method_CharaCutEffectComponent_EndLoadWipe__);
-    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C3E564(&StringLiteral_15669/*"Wipe/"*/);
-    byte_4C583AE = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&Method_CharaCutEffectComponent_EndLoadWipe__);
+    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C6BA08(&StringLiteral_15656/*"Wipe/"*/);
+    byte_4CB791C = 1;
   }
   this->fields.isCutBusy = 1;
   this->fields.image = image;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.image, (int32_t)image, (int32_t)wipeName, method);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.image, (int32_t)image, (int32_t)wipeName, method);
   this->fields.mgd = mgd;
-  v9 = System_String__Concat_63636468((System_String_o *)StringLiteral_15669/*"Wipe/"*/, wipeName, 0);
-  v10 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v9 = System_String__Concat_63966792((System_String_o *)StringLiteral_15656/*"Wipe/"*/, wipeName, 0);
+  v10 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(v10, (Il2CppObject *)this, Method_CharaCutEffectComponent_EndLoadWipe__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -159,11 +159,11 @@ void CharaCutEffectComponent__CutoutStart(
   UnityEngine_Object_o *gameObject; // x19
 
   v7 = isSkip;
-  if ( (byte_4C583B1 & 1) == 0 )
+  if ( (byte_4CB791F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_9900/*"OnEndCutoutEffect"*/);
-    byte_4C583B1 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9896/*"OnEndCutoutEffect"*/);
+    byte_4CB791F = 1;
   }
   this->fields.duration = time;
   this->fields.isSkip = v7;
@@ -172,7 +172,7 @@ void CharaCutEffectComponent__CutoutStart(
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71341564(gameObject, 0);
+    UnityEngine_Object__Destroy_71659676(gameObject, 0);
   }
   else
   {
@@ -180,15 +180,15 @@ void CharaCutEffectComponent__CutoutStart(
     v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     v9 = TweenRenderVolume__Begin(v8, this->fields.duration, 0.0, 0);
     if ( !v9 )
-      sub_1C3E7C0(0, v10);
+      sub_1C6BC60(0, v10);
     v11 = v9;
     v9->fields.method = 1;
     v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     v11->fields.eventReceiver = v12;
-    sub_1C3E508((CGThumbnailListItem_o *)&v11->fields.eventReceiver, (int32_t)v12, v13, v14);
-    v15 = StringLiteral_9900/*"OnEndCutoutEffect"*/;
-    v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9900/*"OnEndCutoutEffect"*/;
-    sub_1C3E508((CGThumbnailListItem_o *)&v11->fields.callWhenFinished, v15, v16, v17);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v11->fields.eventReceiver, (int32_t)v12, v13, v14);
+    v15 = StringLiteral_9896/*"OnEndCutoutEffect"*/;
+    v11->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9896/*"OnEndCutoutEffect"*/;
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v11->fields.callWhenFinished, v15, v16, v17);
   }
 }
 
@@ -203,23 +203,23 @@ void CharaCutEffectComponent__EndLoadWipe(CharaCutEffectComponent_o *this, Asset
   UnityEngine_Vector2_o BodySize; // kr00_8
   _BOOL4 isPause; // w8
 
-  if ( (byte_4C583AF & 1) == 0 )
+  if ( (byte_4CB791D & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C583AF = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB791D = 1;
   }
   wipeData = this->fields.wipeData;
   if ( wipeData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40580972(wipeData, 0);
+    AssetManager__releaseAsset_40765532(wipeData, 0);
   }
   this->fields.wipeData = data;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.wipeData, (int32_t)data, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.wipeData, (int32_t)data, (int32_t)method, v3);
   image = (UIImageRender_o *)this->fields.image;
   if ( !image )
-    sub_1C3E7C0(0, v7);
+    sub_1C6BC60(0, v7);
   BodySize = UIImageRender__GetBodySize(image, 0);
   isPause = this->fields.isPause;
   this->fields.bodySize = BodySize;
@@ -249,20 +249,20 @@ void CharaCutEffectComponent__OnDestroy(CharaCutEffectComponent_o *this, const M
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C583B3 & 1) == 0 )
+  if ( (byte_4CB7921 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C583B3 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB7921 = 1;
   }
   wipeData = this->fields.wipeData;
   if ( wipeData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40580972(wipeData, 0);
+    AssetManager__releaseAsset_40765532(wipeData, 0);
     this->fields.wipeData = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.wipeData, 0, v4, v5);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.wipeData, 0, v4, v5);
   }
   image = (UnityEngine_Object_o *)this->fields.image;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -272,10 +272,10 @@ void CharaCutEffectComponent__OnDestroy(CharaCutEffectComponent_o *this, const M
     p_image = (CGThumbnailListItem_o *)&this->fields.image;
     klass = (UIImageRender_o *)p_image->klass;
     if ( !p_image->klass || (UIImageRender__RecoverSharder(klass, 0), (klass = (UIImageRender_o *)p_image->klass) == 0) )
-      sub_1C3E7C0(klass, v7);
+      sub_1C6BC60(klass, v7);
     UIImageRender__SetAlpha(klass, 0.0, 0);
     p_image->klass = 0;
-    sub_1C3E508(p_image, 0, v10, v11);
+    sub_1C6B9AC(p_image, 0, v10, v11);
   }
 }
 
@@ -290,16 +290,16 @@ void CharaCutEffectComponent__OnEndCutoutEffect(CharaCutEffectComponent_o *this,
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C583B2 & 1) == 0 )
+  if ( (byte_4CB7920 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C583B2 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB7920 = 1;
   }
   this->fields.isCutBusy = 0;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71341564(gameObject, 0);
+  UnityEngine_Object__Destroy_71659676(gameObject, 0);
 }
 
 
@@ -340,7 +340,7 @@ void CharaCutEffectComponent__SetTweenColor(
   UIWidget__set_color((UIWidget_o *)this, c, 0);
   image = this->fields.image;
   if ( !image )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   ((void (__fastcall *)(struct UIImageM_o *, const MethodInfo *, long double, long double, long double, long double))image->klass->vtable._39_SetTweenColor.methodPtr)(
     image,
     image->klass->vtable._39_SetTweenColor.method,
@@ -358,6 +358,6 @@ void CharaCutEffectComponent__SetTweenVolume(CharaCutEffectComponent_o *this, fl
   image = (UIImageRender_o *)this->fields.image;
   this->fields.volume = v;
   if ( !image )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   UIImageRender__SetVolume(image, v, 0);
 }

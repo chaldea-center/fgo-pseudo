@@ -6,18 +6,18 @@ void BattleResultBondsDeckPerWaveComponent___ctor(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C5A59A & 1) == 0 )
+  if ( (byte_4CB9B69 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleResultBondsIconComponent___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_BattleResultBondsIconComponent__TypeInfo);
-    byte_4C5A59A = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleResultBondsIconComponent___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_BattleResultBondsIconComponent__TypeInfo);
+    byte_4CB9B69 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_BattleResultBondsIconComponent__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_BattleResultBondsIconComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_BattleResultBondsIconComponent___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_BattleResultBondsIconComponent___ctor__);
   this->fields.bondsIconList = (struct System_Collections_Generic_List_BattleResultBondsIconComponent__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.bondsIconList, (int32_t)v3, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.bondsIconList, (int32_t)v3, v4, v5);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -38,11 +38,11 @@ BattleResultBondsIconComponent_o *BattleResultBondsDeckPerWaveComponent__CreateB
   BattleResultBondsIconComponent_o *v12; // x19
   Il2CppClass **v13; // x0
 
-  if ( (byte_4C5A596 & 1) == 0 )
+  if ( (byte_4CB9B65 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BaseMonoBehaviour_createObject_BattleResultBondsIconComponent___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleResultBondsIconComponent__Add__);
-    byte_4C5A596 = 1;
+    sub_1C6BA08(&Method_BaseMonoBehaviour_createObject_BattleResultBondsIconComponent___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleResultBondsIconComponent__Add__);
+    byte_4CB9B65 = 1;
   }
   iconRoot = (UnityEngine_Component_o *)this->fields.iconRoot;
   if ( !iconRoot
@@ -53,14 +53,14 @@ BattleResultBondsIconComponent_o *BattleResultBondsDeckPerWaveComponent__CreateB
                                                 bondsIcon,
                                                 transform,
                                                 0,
-                                                (const MethodInfo_30E26E8 *)Method_BaseMonoBehaviour_createObject_BattleResultBondsIconComponent___),
+                                                (const MethodInfo_3123D08 *)Method_BaseMonoBehaviour_createObject_BattleResultBondsIconComponent___),
         (bondsIconList = (System_Collections_Generic_List_object__o *)this->fields.bondsIconList) == 0)
     || (items = bondsIconList->fields._items,
         v10 = Method_System_Collections_Generic_List_BattleResultBondsIconComponent__Add__,
         ++bondsIconList->fields._version,
         !items) )
   {
-    sub_1C3E7C0(iconRoot, method);
+    sub_1C6BC60(iconRoot, method);
   }
   size = bondsIconList->fields._size;
   v12 = (BattleResultBondsIconComponent_o *)iconRoot;
@@ -69,14 +69,14 @@ BattleResultBondsIconComponent_o *BattleResultBondsDeckPerWaveComponent__CreateB
     System_Collections_Generic_List_object___AddWithResize(
       bondsIconList,
       (Il2CppObject *)iconRoot,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
   }
   else
   {
     v13 = &items->obj.klass + size;
     bondsIconList->fields._size = size + 1;
     v13[4] = (Il2CppClass *)v12;
-    sub_1C3E508((CGThumbnailListItem_o *)(v13 + 4), (int32_t)v12, v6, v7);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 4), (int32_t)v12, v6, v7);
   }
   return v12;
 }
@@ -88,17 +88,17 @@ BattleResultBondsIconComponent_array *BattleResultBondsDeckPerWaveComponent__Get
 {
   System_Collections_Generic_List_object__o *bondsIconList; // x0
 
-  if ( (byte_4C5A597 & 1) == 0 )
+  if ( (byte_4CB9B66 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleResultBondsIconComponent__ToArray__);
-    byte_4C5A597 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleResultBondsIconComponent__ToArray__);
+    byte_4CB9B66 = 1;
   }
   bondsIconList = (System_Collections_Generic_List_object__o *)this->fields.bondsIconList;
   if ( !bondsIconList )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   return (BattleResultBondsIconComponent_array *)System_Collections_Generic_List_object___ToArray(
                                                    bondsIconList,
-                                                   (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_BattleResultBondsIconComponent__ToArray__);
+                                                   (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_BattleResultBondsIconComponent__ToArray__);
 }
 
 
@@ -110,7 +110,7 @@ void BattleResultBondsDeckPerWaveComponent__RepositionIcons(
 
   iconRoot = this->fields.iconRoot;
   if ( !iconRoot )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   ((void (__fastcall *)(struct UIGrid_o *, const MethodInfo *))iconRoot->klass->vtable._8_Reposition.methodPtr)(
     iconRoot,
     iconRoot->klass->vtable._8_Reposition.method);
@@ -140,7 +140,7 @@ void BattleResultBondsDeckPerWaveComponent__SetLine(
   waveLabel = v3->fields.waveLabel;
   if ( !waveLabel || (this = (BattleResultBondsDeckPerWaveComponent_o *)v3->fields.waveLabelLine) == 0 )
 LABEL_9:
-    sub_1C3E7C0(this, isPartyNameDialog);
+    sub_1C6BC60(this, isPartyNameDialog);
   mWidth = waveLabel->fields.mWidth;
   m_CancellationTokenSource = (int)this[2].fields.m_CancellationTokenSource;
   v7 = m_CancellationTokenSource + mWidth;
@@ -161,11 +161,11 @@ void BattleResultBondsDeckPerWaveComponent__SetPartyName(
   Il2CppObject *v8; // x0
   const MethodInfo *v9; // x2
 
-  if ( (byte_4C5A599 & 1) == 0 )
+  if ( (byte_4CB9B68 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_2838/*"BATTLE_RESULT_BONDS_PARTY_ID"*/);
-    byte_4C5A599 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_2830/*"BATTLE_RESULT_BONDS_PARTY_ID"*/);
+    byte_4CB9B68 = 1;
   }
   waveLabel = this->fields.waveLabel;
   if ( !waveLabel )
@@ -174,12 +174,12 @@ void BattleResultBondsDeckPerWaveComponent__SetPartyName(
   v6 = this->fields.waveLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_2838/*"BATTLE_RESULT_BONDS_PARTY_ID"*/, 0);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_2830/*"BATTLE_RESULT_BONDS_PARTY_ID"*/, 0);
   v8 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(partyId, 0);
   waveLabel = (UILabel_o *)System_String__Format(v7, v8, 0);
   if ( !v6 )
 LABEL_8:
-    sub_1C3E7C0(waveLabel, *(_QWORD *)&partyId);
+    sub_1C6BC60(waveLabel, *(_QWORD *)&partyId);
   UILabel__set_text(v6, (System_String_o *)waveLabel, 0);
   BattleResultBondsDeckPerWaveComponent__SetLine(this, 1, v9);
 }
@@ -195,30 +195,18 @@ void BattleResultBondsDeckPerWaveComponent__SetWaveCount(
   UILabel_o *waveLabel; // x0
   UILabel_o *v8; // x22
   System_String_o *v9; // x23
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 v12; // x4
-  __int64 v13; // x5
-  __int64 v14; // x6
-  __int64 v15; // x7
-  Il2CppObject *v16; // x21
-  __int64 v17; // x2
-  __int64 v18; // x3
-  __int64 v19; // x4
-  __int64 v20; // x5
-  __int64 v21; // x6
-  __int64 v22; // x7
-  Il2CppObject *v23; // x0
-  const MethodInfo *v24; // x2
-  int32_t v25; // [xsp+8h] [xbp-38h] BYREF
-  int32_t v26; // [xsp+Ch] [xbp-34h] BYREF
+  Il2CppObject *v10; // x21
+  Il2CppObject *v11; // x0
+  const MethodInfo *v12; // x2
+  int32_t v13; // [xsp+8h] [xbp-38h] BYREF
+  int32_t v14; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C5A598 & 1) == 0 )
+  if ( (byte_4CB9B67 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_2839/*"BATTLE_RESULT_BONDS_WAVE_COUNT"*/);
-    byte_4C5A598 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_2831/*"BATTLE_RESULT_BONDS_WAVE_COUNT"*/);
+    byte_4CB9B67 = 1;
   }
   waveLabel = this->fields.waveLabel;
   if ( !waveLabel )
@@ -227,15 +215,15 @@ void BattleResultBondsDeckPerWaveComponent__SetWaveCount(
   v8 = this->fields.waveLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2839/*"BATTLE_RESULT_BONDS_WAVE_COUNT"*/, 0);
-  v26 = current;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, v10, v11, v12, v13, v14, v15);
-  v25 = max;
-  v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25, v17, v18, v19, v20, v21, v22);
-  waveLabel = (UILabel_o *)System_String__Format_63677760(v9, v16, v23, 0);
+  v9 = LocalizationManager__Get((System_String_o *)StringLiteral_2831/*"BATTLE_RESULT_BONDS_WAVE_COUNT"*/, 0);
+  v14 = current;
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
+  v13 = max;
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
+  waveLabel = (UILabel_o *)System_String__Format_64008100(v9, v10, v11, 0);
   if ( !v8 )
 LABEL_8:
-    sub_1C3E7C0(waveLabel, *(_QWORD *)&current);
+    sub_1C6BC60(waveLabel, *(_QWORD *)&current);
   UILabel__set_text(v8, (System_String_o *)waveLabel, 0);
-  BattleResultBondsDeckPerWaveComponent__SetLine(this, 0, v24);
+  BattleResultBondsDeckPerWaveComponent__SetLine(this, 0, v12);
 }

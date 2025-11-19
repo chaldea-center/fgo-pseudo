@@ -1,14 +1,14 @@
 void EventBoostItemUsedMaster___ctor(EventBoostItemUsedMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56C19 & 1) == 0 )
+  if ( (byte_4CB6182 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long___ctor__);
-    byte_4C56C19 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long___ctor__);
+    byte_4CB6182 = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     306,
-    (const MethodInfo_33B3190 *)Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long___ctor__);
+    (const MethodInfo_33F9314 *)Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long___ctor__);
 }
 
 
@@ -24,22 +24,22 @@ UsedCount_o *EventBoostItemUsedMaster__GetUsedCount(
   UsedCount_o *result; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C56C1A & 1) == 0 )
+  if ( (byte_4CB6183 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long__TryGetEntity__);
-    byte_4C56C1A = 1;
+    sub_1C6BA08(&Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long__TryGetEntity__);
+    byte_4CB6183 = 1;
   }
   entity = 0;
   v9 = DataMasterBase_object__object__long___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          eventId,
-         (const MethodInfo_33B5500 *)Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long__TryGetEntity__);
+         (const MethodInfo_33FB684 *)Method_DataMasterBase_EventBoostItemUsedMaster__EventBoostItemUsedEntity__long__TryGetEntity__);
   result = 0;
   if ( v9 )
   {
     if ( !entity )
-      sub_1C3E7C0(0, v7);
+      sub_1C6BC60(0, v7);
     return EventBoostItemUsedEntity__GetUsedCount((EventBoostItemUsedEntity_o *)entity, userId, v8);
   }
   return result;

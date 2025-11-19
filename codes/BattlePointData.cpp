@@ -16,7 +16,7 @@ void BattlePointData___ctor(
 }
 
 
-void BattlePointData___ctor_46199224(
+void BattlePointData___ctor_46419332(
         BattlePointData_o *this,
         BattlePointData_SaveData_o *sv,
         BattleServantData_o *svtData,
@@ -30,7 +30,7 @@ void BattlePointData___ctor_46199224(
   this->fields.maxValue = 0x7FFFFFFF;
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !sv )
-    sub_1C3E7C0(v7, v8);
+    sub_1C6BC60(v7, v8);
   *(BattlePointData_SaveData_Fields *)&this->fields.id = sv->fields;
   BattlePointData__UpdateFlagEnableToAddValue(this, svtData, v9);
   BattlePointData__UpdateMaxValue(this, v10);
@@ -65,15 +65,15 @@ BattlePointData_SaveData_o *BattlePointData__GetSaveData(BattlePointData_o *this
   __int64 v5; // x1
   BattlePointData_SaveData_o *result; // x0
 
-  if ( (byte_4C598EC & 1) == 0 )
+  if ( (byte_4CB8EA2 & 1) == 0 )
   {
-    sub_1C3E564(&BattlePointData_SaveData_TypeInfo);
-    byte_4C598EC = 1;
+    sub_1C6BA08(&BattlePointData_SaveData_TypeInfo);
+    byte_4CB8EA2 = 1;
   }
-  v3 = (Il2CppObject *)sub_1C3E7B0(BattlePointData_SaveData_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C6BC54(BattlePointData_SaveData_TypeInfo);
   System_Object___ctor(v3, 0);
   if ( !v3 )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   result = (BattlePointData_SaveData_o *)v3;
   v3[1].klass = *(Il2CppClass **)&this->fields.id;
   return result;
@@ -98,25 +98,25 @@ void BattlePointData__UpdateFlagEnableToAddValue(
   bool IsHideBattlePointGauge; // w0
   bool v10; // w21
 
-  if ( (byte_4C598E9 & 1) == 0 )
+  if ( (byte_4CB8E9F & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_BattlePointMaster___);
-    sub_1C3E564(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C598E9 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_BattlePointMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB8E9F = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_BattlePointMaster___);
+                                (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_BattlePointMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 this->fields.id,
-                                (const MethodInfo_33B2F58 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__);
+                                (const MethodInfo_33F90DC *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__);
   if ( !Instance )
     goto LABEL_10;
   v7 = (BattlePointEntity_o *)Instance;
@@ -136,7 +136,7 @@ void BattlePointData__UpdateFlagEnableToAddValue(
         (Instance = (DataManager_o *)svtData->fields.deckSvt) == 0) )
   {
 LABEL_10:
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   }
   this->fields._IsHideBattlePointGauge_k__BackingField = (v10
                                                         | BattleDeckServantData__IsHideBattlePointGauge(
@@ -152,19 +152,19 @@ void BattlePointData__UpdateMaxValue(BattlePointData_o *this, const MethodInfo *
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4C598EA & 1) == 0 )
+  if ( (byte_4CB8EA0 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_BattlePointPhaseMaster___);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C598EA = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_BattlePointPhaseMaster___);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB8EA0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_BattlePointPhaseMaster___)) == 0 )
+                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_BattlePointPhaseMaster___)) == 0 )
   {
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   }
   this->fields.maxValue = BattlePointPhaseMaster__GetMaxPhaseValue(
                             (BattlePointPhaseMaster_o *)Instance,
@@ -192,12 +192,12 @@ void BattlePointData__UpdateSetting(
   __int64 v17; // x1
   bool v18; // w21
 
-  if ( (byte_4C598EB & 1) == 0 )
+  if ( (byte_4CB8EA1 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_BattlePointMaster___);
-    sub_1C3E564(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C598EB = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_BattlePointMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB8EA1 = 1;
   }
   if ( battleEntity )
   {
@@ -232,17 +232,17 @@ LABEL_8:
   v15 = (v11 & 1) == 0
      && QuestPhaseEntity__IsHideBattlePointGauge((QuestPhaseEntity_o *)battleEntity, this->fields.id, 0);
   this->fields._IsHideBattlePointGauge_k__BackingField = v15 || IsHideBattlePointGauge_k__BackingField;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_BattlePointMaster___)) == 0
+                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_BattlePointMaster___)) == 0
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      this->fields.id,
-                     (const MethodInfo_33B2F58 *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__)) == 0 )
+                     (const MethodInfo_33F90DC *)Method_DataMasterBase_BattlePointMaster__BattlePointEntity__int__GetEntity__)) == 0 )
   {
-    sub_1C3E7C0(Instance, v17);
+    sub_1C6BC60(Instance, v17);
   }
   v18 = this->fields._IsHideBattlePointGauge_k__BackingField;
   this->fields._IsHideBattlePointGauge_k__BackingField = (v18
@@ -278,19 +278,19 @@ int32_t BattlePointData__get_Phase(BattlePointData_o *this, const MethodInfo *me
   __int64 v4; // x1
   BattlePointPhaseEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C598E8 & 1) == 0 )
+  if ( (byte_4CB8E9E & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_BattlePointPhaseMaster___);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C598E8 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_BattlePointPhaseMaster___);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB8E9E = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_BattlePointPhaseMaster___);
+               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_BattlePointPhaseMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = (Il2CppObject *)BattlePointPhaseMaster__TryGetEntityByValue(
@@ -304,7 +304,7 @@ int32_t BattlePointData__get_Phase(BattlePointData_o *this, const MethodInfo *me
     if ( entity )
       return entity->fields.phase;
 LABEL_10:
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   }
   return 1;
 }

@@ -10,18 +10,18 @@ void EquipGraphListViewItemDraw__Awake(EquipGraphListViewItemDraw_o *this, const
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C562BB & 1) == 0 )
+  if ( (byte_4CB5822 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_UIWidget__TypeInfo);
-    byte_4C562BB = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_UIWidget__TypeInfo);
+    byte_4CB5822 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_UIWidget__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_UIWidget__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_UIWidget___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
   this->fields.messageLabelList = (struct System_Collections_Generic_List_UIWidget__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.messageLabelList, (int32_t)v3, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.messageLabelList, (int32_t)v3, v4, v5);
 }
 
 
@@ -40,11 +40,11 @@ void EquipGraphListViewItemDraw__SetInput(
   bool isChoice; // w1
   UnityEngine_Object_o *selectObject; // x21
 
-  if ( (byte_4C562BD & 1) == 0 )
+  if ( (byte_4CB5824 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C562BD = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB5824 = 1;
   }
   if ( item )
   {
@@ -58,7 +58,7 @@ void EquipGraphListViewItemDraw__SetInput(
         goto LABEL_35;
       Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       Component_object,
-                                                      (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                      (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider___);
       if ( !Component_object )
         goto LABEL_35;
       UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0);
@@ -117,7 +117,7 @@ void EquipGraphListViewItemDraw__SetInput(
         return;
       }
 LABEL_35:
-      sub_1C3E7C0(Component_object, v8);
+      sub_1C6BC60(Component_object, v8);
     }
   }
 }
@@ -199,43 +199,43 @@ void EquipGraphListViewItemDraw__SetItem(
   __int64 v74; // x10
   Il2CppClass **v75; // x0
   System_String_o *v76; // x23
-  __int64 v77; // x2
-  __int64 v78; // x3
-  __int64 v79; // x4
-  __int64 v80; // x5
-  __int64 v81; // x6
-  __int64 v82; // x7
-  Il2CppObject *v83; // x24
-  __int64 v84; // x2
-  __int64 v85; // x3
-  __int64 v86; // x4
-  __int64 v87; // x5
-  __int64 v88; // x6
-  __int64 v89; // x7
-  Il2CppObject *v90; // x0
-  struct System_Object_array *v91; // x8
-  _QWORD *v92; // x9
-  __int64 v93; // x10
-  int *v94; // x1
+  Il2CppObject *v77; // x24
+  Il2CppObject *v78; // x0
+  struct System_Object_array *v79; // x8
+  _QWORD *v80; // x9
+  __int64 v81; // x10
+  int *v82; // x1
+  Il2CppClass **v83; // x0
+  int32_t v84; // w2
+  const MethodInfo *v85; // x3
+  struct System_Object_array *v86; // x8
+  _QWORD *v87; // x9
+  __int64 v88; // x10
+  Il2CppClass **v89; // x0
+  int32_t v90; // w2
+  const MethodInfo *v91; // x3
+  struct System_Object_array *v92; // x8
+  _QWORD *v93; // x9
+  __int64 v94; // x10
   Il2CppClass **v95; // x0
   int32_t v96; // w2
   const MethodInfo *v97; // x3
   struct System_Object_array *v98; // x8
   _QWORD *v99; // x9
   __int64 v100; // x10
-  Il2CppClass **v101; // x0
-  int32_t v102; // w2
-  const MethodInfo *v103; // x3
-  struct System_Object_array *v104; // x8
-  _QWORD *v105; // x9
-  __int64 v106; // x10
-  Il2CppClass **v107; // x0
-  int32_t v108; // w2
-  const MethodInfo *v109; // x3
-  struct System_Object_array *v110; // x8
-  _QWORD *v111; // x9
-  __int64 v112; // x10
-  int *v113; // x1
+  int *v101; // x1
+  Il2CppClass **v102; // x0
+  int32_t v103; // w2
+  const MethodInfo *v104; // x3
+  struct System_Object_array *v105; // x8
+  _QWORD *v106; // x9
+  __int64 v107; // x10
+  Il2CppClass **v108; // x0
+  int32_t v109; // w2
+  const MethodInfo *v110; // x3
+  struct System_Object_array *v111; // x8
+  _QWORD *v112; // x9
+  __int64 v113; // x10
   Il2CppClass **v114; // x0
   int32_t v115; // w2
   const MethodInfo *v116; // x3
@@ -243,92 +243,68 @@ void EquipGraphListViewItemDraw__SetItem(
   _QWORD *v118; // x9
   __int64 v119; // x10
   Il2CppClass **v120; // x0
-  int32_t v121; // w2
-  const MethodInfo *v122; // x3
-  struct System_Object_array *v123; // x8
-  _QWORD *v124; // x9
-  __int64 v125; // x10
-  Il2CppClass **v126; // x0
-  int32_t v127; // w2
-  const MethodInfo *v128; // x3
-  struct System_Object_array *v129; // x8
-  _QWORD *v130; // x9
-  __int64 v131; // x10
-  Il2CppClass **v132; // x0
   UILabel_o *warningLabel2; // x23
-  struct UILabel_o *v134; // x8
+  struct UILabel_o *v122; // x8
   int32_t mWidth; // w22
-  System_String_o *v136; // x23
-  __int64 v137; // x2
-  __int64 v138; // x3
-  __int64 v139; // x4
-  __int64 v140; // x5
-  __int64 v141; // x6
-  __int64 v142; // x7
-  Il2CppObject *v143; // x24
-  __int64 v144; // x2
-  __int64 v145; // x3
-  __int64 v146; // x4
-  __int64 v147; // x5
-  __int64 v148; // x6
-  __int64 v149; // x7
-  Il2CppObject *v150; // x0
-  struct System_Object_array *v151; // x8
-  _QWORD *v152; // x9
-  __int64 v153; // x10
-  int *v154; // x1
-  Il2CppClass **v155; // x0
-  int32_t v156; // w2
-  const MethodInfo *v157; // x3
-  struct System_Object_array *v158; // x8
-  _QWORD *v159; // x9
-  __int64 v160; // x10
-  Il2CppClass **v161; // x0
-  int32_t v162; // w2
-  const MethodInfo *v163; // x3
-  struct System_Object_array *v164; // x8
-  _QWORD *v165; // x9
-  __int64 v166; // x10
-  Il2CppClass **v167; // x0
-  int32_t v168; // w2
-  const MethodInfo *v169; // x3
-  struct System_Object_array *v170; // x8
-  _QWORD *v171; // x9
-  __int64 v172; // x10
-  int *v173; // x1
-  Il2CppClass **v174; // x0
-  int32_t v175; // w2
-  const MethodInfo *v176; // x3
-  struct System_Object_array *v177; // x8
-  _QWORD *v178; // x9
-  __int64 v179; // x10
-  Il2CppClass **v180; // x0
-  int32_t v181; // w2
-  const MethodInfo *v182; // x3
-  struct System_Object_array *v183; // x8
-  _QWORD *v184; // x9
-  __int64 v185; // x10
-  Il2CppClass **v186; // x0
-  int32_t v187; // w2
-  const MethodInfo *v188; // x3
-  struct System_Object_array *v189; // x8
-  _QWORD *v190; // x9
-  __int64 v191; // x10
-  Il2CppClass **v192; // x0
-  UILabel_o *v193; // x23
-  int32_t v194; // w22
-  struct UILabel_o *v195; // x8
+  System_String_o *v124; // x23
+  Il2CppObject *v125; // x24
+  Il2CppObject *v126; // x0
+  struct System_Object_array *v127; // x8
+  _QWORD *v128; // x9
+  __int64 v129; // x10
+  int *v130; // x1
+  Il2CppClass **v131; // x0
+  int32_t v132; // w2
+  const MethodInfo *v133; // x3
+  struct System_Object_array *v134; // x8
+  _QWORD *v135; // x9
+  __int64 v136; // x10
+  Il2CppClass **v137; // x0
+  int32_t v138; // w2
+  const MethodInfo *v139; // x3
+  struct System_Object_array *v140; // x8
+  _QWORD *v141; // x9
+  __int64 v142; // x10
+  Il2CppClass **v143; // x0
+  int32_t v144; // w2
+  const MethodInfo *v145; // x3
+  struct System_Object_array *v146; // x8
+  _QWORD *v147; // x9
+  __int64 v148; // x10
+  int *v149; // x1
+  Il2CppClass **v150; // x0
+  int32_t v151; // w2
+  const MethodInfo *v152; // x3
+  struct System_Object_array *v153; // x8
+  _QWORD *v154; // x9
+  __int64 v155; // x10
+  Il2CppClass **v156; // x0
+  int32_t v157; // w2
+  const MethodInfo *v158; // x3
+  struct System_Object_array *v159; // x8
+  _QWORD *v160; // x9
+  __int64 v161; // x10
+  Il2CppClass **v162; // x0
+  int32_t v163; // w2
+  const MethodInfo *v164; // x3
+  struct System_Object_array *v165; // x8
+  _QWORD *v166; // x9
+  __int64 v167; // x10
+  Il2CppClass **v168; // x0
+  UILabel_o *v169; // x23
+  int32_t v170; // w22
+  struct UILabel_o *v171; // x8
   UILabel_o *warningLabel3; // x22
   UILabel_o *warningLabel; // x22
-  int32_t v198; // w2
-  const MethodInfo *v199; // x3
-  __int64 v200; // x8
-  _QWORD *v201; // x9
-  __int64 v202; // x10
-  __int64 v203; // x8
-  int v204; // w8
-  __int64 v205; // x8
-  _QWORD *v206; // x9
+  int32_t v174; // w2
+  const MethodInfo *v175; // x3
+  __int64 v176; // x8
+  _QWORD *v177; // x9
+  __int64 v178; // x10
+  __int64 v179; // x8
+  int v180; // w8
+  __int64 v181; // x8
+  _QWORD *v182; // x9
   SwitchUIWidgetComponent_o *messageLabel; // x21
   UnityEngine_Object_o *selectObject; // x21
   UnityEngine_Object_o *friendShipSprite; // x21
@@ -337,36 +313,36 @@ void EquipGraphListViewItemDraw__SetItem(
   int32_t OrganizedWave_k__BackingField; // [xsp+1Ch] [xbp-44h] BYREF
 
   v7 = item;
-  if ( (byte_4C562BC & 1) == 0 )
+  if ( (byte_4CB5823 & 1) == 0 )
   {
-    sub_1C3E564(&BalanceConfig_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
-    sub_1C3E564(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    sub_1C3E564(&StringLiteral_43/*"\n"*/);
-    sub_1C3E564(&StringLiteral_15491/*"WAVE_BATTLE_ALREADY_SORTIE"*/);
-    sub_1C3E564(&StringLiteral_11522/*"SELECT_BONUS_SKILL_INVALID"*/);
-    sub_1C3E564(&StringLiteral_15508/*"WAVE_BATTLE_EQUIP_PARTY"*/);
-    sub_1C3E564(&StringLiteral_15515/*"WAVE_BATTLE_EQUIP_WAVE"*/);
-    sub_1C3E564(&StringLiteral_15553/*"WAVE_BATTLE_USE_EQUIP_UNIQUE"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_5492/*"EQUIP_GRAPH_USE"*/);
-    byte_4C562BC = 1;
+    sub_1C6BA08(&BalanceConfig_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
+    sub_1C6BA08(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    sub_1C6BA08(&StringLiteral_43/*"\n"*/);
+    sub_1C6BA08(&StringLiteral_15478/*"WAVE_BATTLE_ALREADY_SORTIE"*/);
+    sub_1C6BA08(&StringLiteral_11519/*"SELECT_BONUS_SKILL_INVALID"*/);
+    sub_1C6BA08(&StringLiteral_15495/*"WAVE_BATTLE_EQUIP_PARTY"*/);
+    sub_1C6BA08(&StringLiteral_15502/*"WAVE_BATTLE_EQUIP_WAVE"*/);
+    sub_1C6BA08(&StringLiteral_15540/*"WAVE_BATTLE_USE_EQUIP_UNIQUE"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_5482/*"EQUIP_GRAPH_USE"*/);
+    byte_4CB5823 = 1;
   }
   if ( !v7 || !mode )
     return;
   servantFaceIcon = (int *)this->fields.servantFaceIcon;
   if ( !servantFaceIcon )
     goto LABEL_249;
-  ServantFaceIconComponent__Set_41053768(
+  ServantFaceIconComponent__Set_41239152(
     (ServantFaceIconComponent_o *)servantFaceIcon,
     v7->fields.userSvtEntity,
     v7->fields.iconLabelInfo1,
@@ -386,7 +362,7 @@ void EquipGraphListViewItemDraw__SetItem(
     if ( !servantFaceIcon )
       goto LABEL_249;
   }
-  UIIconLabel__Set_41158744((UIIconLabel_o *)servantFaceIcon, 7, cost, 0, 0, 0, 0, 0, 0, 0, 0);
+  UIIconLabel__Set_41344128((UIIconLabel_o *)servantFaceIcon, 7, cost, 0, 0, 0, 0, 0, 0, 0, 0);
   messageLabelList = this->fields.messageLabelList;
   if ( !messageLabelList )
     goto LABEL_249;
@@ -447,7 +423,7 @@ void EquipGraphListViewItemDraw__SetItem(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_11522/*"SELECT_BONUS_SKILL_INVALID"*/, 0);
+    servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_11519/*"SELECT_BONUS_SKILL_INVALID"*/, 0);
     if ( !skillInvalidLabel )
       goto LABEL_249;
     UILabel__set_text(skillInvalidLabel, (System_String_o *)servantFaceIcon, 0);
@@ -466,14 +442,14 @@ void EquipGraphListViewItemDraw__SetItem(
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)servantFaceIcon,
         (Il2CppObject *)item,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
     }
     else
     {
       v21 = v18 + 8 * v20;
       servantFaceIcon[6] = v20 + 1;
       *(_QWORD *)(v21 + 32) = item;
-      sub_1C3E508((CGThumbnailListItem_o *)(v21 + 32), (int32_t)item, v16, v17);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 32), (int32_t)item, v16, v17);
     }
   }
   else
@@ -515,19 +491,19 @@ void EquipGraphListViewItemDraw__SetItem(
   }
   if ( EquipGraphListViewItem__get_IsUse(v7, (const MethodInfo *)item) )
   {
-    v25 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
+    v25 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v25,
-      (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
-    v26 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
+      (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
+    v26 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v26,
-      (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
     if ( v7->fields._IsClearedWave_k__BackingField )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_15491/*"WAVE_BATTLE_ALREADY_SORTIE"*/, 0);
+      servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_15478/*"WAVE_BATTLE_ALREADY_SORTIE"*/, 0);
       if ( !v25 )
         goto LABEL_249;
       items = v25->fields._items;
@@ -542,14 +518,14 @@ void EquipGraphListViewItemDraw__SetItem(
         System_Collections_Generic_List_object___AddWithResize(
           v25,
           (Il2CppObject *)servantFaceIcon,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
       }
       else
       {
         v33 = &items->obj.klass + v31;
         v25->fields._size = v31 + 1;
         v33[4] = (Il2CppClass *)v32;
-        sub_1C3E508((CGThumbnailListItem_o *)(v33 + 4), (int32_t)v32, v27, v28);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v33 + 4), (int32_t)v32, v27, v28);
       }
       v51 = v25->fields._items;
       v52 = Method_System_Collections_Generic_List_string__Add__;
@@ -563,14 +539,14 @@ void EquipGraphListViewItemDraw__SetItem(
         System_Collections_Generic_List_object___AddWithResize(
           v25,
           (Il2CppObject *)item,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
       }
       else
       {
         v54 = &v51->obj.klass + v53;
         v25->fields._size = v53 + 1;
         v54[4] = (Il2CppClass *)item;
-        sub_1C3E508((CGThumbnailListItem_o *)(v54 + 4), (int32_t)item, v34, v35);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v54 + 4), (int32_t)item, v34, v35);
       }
       if ( !v26 )
         goto LABEL_249;
@@ -586,14 +562,14 @@ void EquipGraphListViewItemDraw__SetItem(
         System_Collections_Generic_List_object___AddWithResize(
           v26,
           (Il2CppObject *)item,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
       }
       else
       {
         v60 = &v57->obj.klass + v59;
         v26->fields._size = v59 + 1;
         v60[4] = (Il2CppClass *)item;
-        sub_1C3E508((CGThumbnailListItem_o *)(v60 + 4), (int32_t)item, v55, v56);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v60 + 4), (int32_t)item, v55, v56);
       }
       servantFaceIcon = (int *)this->fields.maskSprite;
       if ( !servantFaceIcon )
@@ -608,7 +584,7 @@ void EquipGraphListViewItemDraw__SetItem(
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         if ( IsWaveSetupSwitchParty_k__BackingField )
         {
-          v47 = LocalizationManager__Get((System_String_o *)StringLiteral_15508/*"WAVE_BATTLE_EQUIP_PARTY"*/, 0);
+          v47 = LocalizationManager__Get((System_String_o *)StringLiteral_15495/*"WAVE_BATTLE_EQUIP_PARTY"*/, 0);
           v48 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(
                                   v7->fields._OrganizedWave_k__BackingField,
                                   0);
@@ -618,95 +594,79 @@ void EquipGraphListViewItemDraw__SetItem(
         }
         else
         {
-          v76 = LocalizationManager__Get((System_String_o *)StringLiteral_15515/*"WAVE_BATTLE_EQUIP_WAVE"*/, 0);
+          v76 = LocalizationManager__Get((System_String_o *)StringLiteral_15502/*"WAVE_BATTLE_EQUIP_WAVE"*/, 0);
           OrganizedWave_k__BackingField = v7->fields._OrganizedWave_k__BackingField;
-          v83 = (Il2CppObject *)j_il2cpp_value_box_0(
-                                  int_TypeInfo,
-                                  &OrganizedWave_k__BackingField,
-                                  v77,
-                                  v78,
-                                  v79,
-                                  v80,
-                                  v81,
-                                  v82);
+          v77 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &OrganizedWave_k__BackingField);
           MaxWave_k__BackingField = v7->fields._MaxWave_k__BackingField;
-          v90 = (Il2CppObject *)j_il2cpp_value_box_0(
-                                  int_TypeInfo,
-                                  &MaxWave_k__BackingField,
-                                  v84,
-                                  v85,
-                                  v86,
-                                  v87,
-                                  v88,
-                                  v89);
-          servantFaceIcon = (int *)System_String__Format_63677760(v76, v83, v90, 0);
+          v78 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &MaxWave_k__BackingField);
+          servantFaceIcon = (int *)System_String__Format_64008100(v76, v77, v78, 0);
           if ( !v25 )
             goto LABEL_249;
         }
-        v91 = v25->fields._items;
-        v92 = Method_System_Collections_Generic_List_string__Add__;
+        v79 = v25->fields._items;
+        v80 = Method_System_Collections_Generic_List_string__Add__;
         ++v25->fields._version;
-        if ( !v91 )
+        if ( !v79 )
           goto LABEL_249;
-        v93 = v25->fields._size;
-        v94 = servantFaceIcon;
-        if ( (unsigned int)v93 >= LODWORD(v91->max_length) )
+        v81 = v25->fields._size;
+        v82 = servantFaceIcon;
+        if ( (unsigned int)v81 >= LODWORD(v79->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v25,
             (Il2CppObject *)servantFaceIcon,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v92[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v80[4] + 192LL) + 112LL));
         }
         else
         {
-          v95 = &v91->obj.klass + v93;
-          v25->fields._size = v93 + 1;
-          v95[4] = (Il2CppClass *)v94;
-          sub_1C3E508((CGThumbnailListItem_o *)(v95 + 4), (int32_t)v94, v49, v50);
+          v83 = &v79->obj.klass + v81;
+          v25->fields._size = v81 + 1;
+          v83[4] = (Il2CppClass *)v82;
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v83 + 4), (int32_t)v82, v49, v50);
         }
-        v98 = v25->fields._items;
+        v86 = v25->fields._items;
         item = (EquipGraphListViewItem_o *)StringLiteral_43/*"\n"*/;
-        v99 = Method_System_Collections_Generic_List_string__Add__;
+        v87 = Method_System_Collections_Generic_List_string__Add__;
         ++v25->fields._version;
-        if ( !v98 )
+        if ( !v86 )
           goto LABEL_249;
-        v100 = v25->fields._size;
-        if ( (unsigned int)v100 >= LODWORD(v98->max_length) )
+        v88 = v25->fields._size;
+        if ( (unsigned int)v88 >= LODWORD(v86->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v25,
             (Il2CppObject *)item,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v99[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v87[4] + 192LL) + 112LL));
         }
         else
         {
-          v101 = &v98->obj.klass + v100;
-          v25->fields._size = v100 + 1;
-          v101[4] = (Il2CppClass *)item;
-          sub_1C3E508((CGThumbnailListItem_o *)(v101 + 4), (int32_t)item, v96, v97);
+          v89 = &v86->obj.klass + v88;
+          v25->fields._size = v88 + 1;
+          v89[4] = (Il2CppClass *)item;
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v89 + 4), (int32_t)item, v84, v85);
         }
         if ( !v26 )
           goto LABEL_249;
         item = (EquipGraphListViewItem_o *)StringLiteral_43/*"\n"*/;
-        v104 = v26->fields._items;
-        v105 = Method_System_Collections_Generic_List_string__Add__;
+        v92 = v26->fields._items;
+        v93 = Method_System_Collections_Generic_List_string__Add__;
         ++v26->fields._version;
-        if ( !v104 )
+        if ( !v92 )
           goto LABEL_249;
-        v106 = v26->fields._size;
-        if ( (unsigned int)v106 >= LODWORD(v104->max_length) )
+        v94 = v26->fields._size;
+        if ( (unsigned int)v94 >= LODWORD(v92->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v26,
             (Il2CppObject *)item,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v105[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v93[4] + 192LL) + 112LL));
         }
         else
         {
-          v107 = &v104->obj.klass + v106;
-          v26->fields._size = v106 + 1;
-          v107[4] = (Il2CppClass *)item;
-          sub_1C3E508((CGThumbnailListItem_o *)(v107 + 4), (int32_t)item, v102, v103);
+          v95 = &v92->obj.klass + v94;
+          v26->fields._size = v94 + 1;
+          v95[4] = (Il2CppClass *)item;
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v95 + 4), (int32_t)item, v90, v91);
         }
         servantFaceIcon = (int *)this->fields.maskSprite2;
         if ( !servantFaceIcon )
@@ -715,73 +675,73 @@ void EquipGraphListViewItemDraw__SetItem(
       }
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_5492/*"EQUIP_GRAPH_USE"*/, 0);
+      servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_5482/*"EQUIP_GRAPH_USE"*/, 0);
       if ( !v25 )
         goto LABEL_249;
-      v110 = v25->fields._items;
-      v111 = Method_System_Collections_Generic_List_string__Add__;
+      v98 = v25->fields._items;
+      v99 = Method_System_Collections_Generic_List_string__Add__;
       ++v25->fields._version;
-      if ( !v110 )
+      if ( !v98 )
         goto LABEL_249;
-      v112 = v25->fields._size;
-      v113 = servantFaceIcon;
-      if ( (unsigned int)v112 >= LODWORD(v110->max_length) )
+      v100 = v25->fields._size;
+      v101 = servantFaceIcon;
+      if ( (unsigned int)v100 >= LODWORD(v98->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v25,
           (Il2CppObject *)servantFaceIcon,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v111[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v99[4] + 192LL) + 112LL));
       }
       else
       {
-        v114 = &v110->obj.klass + v112;
-        v25->fields._size = v112 + 1;
-        v114[4] = (Il2CppClass *)v113;
-        sub_1C3E508((CGThumbnailListItem_o *)(v114 + 4), (int32_t)v113, v108, v109);
+        v102 = &v98->obj.klass + v100;
+        v25->fields._size = v100 + 1;
+        v102[4] = (Il2CppClass *)v101;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v102 + 4), (int32_t)v101, v96, v97);
       }
-      v117 = v25->fields._items;
-      v118 = Method_System_Collections_Generic_List_string__Add__;
+      v105 = v25->fields._items;
+      v106 = Method_System_Collections_Generic_List_string__Add__;
       item = (EquipGraphListViewItem_o *)StringLiteral_43/*"\n"*/;
       ++v25->fields._version;
-      if ( !v117 )
+      if ( !v105 )
         goto LABEL_249;
-      v119 = v25->fields._size;
-      if ( (unsigned int)v119 >= LODWORD(v117->max_length) )
+      v107 = v25->fields._size;
+      if ( (unsigned int)v107 >= LODWORD(v105->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v25,
           (Il2CppObject *)item,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v106[4] + 192LL) + 112LL));
       }
       else
       {
-        v120 = &v117->obj.klass + v119;
-        v25->fields._size = v119 + 1;
-        v120[4] = (Il2CppClass *)item;
-        sub_1C3E508((CGThumbnailListItem_o *)(v120 + 4), (int32_t)item, v115, v116);
+        v108 = &v105->obj.klass + v107;
+        v25->fields._size = v107 + 1;
+        v108[4] = (Il2CppClass *)item;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v108 + 4), (int32_t)item, v103, v104);
       }
       if ( !v26 )
         goto LABEL_249;
       item = (EquipGraphListViewItem_o *)StringLiteral_43/*"\n"*/;
-      v123 = v26->fields._items;
-      v124 = Method_System_Collections_Generic_List_string__Add__;
+      v111 = v26->fields._items;
+      v112 = Method_System_Collections_Generic_List_string__Add__;
       ++v26->fields._version;
-      if ( !v123 )
+      if ( !v111 )
         goto LABEL_249;
-      v125 = v26->fields._size;
-      if ( (unsigned int)v125 >= LODWORD(v123->max_length) )
+      v113 = v26->fields._size;
+      if ( (unsigned int)v113 >= LODWORD(v111->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v26,
           (Il2CppObject *)item,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v124[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v112[4] + 192LL) + 112LL));
       }
       else
       {
-        v126 = &v123->obj.klass + v125;
-        v26->fields._size = v125 + 1;
-        v126[4] = (Il2CppClass *)item;
-        sub_1C3E508((CGThumbnailListItem_o *)(v126 + 4), (int32_t)item, v121, v122);
+        v114 = &v111->obj.klass + v113;
+        v26->fields._size = v113 + 1;
+        v114[4] = (Il2CppClass *)item;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v114 + 4), (int32_t)item, v109, v110);
       }
       servantFaceIcon = (int *)this->fields.maskSprite2;
       if ( !servantFaceIcon )
@@ -794,55 +754,55 @@ void EquipGraphListViewItemDraw__SetItem(
     if ( v7->fields.isDispEquipFrameName )
     {
       item = (EquipGraphListViewItem_o *)v7->fields._UseEquipFrameName_k__BackingField;
-      v129 = v26->fields._items;
-      v130 = Method_System_Collections_Generic_List_string__Add__;
+      v117 = v26->fields._items;
+      v118 = Method_System_Collections_Generic_List_string__Add__;
       ++v26->fields._version;
-      if ( !v129 )
+      if ( !v117 )
         goto LABEL_249;
     }
     else
     {
-      servantFaceIcon = (int *)SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+      servantFaceIcon = (int *)SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
       if ( !servantFaceIcon )
         goto LABEL_249;
       servantFaceIcon = (int *)PartyOrganizationUtility__GetServantShortName(
                                  (PartyOrganizationUtility_o *)servantFaceIcon,
                                  v7->fields._EquipUseServantId_k__BackingField,
                                  0);
-      v129 = v26->fields._items;
-      v130 = Method_System_Collections_Generic_List_string__Add__;
+      v117 = v26->fields._items;
+      v118 = Method_System_Collections_Generic_List_string__Add__;
       ++v26->fields._version;
-      if ( !v129 )
+      if ( !v117 )
         goto LABEL_249;
       item = (EquipGraphListViewItem_o *)servantFaceIcon;
     }
-    v131 = v26->fields._size;
-    if ( (unsigned int)v131 >= LODWORD(v129->max_length) )
+    v119 = v26->fields._size;
+    if ( (unsigned int)v119 >= LODWORD(v117->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v26,
         (Il2CppObject *)item,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v130[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v118[4] + 192LL) + 112LL));
     }
     else
     {
-      v132 = &v129->obj.klass + v131;
-      v26->fields._size = v131 + 1;
-      v132[4] = (Il2CppClass *)item;
-      sub_1C3E508((CGThumbnailListItem_o *)(v132 + 4), (int32_t)item, v127, v128);
+      v120 = &v117->obj.klass + v119;
+      v26->fields._size = v119 + 1;
+      v120[4] = (Il2CppClass *)item;
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v120 + 4), (int32_t)item, v115, v116);
     }
     warningLabel2 = this->fields.warningLabel2;
-    servantFaceIcon = (int *)System_String__Join_63679044(
+    servantFaceIcon = (int *)System_String__Join_64009384(
                                (System_String_o *)StringLiteral_1/*""*/,
                                (System_Collections_Generic_IEnumerable_string__o *)v26,
                                0);
     if ( warningLabel2 )
     {
       UILabel__set_text(warningLabel2, (System_String_o *)servantFaceIcon, 0);
-      v134 = this->fields.warningLabel2;
-      if ( v134 )
+      v122 = this->fields.warningLabel2;
+      if ( v122 )
       {
-        mWidth = v134->fields.mWidth;
+        mWidth = v122->fields.mWidth;
         servantFaceIcon = (int *)BalanceConfig_TypeInfo;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
         {
@@ -857,13 +817,13 @@ void EquipGraphListViewItemDraw__SetItem(
           goto LABEL_212;
         }
 LABEL_204:
-        v195 = this->fields.warningLabel2;
-        if ( !v195 )
+        v171 = this->fields.warningLabel2;
+        if ( !v171 )
           goto LABEL_249;
         servantFaceIcon = (int *)this->fields.warningLabel3;
         if ( !servantFaceIcon )
           goto LABEL_249;
-        UILabel__set_text((UILabel_o *)servantFaceIcon, v195->fields.mText, 0);
+        UILabel__set_text((UILabel_o *)servantFaceIcon, v171->fields.mText, 0);
         servantFaceIcon = (int *)this->fields.warningLabel3;
         if ( !servantFaceIcon )
           goto LABEL_249;
@@ -897,14 +857,14 @@ LABEL_46:
     UILabel__set_text((UILabel_o *)servantFaceIcon, v22, 0);
     goto LABEL_220;
   }
-  v25 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
+  v25 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v25,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
-  v36 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
+  v36 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v36,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
   servantFaceIcon = (int *)this->fields.warningLabel2;
   if ( !servantFaceIcon )
     goto LABEL_249;
@@ -923,7 +883,7 @@ LABEL_46:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_15491/*"WAVE_BATTLE_ALREADY_SORTIE"*/, 0);
+    servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_15478/*"WAVE_BATTLE_ALREADY_SORTIE"*/, 0);
     if ( !v25 )
       goto LABEL_249;
     v39 = v25->fields._items;
@@ -938,14 +898,14 @@ LABEL_46:
       System_Collections_Generic_List_object___AddWithResize(
         v25,
         (Il2CppObject *)servantFaceIcon,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
     }
     else
     {
       v43 = &v39->obj.klass + v41;
       v25->fields._size = v41 + 1;
       v43[4] = (Il2CppClass *)v42;
-      sub_1C3E508((CGThumbnailListItem_o *)(v43 + 4), (int32_t)v42, v37, v38);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v43 + 4), (int32_t)v42, v37, v38);
     }
     v66 = v25->fields._items;
     v67 = Method_System_Collections_Generic_List_string__Add__;
@@ -959,14 +919,14 @@ LABEL_46:
       System_Collections_Generic_List_object___AddWithResize(
         v25,
         (Il2CppObject *)item,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v67[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v67[4] + 192LL) + 112LL));
     }
     else
     {
       v69 = &v66->obj.klass + v68;
       v25->fields._size = v68 + 1;
       v69[4] = (Il2CppClass *)item;
-      sub_1C3E508((CGThumbnailListItem_o *)(v69 + 4), (int32_t)item, v44, v45);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v69 + 4), (int32_t)item, v44, v45);
     }
     if ( !v36 )
       goto LABEL_249;
@@ -982,14 +942,14 @@ LABEL_46:
       System_Collections_Generic_List_object___AddWithResize(
         v36,
         (Il2CppObject *)item,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
     }
     else
     {
       v75 = &v72->obj.klass + v74;
       v36->fields._size = v74 + 1;
       v75[4] = (Il2CppClass *)item;
-      sub_1C3E508((CGThumbnailListItem_o *)(v75 + 4), (int32_t)item, v70, v71);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v75 + 4), (int32_t)item, v70, v71);
     }
     servantFaceIcon = (int *)this->fields.maskSprite;
     if ( !servantFaceIcon )
@@ -1004,7 +964,7 @@ LABEL_46:
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( v61 )
       {
-        v62 = LocalizationManager__Get((System_String_o *)StringLiteral_15508/*"WAVE_BATTLE_EQUIP_PARTY"*/, 0);
+        v62 = LocalizationManager__Get((System_String_o *)StringLiteral_15495/*"WAVE_BATTLE_EQUIP_PARTY"*/, 0);
         v63 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(
                                 v7->fields._UniqueOrganizedWave_k__BackingField,
                                 0);
@@ -1014,95 +974,79 @@ LABEL_46:
       }
       else
       {
-        v136 = LocalizationManager__Get((System_String_o *)StringLiteral_15515/*"WAVE_BATTLE_EQUIP_WAVE"*/, 0);
+        v124 = LocalizationManager__Get((System_String_o *)StringLiteral_15502/*"WAVE_BATTLE_EQUIP_WAVE"*/, 0);
         OrganizedWave_k__BackingField = v7->fields._UniqueOrganizedWave_k__BackingField;
-        v143 = (Il2CppObject *)j_il2cpp_value_box_0(
-                                 int_TypeInfo,
-                                 &OrganizedWave_k__BackingField,
-                                 v137,
-                                 v138,
-                                 v139,
-                                 v140,
-                                 v141,
-                                 v142);
+        v125 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &OrganizedWave_k__BackingField);
         MaxWave_k__BackingField = v7->fields._MaxWave_k__BackingField;
-        v150 = (Il2CppObject *)j_il2cpp_value_box_0(
-                                 int_TypeInfo,
-                                 &MaxWave_k__BackingField,
-                                 v144,
-                                 v145,
-                                 v146,
-                                 v147,
-                                 v148,
-                                 v149);
-        servantFaceIcon = (int *)System_String__Format_63677760(v136, v143, v150, 0);
+        v126 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &MaxWave_k__BackingField);
+        servantFaceIcon = (int *)System_String__Format_64008100(v124, v125, v126, 0);
         if ( !v25 )
           goto LABEL_249;
       }
-      v151 = v25->fields._items;
-      v152 = Method_System_Collections_Generic_List_string__Add__;
+      v127 = v25->fields._items;
+      v128 = Method_System_Collections_Generic_List_string__Add__;
       ++v25->fields._version;
-      if ( !v151 )
+      if ( !v127 )
         goto LABEL_249;
-      v153 = v25->fields._size;
-      v154 = servantFaceIcon;
-      if ( (unsigned int)v153 >= LODWORD(v151->max_length) )
+      v129 = v25->fields._size;
+      v130 = servantFaceIcon;
+      if ( (unsigned int)v129 >= LODWORD(v127->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v25,
           (Il2CppObject *)servantFaceIcon,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v152[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v128[4] + 192LL) + 112LL));
       }
       else
       {
-        v155 = &v151->obj.klass + v153;
-        v25->fields._size = v153 + 1;
-        v155[4] = (Il2CppClass *)v154;
-        sub_1C3E508((CGThumbnailListItem_o *)(v155 + 4), (int32_t)v154, v64, v65);
+        v131 = &v127->obj.klass + v129;
+        v25->fields._size = v129 + 1;
+        v131[4] = (Il2CppClass *)v130;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v131 + 4), (int32_t)v130, v64, v65);
       }
-      v158 = v25->fields._items;
+      v134 = v25->fields._items;
       item = (EquipGraphListViewItem_o *)StringLiteral_43/*"\n"*/;
-      v159 = Method_System_Collections_Generic_List_string__Add__;
+      v135 = Method_System_Collections_Generic_List_string__Add__;
       ++v25->fields._version;
-      if ( !v158 )
+      if ( !v134 )
         goto LABEL_249;
-      v160 = v25->fields._size;
-      if ( (unsigned int)v160 >= LODWORD(v158->max_length) )
+      v136 = v25->fields._size;
+      if ( (unsigned int)v136 >= LODWORD(v134->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v25,
           (Il2CppObject *)item,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v159[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v135[4] + 192LL) + 112LL));
       }
       else
       {
-        v161 = &v158->obj.klass + v160;
-        v25->fields._size = v160 + 1;
-        v161[4] = (Il2CppClass *)item;
-        sub_1C3E508((CGThumbnailListItem_o *)(v161 + 4), (int32_t)item, v156, v157);
+        v137 = &v134->obj.klass + v136;
+        v25->fields._size = v136 + 1;
+        v137[4] = (Il2CppClass *)item;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v137 + 4), (int32_t)item, v132, v133);
       }
       if ( !v36 )
         goto LABEL_249;
       item = (EquipGraphListViewItem_o *)StringLiteral_43/*"\n"*/;
-      v164 = v36->fields._items;
-      v165 = Method_System_Collections_Generic_List_string__Add__;
+      v140 = v36->fields._items;
+      v141 = Method_System_Collections_Generic_List_string__Add__;
       ++v36->fields._version;
-      if ( !v164 )
+      if ( !v140 )
         goto LABEL_249;
-      v166 = v36->fields._size;
-      if ( (unsigned int)v166 >= LODWORD(v164->max_length) )
+      v142 = v36->fields._size;
+      if ( (unsigned int)v142 >= LODWORD(v140->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v36,
           (Il2CppObject *)item,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v165[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v141[4] + 192LL) + 112LL));
       }
       else
       {
-        v167 = &v164->obj.klass + v166;
-        v36->fields._size = v166 + 1;
-        v167[4] = (Il2CppClass *)item;
-        sub_1C3E508((CGThumbnailListItem_o *)(v167 + 4), (int32_t)item, v162, v163);
+        v143 = &v140->obj.klass + v142;
+        v36->fields._size = v142 + 1;
+        v143[4] = (Il2CppClass *)item;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v143 + 4), (int32_t)item, v138, v139);
       }
       servantFaceIcon = (int *)this->fields.maskSprite2;
       if ( !servantFaceIcon )
@@ -1111,73 +1055,73 @@ LABEL_46:
     }
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_15553/*"WAVE_BATTLE_USE_EQUIP_UNIQUE"*/, 0);
+    servantFaceIcon = (int *)LocalizationManager__Get((System_String_o *)StringLiteral_15540/*"WAVE_BATTLE_USE_EQUIP_UNIQUE"*/, 0);
     if ( !v25 )
       goto LABEL_249;
-    v170 = v25->fields._items;
-    v171 = Method_System_Collections_Generic_List_string__Add__;
+    v146 = v25->fields._items;
+    v147 = Method_System_Collections_Generic_List_string__Add__;
     ++v25->fields._version;
-    if ( !v170 )
+    if ( !v146 )
       goto LABEL_249;
-    v172 = v25->fields._size;
-    v173 = servantFaceIcon;
-    if ( (unsigned int)v172 >= LODWORD(v170->max_length) )
+    v148 = v25->fields._size;
+    v149 = servantFaceIcon;
+    if ( (unsigned int)v148 >= LODWORD(v146->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v25,
         (Il2CppObject *)servantFaceIcon,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v171[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v147[4] + 192LL) + 112LL));
     }
     else
     {
-      v174 = &v170->obj.klass + v172;
-      v25->fields._size = v172 + 1;
-      v174[4] = (Il2CppClass *)v173;
-      sub_1C3E508((CGThumbnailListItem_o *)(v174 + 4), (int32_t)v173, v168, v169);
+      v150 = &v146->obj.klass + v148;
+      v25->fields._size = v148 + 1;
+      v150[4] = (Il2CppClass *)v149;
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v150 + 4), (int32_t)v149, v144, v145);
     }
-    v177 = v25->fields._items;
-    v178 = Method_System_Collections_Generic_List_string__Add__;
+    v153 = v25->fields._items;
+    v154 = Method_System_Collections_Generic_List_string__Add__;
     item = (EquipGraphListViewItem_o *)StringLiteral_43/*"\n"*/;
     ++v25->fields._version;
-    if ( !v177 )
+    if ( !v153 )
       goto LABEL_249;
-    v179 = v25->fields._size;
-    if ( (unsigned int)v179 >= LODWORD(v177->max_length) )
+    v155 = v25->fields._size;
+    if ( (unsigned int)v155 >= LODWORD(v153->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v25,
         (Il2CppObject *)item,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v178[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v154[4] + 192LL) + 112LL));
     }
     else
     {
-      v180 = &v177->obj.klass + v179;
-      v25->fields._size = v179 + 1;
-      v180[4] = (Il2CppClass *)item;
-      sub_1C3E508((CGThumbnailListItem_o *)(v180 + 4), (int32_t)item, v175, v176);
+      v156 = &v153->obj.klass + v155;
+      v25->fields._size = v155 + 1;
+      v156[4] = (Il2CppClass *)item;
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v156 + 4), (int32_t)item, v151, v152);
     }
     if ( !v36 )
       goto LABEL_249;
     item = (EquipGraphListViewItem_o *)StringLiteral_43/*"\n"*/;
-    v183 = v36->fields._items;
-    v184 = Method_System_Collections_Generic_List_string__Add__;
+    v159 = v36->fields._items;
+    v160 = Method_System_Collections_Generic_List_string__Add__;
     ++v36->fields._version;
-    if ( !v183 )
+    if ( !v159 )
       goto LABEL_249;
-    v185 = v36->fields._size;
-    if ( (unsigned int)v185 >= LODWORD(v183->max_length) )
+    v161 = v36->fields._size;
+    if ( (unsigned int)v161 >= LODWORD(v159->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v36,
         (Il2CppObject *)item,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v184[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v160[4] + 192LL) + 112LL));
     }
     else
     {
-      v186 = &v183->obj.klass + v185;
-      v36->fields._size = v185 + 1;
-      v186[4] = (Il2CppClass *)item;
-      sub_1C3E508((CGThumbnailListItem_o *)(v186 + 4), (int32_t)item, v181, v182);
+      v162 = &v159->obj.klass + v161;
+      v36->fields._size = v161 + 1;
+      v162[4] = (Il2CppClass *)item;
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v162 + 4), (int32_t)item, v157, v158);
     }
     servantFaceIcon = (int *)this->fields.maskSprite2;
     if ( !servantFaceIcon )
@@ -1190,58 +1134,58 @@ LABEL_46:
   if ( v7->fields.isDispEquipFrameName )
   {
     item = (EquipGraphListViewItem_o *)v7->fields._UseEquipFrameName_k__BackingField;
-    v189 = v36->fields._items;
-    v190 = Method_System_Collections_Generic_List_string__Add__;
+    v165 = v36->fields._items;
+    v166 = Method_System_Collections_Generic_List_string__Add__;
     ++v36->fields._version;
-    if ( !v189 )
+    if ( !v165 )
       goto LABEL_249;
   }
   else
   {
-    servantFaceIcon = (int *)SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    servantFaceIcon = (int *)SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
     if ( !servantFaceIcon )
       goto LABEL_249;
     servantFaceIcon = (int *)PartyOrganizationUtility__GetServantShortName(
                                (PartyOrganizationUtility_o *)servantFaceIcon,
                                v7->fields._EquipUseServantId_k__BackingField,
                                0);
-    v189 = v36->fields._items;
-    v190 = Method_System_Collections_Generic_List_string__Add__;
+    v165 = v36->fields._items;
+    v166 = Method_System_Collections_Generic_List_string__Add__;
     ++v36->fields._version;
-    if ( !v189 )
+    if ( !v165 )
       goto LABEL_249;
     item = (EquipGraphListViewItem_o *)servantFaceIcon;
   }
-  v191 = v36->fields._size;
-  if ( (unsigned int)v191 >= LODWORD(v189->max_length) )
+  v167 = v36->fields._size;
+  if ( (unsigned int)v167 >= LODWORD(v165->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v36,
       (Il2CppObject *)item,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v190[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v166[4] + 192LL) + 112LL));
   }
   else
   {
-    v192 = &v189->obj.klass + v191;
-    v36->fields._size = v191 + 1;
-    v192[4] = (Il2CppClass *)item;
-    sub_1C3E508((CGThumbnailListItem_o *)(v192 + 4), (int32_t)item, v187, v188);
+    v168 = &v165->obj.klass + v167;
+    v36->fields._size = v167 + 1;
+    v168[4] = (Il2CppClass *)item;
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v168 + 4), (int32_t)item, v163, v164);
   }
-  v193 = this->fields.warningLabel2;
-  servantFaceIcon = (int *)System_String__Join_63679044(
+  v169 = this->fields.warningLabel2;
+  servantFaceIcon = (int *)System_String__Join_64009384(
                              (System_String_o *)StringLiteral_1/*""*/,
                              (System_Collections_Generic_IEnumerable_string__o *)v36,
                              0);
-  if ( !v193
-    || (UILabel__set_text(v193, (System_String_o *)servantFaceIcon, 0),
+  if ( !v169
+    || (UILabel__set_text(v169, (System_String_o *)servantFaceIcon, 0),
         (servantFaceIcon = (int *)this->fields.warningLabel2) == 0)
-    || (v194 = servantFaceIcon[42], !BalanceConfig_TypeInfo->_2.cctor_finished)
+    || (v170 = servantFaceIcon[42], !BalanceConfig_TypeInfo->_2.cctor_finished)
     && (j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo), (servantFaceIcon = (int *)this->fields.warningLabel2) == 0) )
   {
 LABEL_249:
-    sub_1C3E7C0(servantFaceIcon, item);
+    sub_1C6BC60(servantFaceIcon, item);
   }
-  if ( v194 > BalanceConfig_TypeInfo->static_fields->UseEquipServantNameTextMaxWidth )
+  if ( v170 > BalanceConfig_TypeInfo->static_fields->UseEquipServantNameTextMaxWidth )
   {
     UILabel__set_spacingX((UILabel_o *)servantFaceIcon, -2, 0);
     goto LABEL_204;
@@ -1253,7 +1197,7 @@ LABEL_212:
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)servantFaceIcon, 1, 0);
 LABEL_214:
   warningLabel = this->fields.warningLabel;
-  servantFaceIcon = (int *)System_String__Join_63679044(
+  servantFaceIcon = (int *)System_String__Join_64009384(
                              (System_String_o *)StringLiteral_1/*""*/,
                              (System_Collections_Generic_IEnumerable_string__o *)v25,
                              0);
@@ -1264,53 +1208,53 @@ LABEL_214:
   if ( !servantFaceIcon )
     goto LABEL_249;
   item = (EquipGraphListViewItem_o *)this->fields.warningLabel;
-  v200 = *((_QWORD *)servantFaceIcon + 2);
-  v201 = Method_System_Collections_Generic_List_UIWidget__Add__;
+  v176 = *((_QWORD *)servantFaceIcon + 2);
+  v177 = Method_System_Collections_Generic_List_UIWidget__Add__;
   ++servantFaceIcon[7];
-  if ( !v200 )
+  if ( !v176 )
     goto LABEL_249;
-  v202 = servantFaceIcon[6];
-  if ( (unsigned int)v202 >= *(_DWORD *)(v200 + 24) )
+  v178 = servantFaceIcon[6];
+  if ( (unsigned int)v178 >= *(_DWORD *)(v176 + 24) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)servantFaceIcon,
       (Il2CppObject *)item,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v201[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v177[4] + 192LL) + 112LL));
   }
   else
   {
-    v203 = v200 + 8 * v202;
-    servantFaceIcon[6] = v202 + 1;
-    *(_QWORD *)(v203 + 32) = item;
-    sub_1C3E508((CGThumbnailListItem_o *)(v203 + 32), (int32_t)item, v198, v199);
+    v179 = v176 + 8 * v178;
+    servantFaceIcon[6] = v178 + 1;
+    *(_QWORD *)(v179 + 32) = item;
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v179 + 32), (int32_t)item, v174, v175);
   }
 LABEL_220:
   servantFaceIcon = (int *)this->fields.messageLabelList;
   if ( !servantFaceIcon )
     goto LABEL_249;
-  v204 = servantFaceIcon[6];
-  if ( v204 >= 1 )
+  v180 = servantFaceIcon[6];
+  if ( v180 >= 1 )
   {
-    if ( v204 == 1 && v7->fields.isInvalidRarity )
+    if ( v180 == 1 && v7->fields.isInvalidRarity )
     {
       item = (EquipGraphListViewItem_o *)this->fields.skillInvalidLabel;
-      v205 = *((_QWORD *)servantFaceIcon + 2);
-      v206 = Method_System_Collections_Generic_List_UIWidget__Add__;
+      v181 = *((_QWORD *)servantFaceIcon + 2);
+      v182 = Method_System_Collections_Generic_List_UIWidget__Add__;
       ++servantFaceIcon[7];
-      if ( !v205 )
+      if ( !v181 )
         goto LABEL_249;
-      if ( *(_DWORD *)(v205 + 24) < 2u )
+      if ( *(_DWORD *)(v181 + 24) < 2u )
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)servantFaceIcon,
           (Il2CppObject *)item,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v206[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v182[4] + 192LL) + 112LL));
       }
       else
       {
         servantFaceIcon[6] = 2;
-        *(_QWORD *)(v205 + 40) = item;
-        sub_1C3E508((CGThumbnailListItem_o *)(v205 + 40), (int32_t)item, v23, v24);
+        *(_QWORD *)(v181 + 40) = item;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v181 + 40), (int32_t)item, v23, v24);
       }
     }
     servantFaceIcon = (int *)this->fields.messageLabelList;
@@ -1319,7 +1263,7 @@ LABEL_220:
     messageLabel = this->fields.messageLabel;
     servantFaceIcon = (int *)System_Collections_Generic_List_object___ToArray(
                                (System_Collections_Generic_List_object__o *)servantFaceIcon,
-                               (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
+                               (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
     if ( !messageLabel )
       goto LABEL_249;
     SwitchUIWidgetComponent__Set(messageLabel, (UIWidget_array *)servantFaceIcon, 0, 0);

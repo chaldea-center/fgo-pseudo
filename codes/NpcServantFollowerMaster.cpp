@@ -1,14 +1,14 @@
 void NpcServantFollowerMaster___ctor(NpcServantFollowerMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C572F1 & 1) == 0 )
+  if ( (byte_4CB685A & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
-    byte_4C572F1 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
+    byte_4CB685A = 1;
   }
   DataMasterBase_object__object__long____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     100,
-    (const MethodInfo_33B3190 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
+    (const MethodInfo_33F9314 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long___ctor__);
 }
 
 
@@ -34,27 +34,27 @@ bool NpcServantFollowerMaster__TryGetEntityByQuestIdAndSvtId(
   const MethodInfo *v20; // x3
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C572F2 & 1) == 0 )
+  if ( (byte_4CB685B & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_NpcFollowerMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
-    byte_4C572F2 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_NpcFollowerMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_NpcServantFollowerMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+    byte_4CB685B = 1;
   }
   entity = 0;
   *npcServantFollowerEntity = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)npcServantFollowerEntity, 0, questId, *(const MethodInfo **)&questPhase);
+  sub_1C6B9AC((CGThumbnailListItem_o *)npcServantFollowerEntity, 0, questId, *(const MethodInfo **)&questPhase);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_NpcFollowerMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_NpcFollowerMaster___);
   if ( !Master_object
     || (EntityArray = NpcFollowerMaster__GetEntityArray((NpcFollowerMaster_o *)Master_object, questId, questPhase, v12),
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_NpcServantFollowerMaster___),
         !EntityArray) )
   {
 LABEL_19:
-    sub_1C3E7C0(Master_object, v11);
+    sub_1C6BC60(Master_object, v11);
   }
   max_length = EntityArray->max_length;
   v15 = max_length > 0;
@@ -65,7 +65,7 @@ LABEL_19:
     while ( 1 )
     {
       if ( v17 >= (unsigned int)max_length )
-        sub_1C3E7C8(Master_object, v11);
+        sub_1C6BC68(Master_object);
       v18 = EntityArray->m_Items[v17];
       if ( !v18 || !v16 )
         goto LABEL_19;
@@ -73,7 +73,7 @@ LABEL_19:
                                         v16,
                                         &entity,
                                         v18->fields.leaderSvtId,
-                                        (const MethodInfo_33B5500 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
+                                        (const MethodInfo_33FB684 *)Method_DataMasterBase_NpcServantFollowerMaster__NpcServantFollowerEntity__long__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         v11 = entity;
@@ -88,7 +88,7 @@ LABEL_19:
         return v15;
     }
     *npcServantFollowerEntity = (NpcServantFollowerEntity_o *)entity;
-    sub_1C3E508((CGThumbnailListItem_o *)npcServantFollowerEntity, (int32_t)v11, v19, v20);
+    sub_1C6B9AC((CGThumbnailListItem_o *)npcServantFollowerEntity, (int32_t)v11, v19, v20);
   }
   return v15;
 }

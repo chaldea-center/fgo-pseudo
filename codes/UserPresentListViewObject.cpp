@@ -1,9 +1,9 @@
 void UserPresentListViewObject___ctor(UserPresentListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C55AC7 & 1) == 0 )
+  if ( (byte_4CB5024 & 1) == 0 )
   {
-    sub_1C3E564(&ListViewObject_TypeInfo);
-    byte_4C55AC7 = 1;
+    sub_1C6BA08(&ListViewObject_TypeInfo);
+    byte_4CB5024 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void UserPresentListViewObject__Awake(UserPresentListViewObject_o *this, const M
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C55AC0 & 1) == 0 )
+  if ( (byte_4CB501D & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UserPresentListViewItemDraw___);
-    byte_4C55AC0 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UserPresentListViewItemDraw___);
+    byte_4CB501D = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UserPresentListViewItemDraw___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UserPresentListViewItemDraw___);
   this->fields.itemDraw = (struct UserPresentListViewItemDraw_o *)Component_object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -43,10 +43,10 @@ UserPresentListViewItem_o *UserPresentListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C55AC1 & 1) == 0 )
+  if ( (byte_4CB501E & 1) == 0 )
   {
-    sub_1C3E564(&UserPresentListViewItem_TypeInfo);
-    byte_4C55AC1 = 1;
+    sub_1C6BA08(&UserPresentListViewItem_TypeInfo);
+    byte_4CB501E = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -84,10 +84,10 @@ void UserPresentListViewObject__Init(
   int32_t v22; // w9
   CGThumbnailListItem_c *klass; // x19
 
-  if ( (byte_4C55AC3 & 1) == 0 )
+  if ( (byte_4CB5020 & 1) == 0 )
   {
-    sub_1C3E564(&UserPresentListViewItem_TypeInfo);
-    byte_4C55AC3 = 1;
+    sub_1C6BA08(&UserPresentListViewItem_TypeInfo);
+    byte_4CB5020 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -115,16 +115,16 @@ void UserPresentListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C3E7C0(transform, v15);
+    sub_1C6BC60(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
   if ( (unsigned int)v11 <= 3 )
   {
-    v22 = dword_C116E0[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_C123E0 + v11);
+    v22 = dword_CEB9B0[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_CEC6A0 + v11);
     this->fields.state = v22;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -133,7 +133,7 @@ void UserPresentListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0;
-    sub_1C3E508(p_callbackFunc, 0, v20, v21);
+    sub_1C6B9AC(p_callbackFunc, 0, v20, v21);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -142,7 +142,7 @@ void UserPresentListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void UserPresentListViewObject__Init_40279852(
+void UserPresentListViewObject__Init_40461836(
         UserPresentListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -151,17 +151,17 @@ void UserPresentListViewObject__Init_40279852(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   UserPresentListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void UserPresentListViewObject__Init_40281204(
+void UserPresentListViewObject__Init_40463188(
         UserPresentListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -170,17 +170,17 @@ void UserPresentListViewObject__Init_40281204(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   UserPresentListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void UserPresentListViewObject__Init_40281288(
+void UserPresentListViewObject__Init_40463272(
         UserPresentListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -189,10 +189,10 @@ void UserPresentListViewObject__Init_40281288(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   UserPresentListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -205,11 +205,11 @@ void UserPresentListViewObject__OnClickCheck(UserPresentListViewObject_o *this, 
   __int64 naturalAligment; // x9
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C55AC6 & 1) == 0 )
+  if ( (byte_4CB5023 & 1) == 0 )
   {
-    sub_1C3E564(&UserPresentListViewItem_TypeInfo);
-    sub_1C3E564(&StringLiteral_9844/*"OnClickListCheck"*/);
-    byte_4C55AC6 = 1;
+    sub_1C6BA08(&UserPresentListViewItem_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9840/*"OnClickListCheck"*/);
+    byte_4CB5023 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -224,15 +224,15 @@ void UserPresentListViewObject__OnClickCheck(UserPresentListViewObject_o *this, 
       manager = (UnityEngine_Component_o *)this->fields.manager;
       if ( manager )
       {
-        UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9844/*"OnClickListCheck"*/, (Il2CppObject *)this, 0);
+        UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9840/*"OnClickListCheck"*/, (Il2CppObject *)this, 0);
         return;
       }
     }
     else
     {
-      sub_1C3EA80(linkItem);
+      sub_1C6BFFC(linkItem);
     }
-    sub_1C3E7C0(manager, v4);
+    sub_1C6BC60(manager, v4);
   }
 }
 
@@ -244,23 +244,23 @@ void UserPresentListViewObject__OnClickSelect(UserPresentListViewObject_o *this,
   __int64 v5; // x1
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C55AC5 & 1) == 0 )
+  if ( (byte_4CB5022 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UserPresentListViewObject_OnClickSelect__);
-    sub_1C3E564(&StringLiteral_9849/*"OnClickListView"*/);
-    byte_4C55AC5 = 1;
+    sub_1C6BA08(&Method_UserPresentListViewObject_OnClickSelect__);
+    sub_1C6BA08(&StringLiteral_9845/*"OnClickListView"*/);
+    byte_4CB5022 = 1;
   }
   if ( this->fields.linkItem )
   {
     v3 = Method_UserPresentListViewObject_OnClickSelect__;
     if ( (*((_BYTE *)Method_UserPresentListViewObject_OnClickSelect__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_UserPresentListViewObject_OnClickSelect__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_UserPresentListViewObject_OnClickSelect__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C3E7C0(0, v5);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9849/*"OnClickListView"*/, (Il2CppObject *)this, 0);
+      sub_1C6BC60(0, v5);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9845/*"OnClickListView"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -278,11 +278,11 @@ void UserPresentListViewObject__SetInput(UserPresentListViewObject_o *this, bool
   const MethodInfo *v7; // x3
   UserPresentListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4C55AC2 & 1) == 0 )
+  if ( (byte_4CB501F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UserPresentListViewItem_TypeInfo);
-    byte_4C55AC2 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UserPresentListViewItem_TypeInfo);
+    byte_4CB501F = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -292,7 +292,7 @@ void UserPresentListViewObject__SetInput(UserPresentListViewObject_o *this, bool
   {
     v8 = this->fields.itemDraw;
     if ( !v8 )
-      sub_1C3E7C0(0, v6);
+      sub_1C6BC60(0, v6);
     UserPresentListViewItemDraw__SetInput(v8, v6, isInput, v7);
   }
 }
@@ -305,7 +305,7 @@ void UserPresentListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_43886976((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_44077592((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -319,11 +319,11 @@ void UserPresentListViewObject__SetupDisp(UserPresentListViewObject_o *this, con
   const MethodInfo *v8; // x3
   UserPresentListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4C55AC4 & 1) == 0 )
+  if ( (byte_4CB5021 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UserPresentListViewItem_TypeInfo);
-    byte_4C55AC4 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UserPresentListViewItem_TypeInfo);
+    byte_4CB5021 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -347,7 +347,7 @@ LABEL_8:
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C3E7C0(0, v7);
+      sub_1C6BC60(0, v7);
     UserPresentListViewItemDraw__SetItem(v9, (UserPresentListViewItem_o *)linkItem, this->fields.dispMode, v8);
   }
 }
@@ -368,10 +368,10 @@ void UserPresentListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C55ABE & 1) == 0 )
+  if ( (byte_4CB501B & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C55ABE = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB501B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -384,13 +384,13 @@ void UserPresentListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   UserPresentListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -409,10 +409,10 @@ void UserPresentListViewObject__remove_callbackFunc(
   UserPresentListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C55ABF & 1) == 0 )
+  if ( (byte_4CB501C & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C55ABF = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB501C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -425,25 +425,24 @@ void UserPresentListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   UserPresentListViewObject__Awake(v11, v12);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UserPresentListViewObject__setBlocked(UserPresentListViewObject_o *this, bool blocked, const MethodInfo *method)
 {
   struct UserPresentListViewItemDraw_o *itemDraw; // x8
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw || (this = (UserPresentListViewObject_o *)itemDraw->fields.blockObj) == 0 )
-    sub_1C3E7C0(this, blocked);
+    sub_1C6BC60(this, blocked);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, blocked, 0);
 }
 
@@ -465,7 +464,7 @@ void UserPresentListViewObject__setCheckBoxed(
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, checkBoxed, 0),
         (this = (UserPresentListViewObject_o *)v5->fields.itemDraw) == 0) )
   {
-    sub_1C3E7C0(this, checkBoxed);
+    sub_1C6BC60(this, checkBoxed);
   }
   UserPresentListViewItemDraw__SetCheckCnt((UserPresentListViewItemDraw_o *)this, count, v7);
 }

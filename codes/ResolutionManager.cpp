@@ -2,10 +2,10 @@ void ResolutionManager___cctor(const MethodInfo *method)
 {
   struct ResolutionManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C566B5 & 1) == 0 )
+  if ( (byte_4CB5C14 & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566B5 = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C14 = 1;
   }
   static_fields = ResolutionManager_TypeInfo->static_fields;
   static_fields->RESOLUTION_LOW_DPI = 350.0;
@@ -44,10 +44,10 @@ void ResolutionManager__Initialize(const MethodInfo *method)
   UnityEngine_Resolution_o v14; // 0:x0.16
   UnityEngine_Resolution_o v15; // 0:x0.16
 
-  if ( (byte_4C566AF & 1) == 0 )
+  if ( (byte_4CB5C0E & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566AF = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C0E = 1;
   }
   v1 = ResolutionManager_TypeInfo;
   *(_QWORD *)&currentResolution.fields.m_Width = 0;
@@ -67,10 +67,10 @@ void ResolutionManager__Initialize(const MethodInfo *method)
     }
     static_fields->isInitialize = 1;
     width = UnityEngine_Screen__get_width(0);
-    if ( !byte_4C56797 )
+    if ( !byte_4CB5CF6 )
     {
-      sub_1C3E564(&ResolutionManager_TypeInfo);
-      byte_4C56797 = 1;
+      sub_1C6BA08(&ResolutionManager_TypeInfo);
+      byte_4CB5CF6 = 1;
     }
     v4 = ResolutionManager_TypeInfo;
     if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -80,10 +80,10 @@ void ResolutionManager__Initialize(const MethodInfo *method)
     }
     v4->static_fields->_DefaultScreenWidth_k__BackingField = width;
     height = UnityEngine_Screen__get_height(0);
-    if ( !byte_4C56798 )
+    if ( !byte_4CB5CF7 )
     {
-      sub_1C3E564(&ResolutionManager_TypeInfo);
-      byte_4C56798 = 1;
+      sub_1C6BA08(&ResolutionManager_TypeInfo);
+      byte_4CB5CF7 = 1;
     }
     v6 = ResolutionManager_TypeInfo;
     if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -96,10 +96,10 @@ void ResolutionManager__Initialize(const MethodInfo *method)
     *(_QWORD *)&v14.fields.m_Width = &currentResolution;
     v14.fields.m_RefreshRate = 0;
     v8 = UnityEngine_Resolution__get_width(v14, v7);
-    if ( !byte_4C56799 )
+    if ( !byte_4CB5CF8 )
     {
-      sub_1C3E564(&ResolutionManager_TypeInfo);
-      byte_4C56799 = 1;
+      sub_1C6BA08(&ResolutionManager_TypeInfo);
+      byte_4CB5CF8 = 1;
     }
     v9 = ResolutionManager_TypeInfo;
     if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -112,10 +112,10 @@ void ResolutionManager__Initialize(const MethodInfo *method)
     *(_QWORD *)&v15.fields.m_Width = &currentResolution;
     v15.fields.m_RefreshRate = 0;
     v11 = UnityEngine_Resolution__get_height(v15, v10);
-    if ( !byte_4C5679A )
+    if ( !byte_4CB5CF9 )
     {
-      sub_1C3E564(&ResolutionManager_TypeInfo);
-      byte_4C5679A = 1;
+      sub_1C6BA08(&ResolutionManager_TypeInfo);
+      byte_4CB5CF9 = 1;
     }
     v12 = ResolutionManager_TypeInfo;
     if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -130,10 +130,10 @@ void ResolutionManager__Initialize(const MethodInfo *method)
 
 bool ResolutionManager__IsEnableResolutionSetting(const MethodInfo *method)
 {
-  if ( (byte_4C566B3 & 1) == 0 )
+  if ( (byte_4CB5C12 & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566B3 = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C12 = 1;
   }
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResolutionManager_TypeInfo);
@@ -174,32 +174,32 @@ void ResolutionManager__OnPreCull(ResolutionManager_o *this, const MethodInfo *m
   UnityEngine_Matrix4x4_o v15; // [xsp+140h] [xbp-A0h]
   UnityEngine_Matrix4x4_o v16; // [xsp+180h] [xbp-60h] BYREF
 
-  if ( (byte_4C566B2 & 1) == 0 )
+  if ( (byte_4CB5C11 & 1) == 0 )
   {
-    sub_1C3E564(&BattlePerformance_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Camera___);
-    byte_4C566B2 = 1;
+    sub_1C6BA08(&BattlePerformance_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Camera___);
+    byte_4CB5C11 = 1;
   }
   if ( this->fields.enableFlip && this->fields.is3DCamera )
   {
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_16;
     UnityEngine_Camera__ResetWorldToCameraMatrix(Component_object, 0);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_16;
     UnityEngine_Camera__ResetProjectionMatrix(Component_object, 0);
     v5 = UnityEngine_Component__GetComponent_object_(
            (UnityEngine_Component_o *)this,
-           (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Camera___);
+           (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_16;
     UnityEngine_Camera__get_projectionMatrix(&v16, Component_object, 0);
@@ -230,7 +230,7 @@ void ResolutionManager__OnPreCull(ResolutionManager_o *this, const MethodInfo *m
     v14 = v13;
     if ( !v5 )
 LABEL_16:
-      sub_1C3E7C0(Component_object, v4);
+      sub_1C6BC60(Component_object, v4);
     v10 = v14;
     UnityEngine_Camera__set_projectionMatrix((UnityEngine_Camera_o *)v5, &v10, 0);
   }
@@ -241,10 +241,10 @@ void ResolutionManager__OnPreRender(ResolutionManager_o *this, const MethodInfo 
 {
   BattlePerformance_c *v3; // x0
 
-  if ( (byte_4C566B1 & 1) == 0 )
+  if ( (byte_4CB5C10 & 1) == 0 )
   {
-    sub_1C3E564(&BattlePerformance_TypeInfo);
-    byte_4C566B1 = 1;
+    sub_1C6BA08(&BattlePerformance_TypeInfo);
+    byte_4CB5C10 = 1;
   }
   if ( this->fields.enableFlip && this->fields.is3DCamera )
   {
@@ -277,12 +277,12 @@ void ResolutionManager__ReScale(ResolutionManager_o *this, const MethodInfo *met
   float v15; // s1
   float v16; // s2
 
-  if ( (byte_4C566B0 & 1) == 0 )
+  if ( (byte_4CB5C0F & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIRoot___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C566B0 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIRoot___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB5C0F = 1;
   }
   this->fields.preWidth = UnityEngine_Screen__get_width(0);
   this->fields.preHeight = UnityEngine_Screen__get_height(0);
@@ -297,12 +297,12 @@ void ResolutionManager__ReScale(ResolutionManager_o *this, const MethodInfo *met
   logicalHeight = this->fields.logicalHeight;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIRoot___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIRoot___);
   if ( !CommonFunction__ReScaleUiFunc((UIRoot_o *)Component_object, 0) )
     this->fields.is3DCamera = 1;
   v8 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Camera___);
+         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v8, 0, 0) )
@@ -314,7 +314,7 @@ void ResolutionManager__ReScale(ResolutionManager_o *this, const MethodInfo *met
     if ( (float)((float)(width / v10) * v9) >= (float)(int)v11 )
       v13 = (float)(width * v10) / (float)(height * v9);
     if ( !v8 )
-      sub_1C3E7C0(v11, v12);
+      sub_1C6BC60(v11, v12);
     v14 = 0;
     v15 = (float)(1.0 - v13) * 0.5;
     v16 = 1.0;
@@ -346,11 +346,11 @@ void ResolutionManager__SetResolutionType(int32_t type, const MethodInfo *method
   bool v21; // w0
   int v22; // w8
 
-  if ( (byte_4C566B4 & 1) == 0 )
+  if ( (byte_4CB5C13 & 1) == 0 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566B4 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C13 = 1;
   }
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResolutionManager_TypeInfo);
@@ -359,10 +359,10 @@ void ResolutionManager__SetResolutionType(int32_t type, const MethodInfo *method
   v5 = type == 0;
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResolutionManager_TypeInfo);
-  if ( !byte_4C5679B )
+  if ( !byte_4CB5CFA )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C5679B = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5CFA = 1;
   }
   v6 = ResolutionManager_TypeInfo;
   v7 = v5 || v4;
@@ -375,11 +375,11 @@ void ResolutionManager__SetResolutionType(int32_t type, const MethodInfo *method
   DefaultScreenWidth_k__BackingField = static_fields->_DefaultScreenWidth_k__BackingField;
   if ( v7 )
   {
-    if ( !byte_4C5679C )
+    if ( !byte_4CB5CFB )
     {
-      sub_1C3E564(&ResolutionManager_TypeInfo);
+      sub_1C6BA08(&ResolutionManager_TypeInfo);
       v6 = ResolutionManager_TypeInfo;
-      byte_4C5679C = 1;
+      byte_4CB5CFB = 1;
     }
     if ( !v6->_2.cctor_finished )
     {
@@ -396,19 +396,19 @@ void ResolutionManager__SetResolutionType(int32_t type, const MethodInfo *method
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
     v14 = RESOLUTION_LOW_DPI * (double)DefaultScreenWidth_k__BackingField;
-    if ( !byte_4C542D7 )
+    if ( !byte_4CB3829 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C542D7 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB3829 = 1;
     }
     v15 = v14 / dpi;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v16 = System_Math__Round_65160684(v15, 0, 1, 0);
-    if ( !byte_4C5679C )
+    v16 = System_Math__Round_65489396(v15, 0, 1, 0);
+    if ( !byte_4CB5CFB )
     {
-      sub_1C3E564(&ResolutionManager_TypeInfo);
-      byte_4C5679C = 1;
+      sub_1C6BA08(&ResolutionManager_TypeInfo);
+      byte_4CB5CFB = 1;
     }
     v17 = ResolutionManager_TypeInfo;
     if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -417,15 +417,15 @@ void ResolutionManager__SetResolutionType(int32_t type, const MethodInfo *method
       v17 = ResolutionManager_TypeInfo;
     }
     v18 = v17->static_fields->RESOLUTION_LOW_DPI * (double)v17->static_fields->_DefaultScreenHeight_k__BackingField;
-    if ( !byte_4C542D7 )
+    if ( !byte_4CB3829 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C542D7 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB3829 = 1;
     }
     v19 = v18 / dpi;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v20 = System_Math__Round_65160684(v19, 0, 1, 0);
+    v20 = System_Math__Round_65489396(v19, 0, 1, 0);
     if ( v20 == INFINITY )
       DefaultScreenHeight_k__BackingField = 0x80000000;
     else
@@ -437,7 +437,7 @@ void ResolutionManager__SetResolutionType(int32_t type, const MethodInfo *method
     fullScreen = v21;
     v12 = v22;
   }
-  UnityEngine_Screen__SetResolution_71185516(v12, DefaultScreenHeight_k__BackingField, fullScreen, 0);
+  UnityEngine_Screen__SetResolution_71502868(v12, DefaultScreenHeight_k__BackingField, fullScreen, 0);
 }
 
 
@@ -467,10 +467,10 @@ int32_t ResolutionManager__get_DefaultResolutionScreenHeight(const MethodInfo *m
 {
   ResolutionManager_c *v1; // x0
 
-  if ( (byte_4C566AD & 1) == 0 )
+  if ( (byte_4CB5C0C & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566AD = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C0C = 1;
   }
   v1 = ResolutionManager_TypeInfo;
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -486,10 +486,10 @@ int32_t ResolutionManager__get_DefaultResolutionScreenWidth(const MethodInfo *me
 {
   ResolutionManager_c *v1; // x0
 
-  if ( (byte_4C566AB & 1) == 0 )
+  if ( (byte_4CB5C0A & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566AB = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C0A = 1;
   }
   v1 = ResolutionManager_TypeInfo;
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -505,10 +505,10 @@ int32_t ResolutionManager__get_DefaultScreenHeight(const MethodInfo *method)
 {
   ResolutionManager_c *v1; // x0
 
-  if ( (byte_4C566A9 & 1) == 0 )
+  if ( (byte_4CB5C08 & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566A9 = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C08 = 1;
   }
   v1 = ResolutionManager_TypeInfo;
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -524,10 +524,10 @@ int32_t ResolutionManager__get_DefaultScreenWidth(const MethodInfo *method)
 {
   ResolutionManager_c *v1; // x0
 
-  if ( (byte_4C566A7 & 1) == 0 )
+  if ( (byte_4CB5C06 & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566A7 = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C06 = 1;
   }
   v1 = ResolutionManager_TypeInfo;
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -543,10 +543,10 @@ void ResolutionManager__set_DefaultResolutionScreenHeight(int32_t value, const M
 {
   ResolutionManager_c *v3; // x0
 
-  if ( (byte_4C566AE & 1) == 0 )
+  if ( (byte_4CB5C0D & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566AE = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C0D = 1;
   }
   v3 = ResolutionManager_TypeInfo;
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -562,10 +562,10 @@ void ResolutionManager__set_DefaultResolutionScreenWidth(int32_t value, const Me
 {
   ResolutionManager_c *v3; // x0
 
-  if ( (byte_4C566AC & 1) == 0 )
+  if ( (byte_4CB5C0B & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566AC = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C0B = 1;
   }
   v3 = ResolutionManager_TypeInfo;
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -581,10 +581,10 @@ void ResolutionManager__set_DefaultScreenHeight(int32_t value, const MethodInfo 
 {
   ResolutionManager_c *v3; // x0
 
-  if ( (byte_4C566AA & 1) == 0 )
+  if ( (byte_4CB5C09 & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566AA = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C09 = 1;
   }
   v3 = ResolutionManager_TypeInfo;
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )
@@ -600,10 +600,10 @@ void ResolutionManager__set_DefaultScreenWidth(int32_t value, const MethodInfo *
 {
   ResolutionManager_c *v3; // x0
 
-  if ( (byte_4C566A8 & 1) == 0 )
+  if ( (byte_4CB5C07 & 1) == 0 )
   {
-    sub_1C3E564(&ResolutionManager_TypeInfo);
-    byte_4C566A8 = 1;
+    sub_1C6BA08(&ResolutionManager_TypeInfo);
+    byte_4CB5C07 = 1;
   }
   v3 = ResolutionManager_TypeInfo;
   if ( !ResolutionManager_TypeInfo->_2.cctor_finished )

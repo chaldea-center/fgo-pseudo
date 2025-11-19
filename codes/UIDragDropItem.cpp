@@ -14,16 +14,16 @@ System_Collections_IEnumerator_o *UIDragDropItem__EnableDragScrollView(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C5B375 & 1) == 0 )
+  if ( (byte_4CBA952 & 1) == 0 )
   {
-    sub_1C3E564(&UIDragDropItem__EnableDragScrollView_d__30_TypeInfo);
-    byte_4C5B375 = 1;
+    sub_1C6BA08(&UIDragDropItem__EnableDragScrollView_d__30_TypeInfo);
+    byte_4CBA952 = 1;
   }
-  v3 = sub_1C3E7B0(UIDragDropItem__EnableDragScrollView_d__30_TypeInfo);
+  v3 = sub_1C6BC54(UIDragDropItem__EnableDragScrollView_d__30_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -41,10 +41,10 @@ void UIDragDropItem__OnDrag(UIDragDropItem_o *this, UnityEngine_Vector2_o delta,
 
   y = delta.fields.y;
   x = delta.fields.x;
-  if ( (byte_4C5B371 & 1) == 0 )
+  if ( (byte_4CBA94E & 1) == 0 )
   {
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B371 = 1;
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBA94E = 1;
   }
   if ( this->fields.interactable
     && this->fields.mDragging
@@ -61,7 +61,7 @@ void UIDragDropItem__OnDrag(UIDragDropItem_o *this, UnityEngine_Vector2_o delta,
     {
       mRoot = this->fields.mRoot;
       if ( !mRoot )
-        sub_1C3E7C0(0, v6);
+        sub_1C6BC60(0, v6);
       pixelSizeAdjustment = UIRoot__get_pixelSizeAdjustment(mRoot, 0);
       *(float *)&v11 = x * pixelSizeAdjustment;
       ((void (__fastcall *)(UIDragDropItem_o *, const MethodInfo *, long double, float))this->klass->vtable._12_OnDragDropMove.methodPtr)(
@@ -89,7 +89,7 @@ void UIDragDropItem__OnDragDropMove(UIDragDropItem_o *this, UnityEngine_Vector2_
 
   mTrans = this->fields.mTrans;
   if ( !mTrans )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   y = delta.fields.y;
   x = delta.fields.x;
   localPosition = UnityEngine_Transform__get_localPosition(this->fields.mTrans, 0);
@@ -135,14 +135,14 @@ void UIDragDropItem__OnDragDropRelease(
   UnityEngine_Object_o *v32; // x21
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B374 & 1) == 0 )
+  if ( (byte_4CBA951 & 1) == 0 )
   {
-    sub_1C3E564(&Method_NGUITools_FindInParents_UIDragDropContainer___);
-    sub_1C3E564(&Method_NGUITools_FindInParents_UIGrid____78269976);
-    sub_1C3E564(&Method_NGUITools_FindInParents_UITable____78270064);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B374 = 1;
+    sub_1C6BA08(&Method_NGUITools_FindInParents_UIDragDropContainer___);
+    sub_1C6BA08(&Method_NGUITools_FindInParents_UIGrid____78653256);
+    sub_1C6BA08(&Method_NGUITools_FindInParents_UITable____78653344);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA951 = 1;
   }
   if ( !this->fields.cloneOnDrag )
   {
@@ -194,7 +194,7 @@ void UIDragDropItem__OnDragDropRelease(
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       v11 = (UnityEngine_Object_o *)NGUITools__FindInParents_object_(
                                       surface,
-                                      (const MethodInfo_3183E10 *)Method_NGUITools_FindInParents_UIDragDropContainer___);
+                                      (const MethodInfo_31C5E70 *)Method_NGUITools_FindInParents_UIDragDropContainer___);
     }
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -241,29 +241,29 @@ void UIDragDropItem__OnDragDropRelease(
       goto LABEL_63;
     parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)transform, 0);
     this->fields.mParent = parent;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mParent, (int32_t)parent, v16, v17);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mParent, (int32_t)parent, v16, v17);
     mParent = this->fields.mParent;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    v19 = NGUITools__FindInParents_object__51920744(
+    v19 = NGUITools__FindInParents_object__52191176(
             mParent,
-            (const MethodInfo_3183F68 *)Method_NGUITools_FindInParents_UIGrid____78269976);
+            (const MethodInfo_31C5FC8 *)Method_NGUITools_FindInParents_UIGrid____78653256);
     this->fields.mGrid = (struct UIGrid_o *)v19;
     p_mGrid = &this->fields.mGrid;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mGrid, (int32_t)v19, v21, v22);
-    v23 = NGUITools__FindInParents_object__51920744(
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mGrid, (int32_t)v19, v21, v22);
+    v23 = NGUITools__FindInParents_object__52191176(
             this->fields.mParent,
-            (const MethodInfo_3183F68 *)Method_NGUITools_FindInParents_UITable____78270064);
+            (const MethodInfo_31C5FC8 *)Method_NGUITools_FindInParents_UITable____78653344);
     this->fields.mTable = (struct UITable_o *)v23;
     p_mTable = &this->fields.mTable;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v23, v25, v26);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v23, v25, v26);
     mDragScrollView = (UnityEngine_Object_o *)this->fields.mDragScrollView;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(mDragScrollView, 0, 0) )
     {
       v29 = UIDragDropItem__EnableDragScrollView(this, v28);
-      UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)this, v29, 0);
+      UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v29, 0);
     }
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
@@ -296,7 +296,7 @@ LABEL_62:
       return;
     }
 LABEL_63:
-    sub_1C3E7C0(transform, v7);
+    sub_1C6BC60(transform, v7);
   }
   v5 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
@@ -337,17 +337,17 @@ void UIDragDropItem__OnDragDropStart(UIDragDropItem_o *this, const MethodInfo *m
   UnityEngine_Object_o *v30; // x19
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B373 & 1) == 0 )
+  if ( (byte_4CBA950 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_TweenPosition___);
-    sub_1C3E564(&Method_NGUITools_FindInParents_UIGrid____78269976);
-    sub_1C3E564(&Method_NGUITools_FindInParents_UIRoot____78270032);
-    sub_1C3E564(&Method_NGUITools_FindInParents_UITable____78270064);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIDragDropRoot_TypeInfo);
-    byte_4C5B373 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_TweenPosition___);
+    sub_1C6BA08(&Method_NGUITools_FindInParents_UIGrid____78653256);
+    sub_1C6BA08(&Method_NGUITools_FindInParents_UIRoot____78653312);
+    sub_1C6BA08(&Method_NGUITools_FindInParents_UITable____78653344);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIDragDropRoot_TypeInfo);
+    byte_4CBA950 = 1;
   }
   mDragScrollView = (UnityEngine_Object_o *)this->fields.mDragScrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -403,27 +403,27 @@ void UIDragDropItem__OnDragDropStart(UIDragDropItem_o *this, const MethodInfo *m
     goto LABEL_56;
   parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)mTrans, 0);
   this->fields.mParent = parent;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mParent, (int32_t)parent, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mParent, (int32_t)parent, v10, v11);
   mParent = this->fields.mParent;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  v13 = NGUITools__FindInParents_object__51920744(
+  v13 = NGUITools__FindInParents_object__52191176(
           mParent,
-          (const MethodInfo_3183F68 *)Method_NGUITools_FindInParents_UIRoot____78270032);
+          (const MethodInfo_31C5FC8 *)Method_NGUITools_FindInParents_UIRoot____78653312);
   this->fields.mRoot = (struct UIRoot_o *)v13;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mRoot, (int32_t)v13, v14, v15);
-  v16 = NGUITools__FindInParents_object__51920744(
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mRoot, (int32_t)v13, v14, v15);
+  v16 = NGUITools__FindInParents_object__52191176(
           this->fields.mParent,
-          (const MethodInfo_3183F68 *)Method_NGUITools_FindInParents_UIGrid____78269976);
+          (const MethodInfo_31C5FC8 *)Method_NGUITools_FindInParents_UIGrid____78653256);
   this->fields.mGrid = (struct UIGrid_o *)v16;
   p_mGrid = &this->fields.mGrid;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mGrid, (int32_t)v16, v18, v19);
-  v20 = NGUITools__FindInParents_object__51920744(
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mGrid, (int32_t)v16, v18, v19);
+  v20 = NGUITools__FindInParents_object__52191176(
           this->fields.mParent,
-          (const MethodInfo_3183F68 *)Method_NGUITools_FindInParents_UITable____78270064);
+          (const MethodInfo_31C5FC8 *)Method_NGUITools_FindInParents_UITable____78653344);
   this->fields.mTable = (struct UITable_o *)v20;
   p_mTable = &this->fields.mTable;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v20, v22, v23);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTable, (int32_t)v20, v22, v23);
   root = (UnityEngine_Object_o *)UIDragDropRoot_TypeInfo->static_fields->root;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -443,13 +443,13 @@ void UIDragDropItem__OnDragDropStart(UIDragDropItem_o *this, const MethodInfo *m
         (mTrans = (UnityEngine_Behaviour_o *)this->fields.mTrans) == 0) )
   {
 LABEL_56:
-    sub_1C3E7C0(mTrans, v4);
+    sub_1C6BC60(mTrans, v4);
   }
   v25 = 0;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)mTrans, localPosition, 0);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_TweenPosition___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   mTrans = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -461,7 +461,7 @@ LABEL_56:
   }
   v27 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
+          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   mTrans = (UnityEngine_Behaviour_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v27, 0, 0);
@@ -510,10 +510,10 @@ void UIDragDropItem__OnDragEnd(UIDragDropItem_o *this, const MethodInfo *method)
   UIDragDropItem_c *klass; // x9
   struct UnityEngine_GameObject_o *hoveredObject; // x1
 
-  if ( (byte_4C5B372 & 1) == 0 )
+  if ( (byte_4CBA94F & 1) == 0 )
   {
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B372 = 1;
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBA94F = 1;
   }
   if ( this->fields.interactable && UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -553,10 +553,10 @@ void UIDragDropItem__OnDragStart(UIDragDropItem_o *this, const MethodInfo *metho
   struct UICamera_MouseOrTouch_o *v7; // x8
   struct UICamera_MouseOrTouch_o *v8; // x8
 
-  if ( (byte_4C5B36F & 1) == 0 )
+  if ( (byte_4CBA94C & 1) == 0 )
   {
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B36F = 1;
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBA94C = 1;
   }
   if ( !this->fields.interactable || !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
     return;
@@ -577,7 +577,7 @@ void UIDragDropItem__OnDragStart(UIDragDropItem_o *this, const MethodInfo *metho
     v8 = this->fields.mTouch;
     if ( !v8 )
 LABEL_18:
-      sub_1C3E7C0(v5, v3);
+      sub_1C6BC60(v5, v3);
     if ( fabsf(v8->fields.totalDelta.fields.x) > fabsf(v8->fields.totalDelta.fields.y) )
       return;
 LABEL_17:
@@ -606,10 +606,10 @@ void UIDragDropItem__OnPress(UIDragDropItem_o *this, bool isPressed, const Metho
   float v10; // s1
   struct UICamera_MouseOrTouch_o **v11; // x19
 
-  if ( (byte_4C5B36E & 1) == 0 )
+  if ( (byte_4CBA94B & 1) == 0 )
   {
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B36E = 1;
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBA94B = 1;
   }
   if ( this->fields.interactable )
   {
@@ -624,7 +624,7 @@ void UIDragDropItem__OnPress(UIDragDropItem_o *this, bool isPressed, const Metho
       currentTouch = v6->static_fields->currentTouch;
       this->fields.mTouch = currentTouch;
       p_mTouch = &this->fields.mTouch;
-      sub_1C3E508((CGThumbnailListItem_o *)p_mTouch, (int32_t)currentTouch, (int32_t)method, v3);
+      sub_1C6B9AC((CGThumbnailListItem_o *)p_mTouch, (int32_t)currentTouch, (int32_t)method, v3);
       time = RealTime__get_time(0);
       v10 = *((float *)p_mTouch - 24);
       *((_BYTE *)p_mTouch - 8) = 1;
@@ -635,7 +635,7 @@ void UIDragDropItem__OnPress(UIDragDropItem_o *this, bool isPressed, const Metho
       this->fields.mTouch = 0;
       v11 = &this->fields.mTouch;
       *((_BYTE *)v11 - 8) = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)v11, 0, (int32_t)method, v3);
+      sub_1C6B9AC((CGThumbnailListItem_o *)v11, 0, (int32_t)method, v3);
     }
   }
 }
@@ -661,43 +661,43 @@ void UIDragDropItem__Start(UIDragDropItem_o *this, const MethodInfo *method)
   int32_t v18; // w2
   const MethodInfo *v19; // x3
 
-  if ( (byte_4C5B36D & 1) == 0 )
+  if ( (byte_4CBA94A & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIButton___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIDragScrollView___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Collider2D___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    byte_4C5B36D = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIButton___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIDragScrollView___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Collider2D___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    byte_4CBA94A = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              gameObject,
-                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Collider___),
+                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Collider___),
         this->fields.mCollider = (struct UnityEngine_Collider_o *)Component_object,
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCollider, (int32_t)Component_object, v9, v10),
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCollider, (int32_t)Component_object, v9, v10),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C3E7C0(gameObject, v7);
+    sub_1C6BC60(gameObject, v7);
   }
   v11 = UnityEngine_GameObject__GetComponent_object_(
           gameObject,
-          (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Collider2D___);
+          (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Collider2D___);
   this->fields.mCollider2D = (struct UnityEngine_Collider2D_o *)v11;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCollider2D, (int32_t)v11, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCollider2D, (int32_t)v11, v12, v13);
   v14 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIButton___);
+          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIButton___);
   this->fields.mButton = (struct UIButton_o *)v14;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mButton, (int32_t)v14, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mButton, (int32_t)v14, v15, v16);
   v17 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIDragScrollView___);
+          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIDragScrollView___);
   this->fields.mDragScrollView = (struct UIDragScrollView_o *)v17;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mDragScrollView, (int32_t)v17, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mDragScrollView, (int32_t)v17, v18, v19);
 }
 
 
@@ -736,40 +736,28 @@ void UIDragDropItem__StartDragging(UIDragDropItem_o *this, const MethodInfo *met
   struct UICamera_StaticFields *static_fields; // x8
   struct UICamera_MouseOrTouch_o *v34; // x20
   UnityEngine_GameObject_o *v35; // x20
-  __int64 v36; // x2
-  __int64 v37; // x3
-  __int64 v38; // x4
-  __int64 v39; // x5
-  __int64 v40; // x6
-  __int64 v41; // x7
-  Il2CppObject *v42; // x21
-  UnityEngine_GameObject_o *v43; // x19
-  __int64 v44; // x2
-  __int64 v45; // x3
-  __int64 v46; // x4
-  __int64 v47; // x5
-  __int64 v48; // x6
-  __int64 v49; // x7
-  Il2CppObject *v50; // x0
+  Il2CppObject *v36; // x21
+  UnityEngine_GameObject_o *v37; // x19
+  Il2CppObject *v38; // x0
   UIDragDropItem_c *klass; // x8
-  char v52[4]; // [xsp+8h] [xbp-38h] BYREF
-  char v53[4]; // [xsp+Ch] [xbp-34h] BYREF
+  char v40[4]; // [xsp+8h] [xbp-38h] BYREF
+  char v41[4]; // [xsp+Ch] [xbp-34h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5B370 & 1) == 0 )
+  if ( (byte_4CBA94D & 1) == 0 )
   {
-    sub_1C3E564(&bool_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIButtonColor___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIDragDropItem___);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    sub_1C3E564(&StringLiteral_9914/*"OnHover"*/);
-    sub_1C3E564(&StringLiteral_9945/*"OnPress"*/);
-    byte_4C5B370 = 1;
+    sub_1C6BA08(&bool_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIButtonColor___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIDragDropItem___);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9910/*"OnHover"*/);
+    sub_1C6BA08(&StringLiteral_9941/*"OnPress"*/);
+    byte_4CBA94D = 1;
   }
   if ( this->fields.interactable && !this->fields.mDragging )
   {
@@ -793,7 +781,7 @@ void UIDragDropItem__StartDragging(UIDragDropItem_o *this, const MethodInfo *met
         v6 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
         if ( !NGUITools_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-        transform = (char *)NGUITools__AddChild_49422768(gameObject, v6, 0);
+        transform = (char *)NGUITools__AddChild_49651652(gameObject, v6, 0);
         if ( transform )
         {
           v7 = (UnityEngine_GameObject_o *)transform;
@@ -823,14 +811,14 @@ void UIDragDropItem__StartDragging(UIDragDropItem_o *this, const MethodInfo *met
                       UnityEngine_Transform__set_localScale(v10, localScale, 0);
                       Component_object = UnityEngine_GameObject__GetComponent_object_(
                                            v7,
-                                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
+                                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIButtonColor___);
                       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
                       {
                         transform = (char *)UnityEngine_Component__GetComponent_object_(
                                               (UnityEngine_Component_o *)this,
-                                              (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIButtonColor___);
+                                              (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIButtonColor___);
                         if ( !transform )
                           goto LABEL_46;
                         v12 = transform;
@@ -861,33 +849,33 @@ void UIDragDropItem__StartDragging(UIDragDropItem_o *this, const MethodInfo *met
                           if ( !*p_mTouch )
                             goto LABEL_46;
                           *((_QWORD *)transform + 8) = v7;
-                          sub_1C3E508((CGThumbnailListItem_o *)(transform + 64), (int32_t)v7, v17, v18);
+                          sub_1C6B9AC((CGThumbnailListItem_o *)(transform + 64), (int32_t)v7, v17, v18);
                           transform = (char *)*p_mTouch;
                           if ( !*p_mTouch )
                             goto LABEL_46;
                           *((_QWORD *)transform + 9) = v7;
-                          sub_1C3E508((CGThumbnailListItem_o *)(transform + 72), (int32_t)v7, v19, v20);
+                          sub_1C6B9AC((CGThumbnailListItem_o *)(transform + 72), (int32_t)v7, v19, v20);
                           transform = (char *)*p_mTouch;
                           if ( !*p_mTouch )
                             goto LABEL_46;
                           *((_QWORD *)transform + 10) = v7;
-                          sub_1C3E508((CGThumbnailListItem_o *)(transform + 80), (int32_t)v7, v21, v22);
+                          sub_1C6B9AC((CGThumbnailListItem_o *)(transform + 80), (int32_t)v7, v21, v22);
                           transform = (char *)*p_mTouch;
                           if ( !*p_mTouch )
                             goto LABEL_46;
                           *((_QWORD *)transform + 7) = v7;
-                          sub_1C3E508((CGThumbnailListItem_o *)(transform + 56), (int32_t)v7, v23, v24);
+                          sub_1C6B9AC((CGThumbnailListItem_o *)(transform + 56), (int32_t)v7, v23, v24);
                         }
                       }
                       transform = (char *)UnityEngine_GameObject__GetComponent_object_(
                                             v7,
-                                            (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIDragDropItem___);
+                                            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIDragDropItem___);
                       if ( transform )
                       {
                         v27 = *p_mTouch;
                         v28 = transform;
                         *((_QWORD *)transform + 17) = *p_mTouch;
-                        sub_1C3E508((CGThumbnailListItem_o *)(transform + 136), (int32_t)v27, v25, v26);
+                        sub_1C6B9AC((CGThumbnailListItem_o *)(transform + 136), (int32_t)v27, v25, v26);
                         v29 = *(_QWORD *)v28;
                         *((_WORD *)v28 + 64) = 257;
                         (*(void (__fastcall **)(char *, _QWORD))(v29 + 376))(v28, *(_QWORD *)(v29 + 384));
@@ -910,20 +898,20 @@ void UIDragDropItem__StartDragging(UIDragDropItem_o *this, const MethodInfo *met
                             static_fields = UICamera_TypeInfo->static_fields;
                           }
                           static_fields->currentTouch = v34;
-                          sub_1C3E508((CGThumbnailListItem_o *)&static_fields->currentTouch, (int32_t)v34, v30, v31);
+                          sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->currentTouch, (int32_t)v34, v30, v31);
                         }
                         this->fields.mTouch = 0;
-                        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTouch, 0, v30, v31);
+                        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTouch, 0, v30, v31);
                         v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-                        v53[0] = 0;
-                        v42 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v53, v36, v37, v38, v39, v40, v41);
+                        v41[0] = 0;
+                        v36 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v41);
                         if ( !UICamera_TypeInfo->_2.cctor_finished )
                           j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
-                        UICamera__Notify(v35, (System_String_o *)StringLiteral_9945/*"OnPress"*/, v42, 0);
-                        v43 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-                        v52[0] = 0;
-                        v50 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v52, v44, v45, v46, v47, v48, v49);
-                        UICamera__Notify(v43, (System_String_o *)StringLiteral_9914/*"OnHover"*/, v50, 0);
+                        UICamera__Notify(v35, (System_String_o *)StringLiteral_9941/*"OnPress"*/, v36, 0);
+                        v37 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+                        v40[0] = 0;
+                        v38 = (Il2CppObject *)j_il2cpp_value_box_0(bool_TypeInfo, v40);
+                        UICamera__Notify(v37, (System_String_o *)StringLiteral_9910/*"OnHover"*/, v38, 0);
                         return;
                       }
                     }
@@ -936,7 +924,7 @@ void UIDragDropItem__StartDragging(UIDragDropItem_o *this, const MethodInfo *met
       }
     }
 LABEL_46:
-    sub_1C3E7C0(transform, v4);
+    sub_1C6BC60(transform, v4);
   }
 }
 
@@ -996,11 +984,11 @@ bool UIDragDropItem__EnableDragScrollView_d__30__MoveNext(
   UnityEngine_Object_o *mDragScrollView; // x19
 
   v2 = this;
-  if ( (byte_4C5B376 & 1) == 0 )
+  if ( (byte_4CBA953 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    this = (UIDragDropItem__EnableDragScrollView_d__30_o *)sub_1C3E564(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_4C5B376 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    this = (UIDragDropItem__EnableDragScrollView_d__30_o *)sub_1C6BA08(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    byte_4CBA953 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -1017,16 +1005,16 @@ bool UIDragDropItem__EnableDragScrollView_d__30__MoveNext(
     this = (UIDragDropItem__EnableDragScrollView_d__30_o *)_4__this->fields.mDragScrollView;
     if ( !this )
 LABEL_13:
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 1, 0);
   }
   else if ( !_1__state )
   {
     v2->fields.__1__state = -1;
-    v4 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    v4 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
     UnityEngine_WaitForEndOfFrame___ctor(v4, 0);
     v2->fields.__2__current = (Il2CppObject *)v4;
-    sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v4, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.__2__current, (int32_t)v4, v5, v6);
     result = 1;
     v2->fields.__1__state = 1;
     return result;
@@ -1051,11 +1039,11 @@ void __noreturn UIDragDropItem__EnableDragScrollView_d__30__System_Collections_I
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_UIDragDropItem__EnableDragScrollView_d__30_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_UIDragDropItem__EnableDragScrollView_d__30_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 

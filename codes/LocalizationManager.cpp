@@ -12,56 +12,56 @@ void LocalizationManager___cctor(const MethodInfo *method)
   const MethodInfo *v10; // x3
   struct NguiLocalizationManager_StaticFields *v11; // x0
 
-  if ( (byte_4C56450 & 1) == 0 )
+  if ( (byte_4CB59B7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    sub_1C3E564(&System_Func_string__string__TypeInfo);
-    sub_1C3E564(&System_Func_string__bool__TypeInfo);
-    sub_1C3E564(&Method_LocalizationManager_ContainsKey__);
-    sub_1C3E564(&Method_LocalizationManager_Get__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C56450 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+    sub_1C6BA08(&System_Func_string__string__TypeInfo);
+    sub_1C6BA08(&System_Func_string__bool__TypeInfo);
+    sub_1C6BA08(&Method_LocalizationManager_ContainsKey__);
+    sub_1C6BA08(&Method_LocalizationManager_Get__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59B7 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__string__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v1,
-    (const MethodInfo_3474E30 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    (const MethodInfo_34BAF8C *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   static_fields = LocalizationManager_TypeInfo->static_fields;
   static_fields->lookup = (struct System_Collections_Generic_Dictionary_string__string__o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->lookup, (int32_t)v1, v3, v4);
-  v5 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_string__bool__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->lookup, (int32_t)v1, v3, v4);
+  v5 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_string__bool__TypeInfo);
   System_Func_object__bool____ctor(v5, 0, Method_LocalizationManager_ContainsKey__, 0);
-  if ( !byte_4C564E0 )
+  if ( !byte_4CB5A3E )
   {
-    sub_1C3E564(&NguiLocalizationManager_TypeInfo);
-    byte_4C564E0 = 1;
+    sub_1C6BA08(&NguiLocalizationManager_TypeInfo);
+    byte_4CB5A3E = 1;
   }
   NguiLocalizationManager_TypeInfo->static_fields->containsKeyFunc = (struct System_Func_string__bool__o *)v5;
-  sub_1C3E508((CGThumbnailListItem_o *)NguiLocalizationManager_TypeInfo->static_fields, (int32_t)v5, v6, v7);
-  v8 = (System_Func_object__object__o *)sub_1C3E7B0(System_Func_string__string__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)NguiLocalizationManager_TypeInfo->static_fields, (int32_t)v5, v6, v7);
+  v8 = (System_Func_object__object__o *)sub_1C6BC54(System_Func_string__string__TypeInfo);
   System_Func_object__object____ctor(v8, 0, Method_LocalizationManager_Get__, 0);
-  if ( !byte_4C564E1 )
+  if ( !byte_4CB5A3F )
   {
-    sub_1C3E564(&NguiLocalizationManager_TypeInfo);
-    byte_4C564E1 = 1;
+    sub_1C6BA08(&NguiLocalizationManager_TypeInfo);
+    byte_4CB5A3F = 1;
   }
   v11 = NguiLocalizationManager_TypeInfo->static_fields;
   v11->getFunc = (struct System_Func_string__string__o *)v8;
-  sub_1C3E508((CGThumbnailListItem_o *)&v11->getFunc, (int32_t)v8, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v11->getFunc, (int32_t)v8, v9, v10);
 }
 
 
 void LocalizationManager___ctor(LocalizationManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5648B & 1) == 0 )
+  if ( (byte_4CB59F2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_LocalizationManager___ctor__);
-    byte_4C5648B = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_LocalizationManager___ctor__);
+    byte_4CB59F2 = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_39FFA90 *)Method_SingletonMonoBehaviour_LocalizationManager___ctor__);
+    (const MethodInfo_3A4F89C *)Method_SingletonMonoBehaviour_LocalizationManager___ctor__);
 }
 
 
@@ -80,11 +80,11 @@ System_String_o *LocalizationManager__ChineseNumber(int32_t n, const MethodInfo 
   LocalizationManager_c *v14; // x0
   System_String_o *v15; // x0
 
-  if ( (byte_4C56487 & 1) == 0 )
+  if ( (byte_4CB59EE & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    byte_4C56487 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    byte_4CB59EE = 1;
   }
   v3 = n % 10;
   if ( n < 10 )
@@ -97,12 +97,12 @@ System_String_o *LocalizationManager__ChineseNumber(int32_t n, const MethodInfo 
     }
     lowNumberString = v4->static_fields->lowNumberString;
     if ( lowNumberString )
-      return System_String__Substring_63682392((System_String_o *)lowNumberString, v3, 1, 0);
+      return System_String__Substring_64012732((System_String_o *)lowNumberString, v3, 1, 0);
 LABEL_38:
-    sub_1C3E7C0(lowNumberString, method);
+    sub_1C6BC60(lowNumberString, method);
   }
-  v7 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor_63714884(v7, 10, 0);
+  v7 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor_64044104(v7, 10, 0);
   if ( n >= 100 )
   {
     v8 = n / 0x64u % 0xA;
@@ -117,17 +117,17 @@ LABEL_38:
       lowNumberString = v9->static_fields->lowNumberString;
       if ( !lowNumberString )
         goto LABEL_38;
-      lowNumberString = System_String__Substring_63682392((System_String_o *)lowNumberString, v8, 1, 0);
+      lowNumberString = System_String__Substring_64012732((System_String_o *)lowNumberString, v8, 1, 0);
       if ( !v7 )
         goto LABEL_38;
-      System_Text_StringBuilder__Append_63721532(v7, (System_String_o *)lowNumberString, 0);
+      System_Text_StringBuilder__Append_64050752(v7, (System_String_o *)lowNumberString, 0);
     }
     lowNumberString = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     if ( !v7 )
       goto LABEL_38;
-    System_Text_StringBuilder__Append_63721532(v7, LocalizationManager_TypeInfo->static_fields->hi2NumberString, 0);
+    System_Text_StringBuilder__Append_64050752(v7, LocalizationManager_TypeInfo->static_fields->hi2NumberString, 0);
   }
   lowNumberString = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -151,25 +151,25 @@ LABEL_38:
     lowNumberString = static_fields->lowNumberString;
     if ( !static_fields->lowNumberString )
       goto LABEL_38;
-    lowNumberString = System_String__Substring_63682392((System_String_o *)lowNumberString, v13, 1, 0);
+    lowNumberString = System_String__Substring_64012732((System_String_o *)lowNumberString, v13, 1, 0);
     if ( !v7 )
       goto LABEL_38;
-    System_Text_StringBuilder__Append_63721532(v7, (System_String_o *)lowNumberString, 0);
+    System_Text_StringBuilder__Append_64050752(v7, (System_String_o *)lowNumberString, 0);
     lowNumberString = LocalizationManager_TypeInfo->static_fields->hiNumberString;
     if ( !lowNumberString )
       goto LABEL_38;
-    lowNumberString = System_String__Substring_63682392((System_String_o *)lowNumberString, 0, 1, 0);
+    lowNumberString = System_String__Substring_64012732((System_String_o *)lowNumberString, 0, 1, 0);
   }
   else
   {
     lowNumberString = static_fields->hiNumberString;
     if ( !lowNumberString )
       goto LABEL_38;
-    lowNumberString = System_String__Substring_63682392((System_String_o *)lowNumberString, v13, 1, 0);
+    lowNumberString = System_String__Substring_64012732((System_String_o *)lowNumberString, v13, 1, 0);
     if ( !v7 )
       goto LABEL_38;
   }
-  System_Text_StringBuilder__Append_63721532(v7, (System_String_o *)lowNumberString, 0);
+  System_Text_StringBuilder__Append_64050752(v7, (System_String_o *)lowNumberString, 0);
   if ( v3 >= 1 )
   {
     v14 = LocalizationManager_TypeInfo;
@@ -181,8 +181,8 @@ LABEL_38:
     lowNumberString = v14->static_fields->lowNumberString;
     if ( !lowNumberString )
       goto LABEL_38;
-    v15 = System_String__Substring_63682392((System_String_o *)lowNumberString, v3, 1, 0);
-    System_Text_StringBuilder__Append_63721532(v7, v15, 0);
+    v15 = System_String__Substring_64012732((System_String_o *)lowNumberString, v3, 1, 0);
+    System_Text_StringBuilder__Append_64050752(v7, v15, 0);
   }
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v7->klass->vtable._3_ToString.methodPtr)(
                               v7,
@@ -195,11 +195,11 @@ bool LocalizationManager__ContainsKey(System_String_o *key, const MethodInfo *me
   LocalizationManager_c *v3; // x0
   System_Collections_Generic_Dictionary_object__object__o *lookup; // x0
 
-  if ( (byte_4C5645D & 1) == 0 )
+  if ( (byte_4CB59C4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C5645D = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59C4 = 1;
   }
   v3 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -209,40 +209,34 @@ bool LocalizationManager__ContainsKey(System_String_o *key, const MethodInfo *me
   }
   lookup = (System_Collections_Generic_Dictionary_object__object__o *)v3->static_fields->lookup;
   if ( !lookup )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            lookup,
            (Il2CppObject *)key,
-           (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+           (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
 }
 
 
 System_String_o *LocalizationManager__ConvertNumberToRomaNumber(int32_t number, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  Il2CppObject *v9; // x0
-  const MethodInfo *v10; // x1
-  System_String_o *v11; // x19
-  int32_t v13; // [xsp+Ch] [xbp-34h] BYREF
+  Il2CppObject *v3; // x0
+  const MethodInfo *v4; // x1
+  System_String_o *v5; // x19
+  int32_t v7; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C5648A & 1) == 0 )
+  if ( (byte_4CB59F1 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_11164/*"ROMAN_NUMBER_{0}"*/);
-    byte_4C5648A = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_11160/*"ROMAN_NUMBER_{0}"*/);
+    byte_4CB59F1 = 1;
   }
-  v13 = number;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13, v2, v3, v4, v5, v6, v7);
-  v11 = System_String__Format((System_String_o *)StringLiteral_11164/*"ROMAN_NUMBER_{0}"*/, v9, 0);
+  v7 = number;
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v7);
+  v5 = System_String__Format((System_String_o *)StringLiteral_11160/*"ROMAN_NUMBER_{0}"*/, v3, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get(v11, v10);
+  return LocalizationManager__Get(v5, v4);
 }
 
 
@@ -252,11 +246,11 @@ System_String_o *LocalizationManager__Get(System_String_o *key, const MethodInfo
   LocalizationManager_c *v4; // x0
   System_Collections_Generic_Dictionary_object__object__o *lookup; // x0
 
-  if ( (byte_4C5645B & 1) == 0 )
+  if ( (byte_4CB59C2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C5645B = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59C2 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -270,67 +264,55 @@ System_String_o *LocalizationManager__Get(System_String_o *key, const MethodInfo
   }
   lookup = (System_Collections_Generic_Dictionary_object__object__o *)v4->static_fields->lookup;
   if ( !lookup )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   return (System_String_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                               lookup,
                               (Il2CppObject *)key,
-                              (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+                              (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
 }
 
 
 System_String_o *LocalizationManager__GetAttackIconInfo(int32_t atk, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C56480 & 1) == 0 )
+  if ( (byte_4CB59E7 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_2045/*"ATTACK_ICON_INFO"*/);
-    byte_4C56480 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_2038/*"ATTACK_ICON_INFO"*/);
+    byte_4CB59E7 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_2045/*"ATTACK_ICON_INFO"*/, method);
-  v12 = atk;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_2038/*"ATTACK_ICON_INFO"*/, method);
+  v6 = atk;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
 System_String_o *LocalizationManager__GetAttackInfo(int32_t atk, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C5647F & 1) == 0 )
+  if ( (byte_4CB59E6 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_2046/*"ATTACK_INFO"*/);
-    byte_4C5647F = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_2039/*"ATTACK_INFO"*/);
+    byte_4CB59E6 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_2046/*"ATTACK_INFO"*/, method);
-  v12 = atk;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_2039/*"ATTACK_INFO"*/, method);
+  v6 = atk;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
@@ -338,31 +320,25 @@ System_String_o *LocalizationManager__GetBeforeTime(int64_t at, const MethodInfo
 {
   const MethodInfo *v3; // x1
   int64_t v4; // x19
-  __int64 v6; // x2
-  __int64 v7; // x3
-  __int64 v8; // x4
-  __int64 v9; // x5
-  __int64 v10; // x6
-  __int64 v11; // x7
-  System_String_o *v12; // x19
-  void *v13; // x0
-  unsigned __int64 v14; // x21
-  unsigned __int64 v15; // x20
-  System_String_o *v16; // x0
-  Il2CppObject *v17; // x0
-  unsigned __int64 v18; // [xsp+8h] [xbp-28h] BYREF
+  System_String_o *v6; // x19
+  void *v7; // x0
+  unsigned __int64 v8; // x21
+  unsigned __int64 v9; // x20
+  System_String_o *v10; // x0
+  Il2CppObject *v11; // x0
+  unsigned __int64 v12; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C5645F & 1) == 0 )
+  if ( (byte_4CB59C6 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_13401/*"TIME_BEFORE_MINUTES"*/);
-    sub_1C3E564(&StringLiteral_13399/*"TIME_BEFORE_DAYS"*/);
-    sub_1C3E564(&StringLiteral_13400/*"TIME_BEFORE_HOURS"*/);
-    sub_1C3E564(&StringLiteral_13402/*"TIME_BEFORE_OVER_YEARS"*/);
-    byte_4C5645F = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_13394/*"TIME_BEFORE_MINUTES"*/);
+    sub_1C6BA08(&StringLiteral_13392/*"TIME_BEFORE_DAYS"*/);
+    sub_1C6BA08(&StringLiteral_13393/*"TIME_BEFORE_HOURS"*/);
+    sub_1C6BA08(&StringLiteral_13395/*"TIME_BEFORE_OVER_YEARS"*/);
+    byte_4CB59C6 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -371,189 +347,153 @@ System_String_o *LocalizationManager__GetBeforeTime(int64_t at, const MethodInfo
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_13401/*"TIME_BEFORE_MINUTES"*/, v3);
-    v13 = int_TypeInfo;
-    LODWORD(v18) = 0;
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13394/*"TIME_BEFORE_MINUTES"*/, v3);
+    v7 = int_TypeInfo;
+    LODWORD(v12) = 0;
   }
   else
   {
     if ( v4 <= 3599 )
     {
-      v14 = v4 / 0x3CuLL;
+      v8 = v4 / 0x3CuLL;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_13401/*"TIME_BEFORE_MINUTES"*/, v3);
-      v18 = v14;
+      v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13394/*"TIME_BEFORE_MINUTES"*/, v3);
+      v12 = v8;
     }
     else
     {
       if ( v4 <= 86399 )
       {
-        v15 = v4 / 0xE10uLL;
+        v9 = v4 / 0xE10uLL;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v16 = (System_String_o *)StringLiteral_13400/*"TIME_BEFORE_HOURS"*/;
+        v10 = (System_String_o *)StringLiteral_13393/*"TIME_BEFORE_HOURS"*/;
       }
       else
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
         if ( v4 > 31535999 )
-          return LocalizationManager__Get((System_String_o *)StringLiteral_13402/*"TIME_BEFORE_OVER_YEARS"*/, v3);
-        v16 = (System_String_o *)StringLiteral_13399/*"TIME_BEFORE_DAYS"*/;
-        v15 = v4 / 0x15180uLL;
+          return LocalizationManager__Get((System_String_o *)StringLiteral_13395/*"TIME_BEFORE_OVER_YEARS"*/, v3);
+        v10 = (System_String_o *)StringLiteral_13392/*"TIME_BEFORE_DAYS"*/;
+        v9 = v4 / 0x15180uLL;
       }
-      v12 = LocalizationManager__Get(v16, v3);
-      v18 = v15;
+      v6 = LocalizationManager__Get(v10, v3);
+      v12 = v9;
     }
-    v13 = long_TypeInfo;
+    v7 = long_TypeInfo;
   }
-  v17 = (Il2CppObject *)j_il2cpp_value_box_0(v13, &v18, v6, v7, v8, v9, v10, v11);
-  return System_String__Format(v12, v17, 0);
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(v7, &v12);
+  return System_String__Format(v6, v11, 0);
 }
 
 
 System_String_o *LocalizationManager__GetCostIconInfo(int32_t cost, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C5647C & 1) == 0 )
+  if ( (byte_4CB59E3 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_3858/*"COST_ICON_INFO"*/);
-    byte_4C5647C = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_3850/*"COST_ICON_INFO"*/);
+    byte_4CB59E3 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3858/*"COST_ICON_INFO"*/, method);
-  v12 = cost;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3850/*"COST_ICON_INFO"*/, method);
+  v6 = cost;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
 System_String_o *LocalizationManager__GetCostInfo(int32_t cost, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C5647B & 1) == 0 )
+  if ( (byte_4CB59E2 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_3859/*"COST_INFO"*/);
-    byte_4C5647B = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_3851/*"COST_INFO"*/);
+    byte_4CB59E2 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3859/*"COST_INFO"*/, method);
-  v12 = cost;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3851/*"COST_INFO"*/, method);
+  v6 = cost;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
 System_String_o *LocalizationManager__GetCountInfo(int32_t count, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C56471 & 1) == 0 )
+  if ( (byte_4CB59D8 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_3860/*"COUNT_INFO"*/);
-    byte_4C56471 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_3852/*"COUNT_INFO"*/);
+    byte_4CB59D8 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3860/*"COUNT_INFO"*/, method);
-  v12 = count;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_3852/*"COUNT_INFO"*/, method);
+  v6 = count;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
 System_String_o *LocalizationManager__GetDate(int64_t time, const MethodInfo *method)
 {
   System_DateTime_o v3; // x0
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x19
-  System_DateTime_o v11; // x0
-  __int64 v12; // x2
-  __int64 v13; // x3
-  __int64 v14; // x4
-  __int64 v15; // x5
-  __int64 v16; // x6
-  __int64 v17; // x7
-  Il2CppObject *v18; // x20
-  System_DateTime_o v19; // x0
-  __int64 v20; // x2
-  __int64 v21; // x3
-  __int64 v22; // x4
-  __int64 v23; // x5
-  __int64 v24; // x6
-  __int64 v25; // x7
-  Il2CppObject *v26; // x0
+  Il2CppObject *v4; // x19
+  System_DateTime_o v5; // x0
+  Il2CppObject *v6; // x20
+  System_DateTime_o v7; // x0
+  Il2CppObject *v8; // x0
   int32_t Day; // [xsp+4h] [xbp-3Ch] BYREF
   int32_t Month; // [xsp+8h] [xbp-38h] BYREF
   int32_t Year; // [xsp+Ch] [xbp-34h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C5646A & 1) == 0 )
+  if ( (byte_4CB59D1 & 1) == 0 )
   {
-    sub_1C3E564(&System_DateTime_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_25108/*"{0:D}/{1:D2}/{2:D2}"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5646A = 1;
+    sub_1C6BA08(&System_DateTime_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25198/*"{0:D}/{1:D2}/{2:D2}"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB59D1 = 1;
   }
   if ( time < 1 )
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  dateData = NetworkManager__getServerDateTime_41416004(time, 0).fields._dateData;
+  dateData = NetworkManager__getServerDateTime_41600872(time, 0).fields._dateData;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
   v3.fields._dateData = (uint64_t)&dateData;
   Year = System_DateTime__get_Year(v3, 0);
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Year, v4, v5, v6, v7, v8, v9);
-  v11.fields._dateData = (uint64_t)&dateData;
-  Month = System_DateTime__get_Month(v11, 0);
-  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Month, v12, v13, v14, v15, v16, v17);
-  v19.fields._dateData = (uint64_t)&dateData;
-  Day = System_DateTime__get_Day(v19, 0);
-  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Day, v20, v21, v22, v23, v24, v25);
-  return System_String__Format_63677828((System_String_o *)StringLiteral_25108/*"{0:D}/{1:D2}/{2:D2}"*/, v10, v18, v26, 0);
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Year);
+  v5.fields._dateData = (uint64_t)&dateData;
+  Month = System_DateTime__get_Month(v5, 0);
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Month);
+  v7.fields._dateData = (uint64_t)&dateData;
+  Day = System_DateTime__get_Day(v7, 0);
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Day);
+  return System_String__Format_64008168((System_String_o *)StringLiteral_25198/*"{0:D}/{1:D2}/{2:D2}"*/, v4, v6, v8, 0);
 }
 
 
@@ -561,58 +501,28 @@ System_String_o *LocalizationManager__GetDateTime(int64_t time, const MethodInfo
 {
   __int64 v3; // x19
   System_DateTime_o v4; // x0
-  __int64 v5; // x2
-  __int64 v6; // x3
-  __int64 v7; // x4
-  __int64 v8; // x5
-  __int64 v9; // x6
-  __int64 v10; // x7
-  __int64 v11; // x0
-  __int64 v12; // x1
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  __int64 v15; // x20
-  System_DateTime_o v16; // x0
-  __int64 v17; // x2
-  __int64 v18; // x3
-  __int64 v19; // x4
-  __int64 v20; // x5
-  __int64 v21; // x6
-  __int64 v22; // x7
+  __int64 v5; // x0
+  __int64 v6; // x1
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  __int64 v9; // x20
+  System_DateTime_o v10; // x0
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  __int64 v13; // x20
+  System_DateTime_o v14; // x0
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  __int64 v17; // x20
+  System_DateTime_o v18; // x0
+  int32_t v19; // w2
+  const MethodInfo *v20; // x3
+  __int64 v21; // x20
+  System_DateTime_o v22; // x0
   int32_t v23; // w2
   const MethodInfo *v24; // x3
   __int64 v25; // x20
-  System_DateTime_o v26; // x0
-  __int64 v27; // x2
-  __int64 v28; // x3
-  __int64 v29; // x4
-  __int64 v30; // x5
-  __int64 v31; // x6
-  __int64 v32; // x7
-  int32_t v33; // w2
-  const MethodInfo *v34; // x3
-  __int64 v35; // x20
-  System_DateTime_o v36; // x0
-  __int64 v37; // x2
-  __int64 v38; // x3
-  __int64 v39; // x4
-  __int64 v40; // x5
-  __int64 v41; // x6
-  __int64 v42; // x7
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  __int64 v45; // x20
-  System_DateTime_o v46; // x0
-  __int64 v47; // x2
-  __int64 v48; // x3
-  __int64 v49; // x4
-  __int64 v50; // x5
-  __int64 v51; // x6
-  __int64 v52; // x7
-  int32_t v53; // w2
-  const MethodInfo *v54; // x3
-  __int64 v55; // x20
-  __int64 v57; // x0
+  __int64 v27; // x0
   int32_t Minute; // [xsp+Ch] [xbp-44h] BYREF
   int32_t Hour; // [xsp+10h] [xbp-40h] BYREF
   int32_t Day; // [xsp+14h] [xbp-3Ch] BYREF
@@ -620,90 +530,90 @@ System_String_o *LocalizationManager__GetDateTime(int64_t time, const MethodInfo
   int32_t Year; // [xsp+1Ch] [xbp-34h] BYREF
   uint64_t dateData; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_4C5646C & 1) == 0 )
+  if ( (byte_4CB59D3 & 1) == 0 )
   {
-    sub_1C3E564(&System_DateTime_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&object___TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_25109/*"{0:D}/{1:D2}/{2:D2} {3:D2}:{4:D2}"*/);
-    byte_4C5646C = 1;
+    sub_1C6BA08(&System_DateTime_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&object___TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_25199/*"{0:D}/{1:D2}/{2:D2} {3:D2}:{4:D2}"*/);
+    byte_4CB59D3 = 1;
   }
   if ( time >= 1 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    dateData = NetworkManager__getServerDateTime_41416004(time, 0).fields._dateData;
-    v3 = sub_1C3E60C(object___TypeInfo, 5);
+    dateData = NetworkManager__getServerDateTime_41600872(time, 0).fields._dateData;
+    v3 = sub_1C6BAB0(object___TypeInfo, 5);
     if ( !System_DateTime_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
     v4.fields._dateData = (uint64_t)&dateData;
     Year = System_DateTime__get_Year(v4, 0);
-    v11 = j_il2cpp_value_box_0(int_TypeInfo, &Year, v5, v6, v7, v8, v9, v10);
+    v5 = j_il2cpp_value_box_0(int_TypeInfo, &Year);
     if ( !v3 )
-      sub_1C3E7C0(v11, v12);
-    v15 = v11;
-    if ( !v11 || (v11 = sub_1C3E6A0(v11, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
+      sub_1C6BC60(v5, v6);
+    v9 = v5;
+    if ( !v5 || (v5 = sub_1C6BB44(v5, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
     {
       if ( !*(_DWORD *)(v3 + 24) )
         goto LABEL_27;
-      *(_QWORD *)(v3 + 32) = v15;
-      sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), v15, v13, v14);
-      v16.fields._dateData = (uint64_t)&dateData;
-      Month = System_DateTime__get_Month(v16, 0);
-      v11 = j_il2cpp_value_box_0(int_TypeInfo, &Month, v17, v18, v19, v20, v21, v22);
-      v25 = v11;
-      if ( !v11 || (v11 = sub_1C3E6A0(v11, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
+      *(_QWORD *)(v3 + 32) = v9;
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), v9, v7, v8);
+      v10.fields._dateData = (uint64_t)&dateData;
+      Month = System_DateTime__get_Month(v10, 0);
+      v5 = j_il2cpp_value_box_0(int_TypeInfo, &Month);
+      v13 = v5;
+      if ( !v5 || (v5 = sub_1C6BB44(v5, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
       {
         if ( *(_DWORD *)(v3 + 24) <= 1u )
           goto LABEL_27;
-        *(_QWORD *)(v3 + 40) = v25;
-        sub_1C3E508((CGThumbnailListItem_o *)(v3 + 40), v25, v23, v24);
-        v26.fields._dateData = (uint64_t)&dateData;
-        Day = System_DateTime__get_Day(v26, 0);
-        v11 = j_il2cpp_value_box_0(int_TypeInfo, &Day, v27, v28, v29, v30, v31, v32);
-        v35 = v11;
-        if ( !v11 || (v11 = sub_1C3E6A0(v11, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
+        *(_QWORD *)(v3 + 40) = v13;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 40), v13, v11, v12);
+        v14.fields._dateData = (uint64_t)&dateData;
+        Day = System_DateTime__get_Day(v14, 0);
+        v5 = j_il2cpp_value_box_0(int_TypeInfo, &Day);
+        v17 = v5;
+        if ( !v5 || (v5 = sub_1C6BB44(v5, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
         {
           if ( *(_DWORD *)(v3 + 24) <= 2u )
             goto LABEL_27;
-          *(_QWORD *)(v3 + 48) = v35;
-          sub_1C3E508((CGThumbnailListItem_o *)(v3 + 48), v35, v33, v34);
-          v36.fields._dateData = (uint64_t)&dateData;
-          Hour = System_DateTime__get_Hour(v36, 0);
-          v11 = j_il2cpp_value_box_0(int_TypeInfo, &Hour, v37, v38, v39, v40, v41, v42);
-          v45 = v11;
-          if ( !v11 || (v11 = sub_1C3E6A0(v11, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
+          *(_QWORD *)(v3 + 48) = v17;
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 48), v17, v15, v16);
+          v18.fields._dateData = (uint64_t)&dateData;
+          Hour = System_DateTime__get_Hour(v18, 0);
+          v5 = j_il2cpp_value_box_0(int_TypeInfo, &Hour);
+          v21 = v5;
+          if ( !v5 || (v5 = sub_1C6BB44(v5, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
           {
             if ( *(_DWORD *)(v3 + 24) <= 3u )
               goto LABEL_27;
-            *(_QWORD *)(v3 + 56) = v45;
-            sub_1C3E508((CGThumbnailListItem_o *)(v3 + 56), v45, v43, v44);
-            v46.fields._dateData = (uint64_t)&dateData;
-            Minute = System_DateTime__get_Minute(v46, 0);
-            v11 = j_il2cpp_value_box_0(int_TypeInfo, &Minute, v47, v48, v49, v50, v51, v52);
-            v55 = v11;
-            if ( !v11 || (v11 = sub_1C3E6A0(v11, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
+            *(_QWORD *)(v3 + 56) = v21;
+            sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 56), v21, v19, v20);
+            v22.fields._dateData = (uint64_t)&dateData;
+            Minute = System_DateTime__get_Minute(v22, 0);
+            v5 = j_il2cpp_value_box_0(int_TypeInfo, &Minute);
+            v25 = v5;
+            if ( !v5 || (v5 = sub_1C6BB44(v5, *(_QWORD *)(*(_QWORD *)v3 + 64LL))) != 0 )
             {
               if ( *(_DWORD *)(v3 + 24) > 4u )
               {
-                *(_QWORD *)(v3 + 64) = v55;
-                sub_1C3E508((CGThumbnailListItem_o *)(v3 + 64), v55, v53, v54);
-                return System_String__Format_63677896(
-                         (System_String_o *)StringLiteral_25109/*"{0:D}/{1:D2}/{2:D2} {3:D2}:{4:D2}"*/,
+                *(_QWORD *)(v3 + 64) = v25;
+                sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 64), v25, v23, v24);
+                return System_String__Format_64008236(
+                         (System_String_o *)StringLiteral_25199/*"{0:D}/{1:D2}/{2:D2} {3:D2}:{4:D2}"*/,
                          (System_Object_array *)v3,
                          0);
               }
 LABEL_27:
-              sub_1C3E7C8(v11, v12);
+              sub_1C6BC68(v5);
             }
           }
         }
       }
     }
-    v57 = sub_1C3E7E4(v11);
-    sub_1C3E68C(v57, 0);
+    v27 = sub_1C6BC84(v5);
+    sub_1C6BB30(v27, 0);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -711,65 +621,35 @@ LABEL_27:
 
 System_String_o *LocalizationManager__GetDateTimeDayOfWeek(int64_t time, const MethodInfo *method)
 {
-  System_IFormatProvider_o *CultureInfo_64847588; // x20
+  System_IFormatProvider_o *CultureInfo_65176300; // x20
   __int64 v4; // x19
   System_DateTime_o v5; // x0
-  __int64 v6; // x2
-  __int64 v7; // x3
-  __int64 v8; // x4
-  __int64 v9; // x5
-  __int64 v10; // x6
-  __int64 v11; // x7
-  __int64 v12; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  __int64 v16; // x21
-  System_DateTime_o v17; // x0
-  __int64 v18; // x2
-  __int64 v19; // x3
-  __int64 v20; // x4
-  __int64 v21; // x5
-  __int64 v22; // x6
-  __int64 v23; // x7
+  System_String_o *v6; // x0
+  __int64 v7; // x1
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  System_String_o *v10; // x21
+  System_DateTime_o v11; // x0
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  System_String_o *v14; // x21
+  System_DateTime_o v15; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  System_String_o *v18; // x21
+  System_DateTime_o v19; // x0
+  int32_t v20; // w2
+  const MethodInfo *v21; // x3
+  System_String_o *v22; // x20
+  System_DateTime_o v23; // x0
   int32_t v24; // w2
   const MethodInfo *v25; // x3
-  __int64 v26; // x21
+  System_String_o *v26; // x20
   System_DateTime_o v27; // x0
-  __int64 v28; // x2
-  __int64 v29; // x3
-  __int64 v30; // x4
-  __int64 v31; // x5
-  __int64 v32; // x6
-  __int64 v33; // x7
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
-  __int64 v36; // x21
-  System_DateTime_o v37; // x0
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
-  __int64 v40; // x20
-  System_DateTime_o v41; // x0
-  __int64 v42; // x2
-  __int64 v43; // x3
-  __int64 v44; // x4
-  __int64 v45; // x5
-  __int64 v46; // x6
-  __int64 v47; // x7
-  int32_t v48; // w2
-  const MethodInfo *v49; // x3
-  __int64 v50; // x20
-  System_DateTime_o v51; // x0
-  __int64 v52; // x2
-  __int64 v53; // x3
-  __int64 v54; // x4
-  __int64 v55; // x5
-  __int64 v56; // x6
-  __int64 v57; // x7
-  int32_t v58; // w2
-  const MethodInfo *v59; // x3
-  __int64 v60; // x20
-  __int64 v62; // x0
+  int32_t v28; // w2
+  const MethodInfo *v29; // x3
+  System_String_o *v30; // x20
+  __int64 v32; // x0
   int32_t Minute; // [xsp+4h] [xbp-4Ch] BYREF
   int32_t Hour; // [xsp+8h] [xbp-48h] BYREF
   int32_t Day; // [xsp+Ch] [xbp-44h] BYREF
@@ -777,112 +657,108 @@ System_String_o *LocalizationManager__GetDateTimeDayOfWeek(int64_t time, const M
   int32_t Year; // [xsp+14h] [xbp-3Ch] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C5646D & 1) == 0 )
+  if ( (byte_4CB59D4 & 1) == 0 )
   {
-    sub_1C3E564(&System_Globalization_CultureInfo_TypeInfo);
-    sub_1C3E564(&System_DateTime_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&object___TypeInfo);
-    sub_1C3E564(&StringLiteral_25110/*"{0:D}/{1:D2}/{2:D2}({3}) {4:D2}:{5:D2}"*/);
-    sub_1C3E564(&StringLiteral_21061/*"ja-JP"*/);
-    sub_1C3E564(&StringLiteral_18518/*"ddd"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5646D = 1;
+    sub_1C6BA08(&System_Globalization_CultureInfo_TypeInfo);
+    sub_1C6BA08(&System_DateTime_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&object___TypeInfo);
+    sub_1C6BA08(&StringLiteral_25200/*"{0:D}/{1:D2}/{2:D2}({3}) {4:D2}:{5:D2}"*/);
+    sub_1C6BA08(&StringLiteral_21120/*"ja-JP"*/);
+    sub_1C6BA08(&StringLiteral_18528/*"ddd"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB59D4 = 1;
   }
   if ( time >= 1 )
   {
     if ( !System_Globalization_CultureInfo_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Globalization_CultureInfo_TypeInfo);
-    CultureInfo_64847588 = (System_IFormatProvider_o *)System_Globalization_CultureInfo__GetCultureInfo_64847588(
-                                                         (System_String_o *)StringLiteral_21061/*"ja-JP"*/,
+    CultureInfo_65176300 = (System_IFormatProvider_o *)System_Globalization_CultureInfo__GetCultureInfo_65176300(
+                                                         (System_String_o *)StringLiteral_21120/*"ja-JP"*/,
                                                          0);
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    dateData = NetworkManager__getServerDateTime_41416004(time, 0).fields._dateData;
-    v4 = sub_1C3E60C(object___TypeInfo, 6);
+    dateData = NetworkManager__getServerDateTime_41600872(time, 0).fields._dateData;
+    v4 = sub_1C6BAB0(object___TypeInfo, 6);
     if ( !System_DateTime_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
     v5.fields._dateData = (uint64_t)&dateData;
     Year = System_DateTime__get_Year(v5, 0);
-    v12 = j_il2cpp_value_box_0(int_TypeInfo, &Year, v6, v7, v8, v9, v10, v11);
+    v6 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &Year);
     if ( !v4 )
-      sub_1C3E7C0(v12, v13);
-    v16 = v12;
-    if ( !v12 || (v12 = sub_1C3E6A0(v12, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
+      sub_1C6BC60(v6, v7);
+    v10 = v6;
+    if ( !v6 || (v6 = (System_String_o *)sub_1C6BB44(v6, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
     {
       if ( !*(_DWORD *)(v4 + 24) )
         goto LABEL_32;
-      *(_QWORD *)(v4 + 32) = v16;
-      sub_1C3E508((CGThumbnailListItem_o *)(v4 + 32), v16, v14, v15);
-      v17.fields._dateData = (uint64_t)&dateData;
-      Month = System_DateTime__get_Month(v17, 0);
-      v12 = j_il2cpp_value_box_0(int_TypeInfo, &Month, v18, v19, v20, v21, v22, v23);
-      v26 = v12;
-      if ( !v12 || (v12 = sub_1C3E6A0(v12, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
+      *(_QWORD *)(v4 + 32) = v10;
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 32), (int32_t)v10, v8, v9);
+      v11.fields._dateData = (uint64_t)&dateData;
+      Month = System_DateTime__get_Month(v11, 0);
+      v6 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &Month);
+      v14 = v6;
+      if ( !v6 || (v6 = (System_String_o *)sub_1C6BB44(v6, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
       {
         if ( *(_DWORD *)(v4 + 24) <= 1u )
           goto LABEL_32;
-        *(_QWORD *)(v4 + 40) = v26;
-        sub_1C3E508((CGThumbnailListItem_o *)(v4 + 40), v26, v24, v25);
-        v27.fields._dateData = (uint64_t)&dateData;
-        Day = System_DateTime__get_Day(v27, 0);
-        v12 = j_il2cpp_value_box_0(int_TypeInfo, &Day, v28, v29, v30, v31, v32, v33);
-        v36 = v12;
-        if ( !v12 || (v12 = sub_1C3E6A0(v12, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
+        *(_QWORD *)(v4 + 40) = v14;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 40), (int32_t)v14, v12, v13);
+        v15.fields._dateData = (uint64_t)&dateData;
+        Day = System_DateTime__get_Day(v15, 0);
+        v6 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &Day);
+        v18 = v6;
+        if ( !v6 || (v6 = (System_String_o *)sub_1C6BB44(v6, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
         {
           if ( *(_DWORD *)(v4 + 24) <= 2u )
             goto LABEL_32;
-          *(_QWORD *)(v4 + 48) = v36;
-          sub_1C3E508((CGThumbnailListItem_o *)(v4 + 48), v36, v34, v35);
-          v37.fields._dateData = (uint64_t)&dateData;
-          v12 = (__int64)System_DateTime__ToString_65036480(
-                           v37,
-                           (System_String_o *)StringLiteral_18518/*"ddd"*/,
-                           CultureInfo_64847588,
-                           0);
-          v40 = v12;
-          if ( !v12 || (v12 = sub_1C3E6A0(v12, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
+          *(_QWORD *)(v4 + 48) = v18;
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 48), (int32_t)v18, v16, v17);
+          v19.fields._dateData = (uint64_t)&dateData;
+          v6 = System_DateTime__ToString_65365192(v19, (System_String_o *)StringLiteral_18528/*"ddd"*/, CultureInfo_65176300, 0);
+          v22 = v6;
+          if ( !v6 || (v6 = (System_String_o *)sub_1C6BB44(v6, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
           {
             if ( *(_DWORD *)(v4 + 24) <= 3u )
               goto LABEL_32;
-            *(_QWORD *)(v4 + 56) = v40;
-            sub_1C3E508((CGThumbnailListItem_o *)(v4 + 56), v40, v38, v39);
-            v41.fields._dateData = (uint64_t)&dateData;
-            Hour = System_DateTime__get_Hour(v41, 0);
-            v12 = j_il2cpp_value_box_0(int_TypeInfo, &Hour, v42, v43, v44, v45, v46, v47);
-            v50 = v12;
-            if ( !v12 || (v12 = sub_1C3E6A0(v12, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
+            *(_QWORD *)(v4 + 56) = v22;
+            sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 56), (int32_t)v22, v20, v21);
+            v23.fields._dateData = (uint64_t)&dateData;
+            Hour = System_DateTime__get_Hour(v23, 0);
+            v6 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &Hour);
+            v26 = v6;
+            if ( !v6 || (v6 = (System_String_o *)sub_1C6BB44(v6, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
             {
               if ( *(_DWORD *)(v4 + 24) <= 4u )
                 goto LABEL_32;
-              *(_QWORD *)(v4 + 64) = v50;
-              sub_1C3E508((CGThumbnailListItem_o *)(v4 + 64), v50, v48, v49);
-              v51.fields._dateData = (uint64_t)&dateData;
-              Minute = System_DateTime__get_Minute(v51, 0);
-              v12 = j_il2cpp_value_box_0(int_TypeInfo, &Minute, v52, v53, v54, v55, v56, v57);
-              v60 = v12;
-              if ( !v12 || (v12 = sub_1C3E6A0(v12, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
+              *(_QWORD *)(v4 + 64) = v26;
+              sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 64), (int32_t)v26, v24, v25);
+              v27.fields._dateData = (uint64_t)&dateData;
+              Minute = System_DateTime__get_Minute(v27, 0);
+              v6 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &Minute);
+              v30 = v6;
+              if ( !v6 || (v6 = (System_String_o *)sub_1C6BB44(v6, *(_QWORD *)(*(_QWORD *)v4 + 64LL))) != 0 )
               {
                 if ( *(_DWORD *)(v4 + 24) > 5u )
                 {
-                  *(_QWORD *)(v4 + 72) = v60;
-                  sub_1C3E508((CGThumbnailListItem_o *)(v4 + 72), v60, v58, v59);
-                  return System_String__Format_63677896(
-                           (System_String_o *)StringLiteral_25110/*"{0:D}/{1:D2}/{2:D2}({3}) {4:D2}:{5:D2}"*/,
+                  *(_QWORD *)(v4 + 72) = v30;
+                  sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 72), (int32_t)v30, v28, v29);
+                  return System_String__Format_64008236(
+                           (System_String_o *)StringLiteral_25200/*"{0:D}/{1:D2}/{2:D2}({3}) {4:D2}:{5:D2}"*/,
                            (System_Object_array *)v4,
                            0);
                 }
 LABEL_32:
-                sub_1C3E7C8(v12, v13);
+                sub_1C6BC68(v6);
               }
             }
           }
         }
       }
     }
-    v62 = sub_1C3E7E4(v12);
-    sub_1C3E68C(v62, 0);
+    v32 = sub_1C6BC84(v6);
+    sub_1C6BB30(v32, 0);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -901,7 +777,7 @@ System_String_o *LocalizationManager__GetEventPointInfo(
   System_String_o *v12; // x21
   const MethodInfo *v13; // x1
   System_String_o *v14; // x22
-  System_String_o *NumberFormat_41323192; // x1
+  System_String_o *NumberFormat_41508576; // x1
   System_String_o *v16; // x2
   System_String_o *v17; // x0
   __int64 *v18; // x9
@@ -919,59 +795,59 @@ System_String_o *LocalizationManager__GetEventPointInfo(
   int32_t v30; // [xsp+Ch] [xbp-44h] BYREF
 
   v30 = addPoint;
-  if ( (byte_4C56482 & 1) == 0 )
+  if ( (byte_4CB59E9 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_803/*"+"*/);
-    sub_1C3E564(&StringLiteral_5650/*"EVENT_POINT_RATE_INFO"*/);
-    sub_1C3E564(&StringLiteral_5648/*"EVENT_POINT_NONE_INFO"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_5645/*"EVENT_POINT_MAX_INFO"*/);
-    sub_1C3E564(&StringLiteral_5637/*"EVENT_POINT_ADD_INFO"*/);
-    sub_1C3E564(&StringLiteral_5638/*"EVENT_POINT_ADD_RATE_INFO"*/);
-    byte_4C56482 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_800/*"+"*/);
+    sub_1C6BA08(&StringLiteral_5640/*"EVENT_POINT_RATE_INFO"*/);
+    sub_1C6BA08(&StringLiteral_5638/*"EVENT_POINT_NONE_INFO"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_5635/*"EVENT_POINT_MAX_INFO"*/);
+    sub_1C6BA08(&StringLiteral_5627/*"EVENT_POINT_ADD_INFO"*/);
+    sub_1C6BA08(&StringLiteral_5628/*"EVENT_POINT_ADD_RATE_INFO"*/);
+    byte_4CB59E9 = 1;
   }
   v29 = 0;
   if ( ratePoint >= 3000 && isMax )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = &StringLiteral_5645/*"EVENT_POINT_MAX_INFO"*/;
+    v9 = &StringLiteral_5635/*"EVENT_POINT_MAX_INFO"*/;
     return LocalizationManager__Get((System_String_o *)*v9, *(const MethodInfo **)&ratePoint);
   }
   if ( addPoint < 0 )
     v11 = &StringLiteral_1/*""*/;
   else
-    v11 = &StringLiteral_803/*"+"*/;
+    v11 = &StringLiteral_800/*"+"*/;
   v12 = (System_String_o *)*v11;
   v14 = System_Int32__ToString((int32_t)&v30, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  NumberFormat_41323192 = LocalizationManager__GetNumberFormat_41323192(v14, v13);
+  NumberFormat_41508576 = LocalizationManager__GetNumberFormat_41508576(v14, v13);
   if ( unit )
     v16 = unit;
   else
     v16 = (System_String_o *)StringLiteral_1/*""*/;
-  v17 = System_String__Concat_63674716(v12, NumberFormat_41323192, v16, 0);
+  v17 = System_String__Concat_64005056(v12, NumberFormat_41508576, v16, 0);
   if ( ratePoint < 0 )
     v18 = &StringLiteral_1/*""*/;
   else
-    v18 = &StringLiteral_803/*"+"*/;
+    v18 = &StringLiteral_800/*"+"*/;
   v19 = (System_String_o *)*v18;
   v20 = (Il2CppObject *)v17;
   v29 = ratePoint / 10;
   v22 = System_Int32__ToString((int32_t)&v29, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v23 = LocalizationManager__GetNumberFormat_41323192(v22, v21);
-  v24 = (Il2CppObject *)System_String__Concat_63636468(v19, v23, 0);
+  v23 = LocalizationManager__GetNumberFormat_41508576(v22, v21);
+  v24 = (Il2CppObject *)System_String__Concat_63966792(v19, v23, 0);
   cctor_finished = LocalizationManager_TypeInfo->_2.cctor_finished;
   if ( ratePoint && v30 )
   {
     if ( !cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_5638/*"EVENT_POINT_ADD_RATE_INFO"*/, *(const MethodInfo **)&ratePoint);
-    return System_String__Format_63677760(v26, v20, v24, 0);
+    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_5628/*"EVENT_POINT_ADD_RATE_INFO"*/, *(const MethodInfo **)&ratePoint);
+    return System_String__Format_64008100(v26, v20, v24, 0);
   }
   else
   {
@@ -979,7 +855,7 @@ System_String_o *LocalizationManager__GetEventPointInfo(
     {
       if ( !cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_5637/*"EVENT_POINT_ADD_INFO"*/, *(const MethodInfo **)&ratePoint);
+      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_5627/*"EVENT_POINT_ADD_INFO"*/, *(const MethodInfo **)&ratePoint);
       v28 = v20;
     }
     else
@@ -988,10 +864,10 @@ System_String_o *LocalizationManager__GetEventPointInfo(
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( !ratePoint )
       {
-        v9 = &StringLiteral_5648/*"EVENT_POINT_NONE_INFO"*/;
+        v9 = &StringLiteral_5638/*"EVENT_POINT_NONE_INFO"*/;
         return LocalizationManager__Get((System_String_o *)*v9, *(const MethodInfo **)&ratePoint);
       }
-      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_5650/*"EVENT_POINT_RATE_INFO"*/, *(const MethodInfo **)&ratePoint);
+      v27 = LocalizationManager__Get((System_String_o *)StringLiteral_5640/*"EVENT_POINT_RATE_INFO"*/, *(const MethodInfo **)&ratePoint);
       v28 = v24;
     }
     return System_String__Format(v27, v28, 0);
@@ -1002,112 +878,88 @@ System_String_o *LocalizationManager__GetEventPointInfo(
 System_String_o *LocalizationManager__GetHaveUnitInfo(int32_t count, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C56470 & 1) == 0 )
+  if ( (byte_4CB59D7 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_7198/*"HAVE_UNIT_INFO"*/);
-    byte_4C56470 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_7191/*"HAVE_UNIT_INFO"*/);
+    byte_4CB59D7 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_7198/*"HAVE_UNIT_INFO"*/, method);
-  v12 = count;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_7191/*"HAVE_UNIT_INFO"*/, method);
+  v6 = count;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
 System_String_o *LocalizationManager__GetHpIconInfo(int32_t hp, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C5647E & 1) == 0 )
+  if ( (byte_4CB59E5 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_7253/*"HP_ICON_INFO"*/);
-    byte_4C5647E = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_7246/*"HP_ICON_INFO"*/);
+    byte_4CB59E5 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_7253/*"HP_ICON_INFO"*/, method);
-  v12 = hp;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_7246/*"HP_ICON_INFO"*/, method);
+  v6 = hp;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
 System_String_o *LocalizationManager__GetHpInfo(int32_t hp, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C5647D & 1) == 0 )
+  if ( (byte_4CB59E4 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_7254/*"HP_INFO"*/);
-    byte_4C5647D = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_7247/*"HP_INFO"*/);
+    byte_4CB59E4 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_7254/*"HP_INFO"*/, method);
-  v12 = hp;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_7247/*"HP_INFO"*/, method);
+  v6 = hp;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
 System_String_o *LocalizationManager__GetIdIconInfo(int32_t id, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C56477 & 1) == 0 )
+  if ( (byte_4CB59DE & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_7428/*"ID_ICON_INFO"*/);
-    byte_4C56477 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_7421/*"ID_ICON_INFO"*/);
+    byte_4CB59DE = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_7428/*"ID_ICON_INFO"*/, method);
-  v12 = id;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_7421/*"ID_ICON_INFO"*/, method);
+  v6 = id;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
@@ -1119,13 +971,13 @@ System_String_o *LocalizationManager__GetIfExists(System_String_array *keys, con
   System_String_o *v5; // x20
 
   v2 = keys;
-  if ( (byte_4C5645E & 1) == 0 )
+  if ( (byte_4CB59C5 & 1) == 0 )
   {
-    keys = (System_String_array *)sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C5645E = 1;
+    keys = (System_String_array *)sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59C5 = 1;
   }
   if ( !v2 )
-    sub_1C3E7C0(keys, method);
+    sub_1C6BC60(keys, method);
   max_length = v2->max_length;
   if ( (int)max_length < 1 )
     return 0;
@@ -1133,7 +985,7 @@ System_String_o *LocalizationManager__GetIfExists(System_String_array *keys, con
   while ( 1 )
   {
     if ( v4 >= (unsigned int)max_length )
-      sub_1C3E7C8(keys, method);
+      sub_1C6BC68(keys);
     v5 = v2->m_Items[v4];
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -1154,10 +1006,10 @@ System_String_o *LocalizationManager__GetKinsokuLastString(const MethodInfo *met
 {
   LocalizationManager_c *v1; // x0
 
-  if ( (byte_4C56457 & 1) == 0 )
+  if ( (byte_4CB59BE & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C56457 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59BE = 1;
   }
   v1 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1173,10 +1025,10 @@ System_String_o *LocalizationManager__GetKinsokuSeparationString(const MethodInf
 {
   LocalizationManager_c *v1; // x0
 
-  if ( (byte_4C56458 & 1) == 0 )
+  if ( (byte_4CB59BF & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C56458 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59BF = 1;
   }
   v1 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1192,10 +1044,10 @@ System_String_o *LocalizationManager__GetKinsokuTopString(const MethodInfo *meth
 {
   LocalizationManager_c *v1; // x0
 
-  if ( (byte_4C56456 & 1) == 0 )
+  if ( (byte_4CB59BD & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C56456 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59BD = 1;
   }
   v1 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1209,107 +1061,77 @@ System_String_o *LocalizationManager__GetKinsokuTopString(const MethodInfo *meth
 
 System_String_o *LocalizationManager__GetLapTime(int64_t time, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  int64_t v9; // x23
-  int64_t v10; // x20
-  Il2CppObject *v11; // x19
-  __int64 v12; // x2
-  __int64 v13; // x3
-  __int64 v14; // x4
-  __int64 v15; // x5
-  __int64 v16; // x6
-  __int64 v17; // x7
-  Il2CppObject *v18; // x20
-  __int64 v19; // x2
-  __int64 v20; // x3
-  __int64 v21; // x4
-  __int64 v22; // x5
-  __int64 v23; // x6
-  __int64 v24; // x7
-  Il2CppObject *v25; // x0
-  int64_t v27; // [xsp+8h] [xbp-48h] BYREF
-  int64_t v28; // [xsp+10h] [xbp-40h] BYREF
-  int64_t v29; // [xsp+18h] [xbp-38h] BYREF
+  int64_t v3; // x23
+  int64_t v4; // x20
+  Il2CppObject *v5; // x19
+  Il2CppObject *v6; // x20
+  Il2CppObject *v7; // x0
+  int64_t v9; // [xsp+8h] [xbp-48h] BYREF
+  int64_t v10; // [xsp+10h] [xbp-40h] BYREF
+  int64_t v11; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C5646E & 1) == 0 )
+  if ( (byte_4CB59D5 & 1) == 0 )
   {
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&StringLiteral_25090/*"{0:D2}h{1:D2}m{2:D2}s"*/);
-    byte_4C5646E = 1;
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25180/*"{0:D2}h{1:D2}m{2:D2}s"*/);
+    byte_4CB59D5 = 1;
   }
-  v9 = time % 60;
-  v10 = time / 60 % 60;
-  v29 = time / 3600;
-  v11 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v29, v2, v3, v4, v5, v6, v7);
-  v28 = v10;
-  v18 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v28, v12, v13, v14, v15, v16, v17);
-  v27 = v9;
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v27, v19, v20, v21, v22, v23, v24);
-  return System_String__Format_63677828((System_String_o *)StringLiteral_25090/*"{0:D2}h{1:D2}m{2:D2}s"*/, v11, v18, v25, 0);
+  v3 = time % 60;
+  v4 = time / 60 % 60;
+  v11 = time / 3600;
+  v5 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v11);
+  v10 = v4;
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v10);
+  v9 = v3;
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v9);
+  return System_String__Format_64008168((System_String_o *)StringLiteral_25180/*"{0:D2}h{1:D2}m{2:D2}s"*/, v5, v6, v7, 0);
 }
 
 
 System_String_o *LocalizationManager__GetLevelIconInfo(int32_t lv, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C56479 & 1) == 0 )
+  if ( (byte_4CB59E0 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_8262/*"LEVEL_ICON_INFO"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C56479 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_8259/*"LEVEL_ICON_INFO"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB59E0 = 1;
   }
   if ( lv < 1 )
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_8262/*"LEVEL_ICON_INFO"*/, method);
-  v12 = lv;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_8259/*"LEVEL_ICON_INFO"*/, method);
+  v6 = lv;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
 System_String_o *LocalizationManager__GetLevelInfo(int32_t lv, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C56478 & 1) == 0 )
+  if ( (byte_4CB59DF & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_8263/*"LEVEL_INFO"*/);
-    byte_4C56478 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_8260/*"LEVEL_INFO"*/);
+    byte_4CB59DF = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_8263/*"LEVEL_INFO"*/, method);
-  v12 = lv;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_8260/*"LEVEL_INFO"*/, method);
+  v6 = lv;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
@@ -1323,18 +1145,18 @@ System_String_o *LocalizationManager__GetLevelList(System_Int32_array *levelList
   int *m_Items; // x21
 
   v2 = levelList;
-  if ( (byte_4C56483 & 1) == 0 )
+  if ( (byte_4CB59EA & 1) == 0 )
   {
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&StringLiteral_861/*"-"*/);
-    levelList = (System_Int32_array *)sub_1C3E564(&StringLiteral_1048/*"/"*/);
-    byte_4C56483 = 1;
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&StringLiteral_858/*"-"*/);
+    levelList = (System_Int32_array *)sub_1C6BA08(&StringLiteral_1041/*"/"*/);
+    byte_4CB59EA = 1;
   }
   if ( !v2 )
     goto LABEL_18;
   max_length = v2->max_length;
-  v4 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor_63714884(v4, 4 * max_length, 0);
+  v4 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor_64044104(v4, 4 * max_length, 0);
   if ( (int)max_length < 1 )
   {
     if ( v4 )
@@ -1342,7 +1164,7 @@ System_String_o *LocalizationManager__GetLevelList(System_Int32_array *levelList
                                   v4,
                                   v4->klass->vtable._3_ToString.method);
 LABEL_18:
-    sub_1C3E7C0(levelList, method);
+    sub_1C6BC60(levelList, method);
   }
   v5 = 0;
   v6 = (unsigned int)max_length;
@@ -1353,16 +1175,16 @@ LABEL_18:
     {
       if ( !v4 )
         goto LABEL_18;
-      levelList = (System_Int32_array *)System_Text_StringBuilder__Append_63721532(
+      levelList = (System_Int32_array *)System_Text_StringBuilder__Append_64050752(
                                           v4,
-                                          (System_String_o *)StringLiteral_1048/*"/"*/,
+                                          (System_String_o *)StringLiteral_1041/*"/"*/,
                                           0);
     }
     if ( v5 >= LODWORD(v2->max_length) )
-      sub_1C3E7C8(levelList, method);
+      sub_1C6BC68(levelList);
     if ( *m_Items <= 0 )
     {
-      method = (const MethodInfo *)StringLiteral_861/*"-"*/;
+      method = (const MethodInfo *)StringLiteral_858/*"-"*/;
       if ( !v4 )
         goto LABEL_18;
     }
@@ -1373,7 +1195,7 @@ LABEL_18:
       if ( !v4 )
         goto LABEL_18;
     }
-    levelList = (System_Int32_array *)System_Text_StringBuilder__Append_63721532(v4, (System_String_o *)method, 0);
+    levelList = (System_Int32_array *)System_Text_StringBuilder__Append_64050752(v4, (System_String_o *)method, 0);
     ++v5;
     ++m_Items;
   }
@@ -1384,7 +1206,7 @@ LABEL_18:
 }
 
 
-System_String_o *LocalizationManager__GetLevelList_41326684(SkillInfo_array *skillInfoList, const MethodInfo *method)
+System_String_o *LocalizationManager__GetLevelList_41512068(SkillInfo_array *skillInfoList, const MethodInfo *method)
 {
   SkillInfo_array *v2; // x19
   il2cpp_array_size_t max_length; // x21
@@ -1401,22 +1223,22 @@ System_String_o *LocalizationManager__GetLevelList_41326684(SkillInfo_array *ski
   System_String_o *v14; // x0
 
   v2 = skillInfoList;
-  if ( (byte_4C56484 & 1) == 0 )
+  if ( (byte_4CB59EB & 1) == 0 )
   {
-    sub_1C3E564(&ServantSkillStrengthStatus_TypeInfo);
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&StringLiteral_15932/*"[FCF050]"*/);
-    sub_1C3E564(&StringLiteral_15992/*"[ff730f]"*/);
-    sub_1C3E564(&StringLiteral_15833/*"[-]"*/);
-    sub_1C3E564(&StringLiteral_861/*"-"*/);
-    skillInfoList = (SkillInfo_array *)sub_1C3E564(&StringLiteral_1048/*"/"*/);
-    byte_4C56484 = 1;
+    sub_1C6BA08(&ServantSkillStrengthStatus_TypeInfo);
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&StringLiteral_15915/*"[FCF050]"*/);
+    sub_1C6BA08(&StringLiteral_15975/*"[ff730f]"*/);
+    sub_1C6BA08(&StringLiteral_15820/*"[-]"*/);
+    sub_1C6BA08(&StringLiteral_858/*"-"*/);
+    skillInfoList = (SkillInfo_array *)sub_1C6BA08(&StringLiteral_1041/*"/"*/);
+    byte_4CB59EB = 1;
   }
   if ( !v2 )
     goto LABEL_32;
   max_length = v2->max_length;
-  v4 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor_63714884(v4, 15 * max_length, 0);
+  v4 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor_64044104(v4, 15 * max_length, 0);
   if ( (int)max_length >= 1 )
   {
     v5 = 0;
@@ -1424,15 +1246,15 @@ System_String_o *LocalizationManager__GetLevelList_41326684(SkillInfo_array *ski
     do
     {
       if ( v5 >= LODWORD(v2->max_length) )
-        sub_1C3E7C8(skillInfoList, method);
+        sub_1C6BC68(skillInfoList);
       v7 = (int *)v2->m_Items[v5];
       if ( v5 )
       {
         if ( !v4 )
           goto LABEL_32;
-        skillInfoList = (SkillInfo_array *)System_Text_StringBuilder__Append_63721532(
+        skillInfoList = (SkillInfo_array *)System_Text_StringBuilder__Append_64050752(
                                              v4,
-                                             (System_String_o *)StringLiteral_1048/*"/"*/,
+                                             (System_String_o *)StringLiteral_1041/*"/"*/,
                                              0);
       }
       if ( v7 && (v8 = (_DWORD)v7 + 20, v7[5] >= 1) )
@@ -1445,11 +1267,11 @@ LABEL_22:
           skillInfoList = (SkillInfo_array *)System_Int32__ToString(v8, 0);
           if ( !v4 )
             goto LABEL_32;
-          skillInfoList = (SkillInfo_array *)System_Text_StringBuilder__Append_63721532(
+          skillInfoList = (SkillInfo_array *)System_Text_StringBuilder__Append_64050752(
                                                v4,
                                                (System_String_o *)skillInfoList,
                                                0);
-          v13 = (System_String_o **)&StringLiteral_15833/*"[-]"*/;
+          v13 = (System_String_o **)&StringLiteral_15820/*"[-]"*/;
           if ( v11 < 1 )
             goto LABEL_28;
           goto LABEL_27;
@@ -1460,7 +1282,7 @@ LABEL_22:
         skillInfoList = (SkillInfo_array *)ServantSkillStrengthStatus__GetStrengthenedCnt(v9, v10, 0);
         if ( (_DWORD)skillInfoList == 2 )
         {
-          v12 = &StringLiteral_15992/*"[ff730f]"*/;
+          v12 = &StringLiteral_15975/*"[ff730f]"*/;
           if ( !v4 )
             goto LABEL_32;
         }
@@ -1469,23 +1291,23 @@ LABEL_22:
           v11 = (int)skillInfoList;
           if ( (_DWORD)skillInfoList != 1 )
             goto LABEL_22;
-          v12 = &StringLiteral_15932/*"[FCF050]"*/;
+          v12 = &StringLiteral_15915/*"[FCF050]"*/;
           if ( !v4 )
             goto LABEL_32;
         }
-        System_Text_StringBuilder__Append_63721532(v4, (System_String_o *)*v12, 0);
+        System_Text_StringBuilder__Append_64050752(v4, (System_String_o *)*v12, 0);
         v14 = System_Int32__ToString(v8, 0);
-        System_Text_StringBuilder__Append_63721532(v4, v14, 0);
-        v13 = (System_String_o **)&StringLiteral_15833/*"[-]"*/;
+        System_Text_StringBuilder__Append_64050752(v4, v14, 0);
+        v13 = (System_String_o **)&StringLiteral_15820/*"[-]"*/;
       }
       else
       {
-        v13 = (System_String_o **)&StringLiteral_861/*"-"*/;
+        v13 = (System_String_o **)&StringLiteral_858/*"-"*/;
         if ( !v4 )
           goto LABEL_32;
       }
 LABEL_27:
-      skillInfoList = (SkillInfo_array *)System_Text_StringBuilder__Append_63721532(v4, *v13, 0);
+      skillInfoList = (SkillInfo_array *)System_Text_StringBuilder__Append_64050752(v4, *v13, 0);
 LABEL_28:
       ++v5;
     }
@@ -1493,7 +1315,7 @@ LABEL_28:
   }
   if ( !v4 )
 LABEL_32:
-    sub_1C3E7C0(skillInfoList, method);
+    sub_1C6BC60(skillInfoList, method);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v4->klass->vtable._3_ToString.methodPtr)(
                               v4,
                               v4->klass->vtable._3_ToString.method);
@@ -1504,10 +1326,10 @@ System_String_o *LocalizationManager__GetNoEntryName(const MethodInfo *method)
 {
   LocalizationManager_c *v1; // x0
 
-  if ( (byte_4C56455 & 1) == 0 )
+  if ( (byte_4CB59BC & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C56455 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59BC = 1;
   }
   v1 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1529,10 +1351,10 @@ UnityEngine_Color_o LocalizationManager__GetNormalEffectColor(const MethodInfo *
   float v6; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C56459 & 1) == 0 )
+  if ( (byte_4CB59C0 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C56459 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59C0 = 1;
   }
   v1 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -1558,12 +1380,12 @@ System_String_o *LocalizationManager__GetNumberFormat(int32_t data, const Method
   int32_t v3; // [xsp+Ch] [xbp-14h] BYREF
 
   v3 = data;
-  if ( (byte_4C56472 & 1) == 0 )
+  if ( (byte_4CB59D9 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_9232/*"N0"*/);
-    byte_4C56472 = 1;
+    sub_1C6BA08(&StringLiteral_9229/*"N0"*/);
+    byte_4CB59D9 = 1;
   }
-  return System_Int32__ToString_65146576((int32_t)&v3, (System_String_o *)StringLiteral_9232/*"N0"*/, 0);
+  return System_Int32__ToString_65475288((int32_t)&v3, (System_String_o *)StringLiteral_9229/*"N0"*/, 0);
 }
 
 
@@ -1572,16 +1394,16 @@ System_String_o *LocalizationManager__GetNumberFormatLong(int64_t data, const Me
   int64_t v3; // [xsp+8h] [xbp-18h] BYREF
 
   v3 = data;
-  if ( (byte_4C56473 & 1) == 0 )
+  if ( (byte_4CB59DA & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_9232/*"N0"*/);
-    byte_4C56473 = 1;
+    sub_1C6BA08(&StringLiteral_9229/*"N0"*/);
+    byte_4CB59DA = 1;
   }
-  return System_Int64__ToString_65151752((int64_t)&v3, (System_String_o *)StringLiteral_9232/*"N0"*/, 0);
+  return System_Int64__ToString_65480464((int64_t)&v3, (System_String_o *)StringLiteral_9229/*"N0"*/, 0);
 }
 
 
-System_String_o *LocalizationManager__GetNumberFormat_41323192(System_String_o *data, const MethodInfo *method)
+System_String_o *LocalizationManager__GetNumberFormat_41508576(System_String_o *data, const MethodInfo *method)
 {
   int32_t stringLength; // w22
   int32_t v4; // w20
@@ -1593,11 +1415,11 @@ System_String_o *LocalizationManager__GetNumberFormat_41323192(System_String_o *
   int v10; // w23
   uint16_t Chars; // w1
 
-  if ( (byte_4C56474 & 1) == 0 )
+  if ( (byte_4CB59DB & 1) == 0 )
   {
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C56474 = 1;
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB59DB = 1;
   }
   if ( !data )
     return (System_String_o *)StringLiteral_1/*""*/;
@@ -1619,14 +1441,14 @@ LABEL_11:
   v6 = stringLength - v4;
   if ( stringLength <= v4 )
     return data;
-  v7 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor_63714884(v7, 32, 0);
+  v7 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor_64044104(v7, 32, 0);
   if ( v4 >= 1 )
   {
     if ( !v7 )
 LABEL_26:
-      sub_1C3E7C0(appended, v9);
-    appended = System_Text_StringBuilder__Append_63721848(v7, data, 0, v4, 0);
+      sub_1C6BC60(appended, v9);
+    appended = System_Text_StringBuilder__Append_64051068(v7, data, 0, v4, 0);
   }
   if ( v6 % 3 )
     v10 = v6 % 3;
@@ -1638,7 +1460,7 @@ LABEL_26:
     {
       if ( !v7 )
         goto LABEL_26;
-      System_Text_StringBuilder__Append_63723860(v7, 0x2Cu, 0);
+      System_Text_StringBuilder__Append_64053080(v7, 0x2Cu, 0);
       Chars = System_String__get_Chars(data, v4, 0);
       v10 = 3;
     }
@@ -1649,7 +1471,7 @@ LABEL_26:
         goto LABEL_26;
       Chars = (unsigned __int16)appended;
     }
-    appended = System_Text_StringBuilder__Append_63723860(v7, Chars, 0);
+    appended = System_Text_StringBuilder__Append_64053080(v7, Chars, 0);
     ++v4;
     --v10;
   }
@@ -1674,12 +1496,12 @@ System_String_o *LocalizationManager__GetPeriod(
   System_String_o *v14; // x21
   System_String_o *Date; // x0
 
-  if ( (byte_4C56469 & 1) == 0 )
+  if ( (byte_4CB59D0 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_327/*" ~ "*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C56469 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_327/*" ~ "*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB59D0 = 1;
   }
   v9 = (System_String_o *)StringLiteral_1/*""*/;
   if ( startedAt <= 0 && endedAt < 1 )
@@ -1690,15 +1512,15 @@ System_String_o *LocalizationManager__GetPeriod(
     DateTime = LocalizationManager__GetDateTime(startedAt, (const MethodInfo *)endedAt);
   else
     DateTime = LocalizationManager__GetDate(startedAt, (const MethodInfo *)endedAt);
-  v12 = System_String__Concat_63636468(v9, DateTime, 0);
-  v14 = System_String__Concat_63636468(v12, (System_String_o *)StringLiteral_327/*" ~ "*/, 0);
+  v12 = System_String__Concat_63966792(v9, DateTime, 0);
+  v14 = System_String__Concat_63966792(v12, (System_String_o *)StringLiteral_327/*" ~ "*/, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( isDispEndTime )
     Date = LocalizationManager__GetDateTime(endedAt, v13);
   else
     Date = LocalizationManager__GetDate(endedAt, v13);
-  return System_String__Concat_63636468(v14, Date, 0);
+  return System_String__Concat_63966792(v14, Date, 0);
 }
 
 
@@ -1708,15 +1530,15 @@ System_String_o *LocalizationManager__GetPrice2Info(int32_t price, const MethodI
   const MethodInfo *v4; // x1
   Il2CppObject *NumberFormat; // x1
 
-  if ( (byte_4C56476 & 1) == 0 )
+  if ( (byte_4CB59DD & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_10470/*"PRICE2_INFO"*/);
-    byte_4C56476 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_10466/*"PRICE2_INFO"*/);
+    byte_4CB59DD = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_10470/*"PRICE2_INFO"*/, method);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_10466/*"PRICE2_INFO"*/, method);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(price, v4);
   return System_String__Format(v3, NumberFormat, 0);
 }
@@ -1728,15 +1550,15 @@ System_String_o *LocalizationManager__GetPriceInfo(int32_t price, const MethodIn
   const MethodInfo *v4; // x1
   Il2CppObject *NumberFormat; // x1
 
-  if ( (byte_4C56475 & 1) == 0 )
+  if ( (byte_4CB59DC & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_10471/*"PRICE_INFO"*/);
-    byte_4C56475 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_10467/*"PRICE_INFO"*/);
+    byte_4CB59DC = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_10471/*"PRICE_INFO"*/, method);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_10467/*"PRICE_INFO"*/, method);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(price, v4);
   return System_String__Format(v3, NumberFormat, 0);
 }
@@ -1744,24 +1566,18 @@ System_String_o *LocalizationManager__GetPriceInfo(int32_t price, const MethodIn
 
 System_String_o *LocalizationManager__GetRarityInfo(int32_t rare, const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  Il2CppObject *v9; // x0
-  int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v3; // x0
+  int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C5647A & 1) == 0 )
+  if ( (byte_4CB59E1 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&StringLiteral_16026/*"[{0}]"*/);
-    byte_4C5647A = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&StringLiteral_16009/*"[{0}]"*/);
+    byte_4CB59E1 = 1;
   }
-  v11 = rare;
-  v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11, v2, v3, v4, v5, v6, v7);
-  return System_String__Format((System_String_o *)StringLiteral_16026/*"[{0}]"*/, v9, 0);
+  v5 = rare;
+  v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v5);
+  return System_String__Format((System_String_o *)StringLiteral_16009/*"[{0}]"*/, v3, 0);
 }
 
 
@@ -1769,10 +1585,10 @@ bool LocalizationManager__GetRestIsLastHours(int64_t at, const MethodInfo *metho
 {
   int64_t v3; // x8
 
-  if ( (byte_4C56468 & 1) == 0 )
+  if ( (byte_4CB59CF & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C56468 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB59CF = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -1790,33 +1606,27 @@ System_String_o *LocalizationManager__GetRestTime(int64_t at, const MethodInfo *
   int64_t v4; // x19
   __int64 *v5; // x8
   System_String_o *v7; // x0
-  __int64 v8; // x2
-  __int64 v9; // x3
-  __int64 v10; // x4
-  __int64 v11; // x5
-  __int64 v12; // x6
-  __int64 v13; // x7
-  _QWORD *v14; // x8
-  System_String_o *v15; // x19
-  unsigned __int64 v16; // x20
-  __int64 *v17; // x8
-  System_String_o *v18; // x0
-  System_String_o *v19; // x0
-  Il2CppObject *v20; // x0
-  unsigned __int64 v21; // [xsp+8h] [xbp-28h] BYREF
+  _QWORD *v8; // x8
+  System_String_o *v9; // x19
+  unsigned __int64 v10; // x20
+  __int64 *v11; // x8
+  System_String_o *v12; // x0
+  System_String_o *v13; // x0
+  Il2CppObject *v14; // x0
+  unsigned __int64 v15; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C56460 & 1) == 0 )
+  if ( (byte_4CB59C7 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_13426/*"TIME_REST_DAYS"*/);
-    sub_1C3E564(&StringLiteral_13429/*"TIME_REST_HOURS"*/);
-    sub_1C3E564(&StringLiteral_13430/*"TIME_REST_MINUTES"*/);
-    sub_1C3E564(&StringLiteral_13449/*"TIME_REST_TIMEOVER"*/);
-    sub_1C3E564(&StringLiteral_13432/*"TIME_REST_OVER_YEARS"*/);
-    byte_4C56460 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_13419/*"TIME_REST_DAYS"*/);
+    sub_1C6BA08(&StringLiteral_13422/*"TIME_REST_HOURS"*/);
+    sub_1C6BA08(&StringLiteral_13423/*"TIME_REST_MINUTES"*/);
+    sub_1C6BA08(&StringLiteral_13442/*"TIME_REST_TIMEOVER"*/);
+    sub_1C6BA08(&StringLiteral_13425/*"TIME_REST_OVER_YEARS"*/);
+    byte_4CB59C7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -1825,25 +1635,25 @@ System_String_o *LocalizationManager__GetRestTime(int64_t at, const MethodInfo *
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v5 = &StringLiteral_13449/*"TIME_REST_TIMEOVER"*/;
+    v5 = &StringLiteral_13442/*"TIME_REST_TIMEOVER"*/;
     return LocalizationManager__Get((System_String_o *)*v5, v3);
   }
   if ( v4 <= 59 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_13430/*"TIME_REST_MINUTES"*/, v3);
-    v14 = &int_TypeInfo;
-    v15 = v7;
-    LODWORD(v21) = 0;
+    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_13423/*"TIME_REST_MINUTES"*/, v3);
+    v8 = &int_TypeInfo;
+    v9 = v7;
+    LODWORD(v15) = 0;
     goto LABEL_28;
   }
   if ( v4 <= 3599 )
   {
-    v16 = v4 / 0x3CuLL;
+    v10 = v4 / 0x3CuLL;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = &StringLiteral_13430/*"TIME_REST_MINUTES"*/;
+    v11 = &StringLiteral_13423/*"TIME_REST_MINUTES"*/;
   }
   else
   {
@@ -1853,27 +1663,27 @@ System_String_o *LocalizationManager__GetRestTime(int64_t at, const MethodInfo *
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( v4 > 31535999 )
       {
-        v5 = &StringLiteral_13432/*"TIME_REST_OVER_YEARS"*/;
+        v5 = &StringLiteral_13425/*"TIME_REST_OVER_YEARS"*/;
         return LocalizationManager__Get((System_String_o *)*v5, v3);
       }
-      v18 = (System_String_o *)StringLiteral_13426/*"TIME_REST_DAYS"*/;
-      v16 = v4 / 0x15180uLL;
+      v12 = (System_String_o *)StringLiteral_13419/*"TIME_REST_DAYS"*/;
+      v10 = v4 / 0x15180uLL;
       goto LABEL_27;
     }
-    v16 = v4 / 0xE10uLL;
+    v10 = v4 / 0xE10uLL;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = &StringLiteral_13429/*"TIME_REST_HOURS"*/;
+    v11 = &StringLiteral_13422/*"TIME_REST_HOURS"*/;
   }
-  v18 = (System_String_o *)*v17;
+  v12 = (System_String_o *)*v11;
 LABEL_27:
-  v19 = LocalizationManager__Get(v18, v3);
-  v14 = &long_TypeInfo;
-  v15 = v19;
-  v21 = v16;
+  v13 = LocalizationManager__Get(v12, v3);
+  v8 = &long_TypeInfo;
+  v9 = v13;
+  v15 = v10;
 LABEL_28:
-  v20 = (Il2CppObject *)j_il2cpp_value_box_0(*v14, &v21, v8, v9, v10, v11, v12, v13);
-  return System_String__Format(v15, v20, 0);
+  v14 = (Il2CppObject *)j_il2cpp_value_box_0(*v8, &v15);
+  return System_String__Format(v9, v14, 0);
 }
 
 
@@ -1883,34 +1693,28 @@ System_String_o *LocalizationManager__GetRestTime2(int64_t at, int64_t nowTime, 
   __int64 v5; // x19
   __int64 *v6; // x8
   System_String_o *v8; // x0
-  __int64 v9; // x2
-  __int64 v10; // x3
-  __int64 v11; // x4
-  __int64 v12; // x5
-  __int64 v13; // x6
-  __int64 v14; // x7
-  _QWORD *v15; // x8
-  System_String_o *v16; // x19
-  unsigned __int64 v17; // x20
-  __int64 *v18; // x8
-  System_String_o *v19; // x0
-  System_String_o *v20; // x0
-  Il2CppObject *v21; // x0
-  unsigned __int64 v22; // [xsp+8h] [xbp-28h] BYREF
+  _QWORD *v9; // x8
+  System_String_o *v10; // x19
+  unsigned __int64 v11; // x20
+  __int64 *v12; // x8
+  System_String_o *v13; // x0
+  System_String_o *v14; // x0
+  Il2CppObject *v15; // x0
+  unsigned __int64 v16; // [xsp+8h] [xbp-28h] BYREF
 
   Time = nowTime;
-  if ( (byte_4C56461 & 1) == 0 )
+  if ( (byte_4CB59C8 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_13410/*"TIME_REST2_MINUTES"*/);
-    sub_1C3E564(&StringLiteral_13412/*"TIME_REST2_OVER_YEARS"*/);
-    sub_1C3E564(&StringLiteral_13409/*"TIME_REST2_HOURS"*/);
-    sub_1C3E564(&StringLiteral_13408/*"TIME_REST2_DAYS"*/);
-    sub_1C3E564(&StringLiteral_13413/*"TIME_REST2_TIMEOVER"*/);
-    byte_4C56461 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_13403/*"TIME_REST2_MINUTES"*/);
+    sub_1C6BA08(&StringLiteral_13405/*"TIME_REST2_OVER_YEARS"*/);
+    sub_1C6BA08(&StringLiteral_13402/*"TIME_REST2_HOURS"*/);
+    sub_1C6BA08(&StringLiteral_13401/*"TIME_REST2_DAYS"*/);
+    sub_1C6BA08(&StringLiteral_13406/*"TIME_REST2_TIMEOVER"*/);
+    byte_4CB59C8 = 1;
   }
   if ( Time < 0 )
   {
@@ -1923,25 +1727,25 @@ System_String_o *LocalizationManager__GetRestTime2(int64_t at, int64_t nowTime, 
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = &StringLiteral_13413/*"TIME_REST2_TIMEOVER"*/;
+    v6 = &StringLiteral_13406/*"TIME_REST2_TIMEOVER"*/;
     return LocalizationManager__Get((System_String_o *)*v6, (const MethodInfo *)nowTime);
   }
   if ( v5 <= 59 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_13410/*"TIME_REST2_MINUTES"*/, (const MethodInfo *)nowTime);
-    v15 = &int_TypeInfo;
-    v16 = v8;
-    LODWORD(v22) = 0;
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_13403/*"TIME_REST2_MINUTES"*/, (const MethodInfo *)nowTime);
+    v9 = &int_TypeInfo;
+    v10 = v8;
+    LODWORD(v16) = 0;
     goto LABEL_30;
   }
   if ( v5 <= 3599 )
   {
-    v17 = v5 / 0x3CuLL;
+    v11 = v5 / 0x3CuLL;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = &StringLiteral_13410/*"TIME_REST2_MINUTES"*/;
+    v12 = &StringLiteral_13403/*"TIME_REST2_MINUTES"*/;
   }
   else
   {
@@ -1951,27 +1755,27 @@ System_String_o *LocalizationManager__GetRestTime2(int64_t at, int64_t nowTime, 
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( v5 > 31535999 )
       {
-        v6 = &StringLiteral_13412/*"TIME_REST2_OVER_YEARS"*/;
+        v6 = &StringLiteral_13405/*"TIME_REST2_OVER_YEARS"*/;
         return LocalizationManager__Get((System_String_o *)*v6, (const MethodInfo *)nowTime);
       }
-      v19 = (System_String_o *)StringLiteral_13408/*"TIME_REST2_DAYS"*/;
-      v17 = v5 / 0x15180uLL;
+      v13 = (System_String_o *)StringLiteral_13401/*"TIME_REST2_DAYS"*/;
+      v11 = v5 / 0x15180uLL;
       goto LABEL_29;
     }
-    v17 = v5 / 0xE10uLL;
+    v11 = v5 / 0xE10uLL;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = &StringLiteral_13409/*"TIME_REST2_HOURS"*/;
+    v12 = &StringLiteral_13402/*"TIME_REST2_HOURS"*/;
   }
-  v19 = (System_String_o *)*v18;
+  v13 = (System_String_o *)*v12;
 LABEL_29:
-  v20 = LocalizationManager__Get(v19, (const MethodInfo *)nowTime);
-  v15 = &long_TypeInfo;
-  v16 = v20;
-  v22 = v17;
+  v14 = LocalizationManager__Get(v13, (const MethodInfo *)nowTime);
+  v9 = &long_TypeInfo;
+  v10 = v14;
+  v16 = v11;
 LABEL_30:
-  v21 = (Il2CppObject *)j_il2cpp_value_box_0(*v15, &v22, v9, v10, v11, v12, v13, v14);
-  return System_String__Format(v16, v21, 0);
+  v15 = (Il2CppObject *)j_il2cpp_value_box_0(*v9, &v16);
+  return System_String__Format(v10, v15, 0);
 }
 
 
@@ -1985,43 +1789,25 @@ System_String_o *LocalizationManager__GetRestTime3(int64_t at, const MethodInfo 
   System_TimeSpan_o v8; // x0
   int32_t Hours; // w19
   System_TimeSpan_o v10; // x0
-  __int64 v11; // x2
-  __int64 v12; // x3
-  __int64 v13; // x4
-  __int64 v14; // x5
-  __int64 v15; // x6
-  __int64 v16; // x7
-  Il2CppObject *v17; // x19
-  System_TimeSpan_o v18; // x0
-  __int64 v19; // x2
-  __int64 v20; // x3
-  __int64 v21; // x4
-  __int64 v22; // x5
-  __int64 v23; // x6
-  __int64 v24; // x7
-  Il2CppObject *v25; // x20
-  System_TimeSpan_o v26; // x0
-  __int64 v27; // x2
-  __int64 v28; // x3
-  __int64 v29; // x4
-  __int64 v30; // x5
-  __int64 v31; // x6
-  __int64 v32; // x7
-  Il2CppObject *v33; // x0
+  Il2CppObject *v11; // x19
+  System_TimeSpan_o v12; // x0
+  Il2CppObject *v13; // x20
+  System_TimeSpan_o v14; // x0
+  Il2CppObject *v15; // x0
   int32_t Seconds; // [xsp+Ch] [xbp-44h] BYREF
   int32_t Minutes; // [xsp+10h] [xbp-40h] BYREF
-  int v37; // [xsp+14h] [xbp-3Ch] BYREF
+  int v19; // [xsp+14h] [xbp-3Ch] BYREF
   int64_t ticks; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C56462 & 1) == 0 )
+  if ( (byte_4CB59C9 & 1) == 0 )
   {
-    sub_1C3E564(&System_DateTime_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&System_TimeSpan_TypeInfo);
-    sub_1C3E564(&StringLiteral_25088/*"{0:D2}:{1:D2}:{2:D2}"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C56462 = 1;
+    sub_1C6BA08(&System_DateTime_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&System_TimeSpan_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25178/*"{0:D2}:{1:D2}:{2:D2}"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB59C9 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -2030,67 +1816,50 @@ System_String_o *LocalizationManager__GetRestTime3(int64_t at, const MethodInfo 
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
-  v4.fields._dateData = NetworkManager__getDateTime_41415676(Time, 0).fields._dateData;
-  v5.fields._dateData = NetworkManager__getDateTime_41415676(at, 0).fields._dateData;
+  v4.fields._dateData = NetworkManager__getDateTime_41600544(Time, 0).fields._dateData;
+  v5.fields._dateData = NetworkManager__getDateTime_41600544(at, 0).fields._dateData;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
   v6.fields._dateData = v5.fields._dateData;
   v7.fields._dateData = v4.fields._dateData;
-  ticks = System_DateTime__op_Subtraction_65039076(v6, v7, 0).fields._ticks;
+  ticks = System_DateTime__op_Subtraction_65367788(v6, v7, 0).fields._ticks;
   if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
   v8.fields._ticks = (int64_t)&ticks;
   Hours = System_TimeSpan__get_Hours(v8, 0);
   v10.fields._ticks = (int64_t)&ticks;
-  v37 = Hours + 24 * System_TimeSpan__get_Days(v10, 0);
-  v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37, v11, v12, v13, v14, v15, v16);
-  v18.fields._ticks = (int64_t)&ticks;
-  Minutes = System_TimeSpan__get_Minutes(v18, 0);
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Minutes, v19, v20, v21, v22, v23, v24);
-  v26.fields._ticks = (int64_t)&ticks;
-  Seconds = System_TimeSpan__get_Seconds(v26, 0);
-  v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds, v27, v28, v29, v30, v31, v32);
-  return System_String__Format_63677828((System_String_o *)StringLiteral_25088/*"{0:D2}:{1:D2}:{2:D2}"*/, v17, v25, v33, 0);
+  v19 = Hours + 24 * System_TimeSpan__get_Days(v10, 0);
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19);
+  v12.fields._ticks = (int64_t)&ticks;
+  Minutes = System_TimeSpan__get_Minutes(v12, 0);
+  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Minutes);
+  v14.fields._ticks = (int64_t)&ticks;
+  Seconds = System_TimeSpan__get_Seconds(v14, 0);
+  v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds);
+  return System_String__Format_64008168((System_String_o *)StringLiteral_25178/*"{0:D2}:{1:D2}:{2:D2}"*/, v11, v13, v15, 0);
 }
 
 
 System_String_o *LocalizationManager__GetRestTime4(int64_t at, int64_t nowTime, const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  int64_t v10; // x8
-  unsigned int v11; // w10
-  __int64 v12; // x21
-  __int64 v13; // x20
-  Il2CppObject *v14; // x19
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  __int64 v18; // x5
-  __int64 v19; // x6
-  __int64 v20; // x7
-  Il2CppObject *v21; // x20
-  __int64 v22; // x2
-  __int64 v23; // x3
-  __int64 v24; // x4
-  __int64 v25; // x5
-  __int64 v26; // x6
-  __int64 v27; // x7
-  Il2CppObject *v28; // x0
-  __int64 v30; // [xsp+0h] [xbp-40h] BYREF
-  __int64 v31; // [xsp+8h] [xbp-38h] BYREF
-  unsigned __int64 v32; // [xsp+18h] [xbp-28h] BYREF
+  int64_t v5; // x8
+  unsigned int v6; // w10
+  __int64 v7; // x21
+  __int64 v8; // x20
+  Il2CppObject *v9; // x19
+  Il2CppObject *v10; // x20
+  Il2CppObject *v11; // x0
+  __int64 v13; // [xsp+0h] [xbp-40h] BYREF
+  __int64 v14; // [xsp+8h] [xbp-38h] BYREF
+  unsigned __int64 v15; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C56463 & 1) == 0 )
+  if ( (byte_4CB59CA & 1) == 0 )
   {
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_25088/*"{0:D2}:{1:D2}:{2:D2}"*/);
-    sub_1C3E564(&StringLiteral_1455/*"99:99:99"*/);
-    byte_4C56463 = 1;
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25178/*"{0:D2}:{1:D2}:{2:D2}"*/);
+    sub_1C6BA08(&StringLiteral_1448/*"99:99:99"*/);
+    byte_4CB59CA = 1;
   }
   if ( nowTime < 0 )
   {
@@ -2098,22 +1867,22 @@ System_String_o *LocalizationManager__GetRestTime4(int64_t at, int64_t nowTime, 
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     nowTime = NetworkManager__getTime(0);
   }
-  v10 = at - nowTime;
+  v5 = at - nowTime;
   if ( at - nowTime < 0 )
     return 0;
-  if ( v10 >= 360000 )
-    return (System_String_o *)StringLiteral_1455/*"99:99:99"*/;
-  v11 = ((unsigned __int64)(-2004318071LL * ((int)((0x44444444800LL * (unsigned __int64)(unsigned int)v10) >> 32) >> 16)) >> 32)
-      + (__int16)((unsigned int)v10 / 0x3C);
-  v12 = (unsigned int)v10 % 0x3C;
-  v13 = (__int16)((unsigned int)v10 / 0x3C - 60 * ((v11 >> 5) + (v11 >> 31)));
-  v32 = (unsigned int)v10 / 0xE10uLL;
-  v14 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v32, method, v3, v4, v5, v6, v7);
-  v31 = v13;
-  v21 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v31, v15, v16, v17, v18, v19, v20);
-  v30 = v12;
-  v28 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v30, v22, v23, v24, v25, v26, v27);
-  return System_String__Format_63677828((System_String_o *)StringLiteral_25088/*"{0:D2}:{1:D2}:{2:D2}"*/, v14, v21, v28, 0);
+  if ( v5 >= 360000 )
+    return (System_String_o *)StringLiteral_1448/*"99:99:99"*/;
+  v6 = ((unsigned __int64)(-2004318071LL * ((int)((0x44444444800LL * (unsigned __int64)(unsigned int)v5) >> 32) >> 16)) >> 32)
+     + (__int16)((unsigned int)v5 / 0x3C);
+  v7 = (unsigned int)v5 % 0x3C;
+  v8 = (__int16)((unsigned int)v5 / 0x3C - 60 * ((v6 >> 5) + (v6 >> 31)));
+  v15 = (unsigned int)v5 / 0xE10uLL;
+  v9 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v15);
+  v14 = v8;
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v14);
+  v13 = v7;
+  v11 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v13);
+  return System_String__Format_64008168((System_String_o *)StringLiteral_25178/*"{0:D2}:{1:D2}:{2:D2}"*/, v9, v10, v11, 0);
 }
 
 
@@ -2123,34 +1892,28 @@ System_String_o *LocalizationManager__GetRestTime5(int64_t at, int64_t nowTime, 
   __int64 v5; // x19
   __int64 *v6; // x8
   System_String_o *v8; // x0
-  __int64 v9; // x2
-  __int64 v10; // x3
-  __int64 v11; // x4
-  __int64 v12; // x5
-  __int64 v13; // x6
-  __int64 v14; // x7
-  _QWORD *v15; // x8
-  System_String_o *v16; // x19
-  unsigned __int64 v17; // x20
-  __int64 *v18; // x8
-  System_String_o *v19; // x0
-  System_String_o *v20; // x0
-  Il2CppObject *v21; // x0
-  unsigned __int64 v22; // [xsp+8h] [xbp-28h] BYREF
+  _QWORD *v9; // x8
+  System_String_o *v10; // x19
+  unsigned __int64 v11; // x20
+  __int64 *v12; // x8
+  System_String_o *v13; // x0
+  System_String_o *v14; // x0
+  Il2CppObject *v15; // x0
+  unsigned __int64 v16; // [xsp+8h] [xbp-28h] BYREF
 
   Time = nowTime;
-  if ( (byte_4C56464 & 1) == 0 )
+  if ( (byte_4CB59CB & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_13415/*"TIME_REST5_HOURS"*/);
-    sub_1C3E564(&StringLiteral_13418/*"TIME_REST5_TIMEOVER"*/);
-    sub_1C3E564(&StringLiteral_13417/*"TIME_REST5_OVER_YEARS"*/);
-    sub_1C3E564(&StringLiteral_13414/*"TIME_REST5_DAYS"*/);
-    sub_1C3E564(&StringLiteral_13416/*"TIME_REST5_MINUTES"*/);
-    byte_4C56464 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_13408/*"TIME_REST5_HOURS"*/);
+    sub_1C6BA08(&StringLiteral_13411/*"TIME_REST5_TIMEOVER"*/);
+    sub_1C6BA08(&StringLiteral_13410/*"TIME_REST5_OVER_YEARS"*/);
+    sub_1C6BA08(&StringLiteral_13407/*"TIME_REST5_DAYS"*/);
+    sub_1C6BA08(&StringLiteral_13409/*"TIME_REST5_MINUTES"*/);
+    byte_4CB59CB = 1;
   }
   if ( Time < 0 )
   {
@@ -2163,25 +1926,25 @@ System_String_o *LocalizationManager__GetRestTime5(int64_t at, int64_t nowTime, 
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = &StringLiteral_13418/*"TIME_REST5_TIMEOVER"*/;
+    v6 = &StringLiteral_13411/*"TIME_REST5_TIMEOVER"*/;
     return LocalizationManager__Get((System_String_o *)*v6, (const MethodInfo *)nowTime);
   }
   if ( v5 <= 59 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_13416/*"TIME_REST5_MINUTES"*/, (const MethodInfo *)nowTime);
-    v15 = &int_TypeInfo;
-    v16 = v8;
-    LODWORD(v22) = 0;
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_13409/*"TIME_REST5_MINUTES"*/, (const MethodInfo *)nowTime);
+    v9 = &int_TypeInfo;
+    v10 = v8;
+    LODWORD(v16) = 0;
     goto LABEL_30;
   }
   if ( v5 <= 3599 )
   {
-    v17 = v5 / 0x3CuLL;
+    v11 = v5 / 0x3CuLL;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = &StringLiteral_13416/*"TIME_REST5_MINUTES"*/;
+    v12 = &StringLiteral_13409/*"TIME_REST5_MINUTES"*/;
   }
   else
   {
@@ -2191,27 +1954,27 @@ System_String_o *LocalizationManager__GetRestTime5(int64_t at, int64_t nowTime, 
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
       if ( v5 > 31535999 )
       {
-        v6 = &StringLiteral_13417/*"TIME_REST5_OVER_YEARS"*/;
+        v6 = &StringLiteral_13410/*"TIME_REST5_OVER_YEARS"*/;
         return LocalizationManager__Get((System_String_o *)*v6, (const MethodInfo *)nowTime);
       }
-      v19 = (System_String_o *)StringLiteral_13414/*"TIME_REST5_DAYS"*/;
-      v17 = v5 / 0x15180uLL;
+      v13 = (System_String_o *)StringLiteral_13407/*"TIME_REST5_DAYS"*/;
+      v11 = v5 / 0x15180uLL;
       goto LABEL_29;
     }
-    v17 = v5 / 0xE10uLL;
+    v11 = v5 / 0xE10uLL;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = &StringLiteral_13415/*"TIME_REST5_HOURS"*/;
+    v12 = &StringLiteral_13408/*"TIME_REST5_HOURS"*/;
   }
-  v19 = (System_String_o *)*v18;
+  v13 = (System_String_o *)*v12;
 LABEL_29:
-  v20 = LocalizationManager__Get(v19, (const MethodInfo *)nowTime);
-  v15 = &long_TypeInfo;
-  v16 = v20;
-  v22 = v17;
+  v14 = LocalizationManager__Get(v13, (const MethodInfo *)nowTime);
+  v9 = &long_TypeInfo;
+  v10 = v14;
+  v16 = v11;
 LABEL_30:
-  v21 = (Il2CppObject *)j_il2cpp_value_box_0(*v15, &v22, v9, v10, v11, v12, v13, v14);
-  return System_String__Format(v16, v21, 0);
+  v15 = (Il2CppObject *)j_il2cpp_value_box_0(*v9, &v16);
+  return System_String__Format(v10, v15, 0);
 }
 
 
@@ -2225,62 +1988,44 @@ System_String_o *LocalizationManager__GetRestTime6(int64_t at, int64_t nowTime, 
   unsigned __int64 v9; // x21
   System_String_o *v10; // x0
   System_String_o *v12; // x0
-  __int64 v13; // x2
-  __int64 v14; // x3
-  __int64 v15; // x4
-  __int64 v16; // x5
-  __int64 v17; // x6
-  __int64 v18; // x7
-  System_Int64_c **v19; // x8
+  System_Int64_c **v13; // x8
+  System_String_o *v14; // x20
+  System_String_o *v15; // x0
+  System_Int64_c *v16; // x0
+  unsigned __int64 *v17; // x1
+  Il2CppObject *v18; // x0
+  System_String_o *v19; // x0
   System_String_o *v20; // x20
-  System_String_o *v21; // x0
-  System_Int64_c *v22; // x0
-  unsigned __int64 *v23; // x1
-  Il2CppObject *v24; // x0
-  System_String_o *v25; // x0
+  Il2CppObject *v21; // x0
+  System_String_o *v22; // x0
+  const MethodInfo *v23; // x1
+  unsigned __int64 v24; // x22
+  unsigned __int64 v25; // x21
   System_String_o *v26; // x20
-  __int64 v27; // x2
-  __int64 v28; // x3
-  __int64 v29; // x4
-  __int64 v30; // x5
-  __int64 v31; // x6
-  __int64 v32; // x7
-  Il2CppObject *v33; // x0
-  System_String_o *v34; // x0
-  const MethodInfo *v35; // x1
-  unsigned __int64 v36; // x22
-  unsigned __int64 v37; // x21
-  System_String_o *v38; // x20
-  __int64 v39; // x2
-  __int64 v40; // x3
-  __int64 v41; // x4
-  __int64 v42; // x5
-  __int64 v43; // x6
-  __int64 v44; // x7
-  Il2CppObject *v45; // x0
-  System_String_o *v46; // x0
-  const MethodInfo *v47; // x1
-  unsigned __int64 v48; // [xsp+0h] [xbp-40h] BYREF
-  unsigned __int64 v49; // [xsp+8h] [xbp-38h] BYREF
+  Il2CppObject *v27; // x0
+  System_String_o *v28; // x0
+  const MethodInfo *v29; // x1
+  unsigned __int64 v30; // [xsp+0h] [xbp-40h] BYREF
+  unsigned __int64 v31; // [xsp+8h] [xbp-38h] BYREF
 
   Time = nowTime;
-  if ( (byte_4C56465 & 1) == 0 )
+  if ( (byte_4CB59CC & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_13424/*"TIME_REST6_TIMEOVER"*/);
-    sub_1C3E564(&StringLiteral_13421/*"TIME_REST6_HOURS"*/);
-    sub_1C3E564(&StringLiteral_13423/*"TIME_REST6_OVER_YEARS"*/);
-    sub_1C3E564(&StringLiteral_13422/*"TIME_REST6_MINUTES"*/);
-    sub_1C3E564(&StringLiteral_13420/*"TIME_REST6_HEAD"*/);
-    sub_1C3E564(&StringLiteral_13419/*"TIME_REST6_DAYS"*/);
-    byte_4C56465 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_13417/*"TIME_REST6_TIMEOVER"*/);
+    sub_1C6BA08(&StringLiteral_13414/*"TIME_REST6_HOURS"*/);
+    sub_1C6BA08(&StringLiteral_13416/*"TIME_REST6_OVER_YEARS"*/);
+    sub_1C6BA08(&StringLiteral_13415/*"TIME_REST6_MINUTES"*/);
+    sub_1C6BA08(&StringLiteral_13413/*"TIME_REST6_HEAD"*/);
+    sub_1C6BA08(&StringLiteral_13412/*"TIME_REST6_DAYS"*/);
+    byte_4CB59CC = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13420/*"TIME_REST6_HEAD"*/, (const MethodInfo *)nowTime);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13413/*"TIME_REST6_HEAD"*/, (const MethodInfo *)nowTime);
   if ( Time < 0 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -2294,10 +2039,10 @@ System_String_o *LocalizationManager__GetRestTime6(int64_t at, int64_t nowTime, 
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_13422/*"TIME_REST6_MINUTES"*/, v5);
-      v19 = (System_Int64_c **)&int_TypeInfo;
-      v20 = v12;
-      LODWORD(v49) = 0;
+      v12 = LocalizationManager__Get((System_String_o *)StringLiteral_13415/*"TIME_REST6_MINUTES"*/, v5);
+      v13 = (System_Int64_c **)&int_TypeInfo;
+      v14 = v12;
+      LODWORD(v31) = 0;
     }
     else
     {
@@ -2309,14 +2054,14 @@ System_String_o *LocalizationManager__GetRestTime6(int64_t at, int64_t nowTime, 
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_13421/*"TIME_REST6_HOURS"*/, v5);
-          v49 = v9;
-          v33 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v49, v27, v28, v29, v30, v31, v32);
-          v34 = System_String__Format(v26, v33, 0);
-          v6 = System_String__Concat_63636468(v6, v34, 0);
-          v20 = LocalizationManager__Get((System_String_o *)StringLiteral_13422/*"TIME_REST6_MINUTES"*/, v35);
-          v22 = long_TypeInfo;
-          v48 = v8 % 0x3C;
+          v20 = LocalizationManager__Get((System_String_o *)StringLiteral_13414/*"TIME_REST6_HOURS"*/, v5);
+          v31 = v9;
+          v21 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v31);
+          v22 = System_String__Format(v20, v21, 0);
+          v6 = System_String__Concat_63966792(v6, v22, 0);
+          v14 = LocalizationManager__Get((System_String_o *)StringLiteral_13415/*"TIME_REST6_MINUTES"*/, v23);
+          v16 = long_TypeInfo;
+          v30 = v8 % 0x3C;
         }
         else
         {
@@ -2324,42 +2069,42 @@ System_String_o *LocalizationManager__GetRestTime6(int64_t at, int64_t nowTime, 
           {
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13423/*"TIME_REST6_OVER_YEARS"*/, v5);
-            return System_String__Concat_63636468(v6, v10, 0);
+            v10 = LocalizationManager__Get((System_String_o *)StringLiteral_13416/*"TIME_REST6_OVER_YEARS"*/, v5);
+            return System_String__Concat_63966792(v6, v10, 0);
           }
-          v36 = v7 / 0x15180uLL;
-          v37 = v9 % 0x18;
+          v24 = v7 / 0x15180uLL;
+          v25 = v9 % 0x18;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_13419/*"TIME_REST6_DAYS"*/, v5);
-          v49 = v36;
-          v45 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v49, v39, v40, v41, v42, v43, v44);
-          v46 = System_String__Format(v38, v45, 0);
-          v6 = System_String__Concat_63636468(v6, v46, 0);
-          v20 = LocalizationManager__Get((System_String_o *)StringLiteral_13421/*"TIME_REST6_HOURS"*/, v47);
-          v22 = long_TypeInfo;
-          v48 = v37;
+          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_13412/*"TIME_REST6_DAYS"*/, v5);
+          v31 = v24;
+          v27 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v31);
+          v28 = System_String__Format(v26, v27, 0);
+          v6 = System_String__Concat_63966792(v6, v28, 0);
+          v14 = LocalizationManager__Get((System_String_o *)StringLiteral_13414/*"TIME_REST6_HOURS"*/, v29);
+          v16 = long_TypeInfo;
+          v30 = v25;
         }
-        v23 = &v48;
+        v17 = &v30;
 LABEL_27:
-        v24 = (Il2CppObject *)j_il2cpp_value_box_0(v22, v23, v13, v14, v15, v16, v17, v18);
-        v25 = System_String__Format(v20, v24, 0);
-        return System_String__Concat_63636468(v6, v25, 0);
+        v18 = (Il2CppObject *)j_il2cpp_value_box_0(v16, v17);
+        v19 = System_String__Format(v14, v18, 0);
+        return System_String__Concat_63966792(v6, v19, 0);
       }
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v21 = LocalizationManager__Get((System_String_o *)StringLiteral_13422/*"TIME_REST6_MINUTES"*/, v5);
-      v19 = &long_TypeInfo;
-      v20 = v21;
-      v49 = v8;
+      v15 = LocalizationManager__Get((System_String_o *)StringLiteral_13415/*"TIME_REST6_MINUTES"*/, v5);
+      v13 = &long_TypeInfo;
+      v14 = v15;
+      v31 = v8;
     }
-    v22 = *v19;
-    v23 = &v49;
+    v16 = *v13;
+    v17 = &v31;
     goto LABEL_27;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_13424/*"TIME_REST6_TIMEOVER"*/, v5);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_13417/*"TIME_REST6_TIMEOVER"*/, v5);
 }
 
 
@@ -2369,52 +2114,24 @@ System_String_o *LocalizationManager__GetRestTimeInFormat(
         System_String_o *format,
         const MethodInfo *method)
 {
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  int64_t v11; // x8
-  unsigned int v12; // w10
-  __int64 v13; // x22
-  __int64 v14; // x21
-  Il2CppObject *v15; // x20
-  __int64 v16; // x2
-  __int64 v17; // x3
-  __int64 v18; // x4
-  __int64 v19; // x5
-  __int64 v20; // x6
-  __int64 v21; // x7
-  __int64 v22; // x2
-  __int64 v23; // x3
-  __int64 v24; // x4
-  __int64 v25; // x5
-  __int64 v26; // x6
-  __int64 v27; // x7
-  Il2CppObject *v28; // x21
-  void *v29; // x0
-  __int64 v30; // x2
-  __int64 v31; // x3
-  __int64 v32; // x4
-  __int64 v33; // x5
-  __int64 v34; // x6
-  __int64 v35; // x7
-  __int64 v36; // x2
-  __int64 v37; // x3
-  __int64 v38; // x4
-  __int64 v39; // x5
-  __int64 v40; // x6
-  __int64 v41; // x7
-  Il2CppObject *v42; // x0
-  __int64 v44; // [xsp+8h] [xbp-48h] BYREF
-  __int64 v45; // [xsp+10h] [xbp-40h] BYREF
-  unsigned __int64 v46; // [xsp+18h] [xbp-38h] BYREF
+  int64_t v7; // x8
+  unsigned int v8; // w10
+  __int64 v9; // x22
+  __int64 v10; // x21
+  Il2CppObject *v11; // x20
+  Il2CppObject *v12; // x21
+  void *v13; // x0
+  Il2CppObject *v14; // x0
+  __int64 v16; // [xsp+8h] [xbp-48h] BYREF
+  __int64 v17; // [xsp+10h] [xbp-40h] BYREF
+  unsigned __int64 v18; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C56466 & 1) == 0 )
+  if ( (byte_4CB59CD & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C56466 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB59CD = 1;
   }
   if ( nowTime < 0 )
   {
@@ -2422,41 +2139,40 @@ System_String_o *LocalizationManager__GetRestTimeInFormat(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     nowTime = NetworkManager__getTime(0);
   }
-  v11 = at - nowTime;
+  v7 = at - nowTime;
   if ( at - nowTime < 0 )
   {
-    LODWORD(v46) = 0;
-    v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v46, format, method, v4, v5, v6, v7);
-    LODWORD(v45) = 0;
-    v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45, v30, v31, v32, v33, v34, v35);
-    v29 = int_TypeInfo;
-    LODWORD(v44) = 0;
+    LODWORD(v18) = 0;
+    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
+    LODWORD(v17) = 0;
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
+    v13 = int_TypeInfo;
+    LODWORD(v16) = 0;
   }
-  else if ( v11 >= 360000 )
+  else if ( v7 >= 360000 )
   {
-    LODWORD(v46) = 99;
-    v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v46, format, method, v4, v5, v6, v7);
-    LODWORD(v45) = 99;
-    v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45, v36, v37, v38, v39, v40, v41);
-    v29 = int_TypeInfo;
-    LODWORD(v44) = 99;
+    LODWORD(v18) = 99;
+    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
+    LODWORD(v17) = 99;
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
+    v13 = int_TypeInfo;
+    LODWORD(v16) = 99;
   }
   else
   {
-    v12 = ((unsigned __int64)(-2004318071LL
-                            * ((int)((0x44444444800LL * (unsigned __int64)(unsigned int)v11) >> 32) >> 16)) >> 32)
-        + (__int16)((unsigned int)v11 / 0x3C);
-    v13 = (unsigned int)v11 % 0x3C;
-    v14 = (__int16)((unsigned int)v11 / 0x3C - 60 * ((v12 >> 5) + (v12 >> 31)));
-    v46 = (unsigned int)v11 / 0xE10uLL;
-    v15 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v46, format, method, v4, v5, v6, v7);
-    v45 = v14;
-    v28 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v45, v16, v17, v18, v19, v20, v21);
-    v29 = long_TypeInfo;
-    v44 = v13;
+    v8 = ((unsigned __int64)(-2004318071LL * ((int)((0x44444444800LL * (unsigned __int64)(unsigned int)v7) >> 32) >> 16)) >> 32)
+       + (__int16)((unsigned int)v7 / 0x3C);
+    v9 = (unsigned int)v7 % 0x3C;
+    v10 = (__int16)((unsigned int)v7 / 0x3C - 60 * ((v8 >> 5) + (v8 >> 31)));
+    v18 = (unsigned int)v7 / 0xE10uLL;
+    v11 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v18);
+    v17 = v10;
+    v12 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v17);
+    v13 = long_TypeInfo;
+    v16 = v9;
   }
-  v42 = (Il2CppObject *)j_il2cpp_value_box_0(v29, &v44, v22, v23, v24, v25, v26, v27);
-  return System_String__Format_63677828(format, v15, v28, v42, 0);
+  v14 = (Il2CppObject *)j_il2cpp_value_box_0(v13, &v16);
+  return System_String__Format_64008168(format, v11, v12, v14, 0);
 }
 
 
@@ -2486,19 +2202,19 @@ void LocalizationManager__GetRestTimeWithSeparatedTimeStr(
   unsigned __int64 v24; // [xsp+10h] [xbp-40h] BYREF
   unsigned __int64 v25; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C56467 & 1) == 0 )
+  if ( (byte_4CB59CE & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_13457/*"TIME_STR_TIMEOVER"*/);
-    sub_1C3E564(&StringLiteral_13454/*"TIME_STR_MINUTES"*/);
-    sub_1C3E564(&StringLiteral_13452/*"TIME_STR_DAYS"*/);
-    sub_1C3E564(&StringLiteral_13456/*"TIME_STR_OVER_YEARS"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_1172/*"1"*/);
-    sub_1C3E564(&StringLiteral_13453/*"TIME_STR_HOURS"*/);
-    sub_1C3E564(&StringLiteral_1122/*"0"*/);
-    byte_4C56467 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_13450/*"TIME_STR_TIMEOVER"*/);
+    sub_1C6BA08(&StringLiteral_13447/*"TIME_STR_MINUTES"*/);
+    sub_1C6BA08(&StringLiteral_13445/*"TIME_STR_DAYS"*/);
+    sub_1C6BA08(&StringLiteral_13449/*"TIME_STR_OVER_YEARS"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_1165/*"1"*/);
+    sub_1C6BA08(&StringLiteral_13446/*"TIME_STR_HOURS"*/);
+    sub_1C6BA08(&StringLiteral_1115/*"0"*/);
+    byte_4CB59CE = 1;
   }
   v23 = 0;
   v24 = 0;
@@ -2508,17 +2224,17 @@ void LocalizationManager__GetRestTimeWithSeparatedTimeStr(
   if ( v9 < 0 )
   {
     *numStr = (System_String_o *)StringLiteral_1/*""*/;
-    sub_1C3E508((CGThumbnailListItem_o *)numStr, StringLiteral_1/*""*/, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)numStr, StringLiteral_1/*""*/, v7, v8);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = &StringLiteral_13457/*"TIME_STR_TIMEOVER"*/;
+    v11 = &StringLiteral_13450/*"TIME_STR_TIMEOVER"*/;
   }
   else
   {
     if ( v9 <= 59 )
     {
-      *numStr = (System_String_o *)StringLiteral_1122/*"0"*/;
-      v12 = StringLiteral_1122/*"0"*/;
+      *numStr = (System_String_o *)StringLiteral_1115/*"0"*/;
+      v12 = StringLiteral_1115/*"0"*/;
     }
     else
     {
@@ -2530,10 +2246,10 @@ void LocalizationManager__GetRestTimeWithSeparatedTimeStr(
         {
           v17 = System_Int64__ToString((int64_t)&v24, 0);
           *numStr = v17;
-          sub_1C3E508((CGThumbnailListItem_o *)numStr, (int32_t)v17, v18, v19);
+          sub_1C6B9AC((CGThumbnailListItem_o *)numStr, (int32_t)v17, v18, v19);
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v11 = &StringLiteral_13453/*"TIME_STR_HOURS"*/;
+          v11 = &StringLiteral_13446/*"TIME_STR_HOURS"*/;
         }
         else
         {
@@ -2542,18 +2258,18 @@ void LocalizationManager__GetRestTimeWithSeparatedTimeStr(
           {
             v20 = System_Int64__ToString((int64_t)&v23, 0);
             *numStr = v20;
-            sub_1C3E508((CGThumbnailListItem_o *)numStr, (int32_t)v20, v21, v22);
+            sub_1C6B9AC((CGThumbnailListItem_o *)numStr, (int32_t)v20, v21, v22);
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v11 = &StringLiteral_13452/*"TIME_STR_DAYS"*/;
+            v11 = &StringLiteral_13445/*"TIME_STR_DAYS"*/;
           }
           else
           {
-            *numStr = (System_String_o *)StringLiteral_1172/*"1"*/;
-            sub_1C3E508((CGThumbnailListItem_o *)numStr, StringLiteral_1172/*"1"*/, v7, v8);
+            *numStr = (System_String_o *)StringLiteral_1165/*"1"*/;
+            sub_1C6B9AC((CGThumbnailListItem_o *)numStr, StringLiteral_1165/*"1"*/, v7, v8);
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v11 = &StringLiteral_13456/*"TIME_STR_OVER_YEARS"*/;
+            v11 = &StringLiteral_13449/*"TIME_STR_OVER_YEARS"*/;
           }
         }
         goto LABEL_21;
@@ -2562,15 +2278,15 @@ void LocalizationManager__GetRestTimeWithSeparatedTimeStr(
       v12 = (int)v13;
       *numStr = v13;
     }
-    sub_1C3E508((CGThumbnailListItem_o *)numStr, v12, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)numStr, v12, v7, v8);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = &StringLiteral_13454/*"TIME_STR_MINUTES"*/;
+    v11 = &StringLiteral_13447/*"TIME_STR_MINUTES"*/;
   }
 LABEL_21:
   v14 = LocalizationManager__Get((System_String_o *)*v11, v10);
   *charStr = v14;
-  sub_1C3E508((CGThumbnailListItem_o *)charStr, (int32_t)v14, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)charStr, (int32_t)v14, v15, v16);
 }
 
 
@@ -2584,10 +2300,10 @@ UnityEngine_Color_o LocalizationManager__GetSelectEffectColor(const MethodInfo *
   float v6; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5645A & 1) == 0 )
+  if ( (byte_4CB59C1 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C5645A = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59C1 = 1;
   }
   v1 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -2611,76 +2327,58 @@ UnityEngine_Color_o LocalizationManager__GetSelectEffectColor(const MethodInfo *
 System_String_o *LocalizationManager__GetStoneInfo(int32_t n, const MethodInfo *method)
 {
   System_String_o *v3; // x20
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v4; // x0
+  int32_t v6; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C56481 & 1) == 0 )
+  if ( (byte_4CB59E8 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_12370/*"STONE_INFO"*/);
-    byte_4C56481 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_12367/*"STONE_INFO"*/);
+    byte_4CB59E8 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_12370/*"STONE_INFO"*/, method);
-  v12 = n;
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12, v4, v5, v6, v7, v8, v9);
-  return System_String__Format(v3, v10, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_12367/*"STONE_INFO"*/, method);
+  v6 = n;
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v6);
+  return System_String__Format(v3, v4, 0);
 }
 
 
 System_String_o *LocalizationManager__GetTime(int64_t time, const MethodInfo *method)
 {
   System_DateTime_o v3; // x0
-  __int64 v4; // x2
-  __int64 v5; // x3
-  __int64 v6; // x4
-  __int64 v7; // x5
-  __int64 v8; // x6
-  __int64 v9; // x7
-  Il2CppObject *v10; // x19
-  System_DateTime_o v11; // x0
-  __int64 v12; // x2
-  __int64 v13; // x3
-  __int64 v14; // x4
-  __int64 v15; // x5
-  __int64 v16; // x6
-  __int64 v17; // x7
-  Il2CppObject *v18; // x0
+  Il2CppObject *v4; // x19
+  System_DateTime_o v5; // x0
+  Il2CppObject *v6; // x0
   int32_t Minute; // [xsp+8h] [xbp-38h] BYREF
   int32_t Hour; // [xsp+Ch] [xbp-34h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C5646B & 1) == 0 )
+  if ( (byte_4CB59D2 & 1) == 0 )
   {
-    sub_1C3E564(&System_DateTime_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_25087/*"{0:D2}:{1:D2}"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5646B = 1;
+    sub_1C6BA08(&System_DateTime_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25177/*"{0:D2}:{1:D2}"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB59D2 = 1;
   }
   if ( time < 1 )
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  dateData = NetworkManager__getServerDateTime_41416004(time, 0).fields._dateData;
+  dateData = NetworkManager__getServerDateTime_41600872(time, 0).fields._dateData;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
   v3.fields._dateData = (uint64_t)&dateData;
   Hour = System_DateTime__get_Hour(v3, 0);
-  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Hour, v4, v5, v6, v7, v8, v9);
-  v11.fields._dateData = (uint64_t)&dateData;
-  Minute = System_DateTime__get_Minute(v11, 0);
-  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Minute, v12, v13, v14, v15, v16, v17);
-  return System_String__Format_63677760((System_String_o *)StringLiteral_25087/*"{0:D2}:{1:D2}"*/, v10, v18, 0);
+  v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Hour);
+  v5.fields._dateData = (uint64_t)&dateData;
+  Minute = System_DateTime__get_Minute(v5, 0);
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Minute);
+  return System_String__Format_64008100((System_String_o *)StringLiteral_25177/*"{0:D2}:{1:D2}"*/, v4, v6, 0);
 }
 
 
@@ -2690,15 +2388,15 @@ System_String_o *LocalizationManager__GetUnitInfo(int32_t count, const MethodInf
   const MethodInfo *v4; // x1
   Il2CppObject *NumberFormat; // x1
 
-  if ( (byte_4C5646F & 1) == 0 )
+  if ( (byte_4CB59D6 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_14823/*"UNIT_INFO"*/);
-    byte_4C5646F = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_14814/*"UNIT_INFO"*/);
+    byte_4CB59D6 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_14823/*"UNIT_INFO"*/, method);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_14814/*"UNIT_INFO"*/, method);
   NumberFormat = (Il2CppObject *)LocalizationManager__GetNumberFormat(count, v4);
   return System_String__Format(v3, NumberFormat, 0);
 }
@@ -2708,10 +2406,10 @@ System_String_o *LocalizationManager__GetUnknownName(const MethodInfo *method)
 {
   LocalizationManager_c *v1; // x0
 
-  if ( (byte_4C56454 & 1) == 0 )
+  if ( (byte_4CB59BB & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C56454 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59BB = 1;
   }
   v1 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -2729,20 +2427,20 @@ void LocalizationManager__Initialize(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C56452 & 1) == 0 )
+  if ( (byte_4CB59B9 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_LocalizationManager__get_Instance__);
-    byte_4C56452 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_LocalizationManager__get_Instance__);
+    byte_4CB59B9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_LocalizationManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_LocalizationManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v2, v3);
+      sub_1C6BC60(v2, v3);
     LocalizationManager__InitializeLocal((LocalizationManager_o *)Instance, v3);
   }
 }
@@ -2756,10 +2454,10 @@ void LocalizationManager__InitializeLocal(LocalizationManager_o *this, const Met
   LocalizationManager_o *text; // x0
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C56488 & 1) == 0 )
+  if ( (byte_4CB59EF & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C56488 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB59EF = 1;
   }
   mainTextData = (UnityEngine_Object_o *)this->fields.mainTextData;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2768,7 +2466,7 @@ void LocalizationManager__InitializeLocal(LocalizationManager_o *this, const Met
   {
     v5 = this->fields.mainTextData;
     if ( !v5 )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     text = (LocalizationManager_o *)UnityEngine_TextAsset__get_text(v5, 0);
     LocalizationManager__SetTextData(text, (System_String_o *)text, v7);
   }
@@ -2779,10 +2477,10 @@ bool LocalizationManager__IsBusySetAssetData(const MethodInfo *method)
 {
   LocalizationManager_c *v1; // x0
 
-  if ( (byte_4C56451 & 1) == 0 )
+  if ( (byte_4CB59B8 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C56451 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59B8 = 1;
   }
   v1 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -2883,25 +2581,25 @@ void LocalizationManager__LoadAssetData(const MethodInfo *method)
   LocalizationManager_c *v7; // x0
   AssetLoader_LoadEndDataHandler_o *v8; // x20
 
-  if ( (byte_4C56453 & 1) == 0 )
+  if ( (byte_4CB59BA & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_LocalizationManager__get_Instance__);
-    sub_1C3E564(&Method_LocalizationManager___c__DisplayClass16_0__LoadAssetData_b__0__);
-    sub_1C3E564(&LocalizationManager___c__DisplayClass16_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_8484/*"Localization"*/);
-    byte_4C56453 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_LocalizationManager__get_Instance__);
+    sub_1C6BA08(&Method_LocalizationManager___c__DisplayClass16_0__LoadAssetData_b__0__);
+    sub_1C6BA08(&LocalizationManager___c__DisplayClass16_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_8481/*"Localization"*/);
+    byte_4CB59BA = 1;
   }
-  v1 = sub_1C3E7B0(LocalizationManager___c__DisplayClass16_0_TypeInfo);
+  v1 = sub_1C6BC54(LocalizationManager___c__DisplayClass16_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v1, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_LocalizationManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_LocalizationManager__get_Instance__);
   if ( !v1 )
-    sub_1C3E7C0(Instance, v3);
+    sub_1C6BC60(Instance, v3);
   *(_QWORD *)(v1 + 16) = Instance;
-  sub_1C3E508((CGThumbnailListItem_o *)(v1 + 16), (int32_t)Instance, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v1 + 16), (int32_t)Instance, v4, v5);
   v6 = *(UnityEngine_Object_o **)(v1 + 16);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2914,7 +2612,7 @@ void LocalizationManager__LoadAssetData(const MethodInfo *method)
       v7 = LocalizationManager_TypeInfo;
     }
     v7->static_fields->isBusySetAssetData = 1;
-    v8 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v8 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v8,
       (Il2CppObject *)v1,
@@ -2922,7 +2620,7 @@ void LocalizationManager__LoadAssetData(const MethodInfo *method)
       0);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_8484/*"Localization"*/, v8, 1, 0);
+    AssetManager__loadAssetStorage((System_String_o *)StringLiteral_8481/*"Localization"*/, v8, 1, 0);
   }
 }
 
@@ -2955,22 +2653,22 @@ System_String_o *LocalizationManager__ReplaceCommonTag(
   bool v26; // [xsp+4h] [xbp-6Ch]
   UserServantCollectionEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C56485 & 1) == 0 )
+  if ( (byte_4CB59EC & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&StringLiteral_23304/*"servantName "*/);
-    sub_1C3E564(&StringLiteral_15814/*"["*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_16068/*"]"*/);
-    byte_4C56485 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&StringLiteral_23388/*"servantName "*/);
+    sub_1C6BA08(&StringLiteral_15801/*"["*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_16051/*"]"*/);
+    byte_4CB59EC = 1;
   }
   entity = 0;
   if ( !text )
@@ -2983,18 +2681,18 @@ System_String_o *LocalizationManager__ReplaceCommonTag(
   v7 = 0;
   while ( 1 )
   {
-    v8 = System_String__IndexOf_63694860(text, (System_String_o *)StringLiteral_15814/*"["*/, v6, 0);
+    v8 = System_String__IndexOf_64025200(text, (System_String_o *)StringLiteral_15801/*"["*/, v6, 0);
     if ( v8 < 0 )
       break;
     v9 = v8;
-    Instance = (void *)System_String__IndexOf_63694860(text, (System_String_o *)StringLiteral_16068/*"]"*/, v8, 0);
+    Instance = (void *)System_String__IndexOf_64025200(text, (System_String_o *)StringLiteral_16051/*"]"*/, v8, 0);
     if ( ((unsigned int)Instance & 0x80000000) != 0 )
       break;
     v11 = (int)Instance;
     if ( !v7 )
     {
-      v7 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
-      System_Text_StringBuilder___ctor_63714884(v7, stringLength + 32, 0);
+      v7 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
+      System_Text_StringBuilder___ctor_64044104(v7, stringLength + 32, 0);
     }
     v12 = (unsigned int)(v9 + 1);
     if ( v11 == (_DWORD)v12 )
@@ -3003,14 +2701,14 @@ System_String_o *LocalizationManager__ReplaceCommonTag(
         goto LABEL_71;
       v13 = v11 - v6;
 LABEL_47:
-      System_Text_StringBuilder__Append_63721848(v7, text, v6, v13, 0);
+      System_Text_StringBuilder__Append_64051068(v7, text, v6, v13, 0);
       goto LABEL_63;
     }
-    Instance = System_String__Substring_63682392(text, v12, v11 + ~v9, 0);
+    Instance = System_String__Substring_64012732(text, v12, v11 + ~v9, 0);
     if ( !Instance )
       goto LABEL_71;
     v14 = (System_String_o *)Instance;
-    Instance = (void *)System_String__StartsWith((System_String_o *)Instance, (System_String_o *)StringLiteral_23304/*"servantName "*/, 0);
+    Instance = (void *)System_String__StartsWith((System_String_o *)Instance, (System_String_o *)StringLiteral_23388/*"servantName "*/, 0);
     if ( ((unsigned __int8)Instance & 1) == 0 )
     {
       if ( !v7 )
@@ -3022,7 +2720,7 @@ LABEL_47:
     {
       if ( !v7 )
         goto LABEL_71;
-      System_Text_StringBuilder__Append_63721848(v7, text, v6, v9 - v6, 0);
+      System_Text_StringBuilder__Append_64051068(v7, text, v6, v9 - v6, 0);
     }
     Instance = System_String__Substring(v14, 12, 0);
     if ( !Instance )
@@ -3037,18 +2735,18 @@ LABEL_47:
     if ( !(_DWORD)v15 )
       goto LABEL_72;
     v17 = System_Int32__Parse(*((System_String_o **)Instance + 4), 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_71;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_ServantMaster___);
+                 (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantMaster___);
     if ( !Instance )
       goto LABEL_71;
     v18 = DataMasterBase_object__object__int___GetEntity(
             (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
             v17,
-            (const MethodInfo_33B2F58 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+            (const MethodInfo_33F90DC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
     if ( v18 )
     {
       v19 = (ServantEntity_o *)v18;
@@ -3066,12 +2764,12 @@ LABEL_47:
         {
           if ( v23 <= 1 )
 LABEL_72:
-            sub_1C3E7C8(Instance, v12);
+            sub_1C6BC68(Instance);
           v24 = (System_String_o **)(v16 + 40);
         }
         if ( !v7 )
 LABEL_71:
-          sub_1C3E7C0(Instance, v12);
+          sub_1C6BC60(Instance, v12);
         unknownNameText = *v24;
       }
       else
@@ -3080,13 +2778,13 @@ LABEL_71:
           goto LABEL_55;
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4C50AE2 )
+        if ( !byte_4CB002A )
         {
-          sub_1C3E564(&NetworkManager_TypeInfo);
-          byte_4C50AE2 = 1;
+          sub_1C6BA08(&NetworkManager_TypeInfo);
+          byte_4CB002A = 1;
         }
         Instance = NetworkManager_TypeInfo;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -3105,7 +2803,7 @@ LABEL_71:
         {
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          Instance = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+          Instance = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
           if ( !entity )
             goto LABEL_71;
           if ( !Instance )
@@ -3143,7 +2841,7 @@ LABEL_48:
         goto LABEL_71;
       unknownNameText = LocalizationManager_TypeInfo->static_fields->unknownNameText;
     }
-    System_Text_StringBuilder__Append_63721532(v7, unknownNameText, 0);
+    System_Text_StringBuilder__Append_64050752(v7, unknownNameText, 0);
 LABEL_63:
     v6 = v11 + 1;
     if ( v11 + 1 >= stringLength )
@@ -3154,7 +2852,7 @@ LABEL_63:
   if ( v7 )
   {
     if ( stringLength > v6 )
-      System_Text_StringBuilder__Append_63721848(v7, text, v6, stringLength - v6, 0);
+      System_Text_StringBuilder__Append_64051068(v7, text, v6, stringLength - v6, 0);
     return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v7->klass->vtable._3_ToString.methodPtr)(
                                 v7,
                                 v7->klass->vtable._3_ToString.method);
@@ -3195,39 +2893,39 @@ System_String_o *LocalizationManager__ReplaceNameTag(
   System_String_o *v29; // x0
   bool v31; // [xsp+Ch] [xbp-64h]
 
-  if ( (byte_4C56486 & 1) == 0 )
+  if ( (byte_4CB59ED & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&StringLiteral_370/*"#"*/);
-    sub_1C3E564(&StringLiteral_22364/*"o"*/);
-    sub_1C3E564(&StringLiteral_15833/*"[-]"*/);
-    sub_1C3E564(&StringLiteral_20109/*"i"*/);
-    sub_1C3E564(&StringLiteral_19741/*"g"*/);
-    sub_1C3E564(&StringLiteral_861/*"-"*/);
-    sub_1C3E564(&StringLiteral_16985/*"b"*/);
-    sub_1C3E564(&StringLiteral_1110/*"/sub"*/);
-    sub_1C3E564(&StringLiteral_1107/*"/o"*/);
-    sub_1C3E564(&StringLiteral_1114/*"/u"*/);
-    sub_1C3E564(&StringLiteral_479/*"%"*/);
-    sub_1C3E564(&StringLiteral_16095/*"^"*/);
-    sub_1C3E564(&StringLiteral_1094/*"/b"*/);
-    sub_1C3E564(&StringLiteral_501/*"&"*/);
-    sub_1C3E564(&StringLiteral_23865/*"sup"*/);
-    sub_1C3E564(&StringLiteral_25280/*"~"*/);
-    sub_1C3E564(&StringLiteral_22938/*"r"*/);
-    sub_1C3E564(&StringLiteral_21259/*"line"*/);
-    sub_1C3E564(&StringLiteral_1111/*"/sup"*/);
-    sub_1C3E564(&StringLiteral_1109/*"/s"*/);
-    sub_1C3E564(&StringLiteral_20303/*"image"*/);
-    sub_1C3E564(&StringLiteral_1102/*"/g"*/);
-    sub_1C3E564(&StringLiteral_23780/*"sub"*/);
-    sub_1C3E564(&StringLiteral_24279/*"u"*/);
-    sub_1C3E564(&StringLiteral_15814/*"["*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_23194/*"s"*/);
-    sub_1C3E564(&StringLiteral_16068/*"]"*/);
-    byte_4C56486 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&StringLiteral_369/*"#"*/);
+    sub_1C6BA08(&StringLiteral_22435/*"o"*/);
+    sub_1C6BA08(&StringLiteral_15820/*"[-]"*/);
+    sub_1C6BA08(&StringLiteral_20155/*"i"*/);
+    sub_1C6BA08(&StringLiteral_19786/*"g"*/);
+    sub_1C6BA08(&StringLiteral_858/*"-"*/);
+    sub_1C6BA08(&StringLiteral_16982/*"b"*/);
+    sub_1C6BA08(&StringLiteral_1103/*"/sub"*/);
+    sub_1C6BA08(&StringLiteral_1100/*"/o"*/);
+    sub_1C6BA08(&StringLiteral_1107/*"/u"*/);
+    sub_1C6BA08(&StringLiteral_478/*"%"*/);
+    sub_1C6BA08(&StringLiteral_16078/*"^"*/);
+    sub_1C6BA08(&StringLiteral_1087/*"/b"*/);
+    sub_1C6BA08(&StringLiteral_500/*"&"*/);
+    sub_1C6BA08(&StringLiteral_23939/*"sup"*/);
+    sub_1C6BA08(&StringLiteral_25370/*"~"*/);
+    sub_1C6BA08(&StringLiteral_23012/*"r"*/);
+    sub_1C6BA08(&StringLiteral_21323/*"line"*/);
+    sub_1C6BA08(&StringLiteral_1104/*"/sup"*/);
+    sub_1C6BA08(&StringLiteral_1102/*"/s"*/);
+    sub_1C6BA08(&StringLiteral_20350/*"image"*/);
+    sub_1C6BA08(&StringLiteral_1095/*"/g"*/);
+    sub_1C6BA08(&StringLiteral_23854/*"sub"*/);
+    sub_1C6BA08(&StringLiteral_24361/*"u"*/);
+    sub_1C6BA08(&StringLiteral_15801/*"["*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_23270/*"s"*/);
+    sub_1C6BA08(&StringLiteral_16051/*"]"*/);
+    byte_4CB59ED = 1;
   }
   if ( !text )
     return text;
@@ -3239,13 +2937,13 @@ System_String_o *LocalizationManager__ReplaceNameTag(
   v7 = 0;
   while ( 1 )
   {
-    v8 = System_String__IndexOf_63694860(text, (System_String_o *)StringLiteral_15814/*"["*/, v6, 0);
+    v8 = System_String__IndexOf_64025200(text, (System_String_o *)StringLiteral_15801/*"["*/, v6, 0);
     if ( v8 < 0 )
       break;
     v9 = v8;
     if ( v8 + 1 >= stringLength )
       break;
-    v10 = System_String__IndexOf_63694860(text, (System_String_o *)StringLiteral_16068/*"]"*/, v8 + 1, 0);
+    v10 = System_String__IndexOf_64025200(text, (System_String_o *)StringLiteral_16051/*"]"*/, v8 + 1, 0);
     if ( v10 < 0 )
       break;
     v11 = v10;
@@ -3253,9 +2951,9 @@ System_String_o *LocalizationManager__ReplaceNameTag(
     {
       v12 = v9 + 1;
       v13 = v9;
-      appended = (System_String_o *)System_String__IndexOf_63694860(
+      appended = (System_String_o *)System_String__IndexOf_64025200(
                                       text,
-                                      (System_String_o *)StringLiteral_15814/*"["*/,
+                                      (System_String_o *)StringLiteral_15801/*"["*/,
                                       v9 + 1,
                                       0);
       if ( ((unsigned int)appended & 0x80000000) != 0 )
@@ -3267,8 +2965,8 @@ System_String_o *LocalizationManager__ReplaceNameTag(
       break;
     if ( !v7 )
     {
-      v7 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
-      System_Text_StringBuilder___ctor_63714884(v7, stringLength + 32, 0);
+      v7 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
+      System_Text_StringBuilder___ctor_64044104(v7, stringLength + 32, 0);
     }
     if ( v11 != v12 )
     {
@@ -3276,19 +2974,19 @@ System_String_o *LocalizationManager__ReplaceNameTag(
       {
         if ( !v7 )
           goto LABEL_110;
-        System_Text_StringBuilder__Append_63721848(v7, text, v6, v13 - v6, 0);
+        System_Text_StringBuilder__Append_64051068(v7, text, v6, v13 - v6, 0);
       }
       v20 = v11 - v13;
-      appended = System_String__Substring_63682392(text, v12, v11 - v13 - 1, 0);
+      appended = System_String__Substring_64012732(text, v12, v11 - v13 - 1, 0);
       if ( !appended )
         goto LABEL_110;
       v21 = appended;
-      appended = (System_String_o *)System_String__StartsWith(appended, (System_String_o *)StringLiteral_370/*"#"*/, 0);
+      appended = (System_String_o *)System_String__StartsWith(appended, (System_String_o *)StringLiteral_369/*"#"*/, 0);
       if ( ((unsigned __int8)appended & 1) != 0 )
       {
         if ( v20 - 2 < 1 )
           goto LABEL_19;
-        appended = System_String__Substring_63682392(text, v13 + 2, v20 - 2, 0);
+        appended = System_String__Substring_64012732(text, v13 + 2, v20 - 2, 0);
         if ( !appended )
           goto LABEL_110;
         appended = (System_String_o *)System_String__Split(appended, 0x3Au, 0, 0);
@@ -3303,22 +3001,22 @@ System_String_o *LocalizationManager__ReplaceNameTag(
           goto LABEL_110;
         monitor = (System_String_o *)appended[1].monitor;
 LABEL_33:
-        appended = (System_String_o *)System_Text_StringBuilder__Append_63721532(v7, monitor, 0);
+        appended = (System_String_o *)System_Text_StringBuilder__Append_64050752(v7, monitor, 0);
         goto LABEL_19;
       }
-      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_501/*"&"*/, 0);
+      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_500/*"&"*/, 0);
       if ( ((unsigned __int8)appended & 1) != 0 )
         goto LABEL_19;
-      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_16095/*"^"*/, 0);
+      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_16078/*"^"*/, 0);
       if ( ((unsigned __int8)appended & 1) != 0 )
         goto LABEL_19;
-      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_25280/*"~"*/, 0);
+      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_25370/*"~"*/, 0);
       if ( ((unsigned __int8)appended & 1) != 0 )
         goto LABEL_19;
-      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_479/*"%"*/, 0);
+      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_478/*"%"*/, 0);
       if ( ((unsigned __int8)appended & 1) != 0 )
         goto LABEL_19;
-      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_21259/*"line"*/, 0);
+      appended = (System_String_o *)System_String__StartsWith(v21, (System_String_o *)StringLiteral_21323/*"line"*/, 0);
       if ( ((unsigned __int8)appended & 1) != 0 )
         goto LABEL_19;
       appended = (System_String_o *)System_String__Split(v21, 0x20u, 0, 0);
@@ -3338,13 +3036,13 @@ LABEL_33:
             switch ( (_DWORD)appended )
             {
               case 0xF00C3C10:
-                v26 = &StringLiteral_24279/*"u"*/;
+                v26 = &StringLiteral_24361/*"u"*/;
                 goto LABEL_87;
               case 0xF60C4582:
-                v26 = &StringLiteral_23194/*"s"*/;
+                v26 = &StringLiteral_23270/*"s"*/;
                 goto LABEL_87;
               case 0xF70C4715:
-                v26 = &StringLiteral_22938/*"r"*/;
+                v26 = &StringLiteral_23012/*"r"*/;
                 goto LABEL_87;
             }
           }
@@ -3352,12 +3050,12 @@ LABEL_33:
           {
             if ( (_DWORD)appended == -368299362 )
             {
-              v26 = &StringLiteral_22364/*"o"*/;
+              v26 = &StringLiteral_22435/*"o"*/;
               goto LABEL_87;
             }
             if ( (_DWORD)appended == -334744124 )
             {
-              v26 = &StringLiteral_20109/*"i"*/;
+              v26 = &StringLiteral_20155/*"i"*/;
               goto LABEL_87;
             }
           }
@@ -3366,12 +3064,12 @@ LABEL_33:
         {
           if ( (_DWORD)appended == -502520314 )
           {
-            v26 = &StringLiteral_19741/*"g"*/;
+            v26 = &StringLiteral_19786/*"g"*/;
             goto LABEL_87;
           }
           if ( (_DWORD)appended == -418632219 )
           {
-            v26 = &StringLiteral_16985/*"b"*/;
+            v26 = &StringLiteral_16982/*"b"*/;
             goto LABEL_87;
           }
         }
@@ -3379,12 +3077,12 @@ LABEL_33:
         {
           if ( (_DWORD)appended == -900850497 )
           {
-            v26 = &StringLiteral_23865/*"sup"*/;
+            v26 = &StringLiteral_23939/*"sup"*/;
             goto LABEL_87;
           }
           if ( (_DWORD)appended == -598853355 )
           {
-            v26 = &StringLiteral_23780/*"sub"*/;
+            v26 = &StringLiteral_23854/*"sub"*/;
             goto LABEL_87;
           }
         }
@@ -3396,13 +3094,13 @@ LABEL_33:
           switch ( (_DWORD)appended )
           {
             case 0xB35135FA:
-              v26 = &StringLiteral_20303/*"image"*/;
+              v26 = &StringLiteral_20350/*"image"*/;
               goto LABEL_87;
             case 0x6AD20EBB:
-              v26 = &StringLiteral_1102/*"/g"*/;
+              v26 = &StringLiteral_1095/*"/g"*/;
               goto LABEL_87;
             case 0x6DD21374:
-              v26 = &StringLiteral_1094/*"/b"*/;
+              v26 = &StringLiteral_1087/*"/b"*/;
               goto LABEL_87;
           }
         }
@@ -3410,12 +3108,12 @@ LABEL_33:
         {
           if ( (_DWORD)appended == 1657930275 )
           {
-            v26 = &StringLiteral_1107/*"/o"*/;
+            v26 = &StringLiteral_1100/*"/o"*/;
             goto LABEL_87;
           }
           if ( (_DWORD)appended == 1766857154 )
           {
-            v26 = &StringLiteral_1111/*"/sup"*/;
+            v26 = &StringLiteral_1104/*"/sup"*/;
             goto LABEL_87;
           }
         }
@@ -3424,31 +3122,31 @@ LABEL_33:
       {
         if ( (_DWORD)appended == 1557264561 )
         {
-          v26 = &StringLiteral_1114/*"/u"*/;
+          v26 = &StringLiteral_1107/*"/u"*/;
           goto LABEL_87;
         }
         if ( (_DWORD)appended == 1590819799 )
         {
-          v26 = &StringLiteral_1109/*"/s"*/;
+          v26 = &StringLiteral_1102/*"/s"*/;
           goto LABEL_87;
         }
       }
       else if ( (_DWORD)appended == 671913016 )
       {
-        appended = (System_String_o *)System_String__op_Equality(v25, (System_String_o *)StringLiteral_861/*"-"*/, 0);
+        appended = (System_String_o *)System_String__op_Equality(v25, (System_String_o *)StringLiteral_858/*"-"*/, 0);
         if ( ((unsigned __int8)appended & 1) != 0 )
         {
           if ( !v31 )
             goto LABEL_19;
           if ( !v7 )
             goto LABEL_110;
-          monitor = (System_String_o *)StringLiteral_15833/*"[-]"*/;
+          monitor = (System_String_o *)StringLiteral_15820/*"[-]"*/;
           goto LABEL_33;
         }
       }
       else if ( (_DWORD)appended == 1464860012 )
       {
-        v26 = &StringLiteral_1110/*"/sub"*/;
+        v26 = &StringLiteral_1103/*"/sub"*/;
 LABEL_87:
         appended = (System_String_o *)System_String__op_Equality(v25, (System_String_o *)*v26, 0);
         if ( ((unsigned __int8)appended & 1) != 0 )
@@ -3474,16 +3172,16 @@ LABEL_87:
           {
             if ( !v7 )
               goto LABEL_110;
-            appended = (System_String_o *)System_Text_StringBuilder__Append_63723860(v7, 0x5Bu, 0);
+            appended = (System_String_o *)System_Text_StringBuilder__Append_64053080(v7, 0x5Bu, 0);
             if ( !LODWORD(v24[1].klass) )
 LABEL_111:
-              sub_1C3E7C8(appended, v15);
+              sub_1C6BC68(appended);
             appended = (System_String_o *)v24[1].monitor;
             if ( !appended )
               goto LABEL_110;
-            v29 = System_String__Substring_63682392(appended, 0, 6, 0);
-            System_Text_StringBuilder__Append_63721532(v7, v29, 0);
-            appended = (System_String_o *)System_Text_StringBuilder__Append_63723860(v7, 0x5Du, 0);
+            v29 = System_String__Substring_64012732(appended, 0, 6, 0);
+            System_Text_StringBuilder__Append_64050752(v7, v29, 0);
+            appended = (System_String_o *)System_Text_StringBuilder__Append_64053080(v7, 0x5Du, 0);
           }
           goto LABEL_19;
         }
@@ -3503,14 +3201,14 @@ LABEL_111:
     v18 = text;
     v19 = v6;
 LABEL_18:
-    appended = (System_String_o *)System_Text_StringBuilder__Append_63721848(v17, v18, v19, v16, 0);
+    appended = (System_String_o *)System_Text_StringBuilder__Append_64051068(v17, v18, v19, v16, 0);
 LABEL_19:
     v6 = v11 + 1;
     if ( v11 + 1 >= stringLength )
     {
       if ( !v7 )
 LABEL_110:
-        sub_1C3E7C0(appended, v15);
+        sub_1C6BC60(appended, v15);
       return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v7->klass->vtable._3_ToString.methodPtr)(
                                   v7,
                                   v7->klass->vtable._3_ToString.method);
@@ -3519,7 +3217,7 @@ LABEL_110:
   if ( !v7 )
     return text;
   if ( stringLength > v6 )
-    System_Text_StringBuilder__Append_63721848(v7, text, v6, stringLength - v6, 0);
+    System_Text_StringBuilder__Append_64051068(v7, text, v6, stringLength - v6, 0);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v7->klass->vtable._3_ToString.methodPtr)(
                               v7,
                               v7->klass->vtable._3_ToString.method);
@@ -3597,49 +3295,49 @@ void LocalizationManager__SetTextData(
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v72; // [xsp+8h] [xbp-B8h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v73; // [xsp+30h] [xbp-90h] BYREF
 
-  if ( (byte_4C56489 & 1) == 0 )
+  if ( (byte_4CB59F0 & 1) == 0 )
   {
-    sub_1C3E564(&char___TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
-    sub_1C3E564(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54);
-    sub_1C3E564(&StringLiteral_8210/*"KINSOKU_SEPARATION_STR"*/);
-    sub_1C3E564(&StringLiteral_1051/*"//"*/);
-    sub_1C3E564(&StringLiteral_9289/*"NORMAL_EFFECT_COLOR"*/);
-    sub_1C3E564(&StringLiteral_8211/*"KINSOKU_TOP_STR"*/);
-    sub_1C3E564(&StringLiteral_8193/*"KANNSUUJI_100"*/);
-    sub_1C3E564(&StringLiteral_11527/*"SELECT_EFFECT_COLOR"*/);
-    sub_1C3E564(&StringLiteral_8192/*"KANNSUUJI_10"*/);
-    sub_1C3E564(&StringLiteral_9325/*"NO_ENTRY_NAME"*/);
-    sub_1C3E564(&StringLiteral_8209/*"KINSOKU_LAST_STR"*/);
-    sub_1C3E564(&StringLiteral_14833/*"UNKNOWN_NAME"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_8191/*"KANNSUUJI_1"*/);
-    byte_4C56489 = 1;
+    sub_1C6BA08(&char___TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_string__object__get_Current__);
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Key__);
+    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_string__object__get_Value__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54);
+    sub_1C6BA08(&StringLiteral_8207/*"KINSOKU_SEPARATION_STR"*/);
+    sub_1C6BA08(&StringLiteral_1044/*"//"*/);
+    sub_1C6BA08(&StringLiteral_9286/*"NORMAL_EFFECT_COLOR"*/);
+    sub_1C6BA08(&StringLiteral_8208/*"KINSOKU_TOP_STR"*/);
+    sub_1C6BA08(&StringLiteral_8190/*"KANNSUUJI_100"*/);
+    sub_1C6BA08(&StringLiteral_11524/*"SELECT_EFFECT_COLOR"*/);
+    sub_1C6BA08(&StringLiteral_8189/*"KANNSUUJI_10"*/);
+    sub_1C6BA08(&StringLiteral_9322/*"NO_ENTRY_NAME"*/);
+    sub_1C6BA08(&StringLiteral_8206/*"KINSOKU_LAST_STR"*/);
+    sub_1C6BA08(&StringLiteral_14824/*"UNKNOWN_NAME"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_8188/*"KANNSUUJI_1"*/);
+    byte_4CB59F0 = 1;
   }
   memset(&v73, 0, sizeof(v73));
-  v4 = (System_Array_o *)sub_1C3E60C(char___TypeInfo, 5);
+  v4 = (System_Array_o *)sub_1C6BAB0(char___TypeInfo, 5);
   v5.fields.value = Field__PrivateImplementationDetails__01A2D4D2A3644EB58B9321AF665A1E3DD259AB36BB36C6953CE858B64416EF54;
   v6 = (System_Char_array *)v4;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64337244(v4, v5, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v4, v5, 0);
   if ( !text_data )
     goto LABEL_63;
-  v9 = System_String__Split_63685660(text_data, v6, 1, 0);
+  v9 = System_String__Split_64016000(text_data, v6, 1, 0);
   stringLength = text_data->fields._stringLength;
   v11 = v9;
-  v12 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor_63714884(v12, stringLength, 0);
+  v12 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor_64044104(v12, stringLength, 0);
   if ( !v11 )
     goto LABEL_63;
   max_length = v11->max_length;
@@ -3649,29 +3347,29 @@ void LocalizationManager__SetTextData(
     while ( 1 )
     {
       if ( v14 >= max_length )
-        sub_1C3E7C8(appended, v8);
+        sub_1C6BC68(appended);
       v15 = &v11->obj.klass + (int)v14;
       v16 = (System_String_o *)v15[4];
       if ( !v16 )
         goto LABEL_63;
-      appended = (System_String_o *)System_String__IndexOf_63694844(
+      appended = (System_String_o *)System_String__IndexOf_64025184(
                                       (System_String_o *)v15[4],
-                                      (System_String_o *)StringLiteral_1051/*"//"*/,
+                                      (System_String_o *)StringLiteral_1044/*"//"*/,
                                       0);
       if ( ((unsigned int)appended & 0x80000000) != 0 )
         break;
       if ( (_DWORD)appended )
       {
-        appended = System_String__Substring_63682392(v16, 0, (int)appended - 1, 0);
+        appended = System_String__Substring_64012732(v16, 0, (int)appended - 1, 0);
         if ( !v12 )
           goto LABEL_63;
         v17 = appended;
         v18 = v12;
 LABEL_15:
-        appended = (System_String_o *)System_Text_StringBuilder__Append_63721532(v18, v17, 0);
+        appended = (System_String_o *)System_Text_StringBuilder__Append_64050752(v18, v17, 0);
         if ( !appended )
           goto LABEL_63;
-        appended = (System_String_o *)System_Text_StringBuilder__Append_63723860(
+        appended = (System_String_o *)System_Text_StringBuilder__Append_64053080(
                                         (System_Text_StringBuilder_o *)appended,
                                         0xAu,
                                         0);
@@ -3700,11 +3398,11 @@ LABEL_18:
   System_Collections_Generic_Dictionary_object__object___GetEnumerator(
     &v72,
     (System_Collections_Generic_Dictionary_object__object__o *)appended,
-    (const MethodInfo_3475C10 *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
+    (const MethodInfo_34BBD6C *)Method_System_Collections_Generic_Dictionary_string__object__GetEnumerator__);
   v73 = v72;
   while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
             &v73,
-            (const MethodInfo_3572518 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
+            (const MethodInfo_35B8FF4 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__MoveNext__) )
   {
     v21 = LocalizationManager_TypeInfo;
     current = v73.fields._current;
@@ -3714,22 +3412,22 @@ LABEL_18:
       v21 = LocalizationManager_TypeInfo;
     }
     if ( !current.fields.value )
-      sub_1C3E7C0(v21, v20);
+      sub_1C6BC60(v21, v20);
     lookup = (System_Collections_Generic_Dictionary_object__object__o *)v21->static_fields->lookup;
     v24 = (Il2CppObject *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))current.fields.value->klass->vtable[3].methodPtr)(
                             current.fields.value,
                             current.fields.value->klass->vtable[3].method);
     if ( !lookup )
-      sub_1C3E7C0(v24, v25);
+      sub_1C6BC60(v24, v25);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       lookup,
       current.fields.key,
       v24,
-      (const MethodInfo_34757CC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+      (const MethodInfo_34BB928 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
   }
   System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
     &v73,
-    (const MethodInfo_3572638 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
+    (const MethodInfo_35B9114 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__object__Dispose__);
   v26 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
   {
@@ -3741,50 +3439,50 @@ LABEL_18:
     goto LABEL_63;
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)appended,
-           (Il2CppObject *)StringLiteral_14833/*"UNKNOWN_NAME"*/,
-           (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+           (Il2CppObject *)StringLiteral_14824/*"UNKNOWN_NAME"*/,
+           (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   static_fields = LocalizationManager_TypeInfo->static_fields;
   static_fields->unknownNameText = (struct System_String_o *)Item;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->unknownNameText, (int32_t)Item, v29, v30);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->unknownNameText, (int32_t)Item, v29, v30);
   appended = (System_String_o *)LocalizationManager_TypeInfo->static_fields->lookup;
   if ( !appended )
     goto LABEL_63;
   v31 = System_Collections_Generic_Dictionary_object__object___get_Item(
           (System_Collections_Generic_Dictionary_object__object__o *)appended,
-          (Il2CppObject *)StringLiteral_9325/*"NO_ENTRY_NAME"*/,
-          (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+          (Il2CppObject *)StringLiteral_9322/*"NO_ENTRY_NAME"*/,
+          (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   v32 = LocalizationManager_TypeInfo->static_fields;
   v32->noEntryNameText = (struct System_String_o *)v31;
-  sub_1C3E508((CGThumbnailListItem_o *)&v32->noEntryNameText, (int32_t)v31, v33, v34);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v32->noEntryNameText, (int32_t)v31, v33, v34);
   appended = (System_String_o *)LocalizationManager_TypeInfo->static_fields->lookup;
   if ( !appended )
     goto LABEL_63;
   v35 = System_Collections_Generic_Dictionary_object__object___get_Item(
           (System_Collections_Generic_Dictionary_object__object__o *)appended,
-          (Il2CppObject *)StringLiteral_8211/*"KINSOKU_TOP_STR"*/,
-          (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+          (Il2CppObject *)StringLiteral_8208/*"KINSOKU_TOP_STR"*/,
+          (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   v36 = LocalizationManager_TypeInfo->static_fields;
   v36->kinsokuTopString = (struct System_String_o *)v35;
-  sub_1C3E508((CGThumbnailListItem_o *)&v36->kinsokuTopString, (int32_t)v35, v37, v38);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v36->kinsokuTopString, (int32_t)v35, v37, v38);
   appended = (System_String_o *)LocalizationManager_TypeInfo->static_fields->lookup;
   if ( !appended )
     goto LABEL_63;
   v39 = System_Collections_Generic_Dictionary_object__object___get_Item(
           (System_Collections_Generic_Dictionary_object__object__o *)appended,
-          (Il2CppObject *)StringLiteral_8209/*"KINSOKU_LAST_STR"*/,
-          (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+          (Il2CppObject *)StringLiteral_8206/*"KINSOKU_LAST_STR"*/,
+          (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   v40 = LocalizationManager_TypeInfo->static_fields;
   v40->kinsokuLastString = (struct System_String_o *)v39;
-  sub_1C3E508((CGThumbnailListItem_o *)&v40->kinsokuLastString, (int32_t)v39, v41, v42);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v40->kinsokuLastString, (int32_t)v39, v41, v42);
   v43 = LocalizationManager_TypeInfo->static_fields;
   appended = (System_String_o *)v43->lookup;
   if ( !appended )
     goto LABEL_63;
   System_Collections_Generic_Dictionary_object__object___TryGetValue(
     (System_Collections_Generic_Dictionary_object__object__o *)appended,
-    (Il2CppObject *)StringLiteral_8210/*"KINSOKU_SEPARATION_STR"*/,
+    (Il2CppObject *)StringLiteral_8207/*"KINSOKU_SEPARATION_STR"*/,
     (Il2CppObject **)&v43->kinsokuSeparationString,
-    (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
+    (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
   v46 = LocalizationManager_TypeInfo;
   v47 = LocalizationManager_TypeInfo->static_fields;
   if ( !v47->kinsokuSeparationString )
@@ -3796,7 +3494,7 @@ LABEL_18:
     }
     v48 = StringLiteral_1/*""*/;
     v47->kinsokuSeparationString = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1C3E508((CGThumbnailListItem_o *)&v47->kinsokuSeparationString, v48, v44, v45);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v47->kinsokuSeparationString, v48, v44, v45);
     v46 = LocalizationManager_TypeInfo;
   }
   if ( !v46->_2.cctor_finished )
@@ -3809,8 +3507,8 @@ LABEL_18:
     goto LABEL_63;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)appended,
-         (Il2CppObject *)StringLiteral_8191/*"KANNSUUJI_1"*/,
-         (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_8188/*"KANNSUUJI_1"*/,
+         (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     v49 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -3823,30 +3521,30 @@ LABEL_18:
       goto LABEL_63;
     v50 = System_Collections_Generic_Dictionary_object__object___get_Item(
             (System_Collections_Generic_Dictionary_object__object__o *)appended,
-            (Il2CppObject *)StringLiteral_8191/*"KANNSUUJI_1"*/,
-            (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            (Il2CppObject *)StringLiteral_8188/*"KANNSUUJI_1"*/,
+            (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     LocalizationManager_TypeInfo->static_fields->lowNumberString = (struct System_String_o *)v50;
-    sub_1C3E508((CGThumbnailListItem_o *)LocalizationManager_TypeInfo->static_fields, (int32_t)v50, v51, v52);
+    sub_1C6B9AC((CGThumbnailListItem_o *)LocalizationManager_TypeInfo->static_fields, (int32_t)v50, v51, v52);
     appended = (System_String_o *)LocalizationManager_TypeInfo->static_fields->lookup;
     if ( !appended )
       goto LABEL_63;
     v53 = System_Collections_Generic_Dictionary_object__object___get_Item(
             (System_Collections_Generic_Dictionary_object__object__o *)appended,
-            (Il2CppObject *)StringLiteral_8192/*"KANNSUUJI_10"*/,
-            (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            (Il2CppObject *)StringLiteral_8189/*"KANNSUUJI_10"*/,
+            (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     v54 = LocalizationManager_TypeInfo->static_fields;
     v54->hiNumberString = (struct System_String_o *)v53;
-    sub_1C3E508((CGThumbnailListItem_o *)&v54->hiNumberString, (int32_t)v53, v55, v56);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v54->hiNumberString, (int32_t)v53, v55, v56);
     appended = (System_String_o *)LocalizationManager_TypeInfo->static_fields->lookup;
     if ( !appended )
       goto LABEL_63;
     v57 = System_Collections_Generic_Dictionary_object__object___get_Item(
             (System_Collections_Generic_Dictionary_object__object__o *)appended,
-            (Il2CppObject *)StringLiteral_8193/*"KANNSUUJI_100"*/,
-            (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+            (Il2CppObject *)StringLiteral_8190/*"KANNSUUJI_100"*/,
+            (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
     v58 = LocalizationManager_TypeInfo->static_fields;
     v58->hi2NumberString = (struct System_String_o *)v57;
-    sub_1C3E508((CGThumbnailListItem_o *)&v58->hi2NumberString, (int32_t)v57, v59, v60);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v58->hi2NumberString, (int32_t)v57, v59, v60);
   }
   v61 = LocalizationManager_TypeInfo;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -3859,8 +3557,8 @@ LABEL_18:
     goto LABEL_63;
   v62 = System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)appended,
-          (Il2CppObject *)StringLiteral_9289/*"NORMAL_EFFECT_COLOR"*/,
-          (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+          (Il2CppObject *)StringLiteral_9286/*"NORMAL_EFFECT_COLOR"*/,
+          (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
   v63 = LocalizationManager_TypeInfo;
   cctor_finished = LocalizationManager_TypeInfo->_2.cctor_finished;
   if ( v62 )
@@ -3875,8 +3573,8 @@ LABEL_18:
     {
       v65 = System_Collections_Generic_Dictionary_object__object___get_Item(
               (System_Collections_Generic_Dictionary_object__object__o *)appended,
-              (Il2CppObject *)StringLiteral_9289/*"NORMAL_EFFECT_COLOR"*/,
-              (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+              (Il2CppObject *)StringLiteral_9286/*"NORMAL_EFFECT_COLOR"*/,
+              (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
       UnityEngine_ColorUtility__TryParseHtmlString(
         (System_String_o *)v65,
         &LocalizationManager_TypeInfo->static_fields->normalEffectColor,
@@ -3886,8 +3584,8 @@ LABEL_18:
       {
         v66 = System_Collections_Generic_Dictionary_object__object___get_Item(
                 (System_Collections_Generic_Dictionary_object__object__o *)appended,
-                (Il2CppObject *)StringLiteral_11527/*"SELECT_EFFECT_COLOR"*/,
-                (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+                (Il2CppObject *)StringLiteral_11524/*"SELECT_EFFECT_COLOR"*/,
+                (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
         UnityEngine_ColorUtility__TryParseHtmlString(
           (System_String_o *)v66,
           &LocalizationManager_TypeInfo->static_fields->selectEffectColor,
@@ -3896,7 +3594,7 @@ LABEL_18:
       }
     }
 LABEL_63:
-    sub_1C3E7C0(appended, v8);
+    sub_1C6BC60(appended, v8);
   }
   if ( !cctor_finished )
   {
@@ -3922,11 +3620,11 @@ bool LocalizationManager__TryGet(
   LocalizationManager_c *v11; // x0
   System_Collections_Generic_Dictionary_object__object__o *lookup; // x0
 
-  if ( (byte_4C5645C & 1) == 0 )
+  if ( (byte_4CB59C3 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C5645C = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59C3 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -3941,14 +3639,14 @@ bool LocalizationManager__TryGet(
     }
     lookup = (System_Collections_Generic_Dictionary_object__object__o *)v11->static_fields->lookup;
     if ( !lookup )
-      sub_1C3E7C0(0, v7);
+      sub_1C6BC60(0, v7);
     defaultText = (System_String_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                        lookup,
                                        (Il2CppObject *)key,
-                                       (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
+                                       (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__string__get_Item__);
   }
   *resultText = defaultText;
-  sub_1C3E508((CGThumbnailListItem_o *)resultText, (int32_t)defaultText, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)resultText, (int32_t)defaultText, v8, v9);
   return v10;
 }
 
@@ -3971,22 +3669,22 @@ void LocalizationManager___c__DisplayClass16_0___LoadAssetData_b__0(
   LocalizationManager_c *v6; // x0
 
   v4 = this;
-  if ( (byte_4C5648C & 1) == 0 )
+  if ( (byte_4CB59F3 & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetData_GetObject_TextAsset___);
-    this = (LocalizationManager___c__DisplayClass16_0_o *)sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C5648C = 1;
+    sub_1C6BA08(&Method_AssetData_GetObject_TextAsset___);
+    this = (LocalizationManager___c__DisplayClass16_0_o *)sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB59F3 = 1;
   }
   if ( !assetData
     || (this = (LocalizationManager___c__DisplayClass16_0_o *)AssetData__GetObject_object_(
                                                                 assetData,
-                                                                (const MethodInfo_30DACD8 *)Method_AssetData_GetObject_TextAsset___)) == 0
+                                                                (const MethodInfo_311C2F8 *)Method_AssetData_GetObject_TextAsset___)) == 0
     || (this = (LocalizationManager___c__DisplayClass16_0_o *)UnityEngine_TextAsset__get_text(
                                                                 (UnityEngine_TextAsset_o *)this,
                                                                 0),
         !v4->fields.ins) )
   {
-    sub_1C3E7C0(this, assetData);
+    sub_1C6BC60(this, assetData);
   }
   LocalizationManager__SetTextData((LocalizationManager_o *)this, (System_String_o *)this, v5);
   v6 = LocalizationManager_TypeInfo;

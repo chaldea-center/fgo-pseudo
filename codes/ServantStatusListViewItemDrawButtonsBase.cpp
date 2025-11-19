@@ -11,15 +11,15 @@ int32_t ServantStatusListViewItemDrawButtonsBase__GetButtonIndex(
         UICommonButton_o *buttonObj,
         const MethodInfo *method)
 {
-  if ( (byte_4C53903 & 1) == 0 )
+  if ( (byte_4CB2E53 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Array_IndexOf_UICommonButton___);
-    byte_4C53903 = 1;
+    sub_1C6BA08(&Method_System_Array_IndexOf_UICommonButton___);
+    byte_4CB2E53 = 1;
   }
   return System_Array__IndexOf_object_(
            (System_Object_array *)this->fields.tdSpeedButtonList,
            (Il2CppObject *)buttonObj,
-           (const MethodInfo_3200DC4 *)Method_System_Array_IndexOf_UICommonButton___);
+           (const MethodInfo_3243314 *)Method_System_Array_IndexOf_UICommonButton___);
 }
 
 
@@ -84,22 +84,22 @@ void ServantStatusListViewItemDrawButtonsBase__SetItem(
   float v32; // s2
   float v33; // s3
 
-  if ( (byte_4C53902 & 1) == 0 )
+  if ( (byte_4CB2E52 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_17464/*"btn_bg_20"*/);
-    sub_1C3E564(&StringLiteral_17465/*"btn_bg_21"*/);
-    byte_4C53902 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_17462/*"btn_bg_20"*/);
+    sub_1C6BA08(&StringLiteral_17463/*"btn_bg_21"*/);
+    byte_4CB2E52 = 1;
   }
   this->fields.dispMode = mode;
   if ( item && mode )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( !byte_4C514FE )
+    if ( !byte_4CB0A46 )
     {
-      sub_1C3E564(&LocalizationManager_TypeInfo);
-      byte_4C514FE = 1;
+      sub_1C6BA08(&LocalizationManager_TypeInfo);
+      byte_4CB0A46 = 1;
     }
     v7 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -112,11 +112,11 @@ void ServantStatusListViewItemDrawButtonsBase__SetItem(
     v10 = static_fields[21];
     v11 = static_fields[22];
     v12 = static_fields[23];
-    if ( !byte_4C514FF )
+    if ( !byte_4CB0A47 )
     {
-      sub_1C3E564(&LocalizationManager_TypeInfo);
+      sub_1C6BA08(&LocalizationManager_TypeInfo);
       v7 = LocalizationManager_TypeInfo;
-      byte_4C514FF = 1;
+      byte_4CB0A47 = 1;
     }
     if ( !v7->_2.cctor_finished )
     {
@@ -147,7 +147,7 @@ void ServantStatusListViewItemDrawButtonsBase__SetItem(
       {
         if ( v23 >= LODWORD(tdSpeedButtonList->max_length) )
 LABEL_45:
-          sub_1C3E7C8(v18, v19);
+          sub_1C6BC68(v18);
         v26 = (int)v23;
         v18 = tdSpeedButtonList->m_Items[v23];
         if ( !v18 )
@@ -161,7 +161,7 @@ LABEL_45:
         v18 = (UICommonButton_o *)tdSpeedButtonSpriteList->m_Items[v26];
         if ( !v18 )
           break;
-        v28 = (System_String_o **)(v25 ? &StringLiteral_17465/*"btn_bg_21"*/ : &StringLiteral_17464/*"btn_bg_20"*/);
+        v28 = (System_String_o **)(v25 ? &StringLiteral_17463/*"btn_bg_21"*/ : &StringLiteral_17462/*"btn_bg_20"*/);
         UISprite__set_spriteName((UISprite_o *)v18, *v28, 0);
         tdSpeedRangeLabelList = this->fields.tdSpeedRangeLabelList;
         if ( !tdSpeedRangeLabelList )
@@ -184,7 +184,7 @@ LABEL_45:
       }
       while ( tdSpeedButtonList );
 LABEL_43:
-      sub_1C3E7C0(v18, v19);
+      sub_1C6BC60(v18, v19);
     }
   }
 }

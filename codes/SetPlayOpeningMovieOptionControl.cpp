@@ -15,43 +15,43 @@ void SetPlayOpeningMovieOptionControl__Init(SetPlayOpeningMovieOptionControl_o *
   UILabel_o *touchSkipInfoLabel; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4C51D82 & 1) == 0 )
+  if ( (byte_4CB12CA & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&OptionManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_9674/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/);
-    sub_1C3E564(&StringLiteral_9716/*"OPTION_TOUCH_SKIP_OPENING_MOVIE"*/);
-    sub_1C3E564(&StringLiteral_9717/*"OPTION_TOUCH_SKIP_OPENING_MOVIE_INFO"*/);
-    sub_1C3E564(&StringLiteral_20716/*"img_txt_playopening"*/);
-    sub_1C3E564(&StringLiteral_9675/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/);
-    byte_4C51D82 = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&OptionManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9670/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/);
+    sub_1C6BA08(&StringLiteral_9712/*"OPTION_TOUCH_SKIP_OPENING_MOVIE"*/);
+    sub_1C6BA08(&StringLiteral_9713/*"OPTION_TOUCH_SKIP_OPENING_MOVIE_INFO"*/);
+    sub_1C6BA08(&StringLiteral_20763/*"img_txt_playopening"*/);
+    sub_1C6BA08(&StringLiteral_9671/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/);
+    byte_4CB12CA = 1;
   }
   titleImage = this->fields.titleImage;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetMyRoomImage(titleImage, (System_String_o *)StringLiteral_20716/*"img_txt_playopening"*/, 0);
+  AtlasManager__SetMyRoomImage(titleImage, (System_String_o *)StringLiteral_20763/*"img_txt_playopening"*/, 0);
   notPlayTitleLabel = this->fields.notPlayTitleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9674/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9670/*"OPTION_NOT_PLAY_OPENING_MOVIE"*/, 0);
   if ( !notPlayTitleLabel )
     goto LABEL_14;
   UILabel__set_text(notPlayTitleLabel, v5, 0);
   notPlayInfoLabel = this->fields.notPlayInfoLabel;
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9675/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9671/*"OPTION_NOT_PLAY_OPENING_MOVIE_INFO"*/, 0);
   if ( !notPlayInfoLabel
     || (UILabel__set_text(notPlayInfoLabel, v5, 0),
         touchSkipTitleLabel = this->fields.touchSkipTitleLabel,
-        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9716/*"OPTION_TOUCH_SKIP_OPENING_MOVIE"*/, 0),
+        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9712/*"OPTION_TOUCH_SKIP_OPENING_MOVIE"*/, 0),
         !touchSkipTitleLabel)
     || (UILabel__set_text(touchSkipTitleLabel, v5, 0),
         touchSkipInfoLabel = this->fields.touchSkipInfoLabel,
-        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9717/*"OPTION_TOUCH_SKIP_OPENING_MOVIE_INFO"*/, 0),
+        v5 = LocalizationManager__Get((System_String_o *)StringLiteral_9713/*"OPTION_TOUCH_SKIP_OPENING_MOVIE_INFO"*/, 0),
         !touchSkipInfoLabel) )
   {
 LABEL_14:
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   }
   UILabel__set_text(touchSkipInfoLabel, v5, 0);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -72,10 +72,10 @@ void SetPlayOpeningMovieOptionControl__OnClickNotPlaySwitchButton(
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C51D84 & 1) == 0 )
+  if ( (byte_4CB12CC & 1) == 0 )
   {
-    sub_1C3E564(&Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__);
-    byte_4C51D84 = 1;
+    sub_1C6BA08(&Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__);
+    byte_4CB12CC = 1;
   }
   klass = this->klass;
   this->fields.notPlayFlag ^= 1u;
@@ -85,8 +85,8 @@ void SetPlayOpeningMovieOptionControl__OnClickNotPlaySwitchButton(
   v4 = Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__;
   notPlayFlag = this->fields.notPlayFlag;
   if ( (*((_BYTE *)Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C3E57C(Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C3E548(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C6BA20(Method_SetPlayOpeningMovieOptionControl_OnClickNotPlaySwitchButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, !notPlayFlag, 0, 0);
   SetPlayOpeningMovieOptionControl__RefreshDisplay(this, v7);
 }
@@ -102,10 +102,10 @@ void SetPlayOpeningMovieOptionControl__OnClickTouchSkipSwitchButton(
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C51D85 & 1) == 0 )
+  if ( (byte_4CB12CD & 1) == 0 )
   {
-    sub_1C3E564(&Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__);
-    byte_4C51D85 = 1;
+    sub_1C6BA08(&Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__);
+    byte_4CB12CD = 1;
   }
   klass = this->klass;
   this->fields.touchSkipFlag ^= 1u;
@@ -115,8 +115,8 @@ void SetPlayOpeningMovieOptionControl__OnClickTouchSkipSwitchButton(
   v4 = Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__;
   touchSkipFlag = this->fields.touchSkipFlag;
   if ( (*((_BYTE *)Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C3E57C(Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C3E548(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C6BA20(Method_SetPlayOpeningMovieOptionControl_OnClickTouchSkipSwitchButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, !touchSkipFlag, 0, 0);
   SetPlayOpeningMovieOptionControl__RefreshDisplay(this, v7);
 }
@@ -126,10 +126,10 @@ void SetPlayOpeningMovieOptionControl__Reflection(SetPlayOpeningMovieOptionContr
 {
   _BOOL4 notPlayFlag; // w20
 
-  if ( (byte_4C51D86 & 1) == 0 )
+  if ( (byte_4CB12CE & 1) == 0 )
   {
-    sub_1C3E564(&OptionManager_TypeInfo);
-    byte_4C51D86 = 1;
+    sub_1C6BA08(&OptionManager_TypeInfo);
+    byte_4CB12CE = 1;
   }
   notPlayFlag = this->fields.notPlayFlag;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -150,24 +150,24 @@ void SetPlayOpeningMovieOptionControl__RefreshDisplay(
   System_String_o *v7; // x1
   System_String_o *v8; // x1
 
-  if ( (byte_4C51D83 & 1) == 0 )
+  if ( (byte_4CB12CB & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_17524/*"btn_on"*/);
-    sub_1C3E564(&StringLiteral_17523/*"btn_off"*/);
-    byte_4C51D83 = 1;
+    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
+    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
+    byte_4CB12CB = 1;
   }
   notPlaySwitchButton = this->fields.notPlaySwitchButton;
   if ( !notPlaySwitchButton
     || ((touchSkipFlag = this->fields.touchSkipFlag,
-         v5 = StringLiteral_17523/*"btn_off"*/,
-         v6 = StringLiteral_17524/*"btn_on"*/,
+         v5 = StringLiteral_17521/*"btn_off"*/,
+         v6 = StringLiteral_17522/*"btn_on"*/,
          this->fields.notPlayFlag)
-      ? (v7 = (System_String_o *)StringLiteral_17524/*"btn_on"*/)
-      : (v7 = (System_String_o *)StringLiteral_17523/*"btn_off"*/),
+      ? (v7 = (System_String_o *)StringLiteral_17522/*"btn_on"*/)
+      : (v7 = (System_String_o *)StringLiteral_17521/*"btn_off"*/),
         UIButton__set_normalSprite(notPlaySwitchButton, v7, 0),
         (notPlaySwitchButton = this->fields.touchSkipSwitchButton) == 0) )
   {
-    sub_1C3E7C0(notPlaySwitchButton, method);
+    sub_1C6BC60(notPlaySwitchButton, method);
   }
   if ( touchSkipFlag )
     v8 = (System_String_o *)v6;

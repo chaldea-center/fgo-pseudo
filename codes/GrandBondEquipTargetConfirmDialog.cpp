@@ -1,9 +1,9 @@
 void GrandBondEquipTargetConfirmDialog___ctor(GrandBondEquipTargetConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C595D7 & 1) == 0 )
+  if ( (byte_4CB8B5E & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C595D7 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB8B5E = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -33,7 +33,7 @@ void GrandBondEquipTargetConfirmDialog__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C3E508(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1C6B9AC(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       (unsigned int)result,
@@ -88,13 +88,13 @@ void GrandBondEquipTargetConfirmDialog__OnEnable(GrandBondEquipTargetConfirmDial
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C595D6 & 1) == 0 )
+  if ( (byte_4CB8B5D & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_15648/*"Window/Buttons/CancelButton"*/);
-    byte_4C595D6 = 1;
+    sub_1C6BA08(&StringLiteral_15635/*"Window/Buttons/CancelButton"*/);
+    byte_4CB8B5D = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45015816(transform, (System_String_o *)StringLiteral_15648/*"Window/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45210584(transform, (System_String_o *)StringLiteral_15635/*"Window/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -106,7 +106,7 @@ void GrandBondEquipTargetConfirmDialog__Open(
   const MethodInfo *v3; // x3
 
   this->fields.callbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
   BaseDialog__SafeOpen((BaseDialog_o *)this, 0, 0, 0);
 }
 
@@ -126,10 +126,10 @@ void GrandBondEquipTargetConfirmDialog__add_callbackFunc(
   GrandBondEquipTargetConfirmDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C595D4 & 1) == 0 )
+  if ( (byte_4CB8B5B & 1) == 0 )
   {
-    sub_1C3E564(&GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo);
-    byte_4C595D4 = 1;
+    sub_1C6BA08(&GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo);
+    byte_4CB8B5B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -142,13 +142,13 @@ void GrandBondEquipTargetConfirmDialog__add_callbackFunc(
       if ( (GrandBondEquipTargetConfirmDialog_CallbackFunc_c *)v8->klass != GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   GrandBondEquipTargetConfirmDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -167,10 +167,10 @@ void GrandBondEquipTargetConfirmDialog__remove_callbackFunc(
   GrandBondEquipTargetConfirmDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C595D5 & 1) == 0 )
+  if ( (byte_4CB8B5C & 1) == 0 )
   {
-    sub_1C3E564(&GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo);
-    byte_4C595D5 = 1;
+    sub_1C6BA08(&GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo);
+    byte_4CB8B5C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -183,13 +183,13 @@ void GrandBondEquipTargetConfirmDialog__remove_callbackFunc(
       if ( (GrandBondEquipTargetConfirmDialog_CallbackFunc_c *)v8->klass != GrandBondEquipTargetConfirmDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   GrandBondEquipTargetConfirmDialog__Awake(v11, v12);
 }
 
@@ -209,15 +209,15 @@ void GrandBondEquipTargetConfirmDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -229,9 +229,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A85004;
+  this->fields.invoke_impl = (intptr_t)sub_1AA4200;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A84FBC;
+  this->fields.extra_arg = (intptr_t)sub_1AA41B8;
 }
 
 
@@ -242,29 +242,18 @@ System_IAsyncResult_o *GrandBondEquipTargetConfirmDialog_CallbackFunc__BeginInvo
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v13; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v13 = result;
-  if ( (byte_4C595D8 & 1) == 0 )
+  v10 = result;
+  if ( (byte_4CB8B5F & 1) == 0 )
   {
-    sub_1C3E564(&GrandBondEquipTargetConfirmDialog_Result_TypeInfo);
-    byte_4C595D8 = 1;
+    sub_1C6BA08(&GrandBondEquipTargetConfirmDialog_Result_TypeInfo);
+    byte_4CB8B5F = 1;
   }
-  v12[1] = 0;
-  v12[0] = j_il2cpp_value_box_0(
-             GrandBondEquipTargetConfirmDialog_Result_TypeInfo,
-             &v13,
-             callback,
-             object,
-             method,
-             v5,
-             v6,
-             v7);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
+  v9[1] = 0;
+  v9[0] = j_il2cpp_value_box_0(GrandBondEquipTargetConfirmDialog_Result_TypeInfo, &v10);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
 }
 
 
@@ -273,7 +262,7 @@ void GrandBondEquipTargetConfirmDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 

@@ -1,28 +1,28 @@
 void MasterPhotoEntity___ctor(MasterPhotoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C58040 & 1) == 0 )
+  if ( (byte_4CB75AE & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C58040 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB75AE = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *MasterPhotoEntity__CreatePK(int32_t equipId, int32_t type, int32_t position, const MethodInfo *method)
 {
-  if ( (byte_4C5803F & 1) == 0 )
+  if ( (byte_4CB75AD & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C5803F = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4CB75AD = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            equipId,
            type,
            position,
-           (const MethodInfo_30F8088 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_3139980 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

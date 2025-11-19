@@ -2,10 +2,10 @@ void MenuListControl___cctor(const MethodInfo *method)
 {
   struct MenuListControl_StaticFields *static_fields; // x8
 
-  if ( (byte_4C5AD7F & 1) == 0 )
+  if ( (byte_4CBA355 & 1) == 0 )
   {
-    sub_1C3E564(&MenuListControl_TypeInfo);
-    byte_4C5AD7F = 1;
+    sub_1C6BA08(&MenuListControl_TypeInfo);
+    byte_4CBA355 = 1;
   }
   static_fields = MenuListControl_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->ALPHA_ANIMATION_SPD = 0x73F000000LL;
@@ -27,22 +27,22 @@ void MenuListControl___ctor(MenuListControl_o *this, const MethodInfo *method)
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C5AD7E & 1) == 0 )
+  if ( (byte_4CBA354 & 1) == 0 )
   {
-    sub_1C3E564(&MenuListControl_CombineKind_var);
-    sub_1C3E564(&System_Enum_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SetNoticeNumControl___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_SetNoticeNumControl__TypeInfo);
-    sub_1C3E564(&RestTimeNoticeControl___TypeInfo);
-    sub_1C3E564(&System_Type_TypeInfo);
-    byte_4C5AD7E = 1;
+    sub_1C6BA08(&MenuListControl_CombineKind_var);
+    sub_1C6BA08(&System_Enum_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SetNoticeNumControl___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_SetNoticeNumControl__TypeInfo);
+    sub_1C6BA08(&RestTimeNoticeControl___TypeInfo);
+    sub_1C6BA08(&System_Type_TypeInfo);
+    byte_4CBA354 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_SetNoticeNumControl__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SetNoticeNumControl__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_SetNoticeNumControl___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SetNoticeNumControl___ctor__);
   this->fields.setNoticeNumList = (struct System_Collections_Generic_List_SetNoticeNumControl__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.setNoticeNumList, (int32_t)v3, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.setNoticeNumList, (int32_t)v3, v4, v5);
   v6 = MenuListControl_CombineKind_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
@@ -52,10 +52,10 @@ void MenuListControl___ctor(MenuListControl_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(System_Enum_TypeInfo);
   Names = System_Enum__GetNames(TypeFromHandle, 0);
   if ( !Names )
-    sub_1C3E7C0(0, v10);
-  v11 = (struct RestTimeNoticeControl_array *)sub_1C3E60C(RestTimeNoticeControl___TypeInfo, LODWORD(Names->max_length));
+    sub_1C6BC60(0, v10);
+  v11 = (struct RestTimeNoticeControl_array *)sub_1C6BAB0(RestTimeNoticeControl___TypeInfo, LODWORD(Names->max_length));
   this->fields.restTimeNoticeList = v11;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.restTimeNoticeList, (int32_t)v11, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.restTimeNoticeList, (int32_t)v11, v12, v13);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -67,11 +67,11 @@ AlphaTransitionCalculator_o *MenuListControl__CreateAlphaCalculator(MenuListCont
   System_Func_float__float__float__float__o *v4; // x19
   AlphaTransitionCalculator_o *v5; // x20
 
-  if ( (byte_4C5AD79 & 1) == 0 )
+  if ( (byte_4CBA34F & 1) == 0 )
   {
-    sub_1C3E564(&AlphaTransitionCalculator_TypeInfo);
-    sub_1C3E564(&MenuListControl_TypeInfo);
-    byte_4C5AD79 = 1;
+    sub_1C6BA08(&AlphaTransitionCalculator_TypeInfo);
+    sub_1C6BA08(&MenuListControl_TypeInfo);
+    byte_4CBA34F = 1;
   }
   v2 = MenuListControl_TypeInfo;
   if ( !MenuListControl_TypeInfo->_2.cctor_finished )
@@ -84,7 +84,7 @@ AlphaTransitionCalculator_o *MenuListControl__CreateAlphaCalculator(MenuListCont
          MenuListControl_TypeInfo->static_fields->ALPHA_ANIMATION_SPD,
          (float)MenuListControl_TypeInfo->static_fields->ALPHA_ANIMATION_FRAME_NUM,
          0);
-  v5 = (AlphaTransitionCalculator_o *)sub_1C3E7B0(AlphaTransitionCalculator_TypeInfo);
+  v5 = (AlphaTransitionCalculator_o *)sub_1C6BC54(AlphaTransitionCalculator_TypeInfo);
   AlphaTransitionCalculator___ctor(v5, v3, v4, 0);
   return v5;
 }
@@ -114,13 +114,13 @@ void MenuListControl__InitMenuEventNotice(MenuListControl_o *this, const MethodI
   __int64 klass_low; // x10
   intptr_t v23; // x8
 
-  if ( (byte_4C5AD72 & 1) == 0 )
+  if ( (byte_4CBA348 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentsInChildren_EventNoticeControl___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventNoticeControl__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventNoticeControl___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_EventNoticeControl__TypeInfo);
-    byte_4C5AD72 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentsInChildren_EventNoticeControl___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_EventNoticeControl__TypeInfo);
+    byte_4CBA348 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -135,13 +135,13 @@ void MenuListControl__InitMenuEventNotice(MenuListControl_o *this, const MethodI
   if ( !gameObject )
     goto LABEL_25;
   childCount = UnityEngine_Transform__get_childCount((UnityEngine_Transform_o *)gameObject, 0);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventNoticeControl__TypeInfo);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventNoticeControl__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventNoticeControl___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventNoticeControl___ctor__);
   this->fields.noticeList = (struct System_Collections_Generic_List_EventNoticeControl__o *)v6;
   p_noticeList = &this->fields.noticeList;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.noticeList, (int32_t)v6, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.noticeList, (int32_t)v6, v8, v9);
   v10 = childCount - 1;
   if ( childCount - 1 >= 1 )
   {
@@ -165,7 +165,7 @@ void MenuListControl__InitMenuEventNotice(MenuListControl_o *this, const MethodI
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponentsInChildren_object_(
                                                  (UnityEngine_Component_o *)gameObject,
                                                  1,
-                                                 (const MethodInfo_30F0F64 *)Method_UnityEngine_Component_GetComponentsInChildren_EventNoticeControl___);
+                                                 (const MethodInfo_313285C *)Method_UnityEngine_Component_GetComponentsInChildren_EventNoticeControl___);
       if ( !gameObject )
         goto LABEL_25;
       klass = (int)gameObject[1].klass;
@@ -180,7 +180,7 @@ LABEL_23:
     while ( 1 )
     {
       if ( v14 >= klass )
-        sub_1C3E7C8(gameObject, v4);
+        sub_1C6BC68(gameObject);
       v15 = (int *)(&v13->klass + (int)v14);
       v16 = (EventNoticeControl_o *)*((_QWORD *)v15 + 4);
       if ( !v16 )
@@ -204,21 +204,21 @@ LABEL_23:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)gameObject,
           (Il2CppObject *)v16,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
         v23 = m_CachedPtr + 8 * klass_low;
         LODWORD(gameObject[1].klass) = klass_low + 1;
         *(_QWORD *)(v23 + 32) = v16;
-        sub_1C3E508((CGThumbnailListItem_o *)(v23 + 32), (int32_t)v16, v18, v19);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v23 + 32), (int32_t)v16, v18, v19);
       }
       klass = (int)v13[1].klass;
       if ( (int)++v14 >= klass )
         goto LABEL_23;
     }
 LABEL_25:
-    sub_1C3E7C0(gameObject, v4);
+    sub_1C6BC60(gameObject, v4);
   }
 }
 
@@ -253,19 +253,19 @@ void MenuListControl__SetBudgeNumNotice(MenuListControl_o *this, const MethodInf
   __int64 size; // x11
   UnityEngine_GameObject_o *v15; // x1
   Il2CppClass **v16; // x0
-  Il2CppObject *ComponentInChildren_object__51315876; // x21
+  Il2CppObject *ComponentInChildren_object__51584412; // x21
   int32_t v18; // w2
   const MethodInfo *v19; // x3
   unsigned int *restTimeNoticeList; // x28
   __int64 v21; // x0
 
-  if ( (byte_4C5AD73 & 1) == 0 )
+  if ( (byte_4CBA349 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentInChildren_RestTimeNoticeControl___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentInChildren_SetNoticeNumControl___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SetNoticeNumControl__Add__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5AD73 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInChildren_RestTimeNoticeControl___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInChildren_SetNoticeNumControl___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SetNoticeNumControl__Add__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA349 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -300,9 +300,9 @@ void MenuListControl__SetBudgeNumNotice(MenuListControl_o *this, const MethodInf
                                                  0);
       if ( !gameObject )
         break;
-      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponentInChildren_object__51315876(
+      gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponentInChildren_object__51584412(
                                                  (UnityEngine_Component_o *)gameObject,
-                                                 (const MethodInfo_30F04A4 *)Method_UnityEngine_Component_GetComponentInChildren_SetNoticeNumControl___);
+                                                 (const MethodInfo_3131D9C *)Method_UnityEngine_Component_GetComponentInChildren_SetNoticeNumControl___);
       setNoticeNumList = (System_Collections_Generic_List_object__o *)this->fields.setNoticeNumList;
       if ( !setNoticeNumList )
         break;
@@ -318,14 +318,14 @@ void MenuListControl__SetBudgeNumNotice(MenuListControl_o *this, const MethodInf
         System_Collections_Generic_List_object___AddWithResize(
           setNoticeNumList,
           (Il2CppObject *)gameObject,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
       }
       else
       {
         v16 = &items->obj.klass + size;
         setNoticeNumList->fields._size = size + 1;
         v16[4] = (Il2CppClass *)v15;
-        sub_1C3E508((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v15, v9, v10);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v15, v9, v10);
       }
       gameObject = (UnityEngine_GameObject_o *)this->fields.menuListGrid;
       if ( !gameObject )
@@ -341,13 +341,13 @@ void MenuListControl__SetBudgeNumNotice(MenuListControl_o *this, const MethodInf
                                                  0);
       if ( !gameObject )
         break;
-      ComponentInChildren_object__51315876 = UnityEngine_Component__GetComponentInChildren_object__51315876(
+      ComponentInChildren_object__51584412 = UnityEngine_Component__GetComponentInChildren_object__51584412(
                                                (UnityEngine_Component_o *)gameObject,
-                                               (const MethodInfo_30F04A4 *)Method_UnityEngine_Component_GetComponentInChildren_RestTimeNoticeControl___);
+                                               (const MethodInfo_3131D9C *)Method_UnityEngine_Component_GetComponentInChildren_RestTimeNoticeControl___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
-                                                 (UnityEngine_Object_o *)ComponentInChildren_object__51315876,
+                                                 (UnityEngine_Object_o *)ComponentInChildren_object__51584412,
                                                  0,
                                                  0);
       if ( ((unsigned __int8)gameObject & 1) != 0 )
@@ -355,23 +355,23 @@ void MenuListControl__SetBudgeNumNotice(MenuListControl_o *this, const MethodInf
         restTimeNoticeList = (unsigned int *)this->fields.restTimeNoticeList;
         if ( !restTimeNoticeList )
           break;
-        if ( ComponentInChildren_object__51315876 )
+        if ( ComponentInChildren_object__51584412 )
         {
-          gameObject = (UnityEngine_GameObject_o *)sub_1C3E6A0(
-                                                     ComponentInChildren_object__51315876,
+          gameObject = (UnityEngine_GameObject_o *)sub_1C6BB44(
+                                                     ComponentInChildren_object__51584412,
                                                      *(_QWORD *)(*(_QWORD *)restTimeNoticeList + 64LL));
           if ( !gameObject )
           {
-            v21 = sub_1C3E7E4(0);
-            sub_1C3E68C(v21, 0);
+            v21 = sub_1C6BC84(0);
+            sub_1C6BB30(v21, 0);
           }
         }
         if ( v6 >= restTimeNoticeList[6] )
-          sub_1C3E7C8(gameObject, v4);
-        *(_QWORD *)&restTimeNoticeList[2 * v6 + 8] = ComponentInChildren_object__51315876;
-        sub_1C3E508(
+          sub_1C6BC68(gameObject);
+        *(_QWORD *)&restTimeNoticeList[2 * v6 + 8] = ComponentInChildren_object__51584412;
+        sub_1C6B9AC(
           (CGThumbnailListItem_o *)&restTimeNoticeList[i],
-          (int32_t)ComponentInChildren_object__51315876,
+          (int32_t)ComponentInChildren_object__51584412,
           v18,
           v19);
       }
@@ -379,7 +379,7 @@ void MenuListControl__SetBudgeNumNotice(MenuListControl_o *this, const MethodInf
         return;
     }
 LABEL_29:
-    sub_1C3E7C0(gameObject, v4);
+    sub_1C6BC60(gameObject, v4);
   }
 }
 
@@ -392,11 +392,11 @@ void MenuListControl__SetEventNotice(MenuListControl_o *this, const MethodInfo *
   int32_t v6; // w20
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C5AD7A & 1) == 0 )
+  if ( (byte_4CBA350 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventNoticeControl__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
-    byte_4C5AD7A = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
+    byte_4CBA350 = 1;
   }
   noticeList = (System_Collections_Generic_List_object__o *)this->fields.noticeList;
   if ( noticeList )
@@ -411,7 +411,7 @@ void MenuListControl__SetEventNotice(MenuListControl_o *this, const MethodInfo *
         noticeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     noticeList,
                                                                     v6,
-                                                                    (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
+                                                                    (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
         if ( !noticeList )
           break;
         if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)noticeList, 0) )
@@ -422,7 +422,7 @@ void MenuListControl__SetEventNotice(MenuListControl_o *this, const MethodInfo *
           noticeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       noticeList,
                                                                       v6,
-                                                                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
+                                                                      (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
           if ( !noticeList )
             break;
           EventNoticeControl__UpdateEventNotice((EventNoticeControl_o *)noticeList, v7);
@@ -432,7 +432,7 @@ void MenuListControl__SetEventNotice(MenuListControl_o *this, const MethodInfo *
           noticeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       noticeList,
                                                                       v6,
-                                                                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
+                                                                      (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
           if ( !noticeList )
             break;
           EventNoticeControl__ChangeEventInfo((EventNoticeControl_o *)noticeList, v7);
@@ -443,7 +443,7 @@ void MenuListControl__SetEventNotice(MenuListControl_o *this, const MethodInfo *
         ++v6;
       }
       while ( noticeList );
-      sub_1C3E7C0(noticeList, v7);
+      sub_1C6BC60(noticeList, v7);
     }
   }
 }
@@ -467,10 +467,10 @@ void MenuListControl__SetScrollBarValue(MenuListControl_o *this, float value, co
   UnityEngine_Object_o *verticalScrollBar; // x20
   struct UIScrollView_o *v10; // x8
 
-  if ( (byte_4C5AD7D & 1) == 0 )
+  if ( (byte_4CBA353 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5AD7D = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA353 = 1;
   }
   menuListScrollView = (UnityEngine_Object_o *)this->fields.menuListScrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -498,7 +498,7 @@ void MenuListControl__SetScrollBarValue(MenuListControl_o *this, float value, co
         }
       }
 LABEL_14:
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     }
   }
 }
@@ -514,11 +514,11 @@ void MenuListControl__Update(MenuListControl_o *this, const MethodInfo *method)
   unsigned __int64 v8; // x22
   UnityEngine_Object_o *v9; // x20
 
-  if ( (byte_4C5AD71 & 1) == 0 )
+  if ( (byte_4CBA347 & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5AD71 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA347 = 1;
   }
   MenuListControl__UpdateAnim(this, method);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -527,7 +527,7 @@ void MenuListControl__Update(MenuListControl_o *this, const MethodInfo *method)
   restTimeNoticeList = this->fields.restTimeNoticeList;
   if ( !restTimeNoticeList )
 LABEL_17:
-    sub_1C3E7C0(Time, v4);
+    sub_1C6BC60(Time, v4);
   max_length = restTimeNoticeList->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -536,7 +536,7 @@ LABEL_17:
     do
     {
       if ( v8 >= (unsigned int)max_length )
-        sub_1C3E7C8(Time, v4);
+        sub_1C6BC68(Time);
       v9 = (UnityEngine_Object_o *)restTimeNoticeList->m_Items[v8];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -569,12 +569,12 @@ void MenuListControl__UpdateAnim(MenuListControl_o *this, const MethodInfo *meth
   MenuListControl_c *v12; // x0
   const MethodInfo *v13; // x1
 
-  if ( (byte_4C5AD78 & 1) == 0 )
+  if ( (byte_4CBA34E & 1) == 0 )
   {
-    sub_1C3E564(&MenuListControl_TypeInfo);
-    sub_1C3E564(&Method_TransitionCalculator_float__Update__);
-    sub_1C3E564(&Method_TransitionCalculator_float__get_Current__);
-    byte_4C5AD78 = 1;
+    sub_1C6BA08(&MenuListControl_TypeInfo);
+    sub_1C6BA08(&Method_TransitionCalculator_float__Update__);
+    sub_1C6BA08(&Method_TransitionCalculator_float__get_Current__);
+    byte_4CBA34E = 1;
   }
   p_fadeUIAlphaCalculator = &this->fields.fadeUIAlphaCalculator;
   fadeUIAlphaCalculator = this->fields.fadeUIAlphaCalculator;
@@ -582,7 +582,7 @@ void MenuListControl__UpdateAnim(MenuListControl_o *this, const MethodInfo *meth
   {
     AlphaCalculator = MenuListControl__CreateAlphaCalculator(0, method);
     *p_fadeUIAlphaCalculator = AlphaCalculator;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.fadeUIAlphaCalculator, (int32_t)AlphaCalculator, v6, v7);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.fadeUIAlphaCalculator, (int32_t)AlphaCalculator, v6, v7);
     fadeUIAlphaCalculator = *p_fadeUIAlphaCalculator;
     if ( !*p_fadeUIAlphaCalculator )
       goto LABEL_19;
@@ -593,7 +593,7 @@ void MenuListControl__UpdateAnim(MenuListControl_o *this, const MethodInfo *meth
   }
   TransitionCalculator_float___Update(
     (TransitionCalculator_float__o *)fadeUIAlphaCalculator,
-    (const MethodInfo_3A785D0 *)Method_TransitionCalculator_float__Update__);
+    (const MethodInfo_3AF12A0 *)Method_TransitionCalculator_float__Update__);
   fadeUIAlphaCalculator = *p_fadeUIAlphaCalculator;
   if ( !*p_fadeUIAlphaCalculator )
     goto LABEL_19;
@@ -633,7 +633,7 @@ void MenuListControl__UpdateAnim(MenuListControl_o *this, const MethodInfo *meth
   }
   if ( !*p_fadeUIAlphaCalculator )
 LABEL_19:
-    sub_1C3E7C0(fadeUIAlphaCalculator, v8);
+    sub_1C6BC60(fadeUIAlphaCalculator, v8);
   this->fields.alphaAnimNow = (*p_fadeUIAlphaCalculator)->fields._Current_k__BackingField;
   MenuListControl__UpdateEventNoticeAlpha(this, v8);
 }
@@ -645,33 +645,33 @@ void MenuListControl__UpdateEventNotice(MenuListControl_o *this, const MethodInf
   const MethodInfo *v4; // x1
   System_Collections_Generic_List_Enumerator_object__o v5; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C5AD7C & 1) == 0 )
+  if ( (byte_4CBA352 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventNoticeControl__GetEnumerator__);
-    byte_4C5AD7C = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl__GetEnumerator__);
+    byte_4CBA352 = 1;
   }
   memset(&v5, 0, sizeof(v5));
   noticeList = (System_Collections_Generic_List_object__o *)this->fields.noticeList;
   if ( !noticeList )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v5,
     noticeList,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_EventNoticeControl__GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_EventNoticeControl__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v5,
-            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__MoveNext__) )
+            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__MoveNext__) )
   {
     if ( !v5.fields._current )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     EventNoticeControl__CheckCombineCampaignData((EventNoticeControl_o *)v5.fields._current, v4);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v5,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl__Dispose__);
 }
 
 
@@ -682,11 +682,11 @@ void MenuListControl__UpdateEventNoticeAlpha(MenuListControl_o *this, const Meth
   int32_t v5; // w20
   const MethodInfo *v6; // x1
 
-  if ( (byte_4C5AD7B & 1) == 0 )
+  if ( (byte_4CBA351 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventNoticeControl__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
-    byte_4C5AD7B = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
+    byte_4CBA351 = 1;
   }
   noticeList = (System_Collections_Generic_List_object__o *)this->fields.noticeList;
   if ( noticeList )
@@ -700,7 +700,7 @@ void MenuListControl__UpdateEventNoticeAlpha(MenuListControl_o *this, const Meth
         noticeList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     noticeList,
                                                                     v5,
-                                                                    (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
+                                                                    (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
         if ( !noticeList )
           break;
         EventNoticeControl__SetAlpha((EventNoticeControl_o *)noticeList, this->fields.alphaAnimNow, v6);
@@ -709,7 +709,7 @@ void MenuListControl__UpdateEventNoticeAlpha(MenuListControl_o *this, const Meth
         noticeList = (System_Collections_Generic_List_object__o *)this->fields.noticeList;
       }
       while ( noticeList );
-      sub_1C3E7C0(noticeList, v6);
+      sub_1C6BC60(noticeList, v6);
     }
   }
   else
@@ -776,24 +776,24 @@ void MenuListControl__checkEventNotice(MenuListControl_o *this, const MethodInfo
   System_Collections_Generic_List_Enumerator_object__o v54; // [xsp+20h] [xbp-80h] BYREF
 
   v2 = this;
-  if ( (byte_4C5AD74 & 1) == 0 )
+  if ( (byte_4CBA34A & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_EventEntity___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__get_Current__);
-    sub_1C3E564(&System_Func_EventEntity__bool__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventCampaignEntity__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventInfoData__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventInfoData___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventCampaignEntity___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
-    sub_1C3E564(&System_Collections_Generic_List_EventInfoData__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_List_EventCampaignEntity__TypeInfo);
-    sub_1C3E564(&Method_MenuListControl___c__DisplayClass20_0__checkEventNotice_b__0__);
-    this = (MenuListControl_o *)sub_1C3E564(&MenuListControl___c__DisplayClass20_0_TypeInfo);
-    byte_4C5AD74 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_EventEntity___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__get_Current__);
+    sub_1C6BA08(&System_Func_EventEntity__bool__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventCampaignEntity__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventInfoData__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventInfoData___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventCampaignEntity___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
+    sub_1C6BA08(&System_Collections_Generic_List_EventInfoData__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_List_EventCampaignEntity__TypeInfo);
+    sub_1C6BA08(&Method_MenuListControl___c__DisplayClass20_0__checkEventNotice_b__0__);
+    this = (MenuListControl_o *)sub_1C6BA08(&MenuListControl___c__DisplayClass20_0_TypeInfo);
+    byte_4CBA34A = 1;
   }
   memset(&v54, 0, sizeof(v54));
   combineData = v2->fields.combineData;
@@ -802,17 +802,17 @@ void MenuListControl__checkEventNotice(MenuListControl_o *this, const MethodInfo
   combineEventList = combineData->fields.combineEventList;
   if ( combineEventList )
   {
-    v5 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventInfoData__TypeInfo);
+    v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventInfoData__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v5,
-      (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventInfoData___ctor__);
+      (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventInfoData___ctor__);
     v2->fields.combineEventList = (struct System_Collections_Generic_List_EventInfoData__o *)v5;
     p_combineEventList = (System_Collections_Generic_List_object__o **)&v2->fields.combineEventList;
-    sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.combineEventList, (int32_t)v5, v7, v8);
-    v9 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventCampaignEntity__TypeInfo);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.combineEventList, (int32_t)v5, v7, v8);
+    v9 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventCampaignEntity__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v9,
-      (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventCampaignEntity___ctor__);
+      (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventCampaignEntity___ctor__);
     max_length = combineEventList->max_length;
     if ( max_length >= 1 )
     {
@@ -820,7 +820,7 @@ void MenuListControl__checkEventNotice(MenuListControl_o *this, const MethodInfo
       while ( 1 )
       {
         if ( (unsigned int)v11 >= max_length )
-          sub_1C3E7C8(this, method);
+          sub_1C6BC68(this);
         v12 = combineEventList->m_Items[v11];
         if ( !v12 )
           break;
@@ -844,14 +844,14 @@ void MenuListControl__checkEventNotice(MenuListControl_o *this, const MethodInfo
             System_Collections_Generic_List_object___AddWithResize(
               v9,
               (Il2CppObject *)this,
-              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+              *(const MethodInfo_3800974 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
           }
           else
           {
             v19 = &items->obj.klass + size;
             v9->fields._size = size + 1;
             v19[4] = (Il2CppClass *)v18;
-            sub_1C3E508((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v18, v13, v14);
+            sub_1C6B9AC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v18, v13, v14);
           }
         }
         max_length = combineEventList->max_length;
@@ -859,7 +859,7 @@ void MenuListControl__checkEventNotice(MenuListControl_o *this, const MethodInfo
           goto LABEL_17;
       }
 LABEL_36:
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     }
 LABEL_17:
     this = (MenuListControl_o *)EventCampaignMaster__CheckCampaignGrouping(
@@ -870,34 +870,34 @@ LABEL_17:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v53,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
+      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_EventCampaignEntity__GetEnumerator__);
     v54 = v53;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v54,
-              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__) )
+              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__MoveNext__) )
     {
-      v20 = sub_1C3E7B0(MenuListControl___c__DisplayClass20_0_TypeInfo);
+      v20 = sub_1C6BC54(MenuListControl___c__DisplayClass20_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v20, 0);
       if ( !v20 )
-        sub_1C3E7C0(v21, v22);
+        sub_1C6BC60(v21, v22);
       current = (int32_t)v54.fields._current;
       *(_QWORD *)(v20 + 16) = v54.fields._current;
-      sub_1C3E508((CGThumbnailListItem_o *)(v20 + 16), current, v23, v24);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v20 + 16), current, v23, v24);
       if ( !*(_QWORD *)(v20 + 16) )
-        sub_1C3E7C0(v26, v27);
+        sub_1C6BC60(v26, v27);
       v28 = *(_DWORD *)(*(_QWORD *)(v20 + 16) + 20LL) - 1;
       if ( (unsigned int)v28 < 0x21 && ((0x1840782BBuLL >> v28) & 1) != 0 )
       {
-        v29 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_EventEntity__bool__TypeInfo);
+        v29 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_EventEntity__bool__TypeInfo);
         System_Func_object__bool____ctor(
           v29,
           (Il2CppObject *)v20,
           Method_MenuListControl___c__DisplayClass20_0__checkEventNotice_b__0__,
           0);
-        v30 = System_Linq_Enumerable__FirstOrDefault_object__51525108(
+        v30 = System_Linq_Enumerable__FirstOrDefault_object__51793644(
                 (System_Collections_Generic_IEnumerable_TSource__o *)combineEventList,
                 (System_Func_TSource__bool__o *)v29,
-                (const MethodInfo_31235F4 *)Method_System_Linq_Enumerable_FirstOrDefault_EventEntity___);
+                (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_EventEntity___);
         v33 = MenuListControl__setEventInfo(
                 (MenuListControl_o *)v30,
                 *(EventCampaignEntity_o **)(v20 + 16),
@@ -905,56 +905,56 @@ LABEL_17:
                 v31);
         noticeList = (System_Collections_Generic_List_object__o *)v2->fields.noticeList;
         if ( !noticeList )
-          sub_1C3E7C0(0, v32);
-        v35 = dword_C4CC48[v28];
+          sub_1C6BC60(0, v32);
+        v35 = dword_D21A50[v28];
         Item = System_Collections_Generic_List_object___get_Item(
                  noticeList,
                  v35,
-                 (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
+                 (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
         if ( !Item )
-          sub_1C3E7C0(0, v37);
+          sub_1C6BC60(0, v37);
         EventNoticeControl__SetCombineEventData((EventNoticeControl_o *)Item, v33, v38);
         v40 = (System_Collections_Generic_List_object__o *)v2->fields.noticeList;
         if ( !v40 )
-          sub_1C3E7C0(0, v39);
+          sub_1C6BC60(0, v39);
         v41 = System_Collections_Generic_List_object___get_Item(
                 v40,
                 v35,
-                (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
+                (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventNoticeControl__get_Item__);
         if ( !v41 )
-          sub_1C3E7C0(0, v42);
+          sub_1C6BC60(0, v42);
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v41, 0);
         if ( !gameObject )
-          sub_1C3E7C0(0, v44);
+          sub_1C6BC60(0, v44);
         UnityEngine_GameObject__SetActive(gameObject, 1, 0);
         v48 = *p_combineEventList;
         if ( !*p_combineEventList )
-          sub_1C3E7C0(0, v45);
+          sub_1C6BC60(0, v45);
         v49 = v48->fields._items;
         v50 = Method_System_Collections_Generic_List_EventInfoData__Add__;
         ++v48->fields._version;
         if ( !v49 )
-          sub_1C3E7C0(v48, v45);
+          sub_1C6BC60(v48, v45);
         v51 = v48->fields._size;
         if ( (unsigned int)v51 >= LODWORD(v49->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v48,
             (Il2CppObject *)v33,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v50[4] + 192LL) + 112LL));
         }
         else
         {
           v52 = &v49->obj.klass + v51;
           v48->fields._size = v51 + 1;
           v52[4] = (Il2CppClass *)v33;
-          sub_1C3E508((CGThumbnailListItem_o *)(v52 + 4), (int32_t)v33, v46, v47);
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v52 + 4), (int32_t)v33, v46, v47);
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v54,
-      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
+      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_EventCampaignEntity__Dispose__);
   }
 }
 
@@ -982,10 +982,10 @@ float MenuListControl__get_ScrollBarValue(MenuListControl_o *this, const MethodI
   UnityEngine_Object_o *verticalScrollBar; // x20
   struct UIScrollView_o *v8; // x8
 
-  if ( (byte_4C5AD70 & 1) == 0 )
+  if ( (byte_4CBA346 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5AD70 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA346 = 1;
   }
   menuListScrollView = (UnityEngine_Object_o *)this->fields.menuListScrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1010,7 +1010,7 @@ float MenuListControl__get_ScrollBarValue(MenuListControl_o *this, const MethodI
           return UIProgressBar__get_value(v4, 0);
       }
 LABEL_14:
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     }
   }
   return 0.0;
@@ -1023,7 +1023,7 @@ void MenuListControl__resetScrollView(MenuListControl_o *this, const MethodInfo 
 
   menuListScrollView = this->fields.menuListScrollView;
   if ( !menuListScrollView )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   ((void (__fastcall *)(struct UIScrollView_o *, _QWORD, const MethodInfo *, float, float))menuListScrollView->klass->vtable._9_SetDragAmount.methodPtr)(
     menuListScrollView,
     0,
@@ -1042,10 +1042,10 @@ void MenuListControl__setBannerIcon(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4C5AD76 & 1) == 0 )
+  if ( (byte_4CBA34C & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    byte_4C5AD76 = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    byte_4CBA34C = 1;
   }
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -1053,7 +1053,7 @@ void MenuListControl__setBannerIcon(
   if ( !targetSprite
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)targetSprite, 0)) == 0 )
   {
-    sub_1C3E7C0(gameObject, v7);
+    sub_1C6BC60(gameObject, v7);
   }
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
 }
@@ -1066,10 +1066,10 @@ void MenuListControl__setCombineEnableNum(
 {
   System_Collections_Generic_List_object__o *setNoticeNumList; // x0
 
-  if ( (byte_4C5AD77 & 1) == 0 )
+  if ( (byte_4CBA34D & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__);
-    byte_4C5AD77 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__);
+    byte_4CBA34D = 1;
   }
   setNoticeNumList = (System_Collections_Generic_List_object__o *)this->fields.setNoticeNumList;
   if ( !setNoticeNumList )
@@ -1077,7 +1077,7 @@ void MenuListControl__setCombineEnableNum(
   setNoticeNumList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     setNoticeNumList,
                                                                     1,
-                                                                    (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__);
+                                                                    (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__);
   if ( !enableData )
     goto LABEL_17;
   if ( !setNoticeNumList )
@@ -1089,7 +1089,7 @@ void MenuListControl__setCombineEnableNum(
   setNoticeNumList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     setNoticeNumList,
                                                                     3,
-                                                                    (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__);
+                                                                    (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__);
   if ( !setNoticeNumList )
     goto LABEL_17;
   SetNoticeNumControl__setNoticeNum((SetNoticeNumControl_o *)setNoticeNumList, enableData->fields.limitUpEnableNum, 0);
@@ -1099,7 +1099,7 @@ void MenuListControl__setCombineEnableNum(
   setNoticeNumList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     setNoticeNumList,
                                                                     5,
-                                                                    (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__);
+                                                                    (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__);
   if ( !setNoticeNumList )
     goto LABEL_17;
   SetNoticeNumControl__setNoticeNum(
@@ -1111,7 +1111,7 @@ void MenuListControl__setCombineEnableNum(
     || (setNoticeNumList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                           setNoticeNumList,
                                                                           10,
-                                                                          (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__)) == 0
+                                                                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__)) == 0
     || (SetNoticeNumControl__setNoticeNum(
           (SetNoticeNumControl_o *)setNoticeNumList,
           enableData->fields.npUpEnableNum,
@@ -1120,7 +1120,7 @@ void MenuListControl__setCombineEnableNum(
     || (setNoticeNumList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                           setNoticeNumList,
                                                                           11,
-                                                                          (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__)) == 0
+                                                                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__)) == 0
     || (SetNoticeNumControl__setNoticeNum(
           (SetNoticeNumControl_o *)setNoticeNumList,
           enableData->fields.lvExceedEnableNum,
@@ -1129,10 +1129,10 @@ void MenuListControl__setCombineEnableNum(
     || (setNoticeNumList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                           setNoticeNumList,
                                                                           12,
-                                                                          (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__)) == 0 )
+                                                                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SetNoticeNumControl__get_Item__)) == 0 )
   {
 LABEL_17:
-    sub_1C3E7C0(setNoticeNumList, enableData);
+    sub_1C6BC60(setNoticeNumList, enableData);
   }
   SetNoticeNumControl__setNoticeNum(
     (SetNoticeNumControl_o *)setNoticeNumList,
@@ -1162,30 +1162,30 @@ EventInfoData_o *MenuListControl__setEventInfo(
   int32_t v18; // w2
   const MethodInfo *v19; // x3
 
-  if ( (byte_4C5AD75 & 1) == 0 )
+  if ( (byte_4CBA34B & 1) == 0 )
   {
-    sub_1C3E564(&EventInfoData_TypeInfo);
-    byte_4C5AD75 = 1;
+    sub_1C6BA08(&EventInfoData_TypeInfo);
+    byte_4CBA34B = 1;
   }
-  v6 = sub_1C3E7B0(EventInfoData_TypeInfo);
+  v6 = sub_1C6BC54(EventInfoData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   if ( !eventEnt || !v6 || (*(_DWORD *)(v6 + 16) = eventEnt->fields.id, !combineEventEnt) )
-    sub_1C3E7C0(v7, v8);
+    sub_1C6BC60(v7, v8);
   *(_DWORD *)(v6 + 20) = combineEventEnt->fields.target;
   targetIds = combineEventEnt->fields.targetIds;
   *(_QWORD *)(v6 + 32) = targetIds;
-  sub_1C3E508((CGThumbnailListItem_o *)(v6 + 32), (int32_t)targetIds, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 32), (int32_t)targetIds, v9, v10);
   *(_DWORD *)(v6 + 24) = eventEnt->fields.iconId;
   EventName = EventEntity__getEventName(eventEnt, 0);
   *(_QWORD *)(v6 + 40) = EventName;
-  sub_1C3E508((CGThumbnailListItem_o *)(v6 + 40), (int32_t)EventName, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 40), (int32_t)EventName, v13, v14);
   detail = eventEnt->fields.detail;
   *(_QWORD *)(v6 + 48) = detail;
-  sub_1C3E508((CGThumbnailListItem_o *)(v6 + 48), (int32_t)detail, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 48), (int32_t)detail, v16, v17);
   *(float *)(v6 + 56) = (float)combineEventEnt->fields.value / 1000.0;
   *(_OWORD *)(v6 + 64) = *(_OWORD *)&eventEnt->fields.startedAt;
   *(_QWORD *)(v6 + 80) = eventEnt;
-  sub_1C3E508((CGThumbnailListItem_o *)(v6 + 80), (int32_t)eventEnt, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 80), (int32_t)eventEnt, v18, v19);
   return (EventInfoData_o *)v6;
 }
 
@@ -1206,6 +1206,6 @@ bool MenuListControl___c__DisplayClass20_0___checkEventNotice_b__0(
   struct EventCampaignEntity_o *eventCampaignEntity; // x8
 
   if ( !entity || (eventCampaignEntity = this->fields.eventCampaignEntity) == 0 )
-    sub_1C3E7C0(this, entity);
+    sub_1C6BC60(this, entity);
   return entity->fields.id == eventCampaignEntity->fields.eventId;
 }

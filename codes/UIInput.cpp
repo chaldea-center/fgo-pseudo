@@ -5,17 +5,17 @@ void UIInput___cctor(const MethodInfo *method)
   struct UIInput_StaticFields *static_fields; // x0
   int32_t v4; // w1
 
-  if ( (byte_4C5B63E & 1) == 0 )
+  if ( (byte_4CBAC1B & 1) == 0 )
   {
-    sub_1C3E564(&UIInput_TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B63E = 1;
+    sub_1C6BA08(&UIInput_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC1B = 1;
   }
   static_fields = UIInput_TypeInfo->static_fields;
   static_fields->mDrawStart = 0;
   v4 = StringLiteral_1/*""*/;
   static_fields->mLastIME = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->mLastIME, v4, v1, v2);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->mLastIME, v4, v1, v2);
   UIInput_TypeInfo->static_fields->mWaitForKeyboard = 0;
 }
 
@@ -36,40 +36,40 @@ void UIInput___ctor(UIInput_o *this, const MethodInfo *method)
   const MethodInfo *v19; // x3
   struct UnityEngine_Color_o v20; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_4C5B63D & 1) == 0 )
+  if ( (byte_4CBAC1A & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B63D = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC1A = 1;
   }
   __asm { FMOV            V2.4S, #1.0 }
   this->fields.selectAllTextOnFocus = 1;
   this->fields.activeTextColor = _Q2;
-  this->fields.caretColor = (struct UnityEngine_Color_o)xmmword_C13650;
-  this->fields.selectionColor = (struct UnityEngine_Color_o)xmmword_C125B0;
+  this->fields.caretColor = (struct UnityEngine_Color_o)xmmword_CED910;
+  this->fields.selectionColor = (struct UnityEngine_Color_o)xmmword_CEC870;
   v20 = _Q2;
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onSubmit = (struct System_Collections_Generic_List_EventDelegate__o *)v8;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onSubmit, (int32_t)v8, v9, v10);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onSubmit, (int32_t)v8, v9, v10);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onChange = (struct System_Collections_Generic_List_EventDelegate__o *)v11;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onChange, (int32_t)v11, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onChange, (int32_t)v11, v12, v13);
   v14 = StringLiteral_1/*""*/;
   this->fields.mDefaultText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mDefaultText, v14, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mDefaultText, v14, v15, v16);
   this->fields.mDoInit = 1;
   this->fields.mLoadSavedValue = 1;
   this->fields.mDefaultColor = v20;
   v17 = StringLiteral_1/*""*/;
   this->fields.mCached = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCached, v17, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCached, v17, v18, v19);
   this->fields.mSelectMe = -1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -88,11 +88,11 @@ void UIInput__Cleanup(UIInput_o *this, const MethodInfo *method)
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C5B636 & 1) == 0 )
+  if ( (byte_4CBAC13 & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B636 = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC13 = 1;
   }
   mHighlight = (UnityEngine_Object_o *)this->fields.mHighlight;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -116,7 +116,7 @@ void UIInput__Cleanup(UIInput_o *this, const MethodInfo *method)
       goto LABEL_13;
     }
 LABEL_20:
-    sub_1C3E7C0(v5, v4);
+    sub_1C6BC60(v5, v4);
   }
 LABEL_13:
   mBlankTex = this->fields.mBlankTex;
@@ -131,7 +131,7 @@ LABEL_13:
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_mBlankTex->klass = 0;
-    sub_1C3E508(p_mBlankTex, 0, v11, v12);
+    sub_1C6B9AC(p_mBlankTex, 0, v11, v12);
   }
 }
 
@@ -142,10 +142,10 @@ void UIInput__DoBackspace(UIInput_o *this, const MethodInfo *method)
   bool v4; // vf
   int32_t v5; // w8
 
-  if ( (byte_4C5B62E & 1) == 0 )
+  if ( (byte_4CBAC0B & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B62E = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC0B = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.mValue, 0) )
   {
@@ -178,12 +178,12 @@ void UIInput__ExecuteOnChange(UIInput_o *this, const MethodInfo *method)
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C5B63B & 1) == 0 )
+  if ( (byte_4CBAC18 & 1) == 0 )
   {
-    sub_1C3E564(&EventDelegate_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B63B = 1;
+    sub_1C6BA08(&EventDelegate_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC18 = 1;
   }
   v3 = UIInput_TypeInfo;
   if ( !UIInput_TypeInfo->_2.cctor_finished )
@@ -199,7 +199,7 @@ void UIInput__ExecuteOnChange(UIInput_o *this, const MethodInfo *method)
     onChange = this->fields.onChange;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    if ( EventDelegate__IsValid_49322312(onChange, 0) )
+    if ( EventDelegate__IsValid_49551196(onChange, 0) )
     {
       v8 = UIInput_TypeInfo;
       if ( !UIInput_TypeInfo->_2.cctor_finished )
@@ -208,13 +208,13 @@ void UIInput__ExecuteOnChange(UIInput_o *this, const MethodInfo *method)
         v8 = UIInput_TypeInfo;
       }
       v8->static_fields->current = this;
-      sub_1C3E508((CGThumbnailListItem_o *)UIInput_TypeInfo->static_fields, (int32_t)this, v6, v7);
+      sub_1C6B9AC((CGThumbnailListItem_o *)UIInput_TypeInfo->static_fields, (int32_t)this, v6, v7);
       v9 = this->fields.onChange;
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      EventDelegate__Execute_49293740(v9, 0);
+      EventDelegate__Execute_49522624(v9, 0);
       UIInput_TypeInfo->static_fields->current = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)UIInput_TypeInfo->static_fields, 0, v10, v11);
+      sub_1C6B9AC((CGThumbnailListItem_o *)UIInput_TypeInfo->static_fields, 0, v10, v11);
     }
   }
 }
@@ -242,11 +242,11 @@ int32_t UIInput__GetCharUnderMouse(UIInput_o *this, const MethodInfo *method)
   UnityEngine_Ray_o v21; // [xsp+40h] [xbp-80h] BYREF
   UnityEngine_Vector3_o Point; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B633 & 1) == 0 )
+  if ( (byte_4CBAC10 & 1) == 0 )
   {
-    sub_1C3E564(&UICamera_TypeInfo);
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B633 = 1;
+    sub_1C6BA08(&UICamera_TypeInfo);
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC10 = 1;
   }
   memset(&v21, 0, sizeof(v21));
   v19 = 0;
@@ -264,8 +264,8 @@ int32_t UIInput__GetCharUnderMouse(UIInput_o *this, const MethodInfo *method)
   if ( !v4 )
     goto LABEL_20;
   if ( *(_DWORD *)(v4 + 24) <= 2u )
-    sub_1C3E7C8(label, method);
-  sub_2F01B3C(
+    sub_1C6BC68(label);
+  sub_2F39950(
     &v19,
     0,
     *(float *)(v4 + 32),
@@ -281,10 +281,10 @@ int32_t UIInput__GetCharUnderMouse(UIInput_o *this, const MethodInfo *method)
   v9 = (float)(v21.fields.m_Direction.fields.z * *(float *)&v20)
      + (float)((float)(v21.fields.m_Direction.fields.x * *(float *)&v19)
              + (float)(v21.fields.m_Direction.fields.y * *((float *)&v19 + 1)));
-  if ( !byte_4C506A5 )
+  if ( !byte_4CAFC0D )
   {
-    sub_1C3E564(&UnityEngine_Mathf_TypeInfo);
-    byte_4C506A5 = 1;
+    sub_1C6BA08(&UnityEngine_Mathf_TypeInfo);
+    byte_4CAFC0D = 1;
   }
   v10 = fmaxf(fabsf(v9), 0.0) * 0.000001;
   Epsilon = UnityEngine_Mathf_TypeInfo->static_fields->Epsilon;
@@ -311,7 +311,7 @@ int32_t UIInput__GetCharUnderMouse(UIInput_o *this, const MethodInfo *method)
       if ( v14 )
         return UILabel__GetCharacterIndexAtPosition(v14, Point, 0, v16) + mDrawStart;
 LABEL_20:
-      sub_1C3E7C0(label, method);
+      sub_1C6BC60(label, method);
     }
   }
   return 0;
@@ -324,10 +324,10 @@ System_String_o *UIInput__GetLeftText(UIInput_o *this, const MethodInfo *method)
   __int64 v4; // x1
   System_String_o *mValue; // x0
 
-  if ( (byte_4C5B630 & 1) == 0 )
+  if ( (byte_4CBAC0D & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B630 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC0D = 1;
   }
   if ( this->fields.mSelectionStart >= this->fields.mSelectionEnd )
     mSelectionEnd = this->fields.mSelectionEnd;
@@ -337,8 +337,8 @@ System_String_o *UIInput__GetLeftText(UIInput_o *this, const MethodInfo *method)
     return (System_String_o *)StringLiteral_1/*""*/;
   mValue = this->fields.mValue;
   if ( !mValue )
-    sub_1C3E7C0(0, v4);
-  return System_String__Substring_63682392(mValue, 0, mSelectionEnd, 0);
+    sub_1C6BC60(0, v4);
+  return System_String__Substring_64012732(mValue, 0, mSelectionEnd, 0);
 }
 
 
@@ -348,10 +348,10 @@ System_String_o *UIInput__GetRightText(UIInput_o *this, const MethodInfo *method
   __int64 v4; // x1
   struct System_String_o *mValue; // x0
 
-  if ( (byte_4C5B631 & 1) == 0 )
+  if ( (byte_4CBAC0E & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B631 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC0E = 1;
   }
   if ( this->fields.mSelectionStart <= this->fields.mSelectionEnd )
     mSelectionEnd = this->fields.mSelectionEnd;
@@ -361,7 +361,7 @@ System_String_o *UIInput__GetRightText(UIInput_o *this, const MethodInfo *method
     return (System_String_o *)StringLiteral_1/*""*/;
   mValue = this->fields.mValue;
   if ( !mValue )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   if ( mSelectionEnd >= mValue->fields._stringLength )
     return (System_String_o *)StringLiteral_1/*""*/;
   else
@@ -376,10 +376,10 @@ System_String_o *UIInput__GetSelection(UIInput_o *this, const MethodInfo *method
   System_String_o *mValue; // x0
   __int64 v7; // x1
 
-  if ( (byte_4C5B632 & 1) == 0 )
+  if ( (byte_4CBAC0F & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B632 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC0F = 1;
   }
   if ( System_String__IsNullOrEmpty(this->fields.mValue, 0) )
     return (System_String_o *)StringLiteral_1/*""*/;
@@ -393,10 +393,10 @@ System_String_o *UIInput__GetSelection(UIInput_o *this, const MethodInfo *method
   else
     v7 = (unsigned int)mSelectionStart;
   if ( !mValue )
-    sub_1C3E7C0(0, v7);
+    sub_1C6BC60(0, v7);
   if ( mSelectionStart <= mSelectionEnd )
     mSelectionStart = this->fields.mSelectionEnd;
-  return System_String__Substring_63682392(mValue, v7, mSelectionStart - (int)v7, 0);
+  return System_String__Substring_64012732(mValue, v7, mSelectionStart - (int)v7, 0);
 }
 
 
@@ -411,12 +411,12 @@ void UIInput__Init(UIInput_o *this, const MethodInfo *method)
   struct System_String_o *mText; // x1
   const MethodInfo *v10; // x1
 
-  if ( (byte_4C5B62A & 1) == 0 )
+  if ( (byte_4CBAC07 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Debug_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_7677/*"Input fields using labels with justified alignment are not supported at this time"*/);
-    byte_4C5B62A = 1;
+    sub_1C6BA08(&UnityEngine_Debug_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_7674/*"Input fields using labels with justified alignment are not supported at this time"*/);
+    byte_4CBAC07 = 1;
   }
   if ( this->fields.mDoInit )
   {
@@ -432,7 +432,7 @@ void UIInput__Init(UIInput_o *this, const MethodInfo *method)
         goto LABEL_18;
       mText = v8->fields.mText;
       this->fields.mDefaultText = mText;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mDefaultText, (int32_t)mText, v6, v7);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mDefaultText, (int32_t)mText, v6, v7);
       cachedTransform = this->fields.label;
       if ( !cachedTransform )
         goto LABEL_18;
@@ -454,7 +454,7 @@ void UIInput__Init(UIInput_o *this, const MethodInfo *method)
         UILabel__ProcessAndRequest(cachedTransform, v5);
         if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-        UnityEngine_Debug__LogWarning_71155500((Il2CppObject *)StringLiteral_7677/*"Input fields using labels with justified alignment are not supported at this time"*/, (UnityEngine_Object_o *)this, 0);
+        UnityEngine_Debug__LogWarning_71472752((Il2CppObject *)StringLiteral_7674/*"Input fields using labels with justified alignment are not supported at this time"*/, (UnityEngine_Object_o *)this, 0);
         cachedTransform = this->fields.label;
         if ( !cachedTransform )
           goto LABEL_18;
@@ -463,7 +463,7 @@ void UIInput__Init(UIInput_o *this, const MethodInfo *method)
       cachedTransform = (UILabel_o *)UIRect__get_cachedTransform((UIRect_o *)cachedTransform, 0);
       if ( !cachedTransform )
 LABEL_18:
-        sub_1C3E7C0(cachedTransform, v5);
+        sub_1C6BC60(cachedTransform, v5);
       LODWORD(this->fields.mPosition) = (unsigned int)UnityEngine_Transform__get_localPosition(
                                                         (UnityEngine_Transform_o *)cachedTransform,
                                                         0);
@@ -514,10 +514,10 @@ void UIInput__Insert(UIInput_o *this, System_String_o *text, const MethodInfo *m
   const MethodInfo *v41; // x1
   const MethodInfo *v42; // x1
 
-  if ( (byte_4C5B62F & 1) == 0 )
+  if ( (byte_4CBAC0C & 1) == 0 )
   {
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    byte_4C5B62F = 1;
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    byte_4CBAC0C = 1;
   }
   LeftText = UIInput__GetLeftText(this, (const MethodInfo *)text);
   RightText = UIInput__GetRightText(this, v6);
@@ -528,13 +528,13 @@ void UIInput__Insert(UIInput_o *this, System_String_o *text, const MethodInfo *m
         stringLength = RightText->fields._stringLength,
         v11 = LeftText->fields._stringLength,
         v12 = text->fields._stringLength,
-        v13 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo),
-        System_Text_StringBuilder___ctor_63714884(v13, v11 + stringLength + v12, 0),
+        v13 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo),
+        System_Text_StringBuilder___ctor_64044104(v13, v11 + stringLength + v12, 0),
         !v13) )
   {
-    sub_1C3E7C0(RightText, v8);
+    sub_1C6BC60(RightText, v8);
   }
-  System_Text_StringBuilder__Append_63721532(v13, LeftText, 0);
+  System_Text_StringBuilder__Append_64050752(v13, LeftText, 0);
   v14 = text->fields._stringLength;
   if ( v14 >= 1 )
   {
@@ -577,12 +577,12 @@ LABEL_20:
                                  v13,
                                  v13->klass->vtable._3_ToString.method);
       v24 = System_Text_StringBuilder__get_Length(v13, 0);
-      v22 = UIInput__Validate_49565244(this, v23, v24, v18, v25);
+      v22 = UIInput__Validate_49794128(this, v23, v24, v18, v25);
     }
     LOWORD(v18) = v22;
 LABEL_18:
     if ( (_WORD)v18 )
-      System_Text_StringBuilder__Append_63723860(v13, v18, 0);
+      System_Text_StringBuilder__Append_64053080(v13, v18, 0);
     goto LABEL_20;
   }
 LABEL_21:
@@ -606,12 +606,12 @@ LABEL_21:
                                    v13,
                                    v13->klass->vtable._3_ToString.method);
         v36 = System_Text_StringBuilder__get_Length(v13, 0);
-        v34 = UIInput__Validate_49565244(this, v35, v36, v31, v37);
+        v34 = UIInput__Validate_49794128(this, v35, v36, v31, v37);
         goto LABEL_27;
       }
 LABEL_28:
       if ( (_WORD)v31 )
-        System_Text_StringBuilder__Append_63723860(v13, v31, 0);
+        System_Text_StringBuilder__Append_64053080(v13, v31, 0);
       if ( v27 == ++v28 )
         goto LABEL_31;
     }
@@ -634,7 +634,7 @@ LABEL_31:
                                     v13,
                                     v13->klass->vtable._3_ToString.method);
   this->fields.mValue = v38;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)v38, v39, v40);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)v38, v39, v40);
   UIInput__UpdateLabel(this, v41);
   UIInput__ExecuteOnChange(this, v42);
 }
@@ -644,35 +644,35 @@ void UIInput__LoadValue(UIInput_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
   System_String_o *mValue; // x0
-  System_String_o *String_71300376; // x20
+  System_String_o *String_71617980; // x20
   int32_t v6; // w1
   int32_t v7; // w2
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x2
 
-  if ( (byte_4C5B63C & 1) == 0 )
+  if ( (byte_4CBAC19 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_43/*"\n"*/);
-    sub_1C3E564(&StringLiteral_16054/*"\\n"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B63C = 1;
+    sub_1C6BA08(&StringLiteral_43/*"\n"*/);
+    sub_1C6BA08(&StringLiteral_16037/*"\\n"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC19 = 1;
   }
   if ( !System_String__IsNullOrEmpty(this->fields.savedAs, 0) )
   {
     mValue = this->fields.mValue;
     if ( !mValue )
-      sub_1C3E7C0(0, v3);
-    String_71300376 = System_String__Replace_63683016(
+      sub_1C6BC60(0, v3);
+    String_71617980 = System_String__Replace_64013356(
                         mValue,
-                        (System_String_o *)StringLiteral_16054/*"\\n"*/,
+                        (System_String_o *)StringLiteral_16037/*"\\n"*/,
                         (System_String_o *)StringLiteral_43/*"\n"*/,
                         0);
     v6 = StringLiteral_1/*""*/;
     this->fields.mValue = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mValue, v6, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mValue, v6, v7, v8);
     if ( UnityEngine_PlayerPrefs__HasKey(this->fields.savedAs, 0) )
-      String_71300376 = UnityEngine_PlayerPrefs__GetString_71300376(this->fields.savedAs, 0);
-    UIInput__set_value(this, String_71300376, v9);
+      String_71617980 = UnityEngine_PlayerPrefs__GetString_71617980(this->fields.savedAs, 0);
+    UIInput__set_value(this, String_71617980, v9);
   }
 }
 
@@ -698,12 +698,12 @@ void UIInput__OnDeselectEvent(UIInput_o *this, const MethodInfo *method)
   struct UIInput_StaticFields *v19; // x0
   const MethodInfo *v20; // x1
 
-  if ( (byte_4C5B62C & 1) == 0 )
+  if ( (byte_4CBAC09 & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B62C = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC09 = 1;
   }
   if ( this->fields.mDoInit )
     UIInput__Init(this, method);
@@ -718,7 +718,7 @@ void UIInput__OnDeselectEvent(UIInput_o *this, const MethodInfo *method)
     {
       if ( this->fields.mDoInit )
         UIInput__Init(this, v6);
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)this->fields.mValue, v4, v5);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)this->fields.mValue, v4, v5);
       v7 = UIInput_TypeInfo;
       if ( !UIInput_TypeInfo->_2.cctor_finished )
       {
@@ -745,7 +745,7 @@ void UIInput__OnDeselectEvent(UIInput_o *this, const MethodInfo *method)
         UnityEngine_TouchScreenKeyboard__set_active(mKeyboard, 0, 0);
         v12 = UIInput_TypeInfo->static_fields;
         v12->mKeyboard = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&v12->mKeyboard, 0, v13, v14);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v12->mKeyboard, 0, v13, v14);
       }
       mKeyboard = (UnityEngine_TouchScreenKeyboard_o *)System_String__IsNullOrEmpty(this->fields.mValue, 0);
       v16 = this->fields.label;
@@ -771,7 +771,7 @@ LABEL_26:
         goto LABEL_26;
       }
 LABEL_30:
-      sub_1C3E7C0(mKeyboard, v10);
+      sub_1C6BC60(mKeyboard, v10);
     }
   }
 LABEL_27:
@@ -783,7 +783,7 @@ LABEL_27:
   }
   v19 = v18->static_fields;
   v19->selection = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&v19->selection, 0, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v19->selection, 0, v4, v5);
   UIInput__UpdateLabel(this, v20);
 }
 
@@ -805,11 +805,11 @@ void UIInput__OnDrag(UIInput_o *this, UnityEngine_Vector2_o delta, const MethodI
   int32_t CharUnderMouse; // w1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4C5B635 & 1) == 0 )
+  if ( (byte_4CBAC12 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B635 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBAC12 = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -851,11 +851,11 @@ void UIInput__OnPress(UIInput_o *this, bool isPressed, const MethodInfo *method)
   const MethodInfo *v10; // x2
   const MethodInfo *v11; // x2
 
-  if ( (byte_4C5B634 & 1) == 0 )
+  if ( (byte_4CBAC11 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B634 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBAC11 = 1;
   }
   if ( isPressed && UIInput__get_isSelected(this, (const MethodInfo *)isPressed) )
   {
@@ -910,12 +910,12 @@ void UIInput__OnSelectEvent(UIInput_o *this, const MethodInfo *method)
   const MethodInfo *v7; // x1
   UnityEngine_Object_o *label; // x20
 
-  if ( (byte_4C5B62B & 1) == 0 )
+  if ( (byte_4CBAC08 & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B62B = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC08 = 1;
   }
   v5 = UIInput_TypeInfo;
   if ( !UIInput_TypeInfo->_2.cctor_finished )
@@ -925,7 +925,7 @@ void UIInput__OnSelectEvent(UIInput_o *this, const MethodInfo *method)
   }
   static_fields = v5->static_fields;
   static_fields->selection = this;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->selection, (int32_t)this, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->selection, (int32_t)this, v2, v3);
   if ( this->fields.mDoInit )
     UIInput__Init(this, v7);
   label = (UnityEngine_Object_o *)this->fields.label;
@@ -956,10 +956,10 @@ void UIInput__RestoreLabelPivot(UIInput_o *this, const MethodInfo *method)
   UIWidget_o *v5; // x0
   int32_t mPivot; // w1
 
-  if ( (byte_4C5B639 & 1) == 0 )
+  if ( (byte_4CBAC16 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B639 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC16 = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -968,7 +968,7 @@ void UIInput__RestoreLabelPivot(UIInput_o *this, const MethodInfo *method)
   {
     v5 = (UIWidget_o *)this->fields.label;
     if ( !v5 )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     mPivot = this->fields.mPivot;
     if ( v5->fields.mPivot != mPivot )
       UIWidget__set_pivot(v5, mPivot, 0);
@@ -1013,7 +1013,7 @@ void UIInput__SetPivotToLeft(UIInput_o *this, const MethodInfo *method)
   v6.fields.x = 0.0;
   Pivot = NGUIMath__GetPivot(v6, 0);
   if ( !label )
-    sub_1C3E7C0(Pivot, v5);
+    sub_1C6BC60(Pivot, v5);
   UIWidget__set_pivot(label, Pivot, 0);
 }
 
@@ -1030,7 +1030,7 @@ void UIInput__SetPivotToRight(UIInput_o *this, const MethodInfo *method)
   v6.fields.x = 1.0;
   Pivot = NGUIMath__GetPivot(v6, 0);
   if ( !label )
-    sub_1C3E7C0(Pivot, v5);
+    sub_1C6BC60(Pivot, v5);
   UIWidget__set_pivot(label, Pivot, 0);
 }
 
@@ -1050,15 +1050,15 @@ void UIInput__Start(UIInput_o *this, const MethodInfo *method)
   System_String_o *v13; // x1
   const MethodInfo *v14; // x2
 
-  if ( (byte_4C5B629 & 1) == 0 )
+  if ( (byte_4CBAC06 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIKeyNavigation___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_AddComponent_UIKeyNavigation___);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_43/*"\n"*/);
-    sub_1C3E564(&StringLiteral_16054/*"\\n"*/);
-    byte_4C5B629 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIKeyNavigation___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_AddComponent_UIKeyNavigation___);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_43/*"\n"*/);
+    sub_1C6BA08(&StringLiteral_16037/*"\\n"*/);
+    byte_4CBAC06 = 1;
   }
   p_selectOnTab = &this->fields.selectOnTab;
   selectOnTab = (UnityEngine_Object_o *)this->fields.selectOnTab;
@@ -1068,7 +1068,7 @@ void UIInput__Start(UIInput_o *this, const MethodInfo *method)
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIKeyNavigation___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIKeyNavigation___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -1078,15 +1078,15 @@ void UIInput__Start(UIInput_o *this, const MethodInfo *method)
         goto LABEL_20;
       gameObject = (char *)UnityEngine_GameObject__AddComponent_object_(
                              (UnityEngine_GameObject_o *)gameObject,
-                             (const MethodInfo_3150FE4 *)Method_UnityEngine_GameObject_AddComponent_UIKeyNavigation___);
+                             (const MethodInfo_3193044 *)Method_UnityEngine_GameObject_AddComponent_UIKeyNavigation___);
       if ( !gameObject )
         goto LABEL_20;
       v12 = *p_selectOnTab;
       *((_QWORD *)gameObject + 6) = *p_selectOnTab;
-      sub_1C3E508((CGThumbnailListItem_o *)(gameObject + 48), (int32_t)v12, v10, v11);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(gameObject + 48), (int32_t)v12, v10, v11);
     }
     *p_selectOnTab = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.selectOnTab, 0, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectOnTab, 0, v7, v8);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -1096,16 +1096,16 @@ void UIInput__Start(UIInput_o *this, const MethodInfo *method)
     gameObject = (char *)this->fields.mValue;
     if ( gameObject )
     {
-      v13 = System_String__Replace_63683016(
+      v13 = System_String__Replace_64013356(
               (System_String_o *)gameObject,
-              (System_String_o *)StringLiteral_16054/*"\\n"*/,
+              (System_String_o *)StringLiteral_16037/*"\\n"*/,
               (System_String_o *)StringLiteral_43/*"\n"*/,
               0);
       UIInput__set_value(this, v13, v14);
       return;
     }
 LABEL_20:
-    sub_1C3E7C0(gameObject, v5);
+    sub_1C6BC60(gameObject, v5);
   }
   UIInput__LoadValue(this, v5);
 }
@@ -1125,13 +1125,13 @@ void UIInput__Submit(UIInput_o *this, const MethodInfo *method)
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C5B637 & 1) == 0 )
+  if ( (byte_4CBAC14 & 1) == 0 )
   {
-    sub_1C3E564(&EventDelegate_TypeInfo);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B637 = 1;
+    sub_1C6BA08(&EventDelegate_TypeInfo);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC14 = 1;
   }
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
@@ -1139,7 +1139,7 @@ void UIInput__Submit(UIInput_o *this, const MethodInfo *method)
   {
     if ( this->fields.mDoInit )
       UIInput__Init(this, v3);
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)this->fields.mValue, v4, v5);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)this->fields.mValue, v4, v5);
     v6 = UIInput_TypeInfo;
     if ( !UIInput_TypeInfo->_2.cctor_finished )
     {
@@ -1158,13 +1158,13 @@ void UIInput__Submit(UIInput_o *this, const MethodInfo *method)
         v10 = UIInput_TypeInfo;
       }
       v10->static_fields->current = this;
-      sub_1C3E508((CGThumbnailListItem_o *)UIInput_TypeInfo->static_fields, (int32_t)this, (int32_t)v8, v9);
+      sub_1C6B9AC((CGThumbnailListItem_o *)UIInput_TypeInfo->static_fields, (int32_t)this, (int32_t)v8, v9);
       onSubmit = this->fields.onSubmit;
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      EventDelegate__Execute_49293740(onSubmit, 0);
+      EventDelegate__Execute_49522624(onSubmit, 0);
       UIInput_TypeInfo->static_fields->current = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)UIInput_TypeInfo->static_fields, 0, v12, v13);
+      sub_1C6B9AC((CGThumbnailListItem_o *)UIInput_TypeInfo->static_fields, 0, v12, v13);
     }
     UIInput__SaveToPlayerPrefs(this, this->fields.mValue, v8);
   }
@@ -1265,17 +1265,17 @@ void UIInput__Update(UIInput_o *this, const MethodInfo *method)
   UnityEngine_Vector2_o v92; // 0:s0.4,4:s1.4
   UnityEngine_Vector3_o v93; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B62D & 1) == 0 )
+  if ( (byte_4CBAC0A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Application_TypeInfo);
-    sub_1C3E564(&char_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    sub_1C3E564(&UIInput_TypeInfo);
-    sub_1C3E564(&StringLiteral_43/*"\n"*/);
-    sub_1C3E564(&StringLiteral_25267/*"|"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B62D = 1;
+    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
+    sub_1C6BA08(&char_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    sub_1C6BA08(&UIInput_TypeInfo);
+    sub_1C6BA08(&StringLiteral_43/*"\n"*/);
+    sub_1C6BA08(&StringLiteral_25357/*"|"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC0A = 1;
   }
   v91 = 0;
   if ( UIInput__get_isSelected(this, method) )
@@ -1341,7 +1341,7 @@ LABEL_58:
         text = UnityEngine_TouchScreenKeyboard__get_text(v34, 0);
         if ( UIInput__get_inputShouldBeHidden(this, v36) )
         {
-          if ( System_String__op_Inequality(text, (System_String_o *)StringLiteral_25267/*"|"*/, 0) )
+          if ( System_String__op_Inequality(text, (System_String_o *)StringLiteral_25357/*"|"*/, 0) )
           {
             IsNullOrEmpty = System_String__IsNullOrEmpty(text, 0);
             if ( (IsNullOrEmpty & 1) != 0 )
@@ -1369,14 +1369,14 @@ LABEL_58:
               goto LABEL_163;
             UnityEngine_TouchScreenKeyboard__set_text(
               (UnityEngine_TouchScreenKeyboard_o *)IsNullOrEmpty,
-              (System_String_o *)StringLiteral_25267/*"|"*/,
+              (System_String_o *)StringLiteral_25357/*"|"*/,
               0);
           }
         }
         else if ( System_String__op_Inequality(this->fields.mCached, text, 0) )
         {
           this->fields.mCached = text;
-          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCached, (int32_t)text, v47, v48);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCached, (int32_t)text, v47, v48);
           UIInput__set_value(this, text, v49);
         }
         v57 = UIInput_TypeInfo;
@@ -1421,11 +1421,11 @@ LABEL_105:
           }
           v64 = v63->static_fields;
           v64->mKeyboard = 0;
-          sub_1C3E508((CGThumbnailListItem_o *)&v64->mKeyboard, 0, v61, v62);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v64->mKeyboard, 0, v61, v62);
           UIInput__set_isSelected(this, 0, v65);
           v66 = StringLiteral_1/*""*/;
           this->fields.mCached = (struct System_String_o *)StringLiteral_1/*""*/;
-          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCached, v66, v67, v68);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCached, v66, v67, v68);
         }
       }
       else
@@ -1492,7 +1492,7 @@ LABEL_105:
           }
           v52 = v51->static_fields;
           v52->mLastIME = compositionString;
-          sub_1C3E508((CGThumbnailListItem_o *)&v52->mLastIME, (int32_t)compositionString, v44, v45);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v52->mLastIME, (int32_t)compositionString, v44, v45);
           UIInput__UpdateLabel(this, v53);
           UIInput__ExecuteOnChange(this, v54);
         }
@@ -1570,7 +1570,7 @@ LABEL_137:
         }
       }
 LABEL_163:
-      sub_1C3E7C0(IsNullOrEmpty, v8);
+      sub_1C6BC60(IsNullOrEmpty, v8);
     }
     v10 = this->fields.mValue;
     this->fields.mSelectMe = -1;
@@ -1611,7 +1611,7 @@ LABEL_163:
       {
         UnityEngine_TouchScreenKeyboard__set_hideInput(1, 0);
         keyboardType = this->fields.keyboardType;
-        v19 = (System_String_o *)StringLiteral_25267/*"|"*/;
+        v19 = (System_String_o *)StringLiteral_25357/*"|"*/;
       }
       else
       {
@@ -1633,7 +1633,7 @@ LABEL_163:
       v21->static_fields->mWaitForKeyboard = 1;
       if ( this->fields.inputType == 2 )
       {
-        v22 = UnityEngine_TouchScreenKeyboard__Open_71354392(v19, keyboardType, 0, 0, 1, 0);
+        v22 = UnityEngine_TouchScreenKeyboard__Open_71672584(v19, keyboardType, 0, 0, 1, 0);
       }
       else
       {
@@ -1645,7 +1645,7 @@ LABEL_163:
         v27 = v26->fields.mMaxLineCount != 1 && !this->fields.hideInput;
         if ( this->fields.mDoInit )
           UIInput__Init(this, v8);
-        v22 = UnityEngine_TouchScreenKeyboard__Open_71354348(
+        v22 = UnityEngine_TouchScreenKeyboard__Open_71672540(
                 v19,
                 keyboardType,
                 v25,
@@ -1664,7 +1664,7 @@ LABEL_163:
       }
       v30 = v29->static_fields;
       v30->mKeyboard = v28;
-      sub_1C3E508((CGThumbnailListItem_o *)&v30->mKeyboard, (int32_t)v28, v23, v24);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v30->mKeyboard, (int32_t)v28, v23, v24);
       goto LABEL_57;
     }
     v81 = UICamera_TypeInfo;
@@ -1716,7 +1716,7 @@ LABEL_163:
       {
         if ( !v87 )
           goto LABEL_163;
-        v93 = UnityEngine_Camera__WorldToScreenPoint_71147832(v87, *(UnityEngine_Vector3_o *)(IsNullOrEmpty + 32), 0);
+        v93 = UnityEngine_Camera__WorldToScreenPoint_71464248(v87, *(UnityEngine_Vector3_o *)(IsNullOrEmpty + 32), 0);
         x = v93.fields.x;
         y = v93.fields.y;
         goto LABEL_162;
@@ -1751,7 +1751,7 @@ LABEL_57:
         goto LABEL_58;
       }
     }
-    sub_1C3E7C8(IsNullOrEmpty, v8);
+    sub_1C6BC68(IsNullOrEmpty);
   }
 }
 
@@ -1846,19 +1846,19 @@ void UIInput__UpdateLabel(UIInput_o *this, const MethodInfo *method)
   UnityEngine_Color_o v88; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v89; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5B638 & 1) == 0 )
+  if ( (byte_4CBAC15 & 1) == 0 )
   {
-    sub_1C3E564(&Method_NGUITools_AddWidget_UITexture___);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UnityEngine_Texture2D_TypeInfo);
-    sub_1C3E564(&UIInput_TypeInfo);
-    sub_1C3E564(&StringLiteral_24884/*"x"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_788/*"*"*/);
-    sub_1C3E564(&StringLiteral_7671/*"Input Caret"*/);
-    sub_1C3E564(&StringLiteral_7672/*"Input Highlight"*/);
-    byte_4C5B638 = 1;
+    sub_1C6BA08(&Method_NGUITools_AddWidget_UITexture___);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Texture2D_TypeInfo);
+    sub_1C6BA08(&UIInput_TypeInfo);
+    sub_1C6BA08(&StringLiteral_24974/*"x"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_785/*"*"*/);
+    sub_1C6BA08(&StringLiteral_7668/*"Input Caret"*/);
+    sub_1C6BA08(&StringLiteral_7669/*"Input Highlight"*/);
+    byte_4CBAC15 = 1;
   }
   label = (UnityEngine_Object_o *)this->fields.label;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1909,7 +1909,7 @@ LABEL_16:
             goto LABEL_158;
           v18 = (System_String_o *)StringLiteral_1/*""*/;
           mFont = (UnityEngine_Object_o *)v17->fields.mFont;
-          v20 = (System_String_o *)StringLiteral_788/*"*"*/;
+          v20 = (System_String_o *)StringLiteral_785/*"*"*/;
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           bmFont = (UIWidget_o *)UnityEngine_Object__op_Inequality(mFont, 0, 0);
@@ -1933,9 +1933,9 @@ LABEL_16:
               bmFont = (UIWidget_o *)UIFont__get_bmFont((UIFont_o *)bmFont, (const MethodInfo *)method_ptr_low);
               if ( !bmFont )
                 goto LABEL_158;
-              bmFont = (UIWidget_o *)BMFont__GetGlyph_49340180((BMFont_o *)bmFont, 42, 0);
+              bmFont = (UIWidget_o *)BMFont__GetGlyph_49569064((BMFont_o *)bmFont, 42, 0);
               if ( !bmFont )
-                v20 = (System_String_o *)StringLiteral_24884/*"x"*/;
+                v20 = (System_String_o *)StringLiteral_24974/*"x"*/;
             }
           }
           if ( !mValue )
@@ -1945,7 +1945,7 @@ LABEL_16:
           {
             do
             {
-              bmFont = (UIWidget_o *)System_String__Concat_63636468(v18, v20, 0);
+              bmFont = (UIWidget_o *)System_String__Concat_63966792(v18, v20, 0);
               --stringLength;
               v18 = (System_String_o *)bmFont;
             }
@@ -1968,19 +1968,19 @@ LABEL_35:
               v26 = cursorPosition;
             else
               v26 = v24;
-            v27 = System_String__Substring_63682392(v18, 0, v26, 0);
+            v27 = System_String__Substring_64012732(v18, 0, v26, 0);
             v28 = UnityEngine_Input__get_compositionString(0);
-            v29 = System_String__Concat_63636468(v27, v28, 0);
+            v29 = System_String__Concat_63966792(v27, v28, 0);
             goto LABEL_46;
           }
         }
         if ( !v18 )
           goto LABEL_158;
-        v29 = System_String__Substring_63682392(v18, 0, 0, 0);
+        v29 = System_String__Substring_64012732(v18, 0, 0, 0);
         v26 = 0;
 LABEL_46:
-        v32 = System_String__Substring_63682392(v18, v26, v18->fields._stringLength - v26, 0);
-        v31 = System_String__Concat_63636468(v29, v32, 0);
+        v32 = System_String__Substring_64012732(v18, v26, v18->fields._stringLength - v26, 0);
+        v31 = System_String__Concat_63966792(v29, v32, 0);
         if ( isSelected )
         {
           bmFont = (UIWidget_o *)this->fields.label;
@@ -2017,7 +2017,7 @@ LABEL_46:
                 if ( !v31 )
                   goto LABEL_158;
                 v81 = this->fields.label;
-                bmFont = (UIWidget_o *)System_String__Substring_63682392(v31, 0, v26, 0);
+                bmFont = (UIWidget_o *)System_String__Substring_64012732(v31, 0, v26, 0);
                 if ( !v81 )
                   goto LABEL_158;
                 v83 = UILabel__CalculateOffsetToFit(v81, (System_String_o *)bmFont, v82);
@@ -2056,7 +2056,7 @@ LABEL_143:
                   }
                   if ( !v31 )
                     goto LABEL_158;
-                  v31 = System_String__Substring_63682392(
+                  v31 = System_String__Substring_64012732(
                           v31,
                           method_ptr_low,
                           v31->fields._stringLength - (int)method_ptr_low,
@@ -2092,10 +2092,10 @@ LABEL_68:
                       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                     if ( UnityEngine_Object__op_Equality(mBlankTex, 0, 0) )
                     {
-                      v47 = (UnityEngine_Texture2D_o *)sub_1C3E7B0(UnityEngine_Texture2D_TypeInfo);
-                      UnityEngine_Texture2D___ctor_71229780(v47, 2, 2, 5, 0, 0);
+                      v47 = (UnityEngine_Texture2D_o *)sub_1C6BC54(UnityEngine_Texture2D_TypeInfo);
+                      UnityEngine_Texture2D___ctor_71547260(v47, 2, 2, 5, 0, 0);
                       *p_mBlankTex = v47;
-                      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mBlankTex, (int32_t)v47, v48, v49);
+                      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mBlankTex, (int32_t)v47, v48, v49);
                       for ( i = 0; i != 2; ++i )
                       {
                         method_ptr_low = 0;
@@ -2119,7 +2119,7 @@ LABEL_68:
                       bmFont = (UIWidget_o *)*p_mBlankTex;
                       if ( !*p_mBlankTex )
                         goto LABEL_158;
-                      UnityEngine_Texture2D__Apply_71231632((UnityEngine_Texture2D_o *)bmFont, 0);
+                      UnityEngine_Texture2D__Apply_71549112((UnityEngine_Texture2D_o *)bmFont, 0);
                     }
                     if ( mSelectionStart != mSelectionEnd )
                     {
@@ -2138,15 +2138,15 @@ LABEL_68:
                           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
                         v56 = NGUITools__AddWidget_object_(
                                 cachedGameObject,
-                                (const MethodInfo_3183A0C *)Method_NGUITools_AddWidget_UITexture___);
+                                (const MethodInfo_31C5A6C *)Method_NGUITools_AddWidget_UITexture___);
                         *p_mHighlight = (struct UITexture_o *)v56;
-                        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mHighlight, (int32_t)v56, v57, v58);
+                        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mHighlight, (int32_t)v56, v57, v58);
                         bmFont = (UIWidget_o *)*p_mHighlight;
                         if ( !*p_mHighlight )
                           goto LABEL_158;
                         UnityEngine_Object__set_name(
                           (UnityEngine_Object_o *)bmFont,
-                          (System_String_o *)StringLiteral_7672/*"Input Highlight"*/,
+                          (System_String_o *)StringLiteral_7669/*"Input Highlight"*/,
                           0);
                         bmFont = (UIWidget_o *)*p_mHighlight;
                         if ( !*p_mHighlight )
@@ -2215,15 +2215,15 @@ LABEL_68:
                         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
                       v65 = NGUITools__AddWidget_object_(
                               v64,
-                              (const MethodInfo_3183A0C *)Method_NGUITools_AddWidget_UITexture___);
+                              (const MethodInfo_31C5A6C *)Method_NGUITools_AddWidget_UITexture___);
                       *p_mCaret = (struct UITexture_o *)v65;
-                      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCaret, (int32_t)v65, v66, v67);
+                      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCaret, (int32_t)v65, v66, v67);
                       bmFont = (UIWidget_o *)*p_mCaret;
                       if ( !*p_mCaret )
                         goto LABEL_158;
                       UnityEngine_Object__set_name(
                         (UnityEngine_Object_o *)bmFont,
-                        (System_String_o *)StringLiteral_7671/*"Input Caret"*/,
+                        (System_String_o *)StringLiteral_7668/*"Input Caret"*/,
                         0);
                       bmFont = (UIWidget_o *)*p_mCaret;
                       if ( !*p_mCaret )
@@ -2342,7 +2342,7 @@ LABEL_134:
                       return;
                     }
 LABEL_158:
-                    sub_1C3E7C0(bmFont, method_ptr_low);
+                    sub_1C6BC60(bmFont, method_ptr_low);
                   }
                   if ( UIInput__get_inputShouldBeHidden(this, v40) )
                   {
@@ -2413,11 +2413,11 @@ System_String_o *UIInput__Validate(UIInput_o *this, System_String_o *val, const 
   int32_t v18; // w0
   int32_t characterLimit; // w2
 
-  if ( (byte_4C5B628 & 1) == 0 )
+  if ( (byte_4CBAC05 & 1) == 0 )
   {
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5B628 = 1;
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CBAC05 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(val, 0);
   if ( (IsNullOrEmpty & 1) != 0 )
@@ -2425,8 +2425,8 @@ System_String_o *UIInput__Validate(UIInput_o *this, System_String_o *val, const 
   if ( !val )
     goto LABEL_25;
   stringLength = val->fields._stringLength;
-  v9 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor_63714884(v9, stringLength, 0);
+  v9 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor_64044104(v9, stringLength, 0);
   if ( val->fields._stringLength >= 1 )
   {
     v10 = 0;
@@ -2445,7 +2445,7 @@ System_String_o *UIInput__Validate(UIInput_o *this, System_String_o *val, const 
                                    v9,
                                    v9->klass->vtable._3_ToString.method);
         Length = System_Text_StringBuilder__get_Length(v9, 0);
-        IsNullOrEmpty = UIInput__Validate_49565244(this, v15, Length, v12, v17);
+        IsNullOrEmpty = UIInput__Validate_49794128(this, v15, Length, v12, v17);
         goto LABEL_14;
       }
 LABEL_15:
@@ -2453,7 +2453,7 @@ LABEL_15:
       {
         if ( !v9 )
           goto LABEL_25;
-        IsNullOrEmpty = (unsigned __int64)System_Text_StringBuilder__Append_63723860(v9, v12, 0);
+        IsNullOrEmpty = (unsigned __int64)System_Text_StringBuilder__Append_64053080(v9, v12, 0);
       }
       if ( ++v10 >= val->fields._stringLength )
         goto LABEL_19;
@@ -2482,21 +2482,21 @@ LABEL_19:
                                   v9,
                                   v9->klass->vtable._3_ToString.method);
 LABEL_25:
-    sub_1C3E7C0(IsNullOrEmpty, v6);
+    sub_1C6BC60(IsNullOrEmpty, v6);
   }
   if ( !v9 )
     goto LABEL_25;
   v18 = System_Text_StringBuilder__get_Length(v9, 0);
   characterLimit = this->fields.characterLimit;
   if ( v18 > characterLimit )
-    return System_Text_StringBuilder__ToString_63718256(v9, 0, characterLimit, 0);
+    return System_Text_StringBuilder__ToString_64047476(v9, 0, characterLimit, 0);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v9->klass->vtable._3_ToString.methodPtr)(
                               v9,
                               v9->klass->vtable._3_ToString.method);
 }
 
 
-uint16_t UIInput__Validate_49565244(
+uint16_t UIInput__Validate_49794128(
         UIInput_o *this,
         System_String_o *text,
         int32_t pos,
@@ -2516,12 +2516,12 @@ uint16_t UIInput__Validate_49565244(
   int32_t v19; // w1
   int v20; // w8
 
-  if ( (byte_4C5B63A & 1) == 0 )
+  if ( (byte_4CBAC17 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_861/*"-"*/);
-    sub_1C3E564(&StringLiteral_524/*"'"*/);
-    sub_1C3E564(&StringLiteral_988/*"."*/);
-    byte_4C5B63A = 1;
+    sub_1C6BA08(&StringLiteral_858/*"-"*/);
+    sub_1C6BA08(&StringLiteral_523/*"'"*/);
+    sub_1C6BA08(&StringLiteral_981/*"."*/);
+    byte_4CBAC17 = 1;
   }
   if ( !this->fields.validation )
     return ch;
@@ -2547,7 +2547,7 @@ uint16_t UIInput__Validate_49565244(
             return 0;
           if ( text )
           {
-            if ( !System_String__Contains(text, (System_String_o *)StringLiteral_988/*"."*/, 0) )
+            if ( !System_String__Contains(text, (System_String_o *)StringLiteral_981/*"."*/, 0) )
               return 46;
             return 0;
           }
@@ -2557,13 +2557,13 @@ uint16_t UIInput__Validate_49565244(
 LABEL_13:
           if ( text )
           {
-            if ( !System_String__Contains(text, (System_String_o *)StringLiteral_861/*"-"*/, 0) )
+            if ( !System_String__Contains(text, (System_String_o *)StringLiteral_858/*"-"*/, 0) )
               return 45;
             return 0;
           }
         }
 LABEL_71:
-        sub_1C3E7C0(enabled, v10);
+        sub_1C6BC60(enabled, v10);
       }
 LABEL_40:
       if ( v11 <= 0x39 )
@@ -2647,7 +2647,7 @@ LABEL_53:
                && v17 != 32
                && v17 != 39
                && v20 != 39
-               && !System_String__Contains(text, (System_String_o *)StringLiteral_524/*"'"*/, 0) )
+               && !System_String__Contains(text, (System_String_o *)StringLiteral_523/*"'"*/, 0) )
         {
           return 39;
         }
@@ -2676,10 +2676,10 @@ int32_t UIInput__get_cursorPosition(UIInput_o *this, const MethodInfo *method)
   int32_t *p_mSelectionEnd; // x8
   struct System_String_o *mValue; // x8
 
-  if ( (byte_4C5B622 & 1) == 0 )
+  if ( (byte_4CBABFF & 1) == 0 )
   {
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B622 = 1;
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBABFF = 1;
   }
   v3 = UIInput_TypeInfo;
   if ( !UIInput_TypeInfo->_2.cctor_finished )
@@ -2698,7 +2698,7 @@ int32_t UIInput__get_cursorPosition(UIInput_o *this, const MethodInfo *method)
       UIInput__Init(this, method);
     mValue = this->fields.mValue;
     if ( !mValue )
-      sub_1C3E7C0(ShouldBeHidden, method);
+      sub_1C6BC60(ShouldBeHidden, method);
     p_mSelectionEnd = (int32_t *)&mValue->fields;
   }
   return *p_mSelectionEnd;
@@ -2720,10 +2720,10 @@ bool UIInput__get_inputShouldBeHidden(UIInput_o *this, const MethodInfo *method)
   __int64 v5; // x1
   struct UILabel_o *v6; // x8
 
-  if ( (byte_4C5B61E & 1) == 0 )
+  if ( (byte_4CBABFB & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B61E = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBABFB = 1;
   }
   if ( !this->fields.hideInput )
     return 0;
@@ -2735,7 +2735,7 @@ bool UIInput__get_inputShouldBeHidden(UIInput_o *this, const MethodInfo *method)
     return 0;
   v6 = this->fields.label;
   if ( !v6 )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   return v6->fields.mMaxLineCount == 1 && this->fields.inputType != 2;
 }
 
@@ -2745,11 +2745,11 @@ bool UIInput__get_isSelected(UIInput_o *this, const MethodInfo *method)
   UIInput_c *v3; // x0
   UnityEngine_Object_o *selection; // x20
 
-  if ( (byte_4C5B620 & 1) == 0 )
+  if ( (byte_4CBABFD & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B620 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBABFD = 1;
   }
   v3 = UIInput_TypeInfo;
   if ( !UIInput_TypeInfo->_2.cctor_finished )
@@ -2771,10 +2771,10 @@ int32_t UIInput__get_selectionEnd(UIInput_o *this, const MethodInfo *method)
   int32_t *p_mSelectionEnd; // x8
   struct System_String_o *mValue; // x8
 
-  if ( (byte_4C5B626 & 1) == 0 )
+  if ( (byte_4CBAC03 & 1) == 0 )
   {
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B626 = 1;
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC03 = 1;
   }
   v3 = UIInput_TypeInfo;
   if ( !UIInput_TypeInfo->_2.cctor_finished )
@@ -2793,7 +2793,7 @@ int32_t UIInput__get_selectionEnd(UIInput_o *this, const MethodInfo *method)
       UIInput__Init(this, method);
     mValue = this->fields.mValue;
     if ( !mValue )
-      sub_1C3E7C0(ShouldBeHidden, method);
+      sub_1C6BC60(ShouldBeHidden, method);
     p_mSelectionEnd = (int32_t *)&mValue->fields;
   }
   return *p_mSelectionEnd;
@@ -2808,10 +2808,10 @@ int32_t UIInput__get_selectionStart(UIInput_o *this, const MethodInfo *method)
   int32_t *p_mSelectionStart; // x8
   struct System_String_o *mValue; // x8
 
-  if ( (byte_4C5B624 & 1) == 0 )
+  if ( (byte_4CBAC01 & 1) == 0 )
   {
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B624 = 1;
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC01 = 1;
   }
   v3 = UIInput_TypeInfo;
   if ( !UIInput_TypeInfo->_2.cctor_finished )
@@ -2832,7 +2832,7 @@ int32_t UIInput__get_selectionStart(UIInput_o *this, const MethodInfo *method)
       UIInput__Init(this, v5);
     mValue = this->fields.mValue;
     if ( !mValue )
-      sub_1C3E7C0(isSelected, v5);
+      sub_1C6BC60(isSelected, v5);
     p_mSelectionStart = (int32_t *)&mValue->fields;
   }
   return *p_mSelectionStart;
@@ -2861,10 +2861,10 @@ void UIInput__set_cursorPosition(UIInput_o *this, int32_t value, const MethodInf
   const MethodInfo *v5; // x1
   UIInput_c *v6; // x0
 
-  if ( (byte_4C5B623 & 1) == 0 )
+  if ( (byte_4CBAC00 & 1) == 0 )
   {
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B623 = 1;
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC00 = 1;
   }
   if ( UIInput__get_isSelected(this, *(const MethodInfo **)&value) )
   {
@@ -2891,7 +2891,7 @@ void UIInput__set_defaultText(UIInput_o *this, System_String_o *value, const Met
   if ( this->fields.mDoInit )
     UIInput__Init(this, (const MethodInfo *)value);
   this->fields.mDefaultText = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mDefaultText, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mDefaultText, (int32_t)value, (int32_t)method, v3);
   UIInput__UpdateLabel(this, v6);
 }
 
@@ -2901,10 +2901,10 @@ void UIInput__set_isSelected(UIInput_o *this, bool value, const MethodInfo *meth
 {
   UnityEngine_GameObject_o *gameObject; // x19
 
-  if ( (byte_4C5B621 & 1) == 0 )
+  if ( (byte_4CBABFE & 1) == 0 )
   {
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B621 = 1;
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBABFE = 1;
   }
   if ( value )
   {
@@ -2936,10 +2936,10 @@ void UIInput__set_selectionEnd(UIInput_o *this, int32_t value, const MethodInfo 
   const MethodInfo *v5; // x1
   UIInput_c *v6; // x0
 
-  if ( (byte_4C5B627 & 1) == 0 )
+  if ( (byte_4CBAC04 & 1) == 0 )
   {
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B627 = 1;
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC04 = 1;
   }
   if ( UIInput__get_isSelected(this, *(const MethodInfo **)&value) )
   {
@@ -2964,10 +2964,10 @@ void UIInput__set_selectionStart(UIInput_o *this, int32_t value, const MethodInf
   const MethodInfo *v5; // x1
   UIInput_c *v6; // x0
 
-  if ( (byte_4C5B625 & 1) == 0 )
+  if ( (byte_4CBAC02 & 1) == 0 )
   {
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B625 = 1;
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBAC02 = 1;
   }
   if ( UIInput__get_isSelected(this, *(const MethodInfo **)&value) )
   {
@@ -3011,10 +3011,10 @@ void UIInput__set_value(UIInput_o *this, System_String_o *value, const MethodInf
   int32_t stringLength; // w8
   const MethodInfo *v19; // x1
 
-  if ( (byte_4C5B61F & 1) == 0 )
+  if ( (byte_4CBABFC & 1) == 0 )
   {
-    sub_1C3E564(&UIInput_TypeInfo);
-    byte_4C5B61F = 1;
+    sub_1C6BA08(&UIInput_TypeInfo);
+    byte_4CBABFC = 1;
   }
   if ( this->fields.mDoInit )
     UIInput__Init(this, (const MethodInfo *)value);
@@ -3047,13 +3047,13 @@ void UIInput__set_value(UIInput_o *this, System_String_o *value, const MethodInf
         goto LABEL_25;
       UnityEngine_TouchScreenKeyboard__set_text(mKeyboard, v6, 0);
       this->fields.mCached = v6;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCached, (int32_t)v6, v12, v13);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCached, (int32_t)v6, v12, v13);
     }
   }
   if ( System_String__op_Inequality(this->fields.mValue, v6, 0) )
   {
     this->fields.mValue = v6;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)v6, v14, v15);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mValue, (int32_t)v6, v14, v15);
     this->fields.mLoadSavedValue = 0;
     if ( !UIInput__get_isSelected(this, v16) )
     {
@@ -3077,7 +3077,7 @@ LABEL_24:
       goto LABEL_24;
     }
 LABEL_25:
-    sub_1C3E7C0(mKeyboard, v9);
+    sub_1C6BC60(mKeyboard, v9);
   }
 }
 
@@ -3094,20 +3094,20 @@ void UIInput_OnValidate___ctor(UIInput_OnValidate_o *this, Il2CppObject *object,
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( v8 == 2 )
     {
-      v9 = sub_1A8A48C;
+      v9 = sub_1AA9B4C;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v11 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v11, 0);
+      v11 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v11, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -3117,15 +3117,14 @@ LABEL_8:
   }
   if ( v8 != 3 )
     goto LABEL_8;
-  v9 = sub_1A8A4B4;
+  v9 = sub_1AA9B74;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v9;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A8A424;
+  this->fields.extra_arg = (intptr_t)sub_1AA9AE4;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *UIInput_OnValidate__BeginInvoke(
         UIInput_OnValidate_o *this,
         System_String_o *text,
@@ -3135,30 +3134,23 @@ System_IAsyncResult_o *UIInput_OnValidate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v7; // x7
-  __int64 v12; // x2
-  __int64 v13; // x3
-  __int64 v14; // x4
-  __int64 v15; // x5
-  __int64 v16; // x6
-  __int64 v17; // x7
-  _QWORD v19[4]; // [xsp+8h] [xbp-68h] BYREF
-  uint16_t v20[2]; // [xsp+28h] [xbp-48h] BYREF
-  int32_t v21; // [xsp+2Ch] [xbp-44h] BYREF
+  _QWORD v12[4]; // [xsp+8h] [xbp-68h] BYREF
+  uint16_t v13[2]; // [xsp+28h] [xbp-48h] BYREF
+  int32_t v14; // [xsp+2Ch] [xbp-44h] BYREF
 
-  v21 = charIndex;
-  v20[0] = addedChar;
-  if ( (byte_4C5B63F & 1) == 0 )
+  v14 = charIndex;
+  v13[0] = addedChar;
+  if ( (byte_4CBAC1C & 1) == 0 )
   {
-    sub_1C3E564(&char_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    byte_4C5B63F = 1;
+    sub_1C6BA08(&char_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    byte_4CBAC1C = 1;
   }
-  v19[3] = 0;
-  v19[0] = text;
-  v19[1] = j_il2cpp_value_box_0(int_TypeInfo, &v21, *(_QWORD *)&charIndex, addedChar, callback, object, method, v7);
-  v19[2] = j_il2cpp_value_box_0(char_TypeInfo, v20, v12, v13, v14, v15, v16, v17);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v19, callback, object);
+  v12[3] = 0;
+  v12[0] = text;
+  v12[1] = j_il2cpp_value_box_0(int_TypeInfo, &v14);
+  v12[2] = j_il2cpp_value_box_0(char_TypeInfo, v13);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v12, callback, object);
 }
 
 
@@ -3172,9 +3164,9 @@ uint16_t UIInput_OnValidate__EndInvoke(
   __int64 v5; // x2
   __int64 v6; // x3
 
-  v3 = sub_1C3E51C(result, 0, method);
+  v3 = sub_1C6B9C0(result, 0, method);
   if ( !v3 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   return *(_WORD *)j_il2cpp_object_unbox_0(v3, v4, v5, v6);
 }
 

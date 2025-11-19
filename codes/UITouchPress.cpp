@@ -13,36 +13,36 @@ void UITouchPress___ctor(UITouchPress_o *this, const MethodInfo *method)
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C58706 & 1) == 0 )
+  if ( (byte_4CB7C7D & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4C58706 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4CB7C7D = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onClick = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onClick, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onClick, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onPress = (struct System_Collections_Generic_List_EventDelegate__o *)v6;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onPress, (int32_t)v6, v7, v8);
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onPress, (int32_t)v6, v7, v8);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onLongPress = (struct System_Collections_Generic_List_EventDelegate__o *)v9;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onLongPress, (int32_t)v9, v10, v11);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onLongPress, (int32_t)v9, v10, v11);
+  v12 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v12,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onLongRelease = (struct System_Collections_Generic_List_EventDelegate__o *)v12;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onLongRelease, (int32_t)v12, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onLongRelease, (int32_t)v12, v13, v14);
   *(_QWORD *)&this->fields.releaseRange = 0x4220000041200000LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -52,10 +52,10 @@ void UITouchPress__Click(UITouchPress_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_EventDelegate__o *onClick; // x19
 
-  if ( (byte_4C58705 & 1) == 0 )
+  if ( (byte_4CB7C7C & 1) == 0 )
   {
-    sub_1C3E564(&EventDelegate_TypeInfo);
-    byte_4C58705 = 1;
+    sub_1C6BA08(&EventDelegate_TypeInfo);
+    byte_4CB7C7C = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0)
     && !this->fields.isCancel
@@ -64,7 +64,7 @@ void UITouchPress__Click(UITouchPress_o *this, const MethodInfo *method)
     onClick = this->fields.onClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49293740(onClick, 0);
+    EventDelegate__Execute_49522624(onClick, 0);
   }
 }
 
@@ -79,16 +79,16 @@ void UITouchPress__OnCheckLongPress(UITouchPress_o *this, const MethodInfo *meth
 {
   System_Collections_Generic_List_EventDelegate__o *onLongPress; // x19
 
-  if ( (byte_4C58702 & 1) == 0 )
+  if ( (byte_4CB7C79 & 1) == 0 )
   {
-    sub_1C3E564(&EventDelegate_TypeInfo);
-    byte_4C58702 = 1;
+    sub_1C6BA08(&EventDelegate_TypeInfo);
+    byte_4CB7C79 = 1;
   }
   *(_WORD *)&this->fields.isLongPressCheck = 256;
   onLongPress = this->fields.onLongPress;
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Execute_49293740(onLongPress, 0);
+  EventDelegate__Execute_49522624(onLongPress, 0);
 }
 
 
@@ -100,11 +100,11 @@ void UITouchPress__OnDrag(UITouchPress_o *this, UnityEngine_Vector2_o v, const M
   float v7; // s0
   float v8; // s2
 
-  if ( (byte_4C58704 & 1) == 0 )
+  if ( (byte_4CB7C7B & 1) == 0 )
   {
-    sub_1C3E564(&UICamera_TypeInfo);
-    sub_1C3E564(&StringLiteral_9837/*"OnCheckLongPress"*/);
-    byte_4C58704 = 1;
+    sub_1C6BA08(&UICamera_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9833/*"OnCheckLongPress"*/);
+    byte_4CB7C7B = 1;
   }
   if ( this->fields.isLongPressCheck )
   {
@@ -126,9 +126,9 @@ void UITouchPress__OnDrag(UITouchPress_o *this, UnityEngine_Vector2_o v, const M
         || v7 < (float)-releaseRange )
       {
         this->fields.isLongPressCheck = 0;
-        UnityEngine_MonoBehaviour__CancelInvoke_71326444(
+        UnityEngine_MonoBehaviour__CancelInvoke_71644176(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_9837/*"OnCheckLongPress"*/,
+          (System_String_o *)StringLiteral_9833/*"OnCheckLongPress"*/,
           0);
       }
     }
@@ -144,17 +144,17 @@ void UITouchPress__OnEnable(UITouchPress_o *this, const MethodInfo *method)
 
 void UITouchPress__OnHover(UITouchPress_o *this, bool isSelect, const MethodInfo *method)
 {
-  if ( (byte_4C58703 & 1) == 0 )
+  if ( (byte_4CB7C7A & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_9837/*"OnCheckLongPress"*/);
-    byte_4C58703 = 1;
+    sub_1C6BA08(&StringLiteral_9833/*"OnCheckLongPress"*/);
+    byte_4CB7C7A = 1;
   }
   if ( this->fields.isPress && !isSelect )
   {
     this->fields.isLongPressCheck = 0;
-    UnityEngine_MonoBehaviour__CancelInvoke_71326444(
+    UnityEngine_MonoBehaviour__CancelInvoke_71644176(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9837/*"OnCheckLongPress"*/,
+      (System_String_o *)StringLiteral_9833/*"OnCheckLongPress"*/,
       0);
     this->fields.isPress = 0;
     this->fields.isLongPress = 0;
@@ -178,12 +178,12 @@ void UITouchPress__OnPress(UITouchPress_o *this, bool isPressed, const MethodInf
   float v16; // s2
   System_Collections_Generic_List_EventDelegate__o *onLongRelease; // x19
 
-  if ( (byte_4C58701 & 1) == 0 )
+  if ( (byte_4CB7C78 & 1) == 0 )
   {
-    sub_1C3E564(&EventDelegate_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    sub_1C3E564(&StringLiteral_9837/*"OnCheckLongPress"*/);
-    byte_4C58701 = 1;
+    sub_1C6BA08(&EventDelegate_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9833/*"OnCheckLongPress"*/);
+    byte_4CB7C78 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -201,7 +201,7 @@ void UITouchPress__OnPress(UITouchPress_o *this, bool isPressed, const MethodInf
       onPress = this->fields.onPress;
       if ( !EventDelegate_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-      EventDelegate__Execute_49293740(onPress, 0);
+      EventDelegate__Execute_49522624(onPress, 0);
       isLongPressFast = this->fields.isLongPressFast;
       this->fields.isLongPressCheck = 1;
       v8 = 0.5;
@@ -209,16 +209,16 @@ void UITouchPress__OnPress(UITouchPress_o *this, bool isPressed, const MethodInf
         v8 = 1.0;
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_9837/*"OnCheckLongPress"*/,
+        (System_String_o *)StringLiteral_9833/*"OnCheckLongPress"*/,
         v8,
         0);
       return;
     }
     isLongPressCheck = this->fields.isLongPressCheck;
     this->fields.isLongPressCheck = 0;
-    UnityEngine_MonoBehaviour__CancelInvoke_71326444(
+    UnityEngine_MonoBehaviour__CancelInvoke_71644176(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9837/*"OnCheckLongPress"*/,
+      (System_String_o *)StringLiteral_9833/*"OnCheckLongPress"*/,
       0);
     if ( !this->fields.isPress )
       return;
@@ -253,7 +253,7 @@ void UITouchPress__OnPress(UITouchPress_o *this, bool isPressed, const MethodInf
 LABEL_26:
           if ( !EventDelegate_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-          EventDelegate__Execute_49293740(onLongRelease, 0);
+          EventDelegate__Execute_49522624(onLongRelease, 0);
         }
       }
     }
@@ -295,17 +295,17 @@ void UITouchPress__set_IsEnabled(UITouchPress_o *this, bool value, const MethodI
 {
   _BOOL4 v5; // w20
 
-  if ( (byte_4C58700 & 1) == 0 )
+  if ( (byte_4CB7C77 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_9837/*"OnCheckLongPress"*/);
-    byte_4C58700 = 1;
+    sub_1C6BA08(&StringLiteral_9833/*"OnCheckLongPress"*/);
+    byte_4CB7C77 = 1;
   }
   v5 = value;
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) != v5 )
   {
-    UnityEngine_MonoBehaviour__CancelInvoke_71326444(
+    UnityEngine_MonoBehaviour__CancelInvoke_71644176(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9837/*"OnCheckLongPress"*/,
+      (System_String_o *)StringLiteral_9833/*"OnCheckLongPress"*/,
       0);
     *(_DWORD *)&this->fields.isCancel = 0;
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, v5, 0);

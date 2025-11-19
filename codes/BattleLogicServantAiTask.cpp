@@ -16,15 +16,15 @@ void BattleLogicServantAiTask___ctor(
   BattleLogicServantTask___ctor((BattleLogicServantTask_o *)this, 59, svtData, (const MethodInfo *)logic);
   this->fields.procState = procState;
   this->fields.svtData = svtData;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.svtData, (int32_t)svtData, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.svtData, (int32_t)svtData, v9, v10);
   if ( !svtData )
-    sub_1C3E7C0(v11, v12);
+    sub_1C6BC60(v11, v12);
   v13 = (struct BattleLogicServantAi_o *)((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, const MethodInfo *))svtData->klass->vtable._20_GetLogicServantAi.methodPtr)(
                                            svtData,
                                            logic,
                                            svtData->klass->vtable._20_GetLogicServantAi.method);
   this->fields.logicAi = v13;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.logicAi, (int32_t)v13, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.logicAi, (int32_t)v13, v14, v15);
 }
 
 
@@ -45,20 +45,20 @@ BattleLogicTask_array *BattleLogicServantAiTask__MakeActionTask(
   __int64 v5; // x1
   BattleLogicServantAi_o *logicAi; // x0
 
-  if ( (byte_4C5A05C & 1) == 0 )
+  if ( (byte_4CB961F & 1) == 0 )
   {
-    sub_1C3E564(&BattleLogicTask___TypeInfo);
-    byte_4C5A05C = 1;
+    sub_1C6BA08(&BattleLogicTask___TypeInfo);
+    byte_4CB961F = 1;
   }
   if ( (((__int64 (__fastcall *)(BattleLogicServantAiTask_o *, BattleLogic_o *, const MethodInfo *))this->klass->vtable._11_IsActable.methodPtr)(
           this,
           logic,
           this->klass->vtable._11_IsActable.method)
       & 1) == 0 )
-    return (BattleLogicTask_array *)sub_1C3E60C(BattleLogicTask___TypeInfo, 0);
+    return (BattleLogicTask_array *)sub_1C6BAB0(BattleLogicTask___TypeInfo, 0);
   logicAi = this->fields.logicAi;
   if ( !logicAi )
-    sub_1C3E7C0(0, v5);
+    sub_1C6BC60(0, v5);
   return BattleLogicServantAi__TaskAiTargetAct(
            logicAi,
            this->fields.svtData,

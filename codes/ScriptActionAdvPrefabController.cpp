@@ -14,10 +14,10 @@ bool ScriptActionAdvPrefabController__CheckGoNext(
   __int64 v7; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C58A50 & 1) == 0 )
+  if ( (byte_4CB8208 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
-    byte_4C58A50 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
+    byte_4CB8208 = 1;
   }
   value = 0;
   actorDict = this->fields.actorDict;
@@ -27,23 +27,23 @@ bool ScriptActionAdvPrefabController__CheckGoNext(
          (System_Collections_Generic_Dictionary_object__object__o *)actorDict,
          (Il2CppObject *)actorName,
          &value,
-         (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
+         (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
   if ( !v6 )
     return 1;
   if ( !value )
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   return LOBYTE(value[5].klass) != 0;
 }
 
 
 System_String_o *ScriptActionAdvPrefabController__GetAssetName(System_String_o *baseName, const MethodInfo *method)
 {
-  if ( (byte_4C58A4C & 1) == 0 )
+  if ( (byte_4CB8204 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1924/*"ADV/{0}"*/);
-    byte_4C58A4C = 1;
+    sub_1C6BA08(&StringLiteral_1917/*"ADV/{0}"*/);
+    byte_4CB8204 = 1;
   }
-  return System_String__Format((System_String_o *)StringLiteral_1924/*"ADV/{0}"*/, (Il2CppObject *)baseName, 0);
+  return System_String__Format((System_String_o *)StringLiteral_1917/*"ADV/{0}"*/, (Il2CppObject *)baseName, 0);
 }
 
 
@@ -58,13 +58,13 @@ void ScriptActionAdvPrefabController__Pause(
   System_Action_object__o *v7; // x21
 
   v4 = pause;
-  if ( (byte_4C58A54 & 1) == 0 )
+  if ( (byte_4CB820C & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_ScriptActionAdvPrefabActorController__TypeInfo);
-    sub_1C3E564(&Method_BasicHelper_ForEach_ScriptActionAdvPrefabActorController___);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__get_Values__);
-    sub_1C3E564(&Method_ScriptActionAdvPrefabController__Pause_b__23_0__);
-    byte_4C58A54 = 1;
+    sub_1C6BA08(&System_Action_ScriptActionAdvPrefabActorController__TypeInfo);
+    sub_1C6BA08(&Method_BasicHelper_ForEach_ScriptActionAdvPrefabActorController___);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__get_Values__);
+    sub_1C6BA08(&Method_ScriptActionAdvPrefabController__Pause_b__23_0__);
+    byte_4CB820C = 1;
   }
   actorDict = this->fields.actorDict;
   this->fields.isPaused = v4;
@@ -72,13 +72,13 @@ void ScriptActionAdvPrefabController__Pause(
   {
     Values = System_Collections_Generic_Dictionary_object__object___get_Values(
                (System_Collections_Generic_Dictionary_object__object__o *)actorDict,
-               (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__get_Values__);
-    v7 = (System_Action_object__o *)sub_1C3E7B0(System_Action_ScriptActionAdvPrefabActorController__TypeInfo);
+               (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__get_Values__);
+    v7 = (System_Action_object__o *)sub_1C6BC54(System_Action_ScriptActionAdvPrefabActorController__TypeInfo);
     System_Action_object____ctor(v7, (Il2CppObject *)this, Method_ScriptActionAdvPrefabController__Pause_b__23_0__, 0);
     BasicHelper__ForEach_object_(
       (System_Collections_Generic_IEnumerable_T__o *)Values,
       (System_Action_T__o *)v7,
-      (const MethodInfo_30E5A30 *)Method_BasicHelper_ForEach_ScriptActionAdvPrefabActorController___);
+      (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_ScriptActionAdvPrefabActorController___);
   }
 }
 
@@ -94,10 +94,10 @@ void ScriptActionAdvPrefabController__PlayAnimator(
   const MethodInfo *v9; // x2
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C58A4F & 1) == 0 )
+  if ( (byte_4CB8207 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
-    byte_4C58A4F = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
+    byte_4CB8207 = 1;
   }
   value = 0;
   actorDict = this->fields.actorDict;
@@ -106,10 +106,10 @@ void ScriptActionAdvPrefabController__PlayAnimator(
          (System_Collections_Generic_Dictionary_object__object__o *)actorDict,
          (Il2CppObject *)actorName,
          &value,
-         (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__) )
+         (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__) )
   {
     if ( !value )
-      sub_1C3E7C0(0, v8);
+      sub_1C6BC60(0, v8);
     ScriptActionAdvPrefabActorController__PlayAnimator((ScriptActionAdvPrefabActorController_o *)value, trigger, v9);
   }
 }
@@ -122,7 +122,7 @@ void ScriptActionAdvPrefabController__Prepare(
 {
   UnityEngine_RenderTexture_o **p_renderTexture_k__BackingField; // x20
   UnityEngine_Object_o *renderTexture_k__BackingField; // x22
-  UnityEngine_RenderTexture_o *Temporary_71249912; // x0
+  UnityEngine_RenderTexture_o *Temporary_71567392; // x0
   int32_t v8; // w2
   const MethodInfo *v9; // x3
   struct UnityEngine_GameObject_o **p_demoRootObject; // x22
@@ -134,7 +134,7 @@ void ScriptActionAdvPrefabController__Prepare(
   int32_t v16; // w2
   const MethodInfo *v17; // x3
   UnityEngine_Object_o *v18; // x23
-  Il2CppObject *Object_object__51228128; // x23
+  Il2CppObject *Object_object__51495936; // x23
   UnityEngine_Transform_o *transform; // x24
   Il2CppObject *v21; // x0
   int32_t v22; // w2
@@ -153,18 +153,18 @@ void ScriptActionAdvPrefabController__Prepare(
   __int64 v35; // x23
   ScriptReplaceString_c *v36; // x0
 
-  if ( (byte_4C58A4E & 1) == 0 )
+  if ( (byte_4CB8206 & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetData_GetObject_GameObject____78185152);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController___ctor__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_ScriptActionAdvPrefabActorController___);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&ScriptReplaceString_TypeInfo);
-    byte_4C58A4E = 1;
+    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponentsInChildren_ScriptActionAdvPrefabActorController___);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&ScriptReplaceString_TypeInfo);
+    byte_4CB8206 = 1;
   }
   p_renderTexture_k__BackingField = &this->fields._renderTexture_k__BackingField;
   renderTexture_k__BackingField = (UnityEngine_Object_o *)this->fields._renderTexture_k__BackingField;
@@ -172,18 +172,18 @@ void ScriptActionAdvPrefabController__Prepare(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(renderTexture_k__BackingField, 0, 0) )
   {
-    if ( !byte_4C506A0 )
+    if ( !byte_4CAFC08 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C506A0 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CAFC08 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    Temporary_71249912 = UnityEngine_RenderTexture__GetTemporary_71249912(1267, 576, 24, 0);
-    *p_renderTexture_k__BackingField = Temporary_71249912;
-    sub_1C3E508(
+    Temporary_71567392 = UnityEngine_RenderTexture__GetTemporary_71567392(1267, 576, 24, 0);
+    *p_renderTexture_k__BackingField = Temporary_71567392;
+    sub_1C6B9AC(
       (CGThumbnailListItem_o *)&this->fields._renderTexture_k__BackingField,
-      (int32_t)Temporary_71249912,
+      (int32_t)Temporary_71567392,
       v8,
       v9);
   }
@@ -202,9 +202,9 @@ void ScriptActionAdvPrefabController__Prepare(
       v15 = (UnityEngine_Object_o *)*p_demoRootObject;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564(v15, 0);
+      UnityEngine_Object__Destroy_71659676(v15, 0);
       *p_demoRootObject = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.demoRootObject, 0, v16, v17);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.demoRootObject, 0, v16, v17);
     }
   }
   v18 = (UnityEngine_Object_o *)*p_demoRootObject;
@@ -215,19 +215,19 @@ void ScriptActionAdvPrefabController__Prepare(
   assetData = this->fields.assetData;
   if ( !assetData )
     goto LABEL_57;
-  Object_object__51228128 = AssetData__GetObject_object__51228128(
+  Object_object__51495936 = AssetData__GetObject_object__51495936(
                               (AssetData_o *)assetData,
                               objectName,
-                              (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_GameObject____78185152);
+                              (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v21 = UnityEngine_Object__Instantiate_object__51929056(
-          Object_object__51228128,
+  v21 = UnityEngine_Object__Instantiate_object__52199488(
+          Object_object__51495936,
           transform,
-          (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+          (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
   *p_demoRootObject = (struct UnityEngine_GameObject_o *)v21;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.demoRootObject, (int32_t)v21, v22, v23);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.demoRootObject, (int32_t)v21, v22, v23);
   assetData = *p_demoRootObject;
   if ( !*p_demoRootObject )
     goto LABEL_57;
@@ -235,9 +235,9 @@ void ScriptActionAdvPrefabController__Prepare(
   assetData = *p_demoRootObject;
   if ( !*p_demoRootObject )
     goto LABEL_57;
-  assetData = UnityEngine_GameObject__GetComponentsInChildren_object__51715312(
+  assetData = UnityEngine_GameObject__GetComponentsInChildren_object__51985744(
                 (UnityEngine_GameObject_o *)assetData,
-                (const MethodInfo_3151CF0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
+                (const MethodInfo_3193D50 *)Method_UnityEngine_GameObject_GetComponentsInChildren_Camera___);
   if ( !assetData )
     goto LABEL_57;
   v24 = *((_DWORD *)assetData + 6);
@@ -256,24 +256,24 @@ void ScriptActionAdvPrefabController__Prepare(
         goto LABEL_33;
     }
 LABEL_58:
-    sub_1C3E7C8(assetData, v12);
+    sub_1C6BC68(assetData);
   }
 LABEL_33:
-  v27 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TypeInfo);
+  v27 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v27,
-    (const MethodInfo_3474E30 *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController___ctor__);
+    (const MethodInfo_34BAF8C *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController___ctor__);
   this->fields.actorDict = (struct System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__o *)v27;
   p_actorDict = &this->fields.actorDict;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.actorDict, (int32_t)v27, v29, v30);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.actorDict, (int32_t)v27, v29, v30);
   assetData = this->fields.demoRootObject;
   if ( !assetData
-    || (assetData = UnityEngine_GameObject__GetComponentsInChildren_object__51715312(
+    || (assetData = UnityEngine_GameObject__GetComponentsInChildren_object__51985744(
                       (UnityEngine_GameObject_o *)assetData,
-                      (const MethodInfo_3151CF0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_ScriptActionAdvPrefabActorController___)) == 0 )
+                      (const MethodInfo_3193D50 *)Method_UnityEngine_GameObject_GetComponentsInChildren_ScriptActionAdvPrefabActorController___)) == 0 )
   {
 LABEL_57:
-    sub_1C3E7C0(assetData, v12);
+    sub_1C6BC60(assetData, v12);
   }
   v32 = *((_DWORD *)assetData + 6);
   v33 = assetData;
@@ -285,10 +285,10 @@ LABEL_57:
       v35 = *((_QWORD *)v33 + (int)v34 + 4);
       if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ScriptReplaceString_TypeInfo);
-      if ( !byte_4C58A5F )
+      if ( !byte_4CB7FC4 )
       {
-        sub_1C3E564(&ScriptReplaceString_TypeInfo);
-        byte_4C58A5F = 1;
+        sub_1C6BA08(&ScriptReplaceString_TypeInfo);
+        byte_4CB7FC4 = 1;
       }
       assetData = ScriptReplaceString_TypeInfo;
       if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
@@ -306,10 +306,10 @@ LABEL_57:
       {
         if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(ScriptReplaceString_TypeInfo);
-        if ( !byte_4C58A5F )
+        if ( !byte_4CB7FC4 )
         {
-          sub_1C3E564(&ScriptReplaceString_TypeInfo);
-          byte_4C58A5F = 1;
+          sub_1C6BA08(&ScriptReplaceString_TypeInfo);
+          byte_4CB7FC4 = 1;
         }
         v36 = ScriptReplaceString_TypeInfo;
         if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
@@ -328,7 +328,7 @@ LABEL_57:
           (System_Collections_Generic_Dictionary_object__object__o *)assetData,
           *(Il2CppObject **)(v35 + 32),
           (Il2CppObject *)v35,
-          (const MethodInfo_34757E0 *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__Add__);
+          (const MethodInfo_34BB93C *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__Add__);
         if ( this->fields.isPaused )
           ScriptActionAdvPrefabActorController__Pause((ScriptActionAdvPrefabActorController_o *)v35, 1, v31);
       }
@@ -355,35 +355,35 @@ void ScriptActionAdvPrefabController__Release(ScriptActionAdvPrefabController_o 
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C58A53 & 1) == 0 )
+  if ( (byte_4CB820B & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C58A53 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB820B = 1;
   }
   demoRootObject = (UnityEngine_Object_o *)this->fields.demoRootObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71341564(demoRootObject, 0);
+  UnityEngine_Object__Destroy_71659676(demoRootObject, 0);
   this->fields.demoRootObject = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.demoRootObject, 0, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.demoRootObject, 0, v4, v5);
   this->fields.actorDict = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.actorDict, 0, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.actorDict, 0, v6, v7);
   p_renderTexture_k__BackingField = &this->fields._renderTexture_k__BackingField;
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)this->fields._renderTexture_k__BackingField, 0, 0) )
   {
     UnityEngine_RenderTexture__ReleaseTemporary(*p_renderTexture_k__BackingField, 0);
     *p_renderTexture_k__BackingField = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields._renderTexture_k__BackingField, 0, v9, v10);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._renderTexture_k__BackingField, 0, v9, v10);
   }
   assetData = this->fields.assetData;
   if ( assetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40580972(assetData, 0);
+    AssetManager__releaseAsset_40765532(assetData, 0);
     this->fields.assetData = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetData, 0, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetData, 0, v12, v13);
   }
   this->fields._isSetup_k__BackingField = 0;
 }
@@ -398,10 +398,10 @@ void ScriptActionAdvPrefabController__SetHide(
   const MethodInfo *v6; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C58A52 & 1) == 0 )
+  if ( (byte_4CB820A & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
-    byte_4C58A52 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
+    byte_4CB820A = 1;
   }
   value = 0;
   actorDict = this->fields.actorDict;
@@ -410,10 +410,10 @@ void ScriptActionAdvPrefabController__SetHide(
          (System_Collections_Generic_Dictionary_object__object__o *)actorDict,
          (Il2CppObject *)actorName,
          &value,
-         (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__) )
+         (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__) )
   {
     if ( !value )
-      sub_1C3E7C0(0, v6);
+      sub_1C6BC60(0, v6);
     ScriptActionAdvPrefabActorController__Hide((ScriptActionAdvPrefabActorController_o *)value, v6);
   }
 }
@@ -428,10 +428,10 @@ void ScriptActionAdvPrefabController__SetShow(
   const MethodInfo *v6; // x1
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C58A51 & 1) == 0 )
+  if ( (byte_4CB8209 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
-    byte_4C58A51 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__);
+    byte_4CB8209 = 1;
   }
   value = 0;
   actorDict = this->fields.actorDict;
@@ -440,10 +440,10 @@ void ScriptActionAdvPrefabController__SetShow(
          (System_Collections_Generic_Dictionary_object__object__o *)actorDict,
          (Il2CppObject *)actorName,
          &value,
-         (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__) )
+         (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__TryGetValue__) )
   {
     if ( !value )
-      sub_1C3E7C0(0, v6);
+      sub_1C6BC60(0, v6);
     ScriptActionAdvPrefabActorController__Show((ScriptActionAdvPrefabActorController_o *)value, v6);
   }
 }
@@ -456,15 +456,15 @@ void ScriptActionAdvPrefabController__Setup(
 {
   AssetLoader_LoadEndDataHandler_o *v5; // x21
 
-  if ( (byte_4C58A4D & 1) == 0 )
+  if ( (byte_4CB8205 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C3E564(&Method_ScriptActionAdvPrefabController__Setup_b__16_0__);
-    byte_4C58A4D = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C6BA08(&Method_ScriptActionAdvPrefabController__Setup_b__16_0__);
+    byte_4CB8205 = 1;
   }
   this->fields._isSetup_k__BackingField = 0;
-  v5 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v5 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v5,
     (Il2CppObject *)this,
@@ -482,7 +482,7 @@ void ScriptActionAdvPrefabController___Pause_b__23_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   ScriptActionAdvPrefabActorController__Pause(x, this->fields.isPaused, method);
 }
 
@@ -498,7 +498,7 @@ void ScriptActionAdvPrefabController___Setup_b__16_0(
   this->fields.assetData = asset;
   p_assetData = &this->fields.assetData;
   *((_BYTE *)p_assetData - 8) = 1;
-  sub_1C3E508((CGThumbnailListItem_o *)p_assetData, (int32_t)asset, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_assetData, (int32_t)asset, (int32_t)method, v3);
 }
 
 
@@ -514,21 +514,21 @@ bool ScriptActionAdvPrefabController__get_IsGoNext(ScriptActionAdvPrefabControll
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C58A4B & 1) == 0 )
+  if ( (byte_4CB8203 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__get_Values__);
-    sub_1C3E564(&Method_System_Linq_Enumerable_All_ScriptActionAdvPrefabActorController___);
-    sub_1C3E564(&System_Func_ScriptActionAdvPrefabActorController__bool__TypeInfo);
-    sub_1C3E564(&Method_ScriptActionAdvPrefabController___c__get_IsGoNext_b__12_0__);
-    sub_1C3E564(&ScriptActionAdvPrefabController___c_TypeInfo);
-    byte_4C58A4B = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__get_Values__);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_All_ScriptActionAdvPrefabActorController___);
+    sub_1C6BA08(&System_Func_ScriptActionAdvPrefabActorController__bool__TypeInfo);
+    sub_1C6BA08(&Method_ScriptActionAdvPrefabController___c__get_IsGoNext_b__12_0__);
+    sub_1C6BA08(&ScriptActionAdvPrefabController___c_TypeInfo);
+    byte_4CB8203 = 1;
   }
   actorDict = this->fields.actorDict;
   if ( !actorDict )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   Values = System_Collections_Generic_Dictionary_object__object___get_Values(
              (System_Collections_Generic_Dictionary_object__object__o *)actorDict,
-             (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__get_Values__);
+             (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__ScriptActionAdvPrefabActorController__get_Values__);
   v5 = ScriptActionAdvPrefabController___c_TypeInfo;
   v6 = (System_Collections_Generic_IEnumerable_TSource__o *)Values;
   if ( !ScriptActionAdvPrefabController___c_TypeInfo->_2.cctor_finished )
@@ -545,7 +545,7 @@ bool ScriptActionAdvPrefabController__get_IsGoNext(ScriptActionAdvPrefabControll
       v5 = ScriptActionAdvPrefabController___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__12_0 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_ScriptActionAdvPrefabActorController__bool__TypeInfo);
+    _9__12_0 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_ScriptActionAdvPrefabActorController__bool__TypeInfo);
     System_Func_object__bool____ctor(
       _9__12_0,
       v8,
@@ -553,12 +553,12 @@ bool ScriptActionAdvPrefabController__get_IsGoNext(ScriptActionAdvPrefabControll
       0);
     static_fields = ScriptActionAdvPrefabController___c_TypeInfo->static_fields;
     static_fields->__9__12_0 = (struct System_Func_ScriptActionAdvPrefabActorController__bool__o *)_9__12_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v10, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v10, v11);
   }
   return System_Linq_Enumerable__All_object_(
            v6,
            (System_Func_TSource__bool__o *)_9__12_0,
-           (const MethodInfo_3103F20 *)Method_System_Linq_Enumerable_All_ScriptActionAdvPrefabActorController___);
+           (const MethodInfo_3145818 *)Method_System_Linq_Enumerable_All_ScriptActionAdvPrefabActorController___);
 }
 
 
@@ -593,7 +593,7 @@ void ScriptActionAdvPrefabController__set_renderTexture(
   const MethodInfo *v3; // x3
 
   this->fields._renderTexture_k__BackingField = value;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._renderTexture_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -607,15 +607,15 @@ void ScriptActionAdvPrefabController___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C58A55 & 1) == 0 )
+  if ( (byte_4CB820D & 1) == 0 )
   {
-    sub_1C3E564(&ScriptActionAdvPrefabController___c_TypeInfo);
-    byte_4C58A55 = 1;
+    sub_1C6BA08(&ScriptActionAdvPrefabController___c_TypeInfo);
+    byte_4CB820D = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(ScriptActionAdvPrefabController___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(ScriptActionAdvPrefabController___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ScriptActionAdvPrefabController___c_TypeInfo->static_fields->__9 = (struct ScriptActionAdvPrefabController___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)ScriptActionAdvPrefabController___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)ScriptActionAdvPrefabController___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -631,6 +631,6 @@ bool ScriptActionAdvPrefabController___c___get_IsGoNext_b__12_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return x->fields._IsGoNext_k__BackingField;
 }

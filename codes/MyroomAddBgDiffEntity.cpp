@@ -1,13 +1,13 @@
 void MyroomAddBgDiffEntity___ctor(MyroomAddBgDiffEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C57294 & 1) == 0 )
+  if ( (byte_4CB67FD & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C57294 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB67FD = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *MyroomAddBgDiffEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4C57293 & 1) == 0 )
+  if ( (byte_4CB67FC & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C57293 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4CB67FC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            overwriteId,
            type,
            priority,
-           (const MethodInfo_30F8088 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_3139980 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -44,10 +44,10 @@ bool MyroomAddBgDiffEntity__IsOpen(MyroomAddBgDiffEntity_o *this, const MethodIn
   int32_t condType; // w21
   int64_t condValue; // x19
 
-  if ( (byte_4C57292 & 1) == 0 )
+  if ( (byte_4CB67FB & 1) == 0 )
   {
-    sub_1C3E564(&CondType_TypeInfo);
-    byte_4C57292 = 1;
+    sub_1C6BA08(&CondType_TypeInfo);
+    byte_4CB67FB = 1;
   }
   condType = this->fields.condType;
   condId = this->fields.condId;

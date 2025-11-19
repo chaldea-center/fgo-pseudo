@@ -29,23 +29,23 @@ int32_t AssistEffectListViewManager__CreateList(
   Il2CppClass **v21; // x0
   const MethodInfo *v23; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4C50A3C & 1) == 0 )
+  if ( (byte_4CAFF84 & 1) == 0 )
   {
-    sub_1C3E564(&AssistEffectListViewItem_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMasterData_AssistMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssistEntity__get_Item__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C50A3C = 1;
+    sub_1C6BA08(&AssistEffectListViewItem_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_AssistMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssistEntity__get_Item__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CAFF84 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_AssistMaster___);
+               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_AssistMaster___);
   if ( !Instance )
     goto LABEL_17;
   Instance = AssistMaster__GetAvailableEntityList((AssistMaster_o *)Instance, 0);
@@ -61,7 +61,7 @@ int32_t AssistEffectListViewManager__CreateList(
       Instance = System_Collections_Generic_List_object___get_Item(
                    v7,
                    v8,
-                   (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_AssistEntity__get_Item__);
+                   (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssistEntity__get_Item__);
       if ( !Instance )
         break;
       v9 = Instance;
@@ -72,7 +72,7 @@ int32_t AssistEffectListViewManager__CreateList(
       v14 = (System_String_o *)*((_QWORD *)v9 + 3);
       size = v7->fields._size;
       v16 = Detail;
-      v17 = (AssistEffectListViewItem_o *)sub_1C3E7B0(AssistEffectListViewItem_TypeInfo);
+      v17 = (AssistEffectListViewItem_o *)sub_1C6BC54(AssistEffectListViewItem_TypeInfo);
       AssistEffectListViewItem___ctor(v17, v8, eventId, v12, v13, v14, v16, v8 == size - 1, v23);
       if ( !itemList )
         break;
@@ -87,20 +87,20 @@ int32_t AssistEffectListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v17,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
       }
       else
       {
         v21 = &items->obj.klass + v20;
         itemList->fields._size = v20 + 1;
         v21[4] = (Il2CppClass *)v17;
-        sub_1C3E508(v21 + 4, v17);
+        sub_1C6B9AC(v21 + 4, v17);
       }
       if ( v6 == ++v8 )
         goto LABEL_15;
     }
 LABEL_17:
-    sub_1C3E7C0(Instance, v5);
+    sub_1C6BC60(Instance, v5);
   }
 LABEL_15:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 1, -1, 0);

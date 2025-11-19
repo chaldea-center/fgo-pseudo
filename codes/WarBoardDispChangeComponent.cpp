@@ -16,14 +16,14 @@ void WarBoardDispChangeComponent__ChangeFaceEffect(WarBoardDispChangeComponent_o
   __int64 naturalAligment; // x11
   UnityEngine_Object_o *v10; // x20
 
-  if ( (byte_4C54A78 & 1) == 0 )
+  if ( (byte_4CB3FD0 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C3E564(&WarBoardServantPieceComponent_TypeInfo);
-    byte_4C54A78 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C6BA08(&WarBoardServantPieceComponent_TypeInfo);
+    byte_4CB3FD0 = 1;
   }
-  Instance = (WarBoardPieceData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardPieceData_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_23;
   Instance = (WarBoardPieceData_array *)Instance->m_Items[51];
@@ -40,7 +40,7 @@ void WarBoardDispChangeComponent__ChangeFaceEffect(WarBoardDispChangeComponent_o
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C3E7C8(Instance, v3);
+        sub_1C6BC68(Instance);
       v7 = v5->m_Items[v6];
       if ( !v7 )
         break;
@@ -72,7 +72,7 @@ void WarBoardDispChangeComponent__ChangeFaceEffect(WarBoardDispChangeComponent_o
         return;
     }
 LABEL_23:
-    sub_1C3E7C0(Instance, v3);
+    sub_1C6BC60(Instance, v3);
   }
 }
 
@@ -87,13 +87,13 @@ void WarBoardDispChangeComponent__Initialize(
   const MethodInfo *v7; // x3
 
   this->fields.configuration = configurationGo;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields.configuration,
     (int32_t)configurationGo,
     (int32_t)playingGo,
     method);
   this->fields.playing = playingGo;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.playing, (int32_t)playingGo, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.playing, (int32_t)playingGo, v6, v7);
 }
 
 
@@ -104,11 +104,11 @@ void WarBoardDispChangeComponent__SetBackKeyObject(WarBoardDispChangeComponent_o
   UnityEngine_GameObject_o *v5; // x0
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C54A76 & 1) == 0 )
+  if ( (byte_4CB3FCE & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_14567/*"TopBase/BackButton"*/);
-    byte_4C54A76 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_14557/*"TopBase/BackButton"*/);
+    byte_4CB3FCE = 1;
   }
   configuration = (UnityEngine_Object_o *)this->fields.configuration;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -117,9 +117,9 @@ void WarBoardDispChangeComponent__SetBackKeyObject(WarBoardDispChangeComponent_o
   {
     v5 = this->fields.configuration;
     if ( !v5 )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     transform = UnityEngine_GameObject__get_transform(v5, 0);
-    AndroidBackKeyManager__AddBackBtn_45015816(transform, (System_String_o *)StringLiteral_14567/*"TopBase/BackButton"*/, 0);
+    AndroidBackKeyManager__AddBackBtn_45210584(transform, (System_String_o *)StringLiteral_14557/*"TopBase/BackButton"*/, 0);
   }
 }
 
@@ -135,11 +135,11 @@ void WarBoardDispChangeComponent__SetDispChangeBlink(
   WarBoardPlayingUIController_o *v8; // x20
   const MethodInfo *v9; // x2
 
-  if ( (byte_4C54A77 & 1) == 0 )
+  if ( (byte_4CB3FCF & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_WarBoardPlayingUIController___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C54A77 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_WarBoardPlayingUIController___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB3FCF = 1;
   }
   playing = (UnityEngine_Object_o *)this->fields.playing;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -150,9 +150,9 @@ void WarBoardDispChangeComponent__SetDispChangeBlink(
     if ( !Component_object
       || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_WarBoardPlayingUIController___)) == 0 )
+                                                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_WarBoardPlayingUIController___)) == 0 )
     {
-      sub_1C3E7C0(Component_object, v6);
+      sub_1C6BC60(Component_object, v6);
     }
     v8 = (WarBoardPlayingUIController_o *)Component_object;
     if ( UnityEngine_Behaviour__get_isActiveAndEnabled((UnityEngine_Behaviour_o *)Component_object, 0) )
@@ -170,16 +170,16 @@ void WarBoardDispChangeComponent__SetUiRootAlpha(
   __int64 v6; // x1
   long double v7; // q0
 
-  if ( (byte_4C54A75 & 1) == 0 )
+  if ( (byte_4CB3FCD & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4C54A75 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4CB3FCD = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   if ( !Component_object )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   LODWORD(v7) = 0;
   if ( isDisp )
     *(float *)&v7 = 1.0;

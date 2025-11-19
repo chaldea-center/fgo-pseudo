@@ -33,11 +33,11 @@ void FixedSpringPanel__AdvanceTowardsPosition(FixedSpringPanel_o *this, const Me
   UnityEngine_Vector3_o v26; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B2EB & 1) == 0 )
+  if ( (byte_4CBA8C8 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&SpringPanel_TypeInfo);
-    byte_4C5B2EB = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&SpringPanel_TypeInfo);
+    byte_4CBA8C8 = 1;
   }
   deltaTime = RealTime__get_deltaTime(0);
   mTrans = this->fields.mTrans;
@@ -51,7 +51,7 @@ void FixedSpringPanel__AdvanceTowardsPosition(FixedSpringPanel_o *this, const Me
   x = localPosition.fields.x;
   y = localPosition.fields.y;
   v25 = UnityEngine_Transform__get_localPosition(mTrans, 0);
-  v26 = NGUIMath__SpringLerp_49375244(v25, this->fields.target, this->fields.strength, v6, 0);
+  v26 = NGUIMath__SpringLerp_49604128(v25, this->fields.target, this->fields.strength, v6, 0);
   v9 = v26.fields.x;
   v10 = v26.fields.y;
   z = v26.fields.z;
@@ -68,10 +68,10 @@ void FixedSpringPanel__AdvanceTowardsPosition(FixedSpringPanel_o *this, const Me
   v13 = mDrag->fields.mMomentum.fields.x;
   v14 = mDrag->fields.mMomentum.fields.y;
   v15 = mDrag->fields.mMomentum.fields.z;
-  if ( !byte_4C506A3 )
+  if ( !byte_4CAFC0B )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C506A3 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CAFC0B = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -97,7 +97,7 @@ LABEL_13:
         (mTrans = (UnityEngine_Transform_o *)this->fields.mPanel) == 0) )
   {
 LABEL_26:
-    sub_1C3E7C0(mTrans, v3);
+    sub_1C6BC60(mTrans, v3);
   }
   v23.fields.x = *((float *)&mTrans[13].fields.m_CachedPtr + 1) - (float)(v9 - x);
   v23.fields.y = *(float *)&mTrans[14].klass - (float)(v10 - y);
@@ -118,7 +118,7 @@ LABEL_26:
   if ( v16 && this->fields.onFinished )
   {
     SpringPanel_TypeInfo->static_fields->current = (struct SpringPanel_o *)this;
-    sub_1C3E508((CGThumbnailListItem_o *)SpringPanel_TypeInfo->static_fields, (int32_t)this, v18, v19);
+    sub_1C6B9AC((CGThumbnailListItem_o *)SpringPanel_TypeInfo->static_fields, (int32_t)this, v18, v19);
     onFinished = this->fields.onFinished;
     if ( onFinished )
     {
@@ -126,7 +126,7 @@ LABEL_26:
         onFinished->fields.method_code,
         onFinished->fields.method);
       SpringPanel_TypeInfo->static_fields->current = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)SpringPanel_TypeInfo->static_fields, 0, v21, v22);
+      sub_1C6B9AC((CGThumbnailListItem_o *)SpringPanel_TypeInfo->static_fields, 0, v21, v22);
       return;
     }
     goto LABEL_26;

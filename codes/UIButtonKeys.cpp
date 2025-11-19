@@ -1,9 +1,9 @@
 void UIButtonKeys___ctor(UIButtonKeys_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5B34E & 1) == 0 )
+  if ( (byte_4CBA92B & 1) == 0 )
   {
-    sub_1C3E564(&UIKeyNavigation_TypeInfo);
-    byte_4C5B34E = 1;
+    sub_1C6BA08(&UIKeyNavigation_TypeInfo);
+    byte_4CBA92B = 1;
   }
   if ( !UIKeyNavigation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIKeyNavigation_TypeInfo);
@@ -65,11 +65,11 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
   int32_t v43; // w2
   const MethodInfo *v44; // x3
 
-  if ( (byte_4C5B34D & 1) == 0 )
+  if ( (byte_4CBA92A & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B34D = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA92A = 1;
   }
   onClick = (UnityEngine_Object_o *)this->fields.onClick;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -87,9 +87,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       gameObject = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onClick = gameObject;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onClick, (int32_t)gameObject, v9, v10);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onClick, (int32_t)gameObject, v9, v10);
       *p_selectOnClick = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.selectOnClick, 0, v11, v12);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectOnClick, 0, v11, v12);
       if ( !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -111,9 +111,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       v16 = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onLeft = v16;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onLeft, (int32_t)v16, v17, v18);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onLeft, (int32_t)v16, v17, v18);
       *p_selectOnLeft = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.selectOnLeft, 0, v19, v20);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectOnLeft, 0, v19, v20);
       if ( !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -135,9 +135,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       v24 = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onRight = v24;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onRight, (int32_t)v24, v25, v26);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onRight, (int32_t)v24, v25, v26);
       *p_selectOnRight = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.selectOnRight, 0, v27, v28);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectOnRight, 0, v27, v28);
       if ( !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -159,9 +159,9 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
         goto LABEL_54;
       v32 = UnityEngine_Component__get_gameObject(v7, 0);
       this->fields.onUp = v32;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onUp, (int32_t)v32, v33, v34);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onUp, (int32_t)v32, v33, v34);
       *p_selectOnUp = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.selectOnUp, 0, v35, v36);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectOnUp, 0, v35, v36);
       if ( !NGUITools_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
@@ -183,16 +183,16 @@ void UIButtonKeys__Upgrade(UIButtonKeys_o *this, const MethodInfo *method)
       {
         v40 = UnityEngine_Component__get_gameObject(v7, 0);
         this->fields.onDown = v40;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onDown, (int32_t)v40, v41, v42);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onDown, (int32_t)v40, v41, v42);
         *p_selectOnDown = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.selectOnDown, 0, v43, v44);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectOnDown, 0, v43, v44);
         if ( !NGUITools_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
         NGUITools__SetDirty((UnityEngine_Object_o *)this, 0);
         return;
       }
 LABEL_54:
-      sub_1C3E7C0(v7, v6);
+      sub_1C6BC60(v7, v6);
     }
   }
 }

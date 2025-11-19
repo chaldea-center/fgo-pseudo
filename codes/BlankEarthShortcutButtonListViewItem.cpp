@@ -22,26 +22,26 @@ void BlankEarthShortcutButtonListViewItem___ctor(
   int32_t v24; // w2
   const MethodInfo *v25; // x3
 
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = ent;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int32_t)ent,
     v12,
     v13);
   blankEarthSpotNavimenuEntity_k__BackingField = this->fields._blankEarthSpotNavimenuEntity_k__BackingField;
   if ( !blankEarthSpotNavimenuEntity_k__BackingField )
-    sub_1C3E7C0(v14, v15);
+    sub_1C6BC60(v14, v15);
   this->fields._IconId_k__BackingField = blankEarthSpotNavimenuEntity_k__BackingField->fields.iconId;
   name = blankEarthSpotNavimenuEntity_k__BackingField->fields.name;
   this->fields._Name_k__BackingField = name;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)name, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)name, v16, v17);
   this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._CommonUiAtlas_k__BackingField, (int32_t)commonUiAtlas, v20, v21);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._CommonUiAtlas_k__BackingField, (int32_t)commonUiAtlas, v20, v21);
   this->fields._IconAtlas_k__BackingField = iconAtlas;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._IconAtlas_k__BackingField, (int32_t)iconAtlas, v22, v23);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconAtlas_k__BackingField, (int32_t)iconAtlas, v22, v23);
   this->fields._OnClickAction_k__BackingField = onClickAction;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._OnClickAction_k__BackingField, (int32_t)onClickAction, v24, v25);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._OnClickAction_k__BackingField, (int32_t)onClickAction, v24, v25);
 }
 
 
@@ -101,7 +101,7 @@ void BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
   const MethodInfo *v3; // x3
 
   this->fields._CommonUiAtlas_k__BackingField = value;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -117,7 +117,7 @@ void BlankEarthShortcutButtonListViewItem__set_IconAtlas(
   const MethodInfo *v3; // x3
 
   this->fields._IconAtlas_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._IconAtlas_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconAtlas_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -138,7 +138,7 @@ void BlankEarthShortcutButtonListViewItem__set_Name(
   const MethodInfo *v3; // x3
 
   this->fields._Name_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -150,7 +150,7 @@ void BlankEarthShortcutButtonListViewItem__set_OnClickAction(
   const MethodInfo *v3; // x3
 
   this->fields._OnClickAction_k__BackingField = value;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._OnClickAction_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -166,7 +166,7 @@ void BlankEarthShortcutButtonListViewItem__set_blankEarthSpotNavimenuEntity(
   const MethodInfo *v3; // x3
 
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = value;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

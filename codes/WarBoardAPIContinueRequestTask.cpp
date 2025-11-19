@@ -6,7 +6,7 @@ void WarBoardAPIContinueRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_38303084(
+  WarBoardAPIRequestTask___ctor_38483148(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
@@ -25,14 +25,14 @@ void WarBoardAPIContinueRequestTask__SetRequest(WarBoardAPIContinueRequestTask_o
   const MethodInfo *v8; // x3
   int32_t id; // w0
 
-  if ( (byte_4C549C0 & 1) == 0 )
+  if ( (byte_4CB3F16 & 1) == 0 )
   {
-    sub_1C3E564(&Method_NetworkManager_getRequest_WarBoardContinueRequest___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4C549C0 = 1;
+    sub_1C6BA08(&Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4CB3F16 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   monitor = (WarBoardData_o *)Instance[27].monitor;
@@ -40,7 +40,7 @@ void WarBoardAPIContinueRequestTask__SetRequest(WarBoardAPIContinueRequestTask_o
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
                0,
-               (const MethodInfo_3184BE4 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+               (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
   if ( !Instance )
     goto LABEL_11;
   v6 = (WarBoardContinueRequest_o *)Instance;
@@ -54,9 +54,9 @@ void WarBoardAPIContinueRequestTask__SetRequest(WarBoardAPIContinueRequestTask_o
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   }
 LABEL_10:
   this->fields.request = (struct RequestBase_o *)v6;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v6, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v6, v7, v8);
 }

@@ -17,7 +17,7 @@ UnityEngine_Vector3_o ItemSeed__GetLocalPosition(ItemSeed_o *this, const MethodI
         Position = ItemSeed__GetPosition(this, v5),
         !transform) )
   {
-    sub_1C3E7C0(parent, method);
+    sub_1C6BC60(parent, method);
   }
   return UnityEngine_Transform__InverseTransformPoint(transform, Position, 0);
 }
@@ -30,8 +30,8 @@ UnityEngine_Vector3_o ItemSeed__GetPosition(ItemSeed_o *this, const MethodInfo *
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1C3E7C0(0, v3);
-  return UnityEngine_Transform__TransformPoint_71368164(transform, 0.0, 0.0, 0.0, 0);
+    sub_1C6BC60(0, v3);
+  return UnityEngine_Transform__TransformPoint_71686456(transform, 0.0, 0.0, 0.0, 0);
 }
 
 
@@ -47,10 +47,10 @@ void ItemSeed__SetTransform(ItemSeed_o *this, UnityEngine_GameObject_o *obj, con
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_4C58497 & 1) == 0 )
+  if ( (byte_4CB7A07 & 1) == 0 )
   {
-    this = (ItemSeed_o *)sub_1C3E564(&StringLiteral_12794/*"SetBaseTransform"*/);
-    byte_4C58497 = 1;
+    this = (ItemSeed_o *)sub_1C6BA08(&StringLiteral_12790/*"SetBaseTransform"*/);
+    byte_4CB7A07 = 1;
   }
   if ( !obj )
     goto LABEL_10;
@@ -69,10 +69,10 @@ void ItemSeed__SetTransform(ItemSeed_o *this, UnityEngine_GameObject_o *obj, con
     || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)this, 0), !v8) )
   {
 LABEL_10:
-    sub_1C3E7C0(this, obj);
+    sub_1C6BC60(this, obj);
   }
   UnityEngine_Transform__set_localScale(v8, localScale, 0);
-  UnityEngine_GameObject__SendMessage_71323440(obj, (System_String_o *)StringLiteral_12794/*"SetBaseTransform"*/, 0);
+  UnityEngine_GameObject__SendMessage_71641044(obj, (System_String_o *)StringLiteral_12790/*"SetBaseTransform"*/, 0);
 }
 
 

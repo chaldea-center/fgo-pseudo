@@ -10,11 +10,11 @@ void ScriptSelectListViewItem___ctor(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
   this->fields.message = message;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v8, v9);
   this->fields.fontType = fontType;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.fontType, (int32_t)fontType, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.fontType, (int32_t)fontType, v10, v11);
 }
 
 
@@ -26,12 +26,12 @@ void ScriptSelectListViewItem__Finalize(ScriptSelectListViewItem_o *this, const 
 
 System_String_o *ScriptSelectListViewItem__ToString(ScriptSelectListViewItem_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C58DAB & 1) == 0 )
+  if ( (byte_4CB832B & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_21558/*"message "*/);
-    byte_4C58DAB = 1;
+    sub_1C6BA08(&StringLiteral_21626/*"message "*/);
+    byte_4CB832B = 1;
   }
-  return System_String__Concat_63636468((System_String_o *)StringLiteral_21558/*"message "*/, this->fields.message, 0);
+  return System_String__Concat_63966792((System_String_o *)StringLiteral_21626/*"message "*/, this->fields.message, 0);
 }
 
 

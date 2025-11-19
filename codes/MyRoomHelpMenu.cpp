@@ -1,9 +1,9 @@
 void MyRoomHelpMenu___ctor(MyRoomHelpMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C590E3 & 1) == 0 )
+  if ( (byte_4CB8662 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C590E3 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB8662 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -16,15 +16,15 @@ void MyRoomHelpMenu__Close(MyRoomHelpMenu_o *this, MyRoomHelpMenu_CallbackFunc_o
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C590E2 & 1) == 0 )
+  if ( (byte_4CB8661 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_MyRoomHelpMenu_endClose__);
-    byte_4C590E2 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_MyRoomHelpMenu_endClose__);
+    byte_4CB8661 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
-  v6 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
+  v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_MyRoomHelpMenu_endClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -43,16 +43,16 @@ void MyRoomHelpMenu__OnEnable(MyRoomHelpMenu_o *this, const MethodInfo *method)
   UnityEngine_Object_o *v5; // x19
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4C590DF & 1) == 0 )
+  if ( (byte_4CB865E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_9227/*"MyRoomHelpListPanel/BaseWindow/UpperCloseButton"*/);
-    byte_4C590DF = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9224/*"MyRoomHelpListPanel/BaseWindow/UpperCloseButton"*/);
+    byte_4CB865E = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_9;
-  v5 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_9227/*"MyRoomHelpListPanel/BaseWindow/UpperCloseButton"*/, 0);
+  v5 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_9224/*"MyRoomHelpListPanel/BaseWindow/UpperCloseButton"*/, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Equality(v5, 0, 0);
@@ -65,7 +65,7 @@ void MyRoomHelpMenu__OnEnable(MyRoomHelpMenu_o *this, const MethodInfo *method)
       return;
     }
 LABEL_9:
-    sub_1C3E7C0(transform, v4);
+    sub_1C6BC60(transform, v4);
   }
 }
 
@@ -91,10 +91,10 @@ void MyRoomHelpMenu__add_callbackFunc(
   MyRoomHelpMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C590E0 & 1) == 0 )
+  if ( (byte_4CB865F & 1) == 0 )
   {
-    sub_1C3E564(&MyRoomHelpMenu_CallbackFunc_TypeInfo);
-    byte_4C590E0 = 1;
+    sub_1C6BA08(&MyRoomHelpMenu_CallbackFunc_TypeInfo);
+    byte_4CB865F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -107,13 +107,13 @@ void MyRoomHelpMenu__add_callbackFunc(
       if ( (MyRoomHelpMenu_CallbackFunc_c *)v8->klass != MyRoomHelpMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   MyRoomHelpMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -130,7 +130,7 @@ void MyRoomHelpMenu__endClose(MyRoomHelpMenu_o *this, const MethodInfo *method)
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
   v6 = callbackFunc;
   p_callbackFunc->klass = 0;
-  sub_1C3E508(p_callbackFunc, 0, v2, v3);
+  sub_1C6B9AC(p_callbackFunc, 0, v2, v3);
   if ( callbackFunc )
   {
     BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -153,10 +153,10 @@ void MyRoomHelpMenu__remove_callbackFunc(
   MyRoomHelpMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C590E1 & 1) == 0 )
+  if ( (byte_4CB8660 & 1) == 0 )
   {
-    sub_1C3E564(&MyRoomHelpMenu_CallbackFunc_TypeInfo);
-    byte_4C590E1 = 1;
+    sub_1C6BA08(&MyRoomHelpMenu_CallbackFunc_TypeInfo);
+    byte_4CB8660 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -169,13 +169,13 @@ void MyRoomHelpMenu__remove_callbackFunc(
       if ( (MyRoomHelpMenu_CallbackFunc_c *)v8->klass != MyRoomHelpMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   MyRoomHelpMenu__Init(v11, v12);
 }
 
@@ -195,15 +195,15 @@ void MyRoomHelpMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -215,9 +215,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A84C6C;
+  this->fields.invoke_impl = (intptr_t)sub_1AA3E68;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A84C2C;
+  this->fields.extra_arg = (intptr_t)sub_1AA3E28;
 }
 
 
@@ -230,7 +230,7 @@ System_IAsyncResult_o *MyRoomHelpMenu_CallbackFunc__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C3E518(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v5, callback, object);
 }
 
 
@@ -239,7 +239,7 @@ void MyRoomHelpMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 

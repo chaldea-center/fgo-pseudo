@@ -4,48 +4,35 @@ void NGuiEventsToPlaymakerFsmEvents___ctor(NGuiEventsToPlaymakerFsmEvents_o *thi
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent(
         NGuiEventsToPlaymakerFsmEvents_o *this,
         PlayMakerFSM_o *fsm,
         int32_t fsmEventDelegate,
         const MethodInfo *method)
 {
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  System_Enum_o *v10; // x0
-  const MethodInfo *v11; // x1
+  System_Enum_o *v6; // x0
+  const MethodInfo *v7; // x1
   NGuiEventsToPlaymakerFsmEvents_o *FsmEventEnumValue; // x0
-  const MethodInfo *v13; // x3
-  int32_t v15; // [xsp+Ch] [xbp-24h] BYREF
+  const MethodInfo *v9; // x3
+  int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C54B81 & 1) == 0 )
+  if ( (byte_4CB40D9 & 1) == 0 )
   {
-    sub_1C3E564(&NGuiPlayMakerDelegates_TypeInfo);
-    byte_4C54B81 = 1;
+    sub_1C6BA08(&NGuiPlayMakerDelegates_TypeInfo);
+    byte_4CB40D9 = 1;
   }
-  v15 = fsmEventDelegate;
-  v10 = (System_Enum_o *)j_il2cpp_value_box_0(
-                           NGuiPlayMakerDelegates_TypeInfo,
-                           &v15,
-                           *(_QWORD *)&fsmEventDelegate,
-                           method,
-                           v4,
-                           v5,
-                           v6,
-                           v7);
-  FsmEventEnumValue = (NGuiEventsToPlaymakerFsmEvents_o *)NGuiPlayMakerProxy__GetFsmEventEnumValue(v10, v11);
-  return NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_38497900(
+  v11 = fsmEventDelegate;
+  v6 = (System_Enum_o *)j_il2cpp_value_box_0(NGuiPlayMakerDelegates_TypeInfo, &v11);
+  FsmEventEnumValue = (NGuiEventsToPlaymakerFsmEvents_o *)NGuiPlayMakerProxy__GetFsmEventEnumValue(v6, v7);
+  return NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_38677964(
            FsmEventEnumValue,
            fsm,
            (System_String_o *)FsmEventEnumValue,
-           v13);
+           v9);
 }
 
 
-bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_38497900(
+bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_38677964(
         NGuiEventsToPlaymakerFsmEvents_o *this,
         PlayMakerFSM_o *fsm,
         System_String_o *fsmEvent,
@@ -84,7 +71,7 @@ bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_38497900(
                                                    0);
       if ( !this )
         goto LABEL_26;
-      this = (NGuiEventsToPlaymakerFsmEvents_o *)System_String__Equals_63671772((System_String_o *)this, fsmEvent, 0);
+      this = (NGuiEventsToPlaymakerFsmEvents_o *)System_String__Equals_64002112((System_String_o *)this, fsmEvent, 0);
       if ( ((unsigned __int8)this & 1) != 0 )
         return 1;
       m_CancellationTokenSource = (int)v7->fields.m_CancellationTokenSource;
@@ -94,7 +81,7 @@ bool NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_38497900(
   this = (NGuiEventsToPlaymakerFsmEvents_o *)PlayMakerFSM__get_FsmStates(fsm, 0);
   if ( !this )
 LABEL_26:
-    sub_1C3E7C0(this, fsm);
+    sub_1C6BC60(this, fsm);
   v9 = (int)this->fields.m_CancellationTokenSource;
   v10 = this;
   if ( v9 >= 1 )
@@ -129,7 +116,7 @@ LABEL_23:
                                                    0);
       if ( !this )
         goto LABEL_26;
-      this = (NGuiEventsToPlaymakerFsmEvents_o *)System_String__Equals_63671772((System_String_o *)this, fsmEvent, 0);
+      this = (NGuiEventsToPlaymakerFsmEvents_o *)System_String__Equals_64002112((System_String_o *)this, fsmEvent, 0);
       if ( ((unsigned __int8)this & 1) != 0 )
         return 1;
       v14 = *(_DWORD *)(v13 + 24);
@@ -137,107 +124,94 @@ LABEL_23:
         goto LABEL_23;
     }
 LABEL_27:
-    sub_1C3E7C8(this, fsm);
+    sub_1C6BC68(this);
   }
   return 0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation(
         NGuiEventsToPlaymakerFsmEvents_o *this,
         PlayMakerFSM_o *fsm,
         int32_t fsmEventDelegate,
         const MethodInfo *method)
 {
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  System_Enum_o *v11; // x0
-  const MethodInfo *v12; // x1
+  System_Enum_o *v7; // x0
+  const MethodInfo *v8; // x1
   System_String_o *FsmEventEnumValue; // x0
-  const MethodInfo *v14; // x3
-  int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
+  const MethodInfo *v10; // x3
+  int32_t v12; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C54B80 & 1) == 0 )
+  if ( (byte_4CB40D8 & 1) == 0 )
   {
-    sub_1C3E564(&NGuiPlayMakerDelegates_TypeInfo);
-    byte_4C54B80 = 1;
+    sub_1C6BA08(&NGuiPlayMakerDelegates_TypeInfo);
+    byte_4CB40D8 = 1;
   }
-  v16 = fsmEventDelegate;
-  v11 = (System_Enum_o *)j_il2cpp_value_box_0(
-                           NGuiPlayMakerDelegates_TypeInfo,
-                           &v16,
-                           *(_QWORD *)&fsmEventDelegate,
-                           method,
-                           v4,
-                           v5,
-                           v6,
-                           v7);
-  FsmEventEnumValue = NGuiPlayMakerProxy__GetFsmEventEnumValue(v11, v12);
-  return NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation_38497744(this, fsm, FsmEventEnumValue, v14);
+  v12 = fsmEventDelegate;
+  v7 = (System_Enum_o *)j_il2cpp_value_box_0(NGuiPlayMakerDelegates_TypeInfo, &v12);
+  FsmEventEnumValue = NGuiPlayMakerProxy__GetFsmEventEnumValue(v7, v8);
+  return NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation_38677808(this, fsm, FsmEventEnumValue, v10);
 }
 
 
-bool NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation_38497744(
+bool NGuiEventsToPlaymakerFsmEvents__DoesTargetMissEventImplementation_38677808(
         NGuiEventsToPlaymakerFsmEvents_o *this,
         PlayMakerFSM_o *fsm,
         System_String_o *fsmEvent,
         const MethodInfo *method)
 {
-  HutongGames_PlayMaker_FsmEvent_array *DoesTargetImplementsEvent_38497900; // x0
+  HutongGames_PlayMaker_FsmEvent_array *DoesTargetImplementsEvent_38677964; // x0
   __int64 v7; // x1
   int max_length; // w8
   HutongGames_PlayMaker_FsmEvent_array *v9; // x20
   unsigned int v10; // w21
   HutongGames_PlayMaker_FsmEvent_o *v11; // x8
 
-  DoesTargetImplementsEvent_38497900 = (HutongGames_PlayMaker_FsmEvent_array *)NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_38497900(
+  DoesTargetImplementsEvent_38677964 = (HutongGames_PlayMaker_FsmEvent_array *)NGuiEventsToPlaymakerFsmEvents__DoesTargetImplementsEvent_38677964(
                                                                                  this,
                                                                                  fsm,
                                                                                  fsmEvent,
                                                                                  method);
-  if ( ((unsigned __int8)DoesTargetImplementsEvent_38497900 & 1) == 0 )
+  if ( ((unsigned __int8)DoesTargetImplementsEvent_38677964 & 1) == 0 )
   {
     if ( !fsm )
       goto LABEL_14;
-    DoesTargetImplementsEvent_38497900 = PlayMakerFSM__get_FsmEvents(fsm, 0);
-    if ( !DoesTargetImplementsEvent_38497900 )
+    DoesTargetImplementsEvent_38677964 = PlayMakerFSM__get_FsmEvents(fsm, 0);
+    if ( !DoesTargetImplementsEvent_38677964 )
       goto LABEL_14;
-    max_length = DoesTargetImplementsEvent_38497900->max_length;
-    v9 = DoesTargetImplementsEvent_38497900;
+    max_length = DoesTargetImplementsEvent_38677964->max_length;
+    v9 = DoesTargetImplementsEvent_38677964;
     if ( max_length >= 1 )
     {
       v10 = 0;
       while ( 1 )
       {
         if ( v10 >= max_length )
-          sub_1C3E7C8(DoesTargetImplementsEvent_38497900, v7);
+          sub_1C6BC68(DoesTargetImplementsEvent_38677964);
         v11 = v9->m_Items[v10];
         if ( !v11 )
           break;
-        DoesTargetImplementsEvent_38497900 = (HutongGames_PlayMaker_FsmEvent_array *)v11->fields.name;
-        if ( !DoesTargetImplementsEvent_38497900 )
+        DoesTargetImplementsEvent_38677964 = (HutongGames_PlayMaker_FsmEvent_array *)v11->fields.name;
+        if ( !DoesTargetImplementsEvent_38677964 )
           break;
-        DoesTargetImplementsEvent_38497900 = (HutongGames_PlayMaker_FsmEvent_array *)System_String__Equals_63671772(
-                                                                                       (System_String_o *)DoesTargetImplementsEvent_38497900,
+        DoesTargetImplementsEvent_38677964 = (HutongGames_PlayMaker_FsmEvent_array *)System_String__Equals_64002112(
+                                                                                       (System_String_o *)DoesTargetImplementsEvent_38677964,
                                                                                        fsmEvent,
                                                                                        0);
-        if ( ((unsigned __int8)DoesTargetImplementsEvent_38497900 & 1) == 0 )
+        if ( ((unsigned __int8)DoesTargetImplementsEvent_38677964 & 1) == 0 )
         {
           max_length = v9->max_length;
           if ( (int)++v10 < max_length )
             continue;
         }
-        return (unsigned __int8)DoesTargetImplementsEvent_38497900 & 1;
+        return (unsigned __int8)DoesTargetImplementsEvent_38677964 & 1;
       }
 LABEL_14:
-      sub_1C3E7C0(DoesTargetImplementsEvent_38497900, v7);
+      sub_1C6BC60(DoesTargetImplementsEvent_38677964, v7);
     }
   }
-  LOBYTE(DoesTargetImplementsEvent_38497900) = 0;
-  return (unsigned __int8)DoesTargetImplementsEvent_38497900 & 1;
+  LOBYTE(DoesTargetImplementsEvent_38677964) = 0;
+  return (unsigned __int8)DoesTargetImplementsEvent_38677964 & 1;
 }
 
 
@@ -249,25 +223,19 @@ void NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(
 {
   System_Collections_Generic_List_T__o *customEventsKeys; // x0
   bool v6; // w0
-  __int64 v7; // x2
-  __int64 v8; // x3
-  __int64 v9; // x4
-  __int64 v10; // x5
-  __int64 v11; // x6
-  __int64 v12; // x7
   PlayMakerFSM_o *targetFSM; // x20
   struct System_Collections_Generic_List_string__o *customEventsValues; // x21
-  System_Enum_o *v15; // x0
-  const MethodInfo *v16; // x1
-  int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
+  System_Enum_o *v9; // x0
+  const MethodInfo *v10; // x1
+  int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C54B82 & 1) == 0 )
+  if ( (byte_4CB40DA & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__Contains__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__IndexOf__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C3E564(&NGuiPlayMakerDelegates_TypeInfo);
-    byte_4C54B82 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__Contains__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__IndexOf__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C6BA08(&NGuiPlayMakerDelegates_TypeInfo);
+    byte_4CB40DA = 1;
   }
   customEventsKeys = (System_Collections_Generic_List_T__o *)this->fields.customEventsKeys;
   if ( !customEventsKeys )
@@ -275,7 +243,7 @@ void NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(
   v6 = System_Collections_Generic_List_Int32Enum___Contains(
          customEventsKeys,
          event,
-         (const MethodInfo_379AFE0 *)Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__Contains__);
+         (const MethodInfo_37E64F4 *)Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__Contains__);
   targetFSM = this->fields.targetFSM;
   if ( v6 )
   {
@@ -286,13 +254,13 @@ void NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(
       customEventsKeys = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_Int32Enum___IndexOf(
                                                                    customEventsKeys,
                                                                    event,
-                                                                   (const MethodInfo_379B8E4 *)Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__IndexOf__);
+                                                                   (const MethodInfo_37E6DF8 *)Method_System_Collections_Generic_List_NGuiPlayMakerDelegates__IndexOf__);
       if ( customEventsValues )
       {
         customEventsKeys = (System_Collections_Generic_List_T__o *)System_Collections_Generic_List_object___get_Item(
                                                                      (System_Collections_Generic_List_object__o *)customEventsValues,
                                                                      (int32_t)customEventsKeys,
-                                                                     (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                                                     (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_string__get_Item__);
         if ( targetFSM )
         {
           PlayMakerFSM__SendEvent(targetFSM, (System_String_o *)customEventsKeys, 0);
@@ -301,11 +269,11 @@ void NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(
       }
     }
 LABEL_11:
-    sub_1C3E7C0(customEventsKeys, *(_QWORD *)&event);
+    sub_1C6BC60(customEventsKeys, *(_QWORD *)&event);
   }
-  v17 = event;
-  v15 = (System_Enum_o *)j_il2cpp_value_box_0(NGuiPlayMakerDelegates_TypeInfo, &v17, v7, v8, v9, v10, v11, v12);
-  customEventsKeys = (System_Collections_Generic_List_T__o *)NGuiPlayMakerProxy__GetFsmEventEnumValue(v15, v16);
+  v11 = event;
+  v9 = (System_Enum_o *)j_il2cpp_value_box_0(NGuiPlayMakerDelegates_TypeInfo, &v11);
+  customEventsKeys = (System_Collections_Generic_List_T__o *)NGuiPlayMakerProxy__GetFsmEventEnumValue(v9, v10);
   if ( !targetFSM )
     goto LABEL_11;
   PlayMakerFSM__SendEvent(targetFSM, (System_String_o *)customEventsKeys, 0);
@@ -326,11 +294,11 @@ void NGuiEventsToPlaymakerFsmEvents__OnChange(NGuiEventsToPlaymakerFsmEvents_o *
   const MethodInfo *v12; // x2
   __int64 v13; // x20
 
-  if ( (byte_4C54B8D & 1) == 0 )
+  if ( (byte_4CB40E5 & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C54B8D = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB40E5 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -344,7 +312,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnChange(NGuiEventsToPlaymakerFsmEvents_o *
       if ( !usage )
         goto LABEL_27;
       if ( LODWORD(usage->max_length) <= 0xE )
-        sub_1C3E7C8(value, v5);
+        sub_1C6BC68(value);
       ++usage->m_Items[14];
       input = (UnityEngine_Object_o *)this->fields._input;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -364,7 +332,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnChange(NGuiEventsToPlaymakerFsmEvents_o *
         if ( !v8 )
           goto LABEL_27;
         *(_QWORD *)(v8 + 80) = value;
-        sub_1C3E508((CGThumbnailListItem_o *)(v8 + 80), (int32_t)value, v9, v10);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v8 + 80), (int32_t)value, v9, v10);
       }
       toggle = (UnityEngine_Object_o *)this->fields._toggle;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -390,7 +358,7 @@ LABEL_26:
         }
       }
 LABEL_27:
-      sub_1C3E7C0(value, v5);
+      sub_1C6BC60(value, v5);
     }
   }
 }
@@ -408,12 +376,12 @@ void NGuiEventsToPlaymakerFsmEvents__OnClick(NGuiEventsToPlaymakerFsmEvents_o *t
   struct UICamera_MouseOrTouch_o *currentTouch; // x1
   const MethodInfo *v11; // x2
 
-  if ( (byte_4C54B83 & 1) == 0 )
+  if ( (byte_4CB40DB & 1) == 0 )
   {
-    sub_1C3E564(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C54B83 = 1;
+    sub_1C6BA08(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CB40DB = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -425,9 +393,9 @@ void NGuiEventsToPlaymakerFsmEvents__OnClick(NGuiEventsToPlaymakerFsmEvents_o *t
     {
       usage = this->fields._usage;
       if ( !usage )
-        sub_1C3E7C0(v4, v5);
+        sub_1C6BC60(v4, v5);
       if ( !LODWORD(usage->max_length) )
-        sub_1C3E7C8(v4, v5);
+        sub_1C6BC68(v4);
       ++usage->m_Items[0];
       v9 = UICamera_TypeInfo;
       if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -437,7 +405,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnClick(NGuiEventsToPlaymakerFsmEvents_o *t
       }
       currentTouch = v9->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_1C3E508(
+      sub_1C6B9AC(
         (CGThumbnailListItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v6,
@@ -467,13 +435,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrag(
 
   y = delta.fields.y;
   x = delta.fields.x;
-  if ( (byte_4C54B87 & 1) == 0 )
+  if ( (byte_4CB40DF & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C54B87 = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CB40DF = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -490,7 +458,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrag(
       }
       EventData = (float *)v10->static_fields->EventData;
       if ( !EventData )
-        sub_1C3E7C0(v10, v7);
+        sub_1C6BC60(v10, v7);
       EventData[17] = x;
       EventData[18] = y;
       EventData[19] = 0.0;
@@ -502,7 +470,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrag(
       }
       currentTouch = v12->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_1C3E508(
+      sub_1C6B9AC(
         (CGThumbnailListItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v8,
@@ -530,13 +498,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrop(
   struct UICamera_MouseOrTouch_o *currentTouch; // x1
   const MethodInfo *v15; // x2
 
-  if ( (byte_4C54B88 & 1) == 0 )
+  if ( (byte_4CB40E0 & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C54B88 = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CB40E0 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -553,9 +521,9 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrop(
       }
       EventData = (CGThumbnailListItem_o *)v9->static_fields->EventData;
       if ( !EventData )
-        sub_1C3E7C0(0, v6);
+        sub_1C6BC60(0, v6);
       EventData[1].klass = (CGThumbnailListItem_c *)go;
-      sub_1C3E508(EventData + 1, (int32_t)go, v7, v8);
+      sub_1C6B9AC(EventData + 1, (int32_t)go, v7, v8);
       v13 = UICamera_TypeInfo;
       if ( !UICamera_TypeInfo->_2.cctor_finished )
       {
@@ -564,7 +532,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnDrop(
       }
       currentTouch = v13->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_1C3E508(
+      sub_1C6B9AC(
         (CGThumbnailListItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v11,
@@ -643,23 +611,23 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
   __int64 v66; // x10
   Il2CppClass **v67; // x8
 
-  if ( (byte_4C54B7F & 1) == 0 )
+  if ( (byte_4CB40D7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIProgressBar___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIToggle___);
-    sub_1C3E564(&System_Enum_TypeInfo);
-    sub_1C3E564(&EventDelegate_TypeInfo);
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C3E564(&NGuiPlayMakerDelegates_var);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&System_Type_TypeInfo);
-    sub_1C3E564(&StringLiteral_9968/*"OnSubmitChange"*/);
-    sub_1C3E564(&StringLiteral_9963/*"OnSliderChange"*/);
-    sub_1C3E564(&StringLiteral_9835/*"OnChange"*/);
-    byte_4C54B7F = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIProgressBar___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIToggle___);
+    sub_1C6BA08(&System_Enum_TypeInfo);
+    sub_1C6BA08(&EventDelegate_TypeInfo);
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C6BA08(&NGuiPlayMakerDelegates_var);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&System_Type_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9964/*"OnSubmitChange"*/);
+    sub_1C6BA08(&StringLiteral_9959/*"OnSliderChange"*/);
+    sub_1C6BA08(&StringLiteral_9831/*"OnChange"*/);
+    byte_4CB40D7 = 1;
   }
   usage = this->fields._usage;
   if ( !usage || !usage->max_length )
@@ -674,9 +642,9 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
     Names = (System_Collections_Generic_List_object__o *)System_Enum__GetNames(TypeFromHandle, 0);
     if ( !Names )
       goto LABEL_63;
-    v9 = (struct System_Int32_array *)sub_1C3E60C(int___TypeInfo, (unsigned int)Names->fields._size);
+    v9 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, (unsigned int)Names->fields._size);
     this->fields._usage = v9;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields._usage, (int32_t)v9, v10, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._usage, (int32_t)v9, v10, v11);
   }
   targetFSM = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -685,9 +653,9 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_PlayMakerFSM___);
     this->fields.targetFSM = (struct PlayMakerFSM_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.targetFSM, (int32_t)Component_object, v14, v15);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.targetFSM, (int32_t)Component_object, v14, v15);
   }
   v16 = (UnityEngine_Object_o *)this->fields.targetFSM;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -698,20 +666,20 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
   {
     v19 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+            (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIInput___);
     this->fields._input = (struct UIInput_o *)v19;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields._input, (int32_t)v19, v20, v21);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._input, (int32_t)v19, v20, v21);
     input = (UnityEngine_Object_o *)this->fields._input;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(input, 0, 0) )
     {
-      v23 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+      v23 = (EventDelegate_o *)sub_1C6BC54(EventDelegate_TypeInfo);
       EventDelegate___ctor(v23, 0);
       if ( !v23 )
         goto LABEL_63;
       EventDelegate__set_target(v23, (UnityEngine_MonoBehaviour_o *)this, 0);
-      EventDelegate__set_methodName(v23, (System_String_o *)StringLiteral_9968/*"OnSubmitChange"*/, 0);
+      EventDelegate__set_methodName(v23, (System_String_o *)StringLiteral_9964/*"OnSubmitChange"*/, 0);
       v26 = this->fields._input;
       if ( !v26 )
         goto LABEL_63;
@@ -729,14 +697,14 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
         System_Collections_Generic_List_object___AddWithResize(
           Names,
           (Il2CppObject *)v23,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
       }
       else
       {
         v30 = &items->obj.klass + size;
         Names->fields._size = size + 1;
         v30[4] = (Il2CppClass *)v23;
-        sub_1C3E508((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v23, v24, v25);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v30 + 4), (int32_t)v23, v24, v25);
       }
     }
   }
@@ -744,20 +712,20 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
   {
     v32 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIProgressBar___);
+            (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIProgressBar___);
     this->fields._pBar = (struct UIProgressBar_o *)v32;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields._pBar, (int32_t)v32, v33, v34);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._pBar, (int32_t)v32, v33, v34);
     pBar = (UnityEngine_Object_o *)this->fields._pBar;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(pBar, 0, 0) )
     {
-      v36 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+      v36 = (EventDelegate_o *)sub_1C6BC54(EventDelegate_TypeInfo);
       EventDelegate___ctor(v36, 0);
       if ( !v36 )
         goto LABEL_63;
       EventDelegate__set_target(v36, (UnityEngine_MonoBehaviour_o *)this, 0);
-      EventDelegate__set_methodName(v36, (System_String_o *)StringLiteral_9963/*"OnSliderChange"*/, 0);
+      EventDelegate__set_methodName(v36, (System_String_o *)StringLiteral_9959/*"OnSliderChange"*/, 0);
       v39 = this->fields._pBar;
       if ( !v39 )
         goto LABEL_63;
@@ -775,14 +743,14 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
         System_Collections_Generic_List_object___AddWithResize(
           Names,
           (Il2CppObject *)v36,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
       }
       else
       {
         v43 = &v40->obj.klass + v42;
         Names->fields._size = v42 + 1;
         v43[4] = (Il2CppClass *)v36;
-        sub_1C3E508((CGThumbnailListItem_o *)(v43 + 4), (int32_t)v36, v37, v38);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v43 + 4), (int32_t)v36, v37, v38);
       }
     }
   }
@@ -790,20 +758,20 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
     return;
   v44 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIInput___);
+          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIInput___);
   this->fields._input = (struct UIInput_o *)v44;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._input, (int32_t)v44, v45, v46);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._input, (int32_t)v44, v45, v46);
   v47 = (UnityEngine_Object_o *)this->fields._input;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(v47, 0, 0) )
   {
-    v48 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+    v48 = (EventDelegate_o *)sub_1C6BC54(EventDelegate_TypeInfo);
     EventDelegate___ctor(v48, 0);
     if ( !v48 )
       goto LABEL_63;
     EventDelegate__set_target(v48, (UnityEngine_MonoBehaviour_o *)this, 0);
-    EventDelegate__set_methodName(v48, (System_String_o *)StringLiteral_9835/*"OnChange"*/, 0);
+    EventDelegate__set_methodName(v48, (System_String_o *)StringLiteral_9831/*"OnChange"*/, 0);
     v51 = this->fields._input;
     if ( !v51 )
       goto LABEL_63;
@@ -821,32 +789,32 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
       System_Collections_Generic_List_object___AddWithResize(
         Names,
         (Il2CppObject *)v48,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
     }
     else
     {
       v55 = &v52->obj.klass + v54;
       Names->fields._size = v54 + 1;
       v55[4] = (Il2CppClass *)v48;
-      sub_1C3E508((CGThumbnailListItem_o *)(v55 + 4), (int32_t)v48, v49, v50);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v55 + 4), (int32_t)v48, v49, v50);
     }
   }
   v56 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
+          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIToggle___);
   this->fields._toggle = (struct UIToggle_o *)v56;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._toggle, (int32_t)v56, v57, v58);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._toggle, (int32_t)v56, v57, v58);
   toggle = (UnityEngine_Object_o *)this->fields._toggle;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(toggle, 0, 0) )
   {
-    v60 = (EventDelegate_o *)sub_1C3E7B0(EventDelegate_TypeInfo);
+    v60 = (EventDelegate_o *)sub_1C6BC54(EventDelegate_TypeInfo);
     EventDelegate___ctor(v60, 0);
     if ( v60 )
     {
       EventDelegate__set_target(v60, (UnityEngine_MonoBehaviour_o *)this, 0);
-      EventDelegate__set_methodName(v60, (System_String_o *)StringLiteral_9835/*"OnChange"*/, 0);
+      EventDelegate__set_methodName(v60, (System_String_o *)StringLiteral_9831/*"OnChange"*/, 0);
       v63 = this->fields._toggle;
       if ( v63 )
       {
@@ -864,14 +832,14 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
               System_Collections_Generic_List_object___AddWithResize(
                 Names,
                 (Il2CppObject *)v60,
-                *(const MethodInfo_37B5460 **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
+                *(const MethodInfo_3800974 **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
             }
             else
             {
               v67 = &v64->obj.klass + v66;
               Names->fields._size = v66 + 1;
               v67[4] = (Il2CppClass *)v60;
-              sub_1C3E508((CGThumbnailListItem_o *)(v67 + 4), (int32_t)v60, v61, v62);
+              sub_1C6B9AC((CGThumbnailListItem_o *)(v67 + 4), (int32_t)v60, v61, v62);
             }
             return;
           }
@@ -879,7 +847,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnEnable(NGuiEventsToPlaymakerFsmEvents_o *
       }
     }
 LABEL_63:
-    sub_1C3E7C0(Names, v8);
+    sub_1C6BC60(Names, v8);
   }
 }
 
@@ -903,13 +871,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnHover(
   struct System_Int32_array *v16; // x8
   struct System_Int32_array *v17; // x8
 
-  if ( (byte_4C54B84 & 1) == 0 )
+  if ( (byte_4CB40DC & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C54B84 = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CB40DC = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -943,7 +911,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnHover(
       }
       currentTouch = v12->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_1C3E508(
+      sub_1C6B9AC(
         (CGThumbnailListItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v8,
@@ -961,10 +929,10 @@ void NGuiEventsToPlaymakerFsmEvents__OnHover(
             return;
           }
 LABEL_23:
-          sub_1C3E7C8(v6, v7);
+          sub_1C6BC68(v6);
         }
 LABEL_22:
-        sub_1C3E7C0(v6, v7);
+        sub_1C6BC60(v6, v7);
       }
       NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(this, 3, v15);
       v17 = this->fields._usage;
@@ -997,13 +965,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnPress(
   struct System_Int32_array *v16; // x8
   struct System_Int32_array *v17; // x8
 
-  if ( (byte_4C54B85 & 1) == 0 )
+  if ( (byte_4CB40DD & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C54B85 = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CB40DD = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1037,7 +1005,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnPress(
       }
       currentTouch = v12->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_1C3E508(
+      sub_1C6B9AC(
         (CGThumbnailListItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v8,
@@ -1055,10 +1023,10 @@ void NGuiEventsToPlaymakerFsmEvents__OnPress(
             return;
           }
 LABEL_23:
-          sub_1C3E7C8(v6, v7);
+          sub_1C6BC68(v6);
         }
 LABEL_22:
-        sub_1C3E7C0(v6, v7);
+        sub_1C6BC60(v6, v7);
       }
       NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(this, 5, v15);
       v17 = this->fields._usage;
@@ -1087,13 +1055,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelect(
   struct UICamera_MouseOrTouch_o *currentTouch; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C54B86 & 1) == 0 )
+  if ( (byte_4CB40DE & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C54B86 = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CB40DE = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1110,7 +1078,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelect(
       }
       EventData = v9->static_fields->EventData;
       if ( !EventData )
-        sub_1C3E7C0(v9, v6);
+        sub_1C6BC60(v9, v6);
       EventData->fields.BoolData = selected;
       v11 = UICamera_TypeInfo;
       if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -1120,7 +1088,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelect(
       }
       currentTouch = v11->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_1C3E508(
+      sub_1C6B9AC(
         (CGThumbnailListItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v7,
@@ -1145,11 +1113,11 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelectionChange(
   HutongGames_PlayMaker_Fsm_c *v11; // x0
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C54B8C & 1) == 0 )
+  if ( (byte_4CB40E4 & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C54B8C = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB40E4 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1163,7 +1131,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelectionChange(
       if ( !usage )
         goto LABEL_14;
       if ( LODWORD(usage->max_length) <= 0xC )
-        sub_1C3E7C8(EventData, v7);
+        sub_1C6BC68(EventData);
       ++usage->m_Items[12];
       v11 = HutongGames_PlayMaker_Fsm_TypeInfo;
       if ( !HutongGames_PlayMaker_Fsm_TypeInfo->_2.cctor_finished )
@@ -1174,9 +1142,9 @@ void NGuiEventsToPlaymakerFsmEvents__OnSelectionChange(
       EventData = v11->static_fields->EventData;
       if ( !EventData )
 LABEL_14:
-        sub_1C3E7C0(EventData, v7);
+        sub_1C6BC60(EventData, v7);
       EventData->fields.StringData = item;
-      sub_1C3E508((CGThumbnailListItem_o *)&EventData->fields.StringData, (int32_t)item, v8, v9);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&EventData->fields.StringData, (int32_t)item, v8, v9);
       NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(this, 12, v12);
     }
   }
@@ -1199,11 +1167,11 @@ void NGuiEventsToPlaymakerFsmEvents__OnSliderChange(
   float v13; // s8
   UnityEngine_Transform_c *v14; // x8
 
-  if ( (byte_4C54B8B & 1) == 0 )
+  if ( (byte_4CB40E3 & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C54B8B = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB40E3 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1217,7 +1185,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSliderChange(
       if ( usage )
       {
         if ( LODWORD(usage->max_length) <= 0xB )
-          sub_1C3E7C8(v6, v7);
+          sub_1C6BC68(v6);
         ++usage->m_Items[11];
         v6 = (UIProgressBar_o *)HutongGames_PlayMaker_Fsm_TypeInfo;
         if ( !HutongGames_PlayMaker_Fsm_TypeInfo->_2.cctor_finished )
@@ -1256,7 +1224,7 @@ LABEL_21:
           }
         }
       }
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     }
   }
 }
@@ -1275,12 +1243,12 @@ void NGuiEventsToPlaymakerFsmEvents__OnSubmitChange(NGuiEventsToPlaymakerFsmEven
   System_String_o *value; // x20
   HutongGames_PlayMaker_Fsm_c *v12; // x8
 
-  if ( (byte_4C54B8A & 1) == 0 )
+  if ( (byte_4CB40E2 & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C54B8A = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB40E2 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1294,7 +1262,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnSubmitChange(NGuiEventsToPlaymakerFsmEven
       if ( usage )
       {
         if ( LODWORD(usage->max_length) <= 0xA )
-          sub_1C3E7C8(EventData, v5);
+          sub_1C6BC68(EventData);
         ++usage->m_Items[10];
         input = (UnityEngine_Object_o *)this->fields._input;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1315,14 +1283,14 @@ void NGuiEventsToPlaymakerFsmEvents__OnSubmitChange(NGuiEventsToPlaymakerFsmEven
           if ( EventData )
           {
             *(_QWORD *)&EventData->fields.activeTextColor.fields.r = value;
-            sub_1C3E508((CGThumbnailListItem_o *)&EventData->fields.activeTextColor, (int32_t)value, v9, v10);
+            sub_1C6B9AC((CGThumbnailListItem_o *)&EventData->fields.activeTextColor, (int32_t)value, v9, v10);
 LABEL_18:
             NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(this, 10, v8);
             return;
           }
         }
       }
-      sub_1C3E7C0(EventData, v5);
+      sub_1C6BC60(EventData, v5);
     }
   }
 }
@@ -1343,13 +1311,13 @@ void NGuiEventsToPlaymakerFsmEvents__OnTooltip(
   struct UICamera_MouseOrTouch_o *currentTouch; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C54B89 & 1) == 0 )
+  if ( (byte_4CB40E1 & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C54B89 = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&NGuiEventsToPlaymakerFsmEvents_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CB40E1 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1366,7 +1334,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnTooltip(
       }
       EventData = v9->static_fields->EventData;
       if ( !EventData )
-        sub_1C3E7C0(v9, v6);
+        sub_1C6BC60(v9, v6);
       EventData->fields.BoolData = show;
       v11 = UICamera_TypeInfo;
       if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -1376,7 +1344,7 @@ void NGuiEventsToPlaymakerFsmEvents__OnTooltip(
       }
       currentTouch = v11->static_fields->currentTouch;
       NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields->currentTouch = currentTouch;
-      sub_1C3E508(
+      sub_1C6B9AC(
         (CGThumbnailListItem_o *)NGuiEventsToPlaymakerFsmEvents_TypeInfo->static_fields,
         (int32_t)currentTouch,
         v7,
@@ -1403,13 +1371,13 @@ void NGuiEventsToPlaymakerFsmEvents__SetCurrentSelection(
   HutongGames_PlayMaker_Fsm_c *v12; // x0
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C54B8E & 1) == 0 )
+  if ( (byte_4CB40E6 & 1) == 0 )
   {
-    sub_1C3E564(&HutongGames_PlayMaker_Fsm_TypeInfo);
-    sub_1C3E564(&Localization_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UIPopupList_TypeInfo);
-    byte_4C54B8E = 1;
+    sub_1C6BA08(&HutongGames_PlayMaker_Fsm_TypeInfo);
+    sub_1C6BA08(&Localization_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UIPopupList_TypeInfo);
+    byte_4CB40E6 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -1428,7 +1396,7 @@ void NGuiEventsToPlaymakerFsmEvents__SetCurrentSelection(
         if ( !usage )
           goto LABEL_22;
         if ( LODWORD(usage->max_length) <= 0xC )
-          sub_1C3E7C8(EventData, v6);
+          sub_1C6BC68(EventData);
         ++usage->m_Items[12];
         v10 = UIPopupList_TypeInfo->static_fields->current;
         if ( !v10 )
@@ -1449,9 +1417,9 @@ void NGuiEventsToPlaymakerFsmEvents__SetCurrentSelection(
         EventData = v12->static_fields->EventData;
         if ( !EventData )
 LABEL_22:
-          sub_1C3E7C0(EventData, v6);
+          sub_1C6BC60(EventData, v6);
         EventData->fields.StringData = mSelectedItem;
-        sub_1C3E508((CGThumbnailListItem_o *)&EventData->fields.StringData, (int32_t)mSelectedItem, v7, v8);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&EventData->fields.StringData, (int32_t)mSelectedItem, v7, v8);
         NGuiEventsToPlaymakerFsmEvents__FireNGUIPlayMakerEvent(this, 12, v13);
       }
     }
@@ -1459,7 +1427,6 @@ LABEL_22:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t NGuiEventsToPlaymakerFsmEvents__getUsage(
         NGuiEventsToPlaymakerFsmEvents_o *this,
         int32_t fsmEventDelegate,
@@ -1475,6 +1442,6 @@ int32_t NGuiEventsToPlaymakerFsmEvents__getUsage(
   if ( max_length <= fsmEventDelegate )
     return -1;
   if ( max_length <= (unsigned int)fsmEventDelegate )
-    sub_1C3E7C8(this, *(_QWORD *)&fsmEventDelegate);
+    sub_1C6BC68(this);
   return usage->m_Items[fsmEventDelegate];
 }

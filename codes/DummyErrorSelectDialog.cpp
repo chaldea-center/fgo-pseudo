@@ -1,9 +1,9 @@
 void DummyErrorSelectDialog___ctor(DummyErrorSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56287 & 1) == 0 )
+  if ( (byte_4CB57EE & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C56287 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB57EE = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,10 +15,10 @@ void DummyErrorSelectDialog__Init(DummyErrorSelectDialog_o *this, const MethodIn
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4C56286 & 1) == 0 )
+  if ( (byte_4CB57ED & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C56286 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB57ED = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -27,7 +27,7 @@ void DummyErrorSelectDialog__Init(DummyErrorSelectDialog_o *this, const MethodIn
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (titleLabel = this->fields.decideLabel) == 0) )
   {
-    sub_1C3E7C0(titleLabel, method);
+    sub_1C6BC60(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -49,15 +49,15 @@ void DummyErrorSelectDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -69,9 +69,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A82DEC;
+  this->fields.invoke_impl = (intptr_t)sub_1AA1D74;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A82DA4;
+  this->fields.extra_arg = (intptr_t)sub_1AA1D2C;
 }
 
 
@@ -82,21 +82,18 @@ System_IAsyncResult_o *DummyErrorSelectDialog_ClickDelegate__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v13; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v13 = selectError;
-  if ( (byte_4C56288 & 1) == 0 )
+  v10 = selectError;
+  if ( (byte_4CB57EF & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    byte_4C56288 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    byte_4CB57EF = 1;
   }
-  v12[1] = 0;
-  v12[0] = j_il2cpp_value_box_0(int_TypeInfo, &v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
+  v9[1] = 0;
+  v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
 }
 
 
@@ -105,7 +102,7 @@ void DummyErrorSelectDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 

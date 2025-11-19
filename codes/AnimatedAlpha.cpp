@@ -12,10 +12,10 @@ void AnimatedAlpha__LateUpdate(AnimatedAlpha_o *this, const MethodInfo *method)
   void *v5; // x0
   UnityEngine_Object_o *mPanel; // x20
 
-  if ( (byte_4C5B59E & 1) == 0 )
+  if ( (byte_4CBAB7B & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B59E = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAB7B = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -45,7 +45,7 @@ void AnimatedAlpha__LateUpdate(AnimatedAlpha_o *this, const MethodInfo *method)
       return;
     }
 LABEL_14:
-    sub_1C3E7C0(v5, v4);
+    sub_1C6BC60(v5, v4);
   }
 }
 
@@ -60,21 +60,21 @@ void AnimatedAlpha__OnEnable(AnimatedAlpha_o *this, const MethodInfo *method)
   const MethodInfo *v8; // x3
   const MethodInfo *v9; // x1
 
-  if ( (byte_4C5B59D & 1) == 0 )
+  if ( (byte_4CBAB7A & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4C5B59D = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_4CBAB7A = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
   v6 = UnityEngine_Component__GetComponent_object_(
          (UnityEngine_Component_o *)this,
-         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)v6;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)v6, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)v6, v7, v8);
   AnimatedAlpha__LateUpdate(this, v9);
 }

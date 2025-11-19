@@ -11,33 +11,33 @@ void UserRecommendSupportEntity___ctor(UserRecommendSupportEntity_o *this, const
   int32_t v11; // w2
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C57CC2 & 1) == 0 )
+  if ( (byte_4CB722F & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&ServantLeaderInfo_TypeInfo);
-    byte_4C57CC2 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&ServantLeaderInfo_TypeInfo);
+    byte_4CB722F = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.idx = 0;
   this->fields.questPhase = 0;
-  v3 = (struct System_Int32_array *)sub_1C3E60C(int___TypeInfo, 0);
+  v3 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 0);
   this->fields.adviceMessageIds = v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.adviceMessageIds, (int32_t)v3, v4, v5);
-  v6 = (ServantLeaderInfo_o *)sub_1C3E7B0(ServantLeaderInfo_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.adviceMessageIds, (int32_t)v3, v4, v5);
+  v6 = (ServantLeaderInfo_o *)sub_1C6BC54(ServantLeaderInfo_TypeInfo);
   ServantLeaderInfo___ctor(v6, 0);
   this->fields.userSvtLeaderInfo = v6;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.userSvtLeaderInfo, (int32_t)v6, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.userSvtLeaderInfo, (int32_t)v6, v7, v8);
   this->fields._UserServantEntity_k__BackingField = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField, 0, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField, 0, v9, v10);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField, 0, v11, v12);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField, 0, v11, v12);
 }
 
 
-void UserRecommendSupportEntity___ctor_43177816(
+void UserRecommendSupportEntity___ctor_43367896(
         UserRecommendSupportEntity_o *this,
         int32_t index,
         const MethodInfo *method)
@@ -53,34 +53,34 @@ void UserRecommendSupportEntity___ctor_43177816(
   int32_t v13; // w2
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C57CC3 & 1) == 0 )
+  if ( (byte_4CB7230 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&ServantLeaderInfo_TypeInfo);
-    byte_4C57CC3 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&ServantLeaderInfo_TypeInfo);
+    byte_4CB7230 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
   this->fields.questId = 0;
   this->fields.questPhase = 0;
   this->fields.idx = index + 1;
-  v5 = (struct System_Int32_array *)sub_1C3E60C(int___TypeInfo, 0);
+  v5 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 0);
   this->fields.adviceMessageIds = v5;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.adviceMessageIds, (int32_t)v5, v6, v7);
-  v8 = (ServantLeaderInfo_o *)sub_1C3E7B0(ServantLeaderInfo_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.adviceMessageIds, (int32_t)v5, v6, v7);
+  v8 = (ServantLeaderInfo_o *)sub_1C6BC54(ServantLeaderInfo_TypeInfo);
   ServantLeaderInfo___ctor(v8, 0);
   this->fields.userSvtLeaderInfo = v8;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.userSvtLeaderInfo, (int32_t)v8, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.userSvtLeaderInfo, (int32_t)v8, v9, v10);
   this->fields._UserServantEntity_k__BackingField = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField, 0, v11, v12);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField, 0, v11, v12);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField, 0, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField, 0, v13, v14);
 }
 
 
-void UserRecommendSupportEntity___ctor_43178056(
+void UserRecommendSupportEntity___ctor_43368136(
         UserRecommendSupportEntity_o *this,
         UserRecommendSupportEntity_o *src,
         const MethodInfo *method)
@@ -100,26 +100,26 @@ void UserRecommendSupportEntity___ctor_43178056(
   int32_t v17; // w2
   const MethodInfo *v18; // x3
 
-  if ( (byte_4C57CC4 & 1) == 0 )
+  if ( (byte_4CB7231 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C57CC4 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB7231 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
   if ( !src )
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   UserServantEntity_k__BackingField = src->fields._UserServantEntity_k__BackingField;
   this->fields._UserServantEntity_k__BackingField = UserServantEntity_k__BackingField;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField,
     (int32_t)UserServantEntity_k__BackingField,
     v7,
     v8);
   UserRecommendSupportInfo_k__BackingField = src->fields._UserRecommendSupportInfo_k__BackingField;
   this->fields._UserRecommendSupportInfo_k__BackingField = UserRecommendSupportInfo_k__BackingField;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
     (int32_t)UserRecommendSupportInfo_k__BackingField,
     v11,
@@ -128,24 +128,24 @@ void UserRecommendSupportEntity___ctor_43178056(
   this->fields.questPhase = src->fields.questPhase;
   adviceMessageIds = src->fields.adviceMessageIds;
   this->fields.adviceMessageIds = adviceMessageIds;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.adviceMessageIds, (int32_t)adviceMessageIds, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.adviceMessageIds, (int32_t)adviceMessageIds, v14, v15);
   userSvtLeaderInfo = src->fields.userSvtLeaderInfo;
   this->fields.userSvtLeaderInfo = userSvtLeaderInfo;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.userSvtLeaderInfo, (int32_t)userSvtLeaderInfo, v17, v18);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.userSvtLeaderInfo, (int32_t)userSvtLeaderInfo, v17, v18);
 }
 
 
 System_String_o *UserRecommendSupportEntity__CreatePK(int64_t userId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C57CC1 & 1) == 0 )
+  if ( (byte_4CB722E & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4C57CC1 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4CB722E = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            idx,
-           (const MethodInfo_30F7D00 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_31395F8 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -161,7 +161,7 @@ System_String_o *UserRecommendSupportEntity__CreatePrimaryKey(
 
 int64_t UserRecommendSupportEntity__GetEquipUserSvtId(UserRecommendSupportEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo_38DC57C *v2; // x3
+  const MethodInfo_392A934 *v2; // x3
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
   struct EquipTargetInfo_o *equipTarget1; // x8
   __int128 v6; // q0
@@ -180,13 +180,13 @@ int64_t UserRecommendSupportEntity__GetEquipUserSvtId(UserRecommendSupportEntity
   System_Nullable_T__o v20; // 0:x0.16
 
   v19 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
-  if ( (byte_4C57CC5 & 1) == 0 )
+  if ( (byte_4CB7232 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Nullable_ObscuredLong__GetValueOrDefault__);
-    sub_1C3E564(&Method_System_Nullable_ObscuredLong___ctor__);
-    sub_1C3E564(&Method_System_Nullable_ObscuredLong__get_HasValue__);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C57CC5 = 1;
+    sub_1C6BA08(&Method_System_Nullable_ObscuredLong__GetValueOrDefault__);
+    sub_1C6BA08(&Method_System_Nullable_ObscuredLong___ctor__);
+    sub_1C6BA08(&Method_System_Nullable_ObscuredLong__get_HasValue__);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4CB7232 = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo && (equipTarget1 = userSvtLeaderInfo->fields.equipTarget1) != 0 )
@@ -233,7 +233,7 @@ LABEL_11:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v12 = v16;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v12, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v12, 0);
 }
 
 
@@ -268,7 +268,7 @@ void UserRecommendSupportEntity__SetAdviceMessage(
   this->fields.adviceMessageIds = ids;
   p_adviceMessageIds = &this->fields.adviceMessageIds;
   *((_DWORD *)p_adviceMessageIds - 4) = index + 1;
-  sub_1C3E508((CGThumbnailListItem_o *)p_adviceMessageIds, (int32_t)ids, (int32_t)ids, method);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_adviceMessageIds, (int32_t)ids, (int32_t)ids, method);
 }
 
 
@@ -303,19 +303,19 @@ void UserRecommendSupportEntity__SetUserServantEntity(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+30h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+50h] [xbp-50h]
 
-  if ( (byte_4C57CC6 & 1) == 0 )
+  if ( (byte_4CB7233 & 1) == 0 )
   {
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C57CC6 = 1;
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4CB7233 = 1;
   }
   this->fields._UserServantEntity_k__BackingField = entity;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField,
     (int32_t)entity,
     (int32_t)entity,
     method);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField, 0, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField, 0, v7, v8);
   if ( !entity )
     goto LABEL_9;
   v11 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
@@ -324,16 +324,16 @@ void UserRecommendSupportEntity__SetUserServantEntity(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v16 = v17;
-  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v16, 0);
+  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v16, 0);
   this->fields.idx = index + 1;
   v12 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   *(_OWORD *)&v15.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v15.fields.fakeValue = v12;
-  v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v15, 0);
+  v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v15, 0);
   if ( !userSvtLeaderInfo || (userSvtLeaderInfo->fields.userSvtId = v9, (v14 = this->fields.userSvtLeaderInfo) == 0) )
 LABEL_9:
-    sub_1C3E7C0(v9, v10);
+    sub_1C6BC60(v9, v10);
   v14->fields.svtId = entity->fields.svtId;
 }
 
@@ -362,7 +362,7 @@ void UserRecommendSupportEntity__set_UserRecommendSupportInfo(
   const MethodInfo *v3; // x3
 
   this->fields._UserRecommendSupportInfo_k__BackingField = value;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -378,7 +378,7 @@ void UserRecommendSupportEntity__set_UserServantEntity(
   const MethodInfo *v3; // x3
 
   this->fields._UserServantEntity_k__BackingField = value;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

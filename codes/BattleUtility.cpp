@@ -1,23 +1,23 @@
 bool BattleUtility__Above(System_Int32_array *condArray, int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4C59B09 & 1) == 0 )
+  if ( (byte_4CB90C3 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_First_int___);
-    byte_4C59B09 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_First_int___);
+    byte_4CB90C3 = 1;
   }
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)condArray, 0)
       && System_Linq_Enumerable__First_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)condArray,
-           (const MethodInfo_311FFD4 *)Method_System_Linq_Enumerable_First_int___) <= value;
+           (const MethodInfo_31618CC *)Method_System_Linq_Enumerable_First_int___) <= value;
 }
 
 
 float BattleUtility__Abs(float f, const MethodInfo *method)
 {
-  if ( (byte_4C59B07 & 1) == 0 )
+  if ( (byte_4CB90C1 & 1) == 0 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C59B07 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB90C1 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -25,12 +25,12 @@ float BattleUtility__Abs(float f, const MethodInfo *method)
 }
 
 
-int32_t BattleUtility__Abs_46454236(int32_t value, const MethodInfo *method)
+int32_t BattleUtility__Abs_46675488(int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4C59B08 & 1) == 0 )
+  if ( (byte_4CB90C2 & 1) == 0 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C59B08 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB90C2 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -43,15 +43,15 @@ int32_t BattleUtility__Abs_46454236(int32_t value, const MethodInfo *method)
 
 bool BattleUtility__Below(System_Int32_array *condArray, int32_t value, const MethodInfo *method)
 {
-  if ( (byte_4C59B0A & 1) == 0 )
+  if ( (byte_4CB90C4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_First_int___);
-    byte_4C59B0A = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_First_int___);
+    byte_4CB90C4 = 1;
   }
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)condArray, 0)
       && System_Linq_Enumerable__First_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)condArray,
-           (const MethodInfo_311FFD4 *)Method_System_Linq_Enumerable_First_int___) >= value;
+           (const MethodInfo_31618CC *)Method_System_Linq_Enumerable_First_int___) >= value;
 }
 
 
@@ -60,24 +60,24 @@ bool BattleUtility__Between(System_Int32_array *condArray, int32_t value, const 
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v6; // x1
 
-  if ( (byte_4C59B0B & 1) == 0 )
+  if ( (byte_4CB90C5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_First_int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Last_int___);
-    byte_4C59B0B = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_First_int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Last_int___);
+    byte_4CB90C5 = 1;
   }
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)condArray, 0);
   if ( IsNullOrEmpty )
     return 0;
   if ( !condArray )
-    sub_1C3E7C0(IsNullOrEmpty, v6);
+    sub_1C6BC60(IsNullOrEmpty, v6);
   return LODWORD(condArray->max_length) == 2
       && System_Linq_Enumerable__First_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)condArray,
-           (const MethodInfo_311FFD4 *)Method_System_Linq_Enumerable_First_int___) <= value
+           (const MethodInfo_31618CC *)Method_System_Linq_Enumerable_First_int___) <= value
       && System_Linq_Enumerable__Last_int_(
            (System_Collections_Generic_IEnumerable_TSource__o *)condArray,
-           (const MethodInfo_3124570 *)Method_System_Linq_Enumerable_Last_int___) >= value;
+           (const MethodInfo_3165E68 *)Method_System_Linq_Enumerable_Last_int___) >= value;
 }
 
 
@@ -87,14 +87,14 @@ int32_t BattleUtility__FloorToInt(float f, const MethodInfo *method)
 }
 
 
-int32_t BattleUtility__FloorToInt_46454028(double d, const MethodInfo *method)
+int32_t BattleUtility__FloorToInt_46675280(double d, const MethodInfo *method)
 {
   int32_t v3; // w9
 
-  if ( (byte_4C59B05 & 1) == 0 )
+  if ( (byte_4CB90BF & 1) == 0 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C59B05 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB90BF = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -110,10 +110,10 @@ int64_t BattleUtility__FloorToLong(double f, const MethodInfo *method)
 {
   int64_t v3; // x9
 
-  if ( (byte_4C59B06 & 1) == 0 )
+  if ( (byte_4CB90C0 & 1) == 0 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C59B06 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB90C0 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -127,7 +127,7 @@ int64_t BattleUtility__FloorToLong(double f, const MethodInfo *method)
 
 Il2CppObject *BattleUtility__GetDataFromMessagePackString_object_(
         System_String_o *dataString,
-        const MethodInfo_30EAFF8 *method)
+        const MethodInfo_312C7E8 *method)
 {
   ByteCompressor_o *v4; // x21
   ByteCompressor_o *v5; // x0
@@ -135,32 +135,32 @@ Il2CppObject *BattleUtility__GetDataFromMessagePackString_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_1C3E564(&ByteCompressor_TypeInfo);
+    sub_1C6BA08(&ByteCompressor_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C8ECD4(method);
+      sub_1C41AF8(method);
   }
-  v4 = (ByteCompressor_o *)sub_1C3E7B0(ByteCompressor_TypeInfo);
-  ByteCompressor___ctor_38476488(v4, dataString, 0);
+  v4 = (ByteCompressor_o *)sub_1C6BC54(ByteCompressor_TypeInfo);
+  ByteCompressor___ctor_38656552(v4, dataString, 0);
   if ( !v4 || (v5 = ByteCompressor__AsBase64StrToBytes(v4, 0)) == 0 || (v5 = ByteCompressor__AsGzipToBytes(v5, 0)) == 0 )
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   return ByteCompressor__UnpackMiniMessagePack_object_(
            v5,
-           (const MethodInfo_30EC304 *)method->rgctx_data->_0_ByteCompressor_UnpackMiniMessagePack_T_);
+           (const MethodInfo_312DAF4 *)method->rgctx_data->_0_ByteCompressor_UnpackMiniMessagePack_T_);
 }
 
 
 System_String_o *BattleUtility__GetStringFromMessagePackTargetData_object_(
         Il2CppObject *data,
-        const MethodInfo_30EB084 *method)
+        const MethodInfo_312C874 *method)
 {
   ByteCompressor_o *v3; // x0
   __int64 v4; // x1
 
   if ( !method->rgctx_data )
-    sub_1C8ECD4(method);
-  v3 = ByteCompressor__ImportMiniMessagePack_object_(data, (const MethodInfo_30EC124 *)method);
+    sub_1C41AF8(method);
+  v3 = ByteCompressor__ImportMiniMessagePack_object_(data, (const MethodInfo_312D914 *)method);
   if ( !v3 || (v3 = ByteCompressor__ToGzip(v3, 0)) == 0 || (v3 = ByteCompressor__ToBase64Str(v3, 0)) == 0 )
-    sub_1C3E7C0(v3, v4);
+    sub_1C6BC60(v3, v4);
   return v3->fields._Str_k__BackingField;
 }
 
@@ -203,15 +203,15 @@ float BattleUtility__Lerp(float a, float b, float t, const MethodInfo *method)
 {
   float v7; // s0
 
-  if ( (byte_4C59B03 & 1) == 0 )
+  if ( (byte_4CB90BD & 1) == 0 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C59B03 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB90BD = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v7 = System_Math__Max_65159940(0.0, t, 0);
-  return (float)((float)(b - a) * System_Math__Min_65160268(v7, 1.0, 0)) + a;
+  v7 = System_Math__Max_65488652(0.0, t, 0);
+  return (float)((float)(b - a) * System_Math__Min_65488980(v7, 1.0, 0)) + a;
 }
 
 
@@ -219,13 +219,13 @@ double BattleUtility__LerpDouble(double a, double b, float t, const MethodInfo *
 {
   float v7; // s0
 
-  if ( (byte_4C59B04 & 1) == 0 )
+  if ( (byte_4CB90BE & 1) == 0 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C59B04 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB90BE = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v7 = System_Math__Max_65159940(0.0, t, 0);
-  return (b - a) * System_Math__Min_65160268(v7, 1.0, 0) + a;
+  v7 = System_Math__Max_65488652(0.0, t, 0);
+  return (b - a) * System_Math__Min_65488980(v7, 1.0, 0) + a;
 }

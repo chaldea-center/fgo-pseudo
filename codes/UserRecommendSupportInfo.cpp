@@ -15,7 +15,7 @@ void UserRecommendSupportInfo__Finalize(UserRecommendSupportInfo_o *this, const 
   if ( userSvtLeaderInfo )
   {
     userSvtLeaderInfo[1].klass = 0;
-    sub_1C3E508(userSvtLeaderInfo + 1, 0, v2, v3);
+    sub_1C6B9AC(userSvtLeaderInfo + 1, 0, v2, v3);
   }
   System_Object__Finalize((Il2CppObject *)this, 0);
 }

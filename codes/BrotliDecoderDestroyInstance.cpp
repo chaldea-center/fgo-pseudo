@@ -9,7 +9,7 @@ __int64 __fastcall BrotliDecoderDestroyInstance(__int64 result)
     v1 = result;
     v2 = *(_QWORD *)(result + 56);
     v3 = *(__int64 (__fastcall **)(__int64, __int64))(result + 48);
-    sub_1C3F2BC(result);
+    sub_1CCB298(result);
     return v3(v2, v1);
   }
   return result;

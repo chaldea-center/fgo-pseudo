@@ -1,9 +1,9 @@
 void UICrossNarrowLabel___ctor(UICrossNarrowLabel_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5859B & 1) == 0 )
+  if ( (byte_4CB7B12 & 1) == 0 )
   {
-    sub_1C3E564(&UILabel_TypeInfo);
-    byte_4C5859B = 1;
+    sub_1C6BA08(&UILabel_TypeInfo);
+    byte_4CB7B12 = 1;
   }
   if ( !UILabel_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UILabel_TypeInfo);
@@ -31,10 +31,10 @@ void UICrossNarrowLabel__SetCrossNarrowText(
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5859A & 1) == 0 )
+  if ( (byte_4CB7B11 & 1) == 0 )
   {
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C5859A = 1;
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB7B11 = 1;
   }
   if ( !this->fields.isInit )
   {
@@ -67,7 +67,7 @@ void UICrossNarrowLabel__SetCrossNarrowText(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
 LABEL_12:
-    sub_1C3E7C0(transform, v9);
+    sub_1C6BC60(transform, v9);
   v18.fields.x = value;
   v18.fields.y = y;
   v18.fields.z = z;

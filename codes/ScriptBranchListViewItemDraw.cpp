@@ -30,11 +30,11 @@ void ScriptBranchListViewItemDraw__SetItem(
   struct ScriptBranchListViewItem_o **p_drawItem; // x0
   int32_t v24; // w1
 
-  if ( (byte_4C542F4 & 1) == 0 )
+  if ( (byte_4CB3846 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C542F4 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB3846 = 1;
   }
   if ( !item || !mode )
   {
@@ -67,7 +67,7 @@ void ScriptBranchListViewItemDraw__SetItem(
     goto LABEL_29;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)titleTextLabel,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   titleTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -92,7 +92,7 @@ void ScriptBranchListViewItemDraw__SetItem(
   v19 = ((unsigned __int8)titleTextLabel & 1) != 0 ? 1.0 : 0.5;
   if ( !checkSprite )
 LABEL_29:
-    sub_1C3E7C0(titleTextLabel, title);
+    sub_1C6BC60(titleTextLabel, title);
   v20 = 1.0;
   v21 = v19;
   v22 = v19;
@@ -101,7 +101,7 @@ LABEL_29:
   p_drawItem = &this->fields.drawItem;
   v24 = (int)item;
 LABEL_28:
-  sub_1C3E508((CGThumbnailListItem_o *)p_drawItem, v24, mode, method);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_drawItem, v24, mode, method);
 }
 
 
@@ -143,7 +143,7 @@ void ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDraw_o *this, 
     v6 = 1.0;
   if ( !drawItem )
 LABEL_14:
-    sub_1C3E7C0(drawItem, method);
+    sub_1C6BC60(drawItem, method);
   v7 = 1.0;
   v8 = v6;
   v9 = v6;

@@ -15,6 +15,6 @@ void PlayFieldMotionBattleLogicTask___ctor(
   v5->fields.motionName = motionName;
   v5 = (PlayFieldMotionBattleLogicTask_o *)((char *)v5 + 120);
   *(_DWORD *)&v5[-1].fields.isNoCriticalOnAttack = 44;
-  sub_1C3E508((CGThumbnailListItem_o *)v5, (int32_t)motionName, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v5, (int32_t)motionName, v7, v8);
   LOBYTE(v5->fields.combo) = v6;
 }

@@ -6,11 +6,11 @@ TweenTransform_o *TweenTransform__Begin(
 {
   const MethodInfo *v4; // x3
 
-  return TweenTransform__Begin_49521268(go, duration, 0, to, v4);
+  return TweenTransform__Begin_49750152(go, duration, 0, to, v4);
 }
 
 
-TweenTransform_o *TweenTransform__Begin_49521268(
+TweenTransform_o *TweenTransform__Begin_49750152(
         UnityEngine_GameObject_o *go,
         float duration,
         UnityEngine_Transform_o *from,
@@ -26,19 +26,19 @@ TweenTransform_o *TweenTransform__Begin_49521268(
   const MethodInfo *v15; // x3
   const MethodInfo *v16; // x2
 
-  if ( (byte_4C5B5C0 & 1) == 0 )
+  if ( (byte_4CBAB9D & 1) == 0 )
   {
-    sub_1C3E564(&Method_UITweener_Begin_TweenTransform___);
-    byte_4C5B5C0 = 1;
+    sub_1C6BA08(&Method_UITweener_Begin_TweenTransform___);
+    byte_4CBAB9D = 1;
   }
-  v9 = UITweener__Begin_object_(go, duration, (const MethodInfo_31B54C4 *)Method_UITweener_Begin_TweenTransform___);
+  v9 = UITweener__Begin_object_(go, duration, (const MethodInfo_3210C14 *)Method_UITweener_Begin_TweenTransform___);
   if ( !v9 )
-    sub_1C3E7C0(0, v10);
+    sub_1C6BC60(0, v10);
   v13 = v9;
   v9[8].klass = (Il2CppClass *)from;
-  sub_1C3E508((CGThumbnailListItem_o *)&v9[8], (int32_t)from, v11, v12);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v9[8], (int32_t)from, v11, v12);
   v13[8].monitor = to;
-  sub_1C3E508((CGThumbnailListItem_o *)&v13[8].monitor, (int32_t)to, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v13[8].monitor, (int32_t)to, v14, v15);
   if ( duration <= 0.0 )
   {
     UITweener__Sample((UITweener_o *)v13, 1.0, 1, v16);
@@ -105,10 +105,10 @@ void TweenTransform__OnUpdate(TweenTransform_o *this, float factor, bool isFinis
   UnityEngine_Quaternion_o v59; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
   UnityEngine_Quaternion_o v60; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4C5B5BF & 1) == 0 )
+  if ( (byte_4CBAB9C & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B5BF = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAB9C = 1;
   }
   to = (UnityEngine_Object_o *)this->fields.to;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -123,7 +123,7 @@ void TweenTransform__OnUpdate(TweenTransform_o *this, float factor, bool isFinis
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.mTrans = transform;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12);
       v14 = this->fields.mTrans;
       if ( !v14 )
         goto LABEL_36;
@@ -258,7 +258,7 @@ void TweenTransform__OnUpdate(TweenTransform_o *this, float factor, bool isFinis
         return;
       }
 LABEL_36:
-      sub_1C3E7C0(v14, v13);
+      sub_1C6BC60(v14, v13);
     }
   }
 }

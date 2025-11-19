@@ -16,11 +16,11 @@ void NpcServantAiActArgument___ctor(
   v9 = this;
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, fromProcState, (const MethodInfo *)npcAi);
   v9->fields._SvtData_k__BackingField = svtData;
-  sub_1C3E508((CGThumbnailListItem_o *)&v9->fields._SvtData_k__BackingField, (int32_t)svtData, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v9->fields._SvtData_k__BackingField, (int32_t)svtData, v10, v11);
   v9->fields._NpcAi_k__BackingField = npcAi;
   v9 = (NpcServantAiActArgument_o *)((char *)v9 + 56);
   LOBYTE(v9[-1].fields._NpcAi_k__BackingField) = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)v9, (int32_t)npcAi, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v9, (int32_t)npcAi, v12, v13);
 }
 
 
@@ -45,13 +45,13 @@ void NpcServantAiActArgument__InitCommonTask(
   BattleActionData_o *v18; // x21
   __int64 v19; // x0
 
-  if ( (byte_4C59D97 & 1) == 0 )
+  if ( (byte_4CB9355 & 1) == 0 )
   {
-    sub_1C3E564(&BattleActionData___TypeInfo);
-    byte_4C59D97 = 1;
+    sub_1C6BA08(&BattleActionData___TypeInfo);
+    byte_4CB9355 = 1;
   }
   ServantAiActArgument__InitCommonTask((ServantAiActArgument_o *)this, task, method);
-  v5 = sub_1C3E60C(BattleActionData___TypeInfo, 2);
+  v5 = sub_1C6BAB0(BattleActionData___TypeInfo, 2);
   NpcAi_k__BackingField = this->fields._NpcAi_k__BackingField;
   v7 = (BattleActionData_array *)v5;
   LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
@@ -68,18 +68,18 @@ void NpcServantAiActArgument__InitCommonTask(
   v12 = (BattleActionData_o *)LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = sub_1C3E6A0(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1C6BB44(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
     {
 LABEL_17:
-      v19 = sub_1C3E7E4(LoadNpcPreStepInAction);
-      sub_1C3E68C(v19, 0);
+      v19 = sub_1C6BC84(LoadNpcPreStepInAction);
+      sub_1C6BB30(v19, 0);
     }
   }
   if ( !LODWORD(v7->max_length) )
     goto LABEL_16;
   v7->m_Items[0] = v12;
-  sub_1C3E508((CGThumbnailListItem_o *)v7->m_Items, (int32_t)v12, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v7->m_Items, (int32_t)v12, v10, v11);
   v13 = this->fields._NpcAi_k__BackingField;
   LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
                              this,
@@ -91,21 +91,21 @@ LABEL_17:
         !v13) )
   {
 LABEL_15:
-    sub_1C3E7C0(LoadNpcPreStepInAction, v9);
+    sub_1C6BC60(LoadNpcPreStepInAction, v9);
   }
   LoadNpcPreStepInAction = (__int64)BattleLogicNpcAi__MakeStepInAction(v13, v15, LoadNpcPreStepInAction & 1, 0);
   v18 = (BattleActionData_o *)LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = sub_1C3E6A0(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1C6BB44(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
       goto LABEL_17;
   }
   if ( LODWORD(v7->max_length) <= 1 )
 LABEL_16:
-    sub_1C3E7C8(LoadNpcPreStepInAction, v9);
+    sub_1C6BC68(LoadNpcPreStepInAction);
   v7->m_Items[1] = v18;
-  sub_1C3E508((CGThumbnailListItem_o *)&v7->m_Items[1], (int32_t)v18, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v7->m_Items[1], (int32_t)v18, v16, v17);
   if ( !task )
     goto LABEL_15;
   BattleLogicTask__SetInterruptAction((BattleLogicTask_o *)task, v7, 0);
@@ -126,5 +126,5 @@ void NpcServantAiActArgument__set_NpcAi(
   const MethodInfo *v3; // x3
 
   this->fields._NpcAi_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._NpcAi_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._NpcAi_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

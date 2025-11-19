@@ -12,65 +12,65 @@ void ScriptLineMessage___ctor(ScriptLineMessage_o *this, const MethodInfo *metho
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C58CFD & 1) == 0 )
+  if ( (byte_4CB827F & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
-    sub_1C3E564(&StringLiteral_861/*"-"*/);
-    sub_1C3E564(&StringLiteral_21535/*"medium"*/);
-    sub_1C3E564(&StringLiteral_23572/*"small"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_21187/*"large"*/);
-    sub_1C3E564(&StringLiteral_24921/*"x-large"*/);
-    byte_4C58CFD = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
+    sub_1C6BA08(&StringLiteral_858/*"-"*/);
+    sub_1C6BA08(&StringLiteral_21603/*"medium"*/);
+    sub_1C6BA08(&StringLiteral_23644/*"small"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_21247/*"large"*/);
+    sub_1C6BA08(&StringLiteral_25011/*"x-large"*/);
+    byte_4CB827F = 1;
   }
   this->fields.fontScale = 1.0;
   this->fields.defaultBetweenLineHeight = 5.0;
-  v3 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v3,
-    (const MethodInfo_346C0FC *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    (const MethodInfo_34B2258 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   if ( !v3 )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   System_Collections_Generic_Dictionary_object__int___Add(
     v3,
-    (Il2CppObject *)StringLiteral_861/*"-"*/,
+    (Il2CppObject *)StringLiteral_858/*"-"*/,
     30,
-    (const MethodInfo_346CAB0 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    (const MethodInfo_34B2C0C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
   System_Collections_Generic_Dictionary_object__int___Add(
     v3,
-    (Il2CppObject *)StringLiteral_23572/*"small"*/,
+    (Il2CppObject *)StringLiteral_23644/*"small"*/,
     24,
-    (const MethodInfo_346CAB0 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    (const MethodInfo_34B2C0C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
   System_Collections_Generic_Dictionary_object__int___Add(
     v3,
-    (Il2CppObject *)StringLiteral_21535/*"medium"*/,
+    (Il2CppObject *)StringLiteral_21603/*"medium"*/,
     30,
-    (const MethodInfo_346CAB0 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    (const MethodInfo_34B2C0C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
   System_Collections_Generic_Dictionary_object__int___Add(
     v3,
-    (Il2CppObject *)StringLiteral_21187/*"large"*/,
+    (Il2CppObject *)StringLiteral_21247/*"large"*/,
     48,
-    (const MethodInfo_346CAB0 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    (const MethodInfo_34B2C0C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
   System_Collections_Generic_Dictionary_object__int___Add(
     v3,
-    (Il2CppObject *)StringLiteral_24921/*"x-large"*/,
+    (Il2CppObject *)StringLiteral_25011/*"x-large"*/,
     64,
-    (const MethodInfo_346CAB0 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    (const MethodInfo_34B2C0C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
   this->fields.fontSizes = (struct System_Collections_Generic_Dictionary_string__int__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.fontSizes, (int32_t)v3, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.fontSizes, (int32_t)v3, v6, v7);
   v8 = StringLiteral_1/*""*/;
   this->fields.defaultColorTag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.defaultColorTag, v8, v9, v10);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultColorTag, v8, v9, v10);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
   this->fields.dispLabelList = (struct System_Collections_Generic_List_ScriptMessageLabel__o *)v11;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.dispLabelList, (int32_t)v11, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.dispLabelList, (int32_t)v11, v12, v13);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -148,13 +148,13 @@ void ScriptLineMessage__AddLabel(
   UnityEngine_Vector3_o v72; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v73; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C58CF6 & 1) == 0 )
+  if ( (byte_4CB8278 & 1) == 0 )
   {
-    sub_1C3E564(&char___TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScriptMessageLabel__Add__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_21259/*"line"*/);
-    byte_4C58CF6 = 1;
+    sub_1C6BA08(&char___TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScriptMessageLabel__Add__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_21323/*"line"*/);
+    byte_4CB8278 = 1;
   }
   Label = (__int64)ScriptLineMessage__FetchLabel(this, (const MethodInfo *)text);
   if ( !Label )
@@ -163,7 +163,7 @@ void ScriptLineMessage__AddLabel(
   *(_QWORD *)(Label + 112) = colorTag;
   v15 = Label + 112;
   *(_DWORD *)(v15 + 52) = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)v15, (int32_t)colorTag, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v15, (int32_t)colorTag, v12, v13);
   if ( !text )
     goto LABEL_64;
   if ( System_String__get_Chars(text, 0, 0) != 91 )
@@ -172,12 +172,12 @@ void ScriptLineMessage__AddLabel(
   {
     MainLabel = ScriptLineMessage__FetchMainLabel(this, v17);
     *(_QWORD *)(v14 + 16) = MainLabel;
-    sub_1C3E508((CGThumbnailListItem_o *)(v14 + 16), (int32_t)MainLabel, v19, v20);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 16), (int32_t)MainLabel, v19, v20);
     RubyLabel = ScriptLineMessage__FetchRubyLabel(this, v21);
     *(_QWORD *)(v14 + 24) = RubyLabel;
-    sub_1C3E508((CGThumbnailListItem_o *)(v14 + 24), (int32_t)RubyLabel, v23, v24);
-    v25 = System_String__Substring_63682392(text, 2, text->fields._stringLength - 3, 0);
-    Label = sub_1C3E60C(char___TypeInfo, 1);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 24), (int32_t)RubyLabel, v23, v24);
+    v25 = System_String__Substring_64012732(text, 2, text->fields._stringLength - 3, 0);
+    Label = sub_1C6BAB0(char___TypeInfo, 1);
     if ( !Label )
       goto LABEL_64;
     v11 = (const MethodInfo *)Label;
@@ -186,7 +186,7 @@ void ScriptLineMessage__AddLabel(
       *(_WORD *)(Label + 32) = 58;
       if ( !v25 )
         goto LABEL_64;
-      Label = (__int64)System_String__Split_63685544(v25, (System_Char_array *)Label, 0);
+      Label = (__int64)System_String__Split_64015884(v25, (System_Char_array *)Label, 0);
       if ( !Label )
         goto LABEL_64;
       v26 = Label;
@@ -233,7 +233,7 @@ void ScriptLineMessage__AddLabel(
       }
     }
 LABEL_65:
-    sub_1C3E7C8(Label, v11);
+    sub_1C6BC68(Label);
   }
   if ( System_String__get_Chars(text, 1, 0) != 94 )
   {
@@ -241,8 +241,8 @@ LABEL_65:
     {
       ImageSprite = ScriptLineMessage__FetchImageSprite(this, v16);
       *(_QWORD *)(v14 + 32) = ImageSprite;
-      sub_1C3E508((CGThumbnailListItem_o *)(v14 + 32), (int32_t)ImageSprite, v43, v44);
-      v45 = System_String__Substring_63682392(text, 2, text->fields._stringLength - 3, 0);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 32), (int32_t)ImageSprite, v43, v44);
+      v45 = System_String__Substring_64012732(text, 2, text->fields._stringLength - 3, 0);
       v46 = this->fields.fontSize;
       v47 = System_Int32__Parse(v45, 0);
       ScriptMessageLabel__UpdateLine(
@@ -251,14 +251,14 @@ LABEL_65:
         &this->fields.dispPosition,
         v46,
         v47,
-        (System_String_o *)StringLiteral_21259/*"line"*/,
+        (System_String_o *)StringLiteral_21323/*"line"*/,
         0);
       goto LABEL_27;
     }
 LABEL_26:
     v48 = ScriptLineMessage__FetchMainLabel(this, v16);
     *(_QWORD *)(v14 + 16) = v48;
-    sub_1C3E508((CGThumbnailListItem_o *)(v14 + 16), (int32_t)v48, v49, v50);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 16), (int32_t)v48, v49, v50);
     ScriptMessageLabel__UpdateLabel(
       (ScriptMessageLabel_o *)v14,
       (UILabel_o **)(v14 + 16),
@@ -273,9 +273,9 @@ LABEL_26:
   }
   v32 = ScriptLineMessage__FetchImageSprite(this, v31);
   *(_QWORD *)(v14 + 32) = v32;
-  sub_1C3E508((CGThumbnailListItem_o *)(v14 + 32), (int32_t)v32, v33, v34);
-  v35 = System_String__Substring_63682392(text, 2, text->fields._stringLength - 3, 0);
-  Label = sub_1C3E60C(char___TypeInfo, 1);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 32), (int32_t)v32, v33, v34);
+  v35 = System_String__Substring_64012732(text, 2, text->fields._stringLength - 3, 0);
+  Label = sub_1C6BAB0(char___TypeInfo, 1);
   if ( !Label )
     goto LABEL_64;
   v11 = (const MethodInfo *)Label;
@@ -284,7 +284,7 @@ LABEL_26:
   *(_WORD *)(Label + 32) = 32;
   if ( !v35 )
     goto LABEL_64;
-  Label = (__int64)System_String__Split_63685544(v35, (System_Char_array *)Label, 0);
+  Label = (__int64)System_String__Split_64015884(v35, (System_Char_array *)Label, 0);
   if ( !Label )
     goto LABEL_64;
   v36 = *(_DWORD *)(Label + 24);
@@ -294,7 +294,7 @@ LABEL_26:
   v38 = *(System_String_o **)(Label + 32);
   if ( v36 <= 1 )
   {
-    Label = sub_1C3E60C(char___TypeInfo, 1);
+    Label = sub_1C6BAB0(char___TypeInfo, 1);
     if ( !Label )
       goto LABEL_64;
     v11 = (const MethodInfo *)Label;
@@ -303,7 +303,7 @@ LABEL_26:
     *(_WORD *)(Label + 32) = 58;
     if ( !v38 )
       goto LABEL_64;
-    Label = (__int64)System_String__Split_63685544(v38, (System_Char_array *)Label, 0);
+    Label = (__int64)System_String__Split_64015884(v38, (System_Char_array *)Label, 0);
     if ( !Label )
       goto LABEL_64;
     v62 = *(_DWORD *)(Label + 24);
@@ -325,7 +325,7 @@ LABEL_26:
     {
       v64 = ScriptLineMessage__FetchRubyLabel(this, v11);
       *(_QWORD *)(v14 + 24) = v64;
-      sub_1C3E508((CGThumbnailListItem_o *)(v14 + 24), (int32_t)v64, v65, v66);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 24), (int32_t)v64, v65, v66);
       if ( *(_DWORD *)(v63 + 24) < 2u )
         goto LABEL_65;
       ScriptMessageLabel__UpdateImageRuby(
@@ -348,7 +348,7 @@ LABEL_26:
     v41 = v39;
     if ( v40 == 2 )
     {
-      ScriptMessageLabel__UpdateImage_44923804(
+      ScriptMessageLabel__UpdateImage_45118572(
         (ScriptMessageLabel_o *)v14,
         (UISprite_o **)(v14 + 32),
         &this->fields.dispPosition,
@@ -363,7 +363,7 @@ LABEL_26:
       if ( (unsigned int)v40 <= 2 )
         goto LABEL_65;
       v67 = *(System_String_o **)(v37 + 48);
-      Label = sub_1C3E60C(char___TypeInfo, 1);
+      Label = sub_1C6BAB0(char___TypeInfo, 1);
       if ( !Label )
         goto LABEL_64;
       v11 = (const MethodInfo *)Label;
@@ -372,7 +372,7 @@ LABEL_26:
       *(_WORD *)(Label + 32) = 44;
       if ( !v67 )
         goto LABEL_64;
-      Label = (__int64)System_String__Split_63685544(v67, (System_Char_array *)Label, 0);
+      Label = (__int64)System_String__Split_64015884(v67, (System_Char_array *)Label, 0);
       if ( !Label )
         goto LABEL_64;
       v68 = Label;
@@ -385,7 +385,7 @@ LABEL_26:
       v70 = System_Int32__Parse(*(System_String_o **)(v68 + 40), 0);
       v71.fields.x = (float)v69;
       v71.fields.y = (float)v70;
-      ScriptMessageLabel__UpdateImage_44923956(
+      ScriptMessageLabel__UpdateImage_45118724(
         (ScriptMessageLabel_o *)v14,
         (UISprite_o **)(v14 + 32),
         &this->fields.dispPosition,
@@ -412,10 +412,10 @@ LABEL_27:
     UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)Label, v72, 0);
     Label = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     v54 = (UnityEngine_Transform_o *)Label;
-    if ( !byte_4C506A6 )
+    if ( !byte_4CAFC0E )
     {
-      Label = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A6 = 1;
+      Label = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC0E = 1;
     }
     if ( !v54 )
       goto LABEL_64;
@@ -443,7 +443,7 @@ LABEL_27:
           }
         }
 LABEL_64:
-        sub_1C3E7C0(Label, v11);
+        sub_1C6BC60(Label, v11);
       }
     }
   }
@@ -462,14 +462,14 @@ LABEL_40:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)Label,
       (Il2CppObject *)v14,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v59[4] + 192LL) + 112LL));
   }
   else
   {
     v61 = v58 + 8 * v60;
     *(_DWORD *)(Label + 24) = v60 + 1;
     *(_QWORD *)(v61 + 32) = v14;
-    sub_1C3E508((CGThumbnailListItem_o *)(v61 + 32), v14, v52, v53);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v61 + 32), v14, v52, v53);
   }
 }
 
@@ -492,7 +492,7 @@ void ScriptLineMessage__ChangeMainPrefab(
   const MethodInfo *v3; // x3
 
   this->fields.mainPrefab = prefab;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mainPrefab, (int32_t)prefab, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mainPrefab, (int32_t)prefab, (int32_t)method, v3);
 }
 
 
@@ -504,7 +504,7 @@ void ScriptLineMessage__ChangeMessageRoot(
   const MethodInfo *v3; // x3
 
   this->fields.messageRoot = root;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.messageRoot, (int32_t)root, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.messageRoot, (int32_t)root, (int32_t)method, v3);
 }
 
 
@@ -516,7 +516,7 @@ void ScriptLineMessage__ChangeRubyPrefab(
   const MethodInfo *v3; // x3
 
   this->fields.rubyPrefab = prefab;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.rubyPrefab, (int32_t)prefab, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.rubyPrefab, (int32_t)prefab, (int32_t)method, v3);
 }
 
 
@@ -530,14 +530,14 @@ void ScriptLineMessage__ClearLabels(ScriptLineMessage_o *this, const MethodInfo 
   int v8; // w9
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C58CF0 & 1) == 0 )
+  if ( (byte_4CB8272 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScriptMessageLabel__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
-    byte_4C58CF0 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScriptMessageLabel__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
+    byte_4CB8272 = 1;
   }
   memset(&v9, 0, sizeof(v9));
   ScriptLineMessage__Init(this, method);
@@ -547,18 +547,18 @@ void ScriptLineMessage__ClearLabels(ScriptLineMessage_o *this, const MethodInfo 
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     dispLabelList,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v9,
-            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__) )
+            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__) )
     ScriptLineMessage__ReleaseLabel(this, (ScriptMessageLabel_o *)v9.fields._current, v5);
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v9,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
   v6 = this->fields.dispLabelList;
   if ( !v6 )
 LABEL_11:
-    sub_1C3E7C0(dispLabelList, v3);
+    sub_1C6BC60(dispLabelList, v3);
   size = v6->fields._size;
   v8 = v6->fields._version + 1;
   v6->fields._size = 0;
@@ -577,10 +577,10 @@ void ScriptLineMessage__ClearText(ScriptLineMessage_o *this, const MethodInfo *m
   const MethodInfo *v7; // x1
   UnityEngine_Transform_o *v8; // x20
 
-  if ( (byte_4C58CFB & 1) == 0 )
+  if ( (byte_4CB827D & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C58CFB = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB827D = 1;
   }
   ScriptLineMessage__ClearLabels(this, method);
   startPosition = this->fields.startPosition;
@@ -595,13 +595,13 @@ void ScriptLineMessage__ClearText(ScriptLineMessage_o *this, const MethodInfo *m
   if ( (v6 & 1) != 0 )
   {
     v8 = this->fields.messageOffset;
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
-      v6 = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A1 = 1;
+      v6 = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC09 = 1;
     }
     if ( !v8 )
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     UnityEngine_Transform__set_localPosition(v8, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   }
   ScriptLineMessage__SetDefaultState(this, v7);
@@ -617,16 +617,16 @@ void ScriptLineMessage__DeleteLabels(ScriptLineMessage_o *this, const MethodInfo
   UnityEngine_Object_o *v7; // x20
   UnityEngine_Object_o *v8; // x20
 
-  if ( (byte_4C58CEE & 1) == 0 )
+  if ( (byte_4CB8270 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UILabel__Pop__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UISprite__Pop__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UILabel__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UISprite__get_Count__);
-    byte_4C58CEE = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UILabel__Pop__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UISprite__Pop__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UILabel__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UISprite__get_Count__);
+    byte_4CB8270 = 1;
   }
   ScriptLineMessage__Init(this, method);
   ScriptLineMessage__ClearLabels(this, v3);
@@ -639,7 +639,7 @@ void ScriptLineMessage__DeleteLabels(ScriptLineMessage_o *this, const MethodInfo
     {
       labelStock = (System_Collections_Generic_Stack_T__o *)System_Collections_Generic_Stack_object___Pop(
                                                               labelStock,
-                                                              (const MethodInfo_3A15BE8 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
+                                                              (const MethodInfo_3A659F4 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
       if ( labelStock )
       {
         ScriptMessageLabel__Destroy((ScriptMessageLabel_o *)labelStock, 0);
@@ -656,7 +656,7 @@ void ScriptLineMessage__DeleteLabels(ScriptLineMessage_o *this, const MethodInfo
     {
       labelStock = (System_Collections_Generic_Stack_T__o *)System_Collections_Generic_Stack_object___Pop(
                                                               labelStock,
-                                                              (const MethodInfo_3A15BE8 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+                                                              (const MethodInfo_3A659F4 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
       if ( labelStock )
       {
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
@@ -664,7 +664,7 @@ void ScriptLineMessage__DeleteLabels(ScriptLineMessage_o *this, const MethodInfo
                                                0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_71341564(gameObject, 0);
+        UnityEngine_Object__Destroy_71659676(gameObject, 0);
         labelStock = (System_Collections_Generic_Stack_T__o *)this->fields.mainStock;
         if ( labelStock )
           continue;
@@ -680,29 +680,29 @@ void ScriptLineMessage__DeleteLabels(ScriptLineMessage_o *this, const MethodInfo
         break;
       labelStock = (System_Collections_Generic_Stack_T__o *)System_Collections_Generic_Stack_object___Pop(
                                                               labelStock,
-                                                              (const MethodInfo_3A15BE8 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+                                                              (const MethodInfo_3A659F4 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
       if ( !labelStock )
         goto LABEL_28;
       v7 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)labelStock, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564(v7, 0);
+      UnityEngine_Object__Destroy_71659676(v7, 0);
     }
     labelStock = (System_Collections_Generic_Stack_T__o *)this->fields.imageStock;
     if ( !labelStock )
 LABEL_28:
-      sub_1C3E7C0(labelStock, v4);
+      sub_1C6BC60(labelStock, v4);
     while ( labelStock->fields._size > 0 )
     {
       labelStock = (System_Collections_Generic_Stack_T__o *)System_Collections_Generic_Stack_object___Pop(
                                                               labelStock,
-                                                              (const MethodInfo_3A15BE8 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
+                                                              (const MethodInfo_3A659F4 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
       if ( labelStock )
       {
         v8 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)labelStock, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_71341564(v8, 0);
+        UnityEngine_Object__Destroy_71659676(v8, 0);
         labelStock = (System_Collections_Generic_Stack_T__o *)this->fields.imageStock;
         if ( labelStock )
           continue;
@@ -758,7 +758,7 @@ void ScriptLineMessage__Fadeout(ScriptLineMessage_o *this, float d, const Method
         return;
     }
 LABEL_8:
-    sub_1C3E7C0(messageRoot, method);
+    sub_1C6BC60(messageRoot, method);
   }
 }
 
@@ -778,15 +778,15 @@ UISprite_o *ScriptLineMessage__FetchImageSprite(ScriptLineMessage_o *this, const
   UnityEngine_Transform_o *v13; // x20
   UnityEngine_Transform_o *v14; // x20
 
-  if ( (byte_4C58CF3 & 1) == 0 )
+  if ( (byte_4CB8275 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UISprite__Pop__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UISprite__get_Count__);
-    byte_4C58CF3 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UISprite__Pop__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UISprite__get_Count__);
+    byte_4CB8275 = 1;
   }
   imageStock = (System_Collections_Generic_Stack_T__o *)this->fields.imageStock;
   if ( !imageStock || imageStock->fields._size < 1 )
@@ -796,13 +796,13 @@ UISprite_o *ScriptLineMessage__FetchImageSprite(ScriptLineMessage_o *this, const
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Component_object = (__int64)UnityEngine_Object__Instantiate_object_(
                                   imagePrefab,
-                                  (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                  (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( Component_object )
     {
       v8 = (UnityEngine_GameObject_o *)Component_object;
       Component_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)Component_object,
-                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                                    (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
       if ( Component_object )
       {
         v6 = (UnityEngine_Component_o *)Component_object;
@@ -823,9 +823,9 @@ UISprite_o *ScriptLineMessage__FetchImageSprite(ScriptLineMessage_o *this, const
               if ( v9 )
               {
                 UnityEngine_GameObject__set_layer(v9, Component_object, 0);
-                Component_object = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__51715312(
+                Component_object = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__51985744(
                                               v8,
-                                              (const MethodInfo_3151CF0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+                                              (const MethodInfo_3193D50 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
                 if ( Component_object )
                 {
                   v10 = *(_DWORD *)(Component_object + 24);
@@ -836,7 +836,7 @@ UISprite_o *ScriptLineMessage__FetchImageSprite(ScriptLineMessage_o *this, const
                   while ( 1 )
                   {
                     if ( v12 >= v10 )
-                      sub_1C3E7C8(Component_object, v5);
+                      sub_1C6BC68(Component_object);
                     Component_object = *(_QWORD *)(v11 + 8LL * (int)v12 + 32);
                     if ( !Component_object )
                       break;
@@ -856,31 +856,31 @@ UISprite_o *ScriptLineMessage__FetchImageSprite(ScriptLineMessage_o *this, const
       }
     }
 LABEL_28:
-    sub_1C3E7C0(Component_object, v5);
+    sub_1C6BC60(Component_object, v5);
   }
   Component_object = (__int64)System_Collections_Generic_Stack_object___Pop(
                                 imageStock,
-                                (const MethodInfo_3A15BE8 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
+                                (const MethodInfo_3A659F4 *)Method_System_Collections_Generic_Stack_UISprite__Pop__);
   v6 = (UnityEngine_Component_o *)Component_object;
 LABEL_20:
   if ( !v6 )
     goto LABEL_28;
   Component_object = (__int64)UnityEngine_Component__get_transform(v6, 0);
   v13 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    Component_object = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    Component_object = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   if ( !v13 )
     goto LABEL_28;
   UnityEngine_Transform__set_localPosition(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   Component_object = (__int64)UnityEngine_Component__get_transform(v6, 0);
   v14 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4C506A6 )
+  if ( !byte_4CAFC0E )
   {
-    Component_object = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A6 = 1;
+    Component_object = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC0E = 1;
   }
   if ( !v14 )
     goto LABEL_28;
@@ -894,19 +894,19 @@ ScriptMessageLabel_o *ScriptLineMessage__FetchLabel(ScriptLineMessage_o *this, c
   System_Collections_Generic_Stack_T__o *labelStock; // x0
   ScriptMessageLabel_o *v5; // x19
 
-  if ( (byte_4C58CF4 & 1) == 0 )
+  if ( (byte_4CB8276 & 1) == 0 )
   {
-    sub_1C3E564(&ScriptMessageLabel_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__get_Count__);
-    byte_4C58CF4 = 1;
+    sub_1C6BA08(&ScriptMessageLabel_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__get_Count__);
+    byte_4CB8276 = 1;
   }
   labelStock = (System_Collections_Generic_Stack_T__o *)this->fields.labelStock;
   if ( labelStock && labelStock->fields._size >= 1 )
     return (ScriptMessageLabel_o *)System_Collections_Generic_Stack_object___Pop(
                                      labelStock,
-                                     (const MethodInfo_3A15BE8 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
-  v5 = (ScriptMessageLabel_o *)sub_1C3E7B0(ScriptMessageLabel_TypeInfo);
+                                     (const MethodInfo_3A659F4 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Pop__);
+  v5 = (ScriptMessageLabel_o *)sub_1C6BC54(ScriptMessageLabel_TypeInfo);
   ScriptMessageLabel___ctor(v5, 0);
   return v5;
 }
@@ -927,15 +927,15 @@ UILabel_o *ScriptLineMessage__FetchMainLabel(ScriptLineMessage_o *this, const Me
   UnityEngine_Transform_o *v13; // x20
   UnityEngine_Transform_o *v14; // x20
 
-  if ( (byte_4C58CF1 & 1) == 0 )
+  if ( (byte_4CB8273 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UILabel__Pop__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UILabel__get_Count__);
-    byte_4C58CF1 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UILabel__Pop__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UILabel__get_Count__);
+    byte_4CB8273 = 1;
   }
   mainStock = (System_Collections_Generic_Stack_T__o *)this->fields.mainStock;
   if ( !mainStock || mainStock->fields._size < 1 )
@@ -945,13 +945,13 @@ UILabel_o *ScriptLineMessage__FetchMainLabel(ScriptLineMessage_o *this, const Me
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Component_object = (__int64)UnityEngine_Object__Instantiate_object_(
                                   mainPrefab,
-                                  (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                  (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( Component_object )
     {
       v8 = (UnityEngine_GameObject_o *)Component_object;
       Component_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)Component_object,
-                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                    (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( Component_object )
       {
         v6 = (UnityEngine_Component_o *)Component_object;
@@ -972,9 +972,9 @@ UILabel_o *ScriptLineMessage__FetchMainLabel(ScriptLineMessage_o *this, const Me
               if ( v9 )
               {
                 UnityEngine_GameObject__set_layer(v9, Component_object, 0);
-                Component_object = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__51715312(
+                Component_object = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__51985744(
                                               v8,
-                                              (const MethodInfo_3151CF0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+                                              (const MethodInfo_3193D50 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
                 if ( Component_object )
                 {
                   v10 = *(_DWORD *)(Component_object + 24);
@@ -985,7 +985,7 @@ UILabel_o *ScriptLineMessage__FetchMainLabel(ScriptLineMessage_o *this, const Me
                   while ( 1 )
                   {
                     if ( v12 >= v10 )
-                      sub_1C3E7C8(Component_object, v5);
+                      sub_1C6BC68(Component_object);
                     Component_object = *(_QWORD *)(v11 + 8LL * (int)v12 + 32);
                     if ( !Component_object )
                       break;
@@ -1005,31 +1005,31 @@ UILabel_o *ScriptLineMessage__FetchMainLabel(ScriptLineMessage_o *this, const Me
       }
     }
 LABEL_28:
-    sub_1C3E7C0(Component_object, v5);
+    sub_1C6BC60(Component_object, v5);
   }
   Component_object = (__int64)System_Collections_Generic_Stack_object___Pop(
                                 mainStock,
-                                (const MethodInfo_3A15BE8 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+                                (const MethodInfo_3A659F4 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
   v6 = (UnityEngine_Component_o *)Component_object;
 LABEL_20:
   if ( !v6 )
     goto LABEL_28;
   Component_object = (__int64)UnityEngine_Component__get_transform(v6, 0);
   v13 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    Component_object = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    Component_object = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   if ( !v13 )
     goto LABEL_28;
   UnityEngine_Transform__set_localPosition(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   Component_object = (__int64)UnityEngine_Component__get_transform(v6, 0);
   v14 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4C506A6 )
+  if ( !byte_4CAFC0E )
   {
-    Component_object = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A6 = 1;
+    Component_object = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC0E = 1;
   }
   if ( !v14 )
     goto LABEL_28;
@@ -1053,15 +1053,15 @@ UILabel_o *ScriptLineMessage__FetchRubyLabel(ScriptLineMessage_o *this, const Me
   UnityEngine_Transform_o *v13; // x21
   UnityEngine_Transform_o *v14; // x21
 
-  if ( (byte_4C58CF2 & 1) == 0 )
+  if ( (byte_4CB8274 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UILabel__Pop__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UILabel__get_Count__);
-    byte_4C58CF2 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UILabel__Pop__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UILabel__get_Count__);
+    byte_4CB8274 = 1;
   }
   rubyStock = (System_Collections_Generic_Stack_T__o *)this->fields.rubyStock;
   if ( !rubyStock || rubyStock->fields._size < 1 )
@@ -1071,13 +1071,13 @@ UILabel_o *ScriptLineMessage__FetchRubyLabel(ScriptLineMessage_o *this, const Me
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     Component_object = (__int64)UnityEngine_Object__Instantiate_object_(
                                   rubyPrefab,
-                                  (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                  (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( Component_object )
     {
       v8 = (UnityEngine_GameObject_o *)Component_object;
       Component_object = (__int64)UnityEngine_GameObject__GetComponent_object_(
                                     (UnityEngine_GameObject_o *)Component_object,
-                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                                    (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( Component_object )
       {
         v6 = (UnityEngine_Component_o *)Component_object;
@@ -1098,9 +1098,9 @@ UILabel_o *ScriptLineMessage__FetchRubyLabel(ScriptLineMessage_o *this, const Me
               if ( v9 )
               {
                 UnityEngine_GameObject__set_layer(v9, Component_object, 0);
-                Component_object = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__51715312(
+                Component_object = (__int64)UnityEngine_GameObject__GetComponentsInChildren_object__51985744(
                                               v8,
-                                              (const MethodInfo_3151CF0 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+                                              (const MethodInfo_3193D50 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
                 if ( Component_object )
                 {
                   v10 = *(_DWORD *)(Component_object + 24);
@@ -1111,7 +1111,7 @@ UILabel_o *ScriptLineMessage__FetchRubyLabel(ScriptLineMessage_o *this, const Me
                   while ( 1 )
                   {
                     if ( v12 >= v10 )
-                      sub_1C3E7C8(Component_object, v5);
+                      sub_1C6BC68(Component_object);
                     Component_object = *(_QWORD *)(v11 + 8LL * (int)v12 + 32);
                     if ( !Component_object )
                       break;
@@ -1131,31 +1131,31 @@ UILabel_o *ScriptLineMessage__FetchRubyLabel(ScriptLineMessage_o *this, const Me
       }
     }
 LABEL_28:
-    sub_1C3E7C0(Component_object, v5);
+    sub_1C6BC60(Component_object, v5);
   }
   Component_object = (__int64)System_Collections_Generic_Stack_object___Pop(
                                 rubyStock,
-                                (const MethodInfo_3A15BE8 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
+                                (const MethodInfo_3A659F4 *)Method_System_Collections_Generic_Stack_UILabel__Pop__);
   v6 = (UnityEngine_Component_o *)Component_object;
 LABEL_20:
   if ( !v6 )
     goto LABEL_28;
   Component_object = (__int64)UnityEngine_Component__get_transform(v6, 0);
   v13 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    Component_object = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    Component_object = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   if ( !v13 )
     goto LABEL_28;
   UnityEngine_Transform__set_localPosition(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   Component_object = (__int64)UnityEngine_Component__get_transform(v6, 0);
   v14 = (UnityEngine_Transform_o *)Component_object;
-  if ( !byte_4C506A6 )
+  if ( !byte_4CAFC0E )
   {
-    Component_object = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A6 = 1;
+    Component_object = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC0E = 1;
   }
   if ( !v14 )
     goto LABEL_28;
@@ -1182,17 +1182,17 @@ ScriptMessageLabel_array *ScriptLineMessage__GetDispLabelArray(ScriptLineMessage
 {
   System_Collections_Generic_List_object__o *dispLabelList; // x0
 
-  if ( (byte_4C58CEF & 1) == 0 )
+  if ( (byte_4CB8271 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScriptMessageLabel__ToArray__);
-    byte_4C58CEF = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScriptMessageLabel__ToArray__);
+    byte_4CB8271 = 1;
   }
   dispLabelList = (System_Collections_Generic_List_object__o *)this->fields.dispLabelList;
   if ( !dispLabelList )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   return (ScriptMessageLabel_array *)System_Collections_Generic_List_object___ToArray(
                                        dispLabelList,
-                                       (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_ScriptMessageLabel__ToArray__);
+                                       (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_ScriptMessageLabel__ToArray__);
 }
 
 
@@ -1216,15 +1216,15 @@ UnityEngine_Vector2_o ScriptLineMessage__GetPrintedSize(ScriptLineMessage_o *thi
 
 bool ScriptLineMessage__HasRubyFormat(System_String_o *text, const MethodInfo *method)
 {
-  if ( (byte_4C58CFC & 1) == 0 )
+  if ( (byte_4CB827E & 1) == 0 )
   {
-    sub_1C3E564(&System_Text_RegularExpressions_Regex_TypeInfo);
-    sub_1C3E564(&StringLiteral_16045/*"\\[#[^:]+:[^:]+\\]"*/);
-    byte_4C58CFC = 1;
+    sub_1C6BA08(&System_Text_RegularExpressions_Regex_TypeInfo);
+    sub_1C6BA08(&StringLiteral_16028/*"\\[#[^:]+:[^:]+\\]"*/);
+    byte_4CB827E = 1;
   }
   if ( !System_Text_RegularExpressions_Regex_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Text_RegularExpressions_Regex_TypeInfo);
-  return System_Text_RegularExpressions_Regex__IsMatch(text, (System_String_o *)StringLiteral_16045/*"\\[#[^:]+:[^:]+\\]"*/, 0);
+  return System_Text_RegularExpressions_Regex__IsMatch(text, (System_String_o *)StringLiteral_16028/*"\\[#[^:]+:[^:]+\\]"*/, 0);
 }
 
 
@@ -1262,22 +1262,22 @@ void ScriptLineMessage__Init(ScriptLineMessage_o *this, const MethodInfo *method
   float v32; // s0
   UnityEngine_Transform_o *v33; // x20
 
-  if ( (byte_4C58CED & 1) == 0 )
+  if ( (byte_4CB826F & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UILabel___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UISprite___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_ScriptMessageLabel___ctor__);
-    sub_1C3E564(&System_Collections_Generic_Stack_UILabel__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_Stack_UISprite__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_Stack_ScriptMessageLabel__TypeInfo);
-    sub_1C3E564(&StringLiteral_861/*"-"*/);
-    sub_1C3E564(&StringLiteral_25376/*"■"*/);
-    byte_4C58CED = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UILabel___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UISprite___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_ScriptMessageLabel___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_Stack_UILabel__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_Stack_UISprite__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_Stack_ScriptMessageLabel__TypeInfo);
+    sub_1C6BA08(&StringLiteral_858/*"-"*/);
+    sub_1C6BA08(&StringLiteral_25466/*"■"*/);
+    byte_4CB826F = 1;
   }
   if ( !this->fields.isInit )
   {
@@ -1285,50 +1285,50 @@ void ScriptLineMessage__Init(ScriptLineMessage_o *this, const MethodInfo *method
     this->fields.isInit = 1;
     if ( isRecycle )
     {
-      v4 = (System_Collections_Generic_Stack_T__o *)sub_1C3E7B0(System_Collections_Generic_Stack_UILabel__TypeInfo);
+      v4 = (System_Collections_Generic_Stack_T__o *)sub_1C6BC54(System_Collections_Generic_Stack_UILabel__TypeInfo);
       System_Collections_Generic_Stack_object____ctor(
         v4,
-        (const MethodInfo_3A15620 *)Method_System_Collections_Generic_Stack_UILabel___ctor__);
+        (const MethodInfo_3A6542C *)Method_System_Collections_Generic_Stack_UILabel___ctor__);
       this->fields.mainStock = (struct System_Collections_Generic_Stack_UILabel__o *)v4;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mainStock, (int32_t)v4, v5, v6);
-      v7 = (System_Collections_Generic_Stack_T__o *)sub_1C3E7B0(System_Collections_Generic_Stack_UILabel__TypeInfo);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mainStock, (int32_t)v4, v5, v6);
+      v7 = (System_Collections_Generic_Stack_T__o *)sub_1C6BC54(System_Collections_Generic_Stack_UILabel__TypeInfo);
       System_Collections_Generic_Stack_object____ctor(
         v7,
-        (const MethodInfo_3A15620 *)Method_System_Collections_Generic_Stack_UILabel___ctor__);
+        (const MethodInfo_3A6542C *)Method_System_Collections_Generic_Stack_UILabel___ctor__);
       this->fields.rubyStock = (struct System_Collections_Generic_Stack_UILabel__o *)v7;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.rubyStock, (int32_t)v7, v8, v9);
-      v10 = (System_Collections_Generic_Stack_T__o *)sub_1C3E7B0(System_Collections_Generic_Stack_UISprite__TypeInfo);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.rubyStock, (int32_t)v7, v8, v9);
+      v10 = (System_Collections_Generic_Stack_T__o *)sub_1C6BC54(System_Collections_Generic_Stack_UISprite__TypeInfo);
       System_Collections_Generic_Stack_object____ctor(
         v10,
-        (const MethodInfo_3A15620 *)Method_System_Collections_Generic_Stack_UISprite___ctor__);
+        (const MethodInfo_3A6542C *)Method_System_Collections_Generic_Stack_UISprite___ctor__);
       this->fields.imageStock = (struct System_Collections_Generic_Stack_UISprite__o *)v10;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.imageStock, (int32_t)v10, v11, v12);
-      v13 = (System_Collections_Generic_Stack_T__o *)sub_1C3E7B0(System_Collections_Generic_Stack_ScriptMessageLabel__TypeInfo);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.imageStock, (int32_t)v10, v11, v12);
+      v13 = (System_Collections_Generic_Stack_T__o *)sub_1C6BC54(System_Collections_Generic_Stack_ScriptMessageLabel__TypeInfo);
       System_Collections_Generic_Stack_object____ctor(
         v13,
-        (const MethodInfo_3A15620 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel___ctor__);
+        (const MethodInfo_3A6542C *)Method_System_Collections_Generic_Stack_ScriptMessageLabel___ctor__);
       this->fields.labelStock = (struct System_Collections_Generic_Stack_ScriptMessageLabel__o *)v13;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.labelStock, (int32_t)v13, v14, v15);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.labelStock, (int32_t)v13, v14, v15);
     }
     mainPrefab = (Il2CppObject *)this->fields.mainPrefab;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     fontSizes = (__int64)UnityEngine_Object__Instantiate_object_(
                            mainPrefab,
-                           (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                           (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !fontSizes )
       goto LABEL_37;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)fontSizes,
-                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
     fontSizes = (__int64)UnityEngine_Object__Instantiate_object_(
                            (Il2CppObject *)this->fields.rubyPrefab,
-                           (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                           (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !fontSizes )
       goto LABEL_37;
     v20 = UnityEngine_GameObject__GetComponent_object_(
             (UnityEngine_GameObject_o *)fontSizes,
-            (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
     defaultFontSize = this->fields.defaultFontSize;
     v22 = (UILabel_o *)v20;
     if ( defaultFontSize >= 1 )
@@ -1338,16 +1338,16 @@ void ScriptLineMessage__Init(ScriptLineMessage_o *this, const MethodInfo *method
         goto LABEL_37;
       System_Collections_Generic_Dictionary_object__int___set_Item(
         (System_Collections_Generic_Dictionary_object__int__o *)fontSizes,
-        (Il2CppObject *)StringLiteral_861/*"-"*/,
+        (Il2CppObject *)StringLiteral_858/*"-"*/,
         defaultFontSize,
-        (const MethodInfo_346CA9C *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
+        (const MethodInfo_34B2BF8 *)Method_System_Collections_Generic_Dictionary_string__int__set_Item__);
     }
     fontSizes = (__int64)this->fields.fontSizes;
     if ( !fontSizes
       || ((fontSizes = System_Collections_Generic_Dictionary_object__int___get_Item(
                          (System_Collections_Generic_Dictionary_object__int__o *)fontSizes,
-                         (Il2CppObject *)StringLiteral_861/*"-"*/,
-                         (const MethodInfo_346CA30 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__),
+                         (Il2CppObject *)StringLiteral_858/*"-"*/,
+                         (const MethodInfo_34B2B8C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__),
            v23 = this->fields.fontScale * (float)(int)fontSizes,
            v23 != INFINITY)
         ? (v18 = (unsigned int)(int)v23)
@@ -1356,10 +1356,10 @@ void ScriptLineMessage__Init(ScriptLineMessage_o *this, const MethodInfo *method
           !Component_object) )
     {
 LABEL_37:
-      sub_1C3E7C0(fontSizes, v18);
+      sub_1C6BC60(fontSizes, v18);
     }
     UILabel__set_fontSize((UILabel_o *)Component_object, v18, 0);
-    UILabel__set_text((UILabel_o *)Component_object, (System_String_o *)StringLiteral_25376/*"■"*/, 0);
+    UILabel__set_text((UILabel_o *)Component_object, (System_String_o *)StringLiteral_25466/*"■"*/, 0);
     fontSizes = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Component_object->klass->vtable[22].methodPtr)(
                   Component_object,
                   Component_object->klass->vtable[22].method);
@@ -1388,7 +1388,7 @@ LABEL_37:
         goto LABEL_37;
     }
     UILabel__set_fontSize(v22, v18, 0);
-    UILabel__set_text(v22, (System_String_o *)StringLiteral_25376/*"■"*/, 0);
+    UILabel__set_text(v22, (System_String_o *)StringLiteral_25466/*"■"*/, 0);
     ((void (__fastcall *)(UILabel_o *, const MethodInfo *))v22->klass->vtable._22_get_localSize.methodPtr)(
       v22,
       v22->klass->vtable._22_get_localSize.method);
@@ -1398,9 +1398,9 @@ LABEL_37:
                                            0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71341564(gameObject, 0);
+    UnityEngine_Object__Destroy_71659676(gameObject, 0);
     v30 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v22, 0);
-    UnityEngine_Object__Destroy_71341564(v30, 0);
+    UnityEngine_Object__Destroy_71659676(v30, 0);
     messageOffset = (UnityEngine_Object_o *)this->fields.messageOffset;
     v32 = -this->fields.rubyLineHeight;
     this->fields.startPosition.fields.x = 0.0;
@@ -1409,10 +1409,10 @@ LABEL_37:
     if ( (fontSizes & 1) != 0 )
     {
       v33 = this->fields.messageOffset;
-      if ( !byte_4C506A1 )
+      if ( !byte_4CAFC09 )
       {
-        fontSizes = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-        byte_4C506A1 = 1;
+        fontSizes = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+        byte_4CAFC09 = 1;
       }
       if ( !v33 )
         goto LABEL_37;
@@ -1463,14 +1463,14 @@ void ScriptLineMessage__ReleaseLabel(ScriptLineMessage_o *this, ScriptMessageLab
 
   v3 = label;
   v4 = this;
-  if ( (byte_4C58CF5 & 1) == 0 )
+  if ( (byte_4CB8277 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Push__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UILabel__Push__);
-    sub_1C3E564(&Method_System_Collections_Generic_Stack_UISprite__Push__);
-    this = (ScriptLineMessage_o *)sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58CF5 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_ScriptMessageLabel__Push__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UILabel__Push__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Stack_UISprite__Push__);
+    this = (ScriptLineMessage_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB8277 = 1;
   }
   if ( !v3 )
     goto LABEL_40;
@@ -1491,7 +1491,7 @@ void ScriptLineMessage__ReleaseLabel(ScriptLineMessage_o *this, ScriptMessageLab
       System_Collections_Generic_Stack_object___Push(
         (System_Collections_Generic_Stack_T__o *)this,
         (Il2CppObject *)label,
-        (const MethodInfo_3A15C48 *)Method_System_Collections_Generic_Stack_UILabel__Push__);
+        (const MethodInfo_3A65A54 *)Method_System_Collections_Generic_Stack_UILabel__Push__);
     }
     else
     {
@@ -1502,10 +1502,10 @@ void ScriptLineMessage__ReleaseLabel(ScriptLineMessage_o *this, ScriptMessageLab
                                              0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564(gameObject, 0);
+      UnityEngine_Object__Destroy_71659676(gameObject, 0);
     }
     *p_fields = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v3->fields, 0, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v3->fields, 0, v7, v8);
   }
   p_ruby = (ScriptLineMessage_o **)&v3->fields.ruby;
   ruby = (UnityEngine_Object_o *)v3->fields.ruby;
@@ -1524,7 +1524,7 @@ void ScriptLineMessage__ReleaseLabel(ScriptLineMessage_o *this, ScriptMessageLab
       System_Collections_Generic_Stack_object___Push(
         (System_Collections_Generic_Stack_T__o *)this,
         (Il2CppObject *)label,
-        (const MethodInfo_3A15C48 *)Method_System_Collections_Generic_Stack_UILabel__Push__);
+        (const MethodInfo_3A65A54 *)Method_System_Collections_Generic_Stack_UILabel__Push__);
     }
     else
     {
@@ -1533,10 +1533,10 @@ void ScriptLineMessage__ReleaseLabel(ScriptLineMessage_o *this, ScriptMessageLab
       v14 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)*p_ruby, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564(v14, 0);
+      UnityEngine_Object__Destroy_71659676(v14, 0);
     }
     *p_ruby = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v3->fields.ruby, 0, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v3->fields.ruby, 0, v12, v13);
   }
   p_image = (ScriptLineMessage_o **)&v3->fields.image;
   image = (UnityEngine_Object_o *)v3->fields.image;
@@ -1558,10 +1558,10 @@ void ScriptLineMessage__ReleaseLabel(ScriptLineMessage_o *this, ScriptMessageLab
         System_Collections_Generic_Stack_object___Push(
           (System_Collections_Generic_Stack_T__o *)this,
           (Il2CppObject *)label,
-          (const MethodInfo_3A15C48 *)Method_System_Collections_Generic_Stack_UISprite__Push__);
+          (const MethodInfo_3A65A54 *)Method_System_Collections_Generic_Stack_UISprite__Push__);
 LABEL_36:
         *p_image = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&v3->fields.image, 0, v17, v18);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v3->fields.image, 0, v17, v18);
         goto LABEL_37;
       }
       if ( label )
@@ -1569,12 +1569,12 @@ LABEL_36:
         v19 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)*p_image, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_71341564(v19, 0);
+        UnityEngine_Object__Destroy_71659676(v19, 0);
         goto LABEL_36;
       }
     }
 LABEL_40:
-    sub_1C3E7C0(this, label);
+    sub_1C6BC60(this, label);
   }
 LABEL_37:
   ScriptMessageLabel__Release(v3, 0);
@@ -1583,7 +1583,7 @@ LABEL_37:
     System_Collections_Generic_Stack_object___Push(
       labelStock,
       (Il2CppObject *)v3,
-      (const MethodInfo_3A15C48 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Push__);
+      (const MethodInfo_3A65A54 *)Method_System_Collections_Generic_Stack_ScriptMessageLabel__Push__);
 }
 
 
@@ -1598,10 +1598,10 @@ void ScriptLineMessage__ReturnText(ScriptLineMessage_o *this, const MethodInfo *
   float v9; // s0
   int32_t v10; // w1
 
-  if ( (byte_4C58CF9 & 1) == 0 )
+  if ( (byte_4CB827B & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58CF9 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB827B = 1;
   }
   x = this->fields.dispPosition.fields.x;
   if ( this->fields.maxDispPosition.fields.x < x )
@@ -1617,7 +1617,7 @@ void ScriptLineMessage__ReturnText(ScriptLineMessage_o *this, const MethodInfo *
   this->fields.beforeTextOnlyLineHeight = v7;
   v10 = StringLiteral_1/*""*/;
   this->fields.defaultColorTag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.defaultColorTag, v10, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultColorTag, v10, v2, v3);
   this->fields.maxDispPosition.fields.y = this->fields.dispPosition.fields.y - this->fields.textOnlyLineHeight;
 }
 
@@ -1627,7 +1627,7 @@ void ScriptLineMessage__SetBetweenLineHeight(ScriptLineMessage_o *this, float he
   if ( height >= 0.0 )
   {
     if ( !this )
-      sub_1C3E7C0(0, method);
+      sub_1C6BC60(0, method);
   }
   else
   {
@@ -1646,10 +1646,10 @@ void ScriptLineMessage__SetDefaultState(ScriptLineMessage_o *this, const MethodI
   int32_t defaultFontSize; // w8
   int32_t v8; // w1
 
-  if ( (byte_4C58CF8 & 1) == 0 )
+  if ( (byte_4CB827A & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58CF8 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB827A = 1;
   }
   rubyLineHeight = this->fields.rubyLineHeight;
   defaultTextOnlyLineHeight = this->fields.defaultTextOnlyLineHeight;
@@ -1660,7 +1660,7 @@ void ScriptLineMessage__SetDefaultState(ScriptLineMessage_o *this, const MethodI
   this->fields.beforeTextOnlyLineHeight = defaultTextOnlyLineHeight + rubyLineHeight;
   v8 = StringLiteral_1/*""*/;
   this->fields.defaultColorTag = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.defaultColorTag, v8, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultColorTag, v8, v2, v3);
 }
 
 
@@ -1674,18 +1674,18 @@ void ScriptLineMessage__SetFontSize(ScriptLineMessage_o *this, System_String_o *
   float v10; // s0
   float y; // s1
 
-  if ( (byte_4C58CFA & 1) == 0 )
+  if ( (byte_4CB827C & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    byte_4C58CFA = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    byte_4CB827C = 1;
   }
   fontSizes = this->fields.fontSizes;
   if ( !fontSizes )
-    sub_1C3E7C0(0, sizeName);
+    sub_1C6BC60(0, sizeName);
   Item = System_Collections_Generic_Dictionary_object__int___get_Item(
            (System_Collections_Generic_Dictionary_object__int__o *)fontSizes,
            (Il2CppObject *)sizeName,
-           (const MethodInfo_346CA30 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+           (const MethodInfo_34B2B8C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
   textOnlyLineHeight = this->fields.textOnlyLineHeight;
   v8 = this->fields.fontScale * (float)Item;
   v9 = (int)v8;
@@ -1791,60 +1791,60 @@ void ScriptLineMessage__UpdateLabels(
   ScriptLineMessage_ProcAddLabel2_o *v72; // [xsp+0h] [xbp-80h]
   System_String_o *text; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4C58CF7 & 1) == 0 )
+  if ( (byte_4CB8279 & 1) == 0 )
   {
-    sub_1C3E564(&ScriptLineMessage_ProcAddLabel2_TypeInfo);
-    sub_1C3E564(&ScriptLineMessage_ProcAddLabel_TypeInfo);
-    sub_1C3E564(&ScriptMessageLabel_TypeInfo);
-    sub_1C3E564(&ScriptReplaceString_TypeInfo);
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&Method_ScriptLineMessage___c__DisplayClass55_0__UpdateLabels_b__0__);
-    sub_1C3E564(&Method_ScriptLineMessage___c__DisplayClass55_0__UpdateLabels_b__1__);
-    sub_1C3E564(&ScriptLineMessage___c__DisplayClass55_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_23303/*"servantName"*/);
-    sub_1C3E564(&StringLiteral_15833/*"[-]"*/);
-    sub_1C3E564(&StringLiteral_20109/*"i"*/);
-    sub_1C3E564(&StringLiteral_16033/*"[~1]"*/);
-    sub_1C3E564(&StringLiteral_15968/*"[^"*/);
-    sub_1C3E564(&StringLiteral_22938/*"r"*/);
-    sub_1C3E564(&StringLiteral_21259/*"line"*/);
-    sub_1C3E564(&StringLiteral_20303/*"image"*/);
-    sub_1C3E564(&StringLiteral_15814/*"["*/);
-    sub_1C3E564(&StringLiteral_16032/*"[~"*/);
-    sub_1C3E564(&StringLiteral_16068/*"]"*/);
-    byte_4C58CF7 = 1;
+    sub_1C6BA08(&ScriptLineMessage_ProcAddLabel2_TypeInfo);
+    sub_1C6BA08(&ScriptLineMessage_ProcAddLabel_TypeInfo);
+    sub_1C6BA08(&ScriptMessageLabel_TypeInfo);
+    sub_1C6BA08(&ScriptReplaceString_TypeInfo);
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&Method_ScriptLineMessage___c__DisplayClass55_0__UpdateLabels_b__0__);
+    sub_1C6BA08(&Method_ScriptLineMessage___c__DisplayClass55_0__UpdateLabels_b__1__);
+    sub_1C6BA08(&ScriptLineMessage___c__DisplayClass55_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_23387/*"servantName"*/);
+    sub_1C6BA08(&StringLiteral_15820/*"[-]"*/);
+    sub_1C6BA08(&StringLiteral_20155/*"i"*/);
+    sub_1C6BA08(&StringLiteral_16016/*"[~1]"*/);
+    sub_1C6BA08(&StringLiteral_15951/*"[^"*/);
+    sub_1C6BA08(&StringLiteral_23012/*"r"*/);
+    sub_1C6BA08(&StringLiteral_21323/*"line"*/);
+    sub_1C6BA08(&StringLiteral_20350/*"image"*/);
+    sub_1C6BA08(&StringLiteral_15801/*"["*/);
+    sub_1C6BA08(&StringLiteral_16015/*"[~"*/);
+    sub_1C6BA08(&StringLiteral_16051/*"]"*/);
+    byte_4CB8279 = 1;
   }
   text = 0;
-  v12 = sub_1C3E7B0(ScriptLineMessage___c__DisplayClass55_0_TypeInfo);
+  v12 = sub_1C6BC54(ScriptLineMessage___c__DisplayClass55_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0);
   if ( !v12 )
     goto LABEL_89;
   *(_QWORD *)(v12 + 24) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v12 + 24), (int32_t)this, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 24), (int32_t)this, v15, v16);
   *(_BYTE *)(v12 + 32) = isFoward;
   *(_QWORD *)(v12 + 40) = font;
-  sub_1C3E508((CGThumbnailListItem_o *)(v12 + 40), (int32_t)font, v17, v18);
-  v19 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 40), (int32_t)font, v17, v18);
+  v19 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v19, 0);
   *(_QWORD *)(v12 + 16) = v19;
   v20 = (System_Text_StringBuilder_o **)(v12 + 16);
-  sub_1C3E508((CGThumbnailListItem_o *)(v12 + 16), (int32_t)v19, v21, v22);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 16), (int32_t)v19, v21, v22);
   if ( enforceColor )
   {
     this->fields.defaultColorTag = enforceColor;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.defaultColorTag, (int32_t)enforceColor, v23, v24);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultColorTag, (int32_t)enforceColor, v23, v24);
   }
   p_defaultColorTag = &this->fields.defaultColorTag;
   defaultColorTag = this->fields.defaultColorTag;
   *(_QWORD *)(v12 + 48) = defaultColorTag;
-  sub_1C3E508((CGThumbnailListItem_o *)(v12 + 48), (int32_t)defaultColorTag, v23, v24);
-  v27 = sub_1C3E7B0(ScriptLineMessage_ProcAddLabel_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 48), (int32_t)defaultColorTag, v23, v24);
+  v27 = sub_1C6BC54(ScriptLineMessage_ProcAddLabel_TypeInfo);
   ScriptLineMessage_ProcAddLabel___ctor(
     (ScriptLineMessage_ProcAddLabel_o *)v27,
     (Il2CppObject *)v12,
     Method_ScriptLineMessage___c__DisplayClass55_0__UpdateLabels_b__0__,
     v28);
-  v72 = (ScriptLineMessage_ProcAddLabel2_o *)sub_1C3E7B0(ScriptLineMessage_ProcAddLabel2_TypeInfo);
+  v72 = (ScriptLineMessage_ProcAddLabel2_o *)sub_1C6BC54(ScriptLineMessage_ProcAddLabel2_TypeInfo);
   ScriptLineMessage_ProcAddLabel2___ctor(
     v72,
     (Il2CppObject *)v12,
@@ -1864,7 +1864,7 @@ void ScriptLineMessage__UpdateLabels(
       Chars = System_String__get_Chars(txt, v30, 0);
       if ( !v43 )
         goto LABEL_89;
-      System_Text_StringBuilder__Append_63723860(v43, Chars, 0);
+      System_Text_StringBuilder__Append_64053080(v43, Chars, 0);
       v34 = v30;
       goto LABEL_42;
     }
@@ -1877,9 +1877,9 @@ void ScriptLineMessage__UpdateLabels(
       Chars = (__int64)*v20;
       if ( !*v20 )
         goto LABEL_89;
-      Chars = (__int64)System_Text_StringBuilder__Append_63721532(
+      Chars = (__int64)System_Text_StringBuilder__Append_64050752(
                          (System_Text_StringBuilder_o *)Chars,
-                         (System_String_o *)StringLiteral_15814/*"["*/,
+                         (System_String_o *)StringLiteral_15801/*"["*/,
                          0);
       goto LABEL_43;
     }
@@ -1890,7 +1890,7 @@ void ScriptLineMessage__UpdateLabels(
       if ( !v27 )
         goto LABEL_89;
       (*(void (__fastcall **)(_QWORD, _QWORD))(v27 + 24))(*(_QWORD *)(v27 + 64), *(_QWORD *)(v27 + 40));
-      v35 = System_String__Substring_63682392(txt, v30 + 2, v31 + v34 - 2, 0);
+      v35 = System_String__Substring_64012732(txt, v30 + 2, v31 + v34 - 2, 0);
       v36 = System_Int32__Parse(v35, 0);
       if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ScriptReplaceString_TypeInfo);
@@ -1905,13 +1905,13 @@ void ScriptLineMessage__UpdateLabels(
       }
       else
       {
-        TagSplitString = System_String__Concat_63636468(String, (System_String_o *)StringLiteral_15833/*"[-]"*/, 0);
+        TagSplitString = System_String__Concat_63966792(String, (System_String_o *)StringLiteral_15820/*"[-]"*/, 0);
       }
 LABEL_39:
       v46 = *(struct System_String_o **)(v12 + 48);
       v47 = TagSplitString;
       this->fields.defaultColorTag = v46;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.defaultColorTag, (int32_t)v46, v41, v42);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultColorTag, (int32_t)v46, v41, v42);
       v49 = *(_BYTE *)(v12 + 32);
       v50 = *(UnityEngine_Font_o **)(v12 + 40);
       v51 = this;
@@ -1921,7 +1921,7 @@ LABEL_40:
       v55 = this->fields.defaultColorTag;
       *(_QWORD *)(v12 + 48) = v55;
 LABEL_41:
-      sub_1C3E508((CGThumbnailListItem_o *)(v12 + 48), (int32_t)v55, v53, v54);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 48), (int32_t)v55, v53, v54);
       goto LABEL_42;
     }
     Chars = System_String__get_Chars(txt, v32, 0);
@@ -1932,10 +1932,10 @@ LABEL_41:
       (*(void (__fastcall **)(_QWORD, _QWORD))(v27 + 24))(*(_QWORD *)(v27 + 64), *(_QWORD *)(v27 + 40));
       if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ScriptReplaceString_TypeInfo);
-      if ( !byte_4C58A5F )
+      if ( !byte_4CB7FC4 )
       {
-        sub_1C3E564(&ScriptReplaceString_TypeInfo);
-        byte_4C58A5F = 1;
+        sub_1C6BA08(&ScriptReplaceString_TypeInfo);
+        byte_4CB7FC4 = 1;
       }
       v44 = ScriptReplaceString_TypeInfo;
       if ( !ScriptReplaceString_TypeInfo->_2.cctor_finished )
@@ -1955,7 +1955,7 @@ LABEL_41:
       if ( !v27 )
         goto LABEL_89;
       (*(void (__fastcall **)(_QWORD, _QWORD))(v27 + 24))(*(_QWORD *)(v27 + 64), *(_QWORD *)(v27 + 40));
-      Chars = (__int64)System_String__Substring_63682392(txt, v30, v31 + v34 + 1, 0);
+      Chars = (__int64)System_String__Substring_64012732(txt, v30, v31 + v34 + 1, 0);
       goto LABEL_60;
     }
     if ( System_String__get_Chars(txt, v32, 0) != 61 )
@@ -1979,7 +1979,7 @@ LABEL_43:
   if ( !Chars )
     goto LABEL_89;
   v56 = (System_String_o *)Chars;
-  Chars = System_String__Equals_63671772((System_String_o *)Chars, (System_String_o *)StringLiteral_20303/*"image"*/, 0);
+  Chars = System_String__Equals_64002112((System_String_o *)Chars, (System_String_o *)StringLiteral_20350/*"image"*/, 0);
   if ( (Chars & 1) != 0 )
   {
     if ( !v27 )
@@ -1989,7 +1989,7 @@ LABEL_43:
     v58 = v31 + v34 - 7;
     goto LABEL_58;
   }
-  Chars = System_String__Equals_63671772(v56, (System_String_o *)StringLiteral_20109/*"i"*/, 0);
+  Chars = System_String__Equals_64002112(v56, (System_String_o *)StringLiteral_20155/*"i"*/, 0);
   if ( (Chars & 1) != 0 )
   {
     if ( !v27 )
@@ -1998,11 +1998,11 @@ LABEL_43:
     v57 = v30 + 3;
     v58 = v31 + v34 - 3;
 LABEL_58:
-    v14 = System_String__Substring_63682392(txt, v57, v58, 0);
-    v59 = (System_String_o *)StringLiteral_15968/*"[^"*/;
-    v60 = (System_String_o *)StringLiteral_16068/*"]"*/;
+    v14 = System_String__Substring_64012732(txt, v57, v58, 0);
+    v59 = (System_String_o *)StringLiteral_15951/*"[^"*/;
+    v60 = (System_String_o *)StringLiteral_16051/*"]"*/;
 LABEL_59:
-    Chars = (__int64)System_String__Concat_63674716(v59, v14, v60, 0);
+    Chars = (__int64)System_String__Concat_64005056(v59, v14, v60, 0);
 LABEL_60:
     v61 = v72;
     if ( !v72 )
@@ -2015,7 +2015,7 @@ LABEL_62:
       v61->fields.method);
     goto LABEL_42;
   }
-  Chars = System_String__Equals_63671772(v56, (System_String_o *)StringLiteral_22938/*"r"*/, 0);
+  Chars = System_String__Equals_64002112(v56, (System_String_o *)StringLiteral_23012/*"r"*/, 0);
   if ( (Chars & 1) != 0 )
   {
     if ( !v27 )
@@ -2025,26 +2025,26 @@ LABEL_62:
     if ( enforceColor )
     {
       *p_defaultColorTag = enforceColor;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.defaultColorTag, (int32_t)enforceColor, v53, v54);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultColorTag, (int32_t)enforceColor, v53, v54);
     }
     v55 = *p_defaultColorTag;
     *(_QWORD *)(v12 + 48) = *p_defaultColorTag;
     goto LABEL_41;
   }
-  Chars = System_String__Equals_63671772(v56, (System_String_o *)StringLiteral_23303/*"servantName"*/, 0);
+  Chars = System_String__Equals_64002112(v56, (System_String_o *)StringLiteral_23387/*"servantName"*/, 0);
   if ( (Chars & 1) != 0 )
   {
     if ( !v27 )
       goto LABEL_89;
     (*(void (__fastcall **)(_QWORD, _QWORD))(v27 + 24))(*(_QWORD *)(v27 + 64), *(_QWORD *)(v27 + 40));
-    v64 = System_String__Substring_63682392(txt, v30 + 12, v31 + v34 - 12, 0);
+    v64 = System_String__Substring_64012732(txt, v30 + 12, v31 + v34 - 12, 0);
     if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptMessageLabel_TypeInfo);
     v65 = ScriptMessageLabel__AnalysTagParam(v64, 0, 0);
     v66 = *(struct System_String_o **)(v12 + 48);
     v67 = v65;
     this->fields.defaultColorTag = v66;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.defaultColorTag, (int32_t)v66, v68, v69);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultColorTag, (int32_t)v66, v68, v69);
     v70 = ScriptMessageLabel__GetServantChangeName(v67, 0);
     v49 = *(_BYTE *)(v12 + 32);
     v50 = *(UnityEngine_Font_o **)(v12 + 40);
@@ -2052,49 +2052,49 @@ LABEL_62:
     v51 = this;
     goto LABEL_40;
   }
-  Chars = System_String__StartsWith(v56, (System_String_o *)StringLiteral_21259/*"line"*/, 0);
+  Chars = System_String__StartsWith(v56, (System_String_o *)StringLiteral_21323/*"line"*/, 0);
   if ( (Chars & 1) != 0 )
   {
     if ( !v27 )
       goto LABEL_89;
     (*(void (__fastcall **)(_QWORD, _QWORD))(v27 + 24))(*(_QWORD *)(v27 + 64), *(_QWORD *)(v27 + 40));
-    Chars = (__int64)System_String__Substring_63682392(txt, v30 + 5, v31 + v34 - 5, 0);
+    Chars = (__int64)System_String__Substring_64012732(txt, v30 + 5, v31 + v34 - 5, 0);
     if ( !Chars )
       goto LABEL_89;
     v14 = (System_String_o *)Chars;
     if ( *(int *)(Chars + 16) >= 1 )
     {
-      v59 = (System_String_o *)StringLiteral_16032/*"[~"*/;
-      v60 = (System_String_o *)StringLiteral_16068/*"]"*/;
+      v59 = (System_String_o *)StringLiteral_16015/*"[~"*/;
+      v60 = (System_String_o *)StringLiteral_16051/*"]"*/;
       goto LABEL_59;
     }
     v61 = v72;
     if ( !v72 )
       goto LABEL_89;
-    v62 = StringLiteral_16033/*"[~1]"*/;
+    v62 = StringLiteral_16016/*"[~1]"*/;
     goto LABEL_62;
   }
   if ( v34 < txt->fields._stringLength )
   {
-    text = System_String__Substring_63682392(txt, v30, v31 + v34 + 1, 0);
+    text = System_String__Substring_64012732(txt, v30, v31 + v34 + 1, 0);
     if ( !ScriptMessageLabel_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptMessageLabel_TypeInfo);
     ScriptMessageLabel__EnforceColorTag((System_String_o **)(v12 + 48), &text, enforceColor, 0);
     Chars = (__int64)*v20;
     if ( !*v20 )
       goto LABEL_89;
-    System_Text_StringBuilder__Append_63721532((System_Text_StringBuilder_o *)Chars, text, 0);
+    System_Text_StringBuilder__Append_64050752((System_Text_StringBuilder_o *)Chars, text, 0);
     goto LABEL_42;
   }
   v71 = *v20;
   Chars = (__int64)System_String__Substring(txt, v30, 0);
   if ( !v71 )
     goto LABEL_89;
-  Chars = (__int64)System_Text_StringBuilder__Append_63721532(v71, (System_String_o *)Chars, 0);
+  Chars = (__int64)System_Text_StringBuilder__Append_64050752(v71, (System_String_o *)Chars, 0);
 LABEL_87:
   if ( !v27 )
 LABEL_89:
-    sub_1C3E7C0(Chars, v14);
+    sub_1C6BC60(Chars, v14);
   (*(void (__fastcall **)(_QWORD, _QWORD))(v27 + 24))(*(_QWORD *)(v27 + 64), *(_QWORD *)(v27 + 40));
 }
 
@@ -2154,15 +2154,15 @@ void ScriptLineMessage_ProcAddLabel___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -2174,9 +2174,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A844F4;
+  this->fields.invoke_impl = (intptr_t)sub_1AA36F0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A844B4;
+  this->fields.extra_arg = (intptr_t)sub_1AA36B0;
 }
 
 
@@ -2189,7 +2189,7 @@ System_IAsyncResult_o *ScriptLineMessage_ProcAddLabel__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C3E518(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v5, callback, object);
 }
 
 
@@ -2198,7 +2198,7 @@ void ScriptLineMessage_ProcAddLabel__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 
@@ -2224,14 +2224,14 @@ void ScriptLineMessage_ProcAddLabel2___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) != 0 )
+  if ( (sub_1C6BAC8(method) & 1) != 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A84570;
+      v9 = sub_1AA376C;
 LABEL_8:
       this->fields.invoke_impl = (intptr_t)v9;
       goto LABEL_9;
@@ -2241,20 +2241,20 @@ LABEL_8:
   {
     if ( !v8 )
     {
-      v9 = sub_1A84550;
+      v9 = sub_1AA374C;
       goto LABEL_8;
     }
     if ( !object )
     {
-      v11 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v11, 0);
+      v11 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v11, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A84508;
+  this->fields.extra_arg = (intptr_t)sub_1AA3704;
 }
 
 
@@ -2268,7 +2268,7 @@ System_IAsyncResult_o *ScriptLineMessage_ProcAddLabel2__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = txt;
-  return (System_IAsyncResult_o *)sub_1C3E518(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v6, callback, object);
 }
 
 
@@ -2277,7 +2277,7 @@ void ScriptLineMessage_ProcAddLabel2__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 
@@ -2336,7 +2336,7 @@ void ScriptLineMessage___c__DisplayClass55_0___UpdateLabels_b__0(
         (tmpTxt = (char *)this->fields.tmpTxt) == 0) )
   {
 LABEL_10:
-    sub_1C3E7C0(tmpTxt, method);
+    sub_1C6BC60(tmpTxt, method);
   }
   System_Text_StringBuilder__set_Length((System_Text_StringBuilder_o *)tmpTxt, 0, 0);
 LABEL_8:
@@ -2345,7 +2345,7 @@ LABEL_8:
     goto LABEL_10;
   tmpColorTag = this->fields.tmpColorTag;
   *((_QWORD *)tmpTxt + 17) = tmpColorTag;
-  sub_1C3E508((CGThumbnailListItem_o *)(tmpTxt + 136), (int32_t)tmpColorTag, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(tmpTxt + 136), (int32_t)tmpColorTag, v4, v5);
 }
 
 
@@ -2378,8 +2378,8 @@ void ScriptLineMessage___c__DisplayClass55_0___UpdateLabels_b__1(
   this = (ScriptLineMessage___c__DisplayClass55_0_o *)v5->fields.__4__this;
   if ( !this )
 LABEL_7:
-    sub_1C3E7C0(this, text);
+    sub_1C6BC60(this, text);
   tmpColorTag = (struct ScriptLineMessage_o *)v5->fields.tmpColorTag;
   this[2].fields.__4__this = tmpColorTag;
-  sub_1C3E508((CGThumbnailListItem_o *)&this[2].fields.__4__this, (int32_t)tmpColorTag, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this[2].fields.__4__this, (int32_t)tmpColorTag, (int32_t)method, v3);
 }

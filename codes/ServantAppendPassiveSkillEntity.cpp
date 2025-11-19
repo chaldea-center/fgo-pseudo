@@ -1,13 +1,13 @@
 void ServantAppendPassiveSkillEntity___ctor(ServantAppendPassiveSkillEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5759E & 1) == 0 )
+  if ( (byte_4CB6B07 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C5759E = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB6B07 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *ServantAppendPassiveSkillEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4C5759C & 1) == 0 )
+  if ( (byte_4CB6B05 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C5759C = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4CB6B05 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_30F8088 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_3139980 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -63,30 +63,30 @@ void ServantAppendPassiveSkillEntity__GetEffectExplanation(
   LocalizationManager_c *v22; // x0
   System_String_o *unknownNameText; // x1
 
-  if ( (byte_4C5759D & 1) == 0 )
+  if ( (byte_4CB6B06 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5759D = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB6B06 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_SkillMaster___);
   if ( !Master_object )
-    sub_1C3E7C0(0, v10);
+    sub_1C6BC60(0, v10);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              this->fields.skillId,
-             (const MethodInfo_33B2F58 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+             (const MethodInfo_33F90DC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( Entity )
   {
     v14 = (SkillEntity_o *)Entity;
     EffectTitle = SkillEntity__getEffectTitle((SkillEntity_o *)Entity, skillLv, 0);
     *title = EffectTitle;
-    sub_1C3E508((CGThumbnailListItem_o *)title, (int32_t)EffectTitle, v16, v17);
+    sub_1C6B9AC((CGThumbnailListItem_o *)title, (int32_t)EffectTitle, v16, v17);
     EffectExplanation = SkillEntity__getEffectExplanation(v14, skillLv, 0);
     v21 = (int)EffectExplanation;
     *explanation = EffectExplanation;
@@ -95,10 +95,10 @@ void ServantAppendPassiveSkillEntity__GetEffectExplanation(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( !byte_4C5204F )
+    if ( !byte_4CB159D )
     {
-      sub_1C3E564(&LocalizationManager_TypeInfo);
-      byte_4C5204F = 1;
+      sub_1C6BA08(&LocalizationManager_TypeInfo);
+      byte_4CB159D = 1;
     }
     v22 = LocalizationManager_TypeInfo;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -108,9 +108,9 @@ void ServantAppendPassiveSkillEntity__GetEffectExplanation(
     }
     unknownNameText = v22->static_fields->unknownNameText;
     *title = unknownNameText;
-    sub_1C3E508((CGThumbnailListItem_o *)title, (int32_t)unknownNameText, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)title, (int32_t)unknownNameText, v12, v13);
     *explanation = (System_String_o *)StringLiteral_1/*""*/;
     v21 = StringLiteral_1/*""*/;
   }
-  sub_1C3E508((CGThumbnailListItem_o *)explanation, v21, v19, v20);
+  sub_1C6B9AC((CGThumbnailListItem_o *)explanation, v21, v19, v20);
 }

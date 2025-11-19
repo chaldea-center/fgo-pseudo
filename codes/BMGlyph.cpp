@@ -11,11 +11,11 @@ int32_t BMGlyph__GetKerning(BMGlyph_o *this, int32_t previousChar, const MethodI
   int32_t v7; // w21
   __int64 v8; // x1
 
-  if ( (byte_4C5B469 & 1) == 0 )
+  if ( (byte_4CBAA46 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Item__);
-    byte_4C5B469 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_4CBAA46 = 1;
   }
   if ( !previousChar )
     return 0;
@@ -29,7 +29,7 @@ int32_t BMGlyph__GetKerning(BMGlyph_o *this, int32_t previousChar, const MethodI
   while ( System_Collections_Generic_List_int___get_Item(
             kerning,
             v7 - 1,
-            (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__) != previousChar )
+            (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__) != previousChar )
   {
     if ( v7 + 1 >= size )
       return 0;
@@ -41,11 +41,11 @@ int32_t BMGlyph__GetKerning(BMGlyph_o *this, int32_t previousChar, const MethodI
   kerning = this->fields.kerning;
   if ( !kerning )
 LABEL_10:
-    sub_1C3E7C0(kerning, v8);
+    sub_1C6BC60(kerning, v8);
   return System_Collections_Generic_List_int___get_Item(
            kerning,
            v7,
-           (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__);
+           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
 }
 
 
@@ -66,27 +66,27 @@ void BMGlyph__SetKerning(BMGlyph_o *this, int32_t previousChar, int32_t amount, 
   _QWORD *v19; // x9
   __int64 v20; // x10
 
-  if ( (byte_4C5B46A & 1) == 0 )
+  if ( (byte_4CBAA47 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__set_Item__);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C5B46A = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__set_Item__);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4CBAA47 = 1;
   }
   kerning = this->fields.kerning;
   p_kerning = (CGThumbnailListItem_o *)&this->fields.kerning;
   klass = kerning;
   if ( !kerning )
   {
-    v10 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
+    v10 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v10,
-      (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
     p_kerning->klass = (CGThumbnailListItem_c *)v10;
-    sub_1C3E508(p_kerning, (int32_t)v10, v11, v12);
+    sub_1C6B9AC(p_kerning, (int32_t)v10, v11, v12);
     klass = (System_Collections_Generic_List_int__o *)p_kerning->klass;
     if ( !p_kerning->klass )
       goto LABEL_9;
@@ -101,7 +101,7 @@ void BMGlyph__SetKerning(BMGlyph_o *this, int32_t previousChar, int32_t amount, 
     if ( System_Collections_Generic_List_int___get_Item(
            klass,
            v13,
-           (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__) == previousChar )
+           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__) == previousChar )
     {
       klass = (System_Collections_Generic_List_int__o *)p_kerning->klass;
       if ( p_kerning->klass )
@@ -110,7 +110,7 @@ void BMGlyph__SetKerning(BMGlyph_o *this, int32_t previousChar, int32_t amount, 
           klass,
           v14,
           amount,
-          (const MethodInfo_37981A0 *)Method_System_Collections_Generic_List_int__set_Item__);
+          (const MethodInfo_37E36B4 *)Method_System_Collections_Generic_List_int__set_Item__);
         return;
       }
       goto LABEL_9;
@@ -130,7 +130,7 @@ void BMGlyph__SetKerning(BMGlyph_o *this, int32_t previousChar, int32_t amount, 
     System_Collections_Generic_List_int___AddWithResize(
       klass,
       previousChar,
-      *(const MethodInfo_379843C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_37E3950 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
     klass = (System_Collections_Generic_List_int__o *)p_kerning->klass;
     if ( !p_kerning->klass )
       goto LABEL_9;
@@ -145,14 +145,14 @@ void BMGlyph__SetKerning(BMGlyph_o *this, int32_t previousChar, int32_t amount, 
   ++klass->fields._version;
   if ( !v18 )
 LABEL_9:
-    sub_1C3E7C0(klass, v13);
+    sub_1C6BC60(klass, v13);
   v20 = klass->fields._size;
   if ( (unsigned int)v20 >= LODWORD(v18->max_length) )
   {
     System_Collections_Generic_List_int___AddWithResize(
       klass,
       amount,
-      *(const MethodInfo_379843C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+      *(const MethodInfo_37E3950 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
   }
   else
   {

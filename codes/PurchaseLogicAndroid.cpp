@@ -3,14 +3,14 @@ void PurchaseLogicAndroid___cctor(const MethodInfo *method)
   int32_t v1; // w2
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C56684 & 1) == 0 )
+  if ( (byte_4CB5BE2 & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    sub_1C3E564(&StringLiteral_15097/*"UnityPurchasingInitializeFailedCount"*/);
-    byte_4C56684 = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    sub_1C6BA08(&StringLiteral_15084/*"UnityPurchasingInitializeFailedCount"*/);
+    byte_4CB5BE2 = 1;
   }
-  PurchaseLogicAndroid_TypeInfo->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY = (struct System_String_o *)StringLiteral_15097/*"UnityPurchasingInitializeFailedCount"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)PurchaseLogicAndroid_TypeInfo->static_fields, StringLiteral_15097/*"UnityPurchasingInitializeFailedCount"*/, v1, v2);
+  PurchaseLogicAndroid_TypeInfo->static_fields->INITIALIZE_FAILED_COUNT_PREF_KEY = (struct System_String_o *)StringLiteral_15084/*"UnityPurchasingInitializeFailedCount"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)PurchaseLogicAndroid_TypeInfo->static_fields, StringLiteral_15084/*"UnityPurchasingInitializeFailedCount"*/, v1, v2);
   PurchaseLogicAndroid_TypeInfo->static_fields->MAX_COUNT_FOR_INITIALIZE_FAILED = 1000;
 }
 
@@ -28,13 +28,13 @@ void PurchaseLogicAndroid__DisableCrashReporterOnInitialize(PurchaseLogicAndroid
   float v11; // [xsp+8h] [xbp-38h] BYREF
   int32_t v12; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C56680 & 1) == 0 )
+  if ( (byte_4CB5BDE & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C3E564(&StringLiteral_294/*" rateToSend:"*/);
-    sub_1C3E564(&StringLiteral_15958/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/);
-    byte_4C56680 = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C6BA08(&StringLiteral_294/*" rateToSend:"*/);
+    sub_1C6BA08(&StringLiteral_15941/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/);
+    byte_4CB5BDE = 1;
   }
   v3 = PurchaseLogicAndroid_TypeInfo;
   if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
@@ -50,8 +50,8 @@ void PurchaseLogicAndroid__DisableCrashReporterOnInitialize(PurchaseLogicAndroid
     logOutputAction = this->fields._logOutputAction;
     v6 = System_Int32__ToString((int32_t)&v12, 0);
     v8 = System_Single__ToString(v7, (const MethodInfo *)&v11);
-    Instance = (CrashReporter_o *)System_String__Concat_63676720(
-                                    (System_String_o *)StringLiteral_15958/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/,
+    Instance = (CrashReporter_o *)System_String__Concat_64007060(
+                                    (System_String_o *)StringLiteral_15941/*"[UnityIAP]unityPurchasingInitializeFailedCount:"*/,
                                     v6,
                                     (System_String_o *)StringLiteral_294/*" rateToSend:"*/,
                                     v8,
@@ -65,10 +65,10 @@ void PurchaseLogicAndroid__DisableCrashReporterOnInitialize(PurchaseLogicAndroid
     if ( UnityEngine_Random__Range(0.0, 1.0, 0) < v11 )
       return;
     this->fields._isCrashReporterTemporarilyDisabled = 1;
-    Instance = (CrashReporter_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    Instance = (CrashReporter_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( !Instance )
 LABEL_11:
-      sub_1C3E7C0(Instance, v10);
+      sub_1C6BC60(Instance, v10);
     CrashReporter__DisableSampling(Instance, 0);
   }
 }
@@ -85,18 +85,18 @@ void PurchaseLogicAndroid__EnableCrashReporterOnInitializeFailed(
   PurchaseLogicAndroid_c *v7; // x8
   int MAX_COUNT_FOR_INITIALIZE_FAILED; // w19
 
-  if ( (byte_4C56682 & 1) == 0 )
+  if ( (byte_4CB5BE0 & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    byte_4C56682 = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    byte_4CB5BE0 = 1;
   }
   if ( this->fields._isCrashReporterTemporarilyDisabled )
   {
     this->fields._isCrashReporterTemporarilyDisabled = 0;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( !Instance )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     CrashReporter__EnableSampling((CrashReporter_o *)Instance, 0);
   }
   v5 = PurchaseLogicAndroid_TypeInfo;
@@ -147,18 +147,18 @@ void PurchaseLogicAndroid__EnableCrashReporterOnInitializeSucceeded(
   __int64 v4; // x1
   PurchaseLogicAndroid_c *v5; // x0
 
-  if ( (byte_4C56681 & 1) == 0 )
+  if ( (byte_4CB5BDF & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    byte_4C56681 = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    byte_4CB5BDF = 1;
   }
   if ( this->fields._isCrashReporterTemporarilyDisabled )
   {
     this->fields._isCrashReporterTemporarilyDisabled = 0;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( !Instance )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     CrashReporter__EnableSampling((CrashReporter_o *)Instance, 0);
   }
   v5 = PurchaseLogicAndroid_TypeInfo;
@@ -206,17 +206,17 @@ PurchaseLogic_ReceiptContents_o *PurchaseLogicAndroid__ExtractReceiptContents(
   Il2CppObject *v31; // [xsp+10h] [xbp-40h] BYREF
   Il2CppObject *value; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C56677 & 1) == 0 )
+  if ( (byte_4CB5BD5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1C3E564(&PurchaseLogic_ReceiptContents_TypeInfo);
-    sub_1C3E564(&string_TypeInfo);
-    sub_1C3E564(&StringLiteral_21110/*"json"*/);
-    sub_1C3E564(&StringLiteral_10593/*"Payload"*/);
-    sub_1C3E564(&StringLiteral_23515/*"signature"*/);
-    this = (PurchaseLogicAndroid_o *)sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C56677 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_1C6BA08(&PurchaseLogic_ReceiptContents_TypeInfo);
+    sub_1C6BA08(&string_TypeInfo);
+    sub_1C6BA08(&StringLiteral_21170/*"json"*/);
+    sub_1C6BA08(&StringLiteral_10589/*"Payload"*/);
+    sub_1C6BA08(&StringLiteral_23587/*"signature"*/);
+    this = (PurchaseLogicAndroid_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB5BD5 = 1;
   }
   v31 = 0;
   value = 0;
@@ -224,7 +224,7 @@ PurchaseLogic_ReceiptContents_o *PurchaseLogicAndroid__ExtractReceiptContents(
   if ( !product )
     goto LABEL_37;
   receipt_k__BackingField = product->fields._receipt_k__BackingField;
-  v5 = (PurchaseLogic_ReceiptContents_o *)sub_1C3E7B0(PurchaseLogic_ReceiptContents_TypeInfo);
+  v5 = (PurchaseLogic_ReceiptContents_o *)sub_1C6BC54(PurchaseLogic_ReceiptContents_TypeInfo);
   PurchaseLogic_ReceiptContents___ctor(v5, v6);
   this = (PurchaseLogicAndroid_o *)UnityEngine_Purchasing_MiniJson__JsonDecode(receipt_k__BackingField, 0);
   if ( !this )
@@ -237,9 +237,9 @@ PurchaseLogic_ReceiptContents_o *PurchaseLogicAndroid__ExtractReceiptContents(
   }
   System_Collections_Generic_Dictionary_object__object___TryGetValue(
     (System_Collections_Generic_Dictionary_object__object__o *)this,
-    (Il2CppObject *)StringLiteral_10593/*"Payload"*/,
+    (Il2CppObject *)StringLiteral_10589/*"Payload"*/,
     &value,
-    (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
   if ( value )
     v8 = (System_String_c *)value->klass == string_TypeInfo ? (System_String_o *)value : 0LL;
   else
@@ -252,18 +252,18 @@ PurchaseLogic_ReceiptContents_o *PurchaseLogicAndroid__ExtractReceiptContents(
     || (System_Collections_Generic_Dictionary_string__object__c *)this->klass->_2.typeHierarchy[v10 - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo
     || (System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)this,
-          (Il2CppObject *)StringLiteral_21110/*"json"*/,
+          (Il2CppObject *)StringLiteral_21170/*"json"*/,
           &v31,
-          (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
+          (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
         this = (PurchaseLogicAndroid_o *)System_Collections_Generic_Dictionary_object__object___TryGetValue(
                                            (System_Collections_Generic_Dictionary_object__object__o *)v9,
-                                           (Il2CppObject *)StringLiteral_23515/*"signature"*/,
+                                           (Il2CppObject *)StringLiteral_23587/*"signature"*/,
                                            &v30,
-                                           (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
+                                           (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__),
         !v5) )
   {
 LABEL_37:
-    sub_1C3E7C0(this, product);
+    sub_1C6BC60(this, product);
   }
   v13 = v31;
   if ( v31 )
@@ -286,7 +286,7 @@ LABEL_37:
     v5->fields.payloadJsonStr = 0;
     p_fields = (CGThumbnailListItem_o *)&v5->fields;
   }
-  sub_1C3E508(p_fields, v17, v11, v12);
+  sub_1C6B9AC(p_fields, v17, v11, v12);
   v20 = v30;
   if ( v30 )
   {
@@ -308,18 +308,18 @@ LABEL_37:
     v5->fields.googleSignatureStr = 0;
     p_googleSignatureStr = (CGThumbnailListItem_o *)&v5->fields.googleSignatureStr;
   }
-  sub_1C3E508(p_googleSignatureStr, v24, v18, v19);
+  sub_1C6B9AC(p_googleSignatureStr, v24, v18, v19);
   if ( !p_fields->klass )
   {
     v27 = StringLiteral_1/*""*/;
     p_fields->klass = (CGThumbnailListItem_c *)StringLiteral_1/*""*/;
-    sub_1C3E508(p_fields, v27, v25, v26);
+    sub_1C6B9AC(p_fields, v27, v25, v26);
   }
   if ( !p_googleSignatureStr->klass )
   {
     v28 = StringLiteral_1/*""*/;
     p_googleSignatureStr->klass = (CGThumbnailListItem_c *)StringLiteral_1/*""*/;
-    sub_1C3E508(p_googleSignatureStr, v28, v25, v26);
+    sub_1C6B9AC(p_googleSignatureStr, v28, v25, v26);
   }
   return v5;
 }
@@ -331,10 +331,10 @@ System_String_o *PurchaseLogicAndroid__GetCachedObfuscatedAccountId(
 {
   PurchaseLogicAndroid_c *v2; // x0
 
-  if ( (byte_4C56678 & 1) == 0 )
+  if ( (byte_4CB5BD6 & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    byte_4C56678 = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    byte_4CB5BD6 = 1;
   }
   v2 = PurchaseLogicAndroid_TypeInfo;
   if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
@@ -362,20 +362,20 @@ UnityEngine_Purchasing_ConfigurationBuilder_o *PurchaseLogicAndroid__GetConfigur
   __int64 v11; // x0
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4C56676 & 1) == 0 )
+  if ( (byte_4CB5BD4 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_Product__TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
-    this = (PurchaseLogicAndroid_o *)sub_1C3E564(&UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo);
-    byte_4C56676 = 1;
+    sub_1C6BA08(&System_Action_Product__TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
+    this = (PurchaseLogicAndroid_o *)sub_1C6BA08(&UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo);
+    byte_4CB5BD4 = 1;
   }
   ConfigurationBuilder = PurchaseLogic__GetConfigurationBuilder((PurchaseLogic_o *)this, method);
   if ( !ConfigurationBuilder
     || (v5 = ConfigurationBuilder,
         v6 = UnityEngine_Purchasing_ConfigurationBuilder__Configure_object_(
                ConfigurationBuilder,
-               (const MethodInfo_30F1EBC *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___),
-        ConfigurationBuilder = (UnityEngine_Purchasing_ConfigurationBuilder_o *)sub_1C3E7B0(System_Action_Product__TypeInfo),
+               (const MethodInfo_31337B4 *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___),
+        ConfigurationBuilder = (UnityEngine_Purchasing_ConfigurationBuilder_o *)sub_1C6BC54(System_Action_Product__TypeInfo),
         !v2)
     || (v7 = ConfigurationBuilder,
         System_Action_object____ctor(
@@ -385,7 +385,7 @@ UnityEngine_Purchasing_ConfigurationBuilder_o *PurchaseLogicAndroid__GetConfigur
           0),
         !v6) )
   {
-    sub_1C3E7C0(ConfigurationBuilder, v4);
+    sub_1C6BC60(ConfigurationBuilder, v4);
   }
   klass = v6->klass;
   v9 = *(unsigned __int16 *)&v6->klass->_2.rank;
@@ -404,7 +404,7 @@ UnityEngine_Purchasing_ConfigurationBuilder_o *PurchaseLogicAndroid__GetConfigur
   else
   {
 LABEL_10:
-    v11 = sub_1C8ED7C(v6, UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, 0);
+    v11 = sub_1C41D90(v6, UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, 0);
   }
   (*(void (__fastcall **)(Il2CppObject *, UnityEngine_Purchasing_ConfigurationBuilder_o *, _QWORD))v11)(
     v6,
@@ -420,10 +420,10 @@ bool PurchaseLogicAndroid__IsAlreadyInitializedWithObfuscatedAccountId(
 {
   PurchaseLogicAndroid_c *v2; // x0
 
-  if ( (byte_4C5667C & 1) == 0 )
+  if ( (byte_4CB5BDA & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    byte_4C5667C = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    byte_4CB5BDA = 1;
   }
   v2 = PurchaseLogicAndroid_TypeInfo;
   if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
@@ -447,10 +447,10 @@ bool PurchaseLogicAndroid__IsInitializedWithMismatchedObfuscatedAccountId(
 {
   PurchaseLogicAndroid_c *v2; // x0
 
-  if ( (byte_4C5667E & 1) == 0 )
+  if ( (byte_4CB5BDC & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    byte_4C5667E = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    byte_4CB5BDC = 1;
   }
   v2 = PurchaseLogicAndroid_TypeInfo;
   if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
@@ -466,10 +466,10 @@ bool PurchaseLogicAndroid__IsObfuscatedAccountIdCached(PurchaseLogicAndroid_o *t
 {
   PurchaseLogicAndroid_c *v2; // x0
 
-  if ( (byte_4C5667B & 1) == 0 )
+  if ( (byte_4CB5BD9 & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    byte_4C5667B = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    byte_4CB5BD9 = 1;
   }
   v2 = PurchaseLogicAndroid_TypeInfo;
   if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
@@ -506,23 +506,23 @@ void PurchaseLogicAndroid__OnDeferred(
   const MethodInfo *v16; // x7
   int32_t klass; // w5
 
-  if ( (byte_4C56683 & 1) == 0 )
+  if ( (byte_4CB5BE1 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___);
-    sub_1C3E564(&System_Func_BankShopEntity__bool__TypeInfo);
-    sub_1C3E564(&PurchaseBehaviour_TypeInfo);
-    sub_1C3E564(&Method_PurchaseLogicAndroid___c__DisplayClass22_0__OnDeferred_b__0__);
-    sub_1C3E564(&PurchaseLogicAndroid___c__DisplayClass22_0_TypeInfo);
-    byte_4C56683 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___);
+    sub_1C6BA08(&System_Func_BankShopEntity__bool__TypeInfo);
+    sub_1C6BA08(&PurchaseBehaviour_TypeInfo);
+    sub_1C6BA08(&Method_PurchaseLogicAndroid___c__DisplayClass22_0__OnDeferred_b__0__);
+    sub_1C6BA08(&PurchaseLogicAndroid___c__DisplayClass22_0_TypeInfo);
+    byte_4CB5BE1 = 1;
   }
-  v5 = sub_1C3E7B0(PurchaseLogicAndroid___c__DisplayClass22_0_TypeInfo);
+  v5 = sub_1C6BC54(PurchaseLogicAndroid___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   this->fields._existsDeferredPurchase = 1;
   if ( !product || (definition_k__BackingField = product->fields._definition_k__BackingField) == 0 || !v5 )
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   id_k__BackingField = definition_k__BackingField->fields._id_k__BackingField;
   *(_QWORD *)(v5 + 16) = id_k__BackingField;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)id_k__BackingField, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)id_k__BackingField, v8, v9);
   v12 = PurchaseBehaviour_TypeInfo;
   if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
   {
@@ -530,16 +530,16 @@ void PurchaseLogicAndroid__OnDeferred(
     v12 = PurchaseBehaviour_TypeInfo;
   }
   BankShopEntityCollection = (System_Collections_Generic_IEnumerable_TSource__o *)v12->static_fields->BankShopEntityCollection;
-  v14 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_BankShopEntity__bool__TypeInfo);
+  v14 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_BankShopEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v14,
     (Il2CppObject *)v5,
     Method_PurchaseLogicAndroid___c__DisplayClass22_0__OnDeferred_b__0__,
     0);
-  v15 = System_Linq_Enumerable__FirstOrDefault_object__51525108(
+  v15 = System_Linq_Enumerable__FirstOrDefault_object__51793644(
           BankShopEntityCollection,
           (System_Func_TSource__bool__o *)v14,
-          (const MethodInfo_31235F4 *)Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___);
+          (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_BankShopEntity___);
   if ( v15 )
     klass = (int32_t)v15[1].klass;
   else
@@ -555,10 +555,10 @@ void PurchaseLogicAndroid__SetAlreadyInitializedWithObfuscatedAccountId(
 {
   PurchaseLogicAndroid_c *v4; // x0
 
-  if ( (byte_4C5667D & 1) == 0 )
+  if ( (byte_4CB5BDB & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    byte_4C5667D = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    byte_4CB5BDB = 1;
   }
   v4 = PurchaseLogicAndroid_TypeInfo;
   if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
@@ -579,10 +579,10 @@ void PurchaseLogicAndroid__SetCachedObfuscatedAccountId(
   PurchaseLogicAndroid_c *v5; // x0
   struct PurchaseLogicAndroid_StaticFields *static_fields; // x0
 
-  if ( (byte_4C5667A & 1) == 0 )
+  if ( (byte_4CB5BD8 & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    byte_4C5667A = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    byte_4CB5BD8 = 1;
   }
   v5 = PurchaseLogicAndroid_TypeInfo;
   if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
@@ -592,7 +592,7 @@ void PurchaseLogicAndroid__SetCachedObfuscatedAccountId(
   }
   static_fields = v5->static_fields;
   static_fields->_cachedObfuscatedAccountId = obfuscatedAccountId;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&static_fields->_cachedObfuscatedAccountId,
     (int32_t)obfuscatedAccountId,
     (int32_t)method,
@@ -616,10 +616,10 @@ void PurchaseLogicAndroid__SetInitializedWithMismatchedObfuscatedAccountId(
 {
   PurchaseLogicAndroid_c *v4; // x0
 
-  if ( (byte_4C5667F & 1) == 0 )
+  if ( (byte_4CB5BDD & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-    byte_4C5667F = 1;
+    sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+    byte_4CB5BDD = 1;
   }
   v4 = PurchaseLogicAndroid_TypeInfo;
   if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
@@ -652,23 +652,23 @@ void PurchaseLogicAndroid__SetObfuscatedAccountId(
   UnityEngine_Purchasing_IGooglePlayConfiguration_c **p_offset; // x10
   __int64 v19; // x0
 
-  if ( (byte_4C56679 & 1) == 0 )
+  if ( (byte_4CB5BD7 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Application_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
-    sub_1C3E564(&UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo);
-    sub_1C3E564(&StringLiteral_24320/*"unexpected obfuscatedAccountId:"*/);
-    sub_1C3E564(&StringLiteral_743/*"(null)"*/);
-    byte_4C56679 = 1;
+    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
+    sub_1C6BA08(&UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo);
+    sub_1C6BA08(&StringLiteral_24402/*"unexpected obfuscatedAccountId:"*/);
+    sub_1C6BA08(&StringLiteral_739/*"(null)"*/);
+    byte_4CB5BD7 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   if ( UnityEngine_Application__get_platform(0) == 11 )
   {
-    if ( !byte_4C56796 )
+    if ( !byte_4CB5CF5 )
     {
-      sub_1C3E564(&PurchaseLogicAndroid_TypeInfo);
-      byte_4C56796 = 1;
+      sub_1C6BA08(&PurchaseLogicAndroid_TypeInfo);
+      byte_4CB5CF5 = 1;
     }
     v5 = PurchaseLogicAndroid_TypeInfo;
     if ( !PurchaseLogicAndroid_TypeInfo->_2.cctor_finished )
@@ -684,8 +684,8 @@ void PurchaseLogicAndroid__SetObfuscatedAccountId(
       if ( cachedObfuscatedAccountId )
         v10 = cachedObfuscatedAccountId;
       else
-        v10 = (System_String_o *)StringLiteral_743/*"(null)"*/;
-      IsNullOrEmpty = System_String__Concat_63636468((System_String_o *)StringLiteral_24320/*"unexpected obfuscatedAccountId:"*/, v10, 0);
+        v10 = (System_String_o *)StringLiteral_739/*"(null)"*/;
+      IsNullOrEmpty = System_String__Concat_63966792((System_String_o *)StringLiteral_24402/*"unexpected obfuscatedAccountId:"*/, v10, 0);
       if ( logErrorOutputAction )
       {
         v11 = IsNullOrEmpty;
@@ -701,7 +701,7 @@ LABEL_26:
     {
       IsNullOrEmpty = (System_String_o *)UnityEngine_Purchasing_ConfigurationBuilder__Configure_object_(
                                            builder,
-                                           (const MethodInfo_30F1EBC *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
+                                           (const MethodInfo_31337B4 *)Method_UnityEngine_Purchasing_ConfigurationBuilder_Configure_IGooglePlayConfiguration___);
       if ( IsNullOrEmpty )
       {
         klass = IsNullOrEmpty->klass;
@@ -722,7 +722,7 @@ LABEL_26:
         else
         {
 LABEL_23:
-          v19 = sub_1C8ED7C(IsNullOrEmpty, UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, 1);
+          v19 = sub_1C41D90(IsNullOrEmpty, UnityEngine_Purchasing_IGooglePlayConfiguration_TypeInfo, 1);
         }
         invoke_impl = *(void (__fastcall **)(intptr_t, System_String_o *, intptr_t))v19;
         v14 = *(_QWORD *)(v19 + 8);
@@ -731,7 +731,7 @@ LABEL_23:
         goto LABEL_26;
       }
     }
-    sub_1C3E7C0(IsNullOrEmpty, v8);
+    sub_1C6BC60(IsNullOrEmpty, v8);
   }
 }
 
@@ -759,6 +759,6 @@ bool PurchaseLogicAndroid___c__DisplayClass22_0___OnDeferred_b__0(
         const MethodInfo *method)
 {
   if ( !bankShop )
-    sub_1C3E7C0(this, 0);
-  return System_String__Equals_63672576(this->fields.productId, bankShop->fields.googleShopId, 4, 0);
+    sub_1C6BC60(this, 0);
+  return System_String__Equals_64002916(this->fields.productId, bankShop->fields.googleShopId, 4, 0);
 }

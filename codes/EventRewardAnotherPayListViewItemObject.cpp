@@ -2,10 +2,10 @@ void EventRewardAnotherPayListViewItemObject___ctor(
         EventRewardAnotherPayListViewItemObject_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C51556 & 1) == 0 )
+  if ( (byte_4CB0A9E & 1) == 0 )
   {
-    sub_1C3E564(&ListViewObject_TypeInfo);
-    byte_4C51556 = 1;
+    sub_1C6BA08(&ListViewObject_TypeInfo);
+    byte_4CB0A9E = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -21,20 +21,20 @@ void EventRewardAnotherPayListViewItemObject__Awake(
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4C51553 & 1) == 0 )
+  if ( (byte_4CB0A9B & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_EventRewardAnotherPayListViewItemDraw___);
-    byte_4C51553 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_EventRewardAnotherPayListViewItemDraw___);
+    byte_4CB0A9B = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_EventRewardAnotherPayListViewItemDraw___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_EventRewardAnotherPayListViewItemDraw___);
   this->fields.itemDraw = (struct EventRewardAnotherPayListViewItemDraw_o *)Component_object;
-  sub_1C3E508(&this->fields.itemDraw, Component_object);
+  sub_1C6B9AC(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -45,10 +45,10 @@ EventRewardAnotherPayListViewItem_o *EventRewardAnotherPayListViewItemObject__Ge
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C51555 & 1) == 0 )
+  if ( (byte_4CB0A9D & 1) == 0 )
   {
-    sub_1C3E564(&EventRewardAnotherPayListViewItem_TypeInfo);
-    byte_4C51555 = 1;
+    sub_1C6BA08(&EventRewardAnotherPayListViewItem_TypeInfo);
+    byte_4CB0A9D = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -71,22 +71,22 @@ void EventRewardAnotherPayListViewItemObject__SetItem(
   EventRewardAnotherPayListViewItemDraw_o *itemDraw; // x0
   __int64 naturalAligment; // x9
 
-  if ( (byte_4C51554 & 1) == 0 )
+  if ( (byte_4CB0A9C & 1) == 0 )
   {
-    sub_1C3E564(&EventRewardAnotherPayListViewItem_TypeInfo);
-    byte_4C51554 = 1;
+    sub_1C6BA08(&EventRewardAnotherPayListViewItem_TypeInfo);
+    byte_4CB0A9C = 1;
   }
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw )
 LABEL_9:
-    sub_1C3E7C0(itemDraw, item);
+    sub_1C6BC60(itemDraw, item);
   if ( item )
   {
     naturalAligment = EventRewardAnotherPayListViewItem_TypeInfo->_2.naturalAligment;
     if ( item->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (EventRewardAnotherPayListViewItem_c *)item->klass->_2.typeHierarchy[naturalAligment - 1] != EventRewardAnotherPayListViewItem_TypeInfo )
     {
-      itemDraw = (EventRewardAnotherPayListViewItemDraw_o *)sub_1C3EA80(item);
+      itemDraw = (EventRewardAnotherPayListViewItemDraw_o *)sub_1C6BFFC(item);
       goto LABEL_9;
     }
   }
@@ -94,5 +94,5 @@ LABEL_9:
     itemDraw,
     (EventRewardAnotherPayListViewItem_o *)item,
     (const MethodInfo *)seed);
-  ListViewObject__SetItem_43886976((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_44077592((ListViewObject_o *)this, item, seed, 0);
 }

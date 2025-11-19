@@ -20,10 +20,10 @@ void StonePurchaseListViewItemDraw__SetInput(
   __int64 v7; // x1
   struct UICommonButton_o *v8; // x0
 
-  if ( (byte_4C54C12 & 1) == 0 )
+  if ( (byte_4CB416A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C54C12 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB416A = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -38,7 +38,7 @@ void StonePurchaseListViewItemDraw__SetInput(
             v8->klass->vtable._5_set_isEnabled.method),
           (v8 = this->fields.baseButton) == 0) )
     {
-      sub_1C3E7C0(v8, v7);
+      sub_1C6BC60(v8, v7);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, _QWORD, const MethodInfo *))v8->klass->vtable._14_SetState.methodPtr)(
       v8,
@@ -63,49 +63,37 @@ void StonePurchaseListViewItemDraw__SetItem(
   UnityEngine_Object_o *baseButton; // x22
   UnityEngine_Object_o *baseSprite; // x22
   UnityEngine_Object_o *commonUiAtlas; // x22
-  __int64 v15; // x2
-  __int64 v16; // x3
-  __int64 v17; // x4
-  __int64 v18; // x5
-  __int64 v19; // x6
-  __int64 v20; // x7
-  UISprite_o *v21; // x22
-  Il2CppObject *v22; // x0
-  System_String_o *v23; // x23
+  UISprite_o *v15; // x22
+  Il2CppObject *v16; // x0
+  System_String_o *v17; // x23
   UnityEngine_Object_o *detailButton; // x22
   UnityEngine_Object_o *detailButtonLabel; // x22
-  UILabel_o *v26; // x22
+  UILabel_o *v20; // x22
   UnityEngine_Object_o *spTimeLabel; // x22
-  struct UILabel_o *v28; // x21
-  int v29; // w23
+  struct UILabel_o *v22; // x21
+  int v23; // w23
   System_String_o *mText; // x22
-  System_String_o *v31; // x24
-  __int64 v32; // x2
-  __int64 v33; // x3
-  __int64 v34; // x4
-  __int64 v35; // x5
-  __int64 v36; // x6
-  __int64 v37; // x7
-  Il2CppObject *v38; // x0
-  System_String_o *v39; // x0
-  System_String_o *v40; // x0
-  int v41; // [xsp+8h] [xbp-38h] BYREF
+  System_String_o *v25; // x24
+  Il2CppObject *v26; // x0
+  System_String_o *v27; // x0
+  System_String_o *v28; // x0
+  int v29; // [xsp+8h] [xbp-38h] BYREF
   int32_t boardImageId; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C54C10 & 1) == 0 )
+  if ( (byte_4CB4168 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMaster_PaymentLimitMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_20450/*"img_list_bg{0:00}_sp"*/);
-    sub_1C3E564(&StringLiteral_12398/*"STONE_SHOP_LIMIT_TEMPLATE"*/);
-    sub_1C3E564(&StringLiteral_20445/*"img_list_bg01"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_12393/*"STONE_SHOP_DETAIL_BUTTON"*/);
-    byte_4C54C10 = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMaster_PaymentLimitMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_20497/*"img_list_bg{0:00}_sp"*/);
+    sub_1C6BA08(&StringLiteral_12395/*"STONE_SHOP_LIMIT_TEMPLATE"*/);
+    sub_1C6BA08(&StringLiteral_20492/*"img_list_bg01"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_12390/*"STONE_SHOP_DETAIL_BUTTON"*/);
+    byte_4CB4168 = 1;
   }
   if ( item )
   {
@@ -148,25 +136,25 @@ void StonePurchaseListViewItemDraw__SetItem(
           itemIcon = (ItemIconComponent_o *)UnityEngine_Object__op_Inequality(commonUiAtlas, 0, 0);
           if ( ((unsigned __int8)itemIcon & 1) != 0 )
           {
-            v21 = this->fields.baseSprite;
+            v15 = this->fields.baseSprite;
             if ( bankShop->fields.boardImageId )
             {
               boardImageId = bankShop->fields.boardImageId;
-              v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &boardImageId, v15, v16, v17, v18, v19, v20);
-              v23 = System_String__Format((System_String_o *)StringLiteral_20450/*"img_list_bg{0:00}_sp"*/, v22, 0);
+              v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &boardImageId);
+              v17 = System_String__Format((System_String_o *)StringLiteral_20497/*"img_list_bg{0:00}_sp"*/, v16, 0);
               if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-              AtlasManager__SetDownloadCommonSprite(v21, v23, 0);
+              AtlasManager__SetDownloadCommonSprite(v15, v17, 0);
             }
             else
             {
-              if ( !v21 )
+              if ( !v15 )
                 goto LABEL_58;
               UISprite__set_atlas(this->fields.baseSprite, this->fields.commonUiAtlas, 0);
               itemIcon = (ItemIconComponent_o *)this->fields.baseSprite;
               if ( !itemIcon )
                 goto LABEL_58;
-              UISprite__set_spriteName((UISprite_o *)itemIcon, (System_String_o *)StringLiteral_20445/*"img_list_bg01"*/, 0);
+              UISprite__set_spriteName((UISprite_o *)itemIcon, (System_String_o *)StringLiteral_20492/*"img_list_bg01"*/, 0);
             }
             itemIcon = (ItemIconComponent_o *)this->fields.baseSprite;
             if ( !itemIcon )
@@ -190,13 +178,13 @@ void StonePurchaseListViewItemDraw__SetItem(
             if ( !this->fields.detailButton )
               goto LABEL_58;
             UnityEngine_GameObject__SetActive(this->fields.detailButton, (unsigned __int8)itemIcon & 1, 0);
-            v26 = this->fields.detailButtonLabel;
+            v20 = this->fields.detailButtonLabel;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            itemIcon = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12393/*"STONE_SHOP_DETAIL_BUTTON"*/, 0);
-            if ( !v26 )
+            itemIcon = (ItemIconComponent_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12390/*"STONE_SHOP_DETAIL_BUTTON"*/, 0);
+            if ( !v20 )
               goto LABEL_58;
-            UILabel__set_text(v26, (System_String_o *)itemIcon, 0);
+            UILabel__set_text(v20, (System_String_o *)itemIcon, 0);
           }
         }
         spTimeLabel = (UnityEngine_Object_o *)this->fields.spTimeLabel;
@@ -216,7 +204,7 @@ void StonePurchaseListViewItemDraw__SetItem(
             UILabel__set_text((UILabel_o *)itemIcon, bankShop->fields.datesDetail, 0);
             if ( !DataManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-            itemIcon = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_PaymentLimitMaster___);
+            itemIcon = (ItemIconComponent_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_PaymentLimitMaster___);
             if ( !itemIcon )
               goto LABEL_58;
             itemIcon = (ItemIconComponent_o *)PaymentLimitMaster__GetBuyableCount(
@@ -225,19 +213,19 @@ void StonePurchaseListViewItemDraw__SetItem(
                                                 0);
             if ( (int)itemIcon >= 1 )
             {
-              v28 = this->fields.spTimeLabel;
-              if ( !v28 )
+              v22 = this->fields.spTimeLabel;
+              if ( !v22 )
                 goto LABEL_58;
-              v29 = (int)itemIcon;
-              mText = v28->fields.mText;
+              v23 = (int)itemIcon;
+              mText = v22->fields.mText;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-              v31 = LocalizationManager__Get((System_String_o *)StringLiteral_12398/*"STONE_SHOP_LIMIT_TEMPLATE"*/, 0);
-              v41 = v29;
-              v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41, v32, v33, v34, v35, v36, v37);
-              v39 = System_String__Format(v31, v38, 0);
-              v40 = System_String__Concat_63636468(mText, v39, 0);
-              UILabel__set_text(v28, v40, 0);
+              v25 = LocalizationManager__Get((System_String_o *)StringLiteral_12395/*"STONE_SHOP_LIMIT_TEMPLATE"*/, 0);
+              v29 = v23;
+              v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
+              v27 = System_String__Format(v25, v26, 0);
+              v28 = System_String__Concat_63966792(mText, v27, 0);
+              UILabel__set_text(v22, v28, 0);
             }
           }
           itemIcon = (ItemIconComponent_o *)this->fields.spTimeLabel;
@@ -253,7 +241,7 @@ void StonePurchaseListViewItemDraw__SetItem(
             }
           }
 LABEL_58:
-          sub_1C3E7C0(itemIcon, iconId);
+          sub_1C6BC60(itemIcon, iconId);
         }
       }
     }
@@ -280,25 +268,19 @@ void StonePurchaseListViewItemDraw__SetStoneInfoLabel(
   System_String_o *v17; // x22
   System_String_o *PriceDetilText; // x23
   bool v19; // w24
-  __int64 v20; // x2
-  __int64 v21; // x3
-  __int64 v22; // x4
-  __int64 v23; // x5
-  __int64 v24; // x6
-  __int64 v25; // x7
   int32_t Price; // w21
   System_String_o *Price2Info; // x0
-  System_String_o *v28; // x21
-  Il2CppObject *v29; // x0
-  int32_t v30; // [xsp+Ch] [xbp-44h] BYREF
+  System_String_o *v22; // x21
+  Il2CppObject *v23; // x0
+  int32_t v24; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C54C11 & 1) == 0 )
+  if ( (byte_4CB4169 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_113/*" "*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C54C11 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_113/*" "*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB4169 = 1;
   }
   spPriceTextLabel = this->fields.spPriceTextLabel;
   if ( !spPriceTextLabel )
@@ -324,18 +306,18 @@ void StonePurchaseListViewItemDraw__SetStoneInfoLabel(
   NameText = StonePurchaseListViewItem__get_NameText(item, 0);
   CountText = StonePurchaseListViewItem__get_CountText(item, 0);
   if ( IsNullOrEmpty )
-    v16 = System_String__Concat_63674716(NameText, (System_String_o *)StringLiteral_113/*" "*/, CountText, 0);
+    v16 = System_String__Concat_64005056(NameText, (System_String_o *)StringLiteral_113/*" "*/, CountText, 0);
   else
-    v16 = System_String__Format_63677760(CountDetailText, (Il2CppObject *)NameText, (Il2CppObject *)CountText, 0);
+    v16 = System_String__Format_64008100(CountDetailText, (Il2CppObject *)NameText, (Il2CppObject *)CountText, 0);
   v17 = v16;
   PriceDetilText = StonePurchaseListViewItem__get_PriceDetilText(item, 0);
   v19 = System_String__IsNullOrEmpty(PriceDetilText, 0);
   Price = StonePurchaseListViewItem__get_Price(item, 0);
   if ( !v19 )
   {
-    v30 = Price;
-    v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30, v20, v21, v22, v23, v24, v25);
-    v28 = System_String__Format(PriceDetilText, v29, 0);
+    v24 = Price;
+    v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
+    v22 = System_String__Format(PriceDetilText, v23, 0);
     if ( !isSpecial )
       goto LABEL_18;
     goto LABEL_22;
@@ -344,9 +326,9 @@ void StonePurchaseListViewItemDraw__SetStoneInfoLabel(
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   Price2Info = LocalizationManager__GetPrice2Info(Price, 0);
   if ( Price2Info )
-    v28 = Price2Info;
+    v22 = Price2Info;
   else
-    v28 = (System_String_o *)StringLiteral_1/*""*/;
+    v22 = (System_String_o *)StringLiteral_1/*""*/;
   if ( isSpecial )
   {
 LABEL_22:
@@ -359,7 +341,7 @@ LABEL_22:
         goto LABEL_24;
     }
 LABEL_33:
-    sub_1C3E7C0(spPriceTextLabel, item);
+    sub_1C6BC60(spPriceTextLabel, item);
   }
 LABEL_18:
   spPriceTextLabel = this->fields.nameTextLabel;
@@ -370,7 +352,7 @@ LABEL_18:
   if ( !spPriceTextLabel )
     goto LABEL_33;
 LABEL_24:
-  UILabel__set_text(spPriceTextLabel, v28, 0);
+  UILabel__set_text(spPriceTextLabel, v22, 0);
   spPriceTextLabel = this->fields.nameTextLabel;
   if ( !spPriceTextLabel )
     goto LABEL_33;

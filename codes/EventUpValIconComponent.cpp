@@ -2,10 +2,10 @@ void EventUpValIconComponent___cctor(const MethodInfo *method)
 {
   struct EventUpValIconComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4C56130 & 1) == 0 )
+  if ( (byte_4CB5697 & 1) == 0 )
   {
-    sub_1C3E564(&EventUpValIconComponent_TypeInfo);
-    byte_4C56130 = 1;
+    sub_1C6BA08(&EventUpValIconComponent_TypeInfo);
+    byte_4CB5697 = 1;
   }
   static_fields = EventUpValIconComponent_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->MESSAGE_X_SIZE_MAX = 0x60000003E8LL;
@@ -17,7 +17,7 @@ void EventUpValIconComponent___ctor(EventUpValIconComponent_o *this, const Metho
 {
   __asm { FMOV            V1.4S, #1.0 }
   this->fields.COLOR_NORMAL = _Q1;
-  this->fields.COLOR_INVALID = (struct UnityEngine_Color_o)xmmword_C12CE0;
+  this->fields.COLOR_INVALID = (struct UnityEngine_Color_o)xmmword_CECFA0;
   SwitchParameterDisplayComponent___ctor((SwitchParameterDisplayComponent_o *)this, 0);
 }
 
@@ -29,7 +29,7 @@ void EventUpValIconComponent__Clear(EventUpValIconComponent_o *this, const Metho
   const MethodInfo *v5; // x1
 
   this->fields.eventUpValItemList = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.eventUpValItemList, 0, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventUpValItemList, 0, v2, v3);
   EventUpValIconComponent__ClearParam(this, v5);
 }
 
@@ -41,7 +41,7 @@ void EventUpValIconComponent__ClearParam(EventUpValIconComponent_o *this, const 
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -64,18 +64,18 @@ bool EventUpValIconComponent__GetInvalidEquipEventUpByRarity(
   int32_t actMaxRarity; // [xsp+4h] [xbp-3Ch] BYREF
   System_String_o *skillName; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C5612E & 1) == 0 )
+  if ( (byte_4CB5695 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Array_IndexOf_int___);
-    sub_1C3E564(&Method_DataManager_GetMaster_ServantSkillMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
-    byte_4C5612E = 1;
+    sub_1C6BA08(&Method_System_Array_IndexOf_int___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ServantSkillMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+    byte_4CB5695 = 1;
   }
   skillName = 0;
   actMaxRarity = 0;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_PartyOrganizationUtility__get_Instance__);
   if ( !eventUpValItem || !Instance )
     goto LABEL_23;
   if ( !PartyOrganizationUtility__IsRarityRestriction(
@@ -90,8 +90,8 @@ bool EventUpValIconComponent__GetInvalidEquipEventUpByRarity(
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ServantSkillMaster___);
-  Instance = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_SkillLvMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantSkillMaster___);
+  Instance = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_SkillLvMaster___);
   if ( !Master_object
     || (v10 = (SkillLvMaster_o *)Instance,
         Instance = ServantSkillMaster__getServantSkillList((ServantSkillMaster_o *)Master_object, equipSvtId, 0),
@@ -99,7 +99,7 @@ bool EventUpValIconComponent__GetInvalidEquipEventUpByRarity(
         !Instance) )
   {
 LABEL_23:
-    sub_1C3E7C0(Instance, v8);
+    sub_1C6BC60(Instance, v8);
   }
   v11 = *((_DWORD *)Instance + 6);
   v12 = Instance;
@@ -109,7 +109,7 @@ LABEL_23:
   while ( 1 )
   {
     if ( v13 >= (unsigned int)v11 )
-      sub_1C3E7C8(Instance, v8);
+      sub_1C6BC68(Instance);
     v14 = *((_QWORD *)v12 + v13 + 4);
     if ( !v14 )
       goto LABEL_23;
@@ -126,7 +126,7 @@ LABEL_23:
         Instance = (void *)System_Array__IndexOf_int_(
                              *((System_Int32_array **)Instance + 4),
                              funcGroupEntity->fields.funcId,
-                             (const MethodInfo_3200C2C *)Method_System_Array_IndexOf_int___);
+                             (const MethodInfo_324317C *)Method_System_Array_IndexOf_int___);
         if ( ((unsigned int)Instance & 0x80000000) == 0 )
           return 1;
       }
@@ -155,7 +155,7 @@ bool EventUpValIconComponent__ParameterChange(EventUpValIconComponent_o *this, i
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   activeSelf = UnityEngine_GameObject__get_activeSelf(gameObject, 0);
   if ( activeSelf )
     EventUpValIconComponent__SetIconLabel(this, count, v7);
@@ -175,18 +175,18 @@ void EventUpValIconComponent__Set(
   __int64 v12; // x1
   const MethodInfo *v13; // x5
 
-  if ( (byte_4C5612A & 1) == 0 )
+  if ( (byte_4CB5691 & 1) == 0 )
   {
-    sub_1C3E564(&int___TypeInfo);
-    byte_4C5612A = 1;
+    sub_1C6BA08(&int___TypeInfo);
+    byte_4CB5691 = 1;
   }
-  v11 = sub_1C3E60C(int___TypeInfo, 1);
+  v11 = sub_1C6BAB0(int___TypeInfo, 1);
   if ( !v11 )
-    sub_1C3E7C0(0, v12);
+    sub_1C6BC60(0, v12);
   if ( !*(_DWORD *)(v11 + 24) )
-    sub_1C3E7C8(v11, v12);
+    sub_1C6BC68(v11);
   *(_DWORD *)(v11 + 32) = equipSvtId;
-  EventUpValIconComponent__Set_40930324(
+  EventUpValIconComponent__Set_41115576(
     this,
     eventUpValItemList,
     (System_Int32_array *)v11,
@@ -212,10 +212,10 @@ void EventUpValIconComponent__SetAlpha(EventUpValIconComponent_o *this, float al
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v17; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5612F & 1) == 0 )
+  if ( (byte_4CB5696 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5612F = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB5696 = 1;
   }
   iconSprite = (UIWidget_o *)this->fields.iconSprite;
   if ( !iconSprite || !this->fields.paramLabel )
@@ -269,7 +269,7 @@ void EventUpValIconComponent__SetAlpha(EventUpValIconComponent_o *this, float al
       return;
     }
 LABEL_26:
-    sub_1C3E7C0(iconSprite, method);
+    sub_1C6BC60(iconSprite, method);
   }
 }
 
@@ -283,10 +283,10 @@ void EventUpValIconComponent__SetIconLabel(EventUpValIconComponent_o *this, int3
   float v8; // s0
   Il2CppObject *Instance; // x0
 
-  if ( (byte_4C5612C & 1) == 0 )
+  if ( (byte_4CB5693 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    byte_4C5612C = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    byte_4CB5693 = 1;
   }
   eventUpValItemList = this->fields.eventUpValItemList;
   if ( eventUpValItemList && (max_length = eventUpValItemList->max_length) != 0 )
@@ -299,9 +299,9 @@ void EventUpValIconComponent__SetIconLabel(EventUpValIconComponent_o *this, int3
     else
     {
       EventUpValIconComponent__SetParam(this, count % (int)max_length, method);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
       if ( !Instance )
-        sub_1C3E7C0(0, v7);
+        sub_1C6BC60(0, v7);
       v8 = *((float *)&Instance[3].klass + 1);
     }
     EventUpValIconComponent__SetAlpha(this, v8, v7);
@@ -365,26 +365,26 @@ void EventUpValIconComponent__SetParam(EventUpValIconComponent_o *this, int32_t 
   UnityEngine_Color_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v53; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C5612D & 1) == 0 )
+  if ( (byte_4CB5694 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_All_int___);
-    sub_1C3E564(&EventUpValIconComponent_TypeInfo);
-    sub_1C3E564(&System_Func_int__bool__TypeInfo);
-    sub_1C3E564(&System_Math_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_EventUpValIconComponent___c__DisplayClass24_0__SetParam_b__0__);
-    sub_1C3E564(&EventUpValIconComponent___c__DisplayClass24_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_19235/*"event_logo_mini_"*/);
-    byte_4C5612D = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_All_int___);
+    sub_1C6BA08(&EventUpValIconComponent_TypeInfo);
+    sub_1C6BA08(&System_Func_int__bool__TypeInfo);
+    sub_1C6BA08(&System_Math_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_EventUpValIconComponent___c__DisplayClass24_0__SetParam_b__0__);
+    sub_1C6BA08(&EventUpValIconComponent___c__DisplayClass24_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_19266/*"event_logo_mini_"*/);
+    byte_4CB5694 = 1;
   }
   v48 = 0;
-  v5 = sub_1C3E7B0(EventUpValIconComponent___c__DisplayClass24_0_TypeInfo);
+  v5 = sub_1C6BC54(EventUpValIconComponent___c__DisplayClass24_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_106;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
   eventUpValItemList = this->fields.eventUpValItemList;
   this->fields.invalid = 0;
   if ( !eventUpValItemList )
@@ -394,7 +394,7 @@ void EventUpValIconComponent__SetParam(EventUpValIconComponent_o *this, int32_t 
   v13 = eventUpValItemList->m_Items[num];
   *(_QWORD *)(v5 + 24) = v13;
   v14 = (__int64 *)(v5 + 24);
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 24), (int32_t)v13, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)v13, v10, v11);
   gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_106;
@@ -468,10 +468,10 @@ LABEL_21:
       goto LABEL_106;
     gameObject = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)gameObject, 0);
     v32 = (UnityEngine_Transform_o *)gameObject;
-    if ( !byte_4C506A6 )
+    if ( !byte_4CAFC0E )
     {
-      gameObject = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A6 = 1;
+      gameObject = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC0E = 1;
     }
     if ( !v32 )
       goto LABEL_106;
@@ -595,7 +595,7 @@ LABEL_31:
       LODWORD(v36) = v34 + 16;
     }
     v39 = System_Int32__ToString((int32_t)v36, 0);
-    v40 = System_String__Concat_63636468((System_String_o *)StringLiteral_19235/*"event_logo_mini_"*/, v39, 0);
+    v40 = System_String__Concat_63966792((System_String_o *)StringLiteral_19266/*"event_logo_mini_"*/, v39, 0);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     v38 = AtlasManager__SetBanner(v37, v40, 0);
@@ -664,11 +664,11 @@ LABEL_31:
   equipSvtIds = this->fields.equipSvtIds;
   if ( !equipSvtIds )
 LABEL_106:
-    sub_1C3E7C0(gameObject, messageMaxWidth);
+    sub_1C6BC60(gameObject, messageMaxWidth);
   max_length = equipSvtIds->max_length;
   if ( max_length >= 2 )
   {
-    v47 = (System_Func_int__bool__o *)sub_1C3E7B0(System_Func_int__bool__TypeInfo);
+    v47 = (System_Func_int__bool__o *)sub_1C6BC54(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       v47,
       (Il2CppObject *)v5,
@@ -677,13 +677,13 @@ LABEL_106:
     if ( !System_Linq_Enumerable__All_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)equipSvtIds,
             (System_Func_TSource__bool__o *)v47,
-            (const MethodInfo_31038C8 *)Method_System_Linq_Enumerable_All_int___) )
+            (const MethodInfo_31451C0 *)Method_System_Linq_Enumerable_All_int___) )
       return;
     goto LABEL_104;
   }
   if ( !max_length )
 LABEL_107:
-    sub_1C3E7C8(gameObject, messageMaxWidth);
+    sub_1C6BC68(gameObject);
   if ( !EventUpValIconComponent__GetInvalidEquipEventUpByRarity(this, equipSvtIds->m_Items[0], v44, v43) )
     return;
 LABEL_104:
@@ -692,7 +692,7 @@ LABEL_104:
 
 
 // local variable allocation has failed, the output may be wrong!
-void EventUpValIconComponent__Set_40930324(
+void EventUpValIconComponent__Set_41115576(
         EventUpValIconComponent_o *this,
         EventMargeItemUpValInfo_array *eventUpValItemList,
         System_Int32_array *equipSvtIds,
@@ -710,17 +710,17 @@ void EventUpValIconComponent__Set_40930324(
   const MethodInfo *v17; // x1
 
   v8 = equipSvtIds;
-  if ( (byte_4C5612B & 1) == 0 )
+  if ( (byte_4CB5692 & 1) == 0 )
   {
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
-    byte_4C5612B = 1;
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    byte_4CB5692 = 1;
   }
   p_eventUpValItemList = &this->fields.eventUpValItemList;
   if ( eventUpValItemList )
   {
     this->fields.eventUpValItemList = eventUpValItemList;
-    sub_1C3E508(
+    sub_1C6B9AC(
       (CGThumbnailListItem_o *)p_eventUpValItemList,
       (int32_t)eventUpValItemList,
       (int32_t)equipSvtIds,
@@ -729,24 +729,24 @@ void EventUpValIconComponent__Set_40930324(
     this->fields.servantRarity = servantRarity;
     if ( !v8 || !v8->max_length )
     {
-      Instance = (Il2CppObject *)sub_1C3E60C(int___TypeInfo, 1);
+      Instance = (Il2CppObject *)sub_1C6BAB0(int___TypeInfo, 1);
       if ( !Instance )
         goto LABEL_13;
       v8 = (System_Int32_array *)Instance;
       if ( !LODWORD(Instance[1].monitor) )
-        sub_1C3E7C8(Instance, v15);
+        sub_1C6BC68(Instance);
       LODWORD(Instance[2].klass) = -1;
     }
     this->fields.equipSvtIds = v8;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.equipSvtIds, (int32_t)v8, v12, v13);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.equipSvtIds, (int32_t)v8, v12, v13);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
     if ( Instance )
     {
       SwitchParameterDisplayManager__AddComponent(
         (SwitchParameterDisplayManager_o *)Instance,
         (SwitchParameterDisplayComponent_o *)this,
         0);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_SwitchParameterDisplayManager__get_Instance__);
       if ( Instance )
       {
         EventUpValIconComponent__SetIconLabel(this, (int32_t)Instance[3].klass, v16);
@@ -754,10 +754,10 @@ void EventUpValIconComponent__Set_40930324(
       }
     }
 LABEL_13:
-    sub_1C3E7C0(Instance, v15);
+    sub_1C6BC60(Instance, v15);
   }
   this->fields.eventUpValItemList = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)p_eventUpValItemList, 0, (int32_t)equipSvtIds, *(const MethodInfo **)&servantId);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_eventUpValItemList, 0, (int32_t)equipSvtIds, *(const MethodInfo **)&servantId);
   EventUpValIconComponent__ClearParam(this, v17);
 }
 
@@ -781,7 +781,6 @@ void EventUpValIconComponent___c__DisplayClass24_0___ctor(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool EventUpValIconComponent___c__DisplayClass24_0___SetParam_b__0(
         EventUpValIconComponent___c__DisplayClass24_0_o *this,
         int32_t equipSvtId,
@@ -790,7 +789,7 @@ bool EventUpValIconComponent___c__DisplayClass24_0___SetParam_b__0(
   const MethodInfo *v3; // x3
 
   if ( !this->fields.__4__this )
-    sub_1C3E7C0(this, *(_QWORD *)&equipSvtId);
+    sub_1C6BC60(this, equipSvtId);
   return EventUpValIconComponent__GetInvalidEquipEventUpByRarity(
            this->fields.__4__this,
            equipSvtId,

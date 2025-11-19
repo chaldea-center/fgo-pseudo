@@ -35,27 +35,27 @@ void WarBoardBattleResultRequest__beginRequest(
   const MethodInfo *v37; // x3
   const MethodInfo *v38; // x1
 
-  if ( (byte_4C589D0 & 1) == 0 )
+  if ( (byte_4CB7F4C & 1) == 0 )
   {
-    sub_1C3E564(&CatAndMouseGame_TypeInfo);
-    sub_1C3E564(&System_Convert_TypeInfo);
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Dictionary_string__object___ToArray__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C3E564(&StringLiteral_23668/*"stageId"*/);
-    sub_1C3E564(&StringLiteral_23173/*"routeSelect"*/);
-    sub_1C3E564(&StringLiteral_24511/*"useTreasureDevices"*/);
-    sub_1C3E564(&StringLiteral_24764/*"warBoardBattleInfo"*/);
-    sub_1C3E564(&StringLiteral_23884/*"svtCommonFlagList"*/);
-    sub_1C3E564(&StringLiteral_17107/*"battleStatus"*/);
-    sub_1C3E564(&StringLiteral_24032/*"tdPlayed"*/);
-    sub_1C3E564(&StringLiteral_24730/*"voicePlayedList"*/);
-    sub_1C3E564(&StringLiteral_17093/*"battleId"*/);
-    sub_1C3E564(&StringLiteral_17098/*"battleResult"*/);
-    sub_1C3E564(&StringLiteral_16751/*"aliveUniqueIds"*/);
-    byte_4C589D0 = 1;
+    sub_1C6BA08(&CatAndMouseGame_TypeInfo);
+    sub_1C6BA08(&System_Convert_TypeInfo);
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Dictionary_string__object___ToArray__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C6BA08(&StringLiteral_23742/*"stageId"*/);
+    sub_1C6BA08(&StringLiteral_23249/*"routeSelect"*/);
+    sub_1C6BA08(&StringLiteral_24594/*"useTreasureDevices"*/);
+    sub_1C6BA08(&StringLiteral_24854/*"warBoardBattleInfo"*/);
+    sub_1C6BA08(&StringLiteral_23958/*"svtCommonFlagList"*/);
+    sub_1C6BA08(&StringLiteral_17104/*"battleStatus"*/);
+    sub_1C6BA08(&StringLiteral_24109/*"tdPlayed"*/);
+    sub_1C6BA08(&StringLiteral_24820/*"voicePlayedList"*/);
+    sub_1C6BA08(&StringLiteral_17090/*"battleId"*/);
+    sub_1C6BA08(&StringLiteral_17095/*"battleResult"*/);
+    sub_1C6BA08(&StringLiteral_16747/*"aliveUniqueIds"*/);
+    byte_4CB7F4C = 1;
   }
-  Instance = (WarBoardData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = (WarBoardData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   Instance = (WarBoardData_o *)Instance[1].fields.playedStageReinforcementsList;
@@ -64,40 +64,40 @@ void WarBoardBattleResultRequest__beginRequest(
   Instance->fields.localSaveTiming = 4;
   WarBoardData__LocalSave(Instance, 0, 0);
   this->fields.subCallBack = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.subCallBack, (int32_t)callback, v13, v14);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23668/*"stageId"*/, stageId, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.subCallBack, (int32_t)callback, v13, v14);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23742/*"stageId"*/, stageId, v15);
   if ( !arg )
     goto LABEL_15;
-  RequestBase__addField_44302376(
+  RequestBase__addField_44468288(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17093/*"battleId"*/,
+    (System_String_o *)StringLiteral_17090/*"battleId"*/,
     arg->fields.battleId,
     v16);
   v17 = BattleResultRequest_Argument__ConvertVoicePlayedData(arg, 0);
-  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_24730/*"voicePlayedList"*/, v17, v18);
+  RequestBase__addField_44471996((RequestBase_o *)this, (System_String_o *)StringLiteral_24820/*"voicePlayedList"*/, v17, v18);
   Instance = (WarBoardData_o *)arg->fields.firstNpPlayList;
   if ( !Instance )
     goto LABEL_15;
   v19 = System_Collections_Generic_List_object___ToArray(
           (System_Collections_Generic_List_object__o *)Instance,
-          (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_Dictionary_string__object___ToArray__);
+          (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_Dictionary_string__object___ToArray__);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v20 = JsonManager__toJson(&v19->obj, 0, 0, 0);
-  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_24032/*"tdPlayed"*/, v20, v21);
+  RequestBase__addField_44471996((RequestBase_o *)this, (System_String_o *)StringLiteral_24109/*"tdPlayed"*/, v20, v21);
   Instance = (WarBoardData_o *)arg->fields.playerServantNoblePhantasmUsageData;
   if ( !Instance )
 LABEL_15:
-    sub_1C3E7C0(Instance, v12);
+    sub_1C6BC60(Instance, v12);
   v22 = PlayerServantNoblePhantasmUsageData__ConvertToJsonString((PlayerServantNoblePhantasmUsageData_o *)Instance, 0);
-  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_24511/*"useTreasureDevices"*/, v22, v23);
+  RequestBase__addField_44471996((RequestBase_o *)this, (System_String_o *)StringLiteral_24594/*"useTreasureDevices"*/, v22, v23);
   v24 = JsonManager__toJson((Il2CppObject *)arg->fields.svtCommonFlagDict, 0, 0, 0);
-  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_23884/*"svtCommonFlagList"*/, v24, v25);
+  RequestBase__addField_44471996((RequestBase_o *)this, (System_String_o *)StringLiteral_23958/*"svtCommonFlagList"*/, v24, v25);
   v26 = JsonManager__toJson(&arg->fields.aliveUniqueIds->obj, 0, 0, 0);
-  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_16751/*"aliveUniqueIds"*/, v26, v27);
+  RequestBase__addField_44471996((RequestBase_o *)this, (System_String_o *)StringLiteral_16747/*"aliveUniqueIds"*/, v26, v27);
   v28 = BattleResultRequest_Argument__ConvertBattleStatus(arg, 0);
-  RequestBase__addField_44302376((RequestBase_o *)this, (System_String_o *)StringLiteral_17107/*"battleStatus"*/, v28, v29);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17098/*"battleResult"*/, arg->fields.battleResult, v30);
+  RequestBase__addField_44468288((RequestBase_o *)this, (System_String_o *)StringLiteral_17104/*"battleStatus"*/, v28, v29);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17095/*"battleResult"*/, arg->fields.battleResult, v30);
   v31 = (RequestBase_o *)JsonManager__toJson(warBoardBattleInfo, 0, 0, 0);
   v33 = RequestBase__PackToMessagePack(v31, (Il2CppObject *)v31, v32);
   if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
@@ -106,10 +106,10 @@ LABEL_15:
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
   v35 = System_Convert__ToBase64String(v34, 0);
-  RequestBase__addField_44302832((RequestBase_o *)this, (System_String_o *)StringLiteral_24764/*"warBoardBattleInfo"*/, v35, v36);
-  RequestBase__addField_44302936(
+  RequestBase__addField_44471996((RequestBase_o *)this, (System_String_o *)StringLiteral_24854/*"warBoardBattleInfo"*/, v35, v36);
+  RequestBase__addField_44469988(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_23173/*"routeSelect"*/,
+    (System_String_o *)StringLiteral_23249/*"routeSelect"*/,
     &arg->fields.routeSelect->obj,
     v37);
   RequestBase__beginRequest((RequestBase_o *)this, v38);
@@ -138,10 +138,10 @@ bool WarBoardBattleResultRequest__errorRequest(
 
 void WarBoardBattleResultRequest__errorRetry(WarBoardBattleResultRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C589CF & 1) == 0 )
+  if ( (byte_4CB7F4B & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C589CF = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB7F4B = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -153,16 +153,16 @@ System_String_o *WarBoardBattleResultRequest__getURL(WarBoardBattleResultRequest
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C589CE & 1) == 0 )
+  if ( (byte_4CB7F4A & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_24749/*"warBoard/battleResult"*/);
-    byte_4C589CE = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_24839/*"warBoard/battleResult"*/);
+    byte_4CB7F4A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_24749/*"warBoard/battleResult"*/, 0);
+  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_24839/*"warBoard/battleResult"*/, 0);
 }
 
 
@@ -190,16 +190,16 @@ void WarBoardBattleResultRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v16; // x8
 
-  if ( (byte_4C589D1 & 1) == 0 )
+  if ( (byte_4CB7F4D & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_string___);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    sub_1C3E564(&StringLiteral_24765/*"warBoardData"*/);
-    byte_4C589D1 = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_string___);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    sub_1C6BA08(&StringLiteral_24855/*"warBoardData"*/);
+    byte_4CB7F4D = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -210,19 +210,19 @@ void WarBoardBattleResultRequest__requestCompleted(
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_24765/*"warBoardData"*/,
-             (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_24855/*"warBoardData"*/,
+             (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v11 = RequestBase__UnpackToMessagePack((RequestBase_o *)Item, Item, v10);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       success,
-      (Il2CppObject *)StringLiteral_24765/*"warBoardData"*/,
+      (Il2CppObject *)StringLiteral_24855/*"warBoardData"*/,
       v11,
-      (const MethodInfo_34757CC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (const MethodInfo_34BB928 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     subCallBack = (System_Action_T__o *)this->fields.subCallBack;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v13 = (Il2CppObject *)JsonManager__toJson((Il2CppObject *)success, 0, 0, 0);
-    ActionExtensions__Call_object_(subCallBack, v13, (const MethodInfo_3046360 *)Method_ActionExtensions_Call_string___);
+    ActionExtensions__Call_object_(subCallBack, v13, (const MethodInfo_3085F64 *)Method_ActionExtensions_Call_string___);
     v14 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0);
     CallBack = this->fields.CallBack;
     if ( CallBack )
@@ -237,7 +237,7 @@ void WarBoardBattleResultRequest__requestCompleted(
     if ( v16 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v16->fields.invoke_impl)(
         v16->fields.method_code,
-        StringLiteral_22233/*"ng"*/,
+        StringLiteral_22301/*"ng"*/,
         v16->fields.method);
   }
 }

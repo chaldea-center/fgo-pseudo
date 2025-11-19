@@ -1,9 +1,9 @@
 void EventEquipSkillPartsAddPartsDialog___ctor(EventEquipSkillPartsAddPartsDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C50FD1 & 1) == 0 )
+  if ( (byte_4CB0519 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C50FD1 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB0519 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -17,21 +17,21 @@ void EventEquipSkillPartsAddPartsDialog__Init(EventEquipSkillPartsAddPartsDialog
   __int64 v4; // x1
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4C50FCD & 1) == 0 )
+  if ( (byte_4CB0515 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4C50FCD = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4CB0515 = 1;
   }
   this->fields.closeCallback = 0;
-  sub_1C3E508(&this->fields.closeCallback, 0);
+  sub_1C6B9AC(&this->fields.closeCallback, 0);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform || (transform = UnityEngine_Transform__get_parent(transform, 0)) == 0 )
-    sub_1C3E7C0(transform, v4);
+    sub_1C6BC60(transform, v4);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)transform,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.basePanel = (struct UIPanel_o *)Component_object;
-  sub_1C3E508(&this->fields.basePanel, Component_object);
+  sub_1C6B9AC(&this->fields.basePanel, Component_object);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
 
@@ -44,21 +44,21 @@ void EventEquipSkillPartsAddPartsDialog__OnClickCloseButton(
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C50FCF & 1) == 0 )
+  if ( (byte_4CB0517 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_EventEquipSkillPartsAddPartsDialog_OnClickCloseButton__);
-    sub_1C3E564(&Method_EventEquipSkillPartsAddPartsDialog__OnClickCloseButton_b__9_0__);
-    byte_4C50FCF = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_EventEquipSkillPartsAddPartsDialog_OnClickCloseButton__);
+    sub_1C6BA08(&Method_EventEquipSkillPartsAddPartsDialog__OnClickCloseButton_b__9_0__);
+    byte_4CB0517 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_EventEquipSkillPartsAddPartsDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventEquipSkillPartsAddPartsDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_EventEquipSkillPartsAddPartsDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_EventEquipSkillPartsAddPartsDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(
       v5,
       (Il2CppObject *)this,
@@ -85,13 +85,13 @@ void EventEquipSkillPartsAddPartsDialog__Open(
   int32_t size; // w8
   float twoDisplayScrollBarValue; // s0
 
-  if ( (byte_4C50FCE & 1) == 0 )
+  if ( (byte_4CB0516 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_1918/*"ADD_PARTS_DIALOG_TITLE"*/);
-    sub_1C3E564(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4C50FCE = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1911/*"ADD_PARTS_DIALOG_TITLE"*/);
+    sub_1C6BA08(&StringLiteral_3677/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4CB0516 = 1;
   }
   EventEquipSkillPartsAddPartsDialog__Init(this, *(const MethodInfo **)&eventId);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -101,17 +101,17 @@ void EventEquipSkillPartsAddPartsDialog__Open(
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1918/*"ADD_PARTS_DIALOG_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1911/*"ADD_PARTS_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_18;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   closeLabel = this->fields.closeLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3677/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
     goto LABEL_18;
   UILabel__set_text(closeLabel, (System_String_o *)gameObject, 0);
   this->fields.closeCallback = closeCallback;
-  sub_1C3E508(&this->fields.closeCallback, closeCallback);
+  sub_1C6B9AC(&this->fields.closeCallback, closeCallback);
   gameObject = (UnityEngine_GameObject_o *)this->fields.listViewManager;
   if ( !gameObject )
     goto LABEL_18;
@@ -132,7 +132,7 @@ void EventEquipSkillPartsAddPartsDialog__Open(
       goto LABEL_16;
     }
 LABEL_18:
-    sub_1C3E7C0(gameObject, v9);
+    sub_1C6BC60(gameObject, v9);
   }
   if ( size == 1 )
   {
@@ -160,18 +160,18 @@ void EventEquipSkillPartsAddPartsDialog___OnClickCloseButton_b__9_0(
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C50FD2 & 1) == 0 )
+  if ( (byte_4CB051A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C50FD2 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB051A = 1;
   }
   ActionExtensions__Call(this->fields.closeCallback, 0);
   this->fields.closeCallback = 0;
-  sub_1C3E508(&this->fields.closeCallback, 0);
+  sub_1C6B9AC(&this->fields.closeCallback, 0);
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71341564(gameObject, 0);
+  UnityEngine_Object__Destroy_71659676(gameObject, 0);
 }
 
 
@@ -183,10 +183,10 @@ UnityEngine_GameObject_o *EventEquipSkillPartsAddPartsDialog__get_closeBtnObject
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4C50FD0 & 1) == 0 )
+  if ( (byte_4CB0518 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C50FD0 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB0518 = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -195,6 +195,6 @@ UnityEngine_GameObject_o *EventEquipSkillPartsAddPartsDialog__get_closeBtnObject
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }

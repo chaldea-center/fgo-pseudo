@@ -6,14 +6,14 @@ void NpcStepInBattleLogicTask___ctor(
 {
   const MethodInfo *v4; // x4
 
-  if ( (byte_4C5A051 & 1) == 0 )
+  if ( (byte_4CB9614 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_9346/*"NPC_STEPIN"*/);
-    byte_4C5A051 = 1;
+    sub_1C6BA08(&StringLiteral_9343/*"NPC_STEPIN"*/);
+    byte_4CB9614 = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,
-    (System_String_o *)StringLiteral_9346/*"NPC_STEPIN"*/,
+    (System_String_o *)StringLiteral_9343/*"NPC_STEPIN"*/,
     targetId,
     isForcedSpeedOne,
     v4);

@@ -1,9 +1,9 @@
 void MasterMissionReceiveResultListViewItemDraw___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C59F1E & 1) == 0 )
+  if ( (byte_4CB94DE & 1) == 0 )
   {
-    sub_1C3E564(&MasterMissionReceiveResultListViewItemDraw_TypeInfo);
-    byte_4C59F1E = 1;
+    sub_1C6BA08(&MasterMissionReceiveResultListViewItemDraw_TypeInfo);
+    byte_4CB94DE = 1;
   }
   LODWORD(MasterMissionReceiveResultListViewItemDraw_TypeInfo->static_fields->MESSAGE_LABEL_WIDTH) = (struct MasterMissionReceiveResultListViewItemDraw_StaticFields)1142947840;
 }
@@ -25,10 +25,10 @@ void MasterMissionReceiveResultListViewItemDraw__SetItem(
   UILabel_o *messageLabel; // x0
   UILabel_o *v6; // x19
 
-  if ( (byte_4C59F1D & 1) == 0 )
+  if ( (byte_4CB94DD & 1) == 0 )
   {
-    sub_1C3E564(&MasterMissionReceiveResultListViewItemDraw_TypeInfo);
-    byte_4C59F1D = 1;
+    sub_1C6BA08(&MasterMissionReceiveResultListViewItemDraw_TypeInfo);
+    byte_4CB94DD = 1;
   }
   messageLabel = this->fields.messageLabel;
   if ( !messageLabel )
@@ -40,8 +40,8 @@ void MasterMissionReceiveResultListViewItemDraw__SetItem(
     j_il2cpp_runtime_class_init_0(MasterMissionReceiveResultListViewItemDraw_TypeInfo);
   if ( !v6 )
 LABEL_8:
-    sub_1C3E7C0(messageLabel, message);
-  UILabel__SetCondensedScale_49599236(
+    sub_1C6BC60(messageLabel, message);
+  UILabel__SetCondensedScale_49828120(
     v6,
     MasterMissionReceiveResultListViewItemDraw_TypeInfo->static_fields->MESSAGE_LABEL_WIDTH,
     0.0,

@@ -29,7 +29,7 @@ void ServantCollectionCharaGraphSortLogic__SetSortValueLocal(
       goto LABEL_13;
     }
 LABEL_15:
-    sub_1C3E7C0(ListViewItem, v4);
+    sub_1C6BC60(ListViewItem, v4);
   }
   if ( sortKind == 8 )
   {
@@ -68,10 +68,10 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic_
   ServantCollectionCharaGraphSortLogic_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C560A3 & 1) == 0 )
+  if ( (byte_4CB560A & 1) == 0 )
   {
-    sub_1C3E564(&CharaGraphServantCollectionListViewItem_TypeInfo);
-    byte_4C560A3 = 1;
+    sub_1C6BA08(&CharaGraphServantCollectionListViewItem_TypeInfo);
+    byte_4CB560A = 1;
   }
   p_listViewItem = (CGThumbnailListItem_o *)&this->fields.listViewItem;
   listViewItem = this->fields.listViewItem;
@@ -85,10 +85,10 @@ CharaGraphServantCollectionListViewItem_o *ServantCollectionCharaGraphSortLogic_
   {
     item = this->fields.item;
     p_listViewItem->klass = (CGThumbnailListItem_c *)listViewItem;
-    sub_1C3E508(p_listViewItem, (int32_t)item, v2, v3);
+    sub_1C6B9AC(p_listViewItem, (int32_t)item, v2, v3);
     return listViewItem;
   }
-  sub_1C3EA80(this->fields.item);
+  sub_1C6BFFC(this->fields.item);
   ServantCollectionCharaGraphSortLogic__SetSortValueLocal(v10, v11);
   return result;
 }

@@ -8,10 +8,10 @@ void DebugInputComponent__cancel(DebugInputComponent_o *this, const MethodInfo *
 {
   struct DebugInputComponent_EndInputCallBack_o *inputCallBack; // x8
 
-  if ( (byte_4C58352 & 1) == 0 )
+  if ( (byte_4CB78C0 & 1) == 0 )
   {
-    sub_1C3E564(&string_TypeInfo);
-    byte_4C58352 = 1;
+    sub_1C6BA08(&string_TypeInfo);
+    byte_4CB78C0 = 1;
   }
   inputCallBack = this->fields.inputCallBack;
   if ( inputCallBack )
@@ -32,17 +32,17 @@ void DebugInputComponent__setCallBack(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C58351 & 1) == 0 )
+  if ( (byte_4CB78BF & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58351 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB78BF = 1;
   }
   inputField = this->fields.inputField;
   if ( !inputField )
-    sub_1C3E7C0(0, cb);
+    sub_1C6BC60(0, cb);
   UIInput__set_value(inputField, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.inputCallBack = cb;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.inputCallBack, (int32_t)cb, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.inputCallBack, (int32_t)cb, v6, v7);
 }
 
 
@@ -57,7 +57,7 @@ void DebugInputComponent__submit(DebugInputComponent_o *this, const MethodInfo *
   {
     inputField = this->fields.inputField;
     if ( !inputField )
-      sub_1C3E7C0(0, method);
+      sub_1C6BC60(0, method);
     value = UIInput__get_value(inputField, 0);
     ((void (__fastcall *)(intptr_t, System_String_o *, __int64, intptr_t))inputCallBack->fields.invoke_impl)(
       inputCallBack->fields.method_code,
@@ -84,20 +84,20 @@ void DebugInputComponent_EndInputCallBack___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A836B0;
+      v9 = sub_1AA2638;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v11 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v11, 0);
+      v11 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v11, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -107,15 +107,14 @@ LABEL_8:
   }
   if ( v8 != 2 )
     goto LABEL_8;
-  v9 = sub_1A836D8;
+  v9 = sub_1AA2660;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v9;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A83658;
+  this->fields.extra_arg = (intptr_t)sub_1AA25E0;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *DebugInputComponent_EndInputCallBack__BeginInvoke(
         DebugInputComponent_EndInputCallBack_o *this,
         System_String_o *input,
@@ -124,21 +123,19 @@ System_IAsyncResult_o *DebugInputComponent_EndInputCallBack__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v6; // x6
-  __int64 v7; // x7
-  _QWORD v13[3]; // [xsp+8h] [xbp-58h] BYREF
-  bool v14[4]; // [xsp+2Ch] [xbp-34h] BYREF
+  _QWORD v11[3]; // [xsp+8h] [xbp-58h] BYREF
+  bool v12[4]; // [xsp+2Ch] [xbp-34h] BYREF
 
-  v14[0] = submit;
-  if ( (byte_4C58353 & 1) == 0 )
+  v12[0] = submit;
+  if ( (byte_4CB78C1 & 1) == 0 )
   {
-    sub_1C3E564(&bool_TypeInfo);
-    byte_4C58353 = 1;
+    sub_1C6BA08(&bool_TypeInfo);
+    byte_4CB78C1 = 1;
   }
-  v13[2] = 0;
-  v13[0] = input;
-  v13[1] = j_il2cpp_value_box_0(bool_TypeInfo, v14, submit, callback, object, method, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v13, callback, object);
+  v11[2] = 0;
+  v11[0] = input;
+  v11[1] = j_il2cpp_value_box_0(bool_TypeInfo, v12);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v11, callback, object);
 }
 
 
@@ -147,7 +144,7 @@ void DebugInputComponent_EndInputCallBack__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 

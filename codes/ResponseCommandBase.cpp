@@ -1,10 +1,3 @@
-// attributes: thunk
-void ResponseCommandBase___ctor(ResponseCommandBase_o *this, const MethodInfo *method)
-{
-  ResponseData___ctor((ResponseData_o *)this, method);
-}
-
-
 int32_t ResponseCommandBase__ExecuteResponse(
         ResponseCommandBase_o *this,
         ResponseData_o *data,
@@ -18,10 +11,10 @@ System_String_o *ResponseCommandBase__GetCommandName(ResponseCommandBase_o *this
 {
   int32_t v3; // w19
 
-  if ( (byte_4C58948 & 1) == 0 )
+  if ( (byte_4CB7EC4 & 1) == 0 )
   {
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    byte_4C58948 = 1;
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    byte_4CB7EC4 = 1;
   }
   v3 = ((__int64 (__fastcall *)(ResponseCommandBase_o *, const MethodInfo *))this->klass->vtable._4_GetKind.methodPtr)(
          this,

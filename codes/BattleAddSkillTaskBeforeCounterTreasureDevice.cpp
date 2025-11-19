@@ -18,29 +18,29 @@ CreateSkillTaskFromBuffAction_array *BattleAddSkillTaskBeforeCounterTreasureDevi
   const MethodInfo *v7; // x3
   __int64 v9; // x0
 
-  if ( (byte_4C59D3E & 1) == 0 )
+  if ( (byte_4CB92FA & 1) == 0 )
   {
-    sub_1C3E564(&CreateSkillTaskFromBuffAction___TypeInfo);
-    sub_1C3E564(&ForceCreateComboStartSkillTask_TypeInfo);
-    byte_4C59D3E = 1;
+    sub_1C6BA08(&CreateSkillTaskFromBuffAction___TypeInfo);
+    sub_1C6BA08(&ForceCreateComboStartSkillTask_TypeInfo);
+    byte_4CB92FA = 1;
   }
-  v2 = (CreateSkillTaskFromBuffAction_array *)sub_1C3E60C(CreateSkillTaskFromBuffAction___TypeInfo, 1);
-  v3 = (Il2CppObject *)sub_1C3E7B0(ForceCreateComboStartSkillTask_TypeInfo);
+  v2 = (CreateSkillTaskFromBuffAction_array *)sub_1C6BAB0(CreateSkillTaskFromBuffAction___TypeInfo, 1);
+  v3 = (Il2CppObject *)sub_1C6BC54(ForceCreateComboStartSkillTask_TypeInfo);
   System_Object___ctor(v3, 0);
   if ( !v2 )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   if ( v3 )
   {
-    v4 = sub_1C3E6A0(v3, v2->obj.klass->_1.element_class);
+    v4 = sub_1C6BB44(v3, v2->obj.klass->_1.element_class);
     if ( !v4 )
     {
-      v9 = sub_1C3E7E4(0);
-      sub_1C3E68C(v9, 0);
+      v9 = sub_1C6BC84(0);
+      sub_1C6BB30(v9, 0);
     }
   }
   if ( !LODWORD(v2->max_length) )
-    sub_1C3E7C8(v4, v5);
+    sub_1C6BC68(v4);
   v2->m_Items[0] = (CreateSkillTaskFromBuffAction_o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)v2->m_Items, (int32_t)v3, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v2->m_Items, (int32_t)v3, v6, v7);
   return v2;
 }

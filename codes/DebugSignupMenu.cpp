@@ -44,7 +44,7 @@ bool DebugSignupMenu__CloseSignupInput(DebugSignupMenu_o *this, const MethodInfo
         (signupLineInput1 = (UILineInput_o *)this->fields.signupRootObject) == 0) )
   {
 LABEL_11:
-    sub_1C3E7C0(signupLineInput1, method);
+    sub_1C6BC60(signupLineInput1, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)signupLineInput1, 0, 0);
   return 1;
@@ -87,7 +87,7 @@ bool DebugSignupMenu__CloseTakeoverInput(DebugSignupMenu_o *this, const MethodIn
         (takeoverLineInput1 = (UILineInput_o *)this->fields.takeoverRootObject) == 0) )
   {
 LABEL_10:
-    sub_1C3E7C0(takeoverLineInput1, method);
+    sub_1C6BC60(takeoverLineInput1, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)takeoverLineInput1, 0, 0);
   return 1;
@@ -114,36 +114,36 @@ void DebugSignupMenu__OnChangeInputSignup(DebugSignupMenu_o *this, const MethodI
   struct UIButton_o *v18; // x0
   __int64 v19; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C54201 & 1) == 0 )
+  if ( (byte_4CB3753 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C54201 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB3753 = 1;
   }
   signupLineInput1 = this->fields.signupLineInput1;
   if ( !signupLineInput1 )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   Text = UILineInput__GetText(signupLineInput1, 0);
   signupIntegerInput1 = this->fields.signupIntegerInput1;
   if ( !signupIntegerInput1 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   v7 = UILineInput__GetText(signupIntegerInput1, 0);
   v9 = System_Int32__Parse(v7, 0);
   signupIntegerInput2 = this->fields.signupIntegerInput2;
   if ( !signupIntegerInput2 )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   v11 = UILineInput__GetText(signupIntegerInput2, 0);
   v12 = System_Int32__Parse(v11, 0);
   v19 = 0;
   v13.fields._dateData = (uint64_t)&v19;
-  System_DateTime___ctor_65022244(v13, 2000, v9, v12, 0);
+  System_DateTime___ctor_65350956(v13, 2000, v9, v12, 0);
   v15 = System_String__op_Inequality(Text, (System_String_o *)StringLiteral_1/*""*/, 0);
   signupDecideButton = (UnityEngine_Behaviour_o *)this->fields.signupDecideButton;
   if ( !signupDecideButton )
-    sub_1C3E7C0(0, v14);
+    sub_1C6BC60(0, v14);
   UnityEngine_Behaviour__set_enabled(signupDecideButton, v15, 0);
   v18 = this->fields.signupDecideButton;
   if ( !v18 )
-    sub_1C3E7C0(0, v17);
+    sub_1C6BC60(0, v17);
   ((void (__fastcall *)(struct UIButton_o *, bool, const MethodInfo *))v18->klass->vtable._5_set_isEnabled.methodPtr)(
     v18,
     v15,
@@ -168,22 +168,22 @@ void DebugSignupMenu__OnChangeInputTakeover(DebugSignupMenu_o *this, const Metho
   __int64 v15; // x1
   struct UIButton_o *v16; // x0
 
-  if ( (byte_4C54204 & 1) == 0 )
+  if ( (byte_4CB3756 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C54204 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB3756 = 1;
   }
   takeoverLineInput1 = this->fields.takeoverLineInput1;
   if ( !takeoverLineInput1 )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   Text = UILineInput__GetText(takeoverLineInput1, 0);
   takeoverLineInput2 = this->fields.takeoverLineInput2;
   if ( !takeoverLineInput2 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   v8 = UILineInput__GetText(takeoverLineInput2, 0);
   takeoverLineInput3 = this->fields.takeoverLineInput3;
   if ( !takeoverLineInput3 )
-    sub_1C3E7C0(0, v7);
+    sub_1C6BC60(0, v7);
   v10 = UILineInput__GetText(takeoverLineInput3, 0);
   if ( System_String__op_Inequality(Text, (System_String_o *)StringLiteral_1/*""*/, 0)
     && System_String__op_Inequality(v8, (System_String_o *)StringLiteral_1/*""*/, 0) )
@@ -197,11 +197,11 @@ void DebugSignupMenu__OnChangeInputTakeover(DebugSignupMenu_o *this, const Metho
   }
   takeoverDecideButton = (UnityEngine_Behaviour_o *)this->fields.takeoverDecideButton;
   if ( !takeoverDecideButton )
-    sub_1C3E7C0(0, v11);
+    sub_1C6BC60(0, v11);
   UnityEngine_Behaviour__set_enabled(takeoverDecideButton, v13, 0);
   v16 = this->fields.takeoverDecideButton;
   if ( !v16 )
-    sub_1C3E7C0(0, v15);
+    sub_1C6BC60(0, v15);
   ((void (__fastcall *)(struct UIButton_o *, bool, const MethodInfo *))v16->klass->vtable._5_set_isEnabled.methodPtr)(
     v16,
     v13,
@@ -214,16 +214,16 @@ void DebugSignupMenu__OnClickInputSignup(DebugSignupMenu_o *this, const MethodIn
   __int64 v3; // x1
   PlayMakerFSM_o *myFSM; // x0
 
-  if ( (byte_4C54202 & 1) == 0 )
+  if ( (byte_4CB3754 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_12222/*"SIGNUP_INPUT_OK"*/);
-    byte_4C54202 = 1;
+    sub_1C6BA08(&StringLiteral_12219/*"SIGNUP_INPUT_OK"*/);
+    byte_4CB3754 = 1;
   }
   UnityEngine_Input__set_imeCompositionMode(0, 0);
   myFSM = this->fields.myFSM;
   if ( !myFSM )
-    sub_1C3E7C0(0, v3);
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_12222/*"SIGNUP_INPUT_OK"*/, 0);
+    sub_1C6BC60(0, v3);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_12219/*"SIGNUP_INPUT_OK"*/, 0);
 }
 
 
@@ -232,16 +232,16 @@ void DebugSignupMenu__OnClickInputTakeover(DebugSignupMenu_o *this, const Method
   __int64 v3; // x1
   PlayMakerFSM_o *myFSM; // x0
 
-  if ( (byte_4C54205 & 1) == 0 )
+  if ( (byte_4CB3757 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_13341/*"TAKEOVER_INPUT_OK"*/);
-    byte_4C54205 = 1;
+    sub_1C6BA08(&StringLiteral_13334/*"TAKEOVER_INPUT_OK"*/);
+    byte_4CB3757 = 1;
   }
   UnityEngine_Input__set_imeCompositionMode(0, 0);
   myFSM = this->fields.myFSM;
   if ( !myFSM )
-    sub_1C3E7C0(0, v3);
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_13341/*"TAKEOVER_INPUT_OK"*/, 0);
+    sub_1C6BC60(0, v3);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_13334/*"TAKEOVER_INPUT_OK"*/, 0);
 }
 
 
@@ -273,7 +273,7 @@ bool DebugSignupMenu__Open(DebugSignupMenu_o *this, PlayMakerFSM_o *fsm, const M
 
   this->fields.myFSM = fsm;
   p_myFSM = &this->fields.myFSM;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.myFSM, (int32_t)fsm, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.myFSM, (int32_t)fsm, (int32_t)method, v3);
   UnityEngine_Input__set_imeCompositionMode(1, 0);
   gameObject = (UnityEngine_Component_o *)*(p_myFSM - 14);
   if ( !gameObject
@@ -282,7 +282,7 @@ bool DebugSignupMenu__Open(DebugSignupMenu_o *this, PlayMakerFSM_o *fsm, const M
         (gameObject = (UnityEngine_Component_o *)this->fields.takeoverModeButton) == 0)
     || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
   {
-    sub_1C3E7C0(gameObject, v6);
+    sub_1C6BC60(gameObject, v6);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   DebugSignupMenu__OpenTakeoverInput(this, v8);
@@ -295,10 +295,10 @@ bool DebugSignupMenu__OpenSignupInput(DebugSignupMenu_o *this, const MethodInfo 
   UnityEngine_GameObject_o *signupRootObject; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C54200 & 1) == 0 )
+  if ( (byte_4CB3752 & 1) == 0 )
   {
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C54200 = 1;
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB3752 = 1;
   }
   signupRootObject = this->fields.signupRootObject;
   if ( !signupRootObject )
@@ -335,7 +335,7 @@ bool DebugSignupMenu__OpenSignupInput(DebugSignupMenu_o *this, const MethodInfo 
         (signupRootObject = (UnityEngine_GameObject_o *)this->fields.signupModeButton) == 0) )
   {
 LABEL_13:
-    sub_1C3E7C0(signupRootObject, method);
+    sub_1C6BC60(signupRootObject, method);
   }
   ((void (*)(void))signupRootObject->klass[1]._1.name)();
   return 1;
@@ -347,10 +347,10 @@ bool DebugSignupMenu__OpenTakeoverInput(DebugSignupMenu_o *this, const MethodInf
   UnityEngine_GameObject_o *takeoverRootObject; // x0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C54203 & 1) == 0 )
+  if ( (byte_4CB3755 & 1) == 0 )
   {
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C54203 = 1;
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB3755 = 1;
   }
   takeoverRootObject = this->fields.takeoverRootObject;
   if ( !takeoverRootObject )
@@ -383,7 +383,7 @@ bool DebugSignupMenu__OpenTakeoverInput(DebugSignupMenu_o *this, const MethodInf
         (takeoverRootObject = (UnityEngine_GameObject_o *)this->fields.takeoverModeButton) == 0) )
   {
 LABEL_12:
-    sub_1C3E7C0(takeoverRootObject, method);
+    sub_1C6BC60(takeoverRootObject, method);
   }
   ((void (*)(void))takeoverRootObject->klass[1]._1.name)();
   return 1;
@@ -398,29 +398,29 @@ void DebugSignupMenu__RequestSignup(DebugSignupMenu_o *this, PlayMakerFSM_o *fsm
   __int64 v8; // x1
   RequestBase_o *v9; // x19
 
-  if ( (byte_4C54206 & 1) == 0 )
+  if ( (byte_4CB3758 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DebugSignupMenu_callbackTopSignup__);
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    sub_1C3E564(&Method_NetworkManager_getRequest_TopSignupRequest___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C54206 = 1;
+    sub_1C6BA08(&Method_DebugSignupMenu_callbackTopSignup__);
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    sub_1C6BA08(&Method_NetworkManager_getRequest_TopSignupRequest___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4CB3758 = 1;
   }
   this->fields.myFSM = fsm;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.myFSM, (int32_t)fsm, (int32_t)method, v3);
-  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C3E7B0(NetworkManager_ResultCallbackFunc_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.myFSM, (int32_t)fsm, (int32_t)method, v3);
+  v6 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v6, (Il2CppObject *)this, Method_DebugSignupMenu_callbackTopSignup__, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v6,
-                     (const MethodInfo_3184BE4 *)Method_NetworkManager_getRequest_TopSignupRequest___);
+                     (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_TopSignupRequest___);
   v9 = (RequestBase_o *)Request_object;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
   if ( !v9 )
-    sub_1C3E7C0(Request_object, v8);
+    sub_1C6BC60(Request_object, v8);
   RequestBase__beginRequest(v9, 0);
 }
 
@@ -440,24 +440,24 @@ void DebugSignupMenu__SetupTakeover(DebugSignupMenu_o *this, PlayMakerFSM_o *fsm
   DataManager_c *v15; // x0
   int64_t dateVersion; // x24
 
-  if ( (byte_4C54208 & 1) == 0 )
+  if ( (byte_4CB375A & 1) == 0 )
   {
-    sub_1C3E564(&OptionManager_TypeInfo);
-    sub_1C3E564(&OtherUserNewManager_TypeInfo);
-    sub_1C3E564(&ServantCommentManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    sub_1C3E564(&UserCommandCodeCollectionManager_TypeInfo);
-    sub_1C3E564(&UserCommandCodeNewManager_TypeInfo);
-    sub_1C3E564(&UserEquipNewManager_TypeInfo);
-    sub_1C3E564(&UserServantCollectionManager_TypeInfo);
-    sub_1C3E564(&UserServantNewManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_12019/*"SETUP_OK"*/);
-    byte_4C54208 = 1;
+    sub_1C6BA08(&OptionManager_TypeInfo);
+    sub_1C6BA08(&OtherUserNewManager_TypeInfo);
+    sub_1C6BA08(&ServantCommentManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    sub_1C6BA08(&UserCommandCodeCollectionManager_TypeInfo);
+    sub_1C6BA08(&UserCommandCodeNewManager_TypeInfo);
+    sub_1C6BA08(&UserEquipNewManager_TypeInfo);
+    sub_1C6BA08(&UserServantCollectionManager_TypeInfo);
+    sub_1C6BA08(&UserServantNewManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_12016/*"SETUP_OK"*/);
+    byte_4CB375A = 1;
   }
   this->fields.myFSM = fsm;
   p_myFSM = &this->fields.myFSM;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.myFSM, (int32_t)fsm, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.myFSM, (int32_t)fsm, (int32_t)method, v3);
   takeoverLineInput1 = this->fields.takeoverLineInput1;
   if ( !takeoverLineInput1 )
     goto LABEL_37;
@@ -471,13 +471,13 @@ void DebugSignupMenu__SetupTakeover(DebugSignupMenu_o *this, PlayMakerFSM_o *fsm
     goto LABEL_37;
   v11 = (System_String_o *)takeoverLineInput1;
   Text = UILineInput__GetText(takeoverLineInput3, 0);
-  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !takeoverLineInput1 )
     goto LABEL_37;
-  if ( !byte_4C542CA )
+  if ( !byte_4CB381C )
   {
-    sub_1C3E564(&DataManager_TypeInfo);
-    byte_4C542CA = 1;
+    sub_1C6BA08(&DataManager_TypeInfo);
+    byte_4CB381C = 1;
   }
   v13 = DataManager_TypeInfo;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
@@ -486,13 +486,13 @@ void DebugSignupMenu__SetupTakeover(DebugSignupMenu_o *this, PlayMakerFSM_o *fsm
     v13 = DataManager_TypeInfo;
   }
   dataVersion = v13->static_fields->dataVersion;
-  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !takeoverLineInput1 )
     goto LABEL_37;
-  if ( !byte_4C542CB )
+  if ( !byte_4CB381D )
   {
-    sub_1C3E564(&DataManager_TypeInfo);
-    byte_4C542CB = 1;
+    sub_1C6BA08(&DataManager_TypeInfo);
+    byte_4CB381D = 1;
   }
   v15 = DataManager_TypeInfo;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
@@ -505,15 +505,15 @@ void DebugSignupMenu__SetupTakeover(DebugSignupMenu_o *this, PlayMakerFSM_o *fsm
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
   OptionManager__Initialize(0);
-  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !takeoverLineInput1 )
     goto LABEL_37;
   DataManager__setMasterDataVersion((DataManager_o *)takeoverLineInput1, dataVersion, dateVersion, 0);
-  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !takeoverLineInput1 )
     goto LABEL_37;
   NetworkManager__SetAuth((NetworkManager_o *)takeoverLineInput1, v9, v11, Text, 0);
-  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  takeoverLineInput1 = (UILineInput_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !takeoverLineInput1 )
     goto LABEL_37;
   NetworkManager__WriteAuth((NetworkManager_o *)takeoverLineInput1, 0);
@@ -542,8 +542,8 @@ void DebugSignupMenu__SetupTakeover(DebugSignupMenu_o *this, PlayMakerFSM_o *fsm
   takeoverLineInput1 = (UILineInput_o *)*p_myFSM;
   if ( !*p_myFSM )
 LABEL_37:
-    sub_1C3E7C0(takeoverLineInput1, v7);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)takeoverLineInput1, (System_String_o *)StringLiteral_12019/*"SETUP_OK"*/, 0);
+    sub_1C6BC60(takeoverLineInput1, v7);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)takeoverLineInput1, (System_String_o *)StringLiteral_12016/*"SETUP_OK"*/, 0);
 }
 
 
@@ -551,13 +551,13 @@ void DebugSignupMenu__callbackTopSignup(DebugSignupMenu_o *this, System_String_o
 {
   PlayMakerFSM_o *myFSM; // x0
 
-  if ( (byte_4C54207 & 1) == 0 )
+  if ( (byte_4CB3759 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_11086/*"REQUEST_OK"*/);
-    byte_4C54207 = 1;
+    sub_1C6BA08(&StringLiteral_11082/*"REQUEST_OK"*/);
+    byte_4CB3759 = 1;
   }
   myFSM = this->fields.myFSM;
   if ( !myFSM )
-    sub_1C3E7C0(0, result);
-  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11086/*"REQUEST_OK"*/, 0);
+    sub_1C6BC60(0, result);
+  PlayMakerFSM__SendEvent(myFSM, (System_String_o *)StringLiteral_11082/*"REQUEST_OK"*/, 0);
 }

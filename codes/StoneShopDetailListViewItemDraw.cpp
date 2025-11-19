@@ -22,7 +22,7 @@ void StoneShopDetailListViewItemDraw__SetItem(
     || (ItemIconComponent__SetItemImage((ItemIconComponent_o *)this, item->fields._ImageId_k__BackingField, 0),
         (this = (StoneShopDetailListViewItemDraw_o *)v3->fields.messageLabel) == 0) )
   {
-    sub_1C3E7C0(this, item);
+    sub_1C6BC60(this, item);
   }
   UILabel__set_text((UILabel_o *)this, item->fields._Message_k__BackingField, 0);
 }

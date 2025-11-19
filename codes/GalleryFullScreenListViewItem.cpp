@@ -9,15 +9,15 @@ void GalleryFullScreenListViewItem___ctor(
   __int64 v8; // x0
   __int64 v9; // x1
 
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
   this->fields._GalleryResourceEntity_k__BackingField = galleryResourceEntity;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._GalleryResourceEntity_k__BackingField,
     (int32_t)galleryResourceEntity,
     v6,
     v7);
   if ( !galleryResourceEntity )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   this->fields._CurrentGalleryType_k__BackingField = galleryResourceEntity->fields.galleryType;
 }
 

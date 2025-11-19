@@ -28,38 +28,26 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
   System_String_o *v19; // x0
   Il2CppObject *name; // x24
   System_String_o *v21; // x23
-  __int64 v22; // x2
-  __int64 v23; // x3
-  __int64 v24; // x4
-  __int64 v25; // x5
-  __int64 v26; // x6
-  __int64 v27; // x7
-  Il2CppObject *v28; // x25
-  __int64 v29; // x2
-  __int64 v30; // x3
-  __int64 v31; // x4
-  __int64 v32; // x5
-  __int64 v33; // x6
-  __int64 v34; // x7
-  Il2CppObject *v35; // x0
+  Il2CppObject *v22; // x25
+  Il2CppObject *v23; // x0
   SkillLvEntity_o *Entity; // x0
-  UILabel_o *v37; // x21
-  UILabel_o *v38; // x20
-  int32_t v39; // [xsp+8h] [xbp-58h] BYREF
+  UILabel_o *v25; // x21
+  UILabel_o *v26; // x20
+  int32_t v27; // [xsp+8h] [xbp-58h] BYREF
   int32_t lv; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C5A1CE & 1) == 0 )
+  if ( (byte_4CB9794 & 1) == 0 )
   {
-    sub_1C3E564(&BattleData_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_3618/*"COMMAND_ASSIST_NAME"*/);
-    sub_1C3E564(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4C5A1CE = 1;
+    sub_1C6BA08(&BattleData_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_3610/*"COMMAND_ASSIST_NAME"*/);
+    sub_1C6BA08(&StringLiteral_3677/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4CB9794 = 1;
   }
   commandAssistNameLabel = (UnityEngine_Object_o *)this->fields.commandAssistNameLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -86,7 +74,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
           EventId = BattleData__GetEventId(0);
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+          Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
           if ( commandData )
           {
             v12 = Master_object;
@@ -110,14 +98,14 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                   v18 = this->fields.commandAssistNameLabel;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3618/*"COMMAND_ASSIST_NAME"*/, 0);
+                  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3610/*"COMMAND_ASSIST_NAME"*/, 0);
                   name = (Il2CppObject *)v15->fields.name;
                   v21 = v19;
                   lv = v15->fields.lv;
-                  v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv, v22, v23, v24, v25, v26, v27);
-                  v39 = v17->fields.lv;
-                  v35 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39, v29, v30, v31, v32, v33, v34);
-                  Master_object = (EventCommandAssistMaster_o *)System_String__Format_63677828(v21, name, v28, v35, 0);
+                  v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
+                  v27 = v17->fields.lv;
+                  v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27);
+                  Master_object = (EventCommandAssistMaster_o *)System_String__Format_64008168(v21, name, v22, v23, 0);
                   if ( !v18 )
                     goto LABEL_45;
                   UILabel__set_text(v18, (System_String_o *)Master_object, 0);
@@ -131,7 +119,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
               {
                 if ( !DataManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_SkillLvMaster___);
+                Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_SkillLvMaster___);
                 if ( !Master_object )
                   goto LABEL_45;
                 Entity = SkillLvMaster__GetEntity(
@@ -141,30 +129,30 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                            0);
                 if ( Entity )
                 {
-                  v37 = this->fields.detailLabel;
-                  Master_object = (EventCommandAssistMaster_o *)SkillLvEntity__getDetail_42932260(
+                  v25 = this->fields.detailLabel;
+                  Master_object = (EventCommandAssistMaster_o *)SkillLvEntity__getDetail_43122340(
                                                                   Entity,
                                                                   v15->fields.skillLv,
                                                                   0,
                                                                   0);
-                  if ( !v37 )
+                  if ( !v25 )
                     goto LABEL_45;
-                  UILabel__set_text(v37, (System_String_o *)Master_object, 0);
+                  UILabel__set_text(v25, (System_String_o *)Master_object, 0);
                   Master_object = (EventCommandAssistMaster_o *)this->fields.detailLabel;
                   if ( !Master_object )
                     goto LABEL_45;
                   UILabel__SetCondensedScale((UILabel_o *)Master_object, 656, 0, 0);
                 }
               }
-              v38 = this->fields.closeLabel;
+              v26 = this->fields.closeLabel;
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               Master_object = (EventCommandAssistMaster_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/,
+                                                              (System_String_o *)StringLiteral_3677/*"COMMON_CONFIRM_CLOSE"*/,
                                                               0);
-              if ( v38 )
+              if ( v26 )
               {
-                UILabel__set_text(v38, (System_String_o *)Master_object, 0);
+                UILabel__set_text(v26, (System_String_o *)Master_object, 0);
                 Master_object = (EventCommandAssistMaster_o *)UnityEngine_Component__get_gameObject(
                                                                 (UnityEngine_Component_o *)this,
                                                                 0);
@@ -194,7 +182,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
             }
           }
 LABEL_45:
-          sub_1C3E7C0(Master_object, v11);
+          sub_1C6BC60(Master_object, v11);
         }
       }
     }
@@ -206,10 +194,10 @@ System_String_o *BattleCommandAssistDetailWindowComponent__get_closeBtnPath(
         BattleCommandAssistDetailWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C5A1CF & 1) == 0 )
+  if ( (byte_4CB9795 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18037/*"closeBtn"*/);
-    byte_4C5A1CF = 1;
+    sub_1C6BA08(&StringLiteral_18037/*"closeBtn"*/);
+    byte_4CB9795 = 1;
   }
   return (System_String_o *)StringLiteral_18037/*"closeBtn"*/;
 }

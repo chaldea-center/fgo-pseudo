@@ -1,9 +1,9 @@
 void MasterEquipSettingDialog___ctor(MasterEquipSettingDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C52313 & 1) == 0 )
+  if ( (byte_4CB1861 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C52313 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB1861 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -13,23 +13,23 @@ void MasterEquipSettingDialog___ctor(MasterEquipSettingDialog_o *this, const Met
 
 int32_t MasterEquipSettingDialog__GetEquipIdData(MasterEquipSettingDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5230F & 1) == 0 )
+  if ( (byte_4CB185D & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_10624/*"PhotoMasterEquipIdSetting2025"*/);
-    byte_4C5230F = 1;
+    sub_1C6BA08(&StringLiteral_10620/*"PhotoMasterEquipIdSetting2025"*/);
+    byte_4CB185D = 1;
   }
-  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_10624/*"PhotoMasterEquipIdSetting2025"*/, -1, 0);
+  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_10620/*"PhotoMasterEquipIdSetting2025"*/, -1, 0);
 }
 
 
 int32_t MasterEquipSettingDialog__GetGenderData(MasterEquipSettingDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C52311 & 1) == 0 )
+  if ( (byte_4CB185F & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_10625/*"PhotoMasterGenderSetting2025"*/);
-    byte_4C52311 = 1;
+    sub_1C6BA08(&StringLiteral_10621/*"PhotoMasterGenderSetting2025"*/);
+    byte_4CB185F = 1;
   }
-  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_10625/*"PhotoMasterGenderSetting2025"*/, -1, 0);
+  return UnityEngine_PlayerPrefs__GetInt((System_String_o *)StringLiteral_10621/*"PhotoMasterGenderSetting2025"*/, -1, 0);
 }
 
 
@@ -40,27 +40,27 @@ void MasterEquipSettingDialog__Init(MasterEquipSettingDialog_o *this, const Meth
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C52306 & 1) == 0 )
+  if ( (byte_4CB1854 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C52306 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4CB1854 = 1;
   }
   masterEquipSettingListViewManager = this->fields.masterEquipSettingListViewManager;
   this->fields.state = 0;
   if ( !masterEquipSettingListViewManager
     || (MasterEquipSettingListViewManager__DestroyList(masterEquipSettingListViewManager, method),
-        v4 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo),
+        v4 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo),
         System_Collections_Generic_List_int____ctor(
           v4,
-          (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__),
+          (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__),
         this->fields.equipIdList = v4,
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.equipIdList, (int32_t)v4, v5, v6),
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.equipIdList, (int32_t)v4, v5, v6),
         (masterEquipSettingListViewManager = (MasterEquipSettingListViewManager_o *)UnityEngine_Component__get_gameObject(
                                                                                       (UnityEngine_Component_o *)this,
                                                                                       0)) == 0) )
   {
-    sub_1C3E7C0(masterEquipSettingListViewManager, method);
+    sub_1C6BC60(masterEquipSettingListViewManager, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)masterEquipSettingListViewManager, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -73,22 +73,22 @@ void MasterEquipSettingDialog__OnClickCancel(MasterEquipSettingDialog_o *this, c
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C5230A & 1) == 0 )
+  if ( (byte_4CB1858 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_MasterEquipSettingDialog_OnClickCancel__);
-    sub_1C3E564(&Method_MasterEquipSettingDialog__OnClickCancel_b__21_0__);
-    byte_4C5230A = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog_OnClickCancel__);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog__OnClickCancel_b__21_0__);
+    byte_4CB1858 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MasterEquipSettingDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_MasterEquipSettingDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_MasterEquipSettingDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_MasterEquipSettingDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     this->fields.state = 3;
-    v5 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_MasterEquipSettingDialog__OnClickCancel_b__21_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
@@ -115,27 +115,27 @@ void MasterEquipSettingDialog__OnClickDecide(MasterEquipSettingDialog_o *this, c
   const MethodInfo *v18; // x3
   System_Action_o *v19; // x21
 
-  if ( (byte_4C52309 & 1) == 0 )
+  if ( (byte_4CB1857 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C3E564(&Method_MasterEquipSettingDialog_OnClickDecide__);
-    sub_1C3E564(&Method_MasterEquipSettingDialog___c__DisplayClass20_0__OnClickDecide_b__0__);
-    sub_1C3E564(&MasterEquipSettingDialog___c__DisplayClass20_0_TypeInfo);
-    byte_4C52309 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog_OnClickDecide__);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog___c__DisplayClass20_0__OnClickDecide_b__0__);
+    sub_1C6BA08(&MasterEquipSettingDialog___c__DisplayClass20_0_TypeInfo);
+    byte_4CB1857 = 1;
   }
-  v3 = sub_1C3E7B0(MasterEquipSettingDialog___c__DisplayClass20_0_TypeInfo);
+  v3 = sub_1C6BC54(MasterEquipSettingDialog___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_10;
   *(_QWORD *)(v3 + 24) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 24), (int32_t)this, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 24), (int32_t)this, v6, v7);
   if ( this->fields.state == 2 )
   {
     v8 = Method_MasterEquipSettingDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_MasterEquipSettingDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1C3E57C(Method_MasterEquipSettingDialog_OnClickDecide__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1C3E548(v8, v8[4]);
+      v8 = (_QWORD *)sub_1C6BA20(Method_MasterEquipSettingDialog_OnClickDecide__);
+    v9 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 8, 0, 0);
     equipIdList = this->fields.equipIdList;
     if ( equipIdList )
@@ -143,16 +143,16 @@ void MasterEquipSettingDialog__OnClickDecide(MasterEquipSettingDialog_o *this, c
       Item = (MasterEquipSettingDialog_o *)System_Collections_Generic_List_int___get_Item(
                                              equipIdList,
                                              this->fields.selectedIndex,
-                                             (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__);
+                                             (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
       MasterEquipSettingDialog__SaveEquipIdData(Item, (int32_t)Item, v11);
       MasterEquipSettingDialog__SaveGenderData(v12, this->fields.genderType, v13);
       this->fields.state = 3;
       decideCallBack = this->fields.decideCallBack;
       *(_QWORD *)(v3 + 16) = decideCallBack;
-      sub_1C3E508((CGThumbnailListItem_o *)(v3 + 16), (int32_t)decideCallBack, v15, v16);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)decideCallBack, v15, v16);
       this->fields.decideCallBack = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.decideCallBack, 0, v17, v18);
-      v19 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.decideCallBack, 0, v17, v18);
+      v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
       System_Action___ctor(
         v19,
         (Il2CppObject *)v3,
@@ -162,7 +162,7 @@ void MasterEquipSettingDialog__OnClickDecide(MasterEquipSettingDialog_o *this, c
       return;
     }
 LABEL_10:
-    sub_1C3E7C0(equipIdList, v5);
+    sub_1C6BC60(equipIdList, v5);
   }
 }
 
@@ -185,19 +185,19 @@ void MasterEquipSettingDialog__OnClickGenderSwitch(MasterEquipSettingDialog_o *t
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x2
 
-  if ( (byte_4C5230B & 1) == 0 )
+  if ( (byte_4CB1859 & 1) == 0 )
   {
-    sub_1C3E564(&MasterEquipSettingListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_MasterEquipSettingDialog_OnClickGenderSwitch__);
-    sub_1C3E564(&Method_MasterEquipSettingDialog_OnClickImageLimit__);
-    byte_4C5230B = 1;
+    sub_1C6BA08(&MasterEquipSettingListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog_OnClickGenderSwitch__);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog_OnClickImageLimit__);
+    byte_4CB1859 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MasterEquipSettingDialog_OnClickGenderSwitch__;
     if ( (*((_BYTE *)Method_MasterEquipSettingDialog_OnClickGenderSwitch__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_MasterEquipSettingDialog_OnClickGenderSwitch__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_MasterEquipSettingDialog_OnClickGenderSwitch__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     genderType = this->fields.genderType;
     masterEquipSettingListViewManager = this->fields.masterEquipSettingListViewManager;
@@ -218,7 +218,7 @@ void MasterEquipSettingDialog__OnClickGenderSwitch(MasterEquipSettingDialog_o *t
       0,
       v6);
     v12 = this->fields.masterEquipSettingListViewManager;
-    v13 = (MasterEquipSettingListViewManager_CallbackFunc_o *)sub_1C3E7B0(MasterEquipSettingListViewManager_CallbackFunc_TypeInfo);
+    v13 = (MasterEquipSettingListViewManager_CallbackFunc_o *)sub_1C6BC54(MasterEquipSettingListViewManager_CallbackFunc_TypeInfo);
     MasterEquipSettingListViewManager_CallbackFunc___ctor(
       v13,
       (Il2CppObject *)this,
@@ -226,10 +226,10 @@ void MasterEquipSettingDialog__OnClickGenderSwitch(MasterEquipSettingDialog_o *t
       v14);
     if ( !v12 )
 LABEL_15:
-      sub_1C3E7C0(masterEquipSettingListViewManager, v5);
+      sub_1C6BC60(masterEquipSettingListViewManager, v5);
     v12->fields.callbackFunc = v13;
-    sub_1C3E508((CGThumbnailListItem_o *)&v12->fields.callbackFunc, (int32_t)v13, v15, v16);
-    MasterEquipSettingListViewManager__SetMode_33821432(v12, 2, v17);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v12->fields.callbackFunc, (int32_t)v13, v15, v16);
+    MasterEquipSettingListViewManager__SetMode_34001048(v12, 2, v17);
   }
 }
 
@@ -253,12 +253,12 @@ void MasterEquipSettingDialog__OnClickImageLimit(
   const MethodInfo *v16; // x3
   const MethodInfo *v17; // x2
 
-  if ( (byte_4C52312 & 1) == 0 )
+  if ( (byte_4CB1860 & 1) == 0 )
   {
-    sub_1C3E564(&MasterEquipSettingListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C3E564(&Method_MasterEquipSettingDialog_OnClickImageLimit__);
-    byte_4C52312 = 1;
+    sub_1C6BA08(&MasterEquipSettingListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog_OnClickImageLimit__);
+    byte_4CB1860 = 1;
   }
   if ( kind == 1 && this->fields.state == 2 )
   {
@@ -266,8 +266,8 @@ void MasterEquipSettingDialog__OnClickImageLimit(
     {
       v7 = Method_MasterEquipSettingDialog_OnClickImageLimit__;
       if ( (*((_BYTE *)Method_MasterEquipSettingDialog_OnClickImageLimit__ + 83) & 2) != 0 )
-        v7 = (_QWORD *)sub_1C3E57C(Method_MasterEquipSettingDialog_OnClickImageLimit__);
-      v8 = (System_Reflection_MethodBase_o *)sub_1C3E548(v7, v7[4]);
+        v7 = (_QWORD *)sub_1C6BA20(Method_MasterEquipSettingDialog_OnClickImageLimit__);
+      v8 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v7, v7[4]);
       OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0);
     }
     equipIdList = this->fields.equipIdList;
@@ -277,11 +277,11 @@ void MasterEquipSettingDialog__OnClickImageLimit(
           equipIdList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___get_Item(
                                                                     equipIdList,
                                                                     index,
-                                                                    (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__),
+                                                                    (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__),
           !masterEquipSettingListViewManager)
       || (MasterEquipSettingListViewManager__ModifyItem(masterEquipSettingListViewManager, (int32_t)equipIdList, v11),
           v12 = this->fields.masterEquipSettingListViewManager,
-          v13 = (MasterEquipSettingListViewManager_CallbackFunc_o *)sub_1C3E7B0(MasterEquipSettingListViewManager_CallbackFunc_TypeInfo),
+          v13 = (MasterEquipSettingListViewManager_CallbackFunc_o *)sub_1C6BC54(MasterEquipSettingListViewManager_CallbackFunc_TypeInfo),
           MasterEquipSettingListViewManager_CallbackFunc___ctor(
             v13,
             (Il2CppObject *)this,
@@ -289,11 +289,11 @@ void MasterEquipSettingDialog__OnClickImageLimit(
             v14),
           !v12) )
     {
-      sub_1C3E7C0(equipIdList, *(_QWORD *)&kind);
+      sub_1C6BC60(equipIdList, *(_QWORD *)&kind);
     }
     v12->fields.callbackFunc = v13;
-    sub_1C3E508((CGThumbnailListItem_o *)&v12->fields.callbackFunc, (int32_t)v13, v15, v16);
-    MasterEquipSettingListViewManager__SetMode_33821432(v12, 2, v17);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v12->fields.callbackFunc, (int32_t)v13, v15, v16);
+    MasterEquipSettingListViewManager__SetMode_34001048(v12, 2, v17);
   }
 }
 
@@ -302,13 +302,13 @@ void MasterEquipSettingDialog__OnEnable(MasterEquipSettingDialog_o *this, const 
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C5230D & 1) == 0 )
+  if ( (byte_4CB185B & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_15659/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4C5230D = 1;
+    sub_1C6BA08(&StringLiteral_15646/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_4CB185B = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45015816(transform, (System_String_o *)StringLiteral_15659/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45210584(transform, (System_String_o *)StringLiteral_15646/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -360,72 +360,72 @@ void MasterEquipSettingDialog__Open(
   System_Collections_Generic_Dictionary_int__Texture2D__o *genderTexture2Ds; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_string__o *shortNameList; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_4C52307 & 1) == 0 )
+  if ( (byte_4CB1855 & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_bool___);
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&MasterEquipSettingListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&Method_MasterEquipSettingDialog_OnClickImageLimit__);
-    sub_1C3E564(&Method_MasterEquipSettingDialog___c__DisplayClass18_0__Open_b__0__);
-    sub_1C3E564(&MasterEquipSettingDialog___c__DisplayClass18_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_8572/*"MASTER_SETTING_DIALOG_WARNING"*/);
-    sub_1C3E564(&StringLiteral_8571/*"MASTER_SETTING_DIALOG_TITLE"*/);
-    sub_1C3E564(&StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C3E564(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C3E564(&StringLiteral_8570/*"MASTER_SETTING_DIALOG_GENDER_SWITCH"*/);
-    byte_4C52307 = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&MasterEquipSettingListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog_OnClickImageLimit__);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog___c__DisplayClass18_0__Open_b__0__);
+    sub_1C6BA08(&MasterEquipSettingDialog___c__DisplayClass18_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_8569/*"MASTER_SETTING_DIALOG_WARNING"*/);
+    sub_1C6BA08(&StringLiteral_8568/*"MASTER_SETTING_DIALOG_TITLE"*/);
+    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C6BA08(&StringLiteral_8567/*"MASTER_SETTING_DIALOG_GENDER_SWITCH"*/);
+    byte_4CB1855 = 1;
   }
   shortNameList = 0;
   genderTexture2Ds = 0;
-  v13 = sub_1C3E7B0(MasterEquipSettingDialog___c__DisplayClass18_0_TypeInfo);
+  v13 = sub_1C6BC54(MasterEquipSettingDialog___c__DisplayClass18_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_16;
   *(_QWORD *)(v13 + 16) = setMaskMethod;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 16), (int32_t)setMaskMethod, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)setMaskMethod, v16, v17);
   *(_QWORD *)(v13 + 24) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 24), (int32_t)this, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 24), (int32_t)this, v18, v19);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8571/*"MASTER_SETTING_DIALOG_TITLE"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8568/*"MASTER_SETTING_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_16;
   UILabel__set_text(titleLabel, gameObject, 0);
   warningLabel = this->fields.warningLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8572/*"MASTER_SETTING_DIALOG_WARNING"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8569/*"MASTER_SETTING_DIALOG_WARNING"*/, 0);
   if ( !warningLabel )
     goto LABEL_16;
   UILabel__set_text(warningLabel, gameObject, 0);
   genderSwitchLabel = this->fields.genderSwitchLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8570/*"MASTER_SETTING_DIALOG_GENDER_SWITCH"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_8567/*"MASTER_SETTING_DIALOG_GENDER_SWITCH"*/, 0);
   if ( !genderSwitchLabel )
     goto LABEL_16;
   UILabel__set_text(genderSwitchLabel, gameObject, 0);
   decideButtonLabel = this->fields.decideButtonLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideButtonLabel )
     goto LABEL_16;
   UILabel__set_text(decideButtonLabel, gameObject, 0);
   cancelButtonLabel = this->fields.cancelButtonLabel;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelButtonLabel )
     goto LABEL_16;
   UILabel__set_text(cancelButtonLabel, gameObject, 0);
   this->fields.maleMasterEquipTextures = maleTexture2Ds;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.maleMasterEquipTextures, (int32_t)maleTexture2Ds, v25, v26);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.maleMasterEquipTextures, (int32_t)maleTexture2Ds, v25, v26);
   this->fields.femaleMasterEquipTextures = femaleTexture2Ds;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.femaleMasterEquipTextures, (int32_t)femaleTexture2Ds, v27, v28);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.femaleMasterEquipTextures, (int32_t)femaleTexture2Ds, v27, v28);
   this->fields.decideCallBack = decide;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.decideCallBack, (int32_t)decide, v29, v30);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.decideCallBack, (int32_t)decide, v29, v30);
   this->fields.closeCallBack = close;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closeCallBack, (int32_t)close, v31, v32);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closeCallBack, (int32_t)close, v31, v32);
   ActionExtensions__Call_bool_(
     *(System_Action_T__o **)(v13 + 16),
     1,
-    (const MethodInfo_3046270 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
   gameObject = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_16;
@@ -438,7 +438,7 @@ void MasterEquipSettingDialog__Open(
         gameObject = (System_String_o *)System_Collections_Generic_List_int___get_Item(
                                           this->fields.equipIdList,
                                           this->fields.selectedIndex,
-                                          (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__),
+                                          (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__),
         !masterEquipSettingListViewManager)
     || (MasterEquipSettingListViewManager__CreateList(
           masterEquipSettingListViewManager,
@@ -448,7 +448,7 @@ void MasterEquipSettingDialog__Open(
           shortNameList,
           v37),
         v38 = this->fields.masterEquipSettingListViewManager,
-        v39 = (MasterEquipSettingListViewManager_CallbackFunc_o *)sub_1C3E7B0(MasterEquipSettingListViewManager_CallbackFunc_TypeInfo),
+        v39 = (MasterEquipSettingListViewManager_CallbackFunc_o *)sub_1C6BC54(MasterEquipSettingListViewManager_CallbackFunc_TypeInfo),
         MasterEquipSettingListViewManager_CallbackFunc___ctor(
           v39,
           (Il2CppObject *)this,
@@ -457,19 +457,19 @@ void MasterEquipSettingDialog__Open(
         !v38) )
   {
 LABEL_16:
-    sub_1C3E7C0(gameObject, v15);
+    sub_1C6BC60(gameObject, v15);
   }
   v38->fields.callbackFunc = v39;
-  sub_1C3E508((CGThumbnailListItem_o *)&v38->fields.callbackFunc, (int32_t)v39, v41, v42);
-  MasterEquipSettingListViewManager__SetMode_33821432(v38, 2, v43);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v38->fields.callbackFunc, (int32_t)v39, v41, v42);
+  MasterEquipSettingListViewManager__SetMode_34001048(v38, 2, v43);
   v45 = MasterEquipSettingDialog__SetUpMasterEquip(this, v44);
   this->fields.loadMasterEquipCoroutine = v45;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.loadMasterEquipCoroutine, (int32_t)v45, v46, v47);
-  UnityEngine_MonoBehaviour__StartCoroutine_71327136(
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadMasterEquipCoroutine, (int32_t)v45, v46, v47);
+  UnityEngine_MonoBehaviour__StartCoroutine_71644868(
     (UnityEngine_MonoBehaviour_o *)this,
     this->fields.loadMasterEquipCoroutine,
     0);
-  v48 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v48 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v48, (Il2CppObject *)v13, Method_MasterEquipSettingDialog___c__DisplayClass18_0__Open_b__0__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v48, 0, 0, 0);
 }
@@ -477,24 +477,24 @@ LABEL_16:
 
 void MasterEquipSettingDialog__SaveEquipIdData(MasterEquipSettingDialog_o *this, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4C5230E & 1) == 0 )
+  if ( (byte_4CB185C & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_10624/*"PhotoMasterEquipIdSetting2025"*/);
-    byte_4C5230E = 1;
+    sub_1C6BA08(&StringLiteral_10620/*"PhotoMasterEquipIdSetting2025"*/);
+    byte_4CB185C = 1;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_10624/*"PhotoMasterEquipIdSetting2025"*/, id, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_10620/*"PhotoMasterEquipIdSetting2025"*/, id, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
 
 void MasterEquipSettingDialog__SaveGenderData(MasterEquipSettingDialog_o *this, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4C52310 & 1) == 0 )
+  if ( (byte_4CB185E & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_10625/*"PhotoMasterGenderSetting2025"*/);
-    byte_4C52310 = 1;
+    sub_1C6BA08(&StringLiteral_10621/*"PhotoMasterGenderSetting2025"*/);
+    byte_4CB185E = 1;
   }
-  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_10625/*"PhotoMasterGenderSetting2025"*/, id, 0);
+  UnityEngine_PlayerPrefs__SetInt((System_String_o *)StringLiteral_10621/*"PhotoMasterGenderSetting2025"*/, id, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -569,51 +569,51 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v62; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v63; // 0:x0.16
 
-  if ( (byte_4C52308 & 1) == 0 )
+  if ( (byte_4CB1856 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EquipMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_UserEquipMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-    sub_1C3E564(&Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__);
-    sub_1C3E564(&Method_System_Linq_Enumerable_OrderBy_UserEquipEntity__int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_UserEquipEntity___);
-    sub_1C3E564(&System_Func_UserEquipEntity__int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_1C3E564(&Method_MasterEquipSettingDialog___c__SetMasterEquipInfo_b__19_0__);
-    sub_1C3E564(&MasterEquipSettingDialog___c_TypeInfo);
-    byte_4C52308 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EquipMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_UserEquipMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+    sub_1C6BA08(&Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_OrderBy_UserEquipEntity__int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_UserEquipEntity___);
+    sub_1C6BA08(&System_Func_UserEquipEntity__int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_1C6BA08(&Method_MasterEquipSettingDialog___c__SetMasterEquipInfo_b__19_0__);
+    sub_1C6BA08(&MasterEquipSettingDialog___c_TypeInfo);
+    byte_4CB1856 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_UserEquipMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserEquipMaster___);
   v9 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C8EC78(v8);
+    v9 = sub_1C41A9C(v8);
   v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
   if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C8EC78(v8);
+    v10 = sub_1C41A9C(v8);
   v11 = **(DataManager_o ***)(v10 + 184);
   if ( !v11 )
     goto LABEL_67;
   MasterData_object = DataManager__GetMasterData_object_(
                         v11,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EquipMaster___);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EquipMaster___);
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C50AE2 )
+  if ( !byte_4CB002A )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C50AE2 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB002A = 1;
   }
   v11 = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -644,19 +644,19 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
       v15 = MasterEquipSettingDialog___c_TypeInfo;
     }
     v18 = (Il2CppObject *)v15->static_fields->__9;
-    _9__19_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_UserEquipEntity__int__TypeInfo);
+    _9__19_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_UserEquipEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__19_0, v18, Method_MasterEquipSettingDialog___c__SetMasterEquipInfo_b__19_0__, 0);
     static_fields = MasterEquipSettingDialog___c_TypeInfo->static_fields;
     static_fields->__9__19_0 = (struct System_Func_UserEquipEntity__int__o *)_9__19_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__19_0, (int32_t)_9__19_0, v20, v21);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__19_0, (int32_t)_9__19_0, v20, v21);
   }
   v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                v16,
                                                                (System_Func_TSource__TKey__o *)_9__19_0,
-                                                               (const MethodInfo_31292A0 *)Method_System_Linq_Enumerable_OrderBy_UserEquipEntity__int___);
+                                                               (const MethodInfo_316AB98 *)Method_System_Linq_Enumerable_OrderBy_UserEquipEntity__int___);
   v23 = System_Linq_Enumerable__ToArray_object_(
           v22,
-          (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_UserEquipEntity___);
+          (const MethodInfo_317B248 *)Method_System_Linq_Enumerable_ToArray_UserEquipEntity___);
   v11 = (DataManager_o *)SelfUserGame;
   if ( !SelfUserGame )
     goto LABEL_67;
@@ -664,14 +664,14 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
   v57 = DataMasterBase_object__object__long___GetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           ActiveUserEquipId,
-          (const MethodInfo_33B54B4 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+          (const MethodInfo_33FB638 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
   EquipIdData = MasterEquipSettingDialog__GetEquipIdData((MasterEquipSettingDialog_o *)v57, v25);
-  v27 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
+  v27 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v27,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
   *shortNameList = (System_Collections_Generic_List_string__o *)v27;
-  sub_1C3E508((CGThumbnailListItem_o *)shortNameList, (int32_t)v27, v28, v29);
+  sub_1C6B9AC((CGThumbnailListItem_o *)shortNameList, (int32_t)v27, v28, v29);
   if ( !v23 )
     goto LABEL_67;
   max_length = v23->max_length;
@@ -681,7 +681,7 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
     do
     {
       if ( v31 >= max_length )
-        sub_1C3E7C8(v11, v6);
+        sub_1C6BC68(v11);
       v32 = v23->m_Items[v31];
       if ( !v32 )
         goto LABEL_67;
@@ -691,14 +691,14 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v60.fields.currentCryptoKey = klass;
       *(_QWORD *)&v60.fields.fakeValue = monitor;
-      v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v60, 0);
+      v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v60, 0);
       if ( !MasterData_object )
         goto LABEL_67;
       v11 = (DataManager_o *)DataMasterBase_object__object__int___TryGetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                                &entity,
                                (int32_t)v11,
-                               (const MethodInfo_33B2FA4 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__);
+                               (const MethodInfo_33F9128 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)v11 & 1) != 0 )
       {
         v35 = this;
@@ -707,7 +707,7 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v61.fields.currentCryptoKey = klass;
         *(_QWORD *)&v61.fields.fakeValue = monitor;
-        v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v61, 0);
+        v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v61, 0);
         if ( !equipIdList )
           goto LABEL_67;
         items = equipIdList->fields._items;
@@ -722,7 +722,7 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
           System_Collections_Generic_List_int___AddWithResize(
             equipIdList,
             (int32_t)v11,
-            *(const MethodInfo_379843C **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
         }
         else
         {
@@ -735,7 +735,7 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
         v41 = (System_Collections_Generic_List_object__o *)*shortNameList;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-        v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_49039980(v40, 0);
+        v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_49268864(v40, 0);
         if ( !v41 )
           goto LABEL_67;
         v44 = v41->fields._items;
@@ -750,14 +750,14 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
           System_Collections_Generic_List_object___AddWithResize(
             v41,
             (Il2CppObject *)v11,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
         }
         else
         {
           v48 = &v44->obj.klass + v46;
           v41->fields._size = v46 + 1;
           v48[4] = (Il2CppClass *)v47;
-          sub_1C3E508((CGThumbnailListItem_o *)(v48 + 4), (int32_t)v47, v42, v43);
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v48 + 4), (int32_t)v47, v42, v43);
         }
         this = v35;
         cctor_finished = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished;
@@ -767,7 +767,7 @@ void MasterEquipSettingDialog__SetMasterEquipInfo(
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v62.fields.currentCryptoKey = klass;
           *(_QWORD *)&v62.fields.fakeValue = monitor;
-          v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v62, 0);
+          v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v62, 0);
           if ( (_DWORD)v11 != EquipIdData )
             goto LABEL_53;
 LABEL_52:
@@ -778,11 +778,11 @@ LABEL_52:
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v63.fields.currentCryptoKey = klass;
         *(_QWORD *)&v63.fields.fakeValue = monitor;
-        v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v63, 0);
+        v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v63, 0);
         if ( !v57 )
           goto LABEL_67;
         v50 = (int)v11;
-        v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(
+        v11 = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
                                  (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)v57[2],
                                  0);
         if ( v50 == (_DWORD)v11 )
@@ -801,14 +801,14 @@ LABEL_53:
       : (DataManager_o *)MasterEquipSettingDialog__GetGenderData(GenderData, v6);
   if ( !this )
 LABEL_67:
-    sub_1C3E7C0(v11, v6);
+    sub_1C6BC60(v11, v6);
   p_maleMasterEquipTextures = &this->fields.maleMasterEquipTextures;
   this->fields.genderType = (int)v11;
   if ( (_DWORD)v11 != 1 )
     p_maleMasterEquipTextures = &this->fields.femaleMasterEquipTextures;
   v55 = *p_maleMasterEquipTextures;
   *genderTexture2Ds = *p_maleMasterEquipTextures;
-  sub_1C3E508((CGThumbnailListItem_o *)genderTexture2Ds, (int32_t)v55, v52, v53);
+  sub_1C6B9AC((CGThumbnailListItem_o *)genderTexture2Ds, (int32_t)v55, v52, v53);
 }
 
 
@@ -820,16 +820,16 @@ System_Collections_IEnumerator_o *MasterEquipSettingDialog__SetUpMasterEquip(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C5230C & 1) == 0 )
+  if ( (byte_4CB185A & 1) == 0 )
   {
-    sub_1C3E564(&MasterEquipSettingDialog__SetUpMasterEquip_d__23_TypeInfo);
-    byte_4C5230C = 1;
+    sub_1C6BA08(&MasterEquipSettingDialog__SetUpMasterEquip_d__23_TypeInfo);
+    byte_4CB185A = 1;
   }
-  v3 = sub_1C3E7B0(MasterEquipSettingDialog__SetUpMasterEquip_d__23_TypeInfo);
+  v3 = sub_1C6BC54(MasterEquipSettingDialog__SetUpMasterEquip_d__23_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -847,7 +847,7 @@ void MasterEquipSettingDialog___OnClickCancel_b__21_0(MasterEquipSettingDialog_o
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, loadMasterEquipCoroutine, 0);
     this->fields.loadMasterEquipCoroutine = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.loadMasterEquipCoroutine, 0, v4, v5);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadMasterEquipCoroutine, 0, v4, v5);
   }
 }
 
@@ -878,10 +878,10 @@ bool MasterEquipSettingDialog__SetUpMasterEquip_d__23__MoveNext(
   bool result; // w0
 
   v3 = this;
-  if ( (byte_4C52318 & 1) == 0 )
+  if ( (byte_4CB1866 & 1) == 0 )
   {
-    this = (MasterEquipSettingDialog__SetUpMasterEquip_d__23_o *)sub_1C3E564(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4C52318 = 1;
+    this = (MasterEquipSettingDialog__SetUpMasterEquip_d__23_o *)sub_1C6BA08(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4CB1866 = 1;
   }
   _1__state = v3->fields.__1__state;
   if ( _1__state == 1 )
@@ -891,7 +891,7 @@ bool MasterEquipSettingDialog__SetUpMasterEquip_d__23__MoveNext(
     if ( !_4__this
       || (this = (MasterEquipSettingDialog__SetUpMasterEquip_d__23_o *)_4__this->fields.masterEquipSettingListViewManager) == 0 )
     {
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     }
     v6 = 192;
     if ( _4__this->fields.genderType != 1 )
@@ -907,11 +907,11 @@ bool MasterEquipSettingDialog__SetUpMasterEquip_d__23__MoveNext(
   {
     v3->fields.__1__state = -1;
 LABEL_11:
-    v7 = (UnityEngine_WaitForSeconds_o *)sub_1C3E7B0(UnityEngine_WaitForSeconds_TypeInfo);
+    v7 = (UnityEngine_WaitForSeconds_o *)sub_1C6BC54(UnityEngine_WaitForSeconds_TypeInfo);
     UnityEngine_WaitForSeconds___ctor(v7, 0.5, 0);
     v3->fields.__2__current = (Il2CppObject *)v7;
     p__2__current = (CGThumbnailListItem_o *)&v3->fields.__2__current;
-    sub_1C3E508(p__2__current, (int32_t)v7, v9, v10);
+    sub_1C6B9AC(p__2__current, (int32_t)v7, v9, v10);
     result = 1;
     LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
     return result;
@@ -936,11 +936,11 @@ void __noreturn MasterEquipSettingDialog__SetUpMasterEquip_d__23__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_MasterEquipSettingDialog__SetUpMasterEquip_d__23_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_MasterEquipSettingDialog__SetUpMasterEquip_d__23_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -966,15 +966,15 @@ void MasterEquipSettingDialog___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C52314 & 1) == 0 )
+  if ( (byte_4CB1862 & 1) == 0 )
   {
-    sub_1C3E564(&MasterEquipSettingDialog___c_TypeInfo);
-    byte_4C52314 = 1;
+    sub_1C6BA08(&MasterEquipSettingDialog___c_TypeInfo);
+    byte_4CB1862 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(MasterEquipSettingDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(MasterEquipSettingDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MasterEquipSettingDialog___c_TypeInfo->static_fields->__9 = (struct MasterEquipSettingDialog___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)MasterEquipSettingDialog___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)MasterEquipSettingDialog___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -993,20 +993,20 @@ int32_t MasterEquipSettingDialog___c___SetMasterEquipInfo_b__19_0(
   __int64 v5; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v7; // 0:x0.16
 
-  if ( (byte_4C52315 & 1) == 0 )
+  if ( (byte_4CB1863 & 1) == 0 )
   {
-    this = (MasterEquipSettingDialog___c_o *)sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C52315 = 1;
+    this = (MasterEquipSettingDialog___c_o *)sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CB1863 = 1;
   }
   if ( !x )
-    sub_1C3E7C0(this, x);
+    sub_1C6BC60(this, x);
   v5 = *(_QWORD *)&x->fields.equipId.fields.currentCryptoKey;
   v4 = *(_QWORD *)&x->fields.equipId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v7.fields.currentCryptoKey = v5;
   *(_QWORD *)&v7.fields.fakeValue = v4;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v7, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v7, 0);
 }
 
 
@@ -1026,18 +1026,18 @@ void MasterEquipSettingDialog___c__DisplayClass18_0___Open_b__0(
   __int64 v4; // x1
   struct MasterEquipSettingDialog_o *_4__this; // x8
 
-  if ( (byte_4C52316 & 1) == 0 )
+  if ( (byte_4CB1864 & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_bool___);
-    byte_4C52316 = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
+    byte_4CB1864 = 1;
   }
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.setMaskMethod,
     0,
-    (const MethodInfo_3046270 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3E7C0(v3, v4);
+    sub_1C6BC60(v3, v4);
   _4__this->fields.state = 2;
 }
 
@@ -1063,11 +1063,11 @@ void MasterEquipSettingDialog___c__DisplayClass20_0___OnClickDecide_b__0(
   const MethodInfo *v8; // x3
 
   v2 = this;
-  if ( (byte_4C52317 & 1) == 0 )
+  if ( (byte_4CB1865 & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_int__int___);
-    this = (MasterEquipSettingDialog___c__DisplayClass20_0_o *)sub_1C3E564(&Method_System_Collections_Generic_List_int__get_Item__);
-    byte_4C52317 = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_int__int___);
+    this = (MasterEquipSettingDialog___c__DisplayClass20_0_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_4CB1865 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -1079,7 +1079,7 @@ void MasterEquipSettingDialog___c__DisplayClass20_0___OnClickDecide_b__0(
   this = (MasterEquipSettingDialog___c__DisplayClass20_0_o *)System_Collections_Generic_List_int___get_Item(
                                                                (System_Collections_Generic_List_int__o *)this,
                                                                _4__this->fields.selectedIndex,
-                                                               (const MethodInfo_379814C *)Method_System_Collections_Generic_List_int__get_Item__);
+                                                               (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
   v5 = v2->fields.__4__this;
   if ( !v5 )
     goto LABEL_12;
@@ -1087,7 +1087,7 @@ void MasterEquipSettingDialog___c__DisplayClass20_0___OnClickDecide_b__0(
     callBack,
     (int32_t)this,
     v5->fields.genderType,
-    (const MethodInfo_304664C *)Method_ActionExtensions_Call_int__int___);
+    (const MethodInfo_3086250 *)Method_ActionExtensions_Call_int__int___);
   this = (MasterEquipSettingDialog___c__DisplayClass20_0_o *)v2->fields.__4__this;
   if ( !this )
     goto LABEL_12;
@@ -1106,10 +1106,10 @@ void MasterEquipSettingDialog___c__DisplayClass20_0___OnClickDecide_b__0(
     if ( this )
     {
       this[6].fields.__4__this = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&this[6].fields.__4__this, 0, v7, v8);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this[6].fields.__4__this, 0, v7, v8);
       return;
     }
 LABEL_12:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
 }

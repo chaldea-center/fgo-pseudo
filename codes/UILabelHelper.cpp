@@ -1,12 +1,64 @@
+void UILabelHelper__SetLabelWithScroll(
+        UILabel_o *self,
+        System_String_o *detail,
+        int32_t lineThreshold,
+        const MethodInfo *method)
+{
+  _BOOL8 v7; // x0
+  __int64 v8; // x1
+  int32_t v9; // w21
+  Il2CppObject *ComponentInParent_object__51585524; // x20
+  bool v11; // w19
+  const MethodInfo *v12; // x2
+
+  if ( (byte_4CB7D10 & 1) == 0 )
+  {
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInParent_UIScrollView___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB7D10 = 1;
+  }
+  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+  v7 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)self, 0, 0);
+  if ( !v7 )
+  {
+    if ( !self )
+      goto LABEL_13;
+    UIWidget__set_height((UIWidget_o *)self, self->fields.mFontSize * lineThreshold, 0);
+    v9 = WrapControlText__textBBCodeAdjust(self, detail, self->fields.mFontSize, self->fields.mFontSize, 0);
+    UIWidget__ResizeCollider((UIWidget_o *)self, 0);
+    ComponentInParent_object__51585524 = UnityEngine_Component__GetComponentInParent_object__51585524(
+                                           (UnityEngine_Component_o *)self,
+                                           (const MethodInfo_31321F4 *)Method_UnityEngine_Component_GetComponentInParent_UIScrollView___);
+    if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
+    v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)ComponentInParent_object__51585524, 0, 0);
+    if ( v7 )
+    {
+      if ( ComponentInParent_object__51585524 )
+      {
+        v11 = v9 > lineThreshold;
+        UIScrollView__ResetPosition((UIScrollView_o *)ComponentInParent_object__51585524, 0);
+        BasicHelper__SetActiveSafely((UnityEngine_Component_o *)ComponentInParent_object__51585524[4].klass, v11, v12);
+        UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)ComponentInParent_object__51585524, v11, 0);
+        return;
+      }
+LABEL_13:
+      sub_1C6BC60(v7, v8);
+    }
+  }
+}
+
+
 void UILabelHelper__SetTextSafely(UILabel_o *self, System_String_o *text, const MethodInfo *method)
 {
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4C58795 & 1) == 0 )
+  if ( (byte_4CB7D0E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C58795 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB7D0E = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -14,13 +66,13 @@ void UILabelHelper__SetTextSafely(UILabel_o *self, System_String_o *text, const 
   if ( !v5 )
   {
     if ( !self )
-      sub_1C3E7C0(v5, v6);
+      sub_1C6BC60(v5, v6);
     UILabel__set_text(self, text, 0);
   }
 }
 
 
-void UILabelHelper__SetTextSafely_44214512(
+void UILabelHelper__SetTextSafely_44407596(
         UILabel_o *self,
         System_String_o *format,
         System_Object_array *args,
@@ -29,18 +81,18 @@ void UILabelHelper__SetTextSafely_44214512(
   System_String_o *v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4C58796 & 1) == 0 )
+  if ( (byte_4CB7D0F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C58796 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB7D0F = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)self, 0, 0) )
   {
-    v7 = System_String__Format_63677896(format, args, 0);
+    v7 = System_String__Format_64008236(format, args, 0);
     if ( !self )
-      sub_1C3E7C0(v7, v8);
+      sub_1C6BC60(v7, v8);
     UILabel__set_text(self, v7, 0);
   }
 }

@@ -1,14 +1,14 @@
 void QuestScriptBranchMaterialMaster___ctor(QuestScriptBranchMaterialMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C574E7 & 1) == 0 )
+  if ( (byte_4CB6A50 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_QuestScriptBranchMaterialMaster__QuestScriptBranchMaterialEntity__string___ctor__);
-    byte_4C574E7 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_QuestScriptBranchMaterialMaster__QuestScriptBranchMaterialEntity__string___ctor__);
+    byte_4CB6A50 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     425,
-    (const MethodInfo_33B56EC *)Method_DataMasterBase_QuestScriptBranchMaterialMaster__QuestScriptBranchMaterialEntity__string___ctor__);
+    (const MethodInfo_33FB870 *)Method_DataMasterBase_QuestScriptBranchMaterialMaster__QuestScriptBranchMaterialEntity__string___ctor__);
 }
 
 
@@ -28,13 +28,13 @@ int32_t QuestScriptBranchMaterialMaster__GetBaseQuestId(
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-48h] BYREF
   int32_t playPhase[2]; // [xsp+28h] [xbp-28h] BYREF
 
-  if ( (byte_4C574EA & 1) == 0 )
+  if ( (byte_4CB6A53 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity__GetEnumerator__);
-    byte_4C574EA = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity__GetEnumerator__);
+    byte_4CB6A53 = 1;
   }
   memset(&v14, 0, sizeof(v14));
   *(_QWORD *)playPhase = 0;
@@ -47,20 +47,20 @@ int32_t QuestScriptBranchMaterialMaster__GetBaseQuestId(
                                                                    questId,
                                                                    v6);
     if ( !ListByQuestId )
-      sub_1C3E7C0(0, v9);
+      sub_1C6BC60(0, v9);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v14,
       ListByQuestId,
-      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity__GetEnumerator__);
+      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity__GetEnumerator__);
     while ( 1 )
     {
       v10 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v14,
-              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__MoveNext__);
+              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__MoveNext__);
       if ( !v10 )
         break;
       if ( !v14.fields._current )
-        sub_1C3E7C0(v10, v11);
+        sub_1C6BC60(v10, v11);
       QuestScriptBranchMaterialMaster__GetPlayQuest(
         this,
         questId,
@@ -74,13 +74,13 @@ int32_t QuestScriptBranchMaterialMaster__GetBaseQuestId(
       {
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v14,
-          (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__Dispose__);
+          (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__Dispose__);
         return v7;
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v14,
-      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__Dispose__);
+      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_QuestScriptBranchMaterialEntity__Dispose__);
     return questId;
   }
   return v7;
@@ -119,29 +119,29 @@ System_Collections_Generic_List_QuestScriptBranchMaterialEntity__o *QuestScriptB
   int32_t *v29; // x10
   __int64 v30; // x0
 
-  if ( (byte_4C574E9 & 1) == 0 )
+  if ( (byte_4CB6A52 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_QuestScriptBranchMaterialEntity__TypeInfo);
-    byte_4C574E9 = 1;
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_QuestScriptBranchMaterialEntity__TypeInfo);
+    byte_4CB6A52 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_QuestScriptBranchMaterialEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_QuestScriptBranchMaterialEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_334C9A0 *)Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
+                 (const MethodInfo_339243C *)Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -161,7 +161,7 @@ System_Collections_Generic_List_QuestScriptBranchMaterialEntity__o *QuestScriptB
     else
     {
 LABEL_9:
-      v13 = sub_1C8ED7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v13 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v13)(
             Enumerator,
@@ -185,37 +185,37 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_1C8ED7C(Enumerator, System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo, 0);
+      v17 = sub_1C41D90(Enumerator, System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo, 0);
     }
     v18 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
             Enumerator,
             *(_QWORD *)(v17 + 8));
     v22 = v18;
     if ( !v18 )
-      sub_1C3E7C0(0, v19);
+      sub_1C6BC60(0, v19);
     if ( *(_DWORD *)(v18 + 16) == questId )
     {
       if ( !v5 )
-        sub_1C3E7C0(v18, v19);
+        sub_1C6BC60(v18, v19);
       items = v5->fields._items;
       v24 = Method_System_Collections_Generic_List_QuestScriptBranchMaterialEntity__Add__;
       ++v5->fields._version;
       if ( !items )
-        sub_1C3E7C0(v18, v19);
+        sub_1C6BC60(v18, v19);
       size = v5->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v5,
           (Il2CppObject *)v18,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
       }
       else
       {
         v26 = &items->obj.klass + size;
         v5->fields._size = size + 1;
         v26[4] = (Il2CppClass *)v22;
-        sub_1C3E508((CGThumbnailListItem_o *)(v26 + 4), v22, v20, v21);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v26 + 4), v22, v20, v21);
       }
     }
   }
@@ -236,7 +236,7 @@ LABEL_16:
   else
   {
 LABEL_29:
-    v30 = sub_1C8ED7C(Enumerator, System_IDisposable_TypeInfo, 0);
+    v30 = sub_1C41D90(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(Enumerator, *(_QWORD *)(v30 + 8));
   return (System_Collections_Generic_List_QuestScriptBranchMaterialEntity__o *)v5;
@@ -273,13 +273,13 @@ void QuestScriptBranchMaterialMaster__GetPlayQuest(
   __int64 v30; // x0
   _DWORD *v31; // x8
 
-  if ( (byte_4C574EB & 1) == 0 )
+  if ( (byte_4CB6A54 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C574EB = 1;
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    byte_4CB6A54 = 1;
   }
   *playQuestId = 0;
   *playPhase = 0;
@@ -288,9 +288,9 @@ void QuestScriptBranchMaterialMaster__GetPlayQuest(
     goto LABEL_37;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_334C9A0 *)Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
+                 (const MethodInfo_339243C *)Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C3E7C0(0, v14);
+    sub_1C6BC60(0, v14);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -310,7 +310,7 @@ void QuestScriptBranchMaterialMaster__GetPlayQuest(
     else
     {
 LABEL_9:
-      v19 = sub_1C8ED7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v19 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
             Enumerator,
@@ -334,14 +334,14 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v23 = sub_1C8ED7C(Enumerator, System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo, 0);
+      v23 = sub_1C41D90(Enumerator, System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo, 0);
     }
     v24 = (_DWORD *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(
                       Enumerator,
                       *(_QWORD *)(v23 + 8));
     v26 = v24;
     if ( !v24 )
-      sub_1C3E7C0(0, v25);
+      sub_1C6BC60(0, v25);
     if ( v24[4] == questId && v24[5] == phase && v24[6] == playType )
       goto LABEL_24;
   }
@@ -364,7 +364,7 @@ LABEL_24:
   else
   {
 LABEL_28:
-    v30 = sub_1C8ED7C(Enumerator, System_IDisposable_TypeInfo, 0);
+    v30 = sub_1C41D90(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v30)(
                                                              Enumerator,
@@ -374,7 +374,7 @@ LABEL_28:
   v31 = (_DWORD *)*((_QWORD *)v26 + 4);
   if ( !v31 )
 LABEL_37:
-    sub_1C3E7C0(list, *(_QWORD *)&questId);
+    sub_1C6BC60(list, *(_QWORD *)&questId);
   if ( v31[6] != 2 )
   {
 LABEL_34:
@@ -413,22 +413,22 @@ bool QuestScriptBranchMaterialMaster__IsBranchQuestMaterialOpen(
   int32_t *v21; // x10
   __int64 v22; // x0
 
-  if ( (byte_4C574E8 & 1) == 0 )
+  if ( (byte_4CB6A51 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    byte_4C574E8 = 1;
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    byte_4CB6A51 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C3E7C0(0, *(_QWORD *)&questId);
+    sub_1C6BC60(0, *(_QWORD *)&questId);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_334C9A0 *)Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
+                 (const MethodInfo_339243C *)Method_System_Collections_ObjectModel_Collection_QuestScriptBranchMaterialEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -448,7 +448,7 @@ bool QuestScriptBranchMaterialMaster__IsBranchQuestMaterialOpen(
     else
     {
 LABEL_9:
-      v11 = sub_1C8ED7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v11 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     v12 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v11)(
             Enumerator,
@@ -472,13 +472,13 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v16 = sub_1C8ED7C(Enumerator, System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo, 0);
+      v16 = sub_1C41D90(Enumerator, System_Collections_Generic_IEnumerator_QuestScriptBranchMaterialEntity__TypeInfo, 0);
     }
     v17 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v16)(
             Enumerator,
             *(_QWORD *)(v16 + 8));
     if ( !v17 )
-      sub_1C3E7C0(0, v18);
+      sub_1C6BC60(0, v18);
     if ( *(_DWORD *)(v17 + 16) == questId )
       goto LABEL_22;
   }
@@ -501,7 +501,7 @@ LABEL_22:
   else
   {
 LABEL_26:
-    v22 = sub_1C8ED7C(Enumerator, System_IDisposable_TypeInfo, 0);
+    v22 = sub_1C41D90(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v22)(Enumerator, *(_QWORD *)(v22 + 8));
   return v12 & 1;

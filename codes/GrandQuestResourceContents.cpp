@@ -10,7 +10,7 @@ void GrandQuestResourceContents__SetBoardUIAtlas(
         const MethodInfo *method)
 {
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1C3E508(&this->fields, boardUiAtlasManagerUnit);
+  sub_1C6B9AC(&this->fields, boardUiAtlasManagerUnit);
 }
 
 
@@ -36,7 +36,7 @@ void GrandQuestResourceContents__set_BoardUiAtlasManagerUnit(
         const MethodInfo *method)
 {
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_1C3E508(&this->fields, value);
+  sub_1C6B9AC(&this->fields, value);
 }
 
 
@@ -46,5 +46,5 @@ void GrandQuestResourceContents__set_GrandQuestFolderBoardPrefab(
         const MethodInfo *method)
 {
   this->fields._GrandQuestFolderBoardPrefab_k__BackingField = value;
-  sub_1C3E508(&this->fields._GrandQuestFolderBoardPrefab_k__BackingField, value);
+  sub_1C6B9AC(&this->fields._GrandQuestFolderBoardPrefab_k__BackingField, value);
 }

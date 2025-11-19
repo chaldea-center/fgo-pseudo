@@ -1,9 +1,9 @@
 void ScriptConnectListViewObject___ctor(ScriptConnectListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C54327 & 1) == 0 )
+  if ( (byte_4CB3879 & 1) == 0 )
   {
-    sub_1C3E564(&ListViewObject_TypeInfo);
-    byte_4C54327 = 1;
+    sub_1C6BA08(&ListViewObject_TypeInfo);
+    byte_4CB3879 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void ScriptConnectListViewObject__Awake(ScriptConnectListViewObject_o *this, con
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C5431F & 1) == 0 )
+  if ( (byte_4CB3871 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ScriptConnectListViewItemDraw___);
-    byte_4C5431F = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ScriptConnectListViewItemDraw___);
+    byte_4CB3871 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ScriptConnectListViewItemDraw___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ScriptConnectListViewItemDraw___);
   this->fields.itemDraw = (struct ScriptConnectListViewItemDraw_o *)Component_object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -45,21 +45,21 @@ UnityEngine_GameObject_o *ScriptConnectListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C54322 & 1) == 0 )
+  if ( (byte_4CB3874 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ScriptConnectListViewObject___);
-    byte_4C54322 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ScriptConnectListViewObject___);
+    byte_4CB3874 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ScriptConnectListViewObject___)) == 0) )
+                                                    (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ScriptConnectListViewObject___)) == 0) )
   {
-    sub_1C3E7C0(DragObject, v4);
+    sub_1C6BC60(DragObject, v4);
   }
-  ScriptConnectListViewObject__Init_37480868((ScriptConnectListViewObject_o *)DragObject, 2, v6);
+  ScriptConnectListViewObject__Init_37660924((ScriptConnectListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -80,7 +80,7 @@ void ScriptConnectListViewObject__EventMoveEnd(ScriptConnectListViewObject_o *th
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C3E508(p_callbackFunc, 0, v2, v3);
+    sub_1C6B9AC(p_callbackFunc, 0, v2, v3);
     ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
   }
 }
@@ -93,10 +93,10 @@ ScriptConnectListViewItem_o *ScriptConnectListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4C54321 & 1) == 0 )
+  if ( (byte_4CB3873 & 1) == 0 )
   {
-    sub_1C3E564(&ScriptConnectListViewItem_TypeInfo);
-    byte_4C54321 = 1;
+    sub_1C6BA08(&ScriptConnectListViewItem_TypeInfo);
+    byte_4CB3873 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -134,10 +134,10 @@ void ScriptConnectListViewObject__Init(
   int32_t v22; // w9
   CGThumbnailListItem_c *klass; // x19
 
-  if ( (byte_4C54323 & 1) == 0 )
+  if ( (byte_4CB3875 & 1) == 0 )
   {
-    sub_1C3E564(&ScriptConnectListViewItem_TypeInfo);
-    byte_4C54323 = 1;
+    sub_1C6BA08(&ScriptConnectListViewItem_TypeInfo);
+    byte_4CB3875 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -165,16 +165,16 @@ void ScriptConnectListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C3E7C0(transform, v15);
+    sub_1C6BC60(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
   if ( (unsigned int)v11 <= 3 )
   {
-    v22 = dword_C116E0[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_C123E0 + v11);
+    v22 = dword_CEB9B0[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_CEC6A0 + v11);
     this->fields.state = v22;
   }
   if ( !state || dispMode != this->fields.dispMode )
@@ -183,7 +183,7 @@ void ScriptConnectListViewObject__Init(
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0;
-    sub_1C3E508(p_callbackFunc, 0, v20, v21);
+    sub_1C6B9AC(p_callbackFunc, 0, v20, v21);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -192,7 +192,7 @@ void ScriptConnectListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void ScriptConnectListViewObject__Init_37480868(
+void ScriptConnectListViewObject__Init_37660924(
         ScriptConnectListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -201,17 +201,17 @@ void ScriptConnectListViewObject__Init_37480868(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   ScriptConnectListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void ScriptConnectListViewObject__Init_37482088(
+void ScriptConnectListViewObject__Init_37662144(
         ScriptConnectListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -220,17 +220,17 @@ void ScriptConnectListViewObject__Init_37482088(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   ScriptConnectListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void ScriptConnectListViewObject__Init_37482172(
+void ScriptConnectListViewObject__Init_37662228(
         ScriptConnectListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -239,10 +239,10 @@ void ScriptConnectListViewObject__Init_37482172(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   ScriptConnectListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -252,17 +252,17 @@ void ScriptConnectListViewObject__OnClickSingle(ScriptConnectListViewObject_o *t
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C54325 & 1) == 0 )
+  if ( (byte_4CB3877 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_9873/*"OnClickSingleListView"*/);
-    byte_4C54325 = 1;
+    sub_1C6BA08(&StringLiteral_9869/*"OnClickSingleListView"*/);
+    byte_4CB3877 = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C3E7C0(0, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9873/*"OnClickSingleListView"*/, (Il2CppObject *)this, 0);
+      sub_1C6BC60(0, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9869/*"OnClickSingleListView"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -276,11 +276,11 @@ void ScriptConnectListViewObject__OnDestroy(ScriptConnectListViewObject_o *this,
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C54320 & 1) == 0 )
+  if ( (byte_4CB3872 & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C54320 = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB3872 = 1;
   }
   dragObject = this->fields.dragObject;
   p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
@@ -294,7 +294,7 @@ void ScriptConnectListViewObject__OnDestroy(ScriptConnectListViewObject_o *this,
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1C3E508(p_dragObject, 0, v7, v8);
+    sub_1C6B9AC(p_dragObject, 0, v7, v8);
   }
 }
 
@@ -303,17 +303,17 @@ void ScriptConnectListViewObject__OnLongPush(ScriptConnectListViewObject_o *this
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4C54326 & 1) == 0 )
+  if ( (byte_4CB3878 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_9928/*"OnLongPushListView"*/);
-    byte_4C54326 = 1;
+    sub_1C6BA08(&StringLiteral_9924/*"OnLongPushListView"*/);
+    byte_4CB3878 = 1;
   }
   if ( this->fields.linkItem )
   {
     manager = (UnityEngine_Component_o *)this->fields.manager;
     if ( !manager )
-      sub_1C3E7C0(0, method);
-    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9928/*"OnLongPushListView"*/, (Il2CppObject *)this, 0);
+      sub_1C6BC60(0, method);
+    UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9924/*"OnLongPushListView"*/, (Il2CppObject *)this, 0);
   }
 }
 
@@ -325,7 +325,7 @@ void ScriptConnectListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_43886976((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_44077592((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -339,11 +339,11 @@ void ScriptConnectListViewObject__SetupDisp(ScriptConnectListViewObject_o *this,
   const MethodInfo *v8; // x3
   ScriptConnectListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4C54324 & 1) == 0 )
+  if ( (byte_4CB3876 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&ScriptConnectListViewItem_TypeInfo);
-    byte_4C54324 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&ScriptConnectListViewItem_TypeInfo);
+    byte_4CB3876 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -367,7 +367,7 @@ LABEL_8:
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C3E7C0(0, v7);
+      sub_1C6BC60(0, v7);
     ScriptConnectListViewItemDraw__SetItem(v9, (ScriptConnectListViewItem_o *)linkItem, this->fields.dispMode, v8);
   }
 }
@@ -378,7 +378,7 @@ void ScriptConnectListViewObject__Start(ScriptConnectListViewObject_o *this, con
   const MethodInfo *v2; // x2
 
   if ( !this->fields.state )
-    ScriptConnectListViewObject__Init_37480868(this, 2, v2);
+    ScriptConnectListViewObject__Init_37660924(this, 2, v2);
 }
 
 
@@ -397,10 +397,10 @@ void ScriptConnectListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C5431D & 1) == 0 )
+  if ( (byte_4CB386F & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C5431D = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB386F = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -413,13 +413,13 @@ void ScriptConnectListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   ScriptConnectListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -438,10 +438,10 @@ void ScriptConnectListViewObject__remove_callbackFunc(
   ScriptConnectListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C5431E & 1) == 0 )
+  if ( (byte_4CB3870 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C5431E = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB3870 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -454,12 +454,12 @@ void ScriptConnectListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   ScriptConnectListViewObject__Awake(v11, v12);
 }

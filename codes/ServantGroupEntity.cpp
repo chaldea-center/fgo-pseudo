@@ -1,27 +1,27 @@
 void ServantGroupEntity___ctor(ServantGroupEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C576AB & 1) == 0 )
+  if ( (byte_4CB6C14 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C576AB = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB6C14 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantGroupEntity__CreatePK(int32_t id, int32_t svtId, const MethodInfo *method)
 {
-  if ( (byte_4C576AA & 1) == 0 )
+  if ( (byte_4CB6C13 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C576AA = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CB6C13 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            svtId,
-           (const MethodInfo_30F7BF8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_31394F0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

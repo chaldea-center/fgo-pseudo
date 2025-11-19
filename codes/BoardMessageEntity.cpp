@@ -1,13 +1,13 @@
 void BoardMessageEntity___ctor(BoardMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56A0E & 1) == 0 )
+  if ( (byte_4CB5F70 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
-    byte_4C56A0E = 1;
+    sub_1C6BA08(&Method_DataEntityBase_int___ctor__);
+    byte_4CB5F70 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33F6BF8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -59,7 +59,7 @@ BoardMessageEntity_TimeData_o *BoardMessageEntity__GetScriptDataCondCheck(
     {
       v8 = script->m_Items[v6];
       if ( !v8 )
-        sub_1C3E7C0(this, nowTime);
+        sub_1C6BC60(this, nowTime);
       v9 = nowTime - v8->fields.startTime;
       v10 = v9 >= 0;
       v11 = v9 < v7;
@@ -72,7 +72,7 @@ BoardMessageEntity_TimeData_o *BoardMessageEntity__GetScriptDataCondCheck(
     while ( (_DWORD)max_length != v6 );
   }
   if ( v5 >= (unsigned int)max_length )
-    sub_1C3E7C8(this, nowTime);
+    sub_1C6BC68(this);
   return script->m_Items[v5];
 }
 

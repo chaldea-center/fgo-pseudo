@@ -16,21 +16,21 @@ System_String_array *UISkinnedEffectLoad__GetEffectNames(
   struct UISkinnedEffectLoad_skinEffect_array *skinEffects; // x8
   System_Collections_Generic_List_string__o *EffectNameList; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C55B09 & 1) == 0 )
+  if ( (byte_4CB5067 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C3E564(&ServantCommentManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C55B09 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C6BA08(&ServantCommentManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB5067 = 1;
   }
   EffectNameList = 0;
-  result = (System_String_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (System_String_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_16;
   result = (System_String_array *)DataManager__GetMasterData_object_(
                                     (DataManager_o *)result,
-                                    (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
+                                    (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_TerminalOverwriteMaster___);
   if ( result )
   {
     result = (System_String_array *)TerminalOverwriteMaster__TryGetOverwriteEffectNames(
@@ -44,9 +44,9 @@ System_String_array *UISkinnedEffectLoad__GetEffectNames(
       if ( EffectNameList )
         return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                         (System_Collections_Generic_List_object__o *)EffectNameList,
-                                        (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                        (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_string__ToArray__);
 LABEL_16:
-      sub_1C3E7C0(result, v6);
+      sub_1C6BC60(result, v6);
     }
   }
   if ( this->fields.skinType != 7 )
@@ -62,14 +62,13 @@ LABEL_12:
     if ( !skinEffects )
       goto LABEL_16;
     if ( LODWORD(skinEffects->max_length) <= uiChangeType )
-      sub_1C3E7C8(result, v6);
+      sub_1C6BC68(result);
     return skinEffects->m_Items[uiChangeType].fields.EffectName;
   }
   return result;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_String_array *UISkinnedEffectLoad__GetReplaceEffectnames(
         UISkinnedEffectLoad_o *this,
         int32_t uiChangeType,
@@ -92,7 +91,7 @@ System_String_array *UISkinnedEffectLoad__GetReplaceEffectnames(
   {
     v7 = replaceDatas->m_Items[v6];
     if ( !v7 )
-      sub_1C3E7C0(this, *(_QWORD *)&uiChangeType);
+      sub_1C6BC60(this, uiChangeType);
     if ( v7->fields.UiChangeType == uiChangeType && v7->fields.Version == version )
       break;
     if ( max_length == ++v6 )
@@ -158,20 +157,20 @@ void UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodIn
   int32_t v44; // w2
   const MethodInfo *v45; // x3
 
-  if ( (byte_4C55B08 & 1) == 0 )
+  if ( (byte_4CB5066 & 1) == 0 )
   {
-    sub_1C3E564(&CommonEffectManager_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Where_GameObject___);
-    sub_1C3E564(&System_Func_GameObject__bool__TypeInfo);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerable_GameObject__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_GameObject__TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&ServantCommentManager_TypeInfo);
-    sub_1C3E564(&Method_UISkinnedEffectLoad___c__SetEffects_b__9_0__);
-    sub_1C3E564(&UISkinnedEffectLoad___c_TypeInfo);
-    byte_4C55B08 = 1;
+    sub_1C6BA08(&CommonEffectManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_GameObject___);
+    sub_1C6BA08(&System_Func_GameObject__bool__TypeInfo);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerable_GameObject__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_GameObject__TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&ServantCommentManager_TypeInfo);
+    sub_1C6BA08(&Method_UISkinnedEffectLoad___c__SetEffects_b__9_0__);
+    sub_1C6BA08(&UISkinnedEffectLoad___c_TypeInfo);
+    byte_4CB5066 = 1;
   }
   if ( !ServantCommentManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantCommentManager_TypeInfo);
@@ -201,18 +200,18 @@ void UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodIn
             v9 = UISkinnedEffectLoad___c_TypeInfo;
           }
           v11 = (Il2CppObject *)v9->static_fields->__9;
-          _9__9_0 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_GameObject__bool__TypeInfo);
+          _9__9_0 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_GameObject__bool__TypeInfo);
           System_Func_object__bool____ctor(_9__9_0, v11, Method_UISkinnedEffectLoad___c__SetEffects_b__9_0__, 0);
           static_fields = UISkinnedEffectLoad___c_TypeInfo->static_fields;
           static_fields->__9__9_0 = (struct System_Func_GameObject__bool__o *)_9__9_0;
-          sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v13, v14);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v13, v14);
         }
         v15 = System_Linq_Enumerable__Where_object_(
                 (System_Collections_Generic_IEnumerable_TSource__o *)setEffectList,
                 (System_Func_TSource__bool__o *)_9__9_0,
-                (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_GameObject___);
+                (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_GameObject___);
         if ( !v15 )
-          sub_1C3E7C0(0, v16);
+          sub_1C6BC60(0, v16);
         klass = v15->klass;
         v18 = v15;
         v19 = *(unsigned __int16 *)&v15->klass->_2.rank;
@@ -231,13 +230,13 @@ void UISkinnedEffectLoad__SetEffects(UISkinnedEffectLoad_o *this, const MethodIn
         else
         {
 LABEL_19:
-          v21 = sub_1C8ED7C(v15, System_Collections_Generic_IEnumerable_GameObject__TypeInfo, 0);
+          v21 = sub_1C41D90(v15, System_Collections_Generic_IEnumerable_GameObject__TypeInfo, 0);
         }
         v23 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v21)(
                 v18,
                 *(_QWORD *)(v21 + 8));
         if ( !v23 )
-          sub_1C3E7C0(0, v22);
+          sub_1C6BC60(0, v22);
         while ( 1 )
         {
           v24 = *(_QWORD *)v23;
@@ -257,7 +256,7 @@ LABEL_19:
           else
           {
 LABEL_27:
-            v27 = sub_1C8ED7C(v23, System_Collections_IEnumerator_TypeInfo, 0);
+            v27 = sub_1C41D90(v23, System_Collections_IEnumerator_TypeInfo, 0);
           }
           if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v27)(v23, *(_QWORD *)(v27 + 8)) & 1) == 0 )
             break;
@@ -278,16 +277,16 @@ LABEL_27:
           else
           {
 LABEL_34:
-            v31 = sub_1C8ED7C(v23, System_Collections_Generic_IEnumerator_GameObject__TypeInfo, 0);
+            v31 = sub_1C41D90(v23, System_Collections_Generic_IEnumerator_GameObject__TypeInfo, 0);
           }
           v32 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v31)(v23, *(_QWORD *)(v31 + 8));
           v34 = (UnityEngine_Object_o *)v32;
           if ( !v32 )
-            sub_1C3E7C0(0, v33);
+            sub_1C6BC60(0, v33);
           UnityEngine_GameObject__SetActive(v32, 0, 0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_71341564(v34, 0);
+          UnityEngine_Object__Destroy_71659676(v34, 0);
         }
         v35 = *(_QWORD *)v23;
         v36 = *(unsigned __int16 *)(*(_QWORD *)v23 + 302LL);
@@ -306,7 +305,7 @@ LABEL_34:
         else
         {
 LABEL_44:
-          v38 = sub_1C8ED7C(v23, System_IDisposable_TypeInfo, 0);
+          v38 = sub_1C41D90(v23, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v38)(v23, *(_QWORD *)(v38 + 8));
       }
@@ -318,7 +317,7 @@ LABEL_44:
         j_il2cpp_runtime_class_init_0(CommonEffectManager_TypeInfo);
       v43 = CommonEffectManager__SetSkinEffects(EffectNames, v42, SetDepthZero, 0);
       p_setEffectList->klass = (CGThumbnailListItem_c *)v43;
-      sub_1C3E508(p_setEffectList, (int32_t)v43, v44, v45);
+      sub_1C6B9AC(p_setEffectList, (int32_t)v43, v44, v45);
     }
   }
 }
@@ -336,15 +335,15 @@ void UISkinnedEffectLoad___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C55B0A & 1) == 0 )
+  if ( (byte_4CB506A & 1) == 0 )
   {
-    sub_1C3E564(&UISkinnedEffectLoad___c_TypeInfo);
-    byte_4C55B0A = 1;
+    sub_1C6BA08(&UISkinnedEffectLoad___c_TypeInfo);
+    byte_4CB506A = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(UISkinnedEffectLoad___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(UISkinnedEffectLoad___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UISkinnedEffectLoad___c_TypeInfo->static_fields->__9 = (struct UISkinnedEffectLoad___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)UISkinnedEffectLoad___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)UISkinnedEffectLoad___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -359,10 +358,10 @@ bool UISkinnedEffectLoad___c___SetEffects_b__9_0(
         UnityEngine_GameObject_o *setEffect,
         const MethodInfo *method)
 {
-  if ( (byte_4C55B0B & 1) == 0 )
+  if ( (byte_4CB506B & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C55B0B = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB506B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);

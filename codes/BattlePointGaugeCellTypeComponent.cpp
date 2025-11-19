@@ -14,23 +14,23 @@ void BattlePointGaugeCellTypeComponent__UpdateProgressGauge(
   System_Collections_Generic_List_object__o *progressGaugeCells; // x0
   int32_t v6; // w21
 
-  if ( (byte_4C5A3C2 & 1) == 0 )
+  if ( (byte_4CB998E & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4C5A3C2 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_4CB998E = 1;
   }
   progressGaugeCells = (System_Collections_Generic_List_object__o *)this->fields.progressGaugeCells;
   if ( !progressGaugeCells )
 LABEL_9:
-    sub_1C3E7C0(progressGaugeCells, entity);
+    sub_1C6BC60(progressGaugeCells, entity);
   v6 = 0;
   while ( v6 < progressGaugeCells->fields._size )
   {
     progressGaugeCells = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                         progressGaugeCells,
                                                                         v6,
-                                                                        (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                                                        (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     if ( entity )
     {
       if ( progressGaugeCells )
@@ -54,11 +54,11 @@ void BattlePointGaugeCellTypeComponent__ValidateSerializedField(
   BattlePointGaugeSetting_o *setting; // x0
   int32_t v4; // w20
 
-  if ( (byte_4C5A3C1 & 1) == 0 )
+  if ( (byte_4CB998D & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4C5A3C1 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_4CB998D = 1;
   }
   setting = this->fields.setting;
   if ( !setting
@@ -66,7 +66,7 @@ void BattlePointGaugeCellTypeComponent__ValidateSerializedField(
         (setting = (BattlePointGaugeSetting_o *)this->fields.progressGaugeCells) == 0) )
   {
 LABEL_8:
-    sub_1C3E7C0(setting, method);
+    sub_1C6BC60(setting, method);
   }
   v4 = 0;
   while ( v4 < SLODWORD(setting->fields.sprite) )
@@ -74,7 +74,7 @@ LABEL_8:
     System_Collections_Generic_List_object___get_Item(
       (System_Collections_Generic_List_object__o *)setting,
       v4,
-      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+      (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
     setting = (BattlePointGaugeSetting_o *)this->fields.progressGaugeCells;
     ++v4;
     if ( !setting )

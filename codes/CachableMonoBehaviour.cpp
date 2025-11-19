@@ -11,11 +11,11 @@ UnityEngine_Renderer_o *CachableMonoBehaviour__get_renderer(CachableMonoBehaviou
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C537AA & 1) == 0 )
+  if ( (byte_4CB2CFA & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537AA = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2CFA = 1;
   }
   mRenderer = (UnityEngine_Object_o *)this->fields.mRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -24,9 +24,9 @@ UnityEngine_Renderer_o *CachableMonoBehaviour__get_renderer(CachableMonoBehaviou
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Renderer___);
     this->fields.mRenderer = (struct UnityEngine_Renderer_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mRenderer, (int32_t)Component_object, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mRenderer, (int32_t)Component_object, v5, v6);
   }
   return this->fields.mRenderer;
 }
@@ -39,11 +39,11 @@ UnityEngine_Rigidbody_o *CachableMonoBehaviour__get_rigidbody(CachableMonoBehavi
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C537AB & 1) == 0 )
+  if ( (byte_4CB2CFB & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537AB = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Rigidbody___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2CFB = 1;
   }
   mRigidbody = (UnityEngine_Object_o *)this->fields.mRigidbody;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -52,9 +52,9 @@ UnityEngine_Rigidbody_o *CachableMonoBehaviour__get_rigidbody(CachableMonoBehavi
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Rigidbody___);
     this->fields.mRigidbody = (struct UnityEngine_Rigidbody_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mRigidbody, (int32_t)Component_object, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mRigidbody, (int32_t)Component_object, v5, v6);
   }
   return this->fields.mRigidbody;
 }
@@ -67,11 +67,11 @@ UnityEngine_Transform_o *CachableMonoBehaviour__get_transform(CachableMonoBehavi
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C537AC & 1) == 0 )
+  if ( (byte_4CB2CFC & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Transform___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537AC = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Transform___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2CFC = 1;
   }
   mTransform = (UnityEngine_Object_o *)this->fields.mTransform;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -80,9 +80,9 @@ UnityEngine_Transform_o *CachableMonoBehaviour__get_transform(CachableMonoBehavi
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Transform___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Transform___);
     this->fields.mTransform = (struct UnityEngine_Transform_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTransform, (int32_t)Component_object, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTransform, (int32_t)Component_object, v5, v6);
   }
   return this->fields.mTransform;
 }

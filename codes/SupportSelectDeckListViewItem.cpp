@@ -15,10 +15,10 @@ void SupportSelectDeckListViewItem___ctor(
   v7 = this;
   v8 = isSameKind;
   v9 = isPossibleCopy;
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
   v7->fields.supportData = data;
   v7 = (SupportSelectDeckListViewItem_o *)((char *)v7 + 120);
-  sub_1C3E508((CGThumbnailListItem_o *)v7, (int32_t)data, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v7, (int32_t)data, v10, v11);
   LOBYTE(v7->monitor) = v8;
   BYTE1(v7->monitor) = v9;
 }

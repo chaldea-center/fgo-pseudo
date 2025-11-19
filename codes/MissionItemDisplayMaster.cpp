@@ -1,14 +1,14 @@
 void MissionItemDisplayMaster___ctor(MissionItemDisplayMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5726D & 1) == 0 )
+  if ( (byte_4CB67D6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_MissionItemDisplayMaster__MissionItemDisplayEntity__int___ctor__);
-    byte_4C5726D = 1;
+    sub_1C6BA08(&Method_DataMasterBase_MissionItemDisplayMaster__MissionItemDisplayEntity__int___ctor__);
+    byte_4CB67D6 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     536,
-    (const MethodInfo_33B0C34 *)Method_DataMasterBase_MissionItemDisplayMaster__MissionItemDisplayEntity__int___ctor__);
+    (const MethodInfo_33F6DB8 *)Method_DataMasterBase_MissionItemDisplayMaster__MissionItemDisplayEntity__int___ctor__);
 }
 
 
@@ -52,34 +52,34 @@ MissionItemDisplayEntity_array *MissionItemDisplayMaster__GetListByMissionType(
   int32_t v37; // w2
   const MethodInfo *v38; // x3
 
-  if ( (byte_4C5726C & 1) == 0 )
+  if ( (byte_4CB67D5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_MissionItemDisplayEntity__GetEnumerator__);
-    sub_1C3E564(&System_Comparison_MissionItemDisplayEntity__TypeInfo);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_MissionItemDisplayEntity__TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_MissionItemDisplayEntity__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_MissionItemDisplayEntity__Sort__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_MissionItemDisplayEntity__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_MissionItemDisplayEntity___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_MissionItemDisplayEntity__TypeInfo);
-    sub_1C3E564(&Method_MissionItemDisplayMaster___c__GetListByMissionType_b__0_0__);
-    sub_1C3E564(&MissionItemDisplayMaster___c_TypeInfo);
-    byte_4C5726C = 1;
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_MissionItemDisplayEntity__GetEnumerator__);
+    sub_1C6BA08(&System_Comparison_MissionItemDisplayEntity__TypeInfo);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_MissionItemDisplayEntity__TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_MissionItemDisplayEntity__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_MissionItemDisplayEntity__Sort__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_MissionItemDisplayEntity__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_MissionItemDisplayEntity___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_MissionItemDisplayEntity__TypeInfo);
+    sub_1C6BA08(&Method_MissionItemDisplayMaster___c__GetListByMissionType_b__0_0__);
+    sub_1C6BA08(&MissionItemDisplayMaster___c_TypeInfo);
+    byte_4CB67D5 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_MissionItemDisplayEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_MissionItemDisplayEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_MissionItemDisplayEntity___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_MissionItemDisplayEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_43;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_334C9A0 *)Method_System_Collections_ObjectModel_Collection_MissionItemDisplayEntity__GetEnumerator__);
+                 (const MethodInfo_339243C *)Method_System_Collections_ObjectModel_Collection_MissionItemDisplayEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -99,7 +99,7 @@ MissionItemDisplayEntity_array *MissionItemDisplayMaster__GetListByMissionType(
     else
     {
 LABEL_9:
-      v13 = sub_1C8ED7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v13 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v13)(
             Enumerator,
@@ -123,40 +123,40 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_1C8ED7C(Enumerator, System_Collections_Generic_IEnumerator_MissionItemDisplayEntity__TypeInfo, 0);
+      v17 = sub_1C41D90(Enumerator, System_Collections_Generic_IEnumerator_MissionItemDisplayEntity__TypeInfo, 0);
     }
     v18 = (MissionItemDisplayEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                                           Enumerator,
                                           *(_QWORD *)(v17 + 8));
     v20 = (Il2CppObject *)v18;
     if ( !v18 )
-      sub_1C3E7C0(0, v19);
+      sub_1C6BC60(0, v19);
     if ( v18->fields.missionType == missionType )
     {
       IsEnable = MissionItemDisplayEntity__IsEnable(v18, v19);
       if ( IsEnable )
       {
         if ( !v5 )
-          sub_1C3E7C0(IsEnable, v22);
+          sub_1C6BC60(IsEnable, v22);
         items = v5->fields._items;
         v26 = Method_System_Collections_Generic_List_MissionItemDisplayEntity__Add__;
         ++v5->fields._version;
         if ( !items )
-          sub_1C3E7C0(IsEnable, v22);
+          sub_1C6BC60(IsEnable, v22);
         size = v5->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v5,
             v20,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
         }
         else
         {
           v28 = &items->obj.klass + size;
           v5->fields._size = size + 1;
           v28[4] = (Il2CppClass *)v20;
-          sub_1C3E508((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v20, v23, v24);
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v20, v23, v24);
         }
       }
     }
@@ -178,7 +178,7 @@ LABEL_16:
   else
   {
 LABEL_30:
-    v32 = sub_1C8ED7C(Enumerator, System_IDisposable_TypeInfo, 0);
+    v32 = sub_1C41D90(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(
                                                              Enumerator,
@@ -198,7 +198,7 @@ LABEL_30:
       v33 = MissionItemDisplayMaster___c_TypeInfo;
     }
     v35 = (Il2CppObject *)v33->static_fields->__9;
-    _9__0_0 = (System_Comparison_T__o *)sub_1C3E7B0(System_Comparison_MissionItemDisplayEntity__TypeInfo);
+    _9__0_0 = (System_Comparison_T__o *)sub_1C6BC54(System_Comparison_MissionItemDisplayEntity__TypeInfo);
     System_Comparison_object____ctor(
       _9__0_0,
       v35,
@@ -206,18 +206,18 @@ LABEL_30:
       0);
     static_fields = MissionItemDisplayMaster___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Comparison_MissionItemDisplayEntity__o *)_9__0_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v37, v38);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v37, v38);
   }
   if ( !v5 )
 LABEL_43:
-    sub_1C3E7C0(list, v6);
-  System_Collections_Generic_List_object___Sort_58421028(
+    sub_1C6BC60(list, v6);
+  System_Collections_Generic_List_object___Sort_58729528(
     v5,
     _9__0_0,
-    (const MethodInfo_37B6F24 *)Method_System_Collections_Generic_List_MissionItemDisplayEntity__Sort__);
+    (const MethodInfo_3802438 *)Method_System_Collections_Generic_List_MissionItemDisplayEntity__Sort__);
   return (MissionItemDisplayEntity_array *)System_Collections_Generic_List_object___ToArray(
                                              v5,
-                                             (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_MissionItemDisplayEntity__ToArray__);
+                                             (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_MissionItemDisplayEntity__ToArray__);
 }
 
 
@@ -227,15 +227,15 @@ void MissionItemDisplayMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C5726E & 1) == 0 )
+  if ( (byte_4CB67D7 & 1) == 0 )
   {
-    sub_1C3E564(&MissionItemDisplayMaster___c_TypeInfo);
-    byte_4C5726E = 1;
+    sub_1C6BA08(&MissionItemDisplayMaster___c_TypeInfo);
+    byte_4CB67D7 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(MissionItemDisplayMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(MissionItemDisplayMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MissionItemDisplayMaster___c_TypeInfo->static_fields->__9 = (struct MissionItemDisplayMaster___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)MissionItemDisplayMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)MissionItemDisplayMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -252,6 +252,6 @@ int32_t MissionItemDisplayMaster___c___GetListByMissionType_b__0_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1C3E7C0(this, a);
+    sub_1C6BC60(this, a);
   return b->fields.priority - a->fields.priority;
 }

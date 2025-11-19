@@ -2,10 +2,10 @@ void BattleCharaChangeConfirmListViewManager___cctor(const MethodInfo *method)
 {
   struct BattleCharaChangeConfirmListViewManager_StaticFields *static_fields; // x8
 
-  if ( (byte_4C51FF2 & 1) == 0 )
+  if ( (byte_4CB1540 & 1) == 0 )
   {
-    sub_1C3E564(&BattleCharaChangeConfirmListViewManager_TypeInfo);
-    byte_4C51FF2 = 1;
+    sub_1C6BA08(&BattleCharaChangeConfirmListViewManager_TypeInfo);
+    byte_4CB1540 = 1;
   }
   static_fields = BattleCharaChangeConfirmListViewManager_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->ObjectOffsetY = 0x40E0000041000000LL;
@@ -75,26 +75,26 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
   UnityEngine_Vector3_o v43; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C51FED & 1) == 0 )
+  if ( (byte_4CB153B & 1) == 0 )
   {
-    sub_1C3E564(&BattleCharaChangeConfirmListViewManager_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToList_BattleCharaChangeConfirmListViewObject___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewObject___);
-    sub_1C3E564(&System_Func_BattleCharaChangeConfirmListViewObject__bool__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_BattleCharaChangeConfirmListViewManager___c__DisplayClass10_0__CreateList_b__0__);
-    sub_1C3E564(&BattleCharaChangeConfirmListViewManager___c__DisplayClass10_0_TypeInfo);
-    byte_4C51FED = 1;
+    sub_1C6BA08(&BattleCharaChangeConfirmListViewManager_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_BattleCharaChangeConfirmListViewObject___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewObject___);
+    sub_1C6BA08(&System_Func_BattleCharaChangeConfirmListViewObject__bool__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_BattleCharaChangeConfirmListViewManager___c__DisplayClass10_0__CreateList_b__0__);
+    sub_1C6BA08(&BattleCharaChangeConfirmListViewManager___c__DisplayClass10_0_TypeInfo);
+    byte_4CB153B = 1;
   }
-  v5 = sub_1C3E7B0(BattleCharaChangeConfirmListViewManager___c__DisplayClass10_0_TypeInfo);
+  v5 = sub_1C6BC54(BattleCharaChangeConfirmListViewManager___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_37;
   *(_QWORD *)(v5 + 16) = itemInfo;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)itemInfo, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)itemInfo, v8, v9);
   BattleCharaChangeConfirmListViewManager__DestroyList(this, v10);
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -106,7 +106,7 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
       goto LABEL_37;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          transform,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -137,7 +137,7 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
   }
   p_objectList = (System_Collections_Generic_List_object__o **)&this->fields.objectList;
   objectList = this->fields.objectList;
-  v17 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_BattleCharaChangeConfirmListViewObject__bool__TypeInfo);
+  v17 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_BattleCharaChangeConfirmListViewObject__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v17,
     (Il2CppObject *)v5,
@@ -146,12 +146,12 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
   v18 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)objectList,
           (System_Func_TSource__bool__o *)v17,
-          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewObject___);
+          (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_BattleCharaChangeConfirmListViewObject___);
   v19 = (struct System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__o *)System_Linq_Enumerable__ToList_object_(
                                                                                               v18,
-                                                                                              (const MethodInfo_313DE84 *)Method_System_Linq_Enumerable_ToList_BattleCharaChangeConfirmListViewObject___);
+                                                                                              (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_BattleCharaChangeConfirmListViewObject___);
   this->fields.objectList = v19;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.objectList, (int32_t)v19, v20, v21);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.objectList, (int32_t)v19, v20, v21);
   transform = (UnityEngine_Component_o *)this->fields.dummyStart;
   if ( !transform )
     goto LABEL_37;
@@ -177,14 +177,14 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
       transform = (UnityEngine_Component_o *)System_Collections_Generic_List_object___get_Item(
                                                (System_Collections_Generic_List_object__o *)transform,
                                                v23 - 1,
-                                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
+                                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
       if ( !*p_objectList )
         goto LABEL_37;
       v26 = (BattleCharaChangeConfirmListViewObject_o *)transform;
       transform = (UnityEngine_Component_o *)System_Collections_Generic_List_object___get_Item(
                                                *p_objectList,
                                                v23,
-                                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
+                                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
       if ( !v26 )
         goto LABEL_37;
       v27 = transform;
@@ -204,7 +204,7 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)transform,
                0,
-               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
+               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
       v35 = BattleCharaChangeConfirmListViewManager_TypeInfo;
       v27 = (UnityEngine_Component_o *)Item;
       if ( !BattleCharaChangeConfirmListViewManager_TypeInfo->_2.cctor_finished )
@@ -223,10 +223,10 @@ void BattleCharaChangeConfirmListViewManager__CreateList(
   transform = (UnityEngine_Component_o *)System_Collections_Generic_List_object___get_Item(
                                            (System_Collections_Generic_List_object__o *)transform,
                                            klass - 1,
-                                           (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
+                                           (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__get_Item__);
   if ( !transform )
 LABEL_37:
-    sub_1C3E7C0(transform, v7);
+    sub_1C6BC60(transform, v7);
   v36 = (BattleCharaChangeConfirmListViewObject_o *)transform;
   v37 = BattleCharaChangeConfirmListViewObject__GetObjectLocalPositionY(
           (BattleCharaChangeConfirmListViewObject_o *)transform,
@@ -253,10 +253,10 @@ void BattleCharaChangeConfirmListViewManager__DestroyList(
   UIScrollView_o *v5; // x0
   UIScrollView_o *v6; // x19
 
-  if ( (byte_4C51FEE & 1) == 0 )
+  if ( (byte_4CB153C & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C51FEE = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB153C = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -268,14 +268,14 @@ void BattleCharaChangeConfirmListViewManager__DestroyList(
       goto LABEL_11;
     UIScrollView__DisableSpring(v5, 0);
     v6 = this->fields.scrollView;
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
-      v5 = (UIScrollView_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A1 = 1;
+      v5 = (UIScrollView_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC09 = 1;
     }
     if ( !v6 )
 LABEL_11:
-      sub_1C3E7C0(v5, v4);
+      sub_1C6BC60(v5, v4);
     UIScrollView__set_currentMomentum(v6, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   }
 }
@@ -289,10 +289,10 @@ void BattleCharaChangeConfirmListViewManager__OnMoveEnd(
   __int64 v4; // x1
   UIScrollView_o *v5; // x0
 
-  if ( (byte_4C51FF1 & 1) == 0 )
+  if ( (byte_4CB153F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C51FF1 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB153F = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -307,7 +307,7 @@ void BattleCharaChangeConfirmListViewManager__OnMoveEnd(
             v5->klass->vtable._8_UpdateScrollbars.method),
           (v5 = this->fields.scrollView) == 0) )
     {
-      sub_1C3E7C0(v5, v4);
+      sub_1C6BC60(v5, v4);
     }
     UIScrollView__UpdatePosition(v5, 0);
   }
@@ -328,23 +328,23 @@ void BattleCharaChangeConfirmListViewManager__RequestListObject(
   const MethodInfo *v11; // x3
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C51FF0 & 1) == 0 )
+  if ( (byte_4CB153E & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_BattleCharaChangeConfirmListViewManager_OnMoveEnd__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__GetEnumerator__);
-    sub_1C3E564(&StringLiteral_9942/*"OnMoveEnd"*/);
-    byte_4C51FF0 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_BattleCharaChangeConfirmListViewManager_OnMoveEnd__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__GetEnumerator__);
+    sub_1C6BA08(&StringLiteral_9938/*"OnMoveEnd"*/);
+    byte_4CB153E = 1;
   }
   memset(&v12, 0, sizeof(v12));
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.objectList, 0) )
   {
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9942/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9938/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -352,20 +352,20 @@ void BattleCharaChangeConfirmListViewManager__RequestListObject(
   {
     objectList = this->fields.objectList;
     if ( !objectList )
-      sub_1C3E7C0(0, v5);
+      sub_1C6BC60(0, v5);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v12,
       (System_Collections_Generic_List_object__o *)objectList,
-      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__GetEnumerator__);
+      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_BattleCharaChangeConfirmListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v12,
-              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__MoveNext__) )
+              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__MoveNext__) )
     {
       current = v12.fields._current;
-      v8 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      v8 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
       System_Action___ctor(v8, (Il2CppObject *)this, Method_BattleCharaChangeConfirmListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C3E7C0(v9, v10);
+        sub_1C6BC60(v9, v10);
       BattleCharaChangeConfirmListViewObject__SetMode(
         (BattleCharaChangeConfirmListViewObject_o *)current,
         mode,
@@ -374,7 +374,7 @@ void BattleCharaChangeConfirmListViewManager__RequestListObject(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v12,
-      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__Dispose__);
+      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_BattleCharaChangeConfirmListViewObject__Dispose__);
   }
 }
 
@@ -387,10 +387,10 @@ void BattleCharaChangeConfirmListViewManager__ResetScrollViewPosition(
   __int64 v4; // x1
   UIScrollView_o *v5; // x0
 
-  if ( (byte_4C51FEF & 1) == 0 )
+  if ( (byte_4CB153D & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C51FEF = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB153D = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -399,7 +399,7 @@ void BattleCharaChangeConfirmListViewManager__ResetScrollViewPosition(
   {
     v5 = this->fields.scrollView;
     if ( !v5 )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     UIScrollView__ResetPosition(v5, 0);
   }
 }
@@ -438,11 +438,11 @@ bool BattleCharaChangeConfirmListViewManager___c__DisplayClass10_0___CreateList_
   const MethodInfo *v12; // x1
 
   if ( !viewObj )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   BattleCharaChangeConfirmListViewObject__Init(viewObj, (const MethodInfo *)viewObj);
   itemInfo = this->fields.itemInfo;
   viewObj->fields.itemInfo = itemInfo;
-  sub_1C3E508((CGThumbnailListItem_o *)&viewObj->fields.itemInfo, (int32_t)itemInfo, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&viewObj->fields.itemInfo, (int32_t)itemInfo, v6, v7);
   BattleCharaChangeConfirmListViewObject__SetMode(viewObj, 2, 0, v8);
   v10 = BattleCharaChangeConfirmListViewObject__GetKind(viewObj, v9) != 0;
   BattleCharaChangeConfirmListViewObject__SetVisible(viewObj, v10, v11);

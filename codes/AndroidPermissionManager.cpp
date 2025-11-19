@@ -12,10 +12,10 @@ bool AndroidPermissionManager__CheckPermission(System_String_o *permissionName, 
 
 bool AndroidPermissionManager__EnabledRuntimePermission(const MethodInfo *method)
 {
-  if ( (byte_4C56335 & 1) == 0 )
+  if ( (byte_4CB589C & 1) == 0 )
   {
-    sub_1C3E564(&AndroidUtil_TypeInfo);
-    byte_4C56335 = 1;
+    sub_1C6BA08(&AndroidUtil_TypeInfo);
+    byte_4CB589C = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -35,15 +35,15 @@ void AndroidPermissionManager__RequestPermission(
   __int64 v11; // x1
   System_Action_string__o *v12; // x1
 
-  if ( (byte_4C56337 & 1) == 0 )
+  if ( (byte_4CB589E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Android_PermissionCallbacks_TypeInfo);
-    byte_4C56337 = 1;
+    sub_1C6BA08(&UnityEngine_Android_PermissionCallbacks_TypeInfo);
+    byte_4CB589E = 1;
   }
-  v9 = (UnityEngine_Android_PermissionCallbacks_o *)sub_1C3E7B0(UnityEngine_Android_PermissionCallbacks_TypeInfo);
+  v9 = (UnityEngine_Android_PermissionCallbacks_o *)sub_1C6BC54(UnityEngine_Android_PermissionCallbacks_TypeInfo);
   UnityEngine_Android_PermissionCallbacks___ctor(v9, 0);
   if ( !v9 )
-    sub_1C3E7C0(v10, v11);
+    sub_1C6BC60(v10, v11);
   UnityEngine_Android_PermissionCallbacks__add_PermissionGranted(v9, grantedCallback, 0);
   UnityEngine_Android_PermissionCallbacks__add_PermissionDenied(v9, deniedCallback, 0);
   if ( dontAskCallback )
@@ -81,50 +81,50 @@ bool AndroidPermissionManager__ShouldShowRequestPermissionRationale(
   __int64 v22; // x0
   __int64 v24; // x0
 
-  if ( (byte_4C56336 & 1) == 0 )
+  if ( (byte_4CB589D & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_AndroidJavaObject_Call_bool____78181672);
-    sub_1C3E564(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&object___TypeInfo);
-    sub_1C3E564(&StringLiteral_23495/*"shouldShowRequestPermissionRationale"*/);
-    sub_1C3E564(&StringLiteral_18136/*"com.unity3d.player.UnityPlayer"*/);
-    sub_1C3E564(&StringLiteral_18421/*"currentActivity"*/);
-    byte_4C56336 = 1;
+    sub_1C6BA08(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_AndroidJavaObject_Call_bool____78564736);
+    sub_1C6BA08(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&object___TypeInfo);
+    sub_1C6BA08(&StringLiteral_23565/*"shouldShowRequestPermissionRationale"*/);
+    sub_1C6BA08(&StringLiteral_18142/*"com.unity3d.player.UnityPlayer"*/);
+    sub_1C6BA08(&StringLiteral_18435/*"currentActivity"*/);
+    byte_4CB589D = 1;
   }
-  v3 = (UnityEngine_AndroidJavaClass_o *)sub_1C3E7B0(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v3, (System_String_o *)StringLiteral_18136/*"com.unity3d.player.UnityPlayer"*/, 0);
+  v3 = (UnityEngine_AndroidJavaClass_o *)sub_1C6BC54(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v3, (System_String_o *)StringLiteral_18142/*"com.unity3d.player.UnityPlayer"*/, 0);
   if ( !v3 )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   Static_object = UnityEngine_AndroidJavaObject__GetStatic_object_(
                     (UnityEngine_AndroidJavaObject_o *)v3,
-                    (System_String_o *)StringLiteral_18421/*"currentActivity"*/,
-                    (const MethodInfo_304BDCC *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
-  v7 = sub_1C3E60C(object___TypeInfo, 1);
+                    (System_String_o *)StringLiteral_18435/*"currentActivity"*/,
+                    (const MethodInfo_308B9D0 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+  v7 = sub_1C6BAB0(object___TypeInfo, 1);
   v11 = v7;
   if ( !v7 )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   if ( permissionName )
   {
-    v7 = sub_1C3E6A0(permissionName, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
+    v7 = sub_1C6BB44(permissionName, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
     if ( !v7 )
     {
-      v24 = sub_1C3E7E4(0);
-      sub_1C3E68C(v24, 0);
+      v24 = sub_1C6BC84(0);
+      sub_1C6BB30(v24, 0);
     }
   }
   if ( !*(_DWORD *)(v11 + 24) )
-    sub_1C3E7C8(v7, v8);
+    sub_1C6BC68(v7);
   *(_QWORD *)(v11 + 32) = permissionName;
-  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 32), (int32_t)permissionName, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 32), (int32_t)permissionName, v9, v10);
   if ( !Static_object )
-    sub_1C3E7C0(v12, v13);
+    sub_1C6BC60(v12, v13);
   v14 = UnityEngine_AndroidJavaObject__Call_bool_(
           (UnityEngine_AndroidJavaObject_o *)Static_object,
-          (System_String_o *)StringLiteral_23495/*"shouldShowRequestPermissionRationale"*/,
+          (System_String_o *)StringLiteral_23565/*"shouldShowRequestPermissionRationale"*/,
           (System_Object_array *)v11,
-          (const MethodInfo_3049974 *)Method_UnityEngine_AndroidJavaObject_Call_bool____78181672);
+          (const MethodInfo_3089578 *)Method_UnityEngine_AndroidJavaObject_Call_bool____78564736);
   klass = Static_object->klass;
   v16 = *(unsigned __int16 *)&Static_object->klass->_2.rank;
   if ( *(_WORD *)&Static_object->klass->_2.rank )
@@ -142,7 +142,7 @@ bool AndroidPermissionManager__ShouldShowRequestPermissionRationale(
   else
   {
 LABEL_13:
-    v18 = sub_1C8ED7C(Static_object, System_IDisposable_TypeInfo, 0);
+    v18 = sub_1C41D90(Static_object, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(Il2CppObject *, _QWORD))v18)(Static_object, *(_QWORD *)(v18 + 8));
   v19 = v3->klass;
@@ -162,7 +162,7 @@ LABEL_13:
   else
   {
 LABEL_19:
-    v22 = sub_1C8ED7C(v3, System_IDisposable_TypeInfo, 0);
+    v22 = sub_1C41D90(v3, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(UnityEngine_AndroidJavaClass_o *, _QWORD))v22)(v3, *(_QWORD *)(v22 + 8));
   return v14;

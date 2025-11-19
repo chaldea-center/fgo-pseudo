@@ -2,21 +2,21 @@ void GrandQuestClassBoardController___ctor(GrandQuestClassBoardController_o *thi
 {
   System_Collections_Generic_Dictionary_int__object__o *v3; // x20
 
-  if ( (byte_4C51A30 & 1) == 0 )
+  if ( (byte_4CB0F78 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__UISprite___ctor__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_int__UISprite__TypeInfo);
-    byte_4C51A30 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__UISprite___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_int__UISprite__TypeInfo);
+    byte_4CB0F78 = 1;
   }
   this->fields.currentWarId = -1;
-  *(_OWORD *)&this->fields.effectRootDefaultPosition.fields.x = xmmword_C12A30;
-  *(_OWORD *)&this->fields.effectRootQuestSelectPosition.fields.y = xmmword_C132E0;
-  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_int__UISprite__TypeInfo);
+  *(_OWORD *)&this->fields.effectRootDefaultPosition.fields.x = xmmword_CECCF0;
+  *(_OWORD *)&this->fields.effectRootQuestSelectPosition.fields.y = xmmword_CED5A0;
+  v3 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__UISprite__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v3,
-    (const MethodInfo_340BA68 *)Method_System_Collections_Generic_Dictionary_int__UISprite___ctor__);
+    (const MethodInfo_3451B1C *)Method_System_Collections_Generic_Dictionary_int__UISprite___ctor__);
   this->fields.dicClassIcon = (struct System_Collections_Generic_Dictionary_int__UISprite__o *)v3;
-  sub_1C3E508(&this->fields.dicClassIcon, v3);
+  sub_1C6B9AC(&this->fields.dicClassIcon, v3);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -74,22 +74,22 @@ void GrandQuestClassBoardController__ExecChangeIconAlpha(
   System_Action_o *v15; // x21
   System_Action_o *v16; // x22
 
-  if ( (byte_4C51A2A & 1) == 0 )
+  if ( (byte_4CB0F72 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass35_0__ExecChangeIconAlpha_b__0__);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass35_0__ExecChangeIconAlpha_b__1__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass35_0_TypeInfo);
-    byte_4C51A2A = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass35_0__ExecChangeIconAlpha_b__0__);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass35_0__ExecChangeIconAlpha_b__1__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass35_0_TypeInfo);
+    byte_4CB0F72 = 1;
   }
-  v8 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass35_0_TypeInfo);
+  v8 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass35_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0);
   if ( !v8 )
     goto LABEL_11;
   *(_QWORD *)(v8 + 32) = icon;
   *(float *)(v8 + 28) = toAlpha;
-  sub_1C3E508(v8 + 32, icon);
+  sub_1C6B9AC(v8 + 32, icon);
   v9 = *(UnityEngine_Component_o **)(v8 + 32);
   if ( time > 0.0 )
   {
@@ -105,17 +105,17 @@ void GrandQuestClassBoardController__ExecChangeIconAlpha(
         gameObject = UnityEngine_Component__get_gameObject(v9, 0);
         Component_object = GameObjectExtensions__SafeGetComponent_object_(
                              gameObject,
-                             (const MethodInfo_3152BB4 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                             (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
         *(_QWORD *)(v8 + 16) = Component_object;
-        sub_1C3E508(v8 + 16, Component_object);
+        sub_1C6B9AC(v8 + 16, Component_object);
         v14 = *(EasingObject_o **)(v8 + 16);
-        v15 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+        v15 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
         System_Action___ctor(
           v15,
           (Il2CppObject *)v8,
           Method_GrandQuestClassBoardController___c__DisplayClass35_0__ExecChangeIconAlpha_b__0__,
           0);
-        v16 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+        v16 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
         System_Action___ctor(
           v16,
           (Il2CppObject *)v8,
@@ -123,13 +123,13 @@ void GrandQuestClassBoardController__ExecChangeIconAlpha(
           0);
         if ( v14 )
         {
-          EasingObject__Play_49128492(v14, 0.0, 1.0, time, v15, v16, 0.0, 15, 0);
+          EasingObject__Play_49357376(v14, 0.0, 1.0, time, v15, v16, 0.0, 15, 0);
           return;
         }
       }
     }
 LABEL_11:
-    sub_1C3E7C0(v9, v10);
+    sub_1C6BC60(v9, v10);
   }
   if ( !v9 )
     goto LABEL_11;
@@ -178,32 +178,32 @@ void GrandQuestClassBoardController__ExecCircleEffect(
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v37; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C51A29 & 1) == 0 )
+  if ( (byte_4CB0F71 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__UISprite__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__UISprite__TryGetValue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__get_Current__);
-    sub_1C3E564(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1C3E564(&Method_System_Collections_Generic_KeyValuePair_int__UISprite__get_Key__);
-    sub_1C3E564(&Method_System_Collections_Generic_KeyValuePair_int__UISprite__get_Value__);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass34_0__ExecCircleEffect_b__0__);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass34_0__ExecCircleEffect_b__1__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass34_0_TypeInfo);
-    byte_4C51A29 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__UISprite__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__UISprite__TryGetValue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__get_Current__);
+    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_int__UISprite__get_Key__);
+    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_int__UISprite__get_Value__);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass34_0__ExecCircleEffect_b__0__);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass34_0__ExecCircleEffect_b__1__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass34_0_TypeInfo);
+    byte_4CB0F71 = 1;
   }
   value = 0;
   memset(&v31, 0, sizeof(v31));
-  v7 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass34_0_TypeInfo);
+  v7 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass34_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_40;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C3E508(v7 + 32, this);
+  sub_1C6B9AC(v7 + 32, this);
   *(_QWORD *)(v7 + 40) = callback;
-  sub_1C3E508(v7 + 40, callback);
+  sub_1C6B9AC(v7 + 40, callback);
   blankEarthSpotEntity = this->fields.blankEarthSpotEntity;
   if ( !blankEarthSpotEntity )
     goto LABEL_40;
@@ -215,7 +215,7 @@ void GrandQuestClassBoardController__ExecCircleEffect(
                                                      (System_Collections_Generic_Dictionary_int__object__o *)this->fields.dicClassIcon,
                                                      (int32_t)blankEarthSpotEntity,
                                                      &value,
-                                                     (const MethodInfo_340DBC8 *)Method_System_Collections_Generic_Dictionary_int__UISprite__TryGetValue__);
+                                                     (const MethodInfo_3453C7C *)Method_System_Collections_Generic_Dictionary_int__UISprite__TryGetValue__);
   if ( !this->fields.classBoard )
     goto LABEL_40;
   v11 = (char)blankEarthSpotEntity;
@@ -267,7 +267,7 @@ LABEL_37:
     || (classSelectController = rootComponent->fields.classSelectController) == 0 )
   {
 LABEL_40:
-    sub_1C3E7C0(blankEarthSpotEntity, v9);
+    sub_1C6BC60(blankEarthSpotEntity, v9);
   }
   if ( classSelectController->fields.isMovePositiveIndex )
   {
@@ -293,7 +293,7 @@ LABEL_23:
   System_Collections_Generic_Dictionary_int__object___GetEnumerator(
     &v31,
     (System_Collections_Generic_Dictionary_int__object__o *)blankEarthSpotEntity,
-    (const MethodInfo_340C874 *)Method_System_Collections_Generic_Dictionary_int__UISprite__GetEnumerator__);
+    (const MethodInfo_3452928 *)Method_System_Collections_Generic_Dictionary_int__UISprite__GetEnumerator__);
   for ( i = immediately ? 0.0 : v20;
         ;
         GrandQuestClassBoardController__ExecChangeIconAlpha(
@@ -305,7 +305,7 @@ LABEL_23:
   {
     v22 = System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
             &v31,
-            (const MethodInfo_3563834 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__MoveNext__);
+            (const MethodInfo_35AA310 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__MoveNext__);
     if ( !v22 )
       break;
     if ( v10 == LODWORD(v31.fields._current.fields.key) )
@@ -315,7 +315,7 @@ LABEL_23:
   }
   System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
     &v31,
-    (const MethodInfo_3563958 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__Dispose__);
+    (const MethodInfo_35AA434 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__UISprite__Dispose__);
   blankEarthSpotEntity = (BlankEarthSpotEntity_o *)this->fields.classBoard;
   if ( !blankEarthSpotEntity )
     goto LABEL_40;
@@ -336,17 +336,17 @@ LABEL_23:
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)blankEarthSpotEntity, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3152BB4 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v7 + 16) = Component_object;
-  sub_1C3E508(v7 + 16, Component_object);
+  sub_1C6B9AC(v7 + 16, Component_object);
   v28 = *(EasingObject_o **)(v7 + 16);
-  v29 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v29 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v29,
     (Il2CppObject *)v7,
     Method_GrandQuestClassBoardController___c__DisplayClass34_0__ExecCircleEffect_b__0__,
     0);
-  v30 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v30 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v30,
     (Il2CppObject *)v7,
@@ -354,7 +354,7 @@ LABEL_23:
     0);
   if ( !v28 )
     goto LABEL_40;
-  EasingObject__Play_49128492(v28, 0.0, 1.0, v20, v29, v30, 0.0, 15, 0);
+  EasingObject__Play_49357376(v28, 0.0, 1.0, v20, v29, v30, 0.0, 15, 0);
 }
 
 
@@ -381,16 +381,16 @@ void GrandQuestClassBoardController__ExecMoveEffectRoot(
   z = targetPosition.fields.z;
   y = targetPosition.fields.y;
   x = targetPosition.fields.x;
-  if ( (byte_4C51A2E & 1) == 0 )
+  if ( (byte_4CB0F76 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass39_0__ExecMoveEffectRoot_b__0__);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass39_0__ExecMoveEffectRoot_b__1__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass39_0_TypeInfo);
-    byte_4C51A2E = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass39_0__ExecMoveEffectRoot_b__0__);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass39_0__ExecMoveEffectRoot_b__1__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass39_0_TypeInfo);
+    byte_4CB0F76 = 1;
   }
-  v11 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass39_0_TypeInfo);
+  v11 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass39_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_8;
@@ -398,30 +398,30 @@ void GrandQuestClassBoardController__ExecMoveEffectRoot(
   *(float *)(v11 + 40) = y;
   *(float *)(v11 + 44) = z;
   *(_QWORD *)(v11 + 48) = this;
-  sub_1C3E508(v11 + 48, this);
+  sub_1C6B9AC(v11 + 48, this);
   *(_QWORD *)(v11 + 56) = callback;
-  sub_1C3E508(v11 + 56, callback);
+  sub_1C6B9AC(v11 + 56, callback);
   effectRoot = (UnityEngine_Component_o *)this->fields.effectRoot;
   if ( !effectRoot )
     goto LABEL_8;
   gameObject = UnityEngine_Component__get_gameObject(effectRoot, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3152BB4 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v11 + 16) = Component_object;
-  sub_1C3E508(v11 + 16, Component_object);
+  sub_1C6B9AC(v11 + 16, Component_object);
   effectRoot = (UnityEngine_Component_o *)this->fields.effectRoot;
   if ( !effectRoot
     || (v16 = UnityEngine_Component__get_gameObject(effectRoot, 0),
         *(UnityEngine_Vector3_o *)(v11 + 24) = GameObjectExtensions__GetLocalPosition(v16, 0),
         v17 = *(EasingObject_o **)(v11 + 16),
-        v18 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo),
+        v18 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
         System_Action___ctor(
           v18,
           (Il2CppObject *)v11,
           Method_GrandQuestClassBoardController___c__DisplayClass39_0__ExecMoveEffectRoot_b__0__,
           0),
-        v19 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo),
+        v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
         System_Action___ctor(
           v19,
           (Il2CppObject *)v11,
@@ -430,9 +430,9 @@ void GrandQuestClassBoardController__ExecMoveEffectRoot(
         !v17) )
   {
 LABEL_8:
-    sub_1C3E7C0(effectRoot, v13);
+    sub_1C6BC60(effectRoot, v13);
   }
-  EasingObject__Play_49128492(v17, 0.0, 1.0, moveTime, v18, v19, 0.0, 17, 0);
+  EasingObject__Play_49357376(v17, 0.0, 1.0, moveTime, v18, v19, 0.0, 17, 0);
 }
 
 
@@ -456,49 +456,49 @@ void GrandQuestClassBoardController__FadeIn(
   float v18; // s1
   float v19; // s3
 
-  if ( (byte_4C51A2D & 1) == 0 )
+  if ( (byte_4CB0F75 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass38_0__FadeIn_b__0__);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass38_0__FadeIn_b__1__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass38_0_TypeInfo);
-    byte_4C51A2D = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass38_0__FadeIn_b__0__);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass38_0__FadeIn_b__1__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass38_0_TypeInfo);
+    byte_4CB0F75 = 1;
   }
-  v7 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass38_0_TypeInfo);
+  v7 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass38_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_18;
   *(_QWORD *)(v7 + 24) = this;
-  sub_1C3E508(v7 + 24, this);
+  sub_1C6B9AC(v7 + 24, this);
   classBoardRoot = (UnityEngine_Component_o *)this->fields.classBoardRoot;
   if ( !classBoardRoot )
     goto LABEL_18;
   gameObject = UnityEngine_Component__get_gameObject(classBoardRoot, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3152BB4 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   *(_QWORD *)(v7 + 16) = Component_object;
-  sub_1C3E508(v7 + 16, Component_object);
+  sub_1C6B9AC(v7 + 16, Component_object);
   *(_DWORD *)(v7 + 48) = 1065353216;
-  *(_OWORD *)(v7 + 32) = xmmword_C13190;
-  if ( !byte_4C506A6 )
+  *(_OWORD *)(v7 + 32) = xmmword_CED450;
+  if ( !byte_4CAFC0E )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A6 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC0E = 1;
   }
   v12 = *(EasingObject_o **)(v7 + 16);
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->oneVector.fields.z;
   *(_QWORD *)(v7 + 52) = *(_QWORD *)&static_fields->oneVector.fields.x;
   *(float *)(v7 + 60) = z;
-  v15 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v15,
     (Il2CppObject *)v7,
     Method_GrandQuestClassBoardController___c__DisplayClass38_0__FadeIn_b__0__,
     0);
-  v16 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v16 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v16,
     (Il2CppObject *)v7,
@@ -506,7 +506,7 @@ void GrandQuestClassBoardController__FadeIn(
     0);
   if ( !v12 )
 LABEL_18:
-    sub_1C3E7C0(classBoardRoot, v9);
+    sub_1C6BC60(classBoardRoot, v9);
   if ( immediately )
     v17 = 0.0;
   else
@@ -519,7 +519,7 @@ LABEL_18:
     v19 = v18;
   else
     v19 = 0.0;
-  EasingObject__Play_49128492(v12, 0.0, 1.0, v17, v15, v16, v19, 11, 0);
+  EasingObject__Play_49357376(v12, 0.0, 1.0, v17, v15, v16, v19, 11, 0);
 }
 
 
@@ -539,74 +539,74 @@ SchedulerTaskBase_o *GrandQuestClassBoardController__GetTaskOfChangeClass(
   System_Func_bool__o *v13; // x21
   struct SchedulerTaskBase_TaskCallback_o *v14; // x21
 
-  if ( (byte_4C51A27 & 1) == 0 )
+  if ( (byte_4CB0F6F & 1) == 0 )
   {
-    sub_1C3E564(&System_Func_bool__TypeInfo);
-    sub_1C3E564(&SchedulerTaskWaitWhile_TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass31_0_TypeInfo);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass31_1__GetTaskOfChangeClass_b__0__);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass31_1__GetTaskOfChangeClass_b__1__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass31_1_TypeInfo);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass31_2__GetTaskOfChangeClass_b__3__);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass31_2__GetTaskOfChangeClass_b__4__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass31_2_TypeInfo);
-    byte_4C51A27 = 1;
+    sub_1C6BA08(&System_Func_bool__TypeInfo);
+    sub_1C6BA08(&SchedulerTaskWaitWhile_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass31_0_TypeInfo);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass31_1__GetTaskOfChangeClass_b__0__);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass31_1__GetTaskOfChangeClass_b__1__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass31_1_TypeInfo);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass31_2__GetTaskOfChangeClass_b__3__);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass31_2__GetTaskOfChangeClass_b__4__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass31_2_TypeInfo);
+    byte_4CB0F6F = 1;
   }
-  v5 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass31_0_TypeInfo);
+  v5 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass31_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_11;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C3E508(v5 + 16, this);
+  sub_1C6B9AC(v5 + 16, this);
   *(_DWORD *)(v5 + 24) = warId;
   if ( this->fields.currentWarId == warId )
   {
-    v8 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass31_1_TypeInfo);
+    v8 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass31_1_TypeInfo);
     System_Object___ctor((Il2CppObject *)v8, 0);
     if ( !v8 )
       goto LABEL_11;
     *(_QWORD *)(v8 + 24) = v5;
-    sub_1C3E508(v8 + 24, v5);
+    sub_1C6B9AC(v8 + 24, v5);
     *(_BYTE *)(v8 + 16) = 1;
-    v9 = (System_Func_bool__o *)sub_1C3E7B0(System_Func_bool__TypeInfo);
+    v9 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v9,
       (Il2CppObject *)v8,
       Method_GrandQuestClassBoardController___c__DisplayClass31_1__GetTaskOfChangeClass_b__0__,
       0);
-    v10 = (SchedulerTaskWaitWhile_o *)sub_1C3E7B0(SchedulerTaskWaitWhile_TypeInfo);
+    v10 = (SchedulerTaskWaitWhile_o *)sub_1C6BC54(SchedulerTaskWaitWhile_TypeInfo);
     SchedulerTaskWaitWhile___ctor(v10, v9, 0);
-    v11 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
+    v11 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
     v12 = &Method_GrandQuestClassBoardController___c__DisplayClass31_1__GetTaskOfChangeClass_b__1__;
   }
   else
   {
-    v8 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass31_2_TypeInfo);
+    v8 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass31_2_TypeInfo);
     System_Object___ctor((Il2CppObject *)v8, 0);
     if ( !v8 )
       goto LABEL_11;
     *(_QWORD *)(v8 + 24) = v5;
-    sub_1C3E508(v8 + 24, v5);
+    sub_1C6B9AC(v8 + 24, v5);
     *(_BYTE *)(v8 + 16) = 1;
-    v13 = (System_Func_bool__o *)sub_1C3E7B0(System_Func_bool__TypeInfo);
+    v13 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v13,
       (Il2CppObject *)v8,
       Method_GrandQuestClassBoardController___c__DisplayClass31_2__GetTaskOfChangeClass_b__3__,
       0);
-    v10 = (SchedulerTaskWaitWhile_o *)sub_1C3E7B0(SchedulerTaskWaitWhile_TypeInfo);
+    v10 = (SchedulerTaskWaitWhile_o *)sub_1C6BC54(SchedulerTaskWaitWhile_TypeInfo);
     SchedulerTaskWaitWhile___ctor(v10, v13, 0);
-    v11 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
+    v11 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
     v12 = &Method_GrandQuestClassBoardController___c__DisplayClass31_2__GetTaskOfChangeClass_b__4__;
   }
   v14 = v11;
   SchedulerTaskBase_TaskCallback___ctor(v11, (Il2CppObject *)v8, *v12, 0);
   if ( !v10 )
 LABEL_11:
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   v10->fields.StartCallback = v14;
-  sub_1C3E508(&v10->fields.StartCallback, v14);
+  sub_1C6B9AC(&v10->fields.StartCallback, v14);
   return (SchedulerTaskBase_o *)v10;
 }
 
@@ -623,33 +623,33 @@ SchedulerTaskBase_o *GrandQuestClassBoardController__GetTaskOfChangeViewType(
   SchedulerTaskWaitWhile_o *v9; // x19
   SchedulerTaskBase_TaskCallback_o *v10; // x20
 
-  if ( (byte_4C51A25 & 1) == 0 )
+  if ( (byte_4CB0F6D & 1) == 0 )
   {
-    sub_1C3E564(&System_Func_bool__TypeInfo);
-    sub_1C3E564(&SchedulerTaskWaitWhile_TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass28_0__GetTaskOfChangeViewType_b__0___78345872);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass28_0__GetTaskOfChangeViewType_b__1__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass28_0_TypeInfo);
-    byte_4C51A25 = 1;
+    sub_1C6BA08(&System_Func_bool__TypeInfo);
+    sub_1C6BA08(&SchedulerTaskWaitWhile_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass28_0__GetTaskOfChangeViewType_b__0__);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass28_0__GetTaskOfChangeViewType_b__1__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass28_0_TypeInfo);
+    byte_4CB0F6D = 1;
   }
-  v5 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass28_0_TypeInfo);
+  v5 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass28_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_6;
   *(_QWORD *)(v5 + 24) = this;
-  sub_1C3E508(v5 + 24, this);
+  sub_1C6B9AC(v5 + 24, this);
   *(_DWORD *)(v5 + 32) = viewType;
   *(_BYTE *)(v5 + 16) = 1;
-  v8 = (System_Func_bool__o *)sub_1C3E7B0(System_Func_bool__TypeInfo);
+  v8 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v8,
     (Il2CppObject *)v5,
-    Method_GrandQuestClassBoardController___c__DisplayClass28_0__GetTaskOfChangeViewType_b__0___78345872,
+    Method_GrandQuestClassBoardController___c__DisplayClass28_0__GetTaskOfChangeViewType_b__0__,
     0);
-  v9 = (SchedulerTaskWaitWhile_o *)sub_1C3E7B0(SchedulerTaskWaitWhile_TypeInfo);
+  v9 = (SchedulerTaskWaitWhile_o *)sub_1C6BC54(SchedulerTaskWaitWhile_TypeInfo);
   SchedulerTaskWaitWhile___ctor(v9, v8, 0);
-  v10 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v10 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
     v10,
     (Il2CppObject *)v5,
@@ -657,9 +657,9 @@ SchedulerTaskBase_o *GrandQuestClassBoardController__GetTaskOfChangeViewType(
     0);
   if ( !v9 )
 LABEL_6:
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   v9->fields.StartCallback = v10;
-  sub_1C3E508(&v9->fields.StartCallback, v10);
+  sub_1C6B9AC(&v9->fields.StartCallback, v10);
   return (SchedulerTaskBase_o *)v9;
 }
 
@@ -685,34 +685,28 @@ void GrandQuestClassBoardController__Init(
   System_String_o *name; // x21
   System_String_o *v19; // x0
   int v20; // w21
-  __int64 v21; // x2
-  __int64 v22; // x3
-  __int64 v23; // x4
-  __int64 v24; // x5
-  __int64 v25; // x6
-  __int64 v26; // x7
-  Il2CppObject *v27; // x0
-  System_String_o *v28; // x0
-  const MethodInfo *v29; // x4
-  int v30; // [xsp+Ch] [xbp-54h] BYREF
+  Il2CppObject *v21; // x0
+  System_String_o *v22; // x0
+  const MethodInfo *v23; // x4
+  int v24; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C51A22 & 1) == 0 )
+  if ( (byte_4CB0F6A & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__UISprite__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__UISprite__set_Item__);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_20327/*"img_bg_classcircle_center"*/);
-    sub_1C3E564(&StringLiteral_20337/*"img_bg_grand_classicon_{0}"*/);
-    sub_1C3E564(&StringLiteral_20328/*"img_bg_classcircle_outring"*/);
-    sub_1C3E564(&StringLiteral_16119/*"_"*/);
-    byte_4C51A22 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__UISprite__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__UISprite__set_Item__);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_20374/*"img_bg_classcircle_center"*/);
+    sub_1C6BA08(&StringLiteral_20384/*"img_bg_grand_classicon_{0}"*/);
+    sub_1C6BA08(&StringLiteral_20375/*"img_bg_classcircle_outring"*/);
+    sub_1C6BA08(&StringLiteral_16102/*"_"*/);
+    byte_4CB0F6A = 1;
   }
   if ( !this->fields.initialized )
   {
     *(_QWORD *)&this->fields.currentWarId = 0xFFFFFFFFLL;
     this->fields.blankEarthSpotEntity = 0;
-    sub_1C3E508(&this->fields.blankEarthSpotEntity, 0);
+    sub_1C6B9AC(&this->fields.blankEarthSpotEntity, 0);
     p_classServantEffect = &this->fields.classServantEffect;
     classServantEffect = (UnityEngine_Object_o *)this->fields.classServantEffect;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -722,35 +716,35 @@ void GrandQuestClassBoardController__Init(
       v8 = (UnityEngine_Object_o *)*p_classServantEffect;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564(v8, 0);
+      UnityEngine_Object__Destroy_71659676(v8, 0);
       *p_classServantEffect = 0;
-      sub_1C3E508(&this->fields.classServantEffect, 0);
+      sub_1C6B9AC(&this->fields.classServantEffect, 0);
     }
     dicClassIcon = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.dicClassIcon;
     if ( !dicClassIcon )
       goto LABEL_24;
     System_Collections_Generic_Dictionary_int__object___Clear(
       dicClassIcon,
-      (const MethodInfo_340C5C4 *)Method_System_Collections_Generic_Dictionary_int__UISprite__Clear__);
+      (const MethodInfo_3452678 *)Method_System_Collections_Generic_Dictionary_int__UISprite__Clear__);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
-      sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A1 = 1;
+      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC09 = 1;
     }
     GameObjectExtensions__SetLocalPosition(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
     this->fields.rootComponent = grandQuestRoot;
-    sub_1C3E508(&this->fields.rootComponent, grandQuestRoot);
+    sub_1C6B9AC(&this->fields.rootComponent, grandQuestRoot);
     GrandQuestClassBoardController__SetSprite(
       this,
       this->fields.classBoard,
-      (System_String_o *)StringLiteral_20328/*"img_bg_classcircle_outring"*/,
+      (System_String_o *)StringLiteral_20375/*"img_bg_classcircle_outring"*/,
       1,
       v11);
     GrandQuestClassBoardController__SetSprite(
       this,
       this->fields.classCircle,
-      (System_String_o *)StringLiteral_20327/*"img_bg_classcircle_center"*/,
+      (System_String_o *)StringLiteral_20374/*"img_bg_classcircle_center"*/,
       1,
       v12);
     classIcons = this->fields.classIcons;
@@ -763,7 +757,7 @@ void GrandQuestClassBoardController__Init(
       while ( 1 )
       {
         if ( v15 >= max_length )
-          sub_1C3E7C8(dicClassIcon, v7);
+          sub_1C6BC68(dicClassIcon);
         v16 = &classIcons->obj.klass + (int)v15;
         v17 = (UnityEngine_Object_o *)v16[4];
         if ( !v17 )
@@ -772,9 +766,9 @@ void GrandQuestClassBoardController__Init(
         dicClassIcon = (System_Collections_Generic_Dictionary_int__object__o *)UnityEngine_Object__get_name(v17, 0);
         if ( !dicClassIcon )
           break;
-        dicClassIcon = (System_Collections_Generic_Dictionary_int__object__o *)System_String__LastIndexOf_63696608(
+        dicClassIcon = (System_Collections_Generic_Dictionary_int__object__o *)System_String__LastIndexOf_64026948(
                                                                                  (System_String_o *)dicClassIcon,
-                                                                                 (System_String_o *)StringLiteral_16119/*"_"*/,
+                                                                                 (System_String_o *)StringLiteral_16102/*"_"*/,
                                                                                  0);
         if ( !name )
           break;
@@ -787,17 +781,17 @@ void GrandQuestClassBoardController__Init(
           (System_Collections_Generic_Dictionary_int__object__o *)this->fields.dicClassIcon,
           (int32_t)dicClassIcon,
           (Il2CppObject *)v17,
-          (const MethodInfo_340C428 *)Method_System_Collections_Generic_Dictionary_int__UISprite__set_Item__);
-        v30 = v20;
-        v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v30, v21, v22, v23, v24, v25, v26);
-        v28 = System_String__Format((System_String_o *)StringLiteral_20337/*"img_bg_grand_classicon_{0}"*/, v27, 0);
-        GrandQuestClassBoardController__SetSprite(this, (UISprite_o *)v17, v28, 0, v29);
+          (const MethodInfo_34524DC *)Method_System_Collections_Generic_Dictionary_int__UISprite__set_Item__);
+        v24 = v20;
+        v21 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
+        v22 = System_String__Format((System_String_o *)StringLiteral_20384/*"img_bg_grand_classicon_{0}"*/, v21, 0);
+        GrandQuestClassBoardController__SetSprite(this, (UISprite_o *)v17, v22, 0, v23);
         max_length = classIcons->max_length;
         if ( (int)++v15 >= max_length )
           goto LABEL_22;
       }
 LABEL_24:
-      sub_1C3E7C0(dicClassIcon, v7);
+      sub_1C6BC60(dicClassIcon, v7);
     }
 LABEL_22:
     this->fields.initialized = 1;
@@ -811,14 +805,14 @@ void GrandQuestClassBoardController__Quit(GrandQuestClassBoardController_o *this
   UnityEngine_Object_o *classServantEffect; // x21
   UnityEngine_Object_o *v5; // x21
 
-  if ( (byte_4C51A2F & 1) == 0 )
+  if ( (byte_4CB0F77 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C51A2F = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB0F77 = 1;
   }
   *(_QWORD *)&this->fields.currentWarId = 0xFFFFFFFFLL;
   this->fields.blankEarthSpotEntity = 0;
-  sub_1C3E508(&this->fields.blankEarthSpotEntity, 0);
+  sub_1C6B9AC(&this->fields.blankEarthSpotEntity, 0);
   p_classServantEffect = &this->fields.classServantEffect;
   classServantEffect = (UnityEngine_Object_o *)this->fields.classServantEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -828,9 +822,9 @@ void GrandQuestClassBoardController__Quit(GrandQuestClassBoardController_o *this
     v5 = (UnityEngine_Object_o *)*p_classServantEffect;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71341564(v5, 0);
+    UnityEngine_Object__Destroy_71659676(v5, 0);
     *p_classServantEffect = 0;
-    sub_1C3E508(&this->fields.classServantEffect, 0);
+    sub_1C6B9AC(&this->fields.classServantEffect, 0);
   }
   this->fields.initialized = 0;
 }
@@ -846,7 +840,7 @@ void GrandQuestClassBoardController__RefreshClassBoardRootActive(
   if ( !classBoardRoot
     || (classBoardRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(classBoardRoot, 0)) == 0 )
   {
-    sub_1C3E7C0(classBoardRoot, method);
+    sub_1C6BC60(classBoardRoot, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)classBoardRoot, this->fields.currentViewType == 1, 0);
 }
@@ -864,28 +858,28 @@ void GrandQuestClassBoardController__Resume(
   System_Action_o *v10; // x21
   const MethodInfo *v11; // x6
 
-  if ( (byte_4C51A24 & 1) == 0 )
+  if ( (byte_4CB0F6C & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass26_0__Resume_b__0__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass26_0_TypeInfo);
-    byte_4C51A24 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass26_0__Resume_b__0__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass26_0_TypeInfo);
+    byte_4CB0F6C = 1;
   }
-  v7 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass26_0_TypeInfo);
+  v7 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C3E508(v7 + 16, this);
+  sub_1C6B9AC(v7 + 16, this);
   *(_QWORD *)(v7 + 24) = callback;
-  sub_1C3E508(v7 + 24, callback);
+  sub_1C6B9AC(v7 + 24, callback);
   if ( this->fields.currentWarId == warId )
   {
     ActionExtensions__Call(*(System_Action_o **)(v7 + 24), 0);
   }
   else
   {
-    v10 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(
       v10,
       (Il2CppObject *)v7,
@@ -920,12 +914,12 @@ void GrandQuestClassBoardController__SetClass(
   const MethodInfo *v25; // x1
   const MethodInfo *v26; // x3
 
-  if ( (byte_4C51A28 & 1) == 0 )
+  if ( (byte_4CB0F70 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_BlankEarthSpotMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___);
-    byte_4C51A28 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___);
+    byte_4CB0F70 = 1;
   }
   if ( this->fields.currentWarId == warId )
   {
@@ -935,23 +929,23 @@ void GrandQuestClassBoardController__SetClass(
   this->fields.currentWarId = warId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_BlankEarthSpotMaster___);
   if ( !Master_object )
     goto LABEL_17;
   v15 = BlankEarthSpotMaster__GetByWarId((BlankEarthSpotMaster_o *)Master_object, this->fields.currentWarId, 0);
   Master_object = (Il2CppObject *)System_Linq_Enumerable__Any_object_(
                                     (System_Collections_Generic_IEnumerable_TSource__o *)v15,
-                                    (const MethodInfo_31055E8 *)Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___);
+                                    (const MethodInfo_3146EE0 *)Method_System_Linq_Enumerable_Any_BlankEarthSpotEntity___);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return;
   if ( !v15 )
 LABEL_17:
-    sub_1C3E7C0(Master_object, v14);
+    sub_1C6BC60(Master_object, v14);
   if ( !LODWORD(v15->max_length) )
-    sub_1C3E7C8(Master_object, v14);
+    sub_1C6BC68(Master_object);
   v16 = v15->m_Items[0];
   this->fields.blankEarthSpotEntity = v16;
-  sub_1C3E508(&this->fields.blankEarthSpotEntity, v16);
+  sub_1C6B9AC(&this->fields.blankEarthSpotEntity, v16);
   v17 = immediately;
   GrandQuestClassBoardController__SetEffectRootPosition(this, v17, 1, 0, v18);
   GrandQuestClassBoardController__SetClassMotif(this, v17, v19);
@@ -960,7 +954,7 @@ LABEL_17:
   if ( !v22 )
     v21 = 0.0;
   v23 = GrandQuestClassBoardController__SetClassServantEffect(this, v21, isSkipEffectAnim, v20);
-  UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)this, v23, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v23, 0);
   GrandQuestClassBoardController__ExecCircleEffect(this, 1, callback, v24);
   if ( !v22 )
     GrandQuestClassBoardController__FadeIn(this, 0, v17, v26);
@@ -978,48 +972,42 @@ void GrandQuestClassBoardController__SetClassMotif(
   __int64 v7; // x1
   int32_t GrandClassIconId; // w0
   UISprite_o *classMotif; // x22
-  __int64 v10; // x2
-  __int64 v11; // x3
-  __int64 v12; // x4
-  __int64 v13; // x5
-  __int64 v14; // x6
-  __int64 v15; // x7
-  Il2CppObject *v16; // x0
-  System_String_o *v17; // x0
-  const MethodInfo *v18; // x4
+  Il2CppObject *v10; // x0
+  System_String_o *v11; // x0
+  const MethodInfo *v12; // x4
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
   EasingObject_o *klass; // x20
-  System_Action_o *v22; // x21
-  System_Action_o *v23; // x22
-  int32_t v24; // [xsp+Ch] [xbp-34h] BYREF
+  System_Action_o *v16; // x21
+  System_Action_o *v17; // x22
+  int32_t v18; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C51A2B & 1) == 0 )
+  if ( (byte_4CB0F73 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass36_0__SetClassMotif_b__0__);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass36_0__SetClassMotif_b__1__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass36_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_20338/*"img_bg_grand_motif_{0}"*/);
-    byte_4C51A2B = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass36_0__SetClassMotif_b__0__);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass36_0__SetClassMotif_b__1__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass36_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_20385/*"img_bg_grand_motif_{0}"*/);
+    byte_4CB0F73 = 1;
   }
-  v5 = (Il2CppObject *)sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass36_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass36_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_10;
   v5[1].monitor = this;
-  sub_1C3E508(&v5[1].monitor, this);
+  sub_1C6B9AC(&v5[1].monitor, this);
   blankEarthSpotEntity = this->fields.blankEarthSpotEntity;
   if ( !blankEarthSpotEntity )
     goto LABEL_10;
   GrandClassIconId = BlankEarthSpotEntity__GetGrandClassIconId(blankEarthSpotEntity, 1, 0);
   classMotif = this->fields.classMotif;
-  v24 = GrandClassIconId;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24, v10, v11, v12, v13, v14, v15);
-  v17 = System_String__Format((System_String_o *)StringLiteral_20338/*"img_bg_grand_motif_{0}"*/, v16, 0);
-  GrandQuestClassBoardController__SetSprite(this, classMotif, v17, 1, v18);
+  v18 = GrandClassIconId;
+  v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
+  v11 = System_String__Format((System_String_o *)StringLiteral_20385/*"img_bg_grand_motif_{0}"*/, v10, 0);
+  GrandQuestClassBoardController__SetSprite(this, classMotif, v11, 1, v12);
   blankEarthSpotEntity = (BlankEarthSpotEntity_o *)this->fields.classMotif;
   if ( !blankEarthSpotEntity )
     goto LABEL_10;
@@ -1034,19 +1022,19 @@ void GrandQuestClassBoardController__SetClassMotif(
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)blankEarthSpotEntity, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3152BB4 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+                       (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
   v5[1].klass = (Il2CppClass *)Component_object;
-  sub_1C3E508(&v5[1], Component_object);
+  sub_1C6B9AC(&v5[1], Component_object);
   v5[2].klass = (Il2CppClass *)0x3F80000000000000LL;
   klass = (EasingObject_o *)v5[1].klass;
-  v22 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
-  System_Action___ctor(v22, v5, Method_GrandQuestClassBoardController___c__DisplayClass36_0__SetClassMotif_b__0__, 0);
-  v23 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
-  System_Action___ctor(v23, v5, Method_GrandQuestClassBoardController___c__DisplayClass36_0__SetClassMotif_b__1__, 0);
+  v16 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  System_Action___ctor(v16, v5, Method_GrandQuestClassBoardController___c__DisplayClass36_0__SetClassMotif_b__0__, 0);
+  v17 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  System_Action___ctor(v17, v5, Method_GrandQuestClassBoardController___c__DisplayClass36_0__SetClassMotif_b__1__, 0);
   if ( !klass )
 LABEL_10:
-    sub_1C3E7C0(blankEarthSpotEntity, v7);
-  EasingObject__Play_49128492(klass, 0.0, 1.0, 1.2, v22, v23, 0.0, 11, 0);
+    sub_1C6BC60(blankEarthSpotEntity, v7);
+  EasingObject__Play_49357376(klass, 0.0, 1.0, 1.2, v16, v17, 0.0, 11, 0);
 }
 
 
@@ -1059,17 +1047,17 @@ System_Collections_IEnumerator_o *GrandQuestClassBoardController__SetClassServan
   bool v7; // w21
   __int64 v8; // x20
 
-  if ( (byte_4C51A2C & 1) == 0 )
+  if ( (byte_4CB0F74 & 1) == 0 )
   {
-    sub_1C3E564(&GrandQuestClassBoardController__SetClassServantEffect_d__37_TypeInfo);
-    byte_4C51A2C = 1;
+    sub_1C6BA08(&GrandQuestClassBoardController__SetClassServantEffect_d__37_TypeInfo);
+    byte_4CB0F74 = 1;
   }
   v7 = isSkipEffectAnim;
-  v8 = sub_1C3E7B0(GrandQuestClassBoardController__SetClassServantEffect_d__37_TypeInfo);
+  v8 = sub_1C6BC54(GrandQuestClassBoardController__SetClassServantEffect_d__37_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0);
   *(_DWORD *)(v8 + 16) = 0;
   *(_QWORD *)(v8 + 32) = this;
-  sub_1C3E508(v8 + 32, this);
+  sub_1C6B9AC(v8 + 32, this);
   *(float *)(v8 + 44) = delayTime;
   *(_BYTE *)(v8 + 40) = v7;
   return (System_Collections_IEnumerator_o *)v8;
@@ -1088,7 +1076,7 @@ void GrandQuestClassBoardController__SetDispEffect(
   if ( !effectRoot
     || (effectRoot = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(effectRoot, 0)) == 0 )
   {
-    sub_1C3E7C0(effectRoot, disp);
+    sub_1C6BC60(effectRoot, disp);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)effectRoot, disp, 0);
 }
@@ -1110,10 +1098,10 @@ void GrandQuestClassBoardController__SetEffectRootPosition(
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C51A26 & 1) == 0 )
+  if ( (byte_4CB0F6E & 1) == 0 )
   {
-    sub_1C3E564(&GrandQuestClassSelectController_TypeInfo);
-    byte_4C51A26 = 1;
+    sub_1C6BA08(&GrandQuestClassSelectController_TypeInfo);
+    byte_4CB0F6E = 1;
   }
   this->fields.currentViewType = viewType;
   if ( viewType == 2 )
@@ -1196,7 +1184,7 @@ void GrandQuestClassBoardController__SetSprite(
       return;
     }
 LABEL_8:
-    sub_1C3E7C0(this, sprite);
+    sub_1C6BC60(this, sprite);
   }
 }
 
@@ -1213,28 +1201,28 @@ void GrandQuestClassBoardController__StartUp(
   System_Action_o *v10; // x21
   const MethodInfo *v11; // x6
 
-  if ( (byte_4C51A23 & 1) == 0 )
+  if ( (byte_4CB0F6B & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass25_0__StartUp_b__0__);
-    sub_1C3E564(&GrandQuestClassBoardController___c__DisplayClass25_0_TypeInfo);
-    byte_4C51A23 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass25_0__StartUp_b__0__);
+    sub_1C6BA08(&GrandQuestClassBoardController___c__DisplayClass25_0_TypeInfo);
+    byte_4CB0F6B = 1;
   }
-  v7 = sub_1C3E7B0(GrandQuestClassBoardController___c__DisplayClass25_0_TypeInfo);
+  v7 = sub_1C6BC54(GrandQuestClassBoardController___c__DisplayClass25_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C3E508(v7 + 16, this);
+  sub_1C6B9AC(v7 + 16, this);
   *(_QWORD *)(v7 + 24) = callback;
-  sub_1C3E508(v7 + 24, callback);
+  sub_1C6B9AC(v7 + 24, callback);
   if ( this->fields.currentWarId == warId )
   {
     ActionExtensions__Call(*(System_Action_o **)(v7 + 24), 0);
   }
   else
   {
-    v10 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(
       v10,
       (Il2CppObject *)v7,
@@ -1281,68 +1269,56 @@ bool GrandQuestClassBoardController__SetClassServantEffect_d__37__MoveNext(
   Il2CppObject *v21; // x0
   const MethodInfo *v22; // x4
   Il2CppObject *v23; // x23
-  __int64 v24; // x2
-  __int64 v25; // x3
-  __int64 v26; // x4
-  __int64 v27; // x5
-  __int64 v28; // x6
-  __int64 v29; // x7
-  Il2CppObject *v30; // x0
-  System_String_o *v31; // x0
-  const MethodInfo *v32; // x4
-  Il2CppObject *v33; // x23
-  __int64 v34; // x2
-  __int64 v35; // x3
-  __int64 v36; // x4
-  __int64 v37; // x5
-  __int64 v38; // x6
-  __int64 v39; // x7
-  Il2CppObject *v40; // x0
-  System_String_o *v41; // x0
-  const MethodInfo *v42; // x4
-  __int64 v43; // x1
+  Il2CppObject *v24; // x0
+  System_String_o *v25; // x0
+  const MethodInfo *v26; // x4
+  Il2CppObject *v27; // x23
+  Il2CppObject *v28; // x0
+  System_String_o *v29; // x0
+  const MethodInfo *v30; // x4
+  __int64 v31; // x1
   System_Collections_IEnumerator_o *Enumerator; // x19
   System_Collections_IEnumerator_c *klass; // x8
-  __int64 v46; // x9
+  __int64 v34; // x9
   int32_t *p_offset; // x10
+  __int64 v36; // x0
+  System_Collections_IEnumerator_c *v37; // x8
+  __int64 v38; // x9
+  System_Collections_IEnumerator_c **v39; // x10
+  __int64 v40; // x0
+  UnityEngine_AnimationState_o *v41; // x0
+  __int64 v42; // x1
+  __int64 v43; // x0
+  __int64 v44; // x8
+  __int64 v45; // x19
+  __int64 v46; // x9
+  int *v47; // x10
   __int64 v48; // x0
-  System_Collections_IEnumerator_c *v49; // x8
-  __int64 v50; // x9
-  System_Collections_IEnumerator_c **v51; // x10
-  __int64 v52; // x0
-  UnityEngine_AnimationState_o *v53; // x0
-  __int64 v54; // x1
-  __int64 v55; // x0
-  __int64 v56; // x8
-  __int64 v57; // x19
-  __int64 v58; // x9
-  int *v59; // x10
-  __int64 v60; // x0
-  int v61; // [xsp+8h] [xbp-58h] BYREF
-  int v62; // [xsp+Ch] [xbp-54h] BYREF
+  int v49; // [xsp+8h] [xbp-58h] BYREF
+  int v50; // [xsp+Ch] [xbp-54h] BYREF
 
   v2 = this;
-  if ( (byte_4C51A35 & 1) == 0 )
+  if ( (byte_4CB0F7D & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_AnimationState_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UnityEngine_WaitForSeconds_TypeInfo);
-    sub_1C3E564(&StringLiteral_23160/*"root/base"*/);
-    sub_1C3E564(&StringLiteral_20337/*"img_bg_grand_classicon_{0}"*/);
-    sub_1C3E564(&StringLiteral_23159/*"root/2_enemyname"*/);
-    sub_1C3E564(&StringLiteral_20613/*"img_text_servantname_{0}"*/);
-    sub_1C3E564(&StringLiteral_23157/*"root/0_iconbase"*/);
-    sub_1C3E564(&StringLiteral_20614/*"img_textbg_grandname"*/);
-    sub_1C3E564(&StringLiteral_20336/*"img_bg_grand_classicon_base"*/);
-    this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)sub_1C3E564(&StringLiteral_23158/*"root/1_classicon"*/);
-    byte_4C51A35 = 1;
+    sub_1C6BA08(&UnityEngine_AnimationState_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UnityEngine_WaitForSeconds_TypeInfo);
+    sub_1C6BA08(&StringLiteral_23236/*"root/base"*/);
+    sub_1C6BA08(&StringLiteral_20384/*"img_bg_grand_classicon_{0}"*/);
+    sub_1C6BA08(&StringLiteral_23235/*"root/2_enemyname"*/);
+    sub_1C6BA08(&StringLiteral_20660/*"img_text_servantname_{0}"*/);
+    sub_1C6BA08(&StringLiteral_23233/*"root/0_iconbase"*/);
+    sub_1C6BA08(&StringLiteral_20661/*"img_textbg_grandname"*/);
+    sub_1C6BA08(&StringLiteral_20383/*"img_bg_grand_classicon_base"*/);
+    this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)sub_1C6BA08(&StringLiteral_23234/*"root/1_classicon"*/);
+    byte_4CB0F7D = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -1368,20 +1344,20 @@ bool GrandQuestClassBoardController__SetClassServantEffect_d__37__MoveNext(
       v7 = *p_classServantEffect;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564(v7, 0);
+      UnityEngine_Object__Destroy_71659676(v7, 0);
       *p_classServantEffect = 0;
-      sub_1C3E508(&_4__this->fields.classServantEffect, 0);
+      sub_1C6B9AC(&_4__this->fields.classServantEffect, 0);
     }
     if ( !v2->fields.isSkipEffectAnim )
     {
       delayTime = v2->fields.delayTime;
       if ( delayTime > 0.0 )
       {
-        v9 = (UnityEngine_WaitForSeconds_o *)sub_1C3E7B0(UnityEngine_WaitForSeconds_TypeInfo);
+        v9 = (UnityEngine_WaitForSeconds_o *)sub_1C6BC54(UnityEngine_WaitForSeconds_TypeInfo);
         UnityEngine_WaitForSeconds___ctor(v9, delayTime, 0);
         v2->fields.__2__current = (Il2CppObject *)v9;
         p__2__current = &v2->fields.__2__current;
-        sub_1C3E508(p__2__current, v9);
+        sub_1C6B9AC(p__2__current, v9);
         result = 1;
         *((_DWORD *)p__2__current - 2) = 1;
         return result;
@@ -1409,73 +1385,73 @@ bool GrandQuestClassBoardController__SetClassServantEffect_d__37__MoveNext(
   v16 = (Il2CppObject *)ClassServantNamePrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v17 = UnityEngine_Object__Instantiate_object__51929056(
+  v17 = UnityEngine_Object__Instantiate_object__52199488(
           v16,
           effectRoot,
-          (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+          (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
   _4__this->fields.classServantEffect = (struct UnityEngine_GameObject_o *)v17;
   v18 = &_4__this->fields.classServantEffect;
-  sub_1C3E508(&_4__this->fields.classServantEffect, v17);
+  sub_1C6B9AC(&_4__this->fields.classServantEffect, v17);
   this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)_4__this->fields.classServantEffect;
   if ( !this )
     goto LABEL_58;
   this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                             (UnityEngine_GameObject_o *)this,
-                                                                            (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+                                                                            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
   if ( !this )
     goto LABEL_58;
   BYTE5(this[2].monitor) = 1;
   this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)GameObjectExtensions__Find(
                                                                             *v18,
-                                                                            (System_String_o *)StringLiteral_23160/*"root/base"*/,
+                                                                            (System_String_o *)StringLiteral_23236/*"root/base"*/,
                                                                             0);
   if ( !this )
     goto LABEL_58;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UISprite___);
   GrandQuestClassBoardController__SetSprite(
     _4__this,
     (UISprite_o *)Component_object,
-    (System_String_o *)StringLiteral_20614/*"img_textbg_grandname"*/,
+    (System_String_o *)StringLiteral_20661/*"img_textbg_grandname"*/,
     1,
     v20);
   this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)GameObjectExtensions__Find(
                                                                             _4__this->fields.classServantEffect,
-                                                                            (System_String_o *)StringLiteral_23157/*"root/0_iconbase"*/,
+                                                                            (System_String_o *)StringLiteral_23233/*"root/0_iconbase"*/,
                                                                             0);
   if ( !this )
     goto LABEL_58;
   v21 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UISprite___);
-  GrandQuestClassBoardController__SetSprite(_4__this, (UISprite_o *)v21, (System_String_o *)StringLiteral_20336/*"img_bg_grand_classicon_base"*/, 1, v22);
+          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+  GrandQuestClassBoardController__SetSprite(_4__this, (UISprite_o *)v21, (System_String_o *)StringLiteral_20383/*"img_bg_grand_classicon_base"*/, 1, v22);
   this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)GameObjectExtensions__Find(
                                                                             _4__this->fields.classServantEffect,
-                                                                            (System_String_o *)StringLiteral_23158/*"root/1_classicon"*/,
+                                                                            (System_String_o *)StringLiteral_23234/*"root/1_classicon"*/,
                                                                             0);
   if ( !this )
     goto LABEL_58;
   v23 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UISprite___);
-  v62 = v13;
-  v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v62, v24, v25, v26, v27, v28, v29);
-  v31 = System_String__Format((System_String_o *)StringLiteral_20337/*"img_bg_grand_classicon_{0}"*/, v30, 0);
-  GrandQuestClassBoardController__SetSprite(_4__this, (UISprite_o *)v23, v31, 1, v32);
+          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+  v50 = v13;
+  v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
+  v25 = System_String__Format((System_String_o *)StringLiteral_20384/*"img_bg_grand_classicon_{0}"*/, v24, 0);
+  GrandQuestClassBoardController__SetSprite(_4__this, (UISprite_o *)v23, v25, 1, v26);
   this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)GameObjectExtensions__Find(
                                                                             _4__this->fields.classServantEffect,
-                                                                            (System_String_o *)StringLiteral_23159/*"root/2_enemyname"*/,
+                                                                            (System_String_o *)StringLiteral_23235/*"root/2_enemyname"*/,
                                                                             0);
   if ( !this )
     goto LABEL_58;
-  v33 = UnityEngine_Component__GetComponent_object_(
+  v27 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UISprite___);
-  v61 = v13;
-  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v61, v34, v35, v36, v37, v38, v39);
-  v41 = System_String__Format((System_String_o *)StringLiteral_20613/*"img_text_servantname_{0}"*/, v40, 0);
-  GrandQuestClassBoardController__SetSprite(_4__this, (UISprite_o *)v33, v41, 1, v42);
+          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+  v49 = v13;
+  v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49);
+  v29 = System_String__Format((System_String_o *)StringLiteral_20660/*"img_text_servantname_{0}"*/, v28, 0);
+  GrandQuestClassBoardController__SetSprite(_4__this, (UISprite_o *)v27, v29, 1, v30);
   if ( v2->fields.isSkipEffectAnim )
   {
     this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)*v18;
@@ -1483,100 +1459,100 @@ bool GrandQuestClassBoardController__SetClassServantEffect_d__37__MoveNext(
     {
       this = (GrandQuestClassBoardController__SetClassServantEffect_d__37_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                                 (UnityEngine_GameObject_o *)this,
-                                                                                (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                                                                                (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
       if ( this )
       {
         Enumerator = UnityEngine_Animation__GetEnumerator((UnityEngine_Animation_o *)this, 0);
         if ( !Enumerator )
-          sub_1C3E7C0(0, v43);
+          sub_1C6BC60(0, v31);
         while ( 1 )
         {
           klass = Enumerator->klass;
-          v46 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+          v34 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
           if ( *(_WORD *)&Enumerator->klass->_2.rank )
           {
             p_offset = &klass->_1.interfaceOffsets->offset;
             while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              --v46;
+              --v34;
               p_offset += 4;
-              if ( !v46 )
+              if ( !v34 )
                 goto LABEL_35;
             }
-            v48 = (__int64)&klass->vtable[*p_offset];
+            v36 = (__int64)&klass->vtable[*p_offset];
           }
           else
           {
 LABEL_35:
-            v48 = sub_1C8ED7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+            v36 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
           }
-          if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v48)(
+          if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v36)(
                   Enumerator,
-                  *(_QWORD *)(v48 + 8))
+                  *(_QWORD *)(v36 + 8))
               & 1) == 0 )
             break;
-          v49 = Enumerator->klass;
-          v50 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+          v37 = Enumerator->klass;
+          v38 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
           if ( *(_WORD *)&Enumerator->klass->_2.rank )
           {
-            v51 = (System_Collections_IEnumerator_c **)&v49->_1.interfaceOffsets->offset;
-            while ( *(v51 - 1) != System_Collections_IEnumerator_TypeInfo )
+            v39 = (System_Collections_IEnumerator_c **)&v37->_1.interfaceOffsets->offset;
+            while ( *(v39 - 1) != System_Collections_IEnumerator_TypeInfo )
             {
-              --v50;
-              v51 += 2;
-              if ( !v50 )
+              --v38;
+              v39 += 2;
+              if ( !v38 )
                 goto LABEL_42;
             }
-            v52 = (__int64)&v49->vtable[*(_DWORD *)v51 + 1];
+            v40 = (__int64)&v37->vtable[*(_DWORD *)v39 + 1];
           }
           else
           {
 LABEL_42:
-            v52 = sub_1C8ED7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+            v40 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
           }
-          v53 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v52)(
+          v41 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v40)(
                                                   Enumerator,
-                                                  *(_QWORD *)(v52 + 8));
-          if ( !v53 )
+                                                  *(_QWORD *)(v40 + 8));
+          if ( !v41 )
             goto LABEL_57;
-          if ( v53->klass != UnityEngine_AnimationState_TypeInfo )
+          if ( v41->klass != UnityEngine_AnimationState_TypeInfo )
           {
-            v53 = (UnityEngine_AnimationState_o *)sub_1C3EA80(v53);
+            v41 = (UnityEngine_AnimationState_o *)sub_1C6BFFC(v41);
 LABEL_57:
-            sub_1C3E7C0(v53, v54);
+            sub_1C6BC60(v41, v42);
           }
-          UnityEngine_AnimationState__set_normalizedTime(v53, 1.0, 0);
+          UnityEngine_AnimationState__set_normalizedTime(v41, 1.0, 0);
         }
-        v55 = sub_1C3E6A0(Enumerator, System_IDisposable_TypeInfo);
-        if ( v55 )
+        v43 = sub_1C6BB44(Enumerator, System_IDisposable_TypeInfo);
+        if ( v43 )
         {
-          v56 = *(_QWORD *)v55;
-          v57 = v55;
-          v58 = *(unsigned __int16 *)(*(_QWORD *)v55 + 302LL);
-          if ( *(_WORD *)(*(_QWORD *)v55 + 302LL) )
+          v44 = *(_QWORD *)v43;
+          v45 = v43;
+          v46 = *(unsigned __int16 *)(*(_QWORD *)v43 + 302LL);
+          if ( *(_WORD *)(*(_QWORD *)v43 + 302LL) )
           {
-            v59 = (int *)(*(_QWORD *)(v56 + 176) + 8LL);
-            while ( *((System_IDisposable_c **)v59 - 1) != System_IDisposable_TypeInfo )
+            v47 = (int *)(*(_QWORD *)(v44 + 176) + 8LL);
+            while ( *((System_IDisposable_c **)v47 - 1) != System_IDisposable_TypeInfo )
             {
-              --v58;
-              v59 += 4;
-              if ( !v58 )
+              --v46;
+              v47 += 4;
+              if ( !v46 )
                 goto LABEL_52;
             }
-            v60 = v56 + 16LL * *v59 + 312;
+            v48 = v44 + 16LL * *v47 + 312;
           }
           else
           {
 LABEL_52:
-            v60 = sub_1C8ED7C(v55, System_IDisposable_TypeInfo, 0);
+            v48 = sub_1C41D90(v43, System_IDisposable_TypeInfo, 0);
           }
-          (*(void (__fastcall **)(__int64, _QWORD))v60)(v57, *(_QWORD *)(v60 + 8));
+          (*(void (__fastcall **)(__int64, _QWORD))v48)(v45, *(_QWORD *)(v48 + 8));
         }
         return 0;
       }
     }
 LABEL_58:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   return 0;
 }
@@ -1598,11 +1574,11 @@ void __noreturn GrandQuestClassBoardController__SetClassServantEffect_d__37__Sys
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_GrandQuestClassBoardController__SetClassServantEffect_d__37_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_GrandQuestClassBoardController__SetClassServantEffect_d__37_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -1639,7 +1615,7 @@ void GrandQuestClassBoardController___c__DisplayClass25_0___StartUp_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   GrandQuestClassBoardController__FadeIn(_4__this, 1, 0, v2);
   ActionExtensions__Call(this->fields.callback, 0);
 }
@@ -1663,23 +1639,23 @@ void GrandQuestClassBoardController___c__DisplayClass26_0___Resume_b__0(
   GrandQuestClassBoardController_o *v5; // x20
 
   v3 = (Il2CppObject *)this;
-  if ( (byte_4C51A31 & 1) == 0 )
+  if ( (byte_4CB0F79 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    this = (GrandQuestClassBoardController___c__DisplayClass26_0_o *)sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass26_0__Resume_b__1__);
-    byte_4C51A31 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    this = (GrandQuestClassBoardController___c__DisplayClass26_0_o *)sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass26_0__Resume_b__1__);
+    byte_4CB0F79 = 1;
   }
   klass = (System_Action_o *)v3[2].klass;
   v5 = (GrandQuestClassBoardController_o *)v3[1].klass;
   if ( !klass )
   {
-    klass = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    klass = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(klass, v3, Method_GrandQuestClassBoardController___c__DisplayClass26_0__Resume_b__1__, 0);
     v3[2].klass = (Il2CppClass *)klass;
-    this = (GrandQuestClassBoardController___c__DisplayClass26_0_o *)sub_1C3E508(&v3[2], klass);
+    this = (GrandQuestClassBoardController___c__DisplayClass26_0_o *)sub_1C6B9AC(&v3[2], klass);
   }
   if ( !v5 )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   GrandQuestClassBoardController__SetEffectRootPosition(v5, 1, 2, klass, v2);
 }
 
@@ -1693,7 +1669,7 @@ void GrandQuestClassBoardController___c__DisplayClass26_0___Resume_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   GrandQuestClassBoardController__FadeIn(_4__this, 0, 1, v2);
   ActionExtensions__Call(this->fields.callback, 0);
 }
@@ -1726,28 +1702,28 @@ void GrandQuestClassBoardController___c__DisplayClass28_0___GetTaskOfChangeViewT
   int32_t viewType; // w21
 
   v3 = this;
-  if ( (byte_4C51A32 & 1) == 0 )
+  if ( (byte_4CB0F7A & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    this = (GrandQuestClassBoardController___c__DisplayClass28_0_o *)sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass28_0__GetTaskOfChangeViewType_b__2__);
-    byte_4C51A32 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    this = (GrandQuestClassBoardController___c__DisplayClass28_0_o *)sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass28_0__GetTaskOfChangeViewType_b__2__);
+    byte_4CB0F7A = 1;
   }
   _9__2 = v3->fields.__9__2;
   _4__this = v3->fields.__4__this;
   viewType = v3->fields.viewType;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)v3,
       Method_GrandQuestClassBoardController___c__DisplayClass28_0__GetTaskOfChangeViewType_b__2__,
       0);
     v3->fields.__9__2 = _9__2;
-    this = (GrandQuestClassBoardController___c__DisplayClass28_0_o *)sub_1C3E508(&v3->fields.__9__2, _9__2);
+    this = (GrandQuestClassBoardController___c__DisplayClass28_0_o *)sub_1C6B9AC(&v3->fields.__9__2, _9__2);
   }
   if ( !_4__this )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   GrandQuestClassBoardController__ChangeViewType(_4__this, viewType, _9__2, v2);
 }
 
@@ -1795,11 +1771,11 @@ void GrandQuestClassBoardController___c__DisplayClass31_1___GetTaskOfChangeClass
   System_Action_o *klass; // x21
 
   v3 = (Il2CppObject *)this;
-  if ( (byte_4C51A33 & 1) == 0 )
+  if ( (byte_4CB0F7B & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    this = (GrandQuestClassBoardController___c__DisplayClass31_1_o *)sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass31_1__GetTaskOfChangeClass_b__2__);
-    byte_4C51A33 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    this = (GrandQuestClassBoardController___c__DisplayClass31_1_o *)sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass31_1__GetTaskOfChangeClass_b__2__);
+    byte_4CB0F7B = 1;
   }
   monitor = v3[1].monitor;
   if ( !monitor )
@@ -1808,18 +1784,18 @@ void GrandQuestClassBoardController___c__DisplayClass31_1___GetTaskOfChangeClass
   klass = (System_Action_o *)v3[2].klass;
   if ( !klass )
   {
-    klass = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    klass = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(
       klass,
       v3,
       Method_GrandQuestClassBoardController___c__DisplayClass31_1__GetTaskOfChangeClass_b__2__,
       0);
     v3[2].klass = (Il2CppClass *)klass;
-    this = (GrandQuestClassBoardController___c__DisplayClass31_1_o *)sub_1C3E508(&v3[2], klass);
+    this = (GrandQuestClassBoardController___c__DisplayClass31_1_o *)sub_1C6B9AC(&v3[2], klass);
   }
   if ( !v5 )
 LABEL_8:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   GrandQuestClassBoardController__ChangeViewType(v5, 1, klass, v2);
 }
 
@@ -1860,11 +1836,11 @@ void GrandQuestClassBoardController___c__DisplayClass31_2___GetTaskOfChangeClass
   System_Action_o *klass; // x22
 
   v3 = (Il2CppObject *)this;
-  if ( (byte_4C51A34 & 1) == 0 )
+  if ( (byte_4CB0F7C & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    this = (GrandQuestClassBoardController___c__DisplayClass31_2_o *)sub_1C3E564(&Method_GrandQuestClassBoardController___c__DisplayClass31_2__GetTaskOfChangeClass_b__5__);
-    byte_4C51A34 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    this = (GrandQuestClassBoardController___c__DisplayClass31_2_o *)sub_1C6BA08(&Method_GrandQuestClassBoardController___c__DisplayClass31_2__GetTaskOfChangeClass_b__5__);
+    byte_4CB0F7C = 1;
   }
   monitor = v3[1].monitor;
   if ( !monitor )
@@ -1874,18 +1850,18 @@ void GrandQuestClassBoardController___c__DisplayClass31_2___GetTaskOfChangeClass
   klass = (System_Action_o *)v3[2].klass;
   if ( !klass )
   {
-    klass = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    klass = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(
       klass,
       v3,
       Method_GrandQuestClassBoardController___c__DisplayClass31_2__GetTaskOfChangeClass_b__5__,
       0);
     v3[2].klass = (Il2CppClass *)klass;
-    this = (GrandQuestClassBoardController___c__DisplayClass31_2_o *)sub_1C3E508(&v3[2], klass);
+    this = (GrandQuestClassBoardController___c__DisplayClass31_2_o *)sub_1C6B9AC(&v3[2], klass);
   }
   if ( !v5 )
 LABEL_8:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   GrandQuestClassBoardController__ChangeClass(v5, v6, klass, v2);
 }
 
@@ -1933,7 +1909,7 @@ void GrandQuestClassBoardController___c__DisplayClass34_0___ExecCircleEffect_b__
         !transform) )
   {
 LABEL_6:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   UnityEngine_Transform__set_localRotation(transform, v8, 0);
 }
@@ -1959,7 +1935,7 @@ void GrandQuestClassBoardController___c__DisplayClass34_0___ExecCircleEffect_b__
         v6 = UnityEngine_Quaternion__Internal_FromEulerRad(v5, 0),
         !transform) )
   {
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   UnityEngine_Transform__set_localRotation(transform, v6, 0);
   ActionExtensions__Call(v3->fields.callback, 0);
@@ -1987,7 +1963,7 @@ void GrandQuestClassBoardController___c__DisplayClass35_0___ExecChangeIconAlpha_
 
   easing = this->fields.easing;
   if ( !easing || (v3 = this, (this = (GrandQuestClassBoardController___c__DisplayClass35_0_o *)this->fields.icon) == 0) )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   mNow = easing->fields.mNow;
   v5 = fminf(mNow, 1.0);
   v6 = mNow < 0.0;
@@ -2009,7 +1985,7 @@ void GrandQuestClassBoardController___c__DisplayClass35_0___ExecChangeIconAlpha_
 
   icon = this->fields.icon;
   if ( !icon )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *, float))icon->klass->vtable._8_set_alpha.methodPtr)(
     icon,
     icon->klass->vtable._8_set_alpha.method,
@@ -2042,7 +2018,7 @@ void GrandQuestClassBoardController___c__DisplayClass36_0___SetClassMotif_b__0(
     || (_4__this = this->fields.__4__this, v4 = this, !_4__this)
     || (this = (GrandQuestClassBoardController___c__DisplayClass36_0_o *)_4__this->fields.classMotif) == 0 )
   {
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   mNow = easing->fields.mNow;
   v6 = fminf(mNow, 1.0);
@@ -2066,7 +2042,7 @@ void GrandQuestClassBoardController___c__DisplayClass36_0___SetClassMotif_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (classMotif = _4__this->fields.classMotif) == 0 )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   ((void (__fastcall *)(struct UISprite_o *__return_ptr, struct UISprite_o *, const MethodInfo *, float))classMotif->klass->vtable._8_set_alpha.methodPtr)(
     classMotif,
     classMotif,
@@ -2127,7 +2103,7 @@ void GrandQuestClassBoardController___c__DisplayClass38_0___FadeIn_b__0(
                                                                            0)) == 0 )
   {
 LABEL_11:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   v9 = vadd_f32(
          *(float32x2_t *)&v4->fields.fromScale.fields.x,
@@ -2163,7 +2139,7 @@ void GrandQuestClassBoardController___c__DisplayClass38_0___FadeIn_b__1(
                                                                            (UnityEngine_Component_o *)this,
                                                                            0)) == 0 )
   {
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)this, v3->fields.toScale, 0);
 }
@@ -2206,7 +2182,7 @@ void GrandQuestClassBoardController___c__DisplayClass39_0___ExecMoveEffectRoot_b
     v7 = v5;
   if ( !_4__this )
 LABEL_6:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   z = this->fields.currentPosition.fields.z;
   v9 = v7 * (float)(this->fields.targetPosition.fields.z - z);
   v10 = vadd_f32(
@@ -2230,7 +2206,7 @@ void GrandQuestClassBoardController___c__DisplayClass39_0___ExecMoveEffectRoot_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   TransformHelper__SetLocalPosition(_4__this->fields.effectRoot, this->fields.targetPosition, 0);
   ActionExtensions__Call(this->fields.callback, 0);
 }

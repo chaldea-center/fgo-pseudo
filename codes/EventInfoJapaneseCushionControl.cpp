@@ -5,17 +5,17 @@ void EventInfoJapaneseCushionControl___cctor(const MethodInfo *method)
   struct EventInfoJapaneseCushionControl_StaticFields *static_fields; // x0
   int32_t v4; // w1
 
-  if ( (byte_4C582A5 & 1) == 0 )
+  if ( (byte_4CB7813 & 1) == 0 )
   {
-    sub_1C3E564(&EventInfoJapaneseCushionControl_TypeInfo);
-    sub_1C3E564(&StringLiteral_5583/*"EVENT_CUSHION_VALUE"*/);
-    byte_4C582A5 = 1;
+    sub_1C6BA08(&EventInfoJapaneseCushionControl_TypeInfo);
+    sub_1C6BA08(&StringLiteral_5573/*"EVENT_CUSHION_VALUE"*/);
+    byte_4CB7813 = 1;
   }
   static_fields = EventInfoJapaneseCushionControl_TypeInfo->static_fields;
   static_fields->LIMIT_BREAK_CUSHION_NUM = 73;
-  v4 = StringLiteral_5583/*"EVENT_CUSHION_VALUE"*/;
-  static_fields->SAVEKEY_EVENT_CUSHION_VALUE = (struct System_String_o *)StringLiteral_5583/*"EVENT_CUSHION_VALUE"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->SAVEKEY_EVENT_CUSHION_VALUE, v4, v1, v2);
+  v4 = StringLiteral_5573/*"EVENT_CUSHION_VALUE"*/;
+  static_fields->SAVEKEY_EVENT_CUSHION_VALUE = (struct System_String_o *)StringLiteral_5573/*"EVENT_CUSHION_VALUE"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->SAVEKEY_EVENT_CUSHION_VALUE, v4, v1, v2);
 }
 
 
@@ -32,10 +32,10 @@ bool EventInfoJapaneseCushionControl__CheckEventProgressValueSaveData(
 {
   System_String_o *EventProgressValueSaveKey; // x0
 
-  if ( (byte_4C582A2 & 1) == 0 )
+  if ( (byte_4CB7810 & 1) == 0 )
   {
-    sub_1C3E564(&EventInfoJapaneseCushionControl_TypeInfo);
-    byte_4C582A2 = 1;
+    sub_1C6BA08(&EventInfoJapaneseCushionControl_TypeInfo);
+    byte_4CB7810 = 1;
   }
   if ( !EventInfoJapaneseCushionControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventInfoJapaneseCushionControl_TypeInfo);
@@ -58,11 +58,11 @@ void EventInfoJapaneseCushionControl__DeleteBeforeAnim(
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C5829E & 1) == 0 )
+  if ( (byte_4CB780C & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5829E = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB780C = 1;
   }
   beforeAnimObject = this->fields.beforeAnimObject;
   p_beforeAnimObject = (CGThumbnailListItem_o *)&this->fields.beforeAnimObject;
@@ -76,7 +76,7 @@ void EventInfoJapaneseCushionControl__DeleteBeforeAnim(
       goto LABEL_16;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)klass,
-                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     klass = (CGThumbnailListItem_c *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -93,13 +93,13 @@ void EventInfoJapaneseCushionControl__DeleteBeforeAnim(
       v9 = (UnityEngine_Object_o *)p_beforeAnimObject->klass;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564(v9, 0);
+      UnityEngine_Object__Destroy_71659676(v9, 0);
       p_beforeAnimObject->klass = 0;
-      sub_1C3E508(p_beforeAnimObject, 0, v10, v11);
+      sub_1C6B9AC(p_beforeAnimObject, 0, v10, v11);
       return;
     }
 LABEL_16:
-    sub_1C3E7C0(klass, v6);
+    sub_1C6BC60(klass, v6);
   }
 }
 
@@ -129,7 +129,7 @@ void EventInfoJapaneseCushionControl__EndAddedCushionAnim(
   if ( cushionStartAnimIndex < max_length && this->fields.cushionAddNum >= 1 )
   {
     if ( cushionStartAnimIndex >= (unsigned int)max_length )
-      sub_1C3E7C8(this, method);
+      sub_1C6BC68(this);
     this = (EventInfoJapaneseCushionControl_o *)CushionObjectList->m_Items[cushionStartAnimIndex];
     if ( !this )
       goto LABEL_15;
@@ -143,7 +143,7 @@ void EventInfoJapaneseCushionControl__EndAddedCushionAnim(
   v8 = v6->fields.servantObjectData;
   if ( !v8 || (v9 = v8->fields.CushionObjectList) == 0 )
 LABEL_15:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   v6->fields.cushionStartAnimIndex = LODWORD(v9->max_length) - 1;
 LABEL_12:
   if ( v6->fields.cushionAddNum )
@@ -165,14 +165,14 @@ void EventInfoJapaneseCushionControl__EndCushionAnim(EventInfoJapaneseCushionCon
 
   servantObjectData = this->fields.servantObjectData;
   if ( !servantObjectData )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   ServantObject = servantObjectData->fields.ServantObject;
   ServantPosition = EventInfoJapaneseCushionControl__GetServantPosition(this, this->fields.currentCushionNum, v2);
   GameObjectExtensions__SetLocalPosition(ServantObject, ServantPosition, 0);
   animEndAction = this->fields.animEndAction;
   this->fields.cushionAddNum = 0;
   this->fields.animEndAction = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.animEndAction, 0, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.animEndAction, 0, v7, v8);
   if ( animEndAction )
     ((void (__fastcall *)(intptr_t, intptr_t))animEndAction->fields.invoke_impl)(
       animEndAction->fields.method_code,
@@ -189,10 +189,10 @@ int32_t EventInfoJapaneseCushionControl__GetBeforeCushionNum(
   int32_t eventId; // w19
   int32_t id; // w20
 
-  if ( (byte_4C582A0 & 1) == 0 )
+  if ( (byte_4CB780E & 1) == 0 )
   {
-    sub_1C3E564(&EventInfoJapaneseCushionControl_TypeInfo);
-    byte_4C582A0 = 1;
+    sub_1C6BA08(&EventInfoJapaneseCushionControl_TypeInfo);
+    byte_4CB780E = 1;
   }
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
@@ -220,10 +220,10 @@ int32_t EventInfoJapaneseCushionControl__GetCurrentCushionNum(
   struct UnityEngine_GameObject_array *CushionObjectList; // x8
 
   v2 = this;
-  if ( (byte_4C5829F & 1) == 0 )
+  if ( (byte_4CB780D & 1) == 0 )
   {
-    this = (EventInfoJapaneseCushionControl_o *)sub_1C3E564(&EventInfoJapaneseCushionControl_TypeInfo);
-    byte_4C5829F = 1;
+    this = (EventInfoJapaneseCushionControl_o *)sub_1C6BA08(&EventInfoJapaneseCushionControl_TypeInfo);
+    byte_4CB780D = 1;
   }
   eventUiEntity = v2->fields.eventUiEntity;
   if ( eventUiEntity
@@ -246,7 +246,7 @@ int32_t EventInfoJapaneseCushionControl__GetCurrentCushionNum(
     servantObjectData = v2->fields.servantObjectData;
     if ( !servantObjectData || (CushionObjectList = servantObjectData->fields.CushionObjectList) == 0 )
 LABEL_18:
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     if ( (int)this >= SLODWORD(CushionObjectList->max_length) )
     {
       this = (EventInfoJapaneseCushionControl_o *)EventInfoJapaneseCushionControl_TypeInfo;
@@ -276,10 +276,10 @@ int32_t EventInfoJapaneseCushionControl__GetEventProgressValueSaveData(
 {
   System_String_o *EventProgressValueSaveKey; // x0
 
-  if ( (byte_4C582A3 & 1) == 0 )
+  if ( (byte_4CB7811 & 1) == 0 )
   {
-    sub_1C3E564(&EventInfoJapaneseCushionControl_TypeInfo);
-    byte_4C582A3 = 1;
+    sub_1C6BA08(&EventInfoJapaneseCushionControl_TypeInfo);
+    byte_4CB7811 = 1;
   }
   if ( !EventInfoJapaneseCushionControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventInfoJapaneseCushionControl_TypeInfo);
@@ -318,14 +318,14 @@ System_String_o *EventInfoJapaneseCushionControl__GetEventProgressValueSaveKey(
 
   v21 = eventUiId;
   v22 = eventId;
-  if ( (byte_4C582A1 & 1) == 0 )
+  if ( (byte_4CB780F & 1) == 0 )
   {
-    sub_1C3E564(&EventInfoJapaneseCushionControl_TypeInfo);
-    sub_1C3E564(&string___TypeInfo);
-    sub_1C3E564(&StringLiteral_16119/*"_"*/);
-    byte_4C582A1 = 1;
+    sub_1C6BA08(&EventInfoJapaneseCushionControl_TypeInfo);
+    sub_1C6BA08(&string___TypeInfo);
+    sub_1C6BA08(&StringLiteral_16102/*"_"*/);
+    byte_4CB780F = 1;
   }
-  v3 = (System_String_o *)sub_1C3E60C(string___TypeInfo, 5);
+  v3 = (System_String_o *)sub_1C6BAB0(string___TypeInfo, 5);
   v7 = EventInfoJapaneseCushionControl_TypeInfo;
   v8 = v3;
   if ( !EventInfoJapaneseCushionControl_TypeInfo->_2.cctor_finished )
@@ -334,34 +334,34 @@ System_String_o *EventInfoJapaneseCushionControl__GetEventProgressValueSaveKey(
     v7 = EventInfoJapaneseCushionControl_TypeInfo;
   }
   if ( !v8 )
-    sub_1C3E7C0(v3, v4);
+    sub_1C6BC60(v3, v4);
   if ( !LODWORD(v8[1].klass) )
     goto LABEL_12;
   SAVEKEY_EVENT_CUSHION_VALUE = v7->static_fields->SAVEKEY_EVENT_CUSHION_VALUE;
   v8[1].monitor = SAVEKEY_EVENT_CUSHION_VALUE;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8[1].monitor, (int32_t)SAVEKEY_EVENT_CUSHION_VALUE, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8[1].monitor, (int32_t)SAVEKEY_EVENT_CUSHION_VALUE, v5, v6);
   if ( LODWORD(v8[1].klass) <= 1 )
     goto LABEL_12;
-  v12 = StringLiteral_16119/*"_"*/;
-  v8[1].fields = (System_String_Fields)StringLiteral_16119/*"_"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8[1].fields, v12, v10, v11);
+  v12 = StringLiteral_16102/*"_"*/;
+  v8[1].fields = (System_String_Fields)StringLiteral_16102/*"_"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8[1].fields, v12, v10, v11);
   v3 = System_Int32__ToString((int32_t)&v22, 0);
   if ( LODWORD(v8[1].klass) <= 2
     || (v8[2].klass = (System_String_c *)v3,
-        sub_1C3E508((CGThumbnailListItem_o *)&v8[2], (int32_t)v3, v13, v14),
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v8[2], (int32_t)v3, v13, v14),
         LODWORD(v8[1].klass) <= 3)
-    || (v17 = StringLiteral_16119/*"_"*/,
-        v8[2].monitor = (void *)StringLiteral_16119/*"_"*/,
-        sub_1C3E508((CGThumbnailListItem_o *)&v8[2].monitor, v17, v15, v16),
+    || (v17 = StringLiteral_16102/*"_"*/,
+        v8[2].monitor = (void *)StringLiteral_16102/*"_"*/,
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v8[2].monitor, v17, v15, v16),
         v3 = System_Int32__ToString((int32_t)&v21, 0),
         LODWORD(v8[1].klass) <= 4) )
   {
 LABEL_12:
-    sub_1C3E7C8(v3, v4);
+    sub_1C6BC68(v3);
   }
   v8[2].fields = (System_String_Fields)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8[2].fields, (int32_t)v3, v18, v19);
-  return System_String__Concat_63676984((System_String_array *)v8, 0);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8[2].fields, (int32_t)v3, v18, v19);
+  return System_String__Concat_64007324((System_String_array *)v8, 0);
 }
 
 
@@ -381,7 +381,7 @@ UnityEngine_Vector3_o EventInfoJapaneseCushionControl__GetLordUpEffectEndedPosit
 
   servantObjectData = this->fields.servantObjectData;
   if ( !servantObjectData || (CushionObjectList = servantObjectData->fields.CushionObjectList) == 0 )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   beforeCushionNum = this->fields.beforeCushionNum;
   max_length = CushionObjectList->max_length;
   v7 = beforeCushionNum - 1;
@@ -394,7 +394,7 @@ UnityEngine_Vector3_o EventInfoJapaneseCushionControl__GetLordUpEffectEndedPosit
       goto LABEL_9;
     }
 LABEL_11:
-    sub_1C3E7C8(this, method);
+    sub_1C6BC68(this);
   }
   if ( v7 >= max_length )
     goto LABEL_11;
@@ -427,7 +427,6 @@ UnityEngine_Vector3_o EventInfoJapaneseCushionControl__GetLordUpEffectStartedPos
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o EventInfoJapaneseCushionControl__GetServantAnimPosition(
         EventInfoJapaneseCushionControl_o *this,
         int32_t index,
@@ -440,18 +439,17 @@ UnityEngine_Vector3_o EventInfoJapaneseCushionControl__GetServantAnimPosition(
 
   servantObjectData = this->fields.servantObjectData;
   if ( !servantObjectData || (CushionObjectList = servantObjectData->fields.CushionObjectList) == 0 )
-    sub_1C3E7C0(this, *(_QWORD *)&index);
+    sub_1C6BC60(this, index);
   max_length = CushionObjectList->max_length;
   v6 = max_length - 1;
   if ( max_length > index )
     v6 = index;
   if ( v6 >= (unsigned int)max_length )
-    sub_1C3E7C8(this, *(_QWORD *)&index);
+    sub_1C6BC68(this);
   return GameObjectExtensions__GetLocalPosition(CushionObjectList->m_Items[v6], 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 UnityEngine_Vector3_o EventInfoJapaneseCushionControl__GetServantPosition(
         EventInfoJapaneseCushionControl_o *this,
         int32_t cushionNum,
@@ -463,7 +461,7 @@ UnityEngine_Vector3_o EventInfoJapaneseCushionControl__GetServantPosition(
 
   servantObjectData = this->fields.servantObjectData;
   if ( !servantObjectData )
-    sub_1C3E7C0(this, *(_QWORD *)&cushionNum);
+    sub_1C6BC60(this, cushionNum);
   result = GameObjectExtensions__GetLocalPosition(servantObjectData->fields.ServantObject, 0);
   v6 = (float)(this->fields.servantStepHeight * (float)(cushionNum - 1)) + this->fields.servantPositionOffsetY;
   result.fields.y = v6;
@@ -501,28 +499,28 @@ void EventInfoJapaneseCushionControl__Initialization(
   struct UnityEngine_GameObject_array *ExtentionCushionObjectList; // x8
   unsigned __int64 v28; // x9
 
-  if ( (byte_4C58299 & 1) == 0 )
+  if ( (byte_4CB7807 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_EventInfoJapaneseCushionControl__Initialization_b__30_0__);
-    sub_1C3E564(&TerminalSceneComponent_TypeInfo);
-    sub_1C3E564(&StringLiteral_19219/*"event_gauge_bg_8036702"*/);
-    sub_1C3E564(&StringLiteral_19227/*"event_gauge_sd_8036702"*/);
-    sub_1C3E564(&StringLiteral_19217/*"event_gauge_base_8036702"*/);
-    sub_1C3E564(&StringLiteral_19218/*"event_gauge_bg_8036701"*/);
-    sub_1C3E564(&StringLiteral_19216/*"event_gauge_base_8036701"*/);
-    sub_1C3E564(&StringLiteral_19311/*"event_title_80367"*/);
-    sub_1C3E564(&StringLiteral_19226/*"event_gauge_sd_8036701"*/);
-    byte_4C58299 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_EventInfoJapaneseCushionControl__Initialization_b__30_0__);
+    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
+    sub_1C6BA08(&StringLiteral_19250/*"event_gauge_bg_8036702"*/);
+    sub_1C6BA08(&StringLiteral_19258/*"event_gauge_sd_8036702"*/);
+    sub_1C6BA08(&StringLiteral_19248/*"event_gauge_base_8036702"*/);
+    sub_1C6BA08(&StringLiteral_19249/*"event_gauge_bg_8036701"*/);
+    sub_1C6BA08(&StringLiteral_19247/*"event_gauge_base_8036701"*/);
+    sub_1C6BA08(&StringLiteral_19342/*"event_title_80367"*/);
+    sub_1C6BA08(&StringLiteral_19257/*"event_gauge_sd_8036701"*/);
+    byte_4CB7807 = 1;
   }
   if ( !this->fields.servantType )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4C50C86 )
+    if ( !byte_4CB01CE )
     {
-      sub_1C3E564(&TerminalSceneComponent_TypeInfo);
-      byte_4C50C86 = 1;
+      sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
+      byte_4CB01CE = 1;
     }
     ServantSprite = (UIWidget_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -546,9 +544,9 @@ void EventInfoJapaneseCushionControl__Initialization(
     UIWidget__set_depth(ServantSprite, this->fields.titleBackButtonDepth, 0);
   }
   this->fields.eventUiEntity = entity;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
   eventUiEntity = this->fields.eventUiEntity;
-  v10 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_EventInfoJapaneseCushionControl__Initialization_b__30_0__, 0);
   EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v10, 0);
   bgSprite = this->fields.bgSprite;
@@ -557,7 +555,7 @@ void EventInfoJapaneseCushionControl__Initialization(
     EventInfoUIBase__SetSpriteByLocalAtlas(
       (EventInfoUIBase_o *)this,
       bgSprite,
-      (System_String_o *)StringLiteral_19217/*"event_gauge_base_8036702"*/,
+      (System_String_o *)StringLiteral_19248/*"event_gauge_base_8036702"*/,
       0);
     ServantSprite = (UIWidget_o *)this->fields.bgSprite;
     if ( !ServantSprite )
@@ -571,7 +569,7 @@ void EventInfoJapaneseCushionControl__Initialization(
     ServantSprite = (UIWidget_o *)EventInfoUIBase__SetSpriteByLocalAtlas(
                                     (EventInfoUIBase_o *)this,
                                     servantObjectData->fields.ServantSprite,
-                                    (System_String_o *)StringLiteral_19227/*"event_gauge_sd_8036702"*/,
+                                    (System_String_o *)StringLiteral_19258/*"event_gauge_sd_8036702"*/,
                                     0);
     v13 = this->fields.servantObjectData;
     if ( !v13 )
@@ -586,14 +584,14 @@ void EventInfoJapaneseCushionControl__Initialization(
     if ( !v14 )
       goto LABEL_45;
     NameSprite = v14->fields.NameSprite;
-    v16 = &StringLiteral_19219/*"event_gauge_bg_8036702"*/;
+    v16 = &StringLiteral_19250/*"event_gauge_bg_8036702"*/;
   }
   else
   {
     EventInfoUIBase__SetSpriteByLocalAtlas(
       (EventInfoUIBase_o *)this,
       bgSprite,
-      (System_String_o *)StringLiteral_19216/*"event_gauge_base_8036701"*/,
+      (System_String_o *)StringLiteral_19247/*"event_gauge_base_8036701"*/,
       0);
     ServantSprite = (UIWidget_o *)this->fields.bgSprite;
     if ( !ServantSprite )
@@ -604,7 +602,7 @@ void EventInfoJapaneseCushionControl__Initialization(
     EventInfoUIBase__SetSpriteByLocalAtlas(
       (EventInfoUIBase_o *)this,
       this->fields.titleSprite,
-      (System_String_o *)StringLiteral_19311/*"event_title_80367"*/,
+      (System_String_o *)StringLiteral_19342/*"event_title_80367"*/,
       0);
     ServantSprite = (UIWidget_o *)this->fields.titleSprite;
     if ( !ServantSprite )
@@ -618,7 +616,7 @@ void EventInfoJapaneseCushionControl__Initialization(
     ServantSprite = (UIWidget_o *)EventInfoUIBase__SetSpriteByLocalAtlas(
                                     (EventInfoUIBase_o *)this,
                                     v17->fields.ServantSprite,
-                                    (System_String_o *)StringLiteral_19226/*"event_gauge_sd_8036701"*/,
+                                    (System_String_o *)StringLiteral_19257/*"event_gauge_sd_8036701"*/,
                                     0);
     v18 = this->fields.servantObjectData;
     if ( !v18 )
@@ -633,7 +631,7 @@ void EventInfoJapaneseCushionControl__Initialization(
     if ( !v19 )
       goto LABEL_45;
     NameSprite = v19->fields.NameSprite;
-    v16 = &StringLiteral_19218/*"event_gauge_bg_8036701"*/;
+    v16 = &StringLiteral_19249/*"event_gauge_bg_8036701"*/;
   }
   ServantSprite = (UIWidget_o *)EventInfoUIBase__SetSpriteByLocalAtlas(
                                   (EventInfoUIBase_o *)this,
@@ -663,7 +661,7 @@ void EventInfoJapaneseCushionControl__Initialization(
       break;
     if ( v23 >= max_length_low )
 LABEL_46:
-      sub_1C3E7C8(ServantSprite, entity);
+      sub_1C6BC68(ServantSprite);
     EventInfoJapaneseCushionControl__SetupCushionObject(
       this,
       CushionObjectList->m_Items[v23],
@@ -699,7 +697,7 @@ LABEL_46:
     }
     while ( v22 );
 LABEL_45:
-    sub_1C3E7C0(ServantSprite, entity);
+    sub_1C6BC60(ServantSprite, entity);
   }
 }
 
@@ -724,7 +722,7 @@ void EventInfoJapaneseCushionControl__OnDestroy(EventInfoJapaneseCushionControl_
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   EventInfoUIBase__ReleaseEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0);
   EventInfoUIBase__ReleaseLocalAtlas((EventInfoUIBase_o *)this, 0);
 }
@@ -736,19 +734,19 @@ void EventInfoJapaneseCushionControl__OnDisable(EventInfoJapaneseCushionControl_
   UIWidget_OnDimensionsChanged_c *klass; // x8
   void *genericContainerHandle; // x19
 
-  if ( (byte_4C58298 & 1) == 0 )
+  if ( (byte_4CB7806 & 1) == 0 )
   {
-    sub_1C3E564(&TerminalSceneComponent_TypeInfo);
-    byte_4C58298 = 1;
+    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
+    byte_4CB7806 = 1;
   }
   if ( !this->fields.servantType )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4C50C86 )
+    if ( !byte_4CB01CE )
     {
-      sub_1C3E564(&TerminalSceneComponent_TypeInfo);
-      byte_4C50C86 = 1;
+      sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
+      byte_4CB01CE = 1;
     }
     v3 = (UIWidget_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -762,7 +760,7 @@ void EventInfoJapaneseCushionControl__OnDisable(EventInfoJapaneseCushionControl_
       || (v3 = (UIWidget_o *)*((_QWORD *)genericContainerHandle + 5)) == 0
       || (UIWidget__set_depth(v3, 8, 0), (v3 = (UIWidget_o *)*((_QWORD *)genericContainerHandle + 4)) == 0) )
     {
-      sub_1C3E7C0(v3, method);
+      sub_1C6BC60(v3, method);
     }
     UIWidget__set_depth(v3, 6, 0);
   }
@@ -805,23 +803,23 @@ void EventInfoJapaneseCushionControl__PlayAddedCushionAnim(
   UnityEngine_Object_o *Clip; // x22
   UnityEngine_Vector3_o ServantAnimPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5829D & 1) == 0 )
+  if ( (byte_4CB780B & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_EventInfoJapaneseCushionControl__PlayAddedCushionAnim_b__36_0__);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_EventInfoJapaneseCushionControl___c__DisplayClass36_0__PlayAddedCushionAnim_b__1__);
-    sub_1C3E564(&EventInfoJapaneseCushionControl___c__DisplayClass36_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_18830/*"ef_bunyan"*/);
-    sub_1C3E564(&StringLiteral_18818/*"ef_anning2"*/);
-    sub_1C3E564(&StringLiteral_18817/*"ef_anning1"*/);
-    sub_1C3E564(&StringLiteral_18816/*"ef_anning"*/);
-    sub_1C3E564(&StringLiteral_18832/*"ef_bunyan2"*/);
-    sub_1C3E564(&StringLiteral_18831/*"ef_bunyan1"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5829D = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_EventInfoJapaneseCushionControl__PlayAddedCushionAnim_b__36_0__);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_EventInfoJapaneseCushionControl___c__DisplayClass36_0__PlayAddedCushionAnim_b__1__);
+    sub_1C6BA08(&EventInfoJapaneseCushionControl___c__DisplayClass36_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_18848/*"ef_bunyan"*/);
+    sub_1C6BA08(&StringLiteral_18836/*"ef_anning2"*/);
+    sub_1C6BA08(&StringLiteral_18835/*"ef_anning1"*/);
+    sub_1C6BA08(&StringLiteral_18834/*"ef_anning"*/);
+    sub_1C6BA08(&StringLiteral_18850/*"ef_bunyan2"*/);
+    sub_1C6BA08(&StringLiteral_18849/*"ef_bunyan1"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB780B = 1;
   }
   servantType = this->fields.servantType;
   if ( servantType )
@@ -830,9 +828,9 @@ void EventInfoJapaneseCushionControl__PlayAddedCushionAnim(
     {
       cushionStartAnimIndex = this->fields.cushionStartAnimIndex;
       if ( cushionStartAnimIndex % 5 == 4 )
-        v6 = (System_String_o **)&StringLiteral_18818/*"ef_anning2"*/;
+        v6 = (System_String_o **)&StringLiteral_18836/*"ef_anning2"*/;
       else
-        v6 = (System_String_o **)&StringLiteral_18817/*"ef_anning1"*/;
+        v6 = (System_String_o **)&StringLiteral_18835/*"ef_anning1"*/;
       v7 = *v6;
       goto LABEL_14;
     }
@@ -843,9 +841,9 @@ void EventInfoJapaneseCushionControl__PlayAddedCushionAnim(
   {
     cushionStartAnimIndex = this->fields.cushionStartAnimIndex;
     if ( cushionStartAnimIndex % 5 == 4 )
-      v8 = (System_String_o **)&StringLiteral_18832/*"ef_bunyan2"*/;
+      v8 = (System_String_o **)&StringLiteral_18850/*"ef_bunyan2"*/;
     else
-      v8 = (System_String_o **)&StringLiteral_18831/*"ef_bunyan1"*/;
+      v8 = (System_String_o **)&StringLiteral_18849/*"ef_bunyan1"*/;
   }
   v7 = *v8;
 LABEL_14:
@@ -858,20 +856,20 @@ LABEL_14:
   GameObjectExtensions__GetLocalPositionX(servantObjectData->fields.ServantObject, 0);
   if ( System_String__IsNullOrEmpty(v7, 0) )
     goto LABEL_37;
-  v13 = sub_1C3E7B0(EventInfoJapaneseCushionControl___c__DisplayClass36_0_TypeInfo);
+  v13 = sub_1C6BC54(EventInfoJapaneseCushionControl___c__DisplayClass36_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_38;
   *(_QWORD *)(v13 + 24) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 24), (int32_t)this, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 24), (int32_t)this, v14, v15);
   if ( this->fields.servantType )
-    v16 = (System_String_o **)&StringLiteral_18816/*"ef_anning"*/;
+    v16 = (System_String_o **)&StringLiteral_18834/*"ef_anning"*/;
   else
-    v16 = (System_String_o **)&StringLiteral_18830/*"ef_bunyan"*/;
+    v16 = (System_String_o **)&StringLiteral_18848/*"ef_bunyan"*/;
   v17 = EventInfoUIBase__InstantiateFromEventUIAssetData((EventInfoUIBase_o *)this, *v16, 0);
   *(_QWORD *)(v13 + 16) = v17;
   v18 = (UnityEngine_GameObject_o **)(v13 + 16);
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 16), (int32_t)v17, v19, v20);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)v17, v19, v20);
   v21 = *(UnityEngine_Object_o **)(v13 + 16);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -879,19 +877,19 @@ LABEL_14:
     goto LABEL_37;
   v22 = *v18;
   ServantRoot = EventInfoJapaneseCushionControl__get_ServantRoot(this, v10);
-  GameObjectExtensions__SafeSetParent_36182084(v22, ServantRoot, 0);
+  GameObjectExtensions__SafeSetParent_36361932(v22, ServantRoot, 0);
   GameObjectExtensions__SetLocalPositionY(*v18, y - this->fields.servantStepHeight, 0);
   v9 = *v18;
   if ( !*v18 )
     goto LABEL_38;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v9,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
     goto LABEL_37;
-  v25 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v25 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v25,
     (Il2CppObject *)this,
@@ -900,21 +898,21 @@ LABEL_14:
   if ( !Component_object )
     goto LABEL_38;
   Component_object[2].klass = (Il2CppClass *)v25;
-  sub_1C3E508((CGThumbnailListItem_o *)&Component_object[2], (int32_t)v25, v26, v27);
-  v28 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&Component_object[2], (int32_t)v25, v26, v27);
+  v28 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v28,
     (Il2CppObject *)v13,
     Method_EventInfoJapaneseCushionControl___c__DisplayClass36_0__PlayAddedCushionAnim_b__1__,
     0);
   Component_object[2].monitor = v28;
-  sub_1C3E508((CGThumbnailListItem_o *)&Component_object[2].monitor, (int32_t)v28, v29, v30);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&Component_object[2].monitor, (int32_t)v28, v29, v30);
   v9 = *(UnityEngine_GameObject_o **)(v13 + 16);
   if ( !v9 )
     goto LABEL_38;
   v31 = UnityEngine_GameObject__GetComponent_object_(
           v9,
-          (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+          (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v9 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v31, 0, 0);
@@ -922,13 +920,13 @@ LABEL_14:
     goto LABEL_37;
   if ( !v31 )
 LABEL_38:
-    sub_1C3E7C0(v9, v10);
+    sub_1C6BC60(v9, v10);
   Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)v31, v7, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(Clip, 0, 0) )
   {
-    UnityEngine_Animation__Play_71086848((UnityEngine_Animation_o *)v31, v7, 0);
+    UnityEngine_Animation__Play_71403152((UnityEngine_Animation_o *)v31, v7, 0);
     return;
   }
 LABEL_37:
@@ -947,7 +945,7 @@ void EventInfoJapaneseCushionControl__PlayAnim(
   if ( type == 1 )
   {
     this->fields.animEndAction = callback;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.animEndAction, (int32_t)callback, (int32_t)callback, method);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.animEndAction, (int32_t)callback, (int32_t)callback, method);
     EventInfoJapaneseCushionControl__StartAddedCushionAnim(this, v5);
   }
   else
@@ -987,34 +985,34 @@ void EventInfoJapaneseCushionControl__PlayOverflowCushionAnim(
   UnityEngine_Object_o *Clip; // x22
   UnityEngine_Vector3_o ServantAnimPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5829C & 1) == 0 )
+  if ( (byte_4CB780A & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_EventInfoJapaneseCushionControl___c__DisplayClass35_0__PlayOverflowCushionAnim_b__0__);
-    sub_1C3E564(&Method_EventInfoJapaneseCushionControl___c__DisplayClass35_0__PlayOverflowCushionAnim_b__1__);
-    sub_1C3E564(&EventInfoJapaneseCushionControl___c__DisplayClass35_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_18830/*"ef_bunyan"*/);
-    sub_1C3E564(&StringLiteral_18833/*"ef_bunyan99"*/);
-    byte_4C5829C = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_EventInfoJapaneseCushionControl___c__DisplayClass35_0__PlayOverflowCushionAnim_b__0__);
+    sub_1C6BA08(&Method_EventInfoJapaneseCushionControl___c__DisplayClass35_0__PlayOverflowCushionAnim_b__1__);
+    sub_1C6BA08(&EventInfoJapaneseCushionControl___c__DisplayClass35_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_18848/*"ef_bunyan"*/);
+    sub_1C6BA08(&StringLiteral_18851/*"ef_bunyan99"*/);
+    byte_4CB780A = 1;
   }
-  v3 = sub_1C3E7B0(EventInfoJapaneseCushionControl___c__DisplayClass35_0_TypeInfo);
+  v3 = sub_1C6BC54(EventInfoJapaneseCushionControl___c__DisplayClass35_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_22;
   *(_QWORD *)(v3 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 16), (int32_t)this, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)this, v6, v7);
   ServantAnimPosition = EventInfoJapaneseCushionControl__GetServantAnimPosition(this, this->fields.beforeCushionNum, v8);
   y = ServantAnimPosition.fields.y;
   v10 = EventInfoUIBase__InstantiateFromEventUIAssetData(
           (EventInfoUIBase_o *)this,
-          (System_String_o *)StringLiteral_18830/*"ef_bunyan"*/,
+          (System_String_o *)StringLiteral_18848/*"ef_bunyan"*/,
           0);
   *(_QWORD *)(v3 + 24) = v10;
   v11 = (UnityEngine_GameObject_o **)(v3 + 24);
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 24), (int32_t)v10, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 24), (int32_t)v10, v12, v13);
   v14 = *(UnityEngine_Object_o **)(v3 + 24);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1022,19 +1020,19 @@ void EventInfoJapaneseCushionControl__PlayOverflowCushionAnim(
     goto LABEL_21;
   v15 = *v11;
   ServantRoot = EventInfoJapaneseCushionControl__get_ServantRoot(this, v5);
-  GameObjectExtensions__SafeSetParent_36182084(v15, ServantRoot, 0);
+  GameObjectExtensions__SafeSetParent_36361932(v15, ServantRoot, 0);
   GameObjectExtensions__SetLocalPositionY(*v11, y - this->fields.servantStepHeight, 0);
   v4 = *v11;
   if ( !*v11 )
     goto LABEL_22;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        v4,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
     goto LABEL_21;
-  v18 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v18 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v18,
     (Il2CppObject *)v3,
@@ -1043,22 +1041,22 @@ void EventInfoJapaneseCushionControl__PlayOverflowCushionAnim(
   if ( !Component_object )
     goto LABEL_22;
   Component_object[2].klass = (Il2CppClass *)v18;
-  sub_1C3E508((CGThumbnailListItem_o *)&Component_object[2], (int32_t)v18, v19, v20);
-  v21 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&Component_object[2], (int32_t)v18, v19, v20);
+  v21 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v21,
     (Il2CppObject *)v3,
     Method_EventInfoJapaneseCushionControl___c__DisplayClass35_0__PlayOverflowCushionAnim_b__1__,
     0);
   Component_object[2].monitor = v21;
-  sub_1C3E508((CGThumbnailListItem_o *)&Component_object[2].monitor, (int32_t)v21, v22, v23);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&Component_object[2].monitor, (int32_t)v21, v22, v23);
   v4 = *(UnityEngine_GameObject_o **)(v3 + 24);
   if ( !v4 )
     goto LABEL_22;
-  v24 = (System_String_o *)StringLiteral_18833/*"ef_bunyan99"*/;
+  v24 = (System_String_o *)StringLiteral_18851/*"ef_bunyan99"*/;
   v25 = UnityEngine_GameObject__GetComponent_object_(
           v4,
-          (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+          (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v25, 0, 0);
@@ -1066,13 +1064,13 @@ void EventInfoJapaneseCushionControl__PlayOverflowCushionAnim(
     goto LABEL_21;
   if ( !v25 )
 LABEL_22:
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   Clip = (UnityEngine_Object_o *)UnityEngine_Animation__GetClip((UnityEngine_Animation_o *)v25, v24, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(Clip, 0, 0) )
   {
-    UnityEngine_Animation__Play_71086848((UnityEngine_Animation_o *)v25, v24, 0);
+    UnityEngine_Animation__Play_71403152((UnityEngine_Animation_o *)v25, v24, 0);
     return;
   }
 LABEL_21:
@@ -1090,10 +1088,10 @@ void EventInfoJapaneseCushionControl__SaveEventProgressValueSaveData(
   int32_t id; // w21
   System_String_o *EventProgressValueSaveKey; // x0
 
-  if ( (byte_4C582A4 & 1) == 0 )
+  if ( (byte_4CB7812 & 1) == 0 )
   {
-    sub_1C3E564(&EventInfoJapaneseCushionControl_TypeInfo);
-    byte_4C582A4 = 1;
+    sub_1C6BA08(&EventInfoJapaneseCushionControl_TypeInfo);
+    byte_4CB7812 = 1;
   }
   eventUiEntity = this->fields.eventUiEntity;
   if ( eventUiEntity )
@@ -1135,7 +1133,7 @@ void EventInfoJapaneseCushionControl__SetActiveExtentionCushionObjectList(
         if ( (int)v4 >= max_length )
           return;
         if ( (unsigned int)v4 >= max_length )
-          sub_1C3E7C8(this, method);
+          sub_1C6BC68(this);
         this = (EventInfoJapaneseCushionControl_o *)ExtentionCushionObjectList->m_Items[v4];
         if ( !this )
           break;
@@ -1145,7 +1143,7 @@ void EventInfoJapaneseCushionControl__SetActiveExtentionCushionObjectList(
       }
       while ( servantObjectData );
     }
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
 }
 
@@ -1184,13 +1182,13 @@ void EventInfoJapaneseCushionControl__Setup(
   UnityEngine_Vector3_o ServantPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5829A & 1) == 0 )
+  if ( (byte_4CB7808 & 1) == 0 )
   {
-    sub_1C3E564(&EventInfoJapaneseCushionControl_TypeInfo);
-    byte_4C5829A = 1;
+    sub_1C6BA08(&EventInfoJapaneseCushionControl_TypeInfo);
+    byte_4CB7808 = 1;
   }
   this->fields.eventUiValueEntityList = entitys;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.eventUiValueEntityList, (int32_t)entitys, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventUiValueEntityList, (int32_t)entitys, (int32_t)method, v3);
   eventUiEntity = this->fields.eventUiEntity;
   this->fields.cushionAddNum = 0;
   if ( !eventUiEntity )
@@ -1244,7 +1242,7 @@ void EventInfoJapaneseCushionControl__Setup(
       if ( !v27 )
         break;
       if ( (unsigned int)v25 >= LODWORD(v27->max_length) )
-        sub_1C3E7C8(CurrentCushionNum, v7);
+        sub_1C6BC68(CurrentCushionNum);
       CurrentCushionNum = v27->m_Items[v25];
       if ( !CurrentCushionNum )
         break;
@@ -1254,7 +1252,7 @@ void EventInfoJapaneseCushionControl__Setup(
         goto LABEL_22;
     }
 LABEL_30:
-    sub_1C3E7C0(CurrentCushionNum, v7);
+    sub_1C6BC60(CurrentCushionNum, v7);
   }
 LABEL_22:
   if ( v24 >= max_length && !this->fields.servantType && this->fields.currentCushionNum >= max_length )
@@ -1288,30 +1286,30 @@ void EventInfoJapaneseCushionControl__SetupCushionObject(
   System_String_o **v11; // x8
 
   v8 = (EventInfoUIBase_o *)this;
-  if ( (byte_4C5829B & 1) == 0 )
+  if ( (byte_4CB7809 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_19225/*"event_gauge_img_8036703"*/);
-    sub_1C3E564(&StringLiteral_19224/*"event_gauge_img_8036702"*/);
-    this = (EventInfoJapaneseCushionControl_o *)sub_1C3E564(&StringLiteral_19223/*"event_gauge_img_8036701"*/);
-    byte_4C5829B = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_19256/*"event_gauge_img_8036703"*/);
+    sub_1C6BA08(&StringLiteral_19255/*"event_gauge_img_8036702"*/);
+    this = (EventInfoJapaneseCushionControl_o *)sub_1C6BA08(&StringLiteral_19254/*"event_gauge_img_8036701"*/);
+    byte_4CB7809 = 1;
   }
   if ( !obj )
     goto LABEL_13;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        obj,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
   {
-    v10 = (System_String_o **)&StringLiteral_19224/*"event_gauge_img_8036702"*/;
-    v11 = (System_String_o **)&StringLiteral_19223/*"event_gauge_img_8036701"*/;
+    v10 = (System_String_o **)&StringLiteral_19255/*"event_gauge_img_8036702"*/;
+    v11 = (System_String_o **)&StringLiteral_19254/*"event_gauge_img_8036701"*/;
     if ( index % 5 == 4 )
     {
-      v10 = (System_String_o **)&StringLiteral_19225/*"event_gauge_img_8036703"*/;
-      v11 = (System_String_o **)&StringLiteral_19225/*"event_gauge_img_8036703"*/;
+      v10 = (System_String_o **)&StringLiteral_19256/*"event_gauge_img_8036703"*/;
+      v11 = (System_String_o **)&StringLiteral_19256/*"event_gauge_img_8036703"*/;
     }
     if ( type == 1 )
       v11 = v10;
@@ -1329,7 +1327,7 @@ void EventInfoJapaneseCushionControl__SetupCushionObject(
       return;
     }
 LABEL_13:
-    sub_1C3E7C0(this, obj);
+    sub_1C6BC60(this, obj);
   }
 }
 
@@ -1360,7 +1358,7 @@ void EventInfoJapaneseCushionControl__StartAddedCushionAnim(
       goto LABEL_6;
     servantObjectData = this->fields.servantObjectData;
     if ( !servantObjectData || (CushionObjectList = servantObjectData->fields.CushionObjectList) == 0 )
-      sub_1C3E7C0(v5, v6);
+      sub_1C6BC60(v5, v6);
     if ( this->fields.beforeCushionNum + cushionAddNum < SLODWORD(CushionObjectList->max_length) )
 LABEL_6:
       EventInfoJapaneseCushionControl__PlayAddedCushionAnim(this, v6);
@@ -1378,7 +1376,7 @@ void EventInfoJapaneseCushionControl___Initialization_b__30_0(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0);
 }
 
@@ -1395,7 +1393,7 @@ void EventInfoJapaneseCushionControl___PlayAddedCushionAnim_b__36_0(
   if ( !servantObjectData
     || (v3 = this, (this = (EventInfoJapaneseCushionControl_o *)servantObjectData->fields.ServantSprite) == 0) )
   {
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
   EventInfoJapaneseCushionControl__DeleteBeforeAnim(v3, v4);
@@ -1430,7 +1428,7 @@ UnityEngine_GameObject_o *EventInfoJapaneseCushionControl__get_ServantRoot(
                                                       servantObjectData->fields.ServantObject,
                                                       0)) == 0 )
   {
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   return UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
 }
@@ -1464,7 +1462,7 @@ void EventInfoJapaneseCushionControl___c__DisplayClass35_0___PlayOverflowCushion
     || (servantObjectData = _4__this->fields.servantObjectData) == 0
     || (this = (EventInfoJapaneseCushionControl___c__DisplayClass35_0_o *)servantObjectData->fields.ServantSprite) == 0 )
   {
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
 }
@@ -1488,7 +1486,7 @@ void EventInfoJapaneseCushionControl___c__DisplayClass35_0___PlayOverflowCushion
     goto LABEL_10;
   animGameObject = this->fields.animGameObject;
   _4__this->fields.beforeAnimObject = animGameObject;
-  sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.beforeAnimObject, (int32_t)animGameObject, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.beforeAnimObject, (int32_t)animGameObject, v2, v3);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_10;
@@ -1505,7 +1503,7 @@ void EventInfoJapaneseCushionControl___c__DisplayClass35_0___PlayOverflowCushion
     if ( (int)v7 >= max_length )
       break;
     if ( (unsigned int)v7 >= max_length )
-      sub_1C3E7C8(_4__this, method);
+      sub_1C6BC68(_4__this);
     _4__this = (struct EventInfoJapaneseCushionControl_o *)CushionObjectList->m_Items[v7];
     if ( _4__this )
     {
@@ -1521,7 +1519,7 @@ void EventInfoJapaneseCushionControl___c__DisplayClass35_0___PlayOverflowCushion
   _4__this = this->fields.__4__this;
   if ( !_4__this )
 LABEL_10:
-    sub_1C3E7C0(_4__this, method);
+    sub_1C6BC60(_4__this, method);
   EventInfoJapaneseCushionControl__EndCushionAnim(_4__this, method);
 }
 
@@ -1547,10 +1545,10 @@ void EventInfoJapaneseCushionControl___c__DisplayClass36_0___PlayAddedCushionAni
   if ( !_4__this
     || (animGameObject = this->fields.animGameObject,
         _4__this->fields.beforeAnimObject = animGameObject,
-        sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.beforeAnimObject, (int32_t)animGameObject, v2, v3),
+        sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.beforeAnimObject, (int32_t)animGameObject, v2, v3),
         (_4__this = this->fields.__4__this) == 0) )
   {
-    sub_1C3E7C0(_4__this, method);
+    sub_1C6BC60(_4__this, method);
   }
   EventInfoJapaneseCushionControl__EndAddedCushionAnim(_4__this, method);
 }

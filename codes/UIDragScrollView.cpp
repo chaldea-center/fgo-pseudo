@@ -20,19 +20,19 @@ void UIDragScrollView__FindScrollView(UIDragScrollView_o *this, const MethodInfo
   UnityEngine_Object_o *v14; // x21
   struct UIScrollView_o *v15; // x1
 
-  if ( (byte_4C5B38D & 1) == 0 )
+  if ( (byte_4CBA96A & 1) == 0 )
   {
-    sub_1C3E564(&Method_NGUITools_FindInParents_UIScrollView____78270048);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B38D = 1;
+    sub_1C6BA08(&Method_NGUITools_FindInParents_UIScrollView____78653328);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA96A = 1;
   }
   mTrans = this->fields.mTrans;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-  v4 = NGUITools__FindInParents_object__51920744(
+  v4 = NGUITools__FindInParents_object__52191176(
          mTrans,
-         (const MethodInfo_3183F68 *)Method_NGUITools_FindInParents_UIScrollView____78270048);
+         (const MethodInfo_31C5FC8 *)Method_NGUITools_FindInParents_UIScrollView____78653328);
   p_scrollView = &this->fields.scrollView;
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   v7 = (struct UIScrollView_o *)v4;
@@ -50,7 +50,7 @@ void UIDragScrollView__FindScrollView(UIDragScrollView_o *this, const MethodInfo
     {
 LABEL_12:
       this->fields.scrollView = v7;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.scrollView, (int32_t)v7, v8, v9);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.scrollView, (int32_t)v7, v8, v9);
       p_mAutoFind = &this->fields.mAutoFind;
 LABEL_16:
       *p_mAutoFind = 1;
@@ -65,7 +65,7 @@ LABEL_16:
 LABEL_17:
   v15 = this->fields.scrollView;
   this->fields.mScroll = v15;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mScroll, (int32_t)v15, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mScroll, (int32_t)v15, v12, v13);
 }
 
 
@@ -75,11 +75,11 @@ void UIDragScrollView__OnDrag(UIDragScrollView_o *this, UnityEngine_Vector2_o de
   __int64 v5; // x1
   UIScrollView_o *v6; // x0
 
-  if ( (byte_4C5B38F & 1) == 0 )
+  if ( (byte_4CBA96C & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B38F = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA96C = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -92,7 +92,7 @@ void UIDragScrollView__OnDrag(UIDragScrollView_o *this, UnityEngine_Vector2_o de
     {
       v6 = this->fields.scrollView;
       if ( !v6 )
-        sub_1C3E7C0(0, v5);
+        sub_1C6BC60(0, v5);
       UIScrollView__Drag(v6, 0);
     }
   }
@@ -115,14 +115,14 @@ void UIDragScrollView__OnEnable(UIDragScrollView_o *this, const MethodInfo *meth
   const MethodInfo *v14; // x3
   UnityEngine_Object_o *mScroll; // x20
 
-  if ( (byte_4C5B38C & 1) == 0 )
+  if ( (byte_4CBA969 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B38C = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA969 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -136,9 +136,9 @@ void UIDragScrollView__OnEnable(UIDragScrollView_o *this, const MethodInfo *meth
     {
       v12 = *p_draggablePanel;
       this->fields.scrollView = *p_draggablePanel;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.scrollView, (int32_t)v12, v10, v11);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.scrollView, (int32_t)v12, v10, v11);
       *p_draggablePanel = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.draggablePanel, 0, v13, v14);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.draggablePanel, 0, v13, v14);
     }
   }
   if ( this->fields.mStarted )
@@ -174,12 +174,12 @@ void UIDragScrollView__OnPress(UIDragScrollView_o *this, bool pressed, const Met
   int32_t v19; // w2
   const MethodInfo *v20; // x3
 
-  if ( (byte_4C5B38E & 1) == 0 )
+  if ( (byte_4CBA96B & 1) == 0 )
   {
-    sub_1C3E564(&Method_NGUITools_FindInParents_UIScrollView____78270048);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B38E = 1;
+    sub_1C6BA08(&Method_NGUITools_FindInParents_UIScrollView____78653328);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA96B = 1;
   }
   if ( this->fields.mAutoFind )
   {
@@ -191,7 +191,7 @@ void UIDragScrollView__OnPress(UIDragScrollView_o *this, bool pressed, const Met
     {
       v9 = this->fields.scrollView;
       this->fields.mScroll = v9;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mScroll, (int32_t)v9, v7, v8);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mScroll, (int32_t)v9, v7, v8);
       this->fields.mAutoFind = 0;
     }
   }
@@ -204,24 +204,24 @@ void UIDragScrollView__OnPress(UIDragScrollView_o *this, bool pressed, const Met
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49418336(gameObject, 0) )
+    if ( NGUITools__GetActive_49647220(gameObject, 0) )
     {
       if ( !*p_scrollView )
-        sub_1C3E7C0(0, v13);
+        sub_1C6BC60(0, v13);
       UIScrollView__Press(*p_scrollView, pressed, 0);
       if ( !pressed && this->fields.mAutoFind )
       {
         mTrans = this->fields.mTrans;
         if ( !NGUITools_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-        v15 = NGUITools__FindInParents_object__51920744(
+        v15 = NGUITools__FindInParents_object__52191176(
                 mTrans,
-                (const MethodInfo_3183F68 *)Method_NGUITools_FindInParents_UIScrollView____78270048);
+                (const MethodInfo_31C5FC8 *)Method_NGUITools_FindInParents_UIScrollView____78653328);
         this->fields.scrollView = (struct UIScrollView_o *)v15;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.scrollView, (int32_t)v15, v16, v17);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.scrollView, (int32_t)v15, v16, v17);
         v18 = this->fields.scrollView;
         this->fields.mScroll = v18;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mScroll, (int32_t)v18, v19, v20);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mScroll, (int32_t)v18, v19, v20);
       }
     }
   }
@@ -234,11 +234,11 @@ void UIDragScrollView__OnScroll(UIDragScrollView_o *this, float delta, const Met
   __int64 v6; // x1
   UIScrollView_o *v7; // x0
 
-  if ( (byte_4C5B390 & 1) == 0 )
+  if ( (byte_4CBA96D & 1) == 0 )
   {
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B390 = 1;
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA96D = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -251,7 +251,7 @@ void UIDragScrollView__OnScroll(UIDragScrollView_o *this, float delta, const Met
     {
       v7 = this->fields.scrollView;
       if ( !v7 )
-        sub_1C3E7C0(0, v6);
+        sub_1C6BC60(0, v6);
       UIScrollView__Scroll(v7, delta, 0);
     }
   }
@@ -265,10 +265,10 @@ void UIDragScrollView__OnScrollStop(UIDragScrollView_o *this, bool dummy, const 
   UIScrollView_o *v6; // x0
   UIScrollView_o *v7; // x19
 
-  if ( (byte_4C5B391 & 1) == 0 )
+  if ( (byte_4CBA96E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B391 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBA96E = 1;
   }
   scrollView = (UnityEngine_Object_o *)this->fields.scrollView;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -280,14 +280,14 @@ void UIDragScrollView__OnScrollStop(UIDragScrollView_o *this, bool dummy, const 
       goto LABEL_12;
     UIScrollView__DisableSpring(v6, 0);
     v7 = this->fields.scrollView;
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
-      v6 = (UIScrollView_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A1 = 1;
+      v6 = (UIScrollView_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC09 = 1;
     }
     if ( !v7 )
 LABEL_12:
-      sub_1C3E7C0(v6, v5);
+      sub_1C6BC60(v6, v5);
     UIScrollView__set_currentMomentum(v7, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   }
 }

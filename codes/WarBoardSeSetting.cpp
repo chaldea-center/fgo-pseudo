@@ -28,44 +28,44 @@ void WarBoardSeSetting___ctor(WarBoardSeSetting_o *this, const MethodInfo *metho
   int32_t v28; // w2
   const MethodInfo *v29; // x3
 
-  if ( (byte_4C54987 & 1) == 0 )
+  if ( (byte_4CB3EDB & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_17050/*"bas13"*/);
-    sub_1C3E564(&StringLiteral_17048/*"bas1"*/);
-    sub_1C3E564(&StringLiteral_17003/*"ba20"*/);
-    sub_1C3E564(&StringLiteral_17049/*"bas10"*/);
-    sub_1C3E564(&StringLiteral_17001/*"ba19"*/);
-    sub_1C3E564(&StringLiteral_17009/*"ba30"*/);
-    sub_1C3E564(&StringLiteral_17004/*"ba21"*/);
-    sub_1C3E564(&StringLiteral_17000/*"ba18"*/);
-    byte_4C54987 = 1;
+    sub_1C6BA08(&StringLiteral_17047/*"bas13"*/);
+    sub_1C6BA08(&StringLiteral_17045/*"bas1"*/);
+    sub_1C6BA08(&StringLiteral_17000/*"ba20"*/);
+    sub_1C6BA08(&StringLiteral_17046/*"bas10"*/);
+    sub_1C6BA08(&StringLiteral_16998/*"ba19"*/);
+    sub_1C6BA08(&StringLiteral_17006/*"ba30"*/);
+    sub_1C6BA08(&StringLiteral_17001/*"ba21"*/);
+    sub_1C6BA08(&StringLiteral_16997/*"ba18"*/);
+    byte_4CB3EDB = 1;
   }
-  v5 = StringLiteral_17000/*"ba18"*/;
-  this->fields.SelectSe = (struct System_String_o *)StringLiteral_17000/*"ba18"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.SelectSe, v5, v2, v3);
-  v6 = StringLiteral_17001/*"ba19"*/;
-  this->fields.DeselectSe = (struct System_String_o *)StringLiteral_17001/*"ba19"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.DeselectSe, v6, v7, v8);
-  v9 = StringLiteral_17000/*"ba18"*/;
-  this->fields.OpenSimpleInfoSe = (struct System_String_o *)StringLiteral_17000/*"ba18"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.OpenSimpleInfoSe, v9, v10, v11);
-  v12 = StringLiteral_17003/*"ba20"*/;
-  this->fields.OpenDetailInfoSe = (struct System_String_o *)StringLiteral_17003/*"ba20"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.OpenDetailInfoSe, v12, v13, v14);
-  v15 = StringLiteral_17004/*"ba21"*/;
-  this->fields.CloseDetailInfoSe = (struct System_String_o *)StringLiteral_17004/*"ba21"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.CloseDetailInfoSe, v15, v16, v17);
-  v18 = StringLiteral_17009/*"ba30"*/;
-  this->fields.HpGaugeAddSe = (struct System_String_o *)StringLiteral_17009/*"ba30"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.HpGaugeAddSe, v18, v19, v20);
-  v21 = StringLiteral_17048/*"bas1"*/;
-  this->fields.OnBoardSkillNameInfoSe = (struct System_String_o *)StringLiteral_17048/*"bas1"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.OnBoardSkillNameInfoSe, v21, v22, v23);
-  v24 = StringLiteral_17049/*"bas10"*/;
-  this->fields.OnBoardSkillBuffSe = (struct System_String_o *)StringLiteral_17049/*"bas10"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.OnBoardSkillBuffSe, v24, v25, v26);
-  v27 = StringLiteral_17050/*"bas13"*/;
-  this->fields.OnBoardSkillDebuffSe = (struct System_String_o *)StringLiteral_17050/*"bas13"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.OnBoardSkillDebuffSe, v27, v28, v29);
+  v5 = StringLiteral_16997/*"ba18"*/;
+  this->fields.SelectSe = (struct System_String_o *)StringLiteral_16997/*"ba18"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.SelectSe, v5, v2, v3);
+  v6 = StringLiteral_16998/*"ba19"*/;
+  this->fields.DeselectSe = (struct System_String_o *)StringLiteral_16998/*"ba19"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.DeselectSe, v6, v7, v8);
+  v9 = StringLiteral_16997/*"ba18"*/;
+  this->fields.OpenSimpleInfoSe = (struct System_String_o *)StringLiteral_16997/*"ba18"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.OpenSimpleInfoSe, v9, v10, v11);
+  v12 = StringLiteral_17000/*"ba20"*/;
+  this->fields.OpenDetailInfoSe = (struct System_String_o *)StringLiteral_17000/*"ba20"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.OpenDetailInfoSe, v12, v13, v14);
+  v15 = StringLiteral_17001/*"ba21"*/;
+  this->fields.CloseDetailInfoSe = (struct System_String_o *)StringLiteral_17001/*"ba21"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.CloseDetailInfoSe, v15, v16, v17);
+  v18 = StringLiteral_17006/*"ba30"*/;
+  this->fields.HpGaugeAddSe = (struct System_String_o *)StringLiteral_17006/*"ba30"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.HpGaugeAddSe, v18, v19, v20);
+  v21 = StringLiteral_17045/*"bas1"*/;
+  this->fields.OnBoardSkillNameInfoSe = (struct System_String_o *)StringLiteral_17045/*"bas1"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.OnBoardSkillNameInfoSe, v21, v22, v23);
+  v24 = StringLiteral_17046/*"bas10"*/;
+  this->fields.OnBoardSkillBuffSe = (struct System_String_o *)StringLiteral_17046/*"bas10"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.OnBoardSkillBuffSe, v24, v25, v26);
+  v27 = StringLiteral_17047/*"bas13"*/;
+  this->fields.OnBoardSkillDebuffSe = (struct System_String_o *)StringLiteral_17047/*"bas13"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.OnBoardSkillDebuffSe, v27, v28, v29);
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }

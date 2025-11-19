@@ -11,8 +11,8 @@ void UserOwnRarePrism___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)itemEntity, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)itemEntity, v7, v8);
   if ( !userGameEntity )
-    sub_1C3E7C0(v9, v10);
+    sub_1C6BC60(v9, v10);
   this->fields._Num_k__BackingField = userGameEntity->fields.rarePri;
 }

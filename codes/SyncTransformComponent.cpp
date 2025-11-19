@@ -20,7 +20,7 @@ void SyncTransformComponent__setChild(
   const MethodInfo *v5; // x1
 
   this->fields.child = trans;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
   this->fields.isEnable = 1;
   SyncTransformComponent__sync(this, v5);
 }
@@ -38,10 +38,10 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C56313 & 1) == 0 )
+  if ( (byte_4CB587A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C56313 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB587A = 1;
   }
   child = (UnityEngine_Object_o *)this->fields.child;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -88,7 +88,7 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
       || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0), !v8) )
     {
 LABEL_20:
-      sub_1C3E7C0(gameObject, v4);
+      sub_1C6BC60(gameObject, v4);
     }
     UnityEngine_Transform__set_localScale(v8, localScale, 0);
   }

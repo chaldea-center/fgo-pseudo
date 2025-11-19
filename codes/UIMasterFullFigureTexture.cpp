@@ -1,9 +1,9 @@
 void UIMasterFullFigureTexture___ctor(UIMasterFullFigureTexture_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5865A & 1) == 0 )
+  if ( (byte_4CB7BD1 & 1) == 0 )
   {
-    sub_1C3E564(&UIMasterFullFigureRender_TypeInfo);
-    byte_4C5865A = 1;
+    sub_1C6BA08(&UIMasterFullFigureRender_TypeInfo);
+    byte_4CB7BD1 = 1;
   }
   if ( !UIMasterFullFigureRender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIMasterFullFigureRender_TypeInfo);
@@ -21,56 +21,55 @@ void UIMasterFullFigureTexture__Destroy(UIMasterFullFigureTexture_o *this, const
 void UIMasterFullFigureTexture__EndLoadAsset(UIMasterFullFigureTexture_o *this, const MethodInfo *method)
 {
   System_String_array *loadNameList; // x20
-  AssetData_array *AssetStorage_40589144; // x0
-  __int64 v5; // x1
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  AssetData_array *AssetStorage_40773704; // x0
+  int32_t v5; // w2
+  const MethodInfo *v6; // x3
   int max_length; // w8
-  struct AssetData_array *v9; // x20
-  __int64 v10; // x9
+  struct AssetData_array *v8; // x20
+  __int64 v9; // x9
   AssetData_array *assetDataList; // x21
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x1
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  const MethodInfo *v13; // x1
+  int32_t v14; // w2
+  const MethodInfo *v15; // x3
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4C58658 & 1) == 0 )
+  if ( (byte_4CB7BCF & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C58658 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB7BCF = 1;
   }
   loadNameList = this->fields.loadNameList;
   if ( loadNameList )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetStorage_40589144 = AssetManager__getAssetStorage_40589144(loadNameList, 0);
-    if ( AssetStorage_40589144 )
+    AssetStorage_40773704 = AssetManager__getAssetStorage_40773704(loadNameList, 0);
+    if ( AssetStorage_40773704 )
     {
-      max_length = AssetStorage_40589144->max_length;
-      v9 = AssetStorage_40589144;
+      max_length = AssetStorage_40773704->max_length;
+      v8 = AssetStorage_40773704;
       if ( max_length < 1 )
       {
 LABEL_12:
         assetDataList = this->fields.assetDataList;
         this->fields.loadNameList = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.loadNameList, 0, v6, v7);
-        this->fields.assetDataList = v9;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetDataList, (int32_t)v9, v12, v13);
-        UIMasterFullFigureTexture__SetTexture(this, v14);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadNameList, 0, v5, v6);
+        this->fields.assetDataList = v8;
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetDataList, (int32_t)v8, v11, v12);
+        UIMasterFullFigureTexture__SetTexture(this, v13);
         if ( assetDataList )
         {
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          AssetManager__releaseAsset_40581180(assetDataList, 0);
+          AssetManager__releaseAsset_40765740(assetDataList, 0);
         }
         callbackFunc = this->fields.callbackFunc;
         if ( callbackFunc )
         {
           this->fields.callbackFunc = 0;
-          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v15, v16);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v14, v15);
           ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
             callbackFunc->fields.method_code,
             callbackFunc->fields.method);
@@ -78,14 +77,14 @@ LABEL_12:
       }
       else
       {
-        v10 = 0;
+        v9 = 0;
         while ( 1 )
         {
-          if ( (unsigned int)v10 >= max_length )
-            sub_1C3E7C8(AssetStorage_40589144, v5);
-          if ( !AssetStorage_40589144->m_Items[v10] )
+          if ( (unsigned int)v9 >= max_length )
+            sub_1C6BC68(AssetStorage_40773704);
+          if ( !AssetStorage_40773704->m_Items[v9] )
             break;
-          if ( (int)++v10 >= max_length )
+          if ( (int)++v9 >= max_length )
             goto LABEL_12;
         }
       }
@@ -110,11 +109,11 @@ void UIMasterFullFigureTexture__ReleaseCharacter(UIMasterFullFigureTexture_o *th
   int32_t v14; // w2
   const MethodInfo *v15; // x3
 
-  if ( (byte_4C58656 & 1) == 0 )
+  if ( (byte_4CB7BCD & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C58656 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB7BCD = 1;
   }
   bodyTexture = (UnityEngine_Object_o *)this->fields.bodyTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -155,7 +154,7 @@ void UIMasterFullFigureTexture__ReleaseCharacter(UIMasterFullFigureTexture_o *th
                                      v5->klass[1].vtable._1_Finalize.methodPtr);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564(v8, 0);
+      UnityEngine_Object__Destroy_71659676(v8, 0);
       v5 = (UnityEngine_Component_o *)this->fields.bodyTexture;
       if ( !v5 )
         goto LABEL_33;
@@ -174,7 +173,7 @@ void UIMasterFullFigureTexture__ReleaseCharacter(UIMasterFullFigureTexture_o *th
       goto LABEL_24;
     }
 LABEL_33:
-    sub_1C3E7C0(v5, v4);
+    sub_1C6BC60(v5, v4);
   }
 LABEL_24:
   assetDataList = this->fields.assetDataList;
@@ -182,9 +181,9 @@ LABEL_24:
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40581180(assetDataList, 0);
+    AssetManager__releaseAsset_40765740(assetDataList, 0);
     this->fields.assetDataList = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetDataList, 0, v10, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetDataList, 0, v10, v11);
   }
   loadNameList = this->fields.loadNameList;
   if ( loadNameList )
@@ -192,9 +191,9 @@ LABEL_24:
     p_loadNameList = (CGThumbnailListItem_o *)&this->fields.loadNameList;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage_40590132(loadNameList, 0);
+    AssetManager__releaseAssetStorage_40774692(loadNameList, 0);
     p_loadNameList->klass = 0;
-    sub_1C3E508(p_loadNameList, 0, v14, v15);
+    sub_1C6B9AC(p_loadNameList, 0, v14, v15);
   }
 }
 
@@ -208,7 +207,7 @@ void UIMasterFullFigureTexture__SetActive(UIMasterFullFigureTexture_o *this, boo
   if ( !bodyTexture
     || (bodyTexture = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bodyTexture, 0)) == 0 )
   {
-    sub_1C3E7C0(bodyTexture, isActive);
+    sub_1C6BC60(bodyTexture, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bodyTexture, isActive, 0);
 }
@@ -246,13 +245,13 @@ void UIMasterFullFigureTexture__SetCharacter(
   System_String_array *v31; // x20
   System_Action_o *v32; // x21
 
-  if ( (byte_4C58657 & 1) == 0 )
+  if ( (byte_4CB7BCE & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&UIMasterFullFigureRender_TypeInfo);
-    sub_1C3E564(&Method_UIMasterFullFigureTexture_EndLoadAsset__);
-    byte_4C58657 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&UIMasterFullFigureRender_TypeInfo);
+    sub_1C6BA08(&Method_UIMasterFullFigureTexture_EndLoadAsset__);
+    byte_4CB7BCE = 1;
   }
   if ( !UIMasterFullFigureRender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIMasterFullFigureRender_TypeInfo);
@@ -278,7 +277,7 @@ void UIMasterFullFigureTexture__SetCharacter(
           || (p_callbackFunc->klass = (CGThumbnailListItem_c *)v18, (System_Action_c *)v18->klass != v22) )
         {
 LABEL_27:
-          sub_1C3EA80(v21);
+          sub_1C6BFFC(v21);
           return;
         }
       }
@@ -286,13 +285,13 @@ LABEL_27:
       {
         p_callbackFunc->klass = 0;
       }
-      sub_1C3E508(p_callbackFunc, (int32_t)v18, v19, v20);
+      sub_1C6B9AC(p_callbackFunc, (int32_t)v18, v19, v20);
       return;
     }
     v25 = this->fields.loadNameList;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage_40590132(v25, 0);
+    AssetManager__releaseAssetStorage_40774692(v25, 0);
   }
   else
   {
@@ -301,7 +300,7 @@ LABEL_27:
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      if ( AssetManager__compAssetStorageList_40578916(assetDataList, AssetNameList, 0) )
+      if ( AssetManager__compAssetStorageList_40763476(assetDataList, AssetNameList, 0) )
       {
         UIMasterFullFigureTexture__SetTextureStatus(this, v24);
         if ( callbackFunc )
@@ -330,27 +329,26 @@ LABEL_27:
     {
       *v26 = 0;
     }
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v27, v28, v29);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v27, v28, v29);
   }
   this->fields.loadNameList = AssetNameList;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.loadNameList, (int32_t)AssetNameList, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadNameList, (int32_t)AssetNameList, v13, v14);
   v31 = this->fields.loadNameList;
-  v32 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v32 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v32, (Il2CppObject *)this, Method_UIMasterFullFigureTexture_EndLoadAsset__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage_40587784(v31, v32, 1, 0);
+  AssetManager__loadAssetStorage_40772344(v31, v32, 1, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void UIMasterFullFigureTexture__SetDepth(UIMasterFullFigureTexture_o *this, int32_t d, const MethodInfo *method)
 {
   UIWidget_o *bodyTexture; // x0
 
   bodyTexture = (UIWidget_o *)this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_1C3E7C0(0, *(_QWORD *)&d);
+    sub_1C6BC60(0, d);
   UIWidget__set_depth(bodyTexture, d, 0);
 }
 
@@ -369,16 +367,16 @@ void UIMasterFullFigureTexture__SetTexture(UIMasterFullFigureTexture_o *this, co
   const MethodInfo *v12; // x2
   const MethodInfo *v13; // x1
 
-  if ( (byte_4C58659 & 1) == 0 )
+  if ( (byte_4CB7BD0 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Material_TypeInfo);
-    sub_1C3E564(&StringLiteral_4940/*"Custom/SpriteWithMask"*/);
-    sub_1C3E564(&StringLiteral_16279/*"_MaskTex"*/);
-    byte_4C58659 = 1;
+    sub_1C6BA08(&UnityEngine_Material_TypeInfo);
+    sub_1C6BA08(&StringLiteral_4930/*"Custom/SpriteWithMask"*/);
+    sub_1C6BA08(&StringLiteral_16263/*"_MaskTex"*/);
+    byte_4CB7BD0 = 1;
   }
   bodyTexture = this->fields.bodyTexture;
-  v4 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4940/*"Custom/SpriteWithMask"*/, 0);
-  v5 = (UnityEngine_Material_o *)sub_1C3E7B0(UnityEngine_Material_TypeInfo);
+  v4 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4930/*"Custom/SpriteWithMask"*/, 0);
+  v5 = (UnityEngine_Material_o *)sub_1C6BC54(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v5, v4, 0);
   if ( !bodyTexture
     || (v8 = (UIMasterFullFigureRender_o *)((__int64 (__fastcall *)(struct UITexture_o *, UnityEngine_Material_o *, const MethodInfo *))bodyTexture->klass->vtable._25_set_material.methodPtr)(
@@ -405,11 +403,11 @@ void UIMasterFullFigureTexture__SetTexture(UIMasterFullFigureTexture_o *this, co
                                                       v12),
         !v11) )
   {
-    sub_1C3E7C0(BodyAlphaTexture, v7);
+    sub_1C6BC60(BodyAlphaTexture, v7);
   }
   UnityEngine_Material__SetTexture(
     (UnityEngine_Material_o *)v11,
-    (System_String_o *)StringLiteral_16279/*"_MaskTex"*/,
+    (System_String_o *)StringLiteral_16263/*"_MaskTex"*/,
     BodyAlphaTexture,
     0);
   UIMasterFullFigureTexture__SetTextureStatus(this, v13);
@@ -467,7 +465,7 @@ void UIMasterFullFigureTexture__SetTextureStatus(UIMasterFullFigureTexture_o *th
     || (transform = (UIWidget_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)transform, 0)) == 0 )
   {
 LABEL_18:
-    sub_1C3E7C0(transform, v5);
+    sub_1C6BC60(transform, v5);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 1, 0);
 }
@@ -493,7 +491,7 @@ void UIMasterFullFigureTexture__SetTweenColor(
   UIWidget__set_color((UIWidget_o *)this, c, 0);
   bodyTexture = (UIWidget_o *)this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   v10.fields.b = b;
   v10.fields.a = a;
   v10.fields.r = r;

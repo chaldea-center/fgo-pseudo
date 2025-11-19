@@ -17,7 +17,7 @@ bool AliveServantExistReactTaskCreator__IsCreatable(
   if ( !IsCreatable )
     return 0;
   if ( !svtData )
-    sub_1C3E7C0(IsCreatable, v10);
+    sub_1C6BC60(IsCreatable, v10);
   return ((__int64 (__fastcall *)(BattleServantData_o *, BattleLogic_o *, _QWORD, _QWORD, const MethodInfo *))svtData->klass->vtable._19_ExistAiThinking.methodPtr)(
            svtData,
            logic,

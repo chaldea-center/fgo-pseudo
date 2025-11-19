@@ -2,7 +2,7 @@ void NGUIGlow___ctor(NGUIGlow_o *this, const MethodInfo *method)
 {
   *(_QWORD *)&this->fields.sigma = 0x3F80000041200000LL;
   this->fields.downSample = 2;
-  *(_OWORD *)&this->fields.pingPongTimeMultiplier = xmmword_C12E10;
+  *(_OWORD *)&this->fields.pingPongTimeMultiplier = xmmword_CED0D0;
   this->fields.quality = 35;
   *(_QWORD *)&this->fields.glowColor.fields.b = 0x3F80000000000000LL;
   this->fields.colorStrength = 1.0;
@@ -34,11 +34,11 @@ void NGUIGlow__ApplyBloom(NGUIGlow_o *this, const MethodInfo *method)
   UnityEngine_RenderTexture_o *v22; // x19
   const MethodInfo *v23; // x2
 
-  if ( (byte_4C5A846 & 1) == 0 )
+  if ( (byte_4CB9E18 & 1) == 0 )
   {
-    sub_1C3E564(&NGUIGlowTextureGenerator_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A846 = 1;
+    sub_1C6BA08(&NGUIGlowTextureGenerator_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9E18 = 1;
   }
   rt = (UnityEngine_Object_o *)this->fields.rt;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -53,10 +53,10 @@ void NGUIGlow__ApplyBloom(NGUIGlow_o *this, const MethodInfo *method)
     glowCompute = this->fields.glowCompute;
     glowMaterial = this->fields.glowMaterial;
     v11 = time;
-    v12 = (NGUIGlowTextureGenerator_o *)sub_1C3E7B0(NGUIGlowTextureGenerator_TypeInfo);
+    v12 = (NGUIGlowTextureGenerator_o *)sub_1C6BC54(NGUIGlowTextureGenerator_TypeInfo);
     NGUIGlowTextureGenerator___ctor(v12, maskSprite, glowCompute, glowMaterial, v13);
     if ( !v12 )
-      sub_1C3E7C0(v14, v15);
+      sub_1C6BC60(v14, v15);
     v17 = pingPongLength + pingPongLength;
     v12->fields.downSample = this->fields.downSample;
     v18 = floorf((float)(v11 * pingPongTimeMultiplier) / (float)(pingPongLength + pingPongLength));
@@ -93,14 +93,14 @@ void NGUIGlow__AutoInitialize(NGUIGlow_o *this, const MethodInfo *method)
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C5A847 & 1) == 0 )
+  if ( (byte_4CB9E19 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Material_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Resources_Load_ComputeShader___);
-    sub_1C3E564(&StringLiteral_7328/*"Hidden/TwoPassGaussianBlur"*/);
-    sub_1C3E564(&StringLiteral_12846/*"Shaders/NGUIGlowCompute"*/);
-    byte_4C5A847 = 1;
+    sub_1C6BA08(&UnityEngine_Material_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ComputeShader___);
+    sub_1C6BA08(&StringLiteral_7321/*"Hidden/TwoPassGaussianBlur"*/);
+    sub_1C6BA08(&StringLiteral_12842/*"Shaders/NGUIGlowCompute"*/);
+    byte_4CB9E19 = 1;
   }
   glowCompute = (UnityEngine_Object_o *)this->fields.glowCompute;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -108,10 +108,10 @@ void NGUIGlow__AutoInitialize(NGUIGlow_o *this, const MethodInfo *method)
   if ( UnityEngine_Object__op_Equality(glowCompute, 0, 0) )
   {
     object = UnityEngine_Resources__Load_object_(
-               (System_String_o *)StringLiteral_12846/*"Shaders/NGUIGlowCompute"*/,
-               (const MethodInfo_3196164 *)Method_UnityEngine_Resources_Load_ComputeShader___);
+               (System_String_o *)StringLiteral_12842/*"Shaders/NGUIGlowCompute"*/,
+               (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ComputeShader___);
     this->fields.glowCompute = (struct UnityEngine_ComputeShader_o *)object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.glowCompute, (int32_t)object, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.glowCompute, (int32_t)object, v5, v6);
   }
   glowMaterial = this->fields.glowMaterial;
   p_glowMaterial = (CGThumbnailListItem_o *)&this->fields.glowMaterial;
@@ -120,15 +120,15 @@ void NGUIGlow__AutoInitialize(NGUIGlow_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(v8, 0, 0) )
   {
-    v10 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_7328/*"Hidden/TwoPassGaussianBlur"*/, 0);
+    v10 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_7321/*"Hidden/TwoPassGaussianBlur"*/, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0, 0) )
     {
-      v11 = (UnityEngine_Material_o *)sub_1C3E7B0(UnityEngine_Material_TypeInfo);
+      v11 = (UnityEngine_Material_o *)sub_1C6BC54(UnityEngine_Material_TypeInfo);
       UnityEngine_Material___ctor(v11, v10, 0);
       p_glowMaterial->klass = (CGThumbnailListItem_c *)v11;
-      sub_1C3E508(p_glowMaterial, (int32_t)v11, v12, v13);
+      sub_1C6B9AC(p_glowMaterial, (int32_t)v11, v12, v13);
       UnityEngine_Resources__UnloadAsset((UnityEngine_Object_o *)v10, 0);
     }
   }
@@ -157,10 +157,10 @@ void NGUIGlow__CleanUp(NGUIGlow_o *this, const MethodInfo *method)
   int32_t v20; // w2
   const MethodInfo *v21; // x3
 
-  if ( (byte_4C5A848 & 1) == 0 )
+  if ( (byte_4CB9E1A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A848 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9E1A = 1;
   }
   p_rt = &this->fields.rt;
   rt = (UnityEngine_Object_o *)this->fields.rt;
@@ -176,14 +176,14 @@ void NGUIGlow__CleanUp(NGUIGlow_o *this, const MethodInfo *method)
     if ( UnityEngine_Object__op_Equality(v7, (UnityEngine_Object_o *)v6, 0) )
       UnityEngine_RenderTexture__set_active(0, 0);
     if ( !*p_rt )
-      sub_1C3E7C0(0, v8);
+      sub_1C6BC60(0, v8);
     UnityEngine_RenderTexture__Release(*p_rt, 0);
     v9 = *p_rt;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71341564((UnityEngine_Object_o *)v9, 0);
+    UnityEngine_Object__Destroy_71659676((UnityEngine_Object_o *)v9, 0);
     *p_rt = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.rt, 0, v10, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.rt, 0, v10, v11);
   }
   p_glowMaterial = &this->fields.glowMaterial;
   glowMaterial = (UnityEngine_Object_o *)this->fields.glowMaterial;
@@ -194,9 +194,9 @@ void NGUIGlow__CleanUp(NGUIGlow_o *this, const MethodInfo *method)
     v14 = (UnityEngine_Object_o *)*p_glowMaterial;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71341564(v14, 0);
+    UnityEngine_Object__Destroy_71659676(v14, 0);
     *p_glowMaterial = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.glowMaterial, 0, v15, v16);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.glowMaterial, 0, v15, v16);
   }
   glowCompute = this->fields.glowCompute;
   p_glowCompute = (UnityEngine_Object_o **)&this->fields.glowCompute;
@@ -207,7 +207,7 @@ void NGUIGlow__CleanUp(NGUIGlow_o *this, const MethodInfo *method)
   {
     UnityEngine_Resources__UnloadAsset(*p_glowCompute, 0);
     *p_glowCompute = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)p_glowCompute, 0, v20, v21);
+    sub_1C6B9AC((CGThumbnailListItem_o *)p_glowCompute, 0, v20, v21);
   }
 }
 
@@ -216,10 +216,10 @@ void NGUIGlow__OnValidate(NGUIGlow_o *this, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C5A844 & 1) == 0 )
+  if ( (byte_4CB9E16 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Application_TypeInfo);
-    byte_4C5A844 = 1;
+    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
+    byte_4CB9E16 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -248,10 +248,10 @@ void NGUIGlow__UpdateTexture(NGUIGlow_o *this, const MethodInfo *method)
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C5A845 & 1) == 0 )
+  if ( (byte_4CB9E17 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A845 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9E17 = 1;
   }
   texture = (UnityEngine_Object_o *)this->fields.texture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -263,11 +263,11 @@ void NGUIGlow__UpdateTexture(NGUIGlow_o *this, const MethodInfo *method)
     if ( !v8
       || (NewRenderTexture = NGUIGlowTextureGenerator__CreateNewRenderTexture(v8->fields.mWidth, v8->fields.mHeight, v7),
           this->fields.rt = NewRenderTexture,
-          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.rt, (int32_t)NewRenderTexture, v10, v11),
+          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.rt, (int32_t)NewRenderTexture, v10, v11),
           NGUIGlow__ApplyBloom(this, v12),
           (v5 = this->fields.texture) == 0) )
     {
-      sub_1C3E7C0(v5, v6);
+      sub_1C6BC60(v5, v6);
     }
     ((void (__fastcall *)(struct UITexture_o *, struct UnityEngine_RenderTexture_o *, const MethodInfo *))v5->klass->vtable._27_set_mainTexture.methodPtr)(
       v5,

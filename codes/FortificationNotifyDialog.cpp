@@ -1,9 +1,9 @@
 void FortificationNotifyDialog___ctor(FortificationNotifyDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C51115 & 1) == 0 )
+  if ( (byte_4CB065D & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C51115 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB065D = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -16,22 +16,22 @@ void FortificationNotifyDialog__ClickButtonAction(FortificationNotifyDialog_o *t
   struct System_Action_o *onClick; // x20
   System_Action_o *v4; // x20
 
-  if ( (byte_4C51113 & 1) == 0 )
+  if ( (byte_4CB065B & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_FortificationNotifyDialog__ClickButtonAction_b__13_0__);
-    byte_4C51113 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_FortificationNotifyDialog__ClickButtonAction_b__13_0__);
+    byte_4CB065B = 1;
   }
   onClick = this->fields.onClick;
   if ( onClick )
   {
     this->fields.onClick = 0;
-    sub_1C3E508(&this->fields.onClick, 0);
+    sub_1C6B9AC(&this->fields.onClick, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))onClick->fields.invoke_impl)(
       onClick->fields.method_code,
       onClick->fields.method);
     this->fields.state = 4;
-    v4 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v4, (Il2CppObject *)this, Method_FortificationNotifyDialog__ClickButtonAction_b__13_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v4, 0);
   }
@@ -45,7 +45,7 @@ void FortificationNotifyDialog__Init(FortificationNotifyDialog_o *this, const Me
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -58,18 +58,18 @@ void FortificationNotifyDialog__OnClickCancel(FortificationNotifyDialog_o *this,
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C51112 & 1) == 0 )
+  if ( (byte_4CB065A & 1) == 0 )
   {
-    sub_1C3E564(&Method_FortificationNotifyDialog_OnClickCancel__);
-    byte_4C51112 = 1;
+    sub_1C6BA08(&Method_FortificationNotifyDialog_OnClickCancel__);
+    byte_4CB065A = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_FortificationNotifyDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_FortificationNotifyDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_FortificationNotifyDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_FortificationNotifyDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     FortificationNotifyDialog__ClickButtonAction(this, v5);
   }
@@ -88,31 +88,31 @@ void FortificationNotifyDialog__OnClickDecide(FortificationNotifyDialog_o *this,
   int32_t slot; // w22
   SceneJumpInfo_o *v11; // x21
 
-  if ( (byte_4C51111 & 1) == 0 )
+  if ( (byte_4CB0659 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_EventRewardSceneMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_FortificationNotifyDialog_OnClickDecide__);
-    sub_1C3E564(&SceneJumpInfo_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C3E564(&TerminalPramsManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C51111 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_EventRewardSceneMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_FortificationNotifyDialog_OnClickDecide__);
+    sub_1C6BA08(&SceneJumpInfo_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB0659 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_FortificationNotifyDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_FortificationNotifyDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_FortificationNotifyDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_FortificationNotifyDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C51117 )
+    if ( !byte_4CB065F )
     {
-      sub_1C3E564(&TerminalPramsManager_TypeInfo);
-      byte_4C51117 = 1;
+      sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+      byte_4CB065F = 1;
     }
     v5 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -123,7 +123,7 @@ void FortificationNotifyDialog__OnClickDecide(FortificationNotifyDialog_o *this,
     EventID = WarMaster__getEventID(v5->static_fields->_WarId_k__BackingField, 0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (EventRewardSceneEntity_array *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_EventRewardSceneMaster___);
+    Master_object = (EventRewardSceneEntity_array *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_EventRewardSceneMaster___);
     if ( Master_object )
     {
       Master_object = EventRewardSceneMaster__getEntityFromIdAndEventType(
@@ -138,17 +138,17 @@ LABEL_21:
         return;
       }
       if ( !LODWORD(Master_object->max_length) )
-        sub_1C3E7C8(Master_object, v8);
+        sub_1C6BC68(Master_object);
       v9 = Master_object->m_Items[0];
       if ( v9 )
       {
         slot = v9->fields.slot;
-        v11 = (SceneJumpInfo_o *)sub_1C3E7B0(SceneJumpInfo_TypeInfo);
-        SceneJumpInfo___ctor_41527708(v11, (System_String_o *)StringLiteral_1/*""*/, EventID, slot + 1, 0);
+        v11 = (SceneJumpInfo_o *)sub_1C6BC54(SceneJumpInfo_TypeInfo);
+        SceneJumpInfo___ctor_41713128(v11, (System_String_o *)StringLiteral_1/*""*/, EventID, slot + 1, 0);
         if ( v11 )
         {
           SceneJumpInfo__SetReturnNowScene(v11, 0);
-          Master_object = (EventRewardSceneEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+          Master_object = (EventRewardSceneEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
           if ( Master_object )
           {
             AvalonSceneManager__transitionScene((AvalonSceneManager_o *)Master_object, 72, 1, (Il2CppObject *)v11, 0);
@@ -157,7 +157,7 @@ LABEL_21:
         }
       }
     }
-    sub_1C3E7C0(Master_object, v8);
+    sub_1C6BC60(Master_object, v8);
   }
 }
 
@@ -174,19 +174,19 @@ void FortificationNotifyDialog__Open(
   UILabel_o *cancelButtonLb; // x20
   System_Action_o *v11; // x20
 
-  if ( (byte_4C51110 & 1) == 0 )
+  if ( (byte_4CB0658 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_FortificationNotifyDialog__Open_b__9_0__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_6492/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/);
-    sub_1C3E564(&StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4C51110 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_FortificationNotifyDialog__Open_b__9_0__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_6484/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/);
+    sub_1C6BA08(&StringLiteral_3677/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4CB0658 = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.onClick = onClick;
-    sub_1C3E508(&this->fields.onClick, onClick);
+    sub_1C6B9AC(&this->fields.onClick, onClick);
     descriptionLb = this->fields.descriptionLb;
     if ( !descriptionLb )
       goto LABEL_10;
@@ -194,19 +194,19 @@ void FortificationNotifyDialog__Open(
     decideButtonLb = this->fields.decideButtonLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    descriptionLb = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6492/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, 0);
+    descriptionLb = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_6484/*"FORTIFICATION_EXPANSION_DIALOG_DECIDE"*/, 0);
     if ( !decideButtonLb
       || (UILabel__set_text(decideButtonLb, (System_String_o *)descriptionLb, 0),
           cancelButtonLb = this->fields.cancelButtonLb,
-          descriptionLb = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3685/*"COMMON_CONFIRM_CLOSE"*/, 0),
+          descriptionLb = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3677/*"COMMON_CONFIRM_CLOSE"*/, 0),
           !cancelButtonLb) )
     {
 LABEL_10:
-      sub_1C3E7C0(descriptionLb, v7);
+      sub_1C6BC60(descriptionLb, v7);
     }
     UILabel__set_text(cancelButtonLb, (System_String_o *)descriptionLb, 0);
     this->fields.state = 1;
-    v11 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v11 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v11, (Il2CppObject *)this, Method_FortificationNotifyDialog__Open_b__9_0__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v11, 0, 0, 0);
   }
@@ -223,15 +223,15 @@ void FortificationNotifyDialog___ClickButtonAction_b__13_0(FortificationNotifyDi
 {
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4C51116 & 1) == 0 )
+  if ( (byte_4CB065E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C51116 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB065E = 1;
   }
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71341564(gameObject, 0);
+  UnityEngine_Object__Destroy_71659676(gameObject, 0);
 }
 
 
@@ -249,10 +249,10 @@ UnityEngine_GameObject_o *FortificationNotifyDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4C51114 & 1) == 0 )
+  if ( (byte_4CB065C & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C51114 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB065C = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -261,6 +261,6 @@ UnityEngine_GameObject_o *FortificationNotifyDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }

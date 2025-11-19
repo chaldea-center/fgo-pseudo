@@ -22,12 +22,12 @@ void ReceiptListViewItemDraw__SetItem(
   float v15; // s1
   float v16; // s2
 
-  if ( (byte_4C542A0 & 1) == 0 )
+  if ( (byte_4CB37F2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_1755/*"?"*/);
-    byte_4C542A0 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1748/*"?"*/);
+    byte_4CB37F2 = 1;
   }
   if ( item && mode )
   {
@@ -44,14 +44,14 @@ void ReceiptListViewItemDraw__SetItem(
     {
       if ( !titleTextLabel )
         goto LABEL_25;
-      v10 = (System_String_o *)StringLiteral_1755/*"?"*/;
+      v10 = (System_String_o *)StringLiteral_1748/*"?"*/;
     }
     UILabel__set_text(titleTextLabel, v10, 0);
     timeTextLabel = this->fields.timeTextLabel;
-    if ( (byte_4C5429F & 1) == 0 )
+    if ( (byte_4CB37F1 & 1) == 0 )
     {
-      TitleText = sub_1C3E564(&StringLiteral_1/*""*/);
-      byte_4C5429F = 1;
+      TitleText = sub_1C6BA08(&StringLiteral_1/*""*/);
+      byte_4CB37F1 = 1;
     }
     if ( timeTextLabel )
     {
@@ -64,7 +64,7 @@ void ReceiptListViewItemDraw__SetItem(
         {
           Component_object = UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)TitleText,
-                               (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                               (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           TitleText = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -90,6 +90,6 @@ void ReceiptListViewItemDraw__SetItem(
       }
     }
 LABEL_25:
-    sub_1C3E7C0(TitleText, v8);
+    sub_1C6BC60(TitleText, v8);
   }
 }

@@ -1,9 +1,9 @@
 System_String_o *TopRefreshRequest__getMockData(TopRefreshRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5899F & 1) == 0 )
+  if ( (byte_4CB7F1B & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5899F = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB7F1B = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -13,16 +13,16 @@ System_String_o *TopRefreshRequest__getURL(TopRefreshRequest_o *this, const Meth
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C5899E & 1) == 0 )
+  if ( (byte_4CB7F1A & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_23026/*"refresh/top"*/);
-    byte_4C5899E = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_23100/*"refresh/top"*/);
+    byte_4CB7F1A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_23026/*"refresh/top"*/, 0);
+  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_23100/*"refresh/top"*/, 0);
 }
 
 
@@ -36,17 +36,17 @@ void TopRefreshRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4C589A0 & 1) == 0 )
+  if ( (byte_4CB7F1C & 1) == 0 )
   {
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    sub_1C3E564(&StringLiteral_22400/*"ok"*/);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    byte_4C589A0 = 1;
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    byte_4CB7F1C = 1;
   }
-  if ( (byte_4C5898A & 1) == 0 )
+  if ( (byte_4CB7F06 & 1) == 0 )
   {
-    sub_1C3E564(&TopHomeRequest_TypeInfo);
-    byte_4C5898A = 1;
+    sub_1C6BA08(&TopHomeRequest_TypeInfo);
+    byte_4CB7F06 = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0;
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -57,14 +57,14 @@ void TopRefreshRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22400/*"ok"*/;
+    v8 = &StringLiteral_22471/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22233/*"ng"*/;
+    v8 = &StringLiteral_22301/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

@@ -1,35 +1,29 @@
 void SampleEventListViewItem___ctor(SampleEventListViewItem_o *this, int32_t index, const MethodInfo *method)
 {
-  __int64 v5; // x2
-  __int64 v6; // x3
-  __int64 v7; // x4
-  __int64 v8; // x5
-  __int64 v9; // x6
-  __int64 v10; // x7
-  int32_t v11; // w8
-  Il2CppObject *v12; // x0
-  struct System_String_o *v13; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int v16; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v5; // w8
+  Il2CppObject *v6; // x0
+  struct System_String_o *v7; // x0
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  int v10; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C54525 & 1) == 0 )
+  if ( (byte_4CB3A77 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&StringLiteral_6192/*"Event Number {0}"*/);
-    byte_4C54525 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&StringLiteral_6182/*"Event Number {0}"*/);
+    byte_4CB3A77 = 1;
   }
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
   if ( index >= 0 )
-    v11 = index;
+    v5 = index;
   else
-    v11 = index + 1;
-  this->fields.eventType = index - (v11 & 0xFFFFFFFE);
-  v16 = index + 1;
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16, v5, v6, v7, v8, v9, v10);
-  v13 = System_String__Format((System_String_o *)StringLiteral_6192/*"Event Number {0}"*/, v12, 0);
-  this->fields.eventText = v13;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.eventText, (int32_t)v13, v14, v15);
+    v5 = index + 1;
+  this->fields.eventType = index - (v5 & 0xFFFFFFFE);
+  v10 = index + 1;
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
+  v7 = System_String__Format((System_String_o *)StringLiteral_6182/*"Event Number {0}"*/, v6, 0);
+  this->fields.eventText = v7;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventText, (int32_t)v7, v8, v9);
 }
 
 
@@ -43,15 +37,15 @@ System_String_o *SampleEventListViewItem__ToString(SampleEventListViewItem_o *th
 {
   System_String_o *v3; // x0
 
-  if ( (byte_4C54526 & 1) == 0 )
+  if ( (byte_4CB3A78 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_113/*" "*/);
-    sub_1C3E564(&StringLiteral_19176/*"eventType "*/);
-    byte_4C54526 = 1;
+    sub_1C6BA08(&StringLiteral_113/*" "*/);
+    sub_1C6BA08(&StringLiteral_19207/*"eventType "*/);
+    byte_4CB3A78 = 1;
   }
   v3 = System_Int32__ToString((int)this + 120, 0);
-  return System_String__Concat_63676720(
-           (System_String_o *)StringLiteral_19176/*"eventType "*/,
+  return System_String__Concat_64007060(
+           (System_String_o *)StringLiteral_19207/*"eventType "*/,
            v3,
            (System_String_o *)StringLiteral_113/*" "*/,
            this->fields.eventText,

@@ -17,17 +17,17 @@ TweenOrthoSize_o *TweenOrthoSize__Begin(
   TweenOrthoSize_o *v9; // x19
   const MethodInfo *v10; // x2
 
-  if ( (byte_4C5B5B4 & 1) == 0 )
+  if ( (byte_4CBAB91 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UITweener_Begin_TweenOrthoSize___);
-    byte_4C5B5B4 = 1;
+    sub_1C6BA08(&Method_UITweener_Begin_TweenOrthoSize___);
+    byte_4CBAB91 = 1;
   }
   v7 = (TweenOrthoSize_o *)UITweener__Begin_object_(
                              go,
                              duration,
-                             (const MethodInfo_31B54C4 *)Method_UITweener_Begin_TweenOrthoSize___);
+                             (const MethodInfo_3210C14 *)Method_UITweener_Begin_TweenOrthoSize___);
   if ( !v7 )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   v9 = v7;
   v7->fields.from = TweenOrthoSize__get_value(v7, v8);
   v9->fields.to = to;
@@ -69,11 +69,11 @@ UnityEngine_Camera_o *TweenOrthoSize__get_cachedCamera(TweenOrthoSize_o *this, c
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C5B5B3 & 1) == 0 )
+  if ( (byte_4CBAB90 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B5B3 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAB90 = 1;
   }
   mCam = (UnityEngine_Object_o *)this->fields.mCam;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -82,9 +82,9 @@ UnityEngine_Camera_o *TweenOrthoSize__get_cachedCamera(TweenOrthoSize_o *this, c
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
     this->fields.mCam = (struct UnityEngine_Camera_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mCam, (int32_t)Component_object, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCam, (int32_t)Component_object, v5, v6);
   }
   return this->fields.mCam;
 }
@@ -104,7 +104,7 @@ float TweenOrthoSize__get_value(TweenOrthoSize_o *this, const MethodInfo *method
 
   cachedCamera = TweenOrthoSize__get_cachedCamera(this, method);
   if ( !cachedCamera )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   return UnityEngine_Camera__get_orthographicSize(cachedCamera, 0);
 }
 
@@ -123,6 +123,6 @@ void TweenOrthoSize__set_value(TweenOrthoSize_o *this, float value, const Method
 
   cachedCamera = TweenOrthoSize__get_cachedCamera(this, method);
   if ( !cachedCamera )
-    sub_1C3E7C0(0, v5);
+    sub_1C6BC60(0, v5);
   UnityEngine_Camera__set_orthographicSize(cachedCamera, value, 0);
 }

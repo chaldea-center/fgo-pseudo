@@ -6,9 +6,9 @@ void CharaGraphListViewPatternGrandEquipNormal___ctor(
 {
   CharaGraphListViewPatternServantEquip___ctor((CharaGraphListViewPatternServantEquip_o *)this, 0);
   this->fields.otherUsedEquipUserSvtId = otherUsedEquipUserId;
-  sub_1C3E508(&this->fields.otherUsedEquipUserSvtId, otherUsedEquipUserId);
+  sub_1C6B9AC(&this->fields.otherUsedEquipUserSvtId, otherUsedEquipUserId);
   this->fields.grandServantData = grandSvtSlotData;
-  sub_1C3E508(&this->fields.grandServantData, grandSvtSlotData);
+  sub_1C6B9AC(&this->fields.grandServantData, grandSvtSlotData);
 }
 
 
@@ -32,25 +32,25 @@ System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *CharaGraph
   System_Collections_Generic_IEnumerable_TSource__o *v7; // x20
   System_Func_T1__T2__TResult__o *v8; // x21
 
-  if ( (byte_4C51AE8 & 1) == 0 )
+  if ( (byte_4CB1030 & 1) == 0 )
   {
-    sub_1C3E564(&Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
-    sub_1C3E564(&Method_CharaGraphListViewPatternGrandEquipNormal__GenerateListViewItem_b__3_0__);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_UserServantEntity__CharaGraphGrandEquipListViewItem___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Where_UserServantEntity___);
-    sub_1C3E564(&System_Func_UserServantEntity__bool__TypeInfo);
-    sub_1C3E564(&System_Func_UserServantEntity__int__CharaGraphGrandEquipListViewItem__TypeInfo);
-    byte_4C51AE8 = 1;
+    sub_1C6BA08(&Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
+    sub_1C6BA08(&Method_CharaGraphListViewPatternGrandEquipNormal__GenerateListViewItem_b__3_0__);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_UserServantEntity__CharaGraphGrandEquipListViewItem___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_UserServantEntity___);
+    sub_1C6BA08(&System_Func_UserServantEntity__bool__TypeInfo);
+    sub_1C6BA08(&System_Func_UserServantEntity__int__CharaGraphGrandEquipListViewItem__TypeInfo);
+    byte_4CB1030 = 1;
   }
-  Master_object = CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_30ED1F0 *)Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
+  Master_object = CharaGraphListViewPatternBase__GetMaster_object_((const MethodInfo_312E9E0 *)Method_CharaGraphListViewPatternBase_GetMaster_UserServantMaster___);
   if ( !Master_object
     || (ServantEquipList = (System_Collections_Generic_IEnumerable_TSource__o *)UserServantMaster__getServantEquipList(
                                                                                   (UserServantMaster_o *)Master_object,
                                                                                   0),
-        Master_object = (Il2CppObject *)sub_1C3E7B0(System_Func_UserServantEntity__bool__TypeInfo),
+        Master_object = (Il2CppObject *)sub_1C6BC54(System_Func_UserServantEntity__bool__TypeInfo),
         !this) )
   {
-    sub_1C3E7C0(Master_object, v4);
+    sub_1C6BC60(Master_object, v4);
   }
   v6 = (System_Func_TSource__bool__o *)Master_object;
   System_Func_object__bool____ctor(
@@ -61,17 +61,17 @@ System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *CharaGraph
   v7 = System_Linq_Enumerable__Where_object_(
          ServantEquipList,
          v6,
-         (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_UserServantEntity___);
-  v8 = (System_Func_T1__T2__TResult__o *)sub_1C3E7B0(System_Func_UserServantEntity__int__CharaGraphGrandEquipListViewItem__TypeInfo);
+         (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_UserServantEntity___);
+  v8 = (System_Func_T1__T2__TResult__o *)sub_1C6BC54(System_Func_UserServantEntity__int__CharaGraphGrandEquipListViewItem__TypeInfo);
   System_Func_object__int__object____ctor(
     v8,
     (Il2CppObject *)this,
     Method_CharaGraphListViewPatternGrandEquipNormal__GenerateListViewItem_b__3_0__,
     0);
-  return (System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *)System_Linq_Enumerable__Select_object__object__51578124(
+  return (System_Collections_Generic_IEnumerable_CharaGraphListViewItemBase__o *)System_Linq_Enumerable__Select_object__object__51846660(
                                                                                    v7,
                                                                                    (System_Func_TSource__int__TResult__o *)v8,
-                                                                                   (const MethodInfo_313050C *)Method_System_Linq_Enumerable_Select_UserServantEntity__CharaGraphGrandEquipListViewItem___);
+                                                                                   (const MethodInfo_3171E04 *)Method_System_Linq_Enumerable_Select_UserServantEntity__CharaGraphGrandEquipListViewItem___);
 }
 
 
@@ -81,12 +81,12 @@ CharaGraphListViewItemDrawPatternBase_o *CharaGraphListViewPatternGrandEquipNorm
 {
   CharaGraphListViewItemDrawPatternDefault_o *v2; // x19
 
-  if ( (byte_4C51AE9 & 1) == 0 )
+  if ( (byte_4CB1031 & 1) == 0 )
   {
-    sub_1C3E564(&CharaGraphListViewItemDrawPatternGrandEquip_TypeInfo);
-    byte_4C51AE9 = 1;
+    sub_1C6BA08(&CharaGraphListViewItemDrawPatternGrandEquip_TypeInfo);
+    byte_4CB1031 = 1;
   }
-  v2 = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C3E7B0(CharaGraphListViewItemDrawPatternGrandEquip_TypeInfo);
+  v2 = (CharaGraphListViewItemDrawPatternDefault_o *)sub_1C6BC54(CharaGraphListViewItemDrawPatternGrandEquip_TypeInfo);
   CharaGraphListViewItemDrawPatternDefault___ctor(v2, 0);
   return (CharaGraphListViewItemDrawPatternBase_o *)v2;
 }
@@ -98,7 +98,7 @@ bool CharaGraphListViewPatternGrandEquipNormal__IsFocusItem(
         const MethodInfo *method)
 {
   if ( !item )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return item->fields._IsBase_k__BackingField;
 }
 
@@ -114,14 +114,14 @@ CharaGraphGrandEquipListViewItem_o *CharaGraphListViewPatternGrandEquipNormal___
   CharaGraphGrandEquipListViewItem_o *v9; // x24
   const MethodInfo *v10; // x6
 
-  if ( (byte_4C51AEA & 1) == 0 )
+  if ( (byte_4CB1032 & 1) == 0 )
   {
-    sub_1C3E564(&CharaGraphGrandEquipListViewItem_TypeInfo);
-    byte_4C51AEA = 1;
+    sub_1C6BA08(&CharaGraphGrandEquipListViewItem_TypeInfo);
+    byte_4CB1032 = 1;
   }
   otherUsedEquipUserSvtId = this->fields.otherUsedEquipUserSvtId;
   grandServantData = this->fields.grandServantData;
-  v9 = (CharaGraphGrandEquipListViewItem_o *)sub_1C3E7B0(CharaGraphGrandEquipListViewItem_TypeInfo);
+  v9 = (CharaGraphGrandEquipListViewItem_o *)sub_1C6BC54(CharaGraphGrandEquipListViewItem_TypeInfo);
   CharaGraphGrandEquipListViewItem___ctor(
     v9,
     i,

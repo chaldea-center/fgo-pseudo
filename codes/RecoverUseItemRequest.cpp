@@ -7,14 +7,14 @@ void RecoverUseItemRequest__beginRequest(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x1
 
-  if ( (byte_4C5892A & 1) == 0 )
+  if ( (byte_4CB7EA6 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_22356/*"num"*/);
-    sub_1C3E564(&StringLiteral_23008/*"recoverId"*/);
-    byte_4C5892A = 1;
+    sub_1C6BA08(&StringLiteral_22424/*"num"*/);
+    sub_1C6BA08(&StringLiteral_23082/*"recoverId"*/);
+    byte_4CB7EA6 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23008/*"recoverId"*/, recoverId, method);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22356/*"num"*/, num, v7);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23082/*"recoverId"*/, recoverId, method);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22424/*"num"*/, num, v7);
   RequestBase__beginRequest((RequestBase_o *)this, v8);
 }
 
@@ -23,16 +23,16 @@ System_String_o *RecoverUseItemRequest__getURL(RecoverUseItemRequest_o *this, co
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C58929 & 1) == 0 )
+  if ( (byte_4CB7EA5 & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_21038/*"item/recover"*/);
-    byte_4C58929 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_21085/*"item/recover"*/);
+    byte_4CB7EA5 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_21038/*"item/recover"*/, 0);
+  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_21085/*"item/recover"*/, 0);
 }
 
 
@@ -46,12 +46,12 @@ void RecoverUseItemRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4C5892B & 1) == 0 )
+  if ( (byte_4CB7EA7 & 1) == 0 )
   {
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    sub_1C3E564(&StringLiteral_22400/*"ok"*/);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    byte_4C5892B = 1;
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    byte_4CB7EA7 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -61,14 +61,14 @@ void RecoverUseItemRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22400/*"ok"*/;
+    v8 = &StringLiteral_22471/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22233/*"ng"*/;
+    v8 = &StringLiteral_22301/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

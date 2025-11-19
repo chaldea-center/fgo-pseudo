@@ -16,10 +16,10 @@ bool EventPointGaugeChangeEffectAction__IsEnd(EventPointGaugeChangeEffectAction_
   UnityEngine_Animation_o *v10; // x19
   System_String_o *v11; // x0
 
-  if ( (byte_4C50F27 & 1) == 0 )
+  if ( (byte_4CB046F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C50F27 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB046F = 1;
   }
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -40,7 +40,7 @@ bool EventPointGaugeChangeEffectAction__IsEnd(EventPointGaugeChangeEffectAction_
     v7 = this->fields.simpleAnimation;
     if ( !v7 || (m_Clip = (CommonEffectComponent_o *)v7->fields.m_Clip) == 0 )
 LABEL_23:
-      sub_1C3E7C0(m_Clip, v4);
+      sub_1C6BC60(m_Clip, v4);
     name = UnityEngine_Object__get_name((UnityEngine_Object_o *)m_Clip, 0);
     if ( !SimpleAnimation__IsPlaying(v7, name, 0) )
       return 1;
@@ -74,7 +74,7 @@ void EventPointGaugeChangeEffectAction__OnChangeGauge(
   p_gaugeChangeAction = &this->fields.gaugeChangeAction;
   v3 = gaugeChangeAction;
   *p_gaugeChangeAction = 0;
-  sub_1C3E508(p_gaugeChangeAction, 0);
+  sub_1C6B9AC(p_gaugeChangeAction, 0);
   if ( gaugeChangeAction )
     ActionExtensions__Call(v3, 0);
 }
@@ -88,46 +88,46 @@ void EventPointGaugeChangeEffectAction__Setup(
 {
   UnityEngine_Component_o *transform; // x0
   __int64 v8; // x1
-  Il2CppObject *ComponentInChildren_object__51315876; // x0
+  Il2CppObject *ComponentInChildren_object__51584412; // x0
   Il2CppObject *v10; // x0
   Il2CppObject *v11; // x0
 
-  if ( (byte_4C50F26 & 1) == 0 )
+  if ( (byte_4CB046E & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
-    byte_4C50F26 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___);
+    byte_4CB046E = 1;
   }
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_7;
-  ComponentInChildren_object__51315876 = UnityEngine_Component__GetComponentInChildren_object__51315876(
+  ComponentInChildren_object__51584412 = UnityEngine_Component__GetComponentInChildren_object__51584412(
                                            transform,
-                                           (const MethodInfo_30F04A4 *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
-  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__51315876;
-  sub_1C3E508(&this->fields.commonEffectComponent, ComponentInChildren_object__51315876);
+                                           (const MethodInfo_3131D9C *)Method_UnityEngine_Component_GetComponentInChildren_CommonEffectComponent___);
+  this->fields.commonEffectComponent = (struct CommonEffectComponent_o *)ComponentInChildren_object__51584412;
+  sub_1C6B9AC(&this->fields.commonEffectComponent, ComponentInChildren_object__51584412);
   transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform
-    || (v10 = UnityEngine_Component__GetComponentInChildren_object__51315876(
+    || (v10 = UnityEngine_Component__GetComponentInChildren_object__51584412(
                 transform,
-                (const MethodInfo_30F04A4 *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
+                (const MethodInfo_3131D9C *)Method_UnityEngine_Component_GetComponentInChildren_SimpleAnimation___),
         this->fields.simpleAnimation = (struct SimpleAnimation_o *)v10,
-        sub_1C3E508(&this->fields.simpleAnimation, v10),
+        sub_1C6B9AC(&this->fields.simpleAnimation, v10),
         (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_7:
-    sub_1C3E7C0(transform, v8);
+    sub_1C6BC60(transform, v8);
   }
-  v11 = UnityEngine_Component__GetComponentInChildren_object__51315876(
+  v11 = UnityEngine_Component__GetComponentInChildren_object__51584412(
           transform,
-          (const MethodInfo_30F04A4 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+          (const MethodInfo_3131D9C *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
   this->fields.animation = (struct UnityEngine_Animation_o *)v11;
-  sub_1C3E508(&this->fields.animation, v11);
+  sub_1C6B9AC(&this->fields.animation, v11);
   this->fields.gaugeChangeAction = gaugeChangeAct;
-  sub_1C3E508(&this->fields.gaugeChangeAction, gaugeChangeAct);
+  sub_1C6B9AC(&this->fields.gaugeChangeAction, gaugeChangeAct);
   this->fields.endAction = endAct;
-  sub_1C3E508(&this->fields.endAction, endAct);
+  sub_1C6B9AC(&this->fields.endAction, endAct);
 }
 
 
@@ -139,7 +139,7 @@ void EventPointGaugeChangeEffectAction__Update(EventPointGaugeChangeEffectAction
   {
     endAction = this->fields.endAction;
     this->fields.endAction = 0;
-    sub_1C3E508(&this->fields.endAction, 0);
+    sub_1C6B9AC(&this->fields.endAction, 0);
     if ( endAction )
       ActionExtensions__Call(endAction, 0);
   }

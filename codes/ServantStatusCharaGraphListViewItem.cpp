@@ -10,10 +10,10 @@ void ServantStatusCharaGraphListViewItem___ctor(
   const MethodInfo *v9; // x3
 
   v7 = this;
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
   v7->fields.mainInfo = mainInfo;
   v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 120);
-  sub_1C3E508((CGThumbnailListItem_o *)v7, (int32_t)mainInfo, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v7, (int32_t)mainInfo, v8, v9);
   LODWORD(v7->monitor) = imageLimitCount;
 }
 

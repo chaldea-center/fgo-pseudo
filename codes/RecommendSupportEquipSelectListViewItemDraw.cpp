@@ -14,18 +14,18 @@ void RecommendSupportEquipSelectListViewItemDraw__Awake(
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C52BD0 & 1) == 0 )
+  if ( (byte_4CB2120 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_UIWidget__TypeInfo);
-    byte_4C52BD0 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_UIWidget__TypeInfo);
+    byte_4CB2120 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_UIWidget__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_UIWidget__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_UIWidget___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_UIWidget___ctor__);
   this->fields.messageLabelList = (struct System_Collections_Generic_List_UIWidget__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.messageLabelList, (int32_t)v3, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.messageLabelList, (int32_t)v3, v4, v5);
 }
 
 
@@ -48,11 +48,11 @@ void RecommendSupportEquipSelectListViewItemDraw__SetInput(
   char v17; // w10
   bool v18; // w1
 
-  if ( (byte_4C52BD2 & 1) == 0 )
+  if ( (byte_4CB2122 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C52BD2 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2122 = 1;
   }
   if ( item )
   {
@@ -66,7 +66,7 @@ void RecommendSupportEquipSelectListViewItemDraw__SetInput(
         goto LABEL_38;
       Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       Component_object,
-                                                      (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                      (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider___);
       if ( !Component_object )
         goto LABEL_38;
       UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0);
@@ -130,7 +130,7 @@ void RecommendSupportEquipSelectListViewItemDraw__SetInput(
         }
       }
 LABEL_38:
-      sub_1C3E7C0(Component_object, v8);
+      sub_1C6BC60(Component_object, v8);
     }
   }
 }
@@ -177,25 +177,25 @@ void RecommendSupportEquipSelectListViewItemDraw__SetItem(
   UnityEngine_Object_o *chocolateSprite; // x21
 
   v5 = item;
-  if ( (byte_4C52BD1 & 1) == 0 )
+  if ( (byte_4CB2121 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_11522/*"SELECT_BONUS_SKILL_INVALID"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_5492/*"EQUIP_GRAPH_USE"*/);
-    byte_4C52BD1 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_UIWidget__get_Count__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_11519/*"SELECT_BONUS_SKILL_INVALID"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_5482/*"EQUIP_GRAPH_USE"*/);
+    byte_4CB2121 = 1;
   }
   if ( !v5 || !mode )
     return;
   servantFaceIcon = (__int64)this->fields.servantFaceIcon;
   if ( !servantFaceIcon )
     goto LABEL_85;
-  ServantFaceIconComponent__Set_41053768(
+  ServantFaceIconComponent__Set_41239152(
     (ServantFaceIconComponent_o *)servantFaceIcon,
     v5->fields.userSvtEntity,
     v5->fields.iconLabelInfo1,
@@ -264,7 +264,7 @@ void RecommendSupportEquipSelectListViewItemDraw__SetItem(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    servantFaceIcon = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11522/*"SELECT_BONUS_SKILL_INVALID"*/, 0);
+    servantFaceIcon = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_11519/*"SELECT_BONUS_SKILL_INVALID"*/, 0);
     if ( !skillInvalidLabel )
       goto LABEL_85;
     UILabel__set_text(skillInvalidLabel, (System_String_o *)servantFaceIcon, 0);
@@ -283,14 +283,14 @@ void RecommendSupportEquipSelectListViewItemDraw__SetItem(
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)servantFaceIcon,
         (Il2CppObject *)item,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
     }
     else
     {
       v21 = v18 + 8 * v20;
       *(_DWORD *)(servantFaceIcon + 24) = v20 + 1;
       *(_QWORD *)(v21 + 32) = item;
-      sub_1C3E508((CGThumbnailListItem_o *)(v21 + 32), (int32_t)item, v16, v17);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 32), (int32_t)item, v16, v17);
     }
   }
   else
@@ -328,7 +328,7 @@ LABEL_43:
   warningLabel = this->fields.warningLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  servantFaceIcon = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5492/*"EQUIP_GRAPH_USE"*/, 0);
+  servantFaceIcon = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_5482/*"EQUIP_GRAPH_USE"*/, 0);
   if ( !warningLabel )
     goto LABEL_85;
   UILabel__set_text(warningLabel, (System_String_o *)servantFaceIcon, 0);
@@ -347,14 +347,14 @@ LABEL_43:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)servantFaceIcon,
       (Il2CppObject *)item,
-      *(const MethodInfo_37B5460 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+      *(const MethodInfo_3800974 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
   }
   else
   {
     v34 = v31 + 8 * v33;
     *(_DWORD *)(servantFaceIcon + 24) = v33 + 1;
     *(_QWORD *)(v34 + 32) = item;
-    sub_1C3E508((CGThumbnailListItem_o *)(v34 + 32), (int32_t)item, v29, v30);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v34 + 32), (int32_t)item, v29, v30);
   }
 LABEL_45:
   servantFaceIcon = (__int64)this->fields.messageLabelList;
@@ -376,13 +376,13 @@ LABEL_45:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)servantFaceIcon,
           (Il2CppObject *)item,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
         *(_DWORD *)(servantFaceIcon + 24) = 2;
         *(_QWORD *)(v25 + 40) = item;
-        sub_1C3E508((CGThumbnailListItem_o *)(v25 + 40), (int32_t)item, v22, v23);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v25 + 40), (int32_t)item, v22, v23);
       }
     }
     servantFaceIcon = (__int64)this->fields.messageLabelList;
@@ -391,7 +391,7 @@ LABEL_45:
       messageLabel = this->fields.messageLabel;
       servantFaceIcon = (__int64)System_Collections_Generic_List_object___ToArray(
                                    (System_Collections_Generic_List_object__o *)servantFaceIcon,
-                                   (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
+                                   (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_UIWidget__ToArray__);
       if ( messageLabel )
       {
         SwitchUIWidgetComponent__Set(messageLabel, (UIWidget_array *)servantFaceIcon, 0, 0);
@@ -399,7 +399,7 @@ LABEL_45:
       }
     }
 LABEL_85:
-    sub_1C3E7C0(servantFaceIcon, item);
+    sub_1C6BC60(servantFaceIcon, item);
   }
 LABEL_66:
   selectObject = (UnityEngine_Object_o *)this->fields.selectObject;

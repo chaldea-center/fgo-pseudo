@@ -1,11 +1,11 @@
 void TripleButtonDlgComponent___ctor(TripleButtonDlgComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5598B & 1) == 0 )
+  if ( (byte_4CB4EE8 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C5598B = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB4EE8 = 1;
   }
-  *(_OWORD *)&this->fields.messagePosNormal.fields.x = xmmword_C12770;
+  *(_OWORD *)&this->fields.messagePosNormal.fields.x = xmmword_CECA30;
   *(_QWORD *)&this->fields.messagePosNoTitle.fields.y = 1106247680;
   *(_QWORD *)&this->fields.messageHeightNormal = 0x14000000118LL;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -27,7 +27,7 @@ void TripleButtonDlgComponent__Callback(TripleButtonDlgComponent_o *this, int32_
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C3E508(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1C6B9AC(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       (unsigned int)result,
@@ -40,11 +40,11 @@ void TripleButtonDlgComponent__Close(TripleButtonDlgComponent_o *this, const Met
 {
   const MethodInfo *v2; // x2
 
-  TripleButtonDlgComponent__Close_40172156(this, 0, v2);
+  TripleButtonDlgComponent__Close_40354140(this, 0, v2);
 }
 
 
-void TripleButtonDlgComponent__Close_40172156(
+void TripleButtonDlgComponent__Close_40354140(
         TripleButtonDlgComponent_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -53,17 +53,17 @@ void TripleButtonDlgComponent__Close_40172156(
   const MethodInfo *v6; // x3
   System_Action_o *v7; // x20
 
-  if ( (byte_4C55985 & 1) == 0 )
+  if ( (byte_4CB4EE2 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_TripleButtonDlgComponent_EndClose__);
-    byte_4C55985 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_TripleButtonDlgComponent_EndClose__);
+    byte_4CB4EE2 = 1;
   }
   TripleButtonDlgComponent__DisableButtons(this, (const MethodInfo *)callback);
   AndroidBackKeyManager__RemoveBackBtn(this->fields.closeBtn, 0);
   this->fields.closeCallbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, v5, v6);
-  v7 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, v5, v6);
+  v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_TripleButtonDlgComponent_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v7, 0);
 }
@@ -96,7 +96,7 @@ void TripleButtonDlgComponent__EndClose(TripleButtonDlgComponent_o *this, const 
   TripleButtonDlgComponent__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (CGThumbnailListItem_o *)&this->fields.closeCallbackFunc;
@@ -104,7 +104,7 @@ void TripleButtonDlgComponent__EndClose(TripleButtonDlgComponent_o *this, const 
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C3E508(p_closeCallbackFunc, 0, v5, v6);
+    sub_1C6B9AC(p_closeCallbackFunc, 0, v5, v6);
     ((void (__fastcall *)(intptr_t, intptr_t))v8->fields.invoke_impl)(v8->fields.method_code, v8->fields.method);
   }
 }
@@ -121,10 +121,10 @@ void TripleButtonDlgComponent__Init(TripleButtonDlgComponent_o *this, const Meth
 {
   UILabel_o *confirmTitleLabel; // x0
 
-  if ( (byte_4C5597F & 1) == 0 )
+  if ( (byte_4CB4EDC & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5597F = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB4EDC = 1;
   }
   confirmTitleLabel = this->fields.confirmTitleLabel;
   if ( !confirmTitleLabel
@@ -133,7 +133,7 @@ void TripleButtonDlgComponent__Init(TripleButtonDlgComponent_o *this, const Meth
     || (UILabel__set_text(confirmTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (confirmTitleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C3E7C0(confirmTitleLabel, method);
+    sub_1C6BC60(confirmTitleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)confirmTitleLabel, 0, 0);
   this->fields.state = 0;
@@ -147,15 +147,15 @@ void TripleButtonDlgComponent__OnClickCancel(TripleButtonDlgComponent_o *this, c
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C55988 & 1) == 0 )
+  if ( (byte_4CB4EE5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_TripleButtonDlgComponent_OnClickCancel__);
-    byte_4C55988 = 1;
+    sub_1C6BA08(&Method_TripleButtonDlgComponent_OnClickCancel__);
+    byte_4CB4EE5 = 1;
   }
   v3 = Method_TripleButtonDlgComponent_OnClickCancel__;
   if ( (*((_BYTE *)Method_TripleButtonDlgComponent_OnClickCancel__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_TripleButtonDlgComponent_OnClickCancel__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_TripleButtonDlgComponent_OnClickCancel__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.leftSeNo, 0, 0);
   TripleButtonDlgComponent__Callback(this, 2, v5);
 }
@@ -167,15 +167,15 @@ void TripleButtonDlgComponent__OnClickMiddle(TripleButtonDlgComponent_o *this, c
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C55987 & 1) == 0 )
+  if ( (byte_4CB4EE4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_TripleButtonDlgComponent_OnClickMiddle__);
-    byte_4C55987 = 1;
+    sub_1C6BA08(&Method_TripleButtonDlgComponent_OnClickMiddle__);
+    byte_4CB4EE4 = 1;
   }
   v3 = Method_TripleButtonDlgComponent_OnClickMiddle__;
   if ( (*((_BYTE *)Method_TripleButtonDlgComponent_OnClickMiddle__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_TripleButtonDlgComponent_OnClickMiddle__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_TripleButtonDlgComponent_OnClickMiddle__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.middleSeNo, 0, 0);
   TripleButtonDlgComponent__Callback(this, 1, v5);
 }
@@ -187,15 +187,15 @@ void TripleButtonDlgComponent__OnClickRight(TripleButtonDlgComponent_o *this, co
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C55986 & 1) == 0 )
+  if ( (byte_4CB4EE3 & 1) == 0 )
   {
-    sub_1C3E564(&Method_TripleButtonDlgComponent_OnClickRight__);
-    byte_4C55986 = 1;
+    sub_1C6BA08(&Method_TripleButtonDlgComponent_OnClickRight__);
+    byte_4CB4EE3 = 1;
   }
   v3 = Method_TripleButtonDlgComponent_OnClickRight__;
   if ( (*((_BYTE *)Method_TripleButtonDlgComponent_OnClickRight__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_TripleButtonDlgComponent_OnClickRight__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_TripleButtonDlgComponent_OnClickRight__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.rightSeNo, 0, 0);
   TripleButtonDlgComponent__Callback(this, 0, v5);
 }
@@ -247,20 +247,20 @@ void TripleButtonDlgComponent__Open(
   const MethodInfo *v45; // x2
   System_Action_o *v46; // x20
 
-  if ( (byte_4C55980 & 1) == 0 )
+  if ( (byte_4CB4EDD & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_TripleButtonDlgComponent_EndOpen__);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C55980 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_TripleButtonDlgComponent_EndOpen__);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB4EDD = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_57;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.callbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v26, v27);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v26, v27);
   this->fields.rightSeNo = rightSe;
   this->fields.middleSeNo = middleSe;
   this->fields.leftSeNo = leftSe;
@@ -410,10 +410,10 @@ void TripleButtonDlgComponent__Open(
       goto LABEL_56;
     }
 LABEL_57:
-    sub_1C3E7C0(gameObject, v25);
+    sub_1C6BC60(gameObject, v25);
   }
 LABEL_56:
-  v46 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v46 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v46, (Il2CppObject *)this, Method_TripleButtonDlgComponent_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v46, 0, 0, 0);
 }
@@ -427,19 +427,19 @@ void TripleButtonDlgComponent__SetBackKeyForAndroid(TripleButtonDlgComponent_o *
   System_String_o *v5; // x0
 
   v2 = this;
-  if ( (byte_4C55989 & 1) == 0 )
+  if ( (byte_4CB4EE6 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    this = (TripleButtonDlgComponent_o *)sub_1C3E564(&StringLiteral_13345/*"TALKRESUME_CONFIRM_CANCEL"*/);
-    byte_4C55989 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    this = (TripleButtonDlgComponent_o *)sub_1C6BA08(&StringLiteral_13338/*"TALKRESUME_CONFIRM_CANCEL"*/);
+    byte_4CB4EE6 = 1;
   }
   closeBtnLb = v2->fields.closeBtnLb;
   if ( !closeBtnLb )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   mText = closeBtnLb->fields.mText;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_13345/*"TALKRESUME_CONFIRM_CANCEL"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_13338/*"TALKRESUME_CONFIRM_CANCEL"*/, 0);
   if ( !System_String__op_Equality(mText, v5, 0) )
     AndroidBackKeyManager__AddBackBtn(v2->fields.closeBtn, 0);
 }
@@ -467,16 +467,16 @@ void TripleButtonDlgComponent__SetButtonSpriteSize(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v9; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5598A & 1) == 0 )
+  if ( (byte_4CB4EE7 & 1) == 0 )
   {
-    this = (TripleButtonDlgComponent_o *)sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIRect___);
-    byte_4C5598A = 1;
+    this = (TripleButtonDlgComponent_o *)sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIRect___);
+    byte_4CB4EE7 = 1;
   }
   if ( !sprite )
     goto LABEL_8;
   this = (TripleButtonDlgComponent_o *)UnityEngine_Component__GetComponent_object_(
                                          (UnityEngine_Component_o *)sprite,
-                                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+                                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIRect___);
   if ( !this )
     goto LABEL_8;
   v4 = (UnityEngine_Component_o *)this;
@@ -496,7 +496,7 @@ void TripleButtonDlgComponent__SetButtonSpriteSize(
         (this = (TripleButtonDlgComponent_o *)UnityEngine_Component__get_transform(v4, 0)) == 0) )
   {
 LABEL_8:
-    sub_1C3E7C0(this, sprite);
+    sub_1C6BC60(this, sprite);
   }
   v9.fields.x = x;
   v9.fields.y = y;
@@ -513,17 +513,17 @@ void TripleButtonDlgComponent__SetEnableButton(
 {
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4C55984 & 1) == 0 )
+  if ( (byte_4CB4EE1 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    this = (TripleButtonDlgComponent_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C55984 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+    this = (TripleButtonDlgComponent_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB4EE1 = 1;
   }
   if ( !buttonObj )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        buttonObj,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (TripleButtonDlgComponent_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -535,7 +535,7 @@ void TripleButtonDlgComponent__SetEnableButton(
       return;
     }
 LABEL_10:
-    sub_1C3E7C0(this, buttonObj);
+    sub_1C6BC60(this, buttonObj);
   }
 }
 
@@ -555,10 +555,10 @@ void TripleButtonDlgComponent__add_callbackFunc(
   TripleButtonDlgComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C5597D & 1) == 0 )
+  if ( (byte_4CB4EDA & 1) == 0 )
   {
-    sub_1C3E564(&TripleButtonDlgComponent_CallbackFunc_TypeInfo);
-    byte_4C5597D = 1;
+    sub_1C6BA08(&TripleButtonDlgComponent_CallbackFunc_TypeInfo);
+    byte_4CB4EDA = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -571,13 +571,13 @@ void TripleButtonDlgComponent__add_callbackFunc(
       if ( (TripleButtonDlgComponent_CallbackFunc_c *)v8->klass != TripleButtonDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   TripleButtonDlgComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -596,10 +596,10 @@ void TripleButtonDlgComponent__remove_callbackFunc(
   TripleButtonDlgComponent_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C5597E & 1) == 0 )
+  if ( (byte_4CB4EDB & 1) == 0 )
   {
-    sub_1C3E564(&TripleButtonDlgComponent_CallbackFunc_TypeInfo);
-    byte_4C5597E = 1;
+    sub_1C6BA08(&TripleButtonDlgComponent_CallbackFunc_TypeInfo);
+    byte_4CB4EDB = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -612,13 +612,13 @@ void TripleButtonDlgComponent__remove_callbackFunc(
       if ( (TripleButtonDlgComponent_CallbackFunc_c *)v8->klass != TripleButtonDlgComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   TripleButtonDlgComponent__Init(v11, v12);
 }
 
@@ -631,7 +631,7 @@ void TripleButtonDlgComponent__setCallback(
   const MethodInfo *v3; // x3
 
   this->fields.callbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
 }
 
 
@@ -644,18 +644,18 @@ void TripleButtonDlgComponent__setStateLeftButton(
   UnityEngine_GameObject_o *closeBtn; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4C55983 & 1) == 0 )
+  if ( (byte_4CB4EE0 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C55983 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB4EE0 = 1;
   }
   closeBtn = this->fields.closeBtn;
   if ( !closeBtn )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        closeBtn,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   closeBtn = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -673,7 +673,7 @@ void TripleButtonDlgComponent__setStateLeftButton(
       return;
     }
 LABEL_10:
-    sub_1C3E7C0(closeBtn, disabled);
+    sub_1C6BC60(closeBtn, disabled);
   }
 }
 
@@ -687,18 +687,18 @@ void TripleButtonDlgComponent__setStateMiddleButton(
   UnityEngine_GameObject_o *middleBtn; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4C55982 & 1) == 0 )
+  if ( (byte_4CB4EDF & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C55982 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB4EDF = 1;
   }
   middleBtn = this->fields.middleBtn;
   if ( !middleBtn )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        middleBtn,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   middleBtn = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -716,7 +716,7 @@ void TripleButtonDlgComponent__setStateMiddleButton(
       return;
     }
 LABEL_10:
-    sub_1C3E7C0(middleBtn, disabled);
+    sub_1C6BC60(middleBtn, disabled);
   }
 }
 
@@ -730,18 +730,18 @@ void TripleButtonDlgComponent__setStateRightButton(
   UnityEngine_GameObject_o *rightBtn; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4C55981 & 1) == 0 )
+  if ( (byte_4CB4EDE & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C55981 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB4EDE = 1;
   }
   rightBtn = this->fields.rightBtn;
   if ( !rightBtn )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        rightBtn,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   rightBtn = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -759,7 +759,7 @@ void TripleButtonDlgComponent__setStateRightButton(
       return;
     }
 LABEL_10:
-    sub_1C3E7C0(rightBtn, disabled);
+    sub_1C6BC60(rightBtn, disabled);
   }
 }
 
@@ -779,15 +779,15 @@ void TripleButtonDlgComponent_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -799,9 +799,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A81E40;
+  this->fields.invoke_impl = (intptr_t)sub_1AA0D38;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A81DF8;
+  this->fields.extra_arg = (intptr_t)sub_1AA0CF0;
 }
 
 
@@ -812,29 +812,18 @@ System_IAsyncResult_o *TripleButtonDlgComponent_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v13; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v13 = result;
-  if ( (byte_4C5598C & 1) == 0 )
+  v10 = result;
+  if ( (byte_4CB4EE9 & 1) == 0 )
   {
-    sub_1C3E564(&TripleButtonDlgComponent_ResultClicked_TypeInfo);
-    byte_4C5598C = 1;
+    sub_1C6BA08(&TripleButtonDlgComponent_ResultClicked_TypeInfo);
+    byte_4CB4EE9 = 1;
   }
-  v12[1] = 0;
-  v12[0] = j_il2cpp_value_box_0(
-             TripleButtonDlgComponent_ResultClicked_TypeInfo,
-             &v13,
-             callback,
-             object,
-             method,
-             v5,
-             v6,
-             v7);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
+  v9[1] = 0;
+  v9[0] = j_il2cpp_value_box_0(TripleButtonDlgComponent_ResultClicked_TypeInfo, &v10);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
 }
 
 
@@ -843,7 +832,7 @@ void TripleButtonDlgComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 

@@ -6,24 +6,24 @@ void ScrollArrowComponent___cctor(const MethodInfo *method)
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C537CF & 1) == 0 )
+  if ( (byte_4CB2D1F & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScrollArrowComponent___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_ScrollArrowComponent__TypeInfo);
-    sub_1C3E564(&ScrollArrowComponent_TypeInfo);
-    byte_4C537CF = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScrollArrowComponent___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_ScrollArrowComponent__TypeInfo);
+    sub_1C6BA08(&ScrollArrowComponent_TypeInfo);
+    byte_4CB2D1F = 1;
   }
   static_fields = ScrollArrowComponent_TypeInfo->static_fields;
   static_fields->MOVE_RANGE = 20;
   *(_QWORD *)&static_fields->MOVE_TIME = 0x3E80000040200000LL;
   static_fields->ALPHA_FADE_FRAME_NUM = 16;
-  v2 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_ScrollArrowComponent__TypeInfo);
+  v2 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_ScrollArrowComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v2,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_ScrollArrowComponent___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_ScrollArrowComponent___ctor__);
   v3 = ScrollArrowComponent_TypeInfo->static_fields;
   v3->_arrowList = (struct System_Collections_Generic_List_ScrollArrowComponent__o *)v2;
-  sub_1C3E508((CGThumbnailListItem_o *)&v3->_arrowList, (int32_t)v2, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v3->_arrowList, (int32_t)v2, v4, v5);
 }
 
 
@@ -32,10 +32,10 @@ void ScrollArrowComponent___ctor(ScrollArrowComponent_o *this, const MethodInfo 
   ScrollArrowComponent_c *v3; // x0
   struct ScrollArrowComponent_StaticFields *static_fields; // x8
 
-  if ( (byte_4C537CE & 1) == 0 )
+  if ( (byte_4CB2D1E & 1) == 0 )
   {
-    sub_1C3E564(&ScrollArrowComponent_TypeInfo);
-    byte_4C537CE = 1;
+    sub_1C6BA08(&ScrollArrowComponent_TypeInfo);
+    byte_4CB2D1E = 1;
   }
   v3 = ScrollArrowComponent_TypeInfo;
   if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
@@ -75,15 +75,15 @@ void ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const MethodInfo 
   const MethodInfo *v23; // x1
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C537C7 & 1) == 0 )
+  if ( (byte_4CB2D17 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScrollArrowComponent__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScrollArrowComponent__Contains__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&ScrollArrowComponent_TypeInfo);
-    byte_4C537C7 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScrollArrowComponent__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScrollArrowComponent__Contains__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&ScrollArrowComponent_TypeInfo);
+    byte_4CB2D17 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -95,9 +95,9 @@ void ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const MethodInfo 
       goto LABEL_33;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)gameObject,
-                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
     this->fields.mWidget = (struct UIWidget_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v7, v8);
   }
   v9 = ScrollArrowComponent_TypeInfo;
   if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
@@ -108,11 +108,11 @@ void ScrollArrowComponent__Awake(ScrollArrowComponent_o *this, const MethodInfo 
   gameObject = (__int64)v9->static_fields->_arrowList;
   if ( !gameObject )
 LABEL_33:
-    sub_1C3E7C0(gameObject, v4);
+    sub_1C6BC60(gameObject, v4);
   if ( !System_Collections_Generic_List_object___Contains(
           (System_Collections_Generic_List_object__o *)gameObject,
           (Il2CppObject *)this,
-          (const MethodInfo_37B57F0 *)Method_System_Collections_Generic_List_ScrollArrowComponent__Contains__) )
+          (const MethodInfo_3800D04 *)Method_System_Collections_Generic_List_ScrollArrowComponent__Contains__) )
   {
     v12 = ScrollArrowComponent_TypeInfo;
     if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
@@ -134,14 +134,14 @@ LABEL_33:
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)gameObject,
         (Il2CppObject *)this,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
     }
     else
     {
       v16 = v13 + 8 * v15;
       *(_DWORD *)(gameObject + 24) = v15 + 1;
       *(_QWORD *)(v16 + 32) = this;
-      sub_1C3E508((CGThumbnailListItem_o *)(v16 + 32), (int32_t)this, v10, v11);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v16 + 32), (int32_t)this, v10, v11);
     }
   }
   gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -149,16 +149,16 @@ LABEL_33:
     goto LABEL_33;
   v17 = UnityEngine_GameObject__GetComponent_object_(
           (UnityEngine_GameObject_o *)gameObject,
-          (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+          (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v17, 0, 0);
   if ( (gameObject & 1) != 0 )
   {
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
-      gameObject = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A1 = 1;
+      gameObject = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC09 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -207,11 +207,11 @@ AlphaTransitionCalculator_o *ScrollArrowComponent__CreateWidgetAlphaCalculator(
   AlphaTransitionCalculator_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C537CD & 1) == 0 )
+  if ( (byte_4CB2D1D & 1) == 0 )
   {
-    sub_1C3E564(&AlphaTransitionCalculator_TypeInfo);
-    sub_1C3E564(&ScrollArrowComponent_TypeInfo);
-    byte_4C537CD = 1;
+    sub_1C6BA08(&AlphaTransitionCalculator_TypeInfo);
+    sub_1C6BA08(&ScrollArrowComponent_TypeInfo);
+    byte_4CB2D1D = 1;
   }
   v2 = ScrollArrowComponent_TypeInfo;
   if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
@@ -224,7 +224,7 @@ AlphaTransitionCalculator_o *ScrollArrowComponent__CreateWidgetAlphaCalculator(
          ScrollArrowComponent_TypeInfo->static_fields->TGT_ALP_SPD_RATE,
          (float)ScrollArrowComponent_TypeInfo->static_fields->ALPHA_FADE_FRAME_NUM,
          0);
-  v5 = (AlphaTransitionCalculator_o *)sub_1C3E7B0(AlphaTransitionCalculator_TypeInfo);
+  v5 = (AlphaTransitionCalculator_o *)sub_1C6BC54(AlphaTransitionCalculator_TypeInfo);
   AlphaTransitionCalculator___ctor(v5, v3, v4, v6);
   return v5;
 }
@@ -240,15 +240,15 @@ ScrollArrowComponent_o *ScrollArrowComponent__FetchActiveArrow(ScrollArrowCompon
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4C537CB & 1) == 0 )
+  if ( (byte_4CB2D1B & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScrollArrowComponent__GetEnumerator__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&ScrollArrowComponent_TypeInfo);
-    byte_4C537CB = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScrollArrowComponent__GetEnumerator__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&ScrollArrowComponent_TypeInfo);
+    byte_4CB2D1B = 1;
   }
   v3 = ScrollArrowComponent_TypeInfo;
   memset(&v10, 0, sizeof(v10));
@@ -259,15 +259,15 @@ ScrollArrowComponent_o *ScrollArrowComponent__FetchActiveArrow(ScrollArrowCompon
   }
   arrowList = (System_Collections_Generic_List_object__o *)v3->static_fields->_arrowList;
   if ( !arrowList )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     arrowList,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_ScrollArrowComponent__GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_ScrollArrowComponent__GetEnumerator__);
   v10 = v9;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v10,
-            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__MoveNext__) )
+            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__MoveNext__) )
   {
     current = v10.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -276,7 +276,7 @@ ScrollArrowComponent_o *ScrollArrowComponent__FetchActiveArrow(ScrollArrowCompon
     if ( v6 )
     {
       if ( !current )
-        sub_1C3E7C0(v6, v7);
+        sub_1C6BC60(v6, v7);
       if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)current, 0) )
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -290,7 +290,7 @@ ScrollArrowComponent_o *ScrollArrowComponent__FetchActiveArrow(ScrollArrowCompon
 LABEL_18:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v10,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_ScrollArrowComponent__Dispose__);
   return (ScrollArrowComponent_o *)current;
 }
 
@@ -300,11 +300,11 @@ void ScrollArrowComponent__OnDestroy(ScrollArrowComponent_o *this, const MethodI
   ScrollArrowComponent_c *v3; // x0
   System_Collections_Generic_List_object__o *arrowList; // x0
 
-  if ( (byte_4C537C8 & 1) == 0 )
+  if ( (byte_4CB2D18 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_ScrollArrowComponent__Remove__);
-    sub_1C3E564(&ScrollArrowComponent_TypeInfo);
-    byte_4C537C8 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ScrollArrowComponent__Remove__);
+    sub_1C6BA08(&ScrollArrowComponent_TypeInfo);
+    byte_4CB2D18 = 1;
   }
   v3 = ScrollArrowComponent_TypeInfo;
   if ( !ScrollArrowComponent_TypeInfo->_2.cctor_finished )
@@ -314,11 +314,11 @@ void ScrollArrowComponent__OnDestroy(ScrollArrowComponent_o *this, const MethodI
   }
   arrowList = (System_Collections_Generic_List_object__o *)v3->static_fields->_arrowList;
   if ( !arrowList )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   System_Collections_Generic_List_object___Remove(
     arrowList,
     (Il2CppObject *)this,
-    (const MethodInfo_37B6988 *)Method_System_Collections_Generic_List_ScrollArrowComponent__Remove__);
+    (const MethodInfo_3801E9C *)Method_System_Collections_Generic_List_ScrollArrowComponent__Remove__);
 }
 
 
@@ -338,11 +338,11 @@ void ScrollArrowComponent__SetDisp(ScrollArrowComponent_o *this, bool isDisp, bo
   struct UIWidget_o *mWidget; // x20
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C537CA & 1) == 0 )
+  if ( (byte_4CB2D1A & 1) == 0 )
   {
-    sub_1C3E564(&Method_TransitionCalculator_float__ToEnd__);
-    sub_1C3E564(&Method_TransitionCalculator_float__get_Current__);
-    byte_4C537CA = 1;
+    sub_1C6BA08(&Method_TransitionCalculator_float__ToEnd__);
+    sub_1C6BA08(&Method_TransitionCalculator_float__get_Current__);
+    byte_4CB2D1A = 1;
   }
   WidgetAlphaCalculator = ScrollArrowComponent__get_WidgetAlphaCalculator(this, (const MethodInfo *)isDisp);
   if ( !WidgetAlphaCalculator )
@@ -363,7 +363,7 @@ LABEL_8:
     {
       TransitionCalculator_float___ToEnd(
         (TransitionCalculator_float__o *)WidgetAlphaCalculator,
-        (const MethodInfo_3A7868C *)Method_TransitionCalculator_float__ToEnd__);
+        (const MethodInfo_3AF135C *)Method_TransitionCalculator_float__ToEnd__);
       mWidget = this->fields.mWidget;
       WidgetAlphaCalculator = ScrollArrowComponent__get_WidgetAlphaCalculator(this, v11);
       if ( WidgetAlphaCalculator )
@@ -379,7 +379,7 @@ LABEL_8:
       }
     }
 LABEL_12:
-    sub_1C3E7C0(WidgetAlphaCalculator, v8);
+    sub_1C6BC60(WidgetAlphaCalculator, v8);
   }
 }
 
@@ -391,12 +391,12 @@ void ScrollArrowComponent__SyncAnimation(ScrollArrowComponent_o *this, const Met
   __int64 v5; // x1
   UITweener_o *v6; // x19
 
-  if ( (byte_4C537CC & 1) == 0 )
+  if ( (byte_4CB2D1C & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_TweenPosition___);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C537CC = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_TweenPosition___);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_TweenPosition___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2D1C = 1;
   }
   ActiveArrow = (UnityEngine_Component_o *)ScrollArrowComponent__FetchActiveArrow(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -407,15 +407,15 @@ void ScrollArrowComponent__SyncAnimation(ScrollArrowComponent_o *this, const Met
     if ( !gameObject
       || (gameObject = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)gameObject,
-                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___),
+                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_TweenPosition___),
           !ActiveArrow)
       || (v6 = (UITweener_o *)gameObject,
           (gameObject = UnityEngine_Component__GetComponent_object_(
                           ActiveArrow,
-                          (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_TweenPosition___)) == 0)
+                          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_TweenPosition___)) == 0)
       || !v6 )
     {
-      sub_1C3E7C0(gameObject, v5);
+      sub_1C6BC60(gameObject, v5);
     }
     UITweener__set_tweenFactor(v6, *((float *)gameObject + 28), 0);
   }
@@ -431,11 +431,11 @@ void ScrollArrowComponent__Update(ScrollArrowComponent_o *this, const MethodInfo
   __int64 v7; // x1
   float v8; // s0
 
-  if ( (byte_4C537C9 & 1) == 0 )
+  if ( (byte_4CB2D19 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_TransitionCalculator_float__Update__);
-    byte_4C537C9 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_TransitionCalculator_float__Update__);
+    byte_4CB2D19 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -447,10 +447,10 @@ void ScrollArrowComponent__Update(ScrollArrowComponent_o *this, const MethodInfo
     if ( !WidgetAlphaCalculator
       || (v8 = TransitionCalculator_float___Update(
                  WidgetAlphaCalculator,
-                 (const MethodInfo_3A785D0 *)Method_TransitionCalculator_float__Update__),
+                 (const MethodInfo_3AF12A0 *)Method_TransitionCalculator_float__Update__),
           !v5) )
     {
-      sub_1C3E7C0(WidgetAlphaCalculator, v7);
+      sub_1C6BC60(WidgetAlphaCalculator, v7);
     }
     ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, float))v5->klass->vtable._8_set_alpha.methodPtr)(
       v5,
@@ -477,9 +477,9 @@ AlphaTransitionCalculator_o *ScrollArrowComponent__get_WidgetAlphaCalculator(
   {
     WidgetAlphaCalculator = ScrollArrowComponent__CreateWidgetAlphaCalculator(0, method);
     p_widgetAlphaCalculator->klass = (CGThumbnailListItem_c *)WidgetAlphaCalculator;
-    sub_1C3E508(p_widgetAlphaCalculator, (int32_t)WidgetAlphaCalculator, v5, v6);
+    sub_1C6B9AC(p_widgetAlphaCalculator, (int32_t)WidgetAlphaCalculator, v5, v6);
     if ( !p_widgetAlphaCalculator->klass )
-      sub_1C3E7C0(0, v7);
+      sub_1C6BC60(0, v7);
     AlphaTransitionCalculator__MakeFadeInFinished((AlphaTransitionCalculator_o *)p_widgetAlphaCalculator->klass, v7);
     return (AlphaTransitionCalculator_o *)p_widgetAlphaCalculator->klass;
   }

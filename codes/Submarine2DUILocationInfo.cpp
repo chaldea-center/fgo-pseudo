@@ -55,18 +55,18 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
   __int64 v54; // x10
   Il2CppObject *v55; // x8
 
-  if ( (byte_4C5367C & 1) == 0 )
+  if ( (byte_4CB2BCC & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Rect__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Rect___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_Rect__TypeInfo);
-    byte_4C5367C = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Rect__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Rect___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_Rect__TypeInfo);
+    byte_4CB2BCC = 1;
   }
   Base2DUILocationInfo___ctor((Base2DUILocationInfo_o *)this, 0);
-  v3 = (System_Collections_Generic_List_Rect__o *)sub_1C3E7B0(System_Collections_Generic_List_Rect__TypeInfo);
+  v3 = (System_Collections_Generic_List_Rect__o *)sub_1C6BC54(System_Collections_Generic_List_Rect__TypeInfo);
   System_Collections_Generic_List_Rect____ctor(
     v3,
-    (const MethodInfo_37CAD74 *)Method_System_Collections_Generic_List_Rect___ctor__);
+    (const MethodInfo_3816288 *)Method_System_Collections_Generic_List_Rect___ctor__);
   v4 = ((__int64 (__fastcall *)(Submarine2DUILocationInfo_o *, const MethodInfo *))this->klass->vtable._8_GetScanDialogRect.methodPtr)(
          this,
          this->klass->vtable._8_GetScanDialogRect.method);
@@ -83,7 +83,7 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
       *(UnityEngine_Rect_o *)&v6,
-      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
+      *(const MethodInfo_3816B14 **)(*(_QWORD *)(v11[4] + 192LL) + 112LL));
   }
   else
   {
@@ -108,7 +108,7 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
       *(UnityEngine_Rect_o *)&v14,
-      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+      *(const MethodInfo_3816B14 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
   }
   else
   {
@@ -133,7 +133,7 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
       *(UnityEngine_Rect_o *)&v22,
-      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+      *(const MethodInfo_3816B14 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
   }
   else
   {
@@ -158,7 +158,7 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
       *(UnityEngine_Rect_o *)&v30,
-      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
+      *(const MethodInfo_3816B14 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
   }
   else
   {
@@ -183,7 +183,7 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
       *(UnityEngine_Rect_o *)&v38,
-      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
+      *(const MethodInfo_3816B14 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
   }
   else
   {
@@ -202,14 +202,14 @@ void Submarine2DUILocationInfo___ctor(Submarine2DUILocationInfo_o *this, const M
   ++v3->fields._version;
   if ( !v52 )
 LABEL_29:
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   v54 = v3->fields._size;
   if ( (unsigned int)v54 >= LODWORD(v52->max_length) )
   {
     System_Collections_Generic_List_Rect___AddWithResize(
       v3,
       *(UnityEngine_Rect_o *)&v48,
-      *(const MethodInfo_37CB600 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
+      *(const MethodInfo_3816B14 **)(*(_QWORD *)(v53[4] + 192LL) + 112LL));
   }
   else
   {
@@ -221,7 +221,7 @@ LABEL_29:
     HIDWORD(v55[2].monitor) = v51;
   }
   this->fields._rects_k__BackingField = v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v46, v47);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v46, v47);
 }
 
 

@@ -15,22 +15,22 @@ void WarBoardReinforcementsRequest__beginRequest(
   const MethodInfo *v16; // x1
 
   v10 = (RequestBase_o *)this;
-  if ( (byte_4C589EB & 1) == 0 )
+  if ( (byte_4CB7F67 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_23668/*"stageId"*/);
-    sub_1C3E564(&StringLiteral_23669/*"stageReinforcementId"*/);
-    sub_1C3E564(&StringLiteral_23036/*"reinforcementsIdx"*/);
-    this = (WarBoardReinforcementsRequest_o *)sub_1C3E564(&StringLiteral_23643/*"squareIds"*/);
-    byte_4C589EB = 1;
+    sub_1C6BA08(&StringLiteral_23742/*"stageId"*/);
+    sub_1C6BA08(&StringLiteral_23743/*"stageReinforcementId"*/);
+    sub_1C6BA08(&StringLiteral_23111/*"reinforcementsIdx"*/);
+    this = (WarBoardReinforcementsRequest_o *)sub_1C6BA08(&StringLiteral_23717/*"squareIds"*/);
+    byte_4CB7F67 = 1;
   }
   if ( !warBoardData )
-    sub_1C3E7C0(this, warBoardData);
+    sub_1C6BC60(this, warBoardData);
   id = WarBoardData__get_id(warBoardData, 0);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_23668/*"stageId"*/, id, v12);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_23742/*"stageId"*/, id, v12);
   WarBoardData__SetRequest(warBoardData, v10, 0);
-  RequestBase__addField(v10, (System_String_o *)StringLiteral_23669/*"stageReinforcementId"*/, stageReinforcementId, v13);
-  RequestBase__addField_44302936(v10, (System_String_o *)StringLiteral_23036/*"reinforcementsIdx"*/, &reinforcementsIds->obj, v14);
-  RequestBase__addField_44302936(v10, (System_String_o *)StringLiteral_23643/*"squareIds"*/, &squareIds->obj, v15);
+  RequestBase__addField(v10, (System_String_o *)StringLiteral_23743/*"stageReinforcementId"*/, stageReinforcementId, v13);
+  RequestBase__addField_44469988(v10, (System_String_o *)StringLiteral_23111/*"reinforcementsIdx"*/, &reinforcementsIds->obj, v14);
+  RequestBase__addField_44469988(v10, (System_String_o *)StringLiteral_23717/*"squareIds"*/, &squareIds->obj, v15);
   RequestBase__beginRequest(v10, v16);
 }
 
@@ -39,16 +39,16 @@ System_String_o *WarBoardReinforcementsRequest__getURL(WarBoardReinforcementsReq
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C589EA & 1) == 0 )
+  if ( (byte_4CB7F66 & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_24757/*"warBoard/reinforcements"*/);
-    byte_4C589EA = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_24847/*"warBoard/reinforcements"*/);
+    byte_4CB7F66 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_24757/*"warBoard/reinforcements"*/, 0);
+  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_24847/*"warBoard/reinforcements"*/, 0);
 }
 
 
@@ -68,15 +68,15 @@ void WarBoardReinforcementsRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v14; // x8
 
-  if ( (byte_4C589EC & 1) == 0 )
+  if ( (byte_4CB7F68 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    sub_1C3E564(&StringLiteral_24765/*"warBoardData"*/);
-    byte_4C589EC = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    sub_1C6BA08(&StringLiteral_24855/*"warBoardData"*/);
+    byte_4CB7F68 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -87,14 +87,14 @@ void WarBoardReinforcementsRequest__requestCompleted(
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              success,
-             (Il2CppObject *)StringLiteral_24765/*"warBoardData"*/,
-             (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_24855/*"warBoardData"*/,
+             (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     v11 = RequestBase__UnpackToMessagePack((RequestBase_o *)Item, Item, v10);
     System_Collections_Generic_Dictionary_object__object___set_Item(
       success,
-      (Il2CppObject *)StringLiteral_24765/*"warBoardData"*/,
+      (Il2CppObject *)StringLiteral_24855/*"warBoardData"*/,
       v11,
-      (const MethodInfo_34757CC *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
+      (const MethodInfo_34BB928 *)Method_System_Collections_Generic_Dictionary_string__object__set_Item__);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v12 = JsonManager__toJson((Il2CppObject *)success, 0, 0, 0);
@@ -111,7 +111,7 @@ void WarBoardReinforcementsRequest__requestCompleted(
     if ( v14 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v14->fields.invoke_impl)(
         v14->fields.method_code,
-        StringLiteral_22233/*"ng"*/,
+        StringLiteral_22301/*"ng"*/,
         v14->fields.method);
   }
 }

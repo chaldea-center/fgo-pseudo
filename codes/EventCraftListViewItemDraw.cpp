@@ -24,7 +24,7 @@ void EventCraftListViewItemDraw__CheckIsSerializeFieldNotNull(
   EventCraftListViewManager__CheckIsSerializeFieldNotNull((Il2CppObject *)this, method);
   craftIconMiniSprites = this->fields.craftIconMiniSprites;
   if ( !craftIconMiniSprites )
-    sub_1C3E7C0(v3, v4);
+    sub_1C6BC60(v3, v4);
   max_length = craftIconMiniSprites->max_length;
   v7 = -1;
   do
@@ -33,7 +33,6 @@ void EventCraftListViewItemDraw__CheckIsSerializeFieldNotNull(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t EventCraftListViewItemDraw__GetDisplayMode(
         int32_t initMode,
         EventCraftListViewItem_o *item,
@@ -46,7 +45,7 @@ int32_t EventCraftListViewItemDraw__GetDisplayMode(
     if ( initMode == 2 )
     {
       if ( !item )
-        sub_1C3E7C0(*(_QWORD *)&initMode, 0);
+        sub_1C6BC60(initMode, 0);
       EventCraftListViewItem__UpdateCraftUserInfo(item, (const MethodInfo *)item);
       if ( item->fields._TradeInfo_k__BackingField )
       {
@@ -89,13 +88,13 @@ void EventCraftListViewItemDraw__HideCraftMiniObj(EventCraftListViewItemDraw_o *
   Il2CppObject *v6; // x21
   struct EventCraftListViewItemDraw___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4C50F5D & 1) == 0 )
+  if ( (byte_4CB04A5 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_UISprite__TypeInfo);
-    sub_1C3E564(&Method_BasicHelper_ForEach_UISprite___);
-    sub_1C3E564(&Method_EventCraftListViewItemDraw___c__HideCraftMiniObj_b__44_0__);
-    sub_1C3E564(&EventCraftListViewItemDraw___c_TypeInfo);
-    byte_4C50F5D = 1;
+    sub_1C6BA08(&System_Action_UISprite__TypeInfo);
+    sub_1C6BA08(&Method_BasicHelper_ForEach_UISprite___);
+    sub_1C6BA08(&Method_EventCraftListViewItemDraw___c__HideCraftMiniObj_b__44_0__);
+    sub_1C6BA08(&EventCraftListViewItemDraw___c_TypeInfo);
+    byte_4CB04A5 = 1;
   }
   v3 = EventCraftListViewItemDraw___c_TypeInfo;
   craftIconMiniSprites = (System_Collections_Generic_IEnumerable_T__o *)this->fields.craftIconMiniSprites;
@@ -113,16 +112,16 @@ void EventCraftListViewItemDraw__HideCraftMiniObj(EventCraftListViewItemDraw_o *
       v3 = EventCraftListViewItemDraw___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__44_0 = (System_Action_object__o *)sub_1C3E7B0(System_Action_UISprite__TypeInfo);
+    _9__44_0 = (System_Action_object__o *)sub_1C6BC54(System_Action_UISprite__TypeInfo);
     System_Action_object____ctor(_9__44_0, v6, Method_EventCraftListViewItemDraw___c__HideCraftMiniObj_b__44_0__, 0);
     static_fields = EventCraftListViewItemDraw___c_TypeInfo->static_fields;
     static_fields->__9__44_0 = (struct System_Action_UISprite__o *)_9__44_0;
-    sub_1C3E508(&static_fields->__9__44_0, _9__44_0);
+    sub_1C6B9AC(&static_fields->__9__44_0, _9__44_0);
   }
   BasicHelper__ForEach_object_(
     craftIconMiniSprites,
     (System_Action_T__o *)_9__44_0,
-    (const MethodInfo_30E5A30 *)Method_BasicHelper_ForEach_UISprite___);
+    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_UISprite___);
 }
 
 
@@ -152,80 +151,74 @@ void EventCraftListViewItemDraw__SetItem(
   UserItemMaster_o *v24; // x24
   GiftEntity_o *v25; // x8
   GiftEntity_o *v26; // x8
-  __int64 v27; // x2
-  __int64 v28; // x3
-  __int64 v29; // x4
-  __int64 v30; // x5
-  __int64 v31; // x6
-  __int64 v32; // x7
   int32_t num; // w8
-  UISprite_o *v34; // x23
+  UISprite_o *v28; // x23
   struct ItemIconComponent_o *craftItemIcon; // x8
-  UILabel_o *v36; // x22
-  struct EventTradeGoodsEntity_o *v37; // x8
+  UILabel_o *v30; // x22
+  struct EventTradeGoodsEntity_o *v31; // x8
   UILabel_o *possessionNumLabel; // x22
-  Il2CppObject *v39; // x0
-  struct EventTradeGoodsEntity_o *v40; // x8
+  Il2CppObject *v33; // x0
+  struct EventTradeGoodsEntity_o *v34; // x8
   UILabel_o *nameTextLabel; // x22
   System_String_o **p_name; // x8
-  struct EventTradeGoodsEntity_o *v43; // x8
-  const MethodInfo *v44; // x2
+  struct EventTradeGoodsEntity_o *v37; // x8
+  const MethodInfo *v38; // x2
   System_Collections_Generic_IEnumerable_T__o *craftIconMiniSprites; // x22
-  System_Action_object__o *v46; // x25
-  NetworkManager_c *v47; // x0
+  System_Action_object__o *v40; // x25
+  NetworkManager_c *v41; // x0
   struct ItemEntity_o *SupportTool_k__BackingField; // x8
   int32_t id; // w3
-  int32_t v50; // w8
+  int32_t v44; // w8
   UILabel_o *eventRestTimeLabel; // x22
-  unsigned int v52; // w21
-  const MethodInfo *v53; // x1
-  bool v54; // w1
+  unsigned int v46; // w21
+  const MethodInfo *v47; // x1
+  bool v48; // w1
   UILabel_o *textOnMask; // x20
-  int32_t v56; // [xsp+Ch] [xbp-74h] BYREF
-  UserItemEntity_o *v57; // [xsp+10h] [xbp-70h] BYREF
+  int32_t v50; // [xsp+Ch] [xbp-74h] BYREF
+  UserItemEntity_o *v51; // [xsp+10h] [xbp-70h] BYREF
   UserItemEntity_o *entity; // [xsp+18h] [xbp-68h] BYREF
 
-  if ( (byte_4C50F5A & 1) == 0 )
+  if ( (byte_4CB04A2 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_UISprite__TypeInfo);
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&Method_BasicHelper_ForEach_UISprite___);
-    sub_1C3E564(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&string_TypeInfo);
-    sub_1C3E564(&Method_EventCraftListViewItemDraw___c__DisplayClass40_0__SetItem_b__0__);
-    sub_1C3E564(&EventCraftListViewItemDraw___c__DisplayClass40_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_20440/*"img_item_brank"*/);
-    sub_1C3E564(&StringLiteral_3886/*"CRAFT_EVENT_BOARD_SUPPORT_TOOL_BUTTON"*/);
-    sub_1C3E564(&StringLiteral_17492/*"btn_craft_bg_02"*/);
-    sub_1C3E564(&StringLiteral_17493/*"btn_craft_bg_03"*/);
-    sub_1C3E564(&StringLiteral_20400/*"img_craft_reward_bg_1"*/);
-    sub_1C3E564(&StringLiteral_20203/*"icon_craftsupport_frame"*/);
-    sub_1C3E564(&StringLiteral_13474/*"TRADE_EVENT_BOARD_WITHDRAWALLABEL_BUTTON"*/);
-    sub_1C3E564(&StringLiteral_17494/*"btn_craft_bg_04"*/);
-    sub_1C3E564(&StringLiteral_13470/*"TRADE_EVENT_BOARD_RECEIVE_BUTTON"*/);
-    sub_1C3E564(&StringLiteral_3885/*"CRAFT_EVENT_BOARD_START_BUTTON"*/);
-    sub_1C3E564(&StringLiteral_19195/*"event_craft_8049402"*/);
-    sub_1C3E564(&StringLiteral_20201/*"icon_craft_reward"*/);
-    sub_1C3E564(&StringLiteral_19194/*"event_craft_8049401"*/);
-    sub_1C3E564(&StringLiteral_13471/*"TRADE_EVENT_BOARD_REPLENISHMENT_BUTTON"*/);
-    sub_1C3E564(&StringLiteral_25072/*"{0:#,0}"*/);
-    sub_1C3E564(&StringLiteral_20202/*"icon_craftsupport"*/);
-    sub_1C3E564(&StringLiteral_19196/*"event_craft_8049403"*/);
-    sub_1C3E564(&StringLiteral_18338/*"craftgauge_bar"*/);
-    sub_1C3E564(&StringLiteral_3897/*"CRAFT_EVENT_END"*/);
-    sub_1C3E564(&StringLiteral_17491/*"btn_craft_bg_01"*/);
-    sub_1C3E564(&StringLiteral_13473/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/);
-    sub_1C3E564(&StringLiteral_18339/*"craftgauge_bg"*/);
-    byte_4C50F5A = 1;
+    sub_1C6BA08(&System_Action_UISprite__TypeInfo);
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&Method_BasicHelper_ForEach_UISprite___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&string_TypeInfo);
+    sub_1C6BA08(&Method_EventCraftListViewItemDraw___c__DisplayClass40_0__SetItem_b__0__);
+    sub_1C6BA08(&EventCraftListViewItemDraw___c__DisplayClass40_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_20487/*"img_item_brank"*/);
+    sub_1C6BA08(&StringLiteral_3878/*"CRAFT_EVENT_BOARD_SUPPORT_TOOL_BUTTON"*/);
+    sub_1C6BA08(&StringLiteral_17490/*"btn_craft_bg_02"*/);
+    sub_1C6BA08(&StringLiteral_17491/*"btn_craft_bg_03"*/);
+    sub_1C6BA08(&StringLiteral_20447/*"img_craft_reward_bg_1"*/);
+    sub_1C6BA08(&StringLiteral_20249/*"icon_craftsupport_frame"*/);
+    sub_1C6BA08(&StringLiteral_13467/*"TRADE_EVENT_BOARD_WITHDRAWALLABEL_BUTTON"*/);
+    sub_1C6BA08(&StringLiteral_17492/*"btn_craft_bg_04"*/);
+    sub_1C6BA08(&StringLiteral_13463/*"TRADE_EVENT_BOARD_RECEIVE_BUTTON"*/);
+    sub_1C6BA08(&StringLiteral_3877/*"CRAFT_EVENT_BOARD_START_BUTTON"*/);
+    sub_1C6BA08(&StringLiteral_19226/*"event_craft_8049402"*/);
+    sub_1C6BA08(&StringLiteral_20247/*"icon_craft_reward"*/);
+    sub_1C6BA08(&StringLiteral_19225/*"event_craft_8049401"*/);
+    sub_1C6BA08(&StringLiteral_13464/*"TRADE_EVENT_BOARD_REPLENISHMENT_BUTTON"*/);
+    sub_1C6BA08(&StringLiteral_25162/*"{0:#,0}"*/);
+    sub_1C6BA08(&StringLiteral_20248/*"icon_craftsupport"*/);
+    sub_1C6BA08(&StringLiteral_19227/*"event_craft_8049403"*/);
+    sub_1C6BA08(&StringLiteral_18347/*"craftgauge_bar"*/);
+    sub_1C6BA08(&StringLiteral_3889/*"CRAFT_EVENT_END"*/);
+    sub_1C6BA08(&StringLiteral_17489/*"btn_craft_bg_01"*/);
+    sub_1C6BA08(&StringLiteral_13466/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/);
+    sub_1C6BA08(&StringLiteral_18348/*"craftgauge_bg"*/);
+    byte_4CB04A2 = 1;
   }
-  v57 = 0;
+  v51 = 0;
   entity = 0;
   if ( item && mode )
   {
@@ -233,101 +226,101 @@ void EventCraftListViewItemDraw__SetItem(
     craftingBaseSprite = this->fields.craftingBaseSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       craftingBaseSprite,
-      (System_String_o *)StringLiteral_19195/*"event_craft_8049402"*/,
+      (System_String_o *)StringLiteral_19226/*"event_craft_8049402"*/,
       0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.progressGaugeFront,
-      (System_String_o *)StringLiteral_18338/*"craftgauge_bar"*/,
+      (System_String_o *)StringLiteral_18347/*"craftgauge_bar"*/,
       0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.progressGaugeBack,
-      (System_String_o *)StringLiteral_18339/*"craftgauge_bg"*/,
+      (System_String_o *)StringLiteral_18348/*"craftgauge_bg"*/,
       0);
     craftStartLabel = this->fields.craftStartLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_3885/*"CRAFT_EVENT_BOARD_START_BUTTON"*/, 0);
+    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_3877/*"CRAFT_EVENT_BOARD_START_BUTTON"*/, 0);
     if ( !craftStartLabel )
       goto LABEL_100;
     UILabel__set_text(craftStartLabel, Master_object, 0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.craftStartButtonSprite,
-      (System_String_o *)StringLiteral_17491/*"btn_craft_bg_01"*/,
+      (System_String_o *)StringLiteral_17489/*"btn_craft_bg_01"*/,
       0);
     receiveLabel = this->fields.receiveLabel;
-    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13470/*"TRADE_EVENT_BOARD_RECEIVE_BUTTON"*/, 0);
+    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13463/*"TRADE_EVENT_BOARD_RECEIVE_BUTTON"*/, 0);
     if ( !receiveLabel )
       goto LABEL_100;
     UILabel__set_text(receiveLabel, Master_object, 0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.receiveButtonSprite,
-      (System_String_o *)StringLiteral_17493/*"btn_craft_bg_03"*/,
+      (System_String_o *)StringLiteral_17491/*"btn_craft_bg_03"*/,
       0);
     replenishmentLabel = this->fields.replenishmentLabel;
-    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13471/*"TRADE_EVENT_BOARD_REPLENISHMENT_BUTTON"*/, 0);
+    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13464/*"TRADE_EVENT_BOARD_REPLENISHMENT_BUTTON"*/, 0);
     if ( !replenishmentLabel )
       goto LABEL_100;
     UILabel__set_text(replenishmentLabel, Master_object, 0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.replenishmentButtonSprite,
-      (System_String_o *)StringLiteral_17491/*"btn_craft_bg_01"*/,
+      (System_String_o *)StringLiteral_17489/*"btn_craft_bg_01"*/,
       0);
     withdrawLabel = this->fields.withdrawLabel;
-    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13474/*"TRADE_EVENT_BOARD_WITHDRAWALLABEL_BUTTON"*/, 0);
+    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13467/*"TRADE_EVENT_BOARD_WITHDRAWALLABEL_BUTTON"*/, 0);
     if ( !withdrawLabel )
       goto LABEL_100;
     UILabel__set_text(withdrawLabel, Master_object, 0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.withdrawButtonSprite,
-      (System_String_o *)StringLiteral_17494/*"btn_craft_bg_04"*/,
+      (System_String_o *)StringLiteral_17492/*"btn_craft_bg_04"*/,
       0);
     supportToolLabel = this->fields.supportToolLabel;
-    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_3886/*"CRAFT_EVENT_BOARD_SUPPORT_TOOL_BUTTON"*/, 0);
+    Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_3878/*"CRAFT_EVENT_BOARD_SUPPORT_TOOL_BUTTON"*/, 0);
     if ( !supportToolLabel )
       goto LABEL_100;
     UILabel__set_text(supportToolLabel, Master_object, 0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.supportToolButtonSprite,
-      (System_String_o *)StringLiteral_17492/*"btn_craft_bg_02"*/,
+      (System_String_o *)StringLiteral_17490/*"btn_craft_bg_02"*/,
       0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.supportToolUsedSprite,
-      (System_String_o *)StringLiteral_20202/*"icon_craftsupport"*/,
+      (System_String_o *)StringLiteral_20248/*"icon_craftsupport"*/,
       0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.craftIconSupportToolBg,
-      (System_String_o *)StringLiteral_20203/*"icon_craftsupport_frame"*/,
+      (System_String_o *)StringLiteral_20249/*"icon_craftsupport_frame"*/,
       0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.rewardHeader,
-      (System_String_o *)StringLiteral_20201/*"icon_craft_reward"*/,
+      (System_String_o *)StringLiteral_20247/*"icon_craft_reward"*/,
       0);
-    AtlasManager__SetEventUI_40653244(
+    AtlasManager__SetEventUI_40837804(
       EventId_k__BackingField,
       this->fields.backSprite,
-      (System_String_o *)StringLiteral_20400/*"img_craft_reward_bg_1"*/,
+      (System_String_o *)StringLiteral_20447/*"img_craft_reward_bg_1"*/,
       0);
     EventCraftListViewItemDraw__SetReleaseDisplayObject(this, item->fields._IsRelease_k__BackingField, v16);
     if ( item->fields._IsRelease_k__BackingField )
     {
-      v17 = sub_1C3E7B0(EventCraftListViewItemDraw___c__DisplayClass40_0_TypeInfo);
+      v17 = sub_1C6BC54(EventCraftListViewItemDraw___c__DisplayClass40_0_TypeInfo);
       System_Object___ctor((Il2CppObject *)v17, 0);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_GiftMaster___);
+      Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_GiftMaster___);
       TradeGoodsEntity_k__BackingField = item->fields._TradeGoodsEntity_k__BackingField;
       if ( !TradeGoodsEntity_k__BackingField || !Master_object )
         goto LABEL_100;
@@ -339,7 +332,7 @@ void EventCraftListViewItemDraw__SetItem(
         return;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ItemMaster___);
+      Master_object = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ItemMaster___);
       if ( !v17 || !GiftListById )
         goto LABEL_100;
       if ( !LODWORD(GiftListById->max_length) )
@@ -352,19 +345,19 @@ void EventCraftListViewItemDraw__SetItem(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
               (Il2CppObject **)(v17 + 16),
               v20->fields.objectId,
-              (const MethodInfo_33B2FA4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
+              (const MethodInfo_33F9128 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__) )
         return;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      v22 = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_UserItemMaster___);
+      v22 = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserItemMaster___);
       baseSprite = this->fields.baseSprite;
       v24 = (UserItemMaster_o *)v22;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      Master_object = (System_String_o *)AtlasManager__SetEventUI_40653244(
+      Master_object = (System_String_o *)AtlasManager__SetEventUI_40837804(
                                            EventId_k__BackingField,
                                            baseSprite,
-                                           (System_String_o *)StringLiteral_19194/*"event_craft_8049401"*/,
+                                           (System_String_o *)StringLiteral_19225/*"event_craft_8049401"*/,
                                            0);
       if ( !LODWORD(GiftListById->max_length) )
         goto LABEL_101;
@@ -377,10 +370,10 @@ void EventCraftListViewItemDraw__SetItem(
       ItemIconComponent__SetItem((ItemIconComponent_o *)Master_object, v25->fields.objectId, -1, 1, 0);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C50AE2 )
+      if ( !byte_4CB002A )
       {
-        sub_1C3E564(&NetworkManager_TypeInfo);
-        byte_4C50AE2 = 1;
+        sub_1C6BA08(&NetworkManager_TypeInfo);
+        byte_4CB002A = 1;
       }
       Master_object = (System_String_o *)NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -390,7 +383,7 @@ void EventCraftListViewItemDraw__SetItem(
       }
       if ( !LODWORD(GiftListById->max_length) )
 LABEL_101:
-        sub_1C3E7C8(Master_object, v11);
+        sub_1C6BC68(Master_object);
       v26 = GiftListById->m_Items[0];
       if ( !v26 || !v24 )
         goto LABEL_100;
@@ -411,17 +404,17 @@ LABEL_101:
         num = 0;
       }
       possessionNumLabel = this->fields.possessionNumLabel;
-      v56 = num;
-      v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v56, v27, v28, v29, v30, v31, v32);
-      Master_object = System_String__Format((System_String_o *)StringLiteral_25072/*"{0:#,0}"*/, v39, 0);
+      v50 = num;
+      v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
+      Master_object = System_String__Format((System_String_o *)StringLiteral_25162/*"{0:#,0}"*/, v33, 0);
       if ( !possessionNumLabel )
         goto LABEL_100;
       UILabel__set_text(possessionNumLabel, Master_object, 0);
-      v40 = item->fields._TradeGoodsEntity_k__BackingField;
-      if ( !v40 )
+      v34 = item->fields._TradeGoodsEntity_k__BackingField;
+      if ( !v34 )
         goto LABEL_100;
       nameTextLabel = this->fields.nameTextLabel;
-      Master_object = (System_String_o *)System_String__IsNullOrEmpty(v40->fields.name, 0);
+      Master_object = (System_String_o *)System_String__IsNullOrEmpty(v34->fields.name, 0);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         if ( !*v21 )
@@ -430,39 +423,39 @@ LABEL_101:
       }
       else
       {
-        v43 = item->fields._TradeGoodsEntity_k__BackingField;
-        if ( !v43 )
+        v37 = item->fields._TradeGoodsEntity_k__BackingField;
+        if ( !v37 )
           goto LABEL_100;
-        p_name = &v43->fields.name;
+        p_name = &v37->fields.name;
       }
       if ( !nameTextLabel )
 LABEL_100:
-        sub_1C3E7C0(Master_object, v11);
+        sub_1C6BC60(Master_object, v11);
       UILabel__set_text(nameTextLabel, *p_name, 0);
-      EventCraftListViewItemDraw__SetPriceIconText(this, item, v44);
+      EventCraftListViewItemDraw__SetPriceIconText(this, item, v38);
       craftIconMiniSprites = (System_Collections_Generic_IEnumerable_T__o *)this->fields.craftIconMiniSprites;
-      v46 = (System_Action_object__o *)sub_1C3E7B0(System_Action_UISprite__TypeInfo);
+      v40 = (System_Action_object__o *)sub_1C6BC54(System_Action_UISprite__TypeInfo);
       System_Action_object____ctor(
-        v46,
+        v40,
         (Il2CppObject *)v17,
         Method_EventCraftListViewItemDraw___c__DisplayClass40_0__SetItem_b__0__,
         0);
       BasicHelper__ForEach_object_(
         craftIconMiniSprites,
-        (System_Action_T__o *)v46,
-        (const MethodInfo_30E5A30 *)Method_BasicHelper_ForEach_UISprite___);
+        (System_Action_T__o *)v40,
+        (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_UISprite___);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-      if ( !byte_4C50AE2 )
+      if ( !byte_4CB002A )
       {
-        sub_1C3E564(&NetworkManager_TypeInfo);
-        byte_4C50AE2 = 1;
+        sub_1C6BA08(&NetworkManager_TypeInfo);
+        byte_4CB002A = 1;
       }
-      v47 = NetworkManager_TypeInfo;
+      v41 = NetworkManager_TypeInfo;
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        v47 = NetworkManager_TypeInfo;
+        v41 = NetworkManager_TypeInfo;
       }
       SupportTool_k__BackingField = item->fields._SupportTool_k__BackingField;
       if ( SupportTool_k__BackingField )
@@ -471,54 +464,54 @@ LABEL_100:
         id = 0;
       Master_object = (System_String_o *)UserItemMaster__TryGetEntity(
                                            v24,
-                                           &v57,
-                                           v47->static_fields->userIdNumber,
+                                           &v51,
+                                           v41->static_fields->userIdNumber,
                                            id,
                                            0);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
-        if ( !v57 )
+        if ( !v51 )
           goto LABEL_100;
-        v50 = v57->fields.num;
+        v44 = v51->fields.num;
       }
       else
       {
-        v50 = 0;
+        v44 = 0;
       }
-      item->fields._PossessionNum_k__BackingField = v50;
+      item->fields._PossessionNum_k__BackingField = v44;
     }
     else
     {
-      v34 = this->fields.baseSprite;
+      v28 = this->fields.baseSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      Master_object = (System_String_o *)AtlasManager__SetEventUI_40653244(
+      Master_object = (System_String_o *)AtlasManager__SetEventUI_40837804(
                                            EventId_k__BackingField,
-                                           v34,
-                                           (System_String_o *)StringLiteral_19196/*"event_craft_8049403"*/,
+                                           v28,
+                                           (System_String_o *)StringLiteral_19227/*"event_craft_8049403"*/,
                                            0);
       craftItemIcon = this->fields.craftItemIcon;
       if ( !craftItemIcon )
         goto LABEL_100;
-      AtlasManager__SetEventUI_40653244(
+      AtlasManager__SetEventUI_40837804(
         EventId_k__BackingField,
         craftItemIcon->fields.iconSprite,
-        (System_String_o *)StringLiteral_20440/*"img_item_brank"*/,
+        (System_String_o *)StringLiteral_20487/*"img_item_brank"*/,
         0);
-      v36 = this->fields.nameTextLabel;
+      v30 = this->fields.nameTextLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13473/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, 0);
-      if ( !v36 )
+      Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13466/*"TRADE_EVENT_BOARD_UNRELEASED_NAME"*/, 0);
+      if ( !v30 )
         goto LABEL_100;
-      UILabel__set_text(v36, Master_object, 0);
-      v37 = item->fields._TradeGoodsEntity_k__BackingField;
-      if ( !v37 )
+      UILabel__set_text(v30, Master_object, 0);
+      v31 = item->fields._TradeGoodsEntity_k__BackingField;
+      if ( !v31 )
         goto LABEL_100;
       Master_object = (System_String_o *)this->fields.textOnMask;
       if ( !Master_object )
         goto LABEL_100;
-      UILabel__set_text((UILabel_o *)Master_object, v37->fields.closedMessage, 0);
+      UILabel__set_text((UILabel_o *)Master_object, v31->fields.closedMessage, 0);
     }
     eventRestTimeLabel = this->fields.eventRestTimeLabel;
     Master_object = EventCraftListViewItem__get_RestTimeEventAt(item, v11);
@@ -533,11 +526,11 @@ LABEL_100:
                                              0);
         if ( Master_object )
         {
-          v52 = mode & 0xFFFFFFFE;
-          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v52 == 4, 0);
-          if ( !EventCraftListViewItem__get_IsEventEnd(item, v53) )
+          v46 = mode & 0xFFFFFFFE;
+          UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v46 == 4, 0);
+          if ( !EventCraftListViewItem__get_IsEventEnd(item, v47) )
             return;
-          if ( v52 == 4 )
+          if ( v46 == 4 )
           {
             Master_object = (System_String_o *)this->fields.textOnMask;
             if ( Master_object )
@@ -551,9 +544,9 @@ LABEL_100:
                                                      0);
                 if ( Master_object )
                 {
-                  v54 = 0;
+                  v48 = 0;
 LABEL_98:
-                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v54, 0);
+                  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Master_object, v48, 0);
                   return;
                 }
               }
@@ -574,7 +567,7 @@ LABEL_98:
                 textOnMask = this->fields.textOnMask;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_3897/*"CRAFT_EVENT_END"*/, 0);
+                Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_3889/*"CRAFT_EVENT_END"*/, 0);
                 if ( textOnMask )
                 {
                   UILabel__set_text(textOnMask, Master_object, 0);
@@ -595,7 +588,7 @@ LABEL_98:
                                                              0);
                         if ( Master_object )
                         {
-                          v54 = 1;
+                          v48 = 1;
                           goto LABEL_98;
                         }
                       }
@@ -652,7 +645,7 @@ void EventCraftListViewItemDraw__SetPriceIconText(
   this = *v10;
   if ( !*v10 )
 LABEL_14:
-    sub_1C3E7C0(this, item);
+    sub_1C6BC60(this, item);
   EventTradePriceInfo__SetPriceInfo(
     (EventTradePriceInfo_o *)this,
     item->fields._CommonConsumeEntityArray_k__BackingField,
@@ -760,7 +753,7 @@ void EventCraftListViewItemDraw__SetReleaseDisplayObject(
     || (maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0)) == 0 )
   {
 LABEL_31:
-    sub_1C3E7C0(maskSprite, isRelease);
+    sub_1C6BC60(maskSprite, isRelease);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, isRelease, 0);
 }
@@ -782,13 +775,13 @@ void EventCraftListViewItemDraw__UpdateCraftIconMiniSprite(
   struct UISprite_array *v13; // x8
   const MethodInfo *v14; // x1
 
-  if ( (byte_4C50F5C & 1) == 0 )
+  if ( (byte_4CB04A4 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_UISprite__TypeInfo);
-    sub_1C3E564(&Method_BasicHelper_ForEach_UISprite___);
-    sub_1C3E564(&Method_EventCraftListViewItemDraw___c__UpdateCraftIconMiniSprite_b__43_0__);
-    sub_1C3E564(&EventCraftListViewItemDraw___c_TypeInfo);
-    byte_4C50F5C = 1;
+    sub_1C6BA08(&System_Action_UISprite__TypeInfo);
+    sub_1C6BA08(&Method_BasicHelper_ForEach_UISprite___);
+    sub_1C6BA08(&Method_EventCraftListViewItemDraw___c__UpdateCraftIconMiniSprite_b__43_0__);
+    sub_1C6BA08(&EventCraftListViewItemDraw___c_TypeInfo);
+    byte_4CB04A4 = 1;
   }
   v5 = EventCraftListViewItemDraw___c_TypeInfo;
   craftIconMiniSprites = (System_Collections_Generic_IEnumerable_T__o *)this->fields.craftIconMiniSprites;
@@ -806,7 +799,7 @@ void EventCraftListViewItemDraw__UpdateCraftIconMiniSprite(
       v5 = EventCraftListViewItemDraw___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__43_0 = (System_Action_object__o *)sub_1C3E7B0(System_Action_UISprite__TypeInfo);
+    _9__43_0 = (System_Action_object__o *)sub_1C6BC54(System_Action_UISprite__TypeInfo);
     System_Action_object____ctor(
       _9__43_0,
       v8,
@@ -814,12 +807,12 @@ void EventCraftListViewItemDraw__UpdateCraftIconMiniSprite(
       0);
     static_fields = EventCraftListViewItemDraw___c_TypeInfo->static_fields;
     static_fields->__9__43_0 = (struct System_Action_UISprite__o *)_9__43_0;
-    sub_1C3E508(&static_fields->__9__43_0, _9__43_0);
+    sub_1C6B9AC(&static_fields->__9__43_0, _9__43_0);
   }
   BasicHelper__ForEach_object_(
     craftIconMiniSprites,
     (System_Action_T__o *)_9__43_0,
-    (const MethodInfo_30E5A30 *)Method_BasicHelper_ForEach_UISprite___);
+    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_UISprite___);
   if ( !item )
     goto LABEL_18;
   NowCompleteNum = (UnityEngine_GameObject_o *)EventCraftListViewItem__get_NowCompleteNum(item, v11);
@@ -832,7 +825,7 @@ void EventCraftListViewItemDraw__UpdateCraftIconMiniSprite(
       if ( !v13 )
         break;
       if ( (unsigned int)v12 >= LODWORD(v13->max_length) )
-        sub_1C3E7C8(NowCompleteNum, v11);
+        sub_1C6BC68(NowCompleteNum);
       NowCompleteNum = (UnityEngine_GameObject_o *)v13->m_Items[v12];
       if ( !NowCompleteNum )
         break;
@@ -846,7 +839,7 @@ void EventCraftListViewItemDraw__UpdateCraftIconMiniSprite(
         return;
     }
 LABEL_18:
-    sub_1C3E7C0(NowCompleteNum, v11);
+    sub_1C6BC60(NowCompleteNum, v11);
   }
 }
 
@@ -901,73 +894,61 @@ void EventCraftListViewItemDraw__UpdateItem(
   UILabel_o *progressLabel; // x23
   System_String_o *v48; // x24
   const MethodInfo *v49; // x1
-  __int64 v50; // x2
-  __int64 v51; // x3
-  __int64 v52; // x4
-  __int64 v53; // x5
-  __int64 v54; // x6
-  __int64 v55; // x7
-  __int64 v56; // x2
-  __int64 v57; // x3
-  __int64 v58; // x4
-  __int64 v59; // x5
-  __int64 v60; // x6
-  __int64 v61; // x7
-  struct EventTradeInfo_o *v62; // x8
-  Il2CppObject *v63; // x25
-  Il2CppObject *v64; // x0
-  struct EventTradeInfo_o *v65; // x8
+  struct EventTradeInfo_o *v50; // x8
+  Il2CppObject *v51; // x25
+  Il2CppObject *v52; // x0
+  struct EventTradeInfo_o *v53; // x8
   struct UICommonButton_o *replenishmentButton; // x23
-  const MethodInfo *v67; // x1
-  char v68; // w8
+  const MethodInfo *v55; // x1
+  char v56; // w8
   UISprite_o *backSprite; // x23
-  struct EventTradeInfo_o *v70; // x8
+  struct EventTradeInfo_o *v58; // x8
   int64_t startedAt; // x23
   EventTradeGoodsEntity_o *TradeGoodsEntity_k__BackingField; // x26
-  System_Collections_Generic_List_EventCraftPickupInfo__o *v73; // x25
+  System_Collections_Generic_List_EventCraftPickupInfo__o *v61; // x25
   int32_t tradeNum; // w24
   int64_t CraftFinishTime; // x24
-  int64_t v76; // x23
-  const MethodInfo *v77; // x1
+  int64_t v64; // x23
+  const MethodInfo *v65; // x1
   int32_t NowTradeNum; // w0
   UILabel_o *timeLeftLabel; // x22
-  int32_t v80; // w20
-  bool v81; // cc
-  __int64 v82; // x20
-  System_String_o *v83; // x0
+  int32_t v68; // w20
+  bool v69; // cc
+  __int64 v70; // x20
+  System_String_o *v71; // x0
   UISprite_o *craftingStateSprite; // x22
-  __int64 *v85; // x8
-  float v86; // s1 OVERLAPPED
-  float v87; // s2
-  float v88; // s0
-  float v89; // s3
-  int v90; // [xsp+8h] [xbp-68h] BYREF
+  __int64 *v73; // x8
+  float v74; // s1 OVERLAPPED
+  float v75; // s2
+  float v76; // s0
+  float v77; // s3
+  int v78; // [xsp+8h] [xbp-68h] BYREF
   int32_t NowCompleteNum; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4C50F5B & 1) == 0 )
+  if ( (byte_4CB04A3 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&BalanceConfig_TypeInfo);
-    sub_1C3E564(&System_Convert_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-    sub_1C3E564(&EventCraftTimeCalculation_TypeInfo);
-    sub_1C3E564(&System_Func_EventCraftPickupInfo__long__TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&System_Math_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&string_TypeInfo);
-    sub_1C3E564(&Method_EventCraftListViewItemDraw___c__UpdateItem_b__42_0__);
-    sub_1C3E564(&Method_EventCraftListViewItemDraw___c__UpdateItem_b__42_1__);
-    sub_1C3E564(&EventCraftListViewItemDraw___c_TypeInfo);
-    sub_1C3E564(&StringLiteral_20400/*"img_craft_reward_bg_1"*/);
-    sub_1C3E564(&StringLiteral_20200/*"icon_craft_intrade"*/);
-    sub_1C3E564(&StringLiteral_20199/*"icon_craft_compleate"*/);
-    sub_1C3E564(&StringLiteral_20401/*"img_craft_reward_bg_2"*/);
-    sub_1C3E564(&StringLiteral_3902/*"CRAFT_EVENT_PROGRESS_NUM"*/);
-    sub_1C3E564(&StringLiteral_13404/*"TIME_FORMAT_1"*/);
-    sub_1C3E564(&StringLiteral_13509/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/);
-    byte_4C50F5B = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&BalanceConfig_TypeInfo);
+    sub_1C6BA08(&System_Convert_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+    sub_1C6BA08(&EventCraftTimeCalculation_TypeInfo);
+    sub_1C6BA08(&System_Func_EventCraftPickupInfo__long__TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&System_Math_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&string_TypeInfo);
+    sub_1C6BA08(&Method_EventCraftListViewItemDraw___c__UpdateItem_b__42_0__);
+    sub_1C6BA08(&Method_EventCraftListViewItemDraw___c__UpdateItem_b__42_1__);
+    sub_1C6BA08(&EventCraftListViewItemDraw___c_TypeInfo);
+    sub_1C6BA08(&StringLiteral_20447/*"img_craft_reward_bg_1"*/);
+    sub_1C6BA08(&StringLiteral_20246/*"icon_craft_intrade"*/);
+    sub_1C6BA08(&StringLiteral_20245/*"icon_craft_compleate"*/);
+    sub_1C6BA08(&StringLiteral_20448/*"img_craft_reward_bg_2"*/);
+    sub_1C6BA08(&StringLiteral_3894/*"CRAFT_EVENT_PROGRESS_NUM"*/);
+    sub_1C6BA08(&StringLiteral_13397/*"TIME_FORMAT_1"*/);
+    sub_1C6BA08(&StringLiteral_13502/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/);
+    byte_4CB04A3 = 1;
   }
   if ( item && mode && item->fields._TradeGoodsEntity_k__BackingField && item->fields._IsRelease_k__BackingField )
   {
@@ -994,17 +975,17 @@ void EventCraftListViewItemDraw__UpdateItem(
           v10 = EventCraftListViewItemDraw___c_TypeInfo;
         }
         v12 = (Il2CppObject *)v10->static_fields->__9;
-        _9__42_0 = (System_Func_object__long__o *)sub_1C3E7B0(System_Func_EventCraftPickupInfo__long__TypeInfo);
+        _9__42_0 = (System_Func_object__long__o *)sub_1C6BC54(System_Func_EventCraftPickupInfo__long__TypeInfo);
         System_Func_object__long____ctor(_9__42_0, v12, Method_EventCraftListViewItemDraw___c__UpdateItem_b__42_0__, 0);
         static_fields = EventCraftListViewItemDraw___c_TypeInfo->static_fields;
         static_fields->__9__42_0 = (struct System_Func_EventCraftPickupInfo__long__o *)_9__42_0;
-        sub_1C3E508(&static_fields->__9__42_0, _9__42_0);
+        sub_1C6B9AC(&static_fields->__9__42_0, _9__42_0);
       }
       v14 = System_Linq_Enumerable__Select_object__long_(
               (System_Collections_Generic_IEnumerable_TSource__o *)PickupInfoList_k__BackingField,
               (System_Func_TSource__TResult__o *)_9__42_0,
-              (const MethodInfo_312FF24 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-      v8 = System_Linq_Enumerable__Max_66637744((System_Collections_Generic_IEnumerable_long__o *)v14, 0);
+              (const MethodInfo_317181C *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+      v8 = System_Linq_Enumerable__Max_66967376((System_Collections_Generic_IEnumerable_long__o *)v14, 0);
     }
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -1101,30 +1082,22 @@ void EventCraftListViewItemDraw__UpdateItem(
                             progressLabel = this->fields.progressLabel;
                             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                            v48 = LocalizationManager__Get((System_String_o *)StringLiteral_3902/*"CRAFT_EVENT_PROGRESS_NUM"*/, 0);
+                            v48 = LocalizationManager__Get((System_String_o *)StringLiteral_3894/*"CRAFT_EVENT_PROGRESS_NUM"*/, 0);
                             NowCompleteNum = EventCraftListViewItem__get_NowCompleteNum(item, v49);
-                            Time = j_il2cpp_value_box_0(int_TypeInfo, &NowCompleteNum, v50, v51, v52, v53, v54, v55);
-                            v62 = item->fields._TradeInfo_k__BackingField;
-                            if ( v62 )
+                            Time = j_il2cpp_value_box_0(int_TypeInfo, &NowCompleteNum);
+                            v50 = item->fields._TradeInfo_k__BackingField;
+                            if ( v50 )
                             {
-                              v63 = (Il2CppObject *)Time;
-                              v90 = v62->fields.getNum + v62->fields.tradeNum;
-                              v64 = (Il2CppObject *)j_il2cpp_value_box_0(
-                                                      int_TypeInfo,
-                                                      &v90,
-                                                      v56,
-                                                      v57,
-                                                      v58,
-                                                      v59,
-                                                      v60,
-                                                      v61);
-                              Time = (__int64)System_String__Format_63677760(v48, v63, v64, 0);
+                              v51 = (Il2CppObject *)Time;
+                              v78 = v50->fields.getNum + v50->fields.tradeNum;
+                              v52 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v78);
+                              Time = (__int64)System_String__Format_64008100(v48, v51, v52, 0);
                               if ( progressLabel )
                               {
                                 UILabel__set_text(progressLabel, (System_String_o *)Time, 0);
-                                v65 = item->fields._TradeInfo_k__BackingField;
-                                if ( v65
-                                  && (v65->fields.getNum >= 1
+                                v53 = item->fields._TradeInfo_k__BackingField;
+                                if ( v53
+                                  && (v53->fields.getNum >= 1
                                    || EventCraftListViewItem__get_NowCompleteNum(item, (const MethodInfo *)v16) >= 1) )
                                 {
                                   ActionExtensions__Call(item->fields._UpdateReceiveAllButtonState_k__BackingField, 0);
@@ -1186,73 +1159,73 @@ void EventCraftListViewItemDraw__UpdateItem(
                                     goto LABEL_146;
                                   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Time, 1, 0);
                                   replenishmentButton = this->fields.replenishmentButton;
-                                  Time = EventCraftListViewItem__get_IsRefillable(item, v67);
+                                  Time = EventCraftListViewItem__get_IsRefillable(item, v55);
                                   if ( (Time & 1) != 0 )
                                   {
                                     Time = EventCraftListViewItem__get_IsEventEnd(item, (const MethodInfo *)v16);
-                                    v68 = Time ^ 1;
+                                    v56 = Time ^ 1;
                                   }
                                   else
                                   {
-                                    v68 = 0;
+                                    v56 = 0;
                                   }
                                   if ( !replenishmentButton )
                                     goto LABEL_146;
                                   ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, const MethodInfo *))replenishmentButton->klass->vtable._5_set_isEnabled.methodPtr)(
                                     replenishmentButton,
-                                    v68 & 1,
+                                    v56 & 1,
                                     replenishmentButton->klass->vtable._5_set_isEnabled.method);
                                 }
                                 backSprite = this->fields.backSprite;
                                 if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                                   j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                                Time = AtlasManager__SetEventUI_40653244(
+                                Time = AtlasManager__SetEventUI_40837804(
                                          EventId_k__BackingField,
                                          backSprite,
-                                         (System_String_o *)StringLiteral_20401/*"img_craft_reward_bg_2"*/,
+                                         (System_String_o *)StringLiteral_20448/*"img_craft_reward_bg_2"*/,
                                          0);
-                                v70 = item->fields._TradeInfo_k__BackingField;
-                                if ( v70 )
+                                v58 = item->fields._TradeInfo_k__BackingField;
+                                if ( v58 )
                                 {
-                                  startedAt = v70->fields.startedAt;
+                                  startedAt = v58->fields.startedAt;
                                   TradeGoodsEntity_k__BackingField = item->fields._TradeGoodsEntity_k__BackingField;
-                                  v73 = item->fields._PickupInfoList_k__BackingField;
-                                  tradeNum = v70->fields.tradeNum;
+                                  v61 = item->fields._PickupInfoList_k__BackingField;
+                                  tradeNum = v58->fields.tradeNum;
                                   if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
                                     j_il2cpp_runtime_class_init_0(EventCraftTimeCalculation_TypeInfo);
                                   CraftFinishTime = EventCraftTimeCalculation__GetCraftFinishTime(
                                                       TradeGoodsEntity_k__BackingField,
-                                                      v73,
+                                                      v61,
                                                       0,
                                                       tradeNum,
                                                       startedAt,
                                                       0);
-                                  v76 = startedAt - v17;
-                                  NowTradeNum = EventCraftListViewItem__get_NowTradeNum(item, v77);
+                                  v64 = startedAt - v17;
+                                  NowTradeNum = EventCraftListViewItem__get_NowTradeNum(item, v65);
                                   timeLeftLabel = this->fields.timeLeftLabel;
-                                  v80 = NowTradeNum;
+                                  v68 = NowTradeNum;
                                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                                  v81 = v80 <= 0;
-                                  v82 = v76 + CraftFinishTime;
-                                  if ( v81 )
+                                  v69 = v68 <= 0;
+                                  v70 = v64 + CraftFinishTime;
+                                  if ( v69 )
                                   {
-                                    Time = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_13509/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/, 0);
+                                    Time = (__int64)LocalizationManager__Get((System_String_o *)StringLiteral_13502/*"TRADE_EVENT_TRADE_COMPLETE_TIME"*/, 0);
                                     if ( !timeLeftLabel )
                                       goto LABEL_146;
                                     UILabel__set_text(timeLeftLabel, (System_String_o *)Time, 0);
                                     craftingStateSprite = this->fields.craftingStateSprite;
                                     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                                    v85 = &StringLiteral_20199/*"icon_craft_compleate"*/;
+                                    v73 = &StringLiteral_20245/*"icon_craft_compleate"*/;
                                   }
                                   else
                                   {
-                                    v83 = LocalizationManager__Get((System_String_o *)StringLiteral_13404/*"TIME_FORMAT_1"*/, 0);
+                                    v71 = LocalizationManager__Get((System_String_o *)StringLiteral_13397/*"TIME_FORMAT_1"*/, 0);
                                     Time = (__int64)LocalizationManager__GetRestTimeInFormat(
-                                                      v76 + CraftFinishTime,
+                                                      v64 + CraftFinishTime,
                                                       0,
-                                                      v83,
+                                                      v71,
                                                       0);
                                     if ( !timeLeftLabel )
                                       goto LABEL_146;
@@ -1260,26 +1233,26 @@ void EventCraftListViewItemDraw__UpdateItem(
                                     craftingStateSprite = this->fields.craftingStateSprite;
                                     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                                       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                                    v85 = &StringLiteral_20200/*"icon_craft_intrade"*/;
+                                    v73 = &StringLiteral_20246/*"icon_craft_intrade"*/;
                                   }
-                                  AtlasManager__SetEventUI_40653244(
+                                  AtlasManager__SetEventUI_40837804(
                                     EventId_k__BackingField,
                                     craftingStateSprite,
-                                    (System_String_o *)*v85,
+                                    (System_String_o *)*v73,
                                     0);
-                                  v86 = 0.92157;
+                                  v74 = 0.92157;
                                   Time = (__int64)this->fields.timeLeftLabel;
-                                  if ( v82 >= 3600 )
-                                    v87 = 0.015686;
+                                  if ( v70 >= 3600 )
+                                    v75 = 0.015686;
                                   else
-                                    v87 = 0.0;
-                                  if ( v82 < 3600 )
-                                    v86 = 0.0;
+                                    v75 = 0.0;
+                                  if ( v70 < 3600 )
+                                    v74 = 0.0;
                                   if ( Time )
                                   {
-                                    v88 = 1.0;
-                                    v89 = 1.0;
-                                    UIWidget__set_color((UIWidget_o *)Time, *(UnityEngine_Color_o *)(&v86 - 1), 0);
+                                    v76 = 1.0;
+                                    v77 = 1.0;
+                                    UIWidget__set_color((UIWidget_o *)Time, *(UnityEngine_Color_o *)(&v74 - 1), 0);
                                     Time = (__int64)this->fields.craftingStateSprite;
                                     if ( Time )
                                     {
@@ -1375,10 +1348,10 @@ void EventCraftListViewItemDraw__UpdateItem(
                                           v22 = this->fields.backSprite;
                                           if ( !AtlasManager_TypeInfo->_2.cctor_finished )
                                             j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-                                          AtlasManager__SetEventUI_40653244(
+                                          AtlasManager__SetEventUI_40837804(
                                             EventId_k__BackingField,
                                             v22,
-                                            (System_String_o *)StringLiteral_20400/*"img_craft_reward_bg_1"*/,
+                                            (System_String_o *)StringLiteral_20447/*"img_craft_reward_bg_1"*/,
                                             0);
                                           v23 = EventCraftTimeCalculation_TypeInfo;
                                           if ( !EventCraftTimeCalculation_TypeInfo->_2.cctor_finished )
@@ -1408,7 +1381,7 @@ void EventCraftListViewItemDraw__UpdateItem(
                                                 v26 = EventCraftListViewItemDraw___c_TypeInfo;
                                               }
                                               v28 = (Il2CppObject *)v26->static_fields->__9;
-                                              _9__42_1 = (System_Func_object__long__o *)sub_1C3E7B0(System_Func_EventCraftPickupInfo__long__TypeInfo);
+                                              _9__42_1 = (System_Func_object__long__o *)sub_1C6BC54(System_Func_EventCraftPickupInfo__long__TypeInfo);
                                               System_Func_object__long____ctor(
                                                 _9__42_1,
                                                 v28,
@@ -1416,13 +1389,13 @@ void EventCraftListViewItemDraw__UpdateItem(
                                                 0);
                                               v29 = EventCraftListViewItemDraw___c_TypeInfo->static_fields;
                                               v29->__9__42_1 = (struct System_Func_EventCraftPickupInfo__long__o *)_9__42_1;
-                                              sub_1C3E508(&v29->__9__42_1, _9__42_1);
+                                              sub_1C6B9AC(&v29->__9__42_1, _9__42_1);
                                             }
                                             v30 = System_Linq_Enumerable__Select_object__long_(
                                                     (System_Collections_Generic_IEnumerable_TSource__o *)v25,
                                                     (System_Func_TSource__TResult__o *)_9__42_1,
-                                                    (const MethodInfo_312FF24 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-                                            Time = System_Linq_Enumerable__Max_66637744(
+                                                    (const MethodInfo_317181C *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+                                            Time = System_Linq_Enumerable__Max_66967376(
                                                      (System_Collections_Generic_IEnumerable_long__o *)v30,
                                                      0);
                                             if ( v8 >= v17 && v17 >= Time )
@@ -1442,12 +1415,12 @@ void EventCraftListViewItemDraw__UpdateItem(
                                             v34 = ceil((double)(tradeTime * DEFAULT_EVENT_CRAFT_TIME_RATE) / 1000.0);
                                             if ( !System_Convert_TypeInfo->_2.cctor_finished )
                                               j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-                                            v35 = System_Convert__ToInt64_64726272(v34, 0);
+                                            v35 = System_Convert__ToInt64_65054652(v34, 0);
                                             timeRequiredCraft = this->fields.timeRequiredCraft;
                                             v37 = v35;
                                             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                                               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                                            v38 = LocalizationManager__Get((System_String_o *)StringLiteral_13404/*"TIME_FORMAT_1"*/, 0);
+                                            v38 = LocalizationManager__Get((System_String_o *)StringLiteral_13397/*"TIME_FORMAT_1"*/, 0);
                                             Time = (__int64)LocalizationManager__GetRestTimeInFormat(v37, 0, v38, 0);
                                             if ( timeRequiredCraft )
                                             {
@@ -1514,7 +1487,7 @@ void EventCraftListViewItemDraw__UpdateItem(
       }
     }
 LABEL_146:
-    sub_1C3E7C0(Time, v16);
+    sub_1C6BC60(Time, v16);
   }
 }
 
@@ -1541,17 +1514,17 @@ void EventCraftListViewItemDraw__UpdateSupportToolLb(
 
   v3 = item;
   v4 = this;
-  if ( (byte_4C50F5E & 1) == 0 )
+  if ( (byte_4CB04A6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-    sub_1C3E564(&System_Func_EventCraftPickupInfo__long__TypeInfo);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&string_TypeInfo);
-    sub_1C3E564(&Method_EventCraftListViewItemDraw___c__UpdateSupportToolLb_b__45_0__);
-    sub_1C3E564(&EventCraftListViewItemDraw___c_TypeInfo);
-    sub_1C3E564(&StringLiteral_3887/*"CRAFT_EVENT_BOARD_SUPPORT_TOOL_LEFT_TIME"*/);
-    this = (EventCraftListViewItemDraw_o *)sub_1C3E564(&StringLiteral_13404/*"TIME_FORMAT_1"*/);
-    byte_4C50F5E = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+    sub_1C6BA08(&System_Func_EventCraftPickupInfo__long__TypeInfo);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&string_TypeInfo);
+    sub_1C6BA08(&Method_EventCraftListViewItemDraw___c__UpdateSupportToolLb_b__45_0__);
+    sub_1C6BA08(&EventCraftListViewItemDraw___c_TypeInfo);
+    sub_1C6BA08(&StringLiteral_3879/*"CRAFT_EVENT_BOARD_SUPPORT_TOOL_LEFT_TIME"*/);
+    this = (EventCraftListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_13397/*"TIME_FORMAT_1"*/);
+    byte_4CB04A6 = 1;
   }
   if ( !v3 )
     goto LABEL_23;
@@ -1575,7 +1548,7 @@ void EventCraftListViewItemDraw__UpdateSupportToolLb(
         v8 = EventCraftListViewItemDraw___c_TypeInfo;
       }
       v10 = (Il2CppObject *)v8->static_fields->__9;
-      _9__45_0 = (System_Func_object__long__o *)sub_1C3E7B0(System_Func_EventCraftPickupInfo__long__TypeInfo);
+      _9__45_0 = (System_Func_object__long__o *)sub_1C6BC54(System_Func_EventCraftPickupInfo__long__TypeInfo);
       System_Func_object__long____ctor(
         _9__45_0,
         v10,
@@ -1583,13 +1556,13 @@ void EventCraftListViewItemDraw__UpdateSupportToolLb(
         0);
       static_fields = EventCraftListViewItemDraw___c_TypeInfo->static_fields;
       static_fields->__9__45_0 = (struct System_Func_EventCraftPickupInfo__long__o *)_9__45_0;
-      sub_1C3E508(&static_fields->__9__45_0, _9__45_0);
+      sub_1C6B9AC(&static_fields->__9__45_0, _9__45_0);
     }
     v12 = System_Linq_Enumerable__Select_object__long_(
             PickupInfoList_k__BackingField,
             (System_Func_TSource__TResult__o *)_9__45_0,
-            (const MethodInfo_312FF24 *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
-    v6 = System_Linq_Enumerable__Max_66637744((System_Collections_Generic_IEnumerable_long__o *)v12, 0);
+            (const MethodInfo_317181C *)Method_System_Linq_Enumerable_Select_EventCraftPickupInfo__long___);
+    v6 = System_Linq_Enumerable__Max_66967376((System_Collections_Generic_IEnumerable_long__o *)v12, 0);
   }
   this = (EventCraftListViewItemDraw_o *)v4->fields.supportToolUsedSprite;
   if ( !this )
@@ -1610,8 +1583,8 @@ void EventCraftListViewItemDraw__UpdateSupportToolLb(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3887/*"CRAFT_EVENT_BOARD_SUPPORT_TOOL_LEFT_TIME"*/, 0);
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_13404/*"TIME_FORMAT_1"*/, 0);
+    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3879/*"CRAFT_EVENT_BOARD_SUPPORT_TOOL_LEFT_TIME"*/, 0);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_13397/*"TIME_FORMAT_1"*/, 0);
     RestTimeInFormat = (Il2CppObject *)LocalizationManager__GetRestTimeInFormat(v6, -1, v15, 0);
     this = (EventCraftListViewItemDraw_o *)System_String__Format(v14, RestTimeInFormat, 0);
     item = (EventCraftListViewItem_o *)this;
@@ -1622,7 +1595,7 @@ void EventCraftListViewItemDraw__UpdateSupportToolLb(
   }
   if ( !supportToolLeftTime )
 LABEL_23:
-    sub_1C3E7C0(this, item);
+    sub_1C6BC60(this, item);
   UILabel__set_text(supportToolLeftTime, (System_String_o *)item, 0);
 }
 
@@ -1631,15 +1604,15 @@ void EventCraftListViewItemDraw___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C50F5F & 1) == 0 )
+  if ( (byte_4CB04A7 & 1) == 0 )
   {
-    sub_1C3E564(&EventCraftListViewItemDraw___c_TypeInfo);
-    byte_4C50F5F = 1;
+    sub_1C6BA08(&EventCraftListViewItemDraw___c_TypeInfo);
+    byte_4CB04A7 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(EventCraftListViewItemDraw___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(EventCraftListViewItemDraw___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventCraftListViewItemDraw___c_TypeInfo->static_fields->__9 = (struct EventCraftListViewItemDraw___c_o *)v1;
-  sub_1C3E508(EventCraftListViewItemDraw___c_TypeInfo->static_fields, v1);
+  sub_1C6B9AC(EventCraftListViewItemDraw___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -1659,7 +1632,7 @@ void EventCraftListViewItemDraw___c___HideCraftMiniObj_b__44_0(
                                                      (UnityEngine_Component_o *)sprite,
                                                      0)) == 0 )
   {
-    sub_1C3E7C0(this, sprite);
+    sub_1C6BC60(this, sprite);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -1675,7 +1648,7 @@ void EventCraftListViewItemDraw___c___UpdateCraftIconMiniSprite_b__43_0(
                                                      (UnityEngine_Component_o *)sprite,
                                                      0)) == 0 )
   {
-    sub_1C3E7C0(this, sprite);
+    sub_1C6BC60(this, sprite);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -1687,7 +1660,7 @@ int64_t EventCraftListViewItemDraw___c___UpdateItem_b__42_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return x->fields.endedAt;
 }
 
@@ -1698,7 +1671,7 @@ int64_t EventCraftListViewItemDraw___c___UpdateItem_b__42_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return x->fields.startedAt;
 }
 
@@ -1709,7 +1682,7 @@ int64_t EventCraftListViewItemDraw___c___UpdateSupportToolLb_b__45_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return x->fields.endedAt;
 }
 
@@ -1732,14 +1705,14 @@ void EventCraftListViewItemDraw___c__DisplayClass40_0___SetItem_b__0(
   int32_t imageId; // w20
 
   v4 = this;
-  if ( (byte_4C50F60 & 1) == 0 )
+  if ( (byte_4CB04A8 & 1) == 0 )
   {
-    this = (EventCraftListViewItemDraw___c__DisplayClass40_0_o *)sub_1C3E564(&AtlasManager_TypeInfo);
-    byte_4C50F60 = 1;
+    this = (EventCraftListViewItemDraw___c__DisplayClass40_0_o *)sub_1C6BA08(&AtlasManager_TypeInfo);
+    byte_4CB04A8 = 1;
   }
   itemEnt = v4->fields.itemEnt;
   if ( !itemEnt )
-    sub_1C3E7C0(this, sprite);
+    sub_1C6BC60(this, sprite);
   imageId = itemEnt->fields.imageId;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);

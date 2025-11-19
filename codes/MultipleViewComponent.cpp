@@ -10,16 +10,16 @@ void MultipleViewComponent___ctor(MultipleViewComponent_o *this, const MethodInf
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C5207B & 1) == 0 )
+  if ( (byte_4CB15C9 & 1) == 0 )
   {
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&long___TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long___ctor___78136144);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor___78135936);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_List_long__TypeInfo);
-    sub_1C3E564(&MyRoomControl_TypeInfo);
-    byte_4C5207B = 1;
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&long___TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long___ctor___78519008);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor___78518792);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_List_long__TypeInfo);
+    sub_1C6BA08(&MyRoomControl_TypeInfo);
+    byte_4CB15C9 = 1;
   }
   v3 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -27,26 +27,26 @@ void MultipleViewComponent___ctor(MultipleViewComponent_o *this, const MethodInf
     j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
     v3 = MyRoomControl_TypeInfo;
   }
-  v4 = (System_Collections_Generic_IEnumerable_T__o *)sub_1C3E60C(
+  v4 = (System_Collections_Generic_IEnumerable_T__o *)sub_1C6BAB0(
                                                         long___TypeInfo,
                                                         (unsigned int)v3->static_fields->MULTIPLE_VIEW_SELECTED_MAX);
-  v5 = (System_Collections_Generic_List_long__o *)sub_1C3E7B0(System_Collections_Generic_List_long__TypeInfo);
-  System_Collections_Generic_List_long____ctor_58314088(
+  v5 = (System_Collections_Generic_List_long__o *)sub_1C6BC54(System_Collections_Generic_List_long__TypeInfo);
+  System_Collections_Generic_List_long____ctor_58622588(
     v5,
     v4,
-    (const MethodInfo_379CD68 *)Method_System_Collections_Generic_List_long___ctor___78136144);
+    (const MethodInfo_37E827C *)Method_System_Collections_Generic_List_long___ctor___78519008);
   this->fields.listSelectedUsrSvtId = v5;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.listSelectedUsrSvtId, (int32_t)v5, v6, v7);
-  v8 = (System_Collections_Generic_IEnumerable_T__o *)sub_1C3E60C(
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.listSelectedUsrSvtId, (int32_t)v5, v6, v7);
+  v8 = (System_Collections_Generic_IEnumerable_T__o *)sub_1C6BAB0(
                                                         int___TypeInfo,
                                                         (unsigned int)MyRoomControl_TypeInfo->static_fields->MULTIPLE_VIEW_SELECTED_MAX);
-  v9 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_58293520(
+  v9 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_58602020(
     v9,
     v8,
-    (const MethodInfo_3797D10 *)Method_System_Collections_Generic_List_int___ctor___78135936);
+    (const MethodInfo_37E3224 *)Method_System_Collections_Generic_List_int___ctor___78518792);
   this->fields.listSelectedImageLimitCount = v9;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.listSelectedImageLimitCount, (int32_t)v9, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.listSelectedImageLimitCount, (int32_t)v9, v10, v11);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -61,15 +61,15 @@ void MultipleViewComponent__CancelMultipleViewWindow(
   const MethodInfo *v7; // x3
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C5206B & 1) == 0 )
+  if ( (byte_4CB15B9 & 1) == 0 )
   {
-    sub_1C3E564(&Method_MultipleViewComponent_EndCancelButton__);
-    sub_1C3E564(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
-    byte_4C5206B = 1;
+    sub_1C6BA08(&Method_MultipleViewComponent_EndCancelButton__);
+    sub_1C6BA08(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+    byte_4CB15B9 = 1;
   }
   this->fields.cancelCallback = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.cancelCallback, (int32_t)callback, (int32_t)method, v3);
-  v6 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C3E7B0(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.cancelCallback, (int32_t)callback, (int32_t)method, v3);
+  v6 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C6BC54(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
   MultipleViewComponent_RequestCallbackFunc___ctor(
     v6,
     (Il2CppObject *)this,
@@ -94,23 +94,23 @@ void MultipleViewComponent__CloseSvtDetail(
   Il2CppObject *Instance; // x19
   System_Action_o *v14; // x20
 
-  if ( (byte_4C52070 & 1) == 0 )
+  if ( (byte_4CB15BE & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&Method_MultipleViewComponent___c__DisplayClass40_0__CloseSvtDetail_b__0__);
-    sub_1C3E564(&MultipleViewComponent___c__DisplayClass40_0_TypeInfo);
-    byte_4C52070 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&Method_MultipleViewComponent___c__DisplayClass40_0__CloseSvtDetail_b__0__);
+    sub_1C6BA08(&MultipleViewComponent___c__DisplayClass40_0_TypeInfo);
+    byte_4CB15BE = 1;
   }
-  v8 = sub_1C3E7B0(MultipleViewComponent___c__DisplayClass40_0_TypeInfo);
+  v8 = sub_1C6BC54(MultipleViewComponent___c__DisplayClass40_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0);
   if ( !v8
     || (*(_DWORD *)(v8 + 16) = questId,
         *(_QWORD *)(v8 + 24) = this,
-        sub_1C3E508((CGThumbnailListItem_o *)(v8 + 24), (int32_t)this, v11, v12),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v8 + 24), (int32_t)this, v11, v12),
         *(_BYTE *)(v8 + 32) = isNeedSort,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v14 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v14 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
         System_Action___ctor(
           v14,
           (Il2CppObject *)v8,
@@ -118,7 +118,7 @@ void MultipleViewComponent__CloseSvtDetail(
           0),
         !Instance) )
   {
-    sub_1C3E7C0(v9, v10);
+    sub_1C6BC60(v9, v10);
   }
   CommonUI__CloseServantStatusDialog((CommonUI_o *)Instance, v14, 0);
 }
@@ -136,11 +136,11 @@ void MultipleViewComponent__EndCancelButton(MultipleViewComponent_o *this, bool 
   const MethodInfo *v11; // x2
   System_Action_o *cancelCallback; // x0
 
-  if ( (byte_4C5206C & 1) == 0 )
+  if ( (byte_4CB15BA & 1) == 0 )
   {
-    sub_1C3E564(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickServant__);
-    byte_4C5206C = 1;
+    sub_1C6BA08(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickServant__);
+    byte_4CB15BA = 1;
   }
   if ( isRequest )
   {
@@ -148,7 +148,7 @@ void MultipleViewComponent__EndCancelButton(MultipleViewComponent_o *this, bool 
     if ( !multipleViewManager
       || (MultipleViewListViewManager__ModifyList(multipleViewManager, 0, method),
           v6 = this->fields.multipleViewManager,
-          v7 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C3E7B0(MultipleViewListViewManager_CallbackFunc_TypeInfo),
+          v7 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C6BC54(MultipleViewListViewManager_CallbackFunc_TypeInfo),
           MultipleViewListViewManager_CallbackFunc___ctor(
             v7,
             (Il2CppObject *)this,
@@ -157,11 +157,11 @@ void MultipleViewComponent__EndCancelButton(MultipleViewComponent_o *this, bool 
           !v6) )
     {
 LABEL_11:
-      sub_1C3E7C0(multipleViewManager, isRequest);
+      sub_1C6BC60(multipleViewManager, isRequest);
     }
     v6->fields.callbackFunc = v7;
-    sub_1C3E508((CGThumbnailListItem_o *)&v6->fields.callbackFunc, (int32_t)v7, v9, v10);
-    MultipleViewListViewManager__SetMode_33486448(v6, 2, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v6->fields.callbackFunc, (int32_t)v7, v9, v10);
+    MultipleViewListViewManager__SetMode_33666064(v6, 2, v11);
   }
   MultipleViewComponent__Init(this, (const MethodInfo *)isRequest);
   multipleViewManager = (MultipleViewListViewManager_o *)UnityEngine_Component__get_gameObject(
@@ -189,9 +189,9 @@ void MultipleViewComponent__EndClickTabChoice(MultipleViewComponent_o *this, boo
       || (MultipleViewListViewManager__ModifyList(multipleViewManager, 0, method),
           (multipleViewManager = this->fields.multipleViewManager) == 0) )
     {
-      sub_1C3E7C0(multipleViewManager, isRequest);
+      sub_1C6BC60(multipleViewManager, isRequest);
     }
-    MultipleViewListViewManager__SetMode_33486448(multipleViewManager, 2, v5);
+    MultipleViewListViewManager__SetMode_33666064(multipleViewManager, 2, v5);
   }
   MultipleViewComponent__SetModeTabKind(this, 2, method);
 }
@@ -210,9 +210,9 @@ void MultipleViewComponent__EndClickTabLock(MultipleViewComponent_o *this, bool 
       || (MultipleViewListViewManager__ModifyList(multipleViewManager, 0, method),
           (multipleViewManager = this->fields.multipleViewManager) == 0) )
     {
-      sub_1C3E7C0(multipleViewManager, isRequest);
+      sub_1C6BC60(multipleViewManager, isRequest);
     }
-    MultipleViewListViewManager__SetMode_33486448(multipleViewManager, 2, v5);
+    MultipleViewListViewManager__SetMode_33666064(multipleViewManager, 2, v5);
   }
   MultipleViewComponent__SetModeTabKind(this, 1, method);
 }
@@ -231,9 +231,9 @@ void MultipleViewComponent__EndClickTabNormal(MultipleViewComponent_o *this, boo
       || (MultipleViewListViewManager__ModifyList(multipleViewManager, 0, method),
           (multipleViewManager = this->fields.multipleViewManager) == 0) )
     {
-      sub_1C3E7C0(multipleViewManager, isRequest);
+      sub_1C6BC60(multipleViewManager, isRequest);
     }
-    MultipleViewListViewManager__SetMode_33486448(multipleViewManager, 2, v5);
+    MultipleViewListViewManager__SetMode_33666064(multipleViewManager, 2, v5);
   }
   MultipleViewComponent__SetModeTabKind(this, 0, method);
 }
@@ -252,9 +252,9 @@ void MultipleViewComponent__EndClickTabPush(MultipleViewComponent_o *this, bool 
       || (MultipleViewListViewManager__ModifyList(multipleViewManager, 0, method),
           (multipleViewManager = this->fields.multipleViewManager) == 0) )
     {
-      sub_1C3E7C0(multipleViewManager, isRequest);
+      sub_1C6BC60(multipleViewManager, isRequest);
     }
-    MultipleViewListViewManager__SetMode_33486448(multipleViewManager, 2, v5);
+    MultipleViewListViewManager__SetMode_33666064(multipleViewManager, 2, v5);
   }
   MultipleViewComponent__SetModeTabKind(this, 3, method);
 }
@@ -276,7 +276,7 @@ void MultipleViewComponent__EndStatusSync(
   if ( requedstCallback )
   {
     p_requedstCallback->klass = 0;
-    sub_1C3E508(p_requedstCallback, 0, (int32_t)method, v3);
+    sub_1C6B9AC(p_requedstCallback, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, __int64, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       1,
@@ -299,11 +299,11 @@ void MultipleViewComponent__EndePushRequest(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x2
 
-  if ( (byte_4C5206F & 1) == 0 )
+  if ( (byte_4CB15BD & 1) == 0 )
   {
-    sub_1C3E564(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickServant__);
-    byte_4C5206F = 1;
+    sub_1C6BA08(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickServant__);
+    byte_4CB15BD = 1;
   }
   multipleViewManager = this->fields.multipleViewManager;
   if ( !multipleViewManager
@@ -311,7 +311,7 @@ void MultipleViewComponent__EndePushRequest(
         (multipleViewManager = this->fields.multipleViewManager) == 0)
     || (MultipleViewListViewManager__ModifyItem(multipleViewManager, this->fields.usrSvtId, v5),
         v6 = this->fields.multipleViewManager,
-        v7 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C3E7B0(MultipleViewListViewManager_CallbackFunc_TypeInfo),
+        v7 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C6BC54(MultipleViewListViewManager_CallbackFunc_TypeInfo),
         MultipleViewListViewManager_CallbackFunc___ctor(
           v7,
           (Il2CppObject *)this,
@@ -319,11 +319,11 @@ void MultipleViewComponent__EndePushRequest(
           v8),
         !v6) )
   {
-    sub_1C3E7C0(multipleViewManager, result);
+    sub_1C6BC60(multipleViewManager, result);
   }
   v6->fields.callbackFunc = v7;
-  sub_1C3E508((CGThumbnailListItem_o *)&v6->fields.callbackFunc, (int32_t)v7, v9, v10);
-  MultipleViewListViewManager__SetMode_33486448(v6, 2, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v6->fields.callbackFunc, (int32_t)v7, v9, v10);
+  MultipleViewListViewManager__SetMode_33666064(v6, 2, v11);
 }
 
 
@@ -332,23 +332,23 @@ int32_t MultipleViewComponent__GetCurrentSelectIndex(MultipleViewComponent_o *th
   struct System_Collections_Generic_List_long__o *listSelectedUsrSvtId; // x0
   int32_t v4; // w20
 
-  if ( (byte_4C52079 & 1) == 0 )
+  if ( (byte_4CB15C7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__get_Item__);
-    byte_4C52079 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__get_Item__);
+    byte_4CB15C7 = 1;
   }
   listSelectedUsrSvtId = this->fields.listSelectedUsrSvtId;
   if ( !listSelectedUsrSvtId )
 LABEL_8:
-    sub_1C3E7C0(listSelectedUsrSvtId, method);
+    sub_1C6BC60(listSelectedUsrSvtId, method);
   v4 = 0;
   while ( v4 < listSelectedUsrSvtId->fields._size )
   {
     if ( System_Collections_Generic_List_long___get_Item(
            listSelectedUsrSvtId,
            v4,
-           (const MethodInfo_379D1A4 *)Method_System_Collections_Generic_List_long__get_Item__) < 1 )
+           (const MethodInfo_37E86B8 *)Method_System_Collections_Generic_List_long__get_Item__) < 1 )
       return v4;
     listSelectedUsrSvtId = this->fields.listSelectedUsrSvtId;
     ++v4;
@@ -366,14 +366,14 @@ int64_t MultipleViewComponent__GetLatestSelectedUsrSvtId(MultipleViewComponent_o
   int64_t v4; // x0
   int64_t result; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C52069 & 1) == 0 )
+  if ( (byte_4CB15B7 & 1) == 0 )
   {
-    sub_1C3E564(&string_TypeInfo);
-    sub_1C3E564(&StringLiteral_9199/*"MultipleViewSelectedUsrSvtId"*/);
-    byte_4C52069 = 1;
+    sub_1C6BA08(&string_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9196/*"MultipleViewSelectedUsrSvtId"*/);
+    byte_4CB15B7 = 1;
   }
   String = UnityEngine_PlayerPrefs__GetString(
-             (System_String_o *)StringLiteral_9199/*"MultipleViewSelectedUsrSvtId"*/,
+             (System_String_o *)StringLiteral_9196/*"MultipleViewSelectedUsrSvtId"*/,
              string_TypeInfo->static_fields->Empty,
              0);
   IsNullOrEmpty = System_String__IsNullOrEmpty(String, 0);
@@ -397,24 +397,24 @@ System_String_o *MultipleViewComponent__GetTitleMessage(MultipleViewComponent_o 
   System_String_o *v5; // x0
   int32_t CurrentSelectIndex; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4C5207A & 1) == 0 )
+  if ( (byte_4CB15C8 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_7205/*"HEADER_MSG_MULTIPLE_SERVANT_"*/);
-    sub_1C3E564(&StringLiteral_7206/*"HEADER_MSG_MULTIPLE_SERVANT_SELECTED"*/);
-    byte_4C5207A = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_7198/*"HEADER_MSG_MULTIPLE_SERVANT_"*/);
+    sub_1C6BA08(&StringLiteral_7199/*"HEADER_MSG_MULTIPLE_SERVANT_SELECTED"*/);
+    byte_4CB15C8 = 1;
   }
   CurrentSelectIndex = MultipleViewComponent__GetCurrentSelectIndex(this, method);
   if ( CurrentSelectIndex < 0 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v5 = (System_String_o *)StringLiteral_7206/*"HEADER_MSG_MULTIPLE_SERVANT_SELECTED"*/;
+    v5 = (System_String_o *)StringLiteral_7199/*"HEADER_MSG_MULTIPLE_SERVANT_SELECTED"*/;
   }
   else
   {
     v3 = System_Int32__ToString((int32_t)&CurrentSelectIndex, 0);
-    v4 = System_String__Concat_63636468((System_String_o *)StringLiteral_7205/*"HEADER_MSG_MULTIPLE_SERVANT_"*/, v3, 0);
+    v4 = System_String__Concat_63966792((System_String_o *)StringLiteral_7198/*"HEADER_MSG_MULTIPLE_SERVANT_"*/, v3, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     v5 = v4;
@@ -438,7 +438,7 @@ void MultipleViewComponent__Init(MultipleViewComponent_o *this, const MethodInfo
         multipleViewManager = (MultipleViewListViewManager_o *)MultipleViewComponent__GetTitleMessage(this, v5),
         !infoLb) )
   {
-    sub_1C3E7C0(multipleViewManager, method);
+    sub_1C6BC60(multipleViewManager, method);
   }
   UILabel__set_text(infoLb, (System_String_o *)multipleViewManager, 0);
   MultipleViewComponent__SetModeTabKind(this, 0, v6);
@@ -464,26 +464,26 @@ void MultipleViewComponent__OnClickChoiceTabButton(MultipleViewComponent_o *this
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C52073 & 1) == 0 )
+  if ( (byte_4CB15C1 & 1) == 0 )
   {
-    sub_1C3E564(&Method_MultipleViewComponent_EndClickTabChoice__);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickChoiceTabButton__);
-    sub_1C3E564(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
-    byte_4C52073 = 1;
+    sub_1C6BA08(&Method_MultipleViewComponent_EndClickTabChoice__);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickChoiceTabButton__);
+    sub_1C6BA08(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+    byte_4CB15C1 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MultipleViewComponent_OnClickChoiceTabButton__;
     if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickChoiceTabButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickChoiceTabButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickChoiceTabButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     tabModeKind = this->fields.tabModeKind;
     if ( tabModeKind )
     {
       if ( tabModeKind == 2 )
       {
-        v7 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C3E7B0(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+        v7 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C6BC54(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
         MultipleViewComponent_RequestCallbackFunc___ctor(
           v7,
           (Il2CppObject *)this,
@@ -492,7 +492,7 @@ void MultipleViewComponent__OnClickChoiceTabButton(MultipleViewComponent_o *this
         MultipleViewComponent__StatusRequest(this, v7, v9);
         return;
       }
-      v10 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C3E7B0(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+      v10 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C6BC54(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
       MultipleViewComponent_RequestCallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -520,14 +520,14 @@ void MultipleViewComponent__OnClickDecide(MultipleViewComponent_o *this, const M
   System_Int64_array *v13; // x19
   const MethodInfo *v14; // x3
 
-  if ( (byte_4C52078 & 1) == 0 )
+  if ( (byte_4CB15C6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__get_Item__);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickDecide__);
-    byte_4C52078 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__get_Item__);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickDecide__);
+    byte_4CB15C6 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -535,8 +535,8 @@ void MultipleViewComponent__OnClickDecide(MultipleViewComponent_o *this, const M
     {
       v5 = Method_MultipleViewComponent_OnClickDecide__;
       if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickDecide__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickDecide__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1C3E548(v5, v5[4]);
+        v5 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickDecide__);
+      v6 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v5, v5[4]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0);
       listSelectedUsrSvtId = this->fields.listSelectedUsrSvtId;
       this->fields.state = 4;
@@ -545,23 +545,23 @@ void MultipleViewComponent__OnClickDecide(MultipleViewComponent_o *this, const M
       Item = (MultipleViewComponent_o *)System_Collections_Generic_List_long___get_Item(
                                           listSelectedUsrSvtId,
                                           listSelectedUsrSvtId->fields._size - 1,
-                                          (const MethodInfo_379D1A4 *)Method_System_Collections_Generic_List_long__get_Item__);
+                                          (const MethodInfo_37E86B8 *)Method_System_Collections_Generic_List_long__get_Item__);
       MultipleViewComponent__SetLatestSelectedUsrSvtId(Item, (int64_t)Item, v10);
       listSelectedUsrSvtId = this->fields.listSelectedUsrSvtId;
       if ( !listSelectedUsrSvtId
         || (myRoomControl = this->fields.myRoomControl,
             listSelectedUsrSvtId = (System_Collections_Generic_List_long__o *)System_Collections_Generic_List_long___ToArray(
                                                                                 listSelectedUsrSvtId,
-                                                                                (const MethodInfo_379EF4C *)Method_System_Collections_Generic_List_long__ToArray__),
+                                                                                (const MethodInfo_37EA460 *)Method_System_Collections_Generic_List_long__ToArray__),
             (listSelectedImageLimitCount = this->fields.listSelectedImageLimitCount) == 0)
         || (v13 = (System_Int64_array *)listSelectedUsrSvtId,
             listSelectedUsrSvtId = (System_Collections_Generic_List_long__o *)System_Collections_Generic_List_int___ToArray(
                                                                                 listSelectedImageLimitCount,
-                                                                                (const MethodInfo_3799EF4 *)Method_System_Collections_Generic_List_int__ToArray__),
+                                                                                (const MethodInfo_37E5408 *)Method_System_Collections_Generic_List_int__ToArray__),
             !myRoomControl) )
       {
 LABEL_17:
-        sub_1C3E7C0(listSelectedUsrSvtId, v7);
+        sub_1C6BC60(listSelectedUsrSvtId, v7);
       }
       MyRoomControl__OpenMultipleView(myRoomControl, v13, (System_Int32_array *)listSelectedUsrSvtId, v14);
     }
@@ -569,8 +569,8 @@ LABEL_17:
     {
       v3 = Method_MultipleViewComponent_OnClickDecide__;
       if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickDecide__ + 83) & 2) != 0 )
-        v3 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickDecide__);
-      v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+        v3 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickDecide__);
+      v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
       OverwriteAssetSoundName__PlaySystemSe(v4, 2, 0, 0);
     }
   }
@@ -590,26 +590,26 @@ void MultipleViewComponent__OnClickLockTabButton(MultipleViewComponent_o *this, 
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C52072 & 1) == 0 )
+  if ( (byte_4CB15C0 & 1) == 0 )
   {
-    sub_1C3E564(&Method_MultipleViewComponent_EndClickTabLock__);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickLockTabButton__);
-    sub_1C3E564(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
-    byte_4C52072 = 1;
+    sub_1C6BA08(&Method_MultipleViewComponent_EndClickTabLock__);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickLockTabButton__);
+    sub_1C6BA08(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+    byte_4CB15C0 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MultipleViewComponent_OnClickLockTabButton__;
     if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickLockTabButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickLockTabButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickLockTabButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     tabModeKind = this->fields.tabModeKind;
     if ( tabModeKind )
     {
       if ( tabModeKind == 1 )
       {
-        v7 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C3E7B0(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+        v7 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C6BC54(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
         MultipleViewComponent_RequestCallbackFunc___ctor(
           v7,
           (Il2CppObject *)this,
@@ -618,7 +618,7 @@ void MultipleViewComponent__OnClickLockTabButton(MultipleViewComponent_o *this, 
         MultipleViewComponent__StatusRequest(this, v7, v9);
         return;
       }
-      v10 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C3E7B0(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+      v10 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C6BC54(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
       MultipleViewComponent_RequestCallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -639,21 +639,21 @@ void MultipleViewComponent__OnClickNormalTabButton(MultipleViewComponent_o *this
   const MethodInfo *v6; // x3
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C52071 & 1) == 0 )
+  if ( (byte_4CB15BF & 1) == 0 )
   {
-    sub_1C3E564(&Method_MultipleViewComponent_EndClickTabNormal__);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickNormalTabButton__);
-    sub_1C3E564(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
-    byte_4C52071 = 1;
+    sub_1C6BA08(&Method_MultipleViewComponent_EndClickTabNormal__);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickNormalTabButton__);
+    sub_1C6BA08(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+    byte_4CB15BF = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MultipleViewComponent_OnClickNormalTabButton__;
     if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickNormalTabButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickNormalTabButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickNormalTabButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C3E7B0(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+    v5 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C6BC54(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
     MultipleViewComponent_RequestCallbackFunc___ctor(
       v5,
       (Il2CppObject *)this,
@@ -672,22 +672,22 @@ void MultipleViewComponent__OnClickPushTabButton(MultipleViewComponent_o *this, 
   const MethodInfo *v6; // x3
   const MethodInfo *v7; // x2
 
-  if ( (byte_4C52074 & 1) == 0 )
+  if ( (byte_4CB15C2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_MultipleViewComponent_EndClickTabPush__);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickPushTabButton__);
-    sub_1C3E564(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
-    byte_4C52074 = 1;
+    sub_1C6BA08(&Method_MultipleViewComponent_EndClickTabPush__);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickPushTabButton__);
+    sub_1C6BA08(&MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+    byte_4CB15C2 = 1;
   }
   if ( this->fields.state == 2 )
   {
     EventTutorialMaster__CheckTutorial(-1, 68, 0, 0, 0, 0, 0, 0);
     v3 = Method_MultipleViewComponent_OnClickPushTabButton__;
     if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickPushTabButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickPushTabButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickPushTabButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C3E7B0(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
+    v5 = (MultipleViewComponent_RequestCallbackFunc_o *)sub_1C6BC54(MultipleViewComponent_RequestCallbackFunc_TypeInfo);
     MultipleViewComponent_RequestCallbackFunc___ctor(
       v5,
       (Il2CppObject *)this,
@@ -706,21 +706,21 @@ void MultipleViewComponent__OnClickScaleChange(MultipleViewComponent_o *this, co
   MultipleViewListViewManager_o *multipleViewManager; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4C52077 & 1) == 0 )
+  if ( (byte_4CB15C5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickScaleChange__);
-    byte_4C52077 = 1;
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickScaleChange__);
+    byte_4CB15C5 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_MultipleViewComponent_OnClickScaleChange__;
     if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickScaleChange__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickScaleChange__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickScaleChange__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     multipleViewManager = this->fields.multipleViewManager;
     if ( !multipleViewManager )
-      sub_1C3E7C0(0, v5);
+      sub_1C6BC60(0, v5);
     MultipleViewListViewManager__ChangeIconScale(multipleViewManager, v5);
     MultipleViewComponent__UpdateScaleChangeIconSprite(this, v7);
   }
@@ -838,48 +838,48 @@ void MultipleViewComponent__OnClickServant(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v109; // [xsp+A0h] [xbp-80h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v110; // 0:x0.16
 
-  if ( (byte_4C5206D & 1) == 0 )
+  if ( (byte_4CB15BB & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_bool__int__TypeInfo);
-    sub_1C3E564(&BalanceConfig_TypeInfo);
-    sub_1C3E564(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C3E564(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__FindIndex__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__set_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__set_Item__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&Method_MultipleViewComponent_CloseSvtDetail__);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickServant__);
-    sub_1C3E564(&object___TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C3E564(&System_Predicate_long__TypeInfo);
-    sub_1C3E564(&Rarity_TypeInfo);
-    sub_1C3E564(&ServantStatusDialog_ResultDelegate_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&Method_MultipleViewComponent___c__DisplayClass37_0__OnClickServant_b__0__);
-    sub_1C3E564(&Method_MultipleViewComponent___c__DisplayClass37_0__OnClickServant_b__2__);
-    sub_1C3E564(&MultipleViewComponent___c__DisplayClass37_0_TypeInfo);
-    sub_1C3E564(&Method_MultipleViewComponent___c__DisplayClass37_1__OnClickServant_b__3__);
-    sub_1C3E564(&MultipleViewComponent___c__DisplayClass37_1_TypeInfo);
-    sub_1C3E564(&StringLiteral_11952/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/);
-    sub_1C3E564(&StringLiteral_11950/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/);
-    sub_1C3E564(&StringLiteral_11951/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/);
-    sub_1C3E564(&StringLiteral_11953/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/);
-    byte_4C5206D = 1;
+    sub_1C6BA08(&System_Action_bool__int__TypeInfo);
+    sub_1C6BA08(&BalanceConfig_TypeInfo);
+    sub_1C6BA08(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C6BA08(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__FindIndex__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__set_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__set_Item__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&Method_MultipleViewComponent_CloseSvtDetail__);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickServant__);
+    sub_1C6BA08(&object___TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C6BA08(&System_Predicate_long__TypeInfo);
+    sub_1C6BA08(&Rarity_TypeInfo);
+    sub_1C6BA08(&ServantStatusDialog_ResultDelegate_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&Method_MultipleViewComponent___c__DisplayClass37_0__OnClickServant_b__0__);
+    sub_1C6BA08(&Method_MultipleViewComponent___c__DisplayClass37_0__OnClickServant_b__2__);
+    sub_1C6BA08(&MultipleViewComponent___c__DisplayClass37_0_TypeInfo);
+    sub_1C6BA08(&Method_MultipleViewComponent___c__DisplayClass37_1__OnClickServant_b__3__);
+    sub_1C6BA08(&MultipleViewComponent___c__DisplayClass37_1_TypeInfo);
+    sub_1C6BA08(&StringLiteral_11949/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/);
+    sub_1C6BA08(&StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/);
+    sub_1C6BA08(&StringLiteral_11948/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/);
+    sub_1C6BA08(&StringLiteral_11950/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/);
+    byte_4CB15BB = 1;
   }
-  v7 = sub_1C3E7B0(MultipleViewComponent___c__DisplayClass37_0_TypeInfo);
+  v7 = sub_1C6BC54(MultipleViewComponent___c__DisplayClass37_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_120;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
   if ( n < 0 )
   {
     Item = 0;
@@ -893,7 +893,7 @@ void MultipleViewComponent__OnClickServant(
   }
   *(_QWORD *)(v7 + 24) = Item;
   v15 = (MultipleViewListViewItem_o **)(v7 + 24);
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 24), (int32_t)Item, (int32_t)v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)Item, (int32_t)v12, v13);
   if ( !*(_QWORD *)(v7 + 24) )
     goto LABEL_120;
   v16 = *(_QWORD *)(*(_QWORD *)(v7 + 24) + 120LL);
@@ -905,16 +905,16 @@ void MultipleViewComponent__OnClickServant(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v108 = v109;
-  multipleViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v108, 0);
+  multipleViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v108, 0);
   this->fields.usrSvtId = multipleViewManager;
   if ( kind == 1 )
   {
-    multipleViewManager = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    multipleViewManager = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( *v15 )
     {
       userSvtEntity = (*v15)->fields.userSvtEntity;
       v23 = (CommonUI_o *)multipleViewManager;
-      v24 = (ServantStatusDialog_ResultDelegate_o *)sub_1C3E7B0(ServantStatusDialog_ResultDelegate_TypeInfo);
+      v24 = (ServantStatusDialog_ResultDelegate_o *)sub_1C6BC54(ServantStatusDialog_ResultDelegate_TypeInfo);
       ServantStatusDialog_ResultDelegate___ctor(
         v24,
         (Il2CppObject *)this,
@@ -922,7 +922,7 @@ void MultipleViewComponent__OnClickServant(
         0);
       if ( v23 )
       {
-        CommonUI__OpenServantStatusDialog_31249060(v23, 0, userSvtEntity, v24, 0, 0, 0);
+        CommonUI__OpenServantStatusDialog_31428496(v23, 0, userSvtEntity, v24, 0, 0, 0);
         return;
       }
     }
@@ -938,8 +938,8 @@ void MultipleViewComponent__OnClickServant(
     (*v15)->fields.isSwapChoice ^= 1u;
     v25 = Method_MultipleViewComponent_OnClickServant__;
     if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickServant__ + 83) & 2) != 0 )
-      v25 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickServant__);
-    v20 = (System_Reflection_MethodBase_o *)sub_1C3E548(v25, v25[4]);
+      v25 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickServant__);
+    v20 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v25, v25[4]);
     v21 = 0;
     goto LABEL_36;
   }
@@ -950,8 +950,8 @@ void MultipleViewComponent__OnClickServant(
     (*v15)->fields.isSwapLock ^= 1u;
     v19 = Method_MultipleViewComponent_OnClickServant__;
     if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickServant__ + 83) & 2) != 0 )
-      v19 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickServant__);
-    v20 = (System_Reflection_MethodBase_o *)sub_1C3E548(v19, v19[4]);
+      v19 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickServant__);
+    v20 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v19, v19[4]);
     v21 = 11;
     goto LABEL_36;
   }
@@ -963,7 +963,7 @@ void MultipleViewComponent__OnClickServant(
     if ( !MultipleViewListViewItem__get_IsCanNotSelect((MultipleViewListViewItem_o *)multipleViewManager, v9) )
     {
       listSelectedUsrSvtId = this->fields.listSelectedUsrSvtId;
-      v37 = (System_Predicate_long__o *)sub_1C3E7B0(System_Predicate_long__TypeInfo);
+      v37 = (System_Predicate_long__o *)sub_1C6BC54(System_Predicate_long__TypeInfo);
       System_Predicate_long____ctor(
         v37,
         (Il2CppObject *)v7,
@@ -974,14 +974,14 @@ void MultipleViewComponent__OnClickServant(
       Index = System_Collections_Generic_List_long___FindIndex(
                 listSelectedUsrSvtId,
                 (System_Predicate_T__o *)v37,
-                (const MethodInfo_379DCC8 *)Method_System_Collections_Generic_List_long__FindIndex__);
+                (const MethodInfo_37E91DC *)Method_System_Collections_Generic_List_long__FindIndex__);
       if ( (Index & 0x80000000) == 0 )
       {
         v40 = Index;
         v41 = Method_MultipleViewComponent_OnClickServant__;
         if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickServant__ + 83) & 2) != 0 )
-          v41 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickServant__);
-        v42 = (System_Reflection_MethodBase_o *)sub_1C3E548(v41, v41[4]);
+          v41 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickServant__);
+        v42 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v41, v41[4]);
         OverwriteAssetSoundName__PlaySystemSe(v42, 1, 0, 0);
         multipleViewManager = (__int64)this->fields.listSelectedUsrSvtId;
         if ( !multipleViewManager )
@@ -990,7 +990,7 @@ void MultipleViewComponent__OnClickServant(
           (System_Collections_Generic_List_long__o *)multipleViewManager,
           v40,
           0,
-          (const MethodInfo_379D1F8 *)Method_System_Collections_Generic_List_long__set_Item__);
+          (const MethodInfo_37E870C *)Method_System_Collections_Generic_List_long__set_Item__);
         multipleViewManager = (__int64)this->fields.listSelectedImageLimitCount;
         if ( !multipleViewManager )
           goto LABEL_120;
@@ -998,32 +998,32 @@ void MultipleViewComponent__OnClickServant(
           (System_Collections_Generic_List_int__o *)multipleViewManager,
           v40,
           0,
-          (const MethodInfo_37981A0 *)Method_System_Collections_Generic_List_int__set_Item__);
+          (const MethodInfo_37E36B4 *)Method_System_Collections_Generic_List_int__set_Item__);
         multipleViewManager = (__int64)this->fields.listSelectedUsrSvtId;
         if ( !multipleViewManager )
           goto LABEL_120;
         v43 = this->fields.multipleViewManager;
         multipleViewManager = (__int64)System_Collections_Generic_List_long___ToArray(
                                          (System_Collections_Generic_List_long__o *)multipleViewManager,
-                                         (const MethodInfo_379EF4C *)Method_System_Collections_Generic_List_long__ToArray__);
+                                         (const MethodInfo_37EA460 *)Method_System_Collections_Generic_List_long__ToArray__);
         if ( !v43 )
           goto LABEL_120;
-        MultipleViewListViewManager__ModifyItem_33482524(v43, (System_Int64_array *)multipleViewManager, v44);
+        MultipleViewListViewManager__ModifyItem_33662140(v43, (System_Int64_array *)multipleViewManager, v44);
         MultipleViewComponent__SetConfirmButton(this, v45);
         goto LABEL_53;
       }
       if ( (MultipleViewComponent__GetCurrentSelectIndex(this, v39) & 0x80000000) == 0 )
       {
-        v53 = sub_1C3E7B0(MultipleViewComponent___c__DisplayClass37_1_TypeInfo);
+        v53 = sub_1C6BC54(MultipleViewComponent___c__DisplayClass37_1_TypeInfo);
         System_Object___ctor((Il2CppObject *)v53, 0);
         if ( v53 )
         {
           *(_QWORD *)(v53 + 24) = v7;
-          sub_1C3E508((CGThumbnailListItem_o *)(v53 + 24), v7, v54, v55);
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v53 + 24), v7, v54, v55);
           v56 = Method_MultipleViewComponent_OnClickServant__;
           if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickServant__ + 83) & 2) != 0 )
-            v56 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickServant__);
-          v57 = (System_Reflection_MethodBase_o *)sub_1C3E548(v56, v56[4]);
+            v56 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickServant__);
+          v57 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v56, v56[4]);
           OverwriteAssetSoundName__PlaySystemSe(v57, 0, 0, 0);
           multipleViewManager = MultipleViewComponent__GetCurrentSelectIndex(this, v58);
           v59 = *(_QWORD *)(v53 + 24);
@@ -1043,8 +1043,8 @@ void MultipleViewComponent__OnClickServant(
                 if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
                 v106 = v109;
-                v64 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v106, 0);
-                v65 = (System_Action_bool__int__o *)sub_1C3E7B0(System_Action_bool__int__TypeInfo);
+                v64 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v106, 0);
+                v65 = (System_Action_bool__int__o *)sub_1C6BC54(System_Action_bool__int__TypeInfo);
                 System_Action_bool__int____ctor(
                   v65,
                   (Il2CppObject *)v53,
@@ -1064,8 +1064,8 @@ void MultipleViewComponent__OnClickServant(
     }
     v33 = Method_MultipleViewComponent_OnClickServant__;
     if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickServant__ + 83) & 2) != 0 )
-      v33 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickServant__);
-    v34 = (System_Reflection_MethodBase_o *)sub_1C3E548(v33, v33[4]);
+      v33 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickServant__);
+    v34 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v33, v33[4]);
     OverwriteAssetSoundName__PlaySystemSe(v34, 2, 0, 0);
 LABEL_53:
     infoLb = this->fields.infoLb;
@@ -1084,8 +1084,8 @@ LABEL_53:
 LABEL_33:
       v26 = Method_MultipleViewComponent_OnClickServant__;
       if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickServant__ + 83) & 2) != 0 )
-        v26 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickServant__);
-      v20 = (System_Reflection_MethodBase_o *)sub_1C3E548(v26, v26[4]);
+        v26 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickServant__);
+      v20 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v26, v26[4]);
       v21 = 2;
 LABEL_36:
       OverwriteAssetSoundName__PlaySystemSe(v20, v21, 0, 0);
@@ -1099,8 +1099,8 @@ LABEL_36:
     goto LABEL_33;
   v47 = Method_MultipleViewComponent_OnClickServant__;
   if ( (*((_BYTE *)Method_MultipleViewComponent_OnClickServant__ + 83) & 2) != 0 )
-    v47 = (_QWORD *)sub_1C3E57C(Method_MultipleViewComponent_OnClickServant__);
-  v48 = (System_Reflection_MethodBase_o *)sub_1C3E548(v47, v47[4]);
+    v47 = (_QWORD *)sub_1C6BA20(Method_MultipleViewComponent_OnClickServant__);
+  v48 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v47, v47[4]);
   OverwriteAssetSoundName__PlaySystemSe(v48, 0, 0, 0);
   multipleViewManager = (__int64)UserGameMaster__getSelfUserGame(0);
   if ( !multipleViewManager )
@@ -1123,18 +1123,18 @@ LABEL_64:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v107 = v109;
-  if ( v50 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v107, 0) )
+  if ( v50 == CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v107, 0) )
     goto LABEL_64;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  multipleViewManager = (__int64)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_UserServantMaster___);
+  multipleViewManager = (__int64)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !multipleViewManager )
     goto LABEL_120;
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)multipleViewManager,
              v50,
-             (const MethodInfo_33B54B4 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-  multipleViewManager = (__int64)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ServantMaster___);
+             (const MethodInfo_33FB638 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+  multipleViewManager = (__int64)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !Entity )
     goto LABEL_120;
   v68 = (DataMasterBase_TMaster__TEntity__PKType__o *)multipleViewManager;
@@ -1144,13 +1144,13 @@ LABEL_64:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v110.fields.currentCryptoKey = klass;
   *(_QWORD *)&v110.fields.fakeValue = monitor;
-  multipleViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v110, 0);
+  multipleViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v110, 0);
   if ( !v68 )
     goto LABEL_120;
   v71 = DataMasterBase_object__object__int___GetEntity(
           v68,
           multipleViewManager,
-          (const MethodInfo_33B2F58 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+          (const MethodInfo_33F90DC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   multipleViewManager = (__int64)UserServantEntity__GetOverwriteStatus((UserServantEntity_o *)Entity, 0, 0);
   if ( !*v15 )
     goto LABEL_120;
@@ -1161,9 +1161,9 @@ LABEL_64:
   OverwriteStatus = UserServantEntity__GetOverwriteStatus((UserServantEntity_o *)multipleViewManager, 0, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_11953/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0);
-  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_11952/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0);
-  multipleViewManager = sub_1C3E60C(object___TypeInfo, 6);
+  v74 = LocalizationManager__Get((System_String_o *)StringLiteral_11950/*"SERVANT_STATUS_PUSH_CONFIRM_TITLE"*/, 0);
+  v75 = LocalizationManager__Get((System_String_o *)StringLiteral_11949/*"SERVANT_STATUS_PUSH_CONFIRM_MESSAGE"*/, 0);
+  multipleViewManager = sub_1C6BAB0(object___TypeInfo, 6);
   if ( !v72 )
     goto LABEL_120;
   v76 = (System_Object_array *)multipleViewManager;
@@ -1173,61 +1173,61 @@ LABEL_64:
   multipleViewManager = (__int64)Rarity__getRarityType(v77, 0);
   if ( !v76 )
 LABEL_120:
-    sub_1C3E7C0(multipleViewManager, v9);
+    sub_1C6BC60(multipleViewManager, v9);
   v80 = (Il2CppObject *)multipleViewManager;
   if ( multipleViewManager )
   {
-    multipleViewManager = sub_1C3E6A0(multipleViewManager, v76->obj.klass->_1.element_class);
+    multipleViewManager = sub_1C6BB44(multipleViewManager, v76->obj.klass->_1.element_class);
     if ( !multipleViewManager )
       goto LABEL_122;
   }
   if ( !LODWORD(v76->max_length) )
     goto LABEL_121;
   v76->m_Items[0] = v80;
-  sub_1C3E508((CGThumbnailListItem_o *)v76->m_Items, (int32_t)v80, v78, v79);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v76->m_Items, (int32_t)v80, v78, v79);
   if ( !v71 )
     goto LABEL_120;
   multipleViewManager = (__int64)ServantEntity__getClassName((ServantEntity_o *)v71, 0);
   v83 = (Il2CppObject *)multipleViewManager;
   if ( multipleViewManager )
   {
-    multipleViewManager = sub_1C3E6A0(multipleViewManager, v76->obj.klass->_1.element_class);
+    multipleViewManager = sub_1C6BB44(multipleViewManager, v76->obj.klass->_1.element_class);
     if ( !multipleViewManager )
       goto LABEL_122;
   }
   if ( LODWORD(v76->max_length) <= 1 )
     goto LABEL_121;
   v76->m_Items[1] = v83;
-  sub_1C3E508((CGThumbnailListItem_o *)&v76->m_Items[1], (int32_t)v83, v81, v82);
-  v84 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v76->m_Items[1], (int32_t)v83, v81, v82);
+  v84 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
           (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o)Entity[6],
           0);
   multipleViewManager = (__int64)ServantEntity__getName((ServantEntity_o *)v71, v84, -1, 1, 0);
   v87 = (Il2CppObject *)multipleViewManager;
   if ( multipleViewManager )
   {
-    multipleViewManager = sub_1C3E6A0(multipleViewManager, v76->obj.klass->_1.element_class);
+    multipleViewManager = sub_1C6BB44(multipleViewManager, v76->obj.klass->_1.element_class);
     if ( !multipleViewManager )
       goto LABEL_122;
   }
   if ( LODWORD(v76->max_length) <= 2 )
     goto LABEL_121;
   v76->m_Items[2] = v87;
-  sub_1C3E508((CGThumbnailListItem_o *)&v76->m_Items[2], (int32_t)v87, v85, v86);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v76->m_Items[2], (int32_t)v87, v85, v86);
   if ( !OverwriteStatus )
     goto LABEL_120;
   multipleViewManager = (__int64)Rarity__getRarityType(OverwriteStatus->fields._Rarity_k__BackingField, 0);
   v90 = (Il2CppObject *)multipleViewManager;
   if ( multipleViewManager )
   {
-    multipleViewManager = sub_1C3E6A0(multipleViewManager, v76->obj.klass->_1.element_class);
+    multipleViewManager = sub_1C6BB44(multipleViewManager, v76->obj.klass->_1.element_class);
     if ( !multipleViewManager )
       goto LABEL_122;
   }
   if ( LODWORD(v76->max_length) <= 3 )
     goto LABEL_121;
   v76->m_Items[3] = v90;
-  sub_1C3E508((CGThumbnailListItem_o *)&v76->m_Items[3], (int32_t)v90, v88, v89);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v76->m_Items[3], (int32_t)v90, v88, v89);
   if ( !*v15 )
     goto LABEL_120;
   multipleViewManager = (__int64)(*v15)->fields.servantEntity;
@@ -1237,14 +1237,14 @@ LABEL_120:
   v93 = (Il2CppObject *)multipleViewManager;
   if ( multipleViewManager )
   {
-    multipleViewManager = sub_1C3E6A0(multipleViewManager, v76->obj.klass->_1.element_class);
+    multipleViewManager = sub_1C6BB44(multipleViewManager, v76->obj.klass->_1.element_class);
     if ( !multipleViewManager )
       goto LABEL_122;
   }
   if ( LODWORD(v76->max_length) <= 4 )
     goto LABEL_121;
   v76->m_Items[4] = v93;
-  sub_1C3E508((CGThumbnailListItem_o *)&v76->m_Items[4], (int32_t)v93, v91, v92);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v76->m_Items[4], (int32_t)v93, v91, v92);
   v94 = *v15;
   if ( !*v15 )
     goto LABEL_120;
@@ -1252,31 +1252,31 @@ LABEL_120:
   if ( !v95 )
     goto LABEL_120;
   servantEntity = v94->fields.servantEntity;
-  multipleViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v95[6], 0);
+  multipleViewManager = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v95[6], 0);
   if ( !servantEntity )
     goto LABEL_120;
   multipleViewManager = (__int64)ServantEntity__getName(servantEntity, multipleViewManager, -1, 1, 0);
   v99 = (Il2CppObject *)multipleViewManager;
   if ( multipleViewManager )
   {
-    multipleViewManager = sub_1C3E6A0(multipleViewManager, v76->obj.klass->_1.element_class);
+    multipleViewManager = sub_1C6BB44(multipleViewManager, v76->obj.klass->_1.element_class);
     if ( !multipleViewManager )
     {
 LABEL_122:
-      v105 = sub_1C3E7E4();
-      sub_1C3E68C(v105, 0);
+      v105 = sub_1C6BC84();
+      sub_1C6BB30(v105, 0);
     }
   }
   if ( LODWORD(v76->max_length) <= 5 )
 LABEL_121:
-    sub_1C3E7C8(multipleViewManager, v9);
+    sub_1C6BC68(multipleViewManager);
   v76->m_Items[5] = v99;
-  sub_1C3E508((CGThumbnailListItem_o *)&v76->m_Items[5], (int32_t)v99, v97, v98);
-  v100 = System_String__Format_63677896(v75, v76, 0);
-  v101 = LocalizationManager__Get((System_String_o *)StringLiteral_11951/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0);
-  v102 = LocalizationManager__Get((System_String_o *)StringLiteral_11950/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v104 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C3E7B0(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v76->m_Items[5], (int32_t)v99, v97, v98);
+  v100 = System_String__Format_64008236(v75, v76, 0);
+  v101 = LocalizationManager__Get((System_String_o *)StringLiteral_11948/*"SERVANT_STATUS_PUSH_CONFIRM_DECIDE"*/, 0);
+  v102 = LocalizationManager__Get((System_String_o *)StringLiteral_11947/*"SERVANT_STATUS_PUSH_CONFIRM_CANCEL"*/, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v104 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C6BC54(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(
     v104,
     (Il2CppObject *)v7,
@@ -1290,7 +1290,7 @@ LABEL_121:
   }
   if ( !Instance )
     goto LABEL_120;
-  CommonUI__OpenConfirmDialog_31238288(
+  CommonUI__OpenConfirmDialog_31417724(
     (CommonUI_o *)Instance,
     v74,
     v100,
@@ -1311,7 +1311,7 @@ LABEL_121:
     0);
 LABEL_37:
   v27 = this->fields.multipleViewManager;
-  v28 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C3E7B0(MultipleViewListViewManager_CallbackFunc_TypeInfo);
+  v28 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C6BC54(MultipleViewListViewManager_CallbackFunc_TypeInfo);
   MultipleViewListViewManager_CallbackFunc___ctor(
     v28,
     (Il2CppObject *)this,
@@ -1320,8 +1320,8 @@ LABEL_37:
   if ( !v27 )
     goto LABEL_120;
   v27->fields.callbackFunc = v28;
-  sub_1C3E508((CGThumbnailListItem_o *)&v27->fields.callbackFunc, (int32_t)v28, v30, v31);
-  MultipleViewListViewManager__SetMode_33486448(v27, 2, v32);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v27->fields.callbackFunc, (int32_t)v28, v30, v31);
+  MultipleViewListViewManager__SetMode_33666064(v27, 2, v32);
 }
 
 
@@ -1356,19 +1356,19 @@ void MultipleViewComponent__Open(MultipleViewComponent_o *this, bool isResetSele
   const MethodInfo *v30; // x2
   const MethodInfo *v31; // x1
 
-  if ( (byte_4C52068 & 1) == 0 )
+  if ( (byte_4CB15B6 & 1) == 0 )
   {
-    sub_1C3E564(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&long___TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long___ctor___78136144);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor___78135936);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_List_long__TypeInfo);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickServant__);
-    sub_1C3E564(&MyRoomControl_TypeInfo);
-    byte_4C52068 = 1;
+    sub_1C6BA08(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&long___TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long___ctor___78519008);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor___78518792);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_List_long__TypeInfo);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickServant__);
+    sub_1C6BA08(&MyRoomControl_TypeInfo);
+    byte_4CB15B6 = 1;
   }
   if ( isResetSelected )
   {
@@ -1378,26 +1378,26 @@ void MultipleViewComponent__Open(MultipleViewComponent_o *this, bool isResetSele
       j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
       v5 = MyRoomControl_TypeInfo;
     }
-    v6 = (System_Collections_Generic_IEnumerable_T__o *)sub_1C3E60C(
+    v6 = (System_Collections_Generic_IEnumerable_T__o *)sub_1C6BAB0(
                                                           long___TypeInfo,
                                                           (unsigned int)v5->static_fields->MULTIPLE_VIEW_SELECTED_MAX);
-    v7 = (System_Collections_Generic_List_long__o *)sub_1C3E7B0(System_Collections_Generic_List_long__TypeInfo);
-    System_Collections_Generic_List_long____ctor_58314088(
+    v7 = (System_Collections_Generic_List_long__o *)sub_1C6BC54(System_Collections_Generic_List_long__TypeInfo);
+    System_Collections_Generic_List_long____ctor_58622588(
       v7,
       v6,
-      (const MethodInfo_379CD68 *)Method_System_Collections_Generic_List_long___ctor___78136144);
+      (const MethodInfo_37E827C *)Method_System_Collections_Generic_List_long___ctor___78519008);
     this->fields.listSelectedUsrSvtId = v7;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.listSelectedUsrSvtId, (int32_t)v7, v8, v9);
-    v10 = (System_Collections_Generic_IEnumerable_T__o *)sub_1C3E60C(
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.listSelectedUsrSvtId, (int32_t)v7, v8, v9);
+    v10 = (System_Collections_Generic_IEnumerable_T__o *)sub_1C6BAB0(
                                                            int___TypeInfo,
                                                            (unsigned int)MyRoomControl_TypeInfo->static_fields->MULTIPLE_VIEW_SELECTED_MAX);
-    v11 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
-    System_Collections_Generic_List_int____ctor_58293520(
+    v11 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+    System_Collections_Generic_List_int____ctor_58602020(
       v11,
       v10,
-      (const MethodInfo_3797D10 *)Method_System_Collections_Generic_List_int___ctor___78135936);
+      (const MethodInfo_37E3224 *)Method_System_Collections_Generic_List_int___ctor___78518792);
     this->fields.listSelectedImageLimitCount = v11;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.listSelectedImageLimitCount, (int32_t)v11, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.listSelectedImageLimitCount, (int32_t)v11, v12, v13);
   }
   MultipleViewComponent__Init(this, (const MethodInfo *)isResetSelected);
   gameObject = (int64_t)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -1405,11 +1405,11 @@ void MultipleViewComponent__Open(MultipleViewComponent_o *this, bool isResetSele
     goto LABEL_15;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
   this->fields.cancelCallback = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.cancelCallback, 0, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.cancelCallback, 0, v16, v17);
   gameObject = (int64_t)this->fields.titleInfo;
   if ( !gameObject )
     goto LABEL_15;
-  TitleInfoControl__changeTitleInfo_39891972((TitleInfoControl_o *)gameObject, 1, 63, 0, 0);
+  TitleInfoControl__changeTitleInfo_40073532((TitleInfoControl_o *)gameObject, 1, 63, 0, 0);
   gameObject = (int64_t)this->fields.bgTxtSprite;
   if ( !gameObject )
     goto LABEL_15;
@@ -1425,12 +1425,12 @@ void MultipleViewComponent__Open(MultipleViewComponent_o *this, bool isResetSele
   v22 = gameObject;
   gameObject = (int64_t)System_Collections_Generic_List_long___ToArray(
                           this->fields.listSelectedUsrSvtId,
-                          (const MethodInfo_379EF4C *)Method_System_Collections_Generic_List_long__ToArray__);
+                          (const MethodInfo_37EA460 *)Method_System_Collections_Generic_List_long__ToArray__);
   if ( !multipleViewManager
     || (MultipleViewListViewManager__CreateList(multipleViewManager, v22, (System_Int64_array *)gameObject, v23),
         MultipleViewComponent__UpdateScaleChangeIconSprite(this, v24),
         v25 = this->fields.multipleViewManager,
-        v26 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C3E7B0(MultipleViewListViewManager_CallbackFunc_TypeInfo),
+        v26 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C6BC54(MultipleViewListViewManager_CallbackFunc_TypeInfo),
         MultipleViewListViewManager_CallbackFunc___ctor(
           v26,
           (Il2CppObject *)this,
@@ -1439,11 +1439,11 @@ void MultipleViewComponent__Open(MultipleViewComponent_o *this, bool isResetSele
         !v25) )
   {
 LABEL_15:
-    sub_1C3E7C0(gameObject, v15);
+    sub_1C6BC60(gameObject, v15);
   }
   v25->fields.callbackFunc = v26;
-  sub_1C3E508((CGThumbnailListItem_o *)&v25->fields.callbackFunc, (int32_t)v26, v28, v29);
-  MultipleViewListViewManager__SetMode_33486448(v25, 2, v30);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v25->fields.callbackFunc, (int32_t)v26, v28, v29);
+  MultipleViewListViewManager__SetMode_33666064(v25, 2, v30);
   this->fields.state = 2;
   MultipleViewComponent__SetConfirmButton(this, v31);
 }
@@ -1497,18 +1497,18 @@ void MultipleViewComponent__PushRequest(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v45; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v46; // 0:x0.16
 
-  if ( (byte_4C5206E & 1) == 0 )
+  if ( (byte_4CB15BC & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_MultipleViewComponent_EndePushRequest__);
-    sub_1C3E564(&Method_NetworkManager_getRequest_CardFavoriteRequest___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C3E564(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C5206E = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_MultipleViewComponent_EndePushRequest__);
+    sub_1C6BA08(&Method_NetworkManager_getRequest_CardFavoriteRequest___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CB15BC = 1;
   }
   limitCountSupport = (CommonUI_o *)UserGameMaster__getSelfUserGame(0);
   if ( !selectItem )
@@ -1517,7 +1517,7 @@ void MultipleViewComponent__PushRequest(
   userSvtEntity = selectItem->fields.userSvtEntity;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  limitCountSupport = (CommonUI_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  limitCountSupport = (CommonUI_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !v7 || !userSvtEntity )
     goto LABEL_19;
   v9 = (UserServantCollectionMaster_o *)limitCountSupport;
@@ -1528,11 +1528,11 @@ void MultipleViewComponent__PushRequest(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v45.fields.currentCryptoKey = v12;
   *(_QWORD *)&v45.fields.fakeValue = v11;
-  limitCountSupport = (CommonUI_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v45, 0);
+  limitCountSupport = (CommonUI_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v45, 0);
   if ( !v9 )
     goto LABEL_19;
   EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(v9, m_CachedPtr, (int32_t)limitCountSupport, 0);
-  limitCountSupport = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  limitCountSupport = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !limitCountSupport )
     goto LABEL_19;
   CommonUI__SetConnectMarkFadeInLag(limitCountSupport, 0, 0);
@@ -1545,57 +1545,57 @@ void MultipleViewComponent__PushRequest(
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v43 = v44;
-  v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v43, 0);
+  v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v43, 0);
   v18 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
   soundInfo = v7->fields.soundInfo;
   v39 = v17;
   *(_OWORD *)&v42.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
   *(_OWORD *)&v42.fields.fakeValue = v18;
-  v37 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v42, 0);
-  v19 = (NetworkManager_ResultCallbackFunc_o *)sub_1C3E7B0(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v37 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v42, 0);
+  v19 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v19, (Il2CppObject *)this, Method_MultipleViewComponent_EndePushRequest__, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v19,
-                     (const MethodInfo_3184BE4 *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
+                     (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
   v21 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
   v22 = (CardFavoriteRequest_o *)Request_object;
   *(_OWORD *)&v41.fields.currentCryptoKey = *(_OWORD *)&p_fields->id.fields.currentCryptoKey;
   *(_OWORD *)&v41.fields.fakeValue = v21;
-  targetUsrSVtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v41, 0);
-  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(
+  targetUsrSVtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v41, 0);
+  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
                       userSvtEntity->fields.imageLimitCount,
                       0);
-  v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(userSvtEntity->fields.dispLimitCount, 0);
-  v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(
+  v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(userSvtEntity->fields.dispLimitCount, 0);
+  v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
           userSvtEntity->fields.commandCardLimitCount,
           0);
-  v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(userSvtEntity->fields.iconLimitCount, 0);
-  v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(userSvtEntity->fields.portraitLimitCount, 0);
+  v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(userSvtEntity->fields.iconLimitCount, 0);
+  v26 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(userSvtEntity->fields.portraitLimitCount, 0);
   IsLock = UserServantEntity__IsLock(userSvtEntity, 0);
   limitCountSupport = (CommonUI_o *)UserServantEntity__IsChoice(userSvtEntity, 0);
   if ( !EntityDefinitely )
     goto LABEL_19;
   v28 = (char)limitCountSupport;
   commonFlag = EntityDefinitely->fields.svtCommonFlag;
-  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(
+  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
                   userSvtEntity->fields.battleVoice,
                   0);
-  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(
+  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
                        userSvtEntity->fields.randomLimitCount,
                        0);
-  v32 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(
+  v32 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
           userSvtEntity->fields.randomLimitCountSupport,
           0);
   v33 = *(_QWORD *)&userSvtEntity->fields.limitCountSupport.fields.currentCryptoKey;
   *(_QWORD *)&v46.fields.fakeValue = *(_QWORD *)&userSvtEntity->fields.limitCountSupport.fields.fakeValue;
   randomSettingSupport = v32;
   *(_QWORD *)&v46.fields.currentCryptoKey = v33;
-  limitCountSupport = (CommonUI_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v46, 0);
+  limitCountSupport = (CommonUI_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v46, 0);
   if ( !v22 )
 LABEL_19:
-    sub_1C3E7C0(limitCountSupport, v6);
+    sub_1C6BC60(limitCountSupport, v6);
   CardFavoriteRequest__beginRequest(
     v22,
     targetUsrSVtId,
@@ -1650,7 +1650,7 @@ void MultipleViewComponent__SetConfirmButton(MultipleViewComponent_o *this, cons
       }
     }
 LABEL_12:
-    sub_1C3E7C0(confirmBtnColor, method);
+    sub_1C6BC60(confirmBtnColor, method);
   }
   confirmBtnColor = this->fields.confirmBtnColor;
   if ( !confirmBtnColor )
@@ -1685,13 +1685,13 @@ void MultipleViewComponent__SetLatestSelectedUsrSvtId(
   int64_t v4; // [xsp+8h] [xbp-18h] BYREF
 
   v4 = usrSvtId;
-  if ( (byte_4C5206A & 1) == 0 )
+  if ( (byte_4CB15B8 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_9199/*"MultipleViewSelectedUsrSvtId"*/);
-    byte_4C5206A = 1;
+    sub_1C6BA08(&StringLiteral_9196/*"MultipleViewSelectedUsrSvtId"*/);
+    byte_4CB15B8 = 1;
   }
   v3 = System_Int64__ToString((int64_t)&v4, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_9199/*"MultipleViewSelectedUsrSvtId"*/, v3, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_9196/*"MultipleViewSelectedUsrSvtId"*/, v3, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -1712,21 +1712,21 @@ void MultipleViewComponent__SetModeTabKind(MultipleViewComponent_o *this, int32_
   const MethodInfo *v15; // x2
   const MethodInfo *v16; // x1
 
-  if ( (byte_4C52075 & 1) == 0 )
+  if ( (byte_4CB15C3 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_11660/*"SERVANT_LIST_EXPLANATION_PUSH"*/);
-    sub_1C3E564(&StringLiteral_17671/*"button_push_reg"*/);
-    sub_1C3E564(&StringLiteral_17672/*"button_push_unreg"*/);
-    sub_1C3E564(&StringLiteral_17657/*"button_allchoice_reg"*/);
-    sub_1C3E564(&StringLiteral_17660/*"button_alllock_unreg"*/);
-    sub_1C3E564(&StringLiteral_11658/*"SERVANT_LIST_EXPLANATION_CHOICE"*/);
-    sub_1C3E564(&StringLiteral_11659/*"SERVANT_LIST_EXPLANATION_LOCK"*/);
-    sub_1C3E564(&StringLiteral_17673/*"button_select_reg"*/);
-    sub_1C3E564(&StringLiteral_17674/*"button_select_unreg"*/);
-    sub_1C3E564(&StringLiteral_17659/*"button_alllock_reg"*/);
-    sub_1C3E564(&StringLiteral_17658/*"button_allchoice_unreg"*/);
-    byte_4C52075 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_11657/*"SERVANT_LIST_EXPLANATION_PUSH"*/);
+    sub_1C6BA08(&StringLiteral_17669/*"button_push_reg"*/);
+    sub_1C6BA08(&StringLiteral_17670/*"button_push_unreg"*/);
+    sub_1C6BA08(&StringLiteral_17655/*"button_allchoice_reg"*/);
+    sub_1C6BA08(&StringLiteral_17658/*"button_alllock_unreg"*/);
+    sub_1C6BA08(&StringLiteral_11655/*"SERVANT_LIST_EXPLANATION_CHOICE"*/);
+    sub_1C6BA08(&StringLiteral_11656/*"SERVANT_LIST_EXPLANATION_LOCK"*/);
+    sub_1C6BA08(&StringLiteral_17671/*"button_select_reg"*/);
+    sub_1C6BA08(&StringLiteral_17672/*"button_select_unreg"*/);
+    sub_1C6BA08(&StringLiteral_17657/*"button_alllock_reg"*/);
+    sub_1C6BA08(&StringLiteral_17656/*"button_allchoice_unreg"*/);
+    byte_4CB15C3 = 1;
   }
   if ( this->fields.tabModeKind != modeKind )
   {
@@ -1742,7 +1742,7 @@ void MultipleViewComponent__SetModeTabKind(MultipleViewComponent_o *this, int32_
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.normalTabSprite;
     if ( !normalTabButton )
       goto LABEL_49;
-    v6 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17674/*"button_select_unreg"*/ : &StringLiteral_17673/*"button_select_reg"*/);
+    v6 = (System_String_o **)(this->fields.tabModeKind ? &StringLiteral_17672/*"button_select_unreg"*/ : &StringLiteral_17671/*"button_select_reg"*/);
     UISprite__set_spriteName((UISprite_o *)normalTabButton, *v6, 0);
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabButton;
     if ( !normalTabButton )
@@ -1755,7 +1755,7 @@ void MultipleViewComponent__SetModeTabKind(MultipleViewComponent_o *this, int32_
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.lockTabSprite;
     if ( !normalTabButton )
       goto LABEL_49;
-    v7 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17659/*"button_alllock_reg"*/ : &StringLiteral_17660/*"button_alllock_unreg"*/);
+    v7 = (System_String_o **)(this->fields.tabModeKind == 1 ? &StringLiteral_17657/*"button_alllock_reg"*/ : &StringLiteral_17658/*"button_alllock_unreg"*/);
     UISprite__set_spriteName((UISprite_o *)normalTabButton, *v7, 0);
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.choiceTabButton;
     if ( !normalTabButton )
@@ -1768,7 +1768,7 @@ void MultipleViewComponent__SetModeTabKind(MultipleViewComponent_o *this, int32_
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.choiceTabSprite;
     if ( !normalTabButton )
       goto LABEL_49;
-    v8 = (System_String_o **)(this->fields.tabModeKind == 2 ? &StringLiteral_17657/*"button_allchoice_reg"*/ : &StringLiteral_17658/*"button_allchoice_unreg"*/);
+    v8 = (System_String_o **)(this->fields.tabModeKind == 2 ? &StringLiteral_17655/*"button_allchoice_reg"*/ : &StringLiteral_17656/*"button_allchoice_unreg"*/);
     UISprite__set_spriteName((UISprite_o *)normalTabButton, *v8, 0);
     normalTabButton = (UnityEngine_Behaviour_o *)this->fields.pushTabButton;
     if ( !normalTabButton
@@ -1778,12 +1778,12 @@ void MultipleViewComponent__SetModeTabKind(MultipleViewComponent_o *this, int32_
           (normalTabButton = (UnityEngine_Behaviour_o *)this->fields.pushTabSprite) == 0) )
     {
 LABEL_49:
-      sub_1C3E7C0(normalTabButton, *(_QWORD *)&modeKind);
+      sub_1C6BC60(normalTabButton, *(_QWORD *)&modeKind);
     }
     if ( this->fields.tabModeKind == 3 )
-      v9 = &StringLiteral_17671/*"button_push_reg"*/;
+      v9 = &StringLiteral_17669/*"button_push_reg"*/;
     else
-      v9 = &StringLiteral_17672/*"button_push_unreg"*/;
+      v9 = &StringLiteral_17670/*"button_push_unreg"*/;
     UISprite__set_spriteName((UISprite_o *)normalTabButton, (System_String_o *)*v9, 0);
     switch ( modeKind )
     {
@@ -1804,19 +1804,19 @@ LABEL_49:
         v13 = this->fields.infoLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v14 = &StringLiteral_11659/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
+        v14 = &StringLiteral_11656/*"SERVANT_LIST_EXPLANATION_LOCK"*/;
         goto LABEL_43;
       case 2:
         v13 = this->fields.infoLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v14 = &StringLiteral_11658/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
+        v14 = &StringLiteral_11655/*"SERVANT_LIST_EXPLANATION_CHOICE"*/;
         goto LABEL_43;
       case 3:
         v13 = this->fields.infoLb;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v14 = &StringLiteral_11660/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
+        v14 = &StringLiteral_11657/*"SERVANT_LIST_EXPLANATION_PUSH"*/;
 LABEL_43:
         normalTabButton = (UnityEngine_Behaviour_o *)LocalizationManager__Get((System_String_o *)*v14, 0);
         if ( !v13 )
@@ -1836,7 +1836,7 @@ LABEL_47:
         normalTabButton = (UnityEngine_Behaviour_o *)this->fields.multipleViewManager;
         if ( !normalTabButton )
           goto LABEL_49;
-        MultipleViewListViewManager__SetMode_33486448((MultipleViewListViewManager_o *)normalTabButton, 2, v15);
+        MultipleViewListViewManager__SetMode_33666064((MultipleViewListViewManager_o *)normalTabButton, 2, v15);
         MultipleViewComponent__SetConfirmButton(this, v16);
         break;
       default:
@@ -1872,13 +1872,13 @@ void MultipleViewComponent__StatusRequest(
   System_Int64_array *unlockList; // [xsp+10h] [xbp-30h] BYREF
   System_Int64_array *lockList; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4C52076 & 1) == 0 )
+  if ( (byte_4CB15C4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_MultipleViewComponent_EndStatusSync__);
-    sub_1C3E564(&Method_NetworkManager_getRequest_CardStatusSyncRequest___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C52076 = 1;
+    sub_1C6BA08(&Method_MultipleViewComponent_EndStatusSync__);
+    sub_1C6BA08(&Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4CB15C4 = 1;
   }
   unlockList = 0;
   lockList = 0;
@@ -1893,8 +1893,8 @@ void MultipleViewComponent__StatusRequest(
     if ( MultipleViewListViewManager__GetSwapChoiceList(multipleViewManager, &choiceList, &v18, v3) )
     {
       this->fields.requedstCallback = callback;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.requedstCallback, (int32_t)callback, v15, v16);
-      v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1C3E7B0(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.requedstCallback, (int32_t)callback, v15, v16);
+      v17 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v17,
         (Il2CppObject *)this,
@@ -1904,7 +1904,7 @@ void MultipleViewComponent__StatusRequest(
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       multipleViewManager = (MultipleViewListViewManager_o *)NetworkManager__getRequest_object_(
                                                                v17,
-                                                               (const MethodInfo_3184BE4 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                                               (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( multipleViewManager )
       {
         v12 = v18;
@@ -1914,7 +1914,7 @@ void MultipleViewComponent__StatusRequest(
         goto LABEL_17;
       }
 LABEL_21:
-      sub_1C3E7C0(multipleViewManager, callback);
+      sub_1C6BC60(multipleViewManager, callback);
     }
   }
   else if ( tabModeKind == 1 )
@@ -1925,8 +1925,8 @@ LABEL_21:
     if ( MultipleViewListViewManager__GetSwapLockList(multipleViewManager, &lockList, &unlockList, v3) )
     {
       this->fields.requedstCallback = callback;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.requedstCallback, (int32_t)callback, v8, v9);
-      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C3E7B0(NetworkManager_ResultCallbackFunc_TypeInfo);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.requedstCallback, (int32_t)callback, v8, v9);
+      v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         v10,
         (Il2CppObject *)this,
@@ -1936,7 +1936,7 @@ LABEL_21:
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       multipleViewManager = (MultipleViewListViewManager_o *)NetworkManager__getRequest_object_(
                                                                v10,
-                                                               (const MethodInfo_3184BE4 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
+                                                               (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_CardStatusSyncRequest___);
       if ( multipleViewManager )
       {
         v12 = unlockList;
@@ -1971,7 +1971,7 @@ void MultipleViewComponent__UpdateScaleChangeIconSprite(MultipleViewComponent_o 
                                                                  method),
         !scaleChangeTabSprite) )
   {
-    sub_1C3E7C0(multipleViewManager, method);
+    sub_1C6BC60(multipleViewManager, method);
   }
   UISprite__set_spriteName(scaleChangeTabSprite, (System_String_o *)multipleViewManager, 0);
 }
@@ -1992,15 +1992,15 @@ void MultipleViewComponent_RequestCallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -2012,9 +2012,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7C164;
+  this->fields.invoke_impl = (intptr_t)sub_1A9AD8C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7C11C;
+  this->fields.extra_arg = (intptr_t)sub_1A9AD44;
 }
 
 
@@ -2025,21 +2025,18 @@ System_IAsyncResult_o *MultipleViewComponent_RequestCallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
-  bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v13[0] = isRequest;
-  if ( (byte_4C5207C & 1) == 0 )
+  v10[0] = isRequest;
+  if ( (byte_4CB15CA & 1) == 0 )
   {
-    sub_1C3E564(&bool_TypeInfo);
-    byte_4C5207C = 1;
+    sub_1C6BA08(&bool_TypeInfo);
+    byte_4CB15CA = 1;
   }
-  v12[1] = 0;
-  v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
+  v9[1] = 0;
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
 }
 
 
@@ -2048,7 +2045,7 @@ void MultipleViewComponent_RequestCallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 
@@ -2084,36 +2081,36 @@ void MultipleViewComponent___c__DisplayClass37_0___OnClickServant_b__0(
   int32_t v9; // w2
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C5207D & 1) == 0 )
+  if ( (byte_4CB15CB & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&Method_MultipleViewComponent___c__DisplayClass37_0__OnClickServant_b__1__);
-    byte_4C5207D = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&Method_MultipleViewComponent___c__DisplayClass37_0__OnClickServant_b__1__);
+    byte_4CB15CB = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = (CommonUI_o *)Instance;
   if ( isDecide )
   {
     _9__1 = this->fields.__9__1;
     if ( !_9__1 )
     {
-      _9__1 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      _9__1 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
       System_Action___ctor(
         _9__1,
         (Il2CppObject *)this,
         Method_MultipleViewComponent___c__DisplayClass37_0__OnClickServant_b__1__,
         0);
       this->fields.__9__1 = _9__1;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v9, v10);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v9, v10);
     }
     if ( v7 )
     {
-      CommonUI__CloseConfirmDialog_31238516(v7, _9__1, 0);
+      CommonUI__CloseConfirmDialog_31417952(v7, _9__1, 0);
       return;
     }
 LABEL_10:
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   }
   if ( !Instance )
     goto LABEL_10;
@@ -2128,7 +2125,7 @@ void MultipleViewComponent___c__DisplayClass37_0___OnClickServant_b__1(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   MultipleViewComponent__PushRequest(this->fields.__4__this, this->fields.item, v2);
 }
 
@@ -2146,21 +2143,21 @@ bool MultipleViewComponent___c__DisplayClass37_0___OnClickServant_b__2(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v10; // [xsp+20h] [xbp-40h]
 
   v4 = this;
-  if ( (byte_4C5207E & 1) == 0 )
+  if ( (byte_4CB15CC & 1) == 0 )
   {
-    this = (MultipleViewComponent___c__DisplayClass37_0_o *)sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C5207E = 1;
+    this = (MultipleViewComponent___c__DisplayClass37_0_o *)sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4CB15CC = 1;
   }
   item = v4->fields.item;
   if ( !item || (userSvtEntity = item->fields.userSvtEntity) == 0 )
-    sub_1C3E7C0(this, id);
+    sub_1C6BC60(this, id);
   v7 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
   *(_OWORD *)&v10.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v10.fields.fakeValue = v7;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v9 = v10;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(&v9, 0) == id;
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v9, 0) == id;
 }
 
 
@@ -2208,15 +2205,15 @@ void MultipleViewComponent___c__DisplayClass37_1___OnClickServant_b__3(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v32; // [xsp+20h] [xbp-50h]
 
   v6 = this;
-  if ( (byte_4C5207F & 1) == 0 )
+  if ( (byte_4CB15CD & 1) == 0 )
   {
-    sub_1C3E564(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_long__set_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__set_Item__);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickServant__);
-    this = (MultipleViewComponent___c__DisplayClass37_1_o *)sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4C5207F = 1;
+    sub_1C6BA08(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_long__set_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__set_Item__);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickServant__);
+    this = (MultipleViewComponent___c__DisplayClass37_1_o *)sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4CB15CD = 1;
   }
   if ( result )
   {
@@ -2240,7 +2237,7 @@ void MultipleViewComponent___c__DisplayClass37_1___OnClickServant_b__3(
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
     v31 = v32;
-    this = (MultipleViewComponent___c__DisplayClass37_1_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49007660(
+    this = (MultipleViewComponent___c__DisplayClass37_1_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(
                                                               &v31,
                                                               0);
     if ( !listSelectedUsrSvtId )
@@ -2249,7 +2246,7 @@ void MultipleViewComponent___c__DisplayClass37_1___OnClickServant_b__3(
       listSelectedUsrSvtId,
       selectIndex,
       (int64_t)this,
-      (const MethodInfo_379D1F8 *)Method_System_Collections_Generic_List_long__set_Item__);
+      (const MethodInfo_37E870C *)Method_System_Collections_Generic_List_long__set_Item__);
     v14 = v6->fields.CS___8__locals1;
     if ( !v14 )
       goto LABEL_28;
@@ -2263,7 +2260,7 @@ void MultipleViewComponent___c__DisplayClass37_1___OnClickServant_b__3(
       (System_Collections_Generic_List_int__o *)this,
       v6->fields.selectIndex,
       imageLimitCount,
-      (const MethodInfo_37981A0 *)Method_System_Collections_Generic_List_int__set_Item__);
+      (const MethodInfo_37E36B4 *)Method_System_Collections_Generic_List_int__set_Item__);
     v16 = v6->fields.CS___8__locals1;
     if ( !v16
       || (v17 = v16->fields.__4__this) == 0
@@ -2271,14 +2268,14 @@ void MultipleViewComponent___c__DisplayClass37_1___OnClickServant_b__3(
       || (multipleViewManager = v17->fields.multipleViewManager,
           this = (MultipleViewComponent___c__DisplayClass37_1_o *)System_Collections_Generic_List_long___ToArray(
                                                                     (System_Collections_Generic_List_long__o *)this,
-                                                                    (const MethodInfo_379EF4C *)Method_System_Collections_Generic_List_long__ToArray__),
+                                                                    (const MethodInfo_37EA460 *)Method_System_Collections_Generic_List_long__ToArray__),
           !multipleViewManager)
-      || (MultipleViewListViewManager__ModifyItem_33482524(multipleViewManager, (System_Int64_array *)this, v19),
+      || (MultipleViewListViewManager__ModifyItem_33662140(multipleViewManager, (System_Int64_array *)this, v19),
           (v20 = v6->fields.CS___8__locals1) == 0)
       || (this = (MultipleViewComponent___c__DisplayClass37_1_o *)v20->fields.__4__this) == 0 )
     {
 LABEL_28:
-      sub_1C3E7C0(this, result);
+      sub_1C6BC60(this, result);
     }
     MultipleViewComponent__SetConfirmButton((MultipleViewComponent_o *)this, (const MethodInfo *)result);
   }
@@ -2289,7 +2286,7 @@ LABEL_28:
   if ( !v22 )
     goto LABEL_28;
   klass = v22[4].klass;
-  v24 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C3E7B0(MultipleViewListViewManager_CallbackFunc_TypeInfo);
+  v24 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C6BC54(MultipleViewListViewManager_CallbackFunc_TypeInfo);
   MultipleViewListViewManager_CallbackFunc___ctor(
     v24,
     v22,
@@ -2298,8 +2295,8 @@ LABEL_28:
   if ( !klass )
     goto LABEL_28;
   klass->vtable[4].method = (const MethodInfo *)v24;
-  sub_1C3E508((CGThumbnailListItem_o *)&klass->vtable[4].method, (int32_t)v24, v26, v27);
-  MultipleViewListViewManager__SetMode_33486448((MultipleViewListViewManager_o *)klass, 2, v28);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&klass->vtable[4].method, (int32_t)v24, v26, v27);
+  MultipleViewListViewManager__SetMode_33666064((MultipleViewListViewManager_o *)klass, 2, v28);
   v29 = v6->fields.CS___8__locals1;
   if ( !v29 )
     goto LABEL_28;
@@ -2340,12 +2337,12 @@ void MultipleViewComponent___c__DisplayClass40_0___CloseSvtDetail_b__0(
   const MethodInfo *v12; // x3
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C52080 & 1) == 0 )
+  if ( (byte_4CB15CE & 1) == 0 )
   {
-    sub_1C3E564(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_MultipleViewComponent_OnClickServant__);
-    sub_1C3E564(&StringLiteral_3437/*"CLICK_BACK"*/);
-    byte_4C52080 = 1;
+    sub_1C6BA08(&MultipleViewListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_MultipleViewComponent_OnClickServant__);
+    sub_1C6BA08(&StringLiteral_3429/*"CLICK_BACK"*/);
+    byte_4CB15CE = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -2368,14 +2365,14 @@ void MultipleViewComponent___c__DisplayClass40_0___CloseSvtDetail_b__0(
           _4__this = (MultipleViewComponent_o *)v5->fields.myRoomFsm;
           if ( _4__this )
           {
-            PlayMakerFSM__SendEvent((PlayMakerFSM_o *)_4__this, (System_String_o *)StringLiteral_3437/*"CLICK_BACK"*/, 0);
+            PlayMakerFSM__SendEvent((PlayMakerFSM_o *)_4__this, (System_String_o *)StringLiteral_3429/*"CLICK_BACK"*/, 0);
             return;
           }
         }
       }
     }
 LABEL_18:
-    sub_1C3E7C0(_4__this, method);
+    sub_1C6BC60(_4__this, method);
   }
   if ( !_4__this->fields.multipleViewManager )
     goto LABEL_18;
@@ -2394,11 +2391,11 @@ LABEL_18:
   if ( !v7 )
     goto LABEL_18;
   klass = v7[4].klass;
-  v9 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C3E7B0(MultipleViewListViewManager_CallbackFunc_TypeInfo);
+  v9 = (MultipleViewListViewManager_CallbackFunc_o *)sub_1C6BC54(MultipleViewListViewManager_CallbackFunc_TypeInfo);
   MultipleViewListViewManager_CallbackFunc___ctor(v9, v7, (intptr_t)Method_MultipleViewComponent_OnClickServant__, v10);
   if ( !klass )
     goto LABEL_18;
   klass->vtable[4].method = (const MethodInfo *)v9;
-  sub_1C3E508((CGThumbnailListItem_o *)&klass->vtable[4].method, (int32_t)v9, v11, v12);
-  MultipleViewListViewManager__SetMode_33486448((MultipleViewListViewManager_o *)klass, 2, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&klass->vtable[4].method, (int32_t)v9, v11, v12);
+  MultipleViewListViewManager__SetMode_33666064((MultipleViewListViewManager_o *)klass, 2, v13);
 }

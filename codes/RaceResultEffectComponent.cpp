@@ -1,9 +1,9 @@
 void RaceResultEffectComponent___ctor(RaceResultEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C58476 & 1) == 0 )
+  if ( (byte_4CB79E6 & 1) == 0 )
   {
-    sub_1C3E564(&CommonEffectComponent_TypeInfo);
-    byte_4C58476 = 1;
+    sub_1C6BA08(&CommonEffectComponent_TypeInfo);
+    byte_4CB79E6 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -33,18 +33,18 @@ void RaceResultEffectComponent__SetParam(
   System_Object_array *v13; // x20
   __int64 v14; // x24
 
-  if ( (byte_4C58475 & 1) == 0 )
+  if ( (byte_4CB79E5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
-    byte_4C58475 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+    byte_4CB79E5 = 1;
   }
   this->fields.param = param;
   p_param = &this->fields.param;
-  sub_1C3E508((CGThumbnailListItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_param, (int32_t)param, (int32_t)method, v3);
   v9 = (__int64)*(p_param - 1);
   if ( !v9 )
 LABEL_17:
-    sub_1C3E7C0(Components_object, v8);
+    sub_1C6BC60(Components_object, v8);
   v10 = *(_DWORD *)(v9 + 24);
   if ( v10 >= 1 )
   {
@@ -58,7 +58,7 @@ LABEL_17:
         goto LABEL_17;
       Components_object = UnityEngine_GameObject__GetComponents_object_(
                             (UnityEngine_GameObject_o *)Components_object,
-                            (const MethodInfo_3151A28 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
+                            (const MethodInfo_3193A88 *)Method_UnityEngine_GameObject_GetComponents_EffectSubComponent___);
       if ( Components_object )
       {
         max_length = Components_object->max_length;
@@ -86,6 +86,6 @@ LABEL_14:
         goto LABEL_14;
     }
 LABEL_16:
-    sub_1C3E7C8(Components_object, v8);
+    sub_1C6BC68(Components_object);
   }
 }

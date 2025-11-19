@@ -9,12 +9,12 @@ bool LimitCountUtility__CheckOption(int32_t svtId, int32_t limitCountStage, cons
   Il2CppObject *Master_object; // x0
   __int64 v6; // x1
 
-  if ( (byte_4C561A9 & 1) == 0 )
+  if ( (byte_4CB5710 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&OptionManager_TypeInfo);
-    byte_4C561A9 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&OptionManager_TypeInfo);
+    byte_4CB5710 = 1;
   }
   if ( limitCountStage == 4 )
   {
@@ -36,9 +36,9 @@ bool LimitCountUtility__CheckOption(int32_t svtId, int32_t limitCountStage, cons
     return 1;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantLimitSpoilerProtectionMaster___);
   if ( !Master_object )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   return ServantLimitSpoilerProtectionMaster__CheckLimitCount(
            (ServantLimitSpoilerProtectionMaster_o *)Master_object,
            svtId,
@@ -98,10 +98,10 @@ int32_t LimitCountUtility__ConvertStageToLimitCount(
         bool hasRewardStage,
         const MethodInfo *method)
 {
-  if ( (byte_4C561A7 & 1) == 0 )
+  if ( (byte_4CB570E & 1) == 0 )
   {
-    sub_1C3E564(&System_Math_TypeInfo);
-    byte_4C561A7 = 1;
+    sub_1C6BA08(&System_Math_TypeInfo);
+    byte_4CB570E = 1;
   }
   if ( limitCountStage > 4 )
     return limitCountStage;
@@ -121,18 +121,18 @@ int32_t LimitCountUtility__ConvertStageToLimitCount(
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  return System_Math__Min_65160228(limitCountStage, limitCount, 0);
+  return System_Math__Min_65488940(limitCountStage, limitCount, 0);
 }
 
 
-int32_t LimitCountUtility__ConvertStageToLimitCount_41006244(int32_t limitCountStage, const MethodInfo *method)
+int32_t LimitCountUtility__ConvertStageToLimitCount_41191496(int32_t limitCountStage, const MethodInfo *method)
 {
   if ( limitCountStage <= 4 )
   {
     if ( (unsigned int)(limitCountStage - 2) > 2 )
       return 0;
     else
-      return dword_C4BFD8[limitCountStage - 2];
+      return dword_D20DD4[limitCountStage - 2];
   }
   return limitCountStage;
 }
@@ -178,13 +178,13 @@ System_Collections_Generic_IEnumerable_int__o *LimitCountUtility__GetLimitCountS
   bool v5; // w21
   __int64 v6; // x20
 
-  if ( (byte_4C561AA & 1) == 0 )
+  if ( (byte_4CB5711 & 1) == 0 )
   {
-    sub_1C3E564(&LimitCountUtility__GetLimitCountStageList_d__20_TypeInfo);
-    byte_4C561AA = 1;
+    sub_1C6BA08(&LimitCountUtility__GetLimitCountStageList_d__20_TypeInfo);
+    byte_4CB5711 = 1;
   }
   v5 = hasRewardStage;
-  v6 = sub_1C3E7B0(LimitCountUtility__GetLimitCountStageList_d__20_TypeInfo);
+  v6 = sub_1C6BC54(LimitCountUtility__GetLimitCountStageList_d__20_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   *(_DWORD *)(v6 + 16) = -2;
   *(_DWORD *)(v6 + 24) = System_Environment__get_CurrentManagedThreadId(0);
@@ -259,11 +259,11 @@ int32_t LimitCountUtility__GetSealAfter(
   __int64 v11; // x1
   int32_t ServantLimitCountSealAfter; // w0
 
-  if ( (byte_4C561A8 & 1) == 0 )
+  if ( (byte_4CB570F & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    byte_4C561A8 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    byte_4CB570F = 1;
   }
   if ( limitCountStage <= 4 )
   {
@@ -274,9 +274,9 @@ int32_t LimitCountUtility__GetSealAfter(
            (const MethodInfo *)hasRewardStage);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
     if ( !Master_object )
-      sub_1C3E7C0(0, v11);
+      sub_1C6BC60(0, v11);
     ServantLimitCountSealAfter = ServantLimitImageMaster__GetServantLimitCountSealAfter(
                                    (ServantLimitImageMaster_o *)Master_object,
                                    svtId,
@@ -319,10 +319,10 @@ bool LimitCountUtility__IsOtherImage(int32_t value, const MethodInfo *method)
 {
   BalanceConfig_c *v3; // x0
 
-  if ( (byte_4C561A6 & 1) == 0 )
+  if ( (byte_4CB570D & 1) == 0 )
   {
-    sub_1C3E564(&BalanceConfig_TypeInfo);
-    byte_4C561A6 = 1;
+    sub_1C6BA08(&BalanceConfig_TypeInfo);
+    byte_4CB570D = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -424,10 +424,10 @@ System_Collections_Generic_IEnumerator_int__o *LimitCountUtility__GetLimitCountS
   LimitCountUtility__GetLimitCountStageList_d__20_o *v4; // x20
   System_Collections_Generic_IEnumerator_int__o *result; // x0
 
-  if ( (byte_4C561AC & 1) == 0 )
+  if ( (byte_4CB5713 & 1) == 0 )
   {
-    sub_1C3E564(&LimitCountUtility__GetLimitCountStageList_d__20_TypeInfo);
-    byte_4C561AC = 1;
+    sub_1C6BA08(&LimitCountUtility__GetLimitCountStageList_d__20_TypeInfo);
+    byte_4CB5713 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -438,7 +438,7 @@ System_Collections_Generic_IEnumerator_int__o *LimitCountUtility__GetLimitCountS
   }
   else
   {
-    v4 = (LimitCountUtility__GetLimitCountStageList_d__20_o *)sub_1C3E7B0(LimitCountUtility__GetLimitCountStageList_d__20_TypeInfo);
+    v4 = (LimitCountUtility__GetLimitCountStageList_d__20_o *)sub_1C6BC54(LimitCountUtility__GetLimitCountStageList_d__20_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
@@ -466,11 +466,11 @@ void __noreturn LimitCountUtility__GetLimitCountStageList_d__20__System_Collecti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_LimitCountUtility__GetLimitCountStageList_d__20_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_LimitCountUtility__GetLimitCountStageList_d__20_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -478,21 +478,15 @@ Il2CppObject *LimitCountUtility__GetLimitCountStageList_d__20__System_Collection
         LimitCountUtility__GetLimitCountStageList_d__20_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
   int32_t _2__current; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C561AB & 1) == 0 )
+  if ( (byte_4CB5712 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    byte_4C561AB = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    byte_4CB5712 = 1;
   }
   _2__current = this->fields.__2__current;
-  return (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &_2__current, v2, v3, v4, v5, v6, v7);
+  return (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &_2__current);
 }
 
 

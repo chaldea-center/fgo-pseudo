@@ -10,20 +10,20 @@ void ServantCostumeCombineRequest__beginRequest(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C58959 & 1) == 0 )
+  if ( (byte_4CB7ED5 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_17065/*"baseUserSvtId"*/);
-    sub_1C3E564(&StringLiteral_19164/*"eventId"*/);
-    sub_1C3E564(&StringLiteral_18301/*"costumeId"*/);
-    byte_4C58959 = 1;
+    sub_1C6BA08(&StringLiteral_17062/*"baseUserSvtId"*/);
+    sub_1C6BA08(&StringLiteral_19195/*"eventId"*/);
+    sub_1C6BA08(&StringLiteral_18308/*"costumeId"*/);
+    byte_4CB7ED5 = 1;
   }
-  RequestBase__addField_44302376(
+  RequestBase__addField_44468288(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17065/*"baseUserSvtId"*/,
+    (System_String_o *)StringLiteral_17062/*"baseUserSvtId"*/,
     baseUserSvtId,
     *(const MethodInfo **)&eventId);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18301/*"costumeId"*/, costumeId, v9);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19164/*"eventId"*/, eventId, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18308/*"costumeId"*/, costumeId, v9);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_19195/*"eventId"*/, eventId, v10);
   RequestBase__beginRequest((RequestBase_o *)this, v11);
 }
 
@@ -32,16 +32,16 @@ System_String_o *ServantCostumeCombineRequest__getURL(ServantCostumeCombineReque
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C58958 & 1) == 0 )
+  if ( (byte_4CB7ED4 & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_17760/*"card/combineCostume"*/);
-    byte_4C58958 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_17760/*"card/combineCostume"*/);
+    byte_4CB7ED4 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_17760/*"card/combineCostume"*/, 0);
+  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_17760/*"card/combineCostume"*/, 0);
 }
 
 
@@ -58,12 +58,12 @@ void ServantCostumeCombineRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4C5895A & 1) == 0 )
+  if ( (byte_4CB7ED6 & 1) == 0 )
   {
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    byte_4C5895A = 1;
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    byte_4CB7ED6 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -87,7 +87,7 @@ void ServantCostumeCombineRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22233/*"ng"*/,
+        StringLiteral_22301/*"ng"*/,
         v11->fields.method);
   }
 }

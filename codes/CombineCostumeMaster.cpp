@@ -1,14 +1,14 @@
 void CombineCostumeMaster___ctor(CombineCostumeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56AFC & 1) == 0 )
+  if ( (byte_4CB605E & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
-    byte_4C56AFC = 1;
+    sub_1C6BA08(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
+    byte_4CB605E = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     209,
-    (const MethodInfo_33B56EC *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
+    (const MethodInfo_33FB870 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string___ctor__);
 }
 
 
@@ -36,9 +36,9 @@ void CombineCostumeMaster__CheckNeedCombineInfo(
 
   entity = 0;
   *itemIds = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)itemIds, 0, costumeId, (const MethodInfo *)itemIds);
+  sub_1C6B9AC((CGThumbnailListItem_o *)itemIds, 0, costumeId, (const MethodInfo *)itemIds);
   *itemNums = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)itemNums, 0, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)itemNums, 0, v13, v14);
   *qp = 0;
   v16 = CombineCostumeMaster__TryGetEntity(this, &entity, svtId, costumeId, v15);
   if ( v16 )
@@ -46,14 +46,14 @@ void CombineCostumeMaster__CheckNeedCombineInfo(
     if ( !entity
       || (v20 = entity->fields.itemIds,
           *itemIds = v20,
-          sub_1C3E508((CGThumbnailListItem_o *)itemIds, (int32_t)v20, v18, v19),
+          sub_1C6B9AC((CGThumbnailListItem_o *)itemIds, (int32_t)v20, v18, v19),
           !entity)
       || (v23 = entity->fields.itemNums,
           *itemNums = v23,
-          sub_1C3E508((CGThumbnailListItem_o *)itemNums, (int32_t)v23, v21, v22),
+          sub_1C6B9AC((CGThumbnailListItem_o *)itemNums, (int32_t)v23, v21, v22),
           !entity) )
     {
-      sub_1C3E7C0(v16, v17);
+      sub_1C6BC60(v16, v17);
     }
     *qp = entity->fields.qp;
   }
@@ -69,16 +69,16 @@ CombineCostumeEntity_o *CombineCostumeMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C56AFA & 1) == 0 )
+  if ( (byte_4CB605C & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
-    byte_4C56AFA = 1;
+    sub_1C6BA08(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
+    byte_4CB605C = 1;
   }
   PK = (Il2CppObject *)CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&costumeId);
   return (CombineCostumeEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_33B7A10 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
+                                     (const MethodInfo_33FDB94 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__GetEntity__);
 }
 
 
@@ -101,11 +101,11 @@ bool CombineCostumeMaster__IsClearCombineCondition(
   UserItemEntity_o *v18; // [xsp+8h] [xbp-48h] BYREF
   CombineCostumeEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4C56AFD & 1) == 0 )
+  if ( (byte_4CB605F & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserItemMaster___);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C56AFD = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserItemMaster___);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB605F = 1;
   }
   entity = 0;
   v18 = 0;
@@ -127,12 +127,12 @@ bool CombineCostumeMaster__IsClearCombineCondition(
         v14 = 0;
         while ( 1 )
         {
-          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             break;
           Instance = DataManager__GetMasterData_object_(
                        (DataManager_o *)Instance,
-                       (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserItemMaster___);
+                       (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserItemMaster___);
           if ( !SelfUserGame )
             break;
           if ( !entity )
@@ -162,14 +162,14 @@ bool CombineCostumeMaster__IsClearCombineCondition(
             break;
           if ( v14 >= LODWORD(itemNums->max_length) )
 LABEL_29:
-            sub_1C3E7C8(Instance, v10);
+            sub_1C6BC68(Instance);
           if ( v18->fields.num < itemNums->m_Items[v14] )
             return 0;
           if ( (_DWORD)max_length == ++v14 )
             return SelfUserGame->fields.qp >= v11->fields.qp;
         }
 LABEL_28:
-        sub_1C3E7C0(Instance, v10);
+        sub_1C6BC60(Instance, v10);
       }
     }
   }
@@ -189,15 +189,15 @@ bool CombineCostumeMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C56AFB & 1) == 0 )
+  if ( (byte_4CB605D & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
-    byte_4C56AFB = 1;
+    sub_1C6BA08(&Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
+    byte_4CB605D = 1;
   }
   PK = (Il2CppObject *)CombineCostumeEntity__CreatePK(svtId, costumeId, *(const MethodInfo **)&svtId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33B7A5C *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
+           (const MethodInfo_33FDBE0 *)Method_DataMasterBase_CombineCostumeMaster__CombineCostumeEntity__string__TryGetEntity__);
 }

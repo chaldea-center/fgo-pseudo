@@ -1,9 +1,9 @@
 void ChangeUserNameWindow___ctor(ChangeUserNameWindow_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C51E0B & 1) == 0 )
+  if ( (byte_4CB1353 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C51E0B = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB1353 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -27,7 +27,7 @@ void ChangeUserNameWindow__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C3E508(p_callbackFunc, 0, (int32_t)name, method);
+    sub_1C6B9AC(p_callbackFunc, 0, (int32_t)name, method);
     ((void (__fastcall *)(intptr_t, bool, System_String_o *, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       result,
@@ -41,11 +41,11 @@ void ChangeUserNameWindow__Close(ChangeUserNameWindow_o *this, const MethodInfo 
 {
   const MethodInfo *v2; // x2
 
-  ChangeUserNameWindow__Close_33258956(this, 0, v2);
+  ChangeUserNameWindow__Close_33438556(this, 0, v2);
 }
 
 
-void ChangeUserNameWindow__Close_33258956(
+void ChangeUserNameWindow__Close_33438556(
         ChangeUserNameWindow_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -53,16 +53,16 @@ void ChangeUserNameWindow__Close_33258956(
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C51E07 & 1) == 0 )
+  if ( (byte_4CB134F & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_ChangeUserNameWindow_EndClose__);
-    byte_4C51E07 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_ChangeUserNameWindow_EndClose__);
+    byte_4CB134F = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
   this->fields.state = 3;
-  v6 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_ChangeUserNameWindow_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -81,7 +81,7 @@ void ChangeUserNameWindow__EndClose(ChangeUserNameWindow_o *this, const MethodIn
   ChangeUserNameWindow__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = (CGThumbnailListItem_o *)&this->fields.closeCallbackFunc;
@@ -89,7 +89,7 @@ void ChangeUserNameWindow__EndClose(ChangeUserNameWindow_o *this, const MethodIn
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C3E508(p_closeCallbackFunc, 0, v5, v6);
+    sub_1C6B9AC(p_closeCallbackFunc, 0, v5, v6);
     ((void (__fastcall *)(intptr_t, intptr_t))v8->fields.invoke_impl)(v8->fields.method_code, v8->fields.method);
   }
 }
@@ -109,7 +109,7 @@ void ChangeUserNameWindow__Init(ChangeUserNameWindow_o *this, const MethodInfo *
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -131,12 +131,12 @@ void ChangeUserNameWindow__OnChangeInput(ChangeUserNameWindow_o *this, const Met
   float v12; // s2
   System_String_o *v13; // x0
 
-  if ( (byte_4C51E05 & 1) == 0 )
+  if ( (byte_4CB134D & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_43/*"\n"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C51E05 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_43/*"\n"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB134D = 1;
   }
   nameInput = this->fields.nameInput;
   if ( !nameInput )
@@ -161,7 +161,7 @@ void ChangeUserNameWindow__OnChangeInput(ChangeUserNameWindow_o *this, const Met
     }
     while ( ++v6 < Text->fields._stringLength );
   }
-  if ( (System_String__IndexOf_63694844(Text, (System_String_o *)StringLiteral_43/*"\n"*/, 0) & 0x80000000) == 0 )
+  if ( (System_String__IndexOf_64025184(Text, (System_String_o *)StringLiteral_43/*"\n"*/, 0) & 0x80000000) == 0 )
   {
 LABEL_12:
     IsNullOrEmpty = 1;
@@ -172,7 +172,7 @@ LABEL_12:
   nameInput = (UILineInput_o *)LocalizationManager__ReplaceNameTag(Text, 0, 0);
   if ( !nameInput )
 LABEL_23:
-    sub_1C3E7C0(nameInput, method);
+    sub_1C6BC60(nameInput, method);
   v13 = System_String__Trim((System_String_o *)nameInput, 0);
   IsNullOrEmpty = System_String__IsNullOrEmpty(v13, 0);
 LABEL_13:
@@ -204,10 +204,10 @@ void ChangeUserNameWindow__OnClickCancel(ChangeUserNameWindow_o *this, const Met
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C51E09 & 1) == 0 )
+  if ( (byte_4CB1351 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C51E09 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB1351 = 1;
   }
   ChangeUserNameWindow__Callback(this, 0, (System_String_o *)StringLiteral_1/*""*/, v2);
 }
@@ -222,11 +222,11 @@ void ChangeUserNameWindow__OnClickDecide(ChangeUserNameWindow_o *this, const Met
   _QWORD *v7; // x0
   System_Reflection_MethodBase_o *v8; // x0
 
-  if ( (byte_4C51E08 & 1) == 0 )
+  if ( (byte_4CB1350 & 1) == 0 )
   {
-    sub_1C3E564(&Method_ChangeUserNameWindow_OnClickDecide__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C51E08 = 1;
+    sub_1C6BA08(&Method_ChangeUserNameWindow_OnClickDecide__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB1350 = 1;
   }
   submitBtn = (UILineInput_o *)this->fields.submitBtn;
   if ( !submitBtn )
@@ -247,12 +247,12 @@ void ChangeUserNameWindow__OnClickDecide(ChangeUserNameWindow_o *this, const Met
       return;
     }
 LABEL_12:
-    sub_1C3E7C0(submitBtn, method);
+    sub_1C6BC60(submitBtn, method);
   }
   v7 = Method_ChangeUserNameWindow_OnClickDecide__;
   if ( (*((_BYTE *)Method_ChangeUserNameWindow_OnClickDecide__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1C3E57C(Method_ChangeUserNameWindow_OnClickDecide__);
-  v8 = (System_Reflection_MethodBase_o *)sub_1C3E548(v7, v7[4]);
+    v7 = (_QWORD *)sub_1C6BA20(Method_ChangeUserNameWindow_OnClickDecide__);
+  v8 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v7, v7[4]);
   OverwriteAssetSoundName__PlaySystemSe(v8, 2, 0, 0);
 }
 
@@ -279,28 +279,28 @@ void ChangeUserNameWindow__OpenChangeNameWindow(
   System_Action_o *v20; // x20
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C51E04 & 1) == 0 )
+  if ( (byte_4CB134C & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_ChangeUserNameWindow_EndOpen__);
-    sub_1C3E564(&Method_EmojiUtility_ValidateNameText__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&UIInput_OnValidate_TypeInfo);
-    sub_1C3E564(&StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C3E564(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C3E564(&StringLiteral_3327/*"CHANGE_NAME_TITLE"*/);
-    sub_1C3E564(&StringLiteral_3331/*"CHANGE_TITLE"*/);
-    byte_4C51E04 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_ChangeUserNameWindow_EndOpen__);
+    sub_1C6BA08(&Method_EmojiUtility_ValidateNameText__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&UIInput_OnValidate_TypeInfo);
+    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C6BA08(&StringLiteral_3319/*"CHANGE_NAME_TITLE"*/);
+    sub_1C6BA08(&StringLiteral_3323/*"CHANGE_TITLE"*/);
+    byte_4CB134C = 1;
   }
   submitTxtLb = this->fields.submitTxtLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3686/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !submitTxtLb )
     goto LABEL_16;
   UILabel__set_text(submitTxtLb, gameObject, 0);
   cancelTxtLb = this->fields.cancelTxtLb;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelTxtLb )
     goto LABEL_16;
   UILabel__set_text(cancelTxtLb, gameObject, 0);
@@ -329,29 +329,29 @@ void ChangeUserNameWindow__OpenChangeNameWindow(
   v21.fields.a = 1.0;
   UIButtonColor__set_defaultColor((UIButtonColor_o *)gameObject, v21, 0);
   this->fields.callbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v12, v13);
   inputTarget = (CGThumbnailListItem_o *)this->fields.inputTarget;
-  v15 = (UIInput_OnValidate_o *)sub_1C3E7B0(UIInput_OnValidate_TypeInfo);
+  v15 = (UIInput_OnValidate_o *)sub_1C6BC54(UIInput_OnValidate_TypeInfo);
   UIInput_OnValidate___ctor(v15, 0, Method_EmojiUtility_ValidateNameText__, 0);
   if ( !inputTarget )
     goto LABEL_16;
   inputTarget[1].klass = (CGThumbnailListItem_c *)v15;
-  sub_1C3E508(inputTarget + 1, (int32_t)v15, v16, v17);
+  sub_1C6B9AC(inputTarget + 1, (int32_t)v15, v16, v17);
   titleTxtLb = this->fields.titleTxtLb;
-  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3331/*"CHANGE_TITLE"*/, 0);
+  gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3323/*"CHANGE_TITLE"*/, 0);
   if ( !titleTxtLb
     || (UILabel__set_text(titleTxtLb, gameObject, 0),
         titleLb = this->fields.titleLb,
-        gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3327/*"CHANGE_NAME_TITLE"*/, 0),
+        gameObject = LocalizationManager__Get((System_String_o *)StringLiteral_3319/*"CHANGE_NAME_TITLE"*/, 0),
         !titleLb)
     || (UILabel__set_text(titleLb, gameObject, 0), (gameObject = (System_String_o *)this->fields.nameText) == 0) )
   {
 LABEL_16:
-    sub_1C3E7C0(gameObject, v9);
+    sub_1C6BC60(gameObject, v9);
   }
   UILabel__set_text((UILabel_o *)gameObject, usrName, 0);
   this->fields.state = 1;
-  v20 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v20 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v20, (Il2CppObject *)this, Method_ChangeUserNameWindow_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v20, 0, 0, 0);
 }
@@ -372,10 +372,10 @@ void ChangeUserNameWindow__add_callbackFunc(
   ChangeUserNameWindow_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C51E02 & 1) == 0 )
+  if ( (byte_4CB134A & 1) == 0 )
   {
-    sub_1C3E564(&ChangeUserNameWindow_CallbackFunc_TypeInfo);
-    byte_4C51E02 = 1;
+    sub_1C6BA08(&ChangeUserNameWindow_CallbackFunc_TypeInfo);
+    byte_4CB134A = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -388,25 +388,25 @@ void ChangeUserNameWindow__add_callbackFunc(
       if ( (ChangeUserNameWindow_CallbackFunc_c *)v8->klass != ChangeUserNameWindow_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ChangeUserNameWindow_o *)sub_1C3EA80(v8);
+  v11 = (ChangeUserNameWindow_o *)sub_1C6BFFC(v8);
   ChangeUserNameWindow__remove_callbackFunc(v11, v12, v13);
 }
 
 
 System_String_o *ChangeUserNameWindow__get_closeBtnPath(ChangeUserNameWindow_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C51E0A & 1) == 0 )
+  if ( (byte_4CB1352 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_3073/*"BaseWindow/CancleBtn"*/);
-    byte_4C51E0A = 1;
+    sub_1C6BA08(&StringLiteral_3065/*"BaseWindow/CancleBtn"*/);
+    byte_4CB1352 = 1;
   }
-  return (System_String_o *)StringLiteral_3073/*"BaseWindow/CancleBtn"*/;
+  return (System_String_o *)StringLiteral_3065/*"BaseWindow/CancleBtn"*/;
 }
 
 
@@ -424,10 +424,10 @@ void ChangeUserNameWindow__remove_callbackFunc(
   ChangeUserNameWindow_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C51E03 & 1) == 0 )
+  if ( (byte_4CB134B & 1) == 0 )
   {
-    sub_1C3E564(&ChangeUserNameWindow_CallbackFunc_TypeInfo);
-    byte_4C51E03 = 1;
+    sub_1C6BA08(&ChangeUserNameWindow_CallbackFunc_TypeInfo);
+    byte_4CB134B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -440,13 +440,13 @@ void ChangeUserNameWindow__remove_callbackFunc(
       if ( (ChangeUserNameWindow_CallbackFunc_c *)v8->klass != ChangeUserNameWindow_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ChangeUserNameWindow_o *)sub_1C3EA80(v8);
+  v11 = (ChangeUserNameWindow_o *)sub_1C6BFFC(v8);
   ChangeUserNameWindow__Init(v11, v12);
 }
 
@@ -455,14 +455,14 @@ void ChangeUserNameWindow__resetInputVal(ChangeUserNameWindow_o *this, const Met
 {
   UIInput_o *inputTarget; // x0
 
-  if ( (byte_4C51E06 & 1) == 0 )
+  if ( (byte_4CB134E & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C51E06 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB134E = 1;
   }
   inputTarget = this->fields.inputTarget;
   if ( !inputTarget )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   UIInput__set_value(inputTarget, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
 
@@ -482,15 +482,15 @@ void ChangeUserNameWindow_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -502,9 +502,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7B718;
+  this->fields.invoke_impl = (intptr_t)sub_1A9A190;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7B6C0;
+  this->fields.extra_arg = (intptr_t)sub_1A9A138;
 }
 
 
@@ -516,21 +516,19 @@ System_IAsyncResult_o *ChangeUserNameWindow_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v6; // x6
-  __int64 v7; // x7
-  _QWORD v13[3]; // [xsp+8h] [xbp-58h] BYREF
-  bool v14[4]; // [xsp+2Ch] [xbp-34h] BYREF
+  _QWORD v11[3]; // [xsp+8h] [xbp-58h] BYREF
+  bool v12[4]; // [xsp+2Ch] [xbp-34h] BYREF
 
-  v14[0] = result;
-  if ( (byte_4C51E0C & 1) == 0 )
+  v12[0] = result;
+  if ( (byte_4CB1354 & 1) == 0 )
   {
-    sub_1C3E564(&bool_TypeInfo);
-    byte_4C51E0C = 1;
+    sub_1C6BA08(&bool_TypeInfo);
+    byte_4CB1354 = 1;
   }
-  v13[2] = 0;
-  v13[0] = j_il2cpp_value_box_0(bool_TypeInfo, v14, changeName, callback, object, method, v6, v7);
-  v13[1] = changeName;
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v13, callback, object);
+  v11[2] = 0;
+  v11[0] = j_il2cpp_value_box_0(bool_TypeInfo, v12);
+  v11[1] = changeName;
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v11, callback, object);
 }
 
 
@@ -539,7 +537,7 @@ void ChangeUserNameWindow_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 

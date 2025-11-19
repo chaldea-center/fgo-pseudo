@@ -1,14 +1,14 @@
 void CampaignInfoMaster___ctor(CampaignInfoMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56AA6 & 1) == 0 )
+  if ( (byte_4CB6008 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int___ctor__);
-    byte_4C56AA6 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int___ctor__);
+    byte_4CB6008 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     233,
-    (const MethodInfo_33B0C34 *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int___ctor__);
+    (const MethodInfo_33F6DB8 *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int___ctor__);
 }
 
 
@@ -22,22 +22,22 @@ CampaignInformation_array *CampaignInfoMaster__GetInformationById(
   CampaignInformation_array *result; // x0
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C56AA7 & 1) == 0 )
+  if ( (byte_4CB6009 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__);
-    byte_4C56AA7 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__);
+    byte_4CB6009 = 1;
   }
   entity = 0;
   v6 = DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)this,
          &entity,
          id,
-         (const MethodInfo_33B2FA4 *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__);
+         (const MethodInfo_33F9128 *)Method_DataMasterBase_CampaignInfoMaster__CampaignInfoEntity__int__TryGetEntity__);
   result = 0;
   if ( v6 )
   {
     if ( !entity )
-      sub_1C3E7C0(0, v5);
+      sub_1C6BC60(0, v5);
     return *(CampaignInformation_array **)((char *)&off_18 + (_QWORD)entity);
   }
   return result;

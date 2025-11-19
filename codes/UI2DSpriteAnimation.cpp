@@ -64,7 +64,7 @@ LABEL_16:
       goto LABEL_16;
     }
 LABEL_18:
-    sub_1C3E7C0(enabled, v5);
+    sub_1C6BC60(enabled, v5);
   }
 }
 
@@ -78,7 +78,7 @@ void UI2DSpriteAnimation__ResetToBeginning(UI2DSpriteAnimation_o *this, const Me
   {
     frames = this->fields.frames;
     if ( !frames )
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     v2 = LODWORD(frames->max_length) - 1;
   }
   else
@@ -135,7 +135,7 @@ LABEL_13:
           return;
         }
 LABEL_19:
-        sub_1C3E7C0(v10, v4);
+        sub_1C6BC60(v10, v4);
       }
       if ( (v10 & 0x80000000) == 0 )
       {
@@ -178,12 +178,12 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
   struct UI2DSprite_o *v25; // x10
   struct UnityEngine_Sprite_o *v26; // x1
 
-  if ( (byte_4C5B5DA & 1) == 0 )
+  if ( (byte_4CBABB7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B5DA = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBABB7 = 1;
   }
   mUnitySprite = (UnityEngine_Object_o *)this->fields.mUnitySprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -197,14 +197,14 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+                           (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
       this->fields.mUnitySprite = (struct UnityEngine_SpriteRenderer_o *)Component_object;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mUnitySprite, (int32_t)Component_object, v6, v7);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mUnitySprite, (int32_t)Component_object, v6, v7);
       v8 = UnityEngine_Component__GetComponent_object_(
              (UnityEngine_Component_o *)this,
-             (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+             (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
       this->fields.mNguiSprite = (struct UI2DSprite_o *)v8;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mNguiSprite, (int32_t)v8, v9, v10);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mNguiSprite, (int32_t)v8, v9, v10);
       v11 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -247,10 +247,10 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
         return;
       }
 LABEL_36:
-      sub_1C3E7C0(v16, v17);
+      sub_1C6BC60(v16, v17);
     }
 LABEL_37:
-    sub_1C3E7C8(v16, v17);
+    sub_1C6BC68(v16);
   }
   v20 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -269,7 +269,7 @@ LABEL_37:
       goto LABEL_36;
     v26 = v23->m_Items[v24];
     v25->fields.nextSprite = v26;
-    sub_1C3E508((CGThumbnailListItem_o *)&v25->fields.nextSprite, (int32_t)v26, v21, v22);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v25->fields.nextSprite, (int32_t)v26, v21, v22);
   }
 }
 

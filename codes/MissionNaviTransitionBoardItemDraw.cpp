@@ -18,10 +18,10 @@ void MissionNaviTransitionBoardItemDraw__Awake(MissionNaviTransitionBoardItemDra
   struct UISprite_o *v12; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_4C5A7EC & 1) == 0 )
+  if ( (byte_4CB9DBE & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A7EC = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9DBE = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -33,14 +33,14 @@ void MissionNaviTransitionBoardItemDraw__Awake(MissionNaviTransitionBoardItemDra
     if ( !v8
       || (mAtlas = v8->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
+          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseAtlas, (int32_t)mAtlas, v6, v7),
           (v12 = this->fields.baseSprite) == 0) )
     {
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     }
     mSpriteName = v12->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseSpriteName, (int32_t)mSpriteName, v10, v11);
   }
 }
 
@@ -62,10 +62,10 @@ void MissionNaviTransitionBoardItemDraw__DeleteCallback(
   HorizontalQuestInformationIconListComponent_o *v5; // x0
   UnityEngine_Object_o *enemyInformationComponent; // x20
 
-  if ( (byte_4C5A7F4 & 1) == 0 )
+  if ( (byte_4CB9DC6 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A7F4 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9DC6 = 1;
   }
   rewardInformationComponent = (UnityEngine_Object_o *)this->fields.rewardInformationComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -89,7 +89,7 @@ void MissionNaviTransitionBoardItemDraw__DeleteCallback(
       return;
     }
 LABEL_14:
-    sub_1C3E7C0(v5, v4);
+    sub_1C6BC60(v5, v4);
   }
 }
 
@@ -108,20 +108,20 @@ System_String_o *MissionNaviTransitionBoardItemDraw__GetIconNameByWarInfo(
   __int64 *v10; // x19
   System_String_o *v11; // x0
 
-  if ( (byte_4C5A7F3 & 1) == 0 )
+  if ( (byte_4CB9DC5 & 1) == 0 )
   {
-    sub_1C3E564(&BalanceConfig_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C3E564(&StringLiteral_24778/*"war_"*/);
-    sub_1C3E564(&StringLiteral_19178/*"event_"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5A7F3 = 1;
+    sub_1C6BA08(&BalanceConfig_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C6BA08(&StringLiteral_24868/*"war_"*/);
+    sub_1C6BA08(&StringLiteral_19209/*"event_"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB9DC5 = 1;
   }
   if ( !warInfo )
     return (System_String_o *)StringLiteral_1/*""*/;
   Mine = MapControl_WarInfo__GetMine(warInfo, 0);
   if ( !Mine )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   v5 = Mine;
   if ( !WarEntity__IsEvent(Mine, 0) )
     goto LABEL_12;
@@ -144,19 +144,19 @@ System_String_o *MissionNaviTransitionBoardItemDraw__GetIconNameByWarInfo(
   if ( System_Linq_Enumerable__Contains_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)static_fields->MainChaptersWithEventId,
          id,
-         (const MethodInfo_3116AFC *)Method_System_Linq_Enumerable_Contains_int___) )
+         (const MethodInfo_31583F4 *)Method_System_Linq_Enumerable_Contains_int___) )
   {
 LABEL_12:
     v9 = (_DWORD)v5 + 16;
-    v10 = &StringLiteral_24778/*"war_"*/;
+    v10 = &StringLiteral_24868/*"war_"*/;
   }
   else
   {
     v9 = (_DWORD)v5 + 96;
-    v10 = &StringLiteral_19178/*"event_"*/;
+    v10 = &StringLiteral_19209/*"event_"*/;
   }
   v11 = System_Int32__ToString(v9, 0);
-  return System_String__Concat_63636468((System_String_o *)*v10, v11, 0);
+  return System_String__Concat_63966792((System_String_o *)*v10, v11, 0);
 }
 
 
@@ -168,17 +168,17 @@ void MissionNaviTransitionBoardItemDraw__OnClickButton(
   __int64 v4; // x1
   struct MissionNaviTransitionBoardItem_o *naviBoardItem; // x8
 
-  if ( (byte_4C5A7F2 & 1) == 0 )
+  if ( (byte_4CB9DC4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C5A7F2 = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CB9DC4 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__SetMissionNaviTransitionConfirmDialogState((CommonUI_o *)Instance, 4, 0),
         (naviBoardItem = this->fields.naviBoardItem) == 0) )
   {
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   }
   ActionExtensions__Call(naviBoardItem->fields._NaviAction_k__BackingField, 0);
 }
@@ -195,10 +195,10 @@ void MissionNaviTransitionBoardItemDraw__SetBaseButtonState(
   struct UICommonButton_o *v8; // x8
   float v9; // s1
 
-  if ( (byte_4C5A7EE & 1) == 0 )
+  if ( (byte_4CB9DC0 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A7EE = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9DC0 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -220,7 +220,7 @@ void MissionNaviTransitionBoardItemDraw__SetBaseButtonState(
           (v6 = this->fields.baseButton) == 0) )
     {
 LABEL_12:
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, bool, const MethodInfo *))v6->klass->vtable._5_set_isEnabled.methodPtr)(
       v6,
@@ -238,19 +238,19 @@ void MissionNaviTransitionBoardItemDraw__SetBoardImage(
   __int64 v4; // x1
   struct UISprite_o *v5; // x0
 
-  if ( (byte_4C5A7EF & 1) == 0 )
+  if ( (byte_4CB9DC1 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_20447/*"img_list_bg03"*/);
-    byte_4C5A7EF = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_20494/*"img_list_bg03"*/);
+    byte_4CB9DC1 = 1;
   }
   baseSprite = this->fields.baseSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner(baseSprite, (System_String_o *)StringLiteral_20447/*"img_list_bg03"*/, 0);
+  AtlasManager__SetBanner(baseSprite, (System_String_o *)StringLiteral_20494/*"img_list_bg03"*/, 0);
   v5 = this->fields.baseSprite;
   if ( !v5 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v5->klass->vtable._33_MakePixelPerfect.methodPtr)(
     v5,
     v5->klass->vtable._33_MakePixelPerfect.method);
@@ -277,24 +277,24 @@ void MissionNaviTransitionBoardItemDraw__SetIconImage(
   UISprite_o *v17; // x21
 
   v6 = this;
-  if ( (byte_4C5A7F1 & 1) == 0 )
+  if ( (byte_4CB9DC3 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_23474/*"shortcut_board_icon_"*/);
-    sub_1C3E564(&StringLiteral_23481/*"shortcut_board_icon_mainquest"*/);
-    sub_1C3E564(&StringLiteral_23491/*"shortcut_board_icon_war_"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_23476/*"shortcut_board_icon_event_"*/);
-    this = (MissionNaviTransitionBoardItemDraw_o *)sub_1C3E564(&StringLiteral_23477/*"shortcut_board_icon_freequest"*/);
-    byte_4C5A7F1 = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_23544/*"shortcut_board_icon_"*/);
+    sub_1C6BA08(&StringLiteral_23551/*"shortcut_board_icon_mainquest"*/);
+    sub_1C6BA08(&StringLiteral_23561/*"shortcut_board_icon_war_"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_23546/*"shortcut_board_icon_event_"*/);
+    this = (MissionNaviTransitionBoardItemDraw_o *)sub_1C6BA08(&StringLiteral_23547/*"shortcut_board_icon_freequest"*/);
+    byte_4CB9DC3 = 1;
   }
   if ( !item )
     goto LABEL_27;
   if ( !System_String__IsNullOrEmpty(item->fields._IconName_k__BackingField, 0) )
   {
     iconSprite = v6->fields.iconSprite;
-    v10 = System_String__Concat_63636468(
-            (System_String_o *)StringLiteral_23474/*"shortcut_board_icon_"*/,
+    v10 = System_String__Concat_63966792(
+            (System_String_o *)StringLiteral_23544/*"shortcut_board_icon_"*/,
             item->fields._IconName_k__BackingField,
             0);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -308,12 +308,12 @@ void MissionNaviTransitionBoardItemDraw__SetIconImage(
     QuestType = MapControl_QuestInfo__GetQuestType(questInfo, 0);
     if ( QuestType == 1 )
     {
-      v8 = &StringLiteral_23481/*"shortcut_board_icon_mainquest"*/;
+      v8 = &StringLiteral_23551/*"shortcut_board_icon_mainquest"*/;
       goto LABEL_14;
     }
     if ( QuestType == 2 )
     {
-      v8 = &StringLiteral_23477/*"shortcut_board_icon_freequest"*/;
+      v8 = &StringLiteral_23547/*"shortcut_board_icon_freequest"*/;
 LABEL_14:
       v13 = (System_String_o *)*v8;
       goto LABEL_21;
@@ -328,14 +328,14 @@ LABEL_14:
         if ( WarEntity__IsEvent((WarEntity_o *)this, 0) )
         {
           v15 = System_Int32__ToString(v14 + 96, 0);
-          v16 = &StringLiteral_23476/*"shortcut_board_icon_event_"*/;
+          v16 = &StringLiteral_23546/*"shortcut_board_icon_event_"*/;
         }
         else
         {
           v15 = System_Int32__ToString(v14 + 16, 0);
-          v16 = &StringLiteral_23491/*"shortcut_board_icon_war_"*/;
+          v16 = &StringLiteral_23561/*"shortcut_board_icon_war_"*/;
         }
-        v13 = System_String__Concat_63636468((System_String_o *)*v16, v15, 0);
+        v13 = System_String__Concat_63966792((System_String_o *)*v16, v15, 0);
 LABEL_21:
         v17 = v6->fields.iconSprite;
         if ( !AtlasManager_TypeInfo->_2.cctor_finished )
@@ -348,7 +348,7 @@ LABEL_24:
       }
     }
 LABEL_27:
-    sub_1C3E7C0(this, item);
+    sub_1C6BC60(this, item);
   }
 LABEL_25:
   this = (MissionNaviTransitionBoardItemDraw_o *)v6->fields.iconSprite;
@@ -398,29 +398,29 @@ bool MissionNaviTransitionBoardItemDraw__SetItem(
   System_String_o *infoText; // [xsp+8h] [xbp-58h] BYREF
   int64_t endedAt; // [xsp+28h] [xbp-38h] BYREF
 
-  if ( (byte_4C5A7ED & 1) == 0 )
+  if ( (byte_4CB9DBF & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C3E564(&string_TypeInfo);
-    sub_1C3E564(&StringLiteral_43/*"\n"*/);
-    sub_1C3E564(&StringLiteral_13441/*"TIME_REST_QUEST_BOARD_QUEST"*/);
-    sub_1C3E564(&StringLiteral_8685/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/);
-    byte_4C5A7ED = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C6BA08(&string_TypeInfo);
+    sub_1C6BA08(&StringLiteral_43/*"\n"*/);
+    sub_1C6BA08(&StringLiteral_13434/*"TIME_REST_QUEST_BOARD_QUEST"*/);
+    sub_1C6BA08(&StringLiteral_8682/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/);
+    byte_4CB9DBF = 1;
   }
   endedAt = 0;
   infoText = 0;
   if ( boardItem )
   {
     this->fields.naviBoardItem = boardItem;
-    sub_1C3E508(
+    sub_1C6B9AC(
       (CGThumbnailListItem_o *)&this->fields.naviBoardItem,
       (int32_t)boardItem,
       (int32_t)listViewManager,
       method);
     this->fields.naviListViewManager = listViewManager;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.naviListViewManager, (int32_t)listViewManager, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.naviListViewManager, (int32_t)listViewManager, v7, v8);
     Name_k__BackingField = boardItem->fields._Name_k__BackingField;
     if ( !Name_k__BackingField )
       goto LABEL_72;
@@ -487,10 +487,10 @@ LABEL_22:
               0);
           }
         }
-        Instance = (UILabel_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+        Instance = (UILabel_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
         if ( !Instance )
 LABEL_72:
-          sub_1C3E7C0(Instance, v10);
+          sub_1C6BC60(Instance, v10);
         QuestInfo = QuestTree__GetQuestInfo((QuestTree_o *)Instance, boardItem->fields._QuestId_k__BackingField, 0);
         v20 = QuestInfo;
         if ( !QuestInfo )
@@ -538,7 +538,7 @@ LABEL_58:
             goto LABEL_51;
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          v27 = LocalizationManager__Get((System_String_o *)StringLiteral_13441/*"TIME_REST_QUEST_BOARD_QUEST"*/, 0);
+          v27 = LocalizationManager__Get((System_String_o *)StringLiteral_13434/*"TIME_REST_QUEST_BOARD_QUEST"*/, 0);
           v26 = endedAt;
           v25 = v27;
         }
@@ -549,7 +549,7 @@ LABEL_51:
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8685/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, 0);
+          Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8682/*"MISSION_NAVI_BOARD_TIME_DISABLE_COLOR"*/, 0);
           restTimeLabel = this->fields.restTimeLabel;
           if ( boardItem->fields._IsLocked_k__BackingField )
           {
@@ -570,10 +570,10 @@ LABEL_51:
     else
     {
       v16 = (float)stringLength;
-      if ( !byte_4C50D68 )
+      if ( !byte_4CB02B0 )
       {
-        sub_1C3E564(&System_Math_TypeInfo);
-        byte_4C50D68 = 1;
+        sub_1C6BA08(&System_Math_TypeInfo);
+        byte_4CB02B0 = 1;
       }
       v17 = v16 * 0.5;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -624,7 +624,7 @@ void MissionNaviTransitionBoardItemDraw__SetLockNaviBoard(
       }
     }
 LABEL_8:
-    sub_1C3E7C0(this, boardItem);
+    sub_1C6BC60(this, boardItem);
   }
 }
 
@@ -637,19 +637,19 @@ void MissionNaviTransitionBoardItemDraw__SetMaskImage(
   __int64 v4; // x1
   struct UISprite_o *v5; // x0
 
-  if ( (byte_4C5A7F0 & 1) == 0 )
+  if ( (byte_4CB9DC2 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_20447/*"img_list_bg03"*/);
-    byte_4C5A7F0 = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_20494/*"img_list_bg03"*/);
+    byte_4CB9DC2 = 1;
   }
   enableMask = this->fields.enableMask;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetBanner(enableMask, (System_String_o *)StringLiteral_20447/*"img_list_bg03"*/, 0);
+  AtlasManager__SetBanner(enableMask, (System_String_o *)StringLiteral_20494/*"img_list_bg03"*/, 0);
   v5 = this->fields.enableMask;
   if ( !v5 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v5->klass->vtable._33_MakePixelPerfect.methodPtr)(
     v5,
     v5->klass->vtable._33_MakePixelPerfect.method);

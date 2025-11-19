@@ -26,31 +26,31 @@ void EventHeelPortraitListViewManager__CreateList(EventHeelPortraitListViewManag
   Il2CppClass **v20; // x0
   UserHeelPortraitEntity_o *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C512B2 & 1) == 0 )
+  if ( (byte_4CB07FA & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_HeelPortraitMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_UserHeelPortraitMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C3E564(&EventHeelPortraitListViewItem_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_HeelPortraitEntity__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_HeelPortraitEntity__get_Item__);
-    byte_4C512B2 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_HeelPortraitMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_UserHeelPortraitMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C6BA08(&EventHeelPortraitListViewItem_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_HeelPortraitEntity__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_HeelPortraitEntity__get_Item__);
+    byte_4CB07FA = 1;
   }
   entity = 0;
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_HeelPortraitMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_HeelPortraitMaster___);
   if ( !Master_object )
     goto LABEL_26;
   DispEntity = (System_Collections_Generic_List_object__o *)HeelPortraitMaster__GetDispEntity(
                                                               (HeelPortraitMaster_o *)Master_object,
                                                               this->fields.eventId,
                                                               0);
-  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_UserHeelPortraitMaster___);
+  Master_object = (__int64)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserHeelPortraitMaster___);
   if ( !Master_object )
     goto LABEL_26;
   Master_object = UserHeelPortraitMaster__TryGetEntity(
@@ -74,13 +74,13 @@ void EventHeelPortraitListViewManager__CreateList(EventHeelPortraitListViewManag
           Master_object = (__int64)System_Collections_Generic_List_object___get_Item(
                                      DispEntity,
                                      i,
-                                     (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_HeelPortraitEntity__get_Item__);
+                                     (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_HeelPortraitEntity__get_Item__);
           if ( !Master_object )
             goto LABEL_26;
           v10 = System_Linq_Enumerable__Contains_int_(
                   heelPortraitIds,
                   *(_DWORD *)(Master_object + 16),
-                  (const MethodInfo_3116AFC *)Method_System_Linq_Enumerable_Contains_int___);
+                  (const MethodInfo_31583F4 *)Method_System_Linq_Enumerable_Contains_int___);
         }
         else
         {
@@ -90,7 +90,7 @@ void EventHeelPortraitListViewManager__CreateList(EventHeelPortraitListViewManag
         Master_object = (__int64)System_Collections_Generic_List_object___get_Item(
                                    DispEntity,
                                    i,
-                                   (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_HeelPortraitEntity__get_Item__);
+                                   (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_HeelPortraitEntity__get_Item__);
         saveData = this->fields.saveData;
         if ( !saveData )
           goto LABEL_26;
@@ -99,7 +99,7 @@ void EventHeelPortraitListViewManager__CreateList(EventHeelPortraitListViewManag
         Master_object = (__int64)System_Collections_Generic_List_object___get_Item(
                                    DispEntity,
                                    i,
-                                   (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_HeelPortraitEntity__get_Item__);
+                                   (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_HeelPortraitEntity__get_Item__);
         if ( !Master_object )
           goto LABEL_26;
         if ( !displayedId )
@@ -107,11 +107,11 @@ void EventHeelPortraitListViewManager__CreateList(EventHeelPortraitListViewManag
         v15 = System_Collections_Generic_List_int___Contains(
                 displayedId,
                 *(_DWORD *)(Master_object + 16),
-                (const MethodInfo_37987B4 *)Method_System_Collections_Generic_List_int__Contains__);
-        v16 = sub_1C3E7B0(EventHeelPortraitListViewItem_TypeInfo);
-        ListViewItem___ctor_43860152((ListViewItem_o *)v16, i, 0);
+                (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__);
+        v16 = sub_1C6BC54(EventHeelPortraitListViewItem_TypeInfo);
+        ListViewItem___ctor_44050768((ListViewItem_o *)v16, i, 0);
         *(_QWORD *)(v16 + 120) = v14;
-        Master_object = sub_1C3E508(v16 + 120, v14);
+        Master_object = sub_1C6B9AC(v16 + 120, v14);
         *(_BYTE *)(v16 + 128) = v10;
         *(_BYTE *)(v16 + 129) = v15;
         if ( !itemList )
@@ -127,14 +127,14 @@ void EventHeelPortraitListViewManager__CreateList(EventHeelPortraitListViewManag
           System_Collections_Generic_List_object___AddWithResize(
             itemList,
             (Il2CppObject *)v16,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
           v20 = &items->obj.klass + v19;
           itemList->fields._size = v19 + 1;
           v20[4] = (Il2CppClass *)v16;
-          Master_object = sub_1C3E508(v20 + 4, v16);
+          Master_object = sub_1C6B9AC(v20 + 4, v16);
         }
       }
     }
@@ -144,7 +144,7 @@ void EventHeelPortraitListViewManager__CreateList(EventHeelPortraitListViewManag
   Master_object = (__int64)this->fields.scrollView;
   if ( !Master_object )
 LABEL_26:
-    sub_1C3E7C0(Master_object, v4);
+    sub_1C6BC60(Master_object, v4);
   UIScrollView__ResetPosition((UIScrollView_o *)Master_object, 0);
 }
 
@@ -158,10 +158,10 @@ void EventHeelPortraitListViewManager__DestroyList(EventHeelPortraitListViewMana
   UnityEngine_Component_o **p_heelPortraitDetailDialog; // x19
   UnityEngine_Object_o *gameObject; // x20
 
-  if ( (byte_4C512B6 & 1) == 0 )
+  if ( (byte_4CB07FE & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C512B6 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB07FE = 1;
   }
   assetManager = this->fields.assetManager;
   if ( assetManager )
@@ -173,13 +173,13 @@ void EventHeelPortraitListViewManager__DestroyList(EventHeelPortraitListViewMana
   {
     p_heelPortraitDetailDialog = (UnityEngine_Component_o **)&this->fields.heelPortraitDetailDialog;
     if ( !*p_heelPortraitDetailDialog )
-      sub_1C3E7C0(0, v6);
+      sub_1C6BC60(0, v6);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(*p_heelPortraitDetailDialog, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71341564(gameObject, 0);
+    UnityEngine_Object__Destroy_71659676(gameObject, 0);
     *p_heelPortraitDetailDialog = 0;
-    sub_1C3E508(p_heelPortraitDetailDialog, 0);
+    sub_1C6B9AC(p_heelPortraitDetailDialog, 0);
   }
 }
 
@@ -192,18 +192,18 @@ EventHeelPortraitListViewManager_HeelPortraitSaveData_o *EventHeelPortraitListVi
   EventHeelPortraitListViewManager_HeelPortraitSaveData_o *v4; // x19
   const MethodInfo *v5; // x1
 
-  if ( (byte_4C512B5 & 1) == 0 )
+  if ( (byte_4CB07FD & 1) == 0 )
   {
-    sub_1C3E564(&EventHeelPortraitListViewManager_HeelPortraitSaveData_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_JsonUtility_FromJson_EventHeelPortraitListViewManager_HeelPortraitSaveData___);
-    byte_4C512B5 = 1;
+    sub_1C6BA08(&EventHeelPortraitListViewManager_HeelPortraitSaveData_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_JsonUtility_FromJson_EventHeelPortraitListViewManager_HeelPortraitSaveData___);
+    byte_4CB07FD = 1;
   }
   HeelPortraitDetailDialogState = EventRewardSaveData__GetHeelPortraitDetailDialogState(this->fields.eventId, 0);
   if ( !System_String__IsNullOrEmpty(HeelPortraitDetailDialogState, 0) )
     return (EventHeelPortraitListViewManager_HeelPortraitSaveData_o *)UnityEngine_JsonUtility__FromJson_object_(
                                                                         HeelPortraitDetailDialogState,
-                                                                        (const MethodInfo_3169E64 *)Method_UnityEngine_JsonUtility_FromJson_EventHeelPortraitListViewManager_HeelPortraitSaveData___);
-  v4 = (EventHeelPortraitListViewManager_HeelPortraitSaveData_o *)sub_1C3E7B0(EventHeelPortraitListViewManager_HeelPortraitSaveData_TypeInfo);
+                                                                        (const MethodInfo_31ABEC4 *)Method_UnityEngine_JsonUtility_FromJson_EventHeelPortraitListViewManager_HeelPortraitSaveData___);
+  v4 = (EventHeelPortraitListViewManager_HeelPortraitSaveData_o *)sub_1C6BC54(EventHeelPortraitListViewManager_HeelPortraitSaveData_TypeInfo);
   EventHeelPortraitListViewManager_HeelPortraitSaveData___ctor(v4, v5);
   return v4;
 }
@@ -227,37 +227,37 @@ void EventHeelPortraitListViewManager__Init(
   System_Action_o *v15; // x22
   const MethodInfo *v16; // x3
 
-  if ( (byte_4C512B1 & 1) == 0 )
+  if ( (byte_4CB07F9 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&EventHeelPortraitAssetManager_TypeInfo);
-    sub_1C3E564(&Method_EventHeelPortraitListViewManager___c__DisplayClass7_0__Init_b__0__);
-    sub_1C3E564(&EventHeelPortraitListViewManager___c__DisplayClass7_0_TypeInfo);
-    byte_4C512B1 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&EventHeelPortraitAssetManager_TypeInfo);
+    sub_1C6BA08(&Method_EventHeelPortraitListViewManager___c__DisplayClass7_0__Init_b__0__);
+    sub_1C6BA08(&EventHeelPortraitListViewManager___c__DisplayClass7_0_TypeInfo);
+    byte_4CB07F9 = 1;
   }
-  v5 = sub_1C3E7B0(EventHeelPortraitListViewManager___c__DisplayClass7_0_TypeInfo);
+  v5 = sub_1C6BC54(EventHeelPortraitListViewManager___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_8;
   *(_QWORD *)(v5 + 24) = this;
   *(_DWORD *)(v5 + 16) = eventId;
-  sub_1C3E508(v5 + 24, this);
+  sub_1C6B9AC(v5 + 24, this);
   this->fields.eventId = *(_DWORD *)(v5 + 16);
   SaveData = EventHeelPortraitListViewManager__GetSaveData(this, v8);
   this->fields.saveData = SaveData;
-  sub_1C3E508(&this->fields.saveData, SaveData);
+  sub_1C6B9AC(&this->fields.saveData, SaveData);
   assetManager = this->fields.assetManager;
   if ( !assetManager )
   {
     p_assetManager = &this->fields.assetManager;
-    v12 = (EventHeelPortraitAssetManager_o *)sub_1C3E7B0(EventHeelPortraitAssetManager_TypeInfo);
+    v12 = (EventHeelPortraitAssetManager_o *)sub_1C6BC54(EventHeelPortraitAssetManager_TypeInfo);
     EventHeelPortraitAssetManager___ctor(v12, v13);
     *p_assetManager = v12;
-    sub_1C3E508(p_assetManager, v12);
+    sub_1C6B9AC(p_assetManager, v12);
     assetManager = *p_assetManager;
   }
   v14 = *(_DWORD *)(v5 + 16);
-  v15 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v15 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v15,
     (Il2CppObject *)v5,
@@ -265,7 +265,7 @@ void EventHeelPortraitListViewManager__Init(
     0);
   if ( !assetManager )
 LABEL_8:
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   EventHeelPortraitAssetManager__GetAssets(assetManager, v14, v15, v16);
 }
 
@@ -282,12 +282,12 @@ void EventHeelPortraitListViewManager__InitDialog(EventHeelPortraitListViewManag
   Il2CppObject *Component_object; // x0
   UnityEngine_Transform_o *v11; // x20
 
-  if ( (byte_4C512B3 & 1) == 0 )
+  if ( (byte_4CB07FB & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_HeelPortraitDetailDialogComponent___);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C512B3 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_HeelPortraitDetailDialogComponent___);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB07FB = 1;
   }
   heelPortraitDetailDialog = (UnityEngine_Object_o *)this->fields.heelPortraitDetailDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -303,30 +303,30 @@ void EventHeelPortraitListViewManager__InitDialog(EventHeelPortraitListViewManag
     uiRoot = this->fields.uiRoot;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    transform = (__int64)UnityEngine_Object__Instantiate_object__51929056(
+    transform = (__int64)UnityEngine_Object__Instantiate_object__52199488(
                            heelPortraitDetailDialog_k__BackingField,
                            uiRoot,
-                           (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+                           (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
     if ( !transform )
       goto LABEL_17;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)transform,
-                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_HeelPortraitDetailDialogComponent___);
+                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_HeelPortraitDetailDialogComponent___);
     *p_heelPortraitDetailDialog = (struct HeelPortraitDetailDialogComponent_o *)Component_object;
-    sub_1C3E508(p_heelPortraitDetailDialog, Component_object);
+    sub_1C6B9AC(p_heelPortraitDetailDialog, Component_object);
     transform = (__int64)*p_heelPortraitDetailDialog;
     if ( !*p_heelPortraitDetailDialog )
       goto LABEL_17;
     transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0);
     v11 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4C506A6 )
+    if ( !byte_4CAFC0E )
     {
-      transform = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A6 = 1;
+      transform = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC0E = 1;
     }
     if ( !v11 )
 LABEL_17:
-      sub_1C3E7C0(transform, v6);
+      sub_1C6BC60(transform, v6);
     UnityEngine_Transform__set_localScale(v11, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   }
   transform = (__int64)*p_heelPortraitDetailDialog;
@@ -354,23 +354,23 @@ void EventHeelPortraitListViewManager__OnClickListView(
   System_Action_o *v15; // x22
   const MethodInfo *v16; // x3
 
-  if ( (byte_4C512B4 & 1) == 0 )
+  if ( (byte_4CB07FC & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_EventHeelPortraitListViewManager_OnClickListView__);
-    sub_1C3E564(&Method_EventHeelPortraitListViewManager___c__DisplayClass11_0__OnClickListView_b__0__);
-    sub_1C3E564(&EventHeelPortraitListViewManager___c__DisplayClass11_0_TypeInfo);
-    byte_4C512B4 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_EventHeelPortraitListViewManager_OnClickListView__);
+    sub_1C6BA08(&Method_EventHeelPortraitListViewManager___c__DisplayClass11_0__OnClickListView_b__0__);
+    sub_1C6BA08(&EventHeelPortraitListViewManager___c__DisplayClass11_0_TypeInfo);
+    byte_4CB07FC = 1;
   }
-  v5 = (Il2CppObject *)sub_1C3E7B0(EventHeelPortraitListViewManager___c__DisplayClass11_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C6BC54(EventHeelPortraitListViewManager___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_14;
   v5[1].klass = (Il2CppClass *)this;
-  sub_1C3E508(&v5[1], this);
+  sub_1C6B9AC(&v5[1], this);
   v5[1].monitor = obj;
   p_monitor = (EventHeelPortraitListViewItem_o **)&v5[1].monitor;
-  sub_1C3E508(&v5[1].monitor, obj);
+  sub_1C6B9AC(&v5[1].monitor, obj);
   monitor = (EventHeelPortraitListViewItem_o *)v5[1].monitor;
   if ( !monitor )
     goto LABEL_14;
@@ -381,21 +381,21 @@ void EventHeelPortraitListViewManager__OnClickListView(
   {
     v9 = Method_EventHeelPortraitListViewManager_OnClickListView__;
     if ( (*((_BYTE *)Method_EventHeelPortraitListViewManager_OnClickListView__ + 83) & 2) != 0 )
-      v9 = (_QWORD *)sub_1C3E57C(Method_EventHeelPortraitListViewManager_OnClickListView__);
-    v10 = (System_Reflection_MethodBase_o *)sub_1C3E548(v9, v9[4]);
+      v9 = (_QWORD *)sub_1C6BA20(Method_EventHeelPortraitListViewManager_OnClickListView__);
+    v10 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v9, v9[4]);
     OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
     monitor = *p_monitor;
     if ( *p_monitor )
     {
       Item = EventHeelPortraitListViewObject__GetItem((EventHeelPortraitListViewObject_o *)monitor, v7);
       v5[2].klass = (Il2CppClass *)Item;
-      monitor = (EventHeelPortraitListViewItem_o *)sub_1C3E508(&v5[2], Item);
+      monitor = (EventHeelPortraitListViewItem_o *)sub_1C6B9AC(&v5[2], Item);
       klass = v5[2].klass;
       if ( klass )
       {
         heelPortraitDetailDialog = this->fields.heelPortraitDetailDialog;
         v14 = (HeelPortraitEntity_o *)klass->_1.klass;
-        v15 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+        v15 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
         System_Action___ctor(
           v15,
           v5,
@@ -409,7 +409,7 @@ void EventHeelPortraitListViewManager__OnClickListView(
       }
     }
 LABEL_14:
-    sub_1C3E7C0(monitor, v7);
+    sub_1C6BC60(monitor, v7);
   }
 }
 
@@ -437,18 +437,18 @@ void EventHeelPortraitListViewManager_HeelPortraitSaveData___ctor(
 {
   System_Collections_Generic_List_int__o *v3; // x20
 
-  if ( (byte_4C512B7 & 1) == 0 )
+  if ( (byte_4CB07FF & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4C512B7 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4CB07FF = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.displayedId = v3;
-  sub_1C3E508(&this->fields, v3);
+  sub_1C6B9AC(&this->fields, v3);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -476,10 +476,10 @@ void EventHeelPortraitListViewManager___c__DisplayClass11_0___OnClickListView_b_
   System_String_o *v10; // x0
 
   v2 = this;
-  if ( (byte_4C512B8 & 1) == 0 )
+  if ( (byte_4CB0800 & 1) == 0 )
   {
-    this = (EventHeelPortraitListViewManager___c__DisplayClass11_0_o *)sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
-    byte_4C512B8 = 1;
+    this = (EventHeelPortraitListViewManager___c__DisplayClass11_0_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
+    byte_4CB0800 = 1;
   }
   portraitItem = v2->fields.portraitItem;
   if ( !portraitItem )
@@ -511,7 +511,7 @@ void EventHeelPortraitListViewManager___c__DisplayClass11_0___OnClickListView_b_
     System_Collections_Generic_List_int___AddWithResize(
       (System_Collections_Generic_List_int__o *)this,
       (int32_t)method,
-      *(const MethodInfo_379843C **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_37E3950 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     _4__this = v2->fields.__4__this;
     if ( !_4__this )
       goto LABEL_15;
@@ -526,7 +526,7 @@ void EventHeelPortraitListViewManager___c__DisplayClass11_0___OnClickListView_b_
   this = (EventHeelPortraitListViewManager___c__DisplayClass11_0_o *)v2->fields.obj;
   if ( !this )
 LABEL_15:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   EventHeelPortraitListViewObject__ClearNewImgSprite((EventHeelPortraitListViewObject_o *)this, method);
 }
 
@@ -549,11 +549,11 @@ void EventHeelPortraitListViewManager___c__DisplayClass7_0___Init_b__0(
   UISprite_o *bg; // x20
 
   v2 = this;
-  if ( (byte_4C512B9 & 1) == 0 )
+  if ( (byte_4CB0801 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    this = (EventHeelPortraitListViewManager___c__DisplayClass7_0_o *)sub_1C3E564(&StringLiteral_22756/*"portrait_back"*/);
-    byte_4C512B9 = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    this = (EventHeelPortraitListViewManager___c__DisplayClass7_0_o *)sub_1C6BA08(&StringLiteral_22826/*"portrait_back"*/);
+    byte_4CB0801 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -562,14 +562,14 @@ void EventHeelPortraitListViewManager___c__DisplayClass7_0___Init_b__0(
   bg = _4__this->fields.bg;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventUI_40653244(eventId, bg, (System_String_o *)StringLiteral_22756/*"portrait_back"*/, 0);
+  AtlasManager__SetEventUI_40837804(eventId, bg, (System_String_o *)StringLiteral_22826/*"portrait_back"*/, 0);
   this = (EventHeelPortraitListViewManager___c__DisplayClass7_0_o *)v2->fields.__4__this;
   if ( !this
     || (EventHeelPortraitListViewManager__CreateList((EventHeelPortraitListViewManager_o *)this, method),
         (this = (EventHeelPortraitListViewManager___c__DisplayClass7_0_o *)v2->fields.__4__this) == 0) )
   {
 LABEL_9:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   EventHeelPortraitListViewManager__InitDialog((EventHeelPortraitListViewManager_o *)this, method);
 }

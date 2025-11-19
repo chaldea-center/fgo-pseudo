@@ -1,6 +1,6 @@
 void PartyAllFieldTargetAggregator___ctor(PartyAllFieldTargetAggregator_o *this, const MethodInfo *method)
 {
-  System_Object___ctor((Il2CppObject *)this, 0);
+  TargetAggregator___ctor((TargetAggregator_o *)this, 0);
 }
 
 
@@ -8,25 +8,21 @@ System_Int32_array *PartyAllFieldTargetAggregator__GetCandidate(
         PartyAllFieldTargetAggregator_o *this,
         const MethodInfo *method)
 {
-  struct TargetAggregator_Args_o *args; // x8
-  PartyAllFieldTargetAggregator_o *v3; // x19
-  struct TargetAggregator_Args_o *v4; // x9
-  char v5; // w8
+  BattleData_o *battleData; // x20
+  BattleData_o *actorId; // x0
+  __int64 v5; // x1
+  bool isEnemyID; // w20
 
-  args = this->fields.args;
-  if ( !args
-    || (v3 = this, (this = (PartyAllFieldTargetAggregator_o *)args->fields._battleData_k__BackingField) == 0)
-    || (this = (PartyAllFieldTargetAggregator_o *)BattleData__isEnemyID(
-                                                    (BattleData_o *)this,
-                                                    args->fields._actorId_k__BackingField,
-                                                    0),
-        (v4 = v3->fields.args) == 0)
-    || (v5 = (char)this, (this = (PartyAllFieldTargetAggregator_o *)v4->fields._battleData_k__BackingField) == 0) )
+  battleData = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0);
+  actorId = (BattleData_o *)TargetAggregator__get_actorId((TargetAggregator_o *)this, 0);
+  if ( !battleData
+    || (isEnemyID = BattleData__isEnemyID(battleData, (int32_t)actorId, 0),
+        (actorId = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0)) == 0) )
   {
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(actorId, v5);
   }
-  if ( (v5 & 1) != 0 )
-    return BattleData__getFieldEnemyServantIDList((BattleData_o *)this, 0, 0);
+  if ( isEnemyID )
+    return BattleData__getFieldEnemyServantIDList(actorId, 0, 0);
   else
-    return BattleData__getFieldPlayerServantIDList((BattleData_o *)this, 0, 0);
+    return BattleData__getFieldPlayerServantIDList(actorId, 0, 0);
 }

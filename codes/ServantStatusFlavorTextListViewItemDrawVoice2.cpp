@@ -99,7 +99,7 @@ void ServantStatusFlavorTextListViewItemDrawVoice2__SetItem(
       || (illustLabel = (UILabel_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)illustLabel, 0)) == 0 )
     {
 LABEL_23:
-      sub_1C3E7C0(illustLabel, v9);
+      sub_1C6BC60(illustLabel, v9);
     }
     v25.fields.y = y + (float)(v19 >> 1);
     v25.fields.x = x;

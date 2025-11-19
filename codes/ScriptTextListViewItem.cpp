@@ -4,30 +4,24 @@ void ScriptTextListViewItem___ctor(
         System_String_o *lineText,
         const MethodInfo *method)
 {
-  __int64 v7; // x2
-  __int64 v8; // x3
-  __int64 v9; // x4
-  __int64 v10; // x5
-  __int64 v11; // x6
-  __int64 v12; // x7
-  Il2CppObject *v13; // x0
-  struct System_String_o *v14; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int v17; // [xsp+Ch] [xbp-34h] BYREF
+  Il2CppObject *v7; // x0
+  struct System_String_o *v8; // x0
+  int32_t v9; // w2
+  const MethodInfo *v10; // x3
+  int v11; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C54389 & 1) == 0 )
+  if ( (byte_4CB38DB & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&StringLiteral_16024/*"[{0:D4}] {1}"*/);
-    byte_4C54389 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&StringLiteral_16007/*"[{0:D4}] {1}"*/);
+    byte_4CB38DB = 1;
   }
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
-  v17 = index + 1;
-  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17, v7, v8, v9, v10, v11, v12);
-  v14 = System_String__Format_63677760((System_String_o *)StringLiteral_16024/*"[{0:D4}] {1}"*/, v13, (Il2CppObject *)lineText, 0);
-  this->fields.lineText = v14;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.lineText, (int32_t)v14, v15, v16);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  v11 = index + 1;
+  v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11);
+  v8 = System_String__Format_64008100((System_String_o *)StringLiteral_16007/*"[{0:D4}] {1}"*/, v7, (Il2CppObject *)lineText, 0);
+  this->fields.lineText = v8;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.lineText, (int32_t)v8, v9, v10);
 }
 
 

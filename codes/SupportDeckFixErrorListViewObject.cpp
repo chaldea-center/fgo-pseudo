@@ -1,9 +1,9 @@
 void SupportDeckFixErrorListViewObject___ctor(SupportDeckFixErrorListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C53387 & 1) == 0 )
+  if ( (byte_4CB28D7 & 1) == 0 )
   {
-    sub_1C3E564(&ListViewObject_TypeInfo);
-    byte_4C53387 = 1;
+    sub_1C6BA08(&ListViewObject_TypeInfo);
+    byte_4CB28D7 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void SupportDeckFixErrorListViewObject__Awake(SupportDeckFixErrorListViewObject_
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C53385 & 1) == 0 )
+  if ( (byte_4CB28D5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_SupportDeckFixErrorListViewItemDraw___);
-    byte_4C53385 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SupportDeckFixErrorListViewItemDraw___);
+    byte_4CB28D5 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_SupportDeckFixErrorListViewItemDraw___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SupportDeckFixErrorListViewItemDraw___);
   this->fields.itemDraw = (struct SupportDeckFixErrorListViewItemDraw_o *)Component_object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -47,11 +47,11 @@ void SupportDeckFixErrorListViewObject__Init(SupportDeckFixErrorListViewObject_o
   __int64 v9; // x1
   struct SupportDeckFixErrorListViewItemDraw_o *v10; // x8
 
-  if ( (byte_4C53386 & 1) == 0 )
+  if ( (byte_4CB28D6 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&SupportDeckFixErrorListViewItem_TypeInfo);
-    byte_4C53386 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&SupportDeckFixErrorListViewItem_TypeInfo);
+    byte_4CB28D6 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -70,7 +70,7 @@ void SupportDeckFixErrorListViewObject__Init(SupportDeckFixErrorListViewObject_o
         if ( ((unsigned __int8)messageLabel & 1) != 0 )
         {
           if ( !v6 || (v10 = this->fields.itemDraw) == 0 || (messageLabel = v10->fields.messageLabel) == 0 )
-            sub_1C3E7C0(messageLabel, v9);
+            sub_1C6BC60(messageLabel, v9);
           UILabel__set_text(messageLabel, (System_String_o *)v6[1].klass, 0);
         }
       }

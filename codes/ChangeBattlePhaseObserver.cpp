@@ -11,10 +11,10 @@ void ChangeBattlePhaseObserver__Update(
 {
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C5A163 & 1) == 0 )
+  if ( (byte_4CB9727 & 1) == 0 )
   {
-    sub_1C3E564(&ChangeBattlePhaseNotify_TypeInfo);
-    byte_4C5A163 = 1;
+    sub_1C6BA08(&ChangeBattlePhaseNotify_TypeInfo);
+    byte_4CB9727 = 1;
   }
   if ( subject )
   {

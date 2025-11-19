@@ -1,27 +1,27 @@
 void ServantFlagEntity___ctor(ServantFlagEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5769E & 1) == 0 )
+  if ( (byte_4CB6C07 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C5769E = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB6C07 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantFlagEntity__CreatePK(int32_t svtId, int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4C5769D & 1) == 0 )
+  if ( (byte_4CB6C06 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4C5769D = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CB6C06 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            flagId,
-           (const MethodInfo_30F7BF8 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_31394F0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

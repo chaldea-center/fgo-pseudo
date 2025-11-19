@@ -1,14 +1,14 @@
 void CardMaster___ctor(CardMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56AAC & 1) == 0 )
+  if ( (byte_4CB600E & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_CardMaster__CardEntity__string___ctor__);
-    byte_4C56AAC = 1;
+    sub_1C6BA08(&Method_DataMasterBase_CardMaster__CardEntity__string___ctor__);
+    byte_4CB600E = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     117,
-    (const MethodInfo_33B56EC *)Method_DataMasterBase_CardMaster__CardEntity__string___ctor__);
+    (const MethodInfo_33FB870 *)Method_DataMasterBase_CardMaster__CardEntity__string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ CardEntity_o *CardMaster__GetEntity(CardMaster_o *this, int32_t id, int32_t num,
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C56AAA & 1) == 0 )
+  if ( (byte_4CB600C & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_CardMaster__CardEntity__string__GetEntity__);
-    byte_4C56AAA = 1;
+    sub_1C6BA08(&Method_DataMasterBase_CardMaster__CardEntity__string__GetEntity__);
+    byte_4CB600C = 1;
   }
   PK = (Il2CppObject *)CardEntity__CreatePK(id, num, *(const MethodInfo **)&num);
   return (CardEntity_o *)DataMasterBase_object__object__object___GetEntity(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                            PK,
-                           (const MethodInfo_33B7A10 *)Method_DataMasterBase_CardMaster__CardEntity__string__GetEntity__);
+                           (const MethodInfo_33FDB94 *)Method_DataMasterBase_CardMaster__CardEntity__string__GetEntity__);
 }
 
 
@@ -40,17 +40,17 @@ bool CardMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C56AAB & 1) == 0 )
+  if ( (byte_4CB600D & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_CardMaster__CardEntity__string__TryGetEntity__);
-    byte_4C56AAB = 1;
+    sub_1C6BA08(&Method_DataMasterBase_CardMaster__CardEntity__string__TryGetEntity__);
+    byte_4CB600D = 1;
   }
   PK = (Il2CppObject *)CardEntity__CreatePK(id, num, *(const MethodInfo **)&id);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33B7A5C *)Method_DataMasterBase_CardMaster__CardEntity__string__TryGetEntity__);
+           (const MethodInfo_33FDBE0 *)Method_DataMasterBase_CardMaster__CardEntity__string__TryGetEntity__);
 }
 
 
@@ -65,27 +65,27 @@ float CardMaster__getAtk(int32_t type, int32_t num, const MethodInfo *method)
   const MethodInfo *v11; // x3
   float result; // s0
 
-  if ( (byte_4C56AAD & 1) == 0 )
+  if ( (byte_4CB600F & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_1C3E564(&Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
-    sub_1C3E564(&long___TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C56AAD = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
+    sub_1C6BA08(&long___TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB600F = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_CardMaster___);
-  Instance = (DataManager_o *)sub_1C3E60C(long___TypeInfo, 2);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_CardMaster___);
+  Instance = (DataManager_o *)sub_1C6BAB0(long___TypeInfo, 2);
   if ( !Instance )
     goto LABEL_12;
   m_CancellationTokenSource = (int)Instance->fields.m_CancellationTokenSource;
   v6 = Instance;
   if ( !m_CancellationTokenSource || (*(_QWORD *)&Instance->fields._DispLog = type, m_CancellationTokenSource == 1) )
-    sub_1C3E7C8(Instance, Instance);
+    sub_1C6BC68(Instance);
   v9 = num + 1;
   Instance->fields.datalist = (struct DataMasterBase_array *)v9;
   if ( !MasterData_object )
@@ -93,14 +93,14 @@ float CardMaster__getAtk(int32_t type, int32_t num, const MethodInfo *method)
   isEntityExistsFromId = DataMasterBase_object__object__object___isEntityExistsFromId(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                            (System_Int64_array *)Instance,
-                           (const MethodInfo_33B6FEC *)Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
+                           (const MethodInfo_33FD170 *)Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
   result = 1.0;
   if ( !isEntityExistsFromId )
     return result;
   Instance = (DataManager_o *)CardMaster__GetEntity((CardMaster_o *)MasterData_object, type, v9, v11);
   if ( !Instance )
 LABEL_12:
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   return (float)SLODWORD(Instance->fields.m_CancellationTokenSource) / 1000.0;
 }
 
@@ -116,27 +116,27 @@ float CardMaster__getCritical(int32_t type, int32_t num, const MethodInfo *metho
   const MethodInfo *v11; // x3
   float result; // s0
 
-  if ( (byte_4C56AAF & 1) == 0 )
+  if ( (byte_4CB6011 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_1C3E564(&Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
-    sub_1C3E564(&long___TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C56AAF = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
+    sub_1C6BA08(&long___TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6011 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_CardMaster___);
-  Instance = (DataManager_o *)sub_1C3E60C(long___TypeInfo, 2);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_CardMaster___);
+  Instance = (DataManager_o *)sub_1C6BAB0(long___TypeInfo, 2);
   if ( !Instance )
     goto LABEL_12;
   m_CancellationTokenSource = (int)Instance->fields.m_CancellationTokenSource;
   v6 = Instance;
   if ( !m_CancellationTokenSource || (*(_QWORD *)&Instance->fields._DispLog = type, m_CancellationTokenSource == 1) )
-    sub_1C3E7C8(Instance, Instance);
+    sub_1C6BC68(Instance);
   v9 = num + 1;
   Instance->fields.datalist = (struct DataMasterBase_array *)v9;
   if ( !MasterData_object )
@@ -144,14 +144,14 @@ float CardMaster__getCritical(int32_t type, int32_t num, const MethodInfo *metho
   isEntityExistsFromId = DataMasterBase_object__object__object___isEntityExistsFromId(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                            (System_Int64_array *)Instance,
-                           (const MethodInfo_33B6FEC *)Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
+                           (const MethodInfo_33FD170 *)Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
   result = 0.0;
   if ( !isEntityExistsFromId )
     return result;
   Instance = (DataManager_o *)CardMaster__GetEntity((CardMaster_o *)MasterData_object, type, v9, v11);
   if ( !Instance )
 LABEL_12:
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   return (float)*(int *)&Instance->fields._DispLog / 1000.0;
 }
 
@@ -186,31 +186,31 @@ System_Int32_array *CardMaster__getIdArrayFromIndividuality(int32_t individualit
   int32_t *v28; // x10
   __int64 v29; // x0
 
-  if ( (byte_4C56AB1 & 1) == 0 )
+  if ( (byte_4CB6013 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_CardEntity__GetEnumerator__);
-    sub_1C3E564(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_CardEntity__TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C56AB1 = 1;
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_CardEntity__GetEnumerator__);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_CardEntity__TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6013 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_46;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_CardMaster___);
+                                (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_CardMaster___);
   if ( !Instance )
     goto LABEL_46;
   Instance = (DataManager_o *)Instance->fields.datalist;
@@ -218,9 +218,9 @@ System_Int32_array *CardMaster__getIdArrayFromIndividuality(int32_t individualit
     goto LABEL_46;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  (System_Collections_ObjectModel_Collection_T__o *)Instance,
-                 (const MethodInfo_334C9A0 *)Method_System_Collections_ObjectModel_Collection_CardEntity__GetEnumerator__);
+                 (const MethodInfo_339243C *)Method_System_Collections_ObjectModel_Collection_CardEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
 LABEL_7:
   while ( 2 )
   {
@@ -241,7 +241,7 @@ LABEL_7:
     else
     {
 LABEL_11:
-      v11 = sub_1C8ED7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v11 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v11)(
             Enumerator,
@@ -265,7 +265,7 @@ LABEL_11:
       else
       {
 LABEL_18:
-        v15 = sub_1C8ED7C(Enumerator, System_Collections_Generic_IEnumerator_CardEntity__TypeInfo, 0);
+        v15 = sub_1C41D90(Enumerator, System_Collections_Generic_IEnumerator_CardEntity__TypeInfo, 0);
       }
       v16 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
               Enumerator,
@@ -283,15 +283,15 @@ LABEL_18:
       while ( 1 )
       {
         if ( v21 >= (unsigned int)v20 )
-          sub_1C3E7C8(v16, v17);
+          sub_1C6BC68(v16);
         if ( *(_DWORD *)(v19 + 32 + 4 * v21) == individuality )
         {
           if ( !v3 )
-            sub_1C3E7C0(v16, v17);
+            sub_1C6BC60(v16, v17);
           v16 = System_Collections_Generic_List_int___Contains(
                   v3,
                   *(_DWORD *)(v18 + 16),
-                  (const MethodInfo_37987B4 *)Method_System_Collections_Generic_List_int__Contains__);
+                  (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__);
           if ( (v16 & 1) == 0 )
           {
             v22 = *(unsigned int *)(v18 + 16);
@@ -299,14 +299,14 @@ LABEL_18:
             v24 = Method_System_Collections_Generic_List_int__Add__;
             ++v3->fields._version;
             if ( !items )
-              sub_1C3E7C0(v16, v22);
+              sub_1C6BC60(v16, v22);
             size = v3->fields._size;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_int___AddWithResize(
                 v3,
                 v22,
-                *(const MethodInfo_379843C **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+                *(const MethodInfo_37E3950 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
             }
             else
             {
@@ -340,17 +340,17 @@ LABEL_18:
   else
   {
 LABEL_40:
-    v29 = sub_1C8ED7C(Enumerator, System_IDisposable_TypeInfo, 0);
+    v29 = sub_1C41D90(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   Instance = (DataManager_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v29)(
                                 Enumerator,
                                 *(_QWORD *)(v29 + 8));
   if ( !v3 )
 LABEL_46:
-    sub_1C3E7C0(Instance, v5);
+    sub_1C6BC60(Instance, v5);
   return System_Collections_Generic_List_int___ToArray(
            v3,
-           (const MethodInfo_3799EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_37E5408 *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -363,20 +363,20 @@ System_Int32_array *CardMaster__getIndividualities(int32_t type, int32_t num, co
   const MethodInfo *v9; // x4
   CardEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C56AB0 & 1) == 0 )
+  if ( (byte_4CB6012 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C56AB0 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6012 = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_CardMaster___);
+               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_CardMaster___);
   if ( !Instance )
     goto LABEL_10;
   v8 = (CardMaster_o *)Instance;
@@ -388,9 +388,9 @@ System_Int32_array *CardMaster__getIndividualities(int32_t type, int32_t num, co
     if ( entity )
       return entity->fields.individuality;
 LABEL_10:
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   }
-  return (System_Int32_array *)sub_1C3E60C(int___TypeInfo, 0);
+  return (System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 0);
 }
 
 
@@ -405,27 +405,27 @@ float CardMaster__getTdGauge(int32_t type, int32_t num, const MethodInfo *method
   const MethodInfo *v11; // x3
   float result; // s0
 
-  if ( (byte_4C56AAE & 1) == 0 )
+  if ( (byte_4CB6010 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_CardMaster___);
-    sub_1C3E564(&Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
-    sub_1C3E564(&long___TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C56AAE = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_CardMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
+    sub_1C6BA08(&long___TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB6010 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_CardMaster___);
-  Instance = (DataManager_o *)sub_1C3E60C(long___TypeInfo, 2);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_CardMaster___);
+  Instance = (DataManager_o *)sub_1C6BAB0(long___TypeInfo, 2);
   if ( !Instance )
     goto LABEL_12;
   m_CancellationTokenSource = (int)Instance->fields.m_CancellationTokenSource;
   v6 = Instance;
   if ( !m_CancellationTokenSource || (*(_QWORD *)&Instance->fields._DispLog = type, m_CancellationTokenSource == 1) )
-    sub_1C3E7C8(Instance, Instance);
+    sub_1C6BC68(Instance);
   v9 = num + 1;
   Instance->fields.datalist = (struct DataMasterBase_array *)v9;
   if ( !MasterData_object )
@@ -433,13 +433,13 @@ float CardMaster__getTdGauge(int32_t type, int32_t num, const MethodInfo *method
   isEntityExistsFromId = DataMasterBase_object__object__object___isEntityExistsFromId(
                            (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
                            (System_Int64_array *)Instance,
-                           (const MethodInfo_33B6FEC *)Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
+                           (const MethodInfo_33FD170 *)Method_DataMasterBase_CardMaster__CardEntity__string__isEntityExistsFromId__);
   result = 0.0;
   if ( !isEntityExistsFromId )
     return result;
   Instance = (DataManager_o *)CardMaster__GetEntity((CardMaster_o *)MasterData_object, type, v9, v11);
   if ( !Instance )
 LABEL_12:
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   return (float)SHIDWORD(Instance->fields.m_CancellationTokenSource) / 1000.0;
 }

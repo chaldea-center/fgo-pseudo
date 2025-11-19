@@ -1,28 +1,28 @@
 void BattleScriptEntity___ctor(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569BE & 1) == 0 )
+  if ( (byte_4CB5F20 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C569BE = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB5F20 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *BattleScriptEntity__CreatePK(int32_t id, int32_t playOrder, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4C569BD & 1) == 0 )
+  if ( (byte_4CB5F1F & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4C569BD = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4CB5F1F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            playOrder,
            idx,
-           (const MethodInfo_30F8088 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_3139980 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -36,100 +36,100 @@ System_String_o *BattleScriptEntity__CreatePrimaryKey(BattleScriptEntity_o *this
 
 int32_t BattleScriptEntity__GetAiActId(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569AD & 1) == 0 )
+  if ( (byte_4CB5F0F & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_16734/*"aiActId"*/);
-    byte_4C569AD = 1;
+    sub_1C6BA08(&StringLiteral_16730/*"aiActId"*/);
+    byte_4CB5F0F = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_16734/*"aiActId"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_16730/*"aiActId"*/, 0, 0);
 }
 
 
 int32_t BattleScriptEntity__GetAiActIndividuality(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569AF & 1) == 0 )
+  if ( (byte_4CB5F11 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_20795/*"individuality"*/);
-    byte_4C569AF = 1;
+    sub_1C6BA08(&StringLiteral_20841/*"individuality"*/);
+    byte_4CB5F11 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20795/*"individuality"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20841/*"individuality"*/, 0, 0);
 }
 
 
 int32_t BattleScriptEntity__GetAiActType(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569AE & 1) == 0 )
+  if ( (byte_4CB5F10 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_24265/*"type"*/);
-    byte_4C569AE = 1;
+    sub_1C6BA08(&StringLiteral_24347/*"type"*/);
+    byte_4CB5F10 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24265/*"type"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24347/*"type"*/, 0, 0);
 }
 
 
 System_String_o *BattleScriptEntity__GetCameraMotionEventName(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569B8 & 1) == 0 )
+  if ( (byte_4CB5F1A & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_19171/*"eventName"*/);
-    byte_4C569B8 = 1;
+    sub_1C6BA08(&StringLiteral_19202/*"eventName"*/);
+    byte_4CB5F1A = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19171/*"eventName"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_19202/*"eventName"*/, 0, 0);
 }
 
 
 System_String_o *BattleScriptEntity__GetCharaVoice(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569BB & 1) == 0 )
+  if ( (byte_4CB5F1D & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_17950/*"charaVoice"*/);
-    byte_4C569BB = 1;
+    sub_1C6BA08(&StringLiteral_17951/*"charaVoice"*/);
+    byte_4CB5F1D = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_17950/*"charaVoice"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_17951/*"charaVoice"*/, 0, 0);
 }
 
 
 int32_t BattleScriptEntity__GetCutInCamPlayerAll(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569B6 & 1) == 0 )
+  if ( (byte_4CB5F18 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18430/*"cutInCamPlayerAll"*/);
-    byte_4C569B6 = 1;
+    sub_1C6BA08(&StringLiteral_18444/*"cutInCamPlayerAll"*/);
+    byte_4CB5F18 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18430/*"cutInCamPlayerAll"*/, -1, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18444/*"cutInCamPlayerAll"*/, -1, 0);
 }
 
 
 int32_t BattleScriptEntity__GetCutInId(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569B1 & 1) == 0 )
+  if ( (byte_4CB5F13 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18431/*"cutInId"*/);
-    byte_4C569B1 = 1;
+    sub_1C6BA08(&StringLiteral_18445/*"cutInId"*/);
+    byte_4CB5F13 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18431/*"cutInId"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18445/*"cutInId"*/, 0, 0);
 }
 
 
 int32_t BattleScriptEntity__GetCutInMessageMode(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569B3 & 1) == 0 )
+  if ( (byte_4CB5F15 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18432/*"cutInMessageMode"*/);
-    byte_4C569B3 = 1;
+    sub_1C6BA08(&StringLiteral_18446/*"cutInMessageMode"*/);
+    byte_4CB5F15 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18432/*"cutInMessageMode"*/, -1, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18446/*"cutInMessageMode"*/, -1, 0);
 }
 
 
 System_String_o *BattleScriptEntity__GetCutInMessageText(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569B4 & 1) == 0 )
+  if ( (byte_4CB5F16 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18433/*"cutInMessageText"*/);
-    byte_4C569B4 = 1;
+    sub_1C6BA08(&StringLiteral_18447/*"cutInMessageText"*/);
+    byte_4CB5F16 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18433/*"cutInMessageText"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18447/*"cutInMessageText"*/, 0, 0);
 }
 
 
@@ -153,20 +153,20 @@ UnityEngine_Vector3_array *BattleScriptEntity__GetCutInOffset(BattleScriptEntity
   float v18; // s0
   float v19; // s0
 
-  if ( (byte_4C569B7 & 1) == 0 )
+  if ( (byte_4CB5F19 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Vector3___TypeInfo);
-    sub_1C3E564(&StringLiteral_18435/*"cutInPrefabOffsets"*/);
-    byte_4C569B7 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3___TypeInfo);
+    sub_1C6BA08(&StringLiteral_18449/*"cutInPrefabOffsets"*/);
+    byte_4CB5F19 = 1;
   }
-  ScriptStringArray = BattleScriptEntity__GetScriptStringArray(this, (System_String_o *)StringLiteral_18435/*"cutInPrefabOffsets"*/, 0x2Fu, v2);
+  ScriptStringArray = BattleScriptEntity__GetScriptStringArray(this, (System_String_o *)StringLiteral_18449/*"cutInPrefabOffsets"*/, 0x2Fu, v2);
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)ScriptStringArray, 0);
   v7 = 0;
   if ( !IsNullOrEmpty )
   {
     if ( !ScriptStringArray )
-      sub_1C3E7C0(IsNullOrEmpty, v6);
-    v8 = (System_String_array *)sub_1C3E60C(UnityEngine_Vector3___TypeInfo, LODWORD(ScriptStringArray->max_length));
+      sub_1C6BC60(IsNullOrEmpty, v6);
+    v8 = (System_String_array *)sub_1C6BAB0(UnityEngine_Vector3___TypeInfo, LODWORD(ScriptStringArray->max_length));
     max_length = ScriptStringArray->max_length;
     v7 = v8;
     if ( max_length >= 1 )
@@ -208,10 +208,10 @@ UnityEngine_Vector3_array *BattleScriptEntity__GetCutInOffset(BattleScriptEntity
           v15 = System_Single__Parse(v14->m_Items[0], 0);
         if ( !v7 )
 LABEL_20:
-          sub_1C3E7C0(v8, v9);
+          sub_1C6BC60(v8, v9);
         if ( (unsigned int)v11 >= LODWORD(v7->max_length) )
 LABEL_21:
-          sub_1C3E7C8(v8, v9);
+          sub_1C6BC68(v8);
         *(v12 - 2) = v16;
         *(v12 - 1) = v17;
         *v12 = v15;
@@ -230,12 +230,12 @@ System_String_array *BattleScriptEntity__GetCutInPrefabInfo(BattleScriptEntity_o
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C569B2 & 1) == 0 )
+  if ( (byte_4CB5F14 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18434/*"cutInPrefabInfo"*/);
-    byte_4C569B2 = 1;
+    sub_1C6BA08(&StringLiteral_18448/*"cutInPrefabInfo"*/);
+    byte_4CB5F14 = 1;
   }
-  return BattleScriptEntity__GetScriptStringArray(this, (System_String_o *)StringLiteral_18434/*"cutInPrefabInfo"*/, 0x2Cu, v2);
+  return BattleScriptEntity__GetScriptStringArray(this, (System_String_o *)StringLiteral_18448/*"cutInPrefabInfo"*/, 0x2Cu, v2);
 }
 
 
@@ -243,45 +243,45 @@ System_String_array *BattleScriptEntity__GetCutInVoices(BattleScriptEntity_o *th
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4C569B5 & 1) == 0 )
+  if ( (byte_4CB5F17 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18438/*"cutInVoices"*/);
-    byte_4C569B5 = 1;
+    sub_1C6BA08(&StringLiteral_18452/*"cutInVoices"*/);
+    byte_4CB5F17 = 1;
   }
-  return BattleScriptEntity__GetScriptStringArray(this, (System_String_o *)StringLiteral_18438/*"cutInVoices"*/, 0x2Fu, v2);
+  return BattleScriptEntity__GetScriptStringArray(this, (System_String_o *)StringLiteral_18452/*"cutInVoices"*/, 0x2Fu, v2);
 }
 
 
 int32_t BattleScriptEntity__GetDelayTime(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569BC & 1) == 0 )
+  if ( (byte_4CB5F1E & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18578/*"delayTime"*/);
-    byte_4C569BC = 1;
+    sub_1C6BA08(&StringLiteral_18588/*"delayTime"*/);
+    byte_4CB5F1E = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18578/*"delayTime"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18588/*"delayTime"*/, 0, 0);
 }
 
 
 int32_t BattleScriptEntity__GetDispTime(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569BA & 1) == 0 )
+  if ( (byte_4CB5F1C & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_18666/*"dispTime"*/);
-    byte_4C569BA = 1;
+    sub_1C6BA08(&StringLiteral_18681/*"dispTime"*/);
+    byte_4CB5F1C = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18666/*"dispTime"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18681/*"dispTime"*/, 0, 0);
 }
 
 
 System_String_o *BattleScriptEntity__GetMessageText(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569B9 & 1) == 0 )
+  if ( (byte_4CB5F1B & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_21576/*"messageText"*/);
-    byte_4C569B9 = 1;
+    sub_1C6BA08(&StringLiteral_21644/*"messageText"*/);
+    byte_4CB5F1B = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21576/*"messageText"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21644/*"messageText"*/, 0, 0);
 }
 
 
@@ -300,17 +300,17 @@ System_String_array *BattleScriptEntity__GetScriptStringArray(
   if ( IsNullOrEmpty )
     return 0;
   if ( !StringValue )
-    sub_1C3E7C0(IsNullOrEmpty, v7);
+    sub_1C6BC60(IsNullOrEmpty, v7);
   return System_String__Split(StringValue, splitChar, 0, 0);
 }
 
 
 int32_t BattleScriptEntity__GetWaitTime(BattleScriptEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569B0 & 1) == 0 )
+  if ( (byte_4CB5F12 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_24742/*"waitTime"*/);
-    byte_4C569B0 = 1;
+    sub_1C6BA08(&StringLiteral_24832/*"waitTime"*/);
+    byte_4CB5F12 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24742/*"waitTime"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24832/*"waitTime"*/, 0, 0);
 }

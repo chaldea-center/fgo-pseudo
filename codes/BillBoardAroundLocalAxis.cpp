@@ -12,7 +12,7 @@ void BillBoardAroundLocalAxis__SetTargetTransform(
   const MethodInfo *v3; // x3
 
   this->fields.targetTrans = trans;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.targetTrans, (int32_t)trans, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.targetTrans, (int32_t)trans, (int32_t)method, v3);
 }
 
 
@@ -21,10 +21,10 @@ void BillBoardAroundLocalAxis__Update(BillBoardAroundLocalAxis_o *this, const Me
   UnityEngine_Object_o *targetTrans; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4C560E8 & 1) == 0 )
+  if ( (byte_4CB564F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C560E8 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB564F = 1;
   }
   targetTrans = (UnityEngine_Object_o *)this->fields.targetTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -159,7 +159,7 @@ void BillBoardAroundLocalAxis__UpdateAngles(BillBoardAroundLocalAxis_o *this, co
   targetTrans = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !targetTrans )
 LABEL_11:
-    sub_1C3E7C0(targetTrans, method);
+    sub_1C6BC60(targetTrans, method);
   v43.fields.x = v21;
   v43.fields.y = v22;
   v43.fields.z = v23;

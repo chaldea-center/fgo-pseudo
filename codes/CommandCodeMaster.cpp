@@ -1,14 +1,14 @@
 void CommandCodeMaster___ctor(CommandCodeMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56B37 & 1) == 0 )
+  if ( (byte_4CB6099 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int___ctor__);
-    byte_4C56B37 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int___ctor__);
+    byte_4CB6099 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     256,
-    (const MethodInfo_33B0C34 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int___ctor__);
+    (const MethodInfo_33F6DB8 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int___ctor__);
 }
 
 
@@ -29,27 +29,27 @@ System_Int32_array *CommandCodeMaster__GetCollectionList(CommandCodeMaster_o *th
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
 
-  if ( (byte_4C56B38 & 1) == 0 )
+  if ( (byte_4CB609A & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_CommandCodeEntity__get_Count__);
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_CommandCodeEntity__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C56B38 = 1;
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_CommandCodeEntity__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_CommandCodeEntity__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CB609A = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_21;
   Count = System_Collections_ObjectModel_Collection_object___get_Count(
             list,
-            (const MethodInfo_334C3C8 *)Method_System_Collections_ObjectModel_Collection_CommandCodeEntity__get_Count__);
-  v5 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
+            (const MethodInfo_3391E64 *)Method_System_Collections_ObjectModel_Collection_CommandCodeEntity__get_Count__);
+  v5 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v5,
-    (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
   if ( Count >= 1 )
   {
     v6 = 0;
@@ -61,7 +61,7 @@ System_Int32_array *CommandCodeMaster__GetCollectionList(CommandCodeMaster_o *th
       list = (System_Collections_ObjectModel_Collection_T__o *)System_Collections_ObjectModel_Collection_object___get_Item(
                                                                  list,
                                                                  v6,
-                                                                 (const MethodInfo_334C458 *)Method_System_Collections_ObjectModel_Collection_CommandCodeEntity__get_Item__);
+                                                                 (const MethodInfo_3391EF4 *)Method_System_Collections_ObjectModel_Collection_CommandCodeEntity__get_Item__);
       if ( !list )
         break;
       v7 = list;
@@ -71,7 +71,7 @@ System_Int32_array *CommandCodeMaster__GetCollectionList(CommandCodeMaster_o *th
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v16.fields.currentCryptoKey = monitor;
       *(_QWORD *)&v16.fields.fakeValue = items;
-      list = (System_Collections_ObjectModel_Collection_T__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(
+      list = (System_Collections_ObjectModel_Collection_T__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
                                                                  v16,
                                                                  0);
       if ( (int)list >= 1 )
@@ -82,7 +82,7 @@ System_Int32_array *CommandCodeMaster__GetCollectionList(CommandCodeMaster_o *th
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v17.fields.currentCryptoKey = v11;
         *(_QWORD *)&v17.fields.fakeValue = klass;
-        list = (System_Collections_ObjectModel_Collection_T__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(
+        list = (System_Collections_ObjectModel_Collection_T__o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
                                                                    v17,
                                                                    0);
         if ( !v5 )
@@ -99,7 +99,7 @@ System_Int32_array *CommandCodeMaster__GetCollectionList(CommandCodeMaster_o *th
           System_Collections_Generic_List_int___AddWithResize(
             v5,
             (int32_t)list,
-            *(const MethodInfo_379843C **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
         }
         else
         {
@@ -111,12 +111,12 @@ System_Int32_array *CommandCodeMaster__GetCollectionList(CommandCodeMaster_o *th
         goto LABEL_19;
     }
 LABEL_21:
-    sub_1C3E7C0(list, method);
+    sub_1C6BC60(list, method);
   }
 LABEL_19:
   if ( !v5 )
     goto LABEL_21;
   return System_Collections_Generic_List_int___ToArray(
            v5,
-           (const MethodInfo_3799EF4 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_37E5408 *)Method_System_Collections_Generic_List_int__ToArray__);
 }

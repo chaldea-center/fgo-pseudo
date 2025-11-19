@@ -15,12 +15,12 @@ void SupportSelectListViewIndicator__DrawPartyInfo(
   SupportSelectListViewIndicator_o *v7; // x1
 
   v4 = this;
-  if ( (byte_4C533F9 & 1) == 0 )
+  if ( (byte_4CB2949 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_12564/*"SUPPORT_SELECT_NAME"*/);
-    this = (SupportSelectListViewIndicator_o *)sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C533F9 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_12561/*"SUPPORT_SELECT_NAME"*/);
+    this = (SupportSelectListViewIndicator_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB2949 = 1;
   }
   selectNameLabel = v4->fields.selectNameLabel;
   if ( !partyItem )
@@ -31,11 +31,11 @@ void SupportSelectListViewIndicator__DrawPartyInfo(
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1C3E7C0(this, partyItem);
+    sub_1C6BC60(this, partyItem);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this = (SupportSelectListViewIndicator_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12564/*"SUPPORT_SELECT_NAME"*/, 0);
+  this = (SupportSelectListViewIndicator_o *)LocalizationManager__Get((System_String_o *)StringLiteral_12561/*"SUPPORT_SELECT_NAME"*/, 0);
   supportServantData = partyItem->fields.supportServantData;
   if ( !supportServantData )
     goto LABEL_12;
@@ -63,11 +63,11 @@ void SupportSelectListViewIndicator__OnClickLeft(SupportSelectListViewIndicator_
   _QWORD *v10; // x0
   System_Reflection_MethodBase_o *v11; // x0
 
-  if ( (byte_4C533FA & 1) == 0 )
+  if ( (byte_4CB294A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SupportSelectListViewIndicator_OnClickLeft__);
-    byte_4C533FA = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SupportSelectListViewIndicator_OnClickLeft__);
+    byte_4CB294A = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -82,8 +82,8 @@ void SupportSelectListViewIndicator__OnClickLeft(SupportSelectListViewIndicator_
     {
       v6 = Method_SupportSelectListViewIndicator_OnClickLeft__;
       if ( (*((_BYTE *)Method_SupportSelectListViewIndicator_OnClickLeft__ + 83) & 2) != 0 )
-        v6 = (_QWORD *)sub_1C3E57C(Method_SupportSelectListViewIndicator_OnClickLeft__);
-      v7 = (System_Reflection_MethodBase_o *)sub_1C3E548(v6, v6[4]);
+        v6 = (_QWORD *)sub_1C6BA20(Method_SupportSelectListViewIndicator_OnClickLeft__);
+      v7 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v6, v6[4]);
       OverwriteAssetSoundName__PlaySystemSe(v7, 7, 0, 0);
       v5 = this->fields.manager;
       if ( v5 )
@@ -102,8 +102,8 @@ LABEL_19:
     {
       v10 = Method_SupportSelectListViewIndicator_OnClickLeft__;
       if ( (*((_BYTE *)Method_SupportSelectListViewIndicator_OnClickLeft__ + 83) & 2) != 0 )
-        v10 = (_QWORD *)sub_1C3E57C(Method_SupportSelectListViewIndicator_OnClickLeft__);
-      v11 = (System_Reflection_MethodBase_o *)sub_1C3E548(v10, v10[4]);
+        v10 = (_QWORD *)sub_1C6BA20(Method_SupportSelectListViewIndicator_OnClickLeft__);
+      v11 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v10, v10[4]);
       OverwriteAssetSoundName__PlaySystemSe(v11, 7, 0, 0);
       v5 = this->fields.manager;
       if ( v5 )
@@ -112,7 +112,7 @@ LABEL_19:
         goto LABEL_19;
       }
 LABEL_21:
-      sub_1C3E7C0(v5, v4);
+      sub_1C6BC60(v5, v4);
     }
   }
 }
@@ -131,11 +131,11 @@ void SupportSelectListViewIndicator__OnClickRight(SupportSelectListViewIndicator
   _QWORD *v11; // x0
   System_Reflection_MethodBase_o *v12; // x0
 
-  if ( (byte_4C533FB & 1) == 0 )
+  if ( (byte_4CB294B & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SupportSelectListViewIndicator_OnClickRight__);
-    byte_4C533FB = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SupportSelectListViewIndicator_OnClickRight__);
+    byte_4CB294B = 1;
   }
   manager = (UnityEngine_Object_o *)this->fields.manager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -151,8 +151,8 @@ void SupportSelectListViewIndicator__OnClickRight(SupportSelectListViewIndicator
     {
       v7 = Method_SupportSelectListViewIndicator_OnClickRight__;
       if ( (*((_BYTE *)Method_SupportSelectListViewIndicator_OnClickRight__ + 83) & 2) != 0 )
-        v7 = (_QWORD *)sub_1C3E57C(Method_SupportSelectListViewIndicator_OnClickRight__);
-      v8 = (System_Reflection_MethodBase_o *)sub_1C3E548(v7, v7[4]);
+        v7 = (_QWORD *)sub_1C6BA20(Method_SupportSelectListViewIndicator_OnClickRight__);
+      v8 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v7, v7[4]);
       OverwriteAssetSoundName__PlaySystemSe(v8, 7, 0, 0);
       v5 = this->fields.manager;
       if ( v5 )
@@ -171,8 +171,8 @@ LABEL_20:
     {
       v11 = Method_SupportSelectListViewIndicator_OnClickRight__;
       if ( (*((_BYTE *)Method_SupportSelectListViewIndicator_OnClickRight__ + 83) & 2) != 0 )
-        v11 = (_QWORD *)sub_1C3E57C(Method_SupportSelectListViewIndicator_OnClickRight__);
-      v12 = (System_Reflection_MethodBase_o *)sub_1C3E548(v11, v11[4]);
+        v11 = (_QWORD *)sub_1C6BA20(Method_SupportSelectListViewIndicator_OnClickRight__);
+      v12 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v11, v11[4]);
       OverwriteAssetSoundName__PlaySystemSe(v12, 7, 0, 0);
       v5 = this->fields.manager;
       if ( v5 )
@@ -181,7 +181,7 @@ LABEL_20:
         goto LABEL_20;
       }
 LABEL_22:
-      sub_1C3E7C0(v5, v4);
+      sub_1C6BC60(v5, v4);
     }
   }
 }
@@ -210,13 +210,13 @@ void SupportSelectListViewIndicator__OnModifyCenterItem(
   ListViewItem_o *v22; // x1
   System_Action_o *modifyCenterItemCallBack; // x0
 
-  if ( (byte_4C533F6 & 1) == 0 )
+  if ( (byte_4CB2946 & 1) == 0 )
   {
-    sub_1C3E564(&SupportSelectListViewItem_TypeInfo);
-    byte_4C533F6 = 1;
+    sub_1C6BA08(&SupportSelectListViewItem_TypeInfo);
+    byte_4CB2946 = 1;
   }
   this->fields.manager = manager;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields.manager,
     (int32_t)manager,
     (int32_t)item,
@@ -235,7 +235,7 @@ void SupportSelectListViewIndicator__OnModifyCenterItem(
         (leftObject = this->fields.rightObject) == 0) )
   {
 LABEL_21:
-    sub_1C3E7C0(leftObject, v14);
+    sub_1C6BC60(leftObject, v14);
   }
   UnityEngine_GameObject__SetActive(leftObject, isRight, 0);
   if ( item )
@@ -279,7 +279,7 @@ void SupportSelectListViewIndicator__SetActive(
         UnityEngine_GameObject__SetActive(gameObject, v7, 0),
         (gameObject = this->fields.pageBaseObject) == 0) )
   {
-    sub_1C3E7C0(gameObject, v6);
+    sub_1C6BC60(gameObject, v6);
   }
   UnityEngine_GameObject__SetActive(gameObject, v7, 0);
 }
@@ -298,7 +298,7 @@ void SupportSelectListViewIndicator__SetIndexMax(
   if ( !leftObject
     || (UnityEngine_GameObject__SetActive(leftObject, 0, 0), (leftObject = this->fields.rightObject) == 0) )
   {
-    sub_1C3E7C0(leftObject, v4);
+    sub_1C6BC60(leftObject, v4);
   }
   UnityEngine_GameObject__SetActive(leftObject, 0, 0);
 }
@@ -317,7 +317,7 @@ void SupportSelectListViewIndicator__SetPageActive(
   if ( !pageSpriteList )
     goto LABEL_6;
   if ( LODWORD(pageSpriteList->max_length) <= index )
-    sub_1C3E7C8(this, *(_QWORD *)&index);
+    sub_1C6BC68(this);
   this = (SupportSelectListViewIndicator_o *)pageSpriteList->m_Items[index];
   if ( !this
     || (this = (SupportSelectListViewIndicator_o *)UnityEngine_Component__get_gameObject(
@@ -325,7 +325,7 @@ void SupportSelectListViewIndicator__SetPageActive(
                                                      0)) == 0 )
   {
 LABEL_6:
-    sub_1C3E7C0(this, *(_QWORD *)&index);
+    sub_1C6BC60(this, *(_QWORD *)&index);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, active, 0);
 }
@@ -346,13 +346,13 @@ void SupportSelectListViewIndicator__SetPageIndex(
   UISprite_o *indexSprite; // x20
   int v13; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4C533F8 & 1) == 0 )
+  if ( (byte_4CB2948 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_20598/*"img_slider_on"*/);
-    sub_1C3E564(&StringLiteral_22668/*"party_txt_"*/);
-    sub_1C3E564(&StringLiteral_20597/*"img_slider_off"*/);
-    byte_4C533F8 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_20645/*"img_slider_on"*/);
+    sub_1C6BA08(&StringLiteral_22737/*"party_txt_"*/);
+    sub_1C6BA08(&StringLiteral_20644/*"img_slider_off"*/);
+    byte_4CB2948 = 1;
   }
   this->fields.pageIndex = index;
   if ( (index & 0x80000000) == 0 )
@@ -370,26 +370,26 @@ void SupportSelectListViewIndicator__SetPageIndex(
         if ( !pageSpriteList )
           break;
         if ( (unsigned int)v8 >= LODWORD(pageSpriteList->max_length) )
-          sub_1C3E7C8(v6, v7);
+          sub_1C6BC68(v6);
         v6 = pageSpriteList->m_Items[v8];
         if ( !v6 )
           break;
         if ( index == (_DWORD)v8 )
-          v10 = &StringLiteral_20598/*"img_slider_on"*/;
+          v10 = &StringLiteral_20645/*"img_slider_on"*/;
         else
-          v10 = &StringLiteral_20597/*"img_slider_off"*/;
+          v10 = &StringLiteral_20644/*"img_slider_off"*/;
         UISprite__set_spriteName(v6, (System_String_o *)*v10, 0);
         if ( (int)++v8 >= this->fields.pageMax )
           goto LABEL_16;
       }
 LABEL_20:
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     }
 LABEL_16:
     v13 = index + 1;
     v11 = System_Int32__ToString((int32_t)&v13, 0);
     indexSprite = this->fields.indexSprite;
-    v6 = (UISprite_o *)System_String__Concat_63636468((System_String_o *)StringLiteral_22668/*"party_txt_"*/, v11, 0);
+    v6 = (UISprite_o *)System_String__Concat_63966792((System_String_o *)StringLiteral_22737/*"party_txt_"*/, v11, 0);
     if ( !indexSprite )
       goto LABEL_20;
     UISprite__set_spriteName(indexSprite, (System_String_o *)v6, 0);
@@ -419,11 +419,11 @@ void SupportSelectListViewIndicator__SetPageMax(
   System_String_o *v11; // x1
 
   v4 = this;
-  if ( (byte_4C533F7 & 1) == 0 )
+  if ( (byte_4CB2947 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    this = (SupportSelectListViewIndicator_o *)sub_1C3E564(&StringLiteral_20597/*"img_slider_off"*/);
-    byte_4C533F7 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    this = (SupportSelectListViewIndicator_o *)sub_1C6BA08(&StringLiteral_20644/*"img_slider_off"*/);
+    byte_4CB2947 = 1;
   }
   pageSpriteList = v4->fields.pageSpriteList;
   if ( !pageSpriteList )
@@ -444,7 +444,7 @@ void SupportSelectListViewIndicator__SetPageMax(
   v8 = v4->fields.pageSpriteList;
   if ( !v8 )
 LABEL_20:
-    sub_1C3E7C0(this, *(_QWORD *)&max);
+    sub_1C6BC60(this, *(_QWORD *)&max);
   v9 = 0;
   while ( 1 )
   {
@@ -452,11 +452,11 @@ LABEL_20:
     if ( (int)v9 >= v10 )
       break;
     if ( (unsigned int)v9 >= v10 )
-      sub_1C3E7C8(this, *(_QWORD *)&max);
+      sub_1C6BC68(this);
     this = (SupportSelectListViewIndicator_o *)v8->m_Items[v9];
     if ( this )
     {
-      v11 = (int)v9 >= v4->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_20597/*"img_slider_off"*/;
+      v11 = (int)v9 >= v4->fields.pageMax ? 0LL : (System_String_o *)StringLiteral_20644/*"img_slider_off"*/;
       UISprite__set_spriteName((UISprite_o *)this, v11, 0);
       v8 = v4->fields.pageSpriteList;
       ++v9;
@@ -474,7 +474,7 @@ void SupportSelectListViewIndicator__Start(SupportSelectListViewIndicator_o *thi
   const MethodInfo *v3; // x3
 
   this->fields.modifyCenterItemCallBack = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.modifyCenterItemCallBack, 0, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.modifyCenterItemCallBack, 0, v2, v3);
 }
 
 
@@ -488,11 +488,11 @@ void SupportSelectListViewIndicator__createSpriteList(SupportSelectListViewIndic
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C533F5 & 1) == 0 )
+  if ( (byte_4CB2945 & 1) == 0 )
   {
-    sub_1C3E564(&BalanceConfig_TypeInfo);
-    sub_1C3E564(&UISprite___TypeInfo);
-    byte_4C533F5 = 1;
+    sub_1C6BA08(&BalanceConfig_TypeInfo);
+    sub_1C6BA08(&UISprite___TypeInfo);
+    byte_4CB2945 = 1;
   }
   pageSpriteList = this->fields.pageSpriteList;
   p_pageSpriteList = (CGThumbnailListItem_o *)&this->fields.pageSpriteList;
@@ -505,9 +505,9 @@ void SupportSelectListViewIndicator__createSpriteList(SupportSelectListViewIndic
       j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
       v6 = BalanceConfig_TypeInfo;
     }
-    v7 = sub_1C3E60C(UISprite___TypeInfo, (unsigned int)v6->static_fields->SupportDeckMax);
+    v7 = sub_1C6BAB0(UISprite___TypeInfo, (unsigned int)v6->static_fields->SupportDeckMax);
     p_pageSpriteList->klass = (CGThumbnailListItem_c *)v7;
-    sub_1C3E508(p_pageSpriteList, v7, v8, v9);
+    sub_1C6B9AC(p_pageSpriteList, v7, v8, v9);
   }
 }
 
@@ -526,11 +526,10 @@ void SupportSelectListViewIndicator__setModifyCenterItemCallBack(
   const MethodInfo *v3; // x3
 
   this->fields.modifyCenterItemCallBack = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.modifyCenterItemCallBack, (int32_t)callback, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.modifyCenterItemCallBack, (int32_t)callback, (int32_t)method, v3);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void SupportSelectListViewIndicator__setPageSprite(
         SupportSelectListViewIndicator_o *this,
         int32_t num,
@@ -543,19 +542,19 @@ void SupportSelectListViewIndicator__setPageSprite(
 
   pageSpriteList = this->fields.pageSpriteList;
   if ( !pageSpriteList )
-    sub_1C3E7C0(this, *(_QWORD *)&num);
+    sub_1C6BC60(this, num);
   if ( sprite )
   {
-    this = (SupportSelectListViewIndicator_o *)sub_1C3E6A0(sprite, pageSpriteList->obj.klass->_1.element_class);
+    this = (SupportSelectListViewIndicator_o *)sub_1C6BB44(sprite, pageSpriteList->obj.klass->_1.element_class);
     if ( !this )
     {
-      v8 = sub_1C3E7E4();
-      sub_1C3E68C(v8, 0);
+      v8 = sub_1C6BC84();
+      sub_1C6BB30(v8, 0);
     }
   }
   if ( LODWORD(pageSpriteList->max_length) <= num )
-    sub_1C3E7C8(this, *(_QWORD *)&num);
+    sub_1C6BC68(this);
   v7 = &pageSpriteList->obj.klass + num;
   v7[4] = (Il2CppClass *)sprite;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 4), (int32_t)sprite, (int32_t)sprite, method);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 4), (int32_t)sprite, (int32_t)sprite, method);
 }

@@ -1,18 +1,15 @@
-void FriendCancelRequest___ctor(FriendCancelRequest_o *this, const MethodInfo *method)
-{
-  RequestBase___ctor((RequestBase_o *)this, 0);
-}
-
-
 void FriendCancelRequest__beginRequest(FriendCancelRequest_o *this, int64_t targetUserId, const MethodInfo *method)
 {
-  if ( (byte_4C588DC & 1) == 0 )
+  const MethodInfo *v3; // x3
+  const MethodInfo *v6; // x1
+
+  if ( (byte_4CB7E59 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_24022/*"targetUserId"*/);
-    byte_4C588DC = 1;
+    sub_1C6BA08(&StringLiteral_24098/*"targetUserId"*/);
+    byte_4CB7E59 = 1;
   }
-  RequestBase__addField_44302376((RequestBase_o *)this, (System_String_o *)StringLiteral_24022/*"targetUserId"*/, targetUserId, 0);
-  RequestBase__beginRequest((RequestBase_o *)this, 0);
+  RequestBase__addField_44468288((RequestBase_o *)this, (System_String_o *)StringLiteral_24098/*"targetUserId"*/, targetUserId, v3);
+  RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
 
@@ -20,16 +17,16 @@ System_String_o *FriendCancelRequest__getURL(FriendCancelRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C588DB & 1) == 0 )
+  if ( (byte_4CB7E58 & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_19689/*"friend/cancel"*/);
-    byte_4C588DB = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_19734/*"friend/cancel"*/);
+    byte_4CB7E58 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_19689/*"friend/cancel"*/, 0);
+  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_19734/*"friend/cancel"*/, 0);
 }
 
 
@@ -39,30 +36,43 @@ void FriendCancelRequest__requestCompleted(
         const MethodInfo *method)
 {
   ResponseData_o *v5; // x0
-  ResponseData_o *v6; // x20
+  const MethodInfo *v6; // x2
+  ResponseData_o *v7; // x20
   Il2CppObject *success; // x20
-  System_String_o *v8; // x1
+  System_String_o *v9; // x0
+  struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
+  struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4C588DD & 1) == 0 )
+  if ( (byte_4CB7E5A & 1) == 0 )
   {
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    byte_4C588DD = 1;
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    byte_4CB7E5A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(16, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44298060(v5, 0)) )
+  if ( v5 && (v7 = v5, ResponseData__checkError(v5, v5->fields.resCode, v6)) )
   {
-    success = (Il2CppObject *)v6->fields.success;
+    success = (Il2CppObject *)v7->fields.success;
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-    v8 = JsonManager__toJson(success, 0, 0, 0);
+    v9 = JsonManager__toJson(success, 0, 0, 0);
+    CallBack = this->fields.CallBack;
+    if ( CallBack )
+      ((void (__fastcall *)(intptr_t, System_String_o *, intptr_t))CallBack->fields.invoke_impl)(
+        CallBack->fields.method_code,
+        v9,
+        CallBack->fields.method);
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22233/*"ng"*/;
+    v11 = this->fields.CallBack;
+    if ( v11 )
+      ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
+        v11->fields.method_code,
+        StringLiteral_22301/*"ng"*/,
+        v11->fields.method);
   }
-  RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

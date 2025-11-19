@@ -4,6 +4,193 @@ void ClassBoardPageSwitcher___ctor(ClassBoardPageSwitcher_o *this, const MethodI
 }
 
 
+void ClassBoardPageSwitcher__AddPlayBoardSelectFirstTransitionTask(
+        ClassBoardPageSwitcher_o *this,
+        const MethodInfo *method)
+{
+  ClassBoardSelectViewManager_o *boardSelectViewManager; // x0
+  SchedulerTaskBase_o *TaskOfFirstTransition; // x0
+  TaskScheduler_o *taskScheduler; // x19
+  SchedulerTaskBase_o *v6; // x21
+  int32_t v7; // w2
+  const MethodInfo *v8; // x3
+  ClassBoardSelectViewManager_o *v9; // x20
+  __int64 v10; // x0
+
+  if ( (byte_4CB9ED5 & 1) == 0 )
+  {
+    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
+    byte_4CB9ED5 = 1;
+  }
+  boardSelectViewManager = this->fields.boardSelectViewManager;
+  if ( !boardSelectViewManager )
+    goto LABEL_10;
+  TaskOfFirstTransition = ClassBoardSelectViewManager__GetTaskOfFirstTransition(boardSelectViewManager, 0);
+  taskScheduler = this->fields.taskScheduler;
+  v6 = TaskOfFirstTransition;
+  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+  if ( !boardSelectViewManager )
+    goto LABEL_10;
+  v9 = boardSelectViewManager;
+  if ( v6 )
+  {
+    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BB44(
+                                                                v6,
+                                                                boardSelectViewManager->klass->_1.element_class);
+    if ( !boardSelectViewManager )
+    {
+      v10 = sub_1C6BC84(0);
+      sub_1C6BB30(v10, 0);
+    }
+  }
+  if ( !LODWORD(v9->fields.m_CancellationTokenSource) )
+    sub_1C6BC68(boardSelectViewManager);
+  v9->fields.iconArray = (struct ClassBoardSelectIconComponent_array *)v6;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v9->fields.iconArray, (int32_t)v6, v7, v8);
+  if ( !taskScheduler )
+LABEL_10:
+    sub_1C6BC60(boardSelectViewManager, method);
+  TaskScheduler__AddTask(taskScheduler, 0, (SchedulerTaskBase_array *)v9, 0);
+}
+
+
+void ClassBoardPageSwitcher__AddPlayClassBaseReleaseEffectTask(
+        ClassBoardPageSwitcher_o *this,
+        const MethodInfo *method)
+{
+  __int64 v3; // x20
+  __int64 v4; // x1
+  ClassBoardSelectViewManager_o *boardSelectViewManager; // x0
+  int32_t v6; // w2
+  const MethodInfo *v7; // x3
+  ClassBoardSelectViewManager_o *v8; // x21
+  System_Collections_Generic_List_ClassBoardSelectIconComponent__o *v9; // x22
+  System_Action_o *v10; // x23
+  SchedulerTaskBase_o *PlayClassBoardReleaseEffect; // x0
+  SchedulerTaskBase_o *v12; // x20
+  TaskScheduler_o *taskScheduler; // x19
+  ClassBoardSelectViewManager_o *v14; // x21
+  __int64 v15; // x0
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  __int64 v18; // x0
+
+  if ( (byte_4CB9ED6 & 1) == 0 )
+  {
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass31_0__AddPlayClassBaseReleaseEffectTask_b__0__);
+    sub_1C6BA08(&ClassBoardPageSwitcher___c__DisplayClass31_0_TypeInfo);
+    byte_4CB9ED6 = 1;
+  }
+  v3 = sub_1C6BC54(ClassBoardPageSwitcher___c__DisplayClass31_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v3, 0);
+  boardSelectViewManager = this->fields.boardSelectViewManager;
+  if ( !boardSelectViewManager )
+    goto LABEL_13;
+  boardSelectViewManager = (ClassBoardSelectViewManager_o *)ClassBoardSelectViewManager__GetPlayClassBoardReleaseList(
+                                                              boardSelectViewManager,
+                                                              0);
+  if ( !v3 )
+    goto LABEL_13;
+  *(_QWORD *)(v3 + 16) = boardSelectViewManager;
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)boardSelectViewManager, v6, v7);
+  v8 = this->fields.boardSelectViewManager;
+  v9 = *(System_Collections_Generic_List_ClassBoardSelectIconComponent__o **)(v3 + 16);
+  v10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  System_Action___ctor(
+    v10,
+    (Il2CppObject *)v3,
+    Method_ClassBoardPageSwitcher___c__DisplayClass31_0__AddPlayClassBaseReleaseEffectTask_b__0__,
+    0);
+  if ( !v8 )
+    goto LABEL_13;
+  PlayClassBoardReleaseEffect = ClassBoardSelectViewManager__GetPlayClassBoardReleaseEffect(v8, v9, v10, 0);
+  if ( PlayClassBoardReleaseEffect )
+  {
+    v12 = PlayClassBoardReleaseEffect;
+    taskScheduler = this->fields.taskScheduler;
+    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+    if ( boardSelectViewManager )
+    {
+      v14 = boardSelectViewManager;
+      v15 = sub_1C6BB44(v12, boardSelectViewManager->klass->_1.element_class);
+      if ( !v15 )
+      {
+        v18 = sub_1C6BC84(0);
+        sub_1C6BB30(v18, 0);
+      }
+      if ( !LODWORD(v14->fields.m_CancellationTokenSource) )
+        sub_1C6BC68(v15);
+      v14->fields.iconArray = (struct ClassBoardSelectIconComponent_array *)v12;
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v14->fields.iconArray, (int32_t)v12, v16, v17);
+      if ( taskScheduler )
+      {
+        TaskScheduler__AddTask(taskScheduler, 0, (SchedulerTaskBase_array *)v14, 0);
+        return;
+      }
+    }
+LABEL_13:
+    sub_1C6BC60(boardSelectViewManager, v4);
+  }
+}
+
+
+void ClassBoardPageSwitcher__AddPlayClassBoardSelectEffectTask(
+        ClassBoardPageSwitcher_o *this,
+        const MethodInfo *method)
+{
+  TaskScheduler_o *taskScheduler; // x19
+  __int64 v4; // x0
+  Il2CppObject *boardSelectViewManager; // x21
+  SchedulerTaskBase_array *v6; // x20
+  System_Action_object__o *v7; // x22
+  SchedulerTaskWaitWhile_o *v8; // x21
+  __int64 v9; // x0
+  __int64 v10; // x1
+  int32_t v11; // w2
+  const MethodInfo *v12; // x3
+  __int64 v13; // x0
+
+  if ( (byte_4CB9EDD & 1) == 0 )
+  {
+    sub_1C6BA08(&System_Action_Action__TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardSelectViewManager_OpenHelpIfNotYet__);
+    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
+    sub_1C6BA08(&SchedulerTaskWaitWhile_TypeInfo);
+    byte_4CB9EDD = 1;
+  }
+  ClassBoardPageSwitcher__AddPlayClassBaseReleaseEffectTask(this, method);
+  taskScheduler = this->fields.taskScheduler;
+  v4 = sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+  boardSelectViewManager = (Il2CppObject *)this->fields.boardSelectViewManager;
+  v6 = (SchedulerTaskBase_array *)v4;
+  v7 = (System_Action_object__o *)sub_1C6BC54(System_Action_Action__TypeInfo);
+  System_Action_object____ctor(v7, boardSelectViewManager, Method_ClassBoardSelectViewManager_OpenHelpIfNotYet__, 0);
+  v8 = (SchedulerTaskWaitWhile_o *)sub_1C6BC54(SchedulerTaskWaitWhile_TypeInfo);
+  SchedulerTaskWaitWhile___ctor_44562024(v8, (System_Action_Action__o *)v7, 0, 0);
+  if ( !v6 )
+    goto LABEL_9;
+  if ( v8 )
+  {
+    v9 = sub_1C6BB44(v8, v6->obj.klass->_1.element_class);
+    if ( !v9 )
+    {
+      v13 = sub_1C6BC84(0);
+      sub_1C6BB30(v13, 0);
+    }
+  }
+  if ( !LODWORD(v6->max_length) )
+    sub_1C6BC68(v9);
+  v6->m_Items[0] = (SchedulerTaskBase_o *)v8;
+  sub_1C6B9AC((CGThumbnailListItem_o *)v6->m_Items, (int32_t)v8, v11, v12);
+  if ( !taskScheduler )
+LABEL_9:
+    sub_1C6BC60(v9, v10);
+  TaskScheduler__AddTask(taskScheduler, 0, v6, 0);
+}
+
+
 // local variable allocation has failed, the output may be wrong!
 void ClassBoardPageSwitcher__ChangeView(
         ClassBoardPageSwitcher_o *this,
@@ -35,12 +222,12 @@ void ClassBoardPageSwitcher__ChangeView(
   ClassBoardController_o *v31; // x20
   System_Action_o *v32; // x21
 
-  if ( (byte_4C5A90B & 1) == 0 )
+  if ( (byte_4CB9EDE & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher_ToClassBoardSelect__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher__ChangeView_b__39_0__);
-    byte_4C5A90B = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher_ToClassBoardSelect__);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher__ChangeView_b__40_0__);
+    byte_4CB9EDE = 1;
   }
   if ( this->fields.currentViewType != viewType )
   {
@@ -81,7 +268,7 @@ void ClassBoardPageSwitcher__ChangeView(
                         v16->fields.classBoardBackground,
                         0);
                       this->fields.mapCamera = 0;
-                      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mapCamera, 0, v17, v18);
+                      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mapCamera, 0, v17, v18);
                       return;
                     }
                   }
@@ -96,12 +283,12 @@ void ClassBoardPageSwitcher__ChangeView(
               if ( v19 )
               {
                 controller = v19->fields.controller;
-                v21 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+                v21 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
                 System_Action___ctor(v21, (Il2CppObject *)this, Method_ClassBoardPageSwitcher_ToClassBoardSelect__, 0);
                 if ( controller )
                 {
                   controller->fields.toClassBoardSelectAction = v21;
-                  sub_1C3E508(
+                  sub_1C6B9AC(
                     (CGThumbnailListItem_o *)&controller->fields.toClassBoardSelectAction,
                     (int32_t)v21,
                     v22,
@@ -129,16 +316,16 @@ void ClassBoardPageSwitcher__ChangeView(
                         {
                           mapCamera = v28->fields.mapCamera;
                           this->fields.mapCamera = mapCamera;
-                          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mapCamera, (int32_t)mapCamera, v25, v26);
+                          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mapCamera, (int32_t)mapCamera, v25, v26);
                           v30 = this->fields.sceneRoot;
                           if ( v30 )
                           {
                             v31 = v30->fields.controller;
-                            v32 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+                            v32 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
                             System_Action___ctor(
                               v32,
                               (Il2CppObject *)this,
-                              Method_ClassBoardPageSwitcher__ChangeView_b__39_0__,
+                              Method_ClassBoardPageSwitcher__ChangeView_b__40_0__,
                               0);
                             if ( v31 )
                             {
@@ -157,7 +344,7 @@ void ClassBoardPageSwitcher__ChangeView(
         }
       }
     }
-    sub_1C3E7C0(boardSelectViewManager, *(_QWORD *)&viewType);
+    sub_1C6BC60(boardSelectViewManager, *(_QWORD *)&viewType);
   }
 }
 
@@ -175,12 +362,12 @@ void ClassBoardPageSwitcher__DirectlyBack(ClassBoardPageSwitcher_o *this, const 
   struct SceneJumpInfo_o *v10; // x8
 
   v4 = this;
-  if ( (byte_4C5A910 & 1) == 0 )
+  if ( (byte_4CB9EE3 & 1) == 0 )
   {
-    sub_1C3E564(&SceneList_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    this = (ClassBoardPageSwitcher_o *)sub_1C3E564(&TerminalPramsManager_TypeInfo);
-    byte_4C5A910 = 1;
+    sub_1C6BA08(&SceneList_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    this = (ClassBoardPageSwitcher_o *)sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+    byte_4CB9EE3 = 1;
   }
   sceneRoot = v4->fields.sceneRoot;
   if ( !sceneRoot )
@@ -189,7 +376,7 @@ void ClassBoardPageSwitcher__DirectlyBack(ClassBoardPageSwitcher_o *this, const 
   if ( !this )
     goto LABEL_20;
   this[1].fields.sceneJumpInfo = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this[1].fields.sceneJumpInfo, 0, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this[1].fields.sceneJumpInfo, 0, v2, v3);
   sceneJumpInfo = v4->fields.sceneJumpInfo;
   if ( !sceneJumpInfo )
     goto LABEL_20;
@@ -201,10 +388,10 @@ void ClassBoardPageSwitcher__DirectlyBack(ClassBoardPageSwitcher_o *this, const 
   {
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4C51506 )
+    if ( !byte_4CB0A4E )
     {
-      sub_1C3E564(&TerminalPramsManager_TypeInfo);
-      byte_4C51506 = 1;
+      sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+      byte_4CB0A4E = 1;
     }
     v9 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -213,20 +400,20 @@ void ClassBoardPageSwitcher__DirectlyBack(ClassBoardPageSwitcher_o *this, const 
       v9 = TerminalPramsManager_TypeInfo;
     }
     v9->static_fields->_IsAutoResume_k__BackingField = 1;
-    this = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    this = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( this )
     {
       AvalonSceneManager__transitionScene((AvalonSceneManager_o *)this, 34, 1, 0, 0);
       return;
     }
 LABEL_20:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
-  this = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  this = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   v10 = v4->fields.sceneJumpInfo;
   if ( !v10 || !this )
     goto LABEL_20;
-  AvalonSceneManager__transitionScene_41207660(
+  AvalonSceneManager__transitionScene_41393044(
     (AvalonSceneManager_o *)this,
     v10->fields.returnSceneName,
     1,
@@ -260,30 +447,29 @@ void ClassBoardPageSwitcher__DirectlyToClassBoard(
   TaskScheduler_o *taskScheduler; // x19
   SchedulerTaskBase_array *v26; // x20
   __int64 v27; // x0
-  __int64 v28; // x1
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
-  __int64 v33; // x0
+  int32_t v28; // w2
+  const MethodInfo *v29; // x3
+  int32_t v30; // w2
+  const MethodInfo *v31; // x3
+  __int64 v32; // x0
 
-  if ( (byte_4C5A90F & 1) == 0 )
+  if ( (byte_4CB9EE2 & 1) == 0 )
   {
-    sub_1C3E564(&AvalonSceneManager_TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase___TypeInfo);
-    sub_1C3E564(&SchedulerTaskWaitTime_TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass45_0__DirectlyToClassBoard_b__0__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass45_0__DirectlyToClassBoard_b__1__);
-    sub_1C3E564(&ClassBoardPageSwitcher___c__DisplayClass45_0_TypeInfo);
-    byte_4C5A90F = 1;
+    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
+    sub_1C6BA08(&SchedulerTaskWaitTime_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass46_0__DirectlyToClassBoard_b__0__);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass46_0__DirectlyToClassBoard_b__1__);
+    sub_1C6BA08(&ClassBoardPageSwitcher___c__DisplayClass46_0_TypeInfo);
+    byte_4CB9EE2 = 1;
   }
-  v11 = sub_1C3E7B0(ClassBoardPageSwitcher___c__DisplayClass45_0_TypeInfo);
+  v11 = sub_1C6BC54(ClassBoardPageSwitcher___c__DisplayClass46_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_15;
   *(_QWORD *)(v11 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v14, v15);
   *(_DWORD *)(v11 + 24) = baseId;
   *(_DWORD *)(v11 + 28) = iconId;
   *(_BYTE *)(v11 + 32) = isDirectlyGrandBoard;
@@ -295,55 +481,55 @@ void ClassBoardPageSwitcher__DirectlyToClassBoard(
     v16 = AvalonSceneManager_TypeInfo;
   }
   *(struct AvalonSceneManager_StaticFields *)(v11 + 36) = LODWORD(v16->static_fields->DEFAULT_FADE_TIME);
-  v17 = sub_1C3E7B0(SchedulerTaskWaitTime_TypeInfo);
+  v17 = sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
   SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)v17, 0.2, 0);
-  v18 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v18 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
     v18,
     (Il2CppObject *)v11,
-    Method_ClassBoardPageSwitcher___c__DisplayClass45_0__DirectlyToClassBoard_b__0__,
+    Method_ClassBoardPageSwitcher___c__DisplayClass46_0__DirectlyToClassBoard_b__0__,
     0);
   if ( !v17 )
     goto LABEL_15;
   *(_QWORD *)(v17 + 32) = v18;
-  sub_1C3E508((CGThumbnailListItem_o *)(v17 + 32), (int32_t)v18, v19, v20);
-  v21 = sub_1C3E7B0(SchedulerTaskWaitTime_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 32), (int32_t)v18, v19, v20);
+  v21 = sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
   SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)v21, 0.2, 0);
-  v22 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v22 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
     v22,
     (Il2CppObject *)v11,
-    Method_ClassBoardPageSwitcher___c__DisplayClass45_0__DirectlyToClassBoard_b__1__,
+    Method_ClassBoardPageSwitcher___c__DisplayClass46_0__DirectlyToClassBoard_b__1__,
     0);
   if ( !v21
     || (*(_QWORD *)(v21 + 32) = v22,
-        sub_1C3E508((CGThumbnailListItem_o *)(v21 + 32), (int32_t)v22, v23, v24),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 32), (int32_t)v22, v23, v24),
         taskScheduler = this->fields.taskScheduler,
-        (v12 = sub_1C3E60C(SchedulerTaskBase___TypeInfo, 2)) == 0) )
+        (v12 = sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 2)) == 0) )
   {
 LABEL_15:
-    sub_1C3E7C0(v12, v13);
+    sub_1C6BC60(v12, v13);
   }
   v26 = (SchedulerTaskBase_array *)v12;
-  v27 = sub_1C3E6A0(v17, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
+  v27 = sub_1C6BB44(v17, *(_QWORD *)(*(_QWORD *)v12 + 64LL));
   if ( !v27 )
     goto LABEL_16;
   if ( !LODWORD(v26->max_length) )
     goto LABEL_17;
   v26->m_Items[0] = (SchedulerTaskBase_o *)v17;
-  sub_1C3E508((CGThumbnailListItem_o *)v26->m_Items, v17, v29, v30);
-  v27 = sub_1C3E6A0(v21, v26->obj.klass->_1.element_class);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v26->m_Items, v17, v28, v29);
+  v27 = sub_1C6BB44(v21, v26->obj.klass->_1.element_class);
   if ( !v27 )
   {
 LABEL_16:
-    v33 = sub_1C3E7E4(v27);
-    sub_1C3E68C(v33, 0);
+    v32 = sub_1C6BC84(v27);
+    sub_1C6BB30(v32, 0);
   }
   if ( LODWORD(v26->max_length) <= 1 )
 LABEL_17:
-    sub_1C3E7C8(v27, v28);
+    sub_1C6BC68(v27);
   v26->m_Items[1] = (SchedulerTaskBase_o *)v21;
-  sub_1C3E508((CGThumbnailListItem_o *)&v26->m_Items[1], v21, v31, v32);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v26->m_Items[1], v21, v30, v31);
   if ( !taskScheduler )
     goto LABEL_15;
   TaskScheduler__AddTask(taskScheduler, 0, v26, 0);
@@ -386,32 +572,32 @@ void ClassBoardPageSwitcher__Init(
   IClassBoardResourceCatalog_c **v34; // x10
   __int64 v35; // x0
 
-  if ( (byte_4C5A900 & 1) == 0 )
+  if ( (byte_4CB9ED2 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_bool__TypeInfo);
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&CTouch_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher_SetAllTouchBlock__);
-    sub_1C3E564(&ClassBoardPageSwitcher_TypeInfo);
-    sub_1C3E564(&ClassBoardResourceCatalogAssetBundle_TypeInfo);
-    sub_1C3E564(&IClassBoardResourceCatalog_TypeInfo);
-    sub_1C3E564(&TaskScheduler_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass27_0__Init_b__0__);
-    sub_1C3E564(&ClassBoardPageSwitcher___c__DisplayClass27_0_TypeInfo);
-    byte_4C5A900 = 1;
+    sub_1C6BA08(&System_Action_bool__TypeInfo);
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&CTouch_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher_SetAllTouchBlock__);
+    sub_1C6BA08(&ClassBoardPageSwitcher_TypeInfo);
+    sub_1C6BA08(&ClassBoardResourceCatalogAssetBundle_TypeInfo);
+    sub_1C6BA08(&IClassBoardResourceCatalog_TypeInfo);
+    sub_1C6BA08(&TaskScheduler_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass27_0__Init_b__0__);
+    sub_1C6BA08(&ClassBoardPageSwitcher___c__DisplayClass27_0_TypeInfo);
+    byte_4CB9ED2 = 1;
   }
-  v7 = sub_1C3E7B0(ClassBoardPageSwitcher___c__DisplayClass27_0_TypeInfo);
+  v7 = sub_1C6BC54(ClassBoardPageSwitcher___c__DisplayClass27_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_28;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
   *(_QWORD *)(v7 + 24) = finishCallback;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 24), (int32_t)finishCallback, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)finishCallback, v12, v13);
   this->fields.sceneRoot = rootComponent;
   p_fields = &this->fields;
   this->fields.currentViewType = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)rootComponent, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)rootComponent, v15, v16);
   if ( !this->fields.sceneRoot )
     goto LABEL_28;
   classBoardRoot = this->fields.sceneRoot->fields.classBoardRoot;
@@ -424,10 +610,10 @@ void ClassBoardPageSwitcher__Init(
   if ( !p_fields->sceneRoot )
     goto LABEL_28;
   uiCamera = p_fields->sceneRoot->fields.uiCamera;
-  if ( !byte_4C51218 )
+  if ( !byte_4CB0760 )
   {
-    sub_1C3E564(&CTouch_TypeInfo);
-    byte_4C51218 = 1;
+    sub_1C6BA08(&CTouch_TypeInfo);
+    byte_4CB0760 = 1;
   }
   v20 = CTouch_TypeInfo;
   if ( !CTouch_TypeInfo->_2.cctor_finished )
@@ -437,17 +623,17 @@ void ClassBoardPageSwitcher__Init(
   }
   static_fields = v20->static_fields;
   static_fields->mScreenCam = uiCamera;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->mScreenCam, (int32_t)uiCamera, v17, v18);
-  v22 = sub_1C3E7B0(TaskScheduler_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->mScreenCam, (int32_t)uiCamera, v17, v18);
+  v22 = sub_1C6BC54(TaskScheduler_TypeInfo);
   TaskScheduler___ctor((TaskScheduler_o *)v22, 0);
-  v23 = (System_Action_bool__o *)sub_1C3E7B0(System_Action_bool__TypeInfo);
+  v23 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(v23, (Il2CppObject *)this, Method_ClassBoardPageSwitcher_SetAllTouchBlock__, 0);
   if ( !v22 )
     goto LABEL_28;
   *(_QWORD *)(v22 + 56) = v23;
-  sub_1C3E508((CGThumbnailListItem_o *)(v22 + 56), (int32_t)v23, v24, v25);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v22 + 56), (int32_t)v23, v24, v25);
   this->fields.taskScheduler = (struct TaskScheduler_o *)v22;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.taskScheduler, v22, v26, v27);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.taskScheduler, v22, v26, v27);
   classBoardRoot = (UnityEngine_GameObject_o *)this->fields.taskScheduler;
   if ( !classBoardRoot )
     goto LABEL_28;
@@ -469,11 +655,11 @@ void ClassBoardPageSwitcher__Init(
       goto LABEL_28;
   }
   v30 = classBoardRoot[5].fields.m_CachedPtr;
-  v31 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v31 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v31, (Il2CppObject *)v7, Method_ClassBoardPageSwitcher___c__DisplayClass27_0__Init_b__0__, 0);
   if ( !v30 )
 LABEL_28:
-    sub_1C3E7C0(classBoardRoot, v9);
+    sub_1C6BC60(classBoardRoot, v9);
   v32 = *(_QWORD *)v30;
   v33 = *(unsigned __int16 *)(*(_QWORD *)v30 + 302LL);
   if ( *(_WORD *)(*(_QWORD *)v30 + 302LL) )
@@ -491,7 +677,7 @@ LABEL_28:
   else
   {
 LABEL_25:
-    v35 = sub_1C8ED7C(v30, IClassBoardResourceCatalog_TypeInfo, 1);
+    v35 = sub_1C41D90(v30, IClassBoardResourceCatalog_TypeInfo, 1);
   }
   (*(void (__fastcall **)(intptr_t, System_Action_o *, _QWORD))v35)(v30, v31, *(_QWORD *)(v35 + 8));
 }
@@ -529,18 +715,18 @@ void ClassBoardPageSwitcher__InitBoardSelectView(ClassBoardPageSwitcher_o *this,
   const MethodInfo *v29; // x3
 
   v2 = this;
-  if ( (byte_4C5A907 & 1) == 0 )
+  if ( (byte_4CB9ED9 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_bool__TypeInfo);
-    sub_1C3E564(&System_Action_int__int__TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher_SetAllTouchBlock__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher_SetCameraWorkBlock__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher_ToClassBoard__);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ClassBoardSelectViewManager___);
-    sub_1C3E564(&IClassBoardResourceCatalog_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
-    this = (ClassBoardPageSwitcher_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A907 = 1;
+    sub_1C6BA08(&System_Action_bool__TypeInfo);
+    sub_1C6BA08(&System_Action_int__int__TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher_SetAllTouchBlock__);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher_SetCameraWorkBlock__);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher_ToClassBoard__);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ClassBoardSelectViewManager___);
+    sub_1C6BA08(&IClassBoardResourceCatalog_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+    this = (ClassBoardPageSwitcher_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9ED9 = 1;
   }
   sceneRoot = v2->fields.sceneRoot;
   if ( !sceneRoot )
@@ -565,7 +751,7 @@ void ClassBoardPageSwitcher__InitBoardSelectView(ClassBoardPageSwitcher_o *this,
   else
   {
 LABEL_9:
-    v8 = sub_1C8ED7C(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
+    v8 = sub_1C41D90(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
   }
   this = (ClassBoardPageSwitcher_o *)(*(__int64 (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))v8)(
                                        resourceCatalog,
@@ -585,18 +771,18 @@ LABEL_9:
   parent = UnityEngine_Transform__get_parent((UnityEngine_Transform_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (ClassBoardPageSwitcher_o *)UnityEngine_Object__Instantiate_object__51929056(
+  this = (ClassBoardPageSwitcher_o *)UnityEngine_Object__Instantiate_object__52199488(
                                        v11,
                                        parent,
-                                       (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+                                       (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
   if ( !this )
     goto LABEL_25;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)this,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ClassBoardSelectViewManager___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ClassBoardSelectViewManager___);
   v2->fields.boardSelectViewManager = (struct ClassBoardSelectViewManager_o *)Component_object;
   p_boardSelectViewManager = (ClassBoardPageSwitcher_o **)&v2->fields.boardSelectViewManager;
-  sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.boardSelectViewManager, (int32_t)Component_object, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.boardSelectViewManager, (int32_t)Component_object, v15, v16);
   this = (ClassBoardPageSwitcher_o *)v2->fields.boardSelectViewManager;
   if ( !this )
     goto LABEL_25;
@@ -611,28 +797,28 @@ LABEL_9:
     goto LABEL_25;
   ClassBoardSelectViewManager__Init((ClassBoardSelectViewManager_o *)this, 0);
   boardSelectViewManager = v2->fields.boardSelectViewManager;
-  v19 = (System_Action_int__int__o *)sub_1C3E7B0(System_Action_int__int__TypeInfo);
+  v19 = (System_Action_int__int__o *)sub_1C6BC54(System_Action_int__int__TypeInfo);
   System_Action_int__int____ctor(v19, (Il2CppObject *)v2, Method_ClassBoardPageSwitcher_ToClassBoard__, 0);
   if ( !boardSelectViewManager )
     goto LABEL_25;
   boardSelectViewManager->fields.onSelectClassBoard = v19;
-  sub_1C3E508((CGThumbnailListItem_o *)&boardSelectViewManager->fields.onSelectClassBoard, (int32_t)v19, v20, v21);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&boardSelectViewManager->fields.onSelectClassBoard, (int32_t)v19, v20, v21);
   v22 = v2->fields.boardSelectViewManager;
-  v23 = (System_Action_bool__o *)sub_1C3E7B0(System_Action_bool__TypeInfo);
+  v23 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(v23, (Il2CppObject *)v2, Method_ClassBoardPageSwitcher_SetCameraWorkBlock__, 0);
   if ( !v22
     || (v22->fields.setCameraWorkBlock = v23,
-        sub_1C3E508((CGThumbnailListItem_o *)&v22->fields.setCameraWorkBlock, (int32_t)v23, v24, v25),
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v22->fields.setCameraWorkBlock, (int32_t)v23, v24, v25),
         v26 = (CGThumbnailListItem_o *)v2->fields.boardSelectViewManager,
-        v27 = (System_Action_bool__o *)sub_1C3E7B0(System_Action_bool__TypeInfo),
+        v27 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo),
         System_Action_bool____ctor(v27, (Il2CppObject *)v2, Method_ClassBoardPageSwitcher_SetAllTouchBlock__, 0),
         !v26) )
   {
 LABEL_25:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   v26[1].klass = (CGThumbnailListItem_c *)v27;
-  sub_1C3E508(v26 + 1, (int32_t)v27, v28, v29);
+  sub_1C6B9AC(v26 + 1, (int32_t)v27, v28, v29);
 }
 
 
@@ -654,13 +840,13 @@ void ClassBoardPageSwitcher__InitForwardUi(ClassBoardPageSwitcher_o *this, const
   const MethodInfo *v15; // x3
 
   v2 = this;
-  if ( (byte_4C5A908 & 1) == 0 )
+  if ( (byte_4CB9EDA & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_ClassBoardForwardIconAnimComponent___);
-    sub_1C3E564(&IClassBoardResourceCatalog_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject____78272896);
-    this = (ClassBoardPageSwitcher_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A908 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ClassBoardForwardIconAnimComponent___);
+    sub_1C6BA08(&IClassBoardResourceCatalog_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+    this = (ClassBoardPageSwitcher_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9EDA = 1;
   }
   sceneRoot = v2->fields.sceneRoot;
   if ( !sceneRoot )
@@ -685,7 +871,7 @@ void ClassBoardPageSwitcher__InitForwardUi(ClassBoardPageSwitcher_o *this, const
   else
   {
 LABEL_9:
-    v8 = sub_1C8ED7C(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
+    v8 = sub_1C41D90(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
   }
   this = (ClassBoardPageSwitcher_o *)(*(__int64 (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))v8)(
                                        resourceCatalog,
@@ -702,229 +888,18 @@ LABEL_9:
   transform = UnityEngine_GameObject__get_transform(forwardUiRoot, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (ClassBoardPageSwitcher_o *)UnityEngine_Object__Instantiate_object__51929056(
+  this = (ClassBoardPageSwitcher_o *)UnityEngine_Object__Instantiate_object__52199488(
                                        monitor,
                                        transform,
-                                       (const MethodInfo_3185FE0 *)Method_UnityEngine_Object_Instantiate_GameObject____78272896);
+                                       (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
   if ( !this )
 LABEL_18:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)this,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_ClassBoardForwardIconAnimComponent___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ClassBoardForwardIconAnimComponent___);
   v2->fields.forwardIconAnimComponent = (struct ClassBoardForwardIconAnimComponent_o *)Component_object;
-  sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.forwardIconAnimComponent, (int32_t)Component_object, v14, v15);
-}
-
-
-void ClassBoardPageSwitcher__PlayBoardSelectFirstTransitionAction(
-        ClassBoardPageSwitcher_o *this,
-        System_Action_o *finishCallback,
-        const MethodInfo *method)
-{
-  __int64 v5; // x21
-  ClassBoardSelectViewManager_o *boardSelectViewManager; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  SchedulerTaskBase_o *TaskOfFirstTransition; // x20
-  SchedulerTaskBase_TaskCallback_o *v11; // x22
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  TaskScheduler_o *taskScheduler; // x19
-  ClassBoardSelectViewManager_o *v15; // x21
-  __int64 v16; // x0
-  __int64 v17; // x1
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  __int64 v20; // x0
-
-  if ( (byte_4C5A903 & 1) == 0 )
-  {
-    sub_1C3E564(&SchedulerTaskBase___TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass30_0__PlayBoardSelectFirstTransitionAction_b__0__);
-    sub_1C3E564(&ClassBoardPageSwitcher___c__DisplayClass30_0_TypeInfo);
-    byte_4C5A903 = 1;
-  }
-  v5 = sub_1C3E7B0(ClassBoardPageSwitcher___c__DisplayClass30_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0);
-  if ( !v5 )
-    goto LABEL_11;
-  *(_QWORD *)(v5 + 16) = finishCallback;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)finishCallback, v8, v9);
-  boardSelectViewManager = this->fields.boardSelectViewManager;
-  if ( !boardSelectViewManager )
-    goto LABEL_11;
-  TaskOfFirstTransition = ClassBoardSelectViewManager__GetTaskOfFirstTransition(boardSelectViewManager, 0);
-  v11 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
-  SchedulerTaskBase_TaskCallback___ctor(
-    v11,
-    (Il2CppObject *)v5,
-    Method_ClassBoardPageSwitcher___c__DisplayClass30_0__PlayBoardSelectFirstTransitionAction_b__0__,
-    0);
-  if ( !TaskOfFirstTransition )
-    goto LABEL_11;
-  TaskOfFirstTransition->fields.EndCallback = v11;
-  sub_1C3E508((CGThumbnailListItem_o *)&TaskOfFirstTransition->fields.EndCallback, (int32_t)v11, v12, v13);
-  taskScheduler = this->fields.taskScheduler;
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E60C(SchedulerTaskBase___TypeInfo, 1);
-  if ( !boardSelectViewManager )
-    goto LABEL_11;
-  v15 = boardSelectViewManager;
-  v16 = sub_1C3E6A0(TaskOfFirstTransition, boardSelectViewManager->klass->_1.element_class);
-  if ( !v16 )
-  {
-    v20 = sub_1C3E7E4(0);
-    sub_1C3E68C(v20, 0);
-  }
-  if ( !LODWORD(v15->fields.m_CancellationTokenSource) )
-    sub_1C3E7C8(v16, v17);
-  v15->fields.iconArray = (struct ClassBoardSelectIconComponent_array *)TaskOfFirstTransition;
-  sub_1C3E508((CGThumbnailListItem_o *)&v15->fields.iconArray, (int32_t)TaskOfFirstTransition, v18, v19);
-  if ( !taskScheduler )
-LABEL_11:
-    sub_1C3E7C0(boardSelectViewManager, v7);
-  TaskScheduler__AddTask(taskScheduler, 0, (SchedulerTaskBase_array *)v15, 0);
-}
-
-
-void ClassBoardPageSwitcher__PlayClassBaseReleaseEffectAction(
-        ClassBoardPageSwitcher_o *this,
-        System_Action_o *finishCallback,
-        const MethodInfo *method)
-{
-  __int64 v5; // x22
-  ClassBoardSelectViewManager_o *boardSelectViewManager; // x0
-  __int64 v7; // x1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x21
-  SchedulerTaskBase_o *PlayClassBoardReleaseEffect; // x0
-  SchedulerTaskBase_o *v12; // x20
-  SchedulerTaskBase_TaskCallback_o *v13; // x23
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  ClassBoardPageSwitcher___c_c *v16; // x0
-  System_Func_object__int__o *_9__31_1; // x22
-  Il2CppObject *v18; // x23
-  struct ClassBoardPageSwitcher___c_StaticFields *static_fields; // x0
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v22; // x0
-  System_Int32_array *v23; // x21
-  TaskScheduler_o *taskScheduler; // x19
-  ClassBoardSelectViewManager_o *v25; // x21
-  __int64 v26; // x0
-  __int64 v27; // x1
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  __int64 v30; // x0
-
-  if ( (byte_4C5A904 & 1) == 0 )
-  {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_ClassBoardSelectIconComponent__int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C3E564(&System_Func_ClassBoardSelectIconComponent__int__TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase___TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__PlayClassBaseReleaseEffectAction_b__31_1__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass31_0__PlayClassBaseReleaseEffectAction_b__0__);
-    sub_1C3E564(&ClassBoardPageSwitcher___c__DisplayClass31_0_TypeInfo);
-    sub_1C3E564(&ClassBoardPageSwitcher___c_TypeInfo);
-    byte_4C5A904 = 1;
-  }
-  v5 = sub_1C3E7B0(ClassBoardPageSwitcher___c__DisplayClass31_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v5, 0);
-  if ( !v5 )
-    goto LABEL_21;
-  *(_QWORD *)(v5 + 16) = finishCallback;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)finishCallback, v8, v9);
-  boardSelectViewManager = this->fields.boardSelectViewManager;
-  if ( !boardSelectViewManager )
-    goto LABEL_21;
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)ClassBoardSelectViewManager__GetPlayClassBoardReleaseList(
-                                                              boardSelectViewManager,
-                                                              0);
-  if ( !this->fields.boardSelectViewManager )
-    goto LABEL_21;
-  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)boardSelectViewManager;
-  PlayClassBoardReleaseEffect = ClassBoardSelectViewManager__GetPlayClassBoardReleaseEffect(
-                                  this->fields.boardSelectViewManager,
-                                  (System_Collections_Generic_List_ClassBoardSelectIconComponent__o *)boardSelectViewManager,
-                                  0);
-  if ( PlayClassBoardReleaseEffect )
-  {
-    v12 = PlayClassBoardReleaseEffect;
-    v13 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
-    SchedulerTaskBase_TaskCallback___ctor(
-      v13,
-      (Il2CppObject *)v5,
-      Method_ClassBoardPageSwitcher___c__DisplayClass31_0__PlayClassBaseReleaseEffectAction_b__0__,
-      0);
-    v12->fields.EndCallback = v13;
-    sub_1C3E508((CGThumbnailListItem_o *)&v12->fields.EndCallback, (int32_t)v13, v14, v15);
-    v16 = ClassBoardPageSwitcher___c_TypeInfo;
-    if ( !ClassBoardPageSwitcher___c_TypeInfo->_2.cctor_finished )
-    {
-      j_il2cpp_runtime_class_init_0(ClassBoardPageSwitcher___c_TypeInfo);
-      v16 = ClassBoardPageSwitcher___c_TypeInfo;
-    }
-    _9__31_1 = (System_Func_object__int__o *)v16->static_fields->__9__31_1;
-    if ( !_9__31_1 )
-    {
-      if ( !v16->_2.cctor_finished )
-      {
-        j_il2cpp_runtime_class_init_0(v16);
-        v16 = ClassBoardPageSwitcher___c_TypeInfo;
-      }
-      v18 = (Il2CppObject *)v16->static_fields->__9;
-      _9__31_1 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_ClassBoardSelectIconComponent__int__TypeInfo);
-      System_Func_object__int____ctor(
-        _9__31_1,
-        v18,
-        Method_ClassBoardPageSwitcher___c__PlayClassBaseReleaseEffectAction_b__31_1__,
-        0);
-      static_fields = ClassBoardPageSwitcher___c_TypeInfo->static_fields;
-      static_fields->__9__31_1 = (struct System_Func_ClassBoardSelectIconComponent__int__o *)_9__31_1;
-      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__31_1, (int32_t)_9__31_1, v20, v21);
-    }
-    v22 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
-                                                                 v10,
-                                                                 (System_Func_TSource__TResult__o *)_9__31_1,
-                                                                 (const MethodInfo_312F93C *)Method_System_Linq_Enumerable_Select_ClassBoardSelectIconComponent__int___);
-    v23 = System_Linq_Enumerable__ToArray_int_(
-            v22,
-            (const MethodInfo_3139050 *)Method_System_Linq_Enumerable_ToArray_int___);
-    if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
-      j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
-    ClassBoardUtility__SavePlayedClassBaseReleaseEffect(v23, 0);
-    taskScheduler = this->fields.taskScheduler;
-    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E60C(SchedulerTaskBase___TypeInfo, 1);
-    if ( boardSelectViewManager )
-    {
-      v25 = boardSelectViewManager;
-      v26 = sub_1C3E6A0(v12, boardSelectViewManager->klass->_1.element_class);
-      if ( !v26 )
-      {
-        v30 = sub_1C3E7E4(0);
-        sub_1C3E68C(v30, 0);
-      }
-      if ( !LODWORD(v25->fields.m_CancellationTokenSource) )
-        sub_1C3E7C8(v26, v27);
-      v25->fields.iconArray = (struct ClassBoardSelectIconComponent_array *)v12;
-      sub_1C3E508((CGThumbnailListItem_o *)&v25->fields.iconArray, (int32_t)v12, v28, v29);
-      if ( taskScheduler )
-      {
-        TaskScheduler__AddTask(taskScheduler, 0, (SchedulerTaskBase_array *)v25, 0);
-        return;
-      }
-    }
-LABEL_21:
-    sub_1C3E7C0(boardSelectViewManager, v7);
-  }
-  ActionExtensions__Call(*(System_Action_o **)(v5 + 16), 0);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.forwardIconAnimComponent, (int32_t)Component_object, v14, v15);
 }
 
 
@@ -948,10 +923,10 @@ void ClassBoardPageSwitcher__Release(ClassBoardPageSwitcher_o *this, const Metho
   const MethodInfo *v17; // x3
 
   v2 = this;
-  if ( (byte_4C5A906 & 1) == 0 )
+  if ( (byte_4CB9ED8 & 1) == 0 )
   {
-    this = (ClassBoardPageSwitcher_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A906 = 1;
+    this = (ClassBoardPageSwitcher_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9ED8 = 1;
   }
   sceneRoot = v2->fields.sceneRoot;
   if ( !sceneRoot )
@@ -972,9 +947,9 @@ void ClassBoardPageSwitcher__Release(ClassBoardPageSwitcher_o *this, const Metho
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71341564(gameObject, 0);
+    UnityEngine_Object__Destroy_71659676(gameObject, 0);
     *p_boardSelectViewManager = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.boardSelectViewManager, 0, v7, v8);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.boardSelectViewManager, 0, v7, v8);
   }
   p_forwardIconAnimComponent = (ClassBoardPageSwitcher_o **)&v2->fields.forwardIconAnimComponent;
   forwardIconAnimComponent = (UnityEngine_Object_o *)v2->fields.forwardIconAnimComponent;
@@ -988,23 +963,22 @@ void ClassBoardPageSwitcher__Release(ClassBoardPageSwitcher_o *this, const Metho
       v13 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564(v13, 0);
+      UnityEngine_Object__Destroy_71659676(v13, 0);
       *p_forwardIconAnimComponent = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.forwardIconAnimComponent, 0, v14, v15);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.forwardIconAnimComponent, 0, v14, v15);
       goto LABEL_19;
     }
 LABEL_20:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
 LABEL_19:
   v2->fields.mapCamera = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.mapCamera, 0, v11, v12);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.mapCamera, 0, v11, v12);
   v2->fields.taskScheduler = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.taskScheduler, 0, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.taskScheduler, 0, v16, v17);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ClassBoardPageSwitcher__SetAllTouchBlock(ClassBoardPageSwitcher_o *this, bool value, const MethodInfo *method)
 {
   struct ClassBoardRootComponent_o *sceneRoot; // x9
@@ -1021,7 +995,7 @@ void ClassBoardPageSwitcher__SetAllTouchBlock(ClassBoardPageSwitcher_o *this, bo
   v5 = this->fields.touchBlockNum + v4;
   this->fields.touchBlockNum = v5 & ~(v5 >> 31);
   if ( !sceneRoot || (v6 = this, (this = (ClassBoardPageSwitcher_o *)sceneRoot->fields.touchBlock) == 0) )
-    sub_1C3E7C0(this, value);
+    sub_1C6BC60(this, value);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, v5 > 0, 0);
   ClassBoardPageSwitcher__SetCameraWorkBlock(v6, value, v8);
 }
@@ -1035,11 +1009,11 @@ void ClassBoardPageSwitcher__SetCameraWorkBlock(ClassBoardPageSwitcher_o *this, 
   __int64 v7; // x1
   struct MapCamera_o *v8; // x8
 
-  if ( (byte_4C5A90C & 1) == 0 )
+  if ( (byte_4CB9EDF & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardPageSwitcher_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A90C = 1;
+    sub_1C6BA08(&ClassBoardPageSwitcher_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9EDF = 1;
   }
   ClassBoardPageSwitcher__SetCameraWorkBlockNum(value, (const MethodInfo *)value);
   mapCamera = (UnityEngine_Object_o *)this->fields.mapCamera;
@@ -1050,7 +1024,7 @@ void ClassBoardPageSwitcher__SetCameraWorkBlock(ClassBoardPageSwitcher_o *this, 
   {
     v8 = this->fields.mapCamera;
     if ( !v8 )
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     v8->fields._IsTouchEnable_k__BackingField = ClassBoardPageSwitcher_TypeInfo->static_fields->cameraWorkBlockNum < 1;
   }
 }
@@ -1060,10 +1034,10 @@ void ClassBoardPageSwitcher__SetCameraWorkBlockNum(bool value, const MethodInfo 
 {
   int v3; // w10
 
-  if ( (byte_4C5A90D & 1) == 0 )
+  if ( (byte_4CB9EE0 & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardPageSwitcher_TypeInfo);
-    byte_4C5A90D = 1;
+    sub_1C6BA08(&ClassBoardPageSwitcher_TypeInfo);
+    byte_4CB9EE0 = 1;
   }
   if ( value )
     v3 = 1;
@@ -1096,7 +1070,7 @@ void ClassBoardPageSwitcher__StartForwardIconAnim(
           v3),
         (this = (ClassBoardPageSwitcher_o *)v5->fields.forwardIconAnimComponent) == 0) )
   {
-    sub_1C3E7C0(this, *(_QWORD *)&baseId);
+    sub_1C6BC60(this, *(_QWORD *)&baseId);
   }
   ClassBoardForwardIconAnimComponent__PlayAnim(
     (ClassBoardForwardIconAnimComponent_o *)this,
@@ -1107,127 +1081,53 @@ void ClassBoardPageSwitcher__StartForwardIconAnim(
 void ClassBoardPageSwitcher__StartUp(ClassBoardPageSwitcher_o *this, Il2CppObject *data, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
-  char *controller; // x0
+  Il2CppObject *controller; // x0
   __int64 v6; // x1
   int32_t v7; // w2
   const MethodInfo *v8; // x3
   struct ClassBoardRootComponent_o *sceneRoot; // x8
   const MethodInfo *v10; // x2
-  __int64 v11; // x20
-  System_Action_object__o *v12; // x21
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  System_Action_object__o *v15; // x21
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  System_Action_object__o *v18; // x21
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  System_Action_object__o *v21; // x21
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  Il2CppObject *boardSelectViewManager; // x23
-  System_Action_object__o *v25; // x21
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  ActionChain_o *v28; // x21
-  __int64 v29; // x20
-  System_Action_o *v30; // x22
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
+  struct ClassBoardRootComponent_o *v11; // x8
+  ClassBoardSelectViewManager_o *boardSelectViewManager; // x20
+  ClassBoardBackground_o *classBoardBackground; // x21
+  IClassBoardResourceCatalog_o *resourceCatalog; // x22
+  System_Action_o *v15; // x23
 
-  if ( (byte_4C5A901 & 1) == 0 )
+  if ( (byte_4CB9ED3 & 1) == 0 )
   {
-    sub_1C3E564(&ActionChain_TypeInfo);
-    sub_1C3E564(&System_Action___TypeInfo);
-    sub_1C3E564(&System_Action_Action____TypeInfo);
-    sub_1C3E564(&System_Action_Action__TypeInfo);
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher_PlayBoardSelectFirstTransitionAction__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher_PlayClassBaseReleaseEffectAction__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher__StartUp_b__28_0__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher__StartUp_b__28_1__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher__StartUp_b__28_2__);
-    sub_1C3E564(&Method_ClassBoardSelectViewManager_OpenHelpIfNotYet__);
-    sub_1C3E564(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_4C5A901 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher__StartUp_b__28_0__);
+    sub_1C6BA08(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4CB9ED3 = 1;
   }
   this->fields.sceneJumpInfo = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.sceneJumpInfo, 0, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.sceneJumpInfo, 0, (int32_t)method, v3);
   sceneRoot = this->fields.sceneRoot;
   if ( !sceneRoot )
-    goto LABEL_17;
-  controller = (char *)sceneRoot->fields.controller;
+    goto LABEL_9;
+  controller = (Il2CppObject *)sceneRoot->fields.controller;
   if ( !controller )
-    goto LABEL_17;
-  *((_QWORD *)controller + 20) = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)(controller + 160), 0, v7, v8);
-  controller = (char *)SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    goto LABEL_9;
+  controller[10].klass = 0;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&controller[10], 0, v7, v8);
+  controller = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !controller )
-    goto LABEL_17;
+    goto LABEL_9;
   MissionNotifyManager__StartPause((MissionNotifyManager_o *)controller, 0);
   ClassBoardPageSwitcher__SetAllTouchBlock(this, 1, v10);
-  v11 = sub_1C3E60C(System_Action_Action____TypeInfo, 5);
-  v12 = (System_Action_object__o *)sub_1C3E7B0(System_Action_Action__TypeInfo);
-  System_Action_object____ctor(v12, (Il2CppObject *)this, Method_ClassBoardPageSwitcher__StartUp_b__28_0__, 0);
-  if ( !v11 )
-    goto LABEL_17;
-  if ( !*(_DWORD *)(v11 + 24) )
-    goto LABEL_18;
-  *(_QWORD *)(v11 + 32) = v12;
-  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 32), (int32_t)v12, v13, v14);
-  v15 = (System_Action_object__o *)sub_1C3E7B0(System_Action_Action__TypeInfo);
-  System_Action_object____ctor(v15, (Il2CppObject *)this, Method_ClassBoardPageSwitcher__StartUp_b__28_1__, 0);
-  if ( *(_DWORD *)(v11 + 24) <= 1u )
-    goto LABEL_18;
-  *(_QWORD *)(v11 + 40) = v15;
-  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 40), (int32_t)v15, v16, v17);
-  v18 = (System_Action_object__o *)sub_1C3E7B0(System_Action_Action__TypeInfo);
-  System_Action_object____ctor(
-    v18,
-    (Il2CppObject *)this,
-    Method_ClassBoardPageSwitcher_PlayBoardSelectFirstTransitionAction__,
-    0);
-  if ( *(_DWORD *)(v11 + 24) <= 2u )
-    goto LABEL_18;
-  *(_QWORD *)(v11 + 48) = v18;
-  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 48), (int32_t)v18, v19, v20);
-  v21 = (System_Action_object__o *)sub_1C3E7B0(System_Action_Action__TypeInfo);
-  System_Action_object____ctor(
-    v21,
-    (Il2CppObject *)this,
-    Method_ClassBoardPageSwitcher_PlayClassBaseReleaseEffectAction__,
-    0);
-  if ( *(_DWORD *)(v11 + 24) <= 3u )
-    goto LABEL_18;
-  *(_QWORD *)(v11 + 56) = v21;
-  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 56), (int32_t)v21, v22, v23);
-  boardSelectViewManager = (Il2CppObject *)this->fields.boardSelectViewManager;
-  v25 = (System_Action_object__o *)sub_1C3E7B0(System_Action_Action__TypeInfo);
-  System_Action_object____ctor(v25, boardSelectViewManager, Method_ClassBoardSelectViewManager_OpenHelpIfNotYet__, 0);
-  if ( *(_DWORD *)(v11 + 24) <= 4u )
-    goto LABEL_18;
-  *(_QWORD *)(v11 + 64) = v25;
-  sub_1C3E508((CGThumbnailListItem_o *)(v11 + 64), (int32_t)v25, v26, v27);
-  v28 = (ActionChain_o *)sub_1C3E7B0(ActionChain_TypeInfo);
-  ActionChain___ctor_49114212(v28, (System_Action_Action__array *)v11, 0);
-  v29 = sub_1C3E60C(System_Action___TypeInfo, 1);
-  v30 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
-  System_Action___ctor(v30, (Il2CppObject *)this, Method_ClassBoardPageSwitcher__StartUp_b__28_2__, 0);
-  if ( !v29 )
-    goto LABEL_17;
-  if ( !*(_DWORD *)(v29 + 24) )
-LABEL_18:
-    sub_1C3E7C8(controller, v6);
-  *(_QWORD *)(v29 + 32) = v30;
-  sub_1C3E508((CGThumbnailListItem_o *)(v29 + 32), (int32_t)v30, v31, v32);
-  if ( !v28
-    || (controller = (char *)ChainableActionBase__Final((ChainableActionBase_o *)v28, (System_Action_array *)v29, 0)) == 0 )
+  v11 = this->fields.sceneRoot;
+  if ( !v11
+    || (boardSelectViewManager = this->fields.boardSelectViewManager,
+        classBoardBackground = v11->fields.classBoardBackground,
+        resourceCatalog = v11->fields.resourceCatalog,
+        v15 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
+        System_Action___ctor(v15, (Il2CppObject *)this, Method_ClassBoardPageSwitcher__StartUp_b__28_0__, 0),
+        !boardSelectViewManager) )
   {
-LABEL_17:
-    sub_1C3E7C0(controller, v6);
+LABEL_9:
+    sub_1C6BC60(controller, v6);
   }
-  ChainableActionBase__Execute((ChainableActionBase_o *)controller, 0);
+  ClassBoardSelectViewManager__StartUp(boardSelectViewManager, classBoardBackground, resourceCatalog, v15, 0);
 }
 
 
@@ -1269,32 +1169,32 @@ void ClassBoardPageSwitcher__StartUpByTransitionInfo(
   const MethodInfo *v35; // x3
   Il2CppObject *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C5A902 & 1) == 0 )
+  if ( (byte_4CB9ED4 & 1) == 0 )
   {
-    sub_1C3E564(&ActionChain_TypeInfo);
-    sub_1C3E564(&System_Action___TypeInfo);
-    sub_1C3E564(&System_Action_Action____TypeInfo);
-    sub_1C3E564(&System_Action_Action__TypeInfo);
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher_DirectlyBack__);
-    sub_1C3E564(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    sub_1C3E564(&SceneJumpInfo_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass29_0__StartUpByTransitionInfo_b__0__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass29_0__StartUpByTransitionInfo_b__1__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass29_0__StartUpByTransitionInfo_b__2__);
-    sub_1C3E564(&ClassBoardPageSwitcher___c__DisplayClass29_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_5283/*"DirectlyToClassBoard"*/);
-    byte_4C5A902 = 1;
+    sub_1C6BA08(&ActionChain_TypeInfo);
+    sub_1C6BA08(&System_Action___TypeInfo);
+    sub_1C6BA08(&System_Action_Action____TypeInfo);
+    sub_1C6BA08(&System_Action_Action__TypeInfo);
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher_DirectlyBack__);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    sub_1C6BA08(&SceneJumpInfo_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass29_0__StartUpByTransitionInfo_b__0__);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass29_0__StartUpByTransitionInfo_b__1__);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass29_0__StartUpByTransitionInfo_b__2__);
+    sub_1C6BA08(&ClassBoardPageSwitcher___c__DisplayClass29_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_5271/*"DirectlyToClassBoard"*/);
+    byte_4CB9ED4 = 1;
   }
   entity = 0;
-  v5 = sub_1C3E7B0(ClassBoardPageSwitcher___c__DisplayClass29_0_TypeInfo);
+  v5 = sub_1C6BC54(ClassBoardPageSwitcher___c__DisplayClass29_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_41;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
   if ( data )
   {
     v12 = (Il2CppClass *)SceneJumpInfo_TypeInfo;
@@ -1318,23 +1218,23 @@ void ClassBoardPageSwitcher__StartUpByTransitionInfo(
     this->fields.sceneJumpInfo = 0;
     p_sceneJumpInfo = &this->fields.sceneJumpInfo;
   }
-  sub_1C3E508((CGThumbnailListItem_o *)p_sceneJumpInfo, v15, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_sceneJumpInfo, v15, v10, v11);
   v17 = *p_sceneJumpInfo;
   if ( !*p_sceneJumpInfo )
     goto LABEL_41;
   *(_DWORD *)(v5 + 24) = v17->fields.id;
   *(_BYTE *)(v5 + 33) = v17->fields.num > 0;
-  *(_BYTE *)(v5 + 32) = System_String__op_Equality(v17->fields.name, (System_String_o *)StringLiteral_5283/*"DirectlyToClassBoard"*/, 0);
+  *(_BYTE *)(v5 + 32) = System_String__op_Equality(v17->fields.name, (System_String_o *)StringLiteral_5271/*"DirectlyToClassBoard"*/, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
   if ( !Master_object )
     goto LABEL_41;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___TryGetEntity(
                                                                   Master_object,
                                                                   &entity,
                                                                   *(_DWORD *)(v5 + 24),
-                                                                  (const MethodInfo_33B2FA4 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_33F9128 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
   if ( *(_BYTE *)(v5 + 33) )
   {
     Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)entity;
@@ -1367,18 +1267,18 @@ void ClassBoardPageSwitcher__StartUpByTransitionInfo(
   if ( ((unsigned __int8)Master_object & 1) == 0 )
   {
 LABEL_30:
-    v22 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v22 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v22, (Il2CppObject *)this, Method_ClassBoardPageSwitcher_DirectlyBack__, 0);
   }
   if ( !controller )
     goto LABEL_41;
   controller->fields.directlyBackAction = v22;
-  sub_1C3E508((CGThumbnailListItem_o *)&controller->fields.directlyBackAction, (int32_t)v22, v20, v21);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&controller->fields.directlyBackAction, (int32_t)v22, v20, v21);
   if ( !entity )
     goto LABEL_41;
   *(_DWORD *)(v5 + 28) = entity[2].klass;
-  v24 = sub_1C3E60C(System_Action_Action____TypeInfo, 2);
-  v25 = (System_Action_object__o *)sub_1C3E7B0(System_Action_Action__TypeInfo);
+  v24 = sub_1C6BAB0(System_Action_Action____TypeInfo, 2);
+  v25 = (System_Action_object__o *)sub_1C6BC54(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v25,
     (Il2CppObject *)v5,
@@ -1389,8 +1289,8 @@ LABEL_30:
   if ( !*(_DWORD *)(v24 + 24) )
     goto LABEL_42;
   *(_QWORD *)(v24 + 32) = v25;
-  sub_1C3E508((CGThumbnailListItem_o *)(v24 + 32), (int32_t)v25, v26, v27);
-  v28 = (System_Action_object__o *)sub_1C3E7B0(System_Action_Action__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v24 + 32), (int32_t)v25, v26, v27);
+  v28 = (System_Action_object__o *)sub_1C6BC54(System_Action_Action__TypeInfo);
   System_Action_object____ctor(
     v28,
     (Il2CppObject *)v5,
@@ -1399,11 +1299,11 @@ LABEL_30:
   if ( *(_DWORD *)(v24 + 24) <= 1u )
     goto LABEL_42;
   *(_QWORD *)(v24 + 40) = v28;
-  sub_1C3E508((CGThumbnailListItem_o *)(v24 + 40), (int32_t)v28, v29, v30);
-  v31 = (ActionChain_o *)sub_1C3E7B0(ActionChain_TypeInfo);
-  ActionChain___ctor_49114212(v31, (System_Action_Action__array *)v24, 0);
-  v32 = sub_1C3E60C(System_Action___TypeInfo, 1);
-  v33 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v24 + 40), (int32_t)v28, v29, v30);
+  v31 = (ActionChain_o *)sub_1C6BC54(ActionChain_TypeInfo);
+  ActionChain___ctor_49343096(v31, (System_Action_Action__array *)v24, 0);
+  v32 = sub_1C6BAB0(System_Action___TypeInfo, 1);
+  v33 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v33,
     (Il2CppObject *)v5,
@@ -1413,9 +1313,9 @@ LABEL_30:
     goto LABEL_41;
   if ( !*(_DWORD *)(v32 + 24) )
 LABEL_42:
-    sub_1C3E7C8(Master_object, v7);
+    sub_1C6BC68(Master_object);
   *(_QWORD *)(v32 + 32) = v33;
-  sub_1C3E508((CGThumbnailListItem_o *)(v32 + 32), (int32_t)v33, v34, v35);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v32 + 32), (int32_t)v33, v34, v35);
   if ( !v31
     || (Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)ChainableActionBase__Final(
                                                                         (ChainableActionBase_o *)v31,
@@ -1423,7 +1323,7 @@ LABEL_42:
                                                                         0)) == 0 )
   {
 LABEL_41:
-    sub_1C3E7C0(Master_object, v7);
+    sub_1C6BC60(Master_object, v7);
   }
   ChainableActionBase__Execute((ChainableActionBase_o *)Master_object, 0);
 }
@@ -1470,25 +1370,25 @@ void ClassBoardPageSwitcher__ToClassBoard(
   const MethodInfo *v39; // x3
   __int64 v40; // x0
 
-  if ( (byte_4C5A909 & 1) == 0 )
+  if ( (byte_4CB9EDB & 1) == 0 )
   {
-    sub_1C3E564(&AvalonSceneManager_TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase___TypeInfo);
-    sub_1C3E564(&SchedulerTaskParallel_TypeInfo);
-    sub_1C3E564(&SchedulerTaskWaitTime_TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass36_0__ToClassBoard_b__0__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass36_0__ToClassBoard_b__1__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass36_0__ToClassBoard_b__2__);
-    sub_1C3E564(&ClassBoardPageSwitcher___c__DisplayClass36_0_TypeInfo);
-    byte_4C5A909 = 1;
+    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
+    sub_1C6BA08(&SchedulerTaskParallel_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskWaitTime_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass36_0__ToClassBoard_b__0__);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass36_0__ToClassBoard_b__1__);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__DisplayClass36_0__ToClassBoard_b__2__);
+    sub_1C6BA08(&ClassBoardPageSwitcher___c__DisplayClass36_0_TypeInfo);
+    byte_4CB9EDB = 1;
   }
-  v7 = sub_1C3E7B0(ClassBoardPageSwitcher___c__DisplayClass36_0_TypeInfo);
+  v7 = sub_1C6BC54(ClassBoardPageSwitcher___c__DisplayClass36_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_26;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
   *(_DWORD *)(v7 + 24) = baseId;
   *(_DWORD *)(v7 + 28) = iconId;
   v12 = AvalonSceneManager_TypeInfo;
@@ -1505,7 +1405,7 @@ void ClassBoardPageSwitcher__ToClassBoard(
                               boardSelectViewManager,
                               *(_DWORD *)(v7 + 24),
                               0);
-  v14 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v14 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
     v14,
     (Il2CppObject *)v7,
@@ -1514,14 +1414,14 @@ void ClassBoardPageSwitcher__ToClassBoard(
   if ( !TaskOfGoingToClassBoard )
     goto LABEL_26;
   TaskOfGoingToClassBoard->fields.EndCallback = v14;
-  sub_1C3E508((CGThumbnailListItem_o *)&TaskOfGoingToClassBoard->fields.EndCallback, (int32_t)v14, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&TaskOfGoingToClassBoard->fields.EndCallback, (int32_t)v14, v15, v16);
   boardSelectViewManager = this->fields.boardSelectViewManager;
   if ( !boardSelectViewManager )
     goto LABEL_26;
   FowardIconAnimDelayTime = ClassBoardSelectViewManager__GetFowardIconAnimDelayTime(boardSelectViewManager, 0);
-  v18 = sub_1C3E7B0(SchedulerTaskWaitTime_TypeInfo);
+  v18 = sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
   SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)v18, FowardIconAnimDelayTime, 0);
-  v19 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v19 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
     v19,
     (Il2CppObject *)v7,
@@ -1530,14 +1430,14 @@ void ClassBoardPageSwitcher__ToClassBoard(
   if ( !v18 )
     goto LABEL_26;
   *(_QWORD *)(v18 + 32) = v19;
-  sub_1C3E508((CGThumbnailListItem_o *)(v18 + 32), (int32_t)v19, v20, v21);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v18 + 32), (int32_t)v19, v20, v21);
   taskScheduler = this->fields.taskScheduler;
-  v23 = (SchedulerTaskBase_array *)sub_1C3E60C(SchedulerTaskBase___TypeInfo, 1);
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E60C(SchedulerTaskBase___TypeInfo, 2);
+  v23 = (SchedulerTaskBase_array *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 2);
   if ( !boardSelectViewManager )
     goto LABEL_26;
   v24 = (SchedulerTaskBase_array *)boardSelectViewManager;
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E6A0(
+  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BB44(
                                                               TaskOfGoingToClassBoard,
                                                               boardSelectViewManager->klass->_1.element_class);
   if ( !boardSelectViewManager )
@@ -1545,38 +1445,38 @@ void ClassBoardPageSwitcher__ToClassBoard(
   if ( !LODWORD(v24->max_length) )
     goto LABEL_28;
   v24->m_Items[0] = TaskOfGoingToClassBoard;
-  sub_1C3E508((CGThumbnailListItem_o *)v24->m_Items, (int32_t)TaskOfGoingToClassBoard, v25, v26);
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E6A0(v18, v24->obj.klass->_1.element_class);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v24->m_Items, (int32_t)TaskOfGoingToClassBoard, v25, v26);
+  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BB44(v18, v24->obj.klass->_1.element_class);
   if ( !boardSelectViewManager )
     goto LABEL_27;
   if ( LODWORD(v24->max_length) <= 1 )
     goto LABEL_28;
   v24->m_Items[1] = (SchedulerTaskBase_o *)v18;
-  sub_1C3E508((CGThumbnailListItem_o *)&v24->m_Items[1], v18, v27, v28);
-  v29 = (SchedulerTaskParallel_o *)sub_1C3E7B0(SchedulerTaskParallel_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v24->m_Items[1], v18, v27, v28);
+  v29 = (SchedulerTaskParallel_o *)sub_1C6BC54(SchedulerTaskParallel_TypeInfo);
   SchedulerTaskParallel___ctor(v29, v24, 0);
   if ( !v23 )
     goto LABEL_26;
   if ( v29 )
   {
-    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E6A0(v29, v23->obj.klass->_1.element_class);
+    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BB44(v29, v23->obj.klass->_1.element_class);
     if ( !boardSelectViewManager )
     {
 LABEL_27:
-      v40 = sub_1C3E7E4(boardSelectViewManager);
-      sub_1C3E68C(v40, 0);
+      v40 = sub_1C6BC84(boardSelectViewManager);
+      sub_1C6BB30(v40, 0);
     }
   }
   if ( !LODWORD(v23->max_length) )
     goto LABEL_28;
   v23->m_Items[0] = (SchedulerTaskBase_o *)v29;
-  sub_1C3E508((CGThumbnailListItem_o *)v23->m_Items, (int32_t)v29, v30, v31);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v23->m_Items, (int32_t)v29, v30, v31);
   if ( !taskScheduler )
     goto LABEL_26;
   TaskScheduler__AddTask(taskScheduler, 0, v23, 0);
-  v32 = sub_1C3E7B0(SchedulerTaskWaitTime_TypeInfo);
+  v32 = sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
   SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)v32, 0.2, 0);
-  v33 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v33 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
     v33,
     (Il2CppObject *)v7,
@@ -1584,24 +1484,24 @@ LABEL_27:
     0);
   if ( !v32
     || (*(_QWORD *)(v32 + 32) = v33,
-        sub_1C3E508((CGThumbnailListItem_o *)(v32 + 32), (int32_t)v33, v34, v35),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v32 + 32), (int32_t)v33, v34, v35),
         v36 = this->fields.taskScheduler,
-        (boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E60C(SchedulerTaskBase___TypeInfo, 1)) == 0) )
+        (boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1)) == 0) )
   {
 LABEL_26:
-    sub_1C3E7C0(boardSelectViewManager, v9);
+    sub_1C6BC60(boardSelectViewManager, v9);
   }
   v37 = boardSelectViewManager;
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E6A0(
+  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BB44(
                                                               v32,
                                                               boardSelectViewManager->klass->_1.element_class);
   if ( !boardSelectViewManager )
     goto LABEL_27;
   if ( !LODWORD(v37->fields.m_CancellationTokenSource) )
 LABEL_28:
-    sub_1C3E7C8(boardSelectViewManager, v9);
+    sub_1C6BC68(boardSelectViewManager);
   v37->fields.iconArray = (struct ClassBoardSelectIconComponent_array *)v32;
-  sub_1C3E508((CGThumbnailListItem_o *)&v37->fields.iconArray, v32, v38, v39);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v37->fields.iconArray, v32, v38, v39);
   if ( !v36 )
     goto LABEL_26;
   TaskScheduler__AddTask(v36, 0, (SchedulerTaskBase_array *)v37, 0);
@@ -1610,200 +1510,138 @@ LABEL_28:
 
 void ClassBoardPageSwitcher__ToClassBoardSelect(ClassBoardPageSwitcher_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x20
-  ClassBoardSelectViewManager_o *boardSelectViewManager; // x0
-  __int64 v5; // x1
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  AvalonSceneManager_c *v8; // x0
-  __int64 v9; // x23
+  TaskScheduler_o *taskScheduler; // x20
+  __int64 v4; // x0
+  ClassBoardPageSwitcher___c_c *v5; // x8
+  SchedulerTaskBase_array *v6; // x21
+  System_Action_object__o *_9__38_0; // x22
+  Il2CppObject *v8; // x23
+  struct ClassBoardPageSwitcher___c_StaticFields *static_fields; // x0
   int32_t v10; // w2
   const MethodInfo *v11; // x3
-  System_Func_bool__o *v12; // x24
-  __int64 v13; // x21
-  SchedulerTaskBase_TaskCallback_o *v14; // x24
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  Il2CppObject *v17; // x22
-  SchedulerTaskBase_TaskCallback_o *v18; // x23
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  TaskScheduler_o *taskScheduler; // x22
-  ClassBoardSelectViewManager_o *v22; // x23
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  SchedulerTaskWaitTime_o *v25; // x24
+  SchedulerTaskBase_TaskCallback_o *v12; // x24
+  SchedulerTaskWaitWhile_o *v13; // x23
+  ClassBoardSelectViewManager_o *boardSelectViewManager; // x0
+  __int64 v15; // x1
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
+  SchedulerTaskWaitTime_o *v18; // x23
   SchedulerTaskBase_o *TaskOfComingFromClassBoard; // x0
-  TaskScheduler_o *v27; // x21
-  SchedulerTaskBase_o *v28; // x23
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  SchedulerTaskBase_array *v31; // x22
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  __int64 v34; // x21
-  SchedulerTaskBase_TaskCallback_o *v35; // x22
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  TaskScheduler_o *v38; // x19
-  ClassBoardSelectViewManager_o *v39; // x20
-  int32_t v40; // w2
-  const MethodInfo *v41; // x3
-  __int64 v42; // x0
+  TaskScheduler_o *v20; // x20
+  SchedulerTaskBase_o *v21; // x22
+  int32_t v22; // w2
+  const MethodInfo *v23; // x3
+  SchedulerTaskBase_array *v24; // x21
+  int32_t v25; // w2
+  const MethodInfo *v26; // x3
+  const MethodInfo *v27; // x1
+  __int64 v28; // x0
 
-  if ( (byte_4C5A90A & 1) == 0 )
+  if ( (byte_4CB9EDC & 1) == 0 )
   {
-    sub_1C3E564(&AvalonSceneManager_TypeInfo);
-    sub_1C3E564(&System_Func_bool__TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase___TypeInfo);
-    sub_1C3E564(&SchedulerTaskNone_TypeInfo);
-    sub_1C3E564(&SchedulerTaskWaitTime_TypeInfo);
-    sub_1C3E564(&SchedulerTaskWaitWhile_TypeInfo);
-    sub_1C3E564(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass38_0__ToClassBoardSelect_b__2__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass38_0__ToClassBoardSelect_b__4__);
-    sub_1C3E564(&ClassBoardPageSwitcher___c__DisplayClass38_0_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass38_1__ToClassBoardSelect_b__0__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass38_1__ToClassBoardSelect_b__1__);
-    sub_1C3E564(&ClassBoardPageSwitcher___c__DisplayClass38_1_TypeInfo);
-    byte_4C5A90A = 1;
+    sub_1C6BA08(&System_Action_Action__TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher__ToClassBoardSelect_b__38_1__);
+    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
+    sub_1C6BA08(&SchedulerTaskWaitTime_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskWaitWhile_TypeInfo);
+    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__ToClassBoardSelect_b__38_0__);
+    sub_1C6BA08(&ClassBoardPageSwitcher___c_TypeInfo);
+    byte_4CB9EDC = 1;
   }
-  v3 = sub_1C3E7B0(ClassBoardPageSwitcher___c__DisplayClass38_0_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v3, 0);
-  if ( !v3 )
-    goto LABEL_27;
-  *(_QWORD *)(v3 + 24) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 24), (int32_t)this, v6, v7);
-  v8 = AvalonSceneManager_TypeInfo;
-  if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-    v8 = AvalonSceneManager_TypeInfo;
-  }
-  *(struct AvalonSceneManager_StaticFields *)(v3 + 16) = LODWORD(v8->static_fields->DEFAULT_FADE_TIME);
-  v9 = sub_1C3E7B0(ClassBoardPageSwitcher___c__DisplayClass38_1_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v9, 0);
-  if ( !v9 )
-    goto LABEL_27;
-  *(_QWORD *)(v9 + 24) = v3;
-  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 24), v3, v10, v11);
-  *(_BYTE *)(v9 + 16) = 1;
-  v12 = (System_Func_bool__o *)sub_1C3E7B0(System_Func_bool__TypeInfo);
-  System_Func_bool____ctor(
-    v12,
-    (Il2CppObject *)v9,
-    Method_ClassBoardPageSwitcher___c__DisplayClass38_1__ToClassBoardSelect_b__0__,
-    0);
-  v13 = sub_1C3E7B0(SchedulerTaskWaitWhile_TypeInfo);
-  SchedulerTaskWaitWhile___ctor((SchedulerTaskWaitWhile_o *)v13, v12, 0);
-  v14 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
-  SchedulerTaskBase_TaskCallback___ctor(
-    v14,
-    (Il2CppObject *)v9,
-    Method_ClassBoardPageSwitcher___c__DisplayClass38_1__ToClassBoardSelect_b__1__,
-    0);
-  if ( !v13 )
-    goto LABEL_27;
-  *(_QWORD *)(v13 + 24) = v14;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 24), (int32_t)v14, v15, v16);
-  v17 = *(Il2CppObject **)(v9 + 24);
-  v18 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
-  SchedulerTaskBase_TaskCallback___ctor(
-    v18,
-    v17,
-    Method_ClassBoardPageSwitcher___c__DisplayClass38_0__ToClassBoardSelect_b__2__,
-    0);
-  *(_QWORD *)(v13 + 32) = v18;
-  sub_1C3E508((CGThumbnailListItem_o *)(v13 + 32), (int32_t)v18, v19, v20);
   taskScheduler = this->fields.taskScheduler;
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E60C(SchedulerTaskBase___TypeInfo, 1);
-  if ( !boardSelectViewManager )
-    goto LABEL_27;
-  v22 = boardSelectViewManager;
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E6A0(
-                                                              v13,
-                                                              boardSelectViewManager->klass->_1.element_class);
-  if ( !boardSelectViewManager )
-    goto LABEL_29;
-  if ( !LODWORD(v22->fields.m_CancellationTokenSource) )
-    goto LABEL_28;
-  v22->fields.iconArray = (struct ClassBoardSelectIconComponent_array *)v13;
-  sub_1C3E508((CGThumbnailListItem_o *)&v22->fields.iconArray, v13, v23, v24);
-  if ( !taskScheduler )
-    goto LABEL_27;
-  TaskScheduler__AddTask(taskScheduler, 0, (SchedulerTaskBase_array *)v22, 0);
-  v25 = (SchedulerTaskWaitTime_o *)sub_1C3E7B0(SchedulerTaskWaitTime_TypeInfo);
-  SchedulerTaskWaitTime___ctor(v25, 0.2, 0);
-  boardSelectViewManager = this->fields.boardSelectViewManager;
-  if ( !boardSelectViewManager )
-    goto LABEL_27;
-  TaskOfComingFromClassBoard = ClassBoardSelectViewManager__GetTaskOfComingFromClassBoard(boardSelectViewManager, 0);
-  v27 = this->fields.taskScheduler;
-  v28 = TaskOfComingFromClassBoard;
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E60C(SchedulerTaskBase___TypeInfo, 2);
-  if ( !boardSelectViewManager )
-    goto LABEL_27;
-  v31 = (SchedulerTaskBase_array *)boardSelectViewManager;
-  if ( v25 )
+  v4 = sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+  v5 = ClassBoardPageSwitcher___c_TypeInfo;
+  v6 = (SchedulerTaskBase_array *)v4;
+  if ( !ClassBoardPageSwitcher___c_TypeInfo->_2.cctor_finished )
   {
-    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E6A0(
-                                                                v25,
+    j_il2cpp_runtime_class_init_0(ClassBoardPageSwitcher___c_TypeInfo);
+    v5 = ClassBoardPageSwitcher___c_TypeInfo;
+  }
+  _9__38_0 = (System_Action_object__o *)v5->static_fields->__9__38_0;
+  if ( !_9__38_0 )
+  {
+    if ( !v5->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(v5);
+      v5 = ClassBoardPageSwitcher___c_TypeInfo;
+    }
+    v8 = (Il2CppObject *)v5->static_fields->__9;
+    _9__38_0 = (System_Action_object__o *)sub_1C6BC54(System_Action_Action__TypeInfo);
+    System_Action_object____ctor(_9__38_0, v8, Method_ClassBoardPageSwitcher___c__ToClassBoardSelect_b__38_0__, 0);
+    static_fields = ClassBoardPageSwitcher___c_TypeInfo->static_fields;
+    static_fields->__9__38_0 = (struct System_Action_Action__o *)_9__38_0;
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__38_0, (int32_t)_9__38_0, v10, v11);
+  }
+  v12 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+  SchedulerTaskBase_TaskCallback___ctor(
+    v12,
+    (Il2CppObject *)this,
+    Method_ClassBoardPageSwitcher__ToClassBoardSelect_b__38_1__,
+    0);
+  v13 = (SchedulerTaskWaitWhile_o *)sub_1C6BC54(SchedulerTaskWaitWhile_TypeInfo);
+  SchedulerTaskWaitWhile___ctor_44562024(v13, (System_Action_Action__o *)_9__38_0, v12, 0);
+  if ( !v6 )
+    goto LABEL_24;
+  if ( v13 )
+  {
+    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BB44(v13, v6->obj.klass->_1.element_class);
+    if ( !boardSelectViewManager )
+      goto LABEL_26;
+  }
+  if ( !LODWORD(v6->max_length) )
+    goto LABEL_25;
+  v6->m_Items[0] = (SchedulerTaskBase_o *)v13;
+  sub_1C6B9AC((CGThumbnailListItem_o *)v6->m_Items, (int32_t)v13, v16, v17);
+  if ( !taskScheduler )
+    goto LABEL_24;
+  TaskScheduler__AddTask(taskScheduler, 0, v6, 0);
+  v18 = (SchedulerTaskWaitTime_o *)sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
+  SchedulerTaskWaitTime___ctor(v18, 0.2, 0);
+  boardSelectViewManager = this->fields.boardSelectViewManager;
+  if ( !boardSelectViewManager
+    || (TaskOfComingFromClassBoard = ClassBoardSelectViewManager__GetTaskOfComingFromClassBoard(
+                                       boardSelectViewManager,
+                                       0),
+        v20 = this->fields.taskScheduler,
+        v21 = TaskOfComingFromClassBoard,
+        (boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 2)) == 0) )
+  {
+LABEL_24:
+    sub_1C6BC60(boardSelectViewManager, v15);
+  }
+  v24 = (SchedulerTaskBase_array *)boardSelectViewManager;
+  if ( v18 )
+  {
+    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BB44(
+                                                                v18,
                                                                 boardSelectViewManager->klass->_1.element_class);
     if ( !boardSelectViewManager )
-      goto LABEL_29;
+      goto LABEL_26;
   }
-  if ( !LODWORD(v31->max_length) )
-    goto LABEL_28;
-  v31->m_Items[0] = (SchedulerTaskBase_o *)v25;
-  sub_1C3E508((CGThumbnailListItem_o *)v31->m_Items, (int32_t)v25, v29, v30);
-  if ( v28 )
+  if ( !LODWORD(v24->max_length) )
+    goto LABEL_25;
+  v24->m_Items[0] = (SchedulerTaskBase_o *)v18;
+  sub_1C6B9AC((CGThumbnailListItem_o *)v24->m_Items, (int32_t)v18, v22, v23);
+  if ( v21 )
   {
-    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E6A0(v28, v31->obj.klass->_1.element_class);
+    boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C6BB44(v21, v24->obj.klass->_1.element_class);
     if ( !boardSelectViewManager )
     {
-LABEL_29:
-      v42 = sub_1C3E7E4(boardSelectViewManager);
-      sub_1C3E68C(v42, 0);
+LABEL_26:
+      v28 = sub_1C6BC84(boardSelectViewManager);
+      sub_1C6BB30(v28, 0);
     }
   }
-  if ( LODWORD(v31->max_length) <= 1 )
-    goto LABEL_28;
-  v31->m_Items[1] = v28;
-  sub_1C3E508((CGThumbnailListItem_o *)&v31->m_Items[1], (int32_t)v28, v32, v33);
-  if ( !v27 )
-    goto LABEL_27;
-  TaskScheduler__AddTask(v27, 0, v31, 0);
-  v34 = sub_1C3E7B0(SchedulerTaskNone_TypeInfo);
-  SchedulerTaskNone___ctor((SchedulerTaskNone_o *)v34, 0);
-  v35 = (SchedulerTaskBase_TaskCallback_o *)sub_1C3E7B0(SchedulerTaskBase_TaskCallback_TypeInfo);
-  SchedulerTaskBase_TaskCallback___ctor(
-    v35,
-    (Il2CppObject *)v3,
-    Method_ClassBoardPageSwitcher___c__DisplayClass38_0__ToClassBoardSelect_b__4__,
-    0);
-  if ( !v34
-    || (*(_QWORD *)(v34 + 24) = v35,
-        sub_1C3E508((CGThumbnailListItem_o *)(v34 + 24), (int32_t)v35, v36, v37),
-        v38 = this->fields.taskScheduler,
-        (boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E60C(SchedulerTaskBase___TypeInfo, 1)) == 0) )
-  {
-LABEL_27:
-    sub_1C3E7C0(boardSelectViewManager, v5);
-  }
-  v39 = boardSelectViewManager;
-  boardSelectViewManager = (ClassBoardSelectViewManager_o *)sub_1C3E6A0(
-                                                              v34,
-                                                              boardSelectViewManager->klass->_1.element_class);
-  if ( !boardSelectViewManager )
-    goto LABEL_29;
-  if ( !LODWORD(v39->fields.m_CancellationTokenSource) )
-LABEL_28:
-    sub_1C3E7C8(boardSelectViewManager, v5);
-  v39->fields.iconArray = (struct ClassBoardSelectIconComponent_array *)v34;
-  sub_1C3E508((CGThumbnailListItem_o *)&v39->fields.iconArray, v34, v40, v41);
-  if ( !v38 )
-    goto LABEL_27;
-  TaskScheduler__AddTask(v38, 0, (SchedulerTaskBase_array *)v39, 0);
+  if ( LODWORD(v24->max_length) <= 1 )
+LABEL_25:
+    sub_1C6BC68(boardSelectViewManager);
+  v24->m_Items[1] = v21;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v24->m_Items[1], (int32_t)v21, v25, v26);
+  if ( !v20 )
+    goto LABEL_24;
+  TaskScheduler__AddTask(v20, 0, v24, 0);
+  ClassBoardPageSwitcher__AddPlayClassBoardSelectEffectTask(this, v27);
 }
 
 
@@ -1825,12 +1663,12 @@ void ClassBoardPageSwitcher__ToGrandServantList(ClassBoardPageSwitcher_o *this, 
   SceneJumpInfo_o *v15; // x19
 
   v2 = this;
-  if ( (byte_4C5A911 & 1) == 0 )
+  if ( (byte_4CB9EE4 & 1) == 0 )
   {
-    sub_1C3E564(&SceneJumpInfo_TypeInfo);
-    sub_1C3E564(&SceneList_TypeInfo);
-    this = (ClassBoardPageSwitcher_o *)sub_1C3E564(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4C5A911 = 1;
+    sub_1C6BA08(&SceneJumpInfo_TypeInfo);
+    sub_1C6BA08(&SceneList_TypeInfo);
+    this = (ClassBoardPageSwitcher_o *)sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4CB9EE4 = 1;
   }
   sceneRoot = v2->fields.sceneRoot;
   if ( !sceneRoot )
@@ -1850,19 +1688,19 @@ void ClassBoardPageSwitcher__ToGrandServantList(ClassBoardPageSwitcher_o *this, 
   if ( ((unsigned __int8)this & 1) == 0 )
   {
 LABEL_12:
-    v12 = sub_1C3E7B0(SceneJumpInfo_TypeInfo);
+    v12 = sub_1C6BC54(SceneJumpInfo_TypeInfo);
     SceneJumpInfo___ctor((SceneJumpInfo_o *)v12, 0);
     if ( v12 )
     {
       SceneJumpInfo__SetReturnNowScene((SceneJumpInfo_o *)v12, 0);
       v15 = v2->fields.sceneJumpInfo;
-      if ( v15 || (v15 = (SceneJumpInfo_o *)sub_1C3E7B0(SceneJumpInfo_TypeInfo), SceneJumpInfo___ctor(v15, 0), v15) )
+      if ( v15 || (v15 = (SceneJumpInfo_o *)sub_1C6BC54(SceneJumpInfo_TypeInfo), SceneJumpInfo___ctor(v15, 0), v15) )
       {
         v15->fields.id = baseId;
         v15->fields.num = 0;
         *(_QWORD *)(v12 + 56) = v15;
-        sub_1C3E508((CGThumbnailListItem_o *)(v12 + 56), (int32_t)v15, v13, v14);
-        this = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 56), (int32_t)v15, v13, v14);
+        this = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
         if ( this )
         {
           v11 = (Il2CppObject *)v12;
@@ -1871,13 +1709,13 @@ LABEL_12:
       }
     }
 LABEL_18:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   v9 = v2->fields.sceneJumpInfo;
   if ( !v9 )
     goto LABEL_18;
   backSceneJumpInfo = (Il2CppObject *)v9->fields.backSceneJumpInfo;
-  this = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  this = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !this )
     goto LABEL_18;
   v11 = backSceneJumpInfo;
@@ -1895,11 +1733,11 @@ void ClassBoardPageSwitcher__Update(ClassBoardPageSwitcher_o *this, const Method
   bool IsEnableOutSideCollider; // w1
   const MethodInfo *v8; // x2
 
-  if ( (byte_4C5A905 & 1) == 0 )
+  if ( (byte_4CB9ED7 & 1) == 0 )
   {
-    sub_1C3E564(&CTouch_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A905 = 1;
+    sub_1C6BA08(&CTouch_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9ED7 = 1;
   }
   taskScheduler = this->fields.taskScheduler;
   if ( taskScheduler )
@@ -1914,7 +1752,7 @@ void ClassBoardPageSwitcher__Update(ClassBoardPageSwitcher_o *this, const Method
     CTouch__process(0);
     v6 = this->fields.mapCamera;
     if ( !v6 )
-      sub_1C3E7C0(0, v5);
+      sub_1C6BC60(0, v5);
     MapCamera__Process(v6, 1, 0);
   }
   if ( this->fields.isOpenMenuBar != MainMenuBar__get_IsEnableOutSideCollider(0) )
@@ -1926,66 +1764,93 @@ void ClassBoardPageSwitcher__Update(ClassBoardPageSwitcher_o *this, const Method
 }
 
 
-void ClassBoardPageSwitcher___StartUp_b__28_0(
-        ClassBoardPageSwitcher_o *this,
-        System_Action_o *f,
-        const MethodInfo *method)
+void ClassBoardPageSwitcher___StartUp_b__28_0(ClassBoardPageSwitcher_o *this, const MethodInfo *method)
 {
-  struct ClassBoardRootComponent_o *sceneRoot; // x8
+  const MethodInfo *v2; // x6
+  const MethodInfo *v4; // x1
+  const MethodInfo *v5; // x1
+  TaskScheduler_o *taskScheduler; // x19
+  SchedulerTaskBase_array *v7; // x21
+  System_Action_o *v8; // x22
+  SchedulerTaskNone_o *v9; // x20
+  __int64 v10; // x0
+  __int64 v11; // x1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  __int64 v14; // x0
 
-  sceneRoot = this->fields.sceneRoot;
-  if ( !sceneRoot || (this = (ClassBoardPageSwitcher_o *)this->fields.boardSelectViewManager) == 0 )
-    sub_1C3E7C0(this, f);
-  ClassBoardSelectViewManager__StartUp(
-    (ClassBoardSelectViewManager_o *)this,
-    sceneRoot->fields.classBoardBackground,
-    sceneRoot->fields.resourceCatalog,
-    f,
-    0);
+  if ( (byte_4CB9EE5 & 1) == 0 )
+  {
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher__StartUp_b__28_1__);
+    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
+    sub_1C6BA08(&SchedulerTaskNone_TypeInfo);
+    byte_4CB9EE5 = 1;
+  }
+  ClassBoardPageSwitcher__ChangeView(this, 1, 0, 0, 0, 0, v2);
+  ClassBoardPageSwitcher__AddPlayBoardSelectFirstTransitionTask(this, v4);
+  ClassBoardPageSwitcher__AddPlayClassBoardSelectEffectTask(this, v5);
+  taskScheduler = this->fields.taskScheduler;
+  v7 = (SchedulerTaskBase_array *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+  v8 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  System_Action___ctor(v8, (Il2CppObject *)this, Method_ClassBoardPageSwitcher__StartUp_b__28_1__, 0);
+  v9 = (SchedulerTaskNone_o *)sub_1C6BC54(SchedulerTaskNone_TypeInfo);
+  SchedulerTaskNone___ctor(v9, v8, 0, 0);
+  if ( !v7 )
+    goto LABEL_9;
+  if ( v9 )
+  {
+    v10 = sub_1C6BB44(v9, v7->obj.klass->_1.element_class);
+    if ( !v10 )
+    {
+      v14 = sub_1C6BC84(0);
+      sub_1C6BB30(v14, 0);
+    }
+  }
+  if ( !LODWORD(v7->max_length) )
+    sub_1C6BC68(v10);
+  v7->m_Items[0] = (SchedulerTaskBase_o *)v9;
+  sub_1C6B9AC((CGThumbnailListItem_o *)v7->m_Items, (int32_t)v9, v12, v13);
+  if ( !taskScheduler )
+LABEL_9:
+    sub_1C6BC60(v10, v11);
+  TaskScheduler__AddTask(taskScheduler, 0, v7, 0);
 }
 
 
-void ClassBoardPageSwitcher___StartUp_b__28_1(
-        ClassBoardPageSwitcher_o *this,
-        System_Action_o *f,
-        const MethodInfo *method)
-{
-  const MethodInfo *v3; // x6
-  __int64 v5; // x0
-  __int64 v6; // x1
-
-  ClassBoardPageSwitcher__ChangeView(this, 1, 0, 0, 0, 0, v3);
-  if ( !f )
-    sub_1C3E7C0(v5, v6);
-  ((void (__fastcall *)(intptr_t, intptr_t))f->fields.invoke_impl)(f->fields.method_code, f->fields.method);
-}
-
-
-void ClassBoardPageSwitcher___StartUp_b__28_2(ClassBoardPageSwitcher_o *this, const MethodInfo *method)
+void ClassBoardPageSwitcher___StartUp_b__28_1(ClassBoardPageSwitcher_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
   Il2CppObject *Instance; // x0
   __int64 v5; // x1
 
-  if ( (byte_4C5A912 & 1) == 0 )
+  if ( (byte_4CB9EE6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_4C5A912 = 1;
+    sub_1C6BA08(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4CB9EE6 = 1;
   }
   ClassBoardPageSwitcher__SetAllTouchBlock(this, 0, v2);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
-    sub_1C3E7C0(0, v5);
+    sub_1C6BC60(0, v5);
   MissionNotifyManager__EndPause((MissionNotifyManager_o *)Instance, 0);
+}
+
+
+void ClassBoardPageSwitcher___ToClassBoardSelect_b__38_1(ClassBoardPageSwitcher_o *this, const MethodInfo *method)
+{
+  const MethodInfo *v2; // x6
+
+  ClassBoardPageSwitcher__ChangeView(this, 1, 0, 0, 0, 0, v2);
 }
 
 
 int32_t ClassBoardPageSwitcher__get_CameraWorkBlockNum(const MethodInfo *method)
 {
-  if ( (byte_4C5A90E & 1) == 0 )
+  if ( (byte_4CB9EE1 & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardPageSwitcher_TypeInfo);
-    byte_4C5A90E = 1;
+    sub_1C6BA08(&ClassBoardPageSwitcher_TypeInfo);
+    byte_4CB9EE1 = 1;
   }
   return ClassBoardPageSwitcher_TypeInfo->static_fields->cameraWorkBlockNum;
 }
@@ -1999,7 +1864,7 @@ ClassBoardBackground_o *ClassBoardPageSwitcher__get_ClassBoardBackground(
 
   sceneRoot = this->fields.sceneRoot;
   if ( !sceneRoot )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return sceneRoot->fields.classBoardBackground;
 }
 
@@ -2012,7 +1877,7 @@ UnityEngine_GameObject_o *ClassBoardPageSwitcher__get_ForwardUiRoot(
 
   sceneRoot = this->fields.sceneRoot;
   if ( !sceneRoot )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return sceneRoot->fields.forwardUiRoot;
 }
 
@@ -2025,7 +1890,7 @@ UnityEngine_GameObject_o *ClassBoardPageSwitcher__get_classBoardRoot(
 
   sceneRoot = this->fields.sceneRoot;
   if ( !sceneRoot )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return sceneRoot->fields.classBoardRoot;
 }
 
@@ -2038,7 +1903,7 @@ ClassBoardController_o *ClassBoardPageSwitcher__get_controller(
 
   sceneRoot = this->fields.sceneRoot;
   if ( !sceneRoot )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return sceneRoot->fields.controller;
 }
 
@@ -2051,7 +1916,7 @@ IClassBoardResourceCatalog_o *ClassBoardPageSwitcher__get_resourceCatalog(
 
   sceneRoot = this->fields.sceneRoot;
   if ( !sceneRoot )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return sceneRoot->fields.resourceCatalog;
 }
 
@@ -2064,7 +1929,7 @@ UnityEngine_GameObject_o *ClassBoardPageSwitcher__get_touchBlock(
 
   sceneRoot = this->fields.sceneRoot;
   if ( !sceneRoot )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return sceneRoot->fields.touchBlock;
 }
 
@@ -2075,7 +1940,7 @@ UnityEngine_Camera_o *ClassBoardPageSwitcher__get_uiCamera(ClassBoardPageSwitche
 
   sceneRoot = this->fields.sceneRoot;
   if ( !sceneRoot )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return sceneRoot->fields.uiCamera;
 }
 
@@ -2086,15 +1951,15 @@ void ClassBoardPageSwitcher___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C5A913 & 1) == 0 )
+  if ( (byte_4CB9EE7 & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardPageSwitcher___c_TypeInfo);
-    byte_4C5A913 = 1;
+    sub_1C6BA08(&ClassBoardPageSwitcher___c_TypeInfo);
+    byte_4CB9EE7 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(ClassBoardPageSwitcher___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(ClassBoardPageSwitcher___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ClassBoardPageSwitcher___c_TypeInfo->static_fields->__9 = (struct ClassBoardPageSwitcher___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)ClassBoardPageSwitcher___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)ClassBoardPageSwitcher___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -2104,7 +1969,7 @@ void ClassBoardPageSwitcher___c___ctor(ClassBoardPageSwitcher___c_o *this, const
 }
 
 
-int32_t ClassBoardPageSwitcher___c___PlayClassBaseReleaseEffectAction_b__31_1(
+int32_t ClassBoardPageSwitcher___c___AddPlayClassBaseReleaseEffectTask_b__31_1(
         ClassBoardPageSwitcher___c_o *this,
         ClassBoardSelectIconComponent_o *obj,
         const MethodInfo *method)
@@ -2112,8 +1977,33 @@ int32_t ClassBoardPageSwitcher___c___PlayClassBaseReleaseEffectAction_b__31_1(
   struct ClassBoardBaseEntity_o *Entity_k__BackingField; // x8
 
   if ( !obj || (Entity_k__BackingField = obj->fields._Entity_k__BackingField) == 0 )
-    sub_1C3E7C0(this, obj);
+    sub_1C6BC60(this, obj);
   return Entity_k__BackingField->fields.id;
+}
+
+
+void ClassBoardPageSwitcher___c___ToClassBoardSelect_b__38_0(
+        ClassBoardPageSwitcher___c_o *this,
+        System_Action_o *f,
+        const MethodInfo *method)
+{
+  Il2CppObject *Instance; // x0
+  __int64 v5; // x1
+  CommonUI_o *v6; // x20
+
+  if ( (byte_4CB9EE8 & 1) == 0 )
+  {
+    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CB9EE8 = 1;
+  }
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (CommonUI_o *)Instance;
+  if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
+  if ( !v6 )
+    sub_1C6BC60(Instance, v5);
+  CommonUI__maskFadeout(v6, 2, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, f, 0);
 }
 
 
@@ -2141,10 +2031,10 @@ void ClassBoardPageSwitcher___c__DisplayClass27_0___Init_b__0(
   const MethodInfo *v11; // x1
 
   v2 = this;
-  if ( (byte_4C5A914 & 1) == 0 )
+  if ( (byte_4CB9EE9 & 1) == 0 )
   {
-    this = (ClassBoardPageSwitcher___c__DisplayClass27_0_o *)sub_1C3E564(&IClassBoardResourceCatalog_TypeInfo);
-    byte_4C5A914 = 1;
+    this = (ClassBoardPageSwitcher___c__DisplayClass27_0_o *)sub_1C6BA08(&IClassBoardResourceCatalog_TypeInfo);
+    byte_4CB9EE9 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -2172,7 +2062,7 @@ void ClassBoardPageSwitcher___c__DisplayClass27_0___Init_b__0(
   else
   {
 LABEL_10:
-    v9 = sub_1C8ED7C(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
+    v9 = sub_1C41D90(resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
   }
   v10 = (ClassBoardResourceContents_o *)(*(__int64 (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))v9)(
                                           resourceCatalog,
@@ -2184,7 +2074,7 @@ LABEL_10:
         (this = (ClassBoardPageSwitcher___c__DisplayClass27_0_o *)v2->fields.__4__this) == 0) )
   {
 LABEL_15:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   ClassBoardPageSwitcher__InitForwardUi((ClassBoardPageSwitcher_o *)this, method);
   ActionExtensions__Call(v2->fields.finishCallback, 0);
@@ -2212,7 +2102,7 @@ void ClassBoardPageSwitcher___c__DisplayClass29_0___StartUpByTransitionInfo_b__0
     || (sceneRoot = _4__this->fields.sceneRoot) == 0
     || (this = (ClassBoardPageSwitcher___c__DisplayClass29_0_o *)_4__this->fields.boardSelectViewManager) == 0 )
   {
-    sub_1C3E7C0(this, f);
+    sub_1C6BC60(this, f);
   }
   ClassBoardSelectViewManager__StartUp(
     (ClassBoardSelectViewManager_o *)this,
@@ -2238,10 +2128,10 @@ void ClassBoardPageSwitcher___c__DisplayClass29_0___StartUpByTransitionInfo_b__1
   struct ClassBoardPageSwitcher_o *v11; // x1
 
   v4 = this;
-  if ( (byte_4C5A915 & 1) == 0 )
+  if ( (byte_4CB9EEA & 1) == 0 )
   {
-    this = (ClassBoardPageSwitcher___c__DisplayClass29_0_o *)sub_1C3E564(&string_TypeInfo);
-    byte_4C5A915 = 1;
+    this = (ClassBoardPageSwitcher___c__DisplayClass29_0_o *)sub_1C6BA08(&string_TypeInfo);
+    byte_4CB9EEA = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
@@ -2265,11 +2155,11 @@ void ClassBoardPageSwitcher___c__DisplayClass29_0___StartUpByTransitionInfo_b__1
   v9 = v4->fields.__4__this;
   if ( !v9 || (this = (ClassBoardPageSwitcher___c__DisplayClass29_0_o *)v9->fields.sceneJumpInfo) == 0 )
 LABEL_12:
-    sub_1C3E7C0(this, f);
+    sub_1C6BC60(this, f);
   static_fields = (struct ClassBoardPageSwitcher_o **)string_TypeInfo->static_fields;
   v11 = *static_fields;
   this->fields.__4__this = *static_fields;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)v11, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v11, v7, v8);
 LABEL_10:
   if ( !f )
     goto LABEL_12;
@@ -2284,35 +2174,19 @@ void ClassBoardPageSwitcher___c__DisplayClass29_0___StartUpByTransitionInfo_b__2
   const MethodInfo *v2; // x2
   ClassBoardPageSwitcher_o *_4__this; // x0
 
-  if ( (byte_4C5A916 & 1) == 0 )
+  if ( (byte_4CB9EEB & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_4C5A916 = 1;
+    sub_1C6BA08(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4CB9EEB = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this
     || (ClassBoardPageSwitcher__SetAllTouchBlock(_4__this, 0, v2),
-        (_4__this = (ClassBoardPageSwitcher_o *)SingletonTemplate_object___get_Instance((const MethodInfo_39FFA98 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__)) == 0) )
+        (_4__this = (ClassBoardPageSwitcher_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__)) == 0) )
   {
-    sub_1C3E7C0(_4__this, method);
+    sub_1C6BC60(_4__this, method);
   }
   MissionNotifyManager__EndPause((MissionNotifyManager_o *)_4__this, 0);
-}
-
-
-void ClassBoardPageSwitcher___c__DisplayClass30_0___ctor(
-        ClassBoardPageSwitcher___c__DisplayClass30_0_o *this,
-        const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0);
-}
-
-
-void ClassBoardPageSwitcher___c__DisplayClass30_0___PlayBoardSelectFirstTransitionAction_b__0(
-        ClassBoardPageSwitcher___c__DisplayClass30_0_o *this,
-        const MethodInfo *method)
-{
-  ActionExtensions__Call(this->fields.finishCallback, 0);
 }
 
 
@@ -2324,11 +2198,66 @@ void ClassBoardPageSwitcher___c__DisplayClass31_0___ctor(
 }
 
 
-void ClassBoardPageSwitcher___c__DisplayClass31_0___PlayClassBaseReleaseEffectAction_b__0(
+void ClassBoardPageSwitcher___c__DisplayClass31_0___AddPlayClassBaseReleaseEffectTask_b__0(
         ClassBoardPageSwitcher___c__DisplayClass31_0_o *this,
         const MethodInfo *method)
 {
-  ActionExtensions__Call(this->fields.finishCallback, 0);
+  ClassBoardPageSwitcher___c_c *v3; // x0
+  struct System_Collections_Generic_List_ClassBoardSelectIconComponent__o *list; // x19
+  System_Func_object__int__o *_9__31_1; // x20
+  Il2CppObject *v6; // x21
+  struct ClassBoardPageSwitcher___c_StaticFields *static_fields; // x0
+  int32_t v8; // w2
+  const MethodInfo *v9; // x3
+  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
+  System_Int32_array *v11; // x19
+
+  if ( (byte_4CB9EEC & 1) == 0 )
+  {
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_ClassBoardSelectIconComponent__int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C6BA08(&System_Func_ClassBoardSelectIconComponent__int__TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardPageSwitcher___c__AddPlayClassBaseReleaseEffectTask_b__31_1__);
+    sub_1C6BA08(&ClassBoardPageSwitcher___c_TypeInfo);
+    byte_4CB9EEC = 1;
+  }
+  v3 = ClassBoardPageSwitcher___c_TypeInfo;
+  list = this->fields.list;
+  if ( !ClassBoardPageSwitcher___c_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(ClassBoardPageSwitcher___c_TypeInfo);
+    v3 = ClassBoardPageSwitcher___c_TypeInfo;
+  }
+  _9__31_1 = (System_Func_object__int__o *)v3->static_fields->__9__31_1;
+  if ( !_9__31_1 )
+  {
+    if ( !v3->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(v3);
+      v3 = ClassBoardPageSwitcher___c_TypeInfo;
+    }
+    v6 = (Il2CppObject *)v3->static_fields->__9;
+    _9__31_1 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_ClassBoardSelectIconComponent__int__TypeInfo);
+    System_Func_object__int____ctor(
+      _9__31_1,
+      v6,
+      Method_ClassBoardPageSwitcher___c__AddPlayClassBaseReleaseEffectTask_b__31_1__,
+      0);
+    static_fields = ClassBoardPageSwitcher___c_TypeInfo->static_fields;
+    static_fields->__9__31_1 = (struct System_Func_ClassBoardSelectIconComponent__int__o *)_9__31_1;
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__31_1, (int32_t)_9__31_1, v8, v9);
+  }
+  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+                                                               (System_Collections_Generic_IEnumerable_TSource__o *)list,
+                                                               (System_Func_TSource__TResult__o *)_9__31_1,
+                                                               (const MethodInfo_3171234 *)Method_System_Linq_Enumerable_Select_ClassBoardSelectIconComponent__int___);
+  v11 = System_Linq_Enumerable__ToArray_int_(
+          v10,
+          (const MethodInfo_317B0B0 *)Method_System_Linq_Enumerable_ToArray_int___);
+  if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
+  ClassBoardUtility__SavePlayedClassBaseReleaseEffect(v11, 0);
 }
 
 
@@ -2349,7 +2278,7 @@ void ClassBoardPageSwitcher___c__DisplayClass36_0___ToClassBoard_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   ClassBoardPageSwitcher__ChangeView(_4__this, 2, this->fields.baseId, this->fields.iconId, 0, 0, v2);
 }
 
@@ -2361,7 +2290,7 @@ void ClassBoardPageSwitcher___c__DisplayClass36_0___ToClassBoard_b__1(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   ClassBoardPageSwitcher__StartForwardIconAnim(this->fields.__4__this, this->fields.baseId, v2);
 }
 
@@ -2373,28 +2302,28 @@ void ClassBoardPageSwitcher___c__DisplayClass36_0___ToClassBoard_b__2(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4C5A917 & 1) == 0 )
+  if ( (byte_4CB9EED & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C5A917 = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CB9EED = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   CommonUI__maskFadein((CommonUI_o *)Instance, this->fields.fadeTime, 0, 0);
 }
 
 
-void ClassBoardPageSwitcher___c__DisplayClass38_0___ctor(
-        ClassBoardPageSwitcher___c__DisplayClass38_0_o *this,
+void ClassBoardPageSwitcher___c__DisplayClass46_0___ctor(
+        ClassBoardPageSwitcher___c__DisplayClass46_0_o *this,
         const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void ClassBoardPageSwitcher___c__DisplayClass38_0___ToClassBoardSelect_b__2(
-        ClassBoardPageSwitcher___c__DisplayClass38_0_o *this,
+void ClassBoardPageSwitcher___c__DisplayClass46_0___DirectlyToClassBoard_b__0(
+        ClassBoardPageSwitcher___c__DisplayClass46_0_o *this,
         const MethodInfo *method)
 {
   const MethodInfo *v2; // x6
@@ -2402,151 +2331,7 @@ void ClassBoardPageSwitcher___c__DisplayClass38_0___ToClassBoardSelect_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C3E7C0(0, method);
-  ClassBoardPageSwitcher__ChangeView(_4__this, 1, 0, 0, 0, 0, v2);
-}
-
-
-void ClassBoardPageSwitcher___c__DisplayClass38_0___ToClassBoardSelect_b__4(
-        ClassBoardPageSwitcher___c__DisplayClass38_0_o *this,
-        const MethodInfo *method)
-{
-  const MethodInfo *v2; // x2
-  ClassBoardPageSwitcher___c__DisplayClass38_0_o *v3; // x19
-  System_Action_o *_9__5; // x22
-  ClassBoardPageSwitcher_o *_4__this; // x20
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-
-  v3 = this;
-  if ( (byte_4C5A918 & 1) == 0 )
-  {
-    sub_1C3E564(&System_Action_TypeInfo);
-    this = (ClassBoardPageSwitcher___c__DisplayClass38_0_o *)sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass38_0__ToClassBoardSelect_b__5__);
-    byte_4C5A918 = 1;
-  }
-  _9__5 = v3->fields.__9__5;
-  _4__this = v3->fields.__4__this;
-  if ( !_9__5 )
-  {
-    _9__5 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
-    System_Action___ctor(
-      _9__5,
-      (Il2CppObject *)v3,
-      Method_ClassBoardPageSwitcher___c__DisplayClass38_0__ToClassBoardSelect_b__5__,
-      0);
-    v3->fields.__9__5 = _9__5;
-    sub_1C3E508((CGThumbnailListItem_o *)&v3->fields.__9__5, (int32_t)_9__5, v6, v7);
-  }
-  if ( !_4__this )
-    sub_1C3E7C0(this, method);
-  ClassBoardPageSwitcher__PlayClassBaseReleaseEffectAction(_4__this, _9__5, v2);
-}
-
-
-void ClassBoardPageSwitcher___c__DisplayClass38_0___ToClassBoardSelect_b__5(
-        ClassBoardPageSwitcher___c__DisplayClass38_0_o *this,
-        const MethodInfo *method)
-{
-  struct ClassBoardPageSwitcher_o *_4__this; // x8
-
-  _4__this = this->fields.__4__this;
-  if ( !_4__this
-    || (this = (ClassBoardPageSwitcher___c__DisplayClass38_0_o *)_4__this->fields.boardSelectViewManager) == 0 )
-  {
-    sub_1C3E7C0(this, method);
-  }
-  ClassBoardSelectViewManager__OpenHelpIfNotYet((ClassBoardSelectViewManager_o *)this, 0, 0);
-}
-
-
-void ClassBoardPageSwitcher___c__DisplayClass38_1___ctor(
-        ClassBoardPageSwitcher___c__DisplayClass38_1_o *this,
-        const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0);
-}
-
-
-bool ClassBoardPageSwitcher___c__DisplayClass38_1___ToClassBoardSelect_b__0(
-        ClassBoardPageSwitcher___c__DisplayClass38_1_o *this,
-        const MethodInfo *method)
-{
-  return this->fields.fading;
-}
-
-
-void ClassBoardPageSwitcher___c__DisplayClass38_1___ToClassBoardSelect_b__1(
-        ClassBoardPageSwitcher___c__DisplayClass38_1_o *this,
-        const MethodInfo *method)
-{
-  Il2CppObject *Instance; // x0
-  __int64 v4; // x1
-  struct ClassBoardPageSwitcher___c__DisplayClass38_0_o *CS___8__locals1; // x8
-  float fadeTime; // s8
-  System_Action_o *_9__3; // x21
-  CommonUI_o *v8; // x20
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-
-  if ( (byte_4C5A919 & 1) == 0 )
-  {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&Method_ClassBoardPageSwitcher___c__DisplayClass38_1__ToClassBoardSelect_b__3__);
-    byte_4C5A919 = 1;
-  }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  CS___8__locals1 = this->fields.CS___8__locals1;
-  if ( !CS___8__locals1 )
-    goto LABEL_8;
-  fadeTime = CS___8__locals1->fields.fadeTime;
-  _9__3 = this->fields.__9__3;
-  v8 = (CommonUI_o *)Instance;
-  if ( !_9__3 )
-  {
-    _9__3 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
-    System_Action___ctor(
-      _9__3,
-      (Il2CppObject *)this,
-      Method_ClassBoardPageSwitcher___c__DisplayClass38_1__ToClassBoardSelect_b__3__,
-      0);
-    this->fields.__9__3 = _9__3;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.__9__3, (int32_t)_9__3, v9, v10);
-  }
-  if ( !v8 )
-LABEL_8:
-    sub_1C3E7C0(Instance, v4);
-  CommonUI__maskFadeout(v8, 2, fadeTime, _9__3, 0);
-}
-
-
-void ClassBoardPageSwitcher___c__DisplayClass38_1___ToClassBoardSelect_b__3(
-        ClassBoardPageSwitcher___c__DisplayClass38_1_o *this,
-        const MethodInfo *method)
-{
-  this->fields.fading = 0;
-}
-
-
-void ClassBoardPageSwitcher___c__DisplayClass45_0___ctor(
-        ClassBoardPageSwitcher___c__DisplayClass45_0_o *this,
-        const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0);
-}
-
-
-void ClassBoardPageSwitcher___c__DisplayClass45_0___DirectlyToClassBoard_b__0(
-        ClassBoardPageSwitcher___c__DisplayClass45_0_o *this,
-        const MethodInfo *method)
-{
-  const MethodInfo *v2; // x6
-  ClassBoardPageSwitcher_o *_4__this; // x0
-
-  _4__this = this->fields.__4__this;
-  if ( !_4__this )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   ClassBoardPageSwitcher__ChangeView(
     _4__this,
     2,
@@ -2558,20 +2343,20 @@ void ClassBoardPageSwitcher___c__DisplayClass45_0___DirectlyToClassBoard_b__0(
 }
 
 
-void ClassBoardPageSwitcher___c__DisplayClass45_0___DirectlyToClassBoard_b__1(
-        ClassBoardPageSwitcher___c__DisplayClass45_0_o *this,
+void ClassBoardPageSwitcher___c__DisplayClass46_0___DirectlyToClassBoard_b__1(
+        ClassBoardPageSwitcher___c__DisplayClass46_0_o *this,
         const MethodInfo *method)
 {
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4C5A91A & 1) == 0 )
+  if ( (byte_4CB9EEE & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C5A91A = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CB9EEE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   CommonUI__maskFadein((CommonUI_o *)Instance, this->fields.fadeTime, 0, 0);
 }

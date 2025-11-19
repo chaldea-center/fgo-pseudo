@@ -6,14 +6,14 @@ void PreLoadNpcBattleLogicTask___ctor(
 {
   const MethodInfo *v4; // x4
 
-  if ( (byte_4C5A050 & 1) == 0 )
+  if ( (byte_4CB9613 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_9345/*"NPC_PRE_LOAD"*/);
-    byte_4C5A050 = 1;
+    sub_1C6BA08(&StringLiteral_9342/*"NPC_PRE_LOAD"*/);
+    byte_4CB9613 = 1;
   }
   PlayFieldMotionNpcBattleLogicTask___ctor(
     (PlayFieldMotionNpcBattleLogicTask_o *)this,
-    (System_String_o *)StringLiteral_9345/*"NPC_PRE_LOAD"*/,
+    (System_String_o *)StringLiteral_9342/*"NPC_PRE_LOAD"*/,
     targetId,
     isForcedSpeedOne,
     v4);

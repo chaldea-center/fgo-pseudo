@@ -106,50 +106,50 @@ System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSqua
   Il2CppObject *v104; // [xsp+C8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v105; // [xsp+D0h] [xbp-90h] BYREF
 
-  if ( (byte_4C54751 & 1) == 0 )
+  if ( (byte_4CB3CA3 & 1) == 0 )
   {
-    sub_1C3E564(&System_Decimal_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__TryGetValue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__get_Count__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Any_int____78225040);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Sum_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare____);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__get_Current__);
-    sub_1C3E564(&WarBoardEvalValueSquare_EvalValueSquare_TypeInfo);
-    sub_1C3E564(&System_Func_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare___float__TypeInfo);
-    sub_1C3E564(&System_Func_int__bool__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_KeyValuePair_int__WarBoardEvalValueSquare_CalcEval__get_Value__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_WarBoardRatingBase__GetEnumerator__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    sub_1C3E564(&Method_WarBoardEvalValueSquare___c__Calcurate_b__3_0__);
-    sub_1C3E564(&Method_WarBoardEvalValueSquare___c__DisplayClass3_0__Calcurate_b__1__);
-    sub_1C3E564(&WarBoardEvalValueSquare___c__DisplayClass3_0_TypeInfo);
-    sub_1C3E564(&WarBoardEvalValueSquare___c_TypeInfo);
-    byte_4C54751 = 1;
+    sub_1C6BA08(&System_Decimal_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__TryGetValue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__get_Count__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_int____78608240);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Sum_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare____);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__get_Current__);
+    sub_1C6BA08(&WarBoardEvalValueSquare_EvalValueSquare_TypeInfo);
+    sub_1C6BA08(&System_Func_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare___float__TypeInfo);
+    sub_1C6BA08(&System_Func_int__bool__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_int__WarBoardEvalValueSquare_CalcEval__get_Value__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_WarBoardRatingBase__GetEnumerator__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    sub_1C6BA08(&Method_WarBoardEvalValueSquare___c__Calcurate_b__3_0__);
+    sub_1C6BA08(&Method_WarBoardEvalValueSquare___c__DisplayClass3_0__Calcurate_b__1__);
+    sub_1C6BA08(&WarBoardEvalValueSquare___c__DisplayClass3_0_TypeInfo);
+    sub_1C6BA08(&WarBoardEvalValueSquare___c_TypeInfo);
+    byte_4CB3CA3 = 1;
   }
   memset(&v105, 0, sizeof(v105));
   value = 0;
   v104 = 0;
   memset(&v102, 0, sizeof(v102));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_78;
   monitor = Instance[27].monitor;
   if ( !monitor )
     goto LABEL_78;
   v14 = monitor[7];
-  v15 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__TypeInfo);
+  v15 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v15,
-    (const MethodInfo_340BA68 *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___ctor__);
+    (const MethodInfo_3451B1C *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare___ctor__);
   if ( !v14 )
     goto LABEL_78;
   if ( *(int *)(v14 + 24) < 1 )
@@ -159,35 +159,35 @@ System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSqua
   v97 = ratingBaseList;
   do
   {
-    v17 = sub_1C3E7B0(WarBoardEvalValueSquare___c__DisplayClass3_0_TypeInfo);
+    v17 = sub_1C6BC54(WarBoardEvalValueSquare___c__DisplayClass3_0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v17, 0);
     if ( v16 >= *(unsigned int *)(v14 + 24) )
 LABEL_79:
-      sub_1C3E7C8(Instance, v12);
+      sub_1C6BC68(Instance);
     if ( !v17 )
       goto LABEL_78;
     v20 = *(_QWORD *)(v14 + 8 * v16 + 32);
     v93 = v16;
     *(_QWORD *)(v17 + 16) = v20;
-    sub_1C3E508((CGThumbnailListItem_o *)(v17 + 16), v20, v18, v19);
-    v21 = (System_Func_int__bool__o *)sub_1C3E7B0(System_Func_int__bool__TypeInfo);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 16), v20, v18, v19);
+    v21 = (System_Func_int__bool__o *)sub_1C6BC54(System_Func_int__bool__TypeInfo);
     System_Func_int__bool____ctor(
       v21,
       (Il2CppObject *)v17,
       Method_WarBoardEvalValueSquare___c__DisplayClass3_0__Calcurate_b__1__,
       0);
-    v22 = System_Linq_Enumerable__Any_int__51409292(
+    v22 = System_Linq_Enumerable__Any_int__51677828(
             (System_Collections_Generic_IEnumerable_TSource__o *)evalValueTargetSquare,
             (System_Func_TSource__bool__o *)v21,
-            (const MethodInfo_310718C *)Method_System_Linq_Enumerable_Any_int____78225040);
+            (const MethodInfo_3148A84 *)Method_System_Linq_Enumerable_Any_int____78608240);
     v94 = v17 + 16;
     v23 = *(_QWORD *)(v17 + 16);
     v24 = v22;
-    v25 = sub_1C3E7B0(WarBoardEvalValueSquare_EvalValueSquare_TypeInfo);
+    v25 = sub_1C6BC54(WarBoardEvalValueSquare_EvalValueSquare_TypeInfo);
     System_Object___ctor((Il2CppObject *)v25, 0);
     *(_QWORD *)(v25 + 16) = v23;
     v26 = (_QWORD *)(v25 + 16);
-    sub_1C3E508((CGThumbnailListItem_o *)(v25 + 16), v23, v27, v28);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v25 + 16), v23, v27, v28);
     v29 = v14;
     *(_QWORD *)(v25 + 24) = 0;
     *(_QWORD *)(v25 + 36) = 0;
@@ -207,19 +207,19 @@ LABEL_79:
       System_Collections_Generic_List_object___GetEnumerator(
         (System_Collections_Generic_List_Enumerator_T__o *)&v101,
         (System_Collections_Generic_List_object__o *)ratingBaseList,
-        (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_WarBoardRatingBase__GetEnumerator__);
+        (const MethodInfo_380146C *)Method_System_Collections_Generic_List_WarBoardRatingBase__GetEnumerator__);
       *(_OWORD *)&v105.fields._list = *(_OWORD *)&v101.fields._dictionary;
       v105.fields._current = v101.fields._current.fields.key;
       while ( 1 )
       {
         v33 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v105,
-                (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__MoveNext__);
+                (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__MoveNext__);
         if ( !v33 )
           break;
         current = v105.fields._current;
         if ( !v105.fields._current )
-          sub_1C3E7C0(v33, v34);
+          sub_1C6BC60(v33, v34);
         Id = WarBoardRatingBase__GetId((WarBoardRatingBase_o *)v105.fields._current, 0);
         Viewpoint = WarBoardRatingBase__GetViewpoint((WarBoardRatingBase_o *)current, 0);
         if ( Viewpoint )
@@ -233,12 +233,12 @@ LABEL_79:
             adjustmentValueB = WarBoardRatingBase__get_adjustmentValueB((WarBoardRatingBase_o *)current, 0);
             *(float *)(v25 + 48) = v40 + (float)(int)adjustmentValueB;
             if ( !dicRatingbaseCalcValue )
-              sub_1C3E7C0(adjustmentValueB, v42);
+              sub_1C6BC60(adjustmentValueB, v42);
             if ( System_Collections_Generic_Dictionary_int__object___TryGetValue(
                    (System_Collections_Generic_Dictionary_int__object__o *)dicRatingbaseCalcValue,
                    Id,
                    &value,
-                   (const MethodInfo_340DBC8 *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__TryGetValue__) )
+                   (const MethodInfo_3453C7C *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__TryGetValue__) )
             {
               v45 = ((float (__fastcall *)(Il2CppObject *, _QWORD, _QWORD, __int64, System_Collections_Generic_Dictionary_int__uint__o *, System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *, const MethodInfo *))current->klass->vtable[4].methodPtr)(
                       current,
@@ -252,7 +252,7 @@ LABEL_79:
               {
                 v46 = value;
                 if ( !value )
-                  sub_1C3E7C0(v43, v44);
+                  sub_1C6BC60(v43, v44);
                 *(float *)&value[1].monitor = v45 + *(float *)&value[1].monitor;
                 v47 = WarBoardRatingBase__GetViewpoint((WarBoardRatingBase_o *)current, 0);
                 goto LABEL_30;
@@ -271,12 +271,12 @@ LABEL_79:
           if ( v24 )
           {
             if ( !dicRatingbaseCalcValue )
-              sub_1C3E7C0(v51, v52);
+              sub_1C6BC60(v51, v52);
             if ( System_Collections_Generic_Dictionary_int__object___TryGetValue(
                    (System_Collections_Generic_Dictionary_int__object__o *)dicRatingbaseCalcValue,
                    Id,
                    &v104,
-                   (const MethodInfo_340DBC8 *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__TryGetValue__) )
+                   (const MethodInfo_3453C7C *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__TryGetValue__) )
             {
               v55 = ((float (__fastcall *)(Il2CppObject *, _QWORD, _QWORD, __int64, System_Collections_Generic_Dictionary_int__uint__o *, System_Collections_Generic_List_WarBoardAIRoute_RouteData__o *, const MethodInfo *))current->klass->vtable[4].methodPtr)(
                       current,
@@ -290,7 +290,7 @@ LABEL_79:
               {
                 v46 = v104;
                 if ( !v104 )
-                  sub_1C3E7C0(v53, v54);
+                  sub_1C6BC60(v53, v54);
                 v56 = v55 + *(float *)&v104[1].monitor;
                 ++HIDWORD(v104[1].klass);
                 *(float *)&v46[1].monitor = v56;
@@ -304,7 +304,7 @@ LABEL_30:
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v105,
-        (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__Dispose__);
+        (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_WarBoardRatingBase__Dispose__);
       ratingBaseList = v97;
       v29 = v14;
       ++v31;
@@ -320,24 +320,24 @@ LABEL_38:
       v96,
       *(_DWORD *)(*(_QWORD *)v94 + 16LL),
       (Il2CppObject *)v25,
-      (const MethodInfo_340C43C *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__Add__);
+      (const MethodInfo_34524F0 *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__Add__);
     if ( !dicRatingbaseCalcValue )
       goto LABEL_78;
     System_Collections_Generic_Dictionary_int__object___GetEnumerator(
       &v101,
       (System_Collections_Generic_Dictionary_int__object__o *)dicRatingbaseCalcValue,
-      (const MethodInfo_340C874 *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__GetEnumerator__);
+      (const MethodInfo_3452928 *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_CalcEval__GetEnumerator__);
     v102 = v101;
     while ( 1 )
     {
       v57 = System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
               &v102,
-              (const MethodInfo_3563834 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__MoveNext__);
+              (const MethodInfo_35AA310 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__MoveNext__);
       if ( !v57 )
         break;
       v59 = v102.fields._current.fields.value;
       if ( !v102.fields._current.fields.value )
-        sub_1C3E7C0(v57, v58);
+        sub_1C6BC60(v57, v58);
       v60 = *(float *)&v102.fields._current.fields.value[1].monitor;
       klass_high = HIDWORD(v102.fields._current.fields.value[1].klass);
       *(Il2CppClass **)((char *)&v102.fields._current.fields.value[1].klass + 4) = 0;
@@ -347,20 +347,20 @@ LABEL_38:
         if ( klass == 1 )
         {
           if ( !v25 )
-            sub_1C3E7C0(v57, v58);
+            sub_1C6BC60(v57, v58);
           *(float *)(v25 + 28) = v60 + *(float *)(v25 + 28);
         }
         else if ( !klass )
         {
           if ( !v25 )
-            sub_1C3E7C0(v57, v58);
+            sub_1C6BC60(v57, v58);
           *(float *)(v25 + 24) = (float)(v60 / (float)klass_high) + *(float *)(v25 + 24);
         }
       }
     }
     System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
       &v102,
-      (const MethodInfo_3563958 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__Dispose__);
+      (const MethodInfo_35AA434 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__WarBoardEvalValueSquare_CalcEval__Dispose__);
     if ( !v25 )
       goto LABEL_78;
     v63 = *(float *)(v25 + 24);
@@ -379,7 +379,7 @@ LABEL_38:
       if ( !(_DWORD)v75 )
         j_il2cpp_runtime_class_init_0(System_Decimal_TypeInfo);
       v76 = System_Decimal__Divide(v75, v65, v67, (const MethodInfo *)v73);
-      *(float *)(v25 + 24) = System_Decimal__op_Explicit_65548024(v76, v77) * 1000.0;
+      *(float *)(v25 + 24) = System_Decimal__op_Explicit_65876584(v76, v77) * 1000.0;
     }
     v78 = System_Decimal_TypeInfo;
     if ( !System_Decimal_TypeInfo->_2.cctor_finished )
@@ -395,7 +395,7 @@ LABEL_38:
       if ( !(_DWORD)v79 )
         j_il2cpp_runtime_class_init_0(System_Decimal_TypeInfo);
       v80 = System_Decimal__Divide(v79, v69, v71, (const MethodInfo *)v95);
-      *(float *)(v25 + 28) = System_Decimal__op_Explicit_65548024(v80, v81) * 1000.0;
+      *(float *)(v25 + 28) = System_Decimal__op_Explicit_65876584(v80, v81) * 1000.0;
     }
     v16 = v93 + 1;
   }
@@ -416,7 +416,7 @@ LABEL_69:
       v82 = WarBoardEvalValueSquare___c_TypeInfo;
     }
     v84 = (Il2CppObject *)v82->static_fields->__9;
-    _9__3_0 = (System_Func_T__TResult__o *)sub_1C3E7B0(System_Func_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare___float__TypeInfo);
+    _9__3_0 = (System_Func_T__TResult__o *)sub_1C6BC54(System_Func_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare___float__TypeInfo);
     System_Func_KeyValuePair_int__object___float____ctor(
       _9__3_0,
       v84,
@@ -424,21 +424,21 @@ LABEL_69:
       0);
     static_fields = WarBoardEvalValueSquare___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare___float__o *)_9__3_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v86, v87);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v86, v87);
   }
-  v88 = System_Linq_Enumerable__Sum_KeyValuePair_int__object___51607496(
+  v88 = System_Linq_Enumerable__Sum_KeyValuePair_int__object___51877856(
           (System_Collections_Generic_IEnumerable_TSource__o *)v15,
           (System_Func_TSource__float__o *)_9__3_0,
-          (const MethodInfo_31377C8 *)Method_System_Linq_Enumerable_Sum_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare____);
+          (const MethodInfo_31797E0 *)Method_System_Linq_Enumerable_Sum_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare____);
   if ( !v15
     || (v89 = v88,
         Instance = (Il2CppObject *)System_Collections_Generic_Dictionary_int__object___get_Count(
                                      v15,
-                                     (const MethodInfo_340C0EC *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__get_Count__),
+                                     (const MethodInfo_34521A0 *)Method_System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__get_Count__),
         !this) )
   {
 LABEL_78:
-    sub_1C3E7C0(Instance, v12);
+    sub_1C6BC60(Instance, v12);
   }
   v90 = v89 / (float)(int)Instance;
   result = (System_Collections_Generic_Dictionary_int__WarBoardEvalValueSquare_EvalValueSquare__o *)v15;
@@ -466,7 +466,7 @@ void WarBoardEvalValueSquare_EvalValueSquare___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   v4->fields.squareData = squareData;
   v4 = (WarBoardEvalValueSquare_EvalValueSquare_o *)((char *)v4 + 16);
-  sub_1C3E508((CGThumbnailListItem_o *)v4, (int32_t)squareData, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v4, (int32_t)squareData, v5, v6);
   v4->monitor = 0;
   *(_QWORD *)&v4->fields._EvalValueBenefit_k__BackingField = 0;
   *(struct WarBoardSquareData_o **)((char *)&v4->fields.squareData + 4) = 0;
@@ -598,15 +598,15 @@ void WarBoardEvalValueSquare___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C54752 & 1) == 0 )
+  if ( (byte_4CB3CA4 & 1) == 0 )
   {
-    sub_1C3E564(&WarBoardEvalValueSquare___c_TypeInfo);
-    byte_4C54752 = 1;
+    sub_1C6BA08(&WarBoardEvalValueSquare___c_TypeInfo);
+    byte_4CB3CA4 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(WarBoardEvalValueSquare___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(WarBoardEvalValueSquare___c_TypeInfo);
   System_Object___ctor(v1, 0);
   WarBoardEvalValueSquare___c_TypeInfo->static_fields->__9 = (struct WarBoardEvalValueSquare___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)WarBoardEvalValueSquare___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)WarBoardEvalValueSquare___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -624,13 +624,13 @@ float WarBoardEvalValueSquare___c___Calcurate_b__3_0(
   struct WarBoardEvalValueSquare_EvalValueSquare_o *value; // x19
 
   value = x.fields.value;
-  if ( (byte_4C54753 & 1) == 0 )
+  if ( (byte_4CB3CA5 & 1) == 0 )
   {
-    this = (WarBoardEvalValueSquare___c_o *)sub_1C3E564(&Method_System_Collections_Generic_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare__get_Value__);
-    byte_4C54753 = 1;
+    this = (WarBoardEvalValueSquare___c_o *)sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_int__WarBoardEvalValueSquare_EvalValueSquare__get_Value__);
+    byte_4CB3CA5 = 1;
   }
   if ( !value )
-    sub_1C3E7C0(this, *(_QWORD *)&x.fields.key);
+    sub_1C6BC60(this, *(_QWORD *)&x.fields.key);
   return value->fields._EvalValueBenefit_k__BackingField;
 }
 
@@ -643,7 +643,6 @@ void WarBoardEvalValueSquare___c__DisplayClass3_0___ctor(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool WarBoardEvalValueSquare___c__DisplayClass3_0___Calcurate_b__1(
         WarBoardEvalValueSquare___c__DisplayClass3_0_o *this,
         int32_t x,
@@ -653,6 +652,6 @@ bool WarBoardEvalValueSquare___c__DisplayClass3_0___Calcurate_b__1(
 
   calcSquare = this->fields.calcSquare;
   if ( !calcSquare )
-    sub_1C3E7C0(this, *(_QWORD *)&x);
+    sub_1C6BC60(this, x);
   return calcSquare->fields._squareIndex_k__BackingField == x;
 }

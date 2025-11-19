@@ -23,39 +23,39 @@ void EventTreasureBoxPanelComponent__GetTreasureBoxEventEnableTime(
   System_String_o *v15; // x0
   __int64 v16; // x1
 
-  if ( (byte_4C517DC & 1) == 0 )
+  if ( (byte_4CB0D24 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_13405/*"TIME_OVER_EVENTREWARD"*/);
-    sub_1C3E564(&StringLiteral_113/*" "*/);
-    sub_1C3E564(&StringLiteral_15935/*"[FFFF00,FFFF00]"*/);
-    sub_1C3E564(&StringLiteral_15929/*"[E1A545,FEEF99]"*/);
-    sub_1C3E564(&StringLiteral_13413/*"TIME_REST2_TIMEOVER"*/);
-    sub_1C3E564(&StringLiteral_13427/*"TIME_REST_EVENTREWARD"*/);
-    byte_4C517DC = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_13398/*"TIME_OVER_EVENTREWARD"*/);
+    sub_1C6BA08(&StringLiteral_113/*" "*/);
+    sub_1C6BA08(&StringLiteral_15918/*"[FFFF00,FFFF00]"*/);
+    sub_1C6BA08(&StringLiteral_15912/*"[E1A545,FEEF99]"*/);
+    sub_1C6BA08(&StringLiteral_13406/*"TIME_REST2_TIMEOVER"*/);
+    sub_1C6BA08(&StringLiteral_13420/*"TIME_REST_EVENTREWARD"*/);
+    byte_4CB0D24 = 1;
   }
-  v3 = (System_String_o *)StringLiteral_15929/*"[E1A545,FEEF99]"*/;
+  v3 = (System_String_o *)StringLiteral_15912/*"[E1A545,FEEF99]"*/;
   eventEndTime = this->fields.eventEndTime;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   RestTime2 = LocalizationManager__GetRestTime2(eventEndTime, -1, 0);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13413/*"TIME_REST2_TIMEOVER"*/, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_13406/*"TIME_REST2_TIMEOVER"*/, 0);
   v7 = System_String__op_Equality(RestTime2, v6, 0);
-  v8 = (System_String_o *)StringLiteral_15935/*"[FFFF00,FFFF00]"*/;
+  v8 = (System_String_o *)StringLiteral_15918/*"[FFFF00,FFFF00]"*/;
   v9 = v7;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( v9 )
-    v10 = (System_String_o **)&StringLiteral_13405/*"TIME_OVER_EVENTREWARD"*/;
+    v10 = (System_String_o **)&StringLiteral_13398/*"TIME_OVER_EVENTREWARD"*/;
   else
-    v10 = (System_String_o **)&StringLiteral_13427/*"TIME_REST_EVENTREWARD"*/;
+    v10 = (System_String_o **)&StringLiteral_13420/*"TIME_REST_EVENTREWARD"*/;
   v11 = LocalizationManager__Get(*v10, 0);
-  v12 = System_String__Concat_63636468(v3, v11, 0);
-  v13 = System_String__Concat_63636468(v8, RestTime2, 0);
+  v12 = System_String__Concat_63966792(v3, v11, 0);
+  v13 = System_String__Concat_63966792(v8, RestTime2, 0);
   treasureBoxEndTimeLabel = this->fields.treasureBoxEndTimeLabel;
-  v15 = System_String__Concat_63674716(v12, (System_String_o *)StringLiteral_113/*" "*/, v13, 0);
+  v15 = System_String__Concat_64005056(v12, (System_String_o *)StringLiteral_113/*" "*/, v13, 0);
   if ( !treasureBoxEndTimeLabel )
-    sub_1C3E7C0(v15, v16);
+    sub_1C6BC60(v15, v16);
   UILabel__set_text(treasureBoxEndTimeLabel, v15, 0);
 }
 
@@ -90,39 +90,39 @@ void EventTreasureBoxPanelComponent__Init(
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
   Il2CppObject *entity; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4C517DA & 1) == 0 )
+  if ( (byte_4CB0D22 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
-    sub_1C3E564(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&Method_EventTreasureBoxPanelComponent___c__DisplayClass26_0__Init_b__0__);
-    sub_1C3E564(&EventTreasureBoxPanelComponent___c__DisplayClass26_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_13535/*"TREASURE_BOX_USER_EVENT_ITEM"*/);
-    sub_1C3E564(&StringLiteral_13534/*"TREASURE_BOX_PAY_EVENT_ITEM"*/);
-    sub_1C3E564(&StringLiteral_13527/*"TREASURE_BOX_DRAW_TEXT"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C517DA = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_CommonConsumeMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__);
+    sub_1C6BA08(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&Method_EventTreasureBoxPanelComponent___c__DisplayClass26_0__Init_b__0__);
+    sub_1C6BA08(&EventTreasureBoxPanelComponent___c__DisplayClass26_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_13528/*"TREASURE_BOX_USER_EVENT_ITEM"*/);
+    sub_1C6BA08(&StringLiteral_13527/*"TREASURE_BOX_PAY_EVENT_ITEM"*/);
+    sub_1C6BA08(&StringLiteral_13520/*"TREASURE_BOX_DRAW_TEXT"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB0D22 = 1;
   }
   entity = 0;
-  v13 = (Il2CppObject *)sub_1C3E7B0(EventTreasureBoxPanelComponent___c__DisplayClass26_0_TypeInfo);
+  v13 = (Il2CppObject *)sub_1C6BC54(EventTreasureBoxPanelComponent___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor(v13, 0);
   if ( !v13 )
     goto LABEL_37;
   v13[1].klass = (Il2CppClass *)this;
-  sub_1C3E508(&v13[1], this);
+  sub_1C6B9AC(&v13[1], this);
   v13[1].monitor = ent;
   p_monitor = (struct TreasureBoxEntity_o **)&v13[1].monitor;
-  sub_1C3E508(&v13[1].monitor, ent);
+  sub_1C6B9AC(&v13[1].monitor, ent);
   if ( !v13[1].monitor )
     return;
-  v17 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v17 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v17, v13, Method_EventTreasureBoxPanelComponent___c__DisplayClass26_0__Init_b__0__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -130,34 +130,34 @@ void EventTreasureBoxPanelComponent__Init(
   userEventItemLb = this->fields.userEventItemLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13535/*"TREASURE_BOX_USER_EVENT_ITEM"*/, 0);
+  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13528/*"TREASURE_BOX_USER_EVENT_ITEM"*/, 0);
   if ( !userEventItemLb )
     goto LABEL_37;
   UILabel__set_text(userEventItemLb, (System_String_o *)Master_object, 0);
   payEventItemLb = this->fields.payEventItemLb;
-  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13534/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, 0);
+  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13527/*"TREASURE_BOX_PAY_EVENT_ITEM"*/, 0);
   if ( !payEventItemLb )
     goto LABEL_37;
   UILabel__set_text(payEventItemLb, (System_String_o *)Master_object, 0);
   drawBtnLb = this->fields.drawBtnLb;
-  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13527/*"TREASURE_BOX_DRAW_TEXT"*/, 0);
+  Master_object = LocalizationManager__Get((System_String_o *)StringLiteral_13520/*"TREASURE_BOX_DRAW_TEXT"*/, 0);
   if ( !drawBtnLb )
     goto LABEL_37;
   UILabel__set_text(drawBtnLb, (System_String_o *)Master_object, 0);
   v21 = *p_monitor;
   this->fields.treasureBoxEntity = *p_monitor;
   p_treasureBoxEntity = &this->fields.treasureBoxEntity;
-  sub_1C3E508(&this->fields.treasureBoxEntity, v21);
+  sub_1C6B9AC(&this->fields.treasureBoxEntity, v21);
   this->fields.svtId = svtId;
   this->fields.drawAction = drawAction;
-  sub_1C3E508(&this->fields.drawAction, drawAction);
+  sub_1C6B9AC(&this->fields.drawAction, drawAction);
   this->fields.playVoiceAction = playVoice;
-  sub_1C3E508(&this->fields.playVoiceAction, playVoice);
+  sub_1C6B9AC(&this->fields.playVoiceAction, playVoice);
   this->fields.requestCallBack = requestCallBack;
-  sub_1C3E508(&this->fields.requestCallBack, requestCallBack);
+  sub_1C6B9AC(&this->fields.requestCallBack, requestCallBack);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !*p_treasureBoxEntity )
     goto LABEL_37;
   v23 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
@@ -168,7 +168,7 @@ void EventTreasureBoxPanelComponent__Init(
                             v23,
                             &entity,
                             (int32_t)Master_object,
-                            (const MethodInfo_33B2FA4 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                            (const MethodInfo_33F9128 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( !entity )
@@ -181,14 +181,14 @@ void EventTreasureBoxPanelComponent__Init(
   }
   v25 = *v24;
   this->fields.itemName = *v24;
-  sub_1C3E508(&this->fields.itemName, v25);
+  sub_1C6B9AC(&this->fields.itemName, v25);
   EventTreasureBoxPanelComponent__loadTreasureBoxEffect(this, v26);
-  Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_37;
   Master_object = DataManager__GetMasterData_object_(
                     (DataManager_o *)Master_object,
-                    (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
+                    (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_CommonConsumeMaster___);
   if ( !*p_treasureBoxEntity )
     goto LABEL_37;
   if ( !Master_object )
@@ -200,7 +200,7 @@ void EventTreasureBoxPanelComponent__Init(
   if ( !Master_object )
     goto LABEL_37;
   if ( !*((_DWORD *)Master_object + 6) )
-    sub_1C3E7C8(Master_object, v15);
+    sub_1C6BC68(Master_object);
   v27 = *((_QWORD *)Master_object + 4);
   if ( !v27 )
     goto LABEL_37;
@@ -221,19 +221,19 @@ void EventTreasureBoxPanelComponent__Init(
         (treasureBoxEntity = this->fields.treasureBoxEntity) == 0)
     || (Master_object = this->fields.treasureIcon) == 0
     || (ItemIconComponent__SetItem((ItemIconComponent_o *)Master_object, treasureBoxEntity->fields.iconId, -1, 1, 0),
-        (Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Master_object = DataManager__GetMasterData_object_(
                           (DataManager_o *)Master_object,
-                          (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventMaster___),
+                          (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMaster___),
         !*p_treasureBoxEntity)
     || !Master_object
     || (Master_object = DataMasterBase_object__object__int___GetEntity(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                           (*p_treasureBoxEntity)->fields.eventId,
-                          (const MethodInfo_33B2F58 *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__)) == 0 )
+                          (const MethodInfo_33F90DC *)Method_DataMasterBase_EventMaster__EventEntity__int__GetEntity__)) == 0 )
   {
 LABEL_37:
-    sub_1C3E7C0(Master_object, v15);
+    sub_1C6BC60(Master_object, v15);
   }
   this->fields.eventEndTime = *((_QWORD *)Master_object + 13);
   EventTreasureBoxPanelComponent__SetEventEnableTime(this, v15);
@@ -249,36 +249,36 @@ void EventTreasureBoxPanelComponent__OnClickDetail(EventTreasureBoxPanelComponen
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
   System_Int32_array *EmissionItemList; // x20
 
-  if ( (byte_4C517E1 & 1) == 0 )
+  if ( (byte_4CB0D29 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_TreasureBoxGiftMaster___);
-    sub_1C3E564(&Method_EventTreasureBoxPanelComponent_OnClickDetail__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__);
-    byte_4C517E1 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_TreasureBoxGiftMaster___);
+    sub_1C6BA08(&Method_EventTreasureBoxPanelComponent_OnClickDetail__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__);
+    byte_4CB0D29 = 1;
   }
   v3 = Method_EventTreasureBoxPanelComponent_OnClickDetail__;
   if ( (*((_BYTE *)Method_EventTreasureBoxPanelComponent_OnClickDetail__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_EventTreasureBoxPanelComponent_OnClickDetail__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_EventTreasureBoxPanelComponent_OnClickDetail__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AutomatedAction__get_Instance__);
   if ( !Instance
     || (AutomatedAction__SetBackGroundUntouchable((AutomatedAction_o *)Instance, 1, 0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_TreasureBoxGiftMaster___),
+                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_TreasureBoxGiftMaster___),
         (treasureBoxEntity = this->fields.treasureBoxEntity) == 0)
     || !Instance
     || (EmissionItemList = TreasureBoxGiftMaster__GetEmissionItemList(
                              (TreasureBoxGiftMaster_o *)Instance,
                              treasureBoxEntity->fields.treasureBoxGiftId,
                              0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
   {
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   }
   CommonUI__OpenTreasureBoxDialog(
     (CommonUI_o *)Instance,
@@ -303,24 +303,24 @@ void EventTreasureBoxPanelComponent__OnClickDrawBtn(EventTreasureBoxPanelCompone
   __int64 v9; // x1
   const MethodInfo *v10; // x4
 
-  if ( (byte_4C517E2 & 1) == 0 )
+  if ( (byte_4CB0D2A & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_int__TypeInfo);
-    sub_1C3E564(&Method_EventTreasureBoxPanelComponent_OnClickDrawBtn__);
-    sub_1C3E564(&Method_EventTreasureBoxPanelComponent_TreasureBoxDrawRequest__);
-    byte_4C517E2 = 1;
+    sub_1C6BA08(&System_Action_int__TypeInfo);
+    sub_1C6BA08(&Method_EventTreasureBoxPanelComponent_OnClickDrawBtn__);
+    sub_1C6BA08(&Method_EventTreasureBoxPanelComponent_TreasureBoxDrawRequest__);
+    byte_4CB0D2A = 1;
   }
   v3 = Method_EventTreasureBoxPanelComponent_OnClickDrawBtn__;
   if ( (*((_BYTE *)Method_EventTreasureBoxPanelComponent_OnClickDrawBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_EventTreasureBoxPanelComponent_OnClickDrawBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_EventTreasureBoxPanelComponent_OnClickDrawBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   treasureBoxBuyWindow = this->fields.treasureBoxBuyWindow;
   treasureBoxEntity = this->fields.treasureBoxEntity;
-  v7 = (System_Action_int__o *)sub_1C3E7B0(System_Action_int__TypeInfo);
+  v7 = (System_Action_int__o *)sub_1C6BC54(System_Action_int__TypeInfo);
   System_Action_int____ctor(v7, (Il2CppObject *)this, Method_EventTreasureBoxPanelComponent_TreasureBoxDrawRequest__, 0);
   if ( !treasureBoxBuyWindow )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   TreasureBoxBulkBuyConfirmMenu__Open(treasureBoxBuyWindow, treasureBoxEntity, v7, 8, v10);
 }
 
@@ -354,36 +354,36 @@ void EventTreasureBoxPanelComponent__Response(
   _DWORD *v26; // x8
   __int64 v27; // x8
 
-  if ( (byte_4C517E4 & 1) == 0 )
+  if ( (byte_4CB0D2C & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMasterData_TreasureBoxTalkMaster___);
-    sub_1C3E564(&Method_JsonManager_DeserializeArray_EventTreasureBoxPanelComponent_resData___);
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__0__);
-    sub_1C3E564(&Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__1__);
-    sub_1C3E564(&EventTreasureBoxPanelComponent___c__DisplayClass36_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    sub_1C3E564(&StringLiteral_15814/*"["*/);
-    sub_1C3E564(&StringLiteral_16068/*"]"*/);
-    byte_4C517E4 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_TreasureBoxTalkMaster___);
+    sub_1C6BA08(&Method_JsonManager_DeserializeArray_EventTreasureBoxPanelComponent_resData___);
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__0__);
+    sub_1C6BA08(&Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__1__);
+    sub_1C6BA08(&EventTreasureBoxPanelComponent___c__DisplayClass36_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    sub_1C6BA08(&StringLiteral_15801/*"["*/);
+    sub_1C6BA08(&StringLiteral_16051/*"]"*/);
+    byte_4CB0D2C = 1;
   }
-  v5 = (Il2CppObject *)sub_1C3E7B0(EventTreasureBoxPanelComponent___c__DisplayClass36_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C6BC54(EventTreasureBoxPanelComponent___c__DisplayClass36_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_34;
   v5[1].klass = (Il2CppClass *)this;
-  sub_1C3E508(&v5[1], this);
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22233/*"ng"*/, 0) )
+  sub_1C6B9AC(&v5[1], this);
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22301/*"ng"*/, 0) )
     return;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_34;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_TreasureBoxTalkMaster___);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_TreasureBoxTalkMaster___);
   treasureBoxEntity = this->fields.treasureBoxEntity;
   if ( !treasureBoxEntity )
     goto LABEL_34;
@@ -415,20 +415,20 @@ void EventTreasureBoxPanelComponent__Response(
   Instance = (__int64)this->fields.treasureBoxBuyWindow;
   if ( !Instance )
     goto LABEL_34;
-  TreasureBoxBulkBuyConfirmMenu__Close_32658948((TreasureBoxBulkBuyConfirmMenu_o *)Instance, 0, v12);
-  v13 = (Il2CppObject *)System_String__Concat_63674716(
-                          (System_String_o *)StringLiteral_15814/*"["*/,
+  TreasureBoxBulkBuyConfirmMenu__Close_32838816((TreasureBoxBulkBuyConfirmMenu_o *)Instance, 0, v12);
+  v13 = (Il2CppObject *)System_String__Concat_64005056(
+                          (System_String_o *)StringLiteral_15801/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_16068/*"]"*/,
+                          (System_String_o *)StringLiteral_16051/*"]"*/,
                           0);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   v14 = JsonManager__DeserializeArray_object_(
           v13,
-          (const MethodInfo_3168FB8 *)Method_JsonManager_DeserializeArray_EventTreasureBoxPanelComponent_resData___);
+          (const MethodInfo_31AB018 *)Method_JsonManager_DeserializeArray_EventTreasureBoxPanelComponent_resData___);
   v5[1].monitor = v14;
   p_monitor = &v5[1].monitor;
-  Instance = sub_1C3E508(&v5[1].monitor, v14);
+  Instance = sub_1C6B9AC(&v5[1].monitor, v14);
   monitor = v5[1].monitor;
   if ( !monitor )
     goto LABEL_34;
@@ -451,13 +451,13 @@ void EventTreasureBoxPanelComponent__Response(
     this->fields.eventPointNum = *(_QWORD *)(v20 + 32);
   }
   v5[2].klass = 0;
-  Instance = sub_1C3E508(&v5[2], 0);
+  Instance = sub_1C6B9AC(&v5[2], 0);
   v21 = v5[1].monitor;
   if ( !v21 )
     goto LABEL_34;
   if ( !v21[6] )
 LABEL_35:
-    sub_1C3E7C8(Instance, v7);
+    sub_1C6BC68(Instance);
   v22 = *((_QWORD *)v21 + 4);
   if ( !v22 )
     goto LABEL_34;
@@ -466,22 +466,22 @@ LABEL_35:
     goto LABEL_34;
   if ( *(_QWORD *)(v23 + 24) )
   {
-    v24 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v24 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v24, v5, Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__0__, 0);
     v5[2].klass = (Il2CppClass *)v24;
-    sub_1C3E508(&v5[2], v24);
-    v25 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    sub_1C6B9AC(&v5[2], v24);
+    v25 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v25, v5, Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__1__, 0);
   }
   else
   {
     v25 = 0;
   }
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v26 = *p_monitor;
   if ( !*p_monitor )
 LABEL_34:
-    sub_1C3E7C0(Instance, v7);
+    sub_1C6BC60(Instance, v7);
   if ( !v26[6] )
     goto LABEL_35;
   v27 = *((_QWORD *)v26 + 4);
@@ -503,15 +503,15 @@ void EventTreasureBoxPanelComponent__SetEventEnableTime(
         EventTreasureBoxPanelComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C517DB & 1) == 0 )
+  if ( (byte_4CB0D23 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_7107/*"GetTreasureBoxEventEnableTime"*/);
-    byte_4C517DB = 1;
+    sub_1C6BA08(&StringLiteral_7100/*"GetTreasureBoxEventEnableTime"*/);
+    byte_4CB0D23 = 1;
   }
   EventTreasureBoxPanelComponent__GetTreasureBoxEventEnableTime(this, method);
   UnityEngine_MonoBehaviour__InvokeRepeating(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_7107/*"GetTreasureBoxEventEnableTime"*/,
+    (System_String_o *)StringLiteral_7100/*"GetTreasureBoxEventEnableTime"*/,
     1.0,
     1.0,
     0);
@@ -534,23 +534,23 @@ void EventTreasureBoxPanelComponent__SetTreasureBoxDrawBtn(
   __int64 v12; // x1
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C517DD & 1) == 0 )
+  if ( (byte_4CB0D25 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C517DD = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB0D25 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_UserItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C50AE2 )
+  if ( !byte_4CB002A )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C50AE2 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB002A = 1;
   }
   ConsumeItemId = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -579,7 +579,7 @@ void EventTreasureBoxPanelComponent__SetTreasureBoxDrawBtn(
   payNum = this->fields.payNum;
   ConsumeItemId = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                 ConsumeItemId,
-                                                (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                                                (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
   if ( !ConsumeItemId )
     goto LABEL_28;
   v10 = klass_high / payNum;
@@ -592,7 +592,7 @@ void EventTreasureBoxPanelComponent__SetTreasureBoxDrawBtn(
     goto LABEL_28;
   ConsumeItemId = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                 ConsumeItemId,
-                                                (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
+                                                (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___);
   if ( !ConsumeItemId )
     goto LABEL_28;
   v11 = v10 <= 0 ? 0.5 : 1.0;
@@ -607,10 +607,10 @@ void EventTreasureBoxPanelComponent__SetTreasureBoxDrawBtn(
         (ConsumeItemId = this->fields.treasureBoxDrawBtn) == 0)
     || (ConsumeItemId = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                       ConsumeItemId,
-                                                      (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___)) == 0 )
+                                                      (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UICommonButton___)) == 0 )
   {
 LABEL_28:
-    sub_1C3E7C0(ConsumeItemId, v3);
+    sub_1C6BC60(ConsumeItemId, v3);
   }
   if ( v10 <= 0 )
     v12 = 3;
@@ -634,15 +634,15 @@ void EventTreasureBoxPanelComponent__TreasureBoxDrawRequest(
   __int64 v7; // x1
   struct TreasureBoxEntity_o *treasureBoxEntity; // x8
 
-  if ( (byte_4C517E3 & 1) == 0 )
+  if ( (byte_4CB0D2B & 1) == 0 )
   {
-    sub_1C3E564(&Method_EventTreasureBoxPanelComponent_Response__);
-    sub_1C3E564(&Method_NetworkManager_getRequest_TreasureBoxDrawRequest___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C517E3 = 1;
+    sub_1C6BA08(&Method_EventTreasureBoxPanelComponent_Response__);
+    sub_1C6BA08(&Method_NetworkManager_getRequest_TreasureBoxDrawRequest___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4CB0D2B = 1;
   }
-  v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C3E7B0(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
@@ -652,10 +652,10 @@ void EventTreasureBoxPanelComponent__TreasureBoxDrawRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v5,
-                     (const MethodInfo_3184BE4 *)Method_NetworkManager_getRequest_TreasureBoxDrawRequest___);
+                     (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_TreasureBoxDrawRequest___);
   treasureBoxEntity = this->fields.treasureBoxEntity;
   if ( !treasureBoxEntity || !Request_object )
-    sub_1C3E7C0(Request_object, v7);
+    sub_1C6BC60(Request_object, v7);
   TreasureBoxDrawRequest__beginRequest(
     (TreasureBoxDrawRequest_o *)Request_object,
     treasureBoxEntity->fields.id,
@@ -669,15 +669,15 @@ void EventTreasureBoxPanelComponent__endloadEffect(
         AssetData_o *data,
         const MethodInfo *method)
 {
-  if ( (byte_4C517DF & 1) == 0 )
+  if ( (byte_4CB0D27 & 1) == 0 )
   {
-    sub_1C3E564(&EventTreasureBoxPanelComponent_TypeInfo);
-    byte_4C517DF = 1;
+    sub_1C6BA08(&EventTreasureBoxPanelComponent_TypeInfo);
+    byte_4CB0D27 = 1;
   }
   if ( data )
   {
     EventTreasureBoxPanelComponent_TypeInfo->static_fields->effectAssetData = data;
-    sub_1C3E508(EventTreasureBoxPanelComponent_TypeInfo->static_fields, data);
+    sub_1C6B9AC(EventTreasureBoxPanelComponent_TypeInfo->static_fields, data);
   }
 }
 
@@ -688,31 +688,31 @@ UnityEngine_GameObject_o *EventTreasureBoxPanelComponent__getEffect(
         const MethodInfo *method)
 {
   AssetData_o *effectAssetData; // x0
-  Il2CppObject *Object_object__51228128; // x19
+  Il2CppObject *Object_object__51495936; // x19
   UnityEngine_GameObject_o *v7; // x19
   UnityEngine_Transform_o *v8; // x20
   UnityEngine_Transform_o *v9; // x20
 
-  if ( (byte_4C517E0 & 1) == 0 )
+  if ( (byte_4CB0D28 & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetData_GetObject_GameObject____78185152);
-    sub_1C3E564(&EventTreasureBoxPanelComponent_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C517E0 = 1;
+    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
+    sub_1C6BA08(&EventTreasureBoxPanelComponent_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB0D28 = 1;
   }
   effectAssetData = EventTreasureBoxPanelComponent_TypeInfo->static_fields->effectAssetData;
   if ( !effectAssetData )
     goto LABEL_15;
-  Object_object__51228128 = AssetData__GetObject_object__51228128(
+  Object_object__51495936 = AssetData__GetObject_object__51495936(
                               effectAssetData,
                               name,
-                              (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_GameObject____78185152);
+                              (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   effectAssetData = (AssetData_o *)UnityEngine_Object__Instantiate_object_(
-                                     Object_object__51228128,
-                                     (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                     Object_object__51495936,
+                                     (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !effectAssetData )
     goto LABEL_15;
   v7 = (UnityEngine_GameObject_o *)effectAssetData;
@@ -722,24 +722,24 @@ UnityEngine_GameObject_o *EventTreasureBoxPanelComponent__getEffect(
   UnityEngine_Transform__set_parent((UnityEngine_Transform_o *)effectAssetData, parentTr, 0);
   effectAssetData = (AssetData_o *)UnityEngine_GameObject__get_transform(v7, 0);
   v8 = (UnityEngine_Transform_o *)effectAssetData;
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    effectAssetData = (AssetData_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    effectAssetData = (AssetData_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   if ( !v8 )
     goto LABEL_15;
   UnityEngine_Transform__set_localPosition(v8, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   effectAssetData = (AssetData_o *)UnityEngine_GameObject__get_transform(v7, 0);
   v9 = (UnityEngine_Transform_o *)effectAssetData;
-  if ( !byte_4C506A6 )
+  if ( !byte_4CAFC0E )
   {
-    effectAssetData = (AssetData_o *)sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A6 = 1;
+    effectAssetData = (AssetData_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC0E = 1;
   }
   if ( !v9 )
 LABEL_15:
-    sub_1C3E7C0(effectAssetData, parentTr);
+    sub_1C6BC60(effectAssetData, parentTr);
   UnityEngine_Transform__set_localScale(v9, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   return v7;
 }
@@ -751,15 +751,15 @@ void EventTreasureBoxPanelComponent__loadTreasureBoxEffect(
 {
   AssetLoader_LoadEndDataHandler_o *v3; // x20
 
-  if ( (byte_4C517DE & 1) == 0 )
+  if ( (byte_4CB0D26 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&Method_EventTreasureBoxPanelComponent_endloadEffect__);
-    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C3E564(&StringLiteral_5904/*"Effect/TreasureBox"*/);
-    byte_4C517DE = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&Method_EventTreasureBoxPanelComponent_endloadEffect__);
+    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C6BA08(&StringLiteral_5894/*"Effect/TreasureBox"*/);
+    byte_4CB0D26 = 1;
   }
-  v3 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v3 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v3,
     (Il2CppObject *)this,
@@ -767,7 +767,7 @@ void EventTreasureBoxPanelComponent__loadTreasureBoxEffect(
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5904/*"Effect/TreasureBox"*/, v3, 1, 0);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_5894/*"Effect/TreasureBox"*/, v3, 1, 0);
 }
 
 
@@ -786,60 +786,42 @@ void EventTreasureBoxPanelComponent___c__DisplayClass26_0___Init_b__0(
   EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *v2; // x19
   struct EventTreasureBoxPanelComponent_o *_4__this; // x8
   Il2CppObject *Component_object; // x20
-  __int64 v5; // x2
-  __int64 v6; // x3
-  __int64 v7; // x4
-  __int64 v8; // x5
-  __int64 v9; // x6
-  __int64 v10; // x7
-  struct EventTreasureBoxPanelComponent_o *v11; // x8
+  struct EventTreasureBoxPanelComponent_o *v5; // x8
   struct TreasureBoxEntity_o *ent; // x9
   UISprite_o *treasureBoxBg; // x20
-  Il2CppObject *v14; // x0
-  System_String_o *v15; // x0
-  __int64 v16; // x2
-  __int64 v17; // x3
-  __int64 v18; // x4
-  __int64 v19; // x5
-  __int64 v20; // x6
-  __int64 v21; // x7
-  struct EventTreasureBoxPanelComponent_o *v22; // x8
-  struct TreasureBoxEntity_o *v23; // x9
+  Il2CppObject *v8; // x0
+  System_String_o *v9; // x0
+  struct EventTreasureBoxPanelComponent_o *v10; // x8
+  struct TreasureBoxEntity_o *v11; // x9
   UISprite_o *treasureIconFrameFront; // x20
-  Il2CppObject *v25; // x0
-  System_String_o *v26; // x0
-  __int64 v27; // x2
-  __int64 v28; // x3
-  __int64 v29; // x4
-  __int64 v30; // x5
-  __int64 v31; // x6
-  __int64 v32; // x7
-  struct EventTreasureBoxPanelComponent_o *v33; // x8
-  struct TreasureBoxEntity_o *v34; // x9
+  Il2CppObject *v13; // x0
+  System_String_o *v14; // x0
+  struct EventTreasureBoxPanelComponent_o *v15; // x8
+  struct TreasureBoxEntity_o *v16; // x9
   UISprite_o *treasureIconFrameBack; // x20
-  Il2CppObject *v36; // x0
-  System_String_o *v37; // x0
-  struct EventTreasureBoxPanelComponent_o *v38; // x8
-  struct EventTreasureBoxPanelComponent_o *v39; // x8
-  struct EventTreasureBoxPanelComponent_o *v40; // x8
-  int v41; // [xsp+Ch] [xbp-34h] BYREF
-  int v42; // [xsp+18h] [xbp-28h] BYREF
-  int v43; // [xsp+1Ch] [xbp-24h] BYREF
+  Il2CppObject *v18; // x0
+  System_String_o *v19; // x0
+  struct EventTreasureBoxPanelComponent_o *v20; // x8
+  struct EventTreasureBoxPanelComponent_o *v21; // x8
+  struct EventTreasureBoxPanelComponent_o *v22; // x8
+  int v23; // [xsp+Ch] [xbp-34h] BYREF
+  int v24; // [xsp+18h] [xbp-28h] BYREF
+  int v25; // [xsp+1Ch] [xbp-24h] BYREF
 
   v2 = this;
-  if ( (byte_4C517E5 & 1) == 0 )
+  if ( (byte_4CB0D2D & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&StringLiteral_24225/*"treasurechest_btn_open"*/);
-    sub_1C3E564(&StringLiteral_24227/*"treasurechest_img_bg"*/);
-    sub_1C3E564(&StringLiteral_24223/*"treasurechest_btn_info"*/);
-    sub_1C3E564(&StringLiteral_24231/*"treasurechest_img_line"*/);
-    sub_1C3E564(&StringLiteral_24221/*"treasurechest_bg_{0}"*/);
-    sub_1C3E564(&StringLiteral_24229/*"treasurechest_img_frame_0{0}b"*/);
-    this = (EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *)sub_1C3E564(&StringLiteral_24230/*"treasurechest_img_frame_0{0}f"*/);
-    byte_4C517E5 = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&StringLiteral_24305/*"treasurechest_btn_open"*/);
+    sub_1C6BA08(&StringLiteral_24307/*"treasurechest_img_bg"*/);
+    sub_1C6BA08(&StringLiteral_24303/*"treasurechest_btn_info"*/);
+    sub_1C6BA08(&StringLiteral_24311/*"treasurechest_img_line"*/);
+    sub_1C6BA08(&StringLiteral_24301/*"treasurechest_bg_{0}"*/);
+    sub_1C6BA08(&StringLiteral_24309/*"treasurechest_img_frame_0{0}b"*/);
+    this = (EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *)sub_1C6BA08(&StringLiteral_24310/*"treasurechest_img_frame_0{0}f"*/);
+    byte_4CB0D2D = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -849,69 +831,69 @@ void EventTreasureBoxPanelComponent___c__DisplayClass26_0___Init_b__0(
     goto LABEL_17;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)this,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
   this = (EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *)AtlasManager__SetEventUI(
                                                                      (UISprite_o *)Component_object,
-                                                                     (System_String_o *)StringLiteral_24225/*"treasurechest_btn_open"*/,
+                                                                     (System_String_o *)StringLiteral_24305/*"treasurechest_btn_open"*/,
                                                                      0);
-  v11 = v2->fields.__4__this;
-  if ( !v11 )
+  v5 = v2->fields.__4__this;
+  if ( !v5 )
     goto LABEL_17;
   ent = v2->fields.ent;
   if ( !ent )
     goto LABEL_17;
-  treasureBoxBg = v11->fields.treasureBoxBg;
-  v43 = ent->fields.idx + 1;
-  v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v43, v5, v6, v7, v8, v9, v10);
-  v15 = System_String__Format((System_String_o *)StringLiteral_24221/*"treasurechest_bg_{0}"*/, v14, 0);
-  this = (EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *)AtlasManager__SetEventUI(treasureBoxBg, v15, 0);
-  v22 = v2->fields.__4__this;
-  if ( !v22 )
+  treasureBoxBg = v5->fields.treasureBoxBg;
+  v25 = ent->fields.idx + 1;
+  v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
+  v9 = System_String__Format((System_String_o *)StringLiteral_24301/*"treasurechest_bg_{0}"*/, v8, 0);
+  this = (EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *)AtlasManager__SetEventUI(treasureBoxBg, v9, 0);
+  v10 = v2->fields.__4__this;
+  if ( !v10 )
     goto LABEL_17;
-  v23 = v2->fields.ent;
-  if ( !v23 )
+  v11 = v2->fields.ent;
+  if ( !v11 )
     goto LABEL_17;
-  treasureIconFrameFront = v22->fields.treasureIconFrameFront;
-  v42 = v23->fields.idx + 1;
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v42, v16, v17, v18, v19, v20, v21);
-  v26 = System_String__Format((System_String_o *)StringLiteral_24230/*"treasurechest_img_frame_0{0}f"*/, v25, 0);
+  treasureIconFrameFront = v10->fields.treasureIconFrameFront;
+  v24 = v11->fields.idx + 1;
+  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
+  v14 = System_String__Format((System_String_o *)StringLiteral_24310/*"treasurechest_img_frame_0{0}f"*/, v13, 0);
   this = (EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *)AtlasManager__SetEventUI(
                                                                      treasureIconFrameFront,
-                                                                     v26,
+                                                                     v14,
                                                                      0);
-  v33 = v2->fields.__4__this;
-  if ( !v33 )
+  v15 = v2->fields.__4__this;
+  if ( !v15 )
     goto LABEL_17;
-  v34 = v2->fields.ent;
-  if ( !v34 )
+  v16 = v2->fields.ent;
+  if ( !v16 )
     goto LABEL_17;
-  treasureIconFrameBack = v33->fields.treasureIconFrameBack;
-  v41 = v34->fields.idx + 1;
-  v36 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v41, v27, v28, v29, v30, v31, v32);
-  v37 = System_String__Format((System_String_o *)StringLiteral_24229/*"treasurechest_img_frame_0{0}b"*/, v36, 0);
+  treasureIconFrameBack = v15->fields.treasureIconFrameBack;
+  v23 = v16->fields.idx + 1;
+  v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v23);
+  v19 = System_String__Format((System_String_o *)StringLiteral_24309/*"treasurechest_img_frame_0{0}b"*/, v18, 0);
   this = (EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *)AtlasManager__SetEventUI(
                                                                      treasureIconFrameBack,
-                                                                     v37,
+                                                                     v19,
                                                                      0);
-  v38 = v2->fields.__4__this;
-  if ( !v38
+  v20 = v2->fields.__4__this;
+  if ( !v20
     || (this = (EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *)AtlasManager__SetEventUI(
-                                                                           v38->fields.eventItemRootBg,
-                                                                           (System_String_o *)StringLiteral_24227/*"treasurechest_img_bg"*/,
+                                                                           v20->fields.eventItemRootBg,
+                                                                           (System_String_o *)StringLiteral_24307/*"treasurechest_img_bg"*/,
                                                                            0),
-        (v39 = v2->fields.__4__this) == 0)
+        (v21 = v2->fields.__4__this) == 0)
     || (this = (EventTreasureBoxPanelComponent___c__DisplayClass26_0_o *)AtlasManager__SetEventUI(
-                                                                           v39->fields.treasureBoxDetailBtn,
-                                                                           (System_String_o *)StringLiteral_24223/*"treasurechest_btn_info"*/,
+                                                                           v21->fields.treasureBoxDetailBtn,
+                                                                           (System_String_o *)StringLiteral_24303/*"treasurechest_btn_info"*/,
                                                                            0),
-        (v40 = v2->fields.__4__this) == 0) )
+        (v22 = v2->fields.__4__this) == 0) )
   {
 LABEL_17:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
-  AtlasManager__SetEventUI(v40->fields.treasureBoxLine, (System_String_o *)StringLiteral_24231/*"treasurechest_img_line"*/, 0);
+  AtlasManager__SetEventUI(v22->fields.treasureBoxLine, (System_String_o *)StringLiteral_24311/*"treasurechest_img_line"*/, 0);
 }
 
 
@@ -936,11 +918,11 @@ void EventTreasureBoxPanelComponent___c__DisplayClass36_0___Response_b__0(
   System_Action_o *v8; // x21
 
   v2 = (Il2CppObject *)this;
-  if ( (byte_4C517E6 & 1) == 0 )
+  if ( (byte_4CB0D2E & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    this = (EventTreasureBoxPanelComponent___c__DisplayClass36_0_o *)sub_1C3E564(&Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__2__);
-    byte_4C517E6 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    this = (EventTreasureBoxPanelComponent___c__DisplayClass36_0_o *)sub_1C6BA08(&Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__2__);
+    byte_4CB0D2E = 1;
   }
   klass = v2[1].klass;
   if ( !klass )
@@ -949,7 +931,7 @@ void EventTreasureBoxPanelComponent___c__DisplayClass36_0___Response_b__0(
   if ( !monitor )
     goto LABEL_11;
   if ( !monitor[6] )
-    sub_1C3E7C8(this, method);
+    sub_1C6BC68(this);
   v5 = *((_QWORD *)monitor + 4);
   if ( !v5 )
     goto LABEL_11;
@@ -958,14 +940,14 @@ void EventTreasureBoxPanelComponent___c__DisplayClass36_0___Response_b__0(
   v8 = (System_Action_o *)v2[2].monitor;
   if ( !v8 )
   {
-    v8 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v8, v2, Method_EventTreasureBoxPanelComponent___c__DisplayClass36_0__Response_b__2__, 0);
     v2[2].monitor = v8;
-    this = (EventTreasureBoxPanelComponent___c__DisplayClass36_0_o *)sub_1C3E508(&v2[2].monitor, v8);
+    this = (EventTreasureBoxPanelComponent___c__DisplayClass36_0_o *)sub_1C6B9AC(&v2[2].monitor, v8);
   }
   if ( !rgctx_data )
 LABEL_11:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   ((void (__fastcall *)(_QWORD, _QWORD, _QWORD, System_Action_o *, _QWORD))rgctx_data[3].rgctxDataDummy)(
     (Il2CppRGCTXData)rgctx_data[8].rgctxDataDummy,
     v7,
@@ -985,21 +967,21 @@ void EventTreasureBoxPanelComponent___c__DisplayClass36_0___Response_b__1(
   EventTreasureBoxPanelComponent_resData_o *v6; // x8
   struct EventTreasureBoxPanelComponent_o *_4__this; // x9
 
-  if ( (byte_4C517E8 & 1) == 0 )
+  if ( (byte_4CB0D30 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C517E8 = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CB0D30 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   res = this->fields.res;
   if ( !res )
     goto LABEL_9;
   if ( !LODWORD(res->max_length) )
-    sub_1C3E7C8(Instance, v4);
+    sub_1C6BC68(Instance);
   v6 = res->m_Items[0];
   if ( !v6 || (_4__this = this->fields.__4__this) == 0 || !Instance )
 LABEL_9:
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   CommonUI__OpenTreasureBoxDialog(
     (CommonUI_o *)Instance,
     0,
@@ -1021,16 +1003,16 @@ void EventTreasureBoxPanelComponent___c__DisplayClass36_0___Response_b__2(
   struct EventTreasureBoxPanelComponent_o *_4__this; // x8
   struct TreasureBoxEntity_o *treasureBoxEntity; // x9
 
-  if ( (byte_4C517E7 & 1) == 0 )
+  if ( (byte_4CB0D2F & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C517E7 = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB0D2F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   _4__this = this->fields.__4__this;
   if ( !_4__this || (treasureBoxEntity = _4__this->fields.treasureBoxEntity) == 0 || !Instance )
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   CommonUI__CheckOpenQuestByEventPoint(
     (CommonUI_o *)Instance,
     treasureBoxEntity->fields.eventId,

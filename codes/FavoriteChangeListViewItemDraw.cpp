@@ -17,14 +17,14 @@ void FavoriteChangeListViewItemDraw__Awake(FavoriteChangeListViewItemDraw_o *thi
   else
     mAtlas = 0;
   this->fields.defaultMaskAtlas = mAtlas;
-  sub_1C3E508(&this->fields.defaultMaskAtlas, mAtlas);
+  sub_1C6B9AC(&this->fields.defaultMaskAtlas, mAtlas);
   v5 = this->fields.maskSprite;
   if ( v5 )
     mSpriteName = v5->fields.mSpriteName;
   else
     mSpriteName = 0;
   this->fields.defaultMaskName = mSpriteName;
-  sub_1C3E508(&this->fields.defaultMaskName, mSpriteName);
+  sub_1C6B9AC(&this->fields.defaultMaskName, mSpriteName);
 }
 
 
@@ -44,11 +44,11 @@ void FavoriteChangeListViewItemDraw__SetInput(
   UnityEngine_Object_o *maskSprite; // x21
   const MethodInfo *v15; // x2
 
-  if ( (byte_4C51C93 & 1) == 0 )
+  if ( (byte_4CB11DB & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C51C93 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB11DB = 1;
   }
   if ( item )
   {
@@ -69,7 +69,7 @@ void FavoriteChangeListViewItemDraw__SetInput(
             goto LABEL_49;
           maskLb = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                 maskLb,
-                                                (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider___);
           if ( !maskLb )
             goto LABEL_49;
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)maskLb, isInput, 0);
@@ -161,7 +161,7 @@ LABEL_47:
       }
     }
 LABEL_49:
-    sub_1C3E7C0(maskLb, item);
+    sub_1C6BC60(maskLb, item);
   }
 }
 
@@ -183,19 +183,19 @@ void FavoriteChangeListViewItemDraw__SetItem(
   const MethodInfo *v15; // x2
   UILabel_o *statusLb; // x21
 
-  if ( (byte_4C51C92 & 1) == 0 )
+  if ( (byte_4CB11DA & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_8824/*"MYROOM_FAVORITE_STATUS"*/);
-    byte_4C51C92 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_8821/*"MYROOM_FAVORITE_STATUS"*/);
+    byte_4CB11DA = 1;
   }
   if ( item && mode )
   {
     servantFaceIcon = this->fields.servantFaceIcon;
     if ( servantFaceIcon )
     {
-      ServantFaceIconComponent__Set_41053768(
+      ServantFaceIconComponent__Set_41239152(
         servantFaceIcon,
         item->fields.userSvtEntity,
         item->fields.iconLabelInfo1,
@@ -236,7 +236,7 @@ void FavoriteChangeListViewItemDraw__SetItem(
                   servantFaceIcon = (ServantFaceIconComponent_o *)this->fields.partyIcon;
                   if ( !servantFaceIcon )
                     goto LABEL_55;
-                  FlashingIconComponent__Set_40947528(
+                  FlashingIconComponent__Set_41132780(
                     (FlashingIconComponent_o *)servantFaceIcon,
                     item->fields.partyIndex >= 0,
                     0);
@@ -328,7 +328,7 @@ LABEL_53:
                     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                     servantFaceIcon = (ServantFaceIconComponent_o *)LocalizationManager__Get(
-                                                                      (System_String_o *)StringLiteral_8824/*"MYROOM_FAVORITE_STATUS"*/,
+                                                                      (System_String_o *)StringLiteral_8821/*"MYROOM_FAVORITE_STATUS"*/,
                                                                       0);
                     if ( statusLb )
                     {
@@ -344,7 +344,7 @@ LABEL_53:
       }
     }
 LABEL_55:
-    sub_1C3E7C0(servantFaceIcon, item);
+    sub_1C6BC60(servantFaceIcon, item);
   }
 }
 
@@ -360,12 +360,12 @@ void FavoriteChangeListViewItemDraw__SetMaskInfo(
   __int64 *v7; // x8
 
   v4 = (FavoriteChangeListViewItemDraw_o **)this;
-  if ( (byte_4C51C94 & 1) == 0 )
+  if ( (byte_4CB11DC & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_11523/*"SELECT_CANNOT"*/);
-    this = (FavoriteChangeListViewItemDraw_o *)sub_1C3E564(&StringLiteral_11555/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    byte_4C51C94 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_11520/*"SELECT_CANNOT"*/);
+    this = (FavoriteChangeListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    byte_4CB11DC = 1;
   }
   if ( !item )
     goto LABEL_38;
@@ -407,7 +407,7 @@ void FavoriteChangeListViewItemDraw__SetMaskInfo(
       v6 = (UILabel_o *)v4[12];
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v7 = &StringLiteral_11555/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v7 = &StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/;
 LABEL_36:
       this = (FavoriteChangeListViewItemDraw_o *)LocalizationManager__Get((System_String_o *)*v7, 0);
       if ( v6 )
@@ -416,7 +416,7 @@ LABEL_36:
         return;
       }
 LABEL_38:
-      sub_1C3E7C0(this, item);
+      sub_1C6BC60(this, item);
     }
     if ( FavoriteChangeListViewItem__get_IsHerioneReave(item, (const MethodInfo *)item) )
     {
@@ -454,7 +454,7 @@ LABEL_31:
       v6 = (UILabel_o *)v4[12];
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v7 = &StringLiteral_11523/*"SELECT_CANNOT"*/;
+      v7 = &StringLiteral_11520/*"SELECT_CANNOT"*/;
       goto LABEL_36;
     }
   }

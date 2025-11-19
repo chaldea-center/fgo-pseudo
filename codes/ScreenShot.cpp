@@ -7,19 +7,19 @@ void ScreenShot___ctor(ScreenShot_o *this, const MethodInfo *method)
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C58E63 & 1) == 0 )
+  if ( (byte_4CB83E3 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_12638/*"ScreenshotFolder"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58E63 = 1;
+    sub_1C6BA08(&StringLiteral_12634/*"ScreenshotFolder"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB83E3 = 1;
   }
-  v5 = StringLiteral_12638/*"ScreenshotFolder"*/;
-  this->fields.folder = (struct System_String_o *)StringLiteral_12638/*"ScreenshotFolder"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.folder, v5, v2, v3);
+  v5 = StringLiteral_12634/*"ScreenshotFolder"*/;
+  this->fields.folder = (struct System_String_o *)StringLiteral_12634/*"ScreenshotFolder"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.folder, v5, v2, v3);
   this->fields.frameRate = 30;
   v6 = StringLiteral_1/*""*/;
   this->fields.realFolder = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.realFolder, v6, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.realFolder, v6, v7, v8);
   this->fields.frameNumber = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -37,37 +37,31 @@ void ScreenShot__Start(ScreenShot_o *this, const MethodInfo *method)
   sortValue0 = v2->fields.sortValue0;
   v2->fields.sortValue1 = sortValue0;
   v2 = (CGThumbnailListItem_o *)((char *)v2 + 48);
-  sub_1C3E508(v2, sortValue0, v4, v5);
+  sub_1C6B9AC(v2, sortValue0, v4, v5);
   System_IO_Directory__CreateDirectory((System_String_o *)v2->klass, 0);
 }
 
 
 void ScreenShot__Update(ScreenShot_o *this, const MethodInfo *method)
 {
-  __int64 v3; // x2
-  __int64 v4; // x3
-  __int64 v5; // x4
-  __int64 v6; // x5
-  __int64 v7; // x6
-  __int64 v8; // x7
   Il2CppObject *realFolder; // x20
-  Il2CppObject *v10; // x0
-  System_String_o *v11; // x0
+  Il2CppObject *v4; // x0
+  System_String_o *v5; // x0
   int32_t frameNumber; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C58E62 & 1) == 0 )
+  if ( (byte_4CB83E2 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&StringLiteral_25173/*"{0}/s{1:D04}.png"*/);
-    byte_4C58E62 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25263/*"{0}/s{1:D04}.png"*/);
+    byte_4CB83E2 = 1;
   }
   if ( UnityEngine_Time__get_time(0) > this->fields.waitTime )
   {
     realFolder = (Il2CppObject *)this->fields.realFolder;
     frameNumber = this->fields.frameNumber;
-    v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &frameNumber, v3, v4, v5, v6, v7, v8);
-    v11 = System_String__Format_63677760((System_String_o *)StringLiteral_25173/*"{0}/s{1:D04}.png"*/, realFolder, v10, 0);
+    v4 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &frameNumber);
+    v5 = System_String__Format_64008100((System_String_o *)StringLiteral_25263/*"{0}/s{1:D04}.png"*/, realFolder, v4, 0);
     ++this->fields.frameNumber;
-    UnityEngine_ScreenCapture__CaptureScreenshot(v11, 0);
+    UnityEngine_ScreenCapture__CaptureScreenshot(v5, 0);
   }
 }

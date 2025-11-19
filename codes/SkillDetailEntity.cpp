@@ -1,13 +1,13 @@
 void SkillDetailEntity___ctor(SkillDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C578E1 & 1) == 0 )
+  if ( (byte_4CB6E4E & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_int___ctor__);
-    byte_4C578E1 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_int___ctor__);
+    byte_4CB6E4E = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_33B0A74 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_33F6BF8 *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -21,10 +21,10 @@ System_String_o *SkillDetailEntity__getDetail(SkillDetailEntity_o *this, const M
 {
   System_String_o *detail; // x19
 
-  if ( (byte_4C578DF & 1) == 0 )
+  if ( (byte_4CB6E4C & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C578DF = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB6E4C = 1;
   }
   detail = this->fields.detail;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -37,10 +37,10 @@ System_String_o *SkillDetailEntity__getDetailShort(SkillDetailEntity_o *this, co
 {
   System_String_o *detailShort; // x19
 
-  if ( (byte_4C578E0 & 1) == 0 )
+  if ( (byte_4CB6E4D & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    byte_4C578E0 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    byte_4CB6E4D = 1;
   }
   detailShort = this->fields.detailShort;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )

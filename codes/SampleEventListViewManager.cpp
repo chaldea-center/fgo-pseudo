@@ -18,11 +18,11 @@ void SampleEventListViewManager__CreateList(SampleEventListViewManager_o *this, 
   __int64 size; // x10
   Il2CppClass **v15; // x8
 
-  if ( (byte_4C5452D & 1) == 0 )
+  if ( (byte_4CB3A7F & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C3E564(&SampleEventListViewItem_TypeInfo);
-    byte_4C5452D = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C6BA08(&SampleEventListViewItem_TypeInfo);
+    byte_4CB3A7F = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, sum, 0);
   if ( sum >= 1 )
@@ -30,7 +30,7 @@ void SampleEventListViewManager__CreateList(SampleEventListViewManager_o *this, 
     v5 = 0;
     do
     {
-      v6 = (SampleEventListViewItem_o *)sub_1C3E7B0(SampleEventListViewItem_TypeInfo);
+      v6 = (SampleEventListViewItem_o *)sub_1C6BC54(SampleEventListViewItem_TypeInfo);
       SampleEventListViewItem___ctor(v6, v5, v7);
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
       if ( !itemList
@@ -39,7 +39,7 @@ void SampleEventListViewManager__CreateList(SampleEventListViewManager_o *this, 
             ++itemList->fields._version,
             !items) )
       {
-        sub_1C3E7C0(itemList, v8);
+        sub_1C6BC60(itemList, v8);
       }
       size = itemList->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -47,14 +47,14 @@ void SampleEventListViewManager__CreateList(SampleEventListViewManager_o *this, 
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v6,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
       }
       else
       {
         v15 = &items->obj.klass + size;
         itemList->fields._size = size + 1;
         v15[4] = (Il2CppClass *)v6;
-        sub_1C3E508((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v6, v9, v10);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v6, v9, v10);
       }
       ++v5;
     }
@@ -78,11 +78,11 @@ SampleEventListViewItem_o *SampleEventListViewManager__GetItem(
   SampleEventListViewItem_o *result; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4C5452E & 1) == 0 )
+  if ( (byte_4CB3A80 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
-    sub_1C3E564(&SampleEventListViewItem_TypeInfo);
-    byte_4C5452E = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+    sub_1C6BA08(&SampleEventListViewItem_TypeInfo);
+    byte_4CB3A80 = 1;
   }
   result = (SampleEventListViewItem_o *)this->fields.itemList;
   if ( result )
@@ -90,7 +90,7 @@ SampleEventListViewItem_o *SampleEventListViewManager__GetItem(
     result = (SampleEventListViewItem_o *)System_Collections_Generic_List_object___get_Item(
                                             (System_Collections_Generic_List_object__o *)result,
                                             index,
-                                            (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
+                                            (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_ListViewItem__get_Item__);
     if ( result )
     {
       naturalAligment = SampleEventListViewItem_TypeInfo->_2.naturalAligment;
@@ -139,10 +139,10 @@ void SampleEventListViewManager__OnMoveEnd(SampleEventListViewManager_o *this, c
   struct UIScrollView_o *v10; // x0
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4C54533 & 1) == 0 )
+  if ( (byte_4CB3A85 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C54533 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB3A85 = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -159,7 +159,7 @@ void SampleEventListViewManager__OnMoveEnd(SampleEventListViewManager_o *this, c
       {
         v10 = this->fields.scrollView;
         if ( !v10 )
-          sub_1C3E7C0(0, v7);
+          sub_1C6BC60(0, v7);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v10->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v10,
           1,
@@ -169,7 +169,7 @@ void SampleEventListViewManager__OnMoveEnd(SampleEventListViewManager_o *this, c
       if ( callbackFunc )
       {
         this->fields.callbackFunc = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v8, v9);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v8, v9);
         ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
           callbackFunc->fields.method_code,
           callbackFunc->fields.method);
@@ -195,45 +195,45 @@ void SampleEventListViewManager__RequestListObject(
   const MethodInfo *v13; // x3
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C54531 & 1) == 0 )
+  if ( (byte_4CB3A83 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SampleEventListViewObject__GetEnumerator__);
-    sub_1C3E564(&Method_SampleEventListViewManager_OnMoveEnd__);
-    byte_4C54531 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SampleEventListViewObject__GetEnumerator__);
+    sub_1C6BA08(&Method_SampleEventListViewManager_OnMoveEnd__);
+    byte_4CB3A83 = 1;
   }
   memset(&v14, 0, sizeof(v14));
   ObjectList = (System_Collections_Generic_List_object__o *)SampleEventListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v14,
     ObjectList,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_SampleEventListViewObject__GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SampleEventListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v14,
-            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__MoveNext__) )
+            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__MoveNext__) )
   {
     current = v14.fields._current;
-    v10 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)this, Method_SampleEventListViewManager_OnMoveEnd__, 0);
     if ( !current )
-      sub_1C3E7C0(v11, v12);
-    SampleEventListViewObject__Init_37705476((SampleEventListViewObject_o *)current, mode, v10, delay, v13);
+      sub_1C6BC60(v11, v12);
+    SampleEventListViewObject__Init_37885532((SampleEventListViewObject_o *)current, mode, v10, delay, v13);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v14,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__Dispose__);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void SampleEventListViewManager__RequestListObject_37705576(
+void SampleEventListViewManager__RequestListObject_37885632(
         SampleEventListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -247,40 +247,40 @@ void SampleEventListViewManager__RequestListObject_37705576(
   const MethodInfo *v11; // x3
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C54532 & 1) == 0 )
+  if ( (byte_4CB3A84 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SampleEventListViewObject__GetEnumerator__);
-    sub_1C3E564(&Method_SampleEventListViewManager_OnMoveEnd__);
-    byte_4C54532 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SampleEventListViewObject__GetEnumerator__);
+    sub_1C6BA08(&Method_SampleEventListViewManager_OnMoveEnd__);
+    byte_4CB3A84 = 1;
   }
   memset(&v12, 0, sizeof(v12));
   ObjectList = (System_Collections_Generic_List_object__o *)SampleEventListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v12,
     ObjectList,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_SampleEventListViewObject__GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SampleEventListViewObject__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v12,
-            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__MoveNext__) )
+            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__MoveNext__) )
   {
     current = v12.fields._current;
-    v8 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v8 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v8, (Il2CppObject *)this, Method_SampleEventListViewManager_OnMoveEnd__, 0);
     if ( !current )
-      sub_1C3E7C0(v9, v10);
-    SampleEventListViewObject__Init_37706444((SampleEventListViewObject_o *)current, mode, v8, v11);
+      sub_1C6BC60(v9, v10);
+    SampleEventListViewObject__Init_37886500((SampleEventListViewObject_o *)current, mode, v8, v11);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v12,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SampleEventListViewObject__Dispose__);
 }
 
 
@@ -288,11 +288,11 @@ void SampleEventListViewManager__SetMode(SampleEventListViewManager_o *this, int
 {
   const MethodInfo *v3; // x3
 
-  SampleEventListViewManager__SetMode_37704960(this, mode, 0, v3);
+  SampleEventListViewManager__SetMode_37885016(this, mode, 0, v3);
 }
 
 
-void SampleEventListViewManager__SetMode_37704960(
+void SampleEventListViewManager__SetMode_37885016(
         SampleEventListViewManager_o *this,
         int32_t mode,
         System_Action_o *callback,
@@ -310,18 +310,18 @@ void SampleEventListViewManager__SetMode_37704960(
   System_Action_o *v16; // x23
   const MethodInfo *v17; // x3
 
-  if ( (byte_4C54530 & 1) == 0 )
+  if ( (byte_4CB3A82 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SampleEventListViewObject__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SampleEventListViewObject__get_Item__);
-    sub_1C3E564(&Method_SampleEventListViewManager_OnMoveEnd__);
-    sub_1C3E564(&StringLiteral_9942/*"OnMoveEnd"*/);
-    byte_4C54530 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SampleEventListViewObject__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SampleEventListViewObject__get_Item__);
+    sub_1C6BA08(&Method_SampleEventListViewManager_OnMoveEnd__);
+    sub_1C6BA08(&StringLiteral_9938/*"OnMoveEnd"*/);
+    byte_4CB3A82 = 1;
   }
   this->fields.initMode = mode;
   this->fields.callbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)callback, method);
   this->fields.callbackCount = ListViewManager__get_ObjectSum((ListViewManager_o *)this, 0);
   ListViewManager__set_IsInput((ListViewManager_o *)this, mode == 2, 0);
   if ( mode == 1 )
@@ -338,7 +338,7 @@ void SampleEventListViewManager__SetMode_37704960(
       this->fields.callbackCount = 1;
       UnityEngine_MonoBehaviour__Invoke(
         (UnityEngine_MonoBehaviour_o *)this,
-        (System_String_o *)StringLiteral_9942/*"OnMoveEnd"*/,
+        (System_String_o *)StringLiteral_9938/*"OnMoveEnd"*/,
         0.0,
         0);
     }
@@ -350,23 +350,23 @@ void SampleEventListViewManager__SetMode_37704960(
         Item = System_Collections_Generic_List_object___get_Item(
                  v12,
                  v14,
-                 (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_SampleEventListViewObject__get_Item__);
-        v16 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+                 (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SampleEventListViewObject__get_Item__);
+        v16 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
         System_Action___ctor(v16, (Il2CppObject *)this, Method_SampleEventListViewManager_OnMoveEnd__, 0);
         if ( !Item )
           break;
-        SampleEventListViewObject__Init_37705476((SampleEventListViewObject_o *)Item, 4, v16, (float)++v14 * 0.1, v17);
+        SampleEventListViewObject__Init_37885532((SampleEventListViewObject_o *)Item, 4, v16, (float)++v14 * 0.1, v17);
         if ( v14 >= v12->fields._size )
           return;
       }
 LABEL_15:
-      sub_1C3E7C0(ClippingObjectList, v10);
+      sub_1C6BC60(ClippingObjectList, v10);
     }
   }
   else if ( mode == 2 )
   {
     this->fields.callbackCount = 0;
-    SampleEventListViewManager__RequestListObject_37705576(this, 5, v8);
+    SampleEventListViewManager__RequestListObject_37885632(this, 5, v8);
   }
 }
 
@@ -382,23 +382,23 @@ void SampleEventListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4C5452F & 1) == 0 )
+  if ( (byte_4CB3A81 & 1) == 0 )
   {
-    this = (SampleEventListViewManager_o *)sub_1C3E564(&SampleEventListViewObject_TypeInfo);
-    byte_4C5452F = 1;
+    this = (SampleEventListViewManager_o *)sub_1C6BA08(&SampleEventListViewObject_TypeInfo);
+    byte_4CB3A81 = 1;
   }
   if ( !obj
     || (naturalAligment = SampleEventListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (SampleEventListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != SampleEventListViewObject_TypeInfo )
   {
-    sub_1C3E7C0(this, obj);
+    sub_1C6BC60(this, obj);
   }
   if ( v5->fields.initMode == 2 )
     v7 = 5;
   else
     v7 = 2;
-  SampleEventListViewObject__Init_37704876((SampleEventListViewObject_o *)obj, v7, (const MethodInfo *)item);
+  SampleEventListViewObject__Init_37884932((SampleEventListViewObject_o *)obj, v7, (const MethodInfo *)item);
 }
 
 
@@ -416,10 +416,10 @@ void SampleEventListViewManager__add_callbackFunc(
   System_Action_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4C54529 & 1) == 0 )
+  if ( (byte_4CB3A7B & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C54529 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB3A7B = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -431,13 +431,13 @@ void SampleEventListViewManager__add_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C787BC(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1CC77DC(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C3EA80(v7);
+  sub_1C6BFFC(v7);
   SampleEventListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -468,35 +468,35 @@ System_Collections_Generic_List_SampleEventListViewObject__o *SampleEventListVie
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v24; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4C5452C & 1) == 0 )
+  if ( (byte_4CB3A7E & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_SampleEventListViewObject___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SampleEventListViewObject__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SampleEventListViewObject___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_SampleEventListViewObject__TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5452C = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SampleEventListViewObject___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SampleEventListViewObject__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SampleEventListViewObject___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_SampleEventListViewObject__TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB3A7E = 1;
   }
   memset(&v24, 0, sizeof(v24));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_SampleEventListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SampleEventListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_SampleEventListViewObject___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SampleEventListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v23,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v24 = v23;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v24,
-            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v24.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -505,28 +505,28 @@ System_Collections_Generic_List_SampleEventListViewObject__o *SampleEventListVie
     if ( v7 )
     {
       if ( !current )
-        sub_1C3E7C0(v7, v8);
+        sub_1C6BC60(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_SampleEventListViewObject___);
+                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SampleEventListViewObject___);
       v11 = Component_object;
       if ( !Component_object )
-        sub_1C3E7C0(0, v10);
+        sub_1C6BC60(0, v10);
       Item = (ListViewItem_o *)SampleEventListViewObject__GetItem((SampleEventListViewObject_o *)Component_object, v10);
       if ( !Item )
-        sub_1C3E7C0(0, v13);
+        sub_1C6BC60(0, v13);
       if ( Item->fields.isTermination )
       {
-        v16 = ListViewManager__ClippingItem_43876032((ListViewManager_o *)this, Item, 0);
+        v16 = ListViewManager__ClippingItem_44066648((ListViewManager_o *)this, Item, 0);
         if ( v16 )
         {
           if ( !v3 )
-            sub_1C3E7C0(v16, v17);
+            sub_1C6BC60(v16, v17);
           items = v3->fields._items;
           v19 = Method_System_Collections_Generic_List_SampleEventListViewObject__Add__;
           ++v3->fields._version;
           if ( !items )
-            sub_1C3E7C0(v16, v17);
+            sub_1C6BC60(v16, v17);
           size = v3->fields._size;
           if ( (unsigned int)size < LODWORD(items->max_length) )
             goto LABEL_17;
@@ -534,18 +534,18 @@ LABEL_21:
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             v11,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
         }
       }
       else
       {
         if ( !v3 )
-          sub_1C3E7C0(Item, v13);
+          sub_1C6BC60(Item, v13);
         items = v3->fields._items;
         v19 = Method_System_Collections_Generic_List_SampleEventListViewObject__Add__;
         ++v3->fields._version;
         if ( !items )
-          sub_1C3E7C0(Item, v13);
+          sub_1C6BC60(Item, v13);
         size = v3->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
           goto LABEL_21;
@@ -553,13 +553,13 @@ LABEL_17:
         v21 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v21[4] = (Il2CppClass *)v11;
-        sub_1C3E508((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v11, v14, v15);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v11, v14, v15);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v24,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_SampleEventListViewObject__o *)v3;
 }
 
@@ -585,35 +585,35 @@ System_Collections_Generic_List_SampleEventListViewObject__o *SampleEventListVie
   System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C5452B & 1) == 0 )
+  if ( (byte_4CB3A7D & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_SampleEventListViewObject___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SampleEventListViewObject__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_SampleEventListViewObject___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_SampleEventListViewObject__TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5452B = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SampleEventListViewObject___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SampleEventListViewObject__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_SampleEventListViewObject___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_SampleEventListViewObject__TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB3A7D = 1;
   }
   memset(&v19, 0, sizeof(v19));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_SampleEventListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SampleEventListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_SampleEventListViewObject___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SampleEventListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v18,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v19 = v18;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v19,
-            (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v19.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -622,38 +622,38 @@ System_Collections_Generic_List_SampleEventListViewObject__o *SampleEventListVie
     if ( v7 )
     {
       if ( !current )
-        sub_1C3E7C0(v7, v8);
+        sub_1C6BC60(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_SampleEventListViewObject___);
+                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SampleEventListViewObject___);
       v12 = Component_object;
       if ( !v3 )
-        sub_1C3E7C0(Component_object, Component_object);
+        sub_1C6BC60(Component_object, Component_object);
       items = v3->fields._items;
       v14 = Method_System_Collections_Generic_List_SampleEventListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C3E7C0(Component_object, Component_object);
+        sub_1C6BC60(Component_object, Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
       }
       else
       {
         v16 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v16[4] = (Il2CppClass *)v12;
-        sub_1C3E508((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v12, v10, v11);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v16 + 4), (int32_t)v12, v10, v11);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v19,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_SampleEventListViewObject__o *)v3;
 }
 
@@ -671,10 +671,10 @@ void SampleEventListViewManager__remove_callbackFunc(
   SampleEventListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C5452A & 1) == 0 )
+  if ( (byte_4CB3A7C & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C5452A = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB3A7C = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -686,12 +686,12 @@ void SampleEventListViewManager__remove_callbackFunc(
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo )
         break;
     }
-    v8 = sub_1C787BC(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1CC77DC(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  sub_1C3EA80(v7);
+  sub_1C6BFFC(v7);
   SampleEventListViewManager__get_ObjectList(v10, v11);
 }

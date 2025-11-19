@@ -17,10 +17,10 @@ BattleLogicTask_array *ReactTaskTargetNpc__CreateReactionTasksPartial(
   __int64 v10; // x1
   const MethodInfo *v11; // x2
 
-  if ( (byte_4C59FF1 & 1) == 0 )
+  if ( (byte_4CB95B1 & 1) == 0 )
   {
-    sub_1C3E564(&BattleLogicTask___TypeInfo);
-    byte_4C59FF1 = 1;
+    sub_1C6BA08(&BattleLogicTask___TypeInfo);
+    byte_4CB95B1 = 1;
   }
   logicNpcAi = (BattleLogicNpcAi_o *)((__int64 (__fastcall *)(ReactTaskTargetNpc_o *, ServantReactTaskCreator_o *, BattleLogic_o *, _QWORD, const MethodInfo *))this->klass->vtable._7_ExistTargetPriority.methodPtr)(
                                        this,
@@ -29,9 +29,9 @@ BattleLogicTask_array *ReactTaskTargetNpc__CreateReactionTasksPartial(
                                        (unsigned int)priority,
                                        this->klass->vtable._7_ExistTargetPriority.method);
   if ( ((unsigned __int8)logicNpcAi & 1) == 0 )
-    return (BattleLogicTask_array *)sub_1C3E60C(BattleLogicTask___TypeInfo, 0);
+    return (BattleLogicTask_array *)sub_1C6BAB0(BattleLogicTask___TypeInfo, 0);
   if ( !logic || !creator || (logicNpcAi = logic->fields.logicNpcAi) == 0 )
-    sub_1C3E7C0(logicNpcAi, v10);
+    sub_1C6BC60(logicNpcAi, v10);
   return BattleLogicNpcAi__MakeAiCheckTask(logicNpcAi, creator->fields._ProcState_k__BackingField, v11);
 }
 
@@ -55,30 +55,30 @@ bool ReactTaskTargetNpc__ExistTargetPriority(
   System_Collections_Generic_List_T__o *v17; // x19
   System_Func_object__bool__o *v18; // x20
 
-  if ( (byte_4C59FF2 & 1) == 0 )
+  if ( (byte_4CB95B2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_BasicHelper_Any_AiNpcBattleServantData___);
-    sub_1C3E564(&System_Func_AiNpcBattleServantData__bool__TypeInfo);
-    sub_1C3E564(&Method_ReactTaskTargetNpc___c__DisplayClass1_0__ExistTargetPriority_b__0__);
-    sub_1C3E564(&ReactTaskTargetNpc___c__DisplayClass1_0_TypeInfo);
-    byte_4C59FF2 = 1;
+    sub_1C6BA08(&Method_BasicHelper_Any_AiNpcBattleServantData___);
+    sub_1C6BA08(&System_Func_AiNpcBattleServantData__bool__TypeInfo);
+    sub_1C6BA08(&Method_ReactTaskTargetNpc___c__DisplayClass1_0__ExistTargetPriority_b__0__);
+    sub_1C6BA08(&ReactTaskTargetNpc___c__DisplayClass1_0_TypeInfo);
+    byte_4CB95B2 = 1;
   }
-  v8 = sub_1C3E7B0(ReactTaskTargetNpc___c__DisplayClass1_0_TypeInfo);
+  v8 = sub_1C6BC54(ReactTaskTargetNpc___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v8, 0);
   if ( !v8
     || (*(_QWORD *)(v8 + 16) = creator,
-        sub_1C3E508((CGThumbnailListItem_o *)(v8 + 16), (int32_t)creator, v11, v12),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v8 + 16), (int32_t)creator, v11, v12),
         *(_QWORD *)(v8 + 24) = logic,
-        sub_1C3E508((CGThumbnailListItem_o *)(v8 + 24), (int32_t)logic, v13, v14),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v8 + 24), (int32_t)logic, v13, v14),
         v15 = *(_QWORD *)(v8 + 24),
         *(_DWORD *)(v8 + 32) = priority,
         !v15)
     || (v16 = *(_QWORD *)(v15 + 40)) == 0 )
   {
-    sub_1C3E7C0(v9, v10);
+    sub_1C6BC60(v9, v10);
   }
   v17 = *(System_Collections_Generic_List_T__o **)(v16 + 144);
-  v18 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_AiNpcBattleServantData__bool__TypeInfo);
+  v18 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_AiNpcBattleServantData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v18,
     (Il2CppObject *)v8,
@@ -87,7 +87,7 @@ bool ReactTaskTargetNpc__ExistTargetPriority(
   return BasicHelper__Any_object_(
            v17,
            (System_Func_T__bool__o *)v18,
-           (const MethodInfo_30E2E10 *)Method_BasicHelper_Any_AiNpcBattleServantData___);
+           (const MethodInfo_3124430 *)Method_BasicHelper_Any_AiNpcBattleServantData___);
 }
 
 
@@ -108,7 +108,7 @@ bool ReactTaskTargetNpc___c__DisplayClass1_0___ExistTargetPriority_b__0(
 
   creator = this->fields.creator;
   if ( !creator )
-    sub_1C3E7C0(0, svt);
+    sub_1C6BC60(0, svt);
   return ((__int64 (__fastcall *)(struct ServantReactTaskCreator_o *, struct BattleLogic_o *, AiNpcBattleServantData_o *, _QWORD, const MethodInfo *))creator->klass->vtable._7_IsCreatable.methodPtr)(
            creator,
            this->fields.logic,

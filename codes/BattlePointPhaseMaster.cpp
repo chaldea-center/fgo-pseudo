@@ -1,14 +1,14 @@
 void BattlePointPhaseMaster___ctor(BattlePointPhaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C569A9 & 1) == 0 )
+  if ( (byte_4CB5F0B & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string___ctor__);
-    byte_4C569A9 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string___ctor__);
+    byte_4CB5F0B = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     512,
-    (const MethodInfo_33B56EC *)Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string___ctor__);
+    (const MethodInfo_33FB870 *)Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string___ctor__);
 }
 
 
@@ -36,7 +36,7 @@ int32_t BattlePointPhaseMaster__GetEffectNum(
   if ( !v8 )
     return 0;
   if ( !entitya )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   v10 = (entitya->fields.value - entity->fields.value) / effectNumPerPhase;
   if ( v10 >= 1 )
     return changeValue / v10;
@@ -53,16 +53,16 @@ BattlePointPhaseEntity_o *BattlePointPhaseMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C569AA & 1) == 0 )
+  if ( (byte_4CB5F0C & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string__GetEntity__);
-    byte_4C569AA = 1;
+    sub_1C6BA08(&Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string__GetEntity__);
+    byte_4CB5F0C = 1;
   }
   PK = (Il2CppObject *)BattlePointPhaseEntity__CreatePK(battlePointId, phase, 0);
   return (BattlePointPhaseEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                        (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                        PK,
-                                       (const MethodInfo_33B7A10 *)Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string__GetEntity__);
+                                       (const MethodInfo_33FDB94 *)Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string__GetEntity__);
 }
 
 
@@ -93,25 +93,25 @@ System_Collections_Generic_List_BattlePointPhaseEntity__o *BattlePointPhaseMaste
   System_Func_object__bool__o *v9; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
 
-  if ( (byte_4C569A5 & 1) == 0 )
+  if ( (byte_4CB5F07 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_OfType_BattlePointPhaseEntity___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToList_BattlePointPhaseEntity___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Where_BattlePointPhaseEntity___);
-    sub_1C3E564(&System_Func_BattlePointPhaseEntity__bool__TypeInfo);
-    sub_1C3E564(&Method_BattlePointPhaseMaster___c__DisplayClass1_0__GetEntityList_b__0__);
-    sub_1C3E564(&BattlePointPhaseMaster___c__DisplayClass1_0_TypeInfo);
-    byte_4C569A5 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_OfType_BattlePointPhaseEntity___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_BattlePointPhaseEntity___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_BattlePointPhaseEntity___);
+    sub_1C6BA08(&System_Func_BattlePointPhaseEntity__bool__TypeInfo);
+    sub_1C6BA08(&Method_BattlePointPhaseMaster___c__DisplayClass1_0__GetEntityList_b__0__);
+    sub_1C6BA08(&BattlePointPhaseMaster___c__DisplayClass1_0_TypeInfo);
+    byte_4CB5F07 = 1;
   }
-  v5 = sub_1C3E7B0(BattlePointPhaseMaster___c__DisplayClass1_0_TypeInfo);
+  v5 = sub_1C6BC54(BattlePointPhaseMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   *(_DWORD *)(v5 + 16) = battlePointId;
   v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                               (System_Collections_IEnumerable_o *)this->fields.list,
-                                                              (const MethodInfo_3128D28 *)Method_System_Linq_Enumerable_OfType_BattlePointPhaseEntity___);
-  v9 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_BattlePointPhaseEntity__bool__TypeInfo);
+                                                              (const MethodInfo_316A620 *)Method_System_Linq_Enumerable_OfType_BattlePointPhaseEntity___);
+  v9 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_BattlePointPhaseEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -120,10 +120,10 @@ System_Collections_Generic_List_BattlePointPhaseEntity__o *BattlePointPhaseMaste
   v10 = System_Linq_Enumerable__Where_object_(
           v8,
           (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_BattlePointPhaseEntity___);
+          (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_BattlePointPhaseEntity___);
   return (System_Collections_Generic_List_BattlePointPhaseEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                         v10,
-                                                                        (const MethodInfo_313DE84 *)Method_System_Linq_Enumerable_ToList_BattlePointPhaseEntity___);
+                                                                        (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_BattlePointPhaseEntity___);
 }
 
 
@@ -142,18 +142,18 @@ int32_t BattlePointPhaseMaster__GetMaxPhase(
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C569A8 & 1) == 0 )
+  if ( (byte_4CB5F0A & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Max_BattlePointPhaseEntity___);
-    sub_1C3E564(&System_Func_BattlePointPhaseEntity__int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattlePointPhaseEntity__get_Count__);
-    sub_1C3E564(&Method_BattlePointPhaseMaster___c__GetMaxPhase_b__4_0__);
-    sub_1C3E564(&BattlePointPhaseMaster___c_TypeInfo);
-    byte_4C569A8 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Max_BattlePointPhaseEntity___);
+    sub_1C6BA08(&System_Func_BattlePointPhaseEntity__int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattlePointPhaseEntity__get_Count__);
+    sub_1C6BA08(&Method_BattlePointPhaseMaster___c__GetMaxPhase_b__4_0__);
+    sub_1C6BA08(&BattlePointPhaseMaster___c_TypeInfo);
+    byte_4CB5F0A = 1;
   }
   EntityList = BattlePointPhaseMaster__GetEntityList(this, battlePointId, method);
   if ( !EntityList )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)EntityList;
   if ( EntityList->fields._size < 1 )
     return 0x7FFFFFFF;
@@ -172,16 +172,16 @@ int32_t BattlePointPhaseMaster__GetMaxPhase(
       v8 = BattlePointPhaseMaster___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v8->static_fields->__9;
-    _9__4_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_BattlePointPhaseEntity__int__TypeInfo);
+    _9__4_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_BattlePointPhaseEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__4_0, v10, Method_BattlePointPhaseMaster___c__GetMaxPhase_b__4_0__, 0);
     static_fields = BattlePointPhaseMaster___c_TypeInfo->static_fields;
     static_fields->__9__4_0 = (struct System_Func_BattlePointPhaseEntity__int__o *)_9__4_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__4_0, (int32_t)_9__4_0, v12, v13);
   }
   return System_Linq_Enumerable__Max_object_(
            v7,
            (System_Func_TSource__int__o *)_9__4_0,
-           (const MethodInfo_3127E7C *)Method_System_Linq_Enumerable_Max_BattlePointPhaseEntity___);
+           (const MethodInfo_3169774 *)Method_System_Linq_Enumerable_Max_BattlePointPhaseEntity___);
 }
 
 
@@ -200,18 +200,18 @@ int32_t BattlePointPhaseMaster__GetMaxPhaseValue(
   int32_t v12; // w2
   const MethodInfo *v13; // x3
 
-  if ( (byte_4C569A7 & 1) == 0 )
+  if ( (byte_4CB5F09 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Max_BattlePointPhaseEntity___);
-    sub_1C3E564(&System_Func_BattlePointPhaseEntity__int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattlePointPhaseEntity__get_Count__);
-    sub_1C3E564(&Method_BattlePointPhaseMaster___c__GetMaxPhaseValue_b__3_0__);
-    sub_1C3E564(&BattlePointPhaseMaster___c_TypeInfo);
-    byte_4C569A7 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Max_BattlePointPhaseEntity___);
+    sub_1C6BA08(&System_Func_BattlePointPhaseEntity__int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattlePointPhaseEntity__get_Count__);
+    sub_1C6BA08(&Method_BattlePointPhaseMaster___c__GetMaxPhaseValue_b__3_0__);
+    sub_1C6BA08(&BattlePointPhaseMaster___c_TypeInfo);
+    byte_4CB5F09 = 1;
   }
   EntityList = BattlePointPhaseMaster__GetEntityList(this, battlePointId, method);
   if ( !EntityList )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   v7 = (System_Collections_Generic_IEnumerable_TSource__o *)EntityList;
   if ( EntityList->fields._size < 1 )
     return 0x7FFFFFFF;
@@ -230,16 +230,16 @@ int32_t BattlePointPhaseMaster__GetMaxPhaseValue(
       v8 = BattlePointPhaseMaster___c_TypeInfo;
     }
     v10 = (Il2CppObject *)v8->static_fields->__9;
-    _9__3_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_BattlePointPhaseEntity__int__TypeInfo);
+    _9__3_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_BattlePointPhaseEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__3_0, v10, Method_BattlePointPhaseMaster___c__GetMaxPhaseValue_b__3_0__, 0);
     static_fields = BattlePointPhaseMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_BattlePointPhaseEntity__int__o *)_9__3_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v12, v13);
   }
   return System_Linq_Enumerable__Max_object_(
            v7,
            (System_Func_TSource__int__o *)_9__3_0,
-           (const MethodInfo_3127E7C *)Method_System_Linq_Enumerable_Max_BattlePointPhaseEntity___);
+           (const MethodInfo_3169774 *)Method_System_Linq_Enumerable_Max_BattlePointPhaseEntity___);
 }
 
 
@@ -268,7 +268,7 @@ bool BattlePointPhaseMaster__IsEffectIdChanged(
 }
 
 
-bool BattlePointPhaseMaster__IsEffectIdChanged_41852636(
+bool BattlePointPhaseMaster__IsEffectIdChanged_42039420(
         BattlePointPhaseMaster_o *this,
         BattlePointPhaseEntity_o *oldEntity,
         BattlePointPhaseEntity_o *newEntity,
@@ -309,7 +309,7 @@ bool BattlePointPhaseMaster__IsPhaseChanged(
 }
 
 
-bool BattlePointPhaseMaster__IsPhaseChanged_41852444(
+bool BattlePointPhaseMaster__IsPhaseChanged_42039228(
         BattlePointPhaseMaster_o *this,
         BattlePointPhaseEntity_o *oldEntity,
         BattlePointPhaseEntity_o *newEntity,
@@ -334,17 +334,17 @@ bool BattlePointPhaseMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C569AB & 1) == 0 )
+  if ( (byte_4CB5F0D & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string__TryGetEntity__);
-    byte_4C569AB = 1;
+    sub_1C6BA08(&Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string__TryGetEntity__);
+    byte_4CB5F0D = 1;
   }
   PK = (Il2CppObject *)BattlePointPhaseEntity__CreatePK(battlePointId, phase, 0);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33B7A5C *)Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string__TryGetEntity__);
+           (const MethodInfo_33FDBE0 *)Method_DataMasterBase_BattlePointPhaseMaster__BattlePointPhaseEntity__string__TryGetEntity__);
 }
 
 
@@ -391,20 +391,20 @@ bool BattlePointPhaseMaster__TryGetEntityByValue(
   int *v42; // x10
   __int64 v43; // x0
 
-  if ( (byte_4C569A6 & 1) == 0 )
+  if ( (byte_4CB5F08 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_OrderByDescending_BattlePointPhaseEntity__int___);
-    sub_1C3E564(&System_Func_BattlePointPhaseEntity__int__TypeInfo);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerable_BattlePointPhaseEntity__TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_BattlePointPhaseEntity__TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C3E564(&Method_BattlePointPhaseMaster___c__TryGetEntityByValue_b__2_0__);
-    sub_1C3E564(&BattlePointPhaseMaster___c_TypeInfo);
-    byte_4C569A6 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_OrderByDescending_BattlePointPhaseEntity__int___);
+    sub_1C6BA08(&System_Func_BattlePointPhaseEntity__int__TypeInfo);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerable_BattlePointPhaseEntity__TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_BattlePointPhaseEntity__TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C6BA08(&Method_BattlePointPhaseMaster___c__TryGetEntityByValue_b__2_0__);
+    sub_1C6BA08(&BattlePointPhaseMaster___c_TypeInfo);
+    byte_4CB5F08 = 1;
   }
   *entity = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)entity, 0, value, (const MethodInfo *)entity);
+  sub_1C6B9AC((CGThumbnailListItem_o *)entity, 0, value, (const MethodInfo *)entity);
   EntityList = BattlePointPhaseMaster__GetEntityList(this, battlePointId, v9);
   v11 = BattlePointPhaseMaster___c_TypeInfo;
   v12 = (System_Collections_Generic_IEnumerable_TSource__o *)EntityList;
@@ -422,18 +422,18 @@ bool BattlePointPhaseMaster__TryGetEntityByValue(
       v11 = BattlePointPhaseMaster___c_TypeInfo;
     }
     v14 = (Il2CppObject *)v11->static_fields->__9;
-    _9__2_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_BattlePointPhaseEntity__int__TypeInfo);
+    _9__2_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_BattlePointPhaseEntity__int__TypeInfo);
     System_Func_object__int____ctor(_9__2_0, v14, Method_BattlePointPhaseMaster___c__TryGetEntityByValue_b__2_0__, 0);
     static_fields = BattlePointPhaseMaster___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = (struct System_Func_BattlePointPhaseEntity__int__o *)_9__2_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v16, v17);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v16, v17);
   }
   v18 = System_Linq_Enumerable__OrderByDescending_object__int_(
           v12,
           (System_Func_TSource__TKey__o *)_9__2_0,
-          (const MethodInfo_3129820 *)Method_System_Linq_Enumerable_OrderByDescending_BattlePointPhaseEntity__int___);
+          (const MethodInfo_316B118 *)Method_System_Linq_Enumerable_OrderByDescending_BattlePointPhaseEntity__int___);
   if ( !v18 )
-    sub_1C3E7C0(0, v19);
+    sub_1C6BC60(0, v19);
   klass = v18->klass;
   v21 = v18;
   v22 = *(unsigned __int16 *)&v18->klass->_2.rank;
@@ -452,11 +452,11 @@ bool BattlePointPhaseMaster__TryGetEntityByValue(
   else
   {
 LABEL_14:
-    v24 = sub_1C8ED7C(v18, System_Collections_Generic_IEnumerable_BattlePointPhaseEntity__TypeInfo, 0);
+    v24 = sub_1C41D90(v18, System_Collections_Generic_IEnumerable_BattlePointPhaseEntity__TypeInfo, 0);
   }
   v26 = (*(__int64 (__fastcall **)(System_Linq_IOrderedEnumerable_TSource__o *, _QWORD))v24)(v21, *(_QWORD *)(v24 + 8));
   if ( !v26 )
-    sub_1C3E7C0(0, v25);
+    sub_1C6BC60(0, v25);
   while ( 1 )
   {
     v27 = *(_QWORD *)v26;
@@ -476,7 +476,7 @@ LABEL_14:
     else
     {
 LABEL_21:
-      v30 = sub_1C8ED7C(v26, System_Collections_IEnumerator_TypeInfo, 0);
+      v30 = sub_1C41D90(v26, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v30)(v26, *(_QWORD *)(v30 + 8)) & 1) == 0 )
       break;
@@ -497,15 +497,15 @@ LABEL_21:
     else
     {
 LABEL_28:
-      v34 = sub_1C8ED7C(v26, System_Collections_Generic_IEnumerator_BattlePointPhaseEntity__TypeInfo, 0);
+      v34 = sub_1C41D90(v26, System_Collections_Generic_IEnumerator_BattlePointPhaseEntity__TypeInfo, 0);
     }
     v35 = (BattlePointPhaseEntity_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v34)(v26, *(_QWORD *)(v34 + 8));
     if ( !v35 )
-      sub_1C3E7C0(0, v36);
+      sub_1C6BC60(0, v36);
     if ( v35->fields.value <= value )
     {
       *entity = v35;
-      sub_1C3E508((CGThumbnailListItem_o *)entity, (int32_t)v35, v37, v38);
+      sub_1C6B9AC((CGThumbnailListItem_o *)entity, (int32_t)v35, v37, v38);
       v39 = 1;
       goto LABEL_34;
     }
@@ -529,7 +529,7 @@ LABEL_34:
   else
   {
 LABEL_38:
-    v43 = sub_1C8ED7C(v26, System_IDisposable_TypeInfo, 0);
+    v43 = sub_1C41D90(v26, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v43)(v26, *(_QWORD *)(v43 + 8));
   return v39;
@@ -542,15 +542,15 @@ void BattlePointPhaseMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C569AC & 1) == 0 )
+  if ( (byte_4CB5F0E & 1) == 0 )
   {
-    sub_1C3E564(&BattlePointPhaseMaster___c_TypeInfo);
-    byte_4C569AC = 1;
+    sub_1C6BA08(&BattlePointPhaseMaster___c_TypeInfo);
+    byte_4CB5F0E = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(BattlePointPhaseMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(BattlePointPhaseMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattlePointPhaseMaster___c_TypeInfo->static_fields->__9 = (struct BattlePointPhaseMaster___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)BattlePointPhaseMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)BattlePointPhaseMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -566,7 +566,7 @@ int32_t BattlePointPhaseMaster___c___GetMaxPhaseValue_b__3_0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return e->fields.value;
 }
 
@@ -577,7 +577,7 @@ int32_t BattlePointPhaseMaster___c___GetMaxPhase_b__4_0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return e->fields.phase;
 }
 
@@ -588,7 +588,7 @@ int32_t BattlePointPhaseMaster___c___TryGetEntityByValue_b__2_0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return e->fields.value;
 }
 
@@ -607,6 +607,6 @@ bool BattlePointPhaseMaster___c__DisplayClass1_0___GetEntityList_b__0(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return e->fields.battlePointId == this->fields.battlePointId;
 }

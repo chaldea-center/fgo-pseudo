@@ -19,34 +19,34 @@ void ClassBoardUtility___cctor(const MethodInfo *method)
   int32_t v17; // w2
   const MethodInfo *v18; // x3
 
-  if ( (byte_4C5A99A & 1) == 0 )
+  if ( (byte_4CB9F6E & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&StringLiteral_12615/*"SavePlayedClassBoardBaseRelease"*/);
-    sub_1C3E564(&StringLiteral_12616/*"SavePlayedExClassRelease"*/);
-    sub_1C3E564(&StringLiteral_23545/*"skill_{0:D5}"*/);
-    sub_1C3E564(&StringLiteral_12617/*"SavePlayedGrandExClassRelease"*/);
-    sub_1C3E564(&StringLiteral_18407/*"cs_{0:D4}{1}"*/);
-    byte_4C5A99A = 1;
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&StringLiteral_12611/*"SavePlayedClassBoardBaseRelease"*/);
+    sub_1C6BA08(&StringLiteral_12612/*"SavePlayedExClassRelease"*/);
+    sub_1C6BA08(&StringLiteral_23617/*"skill_{0:D5}"*/);
+    sub_1C6BA08(&StringLiteral_12613/*"SavePlayedGrandExClassRelease"*/);
+    sub_1C6BA08(&StringLiteral_18420/*"cs_{0:D4}{1}"*/);
+    byte_4CB9F6E = 1;
   }
-  ClassBoardUtility_TypeInfo->static_fields->commandSpellIconFormat = (struct System_String_o *)StringLiteral_18407/*"cs_{0:D4}{1}"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)ClassBoardUtility_TypeInfo->static_fields, StringLiteral_18407/*"cs_{0:D4}{1}"*/, v1, v2);
-  v3 = StringLiteral_23545/*"skill_{0:D5}"*/;
+  ClassBoardUtility_TypeInfo->static_fields->commandSpellIconFormat = (struct System_String_o *)StringLiteral_18420/*"cs_{0:D4}{1}"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)ClassBoardUtility_TypeInfo->static_fields, StringLiteral_18420/*"cs_{0:D4}{1}"*/, v1, v2);
+  v3 = StringLiteral_23617/*"skill_{0:D5}"*/;
   static_fields = ClassBoardUtility_TypeInfo->static_fields;
-  static_fields->passiveSkillIconFormat = (struct System_String_o *)StringLiteral_23545/*"skill_{0:D5}"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->passiveSkillIconFormat, v3, v5, v6);
-  v7 = StringLiteral_12615/*"SavePlayedClassBoardBaseRelease"*/;
+  static_fields->passiveSkillIconFormat = (struct System_String_o *)StringLiteral_23617/*"skill_{0:D5}"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->passiveSkillIconFormat, v3, v5, v6);
+  v7 = StringLiteral_12611/*"SavePlayedClassBoardBaseRelease"*/;
   v8 = ClassBoardUtility_TypeInfo->static_fields;
-  v8->savePlayedClassBoardBaseReleaseKey = (struct System_String_o *)StringLiteral_12615/*"SavePlayedClassBoardBaseRelease"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8->savePlayedClassBoardBaseReleaseKey, v7, v9, v10);
-  v11 = StringLiteral_12616/*"SavePlayedExClassRelease"*/;
+  v8->savePlayedClassBoardBaseReleaseKey = (struct System_String_o *)StringLiteral_12611/*"SavePlayedClassBoardBaseRelease"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->savePlayedClassBoardBaseReleaseKey, v7, v9, v10);
+  v11 = StringLiteral_12612/*"SavePlayedExClassRelease"*/;
   v12 = ClassBoardUtility_TypeInfo->static_fields;
-  v12->savePlayedExClassReleaseKey = (struct System_String_o *)StringLiteral_12616/*"SavePlayedExClassRelease"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v12->savePlayedExClassReleaseKey, v11, v13, v14);
-  v15 = StringLiteral_12617/*"SavePlayedGrandExClassRelease"*/;
+  v12->savePlayedExClassReleaseKey = (struct System_String_o *)StringLiteral_12612/*"SavePlayedExClassRelease"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->savePlayedExClassReleaseKey, v11, v13, v14);
+  v15 = StringLiteral_12613/*"SavePlayedGrandExClassRelease"*/;
   v16 = ClassBoardUtility_TypeInfo->static_fields;
-  v16->SavePlayedGrandExClassReleaseKey = (struct System_String_o *)StringLiteral_12617/*"SavePlayedGrandExClassRelease"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v16->SavePlayedGrandExClassReleaseKey, v15, v17, v18);
+  v16->SavePlayedGrandExClassReleaseKey = (struct System_String_o *)StringLiteral_12613/*"SavePlayedGrandExClassRelease"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v16->SavePlayedGrandExClassReleaseKey, v15, v17, v18);
 }
 
 
@@ -60,12 +60,12 @@ void ClassBoardUtility__FirstSavePlayedExClassReleaseEffect(const MethodInfo *me
   System_Int32_array *v6; // x19
   ClassBoardUtility_c *v7; // x0
 
-  if ( (byte_4C5A998 & 1) == 0 )
+  if ( (byte_4CB9F6C & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&int___TypeInfo);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C5A998 = 1;
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&int___TypeInfo);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB9F6C = 1;
   }
   v1 = ClassBoardUtility_TypeInfo;
   if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
@@ -93,12 +93,12 @@ void ClassBoardUtility__FirstSavePlayedExClassReleaseEffect(const MethodInfo *me
   }
   else
   {
-    v4 = sub_1C3E60C(int___TypeInfo, 1);
+    v4 = sub_1C6BAB0(int___TypeInfo, 1);
     if ( !v4 )
-      sub_1C3E7C0(0, v5);
+      sub_1C6BC60(0, v5);
     v6 = (System_Int32_array *)v4;
     if ( !*(_DWORD *)(v4 + 24) )
-      sub_1C3E7C8(v4, v5);
+      sub_1C6BC68(v4);
     *(_DWORD *)(v4 + 32) = 10;
     if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
@@ -112,61 +112,50 @@ System_String_o *ClassBoardUtility__GetClassBoardSkillIconName(
         int32_t skillType,
         const MethodInfo *method)
 {
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  ClassBoardUtility_c *v10; // x0
+  ClassBoardUtility_c *v5; // x0
   struct ClassBoardUtility_StaticFields *static_fields; // x8
   System_String_o *commandSpellIconFormat; // x20
-  Il2CppObject *v13; // x19
+  Il2CppObject *v8; // x19
   UserGameEntity_o *SelfUserGame; // x0
-  __int64 v15; // x1
-  __int64 v16; // x2
-  __int64 v17; // x3
-  __int64 v18; // x4
-  __int64 v19; // x5
-  __int64 v20; // x6
-  __int64 v21; // x7
-  Il2CppObject *v22; // x0
+  __int64 v10; // x1
+  Il2CppObject *v11; // x0
   System_String_o *passiveSkillIconFormat; // x20
-  Il2CppObject *v25; // x0
-  int32_t v26; // [xsp+Ch] [xbp-34h] BYREF
+  Il2CppObject *v14; // x0
+  int32_t v15; // [xsp+Ch] [xbp-34h] BYREF
   int32_t genderType; // [xsp+18h] [xbp-28h] BYREF
-  int32_t v28; // [xsp+1Ch] [xbp-24h] BYREF
+  int32_t v17; // [xsp+1Ch] [xbp-24h] BYREF
 
-  if ( (byte_4C5A991 & 1) == 0 )
+  if ( (byte_4CB9F65 & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&int_TypeInfo);
-    byte_4C5A991 = 1;
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&int_TypeInfo);
+    byte_4CB9F65 = 1;
   }
-  v10 = ClassBoardUtility_TypeInfo;
+  v5 = ClassBoardUtility_TypeInfo;
   if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
-    v10 = ClassBoardUtility_TypeInfo;
+    v5 = ClassBoardUtility_TypeInfo;
   }
-  static_fields = v10->static_fields;
+  static_fields = v5->static_fields;
   if ( skillType == 2 )
   {
     commandSpellIconFormat = static_fields->commandSpellIconFormat;
-    v28 = iconId;
-    v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28, method, v3, v4, v5, v6, v7);
+    v17 = iconId;
+    v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
     SelfUserGame = UserGameMaster__getSelfUserGame(0);
     if ( !SelfUserGame )
-      sub_1C3E7C0(0, v15);
+      sub_1C6BC60(0, v10);
     genderType = SelfUserGame->fields.genderType;
-    v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &genderType, v16, v17, v18, v19, v20, v21);
-    return System_String__Format_63677760(commandSpellIconFormat, v13, v22, 0);
+    v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &genderType);
+    return System_String__Format_64008100(commandSpellIconFormat, v8, v11, 0);
   }
   else
   {
     passiveSkillIconFormat = static_fields->passiveSkillIconFormat;
-    v26 = iconId;
-    v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26, method, v3, v4, v5, v6, v7);
-    return System_String__Format(passiveSkillIconFormat, v25, 0);
+    v15 = iconId;
+    v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
+    return System_String__Format(passiveSkillIconFormat, v14, 0);
   }
 }
 
@@ -177,20 +166,20 @@ bool ClassBoardUtility__IsPlayedExClassReleaseEffect(int32_t classId, const Meth
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v5; // x1
   ClassBoardUtility_c *v6; // x0
-  System_String_o *String_71300376; // x20
+  System_String_o *String_71617980; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v9; // x20
   System_Func_object__bool__o *v10; // x21
 
-  if ( (byte_4C5A994 & 1) == 0 )
+  if ( (byte_4CB9F68 & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_string____78227624);
-    sub_1C3E564(&System_Func_string__bool__TypeInfo);
-    sub_1C3E564(&Method_ClassBoardUtility___c__DisplayClass9_0__IsPlayedExClassReleaseEffect_b__0__);
-    sub_1C3E564(&ClassBoardUtility___c__DisplayClass9_0_TypeInfo);
-    byte_4C5A994 = 1;
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_string____78610808);
+    sub_1C6BA08(&System_Func_string__bool__TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardUtility___c__DisplayClass9_0__IsPlayedExClassReleaseEffect_b__0__);
+    sub_1C6BA08(&ClassBoardUtility___c__DisplayClass9_0_TypeInfo);
+    byte_4CB9F68 = 1;
   }
-  v3 = sub_1C3E7B0(ClassBoardUtility___c__DisplayClass9_0_TypeInfo);
+  v3 = sub_1C6BC54(ClassBoardUtility___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_10;
@@ -201,24 +190,24 @@ bool ClassBoardUtility__IsPlayedExClassReleaseEffect(int32_t classId, const Meth
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
     v6 = ClassBoardUtility_TypeInfo;
   }
-  String_71300376 = UnityEngine_PlayerPrefs__GetString_71300376(v6->static_fields->savePlayedExClassReleaseKey, 0);
-  IsNullOrEmpty = System_String__IsNullOrEmpty(String_71300376, 0);
+  String_71617980 = UnityEngine_PlayerPrefs__GetString_71617980(v6->static_fields->savePlayedExClassReleaseKey, 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(String_71617980, 0);
   if ( IsNullOrEmpty )
     return 0;
-  if ( !String_71300376 )
+  if ( !String_71617980 )
 LABEL_10:
-    sub_1C3E7C0(IsNullOrEmpty, v5);
-  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71300376, 0x2Cu, 0, 0);
-  v10 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_string__bool__TypeInfo);
+    sub_1C6BC60(IsNullOrEmpty, v5);
+  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71617980, 0x2Cu, 0, 0);
+  v10 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_string__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v10,
     (Il2CppObject *)v3,
     Method_ClassBoardUtility___c__DisplayClass9_0__IsPlayedExClassReleaseEffect_b__0__,
     0);
-  return System_Linq_Enumerable__FirstOrDefault_object__51525108(
+  return System_Linq_Enumerable__FirstOrDefault_object__51793644(
            v9,
            (System_Func_TSource__bool__o *)v10,
-           (const MethodInfo_31235F4 *)Method_System_Linq_Enumerable_FirstOrDefault_string____78227624) != 0;
+           (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_string____78610808) != 0;
 }
 
 
@@ -228,32 +217,32 @@ bool ClassBoardUtility__IsPlayedGrandExClassReleaseEffect(int32_t classId, const
   ClassBoardClassMaster_o *Master_object; // x0
   __int64 v5; // x1
   ClassBoardUtility_c *v6; // x0
-  System_String_o *String_71300376; // x20
+  System_String_o *String_71617980; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v9; // x20
   System_Func_object__bool__o *v10; // x21
   System_Collections_Generic_List_ClassBoardClassEntity__o *entityList; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C5A995 & 1) == 0 )
+  if ( (byte_4CB9F69 & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_string____78227624);
-    sub_1C3E564(&System_Func_string__bool__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_ClassBoardClassEntity__get_Item__);
-    sub_1C3E564(&Method_ClassBoardUtility___c__DisplayClass10_0__IsPlayedGrandExClassReleaseEffect_b__0__);
-    sub_1C3E564(&ClassBoardUtility___c__DisplayClass10_0_TypeInfo);
-    byte_4C5A995 = 1;
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_string____78610808);
+    sub_1C6BA08(&System_Func_string__bool__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_ClassBoardClassEntity__get_Item__);
+    sub_1C6BA08(&Method_ClassBoardUtility___c__DisplayClass10_0__IsPlayedGrandExClassReleaseEffect_b__0__);
+    sub_1C6BA08(&ClassBoardUtility___c__DisplayClass10_0_TypeInfo);
+    byte_4CB9F69 = 1;
   }
   entityList = 0;
-  v3 = sub_1C3E7B0(ClassBoardUtility___c__DisplayClass10_0_TypeInfo);
+  v3 = sub_1C6BC54(ClassBoardUtility___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_19;
   *(_DWORD *)(v3 + 16) = classId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+  Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
   if ( !Master_object )
     goto LABEL_19;
   if ( !ClassBoardClassMaster__TryGetEntityListFromClassId(Master_object, &entityList, *(_DWORD *)(v3 + 16), 0) )
@@ -264,7 +253,7 @@ bool ClassBoardUtility__IsPlayedGrandExClassReleaseEffect(int32_t classId, const
   Master_object = (ClassBoardClassMaster_o *)System_Collections_Generic_List_object___get_Item(
                                                (System_Collections_Generic_List_object__o *)entityList,
                                                0,
-                                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_ClassBoardClassEntity__get_Item__);
+                                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_ClassBoardClassEntity__get_Item__);
   if ( !Master_object )
     goto LABEL_19;
   if ( !LODWORD(Master_object->fields._MasterName_k__BackingField) )
@@ -275,24 +264,24 @@ bool ClassBoardUtility__IsPlayedGrandExClassReleaseEffect(int32_t classId, const
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
     v6 = ClassBoardUtility_TypeInfo;
   }
-  String_71300376 = UnityEngine_PlayerPrefs__GetString_71300376(v6->static_fields->SavePlayedGrandExClassReleaseKey, 0);
-  Master_object = (ClassBoardClassMaster_o *)System_String__IsNullOrEmpty(String_71300376, 0);
+  String_71617980 = UnityEngine_PlayerPrefs__GetString_71617980(v6->static_fields->SavePlayedGrandExClassReleaseKey, 0);
+  Master_object = (ClassBoardClassMaster_o *)System_String__IsNullOrEmpty(String_71617980, 0);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
     return 0;
-  if ( !String_71300376 )
+  if ( !String_71617980 )
 LABEL_19:
-    sub_1C3E7C0(Master_object, v5);
-  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71300376, 0x2Cu, 0, 0);
-  v10 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_string__bool__TypeInfo);
+    sub_1C6BC60(Master_object, v5);
+  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71617980, 0x2Cu, 0, 0);
+  v10 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_string__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v10,
     (Il2CppObject *)v3,
     Method_ClassBoardUtility___c__DisplayClass10_0__IsPlayedGrandExClassReleaseEffect_b__0__,
     0);
-  return System_Linq_Enumerable__FirstOrDefault_object__51525108(
+  return System_Linq_Enumerable__FirstOrDefault_object__51793644(
            v9,
            (System_Func_TSource__bool__o *)v10,
-           (const MethodInfo_31235F4 *)Method_System_Linq_Enumerable_FirstOrDefault_string____78227624) != 0;
+           (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_string____78610808) != 0;
 }
 
 
@@ -302,20 +291,20 @@ bool ClassBoardUtility__IsPlayedReleaseEffect(int32_t classBoardBaseId, const Me
   _BOOL8 IsNullOrEmpty; // x0
   __int64 v5; // x1
   ClassBoardUtility_c *v6; // x0
-  System_String_o *String_71300376; // x20
+  System_String_o *String_71617980; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v9; // x20
   System_Func_object__bool__o *v10; // x21
 
-  if ( (byte_4C5A992 & 1) == 0 )
+  if ( (byte_4CB9F66 & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_string____78227624);
-    sub_1C3E564(&System_Func_string__bool__TypeInfo);
-    sub_1C3E564(&Method_ClassBoardUtility___c__DisplayClass7_0__IsPlayedReleaseEffect_b__0__);
-    sub_1C3E564(&ClassBoardUtility___c__DisplayClass7_0_TypeInfo);
-    byte_4C5A992 = 1;
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_string____78610808);
+    sub_1C6BA08(&System_Func_string__bool__TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardUtility___c__DisplayClass7_0__IsPlayedReleaseEffect_b__0__);
+    sub_1C6BA08(&ClassBoardUtility___c__DisplayClass7_0_TypeInfo);
+    byte_4CB9F66 = 1;
   }
-  v3 = sub_1C3E7B0(ClassBoardUtility___c__DisplayClass7_0_TypeInfo);
+  v3 = sub_1C6BC54(ClassBoardUtility___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_10;
@@ -326,26 +315,26 @@ bool ClassBoardUtility__IsPlayedReleaseEffect(int32_t classBoardBaseId, const Me
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
     v6 = ClassBoardUtility_TypeInfo;
   }
-  String_71300376 = UnityEngine_PlayerPrefs__GetString_71300376(
+  String_71617980 = UnityEngine_PlayerPrefs__GetString_71617980(
                       v6->static_fields->savePlayedClassBoardBaseReleaseKey,
                       0);
-  IsNullOrEmpty = System_String__IsNullOrEmpty(String_71300376, 0);
+  IsNullOrEmpty = System_String__IsNullOrEmpty(String_71617980, 0);
   if ( IsNullOrEmpty )
     return 0;
-  if ( !String_71300376 )
+  if ( !String_71617980 )
 LABEL_10:
-    sub_1C3E7C0(IsNullOrEmpty, v5);
-  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71300376, 0x2Cu, 0, 0);
-  v10 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_string__bool__TypeInfo);
+    sub_1C6BC60(IsNullOrEmpty, v5);
+  v9 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71617980, 0x2Cu, 0, 0);
+  v10 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_string__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v10,
     (Il2CppObject *)v3,
     Method_ClassBoardUtility___c__DisplayClass7_0__IsPlayedReleaseEffect_b__0__,
     0);
-  return System_Linq_Enumerable__FirstOrDefault_object__51525108(
+  return System_Linq_Enumerable__FirstOrDefault_object__51793644(
            v9,
            (System_Func_TSource__bool__o *)v10,
-           (const MethodInfo_31235F4 *)Method_System_Linq_Enumerable_FirstOrDefault_string____78227624) != 0;
+           (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_string____78610808) != 0;
 }
 
 
@@ -356,26 +345,26 @@ bool ClassBoardUtility__IsTargetQuestClear(const MethodInfo *method)
   Il2CppObject *MasterData_object; // x19
   int64_t v4; // x20
 
-  if ( (byte_4C5A990 & 1) == 0 )
+  if ( (byte_4CB9F64 & 1) == 0 )
   {
-    sub_1C3E564(&BalanceConfig_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4C5A990 = 1;
+    sub_1C6BA08(&BalanceConfig_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CB9F64 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserQuestMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C50AE2 )
+  if ( !byte_4CB002A )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C50AE2 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB002A = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -388,7 +377,7 @@ bool ClassBoardUtility__IsTargetQuestClear(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
   if ( !MasterData_object )
 LABEL_14:
-    sub_1C3E7C0(Instance, v2);
+    sub_1C6BC60(Instance, v2);
   return UserQuestMaster__getClearCountsFromId(
            (UserQuestMaster_o *)MasterData_object,
            v4,
@@ -400,7 +389,7 @@ LABEL_14:
 void ClassBoardUtility__SavePlayedClassBaseReleaseEffect(System_Int32_array *classBaseIds, const MethodInfo *method)
 {
   ClassBoardUtility_c *v3; // x0
-  System_String_o *String_71300376; // x20
+  System_String_o *String_71617980; // x20
   System_Collections_Generic_List_TSource__o *IsNullOrEmpty; // x0
   __int64 v6; // x1
   System_Collections_Generic_List_int__o *v7; // x20
@@ -422,21 +411,21 @@ void ClassBoardUtility__SavePlayedClassBaseReleaseEffect(System_Int32_array *cla
   System_String_o *savePlayedClassBoardBaseReleaseKey; // x19
   System_String_o *v24; // x1
 
-  if ( (byte_4C5A993 & 1) == 0 )
+  if ( (byte_4CB9F67 & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_string__int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_1C3E564(&System_Func_string__int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C3E564(&Method_System_String_Join_int___);
-    sub_1C3E564(&Method_ClassBoardUtility___c__SavePlayedClassBaseReleaseEffect_b__8_0__);
-    sub_1C3E564(&ClassBoardUtility___c_TypeInfo);
-    sub_1C3E564(&StringLiteral_811/*","*/);
-    byte_4C5A993 = 1;
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_string__int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_int___);
+    sub_1C6BA08(&System_Func_string__int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C6BA08(&Method_System_String_Join_int___);
+    sub_1C6BA08(&Method_ClassBoardUtility___c__SavePlayedClassBaseReleaseEffect_b__8_0__);
+    sub_1C6BA08(&ClassBoardUtility___c_TypeInfo);
+    sub_1C6BA08(&StringLiteral_808/*","*/);
+    byte_4CB9F67 = 1;
   }
   v3 = ClassBoardUtility_TypeInfo;
   if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
@@ -444,22 +433,22 @@ void ClassBoardUtility__SavePlayedClassBaseReleaseEffect(System_Int32_array *cla
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
     v3 = ClassBoardUtility_TypeInfo;
   }
-  String_71300376 = UnityEngine_PlayerPrefs__GetString_71300376(
+  String_71617980 = UnityEngine_PlayerPrefs__GetString_71617980(
                       v3->static_fields->savePlayedClassBoardBaseReleaseKey,
                       0);
-  IsNullOrEmpty = (System_Collections_Generic_List_TSource__o *)System_String__IsNullOrEmpty(String_71300376, 0);
+  IsNullOrEmpty = (System_Collections_Generic_List_TSource__o *)System_String__IsNullOrEmpty(String_71617980, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
   {
-    v7 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
+    v7 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v7,
-      (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
   }
   else
   {
-    if ( !String_71300376 )
+    if ( !String_71617980 )
       goto LABEL_29;
-    v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71300376, 0x2Cu, 0, 0);
+    v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71617980, 0x2Cu, 0, 0);
     v9 = ClassBoardUtility___c_TypeInfo;
     if ( !ClassBoardUtility___c_TypeInfo->_2.cctor_finished )
     {
@@ -475,7 +464,7 @@ void ClassBoardUtility__SavePlayedClassBaseReleaseEffect(System_Int32_array *cla
         v9 = ClassBoardUtility___c_TypeInfo;
       }
       v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__8_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_string__int__TypeInfo);
+      _9__8_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_string__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__8_0,
         v11,
@@ -483,20 +472,20 @@ void ClassBoardUtility__SavePlayedClassBaseReleaseEffect(System_Int32_array *cla
         0);
       static_fields = ClassBoardUtility___c_TypeInfo->static_fields;
       static_fields->__9__8_0 = (struct System_Func_string__int__o *)_9__8_0;
-      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v13, v14);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v13, v14);
     }
     v15 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                  v8,
                                                                  (System_Func_TSource__TResult__o *)_9__8_0,
-                                                                 (const MethodInfo_312F93C *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                                 (const MethodInfo_3171234 *)Method_System_Linq_Enumerable_Select_string__int___);
     IsNullOrEmpty = System_Linq_Enumerable__ToList_int_(
                       v15,
-                      (const MethodInfo_313DC18 *)Method_System_Linq_Enumerable_ToList_int___);
+                      (const MethodInfo_317FC78 *)Method_System_Linq_Enumerable_ToList_int___);
     v7 = (System_Collections_Generic_List_int__o *)IsNullOrEmpty;
   }
   if ( !classBaseIds )
 LABEL_29:
-    sub_1C3E7C0(IsNullOrEmpty, v6);
+    sub_1C6BC60(IsNullOrEmpty, v6);
   max_length = classBaseIds->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -504,14 +493,14 @@ LABEL_29:
     do
     {
       if ( v17 >= (unsigned int)max_length )
-        sub_1C3E7C8(IsNullOrEmpty, v6);
+        sub_1C6BC68(IsNullOrEmpty);
       if ( !v7 )
         goto LABEL_29;
       v18 = classBaseIds->m_Items[v17];
       IsNullOrEmpty = (System_Collections_Generic_List_TSource__o *)System_Collections_Generic_List_int___Contains(
                                                                       v7,
                                                                       v18,
-                                                                      (const MethodInfo_37987B4 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                                      (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__);
       if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
       {
         items = v7->fields._items;
@@ -525,7 +514,7 @@ LABEL_29:
           System_Collections_Generic_List_int___AddWithResize(
             v7,
             v18,
-            *(const MethodInfo_379843C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
         }
         else
         {
@@ -545,9 +534,9 @@ LABEL_29:
   }
   savePlayedClassBoardBaseReleaseKey = v22->static_fields->savePlayedClassBoardBaseReleaseKey;
   v24 = System_String__Join_int_(
-          (System_String_o *)StringLiteral_811/*","*/,
+          (System_String_o *)StringLiteral_808/*","*/,
           (System_Collections_Generic_IEnumerable_T__o *)v7,
-          (const MethodInfo_31A4E30 *)Method_System_String_Join_int___);
+          (const MethodInfo_31E7090 *)Method_System_String_Join_int___);
   UnityEngine_PlayerPrefs__SetString(savePlayedClassBoardBaseReleaseKey, v24, 0);
 }
 
@@ -555,7 +544,7 @@ LABEL_29:
 void ClassBoardUtility__SavePlayedExClassReleaseEffect(System_Int32_array *classId, const MethodInfo *method)
 {
   ClassBoardUtility_c *v3; // x0
-  System_String_o *String_71300376; // x20
+  System_String_o *String_71617980; // x20
   System_Collections_Generic_List_TSource__o *IsNullOrEmpty; // x0
   __int64 v6; // x1
   System_Collections_Generic_List_int__o *v7; // x20
@@ -577,21 +566,21 @@ void ClassBoardUtility__SavePlayedExClassReleaseEffect(System_Int32_array *class
   System_String_o *savePlayedExClassReleaseKey; // x19
   System_String_o *v24; // x1
 
-  if ( (byte_4C5A996 & 1) == 0 )
+  if ( (byte_4CB9F6A & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_string__int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_1C3E564(&System_Func_string__int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C3E564(&Method_System_String_Join_int___);
-    sub_1C3E564(&Method_ClassBoardUtility___c__SavePlayedExClassReleaseEffect_b__11_0__);
-    sub_1C3E564(&ClassBoardUtility___c_TypeInfo);
-    sub_1C3E564(&StringLiteral_811/*","*/);
-    byte_4C5A996 = 1;
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_string__int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_int___);
+    sub_1C6BA08(&System_Func_string__int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C6BA08(&Method_System_String_Join_int___);
+    sub_1C6BA08(&Method_ClassBoardUtility___c__SavePlayedExClassReleaseEffect_b__11_0__);
+    sub_1C6BA08(&ClassBoardUtility___c_TypeInfo);
+    sub_1C6BA08(&StringLiteral_808/*","*/);
+    byte_4CB9F6A = 1;
   }
   v3 = ClassBoardUtility_TypeInfo;
   if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
@@ -599,20 +588,20 @@ void ClassBoardUtility__SavePlayedExClassReleaseEffect(System_Int32_array *class
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
     v3 = ClassBoardUtility_TypeInfo;
   }
-  String_71300376 = UnityEngine_PlayerPrefs__GetString_71300376(v3->static_fields->savePlayedExClassReleaseKey, 0);
-  IsNullOrEmpty = (System_Collections_Generic_List_TSource__o *)System_String__IsNullOrEmpty(String_71300376, 0);
+  String_71617980 = UnityEngine_PlayerPrefs__GetString_71617980(v3->static_fields->savePlayedExClassReleaseKey, 0);
+  IsNullOrEmpty = (System_Collections_Generic_List_TSource__o *)System_String__IsNullOrEmpty(String_71617980, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
   {
-    v7 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
+    v7 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v7,
-      (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
   }
   else
   {
-    if ( !String_71300376 )
+    if ( !String_71617980 )
       goto LABEL_29;
-    v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71300376, 0x2Cu, 0, 0);
+    v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71617980, 0x2Cu, 0, 0);
     v9 = ClassBoardUtility___c_TypeInfo;
     if ( !ClassBoardUtility___c_TypeInfo->_2.cctor_finished )
     {
@@ -628,7 +617,7 @@ void ClassBoardUtility__SavePlayedExClassReleaseEffect(System_Int32_array *class
         v9 = ClassBoardUtility___c_TypeInfo;
       }
       v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__11_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_string__int__TypeInfo);
+      _9__11_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_string__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__11_0,
         v11,
@@ -636,20 +625,20 @@ void ClassBoardUtility__SavePlayedExClassReleaseEffect(System_Int32_array *class
         0);
       static_fields = ClassBoardUtility___c_TypeInfo->static_fields;
       static_fields->__9__11_0 = (struct System_Func_string__int__o *)_9__11_0;
-      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v13, v14);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v13, v14);
     }
     v15 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                  v8,
                                                                  (System_Func_TSource__TResult__o *)_9__11_0,
-                                                                 (const MethodInfo_312F93C *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                                 (const MethodInfo_3171234 *)Method_System_Linq_Enumerable_Select_string__int___);
     IsNullOrEmpty = System_Linq_Enumerable__ToList_int_(
                       v15,
-                      (const MethodInfo_313DC18 *)Method_System_Linq_Enumerable_ToList_int___);
+                      (const MethodInfo_317FC78 *)Method_System_Linq_Enumerable_ToList_int___);
     v7 = (System_Collections_Generic_List_int__o *)IsNullOrEmpty;
   }
   if ( !classId )
 LABEL_29:
-    sub_1C3E7C0(IsNullOrEmpty, v6);
+    sub_1C6BC60(IsNullOrEmpty, v6);
   max_length = classId->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -657,14 +646,14 @@ LABEL_29:
     do
     {
       if ( v17 >= (unsigned int)max_length )
-        sub_1C3E7C8(IsNullOrEmpty, v6);
+        sub_1C6BC68(IsNullOrEmpty);
       if ( !v7 )
         goto LABEL_29;
       v18 = classId->m_Items[v17];
       IsNullOrEmpty = (System_Collections_Generic_List_TSource__o *)System_Collections_Generic_List_int___Contains(
                                                                       v7,
                                                                       v18,
-                                                                      (const MethodInfo_37987B4 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                                      (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__);
       if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
       {
         items = v7->fields._items;
@@ -678,7 +667,7 @@ LABEL_29:
           System_Collections_Generic_List_int___AddWithResize(
             v7,
             v18,
-            *(const MethodInfo_379843C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
         }
         else
         {
@@ -698,9 +687,9 @@ LABEL_29:
   }
   savePlayedExClassReleaseKey = v22->static_fields->savePlayedExClassReleaseKey;
   v24 = System_String__Join_int_(
-          (System_String_o *)StringLiteral_811/*","*/,
+          (System_String_o *)StringLiteral_808/*","*/,
           (System_Collections_Generic_IEnumerable_T__o *)v7,
-          (const MethodInfo_31A4E30 *)Method_System_String_Join_int___);
+          (const MethodInfo_31E7090 *)Method_System_String_Join_int___);
   UnityEngine_PlayerPrefs__SetString(savePlayedExClassReleaseKey, v24, 0);
 }
 
@@ -708,7 +697,7 @@ LABEL_29:
 void ClassBoardUtility__SavePlayedGrandExClassReleaseEffect(System_Int32_array *classId, const MethodInfo *method)
 {
   ClassBoardUtility_c *v3; // x0
-  System_String_o *String_71300376; // x20
+  System_String_o *String_71617980; // x20
   System_Collections_Generic_List_TSource__o *IsNullOrEmpty; // x0
   __int64 v6; // x1
   System_Collections_Generic_List_int__o *v7; // x20
@@ -730,21 +719,21 @@ void ClassBoardUtility__SavePlayedGrandExClassReleaseEffect(System_Int32_array *
   System_String_o *SavePlayedGrandExClassReleaseKey; // x19
   System_String_o *v24; // x1
 
-  if ( (byte_4C5A997 & 1) == 0 )
+  if ( (byte_4CB9F6B & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_string__int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToList_int___);
-    sub_1C3E564(&System_Func_string__int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C3E564(&Method_System_String_Join_int___);
-    sub_1C3E564(&Method_ClassBoardUtility___c__SavePlayedGrandExClassReleaseEffect_b__12_0__);
-    sub_1C3E564(&ClassBoardUtility___c_TypeInfo);
-    sub_1C3E564(&StringLiteral_811/*","*/);
-    byte_4C5A997 = 1;
+    sub_1C6BA08(&ClassBoardUtility_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_string__int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_int___);
+    sub_1C6BA08(&System_Func_string__int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C6BA08(&Method_System_String_Join_int___);
+    sub_1C6BA08(&Method_ClassBoardUtility___c__SavePlayedGrandExClassReleaseEffect_b__12_0__);
+    sub_1C6BA08(&ClassBoardUtility___c_TypeInfo);
+    sub_1C6BA08(&StringLiteral_808/*","*/);
+    byte_4CB9F6B = 1;
   }
   v3 = ClassBoardUtility_TypeInfo;
   if ( !ClassBoardUtility_TypeInfo->_2.cctor_finished )
@@ -752,20 +741,20 @@ void ClassBoardUtility__SavePlayedGrandExClassReleaseEffect(System_Int32_array *
     j_il2cpp_runtime_class_init_0(ClassBoardUtility_TypeInfo);
     v3 = ClassBoardUtility_TypeInfo;
   }
-  String_71300376 = UnityEngine_PlayerPrefs__GetString_71300376(v3->static_fields->SavePlayedGrandExClassReleaseKey, 0);
-  IsNullOrEmpty = (System_Collections_Generic_List_TSource__o *)System_String__IsNullOrEmpty(String_71300376, 0);
+  String_71617980 = UnityEngine_PlayerPrefs__GetString_71617980(v3->static_fields->SavePlayedGrandExClassReleaseKey, 0);
+  IsNullOrEmpty = (System_Collections_Generic_List_TSource__o *)System_String__IsNullOrEmpty(String_71617980, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
   {
-    v7 = (System_Collections_Generic_List_int__o *)sub_1C3E7B0(System_Collections_Generic_List_int__TypeInfo);
+    v7 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
     System_Collections_Generic_List_int____ctor(
       v7,
-      (const MethodInfo_3797BE8 *)Method_System_Collections_Generic_List_int___ctor__);
+      (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
   }
   else
   {
-    if ( !String_71300376 )
+    if ( !String_71617980 )
       goto LABEL_29;
-    v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71300376, 0x2Cu, 0, 0);
+    v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_String__Split(String_71617980, 0x2Cu, 0, 0);
     v9 = ClassBoardUtility___c_TypeInfo;
     if ( !ClassBoardUtility___c_TypeInfo->_2.cctor_finished )
     {
@@ -781,7 +770,7 @@ void ClassBoardUtility__SavePlayedGrandExClassReleaseEffect(System_Int32_array *
         v9 = ClassBoardUtility___c_TypeInfo;
       }
       v11 = (Il2CppObject *)v9->static_fields->__9;
-      _9__12_0 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_string__int__TypeInfo);
+      _9__12_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_string__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__12_0,
         v11,
@@ -789,20 +778,20 @@ void ClassBoardUtility__SavePlayedGrandExClassReleaseEffect(System_Int32_array *
         0);
       static_fields = ClassBoardUtility___c_TypeInfo->static_fields;
       static_fields->__9__12_0 = (struct System_Func_string__int__o *)_9__12_0;
-      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v13, v14);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v13, v14);
     }
     v15 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                  v8,
                                                                  (System_Func_TSource__TResult__o *)_9__12_0,
-                                                                 (const MethodInfo_312F93C *)Method_System_Linq_Enumerable_Select_string__int___);
+                                                                 (const MethodInfo_3171234 *)Method_System_Linq_Enumerable_Select_string__int___);
     IsNullOrEmpty = System_Linq_Enumerable__ToList_int_(
                       v15,
-                      (const MethodInfo_313DC18 *)Method_System_Linq_Enumerable_ToList_int___);
+                      (const MethodInfo_317FC78 *)Method_System_Linq_Enumerable_ToList_int___);
     v7 = (System_Collections_Generic_List_int__o *)IsNullOrEmpty;
   }
   if ( !classId )
 LABEL_29:
-    sub_1C3E7C0(IsNullOrEmpty, v6);
+    sub_1C6BC60(IsNullOrEmpty, v6);
   max_length = classId->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -810,14 +799,14 @@ LABEL_29:
     do
     {
       if ( v17 >= (unsigned int)max_length )
-        sub_1C3E7C8(IsNullOrEmpty, v6);
+        sub_1C6BC68(IsNullOrEmpty);
       if ( !v7 )
         goto LABEL_29;
       v18 = classId->m_Items[v17];
       IsNullOrEmpty = (System_Collections_Generic_List_TSource__o *)System_Collections_Generic_List_int___Contains(
                                                                       v7,
                                                                       v18,
-                                                                      (const MethodInfo_37987B4 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                                      (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__);
       if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
       {
         items = v7->fields._items;
@@ -831,7 +820,7 @@ LABEL_29:
           System_Collections_Generic_List_int___AddWithResize(
             v7,
             v18,
-            *(const MethodInfo_379843C **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
         }
         else
         {
@@ -851,9 +840,9 @@ LABEL_29:
   }
   SavePlayedGrandExClassReleaseKey = v22->static_fields->SavePlayedGrandExClassReleaseKey;
   v24 = System_String__Join_int_(
-          (System_String_o *)StringLiteral_811/*","*/,
+          (System_String_o *)StringLiteral_808/*","*/,
           (System_Collections_Generic_IEnumerable_T__o *)v7,
-          (const MethodInfo_31A4E30 *)Method_System_String_Join_int___);
+          (const MethodInfo_31E7090 *)Method_System_String_Join_int___);
   UnityEngine_PlayerPrefs__SetString(SavePlayedGrandExClassReleaseKey, v24, 0);
 }
 
@@ -888,29 +877,29 @@ void ClassBoardUtility__SetOpenClassScoreNum(
   bool *v33; // [xsp+20h] [xbp-70h]
   Il2CppObject *entity; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4C5A999 & 1) == 0 )
+  if ( (byte_4CB9F6D & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
-    byte_4C5A999 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+    byte_4CB9F6D = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+  Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
   if ( !Master_object )
 LABEL_41:
-    sub_1C3E7C0(Master_object, v18);
+    sub_1C6BC60(Master_object, v18);
   ClassBoardBaseId = ClassBoardClassMaster__GetClassBoardBaseId(Master_object, classId, 0);
   if ( ClassBoardBaseId )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
     if ( !Master_object )
       goto LABEL_41;
     Master_object = (ClassBoardClassMaster_o *)ClassBoardBaseMaster__GetGrandClassBoardBaseEntity(
@@ -942,7 +931,7 @@ LABEL_41:
     while ( 1 )
     {
       if ( v21 >= max_length )
-        sub_1C3E7C8(Master_object, v18);
+        sub_1C6BC68(Master_object);
       v26 = boardInfo->m_Items[v21];
       if ( !v26 )
         goto LABEL_41;
@@ -953,7 +942,7 @@ LABEL_41:
         Master_object = (ClassBoardClassMaster_o *)System_Collections_Generic_Dictionary_int__int___ContainsKey(
                                                      classBoardMaxDictionary,
                                                      ClassBoardBaseId,
-                                                     (const MethodInfo_3403B70 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
+                                                     (const MethodInfo_3449C24 *)Method_System_Collections_Generic_Dictionary_int__int__ContainsKey__);
         if ( ((unsigned __int8)Master_object & 1) != 0 )
         {
           Master_object = (ClassBoardClassMaster_o *)ClassBoardInfo__IsReleasedClassId(v26, classId, 0);
@@ -962,7 +951,7 @@ LABEL_41:
             Master_object = (ClassBoardClassMaster_o *)System_Collections_Generic_Dictionary_int__int___get_Item(
                                                          classBoardMaxDictionary,
                                                          ClassBoardBaseId,
-                                                         (const MethodInfo_34038E8 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+                                                         (const MethodInfo_344999C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
             squareIds = v26->fields.squareIds;
             if ( !squareIds )
               goto LABEL_41;
@@ -975,14 +964,14 @@ LABEL_41:
         goto LABEL_36;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
+      Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ClassBoardBaseMaster___);
       if ( !Master_object )
         goto LABEL_41;
       Master_object = (ClassBoardClassMaster_o *)DataMasterBase_object__object__int___TryGetEntity(
                                                    (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                                    &entity,
                                                    v26->fields.classBoardBaseId,
-                                                   (const MethodInfo_33B2FA4 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
+                                                   (const MethodInfo_33F9128 *)Method_DataMasterBase_ClassBoardBaseMaster__ClassBoardBaseEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) == 0 )
         goto LABEL_36;
       Master_object = (ClassBoardClassMaster_o *)entity;
@@ -1005,7 +994,7 @@ LABEL_37:
       Master_object = (ClassBoardClassMaster_o *)System_Collections_Generic_Dictionary_int__int___get_Item(
                                                    classBoardMaxDictionary,
                                                    (int32_t)entity[1].klass,
-                                                   (const MethodInfo_34038E8 *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
+                                                   (const MethodInfo_344999C *)Method_System_Collections_Generic_Dictionary_int__int__get_Item__);
       v28 = v26->fields.squareIds;
       if ( !v28 )
         goto LABEL_41;
@@ -1035,15 +1024,15 @@ void ClassBoardUtility___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C5A99B & 1) == 0 )
+  if ( (byte_4CB9F6F & 1) == 0 )
   {
-    sub_1C3E564(&ClassBoardUtility___c_TypeInfo);
-    byte_4C5A99B = 1;
+    sub_1C6BA08(&ClassBoardUtility___c_TypeInfo);
+    byte_4CB9F6F = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(ClassBoardUtility___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(ClassBoardUtility___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ClassBoardUtility___c_TypeInfo->static_fields->__9 = (struct ClassBoardUtility___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)ClassBoardUtility___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)ClassBoardUtility___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 

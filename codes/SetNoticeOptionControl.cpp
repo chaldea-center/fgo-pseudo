@@ -18,37 +18,37 @@ void SetNoticeOptionControl__Init(SetNoticeOptionControl_o *this, const MethodIn
   const MethodInfo *v10; // x1
   const MethodInfo *v11; // x1
 
-  if ( (byte_4C51D7A & 1) == 0 )
+  if ( (byte_4CB12C2 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&OptionManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_9671/*"OPTION_NOTICE_ELSE"*/);
-    sub_1C3E564(&StringLiteral_9670/*"OPTION_NOTICE_AP"*/);
-    sub_1C3E564(&StringLiteral_9673/*"OPTION_NOTICE_RP_EXPLANATION"*/);
-    sub_1C3E564(&StringLiteral_9672/*"OPTION_NOTICE_RP"*/);
-    byte_4C51D7A = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&OptionManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_9667/*"OPTION_NOTICE_ELSE"*/);
+    sub_1C6BA08(&StringLiteral_9666/*"OPTION_NOTICE_AP"*/);
+    sub_1C6BA08(&StringLiteral_9669/*"OPTION_NOTICE_RP_EXPLANATION"*/);
+    sub_1C6BA08(&StringLiteral_9668/*"OPTION_NOTICE_RP"*/);
+    byte_4CB12C2 = 1;
   }
   apNoticeTitle = this->fields.apNoticeTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9670/*"OPTION_NOTICE_AP"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9666/*"OPTION_NOTICE_AP"*/, 0);
   if ( !apNoticeTitle )
     goto LABEL_12;
   UILabel__set_text(apNoticeTitle, v4, 0);
   rpNoticeTitle = this->fields.rpNoticeTitle;
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9672/*"OPTION_NOTICE_RP"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9668/*"OPTION_NOTICE_RP"*/, 0);
   if ( !rpNoticeTitle
     || (UILabel__set_text(rpNoticeTitle, v4, 0),
         sysNoticeTitle = this->fields.sysNoticeTitle,
-        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9671/*"OPTION_NOTICE_ELSE"*/, 0),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9667/*"OPTION_NOTICE_ELSE"*/, 0),
         !sysNoticeTitle)
     || (UILabel__set_text(sysNoticeTitle, v4, 0),
         rpExplanationTxt = this->fields.rpExplanationTxt,
-        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9673/*"OPTION_NOTICE_RP_EXPLANATION"*/, 0),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9669/*"OPTION_NOTICE_RP_EXPLANATION"*/, 0),
         !rpExplanationTxt) )
   {
 LABEL_12:
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   }
   UILabel__set_text(rpExplanationTxt, v4, 0);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -72,36 +72,36 @@ void SetNoticeOptionControl__OnApNoticeChangeBtn(SetNoticeOptionControl_o *this,
   __int64 *v8; // x8
   bool v9; // w20
 
-  if ( (byte_4C51D7F & 1) == 0 )
+  if ( (byte_4CB12C7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SetNoticeOptionControl_OnApNoticeChangeBtn__);
-    sub_1C3E564(&StringLiteral_17524/*"btn_on"*/);
-    sub_1C3E564(&StringLiteral_17523/*"btn_off"*/);
-    byte_4C51D7F = 1;
+    sub_1C6BA08(&Method_SetNoticeOptionControl_OnApNoticeChangeBtn__);
+    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
+    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
+    byte_4CB12C7 = 1;
   }
   v3 = Method_SetNoticeOptionControl_OnApNoticeChangeBtn__;
   isApNotice = this->fields.isApNotice;
   if ( (*((_BYTE *)Method_SetNoticeOptionControl_OnApNoticeChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_SetNoticeOptionControl_OnApNoticeChangeBtn__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_SetNoticeOptionControl_OnApNoticeChangeBtn__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   if ( !isApNotice )
   {
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
     apNoticeBtn = this->fields.apNoticeBtn;
     if ( apNoticeBtn )
     {
-      v8 = &StringLiteral_17524/*"btn_on"*/;
+      v8 = &StringLiteral_17522/*"btn_on"*/;
       v9 = 1;
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1C3E7C0(apNoticeBtn, v6);
+    sub_1C6BC60(apNoticeBtn, v6);
   }
   OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0, 0);
   apNoticeBtn = this->fields.apNoticeBtn;
   if ( !apNoticeBtn )
     goto LABEL_11;
-  v8 = &StringLiteral_17523/*"btn_off"*/;
+  v8 = &StringLiteral_17521/*"btn_off"*/;
   v9 = 0;
 LABEL_10:
   UIButton__set_normalSprite(apNoticeBtn, (System_String_o *)*v8, 0);
@@ -119,36 +119,36 @@ void SetNoticeOptionControl__OnGameNoticeChangeBtn(SetNoticeOptionControl_o *thi
   __int64 *v8; // x8
   bool v9; // w20
 
-  if ( (byte_4C51D81 & 1) == 0 )
+  if ( (byte_4CB12C9 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SetNoticeOptionControl_OnGameNoticeChangeBtn__);
-    sub_1C3E564(&StringLiteral_17524/*"btn_on"*/);
-    sub_1C3E564(&StringLiteral_17523/*"btn_off"*/);
-    byte_4C51D81 = 1;
+    sub_1C6BA08(&Method_SetNoticeOptionControl_OnGameNoticeChangeBtn__);
+    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
+    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
+    byte_4CB12C9 = 1;
   }
   v3 = Method_SetNoticeOptionControl_OnGameNoticeChangeBtn__;
   isGameNotice = this->fields.isGameNotice;
   if ( (*((_BYTE *)Method_SetNoticeOptionControl_OnGameNoticeChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_SetNoticeOptionControl_OnGameNoticeChangeBtn__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_SetNoticeOptionControl_OnGameNoticeChangeBtn__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   if ( !isGameNotice )
   {
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
     sysNoticeBtn = this->fields.sysNoticeBtn;
     if ( sysNoticeBtn )
     {
-      v8 = &StringLiteral_17524/*"btn_on"*/;
+      v8 = &StringLiteral_17522/*"btn_on"*/;
       v9 = 1;
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1C3E7C0(sysNoticeBtn, v6);
+    sub_1C6BC60(sysNoticeBtn, v6);
   }
   OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0, 0);
   sysNoticeBtn = this->fields.sysNoticeBtn;
   if ( !sysNoticeBtn )
     goto LABEL_11;
-  v8 = &StringLiteral_17523/*"btn_off"*/;
+  v8 = &StringLiteral_17521/*"btn_off"*/;
   v9 = 0;
 LABEL_10:
   UIButton__set_normalSprite(sysNoticeBtn, (System_String_o *)*v8, 0);
@@ -166,36 +166,36 @@ void SetNoticeOptionControl__OnRpNoticeChangeBtn(SetNoticeOptionControl_o *this,
   __int64 *v8; // x8
   bool v9; // w20
 
-  if ( (byte_4C51D80 & 1) == 0 )
+  if ( (byte_4CB12C8 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SetNoticeOptionControl_OnRpNoticeChangeBtn__);
-    sub_1C3E564(&StringLiteral_17524/*"btn_on"*/);
-    sub_1C3E564(&StringLiteral_17523/*"btn_off"*/);
-    byte_4C51D80 = 1;
+    sub_1C6BA08(&Method_SetNoticeOptionControl_OnRpNoticeChangeBtn__);
+    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
+    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
+    byte_4CB12C8 = 1;
   }
   v3 = Method_SetNoticeOptionControl_OnRpNoticeChangeBtn__;
   isRpNotice = this->fields.isRpNotice;
   if ( (*((_BYTE *)Method_SetNoticeOptionControl_OnRpNoticeChangeBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_SetNoticeOptionControl_OnRpNoticeChangeBtn__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_SetNoticeOptionControl_OnRpNoticeChangeBtn__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   if ( !isRpNotice )
   {
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
     rpNoticeBtn = this->fields.rpNoticeBtn;
     if ( rpNoticeBtn )
     {
-      v8 = &StringLiteral_17524/*"btn_on"*/;
+      v8 = &StringLiteral_17522/*"btn_on"*/;
       v9 = 1;
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1C3E7C0(rpNoticeBtn, v6);
+    sub_1C6BC60(rpNoticeBtn, v6);
   }
   OverwriteAssetSoundName__PlaySystemSe(v5, 1, 0, 0);
   rpNoticeBtn = this->fields.rpNoticeBtn;
   if ( !rpNoticeBtn )
     goto LABEL_11;
-  v8 = &StringLiteral_17523/*"btn_off"*/;
+  v8 = &StringLiteral_17521/*"btn_off"*/;
   v9 = 0;
 LABEL_10:
   UIButton__set_normalSprite(rpNoticeBtn, (System_String_o *)*v8, 0);
@@ -207,10 +207,10 @@ void SetNoticeOptionControl__Reflection(SetNoticeOptionControl_o *this, const Me
 {
   _BOOL4 isApNotice; // w20
 
-  if ( (byte_4C51D7B & 1) == 0 )
+  if ( (byte_4CB12C3 & 1) == 0 )
   {
-    sub_1C3E564(&OptionManager_TypeInfo);
-    byte_4C51D7B = 1;
+    sub_1C6BA08(&OptionManager_TypeInfo);
+    byte_4CB12C3 = 1;
   }
   isApNotice = this->fields.isApNotice;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -226,19 +226,19 @@ void SetNoticeOptionControl__setApNoticeValue(SetNoticeOptionControl_o *this, co
   UIButton_o *apNoticeBtn; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4C51D7C & 1) == 0 )
+  if ( (byte_4CB12C4 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_17524/*"btn_on"*/);
-    sub_1C3E564(&StringLiteral_17523/*"btn_off"*/);
-    byte_4C51D7C = 1;
+    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
+    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
+    byte_4CB12C4 = 1;
   }
   apNoticeBtn = this->fields.apNoticeBtn;
   if ( !apNoticeBtn )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   if ( this->fields.isApNotice )
-    v4 = &StringLiteral_17524/*"btn_on"*/;
+    v4 = &StringLiteral_17522/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17523/*"btn_off"*/;
+    v4 = &StringLiteral_17521/*"btn_off"*/;
   UIButton__set_normalSprite(apNoticeBtn, (System_String_o *)*v4, 0);
 }
 
@@ -248,19 +248,19 @@ void SetNoticeOptionControl__setGameNoticeValue(SetNoticeOptionControl_o *this, 
   UIButton_o *sysNoticeBtn; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4C51D7E & 1) == 0 )
+  if ( (byte_4CB12C6 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_17524/*"btn_on"*/);
-    sub_1C3E564(&StringLiteral_17523/*"btn_off"*/);
-    byte_4C51D7E = 1;
+    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
+    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
+    byte_4CB12C6 = 1;
   }
   sysNoticeBtn = this->fields.sysNoticeBtn;
   if ( !sysNoticeBtn )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   if ( this->fields.isGameNotice )
-    v4 = &StringLiteral_17524/*"btn_on"*/;
+    v4 = &StringLiteral_17522/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17523/*"btn_off"*/;
+    v4 = &StringLiteral_17521/*"btn_off"*/;
   UIButton__set_normalSprite(sysNoticeBtn, (System_String_o *)*v4, 0);
 }
 
@@ -270,18 +270,18 @@ void SetNoticeOptionControl__setRpNoticeValue(SetNoticeOptionControl_o *this, co
   UIButton_o *rpNoticeBtn; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4C51D7D & 1) == 0 )
+  if ( (byte_4CB12C5 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_17524/*"btn_on"*/);
-    sub_1C3E564(&StringLiteral_17523/*"btn_off"*/);
-    byte_4C51D7D = 1;
+    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
+    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
+    byte_4CB12C5 = 1;
   }
   rpNoticeBtn = this->fields.rpNoticeBtn;
   if ( !rpNoticeBtn )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   if ( this->fields.isRpNotice )
-    v4 = &StringLiteral_17524/*"btn_on"*/;
+    v4 = &StringLiteral_17522/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17523/*"btn_off"*/;
+    v4 = &StringLiteral_17521/*"btn_off"*/;
   UIButton__set_normalSprite(rpNoticeBtn, (System_String_o *)*v4, 0);
 }

@@ -6,14 +6,14 @@ void ClassBoardFullReleaseEffectComponent___ctor(
   const MethodInfo *v3; // x3
   int32_t v5; // w1
 
-  if ( (byte_4C5A8CD & 1) == 0 )
+  if ( (byte_4CB9E9F & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_16274/*"_MainTex"*/);
-    byte_4C5A8CD = 1;
+    sub_1C6BA08(&StringLiteral_16258/*"_MainTex"*/);
+    byte_4CB9E9F = 1;
   }
-  v5 = StringLiteral_16274/*"_MainTex"*/;
-  this->fields.iconMaterialPropertyName = (struct System_String_o *)StringLiteral_16274/*"_MainTex"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.iconMaterialPropertyName, v5, v2, v3);
+  v5 = StringLiteral_16258/*"_MainTex"*/;
+  this->fields.iconMaterialPropertyName = (struct System_String_o *)StringLiteral_16258/*"_MainTex"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.iconMaterialPropertyName, v5, v2, v3);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -36,29 +36,29 @@ void ClassBoardFullReleaseEffectComponent__Awake(
   Il2CppObject *v14; // x21
   const MethodInfo *v15; // x2
 
-  if ( (byte_4C5A8C7 & 1) == 0 )
+  if ( (byte_4CB9E99 & 1) == 0 )
   {
-    sub_1C3E564(&Method_CStateManager_ClassBoardFullReleaseEffectComponent___ctor__);
-    sub_1C3E564(&Method_CStateManager_ClassBoardFullReleaseEffectComponent__add__);
-    sub_1C3E564(&CStateManager_ClassBoardFullReleaseEffectComponent__TypeInfo);
-    sub_1C3E564(&ClassBoardFullReleaseEffectComponent_StateEnd_TypeInfo);
-    sub_1C3E564(&ClassBoardFullReleaseEffectComponent_StateNone_TypeInfo);
-    sub_1C3E564(&ClassBoardFullReleaseEffectComponent_StatePlay_TypeInfo);
-    byte_4C5A8C7 = 1;
+    sub_1C6BA08(&Method_CStateManager_ClassBoardFullReleaseEffectComponent___ctor__);
+    sub_1C6BA08(&Method_CStateManager_ClassBoardFullReleaseEffectComponent__add__);
+    sub_1C6BA08(&CStateManager_ClassBoardFullReleaseEffectComponent__TypeInfo);
+    sub_1C6BA08(&ClassBoardFullReleaseEffectComponent_StateEnd_TypeInfo);
+    sub_1C6BA08(&ClassBoardFullReleaseEffectComponent_StateNone_TypeInfo);
+    sub_1C6BA08(&ClassBoardFullReleaseEffectComponent_StatePlay_TypeInfo);
+    byte_4CB9E99 = 1;
   }
   p_fsm = &this->fields.fsm;
   if ( !this->fields.fsm )
   {
-    v4 = (CStateManager_T__o *)sub_1C3E7B0(CStateManager_ClassBoardFullReleaseEffectComponent__TypeInfo);
+    v4 = (CStateManager_T__o *)sub_1C6BC54(CStateManager_ClassBoardFullReleaseEffectComponent__TypeInfo);
     CStateManager_object____ctor(
       v4,
       (Il2CppObject *)this,
       3,
-      (const MethodInfo_333EE28 *)Method_CStateManager_ClassBoardFullReleaseEffectComponent___ctor__);
+      (const MethodInfo_33848C4 *)Method_CStateManager_ClassBoardFullReleaseEffectComponent___ctor__);
     this->fields.fsm = (struct CStateManager_ClassBoardFullReleaseEffectComponent__o *)v4;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.fsm, (int32_t)v4, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.fsm, (int32_t)v4, v5, v6);
     fsm = (CStateManager_T__o *)this->fields.fsm;
-    v8 = (Il2CppObject *)sub_1C3E7B0(ClassBoardFullReleaseEffectComponent_StateNone_TypeInfo);
+    v8 = (Il2CppObject *)sub_1C6BC54(ClassBoardFullReleaseEffectComponent_StateNone_TypeInfo);
     System_Object___ctor(v8, 0);
     if ( !fsm )
       goto LABEL_8;
@@ -66,29 +66,29 @@ void ClassBoardFullReleaseEffectComponent__Awake(
       fsm,
       0,
       (IState_T__o *)v8,
-      (const MethodInfo_333EED0 *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__add__);
+      (const MethodInfo_338496C *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__add__);
     v11 = (CStateManager_T__o *)*p_fsm;
-    v12 = (Il2CppObject *)sub_1C3E7B0(ClassBoardFullReleaseEffectComponent_StatePlay_TypeInfo);
+    v12 = (Il2CppObject *)sub_1C6BC54(ClassBoardFullReleaseEffectComponent_StatePlay_TypeInfo);
     System_Object___ctor(v12, 0);
     if ( !v11
       || (CStateManager_object___add(
             v11,
             1,
             (IState_T__o *)v12,
-            (const MethodInfo_333EED0 *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__add__),
+            (const MethodInfo_338496C *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__add__),
           v13 = (CStateManager_T__o *)*p_fsm,
-          v14 = (Il2CppObject *)sub_1C3E7B0(ClassBoardFullReleaseEffectComponent_StateEnd_TypeInfo),
+          v14 = (Il2CppObject *)sub_1C6BC54(ClassBoardFullReleaseEffectComponent_StateEnd_TypeInfo),
           System_Object___ctor(v14, 0),
           !v13) )
     {
 LABEL_8:
-      sub_1C3E7C0(v9, v10);
+      sub_1C6BC60(v9, v10);
     }
     CStateManager_object___add(
       v13,
       2,
       (IState_T__o *)v14,
-      (const MethodInfo_333EED0 *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__add__);
+      (const MethodInfo_338496C *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__add__);
     ClassBoardFullReleaseEffectComponent__SetState(this, 0, v15);
   }
 }
@@ -108,14 +108,14 @@ int32_t ClassBoardFullReleaseEffectComponent__GetState(
   struct CStateManager_ClassBoardFullReleaseEffectComponent__o *fsm; // x8
 
   v2 = this;
-  if ( (byte_4C5A8CB & 1) == 0 )
+  if ( (byte_4CB9E9D & 1) == 0 )
   {
-    this = (ClassBoardFullReleaseEffectComponent_o *)sub_1C3E564(&Method_CStateManager_ClassBoardFullReleaseEffectComponent__getState__);
-    byte_4C5A8CB = 1;
+    this = (ClassBoardFullReleaseEffectComponent_o *)sub_1C6BA08(&Method_CStateManager_ClassBoardFullReleaseEffectComponent__getState__);
+    byte_4CB9E9D = 1;
   }
   fsm = v2->fields.fsm;
   if ( !fsm )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return fsm->fields.m_state;
 }
 
@@ -132,18 +132,18 @@ void ClassBoardFullReleaseEffectComponent__Play(
   const MethodInfo *v9; // x3
   const MethodInfo *v10; // x2
 
-  if ( (byte_4C5A8C8 & 1) == 0 )
+  if ( (byte_4CB9E9A & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Animation___);
-    byte_4C5A8C8 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Animation___);
+    byte_4CB9E9A = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Animation___);
+                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Animation___);
   this->fields.animation = (struct UnityEngine_Animation_o *)Component_object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.animation, (int32_t)Component_object, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.animation, (int32_t)Component_object, v6, v7);
   this->fields.endAct = end_act;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.endAct, (int32_t)end_act, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.endAct, (int32_t)end_act, v8, v9);
   ClassBoardFullReleaseEffectComponent__SetState(this, 1, v10);
 }
 
@@ -160,31 +160,31 @@ void ClassBoardFullReleaseEffectComponent__SetClassIcon(
   System_Func_object__bool__o *v9; // x22
   Il2CppObject *v10; // x20
 
-  if ( (byte_4C5A8C9 & 1) == 0 )
+  if ( (byte_4CB9E9B & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_Texture___);
-    sub_1C3E564(&System_Func_Texture__bool__TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0__SetClassIcon_b__0__);
-    sub_1C3E564(&ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0_TypeInfo);
-    byte_4C5A8C9 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_Texture___);
+    sub_1C6BA08(&System_Func_Texture__bool__TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0__SetClassIcon_b__0__);
+    sub_1C6BA08(&ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0_TypeInfo);
+    byte_4CB9E9B = 1;
   }
-  v5 = sub_1C3E7B0(ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0_TypeInfo);
+  v5 = sub_1C6BC54(ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_10;
   *(_DWORD *)(v5 + 16) = baseId;
   iconTextures = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.iconTextures;
-  v9 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_Texture__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_Texture__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
     Method_ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0__SetClassIcon_b__0__,
     0);
-  v10 = System_Linq_Enumerable__FirstOrDefault_object__51525108(
+  v10 = System_Linq_Enumerable__FirstOrDefault_object__51793644(
           iconTextures,
           (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_31235F4 *)Method_System_Linq_Enumerable_FirstOrDefault_Texture___);
+          (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_Texture___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v10, 0, 0) )
@@ -204,7 +204,7 @@ void ClassBoardFullReleaseEffectComponent__SetClassIcon(
       }
     }
 LABEL_10:
-    sub_1C3E7C0(iconRenderer, v7);
+    sub_1C6BC60(iconRenderer, v7);
   }
 }
 
@@ -217,18 +217,18 @@ void ClassBoardFullReleaseEffectComponent__SetState(
 {
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_4C5A8CC & 1) == 0 )
+  if ( (byte_4CB9E9E & 1) == 0 )
   {
-    sub_1C3E564(&Method_CStateManager_ClassBoardFullReleaseEffectComponent__setState__);
-    byte_4C5A8CC = 1;
+    sub_1C6BA08(&Method_CStateManager_ClassBoardFullReleaseEffectComponent__setState__);
+    byte_4CB9E9E = 1;
   }
   fsm = (CStateManager_T__o *)this->fields.fsm;
   if ( !fsm )
-    sub_1C3E7C0(0, *(_QWORD *)&state);
+    sub_1C6BC60(0, *(_QWORD *)&state);
   CStateManager_object___setState(
     fsm,
     state,
-    (const MethodInfo_333EF5C *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__setState__);
+    (const MethodInfo_33849F8 *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__setState__);
 }
 
 
@@ -238,16 +238,16 @@ void ClassBoardFullReleaseEffectComponent__Update(
 {
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_4C5A8CA & 1) == 0 )
+  if ( (byte_4CB9E9C & 1) == 0 )
   {
-    sub_1C3E564(&Method_CStateManager_ClassBoardFullReleaseEffectComponent__update__);
-    byte_4C5A8CA = 1;
+    sub_1C6BA08(&Method_CStateManager_ClassBoardFullReleaseEffectComponent__update__);
+    byte_4CB9E9C = 1;
   }
   fsm = (CStateManager_T__o *)this->fields.fsm;
   if ( fsm )
     CStateManager_object___update(
       fsm,
-      (const MethodInfo_333EF38 *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__update__);
+      (const MethodInfo_33849D4 *)Method_CStateManager_ClassBoardFullReleaseEffectComponent__update__);
 }
 
 
@@ -265,7 +265,7 @@ void ClassBoardFullReleaseEffectComponent_StateEnd__begin(
         const MethodInfo *method)
 {
   if ( !that )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   ActionExtensions__Call(that->fields.endAct, 0);
 }
 
@@ -285,7 +285,7 @@ void ClassBoardFullReleaseEffectComponent_StateEnd__update(
         const MethodInfo *method)
 {
   if ( !that )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   ClassBoardFullReleaseEffectComponent__SetState(that, 0, method);
 }
 
@@ -347,10 +347,10 @@ void ClassBoardFullReleaseEffectComponent_StatePlay__begin(
   if ( !that )
     goto LABEL_12;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0);
-  if ( !byte_4C506A6 )
+  if ( !byte_4CAFC0E )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A6 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC0E = 1;
   }
   GameObjectExtensions__SetLocalScale(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   this = (ClassBoardFullReleaseEffectComponent_StatePlay_o *)that->fields.animation;
@@ -373,7 +373,7 @@ void ClassBoardFullReleaseEffectComponent_StatePlay__begin(
         (this = (ClassBoardFullReleaseEffectComponent_StatePlay_o *)UnityEngine_Animation__get_Item(v7, v8, 0)) == 0) )
   {
 LABEL_12:
-    sub_1C3E7C0(this, that);
+    sub_1C6BC60(this, that);
   }
   UnityEngine_AnimationState__set_speed((UnityEngine_AnimationState_o *)this, 1.0, 0);
 }
@@ -400,10 +400,10 @@ void ClassBoardFullReleaseEffectComponent_StatePlay__update(
   UnityEngine_Animation_o *v8; // x20
   System_String_o *v9; // x0
 
-  if ( (byte_4C5A8CE & 1) == 0 )
+  if ( (byte_4CB9EA0 & 1) == 0 )
   {
-    this = (ClassBoardFullReleaseEffectComponent_StatePlay_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5A8CE = 1;
+    this = (ClassBoardFullReleaseEffectComponent_StatePlay_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB9EA0 = 1;
   }
   if ( !that )
     goto LABEL_16;
@@ -447,7 +447,7 @@ LABEL_15:
       }
     }
 LABEL_16:
-    sub_1C3E7C0(this, that);
+    sub_1C6BC60(this, that);
   }
 }
 
@@ -467,28 +467,22 @@ bool ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0___SetClassIcon_b
 {
   ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0_o *v4; // x19
   System_String_o *name; // x20
-  __int64 v6; // x2
-  __int64 v7; // x3
-  __int64 v8; // x4
-  __int64 v9; // x5
-  __int64 v10; // x6
-  __int64 v11; // x7
-  Il2CppObject *v12; // x0
-  System_String_o *v13; // x0
+  Il2CppObject *v6; // x0
+  System_String_o *v7; // x0
   int32_t baseId; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4C5A8CF & 1) == 0 )
+  if ( (byte_4CB9EA1 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    this = (ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0_o *)sub_1C3E564(&StringLiteral_6892/*"FullReleaseEffect_CrassIcon{0}"*/);
-    byte_4C5A8CF = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    this = (ClassBoardFullReleaseEffectComponent___c__DisplayClass11_0_o *)sub_1C6BA08(&StringLiteral_6885/*"FullReleaseEffect_CrassIcon{0}"*/);
+    byte_4CB9EA1 = 1;
   }
   if ( !x )
-    sub_1C3E7C0(this, x);
+    sub_1C6BC60(this, x);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)x, 0);
   baseId = v4->fields.baseId;
-  v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &baseId, v6, v7, v8, v9, v10, v11);
-  v13 = System_String__Format((System_String_o *)StringLiteral_6892/*"FullReleaseEffect_CrassIcon{0}"*/, v12, 0);
-  return System_String__op_Equality(name, v13, 0);
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &baseId);
+  v7 = System_String__Format((System_String_o *)StringLiteral_6885/*"FullReleaseEffect_CrassIcon{0}"*/, v6, 0);
+  return System_String__op_Equality(name, v7, 0);
 }

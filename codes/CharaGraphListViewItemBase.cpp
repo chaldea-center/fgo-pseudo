@@ -26,21 +26,21 @@ void CharaGraphListViewItemBase___ctor(
   const MethodInfo *v25; // x3
 
   this->fields._BonusKind_k__BackingField = 1;
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
   if ( !listViewPattern )
     goto LABEL_5;
   FilterLogic = CharaGraphListViewPatternBase__CreateFilterLogic(listViewPattern, v7);
   this->fields.filterLogic = FilterLogic;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.filterLogic, (int32_t)FilterLogic, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.filterLogic, (int32_t)FilterLogic, v9, v10);
   SortLogic = CharaGraphListViewPatternBase__CreateSortLogic(listViewPattern, v11);
   this->fields.sortLogic = SortLogic;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.sortLogic, (int32_t)SortLogic, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.sortLogic, (int32_t)SortLogic, v13, v14);
   ItemDrawPattern = CharaGraphListViewPatternBase__get_ItemDrawPattern(listViewPattern, v15);
   this->fields._DrawPattern_k__BackingField = ItemDrawPattern;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._DrawPattern_k__BackingField, (int32_t)ItemDrawPattern, v17, v18);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._DrawPattern_k__BackingField, (int32_t)ItemDrawPattern, v17, v18);
   RootInfo_k__BackingField = listViewPattern->fields._RootInfo_k__BackingField;
   this->fields._RootInfo_k__BackingField = RootInfo_k__BackingField;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._RootInfo_k__BackingField,
     (int32_t)RootInfo_k__BackingField,
     v20,
@@ -48,14 +48,14 @@ void CharaGraphListViewItemBase___ctor(
   v6 = (char *)this->fields.filterLogic;
   if ( !v6
     || (*((_QWORD *)v6 + 3) = this,
-        sub_1C3E508((CGThumbnailListItem_o *)(v6 + 24), (int32_t)this, v22, v23),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 24), (int32_t)this, v22, v23),
         (v6 = (char *)this->fields.sortLogic) == 0) )
   {
 LABEL_5:
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   }
   *((_QWORD *)v6 + 3) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v6 + 24), (int32_t)this, v24, v25);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 24), (int32_t)this, v24, v25);
 }
 
 
@@ -82,7 +82,7 @@ void CharaGraphListViewItemBase__ApplySortValue(CharaGraphListViewItemBase_o *th
   IconInfo1_k__BackingField = sortLogic->fields._IconInfo1_k__BackingField;
   this->fields._IconInfo1_k__BackingField = IconInfo1_k__BackingField;
   p_IconInfo1_k__BackingField = &this->fields._IconInfo1_k__BackingField;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)IconInfo1_k__BackingField,
     v2,
@@ -90,10 +90,10 @@ void CharaGraphListViewItemBase__ApplySortValue(CharaGraphListViewItemBase_o *th
   v10 = (__int64)*(p_IconInfo1_k__BackingField - 9);
   if ( !v10 )
 LABEL_4:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   v11 = *(struct IconLabelInfo_o **)(v10 + 104);
   this->fields._IconInfo2_k__BackingField = v11;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v11, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v11, v8, v9);
 }
 
 
@@ -106,15 +106,15 @@ bool CharaGraphListViewItemBase__GetNpInfo(
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C5602F & 1) == 0 )
+  if ( (byte_4CB5596 & 1) == 0 )
   {
-    sub_1C3E564(&TreasureDvcInfo_TypeInfo);
-    byte_4C5602F = 1;
+    sub_1C6BA08(&TreasureDvcInfo_TypeInfo);
+    byte_4CB5596 = 1;
   }
-  v4 = (TreasureDvcInfo_o *)sub_1C3E7B0(TreasureDvcInfo_TypeInfo);
+  v4 = (TreasureDvcInfo_o *)sub_1C6BC54(TreasureDvcInfo_TypeInfo);
   TreasureDvcInfo___ctor(v4, 0);
   *tdInfo = v4;
-  sub_1C3E508((CGThumbnailListItem_o *)tdInfo, (int32_t)v4, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)tdInfo, (int32_t)v4, v5, v6);
   return 0;
 }
 
@@ -130,10 +130,10 @@ bool CharaGraphListViewItemBase__IsMatchFilter(
   filterLogic = this->fields.filterLogic;
   if ( !filterLogic
     || (filterLogic->fields.sort = sort,
-        sub_1C3E508((CGThumbnailListItem_o *)&filterLogic->fields, (int32_t)sort, (int32_t)method, v3),
+        sub_1C6B9AC((CGThumbnailListItem_o *)&filterLogic->fields, (int32_t)sort, (int32_t)method, v3),
         (filterLogic = this->fields.filterLogic) == 0) )
   {
-    sub_1C3E7C0(filterLogic, sort);
+    sub_1C6BC60(filterLogic, sort);
   }
   return ((__int64 (__fastcall *)(struct CharaGraphFilterLogicBase_o *, const MethodInfo *))filterLogic->klass->vtable._4_unknown.methodPtr)(
            filterLogic,
@@ -154,7 +154,7 @@ void CharaGraphListViewItemBase__Modify(
          args,
          this->klass->vtable._10_ModifyLocal.method);
   if ( !args )
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   if ( args->fields._IsResetSwap_k__BackingField )
     *(_WORD *)&this->fields._IsSwapLock_k__BackingField = 0;
 }
@@ -215,10 +215,10 @@ bool CharaGraphListViewItemBase__SetSortValue(
     sortLogic = this->fields.sortLogic;
     if ( !sortLogic
       || (sortLogic->fields.sort = sort,
-          sub_1C3E508((CGThumbnailListItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8),
+          sub_1C6B9AC((CGThumbnailListItem_o *)&sortLogic->fields, (int32_t)sort, v7, v8),
           (v11 = this->fields.sortLogic) == 0) )
     {
-      sub_1C3E7C0(sortLogic, v6);
+      sub_1C6BC60(sortLogic, v6);
     }
     CharaGraphSortLogicBase__InitSortValue(this->fields.sortLogic, v6);
     ((void (__fastcall *)(struct CharaGraphSortLogicBase_o *, const MethodInfo *))v11->klass->vtable._4_SetSortValueLocal.methodPtr)(
@@ -506,7 +506,7 @@ void CharaGraphListViewItemBase__set_DrawPattern(
   const MethodInfo *v3; // x3
 
   this->fields._DrawPattern_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._DrawPattern_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._DrawPattern_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -545,7 +545,7 @@ void CharaGraphListViewItemBase__set_IconInfo1(
   const MethodInfo *v3; // x3
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -557,7 +557,7 @@ void CharaGraphListViewItemBase__set_IconInfo2(
   const MethodInfo *v3; // x3
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 
@@ -704,5 +704,5 @@ void CharaGraphListViewItemBase__set_RootInfo(
   const MethodInfo *v3; // x3
 
   this->fields._RootInfo_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._RootInfo_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._RootInfo_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }

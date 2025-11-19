@@ -32,6 +32,8 @@ AddBgmArgument
 AddSkillData
 AddSkillInfoData
 AdjustPopupPosInScreenArgument
+AdjustSdk
+AdjustThreadDispatcher
 AfterTransformSvtInfo
 AgeVerificationMenu
 Ai
@@ -183,6 +185,7 @@ BattleAddSkillTaskBeforeCommandAttack
 BattleAddSkillTaskBeforeCounterTreasureDevice
 BattleAddSkillTaskBeforeTargetTask
 BattleAddSkillTaskBeforeTreasureDevice
+BattleAddSkillTaskPreBeforeOtherTreasureDevice
 BattleAdjustPopupPosInScreenComponent
 BattleAttack
 BattleAttackEnemy
@@ -241,14 +244,19 @@ BattleDeckServantData
 BattleDefenceTargetData
 BattleDefenceTargetHpGaugeComponent
 BattleDemoRootComponent
+BattleDropEffectOncePlaySe
 BattleDropHighPosition
 BattleDropHighPositionOverwriteSetting
 BattleDropItem
 BattleDropItemComponent
 BattleDropPointAdjustSetting
 BattleDropPointComponent
+BattleDropPositionRandom
+BattleDropPositionRandomSetting
 BattleDropRandomBound
 BattleDropRandomBoundOverwriteSetting
+BattleDropTimingAdjustment
+BattleDropTimingAdjustmentSetting
 BattleEffectChangeTexture
 BattleEffectControl
 BattleEffectForceFPS
@@ -1032,6 +1040,7 @@ CreateActionDataLogicTask
 CreateComboEndSkillTask
 CreateComboStartSkillTask
 CreateNLSocket
+CreateOtherTreasureDevicePreBeforeSkillTask
 CreateRecipeRequest
 CreateSkillTaskFromBuffAction
 CreateTreasureDeviceBeforeSkillTask
@@ -1163,7 +1172,6 @@ DiggingSchedulerTaskAnimationSkippable
 DiggingSchedulerTaskWaitTimeOrCondition
 DiggingSettings
 DigitRollLabel
-DirectoryInfoExtentions
 DisplayEffectArgument
 DisplayEffectInheritData
 DisplayType
@@ -1172,8 +1180,11 @@ DllGetActivationFactory
 DownloadHandlerFileWithCrcCheck
 DragSelectComponent
 DrawLotsDisplayMessage
+DropAddEntity
+DropAddMaster
 DropAutoSellDlgComponent
 DropInfo
+DropItemEffectArgs
 DropUpInfo
 DrumRollLabel
 DummyErrorSelectDialog
@@ -2300,6 +2311,7 @@ MstMissionEntity
 MstMissionMaster
 MstProfileComponent
 MstProfileData
+MultiDragScrollViewController
 MultiExSummonListViewItem
 MultiSvtInfoComponent
 MultipleViewComponent
@@ -2566,7 +2578,6 @@ ProjectionMatrixCalc
 PropertyBinding
 PropertyReference
 PurchaseBehaviour
-PurchaseByBankRequest
 PurchaseByBankResponseCommand
 PurchaseByBank_Legacy_Request
 PurchaseByBank_UnityIap_Request
@@ -2884,6 +2895,7 @@ ScriptConnectListViewMenu
 ScriptConnectListViewObject
 ScriptConnectMenu
 ScriptDefaultFilePlayerMenu
+ScriptEffectSizeAdjustComponent
 ScriptEncryptEntity
 ScriptEncryptSettings
 ScriptFaceMessageManager
@@ -3584,6 +3596,7 @@ SwitchParameterDisplayComponent
 SwitchParameterDisplayManager
 SwitchUIWidgetComponent
 SyncPositionComponent
+SyncScrollComponent
 SyncTransformComponent
 SyncWidget
 SyncWidgetFromUILabel
@@ -4536,7 +4549,6 @@ mono_thread_suspend_all_other_threads
 mono_type_full_name
 mono_type_generic_inst_is_valuetype
 mono_type_get_attrs
-mono_type_get_class_0_0
 mono_type_get_name_full
 mono_type_get_type
 mono_type_is_byref

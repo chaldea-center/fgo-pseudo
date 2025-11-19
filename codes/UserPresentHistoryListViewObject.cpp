@@ -1,9 +1,9 @@
 void UserPresentHistoryListViewObject___ctor(UserPresentHistoryListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C55A87 & 1) == 0 )
+  if ( (byte_4CB4FE4 & 1) == 0 )
   {
-    sub_1C3E564(&ListViewObject_TypeInfo);
-    byte_4C55A87 = 1;
+    sub_1C6BA08(&ListViewObject_TypeInfo);
+    byte_4CB4FE4 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -19,20 +19,20 @@ void UserPresentHistoryListViewObject__Awake(UserPresentHistoryListViewObject_o 
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C55A85 & 1) == 0 )
+  if ( (byte_4CB4FE2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
-    byte_4C55A85 = 1;
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
+    byte_4CB4FE2 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
+                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UserPresentHistoryListViewItemDraw___);
   this->fields.itemDraw = (struct UserPresentHistoryListViewItemDraw_o *)Component_object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
 }
 
 
@@ -57,9 +57,9 @@ void UserPresentHistoryListViewObject__SetItem(
     goto LABEL_13;
   v4 = this;
   item->fields.viewObject = (struct ListViewObject_o *)this;
-  sub_1C3E508((CGThumbnailListItem_o *)&item->fields.viewObject, (int32_t)this, (int32_t)seed, method);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&item->fields.viewObject, (int32_t)this, (int32_t)seed, method);
   v4->fields.linkItem = item;
-  sub_1C3E508((CGThumbnailListItem_o *)&v4->fields.linkItem, (int32_t)item, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.linkItem, (int32_t)item, v7, v8);
   this = (UserPresentHistoryListViewObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)v4, 0);
   if ( !seed )
     goto LABEL_13;
@@ -97,7 +97,7 @@ void UserPresentHistoryListViewObject__SetItem(
     || (v13 = this, this = (UserPresentHistoryListViewObject_o *)UnityEngine_GameObject__get_layer(parent, 0), !v13) )
   {
 LABEL_13:
-    sub_1C3E7C0(this, item);
+    sub_1C6BC60(this, item);
   }
   UnityEngine_GameObject__set_layer((UnityEngine_GameObject_o *)v13, (int32_t)this, 0);
   ListViewObject__SetVisible((ListViewObject_o *)v4, 1, 0);
@@ -118,11 +118,11 @@ void UserPresentHistoryListViewObject__SetupDisp(UserPresentHistoryListViewObjec
   const MethodInfo *v8; // x2
   UserPresentHistoryListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4C55A86 & 1) == 0 )
+  if ( (byte_4CB4FE3 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UserPresentHistoryListViewItem_TypeInfo);
-    byte_4C55A86 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UserPresentHistoryListViewItem_TypeInfo);
+    byte_4CB4FE3 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -146,7 +146,7 @@ void UserPresentHistoryListViewObject__SetupDisp(UserPresentHistoryListViewObjec
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C3E7C0(0, v7);
+      sub_1C6BC60(0, v7);
     UserPresentHistoryListViewItemDraw__SetItem(v9, (UserPresentHistoryListViewItem_o *)v5, v8);
   }
 }

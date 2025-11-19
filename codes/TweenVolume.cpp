@@ -16,17 +16,17 @@ TweenVolume_o *TweenVolume__Begin(
   const MethodInfo *v8; // x1
   TweenVolume_o *v9; // x19
 
-  if ( (byte_4C5B5C4 & 1) == 0 )
+  if ( (byte_4CBABA1 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UITweener_Begin_TweenVolume___);
-    byte_4C5B5C4 = 1;
+    sub_1C6BA08(&Method_UITweener_Begin_TweenVolume___);
+    byte_4CBABA1 = 1;
   }
   v7 = (TweenVolume_o *)UITweener__Begin_object_(
                           go,
                           duration,
-                          (const MethodInfo_31B54C4 *)Method_UITweener_Begin_TweenVolume___);
+                          (const MethodInfo_3210C14 *)Method_UITweener_Begin_TweenVolume___);
   if ( !v7 )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   v9 = v7;
   v7->fields.from = TweenVolume__get_value(v7, v8);
   v9->fields.to = targetVolume;
@@ -48,7 +48,7 @@ void TweenVolume__OnUpdate(TweenVolume_o *this, float factor, bool isFinished, c
     (const MethodInfo *)isFinished);
   mSource = this->fields.mSource;
   if ( !mSource )
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   volume = UnityEngine_AudioSource__get_volume(mSource, 0);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)mSource, volume > 0.01, 0);
 }
@@ -78,13 +78,13 @@ UnityEngine_AudioSource_o *TweenVolume__get_audioSource(TweenVolume_o *this, con
   const MethodInfo *v10; // x3
   UnityEngine_Object_o *v11; // x21
 
-  if ( (byte_4C5B5C1 & 1) == 0 )
+  if ( (byte_4CBAB9E & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_AudioSource___);
-    sub_1C3E564(&UnityEngine_Debug_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&StringLiteral_14634/*"TweenVolume needs an AudioSource to work with"*/);
-    byte_4C5B5C1 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_AudioSource___);
+    sub_1C6BA08(&UnityEngine_Debug_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&StringLiteral_14625/*"TweenVolume needs an AudioSource to work with"*/);
+    byte_4CBAB9E = 1;
   }
   mSource = (UnityEngine_Object_o *)this->fields.mSource;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -93,9 +93,9 @@ UnityEngine_AudioSource_o *TweenVolume__get_audioSource(TweenVolume_o *this, con
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
+                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
     this->fields.mSource = (struct UnityEngine_AudioSource_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mSource, (int32_t)Component_object, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mSource, (int32_t)Component_object, v5, v6);
     v7 = (UnityEngine_Object_o *)this->fields.mSource;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -103,9 +103,9 @@ UnityEngine_AudioSource_o *TweenVolume__get_audioSource(TweenVolume_o *this, con
     {
       v8 = UnityEngine_Component__GetComponent_object_(
              (UnityEngine_Component_o *)this,
-             (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
+             (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_AudioSource___);
       this->fields.mSource = (struct UnityEngine_AudioSource_o *)v8;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mSource, (int32_t)v8, v9, v10);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mSource, (int32_t)v8, v9, v10);
       v11 = (UnityEngine_Object_o *)this->fields.mSource;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -113,7 +113,7 @@ UnityEngine_AudioSource_o *TweenVolume__get_audioSource(TweenVolume_o *this, con
       {
         if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-        UnityEngine_Debug__LogError_71154116((Il2CppObject *)StringLiteral_14634/*"TweenVolume needs an AudioSource to work with"*/, (UnityEngine_Object_o *)this, 0);
+        UnityEngine_Debug__LogError_71471368((Il2CppObject *)StringLiteral_14625/*"TweenVolume needs an AudioSource to work with"*/, (UnityEngine_Object_o *)this, 0);
         UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
       }
     }
@@ -128,10 +128,10 @@ float TweenVolume__get_value(TweenVolume_o *this, const MethodInfo *method)
   __int64 v4; // x1
   UnityEngine_AudioSource_o *mSource; // x0
 
-  if ( (byte_4C5B5C2 & 1) == 0 )
+  if ( (byte_4CBAB9F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B5C2 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAB9F = 1;
   }
   audioSource = (UnityEngine_Object_o *)TweenVolume__get_audioSource(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -140,7 +140,7 @@ float TweenVolume__get_value(TweenVolume_o *this, const MethodInfo *method)
     return 0.0;
   mSource = this->fields.mSource;
   if ( !mSource )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   return UnityEngine_AudioSource__get_volume(mSource, 0);
 }
 
@@ -158,10 +158,10 @@ void TweenVolume__set_value(TweenVolume_o *this, float value, const MethodInfo *
   __int64 v6; // x1
   UnityEngine_AudioSource_o *mSource; // x0
 
-  if ( (byte_4C5B5C3 & 1) == 0 )
+  if ( (byte_4CBABA0 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B5C3 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBABA0 = 1;
   }
   audioSource = (UnityEngine_Object_o *)TweenVolume__get_audioSource(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -170,7 +170,7 @@ void TweenVolume__set_value(TweenVolume_o *this, float value, const MethodInfo *
   {
     mSource = this->fields.mSource;
     if ( !mSource )
-      sub_1C3E7C0(0, v6);
+      sub_1C6BC60(0, v6);
     UnityEngine_AudioSource__set_volume(mSource, value, 0);
   }
 }

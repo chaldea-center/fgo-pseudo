@@ -17,7 +17,7 @@ void ServerSettingMenu__Callback(ServerSettingMenu_o *this, bool result, const M
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C3E508(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1C6B9AC(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       result,
@@ -32,16 +32,16 @@ System_Collections_IEnumerator_o *ServerSettingMenu__CheckURL(ServerSettingMenu_
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C543B6 & 1) == 0 )
+  if ( (byte_4CB3908 & 1) == 0 )
   {
-    sub_1C3E564(&ServerSettingMenu__CheckURL_d__37_TypeInfo);
-    byte_4C543B6 = 1;
+    sub_1C6BA08(&ServerSettingMenu__CheckURL_d__37_TypeInfo);
+    byte_4CB3908 = 1;
   }
-  v3 = sub_1C3E7B0(ServerSettingMenu__CheckURL_d__37_TypeInfo);
+  v3 = sub_1C6BC54(ServerSettingMenu__CheckURL_d__37_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -55,7 +55,7 @@ void ServerSettingMenu__Close(ServerSettingMenu_o *this, const MethodInfo *metho
   serverSettingRootObject = this->fields.serverSettingRootObject;
   this->fields.state = 0;
   if ( !serverSettingRootObject )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   UnityEngine_GameObject__SetActive(serverSettingRootObject, 0, 0);
 }
 
@@ -64,10 +64,10 @@ void ServerSettingMenu__EndInput(ServerSettingMenu_o *this, const MethodInfo *me
 {
   UIInput_o *gameServerAddressInput; // x0
 
-  if ( (byte_4C543B2 & 1) == 0 )
+  if ( (byte_4CB3904 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C543B2 = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB3904 = 1;
   }
   if ( this->fields.state )
   {
@@ -80,7 +80,7 @@ void ServerSettingMenu__EndInput(ServerSettingMenu_o *this, const MethodInfo *me
       || (UIInput__set_value(gameServerAddressInput, (System_String_o *)StringLiteral_1/*""*/, 0),
           (gameServerAddressInput = (UIInput_o *)this->fields.serverSettingRootObject) == 0) )
     {
-      sub_1C3E7C0(gameServerAddressInput, method);
+      sub_1C6BC60(gameServerAddressInput, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameServerAddressInput, 0, 0);
   }
@@ -103,14 +103,14 @@ bool ServerSettingMenu__GetIsDecidable(ServerSettingMenu_o *this, const MethodIn
   UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C543B4 & 1) == 0 )
+  if ( (byte_4CB3906 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_6118/*"Error : \nServer is not Exists"*/);
-    sub_1C3E564(&StringLiteral_3938/*"CUSTOM"*/);
-    sub_1C3E564(&StringLiteral_7485/*"IPADDRESS"*/);
-    sub_1C3E564(&StringLiteral_15610/*"Warning : \nServer Number is not registered."*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C543B4 = 1;
+    sub_1C6BA08(&StringLiteral_6108/*"Error : \nServer is not Exists"*/);
+    sub_1C6BA08(&StringLiteral_3930/*"CUSTOM"*/);
+    sub_1C6BA08(&StringLiteral_7479/*"IPADDRESS"*/);
+    sub_1C6BA08(&StringLiteral_15597/*"Warning : \nServer Number is not registered."*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB3906 = 1;
   }
   warningLabel = this->fields.warningLabel;
   if ( !warningLabel )
@@ -121,19 +121,19 @@ bool ServerSettingMenu__GetIsDecidable(ServerSettingMenu_o *this, const MethodIn
     goto LABEL_25;
   warningLabel = (UILabel_o *)System_String__op_Equality(
                                 serverSelectInput->fields.mSelectedItem,
-                                (System_String_o *)StringLiteral_3938/*"CUSTOM"*/,
+                                (System_String_o *)StringLiteral_3930/*"CUSTOM"*/,
                                 0);
   if ( ((unsigned __int8)warningLabel & 1) != 0 )
     return 1;
   v5 = this->fields.serverSelectInput;
   if ( !v5 )
     goto LABEL_25;
-  if ( System_String__op_Equality(v5->fields.mSelectedItem, (System_String_o *)StringLiteral_7485/*"IPADDRESS"*/, 0) )
+  if ( System_String__op_Equality(v5->fields.mSelectedItem, (System_String_o *)StringLiteral_7479/*"IPADDRESS"*/, 0) )
     return 1;
   warningLabel = (UILabel_o *)this->fields.gameServerAddressInput;
   if ( !warningLabel )
 LABEL_25:
-    sub_1C3E7C0(warningLabel, method);
+    sub_1C6BC60(warningLabel, method);
   value = UIInput__get_value((UIInput_o *)warningLabel, 0);
   if ( !System_String__op_Equality(value, (System_String_o *)StringLiteral_1/*""*/, 0) )
   {
@@ -177,7 +177,7 @@ LABEL_25:
               warningLabel = this->fields.warningLabel;
               if ( warningLabel )
               {
-                UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_15610/*"Warning : \nServer Number is not registered."*/, 0);
+                UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_15597/*"Warning : \nServer Number is not registered."*/, 0);
                 return 1;
               }
             }
@@ -198,7 +198,7 @@ LABEL_25:
   warningLabel = this->fields.warningLabel;
   if ( !warningLabel )
     goto LABEL_25;
-  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_6118/*"Error : \nServer is not Exists"*/, 0);
+  UILabel__set_text(warningLabel, (System_String_o *)StringLiteral_6108/*"Error : \nServer is not Exists"*/, 0);
   return 0;
 }
 
@@ -212,18 +212,18 @@ int32_t ServerSettingMenu__GetServerNumberLimit(
   __int64 *v6; // x8
   __int64 *v7; // x8
 
-  if ( (byte_4C543B5 & 1) == 0 )
+  if ( (byte_4CB3907 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_4988/*"DEV"*/);
-    sub_1C3E564(&StringLiteral_12366/*"STG"*/);
-    sub_1C3E564(&StringLiteral_15252/*"VERUP"*/);
-    sub_1C3E564(&StringLiteral_4986/*"DESIGN"*/);
-    sub_1C3E564(&StringLiteral_10812/*"QA"*/);
-    sub_1C3E564(&StringLiteral_10385/*"PLAN"*/);
-    sub_1C3E564(&StringLiteral_8264/*"LIMIT"*/);
-    sub_1C3E564(&StringLiteral_2053/*"AUTOTEST"*/);
-    sub_1C3E564(&StringLiteral_10386/*"PLAY"*/);
-    byte_4C543B5 = 1;
+    sub_1C6BA08(&StringLiteral_4975/*"DEV"*/);
+    sub_1C6BA08(&StringLiteral_12363/*"STG"*/);
+    sub_1C6BA08(&StringLiteral_15239/*"VERUP"*/);
+    sub_1C6BA08(&StringLiteral_4973/*"DESIGN"*/);
+    sub_1C6BA08(&StringLiteral_10808/*"QA"*/);
+    sub_1C6BA08(&StringLiteral_10381/*"PLAN"*/);
+    sub_1C6BA08(&StringLiteral_8261/*"LIMIT"*/);
+    sub_1C6BA08(&StringLiteral_2046/*"AUTOTEST"*/);
+    sub_1C6BA08(&StringLiteral_10382/*"PLAY"*/);
+    byte_4CB3907 = 1;
   }
   v4 = PrivateImplementationDetails___ComputeStringHash(serverType, 0);
   if ( v4 <= 0x8B41AC8F )
@@ -232,21 +232,21 @@ int32_t ServerSettingMenu__GetServerNumberLimit(
     {
       if ( v4 != -1958630257 )
       {
-        if ( v4 == 1945490846 && System_String__op_Equality(serverType, (System_String_o *)StringLiteral_2053/*"AUTOTEST"*/, 0) )
+        if ( v4 == 1945490846 && System_String__op_Equality(serverType, (System_String_o *)StringLiteral_2046/*"AUTOTEST"*/, 0) )
           return 2;
         return 0;
       }
-      v6 = &StringLiteral_4986/*"DESIGN"*/;
+      v6 = &StringLiteral_4973/*"DESIGN"*/;
     }
     else
     {
       if ( v4 != 741848159 )
       {
-        if ( v4 == 1510938844 && System_String__op_Equality(serverType, (System_String_o *)StringLiteral_4988/*"DEV"*/, 0) )
+        if ( v4 == 1510938844 && System_String__op_Equality(serverType, (System_String_o *)StringLiteral_4975/*"DEV"*/, 0) )
           return 20;
         return 0;
       }
-      v6 = &StringLiteral_15252/*"VERUP"*/;
+      v6 = &StringLiteral_15239/*"VERUP"*/;
     }
     goto LABEL_28;
   }
@@ -256,17 +256,17 @@ int32_t ServerSettingMenu__GetServerNumberLimit(
     {
       if ( v4 == -1400509597 )
       {
-        v6 = &StringLiteral_10386/*"PLAY"*/;
+        v6 = &StringLiteral_10382/*"PLAY"*/;
       }
       else
       {
         if ( v4 != -98183329 )
           return 0;
-        v6 = &StringLiteral_12366/*"STG"*/;
+        v6 = &StringLiteral_12363/*"STG"*/;
       }
       goto LABEL_28;
     }
-    v7 = &StringLiteral_10385/*"PLAN"*/;
+    v7 = &StringLiteral_10381/*"PLAN"*/;
 LABEL_25:
     if ( System_String__op_Equality(serverType, (System_String_o *)*v7, 0) )
       return 99;
@@ -274,12 +274,12 @@ LABEL_25:
   }
   if ( v4 == -1946368377 )
   {
-    v7 = &StringLiteral_10812/*"QA"*/;
+    v7 = &StringLiteral_10808/*"QA"*/;
     goto LABEL_25;
   }
   if ( v4 != -1700482540 )
     return 0;
-  v6 = &StringLiteral_8264/*"LIMIT"*/;
+  v6 = &StringLiteral_8261/*"LIMIT"*/;
 LABEL_28:
   if ( System_String__op_Equality(serverType, (System_String_o *)*v6, 0) )
     return 10;
@@ -301,19 +301,19 @@ bool ServerSettingMenu__OnChangeAnyServerAddress(
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v6 = this;
-  if ( (byte_4C543B0 & 1) == 0 )
+  if ( (byte_4CB3902 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_25431/*"サーバアドレスが手動で変更されたので、\nCUSTOM に変更しました"*/);
-    sub_1C3E564(&StringLiteral_3938/*"CUSTOM"*/);
-    this = (ServerSettingMenu_o *)sub_1C3E564(&StringLiteral_7485/*"IPADDRESS"*/);
-    byte_4C543B0 = 1;
+    sub_1C6BA08(&StringLiteral_25521/*"サーバアドレスが手動で変更されたので、\nCUSTOM に変更しました"*/);
+    sub_1C6BA08(&StringLiteral_3930/*"CUSTOM"*/);
+    this = (ServerSettingMenu_o *)sub_1C6BA08(&StringLiteral_7479/*"IPADDRESS"*/);
+    byte_4CB3902 = 1;
   }
   serverSelectInput = v6->fields.serverSelectInput;
   if ( !serverSelectInput )
     goto LABEL_15;
   this = (ServerSettingMenu_o *)System_String__op_Equality(
                                   serverSelectInput->fields.mSelectedItem,
-                                  (System_String_o *)StringLiteral_3938/*"CUSTOM"*/,
+                                  (System_String_o *)StringLiteral_3930/*"CUSTOM"*/,
                                   0);
   if ( ((unsigned __int8)this & 1) == 0 )
   {
@@ -322,7 +322,7 @@ bool ServerSettingMenu__OnChangeAnyServerAddress(
       goto LABEL_15;
     this = (ServerSettingMenu_o *)System_String__op_Equality(
                                     v8->fields.mSelectedItem,
-                                    (System_String_o *)StringLiteral_7485/*"IPADDRESS"*/,
+                                    (System_String_o *)StringLiteral_7479/*"IPADDRESS"*/,
                                     0);
     if ( ((unsigned __int8)this & 1) == 0 )
     {
@@ -339,7 +339,7 @@ bool ServerSettingMenu__OnChangeAnyServerAddress(
         v6->fields.dontRefreshServerInfoFlag = 1;
         if ( this )
         {
-          UIPopupList__set_value((UIPopupList_o *)this, (System_String_o *)StringLiteral_3938/*"CUSTOM"*/, 0);
+          UIPopupList__set_value((UIPopupList_o *)this, (System_String_o *)StringLiteral_3930/*"CUSTOM"*/, 0);
           this = (ServerSettingMenu_o *)v6->fields.warningLabel;
           if ( this )
           {
@@ -351,13 +351,13 @@ bool ServerSettingMenu__OnChangeAnyServerAddress(
             this = (ServerSettingMenu_o *)v6->fields.warningLabel;
             if ( this )
             {
-              UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_25431/*"サーバアドレスが手動で変更されたので、\nCUSTOM に変更しました"*/, 0);
+              UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_25521/*"サーバアドレスが手動で変更されたので、\nCUSTOM に変更しました"*/, 0);
               return 1;
             }
           }
         }
 LABEL_15:
-        sub_1C3E7C0(this, before);
+        sub_1C6BC60(this, before);
       }
     }
   }
@@ -376,10 +376,10 @@ void ServerSettingMenu__OnChangeDataServerAddress(ServerSettingMenu_o *this, con
   const MethodInfo *v8; // x3
 
   v2 = this;
-  if ( (byte_4C543AE & 1) == 0 )
+  if ( (byte_4CB3900 & 1) == 0 )
   {
-    this = (ServerSettingMenu_o *)sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C543AE = 1;
+    this = (ServerSettingMenu_o *)sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB3900 = 1;
   }
   serverSelectInput = v2->fields.serverSelectInput;
   if ( !serverSelectInput )
@@ -389,13 +389,13 @@ void ServerSettingMenu__OnChangeDataServerAddress(ServerSettingMenu_o *this, con
     goto LABEL_13;
   mSelectedItem = serverSelectInput->fields.mSelectedItem;
   value = UIInput__get_value((UIInput_o *)this, 0);
-  System_String__Concat_63636468(mSelectedItem, value, 0);
+  System_String__Concat_63966792(mSelectedItem, value, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C543D4 )
+  if ( !byte_4CB3926 )
   {
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C543D4 = 1;
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB3926 = 1;
   }
   this = (ServerSettingMenu_o *)ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -405,7 +405,7 @@ void ServerSettingMenu__OnChangeDataServerAddress(ServerSettingMenu_o *this, con
   }
   if ( !v2->fields.dataServerAddressInput )
 LABEL_13:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   methods = (System_String_o *)this[1].klass->_1.methods;
   v7 = UIInput__get_value(v2->fields.dataServerAddressInput, 0);
   ServerSettingMenu__OnChangeAnyServerAddress(v2, methods, v7, v8);
@@ -423,10 +423,10 @@ void ServerSettingMenu__OnChangeGameServerAddress(ServerSettingMenu_o *this, con
   const MethodInfo *v8; // x3
 
   v2 = this;
-  if ( (byte_4C543AD & 1) == 0 )
+  if ( (byte_4CB38FF & 1) == 0 )
   {
-    this = (ServerSettingMenu_o *)sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C543AD = 1;
+    this = (ServerSettingMenu_o *)sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB38FF = 1;
   }
   serverSelectInput = v2->fields.serverSelectInput;
   if ( !serverSelectInput )
@@ -436,13 +436,13 @@ void ServerSettingMenu__OnChangeGameServerAddress(ServerSettingMenu_o *this, con
     goto LABEL_13;
   mSelectedItem = serverSelectInput->fields.mSelectedItem;
   value = UIInput__get_value((UIInput_o *)this, 0);
-  System_String__Concat_63636468(mSelectedItem, value, 0);
+  System_String__Concat_63966792(mSelectedItem, value, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C543D3 )
+  if ( !byte_4CB3925 )
   {
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C543D3 = 1;
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB3925 = 1;
   }
   this = (ServerSettingMenu_o *)ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -452,7 +452,7 @@ void ServerSettingMenu__OnChangeGameServerAddress(ServerSettingMenu_o *this, con
   }
   if ( !v2->fields.gameServerAddressInput )
 LABEL_13:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   properties = (System_String_o *)this[1].klass->_1.properties;
   v7 = UIInput__get_value(v2->fields.gameServerAddressInput, 0);
   ServerSettingMenu__OnChangeAnyServerAddress(v2, properties, v7, v8);
@@ -473,10 +473,10 @@ void ServerSettingMenu__OnChangeServerInputType(ServerSettingMenu_o *this, const
   UIInput_o *webServerAddressInput; // x20
   struct UIButton_o *serverDecideButton; // x20
 
-  if ( (byte_4C543AB & 1) == 0 )
+  if ( (byte_4CB38FD & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C543AB = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB38FD = 1;
   }
   ServerSettingMenu__SetDefaultServerNumber(this, method);
   if ( !this->fields.dontRefreshServerInfoFlag )
@@ -489,14 +489,14 @@ void ServerSettingMenu__OnChangeServerInputType(ServerSettingMenu_o *this, const
       goto LABEL_36;
     mSelectedItem = serverSelectInput->fields.mSelectedItem;
     value = UIInput__get_value(serverNumberInput, 0);
-    System_String__Concat_63636468(mSelectedItem, value, 0);
+    System_String__Concat_63966792(mSelectedItem, value, 0);
     serverSecurityDispSprite = (UnityEngine_Behaviour_o *)this->fields.serverSecurityDispSprite;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C543D2 )
+    if ( !byte_4CB3924 )
     {
-      sub_1C3E564(&ManagerConfig_TypeInfo);
-      byte_4C543D2 = 1;
+      sub_1C6BA08(&ManagerConfig_TypeInfo);
+      byte_4CB3924 = 1;
     }
     serverNumberInput = (UIInput_o *)ManagerConfig_TypeInfo;
     if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -511,10 +511,10 @@ void ServerSettingMenu__OnChangeServerInputType(ServerSettingMenu_o *this, const
       *(_BYTE *)(*(_QWORD *)&serverNumberInput->fields.mPosition + 136LL),
       0);
     serverSecuritySprite = (UnityEngine_Behaviour_o *)this->fields.serverSecuritySprite;
-    if ( !byte_4C543D2 )
+    if ( !byte_4CB3924 )
     {
-      sub_1C3E564(&ManagerConfig_TypeInfo);
-      byte_4C543D2 = 1;
+      sub_1C6BA08(&ManagerConfig_TypeInfo);
+      byte_4CB3924 = 1;
     }
     serverNumberInput = (UIInput_o *)ManagerConfig_TypeInfo;
     if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -529,10 +529,10 @@ void ServerSettingMenu__OnChangeServerInputType(ServerSettingMenu_o *this, const
       *(_BYTE *)(*(_QWORD *)&serverNumberInput->fields.mPosition + 136LL),
       0);
     gameServerAddressInput = this->fields.gameServerAddressInput;
-    if ( !byte_4C543D3 )
+    if ( !byte_4CB3925 )
     {
-      sub_1C3E564(&ManagerConfig_TypeInfo);
-      byte_4C543D3 = 1;
+      sub_1C6BA08(&ManagerConfig_TypeInfo);
+      byte_4CB3925 = 1;
     }
     serverNumberInput = (UIInput_o *)ManagerConfig_TypeInfo;
     if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -547,10 +547,10 @@ void ServerSettingMenu__OnChangeServerInputType(ServerSettingMenu_o *this, const
       *(System_String_o **)(*(_QWORD *)&serverNumberInput->fields.mPosition + 144LL),
       0);
     dataServerAddressInput = this->fields.dataServerAddressInput;
-    if ( !byte_4C543D4 )
+    if ( !byte_4CB3926 )
     {
-      sub_1C3E564(&ManagerConfig_TypeInfo);
-      byte_4C543D4 = 1;
+      sub_1C6BA08(&ManagerConfig_TypeInfo);
+      byte_4CB3926 = 1;
     }
     serverNumberInput = (UIInput_o *)ManagerConfig_TypeInfo;
     if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -565,10 +565,10 @@ void ServerSettingMenu__OnChangeServerInputType(ServerSettingMenu_o *this, const
       *(System_String_o **)(*(_QWORD *)&serverNumberInput->fields.mPosition + 152LL),
       0);
     webServerAddressInput = this->fields.webServerAddressInput;
-    if ( !byte_4C543D5 )
+    if ( !byte_4CB3927 )
     {
-      sub_1C3E564(&ManagerConfig_TypeInfo);
-      byte_4C543D5 = 1;
+      sub_1C6BA08(&ManagerConfig_TypeInfo);
+      byte_4CB3927 = 1;
     }
     serverNumberInput = (UIInput_o *)ManagerConfig_TypeInfo;
     if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -578,7 +578,7 @@ void ServerSettingMenu__OnChangeServerInputType(ServerSettingMenu_o *this, const
     }
     if ( !webServerAddressInput )
 LABEL_36:
-      sub_1C3E7C0(serverNumberInput, v4);
+      sub_1C6BC60(serverNumberInput, v4);
     UIInput__set_value(
       webServerAddressInput,
       *(System_String_o **)(*(_QWORD *)&serverNumberInput->fields.mPosition + 160LL),
@@ -607,10 +607,10 @@ void ServerSettingMenu__OnChangeWebServerAddress(ServerSettingMenu_o *this, cons
   const MethodInfo *v8; // x3
 
   v2 = this;
-  if ( (byte_4C543AF & 1) == 0 )
+  if ( (byte_4CB3901 & 1) == 0 )
   {
-    this = (ServerSettingMenu_o *)sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C543AF = 1;
+    this = (ServerSettingMenu_o *)sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB3901 = 1;
   }
   serverSelectInput = v2->fields.serverSelectInput;
   if ( !serverSelectInput )
@@ -620,13 +620,13 @@ void ServerSettingMenu__OnChangeWebServerAddress(ServerSettingMenu_o *this, cons
     goto LABEL_13;
   mSelectedItem = serverSelectInput->fields.mSelectedItem;
   value = UIInput__get_value((UIInput_o *)this, 0);
-  System_String__Concat_63636468(mSelectedItem, value, 0);
+  System_String__Concat_63966792(mSelectedItem, value, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C543D5 )
+  if ( !byte_4CB3927 )
   {
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C543D5 = 1;
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB3927 = 1;
   }
   this = (ServerSettingMenu_o *)ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -636,7 +636,7 @@ void ServerSettingMenu__OnChangeWebServerAddress(ServerSettingMenu_o *this, cons
   }
   if ( !v2->fields.webServerAddressInput )
 LABEL_13:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   nestedTypes = this[1].klass->_1.nestedTypes;
   v7 = UIInput__get_value(v2->fields.webServerAddressInput, 0);
   ServerSettingMenu__OnChangeAnyServerAddress(v2, (System_String_o *)nestedTypes, v7, v8);
@@ -663,7 +663,7 @@ void ServerSettingMenu__OnClickDecide(ServerSettingMenu_o *this, const MethodInf
   if ( this->fields.state == 1 )
   {
     v3 = ServerSettingMenu__CheckURL(this, method);
-    UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)this, v3, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v3, 0);
   }
 }
 
@@ -677,12 +677,12 @@ void ServerSettingMenu__OnClickServerInputSecurity(ServerSettingMenu_o *this, co
   UnityEngine_Behaviour_o *serverSecuritySprite; // x8
   UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4C543AC & 1) == 0 )
+  if ( (byte_4CB38FE & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_7485/*"IPADDRESS"*/);
-    sub_1C3E564(&StringLiteral_15609/*"Warning : \nSecurity設定は変更できません(常にHTTPS通信)"*/);
-    byte_4C543AC = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_7479/*"IPADDRESS"*/);
+    sub_1C6BA08(&StringLiteral_15596/*"Warning : \nSecurity設定は変更できません(常にHTTPS通信)"*/);
+    byte_4CB38FE = 1;
   }
   serverDecideButton = this->fields.serverDecideButton;
   IsDecidable = (UIWidget_o *)ServerSettingMenu__GetIsDecidable(this, method);
@@ -695,14 +695,14 @@ void ServerSettingMenu__OnClickServerInputSecurity(ServerSettingMenu_o *this, co
   serverSelectInput = this->fields.serverSelectInput;
   if ( !serverSelectInput )
     goto LABEL_17;
-  if ( System_String__op_Equality(serverSelectInput->fields.mSelectedItem, (System_String_o *)StringLiteral_7485/*"IPADDRESS"*/, 0) )
+  if ( System_String__op_Equality(serverSelectInput->fields.mSelectedItem, (System_String_o *)StringLiteral_7479/*"IPADDRESS"*/, 0) )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C543D6 )
+    if ( !byte_4CB3928 )
     {
-      sub_1C3E564(&NetworkManager_TypeInfo);
-      byte_4C543D6 = 1;
+      sub_1C6BA08(&NetworkManager_TypeInfo);
+      byte_4CB3928 = 1;
     }
     IsDecidable = (UIWidget_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -720,7 +720,7 @@ void ServerSettingMenu__OnClickServerInputSecurity(ServerSettingMenu_o *this, co
       return;
     }
 LABEL_17:
-    sub_1C3E7C0(IsDecidable, v5);
+    sub_1C6BC60(IsDecidable, v5);
   }
   IsDecidable = (UIWidget_o *)this->fields.warningLabel;
   if ( !IsDecidable )
@@ -733,7 +733,7 @@ LABEL_17:
   IsDecidable = (UIWidget_o *)this->fields.warningLabel;
   if ( !IsDecidable )
     goto LABEL_17;
-  UILabel__set_text((UILabel_o *)IsDecidable, (System_String_o *)StringLiteral_15609/*"Warning : \nSecurity設定は変更できません(常にHTTPS通信)"*/, 0);
+  UILabel__set_text((UILabel_o *)IsDecidable, (System_String_o *)StringLiteral_15596/*"Warning : \nSecurity設定は変更できません(常にHTTPS通信)"*/, 0);
 }
 
 
@@ -765,20 +765,20 @@ void ServerSettingMenu__Open(
   struct UIButton_o *serverDecideButton; // x20
   const MethodInfo *v26; // x1
 
-  if ( (byte_4C543AA & 1) == 0 )
+  if ( (byte_4CB38FC & 1) == 0 )
   {
-    sub_1C3E564(&EventDelegate_Callback_TypeInfo);
-    sub_1C3E564(&EventDelegate_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_ServerSettingMenu_OnChangeDataServerAddress__);
-    sub_1C3E564(&Method_ServerSettingMenu_OnChangeGameServerAddress__);
-    sub_1C3E564(&Method_ServerSettingMenu_OnChangeWebServerAddress__);
-    byte_4C543AA = 1;
+    sub_1C6BA08(&EventDelegate_Callback_TypeInfo);
+    sub_1C6BA08(&EventDelegate_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_ServerSettingMenu_OnChangeDataServerAddress__);
+    sub_1C6BA08(&Method_ServerSettingMenu_OnChangeGameServerAddress__);
+    sub_1C6BA08(&Method_ServerSettingMenu_OnChangeWebServerAddress__);
+    byte_4CB38FC = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
     serverSettingRootObject = this->fields.serverSettingRootObject;
     if ( !serverSettingRootObject )
       goto LABEL_41;
@@ -787,10 +787,10 @@ void ServerSettingMenu__Open(
     serverSelectInput = this->fields.serverSelectInput;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C543CE )
+    if ( !byte_4CB3920 )
     {
-      sub_1C3E564(&NetworkManager_TypeInfo);
-      byte_4C543CE = 1;
+      sub_1C6BA08(&NetworkManager_TypeInfo);
+      byte_4CB3920 = 1;
     }
     v10 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -805,10 +805,10 @@ void ServerSettingMenu__Open(
       goto LABEL_41;
     UIPopupList__set_value(serverSelectInput, (System_String_o *)serverSettingRootObject, 0);
     serverNumberInput = this->fields.serverNumberInput;
-    if ( !byte_4C543CE )
+    if ( !byte_4CB3920 )
     {
-      sub_1C3E564(&NetworkManager_TypeInfo);
-      byte_4C543CE = 1;
+      sub_1C6BA08(&NetworkManager_TypeInfo);
+      byte_4CB3920 = 1;
     }
     v12 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -827,10 +827,10 @@ void ServerSettingMenu__Open(
       goto LABEL_41;
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)serverSettingRootObject, 1, 0);
     gameServerAddressInput = this->fields.gameServerAddressInput;
-    if ( !byte_4C543CF )
+    if ( !byte_4CB3921 )
     {
-      sub_1C3E564(&NetworkManager_TypeInfo);
-      byte_4C543CF = 1;
+      sub_1C6BA08(&NetworkManager_TypeInfo);
+      byte_4CB3921 = 1;
     }
     serverSettingRootObject = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -845,10 +845,10 @@ void ServerSettingMenu__Open(
       *(System_String_o **)(serverSettingRootObject[7].fields.m_CachedPtr + 192),
       0);
     dataServerAddressInput = this->fields.dataServerAddressInput;
-    if ( !byte_4C543D0 )
+    if ( !byte_4CB3922 )
     {
-      sub_1C3E564(&NetworkManager_TypeInfo);
-      byte_4C543D0 = 1;
+      sub_1C6BA08(&NetworkManager_TypeInfo);
+      byte_4CB3922 = 1;
     }
     serverSettingRootObject = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -863,10 +863,10 @@ void ServerSettingMenu__Open(
       *(System_String_o **)(serverSettingRootObject[7].fields.m_CachedPtr + 200),
       0);
     webServerAddressInput = this->fields.webServerAddressInput;
-    if ( !byte_4C543D1 )
+    if ( !byte_4CB3923 )
     {
-      sub_1C3E564(&NetworkManager_TypeInfo);
-      byte_4C543D1 = 1;
+      sub_1C6BA08(&NetworkManager_TypeInfo);
+      byte_4CB3923 = 1;
     }
     serverSettingRootObject = (UnityEngine_GameObject_o *)NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -884,7 +884,7 @@ void ServerSettingMenu__Open(
     if ( !v16 )
       goto LABEL_41;
     onSubmit = v16->fields.onSubmit;
-    v18 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+    v18 = (EventDelegate_Callback_o *)sub_1C6BC54(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(v18, (Il2CppObject *)this, Method_ServerSettingMenu_OnChangeGameServerAddress__, 0);
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -893,13 +893,13 @@ void ServerSettingMenu__Open(
     if ( !v19 )
       goto LABEL_41;
     v20 = v19->fields.onSubmit;
-    v21 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo);
+    v21 = (EventDelegate_Callback_o *)sub_1C6BC54(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(v21, (Il2CppObject *)this, Method_ServerSettingMenu_OnChangeDataServerAddress__, 0);
     serverSettingRootObject = (UnityEngine_GameObject_o *)EventDelegate__Add(v20, v21, 0);
     v22 = this->fields.webServerAddressInput;
     if ( !v22
       || (v23 = v22->fields.onSubmit,
-          v24 = (EventDelegate_Callback_o *)sub_1C3E7B0(EventDelegate_Callback_TypeInfo),
+          v24 = (EventDelegate_Callback_o *)sub_1C6BC54(EventDelegate_Callback_TypeInfo),
           EventDelegate_Callback___ctor(
             v24,
             (Il2CppObject *)this,
@@ -911,7 +911,7 @@ void ServerSettingMenu__Open(
           !serverDecideButton) )
     {
 LABEL_41:
-      sub_1C3E7C0(serverSettingRootObject, v6);
+      sub_1C6BC60(serverSettingRootObject, v6);
     }
     ((void (__fastcall *)(struct UIButton_o *, _QWORD, const MethodInfo *))serverDecideButton->klass->vtable._5_set_isEnabled.methodPtr)(
       serverDecideButton,
@@ -943,12 +943,12 @@ void ServerSettingMenu__SaveServerSettings(ServerSettingMenu_o *this, const Meth
   const MethodInfo *v18; // x2
 
   v2 = this;
-  if ( (byte_4C543B1 & 1) == 0 )
+  if ( (byte_4CB3903 & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
-    this = (ServerSettingMenu_o *)sub_1C3E564(&StringLiteral_7485/*"IPADDRESS"*/);
-    byte_4C543B1 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+    this = (ServerSettingMenu_o *)sub_1C6BA08(&StringLiteral_7479/*"IPADDRESS"*/);
+    byte_4CB3903 = 1;
   }
   serverSelectInput = v2->fields.serverSelectInput;
   if ( !serverSelectInput )
@@ -958,19 +958,19 @@ void ServerSettingMenu__SaveServerSettings(ServerSettingMenu_o *this, const Meth
     goto LABEL_41;
   mSelectedItem = serverSelectInput->fields.mSelectedItem;
   value = UIInput__get_value((UIInput_o *)this, 0);
-  this = (ServerSettingMenu_o *)System_String__Concat_63636468(mSelectedItem, value, 0);
+  this = (ServerSettingMenu_o *)System_String__Concat_63966792(mSelectedItem, value, 0);
   v6 = v2->fields.serverSelectInput;
   if ( !v6 )
     goto LABEL_41;
   v7 = this;
-  if ( System_String__op_Equality(v6->fields.mSelectedItem, (System_String_o *)StringLiteral_7485/*"IPADDRESS"*/, 0) )
+  if ( System_String__op_Equality(v6->fields.mSelectedItem, (System_String_o *)StringLiteral_7479/*"IPADDRESS"*/, 0) )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C543D6 )
+    if ( !byte_4CB3928 )
     {
-      sub_1C3E564(&NetworkManager_TypeInfo);
-      byte_4C543D6 = 1;
+      sub_1C6BA08(&NetworkManager_TypeInfo);
+      byte_4CB3928 = 1;
     }
     v8 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -998,17 +998,17 @@ void ServerSettingMenu__SaveServerSettings(ServerSettingMenu_o *this, const Meth
   v12 = UIInput__get_value(v2->fields.webServerAddressInput, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C543CE )
+  if ( !byte_4CB3920 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C543CE = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB3920 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C543D3 )
+  if ( !byte_4CB3925 )
   {
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C543D3 = 1;
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB3925 = 1;
   }
   v13 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -1017,7 +1017,7 @@ void ServerSettingMenu__SaveServerSettings(ServerSettingMenu_o *this, const Meth
     v13 = ManagerConfig_TypeInfo;
   }
   ReleaseGameServerAddress = v13->static_fields->ReleaseGameServerAddress;
-  this = (ServerSettingMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
+  this = (ServerSettingMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__);
   if ( !this
     || (NetworkManager__SetServerSetting(
           (NetworkManager_o *)this,
@@ -1027,23 +1027,23 @@ void ServerSettingMenu__SaveServerSettings(ServerSettingMenu_o *this, const Meth
           (System_String_o *)v11,
           v12,
           0),
-        (this = (ServerSettingMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0) )
+        (this = (ServerSettingMenu_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_NetworkManager__get_Instance__)) == 0) )
   {
 LABEL_41:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   NetworkManager__WriteServerSetting((NetworkManager_o *)this, 0);
-  if ( !byte_4C543CE )
+  if ( !byte_4CB3920 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C543CE = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB3920 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C543D3 )
+  if ( !byte_4CB3925 )
   {
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C543D3 = 1;
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB3925 = 1;
   }
   v15 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -1075,22 +1075,22 @@ void ServerSettingMenu__SetDefaultServerNumber(ServerSettingMenu_o *this, const 
   UILabel_o *v11; // x19
 
   v2 = this;
-  if ( (byte_4C543B3 & 1) == 0 )
+  if ( (byte_4CB3905 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C3E564(&StringLiteral_4988/*"DEV"*/);
-    sub_1C3E564(&StringLiteral_12366/*"STG"*/);
-    sub_1C3E564(&StringLiteral_22256/*"no number"*/);
-    sub_1C3E564(&StringLiteral_15252/*"VERUP"*/);
-    sub_1C3E564(&StringLiteral_4986/*"DESIGN"*/);
-    sub_1C3E564(&StringLiteral_10812/*"QA"*/);
-    sub_1C3E564(&StringLiteral_10385/*"PLAN"*/);
-    sub_1C3E564(&StringLiteral_8264/*"LIMIT"*/);
-    sub_1C3E564(&StringLiteral_2053/*"AUTOTEST"*/);
-    sub_1C3E564(&StringLiteral_10386/*"PLAY"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    this = (ServerSettingMenu_o *)sub_1C3E564(&StringLiteral_1172/*"1"*/);
-    byte_4C543B3 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C6BA08(&StringLiteral_4975/*"DEV"*/);
+    sub_1C6BA08(&StringLiteral_12363/*"STG"*/);
+    sub_1C6BA08(&StringLiteral_22324/*"no number"*/);
+    sub_1C6BA08(&StringLiteral_15239/*"VERUP"*/);
+    sub_1C6BA08(&StringLiteral_4973/*"DESIGN"*/);
+    sub_1C6BA08(&StringLiteral_10808/*"QA"*/);
+    sub_1C6BA08(&StringLiteral_10381/*"PLAN"*/);
+    sub_1C6BA08(&StringLiteral_8261/*"LIMIT"*/);
+    sub_1C6BA08(&StringLiteral_2046/*"AUTOTEST"*/);
+    sub_1C6BA08(&StringLiteral_10382/*"PLAY"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    this = (ServerSettingMenu_o *)sub_1C6BA08(&StringLiteral_1165/*"1"*/);
+    byte_4CB3905 = 1;
   }
   serverSelectInput = v2->fields.serverSelectInput;
   if ( !serverSelectInput )
@@ -1104,13 +1104,13 @@ void ServerSettingMenu__SetDefaultServerNumber(ServerSettingMenu_o *this, const 
       switch ( v5 )
       {
         case 0xA185DA12:
-          v6 = &StringLiteral_10385/*"PLAN"*/;
+          v6 = &StringLiteral_10381/*"PLAN"*/;
           break;
         case 0xAC85EB63:
-          v6 = &StringLiteral_10386/*"PLAY"*/;
+          v6 = &StringLiteral_10382/*"PLAY"*/;
           break;
         case 0xFA25D75F:
-          v6 = &StringLiteral_12366/*"STG"*/;
+          v6 = &StringLiteral_12363/*"STG"*/;
           break;
         default:
           goto LABEL_31;
@@ -1118,26 +1118,26 @@ void ServerSettingMenu__SetDefaultServerNumber(ServerSettingMenu_o *this, const 
     }
     else if ( v5 == -1946368377 )
     {
-      v6 = &StringLiteral_10812/*"QA"*/;
+      v6 = &StringLiteral_10808/*"QA"*/;
     }
     else
     {
       if ( v5 != -1700482540 )
         goto LABEL_31;
-      v6 = &StringLiteral_8264/*"LIMIT"*/;
+      v6 = &StringLiteral_8261/*"LIMIT"*/;
     }
   }
   else if ( v5 > 0x5A0F18DC )
   {
     if ( v5 == -1958630257 )
     {
-      v6 = &StringLiteral_4986/*"DESIGN"*/;
+      v6 = &StringLiteral_4973/*"DESIGN"*/;
     }
     else
     {
       if ( v5 != 1945490846 )
         goto LABEL_31;
-      v6 = &StringLiteral_2053/*"AUTOTEST"*/;
+      v6 = &StringLiteral_2046/*"AUTOTEST"*/;
     }
   }
   else
@@ -1146,7 +1146,7 @@ void ServerSettingMenu__SetDefaultServerNumber(ServerSettingMenu_o *this, const 
     {
       if ( v5 == 1510938844 )
       {
-        v6 = &StringLiteral_4988/*"DEV"*/;
+        v6 = &StringLiteral_4975/*"DEV"*/;
         goto LABEL_25;
       }
 LABEL_31:
@@ -1155,7 +1155,7 @@ LABEL_31:
       {
         this = (ServerSettingMenu_o *)UnityEngine_Component__GetComponent_object_(
                                         (UnityEngine_Component_o *)this,
-                                        (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                        (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider___);
         if ( this )
         {
           UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, 0, 0);
@@ -1165,7 +1165,7 @@ LABEL_31:
             this = (ServerSettingMenu_o *)serverNumberInput->fields.label;
             if ( this )
             {
-              UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_22256/*"no number"*/, 0);
+              UILabel__set_text((UILabel_o *)this, (System_String_o *)StringLiteral_22324/*"no number"*/, 0);
               this = (ServerSettingMenu_o *)v2->fields.serverNumberInput;
               if ( this )
               {
@@ -1178,7 +1178,7 @@ LABEL_31:
       }
       goto LABEL_42;
     }
-    v6 = &StringLiteral_15252/*"VERUP"*/;
+    v6 = &StringLiteral_15239/*"VERUP"*/;
   }
 LABEL_25:
   if ( !System_String__op_Equality(mSelectedItem, (System_String_o *)*v6, 0) )
@@ -1188,7 +1188,7 @@ LABEL_25:
     goto LABEL_42;
   this = (ServerSettingMenu_o *)UnityEngine_Component__GetComponent_object_(
                                   (UnityEngine_Component_o *)this,
-                                  (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                  (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !this )
     goto LABEL_42;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, 1, 0);
@@ -1198,7 +1198,7 @@ LABEL_25:
   value = UIInput__get_value(v2->fields.serverNumberInput, 0);
   if ( System_String__op_Equality(value, (System_String_o *)StringLiteral_1/*""*/, 0) )
   {
-    v9 = (System_String_o *)StringLiteral_1172/*"1"*/;
+    v9 = (System_String_o *)StringLiteral_1165/*"1"*/;
   }
   else
   {
@@ -1215,7 +1215,7 @@ LABEL_25:
         !v11) )
   {
 LABEL_42:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   UILabel__set_text(v11, (System_String_o *)this, 0);
 }
@@ -1259,7 +1259,7 @@ void ServerSettingMenu__SetInputIsEnabled(ServerSettingMenu_o *this, bool value,
         (serverSelectInput = (UnityEngine_Behaviour_o *)this->fields.serverCancelButton) == 0) )
   {
 LABEL_10:
-    sub_1C3E7C0(serverSelectInput, value);
+    sub_1C6BC60(serverSelectInput, value);
   }
   UnityEngine_Behaviour__set_enabled(serverSelectInput, v7, 0);
 }
@@ -1271,16 +1271,16 @@ void ServerSettingMenu__StartMenu(ServerSettingMenu_o *this, const MethodInfo *m
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C543A9 & 1) == 0 )
+  if ( (byte_4CB38FB & 1) == 0 )
   {
-    sub_1C3E564(&ServerSettingMenu_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_ServerSettingMenu__StartMenu_b__19_0__);
-    byte_4C543A9 = 1;
+    sub_1C6BA08(&ServerSettingMenu_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_ServerSettingMenu__StartMenu_b__19_0__);
+    byte_4CB38FB = 1;
   }
   TestScript_DebugTest_DebugItem_DebugItemMenuBase__StartMenu(
     (TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this,
     0);
-  v3 = (ServerSettingMenu_CallbackFunc_o *)sub_1C3E7B0(ServerSettingMenu_CallbackFunc_TypeInfo);
+  v3 = (ServerSettingMenu_CallbackFunc_o *)sub_1C6BC54(ServerSettingMenu_CallbackFunc_TypeInfo);
   ServerSettingMenu_CallbackFunc___ctor(v3, (Il2CppObject *)this, Method_ServerSettingMenu__StartMenu_b__19_0__, v4);
   ServerSettingMenu__Open(this, v3, v5);
 }
@@ -1301,10 +1301,10 @@ void ServerSettingMenu__add_callbackFunc(
   ServerSettingMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C543A7 & 1) == 0 )
+  if ( (byte_4CB38F9 & 1) == 0 )
   {
-    sub_1C3E564(&ServerSettingMenu_CallbackFunc_TypeInfo);
-    byte_4C543A7 = 1;
+    sub_1C6BA08(&ServerSettingMenu_CallbackFunc_TypeInfo);
+    byte_4CB38F9 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1317,13 +1317,13 @@ void ServerSettingMenu__add_callbackFunc(
       if ( (ServerSettingMenu_CallbackFunc_c *)v8->klass != ServerSettingMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   ServerSettingMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -1342,10 +1342,10 @@ void ServerSettingMenu__remove_callbackFunc(
   ServerSettingMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C543A8 & 1) == 0 )
+  if ( (byte_4CB38FA & 1) == 0 )
   {
-    sub_1C3E564(&ServerSettingMenu_CallbackFunc_TypeInfo);
-    byte_4C543A8 = 1;
+    sub_1C6BA08(&ServerSettingMenu_CallbackFunc_TypeInfo);
+    byte_4CB38FA = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -1358,13 +1358,13 @@ void ServerSettingMenu__remove_callbackFunc(
       if ( (ServerSettingMenu_CallbackFunc_c *)v8->klass != ServerSettingMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   ServerSettingMenu__StartMenu(v11, v12);
 }
 
@@ -1384,15 +1384,15 @@ void ServerSettingMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -1404,9 +1404,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A80528;
+  this->fields.invoke_impl = (intptr_t)sub_1A9F1E0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A804E0;
+  this->fields.extra_arg = (intptr_t)sub_1A9F198;
 }
 
 
@@ -1417,21 +1417,18 @@ System_IAsyncResult_o *ServerSettingMenu_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
-  bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v13[0] = result;
-  if ( (byte_4C543B7 & 1) == 0 )
+  v10[0] = result;
+  if ( (byte_4CB3909 & 1) == 0 )
   {
-    sub_1C3E564(&bool_TypeInfo);
-    byte_4C543B7 = 1;
+    sub_1C6BA08(&bool_TypeInfo);
+    byte_4CB3909 = 1;
   }
-  v12[1] = 0;
-  v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
+  v9[1] = 0;
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
 }
 
 
@@ -1440,7 +1437,7 @@ void ServerSettingMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 
@@ -1509,14 +1506,14 @@ bool ServerSettingMenu__CheckURL_d__37__MoveNext(ServerSettingMenu__CheckURL_d__
   UnityEngine_Color_o v41; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v40 = this;
-  if ( (byte_4C543B8 & 1) == 0 )
+  if ( (byte_4CB390A & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&StringLiteral_6118/*"Error : \nServer is not Exists"*/);
-    sub_1C3E564(&StringLiteral_1103/*"/gamedata/top"*/);
-    sub_1C3E564(&StringLiteral_20096/*"https://"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C543B8 = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&StringLiteral_6108/*"Error : \nServer is not Exists"*/);
+    sub_1C6BA08(&StringLiteral_1096/*"/gamedata/top"*/);
+    sub_1C6BA08(&StringLiteral_20142/*"https://"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB390A = 1;
   }
   v39 = &v40;
   _1__state = this->fields.__1__state;
@@ -1524,35 +1521,35 @@ bool ServerSettingMenu__CheckURL_d__37__MoveNext(ServerSettingMenu__CheckURL_d__
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -3;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1C3E7C0(0, v25);
+      sub_1C6BC60(0, v25);
     CommonUI__SetConnect((CommonUI_o *)Instance, 0, 0);
     www_5__2 = v40->fields._www_5__2;
     if ( !www_5__2 )
-      sub_1C3E7C0(0, v26);
+      sub_1C6BC60(0, v26);
     error = UnityEngine_Networking_UnityWebRequest__get_error(www_5__2, 0);
     v29 = (System_String_o *)System_String__op_Equality(error, (System_String_o *)StringLiteral_1/*""*/, 0);
     if ( ((unsigned __int8)v29 & 1) != 0 )
       goto LABEL_19;
     v31 = v40->fields._www_5__2;
     if ( !v31 )
-      sub_1C3E7C0(0, v30);
+      sub_1C6BC60(0, v30);
     v29 = UnityEngine_Networking_UnityWebRequest__get_error(v31, 0);
     if ( !v29 )
     {
 LABEL_19:
       if ( !_4__this )
-        sub_1C3E7C0(v29, v30);
+        sub_1C6BC60(v29, v30);
       ServerSettingMenu__SaveServerSettings(_4__this, v30);
     }
     else
     {
       if ( !_4__this )
-        sub_1C3E7C0(v29, v30);
+        sub_1C6BC60(v29, v30);
       warningLabel = (UIWidget_o *)_4__this->fields.warningLabel;
       if ( !warningLabel )
-        sub_1C3E7C0(0, v30);
+        sub_1C6BC60(0, v30);
       v41.fields.r = 1.0;
       v41.fields.g = 0.0;
       v41.fields.b = 0.0;
@@ -1560,42 +1557,42 @@ LABEL_19:
       UIWidget__set_color(warningLabel, v41, 0);
       v34 = _4__this->fields.warningLabel;
       if ( !v34 )
-        sub_1C3E7C0(0, v33);
-      UILabel__set_text(v34, (System_String_o *)StringLiteral_6118/*"Error : \nServer is not Exists"*/, 0);
+        sub_1C6BC60(0, v33);
+      UILabel__set_text(v34, (System_String_o *)StringLiteral_6108/*"Error : \nServer is not Exists"*/, 0);
     }
     ServerSettingMenu__CheckURL_d__37____m__Finally1(v40, v35);
     v36 = v40;
     v40->fields._www_5__2 = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v36->fields._www_5__2, 0, v37, v38);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v36->fields._www_5__2, 0, v37, v38);
     return 0;
   }
   if ( _1__state )
     return 0;
   this->fields.__1__state = -1;
-  v5 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v5 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !v5 )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   CommonUI__SetConnect((CommonUI_o *)v5, 1, 0);
   if ( !_4__this )
-    sub_1C3E7C0(v7, v8);
+    sub_1C6BC60(v7, v8);
   gameServerAddressInput = _4__this->fields.gameServerAddressInput;
   if ( !gameServerAddressInput )
-    sub_1C3E7C0(0, v8);
-  v10 = (System_String_o *)StringLiteral_20096/*"https://"*/;
+    sub_1C6BC60(0, v8);
+  v10 = (System_String_o *)StringLiteral_20142/*"https://"*/;
   value = UIInput__get_value(gameServerAddressInput, 0);
-  v12 = System_String__Concat_63674716(v10, value, (System_String_o *)StringLiteral_1103/*"/gamedata/top"*/, 0);
+  v12 = System_String__Concat_64005056(v10, value, (System_String_o *)StringLiteral_1096/*"/gamedata/top"*/, 0);
   v13 = UnityEngine_Networking_UnityWebRequest__Get(v12, 0);
   v14 = v40;
   v40->fields._www_5__2 = v13;
-  sub_1C3E508((CGThumbnailListItem_o *)&v14->fields._www_5__2, (int32_t)v13, v15, v16);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v14->fields._www_5__2, (int32_t)v13, v15, v16);
   v18 = v40->fields._www_5__2;
   v40->fields.__1__state = -3;
   if ( !v18 )
-    sub_1C3E7C0(0, v17);
+    sub_1C6BC60(0, v17);
   v19 = (Il2CppObject *)UnityEngine_Networking_UnityWebRequest__SendWebRequest(v18, 0);
   v20 = v40;
   v40->fields.__2__current = v19;
-  sub_1C3E508((CGThumbnailListItem_o *)&v20->fields.__2__current, (int32_t)v19, v21, v22);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v20->fields.__2__current, (int32_t)v19, v21, v22);
   result = 1;
   v40->fields.__1__state = 1;
   return result;
@@ -1618,11 +1615,11 @@ void __noreturn ServerSettingMenu__CheckURL_d__37__System_Collections_IEnumerato
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_ServerSettingMenu__CheckURL_d__37_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_ServerSettingMenu__CheckURL_d__37_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -1656,10 +1653,10 @@ void ServerSettingMenu__CheckURL_d__37____m__Finally1(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4C543B9 & 1) == 0 )
+  if ( (byte_4CB390B & 1) == 0 )
   {
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    byte_4C543B9 = 1;
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    byte_4CB390B = 1;
   }
   www_5__2 = this->fields._www_5__2;
   this->fields.__1__state = -1;
@@ -1682,7 +1679,7 @@ void ServerSettingMenu__CheckURL_d__37____m__Finally1(
     else
     {
 LABEL_8:
-      v7 = sub_1C8ED7C(www_5__2, System_IDisposable_TypeInfo, 0);
+      v7 = sub_1C41D90(www_5__2, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(struct UnityEngine_Networking_UnityWebRequest_o *, _QWORD))v7)(
       www_5__2,

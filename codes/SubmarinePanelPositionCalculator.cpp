@@ -40,7 +40,7 @@ void SubmarinePanelPositionCalculator__LoadSettings(
         const MethodInfo *method)
 {
   if ( !settings )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   this->fields._OffsetX_k__BackingField = settings->fields._BoardOffset_k__BackingField.fields.x;
   this->fields._OffsetY_k__BackingField = settings->fields._BoardOffset_k__BackingField.fields.y;
   this->fields._PanelUnitSize_k__BackingField = settings->fields._PanelUnitSize_k__BackingField;

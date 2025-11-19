@@ -19,10 +19,10 @@ bool WarBoardTouchBlockObject__Activate(
   if ( !isActiveAndEnabled )
   {
     this->fields.onClickCallback = callback;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onClickCallback, (int32_t)callback, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onClickCallback, (int32_t)callback, v5, v6);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
-      sub_1C3E7C0(0, v9);
+      sub_1C6BC60(0, v9);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   }
   return !isActiveAndEnabled;
@@ -38,10 +38,10 @@ void WarBoardTouchBlockObject__Deactivate(WarBoardTouchBlockObject_o *this, cons
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.onClickCallback = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.onClickCallback, 0, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onClickCallback, 0, v5, v6);
 }
 
 
@@ -60,7 +60,7 @@ void WarBoardTouchBlockObject__OnClickObject(WarBoardTouchBlockObject_o *this, c
       onClickCallback->fields.method_code,
       onClickCallback->fields.method);
     p_onClickCallback->klass = 0;
-    sub_1C3E508(p_onClickCallback, 0, v4, v5);
+    sub_1C6B9AC(p_onClickCallback, 0, v4, v5);
   }
 }
 
@@ -79,7 +79,7 @@ void WarBoardTouchBlockObject__RemoveCallback(WarBoardTouchBlockObject_o *this, 
     if ( onClickCallback )
     {
       p_onClickCallback->klass = 0;
-      sub_1C3E508(p_onClickCallback, 0, v3, v4);
+      sub_1C6B9AC(p_onClickCallback, 0, v3, v4);
     }
   }
 }
@@ -102,7 +102,7 @@ void WarBoardTouchBlockObject__SetCallback(
     if ( !onClickCallback )
     {
       p_onClickCallback->klass = (CGThumbnailListItem_c *)callback;
-      sub_1C3E508(p_onClickCallback, (int32_t)callback, v5, v6);
+      sub_1C6B9AC(p_onClickCallback, (int32_t)callback, v5, v6);
     }
   }
 }

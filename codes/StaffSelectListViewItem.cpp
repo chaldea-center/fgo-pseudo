@@ -18,10 +18,10 @@ void StaffSelectListViewItem___ctor(
   bool v20; // w8
   struct UIAtlas_o **p_PhotoCampaignAtlas_k__BackingField; // x20
 
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
   this->fields._StaffPhotoEntity_k__BackingField = entity;
   p_StaffPhotoEntity_k__BackingField = &this->fields._StaffPhotoEntity_k__BackingField;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._StaffPhotoEntity_k__BackingField, (int32_t)entity, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._StaffPhotoEntity_k__BackingField, (int32_t)entity, v13, v14);
   if ( !entity )
     goto LABEL_7;
   id = entity->fields.id;
@@ -34,17 +34,16 @@ void StaffSelectListViewItem___ctor(
   v15 = *p_StaffPhotoEntity_k__BackingField;
   if ( !*p_StaffPhotoEntity_k__BackingField )
 LABEL_7:
-    sub_1C3E7C0(v15, v16);
+    sub_1C6BC60(v15, v16);
   v20 = !StaffPhotoEntity__IsEnableSameSet(v15, 0);
 LABEL_6:
   this->fields._PhotoCampaignAtlas_k__BackingField = photoCampaignAtlas;
   p_PhotoCampaignAtlas_k__BackingField = &this->fields._PhotoCampaignAtlas_k__BackingField;
   *((_BYTE *)p_PhotoCampaignAtlas_k__BackingField - 7) = v20;
-  sub_1C3E508((CGThumbnailListItem_o *)p_PhotoCampaignAtlas_k__BackingField, (int32_t)photoCampaignAtlas, v17, v18);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_PhotoCampaignAtlas_k__BackingField, (int32_t)photoCampaignAtlas, v17, v18);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void StaffSelectListViewItem__ModifyItem(
         StaffSelectListViewItem_o *this,
         int32_t selectStaffPhotoId,
@@ -54,7 +53,7 @@ void StaffSelectListViewItem__ModifyItem(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1C3E7C0(this, *(_QWORD *)&selectStaffPhotoId);
+    sub_1C6BC60(this, selectStaffPhotoId);
   this->fields._IsSelected_k__BackingField = StaffPhotoEntity_k__BackingField->fields.id == selectStaffPhotoId;
 }
 
@@ -69,7 +68,7 @@ bool StaffSelectListViewItem__SetSortValue(
 
   StaffPhotoEntity_k__BackingField = this->fields._StaffPhotoEntity_k__BackingField;
   if ( !StaffPhotoEntity_k__BackingField )
-    sub_1C3E7C0(this, sort);
+    sub_1C6BC60(this, sort);
   result = 1;
   this->fields.sortValue1 = StaffPhotoEntity_k__BackingField->fields.dispOrder;
   return result;

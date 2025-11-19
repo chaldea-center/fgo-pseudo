@@ -2,10 +2,10 @@ void ConfirmUseGrandServantResetItemDialog___ctor(
         ConfirmUseGrandServantResetItemDialog_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C51ACD & 1) == 0 )
+  if ( (byte_4CB1015 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C51ACD = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB1015 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -36,7 +36,7 @@ void ConfirmUseGrandServantResetItemDialog__Callback(
   if ( callbackFunc )
   {
     *p_callbackFunc = 0;
-    sub_1C3E508(p_callbackFunc, 0);
+    sub_1C6B9AC(p_callbackFunc, 0);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))v4->fields.invoke_impl)(
       v4->fields.method_code,
       (unsigned int)result,
@@ -82,13 +82,13 @@ void ConfirmUseGrandServantResetItemDialog__OnEnable(
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4C51ACB & 1) == 0 )
+  if ( (byte_4CB1013 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_15648/*"Window/Buttons/CancelButton"*/);
-    byte_4C51ACB = 1;
+    sub_1C6BA08(&StringLiteral_15635/*"Window/Buttons/CancelButton"*/);
+    byte_4CB1013 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45015816(transform, (System_String_o *)StringLiteral_15648/*"Window/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45210584(transform, (System_String_o *)StringLiteral_15635/*"Window/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -124,31 +124,31 @@ void ConfirmUseGrandServantResetItemDialog__Open(
   UILabel_o *needNumLabel; // x20
   UILabel_o *haveNumLabel; // x20
 
-  if ( (byte_4C51ACC & 1) == 0 )
+  if ( (byte_4CB1014 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_ItemIconComponent__TypeInfo);
-    sub_1C3E564(&Method_BasicHelper_ForEach_ItemIconComponent___);
-    sub_1C3E564(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C3E564(&Method_DataManager_GetMaster_UserItemMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_ConfirmUseGrandServantResetItemDialog___c__DisplayClass13_0__Open_b__0__);
-    sub_1C3E564(&ConfirmUseGrandServantResetItemDialog___c__DisplayClass13_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_3781/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_NEED_ITEM"*/);
-    sub_1C3E564(&StringLiteral_3780/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_MESSAGE"*/);
-    sub_1C3E564(&StringLiteral_3779/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_HAVE_ITEM"*/);
-    byte_4C51ACC = 1;
+    sub_1C6BA08(&System_Action_ItemIconComponent__TypeInfo);
+    sub_1C6BA08(&Method_BasicHelper_ForEach_ItemIconComponent___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_UserItemMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_ConfirmUseGrandServantResetItemDialog___c__DisplayClass13_0__Open_b__0__);
+    sub_1C6BA08(&ConfirmUseGrandServantResetItemDialog___c__DisplayClass13_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_3773/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_NEED_ITEM"*/);
+    sub_1C6BA08(&StringLiteral_3772/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_MESSAGE"*/);
+    sub_1C6BA08(&StringLiteral_3771/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_HAVE_ITEM"*/);
+    byte_4CB1014 = 1;
   }
-  v9 = (Il2CppObject *)sub_1C3E7B0(ConfirmUseGrandServantResetItemDialog___c__DisplayClass13_0_TypeInfo);
+  v9 = (Il2CppObject *)sub_1C6BC54(ConfirmUseGrandServantResetItemDialog___c__DisplayClass13_0_TypeInfo);
   System_Object___ctor(v9, 0);
   this->fields.callbackFunc = callback;
-  sub_1C3E508(&this->fields.callbackFunc, callback);
+  sub_1C6B9AC(&this->fields.callbackFunc, callback);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
   if ( !grandGraphEntity )
     goto LABEL_38;
   if ( !userServantEntity )
@@ -163,11 +163,11 @@ void ConfirmUseGrandServantResetItemDialog__Open(
   v16 = Entity;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3780/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_MESSAGE"*/, 0);
+  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_3772/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_MESSAGE"*/, 0);
   Master_object = (GrandGraphDetailMaster_o *)UserServantEntity__GetSvtName(userServantEntity, 0);
   if ( !v16 )
     goto LABEL_38;
-  Master_object = (GrandGraphDetailMaster_o *)System_String__Format_63677760(
+  Master_object = (GrandGraphDetailMaster_o *)System_String__Format_64008100(
                                                 v17,
                                                 (Il2CppObject *)Master_object,
                                                 (Il2CppObject *)v16->fields.nameFull,
@@ -185,13 +185,13 @@ void ConfirmUseGrandServantResetItemDialog__Open(
   if ( !LODWORD(removeItemIds->max_length) )
     goto LABEL_39;
   v20 = removeItemIds->m_Items[0];
-  v21 = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_UserItemMaster___);
+  v21 = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserItemMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C50AE2 )
+  if ( !byte_4CB002A )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C50AE2 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB002A = 1;
   }
   Master_object = (GrandGraphDetailMaster_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -206,7 +206,7 @@ void ConfirmUseGrandServantResetItemDialog__Open(
                        (int64_t)Master_object[2].fields.list[1].monitor,
                        v20,
                        0);
-  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = (GrandGraphDetailMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !EntityDefinitely )
     goto LABEL_38;
   if ( !Master_object )
@@ -214,14 +214,14 @@ void ConfirmUseGrandServantResetItemDialog__Open(
   Master_object = (GrandGraphDetailMaster_o *)DataMasterBase_object__object__int___GetEntity(
                                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                                 EntityDefinitely->fields.itemId,
-                                                (const MethodInfo_33B2F58 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                                                (const MethodInfo_33F90DC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   if ( !v9 )
     goto LABEL_38;
   v9[1].klass = (Il2CppClass *)Master_object;
   v23 = v9 + 1;
-  sub_1C3E508(&v9[1], Master_object);
+  sub_1C6B9AC(&v9[1], Master_object);
   needItemIcons = (System_Collections_Generic_IEnumerable_T__o *)this->fields.needItemIcons;
-  v25 = (System_Action_object__o *)sub_1C3E7B0(System_Action_ItemIconComponent__TypeInfo);
+  v25 = (System_Action_object__o *)sub_1C6BC54(System_Action_ItemIconComponent__TypeInfo);
   System_Action_object____ctor(
     v25,
     v9,
@@ -230,14 +230,14 @@ void ConfirmUseGrandServantResetItemDialog__Open(
   BasicHelper__ForEach_object_(
     needItemIcons,
     (System_Action_T__o *)v25,
-    (const MethodInfo_30E5A30 *)Method_BasicHelper_ForEach_ItemIconComponent___);
+    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_ItemIconComponent___);
   needItemNameLabels = this->fields.needItemNameLabels;
   if ( !needItemNameLabels )
     goto LABEL_38;
   if ( !LODWORD(needItemNameLabels->max_length) )
     goto LABEL_39;
   v27 = needItemNameLabels->m_Items[0];
-  Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3781/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_NEED_ITEM"*/, 0);
+  Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3773/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_NEED_ITEM"*/, 0);
   if ( !v23->klass )
     goto LABEL_38;
   Master_object = (GrandGraphDetailMaster_o *)System_String__Format(
@@ -253,7 +253,7 @@ void ConfirmUseGrandServantResetItemDialog__Open(
   if ( LODWORD(v28->max_length) <= 1 )
     goto LABEL_39;
   v29 = v28->m_Items[1];
-  Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3779/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_HAVE_ITEM"*/, 0);
+  Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3771/*"CONFIRM_USE_GRAND_SERVANT_RESET_ITEM_DIALOG_HAVE_ITEM"*/, 0);
   if ( !v23->klass
     || (Master_object = (GrandGraphDetailMaster_o *)System_String__Format(
                                                       (System_String_o *)Master_object,
@@ -264,11 +264,11 @@ void ConfirmUseGrandServantResetItemDialog__Open(
         (removeItemNums = grandGraphEntity->fields.removeItemNums) == 0) )
   {
 LABEL_38:
-    sub_1C3E7C0(Master_object, v11);
+    sub_1C6BC60(Master_object, v11);
   }
   if ( !LODWORD(removeItemNums->max_length) )
 LABEL_39:
-    sub_1C3E7C8(Master_object, v11);
+    sub_1C6BC68(Master_object);
   needNumLabel = this->fields.needNumLabel;
   Master_object = (GrandGraphDetailMaster_o *)LocalizationManager__GetNumberFormat(removeItemNums->m_Items[0], 0);
   if ( !needNumLabel )
@@ -298,10 +298,10 @@ void ConfirmUseGrandServantResetItemDialog__add_callbackFunc(
   ConfirmUseGrandServantResetItemDialog_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C51AC9 & 1) == 0 )
+  if ( (byte_4CB1011 & 1) == 0 )
   {
-    sub_1C3E564(&ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo);
-    byte_4C51AC9 = 1;
+    sub_1C6BA08(&ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo);
+    byte_4CB1011 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -314,13 +314,13 @@ void ConfirmUseGrandServantResetItemDialog__add_callbackFunc(
       if ( (ConfirmUseGrandServantResetItemDialog_CallbackFunc_c *)v8->klass != ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ConfirmUseGrandServantResetItemDialog_o *)sub_1C3EA80(v8);
+  v11 = (ConfirmUseGrandServantResetItemDialog_o *)sub_1C6BFFC(v8);
   ConfirmUseGrandServantResetItemDialog__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -339,10 +339,10 @@ void ConfirmUseGrandServantResetItemDialog__remove_callbackFunc(
   ConfirmUseGrandServantResetItemDialog_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C51ACA & 1) == 0 )
+  if ( (byte_4CB1012 & 1) == 0 )
   {
-    sub_1C3E564(&ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo);
-    byte_4C51ACA = 1;
+    sub_1C6BA08(&ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo);
+    byte_4CB1012 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -355,13 +355,13 @@ void ConfirmUseGrandServantResetItemDialog__remove_callbackFunc(
       if ( (ConfirmUseGrandServantResetItemDialog_CallbackFunc_c *)v8->klass != ConfirmUseGrandServantResetItemDialog_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ConfirmUseGrandServantResetItemDialog_o *)sub_1C3EA80(v8);
+  v11 = (ConfirmUseGrandServantResetItemDialog_o *)sub_1C6BFFC(v8);
   ConfirmUseGrandServantResetItemDialog__Awake(v11, v12);
 }
 
@@ -381,15 +381,15 @@ void ConfirmUseGrandServantResetItemDialog_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508(&this->fields.m_target, object);
+  sub_1C6B9AC(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -401,9 +401,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7B028;
+  this->fields.invoke_impl = (intptr_t)sub_1A99AA0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7AFE0;
+  this->fields.extra_arg = (intptr_t)sub_1A99A58;
 }
 
 
@@ -414,29 +414,18 @@ System_IAsyncResult_o *ConfirmUseGrandServantResetItemDialog_CallbackFunc__Begin
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
-  int32_t v13; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v13 = result;
-  if ( (byte_4C51ACE & 1) == 0 )
+  v10 = result;
+  if ( (byte_4CB1016 & 1) == 0 )
   {
-    sub_1C3E564(&ConfirmUseGrandServantResetItemDialog_Result_TypeInfo);
-    byte_4C51ACE = 1;
+    sub_1C6BA08(&ConfirmUseGrandServantResetItemDialog_Result_TypeInfo);
+    byte_4CB1016 = 1;
   }
-  v12[1] = 0;
-  v12[0] = j_il2cpp_value_box_0(
-             ConfirmUseGrandServantResetItemDialog_Result_TypeInfo,
-             &v13,
-             callback,
-             object,
-             method,
-             v5,
-             v6,
-             v7);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
+  v9[1] = 0;
+  v9[0] = j_il2cpp_value_box_0(ConfirmUseGrandServantResetItemDialog_Result_TypeInfo, &v10);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
 }
 
 
@@ -445,7 +434,7 @@ void ConfirmUseGrandServantResetItemDialog_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 
@@ -475,6 +464,6 @@ void ConfirmUseGrandServantResetItemDialog___c__DisplayClass13_0___Open_b__0(
         const MethodInfo *method)
 {
   if ( !icon )
-    sub_1C3E7C0(this, 0);
-  ItemIconComponent__SetItem_40964796(icon, this->fields.itemEntity, -1, 1, 0);
+    sub_1C6BC60(this, 0);
+  ItemIconComponent__SetItem_41150048(icon, this->fields.itemEntity, -1, 1, 0);
 }

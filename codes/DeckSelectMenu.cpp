@@ -1,9 +1,9 @@
 void DeckSelectMenu___ctor(DeckSelectMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C52598 & 1) == 0 )
+  if ( (byte_4CB1AE8 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C52598 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB1AE8 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -23,7 +23,7 @@ void DeckSelectMenu__Callback(DeckSelectMenu_o *this, int32_t result, int32_t in
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C3E508(p_callbackFunc, 0, index, method);
+    sub_1C6B9AC(p_callbackFunc, 0, index, method);
     ((void (__fastcall *)(intptr_t, _QWORD, _QWORD, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       (unsigned int)result,
@@ -37,31 +37,31 @@ void DeckSelectMenu__Close(DeckSelectMenu_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  DeckSelectMenu__Close_34039312(this, 0, v2);
+  DeckSelectMenu__Close_34218928(this, 0, v2);
 }
 
 
-void DeckSelectMenu__Close_34039312(DeckSelectMenu_o *this, System_Action_o *callback, const MethodInfo *method)
+void DeckSelectMenu__Close_34218928(DeckSelectMenu_o *this, System_Action_o *callback, const MethodInfo *method)
 {
   DeckListViewManager_o *deckListViewManager; // x0
   int32_t v6; // w2
   const MethodInfo *v7; // x3
   System_Action_o *v8; // x20
 
-  if ( (byte_4C52595 & 1) == 0 )
+  if ( (byte_4CB1AE5 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_DeckSelectMenu_EndClose__);
-    byte_4C52595 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_DeckSelectMenu_EndClose__);
+    byte_4CB1AE5 = 1;
   }
   deckListViewManager = this->fields.deckListViewManager;
   if ( !deckListViewManager )
-    sub_1C3E7C0(0, callback);
-  DeckListViewManager__SetMode_34031088(deckListViewManager, 1, method);
+    sub_1C6BC60(0, callback);
+  DeckListViewManager__SetMode_34210704(deckListViewManager, 1, method);
   this->fields.closeCallbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, v6, v7);
   this->fields.state = 4;
-  v8 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_DeckSelectMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v8, 0);
 }
@@ -82,7 +82,7 @@ void DeckSelectMenu__EndClose(DeckSelectMenu_o *this, const MethodInfo *method)
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C3E508(p_closeCallbackFunc, 0, v3, v4);
+    sub_1C6B9AC(p_closeCallbackFunc, 0, v3, v4);
     ((void (__fastcall *)(intptr_t, intptr_t))v6->fields.invoke_impl)(v6->fields.method_code, v6->fields.method);
   }
 }
@@ -104,41 +104,40 @@ void DeckSelectMenu__EndOpen(DeckSelectMenu_o *this, const MethodInfo *method)
   struct System_Action_o *v14; // x20
   struct System_Action_o *openCallbackFunc; // t1
 
-  if ( (byte_4C52594 & 1) == 0 )
+  if ( (byte_4CB1AE4 & 1) == 0 )
   {
-    sub_1C3E564(&DeckListViewManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_DeckSelectMenu_OnSelectItem__);
-    byte_4C52594 = 1;
+    sub_1C6BA08(&DeckListViewManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_DeckSelectMenu_OnSelectItem__);
+    byte_4CB1AE4 = 1;
   }
   this->fields.state = 2;
   deckListViewManager = this->fields.deckListViewManager;
-  v4 = (DeckListViewManager_CallbackFunc_o *)sub_1C3E7B0(DeckListViewManager_CallbackFunc_TypeInfo);
+  v4 = (DeckListViewManager_CallbackFunc_o *)sub_1C6BC54(DeckListViewManager_CallbackFunc_TypeInfo);
   DeckListViewManager_CallbackFunc___ctor(v4, (Il2CppObject *)this, (intptr_t)Method_DeckSelectMenu_OnSelectItem__, v5);
   if ( !deckListViewManager )
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   deckListViewManager->fields.callbackFunc = v4;
-  sub_1C3E508((CGThumbnailListItem_o *)&deckListViewManager->fields.callbackFunc, (int32_t)v4, v8, v9);
-  DeckListViewManager__SetMode_34031088(deckListViewManager, 2, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&deckListViewManager->fields.callbackFunc, (int32_t)v4, v8, v9);
+  DeckListViewManager__SetMode_34210704(deckListViewManager, 2, v10);
   openCallbackFunc = this->fields.openCallbackFunc;
   p_openCallbackFunc = (CGThumbnailListItem_o *)&this->fields.openCallbackFunc;
   v14 = openCallbackFunc;
   if ( openCallbackFunc )
   {
     p_openCallbackFunc->klass = 0;
-    sub_1C3E508(p_openCallbackFunc, 0, v11, v12);
+    sub_1C6B9AC(p_openCallbackFunc, 0, v11, v12);
     ((void (__fastcall *)(intptr_t, intptr_t))v14->fields.invoke_impl)(v14->fields.method_code, v14->fields.method);
   }
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 DeckListViewItem_o *DeckSelectMenu__GetItem(DeckSelectMenu_o *this, int32_t index, const MethodInfo *method)
 {
   DeckListViewManager_o *deckListViewManager; // x0
 
   deckListViewManager = this->fields.deckListViewManager;
   if ( !deckListViewManager )
-    sub_1C3E7C0(0, *(_QWORD *)&index);
+    sub_1C6BC60(0, index);
   return DeckListViewManager__GetItem(deckListViewManager, index, method);
 }
 
@@ -149,7 +148,7 @@ void DeckSelectMenu__Init(DeckSelectMenu_o *this, const MethodInfo *method)
 
   deckListViewManager = (ListViewManager_o *)this->fields.deckListViewManager;
   if ( !deckListViewManager )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   ListViewManager__DestroyList(deckListViewManager, 0);
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -162,17 +161,17 @@ void DeckSelectMenu__OnClickCancel(DeckSelectMenu_o *this, const MethodInfo *met
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C52596 & 1) == 0 )
+  if ( (byte_4CB1AE6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DeckSelectMenu_OnClickCancel__);
-    byte_4C52596 = 1;
+    sub_1C6BA08(&Method_DeckSelectMenu_OnClickCancel__);
+    byte_4CB1AE6 = 1;
   }
   if ( this->fields.state == 2 )
   {
     v3 = Method_DeckSelectMenu_OnClickCancel__;
     if ( (*((_BYTE *)Method_DeckSelectMenu_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_DeckSelectMenu_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_DeckSelectMenu_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     this->fields.state = 3;
     DeckSelectMenu__Callback(this, 0, -1, v5);
@@ -191,10 +190,10 @@ void DeckSelectMenu__OnSelectItem(DeckSelectMenu_o *this, int32_t kind, int32_t 
   DeckSelectMenu_o *v12; // x0
   int32_t v13; // w2
 
-  if ( (byte_4C52597 & 1) == 0 )
+  if ( (byte_4CB1AE7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DeckSelectMenu_OnSelectItem__);
-    byte_4C52597 = 1;
+    sub_1C6BA08(&Method_DeckSelectMenu_OnSelectItem__);
+    byte_4CB1AE7 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -202,13 +201,13 @@ void DeckSelectMenu__OnSelectItem(DeckSelectMenu_o *this, int32_t kind, int32_t 
     {
       deckListViewManager = this->fields.deckListViewManager;
       if ( !deckListViewManager )
-        sub_1C3E7C0(0, *(_QWORD *)&kind);
+        sub_1C6BC60(0, *(_QWORD *)&kind);
       DeckListViewManager__GetItem(deckListViewManager, n, *(const MethodInfo **)&n);
     }
     v8 = Method_DeckSelectMenu_OnSelectItem__;
     if ( (*((_BYTE *)Method_DeckSelectMenu_OnSelectItem__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1C3E57C(Method_DeckSelectMenu_OnSelectItem__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1C3E548(v8, v8[4]);
+      v8 = (_QWORD *)sub_1C6BA20(Method_DeckSelectMenu_OnSelectItem__);
+    v9 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v8, v8[4]);
     if ( kind == 1 )
     {
       OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
@@ -254,39 +253,39 @@ void DeckSelectMenu__Open(
   const MethodInfo *v24; // x3
   const MethodInfo *v25; // x1
 
-  if ( (byte_4C52593 & 1) == 0 )
+  if ( (byte_4CB1AE3 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_DeckSelectMenu_EndOpen__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_10224/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/);
-    sub_1C3E564(&StringLiteral_10226/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/);
-    sub_1C3E564(&StringLiteral_10225/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/);
-    byte_4C52593 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_DeckSelectMenu_EndOpen__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_10220/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/);
+    sub_1C6BA08(&StringLiteral_10222/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/);
+    sub_1C6BA08(&StringLiteral_10221/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/);
+    byte_4CB1AE3 = 1;
   }
   state = this->fields.state;
   if ( (unsigned int)(state - 2) < 2 )
   {
     this->fields.callbackFunc = callback;
-    sub_1C3E508(
+    sub_1C6B9AC(
       (CGThumbnailListItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)baseDeckItemList,
       (const MethodInfo *)callback);
     this->fields.openCallbackFunc = openCallback;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.openCallbackFunc, (int32_t)openCallback, v23, v24);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.openCallbackFunc, (int32_t)openCallback, v23, v24);
     DeckSelectMenu__EndOpen(this, v25);
   }
   else if ( state == 4 || !state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C3E508(
+    sub_1C6B9AC(
       (CGThumbnailListItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)baseDeckItemList,
       (const MethodInfo *)callback);
     this->fields.openCallbackFunc = openCallback;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.openCallbackFunc, (int32_t)openCallback, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.openCallbackFunc, (int32_t)openCallback, v12, v13);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
       goto LABEL_23;
@@ -296,12 +295,12 @@ void DeckSelectMenu__Open(
       titleLabel = this->fields.titleLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10226/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/, 0);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10222/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE"*/, 0);
       if ( !titleLabel )
         goto LABEL_23;
       UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
       titleDetailLabel = this->fields.titleDetailLabel;
-      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10225/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/, 0);
+      gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10221/*"PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL"*/, 0);
       if ( !titleDetailLabel )
         goto LABEL_23;
       UILabel__set_text(titleDetailLabel, (System_String_o *)gameObject, 0);
@@ -309,7 +308,7 @@ void DeckSelectMenu__Open(
     cancelLabel = this->fields.cancelLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10224/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10220/*"PARTY_ORGANIZATION_DECK_SELECT_CANCEL"*/, 0);
     if ( cancelLabel )
     {
       UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0);
@@ -328,9 +327,9 @@ void DeckSelectMenu__Open(
             gameObject = (UnityEngine_GameObject_o *)this->fields.deckListViewManager;
             if ( gameObject )
             {
-              DeckListViewManager__SetMode_34031088((DeckListViewManager_o *)gameObject, 1, v21);
+              DeckListViewManager__SetMode_34210704((DeckListViewManager_o *)gameObject, 1, v21);
               this->fields.state = 1;
-              v22 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+              v22 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
               System_Action___ctor(v22, (Il2CppObject *)this, Method_DeckSelectMenu_EndOpen__, 0);
               BaseDialog__Open((BaseDialog_o *)this, v22, 0, 0, 0);
               return;
@@ -340,7 +339,7 @@ void DeckSelectMenu__Open(
       }
     }
 LABEL_23:
-    sub_1C3E7C0(gameObject, v15);
+    sub_1C6BC60(gameObject, v15);
   }
 }
 
@@ -360,10 +359,10 @@ void DeckSelectMenu__add_callbackFunc(
   DeckSelectMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C52591 & 1) == 0 )
+  if ( (byte_4CB1AE1 & 1) == 0 )
   {
-    sub_1C3E564(&DeckSelectMenu_CallbackFunc_TypeInfo);
-    byte_4C52591 = 1;
+    sub_1C6BA08(&DeckSelectMenu_CallbackFunc_TypeInfo);
+    byte_4CB1AE1 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -376,13 +375,13 @@ void DeckSelectMenu__add_callbackFunc(
       if ( (DeckSelectMenu_CallbackFunc_c *)v8->klass != DeckSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (DeckSelectMenu_o *)sub_1C3EA80(v8);
+  v11 = (DeckSelectMenu_o *)sub_1C6BFFC(v8);
   DeckSelectMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -402,10 +401,10 @@ void DeckSelectMenu__remove_callbackFunc(
   int32_t v12; // w1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C52592 & 1) == 0 )
+  if ( (byte_4CB1AE2 & 1) == 0 )
   {
-    sub_1C3E564(&DeckSelectMenu_CallbackFunc_TypeInfo);
-    byte_4C52592 = 1;
+    sub_1C6BA08(&DeckSelectMenu_CallbackFunc_TypeInfo);
+    byte_4CB1AE2 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -418,13 +417,13 @@ void DeckSelectMenu__remove_callbackFunc(
       if ( (DeckSelectMenu_CallbackFunc_c *)v8->klass != DeckSelectMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (DeckSelectMenu_o *)sub_1C3EA80(v8);
+  v11 = (DeckSelectMenu_o *)sub_1C6BFFC(v8);
   DeckSelectMenu__GetItem(v11, v12, v13);
 }
 
@@ -444,15 +443,15 @@ void DeckSelectMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -464,13 +463,12 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7CB18;
+  this->fields.invoke_impl = (intptr_t)sub_1A9B7D0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7CAC0;
+  this->fields.extra_arg = (intptr_t)sub_1A9B778;
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 System_IAsyncResult_o *DeckSelectMenu_CallbackFunc__BeginInvoke(
         DeckSelectMenu_CallbackFunc_o *this,
         int32_t result,
@@ -479,38 +477,22 @@ System_IAsyncResult_o *DeckSelectMenu_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v6; // x6
-  __int64 v7; // x7
-  __int64 v11; // x2
-  __int64 v12; // x3
-  __int64 v13; // x4
-  __int64 v14; // x5
-  __int64 v15; // x6
-  __int64 v16; // x7
-  _QWORD v18[3]; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v19; // [xsp+28h] [xbp-38h] BYREF
-  int32_t v20; // [xsp+2Ch] [xbp-34h] BYREF
+  _QWORD v10[3]; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v11; // [xsp+28h] [xbp-38h] BYREF
+  int32_t v12; // [xsp+2Ch] [xbp-34h] BYREF
 
-  v19 = index;
-  v20 = result;
-  if ( (byte_4C52599 & 1) == 0 )
+  v11 = index;
+  v12 = result;
+  if ( (byte_4CB1AE9 & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&DeckSelectMenu_ResultKind_TypeInfo);
-    byte_4C52599 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&DeckSelectMenu_ResultKind_TypeInfo);
+    byte_4CB1AE9 = 1;
   }
-  v18[2] = 0;
-  v18[0] = j_il2cpp_value_box_0(
-             DeckSelectMenu_ResultKind_TypeInfo,
-             &v20,
-             *(_QWORD *)&index,
-             callback,
-             object,
-             method,
-             v6,
-             v7);
-  v18[1] = j_il2cpp_value_box_0(int_TypeInfo, &v19, v11, v12, v13, v14, v15, v16);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v18, callback, object);
+  v10[2] = 0;
+  v10[0] = j_il2cpp_value_box_0(DeckSelectMenu_ResultKind_TypeInfo, &v12);
+  v10[1] = j_il2cpp_value_box_0(int_TypeInfo, &v11);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v10, callback, object);
 }
 
 
@@ -519,7 +501,7 @@ void DeckSelectMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 

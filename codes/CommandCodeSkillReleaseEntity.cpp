@@ -1,13 +1,13 @@
 void CommandCodeSkillReleaseEntity___ctor(CommandCodeSkillReleaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56B4C & 1) == 0 )
+  if ( (byte_4CB60AE & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C56B4C = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB60AE = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *CommandCodeSkillReleaseEntity__CreatePK(
         int32_t idx,
         const MethodInfo *method)
 {
-  if ( (byte_4C56B4A & 1) == 0 )
+  if ( (byte_4CB60AC & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4C56B4A = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4CB60AC = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            commandCodeId,
            num,
            priority,
            idx,
-           (const MethodInfo_30F8548 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_3139E40 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -83,52 +83,52 @@ System_String_o *CommandCodeSkillReleaseEntity__getCreatePrimarykey(
   v29 = commandCodeId;
   v26 = idx;
   v27 = priority;
-  if ( (byte_4C56B49 & 1) == 0 )
+  if ( (byte_4CB60AB & 1) == 0 )
   {
-    sub_1C3E564(&string___TypeInfo);
-    sub_1C3E564(&StringLiteral_1456/*":"*/);
-    byte_4C56B49 = 1;
+    sub_1C6BA08(&string___TypeInfo);
+    sub_1C6BA08(&StringLiteral_1449/*":"*/);
+    byte_4CB60AB = 1;
   }
-  v5 = sub_1C3E60C(string___TypeInfo, 7);
+  v5 = sub_1C6BAB0(string___TypeInfo, 7);
   v6 = System_Int32__ToString((int32_t)&v29, 0);
   if ( !v5 )
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   if ( !*(_DWORD *)(v5 + 24) )
     goto LABEL_12;
   *(_QWORD *)(v5 + 32) = v6;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v6, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v6, v8, v9);
   if ( *(_DWORD *)(v5 + 24) <= 1u )
     goto LABEL_12;
-  v12 = StringLiteral_1456/*":"*/;
-  *(_QWORD *)(v5 + 40) = StringLiteral_1456/*":"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), v12, v10, v11);
+  v12 = StringLiteral_1449/*":"*/;
+  *(_QWORD *)(v5 + 40) = StringLiteral_1449/*":"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), v12, v10, v11);
   v6 = System_Int32__ToString((int32_t)&v28, 0);
   if ( *(_DWORD *)(v5 + 24) <= 2u )
     goto LABEL_12;
   *(_QWORD *)(v5 + 48) = v6;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 48), (int32_t)v6, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 48), (int32_t)v6, v13, v14);
   if ( *(_DWORD *)(v5 + 24) <= 3u )
     goto LABEL_12;
-  v17 = StringLiteral_1456/*":"*/;
-  *(_QWORD *)(v5 + 56) = StringLiteral_1456/*":"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 56), v17, v15, v16);
+  v17 = StringLiteral_1449/*":"*/;
+  *(_QWORD *)(v5 + 56) = StringLiteral_1449/*":"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 56), v17, v15, v16);
   v6 = System_Int32__ToString((int32_t)&v27, 0);
   if ( *(_DWORD *)(v5 + 24) <= 4u
     || (*(_QWORD *)(v5 + 64) = v6,
-        sub_1C3E508((CGThumbnailListItem_o *)(v5 + 64), (int32_t)v6, v18, v19),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 64), (int32_t)v6, v18, v19),
         *(_DWORD *)(v5 + 24) <= 5u)
-    || (v22 = StringLiteral_1456/*":"*/,
-        *(_QWORD *)(v5 + 72) = StringLiteral_1456/*":"*/,
-        sub_1C3E508((CGThumbnailListItem_o *)(v5 + 72), v22, v20, v21),
+    || (v22 = StringLiteral_1449/*":"*/,
+        *(_QWORD *)(v5 + 72) = StringLiteral_1449/*":"*/,
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 72), v22, v20, v21),
         v6 = System_Int32__ToString((int32_t)&v26, 0),
         *(_DWORD *)(v5 + 24) <= 6u) )
   {
 LABEL_12:
-    sub_1C3E7C8(v6, v7);
+    sub_1C6BC68(v6);
   }
   *(_QWORD *)(v5 + 80) = v6;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 80), (int32_t)v6, v23, v24);
-  return System_String__Concat_63676984((System_String_array *)v5, 0);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 80), (int32_t)v6, v23, v24);
+  return System_String__Concat_64007324((System_String_array *)v5, 0);
 }
 
 
@@ -145,21 +145,21 @@ bool CommandCodeSkillReleaseEntity__isUse(
   int32_t v11; // w22
   int64_t v12; // x19
 
-  if ( (byte_4C56B4B & 1) == 0 )
+  if ( (byte_4CB60AD & 1) == 0 )
   {
-    sub_1C3E564(&CondType_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C56B4B = 1;
+    sub_1C6BA08(&CondType_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB60AD = 1;
   }
   condType = this->fields.condType;
   if ( condType == 1 )
   {
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    if ( !byte_4C50AE2 )
+    if ( !byte_4CB002A )
     {
-      sub_1C3E564(&NetworkManager_TypeInfo);
-      byte_4C50AE2 = 1;
+      sub_1C6BA08(&NetworkManager_TypeInfo);
+      byte_4CB002A = 1;
     }
     v6 = NetworkManager_TypeInfo;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )

@@ -1,14 +1,14 @@
 void EventEquipSkillPartsMaster___ctor(EventEquipSkillPartsMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C56CDF & 1) == 0 )
+  if ( (byte_4CB6248 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_EventEquipSkillPartsMaster__EventEquipSkillPartsEntity__int___ctor__);
-    byte_4C56CDF = 1;
+    sub_1C6BA08(&Method_DataMasterBase_EventEquipSkillPartsMaster__EventEquipSkillPartsEntity__int___ctor__);
+    byte_4CB6248 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     552,
-    (const MethodInfo_33B0C34 *)Method_DataMasterBase_EventEquipSkillPartsMaster__EventEquipSkillPartsEntity__int___ctor__);
+    (const MethodInfo_33F6DB8 *)Method_DataMasterBase_EventEquipSkillPartsMaster__EventEquipSkillPartsEntity__int___ctor__);
 }
 
 
@@ -83,58 +83,58 @@ EventEquipSkillPartsEntity_array *EventEquipSkillPartsMaster__GetEventEquipSkill
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v70; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_TKey__TValue__o v71; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C56CDC & 1) == 0 )
+  if ( (byte_4CB6245 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___ContainsKey__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity____ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Keys__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_EventEquipSkillPartsEntity____78227248);
-    sub_1C3E564(&Method_System_Linq_Enumerable_First_EventEquipSkillPartsEntity___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_OrderByDescending_EventEquipSkillPartsEntity__int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_OrderBy_EventEquipSkillPartsEntity__int___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_EventEquipSkillPartsEntity___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Where_EventEquipSkillPartsEntity___);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___get_Current__);
-    sub_1C3E564(&System_Func_EventEquipSkillPartsEntity__bool__TypeInfo);
-    sub_1C3E564(&System_Func_EventEquipSkillPartsEntity__int__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_KeyCollection_int__List_EventEquipSkillPartsEntity___GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
-    sub_1C3E564(&Method_EventEquipSkillPartsMaster___c__GetEventEquipSkillPartsEntityArray_b__0_1__);
-    sub_1C3E564(&Method_EventEquipSkillPartsMaster___c__GetEventEquipSkillPartsEntityArray_b__0_2__);
-    sub_1C3E564(&Method_EventEquipSkillPartsMaster___c__GetEventEquipSkillPartsEntityArray_b__0_4__);
-    sub_1C3E564(&Method_EventEquipSkillPartsMaster___c__DisplayClass0_0__GetEventEquipSkillPartsEntityArray_b__0__);
-    sub_1C3E564(&Method_EventEquipSkillPartsMaster___c__DisplayClass0_0__GetEventEquipSkillPartsEntityArray_b__3__);
-    sub_1C3E564(&EventEquipSkillPartsMaster___c__DisplayClass0_0_TypeInfo);
-    sub_1C3E564(&EventEquipSkillPartsMaster___c_TypeInfo);
-    byte_4C56CDC = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___ContainsKey__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity____ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Keys__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_EventEquipSkillPartsEntity____78610432);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_First_EventEquipSkillPartsEntity___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_OrderByDescending_EventEquipSkillPartsEntity__int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_OrderBy_EventEquipSkillPartsEntity__int___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_EventEquipSkillPartsEntity___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_EventEquipSkillPartsEntity___);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___get_Current__);
+    sub_1C6BA08(&System_Func_EventEquipSkillPartsEntity__bool__TypeInfo);
+    sub_1C6BA08(&System_Func_EventEquipSkillPartsEntity__int__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_KeyCollection_int__List_EventEquipSkillPartsEntity___GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
+    sub_1C6BA08(&Method_EventEquipSkillPartsMaster___c__GetEventEquipSkillPartsEntityArray_b__0_1__);
+    sub_1C6BA08(&Method_EventEquipSkillPartsMaster___c__GetEventEquipSkillPartsEntityArray_b__0_2__);
+    sub_1C6BA08(&Method_EventEquipSkillPartsMaster___c__GetEventEquipSkillPartsEntityArray_b__0_4__);
+    sub_1C6BA08(&Method_EventEquipSkillPartsMaster___c__DisplayClass0_0__GetEventEquipSkillPartsEntityArray_b__0__);
+    sub_1C6BA08(&Method_EventEquipSkillPartsMaster___c__DisplayClass0_0__GetEventEquipSkillPartsEntityArray_b__3__);
+    sub_1C6BA08(&EventEquipSkillPartsMaster___c__DisplayClass0_0_TypeInfo);
+    sub_1C6BA08(&EventEquipSkillPartsMaster___c_TypeInfo);
+    byte_4CB6245 = 1;
   }
   memset(&v71, 0, sizeof(v71));
-  v6 = sub_1C3E7B0(EventEquipSkillPartsMaster___c__DisplayClass0_0_TypeInfo);
+  v6 = sub_1C6BC54(EventEquipSkillPartsMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   if ( !v6 )
     goto LABEL_52;
   *(_DWORD *)(v6 + 16) = eventId;
   *(_DWORD *)(v6 + 20) = groupId;
-  v9 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
+  v9 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v9,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
   *(_QWORD *)(v6 + 24) = Master_object;
-  sub_1C3E508((CGThumbnailListItem_o *)(v6 + 24), (int32_t)Master_object, v11, v12);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 24), (int32_t)Master_object, v11, v12);
   list = this->fields.list;
-  v14 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_EventEquipSkillPartsEntity__bool__TypeInfo);
+  v14 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_EventEquipSkillPartsEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v14,
     (Il2CppObject *)v6,
@@ -143,14 +143,14 @@ EventEquipSkillPartsEntity_array *EventEquipSkillPartsMaster__GetEventEquipSkill
   v15 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v14,
-          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_EventEquipSkillPartsEntity___);
+          (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_EventEquipSkillPartsEntity___);
   v16 = System_Linq_Enumerable__ToArray_object_(
           v15,
-          (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_EventEquipSkillPartsEntity___);
-  v17 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___TypeInfo);
+          (const MethodInfo_317B248 *)Method_System_Linq_Enumerable_ToArray_EventEquipSkillPartsEntity___);
+  v17 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v17,
-    (const MethodInfo_340BA68 *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity____ctor__);
+    (const MethodInfo_3451B1C *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity____ctor__);
   if ( !v16 )
     goto LABEL_52;
   max_length = v16->max_length;
@@ -160,30 +160,30 @@ EventEquipSkillPartsEntity_array *EventEquipSkillPartsMaster__GetEventEquipSkill
     while ( 1 )
     {
       if ( v19 >= max_length )
-        sub_1C3E7C8(Item, v8);
+        sub_1C6BC68(Item);
       v20 = v16->m_Items[v19];
       if ( !v20 || !v17 )
         break;
       if ( !System_Collections_Generic_Dictionary_int__object___ContainsKey(
               v17,
               (int32_t)v20[1].monitor,
-              (const MethodInfo_340C630 *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___ContainsKey__) )
+              (const MethodInfo_34526E4 *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___ContainsKey__) )
       {
         monitor = (int32_t)v20[1].monitor;
-        v22 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
+        v22 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
         System_Collections_Generic_List_object____ctor(
           v22,
-          (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
+          (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
         System_Collections_Generic_Dictionary_int__object___Add(
           v17,
           monitor,
           (Il2CppObject *)v22,
-          (const MethodInfo_340C43C *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___Add__);
+          (const MethodInfo_34524F0 *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___Add__);
       }
       Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_Dictionary_int__object___get_Item(
                                                             v17,
                                                             (int32_t)v20[1].monitor,
-                                                            (const MethodInfo_340C39C *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Item__);
+                                                            (const MethodInfo_3452450 *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Item__);
       if ( !Item )
         break;
       items = Item->fields._items;
@@ -197,45 +197,45 @@ EventEquipSkillPartsEntity_array *EventEquipSkillPartsMaster__GetEventEquipSkill
         System_Collections_Generic_List_object___AddWithResize(
           Item,
           v20,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
         v28 = &items->obj.klass + size;
         Item->fields._size = size + 1;
         v28[4] = (Il2CppClass *)v20;
-        sub_1C3E508((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v20, v23, v24);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v28 + 4), (int32_t)v20, v23, v24);
       }
       max_length = v16->max_length;
       if ( (int)++v19 >= max_length )
         goto LABEL_20;
     }
 LABEL_52:
-    sub_1C3E7C0(Item, v8);
+    sub_1C6BC60(Item, v8);
   }
 LABEL_20:
   if ( !v17 )
     goto LABEL_52;
   Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_Dictionary_int__object___get_Keys(
                                                         v17,
-                                                        (const MethodInfo_340C0FC *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Keys__);
+                                                        (const MethodInfo_34521B0 *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Keys__);
   if ( !Item )
     goto LABEL_52;
   System_Collections_Generic_Dictionary_KeyCollection_int__object___GetEnumerator(
     &v70,
     (System_Collections_Generic_Dictionary_KeyCollection_TKey__TValue__o *)Item,
-    (const MethodInfo_36D05D4 *)Method_System_Collections_Generic_Dictionary_KeyCollection_int__List_EventEquipSkillPartsEntity___GetEnumerator__);
+    (const MethodInfo_371BB58 *)Method_System_Collections_Generic_Dictionary_KeyCollection_int__List_EventEquipSkillPartsEntity___GetEnumerator__);
   v71 = v70;
   v29 = (CGThumbnailListItem_o *)(v6 + 32);
   while ( System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__object___MoveNext(
             &v71,
-            (const MethodInfo_3564304 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___MoveNext__) )
+            (const MethodInfo_35AADE0 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___MoveNext__) )
   {
     currentKey = (int32_t)v71.fields._currentKey;
     v31 = System_Collections_Generic_Dictionary_int__object___get_Item(
             v17,
             (int32_t)v71.fields._currentKey,
-            (const MethodInfo_340C39C *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Item__);
+            (const MethodInfo_3452450 *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Item__);
     v32 = EventEquipSkillPartsMaster___c_TypeInfo;
     v33 = (System_Collections_Generic_IEnumerable_TSource__o *)v31;
     if ( !EventEquipSkillPartsMaster___c_TypeInfo->_2.cctor_finished )
@@ -252,7 +252,7 @@ LABEL_20:
         v32 = EventEquipSkillPartsMaster___c_TypeInfo;
       }
       v35 = (Il2CppObject *)v32->static_fields->__9;
-      _9__0_2 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_EventEquipSkillPartsEntity__int__TypeInfo);
+      _9__0_2 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_EventEquipSkillPartsEntity__int__TypeInfo);
       System_Func_object__int____ctor(
         _9__0_2,
         v35,
@@ -260,36 +260,36 @@ LABEL_20:
         0);
       static_fields = EventEquipSkillPartsMaster___c_TypeInfo->static_fields;
       static_fields->__9__0_2 = (struct System_Func_EventEquipSkillPartsEntity__int__o *)_9__0_2;
-      sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__0_2, (int32_t)_9__0_2, v37, v38);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__0_2, (int32_t)_9__0_2, v37, v38);
     }
     v39 = System_Linq_Enumerable__OrderByDescending_object__int_(
             v33,
             (System_Func_TSource__TKey__o *)_9__0_2,
-            (const MethodInfo_3129820 *)Method_System_Linq_Enumerable_OrderByDescending_EventEquipSkillPartsEntity__int___);
+            (const MethodInfo_316B118 *)Method_System_Linq_Enumerable_OrderByDescending_EventEquipSkillPartsEntity__int___);
     klass = (System_Func_object__bool__o *)v29->klass;
     v41 = (System_Collections_Generic_IEnumerable_TSource__o *)v39;
     if ( !v29->klass )
     {
-      klass = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_EventEquipSkillPartsEntity__bool__TypeInfo);
+      klass = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_EventEquipSkillPartsEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         klass,
         (Il2CppObject *)v6,
         Method_EventEquipSkillPartsMaster___c__DisplayClass0_0__GetEventEquipSkillPartsEntityArray_b__3__,
         0);
       v29->klass = (CGThumbnailListItem_c *)klass;
-      sub_1C3E508(v29, (int32_t)klass, v42, v43);
+      sub_1C6B9AC(v29, (int32_t)klass, v42, v43);
     }
-    v44 = System_Linq_Enumerable__FirstOrDefault_object__51525108(
+    v44 = System_Linq_Enumerable__FirstOrDefault_object__51793644(
             v41,
             (System_Func_TSource__bool__o *)klass,
-            (const MethodInfo_31235F4 *)Method_System_Linq_Enumerable_FirstOrDefault_EventEquipSkillPartsEntity____78227248);
+            (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_EventEquipSkillPartsEntity____78610432);
     v47 = v44;
     if ( !v44 )
     {
       v48 = System_Collections_Generic_Dictionary_int__object___get_Item(
               v17,
               currentKey,
-              (const MethodInfo_340C39C *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Item__);
+              (const MethodInfo_3452450 *)Method_System_Collections_Generic_Dictionary_int__List_EventEquipSkillPartsEntity___get_Item__);
       v49 = EventEquipSkillPartsMaster___c_TypeInfo;
       v50 = (System_Collections_Generic_IEnumerable_TSource__o *)v48;
       if ( !EventEquipSkillPartsMaster___c_TypeInfo->_2.cctor_finished )
@@ -306,7 +306,7 @@ LABEL_20:
           v49 = EventEquipSkillPartsMaster___c_TypeInfo;
         }
         v52 = (Il2CppObject *)v49->static_fields->__9;
-        _9__0_4 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_EventEquipSkillPartsEntity__int__TypeInfo);
+        _9__0_4 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_EventEquipSkillPartsEntity__int__TypeInfo);
         System_Func_object__int____ctor(
           _9__0_4,
           v52,
@@ -314,45 +314,45 @@ LABEL_20:
           0);
         v53 = EventEquipSkillPartsMaster___c_TypeInfo->static_fields;
         v53->__9__0_4 = (struct System_Func_EventEquipSkillPartsEntity__int__o *)_9__0_4;
-        sub_1C3E508((CGThumbnailListItem_o *)&v53->__9__0_4, (int32_t)_9__0_4, v54, v55);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v53->__9__0_4, (int32_t)_9__0_4, v54, v55);
       }
       v56 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                    v50,
                                                                    (System_Func_TSource__TKey__o *)_9__0_4,
-                                                                   (const MethodInfo_31292A0 *)Method_System_Linq_Enumerable_OrderBy_EventEquipSkillPartsEntity__int___);
+                                                                   (const MethodInfo_316AB98 *)Method_System_Linq_Enumerable_OrderBy_EventEquipSkillPartsEntity__int___);
       v44 = System_Linq_Enumerable__First_object_(
               v56,
-              (const MethodInfo_3120424 *)Method_System_Linq_Enumerable_First_EventEquipSkillPartsEntity___);
+              (const MethodInfo_3161D1C *)Method_System_Linq_Enumerable_First_EventEquipSkillPartsEntity___);
       v47 = v44;
       if ( !v44 )
         continue;
     }
     if ( !v9 )
-      sub_1C3E7C0(v44, v47);
+      sub_1C6BC60(v44, v47);
     v57 = v9->fields._items;
     v58 = Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__Add__;
     ++v9->fields._version;
     if ( !v57 )
-      sub_1C3E7C0(v44, v47);
+      sub_1C6BC60(v44, v47);
     v59 = v9->fields._size;
     if ( (unsigned int)v59 >= LODWORD(v57->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v9,
         v47,
-        *(const MethodInfo_37B5460 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+        *(const MethodInfo_3800974 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
     }
     else
     {
       v60 = &v57->obj.klass + v59;
       v9->fields._size = v59 + 1;
       v60[4] = (Il2CppClass *)v47;
-      sub_1C3E508((CGThumbnailListItem_o *)(v60 + 4), (int32_t)v47, v45, v46);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v60 + 4), (int32_t)v47, v45, v46);
     }
   }
   System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__object___Dispose(
     &v71,
-    (const MethodInfo_3564300 *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___Dispose__);
+    (const MethodInfo_35AADDC *)Method_System_Collections_Generic_Dictionary_KeyCollection_Enumerator_int__List_EventEquipSkillPartsEntity___Dispose__);
   v61 = EventEquipSkillPartsMaster___c_TypeInfo;
   if ( !EventEquipSkillPartsMaster___c_TypeInfo->_2.cctor_finished )
   {
@@ -368,7 +368,7 @@ LABEL_20:
       v61 = EventEquipSkillPartsMaster___c_TypeInfo;
     }
     v63 = (Il2CppObject *)v61->static_fields->__9;
-    _9__0_1 = (System_Func_object__int__o *)sub_1C3E7B0(System_Func_EventEquipSkillPartsEntity__int__TypeInfo);
+    _9__0_1 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_EventEquipSkillPartsEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__0_1,
       v63,
@@ -376,15 +376,15 @@ LABEL_20:
       0);
     v64 = EventEquipSkillPartsMaster___c_TypeInfo->static_fields;
     v64->__9__0_1 = (struct System_Func_EventEquipSkillPartsEntity__int__o *)_9__0_1;
-    sub_1C3E508((CGThumbnailListItem_o *)&v64->__9__0_1, (int32_t)_9__0_1, v65, v66);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v64->__9__0_1, (int32_t)_9__0_1, v65, v66);
   }
   v67 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v9,
                                                                (System_Func_TSource__TKey__o *)_9__0_1,
-                                                               (const MethodInfo_31292A0 *)Method_System_Linq_Enumerable_OrderBy_EventEquipSkillPartsEntity__int___);
+                                                               (const MethodInfo_316AB98 *)Method_System_Linq_Enumerable_OrderBy_EventEquipSkillPartsEntity__int___);
   return (EventEquipSkillPartsEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                                v67,
-                                               (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_EventEquipSkillPartsEntity___);
+                                               (const MethodInfo_317B248 *)Method_System_Linq_Enumerable_ToArray_EventEquipSkillPartsEntity___);
 }
 
 
@@ -406,22 +406,22 @@ bool EventEquipSkillPartsMaster__TryGetUnclearedEventEquipSkillPartsEntity(
   const MethodInfo *v16; // x3
   System_Collections_Generic_List_EventEquipSkillPartsEntity__o *eventEquipSkillPartsEntityList; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C56CDE & 1) == 0 )
+  if ( (byte_4CB6247 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_FirstOrDefault_EventEquipSkillPartsEntity___);
-    sub_1C3E564(&int___TypeInfo);
-    byte_4C56CDE = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_EventEquipSkillPartsEntity___);
+    sub_1C6BA08(&int___TypeInfo);
+    byte_4CB6247 = 1;
   }
   eventEquipSkillPartsEntityList = 0;
   *eventEquipSkillPartsEntity = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)eventEquipSkillPartsEntity, 0, questId, (const MethodInfo *)isQuestClear);
+  sub_1C6B9AC((CGThumbnailListItem_o *)eventEquipSkillPartsEntity, 0, questId, (const MethodInfo *)isQuestClear);
   if ( isQuestClear )
     return 0;
-  v10 = sub_1C3E60C(int___TypeInfo, 1);
+  v10 = sub_1C6BAB0(int___TypeInfo, 1);
   if ( !v10 )
-    sub_1C3E7C0(0, v11);
+    sub_1C6BC60(0, v11);
   if ( !*(_DWORD *)(v10 + 24) )
-    sub_1C3E7C8(v10, v11);
+    sub_1C6BC68(v10);
   *(_DWORD *)(v10 + 32) = questId;
   ValidEventEquipSkillPartsEntityList = EventEquipSkillPartsMaster__TryGetValidEventEquipSkillPartsEntityList(
                                           this,
@@ -434,9 +434,9 @@ bool EventEquipSkillPartsMaster__TryGetUnclearedEventEquipSkillPartsEntity(
   {
     v14 = System_Linq_Enumerable__FirstOrDefault_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)eventEquipSkillPartsEntityList,
-            (const MethodInfo_3122250 *)Method_System_Linq_Enumerable_FirstOrDefault_EventEquipSkillPartsEntity___);
+            (const MethodInfo_3163B48 *)Method_System_Linq_Enumerable_FirstOrDefault_EventEquipSkillPartsEntity___);
     *eventEquipSkillPartsEntity = (EventEquipSkillPartsEntity_o *)v14;
-    sub_1C3E508((CGThumbnailListItem_o *)eventEquipSkillPartsEntity, (int32_t)v14, v15, v16);
+    sub_1C6B9AC((CGThumbnailListItem_o *)eventEquipSkillPartsEntity, (int32_t)v14, v15, v16);
     return *eventEquipSkillPartsEntity != 0;
   }
   return result;
@@ -483,36 +483,36 @@ bool EventEquipSkillPartsMaster__TryGetValidEventEquipSkillPartsEntityList(
   int32_t *v39; // x10
   __int64 v40; // x0
 
-  if ( (byte_4C56CDD & 1) == 0 )
+  if ( (byte_4CB6246 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_ObjectModel_Collection_EventEquipSkillPartsEntity__GetEnumerator__);
-    sub_1C3E564(&Method_DataManager_GetMaster_CommonReleaseMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&System_IDisposable_TypeInfo);
-    sub_1C3E564(&System_Collections_Generic_IEnumerator_EventEquipSkillPartsEntity__TypeInfo);
-    sub_1C3E564(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
-    byte_4C56CDD = 1;
+    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_EventEquipSkillPartsEntity__GetEnumerator__);
+    sub_1C6BA08(&Method_DataManager_GetMaster_CommonReleaseMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&System_IDisposable_TypeInfo);
+    sub_1C6BA08(&System_Collections_Generic_IEnumerator_EventEquipSkillPartsEntity__TypeInfo);
+    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
+    byte_4CB6246 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_CommonReleaseMaster___);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_CommonReleaseMaster___);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventEquipSkillPartsEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventEquipSkillPartsEntity___ctor__);
   *eventEquipSkillPartsEntityList = (System_Collections_Generic_List_EventEquipSkillPartsEntity__o *)v10;
-  sub_1C3E508((CGThumbnailListItem_o *)eventEquipSkillPartsEntityList, (int32_t)v10, v11, v12);
+  sub_1C6B9AC((CGThumbnailListItem_o *)eventEquipSkillPartsEntityList, (int32_t)v10, v11, v12);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C3E7C0(0, v13);
+    sub_1C6BC60(0, v13);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_334C9A0 *)Method_System_Collections_ObjectModel_Collection_EventEquipSkillPartsEntity__GetEnumerator__);
+                 (const MethodInfo_339243C *)Method_System_Collections_ObjectModel_Collection_EventEquipSkillPartsEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C3E7C0(0, v15);
+    sub_1C6BC60(0, v15);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -532,7 +532,7 @@ bool EventEquipSkillPartsMaster__TryGetValidEventEquipSkillPartsEntityList(
     else
     {
 LABEL_11:
-      v20 = sub_1C8ED7C(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v20 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
             Enumerator,
@@ -556,13 +556,13 @@ LABEL_11:
     else
     {
 LABEL_18:
-      v24 = sub_1C8ED7C(Enumerator, System_Collections_Generic_IEnumerator_EventEquipSkillPartsEntity__TypeInfo, 0);
+      v24 = sub_1C41D90(Enumerator, System_Collections_Generic_IEnumerator_EventEquipSkillPartsEntity__TypeInfo, 0);
     }
     v25 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v24)(
             Enumerator,
             *(_QWORD *)(v24 + 8));
     if ( !questIdList )
-      sub_1C3E7C0(v25, v26);
+      sub_1C6BC60(v25, v26);
     max_length = questIdList->max_length;
     if ( (int)max_length >= 1 )
     {
@@ -571,11 +571,11 @@ LABEL_18:
       do
       {
         if ( v30 >= (unsigned int)max_length )
-          sub_1C3E7C8(v25, v26);
+          sub_1C6BC68(v25);
         if ( !v29 )
-          sub_1C3E7C0(v25, v26);
+          sub_1C6BC60(v25, v26);
         if ( !Master_object )
-          sub_1C3E7C0(v25, v26);
+          sub_1C6BC60(v25, v26);
         v25 = CommonReleaseMaster__ContainQuestClear(
                 (CommonReleaseMaster_o *)Master_object,
                 *(_DWORD *)(v29 + 44),
@@ -585,26 +585,26 @@ LABEL_18:
         {
           v32 = (System_Collections_Generic_List_object__o *)*eventEquipSkillPartsEntityList;
           if ( !*eventEquipSkillPartsEntityList )
-            sub_1C3E7C0(0, v26);
+            sub_1C6BC60(0, v26);
           items = v32->fields._items;
           v34 = Method_System_Collections_Generic_List_EventEquipSkillPartsEntity__Add__;
           ++v32->fields._version;
           if ( !items )
-            sub_1C3E7C0(v32, v26);
+            sub_1C6BC60(v32, v26);
           size = v32->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               v32,
               (Il2CppObject *)v29,
-              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+              *(const MethodInfo_3800974 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
           }
           else
           {
             v36 = &items->obj.klass + size;
             v32->fields._size = size + 1;
             v36[4] = (Il2CppClass *)v29;
-            sub_1C3E508((CGThumbnailListItem_o *)(v36 + 4), v29, v31, v27);
+            sub_1C6B9AC((CGThumbnailListItem_o *)(v36 + 4), v29, v31, v27);
           }
         }
         LODWORD(max_length) = questIdList->max_length;
@@ -630,7 +630,7 @@ LABEL_18:
   else
   {
 LABEL_39:
-    v40 = sub_1C8ED7C(Enumerator, System_IDisposable_TypeInfo, 0);
+    v40 = sub_1C41D90(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v40)(Enumerator, *(_QWORD *)(v40 + 8));
   return !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)*eventEquipSkillPartsEntityList, 0);
@@ -643,15 +643,15 @@ void EventEquipSkillPartsMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C56CE0 & 1) == 0 )
+  if ( (byte_4CB6249 & 1) == 0 )
   {
-    sub_1C3E564(&EventEquipSkillPartsMaster___c_TypeInfo);
-    byte_4C56CE0 = 1;
+    sub_1C6BA08(&EventEquipSkillPartsMaster___c_TypeInfo);
+    byte_4CB6249 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(EventEquipSkillPartsMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(EventEquipSkillPartsMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventEquipSkillPartsMaster___c_TypeInfo->static_fields->__9 = (struct EventEquipSkillPartsMaster___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)EventEquipSkillPartsMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)EventEquipSkillPartsMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -667,7 +667,7 @@ int32_t EventEquipSkillPartsMaster___c___GetEventEquipSkillPartsEntityArray_b__0
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return e->fields.num;
 }
 
@@ -678,7 +678,7 @@ int32_t EventEquipSkillPartsMaster___c___GetEventEquipSkillPartsEntityArray_b__0
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return e->fields.priority;
 }
 
@@ -689,7 +689,7 @@ int32_t EventEquipSkillPartsMaster___c___GetEventEquipSkillPartsEntityArray_b__0
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return e->fields.priority;
 }
 
@@ -708,7 +708,7 @@ bool EventEquipSkillPartsMaster___c__DisplayClass0_0___GetEventEquipSkillPartsEn
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   return e->fields.eventId == this->fields.eventId && e->fields.groupId == this->fields.groupId;
 }
 
@@ -721,6 +721,6 @@ bool EventEquipSkillPartsMaster___c__DisplayClass0_0___GetEventEquipSkillPartsEn
   const MethodInfo *v3; // x4
 
   if ( !e || (this = (EventEquipSkillPartsMaster___c__DisplayClass0_0_o *)this->fields.commonReleaseMaster) == 0 )
-    sub_1C3E7C0(this, e);
+    sub_1C6BC60(this, e);
   return CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)this, e->fields.commonReleaseId, 0, 0, v3);
 }

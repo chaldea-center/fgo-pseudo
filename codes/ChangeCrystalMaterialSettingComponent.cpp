@@ -12,10 +12,10 @@ System_String_o *ChangeCrystalMaterialSettingComponent__get_AlphaTextureProperty
 {
   System_String_o *result; // x0
 
-  if ( (byte_4C5A527 & 1) == 0 )
+  if ( (byte_4CB9AF6 & 1) == 0 )
   {
-    sub_1C3E564(&string_TypeInfo);
-    byte_4C5A527 = 1;
+    sub_1C6BA08(&string_TypeInfo);
+    byte_4CB9AF6 = 1;
   }
   result = this->fields.alphaTexturePropertyName;
   if ( !result )

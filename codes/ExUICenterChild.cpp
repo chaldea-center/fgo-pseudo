@@ -27,7 +27,7 @@ void ExUICenterChild__Recenter(ExUICenterChild_o *this, const MethodInfo *method
       return;
     }
 LABEL_7:
-    sub_1C3E7C0(mScrollView, v3);
+    sub_1C6BC60(mScrollView, v3);
   }
 }
 
@@ -47,7 +47,7 @@ float ExUICenterChild__get_scrollPostion(ExUICenterChild_o *this, const MethodIn
   if ( !mScrollView
     || (mScrollView = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(mScrollView, 0)) == 0 )
   {
-    sub_1C3E7C0(mScrollView, method);
+    sub_1C6BC60(mScrollView, method);
   }
   LODWORD(result) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)mScrollView, 0);
   return result;

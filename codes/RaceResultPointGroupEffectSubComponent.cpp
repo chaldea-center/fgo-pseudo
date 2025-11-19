@@ -7,23 +7,23 @@ void RaceResultPointGroupEffectSubComponent___cctor(const MethodInfo *method)
   int32_t v5; // w2
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C58478 & 1) == 0 )
+  if ( (byte_4CB79E8 & 1) == 0 )
   {
-    sub_1C3E564(&RaceResultPointGroupEffectSubComponent_TypeInfo);
-    sub_1C3E564(&StringLiteral_19273/*"event_ranking_group_name_"*/);
-    sub_1C3E564(&StringLiteral_19272/*"event_ranking_group_"*/);
-    byte_4C58478 = 1;
+    sub_1C6BA08(&RaceResultPointGroupEffectSubComponent_TypeInfo);
+    sub_1C6BA08(&StringLiteral_19304/*"event_ranking_group_name_"*/);
+    sub_1C6BA08(&StringLiteral_19303/*"event_ranking_group_"*/);
+    byte_4CB79E8 = 1;
   }
-  RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields->GROUP_IMAGE_NAME = (struct System_String_o *)StringLiteral_19272/*"event_ranking_group_"*/;
-  sub_1C3E508(
+  RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields->GROUP_IMAGE_NAME = (struct System_String_o *)StringLiteral_19303/*"event_ranking_group_"*/;
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields,
-    StringLiteral_19272/*"event_ranking_group_"*/,
+    StringLiteral_19303/*"event_ranking_group_"*/,
     v1,
     v2);
-  v3 = StringLiteral_19273/*"event_ranking_group_name_"*/;
+  v3 = StringLiteral_19304/*"event_ranking_group_name_"*/;
   static_fields = RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields;
-  static_fields->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_19273/*"event_ranking_group_name_"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->GROUP_NAME_IMAGE_NAME, v3, v5, v6);
+  static_fields->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_19304/*"event_ranking_group_name_"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->GROUP_NAME_IMAGE_NAME, v3, v5, v6);
 }
 
 
@@ -103,18 +103,18 @@ void RaceResultPointGroupEffectSubComponent__RecvParam(
   int32_t groupId; // [xsp+24h] [xbp-6Ch] BYREF
   System_Int64_array *goalTime; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4C58477 & 1) == 0 )
+  if ( (byte_4CB79E7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventRaceResultMaster___);
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventScriptMaster___);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&RaceResultPointGroupEffectSubComponent_TypeInfo);
-    sub_1C3E564(&ScriptManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&StringLiteral_16119/*"_"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58477 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventRaceResultMaster___);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventScriptMaster___);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&RaceResultPointGroupEffectSubComponent_TypeInfo);
+    sub_1C6BA08(&ScriptManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&StringLiteral_16102/*"_"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB79E7 = 1;
   }
   goalTime = 0;
   groupId = 0;
@@ -152,16 +152,16 @@ void RaceResultPointGroupEffectSubComponent__RecvParam(
   }
   if ( Instance < 1 )
     goto LABEL_85;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (__int64)DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventScriptMaster___)) == 0 )
+                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventScriptMaster___)) == 0 )
   {
 LABEL_109:
-    sub_1C3E7C0(Instance, v6);
+    sub_1C6BC60(Instance, v6);
   }
-  Instance = (__int64)EventScriptMaster__getRaceResultEntity_42159808((EventScriptMaster_o *)Instance, 2, v8, 0);
+  Instance = (__int64)EventScriptMaster__getRaceResultEntity_42347236((EventScriptMaster_o *)Instance, 2, v8, 0);
   if ( !Instance )
   {
 LABEL_85:
@@ -236,12 +236,12 @@ LABEL_85:
   v16 = *(_DWORD *)(Instance + 16);
   v17 = *(_DWORD *)(Instance + 40);
   v61 = Instance + 16;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_109;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
+                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
   if ( !Instance )
     goto LABEL_109;
   Instance = (__int64)EventRaceResultMaster__GetRankDatas(
@@ -266,12 +266,12 @@ LABEL_85:
       if ( v20 >= *(unsigned int *)(v19 + 24) )
         goto LABEL_110;
       groupId = *(_DWORD *)(v21 + 4 * v20);
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_109;
       Instance = (__int64)DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                            (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
       if ( !Instance )
         goto LABEL_109;
       Instance = EventPointGroupMaster__TryGetEntity((EventPointGroupMaster_o *)Instance, &entity, v16, groupId, 0);
@@ -311,10 +311,10 @@ LABEL_85:
             GROUP_NAME_IMAGE_NAME = v27->static_fields->GROUP_NAME_IMAGE_NAME;
             v29 = System_Int32__ToString(v61, 0);
             v30 = System_Int32__ToString((int32_t)&groupId, 0);
-            Instance = (__int64)System_String__Concat_63676720(
+            Instance = (__int64)System_String__Concat_64007060(
                                   GROUP_NAME_IMAGE_NAME,
                                   v29,
-                                  (System_String_o *)StringLiteral_16119/*"_"*/,
+                                  (System_String_o *)StringLiteral_16102/*"_"*/,
                                   v30,
                                   0);
             if ( !v26 )
@@ -341,10 +341,10 @@ LABEL_85:
             GROUP_IMAGE_NAME = v34->static_fields->GROUP_IMAGE_NAME;
             v36 = System_Int32__ToString(v61, 0);
             v37 = System_Int32__ToString((int32_t)&groupId, 0);
-            Instance = (__int64)System_String__Concat_63676720(
+            Instance = (__int64)System_String__Concat_64007060(
                                   GROUP_IMAGE_NAME,
                                   v36,
-                                  (System_String_o *)StringLiteral_16119/*"_"*/,
+                                  (System_String_o *)StringLiteral_16102/*"_"*/,
                                   v37,
                                   0);
             if ( !v33 )
@@ -363,7 +363,7 @@ LABEL_85:
               goto LABEL_109;
             if ( v20 >= LODWORD(goalTime->max_length) || v20 >= v39 )
 LABEL_110:
-              sub_1C3E7C8(Instance, v6);
+              sub_1C6BC68(Instance);
             v40 = goalTime->m_Items[v20];
             v41 = v38->m_Items[v20];
             if ( v40 < 1 )

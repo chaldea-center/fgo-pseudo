@@ -1,14 +1,14 @@
 void UserServantAppendPassiveSkillMaster___ctor(UserServantAppendPassiveSkillMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C57CD5 & 1) == 0 )
+  if ( (byte_4CB7242 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string___ctor__);
-    byte_4C57CD5 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string___ctor__);
+    byte_4CB7242 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     375,
-    (const MethodInfo_33B56EC *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string___ctor__);
+    (const MethodInfo_33FB870 *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ UserServantAppendPassiveSkillEntity_o *UserServantAppendPassiveSkillMaster__GetE
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4C57CD6 & 1) == 0 )
+  if ( (byte_4CB7243 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__GetEntity__);
-    byte_4C57CD6 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__GetEntity__);
+    byte_4CB7243 = 1;
   }
   PK = (Il2CppObject *)UserServantAppendPassiveSkillEntity__CreatePK(userId, svtId, *(const MethodInfo **)&svtId);
   return (UserServantAppendPassiveSkillEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                     PK,
-                                                    (const MethodInfo_33B7A10 *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__GetEntity__);
+                                                    (const MethodInfo_33FDB94 *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__GetEntity__);
 }
 
 
@@ -47,26 +47,26 @@ bool UserServantAppendPassiveSkillMaster__IsAppendSkillExchangeLimit(int32_t svt
   UserServantAppendPassiveSkillEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v2 = svtId;
-  if ( (byte_4C57CD4 & 1) == 0 )
+  if ( (byte_4CB7241 & 1) == 0 )
   {
-    sub_1C3E564(&BalanceConfig_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMaster_UserServantAppendPassiveSkillMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    *(_QWORD *)&svtId = sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C57CD4 = 1;
+    sub_1C6BA08(&BalanceConfig_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantAppendPassiveSkillMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    *(_QWORD *)&svtId = sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB7241 = 1;
   }
   entity = 0;
   if ( !UserServantAppendPassiveSkillMaster__IsExchangeLimited(*(const MethodInfo **)&svtId) )
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_UserServantAppendPassiveSkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantAppendPassiveSkillMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C50AE2 )
+  if ( !byte_4CB002A )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C50AE2 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB002A = 1;
   }
   v6 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -76,7 +76,7 @@ bool UserServantAppendPassiveSkillMaster__IsAppendSkillExchangeLimit(int32_t svt
   }
   if ( !Master_object )
 LABEL_19:
-    sub_1C3E7C0(v6, v3);
+    sub_1C6BC60(v6, v3);
   v6 = (NetworkManager_c *)UserServantAppendPassiveSkillMaster__TryGetEntity(
                              (UserServantAppendPassiveSkillMaster_o *)Master_object,
                              &entity,
@@ -102,10 +102,10 @@ bool UserServantAppendPassiveSkillMaster__IsExchangeLimited(const MethodInfo *me
 {
   BalanceConfig_c *v1; // x0
 
-  if ( (byte_4C57CD3 & 1) == 0 )
+  if ( (byte_4CB7240 & 1) == 0 )
   {
-    sub_1C3E564(&BalanceConfig_TypeInfo);
-    byte_4C57CD3 = 1;
+    sub_1C6BA08(&BalanceConfig_TypeInfo);
+    byte_4CB7240 = 1;
   }
   v1 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -126,15 +126,15 @@ bool UserServantAppendPassiveSkillMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4C57CD7 & 1) == 0 )
+  if ( (byte_4CB7244 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__TryGetEntity__);
-    byte_4C57CD7 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__TryGetEntity__);
+    byte_4CB7244 = 1;
   }
   PK = (Il2CppObject *)UserServantAppendPassiveSkillEntity__CreatePK(userId, svtId, (const MethodInfo *)userId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33B7A5C *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__TryGetEntity__);
+           (const MethodInfo_33FDBE0 *)Method_DataMasterBase_UserServantAppendPassiveSkillMaster__UserServantAppendPassiveSkillEntity__string__TryGetEntity__);
 }

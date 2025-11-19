@@ -1,9 +1,9 @@
 void CombineHelpMenu___ctor(CombineHelpMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5AD6F & 1) == 0 )
+  if ( (byte_4CBA345 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C5AD6F = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CBA345 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -19,15 +19,15 @@ void CombineHelpMenu__Close(
   const MethodInfo *v3; // x3
   System_Action_o *v6; // x20
 
-  if ( (byte_4C5AD6D & 1) == 0 )
+  if ( (byte_4CBA343 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_CombineHelpMenu_endClose__);
-    byte_4C5AD6D = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_CombineHelpMenu_endClose__);
+    byte_4CBA343 = 1;
   }
   this->fields.callbackFunc = callback;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
-  v6 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
+  v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_CombineHelpMenu_endClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v6, 0);
 }
@@ -60,10 +60,10 @@ void CombineHelpMenu__add_callbackFunc(
   CombineHelpMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C5AD6B & 1) == 0 )
+  if ( (byte_4CBA341 & 1) == 0 )
   {
-    sub_1C3E564(&CombineHelpMenu_CallbackFunc_TypeInfo);
-    byte_4C5AD6B = 1;
+    sub_1C6BA08(&CombineHelpMenu_CallbackFunc_TypeInfo);
+    byte_4CBA341 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -76,13 +76,13 @@ void CombineHelpMenu__add_callbackFunc(
       if ( (CombineHelpMenu_CallbackFunc_c *)v8->klass != CombineHelpMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   CombineHelpMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -99,7 +99,7 @@ void CombineHelpMenu__endClose(CombineHelpMenu_o *this, const MethodInfo *method
   p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
   v6 = callbackFunc;
   p_callbackFunc->klass = 0;
-  sub_1C3E508(p_callbackFunc, 0, v2, v3);
+  sub_1C6B9AC(p_callbackFunc, 0, v2, v3);
   if ( callbackFunc )
   {
     BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -110,12 +110,12 @@ void CombineHelpMenu__endClose(CombineHelpMenu_o *this, const MethodInfo *method
 
 System_String_o *CombineHelpMenu__get_closeBtnPath(CombineHelpMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C5AD6E & 1) == 0 )
+  if ( (byte_4CBA344 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_4574/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/);
-    byte_4C5AD6E = 1;
+    sub_1C6BA08(&StringLiteral_4564/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/);
+    byte_4CBA344 = 1;
   }
-  return (System_String_o *)StringLiteral_4574/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/;
+  return (System_String_o *)StringLiteral_4564/*"CombineHelpListPanel/BaseWindow/UpperCloseButton"*/;
 }
 
 
@@ -133,10 +133,10 @@ void CombineHelpMenu__remove_callbackFunc(
   CombineHelpMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C5AD6C & 1) == 0 )
+  if ( (byte_4CBA342 & 1) == 0 )
   {
-    sub_1C3E564(&CombineHelpMenu_CallbackFunc_TypeInfo);
-    byte_4C5AD6C = 1;
+    sub_1C6BA08(&CombineHelpMenu_CallbackFunc_TypeInfo);
+    byte_4CBA342 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -149,13 +149,13 @@ void CombineHelpMenu__remove_callbackFunc(
       if ( (CombineHelpMenu_CallbackFunc_c *)v8->klass != CombineHelpMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   CombineHelpMenu__Init(v11, v12);
 }
 
@@ -175,15 +175,15 @@ void CombineHelpMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -195,9 +195,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A873B4;
+  this->fields.invoke_impl = (intptr_t)sub_1AA6834;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A87374;
+  this->fields.extra_arg = (intptr_t)sub_1AA67F4;
 }
 
 
@@ -210,7 +210,7 @@ System_IAsyncResult_o *CombineHelpMenu_CallbackFunc__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C3E518(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v5, callback, object);
 }
 
 
@@ -219,7 +219,7 @@ void CombineHelpMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 

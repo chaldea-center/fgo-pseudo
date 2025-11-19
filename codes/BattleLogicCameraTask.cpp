@@ -9,5 +9,5 @@ void BattleLogicCameraTask___ctor(BattleLogicCameraTask_o *this, System_String_o
   v4[1].monitor = cameraName;
   v4 = (CGThumbnailListItem_o *)((char *)v4 + 152);
   LODWORD(v4[-1].fields.sortValue0B) = 27;
-  sub_1C3E508(v4, (int32_t)cameraName, v5, v6);
+  sub_1C6B9AC(v4, (int32_t)cameraName, v5, v6);
 }

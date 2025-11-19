@@ -41,20 +41,20 @@ void TopMyRoomRequest__beginRequest(
   RequestBase_o *v39; // [xsp+8h] [xbp-68h]
 
   v4 = this;
-  if ( (byte_4C5899C & 1) == 0 )
+  if ( (byte_4CB7F18 & 1) == 0 )
   {
-    sub_1C3E564(&string___TypeInfo);
-    sub_1C3E564(&StringLiteral_860/*",["*/);
-    sub_1C3E564(&StringLiteral_811/*","*/);
-    sub_1C3E564(&StringLiteral_24730/*"voicePlayedList"*/);
-    sub_1C3E564(&StringLiteral_15814/*"["*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    this = (TopMyRoomRequest_o *)sub_1C3E564(&StringLiteral_16068/*"]"*/);
-    byte_4C5899C = 1;
+    sub_1C6BA08(&string___TypeInfo);
+    sub_1C6BA08(&StringLiteral_857/*",["*/);
+    sub_1C6BA08(&StringLiteral_808/*","*/);
+    sub_1C6BA08(&StringLiteral_24820/*"voicePlayedList"*/);
+    sub_1C6BA08(&StringLiteral_15801/*"["*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    this = (TopMyRoomRequest_o *)sub_1C6BA08(&StringLiteral_16051/*"]"*/);
+    byte_4CB7F18 = 1;
   }
   if ( !voicePlayedList )
 LABEL_33:
-    sub_1C3E7C0(this, voicePlayedList);
+    sub_1C6BC60(this, voicePlayedList);
   v39 = (RequestBase_o *)v4;
   max_length = voicePlayedList->max_length;
   v6 = (TopMyRoomRequest_o *)StringLiteral_1/*""*/;
@@ -68,97 +68,97 @@ LABEL_33:
       {
         if ( System_String__IsNullOrEmpty((System_String_o *)v6, 0) )
         {
-          this = (TopMyRoomRequest_o *)sub_1C3E60C(string___TypeInfo, 5);
+          this = (TopMyRoomRequest_o *)sub_1C6BAB0(string___TypeInfo, 5);
           if ( !this )
             goto LABEL_33;
           v11 = this;
           if ( !LODWORD(this->fields.paramInteger) )
             break;
-          v12 = StringLiteral_15814/*"["*/;
-          this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)StringLiteral_15814/*"["*/;
-          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.paramString, v12, v9, v10);
+          v12 = StringLiteral_15801/*"["*/;
+          this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)StringLiteral_15801/*"["*/;
+          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.paramString, v12, v9, v10);
           if ( !LODWORD(v8->max_length) )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 32, 0);
           if ( LODWORD(v11->fields.paramInteger) <= 1 )
             break;
           v11[1].klass = (TopMyRoomRequest_c *)this;
-          sub_1C3E508((CGThumbnailListItem_o *)&v11[1], (int32_t)this, v13, v14);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v11[1], (int32_t)this, v13, v14);
           if ( LODWORD(v11->fields.paramInteger) <= 2 )
             break;
-          v17 = StringLiteral_811/*","*/;
-          v11[1].monitor = (void *)StringLiteral_811/*","*/;
-          sub_1C3E508((CGThumbnailListItem_o *)&v11[1].monitor, v17, v15, v16);
+          v17 = StringLiteral_808/*","*/;
+          v11[1].monitor = (void *)StringLiteral_808/*","*/;
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v11[1].monitor, v17, v15, v16);
           if ( LODWORD(v8->max_length) <= 1 )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 36, 0);
           if ( LODWORD(v11->fields.paramInteger) <= 3 )
             break;
           v11[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)this;
-          sub_1C3E508((CGThumbnailListItem_o *)&v11[1].fields, (int32_t)this, v18, v19);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v11[1].fields, (int32_t)this, v18, v19);
           if ( LODWORD(v11->fields.paramInteger) <= 4 )
             break;
-          v22 = StringLiteral_16068/*"]"*/;
-          v11[1].fields.paramInteger = (struct System_Collections_Generic_Dictionary_string__int__o *)StringLiteral_16068/*"]"*/;
+          v22 = StringLiteral_16051/*"]"*/;
+          v11[1].fields.paramInteger = (struct System_Collections_Generic_Dictionary_string__int__o *)StringLiteral_16051/*"]"*/;
           p_paramInteger = (CGThumbnailListItem_o *)&v11[1].fields.paramInteger;
         }
         else
         {
-          this = (TopMyRoomRequest_o *)sub_1C3E60C(string___TypeInfo, 6);
+          this = (TopMyRoomRequest_o *)sub_1C6BAB0(string___TypeInfo, 6);
           if ( !this )
             goto LABEL_33;
           v11 = this;
           if ( !LODWORD(this->fields.paramInteger) )
             break;
           this->fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)v6;
-          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.paramString, (int32_t)v6, v24, v25);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.paramString, (int32_t)v6, v24, v25);
           if ( LODWORD(v11->fields.paramInteger) <= 1 )
             break;
-          v28 = StringLiteral_860/*",["*/;
-          v11[1].klass = (TopMyRoomRequest_c *)StringLiteral_860/*",["*/;
-          sub_1C3E508((CGThumbnailListItem_o *)&v11[1], v28, v26, v27);
+          v28 = StringLiteral_857/*",["*/;
+          v11[1].klass = (TopMyRoomRequest_c *)StringLiteral_857/*",["*/;
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v11[1], v28, v26, v27);
           if ( !LODWORD(v8->max_length) )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 32, 0);
           if ( LODWORD(v11->fields.paramInteger) <= 2 )
             break;
           v11[1].monitor = this;
-          sub_1C3E508((CGThumbnailListItem_o *)&v11[1].monitor, (int32_t)this, v29, v30);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v11[1].monitor, (int32_t)this, v29, v30);
           if ( LODWORD(v11->fields.paramInteger) <= 3 )
             break;
-          v33 = StringLiteral_811/*","*/;
-          v11[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)StringLiteral_811/*","*/;
-          sub_1C3E508((CGThumbnailListItem_o *)&v11[1].fields, v33, v31, v32);
+          v33 = StringLiteral_808/*","*/;
+          v11[1].fields.CallBack = (struct NetworkManager_ResultCallbackFunc_o *)StringLiteral_808/*","*/;
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v11[1].fields, v33, v31, v32);
           if ( LODWORD(v8->max_length) <= 1 )
             break;
           this = (TopMyRoomRequest_o *)System_Int32__ToString((int)v8 + 36, 0);
           if ( LODWORD(v11->fields.paramInteger) <= 4 )
             break;
           v11[1].fields.paramInteger = (struct System_Collections_Generic_Dictionary_string__int__o *)this;
-          sub_1C3E508((CGThumbnailListItem_o *)&v11[1].fields.paramInteger, (int32_t)this, v34, v35);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v11[1].fields.paramInteger, (int32_t)this, v34, v35);
           if ( LODWORD(v11->fields.paramInteger) <= 5 )
             break;
-          v22 = StringLiteral_16068/*"]"*/;
-          v11[1].fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)StringLiteral_16068/*"]"*/;
+          v22 = StringLiteral_16051/*"]"*/;
+          v11[1].fields.paramString = (struct System_Collections_Generic_Dictionary_string__string__o *)StringLiteral_16051/*"]"*/;
           p_paramInteger = (CGThumbnailListItem_o *)&v11[1].fields.paramString;
         }
-        sub_1C3E508(p_paramInteger, v22, v20, v21);
-        this = (TopMyRoomRequest_o *)System_String__Concat_63676984((System_String_array *)v11, 0);
+        sub_1C6B9AC(p_paramInteger, v22, v20, v21);
+        this = (TopMyRoomRequest_o *)System_String__Concat_64007324((System_String_array *)v11, 0);
         v6 = this;
       }
       LODWORD(max_length) = voicePlayedList->max_length;
       if ( (__int64)++v7 >= (int)max_length )
         goto LABEL_31;
     }
-    sub_1C3E7C8(this, voicePlayedList);
+    sub_1C6BC68(this);
   }
 LABEL_31:
-  v36 = System_String__Concat_63674716(
-          (System_String_o *)StringLiteral_15814/*"["*/,
+  v36 = System_String__Concat_64005056(
+          (System_String_o *)StringLiteral_15801/*"["*/,
           (System_String_o *)v6,
-          (System_String_o *)StringLiteral_16068/*"]"*/,
+          (System_String_o *)StringLiteral_16051/*"]"*/,
           0);
-  RequestBase__addField_44302832(v39, (System_String_o *)StringLiteral_24730/*"voicePlayedList"*/, v36, v37);
+  RequestBase__addField_44471996(v39, (System_String_o *)StringLiteral_24820/*"voicePlayedList"*/, v36, v37);
   RequestBase__beginRequest(v39, v38);
 }
 
@@ -167,16 +167,16 @@ System_String_o *TopMyRoomRequest__getURL(TopMyRoomRequest_o *this, const Method
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4C5899B & 1) == 0 )
+  if ( (byte_4CB7F17 & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_17774/*"card/voice"*/);
-    byte_4C5899B = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_17774/*"card/voice"*/);
+    byte_4CB7F17 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63636468(BaseUrl, (System_String_o *)StringLiteral_17774/*"card/voice"*/, 0);
+  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_17774/*"card/voice"*/, 0);
 }
 
 
@@ -190,12 +190,12 @@ void TopMyRoomRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4C5899D & 1) == 0 )
+  if ( (byte_4CB7F19 & 1) == 0 )
   {
-    sub_1C3E564(&ResponseCommandKind_TypeInfo);
-    sub_1C3E564(&StringLiteral_22400/*"ok"*/);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    byte_4C5899D = 1;
+    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
+    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    byte_4CB7F19 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -205,14 +205,14 @@ void TopMyRoomRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22400/*"ok"*/;
+    v8 = &StringLiteral_22471/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22233/*"ng"*/;
+    v8 = &StringLiteral_22301/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

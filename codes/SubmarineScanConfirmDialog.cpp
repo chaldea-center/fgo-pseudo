@@ -1,9 +1,9 @@
 void SubmarineScanConfirmDialog___ctor(SubmarineScanConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C536E9 & 1) == 0 )
+  if ( (byte_4CB2C39 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    byte_4C536E9 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    byte_4CB2C39 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -21,47 +21,47 @@ void SubmarineScanConfirmDialog__EndLoad(SubmarineScanConfirmDialog_o *this, con
   System_String_o *v8; // x0
   System_Action_o *v9; // x20
 
-  if ( (byte_4C536E5 & 1) == 0 )
+  if ( (byte_4CB2C35 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventPanelScanMaster___);
-    sub_1C3E564(&Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&Method_SubmarineScanConfirmDialog__EndLoad_b__18_0__);
-    sub_1C3E564(&StringLiteral_5717/*"EVENT_SUBMARINE_DO_SCAN_TITLE"*/);
-    byte_4C536E5 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventPanelScanMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&Method_SubmarineScanConfirmDialog__EndLoad_b__18_0__);
+    sub_1C6BA08(&StringLiteral_5707/*"EVENT_SUBMARINE_DO_SCAN_TITLE"*/);
+    byte_4CB2C35 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
+                                (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
   if ( !Instance )
     goto LABEL_11;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
              this->fields.scanId,
-             (const MethodInfo_33B2F58 *)Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
+             (const MethodInfo_33F90DC *)Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
   if ( Entity )
   {
     v6 = Entity;
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5717/*"EVENT_SUBMARINE_DO_SCAN_TITLE"*/, 0);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5707/*"EVENT_SUBMARINE_DO_SCAN_TITLE"*/, 0);
     Instance = (DataManager_o *)System_String__Format(v8, (Il2CppObject *)v6[1].monitor, 0);
     if ( titleLabel )
     {
       UILabel__set_text(titleLabel, (System_String_o *)Instance, 0);
-      v9 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+      v9 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
       System_Action___ctor(v9, (Il2CppObject *)this, Method_SubmarineScanConfirmDialog__EndLoad_b__18_0__, 0);
       BaseDialog__Open((BaseDialog_o *)this, v9, 0, 0, 0);
       return;
     }
 LABEL_11:
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   }
 }
 
@@ -75,13 +75,13 @@ void SubmarineScanConfirmDialog__Init(SubmarineScanConfirmDialog_o *this, const 
   int32_t v7; // w2
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C536E3 & 1) == 0 )
+  if ( (byte_4CB2C33 & 1) == 0 )
   {
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C3E564(&StringLiteral_5725/*"EVENT_SUBMARINE_SCAN_CONFIRM_EXECUTE"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C536E3 = 1;
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C6BA08(&StringLiteral_5715/*"EVENT_SUBMARINE_SCAN_CONFIRM_EXECUTE"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB2C33 = 1;
   }
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -96,19 +96,19 @@ void SubmarineScanConfirmDialog__Init(SubmarineScanConfirmDialog_o *this, const 
   executeLabel = this->fields.executeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5725/*"EVENT_SUBMARINE_SCAN_CONFIRM_EXECUTE"*/, 0);
+  titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5715/*"EVENT_SUBMARINE_SCAN_CONFIRM_EXECUTE"*/, 0);
   if ( !executeLabel
     || (UILabel__set_text(executeLabel, (System_String_o *)titleLabel, 0),
         cancelLabel = this->fields.cancelLabel,
-        titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3684/*"COMMON_CONFIRM_CANCEL"*/, 0),
+        titleLabel = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0),
         !cancelLabel) )
   {
 LABEL_10:
-    sub_1C3E7C0(titleLabel, v3);
+    sub_1C6BC60(titleLabel, v3);
   }
   UILabel__set_text(cancelLabel, (System_String_o *)titleLabel, 0);
   this->fields.closeAction = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closeAction, 0, v7, v8);
 }
 
 
@@ -118,22 +118,22 @@ void SubmarineScanConfirmDialog__OnClickCancelButton(SubmarineScanConfirmDialog_
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C536E6 & 1) == 0 )
+  if ( (byte_4CB2C36 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_SubmarineScanConfirmDialog_OnClickCancelButton__);
-    sub_1C3E564(&Method_SubmarineScanConfirmDialog__OnClickCancelButton_b__19_0__);
-    byte_4C536E6 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_SubmarineScanConfirmDialog_OnClickCancelButton__);
+    sub_1C6BA08(&Method_SubmarineScanConfirmDialog__OnClickCancelButton_b__19_0__);
+    byte_4CB2C36 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 4;
     v3 = Method_SubmarineScanConfirmDialog_OnClickCancelButton__;
     if ( (*((_BYTE *)Method_SubmarineScanConfirmDialog_OnClickCancelButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_SubmarineScanConfirmDialog_OnClickCancelButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_SubmarineScanConfirmDialog_OnClickCancelButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    v5 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_SubmarineScanConfirmDialog__OnClickCancelButton_b__19_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
@@ -146,22 +146,22 @@ void SubmarineScanConfirmDialog__OnClickExecuteButton(SubmarineScanConfirmDialog
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4C536E7 & 1) == 0 )
+  if ( (byte_4CB2C37 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_SubmarineScanConfirmDialog_OnClickExecuteButton__);
-    sub_1C3E564(&Method_SubmarineScanConfirmDialog__OnClickExecuteButton_b__20_0__);
-    byte_4C536E7 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_SubmarineScanConfirmDialog_OnClickExecuteButton__);
+    sub_1C6BA08(&Method_SubmarineScanConfirmDialog__OnClickExecuteButton_b__20_0__);
+    byte_4CB2C37 = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_SubmarineScanConfirmDialog_OnClickExecuteButton__;
     if ( (*((_BYTE *)Method_SubmarineScanConfirmDialog_OnClickExecuteButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C3E57C(Method_SubmarineScanConfirmDialog_OnClickExecuteButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C6BA20(Method_SubmarineScanConfirmDialog_OnClickExecuteButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
-    v5 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_SubmarineScanConfirmDialog__OnClickExecuteButton_b__20_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
   }
@@ -187,19 +187,19 @@ void SubmarineScanConfirmDialog__Open(
   System_Action_o *v17; // x20
   UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C536E4 & 1) == 0 )
+  if ( (byte_4CB2C34 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    sub_1C3E564(&Method_SubmarineScanConfirmDialog_EndLoad__);
-    byte_4C536E4 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    sub_1C6BA08(&Method_SubmarineScanConfirmDialog_EndLoad__);
+    byte_4CB2C34 = 1;
   }
   SubmarineScanConfirmDialog__Init(this, *(const MethodInfo **)&scanId);
   this->fields.closeAction = closeAction;
   this->fields.state = 1;
   this->fields.scanId = scanId;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.closeAction, (int32_t)closeAction, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closeAction, (int32_t)closeAction, v9, v10);
   baseWindow = this->fields.baseWindow;
   if ( !baseWindow )
     goto LABEL_15;
@@ -224,17 +224,17 @@ void SubmarineScanConfirmDialog__Open(
   v18.fields.y = *p_y;
   v18.fields.x = p_dialogPositionUpperSide->fields.x;
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)baseWindow, v18, 0);
-  baseWindow = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+  baseWindow = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
   if ( !baseWindow )
 LABEL_15:
-    sub_1C3E7C0(baseWindow, v11);
+    sub_1C6BC60(baseWindow, v11);
   if ( AtlasManager__isLoadedSkinData((AtlasManager_o *)baseWindow, 5, 0) )
   {
     SubmarineScanConfirmDialog__EndLoad(this, v16);
   }
   else
   {
-    v17 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v17 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v17, (Il2CppObject *)this, Method_SubmarineScanConfirmDialog_EndLoad__, 0);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
@@ -255,14 +255,14 @@ void SubmarineScanConfirmDialog___OnClickCancelButton_b__19_0(
 {
   System_Action_T__o *closeAction; // x0
 
-  if ( (byte_4C536EA & 1) == 0 )
+  if ( (byte_4CB2C3A & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_bool___);
-    byte_4C536EA = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
+    byte_4CB2C3A = 1;
   }
   closeAction = (System_Action_T__o *)this->fields.closeAction;
   if ( closeAction )
-    ActionExtensions__Call_bool_(closeAction, 0, (const MethodInfo_3046270 *)Method_ActionExtensions_Call_bool___);
+    ActionExtensions__Call_bool_(closeAction, 0, (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
 }
 
 
@@ -272,14 +272,14 @@ void SubmarineScanConfirmDialog___OnClickExecuteButton_b__20_0(
 {
   System_Action_T__o *closeAction; // x0
 
-  if ( (byte_4C536EB & 1) == 0 )
+  if ( (byte_4CB2C3B & 1) == 0 )
   {
-    sub_1C3E564(&Method_ActionExtensions_Call_bool___);
-    byte_4C536EB = 1;
+    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
+    byte_4CB2C3B = 1;
   }
   closeAction = (System_Action_T__o *)this->fields.closeAction;
   if ( closeAction )
-    ActionExtensions__Call_bool_(closeAction, 1, (const MethodInfo_3046270 *)Method_ActionExtensions_Call_bool___);
+    ActionExtensions__Call_bool_(closeAction, 1, (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
 }
 
 
@@ -291,10 +291,10 @@ UnityEngine_GameObject_o *SubmarineScanConfirmDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4C536E8 & 1) == 0 )
+  if ( (byte_4CB2C38 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C536E8 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB2C38 = 1;
   }
   cancelButton = (UnityEngine_Object_o *)this->fields.cancelButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -303,6 +303,6 @@ UnityEngine_GameObject_o *SubmarineScanConfirmDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.cancelButton;
   if ( !v6 )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }

@@ -12,20 +12,20 @@ void SupportServantEquipServantItemDraw__SetInput(
 {
   UnityEngine_Component_o *decideButton; // x0
 
-  if ( (byte_4C534E1 & 1) == 0 )
+  if ( (byte_4CB2A31 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_4C534E1 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_4CB2A31 = 1;
   }
   decideButton = (UnityEngine_Component_o *)this->fields.decideButton;
   if ( !decideButton
     || (decideButton = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                     decideButton,
-                                                    (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
+                                                    (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider___)) == 0
     || (UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)decideButton, isInput, 0),
         (decideButton = (UnityEngine_Component_o *)this->fields.decideButton) == 0) )
   {
-    sub_1C3E7C0(decideButton, isInput);
+    sub_1C6BC60(decideButton, isInput);
   }
   ((void (__fastcall *)(UnityEngine_Component_o *, _QWORD, __int64, Il2CppClass **))decideButton->klass[1]._1.nestedTypes)(
     decideButton,
@@ -85,13 +85,13 @@ void SupportServantEquipServantItemDraw__SetItem(
 
   v7 = item;
   v8 = (SupportServantEquipServantItemDraw_o **)this;
-  if ( (byte_4C534E0 & 1) == 0 )
+  if ( (byte_4CB2A30 & 1) == 0 )
   {
-    sub_1C3E564(&AtlasManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    this = (SupportServantEquipServantItemDraw_o *)sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C534E0 = 1;
+    sub_1C6BA08(&AtlasManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    this = (SupportServantEquipServantItemDraw_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB2A30 = 1;
   }
   skillInfoList = 0;
   if ( !v7 )
@@ -105,7 +105,7 @@ void SupportServantEquipServantItemDraw__SetItem(
     this = v8[4];
     if ( !this )
       goto LABEL_108;
-    ServantFaceIconComponent__Set_41053768(
+    ServantFaceIconComponent__Set_41239152(
       (ServantFaceIconComponent_o *)this,
       v7->fields.userServantEntity,
       v7->fields.iconLabelInfo,
@@ -159,7 +159,7 @@ void SupportServantEquipServantItemDraw__SetItem(
         if ( !v12 )
           goto LABEL_108;
       }
-      UIIconLabel__Set_41158744(v12, 3, Hp_k__BackingField + addBaseHp, v14, hp, 0, 0, 0, 0, 0, 0);
+      UIIconLabel__Set_41344128(v12, 3, Hp_k__BackingField + addBaseHp, v14, hp, 0, 0, 0, 0, 0, 0);
     }
     v17 = (UnityEngine_Object_o *)v8[12];
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -204,7 +204,7 @@ void SupportServantEquipServantItemDraw__SetItem(
         if ( !v18 )
           goto LABEL_108;
       }
-      UIIconLabel__Set_41158744(v18, 5, Atk_k__BackingField + addBaseAtk, v20, atk, 0, 0, 0, 0, 0, 0);
+      UIIconLabel__Set_41344128(v18, 5, Atk_k__BackingField + addBaseAtk, v20, atk, 0, 0, 0, 0, 0, 0);
     }
   }
   else
@@ -261,7 +261,7 @@ void SupportServantEquipServantItemDraw__SetItem(
       if ( !this )
         goto LABEL_108;
     }
-    UIIconLabel__Set_41158744((UIIconLabel_o *)this, 41, v25, 0, 0, 0, 0, 0, 0, 0, 0);
+    UIIconLabel__Set_41344128((UIIconLabel_o *)this, 41, v25, 0, 0, 0, 0, 0, 0, 0, 0);
   }
   v26 = (UnityEngine_Object_o *)v8[13];
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -291,7 +291,7 @@ void SupportServantEquipServantItemDraw__SetItem(
       if ( !this )
         goto LABEL_108;
     }
-    UIIconLabel__Set_41158744((UIIconLabel_o *)this, 42, v28, 0, 0, 0, 0, 0, 0, 0, 0);
+    UIIconLabel__Set_41344128((UIIconLabel_o *)this, 42, v28, 0, 0, 0, 0, 0, 0, 0, 0);
   }
   v29 = v7->fields.equipUserSvtEntity;
   if ( v29 )
@@ -300,7 +300,7 @@ void SupportServantEquipServantItemDraw__SetItem(
     if ( !skillInfoList )
       goto LABEL_108;
     if ( !LODWORD(skillInfoList->max_length) )
-      sub_1C3E7C8(this, item);
+      sub_1C6BC68(this);
     v30 = skillInfoList->m_Items[0];
     if ( !v30 )
       goto LABEL_108;
@@ -339,7 +339,7 @@ void SupportServantEquipServantItemDraw__SetItem(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v46.fields.currentCryptoKey = v36;
     *(_QWORD *)&v46.fields.fakeValue = v35;
-    v37 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v46, 0);
+    v37 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v46, 0);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
     AtlasManager__SetEquipFace(v34, v37, 0, 0);
@@ -434,7 +434,7 @@ LABEL_101:
         }
       }
 LABEL_108:
-      sub_1C3E7C0(this, item);
+      sub_1C6BC60(this, item);
     }
   }
 LABEL_102:

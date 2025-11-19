@@ -17,7 +17,7 @@ void ScriptAssetListViewMenu__Callback(ScriptAssetListViewMenu_o *this, bool res
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C3E508(p_callbackFunc, 0, (int32_t)method, v3);
+    sub_1C6B9AC(p_callbackFunc, 0, (int32_t)method, v3);
     ((void (__fastcall *)(intptr_t, bool, intptr_t))v5->fields.invoke_impl)(
       v5->fields.method_code,
       result,
@@ -43,7 +43,7 @@ void ScriptAssetListViewMenu__Close(ScriptAssetListViewMenu_o *this, const Metho
   listViewManager = (ScriptAssetListViewManager_o *)this->fields.scriptTestAssetRootObject;
   if ( !listViewManager )
 LABEL_6:
-    sub_1C3E7C0(listViewManager, v3);
+    sub_1C6BC60(listViewManager, v3);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)listViewManager, 0, 0);
 }
 
@@ -59,7 +59,7 @@ void ScriptAssetListViewMenu__EndInput(ScriptAssetListViewMenu_o *this, const Me
       || (ListViewManager__set_IsInput(listViewManager, 0, 0),
           (listViewManager = (ListViewManager_o *)this->fields.scriptTestAssetCancelButton) == 0) )
     {
-      sub_1C3E7C0(listViewManager, method);
+      sub_1C6BC60(listViewManager, method);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)listViewManager, 0, 0);
   }
@@ -79,20 +79,20 @@ void ScriptAssetListViewMenu__EndPlayScriptDebug(
   const MethodInfo *v9; // x3
   const MethodInfo *v10; // x3
 
-  if ( (byte_4C542DE & 1) == 0 )
+  if ( (byte_4CB3830 & 1) == 0 )
   {
-    sub_1C3E564(&ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_ScriptAssetListViewMenu_OnEndSelectObject__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C542DE = 1;
+    sub_1C6BA08(&ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_ScriptAssetListViewMenu_OnEndSelectObject__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CB3830 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__maskFadein((CommonUI_o *)Instance, 0.1, 0, 0),
         this->fields.state = 3,
         scriptObjectListViewMenu = this->fields.scriptObjectListViewMenu,
         selectAssetPath = this->fields.selectAssetPath,
-        v8 = (ScriptObjectListViewMenu_CallbackFunc_o *)sub_1C3E7B0(ScriptObjectListViewMenu_CallbackFunc_TypeInfo),
+        v8 = (ScriptObjectListViewMenu_CallbackFunc_o *)sub_1C6BC54(ScriptObjectListViewMenu_CallbackFunc_TypeInfo),
         ScriptObjectListViewMenu_CallbackFunc___ctor(
           v8,
           (Il2CppObject *)this,
@@ -100,7 +100,7 @@ void ScriptAssetListViewMenu__EndPlayScriptDebug(
           v9),
         !scriptObjectListViewMenu) )
   {
-    sub_1C3E7C0(Instance, v5);
+    sub_1C6BC60(Instance, v5);
   }
   ScriptObjectListViewMenu__Open(scriptObjectListViewMenu, selectAssetPath, v8, v10);
 }
@@ -132,11 +132,11 @@ void ScriptAssetListViewMenu__OnClickItem(ScriptAssetListViewMenu_o *this, const
   const MethodInfo *v11; // x3
   const MethodInfo *v12; // x3
 
-  if ( (byte_4C542DC & 1) == 0 )
+  if ( (byte_4CB382E & 1) == 0 )
   {
-    sub_1C3E564(&ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_ScriptAssetListViewMenu_OnEndSelectObject__);
-    byte_4C542DC = 1;
+    sub_1C6BA08(&ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_ScriptAssetListViewMenu_OnEndSelectObject__);
+    byte_4CB382E = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -154,11 +154,11 @@ void ScriptAssetListViewMenu__OnClickItem(ScriptAssetListViewMenu_o *this, const
       {
         dragParentObject = (struct System_String_o *)listViewManager->fields.dragParentObject;
         this->fields.selectAssetPath = dragParentObject;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.selectAssetPath, (int32_t)dragParentObject, v5, v6);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectAssetPath, (int32_t)dragParentObject, v5, v6);
         scriptObjectListViewMenu = this->fields.scriptObjectListViewMenu;
         this->fields.state = 3;
         selectAssetPath = this->fields.selectAssetPath;
-        v10 = (ScriptObjectListViewMenu_CallbackFunc_o *)sub_1C3E7B0(ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
+        v10 = (ScriptObjectListViewMenu_CallbackFunc_o *)sub_1C6BC54(ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
         ScriptObjectListViewMenu_CallbackFunc___ctor(
           v10,
           (Il2CppObject *)this,
@@ -171,7 +171,7 @@ void ScriptAssetListViewMenu__OnClickItem(ScriptAssetListViewMenu_o *this, const
         }
       }
 LABEL_10:
-      sub_1C3E7C0(listViewManager, method);
+      sub_1C6BC60(listViewManager, method);
     }
   }
 }
@@ -209,40 +209,40 @@ void ScriptAssetListViewMenu__OnEndSelectObject(
   ScriptAssetListViewManager_o *listViewManager; // x20
   System_Action_o *v30; // x21
 
-  if ( (byte_4C542DD & 1) == 0 )
+  if ( (byte_4CB382F & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&ScriptManager_CallbackBranchList_TypeInfo);
-    sub_1C3E564(&Method_ScriptAssetListViewMenu_OnClickItem__);
-    sub_1C3E564(&ScriptManager_TypeInfo);
-    sub_1C3E564(&Method_ScriptAssetListViewMenu___c__DisplayClass20_0__OnEndSelectObject_b__0__);
-    sub_1C3E564(&ScriptAssetListViewMenu___c__DisplayClass20_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_1048/*"/"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C542DD = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&ScriptManager_CallbackBranchList_TypeInfo);
+    sub_1C6BA08(&Method_ScriptAssetListViewMenu_OnClickItem__);
+    sub_1C6BA08(&ScriptManager_TypeInfo);
+    sub_1C6BA08(&Method_ScriptAssetListViewMenu___c__DisplayClass20_0__OnEndSelectObject_b__0__);
+    sub_1C6BA08(&ScriptAssetListViewMenu___c__DisplayClass20_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1041/*"/"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB382F = 1;
   }
-  v7 = sub_1C3E7B0(ScriptAssetListViewMenu___c__DisplayClass20_0_TypeInfo);
+  v7 = sub_1C6BC54(ScriptAssetListViewMenu___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_23;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
   if ( this->fields.state != 3 )
     return;
   scriptObjectListViewMenu = this->fields.scriptObjectListViewMenu;
   if ( !scriptObjectListViewMenu )
 LABEL_23:
-    sub_1C3E7C0(scriptObjectListViewMenu, v9);
+    sub_1C6BC60(scriptObjectListViewMenu, v9);
   if ( (result & 0xFFFFFFFE) != 2 )
   {
     ScriptObjectListViewMenu__Close(scriptObjectListViewMenu, v9);
     this->fields.state = 2;
     listViewManager = this->fields.listViewManager;
-    v30 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v30 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v30, (Il2CppObject *)this, Method_ScriptAssetListViewMenu_OnClickItem__, 0);
     if ( listViewManager )
     {
-      ScriptAssetListViewManager__SetMode_37454456(listViewManager, 1, v30, 0);
+      ScriptAssetListViewManager__SetMode_37634512(listViewManager, 1, v30, 0);
       scriptObjectListViewMenu = (ScriptObjectListViewMenu_o *)this->fields.scriptTestAssetCancelButton;
       if ( scriptObjectListViewMenu )
       {
@@ -254,12 +254,12 @@ LABEL_23:
   }
   *(_DWORD *)(v7 + 32) = ScriptObjectListViewMenu__GetJumpLine(scriptObjectListViewMenu, v9);
   this->fields.selectObjectPath = path;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.selectObjectPath, (int32_t)path, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectObjectPath, (int32_t)path, v12, v13);
   selectAssetPath = this->fields.selectAssetPath;
   selectObjectPath = this->fields.selectObjectPath;
   *(_QWORD *)(v7 + 24) = selectObjectPath;
   v16 = (System_String_o **)(v7 + 24);
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 24), (int32_t)selectObjectPath, v17, v18);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)selectObjectPath, v17, v18);
   scriptObjectListViewMenu = (ScriptObjectListViewMenu_o *)ScriptManager_TypeInfo;
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
@@ -273,16 +273,16 @@ LABEL_23:
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
     StartModeForAssetStorage = ScriptManager__GetStartModeForAssetStorage(selectAssetPath, v19, 0);
     *(_QWORD *)(v7 + 40) = StartModeForAssetStorage;
-    sub_1C3E508((CGThumbnailListItem_o *)(v7 + 40), (int32_t)StartModeForAssetStorage, v21, v22);
-    v23 = System_String__IndexOf_63694844(selectAssetPath, (System_String_o *)StringLiteral_1048/*"/"*/, 0);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)StartModeForAssetStorage, v21, v22);
+    v23 = System_String__IndexOf_64025184(selectAssetPath, (System_String_o *)StringLiteral_1041/*"/"*/, 0);
     this->fields.state = 4;
     if ( (v23 & 0x80000000) == 0 )
       selectAssetPath = System_String__Substring(selectAssetPath, v23 + 1, 0);
     *(_QWORD *)(v7 + 48) = selectAssetPath;
-    sub_1C3E508((CGThumbnailListItem_o *)(v7 + 48), (int32_t)selectAssetPath, v24, v25);
+    sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 48), (int32_t)selectAssetPath, v24, v25);
     v26 = *(System_String_o **)(v7 + 48);
     v27 = *(System_String_o **)(v7 + 24);
-    v28 = (ScriptManager_CallbackBranchList_o *)sub_1C3E7B0(ScriptManager_CallbackBranchList_TypeInfo);
+    v28 = (ScriptManager_CallbackBranchList_o *)sub_1C6BC54(ScriptManager_CallbackBranchList_TypeInfo);
     ScriptManager_CallbackBranchList___ctor(
       v28,
       (Il2CppObject *)v7,
@@ -309,7 +309,7 @@ void ScriptAssetListViewMenu__Open(
   if ( state == 6 || !state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, (int32_t)method, v3);
     scriptTestAssetRootObject = this->fields.scriptTestAssetRootObject;
     if ( !scriptTestAssetRootObject
       || (UnityEngine_GameObject__SetActive(scriptTestAssetRootObject, 1, 0),
@@ -319,7 +319,7 @@ void ScriptAssetListViewMenu__Open(
       || (UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)scriptTestAssetRootObject, 0, 0),
           (scriptTestAssetRootObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0) )
     {
-      sub_1C3E7C0(scriptTestAssetRootObject, v6);
+      sub_1C6BC60(scriptTestAssetRootObject, v6);
     }
     ScriptAssetListViewManager__CreateList((ScriptAssetListViewManager_o *)scriptTestAssetRootObject, 0);
   }
@@ -335,21 +335,21 @@ void ScriptAssetListViewMenu__StartInput(ScriptAssetListViewMenu_o *this, const 
   UnityEngine_Behaviour_o *scriptTestAssetCancelButton; // x0
   __int64 v6; // x1
 
-  if ( (byte_4C542DB & 1) == 0 )
+  if ( (byte_4CB382D & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_ScriptAssetListViewMenu_OnClickItem__);
-    byte_4C542DB = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_ScriptAssetListViewMenu_OnClickItem__);
+    byte_4CB382D = 1;
   }
   this->fields.state = 2;
   listViewManager = this->fields.listViewManager;
-  v4 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_ScriptAssetListViewMenu_OnClickItem__, 0);
   if ( !listViewManager
-    || (ScriptAssetListViewManager__SetMode_37454456(listViewManager, 1, v4, 0),
+    || (ScriptAssetListViewManager__SetMode_37634512(listViewManager, 1, v4, 0),
         (scriptTestAssetCancelButton = (UnityEngine_Behaviour_o *)this->fields.scriptTestAssetCancelButton) == 0) )
   {
-    sub_1C3E7C0(scriptTestAssetCancelButton, v6);
+    sub_1C6BC60(scriptTestAssetCancelButton, v6);
   }
   UnityEngine_Behaviour__set_enabled(scriptTestAssetCancelButton, 1, 0);
 }
@@ -361,21 +361,21 @@ void ScriptAssetListViewMenu__StartMenu(ScriptAssetListViewMenu_o *this, const M
   const MethodInfo *v4; // x3
   const MethodInfo *v5; // x2
 
-  if ( (byte_4C542D8 & 1) == 0 )
+  if ( (byte_4CB382A & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&ScriptAssetListViewMenu_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_ScriptAssetListViewMenu__StartMenu_b__9_0__);
-    sub_1C3E564(&StringLiteral_12640/*"ScriptActionEncrypt"*/);
-    byte_4C542D8 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&ScriptAssetListViewMenu_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_ScriptAssetListViewMenu__StartMenu_b__9_0__);
+    sub_1C6BA08(&StringLiteral_12636/*"ScriptActionEncrypt"*/);
+    byte_4CB382A = 1;
   }
   TestScript_DebugTest_DebugItem_DebugItemMenuBase__StartMenu(
     (TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this,
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__resetAssetStorageVersion((System_String_o *)StringLiteral_12640/*"ScriptActionEncrypt"*/, 0);
-  v3 = (ScriptAssetListViewMenu_CallbackFunc_o *)sub_1C3E7B0(ScriptAssetListViewMenu_CallbackFunc_TypeInfo);
+  AssetManager__resetAssetStorageVersion((System_String_o *)StringLiteral_12636/*"ScriptActionEncrypt"*/, 0);
+  v3 = (ScriptAssetListViewMenu_CallbackFunc_o *)sub_1C6BC54(ScriptAssetListViewMenu_CallbackFunc_TypeInfo);
   ScriptAssetListViewMenu_CallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -400,10 +400,10 @@ void ScriptAssetListViewMenu__add_callbackFunc(
   ScriptAssetListViewMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C542D9 & 1) == 0 )
+  if ( (byte_4CB382B & 1) == 0 )
   {
-    sub_1C3E564(&ScriptAssetListViewMenu_CallbackFunc_TypeInfo);
-    byte_4C542D9 = 1;
+    sub_1C6BA08(&ScriptAssetListViewMenu_CallbackFunc_TypeInfo);
+    byte_4CB382B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -416,13 +416,13 @@ void ScriptAssetListViewMenu__add_callbackFunc(
       if ( (ScriptAssetListViewMenu_CallbackFunc_c *)v8->klass != ScriptAssetListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   ScriptAssetListViewMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -441,10 +441,10 @@ void ScriptAssetListViewMenu__remove_callbackFunc(
   ScriptAssetListViewMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C542DA & 1) == 0 )
+  if ( (byte_4CB382C & 1) == 0 )
   {
-    sub_1C3E564(&ScriptAssetListViewMenu_CallbackFunc_TypeInfo);
-    byte_4C542DA = 1;
+    sub_1C6BA08(&ScriptAssetListViewMenu_CallbackFunc_TypeInfo);
+    byte_4CB382C = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -457,13 +457,13 @@ void ScriptAssetListViewMenu__remove_callbackFunc(
       if ( (ScriptAssetListViewMenu_CallbackFunc_c *)v8->klass != ScriptAssetListViewMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   ScriptAssetListViewMenu__StartInput(v11, v12);
 }
 
@@ -483,15 +483,15 @@ void ScriptAssetListViewMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -503,9 +503,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A7FD78;
+  this->fields.invoke_impl = (intptr_t)sub_1A9EA30;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A7FD30;
+  this->fields.extra_arg = (intptr_t)sub_1A9E9E8;
 }
 
 
@@ -516,21 +516,18 @@ System_IAsyncResult_o *ScriptAssetListViewMenu_CallbackFunc__BeginInvoke(
         Il2CppObject *object,
         const MethodInfo *method)
 {
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
-  _QWORD v12[2]; // [xsp+8h] [xbp-48h] BYREF
-  bool v13[4]; // [xsp+1Ch] [xbp-34h] BYREF
+  _QWORD v9[2]; // [xsp+8h] [xbp-48h] BYREF
+  bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
-  v13[0] = result;
-  if ( (byte_4C542DF & 1) == 0 )
+  v10[0] = result;
+  if ( (byte_4CB3831 & 1) == 0 )
   {
-    sub_1C3E564(&bool_TypeInfo);
-    byte_4C542DF = 1;
+    sub_1C6BA08(&bool_TypeInfo);
+    byte_4CB3831 = 1;
   }
-  v12[1] = 0;
-  v12[0] = j_il2cpp_value_box_0(bool_TypeInfo, v13, callback, object, method, v5, v6, v7);
-  return (System_IAsyncResult_o *)sub_1C3E518(this, v12, callback, object);
+  v9[1] = 0;
+  v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
 }
 
 
@@ -539,7 +536,7 @@ void ScriptAssetListViewMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 
@@ -584,14 +581,14 @@ void ScriptAssetListViewMenu___c__DisplayClass20_0___OnEndSelectObject_b__0(
   ScriptManager_CallbackFunc_o *v17; // x20
 
   v5 = this;
-  if ( (byte_4C542E0 & 1) == 0 )
+  if ( (byte_4CB3832 & 1) == 0 )
   {
-    sub_1C3E564(&ScriptBranchMenu_CallbackFunc_TypeInfo);
-    sub_1C3E564(&ScriptManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_ScriptAssetListViewMenu_EndPlayScriptDebug__);
-    sub_1C3E564(&ScriptManager_TypeInfo);
-    this = (ScriptAssetListViewMenu___c__DisplayClass20_0_o *)sub_1C3E564(&Method_ScriptAssetListViewMenu___c__DisplayClass20_0__OnEndSelectObject_b__1__);
-    byte_4C542E0 = 1;
+    sub_1C6BA08(&ScriptBranchMenu_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&ScriptManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_ScriptAssetListViewMenu_EndPlayScriptDebug__);
+    sub_1C6BA08(&ScriptManager_TypeInfo);
+    this = (ScriptAssetListViewMenu___c__DisplayClass20_0_o *)sub_1C6BA08(&Method_ScriptAssetListViewMenu___c__DisplayClass20_0__OnEndSelectObject_b__1__);
+    byte_4CB3832 = 1;
   }
   if ( list )
   {
@@ -602,18 +599,18 @@ void ScriptAssetListViewMenu___c__DisplayClass20_0___OnEndSelectObject_b__0(
     _9__1 = v5->fields.__9__1;
     if ( !_9__1 )
     {
-      _9__1 = (ScriptBranchMenu_CallbackFunc_o *)sub_1C3E7B0(ScriptBranchMenu_CallbackFunc_TypeInfo);
+      _9__1 = (ScriptBranchMenu_CallbackFunc_o *)sub_1C6BC54(ScriptBranchMenu_CallbackFunc_TypeInfo);
       ScriptBranchMenu_CallbackFunc___ctor(
         _9__1,
         (Il2CppObject *)v5,
         Method_ScriptAssetListViewMenu___c__DisplayClass20_0__OnEndSelectObject_b__1__,
         v9);
       v5->fields.__9__1 = _9__1;
-      sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.__9__1, (int32_t)_9__1, v10, v11);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.__9__1, (int32_t)_9__1, v10, v11);
     }
     if ( !scriptBranchMenu )
 LABEL_12:
-      sub_1C3E7C0(this, list);
+      sub_1C6BC60(this, list);
     ScriptBranchMenu__Open(scriptBranchMenu, list, _9__1, v3);
   }
   else
@@ -623,7 +620,7 @@ LABEL_12:
     jumpLine = v5->fields.jumpLine;
     v16 = (Il2CppObject *)v5->fields.__4__this;
     labelPath = v5->fields.labelPath;
-    v17 = (ScriptManager_CallbackFunc_o *)sub_1C3E7B0(ScriptManager_CallbackFunc_TypeInfo);
+    v17 = (ScriptManager_CallbackFunc_o *)sub_1C6BC54(ScriptManager_CallbackFunc_TypeInfo);
     ScriptManager_CallbackFunc___ctor(v17, v16, Method_ScriptAssetListViewMenu_EndPlayScriptDebug__, 0);
     if ( !ScriptManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);
@@ -654,14 +651,14 @@ void ScriptAssetListViewMenu___c__DisplayClass20_0___OnEndSelectObject_b__1(
   const MethodInfo *v17; // x3
 
   v4 = this;
-  if ( (byte_4C542E1 & 1) == 0 )
+  if ( (byte_4CB3833 & 1) == 0 )
   {
-    sub_1C3E564(&ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
-    sub_1C3E564(&ScriptManager_CallbackFunc_TypeInfo);
-    sub_1C3E564(&Method_ScriptAssetListViewMenu_EndPlayScriptDebug__);
-    sub_1C3E564(&Method_ScriptAssetListViewMenu_OnEndSelectObject__);
-    this = (ScriptAssetListViewMenu___c__DisplayClass20_0_o *)sub_1C3E564(&ScriptManager_TypeInfo);
-    byte_4C542E1 = 1;
+    sub_1C6BA08(&ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&ScriptManager_CallbackFunc_TypeInfo);
+    sub_1C6BA08(&Method_ScriptAssetListViewMenu_EndPlayScriptDebug__);
+    sub_1C6BA08(&Method_ScriptAssetListViewMenu_OnEndSelectObject__);
+    this = (ScriptAssetListViewMenu___c__DisplayClass20_0_o *)sub_1C6BA08(&ScriptManager_TypeInfo);
+    byte_4CB3833 = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
@@ -678,7 +675,7 @@ void ScriptAssetListViewMenu___c__DisplayClass20_0___OnEndSelectObject_b__1(
       v12->fields.state = 3;
       scriptObjectListViewMenu = v12->fields.scriptObjectListViewMenu;
       selectAssetPath = v12->fields.selectAssetPath;
-      v15 = (ScriptObjectListViewMenu_CallbackFunc_o *)sub_1C3E7B0(ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
+      v15 = (ScriptObjectListViewMenu_CallbackFunc_o *)sub_1C6BC54(ScriptObjectListViewMenu_CallbackFunc_TypeInfo);
       ScriptObjectListViewMenu_CallbackFunc___ctor(
         v15,
         (Il2CppObject *)v12,
@@ -691,14 +688,14 @@ void ScriptAssetListViewMenu___c__DisplayClass20_0___OnEndSelectObject_b__1(
       }
     }
 LABEL_12:
-    sub_1C3E7C0(this, b);
+    sub_1C6BC60(this, b);
   }
   startMode = v4->fields.startMode;
   name = v4->fields.name;
   jumpLine = v4->fields.jumpLine;
   v10 = (Il2CppObject *)v4->fields.__4__this;
   labelPath = v4->fields.labelPath;
-  v11 = (ScriptManager_CallbackFunc_o *)sub_1C3E7B0(ScriptManager_CallbackFunc_TypeInfo);
+  v11 = (ScriptManager_CallbackFunc_o *)sub_1C6BC54(ScriptManager_CallbackFunc_TypeInfo);
   ScriptManager_CallbackFunc___ctor(v11, v10, Method_ScriptAssetListViewMenu_EndPlayScriptDebug__, 0);
   if ( !ScriptManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptManager_TypeInfo);

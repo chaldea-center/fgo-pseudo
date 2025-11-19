@@ -17,15 +17,15 @@ void LotteryShopResultItem__EndShowServantEquipStatusDialog(
   Il2CppObject *v8; // x21
   struct LotteryShopResultItem___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4C515C2 & 1) == 0 )
+  if ( (byte_4CB0B0A & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&Method_LotteryShopResultItem___c__EndShowServantEquipStatusDialog_b__5_0__);
-    sub_1C3E564(&LotteryShopResultItem___c_TypeInfo);
-    byte_4C515C2 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&Method_LotteryShopResultItem___c__EndShowServantEquipStatusDialog_b__5_0__);
+    sub_1C6BA08(&LotteryShopResultItem___c_TypeInfo);
+    byte_4CB0B0A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v5 = LotteryShopResultItem___c_TypeInfo;
   v6 = (CommonUI_o *)Instance;
   if ( !LotteryShopResultItem___c_TypeInfo->_2.cctor_finished )
@@ -42,14 +42,14 @@ void LotteryShopResultItem__EndShowServantEquipStatusDialog(
       v5 = LotteryShopResultItem___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__5_0 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    _9__5_0 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(_9__5_0, v8, Method_LotteryShopResultItem___c__EndShowServantEquipStatusDialog_b__5_0__, 0);
     static_fields = LotteryShopResultItem___c_TypeInfo->static_fields;
     static_fields->__9__5_0 = _9__5_0;
-    Instance = (Il2CppObject *)sub_1C3E508(&static_fields->__9__5_0, _9__5_0);
+    Instance = (Il2CppObject *)sub_1C6B9AC(&static_fields->__9__5_0, _9__5_0);
   }
   if ( !v6 )
-    sub_1C3E7C0(Instance, v4);
+    sub_1C6BC60(Instance, v4);
   CommonUI__CloseServantEquipStatusDialog(v6, _9__5_0, 0);
 }
 
@@ -66,38 +66,37 @@ void LotteryShopResultItem__OnClickDetail(LotteryShopResultItem_o *this, const M
   __int64 v10; // x0
   __int64 v11; // x1
 
-  if ( (byte_4C515C1 & 1) == 0 )
+  if ( (byte_4CB0B09 & 1) == 0 )
   {
-    sub_1C3E564(&ServantStatusDialog_EndDelegate_TypeInfo);
-    sub_1C3E564(&EquipTargetInfo_TypeInfo);
-    sub_1C3E564(&Method_LotteryShopResultItem_EndShowServantEquipStatusDialog__);
-    sub_1C3E564(&Method_LotteryShopResultItem_OnClickDetail__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C515C1 = 1;
+    sub_1C6BA08(&ServantStatusDialog_EndDelegate_TypeInfo);
+    sub_1C6BA08(&EquipTargetInfo_TypeInfo);
+    sub_1C6BA08(&Method_LotteryShopResultItem_EndShowServantEquipStatusDialog__);
+    sub_1C6BA08(&Method_LotteryShopResultItem_OnClickDetail__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CB0B09 = 1;
   }
   v3 = Method_LotteryShopResultItem_OnClickDetail__;
   if ( (*((_BYTE *)Method_LotteryShopResultItem_OnClickDetail__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_LotteryShopResultItem_OnClickDetail__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_LotteryShopResultItem_OnClickDetail__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   svtId = this->fields.svtId;
   v7 = (CommonUI_o *)Instance;
-  v8 = (EquipTargetInfo_o *)sub_1C3E7B0(EquipTargetInfo_TypeInfo);
-  EquipTargetInfo___ctor_41759588(v8, svtId, 0, 1, 0, 0);
-  v9 = (ServantStatusDialog_EndDelegate_o *)sub_1C3E7B0(ServantStatusDialog_EndDelegate_TypeInfo);
+  v8 = (EquipTargetInfo_o *)sub_1C6BC54(EquipTargetInfo_TypeInfo);
+  EquipTargetInfo___ctor_41945392(v8, svtId, 0, 1, 0, 0);
+  v9 = (ServantStatusDialog_EndDelegate_o *)sub_1C6BC54(ServantStatusDialog_EndDelegate_TypeInfo);
   ServantStatusDialog_EndDelegate___ctor(
     v9,
     (Il2CppObject *)this,
     Method_LotteryShopResultItem_EndShowServantEquipStatusDialog__,
     0);
   if ( !v7 )
-    sub_1C3E7C0(v10, v11);
-  CommonUI__OpenServantEquipStatusDialog_31253688(v7, 11, v8, v9, 0, 0);
+    sub_1C6BC60(v10, v11);
+  CommonUI__OpenServantEquipStatusDialog_31433124(v7, 11, v8, v9, 0, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void LotteryShopResultItem__Set(LotteryShopResultItem_o *this, int32_t svtId, bool isGet, const MethodInfo *method)
 {
   ServantFaceIconComponent_o *iconComp; // x0
@@ -108,8 +107,8 @@ void LotteryShopResultItem__Set(LotteryShopResultItem_o *this, int32_t svtId, bo
   this->fields.svtId = svtId;
   this->fields.isNew = isNew;
   if ( !iconComp )
-    sub_1C3E7C0(0, *(_QWORD *)&svtId);
-  ServantFaceIconComponent__Set_41055060(iconComp, svtId, 0, 0, 0, 0, 0, 2, isNew, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    sub_1C6BC60(0, svtId);
+  ServantFaceIconComponent__Set_41240444(iconComp, svtId, 0, 0, 0, 0, 0, 2, isNew, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 }
 
 
@@ -117,15 +116,15 @@ void LotteryShopResultItem___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4C515C3 & 1) == 0 )
+  if ( (byte_4CB0B0B & 1) == 0 )
   {
-    sub_1C3E564(&LotteryShopResultItem___c_TypeInfo);
-    byte_4C515C3 = 1;
+    sub_1C6BA08(&LotteryShopResultItem___c_TypeInfo);
+    byte_4CB0B0B = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(LotteryShopResultItem___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(LotteryShopResultItem___c_TypeInfo);
   System_Object___ctor(v1, 0);
   LotteryShopResultItem___c_TypeInfo->static_fields->__9 = (struct LotteryShopResultItem___c_o *)v1;
-  sub_1C3E508(LotteryShopResultItem___c_TypeInfo->static_fields, v1);
+  sub_1C6B9AC(LotteryShopResultItem___c_TypeInfo->static_fields, v1);
 }
 
 

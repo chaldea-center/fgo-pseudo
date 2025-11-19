@@ -1,9 +1,9 @@
 void EventBannerWindow___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C53669 & 1) == 0 )
+  if ( (byte_4CB2BB9 & 1) == 0 )
   {
-    sub_1C3E564(&EventBannerWindow_TypeInfo);
-    byte_4C53669 = 1;
+    sub_1C6BA08(&EventBannerWindow_TypeInfo);
+    byte_4CB2BB9 = 1;
   }
   *EventBannerWindow_TypeInfo->static_fields = (struct EventBannerWindow_StaticFields)0x4316000000000002LL;
 }
@@ -15,19 +15,19 @@ void EventBannerWindow___ctor(EventBannerWindow_o *this, const MethodInfo *metho
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C53668 & 1) == 0 )
+  if ( (byte_4CB2BB8 & 1) == 0 )
   {
-    sub_1C3E564(&BaseDialog_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_EventBannerWindowScrollItem__TypeInfo);
-    byte_4C53668 = 1;
+    sub_1C6BA08(&BaseDialog_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_EventBannerWindowScrollItem__TypeInfo);
+    byte_4CB2BB8 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_EventBannerWindowScrollItem__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventBannerWindowScrollItem__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem___ctor__);
   this->fields.mScrollItems = (struct System_Collections_Generic_List_EventBannerWindowScrollItem__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mScrollItems, (int32_t)v3, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mScrollItems, (int32_t)v3, v4, v5);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -42,15 +42,15 @@ int32_t EventBannerWindow__GetNowEventId(EventBannerWindow_o *this, const Method
   EventBannerWindow_c *v5; // x0
 
   v2 = this;
-  if ( (byte_4C53665 & 1) == 0 )
+  if ( (byte_4CB2BB5 & 1) == 0 )
   {
-    sub_1C3E564(&EventBannerWindow_TypeInfo);
-    this = (EventBannerWindow_o *)sub_1C3E564(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__get_Count__);
-    byte_4C53665 = 1;
+    sub_1C6BA08(&EventBannerWindow_TypeInfo);
+    this = (EventBannerWindow_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__get_Count__);
+    byte_4CB2BB5 = 1;
   }
   mScrollItems = v2->fields.mScrollItems;
   if ( !mScrollItems )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   size = mScrollItems->fields._size;
   v5 = EventBannerWindow_TypeInfo;
   if ( !EventBannerWindow_TypeInfo->_2.cctor_finished )
@@ -77,18 +77,18 @@ void EventBannerWindow__OnClickClose(EventBannerWindow_o *this, const MethodInfo
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C53666 & 1) == 0 )
+  if ( (byte_4CB2BB6 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_EventBannerWindow_OnClickClose__);
-    sub_1C3E564(&Method_EventBannerWindow___c__OnClickClose_b__13_0__);
-    sub_1C3E564(&EventBannerWindow___c_TypeInfo);
-    byte_4C53666 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_EventBannerWindow_OnClickClose__);
+    sub_1C6BA08(&Method_EventBannerWindow___c__OnClickClose_b__13_0__);
+    sub_1C6BA08(&EventBannerWindow___c_TypeInfo);
+    byte_4CB2BB6 = 1;
   }
   v3 = Method_EventBannerWindow_OnClickClose__;
   if ( (*((_BYTE *)Method_EventBannerWindow_OnClickClose__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C3E57C(Method_EventBannerWindow_OnClickClose__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C3E548(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C6BA20(Method_EventBannerWindow_OnClickClose__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   v6 = EventBannerWindow___c_TypeInfo;
   if ( !EventBannerWindow___c_TypeInfo->_2.cctor_finished )
@@ -105,14 +105,14 @@ void EventBannerWindow__OnClickClose(EventBannerWindow_o *this, const MethodInfo
       v6 = EventBannerWindow___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v6->static_fields->__9;
-    _9__13_0 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    _9__13_0 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(_9__13_0, v8, Method_EventBannerWindow___c__OnClickClose_b__13_0__, 0);
     static_fields = EventBannerWindow___c_TypeInfo->static_fields;
     static_fields->__9__13_0 = _9__13_0;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v10, v11);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v10, v11);
   }
   if ( !this )
-    sub_1C3E7C0(v6, v5);
+    sub_1C6BC60(v6, v5);
   BaseDialog__Close((BaseDialog_o *)this, _9__13_0, 0);
 }
 
@@ -125,7 +125,7 @@ void EventBannerWindow__Open(EventBannerWindow_o *this, System_Action_o *end_act
   BaseDialog__Open((BaseDialog_o *)this, end_act, 0, 0, 0);
   scrollView = this->fields.scrollView;
   if ( !scrollView )
-    sub_1C3E7C0(0, v4);
+    sub_1C6BC60(0, v4);
   UIScrollView__ResetPosition(scrollView, 0);
 }
 
@@ -163,26 +163,26 @@ void EventBannerWindow__Setup(
   System_Collections_Generic_List_Enumerator_object__o v30; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v31; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C53664 & 1) == 0 )
+  if ( (byte_4CB2BB4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C3E564(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__get_Current__);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_EventBannerWindowScrollItem___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C3E564(&StringLiteral_5528/*"EVENT_BANNER_WINDOW_MESSAGE"*/);
-    sub_1C3E564(&StringLiteral_5529/*"EVENT_BANNER_WINDOW_TITLE"*/);
-    byte_4C53664 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C6BA08(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__get_Current__);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_EventBannerWindowScrollItem___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_EventBannerWindowScrollItem__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C6BA08(&StringLiteral_5518/*"EVENT_BANNER_WINDOW_MESSAGE"*/);
+    sub_1C6BA08(&StringLiteral_5519/*"EVENT_BANNER_WINDOW_TITLE"*/);
+    byte_4CB2BB4 = 1;
   }
   memset(&v31, 0, sizeof(v31));
   mScrollItems = (System_Collections_Generic_List_object__o *)this->fields.mScrollItems;
@@ -191,30 +191,30 @@ void EventBannerWindow__Setup(
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v30,
     mScrollItems,
-    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem__GetEnumerator__);
+    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_EventBannerWindowScrollItem__GetEnumerator__);
   v31 = v30;
   while ( 1 )
   {
     v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v31,
-           (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__MoveNext__);
+           (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__MoveNext__);
     if ( !v6 )
       break;
     current = v31.fields._current;
     if ( !v31.fields._current )
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v31.fields._current, 0);
     if ( !gameObject )
-      sub_1C3E7C0(0, v10);
+      sub_1C6BC60(0, v10);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0);
     v11 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)current, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71341564(v11, 0);
+    UnityEngine_Object__Destroy_71659676(v11, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v31,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_EventBannerWindowScrollItem__Dispose__);
   mScrollItems = (System_Collections_Generic_List_object__o *)this->fields.grid;
   if ( !mScrollItems )
     goto LABEL_41;
@@ -234,12 +234,12 @@ void EventBannerWindow__Setup(
   if ( size >= 1 )
     System_Array__Clear((System_Array_o *)v12->fields._items, 0, size, 0);
   this->fields.mNowEventId = 0;
-  mScrollItems = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  mScrollItems = (System_Collections_Generic_List_object__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !mScrollItems )
     goto LABEL_41;
   mScrollItems = (System_Collections_Generic_List_object__o *)DataManager__GetMasterData_object_(
                                                                 (DataManager_o *)mScrollItems,
-                                                                (const MethodInfo_30F9A70 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                                                (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !ev_end_time_infs )
     goto LABEL_41;
   v15 = ev_end_time_infs->fields._size;
@@ -252,7 +252,7 @@ void EventBannerWindow__Setup(
       mScrollItems = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                     (System_Collections_Generic_List_object__o *)ev_end_time_infs,
                                                                     v17,
-                                                                    (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
+                                                                    (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
       if ( !mScrollItems )
         break;
       if ( !v16 )
@@ -260,7 +260,7 @@ void EventBannerWindow__Setup(
       mScrollItems = (System_Collections_Generic_List_object__o *)DataMasterBase_object__object__int___GetEntity(
                                                                     v16,
                                                                     (int32_t)mScrollItems->fields._items,
-                                                                    (const MethodInfo_33B2F58 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+                                                                    (const MethodInfo_33F90DC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
       if ( !mScrollItems )
         break;
       if ( LODWORD(mScrollItems[1].monitor) )
@@ -268,7 +268,7 @@ void EventBannerWindow__Setup(
         mScrollItems = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       (System_Collections_Generic_List_object__o *)ev_end_time_infs,
                                                                       v17,
-                                                                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
+                                                                      (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
         if ( !mScrollItems )
           break;
         scrollItemPrefab = (Il2CppObject *)this->fields.scrollItemPrefab;
@@ -277,7 +277,7 @@ void EventBannerWindow__Setup(
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         v19 = UnityEngine_Object__Instantiate_object_(
                 scrollItemPrefab,
-                (const MethodInfo_3185EB4 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         GameObjectExtensions__SafeSetParent(
           (UnityEngine_GameObject_o *)v19,
           (UnityEngine_Component_o *)this->fields.grid,
@@ -286,11 +286,11 @@ void EventBannerWindow__Setup(
           break;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v19,
-                             (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_EventBannerWindowScrollItem___);
+                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_EventBannerWindowScrollItem___);
         mScrollItems = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                       (System_Collections_Generic_List_object__o *)ev_end_time_infs,
                                                                       v17,
-                                                                      (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
+                                                                      (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_TitleInfoControl_EventEndTimeInfo__get_Item__);
         if ( !Component_object )
           break;
         EventBannerWindowScrollItem__Setup(
@@ -311,21 +311,21 @@ void EventBannerWindow__Setup(
           System_Collections_Generic_List_object___AddWithResize(
             mScrollItems,
             Component_object,
-            *(const MethodInfo_37B5460 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+            *(const MethodInfo_3800974 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
         }
         else
         {
           v27 = (__int64)items + 8 * v26;
           mScrollItems->fields._size = v26 + 1;
           *(_QWORD *)(v27 + 32) = Component_object;
-          sub_1C3E508((CGThumbnailListItem_o *)(v27 + 32), (int32_t)Component_object, v22, v23);
+          sub_1C6B9AC((CGThumbnailListItem_o *)(v27 + 32), (int32_t)Component_object, v22, v23);
         }
       }
       if ( v15 == ++v17 )
         goto LABEL_35;
     }
 LABEL_41:
-    sub_1C3E7C0(mScrollItems, ev_end_time_infs);
+    sub_1C6BC60(mScrollItems, ev_end_time_infs);
   }
 LABEL_35:
   mScrollItems = (System_Collections_Generic_List_object__o *)this->fields.grid;
@@ -339,14 +339,14 @@ LABEL_35:
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   mScrollItems = (System_Collections_Generic_List_object__o *)LocalizationManager__Get(
-                                                                (System_String_o *)StringLiteral_5529/*"EVENT_BANNER_WINDOW_TITLE"*/,
+                                                                (System_String_o *)StringLiteral_5519/*"EVENT_BANNER_WINDOW_TITLE"*/,
                                                                 0);
   if ( !titleLabel )
     goto LABEL_41;
   UILabel__set_text(titleLabel, (System_String_o *)mScrollItems, 0);
   titleDetailLabel = this->fields.titleDetailLabel;
   mScrollItems = (System_Collections_Generic_List_object__o *)LocalizationManager__Get(
-                                                                (System_String_o *)StringLiteral_5528/*"EVENT_BANNER_WINDOW_MESSAGE"*/,
+                                                                (System_String_o *)StringLiteral_5518/*"EVENT_BANNER_WINDOW_MESSAGE"*/,
                                                                 0);
   if ( !titleDetailLabel )
     goto LABEL_41;
@@ -356,12 +356,12 @@ LABEL_35:
 
 System_String_o *EventBannerWindow__get_closeBtnPath(EventBannerWindow_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C53667 & 1) == 0 )
+  if ( (byte_4CB2BB7 & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_3075/*"BaseWindow/CloseBtn"*/);
-    byte_4C53667 = 1;
+    sub_1C6BA08(&StringLiteral_3067/*"BaseWindow/CloseBtn"*/);
+    byte_4CB2BB7 = 1;
   }
-  return (System_String_o *)StringLiteral_3075/*"BaseWindow/CloseBtn"*/;
+  return (System_String_o *)StringLiteral_3067/*"BaseWindow/CloseBtn"*/;
 }
 
 
@@ -371,15 +371,15 @@ void EventBannerWindow___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C5366A & 1) == 0 )
+  if ( (byte_4CB2BBA & 1) == 0 )
   {
-    sub_1C3E564(&EventBannerWindow___c_TypeInfo);
-    byte_4C5366A = 1;
+    sub_1C6BA08(&EventBannerWindow___c_TypeInfo);
+    byte_4CB2BBA = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(EventBannerWindow___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(EventBannerWindow___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventBannerWindow___c_TypeInfo->static_fields->__9 = (struct EventBannerWindow___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)EventBannerWindow___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)EventBannerWindow___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 

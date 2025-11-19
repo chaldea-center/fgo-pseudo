@@ -35,52 +35,52 @@ void AssetManager___cctor(const MethodInfo *method)
   int32_t v33; // w2
   const MethodInfo *v34; // x3
 
-  if ( (byte_4C55D57 & 1) == 0 )
+  if ( (byte_4CB52BC & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_2375/*"Asset"*/);
-    sub_1C3E564(&StringLiteral_2388/*"AssetStorageBack.txt"*/);
-    sub_1C3E564(&StringLiteral_22385/*"offline"*/);
-    sub_1C3E564(&StringLiteral_2387/*"AssetStorage.txt"*/);
-    sub_1C3E564(&StringLiteral_2389/*"AssetStorageCreate.txt"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    sub_1C3E564(&StringLiteral_22452/*"online"*/);
-    byte_4C55D57 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_2367/*"Asset"*/);
+    sub_1C6BA08(&StringLiteral_2380/*"AssetStorageBack.txt"*/);
+    sub_1C6BA08(&StringLiteral_22456/*"offline"*/);
+    sub_1C6BA08(&StringLiteral_2379/*"AssetStorage.txt"*/);
+    sub_1C6BA08(&StringLiteral_2381/*"AssetStorageCreate.txt"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    sub_1C6BA08(&StringLiteral_22522/*"online"*/);
+    byte_4CB52BC = 1;
   }
-  AssetManager_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_2375/*"Asset"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)AssetManager_TypeInfo->static_fields, StringLiteral_2375/*"Asset"*/, v1, v2);
-  v3 = StringLiteral_22385/*"offline"*/;
+  AssetManager_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_2367/*"Asset"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)AssetManager_TypeInfo->static_fields, StringLiteral_2367/*"Asset"*/, v1, v2);
+  v3 = StringLiteral_22456/*"offline"*/;
   static_fields = AssetManager_TypeInfo->static_fields;
-  static_fields->SAVE_DATA_OFFLINE = (struct System_String_o *)StringLiteral_22385/*"offline"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->SAVE_DATA_OFFLINE, v3, v5, v6);
-  v7 = StringLiteral_22452/*"online"*/;
+  static_fields->SAVE_DATA_OFFLINE = (struct System_String_o *)StringLiteral_22456/*"offline"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->SAVE_DATA_OFFLINE, v3, v5, v6);
+  v7 = StringLiteral_22522/*"online"*/;
   v8 = AssetManager_TypeInfo->static_fields;
-  v8->SAVE_DATA_ONLINE = (struct System_String_o *)StringLiteral_22452/*"online"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8->SAVE_DATA_ONLINE, v7, v9, v10);
-  v11 = StringLiteral_2387/*"AssetStorage.txt"*/;
+  v8->SAVE_DATA_ONLINE = (struct System_String_o *)StringLiteral_22522/*"online"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->SAVE_DATA_ONLINE, v7, v9, v10);
+  v11 = StringLiteral_2379/*"AssetStorage.txt"*/;
   v12 = AssetManager_TypeInfo->static_fields;
-  v12->configFileName = (struct System_String_o *)StringLiteral_2387/*"AssetStorage.txt"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v12->configFileName, v11, v13, v14);
-  v15 = StringLiteral_2389/*"AssetStorageCreate.txt"*/;
+  v12->configFileName = (struct System_String_o *)StringLiteral_2379/*"AssetStorage.txt"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->configFileName, v11, v13, v14);
+  v15 = StringLiteral_2381/*"AssetStorageCreate.txt"*/;
   v16 = AssetManager_TypeInfo->static_fields;
-  v16->createConfigFileName = (struct System_String_o *)StringLiteral_2389/*"AssetStorageCreate.txt"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v16->createConfigFileName, v15, v17, v18);
-  v19 = StringLiteral_2388/*"AssetStorageBack.txt"*/;
+  v16->createConfigFileName = (struct System_String_o *)StringLiteral_2381/*"AssetStorageCreate.txt"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v16->createConfigFileName, v15, v17, v18);
+  v19 = StringLiteral_2380/*"AssetStorageBack.txt"*/;
   v20 = AssetManager_TypeInfo->static_fields;
-  v20->backConfigFileName = (struct System_String_o *)StringLiteral_2388/*"AssetStorageBack.txt"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v20->backConfigFileName, v19, v21, v22);
+  v20->backConfigFileName = (struct System_String_o *)StringLiteral_2380/*"AssetStorageBack.txt"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v20->backConfigFileName, v19, v21, v22);
   v23 = StringLiteral_1/*""*/;
   v24 = AssetManager_TypeInfo->static_fields;
   v24->assetBundleMasterVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v24->assetBundleMasterVersion, v23, v25, v26);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v24->assetBundleMasterVersion, v23, v25, v26);
   v27 = StringLiteral_1/*""*/;
   v28 = AssetManager_TypeInfo->static_fields;
   v28->assetBundleDateVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v28->assetBundleDateVersion, v27, v29, v30);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v28->assetBundleDateVersion, v27, v29, v30);
   v31 = StringLiteral_1/*""*/;
   v32 = AssetManager_TypeInfo->static_fields;
   v32->assetBundleBuildVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v32->assetBundleBuildVersion, v31, v33, v34);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v32->assetBundleBuildVersion, v31, v33, v34);
 }
 
 
@@ -105,58 +105,58 @@ void AssetManager___ctor(AssetManager_o *this, const MethodInfo *method)
   int32_t v19; // w2
   const MethodInfo *v20; // x3
 
-  if ( (byte_4C55D56 & 1) == 0 )
+  if ( (byte_4CB52BB & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData___ctor__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_string__AssetData__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_AssetLoader__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
-    sub_1C3E564(&System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager___ctor__);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C55D56 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__AssetData__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_AssetLoader__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager___ctor__);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB52BB = 1;
   }
   *(_WORD *)&this->fields._DispLog = 257;
   this->fields.isInitEnd = 1;
-  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_string__AssetData__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__AssetData__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v3,
-    (const MethodInfo_3474E30 *)Method_System_Collections_Generic_Dictionary_string__AssetData___ctor__);
+    (const MethodInfo_34BAF8C *)Method_System_Collections_Generic_Dictionary_string__AssetData___ctor__);
   this->fields.assetBundleDic = (struct System_Collections_Generic_Dictionary_string__AssetData__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetBundleDic, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_string__AssetData__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetBundleDic, (int32_t)v3, v4, v5);
+  v6 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__AssetData__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v6,
-    (const MethodInfo_3474E30 *)Method_System_Collections_Generic_Dictionary_string__AssetData___ctor__);
+    (const MethodInfo_34BAF8C *)Method_System_Collections_Generic_Dictionary_string__AssetData___ctor__);
   this->fields.assetBundleReleaseDic = (struct System_Collections_Generic_Dictionary_string__AssetData__o *)v6;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetBundleReleaseDic, (int32_t)v6, v7, v8);
-  v9 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C3E7B0(System_Collections_Generic_Dictionary_string__AssetData__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetBundleReleaseDic, (int32_t)v6, v7, v8);
+  v9 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__AssetData__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v9,
-    (const MethodInfo_3474E30 *)Method_System_Collections_Generic_Dictionary_string__AssetData___ctor__);
+    (const MethodInfo_34BAF8C *)Method_System_Collections_Generic_Dictionary_string__AssetData___ctor__);
   this->fields.assetResourceDic = (struct System_Collections_Generic_Dictionary_string__AssetData__o *)v9;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.assetResourceDic, (int32_t)v9, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetResourceDic, (int32_t)v9, v10, v11);
   v12 = StringLiteral_1/*""*/;
   this->fields.requestConfigWriteData = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.requestConfigWriteData, v12, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.requestConfigWriteData, v12, v13, v14);
   this->fields.requestWriteCounter = -1.0;
-  v15 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_AssetLoader__TypeInfo);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_AssetLoader__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v15,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_AssetLoader___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_AssetLoader___ctor__);
   this->fields.processingAssetLoaderList = (struct System_Collections_Generic_List_AssetLoader__o *)v15;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.processingAssetLoaderList, (int32_t)v15, v16, v17);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.processingAssetLoaderList, (int32_t)v15, v16, v17);
   this->fields.loadParallelMax = 1;
-  v18 = (System_Collections_Generic_Queue_T__o *)sub_1C3E7B0(System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
+  v18 = (System_Collections_Generic_Queue_T__o *)sub_1C6BC54(System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v18,
-    (const MethodInfo_395C07C *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
+    (const MethodInfo_39AAE04 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
   this->fields.downLoadWaitList = (struct System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__o *)v18;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.downLoadWaitList, (int32_t)v18, v19, v20);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.downLoadWaitList, (int32_t)v18, v19, v20);
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_39FFA90 *)Method_SingletonMonoBehaviour_AssetManager___ctor__);
+    (const MethodInfo_3A4F89C *)Method_SingletonMonoBehaviour_AssetManager___ctor__);
 }
 
 
@@ -182,15 +182,15 @@ bool AssetManager__AddCallbackLoadStatus(
   int v20; // w19
   System_Collections_Generic_Queue_Enumerator_T__o v22; // [xsp+8h] [xbp-78h] BYREF
 
-  if ( (byte_4C55D40 & 1) == 0 )
+  if ( (byte_4CB52A5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
-    byte_4C55D40 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
+    byte_4CB52A5 = 1;
   }
   memset(&v22, 0, sizeof(v22));
   processingAssetLoaderList = (System_Collections_Generic_List_object__o *)this->fields.processingAssetLoaderList;
@@ -202,12 +202,12 @@ bool AssetManager__AddCallbackLoadStatus(
     processingAssetLoaderList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                processingAssetLoaderList,
                                                                                v10,
-                                                                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+                                                                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
     if ( !processingAssetLoaderList )
       goto LABEL_10;
     v11 = (AssetLoader_o *)processingAssetLoaderList;
     syncRoot = (AssetData_o *)processingAssetLoaderList->fields._syncRoot;
-    if ( syncRoot && AssetData__IsSame_40552500(syncRoot, type, name, 0) )
+    if ( syncRoot && AssetData__IsSame_40737060(syncRoot, type, name, 0) )
     {
       if ( callbackFunc )
         AssetLoader__add_endCallback2(v11, callbackFunc, v13);
@@ -221,26 +221,26 @@ bool AssetManager__AddCallbackLoadStatus(
   processingAssetLoaderList = (System_Collections_Generic_List_object__o *)this->fields.downLoadWaitList;
   if ( !processingAssetLoaderList )
 LABEL_10:
-    sub_1C3E7C0(processingAssetLoaderList, *(_QWORD *)&type);
+    sub_1C6BC60(processingAssetLoaderList, *(_QWORD *)&type);
   System_Collections_Generic_Queue_object___GetEnumerator(
     &v22,
     (System_Collections_Generic_Queue_T__o *)processingAssetLoaderList,
-    (const MethodInfo_395C6FC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
+    (const MethodInfo_39AB484 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
   while ( 1 )
   {
     v14 = System_Collections_Generic_Queue_Enumerator_object___MoveNext(
             &v22,
-            (const MethodInfo_3540058 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
+            (const MethodInfo_3586930 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
     if ( !v14 )
       break;
     Current = System_Collections_Generic_Queue_Enumerator_object___get_Current(
                 &v22,
-                (const MethodInfo_3540148 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
+                (const MethodInfo_3586A20 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
     v17 = (AssetManager_LoadWaitStatus_o *)Current;
     if ( !Current )
-      sub_1C3E7C0(0, v16);
+      sub_1C6BC60(0, v16);
     klass = (AssetData_o *)Current[1].klass;
-    if ( klass && AssetData__IsSame_40552500(klass, type, name, 0) )
+    if ( klass && AssetData__IsSame_40737060(klass, type, name, 0) )
     {
       AssetManager_LoadWaitStatus__AddCallback(v17, callbackFunc, v19);
       v20 = 7;
@@ -251,7 +251,7 @@ LABEL_10:
 LABEL_19:
   System_Collections_Generic_Queue_Enumerator_object___Dispose(
     &v22,
-    (const MethodInfo_3540048 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
+    (const MethodInfo_3586920 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
   return v14 && v20 == 7;
 }
 
@@ -281,15 +281,15 @@ bool AssetManager__AddEntryLoadStatus(
   System_Collections_Generic_Queue_Enumerator_T__o v24; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_Queue_Enumerator_T__o v25; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C55D3F & 1) == 0 )
+  if ( (byte_4CB52A4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
-    byte_4C55D3F = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
+    byte_4CB52A4 = 1;
   }
   memset(&v25, 0, sizeof(v25));
   processingAssetLoaderList = (System_Collections_Generic_List_object__o *)this->fields.processingAssetLoaderList;
@@ -301,12 +301,12 @@ bool AssetManager__AddEntryLoadStatus(
     processingAssetLoaderList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                processingAssetLoaderList,
                                                                                v10,
-                                                                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+                                                                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
     if ( !processingAssetLoaderList )
       goto LABEL_10;
     v11 = (AssetLoader_o *)processingAssetLoaderList;
     syncRoot = (AssetData_o *)processingAssetLoaderList->fields._syncRoot;
-    if ( syncRoot && AssetData__IsSame_40552500(syncRoot, type, name, 0) )
+    if ( syncRoot && AssetData__IsSame_40737060(syncRoot, type, name, 0) )
     {
       processingAssetLoaderList = (System_Collections_Generic_List_object__o *)v11->fields.data;
       if ( processingAssetLoaderList )
@@ -317,7 +317,7 @@ bool AssetManager__AddEntryLoadStatus(
         return 1;
       }
 LABEL_10:
-      sub_1C3E7C0(processingAssetLoaderList, *(_QWORD *)&type);
+      sub_1C6BC60(processingAssetLoaderList, *(_QWORD *)&type);
     }
     processingAssetLoaderList = (System_Collections_Generic_List_object__o *)this->fields.processingAssetLoaderList;
     ++v10;
@@ -330,13 +330,13 @@ LABEL_10:
   System_Collections_Generic_Queue_object___GetEnumerator(
     &v24,
     (System_Collections_Generic_Queue_T__o *)processingAssetLoaderList,
-    (const MethodInfo_395C6FC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
+    (const MethodInfo_39AB484 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
   v25 = v24;
   do
   {
     v13 = System_Collections_Generic_Queue_Enumerator_object___MoveNext(
             &v25,
-            (const MethodInfo_3540058 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
+            (const MethodInfo_3586930 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
     if ( !v13 )
     {
       v21 = 8;
@@ -344,23 +344,23 @@ LABEL_10:
     }
     Current = System_Collections_Generic_Queue_Enumerator_object___get_Current(
                 &v25,
-                (const MethodInfo_3540148 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
+                (const MethodInfo_3586A20 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
     v16 = (AssetManager_LoadWaitStatus_o *)Current;
     if ( !Current )
-      sub_1C3E7C0(0, v15);
+      sub_1C6BC60(0, v15);
     klass = (AssetData_o *)Current[1].klass;
   }
-  while ( !klass || !AssetData__IsSame_40552500(klass, type, name, 0) );
+  while ( !klass || !AssetData__IsSame_40737060(klass, type, name, 0) );
   data = v16->fields.data;
   if ( !data )
-    sub_1C3E7C0(0, v18);
+    sub_1C6BC60(0, v18);
   AssetData__AddEntry(data, 0);
   AssetManager_LoadWaitStatus__AddCallback(v16, callbackFunc, v20);
   v21 = 7;
 LABEL_20:
   System_Collections_Generic_Queue_Enumerator_object___Dispose(
     &v25,
-    (const MethodInfo_3540048 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
+    (const MethodInfo_3586920 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
   return v13 && v21 == 7;
 }
 
@@ -373,27 +373,27 @@ void AssetManager__AddLoadWaitStatus(AssetManager_o *this, System_Action_o *call
   __int64 v8; // x1
   System_Collections_Generic_Queue_T__o *downLoadWaitList; // x0
 
-  if ( (byte_4C55D42 & 1) == 0 )
+  if ( (byte_4CB52A7 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_LoadWaitStatus_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
-    byte_4C55D42 = 1;
+    sub_1C6BA08(&AssetManager_LoadWaitStatus_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+    byte_4CB52A7 = 1;
   }
-  v5 = sub_1C3E7B0(AssetManager_LoadWaitStatus_TypeInfo);
+  v5 = sub_1C6BC54(AssetManager_LoadWaitStatus_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_QWORD *)(v5 + 24) = callbackFunc;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 24), (int32_t)callbackFunc, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)callbackFunc, v6, v7);
   downLoadWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.downLoadWaitList;
   if ( !downLoadWaitList )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   System_Collections_Generic_Queue_object___Enqueue(
     downLoadWaitList,
     (Il2CppObject *)v5,
-    (const MethodInfo_395C644 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+    (const MethodInfo_39AB3CC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
 }
 
 
-void AssetManager__AddLoadWaitStatus_40593528(AssetManager_o *this, AssetData_o *info, const MethodInfo *method)
+void AssetManager__AddLoadWaitStatus_40778088(AssetManager_o *this, AssetData_o *info, const MethodInfo *method)
 {
   AssetManager_o *v4; // x20
   __int64 v5; // x21
@@ -401,30 +401,30 @@ void AssetManager__AddLoadWaitStatus_40593528(AssetManager_o *this, AssetData_o 
   const MethodInfo *v7; // x3
 
   v4 = this;
-  if ( (byte_4C55D43 & 1) == 0 )
+  if ( (byte_4CB52A8 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_LoadWaitStatus_TypeInfo);
-    this = (AssetManager_o *)sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
-    byte_4C55D43 = 1;
+    sub_1C6BA08(&AssetManager_LoadWaitStatus_TypeInfo);
+    this = (AssetManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+    byte_4CB52A8 = 1;
   }
   if ( !info
     || (v4->fields.downloadSize += info->fields.size,
-        v5 = sub_1C3E7B0(AssetManager_LoadWaitStatus_TypeInfo),
+        v5 = sub_1C6BC54(AssetManager_LoadWaitStatus_TypeInfo),
         System_Object___ctor((Il2CppObject *)v5, 0),
         *(_QWORD *)(v5 + 16) = info,
-        sub_1C3E508((CGThumbnailListItem_o *)(v5 + 16), (int32_t)info, v6, v7),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)info, v6, v7),
         (this = (AssetManager_o *)v4->fields.downLoadWaitList) == 0) )
   {
-    sub_1C3E7C0(this, info);
+    sub_1C6BC60(this, info);
   }
   System_Collections_Generic_Queue_object___Enqueue(
     (System_Collections_Generic_Queue_T__o *)this,
     (Il2CppObject *)v5,
-    (const MethodInfo_395C644 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+    (const MethodInfo_39AB3CC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
 }
 
 
-void AssetManager__AddLoadWaitStatus_40605004(
+void AssetManager__AddLoadWaitStatus_40789564(
         AssetManager_o *this,
         AssetData_o *info,
         AssetLoader_LoadEndDataHandler_o *callbackFunc,
@@ -436,24 +436,24 @@ void AssetManager__AddLoadWaitStatus_40605004(
   const MethodInfo *v10; // x4
 
   v8 = this;
-  if ( (byte_4C55D44 & 1) == 0 )
+  if ( (byte_4CB52A9 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_LoadWaitStatus_TypeInfo);
-    this = (AssetManager_o *)sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
-    byte_4C55D44 = 1;
+    sub_1C6BA08(&AssetManager_LoadWaitStatus_TypeInfo);
+    this = (AssetManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+    byte_4CB52A9 = 1;
   }
   if ( !info
     || (v8->fields.downloadSize += info->fields.size,
-        v9 = (AssetManager_LoadWaitStatus_o *)sub_1C3E7B0(AssetManager_LoadWaitStatus_TypeInfo),
-        AssetManager_LoadWaitStatus___ctor_40605176(v9, info, callbackFunc, resourceNames, v10),
+        v9 = (AssetManager_LoadWaitStatus_o *)sub_1C6BC54(AssetManager_LoadWaitStatus_TypeInfo),
+        AssetManager_LoadWaitStatus___ctor_40789736(v9, info, callbackFunc, resourceNames, v10),
         (this = (AssetManager_o *)v8->fields.downLoadWaitList) == 0) )
   {
-    sub_1C3E7C0(this, info);
+    sub_1C6BC60(this, info);
   }
   System_Collections_Generic_Queue_object___Enqueue(
     (System_Collections_Generic_Queue_T__o *)this,
     (Il2CppObject *)v9,
-    (const MethodInfo_395C644 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+    (const MethodInfo_39AB3CC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
 }
 
 
@@ -468,23 +468,23 @@ System_Collections_IEnumerator_o *AssetManager__AssetObjectListSetupAndCall(
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C55D53 & 1) == 0 )
+  if ( (byte_4CB52B8 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager__AssetObjectListSetupAndCall_d__190_TypeInfo);
-    byte_4C55D53 = 1;
+    sub_1C6BA08(&AssetManager__AssetObjectListSetupAndCall_d__190_TypeInfo);
+    byte_4CB52B8 = 1;
   }
-  v5 = sub_1C3E7B0(AssetManager__AssetObjectListSetupAndCall_d__190_TypeInfo);
+  v5 = sub_1C6BC54(AssetManager__AssetObjectListSetupAndCall_d__190_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = asset;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 32), (int32_t)asset, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)asset, v6, v7);
   *(_QWORD *)(v5 + 40) = action;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), (int32_t)action, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)action, v8, v9);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
 
-System_Collections_IEnumerator_o *AssetManager__AssetObjectListSetupAndCall_40607020(
+System_Collections_IEnumerator_o *AssetManager__AssetObjectListSetupAndCall_40791580(
         AssetData_array *assetList,
         System_Action_o *action,
         const MethodInfo *method)
@@ -495,18 +495,18 @@ System_Collections_IEnumerator_o *AssetManager__AssetObjectListSetupAndCall_4060
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C55D54 & 1) == 0 )
+  if ( (byte_4CB52B9 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager__AssetObjectListSetupAndCall_d__191_TypeInfo);
-    byte_4C55D54 = 1;
+    sub_1C6BA08(&AssetManager__AssetObjectListSetupAndCall_d__191_TypeInfo);
+    byte_4CB52B9 = 1;
   }
-  v5 = sub_1C3E7B0(AssetManager__AssetObjectListSetupAndCall_d__191_TypeInfo);
+  v5 = sub_1C6BC54(AssetManager__AssetObjectListSetupAndCall_d__191_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = assetList;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 32), (int32_t)assetList, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)assetList, v6, v7);
   *(_QWORD *)(v5 + 40) = action;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), (int32_t)action, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)action, v8, v9);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -536,24 +536,24 @@ void AssetManager__CancelAndReleaseDownloadAssetStorage(
   int32_t v22; // w2
   const MethodInfo *v23; // x3
 
-  if ( (byte_4C55D36 & 1) == 0 )
+  if ( (byte_4CB529B & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
-    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
-    sub_1C3E564(&System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
-    sub_1C3E564(&Method_AssetManager___c__CancelAndReleaseDownloadAssetStorage_b__130_0__);
-    sub_1C3E564(&AssetManager___c_TypeInfo);
-    byte_4C55D36 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
+    sub_1C6BA08(&System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
+    sub_1C6BA08(&Method_AssetManager___c__CancelAndReleaseDownloadAssetStorage_b__130_0__);
+    sub_1C6BA08(&AssetManager___c_TypeInfo);
+    byte_4CB529B = 1;
   }
-  v5 = (System_Collections_Generic_Queue_T__o *)sub_1C3E7B0(System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
+  v5 = (System_Collections_Generic_Queue_T__o *)sub_1C6BC54(System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v5,
-    (const MethodInfo_395C07C *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
+    (const MethodInfo_39AAE04 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
   p_downLoadWaitList = &this->fields.downLoadWaitList;
   downLoadWaitList = this->fields.downLoadWaitList;
   if ( !downLoadWaitList )
@@ -563,7 +563,7 @@ void AssetManager__CancelAndReleaseDownloadAssetStorage(
   {
     downLoadWaitList = System_Collections_Generic_Queue_object___Dequeue(
                          (System_Collections_Generic_Queue_T__o *)downLoadWaitList,
-                         (const MethodInfo_395C7D4 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
+                         (const MethodInfo_39AB55C *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
     if ( !downLoadWaitList )
       goto LABEL_33;
     v12 = *((_QWORD *)downLoadWaitList + 2);
@@ -585,7 +585,7 @@ void AssetManager__CancelAndReleaseDownloadAssetStorage(
       System_Collections_Generic_Queue_object___Enqueue(
         v5,
         v13,
-        (const MethodInfo_395C644 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+        (const MethodInfo_39AB3CC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
       downLoadWaitList = *p_downLoadWaitList;
       if ( !*p_downLoadWaitList )
         goto LABEL_33;
@@ -602,11 +602,11 @@ void AssetManager__CancelAndReleaseDownloadAssetStorage(
         downLoadWaitList = System_Collections_Generic_List_object___get_Item(
                              (System_Collections_Generic_List_object__o *)downLoadWaitList,
                              v14,
-                             (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+                             (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
         if ( !downLoadWaitList )
           goto LABEL_33;
         v15 = (AssetData_o *)*((_QWORD *)downLoadWaitList + 4);
-        if ( v15 && AssetData__IsSame_40552500(v15, 0, name, 0) )
+        if ( v15 && AssetData__IsSame_40737060(v15, 0, name, 0) )
         {
           downLoadWaitList = this->fields.processingAssetLoaderList;
           if ( !downLoadWaitList )
@@ -614,7 +614,7 @@ void AssetManager__CancelAndReleaseDownloadAssetStorage(
           downLoadWaitList = System_Collections_Generic_List_object___get_Item(
                                (System_Collections_Generic_List_object__o *)downLoadWaitList,
                                v14,
-                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
           v16 = AssetManager___c_TypeInfo;
           v17 = (AssetLoader_o *)downLoadWaitList;
           if ( !AssetManager___c_TypeInfo->_2.cctor_finished )
@@ -631,7 +631,7 @@ void AssetManager__CancelAndReleaseDownloadAssetStorage(
               v16 = AssetManager___c_TypeInfo;
             }
             v19 = (Il2CppObject *)v16->static_fields->__9;
-            _9__130_0 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+            _9__130_0 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
             AssetLoader_LoadEndDataHandler___ctor(
               _9__130_0,
               v19,
@@ -639,7 +639,7 @@ void AssetManager__CancelAndReleaseDownloadAssetStorage(
               v20);
             static_fields = AssetManager___c_TypeInfo->static_fields;
             static_fields->__9__130_0 = _9__130_0;
-            sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__130_0, (int32_t)_9__130_0, v22, v23);
+            sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__130_0, (int32_t)_9__130_0, v22, v23);
           }
           if ( !v17 )
             goto LABEL_33;
@@ -654,11 +654,11 @@ void AssetManager__CancelAndReleaseDownloadAssetStorage(
       goto LABEL_15;
     }
 LABEL_33:
-    sub_1C3E7C0(downLoadWaitList, v6);
+    sub_1C6BC60(downLoadWaitList, v6);
   }
 LABEL_15:
   this->fields.downLoadWaitList = (struct System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__o *)v5;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.downLoadWaitList, (int32_t)v5, (int32_t)v7, v8);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.downLoadWaitList, (int32_t)v5, (int32_t)v7, v8);
   this->fields.isCancelDownload = 1;
 }
 
@@ -672,7 +672,7 @@ void AssetManager__CancelAndReleaseDownloadAssetStorages(
   unsigned __int64 v6; // x21
 
   if ( !names )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   max_length = names->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -680,7 +680,7 @@ void AssetManager__CancelAndReleaseDownloadAssetStorages(
     do
     {
       if ( v6 >= (unsigned int)max_length )
-        sub_1C3E7C8(this, names);
+        sub_1C6BC68(this);
       AssetManager__CancelAndReleaseDownloadAssetStorage(this, names->m_Items[v6], method);
       LODWORD(max_length) = names->max_length;
       ++v6;
@@ -700,29 +700,29 @@ void AssetManager__CancelDownloadAssetStorage(AssetManager_o *this, const Method
   struct System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__o **p_downLoadWaitList; // x21
   struct System_Object_array *array; // x8
 
-  if ( (byte_4C55D35 & 1) == 0 )
+  if ( (byte_4CB529A & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
-    sub_1C3E564(&System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
-    byte_4C55D35 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
+    sub_1C6BA08(&System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
+    byte_4CB529A = 1;
   }
-  v3 = (System_Collections_Generic_Queue_T__o *)sub_1C3E7B0(System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
+  v3 = (System_Collections_Generic_Queue_T__o *)sub_1C6BC54(System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__TypeInfo);
   System_Collections_Generic_Queue_object____ctor(
     v3,
-    (const MethodInfo_395C07C *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
+    (const MethodInfo_39AAE04 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus___ctor__);
   p_downLoadWaitList = &this->fields.downLoadWaitList;
   downLoadWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.downLoadWaitList;
   if ( !downLoadWaitList )
 LABEL_12:
-    sub_1C3E7C0(downLoadWaitList, v4);
+    sub_1C6BC60(downLoadWaitList, v4);
   while ( downLoadWaitList->fields._size > 0 )
   {
     downLoadWaitList = (System_Collections_Generic_Queue_T__o *)System_Collections_Generic_Queue_object___Dequeue(
                                                                   downLoadWaitList,
-                                                                  (const MethodInfo_395C7D4 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
+                                                                  (const MethodInfo_39AB55C *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
     if ( !downLoadWaitList )
       goto LABEL_12;
     array = downLoadWaitList->fields._array;
@@ -738,14 +738,14 @@ LABEL_12:
       System_Collections_Generic_Queue_object___Enqueue(
         v3,
         (Il2CppObject *)downLoadWaitList,
-        (const MethodInfo_395C644 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+        (const MethodInfo_39AB3CC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
     }
     downLoadWaitList = (System_Collections_Generic_Queue_T__o *)*p_downLoadWaitList;
     if ( !*p_downLoadWaitList )
       goto LABEL_12;
   }
   this->fields.downLoadWaitList = (struct System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__o *)v3;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.downLoadWaitList, (int32_t)v3, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.downLoadWaitList, (int32_t)v3, v5, v6);
   this->fields.isCancelDownload = 1;
 }
 
@@ -754,18 +754,18 @@ void AssetManager__CancelDownloadAssetStorageAll(AssetManager_o *this, const Met
 {
   System_Collections_Generic_Queue_T__o *downLoadWaitList; // x0
 
-  if ( (byte_4C55D38 & 1) == 0 )
+  if ( (byte_4CB529D & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Clear__);
-    byte_4C55D38 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Clear__);
+    byte_4CB529D = 1;
   }
   downLoadWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.downLoadWaitList;
   this->fields.downloadSize = 0;
   if ( !downLoadWaitList )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   System_Collections_Generic_Queue_object___Clear(
     downLoadWaitList,
-    (const MethodInfo_395C304 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Clear__);
+    (const MethodInfo_39AB08C *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Clear__);
 }
 
 
@@ -774,10 +774,10 @@ bool AssetManager__CheckDateVersion(System_String_o *dateVersion, const MethodIn
   AssetManager_c *v3; // x0
   System_String_o *assetBundleDateVersion; // x0
 
-  if ( (byte_4C55D01 & 1) == 0 )
+  if ( (byte_4CB5266 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C55D01 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB5266 = 1;
   }
   v3 = AssetManager_TypeInfo;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -787,7 +787,7 @@ bool AssetManager__CheckDateVersion(System_String_o *dateVersion, const MethodIn
   }
   assetBundleDateVersion = v3->static_fields->assetBundleDateVersion;
   if ( !assetBundleDateVersion )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   return System_String__StartsWith(assetBundleDateVersion, dateVersion, 0);
 }
 
@@ -809,15 +809,15 @@ bool AssetManager__CheckEntryLoadStatus(
   int v14; // w19
   System_Collections_Generic_Queue_Enumerator_T__o v16; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4C55D41 & 1) == 0 )
+  if ( (byte_4CB52A6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
-    byte_4C55D41 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
+    byte_4CB52A6 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   processingAssetLoaderList = (System_Collections_Generic_List_object__o *)this->fields.processingAssetLoaderList;
@@ -829,11 +829,11 @@ bool AssetManager__CheckEntryLoadStatus(
     processingAssetLoaderList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                processingAssetLoaderList,
                                                                                v8,
-                                                                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+                                                                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
     if ( !processingAssetLoaderList )
       goto LABEL_10;
     syncRoot = (AssetData_o *)processingAssetLoaderList->fields._syncRoot;
-    if ( syncRoot && AssetData__IsSame_40552500(syncRoot, type, name, 0) )
+    if ( syncRoot && AssetData__IsSame_40737060(syncRoot, type, name, 0) )
       return 1;
     processingAssetLoaderList = (System_Collections_Generic_List_object__o *)this->fields.processingAssetLoaderList;
     ++v8;
@@ -843,25 +843,25 @@ bool AssetManager__CheckEntryLoadStatus(
   processingAssetLoaderList = (System_Collections_Generic_List_object__o *)this->fields.downLoadWaitList;
   if ( !processingAssetLoaderList )
 LABEL_10:
-    sub_1C3E7C0(processingAssetLoaderList, *(_QWORD *)&type);
+    sub_1C6BC60(processingAssetLoaderList, *(_QWORD *)&type);
   System_Collections_Generic_Queue_object___GetEnumerator(
     &v16,
     (System_Collections_Generic_Queue_T__o *)processingAssetLoaderList,
-    (const MethodInfo_395C6FC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
+    (const MethodInfo_39AB484 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
   while ( 1 )
   {
     v10 = System_Collections_Generic_Queue_Enumerator_object___MoveNext(
             &v16,
-            (const MethodInfo_3540058 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
+            (const MethodInfo_3586930 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
     if ( !v10 )
       break;
     Current = System_Collections_Generic_Queue_Enumerator_object___get_Current(
                 &v16,
-                (const MethodInfo_3540148 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
+                (const MethodInfo_3586A20 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
     if ( !Current )
-      sub_1C3E7C0(0, v12);
+      sub_1C6BC60(0, v12);
     klass = (AssetData_o *)Current[1].klass;
-    if ( klass && AssetData__IsSame_40552500(klass, type, name, 0) )
+    if ( klass && AssetData__IsSame_40737060(klass, type, name, 0) )
     {
       v14 = 7;
       goto LABEL_19;
@@ -871,7 +871,7 @@ LABEL_10:
 LABEL_19:
   System_Collections_Generic_Queue_Enumerator_object___Dispose(
     &v16,
-    (const MethodInfo_3540048 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
+    (const MethodInfo_3586920 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
   return v10 && v14 == 7;
 }
 
@@ -881,10 +881,10 @@ bool AssetManager__CheckVersion(System_String_o *masterVersion, System_String_o 
   AssetManager_c *v5; // x0
   AssetManager_c *v6; // x0
 
-  if ( (byte_4C55D00 & 1) == 0 )
+  if ( (byte_4CB5265 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C55D00 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB5265 = 1;
   }
   v5 = AssetManager_TypeInfo;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -918,15 +918,15 @@ void AssetManager__ClearCacheWithoutSystemAssets(AssetManager_o *this, const Met
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v12; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v13; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C55D55 & 1) == 0 )
+  if ( (byte_4CB52BA & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    sub_1C3E564(&StringLiteral_12590/*"SYSTEM"*/);
-    byte_4C55D55 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    sub_1C6BA08(&StringLiteral_12586/*"SYSTEM"*/);
+    byte_4CB52BA = 1;
   }
   memset(&v13, 0, sizeof(v13));
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.assetBundleDic, 0) )
@@ -935,29 +935,29 @@ void AssetManager__ClearCacheWithoutSystemAssets(AssetManager_o *this, const Met
     if ( !assetBundleDic
       || (assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                         assetBundleDic,
-                                                                                        (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
+                                                                                        (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
     {
-      sub_1C3E7C0(assetBundleDic, v3);
+      sub_1C6BC60(assetBundleDic, v3);
     }
     System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
       &v12,
       (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)assetBundleDic,
-      (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+      (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
     v13 = v12;
     while ( 1 )
     {
       v5 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
              &v13,
-             (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+             (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
       if ( !v5 )
         break;
       currentValue = v13.fields._currentValue;
       if ( !v13.fields._currentValue )
-        sub_1C3E7C0(v5, v6);
+        sub_1C6BC60(v5, v6);
       klass = v13.fields._currentValue[2].klass;
       if ( !klass )
-        sub_1C3E7C0(0, v6);
-      if ( !System_String__Equals_63671836((System_String_o *)klass, (System_String_o *)StringLiteral_12590/*"SYSTEM"*/, 5, 0) )
+        sub_1C6BC60(0, v6);
+      if ( !System_String__Equals_64002176((System_String_o *)klass, (System_String_o *)StringLiteral_12586/*"SYSTEM"*/, 5, 0) )
       {
         AssetManager__ReleaseReservation(this, (AssetData_o *)currentValue, v9);
         Path = AssetData__get_Path((AssetData_o *)currentValue, 0);
@@ -971,7 +971,7 @@ void AssetManager__ClearCacheWithoutSystemAssets(AssetManager_o *this, const Met
     }
     System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
       &v13,
-      (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+      (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
     AssetManager__ConfigWriteRequest(this, 1, v11);
   }
 }
@@ -1004,21 +1004,21 @@ void AssetManager__ConfigWriteRequest(AssetManager_o *this, bool isFast, const M
   uint32_t v26; // [xsp+48h] [xbp-58h] BYREF
   bool lockTaken; // [xsp+4Ch] [xbp-54h] BYREF
 
-  if ( (byte_4C55D3B & 1) == 0 )
+  if ( (byte_4CB52A0 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&CatAndMouseGame_TypeInfo);
-    sub_1C3E564(&Crc32_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    sub_1C3E564(&StringLiteral_43/*"\n"*/);
-    sub_1C3E564(&StringLiteral_25280/*"~"*/);
-    byte_4C55D3B = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&CatAndMouseGame_TypeInfo);
+    sub_1C6BA08(&Crc32_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    sub_1C6BA08(&StringLiteral_43/*"\n"*/);
+    sub_1C6BA08(&StringLiteral_25370/*"~"*/);
+    byte_4CB52A0 = 1;
   }
   memset(&v25, 0, sizeof(v25));
   lockTaken = 0;
@@ -1028,96 +1028,96 @@ void AssetManager__ConfigWriteRequest(AssetManager_o *this, bool isFast, const M
     goto LABEL_35;
   if ( System_Collections_Generic_Dictionary_object__object___get_Count(
          assetBundleDic,
-         (const MethodInfo_34754B0 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__) < 1 )
+         (const MethodInfo_34BB60C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__) < 1 )
     return;
   assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.assetBundleDic;
   if ( !assetBundleDic )
     goto LABEL_35;
   Count = System_Collections_Generic_Dictionary_object__object___get_Count(
             assetBundleDic,
-            (const MethodInfo_34754B0 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__);
-  v7 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
-  System_Text_StringBuilder___ctor_63714884(v7, 60 * Count, 0);
+            (const MethodInfo_34BB60C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__);
+  v7 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
+  System_Text_StringBuilder___ctor_64044104(v7, 60 * Count, 0);
   if ( !v7 )
     goto LABEL_35;
-  System_Text_StringBuilder__Append_63723860(v7, 0x40u, 0);
+  System_Text_StringBuilder__Append_64053080(v7, 0x40u, 0);
   v8 = AssetManager_TypeInfo;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     v8 = AssetManager_TypeInfo;
   }
-  System_Text_StringBuilder__Append_63721532(v7, v8->static_fields->assetBundleMasterVersion, 0);
+  System_Text_StringBuilder__Append_64050752(v7, v8->static_fields->assetBundleMasterVersion, 0);
   if ( !System_String__IsNullOrEmpty(AssetManager_TypeInfo->static_fields->assetBundleDateVersion, 0) )
   {
-    System_Text_StringBuilder__Append_63723860(v7, 0x2Cu, 0);
+    System_Text_StringBuilder__Append_64053080(v7, 0x2Cu, 0);
     v9 = AssetManager_TypeInfo;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       v9 = AssetManager_TypeInfo;
     }
-    System_Text_StringBuilder__Append_63721532(v7, v9->static_fields->assetBundleDateVersion, 0);
+    System_Text_StringBuilder__Append_64050752(v7, v9->static_fields->assetBundleDateVersion, 0);
     if ( !System_String__IsNullOrEmpty(AssetManager_TypeInfo->static_fields->assetBundleBuildVersion, 0) )
     {
-      System_Text_StringBuilder__Append_63723860(v7, 0x2Cu, 0);
+      System_Text_StringBuilder__Append_64053080(v7, 0x2Cu, 0);
       v10 = AssetManager_TypeInfo;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
         v10 = AssetManager_TypeInfo;
       }
-      System_Text_StringBuilder__Append_63721532(v7, v10->static_fields->assetBundleBuildVersion, 0);
+      System_Text_StringBuilder__Append_64050752(v7, v10->static_fields->assetBundleBuildVersion, 0);
     }
   }
-  System_Text_StringBuilder__Append_63723860(v7, 0xAu, 0);
+  System_Text_StringBuilder__Append_64053080(v7, 0xAu, 0);
   assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.assetBundleDic;
   if ( !assetBundleDic
     || (assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                       assetBundleDic,
-                                                                                      (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
+                                                                                      (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
   {
 LABEL_35:
-    sub_1C3E7C0(assetBundleDic, isFast);
+    sub_1C6BC60(assetBundleDic, isFast);
   }
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v24,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)assetBundleDic,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   v25 = v24;
   while ( 1 )
   {
     v11 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
             &v25,
-            (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+            (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
     if ( !v11 )
       break;
     currentValue = v25.fields._currentValue;
     if ( !v25.fields._currentValue )
-      sub_1C3E7C0(v11, v12);
-    System_Text_StringBuilder__Append_63724028(v7, (int32_t)v25.fields._currentValue[2].monitor, 0);
-    System_Text_StringBuilder__Append_63723860(v7, 0x2Cu, 0);
-    System_Text_StringBuilder__Append_63721532(v7, (System_String_o *)currentValue[2].klass, 0);
-    System_Text_StringBuilder__Append_63723860(v7, 0x2Cu, 0);
-    System_Text_StringBuilder__Append_63724028(v7, (int32_t)currentValue[3].klass, 0);
-    System_Text_StringBuilder__Append_63723860(v7, 0x2Cu, 0);
-    System_Text_StringBuilder__Append_63724204(v7, HIDWORD(currentValue[3].klass), 0);
-    System_Text_StringBuilder__Append_63723860(v7, 0x2Cu, 0);
-    System_Text_StringBuilder__Append_63721532(v7, (System_String_o *)currentValue[1].monitor, 0);
-    System_Text_StringBuilder__Append_63721532(v7, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
+      sub_1C6BC60(v11, v12);
+    System_Text_StringBuilder__Append_64053248(v7, (int32_t)v25.fields._currentValue[2].monitor, 0);
+    System_Text_StringBuilder__Append_64053080(v7, 0x2Cu, 0);
+    System_Text_StringBuilder__Append_64050752(v7, (System_String_o *)currentValue[2].klass, 0);
+    System_Text_StringBuilder__Append_64053080(v7, 0x2Cu, 0);
+    System_Text_StringBuilder__Append_64053248(v7, (int32_t)currentValue[3].klass, 0);
+    System_Text_StringBuilder__Append_64053080(v7, 0x2Cu, 0);
+    System_Text_StringBuilder__Append_64053424(v7, HIDWORD(currentValue[3].klass), 0);
+    System_Text_StringBuilder__Append_64053080(v7, 0x2Cu, 0);
+    System_Text_StringBuilder__Append_64050752(v7, (System_String_o *)currentValue[1].monitor, 0);
+    System_Text_StringBuilder__Append_64050752(v7, (System_String_o *)StringLiteral_43/*"\n"*/, 0);
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &v25,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
   requestConfigWriteData = (Il2CppObject *)this->fields.requestConfigWriteData;
   lockTaken = 0;
-  System_Threading_Monitor__Enter_65565872(requestConfigWriteData, &lockTaken, 0);
+  System_Threading_Monitor__Enter_65894432(requestConfigWriteData, &lockTaken, 0);
   v15 = (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v7->klass->vtable._3_ToString.methodPtr)(
                              v7,
                              v7->klass->vtable._3_ToString.method);
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !UTF8 )
-    sub_1C3E7C0(0, v17);
+    sub_1C6BC60(0, v17);
   v18 = (System_Byte_array *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
                                UTF8,
                                v15,
@@ -1126,8 +1126,8 @@ LABEL_35:
     j_il2cpp_runtime_class_init_0(Crc32_TypeInfo);
   v26 = Crc32__Compute(v18, 0);
   v19 = System_UInt32__ToString((uint32_t)&v26, 0);
-  v20 = System_String__Concat_63676720(
-          (System_String_o *)StringLiteral_25280/*"~"*/,
+  v20 = System_String__Concat_64007060(
+          (System_String_o *)StringLiteral_25370/*"~"*/,
           v19,
           (System_String_o *)StringLiteral_43/*"\n"*/,
           v15,
@@ -1136,7 +1136,7 @@ LABEL_35:
     j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
   v21 = CatAndMouseGame__CatGame8(v20, 0);
   this->fields.requestConfigWriteData = v21;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.requestConfigWriteData, (int32_t)v21, v22, v23);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.requestConfigWriteData, (int32_t)v21, v22, v23);
   if ( isFast )
   {
     this->fields.requestWriteCounter = 0.0;
@@ -1159,7 +1159,7 @@ void AssetManager__ConfigWriteRequestThread(AssetManager_o *this, const MethodIn
 
   AssetManager__ConfigWriteRequest(this, 0, v2);
   this->fields.writeRequestThread = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.writeRequestThread, 0, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.writeRequestThread, 0, v4, v5);
   if ( this->fields.reserveWriteRequest )
     AssetManager__StartThreadConfigWriteRequest(this, v6);
 }
@@ -1188,47 +1188,47 @@ System_String_o *AssetManager__ConvertDownloadSizeToString(AssetManager_o *this,
   unsigned int i; // w21
   System_String_o format; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C55D2F & 1) == 0 )
+  if ( (byte_4CB5294 & 1) == 0 )
   {
-    sub_1C3E564(&string___TypeInfo);
-    sub_1C3E564(&StringLiteral_8194/*"KB"*/);
-    sub_1C3E564(&StringLiteral_25228/*"{0}{1}"*/);
-    sub_1C3E564(&StringLiteral_9233/*"N2"*/);
-    sub_1C3E564(&StringLiteral_13367/*"TB"*/);
-    sub_1C3E564(&StringLiteral_2510/*"B"*/);
-    sub_1C3E564(&StringLiteral_8634/*"MB"*/);
-    sub_1C3E564(&StringLiteral_6922/*"GB"*/);
-    byte_4C55D2F = 1;
+    sub_1C6BA08(&string___TypeInfo);
+    sub_1C6BA08(&StringLiteral_8191/*"KB"*/);
+    sub_1C6BA08(&StringLiteral_25318/*"{0}{1}"*/);
+    sub_1C6BA08(&StringLiteral_9230/*"N2"*/);
+    sub_1C6BA08(&StringLiteral_13360/*"TB"*/);
+    sub_1C6BA08(&StringLiteral_2502/*"B"*/);
+    sub_1C6BA08(&StringLiteral_8631/*"MB"*/);
+    sub_1C6BA08(&StringLiteral_6915/*"GB"*/);
+    byte_4CB5294 = 1;
   }
-  v4 = (System_String_o *)sub_1C3E60C(string___TypeInfo, 5);
+  v4 = (System_String_o *)sub_1C6BAB0(string___TypeInfo, 5);
   if ( !v4 )
-    sub_1C3E7C0(0, v5);
+    sub_1C6BC60(0, v5);
   v8 = v4;
   if ( !LODWORD(v4[1].klass) )
     goto LABEL_14;
-  v9 = StringLiteral_2510/*"B"*/;
-  v4[1].monitor = (void *)StringLiteral_2510/*"B"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v4[1].monitor, v9, v6, v7);
+  v9 = StringLiteral_2502/*"B"*/;
+  v4[1].monitor = (void *)StringLiteral_2502/*"B"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v4[1].monitor, v9, v6, v7);
   if ( LODWORD(v8[1].klass) <= 1 )
     goto LABEL_14;
-  v12 = StringLiteral_8194/*"KB"*/;
-  v8[1].fields = (System_String_Fields)StringLiteral_8194/*"KB"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8[1].fields, v12, v10, v11);
+  v12 = StringLiteral_8191/*"KB"*/;
+  v8[1].fields = (System_String_Fields)StringLiteral_8191/*"KB"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8[1].fields, v12, v10, v11);
   if ( LODWORD(v8[1].klass) <= 2 )
     goto LABEL_14;
-  v15 = StringLiteral_8634/*"MB"*/;
-  v8[2].klass = (System_String_c *)StringLiteral_8634/*"MB"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8[2], v15, v13, v14);
+  v15 = StringLiteral_8631/*"MB"*/;
+  v8[2].klass = (System_String_c *)StringLiteral_8631/*"MB"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8[2], v15, v13, v14);
   if ( LODWORD(v8[1].klass) <= 3 )
     goto LABEL_14;
-  v18 = StringLiteral_6922/*"GB"*/;
-  v8[2].monitor = (void *)StringLiteral_6922/*"GB"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8[2].monitor, v18, v16, v17);
+  v18 = StringLiteral_6915/*"GB"*/;
+  v8[2].monitor = (void *)StringLiteral_6915/*"GB"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8[2].monitor, v18, v16, v17);
   if ( LODWORD(v8[1].klass) <= 4 )
     goto LABEL_14;
-  v21 = StringLiteral_13367/*"TB"*/;
-  v8[2].fields = (System_String_Fields)StringLiteral_13367/*"TB"*/;
-  sub_1C3E508((CGThumbnailListItem_o *)&v8[2].fields, v21, v19, v20);
+  v21 = StringLiteral_13360/*"TB"*/;
+  v8[2].fields = (System_String_Fields)StringLiteral_13360/*"TB"*/;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8[2].fields, v21, v19, v20);
   for ( i = 0; i != 4; ++i )
   {
     if ( size < 1000.0 )
@@ -1236,12 +1236,12 @@ System_String_o *AssetManager__ConvertDownloadSizeToString(AssetManager_o *this,
     size = size / 1000.0;
     *(double *)&format.klass = size;
   }
-  v4 = System_Double__ToString_65057124(1000.0, &format, (const MethodInfo *)StringLiteral_9233/*"N2"*/);
+  v4 = System_Double__ToString_65385836(1000.0, &format, (const MethodInfo *)StringLiteral_9230/*"N2"*/);
   if ( i >= LODWORD(v8[1].klass) )
 LABEL_14:
-    sub_1C3E7C8(v4, v5);
-  return System_String__Format_63677760(
-           (System_String_o *)StringLiteral_25228/*"{0}{1}"*/,
+    sub_1C6BC68(v4);
+  return System_String__Format_64008100(
+           (System_String_o *)StringLiteral_25318/*"{0}{1}"*/,
            (Il2CppObject *)v4,
            *((Il2CppObject **)&v8[1].monitor + i),
            0);
@@ -1260,19 +1260,19 @@ void AssetManager__DebugLog(AssetManager_o *this, const MethodInfo *method)
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o i; // [xsp+20h] [xbp-90h] BYREF
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v11; // [xsp+40h] [xbp-70h] BYREF
 
-  if ( (byte_4C55D29 & 1) == 0 )
+  if ( (byte_4CB528E & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    byte_4C55D29 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    byte_4CB528E = 1;
   }
   memset(&v11, 0, sizeof(v11));
   memset(&i, 0, sizeof(i));
@@ -1282,20 +1282,20 @@ void AssetManager__DebugLog(AssetManager_o *this, const MethodInfo *method)
   System_Collections_Generic_Queue_object___GetEnumerator(
     (System_Collections_Generic_Queue_Enumerator_T__o *)&v9,
     downLoadWaitList,
-    (const MethodInfo_395C6FC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
+    (const MethodInfo_39AB484 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__GetEnumerator__);
   v11 = v9;
   while ( System_Collections_Generic_Queue_Enumerator_object___MoveNext(
             (System_Collections_Generic_Queue_Enumerator_T__o *)&v11,
-            (const MethodInfo_3540058 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__) )
+            (const MethodInfo_3586930 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__MoveNext__) )
   {
     if ( !System_Collections_Generic_Queue_Enumerator_object___get_Current(
             (System_Collections_Generic_Queue_Enumerator_T__o *)&v11,
-            (const MethodInfo_3540148 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__) )
-      sub_1C3E7C0(0, v4);
+            (const MethodInfo_3586A20 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__get_Current__) )
+      sub_1C6BC60(0, v4);
   }
   System_Collections_Generic_Queue_Enumerator_object___Dispose(
     (System_Collections_Generic_Queue_Enumerator_T__o *)&v11,
-    (const MethodInfo_3540048 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
+    (const MethodInfo_3586920 *)Method_System_Collections_Generic_Queue_Enumerator_AssetManager_LoadWaitStatus__Dispose__);
   processingAssetLoaderList = this->fields.processingAssetLoaderList;
   if ( !processingAssetLoaderList )
     goto LABEL_23;
@@ -1309,46 +1309,46 @@ void AssetManager__DebugLog(AssetManager_o *this, const MethodInfo *method)
     goto LABEL_23;
   downLoadWaitList = (System_Collections_Generic_Queue_T__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                 (System_Collections_Generic_Dictionary_object__object__o *)downLoadWaitList,
-                                                                (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+                                                                (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
   if ( !downLoadWaitList )
     goto LABEL_23;
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v9,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)downLoadWaitList,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   for ( i = v9;
         System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
           &i,
-          (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+          (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
         AssetData__get_IsEmpty((AssetData_o *)i.fields._currentValue, 0) )
   {
     if ( !i.fields._currentValue )
-      sub_1C3E7C0(0, v8);
+      sub_1C6BC60(0, v8);
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &i,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
   downLoadWaitList = (System_Collections_Generic_Queue_T__o *)this->fields.assetResourceDic;
   if ( !downLoadWaitList
     || (downLoadWaitList = (System_Collections_Generic_Queue_T__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                       (System_Collections_Generic_Dictionary_object__object__o *)downLoadWaitList,
-                                                                      (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
+                                                                      (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
   {
 LABEL_23:
-    sub_1C3E7C0(downLoadWaitList, method);
+    sub_1C6BC60(downLoadWaitList, method);
   }
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v9,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)downLoadWaitList,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   i = v9;
   while ( System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
             &i,
-            (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__) )
+            (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__) )
     ;
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &i,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
 }
 
 
@@ -1358,16 +1358,16 @@ System_Collections_IEnumerator_o *AssetManager__DelayLoadStart(AssetManager_o *t
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C55D47 & 1) == 0 )
+  if ( (byte_4CB52AC & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager__DelayLoadStart_d__153_TypeInfo);
-    byte_4C55D47 = 1;
+    sub_1C6BA08(&AssetManager__DelayLoadStart_d__153_TypeInfo);
+    byte_4CB52AC = 1;
   }
-  v3 = sub_1C3E7B0(AssetManager__DelayLoadStart_d__153_TypeInfo);
+  v3 = sub_1C6BC54(AssetManager__DelayLoadStart_d__153_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -1376,10 +1376,10 @@ void AssetManager__DeleteContinueData(const MethodInfo *method)
 {
   AssetManager_c *v1; // x0
 
-  if ( (byte_4C55CF9 & 1) == 0 )
+  if ( (byte_4CB525E & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C55CF9 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB525E = 1;
   }
   v1 = AssetManager_TypeInfo;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -1420,7 +1420,7 @@ LABEL_9:
       v12 = AssetData;
       if ( AssetData__IsNeedUpdateVersion(AssetData, 0) )
       {
-        AssetManager__AddLoadWaitStatus_40605004(this, v12, callbackFunc, 0, v13);
+        AssetManager__AddLoadWaitStatus_40789564(this, v12, callbackFunc, 0, v13);
         this->fields.loadParallelMax = loadParallelMax;
         AssetManager__LoadStart(this, v14);
       }
@@ -1465,49 +1465,49 @@ void AssetManager__DownloadAssetStorageAttribute(
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v13; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v14; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C55D30 & 1) == 0 )
+  if ( (byte_4CB5295 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    byte_4C55D30 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    byte_4CB5295 = 1;
   }
   memset(&v14, 0, sizeof(v14));
   assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.assetBundleDic;
   if ( !assetBundleDic
     || (assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                       assetBundleDic,
-                                                                                      (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
+                                                                                      (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
   {
-    sub_1C3E7C0(assetBundleDic, attrib);
+    sub_1C6BC60(assetBundleDic, attrib);
   }
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v13,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)assetBundleDic,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   v14 = v13;
   while ( 1 )
   {
     v8 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
            &v14,
-           (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+           (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
     if ( !v8 )
       break;
     currentValue = (AssetData_o *)v14.fields._currentValue;
     if ( !v14.fields._currentValue )
-      sub_1C3E7C0(v8, v9);
+      sub_1C6BC60(v8, v9);
     if ( AssetData__IsDownloadOldVersion((AssetData_o *)v14.fields._currentValue, 0)
       || System_String__op_Equality(attrib, currentValue->fields.attrib, 0)
       && AssetData__IsNeedUpdateVersion(currentValue, 0) )
     {
-      AssetManager__AddLoadWaitStatus_40593528(this, currentValue, v11);
+      AssetManager__AddLoadWaitStatus_40778088(this, currentValue, v11);
     }
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &v14,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
   this->fields.loadParallelMax = loadParallelMax;
   AssetManager__LoadStart(this, v12);
 }
@@ -1525,24 +1525,24 @@ System_Collections_IEnumerator_o *AssetManager__DownloadAssetStorageAttributeWit
   int32_t v10; // w2
   const MethodInfo *v11; // x3
 
-  if ( (byte_4C55D2E & 1) == 0 )
+  if ( (byte_4CB5293 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_TypeInfo);
-    byte_4C55D2E = 1;
+    sub_1C6BA08(&AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_TypeInfo);
+    byte_4CB5293 = 1;
   }
-  v7 = sub_1C3E7B0(AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_TypeInfo);
+  v7 = sub_1C6BC54(AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
   *(_QWORD *)(v7 + 40) = attrib;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 40), (int32_t)attrib, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)attrib, v10, v11);
   *(_DWORD *)(v7 + 56) = loadParallelMax;
   return (System_Collections_IEnumerator_o *)v7;
 }
 
 
-void AssetManager__DownloadAssetStorageAttribute_40596472(
+void AssetManager__DownloadAssetStorageAttribute_40781032(
         AssetManager_o *this,
         System_String_array *attribList,
         int32_t loadParallelMax,
@@ -1561,26 +1561,25 @@ void AssetManager__DownloadAssetStorageAttribute_40596472(
   unsigned __int64 v16; // x26
   __int64 v17; // x25
   _BOOL8 v18; // x0
-  __int64 v19; // x1
-  const MethodInfo *v21; // x1
-  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v22; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v23; // [xsp+20h] [xbp-70h] BYREF
+  const MethodInfo *v20; // x1
+  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v21; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v22; // [xsp+20h] [xbp-70h] BYREF
 
   v6 = this;
-  if ( (byte_4C55D31 & 1) == 0 )
+  if ( (byte_4CB5296 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    this = (AssetManager_o *)sub_1C3E564(&StringLiteral_812/*", "*/);
-    byte_4C55D31 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    this = (AssetManager_o *)sub_1C6BA08(&StringLiteral_809/*", "*/);
+    byte_4CB5296 = 1;
   }
-  memset(&v23, 0, sizeof(v23));
+  memset(&v22, 0, sizeof(v22));
   if ( !attribList )
 LABEL_32:
-    sub_1C3E7C0(this, attribList);
+    sub_1C6BC60(this, attribList);
   max_length = attribList->max_length;
   if ( !max_length )
     return;
@@ -1596,14 +1595,14 @@ LABEL_32:
     goto LABEL_14;
   if ( (max_length & 0xFFFFFFFE) == 0 )
 LABEL_13:
-    sub_1C3E7C8(this, attribList);
+    sub_1C6BC68(this);
   v9 = 0;
   v10 = (unsigned int)attribList->max_length - 2LL;
   while ( 1 )
   {
-    this = (AssetManager_o *)System_String__Concat_63674716(
+    this = (AssetManager_o *)System_String__Concat_64005056(
                                v8,
-                               (System_String_o *)StringLiteral_812/*", "*/,
+                               (System_String_o *)StringLiteral_809/*", "*/,
                                attribList->m_Items[v9 + 1],
                                0);
     if ( v10 == v9 )
@@ -1620,26 +1619,26 @@ LABEL_14:
     goto LABEL_32;
   this = (AssetManager_o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                              (System_Collections_Generic_Dictionary_object__object__o *)this,
-                             (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+                             (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
   if ( !this )
     goto LABEL_32;
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
-    &v22,
+    &v21,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)this,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-  v23 = v22;
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+  v22 = v21;
 LABEL_17:
   while ( 1 )
   {
     v12 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
-            &v23,
-            (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+            &v22,
+            (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
     if ( !v12 )
       break;
-    currentValue = (AssetData_o *)v23.fields._currentValue;
-    if ( !v23.fields._currentValue )
-      sub_1C3E7C0(v12, v13);
-    if ( AssetData__IsDownloadOldVersion((AssetData_o *)v23.fields._currentValue, 0) )
+    currentValue = (AssetData_o *)v22.fields._currentValue;
+    if ( !v22.fields._currentValue )
+      sub_1C6BC60(v12, v13);
+    if ( AssetData__IsDownloadOldVersion((AssetData_o *)v22.fields._currentValue, 0) )
       goto LABEL_20;
     if ( AssetData__IsNeedUpdateVersion(currentValue, 0) && (int)attribList->max_length >= 1 )
     {
@@ -1653,21 +1652,21 @@ LABEL_17:
         if ( v17 == v16++ )
           goto LABEL_17;
         if ( v16 >= LODWORD(attribList->max_length) )
-          sub_1C3E7C8(v18, v19);
+          sub_1C6BC68(v18);
       }
 LABEL_20:
-      AssetManager__AddLoadWaitStatus_40593528(v6, currentValue, v15);
+      AssetManager__AddLoadWaitStatus_40778088(v6, currentValue, v15);
     }
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
-    &v23,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    &v22,
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
   v6->fields.loadParallelMax = loadParallelMax;
-  AssetManager__LoadStart(v6, v21);
+  AssetManager__LoadStart(v6, v20);
 }
 
 
-bool AssetManager__DownloadAssetStorage_40585796(
+bool AssetManager__DownloadAssetStorage_40770356(
         AssetManager_o *this,
         System_String_array *nameList,
         System_Action_o *callbackFunc,
@@ -1675,17 +1674,16 @@ bool AssetManager__DownloadAssetStorage_40585796(
         const MethodInfo *method)
 {
   il2cpp_array_size_t max_length; // x8
-  System_String_array *v8; // x22
   AssetManager_o *v9; // x20
   unsigned __int64 v10; // x23
   bool v11; // w25
-  int v12; // w8
-  const MethodInfo *v13; // x1
+  System_String_o *v12; // x1
+  int v13; // w8
+  const MethodInfo *v14; // x1
 
   if ( !nameList )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   max_length = nameList->max_length;
-  v8 = nameList;
   v9 = this;
   if ( (int)max_length < 1 )
   {
@@ -1698,29 +1696,29 @@ bool AssetManager__DownloadAssetStorage_40585796(
     do
     {
       if ( v10 >= (unsigned int)max_length )
-        sub_1C3E7C8(this, nameList);
-      nameList = (System_String_array *)v8->m_Items[v10];
-      if ( nameList )
+        sub_1C6BC68(this);
+      v12 = nameList->m_Items[v10];
+      if ( v12 )
       {
         if ( v11 )
         {
-          this = (AssetManager_o *)AssetManager__DownloadAssetStorage(v9, (System_String_o *)nameList, 0, 1, method);
-          v12 = (unsigned __int8)this & 1;
+          this = (AssetManager_o *)AssetManager__DownloadAssetStorage(v9, v12, 0, 1, method);
+          v13 = (unsigned __int8)this & 1;
         }
         else
         {
-          v12 = 0;
+          v13 = 0;
         }
-        v11 = v12 != 0;
+        v11 = v13 != 0;
       }
-      LODWORD(max_length) = v8->max_length;
+      LODWORD(max_length) = nameList->max_length;
       ++v10;
     }
     while ( (__int64)v10 < (int)max_length );
   }
   AssetManager__AddLoadWaitStatus(v9, callbackFunc, (const MethodInfo *)callbackFunc);
   v9->fields.loadParallelMax = loadParallelMax;
-  AssetManager__LoadStart(v9, v13);
+  AssetManager__LoadStart(v9, v14);
   return v11;
 }
 
@@ -1755,21 +1753,21 @@ AssetData_o *AssetManager__GetAssetData(
 {
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C55D4E & 1) == 0 )
+  if ( (byte_4CB52B3 & 1) == 0 )
   {
-    this = (AssetManager_o *)sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__TryGetValue__);
-    byte_4C55D4E = 1;
+    this = (AssetManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__TryGetValue__);
+    byte_4CB52B3 = 1;
   }
   value = 0;
   if ( !name )
     return 0;
   if ( !dic )
-    sub_1C3E7C0(this, dic);
+    sub_1C6BC60(this, dic);
   if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
          (System_Collections_Generic_Dictionary_object__object__o *)dic,
          (Il2CppObject *)name,
          &value,
-         (const MethodInfo_3476FEC *)Method_System_Collections_Generic_Dictionary_string__AssetData__TryGetValue__) )
+         (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__AssetData__TryGetValue__) )
   {
     return (AssetData_o *)value;
   }
@@ -1870,93 +1868,93 @@ System_String_array *AssetManager__GetAssetStorageList(
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v23; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v24; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C55D33 & 1) == 0 )
+  if ( (byte_4CB5298 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C3E564(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    sub_1C3E564(&StringLiteral_1048/*"/"*/);
-    byte_4C55D33 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C6BA08(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    sub_1C6BA08(&StringLiteral_1041/*"/"*/);
+    byte_4CB5298 = 1;
   }
   memset(&v24, 0, sizeof(v24));
-  v5 = System_String__Concat_63636468(path, (System_String_o *)StringLiteral_1048/*"/"*/, 0);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
+  v5 = System_String__Concat_63966792(path, (System_String_o *)StringLiteral_1041/*"/"*/, 0);
+  v6 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v6,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
   assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.assetBundleDic;
   if ( !assetBundleDic )
     goto LABEL_21;
   assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                 assetBundleDic,
-                                                                                (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+                                                                                (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
   if ( !assetBundleDic )
     goto LABEL_21;
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v23,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)assetBundleDic,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   v24 = v23;
   while ( 1 )
   {
     v9 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
            &v24,
-           (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+           (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
     if ( !v9 )
       break;
     currentValue = v24.fields._currentValue;
     if ( !v24.fields._currentValue )
-      sub_1C3E7C0(v9, v10);
+      sub_1C6BC60(v9, v10);
     monitor = (System_String_o *)v24.fields._currentValue[1].monitor;
     if ( !monitor )
-      sub_1C3E7C0(0, v10);
+      sub_1C6BC60(0, v10);
     v13 = System_String__StartsWith(monitor, v5, 0);
     if ( v13 )
     {
       if ( !v6 )
-        sub_1C3E7C0(v13, v14);
+        sub_1C6BC60(v13, v14);
       v17 = (Il2CppObject *)currentValue[1].monitor;
       items = v6->fields._items;
       v19 = Method_System_Collections_Generic_List_string__Add__;
       ++v6->fields._version;
       if ( !items )
-        sub_1C3E7C0(v13, v17);
+        sub_1C6BC60(v13, v17);
       size = v6->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v6,
           v17,
-          *(const MethodInfo_37B5460 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+          *(const MethodInfo_3800974 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
       }
       else
       {
         v21 = &items->obj.klass + size;
         v6->fields._size = size + 1;
         v21[4] = (Il2CppClass *)v17;
-        sub_1C3E508((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v17, v15, v16);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 4), (int32_t)v17, v15, v16);
       }
     }
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &v24,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
   if ( !v6 )
 LABEL_21:
-    sub_1C3E7C0(assetBundleDic, v7);
+    sub_1C6BC60(assetBundleDic, v7);
   return (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                   v6,
-                                  (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                  (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_string__ToArray__);
 }
 
 
-AssetData_array *AssetManager__GetAssetStorage_40589324(
+AssetData_array *AssetManager__GetAssetStorage_40773884(
         AssetManager_o *this,
         System_String_array *nameList,
         const MethodInfo *method)
@@ -1974,15 +1972,15 @@ AssetData_array *AssetManager__GetAssetStorage_40589324(
   __int64 v15; // x0
 
   v4 = this;
-  if ( (byte_4C55D4F & 1) == 0 )
+  if ( (byte_4CB52B4 & 1) == 0 )
   {
-    this = (AssetManager_o *)sub_1C3E564(&AssetData___TypeInfo);
-    byte_4C55D4F = 1;
+    this = (AssetManager_o *)sub_1C6BA08(&AssetData___TypeInfo);
+    byte_4CB52B4 = 1;
   }
   if ( !nameList )
 LABEL_17:
-    sub_1C3E7C0(this, nameList);
-  this = (AssetManager_o *)sub_1C3E60C(AssetData___TypeInfo, LODWORD(nameList->max_length));
+    sub_1C6BC60(this, nameList);
+  this = (AssetManager_o *)sub_1C6BAB0(AssetData___TypeInfo, LODWORD(nameList->max_length));
   max_length = nameList->max_length;
   v7 = (unsigned int *)this;
   if ( (int)max_length >= 1 )
@@ -2003,16 +2001,16 @@ LABEL_17:
           {
             if ( !v7 )
               goto LABEL_17;
-            this = (AssetManager_o *)sub_1C3E6A0(v11, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
+            this = (AssetManager_o *)sub_1C6BB44(v11, *(_QWORD *)(*(_QWORD *)v7 + 64LL));
             if ( !this )
             {
-              v15 = sub_1C3E7E4(0);
-              sub_1C3E68C(v15, 0);
+              v15 = sub_1C6BC84(0);
+              sub_1C6BB30(v15, 0);
             }
             if ( v8 >= v7[6] )
               break;
             p_isUseDebugStatus->klass = (CGThumbnailListItem_c *)v11;
-            sub_1C3E508(p_isUseDebugStatus, (int32_t)v11, v12, v13);
+            sub_1C6B9AC(p_isUseDebugStatus, (int32_t)v11, v12, v13);
           }
         }
       }
@@ -2022,13 +2020,13 @@ LABEL_17:
       if ( (__int64)v8 >= (int)max_length )
         return (AssetData_array *)v7;
     }
-    sub_1C3E7C8(this, nameList);
+    sub_1C6BC68(this);
   }
   return (AssetData_array *)v7;
 }
 
 
-bool AssetManager__GetAssetStorage_40589784(
+bool AssetManager__GetAssetStorage_40774344(
         AssetManager_o *this,
         System_String_o *name,
         AssetLoader_LoadEndDataHandler_o *callbackFunc,
@@ -2068,7 +2066,7 @@ LABEL_3:
 }
 
 
-bool AssetManager__GetAsset_40579880(
+bool AssetManager__GetAsset_40764440(
         AssetManager_o *this,
         int32_t type,
         System_String_o *name,
@@ -2098,7 +2096,7 @@ LABEL_5:
 }
 
 
-bool AssetManager__GetAsset_40580168(
+bool AssetManager__GetAsset_40764728(
         AssetManager_o *this,
         System_String_o *name,
         AssetLoader_LoadEndDataHandler_o *callbackFunc,
@@ -2137,7 +2135,7 @@ bool AssetManager__GetAsset_40580168(
 }
 
 
-AssetData_o *AssetManager__GetAsset_40606252(AssetManager_o *this, System_String_o *name, const MethodInfo *method)
+AssetData_o *AssetManager__GetAsset_40790812(AssetManager_o *this, System_String_o *name, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   AssetData_o *result; // x0
@@ -2154,10 +2152,10 @@ System_String_o *AssetManager__GetDateVersion(const MethodInfo *method)
 {
   AssetManager_c *v1; // x0
 
-  if ( (byte_4C55D03 & 1) == 0 )
+  if ( (byte_4CB5268 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C55D03 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB5268 = 1;
   }
   v1 = AssetManager_TypeInfo;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -2188,16 +2186,16 @@ int64_t AssetManager__GetDownloadSize(AssetManager_o *this, const MethodInfo *me
   int32_t v5; // w20
   int32_t LoadSize; // w8
 
-  if ( (byte_4C55D32 & 1) == 0 )
+  if ( (byte_4CB5297 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
-    byte_4C55D32 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+    byte_4CB5297 = 1;
   }
   processingAssetLoaderList = (System_Collections_Generic_List_object__o *)this->fields.processingAssetLoaderList;
   if ( !processingAssetLoaderList )
 LABEL_8:
-    sub_1C3E7C0(processingAssetLoaderList, method);
+    sub_1C6BC60(processingAssetLoaderList, method);
   downloadSize = this->fields.downloadSize;
   v5 = 0;
   while ( v5 < processingAssetLoaderList->fields._size )
@@ -2205,7 +2203,7 @@ LABEL_8:
     processingAssetLoaderList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                processingAssetLoaderList,
                                                                                v5,
-                                                                               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+                                                                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
     if ( processingAssetLoaderList )
     {
       LoadSize = AssetLoader__get_LoadSize((AssetLoader_o *)processingAssetLoaderList, method);
@@ -2235,10 +2233,10 @@ System_String_o *AssetManager__GetMasterVersion(const MethodInfo *method)
 {
   AssetManager_c *v1; // x0
 
-  if ( (byte_4C55D02 & 1) == 0 )
+  if ( (byte_4CB5267 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C55D02 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB5267 = 1;
   }
   v1 = AssetManager_TypeInfo;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -2256,16 +2254,16 @@ System_Collections_IEnumerator_o *AssetManager__InitCR(AssetManager_o *this, con
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C55D39 & 1) == 0 )
+  if ( (byte_4CB529E & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager__InitCR_d__135_TypeInfo);
-    byte_4C55D39 = 1;
+    sub_1C6BA08(&AssetManager__InitCR_d__135_TypeInfo);
+    byte_4CB529E = 1;
   }
-  v3 = sub_1C3E7B0(AssetManager__InitCR_d__135_TypeInfo);
+  v3 = sub_1C6BC54(AssetManager__InitCR_d__135_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -2317,23 +2315,23 @@ void AssetManager__Initialize(AssetManager_o *this, const MethodInfo *method)
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v45; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o i; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4C55D2B & 1) == 0 )
+  if ( (byte_4CB5290 & 1) == 0 )
   {
-    sub_1C3E564(&AndroidUtil_TypeInfo);
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    byte_4C55D2B = 1;
+    sub_1C6BA08(&AndroidUtil_TypeInfo);
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    byte_4CB5290 = 1;
   }
   memset(&i, 0, sizeof(i));
   initCRW = this->fields.initCRW;
@@ -2341,20 +2339,20 @@ void AssetManager__Initialize(AssetManager_o *this, const MethodInfo *method)
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)this, initCRW, 0);
     this->fields.initCRW = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.initCRW, 0, v4, v5);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.initCRW, 0, v4, v5);
   }
   assetBundleReleaseDic = this->fields.assetBundleReleaseDic;
   if ( !assetBundleReleaseDic )
     goto LABEL_44;
   System_Collections_Generic_Dictionary_object__object___Clear(
     (System_Collections_Generic_Dictionary_object__object__o *)assetBundleReleaseDic,
-    (const MethodInfo_3475968 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+    (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
   assetBundleReleaseDic = this->fields.assetBundleDic;
   if ( !assetBundleReleaseDic )
     goto LABEL_44;
   if ( System_Collections_Generic_Dictionary_object__object___get_Count(
          (System_Collections_Generic_Dictionary_object__object__o *)assetBundleReleaseDic,
-         (const MethodInfo_34754B0 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__) < 1 )
+         (const MethodInfo_34BB60C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__) < 1 )
   {
     v9 = 0;
   }
@@ -2365,32 +2363,32 @@ void AssetManager__Initialize(AssetManager_o *this, const MethodInfo *method)
       goto LABEL_44;
     assetBundleReleaseDic = System_Collections_Generic_Dictionary_object__object___get_Values(
                               (System_Collections_Generic_Dictionary_object__object__o *)assetBundleReleaseDic,
-                              (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+                              (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
     if ( !assetBundleReleaseDic )
       goto LABEL_44;
     System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
       &v45,
       (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)assetBundleReleaseDic,
-      (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+      (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
     v7 = 0;
     for ( i = v45;
           System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
             &i,
-            (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+            (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
           v7 |= AssetData__ReleaseData((AssetData_o *)i.fields._currentValue, 0) )
     {
       if ( !i.fields._currentValue )
-        sub_1C3E7C0(0, v8);
+        sub_1C6BC60(0, v8);
     }
     System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
       &i,
-      (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+      (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
     assetBundleReleaseDic = this->fields.assetBundleDic;
     if ( !assetBundleReleaseDic )
       goto LABEL_44;
     System_Collections_Generic_Dictionary_object__object___Clear(
       (System_Collections_Generic_Dictionary_object__object__o *)assetBundleReleaseDic,
-      (const MethodInfo_3475968 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+      (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
     v9 = v7 != 0;
   }
   assetBundleReleaseDic = this->fields.assetResourceDic;
@@ -2398,38 +2396,38 @@ void AssetManager__Initialize(AssetManager_o *this, const MethodInfo *method)
     goto LABEL_44;
   if ( System_Collections_Generic_Dictionary_object__object___get_Count(
          (System_Collections_Generic_Dictionary_object__object__o *)assetBundleReleaseDic,
-         (const MethodInfo_34754B0 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__) >= 1 )
+         (const MethodInfo_34BB60C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__) >= 1 )
   {
     assetBundleReleaseDic = this->fields.assetResourceDic;
     if ( !assetBundleReleaseDic )
       goto LABEL_44;
     assetBundleReleaseDic = System_Collections_Generic_Dictionary_object__object___get_Values(
                               (System_Collections_Generic_Dictionary_object__object__o *)assetBundleReleaseDic,
-                              (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+                              (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
     if ( !assetBundleReleaseDic )
       goto LABEL_44;
     System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
       &v45,
       (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)assetBundleReleaseDic,
-      (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+      (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
     for ( i = v45;
           System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
             &i,
-            (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+            (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
           v9 |= AssetData__ReleaseData((AssetData_o *)i.fields._currentValue, 0) )
     {
       if ( !i.fields._currentValue )
-        sub_1C3E7C0(0, v11);
+        sub_1C6BC60(0, v11);
     }
     System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
       &i,
-      (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+      (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
     assetBundleReleaseDic = this->fields.assetResourceDic;
     if ( !assetBundleReleaseDic )
       goto LABEL_44;
     System_Collections_Generic_Dictionary_object__object___Clear(
       (System_Collections_Generic_Dictionary_object__object__o *)assetBundleReleaseDic,
-      (const MethodInfo_3475968 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+      (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
   }
   if ( (v9 & 1) != 0 )
     AssetManager__RequestUnloadUnusedAssets(this, 0, v10);
@@ -2444,10 +2442,10 @@ void AssetManager__Initialize(AssetManager_o *this, const MethodInfo *method)
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)assetBundleReleaseDic,
                v12,
-               (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71341564((UnityEngine_Object_o *)Item, 0);
+      UnityEngine_Object__Destroy_71659676((UnityEngine_Object_o *)Item, 0);
       assetBundleReleaseDic = this->fields.processingAssetLoaderList;
       if ( !assetBundleReleaseDic )
         goto LABEL_44;
@@ -2464,10 +2462,10 @@ void AssetManager__Initialize(AssetManager_o *this, const MethodInfo *method)
   assetBundleReleaseDic = this->fields.downLoadWaitList;
   if ( !assetBundleReleaseDic )
 LABEL_44:
-    sub_1C3E7C0(assetBundleReleaseDic, initCRW);
+    sub_1C6BC60(assetBundleReleaseDic, initCRW);
   System_Collections_Generic_Queue_object___Clear(
     (System_Collections_Generic_Queue_T__o *)assetBundleReleaseDic,
-    (const MethodInfo_395C304 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Clear__);
+    (const MethodInfo_39AB08C *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Clear__);
   this->fields.downloadSize = 0;
   this->fields.isCancelDownload = 0;
   Path = AssetStorageCache__GetPath(v16);
@@ -2480,31 +2478,31 @@ LABEL_44:
   }
   static_fields = v20->static_fields;
   static_fields->cachePathName = v21;
-  sub_1C3E508((CGThumbnailListItem_o *)&static_fields->cachePathName, (int32_t)v21, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->cachePathName, (int32_t)v21, v18, v19);
   v23 = AssetManager_TypeInfo->static_fields;
   cachePathName = v23->cachePathName;
   configFileName = v23->configFileName;
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
   v26 = AndroidUtil__ConvertFileNameIfNeed(configFileName, 0);
-  v27 = System_String__Concat_63636468(cachePathName, v26, 0);
+  v27 = System_String__Concat_63966792(cachePathName, v26, 0);
   v28 = AssetManager_TypeInfo->static_fields;
   v28->cacheListFileName = v27;
-  sub_1C3E508((CGThumbnailListItem_o *)&v28->cacheListFileName, (int32_t)v27, v29, v30);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v28->cacheListFileName, (int32_t)v27, v29, v30);
   v31 = AssetManager_TypeInfo->static_fields;
   v32 = v31->cachePathName;
   v33 = AndroidUtil__ConvertFileNameIfNeed(v31->createConfigFileName, 0);
-  v34 = System_String__Concat_63636468(v32, v33, 0);
+  v34 = System_String__Concat_63966792(v32, v33, 0);
   v35 = AssetManager_TypeInfo->static_fields;
   v35->createCacheListFileName = v34;
-  sub_1C3E508((CGThumbnailListItem_o *)&v35->createCacheListFileName, (int32_t)v34, v36, v37);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v35->createCacheListFileName, (int32_t)v34, v36, v37);
   v38 = AssetManager_TypeInfo->static_fields;
   v39 = v38->cachePathName;
   v40 = AndroidUtil__ConvertFileNameIfNeed(v38->backConfigFileName, 0);
-  v41 = System_String__Concat_63636468(v39, v40, 0);
+  v41 = System_String__Concat_63966792(v39, v40, 0);
   v42 = AssetManager_TypeInfo->static_fields;
   v42->backCacheListFileName = v41;
-  sub_1C3E508((CGThumbnailListItem_o *)&v42->backCacheListFileName, (int32_t)v41, v43, v44);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v42->backCacheListFileName, (int32_t)v41, v43, v44);
   this->fields.isInitFirst = 0;
 }
 
@@ -2522,8 +2520,8 @@ void AssetManager__InitializeAssetStorage(AssetManager_o *this, const MethodInfo
     this->fields.isInitEnd = 0;
     inited = AssetManager__InitCR(this, method);
     this->fields.initCRW = inited;
-    sub_1C3E508((CGThumbnailListItem_o *)p_initCRW, (int32_t)inited, v5, v6);
-    UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)this, this->fields.initCRW, 0);
+    sub_1C6B9AC((CGThumbnailListItem_o *)p_initCRW, (int32_t)inited, v5, v6);
+    UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, this->fields.initCRW, 0);
   }
 }
 
@@ -2543,13 +2541,13 @@ void AssetManager__InterruptDownloadAssetStorage(
   AssetData_o *m_CachedPtr; // x0
 
   v5 = this;
-  if ( (byte_4C55D37 & 1) == 0 )
+  if ( (byte_4CB529C & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Peek__);
-    this = (AssetManager_o *)sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
-    byte_4C55D37 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Peek__);
+    this = (AssetManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
+    byte_4CB529C = 1;
   }
   downLoadWaitList = (System_Collections_Generic_Queue_T__o *)v5->fields.downLoadWaitList;
   p_downLoadWaitList = (CGThumbnailListItem_o *)&v5->fields.downLoadWaitList;
@@ -2563,31 +2561,31 @@ void AssetManager__InterruptDownloadAssetStorage(
     {
       this = (AssetManager_o *)System_Collections_Generic_Queue_object___Peek(
                                  v7,
-                                 (const MethodInfo_395C930 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Peek__);
+                                 (const MethodInfo_39AB6B8 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Peek__);
       if ( !this )
         break;
       v10 = (Il2CppObject *)this;
       m_CachedPtr = (AssetData_o *)this->fields.m_CachedPtr;
-      if ( !m_CachedPtr || !AssetData__IsSame_40552500(m_CachedPtr, 0, target, 0) )
+      if ( !m_CachedPtr || !AssetData__IsSame_40737060(m_CachedPtr, 0, target, 0) )
       {
         System_Collections_Generic_Queue_object___Dequeue(
           v7,
-          (const MethodInfo_395C7D4 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
+          (const MethodInfo_39AB55C *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
         System_Collections_Generic_Queue_object___Enqueue(
           v7,
           v10,
-          (const MethodInfo_395C644 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
+          (const MethodInfo_39AB3CC *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Enqueue__);
         if ( --size )
           continue;
       }
       goto LABEL_9;
     }
 LABEL_10:
-    sub_1C3E7C0(this, target);
+    sub_1C6BC60(this, target);
   }
 LABEL_9:
   p_downLoadWaitList->klass = (CGThumbnailListItem_c *)v7;
-  sub_1C3E508(p_downLoadWaitList, (int32_t)v7, (int32_t)method, v3);
+  sub_1C6B9AC(p_downLoadWaitList, (int32_t)v7, (int32_t)method, v3);
 }
 
 
@@ -2607,36 +2605,35 @@ bool AssetManager__IsExistAssetStorage(AssetManager_o *this, System_String_o *na
 {
   struct System_Collections_Generic_Dictionary_string__AssetData__o *assetBundleDic; // x0
 
-  if ( (byte_4C55D4A & 1) == 0 )
+  if ( (byte_4CB52AF & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__);
-    byte_4C55D4A = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__);
+    byte_4CB52AF = 1;
   }
   assetBundleDic = this->fields.assetBundleDic;
   if ( !assetBundleDic )
-    sub_1C3E7C0(0, name);
+    sub_1C6BC60(0, name);
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)assetBundleDic,
            (Il2CppObject *)name,
-           (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__);
+           (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__);
 }
 
 
-bool AssetManager__IsExistAssetStorage_40582256(
+bool AssetManager__IsExistAssetStorage_40766816(
         AssetManager_o *this,
         System_String_array *nameList,
         const MethodInfo *method)
 {
   il2cpp_array_size_t max_length; // x8
-  System_String_array *v4; // x19
   bool v5; // w21
   AssetManager_o *v6; // x20
   unsigned __int64 v7; // x22
+  System_String_o *v8; // x1
 
   if ( !nameList )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   max_length = nameList->max_length;
-  v4 = nameList;
   v5 = (int)max_length > 0;
   if ( (int)max_length >= 1 )
   {
@@ -2645,15 +2642,15 @@ bool AssetManager__IsExistAssetStorage_40582256(
     do
     {
       if ( v7 >= (unsigned int)max_length )
-        sub_1C3E7C8(this, nameList);
-      nameList = (System_String_array *)v4->m_Items[v7];
-      if ( nameList )
+        sub_1C6BC68(this);
+      v8 = nameList->m_Items[v7];
+      if ( v8 )
       {
-        this = (AssetManager_o *)AssetManager__IsExistAssetStorage(v6, (System_String_o *)nameList, method);
+        this = (AssetManager_o *)AssetManager__IsExistAssetStorage(v6, v8, method);
         if ( ((unsigned __int8)this & 1) == 0 )
           break;
       }
-      LODWORD(max_length) = v4->max_length;
+      LODWORD(max_length) = nameList->max_length;
       v5 = (__int64)++v7 < (int)max_length;
     }
     while ( (__int64)v7 < (int)max_length );
@@ -2680,21 +2677,20 @@ bool AssetManager__IsNeedDownload(AssetManager_o *this, System_String_o *name, c
 }
 
 
-bool AssetManager__IsNeedDownload_40582796(
+bool AssetManager__IsNeedDownload_40767356(
         AssetManager_o *this,
         System_String_array *nameList,
         const MethodInfo *method)
 {
   il2cpp_array_size_t max_length; // x8
-  System_String_array *v4; // x19
   bool v5; // w21
   AssetManager_o *v6; // x20
   unsigned __int64 v7; // x22
+  System_String_o *v8; // x1
 
   if ( !nameList )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   max_length = nameList->max_length;
-  v4 = nameList;
   v5 = (int)max_length > 0;
   if ( (int)max_length >= 1 )
   {
@@ -2703,15 +2699,15 @@ bool AssetManager__IsNeedDownload_40582796(
     do
     {
       if ( v7 >= (unsigned int)max_length )
-        sub_1C3E7C8(this, nameList);
-      nameList = (System_String_array *)v4->m_Items[v7];
-      if ( nameList )
+        sub_1C6BC68(this);
+      v8 = nameList->m_Items[v7];
+      if ( v8 )
       {
-        this = (AssetManager_o *)AssetManager__IsNeedDownload(v6, (System_String_o *)nameList, method);
+        this = (AssetManager_o *)AssetManager__IsNeedDownload(v6, v8, method);
         if ( ((unsigned __int8)this & 1) != 0 )
           break;
       }
-      LODWORD(max_length) = v4->max_length;
+      LODWORD(max_length) = nameList->max_length;
       v5 = (__int64)++v7 < (int)max_length;
     }
     while ( (__int64)v7 < (int)max_length );
@@ -2755,29 +2751,29 @@ void AssetManager__LateUpdate(AssetManager_o *this, const MethodInfo *method)
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v33; // [xsp+18h] [xbp-78h] BYREF
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v34; // [xsp+30h] [xbp-60h] BYREF
 
-  if ( (byte_4C55D3E & 1) == 0 )
+  if ( (byte_4CB52A3 & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetManager_OnClickRetryDialog__);
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_1C3E564(&CommonServicePluginScript_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&ManagementManager_TypeInfo);
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&System_IO_StreamWriter_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    sub_1C3E564(&StringLiteral_2043/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/);
-    sub_1C3E564(&StringLiteral_15939/*"[FFFF80]Download error for debug"*/);
-    sub_1C3E564(&StringLiteral_11483/*"SCRIPT"*/);
-    sub_1C3E564(&StringLiteral_2044/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/);
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C55D3E = 1;
+    sub_1C6BA08(&Method_AssetManager_OnClickRetryDialog__);
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_1C6BA08(&CommonServicePluginScript_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&ManagementManager_TypeInfo);
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&System_IO_StreamWriter_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    sub_1C6BA08(&StringLiteral_2036/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/);
+    sub_1C6BA08(&StringLiteral_15922/*"[FFFF80]Download error for debug"*/);
+    sub_1C6BA08(&StringLiteral_11480/*"SCRIPT"*/);
+    sub_1C6BA08(&StringLiteral_2037/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/);
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB52A3 = 1;
   }
   memset(&v34, 0, sizeof(v34));
   assetBundleReleaseDic = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.assetBundleReleaseDic;
@@ -2785,25 +2781,25 @@ void AssetManager__LateUpdate(AssetManager_o *this, const MethodInfo *method)
     goto LABEL_49;
   assetBundleReleaseDic = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                        assetBundleReleaseDic,
-                                                                                       (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+                                                                                       (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
   if ( !assetBundleReleaseDic )
     goto LABEL_49;
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v33,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)assetBundleReleaseDic,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   v4 = 0;
   v34 = v33;
   while ( 1 )
   {
     v5 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
            &v34,
-           (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+           (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
     if ( !v5 )
       break;
     currentValue = v34.fields._currentValue;
     if ( !v34.fields._currentValue )
-      sub_1C3E7C0(v5, v6);
+      sub_1C6BC60(v5, v6);
     if ( !HIDWORD(v34.fields._currentValue[5].klass)
       && !AssetData__get_IsEmpty((AssetData_o *)v34.fields._currentValue, 0) )
     {
@@ -2812,16 +2808,16 @@ void AssetManager__LateUpdate(AssetManager_o *this, const MethodInfo *method)
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &v34,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
   if ( (v4 & 1) != 0 )
     AssetManager__RequestUnloadUnusedAssets(this, 0, v8);
   assetBundleReleaseDic = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.assetBundleReleaseDic;
   if ( !assetBundleReleaseDic )
 LABEL_49:
-    sub_1C3E7C0(assetBundleReleaseDic, method);
+    sub_1C6BC60(assetBundleReleaseDic, method);
   System_Collections_Generic_Dictionary_object__object___Clear(
     assetBundleReleaseDic,
-    (const MethodInfo_3475968 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+    (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
   if ( this->fields.requestWriteCounter >= 0.0 )
   {
     v10 = this->fields.requestWriteCounter - UnityEngine_Time__get_deltaTime(0);
@@ -2843,12 +2839,12 @@ LABEL_49:
       if ( FreeSize < v13->static_fields->LIMIT_FREE_SIZE )
       {
 LABEL_47:
-        v29 = sub_1C3E578(&System_IO_IOException_TypeInfo);
-        v30 = (System_IO_IOException_o *)sub_1C3E7B0(v29);
-        v31 = (System_String_o *)sub_1C3E578(&StringLiteral_5292/*"Disk full"*/);
-        System_IO_IOException___ctor_64455140(v30, v31, 0);
-        v32 = sub_1C3E578(&Method_AssetManager_LateUpdate__);
-        sub_1C3E68C(v30, v32);
+        v29 = sub_1C6BA1C(&System_IO_IOException_TypeInfo);
+        v30 = (System_IO_IOException_o *)sub_1C6BC54(v29);
+        v31 = (System_String_o *)sub_1C6BA1C(&StringLiteral_5280/*"Disk full"*/);
+        System_IO_IOException___ctor_64783912(v30, v31, 0);
+        v32 = sub_1C6BA1C(&Method_AssetManager_LateUpdate__);
+        sub_1C6BB30(v30, v32);
       }
       v14 = AssetManager_TypeInfo;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -2874,10 +2870,10 @@ LABEL_47:
       }
       createCacheListFileName = v16->static_fields->createCacheListFileName;
       UTF8 = System_Text_Encoding__get_UTF8(0);
-      v19 = (System_IO_StreamWriter_o *)sub_1C3E7B0(System_IO_StreamWriter_TypeInfo);
-      System_IO_StreamWriter___ctor_64482504(v19, createCacheListFileName, 0, UTF8, 0);
+      v19 = (System_IO_StreamWriter_o *)sub_1C6BC54(System_IO_StreamWriter_TypeInfo);
+      System_IO_StreamWriter___ctor_64811260(v19, createCacheListFileName, 0, UTF8, 0);
       if ( !v19 )
-        sub_1C3E7C0(v20, v21);
+        sub_1C6BC60(v20, v21);
       ((void (__fastcall *)(System_IO_StreamWriter_o *, struct System_String_o *, const MethodInfo *))v19->klass->vtable._16_Write.methodPtr)(
         v19,
         this->fields.requestConfigWriteData,
@@ -2920,7 +2916,7 @@ LABEL_47:
       System_IO_File__Move(v25->static_fields->createCacheListFileName, v25->static_fields->cacheListFileName, 0);
       v26 = StringLiteral_1/*""*/;
       this->fields.requestConfigWriteData = (struct System_String_o *)StringLiteral_1/*""*/;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.requestConfigWriteData, v26, v27, v28);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.requestConfigWriteData, v26, v27, v28);
       this->fields.requestWriteCounter = -1.0;
     }
   }
@@ -2972,16 +2968,16 @@ AssetData_o *AssetManager__LoadAssetResource(AssetManager_o *this, System_String
   __int64 v10; // x1
 
   v5 = this;
-  if ( (byte_4C55D50 & 1) == 0 )
+  if ( (byte_4CB52B5 & 1) == 0 )
   {
-    sub_1C3E564(&AssetData_TypeInfo);
-    this = (AssetManager_o *)sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
-    byte_4C55D50 = 1;
+    sub_1C6BA08(&AssetData_TypeInfo);
+    this = (AssetManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
+    byte_4CB52B5 = 1;
   }
   AssetData = AssetManager__GetAssetData(this, v5->fields.assetResourceDic, name, v3);
   if ( !AssetData )
   {
-    v8 = (AssetData_o *)sub_1C3E7B0(AssetData_TypeInfo);
+    v8 = (AssetData_o *)sub_1C6BC54(AssetData_TypeInfo);
     AssetData___ctor(v8, 1, name, 0);
     if ( v8 )
     {
@@ -2996,11 +2992,11 @@ AssetData_o *AssetManager__LoadAssetResource(AssetManager_o *this, System_String
           assetResourceDic,
           (Il2CppObject *)name,
           (Il2CppObject *)v8,
-          (const MethodInfo_34757E0 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
+          (const MethodInfo_34BB93C *)Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
         return v8;
       }
     }
-    sub_1C3E7C0(assetResourceDic, v10);
+    sub_1C6BC60(assetResourceDic, v10);
   }
   v7 = AssetData;
   AssetData__AddEntry(AssetData, 0);
@@ -3030,10 +3026,10 @@ bool AssetManager__LoadAssetStorage(
   const MethodInfo *v19; // x1
 
   v8 = this;
-  if ( (byte_4C55D4B & 1) == 0 )
+  if ( (byte_4CB52B0 & 1) == 0 )
   {
-    this = (AssetManager_o *)sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
-    byte_4C55D4B = 1;
+    this = (AssetManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
+    byte_4CB52B0 = 1;
   }
   if ( name )
   {
@@ -3047,11 +3043,11 @@ bool AssetManager__LoadAssetStorage(
       v12 = AssetData;
       assetBundleReleaseDic = (System_Collections_Generic_Dictionary_object__object__o *)v8->fields.assetBundleReleaseDic;
       if ( !assetBundleReleaseDic )
-        sub_1C3E7C0(0, v10);
+        sub_1C6BC60(0, v10);
       System_Collections_Generic_Dictionary_object__object___Remove(
         assetBundleReleaseDic,
         (Il2CppObject *)name,
-        (const MethodInfo_3476CDC *)Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
+        (const MethodInfo_34BCE38 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
       if ( !AssetData__get_IsEmpty(v12, 0) )
       {
         AssetData__AddEntry(v12, 0);
@@ -3085,7 +3081,7 @@ bool AssetManager__LoadAssetStorage(
         AssetData__ReleaseData(v17, 0);
       }
       AssetData__AddEntry(v17, 0);
-      AssetManager__AddLoadWaitStatus_40605004(v8, v17, callbackFunc, 0, v18);
+      AssetManager__AddLoadWaitStatus_40789564(v8, v17, callbackFunc, 0, v18);
       v8->fields.loadParallelMax = loadParallelMax;
       AssetManager__LoadStart(v8, v19);
 LABEL_16:
@@ -3100,7 +3096,7 @@ LABEL_16:
 }
 
 
-bool AssetManager__LoadAssetStorage_40587992(
+bool AssetManager__LoadAssetStorage_40772552(
         AssetManager_o *this,
         System_String_array *nameList,
         System_Action_o *callbackFunc,
@@ -3132,48 +3128,48 @@ bool AssetManager__LoadAssetStorage_40587992(
   const MethodInfo *v31; // x3
   const MethodInfo *v32; // x1
 
-  if ( (byte_4C55D4D & 1) == 0 )
+  if ( (byte_4CB52B2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__AddRange__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__IndexOf__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__RemoveRange__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__Remove__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C3E564(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C3E564(&Method_AssetManager___c__DisplayClass173_0__LoadAssetStorage_b__0__);
-    sub_1C3E564(&AssetManager___c__DisplayClass173_0_TypeInfo);
-    byte_4C55D4D = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__AddRange__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__IndexOf__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__RemoveRange__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Remove__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C6BA08(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C6BA08(&Method_AssetManager___c__DisplayClass173_0__LoadAssetStorage_b__0__);
+    sub_1C6BA08(&AssetManager___c__DisplayClass173_0_TypeInfo);
+    byte_4CB52B2 = 1;
   }
-  v9 = sub_1C3E7B0(AssetManager___c__DisplayClass173_0_TypeInfo);
+  v9 = sub_1C6BC54(AssetManager___c__DisplayClass173_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_31;
   *(_QWORD *)(v9 + 40) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 40), (int32_t)this, v12, v13);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 40), (int32_t)this, v12, v13);
   *(_QWORD *)(v9 + 48) = callbackFunc;
-  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 48), (int32_t)callbackFunc, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 48), (int32_t)callbackFunc, v14, v15);
   *(_DWORD *)(v9 + 56) = loadParallelMax;
-  v16 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
   *(_QWORD *)(v9 + 24) = v16;
   v17 = (System_Collections_Generic_List_object__o **)(v9 + 24);
-  sub_1C3E508((CGThumbnailListItem_o *)(v9 + 24), (int32_t)v16, v18, v19);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)v16, v18, v19);
   AssetStorage = *(System_Collections_Generic_List_object__o **)(v9 + 24);
   if ( !AssetStorage
     || (System_Collections_Generic_List_object___AddRange(
           AssetStorage,
           (System_Collections_Generic_IEnumerable_T__o *)nameList,
-          (const MethodInfo_37B566C *)Method_System_Collections_Generic_List_string__AddRange__),
+          (const MethodInfo_3800B80 *)Method_System_Collections_Generic_List_string__AddRange__),
         *(_DWORD *)(v9 + 16) = 0,
         *(_BYTE *)(v9 + 32) = 0,
         !nameList) )
   {
 LABEL_31:
-    sub_1C3E7C0(AssetStorage, v11);
+    sub_1C6BC60(AssetStorage, v11);
   }
   max_length = nameList->max_length;
   if ( (int)max_length >= 1 )
@@ -3185,7 +3181,7 @@ LABEL_31:
     while ( 1 )
     {
       if ( v24 >= (unsigned int)max_length )
-        sub_1C3E7C8(AssetStorage, v11);
+        sub_1C6BC68(AssetStorage);
       v27 = nameList->m_Items[v24];
       if ( !v27 )
       {
@@ -3195,7 +3191,7 @@ LABEL_31:
         AssetStorage = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___Remove(
                                                                       AssetStorage,
                                                                       0,
-                                                                      (const MethodInfo_37B6988 *)Method_System_Collections_Generic_List_string__Remove__);
+                                                                      (const MethodInfo_3801E9C *)Method_System_Collections_Generic_List_string__Remove__);
         goto LABEL_23;
       }
       if ( !v26 )
@@ -3203,14 +3199,14 @@ LABEL_31:
       v28 = *v25;
       if ( !*v25 )
       {
-        v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndDataHandler_TypeInfo);
+        v28 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
         AssetLoader_LoadEndDataHandler___ctor(
           v28,
           (Il2CppObject *)v9,
           Method_AssetManager___c__DisplayClass173_0__LoadAssetStorage_b__0__,
           v29);
         *(_QWORD *)(v9 + 64) = v28;
-        sub_1C3E508((CGThumbnailListItem_o *)(v9 + 64), (int32_t)v28, v30, v31);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 64), (int32_t)v28, v30, v31);
       }
       if ( !this )
         goto LABEL_31;
@@ -3235,7 +3231,7 @@ LABEL_23:
     AssetStorage = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___IndexOf(
                                                                   AssetStorage,
                                                                   (Il2CppObject *)v27,
-                                                                  (const MethodInfo_37B6100 *)Method_System_Collections_Generic_List_string__IndexOf__);
+                                                                  (const MethodInfo_3801614 *)Method_System_Collections_Generic_List_string__IndexOf__);
     if ( ((unsigned int)AssetStorage & 0x80000000) == 0 )
     {
       v11 = (unsigned int)AssetStorage;
@@ -3246,7 +3242,7 @@ LABEL_23:
         AssetStorage,
         v11,
         AssetStorage->fields._size - v11,
-        (const MethodInfo_37B6CCC *)Method_System_Collections_Generic_List_string__RemoveRange__);
+        (const MethodInfo_38021E0 *)Method_System_Collections_Generic_List_string__RemoveRange__);
     }
 LABEL_22:
     v26 = 0;
@@ -3266,7 +3262,7 @@ LABEL_26:
 }
 
 
-bool AssetManager__LoadAsset_40606008(
+bool AssetManager__LoadAsset_40790568(
         AssetManager_o *this,
         System_String_o *name,
         AssetLoader_LoadEndDataHandler_o *callbackFunc,
@@ -3305,18 +3301,18 @@ bool AssetManager__LoadIsBusy(const MethodInfo *method)
   __int64 v2; // x1
   _DWORD *monitor; // x8
 
-  if ( (byte_4C55D2A & 1) == 0 )
+  if ( (byte_4CB528F & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D2A = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB528F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !Instance )
     goto LABEL_9;
   if ( BYTE2(Instance[3].klass) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
     if ( Instance )
     {
       monitor = Instance[6].monitor;
@@ -3324,7 +3320,7 @@ bool AssetManager__LoadIsBusy(const MethodInfo *method)
         return monitor[6] > 0;
     }
 LABEL_9:
-    sub_1C3E7C0(Instance, v2);
+    sub_1C6BC60(Instance, v2);
   }
   return 1;
 }
@@ -3366,16 +3362,16 @@ bool AssetManager__LoadResourcesAssetStorage(
   const MethodInfo *v36; // x1
   AssetData_o *v38; // [xsp+8h] [xbp-68h]
 
-  if ( (byte_4C55D4C & 1) == 0 )
+  if ( (byte_4CB52B1 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__AddRange__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C3E564(&System_Collections_Generic_List_string__TypeInfo);
-    byte_4C55D4C = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__AddRange__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C6BA08(&System_Collections_Generic_List_string__TypeInfo);
+    byte_4CB52B1 = 1;
   }
   LOBYTE(v11) = 0;
   if ( !name || !resourceNames )
@@ -3395,7 +3391,7 @@ bool AssetManager__LoadResourcesAssetStorage(
     System_Collections_Generic_Dictionary_object__object___Remove(
       assetBundleReleaseDic,
       (Il2CppObject *)name,
-      (const MethodInfo_3476CDC *)Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
+      (const MethodInfo_34BCE38 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
     if ( !AssetData__get_IsEmpty(v15, 0) )
     {
       AssetData__AddEntry(v15, 0);
@@ -3418,10 +3414,10 @@ LABEL_39:
   if ( v11 )
   {
     v19 = v11;
-    v20 = (System_Collections_Generic_List_object__o *)sub_1C3E7B0(System_Collections_Generic_List_string__TypeInfo);
+    v20 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v20,
-      (const MethodInfo_37B4C2C *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
     objectList = v19->fields.objectList;
     if ( objectList )
     {
@@ -3452,14 +3448,14 @@ LABEL_22:
             System_Collections_Generic_List_object___AddWithResize(
               v20,
               v27,
-              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+              *(const MethodInfo_3800974 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
           }
           else
           {
             v32 = &items->obj.klass + size;
             v20->fields._size = size + 1;
             v32[4] = (Il2CppClass *)v27;
-            sub_1C3E508((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v27, v21, v22);
+            sub_1C6B9AC((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v27, v21, v22);
           }
 LABEL_27:
           LODWORD(max_length) = resourceNames->max_length;
@@ -3477,7 +3473,7 @@ LABEL_27:
                                                                                                0);
           if ( !v27 )
             goto LABEL_41;
-          assetBundleReleaseDic = (System_Collections_Generic_Dictionary_object__object__o *)System_String__Equals_63671772(
+          assetBundleReleaseDic = (System_Collections_Generic_Dictionary_object__object__o *)System_String__Equals_64002112(
                                                                                                (System_String_o *)v27,
                                                                                                (System_String_o *)assetBundleReleaseDic,
                                                                                                0);
@@ -3488,13 +3484,13 @@ LABEL_27:
             goto LABEL_22;
         }
 LABEL_42:
-        sub_1C3E7C8(assetBundleReleaseDic, v13);
+        sub_1C6BC68(assetBundleReleaseDic);
       }
 LABEL_28:
       v19 = v38;
       if ( !v20 )
 LABEL_41:
-        sub_1C3E7C0(assetBundleReleaseDic, v13);
+        sub_1C6BC60(assetBundleReleaseDic, v13);
     }
     else
     {
@@ -3503,7 +3499,7 @@ LABEL_41:
       System_Collections_Generic_List_object___AddRange(
         v20,
         (System_Collections_Generic_IEnumerable_T__o *)resourceNames,
-        (const MethodInfo_37B566C *)Method_System_Collections_Generic_List_string__AddRange__);
+        (const MethodInfo_3800B80 *)Method_System_Collections_Generic_List_string__AddRange__);
     }
     v33 = v20->fields._size;
     AssetData__AddEntry(v19, 0);
@@ -3519,8 +3515,8 @@ LABEL_41:
     {
       v34 = (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                      v20,
-                                     (const MethodInfo_37B6FB8 *)Method_System_Collections_Generic_List_string__ToArray__);
-      AssetManager__AddLoadWaitStatus_40605004(this, v19, callbackFunc, v34, v35);
+                                     (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_string__ToArray__);
+      AssetManager__AddLoadWaitStatus_40789564(this, v19, callbackFunc, v34, v35);
       this->fields.loadParallelMax = loadParallelMax;
       AssetManager__LoadStart(this, v36);
     }
@@ -3566,37 +3562,37 @@ bool AssetManager__LoadStart(AssetManager_o *this, const MethodInfo *method)
   System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4C55D46 & 1) == 0 )
+  if ( (byte_4CB52AB & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_AssetLoader__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_AssetLoader__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_AssetLoader__get_Current__);
-    sub_1C3E564(&Method_UnityEngine_GameObject_AddComponent_AssetLoader___);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__GetEnumerator__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
-    sub_1C3E564(&Method_AssetManager___c__DisplayClass152_0__LoadStart_b__0__);
-    sub_1C3E564(&AssetManager___c__DisplayClass152_0_TypeInfo);
-    sub_1C3E564(&StringLiteral_5226/*"DelayLoadStart"*/);
-    byte_4C55D46 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_AssetLoader__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_AssetLoader__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_AssetLoader__get_Current__);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_AddComponent_AssetLoader___);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__GetEnumerator__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
+    sub_1C6BA08(&Method_AssetManager___c__DisplayClass152_0__LoadStart_b__0__);
+    sub_1C6BA08(&AssetManager___c__DisplayClass152_0_TypeInfo);
+    sub_1C6BA08(&StringLiteral_5213/*"DelayLoadStart"*/);
+    byte_4CB52AB = 1;
   }
   memset(&v37, 0, sizeof(v37));
-  v3 = sub_1C3E7B0(AssetManager___c__DisplayClass152_0_TypeInfo);
+  v3 = sub_1C6BC54(AssetManager___c__DisplayClass152_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_49;
   *(_QWORD *)(v3 + 16) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 16), (int32_t)this, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)this, v6, v7);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C5218E )
+  if ( !byte_4CB16DC )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C5218E = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB16DC = 1;
   }
   processingAssetLoaderList = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -3614,15 +3610,15 @@ bool AssetManager__LoadStart(AssetManager_o *this, const MethodInfo *method)
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v36,
       (System_Collections_Generic_List_object__o *)processingAssetLoaderList,
-      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_AssetLoader__GetEnumerator__);
+      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_AssetLoader__GetEnumerator__);
     v37 = v36;
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v37,
-              (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_AssetLoader__MoveNext__) )
+              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_AssetLoader__MoveNext__) )
       ;
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v37,
-      (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_AssetLoader__Dispose__);
+      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_AssetLoader__Dispose__);
   }
   downLoadWaitList = this->fields.downLoadWaitList;
   if ( !downLoadWaitList )
@@ -3636,25 +3632,25 @@ bool AssetManager__LoadStart(AssetManager_o *this, const MethodInfo *method)
     return 0;
   UnityEngine_MonoBehaviour__StartCoroutine(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_5226/*"DelayLoadStart"*/,
+    (System_String_o *)StringLiteral_5213/*"DelayLoadStart"*/,
     0);
   processingAssetLoaderList = this->fields.downLoadWaitList;
   if ( !processingAssetLoaderList
     || (v12 = System_Collections_Generic_Queue_object___Dequeue(
                 (System_Collections_Generic_Queue_T__o *)processingAssetLoaderList,
-                (const MethodInfo_395C7D4 *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__),
+                (const MethodInfo_39AB55C *)Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__Dequeue__),
         *(_QWORD *)(v3 + 24) = v12,
         v13 = v3 + 24,
-        sub_1C3E508((CGThumbnailListItem_o *)(v3 + 24), (int32_t)v12, v14, v15),
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 24), (int32_t)v12, v14, v15),
         (v16 = *(_QWORD *)(v3 + 24)) == 0) )
   {
 LABEL_49:
-    sub_1C3E7C0(processingAssetLoaderList, v5);
+    sub_1C6BC60(processingAssetLoaderList, v5);
   }
-  if ( (byte_4C55D5A & 1) == 0 )
+  if ( (byte_4CB52BF & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C55D5A = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB52BF = 1;
   }
   v17 = *(_QWORD *)(v16 + 16);
   if ( v17 )
@@ -3669,10 +3665,10 @@ LABEL_49:
     {
       v20 = UnityEngine_GameObject__AddComponent_object_(
               (UnityEngine_GameObject_o *)processingAssetLoaderList,
-              (const MethodInfo_3150FE4 *)Method_UnityEngine_GameObject_AddComponent_AssetLoader___);
+              (const MethodInfo_3193044 *)Method_UnityEngine_GameObject_AddComponent_AssetLoader___);
       *(_QWORD *)(v3 + 32) = v20;
       v21 = (Il2CppObject **)(v3 + 32);
-      sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)v20, v22, v23);
+      sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)v20, v22, v23);
       processingAssetLoaderList = this->fields.processingAssetLoaderList;
       if ( processingAssetLoaderList )
       {
@@ -3688,14 +3684,14 @@ LABEL_49:
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)processingAssetLoaderList,
               v5,
-              *(const MethodInfo_37B5460 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+              *(const MethodInfo_3800974 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
           }
           else
           {
             v29 = v26 + 8 * v28;
             *((_DWORD *)processingAssetLoaderList + 6) = v28 + 1;
             *(_QWORD *)(v29 + 32) = v5;
-            sub_1C3E508((CGThumbnailListItem_o *)(v29 + 32), (int32_t)v5, v24, v25);
+            sub_1C6B9AC((CGThumbnailListItem_o *)(v29 + 32), (int32_t)v5, v24, v25);
           }
           if ( *(_QWORD *)v13 )
           {
@@ -3704,7 +3700,7 @@ LABEL_49:
             {
               v32 = *(_QWORD *)(*(_QWORD *)v13 + 16LL);
               *((_QWORD *)processingAssetLoaderList + 4) = v32;
-              sub_1C3E508((CGThumbnailListItem_o *)((char *)processingAssetLoaderList + 32), v32, v30, v31);
+              sub_1C6B9AC((CGThumbnailListItem_o *)((char *)processingAssetLoaderList + 32), v32, v30, v31);
               if ( *(_QWORD *)v13 )
               {
                 processingAssetLoaderList = *v21;
@@ -3713,7 +3709,7 @@ LABEL_49:
                   v34 = *(AssetLoader_LoadEndDataHandler_o **)(*(_QWORD *)v13 + 32LL);
                   if ( v34 )
                     AssetLoader__add_endCallback2((AssetLoader_o *)processingAssetLoaderList, v34, v33);
-                  v35 = sub_1C3E7B0(System_Action_TypeInfo);
+                  v35 = sub_1C6BC54(System_Action_TypeInfo);
                   System_Action___ctor(
                     (System_Action_o *)v35,
                     (Il2CppObject *)v3,
@@ -3748,12 +3744,12 @@ void AssetManager__OnClickRetryDialog(AssetManager_o *this, bool isDecide, const
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_4C55D3A & 1) == 0 )
+  if ( (byte_4CB529F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Application_TypeInfo);
-    sub_1C3E564(&ManagementManager_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_4C55D3A = 1;
+    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
+    sub_1C6BA08(&ManagementManager_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    byte_4CB529F = 1;
   }
   if ( isDecide )
   {
@@ -3763,10 +3759,10 @@ void AssetManager__OnClickRetryDialog(AssetManager_o *this, bool isDecide, const
   {
     if ( !ManagementManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-    if ( !byte_4C55CE2 )
+    if ( !byte_4CB5247 )
     {
-      sub_1C3E564(&ManagementManager_TypeInfo);
-      byte_4C55CE2 = 1;
+      sub_1C6BA08(&ManagementManager_TypeInfo);
+      byte_4CB5247 = 1;
     }
     v5 = ManagementManager_TypeInfo;
     if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -3778,13 +3774,13 @@ void AssetManager__OnClickRetryDialog(AssetManager_o *this, bool isDecide, const
     {
       if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-      UnityEngine_Application__Quit_71136496(0);
+      UnityEngine_Application__Quit_71452840(0);
     }
     else
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
       if ( !Instance )
-        sub_1C3E7C0(0, v7);
+        sub_1C6BC60(0, v7);
       ManagementManager__reboot((ManagementManager_o *)Instance, 0, 1, 0);
     }
   }
@@ -3806,13 +3802,13 @@ void AssetManager__OnEndLoadAssetStorage(AssetManager_o *this, AssetLoader_o *lo
   struct AssetData_o *data; // x8
 
   v4 = this;
-  if ( (byte_4C55D48 & 1) == 0 )
+  if ( (byte_4CB52AD & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__RemoveAt__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
-    this = (AssetManager_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C55D48 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__RemoveAt__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+    this = (AssetManager_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB52AD = 1;
   }
   if ( !loader )
     goto LABEL_11;
@@ -3828,7 +3824,7 @@ void AssetManager__OnEndLoadAssetStorage(AssetManager_o *this, AssetLoader_o *lo
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)this,
              v6,
-             (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
+             (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssetLoader__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (AssetManager_o *)UnityEngine_Object__op_Equality(
@@ -3849,12 +3845,12 @@ void AssetManager__OnEndLoadAssetStorage(AssetManager_o *this, AssetLoader_o *lo
         !this) )
   {
 LABEL_11:
-    sub_1C3E7C0(this, loader);
+    sub_1C6BC60(this, loader);
   }
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)this,
     v6,
-    (const MethodInfo_37B6C34 *)Method_System_Collections_Generic_List_AssetLoader__RemoveAt__);
+    (const MethodInfo_3802148 *)Method_System_Collections_Generic_List_AssetLoader__RemoveAt__);
 LABEL_15:
   if ( isRequestDownload )
   {
@@ -3882,10 +3878,10 @@ void AssetManager__ReleaseAsset(AssetManager_o *this, int32_t type, System_Strin
   __int64 v10; // x1
   struct System_Collections_Generic_Dictionary_string__AssetData__o *assetResourceDic; // x0
 
-  if ( (byte_4C55D49 & 1) == 0 )
+  if ( (byte_4CB52AE & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
-    byte_4C55D49 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
+    byte_4CB52AE = 1;
   }
   Asset = AssetManager__GetAsset(this, type, name, method);
   if ( Asset )
@@ -3896,11 +3892,11 @@ void AssetManager__ReleaseAsset(AssetManager_o *this, int32_t type, System_Strin
     {
       assetResourceDic = this->fields.assetResourceDic;
       if ( !assetResourceDic )
-        sub_1C3E7C0(0, v10);
+        sub_1C6BC60(0, v10);
       System_Collections_Generic_Dictionary_object__object___Remove(
         (System_Collections_Generic_Dictionary_object__object__o *)assetResourceDic,
         (Il2CppObject *)v8->fields.name,
-        (const MethodInfo_3476CDC *)Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
+        (const MethodInfo_34BCE38 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
     }
   }
 }
@@ -3915,21 +3911,21 @@ void AssetManager__ReleaseAssetResource(AssetManager_o *this, System_String_o *n
   System_Collections_Generic_Dictionary_object__object__o *assetResourceDic; // x0
 
   v5 = this;
-  if ( (byte_4C55D51 & 1) == 0 )
+  if ( (byte_4CB52B6 & 1) == 0 )
   {
-    this = (AssetManager_o *)sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
-    byte_4C55D51 = 1;
+    this = (AssetManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
+    byte_4CB52B6 = 1;
   }
   AssetData = AssetManager__GetAssetData(this, v5->fields.assetResourceDic, name, v3);
   if ( AssetData && AssetData__RemoveEntry(AssetData, 0) )
   {
     assetResourceDic = (System_Collections_Generic_Dictionary_object__object__o *)v5->fields.assetResourceDic;
     if ( !assetResourceDic )
-      sub_1C3E7C0(0, v7);
+      sub_1C6BC60(0, v7);
     System_Collections_Generic_Dictionary_object__object___Remove(
       assetResourceDic,
       (Il2CppObject *)name,
-      (const MethodInfo_3476CDC *)Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
+      (const MethodInfo_34BCE38 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Remove__);
   }
 }
 
@@ -3954,7 +3950,7 @@ void AssetManager__ReleaseAssetStorageAll(
   unsigned __int64 v6; // x21
 
   if ( !nameList )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   max_length = nameList->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -3962,7 +3958,7 @@ void AssetManager__ReleaseAssetStorageAll(
     do
     {
       if ( v6 >= (unsigned int)max_length )
-        sub_1C3E7C8(this, nameList);
+        sub_1C6BC68(this);
       AssetManager__ReleaseAssetStorageEntryAll(this, nameList->m_Items[v6], method);
       LODWORD(max_length) = nameList->max_length;
       ++v6;
@@ -3983,7 +3979,7 @@ void AssetManager__ReleaseAssetStorageEntryAll(AssetManager_o *this, System_Stri
 }
 
 
-void AssetManager__ReleaseAssetStorage_40590308(
+void AssetManager__ReleaseAssetStorage_40774868(
         AssetManager_o *this,
         System_String_array *nameList,
         const MethodInfo *method)
@@ -3992,7 +3988,7 @@ void AssetManager__ReleaseAssetStorage_40590308(
   unsigned __int64 v6; // x21
 
   if ( !nameList )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   max_length = nameList->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -4000,7 +3996,7 @@ void AssetManager__ReleaseAssetStorage_40590308(
     do
     {
       if ( v6 >= (unsigned int)max_length )
-        sub_1C3E7C8(this, nameList);
+        sub_1C6BC68(this);
       AssetManager__ReleaseAssetStorage(this, nameList->m_Items[v6], method);
       LODWORD(max_length) = nameList->max_length;
       ++v6;
@@ -4010,8 +4006,7 @@ void AssetManager__ReleaseAssetStorage_40590308(
 }
 
 
-// local variable allocation has failed, the output may be wrong!
-void AssetManager__ReleaseAsset_40580856(
+void AssetManager__ReleaseAsset_40765416(
         AssetManager_o *this,
         int32_t type,
         System_String_array *nameList,
@@ -4021,7 +4016,7 @@ void AssetManager__ReleaseAsset_40580856(
   unsigned __int64 v8; // x22
 
   if ( !nameList )
-    sub_1C3E7C0(this, *(_QWORD *)&type);
+    sub_1C6BC60(this, type);
   max_length = nameList->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -4029,7 +4024,7 @@ void AssetManager__ReleaseAsset_40580856(
     do
     {
       if ( v8 >= (unsigned int)max_length )
-        sub_1C3E7C8(this, *(_QWORD *)&type);
+        sub_1C6BC68(this);
       AssetManager__ReleaseAsset(this, type, nameList->m_Items[v8], method);
       LODWORD(max_length) = nameList->max_length;
       ++v8;
@@ -4039,7 +4034,7 @@ void AssetManager__ReleaseAsset_40580856(
 }
 
 
-void AssetManager__ReleaseAsset_40581156(AssetManager_o *this, AssetData_o *assetInfo, const MethodInfo *method)
+void AssetManager__ReleaseAsset_40765716(AssetManager_o *this, AssetData_o *assetInfo, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
@@ -4048,7 +4043,7 @@ void AssetManager__ReleaseAsset_40581156(AssetManager_o *this, AssetData_o *asse
 }
 
 
-void AssetManager__ReleaseAsset_40581356(
+void AssetManager__ReleaseAsset_40765916(
         AssetManager_o *this,
         AssetData_array *assetInfoList,
         const MethodInfo *method)
@@ -4059,7 +4054,7 @@ void AssetManager__ReleaseAsset_40581356(
   AssetData_o *v8; // x8
 
   if ( !assetInfoList )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   max_length = assetInfoList->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -4067,7 +4062,7 @@ void AssetManager__ReleaseAsset_40581356(
     do
     {
       if ( v7 >= (unsigned int)max_length )
-        sub_1C3E7C8(this, assetInfoList);
+        sub_1C6BC68(this);
       v8 = assetInfoList->m_Items[v7];
       if ( v8 )
         AssetManager__ReleaseAsset(this, v8->fields.type, v8->fields.name, v3);
@@ -4084,11 +4079,11 @@ void AssetManager__ReleaseReservation(AssetManager_o *this, AssetData_o *info, c
   AssetManager_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4C55D45 & 1) == 0 )
+  if ( (byte_4CB52AA & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
-    this = (AssetManager_o *)sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__);
-    byte_4C55D45 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
+    this = (AssetManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__);
+    byte_4CB52AA = 1;
   }
   if ( !info )
     goto LABEL_11;
@@ -4100,7 +4095,7 @@ void AssetManager__ReleaseReservation(AssetManager_o *this, AssetData_o *info, c
       if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
              (System_Collections_Generic_Dictionary_object__object__o *)this,
              (Il2CppObject *)info->fields.name,
-             (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__) )
+             (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__) )
       {
         return;
       }
@@ -4111,12 +4106,12 @@ void AssetManager__ReleaseReservation(AssetManager_o *this, AssetData_o *info, c
           (System_Collections_Generic_Dictionary_object__object__o *)this,
           (Il2CppObject *)info->fields.name,
           (Il2CppObject *)info,
-          (const MethodInfo_34757E0 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
+          (const MethodInfo_34BB93C *)Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
         return;
       }
     }
 LABEL_11:
-    sub_1C3E7C0(this, info);
+    sub_1C6BC60(this, info);
   }
 }
 
@@ -4134,7 +4129,7 @@ void AssetManager__RequestUnloadUnusedAssets(
   {
     this->fields.requestUnloadUnusedAssets = 1;
     v4 = AssetManager__coUnloadUnusedAssets(this, (const MethodInfo *)callback);
-    UnityEngine_MonoBehaviour__StartCoroutine_71327136((UnityEngine_MonoBehaviour_o *)this, v4, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v4, 0);
   }
 }
 
@@ -4151,53 +4146,53 @@ void AssetManager__ResetAssetStorageVersion(AssetManager_o *this, System_String_
   System_String_o *v12; // x0
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v13; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C55D34 & 1) == 0 )
+  if ( (byte_4CB5299 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    sub_1C3E564(&StringLiteral_1048/*"/"*/);
-    byte_4C55D34 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    sub_1C6BA08(&StringLiteral_1041/*"/"*/);
+    byte_4CB5299 = 1;
   }
   memset(&v13, 0, sizeof(v13));
-  Values = (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)System_String__Concat_63636468(
+  Values = (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)System_String__Concat_63966792(
                                                                                       path,
-                                                                                      (System_String_o *)StringLiteral_1048/*"/"*/,
+                                                                                      (System_String_o *)StringLiteral_1041/*"/"*/,
                                                                                       0);
   assetBundleDic = this->fields.assetBundleDic;
   if ( !assetBundleDic
     || (v8 = (System_String_o *)Values,
         (Values = System_Collections_Generic_Dictionary_object__object___get_Values(
                     (System_Collections_Generic_Dictionary_object__object__o *)assetBundleDic,
-                    (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0) )
+                    (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0) )
   {
-    sub_1C3E7C0(Values, v6);
+    sub_1C6BC60(Values, v6);
   }
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v13,
     Values,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   while ( 1 )
   {
     v9 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
            &v13,
-           (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+           (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
     if ( !v9 )
       break;
     currentValue = v13.fields._currentValue;
     if ( !v13.fields._currentValue )
-      sub_1C3E7C0(v9, v10);
+      sub_1C6BC60(v9, v10);
     v12 = *(System_String_o **)((char *)&v13.fields._currentValue->klass + (unsigned __int64)&off_18);
     if ( !v12 )
-      sub_1C3E7C0(0, v10);
+      sub_1C6BC60(0, v10);
     if ( System_String__StartsWith(v12, v8, 0) )
       AssetData__ResetVersion((AssetData_o *)currentValue, 0);
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &v13,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
 }
 
 
@@ -4218,13 +4213,13 @@ void AssetManager__SetAssetBundleUnload(System_String_o *name, const MethodInfo 
   __int64 v5; // x1
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C55D0F & 1) == 0 )
+  if ( (byte_4CB5274 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D0F = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5274 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   AssetData = (AssetData_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
@@ -4237,7 +4232,7 @@ void AssetManager__SetAssetBundleUnload(System_String_o *name, const MethodInfo 
                         name,
                         v6)) == 0 )
     {
-      sub_1C3E7C0(AssetData, v5);
+      sub_1C6BC60(AssetData, v5);
     }
     AssetData->fields.isAssetBundleUnload = 1;
   }
@@ -4261,11 +4256,11 @@ void AssetManager__SetOfflineStatus(const MethodInfo *method)
   ManagerConfig_c *v1; // x0
   AssetManager_c *v2; // x0
 
-  if ( (byte_4C55CF7 & 1) == 0 )
+  if ( (byte_4CB525C & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C55CF7 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB525C = 1;
   }
   v1 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -4294,11 +4289,11 @@ bool AssetManager__SetOnlineStatus(const MethodInfo *method)
   System_String_o *String; // x0
   AssetManager_c *v5; // x0
 
-  if ( (byte_4C55CF8 & 1) == 0 )
+  if ( (byte_4CB525D & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C55CF8 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB525D = 1;
   }
   v1 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -4338,44 +4333,44 @@ void AssetManager__SetupAssetStorageAll(AssetManager_o *this, const MethodInfo *
   const MethodInfo *v7; // x2
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v8; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C55D2C & 1) == 0 )
+  if ( (byte_4CB5291 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    byte_4C55D2C = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    byte_4CB5291 = 1;
   }
   memset(&v8, 0, sizeof(v8));
   assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.assetBundleDic;
   if ( !assetBundleDic
     || (assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                       assetBundleDic,
-                                                                                      (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
+                                                                                      (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
   {
-    sub_1C3E7C0(assetBundleDic, method);
+    sub_1C6BC60(assetBundleDic, method);
   }
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v8,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)assetBundleDic,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   while ( 1 )
   {
     v4 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
            &v8,
-           (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+           (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
     if ( !v4 )
       break;
     currentValue = v8.fields._currentValue;
     if ( !v8.fields._currentValue )
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     if ( AssetData__IsNeedUpdateVersion((AssetData_o *)v8.fields._currentValue, 0) )
-      AssetManager__AddLoadWaitStatus_40593528(this, (AssetData_o *)currentValue, v7);
+      AssetManager__AddLoadWaitStatus_40778088(this, (AssetData_o *)currentValue, v7);
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &v8,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
 }
 
 
@@ -4397,23 +4392,23 @@ void AssetManager__StartThreadConfigWriteRequest(AssetManager_o *this, const Met
   const MethodInfo *v7; // x3
   __int64 v8; // x1
 
-  if ( (byte_4C55D3C & 1) == 0 )
+  if ( (byte_4CB52A1 & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetManager_ConfigWriteRequestThread__);
-    sub_1C3E564(&System_Threading_ThreadStart_TypeInfo);
-    sub_1C3E564(&System_Threading_Thread_TypeInfo);
-    byte_4C55D3C = 1;
+    sub_1C6BA08(&Method_AssetManager_ConfigWriteRequestThread__);
+    sub_1C6BA08(&System_Threading_ThreadStart_TypeInfo);
+    sub_1C6BA08(&System_Threading_Thread_TypeInfo);
+    byte_4CB52A1 = 1;
   }
   this->fields.reserveWriteRequest = 0;
-  v3 = (System_Threading_ThreadStart_o *)sub_1C3E7B0(System_Threading_ThreadStart_TypeInfo);
+  v3 = (System_Threading_ThreadStart_o *)sub_1C6BC54(System_Threading_ThreadStart_TypeInfo);
   System_Threading_ThreadStart___ctor(v3, (Il2CppObject *)this, Method_AssetManager_ConfigWriteRequestThread__, 0);
-  v4 = (System_Threading_Thread_o *)sub_1C3E7B0(System_Threading_Thread_TypeInfo);
+  v4 = (System_Threading_Thread_o *)sub_1C6BC54(System_Threading_Thread_TypeInfo);
   System_Threading_Thread___ctor(v4, v3, 0);
   this->fields.writeRequestThread = v4;
   p_writeRequestThread = &this->fields.writeRequestThread;
-  sub_1C3E508((CGThumbnailListItem_o *)p_writeRequestThread, (int32_t)v4, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p_writeRequestThread, (int32_t)v4, v6, v7);
   if ( !*p_writeRequestThread )
-    sub_1C3E7C0(0, v8);
+    sub_1C6BC60(0, v8);
   System_Threading_Thread__Start(*p_writeRequestThread, 0);
 }
 
@@ -4434,33 +4429,33 @@ bool AssetManager__TryGetAssetObject_object_(
         Il2CppObject **data,
         System_String_o *path,
         System_String_o *name,
-        const MethodInfo_30DB180 *method)
+        const MethodInfo_311C7A0 *method)
 {
   AssetData_o *AssetStorage; // x0
   int32_t v9; // w2
   const MethodInfo *v10; // x3
-  Il2CppObject *Object_object__51228128; // x1
+  Il2CppObject *Object_object__51495936; // x1
   Il2CppObject *v12; // x19
 
   if ( !method->rgctx_data )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C8ECD4(method);
+      sub_1C41AF8(method);
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorage = AssetManager__getAssetStorage(path, 0);
   if ( AssetStorage )
-    Object_object__51228128 = AssetData__GetObject_object__51228128(
+    Object_object__51495936 = AssetData__GetObject_object__51495936(
                                 AssetStorage,
                                 name,
-                                (const MethodInfo_30DADE0 *)method->rgctx_data->_2_AssetData_GetObject_T_);
+                                (const MethodInfo_311C400 *)method->rgctx_data->_2_AssetData_GetObject_T_);
   else
-    Object_object__51228128 = 0;
-  *data = Object_object__51228128;
-  sub_1C3E508((CGThumbnailListItem_o *)data, (int32_t)Object_object__51228128, v9, v10);
+    Object_object__51495936 = 0;
+  *data = Object_object__51495936;
+  sub_1C6B9AC((CGThumbnailListItem_o *)data, (int32_t)Object_object__51495936, v9, v10);
   v12 = *data;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -4476,7 +4471,7 @@ bool AssetManager__TryGetUIAtlas(
 {
   const MethodInfo *v7; // x1
   AssetData_o *AssetStorage; // x0
-  Il2CppObject *Object_object__51228128; // x20
+  Il2CppObject *Object_object__51495936; // x20
   _BOOL8 v10; // x0
   __int64 v11; // x1
   Il2CppObject *Component_object; // x0
@@ -4484,38 +4479,38 @@ bool AssetManager__TryGetUIAtlas(
   const MethodInfo *v14; // x3
   UnityEngine_Object_o *v15; // x19
 
-  if ( (byte_4C55D52 & 1) == 0 )
+  if ( (byte_4CB52B7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetData_GetObject_GameObject____78185152);
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C55D52 = 1;
+    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB52B7 = 1;
   }
   *atlas = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)atlas, 0, (int32_t)atlasName, method);
+  sub_1C6B9AC((CGThumbnailListItem_o *)atlas, 0, (int32_t)atlasName, method);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorage = AssetManager__getAssetStorage(name, v7);
   if ( AssetStorage )
-    Object_object__51228128 = AssetData__GetObject_object__51228128(
+    Object_object__51495936 = AssetData__GetObject_object__51495936(
                                 AssetStorage,
                                 atlasName,
-                                (const MethodInfo_30DADE0 *)Method_AssetData_GetObject_GameObject____78185152);
+                                (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
   else
-    Object_object__51228128 = 0;
+    Object_object__51495936 = 0;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51228128, 0, 0);
+  v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Object_object__51495936, 0, 0);
   if ( v10 )
   {
-    if ( !Object_object__51228128 )
-      sub_1C3E7C0(v10, v11);
+    if ( !Object_object__51495936 )
+      sub_1C6BC60(v10, v11);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)Object_object__51228128,
-                         (const MethodInfo_31510CC *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                         (UnityEngine_GameObject_o *)Object_object__51495936,
+                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
     *atlas = (UIAtlas_o *)Component_object;
-    sub_1C3E508((CGThumbnailListItem_o *)atlas, (int32_t)Component_object, v13, v14);
+    sub_1C6B9AC((CGThumbnailListItem_o *)atlas, (int32_t)Component_object, v13, v14);
   }
   v15 = (UnityEngine_Object_o *)*atlas;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -4540,16 +4535,16 @@ System_Collections_IEnumerator_o *AssetManager__WaitForExecutionUnloadUnuseAsset
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C55CF5 & 1) == 0 )
+  if ( (byte_4CB525A & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_TypeInfo);
-    byte_4C55CF5 = 1;
+    sub_1C6BA08(&AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_TypeInfo);
+    byte_4CB525A = 1;
   }
-  v3 = sub_1C3E7B0(AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_TypeInfo);
+  v3 = sub_1C6BC54(AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -4562,21 +4557,21 @@ void AssetManager___DownloadAssetStorageAttributeWithCheckDialog_b__119_0(
   struct System_Collections_Generic_List_AssetLoader__o *processingAssetLoaderList; // x8
 
   v2 = this;
-  if ( (byte_4C55D58 & 1) == 0 )
+  if ( (byte_4CB52BD & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
-    sub_1C3E564(&SoundManager_TypeInfo);
-    this = (AssetManager_o *)sub_1C3E564(&StringLiteral_9323/*"NOW_LOADING"*/);
-    byte_4C55D58 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetLoader__get_Count__);
+    sub_1C6BA08(&SoundManager_TypeInfo);
+    this = (AssetManager_o *)sub_1C6BA08(&StringLiteral_9320/*"NOW_LOADING"*/);
+    byte_4CB52BD = 1;
   }
   processingAssetLoaderList = v2->fields.processingAssetLoaderList;
   if ( !processingAssetLoaderList )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   if ( processingAssetLoaderList->fields._size >= 1 )
   {
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-    SoundManager__playBgm((System_String_o *)StringLiteral_9323/*"NOW_LOADING"*/, 0);
+    SoundManager__playBgm((System_String_o *)StringLiteral_9320/*"NOW_LOADING"*/, 0);
   }
 }
 
@@ -4596,10 +4591,10 @@ void AssetManager__add_unloadCallbacks(
   AssetManager_ResourceUnloadEventHandler_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C55CF3 & 1) == 0 )
+  if ( (byte_4CB5258 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_ResourceUnloadEventHandler_TypeInfo);
-    byte_4C55CF3 = 1;
+    sub_1C6BA08(&AssetManager_ResourceUnloadEventHandler_TypeInfo);
+    byte_4CB5258 = 1;
   }
   unloadCallbacks = this->fields.unloadCallbacks;
   p_unloadCallbacks = &this->fields.unloadCallbacks;
@@ -4612,13 +4607,13 @@ void AssetManager__add_unloadCallbacks(
       if ( (AssetManager_ResourceUnloadEventHandler_c *)v8->klass != AssetManager_ResourceUnloadEventHandler_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_unloadCallbacks, v8, v6);
+    v9 = sub_1CC77DC(p_unloadCallbacks, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   AssetManager__remove_unloadCallbacks(v11, v12, v13);
 }
 
@@ -4629,20 +4624,20 @@ void AssetManager__cancelDownloadAssetStorage(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C55D17 & 1) == 0 )
+  if ( (byte_4CB527C & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D17 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB527C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v2, v3);
+      sub_1C6BC60(v2, v3);
     AssetManager__CancelDownloadAssetStorage((AssetManager_o *)Instance, v3);
   }
 }
@@ -4654,16 +4649,16 @@ System_Collections_IEnumerator_o *AssetManager__coUnloadUnusedAssets(AssetManage
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C55D3D & 1) == 0 )
+  if ( (byte_4CB52A2 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager__coUnloadUnusedAssets_d__142_TypeInfo);
-    byte_4C55D3D = 1;
+    sub_1C6BA08(&AssetManager__coUnloadUnusedAssets_d__142_TypeInfo);
+    byte_4CB52A2 = 1;
   }
-  v3 = sub_1C3E7B0(AssetManager__coUnloadUnusedAssets_d__142_TypeInfo);
+  v3 = sub_1C6BC54(AssetManager__coUnloadUnusedAssets_d__142_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v4, v5);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -4675,7 +4670,7 @@ bool AssetManager__compAssetStorage(System_String_o *name1, System_String_o *nam
   if ( name1 )
   {
     if ( name2 )
-      return System_String__Equals_63671772(name1, name2, 0);
+      return System_String__Equals_64002112(name1, name2, 0);
     stringLength = name1->fields._stringLength;
     return stringLength == 0;
   }
@@ -4693,13 +4688,12 @@ bool AssetManager__compAssetStorageList(
         System_String_array *list2,
         const MethodInfo *method)
 {
-  System_String_array *v3; // x19
   il2cpp_array_size_t max_length; // x8
   System_String_array *v5; // x20
   unsigned __int64 v6; // x21
   __int64 v7; // x22
+  System_String_o *v8; // x1
 
-  v3 = list2;
   if ( list1 && (max_length = list1->max_length, v5 = list1, max_length) )
   {
     if ( !list2 || (_DWORD)max_length != LODWORD(list2->max_length) )
@@ -4712,22 +4706,19 @@ bool AssetManager__compAssetStorageList(
         v7 = (unsigned int)list1->max_length - 1LL;
         do
         {
-          if ( v6 >= LODWORD(v3->max_length) )
+          if ( v6 >= LODWORD(list2->max_length) )
             break;
           list1 = (System_String_array *)v5->m_Items[v6];
-          list2 = (System_String_array *)v3->m_Items[v6];
+          v8 = list2->m_Items[v6];
           if ( list1 )
           {
-            if ( !list2 )
+            if ( !v8 )
               return 0;
-            list1 = (System_String_array *)System_String__Equals_63671772(
-                                             (System_String_o *)list1,
-                                             (System_String_o *)list2,
-                                             0);
+            list1 = (System_String_array *)System_String__Equals_64002112((System_String_o *)list1, v8, 0);
             if ( ((unsigned __int8)list1 & 1) == 0 )
               return 0;
           }
-          else if ( list2 )
+          else if ( v8 )
           {
             return 0;
           }
@@ -4737,7 +4728,7 @@ bool AssetManager__compAssetStorageList(
         }
         while ( v6 < LODWORD(v5->max_length) );
       }
-      sub_1C3E7C8(list1, list2);
+      sub_1C6BC68(list1);
     }
   }
   else if ( list2 )
@@ -4748,20 +4739,19 @@ bool AssetManager__compAssetStorageList(
 }
 
 
-bool AssetManager__compAssetStorageList_40578916(
+bool AssetManager__compAssetStorageList_40763476(
         AssetData_array *assetList,
         System_String_array *list,
         const MethodInfo *method)
 {
-  System_String_array *v3; // x19
   il2cpp_array_size_t max_length; // x8
   AssetData_array *v5; // x20
   unsigned __int64 v6; // x21
   __int64 v7; // x22
   AssetData_o *v8; // x8
+  System_String_o *v9; // x1
   System_String_o *name; // x0
 
-  v3 = list;
   if ( assetList && (max_length = assetList->max_length, v5 = assetList, max_length) )
   {
     if ( !list || (_DWORD)max_length != LODWORD(list->max_length) )
@@ -4774,22 +4764,22 @@ bool AssetManager__compAssetStorageList_40578916(
         v7 = (unsigned int)assetList->max_length - 1LL;
         do
         {
-          if ( v6 >= LODWORD(v3->max_length) )
+          if ( v6 >= LODWORD(list->max_length) )
             break;
           v8 = v5->m_Items[v6];
-          list = (System_String_array *)v3->m_Items[v6];
+          v9 = list->m_Items[v6];
           if ( v8 )
           {
-            if ( !list )
+            if ( !v9 )
               return 0;
             name = v8->fields.name;
             if ( !name )
-              sub_1C3E7C0(0, list);
-            assetList = (AssetData_array *)System_String__Equals_63671772(name, (System_String_o *)list, 0);
+              sub_1C6BC60(0, v9);
+            assetList = (AssetData_array *)System_String__Equals_64002112(name, v9, 0);
             if ( ((unsigned __int8)assetList & 1) == 0 )
               return 0;
           }
-          else if ( list )
+          else if ( v9 )
           {
             return 0;
           }
@@ -4799,7 +4789,7 @@ bool AssetManager__compAssetStorageList_40578916(
         }
         while ( v6 < LODWORD(v5->max_length) );
       }
-      sub_1C3E7C8(assetList, list);
+      sub_1C6BC68(assetList);
     }
   }
   else if ( list )
@@ -4810,7 +4800,7 @@ bool AssetManager__compAssetStorageList_40578916(
 }
 
 
-bool AssetManager__compAssetStorage_40578644(AssetData_o *data, System_String_o *name, const MethodInfo *method)
+bool AssetManager__compAssetStorage_40763204(AssetData_o *data, System_String_o *name, const MethodInfo *method)
 {
   struct System_String_o *v3; // x0
   int32_t stringLength; // w8
@@ -4818,7 +4808,7 @@ bool AssetManager__compAssetStorage_40578644(AssetData_o *data, System_String_o 
   if ( data && (v3 = data->fields.name) != 0 )
   {
     if ( name )
-      return System_String__Equals_63671772(v3, name, 0);
+      return System_String__Equals_64002112(v3, name, 0);
     stringLength = v3->fields._stringLength;
   }
   else
@@ -4837,20 +4827,20 @@ void AssetManager__debugLog(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C55CFB & 1) == 0 )
+  if ( (byte_4CB5260 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55CFB = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5260 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v2, v3);
+      sub_1C6BC60(v2, v3);
     AssetManager__DebugLog((AssetManager_o *)Instance, v3);
   }
 }
@@ -4867,25 +4857,25 @@ bool AssetManager__downloadAssetStorage(
   __int64 v9; // x1
   const MethodInfo *v10; // x4
 
-  if ( (byte_4C55D1A & 1) == 0 )
+  if ( (byte_4CB527F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D1A = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB527F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v8 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   return AssetManager__DownloadAssetStorage((AssetManager_o *)Instance, name, callbackFunc, maxParallelLoad, v10);
 }
 
 
-bool AssetManager__downloadAssetStorage_40585604(
+bool AssetManager__downloadAssetStorage_40770164(
         System_String_array *nameList,
         System_Action_o *callbackFunc,
         const MethodInfo *method)
@@ -4895,21 +4885,21 @@ bool AssetManager__downloadAssetStorage_40585604(
   __int64 v7; // x1
   const MethodInfo *v8; // x4
 
-  if ( (byte_4C55D1B & 1) == 0 )
+  if ( (byte_4CB5280 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D1B = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5280 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v6 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v6, v7);
-  return AssetManager__DownloadAssetStorage_40585796((AssetManager_o *)Instance, nameList, callbackFunc, 1, v8);
+    sub_1C6BC60(v6, v7);
+  return AssetManager__DownloadAssetStorage_40770356((AssetManager_o *)Instance, nameList, callbackFunc, 1, v8);
 }
 
 
@@ -4920,20 +4910,20 @@ AssetData_o *AssetManager__getAsset(int32_t type, System_String_o *name, const M
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C55D08 & 1) == 0 )
+  if ( (byte_4CB526D & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D08 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB526D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v6 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v6, v7);
+    sub_1C6BC60(v6, v7);
   return AssetManager__GetAsset((AssetManager_o *)Instance, type, name, v8);
 }
 
@@ -4945,20 +4935,20 @@ AssetData_o *AssetManager__getAssetResource(System_String_o *name, const MethodI
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D27 & 1) == 0 )
+  if ( (byte_4CB528C & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D27 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB528C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   return AssetManager__GetAssetResource((AssetManager_o *)Instance, name, v6);
 }
 
@@ -4970,20 +4960,20 @@ AssetData_o *AssetManager__getAssetStorage(System_String_o *name, const MethodIn
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D20 & 1) == 0 )
+  if ( (byte_4CB5285 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D20 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5285 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   return AssetManager__GetAssetStorage((AssetManager_o *)Instance, name, v6);
 }
 
@@ -4995,20 +4985,20 @@ AssetData_o *AssetManager__getAssetStorageData(System_String_o *name, const Meth
   __int64 v5; // x1
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C55D21 & 1) == 0 )
+  if ( (byte_4CB5286 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D21 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5286 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   return AssetManager__GetAssetData(
            (AssetManager_o *)v4,
            (System_Collections_Generic_Dictionary_string__AssetData__o *)Instance[4].klass,
@@ -5024,50 +5014,50 @@ System_String_array *AssetManager__getAssetStorageList(System_String_o *path, co
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D15 & 1) == 0 )
+  if ( (byte_4CB527A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D15 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB527A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   return AssetManager__GetAssetStorageList((AssetManager_o *)Instance, path, v6);
 }
 
 
-AssetData_array *AssetManager__getAssetStorage_40589144(System_String_array *nameList, const MethodInfo *method)
+AssetData_array *AssetManager__getAssetStorage_40773704(System_String_array *nameList, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D22 & 1) == 0 )
+  if ( (byte_4CB5287 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D22 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5287 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
-  return AssetManager__GetAssetStorage_40589324((AssetManager_o *)Instance, nameList, v6);
+    sub_1C6BC60(v4, v5);
+  return AssetManager__GetAssetStorage_40773884((AssetManager_o *)Instance, nameList, v6);
 }
 
 
-bool AssetManager__getAssetStorage_40589596(
+bool AssetManager__getAssetStorage_40774156(
         System_String_o *name,
         AssetLoader_LoadEndDataHandler_o *callbackFunc,
         const MethodInfo *method)
@@ -5077,25 +5067,25 @@ bool AssetManager__getAssetStorage_40589596(
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C55D23 & 1) == 0 )
+  if ( (byte_4CB5288 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D23 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5288 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v6 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v6, v7);
-  return AssetManager__GetAssetStorage_40589784((AssetManager_o *)Instance, name, callbackFunc, v8);
+    sub_1C6BC60(v6, v7);
+  return AssetManager__GetAssetStorage_40774344((AssetManager_o *)Instance, name, callbackFunc, v8);
 }
 
 
-bool AssetManager__getAsset_40579672(
+bool AssetManager__getAsset_40764232(
         int32_t type,
         System_String_o *name,
         AssetLoader_LoadEndDataHandler_o *callbackFunc,
@@ -5106,25 +5096,25 @@ bool AssetManager__getAsset_40579672(
   __int64 v9; // x1
   const MethodInfo *v10; // x4
 
-  if ( (byte_4C55D09 & 1) == 0 )
+  if ( (byte_4CB526E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D09 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB526E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v8 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v8, v9);
-  return AssetManager__GetAsset_40579880((AssetManager_o *)Instance, type, name, callbackFunc, v10);
+    sub_1C6BC60(v8, v9);
+  return AssetManager__GetAsset_40764440((AssetManager_o *)Instance, type, name, callbackFunc, v10);
 }
 
 
-bool AssetManager__getAsset_40579980(
+bool AssetManager__getAsset_40764540(
         System_String_o *name,
         AssetLoader_LoadEndDataHandler_o *callbackFunc,
         const MethodInfo *method)
@@ -5134,21 +5124,21 @@ bool AssetManager__getAsset_40579980(
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C55D0A & 1) == 0 )
+  if ( (byte_4CB526F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D0A = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB526F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v6 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v6, v7);
-  return AssetManager__GetAsset_40580168((AssetManager_o *)Instance, name, callbackFunc, v8);
+    sub_1C6BC60(v6, v7);
+  return AssetManager__GetAsset_40764728((AssetManager_o *)Instance, name, callbackFunc, v8);
 }
 
 
@@ -5158,20 +5148,20 @@ int64_t AssetManager__getDownloadSize(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C55D10 & 1) == 0 )
+  if ( (byte_4CB5275 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D10 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5275 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v2 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v2, v3);
+    sub_1C6BC60(v2, v3);
   return AssetManager__GetDownloadSize((AssetManager_o *)Instance, v3);
 }
 
@@ -5180,47 +5170,41 @@ System_String_o *AssetManager__getShaName(System_String_o *name, const MethodInf
 {
   System_Security_Cryptography_SHA1CryptoServiceProvider_o *v3; // x21
   System_Text_UTF8Encoding_o *v4; // x20
-  System_Byte_array *appended; // x0
+  System_Text_StringBuilder_o *appended; // x0
   __int64 v6; // x1
   System_Byte_array *v7; // x20
   System_Text_StringBuilder_o *v8; // x19
-  __int64 v9; // x2
-  __int64 v10; // x3
-  __int64 v11; // x4
-  __int64 v12; // x5
-  __int64 v13; // x6
-  __int64 v14; // x7
   il2cpp_array_size_t max_length; // x8
-  unsigned __int64 v16; // x21
-  int v18; // [xsp+Ch] [xbp-44h] BYREF
+  unsigned __int64 v10; // x21
+  int v12; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C55D05 & 1) == 0 )
+  if ( (byte_4CB526A & 1) == 0 )
   {
-    sub_1C3E564(&int_TypeInfo);
-    sub_1C3E564(&System_Security_Cryptography_SHA1CryptoServiceProvider_TypeInfo);
-    sub_1C3E564(&System_Text_StringBuilder_TypeInfo);
-    sub_1C3E564(&System_Text_UTF8Encoding_TypeInfo);
-    sub_1C3E564(&StringLiteral_25064/*"{0,0:x2}"*/);
-    sub_1C3E564(&StringLiteral_1019/*".bin"*/);
-    byte_4C55D05 = 1;
+    sub_1C6BA08(&int_TypeInfo);
+    sub_1C6BA08(&System_Security_Cryptography_SHA1CryptoServiceProvider_TypeInfo);
+    sub_1C6BA08(&System_Text_StringBuilder_TypeInfo);
+    sub_1C6BA08(&System_Text_UTF8Encoding_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25154/*"{0,0:x2}"*/);
+    sub_1C6BA08(&StringLiteral_1012/*".bin"*/);
+    byte_4CB526A = 1;
   }
-  v3 = (System_Security_Cryptography_SHA1CryptoServiceProvider_o *)sub_1C3E7B0(System_Security_Cryptography_SHA1CryptoServiceProvider_TypeInfo);
+  v3 = (System_Security_Cryptography_SHA1CryptoServiceProvider_o *)sub_1C6BC54(System_Security_Cryptography_SHA1CryptoServiceProvider_TypeInfo);
   System_Security_Cryptography_SHA1CryptoServiceProvider___ctor(v3, 0);
-  v4 = (System_Text_UTF8Encoding_o *)sub_1C3E7B0(System_Text_UTF8Encoding_TypeInfo);
+  v4 = (System_Text_UTF8Encoding_o *)sub_1C6BC54(System_Text_UTF8Encoding_TypeInfo);
   System_Text_UTF8Encoding___ctor(v4, 0);
   if ( !v4 )
     goto LABEL_13;
-  appended = (System_Byte_array *)((__int64 (__fastcall *)(System_Text_UTF8Encoding_o *, System_String_o *, const MethodInfo *))v4->klass->vtable._18_GetBytes.methodPtr)(
-                                    v4,
-                                    name,
-                                    v4->klass->vtable._18_GetBytes.method);
+  appended = (System_Text_StringBuilder_o *)((__int64 (__fastcall *)(System_Text_UTF8Encoding_o *, System_String_o *, const MethodInfo *))v4->klass->vtable._18_GetBytes.methodPtr)(
+                                              v4,
+                                              name,
+                                              v4->klass->vtable._18_GetBytes.method);
   if ( !v3 )
     goto LABEL_13;
   v7 = System_Security_Cryptography_HashAlgorithm__ComputeHash(
          (System_Security_Cryptography_HashAlgorithm_o *)v3,
-         appended,
+         (System_Byte_array *)appended,
          0);
-  v8 = (System_Text_StringBuilder_o *)sub_1C3E7B0(System_Text_StringBuilder_TypeInfo);
+  v8 = (System_Text_StringBuilder_o *)sub_1C6BC54(System_Text_StringBuilder_TypeInfo);
   System_Text_StringBuilder___ctor(v8, 0);
   System_Security_Cryptography_HashAlgorithm__Clear((System_Security_Cryptography_HashAlgorithm_o *)v3, 0);
   if ( !v7 )
@@ -5228,31 +5212,31 @@ System_String_o *AssetManager__getShaName(System_String_o *name, const MethodInf
   max_length = v7->max_length;
   if ( (int)max_length >= 1 )
   {
-    v16 = 0;
+    v10 = 0;
     while ( 1 )
     {
-      if ( v16 >= (unsigned int)max_length )
-        sub_1C3E7C8(appended, v6);
-      v18 = v7->m_Items[v16] ^ 0xAA;
-      appended = (System_Byte_array *)j_il2cpp_value_box_0(int_TypeInfo, &v18, v9, v10, v11, v12, v13, v14);
+      if ( v10 >= (unsigned int)max_length )
+        sub_1C6BC68(appended);
+      v12 = v7->m_Items[v10] ^ 0xAA;
+      appended = (System_Text_StringBuilder_o *)j_il2cpp_value_box_0(int_TypeInfo, &v12);
       if ( !v8 )
         break;
-      appended = (System_Byte_array *)System_Text_StringBuilder__AppendFormat(
-                                        v8,
-                                        (System_String_o *)StringLiteral_25064/*"{0,0:x2}"*/,
-                                        &appended->obj,
-                                        0);
+      appended = System_Text_StringBuilder__AppendFormat(
+                   v8,
+                   (System_String_o *)StringLiteral_25154/*"{0,0:x2}"*/,
+                   (Il2CppObject *)appended,
+                   0);
       LODWORD(max_length) = v7->max_length;
-      if ( (__int64)++v16 >= (int)max_length )
+      if ( (__int64)++v10 >= (int)max_length )
         goto LABEL_11;
     }
 LABEL_13:
-    sub_1C3E7C0(appended, v6);
+    sub_1C6BC60(appended, v6);
   }
 LABEL_11:
   if ( !v8 )
     goto LABEL_13;
-  System_Text_StringBuilder__Append_63721532(v8, (System_String_o *)StringLiteral_1019/*".bin"*/, 0);
+  System_Text_StringBuilder__Append_64050752(v8, (System_String_o *)StringLiteral_1012/*".bin"*/, 0);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_StringBuilder_o *, const MethodInfo *))v8->klass->vtable._3_ToString.methodPtr)(
                               v8,
                               v8->klass->vtable._3_ToString.method);
@@ -5267,18 +5251,18 @@ System_String_o *AssetManager__getUrlString(System_String_o *url, const MethodIn
   System_String_o *v6; // x0
   int64_t v8; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C55D04 & 1) == 0 )
+  if ( (byte_4CB5269 & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&StringLiteral_1765/*"?t="*/);
-    sub_1C3E564(&StringLiteral_21063/*"jar:"*/);
-    byte_4C55D04 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&StringLiteral_1758/*"?t="*/);
+    sub_1C6BA08(&StringLiteral_21122/*"jar:"*/);
+    byte_4CB5269 = 1;
   }
   v3 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   if ( !url )
-    sub_1C3E7C0(v3, method);
+    sub_1C6BC60(v3, method);
   if ( !System_String__StartsWith(url, NetworkManager_TypeInfo->static_fields->FILE_URL_SCHEME, 0) )
   {
     v4 = NetworkManager_TypeInfo;
@@ -5287,21 +5271,21 @@ System_String_o *AssetManager__getUrlString(System_String_o *url, const MethodIn
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       v4 = NetworkManager_TypeInfo;
     }
-    v5 = System_String__Concat_63636468((System_String_o *)StringLiteral_21063/*"jar:"*/, v4->static_fields->FILE_URL_SCHEME, 0);
+    v5 = System_String__Concat_63966792((System_String_o *)StringLiteral_21122/*"jar:"*/, v4->static_fields->FILE_URL_SCHEME, 0);
     if ( !System_String__StartsWith(url, v5, 0) )
     {
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       v8 = NetworkManager__getTime(0) / 300;
       v6 = System_Int64__ToString((int64_t)&v8, 0);
-      return System_String__Concat_63674716(url, (System_String_o *)StringLiteral_1765/*"?t="*/, v6, 0);
+      return System_String__Concat_64005056(url, (System_String_o *)StringLiteral_1758/*"?t="*/, v6, 0);
     }
   }
   return url;
 }
 
 
-System_String_o *AssetManager__getUrlString_40577840(AssetData_o *data, const MethodInfo *method)
+System_String_o *AssetManager__getUrlString_40762400(AssetData_o *data, const MethodInfo *method)
 {
   AssetManager_c *v3; // x0
   char *DataServerAddress; // x0
@@ -5338,15 +5322,15 @@ System_String_o *AssetManager__getUrlString_40577840(AssetData_o *data, const Me
   const MethodInfo *v35; // x3
   __int64 v37; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4C55D06 & 1) == 0 )
+  if ( (byte_4CB526B & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&string___TypeInfo);
-    sub_1C3E564(&StringLiteral_16119/*"_"*/);
-    sub_1C3E564(&StringLiteral_21063/*"jar:"*/);
-    sub_1C3E564(&StringLiteral_1766/*"?v="*/);
-    byte_4C55D06 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&string___TypeInfo);
+    sub_1C6BA08(&StringLiteral_16102/*"_"*/);
+    sub_1C6BA08(&StringLiteral_21122/*"jar:"*/);
+    sub_1C6BA08(&StringLiteral_1759/*"?v="*/);
+    byte_4CB526B = 1;
   }
   v3 = AssetManager_TypeInfo;
   v37 = 0;
@@ -5357,7 +5341,7 @@ System_String_o *AssetManager__getUrlString_40577840(AssetData_o *data, const Me
     goto LABEL_27;
   v6 = (System_String_o *)DataServerAddress;
   DownloadName = AssetData__get_DownloadName(data, 0);
-  DataServerAddress = (char *)System_String__Concat_63636468(v6, DownloadName, 0);
+  DataServerAddress = (char *)System_String__Concat_63966792(v6, DownloadName, 0);
   v8 = (System_String_o *)DataServerAddress;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -5371,22 +5355,22 @@ System_String_o *AssetManager__getUrlString_40577840(AssetData_o *data, const Me
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       v9 = NetworkManager_TypeInfo;
     }
-    v10 = System_String__Concat_63636468((System_String_o *)StringLiteral_21063/*"jar:"*/, v9->static_fields->FILE_URL_SCHEME, 0);
+    v10 = System_String__Concat_63966792((System_String_o *)StringLiteral_21122/*"jar:"*/, v9->static_fields->FILE_URL_SCHEME, 0);
     if ( !System_String__StartsWith(v8, v10, 0) )
     {
-      DataServerAddress = (char *)sub_1C3E60C(string___TypeInfo, 9);
+      DataServerAddress = (char *)sub_1C6BAB0(string___TypeInfo, 9);
       if ( DataServerAddress )
       {
         v13 = DataServerAddress;
         if ( !*((_DWORD *)DataServerAddress + 6) )
           goto LABEL_28;
         *((_QWORD *)DataServerAddress + 4) = v8;
-        sub_1C3E508((CGThumbnailListItem_o *)(DataServerAddress + 32), (int32_t)v8, v11, v12);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(DataServerAddress + 32), (int32_t)v8, v11, v12);
         if ( *((_DWORD *)v13 + 6) <= 1u )
           goto LABEL_28;
-        v16 = StringLiteral_1766/*"?v="*/;
-        *((_QWORD *)v13 + 5) = StringLiteral_1766/*"?v="*/;
-        sub_1C3E508((CGThumbnailListItem_o *)(v13 + 40), v16, v14, v15);
+        v16 = StringLiteral_1759/*"?v="*/;
+        *((_QWORD *)v13 + 5) = StringLiteral_1759/*"?v="*/;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 40), v16, v14, v15);
         DataServerAddress = (char *)AssetManager_TypeInfo;
         if ( !AssetManager_TypeInfo->_2.cctor_finished )
         {
@@ -5397,44 +5381,44 @@ System_String_o *AssetManager__getUrlString_40577840(AssetData_o *data, const Me
           goto LABEL_28;
         v19 = *(_QWORD *)(*((_QWORD *)DataServerAddress + 23) + 80LL);
         *((_QWORD *)v13 + 6) = v19;
-        sub_1C3E508((CGThumbnailListItem_o *)(v13 + 48), v19, v17, v18);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 48), v19, v17, v18);
         if ( *((_DWORD *)v13 + 6) <= 3u )
           goto LABEL_28;
-        v22 = StringLiteral_16119/*"_"*/;
-        *((_QWORD *)v13 + 7) = StringLiteral_16119/*"_"*/;
-        sub_1C3E508((CGThumbnailListItem_o *)(v13 + 56), v22, v20, v21);
+        v22 = StringLiteral_16102/*"_"*/;
+        *((_QWORD *)v13 + 7) = StringLiteral_16102/*"_"*/;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 56), v22, v20, v21);
         if ( *((_DWORD *)v13 + 6) <= 4u )
           goto LABEL_28;
         assetBundleDateVersion = AssetManager_TypeInfo->static_fields->assetBundleDateVersion;
         *((_QWORD *)v13 + 8) = assetBundleDateVersion;
-        sub_1C3E508((CGThumbnailListItem_o *)(v13 + 64), (int32_t)assetBundleDateVersion, v23, v24);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 64), (int32_t)assetBundleDateVersion, v23, v24);
         if ( *((_DWORD *)v13 + 6) <= 5u )
           goto LABEL_28;
-        v28 = StringLiteral_16119/*"_"*/;
-        *((_QWORD *)v13 + 9) = StringLiteral_16119/*"_"*/;
-        sub_1C3E508((CGThumbnailListItem_o *)(v13 + 72), v28, v26, v27);
+        v28 = StringLiteral_16102/*"_"*/;
+        *((_QWORD *)v13 + 9) = StringLiteral_16102/*"_"*/;
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 72), v28, v26, v27);
         HIDWORD(v37) = data->fields.size;
         DataServerAddress = (char *)System_Int32__ToString((int32_t)&v37 + 4, 0);
         if ( *((_DWORD *)v13 + 6) <= 6u
           || (*((_QWORD *)v13 + 10) = DataServerAddress,
-              sub_1C3E508((CGThumbnailListItem_o *)(v13 + 80), (int32_t)DataServerAddress, v29, v30),
+              sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 80), (int32_t)DataServerAddress, v29, v30),
               *((_DWORD *)v13 + 6) <= 7u)
-          || (v33 = StringLiteral_16119/*"_"*/,
-              *((_QWORD *)v13 + 11) = StringLiteral_16119/*"_"*/,
-              sub_1C3E508((CGThumbnailListItem_o *)(v13 + 88), v33, v31, v32),
+          || (v33 = StringLiteral_16102/*"_"*/,
+              *((_QWORD *)v13 + 11) = StringLiteral_16102/*"_"*/,
+              sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 88), v33, v31, v32),
               LODWORD(v37) = data->fields.crc,
               DataServerAddress = (char *)System_UInt32__ToString((uint32_t)&v37, 0),
               *((_DWORD *)v13 + 6) <= 8u) )
         {
 LABEL_28:
-          sub_1C3E7C8(DataServerAddress, v5);
+          sub_1C6BC68(DataServerAddress);
         }
         *((_QWORD *)v13 + 12) = DataServerAddress;
-        sub_1C3E508((CGThumbnailListItem_o *)(v13 + 96), (int32_t)DataServerAddress, v34, v35);
-        return System_String__Concat_63676984((System_String_array *)v13, 0);
+        sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 96), (int32_t)DataServerAddress, v34, v35);
+        return System_String__Concat_64007324((System_String_array *)v13, 0);
       }
 LABEL_27:
-      sub_1C3E7C0(DataServerAddress, v5);
+      sub_1C6BC60(DataServerAddress, v5);
     }
   }
   return v8;
@@ -5447,10 +5431,10 @@ System_String_o *AssetManager__get_CacheListFile(const MethodInfo *method)
   AssetManager_c *v2; // x8
   System_String_o *v3; // x19
 
-  if ( (byte_4C55CFF & 1) == 0 )
+  if ( (byte_4CB5264 & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C55CFF = 1;
+    method = (const MethodInfo *)sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB5264 = 1;
   }
   Path = AssetStorageCache__GetPath(method);
   v2 = AssetManager_TypeInfo;
@@ -5460,7 +5444,7 @@ System_String_o *AssetManager__get_CacheListFile(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     v2 = AssetManager_TypeInfo;
   }
-  return System_String__Concat_63636468(v3, v2->static_fields->configFileName, 0);
+  return System_String__Concat_63966792(v3, v2->static_fields->configFileName, 0);
 }
 
 
@@ -5468,10 +5452,10 @@ System_String_o *AssetManager__get_CachePathName(const MethodInfo *method)
 {
   AssetManager_c *v1; // x0
 
-  if ( (byte_4C55CFD & 1) == 0 )
+  if ( (byte_4CB5262 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C55CFD = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB5262 = 1;
   }
   v1 = AssetManager_TypeInfo;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -5488,16 +5472,16 @@ System_String_o *AssetManager__get_ConfigFileAddress(const MethodInfo *method)
   AssetManager_c *v1; // x0
   System_String_o *DataServerAddress; // x0
 
-  if ( (byte_4C55CFE & 1) == 0 )
+  if ( (byte_4CB5263 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    byte_4C55CFE = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    byte_4CB5263 = 1;
   }
   v1 = AssetManager_TypeInfo;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   DataServerAddress = AssetManager__get_DataServerAddress((const MethodInfo *)v1);
-  return System_String__Concat_63636468(DataServerAddress, AssetManager_TypeInfo->static_fields->configFileName, 0);
+  return System_String__Concat_63966792(DataServerAddress, AssetManager_TypeInfo->static_fields->configFileName, 0);
 }
 
 
@@ -5505,17 +5489,17 @@ System_String_o *AssetManager__get_DataServerAddress(const MethodInfo *method)
 {
   NetworkManager_c *v1; // x0
 
-  if ( (byte_4C55CFC & 1) == 0 )
+  if ( (byte_4CB5261 & 1) == 0 )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C55CFC = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB5261 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4C55E68 )
+  if ( !byte_4CB53CD )
   {
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    byte_4C55E68 = 1;
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    byte_4CB53CD = 1;
   }
   v1 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -5545,11 +5529,11 @@ bool AssetManager__get_IsOnline(const MethodInfo *method)
   AssetManager_c *v3; // x0
   System_String_o *String; // x0
 
-  if ( (byte_4C55CF6 & 1) == 0 )
+  if ( (byte_4CB525B & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    byte_4C55CF6 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    byte_4CB525B = 1;
   }
   v1 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -5580,38 +5564,38 @@ bool AssetManager__isDownloadAssetStorageCheck(AssetManager_o *this, System_Stri
   int v10; // w20
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v12; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4C55D2D & 1) == 0 )
+  if ( (byte_4CB5292 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    byte_4C55D2D = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    byte_4CB5292 = 1;
   }
   memset(&v12, 0, sizeof(v12));
   assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)this->fields.assetBundleDic;
   if ( !assetBundleDic
     || (assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                       assetBundleDic,
-                                                                                      (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
+                                                                                      (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__)) == 0 )
   {
-    sub_1C3E7C0(assetBundleDic, attrib);
+    sub_1C6BC60(assetBundleDic, attrib);
   }
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v12,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)assetBundleDic,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   while ( 1 )
   {
     v6 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
            &v12,
-           (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+           (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
     if ( !v6 )
       break;
     currentValue = v12.fields._currentValue;
     if ( !v12.fields._currentValue )
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     if ( AssetData__IsDownloadOldVersion((AssetData_o *)v12.fields._currentValue, 0)
       || System_String__op_Equality(attrib, *(System_String_o **)((char *)&qword_20 + (_QWORD)currentValue), 0)
       && AssetData__IsNeedUpdateVersion((AssetData_o *)currentValue, 0) )
@@ -5626,7 +5610,7 @@ bool AssetManager__isDownloadAssetStorageCheck(AssetManager_o *this, System_Stri
 LABEL_13:
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &v12,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
   return v9 & (v10 == 5);
 }
 
@@ -5638,46 +5622,46 @@ bool AssetManager__isExistAssetStorage(System_String_o *name, const MethodInfo *
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D11 & 1) == 0 )
+  if ( (byte_4CB5276 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D11 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5276 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   return AssetManager__IsExistAssetStorage((AssetManager_o *)Instance, name, v6);
 }
 
 
-bool AssetManager__isExistAssetStorage_40582076(System_String_array *nameList, const MethodInfo *method)
+bool AssetManager__isExistAssetStorage_40766636(System_String_array *nameList, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D12 & 1) == 0 )
+  if ( (byte_4CB5277 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D12 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5277 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
-  return AssetManager__IsExistAssetStorage_40582256((AssetManager_o *)Instance, nameList, v6);
+    sub_1C6BC60(v4, v5);
+  return AssetManager__IsExistAssetStorage_40766816((AssetManager_o *)Instance, nameList, v6);
 }
 
 
@@ -5688,46 +5672,46 @@ bool AssetManager__isNeedDownload(System_String_o *name, const MethodInfo *metho
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D13 & 1) == 0 )
+  if ( (byte_4CB5278 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D13 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5278 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   return AssetManager__IsNeedDownload((AssetManager_o *)Instance, name, v6);
 }
 
 
-bool AssetManager__isNeedDownload_40582616(System_String_array *nameList, const MethodInfo *method)
+bool AssetManager__isNeedDownload_40767176(System_String_array *nameList, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D14 & 1) == 0 )
+  if ( (byte_4CB5279 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D14 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5279 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
-  return AssetManager__IsNeedDownload_40582796((AssetManager_o *)Instance, nameList, v6);
+    sub_1C6BC60(v4, v5);
+  return AssetManager__IsNeedDownload_40767356((AssetManager_o *)Instance, nameList, v6);
 }
 
 
@@ -5742,20 +5726,20 @@ bool AssetManager__loadAsset(
   __int64 v9; // x1
   const MethodInfo *v10; // x4
 
-  if ( (byte_4C55D07 & 1) == 0 )
+  if ( (byte_4CB526C & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D07 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB526C = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v8 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   return AssetManager__LoadAsset((AssetManager_o *)Instance, type, name, callbackFunc, v10);
 }
 
@@ -5767,20 +5751,20 @@ AssetData_o *AssetManager__loadAssetResource(System_String_o *name, const Method
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D26 & 1) == 0 )
+  if ( (byte_4CB528B & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D26 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB528B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v4 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
   return AssetManager__LoadAssetResource((AssetManager_o *)Instance, name, v6);
 }
 
@@ -5796,25 +5780,25 @@ bool AssetManager__loadAssetStorage(
   __int64 v9; // x1
   const MethodInfo *v10; // x4
 
-  if ( (byte_4C55D1C & 1) == 0 )
+  if ( (byte_4CB5281 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D1C = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5281 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v8 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   return AssetManager__LoadAssetStorage((AssetManager_o *)Instance, name, callbackFunc, maxParallelLoad, v10);
 }
 
 
-bool AssetManager__loadAssetStorage_40587576(
+bool AssetManager__loadAssetStorage_40772136(
         System_String_o *name,
         int32_t maxParallelLoad,
         AssetLoader_LoadEndDataHandler_o *callbackFunc,
@@ -5825,25 +5809,25 @@ bool AssetManager__loadAssetStorage_40587576(
   __int64 v9; // x1
   const MethodInfo *v10; // x4
 
-  if ( (byte_4C55D1E & 1) == 0 )
+  if ( (byte_4CB5283 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D1E = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5283 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v8 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   return AssetManager__LoadAssetStorage((AssetManager_o *)Instance, name, callbackFunc, maxParallelLoad, v10);
 }
 
 
-bool AssetManager__loadAssetStorage_40587784(
+bool AssetManager__loadAssetStorage_40772344(
         System_String_array *nameList,
         System_Action_o *callbackFunc,
         int32_t loadParalleMax,
@@ -5854,21 +5838,21 @@ bool AssetManager__loadAssetStorage_40587784(
   __int64 v9; // x1
   const MethodInfo *v10; // x4
 
-  if ( (byte_4C55D1F & 1) == 0 )
+  if ( (byte_4CB5284 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D1F = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5284 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v8 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v8, v9);
-  return AssetManager__LoadAssetStorage_40587992(
+    sub_1C6BC60(v8, v9);
+  return AssetManager__LoadAssetStorage_40772552(
            (AssetManager_o *)Instance,
            nameList,
            callbackFunc,
@@ -5889,20 +5873,20 @@ bool AssetManager__loadResourcesFromAssetStorage(
   __int64 v11; // x1
   const MethodInfo *v12; // x5
 
-  if ( (byte_4C55D1D & 1) == 0 )
+  if ( (byte_4CB5282 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D1D = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5282 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v10 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( v10 )
     return 0;
   if ( !Instance )
-    sub_1C3E7C0(v10, v11);
+    sub_1C6BC60(v10, v11);
   return AssetManager__LoadResourcesAssetStorage(
            (AssetManager_o *)Instance,
            assetBandleName,
@@ -5919,20 +5903,20 @@ void AssetManager__pauseDownloadAssetStorage(const MethodInfo *method)
   _BOOL8 v2; // x0
   __int64 v3; // x1
 
-  if ( (byte_4C55D18 & 1) == 0 )
+  if ( (byte_4CB527D & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D18 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB527D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v2, v3);
+      sub_1C6BC60(v2, v3);
     if ( !BYTE1(Instance[7].monitor) )
       BYTE1(Instance[7].monitor) = 1;
   }
@@ -5946,20 +5930,20 @@ void AssetManager__releaseAsset(int32_t type, System_String_o *name, const Metho
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C55D0B & 1) == 0 )
+  if ( (byte_4CB5270 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D0B = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5270 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v6 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v6, v7);
+      sub_1C6BC60(v6, v7);
     AssetManager__ReleaseAsset((AssetManager_o *)Instance, type, name, v8);
   }
 }
@@ -5972,20 +5956,20 @@ void AssetManager__releaseAssetResource(System_String_o *name, const MethodInfo 
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D28 & 1) == 0 )
+  if ( (byte_4CB528D & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D28 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB528D = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     AssetManager__ReleaseAssetResource((AssetManager_o *)Instance, name, v6);
   }
 }
@@ -5998,126 +5982,126 @@ void AssetManager__releaseAssetStorage(System_String_o *name, const MethodInfo *
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D24 & 1) == 0 )
+  if ( (byte_4CB5289 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D24 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5289 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     AssetManager__ReleaseAssetStorage((AssetManager_o *)Instance, name, v6);
   }
 }
 
 
-void AssetManager__releaseAssetStorage_40590132(System_String_array *nameList, const MethodInfo *method)
+void AssetManager__releaseAssetStorage_40774692(System_String_array *nameList, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D25 & 1) == 0 )
+  if ( (byte_4CB528A & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D25 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB528A = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v4, v5);
-    AssetManager__ReleaseAssetStorage_40590308((AssetManager_o *)Instance, nameList, v6);
+      sub_1C6BC60(v4, v5);
+    AssetManager__ReleaseAssetStorage_40774868((AssetManager_o *)Instance, nameList, v6);
   }
 }
 
 
-void AssetManager__releaseAsset_40580672(int32_t type, System_String_array *nameList, const MethodInfo *method)
+void AssetManager__releaseAsset_40765232(int32_t type, System_String_array *nameList, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x21
   _BOOL8 v6; // x0
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4C55D0C & 1) == 0 )
+  if ( (byte_4CB5271 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D0C = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5271 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v6 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v6, v7);
-    AssetManager__ReleaseAsset_40580856((AssetManager_o *)Instance, type, nameList, v8);
+      sub_1C6BC60(v6, v7);
+    AssetManager__ReleaseAsset_40765416((AssetManager_o *)Instance, type, nameList, v8);
   }
 }
 
 
-void AssetManager__releaseAsset_40580972(AssetData_o *assetInfo, const MethodInfo *method)
+void AssetManager__releaseAsset_40765532(AssetData_o *assetInfo, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
   __int64 v5; // x1
   const MethodInfo *v6; // x3
 
-  if ( (byte_4C55D0D & 1) == 0 )
+  if ( (byte_4CB5272 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D0D = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5272 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     if ( assetInfo )
       AssetManager__ReleaseAsset((AssetManager_o *)Instance, assetInfo->fields.type, assetInfo->fields.name, v6);
   }
 }
 
 
-void AssetManager__releaseAsset_40581180(AssetData_array *assetInfoList, const MethodInfo *method)
+void AssetManager__releaseAsset_40765740(AssetData_array *assetInfoList, const MethodInfo *method)
 {
   Il2CppObject *Instance; // x20
   _BOOL8 v4; // x0
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D0E & 1) == 0 )
+  if ( (byte_4CB5273 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D0E = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB5273 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v4, v5);
-    AssetManager__ReleaseAsset_40581356((AssetManager_o *)Instance, assetInfoList, v6);
+      sub_1C6BC60(v4, v5);
+    AssetManager__ReleaseAsset_40765916((AssetManager_o *)Instance, assetInfoList, v6);
   }
 }
 
@@ -6136,10 +6120,10 @@ void AssetManager__remove_unloadCallbacks(
   AssetManager_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4C55CF4 & 1) == 0 )
+  if ( (byte_4CB5259 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_ResourceUnloadEventHandler_TypeInfo);
-    byte_4C55CF4 = 1;
+    sub_1C6BA08(&AssetManager_ResourceUnloadEventHandler_TypeInfo);
+    byte_4CB5259 = 1;
   }
   unloadCallbacks = this->fields.unloadCallbacks;
   p_unloadCallbacks = &this->fields.unloadCallbacks;
@@ -6152,13 +6136,13 @@ void AssetManager__remove_unloadCallbacks(
       if ( (AssetManager_ResourceUnloadEventHandler_c *)v8->klass != AssetManager_ResourceUnloadEventHandler_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_unloadCallbacks, v8, v6);
+    v9 = sub_1CC77DC(p_unloadCallbacks, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C3EA80(v8);
+  sub_1C6BFFC(v8);
   AssetManager__WaitForExecutionUnloadUnuseAssets(v11, v12);
 }
 
@@ -6170,20 +6154,20 @@ void AssetManager__resetAssetStorageVersion(System_String_o *path, const MethodI
   __int64 v5; // x1
   const MethodInfo *v6; // x2
 
-  if ( (byte_4C55D16 & 1) == 0 )
+  if ( (byte_4CB527B & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D16 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB527B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v4 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v4, v5);
+      sub_1C6BC60(v4, v5);
     AssetManager__ResetAssetStorageVersion((AssetManager_o *)Instance, path, v6);
   }
 }
@@ -6195,20 +6179,20 @@ void AssetManager__resumeDownloadAssetStorage(const MethodInfo *method)
   _BOOL8 v2; // x0
   const MethodInfo *v3; // x1
 
-  if ( (byte_4C55D19 & 1) == 0 )
+  if ( (byte_4CB527E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55D19 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB527E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v2 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !v2 )
   {
     if ( !Instance )
-      sub_1C3E7C0(v2, v3);
+      sub_1C6BC60(v2, v3);
     if ( BYTE1(Instance[7].monitor) )
     {
       BYTE1(Instance[7].monitor) = 0;
@@ -6224,18 +6208,18 @@ void AssetManager__setDebugStatusOut(AssetManager_o *this, bool isUse, const Met
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4C55CFA & 1) == 0 )
+  if ( (byte_4CB525F & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4C55CFA = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4CB525F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0);
   if ( !Instance && !v4 )
-    sub_1C3E7C0(v4, v5);
+    sub_1C6BC60(v4, v5);
 }
 
 
@@ -6249,11 +6233,11 @@ void AssetManager_LoadWaitStatus___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.callbackFunc = callbackFunc;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v5, v6);
 }
 
 
-void AssetManager_LoadWaitStatus___ctor_40604956(
+void AssetManager_LoadWaitStatus___ctor_40789516(
         AssetManager_LoadWaitStatus_o *this,
         AssetData_o *data,
         const MethodInfo *method)
@@ -6263,11 +6247,11 @@ void AssetManager_LoadWaitStatus___ctor_40604956(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.data = data;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v5, v6);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v5, v6);
 }
 
 
-void AssetManager_LoadWaitStatus___ctor_40605176(
+void AssetManager_LoadWaitStatus___ctor_40789736(
         AssetManager_LoadWaitStatus_o *this,
         AssetData_o *data,
         AssetLoader_LoadEndDataHandler_o *callbackFunc,
@@ -6283,11 +6267,11 @@ void AssetManager_LoadWaitStatus___ctor_40605176(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.data = data;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v9, v10);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)data, v9, v10);
   this->fields.callbackFunc2 = callbackFunc;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.callbackFunc2, (int32_t)callbackFunc, v11, v12);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc2, (int32_t)callbackFunc, v11, v12);
   this->fields.resourceNames = resourceNames;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.resourceNames, (int32_t)resourceNames, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.resourceNames, (int32_t)resourceNames, v13, v14);
 }
 
 
@@ -6304,10 +6288,10 @@ void AssetManager_LoadWaitStatus__AddCallback(
   System_Delegate_o *v10; // x8
   AssetLoader_LoadEndDataHandler_c *v11; // x1
 
-  if ( (byte_4C55D59 & 1) == 0 )
+  if ( (byte_4CB52BE & 1) == 0 )
   {
-    sub_1C3E564(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    byte_4C55D59 = 1;
+    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    byte_4CB52BE = 1;
   }
   callbackFunc2 = (System_Delegate_o *)this->fields.callbackFunc2;
   p_callbackFunc2 = (CGThumbnailListItem_o *)&this->fields.callbackFunc2;
@@ -6319,11 +6303,11 @@ void AssetManager_LoadWaitStatus__AddCallback(
   if ( (AssetLoader_LoadEndDataHandler_c *)v7->klass != AssetLoader_LoadEndDataHandler_TypeInfo
     || (p_callbackFunc2->klass = (CGThumbnailListItem_c *)v7, (AssetLoader_LoadEndDataHandler_c *)v7->klass != v11) )
   {
-    sub_1C3EA80(v7);
+    sub_1C6BFFC(v7);
 LABEL_7:
     p_callbackFunc2->klass = (CGThumbnailListItem_c *)v10;
   }
-  sub_1C3E508(p_callbackFunc2, (int32_t)v10, v8, v9);
+  sub_1C6B9AC(p_callbackFunc2, (int32_t)v10, v8, v9);
 }
 
 
@@ -6333,7 +6317,7 @@ void AssetManager_LoadWaitStatus__AddEntry(AssetManager_LoadWaitStatus_o *this, 
 
   data = this->fields.data;
   if ( !data )
-    sub_1C3E7C0(0, method);
+    sub_1C6BC60(0, method);
   AssetData__AddEntry(data, 0);
 }
 
@@ -6348,7 +6332,7 @@ bool AssetManager_LoadWaitStatus__IsSame(
 
   data = this->fields.data;
   if ( data )
-    LOBYTE(data) = AssetData__IsSame_40552500(data, type, name, 0);
+    LOBYTE(data) = AssetData__IsSame_40737060(data, type, name, 0);
   return (char)data;
 }
 
@@ -6388,10 +6372,10 @@ System_String_o *AssetManager_LoadWaitStatus__get_Name(AssetManager_LoadWaitStat
   struct AssetData_o *data; // x8
   System_String_o **p_name; // x8
 
-  if ( (byte_4C55D5A & 1) == 0 )
+  if ( (byte_4CB52BF & 1) == 0 )
   {
-    sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C55D5A = 1;
+    sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB52BF = 1;
   }
   data = this->fields.data;
   if ( data )
@@ -6417,15 +6401,15 @@ void AssetManager_ResourceUnloadEventHandler___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C3E624(method) & 1) == 0 )
+  if ( (sub_1C6BAC8(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C3E7DC(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C3E68C(v10, 0);
+      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C6BB30(v10, 0);
     }
     goto LABEL_5;
   }
@@ -6437,9 +6421,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A82730;
+  this->fields.invoke_impl = (intptr_t)sub_1AA16B8;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A826F0;
+  this->fields.extra_arg = (intptr_t)sub_1AA1678;
 }
 
 
@@ -6452,7 +6436,7 @@ System_IAsyncResult_o *AssetManager_ResourceUnloadEventHandler__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C3E518(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v5, callback, object);
 }
 
 
@@ -6461,7 +6445,7 @@ void AssetManager_ResourceUnloadEventHandler__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C3E51C(result, 0, method);
+  sub_1C6B9C0(result, 0, method);
 }
 
 
@@ -6502,13 +6486,13 @@ bool AssetManager__AssetObjectListSetupAndCall_d__190__MoveNext(
   bool result; // w0
   System_Action_o *action; // x0
 
-  if ( (byte_4C55D5F & 1) == 0 )
+  if ( (byte_4CB52C4 & 1) == 0 )
   {
-    sub_1C3E564(&System_Func_bool__TypeInfo);
-    sub_1C3E564(&Method_AssetManager___c__DisplayClass190_0__AssetObjectListSetupAndCall_b__0__);
-    sub_1C3E564(&AssetManager___c__DisplayClass190_0_TypeInfo);
-    sub_1C3E564(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4C55D5F = 1;
+    sub_1C6BA08(&System_Func_bool__TypeInfo);
+    sub_1C6BA08(&Method_AssetManager___c__DisplayClass190_0__AssetObjectListSetupAndCall_b__0__);
+    sub_1C6BA08(&AssetManager___c__DisplayClass190_0_TypeInfo);
+    sub_1C6BA08(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4CB52C4 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -6521,24 +6505,24 @@ bool AssetManager__AssetObjectListSetupAndCall_d__190__MoveNext(
   if ( _1__state )
     return 0;
   this->fields.__1__state = -1;
-  v4 = sub_1C3E7B0(AssetManager___c__DisplayClass190_0_TypeInfo);
+  v4 = sub_1C6BC54(AssetManager___c__DisplayClass190_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4 )
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   asset = this->fields.asset;
   *(_QWORD *)(v4 + 16) = asset;
-  sub_1C3E508((CGThumbnailListItem_o *)(v4 + 16), (int32_t)asset, v7, v8);
-  v10 = (System_Func_bool__o *)sub_1C3E7B0(System_Func_bool__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 16), (int32_t)asset, v7, v8);
+  v10 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v10,
     (Il2CppObject *)v4,
     Method_AssetManager___c__DisplayClass190_0__AssetObjectListSetupAndCall_b__0__,
     0);
-  v11 = (UnityEngine_WaitUntil_o *)sub_1C3E7B0(UnityEngine_WaitUntil_TypeInfo);
+  v11 = (UnityEngine_WaitUntil_o *)sub_1C6BC54(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v11, v10, 0);
   this->fields.__2__current = (Il2CppObject *)v11;
   p__2__current = &this->fields.__2__current;
-  sub_1C3E508((CGThumbnailListItem_o *)p__2__current, (int32_t)v11, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p__2__current, (int32_t)v11, v13, v14);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -6561,11 +6545,11 @@ void __noreturn AssetManager__AssetObjectListSetupAndCall_d__190__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssetManager__AssetObjectListSetupAndCall_d__190_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssetManager__AssetObjectListSetupAndCall_d__190_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -6614,13 +6598,13 @@ bool AssetManager__AssetObjectListSetupAndCall_d__191__MoveNext(
   bool result; // w0
   System_Action_o *action; // x0
 
-  if ( (byte_4C55D60 & 1) == 0 )
+  if ( (byte_4CB52C5 & 1) == 0 )
   {
-    sub_1C3E564(&System_Func_bool__TypeInfo);
-    sub_1C3E564(&Method_AssetManager___c__DisplayClass191_0__AssetObjectListSetupAndCall_b__0__);
-    sub_1C3E564(&AssetManager___c__DisplayClass191_0_TypeInfo);
-    sub_1C3E564(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4C55D60 = 1;
+    sub_1C6BA08(&System_Func_bool__TypeInfo);
+    sub_1C6BA08(&Method_AssetManager___c__DisplayClass191_0__AssetObjectListSetupAndCall_b__0__);
+    sub_1C6BA08(&AssetManager___c__DisplayClass191_0_TypeInfo);
+    sub_1C6BA08(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4CB52C5 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -6633,24 +6617,24 @@ bool AssetManager__AssetObjectListSetupAndCall_d__191__MoveNext(
   if ( _1__state )
     return 0;
   this->fields.__1__state = -1;
-  v4 = sub_1C3E7B0(AssetManager___c__DisplayClass191_0_TypeInfo);
+  v4 = sub_1C6BC54(AssetManager___c__DisplayClass191_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4 )
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   assetList = this->fields.assetList;
   *(_QWORD *)(v4 + 16) = assetList;
-  sub_1C3E508((CGThumbnailListItem_o *)(v4 + 16), (int32_t)assetList, v7, v8);
-  v10 = (System_Func_bool__o *)sub_1C3E7B0(System_Func_bool__TypeInfo);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 16), (int32_t)assetList, v7, v8);
+  v10 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v10,
     (Il2CppObject *)v4,
     Method_AssetManager___c__DisplayClass191_0__AssetObjectListSetupAndCall_b__0__,
     0);
-  v11 = (UnityEngine_WaitUntil_o *)sub_1C3E7B0(UnityEngine_WaitUntil_TypeInfo);
+  v11 = (UnityEngine_WaitUntil_o *)sub_1C6BC54(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v11, v10, 0);
   this->fields.__2__current = (Il2CppObject *)v11;
   p__2__current = &this->fields.__2__current;
-  sub_1C3E508((CGThumbnailListItem_o *)p__2__current, (int32_t)v11, v13, v14);
+  sub_1C6B9AC((CGThumbnailListItem_o *)p__2__current, (int32_t)v11, v13, v14);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -6673,11 +6657,11 @@ void __noreturn AssetManager__AssetObjectListSetupAndCall_d__191__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssetManager__AssetObjectListSetupAndCall_d__191_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssetManager__AssetObjectListSetupAndCall_d__191_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -6724,7 +6708,7 @@ bool AssetManager__DelayLoadStart_d__153__MoveNext(
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C3E7C0(0, method);
+      sub_1C6BC60(0, method);
     AssetManager__LoadStart(_4__this, method);
   }
   else if ( !_1__state )
@@ -6732,7 +6716,7 @@ bool AssetManager__DelayLoadStart_d__153__MoveNext(
     this->fields.__2__current = 0;
     p__2__current = &this->fields.__2__current;
     this->fields.__1__state = -1;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.__2__current, 0, v2, v3);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__2__current, 0, v2, v3);
     result = 1;
     *((_DWORD *)p__2__current - 2) = 1;
     return result;
@@ -6757,11 +6741,11 @@ void __noreturn AssetManager__DelayLoadStart_d__153__System_Collections_IEnumera
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssetManager__DelayLoadStart_d__153_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssetManager__DelayLoadStart_d__153_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -6839,31 +6823,31 @@ bool AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119__MoveNext
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o v43; // [xsp+20h] [xbp-70h] BYREF
 
   v2 = this;
-  if ( (byte_4C55D61 & 1) == 0 )
+  if ( (byte_4CB52C6 & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_AssetManager__DownloadAssetStorageAttributeWithCheckDialog_b__119_0__);
-    sub_1C3E564(&AvalonSceneManager_TypeInfo);
-    sub_1C3E564(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&Method_AssetManager___c__DisplayClass119_0__DownloadAssetStorageAttributeWithCheckDialog_b__1__);
-    sub_1C3E564(&AssetManager___c__DisplayClass119_0_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
-    sub_1C3E564(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    sub_1C3E564(&UnityEngine_WaitForSeconds_TypeInfo);
-    sub_1C3E564(&StringLiteral_25445/*"データ更新"*/);
-    sub_1C3E564(&StringLiteral_5436/*"END_BOOT_ASSET_DOWNLOAD"*/);
-    sub_1C3E564(&StringLiteral_9250/*"NETWORK_ERROR_DATA_UPDATE_TITLE"*/);
-    sub_1C3E564(&StringLiteral_330/*" ゲームデータの更新を行います。\n\n{0}\n\n ※Wi-Fi接続での更新を推奨します。"*/);
-    this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)sub_1C3E564(&StringLiteral_9248/*"NETWORK_ERROR_DATA_UPDATE_EXP"*/);
-    byte_4C55D61 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_AssetManager__DownloadAssetStorageAttributeWithCheckDialog_b__119_0__);
+    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
+    sub_1C6BA08(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__get_Current__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Queue_AssetManager_LoadWaitStatus__get_Count__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&Method_AssetManager___c__DisplayClass119_0__DownloadAssetStorageAttributeWithCheckDialog_b__1__);
+    sub_1C6BA08(&AssetManager___c__DisplayClass119_0_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    sub_1C6BA08(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    sub_1C6BA08(&UnityEngine_WaitForSeconds_TypeInfo);
+    sub_1C6BA08(&StringLiteral_25535/*"データ更新"*/);
+    sub_1C6BA08(&StringLiteral_5426/*"END_BOOT_ASSET_DOWNLOAD"*/);
+    sub_1C6BA08(&StringLiteral_9247/*"NETWORK_ERROR_DATA_UPDATE_TITLE"*/);
+    sub_1C6BA08(&StringLiteral_330/*" ゲームデータの更新を行います。\n\n{0}\n\n ※Wi-Fi接続での更新を推奨します。"*/);
+    this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)sub_1C6BA08(&StringLiteral_9245/*"NETWORK_ERROR_DATA_UPDATE_EXP"*/);
+    byte_4CB52C6 = 1;
   }
   memset(&v43, 0, sizeof(v43));
   _1__state = v2->fields.__1__state;
@@ -6874,7 +6858,7 @@ bool AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119__MoveNext
     v2->fields.__1__state = -1;
     if ( isDispLogo_5__2 )
     {
-      this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_59;
       CommonUI__SetLoadMode((CommonUI_o *)this, 3, 0);
@@ -6899,16 +6883,16 @@ LABEL_40:
     if ( !_8__1->fields.isDataUpdate )
     {
 LABEL_44:
-      v29 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v29 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v29, 0);
       v2->fields.__2__current = (Il2CppObject *)v29;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C3E508(p__2__current, (int32_t)v29, v31, v32);
+      sub_1C6B9AC(p__2__current, (int32_t)v29, v31, v32);
       result = 1;
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
       return result;
     }
-    this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !this )
       goto LABEL_59;
     this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)CommonUI__isBusyDataUpdateDialog(
@@ -6920,13 +6904,13 @@ LABEL_44:
       goto LABEL_59;
     if ( (*p__8__1)->fields.isDataUpdate )
     {
-      this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+      this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
       if ( !this )
         goto LABEL_59;
-      CrashReporter__SetNowState((CrashReporter_o *)this, (System_String_o *)StringLiteral_5436/*"END_BOOT_ASSET_DOWNLOAD"*/, 0);
+      CrashReporter__SetNowState((CrashReporter_o *)this, (System_String_o *)StringLiteral_5426/*"END_BOOT_ASSET_DOWNLOAD"*/, 0);
     }
     *p__8__1 = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.__8__1, 0, v27, v28);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.__8__1, 0, v27, v28);
     goto LABEL_50;
   }
   if ( _1__state )
@@ -6939,66 +6923,66 @@ LABEL_44:
     goto LABEL_59;
   this = (AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                   (System_Collections_Generic_Dictionary_object__object__o *)this,
-                                                                                  (const MethodInfo_3475610 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
+                                                                                  (const MethodInfo_34BB76C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Values__);
   if ( !this )
     goto LABEL_59;
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     &v42,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)this,
-    (const MethodInfo_3AF64E4 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
+    (const MethodInfo_3B47370 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__AssetData__GetEnumerator__);
   v43 = v42;
   while ( 1 )
   {
     v5 = System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
            &v43,
-           (const MethodInfo_3573240 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
+           (const MethodInfo_35B9D1C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__MoveNext__);
     if ( !v5 )
       break;
     currentValue = (AssetData_o *)v43.fields._currentValue;
     if ( !v43.fields._currentValue )
-      sub_1C3E7C0(v5, v6);
+      sub_1C6BC60(v5, v6);
     if ( AssetData__IsDownloadOldVersion((AssetData_o *)v43.fields._currentValue, 0)
       || System_String__op_Equality(v2->fields.attrib, currentValue->fields.attrib, 0)
       && AssetData__IsNeedUpdateVersion(currentValue, 0) )
     {
-      AssetManager__AddLoadWaitStatus_40593528(_4__this, currentValue, v8);
+      AssetManager__AddLoadWaitStatus_40778088(_4__this, currentValue, v8);
     }
   }
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     &v43,
-    (const MethodInfo_357323C *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
+    (const MethodInfo_35B9D18 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__AssetData__Dispose__);
   downLoadWaitList = _4__this->fields.downLoadWaitList;
   if ( !downLoadWaitList )
 LABEL_59:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   if ( downLoadWaitList->fields._size >= 1 )
   {
-    v11 = (Il2CppObject *)sub_1C3E7B0(AssetManager___c__DisplayClass119_0_TypeInfo);
+    v11 = (Il2CppObject *)sub_1C6BC54(AssetManager___c__DisplayClass119_0_TypeInfo);
     System_Object___ctor(v11, 0);
     v2->fields.__8__1 = (struct AssetManager___c__DisplayClass119_0_o *)v11;
-    sub_1C3E508((CGThumbnailListItem_o *)&v2->fields.__8__1, (int32_t)v11, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.__8__1, (int32_t)v11, v12, v13);
     if ( !v2->fields.__8__1 )
       goto LABEL_59;
     v2->fields.__8__1->fields.isDataUpdate = 0;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( LocalizationManager__ContainsKey((System_String_o *)StringLiteral_9250/*"NETWORK_ERROR_DATA_UPDATE_TITLE"*/, 0) )
+    if ( LocalizationManager__ContainsKey((System_String_o *)StringLiteral_9247/*"NETWORK_ERROR_DATA_UPDATE_TITLE"*/, 0) )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_9250/*"NETWORK_ERROR_DATA_UPDATE_TITLE"*/, 0);
+      v14 = LocalizationManager__Get((System_String_o *)StringLiteral_9247/*"NETWORK_ERROR_DATA_UPDATE_TITLE"*/, 0);
     }
     else
     {
-      v14 = (System_String_o *)StringLiteral_25445/*"データ更新"*/;
+      v14 = (System_String_o *)StringLiteral_25535/*"データ更新"*/;
     }
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    if ( LocalizationManager__ContainsKey((System_String_o *)StringLiteral_9248/*"NETWORK_ERROR_DATA_UPDATE_EXP"*/, 0) )
+    if ( LocalizationManager__ContainsKey((System_String_o *)StringLiteral_9245/*"NETWORK_ERROR_DATA_UPDATE_EXP"*/, 0) )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_9248/*"NETWORK_ERROR_DATA_UPDATE_EXP"*/, 0);
+      v16 = LocalizationManager__Get((System_String_o *)StringLiteral_9245/*"NETWORK_ERROR_DATA_UPDATE_EXP"*/, 0);
     }
     else
     {
@@ -7007,10 +6991,10 @@ LABEL_59:
     DownloadSize = (AssetManager_o *)AssetManager__GetDownloadSize(_4__this, v15);
     v19 = (Il2CppObject *)AssetManager__ConvertDownloadSizeToString(DownloadSize, (double)(__int64)DownloadSize, v18);
     v20 = System_String__Format(v16, v19, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v22 = (Il2CppObject *)v2->fields.__8__1;
     v23 = (CommonUI_o *)Instance;
-    v24 = (ErrorDialog_ClickDelegate_o *)sub_1C3E7B0(ErrorDialog_ClickDelegate_TypeInfo);
+    v24 = (ErrorDialog_ClickDelegate_o *)sub_1C6BC54(ErrorDialog_ClickDelegate_TypeInfo);
     ErrorDialog_ClickDelegate___ctor(
       v24,
       v22,
@@ -7023,8 +7007,8 @@ LABEL_59:
   }
 LABEL_50:
   v2->fields._isDispLogo_5__2 = 0;
-  v34 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v35 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+  v34 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v35 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
   System_Action___ctor(
     v35,
     (Il2CppObject *)_4__this,
@@ -7046,11 +7030,11 @@ LABEL_50:
     v36 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v36->static_fields->DEFAULT_FADE_TIME;
-  v38 = (UnityEngine_WaitForSeconds_o *)sub_1C3E7B0(UnityEngine_WaitForSeconds_TypeInfo);
+  v38 = (UnityEngine_WaitForSeconds_o *)sub_1C6BC54(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v38, DEFAULT_FADE_TIME, 0);
   v2->fields.__2__current = (Il2CppObject *)v38;
   v39 = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1C3E508(v39, (int32_t)v38, v40, v41);
+  sub_1C6B9AC(v39, (int32_t)v38, v40, v41);
   LODWORD(v39[-1].fields._ThumbnailSpritePath_k__BackingField) = 2;
   return 1;
 }
@@ -7072,11 +7056,11 @@ void __noreturn AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__11
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssetManager__DownloadAssetStorageAttributeWithCheckDialog_d__119_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -7355,50 +7339,50 @@ bool AssetManager__InitCR_d__135__MoveNext(AssetManager__InitCR_d__135_o *this, 
   System_Collections_Generic_List_Enumerator_object__o v246; // [xsp+60h] [xbp-90h] BYREF
 
   v4 = this;
-  if ( (byte_4C55D62 & 1) == 0 )
+  if ( (byte_4CB52C7 & 1) == 0 )
   {
-    sub_1C3E564(&AssetDataListInfo_TypeInfo);
-    sub_1C3E564(&AssetData_TypeInfo);
-    sub_1C3E564(&Method_AssetManager_OnClickRetryDialog__);
-    sub_1C3E564(&Method_AssetManager_OnClickWaitDebugDialog__);
-    sub_1C3E564(&AssetManager_TypeInfo);
-    sub_1C3E564(&CatAndMouseGame_TypeInfo);
-    sub_1C3E564(&char___TypeInfo);
-    sub_1C3E564(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_1C3E564(&Crc32_TypeInfo);
-    sub_1C3E564(&UnityEngine_Debug_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__AssetData__set_Item__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_AssetData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetData__Add__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
-    sub_1C3E564(&LocalizationManager_TypeInfo);
-    sub_1C3E564(&ManagementManager_TypeInfo);
-    sub_1C3E564(&ManagerConfig_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C3E564(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    sub_1C3E564(&UnityEngine_WaitForSeconds_TypeInfo);
-    sub_1C3E564(&StringLiteral_2394/*"AssetStorageList download time over"*/);
-    sub_1C3E564(&StringLiteral_2390/*"AssetStorageList download crc error"*/);
-    sub_1C3E564(&StringLiteral_2386/*"AssetStorage boot load error : 読み込んだファイルの先頭がチェックサムデータではなかった"*/);
-    sub_1C3E564(&StringLiteral_2043/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/);
-    sub_1C3E564(&StringLiteral_2382/*"AssetStorage boot load crc error : チェックサム値が不一致"*/);
-    sub_1C3E564(&StringLiteral_15939/*"[FFFF80]Download error for debug"*/);
-    sub_1C3E564(&StringLiteral_2391/*"AssetStorageList download data error"*/);
-    sub_1C3E564(&StringLiteral_2393/*"AssetStorageList download error : "*/);
-    sub_1C3E564(&StringLiteral_2384/*"AssetStorage boot load error : アセットバンドルリスト作成失敗"*/);
-    sub_1C3E564(&StringLiteral_25280/*"~"*/);
-    sub_1C3E564(&StringLiteral_2385/*"AssetStorage boot load error : ファイル先頭の１行目の内容が空"*/);
-    sub_1C3E564(&StringLiteral_11483/*"SCRIPT"*/);
-    sub_1C3E564(&StringLiteral_1768/*"@"*/);
-    sub_1C3E564(&StringLiteral_2044/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/);
-    this = (AssetManager__InitCR_d__135_o *)sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C55D62 = 1;
+    sub_1C6BA08(&AssetDataListInfo_TypeInfo);
+    sub_1C6BA08(&AssetData_TypeInfo);
+    sub_1C6BA08(&Method_AssetManager_OnClickRetryDialog__);
+    sub_1C6BA08(&Method_AssetManager_OnClickWaitDebugDialog__);
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    sub_1C6BA08(&CatAndMouseGame_TypeInfo);
+    sub_1C6BA08(&char___TypeInfo);
+    sub_1C6BA08(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_1C6BA08(&Crc32_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Debug_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AssetData__set_Item__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_AssetData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetData__Add__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
+    sub_1C6BA08(&LocalizationManager_TypeInfo);
+    sub_1C6BA08(&ManagementManager_TypeInfo);
+    sub_1C6BA08(&ManagerConfig_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C6BA08(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    sub_1C6BA08(&UnityEngine_WaitForSeconds_TypeInfo);
+    sub_1C6BA08(&StringLiteral_2386/*"AssetStorageList download time over"*/);
+    sub_1C6BA08(&StringLiteral_2382/*"AssetStorageList download crc error"*/);
+    sub_1C6BA08(&StringLiteral_2378/*"AssetStorage boot load error : 読み込んだファイルの先頭がチェックサムデータではなかった"*/);
+    sub_1C6BA08(&StringLiteral_2036/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/);
+    sub_1C6BA08(&StringLiteral_2374/*"AssetStorage boot load crc error : チェックサム値が不一致"*/);
+    sub_1C6BA08(&StringLiteral_15922/*"[FFFF80]Download error for debug"*/);
+    sub_1C6BA08(&StringLiteral_2383/*"AssetStorageList download data error"*/);
+    sub_1C6BA08(&StringLiteral_2385/*"AssetStorageList download error : "*/);
+    sub_1C6BA08(&StringLiteral_2376/*"AssetStorage boot load error : アセットバンドルリスト作成失敗"*/);
+    sub_1C6BA08(&StringLiteral_25370/*"~"*/);
+    sub_1C6BA08(&StringLiteral_2377/*"AssetStorage boot load error : ファイル先頭の１行目の内容が空"*/);
+    sub_1C6BA08(&StringLiteral_11480/*"SCRIPT"*/);
+    sub_1C6BA08(&StringLiteral_1761/*"@"*/);
+    sub_1C6BA08(&StringLiteral_2037/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/);
+    this = (AssetManager__InitCR_d__135_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB52C7 = 1;
   }
   memset(&v246, 0, sizeof(v246));
   _4__this = v4->fields.__4__this;
@@ -7429,7 +7413,7 @@ bool AssetManager__InitCR_d__135__MoveNext(AssetManager__InitCR_d__135_o *this, 
         goto LABEL_281;
       if ( System_Collections_Generic_Dictionary_object__object___get_Count(
              (System_Collections_Generic_Dictionary_object__object__o *)this,
-             (const MethodInfo_34754B0 *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__) )
+             (const MethodInfo_34BB60C *)Method_System_Collections_Generic_Dictionary_string__AssetData__get_Count__) )
       {
         goto LABEL_120;
       }
@@ -7454,45 +7438,45 @@ bool AssetManager__InitCR_d__135__MoveNext(AssetManager__InitCR_d__135_o *this, 
       v17 = v11;
       if ( !v11 )
         goto LABEL_120;
-      v18 = sub_1C3E60C(char___TypeInfo, 1);
+      v18 = sub_1C6BAB0(char___TypeInfo, 1);
       if ( !v18 )
-        sub_1C3E7C0(0, 0);
+        sub_1C6BC60(0, 0);
       if ( !*(_DWORD *)(v18 + 24) )
-        sub_1C3E7C8(v18, v18);
+        sub_1C6BC68(v18);
       *(_WORD *)(v18 + 32) = -257;
-      v19 = System_String__Trim_63693016(v17, (System_Char_array *)v18, 0);
-      v20 = sub_1C3E60C(char___TypeInfo, 2);
+      v19 = System_String__Trim_64023356(v17, (System_Char_array *)v18, 0);
+      v20 = sub_1C6BAB0(char___TypeInfo, 2);
       if ( !v20 )
-        sub_1C3E7C0(0, 0);
+        sub_1C6BC60(0, 0);
       v21 = *(_DWORD *)(v20 + 24);
       if ( !v21 )
-        sub_1C3E7C8(v20, v20);
+        sub_1C6BC68(v20);
       *(_WORD *)(v20 + 32) = 13;
       if ( v21 == 1 )
-        sub_1C3E7C8(v20, v20);
+        sub_1C6BC68(v20);
       *(_WORD *)(v20 + 34) = 10;
       if ( !v19 )
-        sub_1C3E7C0(v20, v20);
+        sub_1C6BC60(v20, v20);
       v24 = System_String__IndexOfAny(v19, (System_Char_array *)v20, 0);
       if ( v24 < 2 )
       {
-        v25 = &StringLiteral_2385/*"AssetStorage boot load error : ファイル先頭の１行目の内容が空"*/;
+        v25 = &StringLiteral_2377/*"AssetStorage boot load error : ファイル先頭の１行目の内容が空"*/;
         goto LABEL_96;
       }
-      v26 = System_String__Substring_63682392(v19, 0, v24, 0);
+      v26 = System_String__Substring_64012732(v19, 0, v24, 0);
       v28 = v26;
       if ( !v26 )
-        sub_1C3E7C0(0, v27);
-      if ( !System_String__StartsWith(v26, (System_String_o *)StringLiteral_25280/*"~"*/, 0) )
+        sub_1C6BC60(0, v27);
+      if ( !System_String__StartsWith(v26, (System_String_o *)StringLiteral_25370/*"~"*/, 0) )
       {
-        v25 = &StringLiteral_2386/*"AssetStorage boot load error : 読み込んだファイルの先頭がチェックサムデータではなかった"*/;
+        v25 = &StringLiteral_2378/*"AssetStorage boot load error : 読み込んだファイルの先頭がチェックサムデータではなかった"*/;
         goto LABEL_96;
       }
       v29 = System_String__Substring(v28, 1, 0);
       v30 = System_String__Substring(v19, v24 + 1, 0);
       UTF8 = System_Text_Encoding__get_UTF8(0);
       if ( !UTF8 )
-        sub_1C3E7C0(0, v32);
+        sub_1C6BC60(0, v32);
       v33 = (System_Byte_array *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_String_o *, const MethodInfo *))UTF8->klass->vtable._18_GetBytes.methodPtr)(
                                    UTF8,
                                    v30,
@@ -7502,22 +7486,22 @@ bool AssetManager__InitCR_d__135__MoveNext(AssetManager__InitCR_d__135_o *this, 
       v34 = Crc32__Compute(v33, 0);
       if ( System_UInt32__Parse(v29, 0) != v34 )
       {
-        v25 = &StringLiteral_2382/*"AssetStorage boot load crc error : チェックサム値が不一致"*/;
+        v25 = &StringLiteral_2374/*"AssetStorage boot load crc error : チェックサム値が不一致"*/;
         goto LABEL_96;
       }
-      v35 = sub_1C3E60C(char___TypeInfo, 2);
+      v35 = sub_1C6BAB0(char___TypeInfo, 2);
       if ( !v35 )
-        sub_1C3E7C0(0, 0);
+        sub_1C6BC60(0, 0);
       v36 = *(_DWORD *)(v35 + 24);
       if ( !v36 )
-        sub_1C3E7C8(v35, v35);
+        sub_1C6BC68(v35);
       *(_WORD *)(v35 + 32) = 13;
       if ( v36 == 1 )
-        sub_1C3E7C8(v35, v35);
+        sub_1C6BC68(v35);
       *(_WORD *)(v35 + 34) = 10;
       if ( !v30 )
-        sub_1C3E7C0(v35, v35);
-      this = (AssetManager__InitCR_d__135_o *)System_String__Split_63685660(v30, (System_Char_array *)v35, 1, 0);
+        sub_1C6BC60(v35, v35);
+      this = (AssetManager__InitCR_d__135_o *)System_String__Split_64016000(v30, (System_Char_array *)v35, 1, 0);
       v37 = this;
       if ( !this )
         goto LABEL_120;
@@ -7531,12 +7515,12 @@ bool AssetManager__InitCR_d__135__MoveNext(AssetManager__InitCR_d__135_o *this, 
         goto LABEL_281;
       this = (AssetManager__InitCR_d__135_o *)System_String__StartsWith(
                                                 (System_String_o *)this,
-                                                (System_String_o *)StringLiteral_1768/*"@"*/,
+                                                (System_String_o *)StringLiteral_1761/*"@"*/,
                                                 0);
       if ( ((unsigned __int8)this & 1) == 0 )
       {
 LABEL_95:
-        v25 = &StringLiteral_2384/*"AssetStorage boot load error : アセットバンドルリスト作成失敗"*/;
+        v25 = &StringLiteral_2376/*"AssetStorage boot load error : アセットバンドルリスト作成失敗"*/;
 LABEL_96:
         v73 = (System_String_o *)*v25;
         if ( *v25 )
@@ -7550,21 +7534,21 @@ LABEL_96:
           static_fields = v74->static_fields;
           v76 = StringLiteral_1/*""*/;
           static_fields->assetBundleMasterVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-          sub_1C3E508((CGThumbnailListItem_o *)&static_fields->assetBundleMasterVersion, v76, v22, v23);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->assetBundleMasterVersion, v76, v22, v23);
           v77 = StringLiteral_1/*""*/;
           v78 = AssetManager_TypeInfo->static_fields;
           v78->assetBundleDateVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-          sub_1C3E508((CGThumbnailListItem_o *)&v78->assetBundleDateVersion, v77, v79, v80);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v78->assetBundleDateVersion, v77, v79, v80);
           v81 = StringLiteral_1/*""*/;
           v82 = AssetManager_TypeInfo->static_fields;
           v82->assetBundleBuildVersion = (struct System_String_o *)StringLiteral_1/*""*/;
-          sub_1C3E508((CGThumbnailListItem_o *)&v82->assetBundleBuildVersion, v81, v83, v84);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v82->assetBundleBuildVersion, v81, v83, v84);
           this = (AssetManager__InitCR_d__135_o *)_4__this->fields.assetBundleDic;
           if ( !this )
             goto LABEL_281;
           System_Collections_Generic_Dictionary_object__object___Clear(
             (System_Collections_Generic_Dictionary_object__object__o *)this,
-            (const MethodInfo_3475968 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+            (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
           v85 = ManagerConfig_TypeInfo;
           if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
           {
@@ -7579,11 +7563,11 @@ LABEL_96:
               j_il2cpp_runtime_class_init_0(v85);
               v86 = ManagerConfig_TypeInfo->static_fields;
             }
-            if ( System_String__op_Inequality(v86->ServerDefaultType, (System_String_o *)StringLiteral_11483/*"SCRIPT"*/, 0) )
+            if ( System_String__op_Inequality(v86->ServerDefaultType, (System_String_o *)StringLiteral_11480/*"SCRIPT"*/, 0) )
             {
               _4__this->fields.isErrorDialog = 1;
-              Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-              v88 = (ErrorDialog_ClickDelegate_o *)sub_1C3E7B0(ErrorDialog_ClickDelegate_TypeInfo);
+              Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+              v88 = (ErrorDialog_ClickDelegate_o *)sub_1C6BC54(ErrorDialog_ClickDelegate_TypeInfo);
               ErrorDialog_ClickDelegate___ctor(
                 v88,
                 (Il2CppObject *)_4__this,
@@ -7595,7 +7579,7 @@ LABEL_96:
               methoda.fields.value.fields.y = 0.0;
               CommonUI__OpenWarningDialog(
                 (CommonUI_o *)Instance,
-                (System_String_o *)StringLiteral_15939/*"[FFFF80]Download error for debug"*/,
+                (System_String_o *)StringLiteral_15922/*"[FFFF80]Download error for debug"*/,
                 v73,
                 v88,
                 1,
@@ -7607,11 +7591,11 @@ LABEL_96:
 LABEL_27:
               if ( _4__this->fields.isErrorDialog )
               {
-                v12 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                v12 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
                 UnityEngine_WaitForEndOfFrame___ctor(v12, 0);
                 v4->fields.__2__current = (Il2CppObject *)v12;
                 p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-                sub_1C3E508(p__2__current, (int32_t)v12, v14, v15);
+                sub_1C6B9AC(p__2__current, (int32_t)v12, v14, v15);
                 result = 1;
                 LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
                 return result;
@@ -7645,7 +7629,7 @@ LABEL_27:
       }
       v45 = v43->static_fields;
       v45->assetBundleMasterVersion = v44;
-      sub_1C3E508((CGThumbnailListItem_o *)&v45->assetBundleMasterVersion, (int32_t)v44, v41, v42);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v45->assetBundleMasterVersion, (int32_t)v44, v41, v42);
       v48 = AssetManager_TypeInfo;
       if ( SLODWORD(v39->fields.__2__current) <= 1 )
         p_configFileUrl_5__2 = &StringLiteral_1/*""*/;
@@ -7659,7 +7643,7 @@ LABEL_27:
       }
       v51 = v48->static_fields;
       v51->assetBundleDateVersion = (struct System_String_o *)v50;
-      sub_1C3E508((CGThumbnailListItem_o *)&v51->assetBundleDateVersion, v50, v46, v47);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v51->assetBundleDateVersion, v50, v46, v47);
       v54 = AssetManager_TypeInfo;
       if ( SLODWORD(v39->fields.__2__current) <= 2 )
         p_loader_5__3 = &StringLiteral_1/*""*/;
@@ -7673,7 +7657,7 @@ LABEL_27:
       }
       v57 = v54->static_fields;
       v57->assetBundleBuildVersion = (struct System_String_o *)v56;
-      sub_1C3E508((CGThumbnailListItem_o *)&v57->assetBundleBuildVersion, v56, v52, v53);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v57->assetBundleBuildVersion, v56, v52, v53);
       v58 = (int)v37->fields.__2__current;
       if ( v58 >= 2 )
       {
@@ -7719,15 +7703,15 @@ LABEL_27:
           v69 = v67 >= 6 ? (System_String_o *)v60[1].klass : 0LL;
           wait_5__6 = (System_String_o *)v60->fields._wait_5__6;
           assetBundleDic = (System_Collections_Generic_Dictionary_object__object__o *)_4__this->fields.assetBundleDic;
-          v72 = (AssetData_o *)sub_1C3E7B0(AssetData_TypeInfo);
-          AssetData___ctor_40552188(v72, 0, wait_5__6, v62, configFileUrl_5__2, v65, v68, v69, 0);
+          v72 = (AssetData_o *)sub_1C6BC54(AssetData_TypeInfo);
+          AssetData___ctor_40736748(v72, 0, wait_5__6, v62, configFileUrl_5__2, v65, v68, v69, 0);
           if ( !assetBundleDic )
             goto LABEL_281;
           System_Collections_Generic_Dictionary_object__object___set_Item(
             assetBundleDic,
             (Il2CppObject *)wait_5__6,
             (Il2CppObject *)v72,
-            (const MethodInfo_34757CC *)Method_System_Collections_Generic_Dictionary_string__AssetData__set_Item__);
+            (const MethodInfo_34BB928 *)Method_System_Collections_Generic_Dictionary_string__AssetData__set_Item__);
           v37 = v243;
           ++v59;
           v58 = (int)v243->fields.__2__current;
@@ -7742,9 +7726,9 @@ LABEL_120:
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
       ConfigFileAddress = AssetManager__get_ConfigFileAddress((const MethodInfo *)v89);
       v4->fields._configFileUrl_5__2 = ConfigFileAddress;
-      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._configFileUrl_5__2, (int32_t)ConfigFileAddress, v91, v92);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._configFileUrl_5__2, (int32_t)ConfigFileAddress, v91, v92);
       v4->fields._loader_5__3 = 0;
-      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._loader_5__3, 0, v93, v94);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._loader_5__3, 0, v93, v94);
 LABEL_123:
       v95 = v4->fields._configFileUrl_5__2;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -7752,7 +7736,7 @@ LABEL_123:
       UrlString = AssetManager__getUrlString(v95, method);
       v97 = UnityEngine_Networking_UnityWebRequest__Get(UrlString, 0);
       v4->fields._loader_5__3 = v97;
-      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._loader_5__3, (int32_t)v97, v98, v99);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._loader_5__3, (int32_t)v97, v98, v99);
       this = (AssetManager__InitCR_d__135_o *)v4->fields._loader_5__3;
       if ( !this )
         goto LABEL_281;
@@ -7767,10 +7751,10 @@ LABEL_123:
       TIMEOUT = v101->static_fields->TIMEOUT;
       v4->fields._loadProgress_5__5 = 0.0;
       v4->fields._requestTime_5__4 = unscaledTime + TIMEOUT;
-      v103 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v103 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v103, 0);
       v4->fields._wait_5__6 = v103;
-      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._wait_5__6, (int32_t)v103, v104, v105);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._wait_5__6, (int32_t)v103, v104, v105);
 LABEL_129:
       v106 = (AssetManager__InitCR_d__135_o **)&v4->fields._loader_5__3;
       this = (AssetManager__InitCR_d__135_o *)v4->fields._loader_5__3;
@@ -7811,7 +7795,7 @@ LABEL_129:
           goto LABEL_153;
         }
 LABEL_281:
-        sub_1C3E7C0(this, method);
+        sub_1C6BC60(this, method);
       }
       if ( v112 >= v4->fields._requestTime_5__4 )
       {
@@ -7823,7 +7807,7 @@ LABEL_136:
           goto LABEL_281;
         if ( !UnityEngine_Networking_UnityWebRequest__get_isDone((UnityEngine_Networking_UnityWebRequest_o *)this, 0) )
         {
-          v122 = (Il2CppObject *)StringLiteral_2394/*"AssetStorageList download time over"*/;
+          v122 = (Il2CppObject *)StringLiteral_2386/*"AssetStorageList download time over"*/;
           goto LABEL_249;
         }
         this = *v106;
@@ -7855,10 +7839,10 @@ LABEL_155:
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
           v120 = AssetManager__getUrlString(v119, v118);
-          v121 = System_String__Concat_63636468((System_String_o *)StringLiteral_2393/*"AssetStorageList download error : "*/, v120, 0);
+          v121 = System_String__Concat_63966792((System_String_o *)StringLiteral_2385/*"AssetStorageList download error : "*/, v120, 0);
           goto LABEL_155;
         }
-        this = (AssetManager__InitCR_d__135_o *)sub_1C3E60C(char___TypeInfo, 1);
+        this = (AssetManager__InitCR_d__135_o *)sub_1C6BAB0(char___TypeInfo, 1);
         if ( !this )
           goto LABEL_281;
         method = (const MethodInfo *)this;
@@ -7867,17 +7851,16 @@ LABEL_155:
         LOWORD(this->fields.__4__this) = -257;
         if ( !v117 )
           goto LABEL_281;
-        this = (AssetManager__InitCR_d__135_o *)System_String__Trim_63693016(v117, (System_Char_array *)this, 0);
+        this = (AssetManager__InitCR_d__135_o *)System_String__Trim_64023356(v117, (System_Char_array *)this, 0);
         if ( !this )
           goto LABEL_281;
         v128 = this;
-        if ( System_String__StartsWith((System_String_o *)this, (System_String_o *)StringLiteral_25280/*"~"*/, 0) )
+        if ( System_String__StartsWith((System_String_o *)this, (System_String_o *)StringLiteral_25370/*"~"*/, 0) )
         {
-          this = (AssetManager__InitCR_d__135_o *)sub_1C3E60C(char___TypeInfo, 2);
+          this = (AssetManager__InitCR_d__135_o *)sub_1C6BAB0(char___TypeInfo, 2);
           if ( !this )
             goto LABEL_281;
           v129 = (int)this->fields.__2__current;
-          method = (const MethodInfo *)this;
           if ( !v129 )
             goto LABEL_282;
           LOWORD(this->fields.__4__this) = 13;
@@ -7888,7 +7871,7 @@ LABEL_155:
           if ( v130 >= 2 )
           {
             v131 = v130;
-            v132 = System_String__Substring_63682392((System_String_o *)v128, 1, v130 - 1, 0);
+            v132 = System_String__Substring_64012732((System_String_o *)v128, 1, v130 - 1, 0);
             v133 = System_String__Substring((System_String_o *)v128, v131 + 1, 0);
             this = (AssetManager__InitCR_d__135_o *)System_Text_Encoding__get_UTF8(0);
             if ( !this )
@@ -7906,23 +7889,22 @@ LABEL_155:
               {
                 UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)*v106, 0);
                 *v106 = 0;
-                sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._loader_5__3, 0, v138, v139);
+                sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._loader_5__3, 0, v138, v139);
               }
               if ( !v133 )
                 goto LABEL_280;
-              this = (AssetManager__InitCR_d__135_o *)sub_1C3E60C(char___TypeInfo, 2);
+              this = (AssetManager__InitCR_d__135_o *)sub_1C6BAB0(char___TypeInfo, 2);
               if ( !this )
                 goto LABEL_281;
               v140 = (int)this->fields.__2__current;
-              method = (const MethodInfo *)this;
               if ( v140 )
               {
                 LOWORD(this->fields.__4__this) = 13;
                 if ( v140 != 1 )
                 {
                   WORD1(this->fields.__4__this) = 10;
-                  v141 = System_String__Split_63685660(v133, (System_Char_array *)this, 1, 0);
-                  v142 = sub_1C3E7B0(AssetDataListInfo_TypeInfo);
+                  v141 = System_String__Split_64016000(v133, (System_Char_array *)this, 1, 0);
+                  v142 = sub_1C6BC54(AssetDataListInfo_TypeInfo);
                   AssetDataListInfo___ctor((AssetDataListInfo_o *)v142, v143);
                   if ( !v141 )
                     goto LABEL_281;
@@ -7949,7 +7931,7 @@ LABEL_155:
                         goto LABEL_281;
                       this = (AssetManager__InitCR_d__135_o *)System_String__StartsWith(
                                                                 (System_String_o *)this,
-                                                                (System_String_o *)StringLiteral_1768/*"@"*/,
+                                                                (System_String_o *)StringLiteral_1761/*"@"*/,
                                                                 0);
                       if ( !LODWORD(v148->fields.__2__current) )
                         goto LABEL_282;
@@ -7993,22 +7975,22 @@ LABEL_155:
                             goto LABEL_281;
                           System_Collections_Generic_Dictionary_object__object___Clear(
                             (System_Collections_Generic_Dictionary_object__object__o *)this,
-                            (const MethodInfo_3475968 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+                            (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
                         }
                         if ( !v142 )
                           goto LABEL_281;
                         v241->klass = (CGThumbnailListItem_c *)v154;
-                        sub_1C3E508(v241, (int32_t)v154, v160, v161);
+                        sub_1C6B9AC(v241, (int32_t)v154, v160, v161);
                         v242->klass = v158;
-                        sub_1C3E508(v242, (int32_t)v158, v162, v163);
+                        sub_1C6B9AC(v242, (int32_t)v158, v162, v163);
                         v244->klass = v159;
-                        sub_1C3E508(v244, (int32_t)v159, v164, v165);
+                        sub_1C6B9AC(v244, (int32_t)v159, v164, v165);
                       }
                       else
                       {
                         this = (AssetManager__InitCR_d__135_o *)System_String__StartsWith(
                                                                   (System_String_o *)this,
-                                                                  (System_String_o *)StringLiteral_25280/*"~"*/,
+                                                                  (System_String_o *)StringLiteral_25370/*"~"*/,
                                                                   0);
                         if ( ((unsigned __int8)this & 1) == 0 )
                         {
@@ -8088,14 +8070,14 @@ LABEL_155:
                                 System_Collections_Generic_List_object___AddWithResize(
                                   (System_Collections_Generic_List_object__o *)this,
                                   v175,
-                                  *(const MethodInfo_37B5460 **)(*(_QWORD *)(v179[4] + 192LL) + 112LL));
+                                  *(const MethodInfo_3800974 **)(*(_QWORD *)(v179[4] + 192LL) + 112LL));
                               }
                               else
                               {
                                 v181 = v178 + 8 * _2__current_low;
                                 LODWORD(this->fields.__2__current) = _2__current_low + 1;
                                 *(_QWORD *)(v181 + 32) = v175;
-                                sub_1C3E508((CGThumbnailListItem_o *)(v181 + 32), (int32_t)v175, v176, v177);
+                                sub_1C6B9AC((CGThumbnailListItem_o *)(v181 + 32), (int32_t)v175, v176, v177);
                               }
                               v173 = 0;
                             }
@@ -8105,8 +8087,8 @@ LABEL_155:
                               if ( !v142 )
                                 goto LABEL_281;
                               v182 = *(System_Collections_Generic_List_object__o **)(v142 + 40);
-                              v183 = (AssetData_o *)sub_1C3E7B0(AssetData_TypeInfo);
-                              AssetData___ctor_40552328(v183, 0, v173, 0, version, v239, v168, v172, klass, 0);
+                              v183 = (AssetData_o *)sub_1C6BC54(AssetData_TypeInfo);
+                              AssetData___ctor_40736888(v183, 0, v173, 0, version, v239, v168, v172, klass, 0);
                               if ( !v182 )
                                 goto LABEL_281;
                               items = v182->fields._items;
@@ -8120,14 +8102,14 @@ LABEL_155:
                                 System_Collections_Generic_List_object___AddWithResize(
                                   v182,
                                   (Il2CppObject *)v183,
-                                  *(const MethodInfo_37B5460 **)(*(_QWORD *)(v187[4] + 192LL) + 112LL));
+                                  *(const MethodInfo_3800974 **)(*(_QWORD *)(v187[4] + 192LL) + 112LL));
                               }
                               else
                               {
                                 v189 = &items->obj.klass + size;
                                 v182->fields._size = size + 1;
                                 v189[4] = (Il2CppClass *)v183;
-                                sub_1C3E508((CGThumbnailListItem_o *)(v189 + 4), (int32_t)v183, v184, v185);
+                                sub_1C6B9AC((CGThumbnailListItem_o *)(v189 + 4), (int32_t)v183, v184, v185);
                               }
                             }
                           }
@@ -8151,85 +8133,85 @@ LABEL_231:
                   }
                   v192 = v190->static_fields;
                   v192->assetBundleMasterVersion = (struct System_String_o *)v191;
-                  sub_1C3E508((CGThumbnailListItem_o *)&v192->assetBundleMasterVersion, (int32_t)v191, v144, v145);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)&v192->assetBundleMasterVersion, (int32_t)v191, v144, v145);
                   v193 = AssetManager_TypeInfo->static_fields;
                   v194 = v242->klass;
                   v193->assetBundleDateVersion = (struct System_String_o *)v242->klass;
-                  sub_1C3E508((CGThumbnailListItem_o *)&v193->assetBundleDateVersion, (int32_t)v194, v195, v196);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)&v193->assetBundleDateVersion, (int32_t)v194, v195, v196);
                   v197 = AssetManager_TypeInfo->static_fields;
                   v198 = v244->klass;
                   v197->assetBundleBuildVersion = (struct System_String_o *)v244->klass;
-                  sub_1C3E508((CGThumbnailListItem_o *)&v197->assetBundleBuildVersion, (int32_t)v198, v199, v200);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)&v197->assetBundleBuildVersion, (int32_t)v198, v199, v200);
                   this = (AssetManager__InitCR_d__135_o *)_4__this->fields.assetBundleDic;
                   if ( !this )
                     goto LABEL_281;
                   System_Collections_Generic_Dictionary_object__object___Clear(
                     (System_Collections_Generic_Dictionary_object__object__o *)this,
-                    (const MethodInfo_3475968 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
+                    (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Clear__);
                   this = *(AssetManager__InitCR_d__135_o **)(v142 + 40);
                   if ( !this )
                     goto LABEL_281;
                   System_Collections_Generic_List_object___GetEnumerator(
                     (System_Collections_Generic_List_Enumerator_T__o *)&v245,
                     (System_Collections_Generic_List_object__o *)this,
-                    (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
+                    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_AssetData__GetEnumerator__);
                   v246 = v245;
                   while ( 1 )
                   {
                     v201 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                              &v246,
-                             (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
+                             (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_AssetData__MoveNext__);
                     if ( !v201 )
                       break;
                     current = v246.fields._current;
                     if ( !v246.fields._current )
-                      sub_1C3E7C0(v201, v202);
+                      sub_1C6BC60(v201, v202);
                     v204 = (System_Collections_Generic_Dictionary_object__object__o *)_4__this->fields.assetBundleDic;
                     if ( !v204 )
-                      sub_1C3E7C0(0, v202);
+                      sub_1C6BC60(0, v202);
                     if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
                             v204,
                             (Il2CppObject *)v246.fields._current[1].monitor,
-                            (const MethodInfo_34759D4 *)Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__) )
+                            (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__AssetData__ContainsKey__) )
                     {
                       v206 = (System_Collections_Generic_Dictionary_object__object__o *)_4__this->fields.assetBundleDic;
                       if ( !v206 )
-                        sub_1C3E7C0(0, v205);
+                        sub_1C6BC60(0, v205);
                       System_Collections_Generic_Dictionary_object__object___Add(
                         v206,
                         (Il2CppObject *)current[1].monitor,
                         current,
-                        (const MethodInfo_34757E0 *)Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
+                        (const MethodInfo_34BB93C *)Method_System_Collections_Generic_Dictionary_string__AssetData__Add__);
                     }
                   }
                   System_Collections_Generic_List_Enumerator_object___Dispose(
                     &v246,
-                    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
+                    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_AssetData__Dispose__);
                   AssetManager__ConfigWriteRequest(_4__this, 1, v230);
 LABEL_280:
                   v4->fields._configFileUrl_5__2 = 0;
-                  sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._configFileUrl_5__2, 0, v136, v137);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._configFileUrl_5__2, 0, v136, v137);
                   v4->fields._loader_5__3 = 0;
-                  sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._loader_5__3, 0, v231, v232);
-                  v233 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
+                  sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._loader_5__3, 0, v231, v232);
+                  v233 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
                   UnityEngine_WaitForEndOfFrame___ctor(v233, 0);
                   v4->fields.__2__current = (Il2CppObject *)v233;
                   v126 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-                  sub_1C3E508(v126, (int32_t)v233, v234, v235);
+                  sub_1C6B9AC(v126, (int32_t)v233, v234, v235);
                   v127 = 6;
                   goto LABEL_278;
                 }
               }
 LABEL_282:
-              sub_1C3E7C8(this, method);
+              sub_1C6BC68(this);
             }
-            v207 = (Il2CppObject *)StringLiteral_2390/*"AssetStorageList download crc error"*/;
+            v207 = (Il2CppObject *)StringLiteral_2382/*"AssetStorageList download crc error"*/;
             if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
             UnityEngine_Debug__LogError(v207, 0);
           }
         }
-        v122 = (Il2CppObject *)StringLiteral_2391/*"AssetStorageList download data error"*/;
+        v122 = (Il2CppObject *)StringLiteral_2383/*"AssetStorageList download data error"*/;
         if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
         UnityEngine_Debug__LogError(v122, 0);
@@ -8238,7 +8220,7 @@ LABEL_249:
         {
           UnityEngine_Networking_UnityWebRequest__Dispose((UnityEngine_Networking_UnityWebRequest_o *)*v106, 0);
           *v106 = 0;
-          sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._loader_5__3, 0, v208, v209);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._loader_5__3, 0, v208, v209);
         }
         if ( !v122 )
           goto LABEL_277;
@@ -8256,11 +8238,11 @@ LABEL_249:
             j_il2cpp_runtime_class_init_0(v210);
             v211 = ManagerConfig_TypeInfo->static_fields;
           }
-          if ( System_String__op_Inequality(v211->ServerDefaultType, (System_String_o *)StringLiteral_11483/*"SCRIPT"*/, 0) )
+          if ( System_String__op_Inequality(v211->ServerDefaultType, (System_String_o *)StringLiteral_11480/*"SCRIPT"*/, 0) )
           {
             _4__this->fields.isErrorDialog = 1;
-            v212 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-            v213 = (ErrorDialog_ClickDelegate_o *)sub_1C3E7B0(ErrorDialog_ClickDelegate_TypeInfo);
+            v212 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+            v213 = (ErrorDialog_ClickDelegate_o *)sub_1C6BC54(ErrorDialog_ClickDelegate_TypeInfo);
             ErrorDialog_ClickDelegate___ctor(
               v213,
               (Il2CppObject *)_4__this,
@@ -8272,7 +8254,7 @@ LABEL_249:
             methodb.fields.value.fields.y = 0.0;
             CommonUI__OpenWarningDialog(
               (CommonUI_o *)v212,
-              (System_String_o *)StringLiteral_15939/*"[FFFF80]Download error for debug"*/,
+              (System_String_o *)StringLiteral_15922/*"[FFFF80]Download error for debug"*/,
               (System_String_o *)v122,
               v213,
               1,
@@ -8284,11 +8266,11 @@ LABEL_249:
 LABEL_260:
             if ( _4__this->fields.isErrorDialog )
             {
-              v214 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
+              v214 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
               UnityEngine_WaitForEndOfFrame___ctor(v214, 0);
               v4->fields.__2__current = (Il2CppObject *)v214;
               v126 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-              sub_1C3E508(v126, (int32_t)v214, v215, v216);
+              sub_1C6B9AC(v126, (int32_t)v214, v215, v216);
               v127 = 3;
               goto LABEL_278;
             }
@@ -8297,10 +8279,10 @@ LABEL_260:
         _4__this->fields.isErrorDialog = 1;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(ManagementManager_TypeInfo);
-        if ( !byte_4C55CE2 )
+        if ( !byte_4CB5247 )
         {
-          sub_1C3E564(&ManagementManager_TypeInfo);
-          byte_4C55CE2 = 1;
+          sub_1C6BA08(&ManagementManager_TypeInfo);
+          byte_4CB5247 = 1;
         }
         v217 = ManagementManager_TypeInfo;
         if ( !ManagementManager_TypeInfo->_2.cctor_finished )
@@ -8309,14 +8291,14 @@ LABEL_260:
           v217 = ManagementManager_TypeInfo;
         }
         isDuringStartup = v217->static_fields->isDuringStartup;
-        v219 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        v219 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( LocalizationManager_TypeInfo->_2.cctor_finished )
         {
           if ( isDuringStartup )
           {
 LABEL_270:
-            v220 = LocalizationManager__Get((System_String_o *)StringLiteral_2043/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0);
-            v221 = (ErrorDialog_ClickDelegate_o *)sub_1C3E7B0(ErrorDialog_ClickDelegate_TypeInfo);
+            v220 = LocalizationManager__Get((System_String_o *)StringLiteral_2036/*"ASSET_LOADER_ERROR_BOOT_RETRY_MESSAGE"*/, 0);
+            v221 = (ErrorDialog_ClickDelegate_o *)sub_1C6BC54(ErrorDialog_ClickDelegate_TypeInfo);
             ErrorDialog_ClickDelegate___ctor(
               v221,
               (Il2CppObject *)_4__this,
@@ -8328,20 +8310,20 @@ LABEL_270:
 LABEL_275:
             if ( _4__this->fields.isErrorDialog )
             {
-              v224 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
+              v224 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
               UnityEngine_WaitForEndOfFrame___ctor(v224, 0);
               v4->fields.__2__current = (Il2CppObject *)v224;
               v126 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-              sub_1C3E508(v126, (int32_t)v224, v225, v226);
+              sub_1C6B9AC(v126, (int32_t)v224, v225, v226);
               v127 = 4;
               goto LABEL_278;
             }
 LABEL_277:
-            v227 = (UnityEngine_WaitForSeconds_o *)sub_1C3E7B0(UnityEngine_WaitForSeconds_TypeInfo);
+            v227 = (UnityEngine_WaitForSeconds_o *)sub_1C6BC54(UnityEngine_WaitForSeconds_TypeInfo);
             UnityEngine_WaitForSeconds___ctor(v227, 1.0, 0);
             v4->fields.__2__current = (Il2CppObject *)v227;
             v126 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-            sub_1C3E508(v126, (int32_t)v227, v228, v229);
+            sub_1C6B9AC(v126, (int32_t)v227, v228, v229);
             v127 = 5;
             goto LABEL_278;
           }
@@ -8352,8 +8334,8 @@ LABEL_277:
           if ( isDuringStartup )
             goto LABEL_270;
         }
-        v222 = LocalizationManager__Get((System_String_o *)StringLiteral_2044/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0);
-        v223 = (ErrorDialog_ClickDelegate_o *)sub_1C3E7B0(ErrorDialog_ClickDelegate_TypeInfo);
+        v222 = LocalizationManager__Get((System_String_o *)StringLiteral_2037/*"ASSET_LOADER_ERROR_TIME_OVER_MESSAGE"*/, 0);
+        v223 = (ErrorDialog_ClickDelegate_o *)sub_1C6BC54(ErrorDialog_ClickDelegate_TypeInfo);
         ErrorDialog_ClickDelegate___ctor(v223, (Il2CppObject *)_4__this, Method_AssetManager_OnClickRetryDialog__, 0);
         if ( !v219 )
           goto LABEL_281;
@@ -8364,7 +8346,7 @@ LABEL_153:
       v125 = (Il2CppObject *)v4->fields._wait_5__6;
       v4->fields.__2__current = v125;
       v126 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1C3E508(v126, (int32_t)v125, v110, v111);
+      sub_1C6B9AC(v126, (int32_t)v125, v110, v111);
       v127 = 2;
 LABEL_278:
       LODWORD(v126[-1].fields._ThumbnailSpritePath_k__BackingField) = v127;
@@ -8390,7 +8372,7 @@ LABEL_278:
     case 5:
       v4->fields._wait_5__6 = 0;
       v4->fields.__1__state = -1;
-      sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._wait_5__6, 0, v2, v3);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._wait_5__6, 0, v2, v3);
       if ( !_4__this )
         goto LABEL_281;
       goto LABEL_123;
@@ -8401,7 +8383,7 @@ LABEL_278:
       _4__this->fields.initCRW = 0;
       _4__this->fields.isCancelDownload = 0;
       _4__this->fields.isInitEnd = 1;
-      sub_1C3E508((CGThumbnailListItem_o *)&_4__this->fields.initCRW, 0, v2, v3);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.initCRW, 0, v2, v3);
       return 0;
     default:
       return 0;
@@ -8425,11 +8407,11 @@ void __noreturn AssetManager__InitCR_d__135__System_Collections_IEnumerator_Rese
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssetManager__InitCR_d__135_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssetManager__InitCR_d__135_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -8476,10 +8458,10 @@ bool AssetManager__WaitForExecutionUnloadUnuseAssets_d__41__MoveNext(
   bool result; // w0
 
   v4 = this;
-  if ( (byte_4C55D63 & 1) == 0 )
+  if ( (byte_4CB52C8 & 1) == 0 )
   {
-    this = (AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_o *)sub_1C3E564(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_4C55D63 = 1;
+    this = (AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_o *)sub_1C6BA08(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    byte_4CB52C8 = 1;
   }
   _1__state = v4->fields.__1__state;
   _4__this = v4->fields.__4__this;
@@ -8492,19 +8474,19 @@ bool AssetManager__WaitForExecutionUnloadUnuseAssets_d__41__MoveNext(
     if ( _1__state )
       return 0;
     v4->fields.__1__state = -1;
-    v7 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    v7 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
     UnityEngine_WaitForEndOfFrame___ctor(v7, 0);
     v4->fields._wait_5__2 = v7;
-    sub_1C3E508((CGThumbnailListItem_o *)&v4->fields._wait_5__2, (int32_t)v7, v8, v9);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._wait_5__2, (int32_t)v7, v8, v9);
   }
   if ( !_4__this )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   if ( _4__this->fields.inProgressUnloadUnusedAssets || _4__this->fields.requestUnloadUnusedAssets )
   {
     wait_5__2 = (Il2CppObject *)v4->fields._wait_5__2;
     v4->fields.__2__current = wait_5__2;
     p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-    sub_1C3E508(p__2__current, (int32_t)wait_5__2, v2, v3);
+    sub_1C6B9AC(p__2__current, (int32_t)wait_5__2, v2, v3);
     result = 1;
     LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
     return result;
@@ -8529,11 +8511,11 @@ void __noreturn AssetManager__WaitForExecutionUnloadUnuseAssets_d__41__System_Co
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssetManager__WaitForExecutionUnloadUnuseAssets_d__41_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -8559,15 +8541,15 @@ void AssetManager___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C55D5B & 1) == 0 )
+  if ( (byte_4CB52C0 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager___c_TypeInfo);
-    byte_4C55D5B = 1;
+    sub_1C6BA08(&AssetManager___c_TypeInfo);
+    byte_4CB52C0 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(AssetManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(AssetManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AssetManager___c_TypeInfo->static_fields->__9 = (struct AssetManager___c_o *)v1;
-  sub_1C3E508((CGThumbnailListItem_o *)AssetManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)AssetManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
 }
 
 
@@ -8583,7 +8565,7 @@ void AssetManager___c___CancelAndReleaseDownloadAssetStorage_b__130_0(
         const MethodInfo *method)
 {
   if ( !assetData )
-    sub_1C3E7C0(this, 0);
+    sub_1C6BC60(this, 0);
   AssetData__RemoveEntryAll(assetData, 0);
 }
 
@@ -8602,26 +8584,26 @@ void AssetManager___c__DisplayClass119_0___DownloadAssetStorageAttributeWithChec
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4C55D5C & 1) == 0 )
+  if ( (byte_4CB52C1 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Application_TypeInfo);
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
-    sub_1C3E564(&StringLiteral_12316/*"START_BOOT_ASSET_DOWNLOAD"*/);
-    byte_4C55D5C = 1;
+    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    sub_1C6BA08(&StringLiteral_12313/*"START_BOOT_ASSET_DOWNLOAD"*/);
+    byte_4CB52C1 = 1;
   }
   if ( isDecide )
   {
     this->fields.isDataUpdate = 1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CrashReporter__get_Instance__);
     if ( !Instance )
-      sub_1C3E7C0(0, v6);
-    CrashReporter__SetNowState((CrashReporter_o *)Instance, (System_String_o *)StringLiteral_12316/*"START_BOOT_ASSET_DOWNLOAD"*/, 0);
+      sub_1C6BC60(0, v6);
+    CrashReporter__SetNowState((CrashReporter_o *)Instance, (System_String_o *)StringLiteral_12313/*"START_BOOT_ASSET_DOWNLOAD"*/, 0);
   }
   else
   {
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
-    UnityEngine_Application__Quit_71136496(0);
+    UnityEngine_Application__Quit_71452840(0);
   }
 }
 
@@ -8645,19 +8627,19 @@ void AssetManager___c__DisplayClass152_0___LoadStart_b__0(
   const MethodInfo *v9; // x3
   struct AssetManager_LoadWaitStatus_o *waiter; // x8
 
-  if ( (byte_4C55D5D & 1) == 0 )
+  if ( (byte_4CB52C2 & 1) == 0 )
   {
-    sub_1C3E564(&Method_AssetManager_OnEndLoadAssetStorage__);
-    sub_1C3E564(&AssetLoader_LoadEndHandler_TypeInfo);
-    byte_4C55D5D = 1;
+    sub_1C6BA08(&Method_AssetManager_OnEndLoadAssetStorage__);
+    sub_1C6BA08(&AssetLoader_LoadEndHandler_TypeInfo);
+    byte_4CB52C2 = 1;
   }
   loader = this->fields.loader;
   _4__this = (Il2CppObject *)this->fields.__4__this;
-  v5 = (AssetLoader_LoadEndHandler_o *)sub_1C3E7B0(AssetLoader_LoadEndHandler_TypeInfo);
+  v5 = (AssetLoader_LoadEndHandler_o *)sub_1C6BC54(AssetLoader_LoadEndHandler_TypeInfo);
   AssetLoader_LoadEndHandler___ctor(v5, _4__this, Method_AssetManager_OnEndLoadAssetStorage__, v6);
   waiter = this->fields.waiter;
   if ( !waiter || !loader )
-    sub_1C3E7C0(v7, v8);
+    sub_1C6BC60(v7, v8);
   AssetLoader__StartLoad(loader, v5, waiter->fields.resourceNames, v9);
 }
 
@@ -8678,11 +8660,11 @@ void AssetManager___c__DisplayClass173_0___LoadAssetStorage_b__0(
   struct System_Collections_Generic_List_string__o *remainNameList; // x8
 
   v4 = this;
-  if ( (byte_4C55D5E & 1) == 0 )
+  if ( (byte_4CB52C3 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_string__Remove__);
-    this = (AssetManager___c__DisplayClass173_0_o *)sub_1C3E564(&Method_System_Collections_Generic_List_string__get_Count__);
-    byte_4C55D5E = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Remove__);
+    this = (AssetManager___c__DisplayClass173_0_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Count__);
+    byte_4CB52C3 = 1;
   }
   ++v4->fields.calledCallbackFuncCounter;
   if ( !data )
@@ -8693,13 +8675,13 @@ void AssetManager___c__DisplayClass173_0___LoadAssetStorage_b__0(
   this = (AssetManager___c__DisplayClass173_0_o *)System_Collections_Generic_List_object___Remove(
                                                     (System_Collections_Generic_List_object__o *)this,
                                                     (Il2CppObject *)data->fields.name,
-                                                    (const MethodInfo_37B6988 *)Method_System_Collections_Generic_List_string__Remove__);
+                                                    (const MethodInfo_3801E9C *)Method_System_Collections_Generic_List_string__Remove__);
   if ( v4->fields.calledCallbackFunc )
     return;
   remainNameList = v4->fields.remainNameList;
   if ( !remainNameList )
 LABEL_12:
-    sub_1C3E7C0(this, data);
+    sub_1C6BC60(this, data);
   if ( remainNameList->fields._size <= 0 )
   {
     this = (AssetManager___c__DisplayClass173_0_o *)v4->fields.__4__this;
@@ -8734,7 +8716,7 @@ bool AssetManager___c__DisplayClass190_0___AssetObjectListSetupAndCall_b__0(
 
   asset = this->fields.asset;
   if ( !asset )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return asset->fields.objectList != 0;
 }
 
@@ -8764,7 +8746,7 @@ bool AssetManager___c__DisplayClass191_0___AssetObjectListSetupAndCall_b__0(
     while ( 1 )
     {
       if ( max_length == v4 )
-        sub_1C3E7C8(this, method);
+        sub_1C6BC68(this);
       v5 = assetList->m_Items[v4];
       if ( !v5 )
         break;
@@ -8776,7 +8758,7 @@ bool AssetManager___c__DisplayClass191_0___AssetObjectListSetupAndCall_b__0(
       return v4 >= max_length;
     }
 LABEL_12:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   v4 = 0;
   return v4 >= max_length;
@@ -8820,11 +8802,11 @@ bool AssetManager__coUnloadUnusedAssets_d__142__MoveNext(
   const MethodInfo *v22; // x3
 
   v2 = this;
-  if ( (byte_4C55D64 & 1) == 0 )
+  if ( (byte_4CB52C9 & 1) == 0 )
   {
-    sub_1C3E564(&AssetManager_TypeInfo);
-    this = (AssetManager__coUnloadUnusedAssets_d__142_o *)sub_1C3E564(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_4C55D64 = 1;
+    sub_1C6BA08(&AssetManager_TypeInfo);
+    this = (AssetManager__coUnloadUnusedAssets_d__142_o *)sub_1C6BA08(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    byte_4CB52C9 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -8841,7 +8823,7 @@ bool AssetManager__coUnloadUnusedAssets_d__142__MoveNext(
     {
       ((void (__fastcall *)(intptr_t, intptr_t))v18->fields.invoke_impl)(v18->fields.method_code, v18->fields.method);
       p_unloadCallbacks->klass = 0;
-      sub_1C3E508(p_unloadCallbacks, 0, v21, v22);
+      sub_1C6B9AC(p_unloadCallbacks, 0, v21, v22);
     }
     return 0;
   }
@@ -8850,10 +8832,10 @@ bool AssetManager__coUnloadUnusedAssets_d__142__MoveNext(
     if ( !_1__state )
     {
       v2->fields.__1__state = -1;
-      v5 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C3E7B0(UnityEngine_WaitForEndOfFrame_TypeInfo);
+      v5 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
       UnityEngine_WaitForEndOfFrame___ctor(v5, 0);
       v2->fields._wait_5__2 = v5;
-      sub_1C3E508((CGThumbnailListItem_o *)&v2->fields._wait_5__2, (int32_t)v5, v6, v7);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields._wait_5__2, (int32_t)v5, v6, v7);
       goto LABEL_8;
     }
     return 0;
@@ -8873,17 +8855,17 @@ LABEL_8:
       v14 = UnityEngine_Resources__UnloadUnusedAssets(0);
       v2->fields.__2__current = (Il2CppObject *)v14;
       p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-      sub_1C3E508(p__2__current, (int32_t)v14, v16, v17);
+      sub_1C6B9AC(p__2__current, (int32_t)v14, v16, v17);
       LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 2;
       return v13;
     }
 LABEL_19:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
   wait_5__2 = (Il2CppObject *)v2->fields._wait_5__2;
   v2->fields.__2__current = wait_5__2;
   v12 = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1C3E508(v12, (int32_t)wait_5__2, v9, v10);
+  sub_1C6B9AC(v12, (int32_t)wait_5__2, v9, v10);
   v13 = 1;
   LODWORD(v12[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
   return v13;
@@ -8906,11 +8888,11 @@ void __noreturn AssetManager__coUnloadUnusedAssets_d__142__System_Collections_IE
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssetManager__coUnloadUnusedAssets_d__142_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssetManager__coUnloadUnusedAssets_d__142_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 

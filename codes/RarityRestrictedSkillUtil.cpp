@@ -1,11 +1,10 @@
-// local variable allocation has failed, the output may be wrong!
 int32_t RarityRestrictedSkillUtil__GetOverwrittenRarity(
         ServantEntity_o *servantEntity,
         int32_t defaultRarity,
         const MethodInfo *method)
 {
   if ( !servantEntity )
-    sub_1C3E7C0(0, *(_QWORD *)&defaultRarity);
+    sub_1C6BC60(0, defaultRarity);
   if ( ServantEntity__checkIsHeroineSvt(servantEntity, 0) )
     return 3;
   else
@@ -26,10 +25,10 @@ bool RarityRestrictedSkillUtil__IsDisabled(
 
   v5 = servantEntity;
   v6 = skillLvEntity;
-  if ( (byte_4C5812C & 1) == 0 )
+  if ( (byte_4CB769A & 1) == 0 )
   {
-    skillLvEntity = (SkillLvEntity_o *)sub_1C3E564(&Method_System_Array_IndexOf_int___);
-    byte_4C5812C = 1;
+    skillLvEntity = (SkillLvEntity_o *)sub_1C6BA08(&Method_System_Array_IndexOf_int___);
+    byte_4CB769A = 1;
   }
   if ( !v6
     || (skillLvEntity = (SkillLvEntity_o *)SkillLvEntity__GetActRarity(v6, 0), !v5)
@@ -40,13 +39,13 @@ bool RarityRestrictedSkillUtil__IsDisabled(
       : (servantEntity = (ServantEntity_o *)(&dword_0 + 3)),
         !v7) )
   {
-    sub_1C3E7C0(skillLvEntity, servantEntity);
+    sub_1C6BC60(skillLvEntity, servantEntity);
   }
   if ( v7->max_length )
     return (unsigned int)System_Array__IndexOf_int_(
                            v7,
                            (int32_t)servantEntity,
-                           (const MethodInfo_3200C2C *)Method_System_Array_IndexOf_int___) >> 31;
+                           (const MethodInfo_324317C *)Method_System_Array_IndexOf_int___) >> 31;
   else
     LOBYTE(v8) = 0;
   return v8;

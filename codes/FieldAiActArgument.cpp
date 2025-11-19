@@ -21,7 +21,7 @@ void FieldAiActArgument___ctor(
     (const MethodInfo *)isForcedSpeedOne);
   v9->fields._FieldData_k__BackingField = fieldData;
   v9 = (FieldAiActArgument_o *)((char *)v9 + 40);
-  sub_1C3E508((CGThumbnailListItem_o *)v9, (int32_t)fieldData, v10, v11);
+  sub_1C6B9AC((CGThumbnailListItem_o *)v9, (int32_t)fieldData, v10, v11);
   LOBYTE(v9->monitor) = isForcedSpeedOne;
 }
 
@@ -39,11 +39,11 @@ void FieldAiActArgument__InitCommonTask(
     || (task->fields.isForcedSpeedOne = this->fields._IsForcedSpeedOne_k__BackingField,
         (AiEnt_k__BackingField = this->fields._AiEnt_k__BackingField) == 0) )
   {
-    sub_1C3E7C0(this, task);
+    sub_1C6BC60(this, task);
   }
   infoText = AiEnt_k__BackingField->fields.infoText;
   task->fields.motionMessage = infoText;
-  sub_1C3E508((CGThumbnailListItem_o *)&task->fields.motionMessage, (int32_t)infoText, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&task->fields.motionMessage, (int32_t)infoText, (int32_t)method, v3);
 }
 
 
@@ -65,7 +65,7 @@ int32_t FieldAiActArgument__get_UniqueId(FieldAiActArgument_o *this, const Metho
 
   FieldData_k__BackingField = this->fields._FieldData_k__BackingField;
   if ( !FieldData_k__BackingField )
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   return FieldData_k__BackingField->fields.uniqueId;
 }
 
@@ -75,7 +75,7 @@ void FieldAiActArgument__set_FieldData(FieldAiActArgument_o *this, BattleFieldDa
   const MethodInfo *v3; // x3
 
   this->fields._FieldData_k__BackingField = value;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields._FieldData_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._FieldData_k__BackingField, (int32_t)value, (int32_t)method, v3);
 }
 
 

@@ -20,13 +20,13 @@ void EventMissionActionInfo___ctor(
     vals = eventMissionActionEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1C3E508((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
     *((_DWORD *)p_vals + 2) = eventMissionActionEntity->fields.optionId;
   }
 }
 
 
-void EventMissionActionInfo___ctor_44811728(
+void EventMissionActionInfo___ctor_44998440(
         EventMissionActionInfo_o *this,
         EventMissionActionAddEntity_o *eventMissionActionAddEntity,
         const MethodInfo *method)
@@ -45,7 +45,7 @@ void EventMissionActionInfo___ctor_44811728(
     vals = eventMissionActionAddEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1C3E508((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
+    sub_1C6B9AC((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
     *((_DWORD *)p_vals + 2) = eventMissionActionAddEntity->fields.optionId;
   }
 }
@@ -69,7 +69,7 @@ int32_t EventMissionActionInfo__getValID(EventMissionActionInfo_o *this, const M
     if ( this->fields.missionActionType == 3 )
     {
       if ( !(_DWORD)max_length )
-        sub_1C3E7C8(0xFFFFFFFFLL, method);
+        sub_1C6BC68(0xFFFFFFFFLL);
       if ( System_Int32__TryParse(vals->m_Items[0], &result, 0) )
         return result;
       else
@@ -88,16 +88,16 @@ System_String_o *EventMissionActionInfo__getValMessage(EventMissionActionInfo_o 
   System_String_o **m_Items; // x8
 
   v2 = this;
-  if ( (byte_4C58C7C & 1) == 0 )
+  if ( (byte_4CB81E1 & 1) == 0 )
   {
-    this = (EventMissionActionInfo_o *)sub_1C3E564(&StringLiteral_1/*""*/);
-    byte_4C58C7C = 1;
+    this = (EventMissionActionInfo_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
+    byte_4CB81E1 = 1;
   }
   vals = v2->fields.vals;
   if ( vals && (max_length = vals->max_length) != 0 && (unsigned int)(v2->fields.missionActionType - 1) <= 1 )
   {
     if ( !(_DWORD)max_length )
-      sub_1C3E7C8(this, method);
+      sub_1C6BC68(this);
     m_Items = vals->m_Items;
   }
   else

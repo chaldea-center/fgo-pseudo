@@ -42,7 +42,7 @@ int32_t FuncList__getRate(int32_t intype, System_Int32_array *vals, const Method
 }
 
 
-int32_t FuncList__getRate_40471336(int32_t type, System_Int32_array *vals, const MethodInfo *method)
+int32_t FuncList__getRate_40654700(int32_t type, System_Int32_array *vals, const MethodInfo *method)
 {
   if ( vals && SLODWORD(vals->max_length) >= 1 )
     return vals->m_Items[0];
@@ -112,7 +112,6 @@ LABEL_8:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 int32_t FuncList__getValueFronIndex(System_Int32_array *vals, int32_t index, const MethodInfo *method)
 {
   int32_t max_length; // w8
@@ -123,7 +122,7 @@ int32_t FuncList__getValueFronIndex(System_Int32_array *vals, int32_t index, con
     if ( max_length >= index )
     {
       if ( max_length <= (unsigned int)index )
-        sub_1C3E7C8(vals, *(_QWORD *)&index);
+        sub_1C6BC68(vals);
       LODWORD(vals) = vals->m_Items[index];
     }
     else
@@ -137,9 +136,7 @@ int32_t FuncList__getValueFronIndex(System_Int32_array *vals, int32_t index, con
 
 bool FuncList__isAddState(int32_t func, const MethodInfo *method)
 {
-  if ( func != 1 )
-    LOBYTE(func) = func == 16;
-  return func;
+  return func == 1 || func == 16 || (func & 0xFFFFFFFE) == 160;
 }
 
 
@@ -150,19 +147,19 @@ bool FuncList__isDamage(int32_t funcType, const MethodInfo *method)
   System_Enum_o v6; // [xsp+8h] [xbp-38h] BYREF
   int32_t v7; // [xsp+18h] [xbp-28h]
 
-  if ( (byte_4C55C26 & 1) == 0 )
+  if ( (byte_4CB5187 & 1) == 0 )
   {
-    sub_1C3E564(&FuncList_TYPE_TypeInfo);
-    sub_1C3E564(&StringLiteral_4959/*"DAMAGE"*/);
-    byte_4C55C26 = 1;
+    sub_1C6BA08(&FuncList_TYPE_TypeInfo);
+    sub_1C6BA08(&StringLiteral_4949/*"DAMAGE"*/);
+    byte_4CB5187 = 1;
   }
   v6.klass = (System_Enum_c *)FuncList_TYPE_TypeInfo;
   v6.monitor = (void *)-1LL;
   v7 = funcType;
   v3 = System_Enum__ToString(&v6, 0);
   if ( !v3 )
-    sub_1C3E7C0(0, v4);
-  return System_String__Contains(v3, (System_String_o *)StringLiteral_4959/*"DAMAGE"*/, 0);
+    sub_1C6BC60(0, v4);
+  return System_String__Contains(v3, (System_String_o *)StringLiteral_4949/*"DAMAGE"*/, 0);
 }
 
 

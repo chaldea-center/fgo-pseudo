@@ -22,10 +22,10 @@ void BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const 
   {
     transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     v11 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4C506A1 )
+    if ( !byte_4CAFC09 )
     {
-      transform = sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-      byte_4C506A1 = 1;
+      transform = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+      byte_4CAFC09 = 1;
     }
     if ( v11 )
     {
@@ -49,7 +49,7 @@ void BattleActorShakeComponent__Update(BattleActorShakeComponent_o *this, const 
         !v8) )
   {
 LABEL_11:
-    sub_1C3E7C0(transform, v4);
+    sub_1C6BC60(transform, v4);
   }
   v12.fields.z = z * v9;
   v12.fields.y = y * v9;

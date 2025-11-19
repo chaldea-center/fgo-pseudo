@@ -23,7 +23,7 @@ void BattlePointGaugeProgressBarTypeComponent__UpdateProgressGauge(
                              method),
         !barFrontProgressBar) )
   {
-    sub_1C3E7C0(this, entity);
+    sub_1C6BC60(this, entity);
   }
   UIProgressBar__set_value(barFrontProgressBar, BarProgressValue, 0);
 }

@@ -1,14 +1,14 @@
 void QuestAutoOrganizationAdjustMaster___ctor(QuestAutoOrganizationAdjustMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C57340 & 1) == 0 )
+  if ( (byte_4CB68A9 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataMasterBase_QuestAutoOrganizationAdjustMaster__QuestAutoOrganizationAdjustEntity__int___ctor__);
-    byte_4C57340 = 1;
+    sub_1C6BA08(&Method_DataMasterBase_QuestAutoOrganizationAdjustMaster__QuestAutoOrganizationAdjustEntity__int___ctor__);
+    byte_4CB68A9 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     492,
-    (const MethodInfo_33B0C34 *)Method_DataMasterBase_QuestAutoOrganizationAdjustMaster__QuestAutoOrganizationAdjustEntity__int___ctor__);
+    (const MethodInfo_33F6DB8 *)Method_DataMasterBase_QuestAutoOrganizationAdjustMaster__QuestAutoOrganizationAdjustEntity__int___ctor__);
 }
 
 
@@ -30,36 +30,36 @@ QuestAutoOrganizationAdjustEntity_array *QuestAutoOrganizationAdjustMaster__GetE
   System_Func_object__bool__o *v17; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v18; // x0
 
-  if ( (byte_4C5733E & 1) == 0 )
+  if ( (byte_4CB68A7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_OfType_QuestAutoOrganizationAdjustEntity___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_QuestAutoOrganizationAdjustEntity___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Where_QuestAutoOrganizationAdjustEntity___);
-    sub_1C3E564(&System_Func_QuestAutoOrganizationAdjustEntity__bool__TypeInfo);
-    sub_1C3E564(&QuestAutoOrganizationAdjustEntity___TypeInfo);
-    sub_1C3E564(&Method_QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0__GetEntitiesMatchingQuest_b__0__);
-    sub_1C3E564(&QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0_TypeInfo);
-    byte_4C5733E = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_OfType_QuestAutoOrganizationAdjustEntity___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_QuestAutoOrganizationAdjustEntity___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_QuestAutoOrganizationAdjustEntity___);
+    sub_1C6BA08(&System_Func_QuestAutoOrganizationAdjustEntity__bool__TypeInfo);
+    sub_1C6BA08(&QuestAutoOrganizationAdjustEntity___TypeInfo);
+    sub_1C6BA08(&Method_QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0__GetEntitiesMatchingQuest_b__0__);
+    sub_1C6BA08(&QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0_TypeInfo);
+    byte_4CB68A7 = 1;
   }
-  v7 = sub_1C3E7B0(QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0_TypeInfo);
+  v7 = sub_1C6BC54(QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   *(_DWORD *)(v7 + 16) = questId;
   *(_DWORD *)(v7 + 20) = questPhase;
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.list, 0);
   if ( IsNullOrEmpty )
-    return (QuestAutoOrganizationAdjustEntity_array *)sub_1C3E60C(QuestAutoOrganizationAdjustEntity___TypeInfo, 0);
+    return (QuestAutoOrganizationAdjustEntity_array *)sub_1C6BAB0(QuestAutoOrganizationAdjustEntity___TypeInfo, 0);
   QuestGroupIds = QuestAutoOrganizationAdjustMaster__GetQuestGroupIds(
                     (QuestAutoOrganizationAdjustMaster_o *)IsNullOrEmpty,
                     *(_DWORD *)(v7 + 16),
                     v11);
   *(_QWORD *)(v7 + 24) = QuestGroupIds;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 24), (int32_t)QuestGroupIds, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)QuestGroupIds, v14, v15);
   v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields.list,
-                                                               (const MethodInfo_3128D28 *)Method_System_Linq_Enumerable_OfType_QuestAutoOrganizationAdjustEntity___);
-  v17 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_QuestAutoOrganizationAdjustEntity__bool__TypeInfo);
+                                                               (const MethodInfo_316A620 *)Method_System_Linq_Enumerable_OfType_QuestAutoOrganizationAdjustEntity___);
+  v17 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_QuestAutoOrganizationAdjustEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v17,
     (Il2CppObject *)v7,
@@ -68,10 +68,10 @@ QuestAutoOrganizationAdjustEntity_array *QuestAutoOrganizationAdjustMaster__GetE
   v18 = System_Linq_Enumerable__Where_object_(
           v16,
           (System_Func_TSource__bool__o *)v17,
-          (const MethodInfo_3140304 *)Method_System_Linq_Enumerable_Where_QuestAutoOrganizationAdjustEntity___);
+          (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_QuestAutoOrganizationAdjustEntity___);
   return (QuestAutoOrganizationAdjustEntity_array *)System_Linq_Enumerable__ToArray_object_(
                                                       v18,
-                                                      (const MethodInfo_31391E8 *)Method_System_Linq_Enumerable_ToArray_QuestAutoOrganizationAdjustEntity___);
+                                                      (const MethodInfo_317B248 *)Method_System_Linq_Enumerable_ToArray_QuestAutoOrganizationAdjustEntity___);
 }
 
 
@@ -102,37 +102,37 @@ System_ValueTuple_QuestGroupType_Type__int__array *QuestAutoOrganizationAdjustMa
   const MethodInfo *v23; // x3
   System_Collections_Generic_IEnumerable_TSource__o *v24; // x0
 
-  if ( (byte_4C5733F & 1) == 0 )
+  if ( (byte_4CB68A8 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_QuestGroupMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&System_Enum_TypeInfo);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Cast_QuestGroupType_Type___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Select_QuestGroupType_Type__ValueTuple_QuestGroupType_Type__int____);
-    sub_1C3E564(&Method_System_Linq_Enumerable_ToArray_ValueTuple_QuestGroupType_Type__int____);
-    sub_1C3E564(&Method_System_Linq_Enumerable_Where_ValueTuple_QuestGroupType_Type__int____);
-    sub_1C3E564(&System_Func_ValueTuple_QuestGroupType_Type__int___bool__TypeInfo);
-    sub_1C3E564(&System_Func_QuestGroupType_Type__ValueTuple_QuestGroupType_Type__int___TypeInfo);
-    sub_1C3E564(&QuestGroupType_Type_var);
-    sub_1C3E564(&System_Type_TypeInfo);
-    sub_1C3E564(&Method_QuestAutoOrganizationAdjustMaster___c__GetQuestGroupIds_b__2_1__);
-    sub_1C3E564(&Method_QuestAutoOrganizationAdjustMaster___c__DisplayClass2_0__GetQuestGroupIds_b__0__);
-    sub_1C3E564(&QuestAutoOrganizationAdjustMaster___c__DisplayClass2_0_TypeInfo);
-    sub_1C3E564(&QuestAutoOrganizationAdjustMaster___c_TypeInfo);
-    byte_4C5733F = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_QuestGroupMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&System_Enum_TypeInfo);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Cast_QuestGroupType_Type___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_QuestGroupType_Type__ValueTuple_QuestGroupType_Type__int____);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_ValueTuple_QuestGroupType_Type__int____);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_ValueTuple_QuestGroupType_Type__int____);
+    sub_1C6BA08(&System_Func_ValueTuple_QuestGroupType_Type__int___bool__TypeInfo);
+    sub_1C6BA08(&System_Func_QuestGroupType_Type__ValueTuple_QuestGroupType_Type__int___TypeInfo);
+    sub_1C6BA08(&QuestGroupType_Type_var);
+    sub_1C6BA08(&System_Type_TypeInfo);
+    sub_1C6BA08(&Method_QuestAutoOrganizationAdjustMaster___c__GetQuestGroupIds_b__2_1__);
+    sub_1C6BA08(&Method_QuestAutoOrganizationAdjustMaster___c__DisplayClass2_0__GetQuestGroupIds_b__0__);
+    sub_1C6BA08(&QuestAutoOrganizationAdjustMaster___c__DisplayClass2_0_TypeInfo);
+    sub_1C6BA08(&QuestAutoOrganizationAdjustMaster___c_TypeInfo);
+    byte_4CB68A8 = 1;
   }
-  v4 = sub_1C3E7B0(QuestAutoOrganizationAdjustMaster___c__DisplayClass2_0_TypeInfo);
+  v4 = sub_1C6BC54(QuestAutoOrganizationAdjustMaster___c__DisplayClass2_0_TypeInfo);
   QuestAutoOrganizationAdjustMaster___c__DisplayClass2_0___ctor(
     (QuestAutoOrganizationAdjustMaster___c__DisplayClass2_0_o *)v4,
     0);
   if ( !v4 )
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   *(_DWORD *)(v4 + 24) = questId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_QuestGroupMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_QuestGroupMaster___);
   *(_QWORD *)(v4 + 16) = Master_object;
-  sub_1C3E508((CGThumbnailListItem_o *)(v4 + 16), (int32_t)Master_object, v8, v9);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 16), (int32_t)Master_object, v8, v9);
   v10 = QuestGroupType_Type_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
@@ -143,8 +143,8 @@ System_ValueTuple_QuestGroupType_Type__int__array *QuestAutoOrganizationAdjustMa
   Values = System_Enum__GetValues(TypeFromHandle, 0);
   v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Cast_Int32Enum_(
                                                                (System_Collections_IEnumerable_o *)Values,
-                                                               (const MethodInfo_3108198 *)Method_System_Linq_Enumerable_Cast_QuestGroupType_Type___);
-  v15 = (System_Func_T__TResult__o *)sub_1C3E7B0(System_Func_QuestGroupType_Type__ValueTuple_QuestGroupType_Type__int___TypeInfo);
+                                                               (const MethodInfo_3149A90 *)Method_System_Linq_Enumerable_Cast_QuestGroupType_Type___);
+  v15 = (System_Func_T__TResult__o *)sub_1C6BC54(System_Func_QuestGroupType_Type__ValueTuple_QuestGroupType_Type__int___TypeInfo);
   System_Func_Int32Enum__ValueTuple_Int32Enum__int_____ctor(
     v15,
     (Il2CppObject *)v4,
@@ -153,7 +153,7 @@ System_ValueTuple_QuestGroupType_Type__int__array *QuestAutoOrganizationAdjustMa
   v16 = System_Linq_Enumerable__Select_Int32Enum__ValueTuple_Int32Enum__int__(
           v14,
           (System_Func_TSource__TResult__o *)v15,
-          (const MethodInfo_312DE38 *)Method_System_Linq_Enumerable_Select_QuestGroupType_Type__ValueTuple_QuestGroupType_Type__int____);
+          (const MethodInfo_316F730 *)Method_System_Linq_Enumerable_Select_QuestGroupType_Type__ValueTuple_QuestGroupType_Type__int____);
   v17 = QuestAutoOrganizationAdjustMaster___c_TypeInfo;
   v18 = (System_Collections_Generic_IEnumerable_TSource__o *)v16;
   if ( !QuestAutoOrganizationAdjustMaster___c_TypeInfo->_2.cctor_finished )
@@ -170,7 +170,7 @@ System_ValueTuple_QuestGroupType_Type__int__array *QuestAutoOrganizationAdjustMa
       v17 = QuestAutoOrganizationAdjustMaster___c_TypeInfo;
     }
     v20 = (Il2CppObject *)v17->static_fields->__9;
-    _9__2_1 = (System_Func_T__TResult__o *)sub_1C3E7B0(System_Func_ValueTuple_QuestGroupType_Type__int___bool__TypeInfo);
+    _9__2_1 = (System_Func_T__TResult__o *)sub_1C6BC54(System_Func_ValueTuple_QuestGroupType_Type__int___bool__TypeInfo);
     System_Func_ValueTuple_Int32Enum__int___bool____ctor(
       _9__2_1,
       v20,
@@ -178,15 +178,15 @@ System_ValueTuple_QuestGroupType_Type__int__array *QuestAutoOrganizationAdjustMa
       0);
     static_fields = QuestAutoOrganizationAdjustMaster___c_TypeInfo->static_fields;
     static_fields->__9__2_1 = (struct System_Func_ValueTuple_QuestGroupType_Type__int___bool__o *)_9__2_1;
-    sub_1C3E508((CGThumbnailListItem_o *)&static_fields->__9__2_1, (int32_t)_9__2_1, v22, v23);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__2_1, (int32_t)_9__2_1, v22, v23);
   }
   v24 = System_Linq_Enumerable__Where_ValueTuple_Int32Enum__int__(
           v18,
           (System_Func_TSource__bool__o *)_9__2_1,
-          (const MethodInfo_313F7B4 *)Method_System_Linq_Enumerable_Where_ValueTuple_QuestGroupType_Type__int____);
+          (const MethodInfo_3181814 *)Method_System_Linq_Enumerable_Where_ValueTuple_QuestGroupType_Type__int____);
   return (System_ValueTuple_QuestGroupType_Type__int__array *)System_Linq_Enumerable__ToArray_ValueTuple_Int32Enum__int__(
                                                                 v24,
-                                                                (const MethodInfo_3138E30 *)Method_System_Linq_Enumerable_ToArray_ValueTuple_QuestGroupType_Type__int____);
+                                                                (const MethodInfo_317AE90 *)Method_System_Linq_Enumerable_ToArray_ValueTuple_QuestGroupType_Type__int____);
 }
 
 
@@ -207,19 +207,19 @@ bool QuestAutoOrganizationAdjustMaster__IsExistEntity(
   System_Collections_Generic_IEnumerable_TSource__o *v16; // x19
   System_Func_object__bool__o *v17; // x21
 
-  if ( (byte_4C5733D & 1) == 0 )
+  if ( (byte_4CB68A6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Any_QuestAutoOrganizationAdjustEntity___);
-    sub_1C3E564(&Method_System_Linq_Enumerable_OfType_QuestAutoOrganizationAdjustEntity___);
-    sub_1C3E564(&System_Func_QuestAutoOrganizationAdjustEntity__bool__TypeInfo);
-    sub_1C3E564(&Method_QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0__IsExistEntity_b__0__);
-    sub_1C3E564(&QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4C5733D = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_QuestAutoOrganizationAdjustEntity___);
+    sub_1C6BA08(&Method_System_Linq_Enumerable_OfType_QuestAutoOrganizationAdjustEntity___);
+    sub_1C6BA08(&System_Func_QuestAutoOrganizationAdjustEntity__bool__TypeInfo);
+    sub_1C6BA08(&Method_QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0__IsExistEntity_b__0__);
+    sub_1C6BA08(&QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0_TypeInfo);
+    byte_4CB68A6 = 1;
   }
-  v7 = sub_1C3E7B0(QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0_TypeInfo);
+  v7 = sub_1C6BC54(QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C3E7C0(v8, v9);
+    sub_1C6BC60(v8, v9);
   *(_DWORD *)(v7 + 16) = questId;
   *(_DWORD *)(v7 + 20) = questPhase;
   IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.list, 0);
@@ -230,20 +230,20 @@ bool QuestAutoOrganizationAdjustMaster__IsExistEntity(
                     *(_DWORD *)(v7 + 16),
                     v11);
   *(_QWORD *)(v7 + 24) = QuestGroupIds;
-  sub_1C3E508((CGThumbnailListItem_o *)(v7 + 24), (int32_t)QuestGroupIds, v14, v15);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)QuestGroupIds, v14, v15);
   v16 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OfType_object_(
                                                                (System_Collections_IEnumerable_o *)this->fields.list,
-                                                               (const MethodInfo_3128D28 *)Method_System_Linq_Enumerable_OfType_QuestAutoOrganizationAdjustEntity___);
-  v17 = (System_Func_object__bool__o *)sub_1C3E7B0(System_Func_QuestAutoOrganizationAdjustEntity__bool__TypeInfo);
+                                                               (const MethodInfo_316A620 *)Method_System_Linq_Enumerable_OfType_QuestAutoOrganizationAdjustEntity___);
+  v17 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_QuestAutoOrganizationAdjustEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v17,
     (Il2CppObject *)v7,
     Method_QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0__IsExistEntity_b__0__,
     0);
-  return System_Linq_Enumerable__Any_object__51410108(
+  return System_Linq_Enumerable__Any_object__51678644(
            v16,
            (System_Func_TSource__bool__o *)v17,
-           (const MethodInfo_31074BC *)Method_System_Linq_Enumerable_Any_QuestAutoOrganizationAdjustEntity___);
+           (const MethodInfo_3148DB4 *)Method_System_Linq_Enumerable_Any_QuestAutoOrganizationAdjustEntity___);
 }
 
 
@@ -253,15 +253,15 @@ void QuestAutoOrganizationAdjustMaster___c___cctor(const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C57341 & 1) == 0 )
+  if ( (byte_4CB68AA & 1) == 0 )
   {
-    sub_1C3E564(&QuestAutoOrganizationAdjustMaster___c_TypeInfo);
-    byte_4C57341 = 1;
+    sub_1C6BA08(&QuestAutoOrganizationAdjustMaster___c_TypeInfo);
+    byte_4CB68AA = 1;
   }
-  v1 = (Il2CppObject *)sub_1C3E7B0(QuestAutoOrganizationAdjustMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C6BC54(QuestAutoOrganizationAdjustMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   QuestAutoOrganizationAdjustMaster___c_TypeInfo->static_fields->__9 = (struct QuestAutoOrganizationAdjustMaster___c_o *)v1;
-  sub_1C3E508(
+  sub_1C6B9AC(
     (CGThumbnailListItem_o *)QuestAutoOrganizationAdjustMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -309,14 +309,14 @@ bool QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0___IsExistEntity_b__0
   System_ValueTuple_Int32Enum__int__o value; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4C57342 & 1) == 0 )
+  if ( (byte_4CB68AB & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Contains_ValueTuple_QuestGroupType_Type__int____);
-    this = (QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0_o *)sub_1C3E564(&Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
-    byte_4C57342 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Contains_ValueTuple_QuestGroupType_Type__int____);
+    this = (QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0_o *)sub_1C6BA08(&Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
+    byte_4CB68AB = 1;
   }
   if ( !entity )
-    sub_1C3E7C0(this, entity);
+    sub_1C6BC60(this, entity);
   if ( entity->fields.questId == v4->fields.questId
     && ((questPhase = entity->fields.questPhase) == 0 || questPhase == v4->fields.questPhase) )
   {
@@ -333,12 +333,12 @@ bool QuestAutoOrganizationAdjustMaster___c__DisplayClass0_0___IsExistEntity_b__0
       p_value,
       questGroupType,
       questGroupId,
-      (const MethodInfo_3B10BF4 *)Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
+      (const MethodInfo_3B62964 *)Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
     v11 = value;
     return System_Linq_Enumerable__Contains_ValueTuple_Int32Enum__int__(
              questGroupTuples,
              v11,
-             (const MethodInfo_3116904 *)Method_System_Linq_Enumerable_Contains_ValueTuple_QuestGroupType_Type__int____);
+             (const MethodInfo_31581FC *)Method_System_Linq_Enumerable_Contains_ValueTuple_QuestGroupType_Type__int____);
   }
 }
 
@@ -366,14 +366,14 @@ bool QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0___GetEntitiesMatchin
   System_ValueTuple_Int32Enum__int__o value; // [xsp+8h] [xbp-28h] BYREF
 
   v4 = this;
-  if ( (byte_4C57343 & 1) == 0 )
+  if ( (byte_4CB68AC & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Linq_Enumerable_Contains_ValueTuple_QuestGroupType_Type__int____);
-    this = (QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0_o *)sub_1C3E564(&Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
-    byte_4C57343 = 1;
+    sub_1C6BA08(&Method_System_Linq_Enumerable_Contains_ValueTuple_QuestGroupType_Type__int____);
+    this = (QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0_o *)sub_1C6BA08(&Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
+    byte_4CB68AC = 1;
   }
   if ( !entity )
-    sub_1C3E7C0(this, entity);
+    sub_1C6BC60(this, entity);
   if ( entity->fields.questId == v4->fields.questId
     && ((questPhase = entity->fields.questPhase) == 0 || questPhase == v4->fields.questPhase) )
   {
@@ -390,12 +390,12 @@ bool QuestAutoOrganizationAdjustMaster___c__DisplayClass1_0___GetEntitiesMatchin
       p_value,
       questGroupType,
       questGroupId,
-      (const MethodInfo_3B10BF4 *)Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
+      (const MethodInfo_3B62964 *)Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
     v11 = value;
     return System_Linq_Enumerable__Contains_ValueTuple_Int32Enum__int__(
              questGroupTuples,
              v11,
-             (const MethodInfo_3116904 *)Method_System_Linq_Enumerable_Contains_ValueTuple_QuestGroupType_Type__int____);
+             (const MethodInfo_31581FC *)Method_System_Linq_Enumerable_Contains_ValueTuple_QuestGroupType_Type__int____);
   }
 }
 
@@ -420,14 +420,14 @@ System_ValueTuple_QuestGroupType_Type__int__o QuestAutoOrganizationAdjustMaster_
   System_ValueTuple_Int32Enum__int__o v8; // x0
   System_ValueTuple_QuestGroupType_Type__int__o v10; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C57344 & 1) == 0 )
+  if ( (byte_4CB68AD & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
-    byte_4C57344 = 1;
+    sub_1C6BA08(&Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
+    byte_4CB68AD = 1;
   }
   questGroupMaster = this->fields.questGroupMaster;
   if ( !questGroupMaster )
-    sub_1C3E7C0(0, *(_QWORD *)&type);
+    sub_1C6BC60(0, *(_QWORD *)&type);
   GroupId = QuestGroupMaster__GetGroupId(questGroupMaster, this->fields.questId, type, v3);
   v8 = (System_ValueTuple_Int32Enum__int__o)&v10;
   v10 = 0;
@@ -435,6 +435,6 @@ System_ValueTuple_QuestGroupType_Type__int__o QuestAutoOrganizationAdjustMaster_
     v8,
     type,
     GroupId,
-    (const MethodInfo_3B10BF4 *)Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
+    (const MethodInfo_3B62964 *)Method_System_ValueTuple_QuestGroupType_Type__int___ctor__);
   return v10;
 }

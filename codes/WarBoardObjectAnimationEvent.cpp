@@ -17,10 +17,10 @@ void WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
   il2cpp_array_size_t max_length; // x21
   unsigned int v10; // w22
 
-  if ( (byte_4C545FC & 1) == 0 )
+  if ( (byte_4CB3B4E & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C545FC = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB3B4E = 1;
   }
   if ( !this->fields.isInit )
     WarBoardObjectAnimationEvent__Init(this, *(const MethodInfo **)&value);
@@ -47,7 +47,7 @@ void WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
         do
         {
           if ( v10 >= LODWORD(children->max_length) )
-            sub_1C3E7C8(v6, v7);
+            sub_1C6BC68(v6);
           v6 = children->m_Items[v10];
           if ( !v6 )
             break;
@@ -58,7 +58,7 @@ void WarBoardObjectAnimationEvent__AllWidgetDepthIncrement(
         }
         while ( children );
 LABEL_18:
-        sub_1C3E7C0(v6, v7);
+        sub_1C6BC60(v6, v7);
       }
     }
   }
@@ -73,14 +73,14 @@ void WarBoardObjectAnimationEvent__ForceEndInProgressTask(
   __int64 v3; // x1
   Il2CppClass *klass; // x8
 
-  if ( (byte_4C545FE & 1) == 0 )
+  if ( (byte_4CB3B50 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4C545FE = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4CB3B50 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   klass = Instance[63].klass;
   if ( klass )
     BYTE1(klass->_1.namespaze) = 1;
@@ -105,14 +105,14 @@ void WarBoardObjectAnimationEvent__ForceEndWallBreakAnimTask(
   __int64 v3; // x1
   _BYTE *monitor; // x8
 
-  if ( (byte_4C545FF & 1) == 0 )
+  if ( (byte_4CB3B51 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4C545FF = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4CB3B51 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
-    sub_1C3E7C0(0, v3);
+    sub_1C6BC60(0, v3);
   monitor = Instance[63].monitor;
   if ( monitor )
     monitor[25] = 1;
@@ -129,12 +129,12 @@ void WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_o *this, co
   int32_t v8; // w2
   const MethodInfo *v9; // x3
 
-  if ( (byte_4C545FA & 1) == 0 )
+  if ( (byte_4CB3B4C & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78207768);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C545FA = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78590968);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB3B4C = 1;
   }
   if ( !this->fields.isInit )
   {
@@ -143,9 +143,9 @@ void WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_o *this, co
       ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                       (UnityEngine_Component_o *)this,
                                       1,
-                                      (const MethodInfo_30F0F64 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78207768);
+                                      (const MethodInfo_313285C *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget____78590968);
       this->fields.children = (struct UIWidget_array *)ComponentsInChildren_object;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.children, (int32_t)ComponentsInChildren_object, v4, v5);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.children, (int32_t)ComponentsInChildren_object, v4, v5);
     }
     myWidget = (UnityEngine_Object_o *)this->fields.myWidget;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -154,9 +154,9 @@ void WarBoardObjectAnimationEvent__Init(WarBoardObjectAnimationEvent_o *this, co
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_30F0240 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                           (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
       this->fields.myWidget = (struct UIWidget_o *)Component_object;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.myWidget, (int32_t)Component_object, v8, v9);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.myWidget, (int32_t)Component_object, v8, v9);
     }
     this->fields.isInit = 1;
   }
@@ -178,21 +178,21 @@ void WarBoardObjectAnimationEvent__SetDispBgDiff(
   const MethodInfo *v11; // x3
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4C545FD & 1) == 0 )
+  if ( (byte_4CB3B4F & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    this = (WarBoardObjectAnimationEvent_o *)sub_1C3E564(&StringLiteral_14593/*"True"*/);
-    byte_4C545FD = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    this = (WarBoardObjectAnimationEvent_o *)sub_1C6BA08(&StringLiteral_14583/*"True"*/);
+    byte_4CB3B4F = 1;
   }
   result = 0;
   if ( !value || (this = (WarBoardObjectAnimationEvent_o *)System_String__Split(value, 0x2Cu, 0, 0)) == 0 )
 LABEL_16:
-    sub_1C3E7C0(this, value);
+    sub_1C6BC60(this, value);
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   v5 = this;
   if ( (int)m_CancellationTokenSource >= 2 )
   {
-    this = (WarBoardObjectAnimationEvent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    this = (WarBoardObjectAnimationEvent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
     v6 = this;
     v7 = 0;
     v8 = 2LL * ((unsigned int)m_CancellationTokenSource >> 1);
@@ -202,11 +202,11 @@ LABEL_16:
         || (v9 = (System_String_o **)(&v5->klass + v7),
             this = (WarBoardObjectAnimationEvent_o *)System_String__op_Equality(
                                                        v9[5],
-                                                       (System_String_o *)StringLiteral_14593/*"True"*/,
+                                                       (System_String_o *)StringLiteral_14583/*"True"*/,
                                                        0),
             v7 >= LODWORD(v5->fields.m_CancellationTokenSource)) )
       {
-        sub_1C3E7C8(this, value);
+        sub_1C6BC68(this);
       }
       v10 = (char)this;
       this = (WarBoardObjectAnimationEvent_o *)System_Int32__TryParse(v9[4], &result, 0);
@@ -252,17 +252,17 @@ void WarBoardObjectAnimationEvent__SetWidgetDepth(
   int32_t result; // [xsp+Ch] [xbp-44h] BYREF
 
   v4 = this;
-  if ( (byte_4C545FB & 1) == 0 )
+  if ( (byte_4CB3B4D & 1) == 0 )
   {
-    this = (WarBoardObjectAnimationEvent_o *)sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C545FB = 1;
+    this = (WarBoardObjectAnimationEvent_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB3B4D = 1;
   }
   result = 0;
   if ( !v4->fields.isInit )
     WarBoardObjectAnimationEvent__Init(v4, (const MethodInfo *)nameAndDepth);
   if ( !nameAndDepth || (this = (WarBoardObjectAnimationEvent_o *)System_String__Split(nameAndDepth, 0x2Cu, 0, 0)) == 0 )
 LABEL_37:
-    sub_1C3E7C0(this, nameAndDepth);
+    sub_1C6BC60(this, nameAndDepth);
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   v6 = this;
   if ( (int)m_CancellationTokenSource >= 2 )
@@ -355,6 +355,6 @@ LABEL_33:
       }
     }
 LABEL_35:
-    sub_1C3E7C8(this, nameAndDepth);
+    sub_1C6BC68(this);
   }
 }

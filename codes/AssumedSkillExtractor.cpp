@@ -6,17 +6,17 @@ System_Collections_Generic_IEnumerable_SimpleSkillData__o *AssumedSkillExtractor
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C5925E & 1) == 0 )
+  if ( (byte_4CB87DE & 1) == 0 )
   {
-    sub_1C3E564(&AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_TypeInfo);
-    byte_4C5925E = 1;
+    sub_1C6BA08(&AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_TypeInfo);
+    byte_4CB87DE = 1;
   }
-  v3 = sub_1C3E7B0(AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_TypeInfo);
+  v3 = sub_1C6BC54(AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = -2;
   *(_DWORD *)(v3 + 28) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v3 + 40) = battleEntity;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 40), (int32_t)battleEntity, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 40), (int32_t)battleEntity, v4, v5);
   return (System_Collections_Generic_IEnumerable_SimpleSkillData__o *)v3;
 }
 
@@ -29,17 +29,17 @@ System_Collections_Generic_IEnumerable_SimpleSkillData__o *AssumedSkillExtractor
   int32_t v4; // w2
   const MethodInfo *v5; // x3
 
-  if ( (byte_4C5925F & 1) == 0 )
+  if ( (byte_4CB87DF & 1) == 0 )
   {
-    sub_1C3E564(&AssumedSkillExtractor__EnumerateMasterSkill_d__2_TypeInfo);
-    byte_4C5925F = 1;
+    sub_1C6BA08(&AssumedSkillExtractor__EnumerateMasterSkill_d__2_TypeInfo);
+    byte_4CB87DF = 1;
   }
-  v3 = sub_1C3E7B0(AssumedSkillExtractor__EnumerateMasterSkill_d__2_TypeInfo);
+  v3 = sub_1C6BC54(AssumedSkillExtractor__EnumerateMasterSkill_d__2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = -2;
   *(_DWORD *)(v3 + 28) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v3 + 40) = data;
-  sub_1C3E508((CGThumbnailListItem_o *)(v3 + 40), (int32_t)data, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 40), (int32_t)data, v4, v5);
   return (System_Collections_Generic_IEnumerable_SimpleSkillData__o *)v3;
 }
 
@@ -53,17 +53,17 @@ System_Collections_Generic_IEnumerable_SimpleSkillData__o *AssumedSkillExtractor
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  if ( (byte_4C5925D & 1) == 0 )
+  if ( (byte_4CB87DD & 1) == 0 )
   {
-    sub_1C3E564(&AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_TypeInfo);
-    byte_4C5925D = 1;
+    sub_1C6BA08(&AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_TypeInfo);
+    byte_4CB87DD = 1;
   }
-  v5 = sub_1C3E7B0(AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_TypeInfo);
+  v5 = sub_1C6BC54(AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = -2;
   *(_DWORD *)(v5 + 28) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v5 + 40) = battleEntity;
-  sub_1C3E508((CGThumbnailListItem_o *)(v5 + 40), (int32_t)battleEntity, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)battleEntity, v6, v7);
   *(_DWORD *)(v5 + 52) = userSvtId;
   return (System_Collections_Generic_IEnumerable_SimpleSkillData__o *)v5;
 }
@@ -116,11 +116,11 @@ bool AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1__MoveNext(
   struct SimpleSkillData_o v32; // x8
   struct SimpleSkillData_o v34; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4C59260 & 1) == 0 )
+  if ( (byte_4CB87E0 & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataManager_GetMaster_CommandCodeSkillMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    byte_4C59260 = 1;
+    sub_1C6BA08(&Method_DataManager_GetMaster_CommandCodeSkillMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    byte_4CB87E0 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -141,15 +141,15 @@ bool AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1__MoveNext(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_CommandCodeSkillMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_CommandCodeSkillMaster___);
         this->fields._commandCodeMaster_5__2 = (struct CommandCodeSkillMaster_o *)Master_object;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields._commandCodeMaster_5__2, (int32_t)Master_object, v8, v9);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._commandCodeMaster_5__2, (int32_t)Master_object, v8, v9);
         v13 = this->fields.battleEntity;
         if ( !v13 )
           goto LABEL_27;
         userCommandCode = v13->fields.userCommandCode;
         this->fields.__7__wrap2 = userCommandCode;
-        sub_1C3E508((CGThumbnailListItem_o *)&this->fields.__7__wrap2, (int32_t)userCommandCode, v11, v12);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__7__wrap2, (int32_t)userCommandCode, v11, v12);
         v17 = 0;
         for ( this->fields.__7__wrap3 = 0; ; this->fields.__7__wrap3 = v17 )
         {
@@ -173,7 +173,7 @@ bool AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1__MoveNext(
                                    v20->fields.commandCodeId,
                                    0);
           this->fields.__7__wrap4 = CommandCodeSkillList;
-          sub_1C3E508((CGThumbnailListItem_o *)&this->fields.__7__wrap4, (int32_t)CommandCodeSkillList, v22, v23);
+          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__7__wrap4, (int32_t)CommandCodeSkillList, v22, v23);
           v19 = 0;
           this->fields.__7__wrap5 = 0;
 LABEL_16:
@@ -186,7 +186,7 @@ LABEL_16:
           {
             if ( v19 >= (unsigned int)v25 )
 LABEL_28:
-              sub_1C3E7C8(p__7__wrap2, method);
+              sub_1C6BC68(p__7__wrap2);
             v29 = _7__wrap4->m_Items[v19];
             if ( v29 )
             {
@@ -201,14 +201,14 @@ LABEL_28:
               return v28;
             }
 LABEL_27:
-            sub_1C3E7C0(p__7__wrap2, method);
+            sub_1C6BC60(p__7__wrap2, method);
           }
           this->fields.__7__wrap4 = 0;
-          sub_1C3E508((CGThumbnailListItem_o *)p__7__wrap2, 0, v2, v3);
+          sub_1C6B9AC((CGThumbnailListItem_o *)p__7__wrap2, 0, v2, v3);
           v17 = this->fields.__7__wrap3 + 1;
         }
         p__7__wrap2->klass = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)p__7__wrap2, 0, v15, v16);
+        sub_1C6B9AC((CGThumbnailListItem_o *)p__7__wrap2, 0, v15, v16);
       }
     }
   }
@@ -226,10 +226,10 @@ System_Collections_Generic_IEnumerator_SimpleSkillData__o *AssumedSkillExtractor
   AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_o *v6; // x20
   struct BattleEntity_o *_3__battleEntity; // x1
 
-  if ( (byte_4C59262 & 1) == 0 )
+  if ( (byte_4CB87E2 & 1) == 0 )
   {
-    sub_1C3E564(&AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_TypeInfo);
-    byte_4C59262 = 1;
+    sub_1C6BA08(&AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_TypeInfo);
+    byte_4CB87E2 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -240,14 +240,14 @@ System_Collections_Generic_IEnumerator_SimpleSkillData__o *AssumedSkillExtractor
   }
   else
   {
-    v6 = (AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_o *)sub_1C3E7B0(AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_TypeInfo);
+    v6 = (AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_o *)sub_1C6BC54(AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_TypeInfo);
     System_Object___ctor((Il2CppObject *)v6, 0);
     v6->fields.__1__state = 0;
     v6->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
   }
   _3__battleEntity = this->fields.__3__battleEntity;
   v6->fields.battleEntity = _3__battleEntity;
-  sub_1C3E508((CGThumbnailListItem_o *)&v6->fields.battleEntity, (int32_t)_3__battleEntity, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v6->fields.battleEntity, (int32_t)_3__battleEntity, v4, v5);
   return (System_Collections_Generic_IEnumerator_SimpleSkillData__o *)v6;
 }
 
@@ -268,11 +268,11 @@ void __noreturn AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -280,21 +280,15 @@ Il2CppObject *AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1__S
         AssumedSkillExtractor__EnumerateCommandCodeSimpleSkillData_d__1_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
   struct SimpleSkillData_o _2__current; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C59261 & 1) == 0 )
+  if ( (byte_4CB87E1 & 1) == 0 )
   {
-    sub_1C3E564(&SimpleSkillData_TypeInfo);
-    byte_4C59261 = 1;
+    sub_1C6BA08(&SimpleSkillData_TypeInfo);
+    byte_4CB87E1 = 1;
   }
   _2__current = this->fields.__2__current;
-  return (Il2CppObject *)j_il2cpp_value_box_0(SimpleSkillData_TypeInfo, &_2__current, v2, v3, v4, v5, v6, v7);
+  return (Il2CppObject *)j_il2cpp_value_box_0(SimpleSkillData_TypeInfo, &_2__current);
 }
 
 
@@ -348,13 +342,13 @@ bool AssumedSkillExtractor__EnumerateMasterSkill_d__2__MoveNext(
 
   v26 = this;
   v2 = this;
-  if ( (byte_4C59263 & 1) == 0 )
+  if ( (byte_4CB87E3 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__MoveNext__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__get_Current__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_BattleSkillInfoData__GetEnumerator__);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C59263 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__MoveNext__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__get_Current__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleSkillInfoData__GetEnumerator__);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CB87E3 = 1;
   }
   v25 = &v26;
   _1__state = v2->fields.__1__state;
@@ -375,31 +369,31 @@ LABEL_8:
   }
   v8 = v26->fields.data;
   if ( !v8 )
-    sub_1C3E7C0(v5, v6);
+    sub_1C6BC60(v5, v6);
   masterSkillInfo = (System_Collections_Generic_List_object__o *)v8->fields.masterSkillInfo;
   if ( masterSkillInfo )
   {
     System_Collections_Generic_List_object___GetEnumerator(
       &v23,
       masterSkillInfo,
-      (const MethodInfo_37B5F58 *)Method_System_Collections_Generic_List_BattleSkillInfoData__GetEnumerator__);
+      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_BattleSkillInfoData__GetEnumerator__);
     v9 = v26;
     v10 = *(_OWORD *)&v23.fields._list;
     p__7__wrap1 = &v26->fields.__7__wrap1;
     v24 = v23;
     v26->fields.__7__wrap1.fields._current = (struct BattleSkillInfoData_o *)v23.fields._current;
     *(_OWORD *)&v9->fields.__7__wrap1.fields._list = v10;
-    sub_1C3E508((CGThumbnailListItem_o *)p__7__wrap1, 0, v12, v13);
+    sub_1C6B9AC((CGThumbnailListItem_o *)p__7__wrap1, 0, v12, v13);
     v2 = v26;
 LABEL_12:
     v2->fields.__1__state = -3;
     if ( System_Collections_Generic_List_Enumerator_object___MoveNext(
            (System_Collections_Generic_List_Enumerator_object__o *)&v2->fields.__7__wrap1,
-           (const MethodInfo_353FC4C *)Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__MoveNext__) )
+           (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__MoveNext__) )
     {
       current = v26->fields.__7__wrap1.fields._current;
       if ( !current )
-        sub_1C3E7C0(v26, v14);
+        sub_1C6BC60(v26, v14);
       v16 = ((__int64 (__fastcall *)(struct BattleSkillInfoData_o *, const MethodInfo *))current->klass->vtable._5_get_skillId.methodPtr)(
               v26->fields.__7__wrap1.fields._current,
               current->klass->vtable._5_get_skillId.method);
@@ -437,10 +431,10 @@ System_Collections_Generic_IEnumerator_SimpleSkillData__o *AssumedSkillExtractor
   AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *v6; // x20
   struct BattleData_o *_3__data; // x1
 
-  if ( (byte_4C59266 & 1) == 0 )
+  if ( (byte_4CB87E6 & 1) == 0 )
   {
-    sub_1C3E564(&AssumedSkillExtractor__EnumerateMasterSkill_d__2_TypeInfo);
-    byte_4C59266 = 1;
+    sub_1C6BA08(&AssumedSkillExtractor__EnumerateMasterSkill_d__2_TypeInfo);
+    byte_4CB87E6 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -451,14 +445,14 @@ System_Collections_Generic_IEnumerator_SimpleSkillData__o *AssumedSkillExtractor
   }
   else
   {
-    v6 = (AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *)sub_1C3E7B0(AssumedSkillExtractor__EnumerateMasterSkill_d__2_TypeInfo);
+    v6 = (AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *)sub_1C6BC54(AssumedSkillExtractor__EnumerateMasterSkill_d__2_TypeInfo);
     System_Object___ctor((Il2CppObject *)v6, 0);
     v6->fields.__1__state = 0;
     v6->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
   }
   _3__data = this->fields.__3__data;
   v6->fields.data = _3__data;
-  sub_1C3E508((CGThumbnailListItem_o *)&v6->fields.data, (int32_t)_3__data, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v6->fields.data, (int32_t)_3__data, v4, v5);
   return (System_Collections_Generic_IEnumerator_SimpleSkillData__o *)v6;
 }
 
@@ -479,11 +473,11 @@ void __noreturn AssumedSkillExtractor__EnumerateMasterSkill_d__2__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssumedSkillExtractor__EnumerateMasterSkill_d__2_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssumedSkillExtractor__EnumerateMasterSkill_d__2_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -491,21 +485,15 @@ Il2CppObject *AssumedSkillExtractor__EnumerateMasterSkill_d__2__System_Collectio
         AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
   struct SimpleSkillData_o _2__current; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C59265 & 1) == 0 )
+  if ( (byte_4CB87E5 & 1) == 0 )
   {
-    sub_1C3E564(&SimpleSkillData_TypeInfo);
-    byte_4C59265 = 1;
+    sub_1C6BA08(&SimpleSkillData_TypeInfo);
+    byte_4CB87E5 = 1;
   }
   _2__current = this->fields.__2__current;
-  return (Il2CppObject *)j_il2cpp_value_box_0(SimpleSkillData_TypeInfo, &_2__current, v2, v3, v4, v5, v6, v7);
+  return (Il2CppObject *)j_il2cpp_value_box_0(SimpleSkillData_TypeInfo, &_2__current);
 }
 
 
@@ -525,15 +513,15 @@ void AssumedSkillExtractor__EnumerateMasterSkill_d__2____m__Finally1(
         AssumedSkillExtractor__EnumerateMasterSkill_d__2_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4C59264 & 1) == 0 )
+  if ( (byte_4CB87E4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__Dispose__);
-    byte_4C59264 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__Dispose__);
+    byte_4CB87E4 = 1;
   }
   this->fields.__1__state = -1;
   System_Collections_Generic_List_Enumerator_object___Dispose(
     (System_Collections_Generic_List_Enumerator_object__o *)&this->fields.__7__wrap1,
-    (const MethodInfo_353FC48 *)Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__Dispose__);
+    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_BattleSkillInfoData__Dispose__);
 }
 
 
@@ -621,14 +609,14 @@ bool AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0__MoveNext(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v68; // 0:x0.16
 
   v5 = this;
-  if ( (byte_4C59267 & 1) == 0 )
+  if ( (byte_4CB87E7 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Array_Empty_SimpleSkillData___);
-    sub_1C3E564(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C3E564(&DataManager_TypeInfo);
-    sub_1C3E564(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    this = (AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o *)sub_1C3E564(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4C59267 = 1;
+    sub_1C6BA08(&Method_System_Array_Empty_SimpleSkillData___);
+    sub_1C6BA08(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C6BA08(&DataManager_TypeInfo);
+    sub_1C6BA08(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    this = (AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o *)sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CB87E7 = 1;
   }
   switch ( v5->fields.__1__state )
   {
@@ -644,26 +632,26 @@ bool AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0__MoveNext(
       v9 = *((_QWORD *)Method_System_Array_Empty_SimpleSkillData___ + 7);
       if ( !v9 )
       {
-        sub_1C8ECD4(Method_System_Array_Empty_SimpleSkillData___);
+        sub_1C41AF8(Method_System_Array_Empty_SimpleSkillData___);
         v9 = v8[7];
       }
       v10 = *(_QWORD *)(v9 + 16);
       if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-        v10 = sub_1C8EC78(inited);
+        v10 = sub_1C41A9C(inited);
       if ( !*(_DWORD *)(v10 + 224) )
         inited = j_il2cpp_runtime_class_init_0(v10);
       v11 = *(_QWORD *)(v8[7] + 16LL);
       if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-        v11 = sub_1C8EC78(inited);
+        v11 = sub_1C41A9C(inited);
       v12 = *(struct SimpleSkillData_array ***)(v11 + 184);
       v13 = *v12;
       v5->fields._empty_5__2 = *v12;
-      sub_1C3E508((CGThumbnailListItem_o *)&v5->fields._empty_5__2, (int32_t)v13, v2, v3);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields._empty_5__2, (int32_t)v13, v2, v3);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_30F9A1C *)Method_DataManager_GetMaster_ServantMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantMaster___);
       v5->fields._svtMaster_5__3 = (struct ServantMaster_o *)Master_object;
-      sub_1C3E508((CGThumbnailListItem_o *)&v5->fields._svtMaster_5__3, (int32_t)Master_object, v15, v16);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields._svtMaster_5__3, (int32_t)Master_object, v15, v16);
       v19 = v5->fields.battleEntity;
       if ( !v19 )
         goto LABEL_71;
@@ -672,7 +660,7 @@ bool AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0__MoveNext(
         goto LABEL_71;
       userSvt = v20->fields.userSvt;
       v5->fields.__7__wrap3 = userSvt;
-      sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.__7__wrap3, (int32_t)userSvt, v17, v18);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.__7__wrap3, (int32_t)userSvt, v17, v18);
       v24 = 0;
       v5->fields.__7__wrap4 = 0;
       break;
@@ -709,7 +697,7 @@ bool AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0__MoveNext(
     _7__wrap3 = v5->fields.__7__wrap3;
     if ( !_7__wrap3 )
 LABEL_71:
-      sub_1C3E7C0(this, method);
+      sub_1C6BC60(this, method);
     max_length = _7__wrap3->max_length;
     if ( v24 >= max_length )
       break;
@@ -718,7 +706,7 @@ LABEL_71:
     v33 = _7__wrap3->m_Items[v24];
     v5->fields._userSvt_5__6 = v33;
     p_userSvt_5__6 = (AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o **)&v5->fields._userSvt_5__6;
-    sub_1C3E508((CGThumbnailListItem_o *)&v5->fields._userSvt_5__6, (int32_t)v33, v22, v23);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields._userSvt_5__6, (int32_t)v33, v22, v23);
     userSvt_5__6 = v5->fields._userSvt_5__6;
     if ( !userSvt_5__6 )
       goto LABEL_71;
@@ -728,7 +716,7 @@ LABEL_71:
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v68.fields.currentCryptoKey = v37;
     *(_QWORD *)&v68.fields.fakeValue = v36;
-    v38 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49004136(v68, 0);
+    v38 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v68, 0);
     userSvtId = v5->fields.userSvtId;
     method = (const MethodInfo *)v38;
     if ( userSvtId < 0 || v38 == userSvtId )
@@ -739,7 +727,7 @@ LABEL_71:
       if ( DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
              (int32_t)method,
-             (const MethodInfo_33B2F58 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__) )
+             (const MethodInfo_33F90DC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__) )
       {
         this = *p_userSvt_5__6;
         if ( !*p_userSvt_5__6 )
@@ -748,7 +736,7 @@ LABEL_71:
         if ( !SelfSkillArray )
           SelfSkillArray = v5->fields._empty_5__2;
         v5->fields.__7__wrap6 = SelfSkillArray;
-        sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, (int32_t)SelfSkillArray, v41, v42);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, (int32_t)SelfSkillArray, v41, v42);
         v26 = 0;
         v5->fields.__7__wrap7 = 0;
 LABEL_36:
@@ -767,10 +755,10 @@ LABEL_36:
             return result;
           }
 LABEL_72:
-          sub_1C3E7C8(this, method);
+          sub_1C6BC68(this);
         }
         v5->fields.__7__wrap6 = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, 0, v2, v3);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, 0, v2, v3);
         this = (AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o *)v5->fields._userSvt_5__6;
         if ( !this )
           goto LABEL_71;
@@ -778,7 +766,7 @@ LABEL_72:
         if ( !ClassPassiveSkillArray )
           ClassPassiveSkillArray = v5->fields._empty_5__2;
         v5->fields.__7__wrap6 = ClassPassiveSkillArray;
-        sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, (int32_t)ClassPassiveSkillArray, v46, v47);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, (int32_t)ClassPassiveSkillArray, v46, v47);
         v28 = 0;
         v5->fields.__7__wrap7 = 0;
 LABEL_42:
@@ -798,7 +786,7 @@ LABEL_70:
           return 1;
         }
         v5->fields.__7__wrap6 = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, 0, v2, v3);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, 0, v2, v3);
         this = (AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o *)v5->fields._userSvt_5__6;
         if ( !this )
           goto LABEL_71;
@@ -806,7 +794,7 @@ LABEL_70:
         if ( !AddPassiveSkillArray )
           AddPassiveSkillArray = v5->fields._empty_5__2;
         v5->fields.__7__wrap6 = AddPassiveSkillArray;
-        sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, (int32_t)AddPassiveSkillArray, v51, v52);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, (int32_t)AddPassiveSkillArray, v51, v52);
         v30 = 0;
         v5->fields.__7__wrap7 = 0;
 LABEL_48:
@@ -823,7 +811,7 @@ LABEL_48:
           goto LABEL_70;
         }
         v5->fields.__7__wrap6 = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, 0, v2, v3);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, 0, v2, v3);
         this = (AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o *)v5->fields._userSvt_5__6;
         if ( !this )
           goto LABEL_71;
@@ -831,7 +819,7 @@ LABEL_48:
         if ( !AppendPassiveSkillArray )
           AppendPassiveSkillArray = v5->fields._empty_5__2;
         v5->fields.__7__wrap6 = AppendPassiveSkillArray;
-        sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, (int32_t)AppendPassiveSkillArray, v56, v57);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.__7__wrap6, (int32_t)AppendPassiveSkillArray, v56, v57);
         v32 = 0;
         v5->fields.__7__wrap7 = 0;
 LABEL_54:
@@ -849,16 +837,16 @@ LABEL_54:
           goto LABEL_70;
         }
         v5->fields.__7__wrap6 = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)this, 0, v2, v3);
+        sub_1C6B9AC((CGThumbnailListItem_o *)this, 0, v2, v3);
         v5->fields._userSvt_5__6 = 0;
-        sub_1C3E508((CGThumbnailListItem_o *)&v5->fields._userSvt_5__6, 0, v60, v61);
+        sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields._userSvt_5__6, 0, v60, v61);
       }
     }
     v24 = v5->fields.__7__wrap4 + 1;
     v5->fields.__7__wrap4 = v24;
   }
   this->klass = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)this, 0, v22, v23);
+  sub_1C6B9AC((CGThumbnailListItem_o *)this, 0, v22, v23);
   return 0;
 }
 
@@ -874,10 +862,10 @@ System_Collections_Generic_IEnumerator_SimpleSkillData__o *AssumedSkillExtractor
   struct BattleEntity_o *_3__battleEntity; // x1
   System_Collections_Generic_IEnumerator_SimpleSkillData__o *result; // x0
 
-  if ( (byte_4C59269 & 1) == 0 )
+  if ( (byte_4CB87E9 & 1) == 0 )
   {
-    sub_1C3E564(&AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_TypeInfo);
-    byte_4C59269 = 1;
+    sub_1C6BA08(&AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_TypeInfo);
+    byte_4CB87E9 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -888,14 +876,14 @@ System_Collections_Generic_IEnumerator_SimpleSkillData__o *AssumedSkillExtractor
   }
   else
   {
-    v6 = (AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o *)sub_1C3E7B0(AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_TypeInfo);
+    v6 = (AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o *)sub_1C6BC54(AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_TypeInfo);
     System_Object___ctor((Il2CppObject *)v6, 0);
     v6->fields.__1__state = 0;
     v6->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
   }
   _3__battleEntity = this->fields.__3__battleEntity;
   v6->fields.battleEntity = _3__battleEntity;
-  sub_1C3E508((CGThumbnailListItem_o *)&v6->fields.battleEntity, (int32_t)_3__battleEntity, v4, v5);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v6->fields.battleEntity, (int32_t)_3__battleEntity, v4, v5);
   result = (System_Collections_Generic_IEnumerator_SimpleSkillData__o *)v6;
   v6->fields.userSvtId = this->fields.__3__userSvtId;
   return result;
@@ -918,11 +906,11 @@ void __noreturn AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0__System_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C3E578(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C3E7B0(v2);
+  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C3E578(&Method_AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_System_Collections_IEnumerator_Reset__);
-  sub_1C3E68C(v3, v4);
+  v4 = sub_1C6BA1C(&Method_AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_System_Collections_IEnumerator_Reset__);
+  sub_1C6BB30(v3, v4);
 }
 
 
@@ -930,21 +918,15 @@ Il2CppObject *AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0__System_Co
         AssumedSkillExtractor__EnumerateSvtSimpleSkillData_d__0_o *this,
         const MethodInfo *method)
 {
-  __int64 v2; // x2
-  __int64 v3; // x3
-  __int64 v4; // x4
-  __int64 v5; // x5
-  __int64 v6; // x6
-  __int64 v7; // x7
   struct SimpleSkillData_o _2__current; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4C59268 & 1) == 0 )
+  if ( (byte_4CB87E8 & 1) == 0 )
   {
-    sub_1C3E564(&SimpleSkillData_TypeInfo);
-    byte_4C59268 = 1;
+    sub_1C6BA08(&SimpleSkillData_TypeInfo);
+    byte_4CB87E8 = 1;
   }
   _2__current = this->fields.__2__current;
-  return (Il2CppObject *)j_il2cpp_value_box_0(SimpleSkillData_TypeInfo, &_2__current, v2, v3, v4, v5, v6, v7);
+  return (Il2CppObject *)j_il2cpp_value_box_0(SimpleSkillData_TypeInfo, &_2__current);
 }
 
 

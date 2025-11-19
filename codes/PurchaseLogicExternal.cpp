@@ -1,9 +1,9 @@
 void PurchaseLogicExternal___cctor(const MethodInfo *method)
 {
-  if ( (byte_4C56689 & 1) == 0 )
+  if ( (byte_4CB5BE8 & 1) == 0 )
   {
-    sub_1C3E564(&PurchaseLogicExternal_TypeInfo);
-    byte_4C56689 = 1;
+    sub_1C6BA08(&PurchaseLogicExternal_TypeInfo);
+    byte_4CB5BE8 = 1;
   }
   PurchaseLogicExternal_TypeInfo->static_fields->isEnd = 1;
 }
@@ -22,14 +22,14 @@ void PurchaseLogicExternal__ExternalPaymentCheck(PurchaseLogicExternal_o *this, 
   Il2CppObject *Request_object; // x0
   __int64 v6; // x1
 
-  if ( (byte_4C56685 & 1) == 0 )
+  if ( (byte_4CB5BE3 & 1) == 0 )
   {
-    sub_1C3E564(&Method_NetworkManager_getRequest_ExternalPaymentReflectRequest___);
-    sub_1C3E564(&NetworkManager_TypeInfo);
-    sub_1C3E564(&Method_PurchaseLogicExternal_ExternalPaymentCheckCallBack__);
-    sub_1C3E564(&PurchaseLogicExternal_TypeInfo);
-    sub_1C3E564(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4C56685 = 1;
+    sub_1C6BA08(&Method_NetworkManager_getRequest_ExternalPaymentReflectRequest___);
+    sub_1C6BA08(&NetworkManager_TypeInfo);
+    sub_1C6BA08(&Method_PurchaseLogicExternal_ExternalPaymentCheckCallBack__);
+    sub_1C6BA08(&PurchaseLogicExternal_TypeInfo);
+    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4CB5BE3 = 1;
   }
   v3 = PurchaseLogicExternal_TypeInfo;
   if ( !PurchaseLogicExternal_TypeInfo->_2.cctor_finished )
@@ -38,7 +38,7 @@ void PurchaseLogicExternal__ExternalPaymentCheck(PurchaseLogicExternal_o *this, 
     v3 = PurchaseLogicExternal_TypeInfo;
   }
   v3->static_fields->isEnd = 0;
-  v4 = (NetworkManager_ResultCallbackFunc_o *)sub_1C3E7B0(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v4 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v4,
     (Il2CppObject *)this,
@@ -48,9 +48,9 @@ void PurchaseLogicExternal__ExternalPaymentCheck(PurchaseLogicExternal_o *this, 
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v4,
-                     (const MethodInfo_3184BE4 *)Method_NetworkManager_getRequest_ExternalPaymentReflectRequest___);
+                     (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_ExternalPaymentReflectRequest___);
   if ( !Request_object )
-    sub_1C3E7C0(0, v6);
+    sub_1C6BC60(0, v6);
   RequestBase__beginRequest((RequestBase_o *)Request_object, 0);
 }
 
@@ -84,37 +84,40 @@ void PurchaseLogicExternal__ExternalPaymentCheckCallBack(
   __int64 v25; // x2
   __int64 v26; // x3
   PurchaseLogicExternal_o *v27; // x0
-  const MethodInfo *v28; // x3
-  PurchaseBehaviour_c *v29; // x0
-  const MethodInfo *v30; // x0
-  PurchaseLogicExternal_c *v31; // x0
-  PurchaseLogicExternal_o *v32; // x0
-  int32_t v33; // w1
-  System_String_o *v34; // x2
-  const MethodInfo *v35; // x3
-  long double v36; // q0
+  double klass_low; // d8
+  const MethodInfo *v29; // x3
+  PurchaseLogicExternal_o *v30; // x0
+  const MethodInfo *v31; // x3
+  PurchaseBehaviour_c *v32; // x0
+  const MethodInfo *v33; // x0
+  PurchaseLogicExternal_c *v34; // x0
+  PurchaseLogicExternal_o *v35; // x0
+  int32_t v36; // w1
+  System_String_o *v37; // x2
+  const MethodInfo *v38; // x3
+  long double v39; // q0
 
-  if ( (byte_4C56686 & 1) == 0 )
+  if ( (byte_4CB5BE4 & 1) == 0 )
   {
-    sub_1C3E564(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C3E564(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1C3E564(&long_TypeInfo);
-    sub_1C3E564(&JsonManager_TypeInfo);
-    sub_1C3E564(&Method_System_Collections_Generic_List_object__get_Count__);
-    sub_1C3E564(&Method_System_Collections_Generic_List_object__get_Item__);
-    sub_1C3E564(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1C3E564(&PurchaseBehaviour_TypeInfo);
-    sub_1C3E564(&PurchaseLogicExternal_TypeInfo);
-    sub_1C3E564(&StringLiteral_19685/*"freeStoneNum"*/);
-    sub_1C3E564(&StringLiteral_22789/*"price"*/);
-    sub_1C3E564(&StringLiteral_22508/*"orderId"*/);
-    sub_1C3E564(&StringLiteral_22233/*"ng"*/);
-    sub_1C3E564(&StringLiteral_17955/*"chargeStoneNum"*/);
-    sub_1C3E564(&StringLiteral_19360/*"externalPaymentResults"*/);
-    sub_1C3E564(&StringLiteral_24265/*"type"*/);
-    byte_4C56686 = 1;
+    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_1C6BA08(&long_TypeInfo);
+    sub_1C6BA08(&JsonManager_TypeInfo);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_object__get_Count__);
+    sub_1C6BA08(&Method_System_Collections_Generic_List_object__get_Item__);
+    sub_1C6BA08(&System_Collections_Generic_List_object__TypeInfo);
+    sub_1C6BA08(&PurchaseBehaviour_TypeInfo);
+    sub_1C6BA08(&PurchaseLogicExternal_TypeInfo);
+    sub_1C6BA08(&StringLiteral_19730/*"freeStoneNum"*/);
+    sub_1C6BA08(&StringLiteral_22860/*"price"*/);
+    sub_1C6BA08(&StringLiteral_22578/*"orderId"*/);
+    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
+    sub_1C6BA08(&StringLiteral_17956/*"chargeStoneNum"*/);
+    sub_1C6BA08(&StringLiteral_19392/*"externalPaymentResults"*/);
+    sub_1C6BA08(&StringLiteral_24347/*"type"*/);
+    byte_4CB5BE4 = 1;
   }
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_22233/*"ng"*/, 0) )
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_22301/*"ng"*/, 0) )
     goto LABEL_27;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -122,11 +125,11 @@ void PurchaseLogicExternal__ExternalPaymentCheckCallBack(
   if ( !Dictionary
     || (Dictionary = System_Collections_Generic_Dictionary_object__object___get_Item(
                        (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
-                       (Il2CppObject *)StringLiteral_19360/*"externalPaymentResults"*/,
-                       (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
+                       (Il2CppObject *)StringLiteral_19392/*"externalPaymentResults"*/,
+                       (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__)) == 0 )
   {
 LABEL_35:
-    sub_1C3E7C0(Dictionary, v5);
+    sub_1C6BC60(Dictionary, v5);
   }
   v7 = (System_Collections_Generic_List_object__o *)Dictionary;
   naturalAligment = System_Collections_Generic_List_object__TypeInfo->_2.naturalAligment;
@@ -150,7 +153,7 @@ LABEL_35:
         Dictionary = System_Collections_Generic_List_object___get_Item(
                        v7,
                        v12,
-                       (const MethodInfo_37B5190 *)Method_System_Collections_Generic_List_object__get_Item__);
+                       (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_object__get_Item__);
         if ( !Dictionary )
           goto LABEL_35;
         v13 = (System_Collections_Generic_Dictionary_object__object__o *)Dictionary;
@@ -164,8 +167,8 @@ LABEL_35:
         }
         Dictionary = System_Collections_Generic_Dictionary_object__object___get_Item(
                        (System_Collections_Generic_Dictionary_object__object__o *)Dictionary,
-                       (Il2CppObject *)StringLiteral_24265/*"type"*/,
-                       (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                       (Il2CppObject *)StringLiteral_24347/*"type"*/,
+                       (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !Dictionary )
           goto LABEL_35;
         if ( *(Il2CppClass **)(*(_QWORD *)Dictionary + 64LL) != long_TypeInfo->_1.element_class )
@@ -173,8 +176,8 @@ LABEL_35:
         v17 = *(_DWORD *)j_il2cpp_object_unbox_0(Dictionary, long_TypeInfo, v15, v16);
         Dictionary = System_Collections_Generic_Dictionary_object__object___get_Item(
                        v13,
-                       (Il2CppObject *)StringLiteral_22508/*"orderId"*/,
-                       (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                       (Il2CppObject *)StringLiteral_22578/*"orderId"*/,
+                       (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !Dictionary )
           goto LABEL_35;
         v18 = (System_String_o *)(*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)Dictionary + 360LL))(
@@ -182,8 +185,8 @@ LABEL_35:
                                    *(_QWORD *)(*(_QWORD *)Dictionary + 368LL));
         Dictionary = System_Collections_Generic_Dictionary_object__object___get_Item(
                        v13,
-                       (Il2CppObject *)StringLiteral_17955/*"chargeStoneNum"*/,
-                       (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                       (Il2CppObject *)StringLiteral_17956/*"chargeStoneNum"*/,
+                       (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !Dictionary )
           goto LABEL_35;
         if ( *(Il2CppClass **)(*(_QWORD *)Dictionary + 64LL) != long_TypeInfo->_1.element_class )
@@ -191,8 +194,8 @@ LABEL_35:
         v21 = *(_DWORD *)j_il2cpp_object_unbox_0(Dictionary, long_TypeInfo, v19, v20);
         Dictionary = System_Collections_Generic_Dictionary_object__object___get_Item(
                        v13,
-                       (Il2CppObject *)StringLiteral_19685/*"freeStoneNum"*/,
-                       (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                       (Il2CppObject *)StringLiteral_19730/*"freeStoneNum"*/,
+                       (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !Dictionary )
           goto LABEL_35;
         if ( *(Il2CppClass **)(*(_QWORD *)Dictionary + 64LL) != long_TypeInfo->_1.element_class )
@@ -200,51 +203,53 @@ LABEL_35:
         v24 = *(_DWORD *)j_il2cpp_object_unbox_0(Dictionary, long_TypeInfo, v22, v23);
         Dictionary = System_Collections_Generic_Dictionary_object__object___get_Item(
                        v13,
-                       (Il2CppObject *)StringLiteral_22789/*"price"*/,
-                       (const MethodInfo_3475760 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                       (Il2CppObject *)StringLiteral_22860/*"price"*/,
+                       (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
         if ( !Dictionary )
           goto LABEL_35;
         if ( *(Il2CppClass **)(*(_QWORD *)Dictionary + 64LL) != long_TypeInfo->_1.element_class )
           break;
         v27 = (PurchaseLogicExternal_o *)j_il2cpp_object_unbox_0(Dictionary, long_TypeInfo, v25, v26);
         v10 += v21;
+        klass_low = (double)SLODWORD(v27->klass);
         v11 += v24;
-        PurchaseLogicExternal__SendPurchaseAction(v27, v17, (double)SLODWORD(v27->klass), v18, v28);
+        PurchaseLogicExternal__SendPurchaseAction(v27, v17, klass_low, v18, v29);
+        PurchaseLogicExternal__SendPurchaseActionGoogleAnalytics(v30, v17, klass_low, v18, v31);
         if ( ++v12 >= v7->fields._size )
           goto LABEL_31;
       }
-      sub_1C3EA80(Dictionary);
+      sub_1C6BFFC(Dictionary);
 LABEL_37:
-      sub_1C3EA80(v13);
+      sub_1C6BFFC(v13);
 LABEL_38:
-      v36 = sub_1C3EA80(v7);
-      PurchaseLogicExternal__SendPurchaseAction(v32, v33, *(double *)&v36, v34, v35);
+      v39 = sub_1C6BFFC(v7);
+      PurchaseLogicExternal__SendPurchaseAction(v35, v36, *(double *)&v39, v37, v38);
       return;
     }
     v11 = 0;
     v10 = 0;
 LABEL_31:
     PurchaseLogicExternal__ShowExternalPaymentDialog((PurchaseLogicExternal_o *)Dictionary, v10, v11, v6);
-    StoneCountRefreshComponent__RefreshAllStoneCount(v30);
+    StoneCountRefreshComponent__RefreshAllStoneCount(v33);
   }
   else
   {
 LABEL_27:
-    v29 = PurchaseBehaviour_TypeInfo;
+    v32 = PurchaseBehaviour_TypeInfo;
     if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(PurchaseBehaviour_TypeInfo);
-      v29 = PurchaseBehaviour_TypeInfo;
+      v32 = PurchaseBehaviour_TypeInfo;
     }
-    v29->static_fields->isOpenPurchaseDialogEvent = 0;
+    v32->static_fields->isOpenPurchaseDialogEvent = 0;
   }
-  v31 = PurchaseLogicExternal_TypeInfo;
+  v34 = PurchaseLogicExternal_TypeInfo;
   if ( !PurchaseLogicExternal_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(PurchaseLogicExternal_TypeInfo);
-    v31 = PurchaseLogicExternal_TypeInfo;
+    v34 = PurchaseLogicExternal_TypeInfo;
   }
-  v31->static_fields->isEnd = 1;
+  v34->static_fields->isEnd = 1;
 }
 
 
@@ -258,22 +263,104 @@ void PurchaseLogicExternal__SendPurchaseAction(
   Il2CppObject *Instance; // x0
   __int64 v9; // x1
 
-  if ( (byte_4C56688 & 1) == 0 )
+  if ( (byte_4CB5BE6 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
-    sub_1C3E564(&StringLiteral_8161/*"JPY"*/);
-    byte_4C56688 = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+    sub_1C6BA08(&StringLiteral_8159/*"JPY"*/);
+    byte_4CB5BE6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AdManager__get_Instance__);
   if ( !Instance )
-    sub_1C3E7C0(0, v9);
+    sub_1C6BC60(0, v9);
   AdManager__TrackPurchaseExternal(
     (AdManager_o *)Instance,
     actionId,
     price,
-    (System_String_o *)StringLiteral_8161/*"JPY"*/,
+    (System_String_o *)StringLiteral_8159/*"JPY"*/,
     transactionId,
     0);
+}
+
+
+void PurchaseLogicExternal__SendPurchaseActionGoogleAnalytics(
+        PurchaseLogicExternal_o *this,
+        int32_t actionId,
+        double price,
+        System_String_o *transactionId,
+        const MethodInfo *method)
+{
+  Firebase_Analytics_Parameter_array *v8; // x20
+  Firebase_Analytics_Parameter_o *v9; // x22
+  __int64 v10; // x0
+  __int64 v11; // x1
+  int32_t v12; // w2
+  const MethodInfo *v13; // x3
+  Firebase_Analytics_Parameter_o *v14; // x21
+  int32_t v15; // w2
+  const MethodInfo *v16; // x3
+  Firebase_Analytics_Parameter_o *v17; // x21
+  int32_t v18; // w2
+  const MethodInfo *v19; // x3
+  __int64 v20; // x0
+
+  if ( (byte_4CB5BE7 & 1) == 0 )
+  {
+    sub_1C6BA08(&Firebase_Analytics_FirebaseAnalytics_TypeInfo);
+    sub_1C6BA08(&Firebase_Analytics_Parameter___TypeInfo);
+    sub_1C6BA08(&Firebase_Analytics_Parameter_TypeInfo);
+    sub_1C6BA08(&StringLiteral_24274/*"transaction_id"*/);
+    sub_1C6BA08(&StringLiteral_22860/*"price"*/);
+    sub_1C6BA08(&StringLiteral_19394/*"external_purchase"*/);
+    sub_1C6BA08(&StringLiteral_19393/*"external_payment_type"*/);
+    byte_4CB5BE7 = 1;
+  }
+  v8 = (Firebase_Analytics_Parameter_array *)sub_1C6BAB0(Firebase_Analytics_Parameter___TypeInfo, 3);
+  v9 = (Firebase_Analytics_Parameter_o *)sub_1C6BC54(Firebase_Analytics_Parameter_TypeInfo);
+  Firebase_Analytics_Parameter___ctor_50480580(v9, (System_String_o *)StringLiteral_19393/*"external_payment_type"*/, actionId, 0);
+  if ( !v8 )
+    sub_1C6BC60(v10, v11);
+  if ( v9 )
+  {
+    v10 = sub_1C6BB44(v9, v8->obj.klass->_1.element_class);
+    if ( !v10 )
+      goto LABEL_17;
+  }
+  if ( !LODWORD(v8->max_length) )
+    goto LABEL_16;
+  v8->m_Items[0] = v9;
+  sub_1C6B9AC((CGThumbnailListItem_o *)v8->m_Items, (int32_t)v9, v12, v13);
+  v14 = (Firebase_Analytics_Parameter_o *)sub_1C6BC54(Firebase_Analytics_Parameter_TypeInfo);
+  Firebase_Analytics_Parameter___ctor_50480728(v14, (System_String_o *)StringLiteral_22860/*"price"*/, price, 0);
+  if ( v14 )
+  {
+    v10 = sub_1C6BB44(v14, v8->obj.klass->_1.element_class);
+    if ( !v10 )
+      goto LABEL_17;
+  }
+  if ( LODWORD(v8->max_length) <= 1 )
+    goto LABEL_16;
+  v8->m_Items[1] = v14;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->m_Items[1], (int32_t)v14, v15, v16);
+  v17 = (Firebase_Analytics_Parameter_o *)sub_1C6BC54(Firebase_Analytics_Parameter_TypeInfo);
+  Firebase_Analytics_Parameter___ctor(v17, (System_String_o *)StringLiteral_24274/*"transaction_id"*/, transactionId, 0);
+  if ( v17 )
+  {
+    v10 = sub_1C6BB44(v17, v8->obj.klass->_1.element_class);
+    if ( !v10 )
+    {
+LABEL_17:
+      v20 = sub_1C6BC84(v10);
+      sub_1C6BB30(v20, 0);
+    }
+  }
+  if ( LODWORD(v8->max_length) <= 2 )
+LABEL_16:
+    sub_1C6BC68(v10);
+  v8->m_Items[2] = v17;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->m_Items[2], (int32_t)v17, v18, v19);
+  if ( !Firebase_Analytics_FirebaseAnalytics_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(Firebase_Analytics_FirebaseAnalytics_TypeInfo);
+  Firebase_Analytics_FirebaseAnalytics__LogEvent((System_String_o *)StringLiteral_19394/*"external_purchase"*/, v8, 0);
 }
 
 
@@ -286,13 +373,13 @@ void PurchaseLogicExternal__ShowExternalPaymentDialog(
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
 
-  if ( (byte_4C56687 & 1) == 0 )
+  if ( (byte_4CB5BE5 & 1) == 0 )
   {
-    sub_1C3E564(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4C56687 = 1;
+    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CB5BE5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_39FF5A8 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C3E7C0(0, v7);
+    sub_1C6BC60(0, v7);
   CommonUI__OpenStonePurchaseReciveMenu((CommonUI_o *)Instance, 3, 0, freeStoneNum, chargeStoneNum, 0, 0, 0);
 }

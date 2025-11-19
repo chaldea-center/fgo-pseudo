@@ -7,9 +7,9 @@ void ScriptAssetListViewItem___ctor(
   int32_t v6; // w2
   const MethodInfo *v7; // x3
 
-  ListViewItem___ctor_43860152((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
   this->fields.path = path;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v6, v7);
 }
 
 
@@ -38,7 +38,7 @@ System_String_o *ScriptAssetListViewItem__get_TitleText(ScriptAssetListViewItem_
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0);
 LABEL_6:
-    sub_1C3E7C0(path, method);
+    sub_1C6BC60(path, method);
   }
   return this->fields.path;
 }

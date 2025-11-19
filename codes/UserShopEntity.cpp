@@ -1,26 +1,26 @@
 void UserShopEntity___ctor(UserShopEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4C57E1F & 1) == 0 )
+  if ( (byte_4CB738D & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C57E1F = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB738D = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
 }
 
 
-void UserShopEntity___ctor_43308008(UserShopEntity_o *this, int64_t userId, int32_t shopId, const MethodInfo *method)
+void UserShopEntity___ctor_43498624(UserShopEntity_o *this, int64_t userId, int32_t shopId, const MethodInfo *method)
 {
-  if ( (byte_4C57E20 & 1) == 0 )
+  if ( (byte_4CB738E & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_string___ctor__);
-    byte_4C57E20 = 1;
+    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
+    byte_4CB738E = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33B0AEC *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
   this->fields.userId = userId;
   this->fields.shopId = shopId;
   this->fields.updatedAt = 0;
@@ -43,15 +43,15 @@ bool UserShopEntity__CheckFlagKind(UserShopEntity_o *this, int32_t flagKind, con
 
 System_String_o *UserShopEntity__CreatePK(int64_t userId, int32_t shopId, const MethodInfo *method)
 {
-  if ( (byte_4C57E1E & 1) == 0 )
+  if ( (byte_4CB738C & 1) == 0 )
   {
-    sub_1C3E564(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4C57E1E = 1;
+    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4CB738C = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            shopId,
-           (const MethodInfo_30F7D00 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_31395F8 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

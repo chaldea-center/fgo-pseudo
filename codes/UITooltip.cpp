@@ -5,10 +5,10 @@ void UITooltip___ctor(UITooltip_o *this, const MethodInfo *method)
 
   this->fields.appearSpeed = 10.0;
   this->fields.scalingTransitions = 1;
-  if ( !byte_4C506A1 )
+  if ( !byte_4CAFC09 )
   {
-    sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-    byte_4C506A1 = 1;
+    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+    byte_4CAFC09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -23,13 +23,13 @@ void UITooltip__Awake(UITooltip_o *this, const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C5B6A4 & 1) == 0 )
+  if ( (byte_4CBAC81 & 1) == 0 )
   {
-    sub_1C3E564(&UITooltip_TypeInfo);
-    byte_4C5B6A4 = 1;
+    sub_1C6BA08(&UITooltip_TypeInfo);
+    byte_4CBAC81 = 1;
   }
   UITooltip_TypeInfo->static_fields->mInstance = this;
-  sub_1C3E508((CGThumbnailListItem_o *)UITooltip_TypeInfo->static_fields, (int32_t)this, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)UITooltip_TypeInfo->static_fields, (int32_t)this, v2, v3);
 }
 
 
@@ -42,11 +42,11 @@ void UITooltip__Hide(const MethodInfo *method)
   struct UITooltip_o *v5; // x0
   struct UITooltip_o *v6; // x8
 
-  if ( (byte_4C5B6AB & 1) == 0 )
+  if ( (byte_4CBAC88 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UITooltip_TypeInfo);
-    byte_4C5B6AB = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UITooltip_TypeInfo);
+    byte_4CBAC88 = 1;
   }
   mInstance = (UnityEngine_Object_o *)UITooltip_TypeInfo->static_fields->mInstance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -56,10 +56,10 @@ void UITooltip__Hide(const MethodInfo *method)
     v5 = UITooltip_TypeInfo->static_fields->mInstance;
     if ( !v5
       || (v5->fields.mHover = 0,
-          sub_1C3E508((CGThumbnailListItem_o *)&v5->fields.mHover, 0, v3, v4),
+          sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.mHover, 0, v3, v4),
           (v6 = UITooltip_TypeInfo->static_fields->mInstance) == 0) )
     {
-      sub_1C3E7C0(v5, v2);
+      sub_1C6BC60(v5, v2);
     }
     v6->fields.mTarget = 0.0;
   }
@@ -71,13 +71,13 @@ void UITooltip__OnDestroy(UITooltip_o *this, const MethodInfo *method)
   int32_t v2; // w2
   const MethodInfo *v3; // x3
 
-  if ( (byte_4C5B6A5 & 1) == 0 )
+  if ( (byte_4CBAC82 & 1) == 0 )
   {
-    sub_1C3E564(&UITooltip_TypeInfo);
-    byte_4C5B6A5 = 1;
+    sub_1C6BA08(&UITooltip_TypeInfo);
+    byte_4CBAC82 = 1;
   }
   UITooltip_TypeInfo->static_fields->mInstance = 0;
-  sub_1C3E508((CGThumbnailListItem_o *)UITooltip_TypeInfo->static_fields, 0, v2, v3);
+  sub_1C6B9AC((CGThumbnailListItem_o *)UITooltip_TypeInfo->static_fields, 0, v2, v3);
 }
 
 
@@ -100,7 +100,7 @@ void UITooltip__SetAlpha(UITooltip_o *this, float val, const MethodInfo *method)
     do
     {
       if ( v7 >= LODWORD(mWidgets->max_length) )
-        sub_1C3E7C8(this, method);
+        sub_1C6BC68(this);
       this = (UITooltip_o *)mWidgets->m_Items[v7];
       if ( !this )
         break;
@@ -115,7 +115,7 @@ void UITooltip__SetAlpha(UITooltip_o *this, float val, const MethodInfo *method)
     }
     while ( mWidgets );
 LABEL_8:
-    sub_1C3E7C0(this, method);
+    sub_1C6BC60(this, method);
   }
 }
 
@@ -214,11 +214,11 @@ void UITooltip__SetText(UITooltip_o *this, System_String_o *tooltipText, const M
   UnityEngine_Vector3_o v93; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v94; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B6A8 & 1) == 0 )
+  if ( (byte_4CBAC85 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B6A8 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBAC85 = 1;
   }
   text = (UnityEngine_Object_o *)this->fields.text;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -227,7 +227,7 @@ void UITooltip__SetText(UITooltip_o *this, System_String_o *tooltipText, const M
   {
     this->fields.mHover = 0;
     p_mHover = (CGThumbnailListItem_o *)&this->fields.mHover;
-    sub_1C3E508(p_mHover, 0, v6, v7);
+    sub_1C6B9AC(p_mHover, 0, v6, v7);
     p_mHover->fields.selectNum = 0;
     return;
   }
@@ -240,7 +240,7 @@ void UITooltip__SetText(UITooltip_o *this, System_String_o *tooltipText, const M
   }
   hoveredObject = v9->static_fields->hoveredObject;
   this->fields.mHover = hoveredObject;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mHover, (int32_t)hoveredObject, v6, v7);
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mHover, (int32_t)hoveredObject, v6, v7);
   transform = this->fields.text;
   if ( !transform )
     goto LABEL_101;
@@ -284,10 +284,10 @@ void UITooltip__SetText(UITooltip_o *this, System_String_o *tooltipText, const M
     this->fields.mSize.fields.x = v24;
     this->fields.mSize.fields.y = v25;
     v26 = (UIWidget_o *)this->fields.background;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -326,10 +326,10 @@ LABEL_32:
     UIWidget__set_width(v26, v32, 0);
     v33 = (UIWidget_o *)this->fields.background;
     v34 = this->fields.mSize.fields.y;
-    if ( !byte_4C51E80 )
+    if ( !byte_4CB13C8 )
     {
-      sub_1C3E564(&System_Math_TypeInfo);
-      byte_4C51E80 = 1;
+      sub_1C6BA08(&System_Math_TypeInfo);
+      byte_4CB13C8 = 1;
     }
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -425,7 +425,7 @@ LABEL_50:
       goto LABEL_101;
     z = this->fields.mPos.fields.z;
     mTrans = this->fields.mTrans;
-    v93 = UnityEngine_Camera__ViewportToWorldPoint_71147848(
+    v93 = UnityEngine_Camera__ViewportToWorldPoint_71464264(
             (UnityEngine_Camera_o *)transform,
             *(UnityEngine_Vector3_o *)&v63,
             0);
@@ -507,7 +507,7 @@ LABEL_99:
       return;
     }
 LABEL_101:
-    sub_1C3E7C0(transform, v11);
+    sub_1C6BC60(transform, v11);
   }
   v71 = this->fields.mSize.fields.x;
   if ( (float)(v43 + v71) > (float)UnityEngine_Screen__get_width(0) )
@@ -529,11 +529,11 @@ void UITooltip__Show(System_String_o *text, const MethodInfo *method)
   __int64 v4; // x1
   struct UITooltip_o *v5; // x0
 
-  if ( (byte_4C5B6AA & 1) == 0 )
+  if ( (byte_4CBAC87 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UITooltip_TypeInfo);
-    byte_4C5B6AA = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UITooltip_TypeInfo);
+    byte_4CBAC87 = 1;
   }
   mInstance = (UnityEngine_Object_o *)UITooltip_TypeInfo->static_fields->mInstance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -542,7 +542,7 @@ void UITooltip__Show(System_String_o *text, const MethodInfo *method)
   {
     v5 = UITooltip_TypeInfo->static_fields->mInstance;
     if ( !v5 )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     ((void (__fastcall *)(struct UITooltip_o *, System_String_o *, const MethodInfo *))v5->klass->vtable._7_SetText.methodPtr)(
       v5,
       text,
@@ -557,11 +557,11 @@ void UITooltip__ShowText(System_String_o *text, const MethodInfo *method)
   __int64 v4; // x1
   struct UITooltip_o *v5; // x0
 
-  if ( (byte_4C5B6A9 & 1) == 0 )
+  if ( (byte_4CBAC86 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UITooltip_TypeInfo);
-    byte_4C5B6A9 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UITooltip_TypeInfo);
+    byte_4CBAC86 = 1;
   }
   mInstance = (UnityEngine_Object_o *)UITooltip_TypeInfo->static_fields->mInstance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -570,7 +570,7 @@ void UITooltip__ShowText(System_String_o *text, const MethodInfo *method)
   {
     v5 = UITooltip_TypeInfo->static_fields->mInstance;
     if ( !v5 )
-      sub_1C3E7C0(0, v4);
+      sub_1C6BC60(0, v4);
     ((void (__fastcall *)(struct UITooltip_o *, System_String_o *, const MethodInfo *))v5->klass->vtable._7_SetText.methodPtr)(
       v5,
       text,
@@ -584,7 +584,7 @@ void UITooltip__Start(UITooltip_o *this, const MethodInfo *method)
   struct UnityEngine_Transform_o *transform; // x0
   int32_t v4; // w2
   const MethodInfo *v5; // x3
-  System_Object_array *ComponentsInChildren_object__51318504; // x0
+  System_Object_array *ComponentsInChildren_object__51587040; // x0
   int32_t v7; // w2
   const MethodInfo *v8; // x3
   __int64 v9; // x1
@@ -596,21 +596,21 @@ void UITooltip__Start(UITooltip_o *this, const MethodInfo *method)
   const MethodInfo *v15; // x3
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B6A6 & 1) == 0 )
+  if ( (byte_4CBAC83 & 1) == 0 )
   {
-    sub_1C3E564(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget___);
-    sub_1C3E564(&NGUITools_TypeInfo);
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    byte_4C5B6A6 = 1;
+    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentsInChildren_UIWidget___);
+    sub_1C6BA08(&NGUITools_TypeInfo);
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    byte_4CBAC83 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
-  ComponentsInChildren_object__51318504 = UnityEngine_Component__GetComponentsInChildren_object__51318504(
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  ComponentsInChildren_object__51587040 = UnityEngine_Component__GetComponentsInChildren_object__51587040(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_30F0EE8 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget___);
-  this->fields.mWidgets = (struct UIWidget_array *)ComponentsInChildren_object__51318504;
-  sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mWidgets, (int32_t)ComponentsInChildren_object__51318504, v7, v8);
+                                            (const MethodInfo_31327E0 *)Method_UnityEngine_Component_GetComponentsInChildren_UIWidget___);
+  this->fields.mWidgets = (struct UIWidget_array *)ComponentsInChildren_object__51587040;
+  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mWidgets, (int32_t)ComponentsInChildren_object__51587040, v7, v8);
   mTrans = this->fields.mTrans;
   if ( !mTrans )
     goto LABEL_12;
@@ -629,11 +629,11 @@ void UITooltip__Start(UITooltip_o *this, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
       CameraForLayer = NGUITools__FindCameraForLayer(layer, 0);
       this->fields.uiCamera = CameraForLayer;
-      sub_1C3E508((CGThumbnailListItem_o *)&this->fields.uiCamera, (int32_t)CameraForLayer, v14, v15);
+      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.uiCamera, (int32_t)CameraForLayer, v14, v15);
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1C3E7C0(mTrans, v9);
+    sub_1C6BC60(mTrans, v9);
   }
 LABEL_11:
   ((void (__fastcall *)(UITooltip_o *, const MethodInfo *, float))this->klass->vtable._6_SetAlpha.methodPtr)(
@@ -676,11 +676,11 @@ void UITooltip__Update(UITooltip_o *this, const MethodInfo *method)
   float v35; // s2
   UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4C5B6A7 & 1) == 0 )
+  if ( (byte_4CBAC84 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UICamera_TypeInfo);
-    byte_4C5B6A7 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UICamera_TypeInfo);
+    byte_4CBAC84 = 1;
   }
   mHover = (UnityEngine_Object_o *)this->fields.mHover;
   v4 = UICamera_TypeInfo;
@@ -695,7 +695,7 @@ void UITooltip__Update(UITooltip_o *this, const MethodInfo *method)
   if ( UnityEngine_Object__op_Inequality(mHover, hoveredObject, 0) )
   {
     this->fields.mHover = 0;
-    sub_1C3E508((CGThumbnailListItem_o *)&this->fields.mHover, 0, v6, v7);
+    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mHover, 0, v6, v7);
     mTarget = 0.0;
     this->fields.mTarget = 0.0;
   }
@@ -728,10 +728,10 @@ void UITooltip__Update(UITooltip_o *this, const MethodInfo *method)
     {
       v16.n64_u64[0] = *(unsigned __int64 *)&this->fields.mSize.fields.x;
       z = this->fields.mSize.fields.z;
-      if ( !byte_4C506A6 )
+      if ( !byte_4CAFC0E )
       {
-        sub_1C3E564(&UnityEngine_Vector3_TypeInfo);
-        byte_4C506A6 = 1;
+        sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
+        byte_4CAFC0E = 1;
       }
       v18 = this->fields.mCurrent;
       mTrans = this->fields.mTrans;
@@ -759,7 +759,7 @@ void UITooltip__Update(UITooltip_o *this, const MethodInfo *method)
       mTrans = this->fields.mTrans;
       if ( !mTrans )
 LABEL_25:
-        sub_1C3E7C0(mTrans, v15);
+        sub_1C6BC60(mTrans, v15);
       v35 = (float)(v18 * -0.5) + 1.5;
       v36.fields.x = x * v35;
       v36.fields.y = y * v35;
@@ -777,11 +777,11 @@ bool UITooltip__get_isVisible(const MethodInfo *method)
   __int64 v3; // x1
   struct UITooltip_o *v4; // x8
 
-  if ( (byte_4C5B6A3 & 1) == 0 )
+  if ( (byte_4CBAC80 & 1) == 0 )
   {
-    sub_1C3E564(&UnityEngine_Object_TypeInfo);
-    sub_1C3E564(&UITooltip_TypeInfo);
-    byte_4C5B6A3 = 1;
+    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
+    sub_1C6BA08(&UITooltip_TypeInfo);
+    byte_4CBAC80 = 1;
   }
   mInstance = (UnityEngine_Object_o *)UITooltip_TypeInfo->static_fields->mInstance;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -791,6 +791,6 @@ bool UITooltip__get_isVisible(const MethodInfo *method)
     return 0;
   v4 = UITooltip_TypeInfo->static_fields->mInstance;
   if ( !v4 )
-    sub_1C3E7C0(v2, v3);
+    sub_1C6BC60(v2, v3);
   return v4->fields.mTarget == 1.0;
 }

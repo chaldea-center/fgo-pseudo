@@ -14,7 +14,7 @@ void ClassCompatibilityMenu__Callback(ClassCompatibilityMenu_o *this, const Meth
   p_callbackFunc = &this->fields.callbackFunc;
   v3 = callbackFunc;
   *p_callbackFunc = 0;
-  sub_1C3E508(p_callbackFunc, 0);
+  sub_1C6B9AC(p_callbackFunc, 0);
   if ( callbackFunc )
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
 }
@@ -28,23 +28,23 @@ void ClassCompatibilityMenu__Close(ClassCompatibilityMenu_o *this, System_Action
   __int64 v8; // x1
   const MethodInfo *v9; // x2
 
-  if ( (byte_4C50AC7 & 1) == 0 )
+  if ( (byte_4CB000F & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_ClassCompatibilityMenu_EndClose__);
-    byte_4C50AC7 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_ClassCompatibilityMenu_EndClose__);
+    byte_4CB000F = 1;
   }
   if ( this->fields.state )
   {
     this->fields.closeCallbackFunc = callback;
-    sub_1C3E508(&this->fields.closeCallbackFunc, callback);
+    sub_1C6B9AC(&this->fields.closeCallbackFunc, callback);
     this->fields.state = 3;
     classCompatibilityConfirmMenu = this->fields.classCompatibilityConfirmMenu;
-    v6 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo);
+    v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_ClassCompatibilityMenu_EndClose__, 0);
     if ( !classCompatibilityConfirmMenu )
-      sub_1C3E7C0(v7, v8);
-    ClassCompatibilityInfoDialog__Close_31203540(classCompatibilityConfirmMenu, v6, v9);
+      sub_1C6BC60(v7, v8);
+    ClassCompatibilityInfoDialog__Close_31382976(classCompatibilityConfirmMenu, v6, v9);
   }
 }
 
@@ -65,7 +65,7 @@ void ClassCompatibilityMenu__EndClose(ClassCompatibilityMenu_o *this, const Meth
                                                                                (UnityEngine_Component_o *)this,
                                                                                0)) == 0) )
     {
-      sub_1C3E7C0(classCompatibilityConfirmMenu, method);
+      sub_1C6BC60(classCompatibilityConfirmMenu, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)classCompatibilityConfirmMenu, 0, 0);
     closeCallbackFunc = this->fields.closeCallbackFunc;
@@ -75,7 +75,7 @@ void ClassCompatibilityMenu__EndClose(ClassCompatibilityMenu_o *this, const Meth
     if ( closeCallbackFunc )
     {
       *p_closeCallbackFunc = 0;
-      sub_1C3E508(p_closeCallbackFunc, 0);
+      sub_1C6B9AC(p_closeCallbackFunc, 0);
       ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
     }
   }
@@ -90,26 +90,26 @@ void ClassCompatibilityMenu__Open(ClassCompatibilityMenu_o *this, System_Action_
   System_Action_o *v8; // x21
   const MethodInfo *v9; // x2
 
-  if ( (byte_4C50AC6 & 1) == 0 )
+  if ( (byte_4CB000E & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    sub_1C3E564(&Method_ClassCompatibilityMenu_Callback__);
-    byte_4C50AC6 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    sub_1C6BA08(&Method_ClassCompatibilityMenu_Callback__);
+    byte_4CB000E = 1;
   }
   if ( !this->fields.state )
   {
     this->fields.callbackFunc = callback;
-    sub_1C3E508(&this->fields.callbackFunc, callback);
+    sub_1C6B9AC(&this->fields.callbackFunc, callback);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject
       || (UnityEngine_GameObject__SetActive(gameObject, 1, 0),
           this->fields.state = 1,
           classCompatibilityConfirmMenu = this->fields.classCompatibilityConfirmMenu,
-          v8 = (System_Action_o *)sub_1C3E7B0(System_Action_TypeInfo),
+          v8 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
           System_Action___ctor(v8, (Il2CppObject *)this, Method_ClassCompatibilityMenu_Callback__, 0),
           !classCompatibilityConfirmMenu) )
     {
-      sub_1C3E7C0(gameObject, v6);
+      sub_1C6BC60(gameObject, v6);
     }
     ClassCompatibilityInfoDialog__Open(classCompatibilityConfirmMenu, v8, v9);
   }
@@ -131,10 +131,10 @@ void ClassCompatibilityMenu__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C50AC2 & 1) == 0 )
+  if ( (byte_4CB000A & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C50AC2 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB000A = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -147,13 +147,13 @@ void ClassCompatibilityMenu__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ClassCompatibilityMenu_o *)sub_1C3EA80(v8);
+  v11 = (ClassCompatibilityMenu_o *)sub_1C6BFFC(v8);
   ClassCompatibilityMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -173,10 +173,10 @@ void ClassCompatibilityMenu__add_closeCallbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C50AC4 & 1) == 0 )
+  if ( (byte_4CB000C & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C50AC4 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB000C = 1;
   }
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
@@ -189,13 +189,13 @@ void ClassCompatibilityMenu__add_closeCallbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_closeCallbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_closeCallbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ClassCompatibilityMenu_o *)sub_1C3EA80(v8);
+  v11 = (ClassCompatibilityMenu_o *)sub_1C6BFFC(v8);
   ClassCompatibilityMenu__remove_closeCallbackFunc(v11, v12, v13);
 }
 
@@ -215,10 +215,10 @@ void ClassCompatibilityMenu__remove_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C50AC3 & 1) == 0 )
+  if ( (byte_4CB000B & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C50AC3 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB000B = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -231,13 +231,13 @@ void ClassCompatibilityMenu__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_callbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ClassCompatibilityMenu_o *)sub_1C3EA80(v8);
+  v11 = (ClassCompatibilityMenu_o *)sub_1C6BFFC(v8);
   ClassCompatibilityMenu__add_closeCallbackFunc(v11, v12, v13);
 }
 
@@ -257,10 +257,10 @@ void ClassCompatibilityMenu__remove_closeCallbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4C50AC5 & 1) == 0 )
+  if ( (byte_4CB000D & 1) == 0 )
   {
-    sub_1C3E564(&System_Action_TypeInfo);
-    byte_4C50AC5 = 1;
+    sub_1C6BA08(&System_Action_TypeInfo);
+    byte_4CB000D = 1;
   }
   closeCallbackFunc = this->fields.closeCallbackFunc;
   p_closeCallbackFunc = &this->fields.closeCallbackFunc;
@@ -273,12 +273,12 @@ void ClassCompatibilityMenu__remove_closeCallbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1C787BC(p_closeCallbackFunc, v8, v6);
+    v9 = sub_1CC77DC(p_closeCallbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (ClassCompatibilityMenu_o *)sub_1C3EA80(v8);
+  v11 = (ClassCompatibilityMenu_o *)sub_1C6BFFC(v8);
   ClassCompatibilityMenu__Open(v11, v12, v13);
 }
