@@ -18,14 +18,14 @@ void LapTimeEffectSubComponent__RecvParam(
   void *monitor; // x8
   int64_t v12; // x20
 
-  if ( (byte_4CB79C7 & 1) == 0 )
+  if ( (byte_4CC8AF0 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&RaceResultEffectParam_TypeInfo);
-    sub_1C6BA08(&StringLiteral_10947/*"RACE_TARGET_GOAL_RANK"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    sub_1C6BA08(&StringLiteral_5661/*"EVENT_RACE_RESULT_TIME_NONE"*/);
-    byte_4CB79C7 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&RaceResultEffectParam_TypeInfo);
+    sub_1C713B0(&StringLiteral_10953/*"RACE_TARGET_GOAL_RANK"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    sub_1C713B0(&StringLiteral_5664/*"EVENT_RACE_RESULT_TIME_NONE"*/);
+    byte_4CC8AF0 = 1;
   }
   if ( param
     && (naturalAligment = RaceResultEffectParam_TypeInfo->_2.naturalAligment,
@@ -35,14 +35,14 @@ void LapTimeEffectSubComponent__RecvParam(
     && v8[6] >= 5 )
   {
     v9 = *((_QWORD *)v8 + 7);
-    Value = (System_String_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_10947/*"RACE_TARGET_GOAL_RANK"*/, 0);
+    Value = (System_String_o *)ConstantMaster__getValue((System_String_o *)StringLiteral_10953/*"RACE_TARGET_GOAL_RANK"*/, 0);
     if ( v9 <= (int)Value )
     {
       monitor = param[1].monitor;
       if ( !monitor )
         goto LABEL_22;
       if ( *((_DWORD *)monitor + 6) <= 4u )
-        sub_1C6BC68(Value);
+        sub_1C71610(Value);
       v12 = *((_QWORD *)monitor + 8);
       label = this->fields.label;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -50,14 +50,14 @@ void LapTimeEffectSubComponent__RecvParam(
       Value = LocalizationManager__GetLapTime(v12, 0);
       if ( !label )
 LABEL_22:
-        sub_1C6BC60(Value, param);
+        sub_1C71608(Value, param);
     }
     else
     {
       label = this->fields.label;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      Value = LocalizationManager__Get((System_String_o *)StringLiteral_5661/*"EVENT_RACE_RESULT_TIME_NONE"*/, 0);
+      Value = LocalizationManager__Get((System_String_o *)StringLiteral_5664/*"EVENT_RACE_RESULT_TIME_NONE"*/, 0);
       if ( !label )
         goto LABEL_22;
     }

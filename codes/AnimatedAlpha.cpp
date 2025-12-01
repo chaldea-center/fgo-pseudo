@@ -12,10 +12,10 @@ void AnimatedAlpha__LateUpdate(AnimatedAlpha_o *this, const MethodInfo *method)
   void *v5; // x0
   UnityEngine_Object_o *mPanel; // x20
 
-  if ( (byte_4CBAB7B & 1) == 0 )
+  if ( (byte_4CCBCD4 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBAB7B = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBCD4 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -45,7 +45,7 @@ void AnimatedAlpha__LateUpdate(AnimatedAlpha_o *this, const MethodInfo *method)
       return;
     }
 LABEL_14:
-    sub_1C6BC60(v5, v4);
+    sub_1C71608(v5, v4);
   }
 }
 
@@ -54,27 +54,35 @@ void AnimatedAlpha__OnEnable(AnimatedAlpha_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  Il2CppObject *v6; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  Il2CppObject *v10; // x0
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  const MethodInfo *v17; // x1
 
-  if ( (byte_4CBAB7A & 1) == 0 )
+  if ( (byte_4CCBCD3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4CBAB7A = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_4CCBCD3 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5);
-  v6 = UnityEngine_Component__GetComponent_object_(
-         (UnityEngine_Component_o *)this,
-         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
-  this->fields.mPanel = (struct UIPanel_o *)v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)v6, v7, v8);
-  AnimatedAlpha__LateUpdate(this, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  v10 = UnityEngine_Component__GetComponent_object_(
+          (UnityEngine_Component_o *)this,
+          (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+  this->fields.mPanel = (struct UIPanel_o *)v10;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mPanel, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  AnimatedAlpha__LateUpdate(this, v17);
 }

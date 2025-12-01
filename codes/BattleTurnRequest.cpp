@@ -6,22 +6,22 @@ void BattleTurnRequest___ctor(BattleTurnRequest_o *this, const MethodInfo *metho
 
 void BattleTurnRequest__beginRequest(BattleTurnRequest_o *this, int64_t battleId, const MethodInfo *method)
 {
-  if ( (byte_4CB7D63 & 1) == 0 )
+  if ( (byte_4CC8E8C & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_17090/*"battleId"*/);
-    byte_4CB7D63 = 1;
+    sub_1C713B0(&StringLiteral_17097/*"battleId"*/);
+    byte_4CC8E8C = 1;
   }
-  RequestBase__addField_44468288((RequestBase_o *)this, (System_String_o *)StringLiteral_17090/*"battleId"*/, battleId, 0);
+  RequestBase__addField_44514616((RequestBase_o *)this, (System_String_o *)StringLiteral_17097/*"battleId"*/, battleId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
 System_String_o *BattleTurnRequest__getMockData(BattleTurnRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB7D62 & 1) == 0 )
+  if ( (byte_4CC8E8B & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB7D62 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC8E8B = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -31,16 +31,16 @@ System_String_o *BattleTurnRequest__getURL(BattleTurnRequest_o *this, const Meth
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CB7D61 & 1) == 0 )
+  if ( (byte_4CC8E8A & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_17075/*"battle/turn"*/);
-    byte_4CB7D61 = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_17082/*"battle/turn"*/);
+    byte_4CC8E8A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_17075/*"battle/turn"*/, 0);
+  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_17082/*"battle/turn"*/, 0);
 }
 
 
@@ -60,17 +60,17 @@ void BattleTurnRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4CB7D64 & 1) == 0 )
+  if ( (byte_4CC8E8D & 1) == 0 )
   {
-    sub_1C6BA08(&JsonManager_TypeInfo);
-    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
-    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
-    byte_4CB7D64 = 1;
+    sub_1C713B0(&JsonManager_TypeInfo);
+    sub_1C713B0(&ResponseCommandKind_TypeInfo);
+    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
+    byte_4CC8E8D = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(21, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44468912(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44515240(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -78,7 +78,7 @@ void BattleTurnRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22301/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22316/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

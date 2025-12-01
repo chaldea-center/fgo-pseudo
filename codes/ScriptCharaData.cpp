@@ -7,107 +7,131 @@ void ScriptCharaData___ctor(
         const MethodInfo *method)
 {
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  int32_t v17; // w1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v17; // x1
+  __int64 v25; // x1
   Il2CppObject *prefab; // x22
-  Il2CppObject *v19; // x0
+  Il2CppObject *v27; // x0
   struct UnityEngine_GameObject_o **p_gameObject; // x24
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
   Il2CppObject *Component_object; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  UnityEngine_Object_o *v26; // x25
-  UnityEngine_Object_o *v27; // x25
-  __int64 *v28; // x8
-  UnityEngine_Transform_o *v29; // x23
-  UnityEngine_GameObject_o *v30; // x21
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
+  UnityEngine_Object_o *v42; // x25
+  UnityEngine_Object_o *v43; // x25
+  __int64 *v44; // x8
+  UnityEngine_Transform_o *v45; // x23
+  UnityEngine_GameObject_o *v46; // x21
   UIScriptChara_o *chara; // x21
-  const MethodInfo *v32; // x2
+  const MethodInfo *v48; // x2
   UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o Position_45126380; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Position_45176680; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o localRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB8249 & 1) == 0 )
+  if ( (byte_4CC937C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIScriptChara___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    sub_1C6BA08(&StringLiteral_7341/*"HorizontalImage"*/);
-    sub_1C6BA08(&StringLiteral_6701/*"Figure"*/);
-    sub_1C6BA08(&StringLiteral_15320/*"VerticalImage"*/);
-    sub_1C6BA08(&StringLiteral_6099/*"Equip"*/);
-    sub_1C6BA08(&StringLiteral_7564/*"Image"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB8249 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UIScriptChara___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    sub_1C713B0(&StringLiteral_7345/*"HorizontalImage"*/);
+    sub_1C713B0(&StringLiteral_6703/*"Figure"*/);
+    sub_1C713B0(&StringLiteral_15326/*"VerticalImage"*/);
+    sub_1C713B0(&StringLiteral_6101/*"Equip"*/);
+    sub_1C713B0(&StringLiteral_7568/*"Image"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC937C = 1;
   }
   this->fields.isWaitTalkMoveAlpha = 1;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.kind = kind;
   this->fields.name = name;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.name, (int32_t)name, v11, v12);
-  v13 = StringLiteral_1/*""*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.name, (int32_t)name, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_1/*""*/;
   this->fields.imageName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.imageName, v13, v14, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.imageName, v17, v18, v19, v20, v21, v22, v23);
   if ( !seed )
     goto LABEL_29;
   prefab = (Il2CppObject *)seed->fields.prefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v19 = UnityEngine_Object__Instantiate_object_(
+  v27 = UnityEngine_Object__Instantiate_object_(
           prefab,
-          (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-  this->fields.gameObject = (struct UnityEngine_GameObject_o *)v19;
+          (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+  this->fields.gameObject = (struct UnityEngine_GameObject_o *)v27;
   p_gameObject = &this->fields.gameObject;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.gameObject, (int32_t)v19, v21, v22);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.gameObject, (int32_t)v27, v29, v30, v31, v32, v33, v34);
   gameObject = this->fields.gameObject;
   if ( !gameObject )
 LABEL_29:
-    sub_1C6BC60(gameObject, v17);
+    sub_1C71608(gameObject, v25);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIScriptChara___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UIScriptChara___);
   this->fields.chara = (struct UIScriptChara_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.chara, (int32_t)Component_object, v24, v25);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.chara,
+    (int32_t)Component_object,
+    v36,
+    v37,
+    v38,
+    v39,
+    v40,
+    v41);
   switch ( kind )
   {
     case 0:
-      v26 = (UnityEngine_Object_o *)*p_gameObject;
-      gameObject = (UnityEngine_GameObject_o *)System_String__Concat_63966792(
-                                                 (System_String_o *)StringLiteral_6701/*"Figure"*/,
+      v42 = (UnityEngine_Object_o *)*p_gameObject;
+      gameObject = (UnityEngine_GameObject_o *)System_String__Concat_64031724(
+                                                 (System_String_o *)StringLiteral_6703/*"Figure"*/,
                                                  name,
                                                  0);
-      if ( !v26 )
+      if ( !v42 )
         goto LABEL_29;
-      UnityEngine_Object__set_name(v26, (System_String_o *)gameObject, 0);
+      UnityEngine_Object__set_name(v42, (System_String_o *)gameObject, 0);
       this->fields.faceType = 0;
       goto LABEL_16;
     case 1:
-      v27 = (UnityEngine_Object_o *)*p_gameObject;
-      v28 = &StringLiteral_6099/*"Equip"*/;
+      v43 = (UnityEngine_Object_o *)*p_gameObject;
+      v44 = &StringLiteral_6101/*"Equip"*/;
       goto LABEL_14;
     case 2:
-      v27 = (UnityEngine_Object_o *)*p_gameObject;
-      v28 = &StringLiteral_7564/*"Image"*/;
+      v43 = (UnityEngine_Object_o *)*p_gameObject;
+      v44 = &StringLiteral_7568/*"Image"*/;
       goto LABEL_14;
     case 3:
-      v27 = (UnityEngine_Object_o *)*p_gameObject;
-      v28 = &StringLiteral_15320/*"VerticalImage"*/;
+      v43 = (UnityEngine_Object_o *)*p_gameObject;
+      v44 = &StringLiteral_15326/*"VerticalImage"*/;
       goto LABEL_14;
     case 4:
-      v27 = (UnityEngine_Object_o *)*p_gameObject;
-      v28 = &StringLiteral_7341/*"HorizontalImage"*/;
+      v43 = (UnityEngine_Object_o *)*p_gameObject;
+      v44 = &StringLiteral_7345/*"HorizontalImage"*/;
 LABEL_14:
-      gameObject = (UnityEngine_GameObject_o *)System_String__Concat_63966792((System_String_o *)*v28, name, 0);
-      if ( !v27 )
+      gameObject = (UnityEngine_GameObject_o *)System_String__Concat_64031724((System_String_o *)*v44, name, 0);
+      if ( !v43 )
         goto LABEL_29;
-      UnityEngine_Object__set_name(v27, (System_String_o *)gameObject, 0);
+      UnityEngine_Object__set_name(v43, (System_String_o *)gameObject, 0);
 LABEL_16:
       gameObject = *p_gameObject;
       if ( !*p_gameObject )
@@ -115,23 +139,23 @@ LABEL_16:
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
       if ( !seed->fields.parent )
         goto LABEL_29;
-      v29 = (UnityEngine_Transform_o *)gameObject;
+      v45 = (UnityEngine_Transform_o *)gameObject;
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(seed->fields.parent, 0);
-      if ( !v29 )
+      if ( !v45 )
         goto LABEL_29;
-      UnityEngine_Transform__set_parent(v29, (UnityEngine_Transform_o *)gameObject, 0);
+      UnityEngine_Transform__set_parent(v45, (UnityEngine_Transform_o *)gameObject, 0);
       Position = ItemSeed__GetPosition(seed, 0);
-      UnityEngine_Transform__set_position(v29, Position, 0);
+      UnityEngine_Transform__set_position(v45, Position, 0);
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)seed, 0);
       if ( !gameObject )
         goto LABEL_29;
       localRotation = UnityEngine_Transform__get_localRotation((UnityEngine_Transform_o *)gameObject, 0);
-      UnityEngine_Transform__set_localRotation(v29, localRotation, 0);
+      UnityEngine_Transform__set_localRotation(v45, localRotation, 0);
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)seed, 0);
       if ( !gameObject )
         goto LABEL_29;
       localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0);
-      UnityEngine_Transform__set_localScale(v29, localScale, 0);
+      UnityEngine_Transform__set_localScale(v45, localScale, 0);
       gameObject = seed->fields.parent;
       if ( !gameObject )
         goto LABEL_29;
@@ -139,19 +163,19 @@ LABEL_16:
       gameObject = seed->fields.parent;
       if ( !gameObject )
         goto LABEL_29;
-      v30 = this->fields.gameObject;
+      v46 = this->fields.gameObject;
       gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_layer(gameObject, 0);
-      if ( !v30 )
+      if ( !v46 )
         goto LABEL_29;
-      UnityEngine_GameObject__set_layer(v30, (int32_t)gameObject, 0);
+      UnityEngine_GameObject__set_layer(v46, (int32_t)gameObject, 0);
       chara = this->fields.chara;
       if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-      Position_45126380 = ScriptPosition__GetPosition_45126380(0.0, 0.0, 0);
+      Position_45176680 = ScriptPosition__GetPosition_45176680(0.0, 0.0, 0);
       if ( !chara )
         goto LABEL_29;
-      UIScriptChara__SetBasePosition(chara, Position_45126380, 0);
-      ScriptCharaData__SetCharacter(this, imageName, v32);
+      UIScriptChara__SetBasePosition(chara, Position_45176680, 0);
+      ScriptCharaData__SetCharacter(this, imageName, v48);
       gameObject = (UnityEngine_GameObject_o *)this->fields.chara;
       this->fields.defaultDepth = 0;
       if ( !gameObject )
@@ -167,7 +191,6 @@ LABEL_16:
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void ScriptCharaData__ChangeCharacter(
         ScriptCharaData_o *this,
         System_String_o *kind,
@@ -176,62 +199,81 @@ void ScriptCharaData__ChangeCharacter(
         int32_t type,
         const MethodInfo *method)
 {
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   UIScriptChara_o *chara; // x21
   int32_t faceType; // w20
   System_String_o *changeKind; // x23
-  System_String_o *v16; // x22
-  System_Action_o *v17; // x24
-  __int64 v18; // x0
-  __int64 v19; // x1
+  System_String_o *v23; // x22
+  System_Action_o *v24; // x24
+  __int64 v25; // x0
+  __int64 v26; // x1
 
-  if ( (byte_4CB824B & 1) == 0 )
+  if ( (byte_4CC937E & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_ScriptCharaData_EndChange__);
-    byte_4CB824B = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_ScriptCharaData_EndChange__);
+    byte_4CC937E = 1;
   }
   this->fields.imageName = imageName;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.imageName,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.imageName,
     (int32_t)imageName,
     (int32_t)imageName,
-    *(const MethodInfo **)&type);
+    type,
+    (System_String_o *)method,
+    v6,
+    v7,
+    v8);
   this->fields.faceType = type;
   this->fields.changeKind = kind;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.changeKind, (int32_t)kind, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.changeKind, (int32_t)kind, v14, v15, v16, v17, v18, v19);
   this->fields.changeSpeed = speed;
   this->fields.state = 2;
   chara = this->fields.chara;
   faceType = this->fields.faceType;
   changeKind = this->fields.changeKind;
-  v16 = this->fields.imageName;
-  v17 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v17, (Il2CppObject *)this, Method_ScriptCharaData_EndChange__, 0);
+  v23 = this->fields.imageName;
+  v24 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v24, (Il2CppObject *)this, Method_ScriptCharaData_EndChange__, 0);
   if ( !chara )
-    sub_1C6BC60(v18, v19);
-  UIScriptChara__ChangeCharacter(chara, changeKind, speed, v16, faceType, v17, 0);
+    sub_1C71608(v25, v26);
+  UIScriptChara__ChangeCharacter(chara, changeKind, speed, v23, faceType, v24, 0);
 }
 
 
 void ScriptCharaData__Destroy(ScriptCharaData_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_gameObject; // x20
+  GrandQuestFolderBoardItem_o *p_gameObject; // x20
   UnityEngine_Object_o *gameObject; // x21
   UnityEngine_Object_o *klass; // x21
   struct UIScriptChara_o **p_chara; // x19
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
 
-  if ( (byte_4CB824C & 1) == 0 )
+  if ( (byte_4CC937F & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB824C = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC937F = 1;
   }
-  p_gameObject = (CGThumbnailListItem_o *)&this->fields.gameObject;
+  p_gameObject = (GrandQuestFolderBoardItem_o *)&this->fields.gameObject;
   gameObject = (UnityEngine_Object_o *)this->fields.gameObject;
   this->fields.state = 3;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -241,12 +283,12 @@ void ScriptCharaData__Destroy(ScriptCharaData_o *this, const MethodInfo *method)
     klass = (UnityEngine_Object_o *)p_gameObject->klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(klass, 0);
+    UnityEngine_Object__Destroy_71724608(klass, 0);
     this->fields.chara = 0;
     p_chara = &this->fields.chara;
-    sub_1C6B9AC((CGThumbnailListItem_o *)p_chara, 0, v7, v8);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)p_chara, 0, v7, v8, v9, v10, v11, v12);
     *(p_chara - 1) = 0;
-    sub_1C6B9AC(p_gameObject, 0, v9, v10);
+    sub_1C71354(p_gameObject, 0, v13, v14, v15, v16, v17, v18);
   }
 }
 
@@ -257,7 +299,7 @@ void ScriptCharaData__DestroyEffectByMark(ScriptCharaData_o *this, System_String
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, markKey);
+    sub_1C71608(0, markKey);
   UIScriptChara__DestroyEffectByMark(chara, markKey, 0);
 }
 
@@ -280,7 +322,7 @@ float ScriptCharaData__GetCharaDepth(ScriptCharaData_o *this, const MethodInfo *
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__GetDepth(chara, 0);
 }
 
@@ -292,10 +334,10 @@ float ScriptCharaData__GetDepthPos(ScriptCharaData_o *this, const MethodInfo *me
   float z; // s8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB8256 & 1) == 0 )
+  if ( (byte_4CC9389 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB8256 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC9389 = 1;
   }
   gameObject = this->fields.gameObject;
   if ( !gameObject )
@@ -332,12 +374,12 @@ float ScriptCharaData__GetDepthPos(ScriptCharaData_o *this, const MethodInfo *me
       }
     }
 LABEL_18:
-    sub_1C6BC60(gameObject, method);
+    sub_1C71608(gameObject, method);
   }
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   z = UnityEngine_Vector3_TypeInfo->static_fields->zeroVector.fields.z;
 LABEL_16:
@@ -354,10 +396,10 @@ float ScriptCharaData__GetParentDepth(ScriptCharaData_o *this, const MethodInfo 
   UnityEngine_Object_o *parent; // x20
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB8257 & 1) == 0 )
+  if ( (byte_4CC938A & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB8257 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC938A = 1;
   }
   gameObject = this->fields.gameObject;
   if ( !gameObject )
@@ -393,12 +435,12 @@ float ScriptCharaData__GetParentDepth(ScriptCharaData_o *this, const MethodInfo 
       }
     }
 LABEL_16:
-    sub_1C6BC60(gameObject, method);
+    sub_1C71608(gameObject, method);
   }
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   return UnityEngine_Vector3_TypeInfo->static_fields->zeroVector.fields.z;
 }
@@ -410,7 +452,7 @@ void ScriptCharaData__InitRoll(ScriptCharaData_o *this, const MethodInfo *method
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__InitRoll(chara, 0);
 }
 
@@ -421,7 +463,7 @@ bool ScriptCharaData__IsBackEffect(ScriptCharaData_o *this, const MethodInfo *me
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsBackEffect(chara, 0);
 }
 
@@ -432,30 +474,30 @@ bool ScriptCharaData__IsBackEffectStart(ScriptCharaData_o *this, const MethodInf
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsBackEffectStart(chara, 0);
 }
 
 
-bool ScriptCharaData__IsBackEffectStart_45037640(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
+bool ScriptCharaData__IsBackEffectStart_45087940(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
 {
   UIScriptChara_o *chara; // x0
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  return UIScriptChara__IsBackEffectStart_45172752(chara, n, 0);
+    sub_1C71608(0, n);
+  return UIScriptChara__IsBackEffectStart_45223052(chara, n, 0);
 }
 
 
-bool ScriptCharaData__IsBackEffect_45037584(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
+bool ScriptCharaData__IsBackEffect_45087884(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
 {
   UIScriptChara_o *chara; // x0
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  return UIScriptChara__IsBackEffect_45172552(chara, n, 0);
+    sub_1C71608(0, n);
+  return UIScriptChara__IsBackEffect_45222852(chara, n, 0);
 }
 
 
@@ -467,7 +509,7 @@ bool ScriptCharaData__IsChange(ScriptCharaData_o *this, const MethodInfo *method
     return 1;
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsChange(chara, 0);
 }
 
@@ -478,7 +520,7 @@ bool ScriptCharaData__IsCut(ScriptCharaData_o *this, const MethodInfo *method)
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsCut(chara, 0);
 }
 
@@ -489,7 +531,7 @@ bool ScriptCharaData__IsCutStart(ScriptCharaData_o *this, const MethodInfo *meth
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsCutStart(chara, 0);
 }
 
@@ -500,7 +542,7 @@ bool ScriptCharaData__IsDefaultLayer(ScriptCharaData_o *this, const MethodInfo *
 
   gameObject = this->fields.gameObject;
   if ( !gameObject )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UnityEngine_GameObject__get_layer(gameObject, 0) == this->fields.defaultLayer;
 }
 
@@ -511,7 +553,7 @@ bool ScriptCharaData__IsEffect(ScriptCharaData_o *this, const MethodInfo *method
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsEffect(chara, 0);
 }
 
@@ -522,30 +564,30 @@ bool ScriptCharaData__IsEffectStart(ScriptCharaData_o *this, const MethodInfo *m
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsEffectStart(chara, 0);
 }
 
 
-bool ScriptCharaData__IsEffectStart_45037056(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
+bool ScriptCharaData__IsEffectStart_45087356(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
 {
   UIScriptChara_o *chara; // x0
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  return UIScriptChara__IsEffectStart_45171284(chara, n, 0);
+    sub_1C71608(0, n);
+  return UIScriptChara__IsEffectStart_45221584(chara, n, 0);
 }
 
 
-bool ScriptCharaData__IsEffect_45037000(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
+bool ScriptCharaData__IsEffect_45087300(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
 {
   UIScriptChara_o *chara; // x0
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  return UIScriptChara__IsEffect_45171084(chara, n, 0);
+    sub_1C71608(0, n);
+  return UIScriptChara__IsEffect_45221384(chara, n, 0);
 }
 
 
@@ -561,7 +603,7 @@ bool ScriptCharaData__IsMove(ScriptCharaData_o *this, const MethodInfo *method)
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return chara->fields.isMove;
 }
 
@@ -572,7 +614,7 @@ bool ScriptCharaData__IsMoveAlpha(ScriptCharaData_o *this, const MethodInfo *met
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return ((__int64 (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *))chara->klass->vtable._19_IsBusyMoveAlpha.methodPtr)(
            chara,
            chara->klass->vtable._19_IsBusyMoveAlpha.method);
@@ -587,7 +629,7 @@ bool ScriptCharaData__IsMoveAlphaWaitTalk(ScriptCharaData_o *this, const MethodI
     return 0;
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return ((__int64 (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *))chara->klass->vtable._19_IsBusyMoveAlpha.methodPtr)(
            chara,
            chara->klass->vtable._19_IsBusyMoveAlpha.method);
@@ -600,7 +642,7 @@ bool ScriptCharaData__IsMoveRelativePosition(ScriptCharaData_o *this, const Meth
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return chara->fields.isMoveRelativePosition;
 }
 
@@ -611,7 +653,7 @@ bool ScriptCharaData__IsMoveRelativePositionLoop(ScriptCharaData_o *this, const 
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsMoveRelativePositionLoop(chara, 0);
 }
 
@@ -622,7 +664,7 @@ bool ScriptCharaData__IsRoll(ScriptCharaData_o *this, const MethodInfo *method)
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return chara->fields.isRoll;
 }
 
@@ -633,7 +675,7 @@ bool ScriptCharaData__IsShake(ScriptCharaData_o *this, const MethodInfo *method)
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsShake(chara, 0);
 }
 
@@ -644,7 +686,7 @@ bool ScriptCharaData__IsSpecialEffect(ScriptCharaData_o *this, const MethodInfo 
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsSpecialEffect(chara, 0);
 }
 
@@ -655,12 +697,12 @@ bool ScriptCharaData__IsSpecialEffectStart(ScriptCharaData_o *this, const Method
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return UIScriptChara__IsSpecialEffectStart(chara, 0);
 }
 
 
-bool ScriptCharaData__IsSpecialEffectStart_45036772(
+bool ScriptCharaData__IsSpecialEffectStart_45087072(
         ScriptCharaData_o *this,
         System_String_o *n,
         const MethodInfo *method)
@@ -669,19 +711,19 @@ bool ScriptCharaData__IsSpecialEffectStart_45036772(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  return UIScriptChara__IsSpecialEffectStart_45170088(chara, n, 0);
+    sub_1C71608(0, n);
+  return UIScriptChara__IsSpecialEffectStart_45220388(chara, n, 0);
 }
 
 
-bool ScriptCharaData__IsSpecialEffect_45036716(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
+bool ScriptCharaData__IsSpecialEffect_45087016(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
 {
   UIScriptChara_o *chara; // x0
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  return UIScriptChara__IsSpecialEffect_45170064(chara, n, 0);
+    sub_1C71608(0, n);
+  return UIScriptChara__IsSpecialEffect_45220364(chara, n, 0);
 }
 
 
@@ -697,7 +739,7 @@ void ScriptCharaData__MoveAlpha(
   chara = this->fields.chara;
   this->fields.isWaitTalkMoveAlpha = isWaitTalk;
   if ( !chara )
-    sub_1C6BC60(0, isWaitTalk);
+    sub_1C71608(0, isWaitTalk);
   ((void (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *, float, float))chara->klass->vtable._20_MoveAlpha.methodPtr)(
     chara,
     chara->klass->vtable._20_MoveAlpha.method,
@@ -718,7 +760,7 @@ void ScriptCharaData__MoveAlphaSpeed(
   chara = this->fields.chara;
   this->fields.isWaitTalkMoveAlpha = isWaitTalk;
   if ( !chara )
-    sub_1C6BC60(0, isWaitTalk);
+    sub_1C71608(0, isWaitTalk);
   ((void (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *, float, float))chara->klass->vtable._21_MoveAlphaSpeed.methodPtr)(
     chara,
     chara->klass->vtable._21_MoveAlphaSpeed.method,
@@ -741,17 +783,17 @@ void ScriptCharaData__MoveAttack(
   UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v14; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB8254 & 1) == 0 )
+  if ( (byte_4CC9387 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    byte_4CB8254 = 1;
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    byte_4CC9387 = 1;
   }
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
   Position = ScriptPosition__GetPosition(index, 0);
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, v9);
+    sub_1C71608(0, v9);
   y = Position.fields.y;
   z = Position.fields.z;
   v14.fields.x = Position.fields.x;
@@ -761,7 +803,7 @@ void ScriptCharaData__MoveAttack(
 }
 
 
-void ScriptCharaData__MoveAttack_45035960(
+void ScriptCharaData__MoveAttack_45086260(
         ScriptCharaData_o *this,
         System_String_o *kind,
         float duration,
@@ -772,12 +814,12 @@ void ScriptCharaData__MoveAttack_45035960(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, kind);
+    sub_1C71608(0, kind);
   UIScriptChara__MoveAttack(chara, kind, duration, v, 0);
 }
 
 
-void ScriptCharaData__MoveAttack_45035988(
+void ScriptCharaData__MoveAttack_45086288(
         ScriptCharaData_o *this,
         System_String_o *kind,
         float duration,
@@ -789,23 +831,23 @@ void ScriptCharaData__MoveAttack_45035988(
   UIScriptChara_o *chara; // x0
   float v13; // s4
   float z; // s5
-  UnityEngine_Vector3_o Position_45126380; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Position_45176680; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v16; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB8255 & 1) == 0 )
+  if ( (byte_4CC9388 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    byte_4CB8255 = 1;
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    byte_4CC9388 = 1;
   }
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-  Position_45126380 = ScriptPosition__GetPosition_45126380(x, y, 0);
+  Position_45176680 = ScriptPosition__GetPosition_45176680(x, y, 0);
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, v11);
-  v13 = Position_45126380.fields.y;
-  z = Position_45126380.fields.z;
-  v16.fields.x = Position_45126380.fields.x;
+    sub_1C71608(0, v11);
+  v13 = Position_45176680.fields.y;
+  z = Position_45176680.fields.z;
+  v16.fields.x = Position_45176680.fields.x;
   v16.fields.y = v13;
   v16.fields.z = z;
   UIScriptChara__MoveAttack(chara, kind, duration, v16, 0);
@@ -821,17 +863,17 @@ void ScriptCharaData__MovePosition(ScriptCharaData_o *this, float duration, int3
   UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v12; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB824F & 1) == 0 )
+  if ( (byte_4CC9382 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    byte_4CB824F = 1;
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    byte_4CC9382 = 1;
   }
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
   Position = ScriptPosition__GetPosition(index, 0);
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, v7);
+    sub_1C71608(0, v7);
   y = Position.fields.y;
   z = Position.fields.z;
   v12.fields.x = Position.fields.x;
@@ -854,30 +896,30 @@ void ScriptCharaData__MovePositionEase(
   __int64 v13; // x1
   float v14; // s4
   float z; // s5
-  UnityEngine_Vector3_o Position_45126380; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Position_45176680; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB8251 & 1) == 0 )
+  if ( (byte_4CC9384 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    byte_4CB8251 = 1;
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    byte_4CC9384 = 1;
   }
   chara = this->fields.chara;
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-  Position_45126380 = ScriptPosition__GetPosition_45126380(x, y, 0);
+  Position_45176680 = ScriptPosition__GetPosition_45176680(x, y, 0);
   if ( !chara )
-    sub_1C6BC60(v12, v13);
-  v14 = Position_45126380.fields.y;
-  z = Position_45126380.fields.z;
-  v17.fields.x = Position_45126380.fields.x;
+    sub_1C71608(v12, v13);
+  v14 = Position_45176680.fields.y;
+  z = Position_45176680.fields.z;
+  v17.fields.x = Position_45176680.fields.x;
   v17.fields.y = v14;
   v17.fields.z = z;
   UIScriptChara__MovePositionEase(chara, time, v17, easeType, 0);
 }
 
 
-void ScriptCharaData__MovePosition_45034760(
+void ScriptCharaData__MovePosition_45085060(
         ScriptCharaData_o *this,
         float duration,
         UnityEngine_Vector3_o v,
@@ -887,12 +929,12 @@ void ScriptCharaData__MovePosition_45034760(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__MovePosition(chara, duration, v, 0);
 }
 
 
-void ScriptCharaData__MovePosition_45034788(
+void ScriptCharaData__MovePosition_45085088(
         ScriptCharaData_o *this,
         float duration,
         float x,
@@ -903,23 +945,23 @@ void ScriptCharaData__MovePosition_45034788(
   UIScriptChara_o *chara; // x0
   float v11; // s4
   float z; // s5
-  UnityEngine_Vector3_o Position_45126380; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Position_45176680; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v14; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB8250 & 1) == 0 )
+  if ( (byte_4CC9383 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    byte_4CB8250 = 1;
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    byte_4CC9383 = 1;
   }
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-  Position_45126380 = ScriptPosition__GetPosition_45126380(x, y, 0);
+  Position_45176680 = ScriptPosition__GetPosition_45176680(x, y, 0);
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, v9);
-  v11 = Position_45126380.fields.y;
-  z = Position_45126380.fields.z;
-  v14.fields.x = Position_45126380.fields.x;
+    sub_1C71608(0, v9);
+  v11 = Position_45176680.fields.y;
+  z = Position_45176680.fields.z;
+  v14.fields.x = Position_45176680.fields.x;
   v14.fields.y = v11;
   v14.fields.z = z;
   UIScriptChara__MovePosition(chara, duration, v14, 0);
@@ -939,7 +981,7 @@ void ScriptCharaData__MoveRelativePositionEaseLoop(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, movePos);
+    sub_1C71608(0, movePos);
   UIScriptChara__MoveRelativePositionEaseLoop(chara, movePos, duration, loopNum, easeType, isFastPlay, 0);
 }
 
@@ -956,7 +998,7 @@ void ScriptCharaData__MoveRelativePositionLoop(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, movePos);
+    sub_1C71608(0, movePos);
   UIScriptChara__MoveRelativePositionLoop(chara, movePos, duration, loopNum, isFastPlay, 0);
 }
 
@@ -967,7 +1009,7 @@ void ScriptCharaData__MoveReturnPosition(ScriptCharaData_o *this, float duration
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__MoveReturnPosition(chara, duration, 0);
 }
 
@@ -984,12 +1026,12 @@ void ScriptCharaData__MoveReturnPositionEase(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, startEaseType);
+    sub_1C71608(0, startEaseType);
   UIScriptChara__MoveReturnPositionEase(chara, v.fields.x, v.fields.y, time, startEaseType, returnEaseType, 0);
 }
 
 
-void ScriptCharaData__MoveReturnPositionEase_45035560(
+void ScriptCharaData__MoveReturnPositionEase_45085860(
         ScriptCharaData_o *this,
         float x,
         float y,
@@ -1002,12 +1044,12 @@ void ScriptCharaData__MoveReturnPositionEase_45035560(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, startEaseType);
+    sub_1C71608(0, startEaseType);
   UIScriptChara__MoveReturnPositionEase(chara, x, y, time, startEaseType, returnEaseType, 0);
 }
 
 
-void ScriptCharaData__MoveReturnPosition_45035172(
+void ScriptCharaData__MoveReturnPosition_45085472(
         ScriptCharaData_o *this,
         float duration,
         int32_t index,
@@ -1020,27 +1062,27 @@ void ScriptCharaData__MoveReturnPosition_45035172(
   UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v12; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB8252 & 1) == 0 )
+  if ( (byte_4CC9385 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    byte_4CB8252 = 1;
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    byte_4CC9385 = 1;
   }
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
   Position = ScriptPosition__GetPosition(index, 0);
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, v7);
+    sub_1C71608(0, v7);
   y = Position.fields.y;
   z = Position.fields.z;
   v12.fields.x = Position.fields.x;
   v12.fields.y = y;
   v12.fields.z = z;
-  UIScriptChara__MoveReturnPosition_45159756(chara, duration, v12, 0);
+  UIScriptChara__MoveReturnPosition_45210056(chara, duration, v12, 0);
 }
 
 
-void ScriptCharaData__MoveReturnPosition_45035332(
+void ScriptCharaData__MoveReturnPosition_45085632(
         ScriptCharaData_o *this,
         float duration,
         UnityEngine_Vector3_o v,
@@ -1050,12 +1092,12 @@ void ScriptCharaData__MoveReturnPosition_45035332(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
-  UIScriptChara__MoveReturnPosition_45159756(chara, duration, v, 0);
+    sub_1C71608(0, method);
+  UIScriptChara__MoveReturnPosition_45210056(chara, duration, v, 0);
 }
 
 
-void ScriptCharaData__MoveReturnPosition_45035360(
+void ScriptCharaData__MoveReturnPosition_45085660(
         ScriptCharaData_o *this,
         float duration,
         float x,
@@ -1066,26 +1108,26 @@ void ScriptCharaData__MoveReturnPosition_45035360(
   UIScriptChara_o *chara; // x0
   float v11; // s4
   float z; // s5
-  UnityEngine_Vector3_o Position_45126380; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Position_45176680; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v14; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB8253 & 1) == 0 )
+  if ( (byte_4CC9386 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    byte_4CB8253 = 1;
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    byte_4CC9386 = 1;
   }
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-  Position_45126380 = ScriptPosition__GetPosition_45126380(x, y, 0);
+  Position_45176680 = ScriptPosition__GetPosition_45176680(x, y, 0);
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, v9);
-  v11 = Position_45126380.fields.y;
-  z = Position_45126380.fields.z;
-  v14.fields.x = Position_45126380.fields.x;
+    sub_1C71608(0, v9);
+  v11 = Position_45176680.fields.y;
+  z = Position_45176680.fields.z;
+  v14.fields.x = Position_45176680.fields.x;
   v14.fields.y = v11;
   v14.fields.z = z;
-  UIScriptChara__MoveReturnPosition_45159756(chara, duration, v14, 0);
+  UIScriptChara__MoveReturnPosition_45210056(chara, duration, v14, 0);
 }
 
 
@@ -1095,7 +1137,7 @@ void ScriptCharaData__MoveScale(ScriptCharaData_o *this, float duration, float s
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__MoveScale(chara, duration, s, 0);
 }
 
@@ -1111,7 +1153,7 @@ void ScriptCharaData__MoveScaleEase(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, easeType);
+    sub_1C71608(0, easeType);
   UIScriptChara__MoveScaleEase(chara, scale, time, easeType, 0);
 }
 
@@ -1122,7 +1164,7 @@ void ScriptCharaData__RecoverDepth(ScriptCharaData_o *this, const MethodInfo *me
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ((void (__fastcall *)(struct UIScriptChara_o *, _QWORD, const MethodInfo *))chara->klass->vtable._18_SetDepth.methodPtr)(
     chara,
     (unsigned int)this->fields.defaultDepth,
@@ -1136,12 +1178,12 @@ void ScriptCharaData__ResumeBackEffect(ScriptCharaData_o *this, bool isSkip, con
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isSkip);
+    sub_1C71608(0, isSkip);
   UIScriptChara__ResumeBackEffect(chara, isSkip, 0);
 }
 
 
-void ScriptCharaData__ResumeBackEffect_45037924(
+void ScriptCharaData__ResumeBackEffect_45088224(
         ScriptCharaData_o *this,
         System_String_o *n,
         bool isSkip,
@@ -1151,8 +1193,8 @@ void ScriptCharaData__ResumeBackEffect_45037924(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  UIScriptChara__ResumeBackEffect_45173448(chara, n, isSkip, 0);
+    sub_1C71608(0, n);
+  UIScriptChara__ResumeBackEffect_45223748(chara, n, isSkip, 0);
 }
 
 
@@ -1162,7 +1204,7 @@ void ScriptCharaData__ResumeCutin(ScriptCharaData_o *this, bool isSkip, const Me
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isSkip);
+    sub_1C71608(0, isSkip);
   ((void (__fastcall *)(struct UIScriptChara_o *, bool, const MethodInfo *))chara->klass->vtable._24_ResumeCutin.methodPtr)(
     chara,
     isSkip,
@@ -1176,12 +1218,12 @@ void ScriptCharaData__ResumeEffect(ScriptCharaData_o *this, bool isSkip, const M
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isSkip);
+    sub_1C71608(0, isSkip);
   UIScriptChara__ResumeEffect(chara, isSkip, 0);
 }
 
 
-void ScriptCharaData__ResumeEffect_45037432(
+void ScriptCharaData__ResumeEffect_45087732(
         ScriptCharaData_o *this,
         System_String_o *n,
         bool isSkip,
@@ -1191,8 +1233,8 @@ void ScriptCharaData__ResumeEffect_45037432(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  UIScriptChara__ResumeEffect_45171980(chara, n, isSkip, 0);
+    sub_1C71608(0, n);
+  UIScriptChara__ResumeEffect_45222280(chara, n, isSkip, 0);
 }
 
 
@@ -1202,12 +1244,12 @@ void ScriptCharaData__ResumeSpecialEffect(ScriptCharaData_o *this, bool isPause,
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isPause);
+    sub_1C71608(0, isPause);
   UIScriptChara__ResumeSpecialEffect(chara, isPause, 0);
 }
 
 
-void ScriptCharaData__ResumeSpecialEffect_45036884(
+void ScriptCharaData__ResumeSpecialEffect_45087184(
         ScriptCharaData_o *this,
         System_String_o *n,
         bool isPause,
@@ -1217,8 +1259,8 @@ void ScriptCharaData__ResumeSpecialEffect_45036884(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  UIScriptChara__ResumeSpecialEffect_45170952(chara, n, isPause, 0);
+    sub_1C71608(0, n);
+  UIScriptChara__ResumeSpecialEffect_45221252(chara, n, isPause, 0);
 }
 
 
@@ -1228,7 +1270,7 @@ void ScriptCharaData__SetAlpha(ScriptCharaData_o *this, float a, const MethodInf
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ((void (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *, float))chara->klass->vtable._17_SetAlpha.methodPtr)(
     chara,
     chara->klass->vtable._17_SetAlpha.method,
@@ -1251,12 +1293,12 @@ void ScriptCharaData__SetBackEffect(
   chara = this->fields.chara;
   IsDefaultLayer = ScriptCharaData__IsDefaultLayer(this, (const MethodInfo *)n);
   if ( !chara )
-    sub_1C6BC60(IsDefaultLayer, v12);
+    sub_1C71608(IsDefaultLayer, v12);
   UIScriptChara__SetBackEffect(chara, n, isSkip, isPause, flip, !IsDefaultLayer, 0);
 }
 
 
-void ScriptCharaData__SetBackEffect_45037760(
+void ScriptCharaData__SetBackEffect_45088060(
         ScriptCharaData_o *this,
         System_String_o *n,
         UnityEngine_Vector3_o p,
@@ -1279,34 +1321,46 @@ void ScriptCharaData__SetBackEffect_45037760(
   x = p.fields.x;
   IsDefaultLayer = ScriptCharaData__IsDefaultLayer(this, (const MethodInfo *)n);
   if ( !chara )
-    sub_1C6BC60(IsDefaultLayer, v16);
+    sub_1C71608(IsDefaultLayer, v16);
   v17.fields.y = y;
   v17.fields.z = z;
   v17.fields.x = x;
-  UIScriptChara__SetBackEffect_45173000(chara, n, v17, isSkip, isPause, flip, !IsDefaultLayer, 0);
+  UIScriptChara__SetBackEffect_45223300(chara, n, v17, isSkip, isPause, flip, !IsDefaultLayer, 0);
 }
 
 
 void ScriptCharaData__SetCharacter(ScriptCharaData_o *this, System_String_o *imageName, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  __int64 v6; // x1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  __int64 v10; // x1
   int32_t kind; // w8
   _BOOL8 IsUseSimpleMeshFigure; // x0
   struct UIScriptChara_o *chara; // x8
-  struct UIScriptChara_o *v10; // x22
+  struct UIScriptChara_o *v14; // x22
   unsigned int faceType; // w21
-  System_Action_o *v12; // x23
+  System_Action_o *v16; // x23
 
-  if ( (byte_4CB824A & 1) == 0 )
+  if ( (byte_4CC937D & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_ScriptCharaData_EndLoadAsset__);
-    sub_1C6BA08(&ScriptManager_TypeInfo);
-    byte_4CB824A = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_ScriptCharaData_EndLoadAsset__);
+    sub_1C713B0(&ScriptManager_TypeInfo);
+    byte_4CC937D = 1;
   }
   this->fields.imageName = imageName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.imageName, (int32_t)imageName, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.imageName,
+    (int32_t)imageName,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   kind = this->fields.kind;
   IsUseSimpleMeshFigure = 0;
   this->fields.state = 0;
@@ -1322,20 +1376,20 @@ void ScriptCharaData__SetCharacter(ScriptCharaData_o *this, System_String_o *ima
           this->fields.chara,
           IsUseSimpleMeshFigure,
           chara->klass->vtable._31_SetUseSimpleMesh.method),
-        v10 = this->fields.chara,
+        v14 = this->fields.chara,
         faceType = this->fields.faceType,
-        v12 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
-        System_Action___ctor(v12, (Il2CppObject *)this, Method_ScriptCharaData_EndLoadAsset__, 0),
-        !v10) )
+        v16 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo),
+        System_Action___ctor(v16, (Il2CppObject *)this, Method_ScriptCharaData_EndLoadAsset__, 0),
+        !v14) )
   {
-    sub_1C6BC60(IsUseSimpleMeshFigure, v6);
+    sub_1C71608(IsUseSimpleMeshFigure, v10);
   }
-  ((void (__fastcall *)(struct UIScriptChara_o *, System_String_o *, _QWORD, System_Action_o *, const MethodInfo *))v10->klass->vtable._11_SetCharacter.methodPtr)(
-    v10,
+  ((void (__fastcall *)(struct UIScriptChara_o *, System_String_o *, _QWORD, System_Action_o *, const MethodInfo *))v14->klass->vtable._11_SetCharacter.methodPtr)(
+    v14,
     imageName,
     faceType,
-    v12,
-    v10->klass->vtable._11_SetCharacter.method);
+    v16,
+    v14->klass->vtable._11_SetCharacter.method);
 }
 
 
@@ -1352,7 +1406,7 @@ void ScriptCharaData__SetCutin(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
+    sub_1C71608(0, n);
   ((void (__fastcall *)(struct UIScriptChara_o *, System_String_o *, bool, bool, const MethodInfo *, float, float))chara->klass->vtable._23_SetCutin.methodPtr)(
     chara,
     n,
@@ -1370,7 +1424,7 @@ void ScriptCharaData__SetCutout(ScriptCharaData_o *this, float time, bool isSkip
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isSkip);
+    sub_1C71608(0, isSkip);
   ((void (__fastcall *)(struct UIScriptChara_o *, bool, const MethodInfo *, float))chara->klass->vtable._25_SetCutout.methodPtr)(
     chara,
     isSkip,
@@ -1386,7 +1440,7 @@ void ScriptCharaData__SetDepth(ScriptCharaData_o *this, int32_t d, const MethodI
   chara = this->fields.chara;
   this->fields.defaultDepth = d;
   if ( !chara )
-    sub_1C6BC60(0, d);
+    sub_1C71608(0, d);
   ((void (__fastcall *)(struct UIScriptChara_o *))chara->klass->vtable._18_SetDepth.methodPtr)(chara);
 }
 
@@ -1406,7 +1460,7 @@ void ScriptCharaData__SetEffect(
   chara = this->fields.chara;
   IsDefaultLayer = ScriptCharaData__IsDefaultLayer(this, (const MethodInfo *)n);
   if ( !chara )
-    sub_1C6BC60(IsDefaultLayer, v12);
+    sub_1C71608(IsDefaultLayer, v12);
   UIScriptChara__SetEffect(chara, n, isSkip, isPause, flip, !IsDefaultLayer, 0);
 }
 
@@ -1427,12 +1481,12 @@ void ScriptCharaData__SetEffectEdgeBlur(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, effectName);
+    sub_1C71608(0, effectName);
   UIScriptChara__SetEffectEdgeBlur(chara, effectName, color, particleColor, isSkip, isPause, flip, level, thick, 0);
 }
 
 
-void ScriptCharaData__SetEffect_45037224(
+void ScriptCharaData__SetEffect_45087524(
         ScriptCharaData_o *this,
         System_String_o *n,
         UnityEngine_Vector3_o p,
@@ -1455,11 +1509,11 @@ void ScriptCharaData__SetEffect_45037224(
   x = p.fields.x;
   IsDefaultLayer = ScriptCharaData__IsDefaultLayer(this, (const MethodInfo *)n);
   if ( !chara )
-    sub_1C6BC60(IsDefaultLayer, v16);
+    sub_1C71608(IsDefaultLayer, v16);
   v17.fields.y = y;
   v17.fields.z = z;
   v17.fields.x = x;
-  UIScriptChara__SetEffect_45171532(chara, n, v17, isSkip, isPause, flip, !IsDefaultLayer, 0);
+  UIScriptChara__SetEffect_45221832(chara, n, v17, isSkip, isPause, flip, !IsDefaultLayer, 0);
 }
 
 
@@ -1470,7 +1524,7 @@ void ScriptCharaData__SetFace(ScriptCharaData_o *this, int32_t type, float fadeT
   chara = this->fields.chara;
   this->fields.faceType = type;
   if ( !chara )
-    sub_1C6BC60(0, type);
+    sub_1C71608(0, type);
   ((void (__fastcall *)(struct UIScriptChara_o *, float))chara->klass->vtable._13_SetFace.methodPtr)(chara, fadeTime);
 }
 
@@ -1486,7 +1540,7 @@ void ScriptCharaData__SetFilter(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, filterName);
+    sub_1C71608(0, filterName);
   ((void (__fastcall *)(struct UIScriptChara_o *, System_String_o *, const MethodInfo *, long double, long double, long double, long double))chara->klass->vtable._14_SetFilter.methodPtr)(
     chara,
     filterName,
@@ -1504,7 +1558,7 @@ void ScriptCharaData__SetFullScreenScaleType(ScriptCharaData_o *this, int32_t ty
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, type);
+    sub_1C71608(0, type);
   ((void (__fastcall *)(struct UIScriptChara_o *, int32_t, const MethodInfo *))chara->klass->vtable._22_SetFullScreenScaleType.methodPtr)(
     chara,
     type,
@@ -1538,10 +1592,10 @@ void ScriptCharaData__SetMaskData(
   struct UIScriptChara_o *chara; // x0
   __int64 naturalAligment; // x10
 
-  if ( (byte_4CB8259 & 1) == 0 )
+  if ( (byte_4CC938C & 1) == 0 )
   {
-    sub_1C6BA08(&UIScriptImage_TypeInfo);
-    byte_4CB8259 = 1;
+    sub_1C713B0(&UIScriptImage_TypeInfo);
+    byte_4CC938C = 1;
   }
   if ( this->fields.kind == 2 )
   {
@@ -1551,7 +1605,7 @@ void ScriptCharaData__SetMaskData(
           chara->klass->_2.naturalAligment < (unsigned int)naturalAligment)
       || (UIScriptImage_c *)chara->klass->_2.typeHierarchy[naturalAligment - 1] != UIScriptImage_TypeInfo )
     {
-      sub_1C6BC60(chara, *(_QWORD *)&offsetX);
+      sub_1C71608(chara, *(_QWORD *)&offsetX);
     }
     UIScriptImage__SetMaskImage((UIScriptImage_o *)chara, offsetX, offsetY, width, height, 0);
   }
@@ -1564,7 +1618,7 @@ void ScriptCharaData__SetMaskInteraction(ScriptCharaData_o *this, int32_t maskIn
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, maskInteraction);
+    sub_1C71608(0, maskInteraction);
   ((void (__fastcall *)(struct UIScriptChara_o *, int32_t, const MethodInfo *))chara->klass->vtable._29_SetMaskInteraction.methodPtr)(
     chara,
     maskInteraction,
@@ -1578,7 +1632,7 @@ void ScriptCharaData__SetMaterial(ScriptCharaData_o *this, const MethodInfo *met
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ((void (__fastcall *)(struct UIScriptChara_o *, const MethodInfo *))chara->klass->vtable._28_SetMaterial.methodPtr)(
     chara,
     chara->klass->vtable._28_SetMaterial.method);
@@ -1592,50 +1646,50 @@ void ScriptCharaData__SetPosition(ScriptCharaData_o *this, int32_t index, const 
   __int64 v7; // x1
   UnityEngine_Vector3_o Position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB824D & 1) == 0 )
+  if ( (byte_4CC9380 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    byte_4CB824D = 1;
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    byte_4CC9380 = 1;
   }
   chara = this->fields.chara;
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
   Position = ScriptPosition__GetPosition(index, 0);
   if ( !chara )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   UIScriptChara__SetBasePosition(chara, Position, 0);
 }
 
 
-void ScriptCharaData__SetPosition_45033972(ScriptCharaData_o *this, float x, float y, const MethodInfo *method)
+void ScriptCharaData__SetPosition_45084272(ScriptCharaData_o *this, float x, float y, const MethodInfo *method)
 {
   UIScriptChara_o *chara; // x19
   __int64 v8; // x0
   __int64 v9; // x1
-  UnityEngine_Vector3_o Position_45126380; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o Position_45176680; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB824E & 1) == 0 )
+  if ( (byte_4CC9381 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptPosition_TypeInfo);
-    byte_4CB824E = 1;
+    sub_1C713B0(&ScriptPosition_TypeInfo);
+    byte_4CC9381 = 1;
   }
   chara = this->fields.chara;
   if ( !ScriptPosition_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ScriptPosition_TypeInfo);
-  Position_45126380 = ScriptPosition__GetPosition_45126380(x, y, 0);
+  Position_45176680 = ScriptPosition__GetPosition_45176680(x, y, 0);
   if ( !chara )
-    sub_1C6BC60(v8, v9);
-  UIScriptChara__SetBasePosition(chara, Position_45126380, 0);
+    sub_1C71608(v8, v9);
+  UIScriptChara__SetBasePosition(chara, Position_45176680, 0);
 }
 
 
-void ScriptCharaData__SetPosition_45034104(ScriptCharaData_o *this, UnityEngine_Vector3_o v, const MethodInfo *method)
+void ScriptCharaData__SetPosition_45084404(ScriptCharaData_o *this, UnityEngine_Vector3_o v, const MethodInfo *method)
 {
   UIScriptChara_o *chara; // x0
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__SetBasePosition(chara, v, 0);
 }
 
@@ -1646,7 +1700,7 @@ void ScriptCharaData__SetRelativePosition(ScriptCharaData_o *this, UnityEngine_V
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__SetRelativePosition(chara, v, 0);
 }
 
@@ -1661,7 +1715,7 @@ void ScriptCharaData__SetRoll(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__SetRoll(chara, rollZ, centerOffset, 0);
 }
 
@@ -1672,7 +1726,7 @@ void ScriptCharaData__SetScale(ScriptCharaData_o *this, float v, const MethodInf
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__SetScale(chara, v, 0);
 }
 
@@ -1683,7 +1737,7 @@ void ScriptCharaData__SetShadow(ScriptCharaData_o *this, bool isShadow, bool isS
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isShadow);
+    sub_1C71608(0, isShadow);
   ((void (__fastcall *)(struct UIScriptChara_o *, bool, bool, const MethodInfo *))chara->klass->vtable._15_SetShadow.methodPtr)(
     chara,
     isShadow,
@@ -1698,7 +1752,7 @@ void ScriptCharaData__SetSortingOrder(ScriptCharaData_o *this, int32_t order, co
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, order);
+    sub_1C71608(0, order);
   ((void (__fastcall *)(struct UIScriptChara_o *, int32_t, const MethodInfo *))chara->klass->vtable._30_SetSortingOrder.methodPtr)(
     chara,
     order,
@@ -1722,7 +1776,7 @@ void ScriptCharaData__SetSpecialEffect(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
+    sub_1C71608(0, n);
   ((void (__fastcall *)(struct UIScriptChara_o *, System_String_o *, bool, bool, const MethodInfo *, long double, long double, long double, float, long double, long double, long double, long double))chara->klass->vtable._27_SetSpecialEffect.methodPtr)(
     chara,
     n,
@@ -1746,7 +1800,7 @@ void ScriptCharaData__SetTalkDepth(ScriptCharaData_o *this, const MethodInfo *me
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ((void (__fastcall *)(struct UIScriptChara_o *, __int64, const MethodInfo *))chara->klass->vtable._18_SetDepth.methodPtr)(
     chara,
     9,
@@ -1760,7 +1814,7 @@ void ScriptCharaData__SetTalkMask(ScriptCharaData_o *this, bool isMask, const Me
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isMask);
+    sub_1C71608(0, isMask);
   ((void (__fastcall *)(struct UIScriptChara_o *, bool, const MethodInfo *))chara->klass->vtable._16_SetTalkMask.methodPtr)(
     chara,
     isMask,
@@ -1770,10 +1824,14 @@ void ScriptCharaData__SetTalkMask(ScriptCharaData_o *this, bool isMask, const Me
 
 void ScriptCharaData__SetTalkName(ScriptCharaData_o *this, System_String_o *name, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.talkName = name;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.talkName, (int32_t)name, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.talkName, (int32_t)name, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -1789,7 +1847,7 @@ void ScriptCharaData__Shake(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__Shake(chara, duration, cycle, x, y, 0);
 }
 
@@ -1800,7 +1858,7 @@ void ScriptCharaData__ShakeStop(ScriptCharaData_o *this, const MethodInfo *metho
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__Shake(chara, 0.0, 0.0, 0.0, 0.0, 0);
 }
 
@@ -1811,7 +1869,7 @@ void ScriptCharaData__StartRoll(ScriptCharaData_o *this, float duration, float r
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__StartRoll(chara, duration, rollZ, 0);
 }
 
@@ -1830,7 +1888,7 @@ void ScriptCharaData__StartRollAxis(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, rollAxis);
+    sub_1C71608(0, rollAxis);
   UIScriptChara__StartRollAxis(chara, rollAxis, roll, duration, isRollLoop, isRollWait, stopAngleLoopEnd, 0);
 }
 
@@ -1846,7 +1904,7 @@ void ScriptCharaData__StartRollEx(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__StartRollEx(chara, duration, rollZ, centerOffset, 0);
 }
 
@@ -1857,12 +1915,12 @@ bool ScriptCharaData__StopBackEffect(ScriptCharaData_o *this, bool isSkip, const
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isSkip);
+    sub_1C71608(0, isSkip);
   return UIScriptChara__StopBackEffect(chara, isSkip, 0);
 }
 
 
-bool ScriptCharaData__StopBackEffect_45037988(
+bool ScriptCharaData__StopBackEffect_45088288(
         ScriptCharaData_o *this,
         System_String_o *n,
         bool isSkip,
@@ -1872,8 +1930,8 @@ bool ScriptCharaData__StopBackEffect_45037988(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  return UIScriptChara__StopBackEffect_45173680(chara, n, isSkip, 0);
+    sub_1C71608(0, n);
+  return UIScriptChara__StopBackEffect_45223980(chara, n, isSkip, 0);
 }
 
 
@@ -1883,7 +1941,7 @@ void ScriptCharaData__StopCut(ScriptCharaData_o *this, const MethodInfo *method)
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__StopSpecialEffect(chara, 0);
 }
 
@@ -1898,12 +1956,12 @@ bool ScriptCharaData__StopEffect(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isSkip);
+    sub_1C71608(0, isSkip);
   return UIScriptChara__StopEffect(chara, isSkip, markKey, 0);
 }
 
 
-bool ScriptCharaData__StopEffect_45037496(
+bool ScriptCharaData__StopEffect_45087796(
         ScriptCharaData_o *this,
         System_String_o *n,
         bool isSkip,
@@ -1914,8 +1972,8 @@ bool ScriptCharaData__StopEffect_45037496(
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  return UIScriptChara__StopEffect_45172216(chara, n, isSkip, markKey, 0);
+    sub_1C71608(0, n);
+  return UIScriptChara__StopEffect_45222516(chara, n, isSkip, markKey, 0);
 }
 
 
@@ -1925,7 +1983,7 @@ void ScriptCharaData__StopMoveRelativePositionLoop(ScriptCharaData_o *this, cons
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__StopMoveRelativePositionLoop(chara, 0);
 }
 
@@ -1936,7 +1994,7 @@ void ScriptCharaData__StopRollAxisLoop(ScriptCharaData_o *this, bool isFastPlay,
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, isFastPlay);
+    sub_1C71608(0, isFastPlay);
   UIScriptChara__StopRollAxisLoop(chara, isFastPlay, 0);
 }
 
@@ -1947,19 +2005,19 @@ void ScriptCharaData__StopSpecialEffect(ScriptCharaData_o *this, const MethodInf
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UIScriptChara__StopSpecialEffect(chara, 0);
 }
 
 
-void ScriptCharaData__StopSpecialEffect_45036944(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
+void ScriptCharaData__StopSpecialEffect_45087244(ScriptCharaData_o *this, System_String_o *n, const MethodInfo *method)
 {
   UIScriptChara_o *chara; // x0
 
   chara = this->fields.chara;
   if ( !chara )
-    sub_1C6BC60(0, n);
-  UIScriptChara__StopSpecialEffect_45170980(chara, n, 0);
+    sub_1C71608(0, n);
+  UIScriptChara__StopSpecialEffect_45221280(chara, n, 0);
 }
 
 
@@ -1977,11 +2035,11 @@ void ScriptCharaData__UpdateWidgetLayer(
   UnityEngine_Object_o *monitor; // x21
   UnityEngine_GameObject_o *gameObject; // x21
 
-  if ( (byte_4CB8258 & 1) == 0 )
+  if ( (byte_4CC938B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget____78639856);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB8258 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget____78708712);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC938B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1993,7 +2051,7 @@ void ScriptCharaData__UpdateWidgetLayer(
     ComponentsInChildren_object = UnityEngine_GameObject__GetComponentsInChildren_object_(
                                     go,
                                     1,
-                                    (const MethodInfo_3193DCC *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget____78639856);
+                                    (const MethodInfo_31A3B70 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget____78708712);
     if ( !ComponentsInChildren_object )
       goto LABEL_20;
     max_length = ComponentsInChildren_object->max_length;
@@ -2004,7 +2062,7 @@ void ScriptCharaData__UpdateWidgetLayer(
       while ( 1 )
       {
         if ( v8 >= max_length )
-          sub_1C6BC68(ComponentsInChildren_object);
+          sub_1C71610(ComponentsInChildren_object);
         v9 = v7->m_Items[v8];
         if ( !v9 )
           break;
@@ -2028,7 +2086,7 @@ void ScriptCharaData__UpdateWidgetLayer(
           return;
       }
 LABEL_20:
-      sub_1C6BC60(ComponentsInChildren_object, v5);
+      sub_1C71608(ComponentsInChildren_object, v5);
     }
   }
 }

@@ -3,24 +3,28 @@ void VoiceCondType___cctor(const MethodInfo *method)
   __int64 v1; // x0
   __int64 v2; // x1
   int32_t v3; // w2
-  const MethodInfo *v4; // x3
-  int v5; // w8
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
+  int v9; // w8
 
-  if ( (byte_4CB520E & 1) == 0 )
+  if ( (byte_4CC632E & 1) == 0 )
   {
-    sub_1C6BA08(&GameEventType_TYPE___TypeInfo);
-    sub_1C6BA08(&VoiceCondType_TypeInfo);
-    byte_4CB520E = 1;
+    sub_1C713B0(&GameEventType_TYPE___TypeInfo);
+    sub_1C713B0(&VoiceCondType_TypeInfo);
+    byte_4CC632E = 1;
   }
-  v1 = sub_1C6BAB0(GameEventType_TYPE___TypeInfo, 2);
+  v1 = sub_1C71458(GameEventType_TYPE___TypeInfo, 2);
   if ( !v1 )
-    sub_1C6BC60(0, v2);
-  v5 = *(_DWORD *)(v1 + 24);
-  if ( !v5 || (*(_DWORD *)(v1 + 32) = 12, v5 == 1) )
-    sub_1C6BC68(v1);
+    sub_1C71608(0, v2);
+  v9 = *(_DWORD *)(v1 + 24);
+  if ( !v9 || (*(_DWORD *)(v1 + 32) = 12, v9 == 1) )
+    sub_1C71610(v1);
   *(_DWORD *)(v1 + 36) = 22;
   VoiceCondType_TypeInfo->static_fields->EVENT_TYPES_VOICE = (struct GameEventType_TYPE_array *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)VoiceCondType_TypeInfo->static_fields, v1, v3, v4);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)VoiceCondType_TypeInfo->static_fields, v1, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -50,22 +54,22 @@ bool VoiceCondType__IsSatisfyBirthdayCondition(const MethodInfo *method)
   uint64_t v17; // [xsp+8h] [xbp-28h] BYREF
   uint64_t dateData; // [xsp+18h] [xbp-18h] BYREF
 
-  if ( (byte_4CB5203 & 1) == 0 )
+  if ( (byte_4CC6323 & 1) == 0 )
   {
-    sub_1C6BA08(&System_DateTime_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB5203 = 1;
+    sub_1C713B0(&System_DateTime_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC6323 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
-    sub_1C6BC60(0, v2);
+    sub_1C71608(0, v2);
   birthDay = SelfUserGame->fields.birthDay;
   if ( birthDay < 1 )
     return 0;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   dateData = NetworkManager__getServerDateTime(0).fields._dateData;
-  v17 = NetworkManager__getDateTime_41600544(birthDay, 0).fields._dateData;
+  v17 = NetworkManager__getDateTime_41643704(birthDay, 0).fields._dateData;
   if ( !System_DateTime_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
   v4.fields._dateData = (uint64_t)&v17;
@@ -82,7 +86,7 @@ bool VoiceCondType__IsSatisfyBirthdayCondition(const MethodInfo *method)
       Year = System_DateTime__get_Year(v6, 0);
       v16 = 0;
       v8.fields._dateData = (uint64_t)&v16;
-      System_DateTime___ctor_65350956(v8, Year, 2, 29, 0);
+      System_DateTime___ctor_65415888(v8, Year, 2, 29, 0);
       v17 = v16;
     }
   }
@@ -109,10 +113,10 @@ bool VoiceCondType__IsSatisfyCondition(int32_t type, int32_t condValue, int32_t 
   bool result; // w0
   bool isPlayable[4]; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CB520D & 1) == 0 )
+  if ( (byte_4CC632D & 1) == 0 )
   {
-    sub_1C6BA08(&VoiceCondType_TypeInfo);
-    byte_4CB520D = 1;
+    sub_1C713B0(&VoiceCondType_TypeInfo);
+    byte_4CC632D = 1;
   }
   result = 0;
   isPlayable[0] = 0;
@@ -173,10 +177,10 @@ bool VoiceCondType__IsSatisfyCostumeCondition(int32_t condValue, int32_t targetV
 {
   int32_t v5; // w8
 
-  if ( (byte_4CB5209 & 1) == 0 )
+  if ( (byte_4CC6329 & 1) == 0 )
   {
-    sub_1C6BA08(&ImageLimitCount_TypeInfo);
-    byte_4CB5209 = 1;
+    sub_1C713B0(&ImageLimitCount_TypeInfo);
+    byte_4CC6329 = 1;
   }
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
@@ -211,26 +215,26 @@ bool VoiceCondType__IsSatisfyEventCondition(const MethodInfo *method)
   System_Collections_Generic_List_Enumerator_object__o v19; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4CB5204 & 1) == 0 )
+  if ( (byte_4CC6324 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventEntity____Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventEntity____MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventEntity____get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventEntity____GetEnumerator__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&VoiceCondType_TypeInfo);
-    byte_4CB5204 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C713B0(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_EventEntity____Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_EventEntity____MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_EventEntity____get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventEntity____GetEnumerator__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&VoiceCondType_TypeInfo);
+    byte_4CC6324 = 1;
   }
   memset(&v20, 0, sizeof(v20));
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMaster___);
+               (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventMaster___);
   v3 = (EventMaster_o *)Instance;
   if ( !VoiceCondType_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(VoiceCondType_TypeInfo);
@@ -240,27 +244,27 @@ bool VoiceCondType__IsSatisfyEventCondition(const MethodInfo *method)
                                                                            VoiceCondType_TypeInfo->static_fields->EVENT_TYPES_VOICE,
                                                                            0,
                                                                            0),
-        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
+        (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) == 0)
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventDetailMaster___),
+                     (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventDetailMaster___),
         !EnableEntityLists) )
   {
 LABEL_29:
-    sub_1C6BC60(Instance, v2);
+    sub_1C71608(Instance, v2);
   }
   v5 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v19,
     EnableEntityLists,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_EventEntity____GetEnumerator__);
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_EventEntity____GetEnumerator__);
   v20 = v19;
   while ( 1 )
   {
 LABEL_10:
     isEventVoicePlay = System_Collections_Generic_List_Enumerator_object___MoveNext(
                          &v20,
-                         (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_EventEntity____MoveNext__);
+                         (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_EventEntity____MoveNext__);
     v8 = isEventVoicePlay;
     if ( !isEventVoicePlay )
     {
@@ -281,21 +285,21 @@ LABEL_10:
   }
   if ( !(_DWORD)monitor )
 LABEL_22:
-    sub_1C6BC68(isEventVoicePlay);
+    sub_1C71610(isEventVoicePlay);
   v12 = 0;
   while ( 1 )
   {
     v13 = *((_QWORD *)&current[2].klass + (int)v12);
     if ( !v13 )
-      sub_1C6BC60(isEventVoicePlay, v7);
+      sub_1C71608(isEventVoicePlay, v7);
     if ( !v5 )
-      sub_1C6BC60(isEventVoicePlay, v7);
+      sub_1C71608(isEventVoicePlay, v7);
     Entity = DataMasterBase_object__object__int___GetEntity(
                v5,
                *(_DWORD *)(v13 + 16),
-               (const MethodInfo_33F90DC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+               (const MethodInfo_3408E80 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
     if ( !Entity )
-      sub_1C6BC60(0, v15);
+      sub_1C71608(0, v15);
     isEventVoicePlay = EventDetailEntity__isEventVoicePlay((EventDetailEntity_o *)Entity, 0);
     if ( isEventVoicePlay )
       break;
@@ -308,7 +312,7 @@ LABEL_22:
 LABEL_25:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v20,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_EventEntity____Dispose__);
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_EventEntity____Dispose__);
   return v8 && v17 == 7;
 }
 
@@ -320,33 +324,33 @@ bool VoiceCondType__IsSatisfyEventEndCondition(int32_t condValue, const MethodIn
   Il2CppClass *klass; // x19
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB5206 & 1) == 0 )
+  if ( (byte_4CC6326 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB5206 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C713B0(&Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC6326 = 1;
   }
   entity = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMaster___);
+               (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventMaster___);
   if ( !Instance )
     goto LABEL_12;
   Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                &entity,
                                condValue,
-                               (const MethodInfo_33F9128 *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
+                               (const MethodInfo_3408ECC *)Method_DataMasterBase_EventMaster__EventEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Instance & 1) == 0 )
     return 0;
   if ( !entity )
 LABEL_12:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   klass = entity[6].klass;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -361,26 +365,26 @@ bool VoiceCondType__IsSatisfyQuestClearCondition(int32_t condValue, const Method
   Il2CppObject *MasterData_object; // x20
   UserQuestEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB5205 & 1) == 0 )
+  if ( (byte_4CC6325 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserQuestMaster___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB5205 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserQuestMaster___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC6325 = 1;
   }
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserQuestMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserQuestMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4CB002A )
+  if ( !byte_4CC112A )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB002A = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC112A = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -401,7 +405,7 @@ bool VoiceCondType__IsSatisfyQuestClearCondition(int32_t condValue, const Method
     if ( entity )
       return UserQuestEntity__getClearNum(entity, 0) > 0;
 LABEL_15:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   return 0;
 }
@@ -427,14 +431,14 @@ bool VoiceCondType__IsSatisfySvtGetCondition(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v16; // 0:x0.16
 
   v15 = condValue;
-  if ( (byte_4CB5207 & 1) == 0 )
+  if ( (byte_4CC6327 & 1) == 0 )
   {
-    *(_QWORD *)&condValue = sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB5207 = 1;
+    *(_QWORD *)&condValue = sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CC6327 = 1;
   }
   if ( !usrSvtList )
 LABEL_17:
-    sub_1C6BC60(*(_QWORD *)&condValue, usrSvtList);
+    sub_1C71608(*(_QWORD *)&condValue, usrSvtList);
   max_length = usrSvtList->max_length;
   v5 = max_length > 0;
   if ( max_length >= 1 )
@@ -443,7 +447,7 @@ LABEL_17:
     {
       if ( i >= (unsigned int)max_length )
 LABEL_16:
-        sub_1C6BC68(*(_QWORD *)&condValue);
+        sub_1C71610(*(_QWORD *)&condValue);
       v7 = &usrSvtList->obj.klass + i;
       v10 = v7[4];
       v9 = v7 + 4;
@@ -456,8 +460,8 @@ LABEL_16:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v16.fields.currentCryptoKey = declaringType;
       *(_QWORD *)&v16.fields.fakeValue = parent;
-      v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v16, 0);
-      *(_QWORD *)&condValue = System_Int32__Equals_65475116((int32_t)&v15, v13, 0);
+      v13 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v16, 0);
+      *(_QWORD *)&condValue = System_Int32__Equals_65540048((int32_t)&v15, v13, 0);
       if ( (condValue & 1) != 0 )
       {
         if ( (unsigned int)i >= LODWORD(usrSvtList->max_length) )
@@ -500,22 +504,22 @@ bool VoiceCondType__IsSatisfySvtGroupCondition(
   ServantGroupEntity_o *v22; // x10
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
 
-  if ( (byte_4CB5208 & 1) == 0 )
+  if ( (byte_4CC6328 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantGroupMaster___);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB5208 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_ServantGroupMaster___);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC6328 = 1;
   }
-  Instance = (ServantGroupEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (ServantGroupEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (ServantGroupEntity_array *)DataManager__GetMasterData_object_(
                                                  (DataManager_o *)Instance,
-                                                 (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantGroupMaster___)) == 0
+                                                 (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantGroupMaster___)) == 0
     || (Instance = ServantGroupMaster__getEntityListById((ServantGroupMaster_o *)Instance, condValue, 0), !usrSvtList) )
   {
 LABEL_25:
-    sub_1C6BC60(Instance, v8);
+    sub_1C71608(Instance, v8);
   }
   max_length = usrSvtList->max_length;
   v10 = max_length > 0;
@@ -539,7 +543,7 @@ LABEL_25:
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v24.fields.currentCryptoKey = declaringType;
       *(_QWORD *)&v24.fields.fakeValue = parent;
-      Instance = (ServantGroupEntity_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v24, 0);
+      Instance = (ServantGroupEntity_array *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v24, 0);
       if ( (unsigned int)v12 >= LODWORD(usrSvtList->max_length) )
         goto LABEL_26;
       v19 = (int)Instance;
@@ -573,7 +577,7 @@ LABEL_23:
         goto LABEL_23;
     }
 LABEL_26:
-    sub_1C6BC68(Instance);
+    sub_1C71610(Instance);
   }
   return v10;
 }
@@ -595,12 +599,12 @@ bool VoiceCondType__TryIsSatisfyCompCondition(
   UserServantEntity_array *AllList; // x22
   bool v15; // w8
 
-  if ( (byte_4CB520C & 1) == 0 )
+  if ( (byte_4CC632C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&VoiceCondType_TypeInfo);
-    byte_4CB520C = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&VoiceCondType_TypeInfo);
+    byte_4CC632C = 1;
   }
   result = 0;
   *isPlayable = 0;
@@ -612,13 +616,13 @@ bool VoiceCondType__TryIsSatisfyCompCondition(
       {
         if ( type != 5 )
           return 0;
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !Instance
           || (Instance = DataManager__GetMasterData_object_(
                            (DataManager_o *)Instance,
-                           (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
+                           (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantMaster___)) == 0 )
         {
-          sub_1C6BC60(Instance, v12);
+          sub_1C71608(Instance, v12);
         }
         AllList = UserServantMaster__getAllList((UserServantMaster_o *)Instance, 0);
         if ( !VoiceCondType_TypeInfo->_2.cctor_finished )
@@ -692,10 +696,10 @@ bool VoiceCondType__TryIsSatisfyCondition(bool *isPlayable, int32_t type, const 
   VoiceCondType_c *v8; // x0
   bool v9; // w8
 
-  if ( (byte_4CB520A & 1) == 0 )
+  if ( (byte_4CC632A & 1) == 0 )
   {
-    sub_1C6BA08(&VoiceCondType_TypeInfo);
-    byte_4CB520A = 1;
+    sub_1C713B0(&VoiceCondType_TypeInfo);
+    byte_4CC632A = 1;
   }
   *isPlayable = 0;
   if ( type == 2 )
@@ -738,13 +742,13 @@ bool VoiceCondType__TryIsSatisfyValueCondition(
   bool IsSatisfyQuestClearCondition; // w0
   bool v14; // w8
 
-  if ( (byte_4CB520B & 1) == 0 )
+  if ( (byte_4CC632B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C6BA08(&VoiceCondType_TypeInfo);
-    byte_4CB520B = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C713B0(&VoiceCondType_TypeInfo);
+    byte_4CC632B = 1;
   }
   *isPlayable = 0;
   if ( condValue == -1 )
@@ -753,12 +757,12 @@ bool VoiceCondType__TryIsSatisfyValueCondition(
   switch ( type )
   {
     case 4:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_28;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                   (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantMaster___);
       if ( !Instance )
         goto LABEL_28;
       AllList = UserServantMaster__getAllList((UserServantMaster_o *)Instance, 0);
@@ -777,10 +781,10 @@ bool VoiceCondType__TryIsSatisfyValueCondition(
       IsSatisfyQuestClearCondition = VoiceCondType__IsSatisfyQuestClearCondition(condValue, *(const MethodInfo **)&type);
       goto LABEL_26;
     case 12:
-      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       if ( !Instance )
 LABEL_28:
-        sub_1C6BC60(Instance, v9);
+        sub_1C71608(Instance, v9);
       IsSatisfyQuestClearCondition = QuestTree__IsWarNew((QuestTree_o *)Instance, condValue, 0);
       goto LABEL_26;
     case 13:

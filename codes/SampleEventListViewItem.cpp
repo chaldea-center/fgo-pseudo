@@ -4,26 +4,30 @@ void SampleEventListViewItem___ctor(SampleEventListViewItem_o *this, int32_t ind
   Il2CppObject *v6; // x0
   struct System_String_o *v7; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int v10; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int v14; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CB3A77 & 1) == 0 )
+  if ( (byte_4CC4B8F & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6182/*"Event Number {0}"*/);
-    byte_4CB3A77 = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&StringLiteral_6184/*"Event Number {0}"*/);
+    byte_4CC4B8F = 1;
   }
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   if ( index >= 0 )
     v5 = index;
   else
     v5 = index + 1;
   this->fields.eventType = index - (v5 & 0xFFFFFFFE);
-  v10 = index + 1;
-  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  v7 = System_String__Format((System_String_o *)StringLiteral_6182/*"Event Number {0}"*/, v6, 0);
+  v14 = index + 1;
+  v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v14);
+  v7 = System_String__Format((System_String_o *)StringLiteral_6184/*"Event Number {0}"*/, v6, 0);
   this->fields.eventText = v7;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventText, (int32_t)v7, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.eventText, (int32_t)v7, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -37,15 +41,15 @@ System_String_o *SampleEventListViewItem__ToString(SampleEventListViewItem_o *th
 {
   System_String_o *v3; // x0
 
-  if ( (byte_4CB3A78 & 1) == 0 )
+  if ( (byte_4CC4B90 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_113/*" "*/);
-    sub_1C6BA08(&StringLiteral_19207/*"eventType "*/);
-    byte_4CB3A78 = 1;
+    sub_1C713B0(&StringLiteral_113/*" "*/);
+    sub_1C713B0(&StringLiteral_19218/*"eventType "*/);
+    byte_4CC4B90 = 1;
   }
   v3 = System_Int32__ToString((int)this + 120, 0);
-  return System_String__Concat_64007060(
-           (System_String_o *)StringLiteral_19207/*"eventType "*/,
+  return System_String__Concat_64071992(
+           (System_String_o *)StringLiteral_19218/*"eventType "*/,
            v3,
            (System_String_o *)StringLiteral_113/*" "*/,
            this->fields.eventText,

@@ -2,18 +2,22 @@ void TweenPosition__Awake(TweenPosition_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CBAB94 & 1) == 0 )
+  if ( (byte_4CCBCED & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIRect___);
-    byte_4CBAB94 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIRect___);
+    byte_4CCBCED = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIRect___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIRect___);
   this->fields.mRect = (struct UIRect_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mRect, (int32_t)Component_object, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mRect, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -34,17 +38,17 @@ TweenPosition_o *TweenPosition__Begin(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4CBAB95 & 1) == 0 )
+  if ( (byte_4CCBCEE & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UITweener_Begin_TweenPosition___);
-    byte_4CBAB95 = 1;
+    sub_1C713B0(&Method_UITweener_Begin_TweenPosition___);
+    byte_4CCBCEE = 1;
   }
   v9 = (TweenPosition_o *)UITweener__Begin_object_(
                             go,
                             duration,
-                            (const MethodInfo_3210C14 *)Method_UITweener_Begin_TweenPosition___);
+                            (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenPosition___);
   if ( !v9 )
-    sub_1C6BC60(0, v10);
+    sub_1C71608(0, v10);
   v11 = v9;
   v9->fields.from = TweenPosition__get_value(v9, v10);
   v11->fields.to.fields.x = x;
@@ -59,7 +63,7 @@ TweenPosition_o *TweenPosition__Begin(
 }
 
 
-TweenPosition_o *TweenPosition__Begin_49746496(
+TweenPosition_o *TweenPosition__Begin_49811428(
         UnityEngine_GameObject_o *go,
         float duration,
         UnityEngine_Vector3_o pos,
@@ -77,17 +81,17 @@ TweenPosition_o *TweenPosition__Begin_49746496(
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
-  if ( (byte_4CBAB96 & 1) == 0 )
+  if ( (byte_4CCBCEF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UITweener_Begin_TweenPosition___);
-    byte_4CBAB96 = 1;
+    sub_1C713B0(&Method_UITweener_Begin_TweenPosition___);
+    byte_4CCBCEF = 1;
   }
   v11 = (TweenPosition_o *)UITweener__Begin_object_(
                              go,
                              duration,
-                             (const MethodInfo_3210C14 *)Method_UITweener_Begin_TweenPosition___);
+                             (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenPosition___);
   if ( !v11 )
-    sub_1C6BC60(0, v12);
+    sub_1C71608(0, v12);
   v13 = v11;
   v11->fields.worldSpace = worldSpace;
   v11->fields.from = TweenPosition__get_value(v11, v12);
@@ -152,12 +156,16 @@ UnityEngine_Transform_o *TweenPosition__get_cachedTransform(TweenPosition_o *thi
   UnityEngine_Object_o *mTrans; // x21
   struct UnityEngine_Transform_o *transform; // x0
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
 
-  if ( (byte_4CBAB92 & 1) == 0 )
+  if ( (byte_4CCBCEB & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBAB92 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBCEB = 1;
   }
   mTrans = (UnityEngine_Object_o *)this->fields.mTrans;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -166,7 +174,7 @@ UnityEngine_Transform_o *TweenPosition__get_cachedTransform(TweenPosition_o *thi
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.mTrans = transform;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v5, v6, v7, v8, v9, v10);
   }
   return this->fields.mTrans;
 }
@@ -188,7 +196,7 @@ UnityEngine_Vector3_o TweenPosition__get_value(TweenPosition_o *this, const Meth
   worldSpace = this->fields.worldSpace;
   cachedTransform = TweenPosition__get_cachedTransform(this, method);
   if ( !cachedTransform )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   if ( worldSpace )
     return UnityEngine_Transform__get_position(cachedTransform, 0);
   else
@@ -221,10 +229,10 @@ void TweenPosition__set_value(TweenPosition_o *this, UnityEngine_Vector3_o value
   z = value.fields.z;
   y = value.fields.y;
   x = value.fields.x;
-  if ( (byte_4CBAB93 & 1) == 0 )
+  if ( (byte_4CCBCEC & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBAB93 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBCEC = 1;
   }
   mRect = (UnityEngine_Object_o *)this->fields.mRect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -244,7 +252,7 @@ void TweenPosition__set_value(TweenPosition_o *this, UnityEngine_Vector3_o value
         return;
       }
 LABEL_15:
-      sub_1C6BC60(cachedTransform, v8);
+      sub_1C71608(cachedTransform, v8);
     }
   }
   worldSpace = this->fields.worldSpace;

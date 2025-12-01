@@ -1,9 +1,9 @@
 void MapCameraViewAdjusterUtil___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CB5554 & 1) == 0 )
+  if ( (byte_4CC6674 & 1) == 0 )
   {
-    sub_1C6BA08(&MapCameraViewAdjusterUtil_TypeInfo);
-    byte_4CB5554 = 1;
+    sub_1C713B0(&MapCameraViewAdjusterUtil_TypeInfo);
+    byte_4CC6674 = 1;
   }
   *MapCameraViewAdjusterUtil_TypeInfo->static_fields = (struct MapCameraViewAdjusterUtil_StaticFields)0x3D4CCCCD41A00000LL;
 }
@@ -89,14 +89,14 @@ UnityEngine_Rect_o MapCameraViewAdjusterUtil__CalculateEachRectIntersectAvoidedC
 
   v8 = v7;
   v9 = camera;
-  if ( (byte_4CB5550 & 1) == 0 )
+  if ( (byte_4CC6670 & 1) == 0 )
   {
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerable_Rect__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerator_Rect__TypeInfo);
-    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
-    camera = (MapCamera_o *)sub_1C6BA08(&MapCameraViewAdjusterUtil_TypeInfo);
-    byte_4CB5550 = 1;
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerable_Rect__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerator_Rect__TypeInfo);
+    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
+    camera = (MapCamera_o *)sub_1C713B0(&MapCameraViewAdjusterUtil_TypeInfo);
+    byte_4CC6670 = 1;
   }
   *failedReason = 0;
   if ( !v8 )
@@ -171,7 +171,7 @@ LABEL_51:
                             v18);
   if ( !camera )
 LABEL_53:
-    sub_1C6BC60(camera, v58);
+    sub_1C71608(camera, v58);
   klass = camera->klass;
   v26 = camera;
   v27 = *(unsigned __int16 *)&camera->klass->_2.rank;
@@ -190,12 +190,12 @@ LABEL_53:
   else
   {
 LABEL_18:
-    v29 = sub_1C41D90(camera, System_Collections_Generic_IEnumerable_Rect__TypeInfo, 0);
+    v29 = sub_1C47738(camera, System_Collections_Generic_IEnumerable_Rect__TypeInfo, 0);
   }
   v63 = m_XMin;
   v35 = (*(__int64 (__fastcall **)(MapCamera_o *, _QWORD))v29)(v26, *(_QWORD *)(v29 + 8));
   if ( !v35 )
-    sub_1C6BC60(0, v34);
+    sub_1C71608(0, v34);
   while ( 1 )
   {
     v36 = *(_QWORD *)v35;
@@ -215,7 +215,7 @@ LABEL_18:
     else
     {
 LABEL_27:
-      v39 = sub_1C41D90(v35, System_Collections_IEnumerator_TypeInfo, 0);
+      v39 = sub_1C47738(v35, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v39)(v35, *(_QWORD *)(v39 + 8)) & 1) == 0 )
       break;
@@ -236,7 +236,7 @@ LABEL_27:
     else
     {
 LABEL_34:
-      v43 = sub_1C41D90(v35, System_Collections_Generic_IEnumerator_Rect__TypeInfo, 0);
+      v43 = sub_1C47738(v35, System_Collections_Generic_IEnumerator_Rect__TypeInfo, 0);
     }
     v44 = ((long double (__fastcall *)(__int64, _QWORD))*(_QWORD *)v43)(v35, *(_QWORD *)(v43 + 8));
     v31 = *(float *)&v44;
@@ -296,7 +296,7 @@ LABEL_43:
   else
   {
 LABEL_47:
-    v53 = sub_1C41D90(v35, System_IDisposable_TypeInfo, 0);
+    v53 = sub_1C47738(v35, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v53)(v35, *(_QWORD *)(v53 + 8));
   if ( (v49 | 8) == 8 )
@@ -400,14 +400,14 @@ UnityEngine_Rect_o MapCameraViewAdjusterUtil__CalculateLostSomeRectsAllowedCamer
   UnityEngine_Rect_o v79; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
   v10 = camera;
-  if ( (byte_4CB5551 & 1) == 0 )
+  if ( (byte_4CC6671 & 1) == 0 )
   {
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerable_Rect__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerator_Rect__TypeInfo);
-    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
-    camera = (MapCamera_o *)sub_1C6BA08(&MapCameraViewAdjusterUtil_TypeInfo);
-    byte_4CB5551 = 1;
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerable_Rect__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerator_Rect__TypeInfo);
+    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
+    camera = (MapCamera_o *)sub_1C713B0(&MapCameraViewAdjusterUtil_TypeInfo);
+    byte_4CC6671 = 1;
   }
   *failedReason = 0;
   if ( !v10 )
@@ -453,10 +453,10 @@ LABEL_51:
     j_il2cpp_runtime_class_init_0(MapCameraViewAdjusterUtil_TypeInfo);
   MapCameraViewAdjusterUtil__CreateCoveringRect(rectsOnMap, v17);
   v62.n64_u64[0] = vmul_f32((float32x2_t)__PAIR64__(LODWORD(v63), LODWORD(v64)), (float32x2_t)0x3F0000003F000000LL).n64_u64[0];
-  if ( !byte_4CAFC0D )
+  if ( !byte_4CC0D0D )
   {
-    sub_1C6BA08(&UnityEngine_Mathf_TypeInfo);
-    byte_4CAFC0D = 1;
+    sub_1C713B0(&UnityEngine_Mathf_TypeInfo);
+    byte_4CC0D0D = 1;
   }
   x = FSWindowUtil__GetSize(0).fields.x;
   *(_QWORD *)&v22.fields.x = MapCameraViewAdjusterUtil_TypeInfo;
@@ -480,7 +480,7 @@ LABEL_51:
                             v20);
   if ( !camera )
 LABEL_53:
-    sub_1C6BC60(camera, rectsOnMap);
+    sub_1C71608(camera, rectsOnMap);
   klass = camera->klass;
   v25 = camera;
   v26 = *(unsigned __int16 *)&camera->klass->_2.rank;
@@ -499,11 +499,11 @@ LABEL_53:
   else
   {
 LABEL_19:
-    v28 = sub_1C41D90(camera, System_Collections_Generic_IEnumerable_Rect__TypeInfo, 0);
+    v28 = sub_1C47738(camera, System_Collections_Generic_IEnumerable_Rect__TypeInfo, 0);
   }
   v33 = (*(__int64 (__fastcall **)(MapCamera_o *, _QWORD))v28)(v25, *(_QWORD *)(v28 + 8));
   if ( !v33 )
-    sub_1C6BC60(0, v32);
+    sub_1C71608(0, v32);
   while ( 1 )
   {
     v34 = *(_QWORD *)v33;
@@ -523,7 +523,7 @@ LABEL_19:
     else
     {
 LABEL_27:
-      v37 = sub_1C41D90(v33, System_Collections_IEnumerator_TypeInfo, 0);
+      v37 = sub_1C47738(v33, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v37)(v33, *(_QWORD *)(v37 + 8)) & 1) == 0 )
       break;
@@ -544,7 +544,7 @@ LABEL_27:
     else
     {
 LABEL_34:
-      v41 = sub_1C41D90(v33, System_Collections_Generic_IEnumerator_Rect__TypeInfo, 0);
+      v41 = sub_1C47738(v33, System_Collections_Generic_IEnumerator_Rect__TypeInfo, 0);
     }
     v42 = ((long double (__fastcall *)(__int64, _QWORD))*(_QWORD *)v41)(v33, *(_QWORD *)(v41 + 8));
     v44 = v43;
@@ -610,7 +610,7 @@ LABEL_43:
   else
   {
 LABEL_47:
-    v58 = sub_1C41D90(v33, System_IDisposable_TypeInfo, 0);
+    v58 = sub_1C47738(v33, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v58)(v33, *(_QWORD *)(v58 + 8));
   *(float *)&v31 = cameraRecta;
@@ -657,7 +657,7 @@ UnityEngine_Rect_o MapCameraViewAdjusterUtil__CreateCoveringRect(
   UnityEngine_Rect_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   if ( !rects )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   max_length = rects->max_length;
   if ( max_length )
   {
@@ -684,7 +684,7 @@ UnityEngine_Rect_o MapCameraViewAdjusterUtil__CreateCoveringRect(
           goto LABEL_11;
       }
 LABEL_12:
-      sub_1C6BC68(rects);
+      sub_1C71610(rects);
     }
     v10.n64_u64[0] = *(unsigned __int64 *)&rects->m_Items[0].fields.m_XMin;
   }
@@ -725,12 +725,12 @@ System_Collections_Generic_IEnumerable_Rect__o *MapCameraViewAdjusterUtil__Gener
   m_Height = brakeRect.fields.m_Height;
   m_YMin = brakeRect.fields.m_YMin;
   m_XMin = brakeRect.fields.m_XMin;
-  if ( (byte_4CB5552 & 1) == 0 )
+  if ( (byte_4CC6672 & 1) == 0 )
   {
-    sub_1C6BA08(&MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
-    byte_4CB5552 = 1;
+    sub_1C713B0(&MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
+    byte_4CC6672 = 1;
   }
-  v12 = sub_1C6BC54(MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
+  v12 = sub_1C715FC(MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0);
   *(_DWORD *)(v12 + 16) = -2;
   *(_DWORD *)(v12 + 36) = System_Environment__get_CurrentManagedThreadId(0);
@@ -765,7 +765,7 @@ MapCameraViewAdjusterUtil_CameraDestinationInfo_o *MapCameraViewAdjusterUtil__Ge
   float mZoomMax; // s1
   float v12; // s8
   int v13; // w20
-  const MethodInfo_392DB78 *v14; // x2
+  const MethodInfo_393D91C *v14; // x2
   float m_Width; // s2
   float m_Height; // s3
   float x; // s4
@@ -785,19 +785,19 @@ MapCameraViewAdjusterUtil_CameraDestinationInfo_o *MapCameraViewAdjusterUtil__Ge
   v25[0] = v6;
   v25[1] = v7;
   v26 = expectedDestZoom;
-  if ( (byte_4CB5553 & 1) == 0 )
+  if ( (byte_4CC6673 & 1) == 0 )
   {
-    sub_1C6BA08(&MapCameraViewAdjusterUtil_CameraDestinationInfo_TypeInfo);
-    sub_1C6BA08(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1C6BA08(&Method_System_Nullable_float__get_HasValue__);
-    sub_1C6BA08(&Method_System_Nullable_Vector3__get_Value__);
-    camera = (MapCamera_o *)sub_1C6BA08(&Method_System_Nullable_float__get_Value__);
-    byte_4CB5553 = 1;
+    sub_1C713B0(&MapCameraViewAdjusterUtil_CameraDestinationInfo_TypeInfo);
+    sub_1C713B0(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_1C713B0(&Method_System_Nullable_float__get_HasValue__);
+    sub_1C713B0(&Method_System_Nullable_Vector3__get_Value__);
+    camera = (MapCamera_o *)sub_1C713B0(&Method_System_Nullable_float__get_Value__);
+    byte_4CC6673 = 1;
   }
   if ( hasValue )
   {
     v8 = (System_Nullable_float__o)&v26;
-    Value = System_Nullable_float___get_Value(v8, (const MethodInfo_392B6B0 *)Method_System_Nullable_float__get_Value__);
+    Value = System_Nullable_float___get_Value(v8, (const MethodInfo_393B454 *)Method_System_Nullable_float__get_Value__);
     if ( !v5 )
       goto LABEL_32;
   }
@@ -805,7 +805,7 @@ MapCameraViewAdjusterUtil_CameraDestinationInfo_o *MapCameraViewAdjusterUtil__Ge
   {
     if ( !v5 || (camera = (MapCamera_o *)v5->fields.mZoom) == 0 )
 LABEL_32:
-      sub_1C6BC60(camera, v24);
+      sub_1C71608(camera, v24);
     Value = MapZoom__GetZoomSize((MapZoom_o *)camera, 0);
   }
   mZoom = v5->fields.mZoom;
@@ -869,7 +869,7 @@ LABEL_32:
     else
       y = v18;
   }
-  v22 = sub_1C6BC54(MapCameraViewAdjusterUtil_CameraDestinationInfo_TypeInfo);
+  v22 = sub_1C715FC(MapCameraViewAdjusterUtil_CameraDestinationInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v22, 0);
   *(float *)(v22 + 16) = v21;
   *(float *)(v22 + 20) = y;
@@ -910,7 +910,7 @@ bool MapCameraViewAdjusterUtil__HasAnyIntersects(
   m_XMin = cameraRect.fields.m_XMin;
   v8.n64_u32[0] = *(_QWORD *)&FSWindowUtil__GetSize(0);
   if ( !containRects2DUI )
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C6BC60)(HasAnyIntersects, v7);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C71608)(HasAnyIntersects, v7);
   v8.n64_f32[0] = m_Width / v8.n64_f32[0];
   v9.n64_u64[0] = vdup_lane_s32(v8, 0).n64_u64[0];
   v10 = LODWORD(containRects2DUI->max_length) - 1;
@@ -925,7 +925,7 @@ bool MapCameraViewAdjusterUtil__HasAnyIntersects(
     if ( (v10 & 0x80000000) != 0 )
       break;
     if ( v10 >= LODWORD(containRects2DUI->max_length) )
-      sub_1C6BC68(HasAnyIntersects);
+      sub_1C71610(HasAnyIntersects);
     v13 = (float32x2_t *)(&containRects2DUI->obj + v10);
     v14.n64_u64[0] = v13[4].n64_u64[0];
     v15.n64_u64[0] = vadd_f32(v14, v13[5]).n64_u64[0];
@@ -1118,10 +1118,10 @@ bool MapCameraViewAdjusterUtil__GenerateCameraRects_d__5__MoveNext(
   float ZoomMax; // s0
   int32_t x_5__11; // w10
 
-  if ( (byte_4CB5555 & 1) == 0 )
+  if ( (byte_4CC6675 & 1) == 0 )
   {
-    sub_1C6BA08(&int___TypeInfo);
-    byte_4CB5555 = 1;
+    sub_1C713B0(&int___TypeInfo);
+    byte_4CC6675 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -1178,7 +1178,7 @@ bool MapCameraViewAdjusterUtil__GenerateCameraRects_d__5__MoveNext(
       *(float32x2_t *)&this->fields._cameraRect_5__4.fields.m_XMin = v13;
       this->fields._offsetYMinIndex_5__7 = v25;
       this->fields._offsetYMaxIndex_5__8 = v24;
-      v26 = sub_1C6BAB0(int___TypeInfo, 3);
+      v26 = sub_1C71458(int___TypeInfo, 3);
       if ( !v26 )
         goto LABEL_40;
       v28 = *(_QWORD *)(v26 + 24);
@@ -1186,7 +1186,7 @@ bool MapCameraViewAdjusterUtil__GenerateCameraRects_d__5__MoveNext(
         || (v29 = -this->fields._offsetXMinIndex_5__5, *(_DWORD *)(v26 + 36) = v29, (_DWORD)v28 == 2) )
       {
 LABEL_39:
-        sub_1C6BC68(v26);
+        sub_1C71610(v26);
       }
       v30 = *(_DWORD *)(v26 + 32);
       *(_DWORD *)(v26 + 40) = this->fields._offsetXMaxIndex_5__6;
@@ -1210,10 +1210,10 @@ LABEL_39:
         }
       }
       this->fields._loopX_5__9 = (2 * v30) | 1;
-      v26 = sub_1C6BAB0(int___TypeInfo, 3);
+      v26 = sub_1C71458(int___TypeInfo, 3);
       if ( !v26 )
 LABEL_40:
-        sub_1C6BC60(v26, v27);
+        sub_1C71608(v26, v27);
       v35 = *(_QWORD *)(v26 + 24);
       if ( (unsigned int)v35 <= 1 )
         goto LABEL_39;
@@ -1325,10 +1325,10 @@ System_Collections_Generic_IEnumerator_Rect__o *MapCameraViewAdjusterUtil__Gener
   System_Collections_Generic_IEnumerator_Rect__o *result; // x0
   __int64 v6; // x9
 
-  if ( (byte_4CB5557 & 1) == 0 )
+  if ( (byte_4CC6677 & 1) == 0 )
   {
-    sub_1C6BA08(&MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
-    byte_4CB5557 = 1;
+    sub_1C713B0(&MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
+    byte_4CC6677 = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -1339,7 +1339,7 @@ System_Collections_Generic_IEnumerator_Rect__o *MapCameraViewAdjusterUtil__Gener
   }
   else
   {
-    v4 = (MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_o *)sub_1C6BC54(MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
+    v4 = (MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_o *)sub_1C715FC(MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
@@ -1387,11 +1387,11 @@ void __noreturn MapCameraViewAdjusterUtil__GenerateCameraRects_d__5__System_Coll
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MapCameraViewAdjusterUtil__GenerateCameraRects_d__5_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -1401,10 +1401,10 @@ Il2CppObject *MapCameraViewAdjusterUtil__GenerateCameraRects_d__5__System_Collec
 {
   struct UnityEngine_Rect_o _2__current; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4CB5556 & 1) == 0 )
+  if ( (byte_4CC6676 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Rect_TypeInfo);
-    byte_4CB5556 = 1;
+    sub_1C713B0(&UnityEngine_Rect_TypeInfo);
+    byte_4CC6676 = 1;
   }
   _2__current = this->fields.__2__current;
   return (Il2CppObject *)j_il2cpp_value_box_0(UnityEngine_Rect_TypeInfo, &_2__current);

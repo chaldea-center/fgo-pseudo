@@ -1,34 +1,54 @@
 void DataLostResetManager___cctor(const MethodInfo *method)
 {
   int32_t v1; // w2
-  const MethodInfo *v2; // x3
-  int32_t v3; // w1
-  struct DataLostResetManager_StaticFields *static_fields; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  int32_t v4; // w5
+  int64_t v5; // x6
+  System_String_o *v6; // x7
   int32_t v7; // w1
-  struct DataLostResetManager_StaticFields *v8; // x0
+  struct DataLostResetManager_StaticFields *static_fields; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  int32_t v15; // w1
+  struct DataLostResetManager_StaticFields *v16; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
 
-  if ( (byte_4CB57C3 & 1) == 0 )
+  if ( (byte_4CC68E4 & 1) == 0 )
   {
-    sub_1C6BA08(&DataLostResetManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11363/*"ResetConfirmDialog"*/);
-    sub_1C6BA08(&StringLiteral_17251/*"bit_raidreset"*/);
-    sub_1C6BA08(&StringLiteral_11366/*"ResetSelectDialog"*/);
-    byte_4CB57C3 = 1;
+    sub_1C713B0(&DataLostResetManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_11369/*"ResetConfirmDialog"*/);
+    sub_1C713B0(&StringLiteral_17258/*"bit_raidreset"*/);
+    sub_1C713B0(&StringLiteral_11372/*"ResetSelectDialog"*/);
+    byte_4CC68E4 = 1;
   }
-  DataLostResetManager_TypeInfo->static_fields->PREFAB_EFFECT_NAME = (struct System_String_o *)StringLiteral_17251/*"bit_raidreset"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)DataLostResetManager_TypeInfo->static_fields, StringLiteral_17251/*"bit_raidreset"*/, v1, v2);
-  v3 = StringLiteral_11366/*"ResetSelectDialog"*/;
+  DataLostResetManager_TypeInfo->static_fields->PREFAB_EFFECT_NAME = (struct System_String_o *)StringLiteral_17258/*"bit_raidreset"*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)DataLostResetManager_TypeInfo->static_fields,
+    StringLiteral_17258/*"bit_raidreset"*/,
+    v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6);
+  v7 = StringLiteral_11372/*"ResetSelectDialog"*/;
   static_fields = DataLostResetManager_TypeInfo->static_fields;
-  static_fields->PREFAB_SELECT_DIALOG_NAME = (struct System_String_o *)StringLiteral_11366/*"ResetSelectDialog"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->PREFAB_SELECT_DIALOG_NAME, v3, v5, v6);
-  v7 = StringLiteral_11363/*"ResetConfirmDialog"*/;
-  v8 = DataLostResetManager_TypeInfo->static_fields;
-  v8->PREFAB_CONFIRM_DIALOG_NAME = (struct System_String_o *)StringLiteral_11363/*"ResetConfirmDialog"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->PREFAB_CONFIRM_DIALOG_NAME, v7, v9, v10);
+  static_fields->PREFAB_SELECT_DIALOG_NAME = (struct System_String_o *)StringLiteral_11372/*"ResetSelectDialog"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->PREFAB_SELECT_DIALOG_NAME, v7, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_11369/*"ResetConfirmDialog"*/;
+  v16 = DataLostResetManager_TypeInfo->static_fields;
+  v16->PREFAB_CONFIRM_DIALOG_NAME = (struct System_String_o *)StringLiteral_11369/*"ResetConfirmDialog"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v16->PREFAB_CONFIRM_DIALOG_NAME, v15, v17, v18, v19, v20, v21, v22);
 }
 
 
@@ -47,18 +67,18 @@ System_String_o *DataLostResetManager__GetEventAssetName(int32_t eventId, int32_
   int v10; // [xsp+8h] [xbp-28h] BYREF
   int32_t v11; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CB57BB & 1) == 0 )
+  if ( (byte_4CC68DC & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6264/*"EventUI/Prefabs/{0}"*/);
-    sub_1C6BA08(&StringLiteral_6265/*"EventUI/Prefabs/{0}/{1}"*/);
-    byte_4CB57BB = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&StringLiteral_6266/*"EventUI/Prefabs/{0}"*/);
+    sub_1C713B0(&StringLiteral_6267/*"EventUI/Prefabs/{0}/{1}"*/);
+    byte_4CC68DC = 1;
   }
   if ( eventId )
   {
     v11 = eventId;
     v5 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v11);
-    return System_String__Format((System_String_o *)StringLiteral_6264/*"EventUI/Prefabs/{0}"*/, v5, 0);
+    return System_String__Format((System_String_o *)StringLiteral_6266/*"EventUI/Prefabs/{0}"*/, v5, 0);
   }
   else
   {
@@ -66,7 +86,7 @@ System_String_o *DataLostResetManager__GetEventAssetName(int32_t eventId, int32_
     v7 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v10);
     v9 = warId;
     v8 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v9);
-    return System_String__Format_64008100((System_String_o *)StringLiteral_6265/*"EventUI/Prefabs/{0}/{1}"*/, v7, v8, 0);
+    return System_String__Format_64073032((System_String_o *)StringLiteral_6267/*"EventUI/Prefabs/{0}/{1}"*/, v7, v8, 0);
   }
 }
 
@@ -81,106 +101,118 @@ void DataLostResetManager__OpenBattleResultResetDialog(
   UnityEngine_GameObject_o *Instance; // x0
   const MethodInfo *v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  const MethodInfo *v16; // x2
   System_String_o *EventAssetName; // x23
   AssetData_o *AssetStorage; // x0
-  AssetData_o *v15; // x23
-  DataLostResetManager_c *v16; // x0
-  Il2CppObject *Object_object__51495936; // x23
-  Il2CppObject *v18; // x0
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  Il2CppObject *Component_object; // x0
-  UnityEngine_GameObject_o **v22; // x24
+  AssetData_o *v19; // x23
+  DataLostResetManager_c *v20; // x0
+  Il2CppObject *Object_object__51560868; // x23
+  Il2CppObject *v22; // x0
   int32_t v23; // w2
-  const MethodInfo *v24; // x3
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
+  Il2CppObject *Component_object; // x0
+  UnityEngine_GameObject_o **v30; // x24
+  int32_t v31; // w2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  int32_t v34; // w5
+  int64_t v35; // x6
+  System_String_o *v36; // x7
   UnityEngine_Transform_o *transform; // x25
-  UnityEngine_Transform_o *v26; // x25
-  const MethodInfo *v27; // x1
-  ResetSelectDialog_o *v28; // x19
-  System_String_o *v29; // x20
-  System_String_o *v30; // x22
-  System_String_o *v31; // x23
-  ResetSelectDialog_ClickDelegate_o *v32; // x24
-  const MethodInfo *v33; // x3
-  const MethodInfo *v34; // x5
-  UnityEngine_Object_o *v35; // x19
+  UnityEngine_Transform_o *v38; // x25
+  const MethodInfo *v39; // x1
+  ResetSelectDialog_o *v40; // x19
+  System_String_o *v41; // x20
+  System_String_o *v42; // x22
+  System_String_o *v43; // x23
+  ResetSelectDialog_ClickDelegate_o *v44; // x24
+  const MethodInfo *v45; // x3
+  const MethodInfo *v46; // x5
+  UnityEngine_Object_o *v47; // x19
 
-  if ( (byte_4CB57BE & 1) == 0 )
+  if ( (byte_4CC68DF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&ResetSelectDialog_ClickDelegate_TypeInfo);
-    sub_1C6BA08(&DataLostResetManager_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMaster_EventDataLostBattleMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ResetSelectDialog___);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_DataLostResetManager___c__DisplayClass8_0__OpenBattleResultResetDialog_b__0__);
-    sub_1C6BA08(&DataLostResetManager___c__DisplayClass8_0_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5575/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_BUTTON"*/);
-    sub_1C6BA08(&StringLiteral_5577/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_5576/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_MESSAGE"*/);
-    byte_4CB57BE = 1;
+    sub_1C713B0(&Method_AssetData_GetObject_GameObject____78636968);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&ResetSelectDialog_ClickDelegate_TypeInfo);
+    sub_1C713B0(&DataLostResetManager_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMaster_EventDataLostBattleMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_ResetSelectDialog___);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_DataLostResetManager___c__DisplayClass8_0__OpenBattleResultResetDialog_b__0__);
+    sub_1C713B0(&DataLostResetManager___c__DisplayClass8_0_TypeInfo);
+    sub_1C713B0(&StringLiteral_5578/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_BUTTON"*/);
+    sub_1C713B0(&StringLiteral_5580/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_TITLE"*/);
+    sub_1C713B0(&StringLiteral_5579/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_MESSAGE"*/);
+    byte_4CC68DF = 1;
   }
-  v7 = sub_1C6BC54(DataLostResetManager___c__DisplayClass8_0_TypeInfo);
+  v7 = sub_1C715FC(DataLostResetManager___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_40;
   *(_QWORD *)(v7 + 32) = closeAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)closeAction, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)closeAction, v10, v11, v12, v13, v14, v15);
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-  EventAssetName = DataLostResetManager__GetEventAssetName(eventId, warId, v12);
+  EventAssetName = DataLostResetManager__GetEventAssetName(eventId, warId, v16);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorage = AssetManager__getAssetStorage(EventAssetName, 0);
   if ( AssetStorage )
   {
-    v15 = AssetStorage;
-    v16 = DataLostResetManager_TypeInfo;
+    v19 = AssetStorage;
+    v20 = DataLostResetManager_TypeInfo;
     if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-      v16 = DataLostResetManager_TypeInfo;
+      v20 = DataLostResetManager_TypeInfo;
     }
-    Object_object__51495936 = AssetData__GetObject_object__51495936(
-                                v15,
-                                v16->static_fields->PREFAB_SELECT_DIALOG_NAME,
-                                (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+    Object_object__51560868 = AssetData__GetObject_object__51560868(
+                                v19,
+                                v20->static_fields->PREFAB_SELECT_DIALOG_NAME,
+                                (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51495936, 0, 0) )
+    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51560868, 0, 0) )
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v18 = UnityEngine_Object__Instantiate_object_(
-              Object_object__51495936,
-              (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      *(_QWORD *)(v7 + 24) = v18;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)v18, v19, v20);
+      v22 = UnityEngine_Object__Instantiate_object_(
+              Object_object__51560868,
+              (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      *(_QWORD *)(v7 + 24) = v22;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)v22, v23, v24, v25, v26, v27, v28);
       Instance = *(UnityEngine_GameObject_o **)(v7 + 24);
       if ( !Instance )
         goto LABEL_40;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            Instance,
-                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ResetSelectDialog___);
+                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ResetSelectDialog___);
       *(_QWORD *)(v7 + 16) = Component_object;
-      v22 = (UnityEngine_GameObject_o **)(v7 + 16);
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)Component_object, v23, v24);
+      v30 = (UnityEngine_GameObject_o **)(v7 + 16);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)Component_object, v31, v32, v33, v34, v35, v36);
       Instance = *(UnityEngine_GameObject_o **)(v7 + 16);
       if ( !Instance )
         goto LABEL_40;
       ResetSelectDialog__Init((ResetSelectDialog_o *)Instance, v9);
-      Instance = *v22;
-      if ( !*v22 )
+      Instance = *v30;
+      if ( !*v30 )
         goto LABEL_40;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)Instance, 0);
-      Instance = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !Instance )
         goto LABEL_40;
       Instance = (UnityEngine_GameObject_o *)Instance[5].fields.m_CachedPtr;
@@ -192,24 +224,24 @@ void DataLostResetManager__OpenBattleResultResetDialog(
       if ( !transform )
         goto LABEL_40;
       UnityEngine_Transform__SetParent(transform, (UnityEngine_Transform_o *)Instance, 0);
-      Instance = *v22;
-      if ( !*v22 )
+      Instance = *v30;
+      if ( !*v30 )
         goto LABEL_40;
       Instance = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                (UnityEngine_Component_o *)Instance,
                                                0);
-      v26 = (UnityEngine_Transform_o *)Instance;
-      if ( !byte_4CAFC0E )
+      v38 = (UnityEngine_Transform_o *)Instance;
+      if ( !byte_4CC0D0E )
       {
-        Instance = (UnityEngine_GameObject_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-        byte_4CAFC0E = 1;
+        Instance = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+        byte_4CC0D0E = 1;
       }
-      if ( !v26 )
+      if ( !v38 )
         goto LABEL_40;
-      UnityEngine_Transform__set_localScale(v26, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+      UnityEngine_Transform__set_localScale(v38, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Instance = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
+      Instance = (UnityEngine_GameObject_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
       if ( !Instance )
         goto LABEL_40;
       if ( EventDataLostBattleMaster__GetEventDataLostBattleId(
@@ -220,31 +252,31 @@ void DataLostResetManager__OpenBattleResultResetDialog(
       {
         if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-        DataLostResetManager__SetTitleInfoTouchEnable(0, v27);
-        v28 = (ResetSelectDialog_o *)*v22;
+        DataLostResetManager__SetTitleInfoTouchEnable(0, v39);
+        v40 = (ResetSelectDialog_o *)*v30;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v29 = LocalizationManager__Get((System_String_o *)StringLiteral_5577/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_TITLE"*/, 0);
-        v30 = LocalizationManager__Get((System_String_o *)StringLiteral_5576/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_MESSAGE"*/, 0);
-        v31 = LocalizationManager__Get((System_String_o *)StringLiteral_5575/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_BUTTON"*/, 0);
-        v32 = (ResetSelectDialog_ClickDelegate_o *)sub_1C6BC54(ResetSelectDialog_ClickDelegate_TypeInfo);
+        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_5580/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_TITLE"*/, 0);
+        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_5579/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_MESSAGE"*/, 0);
+        v43 = LocalizationManager__Get((System_String_o *)StringLiteral_5578/*"EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_BUTTON"*/, 0);
+        v44 = (ResetSelectDialog_ClickDelegate_o *)sub_1C715FC(ResetSelectDialog_ClickDelegate_TypeInfo);
         ResetSelectDialog_ClickDelegate___ctor(
-          v32,
+          v44,
           (Il2CppObject *)v7,
           Method_DataLostResetManager___c__DisplayClass8_0__OpenBattleResultResetDialog_b__0__,
-          v33);
-        if ( v28 )
+          v45);
+        if ( v40 )
         {
-          ResetSelectDialog__OpenSingleButton(v28, v29, v30, v31, v32, v34);
+          ResetSelectDialog__OpenSingleButton(v40, v41, v42, v43, v44, v46);
           return;
         }
 LABEL_40:
-        sub_1C6BC60(Instance, v9);
+        sub_1C71608(Instance, v9);
       }
-      v35 = *(UnityEngine_Object_o **)(v7 + 24);
+      v47 = *(UnityEngine_Object_o **)(v7 + 24);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71659676(v35, 0);
+      UnityEngine_Object__Destroy_71724608(v47, 0);
     }
   }
   ActionExtensions__Call(*(System_Action_o **)(v7 + 32), 0);
@@ -264,160 +296,172 @@ void DataLostResetManager__OpenConfirmDialog(
   UnityEngine_GameObject_o *mInstance; // x0
   const MethodInfo *v14; // x1
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  const MethodInfo *v17; // x2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  const MethodInfo *v21; // x2
   System_String_o *EventAssetName; // x20
   AssetData_o *AssetStorage; // x0
-  AssetData_o *v20; // x20
-  DataLostResetManager_c *v21; // x0
-  Il2CppObject *Object_object__51495936; // x20
-  Il2CppObject *v23; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  Il2CppObject *Component_object; // x0
-  BaseDialog_o **v27; // x20
+  AssetData_o *v24; // x20
+  DataLostResetManager_c *v25; // x0
+  Il2CppObject *Object_object__51560868; // x20
+  Il2CppObject *v27; // x0
   int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  TerminalSceneComponent_c *v30; // x0
-  System_String_o *v31; // x0
-  System_String_o *v32; // x21
-  System_String_o *v33; // x22
-  System_String_o *v34; // x0
-  System_String_o *v35; // x0
-  bool v36; // w0
-  BaseDialog_o *v37; // x21
-  System_String_o *v38; // x20
-  System_String_o *v39; // x0
-  int v40; // w24
-  System_String_o *v41; // x22
-  ResetConfirmDialog_ClickDelegate_o *v42; // x23
-  const MethodInfo *v43; // x3
-  const MethodInfo *v44; // x5
-  int32_t v45; // [xsp+Ch] [xbp-54h] BYREF
-  System_Nullable_Vector3__o v46; // 0:x2.16
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  Il2CppObject *Component_object; // x0
+  BaseDialog_o **v35; // x20
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
+  TerminalSceneComponent_c *v42; // x0
+  System_String_o *v43; // x0
+  System_String_o *v44; // x21
+  System_String_o *v45; // x22
+  System_String_o *v46; // x0
+  System_String_o *v47; // x0
+  bool v48; // w0
+  BaseDialog_o *v49; // x21
+  System_String_o *v50; // x20
+  System_String_o *v51; // x0
+  int v52; // w24
+  System_String_o *v53; // x22
+  ResetConfirmDialog_ClickDelegate_o *v54; // x23
+  const MethodInfo *v55; // x3
+  const MethodInfo *v56; // x5
+  int32_t v57; // [xsp+Ch] [xbp-54h] BYREF
+  System_Nullable_Vector3__o v58; // 0:x2.16
 
-  v45 = selectNo;
-  if ( (byte_4CB57BD & 1) == 0 )
+  v57 = selectNo;
+  if ( (byte_4CC68DE & 1) == 0 )
   {
-    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&ResetConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C6BA08(&DataLostResetManager_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ResetConfirmDialog___);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    sub_1C6BA08(&Method_DataLostResetManager___c__DisplayClass7_0__OpenConfirmDialog_b__0__);
-    sub_1C6BA08(&DataLostResetManager___c__DisplayClass7_0_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5583/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_5582/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB57BD = 1;
+    sub_1C713B0(&Method_AssetData_GetObject_GameObject____78636968);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&ResetConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C713B0(&DataLostResetManager_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_ResetConfirmDialog___);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    sub_1C713B0(&Method_DataLostResetManager___c__DisplayClass7_0__OpenConfirmDialog_b__0__);
+    sub_1C713B0(&DataLostResetManager___c__DisplayClass7_0_TypeInfo);
+    sub_1C713B0(&StringLiteral_5586/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_TITLE"*/);
+    sub_1C713B0(&StringLiteral_5585/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC68DE = 1;
   }
-  v12 = sub_1C6BC54(DataLostResetManager___c__DisplayClass7_0_TypeInfo);
+  v12 = sub_1C715FC(DataLostResetManager___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v12, 0);
   if ( !v12 )
     goto LABEL_35;
   *(_QWORD *)(v12 + 32) = resetDelegate;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 32), (int32_t)resetDelegate, v15, v16);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v12 + 32), (int32_t)resetDelegate, v15, v16, v17, v18, v19, v20);
   *(_DWORD *)(v12 + 40) = resetIdx;
   *(_BYTE *)(v12 + 44) = isBackReturn;
   *(_DWORD *)(v12 + 48) = eventId;
   *(_DWORD *)(v12 + 52) = warId;
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-  EventAssetName = DataLostResetManager__GetEventAssetName(eventId, warId, v17);
+  EventAssetName = DataLostResetManager__GetEventAssetName(eventId, warId, v21);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorage = AssetManager__getAssetStorage(EventAssetName, 0);
   if ( AssetStorage )
   {
-    v20 = AssetStorage;
-    v21 = DataLostResetManager_TypeInfo;
+    v24 = AssetStorage;
+    v25 = DataLostResetManager_TypeInfo;
     if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-      v21 = DataLostResetManager_TypeInfo;
+      v25 = DataLostResetManager_TypeInfo;
     }
-    Object_object__51495936 = AssetData__GetObject_object__51495936(
-                                v20,
-                                v21->static_fields->PREFAB_CONFIRM_DIALOG_NAME,
-                                (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+    Object_object__51560868 = AssetData__GetObject_object__51560868(
+                                v24,
+                                v25->static_fields->PREFAB_CONFIRM_DIALOG_NAME,
+                                (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51495936, 0, 0) )
+    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51560868, 0, 0) )
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v23 = UnityEngine_Object__Instantiate_object_(
-              Object_object__51495936,
-              (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      *(_QWORD *)(v12 + 24) = v23;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 24), (int32_t)v23, v24, v25);
+      v27 = UnityEngine_Object__Instantiate_object_(
+              Object_object__51560868,
+              (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      *(_QWORD *)(v12 + 24) = v27;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v12 + 24), (int32_t)v27, v28, v29, v30, v31, v32, v33);
       mInstance = *(UnityEngine_GameObject_o **)(v12 + 24);
       if ( mInstance )
       {
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              mInstance,
-                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ResetConfirmDialog___);
+                             (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ResetConfirmDialog___);
         *(_QWORD *)(v12 + 16) = Component_object;
-        v27 = (BaseDialog_o **)(v12 + 16);
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 16), (int32_t)Component_object, v28, v29);
+        v35 = (BaseDialog_o **)(v12 + 16);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v12 + 16), (int32_t)Component_object, v36, v37, v38, v39, v40, v41);
         mInstance = *(UnityEngine_GameObject_o **)(v12 + 16);
         if ( mInstance )
         {
           ResetConfirmDialog__Init((ResetConfirmDialog_o *)mInstance, v14);
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-          if ( !byte_4CB01CE )
+          if ( !byte_4CC12CE )
           {
-            sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-            byte_4CB01CE = 1;
+            sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+            byte_4CC12CE = 1;
           }
-          v30 = TerminalSceneComponent_TypeInfo;
+          v42 = TerminalSceneComponent_TypeInfo;
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-            v30 = TerminalSceneComponent_TypeInfo;
+            v42 = TerminalSceneComponent_TypeInfo;
           }
-          mInstance = (UnityEngine_GameObject_o *)v30->static_fields->mInstance;
+          mInstance = (UnityEngine_GameObject_o *)v42->static_fields->mInstance;
           if ( mInstance )
           {
-            *(_QWORD *)&v46.fields.hasValue = 0;
-            *(_QWORD *)&v46.fields.value.fields.y = 0;
-            TerminalSceneComponent__LocateDialogToUiRoot((TerminalSceneComponent_o *)mInstance, *v27, v46, 0);
-            v31 = System_Int32__ToString((int32_t)&v45, 0);
-            v32 = System_String__Concat_63966792((System_String_o *)StringLiteral_5582/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_"*/, v31, 0);
+            *(_QWORD *)&v58.fields.hasValue = 0;
+            *(_QWORD *)&v58.fields.value.fields.y = 0;
+            TerminalSceneComponent__LocateDialogToUiRoot((TerminalSceneComponent_o *)mInstance, *v35, v58, 0);
+            v43 = System_Int32__ToString((int32_t)&v57, 0);
+            v44 = System_String__Concat_64031724((System_String_o *)StringLiteral_5585/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_"*/, v43, 0);
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v33 = LocalizationManager__Get(v32, 0);
-            v34 = System_Int32__ToString((int32_t)&v45, 0);
-            v35 = System_String__Concat_63966792((System_String_o *)StringLiteral_5582/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_"*/, v34, 0);
-            v36 = System_String__op_Equality(v33, v35, 0);
-            v37 = *v27;
-            v38 = v36 ? (System_String_o *)StringLiteral_1/*""*/ : v33;
+            v45 = LocalizationManager__Get(v44, 0);
+            v46 = System_Int32__ToString((int32_t)&v57, 0);
+            v47 = System_String__Concat_64031724((System_String_o *)StringLiteral_5585/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_"*/, v46, 0);
+            v48 = System_String__op_Equality(v45, v47, 0);
+            v49 = *v35;
+            v50 = v48 ? (System_String_o *)StringLiteral_1/*""*/ : v45;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v39 = LocalizationManager__Get((System_String_o *)StringLiteral_5583/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_TITLE"*/, 0);
-            v40 = *(unsigned __int8 *)(v12 + 44);
-            v41 = v39;
-            v42 = (ResetConfirmDialog_ClickDelegate_o *)sub_1C6BC54(ResetConfirmDialog_ClickDelegate_TypeInfo);
+            v51 = LocalizationManager__Get((System_String_o *)StringLiteral_5586/*"EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_TITLE"*/, 0);
+            v52 = *(unsigned __int8 *)(v12 + 44);
+            v53 = v51;
+            v54 = (ResetConfirmDialog_ClickDelegate_o *)sub_1C715FC(ResetConfirmDialog_ClickDelegate_TypeInfo);
             ResetConfirmDialog_ClickDelegate___ctor(
-              v42,
+              v54,
               (Il2CppObject *)v12,
               Method_DataLostResetManager___c__DisplayClass7_0__OpenConfirmDialog_b__0__,
-              v43);
-            if ( v37 )
+              v55);
+            if ( v49 )
             {
-              ResetConfirmDialog__Open((ResetConfirmDialog_o *)v37, v41, v38, v40 != 0, v42, v44);
+              ResetConfirmDialog__Open((ResetConfirmDialog_o *)v49, v53, v50, v52 != 0, v54, v56);
               return;
             }
           }
         }
       }
 LABEL_35:
-      sub_1C6BC60(mInstance, v14);
+      sub_1C71608(mInstance, v14);
     }
   }
 }
@@ -434,80 +478,96 @@ void DataLostResetManager__OpenResetSelectDialog(
   void *mInstance; // x0
   const MethodInfo *v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x2
-  int32_t v15; // w20
-  int32_t v16; // w21
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  const MethodInfo *v18; // x2
+  int32_t v19; // w20
+  int32_t v20; // w21
   System_String_o *EventAssetName; // x20
   AssetData_o *AssetStorage; // x0
-  AssetData_o *v19; // x20
-  DataLostResetManager_c *v20; // x0
-  Il2CppObject *Object_object__51495936; // x20
-  Il2CppObject *v22; // x0
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  Il2CppObject *Component_object; // x0
-  BaseDialog_o **v26; // x20
+  AssetData_o *v23; // x20
+  DataLostResetManager_c *v24; // x0
+  Il2CppObject *Object_object__51560868; // x20
+  Il2CppObject *v26; // x0
   int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  TerminalSceneComponent_c *v29; // x0
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  Il2CppObject *Component_object; // x0
+  BaseDialog_o **v34; // x20
+  int32_t v35; // w2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  int32_t v38; // w5
+  int64_t v39; // x6
+  System_String_o *v40; // x7
+  TerminalSceneComponent_c *v41; // x0
   int32_t EventDataLostBattleId; // w0
-  const MethodInfo *v31; // x1
-  int32_t v32; // w21
-  System_Collections_Generic_List_object__o *v33; // x23
-  System_String_o *v34; // x21
-  __int64 v35; // x0
-  __int64 *v36; // x24
-  int32_t v37; // w2
-  const MethodInfo *v38; // x3
-  System_String_o *v39; // x0
-  System_String_o *v40; // x0
-  System_String_o *v41; // x22
-  System_String_o *v42; // x25
-  System_String_o *v43; // x22
-  System_String_o *v44; // x0
-  __int64 v45; // x24
-  System_String_o *v46; // x25
-  __int64 v47; // x28
-  __int64 v48; // x24
-  BaseDialog_o *v49; // x20
-  System_String_o *v50; // x0
-  int v51; // w26
-  System_String_o *v52; // x23
-  ResetSelectDialog_ClickDelegate_o *v53; // x24
-  const MethodInfo *v54; // x3
-  const MethodInfo *v55; // x7
-  int v56; // [xsp+Ch] [xbp-54h] BYREF
-  System_Nullable_Vector3__o v57; // 0:x2.16
+  const MethodInfo *v43; // x1
+  int32_t v44; // w21
+  System_Collections_Generic_List_object__o *v45; // x23
+  System_String_o *v46; // x21
+  __int64 v47; // x0
+  __int64 *v48; // x24
+  int32_t v49; // w2
+  int32_t v50; // w3
+  System_String_o *v51; // x4
+  int32_t v52; // w5
+  int64_t v53; // x6
+  System_String_o *v54; // x7
+  System_String_o *v55; // x0
+  System_String_o *v56; // x0
+  System_String_o *v57; // x22
+  System_String_o *v58; // x25
+  System_String_o *v59; // x22
+  System_String_o *v60; // x0
+  __int64 v61; // x24
+  System_String_o *v62; // x25
+  __int64 v63; // x28
+  __int64 v64; // x24
+  BaseDialog_o *v65; // x20
+  System_String_o *v66; // x0
+  int v67; // w26
+  System_String_o *v68; // x23
+  ResetSelectDialog_ClickDelegate_o *v69; // x24
+  const MethodInfo *v70; // x3
+  const MethodInfo *v71; // x7
+  int v72; // [xsp+Ch] [xbp-54h] BYREF
+  System_Nullable_Vector3__o v73; // 0:x2.16
 
-  if ( (byte_4CB57BC & 1) == 0 )
+  if ( (byte_4CC68DD & 1) == 0 )
   {
-    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&ResetSelectDialog_ClickDelegate_TypeInfo);
-    sub_1C6BA08(&DataLostResetManager_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMaster_EventDataLostBattleMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_EventDataLostBattleResetMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ResetSelectDialog___);
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    sub_1C6BA08(&Method_DataLostResetManager___c__DisplayClass6_0__OpenResetSelectDialog_b__0__);
-    sub_1C6BA08(&DataLostResetManager___c__DisplayClass6_0_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16272/*"_NO_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_5585/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_5586/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_MESSAGE_"*/);
-    sub_1C6BA08(&StringLiteral_5587/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB57BC = 1;
+    sub_1C713B0(&Method_AssetData_GetObject_GameObject____78636968);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&ResetSelectDialog_ClickDelegate_TypeInfo);
+    sub_1C713B0(&DataLostResetManager_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMaster_EventDataLostBattleMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_EventDataLostBattleResetMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_ResetSelectDialog___);
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    sub_1C713B0(&Method_DataLostResetManager___c__DisplayClass6_0__OpenResetSelectDialog_b__0__);
+    sub_1C713B0(&DataLostResetManager___c__DisplayClass6_0_TypeInfo);
+    sub_1C713B0(&StringLiteral_16279/*"_NO_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_5588/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_5589/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_MESSAGE_"*/);
+    sub_1C713B0(&StringLiteral_5590/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_TITLE"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC68DD = 1;
   }
-  v56 = 0;
-  v9 = sub_1C6BC54(DataLostResetManager___c__DisplayClass6_0_TypeInfo);
+  v72 = 0;
+  v9 = sub_1C715FC(DataLostResetManager___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_63;
@@ -515,74 +575,74 @@ void DataLostResetManager__OpenResetSelectDialog(
   *(_DWORD *)(v9 + 32) = eventId;
   *(_DWORD *)(v9 + 36) = warId;
   *(_BYTE *)(v9 + 48) = isNoCancel;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 56), (int32_t)resetDelegate, v12, v13);
-  v16 = *(_DWORD *)(v9 + 32);
-  v15 = *(_DWORD *)(v9 + 36);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 56), (int32_t)resetDelegate, v12, v13, v14, v15, v16, v17);
+  v20 = *(_DWORD *)(v9 + 32);
+  v19 = *(_DWORD *)(v9 + 36);
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-  EventAssetName = DataLostResetManager__GetEventAssetName(v16, v15, v14);
+  EventAssetName = DataLostResetManager__GetEventAssetName(v20, v19, v18);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorage = AssetManager__getAssetStorage(EventAssetName, 0);
   if ( AssetStorage )
   {
-    v19 = AssetStorage;
-    v20 = DataLostResetManager_TypeInfo;
+    v23 = AssetStorage;
+    v24 = DataLostResetManager_TypeInfo;
     if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-      v20 = DataLostResetManager_TypeInfo;
+      v24 = DataLostResetManager_TypeInfo;
     }
-    Object_object__51495936 = AssetData__GetObject_object__51495936(
-                                v19,
-                                v20->static_fields->PREFAB_SELECT_DIALOG_NAME,
-                                (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+    Object_object__51560868 = AssetData__GetObject_object__51560868(
+                                v23,
+                                v24->static_fields->PREFAB_SELECT_DIALOG_NAME,
+                                (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51495936, 0, 0) )
+    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51560868, 0, 0) )
     {
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v22 = UnityEngine_Object__Instantiate_object_(
-              Object_object__51495936,
-              (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      *(_QWORD *)(v9 + 24) = v22;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)v22, v23, v24);
+      v26 = UnityEngine_Object__Instantiate_object_(
+              Object_object__51560868,
+              (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      *(_QWORD *)(v9 + 24) = v26;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)v26, v27, v28, v29, v30, v31, v32);
       mInstance = *(void **)(v9 + 24);
       if ( !mInstance )
         goto LABEL_63;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)mInstance,
-                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ResetSelectDialog___);
+                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ResetSelectDialog___);
       *(_QWORD *)(v9 + 16) = Component_object;
-      v26 = (BaseDialog_o **)(v9 + 16);
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)Component_object, v27, v28);
+      v34 = (BaseDialog_o **)(v9 + 16);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)Component_object, v35, v36, v37, v38, v39, v40);
       mInstance = *(void **)(v9 + 16);
       if ( !mInstance )
         goto LABEL_63;
       ResetSelectDialog__Init((ResetSelectDialog_o *)mInstance, v11);
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      if ( !byte_4CB01CE )
+      if ( !byte_4CC12CE )
       {
-        sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-        byte_4CB01CE = 1;
+        sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+        byte_4CC12CE = 1;
       }
-      v29 = TerminalSceneComponent_TypeInfo;
+      v41 = TerminalSceneComponent_TypeInfo;
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-        v29 = TerminalSceneComponent_TypeInfo;
+        v41 = TerminalSceneComponent_TypeInfo;
       }
-      mInstance = v29->static_fields->mInstance;
+      mInstance = v41->static_fields->mInstance;
       if ( !mInstance )
         goto LABEL_63;
-      *(_QWORD *)&v57.fields.hasValue = 0;
-      *(_QWORD *)&v57.fields.value.fields.y = 0;
-      TerminalSceneComponent__LocateDialogToUiRoot((TerminalSceneComponent_o *)mInstance, *v26, v57, 0);
+      *(_QWORD *)&v73.fields.hasValue = 0;
+      *(_QWORD *)&v73.fields.value.fields.y = 0;
+      TerminalSceneComponent__LocateDialogToUiRoot((TerminalSceneComponent_o *)mInstance, *v34, v73, 0);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      mInstance = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
+      mInstance = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
       if ( !mInstance )
         goto LABEL_63;
       EventDataLostBattleId = EventDataLostBattleMaster__GetEventDataLostBattleId(
@@ -592,97 +652,97 @@ void DataLostResetManager__OpenResetSelectDialog(
                                 0);
       if ( EventDataLostBattleId == -1 )
         return;
-      v32 = EventDataLostBattleId;
+      v44 = EventDataLostBattleId;
       if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-      DataLostResetManager__SetTitleInfoTouchEnable(0, v31);
+      DataLostResetManager__SetTitleInfoTouchEnable(0, v43);
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      mInstance = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_EventDataLostBattleResetMaster___);
+      mInstance = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_EventDataLostBattleResetMaster___);
       if ( !mInstance )
         goto LABEL_63;
       mInstance = EventDataLostBattleResetMaster__GetDataLostBattleResetEntities(
                     (EventDataLostBattleResetMaster_o *)mInstance,
-                    v32,
+                    v44,
                     *(_DWORD *)(v9 + 32),
                     0);
       if ( !mInstance )
         goto LABEL_63;
-      v33 = (System_Collections_Generic_List_object__o *)mInstance;
-      v34 = (System_String_o *)StringLiteral_1/*""*/;
-      v56 = *((_DWORD *)mInstance + 6);
-      v35 = sub_1C6BAB0(int___TypeInfo, 2);
-      *(_QWORD *)(v9 + 40) = v35;
-      v36 = (__int64 *)(v9 + 40);
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 40), v35, v37, v38);
-      v39 = System_Int32__ToString((int32_t)&v56, 0);
-      v40 = System_String__Concat_63966792((System_String_o *)StringLiteral_5586/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_MESSAGE_"*/, v39, 0);
-      v41 = v40;
-      if ( ((v56 > 1) & *(_BYTE *)(v9 + 48)) != 0 )
-        v41 = System_String__Concat_63966792(v40, (System_String_o *)StringLiteral_16272/*"_NO_CANCEL"*/, 0);
+      v45 = (System_Collections_Generic_List_object__o *)mInstance;
+      v46 = (System_String_o *)StringLiteral_1/*""*/;
+      v72 = *((_DWORD *)mInstance + 6);
+      v47 = sub_1C71458(int___TypeInfo, 2);
+      *(_QWORD *)(v9 + 40) = v47;
+      v48 = (__int64 *)(v9 + 40);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 40), v47, v49, v50, v51, v52, v53, v54);
+      v55 = System_Int32__ToString((int32_t)&v72, 0);
+      v56 = System_String__Concat_64031724((System_String_o *)StringLiteral_5589/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_MESSAGE_"*/, v55, 0);
+      v57 = v56;
+      if ( ((v72 > 1) & *(_BYTE *)(v9 + 48)) != 0 )
+        v57 = System_String__Concat_64031724(v56, (System_String_o *)StringLiteral_16279/*"_NO_CANCEL"*/, 0);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v42 = LocalizationManager__Get(v41, 0);
-      if ( System_String__op_Equality(v42, v41, 0) )
-        v43 = (System_String_o *)StringLiteral_1/*""*/;
+      v58 = LocalizationManager__Get(v57, 0);
+      if ( System_String__op_Equality(v58, v57, 0) )
+        v59 = (System_String_o *)StringLiteral_1/*""*/;
       else
-        v43 = v42;
-      if ( v56 >= 2 )
+        v59 = v58;
+      if ( v72 >= 2 )
       {
         mInstance = System_Collections_Generic_List_object___get_Item(
-                      v33,
+                      v45,
                       0,
-                      (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
-        if ( !mInstance )
-          goto LABEL_63;
-        v34 = (System_String_o *)*((_QWORD *)mInstance + 4);
-        mInstance = System_Collections_Generic_List_object___get_Item(
-                      v33,
-                      1,
-                      (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
+                      (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
         if ( !mInstance )
           goto LABEL_63;
         v46 = (System_String_o *)*((_QWORD *)mInstance + 4);
-        v47 = *v36;
         mInstance = System_Collections_Generic_List_object___get_Item(
-                      v33,
-                      0,
-                      (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
-        if ( !mInstance || !v47 )
+                      v45,
+                      1,
+                      (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
+        if ( !mInstance )
           goto LABEL_63;
-        if ( *(_DWORD *)(v47 + 24) )
+        v62 = (System_String_o *)*((_QWORD *)mInstance + 4);
+        v63 = *v48;
+        mInstance = System_Collections_Generic_List_object___get_Item(
+                      v45,
+                      0,
+                      (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
+        if ( !mInstance || !v63 )
+          goto LABEL_63;
+        if ( *(_DWORD *)(v63 + 24) )
         {
-          *(_DWORD *)(v47 + 32) = *((_DWORD *)mInstance + 5);
-          v48 = *v36;
+          *(_DWORD *)(v63 + 32) = *((_DWORD *)mInstance + 5);
+          v64 = *v48;
           mInstance = System_Collections_Generic_List_object___get_Item(
-                        v33,
+                        v45,
                         1,
-                        (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
-          if ( !mInstance || !v48 )
+                        (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
+          if ( !mInstance || !v64 )
             goto LABEL_63;
-          if ( *(_DWORD *)(v48 + 24) > 1u )
+          if ( *(_DWORD *)(v64 + 24) > 1u )
           {
-            *(_DWORD *)(v48 + 36) = *((_DWORD *)mInstance + 5);
+            *(_DWORD *)(v64 + 36) = *((_DWORD *)mInstance + 5);
 LABEL_58:
-            v49 = *v26;
+            v65 = *v34;
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-            v50 = LocalizationManager__Get((System_String_o *)StringLiteral_5587/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_TITLE"*/, 0);
-            v51 = *(unsigned __int8 *)(v9 + 48);
-            v52 = v50;
-            v53 = (ResetSelectDialog_ClickDelegate_o *)sub_1C6BC54(ResetSelectDialog_ClickDelegate_TypeInfo);
+            v66 = LocalizationManager__Get((System_String_o *)StringLiteral_5590/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_TITLE"*/, 0);
+            v67 = *(unsigned __int8 *)(v9 + 48);
+            v68 = v66;
+            v69 = (ResetSelectDialog_ClickDelegate_o *)sub_1C715FC(ResetSelectDialog_ClickDelegate_TypeInfo);
             ResetSelectDialog_ClickDelegate___ctor(
-              v53,
+              v69,
               (Il2CppObject *)v9,
               Method_DataLostResetManager___c__DisplayClass6_0__OpenResetSelectDialog_b__0__,
-              v54);
-            if ( v49 )
+              v70);
+            if ( v65 )
             {
-              ResetSelectDialog__Open((ResetSelectDialog_o *)v49, v52, v43, v34, v46, v51 != 0, v53, v55);
+              ResetSelectDialog__Open((ResetSelectDialog_o *)v65, v68, v59, v46, v62, v67 != 0, v69, v71);
               return;
             }
 LABEL_63:
-            sub_1C6BC60(mInstance, v11);
+            sub_1C71608(mInstance, v11);
           }
         }
       }
@@ -690,22 +750,22 @@ LABEL_63:
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v44 = LocalizationManager__Get((System_String_o *)StringLiteral_5585/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_DECIDE"*/, 0);
-        v45 = *v36;
-        v46 = v44;
+        v60 = LocalizationManager__Get((System_String_o *)StringLiteral_5588/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_DECIDE"*/, 0);
+        v61 = *v48;
+        v62 = v60;
         mInstance = System_Collections_Generic_List_object___get_Item(
-                      v33,
+                      v45,
                       0,
-                      (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
-        if ( !mInstance || !v45 )
+                      (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDataLostBattleResetEntity__get_Item__);
+        if ( !mInstance || !v61 )
           goto LABEL_63;
-        if ( *(_DWORD *)(v45 + 24) )
+        if ( *(_DWORD *)(v61 + 24) )
         {
-          *(_DWORD *)(v45 + 32) = *((_DWORD *)mInstance + 5);
+          *(_DWORD *)(v61 + 32) = *((_DWORD *)mInstance + 5);
           goto LABEL_58;
         }
       }
-      sub_1C6BC68(mInstance);
+      sub_1C71610(mInstance);
     }
   }
 }
@@ -719,20 +779,24 @@ System_Collections_IEnumerator_o *DataLostResetManager__PlayGameOverAnimation(
 {
   __int64 v7; // x22
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
-  if ( (byte_4CB57C1 & 1) == 0 )
+  if ( (byte_4CC68E2 & 1) == 0 )
   {
-    sub_1C6BA08(&DataLostResetManager__PlayGameOverAnimation_d__11_TypeInfo);
-    byte_4CB57C1 = 1;
+    sub_1C713B0(&DataLostResetManager__PlayGameOverAnimation_d__11_TypeInfo);
+    byte_4CC68E2 = 1;
   }
-  v7 = sub_1C6BC54(DataLostResetManager__PlayGameOverAnimation_d__11_TypeInfo);
+  v7 = sub_1C715FC(DataLostResetManager__PlayGameOverAnimation_d__11_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_DWORD *)(v7 + 40) = eventId;
   *(_DWORD *)(v7 + 44) = warId;
   *(_QWORD *)(v7 + 32) = endAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)endAction, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)endAction, v8, v9, v10, v11, v12, v13);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -747,17 +811,17 @@ void DataLostResetManager__PlayResetEffect(
   System_Collections_IEnumerator_o *v9; // x0
   __int64 v10; // x1
 
-  if ( (byte_4CB57C0 & 1) == 0 )
+  if ( (byte_4CC68E1 & 1) == 0 )
   {
-    sub_1C6BA08(&DataLostResetManager_TypeInfo);
-    byte_4CB57C0 = 1;
+    sub_1C713B0(&DataLostResetManager_TypeInfo);
+    byte_4CC68E1 = 1;
   }
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
   v9 = DataLostResetManager__PlayGameOverAnimation(eventId, warId, endAction, (const MethodInfo *)endAction);
   if ( !mono )
-    sub_1C6BC60(v9, v10);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868(mono, v9, 0);
+    sub_1C71608(v9, v10);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800(mono, v9, 0);
 }
 
 
@@ -773,17 +837,17 @@ void DataLostResetManager__RequestResetDataLostBattle(
   int32_t EventDataLostBattleId; // w0
   int32_t v12; // w21
 
-  if ( (byte_4CB57BF & 1) == 0 )
+  if ( (byte_4CC68E0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_EventDataLostBattleMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_NetworkManager_getRequest_EventResetDataLostBattleRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB57BF = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_EventDataLostBattleMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_NetworkManager_getRequest_EventResetDataLostBattleRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC68E0 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_EventDataLostBattleMaster___);
   if ( !Master_object )
     goto LABEL_12;
   EventDataLostBattleId = EventDataLostBattleMaster__GetEventDataLostBattleId(
@@ -798,7 +862,7 @@ void DataLostResetManager__RequestResetDataLostBattle(
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Master_object = NetworkManager__getRequest_object_(
                       callback,
-                      (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_EventResetDataLostBattleRequest___);
+                      (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_EventResetDataLostBattleRequest___);
     if ( Master_object )
     {
       EventResetDataLostBattleRequest__beginRequest(
@@ -809,7 +873,7 @@ void DataLostResetManager__RequestResetDataLostBattle(
       return;
     }
 LABEL_12:
-    sub_1C6BC60(Master_object, v10);
+    sub_1C71608(Master_object, v10);
   }
 }
 
@@ -821,18 +885,18 @@ void DataLostResetManager__ResetAfterInit(const MethodInfo *method)
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CB57C2 & 1) == 0 )
+  if ( (byte_4CC68E3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-    byte_4CB57C2 = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
+    byte_4CC68E3 = 1;
   }
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-  if ( !byte_4CB32BF )
+  if ( !byte_4CC43D6 )
   {
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-    byte_4CB32BF = 1;
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
+    byte_4CC43D6 = 1;
   }
   v1 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -841,11 +905,11 @@ void DataLostResetManager__ResetAfterInit(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   v1->static_fields->_isIncomingCall_k__BackingField = 0;
-  if ( !byte_4CB34A4 )
+  if ( !byte_4CC45BB )
   {
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
-    byte_4CB34A4 = 1;
+    byte_4CC45BB = 1;
   }
   if ( !v1->_2.cctor_finished )
   {
@@ -853,11 +917,11 @@ void DataLostResetManager__ResetAfterInit(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   v1->static_fields->_IsStopMasterFaceOverwrite_k__BackingField = 0;
-  if ( !byte_4CB34A5 )
+  if ( !byte_4CC45BC )
   {
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
-    byte_4CB34A5 = 1;
+    byte_4CC45BC = 1;
   }
   if ( !v1->_2.cctor_finished )
   {
@@ -865,11 +929,11 @@ void DataLostResetManager__ResetAfterInit(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   v1->static_fields->_DataLostBattleEventId_k__BackingField = 0;
-  if ( !byte_4CB34A6 )
+  if ( !byte_4CC45BD )
   {
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
-    byte_4CB34A6 = 1;
+    byte_4CC45BD = 1;
   }
   if ( !v1->_2.cctor_finished )
   {
@@ -877,11 +941,11 @@ void DataLostResetManager__ResetAfterInit(const MethodInfo *method)
     v1 = TerminalPramsManager_TypeInfo;
   }
   v1->static_fields->_DataLostBattleWarId_k__BackingField = 0;
-  if ( !byte_4CB0A4E )
+  if ( !byte_4CC1B52 )
   {
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
     v1 = TerminalPramsManager_TypeInfo;
-    byte_4CB0A4E = 1;
+    byte_4CC1B52 = 1;
   }
   if ( !v1->_2.cctor_finished )
   {
@@ -890,10 +954,10 @@ void DataLostResetManager__ResetAfterInit(const MethodInfo *method)
   }
   v1->static_fields->_IsAutoResume_k__BackingField = 1;
   TopHomeRequest__clearExpirationDate(0);
-  if ( !byte_4CB3498 )
+  if ( !byte_4CC45AF )
   {
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-    byte_4CB3498 = 1;
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
+    byte_4CC45AF = 1;
   }
   v2 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -902,11 +966,11 @@ void DataLostResetManager__ResetAfterInit(const MethodInfo *method)
     v2 = TerminalPramsManager_TypeInfo;
   }
   v2->static_fields->_IsDataLostBattleResetFadeIn_k__BackingField = 1;
-  if ( !byte_4CB3499 )
+  if ( !byte_4CC45B0 )
   {
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
     v2 = TerminalPramsManager_TypeInfo;
-    byte_4CB3499 = 1;
+    byte_4CC45B0 = 1;
   }
   if ( !v2->_2.cctor_finished )
   {
@@ -914,11 +978,11 @@ void DataLostResetManager__ResetAfterInit(const MethodInfo *method)
     v2 = TerminalPramsManager_TypeInfo;
   }
   v2->static_fields->_DataLostBattleResetFadeInTime_k__BackingField = 3.0;
-  if ( !byte_4CB36D5 )
+  if ( !byte_4CC47ED )
   {
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
     v2 = TerminalPramsManager_TypeInfo;
-    byte_4CB36D5 = 1;
+    byte_4CC47ED = 1;
   }
   if ( !v2->_2.cctor_finished )
   {
@@ -926,9 +990,9 @@ void DataLostResetManager__ResetAfterInit(const MethodInfo *method)
     v2 = TerminalPramsManager_TypeInfo;
   }
   v2->static_fields->_IsDataLostBattleNoticePause_k__BackingField = 0;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   AvalonSceneManager__transitionSceneRefresh((AvalonSceneManager_o *)Instance, 34, 2, 0, 0, 0);
 }
 
@@ -941,18 +1005,18 @@ void DataLostResetManager__SetTitleInfoTouchEnable(bool flag, const MethodInfo *
   TitleInfoControl_o *genericContainerHandle; // x0
   UISprite_c *klass; // x8
 
-  if ( (byte_4CB57BA & 1) == 0 )
+  if ( (byte_4CC68DB & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB57BA = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC68DB = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CB01CE )
+  if ( !byte_4CC12CE )
   {
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB01CE = 1;
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC12CE = 1;
   }
   v3 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -967,10 +1031,10 @@ void DataLostResetManager__SetTitleInfoTouchEnable(bool flag, const MethodInfo *
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4CB01CE )
+    if ( !byte_4CC12CE )
     {
-      sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-      byte_4CB01CE = 1;
+      sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+      byte_4CC12CE = 1;
     }
     genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -980,7 +1044,7 @@ void DataLostResetManager__SetTitleInfoTouchEnable(bool flag, const MethodInfo *
     }
     klass = genericContainerHandle->fields.mEventBgSp->klass;
     if ( !klass || (genericContainerHandle = (TitleInfoControl_o *)klass->_2.genericContainerHandle) == 0 )
-      sub_1C6BC60(genericContainerHandle, v5);
+      sub_1C71608(genericContainerHandle, v5);
     TitleInfoControl__SetTouchEnable(genericContainerHandle, flag, 0);
   }
 }
@@ -992,28 +1056,40 @@ void DataLostResetManager_ClickDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  intptr_t v8; // x8
+  int v12; // w22
   Il2CppObject *m_target; // x9
-  __int64 v10; // x0
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C6BAC8(method) & 1) == 0 )
+  if ( (sub_1C71470(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C6BB30(v10, 0);
+      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C714D8(v14, 0);
     }
     goto LABEL_5;
   }
-  if ( v8 != 1 )
+  if ( v12 != 1 )
   {
 LABEL_5:
     m_target = this->fields.m_target;
@@ -1021,9 +1097,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA1C48;
+  this->fields.invoke_impl = (intptr_t)sub_1AA7150;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA1C00;
+  this->fields.extra_arg = (intptr_t)sub_1AA7108;
 }
 
 
@@ -1038,14 +1114,14 @@ System_IAsyncResult_o *DataLostResetManager_ClickDelegate__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = resetIdx;
-  if ( (byte_4CB57C4 & 1) == 0 )
+  if ( (byte_4CC68E5 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    byte_4CB57C4 = 1;
+    sub_1C713B0(&int_TypeInfo);
+    byte_4CC68E5 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C71364(this, v9, callback, object);
 }
 
 
@@ -1054,7 +1130,7 @@ void DataLostResetManager_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C6B9C0(result, 0, method);
+  sub_1C71368(result, 0, method);
 }
 
 
@@ -1088,87 +1164,119 @@ bool DataLostResetManager__PlayGameOverAnimation_d__11__MoveNext(
   Il2CppObject *v4; // x21
   struct DataLostResetManager___c__DisplayClass11_0_o **p__8__1; // x20
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  __int64 v8; // x1
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  __int64 v12; // x1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
   void *clip; // x0
   struct System_Action_o *endAction; // x1
-  const MethodInfo *v13; // x2
+  const MethodInfo *v21; // x2
   int32_t warId; // w21
   int32_t eventId; // w22
   System_String_o *EventAssetName; // x21
   AssetData_o *AssetStorage; // x0
-  AssetData_o *v18; // x21
-  DataLostResetManager_c *v19; // x0
-  Il2CppObject *Object_object__51495936; // x21
-  struct DataLostResetManager___c__DisplayClass11_0_o *v21; // x22
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  AssetData_o *v26; // x21
+  DataLostResetManager_c *v27; // x0
+  Il2CppObject *Object_object__51560868; // x21
+  struct DataLostResetManager___c__DisplayClass11_0_o *v29; // x22
+  int32_t v30; // w2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  int32_t v33; // w5
+  int64_t v34; // x6
+  System_String_o *v35; // x7
   UnityEngine_GameObject_o *gameOverEffect; // x21
-  __int64 v25; // x8
-  int32_t v26; // w1
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  struct DataLostResetManager___c__DisplayClass11_0_o *v29; // x8
+  __int64 v37; // x8
+  int32_t v38; // w1
+  int32_t v39; // w2
+  int32_t v40; // w3
+  System_String_o *v41; // x4
+  int32_t v42; // w5
+  int64_t v43; // x6
+  System_String_o *v44; // x7
+  struct DataLostResetManager___c__DisplayClass11_0_o *v45; // x8
   Il2CppObject *Component_object; // x22
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
-  float v33; // s8
-  float v34; // s9
+  int32_t v47; // w2
+  int32_t v48; // w3
+  System_String_o *v49; // x4
+  int32_t v50; // w5
+  int64_t v51; // x6
+  System_String_o *v52; // x7
+  float v53; // s8
+  float v54; // s9
   struct System_String_o *klass; // x1
   System_String_o *whiteOutSe_5__3; // x0
-  _QWORD *v37; // x0
-  System_Reflection_MethodBase_o *v38; // x0
+  _QWORD *v57; // x0
+  System_Reflection_MethodBase_o *v58; // x0
   Il2CppObject *Instance; // x0
   float whiteOutTime_5__2; // s8
   Il2CppObject *_8__1; // x21
-  CommonUI_o *v42; // x19
-  System_Action_o *v43; // x20
-  DataLostResetManager___c_c *v44; // x0
+  CommonUI_o *v62; // x19
+  System_Action_o *v63; // x20
+  DataLostResetManager___c_c *v64; // x0
   System_Func_bool__o *_9__11_0; // x20
-  Il2CppObject *v46; // x21
+  Il2CppObject *v66; // x21
   struct DataLostResetManager___c_StaticFields *static_fields; // x0
-  int32_t v48; // w2
-  const MethodInfo *v49; // x3
-  UnityEngine_WaitWhile_o *v50; // x21
+  int32_t v68; // w2
+  int32_t v69; // w3
+  System_String_o *v70; // x4
+  int32_t v71; // w5
+  int64_t v72; // x6
+  System_String_o *v73; // x7
+  UnityEngine_WaitWhile_o *v74; // x21
   Il2CppObject **p__2__current; // x19
-  int32_t v52; // w2
-  const MethodInfo *v53; // x3
-  struct DataLostResetManager___c__DisplayClass11_0_o *v54; // x8
-  UnityEngine_Object_o *v55; // x20
-  UnityEngine_Object_o *v56; // x21
+  int32_t v76; // w2
+  int32_t v77; // w3
+  System_String_o *v78; // x4
+  int32_t v79; // w5
+  int64_t v80; // x6
+  System_String_o *v81; // x7
+  struct DataLostResetManager___c__DisplayClass11_0_o *v82; // x8
+  UnityEngine_Object_o *v83; // x20
+  UnityEngine_Object_o *v84; // x21
   System_String_o *name; // x0
-  System_String_o *v58; // x0
-  UnityEngine_WaitForSeconds_o *v59; // x20
-  Il2CppObject **v60; // x19
-  int32_t v61; // w2
-  const MethodInfo *v62; // x3
+  System_String_o *v86; // x0
+  UnityEngine_WaitForSeconds_o *v87; // x20
+  Il2CppObject **v88; // x19
+  int32_t v89; // w2
+  int32_t v90; // w3
+  System_String_o *v91; // x4
+  int32_t v92; // w5
+  int64_t v93; // x6
+  System_String_o *v94; // x7
 
-  if ( (byte_4CB57CE & 1) == 0 )
+  if ( (byte_4CC68EF & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&DataLostResetManager_TypeInfo);
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_DataLostResetEffectComponent___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&SoundManager_TypeInfo);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    sub_1C6BA08(&Method_DataLostResetManager__PlayGameOverAnimation_d__11_MoveNext__);
-    sub_1C6BA08(&Method_DataLostResetManager___c__PlayGameOverAnimation_b__11_0__);
-    sub_1C6BA08(&Method_DataLostResetManager___c__DisplayClass11_0__PlayGameOverAnimation_b__1__);
-    sub_1C6BA08(&DataLostResetManager___c__DisplayClass11_0_TypeInfo);
-    sub_1C6BA08(&DataLostResetManager___c_TypeInfo);
-    sub_1C6BA08(&UnityEngine_WaitForSeconds_TypeInfo);
-    sub_1C6BA08(&UnityEngine_WaitWhile_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB57CE = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_AssetData_GetObject_GameObject____78636968);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&DataLostResetManager_TypeInfo);
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_DataLostResetEffectComponent___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&SoundManager_TypeInfo);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    sub_1C713B0(&Method_DataLostResetManager__PlayGameOverAnimation_d__11_MoveNext__);
+    sub_1C713B0(&Method_DataLostResetManager___c__PlayGameOverAnimation_b__11_0__);
+    sub_1C713B0(&Method_DataLostResetManager___c__DisplayClass11_0__PlayGameOverAnimation_b__1__);
+    sub_1C713B0(&DataLostResetManager___c__DisplayClass11_0_TypeInfo);
+    sub_1C713B0(&DataLostResetManager___c_TypeInfo);
+    sub_1C713B0(&UnityEngine_WaitForSeconds_TypeInfo);
+    sub_1C713B0(&UnityEngine_WaitWhile_TypeInfo);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC68EF = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 2 )
@@ -1177,52 +1285,60 @@ bool DataLostResetManager__PlayGameOverAnimation_d__11__MoveNext(
     this->fields.__1__state = -1;
     if ( !System_String__IsNullOrEmpty(whiteOutSe_5__3, 0) )
     {
-      v37 = Method_DataLostResetManager__PlayGameOverAnimation_d__11_MoveNext__;
+      v57 = Method_DataLostResetManager__PlayGameOverAnimation_d__11_MoveNext__;
       if ( (*((_BYTE *)Method_DataLostResetManager__PlayGameOverAnimation_d__11_MoveNext__ + 83) & 2) != 0 )
-        v37 = (_QWORD *)sub_1C6BA20(Method_DataLostResetManager__PlayGameOverAnimation_d__11_MoveNext__);
-      v38 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v37, v37[4]);
-      OverwriteAssetSoundName__PlaySe(v38, this->fields._whiteOutSe_5__3, 0, 0);
+        v57 = (_QWORD *)sub_1C713C8(Method_DataLostResetManager__PlayGameOverAnimation_d__11_MoveNext__);
+      v58 = (System_Reflection_MethodBase_o *)sub_1C71394(v57, v57[4]);
+      OverwriteAssetSoundName__PlaySe(v58, this->fields._whiteOutSe_5__3, 0, 0);
     }
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     whiteOutTime_5__2 = this->fields._whiteOutTime_5__2;
     _8__1 = (Il2CppObject *)this->fields.__8__1;
-    v42 = (CommonUI_o *)Instance;
-    v43 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v43, _8__1, Method_DataLostResetManager___c__DisplayClass11_0__PlayGameOverAnimation_b__1__, 0);
-    if ( !v42 )
+    v62 = (CommonUI_o *)Instance;
+    v63 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v63, _8__1, Method_DataLostResetManager___c__DisplayClass11_0__PlayGameOverAnimation_b__1__, 0);
+    if ( !v62 )
       goto LABEL_70;
-    CommonUI__maskFadeout(v42, 2, whiteOutTime_5__2, v43, 0);
+    CommonUI__maskFadeout(v62, 2, whiteOutTime_5__2, v63, 0);
     goto LABEL_39;
   }
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
-    v44 = DataLostResetManager___c_TypeInfo;
+    v64 = DataLostResetManager___c_TypeInfo;
     if ( !DataLostResetManager___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(DataLostResetManager___c_TypeInfo);
-      v44 = DataLostResetManager___c_TypeInfo;
+      v64 = DataLostResetManager___c_TypeInfo;
     }
-    _9__11_0 = v44->static_fields->__9__11_0;
+    _9__11_0 = v64->static_fields->__9__11_0;
     if ( !_9__11_0 )
     {
-      if ( !v44->_2.cctor_finished )
+      if ( !v64->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v44);
-        v44 = DataLostResetManager___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v64);
+        v64 = DataLostResetManager___c_TypeInfo;
       }
-      v46 = (Il2CppObject *)v44->static_fields->__9;
-      _9__11_0 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
-      System_Func_bool____ctor(_9__11_0, v46, Method_DataLostResetManager___c__PlayGameOverAnimation_b__11_0__, 0);
+      v66 = (Il2CppObject *)v64->static_fields->__9;
+      _9__11_0 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
+      System_Func_bool____ctor(_9__11_0, v66, Method_DataLostResetManager___c__PlayGameOverAnimation_b__11_0__, 0);
       static_fields = DataLostResetManager___c_TypeInfo->static_fields;
       static_fields->__9__11_0 = _9__11_0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__11_0, (int32_t)_9__11_0, v48, v49);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&static_fields->__9__11_0,
+        (int32_t)_9__11_0,
+        v68,
+        v69,
+        v70,
+        v71,
+        v72,
+        v73);
     }
-    v50 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
-    UnityEngine_WaitWhile___ctor(v50, _9__11_0, 0);
-    this->fields.__2__current = (Il2CppObject *)v50;
+    v74 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
+    UnityEngine_WaitWhile___ctor(v74, _9__11_0, 0);
+    this->fields.__2__current = (Il2CppObject *)v74;
     p__2__current = &this->fields.__2__current;
-    sub_1C6B9AC((CGThumbnailListItem_o *)p__2__current, (int32_t)v50, v52, v53);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)p__2__current, (int32_t)v74, v76, v77, v78, v79, v80, v81);
     *((_DWORD *)p__2__current - 2) = 2;
     LOBYTE(AssetStorage) = 1;
     return (char)AssetStorage;
@@ -1234,61 +1350,61 @@ LABEL_39:
     return (char)AssetStorage;
   }
   this->fields.__1__state = -1;
-  v4 = (Il2CppObject *)sub_1C6BC54(DataLostResetManager___c__DisplayClass11_0_TypeInfo);
+  v4 = (Il2CppObject *)sub_1C715FC(DataLostResetManager___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor(v4, 0);
   this->fields.__8__1 = (struct DataLostResetManager___c__DisplayClass11_0_o *)v4;
   p__8__1 = &this->fields.__8__1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__8__1, (int32_t)v4, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__8__1, (int32_t)v4, v6, v7, v8, v9, v10, v11);
   clip = this->fields.__8__1;
   if ( !clip )
     goto LABEL_70;
   endAction = this->fields.endAction;
   *((_QWORD *)clip + 3) = endAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)((char *)clip + 24), (int32_t)endAction, v9, v10);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)((char *)clip + 24), (int32_t)endAction, v13, v14, v15, v16, v17, v18);
   eventId = this->fields.eventId;
   warId = this->fields.warId;
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-  EventAssetName = DataLostResetManager__GetEventAssetName(eventId, warId, v13);
+  EventAssetName = DataLostResetManager__GetEventAssetName(eventId, warId, v21);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorage = AssetManager__getAssetStorage(EventAssetName, 0);
   if ( AssetStorage )
   {
-    v18 = AssetStorage;
-    v19 = DataLostResetManager_TypeInfo;
+    v26 = AssetStorage;
+    v27 = DataLostResetManager_TypeInfo;
     if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-      v19 = DataLostResetManager_TypeInfo;
+      v27 = DataLostResetManager_TypeInfo;
     }
-    Object_object__51495936 = AssetData__GetObject_object__51495936(
-                                v18,
-                                v19->static_fields->PREFAB_EFFECT_NAME,
-                                (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+    Object_object__51560868 = AssetData__GetObject_object__51560868(
+                                v26,
+                                v27->static_fields->PREFAB_EFFECT_NAME,
+                                (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51495936, 0, 0) )
+    if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Object_object__51560868, 0, 0) )
     {
-      v21 = *p__8__1;
+      v29 = *p__8__1;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       clip = UnityEngine_Object__Instantiate_object_(
-               Object_object__51495936,
-               (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      if ( v21 )
+               Object_object__51560868,
+               (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      if ( v29 )
       {
-        v21->fields.gameOverEffect = (struct UnityEngine_GameObject_o *)clip;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v21->fields, (int32_t)clip, v22, v23);
+        v29->fields.gameOverEffect = (struct UnityEngine_GameObject_o *)clip;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v29->fields, (int32_t)clip, v30, v31, v32, v33, v34, v35);
         if ( *p__8__1 )
         {
           gameOverEffect = (*p__8__1)->fields.gameOverEffect;
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-          if ( !byte_4CB01CE )
+          if ( !byte_4CC12CE )
           {
-            sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-            byte_4CB01CE = 1;
+            sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+            byte_4CC12CE = 1;
           }
           clip = TerminalSceneComponent_TypeInfo;
           if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -1296,43 +1412,59 @@ LABEL_39:
             j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
             clip = TerminalSceneComponent_TypeInfo;
           }
-          v25 = **((_QWORD **)clip + 23);
-          if ( v25 )
+          v37 = **((_QWORD **)clip + 23);
+          if ( v37 )
           {
-            GameObjectExtensions__SafeSetParent_36361932(gameOverEffect, *(UnityEngine_GameObject_o **)(v25 + 336), 0);
+            GameObjectExtensions__SafeSetParent_36395768(gameOverEffect, *(UnityEngine_GameObject_o **)(v37 + 336), 0);
             this->fields._whiteOutTime_5__2 = 1.5;
-            v26 = StringLiteral_1/*""*/;
+            v38 = StringLiteral_1/*""*/;
             this->fields._whiteOutSe_5__3 = (struct System_String_o *)StringLiteral_1/*""*/;
-            sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._whiteOutSe_5__3, v26, v27, v28);
-            v29 = this->fields.__8__1;
-            if ( v29 )
+            sub_1C71354(
+              (GrandQuestFolderBoardItem_o *)&this->fields._whiteOutSe_5__3,
+              v38,
+              v39,
+              v40,
+              v41,
+              v42,
+              v43,
+              v44);
+            v45 = this->fields.__8__1;
+            if ( v45 )
             {
-              clip = v29->fields.gameOverEffect;
+              clip = v45->fields.gameOverEffect;
               if ( clip )
               {
                 Component_object = UnityEngine_GameObject__GetComponent_object_(
                                      (UnityEngine_GameObject_o *)clip,
-                                     (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_DataLostResetEffectComponent___);
+                                     (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_DataLostResetEffectComponent___);
                 clip = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
                 if ( ((unsigned __int8)clip & 1) != 0 )
                 {
                   if ( !Component_object )
                     goto LABEL_70;
-                  v33 = *((float *)&Component_object[2].klass + 1);
-                  v34 = *(float *)&Component_object[2].klass;
+                  v53 = *((float *)&Component_object[2].klass + 1);
+                  v54 = *(float *)&Component_object[2].klass;
                   this->fields._whiteOutTime_5__2 = *(float *)&Component_object[2].monitor;
                   klass = (struct System_String_o *)Component_object[3].klass;
                   this->fields._whiteOutSe_5__3 = klass;
-                  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._whiteOutSe_5__3, (int32_t)klass, v31, v32);
+                  sub_1C71354(
+                    (GrandQuestFolderBoardItem_o *)&this->fields._whiteOutSe_5__3,
+                    (int32_t)klass,
+                    v47,
+                    v48,
+                    v49,
+                    v50,
+                    v51,
+                    v52);
                 }
                 else
                 {
-                  v34 = 1.5;
-                  v33 = 6.5;
+                  v54 = 1.5;
+                  v53 = 6.5;
                 }
                 if ( !SoundManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-                SoundManager__fadeoutBgm(v34, 0);
+                SoundManager__fadeoutBgm(v54, 0);
                 if ( *p__8__1 )
                 {
                   clip = (*p__8__1)->fields.gameOverEffect;
@@ -1340,41 +1472,49 @@ LABEL_39:
                   {
                     clip = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)clip,
-                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
-                    v54 = *p__8__1;
+                             (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                    v82 = *p__8__1;
                     if ( *p__8__1 )
                     {
-                      v55 = (UnityEngine_Object_o *)clip;
-                      clip = v54->fields.gameOverEffect;
+                      v83 = (UnityEngine_Object_o *)clip;
+                      clip = v82->fields.gameOverEffect;
                       if ( clip )
                       {
-                        v56 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
+                        v84 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                                         (UnityEngine_GameObject_o *)clip,
-                                                        (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                                                        (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
                         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                        clip = (void *)UnityEngine_Object__op_Inequality(v55, 0, 0);
+                        clip = (void *)UnityEngine_Object__op_Inequality(v83, 0, 0);
                         if ( ((unsigned __int8)clip & 1) != 0 )
                         {
-                          if ( v55 )
+                          if ( v83 )
                           {
-                            clip = UnityEngine_Animation__get_clip((UnityEngine_Animation_o *)v55, 0);
+                            clip = UnityEngine_Animation__get_clip((UnityEngine_Animation_o *)v83, 0);
                             if ( clip )
                             {
                               UnityEngine_AnimationClip__set_wrapMode((UnityEngine_AnimationClip_o *)clip, 8, 0);
-                              clip = UnityEngine_Animation__get_clip((UnityEngine_Animation_o *)v55, 0);
+                              clip = UnityEngine_Animation__get_clip((UnityEngine_Animation_o *)v83, 0);
                               if ( clip )
                               {
                                 name = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0);
-                                UnityEngine_Animation__Play_71403152((UnityEngine_Animation_o *)v55, name, 0);
+                                UnityEngine_Animation__Play_71468084((UnityEngine_Animation_o *)v83, name, 0);
 LABEL_68:
-                                v59 = (UnityEngine_WaitForSeconds_o *)sub_1C6BC54(UnityEngine_WaitForSeconds_TypeInfo);
-                                UnityEngine_WaitForSeconds___ctor(v59, v33, 0);
-                                this->fields.__2__current = (Il2CppObject *)v59;
-                                v60 = &this->fields.__2__current;
-                                sub_1C6B9AC((CGThumbnailListItem_o *)v60, (int32_t)v59, v61, v62);
+                                v87 = (UnityEngine_WaitForSeconds_o *)sub_1C715FC(UnityEngine_WaitForSeconds_TypeInfo);
+                                UnityEngine_WaitForSeconds___ctor(v87, v53, 0);
+                                this->fields.__2__current = (Il2CppObject *)v87;
+                                v88 = &this->fields.__2__current;
+                                sub_1C71354(
+                                  (GrandQuestFolderBoardItem_o *)v88,
+                                  (int32_t)v87,
+                                  v89,
+                                  v90,
+                                  v91,
+                                  v92,
+                                  v93,
+                                  v94);
                                 LOBYTE(AssetStorage) = 1;
-                                *((_DWORD *)v60 - 2) = 1;
+                                *((_DWORD *)v88 - 2) = 1;
                                 return (char)AssetStorage;
                               }
                             }
@@ -1384,20 +1524,20 @@ LABEL_68:
                         {
                           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                          clip = (void *)UnityEngine_Object__op_Inequality(v56, 0, 0);
+                          clip = (void *)UnityEngine_Object__op_Inequality(v84, 0, 0);
                           if ( ((unsigned __int8)clip & 1) == 0 )
                             goto LABEL_68;
-                          if ( v56 )
+                          if ( v84 )
                           {
-                            clip = v56[5].klass;
+                            clip = v84[5].klass;
                             if ( clip )
                             {
                               UnityEngine_AnimationClip__set_wrapMode((UnityEngine_AnimationClip_o *)clip, 8, 0);
-                              clip = v56[5].klass;
+                              clip = v84[5].klass;
                               if ( clip )
                               {
-                                v58 = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0);
-                                SimpleAnimation__Play_66911856((SimpleAnimation_o *)v56, v58, 0);
+                                v86 = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0);
+                                SimpleAnimation__Play_66976788((SimpleAnimation_o *)v84, v86, 0);
                                 goto LABEL_68;
                               }
                             }
@@ -1413,7 +1553,7 @@ LABEL_68:
         }
       }
 LABEL_70:
-      sub_1C6BC60(clip, v8);
+      sub_1C71608(clip, v12);
     }
     goto LABEL_39;
   }
@@ -1437,11 +1577,11 @@ void __noreturn DataLostResetManager__PlayGameOverAnimation_d__11__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_DataLostResetManager__PlayGameOverAnimation_d__11_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_DataLostResetManager__PlayGameOverAnimation_d__11_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -1465,17 +1605,29 @@ void DataLostResetManager___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB57C5 & 1) == 0 )
+  if ( (byte_4CC68E6 & 1) == 0 )
   {
-    sub_1C6BA08(&DataLostResetManager___c_TypeInfo);
-    byte_4CB57C5 = 1;
+    sub_1C713B0(&DataLostResetManager___c_TypeInfo);
+    byte_4CC68E6 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(DataLostResetManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(DataLostResetManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   DataLostResetManager___c_TypeInfo->static_fields->__9 = (struct DataLostResetManager___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)DataLostResetManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)DataLostResetManager___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -1489,10 +1641,10 @@ bool DataLostResetManager___c___PlayGameOverAnimation_b__11_0(
         DataLostResetManager___c_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB57C6 & 1) == 0 )
+  if ( (byte_4CC68E7 & 1) == 0 )
   {
-    sub_1C6BA08(&CTouch_TypeInfo);
-    byte_4CB57C6 = 1;
+    sub_1C713B0(&CTouch_TypeInfo);
+    byte_4CC68E7 = 1;
   }
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
@@ -1515,15 +1667,15 @@ void DataLostResetManager___c__DisplayClass11_0___PlayGameOverAnimation_b__1(
   UnityEngine_Object_o *gameOverEffect; // x20
   struct System_Action_o *endAction; // x8
 
-  if ( (byte_4CB57C7 & 1) == 0 )
+  if ( (byte_4CC68E8 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB57C7 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC68E8 = 1;
   }
   gameOverEffect = (UnityEngine_Object_o *)this->fields.gameOverEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676(gameOverEffect, 0);
+  UnityEngine_Object__Destroy_71724608(gameOverEffect, 0);
   endAction = this->fields.endAction;
   if ( endAction )
     ((void (__fastcall *)(intptr_t, intptr_t))endAction->fields.invoke_impl)(
@@ -1550,58 +1702,62 @@ void DataLostResetManager___c__DisplayClass6_0___OpenResetSelectDialog_b__0(
   System_Action_o *_9__1; // x22
   ResetSelectDialog_o *selectDialog; // x21
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x6
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  const MethodInfo *v13; // x6
   struct System_Int32_array *idx; // x8
   int32_t eventId; // w21
   int32_t warId; // w22
-  int32_t v13; // w23
+  int32_t v17; // w23
   _BOOL4 isNoCancel; // w24
   DataLostResetManager_ClickDelegate_o *resetDelegate; // x20
 
   v4 = this;
-  if ( (byte_4CB57C8 & 1) == 0 )
+  if ( (byte_4CC68E9 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&DataLostResetManager_TypeInfo);
-    this = (DataLostResetManager___c__DisplayClass6_0_o *)sub_1C6BA08(&Method_DataLostResetManager___c__DisplayClass6_0__OpenResetSelectDialog_b__1__);
-    byte_4CB57C8 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&DataLostResetManager_TypeInfo);
+    this = (DataLostResetManager___c__DisplayClass6_0_o *)sub_1C713B0(&Method_DataLostResetManager___c__DisplayClass6_0__OpenResetSelectDialog_b__1__);
+    byte_4CC68E9 = 1;
   }
   _9__1 = v4->fields.__9__1;
   selectDialog = v4->fields.selectDialog;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_DataLostResetManager___c__DisplayClass6_0__OpenResetSelectDialog_b__1__,
       0);
     v4->fields.__9__1 = _9__1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v7, v8);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v7, v8, v9, v10, v11, v12);
   }
   if ( !selectDialog )
     goto LABEL_15;
-  ResetSelectDialog__Close_41276968(selectDialog, _9__1, method);
+  ResetSelectDialog__Close_41319984(selectDialog, _9__1, method);
   if ( selectNo )
   {
     idx = v4->fields.idx;
     if ( idx )
     {
       if ( (unsigned int)(selectNo - 1) >= LODWORD(idx->max_length) )
-        sub_1C6BC68(this);
+        sub_1C71610(this);
       eventId = v4->fields.eventId;
       warId = v4->fields.warId;
-      v13 = idx->m_Items[selectNo - 1];
+      v17 = idx->m_Items[selectNo - 1];
       isNoCancel = v4->fields.isNoCancel;
       resetDelegate = v4->fields.resetDelegate;
       if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-      DataLostResetManager__OpenConfirmDialog(eventId, warId, selectNo, v13, isNoCancel, resetDelegate, v9);
+      DataLostResetManager__OpenConfirmDialog(eventId, warId, selectNo, v17, isNoCancel, resetDelegate, v13);
       return;
     }
 LABEL_15:
-    sub_1C6BC60(this, *(_QWORD *)&selectNo);
+    sub_1C71608(this, *(_QWORD *)&selectNo);
   }
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
@@ -1615,15 +1771,15 @@ void DataLostResetManager___c__DisplayClass6_0___OpenResetSelectDialog_b__1(
 {
   UnityEngine_Object_o *selectDialogObj; // x19
 
-  if ( (byte_4CB57C9 & 1) == 0 )
+  if ( (byte_4CC68EA & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB57C9 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC68EA = 1;
   }
   selectDialogObj = (UnityEngine_Object_o *)this->fields.selectDialogObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676(selectDialogObj, 0);
+  UnityEngine_Object__Destroy_71724608(selectDialogObj, 0);
 }
 
 
@@ -1645,43 +1801,47 @@ void DataLostResetManager___c__DisplayClass7_0___OpenConfirmDialog_b__0(
   System_Action_o *_9__1; // x22
   ResetConfirmDialog_o *confirmDialog; // x21
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
-  const MethodInfo *v10; // x4
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  const MethodInfo *v13; // x1
+  const MethodInfo *v14; // x4
   struct DataLostResetManager_ClickDelegate_o *resetDelegate; // x8
   __int64 resetIdx; // x1
   void (__fastcall *invoke_impl)(intptr_t, __int64, intptr_t); // x3
   intptr_t method_code; // x0
-  intptr_t v15; // x2
+  intptr_t v19; // x2
   int32_t eventId; // w20
   int32_t warId; // w21
-  DataLostResetManager_ClickDelegate_o *v18; // x19
-  struct DataLostResetManager_ClickDelegate_o *v19; // x8
+  DataLostResetManager_ClickDelegate_o *v22; // x19
+  struct DataLostResetManager_ClickDelegate_o *v23; // x8
 
   v4 = this;
-  if ( (byte_4CB57CA & 1) == 0 )
+  if ( (byte_4CC68EB & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&DataLostResetManager_TypeInfo);
-    this = (DataLostResetManager___c__DisplayClass7_0_o *)sub_1C6BA08(&Method_DataLostResetManager___c__DisplayClass7_0__OpenConfirmDialog_b__1__);
-    byte_4CB57CA = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&DataLostResetManager_TypeInfo);
+    this = (DataLostResetManager___c__DisplayClass7_0_o *)sub_1C713B0(&Method_DataLostResetManager___c__DisplayClass7_0__OpenConfirmDialog_b__1__);
+    byte_4CC68EB = 1;
   }
   _9__1 = v4->fields.__9__1;
   confirmDialog = v4->fields.confirmDialog;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v4,
       Method_DataLostResetManager___c__DisplayClass7_0__OpenConfirmDialog_b__1__,
       0);
     v4->fields.__9__1 = _9__1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v7, v8);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v7, v8, v9, v10, v11, v12);
   }
   if ( !confirmDialog )
-    sub_1C6BC60(this, isDecide);
-  ResetConfirmDialog__Close_41277576(confirmDialog, _9__1, method);
+    sub_1C71608(this, isDecide);
+  ResetConfirmDialog__Close_41320592(confirmDialog, _9__1, method);
   if ( isDecide )
   {
     resetDelegate = v4->fields.resetDelegate;
@@ -1690,31 +1850,31 @@ void DataLostResetManager___c__DisplayClass7_0___OpenConfirmDialog_b__0(
       resetIdx = (unsigned int)v4->fields.resetIdx;
       invoke_impl = (void (__fastcall *)(intptr_t, __int64, intptr_t))resetDelegate->fields.invoke_impl;
       method_code = resetDelegate->fields.method_code;
-      v15 = resetDelegate->fields.method;
+      v19 = resetDelegate->fields.method;
 LABEL_17:
-      invoke_impl(method_code, resetIdx, v15);
+      invoke_impl(method_code, resetIdx, v19);
     }
   }
   else if ( v4->fields.isBackReturn )
   {
     eventId = v4->fields.eventId;
     warId = v4->fields.warId;
-    v18 = v4->fields.resetDelegate;
+    v22 = v4->fields.resetDelegate;
     if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-    DataLostResetManager__OpenResetSelectDialog(eventId, warId, 1, v18, v10);
+    DataLostResetManager__OpenResetSelectDialog(eventId, warId, 1, v22, v14);
   }
   else
   {
     if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
-    DataLostResetManager__SetTitleInfoTouchEnable(1, v9);
-    v19 = v4->fields.resetDelegate;
-    if ( v19 )
+    DataLostResetManager__SetTitleInfoTouchEnable(1, v13);
+    v23 = v4->fields.resetDelegate;
+    if ( v23 )
     {
-      invoke_impl = (void (__fastcall *)(intptr_t, __int64, intptr_t))v19->fields.invoke_impl;
-      method_code = v19->fields.method_code;
-      v15 = v19->fields.method;
+      invoke_impl = (void (__fastcall *)(intptr_t, __int64, intptr_t))v23->fields.invoke_impl;
+      method_code = v23->fields.method_code;
+      v19 = v23->fields.method;
       resetIdx = 0xFFFFFFFFLL;
       goto LABEL_17;
     }
@@ -1728,15 +1888,15 @@ void DataLostResetManager___c__DisplayClass7_0___OpenConfirmDialog_b__1(
 {
   UnityEngine_Object_o *confirmDialogObj; // x19
 
-  if ( (byte_4CB57CB & 1) == 0 )
+  if ( (byte_4CC68EC & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB57CB = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC68EC = 1;
   }
   confirmDialogObj = (UnityEngine_Object_o *)this->fields.confirmDialogObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676(confirmDialogObj, 0);
+  UnityEngine_Object__Destroy_71724608(confirmDialogObj, 0);
 }
 
 
@@ -1758,31 +1918,35 @@ void DataLostResetManager___c__DisplayClass8_0___OpenBattleResultResetDialog_b__
   System_Action_o *_9__1; // x22
   ResetSelectDialog_o *selectDialog; // x20
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
   v3 = this;
-  if ( (byte_4CB57CC & 1) == 0 )
+  if ( (byte_4CC68ED & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    this = (DataLostResetManager___c__DisplayClass8_0_o *)sub_1C6BA08(&Method_DataLostResetManager___c__DisplayClass8_0__OpenBattleResultResetDialog_b__1__);
-    byte_4CB57CC = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    this = (DataLostResetManager___c__DisplayClass8_0_o *)sub_1C713B0(&Method_DataLostResetManager___c__DisplayClass8_0__OpenBattleResultResetDialog_b__1__);
+    byte_4CC68ED = 1;
   }
   _9__1 = v3->fields.__9__1;
   selectDialog = v3->fields.selectDialog;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v3,
       Method_DataLostResetManager___c__DisplayClass8_0__OpenBattleResultResetDialog_b__1__,
       0);
     v3->fields.__9__1 = _9__1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v6, v7);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->fields.__9__1, (int32_t)_9__1, v6, v7, v8, v9, v10, v11);
   }
   if ( !selectDialog )
-    sub_1C6BC60(this, *(_QWORD *)&selectNo);
-  ResetSelectDialog__Close_41276968(selectDialog, _9__1, method);
+    sub_1C71608(this, *(_QWORD *)&selectNo);
+  ResetSelectDialog__Close_41319984(selectDialog, _9__1, method);
   ActionExtensions__Call(v3->fields.closeAction, 0);
 }
 
@@ -1793,13 +1957,13 @@ void DataLostResetManager___c__DisplayClass8_0___OpenBattleResultResetDialog_b__
 {
   UnityEngine_Object_o *selectDialogObj; // x19
 
-  if ( (byte_4CB57CD & 1) == 0 )
+  if ( (byte_4CC68EE & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB57CD = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC68EE = 1;
   }
   selectDialogObj = (UnityEngine_Object_o *)this->fields.selectDialogObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676(selectDialogObj, 0);
+  UnityEngine_Object__Destroy_71724608(selectDialogObj, 0);
 }

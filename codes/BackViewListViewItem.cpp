@@ -5,11 +5,15 @@ void BackViewListViewItem___ctor(
         const MethodInfo *method)
 {
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   this->fields.path = path;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.path, (int32_t)path, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -26,21 +30,21 @@ bool BackViewListViewItem__SetSortValue(BackViewListViewItem_o *this, ListViewSo
   System_String_o *v6; // x0
   int32_t result; // [xsp+Ch] [xbp-14h] BYREF
 
-  if ( (byte_4CB3707 & 1) == 0 )
+  if ( (byte_4CC481F & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_17010/*"back"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB3707 = 1;
+    sub_1C713B0(&StringLiteral_17017/*"back"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC481F = 1;
   }
   result = 0;
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue1 = -1;
   TitleText = BackViewListViewItem__get_TitleText(this, (const MethodInfo *)sort);
   if ( !TitleText )
-    sub_1C6BC60(0, v5);
-  v6 = System_String__Replace_64013356(
+    sub_1C71608(0, v5);
+  v6 = System_String__Replace_64078288(
          TitleText,
-         (System_String_o *)StringLiteral_17010/*"back"*/,
+         (System_String_o *)StringLiteral_17017/*"back"*/,
          (System_String_o *)StringLiteral_1/*""*/,
          0);
   if ( System_Int32__TryParse(v6, &result, 0) )
@@ -68,7 +72,7 @@ System_String_o *BackViewListViewItem__get_TitleText(BackViewListViewItem_o *thi
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0);
 LABEL_6:
-    sub_1C6BC60(path, method);
+    sub_1C71608(path, method);
   }
   return this->fields.path;
 }

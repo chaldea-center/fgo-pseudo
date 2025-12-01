@@ -18,7 +18,7 @@ void BattleServantActionHistory___ctor(
 }
 
 
-void BattleServantActionHistory___ctor_46642792(
+void BattleServantActionHistory___ctor_46696452(
         BattleServantActionHistory_o *this,
         BattleServantActionHistory_SaveData_o *save,
         const MethodInfo *method)
@@ -28,7 +28,7 @@ void BattleServantActionHistory___ctor_46642792(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !save )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   *(_QWORD *)&this->fields.actType = *(_QWORD *)&save->fields.actType;
   this->fields.waveCount = save->fields.waveCount;
   this->fields.isOpponent = save->fields.isOpponent;
@@ -45,15 +45,15 @@ BattleServantActionHistory_SaveData_o *BattleServantActionHistory__GetSaveData(
   __int64 v5; // x1
   BattleServantActionHistory_SaveData_o *result; // x0
 
-  if ( (byte_4CB905D & 1) == 0 )
+  if ( (byte_4CCA19A & 1) == 0 )
   {
-    sub_1C6BA08(&BattleServantActionHistory_SaveData_TypeInfo);
-    byte_4CB905D = 1;
+    sub_1C713B0(&BattleServantActionHistory_SaveData_TypeInfo);
+    byte_4CCA19A = 1;
   }
-  v3 = sub_1C6BC54(BattleServantActionHistory_SaveData_TypeInfo);
+  v3 = sub_1C715FC(BattleServantActionHistory_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
-    sub_1C6BC60(v4, v5);
+    sub_1C71608(v4, v5);
   result = (BattleServantActionHistory_SaveData_o *)v3;
   *(_QWORD *)(v3 + 16) = *(_QWORD *)&this->fields.actType;
   *(_DWORD *)(v3 + 24) = this->fields.waveCount;

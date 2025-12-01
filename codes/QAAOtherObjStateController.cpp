@@ -12,130 +12,134 @@ void QAAOtherObjStateController__Init(
   CStateManager_T__o *v5; // x21
   QAAOtherObjStateController_Fields *p_fields; // x20
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
   CStateManager_T__o *stateManager; // x21
-  Il2CppObject *v10; // x22
-  __int64 v11; // x0
-  __int64 v12; // x1
-  CStateManager_T__o *v13; // x21
   Il2CppObject *v14; // x22
-  CStateManager_T__o *v15; // x21
-  __int64 v16; // x22
+  __int64 v15; // x0
+  __int64 v16; // x1
   CStateManager_T__o *v17; // x21
-  __int64 v18; // x22
+  Il2CppObject *v18; // x22
   CStateManager_T__o *v19; // x21
   __int64 v20; // x22
   CStateManager_T__o *v21; // x21
   __int64 v22; // x22
-  CStateManager_T__o *v23; // x20
-  __int64 v24; // x21
-  const MethodInfo *v25; // x2
+  CStateManager_T__o *v23; // x21
+  __int64 v24; // x22
+  CStateManager_T__o *v25; // x21
+  __int64 v26; // x22
+  CStateManager_T__o *v27; // x20
+  __int64 v28; // x21
+  const MethodInfo *v29; // x2
 
-  if ( (byte_4CB2EFC & 1) == 0 )
+  if ( (byte_4CC4011 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject___ctor__);
-    sub_1C6BA08(&Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
-    sub_1C6BA08(&CStateManager_QAAOtherObjStateController_IBlankEarthObject__TypeInfo);
-    sub_1C6BA08(&QAAOtherObjStateController_StateMapMain_TypeInfo);
-    sub_1C6BA08(&QAAOtherObjStateController_StateNone_TypeInfo);
-    sub_1C6BA08(&QAAOtherObjStateController_StateQaaAnimation_TypeInfo);
-    sub_1C6BA08(&QAAOtherObjStateController_StateQaaDisp_TypeInfo);
-    sub_1C6BA08(&QAAOtherObjStateController_StateQaaHide_TypeInfo);
-    byte_4CB2EFC = 1;
+    sub_1C713B0(&Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject___ctor__);
+    sub_1C713B0(&Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
+    sub_1C713B0(&CStateManager_QAAOtherObjStateController_IBlankEarthObject__TypeInfo);
+    sub_1C713B0(&QAAOtherObjStateController_StateMapMain_TypeInfo);
+    sub_1C713B0(&QAAOtherObjStateController_StateNone_TypeInfo);
+    sub_1C713B0(&QAAOtherObjStateController_StateQaaAnimation_TypeInfo);
+    sub_1C713B0(&QAAOtherObjStateController_StateQaaDisp_TypeInfo);
+    sub_1C713B0(&QAAOtherObjStateController_StateQaaHide_TypeInfo);
+    byte_4CC4011 = 1;
   }
-  v5 = (CStateManager_T__o *)sub_1C6BC54(CStateManager_QAAOtherObjStateController_IBlankEarthObject__TypeInfo);
+  v5 = (CStateManager_T__o *)sub_1C715FC(CStateManager_QAAOtherObjStateController_IBlankEarthObject__TypeInfo);
   CStateManager_object____ctor(
     v5,
     (Il2CppObject *)targetObject,
     7,
-    (const MethodInfo_33848C4 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject___ctor__);
+    (const MethodInfo_3394668 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject___ctor__);
   this->fields.stateManager = (struct CStateManager_QAAOtherObjStateController_IBlankEarthObject__o *)v5;
   p_fields = &this->fields;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v5, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v5, v7, v8, v9, v10, v11, v12);
   stateManager = (CStateManager_T__o *)this->fields.stateManager;
-  v10 = (Il2CppObject *)sub_1C6BC54(QAAOtherObjStateController_StateNone_TypeInfo);
-  System_Object___ctor(v10, 0);
+  v14 = (Il2CppObject *)sub_1C715FC(QAAOtherObjStateController_StateNone_TypeInfo);
+  System_Object___ctor(v14, 0);
   if ( !stateManager )
     goto LABEL_16;
   CStateManager_object___add(
     stateManager,
     0,
-    (IState_T__o *)v10,
-    (const MethodInfo_338496C *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
-  v13 = (CStateManager_T__o *)p_fields->stateManager;
-  v14 = (Il2CppObject *)sub_1C6BC54(QAAOtherObjStateController_StateMapMain_TypeInfo);
-  System_Object___ctor(v14, 0);
-  if ( !v13 )
-    goto LABEL_16;
-  CStateManager_object___add(
-    v13,
-    1,
     (IState_T__o *)v14,
-    (const MethodInfo_338496C *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
-  v15 = (CStateManager_T__o *)p_fields->stateManager;
-  v16 = sub_1C6BC54(QAAOtherObjStateController_StateQaaHide_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v16, 0);
-  if ( !v16 )
-    goto LABEL_16;
-  *(_DWORD *)(v16 + 16) = 1056964608;
-  if ( !v15 )
-    goto LABEL_16;
-  CStateManager_object___add(
-    v15,
-    2,
-    (IState_T__o *)v16,
-    (const MethodInfo_338496C *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
+    (const MethodInfo_3394710 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
   v17 = (CStateManager_T__o *)p_fields->stateManager;
-  v18 = sub_1C6BC54(QAAOtherObjStateController_StateQaaDisp_TypeInfo);
-  System_Object___ctor((Il2CppObject *)v18, 0);
-  if ( !v18 )
-    goto LABEL_16;
-  *(_DWORD *)(v18 + 16) = 1056964608;
+  v18 = (Il2CppObject *)sub_1C715FC(QAAOtherObjStateController_StateMapMain_TypeInfo);
+  System_Object___ctor(v18, 0);
   if ( !v17 )
     goto LABEL_16;
   CStateManager_object___add(
     v17,
-    3,
+    1,
     (IState_T__o *)v18,
-    (const MethodInfo_338496C *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
+    (const MethodInfo_3394710 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
   v19 = (CStateManager_T__o *)p_fields->stateManager;
-  v20 = sub_1C6BC54(QAAOtherObjStateController_StateQaaHide_TypeInfo);
+  v20 = sub_1C715FC(QAAOtherObjStateController_StateQaaHide_TypeInfo);
   System_Object___ctor((Il2CppObject *)v20, 0);
   if ( !v20 )
     goto LABEL_16;
-  *(_DWORD *)(v20 + 16) = 0;
+  *(_DWORD *)(v20 + 16) = 1056964608;
   if ( !v19 )
     goto LABEL_16;
   CStateManager_object___add(
     v19,
-    5,
+    2,
     (IState_T__o *)v20,
-    (const MethodInfo_338496C *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
+    (const MethodInfo_3394710 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
   v21 = (CStateManager_T__o *)p_fields->stateManager;
-  v22 = sub_1C6BC54(QAAOtherObjStateController_StateQaaDisp_TypeInfo);
+  v22 = sub_1C715FC(QAAOtherObjStateController_StateQaaDisp_TypeInfo);
   System_Object___ctor((Il2CppObject *)v22, 0);
-  if ( !v22
-    || (*(_DWORD *)(v22 + 16) = 0, !v21)
-    || (CStateManager_object___add(
-          v21,
-          6,
-          (IState_T__o *)v22,
-          (const MethodInfo_338496C *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__),
-        v23 = (CStateManager_T__o *)p_fields->stateManager,
-        v24 = sub_1C6BC54(QAAOtherObjStateController_StateQaaAnimation_TypeInfo),
-        System_Object___ctor((Il2CppObject *)v24, 0),
-        !v24)
-    || (*(_DWORD *)(v24 + 16) = 1056964608, !v23) )
-  {
-LABEL_16:
-    sub_1C6BC60(v11, v12);
-  }
+  if ( !v22 )
+    goto LABEL_16;
+  *(_DWORD *)(v22 + 16) = 1056964608;
+  if ( !v21 )
+    goto LABEL_16;
+  CStateManager_object___add(
+    v21,
+    3,
+    (IState_T__o *)v22,
+    (const MethodInfo_3394710 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
+  v23 = (CStateManager_T__o *)p_fields->stateManager;
+  v24 = sub_1C715FC(QAAOtherObjStateController_StateQaaHide_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v24, 0);
+  if ( !v24 )
+    goto LABEL_16;
+  *(_DWORD *)(v24 + 16) = 0;
+  if ( !v23 )
+    goto LABEL_16;
   CStateManager_object___add(
     v23,
-    4,
+    5,
     (IState_T__o *)v24,
-    (const MethodInfo_338496C *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
-  QAAOtherObjStateController__SetState(this, 0, v25);
+    (const MethodInfo_3394710 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
+  v25 = (CStateManager_T__o *)p_fields->stateManager;
+  v26 = sub_1C715FC(QAAOtherObjStateController_StateQaaDisp_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v26, 0);
+  if ( !v26
+    || (*(_DWORD *)(v26 + 16) = 0, !v25)
+    || (CStateManager_object___add(
+          v25,
+          6,
+          (IState_T__o *)v26,
+          (const MethodInfo_3394710 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__),
+        v27 = (CStateManager_T__o *)p_fields->stateManager,
+        v28 = sub_1C715FC(QAAOtherObjStateController_StateQaaAnimation_TypeInfo),
+        System_Object___ctor((Il2CppObject *)v28, 0),
+        !v28)
+    || (*(_DWORD *)(v28 + 16) = 1056964608, !v27) )
+  {
+LABEL_16:
+    sub_1C71608(v15, v16);
+  }
+  CStateManager_object___add(
+    v27,
+    4,
+    (IState_T__o *)v28,
+    (const MethodInfo_3394710 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__add__);
+  QAAOtherObjStateController__SetState(this, 0, v29);
 }
 
 
@@ -150,180 +154,184 @@ void QAAOtherObjStateController__SetQaaScaleAnim(
   Il2CppObject *v10; // x0
   __int64 v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
   QAAOtherObjStateController_IBlankEarthObject_c *klass; // x8
-  __int64 v15; // x9
+  __int64 v19; // x9
   int32_t *p_offset; // x10
-  __int64 v17; // x0
-  UnityEngine_GameObject_o *v18; // x22
-  QAAOtherObjStateController_IBlankEarthObject_c *v19; // x8
+  __int64 v21; // x0
+  UnityEngine_GameObject_o *v22; // x22
+  QAAOtherObjStateController_IBlankEarthObject_c *v23; // x8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x10
-  __int64 v21; // x9
+  __int64 v25; // x9
   float x; // s9
   float y; // s10
   float z; // s11
-  int32_t *v25; // x10
-  __int64 v26; // x0
-  QAAOtherObjStateController_IBlankEarthObject_c *v27; // x8
-  __int64 v28; // x9
   int32_t *v29; // x10
   __int64 v30; // x0
-  float v31; // s12
-  float v32; // s1
-  float v33; // s13
-  float v34; // s2
-  float v35; // s14
+  QAAOtherObjStateController_IBlankEarthObject_c *v31; // x8
+  __int64 v32; // x9
+  int32_t *v33; // x10
+  __int64 v34; // x0
+  float v35; // s12
   float v36; // s1
-  float v37; // s2
-  struct UnityEngine_Vector3_StaticFields *v38; // x8
+  float v37; // s13
+  float v38; // s2
+  float v39; // s14
+  float v40; // s1
+  float v41; // s2
+  struct UnityEngine_Vector3_StaticFields *v42; // x8
   System_Collections_Generic_List_EventDelegate__o *monitor; // x20
-  EventDelegate_Callback_o *v40; // x21
-  UnityEngine_Vector3_o v41; // 0:s0.4,4:s1.4,8:s2.4
+  EventDelegate_Callback_o *v44; // x21
+  UnityEngine_Vector3_o v45; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB2EFF & 1) == 0 )
+  if ( (byte_4CC4014 & 1) == 0 )
   {
-    sub_1C6BA08(&EventDelegate_Callback_TypeInfo);
-    sub_1C6BA08(&EventDelegate_TypeInfo);
-    sub_1C6BA08(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
-    sub_1C6BA08(&Method_QAAOtherObjStateController___c__DisplayClass8_0__SetQaaScaleAnim_b__0__);
-    sub_1C6BA08(&QAAOtherObjStateController___c__DisplayClass8_0_TypeInfo);
-    sub_1C6BA08(&Method_UITweener_Begin_TweenScale___);
-    byte_4CB2EFF = 1;
+    sub_1C713B0(&EventDelegate_Callback_TypeInfo);
+    sub_1C713B0(&EventDelegate_TypeInfo);
+    sub_1C713B0(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
+    sub_1C713B0(&Method_QAAOtherObjStateController___c__DisplayClass8_0__SetQaaScaleAnim_b__0__);
+    sub_1C713B0(&QAAOtherObjStateController___c__DisplayClass8_0_TypeInfo);
+    sub_1C713B0(&Method_UITweener_Begin_TweenScale___);
+    byte_4CC4014 = 1;
   }
-  v9 = sub_1C6BC54(QAAOtherObjStateController___c__DisplayClass8_0_TypeInfo);
+  v9 = sub_1C715FC(QAAOtherObjStateController___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_36;
   *(_QWORD *)(v9 + 16) = finishCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)finishCallback, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)finishCallback, v12, v13, v14, v15, v16, v17);
   if ( !targetObject )
     goto LABEL_36;
   klass = targetObject->klass;
-  v15 = *(unsigned __int16 *)&targetObject->klass->_2.rank;
+  v19 = *(unsigned __int16 *)&targetObject->klass->_2.rank;
   if ( *(_WORD *)&targetObject->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((QAAOtherObjStateController_IBlankEarthObject_c **)p_offset - 1) != QAAOtherObjStateController_IBlankEarthObject_TypeInfo )
     {
-      --v15;
+      --v19;
       p_offset += 4;
-      if ( !v15 )
+      if ( !v19 )
         goto LABEL_9;
     }
-    v17 = (__int64)&klass->vtable[*p_offset + 5];
+    v21 = (__int64)&klass->vtable[*p_offset + 5];
   }
   else
   {
 LABEL_9:
-    v17 = sub_1C41D90(targetObject, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 5);
+    v21 = sub_1C47738(targetObject, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 5);
   }
-  v18 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))v17)(
+  v22 = (UnityEngine_GameObject_o *)(*(__int64 (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))v21)(
                                       targetObject,
-                                      *(_QWORD *)(v17 + 8));
+                                      *(_QWORD *)(v21 + 8));
   if ( isDisp )
   {
-    if ( !byte_4CAFC09 )
+    if ( !byte_4CC0D09 )
     {
-      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC09 = 1;
+      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D09 = 1;
     }
-    v19 = targetObject->klass;
+    v23 = targetObject->klass;
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-    v21 = *(unsigned __int16 *)&targetObject->klass->_2.rank;
+    v25 = *(unsigned __int16 *)&targetObject->klass->_2.rank;
     x = static_fields->zeroVector.fields.x;
     y = static_fields->zeroVector.fields.y;
     z = static_fields->zeroVector.fields.z;
     if ( *(_WORD *)&targetObject->klass->_2.rank )
     {
-      v25 = &v19->_1.interfaceOffsets->offset;
-      while ( *((QAAOtherObjStateController_IBlankEarthObject_c **)v25 - 1) != QAAOtherObjStateController_IBlankEarthObject_TypeInfo )
+      v29 = &v23->_1.interfaceOffsets->offset;
+      while ( *((QAAOtherObjStateController_IBlankEarthObject_c **)v29 - 1) != QAAOtherObjStateController_IBlankEarthObject_TypeInfo )
       {
-        --v21;
-        v25 += 4;
-        if ( !v21 )
+        --v25;
+        v29 += 4;
+        if ( !v25 )
           goto LABEL_18;
       }
-      v26 = (__int64)&v19->vtable[*v25 + 4];
+      v30 = (__int64)&v23->vtable[*v29 + 4];
     }
     else
     {
 LABEL_18:
-      v26 = sub_1C41D90(targetObject, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 4);
+      v30 = sub_1C47738(targetObject, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 4);
     }
-    LODWORD(v31) = COERCE_UNSIGNED_INT128(
-                     ((long double (__fastcall *)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))*(_QWORD *)v26)(
+    LODWORD(v35) = COERCE_UNSIGNED_INT128(
+                     ((long double (__fastcall *)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))*(_QWORD *)v30)(
                        targetObject,
-                       *(_QWORD *)(v26 + 8)));
-    v33 = v32;
-    v35 = v34;
+                       *(_QWORD *)(v30 + 8)));
+    v37 = v36;
+    v39 = v38;
   }
   else
   {
-    v27 = targetObject->klass;
-    v28 = *(unsigned __int16 *)&targetObject->klass->_2.rank;
+    v31 = targetObject->klass;
+    v32 = *(unsigned __int16 *)&targetObject->klass->_2.rank;
     if ( *(_WORD *)&targetObject->klass->_2.rank )
     {
-      v29 = &v27->_1.interfaceOffsets->offset;
-      while ( *((QAAOtherObjStateController_IBlankEarthObject_c **)v29 - 1) != QAAOtherObjStateController_IBlankEarthObject_TypeInfo )
+      v33 = &v31->_1.interfaceOffsets->offset;
+      while ( *((QAAOtherObjStateController_IBlankEarthObject_c **)v33 - 1) != QAAOtherObjStateController_IBlankEarthObject_TypeInfo )
       {
-        --v28;
-        v29 += 4;
-        if ( !v28 )
+        --v32;
+        v33 += 4;
+        if ( !v32 )
           goto LABEL_23;
       }
-      v30 = (__int64)&v27->vtable[*v29 + 4];
+      v34 = (__int64)&v31->vtable[*v33 + 4];
     }
     else
     {
 LABEL_23:
-      v30 = sub_1C41D90(targetObject, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 4);
+      v34 = sub_1C47738(targetObject, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 4);
     }
     LODWORD(x) = COERCE_UNSIGNED_INT128(
-                   ((long double (__fastcall *)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))*(_QWORD *)v30)(
+                   ((long double (__fastcall *)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))*(_QWORD *)v34)(
                      targetObject,
-                     *(_QWORD *)(v30 + 8)));
-    y = v36;
-    z = v37;
-    if ( !byte_4CAFC09 )
+                     *(_QWORD *)(v34 + 8)));
+    y = v40;
+    z = v41;
+    if ( !byte_4CC0D09 )
     {
-      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC09 = 1;
+      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D09 = 1;
     }
-    v38 = UnityEngine_Vector3_TypeInfo->static_fields;
-    v31 = v38->zeroVector.fields.x;
-    v33 = v38->zeroVector.fields.y;
-    v35 = v38->zeroVector.fields.z;
+    v42 = UnityEngine_Vector3_TypeInfo->static_fields;
+    v35 = v42->zeroVector.fields.x;
+    v37 = v42->zeroVector.fields.y;
+    v39 = v42->zeroVector.fields.z;
   }
   if ( time <= 0.0 )
   {
-    v41.fields.x = v31;
-    v41.fields.y = v33;
-    v41.fields.z = v35;
-    GameObjectExtensions__SetLocalScale(v18, v41, 0);
+    v45.fields.x = v35;
+    v45.fields.y = v37;
+    v45.fields.z = v39;
+    GameObjectExtensions__SetLocalScale(v22, v45, 0);
     ActionExtensions__Call(*(System_Action_o **)(v9 + 16), 0);
     return;
   }
-  v10 = UITweener__Begin_object_(v18, time, (const MethodInfo_3210C14 *)Method_UITweener_Begin_TweenScale___);
+  v10 = UITweener__Begin_object_(v22, time, (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenScale___);
   if ( !v10 )
 LABEL_36:
-    sub_1C6BC60(v10, v11);
+    sub_1C71608(v10, v11);
   *(float *)&v10[8].klass = x;
   *((float *)&v10[8].klass + 1) = y;
   *(float *)&v10[8].monitor = z;
-  *((float *)&v10[8].monitor + 1) = v31;
-  *(float *)&v10[9].klass = v33;
-  *((float *)&v10[9].klass + 1) = v35;
+  *((float *)&v10[8].monitor + 1) = v35;
+  *(float *)&v10[9].klass = v37;
+  *((float *)&v10[9].klass + 1) = v39;
   LODWORD(v10[2].klass) = 2;
   monitor = (System_Collections_Generic_List_EventDelegate__o *)v10[4].monitor;
-  v40 = (EventDelegate_Callback_o *)sub_1C6BC54(EventDelegate_Callback_TypeInfo);
+  v44 = (EventDelegate_Callback_o *)sub_1C715FC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(
-    v40,
+    v44,
     (Il2CppObject *)v9,
     Method_QAAOtherObjStateController___c__DisplayClass8_0__SetQaaScaleAnim_b__0__,
     0);
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Set_49560744(monitor, v40, 0);
+  EventDelegate__Set_49625676(monitor, v44, 0);
 }
 
 
@@ -332,18 +340,18 @@ void QAAOtherObjStateController__SetState(QAAOtherObjStateController_o *this, in
 {
   CStateManager_T__o *stateManager; // x0
 
-  if ( (byte_4CB2EFE & 1) == 0 )
+  if ( (byte_4CC4013 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__setState__);
-    byte_4CB2EFE = 1;
+    sub_1C713B0(&Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__setState__);
+    byte_4CC4013 = 1;
   }
   stateManager = (CStateManager_T__o *)this->fields.stateManager;
   if ( !stateManager )
-    sub_1C6BC60(0, *(_QWORD *)&state);
+    sub_1C71608(0, *(_QWORD *)&state);
   CStateManager_object___setState(
     stateManager,
     state,
-    (const MethodInfo_33849F8 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__setState__);
+    (const MethodInfo_339479C *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__setState__);
 }
 
 
@@ -351,17 +359,17 @@ void QAAOtherObjStateController__Update(QAAOtherObjStateController_o *this, cons
 {
   CStateManager_T__o *stateManager; // x0
 
-  if ( (byte_4CB2EFD & 1) == 0 )
+  if ( (byte_4CC4012 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__update__);
-    byte_4CB2EFD = 1;
+    sub_1C713B0(&Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__update__);
+    byte_4CC4012 = 1;
   }
   stateManager = (CStateManager_T__o *)this->fields.stateManager;
   if ( !stateManager )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CStateManager_object___update(
     stateManager,
-    (const MethodInfo_33849D4 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__update__);
+    (const MethodInfo_3394778 *)Method_CStateManager_QAAOtherObjStateController_IBlankEarthObject__update__);
 }
 
 
@@ -394,13 +402,13 @@ void QAAOtherObjStateController_StateMapMain__begin(
   QAAOtherObjStateController_IBlankEarthObject_o *v17; // x0
   __int64 v18; // x1
 
-  if ( (byte_4CB2F00 & 1) == 0 )
+  if ( (byte_4CC4015 & 1) == 0 )
   {
-    this = (QAAOtherObjStateController_StateMapMain_o *)sub_1C6BA08(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
-    byte_4CB2F00 = 1;
+    this = (QAAOtherObjStateController_StateMapMain_o *)sub_1C713B0(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
+    byte_4CC4015 = 1;
   }
   if ( !that )
-    sub_1C6BC60(this, that);
+    sub_1C71608(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -418,7 +426,7 @@ void QAAOtherObjStateController_StateMapMain__begin(
   else
   {
 LABEL_8:
-    v7 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 0);
+    v7 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 0);
   }
   v8 = (*(__int64 (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))v7)(
          that,
@@ -442,7 +450,7 @@ LABEL_8:
     else
     {
 LABEL_15:
-      v12 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 1);
+      v12 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 1);
     }
     v16 = *(void (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, __int64, __int64))v12;
     v15 = *(_QWORD *)(v12 + 8);
@@ -466,7 +474,7 @@ LABEL_15:
     else
     {
 LABEL_20:
-      v14 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 3);
+      v14 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 3);
     }
     v16 = *(void (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, __int64, __int64))v14;
     v15 = *(_QWORD *)(v14 + 8);
@@ -496,13 +504,13 @@ void QAAOtherObjStateController_StateMapMain__update(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4CB2F01 & 1) == 0 )
+  if ( (byte_4CC4016 & 1) == 0 )
   {
-    this = (QAAOtherObjStateController_StateMapMain_o *)sub_1C6BA08(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
-    byte_4CB2F01 = 1;
+    this = (QAAOtherObjStateController_StateMapMain_o *)sub_1C713B0(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
+    byte_4CC4016 = 1;
   }
   if ( !that )
-    sub_1C6BC60(this, that);
+    sub_1C71608(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -520,7 +528,7 @@ void QAAOtherObjStateController_StateMapMain__update(
   else
   {
 LABEL_8:
-    v7 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 7);
+    v7 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 7);
   }
   (*(void (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD, _QWORD))v7)(
     that,
@@ -575,7 +583,7 @@ void QAAOtherObjStateController_StateQaaAnimation___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   v7 = 0.5;
   if ( isQuick )
     v7 = 0.0;
@@ -604,14 +612,14 @@ void QAAOtherObjStateController_StateQaaAnimation__begin(
   int32_t *v17; // x10
   __int64 v18; // x0
 
-  if ( (byte_4CB2F06 & 1) == 0 )
+  if ( (byte_4CC401B & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    this = (QAAOtherObjStateController_StateQaaAnimation_o *)sub_1C6BA08(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
-    byte_4CB2F06 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    this = (QAAOtherObjStateController_StateQaaAnimation_o *)sub_1C713B0(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
+    byte_4CC401B = 1;
   }
   if ( !that )
-    sub_1C6BC60(this, that);
+    sub_1C71608(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -629,12 +637,12 @@ void QAAOtherObjStateController_StateQaaAnimation__begin(
   else
   {
 LABEL_8:
-    v7 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 6);
+    v7 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 6);
   }
   v8 = (*(__int64 (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))v7)(
          that,
          *(_QWORD *)(v7 + 8));
-  v9 = sub_1C6BC54(System_Action_TypeInfo);
+  v9 = sub_1C715FC(System_Action_TypeInfo);
   v10 = that->klass;
   v11 = (System_Action_o *)v9;
   v12 = *(unsigned __int16 *)&that->klass->_2.rank;
@@ -653,7 +661,7 @@ LABEL_8:
   else
   {
 LABEL_14:
-    v14 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
+    v14 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
   }
   System_Action___ctor(v11, (Il2CppObject *)that, *(_QWORD *)(v14 + 8), 0);
   v15 = that->klass;
@@ -673,7 +681,7 @@ LABEL_14:
   else
   {
 LABEL_20:
-    v18 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 11);
+    v18 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 11);
   }
   (*(void (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD, System_Action_o *, _QWORD))v18)(
     that,
@@ -694,7 +702,7 @@ void QAAOtherObjStateController_StateQaaBase___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   v7 = 0.5;
   if ( isQuick )
     v7 = 0.0;
@@ -740,7 +748,7 @@ void QAAOtherObjStateController_StateQaaDisp___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   v7 = 0.5;
   if ( isQuick )
     v7 = 0.0;
@@ -773,14 +781,14 @@ void QAAOtherObjStateController_StateQaaDisp__begin(
   const MethodInfo *v21; // x3
 
   v4 = this;
-  if ( (byte_4CB2F04 & 1) == 0 )
+  if ( (byte_4CC4019 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    this = (QAAOtherObjStateController_StateQaaDisp_o *)sub_1C6BA08(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
-    byte_4CB2F04 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    this = (QAAOtherObjStateController_StateQaaDisp_o *)sub_1C713B0(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
+    byte_4CC4019 = 1;
   }
   if ( !that )
-    sub_1C6BC60(this, that);
+    sub_1C71608(this, that);
   klass = that->klass;
   v6 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -798,7 +806,7 @@ void QAAOtherObjStateController_StateQaaDisp__begin(
   else
   {
 LABEL_8:
-    v8 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 9);
+    v8 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 9);
   }
   v9 = (*(__int64 (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))v8)(
          that,
@@ -822,14 +830,14 @@ LABEL_8:
     else
     {
 LABEL_21:
-      v20 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
+      v20 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
     }
     (*(void (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))v20)(that, *(_QWORD *)(v20 + 8));
   }
   else if ( !v9 )
   {
     Duration = v4->fields.Duration;
-    v11 = sub_1C6BC54(System_Action_TypeInfo);
+    v11 = sub_1C715FC(System_Action_TypeInfo);
     v12 = that->klass;
     v13 = (System_Action_o *)v11;
     v14 = *(unsigned __int16 *)&that->klass->_2.rank;
@@ -848,7 +856,7 @@ LABEL_21:
     else
     {
 LABEL_16:
-      v16 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
+      v16 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
     }
     System_Action___ctor(v13, (Il2CppObject *)that, *(_QWORD *)(v16 + 8), 0);
     QAAOtherObjStateController__SetQaaScaleAnim(that, 1, Duration, v13, v21);
@@ -866,13 +874,13 @@ void QAAOtherObjStateController_StateQaaDisp__end(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4CB2F05 & 1) == 0 )
+  if ( (byte_4CC401A & 1) == 0 )
   {
-    this = (QAAOtherObjStateController_StateQaaDisp_o *)sub_1C6BA08(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
-    byte_4CB2F05 = 1;
+    this = (QAAOtherObjStateController_StateQaaDisp_o *)sub_1C713B0(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
+    byte_4CC401A = 1;
   }
   if ( !that )
-    sub_1C6BC60(this, that);
+    sub_1C71608(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -890,7 +898,7 @@ void QAAOtherObjStateController_StateQaaDisp__end(
   else
   {
 LABEL_8:
-    v7 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 10);
+    v7 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 10);
   }
   (*(void (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, __int64, _QWORD))v7)(
     that,
@@ -910,7 +918,7 @@ void QAAOtherObjStateController_StateQaaHide___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !this )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   v7 = 0.5;
   if ( isQuick )
     v7 = 0.0;
@@ -943,14 +951,14 @@ void QAAOtherObjStateController_StateQaaHide__begin(
   const MethodInfo *v21; // x3
 
   v4 = this;
-  if ( (byte_4CB2F02 & 1) == 0 )
+  if ( (byte_4CC4017 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    this = (QAAOtherObjStateController_StateQaaHide_o *)sub_1C6BA08(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
-    byte_4CB2F02 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    this = (QAAOtherObjStateController_StateQaaHide_o *)sub_1C713B0(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
+    byte_4CC4017 = 1;
   }
   if ( !that )
-    sub_1C6BC60(this, that);
+    sub_1C71608(this, that);
   klass = that->klass;
   v6 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -968,7 +976,7 @@ void QAAOtherObjStateController_StateQaaHide__begin(
   else
   {
 LABEL_8:
-    v8 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 9);
+    v8 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 9);
   }
   v9 = (*(__int64 (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))v8)(
          that,
@@ -976,7 +984,7 @@ LABEL_8:
   if ( v9 == 1 )
   {
     Duration = v4->fields.Duration;
-    v15 = sub_1C6BC54(System_Action_TypeInfo);
+    v15 = sub_1C715FC(System_Action_TypeInfo);
     v16 = that->klass;
     v17 = (System_Action_o *)v15;
     v18 = *(unsigned __int16 *)&that->klass->_2.rank;
@@ -995,7 +1003,7 @@ LABEL_8:
     else
     {
 LABEL_21:
-      v20 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
+      v20 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
     }
     System_Action___ctor(v17, (Il2CppObject *)that, *(_QWORD *)(v20 + 8), 0);
     QAAOtherObjStateController__SetQaaScaleAnim(that, 0, Duration, v17, v21);
@@ -1019,7 +1027,7 @@ LABEL_21:
     else
     {
 LABEL_16:
-      v13 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
+      v13 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 8);
     }
     (*(void (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD))v13)(that, *(_QWORD *)(v13 + 8));
   }
@@ -1036,13 +1044,13 @@ void QAAOtherObjStateController_StateQaaHide__end(
   int32_t *p_offset; // x10
   __int64 v7; // x0
 
-  if ( (byte_4CB2F03 & 1) == 0 )
+  if ( (byte_4CC4018 & 1) == 0 )
   {
-    this = (QAAOtherObjStateController_StateQaaHide_o *)sub_1C6BA08(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
-    byte_4CB2F03 = 1;
+    this = (QAAOtherObjStateController_StateQaaHide_o *)sub_1C713B0(&QAAOtherObjStateController_IBlankEarthObject_TypeInfo);
+    byte_4CC4018 = 1;
   }
   if ( !that )
-    sub_1C6BC60(this, that);
+    sub_1C71608(this, that);
   klass = that->klass;
   v5 = *(unsigned __int16 *)&that->klass->_2.rank;
   if ( *(_WORD *)&that->klass->_2.rank )
@@ -1060,7 +1068,7 @@ void QAAOtherObjStateController_StateQaaHide__end(
   else
   {
 LABEL_8:
-    v7 = sub_1C41D90(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 10);
+    v7 = sub_1C47738(that, QAAOtherObjStateController_IBlankEarthObject_TypeInfo, 10);
   }
   (*(void (__fastcall **)(QAAOtherObjStateController_IBlankEarthObject_o *, _QWORD, _QWORD))v7)(
     that,

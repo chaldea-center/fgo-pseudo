@@ -17,25 +17,25 @@ void CriFsLoadFileRequest___ctor(
   const MethodInfo *v19; // x3
   CriFsBinder_o *v20; // x0
 
-  if ( (byte_4CAF7BB & 1) == 0 )
+  if ( (byte_4CC08BB & 1) == 0 )
   {
-    sub_1C6BA08(&CriDisposableObjectManager_TypeInfo);
-    sub_1C6BA08(&CriFsBinder_TypeInfo);
-    byte_4CAF7BB = 1;
+    sub_1C713B0(&CriDisposableObjectManager_TypeInfo);
+    sub_1C713B0(&CriFsBinder_TypeInfo);
+    byte_4CC08BB = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.guid = System_Guid__NewGuid(0);
   this->fields._path_k__BackingField = path;
-  sub_1C6B9AC(&this->fields._path_k__BackingField, path);
+  sub_1C71354(&this->fields._path_k__BackingField, path);
   this->fields._doneDelegate_k__BackingField = doneDelegate;
-  sub_1C6B9AC(&this->fields._doneDelegate_k__BackingField, doneDelegate);
+  sub_1C71354(&this->fields._doneDelegate_k__BackingField, doneDelegate);
   this->fields.readUnitSize = readUnitSize;
   if ( srcBinder )
   {
     this->fields.newBinder = 0;
-    sub_1C6B9AC(&this->fields.newBinder, 0);
+    sub_1C71354(&this->fields.newBinder, 0);
     this->fields.refBinder = srcBinder;
-    sub_1C6B9AC(&this->fields.refBinder, srcBinder);
+    sub_1C71354(&this->fields.refBinder, srcBinder);
     FileSize = CriFsBinder__GetFileSize(srcBinder, path, v11);
     this->fields.fileSize = FileSize;
     if ( FileSize < 0 )
@@ -45,16 +45,16 @@ void CriFsLoadFileRequest___ctor(
   }
   else
   {
-    v15 = (CriFsBinder_o *)sub_1C6BC54(CriFsBinder_TypeInfo);
+    v15 = (CriFsBinder_o *)sub_1C715FC(CriFsBinder_TypeInfo);
     CriFsBinder___ctor(v15, v16);
     this->fields.newBinder = v15;
-    sub_1C6B9AC(&this->fields.newBinder, v15);
+    sub_1C71354(&this->fields.newBinder, v15);
     newBinder = this->fields.newBinder;
     this->fields.refBinder = newBinder;
-    sub_1C6B9AC(&this->fields.refBinder, newBinder);
+    sub_1C71354(&this->fields.refBinder, newBinder);
     v20 = this->fields.newBinder;
     if ( !v20 )
-      sub_1C6BC60(0, v18);
+      sub_1C71608(0, v18);
     this->fields.bindId = CriFsBinder__BindFile(v20, 0, path, v19);
     v14 = 1;
   }
@@ -71,10 +71,10 @@ void CriFsLoadFileRequest__Dispose(CriFsLoadFileRequest_o *this, bool disposing,
   struct CriFsLoader_o *loader; // x0
   struct CriFsBinder_o *newBinder; // x0
 
-  if ( (byte_4CAF7BC & 1) == 0 )
+  if ( (byte_4CC08BC & 1) == 0 )
   {
-    sub_1C6BA08(&CriDisposableObjectManager_TypeInfo);
-    byte_4CAF7BC = 1;
+    sub_1C713B0(&CriDisposableObjectManager_TypeInfo);
+    byte_4CC08BC = 1;
   }
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
@@ -86,7 +86,7 @@ void CriFsLoadFileRequest__Dispose(CriFsLoadFileRequest_o *this, bool disposing,
       loader,
       loader->klass->vtable._5_Dispose.method);
     this->fields.loader = 0;
-    sub_1C6B9AC(&this->fields.loader, 0);
+    sub_1C71354(&this->fields.loader, 0);
   }
   newBinder = this->fields.newBinder;
   if ( newBinder )
@@ -95,10 +95,10 @@ void CriFsLoadFileRequest__Dispose(CriFsLoadFileRequest_o *this, bool disposing,
       newBinder,
       newBinder->klass->vtable._5_Dispose.method);
     this->fields.newBinder = 0;
-    sub_1C6B9AC(&this->fields.newBinder, 0);
+    sub_1C71354(&this->fields.newBinder, 0);
   }
   this->fields._bytes_k__BackingField = 0;
-  sub_1C6B9AC(&this->fields._bytes_k__BackingField, 0);
+  sub_1C71354(&this->fields._bytes_k__BackingField, 0);
 }
 
 
@@ -109,18 +109,18 @@ void CriFsLoadFileRequest__OnError(CriFsLoadFileRequest_o *this, const MethodInf
   struct CriFsLoader_o *loader; // x0
   struct CriFsRequest_DoneDelegate_o *doneDelegate_k__BackingField; // x8
 
-  if ( (byte_4CAF7BE & 1) == 0 )
+  if ( (byte_4CC08BE & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_6129/*"Error occurred."*/);
-    byte_4CAF7BE = 1;
+    sub_1C713B0(&StringLiteral_6131/*"Error occurred."*/);
+    byte_4CC08BE = 1;
   }
   this->fields._bytes_k__BackingField = 0;
-  sub_1C6B9AC(&this->fields._bytes_k__BackingField, 0);
-  v3 = StringLiteral_6129/*"Error occurred."*/;
-  this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6129/*"Error occurred."*/;
-  sub_1C6B9AC(&this->fields._error_k__BackingField, v3);
+  sub_1C71354(&this->fields._bytes_k__BackingField, 0);
+  v3 = StringLiteral_6131/*"Error occurred."*/;
+  this->fields._error_k__BackingField = (struct System_String_o *)StringLiteral_6131/*"Error occurred."*/;
+  sub_1C71354(&this->fields._error_k__BackingField, v3);
   this->fields.refBinder = 0;
-  sub_1C6B9AC(&this->fields.refBinder, 0);
+  sub_1C71354(&this->fields.refBinder, 0);
   newBinder = this->fields.newBinder;
   if ( newBinder )
   {
@@ -128,7 +128,7 @@ void CriFsLoadFileRequest__OnError(CriFsLoadFileRequest_o *this, const MethodInf
       newBinder,
       newBinder->klass->vtable._5_Dispose.method);
     this->fields.newBinder = 0;
-    sub_1C6B9AC(&this->fields.newBinder, 0);
+    sub_1C71354(&this->fields.newBinder, 0);
   }
   loader = this->fields.loader;
   if ( loader )
@@ -137,7 +137,7 @@ void CriFsLoadFileRequest__OnError(CriFsLoadFileRequest_o *this, const MethodInf
       loader,
       loader->klass->vtable._5_Dispose.method);
     this->fields.loader = 0;
-    sub_1C6B9AC(&this->fields.loader, 0);
+    sub_1C71354(&this->fields.loader, 0);
   }
   doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;
   this->fields.phase = 3;
@@ -200,7 +200,7 @@ void CriFsLoadFileRequest__UpdateBinder(CriFsLoadFileRequest_o *this, const Meth
     {
       refBinder = this->fields.refBinder;
       if ( !refBinder )
-        sub_1C6BC60(0, v4);
+        sub_1C71608(0, v4);
       FileSize = CriFsBinder__GetFileSize(refBinder, this->fields._path_k__BackingField, v5);
       p_phase = &this->fields.phase;
       this->fields.fileSize = FileSize;
@@ -236,28 +236,28 @@ void CriFsLoadFileRequest__UpdateLoader(CriFsLoadFileRequest_o *this, const Meth
   struct CriFsBinder_o *newBinder; // x0
   struct CriFsRequest_DoneDelegate_o *doneDelegate_k__BackingField; // x8
 
-  if ( (byte_4CAF7BD & 1) == 0 )
+  if ( (byte_4CC08BD & 1) == 0 )
   {
-    sub_1C6BA08(&byte___TypeInfo);
-    sub_1C6BA08(&Method_CriFsLoadFileRequest_UpdateLoader__);
-    sub_1C6BA08(&CriFsLoader_TypeInfo);
-    byte_4CAF7BD = 1;
+    sub_1C713B0(&byte___TypeInfo);
+    sub_1C713B0(&Method_CriFsLoadFileRequest_UpdateLoader__);
+    sub_1C713B0(&CriFsLoader_TypeInfo);
+    byte_4CC08BD = 1;
   }
   p_loader = &this->fields.loader;
   loader = this->fields.loader;
   if ( !loader )
   {
-    v5 = (CriFsLoader_o *)sub_1C6BC54(CriFsLoader_TypeInfo);
+    v5 = (CriFsLoader_o *)sub_1C715FC(CriFsLoader_TypeInfo);
     CriFsLoader___ctor(v5, v6);
     *p_loader = v5;
-    sub_1C6B9AC(&this->fields.loader, v5);
+    sub_1C71354(&this->fields.loader, v5);
     loader = *p_loader;
     if ( !*p_loader )
       goto LABEL_18;
     CriFsLoader__SetReadUnitSize(loader, this->fields.readUnitSize, v7);
-    v8 = (struct System_Byte_array *)sub_1C6BAB0(byte___TypeInfo, LODWORD(this->fields.fileSize));
+    v8 = (struct System_Byte_array *)sub_1C71458(byte___TypeInfo, LODWORD(this->fields.fileSize));
     this->fields._bytes_k__BackingField = v8;
-    sub_1C6B9AC(&this->fields._bytes_k__BackingField, v8);
+    sub_1C71354(&this->fields._bytes_k__BackingField, v8);
     loader = this->fields.loader;
     if ( !loader )
       goto LABEL_18;
@@ -283,19 +283,19 @@ void CriFsLoadFileRequest__UpdateLoader(CriFsLoadFileRequest_o *this, const Meth
       return;
     case 0:
       this->fields._bytes_k__BackingField = 0;
-      sub_1C6B9AC(&this->fields._bytes_k__BackingField, 0);
+      sub_1C71354(&this->fields._bytes_k__BackingField, 0);
       break;
   }
   loader = this->fields.loader;
   this->fields.phase = 3;
   if ( !loader )
 LABEL_18:
-    sub_1C6BC60(loader, method);
+    sub_1C71608(loader, method);
   ((void (__fastcall *)(CriFsLoader_o *, const MethodInfo *))loader->klass->vtable._5_Dispose.methodPtr)(
     loader,
     loader->klass->vtable._5_Dispose.method);
   this->fields.loader = 0;
-  sub_1C6B9AC(&this->fields.loader, 0);
+  sub_1C71354(&this->fields.loader, 0);
   newBinder = this->fields.newBinder;
   if ( newBinder )
   {
@@ -303,7 +303,7 @@ LABEL_18:
       newBinder,
       newBinder->klass->vtable._5_Dispose.method);
     this->fields.newBinder = 0;
-    sub_1C6B9AC(&this->fields.newBinder, 0);
+    sub_1C71354(&this->fields.newBinder, 0);
   }
   doneDelegate_k__BackingField = this->fields._doneDelegate_k__BackingField;
   this->fields._isDone_k__BackingField = 1;
@@ -330,12 +330,12 @@ System_String_o *CriFsLoadFileRequest__get_path(CriFsLoadFileRequest_o *this, co
 void CriFsLoadFileRequest__set_bytes(CriFsLoadFileRequest_o *this, System_Byte_array *value, const MethodInfo *method)
 {
   this->fields._bytes_k__BackingField = value;
-  sub_1C6B9AC(&this->fields._bytes_k__BackingField, value);
+  sub_1C71354(&this->fields._bytes_k__BackingField, value);
 }
 
 
 void CriFsLoadFileRequest__set_path(CriFsLoadFileRequest_o *this, System_String_o *value, const MethodInfo *method)
 {
   this->fields._path_k__BackingField = value;
-  sub_1C6B9AC(&this->fields._path_k__BackingField, value);
+  sub_1C71354(&this->fields._path_k__BackingField, value);
 }

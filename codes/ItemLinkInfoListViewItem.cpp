@@ -2,50 +2,90 @@ void ItemLinkInfoListViewItem___ctor(ItemLinkInfoListViewItem_o *this, int32_t i
 {
   int32_t v5; // w1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  int32_t v8; // w1
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  int32_t v18; // w1
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  int32_t v12; // w1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
   int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
+  int32_t v25; // w1
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  int32_t v35; // w5
+  int64_t v36; // x6
+  System_String_o *v37; // x7
+  int32_t v38; // w1
+  int32_t v39; // w2
+  int32_t v40; // w3
+  System_String_o *v41; // x4
+  int32_t v42; // w5
+  int64_t v43; // x6
+  System_String_o *v44; // x7
 
-  if ( (byte_4CB8B61 & 1) == 0 )
+  if ( (byte_4CC9C9C & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB8B61 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC9C9C = 1;
   }
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   v5 = StringLiteral_1/*""*/;
   this->fields._IconName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7);
-  v8 = StringLiteral_1/*""*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields._IconName_k__BackingField, v5, v6, v7, v8, v9, v10, v11);
+  v12 = StringLiteral_1/*""*/;
   this->fields._Name_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, v8, v9, v10);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField, v12, v13, v14, v15, v16, v17, v18);
   this->fields._ItemEnt_k__BackingField = 0;
   *(_QWORD *)&this->fields._TargetId_k__BackingField = 0;
   this->fields._ItemDropEfficiencyPriority_k__BackingField = 0;
   *(int32_t *)((char *)&this->fields._ItemDropEfficiencyPriority_k__BackingField + 3) = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields._ItemEnt_k__BackingField, 0, v19, v20, v21, v22, v23, v24);
   this->fields._ItemNeedNum_k__BackingField = 0;
   this->fields._IsItemGetInfoList_k__BackingField = 0;
-  v13 = StringLiteral_1/*""*/;
+  v25 = StringLiteral_1/*""*/;
   this->fields._ClosedMessage_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField, v13, v14, v15);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ClosedMessage_k__BackingField,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29,
+    v30,
+    v31);
   this->fields._Type_k__BackingField = 0;
   this->fields._LinkAction_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, 0, v16, v17);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields._LinkAction_k__BackingField, 0, v32, v33, v34, v35, v36, v37);
   this->fields._IsFirst_k__BackingField = 0;
-  v18 = StringLiteral_1/*""*/;
+  v38 = StringLiteral_1/*""*/;
   this->fields._TransitionParam_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField, v18, v19, v20);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._TransitionParam_k__BackingField,
+    v38,
+    v39,
+    v40,
+    v41,
+    v42,
+    v43,
+    v44);
 }
 
 
@@ -168,14 +208,22 @@ void ItemLinkInfoListViewItem__set_ClosedMessage(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._ClosedMessage_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._ClosedMessage_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ClosedMessage_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -184,10 +232,22 @@ void ItemLinkInfoListViewItem__set_IconName(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._IconName_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._IconName_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -241,10 +301,22 @@ void ItemLinkInfoListViewItem__set_ItemEnt(
         ItemEntity_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._ItemEnt_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._ItemEnt_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ItemEnt_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -262,10 +334,22 @@ void ItemLinkInfoListViewItem__set_LinkAction(
         System_Action_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._LinkAction_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._LinkAction_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._LinkAction_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -274,10 +358,22 @@ void ItemLinkInfoListViewItem__set_Name(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._Name_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -301,14 +397,22 @@ void ItemLinkInfoListViewItem__set_TransitionParam(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._TransitionParam_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._TransitionParam_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._TransitionParam_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

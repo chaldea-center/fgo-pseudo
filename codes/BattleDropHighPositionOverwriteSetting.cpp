@@ -3,8 +3,8 @@ void BattleDropHighPositionOverwriteSetting___ctor(
         const MethodInfo *method)
 {
   this->fields.startAcceleration.fields.z = 0.0;
-  *(_OWORD *)&this->fields.startPos.fields.x = xmmword_CED1A0;
-  *(_OWORD *)&this->fields.localGravity.fields.y = xmmword_CECD70;
+  *(_OWORD *)&this->fields.startPos.fields.x = xmmword_CEFDE0;
+  *(_OWORD *)&this->fields.localGravity.fields.y = xmmword_CEF9B0;
   UnityEngine_ScriptableObject___ctor((UnityEngine_ScriptableObject_o *)this, 0);
 }
 

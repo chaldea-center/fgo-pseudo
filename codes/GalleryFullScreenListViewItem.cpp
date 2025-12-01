@@ -5,19 +5,27 @@ void GalleryFullScreenListViewItem___ctor(
         const MethodInfo *method)
 {
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  __int64 v8; // x0
-  __int64 v9; // x1
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  __int64 v12; // x0
+  __int64 v13; // x1
 
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   this->fields._GalleryResourceEntity_k__BackingField = galleryResourceEntity;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._GalleryResourceEntity_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._GalleryResourceEntity_k__BackingField,
     (int32_t)galleryResourceEntity,
     v6,
-    v7);
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
   if ( !galleryResourceEntity )
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v12, v13);
   this->fields._CurrentGalleryType_k__BackingField = galleryResourceEntity->fields.galleryType;
 }
 

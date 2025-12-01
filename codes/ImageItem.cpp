@@ -10,7 +10,7 @@ bool ImageItem__IsTreasure(int32_t id, const MethodInfo *method)
 }
 
 
-bool ImageItem__IsTreasure_40660152(int32_t id, const MethodInfo *method)
+bool ImageItem__IsTreasure_40702444(int32_t id, const MethodInfo *method)
 {
   return (unsigned int)(id - 1) < 3;
 }

@@ -1,27 +1,27 @@
 void UserGachaHistoryEntity___ctor(UserGachaHistoryEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB718A & 1) == 0 )
+  if ( (byte_4CC82B3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
-    byte_4CB718A = 1;
+    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
+    byte_4CC82B3 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserGachaHistoryEntity__CreatePK(int64_t userId, int32_t gachaId, const MethodInfo *method)
 {
-  if ( (byte_4CB7189 & 1) == 0 )
+  if ( (byte_4CC82B2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4CB7189 = 1;
+    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4CC82B2 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            gachaId,
-           (const MethodInfo_31395F8 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_314939C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -44,7 +44,7 @@ System_String_o *UserGachaHistoryEntity__ToString(UserGachaHistoryEntity_o *this
          this->fields.num,
          0);
   if ( !v2 )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   return v2->fields.name;
 }
 
@@ -53,26 +53,30 @@ System_String_o *UserGachaHistoryEntity__get_CreatedAtToString(
         UserGachaHistoryEntity_o *this,
         const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_createdAtString; // x19
+  GrandQuestFolderBoardItem_o *p_createdAtString; // x19
   int64_t createdAt; // x20
   System_String_o *DateTime; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB7187 & 1) == 0 )
+  if ( (byte_4CC82B0 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    byte_4CB7187 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    byte_4CC82B0 = 1;
   }
-  p_createdAtString = (CGThumbnailListItem_o *)&this->fields.createdAtString;
+  p_createdAtString = (GrandQuestFolderBoardItem_o *)&this->fields.createdAtString;
   if ( System_String__IsNullOrEmpty(this->fields.createdAtString, 0) )
   {
     createdAt = this->fields.createdAt;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     DateTime = LocalizationManager__GetDateTime(createdAt, 0);
-    p_createdAtString->klass = (CGThumbnailListItem_c *)DateTime;
-    sub_1C6B9AC(p_createdAtString, (int32_t)DateTime, v6, v7);
+    p_createdAtString->klass = (GrandQuestFolderBoardItem_c *)DateTime;
+    sub_1C71354(p_createdAtString, (int32_t)DateTime, v6, v7, v8, v9, v10, v11);
   }
   return (System_String_o *)p_createdAtString->klass;
 }
@@ -83,47 +87,51 @@ System_String_o *UserGachaHistoryEntity__get_TitleToString(UserGachaHistoryEntit
   System_String_o **p_titleString; // x19
   System_String_o *v4; // x0
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   int32_t gachaExtraGiftBonusType; // w8
-  System_String_o *v8; // x1
-  __int64 *v9; // x8
+  System_String_o *v12; // x1
+  __int64 *v13; // x8
 
-  if ( (byte_4CB7188 & 1) == 0 )
+  if ( (byte_4CC82B1 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_12425/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/);
-    sub_1C6BA08(&StringLiteral_12436/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_12450/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/);
-    byte_4CB7188 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_12431/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/);
+    sub_1C713B0(&StringLiteral_12442/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/);
+    sub_1C713B0(&StringLiteral_12456/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/);
+    byte_4CC82B1 = 1;
   }
   p_titleString = &this->fields.titleString;
   if ( System_String__IsNullOrEmpty(this->fields.titleString, 0) )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12436/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, 0);
+    v4 = LocalizationManager__Get((System_String_o *)StringLiteral_12442/*"SUMMON_BOUNS_ITEM_GIFTS_TITLE"*/, 0);
     gachaExtraGiftBonusType = this->fields.gachaExtraGiftBonusType;
     if ( gachaExtraGiftBonusType == 3 )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = &StringLiteral_12425/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/;
+      v13 = &StringLiteral_12431/*"SUMMON_BONUS_ITEM_GIFTS_FREE"*/;
     }
     else
     {
-      v8 = v4;
+      v12 = v4;
       if ( gachaExtraGiftBonusType != 2 )
       {
 LABEL_15:
-        *p_titleString = v8;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.titleString, (int32_t)v8, v5, v6);
+        *p_titleString = v12;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.titleString, (int32_t)v12, v5, v6, v7, v8, v9, v10);
         return *p_titleString;
       }
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = &StringLiteral_12450/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
+      v13 = &StringLiteral_12456/*"SUMMON_EXTRA_ITEM_GIFTS_TITLE"*/;
     }
-    v8 = LocalizationManager__Get((System_String_o *)*v9, 0);
+    v12 = LocalizationManager__Get((System_String_o *)*v13, 0);
     goto LABEL_15;
   }
   return *p_titleString;

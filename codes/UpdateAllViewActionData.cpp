@@ -4,6 +4,6 @@ void UpdateAllViewActionData__ExecAction(
         const MethodInfo *method)
 {
   if ( !perf || (this = (UpdateAllViewActionData_o *)BattlePerformance__get_FieldEnvData(perf, 0)) == 0 )
-    sub_1C6BC60(this, perf);
+    sub_1C71608(this, perf);
   BattleFieldEnvironmentData__UpdateAllView((BattleFieldEnvironmentData_o *)this, 0);
 }

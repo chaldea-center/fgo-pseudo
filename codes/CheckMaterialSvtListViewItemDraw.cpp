@@ -9,7 +9,7 @@ int32_t CheckMaterialSvtListViewItemDraw__GetDispMode(int32_t initMode, const Me
   if ( (unsigned int)(initMode - 1) > 2 )
     return 0;
   else
-    return dword_D1F87C[initMode - 1];
+    return dword_D224BC[initMode - 1];
 }
 
 
@@ -23,26 +23,26 @@ System_String_o *CheckMaterialSvtListViewItemDraw__GetStatusText(
   UserServantEntity_o *UserServantEntity_k__BackingField; // x0
   __int64 *v9; // x8
 
-  if ( (byte_4CBA4A0 & 1) == 0 )
+  if ( (byte_4CCB5F8 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11538/*"SELECT_LOCK"*/);
-    sub_1C6BA08(&StringLiteral_11527/*"SELECT_FAVORITE"*/);
-    sub_1C6BA08(&StringLiteral_12517/*"SUPPORT_MEMBER"*/);
-    sub_1C6BA08(&StringLiteral_11520/*"SELECT_CANNOT"*/);
-    sub_1C6BA08(&StringLiteral_11521/*"SELECT_CHOICE"*/);
-    sub_1C6BA08(&StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    sub_1C6BA08(&StringLiteral_11548/*"SELECT_PARTY"*/);
-    sub_1C6BA08(&StringLiteral_9314/*"NOT_SELECT_EQUIPED"*/);
-    this = (CheckMaterialSvtListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CBA4A0 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_11544/*"SELECT_LOCK"*/);
+    sub_1C713B0(&StringLiteral_11533/*"SELECT_FAVORITE"*/);
+    sub_1C713B0(&StringLiteral_12523/*"SUPPORT_MEMBER"*/);
+    sub_1C713B0(&StringLiteral_11526/*"SELECT_CANNOT"*/);
+    sub_1C713B0(&StringLiteral_11527/*"SELECT_CHOICE"*/);
+    sub_1C713B0(&StringLiteral_11558/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    sub_1C713B0(&StringLiteral_11554/*"SELECT_PARTY"*/);
+    sub_1C713B0(&StringLiteral_9318/*"NOT_SELECT_EQUIPED"*/);
+    this = (CheckMaterialSvtListViewItemDraw_o *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CCB5F8 = 1;
   }
   if ( !isServant )
   {
     if ( item )
       goto LABEL_16;
 LABEL_11:
-    sub_1C6BC60(this, item);
+    sub_1C71608(this, item);
   }
   if ( !item )
     goto LABEL_11;
@@ -51,14 +51,14 @@ LABEL_11:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = &StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/;
+    v9 = &StringLiteral_11558/*"SELECT_SERVANT_EVENT_JOIN"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   if ( item->fields.attribute )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = &StringLiteral_11520/*"SELECT_CANNOT"*/;
+    v9 = &StringLiteral_11526/*"SELECT_CANNOT"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
 LABEL_16:
@@ -66,14 +66,14 @@ LABEL_16:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = &StringLiteral_11521/*"SELECT_CHOICE"*/;
+    v9 = &StringLiteral_11527/*"SELECT_CHOICE"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   if ( item->fields._IsLock_k__BackingField )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = &StringLiteral_11538/*"SELECT_LOCK"*/;
+    v9 = &StringLiteral_11544/*"SELECT_LOCK"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   if ( isServant )
@@ -82,21 +82,21 @@ LABEL_16:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = &StringLiteral_11527/*"SELECT_FAVORITE"*/;
+      v9 = &StringLiteral_11533/*"SELECT_FAVORITE"*/;
       return LocalizationManager__Get((System_String_o *)*v9, 0);
     }
     if ( item->fields._IsParty_k__BackingField )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = &StringLiteral_11548/*"SELECT_PARTY"*/;
+      v9 = &StringLiteral_11554/*"SELECT_PARTY"*/;
       return LocalizationManager__Get((System_String_o *)*v9, 0);
     }
     if ( item->fields._IsUseSupportServant_k__BackingField )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = &StringLiteral_12517/*"SUPPORT_MEMBER"*/;
+      v9 = &StringLiteral_12523/*"SUPPORT_MEMBER"*/;
       return LocalizationManager__Get((System_String_o *)*v9, 0);
     }
   }
@@ -104,7 +104,7 @@ LABEL_16:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v9 = &StringLiteral_9314/*"NOT_SELECT_EQUIPED"*/;
+    v9 = &StringLiteral_9318/*"NOT_SELECT_EQUIPED"*/;
     return LocalizationManager__Get((System_String_o *)*v9, 0);
   }
   return (System_String_o *)StringLiteral_1/*""*/;
@@ -170,7 +170,7 @@ void CheckMaterialSvtListViewItemDraw__SetDisp(
         (this = (CheckMaterialSvtListViewItemDraw_o *)v5->fields.dragSelect) == 0) )
   {
 LABEL_11:
-    sub_1C6BC60(this, item);
+    sub_1C71608(this, item);
   }
   DragSelectComponent__Set(
     (DragSelectComponent_o *)this,
@@ -191,10 +191,10 @@ void CheckMaterialSvtListViewItemDraw__SetInput(
   const MethodInfo *v9; // x3
   struct UICommonButton_o *v10; // x0
 
-  if ( (byte_4CBA4A1 & 1) == 0 )
+  if ( (byte_4CCB5F9 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA4A1 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCB5F9 = 1;
   }
   baseButton = (UnityEngine_Object_o *)this->fields.baseButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -209,7 +209,7 @@ void CheckMaterialSvtListViewItemDraw__SetInput(
             v10->klass->vtable._5_set_isEnabled.method),
           (v10 = this->fields.baseButton) == 0) )
     {
-      sub_1C6BC60(v10, v8);
+      sub_1C71608(v10, v8);
     }
     ((void (__fastcall *)(struct UICommonButton_o *, _QWORD, __int64, const MethodInfo *))v10->klass->vtable._14_SetState.methodPtr)(
       v10,
@@ -242,10 +242,10 @@ void CheckMaterialSvtListViewItemDraw__SetItem(
   const MethodInfo *v19; // x3
   const MethodInfo *v20; // x5
 
-  if ( (byte_4CBA49C & 1) == 0 )
+  if ( (byte_4CCB5F4 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA49C = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCB5F4 = 1;
   }
   if ( item )
   {
@@ -280,7 +280,7 @@ void CheckMaterialSvtListViewItemDraw__SetItem(
             if ( !v16 )
               goto LABEL_24;
           }
-          FlashingIconComponent__Set_41132780(v16, IsParty_k__BackingField, 0);
+          FlashingIconComponent__Set_41175420(v16, IsParty_k__BackingField, 0);
         }
         CheckMaterialSvtListViewItemDraw__SetSpriteActive(
           (CheckMaterialSvtListViewItemDraw_o *)v14,
@@ -301,7 +301,7 @@ void CheckMaterialSvtListViewItemDraw__SetItem(
                 (v16 = (FlashingIconComponent_o *)this->fields.baseButton) == 0) )
           {
 LABEL_24:
-            sub_1C6BC60(v16, IsParty_k__BackingField);
+            sub_1C71608(v16, IsParty_k__BackingField);
           }
           ((void (__fastcall *)(FlashingIconComponent_o *, _QWORD, __int64, Il2CppClass **))v16->klass[1]._1.nestedTypes)(
             v16,
@@ -332,10 +332,10 @@ void CheckMaterialSvtListViewItemDraw__SetLabelText(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CBA49E & 1) == 0 )
+  if ( (byte_4CCB5F6 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA49E = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCB5F6 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -343,7 +343,7 @@ void CheckMaterialSvtListViewItemDraw__SetLabelText(
   if ( !v6 )
   {
     if ( !label )
-      sub_1C6BC60(v6, v7);
+      sub_1C71608(v6, v7);
     UILabel__set_text(label, text, 0);
   }
 }
@@ -363,7 +363,7 @@ void CheckMaterialSvtListViewItemDraw__SetServantFaceIcon(
       this = (CheckMaterialSvtListViewItemDraw_o *)this->fields.servantFaceIcon;
       if ( this )
       {
-        ServantFaceIconComponent__Set_41239152(
+        ServantFaceIconComponent__Set_41281864(
           (ServantFaceIconComponent_o *)this,
           item->fields._UserServantEntity_k__BackingField,
           item->fields.iconLabelInfo1,
@@ -373,7 +373,7 @@ void CheckMaterialSvtListViewItemDraw__SetServantFaceIcon(
       }
     }
 LABEL_10:
-    sub_1C6BC60(this, item);
+    sub_1C71608(this, item);
   }
   if ( isCommandCode )
   {
@@ -382,7 +382,7 @@ LABEL_10:
     this = (CheckMaterialSvtListViewItemDraw_o *)this->fields.servantFaceIcon;
     if ( !this )
       goto LABEL_10;
-    ServantFaceIconComponent__Set_41246596(
+    ServantFaceIconComponent__Set_41289308(
       (ServantFaceIconComponent_o *)this,
       item->fields._UserCommandCodeEntity_k__BackingField,
       item->fields.iconLabelInfo1,
@@ -401,10 +401,10 @@ void CheckMaterialSvtListViewItemDraw__SetSpriteActive(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CBA49D & 1) == 0 )
+  if ( (byte_4CCB5F5 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA49D = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCB5F5 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -412,7 +412,7 @@ void CheckMaterialSvtListViewItemDraw__SetSpriteActive(
   if ( ((unsigned __int8)gameObject & 1) == 0 )
   {
     if ( !sprite || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)sprite, 0)) == 0 )
-      sub_1C6BC60(gameObject, v7);
+      sub_1C71608(gameObject, v7);
     UnityEngine_GameObject__SetActive(gameObject, isActive, 0);
   }
 }
@@ -434,11 +434,11 @@ void CheckMaterialSvtListViewItemDraw__SetWarningText(
   CheckMaterialSvtListViewItemDraw_o *v14; // x2
 
   v10 = this;
-  if ( (byte_4CBA49F & 1) == 0 )
+  if ( (byte_4CCB5F7 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    this = (CheckMaterialSvtListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CBA49F = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    this = (CheckMaterialSvtListViewItemDraw_o *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CCB5F7 = 1;
   }
   if ( !item )
     goto LABEL_17;
@@ -456,7 +456,7 @@ LABEL_15:
       goto LABEL_12;
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    this = (CheckMaterialSvtListViewItemDraw_o *)TutorialFlag__Get_40657328(126, 0);
+    this = (CheckMaterialSvtListViewItemDraw_o *)TutorialFlag__Get_40699620(126, 0);
     if ( ((unsigned __int8)this & 1) == 0 )
     {
 LABEL_12:
@@ -473,7 +473,7 @@ LABEL_12:
         }
       }
 LABEL_17:
-      sub_1C6BC60(this, item);
+      sub_1C71608(this, item);
     }
   }
   v12 = v10->fields.warningLabel;

@@ -3,12 +3,12 @@ AssumedBattleAssetSearcherForWave_o *AssumedBattleAssetSearcherForWave__Create(c
   AssumedBattleAssetSearcherBase_o *v1; // x19
   const MethodInfo *v2; // x1
 
-  if ( (byte_4CB87DC & 1) == 0 )
+  if ( (byte_4CC990E & 1) == 0 )
   {
-    sub_1C6BA08(&AssumedBattleAssetSearcherForWave_TypeInfo);
-    byte_4CB87DC = 1;
+    sub_1C713B0(&AssumedBattleAssetSearcherForWave_TypeInfo);
+    byte_4CC990E = 1;
   }
-  v1 = (AssumedBattleAssetSearcherBase_o *)sub_1C6BC54(AssumedBattleAssetSearcherForWave_TypeInfo);
+  v1 = (AssumedBattleAssetSearcherBase_o *)sub_1C715FC(AssumedBattleAssetSearcherForWave_TypeInfo);
   AssumedBattleAssetSearcherBase___ctor(v1, v2);
   return (AssumedBattleAssetSearcherForWave_o *)v1;
 }
@@ -27,20 +27,20 @@ AssumedBattleAssetLoadManager_AnalyzedResultParam_o *AssumedBattleAssetSearcherF
   const MethodInfo *v8; // x2
 
   v2 = this;
-  if ( (byte_4CB87DB & 1) == 0 )
+  if ( (byte_4CC990D & 1) == 0 )
   {
-    this = (AssumedBattleAssetSearcherForWave_o *)sub_1C6BA08(&AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
-    byte_4CB87DB = 1;
+    this = (AssumedBattleAssetSearcherForWave_o *)sub_1C713B0(&AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+    byte_4CC990D = 1;
   }
   manager = v2->fields.manager;
   if ( !manager
     || (Perf_k__BackingField = manager->fields._Perf_k__BackingField) == 0
     || (this = (AssumedBattleAssetSearcherForWave_o *)Perf_k__BackingField->fields.data) == 0 )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   StageEntity = BattleData__getStageEntity((BattleData_o *)this, 0);
-  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1C6BC54(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
+  v6 = (AssumedBattleAssetLoadManager_AnalyzedResultParam_o *)sub_1C715FC(AssumedBattleAssetLoadManager_AnalyzedResultParam_TypeInfo);
   AssumedBattleAssetLoadManager_AnalyzedResultParam___ctor(v6, v7);
   AssumedEffectExtractLogic__FromStage(StageEntity, v6, v8);
   return v6;

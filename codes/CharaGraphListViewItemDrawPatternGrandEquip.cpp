@@ -13,7 +13,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupUseSprite(
         const MethodInfo *method)
 {
   if ( !itemDraw )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   CharaGraphListViewItemDrawPatternDefault__SetActive(
     (CharaGraphListViewItemDrawPatternDefault_o *)this,
     (UnityEngine_Component_o *)itemDraw->fields.useSprite,
@@ -53,16 +53,16 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
 
   v5 = itemDraw;
   v6 = (CharaGraphListViewItemDrawPatternDefault_o *)this;
-  if ( (byte_4CB1039 & 1) == 0 )
+  if ( (byte_4CC2146 & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&CharaGraphGrandEquipListViewItem_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_43/*"\n"*/);
-    sub_1C6BA08(&StringLiteral_7000/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_1C6BA08(&StringLiteral_5482/*"EQUIP_GRAPH_USE"*/);
-    byte_4CB1039 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&CharaGraphGrandEquipListViewItem_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_43/*"\n"*/);
+    sub_1C713B0(&StringLiteral_7004/*"GRAND_SERVANT_EQUIP_FRAME_"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)sub_1C713B0(&StringLiteral_5485/*"EQUIP_GRAPH_USE"*/);
+    byte_4CC2146 = 1;
   }
   v26 = 0;
   if ( !item )
@@ -128,7 +128,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
         if ( v12 - 4 >= (int)v14 )
           break;
         if ( v12 - 4 >= v14 )
-          sub_1C6BC68(this);
+          sub_1C71610(this);
         if ( *(_QWORD *)(v13 + 8 * v12) == v9[1].fields.sortValueLast )
         {
           warningLabel3 = v5->fields.warningLabel3;
@@ -136,11 +136,11 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
           {
             v26 = v12 - 3;
             v16 = System_Int32__ToString((int32_t)&v26, 0);
-            v17 = System_String__Concat_63966792((System_String_o *)StringLiteral_7000/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v16, 0);
+            v17 = System_String__Concat_64031724((System_String_o *)StringLiteral_7004/*"GRAND_SERVANT_EQUIP_FRAME_"*/, v16, 0);
             if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
             v18 = LocalizationManager__Get(v17, 0);
-            this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_63966792(
+            this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_64031724(
                                                                       (System_String_o *)StringLiteral_43/*"\n"*/,
                                                                       v18,
                                                                       0);
@@ -209,7 +209,7 @@ void CharaGraphListViewItemDrawPatternGrandEquip__SetupWarningAndMask(
             }
           }
 LABEL_36:
-          sub_1C6BC60(this, itemDraw);
+          sub_1C71608(this, itemDraw);
         }
         this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)v5->fields.warningLabel3;
         if ( !this )
@@ -229,8 +229,8 @@ LABEL_53:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5482/*"EQUIP_GRAPH_USE"*/, 0);
-    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_63966792(
+    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5485/*"EQUIP_GRAPH_USE"*/, 0);
+    this = (CharaGraphListViewItemDrawPatternGrandEquip_o *)System_String__Concat_64031724(
                                                               v24,
                                                               (System_String_o *)StringLiteral_43/*"\n"*/,
                                                               0);

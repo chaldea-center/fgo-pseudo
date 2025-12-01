@@ -2,13 +2,17 @@ void BattleBoostItem___ctor(BattleBoostItem_o *this, ItemEntity_o *item, int32_t
 {
   BattleBoostItem_o *v6; // x21
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
   v6 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v6->fields.item = item;
   v6 = (BattleBoostItem_o *)((char *)v6 + 16);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v6, (int32_t)item, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v6, (int32_t)item, v7, v8, v9, v10, v11, v12);
   LODWORD(v6->monitor) = skillId;
 }
 
@@ -19,17 +23,17 @@ bool BattleBoostItem__checkEffectTiming(BattleBoostItem_o *this, int32_t timing,
   BattleBoostItemInfoData_c *v5; // x0
   ItemEntity_o *item; // x20
 
-  if ( (byte_4CB89D6 & 1) == 0 )
+  if ( (byte_4CC9B0A & 1) == 0 )
   {
-    sub_1C6BA08(&BattleBoostItemInfoData_TypeInfo);
-    byte_4CB89D6 = 1;
+    sub_1C713B0(&BattleBoostItemInfoData_TypeInfo);
+    byte_4CC9B0A = 1;
   }
   v5 = BattleBoostItemInfoData_TypeInfo;
   item = this->fields.item;
   if ( !BattleBoostItemInfoData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleBoostItemInfoData_TypeInfo);
   if ( !item )
-    sub_1C6BC60(v5, *(_QWORD *)&timing);
+    sub_1C71608(v5, *(_QWORD *)&timing);
   return ItemEntity__getScript(
            item,
            BattleBoostItemInfoData_TypeInfo->static_fields->KEY_SCRIPT_BOOST_EFFECT_TIMING,

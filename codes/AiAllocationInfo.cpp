@@ -4,29 +4,37 @@ void AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *obj, const 
   __int64 naturalAligment; // x9
   Il2CppObject *ScriptValue_object__object; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   int32_t IntValue; // w0
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w20
-  __int64 v14; // x0
-  __int64 v15; // x1
-  struct System_Int32_array *v16; // x1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  int32_t v21; // w20
+  __int64 v22; // x0
+  __int64 v23; // x1
+  struct System_Int32_array *v24; // x1
 
-  if ( (byte_4CB5D0F & 1) == 0 )
+  if ( (byte_4CC6E30 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
-    sub_1C6BA08(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
-    sub_1C6BA08(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__);
-    sub_1C6BA08(&System_Func_List_object___List_int___TypeInfo);
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&StringLiteral_16735/*"aiIds"*/);
-    sub_1C6BA08(&StringLiteral_20841/*"individuality"*/);
-    sub_1C6BA08(&StringLiteral_16841/*"applySvtType"*/);
-    byte_4CB5D0F = 1;
+    sub_1C713B0(&System_Collections_Generic_Dictionary_string__object__TypeInfo);
+    sub_1C713B0(&Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
+    sub_1C713B0(&Method_EntityScriptValueConvertLogic_ObjectListToIntList__);
+    sub_1C713B0(&System_Func_List_object___List_int___TypeInfo);
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&StringLiteral_16742/*"aiIds"*/);
+    sub_1C713B0(&StringLiteral_20854/*"individuality"*/);
+    sub_1C713B0(&StringLiteral_16848/*"applySvtType"*/);
+    byte_4CC6E30 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v5 = (System_Func_object__object__o *)sub_1C6BC54(System_Func_List_object___List_int___TypeInfo);
+  v5 = (System_Func_object__object__o *)sub_1C715FC(System_Func_List_object___List_int___TypeInfo);
   System_Func_object__object____ctor(v5, 0, Method_EntityScriptValueConvertLogic_ObjectListToIntList__, 0);
   if ( obj )
   {
@@ -34,45 +42,61 @@ void AiAllocationInfo___ctor(AiAllocationInfo_o *this, Il2CppObject *obj, const 
     if ( obj->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (System_Collections_Generic_Dictionary_string__object__c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != System_Collections_Generic_Dictionary_string__object__TypeInfo )
     {
-      sub_1C6BFFC(obj);
+      sub_1C719A4(obj);
       goto LABEL_13;
     }
   }
   ScriptValue_object__object = EntityScriptUtil__GetScriptValue_object__object_(
                                  (System_Collections_Generic_Dictionary_string__object__o *)obj,
-                                 (System_String_o *)StringLiteral_16735/*"aiIds"*/,
+                                 (System_String_o *)StringLiteral_16742/*"aiIds"*/,
                                  (System_Func_TSource__TDestination__o *)v5,
                                  0,
-                                 (const MethodInfo_3141B00 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
+                                 (const MethodInfo_31518A4 *)Method_EntityScriptUtil_GetScriptValue_List_object___List_int____);
   this->fields._AiIdList_k__BackingField = (struct System_Collections_Generic_List_int__o *)ScriptValue_object__object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)ScriptValue_object__object, v8, v9);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields,
+    (int32_t)ScriptValue_object__object,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13);
   this->fields._ApplyType_k__BackingField = EntityScriptUtil__GetIntValue(
                                               (System_Collections_Generic_Dictionary_string__object__o *)obj,
-                                              (System_String_o *)StringLiteral_16841/*"applySvtType"*/,
+                                              (System_String_o *)StringLiteral_16848/*"applySvtType"*/,
                                               0,
                                               0);
   IntValue = EntityScriptUtil__GetIntValue(
                (System_Collections_Generic_Dictionary_string__object__o *)obj,
-               (System_String_o *)StringLiteral_20841/*"individuality"*/,
+               (System_String_o *)StringLiteral_20854/*"individuality"*/,
                0,
                0);
   if ( IntValue < 1 )
   {
-    v16 = 0;
+    v24 = 0;
     goto LABEL_11;
   }
-  v13 = IntValue;
-  v14 = sub_1C6BAB0(int___TypeInfo, 1);
-  if ( !v14 )
+  v21 = IntValue;
+  v22 = sub_1C71458(int___TypeInfo, 1);
+  if ( !v22 )
 LABEL_13:
-    sub_1C6BC60(v14, v15);
-  v16 = (struct System_Int32_array *)v14;
-  if ( !*(_DWORD *)(v14 + 24) )
-    sub_1C6BC68(v14);
-  *(_DWORD *)(v14 + 32) = v13;
+    sub_1C71608(v22, v23);
+  v24 = (struct System_Int32_array *)v22;
+  if ( !*(_DWORD *)(v22 + 24) )
+    sub_1C71610(v22);
+  *(_DWORD *)(v22 + 32) = v21;
 LABEL_11:
-  this->fields._AiIndividuality_k__BackingField = v16;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._AiIndividuality_k__BackingField, (int32_t)v16, v11, v12);
+  this->fields._AiIndividuality_k__BackingField = v24;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._AiIndividuality_k__BackingField,
+    (int32_t)v24,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
 }
 
 
@@ -88,10 +112,10 @@ bool AiAllocationInfo__IsMatch(
   const MethodInfo *v10; // x3
   struct BattleDeckServantData_o *deckSvt; // x8
 
-  if ( (byte_4CB5D10 & 1) == 0 )
+  if ( (byte_4CC6E31 & 1) == 0 )
   {
-    sub_1C6BA08(&Individuality_TypeInfo);
-    byte_4CB5D10 = 1;
+    sub_1C713B0(&Individuality_TypeInfo);
+    byte_4CC6E31 = 1;
   }
   AiIndividuality_k__BackingField = this->fields._AiIndividuality_k__BackingField;
   if ( !Individuality_TypeInfo->_2.cctor_finished )
@@ -100,7 +124,7 @@ bool AiAllocationInfo__IsMatch(
   if ( !v8 )
     return 0;
   if ( !svt || (deckSvt = svt->fields.deckSvt) == 0 )
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   return AiAllocationInfo__IsMatchApplyType(this, deckSvt->fields.isFollowerSvt, svt->fields.followerType, v10);
 }
 
@@ -162,10 +186,14 @@ void AiAllocationInfo__set_AiIdList(
         System_Collections_Generic_List_int__o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._AiIdList_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -174,14 +202,22 @@ void AiAllocationInfo__set_AiIndividuality(
         System_Int32_array *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._AiIndividuality_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._AiIndividuality_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._AiIndividuality_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

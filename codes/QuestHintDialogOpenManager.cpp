@@ -1,52 +1,84 @@
 void QuestHintDialogOpenManager___cctor(const MethodInfo *method)
 {
   int32_t v1; // w2
-  const MethodInfo *v2; // x3
-  System_Collections_Generic_List_object__o *v3; // x19
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  int32_t v4; // w5
+  int64_t v5; // x6
+  System_String_o *v6; // x7
+  System_Collections_Generic_List_object__o *v7; // x19
   struct QuestHintDialogOpenManager_StaticFields *static_fields; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  System_Collections_Generic_List_int__o *v7; // x19
-  struct QuestHintDialogOpenManager_StaticFields *v8; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  Il2CppObject *v11; // x19
-  struct QuestHintDialogOpenManager_StaticFields *v12; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  System_Collections_Generic_List_int__o *v15; // x19
+  struct QuestHintDialogOpenManager_StaticFields *v16; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  Il2CppObject *v23; // x19
+  struct QuestHintDialogOpenManager_StaticFields *v24; // x0
+  int32_t v25; // w2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
 
-  if ( (byte_4CB763F & 1) == 0 )
+  if ( (byte_4CC8768 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__TypeInfo);
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    sub_1C6BA08(&QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6672/*"Fgo_20210622"*/);
-    byte_4CB763F = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__TypeInfo);
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    sub_1C713B0(&QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
+    sub_1C713B0(&StringLiteral_6674/*"Fgo_20210622"*/);
+    byte_4CC8768 = 1;
   }
-  QuestHintDialogOpenManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6672/*"Fgo_20210622"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)QuestHintDialogOpenManager_TypeInfo->static_fields, StringLiteral_6672/*"Fgo_20210622"*/, v1, v2);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__TypeInfo);
-  System_Collections_Generic_List_object____ctor(
+  QuestHintDialogOpenManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6674/*"Fgo_20210622"*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)QuestHintDialogOpenManager_TypeInfo->static_fields,
+    StringLiteral_6674/*"Fgo_20210622"*/,
+    v1,
+    v2,
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo___ctor__);
-  static_fields = QuestHintDialogOpenManager_TypeInfo->static_fields;
-  static_fields->questPhaseHintDialogOpenList = (struct System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__o *)v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->questPhaseHintDialogOpenList, (int32_t)v3, v5, v6);
-  v7 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor(
+    v4,
+    v5,
+    v6);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__TypeInfo);
+  System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
-  v8 = QuestHintDialogOpenManager_TypeInfo->static_fields;
-  v8->questHintDialogOpenList = v7;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->questHintDialogOpenList, (int32_t)v7, v9, v10);
-  v11 = (Il2CppObject *)sub_1C6BC54(QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
-  System_Object___ctor(v11, 0);
-  v12 = QuestHintDialogOpenManager_TypeInfo->static_fields;
-  v12->questPhaseTempInfo = (struct QuestHintDialogOpenManager_QuestPhaseInfo_o *)v11;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->questPhaseTempInfo, (int32_t)v11, v13, v14);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo___ctor__);
+  static_fields = QuestHintDialogOpenManager_TypeInfo->static_fields;
+  static_fields->questPhaseHintDialogOpenList = (struct System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__o *)v7;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&static_fields->questPhaseHintDialogOpenList,
+    (int32_t)v7,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14);
+  v15 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor(
+    v15,
+    (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
+  v16 = QuestHintDialogOpenManager_TypeInfo->static_fields;
+  v16->questHintDialogOpenList = v15;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v16->questHintDialogOpenList, (int32_t)v15, v17, v18, v19, v20, v21, v22);
+  v23 = (Il2CppObject *)sub_1C715FC(QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
+  System_Object___ctor(v23, 0);
+  v24 = QuestHintDialogOpenManager_TypeInfo->static_fields;
+  v24->questPhaseTempInfo = (struct QuestHintDialogOpenManager_QuestPhaseInfo_o *)v23;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v24->questPhaseTempInfo, (int32_t)v23, v25, v26, v27, v28, v29, v30);
 }
 
 
@@ -63,11 +95,11 @@ void QuestHintDialogOpenManager__ClearOldSaveDataList(const MethodInfo *method)
   struct System_Collections_Generic_List_int__o *questHintDialogOpenList; // x8
   int v4; // w9
 
-  if ( (byte_4CB7636 & 1) == 0 )
+  if ( (byte_4CC875F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB7636 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC875F = 1;
   }
   v2 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -77,7 +109,7 @@ void QuestHintDialogOpenManager__ClearOldSaveDataList(const MethodInfo *method)
   }
   questHintDialogOpenList = v2->static_fields->questHintDialogOpenList;
   if ( !questHintDialogOpenList )
-    sub_1C6BC60(v2, v1);
+    sub_1C71608(v2, v1);
   v4 = questHintDialogOpenList->fields._version + 1;
   questHintDialogOpenList->fields._size = 0;
   questHintDialogOpenList->fields._version = v4;
@@ -92,11 +124,11 @@ void QuestHintDialogOpenManager__ClearSaveDataList(const MethodInfo *method)
   int32_t size; // w2
   int v5; // w9
 
-  if ( (byte_4CB7635 & 1) == 0 )
+  if ( (byte_4CC875E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Clear__);
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB7635 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Clear__);
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC875E = 1;
   }
   v2 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -106,7 +138,7 @@ void QuestHintDialogOpenManager__ClearSaveDataList(const MethodInfo *method)
   }
   questPhaseHintDialogOpenList = v2->static_fields->questPhaseHintDialogOpenList;
   if ( !questPhaseHintDialogOpenList )
-    sub_1C6BC60(v2, v1);
+    sub_1C71608(v2, v1);
   size = questPhaseHintDialogOpenList->fields._size;
   v5 = questPhaseHintDialogOpenList->fields._version + 1;
   questPhaseHintDialogOpenList->fields._size = 0;
@@ -121,10 +153,10 @@ void QuestHintDialogOpenManager__DeleteOldSaveData(const MethodInfo *method)
   QuestHintDialogOpenManager_c *v1; // x0
   System_String_o *OldSaveFileName; // x19
 
-  if ( (byte_4CB7633 & 1) == 0 )
+  if ( (byte_4CC875C & 1) == 0 )
   {
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB7633 = 1;
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC875C = 1;
   }
   v1 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -141,10 +173,10 @@ void QuestHintDialogOpenManager__DeleteSaveData(const MethodInfo *method)
   System_String_o *SaveFileName; // x19
   QuestHintDialogOpenManager_c *v3; // x0
 
-  if ( (byte_4CB7632 & 1) == 0 )
+  if ( (byte_4CC875B & 1) == 0 )
   {
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB7632 = 1;
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC875B = 1;
   }
   v1 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -164,12 +196,12 @@ System_String_o *QuestHintDialogOpenManager__GetOldSaveFileName(const MethodInfo
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4CB7631 & 1) == 0 )
+  if ( (byte_4CC875A & 1) == 0 )
   {
-    sub_1C6BA08(&AndroidUtil_TypeInfo);
-    sub_1C6BA08(&DatFileName_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1041/*"/"*/);
-    byte_4CB7631 = 1;
+    sub_1C713B0(&AndroidUtil_TypeInfo);
+    sub_1C713B0(&DatFileName_TypeInfo);
+    sub_1C713B0(&StringLiteral_1041/*"/"*/);
+    byte_4CC875A = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -177,7 +209,7 @@ System_String_o *QuestHintDialogOpenManager__GetOldSaveFileName(const MethodInfo
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(33, 0);
-  return System_String__Concat_64005056(DatFileSavePath, (System_String_o *)StringLiteral_1041/*"/"*/, FileName, 0);
+  return System_String__Concat_64069988(DatFileSavePath, (System_String_o *)StringLiteral_1041/*"/"*/, FileName, 0);
 }
 
 
@@ -186,12 +218,12 @@ System_String_o *QuestHintDialogOpenManager__GetSaveFileName(const MethodInfo *m
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4CB7630 & 1) == 0 )
+  if ( (byte_4CC8759 & 1) == 0 )
   {
-    sub_1C6BA08(&AndroidUtil_TypeInfo);
-    sub_1C6BA08(&DatFileName_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1041/*"/"*/);
-    byte_4CB7630 = 1;
+    sub_1C713B0(&AndroidUtil_TypeInfo);
+    sub_1C713B0(&DatFileName_TypeInfo);
+    sub_1C713B0(&StringLiteral_1041/*"/"*/);
+    byte_4CC8759 = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -199,7 +231,7 @@ System_String_o *QuestHintDialogOpenManager__GetSaveFileName(const MethodInfo *m
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(43, 0);
-  return System_String__Concat_64005056(DatFileSavePath, (System_String_o *)StringLiteral_1041/*"/"*/, FileName, 0);
+  return System_String__Concat_64069988(DatFileSavePath, (System_String_o *)StringLiteral_1041/*"/"*/, FileName, 0);
 }
 
 
@@ -207,10 +239,10 @@ void QuestHintDialogOpenManager__Initialize(const MethodInfo *method)
 {
   QuestHintDialogOpenManager_c *v1; // x0
 
-  if ( (byte_4CB7634 & 1) == 0 )
+  if ( (byte_4CC875D & 1) == 0 )
   {
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB7634 = 1;
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC875D = 1;
   }
   v1 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -230,15 +262,15 @@ bool QuestHintDialogOpenManager__IsQuestHintOpen(int32_t questId, int32_t questP
   int v10; // w19
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CB763A & 1) == 0 )
+  if ( (byte_4CC8763 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Count__);
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB763A = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Count__);
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC8763 = 1;
   }
   v5 = QuestHintDialogOpenManager_TypeInfo;
   memset(&v12, 0, sizeof(v12));
@@ -265,21 +297,21 @@ bool QuestHintDialogOpenManager__IsQuestHintOpen(int32_t questId, int32_t questP
   v5 = (QuestHintDialogOpenManager_c *)v5->static_fields->questPhaseHintDialogOpenList;
   if ( !v5 )
 LABEL_22:
-    sub_1C6BC60(v5, *(_QWORD *)&questPhase);
+    sub_1C71608(v5, *(_QWORD *)&questPhase);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v12,
     (System_Collections_Generic_List_object__o *)v5,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__GetEnumerator__);
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__GetEnumerator__);
   while ( 1 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v12,
-           (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__MoveNext__);
+           (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__MoveNext__);
     v9 = v7;
     if ( !v7 )
       break;
     if ( !v12.fields._current )
-      sub_1C6BC60(v7, v8);
+      sub_1C71608(v7, v8);
     if ( *(_DWORD *)((char *)&v12.fields._current->klass + (unsigned __int64)&word_10) == questId
       && *(_DWORD *)((char *)&v12.fields._current->klass + (unsigned __int64)&dword_14) == questPhase )
     {
@@ -291,7 +323,7 @@ LABEL_22:
 LABEL_20:
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v12,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
   return v9 && v10 == 5;
 }
 
@@ -305,10 +337,10 @@ bool QuestHintDialogOpenManager__IsSettingTemporarilyInfo(
   QuestHintDialogOpenManager_c *v5; // x0
   struct QuestHintDialogOpenManager_QuestPhaseInfo_o *questPhaseTempInfo; // x8
 
-  if ( (byte_4CB763E & 1) == 0 )
+  if ( (byte_4CC8767 & 1) == 0 )
   {
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB763E = 1;
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC8767 = 1;
   }
   v5 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -328,7 +360,7 @@ bool QuestHintDialogOpenManager__IsSettingTemporarilyInfo(
     if ( questPhaseTempInfo )
       return questPhaseTempInfo->fields.questPhase == questPhase;
 LABEL_11:
-    sub_1C6BC60(v5, *(_QWORD *)&questPhase);
+    sub_1C71608(v5, *(_QWORD *)&questPhase);
   }
   return 0;
 }
@@ -358,66 +390,74 @@ bool QuestHintDialogOpenManager__ReadData(const MethodInfo *method)
   __int64 v21; // x0
   __int64 v22; // x1
   int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  QuestHintDialogOpenManager_c *v25; // x0
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
+  QuestHintDialogOpenManager_c *v29; // x0
   System_Collections_Generic_List_object__o *questPhaseHintDialogOpenList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v28; // x9
+  _QWORD *v32; // x9
   __int64 size; // x10
-  Il2CppClass **v30; // x8
+  Il2CppClass **v34; // x8
   System_IO_BinaryReader_c *klass; // x8
-  __int64 v32; // x9
+  __int64 v36; // x9
   int32_t *p_offset; // x10
-  __int64 v34; // x0
-  QuestHintDialogOpenManager_c *v35; // x0
+  __int64 v38; // x0
+  QuestHintDialogOpenManager_c *v39; // x0
   QuestHintDialogOpenManager_c *questHintDialogOpenList; // x0
-  char v37; // w19
-  char v38; // w22
-  __int64 v39; // x19
-  __int64 v40; // x0
-  __int64 v41; // x1
-  QuestHintDialogOpenManager_c *v42; // x0
-  System_Collections_Generic_List_object__o *v43; // x20
-  System_Predicate_object__o *v44; // x21
-  __int64 v45; // x0
-  __int64 v46; // x1
-  __int64 v47; // x20
-  __int64 v48; // x0
-  __int64 v49; // x1
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
-  QuestHintDialogOpenManager_c *v52; // x0
-  System_Collections_Generic_List_object__o *v53; // x0
-  struct System_Object_array *v54; // x8
-  _QWORD *v55; // x9
-  __int64 v56; // x10
-  Il2CppClass **v57; // x8
-  QuestHintDialogOpenManager_c *v58; // x0
-  struct System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__o *v59; // x8
-  System_Collections_Generic_List_Enumerator_int__o v60; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v61; // [xsp+20h] [xbp-80h] BYREF
+  char v41; // w19
+  char v42; // w22
+  __int64 v43; // x19
+  __int64 v44; // x0
+  __int64 v45; // x1
+  QuestHintDialogOpenManager_c *v46; // x0
+  System_Collections_Generic_List_object__o *v47; // x20
+  System_Predicate_object__o *v48; // x21
+  __int64 v49; // x0
+  __int64 v50; // x1
+  __int64 v51; // x20
+  __int64 v52; // x0
+  __int64 v53; // x1
+  int32_t v54; // w2
+  int32_t v55; // w3
+  System_String_o *v56; // x4
+  int32_t v57; // w5
+  int64_t v58; // x6
+  System_String_o *v59; // x7
+  QuestHintDialogOpenManager_c *v60; // x0
+  System_Collections_Generic_List_object__o *v61; // x0
+  struct System_Object_array *v62; // x8
+  _QWORD *v63; // x9
+  __int64 v64; // x10
+  Il2CppClass **v65; // x8
+  QuestHintDialogOpenManager_c *v66; // x0
+  struct System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__o *v67; // x8
+  System_Collections_Generic_List_Enumerator_int__o v68; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v69; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4CB7637 & 1) == 0 )
+  if ( (byte_4CC8760 & 1) == 0 )
   {
-    sub_1C6BA08(&System_IO_BinaryReader_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Find__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Count__);
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&System_Predicate_QuestHintDialogOpenManager_QuestPhaseInfo__TypeInfo);
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    sub_1C6BA08(&QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
-    sub_1C6BA08(&Method_QuestHintDialogOpenManager___c__DisplayClass12_0__ReadData_b__0__);
-    sub_1C6BA08(&QuestHintDialogOpenManager___c__DisplayClass12_0_TypeInfo);
-    byte_4CB7637 = 1;
+    sub_1C713B0(&System_IO_BinaryReader_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Find__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Count__);
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&System_Predicate_QuestHintDialogOpenManager_QuestPhaseInfo__TypeInfo);
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    sub_1C713B0(&QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
+    sub_1C713B0(&Method_QuestHintDialogOpenManager___c__DisplayClass12_0__ReadData_b__0__);
+    sub_1C713B0(&QuestHintDialogOpenManager___c__DisplayClass12_0_TypeInfo);
+    byte_4CC8760 = 1;
   }
   v1 = ManagerConfig_TypeInfo;
-  memset(&v61, 0, sizeof(v61));
+  memset(&v69, 0, sizeof(v69));
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ManagerConfig_TypeInfo);
@@ -438,10 +478,10 @@ bool QuestHintDialogOpenManager__ReadData(const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
     QuestHintDialogOpenManager__ClearSaveDataList((const MethodInfo *)v9);
     v10 = (System_IO_Stream_o *)System_IO_File__OpenRead(SaveFileName, 0);
-    v11 = (System_IO_BinaryReader_o *)sub_1C6BC54(System_IO_BinaryReader_TypeInfo);
+    v11 = (System_IO_BinaryReader_o *)sub_1C715FC(System_IO_BinaryReader_TypeInfo);
     System_IO_BinaryReader___ctor(v11, v10, 0);
     if ( !v11 )
-      sub_1C6BC60(v12, v13);
+      sub_1C71608(v12, v13);
     v14 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v11->klass->vtable._22_ReadString.methodPtr)(
                                v11,
                                v11->klass->vtable._22_ReadString.method);
@@ -471,40 +511,40 @@ bool QuestHintDialogOpenManager__ReadData(const MethodInfo *method)
           v19 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v11->klass->vtable._15_ReadInt32.methodPtr)(
                   v11,
                   v11->klass->vtable._15_ReadInt32.method);
-          v20 = sub_1C6BC54(QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
+          v20 = sub_1C715FC(QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
           System_Object___ctor((Il2CppObject *)v20, 0);
           if ( !v20 )
-            sub_1C6BC60(v21, v22);
+            sub_1C71608(v21, v22);
           *(_DWORD *)(v20 + 16) = v18;
           *(_DWORD *)(v20 + 20) = v19;
-          v25 = QuestHintDialogOpenManager_TypeInfo;
+          v29 = QuestHintDialogOpenManager_TypeInfo;
           if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
-            v25 = QuestHintDialogOpenManager_TypeInfo;
+            v29 = QuestHintDialogOpenManager_TypeInfo;
           }
-          questPhaseHintDialogOpenList = (System_Collections_Generic_List_object__o *)v25->static_fields->questPhaseHintDialogOpenList;
+          questPhaseHintDialogOpenList = (System_Collections_Generic_List_object__o *)v29->static_fields->questPhaseHintDialogOpenList;
           if ( !questPhaseHintDialogOpenList )
-            sub_1C6BC60(0, v22);
+            sub_1C71608(0, v22);
           items = questPhaseHintDialogOpenList->fields._items;
-          v28 = Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__;
+          v32 = Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__;
           ++questPhaseHintDialogOpenList->fields._version;
           if ( !items )
-            sub_1C6BC60(questPhaseHintDialogOpenList, v22);
+            sub_1C71608(questPhaseHintDialogOpenList, v22);
           size = questPhaseHintDialogOpenList->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               questPhaseHintDialogOpenList,
               (Il2CppObject *)v20,
-              *(const MethodInfo_3800974 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+              *(const MethodInfo_3810718 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
           }
           else
           {
-            v30 = &items->obj.klass + size;
+            v34 = &items->obj.klass + size;
             questPhaseHintDialogOpenList->fields._size = size + 1;
-            v30[4] = (Il2CppClass *)v20;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v30 + 4), v20, v23, v24);
+            v34[4] = (Il2CppClass *)v20;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v34 + 4), v20, v23, v24, v25, v26, v27, v28);
           }
           --v17;
         }
@@ -514,128 +554,128 @@ bool QuestHintDialogOpenManager__ReadData(const MethodInfo *method)
       v2 = !v6;
     }
     klass = v11->klass;
-    v32 = *(unsigned __int16 *)&v11->klass->_2.rank;
+    v36 = *(unsigned __int16 *)&v11->klass->_2.rank;
     if ( *(_WORD *)&v11->klass->_2.rank )
     {
       p_offset = &klass->_1.interfaceOffsets->offset;
       while ( *((System_IDisposable_c **)p_offset - 1) != System_IDisposable_TypeInfo )
       {
-        --v32;
+        --v36;
         p_offset += 4;
-        if ( !v32 )
+        if ( !v36 )
           goto LABEL_36;
       }
-      v34 = (__int64)&klass->vtable + 16 * *p_offset;
+      v38 = (__int64)&klass->vtable + 16 * *p_offset;
     }
     else
     {
 LABEL_36:
-      v34 = sub_1C41D90(v11, System_IDisposable_TypeInfo, 0);
+      v38 = sub_1C47738(v11, System_IDisposable_TypeInfo, 0);
     }
-    (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v34)(v11, *(_QWORD *)(v34 + 8));
+    (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v38)(v11, *(_QWORD *)(v38 + 8));
     if ( v16 != 3 )
       return v2 & 1;
   }
   if ( v6 )
   {
-    v35 = QuestHintDialogOpenManager_TypeInfo;
+    v39 = QuestHintDialogOpenManager_TypeInfo;
     if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
-      v35 = QuestHintDialogOpenManager_TypeInfo;
+      v39 = QuestHintDialogOpenManager_TypeInfo;
     }
-    questHintDialogOpenList = (QuestHintDialogOpenManager_c *)v35->static_fields->questHintDialogOpenList;
+    questHintDialogOpenList = (QuestHintDialogOpenManager_c *)v39->static_fields->questHintDialogOpenList;
     if ( !questHintDialogOpenList )
 LABEL_79:
-      sub_1C6BC60(questHintDialogOpenList, v8);
+      sub_1C71608(questHintDialogOpenList, v8);
     System_Collections_Generic_List_int___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v60,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v68,
       (System_Collections_Generic_List_int__o *)questHintDialogOpenList,
-      (const MethodInfo_37E4424 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-    v61 = v60;
-    v37 = 0;
+      (const MethodInfo_37F41C8 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    v69 = v68;
+    v41 = 0;
 LABEL_44:
-    v38 = v37;
+    v42 = v41;
     while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-              &v61,
-              (const MethodInfo_358270C *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+              &v69,
+              (const MethodInfo_35924B0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
     {
-      v39 = sub_1C6BC54(QuestHintDialogOpenManager___c__DisplayClass12_0_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v39, 0);
-      if ( !v39 )
-        sub_1C6BC60(v40, v41);
-      *(_DWORD *)(v39 + 16) = v61.fields._current;
-      v42 = QuestHintDialogOpenManager_TypeInfo;
+      v43 = sub_1C715FC(QuestHintDialogOpenManager___c__DisplayClass12_0_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v43, 0);
+      if ( !v43 )
+        sub_1C71608(v44, v45);
+      *(_DWORD *)(v43 + 16) = v69.fields._current;
+      v46 = QuestHintDialogOpenManager_TypeInfo;
       if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
-        v42 = QuestHintDialogOpenManager_TypeInfo;
+        v46 = QuestHintDialogOpenManager_TypeInfo;
       }
-      v43 = (System_Collections_Generic_List_object__o *)v42->static_fields->questPhaseHintDialogOpenList;
-      v44 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_QuestHintDialogOpenManager_QuestPhaseInfo__TypeInfo);
+      v47 = (System_Collections_Generic_List_object__o *)v46->static_fields->questPhaseHintDialogOpenList;
+      v48 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_QuestHintDialogOpenManager_QuestPhaseInfo__TypeInfo);
       System_Predicate_object____ctor(
-        v44,
-        (Il2CppObject *)v39,
+        v48,
+        (Il2CppObject *)v43,
         Method_QuestHintDialogOpenManager___c__DisplayClass12_0__ReadData_b__0__,
         0);
-      if ( !v43 )
-        sub_1C6BC60(v45, v46);
+      if ( !v47 )
+        sub_1C71608(v49, v50);
       if ( !System_Collections_Generic_List_object___Find(
-              v43,
-              (System_Predicate_T__o *)v44,
-              (const MethodInfo_3800FDC *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Find__) )
+              v47,
+              (System_Predicate_T__o *)v48,
+              (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Find__) )
       {
-        v47 = sub_1C6BC54(QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
-        System_Object___ctor((Il2CppObject *)v47, 0);
-        if ( !v47 )
-          sub_1C6BC60(v48, v49);
-        *(_DWORD *)(v47 + 16) = *(_DWORD *)(v39 + 16);
-        *(_DWORD *)(v47 + 20) = 1;
-        v52 = QuestHintDialogOpenManager_TypeInfo;
+        v51 = sub_1C715FC(QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
+        System_Object___ctor((Il2CppObject *)v51, 0);
+        if ( !v51 )
+          sub_1C71608(v52, v53);
+        *(_DWORD *)(v51 + 16) = *(_DWORD *)(v43 + 16);
+        *(_DWORD *)(v51 + 20) = 1;
+        v60 = QuestHintDialogOpenManager_TypeInfo;
         if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
-          v52 = QuestHintDialogOpenManager_TypeInfo;
+          v60 = QuestHintDialogOpenManager_TypeInfo;
         }
-        v53 = (System_Collections_Generic_List_object__o *)v52->static_fields->questPhaseHintDialogOpenList;
-        if ( !v53 )
-          sub_1C6BC60(0, v49);
-        v54 = v53->fields._items;
-        v55 = Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__;
-        ++v53->fields._version;
-        if ( !v54 )
-          sub_1C6BC60(v53, v49);
-        v56 = v53->fields._size;
-        if ( (unsigned int)v56 >= LODWORD(v54->max_length) )
+        v61 = (System_Collections_Generic_List_object__o *)v60->static_fields->questPhaseHintDialogOpenList;
+        if ( !v61 )
+          sub_1C71608(0, v53);
+        v62 = v61->fields._items;
+        v63 = Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__;
+        ++v61->fields._version;
+        if ( !v62 )
+          sub_1C71608(v61, v53);
+        v64 = v61->fields._size;
+        if ( (unsigned int)v64 >= LODWORD(v62->max_length) )
         {
-          v37 = 1;
+          v41 = 1;
           System_Collections_Generic_List_object___AddWithResize(
-            v53,
-            (Il2CppObject *)v47,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v55[4] + 192LL) + 112LL));
+            v61,
+            (Il2CppObject *)v51,
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v63[4] + 192LL) + 112LL));
         }
         else
         {
-          v57 = &v54->obj.klass + v56;
-          v37 = 1;
-          v53->fields._size = v56 + 1;
-          v57[4] = (Il2CppClass *)v47;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v57 + 4), v47, v50, v51);
+          v65 = &v62->obj.klass + v64;
+          v41 = 1;
+          v61->fields._size = v64 + 1;
+          v65[4] = (Il2CppClass *)v51;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v65 + 4), v51, v54, v55, v56, v57, v58, v59);
         }
         goto LABEL_44;
       }
     }
     System_Collections_Generic_List_Enumerator_int___Dispose(
-      &v61,
-      (const MethodInfo_3582708 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    v58 = QuestHintDialogOpenManager_TypeInfo;
+      &v69,
+      (const MethodInfo_35924AC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    v66 = QuestHintDialogOpenManager_TypeInfo;
     if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
-    QuestHintDialogOpenManager__DeleteOldSaveData((const MethodInfo *)v58);
+    QuestHintDialogOpenManager__DeleteOldSaveData((const MethodInfo *)v66);
   }
   else
   {
-    v38 = 0;
+    v42 = 0;
   }
   questHintDialogOpenList = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -643,12 +683,12 @@ LABEL_44:
     j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
     questHintDialogOpenList = QuestHintDialogOpenManager_TypeInfo;
   }
-  v59 = questHintDialogOpenList->static_fields->questPhaseHintDialogOpenList;
-  if ( !v59 )
+  v67 = questHintDialogOpenList->static_fields->questPhaseHintDialogOpenList;
+  if ( !v67 )
     goto LABEL_79;
-  if ( v59->fields._size >= 1 )
+  if ( v67->fields._size >= 1 )
   {
-    if ( (v38 & 1) != 0 )
+    if ( (v42 & 1) != 0 )
     {
       if ( !questHintDialogOpenList->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(questHintDialogOpenList);
@@ -692,13 +732,13 @@ bool QuestHintDialogOpenManager__ReadOldData(const MethodInfo *method)
   __int64 v22; // x0
   QuestHintDialogOpenManager_c *v23; // x0
 
-  if ( (byte_4CB7638 & 1) == 0 )
+  if ( (byte_4CC8761 & 1) == 0 )
   {
-    sub_1C6BA08(&System_IO_BinaryReader_TypeInfo);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB7638 = 1;
+    sub_1C713B0(&System_IO_BinaryReader_TypeInfo);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC8761 = 1;
   }
   v1 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -711,10 +751,10 @@ bool QuestHintDialogOpenManager__ReadOldData(const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
     QuestHintDialogOpenManager__ClearOldSaveDataList((const MethodInfo *)v3);
     v4 = (System_IO_Stream_o *)System_IO_File__OpenRead(OldSaveFileName, 0);
-    v5 = (System_IO_BinaryReader_o *)sub_1C6BC54(System_IO_BinaryReader_TypeInfo);
+    v5 = (System_IO_BinaryReader_o *)sub_1C715FC(System_IO_BinaryReader_TypeInfo);
     System_IO_BinaryReader___ctor(v5, v4, 0);
     if ( !v5 )
-      sub_1C6BC60(v6, v7);
+      sub_1C71608(v6, v7);
     v8 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v5->klass->vtable._22_ReadString.methodPtr)(
                               v5,
                               v5->klass->vtable._22_ReadString.method);
@@ -748,19 +788,19 @@ bool QuestHintDialogOpenManager__ReadOldData(const MethodInfo *method)
           }
           questHintDialogOpenList = v14->static_fields->questHintDialogOpenList;
           if ( !questHintDialogOpenList )
-            sub_1C6BC60(0, v12);
+            sub_1C71608(0, v12);
           items = questHintDialogOpenList->fields._items;
           v17 = Method_System_Collections_Generic_List_int__Add__;
           ++questHintDialogOpenList->fields._version;
           if ( !items )
-            sub_1C6BC60(questHintDialogOpenList, v12);
+            sub_1C71608(questHintDialogOpenList, v12);
           size = questHintDialogOpenList->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_int___AddWithResize(
               questHintDialogOpenList,
               v13,
-              *(const MethodInfo_37E3950 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+              *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
           }
           else
           {
@@ -790,7 +830,7 @@ bool QuestHintDialogOpenManager__ReadOldData(const MethodInfo *method)
     else
     {
 LABEL_27:
-      v22 = sub_1C41D90(v5, System_IDisposable_TypeInfo, 0);
+      v22 = sub_1C47738(v5, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v22)(v5, *(_QWORD *)(v22 + 8));
   }
@@ -812,10 +852,10 @@ void QuestHintDialogOpenManager__ResetTemporarilyId(const MethodInfo *method)
   QuestHintDialogOpenManager_c *v2; // x0
   struct QuestHintDialogOpenManager_QuestPhaseInfo_o *questPhaseTempInfo; // x8
 
-  if ( (byte_4CB763D & 1) == 0 )
+  if ( (byte_4CC8766 & 1) == 0 )
   {
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB763D = 1;
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC8766 = 1;
   }
   v2 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -825,7 +865,7 @@ void QuestHintDialogOpenManager__ResetTemporarilyId(const MethodInfo *method)
   }
   questPhaseTempInfo = v2->static_fields->questPhaseTempInfo;
   if ( !questPhaseTempInfo )
-    sub_1C6BC60(v2, v1);
+    sub_1C71608(v2, v1);
   questPhaseTempInfo->fields = 0;
 }
 
@@ -839,29 +879,33 @@ void QuestHintDialogOpenManager__SetQuestInfo(int32_t questId, int32_t questPhas
   __int64 v8; // x1
   __int64 v9; // x21
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  QuestHintDialogOpenManager_c *v12; // x0
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  QuestHintDialogOpenManager_c *v16; // x0
   const char *name; // x8
-  _QWORD *v14; // x9
+  _QWORD *v18; // x9
   __int64 namespaze_low; // x10
-  const char *v16; // x8
-  System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+20h] [xbp-60h] BYREF
+  const char *v20; // x8
+  System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4CB763B & 1) == 0 )
+  if ( (byte_4CC8764 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Count__);
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    sub_1C6BA08(&QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
-    byte_4CB763B = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Count__);
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    sub_1C713B0(&QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
+    byte_4CC8764 = 1;
   }
   v5 = QuestHintDialogOpenManager_TypeInfo;
-  memset(&v18, 0, sizeof(v18));
+  memset(&v22, 0, sizeof(v22));
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
@@ -886,51 +930,51 @@ void QuestHintDialogOpenManager__SetQuestInfo(int32_t questId, int32_t questPhas
   if ( !v5 )
     goto LABEL_29;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v17,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v21,
     (System_Collections_Generic_List_object__o *)v5,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__GetEnumerator__);
-  v18 = v17;
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__GetEnumerator__);
+  v22 = v21;
   while ( 1 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-           &v18,
-           (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__MoveNext__);
+           &v22,
+           (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__MoveNext__);
     if ( !v7 )
       break;
-    if ( !v18.fields._current )
-      sub_1C6BC60(v7, v8);
-    if ( LODWORD(v18.fields._current[1].klass) == questId && HIDWORD(v18.fields._current[1].klass) == questPhase )
+    if ( !v22.fields._current )
+      sub_1C71608(v7, v8);
+    if ( LODWORD(v22.fields._current[1].klass) == questId && HIDWORD(v22.fields._current[1].klass) == questPhase )
     {
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v18,
-        (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
+        &v22,
+        (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
       return;
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v18,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
-  v9 = sub_1C6BC54(QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
+    &v22,
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_QuestHintDialogOpenManager_QuestPhaseInfo__Dispose__);
+  v9 = sub_1C715FC(QuestHintDialogOpenManager_QuestPhaseInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_29;
   *(_DWORD *)(v9 + 16) = questId;
   *(_DWORD *)(v9 + 20) = questPhase;
-  v12 = QuestHintDialogOpenManager_TypeInfo;
+  v16 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
-    v12 = QuestHintDialogOpenManager_TypeInfo;
+    v16 = QuestHintDialogOpenManager_TypeInfo;
   }
-  v5 = (QuestHintDialogOpenManager_c *)v12->static_fields->questPhaseHintDialogOpenList;
+  v5 = (QuestHintDialogOpenManager_c *)v16->static_fields->questPhaseHintDialogOpenList;
   if ( !v5
     || (name = v5->_1.name,
-        v14 = Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__,
+        v18 = Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__Add__,
         ++HIDWORD(v5->_1.namespaze),
         !name) )
   {
 LABEL_29:
-    sub_1C6BC60(v5, *(_QWORD *)&questPhase);
+    sub_1C71608(v5, *(_QWORD *)&questPhase);
   }
   namespaze_low = SLODWORD(v5->_1.namespaze);
   if ( (unsigned int)namespaze_low >= *((_DWORD *)name + 6) )
@@ -938,14 +982,14 @@ LABEL_29:
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)v5,
       (Il2CppObject *)v9,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
-    v16 = &name[8 * namespaze_low];
+    v20 = &name[8 * namespaze_low];
     LODWORD(v5->_1.namespaze) = namespaze_low + 1;
-    *((_QWORD *)v16 + 4) = v9;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v16 + 32), v9, v10, v11);
+    *((_QWORD *)v20 + 4) = v9;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v20 + 32), v9, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -956,10 +1000,10 @@ void QuestHintDialogOpenManager__SetTemporarilyInfo(int32_t questId, int32_t que
   QuestHintDialogOpenManager_c *v5; // x0
   struct QuestHintDialogOpenManager_QuestPhaseInfo_o *questPhaseTempInfo; // x8
 
-  if ( (byte_4CB763C & 1) == 0 )
+  if ( (byte_4CC8765 & 1) == 0 )
   {
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB763C = 1;
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC8765 = 1;
   }
   v5 = QuestHintDialogOpenManager_TypeInfo;
   if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
@@ -969,7 +1013,7 @@ void QuestHintDialogOpenManager__SetTemporarilyInfo(int32_t questId, int32_t que
   }
   questPhaseTempInfo = v5->static_fields->questPhaseTempInfo;
   if ( !questPhaseTempInfo )
-    sub_1C6BC60(v5, *(_QWORD *)&questPhase);
+    sub_1C71608(v5, *(_QWORD *)&questPhase);
   questPhaseTempInfo->fields.questId = questId;
   questPhaseTempInfo->fields.questPhase = questPhase;
 }
@@ -1002,15 +1046,15 @@ bool QuestHintDialogOpenManager__WriteData(const MethodInfo *method)
   int32_t *p_offset; // x10
   __int64 v24; // x0
 
-  if ( (byte_4CB7639 & 1) == 0 )
+  if ( (byte_4CC8762 & 1) == 0 )
   {
-    sub_1C6BA08(&System_IO_BinaryWriter_TypeInfo);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Item__);
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&QuestHintDialogOpenManager_TypeInfo);
-    byte_4CB7639 = 1;
+    sub_1C713B0(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Item__);
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&QuestHintDialogOpenManager_TypeInfo);
+    byte_4CC8762 = 1;
   }
   v1 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -1025,8 +1069,8 @@ bool QuestHintDialogOpenManager__WriteData(const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(QuestHintDialogOpenManager_TypeInfo);
     SaveFileName = QuestHintDialogOpenManager__GetSaveFileName((const MethodInfo *)v2);
     v4 = (System_IO_Stream_o *)System_IO_File__OpenWrite(SaveFileName, 0);
-    v5 = (System_IO_BinaryWriter_o *)sub_1C6BC54(System_IO_BinaryWriter_TypeInfo);
-    System_IO_BinaryWriter___ctor_64876120(v5, v4, 0);
+    v5 = (System_IO_BinaryWriter_o *)sub_1C715FC(System_IO_BinaryWriter_TypeInfo);
+    System_IO_BinaryWriter___ctor_64941052(v5, v4, 0);
     v7 = QuestHintDialogOpenManager_TypeInfo;
     if ( !QuestHintDialogOpenManager_TypeInfo->_2.cctor_finished )
     {
@@ -1036,9 +1080,9 @@ bool QuestHintDialogOpenManager__WriteData(const MethodInfo *method)
     static_fields = v7->static_fields;
     questPhaseHintDialogOpenList = static_fields->questPhaseHintDialogOpenList;
     if ( !questPhaseHintDialogOpenList )
-      sub_1C6BC60(v7, v6);
+      sub_1C71608(v7, v6);
     if ( !v5 )
-      sub_1C6BC60(v7, v6);
+      sub_1C71608(v7, v6);
     size = questPhaseHintDialogOpenList->fields._size;
     ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, const MethodInfo *))v5->klass->vtable._22_Write.methodPtr)(
       v5,
@@ -1060,26 +1104,26 @@ bool QuestHintDialogOpenManager__WriteData(const MethodInfo *method)
         }
         v14 = (System_Collections_Generic_List_object__o *)v13->static_fields->questPhaseHintDialogOpenList;
         if ( !v14 )
-          sub_1C6BC60(0, v11);
+          sub_1C71608(0, v11);
         Item = System_Collections_Generic_List_object___get_Item(
                  v14,
                  i,
-                 (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Item__);
+                 (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Item__);
         if ( !Item )
-          sub_1C6BC60(0, v16);
+          sub_1C71608(0, v16);
         ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v5->klass->vtable._17_Write.methodPtr)(
           v5,
           LODWORD(Item[1].klass),
           v5->klass->vtable._17_Write.method);
         v18 = (System_Collections_Generic_List_object__o *)QuestHintDialogOpenManager_TypeInfo->static_fields->questPhaseHintDialogOpenList;
         if ( !v18 )
-          sub_1C6BC60(0, v17);
+          sub_1C71608(0, v17);
         v19 = System_Collections_Generic_List_object___get_Item(
                 v18,
                 i,
-                (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Item__);
+                (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_QuestHintDialogOpenManager_QuestPhaseInfo__get_Item__);
         if ( !v19 )
-          sub_1C6BC60(0, v20);
+          sub_1C71608(0, v20);
         ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v5->klass->vtable._17_Write.methodPtr)(
           v5,
           HIDWORD(v19[1].klass),
@@ -1103,7 +1147,7 @@ bool QuestHintDialogOpenManager__WriteData(const MethodInfo *method)
     else
     {
 LABEL_25:
-      v24 = sub_1C41D90(v5, System_IDisposable_TypeInfo, 0);
+      v24 = sub_1C47738(v5, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v24)(v5, *(_QWORD *)(v24 + 8));
   }
@@ -1133,6 +1177,6 @@ bool QuestHintDialogOpenManager___c__DisplayClass12_0___ReadData_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields.questId == this->fields.questId && x->fields.questPhase == 1;
 }

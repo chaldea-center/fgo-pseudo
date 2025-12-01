@@ -5,11 +5,15 @@ void ReceiptListViewItem___ctor(
         const MethodInfo *method)
 {
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   this->fields.path = path;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.path, (int32_t)path, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -27,10 +31,10 @@ System_String_o *ReceiptListViewItem__get_Path(ReceiptListViewItem_o *this, cons
 
 System_String_o *ReceiptListViewItem__get_TimeText(ReceiptListViewItem_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB37F1 & 1) == 0 )
+  if ( (byte_4CC4909 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB37F1 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC4909 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -49,7 +53,7 @@ System_String_o *ReceiptListViewItem__get_TitleText(ReceiptListViewItem_o *this,
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0);
 LABEL_6:
-    sub_1C6BC60(path, method);
+    sub_1C71608(path, method);
   }
   return this->fields.path;
 }

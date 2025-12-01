@@ -8,20 +8,24 @@ void LanguageSelection__Awake(LanguageSelection_o *this, const MethodInfo *metho
 {
   Il2CppObject *Component_object; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  const MethodInfo *v6; // x1
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  const MethodInfo *v10; // x1
 
-  if ( (byte_4CBA90B & 1) == 0 )
+  if ( (byte_4CCBA64 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPopupList___);
-    byte_4CBA90B = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIPopupList___);
+    byte_4CCBA64 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPopupList___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIPopupList___);
   this->fields.mList = (struct UIPopupList_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mList, (int32_t)Component_object, v4, v5);
-  LanguageSelection__Refresh(this, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mList, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  LanguageSelection__Refresh(this, v10);
 }
 
 
@@ -39,19 +43,23 @@ void LanguageSelection__Refresh(LanguageSelection_o *this, const MethodInfo *met
   __int64 klass; // x23
   System_Collections_Generic_List_object__o *v13; // x20
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  struct System_Object_array *v16; // x8
-  _QWORD *v17; // x9
-  __int64 v18; // x10
-  Il2CppClass **v19; // x0
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  struct System_Object_array *v20; // x8
+  _QWORD *v21; // x9
+  __int64 v22; // x10
+  Il2CppClass **v23; // x0
 
-  if ( (byte_4CBA90D & 1) == 0 )
+  if ( (byte_4CCBA66 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA90D = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA66 = 1;
   }
   mList = (UnityEngine_Object_o *)this->fields.mList;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -94,36 +102,36 @@ void LanguageSelection__Refresh(LanguageSelection_o *this, const MethodInfo *met
           if ( !knownLanguages )
             break;
           if ( v11 >= LODWORD(knownLanguages[1].klass) )
-            sub_1C6BC68(knownLanguages);
+            sub_1C71610(knownLanguages);
           if ( !v13 )
             break;
           v5 = (Il2CppObject *)*((_QWORD *)&knownLanguages[1].monitor + v11);
-          v16 = v13->fields._items;
-          v17 = Method_System_Collections_Generic_List_string__Add__;
+          v20 = v13->fields._items;
+          v21 = Method_System_Collections_Generic_List_string__Add__;
           ++v13->fields._version;
-          if ( !v16 )
+          if ( !v20 )
             break;
-          v18 = v13->fields._size;
-          if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
+          v22 = v13->fields._size;
+          if ( (unsigned int)v22 >= LODWORD(v20->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               v13,
               v5,
-              *(const MethodInfo_3800974 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+              *(const MethodInfo_3810718 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
           }
           else
           {
-            v19 = &v16->obj.klass + v18;
-            v13->fields._size = v18 + 1;
-            v19[4] = (Il2CppClass *)v5;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v19 + 4), (int32_t)v5, v14, v15);
+            v23 = &v20->obj.klass + v22;
+            v13->fields._size = v22 + 1;
+            v23[4] = (Il2CppClass *)v5;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v23 + 4), (int32_t)v5, v14, v15, v16, v17, v18, v19);
           }
           v10 = this->fields.mList;
           if ( klass == ++v11 )
             goto LABEL_29;
         }
 LABEL_34:
-        sub_1C6BC60(knownLanguages, v5);
+        sub_1C71608(knownLanguages, v5);
       }
 LABEL_29:
       if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -147,20 +155,24 @@ void LanguageSelection__Start(LanguageSelection_o *this, const MethodInfo *metho
   Il2CppObject *v7; // x21
   struct LanguageSelection___c_StaticFields *static_fields; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
   v2 = this;
-  if ( (byte_4CBA90C & 1) == 0 )
+  if ( (byte_4CCBA65 & 1) == 0 )
   {
-    sub_1C6BA08(&EventDelegate_Callback_TypeInfo);
-    sub_1C6BA08(&EventDelegate_TypeInfo);
-    sub_1C6BA08(&Method_LanguageSelection___c__Start_b__2_0__);
-    this = (LanguageSelection_o *)sub_1C6BA08(&LanguageSelection___c_TypeInfo);
-    byte_4CBA90C = 1;
+    sub_1C713B0(&EventDelegate_Callback_TypeInfo);
+    sub_1C713B0(&EventDelegate_TypeInfo);
+    sub_1C713B0(&Method_LanguageSelection___c__Start_b__2_0__);
+    this = (LanguageSelection_o *)sub_1C713B0(&LanguageSelection___c_TypeInfo);
+    byte_4CCBA65 = 1;
   }
   mList = v2->fields.mList;
   if ( !mList )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   onChange = mList->fields.onChange;
   v5 = LanguageSelection___c_TypeInfo;
   if ( !LanguageSelection___c_TypeInfo->_2.cctor_finished )
@@ -177,11 +189,11 @@ void LanguageSelection__Start(LanguageSelection_o *this, const MethodInfo *metho
       v5 = LanguageSelection___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__2_0 = (EventDelegate_Callback_o *)sub_1C6BC54(EventDelegate_Callback_TypeInfo);
+    _9__2_0 = (EventDelegate_Callback_o *)sub_1C715FC(EventDelegate_Callback_TypeInfo);
     EventDelegate_Callback___ctor(_9__2_0, v7, Method_LanguageSelection___c__Start_b__2_0__, 0);
     static_fields = LanguageSelection___c_TypeInfo->static_fields;
     static_fields->__9__2_0 = _9__2_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v9, v10);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__2_0, (int32_t)_9__2_0, v9, v10, v11, v12, v13, v14);
   }
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
@@ -193,17 +205,29 @@ void LanguageSelection___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CBA90E & 1) == 0 )
+  if ( (byte_4CCBA67 & 1) == 0 )
   {
-    sub_1C6BA08(&LanguageSelection___c_TypeInfo);
-    byte_4CBA90E = 1;
+    sub_1C713B0(&LanguageSelection___c_TypeInfo);
+    byte_4CCBA67 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(LanguageSelection___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(LanguageSelection___c_TypeInfo);
   System_Object___ctor(v1, 0);
   LanguageSelection___c_TypeInfo->static_fields->__9 = (struct LanguageSelection___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)LanguageSelection___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)LanguageSelection___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -218,15 +242,15 @@ void LanguageSelection___c___Start_b__2_0(LanguageSelection___c_o *this, const M
   struct UIPopupList_o *current; // x8
   System_String_o *mSelectedItem; // x19
 
-  if ( (byte_4CBA90F & 1) == 0 )
+  if ( (byte_4CCBA68 & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    this = (LanguageSelection___c_o *)sub_1C6BA08(&UIPopupList_TypeInfo);
-    byte_4CBA90F = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    this = (LanguageSelection___c_o *)sub_1C713B0(&UIPopupList_TypeInfo);
+    byte_4CCBA68 = 1;
   }
   current = UIPopupList_TypeInfo->static_fields->current;
   if ( !current )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   mSelectedItem = current->fields.mSelectedItem;
   if ( !Localization_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);

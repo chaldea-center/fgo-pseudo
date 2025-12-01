@@ -1,9 +1,9 @@
 void ClassBoardClassIconListComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CB9D3C & 1) == 0 )
+  if ( (byte_4CCAE8E & 1) == 0 )
   {
-    sub_1C6BA08(&ClassBoardClassIconListComponent_TypeInfo);
-    byte_4CB9D3C = 1;
+    sub_1C713B0(&ClassBoardClassIconListComponent_TypeInfo);
+    byte_4CCAE8E = 1;
   }
   LODWORD(ClassBoardClassIconListComponent_TypeInfo->static_fields->ClassIconOneDispFixPosY) = (struct ClassBoardClassIconListComponent_StaticFields)-1082130432;
 }
@@ -48,7 +48,7 @@ int32_t ClassBoardClassIconListComponent__CompareClassId(
     while ( a )
     {
       if ( v8 >= max_length_low )
-        sub_1C6BC68(this);
+        sub_1C71610(this);
       if ( !b )
         break;
       v10 = m_Items[v8];
@@ -60,7 +60,7 @@ int32_t ClassBoardClassIconListComponent__CompareClassId(
         return v7 - v6;
     }
 LABEL_15:
-    sub_1C6BC60(this, a);
+    sub_1C71608(this, a);
   }
   v7 = 0;
   v6 = 0;
@@ -84,49 +84,65 @@ void ClassBoardClassIconListComponent__CreateArrayForSort(
   Il2CppObject *v15; // x23
   struct ClassBoardClassIconListComponent___c_StaticFields *static_fields; // x0
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  System_Collections_Generic_IEnumerable_TResult__o *v19; // x0
-  ClassBoardClassIconListComponent___c_c *v20; // x8
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  System_Collections_Generic_IEnumerable_TResult__o *v23; // x0
+  ClassBoardClassIconListComponent___c_c *v24; // x8
   System_Func_object__int__o *_9__7_1; // x22
-  Il2CppObject *v22; // x23
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  struct ClassBoardClassIconListComponent___c_StaticFields *v25; // x0
-  CGThumbnailListItem_o *p__9__7_1; // x0
-  ClassBoardEffectListDialogSkillListComponent_c *v27; // x0
-  struct ClassBoardEffectListDialogSkillListComponent_StaticFields *v28; // x8
-  ClassBoardClassIconListComponent___c_c *v29; // x0
-  Il2CppObject *v30; // x23
-  struct ClassBoardClassIconListComponent___c_StaticFields *v31; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v32; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v33; // x0
-  struct System_Int32_array *v34; // x0
-  __int64 v35; // x1
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  ClassBoardClassIconListComponent___c_c *v38; // x0
+  Il2CppObject *v26; // x23
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  struct ClassBoardClassIconListComponent___c_StaticFields *v33; // x0
+  GrandQuestFolderBoardItem_o *p__9__7_1; // x0
+  ClassBoardEffectListDialogSkillListComponent_c *v35; // x0
+  struct ClassBoardEffectListDialogSkillListComponent_StaticFields *v36; // x8
+  ClassBoardClassIconListComponent___c_c *v37; // x0
+  Il2CppObject *v38; // x23
+  struct ClassBoardClassIconListComponent___c_StaticFields *v39; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v40; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v41; // x0
+  struct System_Int32_array *v42; // x0
+  __int64 v43; // x1
+  int32_t v44; // w2
+  int32_t v45; // w3
+  System_String_o *v46; // x4
+  int32_t v47; // w5
+  int64_t v48; // x6
+  System_String_o *v49; // x7
+  ClassBoardClassIconListComponent___c_c *v50; // x0
   System_Func_object__int__o *_9__7_3; // x21
-  Il2CppObject *v40; // x22
-  struct ClassBoardClassIconListComponent___c_StaticFields *v41; // x0
-  int32_t v42; // w2
-  const MethodInfo *v43; // x3
+  Il2CppObject *v52; // x22
+  struct ClassBoardClassIconListComponent___c_StaticFields *v53; // x0
+  int32_t v54; // w2
+  int32_t v55; // w3
+  System_String_o *v56; // x4
+  int32_t v57; // w5
+  int64_t v58; // x6
+  System_String_o *v59; // x7
 
-  if ( (byte_4CB9D3B & 1) == 0 )
+  if ( (byte_4CCAE8D & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_ClassBoardClassEntity__int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_int__int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Union_int___);
-    sub_1C6BA08(&System_Func_int__int__TypeInfo);
-    sub_1C6BA08(&System_Func_ClassBoardClassEntity__int__TypeInfo);
-    sub_1C6BA08(&Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_0__);
-    sub_1C6BA08(&Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_1__);
-    sub_1C6BA08(&Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_2__);
-    sub_1C6BA08(&Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_3__);
-    sub_1C6BA08(&ClassBoardClassIconListComponent___c_TypeInfo);
-    byte_4CB9D3B = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Select_ClassBoardClassEntity__int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Select_int__int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Union_int___);
+    sub_1C713B0(&System_Func_int__int__TypeInfo);
+    sub_1C713B0(&System_Func_ClassBoardClassEntity__int__TypeInfo);
+    sub_1C713B0(&Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_0__);
+    sub_1C713B0(&Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_1__);
+    sub_1C713B0(&Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_2__);
+    sub_1C713B0(&Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_3__);
+    sub_1C713B0(&ClassBoardClassIconListComponent___c_TypeInfo);
+    byte_4CCAE8D = 1;
   }
   v9 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -151,7 +167,7 @@ void ClassBoardClassIconListComponent__CreateArrayForSort(
     }
     Extra1SortOrderClassIds = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__ToArray_int_(
                                                                                      (System_Collections_Generic_IEnumerable_TSource__o *)v12->static_fields->Extra2SortOrderClassIds,
-                                                                                     (const MethodInfo_317B0B0 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                                                                     (const MethodInfo_318AE54 *)Method_System_Linq_Enumerable_ToArray_int___);
   }
   if ( isGrandExtra )
   {
@@ -170,7 +186,7 @@ void ClassBoardClassIconListComponent__CreateArrayForSort(
         v13 = ClassBoardClassIconListComponent___c_TypeInfo;
       }
       v15 = (Il2CppObject *)v13->static_fields->__9;
-      _9__7_0 = (System_Func_int__int__o *)sub_1C6BC54(System_Func_int__int__TypeInfo);
+      _9__7_0 = (System_Func_int__int__o *)sub_1C715FC(System_Func_int__int__TypeInfo);
       System_Func_int__int____ctor(
         _9__7_0,
         v15,
@@ -178,130 +194,138 @@ void ClassBoardClassIconListComponent__CreateArrayForSort(
         0);
       static_fields = ClassBoardClassIconListComponent___c_TypeInfo->static_fields;
       static_fields->__9__7_0 = _9__7_0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v17, v18);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&static_fields->__9__7_0,
+        (int32_t)_9__7_0,
+        v17,
+        v18,
+        v19,
+        v20,
+        v21,
+        v22);
     }
-    v19 = System_Linq_Enumerable__Select_int__int_(
+    v23 = System_Linq_Enumerable__Select_int__int_(
             Extra1SortOrderClassIds,
             (System_Func_TSource__TResult__o *)_9__7_0,
-            (const MethodInfo_316E7FC *)Method_System_Linq_Enumerable_Select_int__int___);
-    v20 = ClassBoardClassIconListComponent___c_TypeInfo;
-    Extra1SortOrderClassIds = (System_Collections_Generic_IEnumerable_TSource__o *)v19;
+            (const MethodInfo_317E5A0 *)Method_System_Linq_Enumerable_Select_int__int___);
+    v24 = ClassBoardClassIconListComponent___c_TypeInfo;
+    Extra1SortOrderClassIds = (System_Collections_Generic_IEnumerable_TSource__o *)v23;
     if ( !ClassBoardClassIconListComponent___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ClassBoardClassIconListComponent___c_TypeInfo);
-      v20 = ClassBoardClassIconListComponent___c_TypeInfo;
+      v24 = ClassBoardClassIconListComponent___c_TypeInfo;
     }
-    _9__7_1 = (System_Func_object__int__o *)v20->static_fields->__9__7_1;
+    _9__7_1 = (System_Func_object__int__o *)v24->static_fields->__9__7_1;
     if ( _9__7_1 )
       goto LABEL_37;
-    if ( !v20->_2.cctor_finished )
+    if ( !v24->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v20);
-      v20 = ClassBoardClassIconListComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v24);
+      v24 = ClassBoardClassIconListComponent___c_TypeInfo;
     }
-    v22 = (Il2CppObject *)v20->static_fields->__9;
-    _9__7_1 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_ClassBoardClassEntity__int__TypeInfo);
+    v26 = (Il2CppObject *)v24->static_fields->__9;
+    _9__7_1 = (System_Func_object__int__o *)sub_1C715FC(System_Func_ClassBoardClassEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__7_1,
-      v22,
+      v26,
       Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_1__,
       0);
-    v25 = ClassBoardClassIconListComponent___c_TypeInfo->static_fields;
-    v25->__9__7_1 = (struct System_Func_ClassBoardClassEntity__int__o *)_9__7_1;
-    p__9__7_1 = (CGThumbnailListItem_o *)&v25->__9__7_1;
+    v33 = ClassBoardClassIconListComponent___c_TypeInfo->static_fields;
+    v33->__9__7_1 = (struct System_Func_ClassBoardClassEntity__int__o *)_9__7_1;
+    p__9__7_1 = (GrandQuestFolderBoardItem_o *)&v33->__9__7_1;
 LABEL_36:
-    sub_1C6B9AC(p__9__7_1, (int32_t)_9__7_1, v23, v24);
+    sub_1C71354(p__9__7_1, (int32_t)_9__7_1, v27, v28, v29, v30, v31, v32);
 LABEL_37:
-    v32 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+    v40 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                  (System_Collections_Generic_IEnumerable_TSource__o *)entityList,
                                                                  (System_Func_TSource__TResult__o *)_9__7_1,
-                                                                 (const MethodInfo_3171234 *)Method_System_Linq_Enumerable_Select_ClassBoardClassEntity__int___);
-    v33 = System_Linq_Enumerable__Union_int_(
+                                                                 (const MethodInfo_3180FD8 *)Method_System_Linq_Enumerable_Select_ClassBoardClassEntity__int___);
+    v41 = System_Linq_Enumerable__Union_int_(
             Extra1SortOrderClassIds,
-            v32,
-            (const MethodInfo_318041C *)Method_System_Linq_Enumerable_Union_int___);
+            v40,
+            (const MethodInfo_31901C0 *)Method_System_Linq_Enumerable_Union_int___);
     goto LABEL_38;
   }
-  v27 = ClassBoardEffectListDialogSkillListComponent_TypeInfo;
+  v35 = ClassBoardEffectListDialogSkillListComponent_TypeInfo;
   if ( !ClassBoardEffectListDialogSkillListComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ClassBoardEffectListDialogSkillListComponent_TypeInfo);
-    v27 = ClassBoardEffectListDialogSkillListComponent_TypeInfo;
+    v35 = ClassBoardEffectListDialogSkillListComponent_TypeInfo;
   }
-  v28 = v27->static_fields;
-  if ( v28->Extra1ClassBaseId == id )
+  v36 = v35->static_fields;
+  if ( v36->Extra1ClassBaseId == id )
     goto LABEL_30;
-  if ( !v27->_2.cctor_finished )
+  if ( !v35->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v27);
-    v28 = ClassBoardEffectListDialogSkillListComponent_TypeInfo->static_fields;
+    j_il2cpp_runtime_class_init_0(v35);
+    v36 = ClassBoardEffectListDialogSkillListComponent_TypeInfo->static_fields;
   }
-  if ( v28->Extra2ClassBaseId == id )
+  if ( v36->Extra2ClassBaseId == id )
   {
 LABEL_30:
-    v29 = ClassBoardClassIconListComponent___c_TypeInfo;
+    v37 = ClassBoardClassIconListComponent___c_TypeInfo;
     if ( !ClassBoardClassIconListComponent___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(ClassBoardClassIconListComponent___c_TypeInfo);
-      v29 = ClassBoardClassIconListComponent___c_TypeInfo;
+      v37 = ClassBoardClassIconListComponent___c_TypeInfo;
     }
-    _9__7_1 = (System_Func_object__int__o *)v29->static_fields->__9__7_2;
+    _9__7_1 = (System_Func_object__int__o *)v37->static_fields->__9__7_2;
     if ( _9__7_1 )
       goto LABEL_37;
-    if ( !v29->_2.cctor_finished )
+    if ( !v37->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v29);
-      v29 = ClassBoardClassIconListComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v37);
+      v37 = ClassBoardClassIconListComponent___c_TypeInfo;
     }
-    v30 = (Il2CppObject *)v29->static_fields->__9;
-    _9__7_1 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_ClassBoardClassEntity__int__TypeInfo);
+    v38 = (Il2CppObject *)v37->static_fields->__9;
+    _9__7_1 = (System_Func_object__int__o *)sub_1C715FC(System_Func_ClassBoardClassEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__7_1,
-      v30,
+      v38,
       Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_2__,
       0);
-    v31 = ClassBoardClassIconListComponent___c_TypeInfo->static_fields;
-    v31->__9__7_2 = (struct System_Func_ClassBoardClassEntity__int__o *)_9__7_1;
-    p__9__7_1 = (CGThumbnailListItem_o *)&v31->__9__7_2;
+    v39 = ClassBoardClassIconListComponent___c_TypeInfo->static_fields;
+    v39->__9__7_2 = (struct System_Func_ClassBoardClassEntity__int__o *)_9__7_1;
+    p__9__7_1 = (GrandQuestFolderBoardItem_o *)&v39->__9__7_2;
     goto LABEL_36;
   }
-  v38 = ClassBoardClassIconListComponent___c_TypeInfo;
+  v50 = ClassBoardClassIconListComponent___c_TypeInfo;
   if ( !ClassBoardClassIconListComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ClassBoardClassIconListComponent___c_TypeInfo);
-    v38 = ClassBoardClassIconListComponent___c_TypeInfo;
+    v50 = ClassBoardClassIconListComponent___c_TypeInfo;
   }
-  _9__7_3 = (System_Func_object__int__o *)v38->static_fields->__9__7_3;
+  _9__7_3 = (System_Func_object__int__o *)v50->static_fields->__9__7_3;
   if ( !_9__7_3 )
   {
-    if ( !v38->_2.cctor_finished )
+    if ( !v50->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v38);
-      v38 = ClassBoardClassIconListComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v50);
+      v50 = ClassBoardClassIconListComponent___c_TypeInfo;
     }
-    v40 = (Il2CppObject *)v38->static_fields->__9;
-    _9__7_3 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_ClassBoardClassEntity__int__TypeInfo);
+    v52 = (Il2CppObject *)v50->static_fields->__9;
+    _9__7_3 = (System_Func_object__int__o *)sub_1C715FC(System_Func_ClassBoardClassEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__7_3,
-      v40,
+      v52,
       Method_ClassBoardClassIconListComponent___c__CreateArrayForSort_b__7_3__,
       0);
-    v41 = ClassBoardClassIconListComponent___c_TypeInfo->static_fields;
-    v41->__9__7_3 = (struct System_Func_ClassBoardClassEntity__int__o *)_9__7_3;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v41->__9__7_3, (int32_t)_9__7_3, v42, v43);
+    v53 = ClassBoardClassIconListComponent___c_TypeInfo->static_fields;
+    v53->__9__7_3 = (struct System_Func_ClassBoardClassEntity__int__o *)_9__7_3;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v53->__9__7_3, (int32_t)_9__7_3, v54, v55, v56, v57, v58, v59);
   }
-  v33 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
+  v41 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)entityList,
                                                                (System_Func_TSource__TResult__o *)_9__7_3,
-                                                               (const MethodInfo_3171234 *)Method_System_Linq_Enumerable_Select_ClassBoardClassEntity__int___);
+                                                               (const MethodInfo_3180FD8 *)Method_System_Linq_Enumerable_Select_ClassBoardClassEntity__int___);
 LABEL_38:
-  v34 = System_Linq_Enumerable__ToArray_int_(
-          v33,
-          (const MethodInfo_317B0B0 *)Method_System_Linq_Enumerable_ToArray_int___);
+  v42 = System_Linq_Enumerable__ToArray_int_(
+          v41,
+          (const MethodInfo_318AE54 *)Method_System_Linq_Enumerable_ToArray_int___);
   if ( !this )
-    sub_1C6BC60(v34, v35);
-  this->fields.arrayForSort = v34;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.arrayForSort, (int32_t)v34, v36, v37);
+    sub_1C71608(v42, v43);
+  this->fields.arrayForSort = v42;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.arrayForSort, (int32_t)v42, v44, v45, v46, v47, v48, v49);
 }
 
 
@@ -369,28 +393,28 @@ void ClassBoardClassIconListComponent__SetClassIconList(
   System_Collections_Generic_List_ClassBoardClassEntity__o *entitys; // [xsp+38h] [xbp-78h] BYREF
   UnityEngine_Vector3_o LocalScale; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB9D3A & 1) == 0 )
+  if ( (byte_4CCAE8C & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&Method_ClassBoardClassIconListComponent_CompareClassId__);
-    sub_1C6BA08(&ClassBoardClassIconListComponent_TypeInfo);
-    sub_1C6BA08(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
-    sub_1C6BA08(&System_Comparison_ClassBoardClassEntity__TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantClassMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Count_ClassBoardClassEntity___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__get_Current__);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ServantClassIconComponent___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ClassBoardClassEntity__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ClassBoardClassEntity__Sort__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_3382/*"CLASS_BOARD_EFFECT_LIST_SUBJECT_CLASS"*/);
-    byte_4CB9D3A = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&Method_ClassBoardClassIconListComponent_CompareClassId__);
+    sub_1C713B0(&ClassBoardClassIconListComponent_TypeInfo);
+    sub_1C713B0(&ClassBoardEffectListDialogSkillListComponent_TypeInfo);
+    sub_1C713B0(&System_Comparison_ClassBoardClassEntity__TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantClassMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Count_ClassBoardClassEntity___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__get_Current__);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_ServantClassIconComponent___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ClassBoardClassEntity__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ClassBoardClassEntity__Sort__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_3385/*"CLASS_BOARD_EFFECT_LIST_SUBJECT_CLASS"*/);
+    byte_4CCAE8C = 1;
   }
   entitys = 0;
   memset(&v63, 0, sizeof(v63));
@@ -398,7 +422,7 @@ void ClassBoardClassIconListComponent__SetClassIconList(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
     if ( !Master_object )
       goto LABEL_80;
     if ( !ClassBoardClassMaster__TryGetEntityList(Master_object, &entitys, classBoardBaseEntity->fields.id, 0) )
@@ -431,7 +455,7 @@ LABEL_18:
 LABEL_26:
         ClassBoardClassIconListComponent__CreateArrayForSort(v21, v18, v19, v20, v13);
         v26 = (System_Collections_Generic_List_object__o *)entitys;
-        v27 = (System_Comparison_T__o *)sub_1C6BC54(System_Comparison_ClassBoardClassEntity__TypeInfo);
+        v27 = (System_Comparison_T__o *)sub_1C715FC(System_Comparison_ClassBoardClassEntity__TypeInfo);
         System_Comparison_object____ctor(
           v27,
           (Il2CppObject *)this,
@@ -439,10 +463,10 @@ LABEL_26:
           0);
         if ( !v26 )
           goto LABEL_80;
-        System_Collections_Generic_List_object___Sort_58729528(
+        System_Collections_Generic_List_object___Sort_58794460(
           v26,
           v27,
-          (const MethodInfo_3802438 *)Method_System_Collections_Generic_List_ClassBoardClassEntity__Sort__);
+          (const MethodInfo_38121DC *)Method_System_Collections_Generic_List_ClassBoardClassEntity__Sort__);
       }
     }
     else
@@ -476,13 +500,13 @@ LABEL_25:
     subjectClassLabel = this->fields.subjectClassLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Master_object = (ClassBoardClassMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3382/*"CLASS_BOARD_EFFECT_LIST_SUBJECT_CLASS"*/, 0);
+    Master_object = (ClassBoardClassMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3385/*"CLASS_BOARD_EFFECT_LIST_SUBJECT_CLASS"*/, 0);
     if ( !subjectClassLabel )
       goto LABEL_80;
     UILabel__set_text(subjectClassLabel, (System_String_o *)Master_object, 0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantClassMaster___);
+    Master_object = (ClassBoardClassMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantClassMaster___);
     if ( !Master_object )
       goto LABEL_80;
     v29 = (ServantClassMaster_o *)Master_object;
@@ -497,7 +521,7 @@ LABEL_25:
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v62,
       (System_Collections_Generic_List_object__o *)entitys,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_ClassBoardClassEntity__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_ClassBoardClassEntity__GetEnumerator__);
     v32 = 0.0;
     v63 = v62;
     while ( 1 )
@@ -506,12 +530,12 @@ LABEL_25:
       {
         v33 = System_Collections_Generic_List_Enumerator_object___MoveNext(
                 &v63,
-                (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__MoveNext__);
+                (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__MoveNext__);
         if ( !v33 )
         {
           System_Collections_Generic_List_Enumerator_object___Dispose(
             &v63,
-            (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
+            (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
           Master_object = (ClassBoardClassMaster_o *)this->fields.subjectClassLabel;
           if ( Master_object )
           {
@@ -526,7 +550,7 @@ LABEL_25:
               if ( v61
                 || System_Linq_Enumerable__Count_object_(
                      (System_Collections_Generic_IEnumerable_TSource__o *)entitys,
-                     (const MethodInfo_315B7CC *)Method_System_Linq_Enumerable_Count_ClassBoardClassEntity___) < 2 )
+                     (const MethodInfo_316B570 *)Method_System_Linq_Enumerable_Count_ClassBoardClassEntity___) < 2 )
               {
                 goto LABEL_74;
               }
@@ -563,11 +587,11 @@ LABEL_74:
             }
           }
 LABEL_80:
-          sub_1C6BC60(Master_object, v12);
+          sub_1C71608(Master_object, v12);
         }
         current = (ClassBoardClassEntity_o *)v63.fields._current;
         if ( !v63.fields._current )
-          sub_1C6BC60(v33, v34);
+          sub_1C71608(v33, v34);
         v36 = BalanceConfig_TypeInfo;
         klass_high = HIDWORD(v63.fields._current[1].klass);
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -578,7 +602,7 @@ LABEL_80:
         if ( !System_Linq_Enumerable__Contains_int_(
                 (System_Collections_Generic_IEnumerable_TSource__o *)v36->static_fields->PlayableBeastClassIds,
                 klass_high,
-                (const MethodInfo_31583F4 *)Method_System_Linq_Enumerable_Contains_int___) )
+                (const MethodInfo_3168198 *)Method_System_Linq_Enumerable_Contains_int___) )
           goto LABEL_45;
         v38 = BalanceConfig_TypeInfo;
         if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -592,7 +616,7 @@ LABEL_45:
           v39 = System_Linq_Enumerable__Contains_int_(
                   PlayableGrandBeastClassIds,
                   klass_high,
-                  (const MethodInfo_31583F4 *)Method_System_Linq_Enumerable_Contains_int___);
+                  (const MethodInfo_3168198 *)Method_System_Linq_Enumerable_Contains_int___);
           if ( v31 == klass_high || !v39 )
             break;
         }
@@ -600,10 +624,10 @@ LABEL_45:
       Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, this->fields.classIconObj, 0, 0, 0);
       v42 = Object;
       if ( !Object )
-        sub_1C6BC60(0, v41);
+        sub_1C71608(0, v41);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            Object,
-                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ServantClassIconComponent___);
+                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ServantClassIconComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v44 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -611,11 +635,11 @@ LABEL_45:
       {
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v63,
-          (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
+          (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_ClassBoardClassEntity__Dispose__);
         return;
       }
       if ( !Component_object )
-        sub_1C6BC60(v44, v45);
+        sub_1C71608(v44, v45);
       ServantClassIconComponent__Set((ServantClassIconComponent_o *)Component_object, klass_high, 0, 0);
       if ( !supportClassBoard )
         break;
@@ -626,7 +650,7 @@ LABEL_45:
         IsOpen = System_Linq_Enumerable__Contains_int_(
                    (System_Collections_Generic_IEnumerable_TSource__o *)supportClassBoard->fields.releasedClassIds,
                    current->fields.classId,
-                   (const MethodInfo_31583F4 *)Method_System_Linq_Enumerable_Contains_int___);
+                   (const MethodInfo_3168198 *)Method_System_Linq_Enumerable_Contains_int___);
         goto LABEL_55;
       }
 LABEL_56:
@@ -634,7 +658,7 @@ LABEL_56:
       {
         v47 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Component_object, 0);
         if ( !v47 )
-          sub_1C6BC60(0, v48);
+          sub_1C71608(0, v48);
         UnityEngine_GameObject__SetActive(v47, 0, 0);
       }
       else
@@ -653,14 +677,14 @@ LABEL_62:
         classIconGrid = this->fields.classIconGrid;
         transform = UnityEngine_GameObject__get_transform(v42, 0);
         if ( !classIconGrid )
-          sub_1C6BC60(transform, transform);
+          sub_1C71608(transform, transform);
         UIGrid__AddChild(classIconGrid, transform, 0);
         LocalScale = GameObjectExtensions__GetLocalScale(this->fields.classIconObj, 0);
         GameObjectExtensions__SetLocalScale(v42, LocalScale, 0);
         UnityEngine_GameObject__SetActive(v42, 1, 0);
         v54 = this->fields.classIconGrid;
         if ( !v54 )
-          sub_1C6BC60(v52, v53);
+          sub_1C71608(v52, v53);
         v32 = v32 + (float)(v54->fields.cellWidth * 0.5);
       }
     }
@@ -677,21 +701,29 @@ void ClassBoardClassIconListComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB9D3D & 1) == 0 )
+  if ( (byte_4CCAE8F & 1) == 0 )
   {
-    sub_1C6BA08(&ClassBoardClassIconListComponent___c_TypeInfo);
-    byte_4CB9D3D = 1;
+    sub_1C713B0(&ClassBoardClassIconListComponent___c_TypeInfo);
+    byte_4CCAE8F = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(ClassBoardClassIconListComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(ClassBoardClassIconListComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ClassBoardClassIconListComponent___c_TypeInfo->static_fields->__9 = (struct ClassBoardClassIconListComponent___c_o *)v1;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)ClassBoardClassIconListComponent___c_TypeInfo->static_fields,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)ClassBoardClassIconListComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -711,17 +743,17 @@ int32_t ClassBoardClassIconListComponent___c___CreateArrayForSort_b__7_0(
   Il2CppObject *Master_object; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CB9D3E & 1) == 0 )
+  if ( (byte_4CCAE90 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    byte_4CB9D3E = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    byte_4CCAE90 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_GrandGraphDetailMaster___);
   if ( !Master_object )
-    sub_1C6BC60(0, v5);
+    sub_1C71608(0, v5);
   return GrandGraphDetailMaster__GetGrandClassId((GrandGraphDetailMaster_o *)Master_object, x, 0);
 }
 
@@ -732,7 +764,7 @@ int32_t ClassBoardClassIconListComponent___c___CreateArrayForSort_b__7_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields.classId;
 }
 
@@ -743,7 +775,7 @@ int32_t ClassBoardClassIconListComponent___c___CreateArrayForSort_b__7_2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields.classId;
 }
 
@@ -754,6 +786,6 @@ int32_t ClassBoardClassIconListComponent___c___CreateArrayForSort_b__7_3(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields.classId;
 }

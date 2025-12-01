@@ -2,19 +2,23 @@ void UIToggle___cctor(const MethodInfo *method)
 {
   BetterList_T__o *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CBAA25 & 1) == 0 )
+  if ( (byte_4CCBB7E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BetterList_UIToggle___ctor__);
-    sub_1C6BA08(&BetterList_UIToggle__TypeInfo);
-    sub_1C6BA08(&UIToggle_TypeInfo);
-    byte_4CBAA25 = 1;
+    sub_1C713B0(&Method_BetterList_UIToggle___ctor__);
+    sub_1C713B0(&BetterList_UIToggle__TypeInfo);
+    sub_1C713B0(&UIToggle_TypeInfo);
+    byte_4CCBB7E = 1;
   }
-  v1 = (BetterList_T__o *)sub_1C6BC54(BetterList_UIToggle__TypeInfo);
-  BetterList_object____ctor(v1, (const MethodInfo_3372068 *)Method_BetterList_UIToggle___ctor__);
+  v1 = (BetterList_T__o *)sub_1C715FC(BetterList_UIToggle__TypeInfo);
+  BetterList_object____ctor(v1, (const MethodInfo_3381E0C *)Method_BetterList_UIToggle___ctor__);
   UIToggle_TypeInfo->static_fields->list = (struct BetterList_UIToggle__o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)UIToggle_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)UIToggle_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -22,27 +26,35 @@ void UIToggle___ctor(UIToggle_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  int32_t v6; // w1
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  int32_t v10; // w1
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
-  if ( (byte_4CBAA24 & 1) == 0 )
+  if ( (byte_4CCBB7D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    sub_1C6BA08(&StringLiteral_9828/*"OnActivate"*/);
-    byte_4CBAA24 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    sub_1C713B0(&StringLiteral_9833/*"OnActivate"*/);
+    byte_4CCBB7D = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onChange = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onChange, (int32_t)v3, v4, v5);
-  v6 = StringLiteral_9828/*"OnActivate"*/;
-  this->fields.functionName = (struct System_String_o *)StringLiteral_9828/*"OnActivate"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.functionName, v6, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.onChange, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = StringLiteral_9833/*"OnActivate"*/;
+  this->fields.functionName = (struct System_String_o *)StringLiteral_9833/*"OnActivate"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.functionName, v10, v11, v12, v13, v14, v15, v16);
   this->fields.mIsActive = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -55,12 +67,12 @@ UIToggle_o *UIToggle__GetActiveToggle(int32_t group, const MethodInfo *method)
   BetterList_T__o *list; // x8
   Il2CppObject *Item; // x21
 
-  if ( (byte_4CBAA1F & 1) == 0 )
+  if ( (byte_4CCBB78 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BetterList_UIToggle__get_Item__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UIToggle_TypeInfo);
-    byte_4CBAA1F = 1;
+    sub_1C713B0(&Method_BetterList_UIToggle__get_Item__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UIToggle_TypeInfo);
+    byte_4CCBB78 = 1;
   }
   for ( i = 0; ; ++i )
   {
@@ -73,7 +85,7 @@ UIToggle_o *UIToggle__GetActiveToggle(int32_t group, const MethodInfo *method)
     list = (BetterList_T__o *)v4->static_fields->list;
     if ( !list )
 LABEL_19:
-      sub_1C6BC60(v4, method);
+      sub_1C71608(v4, method);
     if ( i >= list->fields.size )
       break;
     if ( !v4->_2.cctor_finished )
@@ -83,7 +95,7 @@ LABEL_19:
       if ( !list )
         goto LABEL_19;
     }
-    Item = BetterList_object___get_Item(list, i, (const MethodInfo_3371714 *)Method_BetterList_UIToggle__get_Item__);
+    Item = BetterList_object___get_Item(list, i, (const MethodInfo_33814B8 *)Method_BetterList_UIToggle__get_Item__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v4 = (UIToggle_c *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Item, 0, 0);
@@ -119,11 +131,11 @@ void UIToggle__OnDisable(UIToggle_o *this, const MethodInfo *method)
   UIToggle_c *v3; // x0
   BetterList_T__o *list; // x0
 
-  if ( (byte_4CBAA21 & 1) == 0 )
+  if ( (byte_4CCBB7A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BetterList_UIToggle__Remove__);
-    sub_1C6BA08(&UIToggle_TypeInfo);
-    byte_4CBAA21 = 1;
+    sub_1C713B0(&Method_BetterList_UIToggle__Remove__);
+    sub_1C713B0(&UIToggle_TypeInfo);
+    byte_4CCBB7A = 1;
   }
   v3 = UIToggle_TypeInfo;
   if ( !UIToggle_TypeInfo->_2.cctor_finished )
@@ -133,11 +145,11 @@ void UIToggle__OnDisable(UIToggle_o *this, const MethodInfo *method)
   }
   list = (BetterList_T__o *)v3->static_fields->list;
   if ( !list )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   BetterList_object___Remove(
     list,
     (Il2CppObject *)this,
-    (const MethodInfo_3371BF4 *)Method_BetterList_UIToggle__Remove__);
+    (const MethodInfo_3381998 *)Method_BetterList_UIToggle__Remove__);
 }
 
 
@@ -146,11 +158,11 @@ void UIToggle__OnEnable(UIToggle_o *this, const MethodInfo *method)
   UIToggle_c *v3; // x0
   BetterList_T__o *list; // x0
 
-  if ( (byte_4CBAA20 & 1) == 0 )
+  if ( (byte_4CCBB79 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BetterList_UIToggle__Add__);
-    sub_1C6BA08(&UIToggle_TypeInfo);
-    byte_4CBAA20 = 1;
+    sub_1C713B0(&Method_BetterList_UIToggle__Add__);
+    sub_1C713B0(&UIToggle_TypeInfo);
+    byte_4CCBB79 = 1;
   }
   v3 = UIToggle_TypeInfo;
   if ( !UIToggle_TypeInfo->_2.cctor_finished )
@@ -160,8 +172,8 @@ void UIToggle__OnEnable(UIToggle_o *this, const MethodInfo *method)
   }
   list = (BetterList_T__o *)v3->static_fields->list;
   if ( !list )
-    sub_1C6BC60(0, method);
-  BetterList_object___Add(list, (Il2CppObject *)this, (const MethodInfo_337193C *)Method_BetterList_UIToggle__Add__);
+    sub_1C71608(0, method);
+  BetterList_object___Add(list, (Il2CppObject *)this, (const MethodInfo_33816E0 *)Method_BetterList_UIToggle__Add__);
 }
 
 
@@ -187,39 +199,47 @@ void UIToggle__Set(UIToggle_o *this, bool state, const MethodInfo *method)
   UIToggle_c *v21; // x0
   UnityEngine_Object_o *current; // x21
   int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  UIToggle_c *v25; // x0
-  CGThumbnailListItem_o *static_fields; // x0
-  struct UIToggle_o *v27; // x21
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
+  UIToggle_c *v29; // x0
+  GrandQuestFolderBoardItem_o *static_fields; // x0
+  struct UIToggle_o *v31; // x21
   struct UIToggle_o *monitor; // t1
-  const MethodInfo *v29; // x1
+  const MethodInfo *v33; // x1
   System_Collections_Generic_List_EventDelegate__o *onChange; // x22
-  bool IsValid_49551196; // w0
-  const MethodInfo *v32; // x1
-  struct UIToggle_o *v33; // x25
-  System_Collections_Generic_List_EventDelegate__o *v34; // x22
-  int32_t v35; // w2
-  const MethodInfo *v36; // x3
+  bool IsValid_49616128; // w0
+  const MethodInfo *v36; // x1
+  struct UIToggle_o *v37; // x25
+  System_Collections_Generic_List_EventDelegate__o *v38; // x22
+  int32_t v39; // w2
+  int32_t v40; // w3
+  System_String_o *v41; // x4
+  int32_t v42; // w5
+  int64_t v43; // x6
+  System_String_o *v44; // x7
   UnityEngine_Object_o *eventReceiver; // x22
-  UnityEngine_GameObject_o *v38; // x21
+  UnityEngine_GameObject_o *v46; // x21
   System_String_o *functionName; // x22
-  UIToggle_c *v40; // x0
-  struct UIToggle_StaticFields *v41; // x0
+  UIToggle_c *v48; // x0
+  struct UIToggle_StaticFields *v49; // x0
   UnityEngine_Object_o *activeAnimation; // x21
-  const MethodInfo *v43; // x5
-  int32_t v44; // w2
-  UnityEngine_Object_o *v45; // x20
-  bool v46[4]; // [xsp+Ch] [xbp-54h] BYREF
+  const MethodInfo *v51; // x5
+  int32_t v52; // w2
+  UnityEngine_Object_o *v53; // x20
+  bool v54[4]; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4CBAA23 & 1) == 0 )
+  if ( (byte_4CCBB7C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BetterList_UIToggle__get_Item__);
-    sub_1C6BA08(&bool_TypeInfo);
-    sub_1C6BA08(&EventDelegate_TypeInfo);
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UIToggle_TypeInfo);
-    byte_4CBAA23 = 1;
+    sub_1C713B0(&Method_BetterList_UIToggle__get_Item__);
+    sub_1C713B0(&bool_TypeInfo);
+    sub_1C713B0(&EventDelegate_TypeInfo);
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UIToggle_TypeInfo);
+    byte_4CCBB7C = 1;
   }
   validator = this->fields.validator;
   if ( !validator
@@ -265,7 +285,7 @@ void UIToggle__Set(UIToggle_o *this, bool state, const MethodInfo *method)
                 Item = BetterList_object___get_Item(
                          (BetterList_T__o *)Active,
                          v10,
-                         (const MethodInfo_3371714 *)Method_BetterList_UIToggle__get_Item__);
+                         (const MethodInfo_33814B8 *)Method_BetterList_UIToggle__get_Item__);
                 if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                 Active = UnityEngine_Object__op_Inequality(
@@ -306,7 +326,7 @@ void UIToggle__Set(UIToggle_o *this, bool state, const MethodInfo *method)
                 goto LABEL_34;
             }
 LABEL_98:
-            sub_1C6BC60(Active, state);
+            sub_1C71608(Active, state);
           }
         }
 LABEL_34:
@@ -357,32 +377,32 @@ LABEL_52:
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( UnityEngine_Object__op_Equality(current, 0, 0) )
         {
-          v25 = UIToggle_TypeInfo;
+          v29 = UIToggle_TypeInfo;
           if ( !UIToggle_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(UIToggle_TypeInfo);
-            v25 = UIToggle_TypeInfo;
+            v29 = UIToggle_TypeInfo;
           }
-          static_fields = (CGThumbnailListItem_o *)v25->static_fields;
+          static_fields = (GrandQuestFolderBoardItem_o *)v29->static_fields;
           monitor = (struct UIToggle_o *)static_fields->monitor;
-          static_fields = (CGThumbnailListItem_o *)((char *)static_fields + 8);
-          v27 = monitor;
-          static_fields->klass = (CGThumbnailListItem_c *)this;
-          sub_1C6B9AC(static_fields, (int32_t)this, v23, v24);
+          static_fields = (GrandQuestFolderBoardItem_o *)((char *)static_fields + 8);
+          v31 = monitor;
+          static_fields->klass = (GrandQuestFolderBoardItem_c *)this;
+          sub_1C71354(static_fields, (int32_t)this, v23, v24, v25, v26, v27, v28);
           onChange = this->fields.onChange;
           if ( !EventDelegate_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-          IsValid_49551196 = EventDelegate__IsValid_49551196(onChange, v29);
-          if ( IsValid_49551196 )
-            v33 = 0;
+          IsValid_49616128 = EventDelegate__IsValid_49616128(onChange, v33);
+          if ( IsValid_49616128 )
+            v37 = 0;
           else
-            v33 = v27;
-          if ( IsValid_49551196 )
+            v37 = v31;
+          if ( IsValid_49616128 )
           {
-            v34 = this->fields.onChange;
+            v38 = this->fields.onChange;
             if ( !EventDelegate_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-            EventDelegate__Execute_49522624(v34, v32);
+            EventDelegate__Execute_49587556(v38, v36);
           }
           else
           {
@@ -393,26 +413,26 @@ LABEL_52:
             {
               if ( !System_String__IsNullOrEmpty(this->fields.functionName, 0) )
               {
-                v38 = this->fields.eventReceiver;
+                v46 = this->fields.eventReceiver;
                 functionName = this->fields.functionName;
-                v46[0] = this->fields.mIsActive;
-                Active = j_il2cpp_value_box_0(bool_TypeInfo, v46);
-                if ( !v38 )
+                v54[0] = this->fields.mIsActive;
+                Active = j_il2cpp_value_box_0(bool_TypeInfo, v54);
+                if ( !v46 )
                   goto LABEL_98;
-                UnityEngine_GameObject__SendMessage_71639960(v38, functionName, (Il2CppObject *)Active, 1, 0);
+                UnityEngine_GameObject__SendMessage_71704892(v46, functionName, (Il2CppObject *)Active, 1, 0);
               }
-              v27 = v33;
+              v31 = v37;
             }
           }
-          v40 = UIToggle_TypeInfo;
+          v48 = UIToggle_TypeInfo;
           if ( !UIToggle_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(UIToggle_TypeInfo);
-            v40 = UIToggle_TypeInfo;
+            v48 = UIToggle_TypeInfo;
           }
-          v41 = v40->static_fields;
-          v41->current = v27;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&v41->current, (int32_t)v27, v35, v36);
+          v49 = v48->static_fields;
+          v49->current = v31;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)&v49->current, (int32_t)v31, v39, v40, v41, v42, v43, v44);
         }
         activeAnimation = (UnityEngine_Object_o *)this->fields.activeAnimation;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -420,13 +440,13 @@ LABEL_52:
         if ( UnityEngine_Object__op_Inequality(activeAnimation, 0, 0) )
         {
           if ( state )
-            v44 = 1;
+            v52 = 1;
           else
-            v44 = -1;
-          v45 = (UnityEngine_Object_o *)ActiveAnimation__Play_49551424(this->fields.activeAnimation, 0, v44, 2, 0, v43);
+            v52 = -1;
+          v53 = (UnityEngine_Object_o *)ActiveAnimation__Play_49616356(this->fields.activeAnimation, 0, v52, 2, 0, v51);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          Active = UnityEngine_Object__op_Inequality(v45, 0, 0);
+          Active = UnityEngine_Object__op_Inequality(v53, 0, 0);
           if ( (Active & 1) != 0 )
           {
             if ( this->fields.instantTween )
@@ -437,9 +457,9 @@ LABEL_52:
             if ( (Active & 1) == 0 )
             {
 LABEL_95:
-              if ( !v45 )
+              if ( !v53 )
                 goto LABEL_98;
-              ActiveAnimation__Finish((ActiveAnimation_o *)v45, (const MethodInfo *)state);
+              ActiveAnimation__Finish((ActiveAnimation_o *)v53, (const MethodInfo *)state);
             }
           }
         }
@@ -479,34 +499,58 @@ void UIToggle__Start(UIToggle_o *this, const MethodInfo *method)
   UnityEngine_Object_o *checkSprite; // x21
   UnityEngine_Object_o *activeSprite; // x22
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  struct UIWidget_o *v11; // x1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  struct UIWidget_o *v15; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   struct UnityEngine_Animation_o **p_checkAnimation; // x20
   UnityEngine_Object_o *checkAnimation; // x21
   UnityEngine_Object_o *activeAnimation; // x22
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  struct UnityEngine_Animation_o *v19; // x1
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  const MethodInfo *v22; // x1
-  UnityEngine_Object_o *v23; // x20
-  long double v24; // q0
-  struct UIWidget_o *v25; // x0
+  int32_t v25; // w2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
+  struct UnityEngine_Animation_o *v31; // x1
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  int32_t v35; // w5
+  int64_t v36; // x6
+  System_String_o *v37; // x7
+  const MethodInfo *v38; // x1
+  UnityEngine_Object_o *v39; // x20
+  long double v40; // q0
+  struct UIWidget_o *v41; // x0
   System_Collections_Generic_List_EventDelegate__o *onChange; // x20
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
+  int32_t v43; // w2
+  int32_t v44; // w3
+  System_String_o *v45; // x4
+  int32_t v46; // w5
+  int64_t v47; // x6
+  System_String_o *v48; // x7
+  int32_t v49; // w2
+  int32_t v50; // w3
+  System_String_o *v51; // x4
+  int32_t v52; // w5
+  int64_t v53; // x6
+  System_String_o *v54; // x7
 
-  if ( (byte_4CBAA22 & 1) == 0 )
+  if ( (byte_4CCBB7B & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
-    sub_1C6BA08(&EventDelegate_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBAA22 = 1;
+    sub_1C713B0(&UnityEngine_Application_TypeInfo);
+    sub_1C713B0(&EventDelegate_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBB7B = 1;
   }
   if ( this->fields.startsChecked )
   {
@@ -538,11 +582,19 @@ void UIToggle__Start(UIToggle_o *this, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality(activeSprite, 0, 0) )
       {
-        v11 = *p_checkSprite;
+        v15 = *p_checkSprite;
         this->fields.activeSprite = *p_checkSprite;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.activeSprite, (int32_t)v11, v9, v10);
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&this->fields.activeSprite,
+          (int32_t)v15,
+          v9,
+          v10,
+          v11,
+          v12,
+          v13,
+          v14);
         *p_checkSprite = 0;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.checkSprite, 0, v12, v13);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.checkSprite, 0, v16, v17, v18, v19, v20, v21);
       }
     }
     p_checkAnimation = &this->fields.checkAnimation;
@@ -556,43 +608,51 @@ void UIToggle__Start(UIToggle_o *this, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality(activeAnimation, 0, 0) )
       {
-        v19 = *p_checkAnimation;
+        v31 = *p_checkAnimation;
         this->fields.activeAnimation = *p_checkAnimation;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.activeAnimation, (int32_t)v19, v17, v18);
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&this->fields.activeAnimation,
+          (int32_t)v31,
+          v25,
+          v26,
+          v27,
+          v28,
+          v29,
+          v30);
         *p_checkAnimation = 0;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.checkAnimation, 0, v20, v21);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.checkAnimation, 0, v32, v33, v34, v35, v36, v37);
       }
     }
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
     if ( UnityEngine_Application__get_isPlaying(0) )
     {
-      v23 = (UnityEngine_Object_o *)this->fields.activeSprite;
+      v39 = (UnityEngine_Object_o *)this->fields.activeSprite;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Inequality(v23, 0, 0) )
+      if ( UnityEngine_Object__op_Inequality(v39, 0, 0) )
       {
-        v25 = this->fields.activeSprite;
-        if ( !v25 )
-          sub_1C6BC60(0, v22);
-        LODWORD(v24) = 1.0;
+        v41 = this->fields.activeSprite;
+        if ( !v41 )
+          sub_1C71608(0, v38);
+        LODWORD(v40) = 1.0;
         if ( !this->fields.startsActive )
-          *(float *)&v24 = 0.0;
-        ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, long double))v25->klass->vtable._8_set_alpha.methodPtr)(
-          v25,
-          v25->klass->vtable._8_set_alpha.method,
-          v24);
+          *(float *)&v40 = 0.0;
+        ((void (__fastcall *)(struct UIWidget_o *, const MethodInfo *, long double))v41->klass->vtable._8_set_alpha.methodPtr)(
+          v41,
+          v41->klass->vtable._8_set_alpha.method,
+          v40);
       }
     }
     onChange = this->fields.onChange;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    if ( EventDelegate__IsValid_49551196(onChange, v22) )
+    if ( EventDelegate__IsValid_49616128(onChange, v38) )
     {
       this->fields.eventReceiver = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventReceiver, 0, v27, v28);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.eventReceiver, 0, v43, v44, v45, v46, v47, v48);
       this->fields.functionName = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.functionName, 0, v29, v30);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.functionName, 0, v49, v50, v51, v52, v53, v54);
     }
   }
 }
@@ -642,28 +702,40 @@ void UIToggle__set_value(UIToggle_o *this, bool value, const MethodInfo *method)
 
 void UIToggle_Validate___ctor(UIToggle_Validate_o *this, Il2CppObject *object, intptr_t method, const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  intptr_t v8; // x8
+  int v12; // w22
   Il2CppObject *m_target; // x9
-  __int64 v10; // x0
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C6BAC8(method) & 1) == 0 )
+  if ( (sub_1C71470(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C6BB30(v10, 0);
+      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C714D8(v14, 0);
     }
     goto LABEL_5;
   }
-  if ( v8 != 1 )
+  if ( v12 != 1 )
   {
 LABEL_5:
     m_target = this->fields.m_target;
@@ -671,9 +743,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA8E54;
+  this->fields.invoke_impl = (intptr_t)sub_1AAE35C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA8E00;
+  this->fields.extra_arg = (intptr_t)sub_1AAE308;
 }
 
 
@@ -688,14 +760,14 @@ System_IAsyncResult_o *UIToggle_Validate__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = choice;
-  if ( (byte_4CBAA26 & 1) == 0 )
+  if ( (byte_4CCBB7F & 1) == 0 )
   {
-    sub_1C6BA08(&bool_TypeInfo);
-    byte_4CBAA26 = 1;
+    sub_1C713B0(&bool_TypeInfo);
+    byte_4CCBB7F = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C71364(this, v9, callback, object);
 }
 
 
@@ -706,9 +778,9 @@ bool UIToggle_Validate__EndInvoke(UIToggle_Validate_o *this, System_IAsyncResult
   __int64 v5; // x2
   __int64 v6; // x3
 
-  v3 = sub_1C6B9C0(result, 0, method);
+  v3 = sub_1C71368(result, 0, method);
   if ( !v3 )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   return *(_BYTE *)j_il2cpp_object_unbox_0(v3, v4, v5, v6);
 }
 

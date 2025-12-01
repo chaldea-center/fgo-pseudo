@@ -7,13 +7,17 @@ void ServantStatusCharaGraphListViewItem___ctor(
 {
   ServantStatusCharaGraphListViewItem_o *v7; // x21
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
   v7 = this;
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   v7->fields.mainInfo = mainInfo;
   v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 120);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v7, (int32_t)mainInfo, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v7, (int32_t)mainInfo, v8, v9, v10, v11, v12, v13);
   LODWORD(v7->monitor) = imageLimitCount;
 }
 

@@ -1,9 +1,9 @@
 void EventInfoDetectiveRankControl___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CB77DA & 1) == 0 )
+  if ( (byte_4CC890C & 1) == 0 )
   {
-    sub_1C6BA08(&EventInfoDetectiveRankControl_TypeInfo);
-    byte_4CB77DA = 1;
+    sub_1C713B0(&EventInfoDetectiveRankControl_TypeInfo);
+    byte_4CC890C = 1;
   }
   EventInfoDetectiveRankControl_TypeInfo->static_fields->MISSION_CLEAR_DISP_COUNT_MAX = 9999999;
 }
@@ -11,10 +11,10 @@ void EventInfoDetectiveRankControl___cctor(const MethodInfo *method)
 
 void EventInfoDetectiveRankControl___ctor(EventInfoDetectiveRankControl_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB77D9 & 1) == 0 )
+  if ( (byte_4CC890B & 1) == 0 )
   {
-    sub_1C6BA08(&EventInfoUIProgressControl_TypeInfo);
-    byte_4CB77D9 = 1;
+    sub_1C713B0(&EventInfoUIProgressControl_TypeInfo);
+    byte_4CC890B = 1;
   }
   if ( !EventInfoUIProgressControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventInfoUIProgressControl_TypeInfo);
@@ -36,18 +36,18 @@ int32_t EventInfoDetectiveRankControl__GetCurrentDetectiveRank(
   bool v10; // w0
   struct EventProgressValueEntity_o *v11; // x8
 
-  if ( (byte_4CB77D8 & 1) == 0 )
+  if ( (byte_4CC890A & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB77D8 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC890A = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CB01CE )
+  if ( !byte_4CC12CE )
   {
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB01CE = 1;
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC12CE = 1;
   }
   v3 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -68,10 +68,10 @@ int32_t EventInfoDetectiveRankControl__GetCurrentDetectiveRank(
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CB01CE )
+  if ( !byte_4CC12CE )
   {
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB01CE = 1;
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC12CE = 1;
   }
   v8 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -82,7 +82,7 @@ int32_t EventInfoDetectiveRankControl__GetCurrentDetectiveRank(
   v5 = v8->static_fields->mInstance;
   if ( !v5 )
 LABEL_33:
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   if ( !TerminalSceneComponent__IsMapActive(v5, 0) )
   {
     currentEventProgressValueEntity = this->fields.currentEventProgressValueEntity;
@@ -121,11 +121,15 @@ void EventInfoDetectiveRankControl__Initialization(
   __int64 v9; // x8
   __int64 v10; // x8
   AssetData_o *v11; // x0
-  UnityEngine_Object_o *Object_40741416; // x0
+  UnityEngine_Object_o *Object_40783956; // x0
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  struct UnityEngine_GameObject_o *v15; // x8
-  UnityEngine_GameObject_c *v16; // x1
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  struct UnityEngine_GameObject_o *v19; // x8
+  UnityEngine_GameObject_c *v20; // x1
   struct UnityEngine_GameObject_o **p_effectBasePrefab; // x0
   System_String_o *titleBgSpriteName; // x20
   UISprite_o *titleBgSprite; // x21
@@ -135,26 +139,26 @@ void EventInfoDetectiveRankControl__Initialization(
   UISprite_o *missionCountBgSprite; // x21
   UnityEngine_Object_o *missionStartedCountBgSprite; // x20
   System_String_o *missionStartedCountBgSpriteName; // x20
-  UISprite_o *v26; // x21
-  UnityEngine_Component_o *v27; // x8
-  char v28; // w19
+  UISprite_o *v30; // x21
+  UnityEngine_Component_o *v31; // x8
+  char v32; // w19
 
-  if ( (byte_4CB77D2 & 1) == 0 )
+  if ( (byte_4CC8904 & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_GameObject_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11176/*"RankUpEffect"*/);
-    byte_4CB77D2 = 1;
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_GameObject_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    sub_1C713B0(&StringLiteral_11182/*"RankUpEffect"*/);
+    byte_4CC8904 = 1;
   }
   EventInfoUIProgressControl__Initialization((EventInfoUIProgressControl_o *)this, entity, 0);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CB01CE )
+  if ( !byte_4CC12CE )
   {
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB01CE = 1;
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC12CE = 1;
   }
   v5 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -169,10 +173,10 @@ void EventInfoDetectiveRankControl__Initialization(
     goto LABEL_27;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CB01CE )
+  if ( !byte_4CC12CE )
   {
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB01CE = 1;
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC12CE = 1;
   }
   gameObject = (UnityEngine_GameObject_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -189,24 +193,24 @@ void EventInfoDetectiveRankControl__Initialization(
   v11 = *(AssetData_o **)(v10 + 248);
   if ( !v11 )
     goto LABEL_27;
-  Object_40741416 = AssetData__GetObject_40741416(v11, (System_String_o *)StringLiteral_11176/*"RankUpEffect"*/, 0);
-  v15 = (struct UnityEngine_GameObject_o *)Object_40741416;
-  if ( Object_40741416 )
+  Object_40783956 = AssetData__GetObject_40783956(v11, (System_String_o *)StringLiteral_11182/*"RankUpEffect"*/, 0);
+  v19 = (struct UnityEngine_GameObject_o *)Object_40783956;
+  if ( Object_40783956 )
   {
-    v16 = UnityEngine_GameObject_TypeInfo;
-    if ( (UnityEngine_GameObject_c *)Object_40741416->klass == UnityEngine_GameObject_TypeInfo )
+    v20 = UnityEngine_GameObject_TypeInfo;
+    if ( (UnityEngine_GameObject_c *)Object_40783956->klass == UnityEngine_GameObject_TypeInfo )
     {
-      this->fields.effectBasePrefab = (struct UnityEngine_GameObject_o *)Object_40741416;
+      this->fields.effectBasePrefab = (struct UnityEngine_GameObject_o *)Object_40783956;
       p_effectBasePrefab = &this->fields.effectBasePrefab;
-      if ( v15->klass == v16 )
+      if ( v19->klass == v20 )
         goto LABEL_26;
     }
-    sub_1C6BFFC(v15);
+    sub_1C719A4(v19);
   }
-  this->fields.effectBasePrefab = v15;
+  this->fields.effectBasePrefab = v19;
   p_effectBasePrefab = &this->fields.effectBasePrefab;
 LABEL_26:
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_effectBasePrefab, (int32_t)v15, v13, v14);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p_effectBasePrefab, (int32_t)v19, v13, v14, v15, v16, v17, v18);
 LABEL_27:
   if ( !System_String__IsNullOrEmpty(this->fields.titleBgSpriteName, 0) )
   {
@@ -244,24 +248,24 @@ LABEL_27:
   if ( UnityEngine_Object__op_Inequality(missionStartedCountBgSprite, 0, 0)
     && !System_String__IsNullOrEmpty(this->fields.missionStartedCountBgSpriteName, 0) )
   {
-    v26 = this->fields.missionStartedCountBgSprite;
+    v30 = this->fields.missionStartedCountBgSprite;
     missionStartedCountBgSpriteName = this->fields.missionStartedCountBgSpriteName;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)AtlasManager__SetEventUI(v26, missionStartedCountBgSpriteName, 0);
-    v27 = (UnityEngine_Component_o *)this->fields.missionStartedCountBgSprite;
-    if ( v27 )
+    gameObject = (UnityEngine_GameObject_o *)AtlasManager__SetEventUI(v30, missionStartedCountBgSpriteName, 0);
+    v31 = (UnityEngine_Component_o *)this->fields.missionStartedCountBgSprite;
+    if ( v31 )
     {
-      v28 = (char)gameObject;
-      gameObject = UnityEngine_Component__get_gameObject(v27, 0);
+      v32 = (char)gameObject;
+      gameObject = UnityEngine_Component__get_gameObject(v31, 0);
       if ( gameObject )
       {
-        UnityEngine_GameObject__SetActive(gameObject, v28 & 1, 0);
+        UnityEngine_GameObject__SetActive(gameObject, v32 & 1, 0);
         return;
       }
     }
 LABEL_50:
-    sub_1C6BC60(gameObject, v7);
+    sub_1C71608(gameObject, v7);
   }
 }
 
@@ -276,41 +280,53 @@ void EventInfoDetectiveRankControl__PlayAnim(
   Il2CppObject *v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   UnityEngine_Object_o *effectBasePrefab; // x21
   struct EventProgressValueEntity_o *currentEventProgressValueEntity; // x8
   int32_t progressValue; // w8
-  Il2CppObject *v17; // x21
+  Il2CppObject *v25; // x21
   UnityEngine_Component_o *rankSprite; // x8
-  UnityEngine_GameObject_o *v19; // x20
+  UnityEngine_GameObject_o *v27; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x20
-  System_Action_o *v22; // x21
-  System_Action_o *v23; // x21
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  System_Action_o *v30; // x21
+  System_Action_o *v31; // x21
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  int32_t v35; // w5
+  int64_t v36; // x6
+  System_String_o *v37; // x7
 
-  if ( (byte_4CB77D7 & 1) == 0 )
+  if ( (byte_4CC8909 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__0__);
-    sub_1C6BA08(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__1__);
-    sub_1C6BA08(&EventInfoDetectiveRankControl___c__DisplayClass26_0_TypeInfo);
-    byte_4CB77D7 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__0__);
+    sub_1C713B0(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__1__);
+    sub_1C713B0(&EventInfoDetectiveRankControl___c__DisplayClass26_0_TypeInfo);
+    byte_4CC8909 = 1;
   }
-  v7 = sub_1C6BC54(EventInfoDetectiveRankControl___c__DisplayClass26_0_TypeInfo);
+  v7 = sub_1C715FC(EventInfoDetectiveRankControl___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_18;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 32) = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)callback, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)callback, v16, v17, v18, v19, v20, v21);
   if ( type == 1 && this->fields.currentEventProgressValueEntity )
   {
     effectBasePrefab = (UnityEngine_Object_o *)this->fields.effectBasePrefab;
@@ -326,46 +342,54 @@ void EventInfoDetectiveRankControl__PlayAnim(
       *(_DWORD *)(v7 + 24) = progressValue;
       if ( this->fields.userRank < progressValue )
       {
-        v17 = (Il2CppObject *)this->fields.effectBasePrefab;
+        v25 = (Il2CppObject *)this->fields.effectBasePrefab;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         v8 = UnityEngine_Object__Instantiate_object_(
-               v17,
-               (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+               v25,
+               (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
         rankSprite = (UnityEngine_Component_o *)this->fields.rankSprite;
         if ( rankSprite )
         {
-          v19 = (UnityEngine_GameObject_o *)v8;
+          v27 = (UnityEngine_GameObject_o *)v8;
           gameObject = UnityEngine_Component__get_gameObject(rankSprite, 0);
-          GameObjectExtensions__SafeSetParent_36361932(v19, gameObject, 0);
-          if ( v19 )
+          GameObjectExtensions__SafeSetParent_36395768(v27, gameObject, 0);
+          if ( v27 )
           {
             Component_object = UnityEngine_GameObject__GetComponent_object_(
-                                 v19,
-                                 (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
-            v22 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+                                 v27,
+                                 (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectActionComponent___);
+            v30 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
             System_Action___ctor(
-              v22,
+              v30,
               (Il2CppObject *)v7,
               Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__0__,
               0);
             if ( Component_object )
             {
-              CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 0, v22, 0);
-              v23 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+              CommonEffectActionComponent__SetEventAction((CommonEffectActionComponent_o *)Component_object, 0, v30, 0);
+              v31 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
               System_Action___ctor(
-                v23,
+                v31,
                 (Il2CppObject *)v7,
                 Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__1__,
                 0);
-              Component_object[2].monitor = v23;
-              sub_1C6B9AC((CGThumbnailListItem_o *)&Component_object[2].monitor, (int32_t)v23, v24, v25);
+              Component_object[2].monitor = v31;
+              sub_1C71354(
+                (GrandQuestFolderBoardItem_o *)&Component_object[2].monitor,
+                (int32_t)v31,
+                v32,
+                v33,
+                v34,
+                v35,
+                v36,
+                v37);
               return;
             }
           }
         }
 LABEL_18:
-        sub_1C6BC60(v8, v9);
+        sub_1C71608(v8, v9);
       }
     }
   }
@@ -427,11 +451,11 @@ void EventInfoDetectiveRankControl__SetupCondtionText(
   EventInfoDetectiveRankControl_o *condMessage; // x1
 
   v3 = this;
-  if ( (byte_4CB77D4 & 1) == 0 )
+  if ( (byte_4CC8906 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    this = (EventInfoDetectiveRankControl_o *)sub_1C6BA08(&StringLiteral_5649/*"EVENT_PROGRESS_NEXT_RANK_NONE"*/);
-    byte_4CB77D4 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    this = (EventInfoDetectiveRankControl_o *)sub_1C713B0(&StringLiteral_5652/*"EVENT_PROGRESS_NEXT_RANK_NONE"*/);
+    byte_4CC8906 = 1;
   }
   nextEventProgressValueEntity = v3->fields.nextEventProgressValueEntity;
   conditionTextLabel = v3->fields.conditionTextLabel;
@@ -441,11 +465,11 @@ void EventInfoDetectiveRankControl__SetupCondtionText(
     if ( conditionTextLabel )
       goto LABEL_5;
 LABEL_9:
-    sub_1C6BC60(this, condMessage);
+    sub_1C71608(this, condMessage);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  this = (EventInfoDetectiveRankControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5649/*"EVENT_PROGRESS_NEXT_RANK_NONE"*/, 0);
+  this = (EventInfoDetectiveRankControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5652/*"EVENT_PROGRESS_NEXT_RANK_NONE"*/, 0);
   condMessage = this;
   if ( !conditionTextLabel )
     goto LABEL_9;
@@ -473,20 +497,20 @@ void EventInfoDetectiveRankControl__SetupMissionClearCount(
   System_String_o *v15; // x0
   int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CB77D5 & 1) == 0 )
+  if ( (byte_4CC8907 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserEventRandomMissionMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&EventInfoDetectiveRankControl_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5629/*"EVENT_POINT_COMMON_FORMAT"*/);
-    sub_1C6BA08(&StringLiteral_3692/*"COMMON_COUNT_OPERATOR_PLUS"*/);
-    byte_4CB77D5 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_UserEventRandomMissionMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&EventInfoDetectiveRankControl_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_5632/*"EVENT_POINT_COMMON_FORMAT"*/);
+    sub_1C713B0(&StringLiteral_3695/*"COMMON_COUNT_OPERATOR_PLUS"*/);
+    byte_4CC8907 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserEventRandomMissionMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserEventRandomMissionMaster___);
+  Master_object = (UserEventRandomMissionMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserEventRandomMissionMaster___);
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity || !Master_object )
     goto LABEL_19;
@@ -496,7 +520,7 @@ void EventInfoDetectiveRankControl__SetupMissionClearCount(
                                             0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5629/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
+  v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5632/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
   v8 = EventInfoDetectiveRankControl_TypeInfo;
   v9 = v7;
   if ( !EventInfoDetectiveRankControl_TypeInfo->_2.cctor_finished )
@@ -516,13 +540,13 @@ void EventInfoDetectiveRankControl__SetupMissionClearCount(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3692/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0);
-    v14 = System_String__Concat_63966792(v14, v15, 0);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_3695/*"COMMON_COUNT_OPERATOR_PLUS"*/, 0);
+    v14 = System_String__Concat_64031724(v14, v15, 0);
   }
   Master_object = (UserEventRandomMissionMaster_o *)this->fields.missionCountTextLabel;
   if ( !Master_object )
 LABEL_19:
-    sub_1C6BC60(Master_object, v4);
+    sub_1C71608(Master_object, v4);
   UILabel__set_text((UILabel_o *)Master_object, v14, 0);
 }
 
@@ -547,18 +571,18 @@ void EventInfoDetectiveRankControl__SetupMissionStartedCount(
   int32_t v16; // [xsp+8h] [xbp-38h] BYREF
   int32_t size; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CB77D6 & 1) == 0 )
+  if ( (byte_4CC8908 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserEventRandomMissionMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_UserEventRandomMissionEntity__get_Count__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_12483/*"SUM_INFO"*/);
-    byte_4CB77D6 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_UserEventRandomMissionMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_UserEventRandomMissionEntity__get_Count__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_12489/*"SUM_INFO"*/);
+    byte_4CC8908 = 1;
   }
   missionStartedCountBgSprite = (UnityEngine_Object_o *)this->fields.missionStartedCountBgSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -580,7 +604,7 @@ void EventInfoDetectiveRankControl__SetupMissionStartedCount(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        gameObject = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserEventRandomMissionMaster___);
+        gameObject = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserEventRandomMissionMaster___);
         eventUiEntity = this->fields.eventUiEntity;
         if ( eventUiEntity )
         {
@@ -590,7 +614,7 @@ void EventInfoDetectiveRankControl__SetupMissionStartedCount(
                                                    (UserEventRandomMissionMaster_o *)gameObject,
                                                    eventUiEntity->fields.eventId,
                                                    0);
-            gameObject = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_EventDetailMaster___);
+            gameObject = (UnityEngine_Component_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_EventDetailMaster___);
             v9 = this->fields.eventUiEntity;
             if ( v9 )
             {
@@ -599,7 +623,7 @@ void EventInfoDetectiveRankControl__SetupMissionStartedCount(
                 gameObject = (UnityEngine_Component_o *)DataMasterBase_object__object__int___GetEntity(
                                                           (DataMasterBase_TMaster__TEntity__PKType__o *)gameObject,
                                                           v9->fields.eventId,
-                                                          (const MethodInfo_33F90DC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
+                                                          (const MethodInfo_3408E80 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__GetEntity__);
                 if ( gameObject )
                 {
                   RandomMissionMaxNum = EventDetailEntity__GetRandomMissionMaxNum((EventDetailEntity_o *)gameObject, 0);
@@ -608,7 +632,7 @@ void EventInfoDetectiveRankControl__SetupMissionStartedCount(
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                   gameObject = (UnityEngine_Component_o *)LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_12483/*"SUM_INFO"*/,
+                                                            (System_String_o *)StringLiteral_12489/*"SUM_INFO"*/,
                                                             0);
                   if ( UserEventRandomMissionProgressList )
                   {
@@ -617,7 +641,7 @@ void EventInfoDetectiveRankControl__SetupMissionStartedCount(
                     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &size);
                     v16 = v12;
                     v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
-                    gameObject = (UnityEngine_Component_o *)System_String__Format_64008100(v13, v14, v15, 0);
+                    gameObject = (UnityEngine_Component_o *)System_String__Format_64073032(v13, v14, v15, 0);
                     if ( v11 )
                     {
                       UILabel__set_text(v11, (System_String_o *)gameObject, 0);
@@ -630,7 +654,7 @@ void EventInfoDetectiveRankControl__SetupMissionStartedCount(
           }
         }
 LABEL_28:
-        sub_1C6BC60(gameObject, v4);
+        sub_1C71608(gameObject, v4);
       }
     }
   }
@@ -651,22 +675,22 @@ void EventInfoDetectiveRankControl__SetupTitleBg(
   UISprite_o *rankSprite; // x20
   System_String_o *monitor; // x21
 
-  if ( (byte_4CB77D3 & 1) == 0 )
+  if ( (byte_4CC8905 & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
-    sub_1C6BA08(&System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
-    sub_1C6BA08(&Method_EventInfoDetectiveRankControl___c__DisplayClass21_0__SetupTitleBg_b__0__);
-    sub_1C6BA08(&EventInfoDetectiveRankControl___c__DisplayClass21_0_TypeInfo);
-    byte_4CB77D3 = 1;
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
+    sub_1C713B0(&System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
+    sub_1C713B0(&Method_EventInfoDetectiveRankControl___c__DisplayClass21_0__SetupTitleBg_b__0__);
+    sub_1C713B0(&EventInfoDetectiveRankControl___c__DisplayClass21_0_TypeInfo);
+    byte_4CC8905 = 1;
   }
-  v5 = sub_1C6BC54(EventInfoDetectiveRankControl___c__DisplayClass21_0_TypeInfo);
+  v5 = sub_1C715FC(EventInfoDetectiveRankControl___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_11;
   *(_DWORD *)(v5 + 16) = userRank;
   viewDataList = this->fields.viewDataList;
-  v9 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
+  v9 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
   System_Predicate_object____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -677,7 +701,7 @@ void EventInfoDetectiveRankControl__SetupTitleBg(
   v10 = System_Collections_Generic_List_object___Find(
           (System_Collections_Generic_List_object__o *)viewDataList,
           (System_Predicate_T__o *)v9,
-          (const MethodInfo_3800FDC *)Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
+          (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
   if ( v10 )
   {
     rankSprite = this->fields.rankSprite;
@@ -694,7 +718,7 @@ void EventInfoDetectiveRankControl__SetupTitleBg(
       return;
     }
 LABEL_11:
-    sub_1C6BC60(titleBgSprite, v7);
+    sub_1C71608(titleBgSprite, v7);
   }
 }
 
@@ -721,7 +745,7 @@ bool EventInfoDetectiveRankControl___c__DisplayClass21_0___SetupTitleBg_b__0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return n->fields.DetectiveRank == this->fields.userRank;
 }
 
@@ -749,7 +773,7 @@ void EventInfoDetectiveRankControl___c__DisplayClass26_0___PlayAnim_b__0(
     || (EventInfoDetectiveRankControl__SetupCondtionText(_4__this, (int32_t)method, v5),
         (_4__this = this->fields.__4__this) == 0) )
   {
-    sub_1C6BC60(_4__this, method);
+    sub_1C71608(_4__this, method);
   }
   EventInfoDetectiveRankControl__SetupMissionClearCount(_4__this, method);
 }
@@ -764,36 +788,48 @@ void EventInfoDetectiveRankControl___c__DisplayClass26_0___PlayAnim_b__1(
   System_Collections_Generic_List_object__o *viewDataList; // x20
   System_Predicate_object__o *_9__2; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  struct EventInfoDetectiveRankControl_o *v8; // x8
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  struct EventInfoDetectiveRankControl_o *v12; // x8
   Il2CppObject *callback; // x21
-  System_Collections_Generic_List_object__o *v10; // x20
+  System_Collections_Generic_List_object__o *v14; // x20
   System_Predicate_object__o *_9__3; // x22
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  Il2CppObject *v14; // x23
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  Il2CppObject *v22; // x23
   Il2CppObject *Instance; // x20
-  System_String_o *v16; // x22
-  System_String_o *v17; // x0
+  System_String_o *v24; // x22
+  System_String_o *v25; // x0
   System_Action_o *_9__4; // x23
-  EventInfoDetectiveRankControl___c__DisplayClass26_0_o *v19; // x21
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  EventInfoDetectiveRankControl___c__DisplayClass26_0_o *v27; // x21
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
 
   v2 = this;
-  if ( (byte_4CB77DB & 1) == 0 )
+  if ( (byte_4CC890D & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__2__);
-    sub_1C6BA08(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__3__);
-    sub_1C6BA08(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__4__);
-    sub_1C6BA08(&StringLiteral_5650/*"EVENT_PROGRESS_RANKUP_MESSAGE"*/);
-    this = (EventInfoDetectiveRankControl___c__DisplayClass26_0_o *)sub_1C6BA08(&StringLiteral_5651/*"EVENT_PROGRESS_RANKUP_TITLE"*/);
-    byte_4CB77DB = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__2__);
+    sub_1C713B0(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__3__);
+    sub_1C713B0(&Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__4__);
+    sub_1C713B0(&StringLiteral_5653/*"EVENT_PROGRESS_RANKUP_MESSAGE"*/);
+    this = (EventInfoDetectiveRankControl___c__DisplayClass26_0_o *)sub_1C713B0(&StringLiteral_5654/*"EVENT_PROGRESS_RANKUP_TITLE"*/);
+    byte_4CC890D = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -802,75 +838,75 @@ void EventInfoDetectiveRankControl___c__DisplayClass26_0___PlayAnim_b__1(
   _9__2 = (System_Predicate_object__o *)v2->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
+    _9__2 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
     System_Predicate_object____ctor(
       _9__2,
       (Il2CppObject *)v2,
       Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__2__,
       0);
     v2->fields.__9__2 = (struct System_Predicate_EventInfoDetectiveRankControl_ViewData__o *)_9__2;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.__9__2, (int32_t)_9__2, v6, v7);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.__9__2, (int32_t)_9__2, v6, v7, v8, v9, v10, v11);
   }
   if ( !viewDataList )
     goto LABEL_19;
   this = (EventInfoDetectiveRankControl___c__DisplayClass26_0_o *)System_Collections_Generic_List_object___Find(
                                                                     viewDataList,
                                                                     (System_Predicate_T__o *)_9__2,
-                                                                    (const MethodInfo_3800FDC *)Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
+                                                                    (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
   if ( !this )
     goto LABEL_19;
-  v8 = v2->fields.__4__this;
-  if ( !v8 )
+  v12 = v2->fields.__4__this;
+  if ( !v12 )
     goto LABEL_19;
   callback = (Il2CppObject *)this->fields.callback;
-  v10 = (System_Collections_Generic_List_object__o *)v8->fields.viewDataList;
+  v14 = (System_Collections_Generic_List_object__o *)v12->fields.viewDataList;
   _9__3 = (System_Predicate_object__o *)v2->fields.__9__3;
   if ( !_9__3 )
   {
-    _9__3 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
+    _9__3 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_EventInfoDetectiveRankControl_ViewData__TypeInfo);
     System_Predicate_object____ctor(
       _9__3,
       (Il2CppObject *)v2,
       Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__3__,
       0);
     v2->fields.__9__3 = (struct System_Predicate_EventInfoDetectiveRankControl_ViewData__o *)_9__3;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.__9__3, (int32_t)_9__3, v12, v13);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.__9__3, (int32_t)_9__3, v16, v17, v18, v19, v20, v21);
   }
-  if ( !v10 )
+  if ( !v14 )
     goto LABEL_19;
   this = (EventInfoDetectiveRankControl___c__DisplayClass26_0_o *)System_Collections_Generic_List_object___Find(
-                                                                    v10,
+                                                                    v14,
                                                                     (System_Predicate_T__o *)_9__3,
-                                                                    (const MethodInfo_3800FDC *)Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
+                                                                    (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_EventInfoDetectiveRankControl_ViewData__Find__);
   if ( !this )
     goto LABEL_19;
-  v14 = (Il2CppObject *)this->fields.callback;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v22 = (Il2CppObject *)this->fields.callback;
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v16 = LocalizationManager__Get((System_String_o *)StringLiteral_5651/*"EVENT_PROGRESS_RANKUP_TITLE"*/, 0);
-  v17 = LocalizationManager__Get((System_String_o *)StringLiteral_5650/*"EVENT_PROGRESS_RANKUP_MESSAGE"*/, 0);
-  this = (EventInfoDetectiveRankControl___c__DisplayClass26_0_o *)System_String__Format_64008100(v17, callback, v14, 0);
+  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_5654/*"EVENT_PROGRESS_RANKUP_TITLE"*/, 0);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_5653/*"EVENT_PROGRESS_RANKUP_MESSAGE"*/, 0);
+  this = (EventInfoDetectiveRankControl___c__DisplayClass26_0_o *)System_String__Format_64073032(v25, callback, v22, 0);
   _9__4 = v2->fields.__9__4;
-  v19 = this;
+  v27 = this;
   if ( !_9__4 )
   {
-    _9__4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__4 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__4,
       (Il2CppObject *)v2,
       Method_EventInfoDetectiveRankControl___c__DisplayClass26_0__PlayAnim_b__4__,
       0);
     v2->fields.__9__4 = _9__4;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.__9__4, (int32_t)_9__4, v20, v21);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.__9__4, (int32_t)_9__4, v28, v29, v30, v31, v32, v33);
   }
   if ( !Instance )
 LABEL_19:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   CommonUI__OpenNotificationDialog(
     (CommonUI_o *)Instance,
-    v16,
-    (System_String_o *)v19,
+    v24,
+    (System_String_o *)v27,
     _9__4,
     -1,
     0,
@@ -895,7 +931,7 @@ bool EventInfoDetectiveRankControl___c__DisplayClass26_0___PlayAnim_b__2(
   struct EventInfoDetectiveRankControl_o *_4__this; // x8
 
   if ( !n || (_4__this = this->fields.__4__this) == 0 )
-    sub_1C6BC60(this, n);
+    sub_1C71608(this, n);
   return n->fields.DetectiveRank == _4__this->fields.userRank;
 }
 
@@ -906,7 +942,7 @@ bool EventInfoDetectiveRankControl___c__DisplayClass26_0___PlayAnim_b__3(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return n->fields.DetectiveRank == this->fields.afterRank;
 }
 
@@ -918,19 +954,19 @@ void EventInfoDetectiveRankControl___c__DisplayClass26_0___PlayAnim_b__4(
   EventInfoUIProgressControl_o *_4__this; // x0
   int32_t afterRank; // w1
 
-  if ( (byte_4CB77DC & 1) == 0 )
+  if ( (byte_4CC890E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB77DC = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC890E = 1;
   }
   _4__this = (EventInfoUIProgressControl_o *)this->fields.__4__this;
   if ( !_4__this
     || (afterRank = this->fields.afterRank,
         LODWORD(_4__this[2].monitor) = afterRank,
         EventInfoUIProgressControl__SaveEventProgressValueSaveData(_4__this, afterRank, 0),
-        (_4__this = (EventInfoUIProgressControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
+        (_4__this = (EventInfoUIProgressControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
   {
-    sub_1C6BC60(_4__this, method);
+    sub_1C71608(_4__this, method);
   }
   CommonUI__CloseNotificationDialog((CommonUI_o *)_4__this, 0);
   ActionExtensions__Call(this->fields.callback, 0);

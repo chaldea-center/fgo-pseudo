@@ -4,150 +4,198 @@ void PostProcessorRuler___ctor(PostProcessorRuler_o *this, const MethodInfo *met
   System_RuntimeFieldHandle_o v4; // x1
   struct System_Int32_array *v5; // x20
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  System_Array_o *v8; // x0
-  System_RuntimeFieldHandle_o v9; // x1
-  struct System_Int32_array *v10; // x20
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  System_Array_o *v13; // x0
-  System_RuntimeFieldHandle_o v14; // x1
-  struct System_Int32_array *v15; // x20
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  System_Array_o *v18; // x0
-  System_RuntimeFieldHandle_o v19; // x1
-  struct System_Int32_array *v20; // x20
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  System_Array_o *v23; // x0
-  System_RuntimeFieldHandle_o v24; // x1
-  struct System_Int32_array *v25; // x20
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  System_Array_o *v28; // x0
-  System_RuntimeFieldHandle_o v29; // x1
-  struct System_Int32_array *v30; // x20
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
-  System_Array_o *v33; // x0
-  System_RuntimeFieldHandle_o v34; // x1
-  struct System_Int32_array *v35; // x20
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  System_Array_o *v38; // x0
-  System_RuntimeFieldHandle_o v39; // x1
-  struct System_Int32_array *v40; // x20
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  System_Array_o *v43; // x20
-  System_RuntimeFieldHandle_o v44; // x1
-  int32_t v45; // w2
-  const MethodInfo *v46; // x3
-  System_Array_o *v47; // x20
-  System_RuntimeFieldHandle_o v48; // x1
-  int32_t v49; // w2
-  const MethodInfo *v50; // x3
-  __int64 v51; // x0
-  __int64 v52; // x1
-  int32_t v53; // w2
-  const MethodInfo *v54; // x3
-  unsigned int v55; // w8
-  System_Array_o *v56; // x0
-  System_RuntimeFieldHandle_o v57; // x1
-  struct System_Int32_array *v58; // x20
-  int32_t v59; // w2
-  const MethodInfo *v60; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  System_Array_o *v12; // x0
+  System_RuntimeFieldHandle_o v13; // x1
+  struct System_Int32_array *v14; // x20
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  System_Array_o *v21; // x0
+  System_RuntimeFieldHandle_o v22; // x1
+  struct System_Int32_array *v23; // x20
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
+  System_Array_o *v30; // x0
+  System_RuntimeFieldHandle_o v31; // x1
+  struct System_Int32_array *v32; // x20
+  int32_t v33; // w2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  int32_t v36; // w5
+  int64_t v37; // x6
+  System_String_o *v38; // x7
+  System_Array_o *v39; // x0
+  System_RuntimeFieldHandle_o v40; // x1
+  struct System_Int32_array *v41; // x20
+  int32_t v42; // w2
+  int32_t v43; // w3
+  System_String_o *v44; // x4
+  int32_t v45; // w5
+  int64_t v46; // x6
+  System_String_o *v47; // x7
+  System_Array_o *v48; // x0
+  System_RuntimeFieldHandle_o v49; // x1
+  struct System_Int32_array *v50; // x20
+  int32_t v51; // w2
+  int32_t v52; // w3
+  System_String_o *v53; // x4
+  int32_t v54; // w5
+  int64_t v55; // x6
+  System_String_o *v56; // x7
+  System_Array_o *v57; // x0
+  System_RuntimeFieldHandle_o v58; // x1
+  struct System_Int32_array *v59; // x20
+  int32_t v60; // w2
+  int32_t v61; // w3
+  System_String_o *v62; // x4
+  int32_t v63; // w5
+  int64_t v64; // x6
+  System_String_o *v65; // x7
+  System_Array_o *v66; // x0
+  System_RuntimeFieldHandle_o v67; // x1
+  struct System_Int32_array *v68; // x20
+  int32_t v69; // w2
+  int32_t v70; // w3
+  System_String_o *v71; // x4
+  int32_t v72; // w5
+  int64_t v73; // x6
+  System_String_o *v74; // x7
+  System_Array_o *v75; // x20
+  System_RuntimeFieldHandle_o v76; // x1
+  int32_t v77; // w2
+  int32_t v78; // w3
+  System_String_o *v79; // x4
+  int32_t v80; // w5
+  int64_t v81; // x6
+  System_String_o *v82; // x7
+  System_Array_o *v83; // x20
+  System_RuntimeFieldHandle_o v84; // x1
+  int32_t v85; // w2
+  int32_t v86; // w3
+  System_String_o *v87; // x4
+  int32_t v88; // w5
+  int64_t v89; // x6
+  System_String_o *v90; // x7
+  __int64 v91; // x0
+  __int64 v92; // x1
+  int32_t v93; // w2
+  int32_t v94; // w3
+  System_String_o *v95; // x4
+  int32_t v96; // w5
+  int64_t v97; // x6
+  System_String_o *v98; // x7
+  unsigned int v99; // w8
+  System_Array_o *v100; // x0
+  System_RuntimeFieldHandle_o v101; // x1
+  struct System_Int32_array *v102; // x20
+  int32_t v103; // w2
+  int32_t v104; // w3
+  System_String_o *v105; // x4
+  int32_t v106; // w5
+  int64_t v107; // x6
+  System_String_o *v108; // x7
 
-  if ( (byte_4CB40CE & 1) == 0 )
+  if ( (byte_4CC51E6 & 1) == 0 )
   {
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__06F4290E9FBE47067FB3007610883278D1E16936A41BDFE41DCE11B9AAE3676B);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__1ED8BBF477075524B2CD372A44DEC8C53A9D1FF92A9BD9623A02FB4107A46665);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__3ACF2EF2096C6B462EC79E4FA671815BB2AF869418FC7D07A7DF6CCCB0C7E275);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__5F74BEAD322B2229C20441AFA97D8EF15BB4BDB0EE9A5DDF7DBFDC9379B9B4F9);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__6F7B48BDF9B07742A2259E00722D7F7A406A4D2907408BCFCFEF21FD1CC38395);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__94ED0ED59BC1BD316129504FB4788BCA7FD7D74AE2E779CFC33DC902B635A317);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__9720C82395D62B4D89A4F86ECB11B6E9FA2767DE6BACCA9CE2190E019214A4B4);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__9CB0A842F7477752CF0ED88779DFAC4F86B01B03E69826CBA999C580ECACA29D);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__AE68F3792257FF6FCCB904CBD3739F960550FD677BA4B610C584A1531271CED1);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__BC6F102CE3DCBD686D4D19E9E14616D336836856DB492377F49FEE50F035E423);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__D5226DFBCE5F9EF51AB2D0514E06039745D500CFC2AA49E5EB2D5333852556B1);
-    byte_4CB40CE = 1;
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&Field__PrivateImplementationDetails__06F4290E9FBE47067FB3007610883278D1E16936A41BDFE41DCE11B9AAE3676B);
+    sub_1C713B0(&Field__PrivateImplementationDetails__1ED8BBF477075524B2CD372A44DEC8C53A9D1FF92A9BD9623A02FB4107A46665);
+    sub_1C713B0(&Field__PrivateImplementationDetails__3ACF2EF2096C6B462EC79E4FA671815BB2AF869418FC7D07A7DF6CCCB0C7E275);
+    sub_1C713B0(&Field__PrivateImplementationDetails__5F74BEAD322B2229C20441AFA97D8EF15BB4BDB0EE9A5DDF7DBFDC9379B9B4F9);
+    sub_1C713B0(&Field__PrivateImplementationDetails__6F7B48BDF9B07742A2259E00722D7F7A406A4D2907408BCFCFEF21FD1CC38395);
+    sub_1C713B0(&Field__PrivateImplementationDetails__94ED0ED59BC1BD316129504FB4788BCA7FD7D74AE2E779CFC33DC902B635A317);
+    sub_1C713B0(&Field__PrivateImplementationDetails__9720C82395D62B4D89A4F86ECB11B6E9FA2767DE6BACCA9CE2190E019214A4B4);
+    sub_1C713B0(&Field__PrivateImplementationDetails__9CB0A842F7477752CF0ED88779DFAC4F86B01B03E69826CBA999C580ECACA29D);
+    sub_1C713B0(&Field__PrivateImplementationDetails__AE68F3792257FF6FCCB904CBD3739F960550FD677BA4B610C584A1531271CED1);
+    sub_1C713B0(&Field__PrivateImplementationDetails__BC6F102CE3DCBD686D4D19E9E14616D336836856DB492377F49FEE50F035E423);
+    sub_1C713B0(&Field__PrivateImplementationDetails__D5226DFBCE5F9EF51AB2D0514E06039745D500CFC2AA49E5EB2D5333852556B1);
+    byte_4CC51E6 = 1;
   }
-  v3 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
+  v3 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
   v4.fields.value = Field__PrivateImplementationDetails__9720C82395D62B4D89A4F86ECB11B6E9FA2767DE6BACCA9CE2190E019214A4B4;
   v5 = (struct System_Int32_array *)v3;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v3, v4, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v3, v4, 0);
   this->fields.num0 = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num0, (int32_t)v5, v6, v7);
-  v8 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v9.fields.value = Field__PrivateImplementationDetails__5F74BEAD322B2229C20441AFA97D8EF15BB4BDB0EE9A5DDF7DBFDC9379B9B4F9;
-  v10 = (struct System_Int32_array *)v8;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v8, v9, 0);
-  this->fields.num1 = v10;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num1, (int32_t)v10, v11, v12);
-  v13 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v14.fields.value = Field__PrivateImplementationDetails__94ED0ED59BC1BD316129504FB4788BCA7FD7D74AE2E779CFC33DC902B635A317;
-  v15 = (struct System_Int32_array *)v13;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v13, v14, 0);
-  this->fields.num2 = v15;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num2, (int32_t)v15, v16, v17);
-  v18 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v19.fields.value = Field__PrivateImplementationDetails__BC6F102CE3DCBD686D4D19E9E14616D336836856DB492377F49FEE50F035E423;
-  v20 = (struct System_Int32_array *)v18;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v18, v19, 0);
-  this->fields.num3 = v20;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num3, (int32_t)v20, v21, v22);
-  v23 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v24.fields.value = Field__PrivateImplementationDetails__06F4290E9FBE47067FB3007610883278D1E16936A41BDFE41DCE11B9AAE3676B;
-  v25 = (struct System_Int32_array *)v23;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v23, v24, 0);
-  this->fields.num4 = v25;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num4, (int32_t)v25, v26, v27);
-  v28 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v29.fields.value = Field__PrivateImplementationDetails__1ED8BBF477075524B2CD372A44DEC8C53A9D1FF92A9BD9623A02FB4107A46665;
-  v30 = (struct System_Int32_array *)v28;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v28, v29, 0);
-  this->fields.num5 = v30;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num5, (int32_t)v30, v31, v32);
-  v33 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v34.fields.value = Field__PrivateImplementationDetails__9CB0A842F7477752CF0ED88779DFAC4F86B01B03E69826CBA999C580ECACA29D;
-  v35 = (struct System_Int32_array *)v33;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v33, v34, 0);
-  this->fields.num6 = v35;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num6, (int32_t)v35, v36, v37);
-  v38 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v39.fields.value = Field__PrivateImplementationDetails__AE68F3792257FF6FCCB904CBD3739F960550FD677BA4B610C584A1531271CED1;
-  v40 = (struct System_Int32_array *)v38;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v38, v39, 0);
-  this->fields.num7 = v40;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num7, (int32_t)v40, v41, v42);
-  v43 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v44.fields.value = Field__PrivateImplementationDetails__3ACF2EF2096C6B462EC79E4FA671815BB2AF869418FC7D07A7DF6CCCB0C7E275;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v43, v44, 0);
-  this->fields.num8 = (struct System_Int32_array *)v43;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num8, (int32_t)v43, v45, v46);
-  v47 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v48.fields.value = Field__PrivateImplementationDetails__D5226DFBCE5F9EF51AB2D0514E06039745D500CFC2AA49E5EB2D5333852556B1;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v47, v48, 0);
-  this->fields.num9 = (struct System_Int32_array *)v47;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.num9, (int32_t)v47, v49, v50);
-  v51 = sub_1C6BAB0(int___TypeInfo, 35);
-  if ( !v51 )
-    sub_1C6BC60(0, v52);
-  v55 = *(_DWORD *)(v51 + 24);
-  if ( v55 <= 0x1B || (*(_DWORD *)(v51 + 140) = 1, v55 <= 0x20) )
-    sub_1C6BC68(v51);
-  *(_DWORD *)(v51 + 160) = 1;
-  this->fields.comma = (struct System_Int32_array *)v51;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.comma, v51, v53, v54);
-  v56 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, 35);
-  v57.fields.value = Field__PrivateImplementationDetails__6F7B48BDF9B07742A2259E00722D7F7A406A4D2907408BCFCFEF21FD1CC38395;
-  v58 = (struct System_Int32_array *)v56;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v56, v57, 0);
-  this->fields.subtract = v58;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.subtract, (int32_t)v58, v59, v60);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num0, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  v12 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v13.fields.value = Field__PrivateImplementationDetails__5F74BEAD322B2229C20441AFA97D8EF15BB4BDB0EE9A5DDF7DBFDC9379B9B4F9;
+  v14 = (struct System_Int32_array *)v12;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v12, v13, 0);
+  this->fields.num1 = v14;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num1, (int32_t)v14, v15, v16, v17, v18, v19, v20);
+  v21 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v22.fields.value = Field__PrivateImplementationDetails__94ED0ED59BC1BD316129504FB4788BCA7FD7D74AE2E779CFC33DC902B635A317;
+  v23 = (struct System_Int32_array *)v21;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v21, v22, 0);
+  this->fields.num2 = v23;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num2, (int32_t)v23, v24, v25, v26, v27, v28, v29);
+  v30 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v31.fields.value = Field__PrivateImplementationDetails__BC6F102CE3DCBD686D4D19E9E14616D336836856DB492377F49FEE50F035E423;
+  v32 = (struct System_Int32_array *)v30;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v30, v31, 0);
+  this->fields.num3 = v32;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num3, (int32_t)v32, v33, v34, v35, v36, v37, v38);
+  v39 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v40.fields.value = Field__PrivateImplementationDetails__06F4290E9FBE47067FB3007610883278D1E16936A41BDFE41DCE11B9AAE3676B;
+  v41 = (struct System_Int32_array *)v39;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v39, v40, 0);
+  this->fields.num4 = v41;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num4, (int32_t)v41, v42, v43, v44, v45, v46, v47);
+  v48 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v49.fields.value = Field__PrivateImplementationDetails__1ED8BBF477075524B2CD372A44DEC8C53A9D1FF92A9BD9623A02FB4107A46665;
+  v50 = (struct System_Int32_array *)v48;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v48, v49, 0);
+  this->fields.num5 = v50;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num5, (int32_t)v50, v51, v52, v53, v54, v55, v56);
+  v57 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v58.fields.value = Field__PrivateImplementationDetails__9CB0A842F7477752CF0ED88779DFAC4F86B01B03E69826CBA999C580ECACA29D;
+  v59 = (struct System_Int32_array *)v57;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v57, v58, 0);
+  this->fields.num6 = v59;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num6, (int32_t)v59, v60, v61, v62, v63, v64, v65);
+  v66 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v67.fields.value = Field__PrivateImplementationDetails__AE68F3792257FF6FCCB904CBD3739F960550FD677BA4B610C584A1531271CED1;
+  v68 = (struct System_Int32_array *)v66;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v66, v67, 0);
+  this->fields.num7 = v68;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num7, (int32_t)v68, v69, v70, v71, v72, v73, v74);
+  v75 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v76.fields.value = Field__PrivateImplementationDetails__3ACF2EF2096C6B462EC79E4FA671815BB2AF869418FC7D07A7DF6CCCB0C7E275;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v75, v76, 0);
+  this->fields.num8 = (struct System_Int32_array *)v75;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num8, (int32_t)v75, v77, v78, v79, v80, v81, v82);
+  v83 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v84.fields.value = Field__PrivateImplementationDetails__D5226DFBCE5F9EF51AB2D0514E06039745D500CFC2AA49E5EB2D5333852556B1;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v83, v84, 0);
+  this->fields.num9 = (struct System_Int32_array *)v83;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.num9, (int32_t)v83, v85, v86, v87, v88, v89, v90);
+  v91 = sub_1C71458(int___TypeInfo, 35);
+  if ( !v91 )
+    sub_1C71608(0, v92);
+  v99 = *(_DWORD *)(v91 + 24);
+  if ( v99 <= 0x1B || (*(_DWORD *)(v91 + 140) = 1, v99 <= 0x20) )
+    sub_1C71610(v91);
+  *(_DWORD *)(v91 + 160) = 1;
+  this->fields.comma = (struct System_Int32_array *)v91;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.comma, v91, v93, v94, v95, v96, v97, v98);
+  v100 = (System_Array_o *)sub_1C71458(int___TypeInfo, 35);
+  v101.fields.value = Field__PrivateImplementationDetails__6F7B48BDF9B07742A2259E00722D7F7A406A4D2907408BCFCFEF21FD1CC38395;
+  v102 = (struct System_Int32_array *)v100;
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v100, v101, 0);
+  this->fields.subtract = v102;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.subtract, (int32_t)v102, v103, v104, v105, v106, v107, v108);
   *(_QWORD *)&this->fields.fontSize = 0x100000002LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -165,15 +213,19 @@ void PostProcessorRuler__CreateNewRenderTextureIfNecessary(PostProcessorRuler_o 
   int32_t height; // w22
   UnityEngine_RenderTexture_o *v11; // x23
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  __int64 v14; // x1
-  UnityEngine_RenderTexture_o *v15; // x0
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  __int64 v18; // x1
+  UnityEngine_RenderTexture_o *v19; // x0
 
-  if ( (byte_4CB40C4 & 1) == 0 )
+  if ( (byte_4CC51DC & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UnityEngine_RenderTexture_TypeInfo);
-    byte_4CB40C4 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UnityEngine_RenderTexture_TypeInfo);
+    byte_4CC51DC = 1;
   }
   p_rt = &this->fields.rt;
   rt = (UnityEngine_Object_o *)this->fields.rt;
@@ -191,18 +243,18 @@ void PostProcessorRuler__CreateNewRenderTextureIfNecessary(PostProcessorRuler_o 
       v8 = (UnityEngine_Object_o *)*p_rt;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71659676(v8, 0);
+      UnityEngine_Object__Destroy_71724608(v8, 0);
     }
     width = UnityEngine_Screen__get_width(0);
     height = UnityEngine_Screen__get_height(0);
-    v11 = (UnityEngine_RenderTexture_o *)sub_1C6BC54(UnityEngine_RenderTexture_TypeInfo);
-    UnityEngine_RenderTexture___ctor_71566036(v11, width, height, 0, 0);
+    v11 = (UnityEngine_RenderTexture_o *)sub_1C715FC(UnityEngine_RenderTexture_TypeInfo);
+    UnityEngine_RenderTexture___ctor_71630968(v11, width, height, 0, 0);
     *p_rt = v11;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.rt, (int32_t)v11, v12, v13);
-    v15 = *p_rt;
-    if ( !*p_rt || (UnityEngine_RenderTexture__set_enableRandomWrite(v15, 1, 0), (v15 = *p_rt) == 0) )
-      sub_1C6BC60(v15, v14);
-    UnityEngine_Texture__set_filterMode((UnityEngine_Texture_o *)v15, 0, 0);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.rt, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+    v19 = *p_rt;
+    if ( !*p_rt || (UnityEngine_RenderTexture__set_enableRandomWrite(v19, 1, 0), (v19 = *p_rt) == 0) )
+      sub_1C71608(v19, v18);
+    UnityEngine_Texture__set_filterMode((UnityEngine_Texture_o *)v19, 0, 0);
     this->fields.rtWidth = UnityEngine_Screen__get_width(0);
     this->fields.rtHeight = UnityEngine_Screen__get_height(0);
   }
@@ -229,7 +281,7 @@ void PostProcessorRuler__CreateRulerUnitInfoHorizontal(
   __int64 size; // x12
   int32_t v20; // w10
   char *v21; // x9
-  const MethodInfo_38B43C4 *v22; // x2
+  const MethodInfo_38C4168 *v22; // x2
   int32_t v23; // w8
   int32_t v24; // w10
   struct PostProcessorRuler_RulerUnitInfo_array *v25; // x9
@@ -237,13 +289,13 @@ void PostProcessorRuler__CreateRulerUnitInfoHorizontal(
   __int64 v27; // x12
   int32_t v28; // w10
   char *v29; // x9
-  const MethodInfo_38B43C4 *v30; // x2
+  const MethodInfo_38C4168 *v30; // x2
   PostProcessorRuler_RulerUnitInfo_o v31; // [xsp+8h] [xbp-A8h] BYREF
 
-  if ( (byte_4CB40CA & 1) == 0 )
+  if ( (byte_4CC51E2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__Add__);
-    byte_4CB40CA = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__Add__);
+    byte_4CC51E2 = 1;
   }
   LimitMaxX = this->fields.screenRect.fields.LimitMaxX;
   v10 = (float)(this->fields.screenRect.fields.LimitMinX + (LimitMaxX - this->fields.screenRect.fields.LimitMinX) / 2);
@@ -254,10 +306,10 @@ void PostProcessorRuler__CreateRulerUnitInfoHorizontal(
     v13 = horizontalStep;
     do
     {
-      if ( !byte_4CAFC08 )
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       v14 = System_Math_TypeInfo;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -273,13 +325,13 @@ void PostProcessorRuler__CreateRulerUnitInfoHorizontal(
             !items) )
       {
 LABEL_29:
-        sub_1C6BC60(v14, unitInfos);
+        sub_1C71608(v14, unitInfos);
       }
       size = unitInfos->fields._size;
       v20 = v12 + LimitMinY;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
-        v22 = *(const MethodInfo_38B43C4 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL);
+        v22 = *(const MethodInfo_38C4168 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL);
         v31.fields.PositionX = v15;
         v31.fields.PositionY = v20;
         v31.fields.LengthX = 1;
@@ -297,10 +349,10 @@ LABEL_29:
         *((_DWORD *)v21 + 11) = lengthY;
         *((_QWORD *)v21 + 6) = 0x100000000LL;
       }
-      if ( !byte_4CAFC08 )
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       v14 = System_Math_TypeInfo;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -320,7 +372,7 @@ LABEL_29:
         v28 = v12 + v24;
         if ( (unsigned int)v27 >= LODWORD(v25->max_length) )
         {
-          v30 = *(const MethodInfo_38B43C4 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL);
+          v30 = *(const MethodInfo_38C4168 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL);
           v31.fields.PositionX = v23;
           v31.fields.PositionY = v28;
           v31.fields.LengthX = 1;
@@ -366,13 +418,13 @@ void PostProcessorRuler__CreateRulerUnitInfoVertical(
   _QWORD *v18; // x10
   __int64 size; // x12
   char *v20; // x9
-  const MethodInfo_38B43C4 *v21; // x2
+  const MethodInfo_38C4168 *v21; // x2
   PostProcessorRuler_RulerUnitInfo_o v22; // [xsp+8h] [xbp-98h] BYREF
 
-  if ( (byte_4CB40CB & 1) == 0 )
+  if ( (byte_4CC51E3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__Add__);
-    byte_4CB40CB = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__Add__);
+    byte_4CC51E3 = 1;
   }
   height = UnityEngine_Screen__get_height(0);
   LimitMinY = this->fields.screenRect.fields.LimitMinY;
@@ -383,10 +435,10 @@ void PostProcessorRuler__CreateRulerUnitInfoVertical(
     do
     {
       LimitMinX = this->fields.screenRect.fields.LimitMinX;
-      if ( !byte_4CAFC08 )
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       v15 = System_Math_TypeInfo;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -400,12 +452,12 @@ void PostProcessorRuler__CreateRulerUnitInfoVertical(
             ++unitInfos->fields._version,
             !items) )
       {
-        sub_1C6BC60(v15, v10);
+        sub_1C71608(v15, v10);
       }
       size = unitInfos->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
-        v21 = *(const MethodInfo_38B43C4 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL);
+        v21 = *(const MethodInfo_38C4168 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL);
         v22.fields.PositionX = LimitMinX + 36;
         v22.fields.PositionY = v16;
         v22.fields.LengthX = lengthX;
@@ -504,11 +556,11 @@ PostProcessorRuler_CharInfo_array *PostProcessorRuler__GetCharInfos(
   uint16_t v26; // [xsp+Ch] [xbp-44h] BYREF
 
   v8 = offsetX;
-  if ( (byte_4CB40CC & 1) == 0 )
+  if ( (byte_4CC51E4 & 1) == 0 )
   {
-    sub_1C6BA08(&PostProcessorRuler_CharInfo___TypeInfo);
-    this = (PostProcessorRuler_o *)sub_1C6BA08(&char_TypeInfo);
-    byte_4CB40CC = 1;
+    sub_1C713B0(&PostProcessorRuler_CharInfo___TypeInfo);
+    this = (PostProcessorRuler_o *)sub_1C713B0(&char_TypeInfo);
+    byte_4CC51E4 = 1;
   }
   v26 = 0;
   if ( !txt
@@ -521,11 +573,11 @@ PostProcessorRuler_CharInfo_array *PostProcessorRuler__GetCharInfos(
                                          *(_QWORD *)&offsetY,
                                          method)) == 0
     || (v12 = this,
-        (this = (PostProcessorRuler_o *)sub_1C6BAB0(
+        (this = (PostProcessorRuler_o *)sub_1C71458(
                                           PostProcessorRuler_CharInfo___TypeInfo,
                                           LODWORD(this->fields.m_CachedPtr))) == 0) )
   {
-    sub_1C6BC60(this, txt);
+    sub_1C71608(this, txt);
   }
   v13 = this;
   if ( SLODWORD(this->fields.m_CancellationTokenSource) >= 1 )
@@ -557,7 +609,7 @@ PostProcessorRuler_CharInfo_array *PostProcessorRuler__GetCharInfos(
       }
       m_CancellationTokenSource_low = LODWORD(v13->fields.m_CancellationTokenSource);
       if ( v15 >= m_CancellationTokenSource_low )
-        sub_1C6BC68(CharOffset);
+        sub_1C71610(CharOffset);
       ++v15;
       *(p_num1 - 1) = (struct System_Int32_array *)((unsigned int)CharOffset | ((unsigned __int64)v8 << 32));
       *p_num1 = (struct System_Int32_array *)v17;
@@ -578,7 +630,7 @@ int32_t PostProcessorRuler__GetCharInfosWidth(
         const MethodInfo *method)
 {
   if ( !txt )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return (5 * txt->fields._stringLength + (txt->fields._stringLength - 1) * spacing) * fontSize;
 }
 
@@ -603,15 +655,15 @@ int32_t PostProcessorRuler__GetCharOffset(PostProcessorRuler_o *this, int32_t nu
     v14 = v4;
     v15 = v3;
     v13 = num;
-    v6 = sub_1C6BA1C(&int_TypeInfo);
+    v6 = sub_1C713C4(&int_TypeInfo);
     v7 = (Il2CppObject *)j_il2cpp_value_box_0(v6, &v13);
-    v8 = (System_String_o *)sub_1C6BA1C(&StringLiteral_643/*"'{0}' is out of range. Only 0 - 9, comma and substract are allowed."*/);
+    v8 = (System_String_o *)sub_1C713C4(&StringLiteral_643/*"'{0}' is out of range. Only 0 - 9, comma and substract are allowed."*/);
     v9 = System_String__Format(v8, v7, 0);
-    v10 = sub_1C6BA1C(&System_Exception_TypeInfo);
-    v11 = (System_Exception_o *)sub_1C6BC54(v10);
-    System_Exception___ctor_65712884(v11, v9, 0);
-    v12 = sub_1C6BA1C(&Method_PostProcessorRuler_GetCharOffset__);
-    sub_1C6BB30(v11, v12);
+    v10 = sub_1C713C4(&System_Exception_TypeInfo);
+    v11 = (System_Exception_o *)sub_1C715FC(v10);
+    System_Exception___ctor_65777816(v11, v9, 0);
+    v12 = sub_1C713C4(&Method_PostProcessorRuler_GetCharOffset__);
+    sub_1C714D8(v11, v12);
   }
   return 35 * num;
 }
@@ -640,18 +692,18 @@ UnityEngine_Vector2Int_o PostProcessorRuler__GetMousePositionInt(PostProcessorRu
     v5 = 0.0;
   else
     v5 = width;
-  if ( !byte_4CAFC08 )
+  if ( !byte_4CC0D08 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CAFC08 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC0D08 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   height = UnityEngine_Screen__get_height(0);
-  if ( !byte_4CAFC08 )
+  if ( !byte_4CC0D08 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CAFC08 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC0D08 = 1;
   }
   v7 = floorf(v5);
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -692,7 +744,7 @@ PostProcessorRuler_RulerUnitInfo_array *PostProcessorRuler__GetRulerUnitInfos(
   float v16; // s8
   int32_t v17; // w10
   char *v18; // x9
-  const MethodInfo_38B43C4 *v19; // x2
+  const MethodInfo_38C4168 *v19; // x2
   const MethodInfo *v20; // x3
   const MethodInfo *v21; // x3
   const MethodInfo *v22; // x3
@@ -700,13 +752,13 @@ PostProcessorRuler_RulerUnitInfo_array *PostProcessorRuler__GetRulerUnitInfos(
   const MethodInfo *v24; // x3
   PostProcessorRuler_RulerUnitInfo_o v26; // [xsp+8h] [xbp-78h] BYREF
 
-  if ( (byte_4CB40C9 & 1) == 0 )
+  if ( (byte_4CC51E1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__TypeInfo);
-    byte_4CB40C9 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__TypeInfo);
+    byte_4CC51E1 = 1;
   }
   LimitMinX = this->fields.screenRect.fields.LimitMinX;
   LimitMinY = this->fields.screenRect.fields.LimitMinY;
@@ -716,10 +768,10 @@ PostProcessorRuler_RulerUnitInfo_array *PostProcessorRuler__GetRulerUnitInfos(
     v7 = this->fields.screenRect.fields.LimitMaxX - LimitMinX;
   else
     v7 = v6 + 1;
-  v8 = (System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__o *)sub_1C6BC54(System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__TypeInfo);
+  v8 = (System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__o *)sub_1C715FC(System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__TypeInfo);
   System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo____ctor(
     v8,
-    (const MethodInfo_38B3AC4 *)Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo___ctor__);
+    (const MethodInfo_38C3868 *)Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo___ctor__);
   if ( !v8
     || (v12 = this->fields.screenRect.fields.LimitMinY,
         items = v8->fields._items,
@@ -727,17 +779,17 @@ PostProcessorRuler_RulerUnitInfo_array *PostProcessorRuler__GetRulerUnitInfos(
         ++v8->fields._version,
         !items) )
   {
-    sub_1C6BC60(v9, v10);
+    sub_1C71608(v9, v10);
   }
   size = v8->fields._size;
   v16 = (float)v6 * 0.00097656;
   v17 = LimitMaxY - LimitMinY + v12 - 36;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
-    v19 = *(const MethodInfo_38B43C4 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
+    v19 = *(const MethodInfo_38C4168 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL);
     v26.fields.PositionX = LimitMinX + (v7 >> 1);
     v26.fields.PositionY = v17;
-    *(_OWORD *)&v26.fields.LengthX = xmmword_CEC1C0;
+    *(_OWORD *)&v26.fields.LengthX = xmmword_CEEE00;
     System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo___AddWithResize(v8, &v26, v19);
   }
   else
@@ -746,7 +798,7 @@ PostProcessorRuler_RulerUnitInfo_array *PostProcessorRuler__GetRulerUnitInfos(
     v8->fields._size = size + 1;
     *((_DWORD *)v18 + 8) = LimitMinX + (v7 >> 1);
     *((_DWORD *)v18 + 9) = v17;
-    *(_OWORD *)(v18 + 40) = xmmword_CEC1C0;
+    *(_OWORD *)(v18 + 40) = xmmword_CEEE00;
   }
   PostProcessorRuler__CreateRulerUnitInfoVertical(this, v8, v16 * 100.0, 36, v11);
   PostProcessorRuler__CreateRulerUnitInfoHorizontal(
@@ -777,7 +829,7 @@ PostProcessorRuler_RulerUnitInfo_array *PostProcessorRuler__GetRulerUnitInfos(
     v24);
   return System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo___ToArray(
            v8,
-           (const MethodInfo_38B62BC *)Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__ToArray__);
+           (const MethodInfo_38C6060 *)Method_System_Collections_Generic_List_PostProcessorRuler_RulerUnitInfo__ToArray__);
 }
 
 
@@ -841,10 +893,10 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
   v7 = UnityEngine_Screen__get_width(0);
   v8 = UnityEngine_Screen__get_height(0);
   v9 = (float)UnityEngine_Screen__get_height(0);
-  if ( !byte_4CAFC08 )
+  if ( !byte_4CC0D08 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CAFC08 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC0D08 = 1;
   }
   v10 = v9 * 1.7778;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -855,10 +907,10 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
   else
     v12 = v11;
   v13 = (float)UnityEngine_Screen__get_width(0) * 0.0625;
-  if ( !byte_4CAFC08 )
+  if ( !byte_4CC0D08 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CAFC08 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC0D08 = 1;
   }
   v14 = v13 * 9.0;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -870,10 +922,10 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
   else
     v17 = v15;
   v18 = (float)(UnityEngine_Screen__get_width(0) - v12);
-  if ( !byte_4CAFC08 )
+  if ( !byte_4CC0D08 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CAFC08 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC0D08 = 1;
   }
   v19 = (float)v7 / v16;
   v20 = v18 * 0.5;
@@ -916,10 +968,10 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
         v34 = v30;
       }
       v35 = (float)UnityEngine_Screen__get_height(0);
-      if ( !byte_4CAFC08 )
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       v36 = v30 / v34;
       v37 = v31 / v34;
@@ -940,10 +992,10 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
         v43 = (float)v37;
       else
         v43 = 9.0;
-      if ( !byte_4CAFC08 )
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       v28 = System_Math_TypeInfo;
       v29 = v43 * v42;
@@ -951,10 +1003,10 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
     else
     {
       v24 = (float)UnityEngine_Screen__get_height(0);
-      if ( !byte_4CAFC08 )
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       v25 = v24 * 2.3333;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -965,10 +1017,10 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
       else
         v12 = v26;
       v27 = (float)UnityEngine_Screen__get_width(0) / 21.0;
-      if ( !byte_4CAFC08 )
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       v28 = System_Math_TypeInfo;
       v29 = v27 * 9.0;
@@ -988,10 +1040,10 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
   else
   {
     v45 = (float)(UnityEngine_Screen__get_width(0) - v12);
-    if ( !byte_4CAFC08 )
+    if ( !byte_4CC0D08 )
     {
-      sub_1C6BA08(&System_Math_TypeInfo);
-      byte_4CAFC08 = 1;
+      sub_1C713B0(&System_Math_TypeInfo);
+      byte_4CC0D08 = 1;
     }
     v46 = v45 * 0.5;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -1011,10 +1063,10 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
   else
   {
     v50 = (float)(UnityEngine_Screen__get_height(0) - v17);
-    if ( !byte_4CAFC08 )
+    if ( !byte_4CC0D08 )
     {
-      sub_1C6BA08(&System_Math_TypeInfo);
-      byte_4CAFC08 = 1;
+      sub_1C713B0(&System_Math_TypeInfo);
+      byte_4CC0D08 = 1;
     }
     result = (PostProcessorRuler_ScreenRectInfo_o *)System_Math_TypeInfo;
     v51 = v50 * 0.5;
@@ -1039,258 +1091,290 @@ PostProcessorRuler_ScreenRectInfo_o *PostProcessorRuler__GetScreenRectInfo(
 
 PostProcessorRuler_CharInfo_array *PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
         PostProcessorRuler_CharInfo_array_array *arrays,
-        const MethodInfo_31CE348 *method)
+        const MethodInfo_31DE0EC *method)
 {
   long double inited; // q0
-  const MethodInfo_31CE348_RGCTXs *rgctx_data; // x8
+  const MethodInfo_31DE0EC_RGCTXs *rgctx_data; // x8
   __int64 _3_PostProcessorRuler___c__47_T; // x0
   Il2CppClass *v7; // x0
   System_Func_object__object__o *v8; // x21
   Il2CppClass *v9; // x0
-  const MethodInfo_31CE348_RGCTXs *v10; // x8
+  const MethodInfo_31DE0EC_RGCTXs *v10; // x8
   __int64 v11; // x0
   __int64 _2_System_Func_T____IEnumerable_T; // x8
   Il2CppObject *v13; // x22
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  long double v16; // q0
-  Il2CppClass *v17; // x0
-  Il2CppClass *v18; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  long double v20; // q0
+  Il2CppClass *v21; // x0
+  Il2CppClass *v22; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v23; // x0
 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C41AF8();
+    sub_1C474A0();
     rgctx_data = method->rgctx_data;
   }
   _3_PostProcessorRuler___c__47_T = (__int64)rgctx_data->_3_PostProcessorRuler___c__47_T_;
   if ( (*(_BYTE *)(_3_PostProcessorRuler___c__47_T + 309) & 1) == 0 )
-    _3_PostProcessorRuler___c__47_T = sub_1C41A9C(inited);
+    _3_PostProcessorRuler___c__47_T = sub_1C47444(inited);
   if ( !*(_DWORD *)(_3_PostProcessorRuler___c__47_T + 224) )
     inited = j_il2cpp_runtime_class_init_0(_3_PostProcessorRuler___c__47_T);
   v7 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
   if ( (*(&v7->_2.bitflags2 + 2) & 1) == 0 )
-    v7 = (Il2CppClass *)sub_1C41A9C(inited);
+    v7 = (Il2CppClass *)sub_1C47444(inited);
   v8 = (System_Func_object__object__o *)*((_QWORD *)v7->static_fields + 1);
   if ( !v8 )
   {
     v9 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
     if ( (*(&v9->_2.bitflags2 + 2) & 1) == 0 )
-      v9 = (Il2CppClass *)sub_1C41A9C(inited);
+      v9 = (Il2CppClass *)sub_1C47444(inited);
     if ( !v9->_2.cctor_finished )
       inited = j_il2cpp_runtime_class_init_0(v9);
     v10 = method->rgctx_data;
     v11 = (__int64)v10->_3_PostProcessorRuler___c__47_T_;
     if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
     {
-      v11 = sub_1C41A9C(inited);
+      v11 = sub_1C47444(inited);
       v10 = method->rgctx_data;
     }
     _2_System_Func_T____IEnumerable_T = (__int64)v10->_2_System_Func_T____IEnumerable_T__;
     v13 = **(Il2CppObject ***)(v11 + 184);
     if ( (*(_BYTE *)(_2_System_Func_T____IEnumerable_T + 309) & 1) == 0 )
-      _2_System_Func_T____IEnumerable_T = sub_1C41A9C(inited);
-    v8 = (System_Func_object__object__o *)sub_1C6BC54(_2_System_Func_T____IEnumerable_T);
+      _2_System_Func_T____IEnumerable_T = sub_1C47444(inited);
+    v8 = (System_Func_object__object__o *)sub_1C715FC(_2_System_Func_T____IEnumerable_T);
     System_Func_object__object____ctor(
       v8,
       v13,
       (intptr_t)method->rgctx_data->_4_PostProcessorRuler___c__47_T___MergeArrays_b__47_0,
-      (const MethodInfo_36947B8 *)method->rgctx_data->_5_System_Func_T____IEnumerable_T____ctor);
-    v17 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
-    if ( (*(&v17->_2.bitflags2 + 2) & 1) == 0 )
-      v17 = (Il2CppClass *)sub_1C41A9C(v16);
-    *((_QWORD *)v17->static_fields + 1) = v8;
-    v18 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
-    if ( (*(&v18->_2.bitflags2 + 2) & 1) == 0 )
-      v18 = (Il2CppClass *)sub_1C41A9C(v16);
-    sub_1C6B9AC((CGThumbnailListItem_o *)((char *)v18->static_fields + 8), (int32_t)v8, v14, v15);
+      (const MethodInfo_36A455C *)method->rgctx_data->_5_System_Func_T____IEnumerable_T____ctor);
+    v21 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
+    if ( (*(&v21->_2.bitflags2 + 2) & 1) == 0 )
+      v21 = (Il2CppClass *)sub_1C47444(v20);
+    *((_QWORD *)v21->static_fields + 1) = v8;
+    v22 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
+    if ( (*(&v22->_2.bitflags2 + 2) & 1) == 0 )
+      v22 = (Il2CppClass *)sub_1C47444(v20);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)((char *)v22->static_fields + 8),
+      (int32_t)v8,
+      v14,
+      v15,
+      v16,
+      v17,
+      v18,
+      v19);
   }
-  v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__PostProcessorRuler_CharInfo_(
+  v23 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__PostProcessorRuler_CharInfo_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)arrays,
                                                                (System_Func_TSource__IEnumerable_TResult___o *)v8,
-                                                               (const MethodInfo_3174970 *)method->rgctx_data->_6_System_Linq_Enumerable_SelectMany_T____T_);
+                                                               (const MethodInfo_3184714 *)method->rgctx_data->_6_System_Linq_Enumerable_SelectMany_T____T_);
   return System_Linq_Enumerable__ToArray_PostProcessorRuler_CharInfo_(
-           v19,
-           (const MethodInfo_317B68C *)method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_);
+           v23,
+           (const MethodInfo_318B430 *)method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_);
 }
 
 
 Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *PostProcessorRuler__MergeArrays___Il2CppFullySharedGenericType_(
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array_array *arrays,
-        const MethodInfo_31CE1F8 *method)
+        const MethodInfo_31DDF9C *method)
 {
   long double inited; // q0
-  const MethodInfo_31CE1F8_RGCTXs *rgctx_data; // x8
+  const MethodInfo_31DDF9C_RGCTXs *rgctx_data; // x8
   __int64 _3_PostProcessorRuler___c__47_T; // x0
   Il2CppClass *v7; // x0
   __int64 v8; // x21
   Il2CppClass *v9; // x0
-  const MethodInfo_31CE1F8_RGCTXs *v10; // x8
+  const MethodInfo_31DDF9C_RGCTXs *v10; // x8
   __int64 v11; // x0
   __int64 _2_System_Func_T____IEnumerable_T; // x8
   __int64 v13; // x22
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  long double v16; // q0
-  Il2CppClass *v17; // x0
-  Il2CppClass *v18; // x0
-  __int64 v19; // x0
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  long double v20; // q0
+  Il2CppClass *v21; // x0
+  Il2CppClass *v22; // x0
+  __int64 v23; // x0
 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C41AF8();
+    sub_1C474A0();
     rgctx_data = method->rgctx_data;
   }
   _3_PostProcessorRuler___c__47_T = (__int64)rgctx_data->_3_PostProcessorRuler___c__47_T_;
   if ( (*(_BYTE *)(_3_PostProcessorRuler___c__47_T + 309) & 1) == 0 )
-    _3_PostProcessorRuler___c__47_T = sub_1C41A9C(inited);
+    _3_PostProcessorRuler___c__47_T = sub_1C47444(inited);
   if ( !*(_DWORD *)(_3_PostProcessorRuler___c__47_T + 224) )
     inited = j_il2cpp_runtime_class_init_0(_3_PostProcessorRuler___c__47_T);
   v7 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
   if ( (*(&v7->_2.bitflags2 + 2) & 1) == 0 )
-    v7 = (Il2CppClass *)sub_1C41A9C(inited);
+    v7 = (Il2CppClass *)sub_1C47444(inited);
   v8 = *((_QWORD *)v7->static_fields + 1);
   if ( !v8 )
   {
     v9 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
     if ( (*(&v9->_2.bitflags2 + 2) & 1) == 0 )
-      v9 = (Il2CppClass *)sub_1C41A9C(inited);
+      v9 = (Il2CppClass *)sub_1C47444(inited);
     if ( !v9->_2.cctor_finished )
       inited = j_il2cpp_runtime_class_init_0(v9);
     v10 = method->rgctx_data;
     v11 = (__int64)v10->_3_PostProcessorRuler___c__47_T_;
     if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
     {
-      v11 = sub_1C41A9C(inited);
+      v11 = sub_1C47444(inited);
       v10 = method->rgctx_data;
     }
     _2_System_Func_T____IEnumerable_T = (__int64)v10->_2_System_Func_T____IEnumerable_T__;
     v13 = **(_QWORD **)(v11 + 184);
     if ( (*(_BYTE *)(_2_System_Func_T____IEnumerable_T + 309) & 1) == 0 )
-      _2_System_Func_T____IEnumerable_T = sub_1C41A9C(inited);
-    v8 = sub_1C6BC54(_2_System_Func_T____IEnumerable_T);
+      _2_System_Func_T____IEnumerable_T = sub_1C47444(inited);
+    v8 = sub_1C715FC(_2_System_Func_T____IEnumerable_T);
     ((void (__fastcall *)(__int64, __int64, MethodInfo *))method->rgctx_data->_5_System_Func_T____IEnumerable_T____ctor->methodPointer)(
       v8,
       v13,
       method->rgctx_data->_4_PostProcessorRuler___c__47_T___MergeArrays_b__47_0);
-    v17 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
-    if ( (*(&v17->_2.bitflags2 + 2) & 1) == 0 )
-      v17 = (Il2CppClass *)sub_1C41A9C(v16);
-    *((_QWORD *)v17->static_fields + 1) = v8;
-    v18 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
-    if ( (*(&v18->_2.bitflags2 + 2) & 1) == 0 )
-      v18 = (Il2CppClass *)sub_1C41A9C(v16);
-    sub_1C6B9AC((CGThumbnailListItem_o *)((char *)v18->static_fields + 8), v8, v14, v15);
+    v21 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
+    if ( (*(&v21->_2.bitflags2 + 2) & 1) == 0 )
+      v21 = (Il2CppClass *)sub_1C47444(v20);
+    *((_QWORD *)v21->static_fields + 1) = v8;
+    v22 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
+    if ( (*(&v22->_2.bitflags2 + 2) & 1) == 0 )
+      v22 = (Il2CppClass *)sub_1C47444(v20);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)((char *)v22->static_fields + 8), v8, v14, v15, v16, v17, v18, v19);
   }
-  v19 = ((__int64 (__fastcall *)(Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array_array *, __int64))method->rgctx_data->_6_System_Linq_Enumerable_SelectMany_T____T_->methodPointer)(
+  v23 = ((__int64 (__fastcall *)(Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array_array *, __int64))method->rgctx_data->_6_System_Linq_Enumerable_SelectMany_T____T_->methodPointer)(
           arrays,
           v8);
-  return (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)((__int64 (__fastcall *)(__int64))method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_->methodPointer)(v19);
+  return (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *)((__int64 (__fastcall *)(__int64))method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_->methodPointer)(v23);
 }
 
 
 System_Int32_array *PostProcessorRuler__MergeArrays_int_(
         System_Int32_array_array *arrays,
-        const MethodInfo_31CE0B4 *method)
+        const MethodInfo_31DDE58 *method)
 {
   long double inited; // q0
-  const MethodInfo_31CE0B4_RGCTXs *rgctx_data; // x8
+  const MethodInfo_31DDE58_RGCTXs *rgctx_data; // x8
   __int64 _3_PostProcessorRuler___c__47_T; // x0
   Il2CppClass *v7; // x0
   System_Func_object__object__o *v8; // x21
   Il2CppClass *v9; // x0
-  const MethodInfo_31CE0B4_RGCTXs *v10; // x8
+  const MethodInfo_31DDE58_RGCTXs *v10; // x8
   __int64 v11; // x0
   __int64 _2_System_Func_T____IEnumerable_T; // x8
   Il2CppObject *v13; // x22
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  long double v16; // q0
-  Il2CppClass *v17; // x0
-  Il2CppClass *v18; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v19; // x0
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  long double v20; // q0
+  Il2CppClass *v21; // x0
+  Il2CppClass *v22; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v23; // x0
 
   rgctx_data = method->rgctx_data;
   if ( !rgctx_data )
   {
-    sub_1C41AF8();
+    sub_1C474A0();
     rgctx_data = method->rgctx_data;
   }
   _3_PostProcessorRuler___c__47_T = (__int64)rgctx_data->_3_PostProcessorRuler___c__47_T_;
   if ( (*(_BYTE *)(_3_PostProcessorRuler___c__47_T + 309) & 1) == 0 )
-    _3_PostProcessorRuler___c__47_T = sub_1C41A9C(inited);
+    _3_PostProcessorRuler___c__47_T = sub_1C47444(inited);
   if ( !*(_DWORD *)(_3_PostProcessorRuler___c__47_T + 224) )
     inited = j_il2cpp_runtime_class_init_0(_3_PostProcessorRuler___c__47_T);
   v7 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
   if ( (*(&v7->_2.bitflags2 + 2) & 1) == 0 )
-    v7 = (Il2CppClass *)sub_1C41A9C(inited);
+    v7 = (Il2CppClass *)sub_1C47444(inited);
   v8 = (System_Func_object__object__o *)*((_QWORD *)v7->static_fields + 1);
   if ( !v8 )
   {
     v9 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
     if ( (*(&v9->_2.bitflags2 + 2) & 1) == 0 )
-      v9 = (Il2CppClass *)sub_1C41A9C(inited);
+      v9 = (Il2CppClass *)sub_1C47444(inited);
     if ( !v9->_2.cctor_finished )
       inited = j_il2cpp_runtime_class_init_0(v9);
     v10 = method->rgctx_data;
     v11 = (__int64)v10->_3_PostProcessorRuler___c__47_T_;
     if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
     {
-      v11 = sub_1C41A9C(inited);
+      v11 = sub_1C47444(inited);
       v10 = method->rgctx_data;
     }
     _2_System_Func_T____IEnumerable_T = (__int64)v10->_2_System_Func_T____IEnumerable_T__;
     v13 = **(Il2CppObject ***)(v11 + 184);
     if ( (*(_BYTE *)(_2_System_Func_T____IEnumerable_T + 309) & 1) == 0 )
-      _2_System_Func_T____IEnumerable_T = sub_1C41A9C(inited);
-    v8 = (System_Func_object__object__o *)sub_1C6BC54(_2_System_Func_T____IEnumerable_T);
+      _2_System_Func_T____IEnumerable_T = sub_1C47444(inited);
+    v8 = (System_Func_object__object__o *)sub_1C715FC(_2_System_Func_T____IEnumerable_T);
     System_Func_object__object____ctor(
       v8,
       v13,
       (intptr_t)method->rgctx_data->_4_PostProcessorRuler___c__47_T___MergeArrays_b__47_0,
-      (const MethodInfo_36947B8 *)method->rgctx_data->_5_System_Func_T____IEnumerable_T____ctor);
-    v17 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
-    if ( (*(&v17->_2.bitflags2 + 2) & 1) == 0 )
-      v17 = (Il2CppClass *)sub_1C41A9C(v16);
-    *((_QWORD *)v17->static_fields + 1) = v8;
-    v18 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
-    if ( (*(&v18->_2.bitflags2 + 2) & 1) == 0 )
-      v18 = (Il2CppClass *)sub_1C41A9C(v16);
-    sub_1C6B9AC((CGThumbnailListItem_o *)((char *)v18->static_fields + 8), (int32_t)v8, v14, v15);
+      (const MethodInfo_36A455C *)method->rgctx_data->_5_System_Func_T____IEnumerable_T____ctor);
+    v21 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
+    if ( (*(&v21->_2.bitflags2 + 2) & 1) == 0 )
+      v21 = (Il2CppClass *)sub_1C47444(v20);
+    *((_QWORD *)v21->static_fields + 1) = v8;
+    v22 = method->rgctx_data->_3_PostProcessorRuler___c__47_T_;
+    if ( (*(&v22->_2.bitflags2 + 2) & 1) == 0 )
+      v22 = (Il2CppClass *)sub_1C47444(v20);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)((char *)v22->static_fields + 8),
+      (int32_t)v8,
+      v14,
+      v15,
+      v16,
+      v17,
+      v18,
+      v19);
   }
-  v19 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__int_(
+  v23 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__SelectMany_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)arrays,
                                                                (System_Func_TSource__IEnumerable_TResult___o *)v8,
-                                                               (const MethodInfo_3174890 *)method->rgctx_data->_6_System_Linq_Enumerable_SelectMany_T____T_);
+                                                               (const MethodInfo_3184634 *)method->rgctx_data->_6_System_Linq_Enumerable_SelectMany_T____T_);
   return System_Linq_Enumerable__ToArray_int_(
-           v19,
-           (const MethodInfo_317B0B0 *)method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_);
+           v23,
+           (const MethodInfo_318AE54 *)method->rgctx_data->_9_System_Linq_Enumerable_ToArray_T_);
 }
 
 
 void PostProcessorRuler__OnDisable(PostProcessorRuler_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_rt; // x19
+  GrandQuestFolderBoardItem_o *p_rt; // x19
   UnityEngine_Object_o *v4; // x20
   struct UnityEngine_RenderTexture_o *rt; // t1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB40CD & 1) == 0 )
+  if ( (byte_4CC51E5 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB40CD = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC51E5 = 1;
   }
   rt = this->fields.rt;
-  p_rt = (CGThumbnailListItem_o *)&this->fields.rt;
+  p_rt = (GrandQuestFolderBoardItem_o *)&this->fields.rt;
   v4 = (UnityEngine_Object_o *)rt;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676(v4, 0);
+  UnityEngine_Object__Destroy_71724608(v4, 0);
   p_rt->klass = 0;
-  sub_1C6B9AC(p_rt, 0, v6, v7);
+  sub_1C71354(p_rt, 0, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -1304,11 +1388,11 @@ void PostProcessorRuler__OnRenderImage(
   UnityEngine_Texture_o *v8; // x22
   UnityEngine_Material_o *alphaBlend; // x21
 
-  if ( (byte_4CB40C1 & 1) == 0 )
+  if ( (byte_4CC51D9 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Graphics_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB40C1 = 1;
+    sub_1C713B0(&UnityEngine_Graphics_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC51D9 = 1;
   }
   rt = (UnityEngine_Object_o *)this->fields.rt;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1319,7 +1403,7 @@ void PostProcessorRuler__OnRenderImage(
     alphaBlend = this->fields.alphaBlend;
     if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
-    UnityEngine_Graphics__Blit_71504600(v8, source, alphaBlend, 0);
+    UnityEngine_Graphics__Blit_71569532(v8, source, alphaBlend, 0);
   }
   if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
@@ -1351,27 +1435,39 @@ void PostProcessorRuler__PopulateMousePositionCharInfos(
   int v21; // w25
   int v22; // w26
   int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  char *v25; // x21
-  PostProcessorRuler_CharInfo_array *v26; // x1
-  const MethodInfo *v27; // x6
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  PostProcessorRuler_CharInfo_array *v30; // x0
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
-  int v33; // [xsp+18h] [xbp-48h] BYREF
-  int v34; // [xsp+1Ch] [xbp-44h] BYREF
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
+  char *v29; // x21
+  PostProcessorRuler_CharInfo_array *v30; // x1
+  const MethodInfo *v31; // x6
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  int32_t v35; // w5
+  int64_t v36; // x6
+  System_String_o *v37; // x7
+  PostProcessorRuler_CharInfo_array *v38; // x0
+  int32_t v39; // w2
+  int32_t v40; // w3
+  System_String_o *v41; // x4
+  int32_t v42; // w5
+  int64_t v43; // x6
+  System_String_o *v44; // x7
+  int v45; // [xsp+18h] [xbp-48h] BYREF
+  int v46; // [xsp+1Ch] [xbp-44h] BYREF
 
   m_X = mousePositionInt.fields.m_X;
   m_Y = mousePositionInt.fields.m_Y;
-  if ( (byte_4CB40C6 & 1) == 0 )
+  if ( (byte_4CC51DE & 1) == 0 )
   {
-    sub_1C6BA08(&PostProcessorRuler_CharInfo_____TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
-    sub_1C6BA08(&StringLiteral_25260/*"{0}.{1}"*/);
-    byte_4CB40C6 = 1;
+    sub_1C713B0(&PostProcessorRuler_CharInfo_____TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
+    sub_1C713B0(&StringLiteral_25280/*"{0}.{1}"*/);
+    byte_4CC51DE = 1;
   }
   width = UnityEngine_Screen__get_width(0);
   if ( width >= 0 )
@@ -1383,15 +1479,15 @@ void PostProcessorRuler__PopulateMousePositionCharInfos(
   v12 = (int)v11;
   if ( v11 == INFINITY )
     v12 = 0x80000000;
-  v34 = v12;
-  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
+  v46 = v12;
+  v13 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v46);
   v14 = v10 * (float)m_Y;
   v15 = (int)v14;
   if ( v14 == INFINITY )
     v15 = 0x80000000;
-  v33 = v15;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33);
-  CharInfos = (char *)System_String__Format_64008100((System_String_o *)StringLiteral_25260/*"{0}.{1}"*/, v13, v16, 0);
+  v45 = v15;
+  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v45);
+  CharInfos = (char *)System_String__Format_64073032((System_String_o *)StringLiteral_25280/*"{0}.{1}"*/, v13, v16, 0);
   if ( !CharInfos
     || ((v19 = (System_String_o *)CharInfos,
          v20 = (5 * *((_DWORD *)CharInfos + 4) + (*((_DWORD *)CharInfos + 4) - 1) * this->fields.space)
@@ -1400,15 +1496,15 @@ void PostProcessorRuler__PopulateMousePositionCharInfos(
          m_X + 4 + v20 <= UnityEngine_Screen__get_width(0))
       ? (v22 = 0)
       : (v22 = -8 - v20),
-        (CharInfos = (char *)sub_1C6BAB0(PostProcessorRuler_CharInfo_____TypeInfo, 2)) == 0) )
+        (CharInfos = (char *)sub_1C71458(PostProcessorRuler_CharInfo_____TypeInfo, 2)) == 0) )
   {
-    sub_1C6BC60(CharInfos, v18);
+    sub_1C71608(CharInfos, v18);
   }
-  v25 = CharInfos;
+  v29 = CharInfos;
   if ( !*((_DWORD *)CharInfos + 6)
-    || (v26 = *numInfos,
+    || (v30 = *numInfos,
         *((_QWORD *)CharInfos + 4) = *numInfos,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(CharInfos + 32), (int32_t)v26, v23, v24),
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(CharInfos + 32), (int32_t)v30, v23, v24, v25, v26, v27, v28),
         CharInfos = (char *)PostProcessorRuler__GetCharInfos(
                               this,
                               v19,
@@ -1416,18 +1512,18 @@ void PostProcessorRuler__PopulateMousePositionCharInfos(
                               this->fields.space,
                               v21 + v22,
                               m_Y + 4,
-                              v27),
-        *((_DWORD *)v25 + 6) <= 1u) )
+                              v31),
+        *((_DWORD *)v29 + 6) <= 1u) )
   {
-    sub_1C6BC68(CharInfos);
+    sub_1C71610(CharInfos);
   }
-  *((_QWORD *)v25 + 5) = CharInfos;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v25 + 40), (int32_t)CharInfos, v28, v29);
-  v30 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
-          (PostProcessorRuler_CharInfo_array_array *)v25,
-          (const MethodInfo_31CE348 *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
-  *numInfos = v30;
-  sub_1C6B9AC((CGThumbnailListItem_o *)numInfos, (int32_t)v30, v31, v32);
+  *((_QWORD *)v29 + 5) = CharInfos;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v29 + 40), (int32_t)CharInfos, v32, v33, v34, v35, v36, v37);
+  v38 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
+          (PostProcessorRuler_CharInfo_array_array *)v29,
+          (const MethodInfo_31DE0EC *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
+  *numInfos = v38;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)numInfos, (int32_t)v38, v39, v40, v41, v42, v43, v44);
 }
 
 
@@ -1443,31 +1539,43 @@ void PostProcessorRuler__PopulateUnitHeightCharInfos(
   PostProcessorRuler_CharInfo_array *CharInfos; // x0
   __int64 v10; // x1
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  PostProcessorRuler_CharInfo_array *v13; // x22
-  PostProcessorRuler_CharInfo_array *v14; // x1
-  System_String_o *v15; // x0
-  const MethodInfo *v16; // x6
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  PostProcessorRuler_CharInfo_array *v17; // x22
+  PostProcessorRuler_CharInfo_array *v18; // x1
+  System_String_o *v19; // x0
+  const MethodInfo *v20; // x6
   int32_t fontSize; // w23
   int32_t space; // w24
   int32_t LimitMinX; // w27
-  System_String_o *v20; // x25
-  unsigned int v21; // w8
-  int32_t v22; // w5
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  PostProcessorRuler_CharInfo_array *v25; // x0
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  int v28; // [xsp+Ch] [xbp-74h] BYREF
+  System_String_o *v24; // x25
+  unsigned int v25; // w8
+  int32_t v26; // w5
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  PostProcessorRuler_CharInfo_array *v33; // x0
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
+  int v40; // [xsp+Ch] [xbp-74h] BYREF
 
-  if ( (byte_4CB40C8 & 1) == 0 )
+  if ( (byte_4CC51E0 & 1) == 0 )
   {
-    sub_1C6BA08(&PostProcessorRuler_CharInfo_____TypeInfo);
-    sub_1C6BA08(&Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
-    byte_4CB40C8 = 1;
+    sub_1C713B0(&PostProcessorRuler_CharInfo_____TypeInfo);
+    sub_1C713B0(&Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
+    byte_4CC51E0 = 1;
   }
-  v28 = 0;
+  v40 = 0;
   v5 = (float)this->fields.screenRect.fields.LimitMaxY + -36.0;
   LimitMinY = (float)this->fields.screenRect.fields.LimitMinY;
   if ( v5 > LimitMinY )
@@ -1478,42 +1586,50 @@ void PostProcessorRuler__PopulateUnitHeightCharInfos(
        * 100.0;
     do
     {
-      CharInfos = (PostProcessorRuler_CharInfo_array *)sub_1C6BAB0(PostProcessorRuler_CharInfo_____TypeInfo, 2);
+      CharInfos = (PostProcessorRuler_CharInfo_array *)sub_1C71458(PostProcessorRuler_CharInfo_____TypeInfo, 2);
       if ( !CharInfos )
-        sub_1C6BC60(0, v10);
-      v13 = CharInfos;
+        sub_1C71608(0, v10);
+      v17 = CharInfos;
       if ( !LODWORD(CharInfos->max_length) )
         goto LABEL_17;
-      v14 = *numInfos;
+      v18 = *numInfos;
       *(_QWORD *)&CharInfos->m_Items[0].fields.NumberOffset = *numInfos;
-      sub_1C6B9AC((CGThumbnailListItem_o *)CharInfos->m_Items, (int32_t)v14, v11, v12);
-      v28 = v7;
-      v15 = System_Int32__ToString((int32_t)&v28, 0);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)CharInfos->m_Items, (int32_t)v18, v11, v12, v13, v14, v15, v16);
+      v40 = v7;
+      v19 = System_Int32__ToString((int32_t)&v40, 0);
       fontSize = this->fields.fontSize;
       space = this->fields.space;
       LimitMinX = this->fields.screenRect.fields.LimitMinX;
-      v20 = v15;
-      if ( !byte_4CAFC08 )
+      v24 = v19;
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v21 = vcvtms_s32_f32(LimitMinY) + 4;
-      v22 = floorf(LimitMinY) == INFINITY ? -2147483644 : v21;
-      CharInfos = PostProcessorRuler__GetCharInfos(this, v20, fontSize, space, LimitMinX + 4, v22, v16);
-      if ( LODWORD(v13->max_length) <= 1 )
+      v25 = vcvtms_s32_f32(LimitMinY) + 4;
+      v26 = floorf(LimitMinY) == INFINITY ? -2147483644 : v25;
+      CharInfos = PostProcessorRuler__GetCharInfos(this, v24, fontSize, space, LimitMinX + 4, v26, v20);
+      if ( LODWORD(v17->max_length) <= 1 )
 LABEL_17:
-        sub_1C6BC68(CharInfos);
-      *(_QWORD *)&v13->m_Items[0].fields.OffsetY = CharInfos;
+        sub_1C71610(CharInfos);
+      *(_QWORD *)&v17->m_Items[0].fields.OffsetY = CharInfos;
       ++v7;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v13->m_Items[0].fields.OffsetY, (int32_t)CharInfos, v23, v24);
-      v25 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
-              (PostProcessorRuler_CharInfo_array_array *)v13,
-              (const MethodInfo_31CE348 *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
-      *numInfos = v25;
-      sub_1C6B9AC((CGThumbnailListItem_o *)numInfos, (int32_t)v25, v26, v27);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&v17->m_Items[0].fields.OffsetY,
+        (int32_t)CharInfos,
+        v27,
+        v28,
+        v29,
+        v30,
+        v31,
+        v32);
+      v33 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
+              (PostProcessorRuler_CharInfo_array_array *)v17,
+              (const MethodInfo_31DE0EC *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
+      *numInfos = v33;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)numInfos, (int32_t)v33, v34, v35, v36, v37, v38, v39);
       LimitMinY = v8 + LimitMinY;
     }
     while ( LimitMinY < v5 );
@@ -1533,62 +1649,98 @@ void PostProcessorRuler__PopulateUnitWidthCharInfos(
   PostProcessorRuler_CharInfo_array *CharInfos; // x0
   __int64 v10; // x1
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  PostProcessorRuler_CharInfo_array *v13; // x21
-  PostProcessorRuler_CharInfo_array *v14; // x1
-  int v15; // w23
-  const MethodInfo *v16; // x6
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  float v19; // s8
-  PostProcessorRuler_CharInfo_array *v20; // x0
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  PostProcessorRuler_CharInfo_array *v17; // x21
+  PostProcessorRuler_CharInfo_array *v18; // x1
+  int v19; // w23
+  const MethodInfo *v20; // x6
   int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  float v23; // s9
-  float v24; // s10
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  float v27; // s8
+  PostProcessorRuler_CharInfo_array *v28; // x0
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
+  float v35; // s9
+  float v36; // s10
   int i; // w8
-  int v26; // w22
-  float v27; // s0
-  unsigned int v28; // w8
-  int32_t v29; // w23
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
-  PostProcessorRuler_CharInfo_array *v32; // x22
-  PostProcessorRuler_CharInfo_array *v33; // x1
-  System_String_o *v34; // x0
-  const MethodInfo *v35; // x6
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  PostProcessorRuler_CharInfo_array *v38; // x0
-  int32_t v39; // w2
-  const MethodInfo *v40; // x3
-  int v41; // s12
-  float v42; // s0
-  unsigned int v43; // w8
-  int32_t v44; // w23
-  int32_t v45; // w2
-  const MethodInfo *v46; // x3
-  PostProcessorRuler_CharInfo_array *v47; // x22
-  PostProcessorRuler_CharInfo_array *v48; // x1
-  Il2CppObject *v49; // x0
+  int v38; // w22
+  float v39; // s0
+  unsigned int v40; // w8
+  int32_t v41; // w23
+  int32_t v42; // w2
+  int32_t v43; // w3
+  System_String_o *v44; // x4
+  int32_t v45; // w5
+  int64_t v46; // x6
+  System_String_o *v47; // x7
+  PostProcessorRuler_CharInfo_array *v48; // x22
+  PostProcessorRuler_CharInfo_array *v49; // x1
   System_String_o *v50; // x0
   const MethodInfo *v51; // x6
   int32_t v52; // w2
-  const MethodInfo *v53; // x3
-  PostProcessorRuler_CharInfo_array *v54; // x0
-  int32_t v55; // w2
-  const MethodInfo *v56; // x3
-  int v57; // [xsp+8h] [xbp-88h] BYREF
-  int v58; // [xsp+Ch] [xbp-84h] BYREF
+  int32_t v53; // w3
+  System_String_o *v54; // x4
+  int32_t v55; // w5
+  int64_t v56; // x6
+  System_String_o *v57; // x7
+  PostProcessorRuler_CharInfo_array *v58; // x0
+  int32_t v59; // w2
+  int32_t v60; // w3
+  System_String_o *v61; // x4
+  int32_t v62; // w5
+  int64_t v63; // x6
+  System_String_o *v64; // x7
+  int v65; // s12
+  float v66; // s0
+  unsigned int v67; // w8
+  int32_t v68; // w23
+  int32_t v69; // w2
+  int32_t v70; // w3
+  System_String_o *v71; // x4
+  int32_t v72; // w5
+  int64_t v73; // x6
+  System_String_o *v74; // x7
+  PostProcessorRuler_CharInfo_array *v75; // x22
+  PostProcessorRuler_CharInfo_array *v76; // x1
+  Il2CppObject *v77; // x0
+  System_String_o *v78; // x0
+  const MethodInfo *v79; // x6
+  int32_t v80; // w2
+  int32_t v81; // w3
+  System_String_o *v82; // x4
+  int32_t v83; // w5
+  int64_t v84; // x6
+  System_String_o *v85; // x7
+  PostProcessorRuler_CharInfo_array *v86; // x0
+  int32_t v87; // w2
+  int32_t v88; // w3
+  System_String_o *v89; // x4
+  int32_t v90; // w5
+  int64_t v91; // x6
+  System_String_o *v92; // x7
+  int v93; // [xsp+8h] [xbp-88h] BYREF
+  int v94; // [xsp+Ch] [xbp-84h] BYREF
 
-  if ( (byte_4CB40C7 & 1) == 0 )
+  if ( (byte_4CC51DF & 1) == 0 )
   {
-    sub_1C6BA08(&PostProcessorRuler_CharInfo_____TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
-    sub_1C6BA08(&StringLiteral_980/*"-{0}"*/);
-    sub_1C6BA08(&StringLiteral_1115/*"0"*/);
-    byte_4CB40C7 = 1;
+    sub_1C713B0(&PostProcessorRuler_CharInfo_____TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
+    sub_1C713B0(&StringLiteral_980/*"-{0}"*/);
+    sub_1C713B0(&StringLiteral_1115/*"0"*/);
+    byte_4CC51DF = 1;
   }
   LimitMinX16x9 = this->fields.screenRect.fields.LimitMinX16x9;
   LimitMaxX16x9 = this->fields.screenRect.fields.LimitMaxX16x9;
@@ -1597,15 +1749,15 @@ void PostProcessorRuler__PopulateUnitWidthCharInfos(
     v8 = width;
   else
     v8 = width + 1;
-  CharInfos = (PostProcessorRuler_CharInfo_array *)sub_1C6BAB0(PostProcessorRuler_CharInfo_____TypeInfo, 2);
+  CharInfos = (PostProcessorRuler_CharInfo_array *)sub_1C71458(PostProcessorRuler_CharInfo_____TypeInfo, 2);
   if ( !CharInfos )
     goto LABEL_37;
-  v13 = CharInfos;
+  v17 = CharInfos;
   if ( !LODWORD(CharInfos->max_length)
-    || (v14 = *numInfos,
-        v15 = v8 >> 1,
+    || (v18 = *numInfos,
+        v19 = v8 >> 1,
         *(_QWORD *)&CharInfos->m_Items[0].fields.NumberOffset = *numInfos,
-        sub_1C6B9AC((CGThumbnailListItem_o *)CharInfos->m_Items, (int32_t)v14, v11, v12),
+        sub_1C71354((GrandQuestFolderBoardItem_o *)CharInfos->m_Items, (int32_t)v18, v11, v12, v13, v14, v15, v16),
         CharInfos = PostProcessorRuler__GetCharInfos(
                       this,
                       (System_String_o *)StringLiteral_1115/*"0"*/,
@@ -1613,117 +1765,141 @@ void PostProcessorRuler__PopulateUnitWidthCharInfos(
                       this->fields.space,
                       (v8 >> 1) + 3,
                       -7 * this->fields.fontSize + this->fields.screenRect.fields.LimitMaxY - 6,
-                      v16),
-        LODWORD(v13->max_length) <= 1) )
+                      v20),
+        LODWORD(v17->max_length) <= 1) )
   {
 LABEL_36:
-    sub_1C6BC68(CharInfos);
+    sub_1C71610(CharInfos);
   }
-  *(_QWORD *)&v13->m_Items[0].fields.OffsetY = CharInfos;
-  v19 = (float)((float)(LimitMaxX16x9 - LimitMinX16x9) * 0.00097656) * 100.0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v13->m_Items[0].fields.OffsetY, (int32_t)CharInfos, v17, v18);
-  v20 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
-          (PostProcessorRuler_CharInfo_array_array *)v13,
-          (const MethodInfo_31CE348 *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
-  *numInfos = v20;
-  sub_1C6B9AC((CGThumbnailListItem_o *)numInfos, (int32_t)v20, v21, v22);
-  v23 = (float)v15;
-  v24 = v19 + (float)v15;
-  if ( v24 < (float)this->fields.screenRect.fields.LimitMaxX )
+  *(_QWORD *)&v17->m_Items[0].fields.OffsetY = CharInfos;
+  v27 = (float)((float)(LimitMaxX16x9 - LimitMinX16x9) * 0.00097656) * 100.0;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v17->m_Items[0].fields.OffsetY,
+    (int32_t)CharInfos,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
+  v28 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
+          (PostProcessorRuler_CharInfo_array_array *)v17,
+          (const MethodInfo_31DE0EC *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
+  *numInfos = v28;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)numInfos, (int32_t)v28, v29, v30, v31, v32, v33, v34);
+  v35 = (float)v19;
+  v36 = v27 + (float)v19;
+  if ( v36 < (float)this->fields.screenRect.fields.LimitMaxX )
   {
-    for ( i = 0; ; i = v58 )
+    for ( i = 0; ; i = v94 )
     {
-      v26 = i + 1;
-      v58 = i + 1;
-      if ( !byte_4CAFC08 )
+      v38 = i + 1;
+      v94 = i + 1;
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v27 = (float)((float)(v19 * (float)v26) + v23) + 4.0;
-      v28 = vcvtms_s32_f32(v27);
-      v29 = floorf(v27) == INFINITY ? 0x80000000 : v28;
-      CharInfos = (PostProcessorRuler_CharInfo_array *)sub_1C6BAB0(PostProcessorRuler_CharInfo_____TypeInfo, 2);
+      v39 = (float)((float)(v27 * (float)v38) + v35) + 4.0;
+      v40 = vcvtms_s32_f32(v39);
+      v41 = floorf(v39) == INFINITY ? 0x80000000 : v40;
+      CharInfos = (PostProcessorRuler_CharInfo_array *)sub_1C71458(PostProcessorRuler_CharInfo_____TypeInfo, 2);
       if ( !CharInfos )
         break;
-      v32 = CharInfos;
+      v48 = CharInfos;
       if ( !LODWORD(CharInfos->max_length) )
         goto LABEL_36;
-      v33 = *numInfos;
+      v49 = *numInfos;
       *(_QWORD *)&CharInfos->m_Items[0].fields.NumberOffset = *numInfos;
-      sub_1C6B9AC((CGThumbnailListItem_o *)CharInfos->m_Items, (int32_t)v33, v30, v31);
-      v34 = System_Int32__ToString((int32_t)&v58, 0);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)CharInfos->m_Items, (int32_t)v49, v42, v43, v44, v45, v46, v47);
+      v50 = System_Int32__ToString((int32_t)&v94, 0);
       CharInfos = PostProcessorRuler__GetCharInfos(
                     this,
-                    v34,
+                    v50,
                     this->fields.fontSize,
                     this->fields.space,
-                    v29,
+                    v41,
                     -7 * this->fields.fontSize + this->fields.screenRect.fields.LimitMaxY - 6,
-                    v35);
-      if ( LODWORD(v32->max_length) <= 1 )
+                    v51);
+      if ( LODWORD(v48->max_length) <= 1 )
         goto LABEL_36;
-      *(_QWORD *)&v32->m_Items[0].fields.OffsetY = CharInfos;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v32->m_Items[0].fields.OffsetY, (int32_t)CharInfos, v36, v37);
-      v38 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
-              (PostProcessorRuler_CharInfo_array_array *)v32,
-              (const MethodInfo_31CE348 *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
-      *numInfos = v38;
-      sub_1C6B9AC((CGThumbnailListItem_o *)numInfos, (int32_t)v38, v39, v40);
-      v41 = v58;
-      if ( !byte_4CAFC08 )
+      *(_QWORD *)&v48->m_Items[0].fields.OffsetY = CharInfos;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&v48->m_Items[0].fields.OffsetY,
+        (int32_t)CharInfos,
+        v52,
+        v53,
+        v54,
+        v55,
+        v56,
+        v57);
+      v58 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
+              (PostProcessorRuler_CharInfo_array_array *)v48,
+              (const MethodInfo_31DE0EC *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
+      *numInfos = v58;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)numInfos, (int32_t)v58, v59, v60, v61, v62, v63, v64);
+      v65 = v94;
+      if ( !byte_4CC0D08 )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC08 = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D08 = 1;
       }
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-      v42 = (float)(v23 - (float)(v19 * (float)v41)) + 4.0;
-      v43 = vcvtms_s32_f32(v42);
-      if ( floorf(v42) == INFINITY )
-        v44 = 0x80000000;
+      v66 = (float)(v35 - (float)(v27 * (float)v65)) + 4.0;
+      v67 = vcvtms_s32_f32(v66);
+      if ( floorf(v66) == INFINITY )
+        v68 = 0x80000000;
       else
-        v44 = v43;
-      if ( v44 >= 37 )
+        v68 = v67;
+      if ( v68 >= 37 )
       {
-        CharInfos = (PostProcessorRuler_CharInfo_array *)sub_1C6BAB0(PostProcessorRuler_CharInfo_____TypeInfo, 2);
+        CharInfos = (PostProcessorRuler_CharInfo_array *)sub_1C71458(PostProcessorRuler_CharInfo_____TypeInfo, 2);
         if ( !CharInfos )
           break;
-        v47 = CharInfos;
+        v75 = CharInfos;
         if ( !LODWORD(CharInfos->max_length) )
           goto LABEL_36;
-        v48 = *numInfos;
+        v76 = *numInfos;
         *(_QWORD *)&CharInfos->m_Items[0].fields.NumberOffset = *numInfos;
-        sub_1C6B9AC((CGThumbnailListItem_o *)CharInfos->m_Items, (int32_t)v48, v45, v46);
-        v57 = v58;
-        v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v57);
-        v50 = System_String__Format((System_String_o *)StringLiteral_980/*"-{0}"*/, v49, 0);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)CharInfos->m_Items, (int32_t)v76, v69, v70, v71, v72, v73, v74);
+        v93 = v94;
+        v77 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v93);
+        v78 = System_String__Format((System_String_o *)StringLiteral_980/*"-{0}"*/, v77, 0);
         CharInfos = PostProcessorRuler__GetCharInfos(
                       this,
-                      v50,
+                      v78,
                       this->fields.fontSize,
                       this->fields.space,
-                      v44,
+                      v68,
                       -7 * this->fields.fontSize + this->fields.screenRect.fields.LimitMaxY - 6,
-                      v51);
-        if ( LODWORD(v47->max_length) <= 1 )
+                      v79);
+        if ( LODWORD(v75->max_length) <= 1 )
           goto LABEL_36;
-        *(_QWORD *)&v47->m_Items[0].fields.OffsetY = CharInfos;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v47->m_Items[0].fields.OffsetY, (int32_t)CharInfos, v52, v53);
-        v54 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
-                (PostProcessorRuler_CharInfo_array_array *)v47,
-                (const MethodInfo_31CE348 *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
-        *numInfos = v54;
-        sub_1C6B9AC((CGThumbnailListItem_o *)numInfos, (int32_t)v54, v55, v56);
+        *(_QWORD *)&v75->m_Items[0].fields.OffsetY = CharInfos;
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&v75->m_Items[0].fields.OffsetY,
+          (int32_t)CharInfos,
+          v80,
+          v81,
+          v82,
+          v83,
+          v84,
+          v85);
+        v86 = PostProcessorRuler__MergeArrays_PostProcessorRuler_CharInfo_(
+                (PostProcessorRuler_CharInfo_array_array *)v75,
+                (const MethodInfo_31DE0EC *)Method_PostProcessorRuler_MergeArrays_PostProcessorRuler_CharInfo___);
+        *numInfos = v86;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)numInfos, (int32_t)v86, v87, v88, v89, v90, v91, v92);
       }
-      v24 = v19 + v24;
-      if ( v24 >= (float)this->fields.screenRect.fields.LimitMaxX )
+      v36 = v27 + v36;
+      if ( v36 >= (float)this->fields.screenRect.fields.LimitMaxX )
         return;
     }
 LABEL_37:
-    sub_1C6BC60(CharInfos, v10);
+    sub_1C71608(CharInfos, v10);
   }
 }
 
@@ -1849,69 +2025,69 @@ void PostProcessorRuler__ProcessCompute(
   __int64 v119; // x0
   UnityEngine_ComputeBuffer_o *v120; // [xsp+8h] [xbp-78h]
 
-  if ( (byte_4CB40C5 & 1) == 0 )
+  if ( (byte_4CC51DD & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_ComputeBuffer_TypeInfo);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&StringLiteral_9168/*"MouseY"*/);
-    sub_1C6BA08(&StringLiteral_5365/*"DrawRulerVertical"*/);
-    sub_1C6BA08(&StringLiteral_11432/*"RulerInfos"*/);
-    sub_1C6BA08(&StringLiteral_5360/*"DrawMouseLineHorizontal"*/);
-    sub_1C6BA08(&StringLiteral_9167/*"MouseX"*/);
-    sub_1C6BA08(&StringLiteral_5363/*"DrawRulerHorizontal"*/);
-    sub_1C6BA08(&StringLiteral_3924/*"CSMain"*/);
-    sub_1C6BA08(&StringLiteral_21316/*"limitMaxX"*/);
-    sub_1C6BA08(&StringLiteral_21317/*"limitMaxY"*/);
-    sub_1C6BA08(&StringLiteral_11383/*"Result"*/);
-    sub_1C6BA08(&StringLiteral_5359/*"DrawColor"*/);
-    sub_1C6BA08(&StringLiteral_9605/*"Numbers"*/);
-    sub_1C6BA08(&StringLiteral_21319/*"limitMinY"*/);
-    sub_1C6BA08(&StringLiteral_5361/*"DrawMouseLineVertical"*/);
-    sub_1C6BA08(&StringLiteral_9604/*"NumberInfos"*/);
-    sub_1C6BA08(&StringLiteral_21318/*"limitMinX"*/);
-    sub_1C6BA08(&StringLiteral_5364/*"DrawRulerUnits"*/);
-    byte_4CB40C5 = 1;
+    sub_1C713B0(&UnityEngine_ComputeBuffer_TypeInfo);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&StringLiteral_9172/*"MouseY"*/);
+    sub_1C713B0(&StringLiteral_5368/*"DrawRulerVertical"*/);
+    sub_1C713B0(&StringLiteral_11438/*"RulerInfos"*/);
+    sub_1C713B0(&StringLiteral_5363/*"DrawMouseLineHorizontal"*/);
+    sub_1C713B0(&StringLiteral_9171/*"MouseX"*/);
+    sub_1C713B0(&StringLiteral_5366/*"DrawRulerHorizontal"*/);
+    sub_1C713B0(&StringLiteral_3927/*"CSMain"*/);
+    sub_1C713B0(&StringLiteral_21331/*"limitMaxX"*/);
+    sub_1C713B0(&StringLiteral_21332/*"limitMaxY"*/);
+    sub_1C713B0(&StringLiteral_11389/*"Result"*/);
+    sub_1C713B0(&StringLiteral_5362/*"DrawColor"*/);
+    sub_1C713B0(&StringLiteral_9610/*"Numbers"*/);
+    sub_1C713B0(&StringLiteral_21334/*"limitMinY"*/);
+    sub_1C713B0(&StringLiteral_5364/*"DrawMouseLineVertical"*/);
+    sub_1C713B0(&StringLiteral_9609/*"NumberInfos"*/);
+    sub_1C713B0(&StringLiteral_21333/*"limitMinX"*/);
+    sub_1C713B0(&StringLiteral_5367/*"DrawRulerUnits"*/);
+    byte_4CC51DD = 1;
   }
   RulerUnitInfos = PostProcessorRuler__GetRulerUnitInfos(this, *(const MethodInfo **)&mousePosition);
   mergedArrays = this->fields.mergedArrays;
   if ( !mergedArrays )
-    sub_1C6BC60(RulerUnitInfos, v8);
+    sub_1C71608(RulerUnitInfos, v8);
   v10 = RulerUnitInfos;
-  v120 = (UnityEngine_ComputeBuffer_o *)sub_1C6BC54(UnityEngine_ComputeBuffer_TypeInfo);
+  v120 = (UnityEngine_ComputeBuffer_o *)sub_1C715FC(UnityEngine_ComputeBuffer_TypeInfo);
   UnityEngine_ComputeBuffer___ctor(v120, mergedArrays->max_length, 4, 0);
   if ( !numInfos )
-    sub_1C6BC60(v11, v12);
-  v13 = (UnityEngine_ComputeBuffer_o *)sub_1C6BC54(UnityEngine_ComputeBuffer_TypeInfo);
+    sub_1C71608(v11, v12);
+  v13 = (UnityEngine_ComputeBuffer_o *)sub_1C715FC(UnityEngine_ComputeBuffer_TypeInfo);
   UnityEngine_ComputeBuffer___ctor(v13, numInfos->max_length, 16, 0);
   if ( !v10 )
-    sub_1C6BC60(v14, v15);
-  v16 = (UnityEngine_ComputeBuffer_o *)sub_1C6BC54(UnityEngine_ComputeBuffer_TypeInfo);
+    sub_1C71608(v14, v15);
+  v16 = (UnityEngine_ComputeBuffer_o *)sub_1C715FC(UnityEngine_ComputeBuffer_TypeInfo);
   UnityEngine_ComputeBuffer___ctor(v16, v10->max_length, 24, 0);
   p_cs = &this->fields.cs;
   cs = this->fields.cs;
   if ( !cs )
-    sub_1C6BC60(0, v17);
-  Kernel = UnityEngine_ComputeShader__FindKernel(cs, (System_String_o *)StringLiteral_3924/*"CSMain"*/, 0);
+    sub_1C71608(0, v17);
+  Kernel = UnityEngine_ComputeShader__FindKernel(cs, (System_String_o *)StringLiteral_3927/*"CSMain"*/, 0);
   v22 = this->fields.cs;
   if ( !v22 )
-    sub_1C6BC60(0, v20);
-  UnityEngine_ComputeShader__SetTexture_71667272(
+    sub_1C71608(0, v20);
+  UnityEngine_ComputeShader__SetTexture_71732204(
     v22,
     Kernel,
-    (System_String_o *)StringLiteral_11383/*"Result"*/,
+    (System_String_o *)StringLiteral_11389/*"Result"*/,
     (UnityEngine_Texture_o *)this->fields.rt,
     0);
   rt = this->fields.rt;
   if ( !rt )
-    sub_1C6BC60(0, v23);
+    sub_1C71608(0, v23);
   v25 = this->fields.cs;
   v27 = ((__int64 (__fastcall *)(struct UnityEngine_RenderTexture_o *, const MethodInfo *))rt->klass->vtable._4_get_width.methodPtr)(
           rt,
           rt->klass->vtable._4_get_width.method);
-  if ( !byte_4CB02B0 )
+  if ( !byte_4CC13B2 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB02B0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC13B2 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
@@ -1923,20 +2099,20 @@ void PostProcessorRuler__ProcessCompute(
   else
     v31 = v30;
   if ( !v28 )
-    sub_1C6BC60(0, v26);
+    sub_1C71608(0, v26);
   v33 = ((__int64 (__fastcall *)(struct UnityEngine_RenderTexture_o *, const MethodInfo *))v28->klass->vtable._6_get_height.methodPtr)(
           v28,
           v28->klass->vtable._6_get_height.method);
-  if ( !byte_4CB02B0 )
+  if ( !byte_4CC13B2 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB02B0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC13B2 = 1;
   }
   v34 = System_Math_TypeInfo;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   if ( !v25 )
-    sub_1C6BC60(v34, v32);
+    sub_1C71608(v34, v32);
   v35 = ceilf((float)v33 * 0.125);
   if ( v35 == INFINITY )
     v36 = 0x80000000;
@@ -1944,67 +2120,67 @@ void PostProcessorRuler__ProcessCompute(
     v36 = (int)v35;
   UnityEngine_ComputeShader__Dispatch(v25, Kernel, v31, v36, 1, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v37);
-  UnityEngine_ComputeShader__SetInt_71667080(
+    sub_1C71608(0, v37);
+  UnityEngine_ComputeShader__SetInt_71732012(
     *p_cs,
-    (System_String_o *)StringLiteral_21318/*"limitMinX"*/,
+    (System_String_o *)StringLiteral_21333/*"limitMinX"*/,
     this->fields.screenRect.fields.LimitMinX,
     0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v38);
-  UnityEngine_ComputeShader__SetInt_71667080(
+    sub_1C71608(0, v38);
+  UnityEngine_ComputeShader__SetInt_71732012(
     *p_cs,
-    (System_String_o *)StringLiteral_21316/*"limitMaxX"*/,
+    (System_String_o *)StringLiteral_21331/*"limitMaxX"*/,
     this->fields.screenRect.fields.LimitMaxX,
     0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v39);
-  UnityEngine_ComputeShader__SetInt_71667080(
+    sub_1C71608(0, v39);
+  UnityEngine_ComputeShader__SetInt_71732012(
     *p_cs,
-    (System_String_o *)StringLiteral_21319/*"limitMinY"*/,
+    (System_String_o *)StringLiteral_21334/*"limitMinY"*/,
     this->fields.screenRect.fields.LimitMinY,
     0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v40);
-  UnityEngine_ComputeShader__SetInt_71667080(
+    sub_1C71608(0, v40);
+  UnityEngine_ComputeShader__SetInt_71732012(
     *p_cs,
-    (System_String_o *)StringLiteral_21317/*"limitMaxY"*/,
+    (System_String_o *)StringLiteral_21332/*"limitMaxY"*/,
     this->fields.screenRect.fields.LimitMaxY,
     0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v41);
-  UnityEngine_ComputeShader__SetInt_71667080(*p_cs, (System_String_o *)StringLiteral_9167/*"MouseX"*/, mousePosition.fields.m_X, 0);
+    sub_1C71608(0, v41);
+  UnityEngine_ComputeShader__SetInt_71732012(*p_cs, (System_String_o *)StringLiteral_9171/*"MouseX"*/, mousePosition.fields.m_X, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v42);
-  UnityEngine_ComputeShader__SetInt_71667080(*p_cs, (System_String_o *)StringLiteral_9168/*"MouseY"*/, mousePosition.fields.m_Y, 0);
+    sub_1C71608(0, v42);
+  UnityEngine_ComputeShader__SetInt_71732012(*p_cs, (System_String_o *)StringLiteral_9172/*"MouseY"*/, mousePosition.fields.m_Y, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v43);
-  v45 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5365/*"DrawRulerVertical"*/, 0);
+    sub_1C71608(0, v43);
+  v45 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5368/*"DrawRulerVertical"*/, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v44);
-  UnityEngine_ComputeShader__SetTexture_71667272(
+    sub_1C71608(0, v44);
+  UnityEngine_ComputeShader__SetTexture_71732204(
     *p_cs,
     v45,
-    (System_String_o *)StringLiteral_11383/*"Result"*/,
+    (System_String_o *)StringLiteral_11389/*"Result"*/,
     (UnityEngine_Texture_o *)this->fields.rt,
     0);
   v47 = this->fields.rt;
   if ( !v47 )
-    sub_1C6BC60(0, v46);
+    sub_1C71608(0, v46);
   v48 = this->fields.cs;
   v50 = ((__int64 (__fastcall *)(struct UnityEngine_RenderTexture_o *, const MethodInfo *))v47->klass->vtable._6_get_height.methodPtr)(
           v47,
           v47->klass->vtable._6_get_height.method);
-  if ( !byte_4CB02B0 )
+  if ( !byte_4CC13B2 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB02B0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC13B2 = 1;
   }
   v51 = System_Math_TypeInfo;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   if ( !v48 )
-    sub_1C6BC60(v51, v49);
+    sub_1C71608(v51, v49);
   v52 = ceilf((float)v50 * 0.00097656);
   if ( v52 == INFINITY )
     v53 = 0x80000000;
@@ -2012,33 +2188,33 @@ void PostProcessorRuler__ProcessCompute(
     v53 = (int)v52;
   UnityEngine_ComputeShader__Dispatch(v48, v45, 1, v53, 1, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v54);
-  v56 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5363/*"DrawRulerHorizontal"*/, 0);
+    sub_1C71608(0, v54);
+  v56 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5366/*"DrawRulerHorizontal"*/, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v55);
-  UnityEngine_ComputeShader__SetTexture_71667272(
+    sub_1C71608(0, v55);
+  UnityEngine_ComputeShader__SetTexture_71732204(
     *p_cs,
     v56,
-    (System_String_o *)StringLiteral_11383/*"Result"*/,
+    (System_String_o *)StringLiteral_11389/*"Result"*/,
     (UnityEngine_Texture_o *)this->fields.rt,
     0);
   v58 = this->fields.rt;
   if ( !v58 )
-    sub_1C6BC60(0, v57);
+    sub_1C71608(0, v57);
   v59 = this->fields.cs;
   v61 = ((__int64 (__fastcall *)(struct UnityEngine_RenderTexture_o *, const MethodInfo *))v58->klass->vtable._4_get_width.methodPtr)(
           v58,
           v58->klass->vtable._4_get_width.method);
-  if ( !byte_4CB02B0 )
+  if ( !byte_4CC13B2 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB02B0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC13B2 = 1;
   }
   v62 = System_Math_TypeInfo;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   if ( !v59 )
-    sub_1C6BC60(v62, v60);
+    sub_1C71608(v62, v60);
   v63 = ceilf((float)v61 * 0.00097656);
   if ( v63 == INFINITY )
     v64 = 0x80000000;
@@ -2046,39 +2222,39 @@ void PostProcessorRuler__ProcessCompute(
     v64 = (int)v63;
   UnityEngine_ComputeShader__Dispatch(v59, v56, v64, 1, 1, 0);
   if ( !v16 )
-    sub_1C6BC60(0, v65);
+    sub_1C71608(0, v65);
   UnityEngine_ComputeBuffer__SetData(v16, (System_Array_o *)v10, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v66);
-  v68 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5364/*"DrawRulerUnits"*/, 0);
+    sub_1C71608(0, v66);
+  v68 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5367/*"DrawRulerUnits"*/, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v67);
-  UnityEngine_ComputeShader__SetTexture_71667272(
+    sub_1C71608(0, v67);
+  UnityEngine_ComputeShader__SetTexture_71732204(
     *p_cs,
     v68,
-    (System_String_o *)StringLiteral_11383/*"Result"*/,
+    (System_String_o *)StringLiteral_11389/*"Result"*/,
     (UnityEngine_Texture_o *)this->fields.rt,
     0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v69);
-  UnityEngine_ComputeShader__SetBuffer_71667380(*p_cs, v68, (System_String_o *)StringLiteral_11432/*"RulerInfos"*/, v16, 0);
+    sub_1C71608(0, v69);
+  UnityEngine_ComputeShader__SetBuffer_71732312(*p_cs, v68, (System_String_o *)StringLiteral_11438/*"RulerInfos"*/, v16, 0);
   v71 = this->fields.rt;
   if ( !v71 )
-    sub_1C6BC60(0, v70);
+    sub_1C71608(0, v70);
   v72 = this->fields.cs;
   v74 = ((__int64 (__fastcall *)(struct UnityEngine_RenderTexture_o *, const MethodInfo *))v71->klass->vtable._4_get_width.methodPtr)(
           v71,
           v71->klass->vtable._4_get_width.method);
-  if ( !byte_4CB02B0 )
+  if ( !byte_4CC13B2 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB02B0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC13B2 = 1;
   }
   v75 = System_Math_TypeInfo;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   if ( !v72 )
-    sub_1C6BC60(v75, v73);
+    sub_1C71608(v75, v73);
   v76 = ceilf((float)v74 * 0.00097656);
   if ( v76 == INFINITY )
     v77 = 0x80000000;
@@ -2086,59 +2262,59 @@ void PostProcessorRuler__ProcessCompute(
     v77 = (int)v76;
   UnityEngine_ComputeShader__Dispatch(v72, v68, v77, 1, 1, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v78);
-  v80 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5359/*"DrawColor"*/, 0);
+    sub_1C71608(0, v78);
+  v80 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5362/*"DrawColor"*/, 0);
   if ( !v120 )
-    sub_1C6BC60(0, v79);
+    sub_1C71608(0, v79);
   UnityEngine_ComputeBuffer__SetData(v120, (System_Array_o *)this->fields.mergedArrays, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v81);
-  UnityEngine_ComputeShader__SetBuffer_71667380(*p_cs, v80, (System_String_o *)StringLiteral_9605/*"Numbers"*/, v120, 0);
+    sub_1C71608(0, v81);
+  UnityEngine_ComputeShader__SetBuffer_71732312(*p_cs, v80, (System_String_o *)StringLiteral_9610/*"Numbers"*/, v120, 0);
   if ( !v13 )
-    sub_1C6BC60(0, v82);
+    sub_1C71608(0, v82);
   UnityEngine_ComputeBuffer__SetData(v13, (System_Array_o *)numInfos, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v83);
-  UnityEngine_ComputeShader__SetBuffer_71667380(*p_cs, v80, (System_String_o *)StringLiteral_9604/*"NumberInfos"*/, v13, 0);
+    sub_1C71608(0, v83);
+  UnityEngine_ComputeShader__SetBuffer_71732312(*p_cs, v80, (System_String_o *)StringLiteral_9609/*"NumberInfos"*/, v13, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v84);
-  UnityEngine_ComputeShader__SetTexture_71667272(
+    sub_1C71608(0, v84);
+  UnityEngine_ComputeShader__SetTexture_71732204(
     *p_cs,
     v80,
-    (System_String_o *)StringLiteral_11383/*"Result"*/,
+    (System_String_o *)StringLiteral_11389/*"Result"*/,
     (UnityEngine_Texture_o *)this->fields.rt,
     0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v85);
+    sub_1C71608(0, v85);
   UnityEngine_ComputeShader__Dispatch(*p_cs, v80, 1, 1, 1, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v86);
-  v88 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5361/*"DrawMouseLineVertical"*/, 0);
+    sub_1C71608(0, v86);
+  v88 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5364/*"DrawMouseLineVertical"*/, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v87);
-  UnityEngine_ComputeShader__SetTexture_71667272(
+    sub_1C71608(0, v87);
+  UnityEngine_ComputeShader__SetTexture_71732204(
     *p_cs,
     v88,
-    (System_String_o *)StringLiteral_11383/*"Result"*/,
+    (System_String_o *)StringLiteral_11389/*"Result"*/,
     (UnityEngine_Texture_o *)this->fields.rt,
     0);
   v90 = this->fields.rt;
   if ( !v90 )
-    sub_1C6BC60(0, v89);
+    sub_1C71608(0, v89);
   v91 = this->fields.cs;
   v93 = ((__int64 (__fastcall *)(struct UnityEngine_RenderTexture_o *, const MethodInfo *))v90->klass->vtable._6_get_height.methodPtr)(
           v90,
           v90->klass->vtable._6_get_height.method);
-  if ( !byte_4CB02B0 )
+  if ( !byte_4CC13B2 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB02B0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC13B2 = 1;
   }
   v94 = System_Math_TypeInfo;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   if ( !v91 )
-    sub_1C6BC60(v94, v92);
+    sub_1C71608(v94, v92);
   v95 = ceilf((float)v93 * 0.00097656);
   if ( v95 == INFINITY )
     v96 = 0x80000000;
@@ -2146,33 +2322,33 @@ void PostProcessorRuler__ProcessCompute(
     v96 = (int)v95;
   UnityEngine_ComputeShader__Dispatch(v91, v88, v96, 1, 1, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v97);
-  v99 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5360/*"DrawMouseLineHorizontal"*/, 0);
+    sub_1C71608(0, v97);
+  v99 = UnityEngine_ComputeShader__FindKernel(*p_cs, (System_String_o *)StringLiteral_5363/*"DrawMouseLineHorizontal"*/, 0);
   if ( !*p_cs )
-    sub_1C6BC60(0, v98);
-  UnityEngine_ComputeShader__SetTexture_71667272(
+    sub_1C71608(0, v98);
+  UnityEngine_ComputeShader__SetTexture_71732204(
     *p_cs,
     v99,
-    (System_String_o *)StringLiteral_11383/*"Result"*/,
+    (System_String_o *)StringLiteral_11389/*"Result"*/,
     (UnityEngine_Texture_o *)this->fields.rt,
     0);
   v101 = this->fields.rt;
   if ( !v101 )
-    sub_1C6BC60(0, v100);
+    sub_1C71608(0, v100);
   v102 = this->fields.cs;
   v104 = ((__int64 (__fastcall *)(struct UnityEngine_RenderTexture_o *, const MethodInfo *))v101->klass->vtable._4_get_width.methodPtr)(
            v101,
            v101->klass->vtable._4_get_width.method);
-  if ( !byte_4CB02B0 )
+  if ( !byte_4CC13B2 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB02B0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC13B2 = 1;
   }
   v105 = System_Math_TypeInfo;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
   if ( !v102 )
-    sub_1C6BC60(v105, v103);
+    sub_1C71608(v105, v103);
   v106 = ceilf((float)v104 * 0.00097656);
   if ( v106 == INFINITY )
     v107 = 0x80000000;
@@ -2196,7 +2372,7 @@ void PostProcessorRuler__ProcessCompute(
   else
   {
 LABEL_99:
-    v111 = sub_1C41D90(v16, System_IDisposable_TypeInfo, 0);
+    v111 = sub_1C47738(v16, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(UnityEngine_ComputeBuffer_o *, _QWORD))v111)(v16, *(_QWORD *)(v111 + 8));
   v112 = v13->klass;
@@ -2216,7 +2392,7 @@ LABEL_99:
   else
   {
 LABEL_105:
-    v115 = sub_1C41D90(v13, System_IDisposable_TypeInfo, 0);
+    v115 = sub_1C47738(v13, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(UnityEngine_ComputeBuffer_o *, _QWORD))v115)(v13, *(_QWORD *)(v115 + 8));
   v116 = v120->klass;
@@ -2236,7 +2412,7 @@ LABEL_105:
   else
   {
 LABEL_111:
-    v119 = sub_1C41D90(v120, System_IDisposable_TypeInfo, 0);
+    v119 = sub_1C47738(v120, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(UnityEngine_ComputeBuffer_o *, _QWORD))v119)(v120, *(_QWORD *)(v119 + 8));
 }
@@ -2247,133 +2423,197 @@ void PostProcessorRuler__Start(PostProcessorRuler_o *this, const MethodInfo *met
   UnityEngine_Shader_o *v3; // x20
   UnityEngine_Material_o *v4; // x22
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  __int64 v7; // x0
-  __int64 v8; // x1
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  __int64 v11; // x20
-  struct System_Int32_array *num0; // x1
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  __int64 v11; // x0
+  __int64 v12; // x1
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  __int64 v19; // x20
+  struct System_Int32_array *num0; // x1
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
   struct System_Int32_array *num1; // x1
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  struct System_Int32_array *num2; // x1
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  struct System_Int32_array *num3; // x1
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  struct System_Int32_array *num4; // x1
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
-  struct System_Int32_array *num5; // x1
   int32_t v28; // w2
-  const MethodInfo *v29; // x3
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  struct System_Int32_array *num2; // x1
+  int32_t v35; // w2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  int32_t v38; // w5
+  int64_t v39; // x6
+  System_String_o *v40; // x7
+  struct System_Int32_array *num3; // x1
+  int32_t v42; // w2
+  int32_t v43; // w3
+  System_String_o *v44; // x4
+  int32_t v45; // w5
+  int64_t v46; // x6
+  System_String_o *v47; // x7
+  struct System_Int32_array *num4; // x1
+  int32_t v49; // w2
+  int32_t v50; // w3
+  System_String_o *v51; // x4
+  int32_t v52; // w5
+  int64_t v53; // x6
+  System_String_o *v54; // x7
+  struct System_Int32_array *num5; // x1
+  int32_t v56; // w2
+  int32_t v57; // w3
+  System_String_o *v58; // x4
+  int32_t v59; // w5
+  int64_t v60; // x6
+  System_String_o *v61; // x7
   struct System_Int32_array *num6; // x1
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
+  int32_t v63; // w2
+  int32_t v64; // w3
+  System_String_o *v65; // x4
+  int32_t v66; // w5
+  int64_t v67; // x6
+  System_String_o *v68; // x7
   struct System_Int32_array *num7; // x1
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
+  int32_t v70; // w2
+  int32_t v71; // w3
+  System_String_o *v72; // x4
+  int32_t v73; // w5
+  int64_t v74; // x6
+  System_String_o *v75; // x7
   struct System_Int32_array *num8; // x1
-  int32_t v37; // w2
-  const MethodInfo *v38; // x3
+  int32_t v77; // w2
+  int32_t v78; // w3
+  System_String_o *v79; // x4
+  int32_t v80; // w5
+  int64_t v81; // x6
+  System_String_o *v82; // x7
   struct System_Int32_array *num9; // x1
-  int32_t v40; // w2
-  const MethodInfo *v41; // x3
+  int32_t v84; // w2
+  int32_t v85; // w3
+  System_String_o *v86; // x4
+  int32_t v87; // w5
+  int64_t v88; // x6
+  System_String_o *v89; // x7
   struct System_Int32_array *comma; // x1
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
+  int32_t v91; // w2
+  int32_t v92; // w3
+  System_String_o *v93; // x4
+  int32_t v94; // w5
+  int64_t v95; // x6
+  System_String_o *v96; // x7
   struct System_Int32_array *subtract; // x1
-  struct System_Int32_array *v46; // x0
-  int32_t v47; // w2
-  const MethodInfo *v48; // x3
+  struct System_Int32_array *v98; // x0
+  int32_t v99; // w2
+  int32_t v100; // w3
+  System_String_o *v101; // x4
+  int32_t v102; // w5
+  int64_t v103; // x6
+  System_String_o *v104; // x7
 
-  if ( (byte_4CB40C2 & 1) == 0 )
+  if ( (byte_4CC51DA & 1) == 0 )
   {
-    sub_1C6BA08(&int_____TypeInfo);
-    sub_1C6BA08(&UnityEngine_Material_TypeInfo);
-    sub_1C6BA08(&Method_PostProcessorRuler_MergeArrays_int___);
-    sub_1C6BA08(&StringLiteral_8388/*"Legacy Shaders/Particles/Alpha Blended"*/);
-    byte_4CB40C2 = 1;
+    sub_1C713B0(&int_____TypeInfo);
+    sub_1C713B0(&UnityEngine_Material_TypeInfo);
+    sub_1C713B0(&Method_PostProcessorRuler_MergeArrays_int___);
+    sub_1C713B0(&StringLiteral_8392/*"Legacy Shaders/Particles/Alpha Blended"*/);
+    byte_4CC51DA = 1;
   }
-  v3 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_8388/*"Legacy Shaders/Particles/Alpha Blended"*/, 0);
-  v4 = (UnityEngine_Material_o *)sub_1C6BC54(UnityEngine_Material_TypeInfo);
+  v3 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_8392/*"Legacy Shaders/Particles/Alpha Blended"*/, 0);
+  v4 = (UnityEngine_Material_o *)sub_1C715FC(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v4, v3, 0);
   this->fields.alphaBlend = v4;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.alphaBlend, (int32_t)v4, v5, v6);
-  v7 = sub_1C6BAB0(int_____TypeInfo, 12);
-  if ( !v7 )
-    sub_1C6BC60(0, v8);
-  v11 = v7;
-  if ( !*(_DWORD *)(v7 + 24) )
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.alphaBlend, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  v11 = sub_1C71458(int_____TypeInfo, 12);
+  if ( !v11 )
+    sub_1C71608(0, v12);
+  v19 = v11;
+  if ( !*(_DWORD *)(v11 + 24) )
     goto LABEL_17;
   num0 = this->fields.num0;
-  *(_QWORD *)(v7 + 32) = num0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)num0, v9, v10);
-  if ( *(_DWORD *)(v11 + 24) <= 1u )
+  *(_QWORD *)(v11 + 32) = num0;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)num0, v13, v14, v15, v16, v17, v18);
+  if ( *(_DWORD *)(v19 + 24) <= 1u )
     goto LABEL_17;
   num1 = this->fields.num1;
-  *(_QWORD *)(v11 + 40) = num1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 40), (int32_t)num1, v13, v14);
-  if ( *(_DWORD *)(v11 + 24) <= 2u )
+  *(_QWORD *)(v19 + 40) = num1;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 40), (int32_t)num1, v21, v22, v23, v24, v25, v26);
+  if ( *(_DWORD *)(v19 + 24) <= 2u )
     goto LABEL_17;
   num2 = this->fields.num2;
-  *(_QWORD *)(v11 + 48) = num2;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 48), (int32_t)num2, v16, v17);
-  if ( *(_DWORD *)(v11 + 24) <= 3u )
+  *(_QWORD *)(v19 + 48) = num2;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 48), (int32_t)num2, v28, v29, v30, v31, v32, v33);
+  if ( *(_DWORD *)(v19 + 24) <= 3u )
     goto LABEL_17;
   num3 = this->fields.num3;
-  *(_QWORD *)(v11 + 56) = num3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 56), (int32_t)num3, v19, v20);
-  if ( *(_DWORD *)(v11 + 24) <= 4u )
+  *(_QWORD *)(v19 + 56) = num3;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 56), (int32_t)num3, v35, v36, v37, v38, v39, v40);
+  if ( *(_DWORD *)(v19 + 24) <= 4u )
     goto LABEL_17;
   num4 = this->fields.num4;
-  *(_QWORD *)(v11 + 64) = num4;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 64), (int32_t)num4, v22, v23);
-  if ( *(_DWORD *)(v11 + 24) <= 5u )
+  *(_QWORD *)(v19 + 64) = num4;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 64), (int32_t)num4, v42, v43, v44, v45, v46, v47);
+  if ( *(_DWORD *)(v19 + 24) <= 5u )
     goto LABEL_17;
   num5 = this->fields.num5;
-  *(_QWORD *)(v11 + 72) = num5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 72), (int32_t)num5, v25, v26);
-  if ( *(_DWORD *)(v11 + 24) <= 6u )
+  *(_QWORD *)(v19 + 72) = num5;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 72), (int32_t)num5, v49, v50, v51, v52, v53, v54);
+  if ( *(_DWORD *)(v19 + 24) <= 6u )
     goto LABEL_17;
   num6 = this->fields.num6;
-  *(_QWORD *)(v11 + 80) = num6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 80), (int32_t)num6, v28, v29);
-  if ( *(_DWORD *)(v11 + 24) <= 7u )
+  *(_QWORD *)(v19 + 80) = num6;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 80), (int32_t)num6, v56, v57, v58, v59, v60, v61);
+  if ( *(_DWORD *)(v19 + 24) <= 7u )
     goto LABEL_17;
   num7 = this->fields.num7;
-  *(_QWORD *)(v11 + 88) = num7;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 88), (int32_t)num7, v31, v32);
-  if ( *(_DWORD *)(v11 + 24) <= 8u )
+  *(_QWORD *)(v19 + 88) = num7;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 88), (int32_t)num7, v63, v64, v65, v66, v67, v68);
+  if ( *(_DWORD *)(v19 + 24) <= 8u )
     goto LABEL_17;
   num8 = this->fields.num8;
-  *(_QWORD *)(v11 + 96) = num8;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 96), (int32_t)num8, v34, v35);
-  if ( *(_DWORD *)(v11 + 24) <= 9u
+  *(_QWORD *)(v19 + 96) = num8;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 96), (int32_t)num8, v70, v71, v72, v73, v74, v75);
+  if ( *(_DWORD *)(v19 + 24) <= 9u
     || (num9 = this->fields.num9,
-        *(_QWORD *)(v11 + 104) = num9,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 104), (int32_t)num9, v37, v38),
-        *(_DWORD *)(v11 + 24) <= 0xAu)
+        *(_QWORD *)(v19 + 104) = num9,
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 104), (int32_t)num9, v77, v78, v79, v80, v81, v82),
+        *(_DWORD *)(v19 + 24) <= 0xAu)
     || (comma = this->fields.comma,
-        *(_QWORD *)(v11 + 112) = comma,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 112), (int32_t)comma, v40, v41),
-        *(_DWORD *)(v11 + 24) <= 0xBu) )
+        *(_QWORD *)(v19 + 112) = comma,
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 112), (int32_t)comma, v84, v85, v86, v87, v88, v89),
+        *(_DWORD *)(v19 + 24) <= 0xBu) )
   {
 LABEL_17:
-    sub_1C6BC68(v7);
+    sub_1C71610(v11);
   }
   subtract = this->fields.subtract;
-  *(_QWORD *)(v11 + 120) = subtract;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 120), (int32_t)subtract, v43, v44);
-  v46 = PostProcessorRuler__MergeArrays_int_(
-          (System_Int32_array_array *)v11,
-          (const MethodInfo_31CE0B4 *)Method_PostProcessorRuler_MergeArrays_int___);
-  this->fields.mergedArrays = v46;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mergedArrays, (int32_t)v46, v47, v48);
+  *(_QWORD *)(v19 + 120) = subtract;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 120), (int32_t)subtract, v91, v92, v93, v94, v95, v96);
+  v98 = PostProcessorRuler__MergeArrays_int_(
+          (System_Int32_array_array *)v19,
+          (const MethodInfo_31DDE58 *)Method_PostProcessorRuler_MergeArrays_int___);
+  this->fields.mergedArrays = v98;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.mergedArrays,
+    (int32_t)v98,
+    v99,
+    v100,
+    v101,
+    v102,
+    v103,
+    v104);
 }
 
 
@@ -2402,11 +2642,11 @@ void PostProcessorRuler__Update(PostProcessorRuler_o *this, const MethodInfo *me
   PostProcessorRuler_ScreenRectInfo_o v23; // [xsp+0h] [xbp-40h] BYREF
   PostProcessorRuler_CharInfo_array *numInfos; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4CB40C3 & 1) == 0 )
+  if ( (byte_4CC51DB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Array_Empty_PostProcessorRuler_CharInfo___);
-    sub_1C6BA08(&CommonUI_TypeInfo);
-    byte_4CB40C3 = 1;
+    sub_1C713B0(&Method_System_Array_Empty_PostProcessorRuler_CharInfo___);
+    sub_1C713B0(&CommonUI_TypeInfo);
+    byte_4CC51DB = 1;
   }
   numInfos = 0;
   this->fields.screenWidth = UnityEngine_Screen__get_width(0);
@@ -2428,17 +2668,17 @@ void PostProcessorRuler__Update(PostProcessorRuler_o *this, const MethodInfo *me
   v15 = *((_QWORD *)Method_System_Array_Empty_PostProcessorRuler_CharInfo___ + 7);
   if ( !v15 )
   {
-    sub_1C41AF8(Method_System_Array_Empty_PostProcessorRuler_CharInfo___);
+    sub_1C474A0(Method_System_Array_Empty_PostProcessorRuler_CharInfo___);
     v15 = v13[7];
   }
   v16 = *(_QWORD *)(v15 + 16);
   if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-    v16 = sub_1C41A9C(inited);
+    v16 = sub_1C47444(inited);
   if ( !*(_DWORD *)(v16 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v16);
   v17 = *(_QWORD *)(v13[7] + 16LL);
   if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1C41A9C(inited);
+    v17 = sub_1C47444(inited);
   numInfos = **(PostProcessorRuler_CharInfo_array ***)(v17 + 184);
   PostProcessorRuler__PopulateUnitHeightCharInfos(this, &numInfos, v11);
   PostProcessorRuler__PopulateUnitWidthCharInfos(this, &numInfos, v18);
@@ -2449,48 +2689,52 @@ void PostProcessorRuler__Update(PostProcessorRuler_o *this, const MethodInfo *me
 }
 
 
-void PostProcessorRuler___c__47_PostProcessorRuler_CharInfo____cctor(const MethodInfo_330A6E0 *method)
+void PostProcessorRuler___c__47_PostProcessorRuler_CharInfo____cctor(const MethodInfo_331A484 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
   Il2CppObject *v4; // x20
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  __int64 v7; // x0
-  __int64 v8; // x0
-  __int64 v9; // x0
-  __int64 v10; // x0
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  __int64 v11; // x0
+  __int64 v12; // x0
+  __int64 v13; // x0
+  __int64 v14; // x0
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C41A9C();
+    klass = sub_1C47444();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C41A9C();
-  v4 = (Il2CppObject *)sub_1C6BC54(v3);
+    v3 = sub_1C47444();
+  v4 = (Il2CppObject *)sub_1C715FC(v3);
   if ( (*(&method->klass->_2.bitflags2 + 2) & 1) == 0 )
-    sub_1C41A9C();
+    sub_1C47444();
   System_Object___ctor(v4, 0);
-  v7 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C41A9C();
-  v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
-  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C41A9C();
-  **(_QWORD **)(v8 + 184) = v4;
-  v9 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C41A9C();
-  v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
-  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C41A9C();
-  sub_1C6B9AC(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
+  v11 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
+    v11 = sub_1C47444();
+  v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
+  if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
+    v12 = sub_1C47444();
+  **(_QWORD **)(v12 + 184) = v4;
+  v13 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+    v13 = sub_1C47444();
+  v14 = *(_QWORD *)(*(_QWORD *)(v13 + 192) + 16LL);
+  if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
+    v14 = sub_1C47444();
+  sub_1C71354(*(GrandQuestFolderBoardItem_o **)(v14 + 184), (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
 void PostProcessorRuler___c__47_PostProcessorRuler_CharInfo____ctor(
         PostProcessorRuler___c__47_T__o *this,
-        const MethodInfo_330A79C *method)
+        const MethodInfo_331A540 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -2499,13 +2743,13 @@ void PostProcessorRuler___c__47_PostProcessorRuler_CharInfo____ctor(
 System_Collections_Generic_IEnumerable_T__o *PostProcessorRuler___c__47_PostProcessorRuler_CharInfo____MergeArrays_b__47_0(
         PostProcessorRuler___c__47_T__o *this,
         PostProcessorRuler_CharInfo_array *array,
-        const MethodInfo_330A7A4 *method)
+        const MethodInfo_331A548 *method)
 {
   return (System_Collections_Generic_IEnumerable_T__o *)array;
 }
 
 
-void PostProcessorRuler___c__47___Il2CppFullySharedGenericType____cctor(const MethodInfo_330A5DC *method)
+void PostProcessorRuler___c__47___Il2CppFullySharedGenericType____cctor(const MethodInfo_331A380 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
@@ -2516,19 +2760,23 @@ void PostProcessorRuler___c__47___Il2CppFullySharedGenericType____cctor(const Me
   __int64 v8; // x0
   void (__fastcall *v9)(__int64, _QWORD); // x21
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  __int64 v12; // x0
-  __int64 v13; // x0
-  __int64 v14; // x0
-  __int64 v15; // x0
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  __int64 v16; // x0
+  __int64 v17; // x0
+  __int64 v18; // x0
+  __int64 v19; // x0
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C41A9C();
+    klass = sub_1C47444();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C41A9C();
-  v4 = sub_1C6BC54(v3);
+    v3 = sub_1C47444();
+  v4 = sub_1C715FC(v3);
   v5 = (__int64)method->klass;
   v6 = v4;
   v7 = *(_WORD *)(v5 + 309);
@@ -2538,34 +2786,34 @@ void PostProcessorRuler___c__47___Il2CppFullySharedGenericType____cctor(const Me
   }
   else
   {
-    v8 = sub_1C41A9C();
+    v8 = sub_1C47444();
     v5 = (__int64)method->klass;
     v7 = *(_WORD *)(v5 + 309);
   }
   v9 = **(void (__fastcall ***)(__int64, _QWORD))(*(_QWORD *)(v8 + 192) + 8LL);
   if ( (v7 & 1) == 0 )
-    v5 = sub_1C41A9C();
+    v5 = sub_1C47444();
   v9(v6, *(_QWORD *)(*(_QWORD *)(v5 + 192) + 8LL));
-  v12 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
-    v12 = sub_1C41A9C();
-  v13 = *(_QWORD *)(*(_QWORD *)(v12 + 192) + 16LL);
-  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1C41A9C();
-  **(_QWORD **)(v13 + 184) = v6;
-  v14 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-    v14 = sub_1C41A9C();
-  v15 = *(_QWORD *)(*(_QWORD *)(v14 + 192) + 16LL);
-  if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-    v15 = sub_1C41A9C();
-  sub_1C6B9AC(*(CGThumbnailListItem_o **)(v15 + 184), v6, v10, v11);
+  v16 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
+    v16 = sub_1C47444();
+  v17 = *(_QWORD *)(*(_QWORD *)(v16 + 192) + 16LL);
+  if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
+    v17 = sub_1C47444();
+  **(_QWORD **)(v17 + 184) = v6;
+  v18 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
+    v18 = sub_1C47444();
+  v19 = *(_QWORD *)(*(_QWORD *)(v18 + 192) + 16LL);
+  if ( (*(_BYTE *)(v19 + 309) & 1) == 0 )
+    v19 = sub_1C47444();
+  sub_1C71354(*(GrandQuestFolderBoardItem_o **)(v19 + 184), v6, v10, v11, v12, v13, v14, v15);
 }
 
 
 void PostProcessorRuler___c__47___Il2CppFullySharedGenericType____ctor(
         PostProcessorRuler___c__47_T__o *this,
-        const MethodInfo_330A6D0 *method)
+        const MethodInfo_331A474 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -2574,52 +2822,56 @@ void PostProcessorRuler___c__47___Il2CppFullySharedGenericType____ctor(
 System_Collections_Generic_IEnumerable_T__o *PostProcessorRuler___c__47___Il2CppFullySharedGenericType____MergeArrays_b__47_0(
         PostProcessorRuler___c__47_T__o *this,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_array *array,
-        const MethodInfo_330A6D8 *method)
+        const MethodInfo_331A47C *method)
 {
   return (System_Collections_Generic_IEnumerable_T__o *)array;
 }
 
 
-void PostProcessorRuler___c__47_int____cctor(const MethodInfo_330A510 *method)
+void PostProcessorRuler___c__47_int____cctor(const MethodInfo_331A2B4 *method)
 {
   __int64 klass; // x0
   __int64 v3; // x0
   Il2CppObject *v4; // x20
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  __int64 v7; // x0
-  __int64 v8; // x0
-  __int64 v9; // x0
-  __int64 v10; // x0
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  __int64 v11; // x0
+  __int64 v12; // x0
+  __int64 v13; // x0
+  __int64 v14; // x0
 
   klass = (__int64)method->klass;
   if ( (*(_BYTE *)(klass + 309) & 1) == 0 )
-    klass = sub_1C41A9C();
+    klass = sub_1C47444();
   v3 = **(_QWORD **)(klass + 192);
   if ( (*(_BYTE *)(v3 + 309) & 1) == 0 )
-    v3 = sub_1C41A9C();
-  v4 = (Il2CppObject *)sub_1C6BC54(v3);
+    v3 = sub_1C47444();
+  v4 = (Il2CppObject *)sub_1C715FC(v3);
   if ( (*(&method->klass->_2.bitflags2 + 2) & 1) == 0 )
-    sub_1C41A9C();
+    sub_1C47444();
   System_Object___ctor(v4, 0);
-  v7 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C41A9C();
-  v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
-  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C41A9C();
-  **(_QWORD **)(v8 + 184) = v4;
-  v9 = (__int64)method->klass;
-  if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C41A9C();
-  v10 = *(_QWORD *)(*(_QWORD *)(v9 + 192) + 16LL);
-  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C41A9C();
-  sub_1C6B9AC(*(CGThumbnailListItem_o **)(v10 + 184), (int32_t)v4, v5, v6);
+  v11 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
+    v11 = sub_1C47444();
+  v12 = *(_QWORD *)(*(_QWORD *)(v11 + 192) + 16LL);
+  if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
+    v12 = sub_1C47444();
+  **(_QWORD **)(v12 + 184) = v4;
+  v13 = (__int64)method->klass;
+  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+    v13 = sub_1C47444();
+  v14 = *(_QWORD *)(*(_QWORD *)(v13 + 192) + 16LL);
+  if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
+    v14 = sub_1C47444();
+  sub_1C71354(*(GrandQuestFolderBoardItem_o **)(v14 + 184), (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
-void PostProcessorRuler___c__47_int____ctor(PostProcessorRuler___c__47_T__o *this, const MethodInfo_330A5CC *method)
+void PostProcessorRuler___c__47_int____ctor(PostProcessorRuler___c__47_T__o *this, const MethodInfo_331A370 *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -2628,7 +2880,7 @@ void PostProcessorRuler___c__47_int____ctor(PostProcessorRuler___c__47_T__o *thi
 System_Collections_Generic_IEnumerable_T__o *PostProcessorRuler___c__47_int____MergeArrays_b__47_0(
         PostProcessorRuler___c__47_T__o *this,
         System_Int32_array *array,
-        const MethodInfo_330A5D4 *method)
+        const MethodInfo_331A378 *method)
 {
   return (System_Collections_Generic_IEnumerable_T__o *)array;
 }

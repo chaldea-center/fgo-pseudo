@@ -21,14 +21,14 @@ void ScriptEffectSizeAdjustComponent__SetEffectSize(ScriptEffectSizeAdjustCompon
   float v15; // s0
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB5065 & 1) == 0 )
+  if ( (byte_4CC6184 & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    byte_4CB5065 = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    byte_4CC6184 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Instance, 0, 0) )
@@ -40,10 +40,10 @@ void ScriptEffectSizeAdjustComponent__SetEffectSize(ScriptEffectSizeAdjustCompon
     {
       x = this->fields.defaultScale.fields.x;
       v6.n64_u64[0] = *(unsigned __int64 *)&this->fields.defaultScale.fields.y;
-      if ( !byte_4CAFC09 )
+      if ( !byte_4CC0D09 )
       {
-        sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-        byte_4CAFC09 = 1;
+        sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+        byte_4CC0D09 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       v8.n64_u64[0] = vsub_f32(v6, *(float32x2_t *)&static_fields->zeroVector.fields.y).n64_u64[0];
@@ -53,7 +53,7 @@ void ScriptEffectSizeAdjustComponent__SetEffectSize(ScriptEffectSizeAdjustCompon
                                  * (float)(x - static_fields->zeroVector.fields.x))
                          + *(float *)&v9)) >= 1.0e-10 )
       {
-        v10 = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+        v10 = (ScriptManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
         if ( !v10 )
           goto LABEL_20;
         UiRootActiveHeight = ScriptManager__GetUiRootActiveHeight(v10, 0);
@@ -80,7 +80,7 @@ void ScriptEffectSizeAdjustComponent__SetEffectSize(ScriptEffectSizeAdjustCompon
               return;
             }
 LABEL_20:
-            sub_1C6BC60(v10, v11);
+            sub_1C71608(v10, v11);
           }
         }
       }
@@ -95,8 +95,12 @@ void ScriptEffectSizeAdjustComponent__Start(ScriptEffectSizeAdjustComponent_o *t
   __int64 v4; // x1
   struct UnityEngine_Transform_o *transform; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  const MethodInfo *v12; // x1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
@@ -104,10 +108,18 @@ void ScriptEffectSizeAdjustComponent__Start(ScriptEffectSizeAdjustComponent_o *t
     || (this->fields.defaultScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0),
         (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C6BC60(gameObject, v4);
+    sub_1C71608(gameObject, v4);
   }
   transform = UnityEngine_GameObject__get_transform(gameObject, 0);
   this->fields.effectObjectTransform = transform;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.effectObjectTransform, (int32_t)transform, v6, v7);
-  ScriptEffectSizeAdjustComponent__SetEffectSize(this, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.effectObjectTransform,
+    (int32_t)transform,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
+  ScriptEffectSizeAdjustComponent__SetEffectSize(this, v12);
 }

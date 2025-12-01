@@ -7,10 +7,10 @@ System_Int32_array *CommonFunction__JoinIndiv(
   il2cpp_array_size_t v6; // x9
   System_Array_o *v7; // x21
 
-  if ( (byte_4CB567B & 1) == 0 )
+  if ( (byte_4CC679B & 1) == 0 )
   {
-    sub_1C6BA08(&int___TypeInfo);
-    byte_4CB567B = 1;
+    sub_1C713B0(&int___TypeInfo);
+    byte_4CC679B = 1;
   }
   if ( addIndiv )
   {
@@ -19,7 +19,7 @@ System_Int32_array *CommonFunction__JoinIndiv(
     {
       if ( baseIndiv && (v6 = baseIndiv->max_length) != 0 )
       {
-        v7 = (System_Array_o *)sub_1C6BAB0(int___TypeInfo, (unsigned int)(v6 + max_length));
+        v7 = (System_Array_o *)sub_1C71458(int___TypeInfo, (unsigned int)(v6 + max_length));
         System_Array__CopyTo((System_Array_o *)baseIndiv, v7, 0, 0);
         System_Array__CopyTo((System_Array_o *)addIndiv, v7, baseIndiv->max_length, 0);
         return (System_Int32_array *)v7;
@@ -63,12 +63,12 @@ bool CommonFunction__ReScaleUiFunc(UIRoot_o *uiRoot, const MethodInfo *method)
   unsigned int v28; // w8
   int32_t v29; // w2
 
-  if ( (byte_4CB5679 & 1) == 0 )
+  if ( (byte_4CC6799 & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB5679 = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC6799 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -112,7 +112,7 @@ bool CommonFunction__ReScaleUiFunc(UIRoot_o *uiRoot, const MethodInfo *method)
     goto LABEL_48;
   if ( uiRoot->fields.manualHeight != profileNameLabel )
     uiRoot->fields.manualHeight = profileNameLabel;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
@@ -124,10 +124,10 @@ bool CommonFunction__ReScaleUiFunc(UIRoot_o *uiRoot, const MethodInfo *method)
     v16 = ManagerConfig_TypeInfo;
   }
   v17 = v16->static_fields->HEIGHT;
-  if ( !byte_4CB0BE0 )
+  if ( !byte_4CC1CE4 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB0BE0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC1CE4 = 1;
   }
   v18 = profileNameLabel - v17;
   if ( System_Math_TypeInfo->_2.cctor_finished )
@@ -137,22 +137,22 @@ bool CommonFunction__ReScaleUiFunc(UIRoot_o *uiRoot, const MethodInfo *method)
   else
   {
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v19 = byte_4CB0BE0 == 0;
+    v19 = byte_4CC1CE4 == 0;
   }
   if ( v18 < 0 )
     v18 = -v18;
   v20 = ManagerConfig_TypeInfo->static_fields->WIDTH;
   if ( v19 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB0BE0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC1CE4 = 1;
   }
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  v8 = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v8 = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !v8 )
 LABEL_48:
-    sub_1C6BC60(v8, v6);
+    sub_1C71608(v8, v6);
   v21 = v20 - profileBase;
   if ( v20 - profileBase < 0 )
     v21 = profileBase - v20;
@@ -193,10 +193,10 @@ void CommonFunction__ScalingLabelWidth(UILabel_o *label, int32_t maxWidth, const
   v4 = label;
   label = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)label, 0);
   v5 = label;
-  if ( !byte_4CAFC0E )
+  if ( !byte_4CC0D0E )
   {
-    label = (UILabel_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC0E = 1;
+    label = (UILabel_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D0E = 1;
   }
   if ( !v5 )
     goto LABEL_11;
@@ -227,7 +227,7 @@ void CommonFunction__ScalingLabelWidth(UILabel_o *label, int32_t maxWidth, const
       }
     }
 LABEL_11:
-    sub_1C6BC60(label, *(_QWORD *)&maxWidth);
+    sub_1C71608(label, *(_QWORD *)&maxWidth);
   }
 }
 
@@ -253,12 +253,12 @@ void CommonFunction__SetColor(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4CB567A & 1) == 0 )
+  if ( (byte_4CC679A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB567A = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UILabel___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UISprite___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC679A = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -269,7 +269,7 @@ void CommonFunction__SetColor(
     {
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            obj,
-                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
+                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UILabel___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -298,7 +298,7 @@ LABEL_22:
       {
         v14 = UnityEngine_GameObject__GetComponent_object_(
                 obj,
-                (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
+                (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UISprite___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         v10 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v14, 0, 0);
@@ -318,7 +318,7 @@ LABEL_22:
         }
       }
     }
-    sub_1C6BC60(v10, v11);
+    sub_1C71608(v10, v11);
   }
 }
 
@@ -376,6 +376,6 @@ void CommonFunction__SetColorAllChild(
         return;
     }
 LABEL_7:
-    sub_1C6BC60(parentTransform, isEnable);
+    sub_1C71608(parentTransform, isEnable);
   }
 }

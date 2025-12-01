@@ -10,11 +10,11 @@ void CriFsInstaller___ctor(CriFsInstaller_o *this, const MethodInfo *method)
   System_String_o *v10; // x0
   __int64 v11; // x0
 
-  if ( (byte_4CAF6F0 & 1) == 0 )
+  if ( (byte_4CC07F0 & 1) == 0 )
   {
-    sub_1C6BA08(&CriDisposableObjectManager_TypeInfo);
-    sub_1C6BA08(&CriFsPlugin_TypeInfo);
-    byte_4CAF6F0 = 1;
+    sub_1C713B0(&CriDisposableObjectManager_TypeInfo);
+    sub_1C713B0(&CriFsPlugin_TypeInfo);
+    byte_4CC07F0 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.guid = System_Guid__NewGuid(0);
@@ -23,23 +23,23 @@ void CriFsInstaller___ctor(CriFsInstaller_o *this, const MethodInfo *method)
     inited = (CriFsPlugin_c *)j_il2cpp_runtime_class_init_0(CriFsPlugin_TypeInfo);
   if ( !CriFsPlugin__IsLibraryInitialized((const MethodInfo *)inited) )
   {
-    v6 = sub_1C6BA1C(&System_Exception_TypeInfo);
-    v7 = (System_Exception_o *)sub_1C6BC54(v6);
-    v8 = &StringLiteral_4861/*"CriFsPlugin is not initialized."*/;
+    v6 = sub_1C713C4(&System_Exception_TypeInfo);
+    v7 = (System_Exception_o *)sub_1C715FC(v6);
+    v8 = &StringLiteral_4864/*"CriFsPlugin is not initialized."*/;
     goto LABEL_12;
   }
   this->fields.handle = 0;
   CriFsInstaller__criFsInstaller_Create(&this->fields.handle, 0, v4);
   if ( System_IntPtr__op_Equality(this->fields.handle, 0, 0) )
   {
-    v9 = sub_1C6BA1C(&System_Exception_TypeInfo);
-    v7 = (System_Exception_o *)sub_1C6BC54(v9);
-    v8 = &StringLiteral_18364/*"criFsInstaller_Create() failed."*/;
+    v9 = sub_1C713C4(&System_Exception_TypeInfo);
+    v7 = (System_Exception_o *)sub_1C715FC(v9);
+    v8 = &StringLiteral_18374/*"criFsInstaller_Create() failed."*/;
 LABEL_12:
-    v10 = (System_String_o *)sub_1C6BA1C(v8);
-    System_Exception___ctor_65712884(v7, v10, 0);
-    v11 = sub_1C6BA1C(&Method_CriFsInstaller__ctor__);
-    sub_1C6BB30(v7, v11);
+    v10 = (System_String_o *)sub_1C713C4(v8);
+    System_Exception___ctor_65777816(v7, v10, 0);
+    v11 = sub_1C713C4(&Method_CriFsInstaller__ctor__);
+    sub_1C714D8(v7, v11);
   }
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
@@ -71,27 +71,27 @@ void CriFsInstaller__Copy(
 
   handle = binder;
   v10 = this;
-  if ( (byte_4CAF6F3 & 1) == 0 )
+  if ( (byte_4CC07F3 & 1) == 0 )
   {
-    sub_1C6BA08(&byte___TypeInfo);
-    sub_1C6BA08(&StringLiteral_22275/*"net2:"*/);
-    sub_1C6BA08(&StringLiteral_20141/*"https:"*/);
-    this = (CriFsInstaller_o *)sub_1C6BA08(&StringLiteral_20106/*"http:"*/);
-    byte_4CAF6F3 = 1;
+    sub_1C713B0(&byte___TypeInfo);
+    sub_1C713B0(&StringLiteral_22290/*"net2:"*/);
+    sub_1C713B0(&StringLiteral_20153/*"https:"*/);
+    this = (CriFsInstaller_o *)sub_1C713B0(&StringLiteral_20118/*"http:"*/);
+    byte_4CC07F3 = 1;
   }
   if ( !srcPath )
     goto LABEL_17;
-  if ( System_String__StartsWith(srcPath, (System_String_o *)StringLiteral_20106/*"http:"*/, 0)
-    || System_String__StartsWith(srcPath, (System_String_o *)StringLiteral_20141/*"https:"*/, 0) )
+  if ( System_String__StartsWith(srcPath, (System_String_o *)StringLiteral_20118/*"http:"*/, 0)
+    || System_String__StartsWith(srcPath, (System_String_o *)StringLiteral_20153/*"https:"*/, 0) )
   {
-    srcPath = System_String__Concat_63966792((System_String_o *)StringLiteral_22275/*"net2:"*/, srcPath, 0);
+    srcPath = System_String__Concat_64031724((System_String_o *)StringLiteral_22290/*"net2:"*/, srcPath, 0);
   }
   if ( installBufferSize >= 1 )
   {
-    v12 = sub_1C6BAB0(byte___TypeInfo, (unsigned int)installBufferSize);
+    v12 = sub_1C71458(byte___TypeInfo, (unsigned int)installBufferSize);
     v10->fields.installBuffer = (struct System_Byte_array *)v12;
-    sub_1C6B9AC(&v10->fields.installBuffer, v12);
-    v10->fields.installBufferGch = System_Runtime_InteropServices_GCHandle__Alloc_64646632(
+    sub_1C71354(&v10->fields.installBuffer, v12);
+    v10->fields.installBufferGch = System_Runtime_InteropServices_GCHandle__Alloc_64711564(
                                      &v10->fields.installBuffer->obj,
                                      3,
                                      0);
@@ -112,7 +112,7 @@ void CriFsInstaller__Copy(
       goto LABEL_16;
     }
 LABEL_17:
-    sub_1C6BC60(this, binder);
+    sub_1C71608(this, binder);
   }
   v18 = v10->fields.handle;
   if ( handle )
@@ -132,12 +132,12 @@ void CriFsInstaller__Dispose(CriFsInstaller_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  if ( (byte_4CAF6F1 & 1) == 0 )
+  if ( (byte_4CC07F1 & 1) == 0 )
   {
-    sub_1C6BA08(&System_GC_TypeInfo);
-    byte_4CAF6F1 = 1;
+    sub_1C713B0(&System_GC_TypeInfo);
+    byte_4CC07F1 = 1;
   }
-  CriFsInstaller__Dispose_31030532(this, 1, v2);
+  CriFsInstaller__Dispose_31053484(this, 1, v2);
   if ( !System_GC_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
   System_GC__SuppressFinalize((Il2CppObject *)this, 0);
@@ -145,15 +145,15 @@ void CriFsInstaller__Dispose(CriFsInstaller_o *this, const MethodInfo *method)
 
 
 // local variable allocation has failed, the output may be wrong!
-void CriFsInstaller__Dispose_31030532(CriFsInstaller_o *this, bool disposing, const MethodInfo *method)
+void CriFsInstaller__Dispose_31053484(CriFsInstaller_o *this, bool disposing, const MethodInfo *method)
 {
   const MethodInfo *v5; // x1
   System_Runtime_InteropServices_GCHandle_o v6; // x0
 
-  if ( (byte_4CAF6F2 & 1) == 0 )
+  if ( (byte_4CC07F2 & 1) == 0 )
   {
-    sub_1C6BA08(&CriDisposableObjectManager_TypeInfo);
-    byte_4CAF6F2 = 1;
+    sub_1C713B0(&CriDisposableObjectManager_TypeInfo);
+    byte_4CC07F2 = 1;
   }
   if ( !CriDisposableObjectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CriDisposableObjectManager_TypeInfo);
@@ -170,7 +170,7 @@ void CriFsInstaller__Dispose_31030532(CriFsInstaller_o *this, bool disposing, co
       v6.fields.handle = (intptr_t)&this->fields.installBufferGch;
       System_Runtime_InteropServices_GCHandle__Free(v6, 0);
       this->fields.installBuffer = 0;
-      sub_1C6B9AC(&this->fields.installBuffer, 0);
+      sub_1C71354(&this->fields.installBuffer, 0);
     }
   }
 }
@@ -188,7 +188,7 @@ void CriFsInstaller__Finalize(CriFsInstaller_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  CriFsInstaller__Dispose_31030532(this, 0, v2);
+  CriFsInstaller__Dispose_31053484(this, 0, v2);
   System_Object__Finalize((Il2CppObject *)this, 0);
 }
 
@@ -272,7 +272,7 @@ int32_t CriFsInstaller__criFsInstaller_Copy(
 
   v10 = (int)dst_path;
   v11 = (int)src_path;
-  if ( !off_4CAF710 )
+  if ( !off_4CC0810 )
   {
     *(_QWORD *)v25 = "cri_ware_unity";
     v26 = 14;
@@ -281,9 +281,9 @@ int32_t CriFsInstaller__criFsInstaller_Copy(
     v30 = 48;
     v29 = 0x200000000LL;
     v31 = 0;
-    off_4CAF710 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_1C6C0B8(v25, binder);
+    off_4CC0810 = (__int64 (__fastcall *)(_QWORD, _QWORD, _QWORD, _QWORD, _QWORD, _QWORD))sub_1C71A60(v25, binder);
   }
-  v14 = sub_1C6C098(
+  v14 = sub_1C71A40(
           v11,
           binder,
           (int)src_path,
@@ -296,10 +296,10 @@ int32_t CriFsInstaller__criFsInstaller_Copy(
           v26,
           v27[0],
           v28);
-  v22 = sub_1C6C098(v10, v15, v16, v17, v18, v19, v20, v21, v25[0], v26, v27[0], v28);
-  v23 = off_4CAF710(installer, binder, v14, v22, buffer, buffer_size);
-  sub_1C6C0B0(v14);
-  sub_1C6C0B0(v22);
+  v22 = sub_1C71A40(v10, v15, v16, v17, v18, v19, v20, v21, v25[0], v26, v27[0], v28);
+  v23 = off_4CC0810(installer, binder, v14, v22, buffer, buffer_size);
+  sub_1C71A58(v14);
+  sub_1C71A58(v22);
   return v23;
 }
 
@@ -311,8 +311,8 @@ int32_t CriFsInstaller__criFsInstaller_Create(intptr_t *installer, int32_t optio
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_4CAF700;
-  if ( !off_4CAF700 )
+  v3 = off_4CC0800;
+  if ( !off_4CC0800 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -321,8 +321,8 @@ int32_t CriFsInstaller__criFsInstaller_Create(intptr_t *installer, int32_t optio
     v8 = 12;
     v7[4] = 0x200000000LL;
     v9 = 0;
-    v3 = (void *)sub_1C6C0B8(v7, option);
-    off_4CAF700 = v3;
+    v3 = (void *)sub_1C71A60(v7, option);
+    off_4CC0800 = v3;
   }
   return ((__int64 (__fastcall *)(intptr_t *, _QWORD, const MethodInfo *))v3)(installer, (unsigned int)option, method);
 }
@@ -335,8 +335,8 @@ int32_t CriFsInstaller__criFsInstaller_Destroy(intptr_t installer, const MethodI
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v2 = off_4CAF708;
-  if ( !off_4CAF708 )
+  v2 = off_4CC0808;
+  if ( !off_4CC0808 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -345,8 +345,8 @@ int32_t CriFsInstaller__criFsInstaller_Destroy(intptr_t installer, const MethodI
     v6 = 8;
     v5[4] = 0x200000000LL;
     v7 = 0;
-    v2 = (void *)sub_1C6C0B8(v5, method);
-    off_4CAF708 = v2;
+    v2 = (void *)sub_1C71A60(v5, method);
+    off_4CC0808 = v2;
   }
   return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v2)(installer, method);
 }
@@ -359,8 +359,8 @@ int32_t CriFsInstaller__criFsInstaller_ExecuteMain(const MethodInfo *method)
   int v4; // [xsp+28h] [xbp-18h]
   char v5; // [xsp+2Ch] [xbp-14h]
 
-  v1 = (const MethodInfo *)off_4CAF6F8;
-  if ( !off_4CAF6F8 )
+  v1 = (const MethodInfo *)off_4CC07F8;
+  if ( !off_4CC07F8 )
   {
     v4 = 0;
     v3[0] = "cri_ware_unity";
@@ -369,9 +369,9 @@ int32_t CriFsInstaller__criFsInstaller_ExecuteMain(const MethodInfo *method)
     v3[3] = 26;
     v3[4] = 0x200000000LL;
     v5 = 0;
-    method = (const MethodInfo *)sub_1C6C0B8(v3);
+    method = (const MethodInfo *)sub_1C71A60(v3);
     v1 = method;
-    off_4CAF6F8 = method;
+    off_4CC07F8 = method;
   }
   return ((__int64 (__fastcall *)(const MethodInfo *))v1)(method);
 }
@@ -384,8 +384,8 @@ int32_t CriFsInstaller__criFsInstaller_GetProgress(intptr_t installer, float *pr
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_4CAF728;
-  if ( !off_4CAF728 )
+  v3 = off_4CC0828;
+  if ( !off_4CC0828 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -394,8 +394,8 @@ int32_t CriFsInstaller__criFsInstaller_GetProgress(intptr_t installer, float *pr
     v8 = 16;
     v7[4] = 0x200000000LL;
     v9 = 0;
-    v3 = (void *)sub_1C6C0B8(v7, progress);
-    off_4CAF728 = v3;
+    v3 = (void *)sub_1C71A60(v7, progress);
+    off_4CC0828 = v3;
   }
   return ((__int64 (__fastcall *)(intptr_t, float *, const MethodInfo *))v3)(installer, progress, method);
 }
@@ -408,8 +408,8 @@ int32_t CriFsInstaller__criFsInstaller_GetStatus(intptr_t installer, int32_t *st
   int v8; // [xsp+28h] [xbp-28h]
   char v9; // [xsp+2Ch] [xbp-24h]
 
-  v3 = off_4CAF720;
-  if ( !off_4CAF720 )
+  v3 = off_4CC0820;
+  if ( !off_4CC0820 )
   {
     v7[0] = "cri_ware_unity";
     v7[1] = 14;
@@ -418,8 +418,8 @@ int32_t CriFsInstaller__criFsInstaller_GetStatus(intptr_t installer, int32_t *st
     v8 = 16;
     v7[4] = 0x200000000LL;
     v9 = 0;
-    v3 = (void *)sub_1C6C0B8(v7, status);
-    off_4CAF720 = v3;
+    v3 = (void *)sub_1C71A60(v7, status);
+    off_4CC0820 = v3;
   }
   return ((__int64 (__fastcall *)(intptr_t, int32_t *, const MethodInfo *))v3)(installer, status, method);
 }
@@ -432,8 +432,8 @@ int32_t CriFsInstaller__criFsInstaller_Stop(intptr_t installer, const MethodInfo
   int v6; // [xsp+28h] [xbp-28h]
   char v7; // [xsp+2Ch] [xbp-24h]
 
-  v2 = off_4CAF718;
-  if ( !off_4CAF718 )
+  v2 = off_4CC0818;
+  if ( !off_4CC0818 )
   {
     v5[0] = "cri_ware_unity";
     v5[1] = 14;
@@ -442,8 +442,8 @@ int32_t CriFsInstaller__criFsInstaller_Stop(intptr_t installer, const MethodInfo
     v6 = 8;
     v5[4] = 0x200000000LL;
     v7 = 0;
-    v2 = (void *)sub_1C6C0B8(v5, method);
-    off_4CAF718 = v2;
+    v2 = (void *)sub_1C71A60(v5, method);
+    off_4CC0818 = v2;
   }
   return ((__int64 (__fastcall *)(intptr_t, const MethodInfo *))v2)(installer, method);
 }

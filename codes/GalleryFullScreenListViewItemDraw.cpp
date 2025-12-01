@@ -28,14 +28,14 @@ void GalleryFullScreenListViewItemDraw__DownloadMovieAsset(
 {
   AssetLoader_LoadEndDataHandler_o *v5; // x21
 
-  if ( (byte_4CB125F & 1) == 0 )
+  if ( (byte_4CC236C & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&Method_GalleryFullScreenListViewItemDraw__DownloadMovieAsset_b__31_0__);
-    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    byte_4CB125F = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&Method_GalleryFullScreenListViewItemDraw__DownloadMovieAsset_b__31_0__);
+    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    byte_4CC236C = 1;
   }
-  v5 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v5 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v5,
     (Il2CppObject *)this,
@@ -74,20 +74,40 @@ void GalleryFullScreenListViewItemDraw__Init(
   const MethodInfo *v14; // x4
   System_Collections_IEnumerator_o *loadCoroutine; // x1
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   System_Collections_IEnumerator_o *playMovieCoroutine; // x1
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
   System_Collections_IEnumerator_o *playSeekSequenceCoroutine; // x1
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  struct GalleryFullScreenListViewItem_o *v26; // x8
-  int32_t v27; // w8
-  System_Collections_IEnumerator_o *v28; // x0
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
+  int32_t v30; // w2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  int32_t v33; // w5
+  int64_t v34; // x6
+  System_String_o *v35; // x7
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
+  struct GalleryFullScreenListViewItem_o *v42; // x8
+  int32_t v43; // w8
+  System_Collections_IEnumerator_o *v44; // x0
+  int32_t v45; // w2
+  int32_t v46; // w3
+  System_String_o *v47; // x4
+  int32_t v48; // w5
+  int64_t v49; // x6
+  System_String_o *v50; // x7
 
   galleryFullScreenListViewItem = this->fields.galleryFullScreenListViewItem;
   if ( !galleryFullScreenListViewItem )
@@ -136,21 +156,21 @@ void GalleryFullScreenListViewItemDraw__Init(
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)v4, loadCoroutine, 0);
     v4->fields.loadCoroutine = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.loadCoroutine, 0, v16, v17);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.loadCoroutine, 0, v16, v17, v18, v19, v20, v21);
   }
   playMovieCoroutine = v4->fields.playMovieCoroutine;
   if ( playMovieCoroutine )
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)v4, playMovieCoroutine, 0);
     v4->fields.playMovieCoroutine = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.playMovieCoroutine, 0, v19, v20);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.playMovieCoroutine, 0, v23, v24, v25, v26, v27, v28);
   }
   playSeekSequenceCoroutine = v4->fields.playSeekSequenceCoroutine;
   if ( playSeekSequenceCoroutine )
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)v4, playSeekSequenceCoroutine, 0);
     v4->fields.playSeekSequenceCoroutine = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.playSeekSequenceCoroutine, 0, v22, v23);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.playSeekSequenceCoroutine, 0, v30, v31, v32, v33, v34, v35);
   }
   callAction = (System_Action_o *)v4->fields.seekSequenceCoroutine;
   if ( callAction )
@@ -160,26 +180,26 @@ void GalleryFullScreenListViewItemDraw__Init(
       (System_Collections_IEnumerator_o *)callAction,
       0);
     v4->fields.seekSequenceCoroutine = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.seekSequenceCoroutine, 0, v24, v25);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.seekSequenceCoroutine, 0, v36, v37, v38, v39, v40, v41);
   }
-  v26 = v4->fields.galleryFullScreenListViewItem;
-  if ( !v26 )
+  v42 = v4->fields.galleryFullScreenListViewItem;
+  if ( !v42 )
 LABEL_25:
-    sub_1C6BC60(this, callAction);
-  v27 = v26->fields._CurrentGalleryType_k__BackingField;
-  if ( v27 == 2 )
+    sub_1C71608(this, callAction);
+  v43 = v42->fields._CurrentGalleryType_k__BackingField;
+  if ( v43 == 2 )
   {
-    v28 = GalleryFullScreenListViewItemDraw__SetCGCoroutine(v4, (System_String_o *)v8, (System_String_o *)v9, v6, v14);
+    v44 = GalleryFullScreenListViewItemDraw__SetCGCoroutine(v4, (System_String_o *)v8, (System_String_o *)v9, v6, v14);
     goto LABEL_23;
   }
-  if ( v27 == 1 )
+  if ( v43 == 1 )
   {
-    v28 = GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine(v4, (System_String_o *)v8, v6, v13);
+    v44 = GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine(v4, (System_String_o *)v8, v6, v13);
 LABEL_23:
-    v4->fields.loadCoroutine = v28;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.loadCoroutine, (int32_t)v28, v29, v30);
+    v4->fields.loadCoroutine = v44;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.loadCoroutine, (int32_t)v44, v45, v46, v47, v48, v49, v50);
   }
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)v4, v4->fields.loadCoroutine, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)v4, v4->fields.loadCoroutine, 0);
 }
 
 
@@ -188,14 +208,14 @@ bool GalleryFullScreenListViewItemDraw__IsGallerySubstituteData(
         System_String_o *textureName,
         const MethodInfo *method)
 {
-  if ( (byte_4CB1267 & 1) == 0 )
+  if ( (byte_4CC2374 & 1) == 0 )
   {
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_9217/*"MyRoom/Gallery/SubstituteData"*/);
-    byte_4CB1267 = 1;
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C713B0(&StringLiteral_9221/*"MyRoom/Gallery/SubstituteData"*/);
+    byte_4CC2374 = 1;
   }
   if ( !textureName )
-    sub_1C6BC60(this, textureName);
-  return System_String__Contains(textureName, (System_String_o *)StringLiteral_9217/*"MyRoom/Gallery/SubstituteData"*/, 0);
+    sub_1C71608(this, textureName);
+  return System_String__Contains(textureName, (System_String_o *)StringLiteral_9221/*"MyRoom/Gallery/SubstituteData"*/, 0);
 }
 
 
@@ -211,10 +231,10 @@ bool GalleryFullScreenListViewItemDraw__IsSameName(
   System_String_o *ObjectName; // x21
 
   v4 = this;
-  if ( (byte_4CB125D & 1) == 0 )
+  if ( (byte_4CC236A & 1) == 0 )
   {
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_1041/*"/"*/);
-    byte_4CB125D = 1;
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C713B0(&StringLiteral_1041/*"/"*/);
+    byte_4CC236A = 1;
   }
   galleryFullScreenListViewItem = v4->fields.galleryFullScreenListViewItem;
   if ( !galleryFullScreenListViewItem
@@ -226,11 +246,11 @@ bool GalleryFullScreenListViewItemDraw__IsSameName(
     || (v7 = (System_String_o *)this,
         (this = (GalleryFullScreenListViewItemDraw_o *)v6->fields._GalleryResourceEntity_k__BackingField) == 0) )
   {
-    sub_1C6BC60(this, targetName);
+    sub_1C71608(this, targetName);
   }
   ObjectName = GalleryResourceEntity__GetObjectName((GalleryResourceEntity_o *)this, 0);
   if ( !System_String__IsNullOrEmpty(ObjectName, 0) )
-    v7 = System_String__Concat_64005056(v7, (System_String_o *)StringLiteral_1041/*"/"*/, ObjectName, 0);
+    v7 = System_String__Concat_64069988(v7, (System_String_o *)StringLiteral_1041/*"/"*/, ObjectName, 0);
   return System_String__op_Equality(v7, targetName, 0);
 }
 
@@ -258,7 +278,7 @@ bool GalleryFullScreenListViewItemDraw__IsStandardSize(
                                                  v4,
                                                  v4->klass->vtable._26_get_mainTexture.method)) == 0) )
   {
-    sub_1C6BC60(backTexture, method);
+    sub_1C71608(backTexture, method);
   }
   return v5
        / ((int (__fastcall *)(struct ExUITexture_o *, const MethodInfo *))backTexture->klass->vtable._6_get_canBeAnchored.methodPtr)(
@@ -273,11 +293,11 @@ void GalleryFullScreenListViewItemDraw__OpenPause(GalleryFullScreenListViewItemD
   UnityEngine_Object_o *moviePlayer; // x20
   CRIMoviePlayer_o *v5; // x20
 
-  if ( (byte_4CB1263 & 1) == 0 )
+  if ( (byte_4CC2370 & 1) == 0 )
   {
-    sub_1C6BA08(&BgmManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB1263 = 1;
+    sub_1C713B0(&BgmManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC2370 = 1;
   }
   movieControl = this->fields.movieControl;
   if ( !movieControl )
@@ -291,10 +311,10 @@ void GalleryFullScreenListViewItemDraw__OpenPause(GalleryFullScreenListViewItemD
     v5 = this->fields.moviePlayer;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4CB10C7 )
+    if ( !byte_4CC21CB )
     {
-      sub_1C6BA08(&BgmManager_TypeInfo);
-      byte_4CB10C7 = 1;
+      sub_1C713B0(&BgmManager_TypeInfo);
+      byte_4CC21CB = 1;
     }
     movieControl = (CRIMovieControl_o *)BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -308,7 +328,7 @@ void GalleryFullScreenListViewItemDraw__OpenPause(GalleryFullScreenListViewItemD
       goto LABEL_15;
     }
 LABEL_17:
-    sub_1C6BC60(movieControl, method);
+    sub_1C71608(movieControl, method);
   }
 LABEL_15:
   movieControl = this->fields.movieControl;
@@ -328,58 +348,90 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
   UnityEngine_Transform_o *transform; // x22
   Il2CppObject *v8; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  struct CRIMoviePlayer_o *v11; // x21
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  struct UITexture_o *backBgTexture; // x1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  intptr_t busyAnim; // x1
-  struct UITexture_o *v20; // x8
-  struct UITexture_o *v21; // x8
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  struct CRIMoviePlayer_o *v15; // x21
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  struct UITexture_o *v24; // x1
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
-  struct CRIMoviePlayer_o *v27; // x8
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
+  struct UITexture_o *backBgTexture; // x1
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
+  intptr_t busyAnim; // x1
+  struct UITexture_o *v36; // x8
+  struct UITexture_o *v37; // x8
+  int32_t v38; // w2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  int32_t v41; // w5
+  int64_t v42; // x6
+  System_String_o *v43; // x7
+  struct UITexture_o *v44; // x1
+  int32_t v45; // w2
+  int32_t v46; // w3
+  System_String_o *v47; // x4
+  int32_t v48; // w5
+  int64_t v49; // x6
+  System_String_o *v50; // x7
+  struct CRIMoviePlayer_o *v51; // x8
   struct ExUITexture_o *texture; // x1
-  struct CRIMoviePlayer_o *v29; // x8
-  GalleryFullScreenListViewItemDraw_o *v30; // x21
-  struct GalleryFullScreenListViewItem_o *v31; // x8
+  struct CRIMoviePlayer_o *v53; // x8
+  GalleryFullScreenListViewItemDraw_o *v54; // x21
+  struct GalleryFullScreenListViewItem_o *v55; // x8
   struct GalleryResourceEntity_o *GalleryResourceEntity_k__BackingField; // x8
-  CRIMoviePlayer_o *v33; // x21
+  CRIMoviePlayer_o *v57; // x21
   System_String_o *assetPath; // x22
   System_String_o *Path; // x23
-  BgmManager_c *v36; // x0
+  BgmManager_c *v60; // x0
   float masterVolume; // s8
-  System_Action_o *v38; // x24
-  CinemascopeSideFrame_o *v39; // x25
+  System_Action_o *v62; // x24
+  CinemascopeSideFrame_o *v63; // x25
   System_Action_o *nonDeleteCallBack; // x26
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  System_Collections_IEnumerator_o *v43; // x0
-  int32_t v44; // w2
-  const MethodInfo *v45; // x3
+  int32_t v65; // w2
+  int32_t v66; // w3
+  System_String_o *v67; // x4
+  int32_t v68; // w5
+  int64_t v69; // x6
+  System_String_o *v70; // x7
+  System_Collections_IEnumerator_o *v71; // x0
+  int32_t v72; // w2
+  int32_t v73; // w3
+  System_String_o *v74; // x4
+  int32_t v75; // w5
+  int64_t v76; // x6
+  System_String_o *v77; // x7
   struct CRIMovieControl_o *movieControl; // x8
-  struct CRIMovieControl_o *v47; // x8
+  struct CRIMovieControl_o *v79; // x8
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4CB1262 & 1) == 0 )
+  if ( (byte_4CC236F & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&BgmManager_TypeInfo);
-    sub_1C6BA08(&CinemascopeSideFrame_TypeInfo);
-    sub_1C6BA08(&Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_0__);
-    sub_1C6BA08(&Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_1__);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponentInChildren_UIButton___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_CRIMoviePlayer___);
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB1262 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&BgmManager_TypeInfo);
+    sub_1C713B0(&CinemascopeSideFrame_TypeInfo);
+    sub_1C713B0(&Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_0__);
+    sub_1C713B0(&Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_1__);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponentInChildren_UIButton___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_CRIMoviePlayer___);
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC236F = 1;
   }
   if ( v2->fields.data )
   {
@@ -404,35 +456,43 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v2, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v8 = UnityEngine_Object__Instantiate_object__52199488(
+    v8 = UnityEngine_Object__Instantiate_object__52264420(
            moviePlayerPrefab,
            transform,
-           (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_CRIMoviePlayer___);
+           (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_CRIMoviePlayer___);
     v2->fields.moviePlayer = (struct CRIMoviePlayer_o *)v8;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.moviePlayer, (int32_t)v8, v9, v10);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.moviePlayer, (int32_t)v8, v9, v10, v11, v12, v13, v14);
     this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.touchPanel;
     if ( this )
     {
-      v11 = v2->fields.moviePlayer;
+      v15 = v2->fields.moviePlayer;
       this = (GalleryFullScreenListViewItemDraw_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
                                                       (UnityEngine_GameObject_o *)this,
-                                                      (const MethodInfo_3193390 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIButton___);
-      if ( v11 )
+                                                      (const MethodInfo_31A3134 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIButton___);
+      if ( v15 )
       {
-        v11->fields.touch = (struct UIButton_o *)this;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v11->fields.touch, (int32_t)this, v12, v13);
+        v15->fields.touch = (struct UIButton_o *)this;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v15->fields.touch, (int32_t)this, v16, v17, v18, v19, v20, v21);
         this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.moviePlayer;
         if ( this )
         {
           backBgTexture = v2->fields.backBgTexture;
           this[1].monitor = backBgTexture;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&this[1].monitor, (int32_t)backBgTexture, v14, v15);
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&this[1].monitor,
+            (int32_t)backBgTexture,
+            v22,
+            v23,
+            v24,
+            v25,
+            v26,
+            v27);
           this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.moviePlayer;
           if ( this )
           {
             busyAnim = (intptr_t)v2->fields.busyAnim;
             this[1].fields.m_CachedPtr = busyAnim;
-            sub_1C6B9AC((CGThumbnailListItem_o *)&this[1].fields, busyAnim, v17, v18);
+            sub_1C71354((GrandQuestFolderBoardItem_o *)&this[1].fields, busyAnim, v29, v30, v31, v32, v33, v34);
             this = *p_moviePlayer;
             if ( *p_moviePlayer )
             {
@@ -444,50 +504,62 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
                 UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
                 if ( *p_moviePlayer )
                 {
-                  v20 = v2->fields.backBgTexture;
-                  if ( v20 )
+                  v36 = v2->fields.backBgTexture;
+                  if ( v36 )
                   {
                     this = (GalleryFullScreenListViewItemDraw_o *)(*p_moviePlayer)->fields.seekSequenceCoroutine;
                     if ( this )
                     {
-                      UIWidget__set_width((UIWidget_o *)this, v20->fields.mWidth, 0);
+                      UIWidget__set_width((UIWidget_o *)this, v36->fields.mWidth, 0);
                       if ( *p_moviePlayer )
                       {
-                        v21 = v2->fields.backBgTexture;
-                        if ( v21 )
+                        v37 = v2->fields.backBgTexture;
+                        if ( v37 )
                         {
                           this = (GalleryFullScreenListViewItemDraw_o *)(*p_moviePlayer)->fields.seekSequenceCoroutine;
                           if ( this )
                           {
-                            UIWidget__set_height((UIWidget_o *)this, v21->fields.mHeight, 0);
+                            UIWidget__set_height((UIWidget_o *)this, v37->fields.mHeight, 0);
                             this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.movieControl;
                             if ( this )
                             {
-                              v24 = (struct UITexture_o *)v2->fields.moviePlayer;
-                              this->fields.backBgTexture = v24;
-                              sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.backBgTexture, (int32_t)v24, v22, v23);
-                              v27 = v2->fields.moviePlayer;
-                              if ( v27 )
+                              v44 = (struct UITexture_o *)v2->fields.moviePlayer;
+                              this->fields.backBgTexture = v44;
+                              sub_1C71354(
+                                (GrandQuestFolderBoardItem_o *)&this->fields.backBgTexture,
+                                (int32_t)v44,
+                                v38,
+                                v39,
+                                v40,
+                                v41,
+                                v42,
+                                v43);
+                              v51 = v2->fields.moviePlayer;
+                              if ( v51 )
                               {
                                 this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.movieControl;
                                 if ( this )
                                 {
-                                  texture = (struct ExUITexture_o *)v27->fields.texture;
+                                  texture = (struct ExUITexture_o *)v51->fields.texture;
                                   this->fields.backTexture = texture;
-                                  sub_1C6B9AC(
-                                    (CGThumbnailListItem_o *)&this->fields.backTexture,
+                                  sub_1C71354(
+                                    (GrandQuestFolderBoardItem_o *)&this->fields.backTexture,
                                     (int32_t)texture,
-                                    v25,
-                                    v26);
+                                    v45,
+                                    v46,
+                                    v47,
+                                    v48,
+                                    v49,
+                                    v50);
                                   this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.movieControl;
                                   if ( this )
                                   {
                                     CRIMovieControl__Closed((CRIMovieControl_o *)this, 0);
                                     GameObjectHelper__SetActiveSafely(v2->fields.movieControlPanel, 1, 0);
-                                    v29 = v2->fields.moviePlayer;
-                                    if ( v29 )
+                                    v53 = v2->fields.moviePlayer;
+                                    if ( v53 )
                                     {
-                                      this = (GalleryFullScreenListViewItemDraw_o *)v29->fields.texture;
+                                      this = (GalleryFullScreenListViewItemDraw_o *)v53->fields.texture;
                                       if ( this )
                                       {
                                         this = (GalleryFullScreenListViewItemDraw_o *)UnityEngine_Component__get_gameObject(
@@ -495,7 +567,7 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
                                                                                         0);
                                         if ( v2->fields.backBgTexture )
                                         {
-                                          v30 = this;
+                                          v54 = this;
                                           this = (GalleryFullScreenListViewItemDraw_o *)UnityEngine_Component__get_transform(
                                                                                           (UnityEngine_Component_o *)v2->fields.backBgTexture,
                                                                                           0);
@@ -505,61 +577,61 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
                                                            (UnityEngine_Transform_o *)this,
                                                            0);
                                             GameObjectExtensions__SetLocalScale(
-                                              (UnityEngine_GameObject_o *)v30,
+                                              (UnityEngine_GameObject_o *)v54,
                                               localScale,
                                               0);
-                                            v31 = v2->fields.galleryFullScreenListViewItem;
-                                            if ( v31 )
+                                            v55 = v2->fields.galleryFullScreenListViewItem;
+                                            if ( v55 )
                                             {
-                                              GalleryResourceEntity_k__BackingField = v31->fields._GalleryResourceEntity_k__BackingField;
+                                              GalleryResourceEntity_k__BackingField = v55->fields._GalleryResourceEntity_k__BackingField;
                                               if ( GalleryResourceEntity_k__BackingField )
                                               {
                                                 this = (GalleryFullScreenListViewItemDraw_o *)v2->fields.data;
                                                 if ( this )
                                                 {
-                                                  v33 = v2->fields.moviePlayer;
+                                                  v57 = v2->fields.moviePlayer;
                                                   assetPath = GalleryResourceEntity_k__BackingField->fields.assetPath;
                                                   Path = AssetData__get_Path((AssetData_o *)this, 0);
                                                   if ( !BgmManager_TypeInfo->_2.cctor_finished )
                                                     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-                                                  if ( !byte_4CB10C7 )
+                                                  if ( !byte_4CC21CB )
                                                   {
-                                                    sub_1C6BA08(&BgmManager_TypeInfo);
-                                                    byte_4CB10C7 = 1;
+                                                    sub_1C713B0(&BgmManager_TypeInfo);
+                                                    byte_4CC21CB = 1;
                                                   }
-                                                  v36 = BgmManager_TypeInfo;
+                                                  v60 = BgmManager_TypeInfo;
                                                   if ( !BgmManager_TypeInfo->_2.cctor_finished )
                                                   {
                                                     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-                                                    v36 = BgmManager_TypeInfo;
+                                                    v60 = BgmManager_TypeInfo;
                                                   }
-                                                  masterVolume = v36->static_fields->masterVolume;
-                                                  v38 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+                                                  masterVolume = v60->static_fields->masterVolume;
+                                                  v62 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
                                                   System_Action___ctor(
-                                                    v38,
+                                                    v62,
                                                     (Il2CppObject *)v2,
                                                     Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_0__,
                                                     0);
-                                                  v39 = (CinemascopeSideFrame_o *)sub_1C6BC54(CinemascopeSideFrame_TypeInfo);
-                                                  CinemascopeSideFrame___ctor(v39, 0, 1, 0);
-                                                  nonDeleteCallBack = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+                                                  v63 = (CinemascopeSideFrame_o *)sub_1C715FC(CinemascopeSideFrame_TypeInfo);
+                                                  CinemascopeSideFrame___ctor(v63, 0, 1, 0);
+                                                  nonDeleteCallBack = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
                                                   System_Action___ctor(
                                                     nonDeleteCallBack,
                                                     (Il2CppObject *)v2,
                                                     Method_GalleryFullScreenListViewItemDraw__PlayMovie_b__35_1__,
                                                     0);
-                                                  if ( v33 )
+                                                  if ( v57 )
                                                   {
                                                     CRIMoviePlayer__Initialize(
-                                                      v33,
+                                                      v57,
                                                       assetPath,
                                                       Path,
                                                       masterVolume,
                                                       1,
                                                       0,
-                                                      v38,
+                                                      v62,
                                                       1,
-                                                      v39,
+                                                      v63,
                                                       0,
                                                       0,
                                                       1,
@@ -577,26 +649,34 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
                                                           (System_Collections_IEnumerator_o *)method,
                                                           0);
                                                         v2->fields.playSeekSequenceCoroutine = 0;
-                                                        sub_1C6B9AC(
-                                                          (CGThumbnailListItem_o *)&v2->fields.playSeekSequenceCoroutine,
+                                                        sub_1C71354(
+                                                          (GrandQuestFolderBoardItem_o *)&v2->fields.playSeekSequenceCoroutine,
                                                           0,
-                                                          v41,
-                                                          v42);
+                                                          v65,
+                                                          v66,
+                                                          v67,
+                                                          v68,
+                                                          v69,
+                                                          v70);
                                                       }
                                                       this = *p_moviePlayer;
                                                       if ( *p_moviePlayer )
                                                       {
-                                                        v43 = CRIMoviePlayer__PlaySeekSequence(
+                                                        v71 = CRIMoviePlayer__PlaySeekSequence(
                                                                 (CRIMoviePlayer_o *)this,
                                                                 0,
                                                                 0);
-                                                        v2->fields.playSeekSequenceCoroutine = v43;
-                                                        sub_1C6B9AC(
-                                                          (CGThumbnailListItem_o *)&v2->fields.playSeekSequenceCoroutine,
-                                                          (int32_t)v43,
-                                                          v44,
-                                                          v45);
-                                                        this = (GalleryFullScreenListViewItemDraw_o *)UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)v2, v2->fields.playSeekSequenceCoroutine, 0);
+                                                        v2->fields.playSeekSequenceCoroutine = v71;
+                                                        sub_1C71354(
+                                                          (GrandQuestFolderBoardItem_o *)&v2->fields.playSeekSequenceCoroutine,
+                                                          (int32_t)v71,
+                                                          v72,
+                                                          v73,
+                                                          v74,
+                                                          v75,
+                                                          v76,
+                                                          v77);
+                                                        this = (GalleryFullScreenListViewItemDraw_o *)UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)v2, v2->fields.playSeekSequenceCoroutine, 0);
                                                         movieControl = v2->fields.movieControl;
                                                         if ( movieControl )
                                                         {
@@ -610,10 +690,10 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
                                                                 (UnityEngine_GameObject_o *)this,
                                                                 0,
                                                                 0);
-                                                              v47 = v2->fields.movieControl;
-                                                              if ( v47 )
+                                                              v79 = v2->fields.movieControl;
+                                                              if ( v79 )
                                                               {
-                                                                this = (GalleryFullScreenListViewItemDraw_o *)v47->fields.pauseButton;
+                                                                this = (GalleryFullScreenListViewItemDraw_o *)v79->fields.pauseButton;
                                                                 if ( this )
                                                                 {
                                                                   this = (GalleryFullScreenListViewItemDraw_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -657,7 +737,7 @@ void GalleryFullScreenListViewItemDraw__PlayMovie(GalleryFullScreenListViewItemD
       }
     }
 LABEL_55:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
 }
 
@@ -670,26 +750,38 @@ System_Collections_IEnumerator_o *GalleryFullScreenListViewItemDraw__PlayMovieCo
 {
   __int64 v7; // x22
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
 
-  if ( (byte_4CB1261 & 1) == 0 )
+  if ( (byte_4CC236E & 1) == 0 )
   {
-    sub_1C6BA08(&GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_TypeInfo);
-    byte_4CB1261 = 1;
+    sub_1C713B0(&GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_TypeInfo);
+    byte_4CC236E = 1;
   }
-  v7 = sub_1C6BC54(GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_TypeInfo);
+  v7 = sub_1C715FC(GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 40) = enableControlCallBack;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)enableControlCallBack, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)enableControlCallBack, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v7 + 48) = endFullScreenAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 48), (int32_t)endFullScreenAction, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)endFullScreenAction, v20, v21, v22, v23, v24, v25);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -703,30 +795,46 @@ System_Collections_IEnumerator_o *GalleryFullScreenListViewItemDraw__SetCGCorout
 {
   __int64 v9; // x23
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
 
-  if ( (byte_4CB125B & 1) == 0 )
+  if ( (byte_4CC2368 & 1) == 0 )
   {
-    sub_1C6BA08(&GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_TypeInfo);
-    byte_4CB125B = 1;
+    sub_1C713B0(&GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_TypeInfo);
+    byte_4CC2368 = 1;
   }
-  v9 = sub_1C6BC54(GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_TypeInfo);
+  v9 = sub_1C715FC(GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   *(_DWORD *)(v9 + 16) = 0;
   *(_QWORD *)(v9 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 32), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v9 + 40) = assetPath;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 40), (int32_t)assetPath, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 40), (int32_t)assetPath, v16, v17, v18, v19, v20, v21);
   *(_QWORD *)(v9 + 48) = objName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 48), (int32_t)objName, v14, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)objName, v22, v23, v24, v25, v26, v27);
   *(_QWORD *)(v9 + 56) = callAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 56), (int32_t)callAction, v16, v17);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 56), (int32_t)callAction, v28, v29, v30, v31, v32, v33);
   return (System_Collections_IEnumerator_o *)v9;
 }
 
@@ -739,19 +847,23 @@ void GalleryFullScreenListViewItemDraw__SetData(
   struct AssetData_o *AssetStorage; // x0
   struct AssetData_o **p_data; // x19
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
-  if ( (byte_4CB125E & 1) == 0 )
+  if ( (byte_4CC236B & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    byte_4CB125E = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    byte_4CC236B = 1;
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   AssetStorage = AssetManager__getAssetStorage(assetName, 0);
   this->fields.data = AssetStorage;
   p_data = &this->fields.data;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_data, (int32_t)AssetStorage, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p_data, (int32_t)AssetStorage, v7, v8, v9, v10, v11, v12);
   *((_BYTE *)p_data + 16) = *p_data == 0;
 }
 
@@ -763,22 +875,30 @@ System_Collections_IEnumerator_o *GalleryFullScreenListViewItemDraw__SetDataCoro
 {
   __int64 v5; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
 
-  if ( (byte_4CB125C & 1) == 0 )
+  if ( (byte_4CC2369 & 1) == 0 )
   {
-    sub_1C6BA08(&GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_TypeInfo);
-    byte_4CB125C = 1;
+    sub_1C713B0(&GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_TypeInfo);
+    byte_4CC2369 = 1;
   }
-  v5 = sub_1C6BC54(GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_TypeInfo);
+  v5 = sub_1C715FC(GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = imgName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)imgName, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)imgName, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -790,10 +910,13 @@ void GalleryFullScreenListViewItemDraw__SetItem(
         System_Action_o *callAction,
         const MethodInfo *method)
 {
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct GalleryFullScreenListViewItem_o *galleryFullScreenListViewItem; // x8
   struct GalleryFullScreenListViewItem_o **p_galleryFullScreenListViewItem; // x22
   ExUITexture_o *backTexture; // x0
-  const MethodInfo *v11; // x2
+  const MethodInfo *v14; // x2
 
   if ( item && mode )
   {
@@ -803,16 +926,20 @@ void GalleryFullScreenListViewItemDraw__SetItem(
     {
       backTexture = this->fields.backTexture;
       if ( !backTexture )
-        sub_1C6BC60(0, item);
+        sub_1C71608(0, item);
       ExUITexture__ClearImage(backTexture, 0);
     }
     this->fields.galleryFullScreenListViewItem = item;
-    sub_1C6B9AC(
-      (CGThumbnailListItem_o *)p_galleryFullScreenListViewItem,
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)p_galleryFullScreenListViewItem,
       (int32_t)item,
       mode,
-      (const MethodInfo *)callAction);
-    GalleryFullScreenListViewItemDraw__Init(this, callAction, v11);
+      (int32_t)callAction,
+      (System_String_o *)method,
+      v5,
+      v6,
+      v7);
+    GalleryFullScreenListViewItemDraw__Init(this, callAction, v14);
   }
 }
 
@@ -823,24 +950,44 @@ void GalleryFullScreenListViewItemDraw__SetMovieCallBack(
         System_Action_o *endFullScreenAction,
         const MethodInfo *method)
 {
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct CRIMovieControl_o *movieControl; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
   movieControl = this->fields.movieControl;
   if ( !movieControl
     || (movieControl->fields.enableControlCallBack = enableControlCallBack,
-        sub_1C6B9AC(
-          (CGThumbnailListItem_o *)&movieControl->fields.enableControlCallBack,
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&movieControl->fields.enableControlCallBack,
           (int32_t)enableControlCallBack,
           (int32_t)endFullScreenAction,
-          method),
+          (int32_t)method,
+          v4,
+          v5,
+          v6,
+          v7),
         (movieControl = this->fields.movieControl) == 0) )
   {
-    sub_1C6BC60(movieControl, enableControlCallBack);
+    sub_1C71608(movieControl, enableControlCallBack);
   }
   movieControl->fields.endFullScreenAction = endFullScreenAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&movieControl->fields.endFullScreenAction, (int32_t)endFullScreenAction, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&movieControl->fields.endFullScreenAction,
+    (int32_t)endFullScreenAction,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
 }
 
 
@@ -852,26 +999,38 @@ System_Collections_IEnumerator_o *GalleryFullScreenListViewItemDraw__SetMovieDat
 {
   __int64 v7; // x22
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
 
-  if ( (byte_4CB1260 & 1) == 0 )
+  if ( (byte_4CC236D & 1) == 0 )
   {
-    sub_1C6BA08(&GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_TypeInfo);
-    byte_4CB1260 = 1;
+    sub_1C713B0(&GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_TypeInfo);
+    byte_4CC236D = 1;
   }
-  v7 = sub_1C6BC54(GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_TypeInfo);
+  v7 = sub_1C715FC(GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v7 + 40) = assetPath;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)assetPath, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)assetPath, v14, v15, v16, v17, v18, v19);
   *(_QWORD *)(v7 + 48) = callAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 48), (int32_t)callAction, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)callAction, v20, v21, v22, v23, v24, v25);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -890,7 +1049,7 @@ void GalleryFullScreenListViewItemDraw__SetMovieLocalScale(
 
   backBgTexture = (UnityEngine_Component_o *)this->fields.backBgTexture;
   if ( !backBgTexture )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   z = scale.fields.z;
   y = scale.fields.y;
   x = scale.fields.x;
@@ -925,12 +1084,12 @@ void GalleryFullScreenListViewItemDraw__SetScale(
   struct ExUITexture_o *backTexture; // x8
 
   v6 = this;
-  if ( (byte_4CB1265 & 1) == 0 )
+  if ( (byte_4CC2372 & 1) == 0 )
   {
-    sub_1C6BA08(&FSUtility_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_1041/*"/"*/);
-    byte_4CB1265 = 1;
+    sub_1C713B0(&FSUtility_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C713B0(&StringLiteral_1041/*"/"*/);
+    byte_4CC2372 = 1;
   }
   galleryFullScreenListViewItem = v6->fields.galleryFullScreenListViewItem;
   if ( !galleryFullScreenListViewItem )
@@ -994,7 +1153,7 @@ void GalleryFullScreenListViewItemDraw__SetScale(
       goto LABEL_35;
     ObjectName = GalleryResourceEntity__GetObjectName((GalleryResourceEntity_o *)this, 0);
     if ( !System_String__IsNullOrEmpty(ObjectName, 0) )
-      v15 = System_String__Concat_64005056(v15, (System_String_o *)StringLiteral_1041/*"/"*/, ObjectName, 0);
+      v15 = System_String__Concat_64069988(v15, (System_String_o *)StringLiteral_1041/*"/"*/, ObjectName, 0);
     IsStandardSize = GalleryFullScreenListViewItemDraw__IsStandardSize(v6, v17);
     if ( IsStandardSize
       && !GalleryFullScreenListViewItemDraw__IsGallerySubstituteData(
@@ -1017,7 +1176,7 @@ LABEL_12:
         }
       }
 LABEL_35:
-      sub_1C6BC60(this, width);
+      sub_1C71608(this, width);
     }
     this = (GalleryFullScreenListViewItemDraw_o *)v6->fields.backTexture;
     if ( !this )
@@ -1064,7 +1223,7 @@ void GalleryFullScreenListViewItemDraw__SetTextureScale(
   if ( !backTexture
     || (UIWidget__set_width(backTexture, height[1], 0), (backTexture = (UIWidget_o *)this->fields.backTexture) == 0) )
   {
-    sub_1C6BC60(backTexture, v4);
+    sub_1C71608(backTexture, v4);
   }
   UIWidget__set_height(backTexture, height[0], 0);
 }
@@ -1084,11 +1243,11 @@ void GalleryFullScreenListViewItemDraw__SetUpTextureSize(
   UIWidget_o *v10; // x8
 
   v3 = textureName;
-  if ( (byte_4CB1266 & 1) == 0 )
+  if ( (byte_4CC2373 & 1) == 0 )
   {
-    sub_1C6BA08(&FSUtility_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB1266 = 1;
+    sub_1C713B0(&FSUtility_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC2373 = 1;
   }
   backTexture = this->fields.backTexture;
   if ( !backTexture )
@@ -1135,7 +1294,7 @@ LABEL_20:
             return;
           }
 LABEL_22:
-          sub_1C6BC60(backTexture, textureName);
+          sub_1C71608(backTexture, textureName);
         }
       }
       textureName = (System_String_o *)&qword_240;
@@ -1157,18 +1316,30 @@ void GalleryFullScreenListViewItemDraw__StartPlayMovieCoroutine(
   const MethodInfo *v8; // x3
   struct System_Collections_IEnumerator_o *v9; // x0
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
 
   galleryFullScreenListViewItem = this->fields.galleryFullScreenListViewItem;
   if ( !galleryFullScreenListViewItem )
-    sub_1C6BC60(this, enableControlCallBack);
+    sub_1C71608(this, enableControlCallBack);
   if ( GalleryType__IsMovie(galleryFullScreenListViewItem->fields._CurrentGalleryType_k__BackingField, 0)
     && !this->fields.playMovieCoroutine )
   {
     v9 = GalleryFullScreenListViewItemDraw__PlayMovieCoroutine(this, enableControlCallBack, endFullScreenAction, v8);
     this->fields.playMovieCoroutine = v9;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.playMovieCoroutine, (int32_t)v9, v10, v11);
-    UnityEngine_MonoBehaviour__StartCoroutine_71644868(
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.playMovieCoroutine,
+      (int32_t)v9,
+      v10,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15);
+    UnityEngine_MonoBehaviour__StartCoroutine_71709800(
       (UnityEngine_MonoBehaviour_o *)this,
       this->fields.playMovieCoroutine,
       0);
@@ -1178,26 +1349,38 @@ void GalleryFullScreenListViewItemDraw__StartPlayMovieCoroutine(
 
 void GalleryFullScreenListViewItemDraw__StopMovie(GalleryFullScreenListViewItemDraw_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_moviePlayer; // x19
+  GrandQuestFolderBoardItem_o *p_moviePlayer; // x19
   UnityEngine_Object_o *moviePlayer; // x21
   __int64 v5; // x1
   struct CRIMovieControl_o *klass; // x0
   UnityEngine_Object_o *movieControl; // x21
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   UnityEngine_Object_o *movieControlPanel; // x21
   UnityEngine_Object_o *gameObject; // x20
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
 
-  if ( (byte_4CB1264 & 1) == 0 )
+  if ( (byte_4CC2371 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB1264 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC2371 = 1;
   }
-  p_moviePlayer = (CGThumbnailListItem_o *)&this->fields.moviePlayer;
+  p_moviePlayer = (GrandQuestFolderBoardItem_o *)&this->fields.moviePlayer;
   moviePlayer = (UnityEngine_Object_o *)this->fields.moviePlayer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1225,12 +1408,12 @@ void GalleryFullScreenListViewItemDraw__StopMovie(GalleryFullScreenListViewItemD
           if ( !klass )
             goto LABEL_26;
           klass->fields.player = 0;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&klass->fields.player, 0, v8, v9);
+          sub_1C71354((GrandQuestFolderBoardItem_o *)&klass->fields.player, 0, v8, v9, v10, v11, v12, v13);
           klass = this->fields.movieControl;
           if ( !klass )
             goto LABEL_26;
           klass->fields.texture = 0;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&klass->fields.texture, 0, v10, v11);
+          sub_1C71354((GrandQuestFolderBoardItem_o *)&klass->fields.texture, 0, v14, v15, v16, v17, v18, v19);
         }
         movieControlPanel = (UnityEngine_Object_o *)this->fields.movieControlPanel;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1245,15 +1428,15 @@ void GalleryFullScreenListViewItemDraw__StopMovie(GalleryFullScreenListViewItemD
                                                  0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_71659676(gameObject, 0);
+          UnityEngine_Object__Destroy_71724608(gameObject, 0);
           p_moviePlayer->klass = 0;
-          sub_1C6B9AC(p_moviePlayer, 0, v14, v15);
+          sub_1C71354(p_moviePlayer, 0, v22, v23, v24, v25, v26, v27);
           return;
         }
       }
     }
 LABEL_26:
-    sub_1C6BC60(klass, v5);
+    sub_1C71608(klass, v5);
   }
 }
 
@@ -1283,7 +1466,7 @@ bool GalleryFullScreenListViewItemDraw___PlayMovieCoroutine_b__34_0(
   if ( !galleryFullScreenListViewItem
     || (this = (GalleryFullScreenListViewItemDraw_o *)galleryFullScreenListViewItem->fields._GalleryResourceEntity_k__BackingField) == 0 )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   name = data->fields.name;
   AssetPath = GalleryResourceEntity__GetAssetPath((GalleryResourceEntity_o *)this, 0);
@@ -1302,11 +1485,11 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_0(
   const MethodInfo *v6; // x2
 
   v2 = this;
-  if ( (byte_4CB1268 & 1) == 0 )
+  if ( (byte_4CC2375 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C6BA08(&Method_GalleryFullScreenListViewItemDraw_PlayMovie__);
-    byte_4CB1268 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    this = (GalleryFullScreenListViewItemDraw_o *)sub_1C713B0(&Method_GalleryFullScreenListViewItemDraw_PlayMovie__);
+    byte_4CC2375 = 1;
   }
   moviePlayer = v2->fields.moviePlayer;
   if ( !moviePlayer )
@@ -1322,11 +1505,11 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_0(
         (galleryFullScreenListViewItem = v2->fields.galleryFullScreenListViewItem) == 0) )
   {
 LABEL_11:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   if ( galleryFullScreenListViewItem->fields.isCenterItem )
   {
-    v5 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)v2, Method_GalleryFullScreenListViewItemDraw_PlayMovie__, 0);
     GalleryFullScreenListViewItemDraw__Init(v2, v5, v6);
   }
@@ -1347,24 +1530,32 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_1(
   struct CRIMoviePlayer_o *v10; // x8
   System_Collections_IEnumerator_o *seekSequenceCoroutine; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  CRIMoviePlayer_o *v14; // x21
-  System_Action_o *v15; // x22
-  struct System_Collections_IEnumerator_o *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  CRIMoviePlayer_o *v18; // x21
+  System_Action_o *v19; // x22
+  struct System_Collections_IEnumerator_o *v20; // x0
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
 
-  if ( (byte_4CB1269 & 1) == 0 )
+  if ( (byte_4CC2376 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&BgmManager_TypeInfo);
-    sub_1C6BA08(&Method_GalleryFullScreenListViewItemDraw_OpenPause__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&TouchEffectManager_TypeInfo);
-    byte_4CB1269 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&BgmManager_TypeInfo);
+    sub_1C713B0(&Method_GalleryFullScreenListViewItemDraw_OpenPause__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&TouchEffectManager_TypeInfo);
+    byte_4CC2376 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_30;
   CommonUI__SetLoadMode(Instance, 0, 0);
@@ -1428,21 +1619,37 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_1(
                       seekSequenceCoroutine,
                       0);
                     this->fields.seekSequenceCoroutine = 0;
-                    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.seekSequenceCoroutine, 0, v12, v13);
+                    sub_1C71354(
+                      (GrandQuestFolderBoardItem_o *)&this->fields.seekSequenceCoroutine,
+                      0,
+                      v12,
+                      v13,
+                      v14,
+                      v15,
+                      v16,
+                      v17);
                   }
-                  v14 = this->fields.moviePlayer;
-                  v15 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+                  v18 = this->fields.moviePlayer;
+                  v19 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
                   System_Action___ctor(
-                    v15,
+                    v19,
                     (Il2CppObject *)this,
                     Method_GalleryFullScreenListViewItemDraw_OpenPause__,
                     0);
-                  if ( v14 )
+                  if ( v18 )
                   {
-                    v16 = CRIMoviePlayer__SeekSequence(v14, 0, v15, 0);
-                    this->fields.seekSequenceCoroutine = v16;
-                    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.seekSequenceCoroutine, (int32_t)v16, v17, v18);
-                    UnityEngine_MonoBehaviour__StartCoroutine_71644868(
+                    v20 = CRIMoviePlayer__SeekSequence(v18, 0, v19, 0);
+                    this->fields.seekSequenceCoroutine = v20;
+                    sub_1C71354(
+                      (GrandQuestFolderBoardItem_o *)&this->fields.seekSequenceCoroutine,
+                      (int32_t)v20,
+                      v21,
+                      v22,
+                      v23,
+                      v24,
+                      v25,
+                      v26);
+                    UnityEngine_MonoBehaviour__StartCoroutine_71709800(
                       (UnityEngine_MonoBehaviour_o *)this,
                       this->fields.seekSequenceCoroutine,
                       0);
@@ -1452,7 +1659,7 @@ void GalleryFullScreenListViewItemDraw___PlayMovie_b__35_1(
               }
             }
 LABEL_30:
-            sub_1C6BC60(Instance, v4);
+            sub_1C71608(Instance, v4);
           }
         }
       }
@@ -1493,18 +1700,22 @@ bool GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34__MoveNext(
   System_Func_bool__o *v6; // x21
   UnityEngine_WaitWhile_o *v7; // x20
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   bool result; // w0
-  const MethodInfo *v11; // x1
+  const MethodInfo *v15; // x1
 
   v3 = this;
-  if ( (byte_4CB126A & 1) == 0 )
+  if ( (byte_4CC2377 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&Method_GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_b__34_0__);
-    this = (GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_o *)sub_1C6BA08(&UnityEngine_WaitWhile_TypeInfo);
-    byte_4CB126A = 1;
+    sub_1C713B0(&Method_ActionExtensions_Call_bool___);
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&Method_GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_b__34_0__);
+    this = (GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_o *)sub_1C713B0(&UnityEngine_WaitWhile_TypeInfo);
+    byte_4CC2377 = 1;
   }
   _1__state = v3->fields.__1__state;
   _4__this = v3->fields.__4__this;
@@ -1512,31 +1723,31 @@ bool GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34__MoveNext(
   {
     v3->fields.__1__state = -1;
     if ( !_4__this )
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     GalleryFullScreenListViewItemDraw__SetMovieCallBack(
       _4__this,
       v3->fields.enableControlCallBack,
       v3->fields.endFullScreenAction,
       v2);
-    GalleryFullScreenListViewItemDraw__PlayMovie(_4__this, v11);
+    GalleryFullScreenListViewItemDraw__PlayMovie(_4__this, v15);
     ActionExtensions__Call_bool_(
       (System_Action_T__o *)v3->fields.enableControlCallBack,
       0,
-      (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
+      (const MethodInfo_3095C18 *)Method_ActionExtensions_Call_bool___);
   }
   else if ( !_1__state )
   {
     v3->fields.__1__state = -1;
-    v6 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+    v6 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       v6,
       (Il2CppObject *)_4__this,
       Method_GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_b__34_0__,
       0);
-    v7 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
+    v7 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
     UnityEngine_WaitWhile___ctor(v7, v6, 0);
     v3->fields.__2__current = (Il2CppObject *)v7;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v3->fields.__2__current, (int32_t)v7, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->fields.__2__current, (int32_t)v7, v8, v9, v10, v11, v12, v13);
     result = 1;
     v3->fields.__1__state = 1;
     return result;
@@ -1561,11 +1772,11 @@ void __noreturn GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34__Sys
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_GalleryFullScreenListViewItemDraw__PlayMovieCoroutine_d__34_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -1600,54 +1811,66 @@ bool GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26__MoveNext(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *v4; // x20
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *v8; // x20
   int32_t _1__state; // w8
   struct GalleryFullScreenListViewItemDraw_o *_4__this; // x19
   struct System_String_o *assetPath; // x1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  CGThumbnailListItem_o *p_objName; // x0
-  int32_t v11; // w1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  GrandQuestFolderBoardItem_o *p_objName; // x0
+  int32_t v19; // w1
   AssetData_o *data; // x0
   struct ExUITexture_o *backTexture; // x8
-  UnityEngine_Object_o *v14; // x21
-  const MethodInfo *v15; // x2
-  const MethodInfo *v16; // x1
-  System_String_o *v17; // x0
-  const MethodInfo *v18; // x2
-  System_Collections_IEnumerator_o *v19; // x0
-  CGThumbnailListItem_o *p__2__current; // x20
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
+  UnityEngine_Object_o *v22; // x21
+  const MethodInfo *v23; // x2
+  const MethodInfo *v24; // x1
+  System_String_o *v25; // x0
+  const MethodInfo *v26; // x2
+  System_Collections_IEnumerator_o *v27; // x0
+  GrandQuestFolderBoardItem_o *p__2__current; // x20
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
   bool result; // w0
 
-  v4 = this;
-  if ( (byte_4CB126B & 1) == 0 )
+  v8 = this;
+  if ( (byte_4CC2378 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_AssetData_GetObject_Texture2D____78568232);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *)sub_1C6BA08(&StringLiteral_1041/*"/"*/);
-    byte_4CB126B = 1;
+    sub_1C713B0(&Method_AssetData_GetObject_Texture2D____78637000);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *)sub_1C713B0(&StringLiteral_1041/*"/"*/);
+    byte_4CC2378 = 1;
   }
-  _1__state = v4->fields.__1__state;
-  _4__this = v4->fields.__4__this;
+  _1__state = v8->fields.__1__state;
+  _4__this = v8->fields.__4__this;
   if ( _1__state == 1 )
   {
-    v4->fields.__1__state = -1;
+    v8->fields.__1__state = -1;
     if ( !_4__this )
       goto LABEL_25;
     data = _4__this->fields.data;
     if ( data )
     {
-      this = (GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *)AssetData__GetObject_object__51495936(
+      this = (GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *)AssetData__GetObject_object__51560868(
                                                                             data,
-                                                                            v4->fields.objName,
-                                                                            (const MethodInfo_311C400 *)Method_AssetData_GetObject_Texture2D____78568232);
+                                                                            v8->fields.objName,
+                                                                            (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_Texture2D____78637000);
       backTexture = _4__this->fields.backTexture;
       if ( !backTexture )
         goto LABEL_25;
-      v14 = (UnityEngine_Object_o *)this;
+      v22 = (UnityEngine_Object_o *)this;
       ((void (__fastcall *)(struct ExUITexture_o *__return_ptr, struct ExUITexture_o *, GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *, const MethodInfo *))backTexture->klass->vtable._27_set_mainTexture.methodPtr)(
         backTexture,
         _4__this->fields.backTexture,
@@ -1655,9 +1878,9 @@ bool GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26__MoveNext(
         backTexture->klass->vtable._27_set_mainTexture.method);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      _4__this->fields.setDataResult = UnityEngine_Object__op_Inequality(v14, 0, 0);
-      GalleryFullScreenListViewItemDraw__SetUpTextureSize(_4__this, v4->fields._imgName_5__2, v15);
-      GalleryFullScreenListViewItemDraw__SetTextureScale(_4__this, v16);
+      _4__this->fields.setDataResult = UnityEngine_Object__op_Inequality(v22, 0, 0);
+      GalleryFullScreenListViewItemDraw__SetUpTextureSize(_4__this, v8->fields._imgName_5__2, v23);
+      GalleryFullScreenListViewItemDraw__SetTextureScale(_4__this, v24);
     }
     else
     {
@@ -1669,7 +1892,7 @@ bool GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26__MoveNext(
         0,
         *(_QWORD *)&this->klass[1]._2.interfaces_count);
     }
-    ActionExtensions__Call(v4->fields.callAction, 0);
+    ActionExtensions__Call(v8->fields.callAction, 0);
     if ( _4__this->fields.setDataResult )
       return 0;
     this = (GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_o *)_4__this->fields.backTexture;
@@ -1698,41 +1921,41 @@ bool GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26__MoveNext(
       }
     }
 LABEL_25:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   if ( _1__state )
     return 0;
-  v4->fields.__1__state = -1;
+  v8->fields.__1__state = -1;
   if ( !_4__this )
     goto LABEL_25;
   *(_WORD *)&_4__this->fields.setDataWait = 1;
-  assetPath = v4->fields.assetPath;
-  v4->fields._imgName_5__2 = assetPath;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._imgName_5__2, (int32_t)assetPath, v2, v3);
-  if ( System_String__IsNullOrEmpty(v4->fields.objName, 0) )
+  assetPath = v8->fields.assetPath;
+  v8->fields._imgName_5__2 = assetPath;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v8->fields._imgName_5__2, (int32_t)assetPath, v2, v3, v4, v5, v6, v7);
+  if ( System_String__IsNullOrEmpty(v8->fields.objName, 0) )
   {
-    v4->fields.objName = 0;
-    p_objName = (CGThumbnailListItem_o *)&v4->fields.objName;
-    v11 = 0;
+    v8->fields.objName = 0;
+    p_objName = (GrandQuestFolderBoardItem_o *)&v8->fields.objName;
+    v19 = 0;
   }
   else
   {
-    v17 = System_String__Concat_64005056(
-            v4->fields.assetPath,
+    v25 = System_String__Concat_64069988(
+            v8->fields.assetPath,
             (System_String_o *)StringLiteral_1041/*"/"*/,
-            v4->fields.objName,
+            v8->fields.objName,
             0);
-    v11 = (int)v17;
-    v4->fields._imgName_5__2 = v17;
-    p_objName = (CGThumbnailListItem_o *)&v4->fields._imgName_5__2;
+    v19 = (int)v25;
+    v8->fields._imgName_5__2 = v25;
+    p_objName = (GrandQuestFolderBoardItem_o *)&v8->fields._imgName_5__2;
   }
-  sub_1C6B9AC(p_objName, v11, v8, v9);
-  v19 = GalleryFullScreenListViewItemDraw__SetDataCoroutine(_4__this, v4->fields._imgName_5__2, v18);
-  v4->fields.__2__current = (Il2CppObject *)v19;
-  p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-  sub_1C6B9AC(p__2__current, (int32_t)v19, v21, v22);
+  sub_1C71354(p_objName, v19, v12, v13, v14, v15, v16, v17);
+  v27 = GalleryFullScreenListViewItemDraw__SetDataCoroutine(_4__this, v8->fields._imgName_5__2, v26);
+  v8->fields.__2__current = (Il2CppObject *)v27;
+  p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+  sub_1C71354(p__2__current, (int32_t)v27, v29, v30, v31, v32, v33, v34);
   result = 1;
-  LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+  LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
   return result;
 }
 
@@ -1753,11 +1976,11 @@ void __noreturn GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26__System_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_GalleryFullScreenListViewItemDraw__SetCGCoroutine_d__26_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -1797,7 +2020,11 @@ bool GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27__MoveNext(
   const MethodInfo *v6; // x2
   float waitTime_5__2; // s8
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   Il2CppObject **p__2__current; // x19
   bool result; // w0
 
@@ -1815,7 +2042,7 @@ bool GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27__MoveNext(
       goto LABEL_6;
     }
 LABEL_12:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   this->fields.__1__state = -1;
   if ( !_4__this )
@@ -1832,7 +2059,7 @@ LABEL_6:
     {
       this->fields.__2__current = 0;
       p__2__current = &this->fields.__2__current;
-      sub_1C6B9AC((CGThumbnailListItem_o *)p__2__current, 0, v8, v9);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)p__2__current, 0, v8, v9, v10, v11, v12, v13);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
       return result;
@@ -1861,11 +2088,11 @@ void __noreturn GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27__Syste
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_GalleryFullScreenListViewItemDraw__SetDataCoroutine_d__27_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -1906,32 +2133,40 @@ bool GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__MoveNext(
   const MethodInfo *v6; // x2
   System_Func_bool__o *v7; // x22
   UnityEngine_WaitWhile_o *v8; // x19
-  CGThumbnailListItem_o *p__2__current; // x20
+  GrandQuestFolderBoardItem_o *p__2__current; // x20
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   System_String_o *assetPath; // x21
-  const MethodInfo *v13; // x2
-  GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *v14; // x21
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  const MethodInfo *v17; // x2
+  GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *v18; // x21
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
   struct GalleryFullScreenListViewItem_o *galleryFullScreenListViewItem; // x8
-  System_String_o *v18; // x21
+  System_String_o *v26; // x21
   bool IsFullScreenMovie; // w8
-  int32_t v20; // w21
+  int32_t v28; // w21
   AssetData_o *data; // x0
   System_String_o *Empty; // x0
-  UnityEngine_Color_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4CB126C & 1) == 0 )
+  if ( (byte_4CC2379 & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&FSUtility_TypeInfo);
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_b__32_0__);
-    sub_1C6BA08(&string_TypeInfo);
-    this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)sub_1C6BA08(&UnityEngine_WaitWhile_TypeInfo);
-    byte_4CB126C = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&FSUtility_TypeInfo);
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_b__32_0__);
+    sub_1C713B0(&string_TypeInfo);
+    this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)sub_1C713B0(&UnityEngine_WaitWhile_TypeInfo);
+    byte_4CC2379 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -1944,15 +2179,15 @@ bool GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__MoveNext(
     this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)AssetManager__getAsset(0, assetPath, 0);
     if ( !_4__this )
       goto LABEL_33;
-    v14 = this;
+    v18 = this;
     this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)GalleryFullScreenListViewItemDraw__IsSameName(
                                                                                  _4__this,
                                                                                  v2->fields.assetPath,
-                                                                                 v13);
+                                                                                 v17);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
-      _4__this->fields.data = (struct AssetData_o *)v14;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.data, (int32_t)v14, v15, v16);
+      _4__this->fields.data = (struct AssetData_o *)v18;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&_4__this->fields.data, (int32_t)v18, v19, v20, v21, v22, v23, v24);
     }
     galleryFullScreenListViewItem = _4__this->fields.galleryFullScreenListViewItem;
     if ( !galleryFullScreenListViewItem )
@@ -1960,19 +2195,19 @@ bool GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__MoveNext(
     this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)galleryFullScreenListViewItem->fields._GalleryResourceEntity_k__BackingField;
     if ( !this )
       goto LABEL_33;
-    v18 = GalleryResourceEntity__GetAssetPath((GalleryResourceEntity_o *)this, 0);
+    v26 = GalleryResourceEntity__GetAssetPath((GalleryResourceEntity_o *)this, 0);
     if ( !FSUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(FSUtility_TypeInfo);
-    IsFullScreenMovie = FSUtility__IsFullScreenMovie(v18, 0);
+    IsFullScreenMovie = FSUtility__IsFullScreenMovie(v26, 0);
     this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)_4__this->fields.backBgTexture;
-    v20 = IsFullScreenMovie ? 576 : 756;
+    v28 = IsFullScreenMovie ? 576 : 756;
     if ( !this )
       goto LABEL_33;
     UIWidget__set_width((UIWidget_o *)this, 1344, 0);
     this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)_4__this->fields.backBgTexture;
     if ( !this )
       goto LABEL_33;
-    UIWidget__set_height((UIWidget_o *)this, v20, 0);
+    UIWidget__set_height((UIWidget_o *)this, v28, 0);
     data = _4__this->fields.data;
     if ( !data || (Empty = AssetData__get_Path(data, 0)) == 0 )
       Empty = string_TypeInfo->static_fields->Empty;
@@ -1992,7 +2227,7 @@ bool GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__MoveNext(
                                                                                        0)) == 0 )
     {
 LABEL_33:
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
     GameObjectHelper__SetActiveSafely(_4__this->fields.movieControlPanel, 0, 0);
@@ -2007,26 +2242,26 @@ LABEL_33:
   this = (GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_o *)_4__this->fields.backBgTexture;
   if ( !this )
     goto LABEL_33;
-  v24.fields.r = 0.0;
-  v24.fields.g = 0.0;
-  v24.fields.b = 0.0;
-  v24.fields.a = 1.0;
-  UIWidget__set_color((UIWidget_o *)this, v24, 0);
+  v32.fields.r = 0.0;
+  v32.fields.g = 0.0;
+  v32.fields.b = 0.0;
+  v32.fields.a = 1.0;
+  UIWidget__set_color((UIWidget_o *)this, v32, 0);
   v5 = 1;
   *(_WORD *)&_4__this->fields.setDataWait = 1;
   GalleryFullScreenListViewItemDraw__DownloadMovieAsset(_4__this, v2->fields.assetPath, v6);
-  v7 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+  v7 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v7,
     (Il2CppObject *)_4__this,
     Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_b__32_0__,
     0);
-  v8 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
+  v8 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
   UnityEngine_WaitWhile___ctor(v8, v7, 0);
   v2->fields.__2__current = (Il2CppObject *)v8;
-  p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1C6B9AC(p__2__current, (int32_t)v8, v10, v11);
-  LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+  p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
+  sub_1C71354(p__2__current, (int32_t)v8, v10, v11, v12, v13, v14, v15);
+  LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
   return v5;
 }
 
@@ -2047,11 +2282,11 @@ void __noreturn GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32__
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_GalleryFullScreenListViewItemDraw__SetMovieDataCoroutine_d__32_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 

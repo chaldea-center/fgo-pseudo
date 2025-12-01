@@ -2,10 +2,10 @@ void StandFigureBack___cctor(const MethodInfo *method)
 {
   struct StandFigureBack_StaticFields *static_fields; // x8
 
-  if ( (byte_4CB5873 & 1) == 0 )
+  if ( (byte_4CC6994 & 1) == 0 )
   {
-    sub_1C6BA08(&StandFigureBack_TypeInfo);
-    byte_4CB5873 = 1;
+    sub_1C713B0(&StandFigureBack_TypeInfo);
+    byte_4CC6994 = 1;
   }
   static_fields = StandFigureBack_TypeInfo->static_fields;
   static_fields->COSTUME_IMAGE_CNT_START = 11;
@@ -17,20 +17,24 @@ void StandFigureBack___ctor(StandFigureBack_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CB5872 & 1) == 0 )
+  if ( (byte_4CC6993 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_StandFigureCollect__TypeInfo);
-    byte_4CB5872 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+    byte_4CC6993 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_StandFigureCollect__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_StandFigureCollect___ctor__);
   this->fields.standFigureCollectList = (struct System_Collections_Generic_List_StandFigureCollect__o *)v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.standFigureCollectList, (int32_t)v3, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.standFigureCollectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -53,47 +57,59 @@ void StandFigureBack__CreatePrefab(
   UIStandFigureR_o *v16; // x0
   __int64 v17; // x1
   int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  UIStandFigureR_o *v20; // x24
-  System_Collections_Generic_List_object__o *v21; // x21
-  StandFigureCollect_o *v22; // x22
-  const MethodInfo *v23; // x3
-  __int64 v24; // x0
-  __int64 v25; // x1
-  int32_t v26; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  UIStandFigureR_o *v24; // x24
+  System_Collections_Generic_List_object__o *v25; // x21
+  StandFigureCollect_o *v26; // x22
   const MethodInfo *v27; // x3
-  struct System_Object_array *v28; // x8
-  _QWORD *v29; // x9
-  __int64 v30; // x10
-  Il2CppClass **v31; // x0
+  __int64 v28; // x0
+  __int64 v29; // x1
+  int32_t v30; // w2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  int32_t v33; // w5
+  int64_t v34; // x6
+  System_String_o *v35; // x7
+  struct System_Object_array *v36; // x8
+  _QWORD *v37; // x9
+  __int64 v38; // x10
+  Il2CppClass **v39; // x0
   System_Collections_Generic_List_object__o *standFigureCollectList; // x21
   UIStandFigureR_o *RenderPrefab; // x22
-  StandFigureCollect_o *v34; // x20
-  const MethodInfo *v35; // x3
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
+  StandFigureCollect_o *v42; // x20
+  const MethodInfo *v43; // x3
+  int32_t v44; // w2
+  int32_t v45; // w3
+  System_String_o *v46; // x4
+  int32_t v47; // w5
+  int64_t v48; // x6
+  System_String_o *v49; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v39; // x9
+  _QWORD *v51; // x9
   __int64 size; // x10
-  Il2CppClass **v41; // x0
-  System_Collections_Generic_List_Enumerator_object__o v42; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v43; // [xsp+20h] [xbp-70h] BYREF
+  Il2CppClass **v53; // x0
+  System_Collections_Generic_List_Enumerator_object__o v54; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v55; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4CB5867 & 1) == 0 )
+  if ( (byte_4CC6988 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&StandFigureCollect_TypeInfo);
-    byte_4CB5867 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&StandFigureCollect_TypeInfo);
+    byte_4CC6988 = 1;
   }
-  memset(&v43, 0, sizeof(v43));
+  memset(&v55, 0, sizeof(v55));
   baseStandFigure = (UnityEngine_Object_o *)this->fields.baseStandFigure;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -102,12 +118,12 @@ void StandFigureBack__CreatePrefab(
   if ( v8 )
     v9 = 48;
   v10 = *(UnityEngine_GameObject_o **)((char *)&this->klass + v9);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_29;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
+               (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_SvtMultiPortraitMaster___);
   if ( !Instance )
     goto LABEL_29;
   EntityListOrderBy = SvtMultiPortraitMaster__GetEntityListOrderBy(
@@ -120,16 +136,16 @@ void StandFigureBack__CreatePrefab(
     || (v14 = (System_Collections_Generic_List_object__o *)EntityListOrderBy,
         !System_Linq_Enumerable__Any_object_(
            (System_Collections_Generic_IEnumerable_TSource__o *)EntityListOrderBy,
-           (const MethodInfo_3146EE0 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___)) )
+           (const MethodInfo_3156C84 *)Method_System_Linq_Enumerable_Any_SvtMultiPortraitEntity___)) )
   {
     standFigureCollectList = (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList;
     RenderPrefab = StandFigureManager__CreateRenderPrefab(v10, 0);
-    v34 = (StandFigureCollect_o *)sub_1C6BC54(StandFigureCollect_TypeInfo);
-    StandFigureCollect___ctor(v34, 0, RenderPrefab, v35);
+    v42 = (StandFigureCollect_o *)sub_1C715FC(StandFigureCollect_TypeInfo);
+    StandFigureCollect___ctor(v42, 0, RenderPrefab, v43);
     if ( standFigureCollectList )
     {
       items = standFigureCollectList->fields._items;
-      v39 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
+      v51 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
       ++standFigureCollectList->fields._version;
       if ( items )
       {
@@ -138,67 +154,75 @@ void StandFigureBack__CreatePrefab(
         {
           System_Collections_Generic_List_object___AddWithResize(
             standFigureCollectList,
-            (Il2CppObject *)v34,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+            (Il2CppObject *)v42,
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
         }
         else
         {
-          v41 = &items->obj.klass + size;
+          v53 = &items->obj.klass + size;
           standFigureCollectList->fields._size = size + 1;
-          v41[4] = (Il2CppClass *)v34;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v41 + 4), (int32_t)v34, v36, v37);
+          v53[4] = (Il2CppClass *)v42;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v53 + 4), (int32_t)v42, v44, v45, v46, v47, v48, v49);
         }
         goto LABEL_28;
       }
     }
 LABEL_29:
-    sub_1C6BC60(Instance, v12);
+    sub_1C71608(Instance, v12);
   }
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v42,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v54,
     v14,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
-  v43 = v42;
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SvtMultiPortraitEntity__GetEnumerator__);
+  v55 = v54;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v43,
-            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__) )
+            &v55,
+            (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__MoveNext__) )
   {
-    current = v43.fields._current;
+    current = v55.fields._current;
     v16 = StandFigureManager__CreateRenderPrefab(v10, 0);
-    v20 = v16;
+    v24 = v16;
     if ( !v16 )
-      sub_1C6BC60(0, v17);
+      sub_1C71608(0, v17);
     v16->fields.svtMultiPortraitEntity = (struct SvtMultiPortraitEntity_o *)current;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v16->fields.svtMultiPortraitEntity, (int32_t)current, v18, v19);
-    v21 = (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList;
-    v22 = (StandFigureCollect_o *)sub_1C6BC54(StandFigureCollect_TypeInfo);
-    StandFigureCollect___ctor(v22, (SvtMultiPortraitEntity_o *)current, v20, v23);
-    if ( !v21 )
-      sub_1C6BC60(v24, v25);
-    v28 = v21->fields._items;
-    v29 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
-    ++v21->fields._version;
-    if ( !v28 )
-      sub_1C6BC60(v24, v25);
-    v30 = v21->fields._size;
-    if ( (unsigned int)v30 >= LODWORD(v28->max_length) )
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&v16->fields.svtMultiPortraitEntity,
+      (int32_t)current,
+      v18,
+      v19,
+      v20,
+      v21,
+      v22,
+      v23);
+    v25 = (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList;
+    v26 = (StandFigureCollect_o *)sub_1C715FC(StandFigureCollect_TypeInfo);
+    StandFigureCollect___ctor(v26, (SvtMultiPortraitEntity_o *)current, v24, v27);
+    if ( !v25 )
+      sub_1C71608(v28, v29);
+    v36 = v25->fields._items;
+    v37 = Method_System_Collections_Generic_List_StandFigureCollect__Add__;
+    ++v25->fields._version;
+    if ( !v36 )
+      sub_1C71608(v28, v29);
+    v38 = v25->fields._size;
+    if ( (unsigned int)v38 >= LODWORD(v36->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v21,
-        (Il2CppObject *)v22,
-        *(const MethodInfo_3800974 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+        v25,
+        (Il2CppObject *)v26,
+        *(const MethodInfo_3810718 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
     }
     else
     {
-      v31 = &v28->obj.klass + v30;
-      v21->fields._size = v30 + 1;
-      v31[4] = (Il2CppClass *)v22;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v31 + 4), (int32_t)v22, v26, v27);
+      v39 = &v36->obj.klass + v38;
+      v25->fields._size = v38 + 1;
+      v39[4] = (Il2CppClass *)v26;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v39 + 4), (int32_t)v26, v30, v31, v32, v33, v34, v35);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v43,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
+    &v55,
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SvtMultiPortraitEntity__Dispose__);
 LABEL_28:
   this->fields.isFirstLoading = 1;
 }
@@ -221,12 +245,12 @@ void StandFigureBack__CreatedStandFigure(
   UIStandFigureR_o *v18; // x24
   System_Action_o *v19; // x25
 
-  if ( (byte_4CB586B & 1) == 0 )
+  if ( (byte_4CC698C & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    sub_1C6BA08(&Method_StandFigureBack_EndLoad__);
-    byte_4CB586B = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    sub_1C713B0(&Method_StandFigureBack_EndLoad__);
+    byte_4CC698C = 1;
   }
   StandFigureBack__InitStandFigure(this, callback, *(const MethodInfo **)&imageLimitCount);
   StandFigureBack__CreatePrefab(this, svtId, imageLimitCount, v15);
@@ -235,15 +259,15 @@ void StandFigureBack__CreatedStandFigure(
     || (standFigureCollectList = System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)standFigureCollectList,
                                    index,
-                                   (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0
+                                   (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0
     || (v18 = (UIStandFigureR_o *)*((_QWORD *)standFigureCollectList + 3),
-        v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
+        v19 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo),
         System_Action___ctor(v19, (Il2CppObject *)this, Method_StandFigureBack_EndLoad__, 0),
         !v18) )
   {
-    sub_1C6BC60(standFigureCollectList, v16);
+    sub_1C71608(standFigureCollectList, v16);
   }
-  UIStandFigureR__SetCharacter_44302232(v18, svtId, imageLimitCount, offsetKind, faceType, v19, 0);
+  UIStandFigureR__SetCharacter_44348560(v18, svtId, imageLimitCount, offsetKind, faceType, v19, 0);
 }
 
 
@@ -264,21 +288,21 @@ void StandFigureBack__DestroyFigure(StandFigureBack_o *this, const MethodInfo *m
   System_Collections_Generic_List_Enumerator_object__o v15; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4CB5865 & 1) == 0 )
+  if ( (byte_4CC6986 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB5865 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC6986 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.standFigureCollectList,
-         (const MethodInfo_3146EE0 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
+         (const MethodInfo_3156C84 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
   {
     standFigureCollectList = this->fields.standFigureCollectList;
     if ( !standFigureCollectList )
@@ -286,37 +310,37 @@ void StandFigureBack__DestroyFigure(StandFigureBack_o *this, const MethodInfo *m
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v15,
       (System_Collections_Generic_List_object__o *)standFigureCollectList,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
     v16 = v15;
     while ( 1 )
     {
       v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v16,
-             (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
       if ( !v5 )
         break;
       current = v16.fields._current;
       if ( !v16.fields._current )
-        sub_1C6BC60(v5, v6);
+        sub_1C71608(v5, v6);
       monitor = (UIStandFigureR_o *)v16.fields._current[1].monitor;
       if ( !monitor )
-        sub_1C6BC60(0, v6);
+        sub_1C71608(0, v6);
       UIStandFigureR__Destroy(monitor, 0);
       v10 = (UnityEngine_Component_o *)current[1].monitor;
       if ( !v10 )
-        sub_1C6BC60(0, v9);
+        sub_1C71608(0, v9);
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v10, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__DestroyImmediate_71659864(gameObject, 0);
+      UnityEngine_Object__DestroyImmediate_71724796(gameObject, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v16,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
     v12 = this->fields.standFigureCollectList;
     if ( !v12 )
 LABEL_20:
-      sub_1C6BC60(standFigureCollectList, v3);
+      sub_1C71608(standFigureCollectList, v3);
     size = v12->fields._size;
     v14 = v12->fields._version + 1;
     v12->fields._size = 0;
@@ -332,23 +356,27 @@ void StandFigureBack__EndClose(StandFigureBack_o *this, const MethodInfo *method
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  CGThumbnailListItem_o *p_baseCallbackFunc; // x19
-  struct System_Action_o *v8; // x20
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  GrandQuestFolderBoardItem_o *p_baseCallbackFunc; // x19
+  struct System_Action_o *v12; // x20
   struct System_Action_o *baseCallbackFunc; // t1
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   baseCallbackFunc = this->fields.baseCallbackFunc;
-  p_baseCallbackFunc = (CGThumbnailListItem_o *)&this->fields.baseCallbackFunc;
-  v8 = baseCallbackFunc;
+  p_baseCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.baseCallbackFunc;
+  v12 = baseCallbackFunc;
   if ( baseCallbackFunc )
   {
     p_baseCallbackFunc->klass = 0;
-    sub_1C6B9AC(p_baseCallbackFunc, 0, v5, v6);
-    ((void (__fastcall *)(intptr_t, intptr_t))v8->fields.invoke_impl)(v8->fields.method_code, v8->fields.method);
+    sub_1C71354(p_baseCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
+    ((void (__fastcall *)(intptr_t, intptr_t))v12->fields.invoke_impl)(v12->fields.method_code, v12->fields.method);
   }
 }
 
@@ -356,19 +384,23 @@ void StandFigureBack__EndClose(StandFigureBack_o *this, const MethodInfo *method
 void StandFigureBack__EndFadein(StandFigureBack_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_baseCallbackFunc; // x0
-  struct System_Action_o *v5; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GrandQuestFolderBoardItem_o *p_baseCallbackFunc; // x0
+  struct System_Action_o *v9; // x19
   struct System_Action_o *baseCallbackFunc; // t1
 
   baseCallbackFunc = this->fields.baseCallbackFunc;
-  p_baseCallbackFunc = (CGThumbnailListItem_o *)&this->fields.baseCallbackFunc;
-  v5 = baseCallbackFunc;
+  p_baseCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.baseCallbackFunc;
+  v9 = baseCallbackFunc;
   if ( baseCallbackFunc )
   {
     p_baseCallbackFunc->klass = 0;
-    sub_1C6B9AC(p_baseCallbackFunc, 0, v2, v3);
-    ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
+    sub_1C71354(p_baseCallbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
 
@@ -376,19 +408,23 @@ void StandFigureBack__EndFadein(StandFigureBack_o *this, const MethodInfo *metho
 void StandFigureBack__EndFadeout(StandFigureBack_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_baseCallbackFunc; // x0
-  struct System_Action_o *v5; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GrandQuestFolderBoardItem_o *p_baseCallbackFunc; // x0
+  struct System_Action_o *v9; // x19
   struct System_Action_o *baseCallbackFunc; // t1
 
   baseCallbackFunc = this->fields.baseCallbackFunc;
-  p_baseCallbackFunc = (CGThumbnailListItem_o *)&this->fields.baseCallbackFunc;
-  v5 = baseCallbackFunc;
+  p_baseCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.baseCallbackFunc;
+  v9 = baseCallbackFunc;
   if ( baseCallbackFunc )
   {
     p_baseCallbackFunc->klass = 0;
-    sub_1C6B9AC(p_baseCallbackFunc, 0, v2, v3);
-    ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
+    sub_1C71354(p_baseCallbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
 
@@ -406,32 +442,52 @@ void StandFigureBack__EndLoad(StandFigureBack_o *this, const MethodInfo *method)
 
 void StandFigureBack__Fadein(StandFigureBack_o *this, System_Action_o *callback, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  const MethodInfo *v6; // x1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  const MethodInfo *v10; // x1
   _BOOL4 isFirstLoading; // w8
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v9; // x1
+  __int64 v13; // x1
   UnityEngine_Object_o *baseWindow; // x20
   UnityEngine_Object_o *closeTransform; // x20
-  UnityEngine_GameObject_o *v12; // x20
-  StandFigureBack_c *v13; // x0
-  TweenPosition_o *v14; // x20
-  UnityEngine_GameObject_o *v15; // x0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  int32_t v18; // w1
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  UnityEngine_GameObject_o *v16; // x20
+  StandFigureBack_c *v17; // x0
+  TweenPosition_o *v18; // x20
+  UnityEngine_GameObject_o *v19; // x0
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  int32_t v26; // w1
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
 
-  if ( (byte_4CB5870 & 1) == 0 )
+  if ( (byte_4CC6991 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StandFigureBack_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5994/*"EndFadein"*/);
-    byte_4CB5870 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StandFigureBack_TypeInfo);
+    sub_1C713B0(&StringLiteral_5996/*"EndFadein"*/);
+    byte_4CC6991 = 1;
   }
   this->fields.baseCallbackFunc = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.baseCallbackFunc,
+    (int32_t)callback,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   isFirstLoading = this->fields.isFirstLoading;
   this->fields.isDispRequest = 1;
   if ( !isFirstLoading )
@@ -453,32 +509,48 @@ void StandFigureBack__Fadein(StandFigureBack_o *this, System_Action_o *callback,
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         if ( UnityEngine_Object__op_Inequality(closeTransform, 0, 0) )
         {
-          v12 = this->fields.baseWindow;
-          v13 = StandFigureBack_TypeInfo;
+          v16 = this->fields.baseWindow;
+          v17 = StandFigureBack_TypeInfo;
           if ( !StandFigureBack_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(StandFigureBack_TypeInfo);
-            v13 = StandFigureBack_TypeInfo;
+            v17 = StandFigureBack_TypeInfo;
           }
-          v14 = TweenPosition__Begin(v12, v13->static_fields->OPEN_TIME, this->fields.basePosition, 0);
+          v18 = TweenPosition__Begin(v16, v17->static_fields->OPEN_TIME, this->fields.basePosition, 0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v14, 0, 0);
+          gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v18, 0, 0);
           if ( ((unsigned __int8)gameObject & 1) != 0 )
           {
-            if ( v14 )
+            if ( v18 )
             {
-              v14->fields.method = 3;
-              v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-              v14->fields.eventReceiver = v15;
-              sub_1C6B9AC((CGThumbnailListItem_o *)&v14->fields.eventReceiver, (int32_t)v15, v16, v17);
-              v18 = StringLiteral_5994/*"EndFadein"*/;
-              v14->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5994/*"EndFadein"*/;
-              sub_1C6B9AC((CGThumbnailListItem_o *)&v14->fields.callWhenFinished, v18, v19, v20);
+              v18->fields.method = 3;
+              v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+              v18->fields.eventReceiver = v19;
+              sub_1C71354(
+                (GrandQuestFolderBoardItem_o *)&v18->fields.eventReceiver,
+                (int32_t)v19,
+                v20,
+                v21,
+                v22,
+                v23,
+                v24,
+                v25);
+              v26 = StringLiteral_5996/*"EndFadein"*/;
+              v18->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5996/*"EndFadein"*/;
+              sub_1C71354(
+                (GrandQuestFolderBoardItem_o *)&v18->fields.callWhenFinished,
+                v26,
+                v27,
+                v28,
+                v29,
+                v30,
+                v31,
+                v32);
               return;
             }
 LABEL_23:
-            sub_1C6BC60(gameObject, v9);
+            sub_1C71608(gameObject, v13);
           }
           gameObject = this->fields.baseWindow;
           if ( !gameObject )
@@ -490,45 +562,65 @@ LABEL_23:
         }
       }
     }
-    StandFigureBack__EndFadein(this, v6);
+    StandFigureBack__EndFadein(this, v10);
   }
 }
 
 
 void StandFigureBack__Fadeout(StandFigureBack_o *this, System_Action_o *callback, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  const MethodInfo *v6; // x1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  const MethodInfo *v10; // x1
   _BOOL4 isDisp; // w8
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_Object_o *baseWindow; // x20
   UnityEngine_Object_o *closeTransform; // x20
-  UnityEngine_Transform_o *v11; // x20
-  UnityEngine_GameObject_o *v12; // x20
+  UnityEngine_Transform_o *v15; // x20
+  UnityEngine_GameObject_o *v16; // x20
   float x; // s8
   float y; // s9
-  StandFigureBack_c *v15; // x0
+  StandFigureBack_c *v19; // x0
   float z; // s10
-  TweenPosition_o *v17; // x20
-  UnityEngine_GameObject_o *v18; // x0
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  int32_t v21; // w1
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  TweenPosition_o *v21; // x20
+  UnityEngine_GameObject_o *v22; // x0
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
+  int32_t v29; // w1
+  int32_t v30; // w2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  int32_t v33; // w5
+  int64_t v34; // x6
+  System_String_o *v35; // x7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v26; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB5871 & 1) == 0 )
+  if ( (byte_4CC6992 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StandFigureBack_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5995/*"EndFadeout"*/);
-    byte_4CB5871 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StandFigureBack_TypeInfo);
+    sub_1C713B0(&StringLiteral_5997/*"EndFadeout"*/);
+    byte_4CC6992 = 1;
   }
   this->fields.baseCallbackFunc = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.baseCallbackFunc,
+    (int32_t)callback,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   isDisp = this->fields.isDisp;
   this->fields.isDispRequest = 0;
   if ( isDisp )
@@ -559,43 +651,51 @@ void StandFigureBack__Fadeout(StandFigureBack_o *this, System_Action_o *callback
                                                    0);
         if ( !this->fields.closeTransform )
           goto LABEL_26;
-        v11 = (UnityEngine_Transform_o *)gameObject;
+        v15 = (UnityEngine_Transform_o *)gameObject;
         position = UnityEngine_Transform__get_position(this->fields.closeTransform, 0);
-        if ( !v11 )
+        if ( !v15 )
           goto LABEL_26;
-        v25 = UnityEngine_Transform__InverseTransformPoint(v11, position, 0);
-        v12 = this->fields.baseWindow;
-        x = v25.fields.x;
-        y = v25.fields.y;
-        v15 = StandFigureBack_TypeInfo;
-        z = v25.fields.z;
+        v37 = UnityEngine_Transform__InverseTransformPoint(v15, position, 0);
+        v16 = this->fields.baseWindow;
+        x = v37.fields.x;
+        y = v37.fields.y;
+        v19 = StandFigureBack_TypeInfo;
+        z = v37.fields.z;
         if ( !StandFigureBack_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(StandFigureBack_TypeInfo);
-          v15 = StandFigureBack_TypeInfo;
+          v19 = StandFigureBack_TypeInfo;
         }
-        v26.fields.x = x;
-        v26.fields.y = y;
-        v26.fields.z = z;
-        v17 = TweenPosition__Begin(v12, v15->static_fields->OPEN_TIME, v26, 0);
+        v38.fields.x = x;
+        v38.fields.y = y;
+        v38.fields.z = z;
+        v21 = TweenPosition__Begin(v16, v19->static_fields->OPEN_TIME, v38, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v17, 0, 0);
+        gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v21, 0, 0);
         if ( ((unsigned __int8)gameObject & 1) != 0 )
         {
-          if ( v17 )
+          if ( v21 )
           {
-            v17->fields.method = 3;
-            v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-            v17->fields.eventReceiver = v18;
-            sub_1C6B9AC((CGThumbnailListItem_o *)&v17->fields.eventReceiver, (int32_t)v18, v19, v20);
-            v21 = StringLiteral_5995/*"EndFadeout"*/;
-            v17->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5995/*"EndFadeout"*/;
-            sub_1C6B9AC((CGThumbnailListItem_o *)&v17->fields.callWhenFinished, v21, v22, v23);
+            v21->fields.method = 3;
+            v22 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+            v21->fields.eventReceiver = v22;
+            sub_1C71354(
+              (GrandQuestFolderBoardItem_o *)&v21->fields.eventReceiver,
+              (int32_t)v22,
+              v23,
+              v24,
+              v25,
+              v26,
+              v27,
+              v28);
+            v29 = StringLiteral_5997/*"EndFadeout"*/;
+            v21->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5997/*"EndFadeout"*/;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)&v21->fields.callWhenFinished, v29, v30, v31, v32, v33, v34, v35);
             return;
           }
 LABEL_26:
-          sub_1C6BC60(gameObject, v6);
+          sub_1C71608(gameObject, v10);
         }
         gameObject = this->fields.baseWindow;
         if ( !gameObject )
@@ -607,7 +707,7 @@ LABEL_26:
       }
     }
   }
-  StandFigureBack__EndClose(this, v6);
+  StandFigureBack__EndClose(this, v10);
 }
 
 
@@ -616,19 +716,19 @@ UIStandFigureR_o *StandFigureBack__GetSvtStandFigure(StandFigureBack_o *this, in
 {
   void *standFigureCollectList; // x0
 
-  if ( (byte_4CB5862 & 1) == 0 )
+  if ( (byte_4CC6983 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    byte_4CB5862 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    byte_4CC6983 = 1;
   }
   standFigureCollectList = this->fields.standFigureCollectList;
   if ( !standFigureCollectList
     || (standFigureCollectList = System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)standFigureCollectList,
                                    index,
-                                   (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0 )
+                                   (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0 )
   {
-    sub_1C6BC60(standFigureCollectList, *(_QWORD *)&index);
+    sub_1C71608(standFigureCollectList, *(_QWORD *)&index);
   }
   return (UIStandFigureR_o *)*((_QWORD *)standFigureCollectList + 3);
 }
@@ -653,10 +753,10 @@ void StandFigureBack__Init(StandFigureBack_o *this, const MethodInfo *method)
   UnityEngine_Transform_o *v9; // x19
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB5864 & 1) == 0 )
+  if ( (byte_4CC6985 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB5864 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC6985 = 1;
   }
   baseWindow = (UnityEngine_Object_o *)this->fields.baseWindow;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -706,7 +806,7 @@ void StandFigureBack__Init(StandFigureBack_o *this, const MethodInfo *method)
         }
       }
 LABEL_22:
-      sub_1C6BC60(transform, v4);
+      sub_1C71608(transform, v4);
     }
   }
 }
@@ -718,17 +818,21 @@ void StandFigureBack__InitStandFigure(StandFigureBack_o *this, System_Action_o *
   __int64 v6; // x1
   const MethodInfo *v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   UnityEngine_Object_o *baseWindow; // x20
   UnityEngine_Object_o *closeTransform; // x20
-  UnityEngine_Transform_o *v12; // x8
-  UnityEngine_Transform_o *v13; // x19
+  UnityEngine_Transform_o *v16; // x8
+  UnityEngine_Transform_o *v17; // x19
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB5866 & 1) == 0 )
+  if ( (byte_4CC6987 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB5866 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC6987 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -736,7 +840,15 @@ void StandFigureBack__InitStandFigure(StandFigureBack_o *this, System_Action_o *
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   StandFigureBack__DestroyFigure(this, v7);
   this->fields.baseCallbackFunc = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseCallbackFunc, (int32_t)callback, v8, v9);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.baseCallbackFunc,
+    (int32_t)callback,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13);
   this->fields.isDispRequest = 1;
   baseWindow = (UnityEngine_Object_o *)this->fields.baseWindow;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -760,20 +872,20 @@ void StandFigureBack__InitStandFigure(StandFigureBack_o *this, System_Action_o *
       if ( gameObject )
       {
         gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
-        v12 = this->fields.closeTransform;
-        if ( v12 )
+        v16 = this->fields.closeTransform;
+        if ( v16 )
         {
-          v13 = (UnityEngine_Transform_o *)gameObject;
-          position = UnityEngine_Transform__get_position(v12, 0);
-          if ( v13 )
+          v17 = (UnityEngine_Transform_o *)gameObject;
+          position = UnityEngine_Transform__get_position(v16, 0);
+          if ( v17 )
           {
-            UnityEngine_Transform__set_position(v13, position, 0);
+            UnityEngine_Transform__set_position(v17, position, 0);
             return;
           }
         }
       }
 LABEL_18:
-      sub_1C6BC60(gameObject, v6);
+      sub_1C71608(gameObject, v6);
     }
   }
 }
@@ -786,27 +898,27 @@ UIStandFigureR_o *StandFigureBack__RobSvtStandFigure(StandFigureBack_o *this, in
   struct System_Collections_Generic_List_StandFigureCollect__o *v6; // x8
   System_Collections_Generic_List_object__o *v7; // x19
 
-  if ( (byte_4CB5863 & 1) == 0 )
+  if ( (byte_4CC6984 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__Remove__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    byte_4CB5863 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__Remove__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    byte_4CC6984 = 1;
   }
   standFigureCollectList = (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList;
   if ( !standFigureCollectList
     || (standFigureCollectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                 standFigureCollectList,
                                                                                 index,
-                                                                                (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__),
+                                                                                (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__),
         (v6 = this->fields.standFigureCollectList) == 0)
     || (v7 = standFigureCollectList,
         standFigureCollectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___Remove(
                                                                                 (System_Collections_Generic_List_object__o *)v6,
                                                                                 (Il2CppObject *)standFigureCollectList,
-                                                                                (const MethodInfo_3801E9C *)Method_System_Collections_Generic_List_StandFigureCollect__Remove__),
+                                                                                (const MethodInfo_3811C40 *)Method_System_Collections_Generic_List_StandFigureCollect__Remove__),
         !v7) )
   {
-    sub_1C6BC60(standFigureCollectList, *(_QWORD *)&index);
+    sub_1C71608(standFigureCollectList, *(_QWORD *)&index);
   }
   return *(UIStandFigureR_o **)&v7->fields._size;
 }
@@ -843,29 +955,29 @@ void StandFigureBack__SetEventRewardStandFigure(
   System_Collections_Generic_List_Enumerator_object__o v32; // [xsp+8h] [xbp-88h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v33; // [xsp+20h] [xbp-70h] BYREF
 
-  if ( (byte_4CB586C & 1) == 0 )
+  if ( (byte_4CC698D & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Count_StandFigureCollect___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    sub_1C6BA08(&Method_StandFigureBack_EndLoad__);
-    byte_4CB586C = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Count_StandFigureCollect___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    sub_1C713B0(&Method_StandFigureBack_EndLoad__);
+    byte_4CC698D = 1;
   }
   memset(&v33, 0, sizeof(v33));
   StandFigureBack__InitStandFigure(this, callback, *(const MethodInfo **)&imageLimitCount);
   StandFigureBack__CreatePrefab(this, svtId, imageLimitCount, v15);
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.standFigureCollectList,
-         (const MethodInfo_3146EE0 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
+         (const MethodInfo_3156C84 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
   {
     Item = (Il2CppObject *)System_Linq_Enumerable__Count_object_(
                              (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.standFigureCollectList,
-                             (const MethodInfo_315B7CC *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
+                             (const MethodInfo_316B570 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
     if ( !this->fields.standFigureCollectList )
       goto LABEL_24;
     if ( (int)Item < 2 )
@@ -873,42 +985,42 @@ void StandFigureBack__SetEventRewardStandFigure(
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList,
                0,
-               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+               (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
       if ( Item )
       {
         monitor = (UIStandFigureR_o *)Item[1].monitor;
-        v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+        v19 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
         System_Action___ctor(v19, (Il2CppObject *)this, Method_StandFigureBack_EndLoad__, 0);
         if ( monitor )
         {
-          UIStandFigureR__SetCharacter_44302232(monitor, svtId, imageLimitCount, offsetKind, faceType, v19, 0);
+          UIStandFigureR__SetCharacter_44348560(monitor, svtId, imageLimitCount, offsetKind, faceType, v19, 0);
           return;
         }
       }
 LABEL_24:
-      sub_1C6BC60(Item, v17);
+      sub_1C71608(Item, v17);
     }
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v32,
       (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
     v33 = v32;
     while ( 1 )
     {
       v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v33,
-              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+              (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
       if ( !v20 )
         break;
       current = v33.fields._current;
       if ( !v33.fields._current )
-        sub_1C6BC60(v20, v21);
+        sub_1C71608(v20, v21);
       klass = v33.fields._current[1].klass;
       if ( !klass )
-        sub_1C6BC60(v20, v21);
+        sub_1C71608(v20, v21);
       v24 = (UIStandFigureR_o *)v33.fields._current[1].monitor;
       if ( !v24 )
-        sub_1C6BC60(0, v21);
+        sub_1C71608(0, v21);
       v25 = UIStandFigureR__SetCharacterForImageId(
               v24,
               (int32_t)klass->_1.byval_arg.data,
@@ -920,10 +1032,10 @@ LABEL_24:
               0);
       v27 = current[1].klass;
       if ( !v27 )
-        sub_1C6BC60(v25, v26);
+        sub_1C71608(v25, v26);
       v28 = (UIStandFigureR_o *)current[1].monitor;
       if ( !v28 )
-        sub_1C6BC60(0, v26);
+        sub_1C71608(0, v26);
       UIStandFigureR__SetDepth(
         v28,
         (HIDWORD(v27->_1.byval_arg.data) & ~(SHIDWORD(v27->_1.byval_arg.data) >> 31)) + depth,
@@ -931,11 +1043,11 @@ LABEL_24:
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v33,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    v29 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    v29 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v29, (Il2CppObject *)this, Method_StandFigureBack_EndLoad__, 0);
     AllAssetBundle = StandFigureBack__WaitForLoadAllAssetBundle(this, v29, v30);
-    UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, AllAssetBundle, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, AllAssetBundle, 0);
   }
 }
 
@@ -950,16 +1062,16 @@ void StandFigureBack__SetFaceType(
   __int64 v9; // x1
   System_Collections_Generic_List_object__o *standFigureCollectList; // x0
 
-  if ( (byte_4CB5868 & 1) == 0 )
+  if ( (byte_4CC6989 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    byte_4CB5868 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    byte_4CC6989 = 1;
   }
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.standFigureCollectList,
-         (const MethodInfo_3146EE0 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
+         (const MethodInfo_3156C84 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
   {
     standFigureCollectList = (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList;
     if ( standFigureCollectList )
@@ -969,7 +1081,7 @@ void StandFigureBack__SetFaceType(
       standFigureCollectList = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                               standFigureCollectList,
                                                                               index,
-                                                                              (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+                                                                              (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
       if ( standFigureCollectList )
       {
         standFigureCollectList = *(System_Collections_Generic_List_object__o **)&standFigureCollectList->fields._size;
@@ -980,7 +1092,7 @@ void StandFigureBack__SetFaceType(
         }
       }
     }
-    sub_1C6BC60(standFigureCollectList, v9);
+    sub_1C71608(standFigureCollectList, v9);
   }
 }
 
@@ -998,39 +1110,39 @@ void StandFigureBack__SetFaceTypeAll(
   UIStandFigureR_o *v10; // x0
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CB5869 & 1) == 0 )
+  if ( (byte_4CC698A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    byte_4CB5869 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    byte_4CC698A = 1;
   }
   memset(&v11, 0, sizeof(v11));
   standFigureCollectList = this->fields.standFigureCollectList;
   if ( !standFigureCollectList )
-    sub_1C6BC60(0, *(_QWORD *)&faceType);
+    sub_1C71608(0, *(_QWORD *)&faceType);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     (System_Collections_Generic_List_object__o *)standFigureCollectList,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
   while ( 1 )
   {
     v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v11,
-           (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+           (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
     if ( !v8 )
       break;
     if ( !v11.fields._current )
-      sub_1C6BC60(v8, v9);
+      sub_1C71608(v8, v9);
     v10 = *(UIStandFigureR_o **)((char *)&v11.fields._current->klass + (unsigned __int64)&off_18);
     if ( !v10 )
-      sub_1C6BC60(0, v9);
+      sub_1C71608(0, v9);
     UIStandFigureR__SetFace(v10, faceType, fadeTime, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
 }
 
 
@@ -1047,39 +1159,39 @@ void StandFigureBack__SetFaceTypeAndForm(
   UIStandFigureR_o *v10; // x0
   System_Collections_Generic_List_Enumerator_object__o v11; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CB586A & 1) == 0 )
+  if ( (byte_4CC698B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    byte_4CB586A = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    byte_4CC698B = 1;
   }
   memset(&v11, 0, sizeof(v11));
   standFigureCollectList = this->fields.standFigureCollectList;
   if ( !standFigureCollectList )
-    sub_1C6BC60(0, *(_QWORD *)&faceType);
+    sub_1C71608(0, *(_QWORD *)&faceType);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v11,
     (System_Collections_Generic_List_object__o *)standFigureCollectList,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
   while ( 1 )
   {
     v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v11,
-           (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+           (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
     if ( !v8 )
       break;
     if ( !v11.fields._current )
-      sub_1C6BC60(v8, v9);
+      sub_1C71608(v8, v9);
     v10 = *(UIStandFigureR_o **)((char *)&v11.fields._current->klass + (unsigned __int64)&off_18);
     if ( !v10 )
-      sub_1C6BC60(0, v9);
-    UIStandFigureR__SetFace_44313536(v10, faceType, formId, 0, 0.0, 0);
+      sub_1C71608(0, v9);
+    UIStandFigureR__SetFace_44359864(v10, faceType, formId, 0, 0.0, 0);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v11,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
 }
 
 
@@ -1116,32 +1228,32 @@ void StandFigureBack__SetMyRoomStandFigure(
   System_Collections_Generic_List_Enumerator_object__o v35; // [xsp+8h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4CB586D & 1) == 0 )
+  if ( (byte_4CC698E & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Count_StandFigureCollect___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    sub_1C6BA08(&Method_StandFigureBack_EndLoad__);
-    byte_4CB586D = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Count_StandFigureCollect___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    sub_1C713B0(&Method_StandFigureBack_EndLoad__);
+    byte_4CC698E = 1;
   }
   memset(&v36, 0, sizeof(v36));
   standFigureCollectList = this->fields.standFigureCollectList;
   if ( standFigureCollectList )
     v19 = !System_Linq_Enumerable__Any_object_(
              (System_Collections_Generic_IEnumerable_TSource__o *)standFigureCollectList,
-             (const MethodInfo_3146EE0 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___);
+             (const MethodInfo_3156C84 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___);
   else
     v19 = 1;
   StandFigureBack__InitStandFigure(this, callback, *(const MethodInfo **)&imageLimitCount);
   StandFigureBack__CreatePrefab(this, svtId, imageLimitCount, v20);
   if ( v19 )
   {
-    baseCallbackFunc = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    baseCallbackFunc = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(baseCallbackFunc, (Il2CppObject *)this, Method_StandFigureBack_EndLoad__, 0);
   }
   else
@@ -1151,11 +1263,11 @@ void StandFigureBack__SetMyRoomStandFigure(
   this->fields.isFirstLoading = v19;
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.standFigureCollectList,
-         (const MethodInfo_3146EE0 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
+         (const MethodInfo_3156C84 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___) )
   {
     Item = (UIStandFigureR_o *)System_Linq_Enumerable__Count_object_(
                                  (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.standFigureCollectList,
-                                 (const MethodInfo_315B7CC *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
+                                 (const MethodInfo_316B570 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
     if ( !this->fields.standFigureCollectList )
       goto LABEL_30;
     if ( (int)Item < 2 )
@@ -1163,13 +1275,13 @@ void StandFigureBack__SetMyRoomStandFigure(
       Item = (UIStandFigureR_o *)System_Collections_Generic_List_object___get_Item(
                                    (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList,
                                    0,
-                                   (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+                                   (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
       if ( Item )
       {
         Item = (UIStandFigureR_o *)Item->fields.m_CancellationTokenSource;
         if ( Item )
         {
-          UIStandFigureR__SetCharacter_44302228(
+          UIStandFigureR__SetCharacter_44348556(
             Item,
             svtId,
             imageLimitCount,
@@ -1182,29 +1294,29 @@ void StandFigureBack__SetMyRoomStandFigure(
         }
       }
 LABEL_30:
-      sub_1C6BC60(Item, v23);
+      sub_1C71608(Item, v23);
     }
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v35,
       (System_Collections_Generic_List_object__o *)this->fields.standFigureCollectList,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
     v36 = v35;
     while ( 1 )
     {
       v24 = System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v36,
-              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+              (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
       if ( !v24 )
         break;
       current = v36.fields._current;
       if ( !v36.fields._current )
-        sub_1C6BC60(v24, v25);
+        sub_1C71608(v24, v25);
       klass = v36.fields._current[1].klass;
       if ( !klass )
-        sub_1C6BC60(v24, v25);
+        sub_1C71608(v24, v25);
       monitor = (UIStandFigureR_o *)v36.fields._current[1].monitor;
       if ( !monitor )
-        sub_1C6BC60(0, v25);
+        sub_1C71608(0, v25);
       v29 = UIStandFigureR__SetCharacterForImageId(
               monitor,
               (int32_t)klass->_1.byval_arg.data,
@@ -1216,10 +1328,10 @@ LABEL_30:
               0);
       v31 = current[1].klass;
       if ( !v31 )
-        sub_1C6BC60(v29, v30);
+        sub_1C71608(v29, v30);
       v32 = (UIStandFigureR_o *)current[1].monitor;
       if ( !v32 )
-        sub_1C6BC60(0, v30);
+        sub_1C71608(0, v30);
       UIStandFigureR__SetDepth(
         v32,
         (HIDWORD(v31->_1.byval_arg.data) & ~(SHIDWORD(v31->_1.byval_arg.data) >> 31)) + depth,
@@ -1227,9 +1339,9 @@ LABEL_30:
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v36,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
     AllAssetBundle = StandFigureBack__WaitForLoadAllAssetBundle(this, baseCallbackFunc, v33);
-    UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, AllAssetBundle, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, AllAssetBundle, 0);
   }
 }
 
@@ -1253,19 +1365,19 @@ void StandFigureBack__SetMyRoomStandFigureForImageId(
   __int64 v18; // x1
   System_Collections_Generic_List_object__o *Item; // x0
 
-  if ( (byte_4CB586E & 1) == 0 )
+  if ( (byte_4CC698F & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    sub_1C6BA08(&Method_StandFigureBack_EndLoad__);
-    byte_4CB586E = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Any_StandFigureCollect___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    sub_1C713B0(&Method_StandFigureBack_EndLoad__);
+    byte_4CC698F = 1;
   }
   standFigureCollectList = this->fields.standFigureCollectList;
   if ( standFigureCollectList )
     v13 = !System_Linq_Enumerable__Any_object_(
              (System_Collections_Generic_IEnumerable_TSource__o *)standFigureCollectList,
-             (const MethodInfo_3146EE0 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___);
+             (const MethodInfo_3156C84 *)Method_System_Linq_Enumerable_Any_StandFigureCollect___);
   else
     v13 = 1;
   v14 = v13;
@@ -1273,7 +1385,7 @@ void StandFigureBack__SetMyRoomStandFigureForImageId(
   StandFigureBack__CreatePrefab(this, 0, 0, v15);
   if ( v13 )
   {
-    baseCallbackFunc = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    baseCallbackFunc = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(baseCallbackFunc, (Il2CppObject *)this, Method_StandFigureBack_EndLoad__, 0);
   }
   else
@@ -1293,10 +1405,10 @@ void StandFigureBack__SetMyRoomStandFigureForImageId(
       || (Item = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                 Item,
                                                                 0,
-                                                                (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0
+                                                                (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__)) == 0
       || (Item = *(System_Collections_Generic_List_object__o **)&Item->fields._size) == 0 )
     {
-      sub_1C6BC60(Item, v18);
+      sub_1C71608(Item, v18);
     }
     UIStandFigureR__SetCharacterForImageId(
       (UIStandFigureR_o *)Item,
@@ -1318,22 +1430,30 @@ System_Collections_IEnumerator_o *StandFigureBack__WaitForLoadAllAssetBundle(
 {
   __int64 v5; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
 
-  if ( (byte_4CB586F & 1) == 0 )
+  if ( (byte_4CC6990 & 1) == 0 )
   {
-    sub_1C6BA08(&StandFigureBack__WaitForLoadAllAssetBundle_d__32_TypeInfo);
-    byte_4CB586F = 1;
+    sub_1C713B0(&StandFigureBack__WaitForLoadAllAssetBundle_d__32_TypeInfo);
+    byte_4CC6990 = 1;
   }
-  v5 = sub_1C6BC54(StandFigureBack__WaitForLoadAllAssetBundle_d__32_TypeInfo);
+  v5 = sub_1C715FC(StandFigureBack__WaitForLoadAllAssetBundle_d__32_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = action;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)action, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)action, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -1345,7 +1465,7 @@ bool StandFigureBack__get_IsBusy(StandFigureBack_o *this, const MethodInfo *meth
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   return UnityEngine_GameObject__get_activeSelf(gameObject, 0);
 }
 
@@ -1383,35 +1503,47 @@ bool StandFigureBack__WaitForLoadAllAssetBundle_d__32__MoveNext(
   Il2CppObject *v12; // x22
   struct StandFigureBack___c_StaticFields *static_fields; // x0
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  _BOOL8 v20; // x0
-  __int64 v21; // x1
-  void *v22; // x8
-  UnityEngine_Behaviour_o *v23; // x0
-  CGThumbnailListItem_o *p__2__current; // x19
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  _BOOL8 v32; // x0
+  __int64 v33; // x1
+  void *v34; // x8
+  UnityEngine_Behaviour_o *v35; // x0
+  GrandQuestFolderBoardItem_o *p__2__current; // x19
   bool result; // w0
-  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+8h] [xbp-78h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-60h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v38; // [xsp+8h] [xbp-78h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v39; // [xsp+20h] [xbp-60h] BYREF
 
   v2 = this;
-  if ( (byte_4CB5876 & 1) == 0 )
+  if ( (byte_4CC6997 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Count_StandFigureCollect___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_StandFigureCollect___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_1C6BA08(&System_Func_StandFigureCollect__bool__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    sub_1C6BA08(&Method_StandFigureBack___c__WaitForLoadAllAssetBundle_b__32_0__);
-    this = (StandFigureBack__WaitForLoadAllAssetBundle_d__32_o *)sub_1C6BA08(&StandFigureBack___c_TypeInfo);
-    byte_4CB5876 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_Count_StandFigureCollect___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Where_StandFigureCollect___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_1C713B0(&System_Func_StandFigureCollect__bool__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    sub_1C713B0(&Method_StandFigureBack___c__WaitForLoadAllAssetBundle_b__32_0__);
+    this = (StandFigureBack__WaitForLoadAllAssetBundle_d__32_o *)sub_1C713B0(&StandFigureBack___c_TypeInfo);
+    byte_4CC6997 = 1;
   }
-  memset(&v27, 0, sizeof(v27));
+  memset(&v39, 0, sizeof(v39));
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
   if ( _1__state == 1 )
@@ -1428,30 +1560,30 @@ bool StandFigureBack__WaitForLoadAllAssetBundle_d__32__MoveNext(
     if ( !this )
       goto LABEL_41;
     System_Collections_Generic_List_object___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v26,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v38,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    v27 = v26;
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    v39 = v38;
     while ( 1 )
     {
       v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-             &v27,
-             (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+             &v39,
+             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
       if ( !v5 )
         break;
-      if ( !v27.fields._current )
-        sub_1C6BC60(v5, v6);
-      monitor = v27.fields._current[1].monitor;
+      if ( !v39.fields._current )
+        sub_1C71608(v5, v6);
+      monitor = v39.fields._current[1].monitor;
       if ( !monitor )
-        sub_1C6BC60(v5, v6);
+        sub_1C71608(v5, v6);
       v8 = (UnityEngine_Behaviour_o *)*((_QWORD *)monitor + 4);
       if ( !v8 )
-        sub_1C6BC60(0, v6);
+        sub_1C71608(0, v6);
       UnityEngine_Behaviour__set_enabled(v8, 0, 0);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
-      &v27,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+      &v39,
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
     standFigureCollectList = (System_Collections_Generic_IEnumerable_TSource__o *)_4__this->fields.standFigureCollectList;
     v10 = StandFigureBack___c_TypeInfo;
     if ( !StandFigureBack___c_TypeInfo->_2.cctor_finished )
@@ -1468,7 +1600,7 @@ bool StandFigureBack__WaitForLoadAllAssetBundle_d__32__MoveNext(
         v10 = StandFigureBack___c_TypeInfo;
       }
       v12 = (Il2CppObject *)v10->static_fields->__9;
-      _9__32_0 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_StandFigureCollect__bool__TypeInfo);
+      _9__32_0 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_StandFigureCollect__bool__TypeInfo);
       System_Func_object__bool____ctor(
         _9__32_0,
         v12,
@@ -1476,67 +1608,83 @@ bool StandFigureBack__WaitForLoadAllAssetBundle_d__32__MoveNext(
         0);
       static_fields = StandFigureBack___c_TypeInfo->static_fields;
       static_fields->__9__32_0 = (struct System_Func_StandFigureCollect__bool__o *)_9__32_0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__32_0, (int32_t)_9__32_0, v14, v15);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&static_fields->__9__32_0,
+        (int32_t)_9__32_0,
+        v14,
+        v15,
+        v16,
+        v17,
+        v18,
+        v19);
     }
     this = (StandFigureBack__WaitForLoadAllAssetBundle_d__32_o *)System_Linq_Enumerable__Where_object_(
                                                                    standFigureCollectList,
                                                                    (System_Func_TSource__bool__o *)_9__32_0,
-                                                                   (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_StandFigureCollect___);
+                                                                   (const MethodInfo_3192108 *)Method_System_Linq_Enumerable_Where_StandFigureCollect___);
     if ( !v2 )
       goto LABEL_41;
     v2->fields._assetRendered_5__2 = (struct System_Collections_Generic_IEnumerable_StandFigureCollect__o *)this;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields._assetRendered_5__2, (int32_t)this, v16, v17);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&v2->fields._assetRendered_5__2,
+      (int32_t)this,
+      v20,
+      v21,
+      v22,
+      v23,
+      v24,
+      v25);
 LABEL_22:
     this = (StandFigureBack__WaitForLoadAllAssetBundle_d__32_o *)System_Linq_Enumerable__Count_object_(
                                                                    (System_Collections_Generic_IEnumerable_TSource__o *)v2->fields._assetRendered_5__2,
-                                                                   (const MethodInfo_315B7CC *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
+                                                                   (const MethodInfo_316B570 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___);
     if ( _4__this )
     {
       if ( (_DWORD)this != System_Linq_Enumerable__Count_object_(
                              (System_Collections_Generic_IEnumerable_TSource__o *)_4__this->fields.standFigureCollectList,
-                             (const MethodInfo_315B7CC *)Method_System_Linq_Enumerable_Count_StandFigureCollect___) )
+                             (const MethodInfo_316B570 *)Method_System_Linq_Enumerable_Count_StandFigureCollect___) )
       {
         v2->fields.__2__current = 0;
-        p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-        sub_1C6B9AC(p__2__current, 0, v18, v19);
+        p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
+        sub_1C71354(p__2__current, 0, v26, v27, v28, v29, v30, v31);
         result = 1;
-        LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+        LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
         return result;
       }
       this = (StandFigureBack__WaitForLoadAllAssetBundle_d__32_o *)_4__this->fields.standFigureCollectList;
       if ( this )
       {
         System_Collections_Generic_List_object___GetEnumerator(
-          (System_Collections_Generic_List_Enumerator_T__o *)&v26,
+          (System_Collections_Generic_List_Enumerator_T__o *)&v38,
           (System_Collections_Generic_List_object__o *)this,
-          (const MethodInfo_380146C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-        v27 = v26;
+          (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+        v39 = v38;
         while ( 1 )
         {
-          v20 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                  &v27,
-                  (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-          if ( !v20 )
+          v32 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                  &v39,
+                  (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+          if ( !v32 )
             break;
-          if ( !v27.fields._current )
-            sub_1C6BC60(v20, v21);
-          v22 = v27.fields._current[1].monitor;
-          if ( !v22 )
-            sub_1C6BC60(v20, v21);
-          v23 = (UnityEngine_Behaviour_o *)*((_QWORD *)v22 + 4);
-          if ( !v23 )
-            sub_1C6BC60(0, v21);
-          UnityEngine_Behaviour__set_enabled(v23, 1, 0);
+          if ( !v39.fields._current )
+            sub_1C71608(v32, v33);
+          v34 = v39.fields._current[1].monitor;
+          if ( !v34 )
+            sub_1C71608(v32, v33);
+          v35 = (UnityEngine_Behaviour_o *)*((_QWORD *)v34 + 4);
+          if ( !v35 )
+            sub_1C71608(0, v33);
+          UnityEngine_Behaviour__set_enabled(v35, 1, 0);
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
-          &v27,
-          (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+          &v39,
+          (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
         ActionExtensions__Call(v2->fields.action, 0);
         return 0;
       }
     }
 LABEL_41:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   return 0;
 }
@@ -1558,11 +1706,11 @@ void __noreturn StandFigureBack__WaitForLoadAllAssetBundle_d__32__System_Collect
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_StandFigureBack__WaitForLoadAllAssetBundle_d__32_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_StandFigureBack__WaitForLoadAllAssetBundle_d__32_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -1586,17 +1734,29 @@ void StandFigureBack___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB5874 & 1) == 0 )
+  if ( (byte_4CC6995 & 1) == 0 )
   {
-    sub_1C6BA08(&StandFigureBack___c_TypeInfo);
-    byte_4CB5874 = 1;
+    sub_1C713B0(&StandFigureBack___c_TypeInfo);
+    byte_4CC6995 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(StandFigureBack___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(StandFigureBack___c_TypeInfo);
   System_Object___ctor(v1, 0);
   StandFigureBack___c_TypeInfo->static_fields->__9 = (struct StandFigureBack___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)StandFigureBack___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)StandFigureBack___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -1614,16 +1774,16 @@ bool StandFigureBack___c___WaitForLoadAllAssetBundle_b__32_0(
   struct UIStandFigureR_o *standFigure_k__BackingField; // x8
   UnityEngine_Object_o *v5; // x19
 
-  if ( (byte_4CB5875 & 1) == 0 )
+  if ( (byte_4CC6996 & 1) == 0 )
   {
-    this = (StandFigureBack___c_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB5875 = 1;
+    this = (StandFigureBack___c_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC6996 = 1;
   }
   if ( !x
     || (standFigure_k__BackingField = x->fields._standFigure_k__BackingField) == 0
     || (this = (StandFigureBack___c_o *)standFigure_k__BackingField->fields.bodyTexture) == 0 )
   {
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   }
   v5 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(StandFigureBack___c_o *, Il2CppMethodPointer, const MethodInfo *))this->klass[1].vtable._2_GetHashCode.method)(
                                  this,

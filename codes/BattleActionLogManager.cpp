@@ -2,44 +2,60 @@ void BattleActionLogManager___ctor(BattleActionLogManager_o *this, const MethodI
 {
   System_IO_MemoryStream_o *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  System_IO_MemoryStream_o *v6; // x20
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  System_IO_Stream_o *header; // x20
-  System_IO_BinaryWriter_o *v10; // x21
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  System_IO_MemoryStream_o *v10; // x20
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  System_IO_Stream_o *header; // x20
+  System_IO_BinaryWriter_o *v18; // x21
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
   System_IO_Stream_o *data; // x20
-  System_IO_BinaryWriter_o *v14; // x21
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  System_IO_BinaryWriter_o *v26; // x21
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
 
-  if ( (byte_4CB87C6 & 1) == 0 )
+  if ( (byte_4CC98F8 & 1) == 0 )
   {
-    sub_1C6BA08(&System_IO_BinaryWriter_TypeInfo);
-    sub_1C6BA08(&System_IO_MemoryStream_TypeInfo);
-    byte_4CB87C6 = 1;
+    sub_1C713B0(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C713B0(&System_IO_MemoryStream_TypeInfo);
+    byte_4CC98F8 = 1;
   }
-  v3 = (System_IO_MemoryStream_o *)sub_1C6BC54(System_IO_MemoryStream_TypeInfo);
+  v3 = (System_IO_MemoryStream_o *)sub_1C715FC(System_IO_MemoryStream_TypeInfo);
   System_IO_MemoryStream___ctor(v3, 0);
   this->fields.header = v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
-  v6 = (System_IO_MemoryStream_o *)sub_1C6BC54(System_IO_MemoryStream_TypeInfo);
-  System_IO_MemoryStream___ctor(v6, 0);
-  this->fields.data = v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.data, (int32_t)v6, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_IO_MemoryStream_o *)sub_1C715FC(System_IO_MemoryStream_TypeInfo);
+  System_IO_MemoryStream___ctor(v10, 0);
+  this->fields.data = v10;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0);
   header = (System_IO_Stream_o *)this->fields.header;
-  v10 = (System_IO_BinaryWriter_o *)sub_1C6BC54(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_64876120(v10, header, 0);
-  this->fields.headerWriter = v10;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.headerWriter, (int32_t)v10, v11, v12);
+  v18 = (System_IO_BinaryWriter_o *)sub_1C715FC(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_64941052(v18, header, 0);
+  this->fields.headerWriter = v18;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.headerWriter, (int32_t)v18, v19, v20, v21, v22, v23, v24);
   data = (System_IO_Stream_o *)this->fields.data;
-  v14 = (System_IO_BinaryWriter_o *)sub_1C6BC54(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_64876120(v14, data, 0);
-  this->fields.dataWriter = v14;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.dataWriter, (int32_t)v14, v15, v16);
+  v26 = (System_IO_BinaryWriter_o *)sub_1C715FC(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_64941052(v26, data, 0);
+  this->fields.dataWriter = v26;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.dataWriter, (int32_t)v26, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -70,7 +86,7 @@ void BattleActionLogManager__addHeader(BattleActionLogManager_o *this, int32_t l
                                  *(_QWORD *)(*(_QWORD *)headerWriter + 512LL)),
         !v5) )
   {
-    sub_1C6BC60(headerWriter, *(_QWORD *)&logType);
+    sub_1C71608(headerWriter, *(_QWORD *)&logType);
   }
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, void *, const MethodInfo *))v5->klass->vtable._19_Write.methodPtr)(
     v5,
@@ -88,7 +104,7 @@ void BattleActionLogManager__addLogContinue(BattleActionLogManager_o *this, cons
   BattleActionLogManager__addHeader(this, 5, v2);
   dataWriter = this->fields.dataWriter;
   if ( !dataWriter )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))dataWriter->klass->vtable._17_Write.methodPtr)(
     dataWriter,
     0,
@@ -121,7 +137,7 @@ void BattleActionLogManager__addLogSelectCommand(
           dataWriter->klass->vtable._17_Write.method),
         (dataWriter = this->fields.dataWriter) == 0) )
   {
-    sub_1C6BC60(dataWriter, v9);
+    sub_1C71608(dataWriter, v9);
   }
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))dataWriter->klass->vtable._17_Write.methodPtr)(
     dataWriter,
@@ -141,7 +157,7 @@ void BattleActionLogManager__addLogSelectTarget(
   BattleActionLogManager__addHeader(this, 1, method);
   dataWriter = this->fields.dataWriter;
   if ( !dataWriter )
-    sub_1C6BC60(0, v5);
+    sub_1C71608(0, v5);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))dataWriter->klass->vtable._17_Write.methodPtr)(
     dataWriter,
     (unsigned int)selectIndex,
@@ -185,7 +201,7 @@ void BattleActionLogManager__addLogUseCommandSpell(
     while ( 1 )
     {
       if ( v10 >= (unsigned int)max_length )
-        sub_1C6BC68(dataWriter);
+        sub_1C71610(dataWriter);
       dataWriter = this->fields.dataWriter;
       if ( !dataWriter )
         break;
@@ -198,7 +214,7 @@ void BattleActionLogManager__addLogUseCommandSpell(
         goto LABEL_10;
     }
 LABEL_13:
-    sub_1C6BC60(dataWriter, v6);
+    sub_1C71608(dataWriter, v6);
   }
 LABEL_10:
   dataWriter = task->fields.skillInfo;
@@ -272,7 +288,7 @@ void BattleActionLogManager__addLogUseSkill(
     while ( 1 )
     {
       if ( v12 >= (unsigned int)max_length )
-        sub_1C6BC68(ActorId);
+        sub_1C71610(ActorId);
       ActorId = (__int64)this->fields.dataWriter;
       if ( !ActorId )
         break;
@@ -285,7 +301,7 @@ void BattleActionLogManager__addLogUseSkill(
         goto LABEL_12;
     }
 LABEL_17:
-    sub_1C6BC60(ActorId, v6);
+    sub_1C71608(ActorId, v6);
   }
 LABEL_12:
   ActorId = (__int64)task->fields.skillInfo;
@@ -319,16 +335,24 @@ void BattleActionLogManager__close(BattleActionLogManager_o *this, const MethodI
   System_IO_Stream_o *header; // x0
   struct System_IO_BinaryWriter_o *headerWriter; // x0
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  struct System_IO_BinaryWriter_o *v7; // x0
-  CGThumbnailListItem_o *p_dataWriter; // x19
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  struct System_IO_BinaryWriter_o *v11; // x0
+  GrandQuestFolderBoardItem_o *p_dataWriter; // x19
   struct System_IO_BinaryWriter_o *dataWriter; // t1
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
 
   header = (System_IO_Stream_o *)this->fields.header;
   if ( !header || (System_IO_Stream__Dispose(header, 0), (header = (System_IO_Stream_o *)this->fields.data) == 0) )
-    sub_1C6BC60(header, method);
+    sub_1C71608(header, method);
   System_IO_Stream__Dispose(header, 0);
   headerWriter = this->fields.headerWriter;
   if ( headerWriter )
@@ -337,18 +361,18 @@ void BattleActionLogManager__close(BattleActionLogManager_o *this, const MethodI
       headerWriter,
       headerWriter->klass->vtable._5_Close.method);
     this->fields.headerWriter = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.headerWriter, 0, v5, v6);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.headerWriter, 0, v5, v6, v7, v8, v9, v10);
   }
   dataWriter = this->fields.dataWriter;
-  p_dataWriter = (CGThumbnailListItem_o *)&this->fields.dataWriter;
-  v7 = dataWriter;
+  p_dataWriter = (GrandQuestFolderBoardItem_o *)&this->fields.dataWriter;
+  v11 = dataWriter;
   if ( dataWriter )
   {
-    ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, const MethodInfo *))v7->klass->vtable._5_Close.methodPtr)(
-      v7,
-      v7->klass->vtable._5_Close.method);
+    ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, const MethodInfo *))v11->klass->vtable._5_Close.methodPtr)(
+      v11,
+      v11->klass->vtable._5_Close.method);
     p_dataWriter->klass = 0;
-    sub_1C6B9AC(p_dataWriter, 0, v10, v11);
+    sub_1C71354(p_dataWriter, 0, v14, v15, v16, v17, v18, v19);
   }
 }
 
@@ -359,7 +383,7 @@ System_Byte_array *BattleActionLogManager__getDataRaw(BattleActionLogManager_o *
 
   data = this->fields.data;
   if ( !data )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))data->klass->vtable._40_ToArray.methodPtr)(
                                 data,
                                 data->klass->vtable._40_ToArray.method);
@@ -372,7 +396,7 @@ System_Byte_array *BattleActionLogManager__getHeaderRaw(BattleActionLogManager_o
 
   header = this->fields.header;
   if ( !header )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return (System_Byte_array *)((__int64 (__fastcall *)(struct System_IO_MemoryStream_o *, const MethodInfo *))header->klass->vtable._40_ToArray.methodPtr)(
                                 header,
                                 header->klass->vtable._40_ToArray.method);
@@ -388,7 +412,7 @@ void BattleActionLogManager__setData(
 
   dataWriter = this->fields.dataWriter;
   if ( !dataWriter )
-    sub_1C6BC60(0, buffer);
+    sub_1C71608(0, buffer);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, System_Byte_array *, const MethodInfo *))dataWriter->klass->vtable._10_Write.methodPtr)(
     dataWriter,
     buffer,
@@ -405,7 +429,7 @@ void BattleActionLogManager__setHeader(
 
   headerWriter = this->fields.headerWriter;
   if ( !headerWriter )
-    sub_1C6BC60(0, buffer);
+    sub_1C71608(0, buffer);
   ((void (__fastcall *)(struct System_IO_BinaryWriter_o *, System_Byte_array *, const MethodInfo *))headerWriter->klass->vtable._10_Write.methodPtr)(
     headerWriter,
     buffer,

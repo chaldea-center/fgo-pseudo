@@ -3,118 +3,158 @@ void PlayerStatusRaidPointComponent___cctor(const MethodInfo *method)
   __int64 v1; // x0
   __int64 v2; // x1
   int32_t v3; // w2
-  const MethodInfo *v4; // x3
-  __int64 v5; // x19
-  int32_t v6; // w1
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w1
-  struct PlayerStatusRaidPointComponent_StaticFields *static_fields; // x0
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
+  __int64 v9; // x19
+  int32_t v10; // w1
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  __int64 v15; // x19
-  int32_t v16; // w1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v19; // w1
-  struct PlayerStatusRaidPointComponent_StaticFields *v20; // x0
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  __int64 v25; // x19
-  int32_t v26; // w1
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  int32_t v29; // w1
-  struct PlayerStatusRaidPointComponent_StaticFields *v30; // x0
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  int32_t v17; // w1
+  struct PlayerStatusRaidPointComponent_StaticFields *static_fields; // x0
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
+  int32_t v25; // w2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
+  __int64 v31; // x19
+  int32_t v32; // w1
   int32_t v33; // w2
-  const MethodInfo *v34; // x3
-  struct System_Int32_array *v35; // x1
-  struct PlayerStatusRaidPointComponent_StaticFields *v36; // x0
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  int32_t v36; // w5
+  int64_t v37; // x6
+  System_String_o *v38; // x7
+  int32_t v39; // w1
+  struct PlayerStatusRaidPointComponent_StaticFields *v40; // x0
+  int32_t v41; // w2
+  int32_t v42; // w3
+  System_String_o *v43; // x4
+  int32_t v44; // w5
+  int64_t v45; // x6
+  System_String_o *v46; // x7
+  int32_t v47; // w2
+  int32_t v48; // w3
+  System_String_o *v49; // x4
+  int32_t v50; // w5
+  int64_t v51; // x6
+  System_String_o *v52; // x7
+  __int64 v53; // x19
+  int32_t v54; // w1
+  int32_t v55; // w2
+  int32_t v56; // w3
+  System_String_o *v57; // x4
+  int32_t v58; // w5
+  int64_t v59; // x6
+  System_String_o *v60; // x7
+  int32_t v61; // w1
+  struct PlayerStatusRaidPointComponent_StaticFields *v62; // x0
+  int32_t v63; // w2
+  int32_t v64; // w3
+  System_String_o *v65; // x4
+  int32_t v66; // w5
+  int64_t v67; // x6
+  System_String_o *v68; // x7
+  int32_t v69; // w2
+  int32_t v70; // w3
+  System_String_o *v71; // x4
+  int32_t v72; // w5
+  int64_t v73; // x6
+  System_String_o *v74; // x7
+  struct System_Int32_array *v75; // x1
+  struct PlayerStatusRaidPointComponent_StaticFields *v76; // x0
 
-  if ( (byte_4CB2E0E & 1) == 0 )
+  if ( (byte_4CC3F21 & 1) == 0 )
   {
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&PlayerStatusRaidPointComponent_TypeInfo);
-    sub_1C6BA08(&string___TypeInfo);
-    sub_1C6BA08(&StringLiteral_23042/*"raid_point_old"*/);
-    sub_1C6BA08(&StringLiteral_23039/*"raid_point"*/);
-    sub_1C6BA08(&StringLiteral_23043/*"raid_point_over"*/);
-    sub_1C6BA08(&StringLiteral_23789/*"status_raid_point_frame"*/);
-    sub_1C6BA08(&StringLiteral_23041/*"raid_point_frame_old"*/);
-    sub_1C6BA08(&StringLiteral_23044/*"raid_point_over_old"*/);
-    byte_4CB2E0E = 1;
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&PlayerStatusRaidPointComponent_TypeInfo);
+    sub_1C713B0(&string___TypeInfo);
+    sub_1C713B0(&StringLiteral_23060/*"raid_point_old"*/);
+    sub_1C713B0(&StringLiteral_23057/*"raid_point"*/);
+    sub_1C713B0(&StringLiteral_23061/*"raid_point_over"*/);
+    sub_1C713B0(&StringLiteral_23809/*"status_raid_point_frame"*/);
+    sub_1C713B0(&StringLiteral_23059/*"raid_point_frame_old"*/);
+    sub_1C713B0(&StringLiteral_23062/*"raid_point_over_old"*/);
+    byte_4CC3F21 = 1;
   }
   PlayerStatusRaidPointComponent_TypeInfo->static_fields->RAID_MARKDISP_STEP_DEFAULT = 5;
-  v1 = sub_1C6BAB0(string___TypeInfo, 2);
+  v1 = sub_1C71458(string___TypeInfo, 2);
   if ( !v1 )
     goto LABEL_16;
-  v5 = v1;
+  v9 = v1;
   if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_15;
-  v6 = StringLiteral_23041/*"raid_point_frame_old"*/;
-  *(_QWORD *)(v1 + 32) = StringLiteral_23041/*"raid_point_frame_old"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v1 + 32), v6, v3, v4);
-  if ( *(_DWORD *)(v5 + 24) <= 1u )
+  v10 = StringLiteral_23059/*"raid_point_frame_old"*/;
+  *(_QWORD *)(v1 + 32) = StringLiteral_23059/*"raid_point_frame_old"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v1 + 32), v10, v3, v4, v5, v6, v7, v8);
+  if ( *(_DWORD *)(v9 + 24) <= 1u )
     goto LABEL_15;
-  v9 = StringLiteral_23789/*"status_raid_point_frame"*/;
-  *(_QWORD *)(v5 + 40) = StringLiteral_23789/*"status_raid_point_frame"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), v9, v7, v8);
+  v17 = StringLiteral_23809/*"status_raid_point_frame"*/;
+  *(_QWORD *)(v9 + 40) = StringLiteral_23809/*"status_raid_point_frame"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 40), v17, v11, v12, v13, v14, v15, v16);
   static_fields = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
-  static_fields->RP_SPNAME_FRAME = (struct System_String_array *)v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->RP_SPNAME_FRAME, v5, v11, v12);
-  v1 = sub_1C6BAB0(string___TypeInfo, 2);
+  static_fields->RP_SPNAME_FRAME = (struct System_String_array *)v9;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->RP_SPNAME_FRAME, v9, v19, v20, v21, v22, v23, v24);
+  v1 = sub_1C71458(string___TypeInfo, 2);
   if ( !v1 )
     goto LABEL_16;
-  v15 = v1;
+  v31 = v1;
   if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_15;
-  v16 = StringLiteral_23042/*"raid_point_old"*/;
-  *(_QWORD *)(v1 + 32) = StringLiteral_23042/*"raid_point_old"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v1 + 32), v16, v13, v14);
-  if ( *(_DWORD *)(v15 + 24) <= 1u )
+  v32 = StringLiteral_23060/*"raid_point_old"*/;
+  *(_QWORD *)(v1 + 32) = StringLiteral_23060/*"raid_point_old"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v1 + 32), v32, v25, v26, v27, v28, v29, v30);
+  if ( *(_DWORD *)(v31 + 24) <= 1u )
     goto LABEL_15;
-  v19 = StringLiteral_23039/*"raid_point"*/;
-  *(_QWORD *)(v15 + 40) = StringLiteral_23039/*"raid_point"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 40), v19, v17, v18);
-  v20 = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
-  v20->RP_SPNAME_NORMAL = (struct System_String_array *)v15;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v20->RP_SPNAME_NORMAL, v15, v21, v22);
-  v1 = sub_1C6BAB0(string___TypeInfo, 2);
+  v39 = StringLiteral_23057/*"raid_point"*/;
+  *(_QWORD *)(v31 + 40) = StringLiteral_23057/*"raid_point"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v31 + 40), v39, v33, v34, v35, v36, v37, v38);
+  v40 = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
+  v40->RP_SPNAME_NORMAL = (struct System_String_array *)v31;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v40->RP_SPNAME_NORMAL, v31, v41, v42, v43, v44, v45, v46);
+  v1 = sub_1C71458(string___TypeInfo, 2);
   if ( !v1 )
     goto LABEL_16;
-  v25 = v1;
+  v53 = v1;
   if ( !*(_DWORD *)(v1 + 24)
-    || (v26 = StringLiteral_23044/*"raid_point_over_old"*/,
-        *(_QWORD *)(v1 + 32) = StringLiteral_23044/*"raid_point_over_old"*/,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v1 + 32), v26, v23, v24),
-        *(_DWORD *)(v25 + 24) <= 1u) )
+    || (v54 = StringLiteral_23062/*"raid_point_over_old"*/,
+        *(_QWORD *)(v1 + 32) = StringLiteral_23062/*"raid_point_over_old"*/,
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v1 + 32), v54, v47, v48, v49, v50, v51, v52),
+        *(_DWORD *)(v53 + 24) <= 1u) )
   {
 LABEL_15:
-    sub_1C6BC68(v1);
+    sub_1C71610(v1);
   }
-  v29 = StringLiteral_23043/*"raid_point_over"*/;
-  *(_QWORD *)(v25 + 40) = StringLiteral_23043/*"raid_point_over"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v25 + 40), v29, v27, v28);
-  v30 = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
-  v30->RP_SPNAME_OVER = (struct System_String_array *)v25;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v30->RP_SPNAME_OVER, v25, v31, v32);
-  v1 = sub_1C6BAB0(int___TypeInfo, 2);
+  v61 = StringLiteral_23061/*"raid_point_over"*/;
+  *(_QWORD *)(v53 + 40) = StringLiteral_23061/*"raid_point_over"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v53 + 40), v61, v55, v56, v57, v58, v59, v60);
+  v62 = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
+  v62->RP_SPNAME_OVER = (struct System_String_array *)v53;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v62->RP_SPNAME_OVER, v53, v63, v64, v65, v66, v67, v68);
+  v1 = sub_1C71458(int___TypeInfo, 2);
   if ( !v1 )
 LABEL_16:
-    sub_1C6BC60(v1, v2);
-  v35 = (struct System_Int32_array *)v1;
+    sub_1C71608(v1, v2);
+  v75 = (struct System_Int32_array *)v1;
   if ( !*(_DWORD *)(v1 + 24) )
     goto LABEL_15;
   *(_DWORD *)(v1 + 32) = 5;
-  v36 = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
-  v36->RP_OFFSET = v35;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v36->RP_OFFSET, (int32_t)v35, v33, v34);
+  v76 = PlayerStatusRaidPointComponent_TypeInfo->static_fields;
+  v76->RP_OFFSET = v75;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v76->RP_OFFSET, (int32_t)v75, v69, v70, v71, v72, v73, v74);
 }
 
 
@@ -135,10 +175,10 @@ void PlayerStatusRaidPointComponent__SetDispType(
   __int64 v7; // x8
   __int64 BpType; // x9
 
-  if ( (byte_4CB2E0D & 1) == 0 )
+  if ( (byte_4CC3F20 & 1) == 0 )
   {
-    sub_1C6BA08(&PlayerStatusRaidPointComponent_TypeInfo);
-    byte_4CB2E0D = 1;
+    sub_1C713B0(&PlayerStatusRaidPointComponent_TypeInfo);
+    byte_4CC3F20 = 1;
   }
   switch ( dispType )
   {
@@ -182,7 +222,7 @@ void PlayerStatusRaidPointComponent__SetDispType(
 LABEL_20:
       BpType = this->fields.BpType;
       if ( (unsigned int)BpType >= *(_DWORD *)(v7 + 24) )
-        sub_1C6BC68(raidPointSp);
+        sub_1C71610(raidPointSp);
       if ( !v6 )
         goto LABEL_25;
       UISprite__set_spriteName(v6, *(System_String_o **)(v7 + 8 * BpType + 32), 0);
@@ -205,7 +245,7 @@ LABEL_20:
         }
       }
 LABEL_25:
-      sub_1C6BC60(raidPointSp, *(_QWORD *)&dispType);
+      sub_1C71608(raidPointSp, *(_QWORD *)&dispType);
   }
 }
 
@@ -234,11 +274,11 @@ void PlayerStatusRaidPointComponent__Setup(
   int32_t v21; // [xsp+Ch] [xbp-34h] BYREF
 
   v21 = index;
-  if ( (byte_4CB2E0C & 1) == 0 )
+  if ( (byte_4CC3F1F & 1) == 0 )
   {
-    sub_1C6BA08(&PlayerStatusRaidPointComponent_TypeInfo);
-    sub_1C6BA08(&StringLiteral_10949/*"RAID_MARKDISP_STEP"*/);
-    byte_4CB2E0C = 1;
+    sub_1C713B0(&PlayerStatusRaidPointComponent_TypeInfo);
+    sub_1C713B0(&StringLiteral_10955/*"RAID_MARKDISP_STEP"*/);
+    byte_4CC3F1F = 1;
   }
   this->fields.BpType = iBpType;
   gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -247,10 +287,10 @@ void PlayerStatusRaidPointComponent__Setup(
   v8 = gameObject;
   name = UnityEngine_Object__get_name(gameObject, 0);
   v10 = System_Int32__ToString((int32_t)&v21, 0);
-  v11 = System_String__Concat_63966792(name, v10, 0);
+  v11 = System_String__Concat_64031724(name, v10, 0);
   UnityEngine_Object__set_name(v8, v11, 0);
   v12 = v21 - 1;
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_10949/*"RAID_MARKDISP_STEP"*/, 0);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_10955/*"RAID_MARKDISP_STEP"*/, 0);
   if ( Value <= 0 )
   {
     v14 = PlayerStatusRaidPointComponent_TypeInfo;
@@ -302,11 +342,11 @@ void PlayerStatusRaidPointComponent__Setup(
         (RP_OFFSET = PlayerStatusRaidPointComponent_TypeInfo->static_fields->RP_OFFSET) == 0) )
   {
 LABEL_25:
-    sub_1C6BC60(gameObject, v7);
+    sub_1C71608(gameObject, v7);
   }
   v20 = this->fields.BpType;
   if ( (unsigned int)v20 >= LODWORD(RP_OFFSET->max_length) )
 LABEL_26:
-    sub_1C6BC68(gameObject);
+    sub_1C71610(gameObject);
   GameObjectExtensions__SetLocalPositionX((UnityEngine_GameObject_o *)gameObject, (float)RP_OFFSET->m_Items[v20], 0);
 }

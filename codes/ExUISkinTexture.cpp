@@ -23,75 +23,87 @@ void ExUISkinTexture__loadTexture(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  System_Collections_Generic_List_object__o *v14; // x21
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  System_Collections_Generic_List_object__o *v22; // x21
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v18; // x9
+  _QWORD *v30; // x9
   __int64 size; // x10
-  Il2CppClass **v20; // x0
-  System_Action_o *v21; // x19
+  Il2CppClass **v32; // x0
+  System_Action_o *v33; // x19
 
-  if ( (byte_4CB79FD & 1) == 0 )
+  if ( (byte_4CC8B26 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor___78530424);
-    sub_1C6BA08(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C6BA08(&Method_ExUISkinTexture___c__DisplayClass4_0__loadTexture_b__0__);
-    sub_1C6BA08(&ExUISkinTexture___c__DisplayClass4_0_TypeInfo);
-    byte_4CB79FD = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string___ctor___78599184);
+    sub_1C713B0(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C713B0(&Method_ExUISkinTexture___c__DisplayClass4_0__loadTexture_b__0__);
+    sub_1C713B0(&ExUISkinTexture___c__DisplayClass4_0_TypeInfo);
+    byte_4CC8B26 = 1;
   }
-  v7 = sub_1C6BC54(ExUISkinTexture___c__DisplayClass4_0_TypeInfo);
+  v7 = sub_1C715FC(ExUISkinTexture___c__DisplayClass4_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_12;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)callback, v12, v13);
-  v14 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
-  System_Collections_Generic_List_object____ctor_58720688(
-    v14,
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)callback, v16, v17, v18, v19, v20, v21);
+  v22 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_string__TypeInfo);
+  System_Collections_Generic_List_object____ctor_58785620(
+    v22,
     1,
-    (const MethodInfo_38001B0 *)Method_System_Collections_Generic_List_string___ctor___78530424);
-  if ( !v14
-    || (items = v14->fields._items,
-        v18 = Method_System_Collections_Generic_List_string__Add__,
-        ++v14->fields._version,
+    (const MethodInfo_380FF54 *)Method_System_Collections_Generic_List_string___ctor___78599184);
+  if ( !v22
+    || (items = v22->fields._items,
+        v30 = Method_System_Collections_Generic_List_string__Add__,
+        ++v22->fields._version,
         !items) )
   {
 LABEL_12:
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   }
-  size = v14->fields._size;
+  size = v22->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v14,
+      v22,
       (Il2CppObject *)texName,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
   }
   else
   {
-    v20 = &items->obj.klass + size;
-    v14->fields._size = size + 1;
-    v20[4] = (Il2CppClass *)texName;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v20 + 4), (int32_t)texName, v15, v16);
+    v32 = &items->obj.klass + size;
+    v22->fields._size = size + 1;
+    v32[4] = (Il2CppClass *)texName;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v32 + 4), (int32_t)texName, v23, v24, v25, v26, v27, v28);
   }
-  v21 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v21, (Il2CppObject *)v7, Method_ExUISkinTexture___c__DisplayClass4_0__loadTexture_b__0__, 0);
+  v33 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v33, (Il2CppObject *)v7, Method_ExUISkinTexture___c__DisplayClass4_0__loadTexture_b__0__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadUISkinTex(v21, 3, (System_Collections_Generic_List_string__o *)v14, 0);
+  AtlasManager__LoadUISkinTex(v33, 3, (System_Collections_Generic_List_string__o *)v22, 0);
 }
 
 
-void ExUISkinTexture__loadTexture_44045180(
+void ExUISkinTexture__loadTexture_44091508(
         ExUISkinTexture_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -100,34 +112,42 @@ void ExUISkinTexture__loadTexture_44045180(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  System_Action_o *v12; // x20
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  System_Action_o *v20; // x20
   System_Collections_Generic_List_string__o *texNameList; // x19
 
-  if ( (byte_4CB79FE & 1) == 0 )
+  if ( (byte_4CC8B27 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&Method_ExUISkinTexture___c__DisplayClass5_0__loadTexture_b__0__);
-    sub_1C6BA08(&ExUISkinTexture___c__DisplayClass5_0_TypeInfo);
-    byte_4CB79FE = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&Method_ExUISkinTexture___c__DisplayClass5_0__loadTexture_b__0__);
+    sub_1C713B0(&ExUISkinTexture___c__DisplayClass5_0_TypeInfo);
+    byte_4CC8B27 = 1;
   }
-  v5 = sub_1C6BC54(ExUISkinTexture___c__DisplayClass5_0_TypeInfo);
+  v5 = sub_1C715FC(ExUISkinTexture___c__DisplayClass5_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)callback, v10, v11);
-  v12 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v12, (Il2CppObject *)v5, Method_ExUISkinTexture___c__DisplayClass5_0__loadTexture_b__0__, 0);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)callback, v14, v15, v16, v17, v18, v19);
+  v20 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v20, (Il2CppObject *)v5, Method_ExUISkinTexture___c__DisplayClass5_0__loadTexture_b__0__, 0);
   texNameList = this->fields.texNameList;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadUISkinTex(v12, 3, texNameList, 0);
+  AtlasManager__LoadUISkinTex(v20, 3, texNameList, 0);
 }
 
 
@@ -136,14 +156,14 @@ void ExUISkinTexture__releaseTexture(ExUISkinTexture_o *this, const MethodInfo *
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CB79FF & 1) == 0 )
+  if ( (byte_4CC8B28 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    byte_4CB79FF = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    byte_4CC8B28 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   AtlasManager__ReleaseUISkin((AtlasManager_o *)Instance, this->fields.skinType, 0, 0);
 }
 
@@ -153,15 +173,15 @@ void ExUISkinTexture__setupTexture(ExUISkinTexture_o *this, const MethodInfo *me
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CB79FC & 1) == 0 )
+  if ( (byte_4CC8B25 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    byte_4CB79FC = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    byte_4CC8B25 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v4);
-  AtlasManager__SetSkinLocal_40851532((AtlasManager_o *)Instance, this, this->fields.skinType, 0);
+    sub_1C71608(0, v4);
+  AtlasManager__SetSkinLocal_40894072((AtlasManager_o *)Instance, this, this->fields.skinType, 0);
 }
 
 
@@ -181,7 +201,7 @@ void ExUISkinTexture___c__DisplayClass4_0___loadTexture_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ExUISkinTexture__setupTexture(_4__this, method);
   ActionExtensions__Call(this->fields.callback, 0);
 }
@@ -203,7 +223,7 @@ void ExUISkinTexture___c__DisplayClass5_0___loadTexture_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ExUISkinTexture__setupTexture(_4__this, method);
   ActionExtensions__Call(this->fields.callback, 0);
 }

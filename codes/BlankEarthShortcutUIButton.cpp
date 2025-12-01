@@ -64,10 +64,22 @@ void BlankEarthShortcutUIButton__SetPressAction(
         System_Action_o *pressAction,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.onPressedAction = pressAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onPressedAction, (int32_t)pressAction, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.onPressedAction,
+    (int32_t)pressAction,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

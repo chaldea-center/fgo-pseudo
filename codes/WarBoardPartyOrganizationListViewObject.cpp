@@ -19,28 +19,40 @@ void WarBoardPartyOrganizationListViewObject__Init(
         WarBoardPartyOrganizationMenu_OnTapPartyMemberEvent_o *onTapEvent,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   UnityEngine_Object_o *itemDraw; // x20
-  __int64 v7; // x1
-  const MethodInfo *v8; // x3
-  WarBoardPartyOrganizationListViewItemDraw_o *v9; // x0
+  __int64 v11; // x1
+  const MethodInfo *v12; // x3
+  WarBoardPartyOrganizationListViewItemDraw_o *v13; // x0
 
-  if ( (byte_4CB3EFC & 1) == 0 )
+  if ( (byte_4CC5014 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB3EFC = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC5014 = 1;
   }
   this->fields.onTapEvent = onTapEvent;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onTapEvent, (int32_t)onTapEvent, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.onTapEvent,
+    (int32_t)onTapEvent,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(itemDraw, 0, 0) )
   {
-    v9 = this->fields.itemDraw;
-    if ( !v9 )
-      sub_1C6BC60(0, v7);
-    WarBoardPartyOrganizationListViewItemDraw__SetItem(v9, this->fields.listViewItem, 3, v8);
+    v13 = this->fields.itemDraw;
+    if ( !v13 )
+      sub_1C71608(0, v11);
+    WarBoardPartyOrganizationListViewItemDraw__SetItem(v13, this->fields.listViewItem, 3, v12);
   }
 }
 
@@ -161,8 +173,20 @@ void WarBoardPartyOrganizationListViewObject__SetItem(
         PartyOrganizationListViewItem_o *item,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.listViewItem = item;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.listViewItem, (int32_t)item, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.listViewItem,
+    (int32_t)item,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

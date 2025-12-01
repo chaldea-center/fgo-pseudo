@@ -20,7 +20,7 @@ int32_t WarBoardRatingBase__GetId(WarBoardRatingBase_o *this, const MethodInfo *
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return ratingBase->fields.id;
 }
 
@@ -44,7 +44,7 @@ int32_t WarBoardRatingBase__GetViewpoint(WarBoardRatingBase_o *this, const Metho
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return ratingBase->fields.viewPoint;
 }
 
@@ -54,10 +54,14 @@ void WarBoardRatingBase__Init(
         WarBoardRatingBaseEntity_o *ratingBase,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.ratingBase = ratingBase;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)ratingBase, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)ratingBase, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -67,7 +71,7 @@ int32_t WarBoardRatingBase__get_adjustmentValueA1(WarBoardRatingBase_o *this, co
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return ratingBase->fields.adjustmentValueA1;
 }
 
@@ -78,6 +82,6 @@ int32_t WarBoardRatingBase__get_adjustmentValueB(WarBoardRatingBase_o *this, con
 
   ratingBase = this->fields.ratingBase;
   if ( !ratingBase )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return ratingBase->fields.adjustmentValueB;
 }

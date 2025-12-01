@@ -1,29 +1,41 @@
 void RaceResultPointGroupEffectSubComponent___cctor(const MethodInfo *method)
 {
   int32_t v1; // w2
-  const MethodInfo *v2; // x3
-  int32_t v3; // w1
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  int32_t v4; // w5
+  int64_t v5; // x6
+  System_String_o *v6; // x7
+  int32_t v7; // w1
   struct RaceResultPointGroupEffectSubComponent_StaticFields *static_fields; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v9; // w2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
-  if ( (byte_4CB79E8 & 1) == 0 )
+  if ( (byte_4CC8B11 & 1) == 0 )
   {
-    sub_1C6BA08(&RaceResultPointGroupEffectSubComponent_TypeInfo);
-    sub_1C6BA08(&StringLiteral_19304/*"event_ranking_group_name_"*/);
-    sub_1C6BA08(&StringLiteral_19303/*"event_ranking_group_"*/);
-    byte_4CB79E8 = 1;
+    sub_1C713B0(&RaceResultPointGroupEffectSubComponent_TypeInfo);
+    sub_1C713B0(&StringLiteral_19315/*"event_ranking_group_name_"*/);
+    sub_1C713B0(&StringLiteral_19314/*"event_ranking_group_"*/);
+    byte_4CC8B11 = 1;
   }
-  RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields->GROUP_IMAGE_NAME = (struct System_String_o *)StringLiteral_19303/*"event_ranking_group_"*/;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields,
-    StringLiteral_19303/*"event_ranking_group_"*/,
+  RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields->GROUP_IMAGE_NAME = (struct System_String_o *)StringLiteral_19314/*"event_ranking_group_"*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields,
+    StringLiteral_19314/*"event_ranking_group_"*/,
     v1,
-    v2);
-  v3 = StringLiteral_19304/*"event_ranking_group_name_"*/;
+    v2,
+    v3,
+    v4,
+    v5,
+    v6);
+  v7 = StringLiteral_19315/*"event_ranking_group_name_"*/;
   static_fields = RaceResultPointGroupEffectSubComponent_TypeInfo->static_fields;
-  static_fields->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_19304/*"event_ranking_group_name_"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->GROUP_NAME_IMAGE_NAME, v3, v5, v6);
+  static_fields->GROUP_NAME_IMAGE_NAME = (struct System_String_o *)StringLiteral_19315/*"event_ranking_group_name_"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->GROUP_NAME_IMAGE_NAME, v7, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -103,18 +115,18 @@ void RaceResultPointGroupEffectSubComponent__RecvParam(
   int32_t groupId; // [xsp+24h] [xbp-6Ch] BYREF
   System_Int64_array *goalTime; // [xsp+28h] [xbp-68h] BYREF
 
-  if ( (byte_4CB79E7 & 1) == 0 )
+  if ( (byte_4CC8B10 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventRaceResultMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventScriptMaster___);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&RaceResultPointGroupEffectSubComponent_TypeInfo);
-    sub_1C6BA08(&ScriptManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&StringLiteral_16102/*"_"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB79E7 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventPointGroupMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventRaceResultMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventScriptMaster___);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&RaceResultPointGroupEffectSubComponent_TypeInfo);
+    sub_1C713B0(&ScriptManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&StringLiteral_16109/*"_"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC8B10 = 1;
   }
   goalTime = 0;
   groupId = 0;
@@ -152,16 +164,16 @@ void RaceResultPointGroupEffectSubComponent__RecvParam(
   }
   if ( Instance < 1 )
     goto LABEL_85;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (__int64)DataManager__GetMasterData_object_(
                               (DataManager_o *)Instance,
-                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventScriptMaster___)) == 0 )
+                              (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventScriptMaster___)) == 0 )
   {
 LABEL_109:
-    sub_1C6BC60(Instance, v6);
+    sub_1C71608(Instance, v6);
   }
-  Instance = (__int64)EventScriptMaster__getRaceResultEntity_42347236((EventScriptMaster_o *)Instance, 2, v8, 0);
+  Instance = (__int64)EventScriptMaster__getRaceResultEntity_42392576((EventScriptMaster_o *)Instance, 2, v8, 0);
   if ( !Instance )
   {
 LABEL_85:
@@ -236,12 +248,12 @@ LABEL_85:
   v16 = *(_DWORD *)(Instance + 16);
   v17 = *(_DWORD *)(Instance + 40);
   v61 = Instance + 16;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_109;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventRaceResultMaster___);
   if ( !Instance )
     goto LABEL_109;
   Instance = (__int64)EventRaceResultMaster__GetRankDatas(
@@ -266,12 +278,12 @@ LABEL_85:
       if ( v20 >= *(unsigned int *)(v19 + 24) )
         goto LABEL_110;
       groupId = *(_DWORD *)(v21 + 4 * v20);
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_109;
       Instance = (__int64)DataManager__GetMasterData_object_(
                             (DataManager_o *)Instance,
-                            (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
+                            (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventPointGroupMaster___);
       if ( !Instance )
         goto LABEL_109;
       Instance = EventPointGroupMaster__TryGetEntity((EventPointGroupMaster_o *)Instance, &entity, v16, groupId, 0);
@@ -311,10 +323,10 @@ LABEL_85:
             GROUP_NAME_IMAGE_NAME = v27->static_fields->GROUP_NAME_IMAGE_NAME;
             v29 = System_Int32__ToString(v61, 0);
             v30 = System_Int32__ToString((int32_t)&groupId, 0);
-            Instance = (__int64)System_String__Concat_64007060(
+            Instance = (__int64)System_String__Concat_64071992(
                                   GROUP_NAME_IMAGE_NAME,
                                   v29,
-                                  (System_String_o *)StringLiteral_16102/*"_"*/,
+                                  (System_String_o *)StringLiteral_16109/*"_"*/,
                                   v30,
                                   0);
             if ( !v26 )
@@ -341,10 +353,10 @@ LABEL_85:
             GROUP_IMAGE_NAME = v34->static_fields->GROUP_IMAGE_NAME;
             v36 = System_Int32__ToString(v61, 0);
             v37 = System_Int32__ToString((int32_t)&groupId, 0);
-            Instance = (__int64)System_String__Concat_64007060(
+            Instance = (__int64)System_String__Concat_64071992(
                                   GROUP_IMAGE_NAME,
                                   v36,
-                                  (System_String_o *)StringLiteral_16102/*"_"*/,
+                                  (System_String_o *)StringLiteral_16109/*"_"*/,
                                   v37,
                                   0);
             if ( !v33 )
@@ -363,7 +375,7 @@ LABEL_85:
               goto LABEL_109;
             if ( v20 >= LODWORD(goalTime->max_length) || v20 >= v39 )
 LABEL_110:
-              sub_1C6BC68(Instance);
+              sub_1C71610(Instance);
             v40 = goalTime->m_Items[v20];
             v41 = v38->m_Items[v20];
             if ( v40 < 1 )

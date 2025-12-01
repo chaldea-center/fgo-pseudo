@@ -30,7 +30,7 @@ int32_t FSWidgetSize__GetSize(
   float v14; // s0
   int32_t v15; // w8
 
-  if ( (byte_4CB7CDD & 1) != 0 )
+  if ( (byte_4CC8E06 & 1) != 0 )
   {
     if ( fix )
     {
@@ -46,17 +46,17 @@ LABEL_3:
   }
   else
   {
-    sub_1C6BA08(&FSUtility_TypeInfo);
-    byte_4CB7CDD = 1;
+    sub_1C713B0(&FSUtility_TypeInfo);
+    byte_4CC8E06 = 1;
     if ( fix )
       goto LABEL_3;
   }
   width = UnityEngine_Screen__get_width(0);
   height = (float)UnityEngine_Screen__get_height(0);
-  if ( !byte_4CB02B0 )
+  if ( !byte_4CC13B2 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB02B0 = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC13B2 = 1;
   }
   v12 = (float)width / height;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -84,15 +84,15 @@ void FSWidgetSize__SetSize(FSWidgetSize_o *this, const MethodInfo *method)
   const MethodInfo *v9; // x4
   int32_t v10; // w1
 
-  if ( (byte_4CB7CDC & 1) == 0 )
+  if ( (byte_4CC8E05 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB7CDC = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC8E05 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -105,7 +105,7 @@ void FSWidgetSize__SetSize(FSWidgetSize_o *this, const MethodInfo *method)
              this->fields.fixWidth,
              v5);
     if ( !Component_object )
-      sub_1C6BC60(Size, v7);
+      sub_1C71608(Size, v7);
     UIWidget__set_width((UIWidget_o *)Component_object, Size, 0);
     v10 = FSWidgetSize__GetSize(
             v8,

@@ -1,14 +1,14 @@
 void UserGameEntity___ctor(UserGameEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB71B0 & 1) == 0 )
+  if ( (byte_4CC82D9 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_long___ctor__);
-    byte_4CB71B0 = 1;
+    sub_1C713B0(&Method_DataEntityBase_long___ctor__);
+    byte_4CC82D9 = 1;
   }
   this->fields.mainSupportDeckId = 1;
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_33F6C40 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_34069E4 *)Method_DataEntityBase_long___ctor__);
 }
 
 
@@ -31,26 +31,26 @@ int32_t UserGameEntity__GetFriendPoint(UserGameEntity_o *this, const MethodInfo 
   __int64 v5; // x0
   void *MasterData_object; // x0
 
-  if ( (byte_4CB71A7 & 1) == 0 )
+  if ( (byte_4CC82D0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_TblUserMaster___);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    byte_4CB71A7 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_TblUserMaster___);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    byte_4CC82D0 = 1;
   }
   v4 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1C41A9C(v2);
+    v4 = sub_1C47444(v2);
   v5 = *(_QWORD *)(*(_QWORD *)(v4 + 192) + 16LL);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C41A9C(v2);
+    v5 = sub_1C47444(v2);
   MasterData_object = **(void ***)(v5 + 184);
   if ( !MasterData_object
     || (MasterData_object = DataManager__GetMasterData_object_(
                               (DataManager_o *)MasterData_object,
-                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_TblUserMaster___)) == 0
+                              (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_TblUserMaster___)) == 0
     || (MasterData_object = TblUserMaster__getUserData((TblUserMaster_o *)MasterData_object, this->fields.userId, 0)) == 0 )
   {
-    sub_1C6BC60(MasterData_object, method);
+    sub_1C71608(MasterData_object, method);
   }
   return *((_DWORD *)MasterData_object + 6);
 }
@@ -66,25 +66,25 @@ int32_t UserGameEntity__GetSpellImageId(int32_t genderType, int64_t equipId, con
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // 0:x0.16
 
   v3 = equipId;
-  if ( (byte_4CB71AA & 1) == 0 )
+  if ( (byte_4CC82D3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EquipMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB71AA = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_EquipMaster___);
+    sub_1C713B0(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC82D3 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EquipMaster___)) == 0
+                     (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EquipMaster___)) == 0
     || (Instance = DataMasterBase_object__object__int___GetEntity(
                      (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                      v3,
-                     (const MethodInfo_33F90DC *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__)) == 0 )
+                     (const MethodInfo_3408E80 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__)) == 0 )
   {
-    sub_1C6BC60(Instance, v6);
+    sub_1C71608(Instance, v6);
   }
   if ( genderType == 2 )
   {
@@ -100,7 +100,7 @@ int32_t UserGameEntity__GetSpellImageId(int32_t genderType, int64_t equipId, con
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v10.fields.currentCryptoKey = klass;
   *(_QWORD *)&v10.fields.fakeValue = monitor;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v10, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v10, 0);
 }
 
 
@@ -126,10 +126,10 @@ bool UserGameEntity__IsNeedRecoverAct(UserGameEntity_o *this, const MethodInfo *
 {
   int64_t actRecoverAt; // x19
 
-  if ( (byte_4CB719E & 1) == 0 )
+  if ( (byte_4CC82C7 & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB719E = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC82C7 = 1;
   }
   actRecoverAt = this->fields.actRecoverAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -142,10 +142,10 @@ bool UserGameEntity__IsNeedRecoverRp(UserGameEntity_o *this, const MethodInfo *m
 {
   int64_t rpRecoverAt; // x19
 
-  if ( (byte_4CB71A3 & 1) == 0 )
+  if ( (byte_4CC82CC & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB71A3 = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC82CC = 1;
   }
   rpRecoverAt = this->fields.rpRecoverAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -170,10 +170,10 @@ int64_t UserGameEntity__getActAllRecoverTime(UserGameEntity_o *this, const Metho
   int64_t actRecoverAt; // x19
   __int64 v4; // x8
 
-  if ( (byte_4CB719C & 1) == 0 )
+  if ( (byte_4CC82C5 & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB719C = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC82C5 = 1;
   }
   actRecoverAt = this->fields.actRecoverAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -196,11 +196,11 @@ int64_t UserGameEntity__getActNextRecoverTime(UserGameEntity_o *this, const Meth
   BalanceConfig_c *v5; // x0
   int64_t UerGameActRecoverCost; // x8
 
-  if ( (byte_4CB719D & 1) == 0 )
+  if ( (byte_4CC82C6 & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB719D = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC82C6 = 1;
   }
   actRecoverAt = this->fields.actRecoverAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -234,31 +234,31 @@ int64_t UserGameEntity__getActiveUserEquipId(UserGameEntity_o *this, const Metho
   __int64 v4; // x1
   __int64 v5; // x8
 
-  if ( (byte_4CB71AD & 1) == 0 )
+  if ( (byte_4CC82D6 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserDeckMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB71AD = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserDeckMaster___);
+    sub_1C713B0(&Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC82D6 = 1;
   }
-  result = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  result = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !result )
     goto LABEL_9;
   result = (int64_t)DataManager__GetMasterData_object_(
                       (DataManager_o *)result,
-                      (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserDeckMaster___);
+                      (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserDeckMaster___);
   if ( !result )
     goto LABEL_9;
   result = (int64_t)DataMasterBase_object__object__long___GetEntity(
                       (DataMasterBase_TMaster__TEntity__PKType__o *)result,
                       this->fields.activeDeckId,
-                      (const MethodInfo_33FB638 *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
+                      (const MethodInfo_340B3DC *)Method_DataMasterBase_UserDeckMaster__UserDeckEntity__long__GetEntity__);
   if ( !result )
     return result;
   v5 = *(_QWORD *)(result + 48);
   if ( !v5 )
 LABEL_9:
-    sub_1C6BC60(result, v4);
+    sub_1C71608(result, v4);
   return *(_QWORD *)(v5 + 24);
 }
 
@@ -272,11 +272,11 @@ int32_t UserGameEntity__getBaseAct(UserGameEntity_o *this, const MethodInfo *met
   __int64 actMax; // x8
   __int64 v8; // x9
 
-  if ( (byte_4CB719B & 1) == 0 )
+  if ( (byte_4CC82C4 & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB719B = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC82C4 = 1;
   }
   actRecoverAt = this->fields.actRecoverAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -310,20 +310,20 @@ int32_t UserGameEntity__getBaseRp(UserGameEntity_o *this, const MethodInfo *meth
   int32_t UerGameRpMax; // w19
   __int64 v9; // x8
 
-  if ( (byte_4CB719F & 1) == 0 )
+  if ( (byte_4CC82C8 & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB719F = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC82C8 = 1;
   }
   rpRecoverAt = this->fields.rpRecoverAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Time = NetworkManager__getTime(0);
-  if ( !byte_4CB2EE2 )
+  if ( !byte_4CC3FF7 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    byte_4CB2EE2 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    byte_4CC3FF7 = 1;
   }
   v5 = BalanceConfig_TypeInfo;
   v6 = rpRecoverAt - Time;
@@ -384,12 +384,12 @@ bool UserGameEntity__getCmdSpellInfo(
   __int64 v13; // x10
   int32_t v14; // w9
 
-  if ( (byte_4CB71A5 & 1) == 0 )
+  if ( (byte_4CC82CE & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_3670/*"COMMAND_SPELL_RECOVER_AT"*/);
-    byte_4CB71A5 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_3673/*"COMMAND_SPELL_RECOVER_AT"*/);
+    byte_4CC82CE = 1;
   }
   v7 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -398,10 +398,10 @@ bool UserGameEntity__getCmdSpellInfo(
     v7 = BalanceConfig_TypeInfo;
   }
   CommandSpellMax = v7->static_fields->CommandSpellMax;
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3670/*"COMMAND_SPELL_RECOVER_AT"*/, 0);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_3673/*"COMMAND_SPELL_RECOVER_AT"*/, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( this->fields.commandSpellUseAt < NetworkManager__getNextDayTime_41601572(Value, 0) - 86400 )
+  if ( this->fields.commandSpellUseAt < NetworkManager__getNextDayTime_41644732(Value, 0) - 86400 )
     goto LABEL_19;
   commandSpellRecoverAt = this->fields.commandSpellRecoverAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -441,19 +441,19 @@ int32_t UserGameEntity__getCommandSpell(UserGameEntity_o *this, const MethodInfo
   int32_t v7; // w0
   __int64 v8; // x8
 
-  if ( (byte_4CB71A4 & 1) == 0 )
+  if ( (byte_4CC82CD & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_3670/*"COMMAND_SPELL_RECOVER_AT"*/);
-    sub_1C6BA08(&StringLiteral_9622/*"ONE_COMMAND_SPELL"*/);
-    sub_1C6BA08(&StringLiteral_8605/*"MAX_COMMAND_SPELL"*/);
-    byte_4CB71A4 = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_3673/*"COMMAND_SPELL_RECOVER_AT"*/);
+    sub_1C713B0(&StringLiteral_9627/*"ONE_COMMAND_SPELL"*/);
+    sub_1C713B0(&StringLiteral_8609/*"MAX_COMMAND_SPELL"*/);
+    byte_4CC82CD = 1;
   }
-  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8605/*"MAX_COMMAND_SPELL"*/, 0);
-  v4 = ConstantMaster__getValue((System_String_o *)StringLiteral_3670/*"COMMAND_SPELL_RECOVER_AT"*/, 0);
+  Value = ConstantMaster__getValue((System_String_o *)StringLiteral_8609/*"MAX_COMMAND_SPELL"*/, 0);
+  v4 = ConstantMaster__getValue((System_String_o *)StringLiteral_3673/*"COMMAND_SPELL_RECOVER_AT"*/, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( this->fields.commandSpellUseAt >= NetworkManager__getNextDayTime_41601572(v4, 0) - 86400 )
+  if ( this->fields.commandSpellUseAt >= NetworkManager__getNextDayTime_41644732(v4, 0) - 86400 )
   {
     commandSpellRecoverAt = this->fields.commandSpellRecoverAt;
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -461,7 +461,7 @@ int32_t UserGameEntity__getCommandSpell(UserGameEntity_o *this, const MethodInfo
     v6 = commandSpellRecoverAt - NetworkManager__getTime(0);
     if ( v6 >= 1 )
     {
-      v7 = ConstantMaster__getValue((System_String_o *)StringLiteral_9622/*"ONE_COMMAND_SPELL"*/, 0);
+      v7 = ConstantMaster__getValue((System_String_o *)StringLiteral_9627/*"ONE_COMMAND_SPELL"*/, 0);
       v8 = (v6 + v7 - 1) / v7;
       if ( v8 >= Value )
         return 0;
@@ -490,19 +490,19 @@ bool UserGameEntity__getExpInfo(
   int32_t v16; // w1
   float v17; // s0
 
-  if ( (byte_4CB71A6 & 1) == 0 )
+  if ( (byte_4CC82CF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserExpMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB71A6 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserExpMaster___);
+    sub_1C713B0(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC82CF = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserExpMaster___);
+                                (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserExpMaster___);
   if ( !Instance )
     goto LABEL_14;
   v11 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
@@ -516,7 +516,7 @@ bool UserGameEntity__getExpInfo(
       Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                     v11,
                                     lv - 1,
-                                    (const MethodInfo_33F90DC *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+                                    (const MethodInfo_3408E80 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
       if ( !Instance )
         goto LABEL_14;
       m_CancellationTokenSource = Instance->fields.m_CancellationTokenSource;
@@ -530,7 +530,7 @@ bool UserGameEntity__getExpInfo(
     Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                   v11,
                                   v16,
-                                  (const MethodInfo_33F90DC *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+                                  (const MethodInfo_3408E80 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
     *exp = this->fields.exp - (_QWORD)m_CancellationTokenSource;
     if ( Instance )
     {
@@ -540,7 +540,7 @@ bool UserGameEntity__getExpInfo(
       goto LABEL_13;
     }
 LABEL_14:
-    sub_1C6BC60(Instance, v10);
+    sub_1C71608(Instance, v10);
   }
   v17 = 1.0;
   *exp = 0;
@@ -563,10 +563,10 @@ int32_t UserGameEntity__getRp(UserGameEntity_o *this, const MethodInfo *method)
   BalanceConfig_c *v4; // x0
 
   BaseRp = UserGameEntity__getBaseRp(this, method);
-  if ( !byte_4CB2EE2 )
+  if ( !byte_4CC3FF7 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    byte_4CB2EE2 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    byte_4CC3FF7 = 1;
   }
   v4 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -585,10 +585,10 @@ int64_t UserGameEntity__getRpAllRecoverTime(UserGameEntity_o *this, const Method
   int64_t rpRecoverAt; // x19
   __int64 v4; // x8
 
-  if ( (byte_4CB71A1 & 1) == 0 )
+  if ( (byte_4CC82CA & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB71A1 = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC82CA = 1;
   }
   rpRecoverAt = this->fields.rpRecoverAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -602,10 +602,10 @@ int32_t UserGameEntity__getRpMax(UserGameEntity_o *this, const MethodInfo *metho
 {
   BalanceConfig_c *v2; // x0
 
-  if ( (byte_4CB71A0 & 1) == 0 )
+  if ( (byte_4CC82C9 & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    byte_4CB71A0 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    byte_4CC82C9 = 1;
   }
   v2 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -624,11 +624,11 @@ int64_t UserGameEntity__getRpNextRecoverTime(UserGameEntity_o *this, const Metho
   BalanceConfig_c *v5; // x0
   int64_t UerGameRpRecoverCost; // x8
 
-  if ( (byte_4CB71A2 & 1) == 0 )
+  if ( (byte_4CC82CB & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB71A2 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC82CB = 1;
   }
   rpRecoverAt = this->fields.rpRecoverAt;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -658,14 +658,14 @@ int64_t UserGameEntity__getRpNextRecoverTime(UserGameEntity_o *this, const Metho
 
 bool UserGameEntity__getTutorialFlag(UserGameEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4CB71AB & 1) == 0 )
+  if ( (byte_4CC82D4 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB71AB = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC82D4 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_40657508(this, flagId, 0);
+  return TutorialFlag__Get_40699800(this, flagId, 0);
 }
 
 
@@ -685,10 +685,10 @@ int32_t UserGameEntity__get_CommandCodeKeep(UserGameEntity_o *this, const Method
 {
   BalanceConfig_c *v2; // x0
 
-  if ( (byte_4CB71AE & 1) == 0 )
+  if ( (byte_4CC82D7 & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    byte_4CB71AE = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    byte_4CC82D7 = 1;
   }
   v2 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -706,17 +706,17 @@ int32_t UserGameEntity__get_PayableStoneNum(UserGameEntity_o *this, const Method
   int32_t v4; // w20
   int32_t *p_chargeStone; // t2
 
-  if ( (byte_4CB71AF & 1) == 0 )
+  if ( (byte_4CC82D8 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB71AF = 1;
+    sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC82D8 = 1;
   }
   p_chargeStone = &this->fields.chargeStone;
   chargeStone = this->fields.chargeStone;
   v4 = p_chargeStone[1];
   if ( !System_Math_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-  return System_Math__Max_65488612(v4, chargeStone, 0);
+  return System_Math__Max_65553544(v4, chargeStone, 0);
 }
 
 
@@ -734,28 +734,28 @@ int32_t UserGameEntity__get_SpellImageId(UserGameEntity_o *this, const MethodInf
   const MethodInfo *v12; // x2
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // 0:x0.16
 
-  if ( (byte_4CB71A8 & 1) == 0 )
+  if ( (byte_4CC82D1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserEquipMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB71A8 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserEquipMaster___);
+    sub_1C713B0(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC82D1 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (MasterData_object = DataManager__GetMasterData_object_(
                               Instance,
-                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserEquipMaster___),
+                              (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserEquipMaster___),
         Instance = (DataManager_o *)UserGameEntity__getActiveUserEquipId(this, v6),
         !MasterData_object) )
   {
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              (int64_t)Instance,
-             (const MethodInfo_33FB638 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+             (const MethodInfo_340B3DC *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
   if ( Entity )
   {
     genderType = this->fields.genderType;
@@ -765,7 +765,7 @@ int32_t UserGameEntity__get_SpellImageId(UserGameEntity_o *this, const MethodInf
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v14.fields.currentCryptoKey = klass;
     *(_QWORD *)&v14.fields.fakeValue = monitor;
-    v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v14, 0);
+    v11 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v14, 0);
     LODWORD(Entity) = UserGameEntity__GetSpellImageId(genderType, v11, v12);
   }
   return (int)Entity;
@@ -792,31 +792,31 @@ int32_t UserGameEntity__get_SpellImageIdBattle(UserGameEntity_o *this, const Met
   int32_t v18; // w19
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v19; // 0:x0.16
 
-  if ( (byte_4CB71A9 & 1) == 0 )
+  if ( (byte_4CC82D2 & 1) == 0 )
   {
-    sub_1C6BA08(&BattleRootComponent_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserEquipMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB71A9 = 1;
+    sub_1C713B0(&BattleRootComponent_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserEquipMaster___);
+    sub_1C713B0(&Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC82D2 = 1;
   }
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_26;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserEquipMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserEquipMaster___);
   Instance = UserGameEntity__getActiveUserEquipId(this, v6);
   if ( !MasterData_object )
     goto LABEL_26;
   Entity = DataMasterBase_object__object__long___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
              Instance,
-             (const MethodInfo_33FB638 *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+             (const MethodInfo_340B3DC *)Method_DataMasterBase_UserEquipMaster__UserEquipEntity__long__GetEntity__);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_26;
   v8 = *(_QWORD *)(Instance + 32);
@@ -854,11 +854,11 @@ int32_t UserGameEntity__get_SpellImageIdBattle(UserGameEntity_o *this, const Met
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v19.fields.currentCryptoKey = klass;
   *(_QWORD *)&v19.fields.fakeValue = monitor;
-  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v19, 0);
+  v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v19, 0);
   Instance = UserGameEntity__GetSpellImageId(v13, v16, v17);
   if ( !*(_QWORD *)(v10 + 64) )
 LABEL_26:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   v18 = Instance;
   result = BattleData__GetOverwriteCommandSpellIcon(*(BattleData_o **)(v10 + 64), 0);
   if ( !result )
@@ -869,12 +869,12 @@ LABEL_26:
 
 void UserGameEntity__setTutorialFlag(UserGameEntity_o *this, int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4CB71AC & 1) == 0 )
+  if ( (byte_4CC82D5 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB71AC = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC82D5 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_40692576(this, flagId, 0);
+  TutorialFlag__Set_40734868(this, flagId, 0);
 }

@@ -7,20 +7,24 @@ void SetMaterialFloatComponent___ctor(SetMaterialFloatComponent_o *this, const M
 void SetMaterialFloatComponent__Finish(SetMaterialFloatComponent_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB9C8F & 1) == 0 )
+  if ( (byte_4CCADE1 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9C8F = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCADE1 = 1;
   }
   this->fields.targetRenderer = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.targetRenderer, 0, v2, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.targetRenderer, 0, v2, v3, v4, v5, v6, v7);
   if ( this->fields.destroyOnFinished )
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676((UnityEngine_Object_o *)this, 0);
+    UnityEngine_Object__Destroy_71724608((UnityEngine_Object_o *)this, 0);
   }
   else
   {
@@ -75,10 +79,10 @@ void SetMaterialFloatComponent__SetMaterialFloat(
   __int64 materialIndex; // x8
   UnityEngine_Material_array *v10; // x20
 
-  if ( (byte_4CB9C90 & 1) == 0 )
+  if ( (byte_4CCADE2 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9C90 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCADE2 = 1;
   }
   targetRenderer = (UnityEngine_Object_o *)this->fields.targetRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -112,11 +116,11 @@ void SetMaterialFloatComponent__SetMaterialFloat(
               materialIndex = this->fields.materialIndex;
               v10 = (UnityEngine_Material_array *)materials;
               if ( (unsigned int)materialIndex >= LODWORD(materials[1].klass) )
-                sub_1C6BC68(materials);
+                sub_1C71610(materials);
               materials = (UnityEngine_Renderer_o *)*((_QWORD *)&materials[1].monitor + materialIndex);
               if ( materials )
               {
-                UnityEngine_Material__SetFloat_71528744(
+                UnityEngine_Material__SetFloat_71593676(
                   (UnityEngine_Material_o *)materials,
                   this->fields.propertyId,
                   floatValue,
@@ -131,7 +135,7 @@ void SetMaterialFloatComponent__SetMaterialFloat(
             }
           }
 LABEL_23:
-          sub_1C6BC60(materials, v6);
+          sub_1C71608(materials, v6);
         }
       }
       else
@@ -139,7 +143,7 @@ LABEL_23:
         materials = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_material(materials, 0);
         if ( !materials )
           goto LABEL_23;
-        UnityEngine_Material__SetFloat_71528744(
+        UnityEngine_Material__SetFloat_71593676(
           (UnityEngine_Material_o *)materials,
           this->fields.propertyId,
           floatValue,
@@ -165,23 +169,35 @@ void SetMaterialFloatComponent__Setup(
   bool v17; // w25
   bool v18; // w24
   int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  const MethodInfo *v21; // x1
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
+  const MethodInfo *v25; // x1
   UnityEngine_Object_o *targetRenderer; // x21
-  bool v23; // w0
-  const MethodInfo *v24; // x1
+  bool v27; // w0
+  const MethodInfo *v28; // x1
   UnityEngine_Renderer_o *materials; // x0
 
   v17 = realTime;
   v18 = destroyOnFinished;
-  if ( (byte_4CB9C8D & 1) == 0 )
+  if ( (byte_4CCADDF & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9C8D = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCADDF = 1;
   }
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 1, 0);
   this->fields.propertyName = propertyName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.propertyName, (int32_t)propertyName, v19, v20);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.propertyName,
+    (int32_t)propertyName,
+    v19,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24);
   this->fields.interpolationType = interpolationType;
   this->fields.fromValue = fromValue;
   this->fields.toValue = toValue;
@@ -189,40 +205,44 @@ void SetMaterialFloatComponent__Setup(
   this->fields.realTime = v17;
   this->fields.materialIndex = materialIndex;
   this->fields.destroyOnFinished = v18;
-  SetMaterialFloatComponent__Setup_48089164(this, v21);
+  SetMaterialFloatComponent__Setup_48151080(this, v25);
   targetRenderer = (UnityEngine_Object_o *)this->fields.targetRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v23 = UnityEngine_Object__op_Equality(targetRenderer, 0, 0);
-  if ( materialIndex < 0 || v23 )
+  v27 = UnityEngine_Object__op_Equality(targetRenderer, 0, 0);
+  if ( materialIndex < 0 || v27 )
     goto LABEL_10;
   materials = this->fields.targetRenderer;
   if ( !materials || (materials = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_materials(materials, 0)) == 0 )
-    sub_1C6BC60(materials, v24);
+    sub_1C71608(materials, v28);
   if ( SLODWORD(materials[1].klass) <= materialIndex )
 LABEL_10:
-    SetMaterialFloatComponent__Finish(this, v24);
+    SetMaterialFloatComponent__Finish(this, v28);
 }
 
 
-void SetMaterialFloatComponent__Setup_48089164(SetMaterialFloatComponent_o *this, const MethodInfo *method)
+void SetMaterialFloatComponent__Setup_48151080(SetMaterialFloatComponent_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
   struct UnityEngine_Renderer_o **p_targetRenderer; // x19
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
 
-  if ( (byte_4CB9C8E & 1) == 0 )
+  if ( (byte_4CCADE0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    byte_4CB9C8E = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    byte_4CCADE0 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields.targetRenderer = (struct UnityEngine_Renderer_o *)Component_object;
   p_targetRenderer = &this->fields.targetRenderer;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_targetRenderer, (int32_t)Component_object, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p_targetRenderer, (int32_t)Component_object, v5, v6, v7, v8, v9, v10);
   *((_DWORD *)p_targetRenderer + 2) = UnityEngine_Shader__PropertyToID((System_String_o *)*(p_targetRenderer - 6), 0);
   *((float *)p_targetRenderer - 3) = UnityEngine_Time__get_realtimeSinceStartup(0);
   *((_DWORD *)p_targetRenderer - 2) = 0;
@@ -232,7 +252,7 @@ void SetMaterialFloatComponent__Setup_48089164(SetMaterialFloatComponent_o *this
 // attributes: thunk
 void SetMaterialFloatComponent__Start(SetMaterialFloatComponent_o *this, const MethodInfo *method)
 {
-  SetMaterialFloatComponent__Setup_48089164(this, method);
+  SetMaterialFloatComponent__Setup_48151080(this, method);
 }
 
 

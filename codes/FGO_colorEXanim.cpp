@@ -1,19 +1,23 @@
 void FGO_colorEXanim___ctor(FGO_colorEXanim_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  int32_t v10; // w1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v14; // w1
 
-  if ( (byte_4CB5050 & 1) == 0 )
+  if ( (byte_4CC616F & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16612/*"_xxxColor"*/);
-    byte_4CB5050 = 1;
+    sub_1C713B0(&StringLiteral_16619/*"_xxxColor"*/);
+    byte_4CC616F = 1;
   }
   __asm { FMOV            V0.4S, #1.0 }
   this->fields.customColor = _Q0;
-  v10 = StringLiteral_16612/*"_xxxColor"*/;
-  this->fields.targetColorName = (struct System_String_o *)StringLiteral_16612/*"_xxxColor"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.targetColorName, v10, v2, v3);
+  v14 = StringLiteral_16619/*"_xxxColor"*/;
+  this->fields.targetColorName = (struct System_String_o *)StringLiteral_16619/*"_xxxColor"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.targetColorName, v14, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -22,20 +26,24 @@ void FGO_colorEXanim__Start(FGO_colorEXanim_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  __int64 v6; // x1
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  __int64 v10; // x1
   UnityEngine_Renderer_o *renderer; // x0
 
-  if ( (byte_4CB504F & 1) == 0 )
+  if ( (byte_4CC616E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    byte_4CB504F = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    byte_4CC616E = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Renderer___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Renderer___);
   this->fields._renderer = (struct UnityEngine_Renderer_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._renderer, (int32_t)Component_object, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields._renderer, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
   renderer = this->fields._renderer;
   if ( !renderer
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0)) == 0
@@ -43,7 +51,7 @@ void FGO_colorEXanim__Start(FGO_colorEXanim_o *this, const MethodInfo *method)
         (renderer = this->fields._renderer) == 0)
     || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0)) == 0 )
   {
-    sub_1C6BC60(renderer, v6);
+    sub_1C71608(renderer, v10);
   }
   UnityEngine_Material__SetColor(
     (UnityEngine_Material_o *)renderer,
@@ -59,7 +67,7 @@ void FGO_colorEXanim__Update(FGO_colorEXanim_o *this, const MethodInfo *method)
 
   renderer = this->fields._renderer;
   if ( !renderer || (renderer = (UnityEngine_Renderer_o *)UnityEngine_Renderer__get_sharedMaterial(renderer, 0)) == 0 )
-    sub_1C6BC60(renderer, method);
+    sub_1C71608(renderer, method);
   UnityEngine_Material__SetColor(
     (UnityEngine_Material_o *)renderer,
     this->fields.targetColorName,

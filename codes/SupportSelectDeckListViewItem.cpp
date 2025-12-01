@@ -10,15 +10,19 @@ void SupportSelectDeckListViewItem___ctor(
   bool v8; // w21
   bool v9; // w22
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
 
   v7 = this;
   v8 = isSameKind;
   v9 = isPossibleCopy;
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   v7->fields.supportData = data;
   v7 = (SupportSelectDeckListViewItem_o *)((char *)v7 + 120);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v7, (int32_t)data, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v7, (int32_t)data, v10, v11, v12, v13, v14, v15);
   LOBYTE(v7->monitor) = v8;
   BYTE1(v7->monitor) = v9;
 }

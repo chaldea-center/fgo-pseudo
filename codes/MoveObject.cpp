@@ -51,11 +51,19 @@ void MoveObject__Play(
 {
   float v14; // s10
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
   System_Action_o *mProcessAct; // x0
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
 
   this->fields.mFrom = from;
   this->fields.mTo.fields.x = to.fields.x;
@@ -69,11 +77,11 @@ void MoveObject__Play(
   this->fields.mStartTime = UnityEngine_Time__get_time(0);
   this->fields.mTime = v14;
   this->fields.mEndAct = endAct;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16);
-  v20 = Easing__Func(this->fields.mFrom, this->fields.mTo, 0.0001, this->fields.mEasingType, 0);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mEndAct, (int32_t)endAct, v15, v16, v17, v18, v19, v20);
+  v28 = Easing__Func(this->fields.mFrom, this->fields.mTo, 0.0001, this->fields.mEasingType, 0);
   this->fields.mProcessAct = procAct;
-  this->fields.mNow = v20;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mProcessAct, (int32_t)procAct, v17, v18);
+  this->fields.mNow = v28;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mProcessAct, (int32_t)procAct, v21, v22, v23, v24, v25, v26);
   this->fields.mEasingType = easingType;
   mProcessAct = this->fields.mProcessAct;
   this->fields.mDelay = delay;

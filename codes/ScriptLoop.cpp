@@ -2,31 +2,47 @@ void ScriptLoop___ctor(ScriptLoop_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_int__o *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  System_Collections_Generic_List_object__o *v6; // x20
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  System_Collections_Generic_List_object__o *v10; // x20
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
-  if ( (byte_4CB8292 & 1) == 0 )
+  if ( (byte_4CC93C5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_List_string__TypeInfo);
-    byte_4CB8292 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_List_string__TypeInfo);
+    byte_4CC93C5 = 1;
   }
-  v3 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+  v3 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v3,
-    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
   this->fields.switchCaseIndex = v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.switchCaseIndex, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.switchCaseIndex, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v6,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
-  this->fields.switchCaseMessage = (struct System_Collections_Generic_List_string__o *)v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.switchCaseMessage, (int32_t)v6, v7, v8);
+    v10,
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_string___ctor__);
+  this->fields.switchCaseMessage = (struct System_Collections_Generic_List_string__o *)v10;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.switchCaseMessage,
+    (int32_t)v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
   this->fields.isAddLog = 1;
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -39,10 +55,10 @@ void ScriptLoop__ExecuteLoop(ScriptLoop_o *this, const MethodInfo *method)
   int32_t v5; // w0
   int32_t switchCaseCount; // w8
 
-  if ( (byte_4CB828F & 1) == 0 )
+  if ( (byte_4CC93C2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_LastOrDefault_int___);
-    byte_4CB828F = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_LastOrDefault_int___);
+    byte_4CC93C2 = 1;
   }
   v3 = this->fields.count + 1;
   v4 = this->fields.count - 1 < 0;
@@ -51,7 +67,7 @@ void ScriptLoop__ExecuteLoop(ScriptLoop_o *this, const MethodInfo *method)
     this->fields.isForceStopAdd = 1;
   v5 = System_Linq_Enumerable__LastOrDefault_int_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.switchCaseIndex,
-         (const MethodInfo_31678F8 *)Method_System_Linq_Enumerable_LastOrDefault_int___);
+         (const MethodInfo_317769C *)Method_System_Linq_Enumerable_LastOrDefault_int___);
   switchCaseCount = this->fields.switchCaseCount;
   this->fields.lastSelectedIndex = v5;
   this->fields.lastLoopSwitchCaseCount = switchCaseCount;
@@ -69,13 +85,13 @@ bool ScriptLoop__IsExecuteLogErase(ScriptLoop_o *this, const MethodInfo *method)
   Il2CppObject *Item; // x0
   bool result; // w0
 
-  if ( (byte_4CB8290 & 1) == 0 )
+  if ( (byte_4CC93C3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__RemoveRange__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__RemoveRange__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    byte_4CB8290 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__RemoveRange__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__RemoveRange__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_4CC93C3 = 1;
   }
   if ( !this->fields.isEnableLoopLogLaterErase )
     return 0;
@@ -93,13 +109,13 @@ bool ScriptLoop__IsExecuteLogErase(ScriptLoop_o *this, const MethodInfo *method)
     switchCaseIndex = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___get_Item(
                                                                   switchCaseIndex,
                                                                   v5,
-                                                                  (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                                                  (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
     if ( !this->fields.switchCaseIndex )
       goto LABEL_20;
     if ( (_DWORD)switchCaseIndex != System_Collections_Generic_List_int___get_Item(
                                       this->fields.switchCaseIndex,
                                       this->fields.lastLoopSwitchCaseCount + v4,
-                                      (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__) )
+                                      (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__) )
       goto LABEL_14;
     switchCaseIndex = (System_Collections_Generic_List_int__o *)this->fields.switchCaseMessage;
     if ( !switchCaseIndex )
@@ -107,14 +123,14 @@ bool ScriptLoop__IsExecuteLogErase(ScriptLoop_o *this, const MethodInfo *method)
     switchCaseIndex = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_object___get_Item(
                                                                   (System_Collections_Generic_List_object__o *)switchCaseIndex,
                                                                   v5,
-                                                                  (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_string__get_Item__);
+                                                                  (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_string__get_Item__);
     if ( !this->fields.switchCaseMessage )
       goto LABEL_20;
     v8 = (System_String_o *)switchCaseIndex;
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)this->fields.switchCaseMessage,
              this->fields.lastLoopSwitchCaseCount + v4,
-             (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_string__get_Item__);
+             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_string__get_Item__);
     if ( !System_String__op_Equality(v8, (System_String_o *)Item, 0) )
     {
 LABEL_14:
@@ -133,17 +149,17 @@ LABEL_15:
           switchCaseIndex,
           this->fields.lastLoopSwitchCaseCount,
           v6,
-          (const MethodInfo_37E5138 *)Method_System_Collections_Generic_List_int__RemoveRange__),
+          (const MethodInfo_37F4EDC *)Method_System_Collections_Generic_List_int__RemoveRange__),
         (switchCaseIndex = (System_Collections_Generic_List_int__o *)this->fields.switchCaseMessage) == 0) )
   {
 LABEL_20:
-    sub_1C6BC60(switchCaseIndex, method);
+    sub_1C71608(switchCaseIndex, method);
   }
   System_Collections_Generic_List_object___RemoveRange(
     (System_Collections_Generic_List_object__o *)switchCaseIndex,
     this->fields.lastLoopSwitchCaseCount,
     v6,
-    (const MethodInfo_38021E0 *)Method_System_Collections_Generic_List_string__RemoveRange__);
+    (const MethodInfo_3811F84 *)Method_System_Collections_Generic_List_string__RemoveRange__);
   result = 1;
   this->fields.switchCaseCount = this->fields.lastLoopSwitchCaseCount;
   return result;
@@ -159,25 +175,29 @@ void ScriptLoop__SetLogEraseFlag(ScriptLoop_o *this, bool isEnable, const Method
 // local variable allocation has failed, the output may be wrong!
 void ScriptLoop__SetSwitchCase(ScriptLoop_o *this, int32_t index, System_String_o *message, const MethodInfo *method)
 {
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   _BOOL4 isEnableLoopLogLaterErase; // w8
   System_Collections_Generic_List_int__o *switchCaseIndex; // x0
   struct System_Int32_array *items; // x8
-  _QWORD *v10; // x9
+  _QWORD *v14; // x9
   __int64 size; // x10
-  struct System_Int32_array *v12; // x8
-  _QWORD *v13; // x9
-  __int64 v14; // x10
-  Il2CppClass **v15; // x8
-  int32_t v16; // w22
+  struct System_Int32_array *v16; // x8
+  _QWORD *v17; // x9
+  __int64 v18; // x10
+  Il2CppClass **v19; // x8
+  int32_t v20; // w22
   Il2CppObject *Item; // x0
 
-  if ( (byte_4CB8291 & 1) == 0 )
+  if ( (byte_4CC93C4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    byte_4CB8291 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_4CC93C4 = 1;
   }
   isEnableLoopLogLaterErase = this->fields.isEnableLoopLogLaterErase;
   this->fields.isForceStopAdd = 0;
@@ -190,7 +210,7 @@ LABEL_4:
     if ( !switchCaseIndex )
       goto LABEL_24;
     items = switchCaseIndex->fields._items;
-    v10 = Method_System_Collections_Generic_List_int__Add__;
+    v14 = Method_System_Collections_Generic_List_int__Add__;
     ++switchCaseIndex->fields._version;
     if ( !items )
       goto LABEL_24;
@@ -200,7 +220,7 @@ LABEL_4:
       System_Collections_Generic_List_int___AddWithResize(
         switchCaseIndex,
         index,
-        *(const MethodInfo_37E3950 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+        *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
     }
     else
     {
@@ -209,33 +229,41 @@ LABEL_4:
     }
     switchCaseIndex = (System_Collections_Generic_List_int__o *)this->fields.switchCaseMessage;
     if ( !switchCaseIndex
-      || (v12 = switchCaseIndex->fields._items,
-          v13 = Method_System_Collections_Generic_List_string__Add__,
+      || (v16 = switchCaseIndex->fields._items,
+          v17 = Method_System_Collections_Generic_List_string__Add__,
           ++switchCaseIndex->fields._version,
-          !v12) )
+          !v16) )
     {
 LABEL_24:
-      sub_1C6BC60(switchCaseIndex, *(_QWORD *)&index);
+      sub_1C71608(switchCaseIndex, *(_QWORD *)&index);
     }
-    v14 = switchCaseIndex->fields._size;
-    if ( (unsigned int)v14 >= LODWORD(v12->max_length) )
+    v18 = switchCaseIndex->fields._size;
+    if ( (unsigned int)v18 >= LODWORD(v16->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)switchCaseIndex,
         (Il2CppObject *)message,
-        *(const MethodInfo_3800974 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+        *(const MethodInfo_3810718 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
     }
     else
     {
-      v15 = &v12->obj.klass + v14;
-      switchCaseIndex->fields._size = v14 + 1;
-      v15[4] = (Il2CppClass *)message;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)message, (int32_t)message, method);
+      v19 = &v16->obj.klass + v18;
+      switchCaseIndex->fields._size = v18 + 1;
+      v19[4] = (Il2CppClass *)message;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)(v19 + 4),
+        (int32_t)message,
+        (int32_t)message,
+        (int32_t)method,
+        v4,
+        v5,
+        v6,
+        v7);
     }
   }
   else
   {
-    v16 = 0;
+    v20 = 0;
     do
     {
       switchCaseIndex = this->fields.switchCaseIndex;
@@ -243,25 +271,25 @@ LABEL_24:
         goto LABEL_24;
       if ( System_Collections_Generic_List_int___get_Item(
              switchCaseIndex,
-             v16,
-             (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__) == index )
+             v20,
+             (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__) == index )
       {
         switchCaseIndex = (System_Collections_Generic_List_int__o *)this->fields.switchCaseMessage;
         if ( !switchCaseIndex )
           goto LABEL_24;
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)switchCaseIndex,
-                 v16,
-                 (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_string__get_Item__);
+                 v20,
+                 (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_string__get_Item__);
         if ( System_String__op_Equality((System_String_o *)Item, message, 0) )
         {
           this->fields.isAddLog = 0;
           return;
         }
       }
-      ++v16;
+      ++v20;
     }
-    while ( v16 < this->fields.switchCaseCount );
+    while ( v20 < this->fields.switchCaseCount );
     if ( this->fields.isAddLog )
       goto LABEL_4;
   }

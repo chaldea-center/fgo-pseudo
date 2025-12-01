@@ -6,23 +6,39 @@ void EventMargeItemUpValInfo___ctor(
   __int64 v5; // x0
   __int64 v6; // x1
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w1
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  int32_t v13; // w1
   struct FunctionGroupEntity_o *funcGroupEntity; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
   struct FunctionGroupEntity_o *baseFuncGroupEntity; // x1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
   struct ItemEntity_o *itemEntity; // x1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  struct ItemEntity_o *v19; // x8
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
+  struct ItemEntity_o *v35; // x8
 
-  if ( (byte_4CB5DFC & 1) == 0 )
+  if ( (byte_4CC6F1D & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB5DFC = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC6F1D = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.isFriendPointBonus = 0;
@@ -31,32 +47,56 @@ void EventMargeItemUpValInfo___ctor(
   this->fields.isStartingMemberFriendshipUp = 0;
   *(_WORD *)&this->fields.isStartingMemberFriendshipUpAll = 0;
   if ( !dropItemInfo )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   this->fields.eventId = dropItemInfo->fields.eventId;
   this->fields.member = -1;
-  v9 = StringLiteral_1/*""*/;
+  v13 = StringLiteral_1/*""*/;
   this->fields.servantName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.servantName, v9, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.servantName, v13, v7, v8, v9, v10, v11, v12);
   *(_WORD *)&this->fields.isFollower = 0;
   funcGroupEntity = dropItemInfo->fields.funcGroupEntity;
   this->fields.funcGroupEntity = funcGroupEntity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.funcGroupEntity, (int32_t)funcGroupEntity, v11, v12);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.funcGroupEntity,
+    (int32_t)funcGroupEntity,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
   baseFuncGroupEntity = dropItemInfo->fields.baseFuncGroupEntity;
   this->fields.baseFuncGroupEntity = baseFuncGroupEntity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseFuncGroupEntity, (int32_t)baseFuncGroupEntity, v14, v15);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.baseFuncGroupEntity,
+    (int32_t)baseFuncGroupEntity,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27);
   *(_OWORD *)&this->fields.baseFuncId = *(_OWORD *)&dropItemInfo->fields.baseFuncId;
   itemEntity = dropItemInfo->fields.itemEntity;
   this->fields.itemEntity = itemEntity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.itemEntity, (int32_t)itemEntity, v17, v18);
-  v19 = this->fields.itemEntity;
-  if ( v19 )
-    LODWORD(v19) = v19->fields.priority;
-  this->fields.priority2 = (int)v19;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.itemEntity,
+    (int32_t)itemEntity,
+    v29,
+    v30,
+    v31,
+    v32,
+    v33,
+    v34);
+  v35 = this->fields.itemEntity;
+  if ( v35 )
+    LODWORD(v35) = v35->fields.priority;
+  this->fields.priority2 = (int)v35;
   this->fields.groupId = dropItemInfo->fields.groupId;
 }
 
 
-void EventMargeItemUpValInfo___ctor_41952240(
+void EventMargeItemUpValInfo___ctor_41995440(
         EventMargeItemUpValInfo_o *this,
         int32_t member,
         System_String_o *servantName,
@@ -68,17 +108,33 @@ void EventMargeItemUpValInfo___ctor_41952240(
   __int64 v13; // x0
   __int64 v14; // x1
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
   struct FunctionGroupEntity_o *funcGroupEntity; // x1
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
   struct FunctionGroupEntity_o *baseFuncGroupEntity; // x1
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
   struct ItemEntity_o *itemEntity; // x1
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  struct ItemEntity_o *v26; // x8
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
+  struct ItemEntity_o *v42; // x8
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.isFriendPointBonus = 0;
@@ -87,32 +143,64 @@ void EventMargeItemUpValInfo___ctor_41952240(
   this->fields.isStartingMemberFriendshipUp = 0;
   *(_WORD *)&this->fields.isStartingMemberFriendshipUpAll = 0;
   if ( !dropItemInfo )
-    sub_1C6BC60(v13, v14);
+    sub_1C71608(v13, v14);
   this->fields.eventId = dropItemInfo->fields.eventId;
   this->fields.member = member;
   this->fields.servantName = servantName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.servantName, (int32_t)servantName, v15, v16);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.servantName,
+    (int32_t)servantName,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
   this->fields.isFollower = isFollower;
   this->fields.isOtherUp = isOtherUp;
   funcGroupEntity = dropItemInfo->fields.funcGroupEntity;
   this->fields.funcGroupEntity = funcGroupEntity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.funcGroupEntity, (int32_t)funcGroupEntity, v18, v19);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.funcGroupEntity,
+    (int32_t)funcGroupEntity,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27);
   baseFuncGroupEntity = dropItemInfo->fields.baseFuncGroupEntity;
   this->fields.baseFuncGroupEntity = baseFuncGroupEntity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseFuncGroupEntity, (int32_t)baseFuncGroupEntity, v21, v22);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.baseFuncGroupEntity,
+    (int32_t)baseFuncGroupEntity,
+    v29,
+    v30,
+    v31,
+    v32,
+    v33,
+    v34);
   *(_OWORD *)&this->fields.baseFuncId = *(_OWORD *)&dropItemInfo->fields.baseFuncId;
   itemEntity = dropItemInfo->fields.itemEntity;
   this->fields.itemEntity = itemEntity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.itemEntity, (int32_t)itemEntity, v24, v25);
-  v26 = this->fields.itemEntity;
-  if ( v26 )
-    LODWORD(v26) = v26->fields.priority;
-  this->fields.priority2 = (int)v26;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.itemEntity,
+    (int32_t)itemEntity,
+    v36,
+    v37,
+    v38,
+    v39,
+    v40,
+    v41);
+  v42 = this->fields.itemEntity;
+  if ( v42 )
+    LODWORD(v42) = v42->fields.priority;
+  this->fields.priority2 = (int)v42;
   this->fields.groupId = dropItemInfo->fields.groupId;
 }
 
 
-void EventMargeItemUpValInfo___ctor_41952460(
+void EventMargeItemUpValInfo___ctor_41995660(
         EventMargeItemUpValInfo_o *this,
         int32_t eventId,
         int32_t friendPointBonus,
@@ -129,7 +217,7 @@ void EventMargeItemUpValInfo___ctor_41952460(
 }
 
 
-void EventMargeItemUpValInfo___ctor_41952540(
+void EventMargeItemUpValInfo___ctor_41995740(
         EventMargeItemUpValInfo_o *this,
         int32_t eventId,
         const MethodInfo *method)
@@ -152,7 +240,7 @@ int32_t EventMargeItemUpValInfo__CompMemberPriority(
   int32_t v3; // w8
 
   if ( !info )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   if ( this->fields.isOtherUp == info->fields.isOtherUp )
   {
     v3 = info->fields.priority1 - this->fields.priority1;
@@ -191,7 +279,7 @@ int32_t EventMargeItemUpValInfo__CompPartyPriority(
       goto LABEL_7;
     }
 LABEL_15:
-    sub_1C6BC60(this, info);
+    sub_1C71608(this, info);
   }
   if ( !info )
     goto LABEL_15;
@@ -226,7 +314,7 @@ int32_t EventMargeItemUpValInfo__CompPersonalPriority(
   int32_t result; // w0
 
   if ( !info )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   priority1 = this->fields.priority1;
   v4 = info->fields.priority1;
   result = v4 - priority1;
@@ -241,20 +329,20 @@ System_String_o *EventMargeItemUpValInfo__GetColorString(EventMargeItemUpValInfo
   _BOOL4 isOtherUp; // w20
   System_String_o **v4; // x8
 
-  if ( (byte_4CB5DFD & 1) == 0 )
+  if ( (byte_4CC6F1E & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_10229/*"PARTY_ORGANIZATION_EVENT_MEMBER_MINE_EFFECT"*/);
-    sub_1C6BA08(&StringLiteral_10231/*"PARTY_ORGANIZATION_EVENT_MEMBER_OTHER_EFFECT"*/);
-    byte_4CB5DFD = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_10234/*"PARTY_ORGANIZATION_EVENT_MEMBER_MINE_EFFECT"*/);
+    sub_1C713B0(&StringLiteral_10236/*"PARTY_ORGANIZATION_EVENT_MEMBER_OTHER_EFFECT"*/);
+    byte_4CC6F1E = 1;
   }
   isOtherUp = this->fields.isOtherUp;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   if ( isOtherUp )
-    v4 = (System_String_o **)&StringLiteral_10231/*"PARTY_ORGANIZATION_EVENT_MEMBER_OTHER_EFFECT"*/;
+    v4 = (System_String_o **)&StringLiteral_10236/*"PARTY_ORGANIZATION_EVENT_MEMBER_OTHER_EFFECT"*/;
   else
-    v4 = (System_String_o **)&StringLiteral_10229/*"PARTY_ORGANIZATION_EVENT_MEMBER_MINE_EFFECT"*/;
+    v4 = (System_String_o **)&StringLiteral_10234/*"PARTY_ORGANIZATION_EVENT_MEMBER_MINE_EFFECT"*/;
   return LocalizationManager__Get(*v4, 0);
 }
 
@@ -291,17 +379,17 @@ System_String_o *EventMargeItemUpValInfo__GetEventUpString(
   int32_t servantPoint; // [xsp+8h] [xbp-28h] BYREF
   float v32; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CB5E01 & 1) == 0 )
+  if ( (byte_4CC6F22 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&float_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11529/*"SELECT_FP_NUM_UP"*/);
-    sub_1C6BA08(&StringLiteral_10292/*"PARTY_ORGANIZATION_SERVANT_POINT_INFO"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    sub_1C6BA08(&StringLiteral_10260/*"PARTY_ORGANIZATION_NOT_CLASS_BOARD"*/);
-    sub_1C6BA08(&StringLiteral_10293/*"PARTY_ORGANIZATION_SERVANT_POINT_RANK_"*/);
-    byte_4CB5E01 = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&float_TypeInfo);
+    sub_1C713B0(&StringLiteral_11535/*"SELECT_FP_NUM_UP"*/);
+    sub_1C713B0(&StringLiteral_10297/*"PARTY_ORGANIZATION_SERVANT_POINT_INFO"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    sub_1C713B0(&StringLiteral_10265/*"PARTY_ORGANIZATION_NOT_CLASS_BOARD"*/);
+    sub_1C713B0(&StringLiteral_10298/*"PARTY_ORGANIZATION_SERVANT_POINT_RANK_"*/);
+    byte_4CC6F22 = 1;
   }
   funcGroupEntity = this->fields.funcGroupEntity;
   if ( funcGroupEntity && funcGroupEntity->fields.isDispValue )
@@ -390,7 +478,7 @@ LABEL_47:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11529/*"SELECT_FP_NUM_UP"*/, 0);
+    v10 = LocalizationManager__Get((System_String_o *)StringLiteral_11535/*"SELECT_FP_NUM_UP"*/, 0);
     v11 = (double)this->fields.friendPointBonus / 1000.0;
     v32 = v11;
     v12 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v32);
@@ -399,7 +487,7 @@ LABEL_47:
   if ( this->fields.isServantPoint )
   {
     v15 = System_Int32__ToString((int)this + 144, 0);
-    v16 = System_String__Concat_63966792((System_String_o *)StringLiteral_10293/*"PARTY_ORGANIZATION_SERVANT_POINT_RANK_"*/, v15, 0);
+    v16 = System_String__Concat_64031724((System_String_o *)StringLiteral_10298/*"PARTY_ORGANIZATION_SERVANT_POINT_RANK_"*/, v15, 0);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     IconDetailText = LocalizationManager__Get(v16, 0);
@@ -407,10 +495,10 @@ LABEL_47:
       return IconDetailText;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_10292/*"PARTY_ORGANIZATION_SERVANT_POINT_INFO"*/, 0);
+    v17 = LocalizationManager__Get((System_String_o *)StringLiteral_10297/*"PARTY_ORGANIZATION_SERVANT_POINT_INFO"*/, 0);
     servantPoint = this->fields.servantPoint;
     v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &servantPoint);
-    return System_String__Format_64008100(v17, (Il2CppObject *)IconDetailText, v18, 0);
+    return System_String__Format_64073032(v17, (Il2CppObject *)IconDetailText, v18, 0);
   }
   if ( this->fields.isFriendshipUpForCampaign )
   {
@@ -433,7 +521,7 @@ LABEL_47:
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_10260/*"PARTY_ORGANIZATION_NOT_CLASS_BOARD"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_10265/*"PARTY_ORGANIZATION_NOT_CLASS_BOARD"*/, 0);
 }
 
 
@@ -442,10 +530,10 @@ System_String_o *EventMargeItemUpValInfo__GetItemName(EventMargeItemUpValInfo_o 
   struct ItemEntity_o *itemEntity; // x8
   System_String_o **p_name; // x8
 
-  if ( (byte_4CB5DFF & 1) == 0 )
+  if ( (byte_4CC6F20 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB5DFF = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC6F20 = 1;
   }
   itemEntity = this->fields.itemEntity;
   if ( itemEntity )
@@ -490,19 +578,19 @@ System_String_o *EventMargeItemUpValInfo__GetServantName(EventMargeItemUpValInfo
   System_String_o *v4; // x20
   System_String_o *v5; // x0
 
-  if ( (byte_4CB5DFE & 1) == 0 )
+  if ( (byte_4CC6F1F & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_10232/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    sub_1C6BA08(&StringLiteral_10225/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/);
-    byte_4CB5DFE = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_10237/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    sub_1C713B0(&StringLiteral_10230/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/);
+    byte_4CC6F1F = 1;
   }
   if ( this->fields.member < 0 )
     return (System_String_o *)StringLiteral_1/*""*/;
-  v3 = (System_String_o **)&StringLiteral_10225/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/;
+  v3 = (System_String_o **)&StringLiteral_10230/*"PARTY_ORGANIZATION_EVENT_MEMBER"*/;
   if ( this->fields.isFollower )
-    v3 = (System_String_o **)&StringLiteral_10232/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/;
+    v3 = (System_String_o **)&StringLiteral_10237/*"PARTY_ORGANIZATION_EVENT_MEMBER_SUPPORT"*/;
   v4 = *v3;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -517,15 +605,15 @@ System_String_o *EventMargeItemUpValInfo__GetTargetString(EventMargeItemUpValInf
   int32_t targetType; // w8
   __int64 *v6; // x8
 
-  if ( (byte_4CB5E00 & 1) == 0 )
+  if ( (byte_4CC6F21 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_10235/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_ALL"*/);
-    sub_1C6BA08(&StringLiteral_10237/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_OTHER_FULL"*/);
-    sub_1C6BA08(&StringLiteral_10236/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_FULL"*/);
-    sub_1C6BA08(&StringLiteral_10238/*"PARTY_ORGANIZATION_EVENT_TARGET_SELF"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB5E00 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_10240/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_ALL"*/);
+    sub_1C713B0(&StringLiteral_10242/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_OTHER_FULL"*/);
+    sub_1C713B0(&StringLiteral_10241/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_FULL"*/);
+    sub_1C713B0(&StringLiteral_10243/*"PARTY_ORGANIZATION_EVENT_TARGET_SELF"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC6F21 = 1;
   }
   if ( this->fields.isOtherUp )
     return (System_String_o *)StringLiteral_1/*""*/;
@@ -539,14 +627,14 @@ System_String_o *EventMargeItemUpValInfo__GetTargetString(EventMargeItemUpValInf
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_10238/*"PARTY_ORGANIZATION_EVENT_TARGET_SELF"*/;
+      v6 = &StringLiteral_10243/*"PARTY_ORGANIZATION_EVENT_TARGET_SELF"*/;
       return LocalizationManager__Get((System_String_o *)*v6, 0);
     }
     if ( targetType == 3 )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_10235/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_ALL"*/;
+      v6 = &StringLiteral_10240/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_ALL"*/;
       return LocalizationManager__Get((System_String_o *)*v6, 0);
     }
     return (System_String_o *)StringLiteral_1/*""*/;
@@ -555,14 +643,14 @@ System_String_o *EventMargeItemUpValInfo__GetTargetString(EventMargeItemUpValInf
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = &StringLiteral_10236/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_FULL"*/;
+    v6 = &StringLiteral_10241/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_FULL"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0);
   }
   if ( targetType != 14 )
     return (System_String_o *)StringLiteral_1/*""*/;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = &StringLiteral_10237/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_OTHER_FULL"*/;
+  v6 = &StringLiteral_10242/*"PARTY_ORGANIZATION_EVENT_TARGET_PT_OTHER_FULL"*/;
   return LocalizationManager__Get((System_String_o *)*v6, 0);
 }
 
@@ -613,6 +701,7 @@ bool EventMargeItemUpValInfo__IsStartingMemberFriendshipUp(EventMargeItemUpValIn
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void EventMargeItemUpValInfo__SetAddPassiveCampaign(
         EventMargeItemUpValInfo_o *this,
         int32_t inEventId,
@@ -625,32 +714,60 @@ void EventMargeItemUpValInfo__SetAddPassiveCampaign(
         const MethodInfo *method)
 {
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
 
   this->fields.eventId = inEventId;
   this->fields.addPassiveContentForCampaign = addPassiveContent;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.addPassiveContentForCampaign,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.addPassiveContentForCampaign,
     (int32_t)addPassiveContent,
     (int32_t)addPassiveContent,
-    (const MethodInfo *)addPassiveContentDetail);
+    (int32_t)addPassiveContentDetail,
+    *(System_String_o **)&funcGroupId,
+    (int32_t)titleName,
+    (int64_t)iconName,
+    *(System_String_o **)&funcType);
   this->fields.isAddPassiveForCampaign = 1;
   this->fields.addPassiveContentDetailForCampaign = addPassiveContentDetail;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.addPassiveContentDetailForCampaign,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.addPassiveContentDetailForCampaign,
     (int32_t)addPassiveContentDetail,
     v15,
-    v16);
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
   this->fields.baseFuncType = funcType;
   this->fields.groupId = funcGroupId;
   this->fields.nameTitle = titleName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.nameTitle, (int32_t)titleName, v17, v18);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.nameTitle, (int32_t)titleName, v21, v22, v23, v24, v25, v26);
   this->fields.addPassiveIconNameOverwrite = iconName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.addPassiveIconNameOverwrite, (int32_t)iconName, v19, v20);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.addPassiveIconNameOverwrite,
+    (int32_t)iconName,
+    v27,
+    v28,
+    v29,
+    v30,
+    v31,
+    v32);
 }
 
 
@@ -667,7 +784,7 @@ void EventMargeItemUpValInfo__SetFriendshipUpBonus(
 
 
 // local variable allocation has failed, the output may be wrong!
-void EventMargeItemUpValInfo__SetFriendshipUpBonus_41952644(
+void EventMargeItemUpValInfo__SetFriendshipUpBonus_41995844(
         EventMargeItemUpValInfo_o *this,
         int32_t inEventId,
         int32_t friendshipUpValue,
@@ -678,7 +795,11 @@ void EventMargeItemUpValInfo__SetFriendshipUpBonus_41952644(
         const MethodInfo *method)
 {
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
   this->fields.eventId = inEventId;
   this->fields.friendshipUpBonus = friendshipUpValue;
@@ -686,13 +807,17 @@ void EventMargeItemUpValInfo__SetFriendshipUpBonus_41952644(
   this->fields.isFriendshipUpForCampaign = 1;
   this->fields.baseFuncType = 111;
   this->fields.nameTotal = totalName;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.nameTotal,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.nameTotal,
     (int32_t)totalName,
     friendshipUpValue,
-    *(const MethodInfo **)&funcGroupId);
+    funcGroupId,
+    totalName,
+    (int32_t)titleName,
+    *(int64_t *)&calcType,
+    (System_String_o *)method);
   this->fields.nameTitle = titleName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.nameTitle, (int32_t)titleName, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.nameTitle, (int32_t)titleName, v11, v12, v13, v14, v15, v16);
   if ( calcType == 2 )
   {
     this->fields.rateCount = this->fields.friendshipUpBonus;
@@ -725,15 +850,15 @@ void EventMargeItemUpValInfo__SetIcon(EventMargeItemUpValInfo_o *this, UISprite_
   int32_t v20; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4CB5E02 & 1) == 0 )
+  if ( (byte_4CC6F23 & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_19777/*"func_group_icon_1009_starting"*/);
-    sub_1C6BA08(&StringLiteral_19775/*"func_group_icon_"*/);
-    sub_1C6BA08(&StringLiteral_19776/*"func_group_icon_1009"*/);
-    sub_1C6BA08(&StringLiteral_19779/*"func_group_icon_1028"*/);
-    this = (EventMargeItemUpValInfo_o *)sub_1C6BA08(&StringLiteral_19778/*"func_group_icon_1023_starting"*/);
-    byte_4CB5E02 = 1;
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_19788/*"func_group_icon_1009_starting"*/);
+    sub_1C713B0(&StringLiteral_19786/*"func_group_icon_"*/);
+    sub_1C713B0(&StringLiteral_19787/*"func_group_icon_1009"*/);
+    sub_1C713B0(&StringLiteral_19790/*"func_group_icon_1028"*/);
+    this = (EventMargeItemUpValInfo_o *)sub_1C713B0(&StringLiteral_19789/*"func_group_icon_1023_starting"*/);
+    byte_4CC6F23 = 1;
   }
   v19 = 0;
   funcGroupEntity = v4->fields.funcGroupEntity;
@@ -751,13 +876,13 @@ void EventMargeItemUpValInfo__SetIcon(EventMargeItemUpValInfo_o *this, UISprite_
     {
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      v12 = &StringLiteral_19779/*"func_group_icon_1028"*/;
+      v12 = &StringLiteral_19790/*"func_group_icon_1028"*/;
     }
     else if ( v4->fields.isFriendshipUpForCampaign )
     {
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      v12 = &StringLiteral_19776/*"func_group_icon_1009"*/;
+      v12 = &StringLiteral_19787/*"func_group_icon_1009"*/;
     }
     else
     {
@@ -782,9 +907,9 @@ void EventMargeItemUpValInfo__SetIcon(EventMargeItemUpValInfo_o *this, UISprite_
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
       if ( isStartingMemberFriendshipUpAll )
-        v12 = &StringLiteral_19778/*"func_group_icon_1023_starting"*/;
+        v12 = &StringLiteral_19789/*"func_group_icon_1023_starting"*/;
       else
-        v12 = &StringLiteral_19777/*"func_group_icon_1009_starting"*/;
+        v12 = &StringLiteral_19788/*"func_group_icon_1009_starting"*/;
     }
     v17 = (System_String_o *)*v12;
     v16 = sprite;
@@ -820,12 +945,12 @@ LABEL_17:
       goto LABEL_10;
     }
 LABEL_47:
-    sub_1C6BC60(this, sprite);
+    sub_1C71608(this, sprite);
   }
   v11 = &v20;
 LABEL_25:
   v13 = System_Int32__ToString((int32_t)v11, 0);
-  addPassiveIconNameOverwrite = System_String__Concat_63966792((System_String_o *)StringLiteral_19775/*"func_group_icon_"*/, v13, 0);
+  addPassiveIconNameOverwrite = System_String__Concat_64031724((System_String_o *)StringLiteral_19786/*"func_group_icon_"*/, v13, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
   {
     v15 = AtlasManager_TypeInfo;

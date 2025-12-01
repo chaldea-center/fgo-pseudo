@@ -3,11 +3,11 @@ void MyRoomFrontObject___cctor(const MethodInfo *method)
   ManagerConfig_c *v1; // x0
   struct MyRoomFrontObject_StaticFields *static_fields; // x9
 
-  if ( (byte_4CB120B & 1) == 0 )
+  if ( (byte_4CC2318 & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&MyRoomFrontObject_TypeInfo);
-    byte_4CB120B = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&MyRoomFrontObject_TypeInfo);
+    byte_4CC2318 = 1;
   }
   v1 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -30,10 +30,10 @@ void MyRoomFrontObject___ctor(MyRoomFrontObject_o *this, const MethodInfo *metho
   float z; // w9
   __int64 v6; // x8
 
-  if ( (byte_4CB120A & 1) == 0 )
+  if ( (byte_4CC2317 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomFrontObject_TypeInfo);
-    byte_4CB120A = 1;
+    sub_1C713B0(&MyRoomFrontObject_TypeInfo);
+    byte_4CC2317 = 1;
   }
   v3 = MyRoomFrontObject_TypeInfo;
   if ( !MyRoomFrontObject_TypeInfo->_2.cctor_finished )
@@ -64,17 +64,17 @@ void MyRoomFrontObject__Awake(MyRoomFrontObject_o *this, const MethodInfo *metho
   __int64 v11; // x8
   MyRoomFrontObject_c *v12; // x0
 
-  if ( (byte_4CB1209 & 1) == 0 )
+  if ( (byte_4CC2316 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomFrontObject_TypeInfo);
-    byte_4CB1209 = 1;
+    sub_1C713B0(&MyRoomFrontObject_TypeInfo);
+    byte_4CC2316 = 1;
   }
   x = this->fields.frameOutMoveValue.fields.x;
   v4.n64_u64[0] = *(unsigned __int64 *)&this->fields.frameOutMoveValue.fields.y;
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v6.n64_u64[0] = vsub_f32(v4, *(float32x2_t *)&static_fields->zeroVector.fields.y).n64_u64[0];
@@ -128,7 +128,7 @@ void MyRoomFrontObject__Setup(
   x = position.fields.x;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1C6BC60(0, v8);
+    sub_1C71608(0, v8);
   v9.fields.y = y;
   v9.fields.z = z;
   v9.fields.x = x;

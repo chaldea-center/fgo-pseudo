@@ -8,14 +8,18 @@ void JinglePlayer___ctor(JinglePlayer_o *this, const MethodInfo *method)
 void JinglePlayer__ExecuteCallback(JinglePlayer_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_jingleCallbackFunc; // x0
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GrandQuestFolderBoardItem_o *p_jingleCallbackFunc; // x0
   System_Action_o *jingleCallbackFunc; // t1
 
   jingleCallbackFunc = this->fields.jingleCallbackFunc;
-  p_jingleCallbackFunc = (CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc;
+  p_jingleCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.jingleCallbackFunc;
   p_jingleCallbackFunc->klass = 0;
-  sub_1C6B9AC(p_jingleCallbackFunc, 0, v2, v3);
+  sub_1C71354(p_jingleCallbackFunc, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(jingleCallbackFunc, 0);
 }
 
@@ -29,19 +33,23 @@ BgmPlayArgs_o *JinglePlayer__ExportPlayArgs(JinglePlayer_o *this, const MethodIn
 bool JinglePlayer__FadeoutBgm(JinglePlayer_o *this, float fadeoutTime, const MethodInfo *method)
 {
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  bool v6; // w19
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  bool v10; // w19
   System_Action_o *jingleCallbackFunc; // x21
 
-  v6 = BgmPlayerBase__FadeoutBgm((BgmPlayerBase_o *)this, fadeoutTime, method);
-  if ( v6 )
+  v10 = BgmPlayerBase__FadeoutBgm((BgmPlayerBase_o *)this, fadeoutTime, method);
+  if ( v10 )
   {
     jingleCallbackFunc = this->fields.jingleCallbackFunc;
     this->fields.jingleCallbackFunc = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, v4, v5);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.jingleCallbackFunc, 0, v4, v5, v6, v7, v8, v9);
     ActionExtensions__Call(jingleCallbackFunc, 0);
   }
-  return v6;
+  return v10;
 }
 
 
@@ -68,61 +76,97 @@ void JinglePlayer__PlayBgm(
         System_Action_o *callbackFunc,
         const MethodInfo *method)
 {
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
   System_Action_o *jingleCallbackFunc; // x23
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x3
-  BgmManager_c *v13; // x0
-  float v14; // s0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  const MethodInfo *v20; // x3
+  BgmManager_c *v21; // x0
+  float v22; // s0
 
-  if ( (byte_4CB5913 & 1) == 0 )
+  if ( (byte_4CC6A34 & 1) == 0 )
   {
-    sub_1C6BA08(&BgmManager_TypeInfo);
-    byte_4CB5913 = 1;
+    sub_1C713B0(&BgmManager_TypeInfo);
+    byte_4CC6A34 = 1;
   }
   if ( this->fields.bgmName )
   {
     jingleCallbackFunc = this->fields.jingleCallbackFunc;
     this->fields.jingleCallbackFunc = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, (int32_t)callbackFunc, method);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.jingleCallbackFunc,
+      0,
+      (int32_t)callbackFunc,
+      (int32_t)method,
+      v5,
+      v6,
+      v7,
+      v8);
     ActionExtensions__Call(jingleCallbackFunc, 0);
   }
   this->fields.bgmName = name;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.bgmName, (int32_t)name, (int32_t)callbackFunc, method);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.bgmName,
+    (int32_t)name,
+    (int32_t)callbackFunc,
+    (int32_t)method,
+    v5,
+    v6,
+    v7,
+    v8);
   this->fields.jingleCallbackFunc = callbackFunc;
   this->fields.bgmVolume = volume;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, (int32_t)callbackFunc, v10, v11);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.jingleCallbackFunc,
+    (int32_t)callbackFunc,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  if ( !byte_4CB36C1 )
+  if ( !byte_4CC47D9 )
   {
-    sub_1C6BA08(&BgmManager_TypeInfo);
-    byte_4CB36C1 = 1;
+    sub_1C713B0(&BgmManager_TypeInfo);
+    byte_4CC47D9 = 1;
   }
-  v13 = BgmManager_TypeInfo;
+  v21 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    v13 = BgmManager_TypeInfo;
+    v21 = BgmManager_TypeInfo;
   }
-  v14 = 0.0;
-  if ( !v13->static_fields->isMute )
-    v14 = volume;
-  BgmPlayerBase__PlayLocal((BgmPlayerBase_o *)this, name, v14, -1.0, 0, v12);
+  v22 = 0.0;
+  if ( !v21->static_fields->isMute )
+    v22 = volume;
+  BgmPlayerBase__PlayLocal((BgmPlayerBase_o *)this, name, v22, -1.0, 0, v20);
 }
 
 
 void JinglePlayer__Reset(JinglePlayer_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   System_Action_o *jingleCallbackFunc; // x20
 
   if ( this->fields.bgmName )
   {
     jingleCallbackFunc = this->fields.jingleCallbackFunc;
     this->fields.jingleCallbackFunc = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, v2, v3);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.jingleCallbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ActionExtensions__Call(jingleCallbackFunc, 0);
   }
   BgmPlayerBase__Reset((BgmPlayerBase_o *)this, method);
@@ -138,10 +182,10 @@ void JinglePlayer__SetMute(JinglePlayer_o *this, bool isMute, const MethodInfo *
   float bgmVolume; // s8
   CriAtomSource_c *klass; // x8
 
-  if ( (byte_4CB5914 & 1) == 0 )
+  if ( (byte_4CC6A35 & 1) == 0 )
   {
-    sub_1C6BA08(&BgmManager_TypeInfo);
-    byte_4CB5914 = 1;
+    sub_1C713B0(&BgmManager_TypeInfo);
+    byte_4CC6A35 = 1;
   }
   if ( isMute )
   {
@@ -161,10 +205,10 @@ LABEL_16:
     bgmVolume = this->fields.bgmVolume;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4CB10C7 )
+    if ( !byte_4CC21CB )
     {
-      sub_1C6BA08(&BgmManager_TypeInfo);
-      byte_4CB10C7 = 1;
+      sub_1C713B0(&BgmManager_TypeInfo);
+      byte_4CC21CB = 1;
     }
     bgmPlayer = (CriAtomSource_o *)BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -180,7 +224,7 @@ LABEL_16:
       goto LABEL_16;
     }
 LABEL_18:
-    sub_1C6BC60(bgmPlayer, isMute);
+    sub_1C71608(bgmPlayer, isMute);
   }
 }
 
@@ -188,17 +232,21 @@ LABEL_18:
 bool JinglePlayer__StopBgm(JinglePlayer_o *this, bool keepPlayArgs, const MethodInfo *method)
 {
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  bool v6; // w19
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  bool v10; // w19
   System_Action_o *jingleCallbackFunc; // x21
 
-  v6 = BgmPlayerBase__StopBgm((BgmPlayerBase_o *)this, keepPlayArgs, method);
-  if ( v6 )
+  v10 = BgmPlayerBase__StopBgm((BgmPlayerBase_o *)this, keepPlayArgs, method);
+  if ( v10 )
   {
     jingleCallbackFunc = this->fields.jingleCallbackFunc;
     this->fields.jingleCallbackFunc = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.jingleCallbackFunc, 0, v4, v5);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.jingleCallbackFunc, 0, v4, v5, v6, v7, v8, v9);
     ActionExtensions__Call(jingleCallbackFunc, 0);
   }
-  return v6;
+  return v10;
 }

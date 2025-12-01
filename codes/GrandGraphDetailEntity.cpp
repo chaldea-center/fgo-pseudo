@@ -1,27 +1,27 @@
 void GrandGraphDetailEntity___ctor(GrandGraphDetailEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB66FD & 1) == 0 )
+  if ( (byte_4CC7820 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
-    byte_4CB66FD = 1;
+    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
+    byte_4CC7820 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *GrandGraphDetailEntity__CreatePK(int32_t grandGraphId, int32_t baseClassId, const MethodInfo *method)
 {
-  if ( (byte_4CB66FC & 1) == 0 )
+  if ( (byte_4CC781F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CB66FC = 1;
+    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CC781F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            grandGraphId,
            baseClassId,
-           (const MethodInfo_31394F0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3149294 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,10 +39,10 @@ bool GrandGraphDetailEntity__IsOpen(GrandGraphDetailEntity_o *this, const Method
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4CB66FB & 1) == 0 )
+  if ( (byte_4CC781E & 1) == 0 )
   {
-    sub_1C6BA08(&CondType_TypeInfo);
-    byte_4CB66FB = 1;
+    sub_1C713B0(&CondType_TypeInfo);
+    byte_4CC781E = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

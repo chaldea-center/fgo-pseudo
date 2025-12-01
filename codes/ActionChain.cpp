@@ -1,18 +1,18 @@
 void ActionChain___ctor(ActionChain_o *this, ChainableActionBase_array *chainableActions, const MethodInfo *method)
 {
-  if ( (byte_4CBA851 & 1) == 0 )
+  if ( (byte_4CCB9AA & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ActionChainBase_ChainableActionBase___ctor__);
-    byte_4CBA851 = 1;
+    sub_1C713B0(&Method_ActionChainBase_ChainableActionBase___ctor__);
+    byte_4CCB9AA = 1;
   }
   ActionChainBase_object____ctor(
     (ActionChainBase_T__o *)this,
     (System_Object_array *)chainableActions,
-    (const MethodInfo_3466974 *)Method_ActionChainBase_ChainableActionBase___ctor__);
+    (const MethodInfo_3476718 *)Method_ActionChainBase_ChainableActionBase___ctor__);
 }
 
 
-void ActionChain___ctor_49343096(ActionChain_o *this, System_Action_Action__array *actions, const MethodInfo *method)
+void ActionChain___ctor_49408028(ActionChain_o *this, System_Action_Action__array *actions, const MethodInfo *method)
 {
   ChainableActionBase_array *v4; // x1
   const MethodInfo *v5; // x2
@@ -31,16 +31,16 @@ ActionChain_o *ActionChain__AddRange(
 {
   System_Object_array *v5; // x0
 
-  if ( (byte_4CBA852 & 1) == 0 )
+  if ( (byte_4CCB9AB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ActionChainBase_ChainableActionBase__AddRange__);
-    byte_4CBA852 = 1;
+    sub_1C713B0(&Method_ActionChainBase_ChainableActionBase__AddRange__);
+    byte_4CCB9AB = 1;
   }
   v5 = (System_Object_array *)SimpleChainableAction__ConvertToChainableActionArray(actions, (const MethodInfo *)actions);
   ActionChainBase_object___AddRange(
     (ActionChainBase_T__o *)this,
     v5,
-    (const MethodInfo_3466A28 *)Method_ActionChainBase_ChainableActionBase__AddRange__);
+    (const MethodInfo_34767CC *)Method_ActionChainBase_ChainableActionBase__AddRange__);
   return this;
 }
 
@@ -50,7 +50,7 @@ void ActionChain__ExecuteCurrentAction(ActionChain_o *this, ChainableActionBase_
   ChainableActionBase_c *klass; // x8
 
   if ( !action )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   if ( !action->fields._IsExecuted_k__BackingField )
   {
     klass = action->klass;

@@ -4,12 +4,16 @@ void ScriptActionRenderEffectController___ctor(
         const MethodInfo *method)
 {
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
 
   this->fields.timerMax = -1.0;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.material_ = material;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.material_, (int32_t)material, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.material_, (int32_t)material, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -33,7 +37,11 @@ void ScriptActionRenderEffectController__OnStop(
   struct ScriptActionRenderEffectController_ReflectionFunction_o *reflectionFunction; // x8
   struct ScriptActionRenderEffectController_StopFunction_o *stopFunction; // x8
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
   reflectionFunction = this->fields.reflectionFunction;
   this->fields.timerCount = this->fields.timerMax;
@@ -53,7 +61,7 @@ void ScriptActionRenderEffectController__OnStop(
         stopFunction->fields.method,
         method);
       this->fields.stopFunction = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.stopFunction, 0, v7, v8);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.stopFunction, 0, v7, v8, v9, v10, v11, v12);
     }
   }
   *(_WORD *)&this->fields.isEnable = 0;
@@ -105,17 +113,17 @@ void ScriptActionRenderEffectController__SetGaussianBlur(
   System_Single_array *BlurFactors; // x0
   __int64 v10; // x1
 
-  if ( (byte_4CB8215 & 1) == 0 )
+  if ( (byte_4CC9348 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16135/*"_BlurFactor"*/);
-    byte_4CB8215 = 1;
+    sub_1C713B0(&StringLiteral_16142/*"_BlurFactor"*/);
+    byte_4CC9348 = 1;
   }
   ScriptActionRenderEffectController_EffectParamBase__SetSampleRange(this->fields.material_, sampleRange, method);
   material = this->fields.material_;
   BlurFactors = ScriptActionRenderEffectController_GaussianBlurParam__GetBlurFactors(sampleRange, sigma, v8);
   if ( !material )
-    sub_1C6BC60(BlurFactors, v10);
-  UnityEngine_Material__SetFloatArray_71529384(material, (System_String_o *)StringLiteral_16135/*"_BlurFactor"*/, BlurFactors, 0);
+    sub_1C71608(BlurFactors, v10);
+  UnityEngine_Material__SetFloatArray_71594316(material, (System_String_o *)StringLiteral_16142/*"_BlurFactor"*/, BlurFactors, 0);
 }
 
 
@@ -130,17 +138,17 @@ void ScriptActionRenderEffectController__SetMotionBlur(
   System_Single_array *BlurFactors; // x0
   __int64 v10; // x1
 
-  if ( (byte_4CB8216 & 1) == 0 )
+  if ( (byte_4CC9349 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16135/*"_BlurFactor"*/);
-    byte_4CB8216 = 1;
+    sub_1C713B0(&StringLiteral_16142/*"_BlurFactor"*/);
+    byte_4CC9349 = 1;
   }
   ScriptActionRenderEffectController_EffectParamBase__SetSampleRange(this->fields.material_, sampleRange, method);
   material = this->fields.material_;
   BlurFactors = ScriptActionRenderEffectController_MotionBlurParam__GetBlurFactors(sampleRange, sigma, v8);
   if ( !material )
-    sub_1C6BC60(BlurFactors, v10);
-  UnityEngine_Material__SetFloatArray_71529384(material, (System_String_o *)StringLiteral_16135/*"_BlurFactor"*/, BlurFactors, 0);
+    sub_1C71608(BlurFactors, v10);
+  UnityEngine_Material__SetFloatArray_71594316(material, (System_String_o *)StringLiteral_16142/*"_BlurFactor"*/, BlurFactors, 0);
 }
 
 
@@ -168,24 +176,42 @@ void ScriptActionRenderEffectController__Start(
         ScriptActionRenderEffectController_StopFunction_o *stopfunc,
         const MethodInfo *method)
 {
-  bool v11; // w21
-  char v12; // w2
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x2
+  int64_t v7; // x6
+  System_String_o *v8; // x7
+  bool v13; // w21
+  char v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  const MethodInfo *v20; // x2
 
   this->fields.reflectionFunction = func;
-  v11 = isStop;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.reflectionFunction,
+  v13 = isStop;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.reflectionFunction,
     (int32_t)func,
     isStop,
-    (const MethodInfo *)func);
+    (int32_t)func,
+    (System_String_o *)stopfunc,
+    (int32_t)method,
+    v7,
+    v8);
   this->fields.stopFunction = stopfunc;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.stopFunction, (int32_t)stopfunc, v12, v13);
-  this->fields.requestStop = v11;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.stopFunction,
+    (int32_t)stopfunc,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
+  this->fields.requestStop = v13;
   if ( sec <= 0.0 )
   {
-    ScriptActionRenderEffectController__OnStop(this, v11, v14);
+    ScriptActionRenderEffectController__OnStop(this, v13, v20);
   }
   else
   {
@@ -212,54 +238,66 @@ void ScriptActionRenderEffectController__StartDistortion(
   __int64 v18; // x0
   __int64 v19; // x1
   int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  const MethodInfo *v22; // x1
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  const MethodInfo *v26; // x1
   ScriptActionRenderEffectController_DistortionParam_o *MaterialValue; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  const MethodInfo *v26; // x0
-  ScriptActionRenderEffectController_DistortionParam_o *DistortionParam; // x0
   int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  int32_t v30; // w21
-  ScriptActionRenderEffectController_ReflectionFunction_o *v31; // x22
-  const MethodInfo *v32; // x3
-  const MethodInfo *v33; // x5
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  const MethodInfo *v34; // x0
+  ScriptActionRenderEffectController_DistortionParam_o *DistortionParam; // x0
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
+  int32_t v42; // w21
+  ScriptActionRenderEffectController_ReflectionFunction_o *v43; // x22
+  const MethodInfo *v44; // x3
+  const MethodInfo *v45; // x5
 
-  if ( (byte_4CB820F & 1) == 0 )
+  if ( (byte_4CC9342 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
-    sub_1C6BA08(&Method_ScriptActionRenderEffectController___c__DisplayClass19_0__StartDistortion_b__0__);
-    sub_1C6BA08(&ScriptActionRenderEffectController___c__DisplayClass19_0_TypeInfo);
-    byte_4CB820F = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+    sub_1C713B0(&Method_ScriptActionRenderEffectController___c__DisplayClass19_0__StartDistortion_b__0__);
+    sub_1C713B0(&ScriptActionRenderEffectController___c__DisplayClass19_0_TypeInfo);
+    byte_4CC9342 = 1;
   }
-  v17 = sub_1C6BC54(ScriptActionRenderEffectController___c__DisplayClass19_0_TypeInfo);
+  v17 = sub_1C715FC(ScriptActionRenderEffectController___c__DisplayClass19_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   if ( !v17 )
-    sub_1C6BC60(v18, v19);
+    sub_1C71608(v18, v19);
   *(_DWORD *)(v17 + 16) = count;
   *(_QWORD *)(v17 + 24) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 24), (int32_t)this, v20, v21);
-  MaterialValue = ScriptActionRenderEffectController_DistortionParam__CreateMaterialValue(this->fields.material_, v22);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 24), (int32_t)this, v20, v21, v22, v23, v24, v25);
+  MaterialValue = ScriptActionRenderEffectController_DistortionParam__CreateMaterialValue(this->fields.material_, v26);
   *(_QWORD *)(v17 + 32) = MaterialValue;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 32), (int32_t)MaterialValue, v24, v25);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 32), (int32_t)MaterialValue, v28, v29, v30, v31, v32, v33);
   DistortionParam = ScriptActionRenderEffectController_DistortionParam__CreateDistortionParam(
                       centerX,
                       centerY,
                       strength,
                       range,
                       coefficient,
-                      v26);
+                      v34);
   *(_QWORD *)(v17 + 40) = DistortionParam;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 40), (int32_t)DistortionParam, v28, v29);
-  v30 = *(_DWORD *)(v17 + 16);
-  v31 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C6BC54(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 40), (int32_t)DistortionParam, v36, v37, v38, v39, v40, v41);
+  v42 = *(_DWORD *)(v17 + 16);
+  v43 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C715FC(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
   ScriptActionRenderEffectController_ReflectionFunction___ctor(
-    v31,
+    v43,
     (Il2CppObject *)v17,
     Method_ScriptActionRenderEffectController___c__DisplayClass19_0__StartDistortion_b__0__,
-    v32);
-  ScriptActionRenderEffectController__Start(this, sec, v30, 0, v31, 0, v33);
+    v44);
+  ScriptActionRenderEffectController__Start(this, sec, v42, 0, v43, 0, v45);
 }
 
 
@@ -274,45 +312,57 @@ void ScriptActionRenderEffectController__StartGaussianBlur(
   __int64 v10; // x0
   __int64 v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x1
-  ScriptActionRenderEffectController_GaussianBlurParam_o *v15; // x0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
   const MethodInfo *v18; // x1
   ScriptActionRenderEffectController_GaussianBlurParam_o *v19; // x0
   int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  ScriptActionRenderEffectController_ReflectionFunction_o *v22; // x20
-  const MethodInfo *v23; // x3
-  const MethodInfo *v24; // x5
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  const MethodInfo *v26; // x1
+  ScriptActionRenderEffectController_GaussianBlurParam_o *v27; // x0
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  ScriptActionRenderEffectController_ReflectionFunction_o *v34; // x20
+  const MethodInfo *v35; // x3
+  const MethodInfo *v36; // x5
 
-  if ( (byte_4CB8211 & 1) == 0 )
+  if ( (byte_4CC9344 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
-    sub_1C6BA08(&Method_ScriptActionRenderEffectController___c__DisplayClass21_0__StartGaussianBlur_b__0__);
-    sub_1C6BA08(&ScriptActionRenderEffectController___c__DisplayClass21_0_TypeInfo);
-    byte_4CB8211 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+    sub_1C713B0(&Method_ScriptActionRenderEffectController___c__DisplayClass21_0__StartGaussianBlur_b__0__);
+    sub_1C713B0(&ScriptActionRenderEffectController___c__DisplayClass21_0_TypeInfo);
+    byte_4CC9344 = 1;
   }
-  v9 = sub_1C6BC54(ScriptActionRenderEffectController___c__DisplayClass21_0_TypeInfo);
+  v9 = sub_1C715FC(ScriptActionRenderEffectController___c__DisplayClass21_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
-    sub_1C6BC60(v10, v11);
+    sub_1C71608(v10, v11);
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)this, v12, v13);
-  v15 = ScriptActionRenderEffectController_GaussianBlurParam__CreateByMaterialValue(this->fields.material_, v14);
-  *(_QWORD *)(v9 + 24) = v15;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)v15, v16, v17);
-  v19 = ScriptActionRenderEffectController_GaussianBlurParam__CreateByParams(sampleRange, sigma, v18);
-  *(_QWORD *)(v9 + 32) = v19;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 32), (int32_t)v19, v20, v21);
-  v22 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C6BC54(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  v19 = ScriptActionRenderEffectController_GaussianBlurParam__CreateByMaterialValue(this->fields.material_, v18);
+  *(_QWORD *)(v9 + 24) = v19;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)v19, v20, v21, v22, v23, v24, v25);
+  v27 = ScriptActionRenderEffectController_GaussianBlurParam__CreateByParams(sampleRange, sigma, v26);
+  *(_QWORD *)(v9 + 32) = v27;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)v27, v28, v29, v30, v31, v32, v33);
+  v34 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C715FC(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
   ScriptActionRenderEffectController_ReflectionFunction___ctor(
-    v22,
+    v34,
     (Il2CppObject *)v9,
     Method_ScriptActionRenderEffectController___c__DisplayClass21_0__StartGaussianBlur_b__0__,
-    v23);
-  ScriptActionRenderEffectController__Start(this, sec, 0, 0, v22, 0, v24);
+    v35);
+  ScriptActionRenderEffectController__Start(this, sec, 0, 0, v34, 0, v36);
 }
 
 
@@ -331,52 +381,64 @@ void ScriptActionRenderEffectController__StartMotionBlur(
   __int64 v18; // x0
   __int64 v19; // x1
   int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  const MethodInfo *v22; // x1
-  ScriptActionRenderEffectController_MotionBlurParam_o *v23; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
   const MethodInfo *v26; // x1
   ScriptActionRenderEffectController_MotionBlurParam_o *v27; // x0
   int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  ScriptActionRenderEffectController_ReflectionFunction_o *v30; // x20
-  const MethodInfo *v31; // x3
-  const MethodInfo *v32; // x5
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  const MethodInfo *v34; // x1
+  ScriptActionRenderEffectController_MotionBlurParam_o *v35; // x0
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
+  ScriptActionRenderEffectController_ReflectionFunction_o *v42; // x20
+  const MethodInfo *v43; // x3
+  const MethodInfo *v44; // x5
 
-  if ( (byte_4CB8213 & 1) == 0 )
+  if ( (byte_4CC9346 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
-    sub_1C6BA08(&Method_ScriptActionRenderEffectController___c__DisplayClass23_0__StartMotionBlur_b__0__);
-    sub_1C6BA08(&ScriptActionRenderEffectController___c__DisplayClass23_0_TypeInfo);
-    byte_4CB8213 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+    sub_1C713B0(&Method_ScriptActionRenderEffectController___c__DisplayClass23_0__StartMotionBlur_b__0__);
+    sub_1C713B0(&ScriptActionRenderEffectController___c__DisplayClass23_0_TypeInfo);
+    byte_4CC9346 = 1;
   }
-  v17 = sub_1C6BC54(ScriptActionRenderEffectController___c__DisplayClass23_0_TypeInfo);
+  v17 = sub_1C715FC(ScriptActionRenderEffectController___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   if ( !v17 )
-    sub_1C6BC60(v18, v19);
+    sub_1C71608(v18, v19);
   *(_QWORD *)(v17 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 16), (int32_t)this, v20, v21);
-  v23 = ScriptActionRenderEffectController_MotionBlurParam__CreateByMaterialValue(this->fields.material_, v22);
-  *(_QWORD *)(v17 + 24) = v23;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 24), (int32_t)v23, v24, v25);
-  v27 = ScriptActionRenderEffectController_MotionBlurParam__CreateByParams(
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 16), (int32_t)this, v20, v21, v22, v23, v24, v25);
+  v27 = ScriptActionRenderEffectController_MotionBlurParam__CreateByMaterialValue(this->fields.material_, v26);
+  *(_QWORD *)(v17 + 24) = v27;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 24), (int32_t)v27, v28, v29, v30, v31, v32, v33);
+  v35 = ScriptActionRenderEffectController_MotionBlurParam__CreateByParams(
           sampleRange,
           sigma,
           centerX,
           centerY,
           range,
           coefficient,
-          v26);
-  *(_QWORD *)(v17 + 32) = v27;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 32), (int32_t)v27, v28, v29);
-  v30 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C6BC54(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+          v34);
+  *(_QWORD *)(v17 + 32) = v35;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 32), (int32_t)v35, v36, v37, v38, v39, v40, v41);
+  v42 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C715FC(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
   ScriptActionRenderEffectController_ReflectionFunction___ctor(
-    v30,
+    v42,
     (Il2CppObject *)v17,
     Method_ScriptActionRenderEffectController___c__DisplayClass23_0__StartMotionBlur_b__0__,
-    v31);
-  ScriptActionRenderEffectController__Start(this, sec, 0, 0, v30, 0, v32);
+    v43);
+  ScriptActionRenderEffectController__Start(this, sec, 0, 0, v42, 0, v44);
 }
 
 
@@ -390,45 +452,57 @@ void ScriptActionRenderEffectController__StopDistortion(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x1
-  ScriptActionRenderEffectController_DistortionParam_o *MaterialValue; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   const MethodInfo *v16; // x1
-  ScriptActionRenderEffectController_DistortionParam_o *StopMaterial; // x0
+  ScriptActionRenderEffectController_DistortionParam_o *MaterialValue; // x0
   int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  ScriptActionRenderEffectController_ReflectionFunction_o *v20; // x22
-  const MethodInfo *v21; // x3
-  const MethodInfo *v22; // x5
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  const MethodInfo *v24; // x1
+  ScriptActionRenderEffectController_DistortionParam_o *StopMaterial; // x0
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  ScriptActionRenderEffectController_ReflectionFunction_o *v32; // x22
+  const MethodInfo *v33; // x3
+  const MethodInfo *v34; // x5
 
-  if ( (byte_4CB8210 & 1) == 0 )
+  if ( (byte_4CC9343 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
-    sub_1C6BA08(&Method_ScriptActionRenderEffectController___c__DisplayClass20_0__StopDistortion_b__0__);
-    sub_1C6BA08(&ScriptActionRenderEffectController___c__DisplayClass20_0_TypeInfo);
-    byte_4CB8210 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+    sub_1C713B0(&Method_ScriptActionRenderEffectController___c__DisplayClass20_0__StopDistortion_b__0__);
+    sub_1C713B0(&ScriptActionRenderEffectController___c__DisplayClass20_0_TypeInfo);
+    byte_4CC9343 = 1;
   }
-  v7 = sub_1C6BC54(ScriptActionRenderEffectController___c__DisplayClass20_0_TypeInfo);
+  v7 = sub_1C715FC(ScriptActionRenderEffectController___c__DisplayClass20_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
-  MaterialValue = ScriptActionRenderEffectController_DistortionParam__CreateMaterialValue(this->fields.material_, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  MaterialValue = ScriptActionRenderEffectController_DistortionParam__CreateMaterialValue(this->fields.material_, v16);
   *(_QWORD *)(v7 + 24) = MaterialValue;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)MaterialValue, v14, v15);
-  StopMaterial = ScriptActionRenderEffectController_DistortionParam__CreateStopMaterial(this->fields.material_, v16);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)MaterialValue, v18, v19, v20, v21, v22, v23);
+  StopMaterial = ScriptActionRenderEffectController_DistortionParam__CreateStopMaterial(this->fields.material_, v24);
   *(_QWORD *)(v7 + 32) = StopMaterial;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)StopMaterial, v18, v19);
-  v20 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C6BC54(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)StopMaterial, v26, v27, v28, v29, v30, v31);
+  v32 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C715FC(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
   ScriptActionRenderEffectController_ReflectionFunction___ctor(
-    v20,
+    v32,
     (Il2CppObject *)v7,
     Method_ScriptActionRenderEffectController___c__DisplayClass20_0__StopDistortion_b__0__,
-    v21);
-  ScriptActionRenderEffectController__Start(this, sec, 0, 1, v20, stopFunc, v22);
+    v33);
+  ScriptActionRenderEffectController__Start(this, sec, 0, 1, v32, stopFunc, v34);
   this->fields.requestStop = 1;
 }
 
@@ -443,47 +517,59 @@ void ScriptActionRenderEffectController__StopGaussianBlur(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x1
-  ScriptActionRenderEffectController_GaussianBlurParam_o *v13; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   const MethodInfo *v16; // x1
-  ScriptActionRenderEffectController_GaussianBlurParam_o *StopByMaterial; // x0
+  ScriptActionRenderEffectController_GaussianBlurParam_o *v17; // x0
   int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  ScriptActionRenderEffectController_ReflectionFunction_o *v20; // x22
-  const MethodInfo *v21; // x3
-  const MethodInfo *v22; // x5
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  const MethodInfo *v24; // x1
+  ScriptActionRenderEffectController_GaussianBlurParam_o *StopByMaterial; // x0
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  ScriptActionRenderEffectController_ReflectionFunction_o *v32; // x22
+  const MethodInfo *v33; // x3
+  const MethodInfo *v34; // x5
 
-  if ( (byte_4CB8212 & 1) == 0 )
+  if ( (byte_4CC9345 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
-    sub_1C6BA08(&Method_ScriptActionRenderEffectController___c__DisplayClass22_0__StopGaussianBlur_b__0__);
-    sub_1C6BA08(&ScriptActionRenderEffectController___c__DisplayClass22_0_TypeInfo);
-    byte_4CB8212 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+    sub_1C713B0(&Method_ScriptActionRenderEffectController___c__DisplayClass22_0__StopGaussianBlur_b__0__);
+    sub_1C713B0(&ScriptActionRenderEffectController___c__DisplayClass22_0_TypeInfo);
+    byte_4CC9345 = 1;
   }
-  v7 = sub_1C6BC54(ScriptActionRenderEffectController___c__DisplayClass22_0_TypeInfo);
+  v7 = sub_1C715FC(ScriptActionRenderEffectController___c__DisplayClass22_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
-  v13 = ScriptActionRenderEffectController_GaussianBlurParam__CreateByMaterialValue(this->fields.material_, v12);
-  *(_QWORD *)(v7 + 24) = v13;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)v13, v14, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  v17 = ScriptActionRenderEffectController_GaussianBlurParam__CreateByMaterialValue(this->fields.material_, v16);
+  *(_QWORD *)(v7 + 24) = v17;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)v17, v18, v19, v20, v21, v22, v23);
   StopByMaterial = ScriptActionRenderEffectController_GaussianBlurParam__CreateStopByMaterial(
                      this->fields.material_,
-                     v16);
+                     v24);
   *(_QWORD *)(v7 + 32) = StopByMaterial;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)StopByMaterial, v18, v19);
-  v20 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C6BC54(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)StopByMaterial, v26, v27, v28, v29, v30, v31);
+  v32 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C715FC(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
   ScriptActionRenderEffectController_ReflectionFunction___ctor(
-    v20,
+    v32,
     (Il2CppObject *)v7,
     Method_ScriptActionRenderEffectController___c__DisplayClass22_0__StopGaussianBlur_b__0__,
-    v21);
-  ScriptActionRenderEffectController__Start(this, sec, 0, 1, v20, stopFunc, v22);
+    v33);
+  ScriptActionRenderEffectController__Start(this, sec, 0, 1, v32, stopFunc, v34);
   this->fields.requestStop = 1;
 }
 
@@ -498,45 +584,57 @@ void ScriptActionRenderEffectController__StopMotionBlur(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x1
-  ScriptActionRenderEffectController_MotionBlurParam_o *v13; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   const MethodInfo *v16; // x1
-  ScriptActionRenderEffectController_MotionBlurParam_o *StopByMaterial; // x0
+  ScriptActionRenderEffectController_MotionBlurParam_o *v17; // x0
   int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  ScriptActionRenderEffectController_ReflectionFunction_o *v20; // x22
-  const MethodInfo *v21; // x3
-  const MethodInfo *v22; // x5
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  const MethodInfo *v24; // x1
+  ScriptActionRenderEffectController_MotionBlurParam_o *StopByMaterial; // x0
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  ScriptActionRenderEffectController_ReflectionFunction_o *v32; // x22
+  const MethodInfo *v33; // x3
+  const MethodInfo *v34; // x5
 
-  if ( (byte_4CB8214 & 1) == 0 )
+  if ( (byte_4CC9347 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
-    sub_1C6BA08(&Method_ScriptActionRenderEffectController___c__DisplayClass24_0__StopMotionBlur_b__0__);
-    sub_1C6BA08(&ScriptActionRenderEffectController___c__DisplayClass24_0_TypeInfo);
-    byte_4CB8214 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+    sub_1C713B0(&Method_ScriptActionRenderEffectController___c__DisplayClass24_0__StopMotionBlur_b__0__);
+    sub_1C713B0(&ScriptActionRenderEffectController___c__DisplayClass24_0_TypeInfo);
+    byte_4CC9347 = 1;
   }
-  v7 = sub_1C6BC54(ScriptActionRenderEffectController___c__DisplayClass24_0_TypeInfo);
+  v7 = sub_1C715FC(ScriptActionRenderEffectController___c__DisplayClass24_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
-  v13 = ScriptActionRenderEffectController_MotionBlurParam__CreateByMaterialValue(this->fields.material_, v12);
-  *(_QWORD *)(v7 + 24) = v13;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)v13, v14, v15);
-  StopByMaterial = ScriptActionRenderEffectController_MotionBlurParam__CreateStopByMaterial(this->fields.material_, v16);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  v17 = ScriptActionRenderEffectController_MotionBlurParam__CreateByMaterialValue(this->fields.material_, v16);
+  *(_QWORD *)(v7 + 24) = v17;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  StopByMaterial = ScriptActionRenderEffectController_MotionBlurParam__CreateStopByMaterial(this->fields.material_, v24);
   *(_QWORD *)(v7 + 32) = StopByMaterial;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)StopByMaterial, v18, v19);
-  v20 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C6BC54(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)StopByMaterial, v26, v27, v28, v29, v30, v31);
+  v32 = (ScriptActionRenderEffectController_ReflectionFunction_o *)sub_1C715FC(ScriptActionRenderEffectController_ReflectionFunction_TypeInfo);
   ScriptActionRenderEffectController_ReflectionFunction___ctor(
-    v20,
+    v32,
     (Il2CppObject *)v7,
     Method_ScriptActionRenderEffectController___c__DisplayClass24_0__StopMotionBlur_b__0__,
-    v21);
-  ScriptActionRenderEffectController__Start(this, sec, 0, 1, v20, stopFunc, v22);
+    v33);
+  ScriptActionRenderEffectController__Start(this, sec, 0, 1, v32, stopFunc, v34);
   this->fields.requestStop = 1;
 }
 
@@ -557,10 +655,10 @@ void ScriptActionRenderEffectController__Update(
   float loopCount; // s9
   struct ScriptActionRenderEffectController_ReflectionFunction_o *v14; // x8
 
-  if ( (byte_4CB820E & 1) == 0 )
+  if ( (byte_4CC9341 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB820E = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC9341 = 1;
   }
   if ( this->fields.isEnable && this->fields.timerMax > 0.0 )
   {
@@ -645,12 +743,12 @@ ScriptActionRenderEffectController_DistortionParam_o *ScriptActionRenderEffectCo
 {
   __int64 v11; // x19
 
-  if ( (byte_4CB8218 & 1) == 0 )
+  if ( (byte_4CC934B & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_DistortionParam_TypeInfo);
-    byte_4CB8218 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_DistortionParam_TypeInfo);
+    byte_4CC934B = 1;
   }
-  v11 = sub_1C6BC54(ScriptActionRenderEffectController_DistortionParam_TypeInfo);
+  v11 = sub_1C715FC(ScriptActionRenderEffectController_DistortionParam_TypeInfo);
   *(_QWORD *)(v11 + 16) = 0x3F0000003F000000LL;
   *(_DWORD *)(v11 + 32) = 1120403456;
   System_Object___ctor((Il2CppObject *)v11, 0);
@@ -674,39 +772,39 @@ ScriptActionRenderEffectController_DistortionParam_o *ScriptActionRenderEffectCo
   const MethodInfo *v7; // x2
   const MethodInfo *v8; // x2
 
-  if ( (byte_4CB8219 & 1) == 0 )
+  if ( (byte_4CC934C & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_DistortionParam_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16350/*"_Strength"*/);
-    sub_1C6BA08(&StringLiteral_16165/*"_Coefficient"*/);
-    sub_1C6BA08(&StringLiteral_16145/*"_CenterY"*/);
-    sub_1C6BA08(&StringLiteral_16314/*"_Range"*/);
-    sub_1C6BA08(&StringLiteral_16144/*"_CenterX"*/);
-    byte_4CB8219 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_DistortionParam_TypeInfo);
+    sub_1C713B0(&StringLiteral_16357/*"_Strength"*/);
+    sub_1C713B0(&StringLiteral_16172/*"_Coefficient"*/);
+    sub_1C713B0(&StringLiteral_16152/*"_CenterY"*/);
+    sub_1C713B0(&StringLiteral_16321/*"_Range"*/);
+    sub_1C713B0(&StringLiteral_16151/*"_CenterX"*/);
+    byte_4CC934C = 1;
   }
-  v3 = sub_1C6BC54(ScriptActionRenderEffectController_DistortionParam_TypeInfo);
+  v3 = sub_1C715FC(ScriptActionRenderEffectController_DistortionParam_TypeInfo);
   *(_QWORD *)(v3 + 16) = 0x3F0000003F000000LL;
   *(_DWORD *)(v3 + 32) = 1120403456;
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(float *)(v3 + 16) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16144/*"_CenterX"*/,
+                          (System_String_o *)StringLiteral_16151/*"_CenterX"*/,
                           v4);
   *(float *)(v3 + 20) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16145/*"_CenterY"*/,
+                          (System_String_o *)StringLiteral_16152/*"_CenterY"*/,
                           v5);
   *(float *)(v3 + 24) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16350/*"_Strength"*/,
+                          (System_String_o *)StringLiteral_16357/*"_Strength"*/,
                           v6);
   *(float *)(v3 + 28) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16314/*"_Range"*/,
+                          (System_String_o *)StringLiteral_16321/*"_Range"*/,
                           v7);
   *(float *)(v3 + 32) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16165/*"_Coefficient"*/,
+                          (System_String_o *)StringLiteral_16172/*"_Coefficient"*/,
                           v8);
   return (ScriptActionRenderEffectController_DistortionParam_o *)v3;
 }
@@ -721,29 +819,29 @@ ScriptActionRenderEffectController_DistortionParam_o *ScriptActionRenderEffectCo
   const MethodInfo *v5; // x2
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CB821A & 1) == 0 )
+  if ( (byte_4CC934D & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_DistortionParam_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16165/*"_Coefficient"*/);
-    sub_1C6BA08(&StringLiteral_16145/*"_CenterY"*/);
-    sub_1C6BA08(&StringLiteral_16144/*"_CenterX"*/);
-    byte_4CB821A = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_DistortionParam_TypeInfo);
+    sub_1C713B0(&StringLiteral_16172/*"_Coefficient"*/);
+    sub_1C713B0(&StringLiteral_16152/*"_CenterY"*/);
+    sub_1C713B0(&StringLiteral_16151/*"_CenterX"*/);
+    byte_4CC934D = 1;
   }
-  v3 = sub_1C6BC54(ScriptActionRenderEffectController_DistortionParam_TypeInfo);
+  v3 = sub_1C715FC(ScriptActionRenderEffectController_DistortionParam_TypeInfo);
   *(_QWORD *)(v3 + 16) = 0x3F0000003F000000LL;
   *(_DWORD *)(v3 + 32) = 1120403456;
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(float *)(v3 + 16) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16144/*"_CenterX"*/,
+                          (System_String_o *)StringLiteral_16151/*"_CenterX"*/,
                           v4);
   *(float *)(v3 + 20) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16145/*"_CenterY"*/,
+                          (System_String_o *)StringLiteral_16152/*"_CenterY"*/,
                           v5);
   *(float *)(v3 + 32) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16165/*"_Coefficient"*/,
+                          (System_String_o *)StringLiteral_16172/*"_Coefficient"*/,
                           v6);
   return (ScriptActionRenderEffectController_DistortionParam_o *)v3;
 }
@@ -763,40 +861,40 @@ void ScriptActionRenderEffectController_DistortionParam__ReflectionMaterial(
   const MethodInfo *v12; // x2
 
   v8 = material;
-  if ( (byte_4CB821B & 1) == 0 )
+  if ( (byte_4CC934E & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16350/*"_Strength"*/);
-    sub_1C6BA08(&StringLiteral_16165/*"_Coefficient"*/);
-    sub_1C6BA08(&StringLiteral_16145/*"_CenterY"*/);
-    sub_1C6BA08(&StringLiteral_16314/*"_Range"*/);
-    material = (UnityEngine_Material_o *)sub_1C6BA08(&StringLiteral_16144/*"_CenterX"*/);
-    byte_4CB821B = 1;
+    sub_1C713B0(&StringLiteral_16357/*"_Strength"*/);
+    sub_1C713B0(&StringLiteral_16172/*"_Coefficient"*/);
+    sub_1C713B0(&StringLiteral_16152/*"_CenterY"*/);
+    sub_1C713B0(&StringLiteral_16321/*"_Range"*/);
+    material = (UnityEngine_Material_o *)sub_1C713B0(&StringLiteral_16151/*"_CenterX"*/);
+    byte_4CC934E = 1;
   }
   if ( !srcParam || !destParam )
-    sub_1C6BC60(material, srcParam);
+    sub_1C71608(material, srcParam);
   ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
     v8,
-    (System_String_o *)StringLiteral_16144/*"_CenterX"*/,
+    (System_String_o *)StringLiteral_16151/*"_CenterX"*/,
     srcParam->fields.centerX + (float)((float)(destParam->fields.centerX - srcParam->fields.centerX) * rate),
     (const MethodInfo *)destParam);
   ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
     v8,
-    (System_String_o *)StringLiteral_16145/*"_CenterY"*/,
+    (System_String_o *)StringLiteral_16152/*"_CenterY"*/,
     srcParam->fields.centerY + (float)((float)(destParam->fields.centerY - srcParam->fields.centerY) * rate),
     v9);
   ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
     v8,
-    (System_String_o *)StringLiteral_16350/*"_Strength"*/,
+    (System_String_o *)StringLiteral_16357/*"_Strength"*/,
     srcParam->fields.strength + (float)((float)(destParam->fields.strength - srcParam->fields.strength) * rate),
     v10);
   ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
     v8,
-    (System_String_o *)StringLiteral_16314/*"_Range"*/,
+    (System_String_o *)StringLiteral_16321/*"_Range"*/,
     srcParam->fields.range + (float)((float)(destParam->fields.range - srcParam->fields.range) * rate),
     v11);
   ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
     v8,
-    (System_String_o *)StringLiteral_16165/*"_Coefficient"*/,
+    (System_String_o *)StringLiteral_16172/*"_Coefficient"*/,
     srcParam->fields.coefficient + (float)((float)(destParam->fields.coefficient - srcParam->fields.coefficient) * rate),
     v12);
 }
@@ -820,19 +918,19 @@ float ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
   bool v6; // w0
 
   v4 = material;
-  if ( (byte_4CB8226 & 1) == 0 )
+  if ( (byte_4CC9359 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16145/*"_CenterY"*/);
-    material = (UnityEngine_Material_o *)sub_1C6BA08(&StringLiteral_16144/*"_CenterX"*/);
-    byte_4CB8226 = 1;
+    sub_1C713B0(&StringLiteral_16152/*"_CenterY"*/);
+    material = (UnityEngine_Material_o *)sub_1C713B0(&StringLiteral_16151/*"_CenterX"*/);
+    byte_4CC9359 = 1;
   }
   if ( !v4 )
-    sub_1C6BC60(material, key);
-  if ( UnityEngine_Material__HasProperty_71525148(v4, key, 0) )
+    sub_1C71608(material, key);
+  if ( UnityEngine_Material__HasProperty_71590080(v4, key, 0) )
     return UnityEngine_Material__GetFloat(v4, key, 0);
-  if ( System_String__op_Equality(key, (System_String_o *)StringLiteral_16144/*"_CenterX"*/, 0) )
+  if ( System_String__op_Equality(key, (System_String_o *)StringLiteral_16151/*"_CenterX"*/, 0) )
     return 0.5;
-  v6 = System_String__op_Equality(key, (System_String_o *)StringLiteral_16145/*"_CenterY"*/, 0);
+  v6 = System_String__op_Equality(key, (System_String_o *)StringLiteral_16152/*"_CenterY"*/, 0);
   result = 0.0;
   if ( v6 )
     return 0.5;
@@ -853,7 +951,7 @@ int32_t ScriptActionRenderEffectController_EffectParamBase__GetSampleRange(
   {
     SampleRangeKeyword = ScriptActionRenderEffectController_EffectParamBase__GetSampleRangeKeyword(v3, method);
     if ( !material )
-      sub_1C6BC60(SampleRangeKeyword, v5);
+      sub_1C71608(SampleRangeKeyword, v5);
     if ( UnityEngine_Material__IsKeywordEnabled(material, SampleRangeKeyword, 0) )
       break;
     if ( ++v3 == 5 )
@@ -870,15 +968,15 @@ System_String_o *ScriptActionRenderEffectController_EffectParamBase__GetSampleRa
   Il2CppObject *v3; // x0
   int32_t v5; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CB8227 & 1) == 0 )
+  if ( (byte_4CC935A & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11446/*"SAMPLERANGE_{0}"*/);
-    byte_4CB8227 = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&StringLiteral_11452/*"SAMPLERANGE_{0}"*/);
+    byte_4CC935A = 1;
   }
   v5 = sampleRange;
   v3 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v5);
-  return System_String__Format((System_String_o *)StringLiteral_11446/*"SAMPLERANGE_{0}"*/, v3, 0);
+  return System_String__Format((System_String_o *)StringLiteral_11452/*"SAMPLERANGE_{0}"*/, v3, 0);
 }
 
 
@@ -889,8 +987,8 @@ void ScriptActionRenderEffectController_EffectParamBase__SetFloatArrayProperty(
         const MethodInfo *method)
 {
   if ( !material )
-    sub_1C6BC60(0, key);
-  UnityEngine_Material__SetFloatArray_71529384(material, key, values, 0);
+    sub_1C71608(0, key);
+  UnityEngine_Material__SetFloatArray_71594316(material, key, values, 0);
 }
 
 
@@ -901,8 +999,8 @@ void ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
         const MethodInfo *method)
 {
   if ( !material )
-    sub_1C6BC60(0, key);
-  if ( UnityEngine_Material__HasProperty_71525148(material, key, 0) )
+    sub_1C71608(0, key);
+  if ( UnityEngine_Material__HasProperty_71590080(material, key, 0) )
     UnityEngine_Material__SetFloat(material, key, value, 0);
 }
 
@@ -926,7 +1024,7 @@ void ScriptActionRenderEffectController_EffectParamBase__SetSampleRange(
                            i,
                            *(const MethodInfo **)&sampleRange);
     if ( !material )
-      sub_1C6BC60(SampleRangeKeyword, v7);
+      sub_1C71608(SampleRangeKeyword, v7);
     v8 = SampleRangeKeyword;
     IsKeywordEnabled = UnityEngine_Material__IsKeywordEnabled(material, SampleRangeKeyword, 0);
     if ( sampleRange != i && IsKeywordEnabled )
@@ -960,19 +1058,19 @@ ScriptActionRenderEffectController_GaussianBlurParam_o *ScriptActionRenderEffect
   const MethodInfo *v4; // x1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CB821D & 1) == 0 )
+  if ( (byte_4CC9350 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16339/*"_Sigma"*/);
-    byte_4CB821D = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
+    sub_1C713B0(&StringLiteral_16346/*"_Sigma"*/);
+    byte_4CC9350 = 1;
   }
-  v3 = sub_1C6BC54(ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
+  v3 = sub_1C715FC(ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
   *(_DWORD *)(v3 + 16) = 1;
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = ScriptActionRenderEffectController_EffectParamBase__GetSampleRange(material, v4);
   *(float *)(v3 + 20) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16339/*"_Sigma"*/,
+                          (System_String_o *)StringLiteral_16346/*"_Sigma"*/,
                           v5);
   return (ScriptActionRenderEffectController_GaussianBlurParam_o *)v3;
 }
@@ -985,12 +1083,12 @@ ScriptActionRenderEffectController_GaussianBlurParam_o *ScriptActionRenderEffect
 {
   __int64 v5; // x20
 
-  if ( (byte_4CB821C & 1) == 0 )
+  if ( (byte_4CC934F & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
-    byte_4CB821C = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
+    byte_4CC934F = 1;
   }
-  v5 = sub_1C6BC54(ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
+  v5 = sub_1C715FC(ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
   *(_DWORD *)(v5 + 16) = 1;
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = sampleRange;
@@ -1006,12 +1104,12 @@ ScriptActionRenderEffectController_GaussianBlurParam_o *ScriptActionRenderEffect
   __int64 v3; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4CB821E & 1) == 0 )
+  if ( (byte_4CC9351 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
-    byte_4CB821E = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
+    byte_4CC9351 = 1;
   }
-  v3 = sub_1C6BC54(ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
+  v3 = sub_1C715FC(ScriptActionRenderEffectController_GaussianBlurParam_TypeInfo);
   *(_DWORD *)(v3 + 16) = 1;
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = ScriptActionRenderEffectController_EffectParamBase__GetSampleRange(material, v4);
@@ -1057,10 +1155,10 @@ System_Single_array *ScriptActionRenderEffectController_GaussianBlurParam__GetBl
   float v34; // [xsp+5Ch] [xbp-14h]
   float v35; // [xsp+5Ch] [xbp-14h]
 
-  if ( (byte_4CB8220 & 1) == 0 )
+  if ( (byte_4CC9353 & 1) == 0 )
   {
-    sub_1C6BA08(&float___TypeInfo);
-    byte_4CB8220 = 1;
+    sub_1C713B0(&float___TypeInfo);
+    byte_4CC9353 = 1;
   }
   v5 = (float)(sigma + sigma) * sigma;
   v34 = expf(-0.0 / v5);
@@ -1118,7 +1216,7 @@ System_Single_array *ScriptActionRenderEffectController_GaussianBlurParam__GetBl
       v22 = v13 * v12;
       v24 = (float)(v13 * v12) * 4.0;
 LABEL_11:
-      result = (System_Single_array *)sub_1C6BAB0(float___TypeInfo, 9);
+      result = (System_Single_array *)sub_1C71458(float___TypeInfo, 9);
       if ( !result )
         goto LABEL_24;
       max_length = result->max_length;
@@ -1153,13 +1251,13 @@ LABEL_11:
       m_Items = &result->m_Items[8];
       break;
     default:
-      result = (System_Single_array *)sub_1C6BAB0(float___TypeInfo, 1);
+      result = (System_Single_array *)sub_1C71458(float___TypeInfo, 1);
       if ( !result )
 LABEL_24:
-        sub_1C6BC60(result, v26);
+        sub_1C71608(result, v26);
       if ( !LODWORD(result->max_length) )
 LABEL_23:
-        sub_1C6BC68(result);
+        sub_1C71610(result);
       m_Items = result->m_Items;
       v28 = 1.0;
       break;
@@ -1183,11 +1281,11 @@ void ScriptActionRenderEffectController_GaussianBlurParam__ReflectionMaterial(
   const MethodInfo *v12; // x1
 
   v8 = material;
-  if ( (byte_4CB821F & 1) == 0 )
+  if ( (byte_4CC9352 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16339/*"_Sigma"*/);
-    material = (UnityEngine_Material_o *)sub_1C6BA08(&StringLiteral_16135/*"_BlurFactor"*/);
-    byte_4CB821F = 1;
+    sub_1C713B0(&StringLiteral_16346/*"_Sigma"*/);
+    material = (UnityEngine_Material_o *)sub_1C713B0(&StringLiteral_16142/*"_BlurFactor"*/);
+    byte_4CC9352 = 1;
   }
   if ( !destParam
     || !srcParam
@@ -1196,7 +1294,7 @@ void ScriptActionRenderEffectController_GaussianBlurParam__ReflectionMaterial(
         v11 = srcParam->fields.sigma + (float)((float)(sigma - srcParam->fields.sigma) * rate),
         ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
           v8,
-          (System_String_o *)StringLiteral_16339/*"_Sigma"*/,
+          (System_String_o *)StringLiteral_16346/*"_Sigma"*/,
           v11,
           (const MethodInfo *)destParam),
         material = (UnityEngine_Material_o *)ScriptActionRenderEffectController_GaussianBlurParam__GetBlurFactors(
@@ -1205,11 +1303,11 @@ void ScriptActionRenderEffectController_GaussianBlurParam__ReflectionMaterial(
                                                v12),
         !v8) )
   {
-    sub_1C6BC60(material, srcParam);
+    sub_1C71608(material, srcParam);
   }
-  UnityEngine_Material__SetFloatArray_71529384(
+  UnityEngine_Material__SetFloatArray_71594316(
     v8,
-    (System_String_o *)StringLiteral_16135/*"_BlurFactor"*/,
+    (System_String_o *)StringLiteral_16142/*"_BlurFactor"*/,
     (System_Single_array *)material,
     0);
 }
@@ -1238,17 +1336,17 @@ ScriptActionRenderEffectController_MotionBlurParam_o *ScriptActionRenderEffectCo
   const MethodInfo *v8; // x2
   const MethodInfo *v9; // x2
 
-  if ( (byte_4CB8222 & 1) == 0 )
+  if ( (byte_4CC9355 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16165/*"_Coefficient"*/);
-    sub_1C6BA08(&StringLiteral_16145/*"_CenterY"*/);
-    sub_1C6BA08(&StringLiteral_16339/*"_Sigma"*/);
-    sub_1C6BA08(&StringLiteral_16314/*"_Range"*/);
-    sub_1C6BA08(&StringLiteral_16144/*"_CenterX"*/);
-    byte_4CB8222 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
+    sub_1C713B0(&StringLiteral_16172/*"_Coefficient"*/);
+    sub_1C713B0(&StringLiteral_16152/*"_CenterY"*/);
+    sub_1C713B0(&StringLiteral_16346/*"_Sigma"*/);
+    sub_1C713B0(&StringLiteral_16321/*"_Range"*/);
+    sub_1C713B0(&StringLiteral_16151/*"_CenterX"*/);
+    byte_4CC9355 = 1;
   }
-  v3 = sub_1C6BC54(ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
+  v3 = sub_1C715FC(ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
   *(_DWORD *)(v3 + 16) = 1;
   *(_QWORD *)(v3 + 20) = 0x3F0000003C23D70ALL;
   *(_DWORD *)(v3 + 28) = 1056964608;
@@ -1256,23 +1354,23 @@ ScriptActionRenderEffectController_MotionBlurParam_o *ScriptActionRenderEffectCo
   *(_DWORD *)(v3 + 16) = ScriptActionRenderEffectController_EffectParamBase__GetSampleRange(material, v4);
   *(float *)(v3 + 20) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16339/*"_Sigma"*/,
+                          (System_String_o *)StringLiteral_16346/*"_Sigma"*/,
                           v5);
   *(float *)(v3 + 24) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16144/*"_CenterX"*/,
+                          (System_String_o *)StringLiteral_16151/*"_CenterX"*/,
                           v6);
   *(float *)(v3 + 28) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16145/*"_CenterY"*/,
+                          (System_String_o *)StringLiteral_16152/*"_CenterY"*/,
                           v7);
   *(float *)(v3 + 32) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16314/*"_Range"*/,
+                          (System_String_o *)StringLiteral_16321/*"_Range"*/,
                           v8);
   *(float *)(v3 + 36) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16165/*"_Coefficient"*/,
+                          (System_String_o *)StringLiteral_16172/*"_Coefficient"*/,
                           v9);
   return (ScriptActionRenderEffectController_MotionBlurParam_o *)v3;
 }
@@ -1289,12 +1387,12 @@ ScriptActionRenderEffectController_MotionBlurParam_o *ScriptActionRenderEffectCo
 {
   __int64 v13; // x20
 
-  if ( (byte_4CB8221 & 1) == 0 )
+  if ( (byte_4CC9354 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
-    byte_4CB8221 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
+    byte_4CC9354 = 1;
   }
-  v13 = sub_1C6BC54(ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
+  v13 = sub_1C715FC(ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
   *(_DWORD *)(v13 + 16) = 1;
   *(_QWORD *)(v13 + 20) = 0x3F0000003C23D70ALL;
   *(_DWORD *)(v13 + 28) = 1056964608;
@@ -1318,14 +1416,14 @@ ScriptActionRenderEffectController_MotionBlurParam_o *ScriptActionRenderEffectCo
   const MethodInfo *v5; // x2
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CB8223 & 1) == 0 )
+  if ( (byte_4CC9356 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16145/*"_CenterY"*/);
-    sub_1C6BA08(&StringLiteral_16144/*"_CenterX"*/);
-    byte_4CB8223 = 1;
+    sub_1C713B0(&ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
+    sub_1C713B0(&StringLiteral_16152/*"_CenterY"*/);
+    sub_1C713B0(&StringLiteral_16151/*"_CenterX"*/);
+    byte_4CC9356 = 1;
   }
-  v3 = sub_1C6BC54(ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
+  v3 = sub_1C715FC(ScriptActionRenderEffectController_MotionBlurParam_TypeInfo);
   *(_DWORD *)(v3 + 16) = 1;
   *(_QWORD *)(v3 + 20) = 0x3F0000003C23D70ALL;
   *(_DWORD *)(v3 + 28) = 1056964608;
@@ -1333,11 +1431,11 @@ ScriptActionRenderEffectController_MotionBlurParam_o *ScriptActionRenderEffectCo
   *(_DWORD *)(v3 + 16) = ScriptActionRenderEffectController_EffectParamBase__GetSampleRange(material, v4);
   *(float *)(v3 + 24) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16144/*"_CenterX"*/,
+                          (System_String_o *)StringLiteral_16151/*"_CenterX"*/,
                           v5);
   *(float *)(v3 + 28) = ScriptActionRenderEffectController_EffectParamBase__GetFloatProperty(
                           material,
-                          (System_String_o *)StringLiteral_16145/*"_CenterY"*/,
+                          (System_String_o *)StringLiteral_16152/*"_CenterY"*/,
                           v6);
   return (ScriptActionRenderEffectController_MotionBlurParam_o *)v3;
 }
@@ -1367,10 +1465,10 @@ System_Single_array *ScriptActionRenderEffectController_MotionBlurParam__GetBlur
   unsigned int max_length; // w8
   float v22; // s0
 
-  if ( (byte_4CB8225 & 1) == 0 )
+  if ( (byte_4CC9358 & 1) == 0 )
   {
-    sub_1C6BA08(&float___TypeInfo);
-    byte_4CB8225 = 1;
+    sub_1C713B0(&float___TypeInfo);
+    byte_4CC9358 = 1;
   }
   v5 = (float)(sigma + sigma) * sigma;
   v6 = expf(-0.0 / v5);
@@ -1402,7 +1500,7 @@ System_Single_array *ScriptActionRenderEffectController_MotionBlurParam__GetBlur
       v17 = (float)(v15 + v15) + (float)((float)(v14 + v14) + (float)(v12 + (float)(v13 + v13)));
       v18 = v16 + v16;
 LABEL_11:
-      result = (System_Single_array *)sub_1C6BAB0(float___TypeInfo, 5);
+      result = (System_Single_array *)sub_1C71458(float___TypeInfo, 5);
       if ( !result )
         goto LABEL_19;
       max_length = result->max_length;
@@ -1424,13 +1522,13 @@ LABEL_11:
       result->m_Items[4] = v16 / v22;
       break;
     default:
-      result = (System_Single_array *)sub_1C6BAB0(float___TypeInfo, 1);
+      result = (System_Single_array *)sub_1C71458(float___TypeInfo, 1);
       if ( !result )
 LABEL_19:
-        sub_1C6BC60(result, v20);
+        sub_1C71608(result, v20);
       if ( !LODWORD(result->max_length) )
 LABEL_18:
-        sub_1C6BC68(result);
+        sub_1C71610(result);
       result->m_Items[0] = 1.0;
       break;
   }
@@ -1455,15 +1553,15 @@ void ScriptActionRenderEffectController_MotionBlurParam__ReflectionMaterial(
   const MethodInfo *v15; // x2
 
   v8 = material;
-  if ( (byte_4CB8224 & 1) == 0 )
+  if ( (byte_4CC9357 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16165/*"_Coefficient"*/);
-    sub_1C6BA08(&StringLiteral_16145/*"_CenterY"*/);
-    sub_1C6BA08(&StringLiteral_16339/*"_Sigma"*/);
-    sub_1C6BA08(&StringLiteral_16314/*"_Range"*/);
-    sub_1C6BA08(&StringLiteral_16135/*"_BlurFactor"*/);
-    material = (UnityEngine_Material_o *)sub_1C6BA08(&StringLiteral_16144/*"_CenterX"*/);
-    byte_4CB8224 = 1;
+    sub_1C713B0(&StringLiteral_16172/*"_Coefficient"*/);
+    sub_1C713B0(&StringLiteral_16152/*"_CenterY"*/);
+    sub_1C713B0(&StringLiteral_16346/*"_Sigma"*/);
+    sub_1C713B0(&StringLiteral_16321/*"_Range"*/);
+    sub_1C713B0(&StringLiteral_16142/*"_BlurFactor"*/);
+    material = (UnityEngine_Material_o *)sub_1C713B0(&StringLiteral_16151/*"_CenterX"*/);
+    byte_4CC9357 = 1;
   }
   if ( !destParam
     || !srcParam
@@ -1471,7 +1569,7 @@ void ScriptActionRenderEffectController_MotionBlurParam__ReflectionMaterial(
         v10 = srcParam->fields.sigma + (float)((float)(destParam->fields.sigma - srcParam->fields.sigma) * rate),
         ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
           v8,
-          (System_String_o *)StringLiteral_16339/*"_Sigma"*/,
+          (System_String_o *)StringLiteral_16346/*"_Sigma"*/,
           v10,
           (const MethodInfo *)destParam),
         material = (UnityEngine_Material_o *)ScriptActionRenderEffectController_MotionBlurParam__GetBlurFactors(
@@ -1480,31 +1578,31 @@ void ScriptActionRenderEffectController_MotionBlurParam__ReflectionMaterial(
                                                v11),
         !v8) )
   {
-    sub_1C6BC60(material, srcParam);
+    sub_1C71608(material, srcParam);
   }
-  UnityEngine_Material__SetFloatArray_71529384(
+  UnityEngine_Material__SetFloatArray_71594316(
     v8,
-    (System_String_o *)StringLiteral_16135/*"_BlurFactor"*/,
+    (System_String_o *)StringLiteral_16142/*"_BlurFactor"*/,
     (System_Single_array *)material,
     0);
   ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
     v8,
-    (System_String_o *)StringLiteral_16144/*"_CenterX"*/,
+    (System_String_o *)StringLiteral_16151/*"_CenterX"*/,
     srcParam->fields.centerX + (float)((float)(destParam->fields.centerX - srcParam->fields.centerX) * rate),
     v12);
   ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
     v8,
-    (System_String_o *)StringLiteral_16145/*"_CenterY"*/,
+    (System_String_o *)StringLiteral_16152/*"_CenterY"*/,
     srcParam->fields.centerY + (float)((float)(destParam->fields.centerY - srcParam->fields.centerY) * rate),
     v13);
   ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
     v8,
-    (System_String_o *)StringLiteral_16314/*"_Range"*/,
+    (System_String_o *)StringLiteral_16321/*"_Range"*/,
     srcParam->fields.range + (float)((float)(destParam->fields.range - srcParam->fields.range) * rate),
     v14);
   ScriptActionRenderEffectController_EffectParamBase__SetFloatProperty(
     v8,
-    (System_String_o *)StringLiteral_16165/*"_Coefficient"*/,
+    (System_String_o *)StringLiteral_16172/*"_Coefficient"*/,
     srcParam->fields.coefficient + (float)((float)(destParam->fields.coefficient - srcParam->fields.coefficient) * rate),
     v15);
 }
@@ -1516,28 +1614,40 @@ void ScriptActionRenderEffectController_ReflectionFunction___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  intptr_t v8; // x8
+  int v12; // w22
   Il2CppObject *m_target; // x9
-  __int64 v10; // x0
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C6BAC8(method) & 1) == 0 )
+  if ( (sub_1C71470(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C6BB30(v10, 0);
+      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C714D8(v14, 0);
     }
     goto LABEL_5;
   }
-  if ( v8 != 1 )
+  if ( v12 != 1 )
   {
 LABEL_5:
     m_target = this->fields.m_target;
@@ -1545,9 +1655,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA3590;
+  this->fields.invoke_impl = (intptr_t)sub_1AA8A98;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA3540;
+  this->fields.extra_arg = (intptr_t)sub_1AA8A48;
 }
 
 
@@ -1562,14 +1672,14 @@ System_IAsyncResult_o *ScriptActionRenderEffectController_ReflectionFunction__Be
   float v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = animeRate;
-  if ( (byte_4CB8217 & 1) == 0 )
+  if ( (byte_4CC934A & 1) == 0 )
   {
-    sub_1C6BA08(&float_TypeInfo);
-    byte_4CB8217 = 1;
+    sub_1C713B0(&float_TypeInfo);
+    byte_4CC934A = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(float_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C71364(this, v9, callback, object);
 }
 
 
@@ -1578,7 +1688,7 @@ void ScriptActionRenderEffectController_ReflectionFunction__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C6B9C0(result, 0, method);
+  sub_1C71368(result, 0, method);
 }
 
 
@@ -1600,28 +1710,40 @@ void ScriptActionRenderEffectController_StopFunction___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  intptr_t v8; // x8
+  int v12; // w22
   Il2CppObject *m_target; // x9
-  __int64 v10; // x0
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C6BAC8(method) & 1) == 0 )
+  if ( (sub_1C71470(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C6BB30(v10, 0);
+      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C714D8(v14, 0);
     }
     goto LABEL_5;
   }
-  if ( v8 )
+  if ( v12 )
   {
 LABEL_5:
     m_target = this->fields.m_target;
@@ -1629,9 +1751,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA35E4;
+  this->fields.invoke_impl = (intptr_t)sub_1AA8AEC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA35A4;
+  this->fields.extra_arg = (intptr_t)sub_1AA8AAC;
 }
 
 
@@ -1644,7 +1766,7 @@ System_IAsyncResult_o *ScriptActionRenderEffectController_StopFunction__BeginInv
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C71364(this, &v5, callback, object);
 }
 
 
@@ -1653,7 +1775,7 @@ void ScriptActionRenderEffectController_StopFunction__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C6B9C0(result, 0, method);
+  sub_1C71368(result, 0, method);
 }
 
 
@@ -1685,7 +1807,7 @@ void ScriptActionRenderEffectController___c__DisplayClass19_0___StartDistortion_
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   material = _4__this->fields.material_;
   v6 = vabds_f32(0.5, rate);
   if ( this->fields.count )
@@ -1717,7 +1839,7 @@ void ScriptActionRenderEffectController___c__DisplayClass20_0___StopDistortion_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   ScriptActionRenderEffectController_DistortionParam__ReflectionMaterial(
     _4__this->fields.material_,
     this->fields.srcParam,
@@ -1745,7 +1867,7 @@ void ScriptActionRenderEffectController___c__DisplayClass21_0___StartGaussianBlu
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   ScriptActionRenderEffectController_GaussianBlurParam__ReflectionMaterial(
     _4__this->fields.material_,
     this->fields.srcParam,
@@ -1773,7 +1895,7 @@ void ScriptActionRenderEffectController___c__DisplayClass22_0___StopGaussianBlur
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   ScriptActionRenderEffectController_GaussianBlurParam__ReflectionMaterial(
     _4__this->fields.material_,
     this->fields.srcParam,
@@ -1801,7 +1923,7 @@ void ScriptActionRenderEffectController___c__DisplayClass23_0___StartMotionBlur_
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   ScriptActionRenderEffectController_MotionBlurParam__ReflectionMaterial(
     _4__this->fields.material_,
     this->fields.srcParam,
@@ -1829,7 +1951,7 @@ void ScriptActionRenderEffectController___c__DisplayClass24_0___StopMotionBlur_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   ScriptActionRenderEffectController_MotionBlurParam__ReflectionMaterial(
     _4__this->fields.material_,
     this->fields.srcParam,

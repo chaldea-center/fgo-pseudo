@@ -1,13 +1,13 @@
 void ClassRelationOverwriteEntity___ctor(ClassRelationOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB604E & 1) == 0 )
+  if ( (byte_4CC7173 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
-    byte_4CB604E = 1;
+    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
+    byte_4CC7173 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *ClassRelationOverwriteEntity__CreatePK(
         int32_t defClass,
         const MethodInfo *method)
 {
-  if ( (byte_4CB604C & 1) == 0 )
+  if ( (byte_4CC7171 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
-    byte_4CB604C = 1;
+    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+    byte_4CC7171 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int__int_(
            id,
            atkSide,
            atkClass,
            defClass,
-           (const MethodInfo_3139E40 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
+           (const MethodInfo_3149BE4 *)Method_DataEntityBase_CreateMultiplePK_int__int__int__int___);
 }
 
 
@@ -55,131 +55,155 @@ System_String_o *ClassRelationOverwriteEntity__getFieldsLogString(
   System_String_o *v4; // x0
   __int64 v5; // x1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  Il2CppObject *v8; // x21
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  Il2CppObject *v11; // x21
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  Il2CppObject *v14; // x21
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  Il2CppObject *v17; // x21
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  Il2CppObject *v20; // x21
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  Il2CppObject *v12; // x21
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  Il2CppObject *v19; // x21
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  Il2CppObject *v26; // x21
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  Il2CppObject *v33; // x21
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
+  Il2CppObject *v40; // x21
   int32_t type; // w9
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  Il2CppObject *v24; // x20
-  __int64 v26; // x0
-  System_Enum_o v27; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v28; // [xsp+18h] [xbp-48h]
+  int32_t v42; // w2
+  int32_t v43; // w3
+  System_String_o *v44; // x4
+  int32_t v45; // w5
+  int64_t v46; // x6
+  System_String_o *v47; // x7
+  Il2CppObject *v48; // x20
+  __int64 v50; // x0
+  System_Enum_o v51; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v52; // [xsp+18h] [xbp-48h]
   int32_t damageRate; // [xsp+24h] [xbp-3Ch] BYREF
   int32_t defClass; // [xsp+28h] [xbp-38h] BYREF
   int32_t atkClass; // [xsp+2Ch] [xbp-34h] BYREF
   int32_t atkSide; // [xsp+38h] [xbp-28h] BYREF
   int32_t id; // [xsp+3Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CB604D & 1) == 0 )
+  if ( (byte_4CC7172 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&object___TypeInfo);
-    sub_1C6BA08(&ClassRelationOverwriteEntity_TYPE_TypeInfo);
-    sub_1C6BA08(&StringLiteral_20323/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/);
-    byte_4CB604D = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&object___TypeInfo);
+    sub_1C713B0(&ClassRelationOverwriteEntity_TYPE_TypeInfo);
+    sub_1C713B0(&StringLiteral_20335/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/);
+    byte_4CC7172 = 1;
   }
-  v3 = (System_Object_array *)sub_1C6BAB0(object___TypeInfo, 6);
+  v3 = (System_Object_array *)sub_1C71458(object___TypeInfo, 6);
   id = this->fields.id;
   v4 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &id);
   if ( !v3 )
-    sub_1C6BC60(v4, v5);
-  v8 = (Il2CppObject *)v4;
+    sub_1C71608(v4, v5);
+  v12 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_1C6BB44(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_1C714EC(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_24;
   }
   if ( !LODWORD(v3->max_length) )
     goto LABEL_23;
-  v3->m_Items[0] = v8;
-  sub_1C6B9AC((CGThumbnailListItem_o *)v3->m_Items, (int32_t)v8, v6, v7);
+  v3->m_Items[0] = v12;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v3->m_Items, (int32_t)v12, v6, v7, v8, v9, v10, v11);
   atkSide = this->fields.atkSide;
   v4 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &atkSide);
-  v11 = (Il2CppObject *)v4;
+  v19 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_1C6BB44(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_1C714EC(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_24;
   }
   if ( LODWORD(v3->max_length) <= 1 )
     goto LABEL_23;
-  v3->m_Items[1] = v11;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v3->m_Items[1], (int32_t)v11, v9, v10);
+  v3->m_Items[1] = v19;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->m_Items[1], (int32_t)v19, v13, v14, v15, v16, v17, v18);
   atkClass = this->fields.atkClass;
   v4 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &atkClass);
-  v14 = (Il2CppObject *)v4;
+  v26 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_1C6BB44(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_1C714EC(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_24;
   }
   if ( LODWORD(v3->max_length) <= 2 )
     goto LABEL_23;
-  v3->m_Items[2] = v14;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v3->m_Items[2], (int32_t)v14, v12, v13);
+  v3->m_Items[2] = v26;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->m_Items[2], (int32_t)v26, v20, v21, v22, v23, v24, v25);
   defClass = this->fields.defClass;
   v4 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &defClass);
-  v17 = (Il2CppObject *)v4;
+  v33 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_1C6BB44(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_1C714EC(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_24;
   }
   if ( LODWORD(v3->max_length) <= 3 )
     goto LABEL_23;
-  v3->m_Items[3] = v17;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v3->m_Items[3], (int32_t)v17, v15, v16);
+  v3->m_Items[3] = v33;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->m_Items[3], (int32_t)v33, v27, v28, v29, v30, v31, v32);
   damageRate = this->fields.damageRate;
   v4 = (System_String_o *)j_il2cpp_value_box_0(int_TypeInfo, &damageRate);
-  v20 = (Il2CppObject *)v4;
+  v40 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_1C6BB44(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_1C714EC(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_24;
   }
   if ( LODWORD(v3->max_length) <= 4 )
     goto LABEL_23;
-  v3->m_Items[4] = v20;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v3->m_Items[4], (int32_t)v20, v18, v19);
+  v3->m_Items[4] = v40;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->m_Items[4], (int32_t)v40, v34, v35, v36, v37, v38, v39);
   type = this->fields.type;
-  v27.klass = (System_Enum_c *)ClassRelationOverwriteEntity_TYPE_TypeInfo;
-  v27.monitor = (void *)-1LL;
-  v28 = type;
-  v4 = System_Enum__ToString(&v27, 0);
-  v24 = (Il2CppObject *)v4;
+  v51.klass = (System_Enum_c *)ClassRelationOverwriteEntity_TYPE_TypeInfo;
+  v51.monitor = (void *)-1LL;
+  v52 = type;
+  v4 = System_Enum__ToString(&v51, 0);
+  v48 = (Il2CppObject *)v4;
   if ( v4 )
   {
-    v4 = (System_String_o *)sub_1C6BB44(v4, v3->obj.klass->_1.element_class);
+    v4 = (System_String_o *)sub_1C714EC(v4, v3->obj.klass->_1.element_class);
     if ( !v4 )
     {
 LABEL_24:
-      v26 = sub_1C6BC84(v4);
-      sub_1C6BB30(v26, 0);
+      v50 = sub_1C7162C(v4);
+      sub_1C714D8(v50, 0);
     }
   }
   if ( LODWORD(v3->max_length) <= 5 )
 LABEL_23:
-    sub_1C6BC68(v4);
-  v3->m_Items[5] = v24;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v3->m_Items[5], (int32_t)v24, v22, v23);
-  return System_String__Format_64008236((System_String_o *)StringLiteral_20323/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v3, 0);
+    sub_1C71610(v4);
+  v3->m_Items[5] = v48;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->m_Items[5], (int32_t)v48, v42, v43, v44, v45, v46, v47);
+  return System_String__Format_64073168((System_String_o *)StringLiteral_20335/*"id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}"*/, v3, 0);
 }
 
 

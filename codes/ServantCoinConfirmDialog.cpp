@@ -1,9 +1,9 @@
 void ServantCoinConfirmDialog___ctor(ServantCoinConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB8BA5 & 1) == 0 )
+  if ( (byte_4CC9CE0 & 1) == 0 )
   {
-    sub_1C6BA08(&BaseDialog_TypeInfo);
-    byte_4CB8BA5 = 1;
+    sub_1C713B0(&BaseDialog_TypeInfo);
+    byte_4CC9CE0 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -14,45 +14,49 @@ void ServantCoinConfirmDialog___ctor(ServantCoinConfirmDialog_o *this, const Met
 void ServantCoinConfirmDialog__Init(ServantCoinConfirmDialog_o *this, const MethodInfo *method)
 {
   int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
   UnityEngine_Object_o *titleLabel; // x20
-  __int64 v6; // x1
-  UILabel_o *v7; // x0
+  __int64 v10; // x1
+  UILabel_o *v11; // x0
   UnityEngine_Object_o *descriptionLabel; // x20
 
-  if ( (byte_4CB8BA1 & 1) == 0 )
+  if ( (byte_4CC9CDC & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB8BA1 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC9CDC = 1;
   }
   BaseDialog__Init((BaseDialog_o *)this, 0);
   this->fields.closedAction = 0;
   this->fields.dispType = 1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closedAction, 0, v3, v4);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.closedAction, 0, v3, v4, v5, v6, v7, v8);
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(titleLabel, 0, 0) )
   {
-    v7 = this->fields.titleLabel;
-    if ( !v7 )
+    v11 = this->fields.titleLabel;
+    if ( !v11 )
       goto LABEL_14;
-    UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0);
+    UILabel__set_text(v11, (System_String_o *)StringLiteral_1/*""*/, 0);
   }
   descriptionLabel = (UnityEngine_Object_o *)this->fields.descriptionLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(descriptionLabel, 0, 0) )
   {
-    v7 = this->fields.descriptionLabel;
-    if ( v7 )
+    v11 = this->fields.descriptionLabel;
+    if ( v11 )
     {
-      UILabel__set_text(v7, (System_String_o *)StringLiteral_1/*""*/, 0);
+      UILabel__set_text(v11, (System_String_o *)StringLiteral_1/*""*/, 0);
       return;
     }
 LABEL_14:
-    sub_1C6BC60(v7, v6);
+    sub_1C71608(v11, v10);
   }
 }
 
@@ -63,19 +67,19 @@ void ServantCoinConfirmDialog__OnClickClose(ServantCoinConfirmDialog_o *this, co
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4CB8BA3 & 1) == 0 )
+  if ( (byte_4CC9CDE & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_ServantCoinConfirmDialog_OnClickClose__);
-    sub_1C6BA08(&Method_ServantCoinConfirmDialog__OnClickClose_b__9_0__);
-    byte_4CB8BA3 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_ServantCoinConfirmDialog_OnClickClose__);
+    sub_1C713B0(&Method_ServantCoinConfirmDialog__OnClickClose_b__9_0__);
+    byte_4CC9CDE = 1;
   }
   v3 = Method_ServantCoinConfirmDialog_OnClickClose__;
   if ( (*((_BYTE *)Method_ServantCoinConfirmDialog_OnClickClose__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C6BA20(Method_ServantCoinConfirmDialog_OnClickClose__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C713C8(Method_ServantCoinConfirmDialog_OnClickClose__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-  v5 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_ServantCoinConfirmDialog__OnClickClose_b__9_0__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0);
 }
@@ -90,29 +94,33 @@ void ServantCoinConfirmDialog__Open(
         const MethodInfo *method)
 {
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  __int64 v11; // x1
-  const MethodInfo *v12; // x2
-  int32_t v13; // w8
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  __int64 v15; // x1
+  const MethodInfo *v16; // x2
+  int32_t v17; // w8
   UnityEngine_Object_o *titleLabel; // x21
-  UILabel_o *v15; // x21
+  UILabel_o *v19; // x21
   System_String_o *servantCoinConfirmListViewManager; // x0
   UnityEngine_Object_o *descriptionLabel; // x21
-  UILabel_o *v18; // x21
-  __int64 *v19; // x8
-  UnityEngine_Object_o *v20; // x21
-  UILabel_o *v21; // x21
-  UnityEngine_Object_o *v22; // x21
+  UILabel_o *v22; // x21
+  __int64 *v23; // x8
+  UnityEngine_Object_o *v24; // x21
+  UILabel_o *v25; // x21
+  UnityEngine_Object_o *v26; // x21
 
-  if ( (byte_4CB8BA2 & 1) == 0 )
+  if ( (byte_4CC9CDD & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11595/*"SERVANT_COIN_CONFIRM_OVERFLOW_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_11592/*"SERVANT_COIN_CONFIRM_GET_DESCRIPTION"*/);
-    sub_1C6BA08(&StringLiteral_11594/*"SERVANT_COIN_CONFIRM_OVERFLOW_DESCRIPTION"*/);
-    sub_1C6BA08(&StringLiteral_11593/*"SERVANT_COIN_CONFIRM_GET_TITLE"*/);
-    byte_4CB8BA2 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_11601/*"SERVANT_COIN_CONFIRM_OVERFLOW_TITLE"*/);
+    sub_1C713B0(&StringLiteral_11598/*"SERVANT_COIN_CONFIRM_GET_DESCRIPTION"*/);
+    sub_1C713B0(&StringLiteral_11600/*"SERVANT_COIN_CONFIRM_OVERFLOW_DESCRIPTION"*/);
+    sub_1C713B0(&StringLiteral_11599/*"SERVANT_COIN_CONFIRM_GET_TITLE"*/);
+    byte_4CC9CDD = 1;
   }
   if ( !svtCoins || !svtCoins->max_length )
   {
@@ -123,66 +131,74 @@ void ServantCoinConfirmDialog__Open(
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
   this->fields.closedAction = closedAction;
   this->fields.dispType = dispType;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closedAction, (int32_t)closedAction, v9, v10);
-  v13 = this->fields.dispType;
-  if ( v13 != 2 )
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.closedAction,
+    (int32_t)closedAction,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14);
+  v17 = this->fields.dispType;
+  if ( v17 != 2 )
   {
-    if ( v13 != 1 )
+    if ( v17 != 1 )
       goto LABEL_36;
     titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( !UnityEngine_Object__op_Inequality(titleLabel, 0, 0) )
       goto LABEL_14;
-    v15 = this->fields.titleLabel;
+    v19 = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    servantCoinConfirmListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11593/*"SERVANT_COIN_CONFIRM_GET_TITLE"*/, 0);
-    if ( v15 )
+    servantCoinConfirmListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11599/*"SERVANT_COIN_CONFIRM_GET_TITLE"*/, 0);
+    if ( v19 )
     {
-      UILabel__set_text(v15, servantCoinConfirmListViewManager, 0);
+      UILabel__set_text(v19, servantCoinConfirmListViewManager, 0);
 LABEL_14:
       descriptionLabel = (UnityEngine_Object_o *)this->fields.descriptionLabel;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( !UnityEngine_Object__op_Inequality(descriptionLabel, 0, 0) )
         goto LABEL_36;
-      v18 = this->fields.descriptionLabel;
+      v22 = this->fields.descriptionLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v19 = &StringLiteral_11592/*"SERVANT_COIN_CONFIRM_GET_DESCRIPTION"*/;
+      v23 = &StringLiteral_11598/*"SERVANT_COIN_CONFIRM_GET_DESCRIPTION"*/;
       goto LABEL_34;
     }
 LABEL_38:
-    sub_1C6BC60(servantCoinConfirmListViewManager, v11);
+    sub_1C71608(servantCoinConfirmListViewManager, v15);
   }
-  v20 = (UnityEngine_Object_o *)this->fields.titleLabel;
+  v24 = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v20, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality(v24, 0, 0) )
   {
-    v21 = this->fields.titleLabel;
+    v25 = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    servantCoinConfirmListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11595/*"SERVANT_COIN_CONFIRM_OVERFLOW_TITLE"*/, 0);
-    if ( !v21 )
+    servantCoinConfirmListViewManager = LocalizationManager__Get((System_String_o *)StringLiteral_11601/*"SERVANT_COIN_CONFIRM_OVERFLOW_TITLE"*/, 0);
+    if ( !v25 )
       goto LABEL_38;
-    UILabel__set_text(v21, servantCoinConfirmListViewManager, 0);
+    UILabel__set_text(v25, servantCoinConfirmListViewManager, 0);
   }
-  v22 = (UnityEngine_Object_o *)this->fields.descriptionLabel;
+  v26 = (UnityEngine_Object_o *)this->fields.descriptionLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( !UnityEngine_Object__op_Inequality(v22, 0, 0) )
+  if ( !UnityEngine_Object__op_Inequality(v26, 0, 0) )
     goto LABEL_36;
-  v18 = this->fields.descriptionLabel;
+  v22 = this->fields.descriptionLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v19 = &StringLiteral_11594/*"SERVANT_COIN_CONFIRM_OVERFLOW_DESCRIPTION"*/;
+  v23 = &StringLiteral_11600/*"SERVANT_COIN_CONFIRM_OVERFLOW_DESCRIPTION"*/;
 LABEL_34:
-  servantCoinConfirmListViewManager = LocalizationManager__Get((System_String_o *)*v19, 0);
-  if ( !v18 )
+  servantCoinConfirmListViewManager = LocalizationManager__Get((System_String_o *)*v23, 0);
+  if ( !v22 )
     goto LABEL_38;
-  UILabel__set_text(v18, servantCoinConfirmListViewManager, 0);
+  UILabel__set_text(v22, servantCoinConfirmListViewManager, 0);
 LABEL_36:
   servantCoinConfirmListViewManager = (System_String_o *)this->fields.servantCoinConfirmListViewManager;
   if ( !servantCoinConfirmListViewManager )
@@ -190,7 +206,7 @@ LABEL_36:
   ServantCoinConfirmListViewManager__CreateList(
     (ServantCoinConfirmListViewManager_o *)servantCoinConfirmListViewManager,
     svtCoins,
-    v12);
+    v16);
 }
 
 
@@ -200,7 +216,7 @@ void ServantCoinConfirmDialog___OnClickClose_b__9_0(ServantCoinConfirmDialog_o *
 
   servantCoinConfirmListViewManager = (ListViewManager_o *)this->fields.servantCoinConfirmListViewManager;
   if ( !servantCoinConfirmListViewManager )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ListViewManager__DestroyList(servantCoinConfirmListViewManager, 0);
   ActionExtensions__Call(this->fields.closedAction, 0);
 }
@@ -208,10 +224,10 @@ void ServantCoinConfirmDialog___OnClickClose_b__9_0(ServantCoinConfirmDialog_o *
 
 System_String_o *ServantCoinConfirmDialog__get_closeBtnPath(ServantCoinConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB8BA4 & 1) == 0 )
+  if ( (byte_4CC9CDF & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_15640/*"Window/CloseButton"*/);
-    byte_4CB8BA4 = 1;
+    sub_1C713B0(&StringLiteral_15647/*"Window/CloseButton"*/);
+    byte_4CC9CDF = 1;
   }
-  return (System_String_o *)StringLiteral_15640/*"Window/CloseButton"*/;
+  return (System_String_o *)StringLiteral_15647/*"Window/CloseButton"*/;
 }

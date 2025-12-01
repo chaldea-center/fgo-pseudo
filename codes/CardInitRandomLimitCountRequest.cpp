@@ -10,14 +10,14 @@ void CardInitRandomLimitCountRequest__beginRequest(
         int32_t randomSettingSupportAll,
         const MethodInfo *method)
 {
-  if ( (byte_4CB7D90 & 1) == 0 )
+  if ( (byte_4CC8EB9 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_18569/*"defaultRandomLimitCount"*/);
-    sub_1C6BA08(&StringLiteral_18570/*"defaultRandomLimitCountSupport"*/);
-    byte_4CB7D90 = 1;
+    sub_1C713B0(&StringLiteral_18579/*"defaultRandomLimitCount"*/);
+    sub_1C713B0(&StringLiteral_18580/*"defaultRandomLimitCountSupport"*/);
+    byte_4CC8EB9 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18569/*"defaultRandomLimitCount"*/, randomSettingOwnAll, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18570/*"defaultRandomLimitCountSupport"*/, randomSettingSupportAll, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18579/*"defaultRandomLimitCount"*/, randomSettingOwnAll, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18580/*"defaultRandomLimitCountSupport"*/, randomSettingSupportAll, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -26,11 +26,11 @@ System_String_o *CardInitRandomLimitCountRequest__getMockData(
         CardInitRandomLimitCountRequest_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB7D8F & 1) == 0 )
+  if ( (byte_4CC8EB8 & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB7D8F = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC8EB8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -44,16 +44,16 @@ System_String_o *CardInitRandomLimitCountRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CB7D8E & 1) == 0 )
+  if ( (byte_4CC8EB7 & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_17770/*"card/initRandomLimitCount"*/);
-    byte_4CB7D8E = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_17780/*"card/initRandomLimitCount"*/);
+    byte_4CC8EB7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_17770/*"card/initRandomLimitCount"*/, 0);
+  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_17780/*"card/initRandomLimitCount"*/, 0);
 }
 
 
@@ -65,19 +65,19 @@ void CardInitRandomLimitCountRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4CB7D91 & 1) == 0 )
+  if ( (byte_4CC8EBA & 1) == 0 )
   {
-    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
-    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
-    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
-    byte_4CB7D91 = 1;
+    sub_1C713B0(&ResponseCommandKind_TypeInfo);
+    sub_1C713B0(&StringLiteral_22486/*"ok"*/);
+    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
+    byte_4CC8EBA = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(35, responseList, 0);
-  if ( v5 && ResponseData__checkError_44468912(v5, 0) )
-    v6 = &StringLiteral_22471/*"ok"*/;
+  if ( v5 && ResponseData__checkError_44515240(v5, 0) )
+    v6 = &StringLiteral_22486/*"ok"*/;
   else
-    v6 = &StringLiteral_22301/*"ng"*/;
+    v6 = &StringLiteral_22316/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

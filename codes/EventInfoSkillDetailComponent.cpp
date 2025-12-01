@@ -23,10 +23,10 @@ float EventInfoSkillDetailComponent__GetHeight(EventInfoSkillDetailComponent_o *
   bool IsShowingPartition; // w0
   float partitionHeightOffset; // s1
 
-  if ( (byte_4CB80F5 & 1) == 0 )
+  if ( (byte_4CC9228 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB80F5 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC9228 = 1;
   }
   skillDetailLabel = (UnityEngine_Object_o *)this->fields.skillDetailLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -35,7 +35,7 @@ float EventInfoSkillDetailComponent__GetHeight(EventInfoSkillDetailComponent_o *
     return this->fields.minHeight;
   v6 = this->fields.skillDetailLabel;
   if ( !v6 )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   ((void (__fastcall *)(struct UILabel_o *, const MethodInfo *))v6->klass->vtable._22_get_localSize.methodPtr)(
     v6,
     v6->klass->vtable._22_get_localSize.method);
@@ -72,11 +72,11 @@ void EventInfoSkillDetailComponent__Setup(
   float v18; // s8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB80F4 & 1) == 0 )
+  if ( (byte_4CC9227 & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB80F4 = 1;
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC9227 = 1;
   }
   if ( imagePartsGroupEntity )
   {
@@ -139,7 +139,7 @@ LABEL_23:
       }
     }
 LABEL_25:
-    sub_1C6BC60(SkillName, v13);
+    sub_1C71608(SkillName, v13);
   }
 }
 
@@ -152,10 +152,10 @@ bool EventInfoSkillDetailComponent__get_IsShowingPartition(
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_4CB80F3 & 1) == 0 )
+  if ( (byte_4CC9226 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB80F3 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC9226 = 1;
   }
   partition = (UnityEngine_Object_o *)this->fields.partition;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -164,6 +164,6 @@ bool EventInfoSkillDetailComponent__get_IsShowingPartition(
     return 0;
   v5 = this->fields.partition;
   if ( !v5 )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   return UnityEngine_GameObject__get_activeSelf(v5, 0);
 }

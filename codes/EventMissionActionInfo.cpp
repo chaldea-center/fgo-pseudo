@@ -4,7 +4,11 @@ void EventMissionActionInfo___ctor(
         const MethodInfo *method)
 {
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   struct System_String_array *vals; // x1
   struct System_String_array **p_vals; // x20
 
@@ -20,19 +24,23 @@ void EventMissionActionInfo___ctor(
     vals = eventMissionActionEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1C6B9AC((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
     *((_DWORD *)p_vals + 2) = eventMissionActionEntity->fields.optionId;
   }
 }
 
 
-void EventMissionActionInfo___ctor_44998440(
+void EventMissionActionInfo___ctor_45048740(
         EventMissionActionInfo_o *this,
         EventMissionActionAddEntity_o *eventMissionActionAddEntity,
         const MethodInfo *method)
 {
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   struct System_String_array *vals; // x1
   struct System_String_array **p_vals; // x20
 
@@ -45,7 +53,7 @@ void EventMissionActionInfo___ctor_44998440(
     vals = eventMissionActionAddEntity->fields.vals;
     this->fields.vals = vals;
     p_vals = &this->fields.vals;
-    sub_1C6B9AC((CGThumbnailListItem_o *)p_vals, (int32_t)vals, v5, v6);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)p_vals, (int32_t)vals, v5, v6, v7, v8, v9, v10);
     *((_DWORD *)p_vals + 2) = eventMissionActionAddEntity->fields.optionId;
   }
 }
@@ -69,7 +77,7 @@ int32_t EventMissionActionInfo__getValID(EventMissionActionInfo_o *this, const M
     if ( this->fields.missionActionType == 3 )
     {
       if ( !(_DWORD)max_length )
-        sub_1C6BC68(0xFFFFFFFFLL);
+        sub_1C71610(0xFFFFFFFFLL);
       if ( System_Int32__TryParse(vals->m_Items[0], &result, 0) )
         return result;
       else
@@ -88,16 +96,16 @@ System_String_o *EventMissionActionInfo__getValMessage(EventMissionActionInfo_o 
   System_String_o **m_Items; // x8
 
   v2 = this;
-  if ( (byte_4CB81E1 & 1) == 0 )
+  if ( (byte_4CC9314 & 1) == 0 )
   {
-    this = (EventMissionActionInfo_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB81E1 = 1;
+    this = (EventMissionActionInfo_o *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC9314 = 1;
   }
   vals = v2->fields.vals;
   if ( vals && (max_length = vals->max_length) != 0 && (unsigned int)(v2->fields.missionActionType - 1) <= 1 )
   {
     if ( !(_DWORD)max_length )
-      sub_1C6BC68(this);
+      sub_1C71610(this);
     m_Items = vals->m_Items;
   }
   else

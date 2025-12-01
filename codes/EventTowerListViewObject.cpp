@@ -1,9 +1,9 @@
 void EventTowerListViewObject___ctor(EventTowerListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB0C8E & 1) == 0 )
+  if ( (byte_4CC1D92 & 1) == 0 )
   {
-    sub_1C6BA08(&ListViewObject_TypeInfo);
-    byte_4CB0C8E = 1;
+    sub_1C713B0(&ListViewObject_TypeInfo);
+    byte_4CC1D92 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -17,20 +17,20 @@ void EventTowerListViewObject__Awake(EventTowerListViewObject_o *this, const Met
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4CB0C81 & 1) == 0 )
+  if ( (byte_4CC1D85 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewItemDraw___);
-    byte_4CB0C81 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewItemDraw___);
+    byte_4CC1D85 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewItemDraw___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewItemDraw___);
   this->fields.itemDraw = (struct EventTowerListViewItemDraw_o *)Component_object;
-  sub_1C6B9AC(&this->fields.itemDraw, Component_object);
+  sub_1C71354(&this->fields.itemDraw, Component_object);
 }
 
 
@@ -52,12 +52,12 @@ void EventTowerListViewObject__EventExitMove(EventTowerListViewObject_o *this, c
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v17; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB0C8B & 1) == 0 )
+  if ( (byte_4CC1D8F & 1) == 0 )
   {
-    sub_1C6BA08(&ListViewObject_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6207/*"EventExitMove2"*/);
-    byte_4CB0C8B = 1;
+    sub_1C713B0(&ListViewObject_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_6209/*"EventExitMove2"*/);
+    byte_4CC1D8F = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -98,15 +98,15 @@ void EventTowerListViewObject__EventExitMove(EventTowerListViewObject_o *this, c
     transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(v7, v8->static_fields->BASE_MOVE_TIME, v17, 0);
     if ( !transform )
 LABEL_15:
-      sub_1C6BC60(transform, v4);
+      sub_1C71608(transform, v4);
     v12 = transform;
     LODWORD(transform[1].monitor) = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     v12[3].monitor = gameObject;
-    sub_1C6B9AC(&v12[3].monitor, gameObject);
-    v14 = StringLiteral_6207/*"EventExitMove2"*/;
-    v12[3].fields.m_CachedPtr = StringLiteral_6207/*"EventExitMove2"*/;
-    sub_1C6B9AC(&v12[3].fields, v14);
+    sub_1C71354(&v12[3].monitor, gameObject);
+    v14 = StringLiteral_6209/*"EventExitMove2"*/;
+    v12[3].fields.m_CachedPtr = StringLiteral_6209/*"EventExitMove2"*/;
+    sub_1C71354(&v12[3].fields, v14);
   }
 }
 
@@ -116,17 +116,17 @@ void EventTowerListViewObject__EventExitMove2(EventTowerListViewObject_o *this, 
   UnityEngine_Object_o *dragObject; // x21
   const MethodInfo *v4; // x1
 
-  if ( (byte_4CB0C8C & 1) == 0 )
+  if ( (byte_4CC1D90 & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    byte_4CB0C8C = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    byte_4CC1D90 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C6B9AC(&this->fields.dragObject, 0);
+  sub_1C71354(&this->fields.dragObject, 0);
   EventTowerListViewObject__EventMoveEnd(this, v4);
 }
 
@@ -139,12 +139,12 @@ void EventTowerListViewObject__EventExitStart(EventTowerListViewObject_o *this, 
   Il2CppObject *Component_object; // x20
   const MethodInfo *v9; // x2
 
-  if ( (byte_4CB0C8A & 1) == 0 )
+  if ( (byte_4CC1D8E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6206/*"EventExitMove"*/);
-    byte_4CB0C8A = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_6208/*"EventExitMove"*/);
+    byte_4CC1D8E = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -154,13 +154,13 @@ void EventTowerListViewObject__EventExitStart(EventTowerListViewObject_o *this, 
                                             this,
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
-  sub_1C6B9AC(&this->fields.dragObject, v5);
+  sub_1C71354(&this->fields.dragObject, v5);
   dragObject = this->fields.dragObject;
   if ( !dragObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -174,11 +174,11 @@ void EventTowerListViewObject__EventExitStart(EventTowerListViewObject_o *this, 
   }
   if ( !Component_object )
 LABEL_10:
-    sub_1C6BC60(dragObject, v6);
-  EventTowerListViewObject__Init_32755088((EventTowerListViewObject_o *)Component_object, 2, v9);
+    sub_1C71608(dragObject, v6);
+  EventTowerListViewObject__Init_32778500((EventTowerListViewObject_o *)Component_object, 2, v9);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6206/*"EventExitMove"*/,
+    (System_String_o *)StringLiteral_6208/*"EventExitMove"*/,
     delay,
     0);
 }
@@ -200,11 +200,11 @@ void EventTowerListViewObject__EventIntoMove(EventTowerListViewObject_o *this, c
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v15; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CB0C88 & 1) == 0 )
+  if ( (byte_4CC1D8C & 1) == 0 )
   {
-    sub_1C6BA08(&ListViewObject_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6218/*"EventIntoMove2"*/);
-    byte_4CB0C88 = 1;
+    sub_1C713B0(&ListViewObject_TypeInfo);
+    sub_1C713B0(&StringLiteral_6220/*"EventIntoMove2"*/);
+    byte_4CC1D8C = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -236,15 +236,15 @@ void EventTowerListViewObject__EventIntoMove(EventTowerListViewObject_o *this, c
   dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(v6, v5->static_fields->BASE_MOVE_TIME, v15, 0);
   if ( !dragObject )
 LABEL_11:
-    sub_1C6BC60(dragObject, method);
+    sub_1C71608(dragObject, method);
   v10 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v10[3].monitor = gameObject;
-  sub_1C6B9AC(&v10[3].monitor, gameObject);
-  v12 = StringLiteral_6218/*"EventIntoMove2"*/;
-  v10[3].fields.m_CachedPtr = StringLiteral_6218/*"EventIntoMove2"*/;
-  sub_1C6B9AC(&v10[3].fields, v12);
+  sub_1C71354(&v10[3].monitor, gameObject);
+  v12 = StringLiteral_6220/*"EventIntoMove2"*/;
+  v10[3].fields.m_CachedPtr = StringLiteral_6220/*"EventIntoMove2"*/;
+  sub_1C71354(&v10[3].fields, v12);
 }
 
 
@@ -254,10 +254,10 @@ void EventTowerListViewObject__EventIntoMove2(EventTowerListViewObject_o *this, 
   UnityEngine_Object_o *dragObject; // x21
   const MethodInfo *v5; // x1
 
-  if ( (byte_4CB0C89 & 1) == 0 )
+  if ( (byte_4CC1D8D & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    byte_4CB0C89 = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    byte_4CC1D8D = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0);
   this->fields.dispMode = 2;
@@ -267,7 +267,7 @@ void EventTowerListViewObject__EventIntoMove2(EventTowerListViewObject_o *this, 
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C6B9AC(&this->fields.dragObject, 0);
+  sub_1C71354(&this->fields.dragObject, 0);
   EventTowerListViewObject__EventMoveEnd(this, v5);
 }
 
@@ -282,11 +282,11 @@ void EventTowerListViewObject__EventIntoStart(EventTowerListViewObject_o *this, 
   UnityEngine_Transform_o *transform; // x20
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB0C87 & 1) == 0 )
+  if ( (byte_4CC1D8B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
-    sub_1C6BA08(&StringLiteral_6217/*"EventIntoMove"*/);
-    byte_4CB0C87 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___);
+    sub_1C713B0(&StringLiteral_6219/*"EventIntoMove"*/);
+    byte_4CC1D8B = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -297,27 +297,27 @@ void EventTowerListViewObject__EventIntoStart(EventTowerListViewObject_o *this, 
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
   p_dragObject = &this->fields.dragObject;
-  sub_1C6B9AC(&this->fields.dragObject, v5);
+  sub_1C71354(&this->fields.dragObject, v5);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___)) == 0
-    || (EventTowerListViewObject__Init_32755088((EventTowerListViewObject_o *)dragObject, 2, v9),
+                                                   (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_EventTowerListViewObject___)) == 0
+    || (EventTowerListViewObject__Init_32778500((EventTowerListViewObject_o *)dragObject, 2, v9),
         (dragObject = *p_dragObject) == 0)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0)) == 0)
-    || (v11 = UnityEngine_Transform__TransformPoint_71686456((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
+    || (v11 = UnityEngine_Transform__TransformPoint_71751388((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
         !transform) )
   {
-    sub_1C6BC60(dragObject, v7);
+    sub_1C71608(dragObject, v7);
   }
   UnityEngine_Transform__set_position(transform, v11, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6217/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6219/*"EventIntoMove"*/,
     delay,
     0);
 }
@@ -337,7 +337,7 @@ void EventTowerListViewObject__EventMoveEnd(EventTowerListViewObject_o *this, co
   if ( CallbackFunc )
   {
     *p_CallbackFunc = 0;
-    sub_1C6B9AC(p_CallbackFunc, 0);
+    sub_1C71354(p_CallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
   }
 }
@@ -348,10 +348,10 @@ EventTowerListViewItem_o *EventTowerListViewObject__GetItem(EventTowerListViewOb
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4CB0C83 & 1) == 0 )
+  if ( (byte_4CC1D87 & 1) == 0 )
   {
-    sub_1C6BA08(&EventTowerListViewItem_TypeInfo);
-    byte_4CB0C83 = 1;
+    sub_1C713B0(&EventTowerListViewItem_TypeInfo);
+    byte_4CC1D87 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -385,10 +385,10 @@ void EventTowerListViewObject__Init(
   int32_t v19; // w8
   struct System_Action_o *v20; // x19
 
-  if ( (byte_4CB0C85 & 1) == 0 )
+  if ( (byte_4CC1D89 & 1) == 0 )
   {
-    sub_1C6BA08(&EventTowerListViewItem_TypeInfo);
-    byte_4CB0C85 = 1;
+    sub_1C713B0(&EventTowerListViewItem_TypeInfo);
+    byte_4CC1D89 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -416,12 +416,12 @@ void EventTowerListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C6BC60(transform, v16);
+    sub_1C71608(transform, v16);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.CallbackFunc = callbackFunc;
   p_CallbackFunc = &this->fields.CallbackFunc;
-  sub_1C6B9AC(&this->fields.CallbackFunc, callbackFunc);
+  sub_1C71354(&this->fields.CallbackFunc, callbackFunc);
   v19 = 1;
   switch ( v12 )
   {
@@ -447,7 +447,7 @@ LABEL_14:
       if ( *p_CallbackFunc )
       {
         *p_CallbackFunc = 0;
-        sub_1C6B9AC(p_CallbackFunc, 0);
+        sub_1C71354(p_CallbackFunc, 0);
         ((void (__fastcall *)(intptr_t, intptr_t))v20->fields.invoke_impl)(v20->fields.method_code, v20->fields.method);
       }
       return;
@@ -462,7 +462,7 @@ void EventTowerListViewObject__InitItem(EventTowerListViewObject_o *this, const 
 
 
 // local variable allocation has failed, the output may be wrong!
-void EventTowerListViewObject__Init_32755088(
+void EventTowerListViewObject__Init_32778500(
         EventTowerListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -470,17 +470,17 @@ void EventTowerListViewObject__Init_32755088(
   const MethodInfo *v3; // x3
   int v4; // s1 OVERLAPPED
 
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   EventTowerListViewObject__Init(this, initMode, 0, 0.0, *(UnityEngine_Vector3_o *)&v4, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void EventTowerListViewObject__Init_32755940(
+void EventTowerListViewObject__Init_32779352(
         EventTowerListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -488,17 +488,17 @@ void EventTowerListViewObject__Init_32755940(
 {
   int v4; // s1 OVERLAPPED
 
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   EventTowerListViewObject__Init(this, initMode, callbackFunc, 0.0, *(UnityEngine_Vector3_o *)&v4, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void EventTowerListViewObject__Init_32756460(
+void EventTowerListViewObject__Init_32779872(
         EventTowerListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -507,10 +507,10 @@ void EventTowerListViewObject__Init_32756460(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   EventTowerListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -520,15 +520,15 @@ void EventTowerListViewObject__OnClickSelect(EventTowerListViewObject_o *this, c
 {
   UnityEngine_Component_o *manager; // x0
 
-  if ( (byte_4CB0C8D & 1) == 0 )
+  if ( (byte_4CC1D91 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_9845/*"OnClickListView"*/);
-    byte_4CB0C8D = 1;
+    sub_1C713B0(&StringLiteral_9850/*"OnClickListView"*/);
+    byte_4CC1D91 = 1;
   }
   manager = (UnityEngine_Component_o *)this->fields.manager;
   if ( !manager )
-    sub_1C6BC60(0, method);
-  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9845/*"OnClickListView"*/, (Il2CppObject *)this, 0);
+    sub_1C71608(0, method);
+  UnityEngine_Component__SendMessage(manager, (System_String_o *)StringLiteral_9850/*"OnClickListView"*/, (Il2CppObject *)this, 0);
 }
 
 
@@ -538,11 +538,11 @@ void EventTowerListViewObject__SetInput(EventTowerListViewObject_o *this, bool i
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CB0C84 & 1) == 0 )
+  if ( (byte_4CC1D88 & 1) == 0 )
   {
-    sub_1C6BA08(&EventTowerListViewItem_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB0C84 = 1;
+    sub_1C713B0(&EventTowerListViewItem_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC1D88 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -550,7 +550,7 @@ void EventTowerListViewObject__SetInput(EventTowerListViewObject_o *this, bool i
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Inequality(itemDraw, 0, 0);
   if ( v6 && !this->fields.itemDraw )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
 }
 
 
@@ -561,11 +561,11 @@ void EventTowerListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_44077592((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_44123920((ListViewObject_o *)this, item, seed, 0);
 }
 
 
-void EventTowerListViewObject__SetItem_32758416(
+void EventTowerListViewObject__SetItem_32781828(
         EventTowerListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -588,12 +588,12 @@ void EventTowerListViewObject__SetupDisp(EventTowerListViewObject_o *this, const
   const MethodInfo *v11; // x3
   EventTowerListViewItemDraw_o *v12; // x0
 
-  if ( (byte_4CB0C86 & 1) == 0 )
+  if ( (byte_4CC1D8A & 1) == 0 )
   {
-    sub_1C6BA08(&EventTowerListViewItem_TypeInfo);
-    sub_1C6BA08(&EventTowerListViewManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB0C86 = 1;
+    sub_1C713B0(&EventTowerListViewItem_TypeInfo);
+    sub_1C713B0(&EventTowerListViewManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC1D8A = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -630,10 +630,10 @@ LABEL_8:
       v9 = 0;
     }
     this->fields.manager = v9;
-    sub_1C6B9AC(&this->fields.manager, v9);
+    sub_1C71354(&this->fields.manager, v9);
     v12 = this->fields.itemDraw;
     if ( !v12 )
-      sub_1C6BC60(0, v10);
+      sub_1C71608(0, v10);
     EventTowerListViewItemDraw__SetItem(v12, (EventTowerListViewItem_o *)linkItem, this->fields.dispMode, v11);
   }
 }
@@ -643,10 +643,10 @@ void EventTowerListViewObject__Update(EventTowerListViewObject_o *this, const Me
 {
   UnityEngine_Object_o *manager; // x19
 
-  if ( (byte_4CB0C82 & 1) == 0 )
+  if ( (byte_4CC1D86 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB0C82 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC1D86 = 1;
   }
   if ( this->fields.linkItem )
   {
@@ -673,10 +673,10 @@ void EventTowerListViewObject__add_CallbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CB0C7F & 1) == 0 )
+  if ( (byte_4CC1D83 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    byte_4CB0C7F = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    byte_4CC1D83 = 1;
   }
   CallbackFunc = this->fields.CallbackFunc;
   p_CallbackFunc = &this->fields.CallbackFunc;
@@ -689,13 +689,13 @@ void EventTowerListViewObject__add_CallbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1CC77DC(p_CallbackFunc, v8, v6);
+    v9 = sub_1CCD184(p_CallbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventTowerListViewObject_o *)sub_1C6BFFC(v8);
+  v11 = (EventTowerListViewObject_o *)sub_1C719A4(v8);
   EventTowerListViewObject__remove_CallbackFunc(v11, v12, v13);
 }
 
@@ -714,10 +714,10 @@ void EventTowerListViewObject__remove_CallbackFunc(
   EventTowerListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4CB0C80 & 1) == 0 )
+  if ( (byte_4CC1D84 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    byte_4CB0C80 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    byte_4CC1D84 = 1;
   }
   CallbackFunc = this->fields.CallbackFunc;
   p_CallbackFunc = &this->fields.CallbackFunc;
@@ -730,12 +730,12 @@ void EventTowerListViewObject__remove_CallbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1CC77DC(p_CallbackFunc, v8, v6);
+    v9 = sub_1CCD184(p_CallbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (EventTowerListViewObject_o *)sub_1C6BFFC(v8);
+  v11 = (EventTowerListViewObject_o *)sub_1C719A4(v8);
   EventTowerListViewObject__Awake(v11, v12);
 }

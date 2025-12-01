@@ -1,13 +1,13 @@
 void EventRewardBgEntity___ctor(EventRewardBgEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB63CD & 1) == 0 )
+  if ( (byte_4CC74F5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
-    byte_4CB63CD = 1;
+    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
+    byte_4CC74F5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *EventRewardBgEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4CB63CC & 1) == 0 )
+  if ( (byte_4CC74F4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4CB63CC = 1;
+    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4CC74F4 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            eventId,
            slot,
            priority,
-           (const MethodInfo_3139980 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_3149724 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 

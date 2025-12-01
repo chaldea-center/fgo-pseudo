@@ -59,7 +59,7 @@ void NP601300meshFS__Update(NP601300meshFS_o *this, const MethodInfo *method)
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_11:
-    sub_1C6BC60(transform, v8);
+    sub_1C71608(transform, v8);
   }
   v19.fields.x = v16;
   v19.fields.z = v16;

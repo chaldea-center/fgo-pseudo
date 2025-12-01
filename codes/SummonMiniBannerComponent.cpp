@@ -39,7 +39,6 @@ void SummonMiniBannerComponent__OnClickBanner(SummonMiniBannerComponent_o *this,
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void SummonMiniBannerComponent__SetBannerInfo(
         SummonMiniBannerComponent_o *this,
         VaildGachaInfo_o *info,
@@ -52,26 +51,50 @@ void SummonMiniBannerComponent__SetBannerInfo(
         const MethodInfo *method)
 {
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
   UIAtlas_o *Component_object; // x0
-  __int64 v22; // x1
+  __int64 v30; // x1
 
-  if ( (byte_4CB2889 & 1) == 0 )
+  if ( (byte_4CC399B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2889 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC399B = 1;
   }
   this->fields.info = info;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.info, (int32_t)info, idx, *(const MethodInfo **)&moveIdx);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.info,
+    (int32_t)info,
+    idx,
+    moveIdx,
+    (System_String_o *)bannerAtlas,
+    (int32_t)imgName,
+    (int64_t)callback,
+    (System_String_o *)parent);
   this->fields.bannerIdx = idx;
   this->fields.moveBannerIdx = moveIdx;
   this->fields.callbackFunc = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v17, v18);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+    (int32_t)callback,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22);
   this->fields.scrollPanel = parent;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.scrollPanel, (int32_t)parent, v19, v20);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.scrollPanel, (int32_t)parent, v23, v24, v25, v26, v27, v28);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   Component_object = (UIAtlas_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)bannerAtlas, 0, 0);
@@ -80,12 +103,12 @@ void SummonMiniBannerComponent__SetBannerInfo(
     if ( !bannerAtlas
       || (Component_object = (UIAtlas_o *)UnityEngine_GameObject__GetComponent_object_(
                                             bannerAtlas,
-                                            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___),
+                                            (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___),
           !this->fields.bannerImg)
       || (UISprite__set_atlas(this->fields.bannerImg, Component_object, 0),
           (Component_object = (UIAtlas_o *)this->fields.bannerImg) == 0) )
     {
-      sub_1C6BC60(Component_object, v22);
+      sub_1C71608(Component_object, v30);
     }
     UISprite__set_spriteName((UISprite_o *)Component_object, imgName, 0);
   }
@@ -101,22 +124,22 @@ void SummonMiniBannerComponent__SetEnableCollider(
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CB288A & 1) == 0 )
+  if ( (byte_4CC399C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB288A = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC399C = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( v6 )
   {
     if ( !Component_object )
-      sub_1C6BC60(v6, v7);
+      sub_1C71608(v6, v7);
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isEnable, 0);
   }
 }
@@ -133,7 +156,7 @@ void SummonMiniBannerComponent__Update(SummonMiniBannerComponent_o *this, const 
 
   scrollPanel = this->fields.scrollPanel;
   if ( !scrollPanel )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   x = scrollPanel->fields.mClipOffset.fields.x;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v6 = vabds_f32(x, GameObjectExtensions__GetLocalPositionX(gameObject, 0));
@@ -141,7 +164,7 @@ void SummonMiniBannerComponent__Update(SummonMiniBannerComponent_o *this, const 
   if ( v6 > 0.1 )
     v7 = 1.0 - (float)(v6 * (float)((float)(1.0 - this->fields.SCALING_SIZE) / this->fields.SCALING_POS));
   v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalScale_36358208(v8, v7, v7, 0);
+  GameObjectExtensions__SetLocalScale_36392044(v8, v7, v7, 0);
 }
 
 
@@ -160,10 +183,10 @@ void SummonMiniBannerComponent__add_callbackFunc(
   SummonMiniBannerComponent_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CB2887 & 1) == 0 )
+  if ( (byte_4CC3999 & 1) == 0 )
   {
-    sub_1C6BA08(&SummonMiniBannerComponent_CallbackFunc_TypeInfo);
-    byte_4CB2887 = 1;
+    sub_1C713B0(&SummonMiniBannerComponent_CallbackFunc_TypeInfo);
+    byte_4CC3999 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -176,13 +199,13 @@ void SummonMiniBannerComponent__add_callbackFunc(
       if ( (SummonMiniBannerComponent_CallbackFunc_c *)v8->klass != SummonMiniBannerComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
+    v9 = sub_1CCD184(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C6BFFC(v8);
+  sub_1C719A4(v8);
   SummonMiniBannerComponent__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -208,10 +231,10 @@ void SummonMiniBannerComponent__remove_callbackFunc(
   UIPanel_o *v18; // x7
   const MethodInfo *v19; // [xsp+30h] [xbp+0h]
 
-  if ( (byte_4CB2888 & 1) == 0 )
+  if ( (byte_4CC399A & 1) == 0 )
   {
-    sub_1C6BA08(&SummonMiniBannerComponent_CallbackFunc_TypeInfo);
-    byte_4CB2888 = 1;
+    sub_1C713B0(&SummonMiniBannerComponent_CallbackFunc_TypeInfo);
+    byte_4CC399A = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -224,13 +247,13 @@ void SummonMiniBannerComponent__remove_callbackFunc(
       if ( (SummonMiniBannerComponent_CallbackFunc_c *)v8->klass != SummonMiniBannerComponent_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
+    v9 = sub_1CCD184(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C6BFFC(v8);
+  sub_1C719A4(v8);
   SummonMiniBannerComponent__SetBannerInfo(v11, v12, v13, v14, v15, v16, v17, v18, v19);
 }
 
@@ -241,28 +264,40 @@ void SummonMiniBannerComponent_CallbackFunc___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  intptr_t v8; // x8
+  int v12; // w22
   Il2CppObject *m_target; // x9
-  __int64 v10; // x0
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C6BAC8(method) & 1) == 0 )
+  if ( (sub_1C71470(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C6BB30(v10, 0);
+      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C714D8(v14, 0);
     }
     goto LABEL_5;
   }
-  if ( v8 != 2 )
+  if ( v12 != 2 )
   {
 LABEL_5:
     m_target = this->fields.m_target;
@@ -270,9 +305,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A9DE04;
+  this->fields.invoke_impl = (intptr_t)sub_1AA330C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A9DDAC;
+  this->fields.extra_arg = (intptr_t)sub_1AA32B4;
 }
 
 
@@ -290,16 +325,16 @@ System_IAsyncResult_o *SummonMiniBannerComponent_CallbackFunc__BeginInvoke(
 
   v12 = moveIndex;
   v11[0] = isPlaySe;
-  if ( (byte_4CB288B & 1) == 0 )
+  if ( (byte_4CC399D & 1) == 0 )
   {
-    sub_1C6BA08(&bool_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    byte_4CB288B = 1;
+    sub_1C713B0(&bool_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    byte_4CC399D = 1;
   }
   v10[2] = 0;
   v10[0] = j_il2cpp_value_box_0(int_TypeInfo, &v12);
   v10[1] = j_il2cpp_value_box_0(bool_TypeInfo, v11);
-  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v10, callback, object);
+  return (System_IAsyncResult_o *)sub_1C71364(this, v10, callback, object);
 }
 
 
@@ -308,7 +343,7 @@ void SummonMiniBannerComponent_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C6B9C0(result, 0, method);
+  sub_1C71368(result, 0, method);
 }
 
 

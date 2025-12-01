@@ -11,28 +11,56 @@ void RecommendSupportQuestBoardListViewItem___ctor(
   RecommendSupportQuestBoardListViewItem_o *v12; // x23
   bool v13; // w24
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  const MethodInfo *v18; // x1
-  bool v19; // w0
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  const MethodInfo *v26; // x1
+  bool v27; // w0
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
 
   v12 = this;
   v13 = isSetting;
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   v12->fields._QuestFolderInfo_k__BackingField = folderInfo;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->fields._QuestFolderInfo_k__BackingField, (int32_t)folderInfo, v14, v15);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v12->fields._QuestFolderInfo_k__BackingField,
+    (int32_t)folderInfo,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
   v12->fields._QuestInfo_k__BackingField = questInfo;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->fields._QuestInfo_k__BackingField, (int32_t)questInfo, v16, v17);
-  v19 = RecommendSupportQuestBoardListViewItem__CheckQuestRestriction(v12, v18);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v12->fields._QuestInfo_k__BackingField,
+    (int32_t)questInfo,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25);
+  v27 = RecommendSupportQuestBoardListViewItem__CheckQuestRestriction(v12, v26);
   v12->fields._SettingSvtName_k__BackingField = svtName;
   v12 = (RecommendSupportQuestBoardListViewItem_o *)((char *)v12 + 144);
-  LOBYTE(v12[-1].fields._SettingSvtName_k__BackingField) = v19;
+  LOBYTE(v12[-1].fields._SettingSvtName_k__BackingField) = v27;
   BYTE1(v12[-1].fields._SettingSvtName_k__BackingField) = v13;
   HIDWORD(v12[-1].fields._SettingSvtName_k__BackingField) = selectIndex;
-  sub_1C6B9AC((CGThumbnailListItem_o *)v12, (int32_t)svtName, v20, v21);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v12, (int32_t)svtName, v28, v29, v30, v31, v32, v33);
 }
 
 
@@ -51,34 +79,34 @@ bool RecommendSupportQuestBoardListViewItem__CheckQuestRestriction(
   Il2CppObject *v11; // x20
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB2183 & 1) == 0 )
+  if ( (byte_4CC3294 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
-    sub_1C6BA08(&QuestRestrictionInfo_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
-    byte_4CB2183 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+    sub_1C713B0(&QuestRestrictionInfo_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+    byte_4CC3294 = 1;
   }
   entity = 0;
   if ( !this->fields._QuestInfo_k__BackingField )
     return 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantMaster___);
-  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Instance = (int64_t)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_RecommendSupportSelectControl__get_Instance__);
   if ( !Instance
     || (Instance = RecommendSupportSelectControl__get_SelectServantId((RecommendSupportSelectControl_o *)Instance, v5),
         !Master_object) )
   {
 LABEL_16:
-    sub_1C6BC60(Instance, v5);
+    sub_1C71608(Instance, v5);
   }
   Instance = DataMasterBase_object__object__long___TryGetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                &entity,
                Instance,
-               (const MethodInfo_33FB684 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
+               (const MethodInfo_340B428 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__TryGetEntity__);
   if ( (Instance & 1) == 0 )
     return 0;
   QuestInfo_k__BackingField = this->fields._QuestInfo_k__BackingField;
@@ -89,8 +117,8 @@ LABEL_16:
     goto LABEL_16;
   phase = QuestInfo_k__BackingField->fields.phase;
   id = questEntity->fields.id;
-  v10 = (QuestRestrictionInfo_o *)sub_1C6BC54(QuestRestrictionInfo_TypeInfo);
-  QuestRestrictionInfo___ctor_43646264(v10, 0, id, phase, 0);
+  v10 = (QuestRestrictionInfo_o *)sub_1C715FC(QuestRestrictionInfo_TypeInfo);
+  QuestRestrictionInfo___ctor_43691256(v10, 0, id, phase, 0);
   v11 = entity;
   if ( !entity )
     goto LABEL_16;

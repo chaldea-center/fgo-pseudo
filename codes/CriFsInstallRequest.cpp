@@ -29,7 +29,7 @@ void CriFsInstallRequest__set_destinationPath(
         const MethodInfo *method)
 {
   this->fields._destinationPath_k__BackingField = value;
-  sub_1C6B9AC(&this->fields._destinationPath_k__BackingField, value);
+  sub_1C71354(&this->fields._destinationPath_k__BackingField, value);
 }
 
 
@@ -42,5 +42,5 @@ void CriFsInstallRequest__set_progress(CriFsInstallRequest_o *this, float value,
 void CriFsInstallRequest__set_sourcePath(CriFsInstallRequest_o *this, System_String_o *value, const MethodInfo *method)
 {
   this->fields._sourcePath_k__BackingField = value;
-  sub_1C6B9AC(&this->fields._sourcePath_k__BackingField, value);
+  sub_1C71354(&this->fields._sourcePath_k__BackingField, value);
 }

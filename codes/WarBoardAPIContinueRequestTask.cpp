@@ -6,7 +6,7 @@ void WarBoardAPIContinueRequestTask___ctor(
         bool onStartBeginRequest,
         const MethodInfo *method)
 {
-  WarBoardAPIRequestTask___ctor_38483148(
+  WarBoardAPIRequestTask___ctor_38522232(
     (WarBoardAPIRequestTask_o *)this,
     resultCallback,
     onStartBeginRequest,
@@ -22,17 +22,21 @@ void WarBoardAPIContinueRequestTask__SetRequest(WarBoardAPIContinueRequestTask_o
   WarBoardData_o *monitor; // x20
   WarBoardContinueRequest_o *v6; // x21
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
   int32_t id; // w0
 
-  if ( (byte_4CB3F16 & 1) == 0 )
+  if ( (byte_4CC502E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_NetworkManager_getRequest_WarBoardContinueRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
-    byte_4CB3F16 = 1;
+    sub_1C713B0(&Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+    byte_4CC502E = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_WarBoardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   monitor = (WarBoardData_o *)Instance[27].monitor;
@@ -40,7 +44,7 @@ void WarBoardAPIContinueRequestTask__SetRequest(WarBoardAPIContinueRequestTask_o
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Instance = NetworkManager__getRequest_object_(
                0,
-               (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
+               (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_WarBoardContinueRequest___);
   if ( !Instance )
     goto LABEL_11;
   v6 = (WarBoardContinueRequest_o *)Instance;
@@ -54,9 +58,9 @@ void WarBoardAPIContinueRequestTask__SetRequest(WarBoardAPIContinueRequestTask_o
       goto LABEL_10;
     }
 LABEL_11:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
 LABEL_10:
   this->fields.request = (struct RequestBase_o *)v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.request, (int32_t)v6, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.request, (int32_t)v6, v7, v8, v9, v10, v11, v12);
 }

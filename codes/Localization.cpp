@@ -1,49 +1,61 @@
 void Localization___cctor(const MethodInfo *method)
 {
   int32_t v1; // w2
-  const MethodInfo *v2; // x3
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  int32_t v4; // w5
+  int64_t v5; // x6
+  System_String_o *v6; // x7
   struct Localization_StaticFields *static_fields; // x0
-  System_Collections_Generic_Dictionary_object__object__o *v4; // x19
-  struct Localization_StaticFields *v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
   System_Collections_Generic_Dictionary_object__object__o *v8; // x19
   struct Localization_StaticFields *v9; // x0
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  struct Localization_StaticFields *v12; // x8
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  System_Collections_Generic_Dictionary_object__object__o *v16; // x19
+  struct Localization_StaticFields *v17; // x0
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  struct Localization_StaticFields *v24; // x8
 
-  if ( (byte_4CBAA7C & 1) == 0 )
+  if ( (byte_4CCBBD5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string_____ctor__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__string____TypeInfo);
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA7C = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string_____ctor__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_string__string____TypeInfo);
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBD5 = 1;
   }
   static_fields = Localization_TypeInfo->static_fields;
   static_fields->mLanguages = 0;
   static_fields = (struct Localization_StaticFields *)((char *)static_fields + 24);
   static_fields[-1].mMerging = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)static_fields, 0, v1, v2);
-  v4 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__string__TypeInfo);
-  System_Collections_Generic_Dictionary_object__object____ctor(
-    v4,
-    (const MethodInfo_34BAF8C *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-  v5 = Localization_TypeInfo->static_fields;
-  v5->mOldDictionary = (struct System_Collections_Generic_Dictionary_string__string__o *)v4;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v5->mOldDictionary, (int32_t)v4, v6, v7);
-  v8 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__string____TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)static_fields, 0, v1, v2, v3, v4, v5, v6);
+  v8 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_string__string__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v8,
-    (const MethodInfo_34BAF8C *)Method_System_Collections_Generic_Dictionary_string__string_____ctor__);
+    (const MethodInfo_34CAD30 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
   v9 = Localization_TypeInfo->static_fields;
-  v9->mDictionary = (struct System_Collections_Generic_Dictionary_string__string____o *)v8;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v9->mDictionary, (int32_t)v8, v10, v11);
-  v12 = Localization_TypeInfo->static_fields;
-  v12->mLanguageIndex = -1;
-  v12->mMerging = 0;
+  v9->mOldDictionary = (struct System_Collections_Generic_Dictionary_string__string__o *)v8;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v9->mOldDictionary, (int32_t)v8, v10, v11, v12, v13, v14, v15);
+  v16 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_string__string____TypeInfo);
+  System_Collections_Generic_Dictionary_object__object____ctor(
+    v16,
+    (const MethodInfo_34CAD30 *)Method_System_Collections_Generic_Dictionary_string__string_____ctor__);
+  v17 = Localization_TypeInfo->static_fields;
+  v17->mDictionary = (struct System_Collections_Generic_Dictionary_string__string____o *)v16;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v17->mDictionary, (int32_t)v16, v18, v19, v20, v21, v22, v23);
+  v24 = Localization_TypeInfo->static_fields;
+  v24->mLanguageIndex = -1;
+  v24->mMerging = 0;
 }
 
 
@@ -64,23 +76,23 @@ void Localization__AddCSV(
   System_Collections_Generic_Dictionary_object__object__o *mDictionary; // x0
 
   v6 = (BetterList_T__o *)newValues;
-  if ( (byte_4CBAA73 & 1) == 0 )
+  if ( (byte_4CCBBCC & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BetterList_string__get_Item__);
-    sub_1C6BA08(&UnityEngine_Debug_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____set_Item__);
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&StringLiteral_535/*"' is already present"*/);
-    newValues = (BetterList_string__o *)sub_1C6BA08(&StringLiteral_8482/*"Localization key '"*/);
-    byte_4CBAA73 = 1;
+    sub_1C713B0(&Method_BetterList_string__get_Item__);
+    sub_1C713B0(&UnityEngine_Debug_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____set_Item__);
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&StringLiteral_535/*"' is already present"*/);
+    newValues = (BetterList_string__o *)sub_1C713B0(&StringLiteral_8486/*"Localization key '"*/);
+    byte_4CCBBCC = 1;
   }
   if ( !v6 )
     goto LABEL_23;
   if ( v6->fields.size < 2 )
     return;
-  Item = BetterList_object___get_Item(v6, 0, (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
+  Item = BetterList_object___get_Item(v6, 0, (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
   if ( System_String__IsNullOrEmpty((System_String_o *)Item, 0) )
     return;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -96,7 +108,7 @@ void Localization__AddCSV(
   v10 = System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)Localization_TypeInfo->static_fields->mDictionary,
           Item,
-          (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__);
+          (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__);
   v11 = Localization_TypeInfo;
   cctor_finished = Localization_TypeInfo->_2.cctor_finished;
   if ( v10 )
@@ -113,11 +125,11 @@ void Localization__AddCSV(
         (System_Collections_Generic_Dictionary_object__object__o *)newValues,
         Item,
         v9,
-        (const MethodInfo_34BB928 *)Method_System_Collections_Generic_Dictionary_string__string____set_Item__);
+        (const MethodInfo_34CB6CC *)Method_System_Collections_Generic_Dictionary_string__string____set_Item__);
       if ( !newLanguages )
       {
-        v13 = (Il2CppObject *)System_String__Concat_64005056(
-                                (System_String_o *)StringLiteral_8482/*"Localization key '"*/,
+        v13 = (Il2CppObject *)System_String__Concat_64069988(
+                                (System_String_o *)StringLiteral_8486/*"Localization key '"*/,
                                 (System_String_o *)Item,
                                 (System_String_o *)StringLiteral_535/*"' is already present"*/,
                                 0);
@@ -128,7 +140,7 @@ void Localization__AddCSV(
       return;
     }
 LABEL_23:
-    sub_1C6BC60(newValues, newLanguages);
+    sub_1C71608(newValues, newLanguages);
   }
   if ( !cctor_finished )
   {
@@ -137,12 +149,12 @@ LABEL_23:
   }
   mDictionary = (System_Collections_Generic_Dictionary_object__object__o *)v11->static_fields->mDictionary;
   if ( !mDictionary )
-    sub_1C6BC60(0, newLanguages);
+    sub_1C71608(0, newLanguages);
   System_Collections_Generic_Dictionary_object__object___Add(
     mDictionary,
     Item,
     v9,
-    (const MethodInfo_34BB93C *)Method_System_Collections_Generic_Dictionary_string__string____Add__);
+    (const MethodInfo_34CB6E0 *)Method_System_Collections_Generic_Dictionary_string__string____Add__);
 }
 
 
@@ -160,15 +172,15 @@ bool Localization__Exists(System_String_o *key, const MethodInfo *method)
   Localization_c *v12; // x0
   Localization_c *v14; // x0
 
-  if ( (byte_4CBAA7B & 1) == 0 )
+  if ( (byte_4CCBBD4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__);
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&StringLiteral_190/*" Mobile"*/);
-    sub_1C6BA08(&StringLiteral_8352/*"Language"*/);
-    sub_1C6BA08(&StringLiteral_6043/*"English"*/);
-    byte_4CBAA7B = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__);
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&StringLiteral_190/*" Mobile"*/);
+    sub_1C713B0(&StringLiteral_8356/*"Language"*/);
+    sub_1C713B0(&StringLiteral_6045/*"English"*/);
+    byte_4CCBBD4 = 1;
   }
   v3 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -179,14 +191,14 @@ bool Localization__Exists(System_String_o *key, const MethodInfo *method)
   if ( !v3->static_fields->localizationHasBeenSet )
   {
     String = UnityEngine_PlayerPrefs__GetString(
-               (System_String_o *)StringLiteral_8352/*"Language"*/,
-               (System_String_o *)StringLiteral_6043/*"English"*/,
+               (System_String_o *)StringLiteral_8356/*"Language"*/,
+               (System_String_o *)StringLiteral_6045/*"English"*/,
                0);
     if ( !Localization_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
     Localization__set_language(String, v4);
   }
-  v6 = System_String__Concat_63966792(key, (System_String_o *)StringLiteral_190/*" Mobile"*/, 0);
+  v6 = System_String__Concat_64031724(key, (System_String_o *)StringLiteral_190/*" Mobile"*/, 0);
   v8 = Localization_TypeInfo;
   v9 = (Il2CppObject *)v6;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -200,7 +212,7 @@ bool Localization__Exists(System_String_o *key, const MethodInfo *method)
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          mDictionary,
          v9,
-         (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__) )
+         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__) )
   {
     return 1;
   }
@@ -216,7 +228,7 @@ bool Localization__Exists(System_String_o *key, const MethodInfo *method)
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          mDictionary,
          v9,
-         (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
+         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__) )
   {
     return 1;
   }
@@ -232,7 +244,7 @@ bool Localization__Exists(System_String_o *key, const MethodInfo *method)
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          mDictionary,
          (Il2CppObject *)key,
-         (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__) )
+         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__string____ContainsKey__) )
   {
     return 1;
   }
@@ -245,11 +257,11 @@ bool Localization__Exists(System_String_o *key, const MethodInfo *method)
   mDictionary = (System_Collections_Generic_Dictionary_object__object__o *)v14->static_fields->mOldDictionary;
   if ( !mDictionary )
 LABEL_26:
-    sub_1C6BC60(mDictionary, v7);
+    sub_1C71608(mDictionary, v7);
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            mDictionary,
            (Il2CppObject *)key,
-           (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+           (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
 }
 
 
@@ -271,36 +283,44 @@ System_String_array *Localization__ExtractStrings(
   unsigned __int64 v15; // x22
   unsigned int v16; // w23
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  BetterList_string__o *v19; // x1
-  Il2CppClass **v20; // x0
-  BetterList_string__o *v21; // x20
-  __int64 v22; // x8
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  BetterList_string__o *v23; // x1
+  Il2CppClass **v24; // x0
+  BetterList_string__o *v25; // x20
+  __int64 v26; // x8
   int32_t size; // w8
-  int v24; // w8
-  __int64 v25; // x23
-  CGThumbnailListItem_o *v26; // x22
+  int v28; // w8
+  __int64 v29; // x23
+  GrandQuestFolderBoardItem_o *v30; // x22
   __int64 i; // x21
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  int32_t v35; // w5
+  int64_t v36; // x6
+  System_String_o *v37; // x7
   Il2CppObject *value; // [xsp+8h] [xbp-68h] BYREF
 
   v6 = (BetterList_T__o *)added;
-  if ( (byte_4CBAA74 & 1) == 0 )
+  if ( (byte_4CCBBCD & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BetterList_string__get_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    sub_1C6BA08(&Localization_TypeInfo);
-    added = (BetterList_string__o *)sub_1C6BA08(&string___TypeInfo);
-    byte_4CBAA74 = 1;
+    sub_1C713B0(&Method_BetterList_string__get_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    sub_1C713B0(&Localization_TypeInfo);
+    added = (BetterList_string__o *)sub_1C713B0(&string___TypeInfo);
+    byte_4CCBBCD = 1;
   }
   value = 0;
   if ( newLanguages )
   {
     if ( !v6 )
       goto LABEL_35;
-    Item = BetterList_object___get_Item(v6, 0, (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
+    Item = BetterList_object___get_Item(v6, 0, (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
     v8 = Localization_TypeInfo;
     v9 = Item;
     if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -315,7 +335,7 @@ System_String_array *Localization__ExtractStrings(
                                       (System_Collections_Generic_Dictionary_object__object__o *)added,
                                       v9,
                                       &value,
-                                      (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
+                                      (const MethodInfo_34CCEEC *)Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
     if ( ((unsigned __int8)added & 1) == 0 )
     {
       added = (BetterList_string__o *)Localization_TypeInfo;
@@ -327,7 +347,7 @@ System_String_array *Localization__ExtractStrings(
       v10 = *(_QWORD *)(*(_QWORD *)&added[5].fields.size + 24LL);
       if ( !v10 )
         goto LABEL_35;
-      added = (BetterList_string__o *)sub_1C6BAB0(string___TypeInfo, *(unsigned int *)(v10 + 24));
+      added = (BetterList_string__o *)sub_1C71458(string___TypeInfo, *(unsigned int *)(v10 + 24));
       value = (Il2CppObject *)added;
     }
     if ( (int)newLanguages->max_length >= 1 )
@@ -339,22 +359,22 @@ System_String_array *Localization__ExtractStrings(
         v13 = System_Collections_Generic_Dictionary_object__int___get_Item(
                 (System_Collections_Generic_Dictionary_object__int__o *)languageIndices,
                 (Il2CppObject *)newLanguages->m_Items[v11],
-                (const MethodInfo_34B2B8C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+                (const MethodInfo_34C2930 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
         v14 = value;
         v15 = v11 + 1;
         v16 = v13;
         added = (BetterList_string__o *)BetterList_object___get_Item(
                                           v6,
                                           (int)v11 + 1,
-                                          (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
+                                          (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
         if ( !v14 )
           break;
         if ( v16 >= LODWORD(v14[1].monitor) )
           goto LABEL_20;
-        v19 = added;
-        v20 = &v14->klass + (int)v16;
-        v20[4] = (Il2CppClass *)v19;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v20 + 4), (int32_t)v19, v17, v18);
+        v23 = added;
+        v24 = &v14->klass + (int)v16;
+        v24[4] = (Il2CppClass *)v23;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v24 + 4), (int32_t)v23, v17, v18, v19, v20, v21, v22);
         if ( v12 == v11 )
           return (System_String_array *)value;
         ++v11;
@@ -362,7 +382,7 @@ System_String_array *Localization__ExtractStrings(
           goto LABEL_20;
       }
 LABEL_35:
-      sub_1C6BC60(added, newLanguages);
+      sub_1C71608(added, newLanguages);
     }
     return (System_String_array *)value;
   }
@@ -374,40 +394,40 @@ LABEL_35:
       j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
       added = (BetterList_string__o *)Localization_TypeInfo;
     }
-    v22 = *(_QWORD *)(*(_QWORD *)&added[5].fields.size + 24LL);
-    if ( !v22 )
+    v26 = *(_QWORD *)(*(_QWORD *)&added[5].fields.size + 24LL);
+    if ( !v26 )
       goto LABEL_35;
-    added = (BetterList_string__o *)sub_1C6BAB0(string___TypeInfo, *(unsigned int *)(v22 + 24));
+    added = (BetterList_string__o *)sub_1C71458(string___TypeInfo, *(unsigned int *)(v26 + 24));
     if ( !v6 )
       goto LABEL_35;
-    v21 = added;
+    v25 = added;
     if ( !added )
       goto LABEL_35;
     size = added->fields.size;
     if ( v6->fields.size >= size + 1 )
-      v24 = size + 1;
+      v28 = size + 1;
     else
-      v24 = v6->fields.size;
-    if ( v24 >= 2 )
+      v28 = v6->fields.size;
+    if ( v28 >= 2 )
     {
-      v25 = (unsigned int)v24;
-      v26 = (CGThumbnailListItem_o *)&added[1];
-      for ( i = 1; i != v25; ++i )
+      v29 = (unsigned int)v28;
+      v30 = (GrandQuestFolderBoardItem_o *)&added[1];
+      for ( i = 1; i != v29; ++i )
       {
         added = (BetterList_string__o *)BetterList_object___get_Item(
                                           v6,
                                           i,
-                                          (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
-        if ( i - 1 >= (unsigned __int64)(unsigned int)v21->fields.size )
+                                          (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
+        if ( i - 1 >= (unsigned __int64)(unsigned int)v25->fields.size )
 LABEL_20:
-          sub_1C6BC68(added);
-        v26->klass = (CGThumbnailListItem_c *)added;
-        sub_1C6B9AC(v26, (int32_t)added, v28, v29);
-        v26 = (CGThumbnailListItem_o *)((char *)v26 + 8);
+          sub_1C71610(added);
+        v30->klass = (GrandQuestFolderBoardItem_c *)added;
+        sub_1C71354(v30, (int32_t)added, v32, v33, v34, v35, v36, v37);
+        v30 = (GrandQuestFolderBoardItem_o *)((char *)v30 + 8);
       }
     }
   }
-  return (System_String_array *)v21;
+  return (System_String_array *)v25;
 }
 
 
@@ -415,15 +435,15 @@ System_String_o *Localization__Format(System_String_o *key, System_Object_array 
 {
   System_String_o *v5; // x0
 
-  if ( (byte_4CBAA79 & 1) == 0 )
+  if ( (byte_4CCBBD2 & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA79 = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBD2 = 1;
   }
   if ( !Localization_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
   v5 = Localization__Get(key, (const MethodInfo *)parameters);
-  return System_String__Format_64008236(v5, parameters, 0);
+  return System_String__Format_64073168(v5, parameters, 0);
 }
 
 
@@ -435,45 +455,49 @@ System_String_o *Localization__Get(System_String_o *key, const MethodInfo *metho
   void *language; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  Localization_c *v10; // x8
-  System_String_o *v11; // x20
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  Localization_c *v14; // x8
+  System_String_o *v15; // x20
   unsigned __int64 i; // x22
   struct System_String_array *mLanguages; // x9
-  __int64 v15; // x8
-  __int64 v16; // x1
-  Il2CppObject *v17; // x20
-  System_String_o *v18; // x0
-  Localization_c *v19; // x8
-  Il2CppObject *v20; // x20
+  __int64 v19; // x8
+  __int64 v20; // x1
+  Il2CppObject *v21; // x20
+  System_String_o *v22; // x0
+  Localization_c *v23; // x8
+  Il2CppObject *v24; // x20
   struct Localization_StaticFields *static_fields; // x9
-  Il2CppObject *v22; // x22
+  Il2CppObject *v26; // x22
   int32_t monitor; // w10
   int32_t mLanguageIndex; // w9
-  Il2CppClass **v25; // x8
-  Localization_c *v26; // x8
-  struct Localization_StaticFields *v27; // x9
-  Il2CppObject *v28; // x20
-  int32_t v29; // w10
-  int32_t v30; // w9
+  Il2CppClass **v29; // x8
+  Localization_c *v30; // x8
+  struct Localization_StaticFields *v31; // x9
+  Il2CppObject *v32; // x20
+  int32_t v33; // w10
+  int32_t v34; // w9
   Il2CppObject *value; // [xsp+8h] [xbp-38h] BYREF
-  Il2CppObject *v32; // [xsp+18h] [xbp-28h] BYREF
+  Il2CppObject *v36; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4CBAA78 & 1) == 0 )
+  if ( (byte_4CCBBD1 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Debug_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&StringLiteral_190/*" Mobile"*/);
-    sub_1C6BA08(&StringLiteral_8352/*"Language"*/);
-    sub_1C6BA08(&StringLiteral_9473/*"No localization data present"*/);
-    sub_1C6BA08(&StringLiteral_8353/*"Language not found: "*/);
-    sub_1C6BA08(&StringLiteral_6043/*"English"*/);
-    byte_4CBAA78 = 1;
+    sub_1C713B0(&UnityEngine_Debug_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__);
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&StringLiteral_190/*" Mobile"*/);
+    sub_1C713B0(&StringLiteral_8356/*"Language"*/);
+    sub_1C713B0(&StringLiteral_9478/*"No localization data present"*/);
+    sub_1C713B0(&StringLiteral_8357/*"Language not found: "*/);
+    sub_1C713B0(&StringLiteral_6045/*"English"*/);
+    byte_4CCBBD1 = 1;
   }
   v3 = Localization_TypeInfo;
-  v32 = 0;
+  v36 = 0;
   value = 0;
   if ( !Localization_TypeInfo->_2.cctor_finished )
   {
@@ -483,8 +507,8 @@ System_String_o *Localization__Get(System_String_o *key, const MethodInfo *metho
   if ( !v3->static_fields->localizationHasBeenSet )
   {
     String = UnityEngine_PlayerPrefs__GetString(
-               (System_String_o *)StringLiteral_8352/*"Language"*/,
-               (System_String_o *)StringLiteral_6043/*"English"*/,
+               (System_String_o *)StringLiteral_8356/*"Language"*/,
+               (System_String_o *)StringLiteral_6045/*"English"*/,
                0);
     if ( !Localization_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
@@ -501,86 +525,86 @@ System_String_o *Localization__Get(System_String_o *key, const MethodInfo *metho
     if ( !v3->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(v3);
     language = Localization__get_language((const MethodInfo *)v3);
-    v10 = Localization_TypeInfo;
-    v11 = (System_String_o *)language;
+    v14 = Localization_TypeInfo;
+    v15 = (System_String_o *)language;
     if ( Localization_TypeInfo->static_fields->mLanguageIndex == -1 )
     {
       for ( i = 0; ; ++i )
       {
-        if ( !v10->_2.cctor_finished )
+        if ( !v14->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v10);
-          v10 = Localization_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v14);
+          v14 = Localization_TypeInfo;
         }
-        mLanguages = v10->static_fields->mLanguages;
+        mLanguages = v14->static_fields->mLanguages;
         if ( !mLanguages )
           goto LABEL_84;
         if ( (__int64)i >= SLODWORD(mLanguages->max_length) )
           goto LABEL_31;
-        if ( !v10->_2.cctor_finished )
+        if ( !v14->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v10);
+          j_il2cpp_runtime_class_init_0(v14);
           mLanguages = Localization_TypeInfo->static_fields->mLanguages;
           if ( !mLanguages )
             goto LABEL_84;
         }
         if ( i >= LODWORD(mLanguages->max_length) )
           goto LABEL_85;
-        language = (void *)System_String__op_Equality(mLanguages->m_Items[i], v11, 0);
+        language = (void *)System_String__op_Equality(mLanguages->m_Items[i], v15, 0);
         if ( ((unsigned __int8)language & 1) != 0 )
           break;
-        v10 = Localization_TypeInfo;
+        v14 = Localization_TypeInfo;
       }
-      v10 = Localization_TypeInfo;
+      v14 = Localization_TypeInfo;
       if ( !Localization_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-        v10 = Localization_TypeInfo;
+        v14 = Localization_TypeInfo;
       }
-      v10->static_fields->mLanguageIndex = i;
+      v14->static_fields->mLanguageIndex = i;
     }
 LABEL_31:
-    if ( !v10->_2.cctor_finished )
+    if ( !v14->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v10);
-      v10 = Localization_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v14);
+      v14 = Localization_TypeInfo;
     }
-    language = v10->static_fields;
+    language = v14->static_fields;
     if ( *((_DWORD *)language + 12) == -1 )
     {
-      if ( !v10->_2.cctor_finished )
+      if ( !v14->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v10);
+        j_il2cpp_runtime_class_init_0(v14);
         language = Localization_TypeInfo->static_fields;
       }
-      v15 = *((_QWORD *)language + 3);
+      v19 = *((_QWORD *)language + 3);
       *((_DWORD *)language + 12) = 0;
-      if ( !v15 )
+      if ( !v19 )
         goto LABEL_84;
-      if ( !*(_DWORD *)(v15 + 24) )
+      if ( !*(_DWORD *)(v19 + 24) )
         goto LABEL_85;
-      v16 = *(_QWORD *)(v15 + 32);
-      *((_QWORD *)language + 7) = v16;
-      sub_1C6B9AC((CGThumbnailListItem_o *)((char *)language + 56), v16, v8, v9);
-      v17 = (Il2CppObject *)System_String__Concat_63966792((System_String_o *)StringLiteral_8353/*"Language not found: "*/, v11, 0);
+      v20 = *(_QWORD *)(v19 + 32);
+      *((_QWORD *)language + 7) = v20;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)((char *)language + 56), v20, v8, v9, v10, v11, v12, v13);
+      v21 = (Il2CppObject *)System_String__Concat_64031724((System_String_o *)StringLiteral_8357/*"Language not found: "*/, v15, 0);
       if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-      UnityEngine_Debug__LogWarning(v17, 0);
+      UnityEngine_Debug__LogWarning(v21, 0);
     }
-    v18 = System_String__Concat_63966792(key, (System_String_o *)StringLiteral_190/*" Mobile"*/, 0);
-    v19 = Localization_TypeInfo;
-    v20 = (Il2CppObject *)v18;
+    v22 = System_String__Concat_64031724(key, (System_String_o *)StringLiteral_190/*" Mobile"*/, 0);
+    v23 = Localization_TypeInfo;
+    v24 = (Il2CppObject *)v22;
     if ( !Localization_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-      v19 = Localization_TypeInfo;
+      v23 = Localization_TypeInfo;
     }
-    static_fields = v19->static_fields;
+    static_fields = v23->static_fields;
     if ( static_fields->mLanguageIndex != -1 )
     {
-      if ( !v19->_2.cctor_finished )
+      if ( !v23->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v19);
+        j_il2cpp_runtime_class_init_0(v23);
         static_fields = Localization_TypeInfo->static_fields;
       }
       language = static_fields->mDictionary;
@@ -588,123 +612,123 @@ LABEL_31:
         goto LABEL_84;
       language = (void *)System_Collections_Generic_Dictionary_object__object___TryGetValue(
                            (System_Collections_Generic_Dictionary_object__object__o *)language,
-                           v20,
+                           v24,
                            &value,
-                           (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
-      v19 = Localization_TypeInfo;
+                           (const MethodInfo_34CCEEC *)Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
+      v23 = Localization_TypeInfo;
       if ( ((unsigned __int8)language & 1) != 0 )
       {
         if ( !Localization_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-          v19 = Localization_TypeInfo;
+          v23 = Localization_TypeInfo;
         }
-        v22 = value;
+        v26 = value;
         if ( !value )
           goto LABEL_84;
         monitor = (int32_t)value[1].monitor;
-        mLanguageIndex = v19->static_fields->mLanguageIndex;
+        mLanguageIndex = v23->static_fields->mLanguageIndex;
         if ( mLanguageIndex < monitor )
         {
-          if ( !v19->_2.cctor_finished )
+          if ( !v23->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(v19);
-            monitor = (int32_t)v22[1].monitor;
+            j_il2cpp_runtime_class_init_0(v23);
+            monitor = (int32_t)v26[1].monitor;
             mLanguageIndex = Localization_TypeInfo->static_fields->mLanguageIndex;
           }
           if ( mLanguageIndex < (unsigned int)monitor )
           {
-            v25 = &v22->klass + mLanguageIndex;
-            return (System_String_o *)v25[4];
+            v29 = &v26->klass + mLanguageIndex;
+            return (System_String_o *)v29[4];
           }
           goto LABEL_85;
         }
       }
     }
-    if ( !v19->_2.cctor_finished )
+    if ( !v23->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v19);
-      v19 = Localization_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v23);
+      v23 = Localization_TypeInfo;
     }
-    language = v19->static_fields->mOldDictionary;
+    language = v23->static_fields->mOldDictionary;
     if ( language )
     {
       if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
              (System_Collections_Generic_Dictionary_object__object__o *)language,
-             v20,
-             &v32,
-             (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+             v24,
+             &v36,
+             (const MethodInfo_34CCEEC *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
       {
-        return (System_String_o *)v32;
+        return (System_String_o *)v36;
       }
-      v26 = Localization_TypeInfo;
+      v30 = Localization_TypeInfo;
       if ( !Localization_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-        v26 = Localization_TypeInfo;
+        v30 = Localization_TypeInfo;
       }
-      v27 = v26->static_fields;
-      if ( v27->mLanguageIndex != -1 )
+      v31 = v30->static_fields;
+      if ( v31->mLanguageIndex != -1 )
       {
-        if ( !v26->_2.cctor_finished )
+        if ( !v30->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v26);
-          v27 = Localization_TypeInfo->static_fields;
+          j_il2cpp_runtime_class_init_0(v30);
+          v31 = Localization_TypeInfo->static_fields;
         }
-        language = v27->mDictionary;
+        language = v31->mDictionary;
         if ( !language )
           goto LABEL_84;
         language = (void *)System_Collections_Generic_Dictionary_object__object___TryGetValue(
                              (System_Collections_Generic_Dictionary_object__object__o *)language,
                              (Il2CppObject *)key,
                              &value,
-                             (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
-        v26 = Localization_TypeInfo;
+                             (const MethodInfo_34CCEEC *)Method_System_Collections_Generic_Dictionary_string__string____TryGetValue__);
+        v30 = Localization_TypeInfo;
         if ( ((unsigned __int8)language & 1) != 0 )
         {
           if ( !Localization_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-            v26 = Localization_TypeInfo;
+            v30 = Localization_TypeInfo;
           }
-          v28 = value;
+          v32 = value;
           if ( !value )
             goto LABEL_84;
-          v29 = (int32_t)value[1].monitor;
-          v30 = v26->static_fields->mLanguageIndex;
-          if ( v30 < v29 )
+          v33 = (int32_t)value[1].monitor;
+          v34 = v30->static_fields->mLanguageIndex;
+          if ( v34 < v33 )
           {
-            if ( !v26->_2.cctor_finished )
+            if ( !v30->_2.cctor_finished )
             {
-              j_il2cpp_runtime_class_init_0(v26);
-              v29 = (int32_t)v28[1].monitor;
-              v30 = Localization_TypeInfo->static_fields->mLanguageIndex;
+              j_il2cpp_runtime_class_init_0(v30);
+              v33 = (int32_t)v32[1].monitor;
+              v34 = Localization_TypeInfo->static_fields->mLanguageIndex;
             }
-            if ( v30 < (unsigned int)v29 )
+            if ( v34 < (unsigned int)v33 )
             {
-              v25 = &v28->klass + v30;
-              return (System_String_o *)v25[4];
+              v29 = &v32->klass + v34;
+              return (System_String_o *)v29[4];
             }
 LABEL_85:
-            sub_1C6BC68(language);
+            sub_1C71610(language);
           }
         }
       }
-      if ( !v26->_2.cctor_finished )
+      if ( !v30->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v26);
-        v26 = Localization_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v30);
+        v30 = Localization_TypeInfo;
       }
-      language = v26->static_fields->mOldDictionary;
+      language = v30->static_fields->mOldDictionary;
       if ( language )
       {
         if ( System_Collections_Generic_Dictionary_object__object___TryGetValue(
                (System_Collections_Generic_Dictionary_object__object__o *)language,
                (Il2CppObject *)key,
-               &v32,
-               (const MethodInfo_34BD148 *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
+               &v36,
+               (const MethodInfo_34CCEEC *)Method_System_Collections_Generic_Dictionary_string__string__TryGetValue__) )
         {
-          return (System_String_o *)v32;
+          return (System_String_o *)v36;
         }
         else
         {
@@ -713,11 +737,11 @@ LABEL_85:
       }
     }
 LABEL_84:
-    sub_1C6BC60(language, v7);
+    sub_1C71608(language, v7);
   }
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_9473/*"No localization data present"*/, 0);
+  UnityEngine_Debug__LogError((Il2CppObject *)StringLiteral_9478/*"No localization data present"*/, 0);
   return 0;
 }
 
@@ -733,10 +757,10 @@ bool Localization__HasLanguage(System_String_o *languageName, const MethodInfo *
   bool v9; // w21
   struct System_String_array *v10; // x8
 
-  if ( (byte_4CBAA71 & 1) == 0 )
+  if ( (byte_4CCBBCA & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA71 = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBCA = 1;
   }
   v3 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -765,7 +789,7 @@ bool Localization__HasLanguage(System_String_o *languageName, const MethodInfo *
       if ( !v10 )
         break;
       if ( v6 >= LODWORD(v10->max_length) )
-        sub_1C6BC68(v3);
+        sub_1C71610(v3);
       if ( System_String__op_Equality(v10->m_Items[v6], languageName, 0) )
         return v9;
       v9 = (__int64)(v6 + 1) < v7;
@@ -775,7 +799,7 @@ bool Localization__HasLanguage(System_String_o *languageName, const MethodInfo *
       ++v6;
     }
 LABEL_17:
-    sub_1C6BC60(v3, method);
+    sub_1C71608(v3, method);
   }
   return 0;
 }
@@ -791,21 +815,21 @@ void Localization__Load(UnityEngine_TextAsset_o *asset, const MethodInfo *method
   const MethodInfo *v8; // x2
   System_Collections_Generic_Dictionary_string__string__o *Dictionary; // x20
 
-  if ( (byte_4CBAA6D & 1) == 0 )
+  if ( (byte_4CCBBC6 & 1) == 0 )
   {
-    sub_1C6BA08(&ByteReader_TypeInfo);
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA6D = 1;
+    sub_1C713B0(&ByteReader_TypeInfo);
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBC6 = 1;
   }
-  v3 = (ByteReader_o *)sub_1C6BC54(ByteReader_TypeInfo);
-  ByteReader___ctor_49571256(v3, asset, v4);
+  v3 = (ByteReader_o *)sub_1C715FC(ByteReader_TypeInfo);
+  ByteReader___ctor_49636188(v3, asset, v4);
   if ( !asset || (name = UnityEngine_Object__get_name((UnityEngine_Object_o *)asset, 0), !v3) )
-    sub_1C6BC60(name, v6);
+    sub_1C71608(name, v6);
   v7 = name;
   Dictionary = ByteReader__ReadDictionary(v3, v6);
   if ( !Localization_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-  Localization__Set_49585940(v7, Dictionary, v8);
+  Localization__Set_49650872(v7, Dictionary, v8);
 }
 
 
@@ -818,15 +842,15 @@ bool Localization__LoadAndSelect(System_String_o *value, const MethodInfo *metho
   Localization_c *v7; // x0
   Localization_c *v9; // x0
 
-  if ( (byte_4CBAA6C & 1) == 0 )
+  if ( (byte_4CCBBC5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____get_Count__);
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8352/*"Language"*/);
-    byte_4CBAA6C = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____get_Count__);
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&StringLiteral_8356/*"Language"*/);
+    byte_4CCBBC5 = 1;
   }
   if ( !System_String__IsNullOrEmpty(value, 0) )
   {
@@ -841,7 +865,7 @@ bool Localization__LoadAndSelect(System_String_o *value, const MethodInfo *metho
       goto LABEL_26;
     if ( !System_Collections_Generic_Dictionary_object__object___get_Count(
             mDictionary,
-            (const MethodInfo_34BB60C *)Method_System_Collections_Generic_Dictionary_string__string____get_Count__) )
+            (const MethodInfo_34CB3B0 *)Method_System_Collections_Generic_Dictionary_string__string____get_Count__) )
     {
       if ( !Localization_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
@@ -864,7 +888,7 @@ bool Localization__LoadAndSelect(System_String_o *value, const MethodInfo *metho
     goto LABEL_26;
   if ( System_Collections_Generic_Dictionary_object__object___get_Count(
          mDictionary,
-         (const MethodInfo_34BB60C *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) > 0 )
+         (const MethodInfo_34CB3B0 *)Method_System_Collections_Generic_Dictionary_string__string__get_Count__) > 0 )
     return 1;
   v9 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -876,17 +900,17 @@ bool Localization__LoadAndSelect(System_String_o *value, const MethodInfo *metho
   if ( !mDictionary
     || (System_Collections_Generic_Dictionary_object__object___Clear(
           mDictionary,
-          (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__),
+          (const MethodInfo_34CB868 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__),
         (mDictionary = (System_Collections_Generic_Dictionary_object__object__o *)Localization_TypeInfo->static_fields->mDictionary) == 0) )
   {
 LABEL_26:
-    sub_1C6BC60(mDictionary, v3);
+    sub_1C71608(mDictionary, v3);
   }
   System_Collections_Generic_Dictionary_object__object___Clear(
     mDictionary,
-    (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__string____Clear__);
+    (const MethodInfo_34CB868 *)Method_System_Collections_Generic_Dictionary_string__string____Clear__);
   if ( System_String__IsNullOrEmpty(value, 0) )
-    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8352/*"Language"*/, 0);
+    UnityEngine_PlayerPrefs__DeleteKey((System_String_o *)StringLiteral_8356/*"Language"*/, 0);
   return 0;
 }
 
@@ -900,37 +924,37 @@ bool Localization__LoadCSV(UnityEngine_TextAsset_o *asset, bool merge, const Met
   System_Byte_array *bytes; // x20
 
   v4 = asset;
-  if ( (byte_4CBAA6F & 1) == 0 )
+  if ( (byte_4CCBBC8 & 1) == 0 )
   {
-    asset = (UnityEngine_TextAsset_o *)sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA6F = 1;
+    asset = (UnityEngine_TextAsset_o *)sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBC8 = 1;
   }
   if ( !v4 )
-    sub_1C6BC60(asset, merge);
+    sub_1C71608(asset, merge);
   bytes = UnityEngine_TextAsset__get_bytes(v4, 0);
   if ( !Localization_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-  return Localization__LoadCSV_49586476(bytes, v5, merge, v6);
+  return Localization__LoadCSV_49651408(bytes, v5, merge, v6);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-bool Localization__LoadCSV_49584936(System_Byte_array *bytes, bool merge, const MethodInfo *method)
+bool Localization__LoadCSV_49649868(System_Byte_array *bytes, bool merge, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4CBAA70 & 1) == 0 )
+  if ( (byte_4CCBBC9 & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA70 = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBC9 = 1;
   }
   if ( !Localization_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-  return Localization__LoadCSV_49586476(bytes, (UnityEngine_TextAsset_o *)merge, merge, v3);
+  return Localization__LoadCSV_49651408(bytes, (UnityEngine_TextAsset_o *)merge, merge, v3);
 }
 
 
-bool Localization__LoadCSV_49586476(
+bool Localization__LoadCSV_49651408(
         System_Byte_array *bytes,
         UnityEngine_TextAsset_o *asset,
         bool merge,
@@ -938,299 +962,339 @@ bool Localization__LoadCSV_49586476(
 {
   __int64 v6; // x24
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  const MethodInfo *v13; // x1
   BetterList_T__o *CSV; // x0
-  const MethodInfo *v11; // x1
-  BetterList_T__o *v12; // x20
-  Localization_c *v13; // x0
+  const MethodInfo *v15; // x1
+  BetterList_T__o *v16; // x20
+  Localization_c *v17; // x0
   bool IsNullOrEmpty; // w0
-  Localization_c *v15; // x8
+  Localization_c *v19; // x8
   struct Localization_StaticFields *static_fields; // x9
   struct System_String_array *mLanguages; // x9
-  __int64 v18; // x0
-  __int64 v19; // x21
-  unsigned __int64 v20; // x22
-  CGThumbnailListItem_o *v21; // x23
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  __int64 v22; // x0
+  __int64 v23; // x21
+  unsigned __int64 v24; // x22
+  GrandQuestFolderBoardItem_o *v25; // x23
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
   signed __int64 size; // x8
   int32_t i; // w22
-  const MethodInfo *v26; // x1
+  const MethodInfo *v34; // x1
   Il2CppObject *Item; // x23
-  Localization_c *v28; // x0
-  struct Localization_StaticFields *v29; // x0
-  struct System_String_array *v30; // x8
-  struct System_String_array *v31; // t1
+  Localization_c *v36; // x0
+  struct Localization_StaticFields *v37; // x0
+  struct System_String_array *v38; // x8
+  struct System_String_array *v39; // t1
   il2cpp_array_size_t max_length; // x19
-  struct System_String_array *v33; // x23
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
-  BetterList_T__o *v36; // x1
-  Il2CppClass **v37; // x0
-  System_Collections_Generic_Dictionary_object__object__o *v38; // x23
-  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
-  __int64 v40; // x0
-  __int64 v41; // x1
+  struct System_String_array *v41; // x23
   int32_t v42; // w2
-  const MethodInfo *v43; // x3
-  unsigned int v44; // w9
-  Il2CppObject *v45; // x1
-  Il2CppClass **v46; // x0
-  __int64 v47; // x0
-  __int64 v48; // x1
-  int32_t v49; // w2
-  const MethodInfo *v50; // x3
-  Localization_c *v51; // x0
-  struct Localization_StaticFields *v52; // x0
-  __int64 v54; // x0
-  struct Localization_StaticFields *v55; // x8
-  int32_t v56; // w2
-  const MethodInfo *v57; // x3
-  Localization_c *v58; // x0
-  Il2CppObject *v59; // x0
+  int32_t v43; // w3
+  System_String_o *v44; // x4
+  int32_t v45; // w5
+  int64_t v46; // x6
+  System_String_o *v47; // x7
+  BetterList_T__o *v48; // x1
+  Il2CppClass **v49; // x0
+  System_Collections_Generic_Dictionary_object__object__o *v50; // x23
+  struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
+  __int64 v52; // x0
+  __int64 v53; // x1
+  int32_t v54; // w2
+  int32_t v55; // w3
+  System_String_o *v56; // x4
+  int32_t v57; // w5
+  int64_t v58; // x6
+  System_String_o *v59; // x7
+  unsigned int v60; // w9
+  Il2CppObject *v61; // x1
+  Il2CppClass **v62; // x0
+  __int64 v63; // x0
+  __int64 v64; // x1
+  int32_t v65; // w2
+  int32_t v66; // w3
+  System_String_o *v67; // x4
+  int32_t v68; // w5
+  int64_t v69; // x6
+  System_String_o *v70; // x7
+  Localization_c *v71; // x0
+  struct Localization_StaticFields *v72; // x0
+  __int64 v74; // x0
+  struct Localization_StaticFields *v75; // x8
+  int32_t v76; // w2
+  int32_t v77; // w3
+  System_String_o *v78; // x4
+  int32_t v79; // w5
+  int64_t v80; // x6
+  System_String_o *v81; // x7
+  Localization_c *v82; // x0
+  Il2CppObject *v83; // x0
   System_String_o *String; // x0
-  int32_t v61; // w2
-  const MethodInfo *v62; // x3
-  Localization_c *v63; // x8
-  System_String_o *v64; // x21
-  struct Localization_StaticFields *v65; // x0
-  unsigned __int64 v66; // x21
+  int32_t v85; // w2
+  int32_t v86; // w3
+  System_String_o *v87; // x4
+  int32_t v88; // w5
+  int64_t v89; // x6
+  System_String_o *v90; // x7
+  Localization_c *v91; // x8
+  System_String_o *v92; // x21
+  struct Localization_StaticFields *v93; // x0
+  unsigned __int64 v94; // x21
   __int64 j; // x19
-  struct System_String_array *v68; // x23
-  int32_t v69; // w2
-  const MethodInfo *v70; // x3
-  struct Localization_StaticFields *v71; // x8
-  struct System_String_array *v72; // x9
-  Localization_c *v73; // x0
-  System_Collections_Generic_Dictionary_object__int__o *v74; // x20
+  struct System_String_array *v96; // x23
+  int32_t v97; // w2
+  int32_t v98; // w3
+  System_String_o *v99; // x4
+  int32_t v100; // w5
+  int64_t v101; // x6
+  System_String_o *v102; // x7
+  struct Localization_StaticFields *v103; // x8
+  struct System_String_array *v104; // x9
+  Localization_c *v105; // x0
+  System_Collections_Generic_Dictionary_object__int__o *v106; // x20
   unsigned __int64 k; // x22
-  struct System_String_array *v76; // x8
-  BetterList_string__o *v77; // x0
-  int32_t v78; // w2
-  const MethodInfo *v79; // x3
-  BetterList_T__o *v80; // x22
-  Il2CppObject *v81; // x0
-  const MethodInfo *v82; // x1
-  const MethodInfo *v83; // x3
-  Localization_c *v84; // x0
-  struct Localization_StaticFields *v85; // x8
+  struct System_String_array *v108; // x8
+  BetterList_string__o *v109; // x0
+  int32_t v110; // w2
+  int32_t v111; // w3
+  System_String_o *v112; // x4
+  int32_t v113; // w5
+  int64_t v114; // x6
+  System_String_o *v115; // x7
+  BetterList_T__o *v116; // x22
+  Il2CppObject *v117; // x0
+  const MethodInfo *v118; // x1
+  const MethodInfo *v119; // x3
+  Localization_c *v120; // x0
+  struct Localization_StaticFields *v121; // x8
   struct Localization_OnLocalizeNotification_o *onLocalize; // x19
-  struct Localization_StaticFields *v87; // x0
-  int32_t v88; // w2
-  const MethodInfo *v89; // x3
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v90; // [xsp+10h] [xbp-C0h] BYREF
+  struct Localization_StaticFields *v123; // x0
+  int32_t v124; // w2
+  int32_t v125; // w3
+  System_String_o *v126; // x4
+  int32_t v127; // w5
+  int64_t v128; // x6
+  System_String_o *v129; // x7
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v130; // [xsp+10h] [xbp-C0h] BYREF
   System_Object_array *array; // [xsp+38h] [xbp-98h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v92; // [xsp+40h] [xbp-90h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v132; // [xsp+40h] [xbp-90h] BYREF
 
-  if ( (byte_4CBAA72 & 1) == 0 )
+  if ( (byte_4CCBBCB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Array_Resize_string___);
-    sub_1C6BA08(&Method_BetterList_string__RemoveAt__);
-    sub_1C6BA08(&Method_BetterList_string__get_Item__);
-    sub_1C6BA08(&ByteReader_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string_____ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__string____TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string____Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string____MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string____get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_string__string____get_Key__);
-    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_string__string____get_Value__);
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&string___TypeInfo);
-    sub_1C6BA08(&StringLiteral_8352/*"Language"*/);
-    byte_4CBAA72 = 1;
+    sub_1C713B0(&Method_System_Array_Resize_string___);
+    sub_1C713B0(&Method_BetterList_string__RemoveAt__);
+    sub_1C713B0(&Method_BetterList_string__get_Item__);
+    sub_1C713B0(&ByteReader_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string_____ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_string__string____TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string____Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string____MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__string____get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_KeyValuePair_string__string____get_Key__);
+    sub_1C713B0(&Method_System_Collections_Generic_KeyValuePair_string__string____get_Value__);
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&string___TypeInfo);
+    sub_1C713B0(&StringLiteral_8356/*"Language"*/);
+    byte_4CCBBCB = 1;
   }
-  memset(&v92, 0, sizeof(v92));
+  memset(&v132, 0, sizeof(v132));
   array = 0;
   if ( !bytes )
     return 0;
-  v6 = sub_1C6BC54(ByteReader_TypeInfo);
+  v6 = sub_1C715FC(ByteReader_TypeInfo);
   System_Object___ctor((Il2CppObject *)v6, 0);
   *(_QWORD *)(v6 + 16) = bytes;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 16), (int32_t)bytes, v7, v8);
-  CSV = (BetterList_T__o *)ByteReader__ReadCSV((ByteReader_o *)v6, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v6 + 16), (int32_t)bytes, v7, v8, v9, v10, v11, v12);
+  CSV = (BetterList_T__o *)ByteReader__ReadCSV((ByteReader_o *)v6, v13);
   if ( !CSV )
     goto LABEL_110;
-  v12 = CSV;
+  v16 = CSV;
   if ( CSV->fields.size < 2 )
     return 0;
-  BetterList_object___RemoveAt(CSV, 0, (const MethodInfo_3371D5C *)Method_BetterList_string__RemoveAt__);
-  v13 = Localization_TypeInfo;
+  BetterList_object___RemoveAt(CSV, 0, (const MethodInfo_3381B00 *)Method_BetterList_string__RemoveAt__);
+  v17 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-    v13 = Localization_TypeInfo;
+    v17 = Localization_TypeInfo;
   }
-  IsNullOrEmpty = System_String__IsNullOrEmpty(v13->static_fields->mLanguage, 0);
-  v15 = Localization_TypeInfo;
+  IsNullOrEmpty = System_String__IsNullOrEmpty(v17->static_fields->mLanguage, 0);
+  v19 = Localization_TypeInfo;
   if ( IsNullOrEmpty )
   {
     if ( !Localization_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-      v15 = Localization_TypeInfo;
+      v19 = Localization_TypeInfo;
     }
-    v15->static_fields->localizationHasBeenSet = 0;
+    v19->static_fields->localizationHasBeenSet = 0;
   }
-  if ( !v15->_2.cctor_finished )
+  if ( !v19->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v15);
-    v15 = Localization_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v19);
+    v19 = Localization_TypeInfo;
   }
-  static_fields = v15->static_fields;
+  static_fields = v19->static_fields;
   if ( !static_fields->localizationHasBeenSet )
     goto LABEL_114;
   if ( !merge )
   {
-    if ( !v15->_2.cctor_finished )
+    if ( !v19->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v15);
-      v15 = Localization_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v19);
+      v19 = Localization_TypeInfo;
       static_fields = Localization_TypeInfo->static_fields;
     }
     if ( !static_fields->mMerging )
       goto LABEL_114;
   }
-  if ( !v15->_2.cctor_finished )
+  if ( !v19->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v15);
-    v15 = Localization_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v19);
+    v19 = Localization_TypeInfo;
   }
-  mLanguages = v15->static_fields->mLanguages;
+  mLanguages = v19->static_fields->mLanguages;
   if ( !mLanguages )
     goto LABEL_114;
-  if ( !v15->_2.cctor_finished )
+  if ( !v19->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v15);
-    v15 = Localization_TypeInfo;
+    j_il2cpp_runtime_class_init_0(v19);
+    v19 = Localization_TypeInfo;
     mLanguages = Localization_TypeInfo->static_fields->mLanguages;
     if ( !mLanguages )
       goto LABEL_110;
   }
   if ( mLanguages->max_length )
   {
-    v18 = sub_1C6BAB0(string___TypeInfo, (unsigned int)v12->fields.size);
-    v19 = v18;
-    if ( v12->fields.size >= 1 )
+    v22 = sub_1C71458(string___TypeInfo, (unsigned int)v16->fields.size);
+    v23 = v22;
+    if ( v16->fields.size >= 1 )
     {
-      v20 = 0;
-      v21 = (CGThumbnailListItem_o *)(v18 + 32);
+      v24 = 0;
+      v25 = (GrandQuestFolderBoardItem_o *)(v22 + 32);
       do
       {
         CSV = (BetterList_T__o *)BetterList_object___get_Item(
-                                   v12,
-                                   v20,
-                                   (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
-        if ( !v19 )
+                                   v16,
+                                   v24,
+                                   (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
+        if ( !v23 )
           goto LABEL_110;
-        if ( v20 >= *(unsigned int *)(v19 + 24) )
+        if ( v24 >= *(unsigned int *)(v23 + 24) )
           goto LABEL_111;
-        v21->klass = (CGThumbnailListItem_c *)CSV;
-        sub_1C6B9AC(v21, (int32_t)CSV, v22, v23);
-        size = v12->fields.size;
-        ++v20;
-        v21 = (CGThumbnailListItem_o *)((char *)v21 + 8);
+        v25->klass = (GrandQuestFolderBoardItem_c *)CSV;
+        sub_1C71354(v25, (int32_t)CSV, v26, v27, v28, v29, v30, v31);
+        size = v16->fields.size;
+        ++v24;
+        v25 = (GrandQuestFolderBoardItem_o *)((char *)v25 + 8);
       }
-      while ( (__int64)v20 < size );
+      while ( (__int64)v24 < size );
       if ( (int)size >= 1 )
       {
-        for ( i = 0; i < v12->fields.size; ++i )
+        for ( i = 0; i < v16->fields.size; ++i )
         {
-          Item = BetterList_object___get_Item(v12, i, (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
+          Item = BetterList_object___get_Item(v16, i, (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
           if ( !Localization_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-          if ( !Localization__HasLanguage((System_String_o *)Item, v26) )
+          if ( !Localization__HasLanguage((System_String_o *)Item, v34) )
           {
-            v28 = Localization_TypeInfo;
+            v36 = Localization_TypeInfo;
             if ( !Localization_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-              v28 = Localization_TypeInfo;
+              v36 = Localization_TypeInfo;
             }
-            v29 = v28->static_fields;
-            v31 = v29->mLanguages;
-            CSV = (BetterList_T__o *)&v29->mLanguages;
-            v30 = v31;
-            if ( !v31 )
+            v37 = v36->static_fields;
+            v39 = v37->mLanguages;
+            CSV = (BetterList_T__o *)&v37->mLanguages;
+            v38 = v39;
+            if ( !v39 )
               goto LABEL_110;
-            max_length = v30->max_length;
+            max_length = v38->max_length;
             System_Array__Resize_object_(
               (System_Object_array **)CSV,
               max_length + 1,
-              (const MethodInfo_30F9474 *)Method_System_Array_Resize_string___);
-            v33 = Localization_TypeInfo->static_fields->mLanguages;
+              (const MethodInfo_3109218 *)Method_System_Array_Resize_string___);
+            v41 = Localization_TypeInfo->static_fields->mLanguages;
             CSV = (BetterList_T__o *)BetterList_object___get_Item(
-                                       v12,
+                                       v16,
                                        i,
-                                       (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
-            if ( !v33 )
+                                       (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
+            if ( !v41 )
               goto LABEL_110;
-            if ( (unsigned int)max_length >= LODWORD(v33->max_length) )
+            if ( (unsigned int)max_length >= LODWORD(v41->max_length) )
               goto LABEL_111;
-            v36 = CSV;
-            v37 = &v33->obj.klass + (int)max_length;
-            v37[4] = (Il2CppClass *)v36;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v37 + 4), (int32_t)v36, v34, v35);
-            v38 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__string____TypeInfo);
+            v48 = CSV;
+            v49 = &v41->obj.klass + (int)max_length;
+            v49[4] = (Il2CppClass *)v48;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v49 + 4), (int32_t)v48, v42, v43, v44, v45, v46, v47);
+            v50 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_string__string____TypeInfo);
             System_Collections_Generic_Dictionary_object__object____ctor(
-              v38,
-              (const MethodInfo_34BAF8C *)Method_System_Collections_Generic_Dictionary_string__string_____ctor__);
+              v50,
+              (const MethodInfo_34CAD30 *)Method_System_Collections_Generic_Dictionary_string__string_____ctor__);
             CSV = (BetterList_T__o *)Localization_TypeInfo->static_fields->mDictionary;
             if ( !CSV )
               goto LABEL_110;
             System_Collections_Generic_Dictionary_object__object___GetEnumerator(
-              &v90,
+              &v130,
               (System_Collections_Generic_Dictionary_object__object__o *)CSV,
-              (const MethodInfo_34BBD6C *)Method_System_Collections_Generic_Dictionary_string__string____GetEnumerator__);
-            v92 = v90;
+              (const MethodInfo_34CBB10 *)Method_System_Collections_Generic_Dictionary_string__string____GetEnumerator__);
+            v132 = v130;
             while ( System_Collections_Generic_Dictionary_Enumerator_object__object___MoveNext(
-                      &v92,
-                      (const MethodInfo_35B8FF4 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string____MoveNext__) )
+                      &v132,
+                      (const MethodInfo_35C8D98 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string____MoveNext__) )
             {
-              current = v92.fields._current;
-              array = (System_Object_array *)v92.fields._current.fields.value;
+              current = v132.fields._current;
+              array = (System_Object_array *)v132.fields._current.fields.value;
               System_Array__Resize_object_(
                 &array,
                 max_length + 1,
-                (const MethodInfo_30F9474 *)Method_System_Array_Resize_string___);
+                (const MethodInfo_3109218 *)Method_System_Array_Resize_string___);
               if ( !array )
-                sub_1C6BC60(v40, v41);
-              v44 = array->max_length;
-              if ( !v44 )
-                sub_1C6BC68(v40);
-              if ( (unsigned int)max_length >= v44 )
-                sub_1C6BC68(v40);
-              v45 = array->m_Items[0];
-              v46 = &array->obj.klass + (int)max_length;
-              v46[4] = (Il2CppClass *)v45;
-              sub_1C6B9AC((CGThumbnailListItem_o *)(v46 + 4), (int32_t)v45, v42, v43);
-              if ( !v38 )
-                sub_1C6BC60(v47, v48);
+                sub_1C71608(v52, v53);
+              v60 = array->max_length;
+              if ( !v60 )
+                sub_1C71610(v52);
+              if ( (unsigned int)max_length >= v60 )
+                sub_1C71610(v52);
+              v61 = array->m_Items[0];
+              v62 = &array->obj.klass + (int)max_length;
+              v62[4] = (Il2CppClass *)v61;
+              sub_1C71354((GrandQuestFolderBoardItem_o *)(v62 + 4), (int32_t)v61, v54, v55, v56, v57, v58, v59);
+              if ( !v50 )
+                sub_1C71608(v63, v64);
               System_Collections_Generic_Dictionary_object__object___Add(
-                v38,
+                v50,
                 current.fields.key,
                 &array->obj,
-                (const MethodInfo_34BB93C *)Method_System_Collections_Generic_Dictionary_string__string____Add__);
+                (const MethodInfo_34CB6E0 *)Method_System_Collections_Generic_Dictionary_string__string____Add__);
             }
             System_Collections_Generic_Dictionary_Enumerator_object__object___Dispose(
-              &v92,
-              (const MethodInfo_35B9114 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string____Dispose__);
-            v51 = Localization_TypeInfo;
+              &v132,
+              (const MethodInfo_35C8EB8 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__string____Dispose__);
+            v71 = Localization_TypeInfo;
             if ( !Localization_TypeInfo->_2.cctor_finished )
             {
               j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-              v51 = Localization_TypeInfo;
+              v71 = Localization_TypeInfo;
             }
-            v52 = v51->static_fields;
-            v52->mDictionary = (struct System_Collections_Generic_Dictionary_string__string____o *)v38;
-            sub_1C6B9AC((CGThumbnailListItem_o *)&v52->mDictionary, (int32_t)v38, v49, v50);
+            v72 = v71->static_fields;
+            v72->mDictionary = (struct System_Collections_Generic_Dictionary_string__string____o *)v50;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)&v72->mDictionary, (int32_t)v50, v65, v66, v67, v68, v69, v70);
           }
         }
       }
@@ -1239,90 +1303,90 @@ bool Localization__LoadCSV_49586476(
   else
   {
 LABEL_114:
-    if ( !v15->_2.cctor_finished )
+    if ( !v19->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v15);
-      v15 = Localization_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v19);
+      v19 = Localization_TypeInfo;
     }
-    CSV = (BetterList_T__o *)v15->static_fields->mDictionary;
+    CSV = (BetterList_T__o *)v19->static_fields->mDictionary;
     if ( !CSV )
       goto LABEL_110;
     System_Collections_Generic_Dictionary_object__object___Clear(
       (System_Collections_Generic_Dictionary_object__object__o *)CSV,
-      (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__string____Clear__);
-    v54 = sub_1C6BAB0(string___TypeInfo, (unsigned int)v12->fields.size);
-    v55 = Localization_TypeInfo->static_fields;
-    v55->mLanguages = (struct System_String_array *)v54;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v55->mLanguages, v54, v56, v57);
-    v58 = Localization_TypeInfo;
+      (const MethodInfo_34CB868 *)Method_System_Collections_Generic_Dictionary_string__string____Clear__);
+    v74 = sub_1C71458(string___TypeInfo, (unsigned int)v16->fields.size);
+    v75 = Localization_TypeInfo->static_fields;
+    v75->mLanguages = (struct System_String_array *)v74;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v75->mLanguages, v74, v76, v77, v78, v79, v80, v81);
+    v82 = Localization_TypeInfo;
     if ( !Localization_TypeInfo->static_fields->localizationHasBeenSet )
     {
-      v59 = BetterList_object___get_Item(v12, 0, (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
-      String = UnityEngine_PlayerPrefs__GetString((System_String_o *)StringLiteral_8352/*"Language"*/, (System_String_o *)v59, 0);
-      v63 = Localization_TypeInfo;
-      v64 = String;
+      v83 = BetterList_object___get_Item(v16, 0, (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
+      String = UnityEngine_PlayerPrefs__GetString((System_String_o *)StringLiteral_8356/*"Language"*/, (System_String_o *)v83, 0);
+      v91 = Localization_TypeInfo;
+      v92 = String;
       if ( !Localization_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-        v63 = Localization_TypeInfo;
+        v91 = Localization_TypeInfo;
       }
-      v65 = v63->static_fields;
-      v65->mLanguage = v64;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v65->mLanguage, (int32_t)v64, v61, v62);
-      v58 = Localization_TypeInfo;
+      v93 = v91->static_fields;
+      v93->mLanguage = v92;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&v93->mLanguage, (int32_t)v92, v85, v86, v87, v88, v89, v90);
+      v82 = Localization_TypeInfo;
       Localization_TypeInfo->static_fields->localizationHasBeenSet = 1;
     }
-    if ( v12->fields.size >= 1 )
+    if ( v16->fields.size >= 1 )
     {
-      v66 = 0;
+      v94 = 0;
       for ( j = 32; ; j += 8 )
       {
-        if ( !v58->_2.cctor_finished )
+        if ( !v82->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v58);
-          v58 = Localization_TypeInfo;
+          j_il2cpp_runtime_class_init_0(v82);
+          v82 = Localization_TypeInfo;
         }
-        v68 = v58->static_fields->mLanguages;
+        v96 = v82->static_fields->mLanguages;
         CSV = (BetterList_T__o *)BetterList_object___get_Item(
-                                   v12,
-                                   v66,
-                                   (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
-        if ( !v68 )
+                                   v16,
+                                   v94,
+                                   (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
+        if ( !v96 )
           break;
-        if ( v66 >= LODWORD(v68->max_length) )
+        if ( v94 >= LODWORD(v96->max_length) )
           goto LABEL_111;
-        *(Il2CppClass **)((char *)&v68->obj.klass + j) = (Il2CppClass *)CSV;
-        sub_1C6B9AC((CGThumbnailListItem_o *)((char *)v68 + j), (int32_t)CSV, v69, v70);
-        v71 = Localization_TypeInfo->static_fields;
-        v72 = v71->mLanguages;
-        if ( !v72 )
+        *(Il2CppClass **)((char *)&v96->obj.klass + j) = (Il2CppClass *)CSV;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)((char *)v96 + j), (int32_t)CSV, v97, v98, v99, v100, v101, v102);
+        v103 = Localization_TypeInfo->static_fields;
+        v104 = v103->mLanguages;
+        if ( !v104 )
           break;
-        if ( v66 >= LODWORD(v72->max_length) )
+        if ( v94 >= LODWORD(v104->max_length) )
 LABEL_111:
-          sub_1C6BC68(CSV);
-        if ( System_String__op_Equality(*(System_String_o **)((char *)&v72->obj.klass + j), v71->mLanguage, 0) )
+          sub_1C71610(CSV);
+        if ( System_String__op_Equality(*(System_String_o **)((char *)&v104->obj.klass + j), v103->mLanguage, 0) )
         {
-          v73 = Localization_TypeInfo;
+          v105 = Localization_TypeInfo;
           if ( !Localization_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-            v73 = Localization_TypeInfo;
+            v105 = Localization_TypeInfo;
           }
-          v73->static_fields->mLanguageIndex = v66;
+          v105->static_fields->mLanguageIndex = v94;
         }
-        if ( (__int64)++v66 >= v12->fields.size )
+        if ( (__int64)++v94 >= v16->fields.size )
           goto LABEL_79;
-        v58 = Localization_TypeInfo;
+        v82 = Localization_TypeInfo;
       }
       goto LABEL_110;
     }
 LABEL_79:
-    v19 = 0;
+    v23 = 0;
   }
-  v74 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v106 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C715FC(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
-    v74,
-    (const MethodInfo_34B2258 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    v106,
+    (const MethodInfo_34C1FFC *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   for ( k = 0; ; ++k )
   {
     CSV = (BetterList_T__o *)Localization_TypeInfo;
@@ -1331,87 +1395,87 @@ LABEL_79:
       j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
       CSV = (BetterList_T__o *)Localization_TypeInfo;
     }
-    v76 = *(struct System_String_array **)(*(_QWORD *)&CSV[5].fields.size + 24LL);
-    if ( !v76 )
+    v108 = *(struct System_String_array **)(*(_QWORD *)&CSV[5].fields.size + 24LL);
+    if ( !v108 )
       goto LABEL_110;
-    if ( (__int64)k >= SLODWORD(v76->max_length) )
+    if ( (__int64)k >= SLODWORD(v108->max_length) )
       break;
     if ( !LODWORD(CSV[7].klass) )
     {
       j_il2cpp_runtime_class_init_0(CSV);
-      v76 = Localization_TypeInfo->static_fields->mLanguages;
-      if ( !v76 )
+      v108 = Localization_TypeInfo->static_fields->mLanguages;
+      if ( !v108 )
         goto LABEL_110;
     }
-    if ( k >= LODWORD(v76->max_length) )
+    if ( k >= LODWORD(v108->max_length) )
       goto LABEL_111;
-    if ( !v74 )
+    if ( !v106 )
       goto LABEL_110;
     System_Collections_Generic_Dictionary_object__int___Add(
-      v74,
-      (Il2CppObject *)v76->m_Items[k],
+      v106,
+      (Il2CppObject *)v108->m_Items[k],
       k,
-      (const MethodInfo_34B2C0C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+      (const MethodInfo_34C29B0 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
   }
-  v77 = ByteReader__ReadCSV((ByteReader_o *)v6, v11);
-  if ( v77 )
+  v109 = ByteReader__ReadCSV((ByteReader_o *)v6, v15);
+  if ( v109 )
   {
-    v80 = (BetterList_T__o *)v77;
+    v116 = (BetterList_T__o *)v109;
     do
     {
-      if ( !v80->fields.size )
+      if ( !v116->fields.size )
         break;
-      v81 = BetterList_object___get_Item(v80, 0, (const MethodInfo_3371714 *)Method_BetterList_string__get_Item__);
-      if ( !System_String__IsNullOrEmpty((System_String_o *)v81, 0) )
+      v117 = BetterList_object___get_Item(v116, 0, (const MethodInfo_33814B8 *)Method_BetterList_string__get_Item__);
+      if ( !System_String__IsNullOrEmpty((System_String_o *)v117, 0) )
       {
         if ( !Localization_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
         Localization__AddCSV(
-          (BetterList_string__o *)v80,
-          (System_String_array *)v19,
-          (System_Collections_Generic_Dictionary_string__int__o *)v74,
-          v83);
+          (BetterList_string__o *)v116,
+          (System_String_array *)v23,
+          (System_Collections_Generic_Dictionary_string__int__o *)v106,
+          v119);
       }
-      v80 = (BetterList_T__o *)ByteReader__ReadCSV((ByteReader_o *)v6, v82);
+      v116 = (BetterList_T__o *)ByteReader__ReadCSV((ByteReader_o *)v6, v118);
     }
-    while ( v80 );
+    while ( v116 );
   }
-  v84 = Localization_TypeInfo;
+  v120 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-    v84 = Localization_TypeInfo;
+    v120 = Localization_TypeInfo;
   }
-  v85 = v84->static_fields;
-  if ( v85->mMerging )
+  v121 = v120->static_fields;
+  if ( v121->mMerging )
     return 1;
-  if ( !v84->_2.cctor_finished )
+  if ( !v120->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v84);
-    v84 = Localization_TypeInfo;
-    v85 = Localization_TypeInfo->static_fields;
+    j_il2cpp_runtime_class_init_0(v120);
+    v120 = Localization_TypeInfo;
+    v121 = Localization_TypeInfo->static_fields;
   }
-  onLocalize = v85->onLocalize;
+  onLocalize = v121->onLocalize;
   if ( !onLocalize )
     return 1;
-  if ( !v84->_2.cctor_finished )
+  if ( !v120->_2.cctor_finished )
   {
-    j_il2cpp_runtime_class_init_0(v84);
-    v85 = Localization_TypeInfo->static_fields;
-    onLocalize = v85->onLocalize;
+    j_il2cpp_runtime_class_init_0(v120);
+    v121 = Localization_TypeInfo->static_fields;
+    onLocalize = v121->onLocalize;
   }
-  v85->onLocalize = 0;
-  v85->mMerging = 1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v85->onLocalize, 0, v78, v79);
+  v121->onLocalize = 0;
+  v121->mMerging = 1;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v121->onLocalize, 0, v110, v111, v112, v113, v114, v115);
   if ( !onLocalize )
 LABEL_110:
-    sub_1C6BC60(CSV, v11);
+    sub_1C71608(CSV, v15);
   ((void (__fastcall *)(intptr_t, intptr_t))onLocalize->fields.invoke_impl)(
     onLocalize->fields.method_code,
     onLocalize->fields.method);
-  v87 = Localization_TypeInfo->static_fields;
-  v87->onLocalize = onLocalize;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v87->onLocalize, (int32_t)onLocalize, v88, v89);
+  v123 = Localization_TypeInfo->static_fields;
+  v123->onLocalize = onLocalize;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v123->onLocalize, (int32_t)onLocalize, v124, v125, v126, v127, v128, v129);
   Localization_TypeInfo->static_fields->mMerging = 0;
   return 1;
 }
@@ -1434,13 +1498,13 @@ bool Localization__LoadDictionary(System_String_o *value, const MethodInfo *meth
   const MethodInfo *v15; // x2
   Il2CppObject *v16; // x21
 
-  if ( (byte_4CBAA6B & 1) == 0 )
+  if ( (byte_4CCBBC4 & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_TextAsset___);
-    sub_1C6BA08(&StringLiteral_8481/*"Localization"*/);
-    byte_4CBAA6B = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_TextAsset___);
+    sub_1C713B0(&StringLiteral_8485/*"Localization"*/);
+    byte_4CCBBC4 = 1;
   }
   v4 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -1470,14 +1534,14 @@ bool Localization__LoadDictionary(System_String_o *value, const MethodInfo *meth
     }
     bytes = (System_Byte_array *)((__int64 (__fastcall *)(intptr_t, __int64, intptr_t))loadFunction->fields.invoke_impl)(
                                    loadFunction->fields.method_code,
-                                   StringLiteral_8481/*"Localization"*/,
+                                   StringLiteral_8485/*"Localization"*/,
                                    loadFunction->fields.method);
   }
   else
   {
     object = UnityEngine_Resources__Load_object_(
-               (System_String_o *)StringLiteral_8481/*"Localization"*/,
-               (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_TextAsset___);
+               (System_String_o *)StringLiteral_8485/*"Localization"*/,
+               (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_TextAsset___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)object, 0, 0);
@@ -1500,7 +1564,7 @@ LABEL_19:
 LABEL_22:
   if ( !v4->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(v4);
-  if ( Localization__LoadCSV_49584936(v5, 0, v2) )
+  if ( Localization__LoadCSV_49649868(v5, 0, v2) )
     return 1;
   if ( System_String__IsNullOrEmpty(value, 0) )
   {
@@ -1539,7 +1603,7 @@ LABEL_41:
     {
       v16 = UnityEngine_Resources__Load_object_(
               value,
-              (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_TextAsset___);
+              (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_TextAsset___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v7 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v16, 0, 0);
@@ -1562,7 +1626,7 @@ LABEL_42:
       }
     }
 LABEL_48:
-    sub_1C6BC60(v7, v8);
+    sub_1C71608(v7, v8);
   }
   return 0;
 }
@@ -1570,10 +1634,10 @@ LABEL_48:
 
 System_String_o *Localization__Localize(System_String_o *key, const MethodInfo *method)
 {
-  if ( (byte_4CBAA7A & 1) == 0 )
+  if ( (byte_4CCBBD3 & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA7A = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBD3 = 1;
   }
   if ( !Localization_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
@@ -1593,20 +1657,24 @@ bool Localization__SelectLanguage(System_String_o *language, const MethodInfo *m
   __int64 v10; // x22
   struct System_String_array *v11; // x8
   Localization_c *v12; // x0
-  CGThumbnailListItem_o *v13; // x0
+  GrandQuestFolderBoardItem_o *v13; // x0
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   struct Localization_OnLocalizeNotification_o *onLocalize; // x8
 
-  if ( (byte_4CBAA75 & 1) == 0 )
+  if ( (byte_4CCBBCE & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string____get_Count__);
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&UIRoot_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8352/*"Language"*/);
-    sub_1C6BA08(&StringLiteral_9916/*"OnLocalize"*/);
-    byte_4CBAA75 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string____get_Count__);
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&UIRoot_TypeInfo);
+    sub_1C713B0(&StringLiteral_8356/*"Language"*/);
+    sub_1C713B0(&StringLiteral_9921/*"OnLocalize"*/);
+    byte_4CCBBCE = 1;
   }
   v3 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -1621,7 +1689,7 @@ bool Localization__SelectLanguage(System_String_o *language, const MethodInfo *m
     goto LABEL_31;
   Count = System_Collections_Generic_Dictionary_object__object___get_Count(
             (System_Collections_Generic_Dictionary_object__object__o *)mDictionary,
-            (const MethodInfo_34BB60C *)Method_System_Collections_Generic_Dictionary_string__string____get_Count__);
+            (const MethodInfo_34CB3B0 *)Method_System_Collections_Generic_Dictionary_string__string____get_Count__);
   if ( !Count )
     return Count;
   mDictionary = Localization_TypeInfo;
@@ -1653,7 +1721,7 @@ LABEL_19:
     if ( !v11 )
       goto LABEL_31;
     if ( v9 >= LODWORD(v11->max_length) )
-      sub_1C6BC68(mDictionary);
+      sub_1C71610(mDictionary);
     if ( System_String__op_Equality(v11->m_Items[v9], language, 0) )
       break;
     if ( v10 == v9 )
@@ -1672,14 +1740,14 @@ LABEL_19:
     goto LABEL_31;
   System_Collections_Generic_Dictionary_object__object___Clear(
     (System_Collections_Generic_Dictionary_object__object__o *)mDictionary,
-    (const MethodInfo_34BBAC4 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__);
-  v13 = (CGThumbnailListItem_o *)Localization_TypeInfo->static_fields;
+    (const MethodInfo_34CB868 *)Method_System_Collections_Generic_Dictionary_string__string__Clear__);
+  v13 = (GrandQuestFolderBoardItem_o *)Localization_TypeInfo->static_fields;
   v13->fields.sortStr1 = language;
-  v13 = (CGThumbnailListItem_o *)((char *)v13 + 56);
-  LODWORD(v13[-1].fields._ThumbnailSpritePath_k__BackingField) = v9;
-  sub_1C6B9AC(v13, (int32_t)language, v14, v15);
+  v13 = (GrandQuestFolderBoardItem_o *)((char *)v13 + 56);
+  LODWORD(v13[-1].fields._ClosedMessage_k__BackingField) = v9;
+  sub_1C71354(v13, (int32_t)language, v14, v15, v16, v17, v18, v19);
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_8352/*"Language"*/,
+    (System_String_o *)StringLiteral_8356/*"Language"*/,
     Localization_TypeInfo->static_fields->mLanguage,
     0);
   onLocalize = Localization_TypeInfo->static_fields->onLocalize;
@@ -1695,12 +1763,12 @@ LABEL_19:
       goto LABEL_27;
     }
 LABEL_31:
-    sub_1C6BC60(mDictionary, method);
+    sub_1C71608(mDictionary, method);
   }
 LABEL_27:
   if ( !UIRoot_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIRoot_TypeInfo);
-  UIRoot__Broadcast((System_String_o *)StringLiteral_9916/*"OnLocalize"*/, 0);
+  UIRoot__Broadcast((System_String_o *)StringLiteral_9921/*"OnLocalize"*/, 0);
   LOBYTE(Count) = 1;
   return Count;
 }
@@ -1710,89 +1778,117 @@ void Localization__Set(System_String_o *languageName, System_Byte_array *bytes, 
 {
   __int64 v5; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
-  const MethodInfo *v9; // x2
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  const MethodInfo *v12; // x1
+  const MethodInfo *v13; // x2
   System_Collections_Generic_Dictionary_string__string__o *Dictionary; // x20
 
-  if ( (byte_4CBAA6E & 1) == 0 )
+  if ( (byte_4CCBBC7 & 1) == 0 )
   {
-    sub_1C6BA08(&ByteReader_TypeInfo);
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA6E = 1;
+    sub_1C713B0(&ByteReader_TypeInfo);
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBC7 = 1;
   }
-  v5 = sub_1C6BC54(ByteReader_TypeInfo);
+  v5 = sub_1C715FC(ByteReader_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_QWORD *)(v5 + 16) = bytes;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)bytes, v6, v7);
-  Dictionary = ByteReader__ReadDictionary((ByteReader_o *)v5, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)bytes, v6, v7, v8, v9, v10, v11);
+  Dictionary = ByteReader__ReadDictionary((ByteReader_o *)v5, v12);
   if ( !Localization_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-  Localization__Set_49585940(languageName, Dictionary, v9);
+  Localization__Set_49650872(languageName, Dictionary, v13);
 }
 
 
-void Localization__Set_49585940(
+void Localization__Set_49650872(
         System_String_o *languageName,
         System_Collections_Generic_Dictionary_string__string__o *dictionary,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  Localization_c *v6; // x0
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  Localization_c *v10; // x0
   struct Localization_StaticFields *static_fields; // x0
-  struct Localization_StaticFields *v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  struct Localization_StaticFields *v11; // x8
-  __int64 v12; // x0
-  __int64 v13; // x1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  struct System_String_array *v16; // x20
-  struct Localization_StaticFields *v17; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  struct Localization_StaticFields *v12; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  struct Localization_StaticFields *v19; // x8
+  __int64 v20; // x0
+  __int64 v21; // x1
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
+  struct System_String_array *v28; // x20
+  struct Localization_StaticFields *v29; // x0
+  int32_t v30; // w2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  int32_t v33; // w5
+  int64_t v34; // x6
+  System_String_o *v35; // x7
   struct Localization_OnLocalizeNotification_o *onLocalize; // x8
 
-  if ( (byte_4CBAA76 & 1) == 0 )
+  if ( (byte_4CCBBCF & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&string___TypeInfo);
-    sub_1C6BA08(&UIRoot_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8352/*"Language"*/);
-    sub_1C6BA08(&StringLiteral_9916/*"OnLocalize"*/);
-    byte_4CBAA76 = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&string___TypeInfo);
+    sub_1C713B0(&UIRoot_TypeInfo);
+    sub_1C713B0(&StringLiteral_8356/*"Language"*/);
+    sub_1C713B0(&StringLiteral_9921/*"OnLocalize"*/);
+    byte_4CCBBCF = 1;
   }
-  v6 = Localization_TypeInfo;
+  v10 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-    v6 = Localization_TypeInfo;
+    v10 = Localization_TypeInfo;
   }
-  static_fields = v6->static_fields;
+  static_fields = v10->static_fields;
   static_fields->mLanguage = languageName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->mLanguage, (int32_t)languageName, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&static_fields->mLanguage,
+    (int32_t)languageName,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   UnityEngine_PlayerPrefs__SetString(
-    (System_String_o *)StringLiteral_8352/*"Language"*/,
+    (System_String_o *)StringLiteral_8356/*"Language"*/,
     Localization_TypeInfo->static_fields->mLanguage,
     0);
-  v8 = Localization_TypeInfo->static_fields;
-  v8->mOldDictionary = dictionary;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->mOldDictionary, (int32_t)dictionary, v9, v10);
-  v11 = Localization_TypeInfo->static_fields;
-  v11->localizationHasBeenSet = 1;
-  v11->mLanguageIndex = -1;
-  v12 = sub_1C6BAB0(string___TypeInfo, 1);
-  if ( !v12 )
+  v12 = Localization_TypeInfo->static_fields;
+  v12->mOldDictionary = dictionary;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v12->mOldDictionary, (int32_t)dictionary, v13, v14, v15, v16, v17, v18);
+  v19 = Localization_TypeInfo->static_fields;
+  v19->localizationHasBeenSet = 1;
+  v19->mLanguageIndex = -1;
+  v20 = sub_1C71458(string___TypeInfo, 1);
+  if ( !v20 )
     goto LABEL_14;
-  v16 = (struct System_String_array *)v12;
-  if ( !*(_DWORD *)(v12 + 24) )
-    sub_1C6BC68(v12);
-  *(_QWORD *)(v12 + 32) = languageName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 32), (int32_t)languageName, v14, v15);
-  v17 = Localization_TypeInfo->static_fields;
-  v17->mLanguages = v16;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v17->mLanguages, (int32_t)v16, v18, v19);
+  v28 = (struct System_String_array *)v20;
+  if ( !*(_DWORD *)(v20 + 24) )
+    sub_1C71610(v20);
+  *(_QWORD *)(v20 + 32) = languageName;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v20 + 32), (int32_t)languageName, v22, v23, v24, v25, v26, v27);
+  v29 = Localization_TypeInfo->static_fields;
+  v29->mLanguages = v28;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v29->mLanguages, (int32_t)v28, v30, v31, v32, v33, v34, v35);
   onLocalize = Localization_TypeInfo->static_fields->onLocalize;
   if ( onLocalize )
   {
@@ -1806,16 +1902,16 @@ void Localization__Set_49585940(
       goto LABEL_11;
     }
 LABEL_14:
-    sub_1C6BC60(v12, v13);
+    sub_1C71608(v20, v21);
   }
 LABEL_11:
   if ( !UIRoot_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIRoot_TypeInfo);
-  UIRoot__Broadcast((System_String_o *)StringLiteral_9916/*"OnLocalize"*/, 0);
+  UIRoot__Broadcast((System_String_o *)StringLiteral_9921/*"OnLocalize"*/, 0);
 }
 
 
-void Localization__Set_49590508(System_String_o *key, System_String_o *value, const MethodInfo *method)
+void Localization__Set_49655440(System_String_o *key, System_String_o *value, const MethodInfo *method)
 {
   Localization_c *v5; // x0
   System_Collections_Generic_Dictionary_object__object__o *mOldDictionary; // x0
@@ -1823,13 +1919,13 @@ void Localization__Set_49590508(System_String_o *key, System_String_o *value, co
   Localization_c *v8; // x8
   bool v9; // w21
 
-  if ( (byte_4CBAA77 & 1) == 0 )
+  if ( (byte_4CCBBD0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA77 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBD0 = 1;
   }
   v5 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -1843,7 +1939,7 @@ void Localization__Set_49590508(System_String_o *key, System_String_o *value, co
   v7 = System_Collections_Generic_Dictionary_object__object___ContainsKey(
          mOldDictionary,
          (Il2CppObject *)key,
-         (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
+         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__string__ContainsKey__);
   v8 = Localization_TypeInfo;
   v9 = v7;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -1854,19 +1950,19 @@ void Localization__Set_49590508(System_String_o *key, System_String_o *value, co
   mOldDictionary = (System_Collections_Generic_Dictionary_object__object__o *)v8->static_fields->mOldDictionary;
   if ( !mOldDictionary )
 LABEL_12:
-    sub_1C6BC60(mOldDictionary, value);
+    sub_1C71608(mOldDictionary, value);
   if ( v9 )
     System_Collections_Generic_Dictionary_object__object___set_Item(
       mOldDictionary,
       (Il2CppObject *)key,
       (Il2CppObject *)value,
-      (const MethodInfo_34BB928 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+      (const MethodInfo_34CB6CC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
   else
     System_Collections_Generic_Dictionary_object__object___Add(
       mOldDictionary,
       (Il2CppObject *)key,
       (Il2CppObject *)value,
-      (const MethodInfo_34BB93C *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
+      (const MethodInfo_34CB6E0 *)Method_System_Collections_Generic_Dictionary_string__string__Add__);
 }
 
 
@@ -1876,12 +1972,12 @@ System_Collections_Generic_Dictionary_string__string____o *Localization__get_dic
   const MethodInfo *v2; // x1
   System_String_o *String; // x19
 
-  if ( (byte_4CBAA66 & 1) == 0 )
+  if ( (byte_4CCBBBF & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8352/*"Language"*/);
-    sub_1C6BA08(&StringLiteral_6043/*"English"*/);
-    byte_4CBAA66 = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&StringLiteral_8356/*"Language"*/);
+    sub_1C713B0(&StringLiteral_6045/*"English"*/);
+    byte_4CCBBBF = 1;
   }
   v1 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -1892,8 +1988,8 @@ System_Collections_Generic_Dictionary_string__string____o *Localization__get_dic
   if ( !v1->static_fields->localizationHasBeenSet )
   {
     String = UnityEngine_PlayerPrefs__GetString(
-               (System_String_o *)StringLiteral_8352/*"Language"*/,
-               (System_String_o *)StringLiteral_6043/*"English"*/,
+               (System_String_o *)StringLiteral_8356/*"Language"*/,
+               (System_String_o *)StringLiteral_6045/*"English"*/,
                0);
     if ( !Localization_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
@@ -1921,12 +2017,12 @@ System_String_array *Localization__get_knownLanguages(const MethodInfo *method)
   const MethodInfo *v2; // x1
   System_String_o *String; // x19
 
-  if ( (byte_4CBAA68 & 1) == 0 )
+  if ( (byte_4CCBBC1 & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8352/*"Language"*/);
-    sub_1C6BA08(&StringLiteral_6043/*"English"*/);
-    byte_4CBAA68 = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&StringLiteral_8356/*"Language"*/);
+    sub_1C713B0(&StringLiteral_6045/*"English"*/);
+    byte_4CCBBC1 = 1;
   }
   v1 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -1937,8 +2033,8 @@ System_String_array *Localization__get_knownLanguages(const MethodInfo *method)
   if ( !v1->static_fields->localizationHasBeenSet )
   {
     String = UnityEngine_PlayerPrefs__GetString(
-               (System_String_o *)StringLiteral_8352/*"Language"*/,
-               (System_String_o *)StringLiteral_6043/*"English"*/,
+               (System_String_o *)StringLiteral_8356/*"Language"*/,
+               (System_String_o *)StringLiteral_6045/*"English"*/,
                0);
     if ( !Localization_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
@@ -1961,16 +2057,20 @@ System_String_o *Localization__get_language(const MethodInfo *method)
   System_String_o *String; // x0
   struct Localization_StaticFields *static_fields; // x8
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  const MethodInfo *v7; // x1
-  Localization_c *v8; // x0
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  const MethodInfo *v11; // x1
+  Localization_c *v12; // x0
 
-  if ( (byte_4CBAA69 & 1) == 0 )
+  if ( (byte_4CCBBC2 & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8352/*"Language"*/);
-    sub_1C6BA08(&StringLiteral_6043/*"English"*/);
-    byte_4CBAA69 = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    sub_1C713B0(&StringLiteral_8356/*"Language"*/);
+    sub_1C713B0(&StringLiteral_6045/*"English"*/);
+    byte_4CCBBC2 = 1;
   }
   v1 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -1988,21 +2088,21 @@ System_String_o *Localization__get_language(const MethodInfo *method)
     }
     v2->static_fields->localizationHasBeenSet = 1;
     String = UnityEngine_PlayerPrefs__GetString(
-               (System_String_o *)StringLiteral_8352/*"Language"*/,
-               (System_String_o *)StringLiteral_6043/*"English"*/,
+               (System_String_o *)StringLiteral_8356/*"Language"*/,
+               (System_String_o *)StringLiteral_6045/*"English"*/,
                0);
     static_fields = Localization_TypeInfo->static_fields;
     static_fields->mLanguage = String;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->mLanguage, (int32_t)String, v5, v6);
-    Localization__LoadAndSelect(Localization_TypeInfo->static_fields->mLanguage, v7);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->mLanguage, (int32_t)String, v5, v6, v7, v8, v9, v10);
+    Localization__LoadAndSelect(Localization_TypeInfo->static_fields->mLanguage, v11);
   }
-  v8 = Localization_TypeInfo;
+  v12 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-    v8 = Localization_TypeInfo;
+    v12 = Localization_TypeInfo;
   }
-  return v8->static_fields->mLanguage;
+  return v12->static_fields->mLanguage;
 }
 
 
@@ -2011,26 +2111,30 @@ void Localization__set_dictionary(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  Localization_c *v5; // x0
-  CGThumbnailListItem_o *static_fields; // x0
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  Localization_c *v9; // x0
+  GrandQuestFolderBoardItem_o *static_fields; // x0
 
-  if ( (byte_4CBAA67 & 1) == 0 )
+  if ( (byte_4CCBBC0 & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA67 = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBC0 = 1;
   }
-  v5 = Localization_TypeInfo;
+  v9 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-    v5 = Localization_TypeInfo;
+    v9 = Localization_TypeInfo;
   }
-  static_fields = (CGThumbnailListItem_o *)v5->static_fields;
+  static_fields = (GrandQuestFolderBoardItem_o *)v9->static_fields;
   static_fields->fields.sortValue0B = (int64_t)value;
-  static_fields = (CGThumbnailListItem_o *)((char *)static_fields + 40);
-  LOBYTE(static_fields[-1].fields._Id_k__BackingField) = value != 0;
-  sub_1C6B9AC(static_fields, (int32_t)value, v2, v3);
+  static_fields = (GrandQuestFolderBoardItem_o *)((char *)static_fields + 40);
+  LOBYTE(static_fields[-1].fields._IconId_k__BackingField) = value != 0;
+  sub_1C71354(static_fields, (int32_t)value, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -2038,15 +2142,19 @@ void Localization__set_language(System_String_o *value, const MethodInfo *method
 {
   Localization_c *v3; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  Localization_c *v6; // x0
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  Localization_c *v10; // x0
   struct Localization_StaticFields *static_fields; // x0
-  const MethodInfo *v8; // x1
+  const MethodInfo *v12; // x1
 
-  if ( (byte_4CBAA6A & 1) == 0 )
+  if ( (byte_4CCBBC3 & 1) == 0 )
   {
-    sub_1C6BA08(&Localization_TypeInfo);
-    byte_4CBAA6A = 1;
+    sub_1C713B0(&Localization_TypeInfo);
+    byte_4CCBBC3 = 1;
   }
   v3 = Localization_TypeInfo;
   if ( !Localization_TypeInfo->_2.cctor_finished )
@@ -2056,16 +2164,16 @@ void Localization__set_language(System_String_o *value, const MethodInfo *method
   }
   if ( System_String__op_Inequality(v3->static_fields->mLanguage, value, 0) )
   {
-    v6 = Localization_TypeInfo;
+    v10 = Localization_TypeInfo;
     if ( !Localization_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(Localization_TypeInfo);
-      v6 = Localization_TypeInfo;
+      v10 = Localization_TypeInfo;
     }
-    static_fields = v6->static_fields;
+    static_fields = v10->static_fields;
     static_fields->mLanguage = value;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->mLanguage, (int32_t)value, v4, v5);
-    Localization__LoadAndSelect(value, v8);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->mLanguage, (int32_t)value, v4, v5, v6, v7, v8, v9);
+    Localization__LoadAndSelect(value, v12);
   }
 }
 
@@ -2076,47 +2184,59 @@ void Localization_LoadFunction___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
-  __int64 (__fastcall *v9)(); // x8
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  intptr_t v8; // x8
+  int v12; // w22
+  __int64 (__fastcall *v13)(); // x8
   Il2CppObject *m_target; // x9
-  __int64 v11; // x0
+  __int64 v15; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C6BAC8(method) & 1) != 0 )
+  if ( (sub_1C71470(method) & 1) != 0 )
   {
-    if ( v8 == 1 )
+    if ( v12 == 1 )
     {
-      v9 = sub_1AA903C;
+      v13 = sub_1AAE544;
 LABEL_8:
-      this->fields.invoke_impl = (intptr_t)v9;
+      this->fields.invoke_impl = (intptr_t)v13;
       goto LABEL_9;
     }
   }
   else
   {
-    if ( !v8 )
+    if ( !v12 )
     {
-      v9 = sub_1AA901C;
+      v13 = sub_1AAE524;
       goto LABEL_8;
     }
     if ( !object )
     {
-      v11 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C6BB30(v11, 0);
+      v15 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C714D8(v15, 0);
     }
   }
   m_target = this->fields.m_target;
   this->fields.invoke_impl = this->fields.method_ptr;
   this->fields.method_code = (intptr_t)m_target;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1AA8FCC;
+  this->fields.extra_arg = (intptr_t)sub_1AAE4D4;
 }
 
 
@@ -2130,7 +2250,7 @@ System_IAsyncResult_o *Localization_LoadFunction__BeginInvoke(
   System_String_o *v6; // [xsp+0h] [xbp-20h] BYREF
 
   v6 = path;
-  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v6, callback, object);
+  return (System_IAsyncResult_o *)sub_1C71364(this, &v6, callback, object);
 }
 
 
@@ -2139,7 +2259,7 @@ System_Byte_array *Localization_LoadFunction__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  return (System_Byte_array *)sub_1C6B9C0(result, 0, method);
+  return (System_Byte_array *)sub_1C71368(result, 0, method);
 }
 
 
@@ -2161,28 +2281,40 @@ void Localization_OnLocalizeNotification___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  intptr_t v8; // x8
+  int v12; // w22
   Il2CppObject *m_target; // x9
-  __int64 v10; // x0
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C6BAC8(method) & 1) == 0 )
+  if ( (sub_1C71470(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C6BB30(v10, 0);
+      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C714D8(v14, 0);
     }
     goto LABEL_5;
   }
-  if ( v8 )
+  if ( v12 )
   {
 LABEL_5:
     m_target = this->fields.m_target;
@@ -2190,9 +2322,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA9120;
+  this->fields.invoke_impl = (intptr_t)sub_1AAE628;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA90E0;
+  this->fields.extra_arg = (intptr_t)sub_1AAE5E8;
 }
 
 
@@ -2205,7 +2337,7 @@ System_IAsyncResult_o *Localization_OnLocalizeNotification__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C71364(this, &v5, callback, object);
 }
 
 
@@ -2214,7 +2346,7 @@ void Localization_OnLocalizeNotification__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C6B9C0(result, 0, method);
+  sub_1C71368(result, 0, method);
 }
 
 

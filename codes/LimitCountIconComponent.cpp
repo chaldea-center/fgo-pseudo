@@ -10,7 +10,7 @@ void LimitCountIconComponent__Clear(LimitCountIconComponent_o *this, const Metho
 
   limitCountBase = this->fields.limitCountBase;
   if ( !limitCountBase )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UnityEngine_GameObject__SetActive(limitCountBase, 0, 0);
 }
 
@@ -30,11 +30,11 @@ void LimitCountIconComponent__Set(
   System_String_o **v11; // x8
 
   v6 = this;
-  if ( (byte_4CB570C & 1) == 0 )
+  if ( (byte_4CC682C & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_20272/*"icon_limit_on"*/);
-    this = (LimitCountIconComponent_o *)sub_1C6BA08(&StringLiteral_20271/*"icon_limit_off"*/);
-    byte_4CB570C = 1;
+    sub_1C713B0(&StringLiteral_20284/*"icon_limit_on"*/);
+    this = (LimitCountIconComponent_o *)sub_1C713B0(&StringLiteral_20283/*"icon_limit_off"*/);
+    byte_4CC682C = 1;
   }
   if ( limitMax <= 0 )
   {
@@ -62,26 +62,26 @@ void LimitCountIconComponent__Set(
         if ( !v10 )
           break;
         if ( (unsigned int)v9 >= LODWORD(v10->max_length) )
-          sub_1C6BC68(this);
+          sub_1C71610(this);
         this = (LimitCountIconComponent_o *)v10->m_Items[v9];
         if ( !this )
           break;
         if ( v9 >= limitCount )
-          v11 = (System_String_o **)&StringLiteral_20271/*"icon_limit_off"*/;
+          v11 = (System_String_o **)&StringLiteral_20283/*"icon_limit_off"*/;
         else
-          v11 = (System_String_o **)&StringLiteral_20272/*"icon_limit_on"*/;
+          v11 = (System_String_o **)&StringLiteral_20284/*"icon_limit_on"*/;
         UISprite__set_spriteName((UISprite_o *)this, *v11, 0);
         if ( max_length == ++v9 )
           return;
       }
 LABEL_18:
-      sub_1C6BC60(this, *(_QWORD *)&limitCount);
+      sub_1C71608(this, *(_QWORD *)&limitCount);
     }
   }
 }
 
 
-void LimitCountIconComponent__Set_41190932(
+void LimitCountIconComponent__Set_41233572(
         LimitCountIconComponent_o *this,
         LimitCountIconComponent_o *limitCountIcon,
         const MethodInfo *method)
@@ -125,7 +125,7 @@ void LimitCountIconComponent__Set_41190932(
         break;
       if ( v8 >= LODWORD(v10->max_length) )
 LABEL_16:
-        sub_1C6BC68(this);
+        sub_1C71610(this);
       v11 = v10->m_Items[v8];
       if ( !v11 )
         break;
@@ -137,6 +137,6 @@ LABEL_16:
         return;
     }
 LABEL_15:
-    sub_1C6BC60(this, limitCountIcon);
+    sub_1C71608(this, limitCountIcon);
   }
 }

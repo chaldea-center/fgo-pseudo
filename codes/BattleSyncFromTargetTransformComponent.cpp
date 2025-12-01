@@ -33,10 +33,10 @@ void BattleSyncFromTargetTransformComponent__SyncTarget(
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o FixRotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB9ACB & 1) == 0 )
+  if ( (byte_4CCAC1D & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9ACB = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCAC1D = 1;
   }
   targetObj = (UnityEngine_Object_o *)this->fields.targetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -125,6 +125,6 @@ LABEL_22:
         }
       }
     }
-    sub_1C6BC60(transform, v5);
+    sub_1C71608(transform, v5);
   }
 }

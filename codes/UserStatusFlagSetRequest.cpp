@@ -4,22 +4,22 @@ void UserStatusFlagSetRequest__beginRequest(
         System_Int32_array *offFlagNumbers,
         const MethodInfo *method)
 {
-  if ( (byte_4CB7F48 & 1) == 0 )
+  if ( (byte_4CC9071 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_22455/*"offFlagNumbers"*/);
-    sub_1C6BA08(&StringLiteral_22504/*"onFlagNumbers"*/);
-    byte_4CB7F48 = 1;
+    sub_1C713B0(&StringLiteral_22470/*"offFlagNumbers"*/);
+    sub_1C713B0(&StringLiteral_22519/*"onFlagNumbers"*/);
+    byte_4CC9071 = 1;
   }
   if ( onFlagNumbers && onFlagNumbers->max_length )
-    RequestBase__addField_44469988(
+    RequestBase__addField_44516316(
       (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_22504/*"onFlagNumbers"*/,
+      (System_String_o *)StringLiteral_22519/*"onFlagNumbers"*/,
       &onFlagNumbers->obj,
       method);
   if ( offFlagNumbers && offFlagNumbers->max_length )
-    RequestBase__addField_44469988(
+    RequestBase__addField_44516316(
       (RequestBase_o *)this,
-      (System_String_o *)StringLiteral_22455/*"offFlagNumbers"*/,
+      (System_String_o *)StringLiteral_22470/*"offFlagNumbers"*/,
       &offFlagNumbers->obj,
       method);
   RequestBase__beginRequest((RequestBase_o *)this, (const MethodInfo *)onFlagNumbers);
@@ -28,10 +28,10 @@ void UserStatusFlagSetRequest__beginRequest(
 
 System_String_o *UserStatusFlagSetRequest__getMockData(UserStatusFlagSetRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB7F47 & 1) == 0 )
+  if ( (byte_4CC9070 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB7F47 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC9070 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -41,16 +41,16 @@ System_String_o *UserStatusFlagSetRequest__getURL(UserStatusFlagSetRequest_o *th
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CB7F46 & 1) == 0 )
+  if ( (byte_4CC906F & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_24676/*"userStatus/flagSet"*/);
-    byte_4CB7F46 = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_24696/*"userStatus/flagSet"*/);
+    byte_4CC906F = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_24676/*"userStatus/flagSet"*/, 0);
+  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_24696/*"userStatus/flagSet"*/, 0);
 }
 
 
@@ -64,17 +64,17 @@ void UserStatusFlagSetRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   __int64 *v8; // x9
 
-  if ( (byte_4CB7F49 & 1) == 0 )
+  if ( (byte_4CC9072 & 1) == 0 )
   {
-    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
-    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
-    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
-    byte_4CB7F49 = 1;
+    sub_1C713B0(&ResponseCommandKind_TypeInfo);
+    sub_1C713B0(&StringLiteral_22486/*"ok"*/);
+    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
+    byte_4CC9072 = 1;
   }
-  if ( (byte_4CB7F06 & 1) == 0 )
+  if ( (byte_4CC902F & 1) == 0 )
   {
-    sub_1C6BA08(&TopHomeRequest_TypeInfo);
-    byte_4CB7F06 = 1;
+    sub_1C713B0(&TopHomeRequest_TypeInfo);
+    byte_4CC902F = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0;
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
@@ -85,14 +85,14 @@ void UserStatusFlagSetRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22471/*"ok"*/;
+    v8 = &StringLiteral_22486/*"ok"*/;
   }
   else
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v8 = &StringLiteral_22301/*"ng"*/;
+    v8 = &StringLiteral_22316/*"ng"*/;
   }
   ((void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl)(
     CallBack->fields.method_code,

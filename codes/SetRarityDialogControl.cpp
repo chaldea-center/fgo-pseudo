@@ -1,23 +1,30 @@
 void SetRarityDialogControl___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CB02FC & 1) == 0 )
+  if ( (byte_4CC13FF & 1) == 0 )
   {
-    sub_1C6BA08(&SetRarityDialogControl_TypeInfo);
-    byte_4CB02FC = 1;
+    sub_1C713B0(&SetRarityDialogControl_TypeInfo);
+    byte_4CC13FF = 1;
   }
-  *SetRarityDialogControl_TypeInfo->static_fields = (struct SetRarityDialogControl_StaticFields)xmmword_CECF90;
+  *SetRarityDialogControl_TypeInfo->static_fields = (struct SetRarityDialogControl_StaticFields)xmmword_CEFBD0;
 }
 
 
 void SetRarityDialogControl___ctor(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
-  BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
+  if ( (byte_4CC13FE & 1) == 0 )
+  {
+    sub_1C713B0(&BaseDialog_TypeInfo);
+    byte_4CC13FE = 1;
+  }
+  if ( !BaseDialog_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
+  BaseDialog___ctor((BaseDialog_o *)this, 0);
 }
 
 
 void SetRarityDialogControl__Awake(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
-  ;
+  BaseDialog__Awake((BaseDialog_o *)this, 0);
 }
 
 
@@ -31,12 +38,12 @@ void SetRarityDialogControl__CheckExceedSvt(
   int64_t v6; // x20
   __int64 v7; // x1
 
-  if ( (byte_4CB02FB & 1) == 0 )
+  if ( (byte_4CC13FD & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    this = (SetRarityDialogControl_o *)sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB02FB = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C713B0(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    this = (SetRarityDialogControl_o *)sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC13FD = 1;
   }
   if ( selectedList )
   {
@@ -49,27 +56,27 @@ void SetRarityDialogControl__CheckExceedSvt(
         do
         {
           if ( v5 >= (unsigned int)max_length )
-            sub_1C6BC68(this);
+            sub_1C71610(this);
           v6 = selectedList->m_Items[v5];
-          this = (SetRarityDialogControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          this = (SetRarityDialogControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( this )
           {
             this = (SetRarityDialogControl_o *)DataManager__GetMasterData_object_(
                                                  (DataManager_o *)this,
-                                                 (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                                 (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantMaster___);
             if ( this )
             {
               this = (SetRarityDialogControl_o *)DataMasterBase_object__object__long___GetEntity(
                                                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                    v6,
-                                                   (const MethodInfo_33FB638 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                                   (const MethodInfo_340B3DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
               if ( this )
                 goto LABEL_11;
             }
           }
-          sub_1C6BC60(this, v7);
+          sub_1C71608(this, v7);
 LABEL_11:
-          if ( SLODWORD(this->fields.confirmSpendQpLb) > 0 )
+          if ( SLODWORD(this->fields.allRareConfirmMsgLb) > 0 )
             break;
           LODWORD(max_length) = selectedList->max_length;
           ++v5;
@@ -118,31 +125,31 @@ bool SetRarityDialogControl__CheckStatusUpInfo(
   int32_t atkUp[2]; // [xsp+28h] [xbp-68h] BYREF
 
   v8 = this;
-  if ( (byte_4CB02E9 & 1) == 0 )
+  if ( (byte_4CC13EB & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&StringLiteral_12356/*"STATUS_HP_OVER_DIALOG_MSG"*/);
-    sub_1C6BA08(&StringLiteral_12354/*"STATUS_ATK_OVER_DIALOG_MSG"*/);
-    sub_1C6BA08(&StringLiteral_12355/*"STATUS_HP_ATK_OVER_DIALOG_MSG"*/);
-    sub_1C6BA08(&StringLiteral_12357/*"STATUS_OVER_DIALOG_MSG"*/);
-    this = (SetRarityDialogControl_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB02E9 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C713B0(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&StringLiteral_12362/*"STATUS_HP_OVER_DIALOG_MSG"*/);
+    sub_1C713B0(&StringLiteral_12360/*"STATUS_ATK_OVER_DIALOG_MSG"*/);
+    sub_1C713B0(&StringLiteral_12361/*"STATUS_HP_ATK_OVER_DIALOG_MSG"*/);
+    sub_1C713B0(&StringLiteral_12363/*"STATUS_OVER_DIALOG_MSG"*/);
+    this = (SetRarityDialogControl_o *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC13EB = 1;
   }
   if ( !baseData )
 LABEL_47:
-    sub_1C6BC60(this, baseData);
+    sub_1C71608(this, baseData);
   adjustHp = baseData->fields.adjustHp;
   adjustAtk = baseData->fields.adjustAtk;
   *(_QWORD *)maxAjustAtk = 0;
   *(_QWORD *)atkUp = 0;
   *(_QWORD *)secondMaxAdjustAtk = 0;
   *labelMsg = (System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC(labelMsg, StringLiteral_1/*""*/);
+  sub_1C71354(labelMsg, StringLiteral_1/*""*/);
   UserServantEntity__GetAdjustMax(baseData, &maxAjustAtk[1], maxAjustAtk, &secondMaxAdjustAtk[1], secondMaxAdjustAtk, 0);
   UserServantEntity__isAdjustAtkMax(baseData, 0);
   IsStatusUp = 0;
@@ -157,20 +164,20 @@ LABEL_47:
       do
       {
         if ( v13 >= (unsigned int)max_length )
-          sub_1C6BC68(IsStatusUp);
+          sub_1C71610(IsStatusUp);
         v16 = selectUsrSvtIdList->m_Items[v13];
-        this = (SetRarityDialogControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        this = (SetRarityDialogControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !this )
           goto LABEL_47;
         this = (SetRarityDialogControl_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)this,
-                                             (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                                             (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantMaster___);
         if ( !this )
           goto LABEL_47;
         this = (SetRarityDialogControl_o *)DataMasterBase_object__object__long___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              v16,
-                                             (const MethodInfo_33FB638 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                                             (const MethodInfo_340B3DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
         if ( !this )
           goto LABEL_47;
         v17 = (UserServantEntity_o *)this;
@@ -222,16 +229,16 @@ LABEL_47:
       }
       if ( v19 >= 1 && v19 == v22 )
       {
-        v24 = (System_String_o **)&StringLiteral_12357/*"STATUS_OVER_DIALOG_MSG"*/;
+        v24 = (System_String_o **)&StringLiteral_12363/*"STATUS_OVER_DIALOG_MSG"*/;
       }
       else
       {
-        v24 = (System_String_o **)&StringLiteral_12356/*"STATUS_HP_OVER_DIALOG_MSG"*/;
+        v24 = (System_String_o **)&StringLiteral_12362/*"STATUS_HP_OVER_DIALOG_MSG"*/;
         if ( v22 > 0 && v19 > 0 )
-          v24 = (System_String_o **)&StringLiteral_12355/*"STATUS_HP_ATK_OVER_DIALOG_MSG"*/;
+          v24 = (System_String_o **)&StringLiteral_12361/*"STATUS_HP_ATK_OVER_DIALOG_MSG"*/;
         if ( v19 <= 0 )
         {
-          v24 = (System_String_o **)&StringLiteral_12354/*"STATUS_ATK_OVER_DIALOG_MSG"*/;
+          v24 = (System_String_o **)&StringLiteral_12360/*"STATUS_ATK_OVER_DIALOG_MSG"*/;
           if ( v22 < 1 )
             goto LABEL_45;
         }
@@ -252,9 +259,9 @@ LABEL_47:
         v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
         v33 = BalanceConfig_TypeInfo->static_fields->StatusUpAdjustAtk * v22;
         v30 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33);
-        v31 = System_String__Format_64008100(v27, v29, v30, 0);
+        v31 = System_String__Format_64073032(v27, v29, v30, 0);
         *labelMsg = v31;
-        sub_1C6B9AC(labelMsg, v31);
+        sub_1C71354(labelMsg, v31);
       }
     }
 LABEL_45:
@@ -264,106 +271,32 @@ LABEL_45:
 }
 
 
+void SetRarityDialogControl__ClearDisplay(SetRarityDialogControl_o *this, const MethodInfo *method)
+{
+  const MethodInfo *v3; // x1
+
+  SetRarityDialogControl__DisableConfirmInfo(this, method);
+  SetRarityDialogControl__RemoveAllChild(this, v3);
+}
+
+
 void SetRarityDialogControl__Close(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
-  UnityEngine_GameObject_o *gameObject; // x0
-  SetRarityDialogControl_c *v4; // x8
-  UnityEngine_GameObject_o *v5; // x20
-  __int64 transform; // x0
-  const MethodInfo *v7; // x1
-  UnityEngine_GameObject_o *v8; // x0
-  struct SetRarityDialogControl_StaticFields *static_fields; // x8
-  TweenScale_o *v10; // x20
-  UnityEngine_GameObject_o *v11; // x0
-  __int64 v12; // x1
-  UnityEngine_Transform_o *v13; // x20
-  UnityEngine_Transform_o *v14; // x0
-  UnityEngine_Vector3_o v15; // 0:s1.4,4:s2.4,8:s3.4
+  System_Action_o *v3; // x20
+  UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4CB02F6 & 1) == 0 )
+  if ( (byte_4CC13F8 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&SetRarityDialogControl_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5976/*"EndCloseDlg"*/);
-    sub_1C6BA08(&StringLiteral_5297/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/);
-    byte_4CB02F6 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl_EndCloseDlg__);
+    sub_1C713B0(&StringLiteral_5300/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/);
+    byte_4CC13F8 = 1;
   }
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v4 = SetRarityDialogControl_TypeInfo;
-  v5 = gameObject;
-  if ( !SetRarityDialogControl_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(SetRarityDialogControl_TypeInfo);
-    v4 = SetRarityDialogControl_TypeInfo;
-  }
-  transform = (__int64)TweenAlpha__Begin(v5, v4->static_fields->CLOSE_TIME, 0.0, 0);
-  if ( !transform )
-    goto LABEL_26;
-  *(_DWORD *)(transform + 32) = 6;
-  v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  static_fields = SetRarityDialogControl_TypeInfo->static_fields;
-  v15.fields.x = static_fields->DIALOG_CLOSE_SCALE;
-  v15.fields.y = v15.fields.x;
-  v15.fields.z = v15.fields.x;
-  v10 = TweenScale__Begin(v8, static_fields->CLOSE_TIME, v15, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  transform = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0, 0);
-  if ( (transform & 1) != 0 )
-  {
-    if ( !v10 )
-      goto LABEL_26;
-    v10->fields.method = 6;
-    v11 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v10->fields.eventReceiver = v11;
-    sub_1C6B9AC(&v10->fields.eventReceiver, v11);
-    v12 = StringLiteral_5976/*"EndCloseDlg"*/;
-    v10->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5976/*"EndCloseDlg"*/;
-    sub_1C6B9AC(&v10->fields.callWhenFinished, v12);
-  }
-  else
-  {
-    transform = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    if ( !transform )
-      goto LABEL_26;
-    transform = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
-    v13 = (UnityEngine_Transform_o *)transform;
-    if ( !byte_4CAFC09 )
-    {
-      transform = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC09 = 1;
-    }
-    if ( !v13 )
-      goto LABEL_26;
-    UnityEngine_Transform__set_localScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  }
-  transform = (__int64)this->fields.npUpConfirmInfo;
-  if ( !transform )
-    goto LABEL_26;
-  if ( UnityEngine_GameObject__get_activeSelf((UnityEngine_GameObject_o *)transform, 0) )
-  {
-    transform = (__int64)this->fields.npUpInfoComp;
-    if ( !transform )
-      goto LABEL_26;
-    NpUpConfirmComponent__DestroySvtInfo((NpUpConfirmComponent_o *)transform, v7);
-  }
-  transform = (__int64)this->fields.raritySvtGrid;
-  if ( !transform )
-    goto LABEL_26;
-  UIGrid__RemoveAllChild((UIGrid_o *)transform, 0);
-  transform = (__int64)this->fields.allSvtGrid;
-  if ( !transform
-    || (UIGrid__RemoveAllChild((UIGrid_o *)transform, 0), (transform = (__int64)this->fields.exceedConfirmSvtGrid) == 0)
-    || (UIGrid__RemoveAllChild((UIGrid_o *)transform, 0), (transform = (__int64)this->fields.materialSvtGrid) == 0)
-    || (UIGrid__RemoveAllChild((UIGrid_o *)transform, 0),
-        (transform = (__int64)this->fields.lvExceedConsumeItemGrid) == 0) )
-  {
-LABEL_26:
-    sub_1C6BC60(transform, v7);
-  }
-  UIGrid__RemoveAllChild((UIGrid_o *)transform, 0);
-  v14 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__RemoveBackBtn_45211184(v14, (System_String_o *)StringLiteral_5297/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/, 0);
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v3, (Il2CppObject *)this, Method_SetRarityDialogControl_EndCloseDlg__, 0);
+  BaseDialog__SafeClose((BaseDialog_o *)this, v3, 0);
+  transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  AndroidBackKeyManager__RemoveBackBtn_45261484(transform, (System_String_o *)StringLiteral_5300/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/, 0);
 }
 
 
@@ -395,7 +328,7 @@ void SetRarityDialogControl__DefaultBgSize(SetRarityDialogControl_o *this, const
         (decideBtnLb = (UnityEngine_Component_o *)this->fields.mPanelBg) == 0) )
   {
 LABEL_10:
-    sub_1C6BC60(decideBtnLb, method);
+    sub_1C71608(decideBtnLb, method);
   }
   UIWidget__set_height((UIWidget_o *)decideBtnLb, 480, 0);
   v5 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -462,7 +395,7 @@ void SetRarityDialogControl__DisableConfirmInfo(SetRarityDialogControl_o *this, 
         (rariryConfirmInfo = this->fields.appendSkillConfirmInfo) == 0) )
   {
 LABEL_17:
-    sub_1C6BC60(rariryConfirmInfo, method);
+    sub_1C71608(rariryConfirmInfo, method);
   }
   UnityEngine_GameObject__SetActive(rariryConfirmInfo, 0, 0);
 }
@@ -470,11 +403,14 @@ LABEL_17:
 
 void SetRarityDialogControl__EndCloseDlg(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
-  struct System_Action_o *onClickDlgCloseCallBack; // x19
+  const MethodInfo *v3; // x1
+  struct System_Action_o *onClickDlgCloseCallBack; // x20
 
+  SetRarityDialogControl__DisableConfirmInfo(this, method);
+  SetRarityDialogControl__RemoveAllChild(this, v3);
   onClickDlgCloseCallBack = this->fields.onClickDlgCloseCallBack;
   this->fields.onClickDlgCloseCallBack = 0;
-  sub_1C6B9AC(&this->fields.onClickDlgCloseCallBack, 0);
+  sub_1C71354(&this->fields.onClickDlgCloseCallBack, 0);
   if ( onClickDlgCloseCallBack )
     ((void (__fastcall *)(intptr_t, intptr_t))onClickDlgCloseCallBack->fields.invoke_impl)(
       onClickDlgCloseCallBack->fields.method_code,
@@ -486,112 +422,14 @@ void SetRarityDialogControl__EndOpen(SetRarityDialogControl_o *this, const Metho
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4CB02F8 & 1) == 0 )
+  if ( (byte_4CC13FA & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_5297/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/);
-    byte_4CB02F8 = 1;
+    sub_1C713B0(&StringLiteral_5300/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/);
+    byte_4CC13FA = 1;
   }
   this->fields.isButtonEnable = 1;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45210584(transform, (System_String_o *)StringLiteral_5297/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/, 0);
-}
-
-
-void SetRarityDialogControl__MoveAlpha(SetRarityDialogControl_o *this, const MethodInfo *method)
-{
-  UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v4; // x1
-  SetRarityDialogControl_c *v5; // x8
-  UnityEngine_Transform_o *v6; // x20
-  UnityEngine_GameObject_o *v7; // x20
-  float OPEN_TIME; // s8
-  System_Action_o *v9; // x20
-  System_String_o *v10; // x0
-  UnityEngine_GameObject_o *v11; // x0
-  TweenAlpha_o *v12; // x20
-  UnityEngine_GameObject_o *v13; // x0
-  UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
-
-  if ( (byte_4CB02F7 & 1) == 0 )
-  {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl_EndOpen__);
-    sub_1C6BA08(&SetRarityDialogControl_TypeInfo);
-    byte_4CB02F7 = 1;
-  }
-  this->fields.isButtonEnable = 0;
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !gameObject )
-    goto LABEL_19;
-  gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(gameObject, 0);
-  v5 = SetRarityDialogControl_TypeInfo;
-  v6 = (UnityEngine_Transform_o *)gameObject;
-  if ( !SetRarityDialogControl_TypeInfo->_2.cctor_finished )
-  {
-    gameObject = (UnityEngine_GameObject_o *)j_il2cpp_runtime_class_init_0(SetRarityDialogControl_TypeInfo);
-    v5 = SetRarityDialogControl_TypeInfo;
-  }
-  if ( !v6 )
-    goto LABEL_19;
-  v14.fields.x = v5->static_fields->DIALOG_INITIAL_SCALE;
-  v14.fields.y = v14.fields.x;
-  v14.fields.z = v14.fields.x;
-  UnityEngine_Transform__set_localScale(v6, v14, 0);
-  v7 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  OPEN_TIME = SetRarityDialogControl_TypeInfo->static_fields->OPEN_TIME;
-  if ( !byte_4CAFC0E )
-  {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC0E = 1;
-  }
-  TweenScale__Begin(v7, OPEN_TIME, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-  gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !gameObject )
-    goto LABEL_19;
-  gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
-                                             gameObject,
-                                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-  if ( !gameObject )
-    goto LABEL_19;
-  ((void (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *, float))gameObject->klass[1]._1.element_class)(
-    gameObject,
-    gameObject->klass[1]._1.castClass,
-    0.005);
-  v9 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v9, (Il2CppObject *)this, Method_SetRarityDialogControl_EndOpen__, 0);
-  if ( !v9 )
-    goto LABEL_19;
-  gameObject = (UnityEngine_GameObject_o *)System_Delegate__get_Method((System_Delegate_o *)v9, 0);
-  if ( !gameObject )
-    goto LABEL_19;
-  v10 = (System_String_o *)((__int64 (__fastcall *)(UnityEngine_GameObject_o *, Il2CppClass *))gameObject->klass[1]._1.element_class)(
-                             gameObject,
-                             gameObject->klass[1]._1.castClass);
-  UnityEngine_MonoBehaviour__Invoke(
-    (UnityEngine_MonoBehaviour_o *)this,
-    v10,
-    SetRarityDialogControl_TypeInfo->static_fields->OPEN_TIME,
-    0);
-  v11 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v12 = TweenAlpha__Begin(v11, SetRarityDialogControl_TypeInfo->static_fields->OPEN_TIME, 1.0, 0);
-  if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v12, 0, 0);
-  if ( ((unsigned __int8)gameObject & 1) != 0 )
-  {
-    if ( v12 )
-    {
-      v12->fields.method = 6;
-      v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-      v12->fields.eventReceiver = v13;
-      sub_1C6B9AC(&v12->fields.eventReceiver, v13);
-      return;
-    }
-LABEL_19:
-    sub_1C6BC60(gameObject, v4);
-  }
+  AndroidBackKeyManager__AddBackBtn_45260884(transform, (System_String_o *)StringLiteral_5300/*"DlgPanel/ConfirmBtnInfo/CancleBtn"*/, 0);
 }
 
 
@@ -602,25 +440,25 @@ void SetRarityDialogControl__OnClickCancel(SetRarityDialogControl_o *this, const
   const MethodInfo *v5; // x1
   struct System_Action_o *onClickDlgCancelCallBack; // x21
 
-  if ( (byte_4CB02FA & 1) == 0 )
+  if ( (byte_4CC13FC & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SetRarityDialogControl_OnClickCancel__);
-    byte_4CB02FA = 1;
+    sub_1C713B0(&Method_SetRarityDialogControl_OnClickCancel__);
+    byte_4CC13FC = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
     v3 = Method_SetRarityDialogControl_OnClickCancel__;
     if ( (*((_BYTE *)Method_SetRarityDialogControl_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C6BA20(Method_SetRarityDialogControl_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C713C8(Method_SetRarityDialogControl_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     SetRarityDialogControl__Close(this, v5);
     onClickDlgCancelCallBack = this->fields.onClickDlgCancelCallBack;
     this->fields.onClickDlgOkCallBack = 0;
-    sub_1C6B9AC(&this->fields.onClickDlgOkCallBack, 0);
+    sub_1C71354(&this->fields.onClickDlgOkCallBack, 0);
     this->fields.onClickDlgCancelCallBack = 0;
-    sub_1C6B9AC(&this->fields.onClickDlgCancelCallBack, 0);
+    sub_1C71354(&this->fields.onClickDlgCancelCallBack, 0);
     if ( onClickDlgCancelCallBack )
       ((void (__fastcall *)(intptr_t, intptr_t))onClickDlgCancelCallBack->fields.invoke_impl)(
         onClickDlgCancelCallBack->fields.method_code,
@@ -640,34 +478,34 @@ void SetRarityDialogControl__OnClickDlgOk(SetRarityDialogControl_o *this, const 
   __int64 v9; // x9
   CommonUI_o *v10; // x20
   SetRarityDialogControl___c_c *v11; // x8
-  System_Action_o *_9__167_0; // x21
+  System_Action_o *_9__168_0; // x21
   Il2CppObject *v13; // x22
   struct SetRarityDialogControl___c_StaticFields *static_fields; // x0
   struct System_Action_o *onClickDlgOkCallBack; // x20
   SetRarityDialogControl_o *v16; // x0
   const MethodInfo *v17; // x1
 
-  if ( (byte_4CB02F9 & 1) == 0 )
+  if ( (byte_4CC13FB & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&CombineRootComponent_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl_OnClickDlgOk__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C6BA08(&Method_SetRarityDialogControl___c__OnClickDlgOk_b__167_0__);
-    sub_1C6BA08(&SetRarityDialogControl___c_TypeInfo);
-    byte_4CB02F9 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&CombineRootComponent_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl_OnClickDlgOk__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C713B0(&Method_SetRarityDialogControl___c__OnClickDlgOk_b__168_0__);
+    sub_1C713B0(&SetRarityDialogControl___c_TypeInfo);
+    byte_4CC13FB = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     this->fields.isButtonEnable = 0;
     v3 = Method_SetRarityDialogControl_OnClickDlgOk__;
     if ( (*((_BYTE *)Method_SetRarityDialogControl_OnClickDlgOk__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C6BA20(Method_SetRarityDialogControl_OnClickDlgOk__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C713C8(Method_SetRarityDialogControl_OnClickDlgOk__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, this->fields.onClickDlgOkSeKind, 0, 0);
     SetRarityDialogControl__Close(this, v5);
-    Instance = (CombineRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    Instance = (CombineRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !Instance )
       goto LABEL_26;
     Instance = (CombineRootComponent_o *)Instance->fields.myFSM;
@@ -682,9 +520,9 @@ void SetRarityDialogControl__OnClickDlgOk(SetRarityDialogControl_o *this, const 
 LABEL_23:
         onClickDlgOkCallBack = this->fields.onClickDlgOkCallBack;
         this->fields.onClickDlgOkCallBack = 0;
-        sub_1C6B9AC(&this->fields.onClickDlgOkCallBack, 0);
+        sub_1C71354(&this->fields.onClickDlgOkCallBack, 0);
         this->fields.onClickDlgCancelCallBack = 0;
-        Instance = (CombineRootComponent_o *)sub_1C6B9AC(&this->fields.onClickDlgCancelCallBack, 0);
+        Instance = (CombineRootComponent_o *)sub_1C71354(&this->fields.onClickDlgCancelCallBack, 0);
         if ( onClickDlgOkCallBack )
         {
           ((void (__fastcall *)(intptr_t, intptr_t))onClickDlgOkCallBack->fields.invoke_impl)(
@@ -693,9 +531,9 @@ LABEL_23:
           return;
         }
 LABEL_26:
-        sub_1C6BC60(Instance, v7);
+        sub_1C71608(Instance, v7);
       }
-      Instance = (CombineRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      Instance = (CombineRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       if ( !Instance )
         goto LABEL_26;
       Instance = (CombineRootComponent_o *)Instance->fields.myFSM;
@@ -706,7 +544,7 @@ LABEL_26:
         && (CombineRootComponent_c *)Instance->klass->_2.typeHierarchy[v9 - 1] == CombineRootComponent_TypeInfo )
       {
         CombineRootComponent__SetTutorialProgress(Instance, 8, 0);
-        Instance = (CombineRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = (CombineRootComponent_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         v10 = (CommonUI_o *)Instance;
         v11 = SetRarityDialogControl___c_TypeInfo;
         if ( !SetRarityDialogControl___c_TypeInfo->_2.cctor_finished )
@@ -714,8 +552,8 @@ LABEL_26:
           Instance = (CombineRootComponent_o *)j_il2cpp_runtime_class_init_0(SetRarityDialogControl___c_TypeInfo);
           v11 = SetRarityDialogControl___c_TypeInfo;
         }
-        _9__167_0 = v11->static_fields->__9__167_0;
-        if ( !_9__167_0 )
+        _9__168_0 = v11->static_fields->__9__168_0;
+        if ( !_9__168_0 )
         {
           if ( !v11->_2.cctor_finished )
           {
@@ -723,21 +561,65 @@ LABEL_26:
             v11 = SetRarityDialogControl___c_TypeInfo;
           }
           v13 = (Il2CppObject *)v11->static_fields->__9;
-          _9__167_0 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-          System_Action___ctor(_9__167_0, v13, Method_SetRarityDialogControl___c__OnClickDlgOk_b__167_0__, 0);
+          _9__168_0 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+          System_Action___ctor(_9__168_0, v13, Method_SetRarityDialogControl___c__OnClickDlgOk_b__168_0__, 0);
           static_fields = SetRarityDialogControl___c_TypeInfo->static_fields;
-          static_fields->__9__167_0 = _9__167_0;
-          Instance = (CombineRootComponent_o *)sub_1C6B9AC(&static_fields->__9__167_0, _9__167_0);
+          static_fields->__9__168_0 = _9__168_0;
+          Instance = (CombineRootComponent_o *)sub_1C71354(&static_fields->__9__168_0, _9__168_0);
         }
         if ( !v10 )
           goto LABEL_26;
-        CommonUI__CloseTutorialNotificationDialogArrow_31443236(v10, _9__167_0, 0);
+        CommonUI__CloseTutorialNotificationDialogArrow_31466188(v10, _9__168_0, 0);
         goto LABEL_23;
       }
     }
-    v16 = (SetRarityDialogControl_o *)sub_1C6BFFC(Instance);
+    v16 = (SetRarityDialogControl_o *)sub_1C719A4(Instance);
     SetRarityDialogControl__OnClickCancel(v16, v17);
   }
+}
+
+
+void SetRarityDialogControl__Open(SetRarityDialogControl_o *this, const MethodInfo *method)
+{
+  System_Action_o *v3; // x20
+
+  if ( (byte_4CC13F9 & 1) == 0 )
+  {
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl_EndOpen__);
+    byte_4CC13F9 = 1;
+  }
+  if ( (this->fields.baseState & 0xFFFFFFFE) == 2 )
+    BaseDialog__Init((BaseDialog_o *)this, 0);
+  this->fields.isButtonEnable = 0;
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v3, (Il2CppObject *)this, Method_SetRarityDialogControl_EndOpen__, 0);
+  BaseDialog__SafeOpen((BaseDialog_o *)this, v3, 0, 0);
+}
+
+
+void SetRarityDialogControl__RemoveAllChild(SetRarityDialogControl_o *this, const MethodInfo *method)
+{
+  UIGrid_o *raritySvtGrid; // x0
+
+  raritySvtGrid = this->fields.raritySvtGrid;
+  if ( !raritySvtGrid )
+    goto LABEL_8;
+  UIGrid__RemoveAllChild(raritySvtGrid, 0);
+  raritySvtGrid = this->fields.allSvtGrid;
+  if ( !raritySvtGrid )
+    goto LABEL_8;
+  UIGrid__RemoveAllChild(raritySvtGrid, 0);
+  raritySvtGrid = this->fields.exceedConfirmSvtGrid;
+  if ( !raritySvtGrid
+    || (UIGrid__RemoveAllChild(raritySvtGrid, 0), (raritySvtGrid = this->fields.materialSvtGrid) == 0)
+    || (UIGrid__RemoveAllChild(raritySvtGrid, 0), (raritySvtGrid = this->fields.lvExceedConsumeItemGrid) == 0)
+    || (UIGrid__RemoveAllChild(raritySvtGrid, 0), (raritySvtGrid = (UIGrid_o *)this->fields.npUpInfoComp) == 0) )
+  {
+LABEL_8:
+    sub_1C71608(raritySvtGrid, method);
+  }
+  NpUpConfirmComponent__RemoveAllChild((NpUpConfirmComponent_o *)raritySvtGrid, method);
 }
 
 
@@ -753,65 +635,67 @@ void SetRarityDialogControl__SetAllDispConfirmCombine(
         bool isExceededMaterial,
         const MethodInfo *method)
 {
-  __int64 v16; // x1
+  const MethodInfo *v16; // x1
+  __int64 v17; // x1
   void *allDispConfirmInfo; // x0
-  const MethodInfo *v18; // x1
   const MethodInfo *v19; // x1
+  const MethodInfo *v20; // x1
   UILabel_o *allTitleLb; // x26
   UILabel_o *cancelBtnLb; // x26
   UILabel_o *decideBtnLb; // x26
-  const MethodInfo *v23; // x1
+  const MethodInfo *v24; // x1
   il2cpp_array_size_t max_length; // x27
-  float v25; // s8
-  unsigned __int64 v26; // x26
-  bool v27; // w8
+  float v26; // s8
+  unsigned __int64 v27; // x26
+  bool v28; // w8
   UnityEngine_GameObject_o *svtFaceInfo; // x27
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v30; // x7
+  const MethodInfo *v31; // x7
   float y; // s9
-  int v32; // w20
-  int v33; // w8
-  float v34; // s1 OVERLAPPED
+  int v33; // w20
+  int v34; // w8
+  float v35; // s1 OVERLAPPED
   float z; // s2
-  float v36; // s0
+  float v37; // s0
   UILabel_o *allSpendQpTxtLb; // x24
   UILabel_o *allHaveQpTxtLb; // x24
   UILabel_o *allSpendQpLb; // x24
-  System_String_o *v40; // x25
-  Il2CppObject *v41; // x0
+  System_String_o *v41; // x25
+  Il2CppObject *v42; // x0
   UILabel_o *allHaveQpLb; // x23
-  System_String_o *v43; // x24
-  Il2CppObject *v44; // x0
+  System_String_o *v44; // x24
+  Il2CppObject *v45; // x0
   UILabel_o *allRareMsgLb; // x21
-  __int64 *v46; // x8
+  __int64 *v47; // x8
   UILabel_o *allRareConfirmMsgLb; // x20
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v49; // x20
-  const MethodInfo *v50; // x5
-  int64_t v51; // [xsp+0h] [xbp-80h] BYREF
-  int32_t v52; // [xsp+Ch] [xbp-74h] BYREF
-  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_o *v50; // x20
+  const MethodInfo *v51; // x5
+  int64_t v52; // [xsp+0h] [xbp-80h] BYREF
+  int32_t v53; // [xsp+Ch] [xbp-74h] BYREF
+  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB02E8 & 1) == 0 )
+  if ( (byte_4CC13EA & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetAllDispConfirmCombine_b__147_0__);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3574/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_10955/*"RARE_MATERIAL_INFO_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3609/*"COMBINE_SPEND_QP"*/);
-    sub_1C6BA08(&StringLiteral_3767/*"CONFIRM_TITLE_SVT_COMBINE"*/);
-    byte_4CB02E8 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetAllDispConfirmCombine_b__148_0__);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/);
+    sub_1C713B0(&StringLiteral_3577/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_10961/*"RARE_MATERIAL_INFO_MSG"*/);
+    sub_1C713B0(&StringLiteral_3612/*"COMBINE_SPEND_QP"*/);
+    sub_1C713B0(&StringLiteral_3770/*"CONFIRM_TITLE_SVT_COMBINE"*/);
+    byte_4CC13EA = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
+  SetRarityDialogControl__RemoveAllChild(this, v16);
   allDispConfirmInfo = this->fields.allDispConfirmInfo;
   if ( !allDispConfirmInfo )
     goto LABEL_56;
@@ -820,40 +704,40 @@ void SetRarityDialogControl__SetAllDispConfirmCombine(
   if ( !allDispConfirmInfo )
     goto LABEL_56;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)allDispConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v18);
-  SetRarityDialogControl__DefaultBgSize(this, v19);
+  SetRarityDialogControl__Open(this, v19);
+  SetRarityDialogControl__DefaultBgSize(this, v20);
   allTitleLb = this->fields.allTitleLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3767/*"CONFIRM_TITLE_SVT_COMBINE"*/, 0);
+  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3770/*"CONFIRM_TITLE_SVT_COMBINE"*/, 0);
   if ( !allTitleLb )
     goto LABEL_56;
   UILabel__set_text(allTitleLb, (System_String_o *)allDispConfirmInfo, 0);
   cancelBtnLb = this->fields.cancelBtnLb;
-  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_56;
   UILabel__set_text(cancelBtnLb, (System_String_o *)allDispConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
-  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideBtnLb )
     goto LABEL_56;
   UILabel__set_text(decideBtnLb, (System_String_o *)allDispConfirmInfo, 0);
-  SetRarityDialogControl__SetCenter(this, v23);
+  SetRarityDialogControl__SetCenter(this, v24);
   if ( !selectedList )
     goto LABEL_56;
   allDispConfirmInfo = this->fields.allSvtGrid;
   if ( !allDispConfirmInfo )
     goto LABEL_56;
   LODWORD(max_length) = selectedList->max_length;
-  v25 = *((float *)allDispConfirmInfo + 12);
+  v26 = *((float *)allDispConfirmInfo + 12);
   if ( (int)max_length >= 1 )
   {
-    v26 = 0;
     v27 = 0;
+    v28 = 0;
     do
     {
-      if ( v27 )
+      if ( v28 )
         goto LABEL_56;
       svtFaceInfo = this->fields.svtFaceInfo;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)allDispConfirmInfo, 0);
@@ -862,46 +746,46 @@ void SetRarityDialogControl__SetAllDispConfirmCombine(
         goto LABEL_56;
       allDispConfirmInfo = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)allDispConfirmInfo,
-                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-      if ( v26 >= LODWORD(selectedList->max_length) )
-        sub_1C6BC68(allDispConfirmInfo);
+                             (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+      if ( v27 >= LODWORD(selectedList->max_length) )
+        sub_1C71610(allDispConfirmInfo);
       if ( !allDispConfirmInfo )
         goto LABEL_56;
       MaterialSvtInfo__setMaterialSvtInfo(
         (MaterialSvtInfo_o *)allDispConfirmInfo,
-        v26,
+        v27,
         baseData,
-        selectedList->m_Items[v26],
+        selectedList->m_Items[v27],
         0,
         0,
         0,
-        v30);
+        v31);
       allDispConfirmInfo = this->fields.allSvtGrid;
       max_length = selectedList->max_length;
-      ++v26;
-      v27 = allDispConfirmInfo == 0;
+      ++v27;
+      v28 = allDispConfirmInfo == 0;
     }
-    while ( (__int64)v26 < (int)max_length );
+    while ( (__int64)v27 < (int)max_length );
     if ( !allDispConfirmInfo )
       goto LABEL_56;
   }
   y = this->fields.center.fields.y;
-  v32 = *((_DWORD *)allDispConfirmInfo + 11);
+  v33 = *((_DWORD *)allDispConfirmInfo + 11);
   allDispConfirmInfo = UnityEngine_Component__get_transform((UnityEngine_Component_o *)allDispConfirmInfo, 0);
   if ( !allDispConfirmInfo )
     goto LABEL_56;
-  if ( v32 >= (int)max_length )
-    v33 = max_length;
+  if ( v33 >= (int)max_length )
+    v34 = max_length;
   else
-    v33 = v32;
-  v34 = 70.0;
-  if ( v32 >= (int)max_length )
-    v34 = y;
-  v36 = (float)(this->fields.center.fields.x - (float)((float)(v25 * 0.5) * (float)(v33 - 1))) * 0.47;
+    v34 = v33;
+  v35 = 70.0;
+  if ( v33 >= (int)max_length )
+    v35 = y;
+  v37 = (float)(this->fields.center.fields.x - (float)((float)(v26 * 0.5) * (float)(v34 - 1))) * 0.47;
   z = this->fields.center.fields.z;
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)allDispConfirmInfo,
-    *(UnityEngine_Vector3_o *)(&v34 - 1),
+    *(UnityEngine_Vector3_o *)(&v35 - 1),
     0);
   allDispConfirmInfo = this->fields.allSvtGrid;
   if ( !allDispConfirmInfo )
@@ -909,10 +793,10 @@ void SetRarityDialogControl__SetAllDispConfirmCombine(
   allDispConfirmInfo = UnityEngine_Component__get_transform((UnityEngine_Component_o *)allDispConfirmInfo, 0);
   if ( !allDispConfirmInfo )
     goto LABEL_56;
-  v53.fields.x = 0.47;
-  v53.fields.y = 0.47;
-  v53.fields.z = 0.47;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)allDispConfirmInfo, v53, 0);
+  v54.fields.x = 0.47;
+  v54.fields.y = 0.47;
+  v54.fields.z = 0.47;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)allDispConfirmInfo, v54, 0);
   allDispConfirmInfo = this->fields.allSvtGrid;
   if ( !allDispConfirmInfo )
     goto LABEL_56;
@@ -920,28 +804,28 @@ void SetRarityDialogControl__SetAllDispConfirmCombine(
   allSpendQpTxtLb = this->fields.allSpendQpTxtLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3609/*"COMBINE_SPEND_QP"*/, 0);
+  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3612/*"COMBINE_SPEND_QP"*/, 0);
   if ( !allSpendQpTxtLb )
     goto LABEL_56;
   UILabel__set_text(allSpendQpTxtLb, (System_String_o *)allDispConfirmInfo, 0);
   allHaveQpTxtLb = this->fields.allHaveQpTxtLb;
-  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/, 0);
+  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/, 0);
   if ( !allHaveQpTxtLb )
     goto LABEL_56;
   UILabel__set_text(allHaveQpTxtLb, (System_String_o *)allDispConfirmInfo, 0);
   allSpendQpLb = this->fields.allSpendQpLb;
-  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v52 = spendQp;
-  v41 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
-  allDispConfirmInfo = System_String__Format(v40, v41, 0);
+  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v53 = spendQp;
+  v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v53);
+  allDispConfirmInfo = System_String__Format(v41, v42, 0);
   if ( !allSpendQpLb )
     goto LABEL_56;
   UILabel__set_text(allSpendQpLb, (System_String_o *)allDispConfirmInfo, 0);
   allHaveQpLb = this->fields.allHaveQpLb;
-  v43 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v51 = haveQp;
-  v44 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v51);
-  allDispConfirmInfo = System_String__Format(v43, v44, 0);
+  v44 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v52 = haveQp;
+  v45 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v52);
+  allDispConfirmInfo = System_String__Format(v44, v45, 0);
   if ( !allHaveQpLb )
     goto LABEL_56;
   UILabel__set_text(allHaveQpLb, (System_String_o *)allDispConfirmInfo, 0);
@@ -966,7 +850,7 @@ void SetRarityDialogControl__SetAllDispConfirmCombine(
     || (allDispConfirmInfo = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)allDispConfirmInfo, 0)) == 0 )
   {
 LABEL_56:
-    sub_1C6BC60(allDispConfirmInfo, v16);
+    sub_1C71608(allDispConfirmInfo, v17);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)allDispConfirmInfo, 1, 0);
   allRareMsgLb = this->fields.allRareMsgLb;
@@ -976,22 +860,22 @@ LABEL_56:
     if ( isExceededMaterial )
       goto LABEL_45;
 LABEL_47:
-    v46 = &StringLiteral_10955/*"RARE_MATERIAL_INFO_MSG"*/;
+    v47 = &StringLiteral_10961/*"RARE_MATERIAL_INFO_MSG"*/;
     goto LABEL_48;
   }
   if ( !isExceededMaterial )
     goto LABEL_47;
 LABEL_45:
-  v46 = &StringLiteral_3574/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/;
+  v47 = &StringLiteral_3577/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/;
 LABEL_48:
-  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)*v46, 0);
+  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)*v47, 0);
   if ( !allRareMsgLb )
     goto LABEL_56;
   UILabel__set_text(allRareMsgLb, (System_String_o *)allDispConfirmInfo, 0);
   allRareConfirmMsgLb = this->fields.allRareConfirmMsgLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/, 0);
+  allDispConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/, 0);
   if ( !allRareConfirmMsgLb )
     goto LABEL_56;
   UILabel__set_text(allRareConfirmMsgLb, (System_String_o *)allDispConfirmInfo, 0);
@@ -1000,13 +884,13 @@ LABEL_48:
     goto LABEL_56;
   if ( combineRootComponent->fields.state == 3 )
   {
-    v49 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v50 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
-      v49,
+      v50,
       (Il2CppObject *)this,
-      Method_SetRarityDialogControl__SetAllDispConfirmCombine_b__147_0__,
+      Method_SetRarityDialogControl__SetAllDispConfirmCombine_b__148_0__,
       0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v49, 0, 0, v50);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v50, 0, 0, v51);
   }
 }
 
@@ -1024,74 +908,76 @@ void SetRarityDialogControl__SetAppendSkillCombineInfo(
   const MethodInfo *v12; // x1
   const MethodInfo *v13; // x1
   const MethodInfo *v14; // x1
+  const MethodInfo *v15; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *ComponentInChildren_object; // x22
   UIExtrusionLabel_o *appendSkillCurrentLvLabel; // x22
   UIExtrusionLabel_o *appendSkillResultLvLabel; // x22
-  UnityEngine_GameObject_o *v19; // x0
   UnityEngine_GameObject_o *v20; // x0
-  UILabel_o *v21; // x22
+  UnityEngine_GameObject_o *v21; // x0
   UILabel_o *v22; // x22
   UILabel_o *v23; // x22
-  System_String_o *v24; // x23
-  Il2CppObject *v25; // x0
-  UILabel_o *v26; // x22
-  System_String_o *v27; // x23
-  Il2CppObject *v28; // x0
+  UILabel_o *v24; // x22
+  System_String_o *v25; // x23
+  Il2CppObject *v26; // x0
+  UILabel_o *v27; // x22
+  System_String_o *v28; // x23
+  Il2CppObject *v29; // x0
   UILabel_o *appendSkillConfirmLabel; // x21
-  System_String_o *v30; // x0
+  System_String_o *v31; // x0
   Il2CppObject *Component_object; // x23
   UnityEngine_Transform_o *transform; // x0
-  UnityEngine_GameObject_o *v33; // x0
   UnityEngine_GameObject_o *v34; // x0
+  UnityEngine_GameObject_o *v35; // x0
   UILabel_o *appendSkillSpendTxtLabel; // x22
   UILabel_o *appendSkillHaveTxtLabel; // x22
   UILabel_o *appendSkillSpendLabel; // x22
-  System_String_o *v38; // x23
-  Il2CppObject *v39; // x0
+  System_String_o *v39; // x23
+  Il2CppObject *v40; // x0
   UILabel_o *appendSkillHaveLabel; // x22
-  System_String_o *v41; // x23
-  Il2CppObject *v42; // x0
+  System_String_o *v42; // x23
+  Il2CppObject *v43; // x0
   UILabel_o *cancelBtnLb; // x21
   UILabel_o *decideBtnLb; // x21
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v46; // x21
-  const MethodInfo *v47; // x5
-  UnityEngine_Bounds_o v48; // [xsp+8h] [xbp-68h] BYREF
+  System_Action_o *v47; // x21
+  const MethodInfo *v48; // x5
+  UnityEngine_Bounds_o v49; // [xsp+8h] [xbp-68h] BYREF
   int32_t haveSvtCoin; // [xsp+2Ch] [xbp-44h] BYREF
-  UnityEngine_Vector3_o v50; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB02EC & 1) == 0 )
+  if ( (byte_4CC13EE & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_AddComponent_BoxCollider___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponentInChildren_UIScrollView___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl___c__DisplayClass151_0__SetAppendSkillCombineInfo_b__0__);
-    sub_1C6BA08(&SetRarityDialogControl___c__DisplayClass151_0_TypeInfo);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_1999/*"APPEND_SKILL_OPEN_CONFIRM"*/);
-    sub_1C6BA08(&StringLiteral_2002/*"APPEND_SKILL_OPEN_SPEND_COIN"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_2000/*"APPEND_SKILL_OPEN_HAVE_COIN"*/);
-    sub_1C6BA08(&StringLiteral_3609/*"COMBINE_SPEND_QP"*/);
-    sub_1C6BA08(&StringLiteral_1968/*"APPEND_SKILL_COMBINE_CONFIRM"*/);
-    byte_4CB02EC = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_AddComponent_BoxCollider___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponentInChildren_UIScrollView___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl___c__DisplayClass152_0__SetAppendSkillCombineInfo_b__0__);
+    sub_1C713B0(&SetRarityDialogControl___c__DisplayClass152_0_TypeInfo);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_2001/*"APPEND_SKILL_OPEN_CONFIRM"*/);
+    sub_1C713B0(&StringLiteral_2004/*"APPEND_SKILL_OPEN_SPEND_COIN"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_2002/*"APPEND_SKILL_OPEN_HAVE_COIN"*/);
+    sub_1C713B0(&StringLiteral_3612/*"COMBINE_SPEND_QP"*/);
+    sub_1C713B0(&StringLiteral_1970/*"APPEND_SKILL_COMBINE_CONFIRM"*/);
+    byte_4CC13EE = 1;
   }
-  v9 = sub_1C6BC54(SetRarityDialogControl___c__DisplayClass151_0_TypeInfo);
+  v9 = sub_1C715FC(SetRarityDialogControl___c__DisplayClass152_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_60;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C6B9AC(v9 + 16, this);
+  sub_1C71354(v9 + 16, this);
   *(_BYTE *)(v9 + 24) = isOpen;
   SetRarityDialogControl__DisableConfirmInfo(this, v12);
+  SetRarityDialogControl__RemoveAllChild(this, v13);
   appendSkillConfirmInfo = this->fields.appendSkillConfirmInfo;
   if ( !appendSkillConfirmInfo )
     goto LABEL_60;
@@ -1100,8 +986,8 @@ void SetRarityDialogControl__SetAppendSkillCombineInfo(
   if ( !appendSkillConfirmInfo )
     goto LABEL_60;
   UnityEngine_GameObject__SetActive(appendSkillConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v13);
-  SetRarityDialogControl__DefaultBgSize(this, v14);
+  SetRarityDialogControl__Open(this, v14);
+  SetRarityDialogControl__DefaultBgSize(this, v15);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   GameObjectExtensions__SetLocalPositionY(gameObject, 0.0, 0);
   appendSkillConfirmInfo = (UnityEngine_GameObject_o *)this->fields.appendSkillTitleLabel;
@@ -1123,7 +1009,7 @@ void SetRarityDialogControl__SetAppendSkillCombineInfo(
       appendSkillConfirmInfo = (UnityEngine_GameObject_o *)this->fields.appendSkillIconComp;
       if ( appendSkillConfirmInfo )
       {
-        SkillIconComponent__Set_41257104(
+        SkillIconComponent__Set_41299816(
           (SkillIconComponent_o *)appendSkillConfirmInfo,
           updata->fields.currentId,
           updata->fields.nextLv,
@@ -1141,7 +1027,7 @@ void SetRarityDialogControl__SetAppendSkillCombineInfo(
             {
               ComponentInChildren_object = UnityEngine_GameObject__GetComponentInChildren_object_(
                                              appendSkillConfirmInfo,
-                                             (const MethodInfo_3193390 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIScrollView___);
+                                             (const MethodInfo_31A3134 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIScrollView___);
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               appendSkillConfirmInfo = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -1166,7 +1052,7 @@ void SetRarityDialogControl__SetAppendSkillCombineInfo(
               {
                 Component_object = UnityEngine_GameObject__GetComponent_object_(
                                      appendSkillConfirmInfo,
-                                     (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
+                                     (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_BoxCollider___);
                 if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
                 if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -1178,74 +1064,74 @@ void SetRarityDialogControl__SetAppendSkillCombineInfo(
                     goto LABEL_60;
                   Component_object = UnityEngine_GameObject__AddComponent_object_(
                                        appendSkillConfirmInfo,
-                                       (const MethodInfo_3193044 *)Method_UnityEngine_GameObject_AddComponent_BoxCollider___);
+                                       (const MethodInfo_31A2DE8 *)Method_UnityEngine_GameObject_AddComponent_BoxCollider___);
                 }
                 transform = UnityEngine_Component__get_transform(
                               (UnityEngine_Component_o *)ComponentInChildren_object,
                               0);
-                NGUIMath__CalculateAbsoluteWidgetBounds(&v48, transform, 0);
+                NGUIMath__CalculateAbsoluteWidgetBounds(&v49, transform, 0);
                 appendSkillConfirmInfo = (UnityEngine_GameObject_o *)((UnityEngine_GameObject_o *(__fastcall *)(UnityEngine_Bounds_o *__return_ptr, Il2CppObject *, const MethodInfo *))ComponentInChildren_object->klass->vtable[4].methodPtr)(
-                                                                       &v48,
+                                                                       &v49,
                                                                        ComponentInChildren_object,
                                                                        ComponentInChildren_object->klass->vtable[4].method);
                 if ( Component_object )
                 {
                   UnityEngine_BoxCollider__set_center(
                     (UnityEngine_BoxCollider_o *)Component_object,
-                    v48.fields.m_Center,
+                    v49.fields.m_Center,
                     0);
                   ((void (__fastcall *)(UnityEngine_Bounds_o *__return_ptr, Il2CppObject *, const MethodInfo *))ComponentInChildren_object->klass->vtable[4].methodPtr)(
-                    &v48,
+                    &v49,
                     ComponentInChildren_object,
                     ComponentInChildren_object->klass->vtable[4].method);
-                  v50.fields.x = v48.fields.m_Extents.fields.x + v48.fields.m_Extents.fields.x;
-                  v50.fields.y = v48.fields.m_Extents.fields.y + v48.fields.m_Extents.fields.y;
-                  v50.fields.z = v48.fields.m_Extents.fields.z + v48.fields.m_Extents.fields.z;
-                  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, v50, 0);
+                  v51.fields.x = v49.fields.m_Extents.fields.x + v49.fields.m_Extents.fields.x;
+                  v51.fields.y = v49.fields.m_Extents.fields.y + v49.fields.m_Extents.fields.y;
+                  v51.fields.z = v49.fields.m_Extents.fields.z + v49.fields.m_Extents.fields.z;
+                  UnityEngine_BoxCollider__set_size((UnityEngine_BoxCollider_o *)Component_object, v51, 0);
                   appendSkillConfirmInfo = (UnityEngine_GameObject_o *)this->fields.appendSkillSpendTxtLabel;
                   if ( appendSkillConfirmInfo )
                   {
-                    v33 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)appendSkillConfirmInfo, 0);
-                    GameObjectExtensions__SetLocalPositionX(v33, 100.0, 0);
+                    v34 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)appendSkillConfirmInfo, 0);
+                    GameObjectExtensions__SetLocalPositionX(v34, 100.0, 0);
                     appendSkillConfirmInfo = (UnityEngine_GameObject_o *)this->fields.appendSkillHaveTxtLabel;
                     if ( appendSkillConfirmInfo )
                     {
-                      v34 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)appendSkillConfirmInfo, 0);
-                      GameObjectExtensions__SetLocalPositionX(v34, 100.0, 0);
+                      v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)appendSkillConfirmInfo, 0);
+                      GameObjectExtensions__SetLocalPositionX(v35, 100.0, 0);
                       appendSkillSpendTxtLabel = this->fields.appendSkillSpendTxtLabel;
                       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                       appendSkillConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                             (System_String_o *)StringLiteral_2002/*"APPEND_SKILL_OPEN_SPEND_COIN"*/,
+                                                                             (System_String_o *)StringLiteral_2004/*"APPEND_SKILL_OPEN_SPEND_COIN"*/,
                                                                              0);
                       if ( appendSkillSpendTxtLabel )
                       {
                         UILabel__set_text(appendSkillSpendTxtLabel, (System_String_o *)appendSkillConfirmInfo, 0);
                         appendSkillHaveTxtLabel = this->fields.appendSkillHaveTxtLabel;
                         appendSkillConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                               (System_String_o *)StringLiteral_2000/*"APPEND_SKILL_OPEN_HAVE_COIN"*/,
+                                                                               (System_String_o *)StringLiteral_2002/*"APPEND_SKILL_OPEN_HAVE_COIN"*/,
                                                                                0);
                         if ( appendSkillHaveTxtLabel )
                         {
                           UILabel__set_text(appendSkillHaveTxtLabel, (System_String_o *)appendSkillConfirmInfo, 0);
                           appendSkillSpendLabel = this->fields.appendSkillSpendLabel;
-                          v38 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-                          LODWORD(v48.fields.m_Center.fields.x) = updata->fields.spendSvtCoin;
-                          v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48);
-                          appendSkillConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v38, v39, 0);
+                          v39 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+                          LODWORD(v49.fields.m_Center.fields.x) = updata->fields.spendSvtCoin;
+                          v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v49);
+                          appendSkillConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v39, v40, 0);
                           if ( appendSkillSpendLabel )
                           {
                             UILabel__set_text(appendSkillSpendLabel, (System_String_o *)appendSkillConfirmInfo, 0);
                             appendSkillHaveLabel = this->fields.appendSkillHaveLabel;
-                            v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
+                            v42 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
                             haveSvtCoin = updata->fields.haveSvtCoin;
-                            v42 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveSvtCoin);
-                            appendSkillConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v41, v42, 0);
+                            v43 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveSvtCoin);
+                            appendSkillConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v42, v43, 0);
                             if ( appendSkillHaveLabel )
                             {
                               UILabel__set_text(appendSkillHaveLabel, (System_String_o *)appendSkillConfirmInfo, 0);
                               appendSkillConfirmLabel = this->fields.appendSkillConfirmLabel;
-                              v30 = (System_String_o *)StringLiteral_1999/*"APPEND_SKILL_OPEN_CONFIRM"*/;
+                              v31 = (System_String_o *)StringLiteral_2001/*"APPEND_SKILL_OPEN_CONFIRM"*/;
                               goto LABEL_51;
                             }
                           }
@@ -1261,7 +1147,7 @@ void SetRarityDialogControl__SetAppendSkillCombineInfo(
       }
     }
 LABEL_60:
-    sub_1C6BC60(appendSkillConfirmInfo, v11);
+    sub_1C71608(appendSkillConfirmInfo, v11);
   }
   if ( !updata )
     goto LABEL_60;
@@ -1286,49 +1172,49 @@ LABEL_60:
   appendSkillConfirmInfo = (UnityEngine_GameObject_o *)this->fields.appendSkillSpendTxtLabel;
   if ( !appendSkillConfirmInfo )
     goto LABEL_60;
-  v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)appendSkillConfirmInfo, 0);
-  GameObjectExtensions__SetLocalPositionX(v19, -5.0, 0);
+  v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)appendSkillConfirmInfo, 0);
+  GameObjectExtensions__SetLocalPositionX(v20, -5.0, 0);
   appendSkillConfirmInfo = (UnityEngine_GameObject_o *)this->fields.appendSkillHaveTxtLabel;
   if ( !appendSkillConfirmInfo )
     goto LABEL_60;
-  v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)appendSkillConfirmInfo, 0);
-  GameObjectExtensions__SetLocalPositionX(v20, -5.0, 0);
-  v21 = this->fields.appendSkillSpendTxtLabel;
+  v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)appendSkillConfirmInfo, 0);
+  GameObjectExtensions__SetLocalPositionX(v21, -5.0, 0);
+  v22 = this->fields.appendSkillSpendTxtLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   appendSkillConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                         (System_String_o *)StringLiteral_3609/*"COMBINE_SPEND_QP"*/,
-                                                         0);
-  if ( !v21 )
-    goto LABEL_60;
-  UILabel__set_text(v21, (System_String_o *)appendSkillConfirmInfo, 0);
-  v22 = this->fields.appendSkillHaveTxtLabel;
-  appendSkillConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                         (System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/,
+                                                         (System_String_o *)StringLiteral_3612/*"COMBINE_SPEND_QP"*/,
                                                          0);
   if ( !v22 )
     goto LABEL_60;
   UILabel__set_text(v22, (System_String_o *)appendSkillConfirmInfo, 0);
-  v23 = this->fields.appendSkillSpendLabel;
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  haveSvtCoin = updata->fields.spendQp;
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveSvtCoin);
-  appendSkillConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v24, v25, 0);
+  v23 = this->fields.appendSkillHaveTxtLabel;
+  appendSkillConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
+                                                         (System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/,
+                                                         0);
   if ( !v23 )
     goto LABEL_60;
   UILabel__set_text(v23, (System_String_o *)appendSkillConfirmInfo, 0);
-  v26 = this->fields.appendSkillHaveLabel;
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  *(_QWORD *)&v48.fields.m_Center.fields.x = updata->fields.haveQp;
-  v28 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v48);
-  appendSkillConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v27, v28, 0);
-  if ( !v26 )
+  v24 = this->fields.appendSkillSpendLabel;
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  haveSvtCoin = updata->fields.spendQp;
+  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &haveSvtCoin);
+  appendSkillConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v25, v26, 0);
+  if ( !v24 )
     goto LABEL_60;
-  UILabel__set_text(v26, (System_String_o *)appendSkillConfirmInfo, 0);
+  UILabel__set_text(v24, (System_String_o *)appendSkillConfirmInfo, 0);
+  v27 = this->fields.appendSkillHaveLabel;
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  *(_QWORD *)&v49.fields.m_Center.fields.x = updata->fields.haveQp;
+  v29 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v49);
+  appendSkillConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v28, v29, 0);
+  if ( !v27 )
+    goto LABEL_60;
+  UILabel__set_text(v27, (System_String_o *)appendSkillConfirmInfo, 0);
   appendSkillConfirmLabel = this->fields.appendSkillConfirmLabel;
-  v30 = (System_String_o *)StringLiteral_1968/*"APPEND_SKILL_COMBINE_CONFIRM"*/;
+  v31 = (System_String_o *)StringLiteral_1970/*"APPEND_SKILL_COMBINE_CONFIRM"*/;
 LABEL_51:
-  appendSkillConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(v30, 0);
+  appendSkillConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(v31, 0);
   if ( !appendSkillConfirmLabel )
     goto LABEL_60;
   UILabel__set_text(appendSkillConfirmLabel, (System_String_o *)appendSkillConfirmInfo, 0);
@@ -1336,14 +1222,14 @@ LABEL_51:
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   appendSkillConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                         (System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/,
+                                                         (System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/,
                                                          0);
   if ( !cancelBtnLb )
     goto LABEL_60;
   UILabel__set_text(cancelBtnLb, (System_String_o *)appendSkillConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
   appendSkillConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                         (System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/,
+                                                         (System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/,
                                                          0);
   if ( !decideBtnLb )
     goto LABEL_60;
@@ -1353,13 +1239,13 @@ LABEL_51:
     goto LABEL_60;
   if ( combineRootComponent->fields.state == 14 )
   {
-    v46 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v47 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
-      v46,
+      v47,
       (Il2CppObject *)v9,
-      Method_SetRarityDialogControl___c__DisplayClass151_0__SetAppendSkillCombineInfo_b__0__,
+      Method_SetRarityDialogControl___c__DisplayClass152_0__SetAppendSkillCombineInfo_b__0__,
       0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v46, 0, 0, v47);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v47, 0, 0, v48);
   }
 }
 
@@ -1386,7 +1272,7 @@ void SetRarityDialogControl__SetCenter(SetRarityDialogControl_o *this, const Met
                                               mPanel->klass[1]._1.klass)) == 0 )
   {
 LABEL_11:
-    sub_1C6BC60(mPanel, method);
+    sub_1C71608(mPanel, method);
   }
   klass = (unsigned int)mPanel[1].klass;
   v5 = (float32x2_t *)mPanel;
@@ -1419,7 +1305,7 @@ LABEL_11:
   while ( v6 != 4 );
   if ( klass <= 2 )
 LABEL_12:
-    sub_1C6BC68(mPanel);
+    sub_1C71610(mPanel);
   v11 = v5[5].n64_f32[0];
   v12 = v5[8].n64_f32[0] - v11;
   *(float32x2_t *)&this->fields.center.fields.x = vadd_f32(
@@ -1439,11 +1325,11 @@ void SetRarityDialogControl__SetClickDlgOkSeAndCallBack(
 {
   this->fields.onClickDlgOkSeKind = seKind;
   this->fields.onClickDlgOkCallBack = callBack;
-  sub_1C6B9AC(&this->fields.onClickDlgOkCallBack, callBack);
+  sub_1C71354(&this->fields.onClickDlgOkCallBack, callBack);
   this->fields.onClickDlgCancelCallBack = cancelCallBack;
-  sub_1C6B9AC(&this->fields.onClickDlgCancelCallBack, cancelCallBack);
+  sub_1C71354(&this->fields.onClickDlgCancelCallBack, cancelCallBack);
   this->fields.onClickDlgCloseCallBack = closeCallBack;
-  sub_1C6B9AC(&this->fields.onClickDlgCloseCallBack, closeCallBack);
+  sub_1C71354(&this->fields.onClickDlgCloseCallBack, closeCallBack);
 }
 
 
@@ -1458,64 +1344,66 @@ void SetRarityDialogControl__SetConfirmCombine(
         System_Int64_array *selectedList,
         const MethodInfo *method)
 {
-  __int64 v15; // x1
+  const MethodInfo *v15; // x1
+  __int64 v16; // x1
   void *normalConfirmInfo; // x0
-  const MethodInfo *v17; // x1
   const MethodInfo *v18; // x1
+  const MethodInfo *v19; // x1
   UILabel_o *cancelBtnLb; // x24
   UILabel_o *decideBtnLb; // x24
-  const MethodInfo *v21; // x1
+  const MethodInfo *v22; // x1
   il2cpp_array_size_t max_length; // x25
-  float v23; // s8
-  unsigned __int64 v24; // x24
-  bool v25; // w8
+  float v24; // s8
+  unsigned __int64 v25; // x24
+  bool v26; // w8
   UnityEngine_GameObject_o *svtFaceInfo; // x25
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v28; // x7
+  const MethodInfo *v29; // x7
   float y; // s9
-  int v30; // w24
-  int v31; // w9
-  float v32; // s1 OVERLAPPED
+  int v31; // w24
+  int v32; // w9
+  float v33; // s1 OVERLAPPED
   float z; // s2
-  float v34; // s0
+  float v35; // s0
   UILabel_o *normalSpendQpTxtLb; // x24
   UILabel_o *normalHaveQpTxtLb; // x24
   UILabel_o *confirmSpendQpLb; // x24
-  System_String_o *v38; // x25
-  Il2CppObject *v39; // x0
+  System_String_o *v39; // x25
+  Il2CppObject *v40; // x0
   UILabel_o *confirmHaveQpLb; // x23
-  System_String_o *v41; // x24
-  Il2CppObject *v42; // x0
+  System_String_o *v42; // x24
+  Il2CppObject *v43; // x0
   UILabel_o *confirmMsgLb; // x22
-  const MethodInfo *v44; // x4
-  _BOOL8 v45; // x0
-  const MethodInfo *v46; // x2
+  const MethodInfo *v45; // x4
+  _BOOL8 v46; // x0
+  const MethodInfo *v47; // x2
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v48; // x20
-  const MethodInfo *v49; // x5
-  int64_t v50; // [xsp+0h] [xbp-80h] BYREF
-  int32_t v51; // [xsp+Ch] [xbp-74h] BYREF
+  System_Action_o *v49; // x20
+  const MethodInfo *v50; // x5
+  int64_t v51; // [xsp+0h] [xbp-80h] BYREF
+  int32_t v52; // [xsp+Ch] [xbp-74h] BYREF
   System_String_o *labelMsg; // [xsp+28h] [xbp-58h] BYREF
-  UnityEngine_Vector3_o v53; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB02E6 & 1) == 0 )
+  if ( (byte_4CC13E8 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetConfirmCombine_b__145_0__);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_3609/*"COMBINE_SPEND_QP"*/);
-    byte_4CB02E6 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetConfirmCombine_b__146_0__);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_3612/*"COMBINE_SPEND_QP"*/);
+    byte_4CC13E8 = 1;
   }
   labelMsg = 0;
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
+  SetRarityDialogControl__RemoveAllChild(this, v15);
   normalConfirmInfo = this->fields.normalConfirmInfo;
   if ( !normalConfirmInfo )
     goto LABEL_46;
@@ -1525,8 +1413,8 @@ void SetRarityDialogControl__SetConfirmCombine(
   if ( !normalConfirmInfo )
     goto LABEL_46;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)normalConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v17);
-  SetRarityDialogControl__DefaultBgSize(this, v18);
+  SetRarityDialogControl__Open(this, v18);
+  SetRarityDialogControl__DefaultBgSize(this, v19);
   normalConfirmInfo = this->fields.normalTitleLb;
   if ( !normalConfirmInfo )
     goto LABEL_46;
@@ -1534,30 +1422,30 @@ void SetRarityDialogControl__SetConfirmCombine(
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_46;
   UILabel__set_text(cancelBtnLb, (System_String_o *)normalConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
-  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideBtnLb )
     goto LABEL_46;
   UILabel__set_text(decideBtnLb, (System_String_o *)normalConfirmInfo, 0);
-  SetRarityDialogControl__SetCenter(this, v21);
+  SetRarityDialogControl__SetCenter(this, v22);
   if ( !selectedList )
     goto LABEL_46;
   normalConfirmInfo = this->fields.materialSvtGrid;
   if ( !normalConfirmInfo )
     goto LABEL_46;
   LODWORD(max_length) = selectedList->max_length;
-  v23 = *((float *)normalConfirmInfo + 12);
+  v24 = *((float *)normalConfirmInfo + 12);
   if ( (int)max_length >= 1 )
   {
-    v24 = 0;
     v25 = 0;
+    v26 = 0;
     do
     {
-      if ( v25 )
+      if ( v26 )
         goto LABEL_46;
       svtFaceInfo = this->fields.svtFaceInfo;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)normalConfirmInfo, 0);
@@ -1566,46 +1454,46 @@ void SetRarityDialogControl__SetConfirmCombine(
         goto LABEL_46;
       normalConfirmInfo = UnityEngine_GameObject__GetComponent_object_(
                             (UnityEngine_GameObject_o *)normalConfirmInfo,
-                            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-      if ( v24 >= LODWORD(selectedList->max_length) )
-        sub_1C6BC68(normalConfirmInfo);
+                            (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+      if ( v25 >= LODWORD(selectedList->max_length) )
+        sub_1C71610(normalConfirmInfo);
       if ( !normalConfirmInfo )
         goto LABEL_46;
       MaterialSvtInfo__setMaterialSvtInfo(
         (MaterialSvtInfo_o *)normalConfirmInfo,
-        v24,
+        v25,
         baseData,
-        selectedList->m_Items[v24],
+        selectedList->m_Items[v25],
         0,
         0,
         0,
-        v28);
+        v29);
       normalConfirmInfo = this->fields.materialSvtGrid;
       max_length = selectedList->max_length;
-      ++v24;
-      v25 = normalConfirmInfo == 0;
+      ++v25;
+      v26 = normalConfirmInfo == 0;
     }
-    while ( (__int64)v24 < (int)max_length );
+    while ( (__int64)v25 < (int)max_length );
     if ( !normalConfirmInfo )
       goto LABEL_46;
   }
   y = this->fields.center.fields.y;
-  v30 = *((_DWORD *)normalConfirmInfo + 11);
+  v31 = *((_DWORD *)normalConfirmInfo + 11);
   normalConfirmInfo = UnityEngine_Component__get_transform((UnityEngine_Component_o *)normalConfirmInfo, 0);
   if ( !normalConfirmInfo )
     goto LABEL_46;
-  if ( v30 >= (int)max_length )
-    v31 = max_length;
+  if ( v31 >= (int)max_length )
+    v32 = max_length;
   else
-    v31 = v30;
-  v32 = 55.0;
-  if ( v30 >= (int)max_length )
-    v32 = y;
-  v34 = (float)(this->fields.center.fields.x - (float)((float)(v23 * 0.5) * (float)(v31 - 1))) * 0.5;
+    v32 = v31;
+  v33 = 55.0;
+  if ( v31 >= (int)max_length )
+    v33 = y;
+  v35 = (float)(this->fields.center.fields.x - (float)((float)(v24 * 0.5) * (float)(v32 - 1))) * 0.5;
   z = this->fields.center.fields.z;
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)normalConfirmInfo,
-    *(UnityEngine_Vector3_o *)(&v32 - 1),
+    *(UnityEngine_Vector3_o *)(&v33 - 1),
     0);
   normalConfirmInfo = this->fields.materialSvtGrid;
   if ( !normalConfirmInfo )
@@ -1613,10 +1501,10 @@ void SetRarityDialogControl__SetConfirmCombine(
   normalConfirmInfo = UnityEngine_Component__get_transform((UnityEngine_Component_o *)normalConfirmInfo, 0);
   if ( !normalConfirmInfo )
     goto LABEL_46;
-  v53.fields.x = 0.5;
-  v53.fields.y = 0.5;
-  v53.fields.z = 0.5;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)normalConfirmInfo, v53, 0);
+  v54.fields.x = 0.5;
+  v54.fields.y = 0.5;
+  v54.fields.z = 0.5;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)normalConfirmInfo, v54, 0);
   normalConfirmInfo = this->fields.materialSvtGrid;
   if ( !normalConfirmInfo )
     goto LABEL_46;
@@ -1624,33 +1512,33 @@ void SetRarityDialogControl__SetConfirmCombine(
   normalSpendQpTxtLb = this->fields.normalSpendQpTxtLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3609/*"COMBINE_SPEND_QP"*/, 0);
+  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3612/*"COMBINE_SPEND_QP"*/, 0);
   if ( !normalSpendQpTxtLb )
     goto LABEL_46;
   UILabel__set_text(normalSpendQpTxtLb, (System_String_o *)normalConfirmInfo, 0);
   normalHaveQpTxtLb = this->fields.normalHaveQpTxtLb;
-  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/, 0);
+  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/, 0);
   if ( !normalHaveQpTxtLb )
     goto LABEL_46;
   UILabel__set_text(normalHaveQpTxtLb, (System_String_o *)normalConfirmInfo, 0);
   confirmSpendQpLb = this->fields.confirmSpendQpLb;
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v51 = spendQp;
-  v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51);
-  normalConfirmInfo = System_String__Format(v38, v39, 0);
+  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v52 = spendQp;
+  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v52);
+  normalConfirmInfo = System_String__Format(v39, v40, 0);
   if ( !confirmSpendQpLb )
     goto LABEL_46;
   UILabel__set_text(confirmSpendQpLb, (System_String_o *)normalConfirmInfo, 0);
   confirmHaveQpLb = this->fields.confirmHaveQpLb;
-  v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v50 = haveQp;
-  v42 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v50);
-  normalConfirmInfo = System_String__Format(v41, v42, 0);
+  v42 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v51 = haveQp;
+  v43 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v51);
+  normalConfirmInfo = System_String__Format(v42, v43, 0);
   if ( !confirmHaveQpLb )
     goto LABEL_46;
   UILabel__set_text(confirmHaveQpLb, (System_String_o *)normalConfirmInfo, 0);
   confirmMsgLb = this->fields.confirmMsgLb;
-  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/, 0);
+  normalConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/, 0);
   if ( !confirmMsgLb )
     goto LABEL_46;
   UILabel__set_text(confirmMsgLb, (System_String_o *)normalConfirmInfo, 0);
@@ -1661,8 +1549,8 @@ void SetRarityDialogControl__SetConfirmCombine(
   if ( !normalConfirmInfo )
     goto LABEL_46;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)normalConfirmInfo, 0, 0);
-  v45 = SetRarityDialogControl__CheckStatusUpInfo(this, baseData, selectedList, &labelMsg, v44);
-  if ( !v45 )
+  v46 = SetRarityDialogControl__CheckStatusUpInfo(this, baseData, selectedList, &labelMsg, v45);
+  if ( !v46 )
     goto LABEL_42;
   WrapControlText__textAdjust(this->fields.statusUpInfoLb, labelMsg, 22, 0, 0);
   normalConfirmInfo = this->fields.statusUpInfoLb;
@@ -1670,19 +1558,19 @@ void SetRarityDialogControl__SetConfirmCombine(
     || (normalConfirmInfo = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)normalConfirmInfo, 0)) == 0 )
   {
 LABEL_46:
-    sub_1C6BC60(normalConfirmInfo, v15);
+    sub_1C71608(normalConfirmInfo, v16);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)normalConfirmInfo, 1, 0);
 LABEL_42:
-  SetRarityDialogControl__CheckExceedSvt((SetRarityDialogControl_o *)v45, selectedList, v46);
+  SetRarityDialogControl__CheckExceedSvt((SetRarityDialogControl_o *)v46, selectedList, v47);
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
     goto LABEL_46;
   if ( combineRootComponent->fields.state == 3 )
   {
-    v48 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v48, (Il2CppObject *)this, Method_SetRarityDialogControl__SetConfirmCombine_b__145_0__, 0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v48, 0, 0, v49);
+    v49 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v49, (Il2CppObject *)this, Method_SetRarityDialogControl__SetConfirmCombine_b__146_0__, 0);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v49, 0, 0, v50);
   }
 }
 
@@ -1696,42 +1584,44 @@ void SetRarityDialogControl__SetConfirmCombineCostume(
         System_Action_o *cancelCallBack,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
+  const MethodInfo *v13; // x1
+  __int64 v14; // x1
   UnityEngine_GameObject_o *costumeConfirmInfo; // x0
-  const MethodInfo *v15; // x1
   const MethodInfo *v16; // x1
+  const MethodInfo *v17; // x1
   UILabel_o *costumeTitleLb; // x25
   UILabel_o *cancelBtnLb; // x24
   UILabel_o *decideBtnLb; // x24
   UILabel_o *needQpCostumeTextLb; // x24
   UILabel_o *needQpCostumeLb; // x24
-  System_String_o *v22; // x25
-  Il2CppObject *v23; // x0
+  System_String_o *v23; // x25
+  Il2CppObject *v24; // x0
   UILabel_o *haveQpCostumeTextLb; // x23
   UILabel_o *haveQpCostumeLb; // x23
-  System_String_o *v26; // x24
-  Il2CppObject *v27; // x0
+  System_String_o *v27; // x24
+  Il2CppObject *v28; // x0
   UILabel_o *costumeInfoLb; // x22
-  const MethodInfo *v29; // x5
+  const MethodInfo *v30; // x5
   struct CombineRootComponent_o *combineRootComponent; // x8
-  int64_t v31; // [xsp+0h] [xbp-60h] BYREF
-  int32_t v32; // [xsp+Ch] [xbp-54h] BYREF
+  int64_t v32; // [xsp+0h] [xbp-60h] BYREF
+  int32_t v33; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4CB02F3 & 1) == 0 )
+  if ( (byte_4CC13F5 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3759/*"CONFIRM_TITLE_COSTUME_COMBINE"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_3841/*"COSTUME_NEED_QP_TEXT"*/);
-    sub_1C6BA08(&StringLiteral_3838/*"COSTUME_CONFIRM_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3840/*"COSTUME_HAVE_QP_TEXT"*/);
-    byte_4CB02F3 = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3762/*"CONFIRM_TITLE_COSTUME_COMBINE"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_3844/*"COSTUME_NEED_QP_TEXT"*/);
+    sub_1C713B0(&StringLiteral_3841/*"COSTUME_CONFIRM_MSG"*/);
+    sub_1C713B0(&StringLiteral_3843/*"COSTUME_HAVE_QP_TEXT"*/);
+    byte_4CC13F5 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)cosName);
+  SetRarityDialogControl__RemoveAllChild(this, v13);
   costumeConfirmInfo = this->fields.costumeConfirmInfo;
   if ( !costumeConfirmInfo )
     goto LABEL_20;
@@ -1740,12 +1630,12 @@ void SetRarityDialogControl__SetConfirmCombineCostume(
   if ( !costumeConfirmInfo )
     goto LABEL_20;
   UnityEngine_GameObject__SetActive(costumeConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v15);
-  SetRarityDialogControl__DefaultBgSize(this, v16);
+  SetRarityDialogControl__Open(this, v16);
+  SetRarityDialogControl__DefaultBgSize(this, v17);
   costumeTitleLb = this->fields.costumeTitleLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3759/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, 0);
+  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3762/*"CONFIRM_TITLE_COSTUME_COMBINE"*/, 0);
   if ( !costumeTitleLb )
     goto LABEL_20;
   UILabel__set_text(costumeTitleLb, (System_String_o *)costumeConfirmInfo, 0);
@@ -1754,53 +1644,53 @@ void SetRarityDialogControl__SetConfirmCombineCostume(
     goto LABEL_20;
   UILabel__set_text((UILabel_o *)costumeConfirmInfo, cosName, 0);
   cancelBtnLb = this->fields.cancelBtnLb;
-  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_20;
   UILabel__set_text(cancelBtnLb, (System_String_o *)costumeConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
-  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideBtnLb )
     goto LABEL_20;
   UILabel__set_text(decideBtnLb, (System_String_o *)costumeConfirmInfo, 0);
   needQpCostumeTextLb = this->fields.needQpCostumeTextLb;
-  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3841/*"COSTUME_NEED_QP_TEXT"*/, 0);
+  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3844/*"COSTUME_NEED_QP_TEXT"*/, 0);
   if ( !needQpCostumeTextLb )
     goto LABEL_20;
   UILabel__set_text(needQpCostumeTextLb, (System_String_o *)costumeConfirmInfo, 0);
   needQpCostumeLb = this->fields.needQpCostumeLb;
-  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v32 = needQp;
-  v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v32);
-  costumeConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v22, v23, 0);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v33 = needQp;
+  v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33);
+  costumeConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v23, v24, 0);
   if ( !needQpCostumeLb )
     goto LABEL_20;
   UILabel__set_text(needQpCostumeLb, (System_String_o *)costumeConfirmInfo, 0);
   haveQpCostumeTextLb = this->fields.haveQpCostumeTextLb;
-  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3840/*"COSTUME_HAVE_QP_TEXT"*/, 0);
+  costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3843/*"COSTUME_HAVE_QP_TEXT"*/, 0);
   if ( !haveQpCostumeTextLb )
     goto LABEL_20;
   UILabel__set_text(haveQpCostumeTextLb, (System_String_o *)costumeConfirmInfo, 0);
   haveQpCostumeLb = this->fields.haveQpCostumeLb;
-  v26 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v31 = haveQp;
-  v27 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v31);
-  costumeConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v26, v27, 0);
+  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v32 = haveQp;
+  v28 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v32);
+  costumeConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v27, v28, 0);
   if ( !haveQpCostumeLb
     || (UILabel__set_text(haveQpCostumeLb, (System_String_o *)costumeConfirmInfo, 0),
         costumeInfoLb = this->fields.costumeInfoLb,
         costumeConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                           (System_String_o *)StringLiteral_3838/*"COSTUME_CONFIRM_MSG"*/,
+                                                           (System_String_o *)StringLiteral_3841/*"COSTUME_CONFIRM_MSG"*/,
                                                            0),
         !costumeInfoLb)
     || (UILabel__set_text(costumeInfoLb, (System_String_o *)costumeConfirmInfo, 0),
         (combineRootComponent = this->fields.combineRootComponent) == 0) )
   {
 LABEL_20:
-    sub_1C6BC60(costumeConfirmInfo, v13);
+    sub_1C71608(costumeConfirmInfo, v14);
   }
   if ( combineRootComponent->fields.state == 8 )
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, callBack, cancelCallBack, 0, v29);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, callBack, cancelCallBack, 0, v30);
 }
 
 
@@ -1811,19 +1701,21 @@ void SetRarityDialogControl__SetConfirmCombineCostumeEventItem(
         System_Action_o *cancelCallBack,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
+  const MethodInfo *v9; // x1
+  __int64 v10; // x1
   UnityEngine_GameObject_o *costumeEventItemConfirmInfo; // x0
-  const MethodInfo *v11; // x1
   const MethodInfo *v12; // x1
-  const MethodInfo *v13; // x5
+  const MethodInfo *v13; // x1
+  const MethodInfo *v14; // x5
   struct CombineRootComponent_o *combineRootComponent; // x8
 
-  if ( (byte_4CB02F2 & 1) == 0 )
+  if ( (byte_4CC13F4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_CostumeEventItemConfirmInfo___);
-    byte_4CB02F2 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_CostumeEventItemConfirmInfo___);
+    byte_4CC13F4 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)eventCombineCostumeEnt);
+  SetRarityDialogControl__RemoveAllChild(this, v9);
   costumeEventItemConfirmInfo = this->fields.costumeEventItemConfirmInfo;
   if ( !costumeEventItemConfirmInfo )
     goto LABEL_11;
@@ -1832,22 +1724,22 @@ void SetRarityDialogControl__SetConfirmCombineCostumeEventItem(
   if ( !costumeEventItemConfirmInfo
     || (costumeEventItemConfirmInfo = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                     costumeEventItemConfirmInfo,
-                                                                    (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_CostumeEventItemConfirmInfo___)) == 0
+                                                                    (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_CostumeEventItemConfirmInfo___)) == 0
     || (CostumeEventItemConfirmInfo__Set(
           (CostumeEventItemConfirmInfo_o *)costumeEventItemConfirmInfo,
           eventCombineCostumeEnt,
           0),
         (costumeEventItemConfirmInfo = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0)
     || (UnityEngine_GameObject__SetActive(costumeEventItemConfirmInfo, 1, 0),
-        SetRarityDialogControl__MoveAlpha(this, v11),
-        SetRarityDialogControl__DefaultBgSize(this, v12),
+        SetRarityDialogControl__Open(this, v12),
+        SetRarityDialogControl__DefaultBgSize(this, v13),
         (combineRootComponent = this->fields.combineRootComponent) == 0) )
   {
 LABEL_11:
-    sub_1C6BC60(costumeEventItemConfirmInfo, v9);
+    sub_1C71608(costumeEventItemConfirmInfo, v10);
   }
   if ( combineRootComponent->fields.state == 8 )
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 0, callBack, cancelCallBack, 0, v13);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 0, callBack, cancelCallBack, 0, v14);
 }
 
 
@@ -1861,26 +1753,28 @@ void SetRarityDialogControl__SetConfirmCombineCostumeEventItemOrNeedItem(
         System_Action_o *cancelCallBack,
         const MethodInfo *method)
 {
-  __int64 v15; // x1
+  const MethodInfo *v15; // x1
+  __int64 v16; // x1
   UnityEngine_GameObject_o *costumeEventItemOrNeedItemConfirmInfo; // x0
-  const MethodInfo *v17; // x1
   const MethodInfo *v18; // x1
+  const MethodInfo *v19; // x1
   UILabel_o *cancelBtnLb; // x21
   UnityEngine_GameObject_o *gameObject; // x0
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v22; // x21
-  const MethodInfo *v23; // x5
+  System_Action_o *v23; // x21
+  const MethodInfo *v24; // x5
 
-  if ( (byte_4CB02F1 & 1) == 0 )
+  if ( (byte_4CC13F3 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_CostumeEventItemOrNeedItemConfirmInfo___);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl_DefaultBgSize__);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    byte_4CB02F1 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_CostumeEventItemOrNeedItemConfirmInfo___);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl_DefaultBgSize__);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    byte_4CC13F3 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)combineCostumeEnt);
+  SetRarityDialogControl__RemoveAllChild(this, v15);
   costumeEventItemOrNeedItemConfirmInfo = this->fields.costumeEventItemOrNeedItemConfirmInfo;
   if ( !costumeEventItemOrNeedItemConfirmInfo )
     goto LABEL_21;
@@ -1890,7 +1784,7 @@ void SetRarityDialogControl__SetConfirmCombineCostumeEventItemOrNeedItem(
     goto LABEL_21;
   costumeEventItemOrNeedItemConfirmInfo = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                         costumeEventItemOrNeedItemConfirmInfo,
-                                                                        (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_CostumeEventItemOrNeedItemConfirmInfo___);
+                                                                        (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_CostumeEventItemOrNeedItemConfirmInfo___);
   if ( !costumeEventItemOrNeedItemConfirmInfo )
     goto LABEL_21;
   CostumeEventItemOrNeedItemConfirmInfo__Set(
@@ -1905,13 +1799,13 @@ void SetRarityDialogControl__SetConfirmCombineCostumeEventItemOrNeedItem(
   if ( !costumeEventItemOrNeedItemConfirmInfo )
     goto LABEL_21;
   UnityEngine_GameObject__SetActive(costumeEventItemOrNeedItemConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v17);
-  SetRarityDialogControl__DefaultBgSize(this, v18);
+  SetRarityDialogControl__Open(this, v18);
+  SetRarityDialogControl__DefaultBgSize(this, v19);
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   costumeEventItemOrNeedItemConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                        (System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/,
+                                                                        (System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/,
                                                                         0);
   if ( !cancelBtnLb )
     goto LABEL_21;
@@ -1948,13 +1842,13 @@ void SetRarityDialogControl__SetConfirmCombineCostumeEventItemOrNeedItem(
         (combineRootComponent = this->fields.combineRootComponent) == 0) )
   {
 LABEL_21:
-    sub_1C6BC60(costumeEventItemOrNeedItemConfirmInfo, v15);
+    sub_1C71608(costumeEventItemOrNeedItemConfirmInfo, v16);
   }
   if ( combineRootComponent->fields.state == 8 )
   {
-    v22 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v22, (Il2CppObject *)this, Method_SetRarityDialogControl_DefaultBgSize__, 0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, 0, cancelCallBack, v22, v23);
+    v23 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v23, (Il2CppObject *)this, Method_SetRarityDialogControl_DefaultBgSize__, 0);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, 0, cancelCallBack, v23, v24);
   }
 }
 
@@ -1988,11 +1882,11 @@ void SetRarityDialogControl__SetConfirmInfo(
 
   v16 = this;
   v17 = isStatusUp;
-  if ( (byte_4CB02E3 & 1) == 0 )
+  if ( (byte_4CC13E5 & 1) == 0 )
   {
-    sub_1C6BA08(&CombineRootComponent_TypeInfo);
-    this = (SetRarityDialogControl_o *)sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CB02E3 = 1;
+    sub_1C713B0(&CombineRootComponent_TypeInfo);
+    this = (SetRarityDialogControl_o *)sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4CC13E5 = 1;
   }
   labelMsg = 0;
   SetRarityDialogControl__CheckExceedSvt(this, selectedList, (const MethodInfo *)list);
@@ -2018,7 +1912,7 @@ void SetRarityDialogControl__SetConfirmInfo(
       haveQp,
       isExceededMaterial,
       v20);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = (Il2CppObject *)Instance[2].klass;
@@ -2032,16 +1926,16 @@ void SetRarityDialogControl__SetConfirmInfo(
   }
   if ( HIDWORD(Instance[42].monitor) != 7 )
     return;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance || (Instance = (Il2CppObject *)Instance[2].klass) == 0 )
 LABEL_18:
-    sub_1C6BC60(Instance, v22);
+    sub_1C71608(Instance, v22);
   v24 = CombineRootComponent_TypeInfo->_2.naturalAligment;
   if ( Instance->klass->_2.naturalAligment < (unsigned int)v24
     || (CombineRootComponent_c *)Instance->klass->_2.typeHierarchy[v24 - 1] != CombineRootComponent_TypeInfo )
   {
 LABEL_19:
-    v25 = (SetRarityDialogControl_o *)sub_1C6BFFC(Instance);
+    v25 = (SetRarityDialogControl_o *)sub_1C719A4(Instance);
     SetRarityDialogControl__CheckExceedSvt(v25, v26, v27);
     return;
   }
@@ -2058,47 +1952,49 @@ void SetRarityDialogControl__SetConfirmLvExceed(
         bool isCheck,
         const MethodInfo *method)
 {
-  __int64 v12; // x1
+  const MethodInfo *v12; // x1
+  __int64 v13; // x1
   UnityEngine_GameObject_o *lvExceedConfirmSimpleInfo; // x0
-  const MethodInfo *v14; // x1
   const MethodInfo *v15; // x1
+  const MethodInfo *v16; // x1
   UILabel_o *cancelBtnLb; // x23
   UILabel_o *decideBtnLb; // x23
   UILabel_o *lvExceedInfoLb; // x21
   UILabel_o *lvExceedSpendQpTxtLb; // x23
   UILabel_o *lvExceedHaveQpTxtLb; // x23
   UILabel_o *lvExceedSpendQpLb; // x23
-  System_String_o *v22; // x24
-  Il2CppObject *v23; // x0
+  System_String_o *v23; // x24
+  Il2CppObject *v24; // x0
   UILabel_o *lvExceedHaveQpLb; // x22
-  System_String_o *v25; // x23
-  Il2CppObject *v26; // x0
+  System_String_o *v26; // x23
+  Il2CppObject *v27; // x0
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v28; // x0
-  intptr_t *v29; // x8
-  System_Action_o *v30; // x21
-  int32_t v31; // w20
-  const MethodInfo *v32; // x5
-  int64_t v33; // [xsp+0h] [xbp-50h] BYREF
-  int32_t v34; // [xsp+Ch] [xbp-44h] BYREF
+  System_Action_o *v29; // x0
+  intptr_t *v30; // x8
+  System_Action_o *v31; // x21
+  int32_t v32; // w20
+  const MethodInfo *v33; // x5
+  int64_t v34; // [xsp+0h] [xbp-50h] BYREF
+  int32_t v35; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CB02EE & 1) == 0 )
+  if ( (byte_4CC13F0 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetConfirmLvExceed_b__153_0__);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetConfirmLvExceed_b__153_1__);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3741/*"CONFIRM_EXCEED_COMBINE"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_8344/*"LVEXCEED_COMBINE_SPEND_QP"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    byte_4CB02EE = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetConfirmLvExceed_b__154_0__);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetConfirmLvExceed_b__154_1__);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3744/*"CONFIRM_EXCEED_COMBINE"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_8348/*"LVEXCEED_COMBINE_SPEND_QP"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    byte_4CC13F0 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
+  SetRarityDialogControl__RemoveAllChild(this, v12);
   lvExceedConfirmSimpleInfo = this->fields.lvExceedConfirmSimpleInfo;
   if ( !lvExceedConfirmSimpleInfo )
     goto LABEL_36;
@@ -2107,8 +2003,8 @@ void SetRarityDialogControl__SetConfirmLvExceed(
   if ( !lvExceedConfirmSimpleInfo )
     goto LABEL_36;
   UnityEngine_GameObject__SetActive(lvExceedConfirmSimpleInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v14);
-  SetRarityDialogControl__DefaultBgSize(this, v15);
+  SetRarityDialogControl__Open(this, v15);
+  SetRarityDialogControl__DefaultBgSize(this, v16);
   lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)this->fields.lvExceedTitleLb;
   if ( !lvExceedConfirmSimpleInfo )
     goto LABEL_36;
@@ -2117,14 +2013,14 @@ void SetRarityDialogControl__SetConfirmLvExceed(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/,
+                                                            (System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/,
                                                             0);
   if ( !cancelBtnLb )
     goto LABEL_36;
   UILabel__set_text(cancelBtnLb, (System_String_o *)lvExceedConfirmSimpleInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
   lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/,
+                                                            (System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/,
                                                             0);
   if ( !decideBtnLb )
     goto LABEL_36;
@@ -2135,31 +2031,31 @@ void SetRarityDialogControl__SetConfirmLvExceed(
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_8344/*"LVEXCEED_COMBINE_SPEND_QP"*/,
+                                                              (System_String_o *)StringLiteral_8348/*"LVEXCEED_COMBINE_SPEND_QP"*/,
                                                               0);
     if ( lvExceedSpendQpTxtLb )
     {
       UILabel__set_text(lvExceedSpendQpTxtLb, (System_String_o *)lvExceedConfirmSimpleInfo, 0);
       lvExceedHaveQpTxtLb = this->fields.lvExceedHaveQpTxtLb;
       lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                (System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/,
+                                                                (System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/,
                                                                 0);
       if ( lvExceedHaveQpTxtLb )
       {
         UILabel__set_text(lvExceedHaveQpTxtLb, (System_String_o *)lvExceedConfirmSimpleInfo, 0);
         lvExceedSpendQpLb = this->fields.lvExceedSpendQpLb;
-        v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-        v34 = spendQp;
-        v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
-        lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)System_String__Format(v22, v23, 0);
+        v23 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+        v35 = spendQp;
+        v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
+        lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)System_String__Format(v23, v24, 0);
         if ( lvExceedSpendQpLb )
         {
           UILabel__set_text(lvExceedSpendQpLb, (System_String_o *)lvExceedConfirmSimpleInfo, 0);
           lvExceedHaveQpLb = this->fields.lvExceedHaveQpLb;
-          v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-          v33 = haveQp;
-          v26 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v33);
-          lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)System_String__Format(v25, v26, 0);
+          v26 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+          v34 = haveQp;
+          v27 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v34);
+          lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)System_String__Format(v26, v27, 0);
           if ( lvExceedHaveQpLb )
           {
             UILabel__set_text(lvExceedHaveQpLb, (System_String_o *)lvExceedConfirmSimpleInfo, 0);
@@ -2182,13 +2078,13 @@ void SetRarityDialogControl__SetConfirmLvExceed(
       }
     }
 LABEL_36:
-    sub_1C6BC60(lvExceedConfirmSimpleInfo, v12);
+    sub_1C71608(lvExceedConfirmSimpleInfo, v13);
   }
   lvExceedInfoLb = this->fields.lvExceedInfoLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   lvExceedConfirmSimpleInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                            (System_String_o *)StringLiteral_3741/*"CONFIRM_EXCEED_COMBINE"*/,
+                                                            (System_String_o *)StringLiteral_3744/*"CONFIRM_EXCEED_COMBINE"*/,
                                                             0);
   if ( !lvExceedInfoLb )
     goto LABEL_36;
@@ -2212,25 +2108,25 @@ LABEL_27:
     goto LABEL_36;
   if ( combineRootComponent->fields.state == 6 )
   {
-    v28 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    v29 = (intptr_t *)&Method_SetRarityDialogControl__SetConfirmLvExceed_b__153_0__;
+    v29 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    v30 = (intptr_t *)&Method_SetRarityDialogControl__SetConfirmLvExceed_b__154_0__;
     if ( !isCheck )
-      v29 = (intptr_t *)&Method_SetRarityDialogControl__SetConfirmLvExceed_b__153_1__;
-    v30 = v28;
+      v30 = (intptr_t *)&Method_SetRarityDialogControl__SetConfirmLvExceed_b__154_1__;
+    v31 = v29;
     if ( isCheck )
-      v31 = 8;
+      v32 = 8;
     else
-      v31 = 0;
-    System_Action___ctor(v28, (Il2CppObject *)this, *v29, 0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, v31, v30, 0, 0, v32);
+      v32 = 0;
+    System_Action___ctor(v29, (Il2CppObject *)this, *v30, 0);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, v32, v31, 0, 0, v33);
   }
 }
 
 
-void SetRarityDialogControl__SetConfirmLvExceed_31663064(
+void SetRarityDialogControl__SetConfirmLvExceed_31685920(
         SetRarityDialogControl_o *this,
-        System_Collections_Generic_List_GameObject__o *itemObjList,
-        System_Int32_array *itemList,
+        int64_t userId,
+        System_Collections_Generic_List_CombineMenuControl_CombineItemInfo__o *combineItemInfoList,
         int32_t spendQp,
         int64_t haveQp,
         const MethodInfo *method)
@@ -2239,6 +2135,7 @@ void SetRarityDialogControl__SetConfirmLvExceed_31663064(
   struct CombineRootComponent_o *combineRootComponent; // x8
   const MethodInfo *v12; // x1
   const MethodInfo *v13; // x1
+  const MethodInfo *v14; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   UILabel_o *cancelBtnLb; // x24
   UILabel_o *decideBtnLb; // x24
@@ -2247,61 +2144,66 @@ void SetRarityDialogControl__SetConfirmLvExceed_31663064(
   UILabel_o *lvExceedSpendQpTxtLabel; // x24
   UILabel_o *lvExceedHaveQpTxtLabel; // x24
   UILabel_o *lvExceedSpendQpLabel; // x24
-  System_String_o *v22; // x25
-  Il2CppObject *v23; // x0
+  System_String_o *v23; // x25
+  Il2CppObject *v24; // x0
   UILabel_o *lvExceedHaveQpLabel; // x23
-  System_String_o *v25; // x24
-  Il2CppObject *v26; // x0
+  System_String_o *v26; // x24
+  Il2CppObject *v27; // x0
   UILabel_o *lvExceedConfirmLabel; // x22
-  __int64 size; // x24
-  unsigned __int64 v29; // x22
-  SetRarityDialogControl_o *v30; // x23
+  int32_t size; // w25
+  _BOOL4 v30; // w8
+  int32_t v31; // w22
+  UnityEngine_GameObject_o *itemInfoPrefab; // x23
   UnityEngine_Transform_o *transform; // x0
-  System_Action_o *v32; // x20
-  const MethodInfo *v33; // x5
-  int64_t v34; // [xsp+0h] [xbp-60h] BYREF
-  int32_t v35; // [xsp+Ch] [xbp-54h] BYREF
+  Il2CppObject *Component_object; // x23
+  intptr_t m_CachedPtr; // x8
+  int32_t v36; // w24
+  System_Action_o *v37; // x20
+  const MethodInfo *v38; // x5
+  int64_t v39; // [xsp+0h] [xbp-60h] BYREF
+  int32_t v40; // [xsp+Ch] [xbp-54h] BYREF
 
   v10 = this;
-  if ( (byte_4CB02EF & 1) == 0 )
+  if ( (byte_4CC13F1 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetConfirmLvExceed_b__154_0__);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3760/*"CONFIRM_TITLE_EXCEED_COMBINE"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_8343/*"LVEXCEED_COMBINE_SPEND_ITEM"*/);
-    sub_1C6BA08(&StringLiteral_8344/*"LVEXCEED_COMBINE_SPEND_QP"*/);
-    sub_1C6BA08(&StringLiteral_8345/*"LVEXCEED_EXE_CONFIRM"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    this = (SetRarityDialogControl_o *)sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    byte_4CB02EF = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_CombineMenuControl_CombineItemInfo__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_CombineMenuControl_CombineItemInfo__get_Item__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetConfirmLvExceed_b__155_0__);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3763/*"CONFIRM_TITLE_EXCEED_COMBINE"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_8347/*"LVEXCEED_COMBINE_SPEND_ITEM"*/);
+    sub_1C713B0(&StringLiteral_8348/*"LVEXCEED_COMBINE_SPEND_QP"*/);
+    sub_1C713B0(&StringLiteral_8349/*"LVEXCEED_EXE_CONFIRM"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    this = (SetRarityDialogControl_o *)sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    byte_4CC13F1 = 1;
   }
   combineRootComponent = v10->fields.combineRootComponent;
   if ( !combineRootComponent )
-    goto LABEL_31;
+    goto LABEL_32;
   if ( combineRootComponent->fields.state == 6 )
   {
-    SetRarityDialogControl__DisableConfirmInfo(v10, (const MethodInfo *)itemObjList);
+    SetRarityDialogControl__DisableConfirmInfo(v10, (const MethodInfo *)userId);
+    SetRarityDialogControl__RemoveAllChild(v10, v12);
     this = (SetRarityDialogControl_o *)v10->fields.lvExceedConfirmInfo;
     if ( !this )
-      goto LABEL_31;
+      goto LABEL_32;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
     this = (SetRarityDialogControl_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0);
     if ( !this )
-      goto LABEL_31;
+      goto LABEL_32;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-    SetRarityDialogControl__MoveAlpha(v10, v12);
-    SetRarityDialogControl__DefaultBgSize(v10, v13);
+    SetRarityDialogControl__Open(v10, v13);
+    SetRarityDialogControl__DefaultBgSize(v10, v14);
     this = (SetRarityDialogControl_o *)v10->fields.mPanelBg;
     if ( !this )
-      goto LABEL_31;
+      goto LABEL_32;
     UIWidget__set_height((UIWidget_o *)this, 501, 0);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0);
     GameObjectExtensions__SetLocalPositionY(gameObject, -8.0, 0);
@@ -2309,108 +2211,117 @@ void SetRarityDialogControl__SetConfirmLvExceed_31663064(
     cancelBtnLb = v10->fields.cancelBtnLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
     if ( !cancelBtnLb )
-      goto LABEL_31;
+      goto LABEL_32;
     UILabel__set_text(cancelBtnLb, (System_String_o *)this, 0);
     decideBtnLb = v10->fields.decideBtnLb;
-    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
     if ( !decideBtnLb )
-      goto LABEL_31;
+      goto LABEL_32;
     UILabel__set_text(decideBtnLb, (System_String_o *)this, 0);
     lvExceedTitleLabel = v10->fields.lvExceedTitleLabel;
-    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3760/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, 0);
+    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3763/*"CONFIRM_TITLE_EXCEED_COMBINE"*/, 0);
     if ( !lvExceedTitleLabel )
-      goto LABEL_31;
+      goto LABEL_32;
     UILabel__set_text(lvExceedTitleLabel, (System_String_o *)this, 0);
     lvExceedSpendItemLabel = v10->fields.lvExceedSpendItemLabel;
-    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8343/*"LVEXCEED_COMBINE_SPEND_ITEM"*/, 0);
+    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8347/*"LVEXCEED_COMBINE_SPEND_ITEM"*/, 0);
     if ( !lvExceedSpendItemLabel )
-      goto LABEL_31;
+      goto LABEL_32;
     UILabel__set_text(lvExceedSpendItemLabel, (System_String_o *)this, 0);
     lvExceedSpendQpTxtLabel = v10->fields.lvExceedSpendQpTxtLabel;
-    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8344/*"LVEXCEED_COMBINE_SPEND_QP"*/, 0);
+    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8348/*"LVEXCEED_COMBINE_SPEND_QP"*/, 0);
     if ( !lvExceedSpendQpTxtLabel )
-      goto LABEL_31;
+      goto LABEL_32;
     UILabel__set_text(lvExceedSpendQpTxtLabel, (System_String_o *)this, 0);
     lvExceedHaveQpTxtLabel = v10->fields.lvExceedHaveQpTxtLabel;
-    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/, 0);
+    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/, 0);
     if ( !lvExceedHaveQpTxtLabel )
-      goto LABEL_31;
+      goto LABEL_32;
     UILabel__set_text(lvExceedHaveQpTxtLabel, (System_String_o *)this, 0);
     lvExceedSpendQpLabel = v10->fields.lvExceedSpendQpLabel;
-    v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-    v35 = spendQp;
-    v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
-    this = (SetRarityDialogControl_o *)System_String__Format(v22, v23, 0);
+    v23 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+    v40 = spendQp;
+    v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v40);
+    this = (SetRarityDialogControl_o *)System_String__Format(v23, v24, 0);
     if ( !lvExceedSpendQpLabel )
-      goto LABEL_31;
+      goto LABEL_32;
     UILabel__set_text(lvExceedSpendQpLabel, (System_String_o *)this, 0);
     lvExceedHaveQpLabel = v10->fields.lvExceedHaveQpLabel;
-    v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-    v34 = haveQp;
-    v26 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v34);
-    this = (SetRarityDialogControl_o *)System_String__Format(v25, v26, 0);
+    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+    v39 = haveQp;
+    v27 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v39);
+    this = (SetRarityDialogControl_o *)System_String__Format(v26, v27, 0);
     if ( !lvExceedHaveQpLabel )
-      goto LABEL_31;
+      goto LABEL_32;
     UILabel__set_text(lvExceedHaveQpLabel, (System_String_o *)this, 0);
     lvExceedConfirmLabel = v10->fields.lvExceedConfirmLabel;
-    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8345/*"LVEXCEED_EXE_CONFIRM"*/, 0);
+    this = (SetRarityDialogControl_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8349/*"LVEXCEED_EXE_CONFIRM"*/, 0);
     if ( !lvExceedConfirmLabel )
-      goto LABEL_31;
+      goto LABEL_32;
     UILabel__set_text(lvExceedConfirmLabel, (System_String_o *)this, 0);
-    if ( !itemObjList )
-      goto LABEL_31;
-    size = (unsigned int)itemObjList->fields._size;
-    if ( (int)size >= 1 )
+    if ( !combineItemInfoList )
+      goto LABEL_32;
+    this = (SetRarityDialogControl_o *)v10->fields.lvExceedConsumeItemGrid;
+    size = combineItemInfoList->fields._size;
+    v30 = this == 0;
+    if ( size >= 1 )
     {
-      v29 = 0;
-      while ( 1 )
+      v31 = 0;
+      while ( !v30 )
       {
-        this = (SetRarityDialogControl_o *)System_Collections_Generic_List_object___get_Item(
-                                             (System_Collections_Generic_List_object__o *)itemObjList,
-                                             v29,
-                                             (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
-        if ( !v10->fields.lvExceedConsumeItemGrid )
-          break;
-        v30 = this;
-        transform = UnityEngine_Component__get_transform(
-                      (UnityEngine_Component_o *)v10->fields.lvExceedConsumeItemGrid,
-                      0);
+        itemInfoPrefab = v10->fields.itemInfoPrefab;
+        transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
         this = (SetRarityDialogControl_o *)BaseMonoBehaviour__createObject(
                                              (BaseMonoBehaviour_o *)v10,
-                                             (UnityEngine_GameObject_o *)v30,
+                                             itemInfoPrefab,
                                              transform,
                                              0,
                                              0);
         if ( !this )
           break;
-        this = (SetRarityDialogControl_o *)UnityEngine_GameObject__GetComponent_object_(
-                                             (UnityEngine_GameObject_o *)this,
-                                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
-        if ( !itemList )
-          break;
-        if ( v29 >= LODWORD(itemList->max_length) )
-          sub_1C6BC68(this);
+        Component_object = UnityEngine_GameObject__GetComponent_object_(
+                             (UnityEngine_GameObject_o *)this,
+                             (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_LimitCntUpItemComponent___);
+        this = (SetRarityDialogControl_o *)System_Collections_Generic_List_object___get_Item(
+                                             (System_Collections_Generic_List_object__o *)combineItemInfoList,
+                                             v31,
+                                             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_CombineMenuControl_CombineItemInfo__get_Item__);
         if ( !this )
           break;
-        LimitCntUpItemComponent__SetItemEntity((LimitCntUpItemComponent_o *)this, itemList->m_Items[v29++], 0);
-        if ( size == v29 )
-          goto LABEL_28;
+        m_CachedPtr = this->fields.m_CachedPtr;
+        if ( !m_CachedPtr )
+          break;
+        v36 = *(_DWORD *)(m_CachedPtr + 16);
+        this = (SetRarityDialogControl_o *)System_Collections_Generic_List_object___get_Item(
+                                             (System_Collections_Generic_List_object__o *)combineItemInfoList,
+                                             v31,
+                                             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_CombineMenuControl_CombineItemInfo__get_Item__);
+        if ( !this || !Component_object )
+          break;
+        LimitCntUpItemComponent__setLimitUpItemInfo(
+          (LimitCntUpItemComponent_o *)Component_object,
+          userId,
+          v36,
+          (int32_t)this->fields.m_CancellationTokenSource,
+          0);
+        this = (SetRarityDialogControl_o *)v10->fields.lvExceedConsumeItemGrid;
+        ++v31;
+        v30 = this == 0;
+        if ( size == v31 )
+          goto LABEL_29;
       }
-LABEL_31:
-      sub_1C6BC60(this, itemObjList);
+LABEL_32:
+      sub_1C71608(this, userId);
     }
-LABEL_28:
-    this = (SetRarityDialogControl_o *)v10->fields.lvExceedConsumeItemGrid;
-    if ( !this )
-      goto LABEL_31;
-    ((void (__fastcall *)(SetRarityDialogControl_o *, Il2CppClass *))this->klass[1]._1.element_class)(
-      this,
-      this->klass[1]._1.castClass);
-    v32 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v32, (Il2CppObject *)v10, Method_SetRarityDialogControl__SetConfirmLvExceed_b__154_0__, 0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(v10, 8, v32, 0, 0, v33);
+LABEL_29:
+    if ( v30 )
+      goto LABEL_32;
+    UIGrid__set_repositionNow((UIGrid_o *)this, 1, 0);
+    v37 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v37, (Il2CppObject *)v10, Method_SetRarityDialogControl__SetConfirmLvExceed_b__155_0__, 0);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(v10, 8, v37, 0, 0, v38);
   }
 }
 
@@ -2426,63 +2337,65 @@ void SetRarityDialogControl__SetConfirmRarityInfo(
         bool isExceededMaterial,
         const MethodInfo *method)
 {
-  __int64 v15; // x1
+  const MethodInfo *v15; // x1
+  __int64 v16; // x1
   void *rariryConfirmInfo; // x0
-  const MethodInfo *v17; // x1
   const MethodInfo *v18; // x1
+  const MethodInfo *v19; // x1
   UILabel_o *cancelBtnLb; // x25
   UILabel_o *decideBtnLb; // x25
-  const MethodInfo *v21; // x1
+  const MethodInfo *v22; // x1
   il2cpp_array_size_t max_length; // x26
-  float v23; // s8
-  unsigned __int64 v24; // x25
-  bool v25; // w8
+  float v24; // s8
+  unsigned __int64 v25; // x25
+  bool v26; // w8
   UnityEngine_GameObject_o *svtFaceInfo; // x26
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v28; // x7
+  const MethodInfo *v29; // x7
   float y; // s9
-  int v30; // w23
-  int v31; // w9
-  float v32; // s1 OVERLAPPED
+  int v31; // w23
+  int v32; // w9
+  float v33; // s1 OVERLAPPED
   float z; // s2
-  float v34; // s0
+  float v35; // s0
   UILabel_o *spendQpTxtLb; // x23
   UILabel_o *haveQpTxtLb; // x23
   UILabel_o *spendQpLb; // x23
-  System_String_o *v38; // x24
-  Il2CppObject *v39; // x0
+  System_String_o *v39; // x24
+  Il2CppObject *v40; // x0
   UILabel_o *haveQpLb; // x22
-  System_String_o *v41; // x23
-  Il2CppObject *v42; // x0
+  System_String_o *v42; // x23
+  Il2CppObject *v43; // x0
   UILabel_o *rareMaterialMsgLb; // x21
-  __int64 *v44; // x8
+  __int64 *v45; // x8
   UILabel_o *rareConfirmMsgLb; // x20
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v47; // x20
-  const MethodInfo *v48; // x5
-  int64_t v49; // [xsp+0h] [xbp-80h] BYREF
-  int32_t v50; // [xsp+Ch] [xbp-74h] BYREF
-  UnityEngine_Vector3_o v51; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_o *v48; // x20
+  const MethodInfo *v49; // x5
+  int64_t v50; // [xsp+0h] [xbp-80h] BYREF
+  int32_t v51; // [xsp+Ch] [xbp-74h] BYREF
+  UnityEngine_Vector3_o v52; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB02E4 & 1) == 0 )
+  if ( (byte_4CC13E6 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetConfirmRarityInfo_b__143_0__);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3574/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_10955/*"RARE_MATERIAL_INFO_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3609/*"COMBINE_SPEND_QP"*/);
-    byte_4CB02E4 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetConfirmRarityInfo_b__144_0__);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/);
+    sub_1C713B0(&StringLiteral_3577/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_10961/*"RARE_MATERIAL_INFO_MSG"*/);
+    sub_1C713B0(&StringLiteral_3612/*"COMBINE_SPEND_QP"*/);
+    byte_4CC13E6 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
+  SetRarityDialogControl__RemoveAllChild(this, v15);
   rariryConfirmInfo = this->fields.rariryConfirmInfo;
   if ( !rariryConfirmInfo )
     goto LABEL_48;
@@ -2491,8 +2404,8 @@ void SetRarityDialogControl__SetConfirmRarityInfo(
   if ( !rariryConfirmInfo )
     goto LABEL_48;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)rariryConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v17);
-  SetRarityDialogControl__DefaultBgSize(this, v18);
+  SetRarityDialogControl__Open(this, v18);
+  SetRarityDialogControl__DefaultBgSize(this, v19);
   rariryConfirmInfo = this->fields.rarityTitleLb;
   if ( !rariryConfirmInfo )
     goto LABEL_48;
@@ -2500,30 +2413,30 @@ void SetRarityDialogControl__SetConfirmRarityInfo(
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_48;
   UILabel__set_text(cancelBtnLb, (System_String_o *)rariryConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
-  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideBtnLb )
     goto LABEL_48;
   UILabel__set_text(decideBtnLb, (System_String_o *)rariryConfirmInfo, 0);
-  SetRarityDialogControl__SetCenter(this, v21);
+  SetRarityDialogControl__SetCenter(this, v22);
   if ( !list )
     goto LABEL_48;
   rariryConfirmInfo = this->fields.raritySvtGrid;
   if ( !rariryConfirmInfo )
     goto LABEL_48;
   LODWORD(max_length) = list->max_length;
-  v23 = *((float *)rariryConfirmInfo + 12);
+  v24 = *((float *)rariryConfirmInfo + 12);
   if ( (int)max_length >= 1 )
   {
-    v24 = 0;
     v25 = 0;
+    v26 = 0;
     do
     {
-      if ( v25 )
+      if ( v26 )
         goto LABEL_48;
       svtFaceInfo = this->fields.svtFaceInfo;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)rariryConfirmInfo, 0);
@@ -2532,46 +2445,46 @@ void SetRarityDialogControl__SetConfirmRarityInfo(
         goto LABEL_48;
       rariryConfirmInfo = UnityEngine_GameObject__GetComponent_object_(
                             (UnityEngine_GameObject_o *)rariryConfirmInfo,
-                            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-      if ( v24 >= LODWORD(list->max_length) )
-        sub_1C6BC68(rariryConfirmInfo);
+                            (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+      if ( v25 >= LODWORD(list->max_length) )
+        sub_1C71610(rariryConfirmInfo);
       if ( !rariryConfirmInfo )
         goto LABEL_48;
       MaterialSvtInfo__setMaterialSvtInfo(
         (MaterialSvtInfo_o *)rariryConfirmInfo,
-        v24,
+        v25,
         baseData,
-        list->m_Items[v24],
+        list->m_Items[v25],
         0,
         0,
         0,
-        v28);
+        v29);
       rariryConfirmInfo = this->fields.raritySvtGrid;
       max_length = list->max_length;
-      ++v24;
-      v25 = rariryConfirmInfo == 0;
+      ++v25;
+      v26 = rariryConfirmInfo == 0;
     }
-    while ( (__int64)v24 < (int)max_length );
+    while ( (__int64)v25 < (int)max_length );
     if ( !rariryConfirmInfo )
       goto LABEL_48;
   }
   y = this->fields.center.fields.y;
-  v30 = *((_DWORD *)rariryConfirmInfo + 11);
+  v31 = *((_DWORD *)rariryConfirmInfo + 11);
   rariryConfirmInfo = UnityEngine_Component__get_transform((UnityEngine_Component_o *)rariryConfirmInfo, 0);
   if ( !rariryConfirmInfo )
     goto LABEL_48;
-  if ( v30 >= (int)max_length )
-    v31 = max_length;
+  if ( v31 >= (int)max_length )
+    v32 = max_length;
   else
-    v31 = v30;
-  v32 = 55.0;
-  if ( v30 >= (int)max_length )
-    v32 = y;
-  v34 = (float)(this->fields.center.fields.x - (float)((float)(v23 * 0.5) * (float)(v31 - 1))) * 0.5;
+    v32 = v31;
+  v33 = 55.0;
+  if ( v31 >= (int)max_length )
+    v33 = y;
+  v35 = (float)(this->fields.center.fields.x - (float)((float)(v24 * 0.5) * (float)(v32 - 1))) * 0.5;
   z = this->fields.center.fields.z;
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)rariryConfirmInfo,
-    *(UnityEngine_Vector3_o *)(&v32 - 1),
+    *(UnityEngine_Vector3_o *)(&v33 - 1),
     0);
   rariryConfirmInfo = this->fields.raritySvtGrid;
   if ( !rariryConfirmInfo )
@@ -2579,10 +2492,10 @@ void SetRarityDialogControl__SetConfirmRarityInfo(
   rariryConfirmInfo = UnityEngine_Component__get_transform((UnityEngine_Component_o *)rariryConfirmInfo, 0);
   if ( !rariryConfirmInfo )
     goto LABEL_48;
-  v51.fields.x = 0.5;
-  v51.fields.y = 0.5;
-  v51.fields.z = 0.5;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)rariryConfirmInfo, v51, 0);
+  v52.fields.x = 0.5;
+  v52.fields.y = 0.5;
+  v52.fields.z = 0.5;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)rariryConfirmInfo, v52, 0);
   rariryConfirmInfo = this->fields.raritySvtGrid;
   if ( !rariryConfirmInfo )
     goto LABEL_48;
@@ -2590,31 +2503,31 @@ void SetRarityDialogControl__SetConfirmRarityInfo(
   spendQpTxtLb = this->fields.spendQpTxtLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3609/*"COMBINE_SPEND_QP"*/, 0);
+  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3612/*"COMBINE_SPEND_QP"*/, 0);
   if ( !spendQpTxtLb )
     goto LABEL_48;
   UILabel__set_text(spendQpTxtLb, (System_String_o *)rariryConfirmInfo, 0);
   haveQpTxtLb = this->fields.haveQpTxtLb;
-  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/, 0);
+  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/, 0);
   if ( !haveQpTxtLb )
     goto LABEL_48;
   UILabel__set_text(haveQpTxtLb, (System_String_o *)rariryConfirmInfo, 0);
   spendQpLb = this->fields.spendQpLb;
-  v38 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v50 = spendQp;
-  v39 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v50);
-  rariryConfirmInfo = System_String__Format(v38, v39, 0);
+  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v51 = spendQp;
+  v40 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51);
+  rariryConfirmInfo = System_String__Format(v39, v40, 0);
   if ( !spendQpLb
     || (UILabel__set_text(spendQpLb, (System_String_o *)rariryConfirmInfo, 0),
         haveQpLb = this->fields.haveQpLb,
-        v41 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0),
-        v49 = haveQp,
-        v42 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v49),
-        rariryConfirmInfo = System_String__Format(v41, v42, 0),
+        v42 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0),
+        v50 = haveQp,
+        v43 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v50),
+        rariryConfirmInfo = System_String__Format(v42, v43, 0),
         !haveQpLb) )
   {
 LABEL_48:
-    sub_1C6BC60(rariryConfirmInfo, v15);
+    sub_1C71608(rariryConfirmInfo, v16);
   }
   UILabel__set_text(haveQpLb, (System_String_o *)rariryConfirmInfo, 0);
   rareMaterialMsgLb = this->fields.rareMaterialMsgLb;
@@ -2624,22 +2537,22 @@ LABEL_48:
     if ( isExceededMaterial )
       goto LABEL_37;
 LABEL_39:
-    v44 = &StringLiteral_10955/*"RARE_MATERIAL_INFO_MSG"*/;
+    v45 = &StringLiteral_10961/*"RARE_MATERIAL_INFO_MSG"*/;
     goto LABEL_40;
   }
   if ( !isExceededMaterial )
     goto LABEL_39;
 LABEL_37:
-  v44 = &StringLiteral_3574/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/;
+  v45 = &StringLiteral_3577/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/;
 LABEL_40:
-  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)*v44, 0);
+  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)*v45, 0);
   if ( !rareMaterialMsgLb )
     goto LABEL_48;
   UILabel__set_text(rareMaterialMsgLb, (System_String_o *)rariryConfirmInfo, 0);
   rareConfirmMsgLb = this->fields.rareConfirmMsgLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/, 0);
+  rariryConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/, 0);
   if ( !rareConfirmMsgLb )
     goto LABEL_48;
   UILabel__set_text(rareConfirmMsgLb, (System_String_o *)rariryConfirmInfo, 0);
@@ -2648,9 +2561,9 @@ LABEL_40:
     goto LABEL_48;
   if ( combineRootComponent->fields.state == 3 )
   {
-    v47 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v47, (Il2CppObject *)this, Method_SetRarityDialogControl__SetConfirmRarityInfo_b__143_0__, 0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v47, 0, 0, v48);
+    v48 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v48, (Il2CppObject *)this, Method_SetRarityDialogControl__SetConfirmRarityInfo_b__144_0__, 0);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v48, 0, 0, v49);
   }
 }
 
@@ -2666,78 +2579,80 @@ void SetRarityDialogControl__SetConfirmSvtEqCombine(
         System_Collections_Generic_Dictionary_long__bool__o *selectedList,
         const MethodInfo *method)
 {
-  __int64 v14; // x1
+  const MethodInfo *v14; // x1
+  __int64 v15; // x1
   UnityEngine_GameObject_o *normalConfirmInfo; // x0
-  const MethodInfo *v16; // x1
   const MethodInfo *v17; // x1
+  const MethodInfo *v18; // x1
   UILabel_o *cancelBtnLb; // x24
   UILabel_o *decideBtnLb; // x24
-  const MethodInfo *v20; // x1
+  const MethodInfo *v21; // x1
   struct UIGrid_o *materialSvtGrid; // x8
-  float v22; // s8
-  int32_t v23; // w24
-  __int64 v24; // x1
-  UnityEngine_Component_o *v25; // x0
+  float v23; // s8
+  int32_t v24; // w24
+  __int64 v25; // x1
+  UnityEngine_Component_o *v26; // x0
   struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   UnityEngine_GameObject_o *svtFaceInfo; // x26
   UnityEngine_Transform_o *transform; // x2
   UnityEngine_GameObject_o *Object; // x0
-  __int64 v30; // x1
+  __int64 v31; // x1
   Il2CppObject *Component_object; // x0
-  __int64 v32; // x1
+  __int64 v33; // x1
   float y; // s9
   int32_t Count; // w23
-  struct UIGrid_o *v35; // x8
+  struct UIGrid_o *v36; // x8
   int32_t maxPerLine; // w20
-  int32_t v37; // w22
-  int32_t v38; // w9
-  float v39; // s1 OVERLAPPED
+  int32_t v38; // w22
+  int32_t v39; // w9
+  float v40; // s1 OVERLAPPED
   float z; // s2
-  float v41; // s0
+  float v42; // s0
   UILabel_o *normalSpendQpTxtLb; // x22
   UILabel_o *normalHaveQpTxtLb; // x22
   UILabel_o *confirmSpendQpLb; // x22
-  System_String_o *v45; // x23
-  Il2CppObject *v46; // x0
+  System_String_o *v46; // x23
+  Il2CppObject *v47; // x0
   UILabel_o *confirmHaveQpLb; // x21
-  System_String_o *v48; // x22
-  Il2CppObject *v49; // x0
+  System_String_o *v49; // x22
+  Il2CppObject *v50; // x0
   UILabel_o *confirmMsgLb; // x20
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v52; // x20
-  const MethodInfo *v53; // x5
-  const MethodInfo *v54; // [xsp+0h] [xbp-E0h]
-  struct System_Collections_Generic_Dictionary_TKey__TValue__o *v55; // [xsp+8h] [xbp-D8h]
-  int32_t v57; // [xsp+14h] [xbp-CCh] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v58; // [xsp+18h] [xbp-C8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v59; // [xsp+40h] [xbp-A0h] BYREF
-  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_o *v53; // x20
+  const MethodInfo *v54; // x5
+  const MethodInfo *v55; // [xsp+0h] [xbp-E0h]
+  struct System_Collections_Generic_Dictionary_TKey__TValue__o *v56; // [xsp+8h] [xbp-D8h]
+  int32_t v58; // [xsp+14h] [xbp-CCh] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v59; // [xsp+18h] [xbp-C8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v60; // [xsp+40h] [xbp-A0h] BYREF
+  UnityEngine_Vector3_o v61; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB02E7 & 1) == 0 )
+  if ( (byte_4CC13E9 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_long__bool__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__get_Current__);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Key__);
-    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Value__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetConfirmSvtEqCombine_b__146_0__);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_3609/*"COMBINE_SPEND_QP"*/);
-    byte_4CB02E7 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_long__bool__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__get_Current__);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Key__);
+    sub_1C713B0(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Value__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetConfirmSvtEqCombine_b__147_0__);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_3612/*"COMBINE_SPEND_QP"*/);
+    byte_4CC13E9 = 1;
   }
-  memset(&v59, 0, sizeof(v59));
+  memset(&v60, 0, sizeof(v60));
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
+  SetRarityDialogControl__RemoveAllChild(this, v14);
   normalConfirmInfo = this->fields.normalConfirmInfo;
   if ( !normalConfirmInfo )
     goto LABEL_44;
@@ -2747,8 +2662,8 @@ void SetRarityDialogControl__SetConfirmSvtEqCombine(
   if ( !normalConfirmInfo )
     goto LABEL_44;
   UnityEngine_GameObject__SetActive(normalConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v16);
-  SetRarityDialogControl__DefaultBgSize(this, v17);
+  SetRarityDialogControl__Open(this, v17);
+  SetRarityDialogControl__DefaultBgSize(this, v18);
   normalConfirmInfo = (UnityEngine_GameObject_o *)this->fields.normalTitleLb;
   if ( !normalConfirmInfo )
     goto LABEL_44;
@@ -2756,93 +2671,93 @@ void SetRarityDialogControl__SetConfirmSvtEqCombine(
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_44;
   UILabel__set_text(cancelBtnLb, (System_String_o *)normalConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
-  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideBtnLb )
     goto LABEL_44;
   UILabel__set_text(decideBtnLb, (System_String_o *)normalConfirmInfo, 0);
-  SetRarityDialogControl__SetCenter(this, v20);
+  SetRarityDialogControl__SetCenter(this, v21);
   if ( !selectedList )
     goto LABEL_44;
-  v55 = (struct System_Collections_Generic_Dictionary_TKey__TValue__o *)haveQp;
+  v56 = (struct System_Collections_Generic_Dictionary_TKey__TValue__o *)haveQp;
   normalConfirmInfo = (UnityEngine_GameObject_o *)System_Collections_Generic_Dictionary_long__bool___get_Count(
                                                     selectedList,
-                                                    (const MethodInfo_348B350 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
+                                                    (const MethodInfo_349B0F4 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
   materialSvtGrid = this->fields.materialSvtGrid;
   if ( !materialSvtGrid )
     goto LABEL_44;
-  v22 = materialSvtGrid->fields.cellWidth * 0.5;
+  v23 = materialSvtGrid->fields.cellWidth * 0.5;
   System_Collections_Generic_Dictionary_long__bool___GetEnumerator(
-    &v58,
+    &v59,
     selectedList,
-    (const MethodInfo_348BAA4 *)Method_System_Collections_Generic_Dictionary_long__bool__GetEnumerator__);
-  v23 = 0;
-  v59 = v58;
+    (const MethodInfo_349B848 *)Method_System_Collections_Generic_Dictionary_long__bool__GetEnumerator__);
+  v24 = 0;
+  v60 = v59;
   while ( System_Collections_Generic_Dictionary_Enumerator_long__bool___MoveNext(
-            &v59,
-            (const MethodInfo_35B0784 *)Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__MoveNext__) )
+            &v60,
+            (const MethodInfo_35C0528 *)Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__MoveNext__) )
   {
-    v25 = (UnityEngine_Component_o *)this->fields.materialSvtGrid;
-    if ( !v25 )
-      sub_1C6BC60(0, v24);
-    current = v59.fields._current;
+    v26 = (UnityEngine_Component_o *)this->fields.materialSvtGrid;
+    if ( !v26 )
+      sub_1C71608(0, v25);
+    current = v60.fields._current;
     svtFaceInfo = this->fields.svtFaceInfo;
-    transform = UnityEngine_Component__get_transform(v25, 0);
+    transform = UnityEngine_Component__get_transform(v26, 0);
     Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, svtFaceInfo, transform, 0, 0);
     if ( !Object )
-      sub_1C6BC60(0, v30);
+      sub_1C71608(0, v31);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          Object,
-                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
     if ( !Component_object )
-      sub_1C6BC60(0, v32);
-    MaterialSvtInfo__setMaterialSvtInfo_31639500(
+      sub_1C71608(0, v33);
+    MaterialSvtInfo__setMaterialSvtInfo_31663028(
       (MaterialSvtInfo_o *)Component_object,
-      v23++,
+      v24++,
       baseData,
       (int64_t)current.fields.key,
       0,
       0,
       LOBYTE(current.fields.value) != 0,
       0,
-      v54);
+      v55);
   }
   System_Collections_Generic_Dictionary_Enumerator_long__bool___Dispose(
-    &v59,
-    (const MethodInfo_35B08A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__Dispose__);
+    &v60,
+    (const MethodInfo_35C0644 *)Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__Dispose__);
   y = this->fields.center.fields.y;
   Count = System_Collections_Generic_Dictionary_long__bool___get_Count(
             selectedList,
-            (const MethodInfo_348B350 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
+            (const MethodInfo_349B0F4 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
   normalConfirmInfo = (UnityEngine_GameObject_o *)System_Collections_Generic_Dictionary_long__bool___get_Count(
                                                     selectedList,
-                                                    (const MethodInfo_348B350 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
-  v35 = this->fields.materialSvtGrid;
-  if ( !v35 )
+                                                    (const MethodInfo_349B0F4 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
+  v36 = this->fields.materialSvtGrid;
+  if ( !v36 )
     goto LABEL_44;
-  maxPerLine = v35->fields.maxPerLine;
-  v37 = (int)normalConfirmInfo;
+  maxPerLine = v36->fields.maxPerLine;
+  v38 = (int)normalConfirmInfo;
   normalConfirmInfo = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this->fields.materialSvtGrid,
                                                     0);
   if ( !normalConfirmInfo )
     goto LABEL_44;
-  if ( v37 <= maxPerLine )
-    v38 = Count;
+  if ( v38 <= maxPerLine )
+    v39 = Count;
   else
-    v38 = maxPerLine;
-  v39 = 55.0;
-  if ( v37 <= maxPerLine )
-    v39 = y;
-  v41 = (float)(this->fields.center.fields.x - (float)(v22 * (float)(v38 - 1))) * 0.5;
+    v39 = maxPerLine;
+  v40 = 55.0;
+  if ( v38 <= maxPerLine )
+    v40 = y;
+  v42 = (float)(this->fields.center.fields.x - (float)(v23 * (float)(v39 - 1))) * 0.5;
   z = this->fields.center.fields.z;
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)normalConfirmInfo,
-    *(UnityEngine_Vector3_o *)(&v39 - 1),
+    *(UnityEngine_Vector3_o *)(&v40 - 1),
     0);
   normalConfirmInfo = (UnityEngine_GameObject_o *)this->fields.materialSvtGrid;
   if ( !normalConfirmInfo )
@@ -2852,10 +2767,10 @@ void SetRarityDialogControl__SetConfirmSvtEqCombine(
                                                     0);
   if ( !normalConfirmInfo )
     goto LABEL_44;
-  v60.fields.x = 0.5;
-  v60.fields.y = 0.5;
-  v60.fields.z = 0.5;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)normalConfirmInfo, v60, 0);
+  v61.fields.x = 0.5;
+  v61.fields.y = 0.5;
+  v61.fields.z = 0.5;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)normalConfirmInfo, v61, 0);
   normalConfirmInfo = (UnityEngine_GameObject_o *)this->fields.materialSvtGrid;
   if ( !normalConfirmInfo )
     goto LABEL_44;
@@ -2863,33 +2778,33 @@ void SetRarityDialogControl__SetConfirmSvtEqCombine(
   normalSpendQpTxtLb = this->fields.normalSpendQpTxtLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3609/*"COMBINE_SPEND_QP"*/, 0);
+  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3612/*"COMBINE_SPEND_QP"*/, 0);
   if ( !normalSpendQpTxtLb )
     goto LABEL_44;
   UILabel__set_text(normalSpendQpTxtLb, (System_String_o *)normalConfirmInfo, 0);
   normalHaveQpTxtLb = this->fields.normalHaveQpTxtLb;
-  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/, 0);
+  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/, 0);
   if ( !normalHaveQpTxtLb )
     goto LABEL_44;
   UILabel__set_text(normalHaveQpTxtLb, (System_String_o *)normalConfirmInfo, 0);
   confirmSpendQpLb = this->fields.confirmSpendQpLb;
-  v45 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v57 = spendQp;
-  v46 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v57);
-  normalConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v45, v46, 0);
+  v46 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v58 = spendQp;
+  v47 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v58);
+  normalConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v46, v47, 0);
   if ( !confirmSpendQpLb )
     goto LABEL_44;
   UILabel__set_text(confirmSpendQpLb, (System_String_o *)normalConfirmInfo, 0);
   confirmHaveQpLb = this->fields.confirmHaveQpLb;
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v58.fields._dictionary = v55;
-  v49 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v58);
-  normalConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v48, v49, 0);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v59.fields._dictionary = v56;
+  v50 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v59);
+  normalConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v49, v50, 0);
   if ( !confirmHaveQpLb )
     goto LABEL_44;
   UILabel__set_text(confirmHaveQpLb, (System_String_o *)normalConfirmInfo, 0);
   confirmMsgLb = this->fields.confirmMsgLb;
-  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/, 0);
+  normalConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/, 0);
   if ( !confirmMsgLb
     || (UILabel__set_text(confirmMsgLb, (System_String_o *)normalConfirmInfo, 0),
         (normalConfirmInfo = (UnityEngine_GameObject_o *)this->fields.statusUpInfoLb) == 0)
@@ -2898,13 +2813,13 @@ void SetRarityDialogControl__SetConfirmSvtEqCombine(
         (combineRootComponent = this->fields.combineRootComponent) == 0) )
   {
 LABEL_44:
-    sub_1C6BC60(normalConfirmInfo, v14);
+    sub_1C71608(normalConfirmInfo, v15);
   }
   if ( combineRootComponent->fields.state == 4 )
   {
-    v52 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v52, (Il2CppObject *)this, Method_SetRarityDialogControl__SetConfirmSvtEqCombine_b__146_0__, 0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v52, 0, 0, v53);
+    v53 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v53, (Il2CppObject *)this, Method_SetRarityDialogControl__SetConfirmSvtEqCombine_b__147_0__, 0);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v53, 0, 0, v54);
   }
 }
 
@@ -2919,61 +2834,63 @@ void SetRarityDialogControl__SetExceedMaterialInfo(
         int64_t haveQp,
         const MethodInfo *method)
 {
-  __int64 v13; // x1
+  const MethodInfo *v13; // x1
+  __int64 v14; // x1
   void *exceedConfirmInfo; // x0
-  const MethodInfo *v15; // x1
   const MethodInfo *v16; // x1
+  const MethodInfo *v17; // x1
   UILabel_o *cancelBtnLb; // x24
   UILabel_o *decideBtnLb; // x24
-  const MethodInfo *v19; // x1
+  const MethodInfo *v20; // x1
   il2cpp_array_size_t max_length; // x25
-  float v21; // s8
-  unsigned __int64 v22; // x24
-  bool v23; // w8
+  float v22; // s8
+  unsigned __int64 v23; // x24
+  bool v24; // w8
   UnityEngine_GameObject_o *svtFaceInfo; // x25
   UnityEngine_Transform_o *transform; // x0
-  const MethodInfo *v26; // x7
+  const MethodInfo *v27; // x7
   float y; // s9
-  int v28; // w22
-  int v29; // w9
-  float v30; // s1 OVERLAPPED
+  int v29; // w22
+  int v30; // w9
+  float v31; // s1 OVERLAPPED
   float z; // s2
-  float v32; // s0
+  float v33; // s0
   UILabel_o *exceedConfirmSpendQpTxtLb; // x22
   UILabel_o *exceedConfirmHaveQpTxtLb; // x22
   UILabel_o *exceedConfirmSpendQpLb; // x22
-  System_String_o *v36; // x23
-  Il2CppObject *v37; // x0
+  System_String_o *v37; // x23
+  Il2CppObject *v38; // x0
   UILabel_o *exceedConfirmHaveQpLb; // x21
-  System_String_o *v39; // x22
-  Il2CppObject *v40; // x0
+  System_String_o *v40; // x22
+  Il2CppObject *v41; // x0
   UILabel_o *exceedMaterialMsgLb; // x20
   UILabel_o *exceedConfirmMsgLb; // x20
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v44; // x20
-  const MethodInfo *v45; // x5
-  int64_t v46; // [xsp+8h] [xbp-78h] BYREF
-  int32_t v47; // [xsp+2Ch] [xbp-54h] BYREF
-  UnityEngine_Vector3_o v48; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_o *v45; // x20
+  const MethodInfo *v46; // x5
+  int64_t v47; // [xsp+8h] [xbp-78h] BYREF
+  int32_t v48; // [xsp+2Ch] [xbp-54h] BYREF
+  UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB02E5 & 1) == 0 )
+  if ( (byte_4CC13E7 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetExceedMaterialInfo_b__144_0__);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3574/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_3609/*"COMBINE_SPEND_QP"*/);
-    byte_4CB02E5 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetExceedMaterialInfo_b__145_0__);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/);
+    sub_1C713B0(&StringLiteral_3577/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_3612/*"COMBINE_SPEND_QP"*/);
+    byte_4CC13E7 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
+  SetRarityDialogControl__RemoveAllChild(this, v13);
   exceedConfirmInfo = this->fields.exceedConfirmInfo;
   if ( !exceedConfirmInfo )
     goto LABEL_41;
@@ -2982,8 +2899,8 @@ void SetRarityDialogControl__SetExceedMaterialInfo(
   if ( !exceedConfirmInfo )
     goto LABEL_41;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)exceedConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v15);
-  SetRarityDialogControl__DefaultBgSize(this, v16);
+  SetRarityDialogControl__Open(this, v16);
+  SetRarityDialogControl__DefaultBgSize(this, v17);
   exceedConfirmInfo = this->fields.exceedConfirmTitleLb;
   if ( !exceedConfirmInfo )
     goto LABEL_41;
@@ -2991,30 +2908,30 @@ void SetRarityDialogControl__SetExceedMaterialInfo(
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_41;
   UILabel__set_text(cancelBtnLb, (System_String_o *)exceedConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
-  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideBtnLb )
     goto LABEL_41;
   UILabel__set_text(decideBtnLb, (System_String_o *)exceedConfirmInfo, 0);
-  SetRarityDialogControl__SetCenter(this, v19);
+  SetRarityDialogControl__SetCenter(this, v20);
   if ( !list )
     goto LABEL_41;
   exceedConfirmInfo = this->fields.exceedConfirmSvtGrid;
   if ( !exceedConfirmInfo )
     goto LABEL_41;
   LODWORD(max_length) = list->max_length;
-  v21 = *((float *)exceedConfirmInfo + 12);
+  v22 = *((float *)exceedConfirmInfo + 12);
   if ( (int)max_length >= 1 )
   {
-    v22 = 0;
     v23 = 0;
+    v24 = 0;
     do
     {
-      if ( v23 )
+      if ( v24 )
         goto LABEL_41;
       svtFaceInfo = this->fields.svtFaceInfo;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)exceedConfirmInfo, 0);
@@ -3023,46 +2940,46 @@ void SetRarityDialogControl__SetExceedMaterialInfo(
         goto LABEL_41;
       exceedConfirmInfo = UnityEngine_GameObject__GetComponent_object_(
                             (UnityEngine_GameObject_o *)exceedConfirmInfo,
-                            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-      if ( v22 >= LODWORD(list->max_length) )
-        sub_1C6BC68(exceedConfirmInfo);
+                            (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+      if ( v23 >= LODWORD(list->max_length) )
+        sub_1C71610(exceedConfirmInfo);
       if ( !exceedConfirmInfo )
         goto LABEL_41;
       MaterialSvtInfo__setMaterialSvtInfo(
         (MaterialSvtInfo_o *)exceedConfirmInfo,
-        v22,
+        v23,
         baseData,
-        list->m_Items[v22],
+        list->m_Items[v23],
         0,
         0,
         0,
-        v26);
+        v27);
       exceedConfirmInfo = this->fields.exceedConfirmSvtGrid;
       max_length = list->max_length;
-      ++v22;
-      v23 = exceedConfirmInfo == 0;
+      ++v23;
+      v24 = exceedConfirmInfo == 0;
     }
-    while ( (__int64)v22 < (int)max_length );
+    while ( (__int64)v23 < (int)max_length );
     if ( !exceedConfirmInfo )
       goto LABEL_41;
   }
   y = this->fields.center.fields.y;
-  v28 = *((_DWORD *)exceedConfirmInfo + 11);
+  v29 = *((_DWORD *)exceedConfirmInfo + 11);
   exceedConfirmInfo = UnityEngine_Component__get_transform((UnityEngine_Component_o *)exceedConfirmInfo, 0);
   if ( !exceedConfirmInfo )
     goto LABEL_41;
-  if ( v28 >= (int)max_length )
-    v29 = max_length;
+  if ( v29 >= (int)max_length )
+    v30 = max_length;
   else
-    v29 = v28;
-  v30 = 55.0;
-  if ( v28 >= (int)max_length )
-    v30 = y;
-  v32 = (float)(this->fields.center.fields.x - (float)((float)(v21 * 0.5) * (float)(v29 - 1))) * 0.5;
+    v30 = v29;
+  v31 = 55.0;
+  if ( v29 >= (int)max_length )
+    v31 = y;
+  v33 = (float)(this->fields.center.fields.x - (float)((float)(v22 * 0.5) * (float)(v30 - 1))) * 0.5;
   z = this->fields.center.fields.z;
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)exceedConfirmInfo,
-    *(UnityEngine_Vector3_o *)(&v30 - 1),
+    *(UnityEngine_Vector3_o *)(&v31 - 1),
     0);
   exceedConfirmInfo = this->fields.exceedConfirmSvtGrid;
   if ( !exceedConfirmInfo )
@@ -3070,10 +2987,10 @@ void SetRarityDialogControl__SetExceedMaterialInfo(
   exceedConfirmInfo = UnityEngine_Component__get_transform((UnityEngine_Component_o *)exceedConfirmInfo, 0);
   if ( !exceedConfirmInfo )
     goto LABEL_41;
-  v48.fields.x = 0.5;
-  v48.fields.y = 0.5;
-  v48.fields.z = 0.5;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)exceedConfirmInfo, v48, 0);
+  v49.fields.x = 0.5;
+  v49.fields.y = 0.5;
+  v49.fields.z = 0.5;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)exceedConfirmInfo, v49, 0);
   exceedConfirmInfo = this->fields.exceedConfirmSvtGrid;
   if ( !exceedConfirmInfo )
     goto LABEL_41;
@@ -3081,49 +2998,49 @@ void SetRarityDialogControl__SetExceedMaterialInfo(
   exceedConfirmSpendQpTxtLb = this->fields.exceedConfirmSpendQpTxtLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3609/*"COMBINE_SPEND_QP"*/, 0);
+  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3612/*"COMBINE_SPEND_QP"*/, 0);
   if ( !exceedConfirmSpendQpTxtLb )
     goto LABEL_41;
   UILabel__set_text(exceedConfirmSpendQpTxtLb, (System_String_o *)exceedConfirmInfo, 0);
   exceedConfirmHaveQpTxtLb = this->fields.exceedConfirmHaveQpTxtLb;
-  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/, 0);
+  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/, 0);
   if ( !exceedConfirmHaveQpTxtLb )
     goto LABEL_41;
   UILabel__set_text(exceedConfirmHaveQpTxtLb, (System_String_o *)exceedConfirmInfo, 0);
   exceedConfirmSpendQpLb = this->fields.exceedConfirmSpendQpLb;
-  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v47 = spendQp;
-  v37 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v47);
-  exceedConfirmInfo = System_String__Format(v36, v37, 0);
+  v37 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v48 = spendQp;
+  v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v48);
+  exceedConfirmInfo = System_String__Format(v37, v38, 0);
   if ( !exceedConfirmSpendQpLb )
     goto LABEL_41;
   UILabel__set_text(exceedConfirmSpendQpLb, (System_String_o *)exceedConfirmInfo, 0);
   exceedConfirmHaveQpLb = this->fields.exceedConfirmHaveQpLb;
-  v39 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v46 = haveQp;
-  v40 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v46);
-  exceedConfirmInfo = System_String__Format(v39, v40, 0);
+  v40 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v47 = haveQp;
+  v41 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v47);
+  exceedConfirmInfo = System_String__Format(v40, v41, 0);
   if ( !exceedConfirmHaveQpLb )
     goto LABEL_41;
   UILabel__set_text(exceedConfirmHaveQpLb, (System_String_o *)exceedConfirmInfo, 0);
   exceedMaterialMsgLb = this->fields.exceedMaterialMsgLb;
-  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3574/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/, 0);
+  exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3577/*"COMBINE_EXCEEDED_MATERIAL_INFO_MSG"*/, 0);
   if ( !exceedMaterialMsgLb
     || (UILabel__set_text(exceedMaterialMsgLb, (System_String_o *)exceedConfirmInfo, 0),
         exceedConfirmMsgLb = this->fields.exceedConfirmMsgLb,
-        exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/, 0),
+        exceedConfirmInfo = LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/, 0),
         !exceedConfirmMsgLb)
     || (UILabel__set_text(exceedConfirmMsgLb, (System_String_o *)exceedConfirmInfo, 0),
         (combineRootComponent = this->fields.combineRootComponent) == 0) )
   {
 LABEL_41:
-    sub_1C6BC60(exceedConfirmInfo, v13);
+    sub_1C71608(exceedConfirmInfo, v14);
   }
   if ( combineRootComponent->fields.state == 3 )
   {
-    v44 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v44, (Il2CppObject *)this, Method_SetRarityDialogControl__SetExceedMaterialInfo_b__144_0__, 0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 0, v44, 0, 0, v45);
+    v45 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v45, (Il2CppObject *)this, Method_SetRarityDialogControl__SetExceedMaterialInfo_b__145_0__, 0);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 0, v45, 0, 0, v46);
   }
 }
 
@@ -3135,43 +3052,45 @@ void SetRarityDialogControl__SetFriendshipExceedInfo(
         int64_t haveQp,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
+  const MethodInfo *v9; // x1
+  __int64 v10; // x1
   UnityEngine_GameObject_o *friendshipExceedConfirmInfo; // x0
-  const MethodInfo *v11; // x1
   const MethodInfo *v12; // x1
+  const MethodInfo *v13; // x1
   UILabel_o *cancelBtnLb; // x22
   UILabel_o *decideBtnLb; // x22
   UILabel_o *friendshipExceedSpendQpTxtLb; // x22
   UILabel_o *friendshipExceedHaveQpTxtLb; // x22
   UILabel_o *friendshipExceedSpendQpLb; // x22
-  System_String_o *v18; // x23
-  Il2CppObject *v19; // x0
+  System_String_o *v19; // x23
+  Il2CppObject *v20; // x0
   UILabel_o *friendshipExceedHaveQpLb; // x21
-  System_String_o *v21; // x22
-  Il2CppObject *v22; // x0
+  System_String_o *v22; // x22
+  Il2CppObject *v23; // x0
   UILabel_o *friendshipExceedMsgLb; // x20
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v25; // x20
-  const MethodInfo *v26; // x5
-  int64_t v27; // [xsp+0h] [xbp-50h] BYREF
-  int32_t v28; // [xsp+Ch] [xbp-44h] BYREF
+  System_Action_o *v26; // x20
+  const MethodInfo *v27; // x5
+  int64_t v28; // [xsp+0h] [xbp-50h] BYREF
+  int32_t v29; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CB02F4 & 1) == 0 )
+  if ( (byte_4CC13F6 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetFriendshipExceedInfo_b__159_0__);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_6511/*"FRIENDSHIP_EXCEED_SPEND_QP"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_3744/*"CONFIRM_FRIENDSHIP_EXCEED_COMBINE"*/);
-    byte_4CB02F4 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetFriendshipExceedInfo_b__160_0__);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_6513/*"FRIENDSHIP_EXCEED_SPEND_QP"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_3747/*"CONFIRM_FRIENDSHIP_EXCEED_COMBINE"*/);
+    byte_4CC13F6 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)msg);
+  SetRarityDialogControl__RemoveAllChild(this, v9);
   friendshipExceedConfirmInfo = this->fields.friendshipExceedConfirmInfo;
   if ( !friendshipExceedConfirmInfo )
     goto LABEL_21;
@@ -3180,8 +3099,8 @@ void SetRarityDialogControl__SetFriendshipExceedInfo(
   if ( !friendshipExceedConfirmInfo )
     goto LABEL_21;
   UnityEngine_GameObject__SetActive(friendshipExceedConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v11);
-  SetRarityDialogControl__DefaultBgSize(this, v12);
+  SetRarityDialogControl__Open(this, v12);
+  SetRarityDialogControl__DefaultBgSize(this, v13);
   friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)this->fields.friendshipExceedTitleLb;
   if ( !friendshipExceedConfirmInfo )
     goto LABEL_21;
@@ -3190,51 +3109,51 @@ void SetRarityDialogControl__SetFriendshipExceedInfo(
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/,
+                                                              (System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/,
                                                               0);
   if ( !cancelBtnLb )
     goto LABEL_21;
   UILabel__set_text(cancelBtnLb, (System_String_o *)friendshipExceedConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
   friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/,
+                                                              (System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/,
                                                               0);
   if ( !decideBtnLb )
     goto LABEL_21;
   UILabel__set_text(decideBtnLb, (System_String_o *)friendshipExceedConfirmInfo, 0);
   friendshipExceedSpendQpTxtLb = this->fields.friendshipExceedSpendQpTxtLb;
   friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_6511/*"FRIENDSHIP_EXCEED_SPEND_QP"*/,
+                                                              (System_String_o *)StringLiteral_6513/*"FRIENDSHIP_EXCEED_SPEND_QP"*/,
                                                               0);
   if ( !friendshipExceedSpendQpTxtLb )
     goto LABEL_21;
   UILabel__set_text(friendshipExceedSpendQpTxtLb, (System_String_o *)friendshipExceedConfirmInfo, 0);
   friendshipExceedHaveQpTxtLb = this->fields.friendshipExceedHaveQpTxtLb;
   friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/,
+                                                              (System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/,
                                                               0);
   if ( !friendshipExceedHaveQpTxtLb )
     goto LABEL_21;
   UILabel__set_text(friendshipExceedHaveQpTxtLb, (System_String_o *)friendshipExceedConfirmInfo, 0);
   friendshipExceedSpendQpLb = this->fields.friendshipExceedSpendQpLb;
-  v18 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v28 = spendQp;
-  v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
-  friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v18, v19, 0);
+  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v29 = spendQp;
+  v20 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v29);
+  friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v19, v20, 0);
   if ( !friendshipExceedSpendQpLb )
     goto LABEL_21;
   UILabel__set_text(friendshipExceedSpendQpLb, (System_String_o *)friendshipExceedConfirmInfo, 0);
   friendshipExceedHaveQpLb = this->fields.friendshipExceedHaveQpLb;
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v27 = haveQp;
-  v22 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v27);
-  friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v21, v22, 0);
+  v22 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v28 = haveQp;
+  v23 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v28);
+  friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v22, v23, 0);
   if ( !friendshipExceedHaveQpLb )
     goto LABEL_21;
   UILabel__set_text(friendshipExceedHaveQpLb, (System_String_o *)friendshipExceedConfirmInfo, 0);
   friendshipExceedMsgLb = this->fields.friendshipExceedMsgLb;
   friendshipExceedConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3744/*"CONFIRM_FRIENDSHIP_EXCEED_COMBINE"*/,
+                                                              (System_String_o *)StringLiteral_3747/*"CONFIRM_FRIENDSHIP_EXCEED_COMBINE"*/,
                                                               0);
   if ( !friendshipExceedMsgLb
     || (UILabel__set_text(friendshipExceedMsgLb, (System_String_o *)friendshipExceedConfirmInfo, 0),
@@ -3246,17 +3165,17 @@ void SetRarityDialogControl__SetFriendshipExceedInfo(
         (combineRootComponent = this->fields.combineRootComponent) == 0) )
   {
 LABEL_21:
-    sub_1C6BC60(friendshipExceedConfirmInfo, v9);
+    sub_1C71608(friendshipExceedConfirmInfo, v10);
   }
   if ( combineRootComponent->fields.state == 12 )
   {
-    v25 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v26 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
-      v25,
+      v26,
       (Il2CppObject *)this,
-      Method_SetRarityDialogControl__SetFriendshipExceedInfo_b__159_0__,
+      Method_SetRarityDialogControl__SetFriendshipExceedInfo_b__160_0__,
       0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v25, 0, 0, v26);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v26, 0, 0, v27);
   }
 }
 
@@ -3276,50 +3195,52 @@ void SetRarityDialogControl__SetLimitUpInfo(
   const MethodInfo *v16; // x1
   const MethodInfo *v17; // x1
   const MethodInfo *v18; // x1
+  const MethodInfo *v19; // x1
   UILabel_o *cancelBtnLb; // x23
   UILabel_o *decideBtnLb; // x23
   UILabel_o *limitUpConfirmSpendQpTxtLb; // x23
   UILabel_o *limitUpConfirmHaveQpTxtLb; // x23
   UILabel_o *limitUpConfirmSpendQpLb; // x23
-  System_String_o *v24; // x24
-  Il2CppObject *v25; // x0
+  System_String_o *v25; // x24
+  Il2CppObject *v26; // x0
   UILabel_o *limitUpConfirmHaveQpLb; // x22
-  System_String_o *v27; // x23
-  Il2CppObject *v28; // x0
+  System_String_o *v28; // x23
+  Il2CppObject *v29; // x0
   UILabel_o *limitUpConfirmMsgLb; // x21
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v31; // x21
-  const MethodInfo *v32; // x5
-  int64_t v33; // [xsp+8h] [xbp-58h] BYREF
-  int32_t v34; // [xsp+1Ch] [xbp-44h] BYREF
+  System_Action_o *v32; // x21
+  const MethodInfo *v33; // x5
+  int64_t v34; // [xsp+8h] [xbp-58h] BYREF
+  int32_t v35; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CB02EA & 1) == 0 )
+  if ( (byte_4CC13EC & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl___c__DisplayClass149_0__SetLimitUpInfo_b__0__);
-    sub_1C6BA08(&SetRarityDialogControl___c__DisplayClass149_0_TypeInfo);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_3609/*"COMBINE_SPEND_QP"*/);
-    byte_4CB02EA = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl___c__DisplayClass150_0__SetLimitUpInfo_b__0__);
+    sub_1C713B0(&SetRarityDialogControl___c__DisplayClass150_0_TypeInfo);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_3612/*"COMBINE_SPEND_QP"*/);
+    byte_4CC13EC = 1;
   }
-  v13 = (Il2CppObject *)sub_1C6BC54(SetRarityDialogControl___c__DisplayClass149_0_TypeInfo);
+  v13 = (Il2CppObject *)sub_1C715FC(SetRarityDialogControl___c__DisplayClass150_0_TypeInfo);
   System_Object___ctor(v13, 0);
   if ( !v13 )
     goto LABEL_22;
   v13[1].klass = (Il2CppClass *)baseData;
-  sub_1C6B9AC(&v13[1], baseData);
+  sub_1C71354(&v13[1], baseData);
   v13[1].monitor = combineLimitUpWarningDialog;
-  sub_1C6B9AC(&v13[1].monitor, combineLimitUpWarningDialog);
+  sub_1C71354(&v13[1].monitor, combineLimitUpWarningDialog);
   v13[2].klass = (Il2CppClass *)this;
-  sub_1C6B9AC(&v13[2], this);
+  sub_1C71354(&v13[2], this);
   SetRarityDialogControl__DisableConfirmInfo(this, v16);
+  SetRarityDialogControl__RemoveAllChild(this, v17);
   limitUpConfirmInfo = this->fields.limitUpConfirmInfo;
   if ( !limitUpConfirmInfo )
     goto LABEL_22;
@@ -3328,8 +3249,8 @@ void SetRarityDialogControl__SetLimitUpInfo(
   if ( !limitUpConfirmInfo )
     goto LABEL_22;
   UnityEngine_GameObject__SetActive(limitUpConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v17);
-  SetRarityDialogControl__DefaultBgSize(this, v18);
+  SetRarityDialogControl__Open(this, v18);
+  SetRarityDialogControl__DefaultBgSize(this, v19);
   limitUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.limitUpTitleLb;
   if ( !limitUpConfirmInfo )
     goto LABEL_22;
@@ -3337,43 +3258,43 @@ void SetRarityDialogControl__SetLimitUpInfo(
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_22;
   UILabel__set_text(cancelBtnLb, (System_String_o *)limitUpConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
-  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideBtnLb )
     goto LABEL_22;
   UILabel__set_text(decideBtnLb, (System_String_o *)limitUpConfirmInfo, 0);
   limitUpConfirmSpendQpTxtLb = this->fields.limitUpConfirmSpendQpTxtLb;
-  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3609/*"COMBINE_SPEND_QP"*/, 0);
+  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3612/*"COMBINE_SPEND_QP"*/, 0);
   if ( !limitUpConfirmSpendQpTxtLb )
     goto LABEL_22;
   UILabel__set_text(limitUpConfirmSpendQpTxtLb, (System_String_o *)limitUpConfirmInfo, 0);
   limitUpConfirmHaveQpTxtLb = this->fields.limitUpConfirmHaveQpTxtLb;
-  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/, 0);
+  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/, 0);
   if ( !limitUpConfirmHaveQpTxtLb )
     goto LABEL_22;
   UILabel__set_text(limitUpConfirmHaveQpTxtLb, (System_String_o *)limitUpConfirmInfo, 0);
   limitUpConfirmSpendQpLb = this->fields.limitUpConfirmSpendQpLb;
-  v24 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v34 = spendQp;
-  v25 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
-  limitUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v24, v25, 0);
+  v25 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v35 = spendQp;
+  v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
+  limitUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v25, v26, 0);
   if ( !limitUpConfirmSpendQpLb )
     goto LABEL_22;
   UILabel__set_text(limitUpConfirmSpendQpLb, (System_String_o *)limitUpConfirmInfo, 0);
   limitUpConfirmHaveQpLb = this->fields.limitUpConfirmHaveQpLb;
-  v27 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v33 = haveQp;
-  v28 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v33);
-  limitUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v27, v28, 0);
+  v28 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v34 = haveQp;
+  v29 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v34);
+  limitUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v28, v29, 0);
   if ( !limitUpConfirmHaveQpLb )
     goto LABEL_22;
   UILabel__set_text(limitUpConfirmHaveQpLb, (System_String_o *)limitUpConfirmInfo, 0);
   limitUpConfirmMsgLb = this->fields.limitUpConfirmMsgLb;
-  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/, 0);
+  limitUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/, 0);
   if ( !limitUpConfirmMsgLb
     || (UILabel__set_text(limitUpConfirmMsgLb, (System_String_o *)limitUpConfirmInfo, 0),
         (limitUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.statusUpInfoLb) == 0)
@@ -3382,13 +3303,13 @@ void SetRarityDialogControl__SetLimitUpInfo(
         (combineRootComponent = this->fields.combineRootComponent) == 0) )
   {
 LABEL_22:
-    sub_1C6BC60(limitUpConfirmInfo, v15);
+    sub_1C71608(limitUpConfirmInfo, v15);
   }
   if ( combineRootComponent->fields.state == 5 )
   {
-    v31 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v31, v13, Method_SetRarityDialogControl___c__DisplayClass149_0__SetLimitUpInfo_b__0__, 0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v31, 0, 0, v32);
+    v32 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v32, v13, Method_SetRarityDialogControl___c__DisplayClass150_0__SetLimitUpInfo_b__0__, 0);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v32, 0, 0, v33);
   }
 }
 
@@ -3404,47 +3325,49 @@ void SetRarityDialogControl__SetNpCombineInfo(
         bool reConfirmation,
         const MethodInfo *method)
 {
-  __int64 v17; // x1
+  const MethodInfo *v17; // x1
+  __int64 v18; // x1
   UnityEngine_GameObject_o *npUpConfirmInfo; // x0
-  const MethodInfo *v19; // x1
   const MethodInfo *v20; // x1
+  const MethodInfo *v21; // x1
   UnityEngine_GameObject_o *gameObject; // x0
   UILabel_o *npUpTitleLb; // x21
-  System_String_o **v23; // x8
+  System_String_o **v24; // x8
   UILabel_o *cancelBtnLb; // x21
   UILabel_o *decideBtnLb; // x21
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v27; // x20
-  System_Action_o *v28; // x21
-  const MethodInfo *v29; // x5
-  SetRarityDialogControl_o *v30; // x0
-  int32_t v31; // w1
-  const MethodInfo *v32; // [xsp+0h] [xbp-70h]
+  System_Action_o *v28; // x20
+  System_Action_o *v29; // x21
+  const MethodInfo *v30; // x5
+  SetRarityDialogControl_o *v31; // x0
+  int32_t v32; // w1
+  const MethodInfo *v33; // [xsp+0h] [xbp-70h]
 
-  if ( (byte_4CB02ED & 1) == 0 )
+  if ( (byte_4CC13EF & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl_DefaultBgSize__);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetNpCombineInfo_b__152_0__);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetNpCombineInfo_b__152_1__);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_3770/*"CONFIRM_TITLE_TD_RECONFIRM_COMBINE"*/);
-    sub_1C6BA08(&StringLiteral_3768/*"CONFIRM_TITLE_TD_COMBINE"*/);
-    byte_4CB02ED = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl_DefaultBgSize__);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetNpCombineInfo_b__153_0__);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetNpCombineInfo_b__153_1__);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_3773/*"CONFIRM_TITLE_TD_RECONFIRM_COMBINE"*/);
+    sub_1C713B0(&StringLiteral_3771/*"CONFIRM_TITLE_TD_COMBINE"*/);
+    byte_4CC13EF = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
+  SetRarityDialogControl__RemoveAllChild(this, v17);
   npUpConfirmInfo = this->fields.npUpConfirmInfo;
   if ( !npUpConfirmInfo )
     goto LABEL_27;
   UnityEngine_GameObject__SetActive(npUpConfirmInfo, 1, 0);
   this->fields.npBaseData = baseData;
-  sub_1C6B9AC(&this->fields.npBaseData, baseData);
+  sub_1C71354(&this->fields.npBaseData, baseData);
   this->fields.npSelectMtUsrSvtIdList = selectUsrSvtIdList;
-  sub_1C6B9AC(&this->fields.npSelectMtUsrSvtIdList, selectUsrSvtIdList);
+  sub_1C71354(&this->fields.npSelectMtUsrSvtIdList, selectUsrSvtIdList);
   this->fields.npLvUpData = updata;
-  sub_1C6B9AC(&this->fields.npLvUpData, updata);
+  sub_1C71354(&this->fields.npLvUpData, updata);
   this->fields.npIsExceedMaxLv = isExceedMaxLv;
   this->fields.npIsCombineSvt = isCombineSvt;
   this->fields.npIsExceededMaterial = isExceededMaterial;
@@ -3452,8 +3375,8 @@ void SetRarityDialogControl__SetNpCombineInfo(
   if ( !npUpConfirmInfo )
     goto LABEL_27;
   UnityEngine_GameObject__SetActive(npUpConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v19);
-  SetRarityDialogControl__DefaultBgSize(this, v20);
+  SetRarityDialogControl__Open(this, v20);
+  SetRarityDialogControl__DefaultBgSize(this, v21);
   npUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.mPanelBg;
   if ( !npUpConfirmInfo )
     goto LABEL_27;
@@ -3473,52 +3396,52 @@ void SetRarityDialogControl__SetNpCombineInfo(
     isCombineSvt,
     isExceededMaterial,
     reConfirmation,
-    v32);
+    v33);
   npUpTitleLb = this->fields.npUpTitleLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v23 = (System_String_o **)(reConfirmation ? &StringLiteral_3770/*"CONFIRM_TITLE_TD_RECONFIRM_COMBINE"*/ : &StringLiteral_3768/*"CONFIRM_TITLE_TD_COMBINE"*/);
-  npUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(*v23, 0);
+  v24 = (System_String_o **)(reConfirmation ? &StringLiteral_3773/*"CONFIRM_TITLE_TD_RECONFIRM_COMBINE"*/ : &StringLiteral_3771/*"CONFIRM_TITLE_TD_COMBINE"*/);
+  npUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(*v24, 0);
   if ( !npUpTitleLb )
     goto LABEL_27;
   UILabel__set_text(npUpTitleLb, (System_String_o *)npUpConfirmInfo, 0);
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  npUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  npUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb
     || (UILabel__set_text(cancelBtnLb, (System_String_o *)npUpConfirmInfo, 0),
         decideBtnLb = this->fields.decideBtnLb,
-        npUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0),
+        npUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0),
         !decideBtnLb)
     || (UILabel__set_text(decideBtnLb, (System_String_o *)npUpConfirmInfo, 0),
         (combineRootComponent = this->fields.combineRootComponent) == 0) )
   {
 LABEL_27:
-    sub_1C6BC60(npUpConfirmInfo, v17);
+    sub_1C71608(npUpConfirmInfo, v18);
   }
   if ( combineRootComponent->fields.state == 11 )
   {
     if ( (this->fields.npIsExceedMaxLv || this->fields.npIsCombineSvt || this->fields.npIsExceededMaterial)
       && !reConfirmation )
     {
-      v27 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-      System_Action___ctor(v27, (Il2CppObject *)this, Method_SetRarityDialogControl__SetNpCombineInfo_b__152_0__, 0);
-      v28 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-      System_Action___ctor(v28, (Il2CppObject *)this, Method_SetRarityDialogControl_DefaultBgSize__, 0);
-      v30 = this;
-      v31 = 0;
+      v28 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      System_Action___ctor(v28, (Il2CppObject *)this, Method_SetRarityDialogControl__SetNpCombineInfo_b__153_0__, 0);
+      v29 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      System_Action___ctor(v29, (Il2CppObject *)this, Method_SetRarityDialogControl_DefaultBgSize__, 0);
+      v31 = this;
+      v32 = 0;
     }
     else
     {
-      v27 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-      System_Action___ctor(v27, (Il2CppObject *)this, Method_SetRarityDialogControl__SetNpCombineInfo_b__152_1__, 0);
-      v28 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-      System_Action___ctor(v28, (Il2CppObject *)this, Method_SetRarityDialogControl_DefaultBgSize__, 0);
-      v31 = 8;
-      v30 = this;
+      v28 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      System_Action___ctor(v28, (Il2CppObject *)this, Method_SetRarityDialogControl__SetNpCombineInfo_b__153_1__, 0);
+      v29 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      System_Action___ctor(v29, (Il2CppObject *)this, Method_SetRarityDialogControl_DefaultBgSize__, 0);
+      v32 = 8;
+      v31 = this;
     }
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(v30, v31, v27, 0, v28, v29);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(v31, v32, v28, 0, v29, v30);
   }
 }
 
@@ -3529,91 +3452,93 @@ void SetRarityDialogControl__SetSkillNpCombineInfo(
         System_String_o *titleMsg,
         const MethodInfo *method)
 {
-  __int64 v7; // x1
+  const MethodInfo *v7; // x1
+  __int64 v8; // x1
   UnityEngine_GameObject_o *skillUpConfirmInfo; // x0
-  const MethodInfo *v9; // x1
   const MethodInfo *v10; // x1
-  SetLevelUpData_o *v11; // x23
+  const MethodInfo *v11; // x1
+  SetLevelUpData_o *v12; // x23
   int max_length; // w21
-  UnityEngine_GameObject_o *v13; // x0
   UnityEngine_GameObject_o *v14; // x0
   UnityEngine_GameObject_o *v15; // x0
+  UnityEngine_GameObject_o *v16; // x0
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v17; // x0
   UnityEngine_GameObject_o *v18; // x0
+  UnityEngine_GameObject_o *v19; // x0
   struct UILabel_o *upTargetSkillNameBef; // x22
-  UnityEngine_GameObject_o *v20; // x21
+  UnityEngine_GameObject_o *v21; // x21
   struct UILabel_o *upTargetSkillNameAft; // x22
-  SetLevelUpData_o *v22; // x8
-  UnityEngine_GameObject_o *v23; // x22
-  SetLevelUpData_o *v24; // x8
+  SetLevelUpData_o *v23; // x8
+  UnityEngine_GameObject_o *v24; // x22
+  SetLevelUpData_o *v25; // x8
   UnityEngine_GameObject_c *klass; // x8
-  __int64 v26; // x20
+  __int64 v27; // x20
   UIExtrusionLabel_o *currentLvLb; // x20
   UIExtrusionLabel_o *resLvLb; // x20
   UILabel_o *upSpendQpTxtLb; // x20
   UILabel_o *upHaveQpTxtLb; // x20
   UILabel_o *upSpendQpLb; // x20
-  System_String_o *v32; // x21
-  Il2CppObject *v33; // x0
+  System_String_o *v33; // x21
+  Il2CppObject *v34; // x0
   UILabel_o *upHaveQpLb; // x20
-  System_String_o *v35; // x21
-  Il2CppObject *v36; // x0
+  System_String_o *v36; // x21
+  Il2CppObject *v37; // x0
   UILabel_o *upConfirmMsgLb; // x20
   UILabel_o *cancelBtnLb; // x20
   UILabel_o *decideBtnLb; // x20
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v41; // x20
-  const MethodInfo *v42; // x5
-  __int64 v43; // x0
+  System_Action_o *v42; // x20
+  const MethodInfo *v43; // x5
+  __int64 v44; // x0
   int64_t haveQp; // [xsp+0h] [xbp-50h] BYREF
   int32_t spendQp; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CB02EB & 1) == 0 )
+  if ( (byte_4CC13ED & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetSkillNpCombineInfo_b__150_0__);
-    sub_1C6BA08(&string___TypeInfo);
-    sub_1C6BA08(&UILabel___TypeInfo);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/);
-    sub_1C6BA08(&StringLiteral_25492/*"】"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_3609/*"COMBINE_SPEND_QP"*/);
-    sub_1C6BA08(&StringLiteral_25487/*"【"*/);
-    byte_4CB02EB = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetSkillNpCombineInfo_b__151_0__);
+    sub_1C713B0(&string___TypeInfo);
+    sub_1C713B0(&UILabel___TypeInfo);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/);
+    sub_1C713B0(&StringLiteral_25512/*"】"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_3612/*"COMBINE_SPEND_QP"*/);
+    sub_1C713B0(&StringLiteral_25507/*"【"*/);
+    byte_4CC13ED = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)upDataList);
+  SetRarityDialogControl__RemoveAllChild(this, v7);
   skillUpConfirmInfo = this->fields.skillUpConfirmInfo;
   if ( !skillUpConfirmInfo
     || (UnityEngine_GameObject__SetActive(skillUpConfirmInfo, 1, 0),
         (skillUpConfirmInfo = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0)
     || (UnityEngine_GameObject__SetActive(skillUpConfirmInfo, 1, 0),
-        SetRarityDialogControl__MoveAlpha(this, v9),
-        SetRarityDialogControl__DefaultBgSize(this, v10),
+        SetRarityDialogControl__Open(this, v10),
+        SetRarityDialogControl__DefaultBgSize(this, v11),
         !upDataList) )
   {
 LABEL_60:
-    sub_1C6BC60(skillUpConfirmInfo, v7);
+    sub_1C71608(skillUpConfirmInfo, v8);
   }
   if ( !LODWORD(upDataList->max_length) )
     goto LABEL_61;
   skillUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.upTitleLb;
   if ( !skillUpConfirmInfo )
     goto LABEL_60;
-  v11 = upDataList->m_Items[0];
+  v12 = upDataList->m_Items[0];
   UILabel__set_text((UILabel_o *)skillUpConfirmInfo, titleMsg, 0);
-  if ( !v11 )
+  if ( !v12 )
     goto LABEL_60;
   skillUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.upTargetRubyLb;
   if ( !skillUpConfirmInfo )
     goto LABEL_60;
-  UILabel__set_text((UILabel_o *)skillUpConfirmInfo, v11->fields.targetRuby, 0);
+  UILabel__set_text((UILabel_o *)skillUpConfirmInfo, v12->fields.targetRuby, 0);
   skillUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.upTargetNameLb;
   if ( !skillUpConfirmInfo )
     goto LABEL_60;
@@ -3638,93 +3563,93 @@ LABEL_60:
     skillUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.upSpendQpTxtLb;
     if ( !skillUpConfirmInfo )
       goto LABEL_60;
-    v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
-    GameObjectExtensions__SetLocalPositionX(v17, 11.0, 0);
+    v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
+    GameObjectExtensions__SetLocalPositionX(v18, 11.0, 0);
     skillUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.upHaveQpTxtLb;
     if ( !skillUpConfirmInfo )
       goto LABEL_60;
-    v18 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
-    GameObjectExtensions__SetLocalPositionX(v18, 11.0, 0);
-    skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C6BAB0(UILabel___TypeInfo, 2);
+    v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
+    GameObjectExtensions__SetLocalPositionX(v19, 11.0, 0);
+    skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C71458(UILabel___TypeInfo, 2);
     if ( !skillUpConfirmInfo )
       goto LABEL_60;
     upTargetSkillNameBef = this->fields.upTargetSkillNameBef;
-    v20 = skillUpConfirmInfo;
+    v21 = skillUpConfirmInfo;
     if ( upTargetSkillNameBef )
     {
-      skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C6BB44(
+      skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C714EC(
                                                          this->fields.upTargetSkillNameBef,
                                                          skillUpConfirmInfo->klass->_1.element_class);
       if ( !skillUpConfirmInfo )
         goto LABEL_62;
     }
-    if ( !LODWORD(v20[1].klass) )
+    if ( !LODWORD(v21[1].klass) )
       goto LABEL_61;
-    v20[1].monitor = upTargetSkillNameBef;
-    skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C6B9AC(&v20[1].monitor, upTargetSkillNameBef);
+    v21[1].monitor = upTargetSkillNameBef;
+    skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C71354(&v21[1].monitor, upTargetSkillNameBef);
     upTargetSkillNameAft = this->fields.upTargetSkillNameAft;
     if ( upTargetSkillNameAft )
     {
-      skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C6BB44(
+      skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C714EC(
                                                          this->fields.upTargetSkillNameAft,
-                                                         v20->klass->_1.element_class);
+                                                         v21->klass->_1.element_class);
       if ( !skillUpConfirmInfo )
       {
 LABEL_62:
-        v43 = sub_1C6BC84();
-        sub_1C6BB30(v43, 0);
+        v44 = sub_1C7162C();
+        sub_1C714D8(v44, 0);
       }
     }
-    if ( LODWORD(v20[1].klass) > 1 )
+    if ( LODWORD(v21[1].klass) > 1 )
     {
-      v20[1].fields.m_CachedPtr = (intptr_t)upTargetSkillNameAft;
-      sub_1C6B9AC(&v20[1].fields, upTargetSkillNameAft);
-      skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C6BAB0(string___TypeInfo, 2);
+      v21[1].fields.m_CachedPtr = (intptr_t)upTargetSkillNameAft;
+      sub_1C71354(&v21[1].fields, upTargetSkillNameAft);
+      skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C71458(string___TypeInfo, 2);
       if ( LODWORD(upDataList->max_length) )
       {
-        v22 = upDataList->m_Items[0];
-        if ( !v22 )
-          goto LABEL_60;
-        v23 = skillUpConfirmInfo;
-        skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Concat_64007060(
-                                                           (System_String_o *)StringLiteral_25487/*"【"*/,
-                                                           v22->fields.displayText,
-                                                           (System_String_o *)StringLiteral_25492/*"】"*/,
-                                                           v22->fields.targetName,
-                                                           0);
+        v23 = upDataList->m_Items[0];
         if ( !v23 )
           goto LABEL_60;
-        if ( LODWORD(v23[1].klass) )
+        v24 = skillUpConfirmInfo;
+        skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Concat_64071992(
+                                                           (System_String_o *)StringLiteral_25507/*"【"*/,
+                                                           v23->fields.displayText,
+                                                           (System_String_o *)StringLiteral_25512/*"】"*/,
+                                                           v23->fields.targetName,
+                                                           0);
+        if ( !v24 )
+          goto LABEL_60;
+        if ( LODWORD(v24[1].klass) )
         {
-          v23[1].monitor = skillUpConfirmInfo;
-          skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C6B9AC(&v23[1].monitor, skillUpConfirmInfo);
+          v24[1].monitor = skillUpConfirmInfo;
+          skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C71354(&v24[1].monitor, skillUpConfirmInfo);
           if ( LODWORD(upDataList->max_length) > 1 )
           {
-            v24 = upDataList->m_Items[1];
-            if ( !v24 )
+            v25 = upDataList->m_Items[1];
+            if ( !v25 )
               goto LABEL_60;
-            skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Concat_64007060(
-                                                               (System_String_o *)StringLiteral_25487/*"【"*/,
-                                                               v24->fields.displayText,
-                                                               (System_String_o *)StringLiteral_25492/*"】"*/,
-                                                               v24->fields.targetName,
+            skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Concat_64071992(
+                                                               (System_String_o *)StringLiteral_25507/*"【"*/,
+                                                               v25->fields.displayText,
+                                                               (System_String_o *)StringLiteral_25512/*"】"*/,
+                                                               v25->fields.targetName,
                                                                0);
-            if ( LODWORD(v23[1].klass) > 1 )
+            if ( LODWORD(v24[1].klass) > 1 )
             {
-              v23[1].fields.m_CachedPtr = (intptr_t)skillUpConfirmInfo;
-              skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C6B9AC(&v23[1].fields, skillUpConfirmInfo);
-              klass = v20[1].klass;
+              v24[1].fields.m_CachedPtr = (intptr_t)skillUpConfirmInfo;
+              skillUpConfirmInfo = (UnityEngine_GameObject_o *)sub_1C71354(&v24[1].fields, skillUpConfirmInfo);
+              klass = v21[1].klass;
               if ( (int)klass < 1 )
                 goto LABEL_45;
-              v26 = 0;
-              while ( (unsigned int)v26 < (unsigned int)klass && (unsigned int)v26 < LODWORD(v23[1].klass) )
+              v27 = 0;
+              while ( (unsigned int)v27 < (unsigned int)klass && (unsigned int)v27 < LODWORD(v24[1].klass) )
               {
-                skillUpConfirmInfo = (UnityEngine_GameObject_o *)*((_QWORD *)&v20[1].monitor + v26);
+                skillUpConfirmInfo = (UnityEngine_GameObject_o *)*((_QWORD *)&v21[1].monitor + v27);
                 if ( !skillUpConfirmInfo )
                   goto LABEL_60;
-                UILabel__set_text((UILabel_o *)skillUpConfirmInfo, *((System_String_o **)&v23[1].monitor + v26), 0);
-                klass = v20[1].klass;
-                if ( (int)++v26 >= (int)klass )
+                UILabel__set_text((UILabel_o *)skillUpConfirmInfo, *((System_String_o **)&v24[1].monitor + v27), 0);
+                klass = v21[1].klass;
+                if ( (int)++v27 >= (int)klass )
                   goto LABEL_45;
               }
             }
@@ -3733,18 +3658,18 @@ LABEL_62:
       }
     }
 LABEL_61:
-    sub_1C6BC68(skillUpConfirmInfo);
+    sub_1C71610(skillUpConfirmInfo);
   }
   UnityEngine_GameObject__SetActive(skillUpConfirmInfo, 1, 0);
   skillUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.upTargetNameLb;
   if ( !skillUpConfirmInfo )
     goto LABEL_60;
-  UILabel__set_text((UILabel_o *)skillUpConfirmInfo, v11->fields.targetName, 0);
+  UILabel__set_text((UILabel_o *)skillUpConfirmInfo, v12->fields.targetName, 0);
   skillUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.upTargetSkillNameBef;
   if ( !skillUpConfirmInfo )
     goto LABEL_60;
-  v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)GameObjectExtensions__GetParent(v13, 0);
+  v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)GameObjectExtensions__GetParent(v14, 0);
   if ( !skillUpConfirmInfo )
     goto LABEL_60;
   skillUpConfirmInfo = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
@@ -3754,64 +3679,64 @@ LABEL_61:
   skillUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.upSpendQpTxtLb;
   if ( !skillUpConfirmInfo )
     goto LABEL_60;
-  v14 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
-  GameObjectExtensions__SetLocalPositionX(v14, -5.0, 0);
+  v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
+  GameObjectExtensions__SetLocalPositionX(v15, -5.0, 0);
   skillUpConfirmInfo = (UnityEngine_GameObject_o *)this->fields.upHaveQpTxtLb;
   if ( !skillUpConfirmInfo )
     goto LABEL_60;
-  v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
-  GameObjectExtensions__SetLocalPositionX(v15, -5.0, 0);
+  v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)skillUpConfirmInfo, 0);
+  GameObjectExtensions__SetLocalPositionX(v16, -5.0, 0);
 LABEL_45:
   currentLvLb = this->fields.currentLvLb;
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_Int32__ToString((int)v11 + 64, 0);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_Int32__ToString((int)v12 + 64, 0);
   if ( !currentLvLb )
     goto LABEL_60;
   UIExtrusionLabel__set_text(currentLvLb, (System_String_o *)skillUpConfirmInfo, 0);
   resLvLb = this->fields.resLvLb;
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_Int32__ToString((int)v11 + 68, 0);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_Int32__ToString((int)v12 + 68, 0);
   if ( !resLvLb )
     goto LABEL_60;
   UIExtrusionLabel__set_text(resLvLb, (System_String_o *)skillUpConfirmInfo, 0);
   upSpendQpTxtLb = this->fields.upSpendQpTxtLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3609/*"COMBINE_SPEND_QP"*/, 0);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3612/*"COMBINE_SPEND_QP"*/, 0);
   if ( !upSpendQpTxtLb )
     goto LABEL_60;
   UILabel__set_text(upSpendQpTxtLb, (System_String_o *)skillUpConfirmInfo, 0);
   upHaveQpTxtLb = this->fields.upHaveQpTxtLb;
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/, 0);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/, 0);
   if ( !upHaveQpTxtLb )
     goto LABEL_60;
   UILabel__set_text(upHaveQpTxtLb, (System_String_o *)skillUpConfirmInfo, 0);
   upSpendQpLb = this->fields.upSpendQpLb;
-  v32 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  spendQp = v11->fields.spendQp;
-  v33 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendQp);
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v32, v33, 0);
+  v33 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  spendQp = v12->fields.spendQp;
+  v34 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &spendQp);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v33, v34, 0);
   if ( !upSpendQpLb )
     goto LABEL_60;
   UILabel__set_text(upSpendQpLb, (System_String_o *)skillUpConfirmInfo, 0);
   upHaveQpLb = this->fields.upHaveQpLb;
-  v35 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  haveQp = v11->fields.haveQp;
-  v36 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &haveQp);
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v35, v36, 0);
+  v36 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  haveQp = v12->fields.haveQp;
+  v37 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &haveQp);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v36, v37, 0);
   if ( !upHaveQpLb )
     goto LABEL_60;
   UILabel__set_text(upHaveQpLb, (System_String_o *)skillUpConfirmInfo, 0);
   upConfirmMsgLb = this->fields.upConfirmMsgLb;
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/, 0);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/, 0);
   if ( !upConfirmMsgLb )
     goto LABEL_60;
   UILabel__set_text(upConfirmMsgLb, (System_String_o *)skillUpConfirmInfo, 0);
   cancelBtnLb = this->fields.cancelBtnLb;
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_60;
   UILabel__set_text(cancelBtnLb, (System_String_o *)skillUpConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
-  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  skillUpConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideBtnLb )
     goto LABEL_60;
   UILabel__set_text(decideBtnLb, (System_String_o *)skillUpConfirmInfo, 0);
@@ -3820,9 +3745,9 @@ LABEL_45:
     goto LABEL_60;
   if ( combineRootComponent->fields.state == 10 )
   {
-    v41 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v41, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSkillNpCombineInfo_b__150_0__, 0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v41, 0, 0, v42);
+    v42 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v42, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSkillNpCombineInfo_b__151_0__, 0);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v42, 0, 0, v43);
   }
 }
 
@@ -3835,39 +3760,41 @@ void SetRarityDialogControl__SetSpecialAscension(
         bool warning2,
         const MethodInfo *method)
 {
-  __int64 v10; // x1
+  const MethodInfo *v10; // x1
+  __int64 v11; // x1
   UnityEngine_GameObject_o *specialAscensionConfirmInfo; // x0
-  const MethodInfo *v12; // x1
   const MethodInfo *v13; // x1
-  System_String_o *v14; // x20
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  const MethodInfo *v14; // x1
+  System_String_o *v15; // x20
+  int32_t v16; // w2
+  const MethodInfo *v17; // x3
   UILabel_o *cancelBtnLb; // x20
   UILabel_o *decideBtnLb; // x20
-  System_Action_o *v19; // x20
+  System_Action_o *v20; // x20
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v21; // x21
-  const MethodInfo *v22; // x5
-  SetRarityDialogControl_o *v23; // x0
-  int32_t v24; // w1
+  System_Action_o *v22; // x21
+  const MethodInfo *v23; // x5
+  SetRarityDialogControl_o *v24; // x0
+  int32_t v25; // w1
 
-  if ( (byte_4CB02F5 & 1) == 0 )
+  if ( (byte_4CC13F7 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SpecialAscensionConfirmInfo___);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetSpecialAscension_b__160_0__);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetSpecialAscension_b__160_1__);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetSpecialAscension_b__160_2__);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_12266/*"SPECIAL_ASCENSION_CONFIRM_TXT"*/);
-    sub_1C6BA08(&StringLiteral_12270/*"SPECIAL_ASCENSION_WARNING1_TXT"*/);
-    sub_1C6BA08(&StringLiteral_12271/*"SPECIAL_ASCENSION_WARNING2_TXT"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB02F5 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SpecialAscensionConfirmInfo___);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetSpecialAscension_b__161_0__);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetSpecialAscension_b__161_1__);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetSpecialAscension_b__161_2__);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_12272/*"SPECIAL_ASCENSION_CONFIRM_TXT"*/);
+    sub_1C713B0(&StringLiteral_12276/*"SPECIAL_ASCENSION_WARNING1_TXT"*/);
+    sub_1C713B0(&StringLiteral_12277/*"SPECIAL_ASCENSION_WARNING2_TXT"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC13F7 = 1;
   }
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
+  SetRarityDialogControl__RemoveAllChild(this, v10);
   specialAscensionConfirmInfo = this->fields.specialAscensionConfirmInfo;
   if ( !specialAscensionConfirmInfo )
     goto LABEL_37;
@@ -3876,8 +3803,8 @@ void SetRarityDialogControl__SetSpecialAscension(
   if ( !specialAscensionConfirmInfo )
     goto LABEL_37;
   UnityEngine_GameObject__SetActive(specialAscensionConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v12);
-  SetRarityDialogControl__DefaultBgSize(this, v13);
+  SetRarityDialogControl__Open(this, v13);
+  SetRarityDialogControl__DefaultBgSize(this, v14);
   this->fields.specialAscensionConfirm = confirm;
   this->fields.specialAscensionWarning1 = warning1;
   this->fields.specialAscensionWarning2 = warning2;
@@ -3885,52 +3812,52 @@ void SetRarityDialogControl__SetSpecialAscension(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_12266/*"SPECIAL_ASCENSION_CONFIRM_TXT"*/, 0);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12272/*"SPECIAL_ASCENSION_CONFIRM_TXT"*/, 0);
     this->fields.specialAscensionConfirm = 0;
   }
   else if ( warning1 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_12270/*"SPECIAL_ASCENSION_WARNING1_TXT"*/, 0);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12276/*"SPECIAL_ASCENSION_WARNING1_TXT"*/, 0);
     this->fields.specialAscensionWarning1 = 0;
   }
   else if ( warning2 )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v14 = LocalizationManager__Get((System_String_o *)StringLiteral_12271/*"SPECIAL_ASCENSION_WARNING2_TXT"*/, 0);
+    v15 = LocalizationManager__Get((System_String_o *)StringLiteral_12277/*"SPECIAL_ASCENSION_WARNING2_TXT"*/, 0);
     this->fields.specialAscensionWarning2 = 0;
   }
   else
   {
-    v14 = (System_String_o *)StringLiteral_1/*""*/;
+    v15 = (System_String_o *)StringLiteral_1/*""*/;
   }
   specialAscensionConfirmInfo = this->fields.specialAscensionConfirmInfo;
   if ( !specialAscensionConfirmInfo )
     goto LABEL_37;
   specialAscensionConfirmInfo = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                               specialAscensionConfirmInfo,
-                                                              (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SpecialAscensionConfirmInfo___);
+                                                              (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SpecialAscensionConfirmInfo___);
   if ( !specialAscensionConfirmInfo )
     goto LABEL_37;
   SpecialAscensionConfirmInfo__SetSpecialAscensionConfirmInfo(
     (SpecialAscensionConfirmInfo_o *)specialAscensionConfirmInfo,
-    v14,
     v15,
-    v16);
+    v16,
+    v17);
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
   specialAscensionConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/,
+                                                              (System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/,
                                                               0);
   if ( !cancelBtnLb )
     goto LABEL_37;
   UILabel__set_text(cancelBtnLb, (System_String_o *)specialAscensionConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
   specialAscensionConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/,
+                                                              (System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/,
                                                               0);
   if ( !decideBtnLb
     || (UILabel__set_text(decideBtnLb, (System_String_o *)specialAscensionConfirmInfo, 0),
@@ -3939,16 +3866,16 @@ void SetRarityDialogControl__SetSpecialAscension(
                                         (UnityEngine_Component_o *)specialAscensionConfirmInfo,
                                         0)) == 0
     || (UnityEngine_GameObject__SetActive(specialAscensionConfirmInfo, 0, 0),
-        v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
+        v20 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo),
         System_Action___ctor(
-          v19,
+          v20,
           (Il2CppObject *)this,
-          Method_SetRarityDialogControl__SetSpecialAscension_b__160_0__,
+          Method_SetRarityDialogControl__SetSpecialAscension_b__161_0__,
           0),
         (combineRootComponent = this->fields.combineRootComponent) == 0) )
   {
 LABEL_37:
-    sub_1C6BC60(specialAscensionConfirmInfo, v10);
+    sub_1C71608(specialAscensionConfirmInfo, v11);
   }
   if ( combineRootComponent->fields.state == 7 )
   {
@@ -3959,18 +3886,18 @@ LABEL_37:
     }
     else if ( !this->fields.specialAscensionWarning1 && !this->fields.specialAscensionWarning2 )
     {
-      v21 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-      System_Action___ctor(v21, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__160_1__, 0);
-      v24 = 8;
-      v23 = this;
+      v22 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      System_Action___ctor(v22, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__161_1__, 0);
+      v25 = 8;
+      v24 = this;
       goto LABEL_35;
     }
-    v21 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v21, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__160_2__, 0);
-    v23 = this;
-    v24 = 0;
+    v22 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v22, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__161_2__, 0);
+    v24 = this;
+    v25 = 0;
 LABEL_35:
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(v23, v24, v21, v19, 0, v22);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(v24, v25, v22, v20, 0, v23);
   }
 }
 
@@ -3987,82 +3914,84 @@ void SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
         System_String_o *limitWarningMsg,
         const MethodInfo *method)
 {
-  __int64 v16; // x1
+  const MethodInfo *v16; // x1
+  __int64 v17; // x1
   UnityEngine_GameObject_o *allDispConfirmInfo; // x0
-  const MethodInfo *v18; // x1
   const MethodInfo *v19; // x1
+  const MethodInfo *v20; // x1
   UILabel_o *cancelBtnLb; // x26
   UILabel_o *decideBtnLb; // x26
-  const MethodInfo *v22; // x1
-  struct System_Collections_Generic_Dictionary_TKey__TValue__o *v23; // x22
+  const MethodInfo *v23; // x1
+  struct System_Collections_Generic_Dictionary_TKey__TValue__o *v24; // x22
   struct UIGrid_o *allSvtGrid; // x8
-  float v25; // s9
-  int32_t v26; // w26
-  __int64 v27; // x1
-  UnityEngine_Component_o *v28; // x0
+  float v26; // s9
+  int32_t v27; // w26
+  __int64 v28; // x1
+  UnityEngine_Component_o *v29; // x0
   struct System_Collections_Generic_KeyValuePair_TKey__TValue__o current; // kr00_16
   UnityEngine_GameObject_o *svtFaceInfo; // x28
   UnityEngine_Transform_o *transform; // x2
   UnityEngine_GameObject_o *Object; // x0
-  __int64 v33; // x1
+  __int64 v34; // x1
   Il2CppObject *Component_object; // x0
-  __int64 v35; // x1
+  __int64 v36; // x1
   float y; // s8
   int32_t Count; // w25
-  struct UIGrid_o *v38; // x8
+  struct UIGrid_o *v39; // x8
   int32_t maxPerLine; // w20
-  int32_t v40; // w24
-  int32_t v41; // w10
-  float v42; // s1 OVERLAPPED
+  int32_t v41; // w24
+  int32_t v42; // w10
+  float v43; // s1 OVERLAPPED
   float z; // s2
-  float v44; // s0
+  float v45; // s0
   UILabel_o *allSpendQpTxtLb; // x24
   UILabel_o *allHaveQpTxtLb; // x24
   UILabel_o *allSpendQpLb; // x24
-  System_String_o *v48; // x25
-  Il2CppObject *v49; // x0
+  System_String_o *v49; // x25
+  Il2CppObject *v50; // x0
   UILabel_o *allHaveQpLb; // x23
-  System_String_o *v51; // x24
-  Il2CppObject *v52; // x0
+  System_String_o *v52; // x24
+  Il2CppObject *v53; // x0
   UILabel_o *allRareMsgLb; // x20
   UILabel_o *allLimitRareLb; // x20
   UILabel_o *allRareConfirmMsgLb; // x20
   struct CombineRootComponent_o *combineRootComponent; // x8
-  System_Action_o *v57; // x20
-  const MethodInfo *v58; // x5
-  const MethodInfo *v59; // [xsp+0h] [xbp-F0h]
-  int32_t v61; // [xsp+20h] [xbp-D0h]
-  int32_t v62; // [xsp+24h] [xbp-CCh] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v63; // [xsp+28h] [xbp-C8h] BYREF
-  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v64; // [xsp+50h] [xbp-A0h] BYREF
-  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
+  System_Action_o *v58; // x20
+  const MethodInfo *v59; // x5
+  const MethodInfo *v60; // [xsp+0h] [xbp-F0h]
+  int32_t v62; // [xsp+20h] [xbp-D0h]
+  int32_t v63; // [xsp+24h] [xbp-CCh] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v64; // [xsp+28h] [xbp-C8h] BYREF
+  System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v65; // [xsp+50h] [xbp-A0h] BYREF
+  UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB02F0 & 1) == 0 )
+  if ( (byte_4CC13F2 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_long__bool__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__get_Current__);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Key__);
-    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Value__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine_b__155_0__);
-    sub_1C6BA08(&StringLiteral_9234/*"NEED_QP"*/);
-    sub_1C6BA08(&StringLiteral_3575/*"COMBINE_HAVE_QP"*/);
-    sub_1C6BA08(&StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_10955/*"RARE_MATERIAL_INFO_MSG"*/);
-    sub_1C6BA08(&StringLiteral_3609/*"COMBINE_SPEND_QP"*/);
-    byte_4CB02F0 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_long__bool__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__get_Current__);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Key__);
+    sub_1C713B0(&Method_System_Collections_Generic_KeyValuePair_long__bool__get_Value__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine_b__156_0__);
+    sub_1C713B0(&StringLiteral_9238/*"NEED_QP"*/);
+    sub_1C713B0(&StringLiteral_3578/*"COMBINE_HAVE_QP"*/);
+    sub_1C713B0(&StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_10961/*"RARE_MATERIAL_INFO_MSG"*/);
+    sub_1C713B0(&StringLiteral_3612/*"COMBINE_SPEND_QP"*/);
+    byte_4CC13F2 = 1;
   }
-  memset(&v64, 0, sizeof(v64));
+  memset(&v65, 0, sizeof(v65));
   SetRarityDialogControl__DisableConfirmInfo(this, (const MethodInfo *)baseData);
+  SetRarityDialogControl__RemoveAllChild(this, v16);
   allDispConfirmInfo = this->fields.allDispConfirmInfo;
   if ( !allDispConfirmInfo )
     goto LABEL_69;
@@ -4070,10 +3999,10 @@ void SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
   allDispConfirmInfo = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !allDispConfirmInfo )
     goto LABEL_69;
-  v61 = spendQp;
+  v62 = spendQp;
   UnityEngine_GameObject__SetActive(allDispConfirmInfo, 1, 0);
-  SetRarityDialogControl__MoveAlpha(this, v18);
-  SetRarityDialogControl__DefaultBgSize(this, v19);
+  SetRarityDialogControl__Open(this, v19);
+  SetRarityDialogControl__DefaultBgSize(this, v20);
   allDispConfirmInfo = (UnityEngine_GameObject_o *)this->fields.allTitleLb;
   if ( !allDispConfirmInfo )
     goto LABEL_69;
@@ -4081,93 +4010,93 @@ void SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
   cancelBtnLb = this->fields.cancelBtnLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0);
+  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0);
   if ( !cancelBtnLb )
     goto LABEL_69;
   UILabel__set_text(cancelBtnLb, (System_String_o *)allDispConfirmInfo, 0);
   decideBtnLb = this->fields.decideBtnLb;
-  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideBtnLb )
     goto LABEL_69;
   UILabel__set_text(decideBtnLb, (System_String_o *)allDispConfirmInfo, 0);
-  SetRarityDialogControl__SetCenter(this, v22);
+  SetRarityDialogControl__SetCenter(this, v23);
   if ( !selectedList )
     goto LABEL_69;
-  v23 = (struct System_Collections_Generic_Dictionary_TKey__TValue__o *)haveQp;
+  v24 = (struct System_Collections_Generic_Dictionary_TKey__TValue__o *)haveQp;
   allDispConfirmInfo = (UnityEngine_GameObject_o *)System_Collections_Generic_Dictionary_long__bool___get_Count(
                                                      selectedList,
-                                                     (const MethodInfo_348B350 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
+                                                     (const MethodInfo_349B0F4 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
   allSvtGrid = this->fields.allSvtGrid;
   if ( !allSvtGrid )
     goto LABEL_69;
-  v25 = allSvtGrid->fields.cellWidth * 0.5;
+  v26 = allSvtGrid->fields.cellWidth * 0.5;
   System_Collections_Generic_Dictionary_long__bool___GetEnumerator(
-    &v63,
+    &v64,
     selectedList,
-    (const MethodInfo_348BAA4 *)Method_System_Collections_Generic_Dictionary_long__bool__GetEnumerator__);
-  v26 = 0;
-  v64 = v63;
+    (const MethodInfo_349B848 *)Method_System_Collections_Generic_Dictionary_long__bool__GetEnumerator__);
+  v27 = 0;
+  v65 = v64;
   while ( System_Collections_Generic_Dictionary_Enumerator_long__bool___MoveNext(
-            &v64,
-            (const MethodInfo_35B0784 *)Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__MoveNext__) )
+            &v65,
+            (const MethodInfo_35C0528 *)Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__MoveNext__) )
   {
-    v28 = (UnityEngine_Component_o *)this->fields.allSvtGrid;
-    if ( !v28 )
-      sub_1C6BC60(0, v27);
-    current = v64.fields._current;
+    v29 = (UnityEngine_Component_o *)this->fields.allSvtGrid;
+    if ( !v29 )
+      sub_1C71608(0, v28);
+    current = v65.fields._current;
     svtFaceInfo = this->fields.svtFaceInfo;
-    transform = UnityEngine_Component__get_transform(v28, 0);
+    transform = UnityEngine_Component__get_transform(v29, 0);
     Object = BaseMonoBehaviour__createObject((BaseMonoBehaviour_o *)this, svtFaceInfo, transform, 0, 0);
     if ( !Object )
-      sub_1C6BC60(0, v33);
+      sub_1C71608(0, v34);
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          Object,
-                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
+                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MaterialSvtInfo___);
     if ( !Component_object )
-      sub_1C6BC60(0, v35);
-    MaterialSvtInfo__setMaterialSvtInfo_31639500(
+      sub_1C71608(0, v36);
+    MaterialSvtInfo__setMaterialSvtInfo_31663028(
       (MaterialSvtInfo_o *)Component_object,
-      v26++,
+      v27++,
       baseData,
       (int64_t)current.fields.key,
       0,
       0,
       LOBYTE(current.fields.value) != 0,
       0,
-      v59);
+      v60);
   }
   System_Collections_Generic_Dictionary_Enumerator_long__bool___Dispose(
-    &v64,
-    (const MethodInfo_35B08A0 *)Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__Dispose__);
+    &v65,
+    (const MethodInfo_35C0644 *)Method_System_Collections_Generic_Dictionary_Enumerator_long__bool__Dispose__);
   y = this->fields.center.fields.y;
   Count = System_Collections_Generic_Dictionary_long__bool___get_Count(
             selectedList,
-            (const MethodInfo_348B350 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
+            (const MethodInfo_349B0F4 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
   allDispConfirmInfo = (UnityEngine_GameObject_o *)System_Collections_Generic_Dictionary_long__bool___get_Count(
                                                      selectedList,
-                                                     (const MethodInfo_348B350 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
-  v38 = this->fields.allSvtGrid;
-  if ( !v38 )
+                                                     (const MethodInfo_349B0F4 *)Method_System_Collections_Generic_Dictionary_long__bool__get_Count__);
+  v39 = this->fields.allSvtGrid;
+  if ( !v39 )
     goto LABEL_69;
-  maxPerLine = v38->fields.maxPerLine;
-  v40 = (int)allDispConfirmInfo;
+  maxPerLine = v39->fields.maxPerLine;
+  v41 = (int)allDispConfirmInfo;
   allDispConfirmInfo = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                      (UnityEngine_Component_o *)this->fields.allSvtGrid,
                                                      0);
   if ( !allDispConfirmInfo )
     goto LABEL_69;
-  if ( v40 <= maxPerLine )
-    v41 = Count;
+  if ( v41 <= maxPerLine )
+    v42 = Count;
   else
-    v41 = maxPerLine;
-  v42 = 70.0;
-  if ( v40 <= maxPerLine )
-    v42 = y;
+    v42 = maxPerLine;
+  v43 = 70.0;
+  if ( v41 <= maxPerLine )
+    v43 = y;
   z = this->fields.center.fields.z;
-  v44 = (float)(this->fields.center.fields.x - (float)(v25 * (float)(v41 - 1))) * 0.47;
+  v45 = (float)(this->fields.center.fields.x - (float)(v26 * (float)(v42 - 1))) * 0.47;
   UnityEngine_Transform__set_localPosition(
     (UnityEngine_Transform_o *)allDispConfirmInfo,
-    *(UnityEngine_Vector3_o *)(&v42 - 1),
+    *(UnityEngine_Vector3_o *)(&v43 - 1),
     0);
   allDispConfirmInfo = (UnityEngine_GameObject_o *)this->fields.allSvtGrid;
   if ( !allDispConfirmInfo )
@@ -4177,10 +4106,10 @@ void SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
                                                      0);
   if ( !allDispConfirmInfo )
     goto LABEL_69;
-  v65.fields.x = 0.47;
-  v65.fields.y = 0.47;
-  v65.fields.z = 0.47;
-  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)allDispConfirmInfo, v65, 0);
+  v66.fields.x = 0.47;
+  v66.fields.y = 0.47;
+  v66.fields.z = 0.47;
+  UnityEngine_Transform__set_localScale((UnityEngine_Transform_o *)allDispConfirmInfo, v66, 0);
   allDispConfirmInfo = (UnityEngine_GameObject_o *)this->fields.allSvtGrid;
   if ( !allDispConfirmInfo )
     goto LABEL_69;
@@ -4188,28 +4117,28 @@ void SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
   allSpendQpTxtLb = this->fields.allSpendQpTxtLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3609/*"COMBINE_SPEND_QP"*/, 0);
+  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3612/*"COMBINE_SPEND_QP"*/, 0);
   if ( !allSpendQpTxtLb )
     goto LABEL_69;
   UILabel__set_text(allSpendQpTxtLb, (System_String_o *)allDispConfirmInfo, 0);
   allHaveQpTxtLb = this->fields.allHaveQpTxtLb;
-  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3575/*"COMBINE_HAVE_QP"*/, 0);
+  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3578/*"COMBINE_HAVE_QP"*/, 0);
   if ( !allHaveQpTxtLb )
     goto LABEL_69;
   UILabel__set_text(allHaveQpTxtLb, (System_String_o *)allDispConfirmInfo, 0);
   allSpendQpLb = this->fields.allSpendQpLb;
-  v48 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v62 = v61;
-  v49 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v62);
-  allDispConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v48, v49, 0);
+  v49 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v63 = v62;
+  v50 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v63);
+  allDispConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v49, v50, 0);
   if ( !allSpendQpLb )
     goto LABEL_69;
   UILabel__set_text(allSpendQpLb, (System_String_o *)allDispConfirmInfo, 0);
   allHaveQpLb = this->fields.allHaveQpLb;
-  v51 = LocalizationManager__Get((System_String_o *)StringLiteral_9234/*"NEED_QP"*/, 0);
-  v63.fields._dictionary = v23;
-  v52 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v63);
-  allDispConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v51, v52, 0);
+  v52 = LocalizationManager__Get((System_String_o *)StringLiteral_9238/*"NEED_QP"*/, 0);
+  v64.fields._dictionary = v24;
+  v53 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v64);
+  allDispConfirmInfo = (UnityEngine_GameObject_o *)System_String__Format(v52, v53, 0);
   if ( !allHaveQpLb )
     goto LABEL_69;
   UILabel__set_text(allHaveQpLb, (System_String_o *)allDispConfirmInfo, 0);
@@ -4248,7 +4177,7 @@ void SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
     allRareMsgLb = this->fields.allRareMsgLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10955/*"RARE_MATERIAL_INFO_MSG"*/, 0);
+    allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10961/*"RARE_MATERIAL_INFO_MSG"*/, 0);
     if ( !allRareMsgLb )
       goto LABEL_69;
     UILabel__set_text(allRareMsgLb, (System_String_o *)allDispConfirmInfo, 0);
@@ -4273,7 +4202,7 @@ void SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine(
     allLimitRareLb = this->fields.allLimitRareLb;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10955/*"RARE_MATERIAL_INFO_MSG"*/, 0);
+    allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10961/*"RARE_MATERIAL_INFO_MSG"*/, 0);
     if ( allLimitRareLb )
     {
       UILabel__set_text(allLimitRareLb, (System_String_o *)allDispConfirmInfo, 0);
@@ -4289,13 +4218,13 @@ LABEL_57:
       }
     }
 LABEL_69:
-    sub_1C6BC60(allDispConfirmInfo, v16);
+    sub_1C71608(allDispConfirmInfo, v17);
   }
 LABEL_59:
   allRareConfirmMsgLb = this->fields.allRareConfirmMsgLb;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3736/*"CONFIRM_COMBINE_MSG"*/, 0);
+  allDispConfirmInfo = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3739/*"CONFIRM_COMBINE_MSG"*/, 0);
   if ( !allRareConfirmMsgLb )
     goto LABEL_69;
   UILabel__set_text(allRareConfirmMsgLb, (System_String_o *)allDispConfirmInfo, 0);
@@ -4304,18 +4233,18 @@ LABEL_59:
     goto LABEL_69;
   if ( combineRootComponent->fields.state == 4 )
   {
-    v57 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v58 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
-      v57,
+      v58,
       (Il2CppObject *)this,
-      Method_SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine_b__155_0__,
+      Method_SetRarityDialogControl__SetSvtEqLimitUpConfirmCombine_b__156_0__,
       0);
-    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v57, 0, 0, v58);
+    SetRarityDialogControl__SetClickDlgOkSeAndCallBack(this, 8, v58, 0, 0, v59);
   }
 }
 
 
-void SetRarityDialogControl___SetAllDispConfirmCombine_b__147_0(
+void SetRarityDialogControl___SetAllDispConfirmCombine_b__148_0(
         SetRarityDialogControl_o *this,
         const MethodInfo *method)
 {
@@ -4323,41 +4252,19 @@ void SetRarityDialogControl___SetAllDispConfirmCombine_b__147_0(
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CombineRootComponent__RequestSvtCombine(combineRootComponent, 0);
 }
 
 
-void SetRarityDialogControl___SetConfirmCombine_b__145_0(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetConfirmCombine_b__146_0(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   CombineRootComponent_o *combineRootComponent; // x0
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CombineRootComponent__RequestSvtCombine(combineRootComponent, 0);
-}
-
-
-void SetRarityDialogControl___SetConfirmLvExceed_b__153_0(SetRarityDialogControl_o *this, const MethodInfo *method)
-{
-  CombineRootComponent_o *combineRootComponent; // x0
-
-  combineRootComponent = this->fields.combineRootComponent;
-  if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
-  CombineRootComponent__RequestLvExceed(combineRootComponent, 0);
-}
-
-
-void SetRarityDialogControl___SetConfirmLvExceed_b__153_1(SetRarityDialogControl_o *this, const MethodInfo *method)
-{
-  struct CombineRootComponent_o *combineRootComponent; // x8
-
-  combineRootComponent = this->fields.combineRootComponent;
-  if ( !combineRootComponent || (this = (SetRarityDialogControl_o *)combineRootComponent->fields.lvExceedCtr) == 0 )
-    sub_1C6BC60(this, method);
-  LevelExceedControl__OnClickCheckLvExceed((LevelExceedControl_o *)this, 0);
 }
 
 
@@ -4367,45 +4274,67 @@ void SetRarityDialogControl___SetConfirmLvExceed_b__154_0(SetRarityDialogControl
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CombineRootComponent__RequestLvExceed(combineRootComponent, 0);
 }
 
 
-void SetRarityDialogControl___SetConfirmRarityInfo_b__143_0(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetConfirmLvExceed_b__154_1(SetRarityDialogControl_o *this, const MethodInfo *method)
+{
+  struct CombineRootComponent_o *combineRootComponent; // x8
+
+  combineRootComponent = this->fields.combineRootComponent;
+  if ( !combineRootComponent || (this = (SetRarityDialogControl_o *)combineRootComponent->fields.lvExceedCtr) == 0 )
+    sub_1C71608(this, method);
+  LevelExceedControl__OnClickCheckLvExceed((LevelExceedControl_o *)this, 0);
+}
+
+
+void SetRarityDialogControl___SetConfirmLvExceed_b__155_0(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   CombineRootComponent_o *combineRootComponent; // x0
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
+  CombineRootComponent__RequestLvExceed(combineRootComponent, 0);
+}
+
+
+void SetRarityDialogControl___SetConfirmRarityInfo_b__144_0(SetRarityDialogControl_o *this, const MethodInfo *method)
+{
+  CombineRootComponent_o *combineRootComponent; // x0
+
+  combineRootComponent = this->fields.combineRootComponent;
+  if ( !combineRootComponent )
+    sub_1C71608(0, method);
   CombineRootComponent__RequestSvtCombine(combineRootComponent, 0);
 }
 
 
-void SetRarityDialogControl___SetConfirmSvtEqCombine_b__146_0(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetConfirmSvtEqCombine_b__147_0(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   CombineRootComponent_o *combineRootComponent; // x0
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CombineRootComponent__RequestSvtEqCombine(combineRootComponent, 0);
 }
 
 
-void SetRarityDialogControl___SetExceedMaterialInfo_b__144_0(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetExceedMaterialInfo_b__145_0(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   struct CombineRootComponent_o *combineRootComponent; // x8
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent || (this = (SetRarityDialogControl_o *)combineRootComponent->fields.svtCombineCtr) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   ServantCombineControl__CheckRareSvt((ServantCombineControl_o *)this, 0);
 }
 
 
-void SetRarityDialogControl___SetFriendshipExceedInfo_b__159_0(
+void SetRarityDialogControl___SetFriendshipExceedInfo_b__160_0(
         SetRarityDialogControl_o *this,
         const MethodInfo *method)
 {
@@ -4413,12 +4342,12 @@ void SetRarityDialogControl___SetFriendshipExceedInfo_b__159_0(
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CombineRootComponent__RequestFriendshipExceed(combineRootComponent, 0);
 }
 
 
-void SetRarityDialogControl___SetNpCombineInfo_b__152_0(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetNpCombineInfo_b__153_0(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // [xsp+0h] [xbp-20h]
 
@@ -4435,42 +4364,42 @@ void SetRarityDialogControl___SetNpCombineInfo_b__152_0(SetRarityDialogControl_o
 }
 
 
-void SetRarityDialogControl___SetNpCombineInfo_b__152_1(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetNpCombineInfo_b__153_1(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   CombineRootComponent_o *combineRootComponent; // x0
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CombineRootComponent__RequestTdCombine(combineRootComponent, 0);
 }
 
 
-void SetRarityDialogControl___SetSkillNpCombineInfo_b__150_0(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetSkillNpCombineInfo_b__151_0(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   CombineRootComponent_o *combineRootComponent; // x0
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CombineRootComponent__RequestSkillCombine(combineRootComponent, 0);
 }
 
 
-void SetRarityDialogControl___SetSpecialAscension_b__160_0(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetSpecialAscension_b__161_0(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   struct CombineRootComponent_o *combineRootComponent; // x8
   struct SpecialAscensionControl_o *specialAscensionCtr; // x8
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent || (specialAscensionCtr = combineRootComponent->fields.specialAscensionCtr) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   if ( specialAscensionCtr->fields.pushExeButton )
     specialAscensionCtr->fields.pushExeButton = 0;
 }
 
 
-void SetRarityDialogControl___SetSpecialAscension_b__160_1(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetSpecialAscension_b__161_1(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   __int64 v3; // x1
   CombineRootComponent_o *combineRootComponent; // x0
@@ -4478,16 +4407,16 @@ void SetRarityDialogControl___SetSpecialAscension_b__160_1(SetRarityDialogContro
   System_String_o *v6; // x21
   System_Action_o *v7; // x22
 
-  if ( (byte_4CB02FD & 1) == 0 )
+  if ( (byte_4CC1400 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&CombineRootComponent_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetSpecialAscension_b__160_3__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&StringLiteral_12268/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB02FD = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&CombineRootComponent_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetSpecialAscension_b__161_3__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&StringLiteral_12274/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC1400 = 1;
   }
   if ( !CombineRootComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CombineRootComponent_TypeInfo);
@@ -4500,14 +4429,14 @@ void SetRarityDialogControl___SetSpecialAscension_b__160_1(SetRarityDialogContro
       return;
     }
 LABEL_12:
-    sub_1C6BC60(combineRootComponent, v3);
+    sub_1C71608(combineRootComponent, v3);
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_12268/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/, 0);
-  v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v7, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__160_3__, 0);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_12274/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/, 0);
+  v7 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v7, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__161_3__, 0);
   if ( !Instance )
     goto LABEL_12;
   CommonUI__OpenNotificationDialog(
@@ -4530,7 +4459,7 @@ LABEL_12:
 }
 
 
-void SetRarityDialogControl___SetSpecialAscension_b__160_2(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetSpecialAscension_b__161_2(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   UserServantEntity_o *v3; // x1
   const MethodInfo *v4; // x5
@@ -4540,16 +4469,16 @@ void SetRarityDialogControl___SetSpecialAscension_b__160_2(SetRarityDialogContro
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4CB02FE & 1) == 0 )
+  if ( (byte_4CC1401 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&CombineRootComponent_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_SetRarityDialogControl__SetSpecialAscension_b__160_4__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&StringLiteral_12268/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB02FE = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&CombineRootComponent_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_SetRarityDialogControl__SetSpecialAscension_b__161_4__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&StringLiteral_12274/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC1401 = 1;
   }
   if ( !CombineRootComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CombineRootComponent_TypeInfo);
@@ -4565,14 +4494,14 @@ void SetRarityDialogControl___SetSpecialAscension_b__160_2(SetRarityDialogContro
   }
   else
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_12268/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/, 0);
-    v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v7, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__160_4__, 0);
+    v6 = LocalizationManager__Get((System_String_o *)StringLiteral_12274/*"SPECIAL_ASCENSION_TIME_OVER2_TXT"*/, 0);
+    v7 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v7, (Il2CppObject *)this, Method_SetRarityDialogControl__SetSpecialAscension_b__161_4__, 0);
     if ( !Instance )
-      sub_1C6BC60(v8, v9);
+      sub_1C71608(v8, v9);
     CommonUI__OpenNotificationDialog(
       (CommonUI_o *)Instance,
       (System_String_o *)StringLiteral_1/*""*/,
@@ -4594,7 +4523,7 @@ void SetRarityDialogControl___SetSpecialAscension_b__160_2(SetRarityDialogContro
 }
 
 
-void SetRarityDialogControl___SetSpecialAscension_b__160_3(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetSpecialAscension_b__161_3(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   struct CombineRootComponent_o *combineRootComponent; // x8
   SetRarityDialogControl_o *v3; // x19
@@ -4606,13 +4535,13 @@ void SetRarityDialogControl___SetSpecialAscension_b__160_3(SetRarityDialogContro
         SetRarityDialogControl__OnClickCancel(this, method),
         (this = (SetRarityDialogControl_o *)v3->fields.combineRootComponent) == 0) )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   CombineRootComponent__BackSpecialAscension((CombineRootComponent_o *)this, 0);
 }
 
 
-void SetRarityDialogControl___SetSpecialAscension_b__160_4(SetRarityDialogControl_o *this, const MethodInfo *method)
+void SetRarityDialogControl___SetSpecialAscension_b__161_4(SetRarityDialogControl_o *this, const MethodInfo *method)
 {
   struct CombineRootComponent_o *combineRootComponent; // x8
   SetRarityDialogControl_o *v3; // x19
@@ -4624,13 +4553,13 @@ void SetRarityDialogControl___SetSpecialAscension_b__160_4(SetRarityDialogContro
         SetRarityDialogControl__OnClickCancel(this, method),
         (this = (SetRarityDialogControl_o *)v3->fields.combineRootComponent) == 0) )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   CombineRootComponent__BackSpecialAscension((CombineRootComponent_o *)this, 0);
 }
 
 
-void SetRarityDialogControl___SetSvtEqLimitUpConfirmCombine_b__155_0(
+void SetRarityDialogControl___SetSvtEqLimitUpConfirmCombine_b__156_0(
         SetRarityDialogControl_o *this,
         const MethodInfo *method)
 {
@@ -4638,7 +4567,7 @@ void SetRarityDialogControl___SetSvtEqLimitUpConfirmCombine_b__155_0(
 
   combineRootComponent = this->fields.combineRootComponent;
   if ( !combineRootComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CombineRootComponent__RequestSvtEqCombine(combineRootComponent, 0);
 }
 
@@ -4647,15 +4576,15 @@ void SetRarityDialogControl___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4CB02FF & 1) == 0 )
+  if ( (byte_4CC1402 & 1) == 0 )
   {
-    sub_1C6BA08(&SetRarityDialogControl___c_TypeInfo);
-    byte_4CB02FF = 1;
+    sub_1C713B0(&SetRarityDialogControl___c_TypeInfo);
+    byte_4CC1402 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(SetRarityDialogControl___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(SetRarityDialogControl___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SetRarityDialogControl___c_TypeInfo->static_fields->__9 = (struct SetRarityDialogControl___c_o *)v1;
-  sub_1C6B9AC(SetRarityDialogControl___c_TypeInfo->static_fields, v1);
+  sub_1C71354(SetRarityDialogControl___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -4665,31 +4594,31 @@ void SetRarityDialogControl___c___ctor(SetRarityDialogControl___c_o *this, const
 }
 
 
-void SetRarityDialogControl___c___OnClickDlgOk_b__167_0(SetRarityDialogControl___c_o *this, const MethodInfo *method)
+void SetRarityDialogControl___c___OnClickDlgOk_b__168_0(SetRarityDialogControl___c_o *this, const MethodInfo *method)
 {
   ;
 }
 
 
-bool SetRarityDialogControl___c___SetLimitUpInfo_b__149_1(
+bool SetRarityDialogControl___c___SetLimitUpInfo_b__150_1(
         SetRarityDialogControl___c_o *this,
         UserServantEntity_o *x,
         const MethodInfo *method)
 {
-  return NpCombineControl__CheckConfirm_48868436(x, 0);
+  return NpCombineControl__CheckConfirm_48933100(x, 0);
 }
 
 
-void SetRarityDialogControl___c__DisplayClass149_0___ctor(
-        SetRarityDialogControl___c__DisplayClass149_0_o *this,
+void SetRarityDialogControl___c__DisplayClass150_0___ctor(
+        SetRarityDialogControl___c__DisplayClass150_0_o *this,
         const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
-        SetRarityDialogControl___c__DisplayClass149_0_o *this,
+void SetRarityDialogControl___c__DisplayClass150_0___SetLimitUpInfo_b__0(
+        SetRarityDialogControl___c__DisplayClass150_0_o *this,
         const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
@@ -4726,34 +4655,34 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v34; // [xsp+60h] [xbp-80h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v35; // 0:x0.16
 
-  if ( (byte_4CB0300 & 1) == 0 )
+  if ( (byte_4CC1403 & 1) == 0 )
   {
-    sub_1C6BA08(&CombineLimitUpWarningDialog_ClickDelegate_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_UserServantEntity__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_UserServantEntity__Find__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C6BA08(&System_Predicate_UserServantEntity__TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&Method_SetRarityDialogControl___c__SetLimitUpInfo_b__149_1__);
-    sub_1C6BA08(&Method_SetRarityDialogControl___c__DisplayClass149_0__SetLimitUpInfo_b__2__);
-    sub_1C6BA08(&SetRarityDialogControl___c_TypeInfo);
-    byte_4CB0300 = 1;
+    sub_1C713B0(&CombineLimitUpWarningDialog_ClickDelegate_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_UserServantEntity__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_UserServantEntity__Find__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_UserServantEntity__TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C713B0(&System_Predicate_UserServantEntity__TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&Method_SetRarityDialogControl___c__SetLimitUpInfo_b__150_1__);
+    sub_1C713B0(&Method_SetRarityDialogControl___c__DisplayClass150_0__SetLimitUpInfo_b__2__);
+    sub_1C713B0(&SetRarityDialogControl___c_TypeInfo);
+    byte_4CC1403 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_UserServantEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_UserServantEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_UserServantEntity___ctor__);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4CB002A )
+  if ( !byte_4CC112A )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB002A = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC112A = 1;
   }
   v4 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -4762,12 +4691,12 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
     v4 = NetworkManager_TypeInfo;
   }
   userIdNumber = v4->static_fields->userIdNumber;
-  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_51;
   Instance = (__int64)DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !Instance )
     goto LABEL_51;
   Instance = (__int64)UserServantMaster__getAllList((UserServantMaster_o *)Instance, 0);
@@ -4781,7 +4710,7 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
     do
     {
       if ( v10 >= (unsigned int)v8 )
-        sub_1C6BC68(Instance);
+        sub_1C71610(Instance);
       v11 = *(_QWORD *)(v9 + 32 + 8 * v10);
       if ( v11 )
       {
@@ -4791,7 +4720,7 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
         v33 = v34;
-        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v33, 0);
+        Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v33, 0);
         if ( Instance == userIdNumber )
         {
           Instance = UserServantEntity__IsWithdrawal((UserServantEntity_o *)v11, 0);
@@ -4803,12 +4732,12 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v35.fields.currentCryptoKey = v14;
             *(_QWORD *)&v35.fields.fakeValue = v13;
-            Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v35, 0);
+            Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v35, 0);
             baseData = this->fields.baseData;
             if ( !baseData )
               goto LABEL_51;
             v16 = Instance;
-            Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(baseData->fields.svtId, 0);
+            Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(baseData->fields.svtId, 0);
             if ( v16 == (_DWORD)Instance )
             {
               v17 = *(_OWORD *)(v11 + 32);
@@ -4817,7 +4746,7 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
               if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
               v32 = v34;
-              Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v32, 0);
+              Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v32, 0);
               v18 = this->fields.baseData;
               if ( !v18 )
                 goto LABEL_51;
@@ -4825,7 +4754,7 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
               v20 = Instance;
               *(_OWORD *)&v31.fields.currentCryptoKey = *(_OWORD *)&v18->fields.id.fields.currentCryptoKey;
               *(_OWORD *)&v31.fields.fakeValue = v19;
-              Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v31, 0);
+              Instance = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v31, 0);
               if ( v20 != Instance )
               {
                 if ( !v3 )
@@ -4841,14 +4770,14 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
                   System_Collections_Generic_List_object___AddWithResize(
                     v3,
                     (Il2CppObject *)v11,
-                    *(const MethodInfo_3800974 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+                    *(const MethodInfo_3810718 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v24 = &items->obj.klass + size;
                   v3->fields._size = size + 1;
                   v24[4] = (Il2CppClass *)v11;
-                  Instance = sub_1C6B9AC(v24 + 4, v11);
+                  Instance = sub_1C71354(v24 + 4, v11);
                 }
               }
             }
@@ -4874,32 +4803,32 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
       Instance = (__int64)SetRarityDialogControl___c_TypeInfo;
     }
     v26 = **(Il2CppObject ***)(Instance + 184);
-    v25 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_UserServantEntity__TypeInfo);
-    System_Predicate_object____ctor(v25, v26, Method_SetRarityDialogControl___c__SetLimitUpInfo_b__149_1__, 0);
+    v25 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_UserServantEntity__TypeInfo);
+    System_Predicate_object____ctor(v25, v26, Method_SetRarityDialogControl___c__SetLimitUpInfo_b__150_1__, 0);
     static_fields = SetRarityDialogControl___c_TypeInfo->static_fields;
-    static_fields->__9__149_1 = (struct System_Predicate_UserServantEntity__o *)v25;
-    Instance = sub_1C6B9AC(&static_fields->__9__149_1, v25);
+    static_fields->__9__150_1 = (struct System_Predicate_UserServantEntity__o *)v25;
+    Instance = sub_1C71354(&static_fields->__9__150_1, v25);
   }
   if ( !v3 )
     goto LABEL_51;
   Instance = (__int64)System_Collections_Generic_List_object___Find(
                         v3,
                         (System_Predicate_T__o *)v25,
-                        (const MethodInfo_3800FDC *)Method_System_Collections_Generic_List_UserServantEntity__Find__);
+                        (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_UserServantEntity__Find__);
   if ( Instance )
   {
     _9__2 = this->fields.__9__2;
     combineLimitUpWarningDialog = this->fields.combineLimitUpWarningDialog;
     if ( !_9__2 )
     {
-      _9__2 = (CombineLimitUpWarningDialog_ClickDelegate_o *)sub_1C6BC54(CombineLimitUpWarningDialog_ClickDelegate_TypeInfo);
+      _9__2 = (CombineLimitUpWarningDialog_ClickDelegate_o *)sub_1C715FC(CombineLimitUpWarningDialog_ClickDelegate_TypeInfo);
       CombineLimitUpWarningDialog_ClickDelegate___ctor(
         _9__2,
         (Il2CppObject *)this,
-        Method_SetRarityDialogControl___c__DisplayClass149_0__SetLimitUpInfo_b__2__,
+        Method_SetRarityDialogControl___c__DisplayClass150_0__SetLimitUpInfo_b__2__,
         0);
       this->fields.__9__2 = _9__2;
-      Instance = sub_1C6B9AC(&this->fields.__9__2, _9__2);
+      Instance = sub_1C71354(&this->fields.__9__2, _9__2);
     }
     if ( combineLimitUpWarningDialog )
     {
@@ -4907,7 +4836,7 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__0(
       return;
     }
 LABEL_51:
-    sub_1C6BC60(Instance, v7);
+    sub_1C71608(Instance, v7);
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -4919,8 +4848,8 @@ LABEL_51:
 }
 
 
-void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__2(
-        SetRarityDialogControl___c__DisplayClass149_0_o *this,
+void SetRarityDialogControl___c__DisplayClass150_0___SetLimitUpInfo_b__2(
+        SetRarityDialogControl___c__DisplayClass150_0_o *this,
         bool isDecide,
         const MethodInfo *method)
 {
@@ -4930,25 +4859,25 @@ void SetRarityDialogControl___c__DisplayClass149_0___SetLimitUpInfo_b__2(
   {
     _4__this = this->fields.__4__this;
     if ( !_4__this
-      || (this = (SetRarityDialogControl___c__DisplayClass149_0_o *)_4__this->fields.combineRootComponent) == 0 )
+      || (this = (SetRarityDialogControl___c__DisplayClass150_0_o *)_4__this->fields.combineRootComponent) == 0 )
     {
-      sub_1C6BC60(this, isDecide);
+      sub_1C71608(this, isDecide);
     }
     CombineRootComponent__RequestLimitUp((CombineRootComponent_o *)this, 0);
   }
 }
 
 
-void SetRarityDialogControl___c__DisplayClass151_0___ctor(
-        SetRarityDialogControl___c__DisplayClass151_0_o *this,
+void SetRarityDialogControl___c__DisplayClass152_0___ctor(
+        SetRarityDialogControl___c__DisplayClass152_0_o *this,
         const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-void SetRarityDialogControl___c__DisplayClass151_0___SetAppendSkillCombineInfo_b__0(
-        SetRarityDialogControl___c__DisplayClass151_0_o *this,
+void SetRarityDialogControl___c__DisplayClass152_0___SetAppendSkillCombineInfo_b__0(
+        SetRarityDialogControl___c__DisplayClass152_0_o *this,
         const MethodInfo *method)
 {
   struct SetRarityDialogControl_o *_4__this; // x8
@@ -4956,6 +4885,6 @@ void SetRarityDialogControl___c__DisplayClass151_0___SetAppendSkillCombineInfo_b
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (combineRootComponent = _4__this->fields.combineRootComponent) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   CombineRootComponent__RequestAppendSkillCombine(combineRootComponent, !this->fields.isOpen, 0);
 }

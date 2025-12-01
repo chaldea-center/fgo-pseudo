@@ -2,18 +2,18 @@ void EventSpotCooltimeComponent___ctor(EventSpotCooltimeComponent_o *this, const
 {
   System_Collections_Generic_List_object__o *v3; // x20
 
-  if ( (byte_4CB0C57 & 1) == 0 )
+  if ( (byte_4CC1D5B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SpotCooltimeInfoComponent__TypeInfo);
-    byte_4CB0C57 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SpotCooltimeInfoComponent__TypeInfo);
+    byte_4CC1D5B = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SpotCooltimeInfoComponent__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SpotCooltimeInfoComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent___ctor__);
   this->fields.spotCooltimeList = (struct System_Collections_Generic_List_SpotCooltimeInfoComponent__o *)v3;
-  sub_1C6B9AC(&this->fields.spotCooltimeList, v3);
+  sub_1C71354(&this->fields.spotCooltimeList, v3);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -33,15 +33,15 @@ void EventSpotCooltimeComponent__BeginEventReceiveCooltimeRewardRequest(
   Il2CppObject *Request_object; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CB0C4F & 1) == 0 )
+  if ( (byte_4CC1D53 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_EventSpotCooltimeComponent_Response__);
-    sub_1C6BA08(&Method_NetworkManager_getRequest_EventReceiveCooltimeRewardRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4CB0C4F = 1;
+    sub_1C713B0(&Method_EventSpotCooltimeComponent_Response__);
+    sub_1C713B0(&Method_NetworkManager_getRequest_EventReceiveCooltimeRewardRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4CC1D53 = 1;
   }
-  v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v5,
     (Il2CppObject *)this,
@@ -51,9 +51,9 @@ void EventSpotCooltimeComponent__BeginEventReceiveCooltimeRewardRequest(
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v5,
-                     (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_EventReceiveCooltimeRewardRequest___);
+                     (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_EventReceiveCooltimeRewardRequest___);
   if ( !Request_object )
-    sub_1C6BC60(0, v7);
+    sub_1C71608(0, v7);
   EventReceiveCooltimeRewardRequest__beginRequest((EventReceiveCooltimeRewardRequest_o *)Request_object, eventId, 0);
 }
 
@@ -83,27 +83,27 @@ bool EventSpotCooltimeComponent__CheckServantSpaceShortage(
   struct EventSpotCooltimeComponent___c_StaticFields *static_fields; // x0
   int32_t servantEquipSum[2]; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CB0C56 & 1) == 0 )
+  if ( (byte_4CC1D5A & 1) == 0 )
   {
-    sub_1C6BA08(&ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
-    sub_1C6BA08(&Method_EventSpotCooltimeComponent___c__CheckServantSpaceShortage_b__26_0__);
-    sub_1C6BA08(&EventSpotCooltimeComponent___c_TypeInfo);
-    byte_4CB0C56 = 1;
+    sub_1C713B0(&ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+    sub_1C713B0(&Method_EventSpotCooltimeComponent___c__CheckServantSpaceShortage_b__26_0__);
+    sub_1C713B0(&EventSpotCooltimeComponent___c_TypeInfo);
+    byte_4CC1D5A = 1;
   }
   *(_QWORD *)servantEquipSum = 0;
   if ( !EventSpotCooltimeComponent__HasServantTypeRewards(this, method) )
     return 1;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_19;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___);
+               (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !Instance )
     goto LABEL_19;
   v6 = (UserServantMaster_o *)Instance;
@@ -111,7 +111,7 @@ bool EventSpotCooltimeComponent__CheckServantSpaceShortage(
   UserServantMaster__getCount((UserServantMaster_o *)Instance, &servantEquipSum[1], servantEquipSum, 1, 0);
   if ( UserServantMaster__CheckServantAdd(v6, 1, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( SelfUserGame )
     {
       v8 = (CommonUI_o *)Instance;
@@ -132,7 +132,7 @@ bool EventSpotCooltimeComponent__CheckServantSpaceShortage(
           Instance = EventSpotCooltimeComponent___c_TypeInfo;
         }
         v12 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-        v11 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C6BC54(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
+        v11 = (ServantFrameShortDlgComponent_CallbackFunc_o *)sub_1C715FC(ServantFrameShortDlgComponent_CallbackFunc_TypeInfo);
         ServantFrameShortDlgComponent_CallbackFunc___ctor(
           v11,
           v12,
@@ -140,12 +140,12 @@ bool EventSpotCooltimeComponent__CheckServantSpaceShortage(
           0);
         static_fields = EventSpotCooltimeComponent___c_TypeInfo->static_fields;
         static_fields->__9__26_0 = v11;
-        Instance = (void *)sub_1C6B9AC(&static_fields->__9__26_0, v11);
+        Instance = (void *)sub_1C71354(&static_fields->__9__26_0, v11);
       }
       if ( v8 )
       {
         CommonUI__OpenSvtFrameShortDlg(v8, v9, svtKeep, 0, 1, v11, 2, 0);
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_ServantAssetLoadManager__get_Instance__);
         if ( Instance )
         {
           ServantAssetLoadManager__EndRetryTransition((ServantAssetLoadManager_o *)Instance, 0);
@@ -154,7 +154,7 @@ bool EventSpotCooltimeComponent__CheckServantSpaceShortage(
       }
     }
 LABEL_19:
-    sub_1C6BC60(Instance, v5);
+    sub_1C71608(Instance, v5);
   }
   return v7;
 }
@@ -178,17 +178,17 @@ void EventSpotCooltimeComponent__DestroyObjects(EventSpotCooltimeComponent_o *th
   System_Collections_Generic_List_Enumerator_object__o v16; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v17; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4CB0C52 & 1) == 0 )
+  if ( (byte_4CC1D56 & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
-    byte_4CB0C52 = 1;
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    byte_4CC1D56 = 1;
   }
   memset(&v17, 0, sizeof(v17));
   spotCooltimeInfoPrefab = (UnityEngine_Object_o *)this->fields.spotCooltimeInfoPrefab;
@@ -197,7 +197,7 @@ void EventSpotCooltimeComponent__DestroyObjects(EventSpotCooltimeComponent_o *th
   if ( UnityEngine_Object__op_Inequality(spotCooltimeInfoPrefab, 0, 0) )
   {
     this->fields.spotCooltimeInfoPrefab = 0;
-    sub_1C6B9AC(&this->fields.spotCooltimeInfoPrefab, 0);
+    sub_1C71354(&this->fields.spotCooltimeInfoPrefab, 0);
   }
   spotCooltimeList = (System_Collections_Generic_List_object__o *)this->fields.spotCooltimeList;
   if ( spotCooltimeList )
@@ -205,18 +205,18 @@ void EventSpotCooltimeComponent__DestroyObjects(EventSpotCooltimeComponent_o *th
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v16,
       spotCooltimeList,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
     v17 = v16;
     while ( 1 )
     {
       v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v17,
-             (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
+             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
       if ( !v5 )
         break;
       current = v17.fields._current;
       if ( !v17.fields._current )
-        sub_1C6BC60(v5, v6);
+        sub_1C71608(v5, v6);
       SpotCooltimeInfoComponent__OnDestroyObject((SpotCooltimeInfoComponent_o *)v17.fields._current, v6);
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)current, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -225,15 +225,15 @@ void EventSpotCooltimeComponent__DestroyObjects(EventSpotCooltimeComponent_o *th
       {
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_71659676(gameObject, 0);
+        UnityEngine_Object__Destroy_71724608(gameObject, 0);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v17,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
     v11 = this->fields.spotCooltimeList;
     if ( !v11 )
-      sub_1C6BC60(v9, v10);
+      sub_1C71608(v9, v10);
     size = v11->fields._size;
     v13 = v11->fields._version + 1;
     v11->fields._size = 0;
@@ -243,7 +243,7 @@ void EventSpotCooltimeComponent__DestroyObjects(EventSpotCooltimeComponent_o *th
   }
   if ( this->fields.isEventUILoaded )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AtlasManager__get_Instance__);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
@@ -251,7 +251,7 @@ void EventSpotCooltimeComponent__DestroyObjects(EventSpotCooltimeComponent_o *th
       eventId = this->fields.eventId;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      AtlasManager__ReleaseEventUI_40837680(eventId, 0);
+      AtlasManager__ReleaseEventUI_40880220(eventId, 0);
       this->fields.isEventUILoaded = 0;
     }
   }
@@ -274,13 +274,13 @@ int32_t EventSpotCooltimeComponent__GetReceivableRewardState(
   int32_t v12; // w9
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CB0C53 & 1) == 0 )
+  if ( (byte_4CC1D57 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
-    byte_4CB0C53 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
+    byte_4CC1D57 = 1;
   }
   memset(&v14, 0, sizeof(v14));
   spotCooltimeList = (System_Collections_Generic_List_object__o *)this->fields.spotCooltimeList;
@@ -289,7 +289,7 @@ int32_t EventSpotCooltimeComponent__GetReceivableRewardState(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v14,
       spotCooltimeList,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
     v4 = 0;
     v5 = 0;
     v6 = 1;
@@ -297,11 +297,11 @@ int32_t EventSpotCooltimeComponent__GetReceivableRewardState(
     {
       v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v14,
-             (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
+             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
       if ( !v7 )
         break;
       if ( !v14.fields._current )
-        sub_1C6BC60(v7, v8);
+        sub_1C71608(v7, v8);
       v9 = *(__int64 *)((char *)&v14.fields._current->klass + (unsigned __int64)&qword_D8);
       if ( v9 > 0 )
       {
@@ -319,7 +319,7 @@ int32_t EventSpotCooltimeComponent__GetReceivableRewardState(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v14,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
     v11 = (v5 & 1 | (unsigned __int8)v4) == 0;
     if ( (v6 & 1) == 0 )
     {
@@ -350,13 +350,13 @@ bool EventSpotCooltimeComponent__HasServantTypeRewards(EventSpotCooltimeComponen
   int v8; // w20
   System_Collections_Generic_List_Enumerator_object__o v10; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CB0C55 & 1) == 0 )
+  if ( (byte_4CC1D59 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
-    byte_4CB0C55 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
+    byte_4CC1D59 = 1;
   }
   memset(&v10, 0, sizeof(v10));
   spotCooltimeList = (System_Collections_Generic_List_object__o *)this->fields.spotCooltimeList;
@@ -365,18 +365,18 @@ bool EventSpotCooltimeComponent__HasServantTypeRewards(EventSpotCooltimeComponen
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v10,
       spotCooltimeList,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
     while ( 1 )
     {
       v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v10,
-             (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
+             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
       v6 = v4;
       if ( !v4 )
         break;
       current = v10.fields._current;
       if ( !v10.fields._current )
-        sub_1C6BC60(v4, v5);
+        sub_1C71608(v4, v5);
       if ( SpotCooltimeInfoComponent__IsServantTypeReward((SpotCooltimeInfoComponent_o *)v10.fields._current, v5)
         && *(__int64 *)((char *)&qword_D8 + (_QWORD)current) > 0 )
       {
@@ -388,7 +388,7 @@ bool EventSpotCooltimeComponent__HasServantTypeRewards(EventSpotCooltimeComponen
 LABEL_11:
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v10,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
     LOBYTE(spotCooltimeList) = v6 && v8 == 5;
   }
   return (char)spotCooltimeList;
@@ -404,7 +404,7 @@ void EventSpotCooltimeComponent__Initialize(
   System_Action_o *v7; // x22
   __int64 v8; // x0
   __int64 v9; // x1
-  Il2CppObject *Object_object__51495936; // x0
+  Il2CppObject *Object_object__51560868; // x0
   struct SpotCooltimeRewardDialog_o **p_rewardDialog; // x20
   UnityEngine_Object_o *rewardDialog; // x22
   Il2CppObject *v13; // x21
@@ -413,43 +413,43 @@ void EventSpotCooltimeComponent__Initialize(
   UnityEngine_GameObject_o *v16; // x19
   Il2CppObject *Component_object; // x1
 
-  if ( (byte_4CB0C4D & 1) == 0 )
+  if ( (byte_4CC1D51 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&Method_EventSpotCooltimeComponent__Initialize_b__16_0__);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SpotCooltimeRewardDialog___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_13004/*"SpotCooltimeRewardDialog"*/);
-    sub_1C6BA08(&StringLiteral_8910/*"MapGimmickEffect_SpotCooltimeInfo"*/);
-    byte_4CB0C4D = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_AssetData_GetObject_GameObject____78636968);
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&Method_EventSpotCooltimeComponent__Initialize_b__16_0__);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SpotCooltimeRewardDialog___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_13010/*"SpotCooltimeRewardDialog"*/);
+    sub_1C713B0(&StringLiteral_8914/*"MapGimmickEffect_SpotCooltimeInfo"*/);
+    byte_4CC1D51 = 1;
   }
   this->fields.eventId = eventId;
-  v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_EventSpotCooltimeComponent__Initialize_b__16_0__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadEventUI_40837508(eventId, v7, 1, 0);
+  AtlasManager__LoadEventUI_40880048(eventId, v7, 1, 0);
   if ( !assetData )
     goto LABEL_21;
-  Object_object__51495936 = AssetData__GetObject_object__51495936(
+  Object_object__51560868 = AssetData__GetObject_object__51560868(
                               assetData,
-                              (System_String_o *)StringLiteral_8910/*"MapGimmickEffect_SpotCooltimeInfo"*/,
-                              (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
-  this->fields.spotCooltimeInfoPrefab = (struct UnityEngine_GameObject_o *)Object_object__51495936;
-  sub_1C6B9AC(&this->fields.spotCooltimeInfoPrefab, Object_object__51495936);
+                              (System_String_o *)StringLiteral_8914/*"MapGimmickEffect_SpotCooltimeInfo"*/,
+                              (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
+  this->fields.spotCooltimeInfoPrefab = (struct UnityEngine_GameObject_o *)Object_object__51560868;
+  sub_1C71354(&this->fields.spotCooltimeInfoPrefab, Object_object__51560868);
   p_rewardDialog = &this->fields.rewardDialog;
   rewardDialog = (UnityEngine_Object_o *)this->fields.rewardDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(rewardDialog, 0, 0) )
   {
-    v13 = AssetData__GetObject_object__51495936(
+    v13 = AssetData__GetObject_object__51560868(
             assetData,
-            (System_String_o *)StringLiteral_13004/*"SpotCooltimeRewardDialog"*/,
-            (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+            (System_String_o *)StringLiteral_13010/*"SpotCooltimeRewardDialog"*/,
+            (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v13, 0, 0) )
@@ -458,20 +458,20 @@ void EventSpotCooltimeComponent__Initialize(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v14 = UnityEngine_Object__Instantiate_object_(
               v13,
-              (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+              (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       dialogRoot = this->fields.dialogRoot;
       v16 = (UnityEngine_GameObject_o *)v14;
-      GameObjectExtensions__SetParent_36361856((UnityEngine_GameObject_o *)v14, dialogRoot, 0);
-      if ( !byte_4CAFC09 )
+      GameObjectExtensions__SetParent_36395692((UnityEngine_GameObject_o *)v14, dialogRoot, 0);
+      if ( !byte_4CC0D09 )
       {
-        sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-        byte_4CAFC09 = 1;
+        sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+        byte_4CC0D09 = 1;
       }
       GameObjectExtensions__SetPosition(v16, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-      if ( !byte_4CAFC0E )
+      if ( !byte_4CC0D0E )
       {
-        sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-        byte_4CAFC0E = 1;
+        sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+        byte_4CC0D0E = 1;
       }
       GameObjectExtensions__SetLocalScale(v16, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
       if ( v16 )
@@ -479,13 +479,13 @@ void EventSpotCooltimeComponent__Initialize(
         UnityEngine_GameObject__SetActive(v16, 0, 0);
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              v16,
-                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SpotCooltimeRewardDialog___);
+                             (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SpotCooltimeRewardDialog___);
         *p_rewardDialog = (struct SpotCooltimeRewardDialog_o *)Component_object;
-        sub_1C6B9AC(p_rewardDialog, Component_object);
+        sub_1C71354(p_rewardDialog, Component_object);
         return;
       }
 LABEL_21:
-      sub_1C6BC60(v8, v9);
+      sub_1C71608(v8, v9);
     }
   }
 }
@@ -497,29 +497,29 @@ bool EventSpotCooltimeComponent__IsActiveEventSpotCooltime(int32_t eventId, cons
   __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB0C4C & 1) == 0 )
+  if ( (byte_4CC1D50 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_EventDetailMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    byte_4CB0C4C = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_EventDetailMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    byte_4CC1D50 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_EventDetailMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_EventDetailMaster___);
   if ( !Master_object )
     goto LABEL_11;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           eventId,
-          (const MethodInfo_33F9128 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+          (const MethodInfo_3408ECC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
     return 0;
   Master_object = entity;
   if ( !entity )
 LABEL_11:
-    sub_1C6BC60(Master_object, v4);
+    sub_1C71608(Master_object, v4);
   return EventDetailEntity__IsSpotCooltime((EventDetailEntity_o *)entity, 0);
 }
 
@@ -532,10 +532,10 @@ bool EventSpotCooltimeComponent__IsActive_SpotCooltimeRewardDialog(
   __int64 v4; // x1
   BaseDialog_o *v5; // x0
 
-  if ( (byte_4CB0C54 & 1) == 0 )
+  if ( (byte_4CC1D58 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB0C54 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC1D58 = 1;
   }
   rewardDialog = (UnityEngine_Object_o *)this->fields.rewardDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -544,7 +544,7 @@ bool EventSpotCooltimeComponent__IsActive_SpotCooltimeRewardDialog(
     return 0;
   v5 = (BaseDialog_o *)this->fields.rewardDialog;
   if ( !v5 )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   return BaseDialog__get_IsBusy(v5, 0);
 }
 
@@ -558,7 +558,7 @@ void EventSpotCooltimeComponent__ReceiveCooltimeReward(
   const MethodInfo *v6; // x2
 
   this->fields.onRewardRequestFinishedCallback = reqeustFinishCallback;
-  sub_1C6B9AC(&this->fields.onRewardRequestFinishedCallback, reqeustFinishCallback);
+  sub_1C71354(&this->fields.onRewardRequestFinishedCallback, reqeustFinishCallback);
   EventSpotCooltimeComponent__BeginEventReceiveCooltimeRewardRequest(this, eventId, v6);
 }
 
@@ -586,35 +586,35 @@ void EventSpotCooltimeComponent__Response(
   Il2CppObject *v20; // x24
   struct EventSpotCooltimeComponent___c_StaticFields *static_fields; // x0
 
-  if ( (byte_4CB0C50 & 1) == 0 )
+  if ( (byte_4CC1D54 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_EventSpotCooltimeComponent_Response__);
-    sub_1C6BA08(&Method_JsonManager_DeserializeArray_EventSpotCooltimeComponent_RewardResponseData___);
-    sub_1C6BA08(&JsonManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_EventSpotCooltimeComponent___c__Response_b__20_0__);
-    sub_1C6BA08(&EventSpotCooltimeComponent___c_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16866/*"ar192"*/);
-    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
-    sub_1C6BA08(&StringLiteral_15801/*"["*/);
-    sub_1C6BA08(&StringLiteral_16051/*"]"*/);
-    byte_4CB0C50 = 1;
+    sub_1C713B0(&Method_ActionExtensions_Call_bool___);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_EventSpotCooltimeComponent_Response__);
+    sub_1C713B0(&Method_JsonManager_DeserializeArray_EventSpotCooltimeComponent_RewardResponseData___);
+    sub_1C713B0(&JsonManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_EventSpotCooltimeComponent___c__Response_b__20_0__);
+    sub_1C713B0(&EventSpotCooltimeComponent___c_TypeInfo);
+    sub_1C713B0(&StringLiteral_16873/*"ar192"*/);
+    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
+    sub_1C713B0(&StringLiteral_15808/*"["*/);
+    sub_1C713B0(&StringLiteral_16058/*"]"*/);
+    byte_4CC1D54 = 1;
   }
-  v5 = System_String__op_Equality(result, (System_String_o *)StringLiteral_22301/*"ng"*/, 0);
+  v5 = System_String__op_Equality(result, (System_String_o *)StringLiteral_22316/*"ng"*/, 0);
   if ( !v5 )
   {
-    v6 = (Il2CppObject *)System_String__Concat_64005056(
-                           (System_String_o *)StringLiteral_15801/*"["*/,
+    v6 = (Il2CppObject *)System_String__Concat_64069988(
+                           (System_String_o *)StringLiteral_15808/*"["*/,
                            result,
-                           (System_String_o *)StringLiteral_16051/*"]"*/,
+                           (System_String_o *)StringLiteral_16058/*"]"*/,
                            0);
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v7 = (Il2CppObject ***)JsonManager__DeserializeArray_object_(
                              v6,
-                             (const MethodInfo_31AB018 *)Method_JsonManager_DeserializeArray_EventSpotCooltimeComponent_RewardResponseData___);
+                             (const MethodInfo_31BADBC *)Method_JsonManager_DeserializeArray_EventSpotCooltimeComponent_RewardResponseData___);
     if ( !v7 )
       goto LABEL_25;
     v9 = v7;
@@ -630,9 +630,9 @@ void EventSpotCooltimeComponent__Response(
         goto LABEL_25;
       v12 = Method_EventSpotCooltimeComponent_Response__;
       if ( (*((_BYTE *)Method_EventSpotCooltimeComponent_Response__ + 83) & 2) != 0 )
-        v12 = (_QWORD *)sub_1C6BA20(Method_EventSpotCooltimeComponent_Response__);
-      v13 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v12, v12[4]);
-      v7 = (Il2CppObject ***)OverwriteAssetSoundName__PlaySe(v13, (System_String_o *)StringLiteral_16866/*"ar192"*/, 0, 0);
+        v12 = (_QWORD *)sub_1C713C8(Method_EventSpotCooltimeComponent_Response__);
+      v13 = (System_Reflection_MethodBase_o *)sub_1C71394(v12, v12[4]);
+      v7 = (Il2CppObject ***)OverwriteAssetSoundName__PlaySe(v13, (System_String_o *)StringLiteral_16873/*"ar192"*/, 0, 0);
       if ( *((_DWORD *)v9 + 6) )
       {
         v16 = v9[4];
@@ -655,28 +655,28 @@ void EventSpotCooltimeComponent__Response(
             v7 = (Il2CppObject ***)EventSpotCooltimeComponent___c_TypeInfo;
           }
           v20 = *v7[23];
-          v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+          v19 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
           System_Action___ctor(v19, v20, Method_EventSpotCooltimeComponent___c__Response_b__20_0__, 0);
           static_fields = EventSpotCooltimeComponent___c_TypeInfo->static_fields;
           static_fields->__9__20_0 = v19;
-          v7 = (Il2CppObject ***)sub_1C6B9AC(&static_fields->__9__20_0, v19);
+          v7 = (Il2CppObject ***)sub_1C71354(&static_fields->__9__20_0, v19);
         }
         if ( !v17 )
 LABEL_28:
-          sub_1C6BC60(v7, v14);
+          sub_1C71608(v7, v14);
         SpotCooltimeRewardDialog__Open(v17, v18, v19, v15);
 LABEL_25:
         EventSpotCooltimeComponent__UpdateSpotInfo(this, v8);
         goto LABEL_26;
       }
     }
-    sub_1C6BC68(v7);
+    sub_1C71610(v7);
   }
 LABEL_26:
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.onRewardRequestFinishedCallback,
     !v5,
-    (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_3095C18 *)Method_ActionExtensions_Call_bool___);
 }
 
 
@@ -699,13 +699,13 @@ void EventSpotCooltimeComponent__SetSpot(
   intptr_t v17; // x8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB0C4E & 1) == 0 )
+  if ( (byte_4CC1D52 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SpotCooltimeInfoComponent___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__Add__);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB0C4E = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SpotCooltimeInfoComponent___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__Add__);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC1D52 = 1;
   }
   if ( userCooltimeRewardEntity )
   {
@@ -718,8 +718,8 @@ void EventSpotCooltimeComponent__SetSpot(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v8 = UnityEngine_Object__Instantiate_object_(
              spotCooltimeInfoPrefab,
-             (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
-      GameObjectExtensions__SetParent_36361856((UnityEngine_GameObject_o *)v8, this->fields.spotCooltimeRoot, 0);
+             (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+      GameObjectExtensions__SetParent_36395692((UnityEngine_GameObject_o *)v8, this->fields.spotCooltimeRoot, 0);
       if ( !targetSpot )
         goto LABEL_21;
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)targetSpot, 0);
@@ -733,15 +733,15 @@ void EventSpotCooltimeComponent__SetSpot(
       if ( !v8 )
         goto LABEL_21;
       gameObject = UnityEngine_GameObject__get_gameObject((UnityEngine_GameObject_o *)v8, 0);
-      if ( !byte_4CAFC0E )
+      if ( !byte_4CC0D0E )
       {
-        sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-        byte_4CAFC0E = 1;
+        sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+        byte_4CC0D0E = 1;
       }
       GameObjectExtensions__SetLocalScale(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
       transform = (UnityEngine_Transform_o *)UnityEngine_GameObject__GetComponent_object_(
                                                (UnityEngine_GameObject_o *)v8,
-                                               (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SpotCooltimeInfoComponent___);
+                                               (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SpotCooltimeInfoComponent___);
       if ( !transform
         || (v13 = (Il2CppObject *)transform,
             SpotCooltimeInfoComponent__Setup(
@@ -756,7 +756,7 @@ void EventSpotCooltimeComponent__SetSpot(
             !m_CachedPtr) )
       {
 LABEL_21:
-        sub_1C6BC60(transform, v10);
+        sub_1C71608(transform, v10);
       }
       klass_low = SLODWORD(transform[1].klass);
       if ( (unsigned int)klass_low >= *(_DWORD *)(m_CachedPtr + 24) )
@@ -764,14 +764,14 @@ LABEL_21:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)transform,
           v13,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
       }
       else
       {
         v17 = m_CachedPtr + 8 * klass_low;
         LODWORD(transform[1].klass) = klass_low + 1;
         *(_QWORD *)(v17 + 32) = v13;
-        sub_1C6B9AC(v17 + 32, v13);
+        sub_1C71354(v17 + 32, v13);
       }
     }
   }
@@ -784,13 +784,13 @@ void EventSpotCooltimeComponent__UpdateSpotInfo(EventSpotCooltimeComponent_o *th
   const MethodInfo *v4; // x1
   System_Collections_Generic_List_Enumerator_object__o v5; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CB0C51 & 1) == 0 )
+  if ( (byte_4CC1D55 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
-    byte_4CB0C51 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
+    byte_4CC1D55 = 1;
   }
   memset(&v5, 0, sizeof(v5));
   spotCooltimeList = (System_Collections_Generic_List_object__o *)this->fields.spotCooltimeList;
@@ -799,18 +799,18 @@ void EventSpotCooltimeComponent__UpdateSpotInfo(EventSpotCooltimeComponent_o *th
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v5,
       spotCooltimeList,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SpotCooltimeInfoComponent__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v5,
-              (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__) )
+              (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__MoveNext__) )
     {
       if ( !v5.fields._current )
-        sub_1C6BC60(0, v4);
+        sub_1C71608(0, v4);
       SpotCooltimeInfoComponent__UpdateUserData((SpotCooltimeInfoComponent_o *)v5.fields._current, v4);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v5,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SpotCooltimeInfoComponent__Dispose__);
   }
 }
 
@@ -833,15 +833,15 @@ void EventSpotCooltimeComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4CB0C58 & 1) == 0 )
+  if ( (byte_4CC1D5C & 1) == 0 )
   {
-    sub_1C6BA08(&EventSpotCooltimeComponent___c_TypeInfo);
-    byte_4CB0C58 = 1;
+    sub_1C713B0(&EventSpotCooltimeComponent___c_TypeInfo);
+    byte_4CC1D5C = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(EventSpotCooltimeComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(EventSpotCooltimeComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventSpotCooltimeComponent___c_TypeInfo->static_fields->__9 = (struct EventSpotCooltimeComponent___c_o *)v1;
-  sub_1C6B9AC(EventSpotCooltimeComponent___c_TypeInfo->static_fields, v1);
+  sub_1C71354(EventSpotCooltimeComponent___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -862,20 +862,20 @@ void EventSpotCooltimeComponent___c___CheckServantSpaceShortage_b__26_0(
   Il2CppObject *Instance; // x19
   System_Action_o *v8; // x21
 
-  if ( (byte_4CB0C59 & 1) == 0 )
+  if ( (byte_4CC1D5D & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_EventSpotCooltimeComponent___c__DisplayClass26_0__CheckServantSpaceShortage_b__1__);
-    sub_1C6BA08(&EventSpotCooltimeComponent___c__DisplayClass26_0_TypeInfo);
-    byte_4CB0C59 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_EventSpotCooltimeComponent___c__DisplayClass26_0__CheckServantSpaceShortage_b__1__);
+    sub_1C713B0(&EventSpotCooltimeComponent___c__DisplayClass26_0_TypeInfo);
+    byte_4CC1D5D = 1;
   }
-  v4 = sub_1C6BC54(EventSpotCooltimeComponent___c__DisplayClass26_0_TypeInfo);
+  v4 = sub_1C715FC(EventSpotCooltimeComponent___c__DisplayClass26_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v4, 0);
   if ( !v4
     || (*(_DWORD *)(v4 + 16) = result,
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
-        v8 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__),
+        v8 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo),
         System_Action___ctor(
           v8,
           (Il2CppObject *)v4,
@@ -883,7 +883,7 @@ void EventSpotCooltimeComponent___c___CheckServantSpaceShortage_b__26_0(
           0),
         !Instance) )
   {
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   }
   CommonUI__CloseSvtFrameShortDlg((CommonUI_o *)Instance, v8, 0);
 }
@@ -917,30 +917,30 @@ void EventSpotCooltimeComponent___c__DisplayClass26_0___CheckServantSpaceShortag
   int32_t v8; // w1
   Il2CppObject *v9; // x3
 
-  if ( (byte_4CB0C5A & 1) == 0 )
+  if ( (byte_4CC1D5E & 1) == 0 )
   {
-    sub_1C6BA08(&SceneJumpInfo_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C6BA08(&StringLiteral_12691/*"SellServant"*/);
-    sub_1C6BA08(&StringLiteral_12727/*"ServantCombine"*/);
-    byte_4CB0C5A = 1;
+    sub_1C713B0(&SceneJumpInfo_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C713B0(&StringLiteral_12697/*"SellServant"*/);
+    sub_1C713B0(&StringLiteral_12733/*"ServantCombine"*/);
+    byte_4CC1D5E = 1;
   }
   result = this->fields.result;
   switch ( result )
   {
     case 2:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C6BC54(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_41713068(v5, (System_String_o *)StringLiteral_12691/*"SellServant"*/, 0, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1C715FC(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_41756228(v5, (System_String_o *)StringLiteral_12697/*"SellServant"*/, 0, 0);
       if ( Instance )
       {
         v8 = 22;
         goto LABEL_10;
       }
 LABEL_15:
-      sub_1C6BC60(v6, v7);
+      sub_1C71608(v6, v7);
     case 1:
-      v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v6 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
       if ( v6 )
       {
         v8 = 71;
@@ -949,9 +949,9 @@ LABEL_15:
       }
       goto LABEL_15;
     case 0:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-      v5 = (SceneJumpInfo_o *)sub_1C6BC54(SceneJumpInfo_TypeInfo);
-      SceneJumpInfo___ctor_41712980(v5, (System_String_o *)StringLiteral_12727/*"ServantCombine"*/, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+      v5 = (SceneJumpInfo_o *)sub_1C715FC(SceneJumpInfo_TypeInfo);
+      SceneJumpInfo___ctor_41756140(v5, (System_String_o *)StringLiteral_12733/*"ServantCombine"*/, 0);
       if ( Instance )
       {
         v8 = 32;

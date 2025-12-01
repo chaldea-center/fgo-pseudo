@@ -1,6 +1,6 @@
 void DebugAttackCardSelectCellComponent___ctor(DebugAttackCardSelectCellComponent_o *this, const MethodInfo *method)
 {
-  DebugBuffSelectCellComponent___ctor((DebugBuffSelectCellComponent_o *)this, 0);
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
@@ -12,17 +12,22 @@ void DebugAttackCardSelectCellComponent__Set(
         const MethodInfo *method)
 {
   System_Action_T1__T2__T3__T4__o *v9; // x23
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  const MethodInfo *v10; // x6
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
-  if ( (byte_4CB77C7 & 1) == 0 )
+  if ( (byte_4CC89C4 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_int__string__string__int__TypeInfo);
-    sub_1C6BA08(&Method_DebugAttackCardSelectCellComponent_TapCallback__);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB77C7 = 1;
+    sub_1C713B0(&System_Action_int__string__string__int__TypeInfo);
+    sub_1C713B0(&Method_DebugAttackCardSelectCellComponent_TapCallback__);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC89C4 = 1;
   }
-  v9 = (System_Action_T1__T2__T3__T4__o *)sub_1C6BC54(System_Action_int__string__string__int__TypeInfo);
+  v9 = (System_Action_T1__T2__T3__T4__o *)sub_1C715FC(System_Action_int__string__string__int__TypeInfo);
   System_Action_int__object__object__int____ctor(
     v9,
     (Il2CppObject *)this,
@@ -35,9 +40,17 @@ void DebugAttackCardSelectCellComponent__Set(
     (System_String_o *)StringLiteral_1/*""*/,
     0,
     (System_Action_int__string__string__int__o *)v9,
-    0);
+    v10);
   this->fields.actionCallback = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.actionCallback, (int32_t)callback, v10, v11);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.actionCallback,
+    (int32_t)callback,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
 }
 
 

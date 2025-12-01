@@ -3,29 +3,37 @@ void NGUIDebug___cctor(const MethodInfo *method)
   System_Collections_Generic_List_object__o *v1; // x19
   struct NGUIDebug_StaticFields *static_fields; // x0
   int32_t v3; // w2
-  const MethodInfo *v4; // x3
-  struct NGUIDebug_StaticFields *v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
+  struct NGUIDebug_StaticFields *v9; // x0
+  int32_t v10; // w2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
 
-  if ( (byte_4CBAA86 & 1) == 0 )
+  if ( (byte_4CCBBDF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C6BA08(&NGUIDebug_TypeInfo);
-    byte_4CBAA86 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C713B0(&NGUIDebug_TypeInfo);
+    byte_4CCBBDF = 1;
   }
   NGUIDebug_TypeInfo->static_fields->mRayDebug = 0;
-  v1 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_string__TypeInfo);
+  v1 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_string__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v1,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_string___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_string___ctor__);
   static_fields = NGUIDebug_TypeInfo->static_fields;
   static_fields->mLines = (struct System_Collections_Generic_List_string__o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->mLines, (int32_t)v1, v3, v4);
-  v5 = NGUIDebug_TypeInfo->static_fields;
-  v5->mInstance = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v5->mInstance, 0, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->mLines, (int32_t)v1, v3, v4, v5, v6, v7, v8);
+  v9 = NGUIDebug_TypeInfo->static_fields;
+  v9->mInstance = 0;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v9->mInstance, 0, v10, v11, v12, v13, v14, v15);
 }
 
 
@@ -43,11 +51,11 @@ void NGUIDebug__Clear(const MethodInfo *method)
   int32_t size; // w2
   int v5; // w9
 
-  if ( (byte_4CBAA83 & 1) == 0 )
+  if ( (byte_4CCBBDC & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Clear__);
-    sub_1C6BA08(&NGUIDebug_TypeInfo);
-    byte_4CBAA83 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__Clear__);
+    sub_1C713B0(&NGUIDebug_TypeInfo);
+    byte_4CCBBDC = 1;
   }
   v2 = NGUIDebug_TypeInfo;
   if ( !NGUIDebug_TypeInfo->_2.cctor_finished )
@@ -57,7 +65,7 @@ void NGUIDebug__Clear(const MethodInfo *method)
   }
   mLines = v2->static_fields->mLines;
   if ( !mLines )
-    sub_1C6BC60(v2, v1);
+    sub_1C71608(v2, v1);
   size = mLines->fields._size;
   v5 = mLines->fields._version + 1;
   mLines->fields._size = 0;
@@ -76,19 +84,23 @@ void NGUIDebug__CreateInstance(const MethodInfo *method)
   __int64 v5; // x1
   Il2CppObject *v6; // x0
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  NGUIDebug_c *v9; // x8
-  Il2CppObject *v10; // x20
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  NGUIDebug_c *v13; // x8
+  Il2CppObject *v14; // x20
   struct NGUIDebug_StaticFields *static_fields; // x0
 
-  if ( (byte_4CBAA80 & 1) == 0 )
+  if ( (byte_4CCBBD9 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_AddComponent_NGUIDebug___);
-    sub_1C6BA08(&UnityEngine_GameObject_TypeInfo);
-    sub_1C6BA08(&NGUIDebug_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16271/*"_NGUI Debug"*/);
-    byte_4CBAA80 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_AddComponent_NGUIDebug___);
+    sub_1C713B0(&UnityEngine_GameObject_TypeInfo);
+    sub_1C713B0(&NGUIDebug_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_16278/*"_NGUI Debug"*/);
+    byte_4CCBBD9 = 1;
   }
   v1 = NGUIDebug_TypeInfo;
   if ( !NGUIDebug_TypeInfo->_2.cctor_finished )
@@ -101,23 +113,23 @@ void NGUIDebug__CreateInstance(const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(mInstance, 0, 0) )
   {
-    v3 = (UnityEngine_GameObject_o *)sub_1C6BC54(UnityEngine_GameObject_TypeInfo);
-    UnityEngine_GameObject___ctor(v3, (System_String_o *)StringLiteral_16271/*"_NGUI Debug"*/, 0);
+    v3 = (UnityEngine_GameObject_o *)sub_1C715FC(UnityEngine_GameObject_TypeInfo);
+    UnityEngine_GameObject___ctor(v3, (System_String_o *)StringLiteral_16278/*"_NGUI Debug"*/, 0);
     if ( !v3 )
-      sub_1C6BC60(v4, v5);
+      sub_1C71608(v4, v5);
     v6 = UnityEngine_GameObject__AddComponent_object_(
            v3,
-           (const MethodInfo_3193044 *)Method_UnityEngine_GameObject_AddComponent_NGUIDebug___);
-    v9 = NGUIDebug_TypeInfo;
-    v10 = v6;
+           (const MethodInfo_31A2DE8 *)Method_UnityEngine_GameObject_AddComponent_NGUIDebug___);
+    v13 = NGUIDebug_TypeInfo;
+    v14 = v6;
     if ( !NGUIDebug_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NGUIDebug_TypeInfo);
-      v9 = NGUIDebug_TypeInfo;
+      v13 = NGUIDebug_TypeInfo;
     }
-    static_fields = v9->static_fields;
-    static_fields->mInstance = (struct NGUIDebug_o *)v10;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->mInstance, (int32_t)v10, v7, v8);
+    static_fields = v13->static_fields;
+    static_fields->mInstance = (struct NGUIDebug_o *)v14;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->mInstance, (int32_t)v14, v7, v8, v9, v10, v11, v12);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     UnityEngine_Object__DontDestroyOnLoad((UnityEngine_Object_o *)v3, 0);
@@ -149,10 +161,10 @@ void NGUIDebug__DrawBounds(UnityEngine_Bounds_o *b, const MethodInfo *method)
   UnityEngine_Vector3_o v22; // 0:s3.4,4:s4.4,8:s5.4
   UnityEngine_Vector3_o v23; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_4CBAA84 & 1) == 0 )
+  if ( (byte_4CCBBDD & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Debug_TypeInfo);
-    byte_4CBAA84 = 1;
+    sub_1C713B0(&UnityEngine_Debug_TypeInfo);
+    byte_4CCBBDD = 1;
   }
   x = b->fields.m_Center.fields.x;
   y = b->fields.m_Center.fields.y;
@@ -213,12 +225,12 @@ void NGUIDebug__Log(System_Object_array *objs, const MethodInfo *method)
   System_String_o *v6; // x2
 
   v2 = objs;
-  if ( (byte_4CBAA82 & 1) == 0 )
+  if ( (byte_4CCBBDB & 1) == 0 )
   {
-    sub_1C6BA08(&NGUIDebug_TypeInfo);
-    sub_1C6BA08(&StringLiteral_809/*", "*/);
-    objs = (System_Object_array *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CBAA82 = 1;
+    sub_1C713B0(&NGUIDebug_TypeInfo);
+    sub_1C713B0(&StringLiteral_809/*", "*/);
+    objs = (System_Object_array *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CCBBDB = 1;
   }
   if ( !v2 )
     goto LABEL_16;
@@ -230,7 +242,7 @@ void NGUIDebug__Log(System_Object_array *objs, const MethodInfo *method)
     while ( 1 )
     {
       if ( v5 >= (unsigned int)max_length )
-        sub_1C6BC68(objs);
+        sub_1C71610(objs);
       objs = (System_Object_array *)v2->m_Items[v5];
       if ( !objs )
         break;
@@ -238,9 +250,9 @@ void NGUIDebug__Log(System_Object_array *objs, const MethodInfo *method)
                                 objs,
                                 objs->obj.klass->vtable[3].method);
       if ( v5 )
-        objs = (System_Object_array *)System_String__Concat_64005056(v4, (System_String_o *)StringLiteral_809/*", "*/, v6, 0);
+        objs = (System_Object_array *)System_String__Concat_64069988(v4, (System_String_o *)StringLiteral_809/*", "*/, v6, 0);
       else
-        objs = (System_Object_array *)System_String__Concat_63966792(v4, v6, 0);
+        objs = (System_Object_array *)System_String__Concat_64031724(v4, v6, 0);
       max_length = v2->max_length;
       ++v5;
       v4 = (System_String_o *)objs;
@@ -248,7 +260,7 @@ void NGUIDebug__Log(System_Object_array *objs, const MethodInfo *method)
         goto LABEL_12;
     }
 LABEL_16:
-    sub_1C6BC60(objs, method);
+    sub_1C71608(objs, method);
   }
 LABEL_12:
   if ( !NGUIDebug_TypeInfo->_2.cctor_finished )
@@ -261,43 +273,47 @@ void NGUIDebug__LogString(System_String_o *text, const MethodInfo *method)
 {
   __int64 v3; // x1
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  NGUIDebug_c *v6; // x0
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  NGUIDebug_c *v10; // x0
   System_Collections_Generic_List_object__o *mLines; // x8
   const char *name; // x8
-  _QWORD *v9; // x9
+  _QWORD *v13; // x9
   __int64 namespaze_low; // x10
-  const char *v11; // x8
-  const MethodInfo *v12; // x0
+  const char *v15; // x8
+  const MethodInfo *v16; // x0
 
-  if ( (byte_4CBAA81 & 1) == 0 )
+  if ( (byte_4CCBBDA & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Debug_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__RemoveAt__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C6BA08(&NGUIDebug_TypeInfo);
-    byte_4CBAA81 = 1;
+    sub_1C713B0(&UnityEngine_Application_TypeInfo);
+    sub_1C713B0(&UnityEngine_Debug_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__RemoveAt__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C713B0(&NGUIDebug_TypeInfo);
+    byte_4CCBBDA = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
   if ( UnityEngine_Application__get_isPlaying(0) )
   {
-    v6 = NGUIDebug_TypeInfo;
+    v10 = NGUIDebug_TypeInfo;
     if ( !NGUIDebug_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(NGUIDebug_TypeInfo);
-      v6 = NGUIDebug_TypeInfo;
+      v10 = NGUIDebug_TypeInfo;
     }
-    mLines = (System_Collections_Generic_List_object__o *)v6->static_fields->mLines;
+    mLines = (System_Collections_Generic_List_object__o *)v10->static_fields->mLines;
     if ( mLines )
     {
       if ( mLines->fields._size >= 21 )
       {
-        if ( !v6->_2.cctor_finished )
+        if ( !v10->_2.cctor_finished )
         {
-          j_il2cpp_runtime_class_init_0(v6);
+          j_il2cpp_runtime_class_init_0(v10);
           mLines = (System_Collections_Generic_List_object__o *)NGUIDebug_TypeInfo->static_fields->mLines;
           if ( !mLines )
             goto LABEL_24;
@@ -305,44 +321,44 @@ void NGUIDebug__LogString(System_String_o *text, const MethodInfo *method)
         System_Collections_Generic_List_object___RemoveAt(
           mLines,
           0,
-          (const MethodInfo_3802148 *)Method_System_Collections_Generic_List_string__RemoveAt__);
-        v6 = NGUIDebug_TypeInfo;
+          (const MethodInfo_3811EEC *)Method_System_Collections_Generic_List_string__RemoveAt__);
+        v10 = NGUIDebug_TypeInfo;
       }
-      if ( !v6->_2.cctor_finished )
+      if ( !v10->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v6);
-        v6 = NGUIDebug_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v10);
+        v10 = NGUIDebug_TypeInfo;
       }
-      v6 = (NGUIDebug_c *)v6->static_fields->mLines;
-      if ( v6 )
+      v10 = (NGUIDebug_c *)v10->static_fields->mLines;
+      if ( v10 )
       {
-        name = v6->_1.name;
-        v9 = Method_System_Collections_Generic_List_string__Add__;
-        ++HIDWORD(v6->_1.namespaze);
+        name = v10->_1.name;
+        v13 = Method_System_Collections_Generic_List_string__Add__;
+        ++HIDWORD(v10->_1.namespaze);
         if ( name )
         {
-          namespaze_low = SLODWORD(v6->_1.namespaze);
+          namespaze_low = SLODWORD(v10->_1.namespaze);
           if ( (unsigned int)namespaze_low >= *((_DWORD *)name + 6) )
           {
             System_Collections_Generic_List_object___AddWithResize(
-              (System_Collections_Generic_List_object__o *)v6,
+              (System_Collections_Generic_List_object__o *)v10,
               (Il2CppObject *)text,
-              *(const MethodInfo_3800974 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
+              *(const MethodInfo_3810718 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
           }
           else
           {
-            v11 = &name[8 * namespaze_low];
-            LODWORD(v6->_1.namespaze) = namespaze_low + 1;
-            *((_QWORD *)v11 + 4) = text;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 32), (int32_t)text, v4, v5);
+            v15 = &name[8 * namespaze_low];
+            LODWORD(v10->_1.namespaze) = namespaze_low + 1;
+            *((_QWORD *)v15 + 4) = text;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v15 + 32), (int32_t)text, v4, v5, v6, v7, v8, v9);
           }
-          NGUIDebug__CreateInstance(v12);
+          NGUIDebug__CreateInstance(v16);
           return;
         }
       }
     }
 LABEL_24:
-    sub_1C6BC60(v6, v3);
+    sub_1C71608(v10, v3);
   }
   if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
@@ -379,20 +395,20 @@ void NGUIDebug__OnGUI(NGUIDebug_o *this, const MethodInfo *method)
   __int64 v26; // x0
   __int64 v27; // x0
 
-  if ( (byte_4CBAA85 & 1) == 0 )
+  if ( (byte_4CCBBDE & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
-    sub_1C6BA08(&Method_System_Array_Empty_GUILayoutOption___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_string__get_Item__);
-    sub_1C6BA08(&NGUIDebug_TypeInfo);
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UICamera_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8356/*"Last Hit: "*/);
-    sub_1C6BA08(&StringLiteral_341/*"\""*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CBAA85 = 1;
+    sub_1C713B0(&UnityEngine_Application_TypeInfo);
+    sub_1C713B0(&Method_System_Array_Empty_GUILayoutOption___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_string__get_Item__);
+    sub_1C713B0(&NGUIDebug_TypeInfo);
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UICamera_TypeInfo);
+    sub_1C713B0(&StringLiteral_8360/*"Last Hit: "*/);
+    sub_1C713B0(&StringLiteral_341/*"\""*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CCBBDE = 1;
   }
   Hierarchy = NGUIDebug_TypeInfo;
   if ( !NGUIDebug_TypeInfo->_2.cctor_finished )
@@ -439,27 +455,27 @@ LABEL_25:
           Hierarchy = NGUITools__GetHierarchy(v20, 0);
           if ( !Hierarchy )
             goto LABEL_49;
-          v21 = System_String__Replace_64013356(
+          v21 = System_String__Replace_64078288(
                   (System_String_o *)Hierarchy,
                   (System_String_o *)StringLiteral_341/*"\""*/,
                   (System_String_o *)StringLiteral_1/*""*/,
                   0);
-          v22 = System_String__Concat_63966792((System_String_o *)StringLiteral_8356/*"Last Hit: "*/, v21, 0);
+          v22 = System_String__Concat_64031724((System_String_o *)StringLiteral_8360/*"Last Hit: "*/, v21, 0);
           v24 = Method_System_Array_Empty_GUILayoutOption___;
           v25 = *((_QWORD *)Method_System_Array_Empty_GUILayoutOption___ + 7);
           if ( !v25 )
           {
-            sub_1C41AF8(Method_System_Array_Empty_GUILayoutOption___);
+            sub_1C474A0(Method_System_Array_Empty_GUILayoutOption___);
             v25 = v24[7];
           }
           v26 = *(_QWORD *)(v25 + 16);
           if ( (*(_BYTE *)(v26 + 309) & 1) == 0 )
-            v26 = sub_1C41A9C(inited);
+            v26 = sub_1C47444(inited);
           if ( !*(_DWORD *)(v26 + 224) )
             inited = j_il2cpp_runtime_class_init_0(v26);
           v27 = *(_QWORD *)(v24[7] + 16LL);
           if ( (*(_BYTE *)(v27 + 309) & 1) == 0 )
-            v27 = sub_1C41A9C(inited);
+            v27 = sub_1C47444(inited);
           UnityEngine_GUILayout__Label(v22, **(UnityEngine_GUILayoutOption_array ***)(v27 + 184), 0);
         }
       }
@@ -492,30 +508,30 @@ LABEL_8:
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)Hierarchy,
                i,
-               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_string__get_Item__);
+               (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_string__get_Item__);
       v12 = Method_System_Array_Empty_GUILayoutOption___;
       v13 = (System_String_o *)Item;
       v14 = *((_QWORD *)Method_System_Array_Empty_GUILayoutOption___ + 7);
       if ( !v14 )
       {
-        sub_1C41AF8(Method_System_Array_Empty_GUILayoutOption___);
+        sub_1C474A0(Method_System_Array_Empty_GUILayoutOption___);
         v14 = v12[7];
       }
       v15 = *(_QWORD *)(v14 + 16);
       if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-        v15 = sub_1C41A9C(v11);
+        v15 = sub_1C47444(v11);
       if ( !*(_DWORD *)(v15 + 224) )
         v11 = j_il2cpp_runtime_class_init_0(v15);
       v16 = *(_QWORD *)(v12[7] + 16LL);
       if ( (*(_BYTE *)(v16 + 309) & 1) == 0 )
-        v16 = sub_1C41A9C(v11);
+        v16 = sub_1C47444(v11);
       UnityEngine_GUILayout__Label(v13, **(UnityEngine_GUILayoutOption_array ***)(v16 + 184), 0);
       if ( v8 == i )
         return;
       Hierarchy = NGUIDebug_TypeInfo;
     }
 LABEL_49:
-    sub_1C6BC60(Hierarchy, method);
+    sub_1C71608(Hierarchy, method);
   }
 }
 
@@ -524,10 +540,10 @@ bool NGUIDebug__get_debugRaycast(const MethodInfo *method)
 {
   NGUIDebug_c *v1; // x0
 
-  if ( (byte_4CBAA7E & 1) == 0 )
+  if ( (byte_4CCBBD7 & 1) == 0 )
   {
-    sub_1C6BA08(&NGUIDebug_TypeInfo);
-    byte_4CBAA7E = 1;
+    sub_1C713B0(&NGUIDebug_TypeInfo);
+    byte_4CCBBD7 = 1;
   }
   v1 = NGUIDebug_TypeInfo;
   if ( !NGUIDebug_TypeInfo->_2.cctor_finished )
@@ -543,11 +559,11 @@ void NGUIDebug__set_debugRaycast(bool value, const MethodInfo *method)
 {
   NGUIDebug_c *v3; // x0
 
-  if ( (byte_4CBAA7F & 1) == 0 )
+  if ( (byte_4CCBBD8 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
-    sub_1C6BA08(&NGUIDebug_TypeInfo);
-    byte_4CBAA7F = 1;
+    sub_1C713B0(&UnityEngine_Application_TypeInfo);
+    sub_1C713B0(&NGUIDebug_TypeInfo);
+    byte_4CCBBD8 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);

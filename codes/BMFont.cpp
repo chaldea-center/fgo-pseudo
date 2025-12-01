@@ -2,32 +2,40 @@ void BMFont___ctor(BMFont_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  System_Collections_Generic_Dictionary_int__object__o *v6; // x20
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  System_Collections_Generic_Dictionary_int__object__o *v10; // x20
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
-  if ( (byte_4CBAA45 & 1) == 0 )
+  if ( (byte_4CCBB9E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__BMGlyph___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_int__BMGlyph__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BMGlyph___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_BMGlyph__TypeInfo);
-    byte_4CBAA45 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__BMGlyph___ctor__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_int__BMGlyph__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_BMGlyph___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_BMGlyph__TypeInfo);
+    byte_4CCBB9E = 1;
   }
   this->fields.mSize = 16;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_BMGlyph__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_BMGlyph__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_BMGlyph___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_BMGlyph___ctor__);
   this->fields.mSaved = (struct System_Collections_Generic_List_BMGlyph__o *)v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mSaved, (int32_t)v3, v4, v5);
-  v6 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__BMGlyph__TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mSaved, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_int__BMGlyph__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v6,
-    (const MethodInfo_3451B1C *)Method_System_Collections_Generic_Dictionary_int__BMGlyph___ctor__);
-  this->fields.mDict = (struct System_Collections_Generic_Dictionary_int__BMGlyph__o *)v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mDict, (int32_t)v6, v7, v8);
+    v10,
+    (const MethodInfo_34618C0 *)Method_System_Collections_Generic_Dictionary_int__BMGlyph___ctor__);
+  this->fields.mDict = (struct System_Collections_Generic_Dictionary_int__BMGlyph__o *)v10;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mDict, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -39,20 +47,20 @@ void BMFont__Clear(BMFont_o *this, const MethodInfo *method)
   int32_t size; // w2
   int v6; // w9
 
-  if ( (byte_4CBAA43 & 1) == 0 )
+  if ( (byte_4CCBB9C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__BMGlyph__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BMGlyph__Clear__);
-    byte_4CBAA43 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__BMGlyph__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_BMGlyph__Clear__);
+    byte_4CCBB9C = 1;
   }
   mDict = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.mDict;
   if ( !mDict
     || (System_Collections_Generic_Dictionary_int__object___Clear(
           mDict,
-          (const MethodInfo_3452678 *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__Clear__),
+          (const MethodInfo_346241C *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__Clear__),
         (mSaved = this->fields.mSaved) == 0) )
   {
-    sub_1C6BC60(mDict, method);
+    sub_1C71608(mDict, method);
   }
   size = mSaved->fields._size;
   v6 = mSaved->fields._version + 1;
@@ -69,26 +77,30 @@ BMGlyph_o *BMFont__GetGlyph(BMFont_o *this, int32_t index, bool createIfMissing,
   System_Collections_Generic_List_object__o *mDict; // x0
   __int64 v8; // x21
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v12; // x9
-  __int64 v13; // x10
-  Il2CppClass **v14; // x8
+  _QWORD *v16; // x9
+  __int64 v17; // x10
+  Il2CppClass **v18; // x8
   int size; // w23
-  int32_t v16; // w22
-  System_Collections_Generic_List_object__o *v17; // x2
+  int32_t v20; // w22
+  System_Collections_Generic_List_object__o *v21; // x2
   Il2CppObject *value; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CBAA42 & 1) == 0 )
+  if ( (byte_4CCBB9B & 1) == 0 )
   {
-    sub_1C6BA08(&BMGlyph_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__BMGlyph__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__BMGlyph__TryGetValue__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__BMGlyph__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BMGlyph__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BMGlyph__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BMGlyph__get_Item__);
-    byte_4CBAA42 = 1;
+    sub_1C713B0(&BMGlyph_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__BMGlyph__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__BMGlyph__TryGetValue__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__BMGlyph__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_BMGlyph__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_BMGlyph__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_BMGlyph__get_Item__);
+    byte_4CCBB9B = 1;
   }
   value = 0;
   mDict = (System_Collections_Generic_List_object__o *)this->fields.mDict;
@@ -96,7 +108,7 @@ BMGlyph_o *BMFont__GetGlyph(BMFont_o *this, int32_t index, bool createIfMissing,
     goto LABEL_25;
   if ( !System_Collections_Generic_Dictionary_int__object___get_Count(
           (System_Collections_Generic_Dictionary_int__object__o *)mDict,
-          (const MethodInfo_34521A0 *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__get_Count__) )
+          (const MethodInfo_3461F44 *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__get_Count__) )
   {
     mDict = (System_Collections_Generic_List_object__o *)this->fields.mSaved;
     if ( !mDict )
@@ -104,25 +116,25 @@ BMGlyph_o *BMFont__GetGlyph(BMFont_o *this, int32_t index, bool createIfMissing,
     size = mDict->fields._size;
     if ( size >= 1 )
     {
-      v16 = 0;
+      v20 = 0;
       do
       {
         mDict = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                mDict,
-                                                               v16,
-                                                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_BMGlyph__get_Item__);
+                                                               v20,
+                                                               (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_BMGlyph__get_Item__);
         if ( !mDict )
           break;
-        v17 = mDict;
+        v21 = mDict;
         mDict = (System_Collections_Generic_List_object__o *)this->fields.mDict;
         if ( !mDict )
           break;
         System_Collections_Generic_Dictionary_int__object___Add(
           (System_Collections_Generic_Dictionary_int__object__o *)mDict,
-          (int32_t)v17->fields._items,
-          (Il2CppObject *)v17,
-          (const MethodInfo_34524F0 *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__Add__);
-        if ( size == ++v16 )
+          (int32_t)v21->fields._items,
+          (Il2CppObject *)v21,
+          (const MethodInfo_3462294 *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__Add__);
+        if ( size == ++v20 )
           goto LABEL_5;
         mDict = (System_Collections_Generic_List_object__o *)this->fields.mSaved;
       }
@@ -138,10 +150,10 @@ LABEL_5:
           (System_Collections_Generic_Dictionary_int__object__o *)mDict,
           index,
           &value,
-          (const MethodInfo_3453C7C *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__TryGetValue__)
+          (const MethodInfo_3463A20 *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__TryGetValue__)
     && createIfMissing )
   {
-    v8 = sub_1C6BC54(BMGlyph_TypeInfo);
+    v8 = sub_1C715FC(BMGlyph_TypeInfo);
     System_Object___ctor((Il2CppObject *)v8, 0);
     value = (Il2CppObject *)v8;
     if ( v8 )
@@ -151,24 +163,24 @@ LABEL_5:
       if ( mDict )
       {
         items = mDict->fields._items;
-        v12 = Method_System_Collections_Generic_List_BMGlyph__Add__;
+        v16 = Method_System_Collections_Generic_List_BMGlyph__Add__;
         ++mDict->fields._version;
         if ( items )
         {
-          v13 = mDict->fields._size;
-          if ( (unsigned int)v13 >= LODWORD(items->max_length) )
+          v17 = mDict->fields._size;
+          if ( (unsigned int)v17 >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               mDict,
               (Il2CppObject *)v8,
-              *(const MethodInfo_3800974 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+              *(const MethodInfo_3810718 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
           }
           else
           {
-            v14 = &items->obj.klass + v13;
-            mDict->fields._size = v13 + 1;
-            v14[4] = (Il2CppClass *)v8;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 4), v8, v9, v10);
+            v18 = &items->obj.klass + v17;
+            mDict->fields._size = v17 + 1;
+            v18[4] = (Il2CppClass *)v8;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v18 + 4), v8, v9, v10, v11, v12, v13, v14);
           }
           mDict = (System_Collections_Generic_List_object__o *)this->fields.mDict;
           if ( mDict )
@@ -177,20 +189,20 @@ LABEL_5:
               (System_Collections_Generic_Dictionary_int__object__o *)mDict,
               index,
               value,
-              (const MethodInfo_34524F0 *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__Add__);
+              (const MethodInfo_3462294 *)Method_System_Collections_Generic_Dictionary_int__BMGlyph__Add__);
             return (BMGlyph_o *)value;
           }
         }
       }
     }
 LABEL_25:
-    sub_1C6BC60(mDict, *(_QWORD *)&index);
+    sub_1C71608(mDict, *(_QWORD *)&index);
   }
   return (BMGlyph_o *)value;
 }
 
 
-BMGlyph_o *BMFont__GetGlyph_49569064(BMFont_o *this, int32_t index, const MethodInfo *method)
+BMGlyph_o *BMFont__GetGlyph_49633996(BMFont_o *this, int32_t index, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
 
@@ -208,18 +220,18 @@ void BMFont__Trim(BMFont_o *this, int32_t xMin, int32_t yMin, int32_t xMax, int3
   Il2CppObject *Item; // x0
   const MethodInfo *v16; // x5
 
-  if ( (byte_4CBAA44 & 1) == 0 )
+  if ( (byte_4CCBB9D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BMGlyph__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BMGlyph__get_Item__);
-    byte_4CBAA44 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_BMGlyph__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_BMGlyph__get_Item__);
+    byte_4CCBB9D = 1;
   }
   if ( BMFont__get_isValid(this, *(const MethodInfo **)&xMin) )
   {
     mSaved = (System_Collections_Generic_List_object__o *)this->fields.mSaved;
     if ( !mSaved )
 LABEL_11:
-      sub_1C6BC60(mSaved, v11);
+      sub_1C71608(mSaved, v11);
     size = mSaved->fields._size;
     if ( size >= 1 )
     {
@@ -229,7 +241,7 @@ LABEL_11:
         Item = System_Collections_Generic_List_object___get_Item(
                  mSaved,
                  v14,
-                 (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_BMGlyph__get_Item__);
+                 (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_BMGlyph__get_Item__);
         if ( Item )
           BMGlyph__Trim((BMGlyph_o *)Item, xMin, yMin, xMax, yMax, v16);
         if ( size == ++v14 )
@@ -261,17 +273,17 @@ int32_t BMFont__get_glyphCount(BMFont_o *this, const MethodInfo *method)
   __int64 v4; // x1
   struct System_Collections_Generic_List_BMGlyph__o *mSaved; // x8
 
-  if ( (byte_4CBAA41 & 1) == 0 )
+  if ( (byte_4CCBB9A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BMGlyph__get_Count__);
-    byte_4CBAA41 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_BMGlyph__get_Count__);
+    byte_4CCBB9A = 1;
   }
   isValid = BMFont__get_isValid(this, method);
   if ( !isValid )
     return 0;
   mSaved = this->fields.mSaved;
   if ( !mSaved )
-    sub_1C6BC60(isValid, v4);
+    sub_1C71608(isValid, v4);
   return mSaved->fields._size;
 }
 
@@ -288,14 +300,14 @@ bool BMFont__get_isValid(BMFont_o *this, const MethodInfo *method)
   struct System_Collections_Generic_List_BMGlyph__o *mSaved; // x8
 
   v2 = this;
-  if ( (byte_4CBAA40 & 1) == 0 )
+  if ( (byte_4CCBB99 & 1) == 0 )
   {
-    this = (BMFont_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_BMGlyph__get_Count__);
-    byte_4CBAA40 = 1;
+    this = (BMFont_o *)sub_1C713B0(&Method_System_Collections_Generic_List_BMGlyph__get_Count__);
+    byte_4CCBB99 = 1;
   }
   mSaved = v2->fields.mSaved;
   if ( !mSaved )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return mSaved->fields._size > 0;
 }
 
@@ -332,10 +344,22 @@ void BMFont__set_charSize(BMFont_o *this, int32_t value, const MethodInfo *metho
 
 void BMFont__set_spriteName(BMFont_o *this, System_String_o *value, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.mSpriteName = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mSpriteName, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.mSpriteName,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

@@ -2,16 +2,20 @@ void AiLogic___ctor(AiLogic_o *this, const MethodInfo *method)
 {
   struct System_Int64_array *v3; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CB92D7 & 1) == 0 )
+  if ( (byte_4CCA418 & 1) == 0 )
   {
-    sub_1C6BA08(&long___TypeInfo);
-    byte_4CB92D7 = 1;
+    sub_1C713B0(&long___TypeInfo);
+    byte_4CCA418 = 1;
   }
-  v3 = (struct System_Int64_array *)sub_1C6BAB0(long___TypeInfo, 0);
+  v3 = (struct System_Int64_array *)sub_1C71458(long___TypeInfo, 0);
   this->fields.wkZero = v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.wkZero, (int32_t)v3, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.wkZero, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -24,29 +28,45 @@ void AiLogic__INITLOG(AiLogic_o *this, const MethodInfo *method)
 
 void AiLogic__Initialize(AiLogic_o *this, BattleData_o *data, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   Il2CppObject *Instance; // x0
-  __int64 v7; // x1
+  __int64 v11; // x1
   Il2CppObject *MasterData_object; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
 
-  if ( (byte_4CB92CC & 1) == 0 )
+  if ( (byte_4CCA40D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_AiActMaster___);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB92CC = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_AiActMaster___);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CCA40D = 1;
   }
   this->fields.Bdata = data;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)data, (int32_t)method, v3);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)data, (int32_t)method, v3, v4, v5, v6, v7);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v7);
+    sub_1C71608(0, v11);
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_AiActMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_AiActMaster___);
   this->fields.aiActMst = (struct AiActMaster_o *)MasterData_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.aiActMst, (int32_t)MasterData_object, v9, v10);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.aiActMst,
+    (int32_t)MasterData_object,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
 }
 
 
@@ -85,10 +105,10 @@ LABEL_15:
           return v9 >> 31;
         }
 LABEL_20:
-        sub_1C6BC68(IsNullOrEmpty);
+        sub_1C71610(IsNullOrEmpty);
       }
 LABEL_19:
-      sub_1C6BC60(IsNullOrEmpty, v8);
+      sub_1C71608(IsNullOrEmpty, v8);
     case 2:
       IsNullOrEmpty = BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)partyTargets, 0);
       if ( IsNullOrEmpty )
@@ -139,13 +159,13 @@ bool AiLogic__checkThinking(
   const MethodInfo *v15; // x4
 
   v10 = this;
-  if ( (byte_4CB92CE & 1) == 0 )
+  if ( (byte_4CCA40F & 1) == 0 )
   {
-    this = (AiLogic_o *)sub_1C6BA08(&AiLogic_AiInfo_TypeInfo);
-    byte_4CB92CE = 1;
+    this = (AiLogic_o *)sub_1C713B0(&AiLogic_AiInfo_TypeInfo);
+    byte_4CCA40F = 1;
   }
   if ( !svtData )
-    sub_1C6BC60(this, svtData);
+    sub_1C71608(this, svtData);
   uniqueId = svtData->fields.uniqueId;
   v12 = (AiState_o *)((__int64 (__fastcall *)(BattleServantData_o *, const MethodInfo *, _QWORD, BattleLogicBaseAi_o *, _QWORD, const MethodInfo *))svtData->klass->vtable._18_getAiState.methodPtr)(
                        svtData,
@@ -154,7 +174,7 @@ bool AiLogic__checkThinking(
                        logicAi,
                        *(_QWORD *)&timingPriority,
                        method);
-  v13 = (AiLogic_AiInfo_o *)sub_1C6BC54(AiLogic_AiInfo_TypeInfo);
+  v13 = (AiLogic_AiInfo_o *)sub_1C715FC(AiLogic_AiInfo_TypeInfo);
   AiLogic_AiInfo___ctor(v13, 1, uniqueId, v12, logicAi, procState, v14);
   return AiLogic__checkThinkingBase(v10, v13, procState, timingPriority, v15);
 }
@@ -174,22 +194,22 @@ bool AiLogic__checkThinkingBase(
   System_Collections_Generic_List_object__o *thinkList; // x19
   System_Predicate_object__o *v14; // x20
 
-  if ( (byte_4CB92D0 & 1) == 0 )
+  if ( (byte_4CCA411 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__FindAll__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__get_Count__);
-    sub_1C6BA08(&System_Predicate_AiBaseEntity__TypeInfo);
-    sub_1C6BA08(&Method_AiLogic___c__DisplayClass12_0__checkThinkingBase_b__0__);
-    sub_1C6BA08(&AiLogic___c__DisplayClass12_0_TypeInfo);
-    byte_4CB92D0 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__FindAll__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__get_Count__);
+    sub_1C713B0(&System_Predicate_AiBaseEntity__TypeInfo);
+    sub_1C713B0(&Method_AiLogic___c__DisplayClass12_0__checkThinkingBase_b__0__);
+    sub_1C713B0(&AiLogic___c__DisplayClass12_0_TypeInfo);
+    byte_4CCA411 = 1;
   }
-  v9 = sub_1C6BC54(AiLogic___c__DisplayClass12_0_TypeInfo);
+  v9 = sub_1C715FC(AiLogic___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9
     || (*(_DWORD *)(v9 + 16) = procState, *(_DWORD *)(v9 + 20) = timingPriority, !aiInfo)
     || (AiLogic__updateThinkGroup(this, aiInfo, aiInfo->fields.aiState, v12),
         thinkList = (System_Collections_Generic_List_object__o *)this->fields._thinkList,
-        v14 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_AiBaseEntity__TypeInfo),
+        v14 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_AiBaseEntity__TypeInfo),
         System_Predicate_object____ctor(
           v14,
           (Il2CppObject *)v9,
@@ -199,15 +219,15 @@ bool AiLogic__checkThinkingBase(
     || (All = System_Collections_Generic_List_object___FindAll(
                 thinkList,
                 (System_Predicate_T__o *)v14,
-                (const MethodInfo_3801084 *)Method_System_Collections_Generic_List_AiBaseEntity__FindAll__)) == 0 )
+                (const MethodInfo_3810E28 *)Method_System_Collections_Generic_List_AiBaseEntity__FindAll__)) == 0 )
   {
-    sub_1C6BC60(All, v11);
+    sub_1C71608(All, v11);
   }
   return All->fields._size > 0;
 }
 
 
-bool AiLogic__checkThinking_46916908(
+bool AiLogic__checkThinking_46971764(
         AiLogic_o *this,
         BattleFieldData_o *fieldData,
         int32_t procState,
@@ -222,22 +242,22 @@ bool AiLogic__checkThinking_46916908(
   const MethodInfo *v13; // x4
 
   v8 = this;
-  if ( (byte_4CB92CF & 1) == 0 )
+  if ( (byte_4CCA410 & 1) == 0 )
   {
-    this = (AiLogic_o *)sub_1C6BA08(&AiLogic_AiInfo_TypeInfo);
-    byte_4CB92CF = 1;
+    this = (AiLogic_o *)sub_1C713B0(&AiLogic_AiInfo_TypeInfo);
+    byte_4CCA410 = 1;
   }
   if ( !fieldData )
-    sub_1C6BC60(this, fieldData);
+    sub_1C71608(this, fieldData);
   index = fieldData->fields.index;
   aiState = fieldData->fields.aiState;
-  v11 = (AiLogic_AiInfo_o *)sub_1C6BC54(AiLogic_AiInfo_TypeInfo);
+  v11 = (AiLogic_AiInfo_o *)sub_1C715FC(AiLogic_AiInfo_TypeInfo);
   AiLogic_AiInfo___ctor(v11, 2, index, aiState, logicAi, procState, v12);
   return AiLogic__checkThinkingBase(v8, v11, procState, 0, v13);
 }
 
 
-bool AiLogic__checkThinking_46919528(
+bool AiLogic__checkThinking_46974384(
         AiLogic_o *this,
         AiLogic_AiInfo_o *aiInfo,
         AiBaseEntity_o *aiEnt,
@@ -256,196 +276,199 @@ bool AiLogic__checkThinking_46919528(
   ConditionsInformation_CheckInfo_o *v15; // x25
   System_Collections_Generic_List_object__o *v16; // x20
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  const MethodInfo *v19; // x5
-  int32_t v20; // w4
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  const MethodInfo *v20; // x5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  int32_t v23; // w4
   System_Collections_Generic_IEnumerable_T__o *FieldEnemyServantList; // x0
   struct BattleData_o *Bdata; // x8
-  AiLogic_o *v23; // x0
-  System_Collections_Generic_List_AiInterface__o *v24; // x1
-  bool v25; // w2
+  AiLogic_o *v26; // x0
+  System_Collections_Generic_List_AiInterface__o *v27; // x1
+  bool v28; // w2
   int32_t uniqueId; // w1
-  AiLogic_AiInfo_o *v27; // x3
+  AiLogic_AiInfo_o *v30; // x3
   struct System_Object_array *items; // x8
-  _QWORD *v29; // x9
+  _QWORD *v32; // x9
   __int64 size; // x10
-  Il2CppClass **v31; // x0
-  AiLogic_o *v32; // x21
+  Il2CppClass **v34; // x0
+  AiLogic_o *v35; // x21
   System_Int64_array *wkZero; // x28
-  System_Collections_Generic_IEnumerable_TSource__o *v34; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v35; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v36; // x0
-  struct System_Collections_Generic_List_AiBaseEntity__o *thinkList; // x8
-  System_Collections_Generic_List_object__o *v38; // x22
+  System_Collections_Generic_IEnumerable_TSource__o *v37; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v38; // x0
   System_Collections_Generic_IEnumerable_TSource__o *v39; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v40; // x0
-  System_Int64_array *v41; // x20
+  struct System_Collections_Generic_List_AiBaseEntity__o *thinkList; // x8
+  System_Collections_Generic_List_object__o *v41; // x22
+  System_Collections_Generic_IEnumerable_TSource__o *v42; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v43; // x0
+  System_Int64_array *v44; // x20
   int32_t refine; // w8
   struct ConditionsInformation_ISCheckFunction_o *func; // x24
-  bool v44; // w21
-  _BOOL8 v45; // x0
-  __int64 v46; // x1
-  bool v47; // w20
-  Il2CppObject *v48; // x27
-  Il2CppClass *v49; // x8
-  __int64 v50; // x9
-  int32_t *v51; // x10
-  __int64 v52; // x0
-  Il2CppClass *v53; // x8
-  unsigned int v54; // w22
-  struct BattleData_o *v55; // x23
-  __int64 v56; // x9
-  int32_t *v57; // x10
-  __int64 v58; // x0
-  __int64 v59; // x0
-  _BOOL8 v60; // x0
-  __int64 v61; // x1
+  bool v47; // w21
+  _BOOL8 v48; // x0
+  __int64 v49; // x1
+  bool v50; // w20
+  Il2CppObject *v51; // x27
+  Il2CppClass *v52; // x8
+  __int64 v53; // x9
+  int32_t *v54; // x10
+  __int64 v55; // x0
+  Il2CppClass *v56; // x8
+  unsigned int v57; // w22
+  struct BattleData_o *v58; // x23
+  __int64 v59; // x9
+  int32_t *v60; // x10
+  __int64 v61; // x0
+  __int64 v62; // x0
+  _BOOL8 v63; // x0
+  __int64 v64; // x1
   Il2CppObject *current; // x20
   Il2CppClass *klass; // x8
-  __int64 v64; // x9
+  __int64 v67; // x9
   int32_t *p_offset; // x10
-  __int64 v66; // x0
-  Il2CppClass *v67; // x8
+  __int64 v69; // x0
+  Il2CppClass *v70; // x8
   unsigned int paramater; // w27
-  struct BattleData_o *v69; // x22
-  __int64 v70; // x9
-  int32_t *v71; // x10
-  __int64 v72; // x0
-  __int64 v73; // x0
-  System_Collections_Generic_List_object__o *v74; // x9
-  AiLogic_o *v75; // x20
-  _BOOL8 v76; // x0
-  __int64 v77; // x1
-  Il2CppObject *v78; // x21
-  Il2CppClass *v79; // x8
-  __int64 v80; // x9
-  int32_t *v81; // x10
-  __int64 v82; // x0
-  Il2CppClass *v83; // x8
-  unsigned int v84; // w22
-  struct BattleData_o *v85; // x23
-  __int64 v86; // x9
-  int32_t *v87; // x10
-  __int64 v88; // x0
-  __int64 v89; // x0
-  __int64 v90; // x1
-  __int64 v91; // x8
-  __int64 v92; // x9
-  double *v93; // x10
-  double v94; // t1
-  AiLogic_AiInfo_o *v95; // x29
-  _BOOL8 v96; // x0
-  __int64 v97; // x1
-  Il2CppObject *v98; // x27
-  Il2CppClass *v99; // x8
-  __int64 v100; // x9
-  int32_t *v101; // x10
-  __int64 v102; // x0
-  Il2CppClass *v103; // x8
-  unsigned int v104; // w22
-  struct BattleData_o *v105; // x23
-  __int64 v106; // x9
-  int32_t *v107; // x10
-  __int64 v108; // x0
-  __int64 v109; // x0
-  __int64 v110; // x1
-  __int64 v111; // x11
+  struct BattleData_o *v72; // x22
+  __int64 v73; // x9
+  int32_t *v74; // x10
+  __int64 v75; // x0
+  __int64 v76; // x0
+  System_Collections_Generic_List_object__o *v77; // x9
+  AiLogic_o *v78; // x20
+  _BOOL8 v79; // x0
+  __int64 v80; // x1
+  Il2CppObject *v81; // x21
+  Il2CppClass *v82; // x8
+  __int64 v83; // x9
+  int32_t *v84; // x10
+  __int64 v85; // x0
+  Il2CppClass *v86; // x8
+  unsigned int v87; // w22
+  struct BattleData_o *v88; // x23
+  __int64 v89; // x9
+  int32_t *v90; // x10
+  __int64 v91; // x0
+  __int64 v92; // x0
+  __int64 v93; // x1
+  __int64 v94; // x8
+  __int64 v95; // x9
+  double *v96; // x10
+  double v97; // t1
+  AiLogic_AiInfo_o *v98; // x29
+  _BOOL8 v99; // x0
+  __int64 v100; // x1
+  Il2CppObject *v101; // x27
+  Il2CppClass *v102; // x8
+  __int64 v103; // x9
+  int32_t *v104; // x10
+  __int64 v105; // x0
+  Il2CppClass *v106; // x8
+  unsigned int v107; // w22
+  struct BattleData_o *v108; // x23
+  __int64 v109; // x9
+  int32_t *v110; // x10
+  __int64 v111; // x0
+  __int64 v112; // x0
+  __int64 v113; // x1
+  __int64 v114; // x11
   unsigned __int64 aiState_low; // x10
-  unsigned __int64 v113; // x9
-  AiLogic_o *v114; // x22
-  _BOOL8 v115; // x0
-  __int64 v116; // x1
-  Il2CppObject *v117; // x27
-  Il2CppClass *v118; // x8
-  __int64 v119; // x9
-  int32_t *v120; // x10
-  __int64 v121; // x0
-  Il2CppClass *v122; // x8
-  unsigned int v123; // w22
-  struct BattleData_o *v124; // x23
-  __int64 v125; // x9
-  int32_t *v126; // x10
-  __int64 v127; // x0
-  __int64 v128; // x0
-  __int64 v129; // x1
-  __int64 v130; // x11
+  unsigned __int64 v116; // x9
+  AiLogic_o *v117; // x22
+  _BOOL8 v118; // x0
+  __int64 v119; // x1
+  Il2CppObject *v120; // x27
+  Il2CppClass *v121; // x8
+  __int64 v122; // x9
+  int32_t *v123; // x10
+  __int64 v124; // x0
+  Il2CppClass *v125; // x8
+  unsigned int v126; // w22
+  struct BattleData_o *v127; // x23
+  __int64 v128; // x9
+  int32_t *v129; // x10
+  __int64 v130; // x0
+  __int64 v131; // x0
+  __int64 v132; // x1
+  __int64 v133; // x11
   unsigned __int64 aiType; // x10
-  unsigned __int64 v132; // x9
+  unsigned __int64 v135; // x9
   struct AiState_o *aiState; // x8
-  char v134; // w0
-  char v135; // w20
+  char v137; // w0
+  char v138; // w20
   struct BattleLogicBaseAi_o *logicAi; // x0
-  System_Collections_Generic_List_object__o *v138; // [xsp+0h] [xbp-D0h]
-  System_Collections_Generic_List_object__o *v139; // [xsp+0h] [xbp-D0h]
-  AiLogic_AiInfo_o *v140; // [xsp+8h] [xbp-C8h]
-  unsigned __int8 v141; // [xsp+10h] [xbp-C0h]
-  AiLogic_AiInfo_o *v142; // [xsp+10h] [xbp-C0h]
-  AiLogic_o *v143; // [xsp+18h] [xbp-B8h]
-  System_Int64_array *v144; // [xsp+20h] [xbp-B0h]
-  AiLogic_o *v147; // [xsp+30h] [xbp-A0h]
-  System_Collections_Generic_List_Enumerator_T__o v148; // [xsp+38h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_T__o v149; // [xsp+50h] [xbp-80h] BYREF
+  System_Collections_Generic_List_object__o *v141; // [xsp+0h] [xbp-D0h]
+  System_Collections_Generic_List_object__o *v142; // [xsp+0h] [xbp-D0h]
+  AiLogic_AiInfo_o *v143; // [xsp+8h] [xbp-C8h]
+  unsigned __int8 v144; // [xsp+10h] [xbp-C0h]
+  AiLogic_AiInfo_o *v145; // [xsp+10h] [xbp-C0h]
+  AiLogic_o *v146; // [xsp+18h] [xbp-B8h]
+  System_Int64_array *v147; // [xsp+20h] [xbp-B0h]
+  AiLogic_o *v150; // [xsp+30h] [xbp-A0h]
+  System_Collections_Generic_List_Enumerator_T__o v151; // [xsp+38h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_T__o v152; // [xsp+50h] [xbp-80h] BYREF
 
   v7 = aiInfo;
-  v147 = this;
-  if ( (byte_4CB92D5 & 1) == 0 )
+  v150 = this;
+  if ( (byte_4CCA416 & 1) == 0 )
   {
-    sub_1C6BA08(&AiInterface_TypeInfo);
-    sub_1C6BA08(&Ai_COND_TypeInfo);
-    sub_1C6BA08(&ConditionsInformation_TypeInfo);
-    sub_1C6BA08(&double___TypeInfo);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Skip_long___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Take_long___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_long___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_AiInterface__get_Current__);
-    sub_1C6BA08(&long___TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiInterface__AddRange__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiInterface__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiInterface___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_AiInterface__TypeInfo);
-    sub_1C6BA08(&StringLiteral_9301/*"NOT_"*/);
-    this = (AiLogic_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB92D5 = 1;
+    sub_1C713B0(&AiInterface_TypeInfo);
+    sub_1C713B0(&Ai_COND_TypeInfo);
+    sub_1C713B0(&ConditionsInformation_TypeInfo);
+    sub_1C713B0(&double___TypeInfo);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Skip_long___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Take_long___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_long___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_AiInterface__get_Current__);
+    sub_1C713B0(&long___TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiInterface__AddRange__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiInterface__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiInterface___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_AiInterface__TypeInfo);
+    sub_1C713B0(&StringLiteral_9305/*"NOT_"*/);
+    this = (AiLogic_o *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CCA416 = 1;
   }
-  memset(&v149, 0, sizeof(v149));
+  memset(&v152, 0, sizeof(v152));
   if ( !aiEnt )
     goto LABEL_260;
   Cond = Ai__getCond(aiEnt->fields.cond, 0);
   this = (AiLogic_o *)Ai__getReversal(aiEnt->fields.cond, 0);
   if ( !v7 )
     goto LABEL_260;
-  v9 = (System_String_o **)&StringLiteral_9301/*"NOT_"*/;
+  v9 = (System_String_o **)&StringLiteral_9305/*"NOT_"*/;
   if ( ((unsigned __int8)this & 1) == 0 )
     v9 = (System_String_o **)&StringLiteral_1/*""*/;
   v10 = *v9;
   v11 = (unsigned __int8)this;
-  v148.fields._list = (struct System_Collections_Generic_List_T__o *)Ai_COND_TypeInfo;
-  *(_QWORD *)&v148.fields._index = -1;
-  LODWORD(v148.fields._current) = Cond;
-  v12 = System_Enum__ToString((System_Enum_o *)&v148, 0);
-  System_String__Concat_63966792(v10, v12, 0);
+  v151.fields._list = (struct System_Collections_Generic_List_T__o *)Ai_COND_TypeInfo;
+  *(_QWORD *)&v151.fields._index = -1;
+  LODWORD(v151.fields._current) = Cond;
+  v12 = System_Enum__ToString((System_Enum_o *)&v151, 0);
+  System_String__Concat_64031724(v10, v12, 0);
   if ( !ConditionsInformation_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ConditionsInformation_TypeInfo);
   v14 = ConditionsInformation__getCheckFunction(Cond, v13);
   if ( !v14 )
     goto LABEL_255;
   v15 = v14;
-  v16 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_AiInterface__TypeInfo);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_AiInterface__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_AiInterface___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_AiInterface___ctor__);
   switch ( v15->fields.target )
   {
     case 1:
       if ( !v16 )
         goto LABEL_260;
-      aiInfo = (AiLogic_AiInfo_o *)v147->fields.Bdata;
+      aiInfo = (AiLogic_AiInfo_o *)v150->fields.Bdata;
       goto LABEL_75;
     case 2:
-      this = (AiLogic_o *)v147->fields.Bdata;
+      this = (AiLogic_o *)v150->fields.Bdata;
       if ( !this )
         goto LABEL_260;
       uniqueId = v7->fields.uniqueId;
@@ -462,14 +485,14 @@ bool AiLogic__checkThinking_46919528(
           goto LABEL_260;
       }
       items = v16->fields._items;
-      v29 = Method_System_Collections_Generic_List_AiInterface__Add__;
+      v32 = Method_System_Collections_Generic_List_AiInterface__Add__;
       ++v16->fields._version;
       if ( !items )
         goto LABEL_260;
       aiInfo = (AiLogic_AiInfo_o *)this;
       goto LABEL_83;
     case 3:
-      this = (AiLogic_o *)v147->fields.Bdata;
+      this = (AiLogic_o *)v150->fields.Bdata;
       if ( v7->fields.aiType == 1 )
       {
         if ( !this )
@@ -488,7 +511,7 @@ bool AiLogic__checkThinking_46919528(
       }
       goto LABEL_79;
     case 4:
-      this = (AiLogic_o *)v147->fields.Bdata;
+      this = (AiLogic_o *)v150->fields.Bdata;
       if ( v7->fields.aiType == 1 )
       {
         if ( !this )
@@ -507,7 +530,7 @@ bool AiLogic__checkThinking_46919528(
       }
       goto LABEL_79;
     case 5:
-      this = (AiLogic_o *)v147->fields.Bdata;
+      this = (AiLogic_o *)v150->fields.Bdata;
       if ( v7->fields.aiType != 1 )
       {
         if ( !this || !v16 )
@@ -518,20 +541,20 @@ bool AiLogic__checkThinking_46919528(
       if ( !this )
         goto LABEL_260;
       this = (AiLogic_o *)BattleData__isEnemyID((BattleData_o *)this, v7->fields.uniqueId, 0);
-      Bdata = v147->fields.Bdata;
+      Bdata = v150->fields.Bdata;
       if ( !Bdata )
         goto LABEL_260;
       if ( ((unsigned __int8)this & 1) == 0 )
         goto LABEL_46;
       goto LABEL_22;
     case 6:
-      this = (AiLogic_o *)v147->fields.Bdata;
+      this = (AiLogic_o *)v150->fields.Bdata;
       if ( v7->fields.aiType == 1 )
       {
         if ( !this )
           goto LABEL_260;
         this = (AiLogic_o *)BattleData__isEnemyID((BattleData_o *)this, v7->fields.uniqueId, 0);
-        Bdata = v147->fields.Bdata;
+        Bdata = v150->fields.Bdata;
         if ( !Bdata )
           goto LABEL_260;
         if ( ((unsigned __int8)this & 1) != 0 )
@@ -557,7 +580,7 @@ LABEL_22:
       }
 LABEL_75:
       items = v16->fields._items;
-      v29 = Method_System_Collections_Generic_List_AiInterface__Add__;
+      v32 = Method_System_Collections_Generic_List_AiInterface__Add__;
       ++v16->fields._version;
       if ( !items )
         goto LABEL_260;
@@ -568,18 +591,18 @@ LABEL_83:
         System_Collections_Generic_List_object___AddWithResize(
           v16,
           (Il2CppObject *)aiInfo,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
       }
       else
       {
-        v31 = &items->obj.klass + size;
+        v34 = &items->obj.klass + size;
         v16->fields._size = size + 1;
-        v31[4] = (Il2CppClass *)aiInfo;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v31 + 4), (int32_t)aiInfo, v17, v18);
+        v34[4] = (Il2CppClass *)aiInfo;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v34 + 4), (int32_t)aiInfo, v17, v18, v19, (int32_t)v20, v21, v22);
       }
       goto LABEL_86;
     case 7:
-      this = (AiLogic_o *)v147->fields.Bdata;
+      this = (AiLogic_o *)v150->fields.Bdata;
       if ( v7->fields.aiType == 1 )
       {
         if ( !this )
@@ -598,7 +621,7 @@ LABEL_83:
       }
       goto LABEL_79;
     case 8:
-      this = (AiLogic_o *)v147->fields.Bdata;
+      this = (AiLogic_o *)v150->fields.Bdata;
       if ( v7->fields.aiType == 1 )
       {
         if ( !this )
@@ -619,53 +642,53 @@ LABEL_79:
       System_Collections_Generic_List_object___AddRange(
         v16,
         (System_Collections_Generic_IEnumerable_T__o *)this,
-        (const MethodInfo_3800B80 *)Method_System_Collections_Generic_List_AiInterface__AddRange__);
+        (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_AiInterface__AddRange__);
 LABEL_86:
       this = (AiLogic_o *)AiBaseEntity__getVals(aiEnt, 0);
-      v32 = this;
-      wkZero = v147->fields.wkZero;
+      v35 = this;
+      wkZero = v150->fields.wkZero;
       if ( v15->fields.paramater == 41 )
       {
         if ( !this )
           goto LABEL_260;
         if ( *(_QWORD *)&this->fields._aiType )
         {
-          v34 = System_Linq_Enumerable__Skip_long_(
+          v37 = System_Linq_Enumerable__Skip_long_(
                   (System_Collections_Generic_IEnumerable_TSource__o *)this,
                   1,
-                  (const MethodInfo_3179454 *)Method_System_Linq_Enumerable_Skip_long___);
+                  (const MethodInfo_31891F8 *)Method_System_Linq_Enumerable_Skip_long___);
           this = (AiLogic_o *)System_Linq_Enumerable__ToArray_long_(
-                                v34,
-                                (const MethodInfo_317B1C0 *)Method_System_Linq_Enumerable_ToArray_long___);
-          v32 = this;
+                                v37,
+                                (const MethodInfo_318AF64 *)Method_System_Linq_Enumerable_ToArray_long___);
+          v35 = this;
         }
       }
       if ( v15->fields.isParams )
       {
-        if ( !v32 )
+        if ( !v35 )
           goto LABEL_260;
-        if ( v32->fields._aiType >= 2 )
+        if ( v35->fields._aiType >= 2 )
         {
-          v35 = System_Linq_Enumerable__Skip_long_(
-                  (System_Collections_Generic_IEnumerable_TSource__o *)v32,
+          v38 = System_Linq_Enumerable__Skip_long_(
+                  (System_Collections_Generic_IEnumerable_TSource__o *)v35,
                   1,
-                  (const MethodInfo_3179454 *)Method_System_Linq_Enumerable_Skip_long___);
-          v36 = System_Linq_Enumerable__Take_long_(
-                  v35,
-                  v32->fields._aiType - 1,
-                  (const MethodInfo_3179AD4 *)Method_System_Linq_Enumerable_Take_long___);
-          v144 = System_Linq_Enumerable__ToArray_long_(
-                   v36,
-                   (const MethodInfo_317B1C0 *)Method_System_Linq_Enumerable_ToArray_long___);
-          this = (AiLogic_o *)sub_1C6BAB0(long___TypeInfo, 1);
-          if ( v32->fields._aiType )
+                  (const MethodInfo_31891F8 *)Method_System_Linq_Enumerable_Skip_long___);
+          v39 = System_Linq_Enumerable__Take_long_(
+                  v38,
+                  v35->fields._aiType - 1,
+                  (const MethodInfo_3189878 *)Method_System_Linq_Enumerable_Take_long___);
+          v147 = System_Linq_Enumerable__ToArray_long_(
+                   v39,
+                   (const MethodInfo_318AF64 *)Method_System_Linq_Enumerable_ToArray_long___);
+          this = (AiLogic_o *)sub_1C71458(long___TypeInfo, 1);
+          if ( v35->fields._aiType )
           {
             if ( !this )
               goto LABEL_260;
             if ( this->fields._aiType )
             {
-              thinkList = v32->fields._thinkList;
-              v143 = this;
+              thinkList = v35->fields._thinkList;
+              v146 = this;
 LABEL_105:
               this->fields._thinkList = thinkList;
               goto LABEL_106;
@@ -676,363 +699,363 @@ LABEL_105:
       }
       else if ( v15->fields.isIndiv )
       {
-        if ( !v32 )
+        if ( !v35 )
           goto LABEL_260;
-        if ( v32->fields._aiType >= 2 )
+        if ( v35->fields._aiType >= 2 )
         {
-          v38 = v16;
-          v39 = System_Linq_Enumerable__Skip_long_(
-                  (System_Collections_Generic_IEnumerable_TSource__o *)v32,
+          v41 = v16;
+          v42 = System_Linq_Enumerable__Skip_long_(
+                  (System_Collections_Generic_IEnumerable_TSource__o *)v35,
                   1,
-                  (const MethodInfo_3179454 *)Method_System_Linq_Enumerable_Skip_long___);
-          v40 = System_Linq_Enumerable__Take_long_(
-                  v39,
-                  v32->fields._aiType - 1,
-                  (const MethodInfo_3179AD4 *)Method_System_Linq_Enumerable_Take_long___);
-          v41 = System_Linq_Enumerable__ToArray_long_(
-                  v40,
-                  (const MethodInfo_317B1C0 *)Method_System_Linq_Enumerable_ToArray_long___);
-          this = (AiLogic_o *)sub_1C6BAB0(long___TypeInfo, 1);
-          if ( v32->fields._aiType )
+                  (const MethodInfo_31891F8 *)Method_System_Linq_Enumerable_Skip_long___);
+          v43 = System_Linq_Enumerable__Take_long_(
+                  v42,
+                  v35->fields._aiType - 1,
+                  (const MethodInfo_3189878 *)Method_System_Linq_Enumerable_Take_long___);
+          v44 = System_Linq_Enumerable__ToArray_long_(
+                  v43,
+                  (const MethodInfo_318AF64 *)Method_System_Linq_Enumerable_ToArray_long___);
+          this = (AiLogic_o *)sub_1C71458(long___TypeInfo, 1);
+          if ( v35->fields._aiType )
           {
             if ( !this )
               goto LABEL_260;
             if ( this->fields._aiType )
             {
-              thinkList = v32->fields._thinkList;
-              v143 = this;
-              v144 = wkZero;
-              wkZero = v41;
-              v16 = v38;
+              thinkList = v35->fields._thinkList;
+              v146 = this;
+              v147 = wkZero;
+              wkZero = v44;
+              v16 = v41;
               goto LABEL_105;
             }
           }
 LABEL_153:
-          sub_1C6BC68(this);
+          sub_1C71610(this);
         }
       }
-      v143 = v32;
-      v144 = wkZero;
+      v146 = v35;
+      v147 = wkZero;
 LABEL_106:
       refine = v15->fields.refine;
       func = v15->fields.func;
       if ( !refine )
       {
-        v141 = v11;
+        v144 = v11;
         if ( !v16 )
           goto LABEL_260;
-        v139 = v16;
+        v142 = v16;
         System_Collections_Generic_List_object___GetEnumerator(
-          &v148,
+          &v151,
           v16,
-          (const MethodInfo_380146C *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
-        v149 = v148;
+          (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
+        v152 = v151;
         while ( 1 )
         {
-          v60 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                  (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-                  (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
-          v44 = v60;
-          if ( !v60 )
+          v63 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                  (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+                  (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
+          v47 = v63;
+          if ( !v63 )
             break;
-          current = v149.fields._current;
-          if ( !v149.fields._current )
-            sub_1C6BC60(v60, v61);
-          klass = v149.fields._current->klass;
-          v64 = *(unsigned __int16 *)&v149.fields._current->klass->_2.rank;
-          if ( *(_WORD *)&v149.fields._current->klass->_2.rank )
+          current = v152.fields._current;
+          if ( !v152.fields._current )
+            sub_1C71608(v63, v64);
+          klass = v152.fields._current->klass;
+          v67 = *(unsigned __int16 *)&v152.fields._current->klass->_2.rank;
+          if ( *(_WORD *)&v152.fields._current->klass->_2.rank )
           {
             p_offset = &klass->_1.interfaceOffsets->offset;
             while ( *((AiInterface_c **)p_offset - 1) != AiInterface_TypeInfo )
             {
-              --v64;
+              --v67;
               p_offset += 4;
-              if ( !v64 )
+              if ( !v67 )
                 goto LABEL_136;
             }
-            v66 = (__int64)&klass->vtable[*p_offset + 1];
+            v69 = (__int64)&klass->vtable[*p_offset + 1];
           }
           else
           {
 LABEL_136:
-            v66 = sub_1C41D90(v149.fields._current, AiInterface_TypeInfo, 1);
+            v69 = sub_1C47738(v152.fields._current, AiInterface_TypeInfo, 1);
           }
-          if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v66)(
+          if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v69)(
                   current,
                   v15,
                   wkZero,
                   aiEnt,
-                  *(_QWORD *)(v66 + 8))
+                  *(_QWORD *)(v69 + 8))
               & 1) != 0 )
           {
-            v67 = current->klass;
+            v70 = current->klass;
             paramater = v15->fields.paramater;
-            v69 = v147->fields.Bdata;
-            v70 = *(unsigned __int16 *)&current->klass->_2.rank;
+            v72 = v150->fields.Bdata;
+            v73 = *(unsigned __int16 *)&current->klass->_2.rank;
             if ( *(_WORD *)&current->klass->_2.rank )
             {
-              v71 = &v67->_1.interfaceOffsets->offset;
-              while ( *((AiInterface_c **)v71 - 1) != AiInterface_TypeInfo )
+              v74 = &v70->_1.interfaceOffsets->offset;
+              while ( *((AiInterface_c **)v74 - 1) != AiInterface_TypeInfo )
               {
-                --v70;
-                v71 += 4;
-                if ( !v70 )
+                --v73;
+                v74 += 4;
+                if ( !v73 )
                   goto LABEL_143;
               }
-              v72 = (__int64)&v67->vtable[*v71];
+              v75 = (__int64)&v70->vtable[*v74];
             }
             else
             {
 LABEL_143:
-              v72 = sub_1C41D90(current, AiInterface_TypeInfo, 0);
+              v75 = sub_1C47738(current, AiInterface_TypeInfo, 0);
             }
-            v73 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD, System_Collections_Generic_List_object__o *))v72)(
+            v76 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD, System_Collections_Generic_List_object__o *))v75)(
                     current,
-                    v69,
+                    v72,
                     paramater,
                     (unsigned int)turn,
                     (unsigned int)actcnt,
-                    v144,
+                    v147,
                     aiEnt,
-                    *(_QWORD *)(v72 + 8),
-                    v139);
+                    *(_QWORD *)(v75 + 8),
+                    v142);
             if ( !func )
-              sub_1C6BC60(v73, v73);
+              sub_1C71608(v76, v76);
             if ( (((__int64 (__fastcall *)(intptr_t, __int64, AiLogic_o *, intptr_t))func->fields.invoke_impl)(
                     func->fields.method_code,
-                    v73,
-                    v143,
+                    v76,
+                    v146,
                     func->fields.method)
                 & 1) != 0 )
               break;
           }
         }
         System_Collections_Generic_List_Enumerator_object___Dispose(
-          (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-          (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
+          (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+          (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
 LABEL_148:
-        v11 = v141;
+        v11 = v144;
         goto LABEL_252;
       }
-      v44 = refine == 1;
+      v47 = refine == 1;
       if ( refine == 1 )
       {
-        v141 = v11;
+        v144 = v11;
         if ( !v16 )
           goto LABEL_260;
-        v138 = v16;
+        v141 = v16;
         System_Collections_Generic_List_object___GetEnumerator(
-          &v148,
+          &v151,
           v16,
-          (const MethodInfo_380146C *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
-        v149 = v148;
+          (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
+        v152 = v151;
         while ( 1 )
         {
-          v45 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                  (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-                  (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
-          v47 = v45;
-          if ( !v45 )
+          v48 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                  (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+                  (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
+          v50 = v48;
+          if ( !v48 )
             break;
-          v48 = v149.fields._current;
-          if ( !v149.fields._current )
-            sub_1C6BC60(v45, v46);
-          v49 = v149.fields._current->klass;
-          v50 = *(unsigned __int16 *)&v149.fields._current->klass->_2.rank;
-          if ( *(_WORD *)&v149.fields._current->klass->_2.rank )
+          v51 = v152.fields._current;
+          if ( !v152.fields._current )
+            sub_1C71608(v48, v49);
+          v52 = v152.fields._current->klass;
+          v53 = *(unsigned __int16 *)&v152.fields._current->klass->_2.rank;
+          if ( *(_WORD *)&v152.fields._current->klass->_2.rank )
           {
-            v51 = &v49->_1.interfaceOffsets->offset;
-            while ( *((AiInterface_c **)v51 - 1) != AiInterface_TypeInfo )
+            v54 = &v52->_1.interfaceOffsets->offset;
+            while ( *((AiInterface_c **)v54 - 1) != AiInterface_TypeInfo )
             {
-              --v50;
-              v51 += 4;
-              if ( !v50 )
+              --v53;
+              v54 += 4;
+              if ( !v53 )
                 goto LABEL_116;
             }
-            v52 = (__int64)&v49->vtable[*v51 + 1];
+            v55 = (__int64)&v52->vtable[*v54 + 1];
           }
           else
           {
 LABEL_116:
-            v52 = sub_1C41D90(v149.fields._current, AiInterface_TypeInfo, 1);
+            v55 = sub_1C47738(v152.fields._current, AiInterface_TypeInfo, 1);
           }
-          if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v52)(
-                  v48,
+          if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v55)(
+                  v51,
                   v15,
                   wkZero,
                   aiEnt,
-                  *(_QWORD *)(v52 + 8))
+                  *(_QWORD *)(v55 + 8))
               & 1) != 0 )
           {
-            v53 = v48->klass;
-            v54 = v15->fields.paramater;
-            v55 = v147->fields.Bdata;
-            v56 = *(unsigned __int16 *)&v48->klass->_2.rank;
-            if ( *(_WORD *)&v48->klass->_2.rank )
+            v56 = v51->klass;
+            v57 = v15->fields.paramater;
+            v58 = v150->fields.Bdata;
+            v59 = *(unsigned __int16 *)&v51->klass->_2.rank;
+            if ( *(_WORD *)&v51->klass->_2.rank )
             {
-              v57 = &v53->_1.interfaceOffsets->offset;
-              while ( *((AiInterface_c **)v57 - 1) != AiInterface_TypeInfo )
+              v60 = &v56->_1.interfaceOffsets->offset;
+              while ( *((AiInterface_c **)v60 - 1) != AiInterface_TypeInfo )
               {
-                --v56;
-                v57 += 4;
-                if ( !v56 )
+                --v59;
+                v60 += 4;
+                if ( !v59 )
                   goto LABEL_123;
               }
-              v58 = (__int64)&v53->vtable[*v57];
+              v61 = (__int64)&v56->vtable[*v60];
             }
             else
             {
 LABEL_123:
-              v58 = sub_1C41D90(v48, AiInterface_TypeInfo, 0);
+              v61 = sub_1C47738(v51, AiInterface_TypeInfo, 0);
             }
-            v59 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD, System_Collections_Generic_List_object__o *))v58)(
-                    v48,
-                    v55,
-                    v54,
+            v62 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD, System_Collections_Generic_List_object__o *))v61)(
+                    v51,
+                    v58,
+                    v57,
                     (unsigned int)turn,
                     (unsigned int)actcnt,
-                    v144,
+                    v147,
                     aiEnt,
-                    *(_QWORD *)(v58 + 8),
-                    v138);
+                    *(_QWORD *)(v61 + 8),
+                    v141);
             if ( !func )
-              sub_1C6BC60(v59, v59);
+              sub_1C71608(v62, v62);
             if ( (((__int64 (__fastcall *)(intptr_t, __int64, AiLogic_o *, intptr_t))func->fields.invoke_impl)(
                     func->fields.method_code,
-                    v59,
-                    v143,
+                    v62,
+                    v146,
                     func->fields.method)
                 & 1) == 0 )
               break;
           }
         }
-        v44 = !v47;
+        v47 = !v50;
         System_Collections_Generic_List_Enumerator_object___Dispose(
-          (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-          (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
+          (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+          (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
         goto LABEL_148;
       }
       if ( refine == 2 )
       {
-        this = (AiLogic_o *)sub_1C6BAB0(double___TypeInfo, 0);
+        this = (AiLogic_o *)sub_1C71458(double___TypeInfo, 0);
         if ( !v16 )
           goto LABEL_260;
-        v114 = this;
+        v117 = this;
         System_Collections_Generic_List_object___GetEnumerator(
-          &v148,
+          &v151,
           v16,
-          (const MethodInfo_380146C *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
-        v149 = v148;
+          (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
+        v152 = v151;
         while ( 1 )
         {
 LABEL_213:
-          v142 = (AiLogic_AiInfo_o *)v114;
+          v145 = (AiLogic_AiInfo_o *)v117;
           while ( 1 )
           {
-            v115 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                     (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-                     (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
-            if ( !v115 )
+            v118 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                     (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+                     (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
+            if ( !v118 )
             {
               System_Collections_Generic_List_Enumerator_object___Dispose(
-                (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-                (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
-              aiInfo = v142;
-              if ( !v142 )
+                (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+                (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
+              aiInfo = v145;
+              if ( !v145 )
                 goto LABEL_260;
-              if ( v142->fields.aiState )
+              if ( v145->fields.aiState )
                 goto LABEL_247;
               goto LABEL_252;
             }
-            v117 = v149.fields._current;
-            if ( !v149.fields._current )
-              sub_1C6BC60(v115, v116);
-            v118 = v149.fields._current->klass;
-            v119 = *(unsigned __int16 *)&v149.fields._current->klass->_2.rank;
-            if ( *(_WORD *)&v149.fields._current->klass->_2.rank )
+            v120 = v152.fields._current;
+            if ( !v152.fields._current )
+              sub_1C71608(v118, v119);
+            v121 = v152.fields._current->klass;
+            v122 = *(unsigned __int16 *)&v152.fields._current->klass->_2.rank;
+            if ( *(_WORD *)&v152.fields._current->klass->_2.rank )
             {
-              v120 = &v118->_1.interfaceOffsets->offset;
-              while ( *((AiInterface_c **)v120 - 1) != AiInterface_TypeInfo )
+              v123 = &v121->_1.interfaceOffsets->offset;
+              while ( *((AiInterface_c **)v123 - 1) != AiInterface_TypeInfo )
               {
-                --v119;
-                v120 += 4;
-                if ( !v119 )
+                --v122;
+                v123 += 4;
+                if ( !v122 )
                   goto LABEL_220;
               }
-              v121 = (__int64)&v118->vtable[*v120 + 1];
+              v124 = (__int64)&v121->vtable[*v123 + 1];
             }
             else
             {
 LABEL_220:
-              v121 = sub_1C41D90(v149.fields._current, AiInterface_TypeInfo, 1);
+              v124 = sub_1C47738(v152.fields._current, AiInterface_TypeInfo, 1);
             }
-            if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v121)(
-                    v117,
+            if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v124)(
+                    v120,
                     v15,
                     wkZero,
                     aiEnt,
-                    *(_QWORD *)(v121 + 8))
+                    *(_QWORD *)(v124 + 8))
                 & 1) != 0 )
             {
-              v122 = v117->klass;
-              v123 = v15->fields.paramater;
-              v124 = v147->fields.Bdata;
-              v125 = *(unsigned __int16 *)&v117->klass->_2.rank;
-              if ( *(_WORD *)&v117->klass->_2.rank )
+              v125 = v120->klass;
+              v126 = v15->fields.paramater;
+              v127 = v150->fields.Bdata;
+              v128 = *(unsigned __int16 *)&v120->klass->_2.rank;
+              if ( *(_WORD *)&v120->klass->_2.rank )
               {
-                v126 = &v122->_1.interfaceOffsets->offset;
-                while ( *((AiInterface_c **)v126 - 1) != AiInterface_TypeInfo )
+                v129 = &v125->_1.interfaceOffsets->offset;
+                while ( *((AiInterface_c **)v129 - 1) != AiInterface_TypeInfo )
                 {
-                  --v125;
-                  v126 += 4;
-                  if ( !v125 )
+                  --v128;
+                  v129 += 4;
+                  if ( !v128 )
                     goto LABEL_227;
                 }
-                v127 = (__int64)&v122->vtable[*v126];
+                v130 = (__int64)&v125->vtable[*v129];
               }
               else
               {
 LABEL_227:
-                v127 = sub_1C41D90(v117, AiInterface_TypeInfo, 0);
+                v130 = sub_1C47738(v120, AiInterface_TypeInfo, 0);
               }
-              v128 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD))v127)(
-                       v117,
-                       v124,
-                       v123,
+              v131 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD))v130)(
+                       v120,
+                       v127,
+                       v126,
                        (unsigned int)turn,
                        (unsigned int)actcnt,
-                       v144,
+                       v147,
                        aiEnt,
-                       *(_QWORD *)(v127 + 8));
-              if ( !v128 )
-                sub_1C6BC60(0, v129);
-              v130 = *(_QWORD *)(v128 + 24);
-              if ( v130 )
+                       *(_QWORD *)(v130 + 8));
+              if ( !v131 )
+                sub_1C71608(0, v132);
+              v133 = *(_QWORD *)(v131 + 24);
+              if ( v133 )
                 break;
             }
           }
-          v114 = (AiLogic_o *)v142;
-          if ( !v142 )
-            sub_1C6BC60(v128, v129);
-          if ( !v142->fields.aiState )
-            v114 = (AiLogic_o *)v128;
-          if ( (int)v130 >= 1 )
+          v117 = (AiLogic_o *)v145;
+          if ( !v145 )
+            sub_1C71608(v131, v132);
+          if ( !v145->fields.aiState )
+            v117 = (AiLogic_o *)v131;
+          if ( (int)v133 >= 1 )
           {
-            aiType = (unsigned int)v114->fields._aiType;
-            v132 = 0;
+            aiType = (unsigned int)v117->fields._aiType;
+            v135 = 0;
             while ( 1 )
             {
-              if ( (__int64)v132 < (int)aiType )
+              if ( (__int64)v135 < (int)aiType )
               {
-                if ( v132 >= aiType )
-                  sub_1C6BC68(v128);
-                if ( *((double *)&v114->fields._thinkList + v132) < *(double *)(v128 + 8 * v132 + 32) )
+                if ( v135 >= aiType )
+                  sub_1C71610(v131);
+                if ( *((double *)&v117->fields._thinkList + v135) < *(double *)(v131 + 8 * v135 + 32) )
                   break;
               }
-              if ( (unsigned int)*(_QWORD *)(v128 + 24) == ++v132 )
+              if ( (unsigned int)*(_QWORD *)(v131 + 24) == ++v135 )
                 goto LABEL_213;
             }
-            v114 = (AiLogic_o *)v128;
+            v117 = (AiLogic_o *)v131;
           }
         }
       }
@@ -1040,257 +1063,257 @@ LABEL_227:
       {
         if ( refine == 4 )
         {
-          this = (AiLogic_o *)sub_1C6BAB0(double___TypeInfo, 1);
-          v74 = v16;
+          this = (AiLogic_o *)sub_1C71458(double___TypeInfo, 1);
+          v77 = v16;
           if ( !v16 )
             goto LABEL_260;
-          v75 = this;
+          v78 = this;
           System_Collections_Generic_List_object___GetEnumerator(
-            &v148,
-            v74,
-            (const MethodInfo_380146C *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
-          v149 = v148;
+            &v151,
+            v77,
+            (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
+          v152 = v151;
           while ( 1 )
           {
-            v76 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                    (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-                    (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
-            if ( !v76 )
+            v79 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                    (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+                    (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
+            if ( !v79 )
               break;
-            v78 = v149.fields._current;
-            if ( !v149.fields._current )
-              sub_1C6BC60(v76, v77);
-            v79 = v149.fields._current->klass;
-            v80 = *(unsigned __int16 *)&v149.fields._current->klass->_2.rank;
-            if ( *(_WORD *)&v149.fields._current->klass->_2.rank )
+            v81 = v152.fields._current;
+            if ( !v152.fields._current )
+              sub_1C71608(v79, v80);
+            v82 = v152.fields._current->klass;
+            v83 = *(unsigned __int16 *)&v152.fields._current->klass->_2.rank;
+            if ( *(_WORD *)&v152.fields._current->klass->_2.rank )
             {
-              v81 = &v79->_1.interfaceOffsets->offset;
-              while ( *((AiInterface_c **)v81 - 1) != AiInterface_TypeInfo )
+              v84 = &v82->_1.interfaceOffsets->offset;
+              while ( *((AiInterface_c **)v84 - 1) != AiInterface_TypeInfo )
               {
-                --v80;
-                v81 += 4;
-                if ( !v80 )
+                --v83;
+                v84 += 4;
+                if ( !v83 )
                   goto LABEL_165;
               }
-              v82 = (__int64)&v79->vtable[*v81 + 1];
+              v85 = (__int64)&v82->vtable[*v84 + 1];
             }
             else
             {
 LABEL_165:
-              v82 = sub_1C41D90(v149.fields._current, AiInterface_TypeInfo, 1);
+              v85 = sub_1C47738(v152.fields._current, AiInterface_TypeInfo, 1);
             }
-            if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v82)(
-                    v78,
+            if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v85)(
+                    v81,
                     v15,
                     wkZero,
                     aiEnt,
-                    *(_QWORD *)(v82 + 8))
+                    *(_QWORD *)(v85 + 8))
                 & 1) != 0 )
             {
-              v83 = v78->klass;
-              v84 = v15->fields.paramater;
-              v85 = v147->fields.Bdata;
-              v86 = *(unsigned __int16 *)&v78->klass->_2.rank;
-              if ( *(_WORD *)&v78->klass->_2.rank )
+              v86 = v81->klass;
+              v87 = v15->fields.paramater;
+              v88 = v150->fields.Bdata;
+              v89 = *(unsigned __int16 *)&v81->klass->_2.rank;
+              if ( *(_WORD *)&v81->klass->_2.rank )
               {
-                v87 = &v83->_1.interfaceOffsets->offset;
-                while ( *((AiInterface_c **)v87 - 1) != AiInterface_TypeInfo )
+                v90 = &v86->_1.interfaceOffsets->offset;
+                while ( *((AiInterface_c **)v90 - 1) != AiInterface_TypeInfo )
                 {
-                  --v86;
-                  v87 += 4;
-                  if ( !v86 )
+                  --v89;
+                  v90 += 4;
+                  if ( !v89 )
                     goto LABEL_172;
                 }
-                v88 = (__int64)&v83->vtable[*v87];
+                v91 = (__int64)&v86->vtable[*v90];
               }
               else
               {
 LABEL_172:
-                v88 = sub_1C41D90(v78, AiInterface_TypeInfo, 0);
+                v91 = sub_1C47738(v81, AiInterface_TypeInfo, 0);
               }
-              v89 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD))v88)(
-                      v78,
-                      v85,
-                      v84,
+              v92 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD))v91)(
+                      v81,
+                      v88,
+                      v87,
                       (unsigned int)turn,
                       (unsigned int)actcnt,
-                      v144,
+                      v147,
                       aiEnt,
-                      *(_QWORD *)(v88 + 8));
-              if ( !v89 )
-                sub_1C6BC60(0, v90);
-              v91 = *(unsigned int *)(v89 + 24);
-              if ( v91 << 32 >= 1 )
+                      *(_QWORD *)(v91 + 8));
+              if ( !v92 )
+                sub_1C71608(0, v93);
+              v94 = *(unsigned int *)(v92 + 24);
+              if ( v94 << 32 >= 1 )
               {
-                v92 = (int)v91;
-                v93 = (double *)(v89 + 32);
+                v95 = (int)v94;
+                v96 = (double *)(v92 + 32);
                 do
                 {
-                  if ( !v91 )
-                    sub_1C6BC68(v89);
-                  if ( !v75 )
-                    sub_1C6BC60(v89, v90);
-                  if ( !v75->fields._aiType )
-                    sub_1C6BC68(v89);
-                  v94 = *v93++;
-                  --v92;
-                  --v91;
-                  *(double *)&v75->fields._thinkList = v94 + *(double *)&v75->fields._thinkList;
+                  if ( !v94 )
+                    sub_1C71610(v92);
+                  if ( !v78 )
+                    sub_1C71608(v92, v93);
+                  if ( !v78->fields._aiType )
+                    sub_1C71610(v92);
+                  v97 = *v96++;
+                  --v95;
+                  --v94;
+                  *(double *)&v78->fields._thinkList = v97 + *(double *)&v78->fields._thinkList;
                 }
-                while ( v92 );
+                while ( v95 );
               }
             }
           }
           System_Collections_Generic_List_Enumerator_object___Dispose(
-            (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-            (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
+            (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+            (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
           if ( !func )
             goto LABEL_260;
-          v134 = ((__int64 (__fastcall *)(intptr_t, AiLogic_o *, AiLogic_o *, intptr_t))func->fields.invoke_impl)(
+          v137 = ((__int64 (__fastcall *)(intptr_t, AiLogic_o *, AiLogic_o *, intptr_t))func->fields.invoke_impl)(
                    func->fields.method_code,
-                   v75,
-                   v143,
+                   v78,
+                   v146,
                    func->fields.method);
 LABEL_251:
-          v44 = v134;
+          v47 = v137;
         }
         goto LABEL_252;
       }
-      v140 = v7;
-      this = (AiLogic_o *)sub_1C6BAB0(double___TypeInfo, 0);
+      v143 = v7;
+      this = (AiLogic_o *)sub_1C71458(double___TypeInfo, 0);
       if ( !v16 )
         goto LABEL_260;
-      v95 = (AiLogic_AiInfo_o *)this;
+      v98 = (AiLogic_AiInfo_o *)this;
       System_Collections_Generic_List_object___GetEnumerator(
-        &v148,
+        &v151,
         v16,
-        (const MethodInfo_380146C *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
-      v149 = v148;
+        (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_AiInterface__GetEnumerator__);
+      v152 = v151;
 LABEL_184:
       while ( 1 )
       {
-        v96 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-                (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
-        if ( !v96 )
+        v99 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+                (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__MoveNext__);
+        if ( !v99 )
           break;
-        v98 = v149.fields._current;
-        if ( !v149.fields._current )
-          sub_1C6BC60(v96, v97);
-        v99 = v149.fields._current->klass;
-        v100 = *(unsigned __int16 *)&v149.fields._current->klass->_2.rank;
-        if ( *(_WORD *)&v149.fields._current->klass->_2.rank )
+        v101 = v152.fields._current;
+        if ( !v152.fields._current )
+          sub_1C71608(v99, v100);
+        v102 = v152.fields._current->klass;
+        v103 = *(unsigned __int16 *)&v152.fields._current->klass->_2.rank;
+        if ( *(_WORD *)&v152.fields._current->klass->_2.rank )
         {
-          v101 = &v99->_1.interfaceOffsets->offset;
-          while ( *((AiInterface_c **)v101 - 1) != AiInterface_TypeInfo )
+          v104 = &v102->_1.interfaceOffsets->offset;
+          while ( *((AiInterface_c **)v104 - 1) != AiInterface_TypeInfo )
           {
-            --v100;
-            v101 += 4;
-            if ( !v100 )
+            --v103;
+            v104 += 4;
+            if ( !v103 )
               goto LABEL_190;
           }
-          v102 = (__int64)&v99->vtable[*v101 + 1];
+          v105 = (__int64)&v102->vtable[*v104 + 1];
         }
         else
         {
 LABEL_190:
-          v102 = sub_1C41D90(v149.fields._current, AiInterface_TypeInfo, 1);
+          v105 = sub_1C47738(v152.fields._current, AiInterface_TypeInfo, 1);
         }
-        if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v102)(
-                v98,
+        if ( ((*(__int64 (__fastcall **)(Il2CppObject *, ConditionsInformation_CheckInfo_o *, System_Int64_array *, AiBaseEntity_o *, _QWORD))v105)(
+                v101,
                 v15,
                 wkZero,
                 aiEnt,
-                *(_QWORD *)(v102 + 8))
+                *(_QWORD *)(v105 + 8))
             & 1) != 0 )
         {
-          v103 = v98->klass;
-          v104 = v15->fields.paramater;
-          v105 = v147->fields.Bdata;
-          v106 = *(unsigned __int16 *)&v98->klass->_2.rank;
-          if ( *(_WORD *)&v98->klass->_2.rank )
+          v106 = v101->klass;
+          v107 = v15->fields.paramater;
+          v108 = v150->fields.Bdata;
+          v109 = *(unsigned __int16 *)&v101->klass->_2.rank;
+          if ( *(_WORD *)&v101->klass->_2.rank )
           {
-            v107 = &v103->_1.interfaceOffsets->offset;
-            while ( *((AiInterface_c **)v107 - 1) != AiInterface_TypeInfo )
+            v110 = &v106->_1.interfaceOffsets->offset;
+            while ( *((AiInterface_c **)v110 - 1) != AiInterface_TypeInfo )
             {
-              --v106;
-              v107 += 4;
-              if ( !v106 )
+              --v109;
+              v110 += 4;
+              if ( !v109 )
                 goto LABEL_197;
             }
-            v108 = (__int64)&v103->vtable[*v107];
+            v111 = (__int64)&v106->vtable[*v110];
           }
           else
           {
 LABEL_197:
-            v108 = sub_1C41D90(v98, AiInterface_TypeInfo, 0);
+            v111 = sub_1C47738(v101, AiInterface_TypeInfo, 0);
           }
-          v109 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD))v108)(
-                   v98,
-                   v105,
-                   v104,
+          v112 = (*(__int64 (__fastcall **)(Il2CppObject *, struct BattleData_o *, _QWORD, _QWORD, _QWORD, System_Int64_array *, AiBaseEntity_o *, _QWORD))v111)(
+                   v101,
+                   v108,
+                   v107,
                    (unsigned int)turn,
                    (unsigned int)actcnt,
-                   v144,
+                   v147,
                    aiEnt,
-                   *(_QWORD *)(v108 + 8));
-          if ( !v109 )
-            sub_1C6BC60(0, v110);
-          v111 = *(_QWORD *)(v109 + 24);
-          if ( v111 )
+                   *(_QWORD *)(v111 + 8));
+          if ( !v112 )
+            sub_1C71608(0, v113);
+          v114 = *(_QWORD *)(v112 + 24);
+          if ( v114 )
           {
-            if ( !v95 )
-              sub_1C6BC60(v109, v110);
-            if ( !v95->fields.aiState )
+            if ( !v98 )
+              sub_1C71608(v112, v113);
+            if ( !v98->fields.aiState )
               goto LABEL_210;
-            if ( (int)v111 >= 1 )
+            if ( (int)v114 >= 1 )
             {
-              aiState_low = LODWORD(v95->fields.aiState);
-              v113 = 0;
+              aiState_low = LODWORD(v98->fields.aiState);
+              v116 = 0;
               while ( 1 )
               {
-                if ( (__int64)v113 < (int)aiState_low )
+                if ( (__int64)v116 < (int)aiState_low )
                 {
-                  if ( v113 >= aiState_low )
-                    sub_1C6BC68(v109);
-                  if ( *(double *)(v109 + 8 * v113 + 32) < *((double *)&v95->fields.logicAi + v113) )
+                  if ( v116 >= aiState_low )
+                    sub_1C71610(v112);
+                  if ( *(double *)(v112 + 8 * v116 + 32) < *((double *)&v98->fields.logicAi + v116) )
                     break;
                 }
-                if ( (unsigned int)*(_QWORD *)(v109 + 24) == ++v113 )
+                if ( (unsigned int)*(_QWORD *)(v112 + 24) == ++v116 )
                   goto LABEL_184;
               }
 LABEL_210:
-              v95 = (AiLogic_AiInfo_o *)v109;
+              v98 = (AiLogic_AiInfo_o *)v112;
             }
           }
         }
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        (System_Collections_Generic_List_Enumerator_object__o *)&v149,
-        (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
-      if ( !v95 )
+        (System_Collections_Generic_List_Enumerator_object__o *)&v152,
+        (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_AiInterface__Dispose__);
+      if ( !v98 )
         goto LABEL_260;
-      aiInfo = v95;
-      aiState = v95->fields.aiState;
-      v7 = v140;
+      aiInfo = v98;
+      aiState = v98->fields.aiState;
+      v7 = v143;
       if ( aiState )
       {
 LABEL_247:
         if ( func )
         {
-          v134 = ((__int64 (__fastcall *)(intptr_t, AiLogic_AiInfo_o *, AiLogic_o *, intptr_t))func->fields.invoke_impl)(
+          v137 = ((__int64 (__fastcall *)(intptr_t, AiLogic_AiInfo_o *, AiLogic_o *, intptr_t))func->fields.invoke_impl)(
                    func->fields.method_code,
                    aiInfo,
-                   v143,
+                   v146,
                    func->fields.method);
           goto LABEL_251;
         }
 LABEL_260:
-        sub_1C6BC60(this, aiInfo);
+        sub_1C71608(this, aiInfo);
       }
 LABEL_252:
-      v135 = v11 ^ v44;
-      if ( ((v11 ^ v44) & 1) != 0 )
+      v138 = v11 ^ v47;
+      if ( ((v11 ^ v47) & 1) != 0 )
       {
         logicAi = v7->fields.logicAi;
         if ( logicAi )
@@ -1302,28 +1325,28 @@ LABEL_252:
                   logicAi->klass->vtable._18_CheckAiCanActionFromTargets.method)
               & 1) == 0 )
 LABEL_255:
-            v135 = 0;
+            v138 = 0;
         }
       }
-      return v135 & 1;
+      return v138 & 1;
     case 9:
-      v23 = v147;
-      v25 = 1;
-      v24 = (System_Collections_Generic_List_AiInterface__o *)v16;
+      v26 = v150;
+      v28 = 1;
+      v27 = (System_Collections_Generic_List_AiInterface__o *)v16;
       goto LABEL_58;
     case 0xA:
-      v25 = 1;
-      v20 = 1;
+      v28 = 1;
+      v23 = 1;
       goto LABEL_55;
     case 0xB:
-      v25 = 1;
-      v20 = 2;
+      v28 = 1;
+      v23 = 2;
 LABEL_55:
-      v23 = v147;
-      v24 = (System_Collections_Generic_List_AiInterface__o *)v16;
+      v26 = v150;
+      v27 = (System_Collections_Generic_List_AiInterface__o *)v16;
       goto LABEL_56;
     case 0xC:
-      this = (AiLogic_o *)v147->fields.Bdata;
+      this = (AiLogic_o *)v150->fields.Bdata;
       if ( !this )
         goto LABEL_260;
       this = (AiLogic_o *)BattleData__getFieldPlayerServantList((BattleData_o *)this, 0);
@@ -1332,8 +1355,8 @@ LABEL_55:
       System_Collections_Generic_List_object___AddRange(
         v16,
         (System_Collections_Generic_IEnumerable_T__o *)this,
-        (const MethodInfo_3800B80 *)Method_System_Collections_Generic_List_AiInterface__AddRange__);
-      this = (AiLogic_o *)v147->fields.Bdata;
+        (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_AiInterface__AddRange__);
+      this = (AiLogic_o *)v150->fields.Bdata;
       if ( !this )
         goto LABEL_260;
       FieldEnemyServantList = (System_Collections_Generic_IEnumerable_T__o *)BattleData__getFieldEnemyServantList(
@@ -1343,29 +1366,29 @@ LABEL_55:
       System_Collections_Generic_List_object___AddRange(
         v16,
         FieldEnemyServantList,
-        (const MethodInfo_3800B80 *)Method_System_Collections_Generic_List_AiInterface__AddRange__);
+        (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_AiInterface__AddRange__);
       goto LABEL_86;
     case 0xD:
-      v23 = v147;
-      v24 = (System_Collections_Generic_List_AiInterface__o *)v16;
-      v25 = 0;
+      v26 = v150;
+      v27 = (System_Collections_Generic_List_AiInterface__o *)v16;
+      v28 = 0;
 LABEL_58:
-      v27 = v7;
-      v20 = 0;
+      v30 = v7;
+      v23 = 0;
       goto LABEL_59;
     case 0xE:
-      v20 = 1;
+      v23 = 1;
       goto LABEL_49;
     case 0xF:
-      v20 = 2;
+      v23 = 2;
 LABEL_49:
-      v23 = v147;
-      v24 = (System_Collections_Generic_List_AiInterface__o *)v16;
-      v25 = 0;
+      v26 = v150;
+      v27 = (System_Collections_Generic_List_AiInterface__o *)v16;
+      v28 = 0;
 LABEL_56:
-      v27 = v7;
+      v30 = v7;
 LABEL_59:
-      AiLogic__getTargetPosServant(v23, v24, v25, v27, v20, v19);
+      AiLogic__getTargetPosServant(v26, v27, v28, v30, v23, v20);
       goto LABEL_86;
     default:
       goto LABEL_86;
@@ -1391,21 +1414,25 @@ AiEntity_o *AiLogic__getAction(
   AiLogic_AiInfo_o *v18; // x27
   const MethodInfo *v19; // x6
   int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  int32_t v22; // w4
-  const MethodInfo *v23; // x6
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  int32_t v26; // w4
+  const MethodInfo *v27; // x6
   AiEntity_o *result; // x0
   __int64 naturalAligment; // x10
 
   v15 = this;
-  if ( (byte_4CB92D1 & 1) == 0 )
+  if ( (byte_4CCA412 & 1) == 0 )
   {
-    sub_1C6BA08(&AiEntity_TypeInfo);
-    this = (AiLogic_o *)sub_1C6BA08(&AiLogic_AiInfo_TypeInfo);
-    byte_4CB92D1 = 1;
+    sub_1C713B0(&AiEntity_TypeInfo);
+    this = (AiLogic_o *)sub_1C713B0(&AiLogic_AiInfo_TypeInfo);
+    byte_4CCA412 = 1;
   }
   if ( !svtData )
-    sub_1C6BC60(this, svtData);
+    sub_1C71608(this, svtData);
   uniqueId = svtData->fields.uniqueId;
   v17 = (AiState_o *)((__int64 (__fastcall *)(BattleServantData_o *, const MethodInfo *, _QWORD, _QWORD, _QWORD))svtData->klass->vtable._18_getAiState.methodPtr)(
                        svtData,
@@ -1413,11 +1440,11 @@ AiEntity_o *AiLogic__getAction(
                        *(_QWORD *)&procState,
                        *(_QWORD *)&turnCount,
                        *(_QWORD *)&actCount);
-  v18 = (AiLogic_AiInfo_o *)sub_1C6BC54(AiLogic_AiInfo_TypeInfo);
+  v18 = (AiLogic_AiInfo_o *)sub_1C715FC(AiLogic_AiInfo_TypeInfo);
   AiLogic_AiInfo___ctor(v18, 1, uniqueId, v17, logicAi, procState, v19);
   *info = v18;
-  sub_1C6B9AC((CGThumbnailListItem_o *)info, (int32_t)v18, v20, v21);
-  result = (AiEntity_o *)AiLogic__getActionBase(v15, *info, procState, turnCount, v22, timingPriority, v23);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)info, (int32_t)v18, v20, v21, v22, v23, v24, v25);
+  result = (AiEntity_o *)AiLogic__getActionBase(v15, *info, procState, turnCount, v26, timingPriority, v27);
   if ( result )
   {
     naturalAligment = AiEntity_TypeInfo->_2.naturalAligment;
@@ -1461,11 +1488,11 @@ AiBaseEntity_o *AiLogic__getActionBase(
   struct BattleData_o *v24; // x8
 
   v11 = this;
-  if ( (byte_4CB92D3 & 1) == 0 )
+  if ( (byte_4CCA414 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_AiActMaster__AiActEntity__int__GetEntity__);
-    this = (AiLogic_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB92D3 = 1;
+    sub_1C713B0(&Method_DataMasterBase_AiActMaster__AiActEntity__int__GetEntity__);
+    this = (AiLogic_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCA414 = 1;
   }
   if ( !aiInfo )
     goto LABEL_36;
@@ -1498,7 +1525,7 @@ AiBaseEntity_o *AiLogic__getActionBase(
     this = (AiLogic_o *)DataMasterBase_object__object__int___GetEntity(
                           (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                           BasicAct->fields.aiActId,
-                          (const MethodInfo_33F90DC *)Method_DataMasterBase_AiActMaster__AiActEntity__int__GetEntity__);
+                          (const MethodInfo_3408E80 *)Method_DataMasterBase_AiActMaster__AiActEntity__int__GetEntity__);
     if ( !this )
       goto LABEL_36;
     v16 = this;
@@ -1574,13 +1601,13 @@ AiBaseEntity_o *AiLogic__getActionBase(
       return BasicAct;
     }
 LABEL_36:
-    sub_1C6BC60(this, aiInfo);
+    sub_1C71608(this, aiInfo);
   }
   return BasicAct;
 }
 
 
-AiFieldEntity_o *AiLogic__getAction_46917964(
+AiFieldEntity_o *AiLogic__getAction_46972820(
         AiLogic_o *this,
         BattleFieldData_o *fieldData,
         int32_t procState,
@@ -1601,17 +1628,17 @@ AiFieldEntity_o *AiLogic__getAction_46917964(
   __int64 naturalAligment; // x10
 
   v13 = this;
-  if ( (byte_4CB92D2 & 1) == 0 )
+  if ( (byte_4CCA413 & 1) == 0 )
   {
-    sub_1C6BA08(&AiFieldEntity_TypeInfo);
-    this = (AiLogic_o *)sub_1C6BA08(&AiLogic_AiInfo_TypeInfo);
-    byte_4CB92D2 = 1;
+    sub_1C713B0(&AiFieldEntity_TypeInfo);
+    this = (AiLogic_o *)sub_1C713B0(&AiLogic_AiInfo_TypeInfo);
+    byte_4CCA413 = 1;
   }
   if ( !fieldData )
-    sub_1C6BC60(this, fieldData);
+    sub_1C71608(this, fieldData);
   index = fieldData->fields.index;
   aiState = fieldData->fields.aiState;
-  v16 = (AiLogic_AiInfo_o *)sub_1C6BC54(AiLogic_AiInfo_TypeInfo);
+  v16 = (AiLogic_AiInfo_o *)sub_1C715FC(AiLogic_AiInfo_TypeInfo);
   AiLogic_AiInfo___ctor(v16, 2, index, aiState, logicAi, procState, v17);
   result = (AiFieldEntity_o *)AiLogic__getActionBase(v13, v16, procState, turnCount, v18, timingPriority, v19);
   if ( result )
@@ -1652,67 +1679,71 @@ AiBaseEntity_o *AiLogic__getBasicAct(
   Il2CppObject *v22; // x25
   struct AiLogic___c_StaticFields *static_fields; // x0
   int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  __int64 v26; // x24
-  System_Predicate_object__o *v27; // x25
-  const MethodInfo *v28; // x5
-  int v29; // w8
-  char *v30; // x24
-  WeightRate_int__o *v31; // x25
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
+  __int64 v30; // x24
+  System_Predicate_object__o *v31; // x25
   const MethodInfo *v32; // x5
-  __int64 v33; // x8
-  unsigned __int64 v34; // x26
-  char *v35; // x29
+  int v33; // w8
+  char *v34; // x24
+  WeightRate_int__o *v35; // x25
+  const MethodInfo *v36; // x5
+  __int64 v37; // x8
+  unsigned __int64 v38; // x26
+  char *v39; // x29
   int32_t Next; // w0
-  const MethodInfo *v37; // x5
-  AiBaseEntity_o *v38; // x24
+  const MethodInfo *v41; // x5
+  AiBaseEntity_o *v42; // x24
 
-  if ( (byte_4CB92D4 & 1) == 0 )
+  if ( (byte_4CCA415 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Comparison_AiBaseEntity__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__FindAll__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__Remove__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__Sort__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__get_Item__);
-    sub_1C6BA08(&System_Collections_Generic_List_AiBaseEntity__TypeInfo);
-    sub_1C6BA08(&System_Predicate_AiBaseEntity__TypeInfo);
-    sub_1C6BA08(&Method_AiLogic___c__getBasicAct_b__16_1__);
-    sub_1C6BA08(&Method_AiLogic___c__DisplayClass16_0__getBasicAct_b__0__);
-    sub_1C6BA08(&AiLogic___c__DisplayClass16_0_TypeInfo);
-    sub_1C6BA08(&Method_AiLogic___c__DisplayClass16_1__getBasicAct_b__2__);
-    sub_1C6BA08(&AiLogic___c__DisplayClass16_1_TypeInfo);
-    sub_1C6BA08(&AiLogic___c_TypeInfo);
-    sub_1C6BA08(&Method_WeightRate_int___ctor__);
-    sub_1C6BA08(&Method_WeightRate_int__getCount__);
-    sub_1C6BA08(&Method_WeightRate_int__getData__);
-    sub_1C6BA08(&Method_WeightRate_int__getTotalWeight__);
-    sub_1C6BA08(&Method_WeightRate_int__setWeight__);
-    sub_1C6BA08(&WeightRate_int__TypeInfo);
-    byte_4CB92D4 = 1;
+    sub_1C713B0(&System_Comparison_AiBaseEntity__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__FindAll__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__Remove__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__Sort__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__get_Item__);
+    sub_1C713B0(&System_Collections_Generic_List_AiBaseEntity__TypeInfo);
+    sub_1C713B0(&System_Predicate_AiBaseEntity__TypeInfo);
+    sub_1C713B0(&Method_AiLogic___c__getBasicAct_b__16_1__);
+    sub_1C713B0(&Method_AiLogic___c__DisplayClass16_0__getBasicAct_b__0__);
+    sub_1C713B0(&AiLogic___c__DisplayClass16_0_TypeInfo);
+    sub_1C713B0(&Method_AiLogic___c__DisplayClass16_1__getBasicAct_b__2__);
+    sub_1C713B0(&AiLogic___c__DisplayClass16_1_TypeInfo);
+    sub_1C713B0(&AiLogic___c_TypeInfo);
+    sub_1C713B0(&Method_WeightRate_int___ctor__);
+    sub_1C713B0(&Method_WeightRate_int__getCount__);
+    sub_1C713B0(&Method_WeightRate_int__getData__);
+    sub_1C713B0(&Method_WeightRate_int__getTotalWeight__);
+    sub_1C713B0(&Method_WeightRate_int__setWeight__);
+    sub_1C713B0(&WeightRate_int__TypeInfo);
+    byte_4CCA415 = 1;
   }
-  v13 = sub_1C6BC54(AiLogic___c__DisplayClass16_0_TypeInfo);
+  v13 = sub_1C715FC(AiLogic___c__DisplayClass16_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_42;
   *(_DWORD *)(v13 + 16) = procState;
   *(_DWORD *)(v13 + 20) = actcnt;
   *(_DWORD *)(v13 + 24) = timingPriority;
-  v16 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_AiBaseEntity__TypeInfo);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_AiBaseEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_AiBaseEntity___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_AiBaseEntity___ctor__);
   thinkList = (System_Collections_Generic_List_object__o *)this->fields._thinkList;
-  v18 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_AiBaseEntity__TypeInfo);
+  v18 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_AiBaseEntity__TypeInfo);
   System_Predicate_object____ctor(v18, (Il2CppObject *)v13, Method_AiLogic___c__DisplayClass16_0__getBasicAct_b__0__, 0);
   if ( !thinkList )
     goto LABEL_42;
   All = System_Collections_Generic_List_object___FindAll(
           thinkList,
           (System_Predicate_T__o *)v18,
-          (const MethodInfo_3801084 *)Method_System_Collections_Generic_List_AiBaseEntity__FindAll__);
+          (const MethodInfo_3810E28 *)Method_System_Collections_Generic_List_AiBaseEntity__FindAll__);
   v19 = AiLogic___c_TypeInfo;
   v20 = (System_Collections_Generic_List_object__o *)All;
   if ( !AiLogic___c_TypeInfo->_2.cctor_finished )
@@ -1729,137 +1760,145 @@ AiBaseEntity_o *AiLogic__getBasicAct(
       v19 = AiLogic___c_TypeInfo;
     }
     v22 = (Il2CppObject *)v19->static_fields->__9;
-    _9__16_1 = (System_Comparison_T__o *)sub_1C6BC54(System_Comparison_AiBaseEntity__TypeInfo);
+    _9__16_1 = (System_Comparison_T__o *)sub_1C715FC(System_Comparison_AiBaseEntity__TypeInfo);
     System_Comparison_object____ctor(_9__16_1, v22, Method_AiLogic___c__getBasicAct_b__16_1__, 0);
     static_fields = AiLogic___c_TypeInfo->static_fields;
     static_fields->__9__16_1 = (struct System_Comparison_AiBaseEntity__o *)_9__16_1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__16_1, (int32_t)_9__16_1, v24, v25);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__16_1,
+      (int32_t)_9__16_1,
+      v24,
+      v25,
+      v26,
+      v27,
+      v28,
+      v29);
   }
   if ( !v20 )
 LABEL_42:
-    sub_1C6BC60(All, v15);
-  System_Collections_Generic_List_object___Sort_58729528(
+    sub_1C71608(All, v15);
+  System_Collections_Generic_List_object___Sort_58794460(
     v20,
     _9__16_1,
-    (const MethodInfo_3802438 *)Method_System_Collections_Generic_List_AiBaseEntity__Sort__);
+    (const MethodInfo_38121DC *)Method_System_Collections_Generic_List_AiBaseEntity__Sort__);
   if ( v20->fields._size >= 1 )
   {
     while ( 1 )
     {
-      v26 = sub_1C6BC54(AiLogic___c__DisplayClass16_1_TypeInfo);
-      System_Object___ctor((Il2CppObject *)v26, 0);
+      v30 = sub_1C715FC(AiLogic___c__DisplayClass16_1_TypeInfo);
+      System_Object___ctor((Il2CppObject *)v30, 0);
       if ( v20->fields._size < 1 )
         return 0;
       All = System_Collections_Generic_List_object___get_Item(
               v20,
               0,
-              (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AiBaseEntity__get_Item__);
+              (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_AiBaseEntity__get_Item__);
       if ( !All )
         goto LABEL_42;
-      if ( !v26 )
+      if ( !v30 )
         goto LABEL_42;
-      *(_DWORD *)(v26 + 16) = *((_DWORD *)All + 7);
-      v27 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_AiBaseEntity__TypeInfo);
+      *(_DWORD *)(v30 + 16) = *((_DWORD *)All + 7);
+      v31 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_AiBaseEntity__TypeInfo);
       System_Predicate_object____ctor(
-        v27,
-        (Il2CppObject *)v26,
+        v31,
+        (Il2CppObject *)v30,
         Method_AiLogic___c__DisplayClass16_1__getBasicAct_b__2__,
         0);
       All = System_Collections_Generic_List_object___FindAll(
               v20,
-              (System_Predicate_T__o *)v27,
-              (const MethodInfo_3801084 *)Method_System_Collections_Generic_List_AiBaseEntity__FindAll__);
+              (System_Predicate_T__o *)v31,
+              (const MethodInfo_3810E28 *)Method_System_Collections_Generic_List_AiBaseEntity__FindAll__);
       if ( !All )
         goto LABEL_42;
       All = System_Collections_Generic_List_object___ToArray(
               (System_Collections_Generic_List_object__o *)All,
-              (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_AiBaseEntity__ToArray__);
+              (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_AiBaseEntity__ToArray__);
       if ( !All )
         goto LABEL_42;
-      v29 = *((_DWORD *)All + 6);
-      v30 = (char *)All;
-      if ( v29 <= 1 )
+      v33 = *((_DWORD *)All + 6);
+      v34 = (char *)All;
+      if ( v33 <= 1 )
         break;
-      v31 = (WeightRate_int__o *)sub_1C6BC54(WeightRate_int__TypeInfo);
-      WeightRate_int____ctor(v31, (const MethodInfo_3BF8CB8 *)Method_WeightRate_int___ctor__);
-      v33 = *((_QWORD *)v30 + 3);
-      if ( (int)v33 >= 1 )
+      v35 = (WeightRate_int__o *)sub_1C715FC(WeightRate_int__TypeInfo);
+      WeightRate_int____ctor(v35, (const MethodInfo_3C08A5C *)Method_WeightRate_int___ctor__);
+      v37 = *((_QWORD *)v34 + 3);
+      if ( (int)v37 >= 1 )
       {
-        v34 = 0;
-        v35 = v30 + 32;
-        while ( v34 < (unsigned int)v33 )
+        v38 = 0;
+        v39 = v34 + 32;
+        while ( v38 < (unsigned int)v37 )
         {
-          All = (void *)AiLogic__checkThinking_46919528(
+          All = (void *)AiLogic__checkThinking_46974384(
                           this,
                           aiInfo,
-                          *(AiBaseEntity_o **)&v35[8 * v34],
+                          *(AiBaseEntity_o **)&v39[8 * v38],
                           turn,
                           *(_DWORD *)(v13 + 20),
-                          v32);
-          if ( v34 >= *((unsigned int *)v30 + 6) )
+                          v36);
+          if ( v38 >= *((unsigned int *)v34 + 6) )
             break;
-          v15 = *(_QWORD *)&v35[8 * v34];
+          v15 = *(_QWORD *)&v39[8 * v38];
           if ( ((unsigned __int8)All & 1) != 0 )
           {
-            if ( !v15 || !v31 )
+            if ( !v15 || !v35 )
               goto LABEL_42;
             WeightRate_int___setWeight(
-              v31,
+              v35,
               *(_DWORD *)(v15 + 32),
-              v34,
-              (const MethodInfo_3BF81D4 *)Method_WeightRate_int__setWeight__);
+              v38,
+              (const MethodInfo_3C07F78 *)Method_WeightRate_int__setWeight__);
           }
           else
           {
             All = (void *)System_Collections_Generic_List_object___Remove(
                             v20,
                             (Il2CppObject *)v15,
-                            (const MethodInfo_3801E9C *)Method_System_Collections_Generic_List_AiBaseEntity__Remove__);
+                            (const MethodInfo_3811C40 *)Method_System_Collections_Generic_List_AiBaseEntity__Remove__);
           }
-          LODWORD(v33) = *((_DWORD *)v30 + 6);
-          if ( (__int64)++v34 >= (int)v33 )
+          LODWORD(v37) = *((_DWORD *)v34 + 6);
+          if ( (__int64)++v38 >= (int)v37 )
             goto LABEL_29;
         }
 LABEL_41:
-        sub_1C6BC68(All);
+        sub_1C71610(All);
       }
 LABEL_29:
-      if ( !v31 )
+      if ( !v35 )
         goto LABEL_42;
-      if ( WeightRate_int___getCount(v31, (const MethodInfo_3BF8590 *)Method_WeightRate_int__getCount__) )
+      if ( WeightRate_int___getCount(v35, (const MethodInfo_3C08334 *)Method_WeightRate_int__getCount__) )
       {
-        Next = BattleRandom__getNext(v31->fields.totalweight, 0);
-        All = (void *)WeightRate_int___getData(v31, Next, (const MethodInfo_3BF8648 *)Method_WeightRate_int__getData__);
-        if ( (unsigned int)All >= *((_DWORD *)v30 + 6) )
+        Next = BattleRandom__getNext(v35->fields.totalweight, 0);
+        All = (void *)WeightRate_int___getData(v35, Next, (const MethodInfo_3C083EC *)Method_WeightRate_int__getData__);
+        if ( (unsigned int)All >= *((_DWORD *)v34 + 6) )
           goto LABEL_41;
-        v38 = *(AiBaseEntity_o **)&v30[8 * (int)All + 32];
-        if ( AiLogic__checkThinking_46919528(this, aiInfo, v38, turn, *(_DWORD *)(v13 + 20), v37) )
-          return v38;
+        v42 = *(AiBaseEntity_o **)&v34[8 * (int)All + 32];
+        if ( AiLogic__checkThinking_46974384(this, aiInfo, v42, turn, *(_DWORD *)(v13 + 20), v41) )
+          return v42;
         goto LABEL_37;
       }
 LABEL_38:
       if ( v20->fields._size <= 0 )
         return 0;
     }
-    if ( !v29 )
+    if ( !v33 )
       goto LABEL_41;
-    All = (void *)AiLogic__checkThinking_46919528(
+    All = (void *)AiLogic__checkThinking_46974384(
                     this,
                     aiInfo,
                     *((AiBaseEntity_o **)All + 4),
                     turn,
                     *(_DWORD *)(v13 + 20),
-                    v28);
-    if ( !*((_DWORD *)v30 + 6) )
+                    v32);
+    if ( !*((_DWORD *)v34 + 6) )
       goto LABEL_41;
-    v38 = (AiBaseEntity_o *)*((_QWORD *)v30 + 4);
+    v42 = (AiBaseEntity_o *)*((_QWORD *)v34 + 4);
     if ( ((unsigned __int8)All & 1) != 0 )
-      return v38;
+      return v42;
 LABEL_37:
     System_Collections_Generic_List_object___Remove(
       v20,
-      (Il2CppObject *)v38,
-      (const MethodInfo_3801E9C *)Method_System_Collections_Generic_List_AiBaseEntity__Remove__);
+      (Il2CppObject *)v42,
+      (const MethodInfo_3811C40 *)Method_System_Collections_Generic_List_AiBaseEntity__Remove__);
     goto LABEL_38;
   }
   return 0;
@@ -1877,18 +1916,22 @@ void AiLogic__getTargetPosServant(
   AiLogic_o *v10; // x21
   char v11; // w8
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
   struct AiInterface_array *items; // x8
-  _QWORD *v15; // x9
+  _QWORD *v19; // x9
   __int64 size; // x10
-  AiLogic_o *v17; // x1
-  Il2CppClass **v18; // x0
+  AiLogic_o *v21; // x1
+  Il2CppClass **v22; // x0
 
   v10 = this;
-  if ( (byte_4CB92D6 & 1) == 0 )
+  if ( (byte_4CCA417 & 1) == 0 )
   {
-    this = (AiLogic_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_AiInterface__Add__);
-    byte_4CB92D6 = 1;
+    this = (AiLogic_o *)sub_1C713B0(&Method_System_Collections_Generic_List_AiInterface__Add__);
+    byte_4CCA417 = 1;
   }
   if ( !aiInfo )
     goto LABEL_16;
@@ -1911,28 +1954,28 @@ void AiLogic__getTargetPosServant(
     return;
   if ( !targetList
     || (items = targetList->fields._items,
-        v15 = Method_System_Collections_Generic_List_AiInterface__Add__,
+        v19 = Method_System_Collections_Generic_List_AiInterface__Add__,
         ++targetList->fields._version,
         !items) )
   {
 LABEL_16:
-    sub_1C6BC60(this, targetList);
+    sub_1C71608(this, targetList);
   }
   size = targetList->fields._size;
-  v17 = this;
+  v21 = this;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)targetList,
       (Il2CppObject *)this,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
   }
   else
   {
     targetList->fields._size = size + 1;
-    v18 = &items->obj.klass + size;
-    v18[4] = (Il2CppClass *)v17;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v17, v12, v13);
+    v22 = &items->obj.klass + size;
+    v22[4] = (Il2CppClass *)v21;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v22 + 4), (int32_t)v21, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -1947,16 +1990,20 @@ void AiLogic__updateThinkGroup(AiLogic_o *this, AiLogic_AiInfo_o *aiInfo, AiStat
   System_Collections_Generic_IEnumerable_T__o *v11; // x20
   System_Collections_Generic_List_object__o *v12; // x21
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
 
   v6 = this;
-  if ( (byte_4CB92CD & 1) == 0 )
+  if ( (byte_4CCA40E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity___ctor___78504224);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AiBaseEntity__get_Item__);
-    this = (AiLogic_o *)sub_1C6BA08(&System_Collections_Generic_List_AiBaseEntity__TypeInfo);
-    byte_4CB92CD = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity___ctor___78572976);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AiBaseEntity__get_Item__);
+    this = (AiLogic_o *)sub_1C713B0(&System_Collections_Generic_List_AiBaseEntity__TypeInfo);
+    byte_4CCA40E = 1;
   }
   if ( !aiInfo )
     goto LABEL_19;
@@ -1967,7 +2014,7 @@ void AiLogic__updateThinkGroup(AiLogic_o *this, AiLogic_AiInfo_o *aiInfo, AiStat
     this = (AiLogic_o *)System_Collections_Generic_List_object___get_Item(
                           (System_Collections_Generic_List_object__o *)this,
                           0,
-                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AiBaseEntity__get_Item__);
+                          (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_AiBaseEntity__get_Item__);
     if ( !this || !aiState )
       goto LABEL_19;
     v8 = LODWORD(this->fields.Bdata) != aiState->fields.aiGroupId;
@@ -1990,7 +2037,7 @@ void AiLogic__updateThinkGroup(AiLogic_o *this, AiLogic_AiInfo_o *aiInfo, AiStat
         goto LABEL_18;
       }
 LABEL_19:
-      sub_1C6BC60(this, aiInfo);
+      sub_1C71608(this, aiInfo);
     }
     if ( aiType == 1 )
     {
@@ -2001,13 +2048,13 @@ LABEL_19:
                                                                            0);
 LABEL_18:
         v11 = ListFormGroupId;
-        v12 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_AiBaseEntity__TypeInfo);
-        System_Collections_Generic_List_object____ctor_58720872(
+        v12 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_AiBaseEntity__TypeInfo);
+        System_Collections_Generic_List_object____ctor_58785804(
           v12,
           v11,
-          (const MethodInfo_3800268 *)Method_System_Collections_Generic_List_AiBaseEntity___ctor___78504224);
+          (const MethodInfo_381000C *)Method_System_Collections_Generic_List_AiBaseEntity___ctor___78572976);
         v6->fields._thinkList = (struct System_Collections_Generic_List_AiBaseEntity__o *)v12;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v6->fields._thinkList, (int32_t)v12, v13, v14);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v6->fields._thinkList, (int32_t)v12, v13, v14, v15, v16, v17, v18);
         return;
       }
       goto LABEL_19;
@@ -2027,19 +2074,27 @@ void AiLogic_AiInfo___ctor(
 {
   AiLogic_AiInfo_o *v12; // x24
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
 
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v12->fields.aiType = inAiType;
   v12->fields.uniqueId = inUniqueId;
   v12->fields.aiState = inAiSate;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->fields.aiState, (int32_t)inAiSate, v13, v14);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v12->fields.aiState, (int32_t)inAiSate, v13, v14, v15, v16, v17, v18);
   v12->fields.logicAi = inLogicAi;
   v12 = (AiLogic_AiInfo_o *)((char *)v12 + 32);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v12, (int32_t)inLogicAi, v15, v16);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v12, (int32_t)inLogicAi, v19, v20, v21, v22, v23, v24);
   LODWORD(v12->monitor) = inProcState;
 }
 
@@ -2078,11 +2133,11 @@ void AiLogic_AiInfo__GetCheckedResult(
   int32_t v15; // w20
   int32_t v16; // w21
 
-  if ( (byte_4CB92DA & 1) == 0 )
+  if ( (byte_4CCA41B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__get_Item__);
-    byte_4CB92DA = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__get_Item__);
+    byte_4CCA41B = 1;
   }
   if ( aiBaseEntity )
   {
@@ -2101,7 +2156,7 @@ void AiLogic_AiInfo__GetCheckedResult(
       if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
               (System_Collections_Generic_Dictionary_object__object__o *)checkedInfo,
               v11,
-              (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__) )
+              (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__) )
         return;
       checkedInfo = this->fields.checkedInfo;
       if ( !checkedInfo )
@@ -2109,7 +2164,7 @@ void AiLogic_AiInfo__GetCheckedResult(
       checkedInfo = System_Collections_Generic_Dictionary_object__object___get_Item(
                       (System_Collections_Generic_Dictionary_object__object__o *)checkedInfo,
                       v11,
-                      (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__get_Item__);
+                      (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__get_Item__);
       if ( !checkedInfo )
         goto LABEL_17;
       *aiActType = *((_DWORD *)checkedInfo + 4);
@@ -2119,7 +2174,7 @@ void AiLogic_AiInfo__GetCheckedResult(
       checkedInfo = System_Collections_Generic_Dictionary_object__object___get_Item(
                       (System_Collections_Generic_Dictionary_object__object__o *)checkedInfo,
                       v11,
-                      (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__get_Item__);
+                      (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__get_Item__);
       if ( !checkedInfo )
         goto LABEL_17;
       *noMessage = *((_BYTE *)checkedInfo + 20);
@@ -2129,7 +2184,7 @@ void AiLogic_AiInfo__GetCheckedResult(
       checkedInfo = System_Collections_Generic_Dictionary_object__object___get_Item(
                       (System_Collections_Generic_Dictionary_object__object__o *)checkedInfo,
                       v11,
-                      (const MethodInfo_34BB8BC *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__get_Item__);
+                      (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__get_Item__);
       if ( !checkedInfo )
         goto LABEL_17;
       v14 = (_DWORD *)*((_QWORD *)checkedInfo + 3);
@@ -2142,7 +2197,7 @@ void AiLogic_AiInfo__GetCheckedResult(
                               *(_QWORD *)(*(_QWORD *)v14 + 400LL));
       if ( !svtData )
 LABEL_17:
-        sub_1C6BC60(checkedInfo, v12);
+        sub_1C71608(checkedInfo, v12);
       BattleServantData__addSkillInfo(svtData, v16, v15, (int32_t)checkedInfo, v14[9], -1, -1, 0, 0);
     }
   }
@@ -2155,10 +2210,10 @@ bool AiLogic_AiInfo__IsChecked(AiLogic_AiInfo_o *this, AiBaseEntity_o *aiBaseEnt
   Il2CppObject *v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4CB92D9 & 1) == 0 )
+  if ( (byte_4CCA41A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__);
-    byte_4CB92D9 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__);
+    byte_4CCA41A = 1;
   }
   if ( !aiBaseEntity || BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.checkedInfo, 0) )
     return 0;
@@ -2167,11 +2222,11 @@ bool AiLogic_AiInfo__IsChecked(AiLogic_AiInfo_o *this, AiBaseEntity_o *aiBaseEnt
                          aiBaseEntity,
                          aiBaseEntity->klass->vtable._4_get_PrimaryKey.method);
   if ( !checkedInfo )
-    sub_1C6BC60(v7, v8);
+    sub_1C71608(v7, v8);
   return System_Collections_Generic_Dictionary_object__object___ContainsKey(
            (System_Collections_Generic_Dictionary_object__object__o *)checkedInfo,
            v7,
-           (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__);
+           (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__);
 }
 
 
@@ -2181,35 +2236,39 @@ void AiLogic_AiInfo__SetCheckedResult(
         AiLogic_AiInfo_CheckedInfo_o *inCheckedInfo,
         const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_checkedInfo; // x20
+  GrandQuestFolderBoardItem_o *p_checkedInfo; // x20
   struct System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__o *checkedInfo; // t1
   System_Collections_Generic_Dictionary_object__object__o *v9; // x22
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   Il2CppObject *klass; // x0
-  __int64 v13; // x1
-  Il2CppObject *v14; // x21
+  __int64 v17; // x1
+  Il2CppObject *v18; // x21
 
-  if ( (byte_4CB92D8 & 1) == 0 )
+  if ( (byte_4CCA419 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__TypeInfo);
-    byte_4CB92D8 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo___ctor__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__TypeInfo);
+    byte_4CCA419 = 1;
   }
   if ( aiBaseEntity )
   {
     checkedInfo = this->fields.checkedInfo;
-    p_checkedInfo = (CGThumbnailListItem_o *)&this->fields.checkedInfo;
+    p_checkedInfo = (GrandQuestFolderBoardItem_o *)&this->fields.checkedInfo;
     if ( !checkedInfo )
     {
-      v9 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__TypeInfo);
+      v9 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__TypeInfo);
       System_Collections_Generic_Dictionary_object__object____ctor(
         v9,
-        (const MethodInfo_34BAF8C *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo___ctor__);
-      p_checkedInfo->klass = (CGThumbnailListItem_c *)v9;
-      sub_1C6B9AC(p_checkedInfo, (int32_t)v9, v10, v11);
+        (const MethodInfo_34CAD30 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo___ctor__);
+      p_checkedInfo->klass = (GrandQuestFolderBoardItem_c *)v9;
+      sub_1C71354(p_checkedInfo, (int32_t)v9, v10, v11, v12, v13, v14, v15);
     }
     klass = (Il2CppObject *)((__int64 (__fastcall *)(AiBaseEntity_o *, const MethodInfo *, AiLogic_AiInfo_CheckedInfo_o *, const MethodInfo *))aiBaseEntity->klass->vtable._4_get_PrimaryKey.methodPtr)(
                               aiBaseEntity,
@@ -2218,11 +2277,11 @@ void AiLogic_AiInfo__SetCheckedResult(
                               method);
     if ( p_checkedInfo->klass )
     {
-      v14 = klass;
+      v18 = klass;
       if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
              (System_Collections_Generic_Dictionary_object__object__o *)p_checkedInfo->klass,
              klass,
-             (const MethodInfo_34BBB30 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__) )
+             (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__ContainsKey__) )
       {
         return;
       }
@@ -2231,13 +2290,13 @@ void AiLogic_AiInfo__SetCheckedResult(
       {
         System_Collections_Generic_Dictionary_object__object___Add(
           (System_Collections_Generic_Dictionary_object__object__o *)klass,
-          v14,
+          v18,
           (Il2CppObject *)inCheckedInfo,
-          (const MethodInfo_34BB93C *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__Add__);
+          (const MethodInfo_34CB6E0 *)Method_System_Collections_Generic_Dictionary_string__AiLogic_AiInfo_CheckedInfo__Add__);
         return;
       }
     }
-    sub_1C6BC60(klass, v13);
+    sub_1C71608(klass, v17);
   }
 }
 
@@ -2252,7 +2311,11 @@ void AiLogic_AiInfo_CheckedInfo___ctor(
   AiLogic_AiInfo_CheckedInfo_o *v7; // x21
   bool v8; // w22
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
   v7 = this;
   v8 = inNoMessage;
@@ -2261,7 +2324,7 @@ void AiLogic_AiInfo_CheckedInfo___ctor(
   v7 = (AiLogic_AiInfo_CheckedInfo_o *)((char *)v7 + 24);
   LODWORD(v7[-1].fields.tempSkillInfo) = inActType;
   BYTE4(v7[-1].fields.tempSkillInfo) = v8;
-  sub_1C6B9AC((CGThumbnailListItem_o *)v7, (int32_t)inSkillInfo, v9, v10);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v7, (int32_t)inSkillInfo, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -2269,17 +2332,21 @@ void AiLogic___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB92DB & 1) == 0 )
+  if ( (byte_4CCA41C & 1) == 0 )
   {
-    sub_1C6BA08(&AiLogic___c_TypeInfo);
-    byte_4CB92DB = 1;
+    sub_1C713B0(&AiLogic___c_TypeInfo);
+    byte_4CCA41C = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(AiLogic___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(AiLogic___c_TypeInfo);
   System_Object___ctor(v1, 0);
   AiLogic___c_TypeInfo->static_fields->__9 = (struct AiLogic___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)AiLogic___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)AiLogic___c_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -2296,7 +2363,7 @@ int32_t AiLogic___c___getBasicAct_b__16_1(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1C6BC60(this, a);
+    sub_1C71608(this, a);
   return b->fields.priority - a->fields.priority;
 }
 
@@ -2313,7 +2380,7 @@ bool AiLogic___c__DisplayClass12_0___checkThinkingBase_b__0(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return ((__int64 (__fastcall *)(AiBaseEntity_o *, _QWORD, _QWORD, _QWORD, const MethodInfo *))s->klass->vtable._6_isTiming.methodPtr)(
            s,
            (unsigned int)this->fields.procState,
@@ -2335,7 +2402,7 @@ bool AiLogic___c__DisplayClass16_0___getBasicAct_b__0(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return ((__int64 (__fastcall *)(AiBaseEntity_o *, _QWORD, _QWORD, _QWORD, const MethodInfo *))s->klass->vtable._6_isTiming.methodPtr)(
            s,
            (unsigned int)this->fields.procState,
@@ -2357,6 +2424,6 @@ bool AiLogic___c__DisplayClass16_1___getBasicAct_b__2(
         const MethodInfo *method)
 {
   if ( !s )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return s->fields.priority == this->fields.priority;
 }

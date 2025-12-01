@@ -19,17 +19,21 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
   __int64 v6; // x1
   struct UnityEngine_Transform_o *transform; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   UnityEngine_Transform_o *parent; // x0
-  UnityEngine_Transform_o *v11; // x20
-  UnityEngine_Transform_o *v12; // x21
-  UnityEngine_Transform_o *v13; // x21
-  UnityEngine_Transform_o *v14; // x21
+  UnityEngine_Transform_o *v15; // x20
+  UnityEngine_Transform_o *v16; // x21
+  UnityEngine_Transform_o *v17; // x21
+  UnityEngine_Transform_o *v18; // x21
 
-  if ( (byte_4CB56BE & 1) == 0 )
+  if ( (byte_4CC67DE & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB56BE = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC67DE = 1;
   }
   ConnectTarget = (UnityEngine_Object_o *)this->fields.ConnectTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -44,7 +48,7 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.mTrans = transform;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v8, v9, v10, v11, v12, v13);
     }
     parent = *p_mTrans;
     if ( !*p_mTrans )
@@ -52,40 +56,40 @@ void FlipEffectUpdater__OnLateUpdate(FlipEffectUpdater_o *this, const MethodInfo
     parent = UnityEngine_Transform__get_parent(parent, 0);
     if ( !*p_mTrans )
       goto LABEL_24;
-    v11 = parent;
+    v15 = parent;
     UnityEngine_Transform__set_parent(*p_mTrans, this->fields.ConnectTarget, 0);
-    v12 = this->fields.mTrans;
-    if ( !byte_4CAFC09 )
+    v16 = this->fields.mTrans;
+    if ( !byte_4CC0D09 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC09 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D09 = 1;
     }
-    if ( !v12 )
+    if ( !v16 )
       goto LABEL_24;
-    UnityEngine_Transform__set_localPosition(v12, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-    v13 = *p_mTrans;
-    if ( !byte_4CAFC09 )
+    UnityEngine_Transform__set_localPosition(v16, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+    v17 = *p_mTrans;
+    if ( !byte_4CC0D09 )
     {
-      parent = (UnityEngine_Transform_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC09 = 1;
+      parent = (UnityEngine_Transform_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D09 = 1;
     }
-    if ( !v13 )
+    if ( !v17 )
       goto LABEL_24;
-    UnityEngine_Transform__set_localEulerAngles(v13, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-    v14 = *p_mTrans;
-    if ( !byte_4CAFC0E )
+    UnityEngine_Transform__set_localEulerAngles(v17, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
+    v18 = *p_mTrans;
+    if ( !byte_4CC0D0E )
     {
-      parent = (UnityEngine_Transform_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC0E = 1;
+      parent = (UnityEngine_Transform_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D0E = 1;
     }
-    if ( !v14
-      || (UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
+    if ( !v18
+      || (UnityEngine_Transform__set_localScale(v18, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
           (parent = *p_mTrans) == 0) )
     {
 LABEL_24:
-      sub_1C6BC60(parent, v6);
+      sub_1C71608(parent, v6);
     }
-    UnityEngine_Transform__set_parent(parent, v11, 0);
+    UnityEngine_Transform__set_parent(parent, v15, 0);
   }
 }
 
@@ -94,9 +98,13 @@ void FlipEffectUpdater__Start(FlipEffectUpdater_o *this, const MethodInfo *metho
 {
   struct UnityEngine_Transform_o *transform; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v4, v5, v6, v7, v8, v9);
 }

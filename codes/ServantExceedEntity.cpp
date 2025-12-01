@@ -3,107 +3,143 @@ void ServantExceedEntity___ctor(ServantExceedEntity_o *this, const MethodInfo *m
   __int64 v3; // x0
   __int64 v4; // x1
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  __int64 v7; // x20
-  int32_t v8; // w1
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w1
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int32_t v17; // w1
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  int32_t v20; // w1
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  int32_t v23; // w1
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  __int64 v11; // x20
+  int32_t v12; // w1
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  int32_t v19; // w1
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
   int32_t v26; // w1
   int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  int32_t v29; // w1
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  int32_t v33; // w1
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
+  int32_t v40; // w1
+  int32_t v41; // w2
+  int32_t v42; // w3
+  System_String_o *v43; // x4
+  int32_t v44; // w5
+  int64_t v45; // x6
+  System_String_o *v46; // x7
+  int32_t v47; // w1
+  int32_t v48; // w2
+  int32_t v49; // w3
+  System_String_o *v50; // x4
+  int32_t v51; // w5
+  int64_t v52; // x6
+  System_String_o *v53; // x7
+  int32_t v54; // w1
+  int32_t v55; // w2
+  int32_t v56; // w3
+  System_String_o *v57; // x4
+  int32_t v58; // w5
+  int64_t v59; // x6
+  System_String_o *v60; // x7
+  int32_t v61; // w1
+  int32_t v62; // w2
+  int32_t v63; // w3
+  System_String_o *v64; // x4
+  int32_t v65; // w5
+  int64_t v66; // x6
+  System_String_o *v67; // x7
 
-  if ( (byte_4CB6BED & 1) == 0 )
+  if ( (byte_4CC7D11 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
-    sub_1C6BA08(&string___TypeInfo);
-    sub_1C6BA08(&StringLiteral_18008/*"class_b_"*/);
-    sub_1C6BA08(&StringLiteral_18012/*"class_g_"*/);
-    sub_1C6BA08(&StringLiteral_18013/*"class_n_"*/);
-    sub_1C6BA08(&StringLiteral_18014/*"class_s_"*/);
-    byte_4CB6BED = 1;
+    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
+    sub_1C713B0(&string___TypeInfo);
+    sub_1C713B0(&StringLiteral_18017/*"class_b_"*/);
+    sub_1C713B0(&StringLiteral_18021/*"class_g_"*/);
+    sub_1C713B0(&StringLiteral_18022/*"class_n_"*/);
+    sub_1C713B0(&StringLiteral_18023/*"class_s_"*/);
+    byte_4CC7D11 = 1;
   }
-  v3 = sub_1C6BAB0(string___TypeInfo, 8);
+  v3 = sub_1C71458(string___TypeInfo, 8);
   if ( !v3 )
-    sub_1C6BC60(0, v4);
-  v7 = v3;
+    sub_1C71608(0, v4);
+  v11 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_13;
-  v8 = StringLiteral_18013/*"class_n_"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18013/*"class_n_"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), v8, v5, v6);
-  if ( *(_DWORD *)(v7 + 24) <= 1u )
+  v12 = StringLiteral_18022/*"class_n_"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18022/*"class_n_"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
+  if ( *(_DWORD *)(v11 + 24) <= 1u )
     goto LABEL_13;
-  v11 = StringLiteral_18008/*"class_b_"*/;
-  *(_QWORD *)(v7 + 40) = StringLiteral_18008/*"class_b_"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 40), v11, v9, v10);
-  if ( *(_DWORD *)(v7 + 24) <= 2u )
+  v19 = StringLiteral_18017/*"class_b_"*/;
+  *(_QWORD *)(v11 + 40) = StringLiteral_18017/*"class_b_"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 40), v19, v13, v14, v15, v16, v17, v18);
+  if ( *(_DWORD *)(v11 + 24) <= 2u )
     goto LABEL_13;
-  v14 = StringLiteral_18014/*"class_s_"*/;
-  *(_QWORD *)(v7 + 48) = StringLiteral_18014/*"class_s_"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 48), v14, v12, v13);
-  if ( *(_DWORD *)(v7 + 24) <= 3u )
+  v26 = StringLiteral_18023/*"class_s_"*/;
+  *(_QWORD *)(v11 + 48) = StringLiteral_18023/*"class_s_"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 48), v26, v20, v21, v22, v23, v24, v25);
+  if ( *(_DWORD *)(v11 + 24) <= 3u )
     goto LABEL_13;
-  v17 = StringLiteral_18012/*"class_g_"*/;
-  *(_QWORD *)(v7 + 56) = StringLiteral_18012/*"class_g_"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 56), v17, v15, v16);
-  if ( *(_DWORD *)(v7 + 24) <= 4u )
+  v33 = StringLiteral_18021/*"class_g_"*/;
+  *(_QWORD *)(v11 + 56) = StringLiteral_18021/*"class_g_"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 56), v33, v27, v28, v29, v30, v31, v32);
+  if ( *(_DWORD *)(v11 + 24) <= 4u )
     goto LABEL_13;
-  v20 = StringLiteral_18012/*"class_g_"*/;
-  *(_QWORD *)(v7 + 64) = StringLiteral_18012/*"class_g_"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 64), v20, v18, v19);
-  if ( *(_DWORD *)(v7 + 24) <= 5u
-    || (v23 = StringLiteral_18012/*"class_g_"*/,
-        *(_QWORD *)(v7 + 72) = StringLiteral_18012/*"class_g_"*/,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 72), v23, v21, v22),
-        *(_DWORD *)(v7 + 24) <= 6u)
-    || (v26 = StringLiteral_18013/*"class_n_"*/,
-        *(_QWORD *)(v7 + 80) = StringLiteral_18013/*"class_n_"*/,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 80), v26, v24, v25),
-        *(_DWORD *)(v7 + 24) <= 7u) )
+  v40 = StringLiteral_18021/*"class_g_"*/;
+  *(_QWORD *)(v11 + 64) = StringLiteral_18021/*"class_g_"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 64), v40, v34, v35, v36, v37, v38, v39);
+  if ( *(_DWORD *)(v11 + 24) <= 5u
+    || (v47 = StringLiteral_18021/*"class_g_"*/,
+        *(_QWORD *)(v11 + 72) = StringLiteral_18021/*"class_g_"*/,
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 72), v47, v41, v42, v43, v44, v45, v46),
+        *(_DWORD *)(v11 + 24) <= 6u)
+    || (v54 = StringLiteral_18022/*"class_n_"*/,
+        *(_QWORD *)(v11 + 80) = StringLiteral_18022/*"class_n_"*/,
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 80), v54, v48, v49, v50, v51, v52, v53),
+        *(_DWORD *)(v11 + 24) <= 7u) )
   {
 LABEL_13:
-    sub_1C6BC68(v3);
+    sub_1C71610(v3);
   }
-  v29 = StringLiteral_18013/*"class_n_"*/;
-  *(_QWORD *)(v7 + 88) = StringLiteral_18013/*"class_n_"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 88), v29, v27, v28);
-  this->fields.frameCardFileList = (struct System_String_array *)v7;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, v7, v30, v31);
+  v61 = StringLiteral_18022/*"class_n_"*/;
+  *(_QWORD *)(v11 + 88) = StringLiteral_18022/*"class_n_"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 88), v61, v55, v56, v57, v58, v59, v60);
+  this->fields.frameCardFileList = (struct System_String_array *)v11;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, v11, v62, v63, v64, v65, v66, v67);
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantExceedEntity__CreatePK(int32_t rarity, int32_t exceedCount, const MethodInfo *method)
 {
-  if ( (byte_4CB6BEC & 1) == 0 )
+  if ( (byte_4CC7D10 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CB6BEC = 1;
+    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4CC7D10 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            rarity,
            exceedCount,
-           (const MethodInfo_31394F0 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_3149294 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -144,9 +180,9 @@ System_String_o *ServantExceedEntity__getFrameCardPrefix(ServantExceedEntity_o *
 
   frameCardFileList = this->fields.frameCardFileList;
   if ( !frameCardFileList )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   frameType = this->fields.frameType;
   if ( (unsigned int)frameType >= LODWORD(frameCardFileList->max_length) )
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   return frameCardFileList->m_Items[frameType];
 }

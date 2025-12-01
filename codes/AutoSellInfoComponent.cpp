@@ -9,10 +9,10 @@ void AutoSellInfoComponent__Clear(AutoSellInfoComponent_o *this, const MethodInf
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CB26B3 & 1) == 0 )
+  if ( (byte_4CC37C4 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB26B3 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC37C4 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -31,7 +31,7 @@ void AutoSellInfoComponent__Clear(AutoSellInfoComponent_o *this, const MethodInf
         (gameObject = (UnityEngine_GameObject_o *)this->fields.qpLabel) == 0) )
   {
 LABEL_10:
-    sub_1C6BC60(gameObject, v4);
+    sub_1C71608(gameObject, v4);
   }
   UILabel__set_text((UILabel_o *)gameObject, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
@@ -71,14 +71,14 @@ void AutoSellInfoComponent__SetData(
   System_String_o *v34; // x8
   int64_t v35; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CB26B4 & 1) == 0 )
+  if ( (byte_4CC37C5 & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&StringLiteral_25315/*"{0}{1:#,0}"*/);
-    sub_1C6BA08(&StringLiteral_15917/*"[FF0000]{0}{1:#,0}[-]"*/);
-    byte_4CB26B4 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&StringLiteral_25335/*"{0}{1:#,0}"*/);
+    sub_1C713B0(&StringLiteral_15924/*"[FF0000]{0}{1:#,0}[-]"*/);
+    byte_4CC37C5 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -110,8 +110,8 @@ LABEL_12:
       manaLabel = this->fields.manaLabel;
       LODWORD(v35) = mana;
       v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
-      gameObject = (UnityEngine_GameObject_o *)System_String__Format_64008100(
-                                                 (System_String_o *)StringLiteral_25315/*"{0}{1:#,0}"*/,
+      gameObject = (UnityEngine_GameObject_o *)System_String__Format_64073032(
+                                                 (System_String_o *)StringLiteral_25335/*"{0}{1:#,0}"*/,
                                                  v13,
                                                  v17,
                                                  0);
@@ -133,15 +133,15 @@ LABEL_12:
       {
         LODWORD(v35) = 0;
         v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
-        v23 = (System_String_o *)StringLiteral_15917/*"[FF0000]{0}{1:#,0}[-]"*/;
+        v23 = (System_String_o *)StringLiteral_15924/*"[FF0000]{0}{1:#,0}[-]"*/;
       }
       else
       {
         LODWORD(v35) = v21;
         v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
-        v23 = (System_String_o *)StringLiteral_25315/*"{0}{1:#,0}"*/;
+        v23 = (System_String_o *)StringLiteral_25335/*"{0}{1:#,0}"*/;
       }
-      gameObject = (UnityEngine_GameObject_o *)System_String__Format_64008100(v23, v13, v22, 0);
+      gameObject = (UnityEngine_GameObject_o *)System_String__Format_64073032(v23, v13, v22, 0);
       if ( !v20 )
         goto LABEL_37;
       v18 = (System_String_o *)gameObject;
@@ -176,15 +176,15 @@ LABEL_12:
       {
         v35 = 0;
         v33 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v35);
-        v34 = (System_String_o *)StringLiteral_15917/*"[FF0000]{0}{1:#,0}[-]"*/;
+        v34 = (System_String_o *)StringLiteral_15924/*"[FF0000]{0}{1:#,0}[-]"*/;
       }
       else
       {
         v35 = v32;
         v33 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v35);
-        v34 = (System_String_o *)StringLiteral_25315/*"{0}{1:#,0}"*/;
+        v34 = (System_String_o *)StringLiteral_25335/*"{0}{1:#,0}"*/;
       }
-      gameObject = (UnityEngine_GameObject_o *)System_String__Format_64008100(v34, PlusOperatorString, v33, 0);
+      gameObject = (UnityEngine_GameObject_o *)System_String__Format_64073032(v34, PlusOperatorString, v33, 0);
       if ( qpLabel )
       {
         v29 = (System_String_o *)gameObject;
@@ -192,14 +192,14 @@ LABEL_12:
         goto LABEL_36;
       }
 LABEL_37:
-      sub_1C6BC60(gameObject, v12);
+      sub_1C71608(gameObject, v12);
     }
   }
   v27 = this->fields.qpLabel;
   v35 = qp;
   v28 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v35);
-  gameObject = (UnityEngine_GameObject_o *)System_String__Format_64008100(
-                                             (System_String_o *)StringLiteral_25315/*"{0}{1:#,0}"*/,
+  gameObject = (UnityEngine_GameObject_o *)System_String__Format_64073032(
+                                             (System_String_o *)StringLiteral_25335/*"{0}{1:#,0}"*/,
                                              PlusOperatorString,
                                              v28,
                                              0);

@@ -40,24 +40,24 @@ void EventRewardAnotherPayListViewManager__CreateList(
   ItemEntity_o *v35; // [xsp+0h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4CB0A9F & 1) == 0 )
+  if ( (byte_4CC1BA3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
-    sub_1C6BA08(&EventRewardAnotherPayListViewItem_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C6BA08(&StringLiteral_15192/*"UpdateScrollPosition"*/);
-    byte_4CB0A9F = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+    sub_1C713B0(&EventRewardAnotherPayListViewItem_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C713B0(&StringLiteral_15198/*"UpdateScrollPosition"*/);
+    byte_4CC1BA3 = 1;
   }
   v35 = 0;
   entity = 0;
   this->fields.onClickAction = clickAction;
-  sub_1C6B9AC(&this->fields.onClickAction, clickAction);
+  sub_1C71354(&this->fields.onClickAction, clickAction);
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ItemMaster___);
   v15 = (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object;
   if ( isOnlyAnotherItem )
     goto LABEL_12;
@@ -67,7 +67,7 @@ void EventRewardAnotherPayListViewManager__CreateList(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     shopItemId,
-                                    (const MethodInfo_33F9128 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                    (const MethodInfo_3408ECC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
   {
 LABEL_12:
@@ -79,7 +79,7 @@ LABEL_12:
   {
     itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
     v17 = entity;
-    v18 = (EventRewardAnotherPayListViewItem_o *)sub_1C6BC54(EventRewardAnotherPayListViewItem_TypeInfo);
+    v18 = (EventRewardAnotherPayListViewItem_o *)sub_1C715FC(EventRewardAnotherPayListViewItem_TypeInfo);
     EventRewardAnotherPayListViewItem___ctor(v18, 0, eventId, (ItemEntity_o *)v17, 0, 0, v19);
     if ( !itemList )
       goto LABEL_29;
@@ -94,14 +94,14 @@ LABEL_12:
       System_Collections_Generic_List_object___AddWithResize(
         itemList,
         (Il2CppObject *)v18,
-        *(const MethodInfo_3800974 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+        *(const MethodInfo_3810718 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
     }
     else
     {
       v23 = &items->obj.klass + size;
       itemList->fields._size = size + 1;
       v23[4] = (Il2CppClass *)v18;
-      Master_object = (Il2CppObject *)sub_1C6B9AC(v23 + 4, v18);
+      Master_object = (Il2CppObject *)sub_1C71354(v23 + 4, v18);
     }
     v24 = 1;
     if ( !anotherItemIds )
@@ -114,19 +114,19 @@ LABEL_12:
     while ( 1 )
     {
       if ( v26 >= (unsigned int)max_length )
-        sub_1C6BC68(Master_object);
+        sub_1C71610(Master_object);
       if ( !v15 )
         break;
       Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                         v15,
                                         (Il2CppObject **)&v35,
                                         anotherItemIds->m_Items[v26],
-                                        (const MethodInfo_33F9128 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
+                                        (const MethodInfo_3408ECC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__TryGetEntity__);
       if ( ((unsigned __int8)Master_object & 1) != 0 )
       {
         v27 = (System_Collections_Generic_List_object__o *)this->fields.itemList;
         v28 = v35;
-        v29 = (EventRewardAnotherPayListViewItem_o *)sub_1C6BC54(EventRewardAnotherPayListViewItem_TypeInfo);
+        v29 = (EventRewardAnotherPayListViewItem_o *)sub_1C715FC(EventRewardAnotherPayListViewItem_TypeInfo);
         EventRewardAnotherPayListViewItem___ctor(v29, v24, eventId, v28, 1, v24, v30);
         if ( !v27 )
           break;
@@ -141,14 +141,14 @@ LABEL_12:
           System_Collections_Generic_List_object___AddWithResize(
             v27,
             (Il2CppObject *)v29,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
         }
         else
         {
           v34 = &v31->obj.klass + v33;
           v27->fields._size = v33 + 1;
           v34[4] = (Il2CppClass *)v29;
-          Master_object = (Il2CppObject *)sub_1C6B9AC(v34 + 4, v29);
+          Master_object = (Il2CppObject *)sub_1C71354(v34 + 4, v29);
         }
         ++v24;
       }
@@ -157,10 +157,10 @@ LABEL_12:
         goto LABEL_28;
     }
 LABEL_29:
-    sub_1C6BC60(Master_object, v14);
+    sub_1C71608(Master_object, v14);
   }
 LABEL_28:
-  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_15192/*"UpdateScrollPosition"*/, 0.0, 0);
+  UnityEngine_MonoBehaviour__Invoke((UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_15198/*"UpdateScrollPosition"*/, 0.0, 0);
 }
 
 
@@ -177,10 +177,10 @@ void EventRewardAnotherPayListViewManager__OnClickListView(
   System_Reflection_MethodBase_o *v9; // x0
 
   v4 = this;
-  if ( (byte_4CB0AA0 & 1) == 0 )
+  if ( (byte_4CC1BA4 & 1) == 0 )
   {
-    this = (EventRewardAnotherPayListViewManager_o *)sub_1C6BA08(&Method_EventRewardAnotherPayListViewManager_OnClickListView__);
-    byte_4CB0AA0 = 1;
+    this = (EventRewardAnotherPayListViewManager_o *)sub_1C713B0(&Method_EventRewardAnotherPayListViewManager_OnClickListView__);
+    byte_4CC1BA4 = 1;
   }
   if ( !obj )
     goto LABEL_16;
@@ -212,15 +212,15 @@ LABEL_15:
         return;
       }
 LABEL_16:
-      sub_1C6BC60(this, obj);
+      sub_1C71608(this, obj);
     }
   }
   else
   {
     v8 = Method_EventRewardAnotherPayListViewManager_OnClickListView__;
     if ( (*((_BYTE *)Method_EventRewardAnotherPayListViewManager_OnClickListView__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1C6BA20(Method_EventRewardAnotherPayListViewManager_OnClickListView__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v8, v8[4]);
+      v8 = (_QWORD *)sub_1C713C8(Method_EventRewardAnotherPayListViewManager_OnClickListView__);
+    v9 = (System_Reflection_MethodBase_o *)sub_1C71394(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0, 0);
   }
 }
@@ -236,6 +236,6 @@ void EventRewardAnotherPayListViewManager__UpdateScrollPosition(
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 1, -1, 0);
   scrollView = this->fields.scrollView;
   if ( !scrollView )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   UIScrollView__UpdatePosition(scrollView, 0);
 }

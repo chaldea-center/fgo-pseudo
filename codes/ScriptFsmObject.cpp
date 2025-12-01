@@ -25,7 +25,7 @@ void ScriptFsmObject__SendEvent(ScriptFsmObject_o *this, System_String_o *eventN
   fsm = this->fields.fsm;
   this->fields.isPlaying = 1;
   if ( !fsm )
-    sub_1C6BC60(0, v5);
+    sub_1C71608(0, v5);
   PlayMakerFSM__SendEvent(fsm, eventName, 0);
 }
 
@@ -37,7 +37,7 @@ void ScriptFsmObject__SetBool(ScriptFsmObject_o *this, System_String_o *name, bo
 
   fsm = this->fields.fsm;
   if ( !fsm || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0)) == 0 )
-    sub_1C6BC60(fsm, name);
+    sub_1C71608(fsm, name);
   FsmBool = HutongGames_PlayMaker_FsmVariables__GetFsmBool((HutongGames_PlayMaker_FsmVariables_o *)fsm, name, 0);
   if ( FsmBool )
     FsmBool->fields.value = value;
@@ -51,7 +51,7 @@ void ScriptFsmObject__SetFloat(ScriptFsmObject_o *this, System_String_o *name, f
 
   fsm = this->fields.fsm;
   if ( !fsm || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0)) == 0 )
-    sub_1C6BC60(fsm, name);
+    sub_1C71608(fsm, name);
   FsmFloat = HutongGames_PlayMaker_FsmVariables__GetFsmFloat((HutongGames_PlayMaker_FsmVariables_o *)fsm, name, 0);
   if ( FsmFloat )
     FsmFloat->fields.value = value;
@@ -67,7 +67,7 @@ void ScriptFsmObject__SetState(ScriptFsmObject_o *this, System_String_o *stateNa
   fsm = this->fields.fsm;
   this->fields.isPlaying = 1;
   if ( !fsm )
-    sub_1C6BC60(0, v5);
+    sub_1C71608(0, v5);
   PlayMakerFSM__SetState(fsm, stateName, 0);
 }
 
@@ -81,16 +81,20 @@ void ScriptFsmObject__SetString(
   PlayMakerFSM_o *fsm; // x0
   HutongGames_PlayMaker_FsmString_o *FsmString; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
   fsm = this->fields.fsm;
   if ( !fsm || (fsm = (PlayMakerFSM_o *)PlayMakerFSM__get_FsmVariables(fsm, 0)) == 0 )
-    sub_1C6BC60(fsm, name);
+    sub_1C71608(fsm, name);
   FsmString = HutongGames_PlayMaker_FsmVariables__GetFsmString((HutongGames_PlayMaker_FsmVariables_o *)fsm, name, 0);
   if ( FsmString )
   {
     FsmString->fields.value = value;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&FsmString->fields.value, (int32_t)value, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&FsmString->fields.value, (int32_t)value, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -99,13 +103,13 @@ void ScriptFsmObject__Skip(ScriptFsmObject_o *this, const MethodInfo *method)
 {
   PlayMakerFSM_o *fsm; // x0
 
-  if ( (byte_4CB8262 & 1) == 0 )
+  if ( (byte_4CC9395 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_12237/*"SKIP"*/);
-    byte_4CB8262 = 1;
+    sub_1C713B0(&StringLiteral_12243/*"SKIP"*/);
+    byte_4CC9395 = 1;
   }
   fsm = this->fields.fsm;
   if ( !fsm )
-    sub_1C6BC60(0, method);
-  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12237/*"SKIP"*/, 0);
+    sub_1C71608(0, method);
+  PlayMakerFSM__SendEvent(fsm, (System_String_o *)StringLiteral_12243/*"SKIP"*/, 0);
 }

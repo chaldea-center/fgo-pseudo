@@ -1,202 +1,234 @@
 void TutorialFlag___cctor(const MethodInfo *method)
 {
   int32_t v1; // w2
-  const MethodInfo *v2; // x3
-  int32_t v3; // w1
-  struct TutorialFlag_StaticFields *static_fields; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  int32_t v4; // w5
+  int64_t v5; // x6
+  System_String_o *v6; // x7
   int32_t v7; // w1
-  struct TutorialFlag_StaticFields *v8; // x0
+  struct TutorialFlag_StaticFields *static_fields; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w1
-  struct TutorialFlag_StaticFields *v12; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   int32_t v15; // w1
   struct TutorialFlag_StaticFields *v16; // x0
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  System_Collections_Generic_Dictionary_TKey__TValue__o *v19; // x19
-  __int64 v20; // x0
-  __int64 v21; // x1
-  struct TutorialFlag_StaticFields *v22; // x0
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  int32_t v23; // w1
+  struct TutorialFlag_StaticFields *v24; // x0
+  int32_t v25; // w2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
+  int32_t v31; // w1
+  struct TutorialFlag_StaticFields *v32; // x0
+  int32_t v33; // w2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  int32_t v36; // w5
+  int64_t v37; // x6
+  System_String_o *v38; // x7
+  System_Collections_Generic_Dictionary_TKey__TValue__o *v39; // x19
+  __int64 v40; // x0
+  __int64 v41; // x1
+  struct TutorialFlag_StaticFields *v42; // x0
+  int32_t v43; // w2
+  int32_t v44; // w3
+  System_String_o *v45; // x4
+  int32_t v46; // w5
+  int64_t v47; // x6
+  System_String_o *v48; // x7
 
-  if ( (byte_4CB51FD & 1) == 0 )
+  if ( (byte_4CC631D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    sub_1C6BA08(&StringLiteral_13550/*"TUTORIAL_LABEL_EVENT_GACHA"*/);
-    sub_1C6BA08(&StringLiteral_13563/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/);
-    sub_1C6BA08(&StringLiteral_13545/*"TUTORIAL_LABEL_COMBINE"*/);
-    sub_1C6BA08(&StringLiteral_13561/*"TUTORIAL_LABEL_RAID2_BATTLE"*/);
-    sub_1C6BA08(&StringLiteral_13549/*"TUTORIAL_LABEL_END"*/);
-    sub_1C6BA08(&StringLiteral_13559/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/);
-    sub_1C6BA08(&StringLiteral_14617/*"TutorialFlagConfigId"*/);
-    sub_1C6BA08(&StringLiteral_13546/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/);
-    sub_1C6BA08(&StringLiteral_14621/*"TutorialFlagProgress"*/);
-    sub_1C6BA08(&StringLiteral_13553/*"TUTORIAL_LABEL_FAVORITE1"*/);
-    sub_1C6BA08(&StringLiteral_14618/*"TutorialFlagGachaId"*/);
-    sub_1C6BA08(&StringLiteral_13552/*"TUTORIAL_LABEL_EVENT_REWARD"*/);
-    sub_1C6BA08(&StringLiteral_13548/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/);
-    sub_1C6BA08(&StringLiteral_13558/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/);
-    sub_1C6BA08(&StringLiteral_13565/*"TUTORIAL_LABEL_STONE_GACHA"*/);
-    sub_1C6BA08(&StringLiteral_13566/*"TUTORIAL_LABEL_SVT_LEAVE"*/);
-    sub_1C6BA08(&StringLiteral_13564/*"TUTORIAL_LABEL_SHOP"*/);
-    sub_1C6BA08(&StringLiteral_13557/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/);
-    sub_1C6BA08(&StringLiteral_14620/*"TutorialFlagLocalId"*/);
-    sub_1C6BA08(&StringLiteral_14619/*"TutorialFlagGachaIdArray"*/);
-    sub_1C6BA08(&StringLiteral_13560/*"TUTORIAL_LABEL_MASHU_CHANGE"*/);
-    sub_1C6BA08(&StringLiteral_13551/*"TUTORIAL_LABEL_EVENT_MISSION"*/);
-    sub_1C6BA08(&StringLiteral_13556/*"TUTORIAL_LABEL_GACHA_SCENE"*/);
-    sub_1C6BA08(&StringLiteral_13547/*"TUTORIAL_LABEL_DECK_SCENE"*/);
-    sub_1C6BA08(&StringLiteral_13562/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/);
-    sub_1C6BA08(&StringLiteral_13554/*"TUTORIAL_LABEL_FAVORITE2"*/);
-    sub_1C6BA08(&StringLiteral_13555/*"TUTORIAL_LABEL_FES"*/);
-    byte_4CB51FD = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    sub_1C713B0(&StringLiteral_13556/*"TUTORIAL_LABEL_EVENT_GACHA"*/);
+    sub_1C713B0(&StringLiteral_13569/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/);
+    sub_1C713B0(&StringLiteral_13551/*"TUTORIAL_LABEL_COMBINE"*/);
+    sub_1C713B0(&StringLiteral_13567/*"TUTORIAL_LABEL_RAID2_BATTLE"*/);
+    sub_1C713B0(&StringLiteral_13555/*"TUTORIAL_LABEL_END"*/);
+    sub_1C713B0(&StringLiteral_13565/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/);
+    sub_1C713B0(&StringLiteral_14623/*"TutorialFlagConfigId"*/);
+    sub_1C713B0(&StringLiteral_13552/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/);
+    sub_1C713B0(&StringLiteral_14627/*"TutorialFlagProgress"*/);
+    sub_1C713B0(&StringLiteral_13559/*"TUTORIAL_LABEL_FAVORITE1"*/);
+    sub_1C713B0(&StringLiteral_14624/*"TutorialFlagGachaId"*/);
+    sub_1C713B0(&StringLiteral_13558/*"TUTORIAL_LABEL_EVENT_REWARD"*/);
+    sub_1C713B0(&StringLiteral_13554/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/);
+    sub_1C713B0(&StringLiteral_13564/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/);
+    sub_1C713B0(&StringLiteral_13571/*"TUTORIAL_LABEL_STONE_GACHA"*/);
+    sub_1C713B0(&StringLiteral_13572/*"TUTORIAL_LABEL_SVT_LEAVE"*/);
+    sub_1C713B0(&StringLiteral_13570/*"TUTORIAL_LABEL_SHOP"*/);
+    sub_1C713B0(&StringLiteral_13563/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/);
+    sub_1C713B0(&StringLiteral_14626/*"TutorialFlagLocalId"*/);
+    sub_1C713B0(&StringLiteral_14625/*"TutorialFlagGachaIdArray"*/);
+    sub_1C713B0(&StringLiteral_13566/*"TUTORIAL_LABEL_MASHU_CHANGE"*/);
+    sub_1C713B0(&StringLiteral_13557/*"TUTORIAL_LABEL_EVENT_MISSION"*/);
+    sub_1C713B0(&StringLiteral_13562/*"TUTORIAL_LABEL_GACHA_SCENE"*/);
+    sub_1C713B0(&StringLiteral_13553/*"TUTORIAL_LABEL_DECK_SCENE"*/);
+    sub_1C713B0(&StringLiteral_13568/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/);
+    sub_1C713B0(&StringLiteral_13560/*"TUTORIAL_LABEL_FAVORITE2"*/);
+    sub_1C713B0(&StringLiteral_13561/*"TUTORIAL_LABEL_FES"*/);
+    byte_4CC631D = 1;
   }
-  TutorialFlag_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_14621/*"TutorialFlagProgress"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)TutorialFlag_TypeInfo->static_fields, StringLiteral_14621/*"TutorialFlagProgress"*/, v1, v2);
-  v3 = StringLiteral_14620/*"TutorialFlagLocalId"*/;
+  TutorialFlag_TypeInfo->static_fields->SAVE_KEY = (struct System_String_o *)StringLiteral_14627/*"TutorialFlagProgress"*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)TutorialFlag_TypeInfo->static_fields,
+    StringLiteral_14627/*"TutorialFlagProgress"*/,
+    v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6);
+  v7 = StringLiteral_14626/*"TutorialFlagLocalId"*/;
   static_fields = TutorialFlag_TypeInfo->static_fields;
-  static_fields->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14620/*"TutorialFlagLocalId"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->SAVE_KEY2, v3, v5, v6);
-  v7 = StringLiteral_14617/*"TutorialFlagConfigId"*/;
-  v8 = TutorialFlag_TypeInfo->static_fields;
-  v8->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14617/*"TutorialFlagConfigId"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->SAVE_KEY3, v7, v9, v10);
-  v11 = StringLiteral_14618/*"TutorialFlagGachaId"*/;
-  v12 = TutorialFlag_TypeInfo->static_fields;
-  v12->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14618/*"TutorialFlagGachaId"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->SAVE_KEY4, v11, v13, v14);
-  v15 = StringLiteral_14619/*"TutorialFlagGachaIdArray"*/;
+  static_fields->SAVE_KEY2 = (struct System_String_o *)StringLiteral_14626/*"TutorialFlagLocalId"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->SAVE_KEY2, v7, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_14623/*"TutorialFlagConfigId"*/;
   v16 = TutorialFlag_TypeInfo->static_fields;
-  v16->SaveKey5 = (struct System_String_o *)StringLiteral_14619/*"TutorialFlagGachaIdArray"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v16->SaveKey5, v15, v17, v18);
-  v19 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo);
+  v16->SAVE_KEY3 = (struct System_String_o *)StringLiteral_14623/*"TutorialFlagConfigId"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v16->SAVE_KEY3, v15, v17, v18, v19, v20, v21, v22);
+  v23 = StringLiteral_14624/*"TutorialFlagGachaId"*/;
+  v24 = TutorialFlag_TypeInfo->static_fields;
+  v24->SAVE_KEY4 = (struct System_String_o *)StringLiteral_14624/*"TutorialFlagGachaId"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v24->SAVE_KEY4, v23, v25, v26, v27, v28, v29, v30);
+  v31 = StringLiteral_14625/*"TutorialFlagGachaIdArray"*/;
+  v32 = TutorialFlag_TypeInfo->static_fields;
+  v32->SaveKey5 = (struct System_String_o *)StringLiteral_14625/*"TutorialFlagGachaIdArray"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v32->SaveKey5, v31, v33, v34, v35, v36, v37, v38);
+  v39 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C715FC(System_Collections_Generic_Dictionary_string__TutorialFlag_Id__TypeInfo);
   System_Collections_Generic_Dictionary_object__Int32Enum____ctor(
-    v19,
-    (const MethodInfo_34B5170 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
-  if ( !v19 )
-    sub_1C6BC60(v20, v21);
+    v39,
+    (const MethodInfo_34C4F14 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id___ctor__);
+  if ( !v39 )
+    sub_1C71608(v40, v41);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13565/*"TUTORIAL_LABEL_STONE_GACHA"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13571/*"TUTORIAL_LABEL_STONE_GACHA"*/,
     101,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13549/*"TUTORIAL_LABEL_END"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13555/*"TUTORIAL_LABEL_END"*/,
     102,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13564/*"TUTORIAL_LABEL_SHOP"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13570/*"TUTORIAL_LABEL_SHOP"*/,
     103,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13545/*"TUTORIAL_LABEL_COMBINE"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13551/*"TUTORIAL_LABEL_COMBINE"*/,
     104,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13553/*"TUTORIAL_LABEL_FAVORITE1"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13559/*"TUTORIAL_LABEL_FAVORITE1"*/,
     105,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13554/*"TUTORIAL_LABEL_FAVORITE2"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13560/*"TUTORIAL_LABEL_FAVORITE2"*/,
     106,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13556/*"TUTORIAL_LABEL_GACHA_SCENE"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13562/*"TUTORIAL_LABEL_GACHA_SCENE"*/,
     107,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13557/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13563/*"TUTORIAL_LABEL_GACHA_SVT_EQUIP"*/,
     108,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13547/*"TUTORIAL_LABEL_DECK_SCENE"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13553/*"TUTORIAL_LABEL_DECK_SCENE"*/,
     109,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13548/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13554/*"TUTORIAL_LABEL_DECK_SVT_EQUIP"*/,
     110,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13550/*"TUTORIAL_LABEL_EVENT_GACHA"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13556/*"TUTORIAL_LABEL_EVENT_GACHA"*/,
     111,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13552/*"TUTORIAL_LABEL_EVENT_REWARD"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13558/*"TUTORIAL_LABEL_EVENT_REWARD"*/,
     112,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13546/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13552/*"TUTORIAL_LABEL_DECK_IN_SVT_EQUIP"*/,
     113,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13551/*"TUTORIAL_LABEL_EVENT_MISSION"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13557/*"TUTORIAL_LABEL_EVENT_MISSION"*/,
     114,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13560/*"TUTORIAL_LABEL_MASHU_CHANGE"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13566/*"TUTORIAL_LABEL_MASHU_CHANGE"*/,
     115,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13558/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13564/*"TUTORIAL_LABEL_IBARAKI_RAID_BATTLE"*/,
     117,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13559/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13565/*"TUTORIAL_LABEL_IBARAKI_RAID_EVENT_REWARD"*/,
     118,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13561/*"TUTORIAL_LABEL_RAID2_BATTLE"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13567/*"TUTORIAL_LABEL_RAID2_BATTLE"*/,
     120,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13563/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13569/*"TUTORIAL_LABEL_RAID2_EVENT_REWARD"*/,
     121,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13562/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13568/*"TUTORIAL_LABEL_RAID2_BATTLE_2"*/,
     122,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13566/*"TUTORIAL_LABEL_SVT_LEAVE"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13572/*"TUTORIAL_LABEL_SVT_LEAVE"*/,
     126,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
   System_Collections_Generic_Dictionary_object__Int32Enum___Add(
-    v19,
-    (Il2CppObject *)StringLiteral_13555/*"TUTORIAL_LABEL_FES"*/,
+    v39,
+    (Il2CppObject *)StringLiteral_13561/*"TUTORIAL_LABEL_FES"*/,
     127,
-    (const MethodInfo_34B5B24 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
-  v22 = TutorialFlag_TypeInfo->static_fields;
-  v22->flagNameList = (struct System_Collections_Generic_Dictionary_string__TutorialFlag_Id__o *)v19;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v22->flagNameList, (int32_t)v19, v23, v24);
+    (const MethodInfo_34C58C8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__Add__);
+  v42 = TutorialFlag_TypeInfo->static_fields;
+  v42->flagNameList = (struct System_Collections_Generic_Dictionary_string__TutorialFlag_Id__o *)v39;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v42->flagNameList, (int32_t)v39, v43, v44, v45, v46, v47, v48);
 }
 
 
@@ -206,16 +238,56 @@ void TutorialFlag___ctor(TutorialFlag_o *this, const MethodInfo *method)
 }
 
 
+bool TutorialFlag__CheckGachaFlagArray(int32_t gachaFlagId, const MethodInfo *method)
+{
+  TutorialFlag_c *v3; // x0
+  System_Int32_array *GachaFlagArray; // x0
+  __int64 v5; // x1
+  int32_t v6; // w8
+  int max_length; // w9
+  int v8; // w8
+  _BOOL4 v9; // w0
+
+  if ( (byte_4CC6318 & 1) == 0 )
+  {
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6318 = 1;
+  }
+  v3 = TutorialFlag_TypeInfo;
+  if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
+  GachaFlagArray = TutorialFlag__LoadGachaFlagArray((const MethodInfo *)v3);
+  v6 = gachaFlagId + 31;
+  if ( gachaFlagId >= 0 )
+    v6 = gachaFlagId;
+  if ( !GachaFlagArray )
+    sub_1C71608(0, v5);
+  max_length = GachaFlagArray->max_length;
+  v8 = v6 >> 5;
+  if ( v8 >= max_length )
+  {
+    LOBYTE(v9) = 0;
+  }
+  else
+  {
+    if ( v8 >= (unsigned int)max_length )
+      sub_1C71610(GachaFlagArray);
+    return ((unsigned int)GachaFlagArray->m_Items[v8] >> gachaFlagId) & 1;
+  }
+  return v9;
+}
+
+
 void TutorialFlag__ClearProgress(const MethodInfo *method)
 {
   ManagerConfig_c *v1; // x0
   TutorialFlag_c *v2; // x0
 
-  if ( (byte_4CB51EB & 1) == 0 )
+  if ( (byte_4CC630A & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51EB = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC630A = 1;
   }
   v1 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -241,10 +313,10 @@ void TutorialFlag__CompleteProgress(const MethodInfo *method)
 {
   const MethodInfo *v1; // x1
 
-  if ( (byte_4CB51EC & 1) == 0 )
+  if ( (byte_4CC630B & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51EC = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC630B = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
@@ -256,10 +328,10 @@ void TutorialFlag__DeleteContinueData(const MethodInfo *method)
 {
   TutorialFlag_c *v1; // x0
 
-  if ( (byte_4CB51E1 & 1) == 0 )
+  if ( (byte_4CC6300 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51E1 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6300 = 1;
   }
   v1 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -280,15 +352,15 @@ bool TutorialFlag__Get(System_String_o *flagIdName, const MethodInfo *method)
   int32_t Id; // w0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4CB51E4 & 1) == 0 )
+  if ( (byte_4CC6303 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51E4 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6303 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   Id = TutorialFlag__GetId(flagIdName, method);
-  return TutorialFlag__Get_40657328(Id, v4);
+  return TutorialFlag__Get_40699620(Id, v4);
 }
 
 
@@ -297,10 +369,10 @@ bool TutorialFlag__GetConfigFlg(int32_t configFlagId, const MethodInfo *method)
   TutorialFlag_c *v3; // x0
   int v4; // w19
 
-  if ( (byte_4CB51F5 & 1) == 0 )
+  if ( (byte_4CC6314 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51F5 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6314 = 1;
   }
   if ( (unsigned int)configFlagId > 0x63 )
     return 0;
@@ -320,16 +392,16 @@ bool TutorialFlag__GetGachaFlg(int32_t gachaFlagId, const MethodInfo *method)
   TutorialFlag_c *v3; // x0
   int v4; // w19
 
-  if ( (byte_4CB51F7 & 1) == 0 )
+  if ( (byte_4CC6316 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51F7 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6316 = 1;
   }
   if ( gachaFlagId >= 32 )
   {
     if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    return TutorialFlag__GetGachaFlgArray(gachaFlagId, method);
+    return TutorialFlag__CheckGachaFlagArray(gachaFlagId, method);
   }
   else
   {
@@ -345,56 +417,16 @@ bool TutorialFlag__GetGachaFlg(int32_t gachaFlagId, const MethodInfo *method)
 }
 
 
-bool TutorialFlag__GetGachaFlgArray(int32_t gachaFlagId, const MethodInfo *method)
-{
-  TutorialFlag_c *v3; // x0
-  System_Int32_array *GachaFlagArray; // x0
-  __int64 v5; // x1
-  int32_t v6; // w8
-  int max_length; // w9
-  int v8; // w8
-  _BOOL4 v9; // w0
-
-  if ( (byte_4CB51F9 & 1) == 0 )
-  {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51F9 = 1;
-  }
-  v3 = TutorialFlag_TypeInfo;
-  if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  GachaFlagArray = TutorialFlag__LoadGachaFlagArray((const MethodInfo *)v3);
-  v6 = gachaFlagId + 31;
-  if ( gachaFlagId >= 0 )
-    v6 = gachaFlagId;
-  if ( !GachaFlagArray )
-    sub_1C6BC60(0, v5);
-  max_length = GachaFlagArray->max_length;
-  v8 = v6 >> 5;
-  if ( v8 >= max_length )
-  {
-    LOBYTE(v9) = 0;
-  }
-  else
-  {
-    if ( v8 >= (unsigned int)max_length )
-      sub_1C6BC68(GachaFlagArray);
-    return ((unsigned int)GachaFlagArray->m_Items[v8] >> gachaFlagId) & 1;
-  }
-  return v9;
-}
-
-
 int32_t TutorialFlag__GetId(System_String_o *flagIdName, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
   System_Collections_Generic_Dictionary_TKey__TValue__o *flagNameList; // x0
 
-  if ( (byte_4CB51E3 & 1) == 0 )
+  if ( (byte_4CC6302 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51E3 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6302 = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -404,11 +436,11 @@ int32_t TutorialFlag__GetId(System_String_o *flagIdName, const MethodInfo *metho
   }
   flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)v3->static_fields->flagNameList;
   if ( !flagNameList )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return System_Collections_Generic_Dictionary_object__Int32Enum___get_Item(
            flagNameList,
            (Il2CppObject *)flagIdName,
-           (const MethodInfo_34B5AA4 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
+           (const MethodInfo_34C5848 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Item__);
 }
 
 
@@ -426,17 +458,17 @@ TutorialFlag_Id_array *TutorialFlag__GetIdList(const MethodInfo *method)
   char *v10; // x9
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v12; // [xsp+0h] [xbp-60h] BYREF
 
-  if ( (byte_4CB51E2 & 1) == 0 )
+  if ( (byte_4CC6301 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__get_Current__);
-    sub_1C6BA08(&TutorialFlag_Id___TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_string__TutorialFlag_Id__get_Value__);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51E2 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__get_Current__);
+    sub_1C713B0(&TutorialFlag_Id___TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_KeyValuePair_string__TutorialFlag_Id__get_Value__);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6301 = 1;
   }
   v2 = TutorialFlag_TypeInfo;
   memset(&v12, 0, sizeof(v12));
@@ -449,36 +481,36 @@ TutorialFlag_Id_array *TutorialFlag__GetIdList(const MethodInfo *method)
   if ( !flagNameList
     || (Count = System_Collections_Generic_Dictionary_object__Int32Enum___get_Count(
                   flagNameList,
-                  (const MethodInfo_34B57F4 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__),
-        flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C6BAB0(
+                  (const MethodInfo_34C5598 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__get_Count__),
+        flagNameList = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C71458(
                                                                                   TutorialFlag_Id___TypeInfo,
                                                                                   Count),
         (v5 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)TutorialFlag_TypeInfo->static_fields->flagNameList) == 0) )
   {
-    sub_1C6BC60(flagNameList, v1);
+    sub_1C71608(flagNameList, v1);
   }
   v6 = flagNameList;
   System_Collections_Generic_Dictionary_object__Int32Enum___GetEnumerator(
     &v12,
     v5,
-    (const MethodInfo_34B5F14 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
+    (const MethodInfo_34C5CB8 *)Method_System_Collections_Generic_Dictionary_string__TutorialFlag_Id__GetEnumerator__);
   for ( i = 0; ; ++i )
   {
     v8 = System_Collections_Generic_Dictionary_Enumerator_object__Int32Enum___MoveNext(
            &v12,
-           (const MethodInfo_35B7C44 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
+           (const MethodInfo_35C79E8 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__MoveNext__);
     if ( !v8 )
       break;
     if ( !v6 )
-      sub_1C6BC60(v8, v9);
+      sub_1C71608(v8, v9);
     if ( i >= LODWORD(v6->fields._entries) )
-      sub_1C6BC68(v8);
+      sub_1C71610(v8);
     v10 = (char *)v6 + 4 * (int)i;
     *((_DWORD *)v10 + 8) = v12.fields._current.fields.value;
   }
   System_Collections_Generic_Dictionary_Enumerator_object__Int32Enum___Dispose(
     &v12,
-    (const MethodInfo_35B7D68 *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
+    (const MethodInfo_35C7B0C *)Method_System_Collections_Generic_Dictionary_Enumerator_string__TutorialFlag_Id__Dispose__);
   return (TutorialFlag_Id_array *)v6;
 }
 
@@ -487,10 +519,10 @@ int32_t TutorialFlag__GetProgress(const MethodInfo *method)
 {
   TutorialFlag_c *v1; // x0
 
-  if ( (byte_4CB51EA & 1) == 0 )
+  if ( (byte_4CC6309 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51EA = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6309 = 1;
   }
   v1 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -502,20 +534,20 @@ int32_t TutorialFlag__GetProgress(const MethodInfo *method)
 }
 
 
-bool TutorialFlag__Get_40657328(int32_t flagId, const MethodInfo *method)
+bool TutorialFlag__Get_40699620(int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4CB51E5 & 1) == 0 )
+  if ( (byte_4CC6304 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51E5 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6304 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_40692196(flagId, method);
+  return TutorialFlag__Get_40734488(flagId, method);
 }
 
 
-bool TutorialFlag__Get_40657508(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
+bool TutorialFlag__Get_40699800(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
 {
   int64_t *p_tutorial1; // x8
 
@@ -542,62 +574,62 @@ bool TutorialFlag__Get_40657508(UserGameEntity_o *userGameEntity, int32_t flagId
                                  * (((unsigned __int64)(1374389535LL * flagId) >> 37) + (1374389535LL * flagId < 0))))) != 0;
     }
 LABEL_9:
-    sub_1C6BC60(userGameEntity, flagId);
+    sub_1C71608(userGameEntity, flagId);
   }
   return 0;
 }
 
 
-bool TutorialFlag__Get_40657728(OtherUserGameEntity_o *otherUserGameEntity, int32_t flagId, const MethodInfo *method)
+bool TutorialFlag__Get_40700020(OtherUserGameEntity_o *otherUserGameEntity, int32_t flagId, const MethodInfo *method)
 {
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
   if ( !otherUserGameEntity )
-    sub_1C6BC60(0, flagId);
+    sub_1C71608(0, flagId);
   return (otherUserGameEntity->fields.tutorial1
         & (unsigned int)(1 << (flagId
                              - 100 * (((unsigned __int64)(1374389535LL * flagId) >> 37) + (1374389535LL * flagId < 0))))) != 0;
 }
 
 
-bool TutorialFlag__Get_40657920(FollowerInfo_o *followerInfo, int32_t flagId, const MethodInfo *method)
+bool TutorialFlag__Get_40700212(FollowerInfo_o *followerInfo, int32_t flagId, const MethodInfo *method)
 {
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
   if ( !followerInfo )
-    sub_1C6BC60(0, flagId);
+    sub_1C71608(0, flagId);
   return (followerInfo->fields.tutorial1
         & (unsigned int)(1 << (flagId
                              - 100 * (((unsigned __int64)(1374389535LL * flagId) >> 37) + (1374389535LL * flagId < 0))))) != 0;
 }
 
 
-bool TutorialFlag__Get_40692196(int32_t flagId, const MethodInfo *method)
+bool TutorialFlag__Get_40734488(int32_t flagId, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
   UserGameEntity_o *SelfUserGame; // x20
 
-  if ( (byte_4CB51E6 & 1) == 0 )
+  if ( (byte_4CC6305 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51E6 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6305 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__Get_40657508(SelfUserGame, flagId, v3);
+  return TutorialFlag__Get_40699800(SelfUserGame, flagId, v3);
 }
 
 
-bool TutorialFlag__Get_40693632(int32_t flagId, const MethodInfo *method)
+bool TutorialFlag__Get_40735924(int32_t flagId, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
   int v4; // w19
 
-  if ( (byte_4CB51F2 & 1) == 0 )
+  if ( (byte_4CC6311 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51F2 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6311 = 1;
   }
   if ( (unsigned int)(flagId - 100) > 0x63 )
     return 0;
@@ -612,33 +644,33 @@ bool TutorialFlag__Get_40693632(int32_t flagId, const MethodInfo *method)
 }
 
 
-bool TutorialFlag__Get_40694056(int32_t flagId, int32_t eventId, const MethodInfo *method)
+bool TutorialFlag__Get_40736348(int32_t flagId, int32_t eventId, const MethodInfo *method)
 {
   DataManager_o *Instance; // x0
   __int64 v6; // x1
   Il2CppObject *MasterData_object; // x21
   UserEventEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CB51F4 & 1) == 0 )
+  if ( (byte_4CC6313 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserEventMaster___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB51F4 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserEventMaster___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC6313 = 1;
   }
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   MasterData_object = DataManager__GetMasterData_object_(
                         Instance,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserEventMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserEventMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4CB002A )
+  if ( !byte_4CC112A )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB002A = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC112A = 1;
   }
   Instance = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -658,8 +690,62 @@ bool TutorialFlag__Get_40694056(int32_t flagId, int32_t eventId, const MethodInf
   Instance = (DataManager_o *)entity;
   if ( !entity )
 LABEL_16:
-    sub_1C6BC60(Instance, v6);
+    sub_1C71608(Instance, v6);
   return UserEventEntity__getTutorialFlag(entity, flagId, 0);
+}
+
+
+void TutorialFlag__InitSaveGachaFlag(const MethodInfo *method)
+{
+  TutorialFlag_c *v1; // x0
+  bool HasKey; // w19
+  TutorialFlag_c *v3; // x0
+  TutorialFlag_c *v4; // x0
+  TutorialFlag_c *v5; // x0
+
+  if ( (byte_4CC631C & 1) == 0 )
+  {
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    sub_1C713B0(&StringLiteral_1115/*"0"*/);
+    byte_4CC631C = 1;
+  }
+  v1 = TutorialFlag_TypeInfo;
+  if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
+    v1 = TutorialFlag_TypeInfo;
+  }
+  HasKey = UnityEngine_PlayerPrefs__HasKey(v1->static_fields->SaveKey5, 0);
+  if ( !HasKey )
+  {
+    v3 = TutorialFlag_TypeInfo;
+    if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
+      v3 = TutorialFlag_TypeInfo;
+    }
+    UnityEngine_PlayerPrefs__SetString(v3->static_fields->SaveKey5, (System_String_o *)StringLiteral_1115/*"0"*/, 0);
+  }
+  v4 = TutorialFlag_TypeInfo;
+  if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
+    v4 = TutorialFlag_TypeInfo;
+  }
+  if ( !UnityEngine_PlayerPrefs__HasKey(v4->static_fields->SAVE_KEY4, 0) )
+  {
+    v5 = TutorialFlag_TypeInfo;
+    if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
+    {
+      j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
+      v5 = TutorialFlag_TypeInfo;
+    }
+    UnityEngine_PlayerPrefs__SetInt(v5->static_fields->SAVE_KEY4, 0, 0);
+    goto LABEL_17;
+  }
+  if ( !HasKey )
+LABEL_17:
+    UnityEngine_PlayerPrefs__Save(0);
 }
 
 
@@ -668,14 +754,14 @@ bool TutorialFlag__IsProgressComplete(const MethodInfo *method)
   const MethodInfo *v1; // x1
   const MethodInfo *v2; // x1
 
-  if ( (byte_4CB51F1 & 1) == 0 )
+  if ( (byte_4CC6310 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51F1 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6310 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_40657328(102, v1) )
+  if ( TutorialFlag__Get_40699620(102, v1) )
     return 1;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
@@ -687,29 +773,29 @@ bool TutorialFlag__IsProgressDone(int32_t count, const MethodInfo *method)
 {
   const MethodInfo *v3; // x1
 
-  if ( (byte_4CB51EF & 1) == 0 )
+  if ( (byte_4CC630E & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51EF = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC630E = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_40657328(102, method) )
+  if ( TutorialFlag__Get_40699620(102, method) )
     return 1;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  return TutorialFlag__IsProgressDone_40693416(count, v3);
+  return TutorialFlag__IsProgressDone_40735708(count, v3);
 }
 
 
-bool TutorialFlag__IsProgressDone_40693416(int32_t count, const MethodInfo *method)
+bool TutorialFlag__IsProgressDone_40735708(int32_t count, const MethodInfo *method)
 {
   TutorialFlag_c *v3; // x0
 
-  if ( (byte_4CB51F0 & 1) == 0 )
+  if ( (byte_4CC630F & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51F0 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC630F = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -732,15 +818,15 @@ System_Int32_array *TutorialFlag__LoadGachaFlagArray(const MethodInfo *method)
   __int64 size; // x10
   int32_t result; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CB51FB & 1) == 0 )
+  if ( (byte_4CC631A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1115/*"0"*/);
-    byte_4CB51FB = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    sub_1C713B0(&StringLiteral_1115/*"0"*/);
+    byte_4CC631A = 1;
   }
   v1 = TutorialFlag_TypeInfo;
   result = 0;
@@ -753,10 +839,10 @@ System_Int32_array *TutorialFlag__LoadGachaFlagArray(const MethodInfo *method)
   if ( !String )
     goto LABEL_19;
   v4 = System_String__Split(String, 0x2Cu, 0, 0);
-  v5 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+  v5 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v5,
-    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !v4 )
     goto LABEL_19;
   max_length = v4->max_length;
@@ -766,7 +852,7 @@ System_Int32_array *TutorialFlag__LoadGachaFlagArray(const MethodInfo *method)
     do
     {
       if ( v7 >= (unsigned int)max_length )
-        sub_1C6BC68(String);
+        sub_1C71610(String);
       String = (System_String_o *)System_Int32__TryParse(v4->m_Items[v7], &result, 0);
       if ( ((unsigned __int8)String & 1) != 0 )
       {
@@ -784,7 +870,7 @@ System_Int32_array *TutorialFlag__LoadGachaFlagArray(const MethodInfo *method)
           System_Collections_Generic_List_int___AddWithResize(
             v5,
             v3,
-            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
+            *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v9[4] + 192LL) + 112LL));
         }
         else
         {
@@ -798,39 +884,10 @@ System_Int32_array *TutorialFlag__LoadGachaFlagArray(const MethodInfo *method)
   }
   if ( !v5 )
 LABEL_19:
-    sub_1C6BC60(String, v3);
+    sub_1C71608(String, v3);
   return System_Collections_Generic_List_int___ToArray(
            v5,
-           (const MethodInfo_37E5408 *)Method_System_Collections_Generic_List_int__ToArray__);
-}
-
-
-void TutorialFlag__SaveGachaFlagArray(System_Int32_array *flags, const MethodInfo *method)
-{
-  System_String_o *v3; // x0
-  TutorialFlag_c *v4; // x8
-  System_String_o *v5; // x19
-
-  if ( (byte_4CB51FC & 1) == 0 )
-  {
-    sub_1C6BA08(&Method_System_String_Join_int___);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    sub_1C6BA08(&StringLiteral_808/*","*/);
-    byte_4CB51FC = 1;
-  }
-  v3 = System_String__Join_int_(
-         (System_String_o *)StringLiteral_808/*","*/,
-         (System_Collections_Generic_IEnumerable_T__o *)flags,
-         (const MethodInfo_31E7090 *)Method_System_String_Join_int___);
-  v4 = TutorialFlag_TypeInfo;
-  v5 = v3;
-  if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
-  {
-    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-    v4 = TutorialFlag_TypeInfo;
-  }
-  UnityEngine_PlayerPrefs__SetString(v4->static_fields->SaveKey5, v5, 0);
-  UnityEngine_PlayerPrefs__Save(0);
+           (const MethodInfo_37F51AC *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -839,15 +896,15 @@ void TutorialFlag__Set(System_String_o *flagIdName, const MethodInfo *method)
   int32_t Id; // w0
   const MethodInfo *v4; // x1
 
-  if ( (byte_4CB51E7 & 1) == 0 )
+  if ( (byte_4CC6306 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51E7 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6306 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
   Id = TutorialFlag__GetId(flagIdName, method);
-  TutorialFlag__Set_40692388(Id, v4);
+  TutorialFlag__Set_40734680(Id, v4);
 }
 
 
@@ -857,11 +914,11 @@ void TutorialFlag__SetConfigFlg(int32_t configFlagId, const MethodInfo *method)
   TutorialFlag_c *v4; // x0
   int32_t Int; // w0
 
-  if ( (byte_4CB51F6 & 1) == 0 )
+  if ( (byte_4CC6315 & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51F6 = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6315 = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -887,18 +944,46 @@ void TutorialFlag__SetConfigFlg(int32_t configFlagId, const MethodInfo *method)
 }
 
 
+void TutorialFlag__SetGachaFlagArray(System_Int32_array *flags, const MethodInfo *method)
+{
+  System_String_o *v3; // x0
+  TutorialFlag_c *v4; // x8
+  System_String_o *v5; // x19
+
+  if ( (byte_4CC631B & 1) == 0 )
+  {
+    sub_1C713B0(&Method_System_String_Join_int___);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    sub_1C713B0(&StringLiteral_808/*","*/);
+    byte_4CC631B = 1;
+  }
+  v3 = System_String__Join_int_(
+         (System_String_o *)StringLiteral_808/*","*/,
+         (System_Collections_Generic_IEnumerable_T__o *)flags,
+         (const MethodInfo_31F6E34 *)Method_System_String_Join_int___);
+  v4 = TutorialFlag_TypeInfo;
+  v5 = v3;
+  if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
+  {
+    j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
+    v4 = TutorialFlag_TypeInfo;
+  }
+  UnityEngine_PlayerPrefs__SetString(v4->static_fields->SaveKey5, v5, 0);
+}
+
+
 void TutorialFlag__SetGachaFlg(int32_t gachaFlagId, const MethodInfo *method)
 {
   ManagerConfig_c *v3; // x0
   int v4; // w19
   TutorialFlag_c *v5; // x0
-  int32_t Int; // w0
+  int32_t v6; // w1
 
-  if ( (byte_4CB51F8 & 1) == 0 )
+  if ( (byte_4CC6317 & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51F8 = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6317 = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -923,9 +1008,8 @@ void TutorialFlag__SetGachaFlg(int32_t gachaFlagId, const MethodInfo *method)
         j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
         v5 = TutorialFlag_TypeInfo;
       }
-      Int = UnityEngine_PlayerPrefs__GetInt(v5->static_fields->SAVE_KEY4, 0, 0);
-      UnityEngine_PlayerPrefs__SetInt(TutorialFlag_TypeInfo->static_fields->SAVE_KEY4, Int | v4, 0);
-      UnityEngine_PlayerPrefs__Save(0);
+      v6 = UnityEngine_PlayerPrefs__GetInt(v5->static_fields->SAVE_KEY4, 0, 0) | v4;
+      UnityEngine_PlayerPrefs__SetInt(TutorialFlag_TypeInfo->static_fields->SAVE_KEY4, v6, 0);
     }
   }
 }
@@ -941,11 +1025,11 @@ void TutorialFlag__SetGachaFlgArray(int32_t gachaFlagId, const MethodInfo *metho
   System_Int32_array *v8; // x20
   System_Int32_array *array; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB51FA & 1) == 0 )
+  if ( (byte_4CC6319 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Array_Resize_int___);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51FA = 1;
+    sub_1C713B0(&Method_System_Array_Resize_int___);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6319 = 1;
   }
   v3 = TutorialFlag_TypeInfo;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
@@ -957,43 +1041,43 @@ void TutorialFlag__SetGachaFlgArray(int32_t gachaFlagId, const MethodInfo *metho
   array = GachaFlagArray;
   if ( !GachaFlagArray
     || (v7 = v6 >> 5, v8 = GachaFlagArray, v6 >> 5 >= SLODWORD(GachaFlagArray->max_length))
-    && (System_Array__Resize_int_(&array, v7 + 1, (const MethodInfo_30F8264 *)Method_System_Array_Resize_int___),
+    && (System_Array__Resize_int_(&array, v7 + 1, (const MethodInfo_3108008 *)Method_System_Array_Resize_int___),
         (v8 = array) == 0) )
   {
-    sub_1C6BC60(GachaFlagArray, v5);
+    sub_1C71608(GachaFlagArray, v5);
   }
   if ( (unsigned int)v7 >= LODWORD(v8->max_length) )
-    sub_1C6BC68(GachaFlagArray);
+    sub_1C71610(GachaFlagArray);
   v8->m_Items[v7] |= 1 << gachaFlagId;
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__SaveGachaFlagArray(v8, v5);
+  TutorialFlag__SetGachaFlagArray(v8, v5);
 }
 
 
 void TutorialFlag__SetProgress(int32_t count, const MethodInfo *method)
 {
-  if ( (byte_4CB51ED & 1) == 0 )
+  if ( (byte_4CC630C & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51ED = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC630C = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__SetProgress_40693116(count, method);
+  TutorialFlag__SetProgress_40735408(count, method);
 }
 
 
-void TutorialFlag__SetProgress_40693116(int32_t count, const MethodInfo *method)
+void TutorialFlag__SetProgress_40735408(int32_t count, const MethodInfo *method)
 {
   ManagerConfig_c *v3; // x0
   TutorialFlag_c *v4; // x0
 
-  if ( (byte_4CB51EE & 1) == 0 )
+  if ( (byte_4CC630D & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51EE = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC630D = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -1015,37 +1099,37 @@ void TutorialFlag__SetProgress_40693116(int32_t count, const MethodInfo *method)
 }
 
 
-void TutorialFlag__Set_40692388(int32_t flagId, const MethodInfo *method)
+void TutorialFlag__Set_40734680(int32_t flagId, const MethodInfo *method)
 {
-  if ( (byte_4CB51E8 & 1) == 0 )
+  if ( (byte_4CC6307 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51E8 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6307 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_40692472(flagId, method);
+  TutorialFlag__Set_40734764(flagId, method);
 }
 
 
-void TutorialFlag__Set_40692472(int32_t flagId, const MethodInfo *method)
+void TutorialFlag__Set_40734764(int32_t flagId, const MethodInfo *method)
 {
   const MethodInfo *v3; // x2
   UserGameEntity_o *SelfUserGame; // x20
 
-  if ( (byte_4CB51E9 & 1) == 0 )
+  if ( (byte_4CC6308 & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51E9 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6308 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  TutorialFlag__Set_40692576(SelfUserGame, flagId, v3);
+  TutorialFlag__Set_40734868(SelfUserGame, flagId, v3);
 }
 
 
-void TutorialFlag__Set_40692576(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
+void TutorialFlag__Set_40734868(UserGameEntity_o *userGameEntity, int32_t flagId, const MethodInfo *method)
 {
   int64_t *p_tutorial2; // x8
 
@@ -1059,7 +1143,7 @@ void TutorialFlag__Set_40692576(UserGameEntity_o *userGameEntity, int32_t flagId
       goto LABEL_7;
     }
 LABEL_9:
-    sub_1C6BC60(userGameEntity, flagId);
+    sub_1C71608(userGameEntity, flagId);
   }
   if ( !userGameEntity )
     goto LABEL_9;
@@ -1071,18 +1155,18 @@ LABEL_7:
 }
 
 
-void TutorialFlag__Set_40693804(int32_t flagId, const MethodInfo *method)
+void TutorialFlag__Set_40736096(int32_t flagId, const MethodInfo *method)
 {
   ManagerConfig_c *v3; // x0
   TutorialFlag_c *v4; // x0
   int v5; // w19
   int32_t Int; // w0
 
-  if ( (byte_4CB51F3 & 1) == 0 )
+  if ( (byte_4CC6312 & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB51F3 = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC6312 = 1;
   }
   v3 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )

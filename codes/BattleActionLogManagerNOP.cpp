@@ -2,16 +2,20 @@ void BattleActionLogManagerNOP___ctor(BattleActionLogManagerNOP_o *this, const M
 {
   struct System_Byte_array *v3; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CB87C7 & 1) == 0 )
+  if ( (byte_4CC98F9 & 1) == 0 )
   {
-    sub_1C6BA08(&byte___TypeInfo);
-    byte_4CB87C7 = 1;
+    sub_1C713B0(&byte___TypeInfo);
+    byte_4CC98F9 = 1;
   }
-  v3 = (struct System_Byte_array *)sub_1C6BAB0(byte___TypeInfo, 1);
+  v3 = (struct System_Byte_array *)sub_1C71458(byte___TypeInfo, 1);
   this->fields.dummy = v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 

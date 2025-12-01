@@ -1,9 +1,9 @@
 void UIMasterFaceTexture___ctor(UIMasterFaceTexture_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB7BB1 & 1) == 0 )
+  if ( (byte_4CC8CDA & 1) == 0 )
   {
-    sub_1C6BA08(&UIMasterFaceRender_TypeInfo);
-    byte_4CB7BB1 = 1;
+    sub_1C713B0(&UIMasterFaceRender_TypeInfo);
+    byte_4CC8CDA = 1;
   }
   if ( !UIMasterFaceRender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIMasterFaceRender_TypeInfo);
@@ -14,54 +14,66 @@ void UIMasterFaceTexture___ctor(UIMasterFaceTexture_o *this, const MethodInfo *m
 void UIMasterFaceTexture__EndLoadAsset(UIMasterFaceTexture_o *this, const MethodInfo *method)
 {
   System_String_array *loadNameList; // x20
-  AssetData_array *AssetStorage_40773704; // x0
+  AssetData_array *AssetStorage_40816244; // x0
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   int max_length; // w8
-  struct AssetData_array *v8; // x20
-  __int64 v9; // x9
+  struct AssetData_array *v12; // x20
+  __int64 v13; // x9
   AssetData_array *assetDataList; // x23
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
   struct UITexture_o *bodyTexture; // x20
-  UnityEngine_Shader_o *v14; // x22
-  UnityEngine_Material_o *v15; // x21
+  UnityEngine_Shader_o *v22; // x22
+  UnityEngine_Material_o *v23; // x21
   UnityEngine_Texture_o *MaskTexture; // x0
-  __int64 v17; // x1
-  UIMasterFaceRender_o *v18; // x0
-  struct UITexture_o *v19; // x20
-  const MethodInfo *v20; // x2
-  UnityEngine_Material_o *v21; // x20
-  const MethodInfo *v22; // x2
-  UITexture_o *v23; // x20
-  const MethodInfo *v24; // x1
-  const MethodInfo *v25; // x1
+  __int64 v25; // x1
+  UIMasterFaceRender_o *v26; // x0
+  struct UITexture_o *v27; // x20
+  const MethodInfo *v28; // x2
+  UnityEngine_Material_o *v29; // x20
+  const MethodInfo *v30; // x2
+  UITexture_o *v31; // x20
+  const MethodInfo *v32; // x1
+  const MethodInfo *v33; // x1
   UnityEngine_Vector2_o BodySize; // kr00_8
-  int32_t v27; // w1
-  int32_t v28; // w1
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
+  int32_t v35; // w1
+  int32_t v36; // w1
+  int32_t v37; // w2
+  int32_t v38; // w3
+  System_String_o *v39; // x4
+  int32_t v40; // w5
+  int64_t v41; // x6
+  System_String_o *v42; // x7
   struct System_Action_o *callbackFunc; // x20
   UnityEngine_Rect_o BodyUvRect; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB7BB0 & 1) == 0 )
+  if ( (byte_4CC8CD9 & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Material_TypeInfo);
-    sub_1C6BA08(&StringLiteral_4930/*"Custom/SpriteWithMask"*/);
-    sub_1C6BA08(&StringLiteral_16263/*"_MaskTex"*/);
-    byte_4CB7BB0 = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Material_TypeInfo);
+    sub_1C713B0(&StringLiteral_4933/*"Custom/SpriteWithMask"*/);
+    sub_1C713B0(&StringLiteral_16270/*"_MaskTex"*/);
+    byte_4CC8CD9 = 1;
   }
   loadNameList = this->fields.loadNameList;
   if ( !loadNameList )
     return;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetStorage_40773704 = AssetManager__getAssetStorage_40773704(loadNameList, 0);
-  if ( !AssetStorage_40773704 )
+  AssetStorage_40816244 = AssetManager__getAssetStorage_40816244(loadNameList, 0);
+  if ( !AssetStorage_40816244 )
     return;
-  max_length = AssetStorage_40773704->max_length;
-  v8 = AssetStorage_40773704;
+  max_length = AssetStorage_40816244->max_length;
+  v12 = AssetStorage_40816244;
   if ( max_length < 1 )
   {
 LABEL_12:
@@ -70,59 +82,59 @@ LABEL_12:
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_40765740(assetDataList, 0);
+      AssetManager__releaseAsset_40808280(assetDataList, 0);
     }
-    this->fields.assetDataList = v8;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetDataList, (int32_t)v8, v5, v6);
+    this->fields.assetDataList = v12;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.assetDataList, (int32_t)v12, v5, v6, v7, v8, v9, v10);
     this->fields.loadNameList = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadNameList, 0, v11, v12);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.loadNameList, 0, v15, v16, v17, v18, v19, v20);
     bodyTexture = this->fields.bodyTexture;
-    v14 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4930/*"Custom/SpriteWithMask"*/, 0);
-    v15 = (UnityEngine_Material_o *)sub_1C6BC54(UnityEngine_Material_TypeInfo);
-    UnityEngine_Material___ctor(v15, v14, 0);
+    v22 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4933/*"Custom/SpriteWithMask"*/, 0);
+    v23 = (UnityEngine_Material_o *)sub_1C715FC(UnityEngine_Material_TypeInfo);
+    UnityEngine_Material___ctor(v23, v22, 0);
     if ( bodyTexture )
     {
-      v18 = (UIMasterFaceRender_o *)((__int64 (__fastcall *)(struct UITexture_o *, UnityEngine_Material_o *, const MethodInfo *))bodyTexture->klass->vtable._25_set_material.methodPtr)(
+      v26 = (UIMasterFaceRender_o *)((__int64 (__fastcall *)(struct UITexture_o *, UnityEngine_Material_o *, const MethodInfo *))bodyTexture->klass->vtable._25_set_material.methodPtr)(
                                       bodyTexture,
-                                      v15,
+                                      v23,
                                       bodyTexture->klass->vtable._25_set_material.method);
-      v19 = this->fields.bodyTexture;
-      MaskTexture = (UnityEngine_Texture_o *)UIMasterFaceRender__GetBodyTexture(v18, this->fields.assetDataList, v20);
-      if ( v19 )
+      v27 = this->fields.bodyTexture;
+      MaskTexture = (UnityEngine_Texture_o *)UIMasterFaceRender__GetBodyTexture(v26, this->fields.assetDataList, v28);
+      if ( v27 )
       {
-        ((void (__fastcall *)(struct UITexture_o *, UnityEngine_Texture_o *, const MethodInfo *))v19->klass->vtable._27_set_mainTexture.methodPtr)(
-          v19,
+        ((void (__fastcall *)(struct UITexture_o *, UnityEngine_Texture_o *, const MethodInfo *))v27->klass->vtable._27_set_mainTexture.methodPtr)(
+          v27,
           MaskTexture,
-          v19->klass->vtable._27_set_mainTexture.method);
+          v27->klass->vtable._27_set_mainTexture.method);
         MaskTexture = (UnityEngine_Texture_o *)this->fields.bodyTexture;
         if ( MaskTexture )
         {
-          v21 = (UnityEngine_Material_o *)(*(__int64 (__fastcall **)(UnityEngine_Texture_o *, size_t))&MaskTexture->klass[1]._2.cctor_finished)(
+          v29 = (UnityEngine_Material_o *)(*(__int64 (__fastcall **)(UnityEngine_Texture_o *, size_t))&MaskTexture->klass[1]._2.cctor_finished)(
                                             MaskTexture,
                                             MaskTexture->klass[1]._2.cctor_thread);
           MaskTexture = (UnityEngine_Texture_o *)UIMasterFaceRender__GetMaskTexture(
                                                    (UIMasterFaceRender_o *)this,
                                                    this->fields.assetDataList,
-                                                   v22);
-          if ( v21 )
+                                                   v30);
+          if ( v29 )
           {
-            UnityEngine_Material__SetTexture(v21, (System_String_o *)StringLiteral_16263/*"_MaskTex"*/, MaskTexture, 0);
-            v23 = this->fields.bodyTexture;
-            BodyUvRect = UIMasterFaceRender__GetBodyUvRect((UIMasterFaceRender_o *)this, v24);
-            if ( v23 )
+            UnityEngine_Material__SetTexture(v29, (System_String_o *)StringLiteral_16270/*"_MaskTex"*/, MaskTexture, 0);
+            v31 = this->fields.bodyTexture;
+            BodyUvRect = UIMasterFaceRender__GetBodyUvRect((UIMasterFaceRender_o *)this, v32);
+            if ( v31 )
             {
-              UITexture__set_uvRect(v23, BodyUvRect, 0);
-              BodySize = UIMasterFaceRender__GetBodySize((UIMasterFaceRender_o *)this, v25);
+              UITexture__set_uvRect(v31, BodyUvRect, 0);
+              BodySize = UIMasterFaceRender__GetBodySize((UIMasterFaceRender_o *)this, v33);
               MaskTexture = (UnityEngine_Texture_o *)this->fields.bodyTexture;
               if ( MaskTexture )
               {
-                v27 = BodySize.fields.x == INFINITY ? 0x80000000 : (int)BodySize.fields.x;
-                UIWidget__set_width((UIWidget_o *)MaskTexture, v27, 0);
+                v35 = BodySize.fields.x == INFINITY ? 0x80000000 : (int)BodySize.fields.x;
+                UIWidget__set_width((UIWidget_o *)MaskTexture, v35, 0);
                 MaskTexture = (UnityEngine_Texture_o *)this->fields.bodyTexture;
                 if ( MaskTexture )
                 {
-                  v28 = BodySize.fields.y == INFINITY ? 0x80000000 : (int)BodySize.fields.y;
-                  UIWidget__set_height((UIWidget_o *)MaskTexture, v28, 0);
+                  v36 = BodySize.fields.y == INFINITY ? 0x80000000 : (int)BodySize.fields.y;
+                  UIWidget__set_height((UIWidget_o *)MaskTexture, v36, 0);
                   MaskTexture = (UnityEngine_Texture_o *)this->fields.bodyTexture;
                   if ( MaskTexture )
                   {
@@ -147,7 +159,15 @@ LABEL_35:
                           if ( callbackFunc )
                           {
                             this->fields.callbackFunc = 0;
-                            sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v29, v30);
+                            sub_1C71354(
+                              (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+                              0,
+                              v37,
+                              v38,
+                              v39,
+                              v40,
+                              v41,
+                              v42);
                             ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
                               callbackFunc->fields.method_code,
                               callbackFunc->fields.method);
@@ -164,16 +184,16 @@ LABEL_35:
         }
       }
     }
-    sub_1C6BC60(MaskTexture, v17);
+    sub_1C71608(MaskTexture, v25);
   }
-  v9 = 0;
+  v13 = 0;
   while ( 1 )
   {
-    if ( (unsigned int)v9 >= max_length )
-      sub_1C6BC68(AssetStorage_40773704);
-    if ( !AssetStorage_40773704->m_Items[v9] )
+    if ( (unsigned int)v13 >= max_length )
+      sub_1C71610(AssetStorage_40816244);
+    if ( !AssetStorage_40816244->m_Items[v13] )
       break;
-    if ( (int)++v9 >= max_length )
+    if ( (int)++v13 >= max_length )
       goto LABEL_12;
   }
 }
@@ -200,22 +220,30 @@ void UIMasterFaceTexture__ReleaseCharacter(UIMasterFaceTexture_o *this, const Me
   UnityEngine_Object_o *v12; // x21
   struct AssetData_array **p_assetDataList; // x20
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  AssetData_array *v16; // x21
-  __int64 v17; // x0
-  __int64 v18; // x0
-  UnityEngine_Object_o *v19; // x20
-  CGThumbnailListItem_o *p_loadNameList; // x19
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  AssetData_array *v20; // x21
+  __int64 v21; // x0
+  __int64 v22; // x0
+  UnityEngine_Object_o *v23; // x20
+  GrandQuestFolderBoardItem_o *p_loadNameList; // x19
+  int32_t v25; // w2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
   System_String_array *klass; // x20
 
-  if ( (byte_4CB7BAE & 1) == 0 )
+  if ( (byte_4CC8CD7 & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AssetManager__getInstance__);
-    byte_4CB7BAE = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AssetManager__getInstance__);
+    byte_4CC8CD7 = 1;
   }
   bodyTexture = (UnityEngine_Object_o *)this->fields.bodyTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -256,7 +284,7 @@ void UIMasterFaceTexture__ReleaseCharacter(UIMasterFaceTexture_o *this, const Me
                                      v6->klass[1].vtable._1_Finalize.methodPtr);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71659676(v9, 0);
+      UnityEngine_Object__Destroy_71724608(v9, 0);
       v6 = (UnityEngine_Component_o *)this->fields.bodyTexture;
       if ( !v6 )
         goto LABEL_49;
@@ -275,52 +303,52 @@ void UIMasterFaceTexture__ReleaseCharacter(UIMasterFaceTexture_o *this, const Me
       goto LABEL_24;
     }
 LABEL_49:
-    sub_1C6BC60(v6, v4);
+    sub_1C71608(v6, v4);
   }
 LABEL_24:
   if ( this->fields.assetDataList )
   {
     v10 = *((_QWORD *)Method_SingletonMonoBehaviour_AssetManager__getInstance__ + 4);
     if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-      v10 = sub_1C41A9C(v5);
+      v10 = sub_1C47444(v5);
     v11 = *(_QWORD *)(*(_QWORD *)(v10 + 192) + 16LL);
     if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-      v11 = sub_1C41A9C(v5);
+      v11 = sub_1C47444(v5);
     v12 = **(UnityEngine_Object_o ***)(v11 + 184);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     p_assetDataList = &this->fields.assetDataList;
     if ( UnityEngine_Object__op_Implicit(v12, 0) )
     {
-      v16 = *p_assetDataList;
+      v20 = *p_assetDataList;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAsset_40765740(v16, 0);
+      AssetManager__releaseAsset_40808280(v20, 0);
     }
     *p_assetDataList = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetDataList, 0, v14, v15);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.assetDataList, 0, v14, v15, v16, v17, v18, v19);
   }
   if ( this->fields.loadNameList )
   {
-    v17 = *((_QWORD *)Method_SingletonMonoBehaviour_AssetManager__getInstance__ + 4);
-    if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-      v17 = sub_1C41A9C(v5);
-    v18 = *(_QWORD *)(*(_QWORD *)(v17 + 192) + 16LL);
-    if ( (*(_BYTE *)(v18 + 309) & 1) == 0 )
-      v18 = sub_1C41A9C(v5);
-    v19 = **(UnityEngine_Object_o ***)(v18 + 184);
+    v21 = *((_QWORD *)Method_SingletonMonoBehaviour_AssetManager__getInstance__ + 4);
+    if ( (*(_BYTE *)(v21 + 309) & 1) == 0 )
+      v21 = sub_1C47444(v5);
+    v22 = *(_QWORD *)(*(_QWORD *)(v21 + 192) + 16LL);
+    if ( (*(_BYTE *)(v22 + 309) & 1) == 0 )
+      v22 = sub_1C47444(v5);
+    v23 = **(UnityEngine_Object_o ***)(v22 + 184);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    p_loadNameList = (CGThumbnailListItem_o *)&this->fields.loadNameList;
-    if ( UnityEngine_Object__op_Implicit(v19, 0) )
+    p_loadNameList = (GrandQuestFolderBoardItem_o *)&this->fields.loadNameList;
+    if ( UnityEngine_Object__op_Implicit(v23, 0) )
     {
       klass = (System_String_array *)p_loadNameList->klass;
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      AssetManager__releaseAssetStorage_40774692(klass, 0);
+      AssetManager__releaseAssetStorage_40817232(klass, 0);
     }
     p_loadNameList->klass = 0;
-    sub_1C6B9AC(p_loadNameList, 0, v21, v22);
+    sub_1C71354(p_loadNameList, 0, v25, v26, v27, v28, v29, v30);
   }
 }
 
@@ -334,7 +362,7 @@ void UIMasterFaceTexture__SetActive(UIMasterFaceTexture_o *this, bool isActive, 
   if ( !bodyTexture
     || (bodyTexture = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bodyTexture, 0)) == 0 )
   {
-    sub_1C6BC60(bodyTexture, isActive);
+    sub_1C71608(bodyTexture, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bodyTexture, isActive, 0);
 }
@@ -351,24 +379,32 @@ void UIMasterFaceTexture__SetCharacter(
 {
   struct System_String_array *AssetNameList; // x0
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  System_Delegate_o *v16; // x0
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  System_Delegate_o *v20; // x0
   struct System_Action_o **p_callbackFunc; // x21
-  System_Delegate_o *v18; // x0
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  System_Delegate_o *v21; // x8
-  System_Action_c *v22; // x1
+  System_Delegate_o *v22; // x0
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
+  System_Delegate_o *v29; // x8
+  System_Action_c *v30; // x1
   System_String_array *loadNameList; // x20
-  System_Action_o *v24; // x21
+  System_Action_o *v32; // x21
 
-  if ( (byte_4CB7BAF & 1) == 0 )
+  if ( (byte_4CC8CD8 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&UIMasterFaceRender_TypeInfo);
-    sub_1C6BA08(&Method_UIMasterFaceTexture_EndLoadAsset__);
-    byte_4CB7BAF = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&UIMasterFaceRender_TypeInfo);
+    sub_1C713B0(&Method_UIMasterFaceTexture_EndLoadAsset__);
+    byte_4CC8CD8 = 1;
   }
   if ( !UIMasterFaceRender_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UIMasterFaceRender_TypeInfo);
@@ -379,31 +415,39 @@ void UIMasterFaceTexture__SetCharacter(
                     overWriteImageId,
                     (const MethodInfo *)callbackFunc);
   this->fields.loadNameList = AssetNameList;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadNameList, (int32_t)AssetNameList, v14, v15);
-  v16 = (System_Delegate_o *)this->fields.callbackFunc;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.loadNameList,
+    (int32_t)AssetNameList,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
+  v20 = (System_Delegate_o *)this->fields.callbackFunc;
   this->fields.dispType = dispType;
   this->fields.genderType = genderType;
   this->fields.equipId = equipId;
   p_callbackFunc = &this->fields.callbackFunc;
-  v18 = System_Delegate__Combine(v16, (System_Delegate_o *)callbackFunc, 0);
-  v21 = v18;
-  if ( !v18 )
+  v22 = System_Delegate__Combine(v20, (System_Delegate_o *)callbackFunc, 0);
+  v29 = v22;
+  if ( !v22 )
     goto LABEL_9;
-  v22 = System_Action_TypeInfo;
-  if ( (System_Action_c *)v18->klass != System_Action_TypeInfo
-    || (*p_callbackFunc = (struct System_Action_o *)v18, (System_Action_c *)v18->klass != v22) )
+  v30 = System_Action_TypeInfo;
+  if ( (System_Action_c *)v22->klass != System_Action_TypeInfo
+    || (*p_callbackFunc = (struct System_Action_o *)v22, (System_Action_c *)v22->klass != v30) )
   {
-    sub_1C6BFFC(v18);
+    sub_1C719A4(v22);
 LABEL_9:
-    *p_callbackFunc = (struct System_Action_o *)v21;
+    *p_callbackFunc = (struct System_Action_o *)v29;
   }
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v21, v19, v20);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)v29, v23, v24, v25, v26, v27, v28);
   loadNameList = this->fields.loadNameList;
-  v24 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v24, (Il2CppObject *)this, Method_UIMasterFaceTexture_EndLoadAsset__, 0);
+  v32 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v32, (Il2CppObject *)this, Method_UIMasterFaceTexture_EndLoadAsset__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage_40772344(loadNameList, v24, 1, 0);
+  AssetManager__loadAssetStorage_40814884(loadNameList, v32, 1, 0);
 }
 
 
@@ -413,7 +457,7 @@ void UIMasterFaceTexture__SetDepth(UIMasterFaceTexture_o *this, int32_t d, const
 
   bodyTexture = (UIWidget_o *)this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_1C6BC60(0, d);
+    sub_1C71608(0, d);
   UIWidget__set_depth(bodyTexture, d, 0);
 }
 
@@ -435,7 +479,7 @@ void UIMasterFaceTexture__SetTweenColor(UIMasterFaceTexture_o *this, UnityEngine
   UIWidget__set_color((UIWidget_o *)this, c, 0);
   bodyTexture = (UIWidget_o *)this->fields.bodyTexture;
   if ( !bodyTexture )
-    sub_1C6BC60(0, v8);
+    sub_1C71608(0, v8);
   v10.fields.b = b;
   v10.fields.a = a;
   v10.fields.r = r;

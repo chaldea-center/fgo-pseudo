@@ -14,25 +14,29 @@ void TitleInfoEventTimeImgListViewObject__Init(
   Il2CppObject *Component_object; // x0
   struct TitleInfoEventTimeImgListViewDraw_o **p_itemDraw; // x20
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  const MethodInfo *v14; // x2
 
-  if ( (byte_4CB4C29 & 1) == 0 )
+  if ( (byte_4CC5D41 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
-    byte_4CB4C29 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___);
+    byte_4CC5D41 = 1;
   }
   dispObject = this->fields.dispObject;
   if ( !dispObject
     || (Component_object = UnityEngine_GameObject__GetComponent_object_(
                              dispObject,
-                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
+                             (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_TitleInfoEventTimeImgListViewDraw___),
         this->fields.itemDraw = (struct TitleInfoEventTimeImgListViewDraw_o *)Component_object,
         p_itemDraw = &this->fields.itemDraw,
-        sub_1C6B9AC((CGThumbnailListItem_o *)p_itemDraw, (int32_t)Component_object, v8, v9),
+        sub_1C71354((GrandQuestFolderBoardItem_o *)p_itemDraw, (int32_t)Component_object, v8, v9, v10, v11, v12, v13),
         (dispObject = (UnityEngine_GameObject_o *)*p_itemDraw) == 0) )
   {
-    sub_1C6BC60(dispObject, *(_QWORD *)&state);
+    sub_1C71608(dispObject, *(_QWORD *)&state);
   }
-  TitleInfoEventTimeImgListViewDraw__SetItem((TitleInfoEventTimeImgListViewDraw_o *)dispObject, state, v10);
+  TitleInfoEventTimeImgListViewDraw__SetItem((TitleInfoEventTimeImgListViewDraw_o *)dispObject, state, v14);
 }

@@ -23,18 +23,22 @@ UserGameEntity_o *CharaGraphDefine_CharaGraphItemBulkModifyArgs__get_UserGameEnt
         CharaGraphDefine_CharaGraphItemBulkModifyArgs_o *this,
         const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_userGameEntity; // x19
+  GrandQuestFolderBoardItem_o *p_userGameEntity; // x19
   UserGameEntity_o *userGameEntity; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  p_userGameEntity = (CGThumbnailListItem_o *)&this->fields.userGameEntity;
+  p_userGameEntity = (GrandQuestFolderBoardItem_o *)&this->fields.userGameEntity;
   userGameEntity = this->fields.userGameEntity;
   if ( !userGameEntity )
   {
     userGameEntity = UserGameMaster__getSelfUserGame(0);
-    p_userGameEntity->klass = (CGThumbnailListItem_c *)userGameEntity;
-    sub_1C6B9AC(p_userGameEntity, (int32_t)userGameEntity, v4, v5);
+    p_userGameEntity->klass = (GrandQuestFolderBoardItem_c *)userGameEntity;
+    sub_1C71354(p_userGameEntity, (int32_t)userGameEntity, v4, v5, v6, v7, v8, v9);
   }
   return userGameEntity;
 }

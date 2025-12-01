@@ -33,11 +33,11 @@ void UIRootReScale__ReScale(UIRootReScale_o *this, const MethodInfo *method)
   struct ManagerConfig_StaticFields *static_fields; // x8
   Il2CppObject *Component_object; // x0
 
-  if ( (byte_4CB5888 & 1) == 0 )
+  if ( (byte_4CC69A9 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIRoot___);
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    byte_4CB5888 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIRoot___);
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    byte_4CC69A9 = 1;
   }
   this->fields.preWidth = UnityEngine_Screen__get_width(0);
   this->fields.preHeight = UnityEngine_Screen__get_height(0);
@@ -52,7 +52,7 @@ void UIRootReScale__ReScale(UIRootReScale_o *this, const MethodInfo *method)
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIRoot___);
+                         (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIRoot___);
     CommonFunction__ReScaleUiFunc((UIRoot_o *)Component_object, 0);
   }
 }

@@ -7,31 +7,47 @@ void SubmarineScanVoiceComponent___ctor(SubmarineScanVoiceComponent_o *this, con
 void SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  __int64 v7; // x1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v9; // w2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  __int64 v15; // x1
   int32_t *p_svtId; // x0
   struct System_String_array *vcNameList; // x8
-  System_String_o *v10; // x0
-  struct System_String_o *v11; // x0
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  struct System_String_array *v14; // x8
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  struct System_String_array *v17; // x8
-  struct System_String_o *v18; // x1
+  System_String_o *v18; // x0
+  struct System_String_o *v19; // x0
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  struct System_String_array *v26; // x8
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  struct System_String_array *v33; // x8
+  struct System_String_o *v34; // x1
 
-  if ( (byte_4CB2BE3 & 1) == 0 )
+  if ( (byte_4CC3CF6 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4414/*"ChrVoice_"*/);
-    byte_4CB2BE3 = 1;
+    sub_1C713B0(&StringLiteral_4417/*"ChrVoice_"*/);
+    byte_4CC3CF6 = 1;
   }
   this->fields.assetName = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetName, 0, v2, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.assetName, 0, v2, v3, v4, v5, v6, v7);
   this->fields.vcName = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.vcName, 0, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.vcName, 0, v9, v10, v11, v12, v13, v14);
   p_svtId = &this->fields.svtId;
   if ( this->fields.svtId )
   {
@@ -40,23 +56,23 @@ void SubmarineScanVoiceComponent__Awake(SubmarineScanVoiceComponent_o *this, con
       goto LABEL_11;
     if ( !vcNameList->max_length )
       return;
-    v10 = System_Int32__ToString((int32_t)p_svtId, 0);
-    v11 = System_String__Concat_63966792((System_String_o *)StringLiteral_4414/*"ChrVoice_"*/, v10, 0);
-    this->fields.assetName = v11;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetName, (int32_t)v11, v12, v13);
-    v14 = this->fields.vcNameList;
-    if ( !v14
-      || (p_svtId = (int32_t *)UnityEngine_Random__Range_71619388(0, v14->max_length, 0),
-          (v17 = this->fields.vcNameList) == 0) )
+    v18 = System_Int32__ToString((int32_t)p_svtId, 0);
+    v19 = System_String__Concat_64031724((System_String_o *)StringLiteral_4417/*"ChrVoice_"*/, v18, 0);
+    this->fields.assetName = v19;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.assetName, (int32_t)v19, v20, v21, v22, v23, v24, v25);
+    v26 = this->fields.vcNameList;
+    if ( !v26
+      || (p_svtId = (int32_t *)UnityEngine_Random__Range_71684320(0, v26->max_length, 0),
+          (v33 = this->fields.vcNameList) == 0) )
     {
 LABEL_11:
-      sub_1C6BC60(p_svtId, v7);
+      sub_1C71608(p_svtId, v15);
     }
-    if ( (unsigned int)p_svtId >= LODWORD(v17->max_length) )
-      sub_1C6BC68(p_svtId);
-    v18 = v17->m_Items[(int)p_svtId];
-    this->fields.vcName = v18;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.vcName, (int32_t)v18, v15, v16);
+    if ( (unsigned int)p_svtId >= LODWORD(v33->max_length) )
+      sub_1C71610(p_svtId);
+    v34 = v33->m_Items[(int)p_svtId];
+    this->fields.vcName = v34;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.vcName, (int32_t)v34, v27, v28, v29, v30, v31, v32);
   }
 }
 
@@ -76,15 +92,19 @@ void SubmarineScanVoiceComponent__PlayScanVoice(SubmarineScanVoiceComponent_o *t
   System_Action_o *v7; // x22
   struct SePlayer_o *v8; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
-  if ( (byte_4CB2BE4 & 1) == 0 )
+  if ( (byte_4CC3CF7 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&SeManager_TypeInfo);
-    sub_1C6BA08(&SoundManager_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineScanVoiceComponent_StopVoice__);
-    byte_4CB2BE4 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&SeManager_TypeInfo);
+    sub_1C713B0(&SoundManager_TypeInfo);
+    sub_1C713B0(&Method_SubmarineScanVoiceComponent_StopVoice__);
+    byte_4CC3CF7 = 1;
   }
   assetName = this->fields.assetName;
   if ( assetName )
@@ -99,13 +119,13 @@ void SubmarineScanVoiceComponent__PlayScanVoice(SubmarineScanVoiceComponent_o *t
         v5 = SeManager_TypeInfo;
       }
       DEFAULT_VOLUME = v5->static_fields->DEFAULT_VOLUME;
-      v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+      v7 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
       System_Action___ctor(v7, (Il2CppObject *)this, Method_SubmarineScanVoiceComponent_StopVoice__, 0);
       if ( !SoundManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
-      v8 = SoundManager__playVoice_41752360(assetName, vcName, DEFAULT_VOLUME, v7, 0, 0);
+      v8 = SoundManager__playVoice_41795520(assetName, vcName, DEFAULT_VOLUME, v7, 0, 0);
       this->fields.sePlayer = v8;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.sePlayer, (int32_t)v8, v9, v10);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.sePlayer, (int32_t)v8, v9, v10, v11, v12, v13, v14);
     }
   }
 }
@@ -113,19 +133,23 @@ void SubmarineScanVoiceComponent__PlayScanVoice(SubmarineScanVoiceComponent_o *t
 
 void SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceComponent_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_sePlayer; // x19
+  GrandQuestFolderBoardItem_o *p_sePlayer; // x19
   System_String_o *vcName; // x20
   System_String_o *v5; // x21
   struct System_String_o **p_vcName; // t2
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
-  if ( (byte_4CB2BE5 & 1) == 0 )
+  if ( (byte_4CC3CF8 & 1) == 0 )
   {
-    sub_1C6BA08(&SoundManager_TypeInfo);
-    byte_4CB2BE5 = 1;
+    sub_1C713B0(&SoundManager_TypeInfo);
+    byte_4CC3CF8 = 1;
   }
-  p_sePlayer = (CGThumbnailListItem_o *)&this->fields.sePlayer;
+  p_sePlayer = (GrandQuestFolderBoardItem_o *)&this->fields.sePlayer;
   if ( this->fields.sePlayer )
   {
     p_vcName = &this->fields.vcName;
@@ -135,6 +159,6 @@ void SubmarineScanVoiceComponent__StopVoice(SubmarineScanVoiceComponent_o *this,
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__stopVoice(v5, vcName, 0.0, 0);
     p_sePlayer->klass = 0;
-    sub_1C6B9AC(p_sePlayer, 0, v7, v8);
+    sub_1C71354(p_sePlayer, 0, v7, v8, v9, v10, v11, v12);
   }
 }

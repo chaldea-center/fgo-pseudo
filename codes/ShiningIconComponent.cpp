@@ -10,7 +10,7 @@ void ShiningIconComponent__Awake(ShiningIconComponent_o *this, const MethodInfo 
 
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UnityEngine_Behaviour__set_enabled(widget, 0, 0);
 }
 
@@ -31,7 +31,7 @@ void ShiningIconComponent__Clear(ShiningIconComponent_o *this, const MethodInfo 
       return;
     }
 LABEL_6:
-    sub_1C6BC60(widget, method);
+    sub_1C71608(widget, method);
   }
 }
 
@@ -48,12 +48,12 @@ void ShiningIconComponent__Set(ShiningIconComponent_o *this, const MethodInfo *m
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
 LABEL_5:
-    sub_1C6BC60(widget, method);
+    sub_1C71608(widget, method);
   UnityEngine_Behaviour__set_enabled(widget, 1, 0);
 }
 
 
-void ShiningIconComponent__Set_41250876(
+void ShiningIconComponent__Set_41293588(
         ShiningIconComponent_o *this,
         System_String_o *spriteName,
         const MethodInfo *method)
@@ -62,10 +62,10 @@ void ShiningIconComponent__Set_41250876(
   struct UIWidget_o *v6; // x20
   __int64 naturalAligment; // x10
 
-  if ( (byte_4CB579F & 1) == 0 )
+  if ( (byte_4CC68BF & 1) == 0 )
   {
-    sub_1C6BA08(&UISprite_TypeInfo);
-    byte_4CB579F = 1;
+    sub_1C713B0(&UISprite_TypeInfo);
+    byte_4CC68BF = 1;
   }
   widget = (UnityEngine_Behaviour_o *)this->fields.widget;
   if ( !widget )
@@ -79,7 +79,7 @@ void ShiningIconComponent__Set_41250876(
       goto LABEL_7;
     }
 LABEL_13:
-    sub_1C6BC60(widget, spriteName);
+    sub_1C71608(widget, spriteName);
   }
 LABEL_7:
   v6 = this->fields.widget;
@@ -100,7 +100,7 @@ LABEL_7:
 
 
 // local variable allocation has failed, the output may be wrong!
-void ShiningIconComponent__Set_41255820(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
+void ShiningIconComponent__Set_41298532(ShiningIconComponent_o *this, bool isDisp, const MethodInfo *method)
 {
   if ( isDisp )
     ShiningIconComponent__Set(this, (const MethodInfo *)isDisp);

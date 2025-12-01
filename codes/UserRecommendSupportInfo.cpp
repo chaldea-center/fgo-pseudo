@@ -8,14 +8,18 @@ void UserRecommendSupportInfo___ctor(UserRecommendSupportInfo_o *this, const Met
 void UserRecommendSupportInfo__Finalize(UserRecommendSupportInfo_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *userSvtLeaderInfo; // x0
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  struct ServantLeaderInfo_o *userSvtLeaderInfo; // x0
 
-  userSvtLeaderInfo = (CGThumbnailListItem_o *)this->fields.userSvtLeaderInfo;
+  userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo )
   {
-    userSvtLeaderInfo[1].klass = 0;
-    sub_1C6B9AC(userSvtLeaderInfo + 1, 0, v2, v3);
+    userSvtLeaderInfo->fields.equipTarget1 = 0;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&userSvtLeaderInfo->fields.equipTarget1, 0, v2, v3, v4, v5, v6, v7);
   }
   System_Object__Finalize((Il2CppObject *)this, 0);
 }

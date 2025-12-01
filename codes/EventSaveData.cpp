@@ -27,22 +27,26 @@ void EventSaveData__SetValueByArray(
   System_String_o *v6; // x0
   struct System_String_o *v7; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  uint16_t v10; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  uint16_t v14; // [xsp+Ch] [xbp-24h] BYREF
 
-  v10 = separator;
-  if ( (byte_4CB3541 & 1) == 0 )
+  v14 = separator;
+  if ( (byte_4CC4659 & 1) == 0 )
   {
-    sub_1C6BA08(&char_TypeInfo);
-    byte_4CB3541 = 1;
+    sub_1C713B0(&char_TypeInfo);
+    byte_4CC4659 = 1;
   }
   if ( valueArray )
   {
     if ( !char_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(char_TypeInfo);
-    v6 = System_Char__ToString((uint16_t)&v10, 0);
+    v6 = System_Char__ToString((uint16_t)&v14, 0);
     v7 = System_String__Join(v6, valueArray, 0);
     this->fields.value = v7;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.value, (int32_t)v7, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.value, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }

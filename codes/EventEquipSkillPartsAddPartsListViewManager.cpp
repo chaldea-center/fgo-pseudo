@@ -28,13 +28,13 @@ void EventEquipSkillPartsAddPartsListViewManager__CreateList(
   __int64 v19; // x10
   Il2CppClass **v20; // x0
 
-  if ( (byte_4CB051F & 1) == 0 )
+  if ( (byte_4CC1622 & 1) == 0 )
   {
-    sub_1C6BA08(&EventEquipSkillPartsAddPartsListViewItem_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AssistEntity__get_Item__);
-    byte_4CB051F = 1;
+    sub_1C713B0(&EventEquipSkillPartsAddPartsListViewItem_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AssistEntity__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AssistEntity__get_Item__);
+    byte_4CC1622 = 1;
   }
   ListViewManager__CreateList((ListViewManager_o *)this, 0, 0);
   if ( !assistList )
@@ -47,7 +47,7 @@ void EventEquipSkillPartsAddPartsListViewManager__CreateList(
       Item = (AssistEntity_o *)System_Collections_Generic_List_object___get_Item(
                                  (System_Collections_Generic_List_object__o *)assistList,
                                  v8,
-                                 (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_AssistEntity__get_Item__);
+                                 (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_AssistEntity__get_Item__);
       if ( !Item )
         break;
       itemList = (System_Collections_Generic_List_object__o *)this->fields.itemList;
@@ -56,7 +56,7 @@ void EventEquipSkillPartsAddPartsListViewManager__CreateList(
       Detail = AssistEntity__GetDetail(Item, 0, 0);
       size = assistList->fields._size;
       v14 = Detail;
-      v15 = (EventEquipSkillPartsAddPartsListViewItem_o *)sub_1C6BC54(EventEquipSkillPartsAddPartsListViewItem_TypeInfo);
+      v15 = (EventEquipSkillPartsAddPartsListViewItem_o *)sub_1C715FC(EventEquipSkillPartsAddPartsListViewItem_TypeInfo);
       EventEquipSkillPartsAddPartsListViewItem___ctor(v15, v8, skillId, name, v14, v8 == size - 1, v16);
       if ( !itemList )
         break;
@@ -71,20 +71,20 @@ void EventEquipSkillPartsAddPartsListViewManager__CreateList(
         System_Collections_Generic_List_object___AddWithResize(
           itemList,
           (Il2CppObject *)v15,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
         v20 = &items->obj.klass + v19;
         itemList->fields._size = v19 + 1;
         v20[4] = (Il2CppClass *)v15;
-        sub_1C6B9AC(v20 + 4, v15);
+        sub_1C71354(v20 + 4, v15);
       }
       if ( ++v8 >= assistList->fields._size )
         goto LABEL_13;
     }
 LABEL_15:
-    sub_1C6BC60(Item, v7);
+    sub_1C71608(Item, v7);
   }
 LABEL_13:
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 1, -1, 0);
@@ -116,7 +116,7 @@ void EventEquipSkillPartsAddPartsListViewManager__SetScrollBarValue(
   if ( !scrollView
     || (this = (EventEquipSkillPartsAddPartsListViewManager_o *)scrollView->fields.verticalScrollBar) == 0 )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   UIProgressBar__set_value((UIProgressBar_o *)this, value, 0);
 }

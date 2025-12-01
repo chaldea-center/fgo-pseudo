@@ -5,23 +5,27 @@ void Crc32___cctor(const MethodInfo *method)
   System_Array_o *v3; // x19
   struct Crc32_StaticFields *static_fields; // x0
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
 
-  if ( (byte_4CB596B & 1) == 0 )
+  if ( (byte_4CC6A8C & 1) == 0 )
   {
-    sub_1C6BA08(&Crc32_TypeInfo);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86);
-    sub_1C6BA08(&uint___TypeInfo);
-    byte_4CB596B = 1;
+    sub_1C713B0(&Crc32_TypeInfo);
+    sub_1C713B0(&Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86);
+    sub_1C713B0(&uint___TypeInfo);
+    byte_4CC6A8C = 1;
   }
   Crc32_TypeInfo->static_fields->CRC_UNIT = 256;
-  v1 = (System_Array_o *)sub_1C6BAB0(uint___TypeInfo, 256);
+  v1 = (System_Array_o *)sub_1C71458(uint___TypeInfo, 256);
   v2.fields.value = Field__PrivateImplementationDetails__12F3E0576D447EB37B36D82BA0C1C5481B8F0D12FDC70347CE4A076B229D4C86;
   v3 = v1;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v1, v2, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v1, v2, 0);
   static_fields = Crc32_TypeInfo->static_fields;
   static_fields->CrcTable = (struct System_UInt32_array *)v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->CrcTable, (int32_t)v3, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->CrcTable, (int32_t)v3, v5, v6, v7, v8, v9, v10);
 }
 
 
@@ -36,14 +40,14 @@ uint32_t Crc32__Compute(System_Byte_array *buffer, const MethodInfo *method)
   unsigned int v8; // w10
 
   v2 = buffer;
-  if ( (byte_4CB5968 & 1) == 0 )
+  if ( (byte_4CC6A89 & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_1C6BA08(&Crc32_TypeInfo);
-    byte_4CB5968 = 1;
+    buffer = (System_Byte_array *)sub_1C713B0(&Crc32_TypeInfo);
+    byte_4CC6A89 = 1;
   }
   if ( !v2 )
 LABEL_15:
-    sub_1C6BC60(buffer, method);
+    sub_1C71608(buffer, method);
   max_length = v2->max_length;
   if ( (int)max_length - 1 < 0 )
     return 0;
@@ -67,7 +71,7 @@ LABEL_15:
     v8 = (unsigned __int8)v5 ^ v2->m_Items[v4];
     if ( v8 >= *(_DWORD *)(v7 + 24) )
 LABEL_14:
-      sub_1C6BC68(buffer);
+      sub_1C71610(buffer);
     ++v4;
     v5 = *(_DWORD *)(v7 + 4LL * v8 + 32) ^ (v5 >> 8);
   }
@@ -77,7 +81,7 @@ LABEL_14:
 
 
 // local variable allocation has failed, the output may be wrong!
-uint32_t Crc32__Compute_41479848(System_Byte_array *buffer, int32_t length, const MethodInfo *method)
+uint32_t Crc32__Compute_41523008(System_Byte_array *buffer, int32_t length, const MethodInfo *method)
 {
   int32_t v3; // w20
   System_Byte_array *v4; // x19
@@ -89,14 +93,14 @@ uint32_t Crc32__Compute_41479848(System_Byte_array *buffer, int32_t length, cons
 
   v3 = length;
   v4 = buffer;
-  if ( (byte_4CB5969 & 1) == 0 )
+  if ( (byte_4CC6A8A & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_1C6BA08(&Crc32_TypeInfo);
-    byte_4CB5969 = 1;
+    buffer = (System_Byte_array *)sub_1C713B0(&Crc32_TypeInfo);
+    byte_4CC6A8A = 1;
   }
   if ( !v4 )
 LABEL_17:
-    sub_1C6BC60(buffer, *(_QWORD *)&length);
+    sub_1C71608(buffer, *(_QWORD *)&length);
   max_length = v4->max_length;
   if ( (int)max_length < v3 )
     v3 = v4->max_length;
@@ -121,7 +125,7 @@ LABEL_17:
     v9 = (unsigned __int8)v7 ^ v4->m_Items[v6];
     if ( v9 >= *(_DWORD *)(v8 + 24) )
 LABEL_16:
-      sub_1C6BC68(buffer);
+      sub_1C71610(buffer);
     ++v6;
     v7 = *(_DWORD *)(v8 + 4LL * v9 + 32) ^ (v7 >> 8);
   }
@@ -131,7 +135,7 @@ LABEL_16:
 
 
 // local variable allocation has failed, the output may be wrong!
-uint32_t Crc32__Compute_41480072(System_Byte_array *buffer, int32_t length, uint32_t crc, const MethodInfo *method)
+uint32_t Crc32__Compute_41523232(System_Byte_array *buffer, int32_t length, uint32_t crc, const MethodInfo *method)
 {
   int32_t v5; // w21
   System_Byte_array *v6; // x19
@@ -143,14 +147,14 @@ uint32_t Crc32__Compute_41480072(System_Byte_array *buffer, int32_t length, uint
 
   v5 = length;
   v6 = buffer;
-  if ( (byte_4CB596A & 1) == 0 )
+  if ( (byte_4CC6A8B & 1) == 0 )
   {
-    buffer = (System_Byte_array *)sub_1C6BA08(&Crc32_TypeInfo);
-    byte_4CB596A = 1;
+    buffer = (System_Byte_array *)sub_1C713B0(&Crc32_TypeInfo);
+    byte_4CC6A8B = 1;
   }
   if ( !v6 )
 LABEL_16:
-    sub_1C6BC60(buffer, *(_QWORD *)&length);
+    sub_1C71608(buffer, *(_QWORD *)&length);
   max_length = v6->max_length;
   v8 = ~crc;
   if ( (int)max_length < v5 )
@@ -175,7 +179,7 @@ LABEL_16:
       v11 = (unsigned __int8)v8 ^ v6->m_Items[v9];
       if ( v11 >= *(_DWORD *)(v10 + 24) )
 LABEL_15:
-        sub_1C6BC68(buffer);
+        sub_1C71610(buffer);
       ++v9;
       v8 = *(_DWORD *)(v10 + 4LL * v11 + 32) ^ (v8 >> 8);
     }

@@ -38,7 +38,7 @@ int32_t BattleCharaChangeConfirmListViewItemDraw__GetNextFrameHeight(
 
   nextFrameSprite = this->fields.nextFrameSprite;
   if ( !nextFrameSprite )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return nextFrameSprite->fields.mHeight;
 }
 
@@ -51,7 +51,7 @@ int32_t BattleCharaChangeConfirmListViewItemDraw__GetNowFrameHeight(
 
   nowFrameSprite = this->fields.nowFrameSprite;
   if ( !nowFrameSprite )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return nowFrameSprite->fields.mHeight;
 }
 
@@ -63,29 +63,33 @@ void BattleCharaChangeConfirmListViewItemDraw__Init(
 {
   struct System_String_o *v5; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  __int64 v8; // x1
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  __int64 v12; // x1
   UILabel_o *nowTitleLabel; // x0
 
-  if ( (byte_4CB1503 & 1) == 0 )
+  if ( (byte_4CC2610 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11898/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB1503 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_11904/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC2610 = 1;
   }
   this->fields.drawKind = kind;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_11898/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_11904/*"SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR"*/, 0);
   this->fields.modifyColor = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.modifyColor, (int32_t)v5, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.modifyColor, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   nowTitleLabel = this->fields.nowTitleLabel;
   if ( !nowTitleLabel
     || (UILabel__set_text(nowTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0),
         (nowTitleLabel = this->fields.nextTitleLabel) == 0) )
   {
-    sub_1C6BC60(nowTitleLabel, v8);
+    sub_1C71608(nowTitleLabel, v12);
   }
   UILabel__set_text(nowTitleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
 }

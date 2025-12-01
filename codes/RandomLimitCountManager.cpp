@@ -2,21 +2,33 @@ void RandomLimitCountManager___cctor(const MethodInfo *method)
 {
   System_Collections_Generic_Dictionary_object__int__o *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB1564 & 1) == 0 )
+  if ( (byte_4CC2671 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
-    sub_1C6BA08(&RandomLimitCountManager_TypeInfo);
-    byte_4CB1564 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_string__int__TypeInfo);
+    sub_1C713B0(&RandomLimitCountManager_TypeInfo);
+    byte_4CC2671 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_string__int__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C715FC(System_Collections_Generic_Dictionary_string__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v1,
-    (const MethodInfo_34B2258 *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
+    (const MethodInfo_34C1FFC *)Method_System_Collections_Generic_Dictionary_string__int___ctor__);
   RandomLimitCountManager_TypeInfo->static_fields->choiceRandomLimitCountDic = (struct System_Collections_Generic_Dictionary_string__int__o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)RandomLimitCountManager_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)RandomLimitCountManager_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -30,170 +42,174 @@ int32_t RandomLimitCountManager__ChoiceLimitCount(
   int64_t GroupIndex; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **v12; // x22
-  const MethodInfo *v13; // x3
-  UserServantEntity_o *v14; // x23
-  __int64 v15; // x8
-  __int128 v16; // q1
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v17; // x8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v18; // q0
-  int64_t v19; // x21
-  int64_t v20; // x0
-  const MethodInfo *v21; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **v16; // x22
+  const MethodInfo *v17; // x3
+  UserServantEntity_o *v18; // x23
+  __int64 v19; // x8
+  __int128 v20; // q1
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v21; // x8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // q0
+  int64_t v23; // x21
+  int64_t v24; // x0
+  const MethodInfo *v25; // x3
   Il2CppObject *Key; // x21
-  const MethodInfo *v23; // x1
-  RandomLimitCountManager_c *v24; // x0
+  const MethodInfo *v27; // x1
+  RandomLimitCountManager_c *v28; // x0
   int32_t Item; // w20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v27; // x8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v28; // q0
-  UserServantCollectionMaster_o *v29; // x23
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v30; // x8
-  int64_t v31; // x24
-  __int64 v32; // x25
-  __int64 v33; // x26
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v31; // x8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v32; // q0
+  UserServantCollectionMaster_o *v33; // x23
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v34; // x8
-  UserServantCollectionEntity_o *v35; // x22
+  int64_t v35; // x24
+  __int64 v36; // x25
+  __int64 v37; // x26
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v38; // x8
+  UserServantCollectionEntity_o *v39; // x22
   int32_t currentCryptoKey; // w23
-  System_Collections_Generic_IEnumerable_TSource__o *LimitCountStageList_43387944; // x22
-  System_Func_int__bool__o *v38; // x23
-  System_Collections_Generic_IEnumerable_TSource__o *v39; // x0
-  int64_t v40; // x20
-  __int64 v41; // x0
-  int v42; // w8
-  RandomLimitCountManager_c *v43; // x0
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v44; // [xsp+0h] [xbp-D0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v45; // [xsp+20h] [xbp-B0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v46; // [xsp+40h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v47; // [xsp+60h] [xbp-70h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v48; // 0:x0.16
+  System_Collections_Generic_IEnumerable_TSource__o *LimitCountStageList_43432396; // x22
+  System_Func_int__bool__o *v42; // x23
+  System_Collections_Generic_IEnumerable_TSource__o *v43; // x0
+  int64_t v44; // x20
+  __int64 v45; // x0
+  int v46; // w8
+  RandomLimitCountManager_c *v47; // x0
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v48; // [xsp+0h] [xbp-D0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v49; // [xsp+20h] [xbp-B0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v50; // [xsp+40h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v51; // [xsp+60h] [xbp-70h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v52; // 0:x0.16
 
-  if ( (byte_4CB1562 & 1) == 0 )
+  if ( (byte_4CC266F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_int___);
-    sub_1C6BA08(&System_Func_int__bool__TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C6BA08(&RandomLimitCountManager_TypeInfo);
-    sub_1C6BA08(&Method_RandomLimitCountManager___c__DisplayClass10_0__ChoiceLimitCount_b__0__);
-    sub_1C6BA08(&RandomLimitCountManager___c__DisplayClass10_0_TypeInfo);
-    byte_4CB1562 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Where_int___);
+    sub_1C713B0(&System_Func_int__bool__TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C713B0(&RandomLimitCountManager_TypeInfo);
+    sub_1C713B0(&Method_RandomLimitCountManager___c__DisplayClass10_0__ChoiceLimitCount_b__0__);
+    sub_1C713B0(&RandomLimitCountManager___c__DisplayClass10_0_TypeInfo);
+    byte_4CC266F = 1;
   }
-  v7 = sub_1C6BC54(RandomLimitCountManager___c__DisplayClass10_0_TypeInfo);
+  v7 = sub_1C715FC(RandomLimitCountManager___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_35;
   *(_QWORD *)(v7 + 16) = userServantEntity;
-  v12 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)(v7 + 16);
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)userServantEntity, v10, v11);
-  v14 = *(UserServantEntity_o **)(v7 + 16);
+  v16 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)(v7 + 16);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)userServantEntity, v10, v11, v12, v13, v14, v15);
+  v18 = *(UserServantEntity_o **)(v7 + 16);
   if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
-  GroupIndex = RandomLimitCountManager__GetGroupIndex(v14, dispLimitCountStage, 0, v13);
-  v15 = *(_QWORD *)(v7 + 16);
+  GroupIndex = RandomLimitCountManager__GetGroupIndex(v18, dispLimitCountStage, 0, v17);
+  v19 = *(_QWORD *)(v7 + 16);
   *(_DWORD *)(v7 + 24) = GroupIndex;
-  if ( !v15 )
+  if ( !v19 )
     goto LABEL_35;
-  v16 = *(_OWORD *)(v15 + 64);
-  *(_OWORD *)&v47.fields.currentCryptoKey = *(_OWORD *)(v15 + 48);
-  *(_OWORD *)&v47.fields.fakeValue = v16;
+  v20 = *(_OWORD *)(v19 + 64);
+  *(_OWORD *)&v51.fields.currentCryptoKey = *(_OWORD *)(v19 + 48);
+  *(_OWORD *)&v51.fields.fakeValue = v20;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v46 = v47;
-  GroupIndex = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v46, 0);
-  v17 = *v12;
-  if ( !*v12 )
+  v50 = v51;
+  GroupIndex = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v50, 0);
+  v21 = *v16;
+  if ( !*v16 )
     goto LABEL_35;
-  v18 = v17[2];
-  v19 = GroupIndex;
-  *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v45.fields.currentCryptoKey = v17[1];
-  *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v45.fields.fakeValue = v18;
-  v20 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v45, 0);
-  Key = (Il2CppObject *)RandomLimitCountManager__GenerateKey(v19, v20, *(_DWORD *)(v7 + 24), v21);
-  if ( !RandomLimitCountManager__IsChose((System_String_o *)Key, v23) )
+  v22 = v21[2];
+  v23 = GroupIndex;
+  *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v49.fields.currentCryptoKey = v21[1];
+  *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v49.fields.fakeValue = v22;
+  v24 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v49, 0);
+  Key = (Il2CppObject *)RandomLimitCountManager__GenerateKey(v23, v24, *(_DWORD *)(v7 + 24), v25);
+  if ( !RandomLimitCountManager__IsChose((System_String_o *)Key, v27) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    GroupIndex = (int64_t)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    v27 = *v12;
-    if ( *v12 )
+    GroupIndex = (int64_t)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    v31 = *v16;
+    if ( *v16 )
     {
-      v28 = v27[4];
-      v29 = (UserServantCollectionMaster_o *)GroupIndex;
-      *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v47.fields.currentCryptoKey = v27[3];
-      *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v47.fields.fakeValue = v28;
+      v32 = v31[4];
+      v33 = (UserServantCollectionMaster_o *)GroupIndex;
+      *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v51.fields.currentCryptoKey = v31[3];
+      *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v51.fields.fakeValue = v32;
       if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-      v44 = v47;
-      GroupIndex = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v44, 0);
-      v30 = *v12;
-      if ( *v12 )
+      v48 = v51;
+      GroupIndex = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v48, 0);
+      v34 = *v16;
+      if ( *v16 )
       {
-        v31 = GroupIndex;
-        v33 = *(_QWORD *)&v30[5].fields.currentCryptoKey;
-        v32 = *(_QWORD *)&v30[5].fields.fakeValue;
+        v35 = GroupIndex;
+        v37 = *(_QWORD *)&v34[5].fields.currentCryptoKey;
+        v36 = *(_QWORD *)&v34[5].fields.fakeValue;
         if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-        *(_QWORD *)&v48.fields.currentCryptoKey = v33;
-        *(_QWORD *)&v48.fields.fakeValue = v32;
-        GroupIndex = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v48, 0);
-        if ( v29 )
+        *(_QWORD *)&v52.fields.currentCryptoKey = v37;
+        *(_QWORD *)&v52.fields.fakeValue = v36;
+        GroupIndex = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v52, 0);
+        if ( v33 )
         {
-          GroupIndex = (int64_t)UserServantCollectionMaster__GetEntityDefinitely(v29, v31, GroupIndex, 0);
-          v34 = *v12;
-          if ( *v12 )
+          GroupIndex = (int64_t)UserServantCollectionMaster__GetEntityDefinitely(v33, v35, GroupIndex, 0);
+          v38 = *v16;
+          if ( *v16 )
           {
-            v35 = (UserServantCollectionEntity_o *)GroupIndex;
-            currentCryptoKey = v34[16].fields.currentCryptoKey;
-            GroupIndex = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v34[6], 0);
-            if ( v35 )
+            v39 = (UserServantCollectionEntity_o *)GroupIndex;
+            currentCryptoKey = v38[16].fields.currentCryptoKey;
+            GroupIndex = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v38[6], 0);
+            if ( v39 )
             {
-              LimitCountStageList_43387944 = (System_Collections_Generic_IEnumerable_TSource__o *)UserServantCollectionEntity__GetLimitCountStageList_43387944(
-                                                                                                    v35,
+              LimitCountStageList_43432396 = (System_Collections_Generic_IEnumerable_TSource__o *)UserServantCollectionEntity__GetLimitCountStageList_43432396(
+                                                                                                    v39,
                                                                                                     currentCryptoKey,
                                                                                                     GroupIndex,
                                                                                                     1,
                                                                                                     0);
-              v38 = (System_Func_int__bool__o *)sub_1C6BC54(System_Func_int__bool__TypeInfo);
+              v42 = (System_Func_int__bool__o *)sub_1C715FC(System_Func_int__bool__TypeInfo);
               System_Func_int__bool____ctor(
-                v38,
+                v42,
                 (Il2CppObject *)v7,
                 Method_RandomLimitCountManager___c__DisplayClass10_0__ChoiceLimitCount_b__0__,
                 0);
-              v39 = System_Linq_Enumerable__Where_int_(
-                      LimitCountStageList_43387944,
-                      (System_Func_TSource__bool__o *)v38,
-                      (const MethodInfo_3181DBC *)Method_System_Linq_Enumerable_Where_int___);
+              v43 = System_Linq_Enumerable__Where_int_(
+                      LimitCountStageList_43432396,
+                      (System_Func_TSource__bool__o *)v42,
+                      (const MethodInfo_3191B60 *)Method_System_Linq_Enumerable_Where_int___);
               GroupIndex = (int64_t)System_Linq_Enumerable__ToArray_int_(
-                                      v39,
-                                      (const MethodInfo_317B0B0 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                      v43,
+                                      (const MethodInfo_318AE54 *)Method_System_Linq_Enumerable_ToArray_int___);
               if ( GroupIndex )
               {
-                v40 = GroupIndex;
-                v41 = UnityEngine_Random__Range_71619388(0, *(_DWORD *)(GroupIndex + 24), 0);
-                if ( (unsigned int)v41 >= *(_DWORD *)(v40 + 24) )
-                  sub_1C6BC68(v41);
-                v42 = v41;
-                v43 = RandomLimitCountManager_TypeInfo;
-                Item = *(_DWORD *)(v40 + 4LL * v42 + 32);
+                v44 = GroupIndex;
+                v45 = UnityEngine_Random__Range_71684320(0, *(_DWORD *)(GroupIndex + 24), 0);
+                if ( (unsigned int)v45 >= *(_DWORD *)(v44 + 24) )
+                  sub_1C71610(v45);
+                v46 = v45;
+                v47 = RandomLimitCountManager_TypeInfo;
+                Item = *(_DWORD *)(v44 + 4LL * v46 + 32);
                 if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
                 {
                   j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
-                  v43 = RandomLimitCountManager_TypeInfo;
+                  v47 = RandomLimitCountManager_TypeInfo;
                 }
-                GroupIndex = (int64_t)v43->static_fields->choiceRandomLimitCountDic;
+                GroupIndex = (int64_t)v47->static_fields->choiceRandomLimitCountDic;
                 if ( GroupIndex )
                 {
                   System_Collections_Generic_Dictionary_object__int___Add(
                     (System_Collections_Generic_Dictionary_object__int__o *)GroupIndex,
                     Key,
                     Item,
-                    (const MethodInfo_34B2C0C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+                    (const MethodInfo_34C29B0 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
                   if ( hasRewardStage )
                     return Item;
                   return Item - LimitCountUtility__IsRewardStage(Item, 0);
@@ -205,21 +221,21 @@ int32_t RandomLimitCountManager__ChoiceLimitCount(
       }
     }
 LABEL_35:
-    sub_1C6BC60(GroupIndex, v9);
+    sub_1C71608(GroupIndex, v9);
   }
-  v24 = RandomLimitCountManager_TypeInfo;
+  v28 = RandomLimitCountManager_TypeInfo;
   if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
-    v24 = RandomLimitCountManager_TypeInfo;
+    v28 = RandomLimitCountManager_TypeInfo;
   }
-  GroupIndex = (int64_t)v24->static_fields->choiceRandomLimitCountDic;
+  GroupIndex = (int64_t)v28->static_fields->choiceRandomLimitCountDic;
   if ( !GroupIndex )
     goto LABEL_35;
   Item = System_Collections_Generic_Dictionary_object__int___get_Item(
            (System_Collections_Generic_Dictionary_object__int__o *)GroupIndex,
            Key,
-           (const MethodInfo_34B2B8C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+           (const MethodInfo_34C2930 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
   if ( hasRewardStage )
     return Item;
   return Item - LimitCountUtility__IsRewardStage(Item, 0);
@@ -236,60 +252,80 @@ System_String_o *RandomLimitCountManager__GenerateKey(
   System_String_o *v5; // x0
   __int64 v6; // x1
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
-  int64_t v21; // [xsp+10h] [xbp-30h] BYREF
-  int64_t v22; // [xsp+18h] [xbp-28h] BYREF
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  int32_t v19; // w1
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  int32_t v32; // w1
+  int32_t v33; // w2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  int32_t v36; // w5
+  int64_t v37; // x6
+  System_String_o *v38; // x7
+  int32_t v40; // [xsp+Ch] [xbp-34h] BYREF
+  int64_t v41; // [xsp+10h] [xbp-30h] BYREF
+  int64_t v42; // [xsp+18h] [xbp-28h] BYREF
 
-  v21 = userSvtId;
-  v22 = userId;
-  v20 = groupIndex;
-  if ( (byte_4CB155D & 1) == 0 )
+  v41 = userSvtId;
+  v42 = userId;
+  v40 = groupIndex;
+  if ( (byte_4CC266A & 1) == 0 )
   {
-    sub_1C6BA08(&string___TypeInfo);
-    sub_1C6BA08(&StringLiteral_1449/*":"*/);
-    byte_4CB155D = 1;
+    sub_1C713B0(&string___TypeInfo);
+    sub_1C713B0(&StringLiteral_1450/*":"*/);
+    byte_4CC266A = 1;
   }
-  v4 = sub_1C6BAB0(string___TypeInfo, 5);
-  v5 = System_Int64__ToString((int64_t)&v22, 0);
+  v4 = sub_1C71458(string___TypeInfo, 5);
+  v5 = System_Int64__ToString((int64_t)&v42, 0);
   if ( !v4 )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   if ( !*(_DWORD *)(v4 + 24) )
     goto LABEL_10;
   *(_QWORD *)(v4 + 32) = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 32), (int32_t)v5, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v4 + 32), (int32_t)v5, v7, v8, v9, v10, v11, v12);
   if ( *(_DWORD *)(v4 + 24) <= 1u )
     goto LABEL_10;
-  v11 = StringLiteral_1449/*":"*/;
-  *(_QWORD *)(v4 + 40) = StringLiteral_1449/*":"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 40), v11, v9, v10);
-  v5 = System_Int64__ToString((int64_t)&v21, 0);
+  v19 = StringLiteral_1450/*":"*/;
+  *(_QWORD *)(v4 + 40) = StringLiteral_1450/*":"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v4 + 40), v19, v13, v14, v15, v16, v17, v18);
+  v5 = System_Int64__ToString((int64_t)&v41, 0);
   if ( *(_DWORD *)(v4 + 24) <= 2u
     || (*(_QWORD *)(v4 + 48) = v5,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 48), (int32_t)v5, v12, v13),
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v4 + 48), (int32_t)v5, v20, v21, v22, v23, v24, v25),
         *(_DWORD *)(v4 + 24) <= 3u)
-    || (v16 = StringLiteral_1449/*":"*/,
-        *(_QWORD *)(v4 + 56) = StringLiteral_1449/*":"*/,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 56), v16, v14, v15),
-        v5 = System_Int32__ToString((int32_t)&v20, 0),
+    || (v32 = StringLiteral_1450/*":"*/,
+        *(_QWORD *)(v4 + 56) = StringLiteral_1450/*":"*/,
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v4 + 56), v32, v26, v27, v28, v29, v30, v31),
+        v5 = System_Int32__ToString((int32_t)&v40, 0),
         *(_DWORD *)(v4 + 24) <= 4u) )
   {
 LABEL_10:
-    sub_1C6BC68(v5);
+    sub_1C71610(v5);
   }
   *(_QWORD *)(v4 + 64) = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v4 + 64), (int32_t)v5, v17, v18);
-  return System_String__Concat_64007324((System_String_array *)v4, 0);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v4 + 64), (int32_t)v5, v33, v34, v35, v36, v37, v38);
+  return System_String__Concat_64072256((System_String_array *)v4, 0);
 }
 
 
@@ -338,7 +374,7 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount(UserServantEntity_o *entity
   __int64 v43; // x24
   __int64 v44; // x25
   int32_t v45; // w0
-  System_Int32_array *CostumeList_43382280; // x0
+  System_Int32_array *CostumeList_43427048; // x0
   System_Int32_array *RandomLimitCountList; // x23
   Il2CppObject *v48; // x24
   Il2CppObject *v49; // x25
@@ -377,27 +413,27 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount(UserServantEntity_o *entity
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v83; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v84; // 0:x0.16
 
-  if ( (byte_4CB155F & 1) == 0 )
+  if ( (byte_4CC266C & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantCostumeMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C6BA08(&RandomLimitCountManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB155F = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantCostumeMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C713B0(&RandomLimitCountManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC266C = 1;
   }
   v74 = 0;
   entitya = 0;
@@ -409,7 +445,7 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount(UserServantEntity_o *entity
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v76.fields.currentCryptoKey = v4;
     *(_QWORD *)&v76.fields.fakeValue = v3;
-    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v76, 0) )
+    if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v76, 0) )
     {
       v6 = *(_QWORD *)&entity->fields.dispLimitCount.fields.currentCryptoKey;
       v5 = *(_QWORD *)&entity->fields.dispLimitCount.fields.fakeValue;
@@ -418,7 +454,7 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount(UserServantEntity_o *entity
       *(_QWORD *)&v77.fields.currentCryptoKey = v6;
       *(_QWORD *)&v77.fields.fakeValue = v5;
       v7 = &BalanceConfig_TypeInfo;
-      v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v77, 0);
+      v8 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v77, 0);
       v9 = BalanceConfig_TypeInfo;
       if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
       {
@@ -429,7 +465,7 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount(UserServantEntity_o *entity
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
         entitya = 0;
         v21 = *(_QWORD *)&entity->fields.svtId.fields.currentCryptoKey;
         v20 = *(_QWORD *)&entity->fields.svtId.fields.fakeValue;
@@ -438,8 +474,8 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount(UserServantEntity_o *entity
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v79.fields.currentCryptoKey = v21;
         *(_QWORD *)&v79.fields.fakeValue = v20;
-        v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v79, 0);
-        Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
+        v23 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v79, 0);
+        Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(
                                       entity->fields.dispLimitCount,
                                       0);
         if ( !v22 )
@@ -455,12 +491,12 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount(UserServantEntity_o *entity
       }
       else
       {
-        Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
         if ( !Instance )
           goto LABEL_89;
         MasterData_object = DataManager__GetMasterData_object_(
                               Instance,
-                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                              (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
         v14 = *(_QWORD *)&entity->fields.svtId.fields.currentCryptoKey;
         v13 = *(_QWORD *)&entity->fields.svtId.fields.fakeValue;
         v15 = (ServantCostumeMaster_o *)MasterData_object;
@@ -468,8 +504,8 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount(UserServantEntity_o *entity
           j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
         *(_QWORD *)&v78.fields.currentCryptoKey = v14;
         *(_QWORD *)&v78.fields.fakeValue = v13;
-        v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v78, 0);
-        Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
+        v16 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v78, 0);
+        Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(
                                       entity->fields.dispLimitCount,
                                       0);
         if ( !v15 )
@@ -485,12 +521,12 @@ LABEL_28:
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
           v72 = v73;
-          v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v72, 0);
+          v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v72, 0);
           v26 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
           v27 = v25;
           *(_OWORD *)&v71.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
           *(_OWORD *)&v71.fields.fakeValue = v26;
-          v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v71, 0);
+          v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v71, 0);
           if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(RandomLimitCountManager_TypeInfo);
           Key = (Il2CppObject *)RandomLimitCountManager__GenerateKey(v27, v29, groupIndex, v28);
@@ -507,15 +543,15 @@ LABEL_28:
               return System_Collections_Generic_Dictionary_object__int___get_Item(
                        (System_Collections_Generic_Dictionary_object__int__o *)Instance,
                        Key,
-                       (const MethodInfo_34B2B8C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+                       (const MethodInfo_34C2930 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
             goto LABEL_89;
           }
-          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+          Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
           if ( !Instance )
             goto LABEL_89;
           v33 = DataManager__GetMasterData_object_(
                   Instance,
-                  (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                  (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
           v34 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
           v35 = (UserServantCollectionMaster_o *)v33;
           *(_OWORD *)&v73.fields.currentCryptoKey = *(_OWORD *)&entity->fields.userId.fields.currentCryptoKey;
@@ -523,7 +559,7 @@ LABEL_28:
           if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
           v70 = v73;
-          v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v70, 0);
+          v36 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v70, 0);
           v38 = *(_QWORD *)&entity->fields.svtId.fields.currentCryptoKey;
           v37 = *(_QWORD *)&entity->fields.svtId.fields.fakeValue;
           v39 = v36;
@@ -531,7 +567,7 @@ LABEL_28:
             j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
           *(_QWORD *)&v80.fields.currentCryptoKey = v38;
           *(_QWORD *)&v80.fields.fakeValue = v37;
-          Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v80, 0);
+          Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v80, 0);
           if ( !v35 )
             goto LABEL_89;
           EntityDefinitely = UserServantCollectionMaster__GetEntityDefinitely(v35, v39, (int32_t)Instance, 0);
@@ -545,23 +581,23 @@ LABEL_28:
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v81.fields.currentCryptoKey = v44;
             *(_QWORD *)&v81.fields.fakeValue = v43;
-            v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v81, 0);
-            CostumeList_43382280 = UserServantCollectionEntity__getCostumeList_43382280(v41, lv, v45, 0);
+            v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v81, 0);
+            CostumeList_43427048 = UserServantCollectionEntity__getCostumeList_43427048(v41, lv, v45, 0);
           }
           else
           {
-            CostumeList_43382280 = (System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 0);
+            CostumeList_43427048 = (System_Int32_array *)sub_1C71458(int___TypeInfo, 0);
           }
-          RandomLimitCountList = UserServantEntity__GetRandomLimitCountList(entity, CostumeList_43382280, 0);
+          RandomLimitCountList = UserServantEntity__GetRandomLimitCountList(entity, CostumeList_43427048, 0);
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
           v68 = Key;
-          v48 = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
-          v49 = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
-          v50 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+          v48 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
+          v49 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+          v50 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
           System_Collections_Generic_List_int____ctor(
             v50,
-            (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
+            (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
           if ( !RandomLimitCountList )
             goto LABEL_89;
           max_length = RandomLimitCountList->max_length;
@@ -574,16 +610,16 @@ LABEL_78:
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
             *(_QWORD *)&v84.fields.currentCryptoKey = v64;
             *(_QWORD *)&v84.fields.fakeValue = v63;
-            Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v84, 0);
+            Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v84, 0);
             if ( (_DWORD)Instance )
             {
               if ( !v50 )
                 goto LABEL_89;
-              v65 = UnityEngine_Random__Range_71619388(0, v50->fields._size, 0);
+              v65 = UnityEngine_Random__Range_71684320(0, v50->fields._size, 0);
               Item = System_Collections_Generic_List_int___get_Item(
                        v50,
                        v65,
-                       (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+                       (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
             }
             else
             {
@@ -602,17 +638,17 @@ LABEL_78:
                 (System_Collections_Generic_Dictionary_object__int__o *)Instance,
                 v68,
                 Item,
-                (const MethodInfo_34B2C0C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+                (const MethodInfo_34C29B0 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
               return Item;
             }
 LABEL_89:
-            sub_1C6BC60(Instance, v11);
+            sub_1C71608(Instance, v11);
           }
           v52 = 0;
           while ( 1 )
           {
             if ( v52 >= (unsigned int)max_length )
-              sub_1C6BC68(Instance);
+              sub_1C71610(Instance);
             v53 = RandomLimitCountList->m_Items[v52];
             if ( v53 == -1 )
               goto LABEL_77;
@@ -632,7 +668,7 @@ LABEL_89:
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
               *(_QWORD *)&v83.fields.currentCryptoKey = v59;
               *(_QWORD *)&v83.fields.fakeValue = v58;
-              Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v83, 0);
+              Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v83, 0);
               if ( !v49 )
                 goto LABEL_89;
               v7 = v55;
@@ -663,7 +699,7 @@ LABEL_72:
                   System_Collections_Generic_List_int___AddWithResize(
                     v50,
                     v53,
-                    *(const MethodInfo_37E3950 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
+                    *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
                 }
                 else
                 {
@@ -680,7 +716,7 @@ LABEL_72:
                 j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
               *(_QWORD *)&v82.fields.currentCryptoKey = v57;
               *(_QWORD *)&v82.fields.fakeValue = v56;
-              Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v82, 0);
+              Instance = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v82, 0);
               if ( !v48 )
                 goto LABEL_89;
               Instance = (DataManager_o *)ServantCostumeMaster__GetEntity(
@@ -707,7 +743,7 @@ LABEL_77:
 }
 
 
-int32_t RandomLimitCountManager__GetChoiceLimitCount_33620184(ServantLeaderInfo_o *info, const MethodInfo *method)
+int32_t RandomLimitCountManager__GetChoiceLimitCount_33647736(ServantLeaderInfo_o *info, const MethodInfo *method)
 {
   const MethodInfo *v2; // x3
   struct System_Int32_array *randomLimitCountTargets; // x8
@@ -731,21 +767,21 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount_33620184(ServantLeaderInfo_
   int32_t v23; // w0
   RandomLimitCountManager_c *v24; // x8
 
-  if ( (byte_4CB1560 & 1) == 0 )
+  if ( (byte_4CC266D & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantLimitSpoilerProtectionMaster___);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C6BA08(&OptionManager_TypeInfo);
-    sub_1C6BA08(&RandomLimitCountManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB1560 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_ServantLimitSpoilerProtectionMaster___);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C713B0(&OptionManager_TypeInfo);
+    sub_1C713B0(&RandomLimitCountManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC266D = 1;
   }
   if ( !info )
     return -1;
@@ -770,20 +806,20 @@ int32_t RandomLimitCountManager__GetChoiceLimitCount_33620184(ServantLeaderInfo_
       return System_Collections_Generic_Dictionary_object__int___get_Item(
                choiceRandomLimitCountDic,
                Key,
-               (const MethodInfo_34B2B8C *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
+               (const MethodInfo_34C2930 *)Method_System_Collections_Generic_Dictionary_string__int__get_Item__);
 LABEL_49:
-    sub_1C6BC60(choiceRandomLimitCountDic, v9);
+    sub_1C71608(choiceRandomLimitCountDic, v9);
   }
-  choiceRandomLimitCountDic = (System_Collections_Generic_Dictionary_object__int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  choiceRandomLimitCountDic = (System_Collections_Generic_Dictionary_object__int__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !choiceRandomLimitCountDic )
     goto LABEL_49;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)choiceRandomLimitCountDic,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantLimitSpoilerProtectionMaster___);
-  v15 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantLimitSpoilerProtectionMaster___);
+  v15 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v15,
-    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
   v16 = info->fields.randomLimitCountTargets;
   if ( !v16 )
     goto LABEL_49;
@@ -793,7 +829,7 @@ LABEL_49:
     for ( i = 0; (__int64)i < (int)max_length; ++i )
     {
       if ( i >= (unsigned int)max_length )
-        sub_1C6BC68(choiceRandomLimitCountDic);
+        sub_1C71610(choiceRandomLimitCountDic);
       v19 = v16->m_Items[i];
       if ( !OptionManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
@@ -851,7 +887,7 @@ LABEL_53:
           System_Collections_Generic_List_int___AddWithResize(
             v15,
             v19,
-            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
         }
         else
         {
@@ -865,11 +901,11 @@ LABEL_43:
   }
   if ( !v15 )
     goto LABEL_49;
-  v23 = UnityEngine_Random__Range_71619388(0, v15->fields._size, 0);
+  v23 = UnityEngine_Random__Range_71684320(0, v15->fields._size, 0);
   Item = System_Collections_Generic_List_int___get_Item(
            v15,
            v23,
-           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+           (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
   v24 = RandomLimitCountManager_TypeInfo;
   if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
   {
@@ -883,7 +919,7 @@ LABEL_43:
     choiceRandomLimitCountDic,
     Key,
     Item,
-    (const MethodInfo_34B2C0C *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
+    (const MethodInfo_34C29B0 *)Method_System_Collections_Generic_Dictionary_string__int__Add__);
   return Item;
 }
 
@@ -911,13 +947,13 @@ int32_t RandomLimitCountManager__GetGroupIndex(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v22; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v23; // 0:x0.16
 
-  if ( (byte_4CB1561 & 1) == 0 )
+  if ( (byte_4CC266E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantCostumeMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB1561 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantCostumeMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CC266E = 1;
   }
   entity = 0;
   IsCostume = (void *)LimitCountUtility__IsCostume(limitCountStage, 0);
@@ -925,7 +961,7 @@ int32_t RandomLimitCountManager__GetGroupIndex(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    IsCostume = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
+    IsCostume = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantCostumeMaster___);
     if ( userServantEntity )
     {
       v9 = (ServantCostumeMaster_o *)IsCostume;
@@ -935,7 +971,7 @@ int32_t RandomLimitCountManager__GetGroupIndex(
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v21.fields.currentCryptoKey = v11;
       *(_QWORD *)&v21.fields.fakeValue = v10;
-      IsCostume = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v21, 0);
+      IsCostume = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v21, 0);
       if ( v9 )
       {
         IsCostume = ServantCostumeMaster__GetEntity(v9, (int32_t)IsCostume, limitCountStage, 0);
@@ -944,7 +980,7 @@ int32_t RandomLimitCountManager__GetGroupIndex(
       }
     }
 LABEL_22:
-    sub_1C6BC60(IsCostume, v8);
+    sub_1C71608(IsCostume, v8);
   }
   if ( !userServantEntity )
     goto LABEL_22;
@@ -954,16 +990,16 @@ LABEL_22:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v22.fields.currentCryptoKey = v14;
   *(_QWORD *)&v22.fields.fakeValue = v13;
-  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v22, 0);
+  v15 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v22, 0);
   v16 = LimitCountUtility__ConvertStageToLimitCount(v15, limitCountStage, hasRewardStage, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
   v18 = *(_QWORD *)&userServantEntity->fields.svtId.fields.currentCryptoKey;
   *(_QWORD *)&v23.fields.fakeValue = *(_QWORD *)&userServantEntity->fields.svtId.fields.fakeValue;
   v19 = (ServantLimitAddMaster_o *)Master_object;
   *(_QWORD *)&v23.fields.currentCryptoKey = v18;
-  IsCostume = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v23, 0);
+  IsCostume = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v23, 0);
   if ( !v19 )
     goto LABEL_22;
   if ( !ServantLimitAddMaster__TryGetEntity(v19, &entity, (int32_t)IsCostume, v16, 0) )
@@ -981,95 +1017,99 @@ bool RandomLimitCountManager__HasRandomGroup(UserServantEntity_o *userServantEnt
   int64_t Master_object; // x0
   __int64 v5; // x1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **v8; // x20
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v9; // x8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v10; // q1
-  UserServantCollectionMaster_o *v11; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v12; // x8
-  int64_t v13; // x22
-  __int64 v14; // x23
-  __int64 v15; // x24
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **v12; // x20
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v13; // x8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v14; // q1
+  UserServantCollectionMaster_o *v15; // x21
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v16; // x8
-  UserServantCollectionEntity_o *v17; // x20
+  int64_t v17; // x22
+  __int64 v18; // x23
+  __int64 v19; // x24
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *v20; // x8
+  UserServantCollectionEntity_o *v21; // x20
   int32_t currentCryptoKey; // w21
-  System_Int32_array *LimitCountStageList_43387944; // x20
-  System_Func_int__bool__o *v20; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v22; // [xsp+0h] [xbp-80h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+20h] [xbp-60h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
+  System_Int32_array *LimitCountStageList_43432396; // x20
+  System_Func_int__bool__o *v24; // x21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+0h] [xbp-80h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v27; // [xsp+20h] [xbp-60h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v28; // 0:x0.16
 
-  if ( (byte_4CB1563 & 1) == 0 )
+  if ( (byte_4CC2670 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BasicHelper_Any_int____78570976);
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&System_Func_int__bool__TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C6BA08(&Method_RandomLimitCountManager___c__DisplayClass11_0__HasRandomGroup_b__0__);
-    sub_1C6BA08(&RandomLimitCountManager___c__DisplayClass11_0_TypeInfo);
-    byte_4CB1563 = 1;
+    sub_1C713B0(&Method_BasicHelper_Any_int____78639760);
+    sub_1C713B0(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&System_Func_int__bool__TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C713B0(&Method_RandomLimitCountManager___c__DisplayClass11_0__HasRandomGroup_b__0__);
+    sub_1C713B0(&RandomLimitCountManager___c__DisplayClass11_0_TypeInfo);
+    byte_4CC2670 = 1;
   }
-  v3 = sub_1C6BC54(RandomLimitCountManager___c__DisplayClass11_0_TypeInfo);
+  v3 = sub_1C715FC(RandomLimitCountManager___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_16;
   *(_QWORD *)(v3 + 16) = userServantEntity;
-  v8 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)(v3 + 16);
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)userServantEntity, v6, v7);
+  v12 = (CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o **)(v3 + 16);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)userServantEntity, v6, v7, v8, v9, v10, v11);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
-  v9 = *v8;
-  if ( !*v8 )
+  Master_object = (int64_t)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  v13 = *v12;
+  if ( !*v12 )
     goto LABEL_16;
-  v10 = v9[4];
-  v11 = (UserServantCollectionMaster_o *)Master_object;
-  *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v23.fields.currentCryptoKey = v9[3];
-  *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v23.fields.fakeValue = v10;
+  v14 = v13[4];
+  v15 = (UserServantCollectionMaster_o *)Master_object;
+  *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v27.fields.currentCryptoKey = v13[3];
+  *(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o *)&v27.fields.fakeValue = v14;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v22 = v23;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v22, 0);
-  v12 = *v8;
-  if ( !*v8 )
+  v26 = v27;
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v26, 0);
+  v16 = *v12;
+  if ( !*v12 )
     goto LABEL_16;
-  v13 = Master_object;
-  v15 = *(_QWORD *)&v12[5].fields.currentCryptoKey;
-  v14 = *(_QWORD *)&v12[5].fields.fakeValue;
+  v17 = Master_object;
+  v19 = *(_QWORD *)&v16[5].fields.currentCryptoKey;
+  v18 = *(_QWORD *)&v16[5].fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v24.fields.currentCryptoKey = v15;
-  *(_QWORD *)&v24.fields.fakeValue = v14;
-  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v24, 0);
-  if ( !v11
-    || (Master_object = (int64_t)UserServantCollectionMaster__GetEntityDefinitely(v11, v13, Master_object, 0),
-        (v16 = *v8) == 0)
-    || (v17 = (UserServantCollectionEntity_o *)Master_object,
-        currentCryptoKey = v16[16].fields.currentCryptoKey,
-        Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v16[6], 0),
-        !v17) )
+  *(_QWORD *)&v28.fields.currentCryptoKey = v19;
+  *(_QWORD *)&v28.fields.fakeValue = v18;
+  Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v28, 0);
+  if ( !v15
+    || (Master_object = (int64_t)UserServantCollectionMaster__GetEntityDefinitely(v15, v17, Master_object, 0),
+        (v20 = *v12) == 0)
+    || (v21 = (UserServantCollectionEntity_o *)Master_object,
+        currentCryptoKey = v20[16].fields.currentCryptoKey,
+        Master_object = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v20[6], 0),
+        !v21) )
   {
 LABEL_16:
-    sub_1C6BC60(Master_object, v5);
+    sub_1C71608(Master_object, v5);
   }
-  LimitCountStageList_43387944 = UserServantCollectionEntity__GetLimitCountStageList_43387944(
-                                   v17,
+  LimitCountStageList_43432396 = UserServantCollectionEntity__GetLimitCountStageList_43432396(
+                                   v21,
                                    currentCryptoKey,
                                    Master_object,
                                    1,
                                    0);
-  v20 = (System_Func_int__bool__o *)sub_1C6BC54(System_Func_int__bool__TypeInfo);
+  v24 = (System_Func_int__bool__o *)sub_1C715FC(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
-    v20,
+    v24,
     (Il2CppObject *)v3,
     Method_RandomLimitCountManager___c__DisplayClass11_0__HasRandomGroup_b__0__,
     0);
-  return BasicHelper__Any_int__51528112(
-           LimitCountStageList_43387944,
-           (System_Func_T__bool__o *)v20,
-           (const MethodInfo_31241B0 *)Method_BasicHelper_Any_int____78570976);
+  return BasicHelper__Any_int__51593044(
+           LimitCountStageList_43432396,
+           (System_Func_T__bool__o *)v24,
+           (const MethodInfo_3133F54 *)Method_BasicHelper_Any_int____78639760);
 }
 
 
@@ -1078,11 +1118,11 @@ bool RandomLimitCountManager__IsChose(System_String_o *key, const MethodInfo *me
   RandomLimitCountManager_c *v3; // x0
   System_Collections_Generic_Dictionary_object__int__o *choiceRandomLimitCountDic; // x0
 
-  if ( (byte_4CB155E & 1) == 0 )
+  if ( (byte_4CC266B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
-    sub_1C6BA08(&RandomLimitCountManager_TypeInfo);
-    byte_4CB155E = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+    sub_1C713B0(&RandomLimitCountManager_TypeInfo);
+    byte_4CC266B = 1;
   }
   v3 = RandomLimitCountManager_TypeInfo;
   if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -1092,11 +1132,11 @@ bool RandomLimitCountManager__IsChose(System_String_o *key, const MethodInfo *me
   }
   choiceRandomLimitCountDic = (System_Collections_Generic_Dictionary_object__int__o *)v3->static_fields->choiceRandomLimitCountDic;
   if ( !choiceRandomLimitCountDic )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return System_Collections_Generic_Dictionary_object__int___ContainsKey(
            choiceRandomLimitCountDic,
            (Il2CppObject *)key,
-           (const MethodInfo_34B2E00 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
+           (const MethodInfo_34C2BA4 *)Method_System_Collections_Generic_Dictionary_string__int__ContainsKey__);
 }
 
 
@@ -1104,10 +1144,10 @@ bool RandomLimitCountManager__get_EnableRandomLimitCount(const MethodInfo *metho
 {
   RandomLimitCountManager_c *v1; // x0
 
-  if ( (byte_4CB155C & 1) == 0 )
+  if ( (byte_4CC2669 & 1) == 0 )
   {
-    sub_1C6BA08(&RandomLimitCountManager_TypeInfo);
-    byte_4CB155C = 1;
+    sub_1C713B0(&RandomLimitCountManager_TypeInfo);
+    byte_4CC2669 = 1;
   }
   v1 = RandomLimitCountManager_TypeInfo;
   if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -1126,11 +1166,11 @@ void RandomLimitCountManager__set_EnableRandomLimitCount(bool value, const Metho
   System_Collections_Generic_Dictionary_object__int__o *choiceRandomLimitCountDic; // x0
 
   v3 = value;
-  if ( (byte_4CB155B & 1) == 0 )
+  if ( (byte_4CC2668 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_string__int__Clear__);
-    sub_1C6BA08(&RandomLimitCountManager_TypeInfo);
-    byte_4CB155B = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__int__Clear__);
+    sub_1C713B0(&RandomLimitCountManager_TypeInfo);
+    byte_4CC2668 = 1;
   }
   v4 = RandomLimitCountManager_TypeInfo;
   if ( !RandomLimitCountManager_TypeInfo->_2.cctor_finished )
@@ -1148,10 +1188,10 @@ void RandomLimitCountManager__set_EnableRandomLimitCount(bool value, const Metho
     }
     choiceRandomLimitCountDic = (System_Collections_Generic_Dictionary_object__int__o *)v4->static_fields->choiceRandomLimitCountDic;
     if ( !choiceRandomLimitCountDic )
-      sub_1C6BC60(0, method);
+      sub_1C71608(0, method);
     System_Collections_Generic_Dictionary_object__int___Clear(
       choiceRandomLimitCountDic,
-      (const MethodInfo_34B2D94 *)Method_System_Collections_Generic_Dictionary_string__int__Clear__);
+      (const MethodInfo_34C2B38 *)Method_System_Collections_Generic_Dictionary_string__int__Clear__);
   }
 }
 
@@ -1172,10 +1212,10 @@ bool RandomLimitCountManager___c__DisplayClass10_0___ChoiceLimitCount_b__0(
   const MethodInfo *v3; // x3
   UserServantEntity_o *userServantEntity; // x21
 
-  if ( (byte_4CB1565 & 1) == 0 )
+  if ( (byte_4CC2672 & 1) == 0 )
   {
-    sub_1C6BA08(&RandomLimitCountManager_TypeInfo);
-    byte_4CB1565 = 1;
+    sub_1C713B0(&RandomLimitCountManager_TypeInfo);
+    byte_4CC2672 = 1;
   }
   if ( e < 1 )
     return 0;
@@ -1202,10 +1242,10 @@ bool RandomLimitCountManager___c__DisplayClass11_0___HasRandomGroup_b__0(
   const MethodInfo *v3; // x3
   UserServantEntity_o *userServantEntity; // x20
 
-  if ( (byte_4CB1566 & 1) == 0 )
+  if ( (byte_4CC2673 & 1) == 0 )
   {
-    sub_1C6BA08(&RandomLimitCountManager_TypeInfo);
-    byte_4CB1566 = 1;
+    sub_1C713B0(&RandomLimitCountManager_TypeInfo);
+    byte_4CC2673 = 1;
   }
   if ( e < 1 )
     return 0;

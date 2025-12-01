@@ -9,8 +9,22 @@ void GrandQuestResourceContents__SetBoardUIAtlas(
         AtlasManagerUnit_o *boardUiAtlasManagerUnit,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1C6B9AC(&this->fields, boardUiAtlasManagerUnit);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields,
+    (int32_t)boardUiAtlasManagerUnit,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -35,8 +49,14 @@ void GrandQuestResourceContents__set_BoardUiAtlasManagerUnit(
         AtlasManagerUnit_o *value,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_1C6B9AC(&this->fields, value);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -45,6 +65,20 @@ void GrandQuestResourceContents__set_GrandQuestFolderBoardPrefab(
         GrandQuestFolderBoardComponent_o *value,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+
   this->fields._GrandQuestFolderBoardPrefab_k__BackingField = value;
-  sub_1C6B9AC(&this->fields._GrandQuestFolderBoardPrefab_k__BackingField, value);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._GrandQuestFolderBoardPrefab_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

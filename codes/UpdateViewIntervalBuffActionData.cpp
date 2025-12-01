@@ -4,19 +4,23 @@ void UpdateViewIntervalBuffActionData___ctor(
         const MethodInfo *method)
 {
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
 
-  if ( (byte_4CB89AA & 1) == 0 )
+  if ( (byte_4CC9ADE & 1) == 0 )
   {
-    sub_1C6BA08(&BattleActionData_TypeInfo);
-    byte_4CB89AA = 1;
+    sub_1C713B0(&BattleActionData_TypeInfo);
+    byte_4CC9ADE = 1;
   }
   if ( !BattleActionData_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BattleActionData_TypeInfo);
   BattleActionData___ctor((BattleActionData_o *)this, (const MethodInfo *)actData);
   this->fields.state = 7;
   this->fields.targetActionData = actData;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.targetActionData, (int32_t)actData, v5, v6, v7, v8, v9, v10);
 }
 
 

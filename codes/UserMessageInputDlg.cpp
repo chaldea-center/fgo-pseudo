@@ -10,20 +10,24 @@ void UserMessageInputDlg__OnChangeInput(UserMessageInputDlg_o *this, const Metho
   struct System_String_o *Text; // x0
   struct System_String_o **p_changeName; // x20
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  System_String_o *v8; // x0
-  bool v9; // w8
-  System_String_o *v10; // x20
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  System_String_o *v12; // x0
+  bool v13; // w8
+  System_String_o *v14; // x20
   int stringLength; // w8
-  bool v12; // w22
+  bool v16; // w22
   int32_t i; // w21
   uint16_t Chars; // w0
-  int32_t v15; // w8
+  int32_t v19; // w8
 
-  if ( (byte_4CB13A0 & 1) == 0 )
+  if ( (byte_4CC24AD & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB13A0 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC24AD = 1;
   }
   nameInput = this->fields.nameInput;
   if ( !nameInput )
@@ -31,48 +35,48 @@ void UserMessageInputDlg__OnChangeInput(UserMessageInputDlg_o *this, const Metho
   Text = UILineInput__GetText(nameInput, 0);
   this->fields.changeName = Text;
   p_changeName = &this->fields.changeName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.changeName, (int32_t)Text, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.changeName, (int32_t)Text, v6, v7, v8, v9, v10, v11);
   nameInput = (UILineInput_o *)System_String__IsNullOrEmpty(this->fields.changeName, 0);
   if ( ((unsigned __int8)nameInput & 1) != 0 )
     goto LABEL_9;
   nameInput = (UILineInput_o *)*p_changeName;
   if ( !*p_changeName )
     goto LABEL_17;
-  v8 = System_String__Trim((System_String_o *)nameInput, 0);
-  if ( System_String__op_Equality(v8, (System_String_o *)StringLiteral_1/*""*/, 0)
+  v12 = System_String__Trim((System_String_o *)nameInput, 0);
+  if ( System_String__op_Equality(v12, (System_String_o *)StringLiteral_1/*""*/, 0)
     || (nameInput = (UILineInput_o *)System_String__op_Equality(this->fields.changeName, this->fields.baseName, 0),
         ((unsigned __int8)nameInput & 1) != 0) )
   {
-    v9 = 0;
+    v13 = 0;
   }
   else
   {
 LABEL_9:
-    v10 = *p_changeName;
-    if ( !v10 )
+    v14 = *p_changeName;
+    if ( !v14 )
       goto LABEL_17;
-    stringLength = v10->fields._stringLength;
-    v12 = stringLength > 0;
+    stringLength = v14->fields._stringLength;
+    v16 = stringLength > 0;
     if ( stringLength >= 1 )
     {
-      for ( i = 0; i < v15; v12 = i < v15 )
+      for ( i = 0; i < v19; v16 = i < v19 )
       {
-        Chars = System_String__get_Chars(v10, i, 0);
+        Chars = System_String__get_Chars(v14, i, 0);
         if ( EmojiUtility__IsEmojiChar(Chars, 0) )
           break;
-        v15 = v10->fields._stringLength;
+        v19 = v14->fields._stringLength;
         ++i;
       }
     }
-    v9 = !v12;
+    v13 = !v16;
   }
   nameInput = (UILineInput_o *)this->fields.decideButton;
   if ( !nameInput )
 LABEL_17:
-    sub_1C6BC60(nameInput, method);
+    sub_1C71608(nameInput, method);
   ((void (__fastcall *)(UILineInput_o *, bool, const char *))nameInput->klass[1]._1.name)(
     nameInput,
-    v9,
+    v13,
     nameInput->klass[1]._1.namespaze);
 }
 
@@ -86,87 +90,119 @@ void UserMessageInputDlg__Open(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v8; // x1
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
   UILabel_o *titleLabel; // x21
   UILabel_o *explanationLabel; // x21
-  const MethodInfo *v17; // x2
-  CGThumbnailListItem_o *inputTarget; // x20
-  UIInput_OnValidate_o *v19; // x21
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  const MethodInfo *v29; // x2
+  struct UIInput_o *inputTarget; // x20
+  UIInput_OnValidate_o *v31; // x21
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  int32_t v35; // w5
+  int64_t v36; // x6
+  System_String_o *v37; // x7
   UILabel_o *decideLabel; // x20
   UILabel_o *cancelLabel; // x20
-  System_Action_o *v24; // x20
+  System_Action_o *v40; // x20
 
-  if ( (byte_4CB139E & 1) == 0 )
+  if ( (byte_4CC24AB & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C6BA08(&Method_EmojiUtility_ValidateNameText__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&UIInput_OnValidate_TypeInfo);
-    sub_1C6BA08(&Method_SupportDeckNameInputMenu_EndOpen__);
-    sub_1C6BA08(&StringLiteral_8665/*"MESSAGE_CHANGE_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_8663/*"MESSAGE_CHANGE_EXPLANATION"*/);
-    byte_4CB139E = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C713B0(&Method_EmojiUtility_ValidateNameText__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&UIInput_OnValidate_TypeInfo);
+    sub_1C713B0(&Method_SupportDeckNameInputMenu_EndOpen__);
+    sub_1C713B0(&StringLiteral_8669/*"MESSAGE_CHANGE_TITLE"*/);
+    sub_1C713B0(&StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_8667/*"MESSAGE_CHANGE_EXPLANATION"*/);
+    byte_4CC24AB = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_15;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   this->fields.changeName = message;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.changeName, (int32_t)message, v9, v10);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.changeName, (int32_t)message, v9, v10, v11, v12, v13, v14);
   this->fields.baseName = message;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)message, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.baseName, (int32_t)message, v15, v16, v17, v18, v19, v20);
   this->fields.callbackFunc = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callback, v13, v14);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+    (int32_t)callback,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8665/*"MESSAGE_CHANGE_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8669/*"MESSAGE_CHANGE_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_15;
   UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
   explanationLabel = this->fields.explanationLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8663/*"MESSAGE_CHANGE_EXPLANATION"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8667/*"MESSAGE_CHANGE_EXPLANATION"*/, 0);
   if ( !explanationLabel )
     goto LABEL_15;
   UILabel__set_text(explanationLabel, (System_String_o *)gameObject, 0);
-  UserMessageInputDlg__inputLabelSetup(this, message, v17);
+  UserMessageInputDlg__inputLabelSetup(this, message, v29);
   gameObject = (UnityEngine_GameObject_o *)this->fields.inputTarget;
   if ( !gameObject )
     goto LABEL_15;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                              (UnityEngine_Component_o *)gameObject,
-                                             (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                             (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !gameObject )
     goto LABEL_15;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)gameObject, 0, 0);
-  inputTarget = (CGThumbnailListItem_o *)this->fields.inputTarget;
-  v19 = (UIInput_OnValidate_o *)sub_1C6BC54(UIInput_OnValidate_TypeInfo);
-  UIInput_OnValidate___ctor(v19, 0, Method_EmojiUtility_ValidateNameText__, 0);
+  inputTarget = this->fields.inputTarget;
+  v31 = (UIInput_OnValidate_o *)sub_1C715FC(UIInput_OnValidate_TypeInfo);
+  UIInput_OnValidate___ctor(v31, 0, Method_EmojiUtility_ValidateNameText__, 0);
   if ( !inputTarget )
     goto LABEL_15;
-  inputTarget[1].klass = (CGThumbnailListItem_c *)v19;
-  sub_1C6B9AC(inputTarget + 1, (int32_t)v19, v20, v21);
+  inputTarget->fields.onValidate = v31;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&inputTarget->fields.onValidate,
+    (int32_t)v31,
+    v32,
+    v33,
+    v34,
+    v35,
+    v36,
+    v37);
   decideLabel = this->fields.decideLabel;
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3678/*"COMMON_CONFIRM_DECIDE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3681/*"COMMON_CONFIRM_DECIDE"*/, 0);
   if ( !decideLabel
     || (UILabel__set_text(decideLabel, (System_String_o *)gameObject, 0),
         cancelLabel = this->fields.cancelLabel,
-        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0),
+        gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0),
         !cancelLabel)
     || (UILabel__set_text(cancelLabel, (System_String_o *)gameObject, 0),
         (gameObject = (UnityEngine_GameObject_o *)this->fields.decideButton) == 0) )
   {
 LABEL_15:
-    sub_1C6BC60(gameObject, v8);
+    sub_1C71608(gameObject, v8);
   }
   ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, const char *))gameObject->klass[1]._1.name)(
     gameObject,
@@ -174,9 +210,9 @@ LABEL_15:
     gameObject->klass[1]._1.namespaze);
   this->fields.state = 1;
   this->fields.isFirstSelected = 0;
-  v24 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v24, (Il2CppObject *)this, Method_SupportDeckNameInputMenu_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v24, 0, 0, 0);
+  v40 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v40, (Il2CppObject *)this, Method_SupportDeckNameInputMenu_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v40, 0, 0, 0);
 }
 
 
@@ -184,10 +220,10 @@ void UserMessageInputDlg__Update(UserMessageInputDlg_o *this, const MethodInfo *
 {
   UIInput_o *inputTarget; // x0
 
-  if ( (byte_4CB139F & 1) == 0 )
+  if ( (byte_4CC24AC & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB139F = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC24AC = 1;
   }
   inputTarget = this->fields.inputTarget;
   if ( !inputTarget )
@@ -202,19 +238,19 @@ void UserMessageInputDlg__Update(UserMessageInputDlg_o *this, const MethodInfo *
       return;
     }
 LABEL_9:
-    sub_1C6BC60(inputTarget, method);
+    sub_1C71608(inputTarget, method);
   }
 }
 
 
 System_String_o *UserMessageInputDlg__get_closeBtnPath(UserMessageInputDlg_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB13A2 & 1) == 0 )
+  if ( (byte_4CC24AF & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_3066/*"BaseWindow/CancleButton"*/);
-    byte_4CB13A2 = 1;
+    sub_1C713B0(&StringLiteral_3068/*"BaseWindow/CancleButton"*/);
+    byte_4CC24AF = 1;
   }
-  return (System_String_o *)StringLiteral_3066/*"BaseWindow/CancleButton"*/;
+  return (System_String_o *)StringLiteral_3068/*"BaseWindow/CancleButton"*/;
 }
 
 
@@ -231,11 +267,11 @@ void UserMessageInputDlg__inputLabelSetup(
   struct UIInput_o *v10; // x8
   UnityEngine_Color_o v11; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB13A1 & 1) == 0 )
+  if ( (byte_4CC24AE & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8664/*"MESSAGE_CHANGE_NO_INPUT"*/);
-    byte_4CB13A1 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_8668/*"MESSAGE_CHANGE_NO_INPUT"*/);
+    byte_4CC24AE = 1;
   }
   IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(message, 0);
   inputTarget = this->fields.inputTarget;
@@ -243,7 +279,7 @@ void UserMessageInputDlg__inputLabelSetup(
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_8664/*"MESSAGE_CHANGE_NO_INPUT"*/, 0);
+    IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_8668/*"MESSAGE_CHANGE_NO_INPUT"*/, 0);
     if ( inputTarget )
     {
       UIInput__set_value(inputTarget, IsNullOrEmpty, 0);
@@ -272,7 +308,7 @@ void UserMessageInputDlg__inputLabelSetup(
       }
     }
 LABEL_16:
-    sub_1C6BC60(IsNullOrEmpty, v6);
+    sub_1C71608(IsNullOrEmpty, v6);
   }
   if ( !inputTarget )
     goto LABEL_16;

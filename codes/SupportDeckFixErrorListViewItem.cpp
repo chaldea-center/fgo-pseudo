@@ -5,11 +5,15 @@ void SupportDeckFixErrorListViewItem___ctor(
         const MethodInfo *method)
 {
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   this->fields.message = message;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.message, (int32_t)message, v6, v7, v8, v9, v10, v11);
 }
 
 

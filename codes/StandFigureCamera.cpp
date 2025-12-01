@@ -1,11 +1,11 @@
 void StandFigureCamera___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CB54FC & 1) == 0 )
+  if ( (byte_4CC661C & 1) == 0 )
   {
-    sub_1C6BA08(&StandFigureCamera_TypeInfo);
-    byte_4CB54FC = 1;
+    sub_1C713B0(&StandFigureCamera_TypeInfo);
+    byte_4CC661C = 1;
   }
-  StandFigureCamera_TypeInfo->static_fields->figureRenderGradientColor = (struct UnityEngine_Color_o)xmmword_CED440;
+  StandFigureCamera_TypeInfo->static_fields->figureRenderGradientColor = (struct UnityEngine_Color_o)xmmword_CF0080;
 }
 
 
@@ -13,7 +13,7 @@ void StandFigureCamera___ctor(StandFigureCamera_o *this, const MethodInfo *metho
 {
   *(_QWORD *)&this->fields.GRAND_GlowIterations = 0x3F80000000000002LL;
   *(_QWORD *)&this->fields.GRAND_GlowIntensity = 0x3F8000003F99999ALL;
-  this->fields.GRAND_GlowColor = (struct UnityEngine_Color_o)xmmword_CED790;
+  this->fields.GRAND_GlowColor = (struct UnityEngine_Color_o)xmmword_CF03D0;
   this->fields.GRAND_HighTextureGradientOffset = 0.875;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -37,44 +37,48 @@ void StandFigureCamera__ClearAndReleaseTemporary(
   __int64 v10; // x0
   __int64 v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  UnityEngine_Rendering_RenderTargetIdentifier_o v14; // [xsp+0h] [xbp-90h] BYREF
-  UnityEngine_Rendering_RenderTargetIdentifier_o v15; // [xsp+30h] [xbp-60h] BYREF
-  UnityEngine_Color_o v16; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  UnityEngine_Rendering_RenderTargetIdentifier_o v18; // [xsp+0h] [xbp-90h] BYREF
+  UnityEngine_Rendering_RenderTargetIdentifier_o v19; // [xsp+30h] [xbp-60h] BYREF
+  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB54EB & 1) == 0 )
+  if ( (byte_4CC660B & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Rendering_CommandBuffer_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Graphics_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB54EB = 1;
+    sub_1C713B0(&UnityEngine_Rendering_CommandBuffer_TypeInfo);
+    sub_1C713B0(&UnityEngine_Graphics_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC660B = 1;
   }
   v7 = (UnityEngine_Object_o *)*renderTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(v7, 0, 0) )
   {
-    v8 = (UnityEngine_Rendering_CommandBuffer_o *)sub_1C6BC54(UnityEngine_Rendering_CommandBuffer_TypeInfo);
+    v8 = (UnityEngine_Rendering_CommandBuffer_o *)sub_1C715FC(UnityEngine_Rendering_CommandBuffer_TypeInfo);
     UnityEngine_Rendering_CommandBuffer___ctor(v8, 0);
     v9 = (UnityEngine_Texture_o *)*renderTexture;
-    memset(&v15, 0, sizeof(v15));
-    UnityEngine_Rendering_RenderTargetIdentifier___ctor_71725868(&v15, v9, 0);
+    memset(&v19, 0, sizeof(v19));
+    UnityEngine_Rendering_RenderTargetIdentifier___ctor_71790800(&v19, v9, 0);
     if ( !v8 )
-      sub_1C6BC60(v10, v11);
-    v14 = v15;
-    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v8, &v14, 0);
-    v16.fields.r = 0.0;
-    v16.fields.g = 0.0;
-    v16.fields.b = 0.0;
-    v16.fields.a = 0.0;
-    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71730508(v8, clearDepth, clearColor, v16, 0);
+      sub_1C71608(v10, v11);
+    v18 = v19;
+    UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v8, &v18, 0);
+    v20.fields.r = 0.0;
+    v20.fields.g = 0.0;
+    v20.fields.b = 0.0;
+    v20.fields.a = 0.0;
+    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71795440(v8, clearDepth, clearColor, v20, 0);
     if ( !UnityEngine_Graphics_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Graphics_TypeInfo);
     UnityEngine_Graphics__ExecuteCommandBuffer(v8, 0);
     UnityEngine_Rendering_CommandBuffer__Release(v8, 0);
     UnityEngine_RenderTexture__ReleaseTemporary(*renderTexture, 0);
     *renderTexture = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)renderTexture, 0, v12, v13);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)renderTexture, 0, v12, v13, v14, v15, v16, v17);
   }
 }
 
@@ -98,13 +102,13 @@ void StandFigureCamera__DrawGameObjectWithCommandBuffer(
   __int64 v16; // x1
   struct UnityEngine_ParticleSystem_o *m_ParticleSystem; // [xsp+8h] [xbp-58h] BYREF
 
-  if ( (byte_4CB54F7 & 1) == 0 )
+  if ( (byte_4CC6617 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (StandFigureCamera_o *)sub_1C6BA08(&UnityEngine_ParticleSystemRenderer_TypeInfo);
-    byte_4CB54F7 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_Renderer___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (StandFigureCamera_o *)sub_1C713B0(&UnityEngine_ParticleSystemRenderer_TypeInfo);
+    byte_4CC6617 = 1;
   }
   m_ParticleSystem = 0;
   if ( !gameObject )
@@ -113,7 +117,7 @@ void StandFigureCamera__DrawGameObjectWithCommandBuffer(
     return;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_Renderer___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -122,18 +126,18 @@ void StandFigureCamera__DrawGameObjectWithCommandBuffer(
   {
     v15 = UnityEngine_GameObject__GetComponent_object_(
             gameObject,
-            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
-    sub_1C6BC60(v15, v16);
+            (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+    sub_1C71608(v15, v16);
   }
   klass = Component_object->klass;
   v8 = UnityEngine_ParticleSystemRenderer_TypeInfo;
   v9 = UnityEngine_GameObject__GetComponent_object_(
          gameObject,
-         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
+         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ParticleSystem___);
   this = (StandFigureCamera_o *)UnityEngine_Renderer__get_sharedMaterials((UnityEngine_Renderer_o *)Component_object, 0);
   if ( !this )
 LABEL_29:
-    sub_1C6BC60(this, cmd);
+    sub_1C71608(this, cmd);
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   v11 = this;
   if ( (int)m_CancellationTokenSource >= 1 )
@@ -142,7 +146,7 @@ LABEL_29:
     do
     {
       if ( v12 >= (unsigned int)m_CancellationTokenSource )
-        sub_1C6BC68(this);
+        sub_1C71610(this);
       v13 = (UnityEngine_Object_o *)*((_QWORD *)&v11->fields.manager + v12);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -165,13 +169,13 @@ LABEL_29:
         {
           if ( !cmd )
             goto LABEL_29;
-          UnityEngine_Rendering_CommandBuffer__DrawRenderer_71732700(
+          UnityEngine_Rendering_CommandBuffer__DrawRenderer_71797632(
             cmd,
             (UnityEngine_Renderer_o *)Component_object,
             (UnityEngine_Material_o *)v13,
             0,
             0);
-          UnityEngine_Rendering_CommandBuffer__DrawRenderer_71732700(
+          UnityEngine_Rendering_CommandBuffer__DrawRenderer_71797632(
             cmd,
             (UnityEngine_Renderer_o *)Component_object,
             (UnityEngine_Material_o *)v13,
@@ -183,7 +187,7 @@ LABEL_29:
 LABEL_24:
           if ( !cmd )
             goto LABEL_29;
-          UnityEngine_Rendering_CommandBuffer__DrawRenderer_71732708(
+          UnityEngine_Rendering_CommandBuffer__DrawRenderer_71797640(
             cmd,
             (UnityEngine_Renderer_o *)Component_object,
             (UnityEngine_Material_o *)v13,
@@ -230,19 +234,19 @@ void StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(
   __int64 v29; // x0
 
   v6 = this;
-  if ( (byte_4CB54F8 & 1) == 0 )
+  if ( (byte_4CC6618 & 1) == 0 )
   {
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
-    this = (StandFigureCamera_o *)sub_1C6BA08(&UnityEngine_Transform_TypeInfo);
-    byte_4CB54F8 = 1;
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
+    this = (StandFigureCamera_o *)sub_1C713B0(&UnityEngine_Transform_TypeInfo);
+    byte_4CC6618 = 1;
   }
   StandFigureCamera__DrawGameObjectWithCommandBuffer(this, cmd, gameObject, method);
   if ( !gameObject || (transform = UnityEngine_GameObject__get_transform(gameObject, 0)) == 0 )
-    sub_1C6BC60(transform, v8);
+    sub_1C71608(transform, v8);
   Enumerator = UnityEngine_Transform__GetEnumerator(transform, 0);
   if ( !Enumerator )
-    sub_1C6BC60(0, v9);
+    sub_1C71608(0, v9);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -262,7 +266,7 @@ void StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(
     else
     {
 LABEL_10:
-      v14 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v14 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(Enumerator, *(_QWORD *)(v14 + 8))
         & 1) == 0 )
@@ -284,7 +288,7 @@ LABEL_10:
     else
     {
 LABEL_17:
-      v18 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+      v18 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v19 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v18)(
                                        Enumerator,
@@ -295,14 +299,14 @@ LABEL_17:
     if ( v19->klass->_2.naturalAligment < (unsigned int)naturalAligment
       || (UnityEngine_Transform_c *)v19->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
     {
-      sub_1C6BFFC(v19);
+      sub_1C719A4(v19);
 LABEL_33:
-      sub_1C6BC60(v19, v20);
+      sub_1C71608(v19, v20);
     }
     v22 = UnityEngine_Component__get_gameObject(v19, 0);
     StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(v6, cmd, v22, v23);
   }
-  v24 = sub_1C6BB44(Enumerator, System_IDisposable_TypeInfo);
+  v24 = sub_1C714EC(Enumerator, System_IDisposable_TypeInfo);
   if ( v24 )
   {
     v25 = *(_QWORD *)v24;
@@ -323,7 +327,7 @@ LABEL_33:
     else
     {
 LABEL_28:
-      v29 = sub_1C41D90(v24, System_IDisposable_TypeInfo, 0);
+      v29 = sub_1C47738(v24, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v29)(v26, *(_QWORD *)(v29 + 8));
   }
@@ -338,28 +342,32 @@ UITexture_array *StandFigureCamera__GetStandFigureUITextures(StandFigureCamera_o
   int max_length; // w8
   UITexture_array *v6; // x20
   __int64 v7; // x23
-  CGThumbnailListItem_o *m_Items; // x21
+  GrandQuestFolderBoardItem_o *m_Items; // x21
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  CGThumbnailListItem_c *v11; // x22
-  __int64 v13; // x0
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  GrandQuestFolderBoardItem_c *v15; // x22
+  __int64 v17; // x0
 
-  if ( (byte_4CB54F4 & 1) == 0 )
+  if ( (byte_4CC6614 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInChildren_UITexture____78590512);
-    sub_1C6BA08(&Method_UnityEngine_Object_FindObjectsOfType_UIStandFigureR___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UITexture___TypeInfo);
-    byte_4CB54F4 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponentInChildren_UITexture____78659368);
+    sub_1C713B0(&Method_UnityEngine_Object_FindObjectsOfType_UIStandFigureR___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UITexture___TypeInfo);
+    byte_4CC6614 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  ObjectsOfType_object = UnityEngine_Object__FindObjectsOfType_object_((const MethodInfo_31C7DB8 *)Method_UnityEngine_Object_FindObjectsOfType_UIStandFigureR___);
+  ObjectsOfType_object = UnityEngine_Object__FindObjectsOfType_object_((const MethodInfo_31D7B5C *)Method_UnityEngine_Object_FindObjectsOfType_UIStandFigureR___);
   if ( !ObjectsOfType_object )
 LABEL_16:
-    sub_1C6BC60(ObjectsOfType_object, v3);
+    sub_1C71608(ObjectsOfType_object, v3);
   v4 = ObjectsOfType_object;
-  ObjectsOfType_object = (System_Object_array *)sub_1C6BAB0(
+  ObjectsOfType_object = (System_Object_array *)sub_1C71458(
                                                   UITexture___TypeInfo,
                                                   LODWORD(ObjectsOfType_object->max_length));
   max_length = v4->max_length;
@@ -367,7 +375,7 @@ LABEL_16:
   if ( max_length >= 1 )
   {
     v7 = 0;
-    m_Items = (CGThumbnailListItem_o *)ObjectsOfType_object->m_Items;
+    m_Items = (GrandQuestFolderBoardItem_o *)ObjectsOfType_object->m_Items;
     while ( (unsigned int)v7 < max_length )
     {
       ObjectsOfType_object = (System_Object_array *)v4->m_Items[v7];
@@ -376,30 +384,30 @@ LABEL_16:
       ObjectsOfType_object = (System_Object_array *)UnityEngine_Component__GetComponentInChildren_object_(
                                                       (UnityEngine_Component_o *)ObjectsOfType_object,
                                                       1,
-                                                      (const MethodInfo_3131FBC *)Method_UnityEngine_Component_GetComponentInChildren_UITexture____78590512);
+                                                      (const MethodInfo_3141D60 *)Method_UnityEngine_Component_GetComponentInChildren_UITexture____78659368);
       if ( !v6 )
         goto LABEL_16;
-      v11 = (CGThumbnailListItem_c *)ObjectsOfType_object;
+      v15 = (GrandQuestFolderBoardItem_c *)ObjectsOfType_object;
       if ( ObjectsOfType_object )
       {
-        ObjectsOfType_object = (System_Object_array *)sub_1C6BB44(ObjectsOfType_object, v6->obj.klass->_1.element_class);
+        ObjectsOfType_object = (System_Object_array *)sub_1C714EC(ObjectsOfType_object, v6->obj.klass->_1.element_class);
         if ( !ObjectsOfType_object )
         {
-          v13 = sub_1C6BC84(0);
-          sub_1C6BB30(v13, 0);
+          v17 = sub_1C7162C(0);
+          sub_1C714D8(v17, 0);
         }
       }
       if ( (unsigned int)v7 >= LODWORD(v6->max_length) )
         break;
-      m_Items->klass = v11;
-      sub_1C6B9AC(m_Items, (int32_t)v11, v9, v10);
+      m_Items->klass = v15;
+      sub_1C71354(m_Items, (int32_t)v15, v9, v10, v11, v12, v13, v14);
       max_length = v4->max_length;
       ++v7;
-      m_Items = (CGThumbnailListItem_o *)((char *)m_Items + 8);
+      m_Items = (GrandQuestFolderBoardItem_o *)((char *)m_Items + 8);
       if ( (int)v7 >= max_length )
         return v6;
     }
-    sub_1C6BC68(ObjectsOfType_object);
+    sub_1C71610(ObjectsOfType_object);
   }
   return v6;
 }
@@ -412,96 +420,100 @@ void StandFigureCamera__InitRenderTextures(
         const MethodInfo *method)
 {
   System_Collections_Generic_List_StandFigureCollect__o *v6; // x21
-  UnityEngine_Object_o *Temporary_71567348; // x0
+  UnityEngine_Object_o *Temporary_71632280; // x0
   __int64 v8; // x1
   UnityEngine_Object_o *v9; // x21
   Il2CppObject *v10; // x2
   System_String_o *v11; // x0
-  const MethodInfo_3B5E258 *v12; // x4
+  const MethodInfo_3B6DFFC *v12; // x4
   __int64 v13; // x0
   __int64 v14; // x1
-  const MethodInfo *v15; // x3
-  System_ValueTuple_bool__object__o v16; // x1 OVERLAPPED
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  System_ValueTuple_bool__object__o v20; // x1 OVERLAPPED
   struct System_ValueTuple_bool__RenderTexture__array *items; // x8
-  _QWORD *v18; // x9
+  _QWORD *v22; // x9
   __int64 size; // x10
-  CGThumbnailListItem_o *v20; // x0
+  GrandQuestFolderBoardItem_o *v24; // x0
   int32_t InstanceID; // [xsp+4h] [xbp-8Ch] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-88h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-70h] BYREF
-  System_ValueTuple_bool__object__o v24; // 0:x0.16
+  System_Collections_Generic_List_Enumerator_object__o v26; // [xsp+8h] [xbp-88h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v27; // [xsp+20h] [xbp-70h] BYREF
+  System_ValueTuple_bool__object__o v28; // 0:x0.16
 
   v6 = collectList;
-  if ( (byte_4CB54EC & 1) == 0 )
+  if ( (byte_4CC660C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-    sub_1C6BA08(&Method_System_ValueTuple_bool__RenderTexture___ctor__);
-    collectList = (System_Collections_Generic_List_StandFigureCollect__o *)sub_1C6BA08(&StringLiteral_25218/*"{0} ({1})"*/);
-    byte_4CB54EC = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__get_Current__);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+    sub_1C713B0(&Method_System_ValueTuple_bool__RenderTexture___ctor__);
+    collectList = (System_Collections_Generic_List_StandFigureCollect__o *)sub_1C713B0(&StringLiteral_25238/*"{0} ({1})"*/);
+    byte_4CC660C = 1;
   }
-  memset(&v23, 0, sizeof(v23));
+  memset(&v27, 0, sizeof(v27));
   if ( !v6 )
-    sub_1C6BC60(collectList, renderTextureEffects);
+    sub_1C71608(collectList, renderTextureEffects);
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v22,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v26,
     (System_Collections_Generic_List_object__o *)v6,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
-  v23 = v22;
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_StandFigureCollect__GetEnumerator__);
+  v27 = v26;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v23,
-            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__) )
+            &v27,
+            (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__MoveNext__) )
   {
-    Temporary_71567348 = (UnityEngine_Object_o *)UnityEngine_RenderTexture__GetTemporary_71567348(2048, 2048, 0, 0, 0);
-    v9 = Temporary_71567348;
-    if ( !Temporary_71567348 )
-      sub_1C6BC60(0, v8);
-    InstanceID = UnityEngine_Object__GetInstanceID(Temporary_71567348, 0);
+    Temporary_71632280 = (UnityEngine_Object_o *)UnityEngine_RenderTexture__GetTemporary_71632280(2048, 2048, 0, 0, 0);
+    v9 = Temporary_71632280;
+    if ( !Temporary_71632280 )
+      sub_1C71608(0, v8);
+    InstanceID = UnityEngine_Object__GetInstanceID(Temporary_71632280, 0);
     v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &InstanceID);
-    v11 = System_String__Format_64008100((System_String_o *)StringLiteral_25218/*"{0} ({1})"*/, (Il2CppObject *)textureName, v10, 0);
+    v11 = System_String__Format_64073032((System_String_o *)StringLiteral_25238/*"{0} ({1})"*/, (Il2CppObject *)textureName, v10, 0);
     UnityEngine_Object__set_name(v9, v11, 0);
     UnityEngine_Texture__set_filterMode((UnityEngine_Texture_o *)v9, 1, 0);
-    *(_OWORD *)&v22.fields._list = 0u;
-    *(_QWORD *)&v24.fields.Item1 = &v22;
-    v24.fields.Item2 = 0;
+    *(_OWORD *)&v26.fields._list = 0u;
+    *(_QWORD *)&v28.fields.Item1 = &v26;
+    v28.fields.Item2 = 0;
     System_ValueTuple_bool__object____ctor(
-      v24,
+      v28,
       (bool)v9,
       (Il2CppObject *)Method_System_ValueTuple_bool__RenderTexture___ctor__,
       v12);
     if ( !renderTextureEffects )
-      sub_1C6BC60(v13, v14);
-    v16 = *(System_ValueTuple_bool__object__o *)&v22.fields._list;
+      sub_1C71608(v13, v14);
+    v20 = *(System_ValueTuple_bool__object__o *)&v26.fields._list;
     items = renderTextureEffects->fields._items;
-    v18 = Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___Add__;
+    v22 = Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___Add__;
     ++renderTextureEffects->fields._version;
     if ( !items )
-      sub_1C6BC60(v13, *(_QWORD *)&v16.fields.Item1);
+      sub_1C71608(v13, *(_QWORD *)&v20.fields.Item1);
     size = renderTextureEffects->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_ValueTuple_bool__object____AddWithResize(
         (System_Collections_Generic_List_T__o *)renderTextureEffects,
-        v16,
-        *(const MethodInfo_37A5978 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+        v20,
+        *(const MethodInfo_37B571C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
     }
     else
     {
-      v20 = (CGThumbnailListItem_o *)(&items->obj + size);
+      v24 = (GrandQuestFolderBoardItem_o *)(&items->obj + size);
       renderTextureEffects->fields._size = size + 1;
-      v20->fields.sortValue0B = (int64_t)v16.fields.Item2;
-      v20 = (CGThumbnailListItem_o *)((char *)v20 + 40);
-      v20[-1].fields._ThumbnailSpritePath_k__BackingField = *(struct System_String_o **)&v16.fields.Item1;
-      sub_1C6B9AC(v20, 0, (int32_t)v16.fields.Item2, v15);
+      v24->fields.sortValue0B = (int64_t)v20.fields.Item2;
+      v24 = (GrandQuestFolderBoardItem_o *)((char *)v24 + 40);
+      v24[-1].fields._ClosedMessage_k__BackingField = *(struct System_String_o **)&v20.fields.Item1;
+      sub_1C71354(v24, 0, (int32_t)v20.fields.Item2, v15, v16, v17, v18, v19);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v23,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
+    &v27,
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_StandFigureCollect__Dispose__);
 }
 
 
@@ -514,70 +526,94 @@ void StandFigureCamera__InitializeEffectNguiTextures(StandFigureCamera_o *this, 
   Il2CppObject *v7; // x22
   struct StandFigureCamera___c_StaticFields *static_fields; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   Il2CppObject *Item2; // x1
   System_Collections_Generic_List_T__o *Instance; // x0
-  __int64 v13; // x8
-  int v14; // w8
+  __int64 v17; // x8
+  int v18; // w8
   int i; // w25
   System_ValueTuple_bool__object__o Item; // kr00_16
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  StandFigureCamera_c *v19; // x0
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  StandFigureCamera_c *v27; // x0
   UnityEngine_Object_o *front; // x23
-  const MethodInfo *v21; // x1
-  Il2CppObject *Highest_36_2; // x23
-  Il2CppObject *v23; // x0
-  struct StandFigureCamera_StaticFields *v24; // x8
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
-  UnityEngine_Material_o *v27; // x3
-  const MethodInfo *v28; // x5
   const MethodInfo *v29; // x1
+  Il2CppObject *Highest_36_2; // x23
+  Il2CppObject *v31; // x0
+  struct StandFigureCamera_StaticFields *v32; // x8
+  int32_t v33; // w2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  int32_t v36; // w5
+  int64_t v37; // x6
+  System_String_o *v38; // x7
+  UnityEngine_Material_o *v39; // x3
+  const MethodInfo *v40; // x5
+  const MethodInfo *v41; // x1
   UnityEngine_RenderTexture_o *RenderTextureForEffect; // x0
-  struct StandFigureCamera_StaticFields *v31; // x8
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  struct StandFigureCamera_StaticFields *v34; // x8
-  StandFigureCamera_c *v35; // x0
-  UnityEngine_Object_o *back; // x23
-  const MethodInfo *v37; // x2
-  Il2CppObject *Lowest_36_1; // x23
-  Il2CppObject *v39; // x0
-  struct StandFigureCamera_StaticFields *v40; // x8
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  UnityEngine_Material_o *v43; // x3
-  const MethodInfo *v44; // x5
-  const MethodInfo *v45; // x1
-  UnityEngine_RenderTexture_o *v46; // x0
-  struct StandFigureCamera_StaticFields *v47; // x8
-  int32_t v48; // w2
-  const MethodInfo *v49; // x3
+  struct StandFigureCamera_StaticFields *v43; // x8
+  int32_t v44; // w2
+  int32_t v45; // w3
+  System_String_o *v46; // x4
+  int32_t v47; // w5
+  int64_t v48; // x6
+  System_String_o *v49; // x7
   struct StandFigureCamera_StaticFields *v50; // x8
   StandFigureCamera_c *v51; // x0
-  StandFigureCamera___c__DisplayClass36_0_o v52; // [xsp+8h] [xbp-68h] BYREF
-  System_ValueTuple_bool__object__o v53; // 0:x2.16
+  UnityEngine_Object_o *back; // x23
+  const MethodInfo *v53; // x2
+  Il2CppObject *Lowest_36_1; // x23
+  Il2CppObject *v55; // x0
+  struct StandFigureCamera_StaticFields *v56; // x8
+  int32_t v57; // w2
+  int32_t v58; // w3
+  System_String_o *v59; // x4
+  int32_t v60; // w5
+  int64_t v61; // x6
+  System_String_o *v62; // x7
+  UnityEngine_Material_o *v63; // x3
+  const MethodInfo *v64; // x5
+  const MethodInfo *v65; // x1
+  UnityEngine_RenderTexture_o *v66; // x0
+  struct StandFigureCamera_StaticFields *v67; // x8
+  int32_t v68; // w2
+  int32_t v69; // w3
+  System_String_o *v70; // x4
+  int32_t v71; // w5
+  int64_t v72; // x6
+  System_String_o *v73; // x7
+  struct StandFigureCamera_StaticFields *v74; // x8
+  StandFigureCamera_c *v75; // x0
+  StandFigureCamera___c__DisplayClass36_0_o v76; // [xsp+8h] [xbp-68h] BYREF
+  System_ValueTuple_bool__object__o v77; // 0:x2.16
 
-  if ( (byte_4CB54F5 & 1) == 0 )
+  if ( (byte_4CC6615 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_All_ValueTuple_bool__RenderTexture____);
-    sub_1C6BA08(&System_Func_ValueTuple_bool__RenderTexture___bool__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___get_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___set_Item__);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_UITexture___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
-    sub_1C6BA08(&StandFigureCamera_TypeInfo);
-    sub_1C6BA08(&Method_StandFigureCamera___c__InitializeEffectNguiTextures_b__36_0__);
-    sub_1C6BA08(&StandFigureCamera___c_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11317/*"RenderTextureBack"*/);
-    sub_1C6BA08(&StringLiteral_11327/*"RenderTextureFront"*/);
-    byte_4CB54F5 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_All_ValueTuple_bool__RenderTexture____);
+    sub_1C713B0(&System_Func_ValueTuple_bool__RenderTexture___bool__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___get_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___set_Item__);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_UITexture___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+    sub_1C713B0(&StandFigureCamera_TypeInfo);
+    sub_1C713B0(&Method_StandFigureCamera___c__InitializeEffectNguiTextures_b__36_0__);
+    sub_1C713B0(&StandFigureCamera___c_TypeInfo);
+    sub_1C713B0(&StringLiteral_11323/*"RenderTextureBack"*/);
+    sub_1C713B0(&StringLiteral_11333/*"RenderTextureFront"*/);
+    byte_4CC6615 = 1;
   }
   v3 = StandFigureCamera_TypeInfo;
-  v52.fields.uitextures = 0;
+  v76.fields.uitextures = 0;
   if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
@@ -601,7 +637,7 @@ void StandFigureCamera__InitializeEffectNguiTextures(StandFigureCamera_o *this, 
         v5 = StandFigureCamera___c_TypeInfo;
       }
       v7 = (Il2CppObject *)v5->static_fields->__9;
-      _9__36_0 = (System_Func_T__TResult__o *)sub_1C6BC54(System_Func_ValueTuple_bool__RenderTexture___bool__TypeInfo);
+      _9__36_0 = (System_Func_T__TResult__o *)sub_1C715FC(System_Func_ValueTuple_bool__RenderTexture___bool__TypeInfo);
       System_Func_ValueTuple_bool__object___bool____ctor(
         _9__36_0,
         v7,
@@ -609,12 +645,20 @@ void StandFigureCamera__InitializeEffectNguiTextures(StandFigureCamera_o *this, 
         0);
       static_fields = StandFigureCamera___c_TypeInfo->static_fields;
       static_fields->__9__36_0 = (struct System_Func_ValueTuple_bool__RenderTexture___bool__o *)_9__36_0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__36_0, (int32_t)_9__36_0, v9, v10);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&static_fields->__9__36_0,
+        (int32_t)_9__36_0,
+        v9,
+        v10,
+        v11,
+        v12,
+        v13,
+        v14);
     }
     if ( !System_Linq_Enumerable__All_ValueTuple_bool__object__(
             renderTextureEffects,
             (System_Func_TSource__bool__o *)_9__36_0,
-            (const MethodInfo_3144B58 *)Method_System_Linq_Enumerable_All_ValueTuple_bool__RenderTexture____) )
+            (const MethodInfo_31548FC *)Method_System_Linq_Enumerable_All_ValueTuple_bool__RenderTexture____) )
     {
       Instance = (System_Collections_Generic_List_T__o *)StandFigureCamera_TypeInfo;
       if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
@@ -622,13 +666,13 @@ void StandFigureCamera__InitializeEffectNguiTextures(StandFigureCamera_o *this, 
         j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
         Instance = (System_Collections_Generic_List_T__o *)StandFigureCamera_TypeInfo;
       }
-      v13 = *(_QWORD *)(*(_QWORD *)&Instance[4].fields._size + 8LL);
-      if ( !v13 )
+      v17 = *(_QWORD *)(*(_QWORD *)&Instance[4].fields._size + 8LL);
+      if ( !v17 )
         goto LABEL_54;
-      v14 = *(_DWORD *)(v13 + 24);
-      if ( v14 - 1 >= 0 )
+      v18 = *(_DWORD *)(v17 + 24);
+      if ( v18 - 1 >= 0 )
       {
-        for ( i = v14 - 2; ; --i )
+        for ( i = v18 - 2; ; --i )
         {
           if ( !Instance[5].fields._size )
           {
@@ -641,26 +685,34 @@ void StandFigureCamera__InitializeEffectNguiTextures(StandFigureCamera_o *this, 
           Item = System_Collections_Generic_List_ValueTuple_bool__object____get_Item(
                    Instance,
                    i + 1,
-                   (const MethodInfo_37A565C *)Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___get_Item__);
+                   (const MethodInfo_37B5400 *)Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___get_Item__);
           Item2 = Item.fields.Item2;
           if ( !Item.fields.Item1 )
           {
-            Instance = (System_Collections_Generic_List_T__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
+            Instance = (System_Collections_Generic_List_T__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_StandFigureManager__get_Instance__);
             if ( !Instance )
               break;
             if ( Instance[2].monitor )
             {
-              v52.fields.uitextures = StandFigureCamera__GetStandFigureUITextures(
+              v76.fields.uitextures = StandFigureCamera__GetStandFigureUITextures(
                                         (StandFigureCamera_o *)Instance,
                                         (const MethodInfo *)Item2);
-              sub_1C6B9AC((CGThumbnailListItem_o *)&v52, (int32_t)v52.fields.uitextures, v17, v18);
-              v19 = StandFigureCamera_TypeInfo;
+              sub_1C71354(
+                (GrandQuestFolderBoardItem_o *)&v76,
+                (int32_t)v76.fields.uitextures,
+                v21,
+                v22,
+                v23,
+                v24,
+                v25,
+                v26);
+              v27 = StandFigureCamera_TypeInfo;
               if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
-                v19 = StandFigureCamera_TypeInfo;
+                v27 = StandFigureCamera_TypeInfo;
               }
-              front = (UnityEngine_Object_o *)v19->static_fields->front;
+              front = (UnityEngine_Object_o *)v27->static_fields->front;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               if ( UnityEngine_Object__op_Equality(front, 0, 0) )
@@ -668,49 +720,53 @@ void StandFigureCamera__InitializeEffectNguiTextures(StandFigureCamera_o *this, 
                 if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
                 Highest_36_2 = (Il2CppObject *)StandFigureCamera___InitializeEffectNguiTextures_g__FindHighest_36_2(
-                                                 &v52,
-                                                 v21);
+                                                 &v76,
+                                                 v29);
                 if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                v23 = UnityEngine_Object__Instantiate_object_(
+                v31 = UnityEngine_Object__Instantiate_object_(
                         Highest_36_2,
-                        (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_UITexture___);
-                v24 = StandFigureCamera_TypeInfo->static_fields;
-                v24->front = (struct UITexture_o *)v23;
-                sub_1C6B9AC((CGThumbnailListItem_o *)&v24->front, (int32_t)v23, v25, v26);
+                        (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_UITexture___);
+                v32 = StandFigureCamera_TypeInfo->static_fields;
+                v32->front = (struct UITexture_o *)v31;
+                sub_1C71354((GrandQuestFolderBoardItem_o *)&v32->front, (int32_t)v31, v33, v34, v35, v36, v37, v38);
                 StandFigureCamera__SetupNguiTexture(
                   this,
                   (UITexture_o *)Highest_36_2,
                   StandFigureCamera_TypeInfo->static_fields->front,
-                  v27,
+                  v39,
                   1,
-                  v28);
+                  v40);
                 RenderTextureForEffect = StandFigureCamera__MakeRenderTextureForEffect(
-                                           (System_String_o *)StringLiteral_11327/*"RenderTextureFront"*/,
-                                           v29);
-                v31 = StandFigureCamera_TypeInfo->static_fields;
-                v31->renderTextureEffectFront = RenderTextureForEffect;
-                sub_1C6B9AC(
-                  (CGThumbnailListItem_o *)&v31->renderTextureEffectFront,
+                                           (System_String_o *)StringLiteral_11333/*"RenderTextureFront"*/,
+                                           v41);
+                v43 = StandFigureCamera_TypeInfo->static_fields;
+                v43->renderTextureEffectFront = RenderTextureForEffect;
+                sub_1C71354(
+                  (GrandQuestFolderBoardItem_o *)&v43->renderTextureEffectFront,
                   (int32_t)RenderTextureForEffect,
-                  v32,
-                  v33);
-                v34 = StandFigureCamera_TypeInfo->static_fields;
-                Instance = (System_Collections_Generic_List_T__o *)v34->front;
+                  v44,
+                  v45,
+                  v46,
+                  v47,
+                  v48,
+                  v49);
+                v50 = StandFigureCamera_TypeInfo->static_fields;
+                Instance = (System_Collections_Generic_List_T__o *)v50->front;
                 if ( !Instance )
                   break;
                 ((void (__fastcall *)(System_Collections_Generic_List_T__o *, struct UnityEngine_RenderTexture_o *, const MethodInfo *))Instance->klass->vtable._27_System_Collections_IList_Remove.methodPtr)(
                   Instance,
-                  v34->renderTextureEffectFront,
+                  v50->renderTextureEffectFront,
                   Instance->klass->vtable._27_System_Collections_IList_Remove.method);
               }
-              v35 = StandFigureCamera_TypeInfo;
+              v51 = StandFigureCamera_TypeInfo;
               if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
-                v35 = StandFigureCamera_TypeInfo;
+                v51 = StandFigureCamera_TypeInfo;
               }
-              back = (UnityEngine_Object_o *)v35->static_fields->back;
+              back = (UnityEngine_Object_o *)v51->static_fields->back;
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
               if ( UnityEngine_Object__op_Equality(back, 0, 0) )
@@ -718,34 +774,42 @@ void StandFigureCamera__InitializeEffectNguiTextures(StandFigureCamera_o *this, 
                 if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
                 Lowest_36_1 = (Il2CppObject *)StandFigureCamera___InitializeEffectNguiTextures_g__FindLowest_36_1(
-                                                &v52,
+                                                &v76,
                                                 (const MethodInfo *)Item2);
                 if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-                v39 = UnityEngine_Object__Instantiate_object_(
+                v55 = UnityEngine_Object__Instantiate_object_(
                         Lowest_36_1,
-                        (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_UITexture___);
-                v40 = StandFigureCamera_TypeInfo->static_fields;
-                v40->back = (struct UITexture_o *)v39;
-                sub_1C6B9AC((CGThumbnailListItem_o *)&v40->back, (int32_t)v39, v41, v42);
+                        (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_UITexture___);
+                v56 = StandFigureCamera_TypeInfo->static_fields;
+                v56->back = (struct UITexture_o *)v55;
+                sub_1C71354((GrandQuestFolderBoardItem_o *)&v56->back, (int32_t)v55, v57, v58, v59, v60, v61, v62);
                 StandFigureCamera__SetupNguiTexture(
                   this,
                   (UITexture_o *)Lowest_36_1,
                   StandFigureCamera_TypeInfo->static_fields->back,
-                  v43,
+                  v63,
                   -1,
-                  v44);
-                v46 = StandFigureCamera__MakeRenderTextureForEffect((System_String_o *)StringLiteral_11317/*"RenderTextureBack"*/, v45);
-                v47 = StandFigureCamera_TypeInfo->static_fields;
-                v47->renderTextureEffectBack = v46;
-                sub_1C6B9AC((CGThumbnailListItem_o *)&v47->renderTextureEffectBack, (int32_t)v46, v48, v49);
-                v50 = StandFigureCamera_TypeInfo->static_fields;
-                Instance = (System_Collections_Generic_List_T__o *)v50->back;
+                  v64);
+                v66 = StandFigureCamera__MakeRenderTextureForEffect((System_String_o *)StringLiteral_11323/*"RenderTextureBack"*/, v65);
+                v67 = StandFigureCamera_TypeInfo->static_fields;
+                v67->renderTextureEffectBack = v66;
+                sub_1C71354(
+                  (GrandQuestFolderBoardItem_o *)&v67->renderTextureEffectBack,
+                  (int32_t)v66,
+                  v68,
+                  v69,
+                  v70,
+                  v71,
+                  v72,
+                  v73);
+                v74 = StandFigureCamera_TypeInfo->static_fields;
+                Instance = (System_Collections_Generic_List_T__o *)v74->back;
                 if ( !Instance )
                   break;
                 ((void (__fastcall *)(System_Collections_Generic_List_T__o *, struct UnityEngine_RenderTexture_o *, const MethodInfo *))Instance->klass->vtable._27_System_Collections_IList_Remove.methodPtr)(
                   Instance,
-                  v50->renderTextureEffectBack,
+                  v74->renderTextureEffectBack,
                   Instance->klass->vtable._27_System_Collections_IList_Remove.method);
               }
               Instance = (System_Collections_Generic_List_T__o *)this->fields.manager;
@@ -754,23 +818,23 @@ void StandFigureCamera__InitializeEffectNguiTextures(StandFigureCamera_o *this, 
               StandFigureManager__OnRenderEndWithEffect(
                 (StandFigureManager_o *)Instance,
                 (UnityEngine_RenderTexture_o *)Item.fields.Item2,
-                v37);
-              v51 = StandFigureCamera_TypeInfo;
+                v53);
+              v75 = StandFigureCamera_TypeInfo;
               if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
               {
                 j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
-                v51 = StandFigureCamera_TypeInfo;
+                v75 = StandFigureCamera_TypeInfo;
               }
-              Instance = (System_Collections_Generic_List_T__o *)v51->static_fields->renderTextureEffects;
+              Instance = (System_Collections_Generic_List_T__o *)v75->static_fields->renderTextureEffects;
               if ( !Instance )
                 break;
-              *(_QWORD *)&v53.fields.Item1 = *(_QWORD *)&Item.fields.Item1 & 0xFFFFFFFFFFFFFF00LL | 1;
-              v53.fields.Item2 = Item.fields.Item2;
+              *(_QWORD *)&v77.fields.Item1 = *(_QWORD *)&Item.fields.Item1 & 0xFFFFFFFFFFFFFF00LL | 1;
+              v77.fields.Item2 = Item.fields.Item2;
               System_Collections_Generic_List_ValueTuple_bool__object____set_Item(
                 Instance,
                 i + 1,
-                v53,
-                (const MethodInfo_37A56B4 *)Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___set_Item__);
+                v77,
+                (const MethodInfo_37B5458 *)Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___set_Item__);
             }
           }
           if ( i < 0 )
@@ -778,7 +842,7 @@ void StandFigureCamera__InitializeEffectNguiTextures(StandFigureCamera_o *this, 
           Instance = (System_Collections_Generic_List_T__o *)StandFigureCamera_TypeInfo;
         }
 LABEL_54:
-        sub_1C6BC60(Instance, Item2);
+        sub_1C71608(Instance, Item2);
       }
     }
   }
@@ -796,26 +860,26 @@ UnityEngine_RenderTexture_o *StandFigureCamera__MakeRenderTextureForEffect(
         System_String_o *nameToSet,
         const MethodInfo *method)
 {
-  UnityEngine_Object_o *Temporary_71567348; // x0
+  UnityEngine_Object_o *Temporary_71632280; // x0
   __int64 v4; // x1
   UnityEngine_Object_o *v5; // x20
   Il2CppObject *v6; // x0
   System_String_o *v7; // x0
   int32_t InstanceID; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CB54EF & 1) == 0 )
+  if ( (byte_4CC660F & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&StringLiteral_25218/*"{0} ({1})"*/);
-    byte_4CB54EF = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&StringLiteral_25238/*"{0} ({1})"*/);
+    byte_4CC660F = 1;
   }
-  Temporary_71567348 = (UnityEngine_Object_o *)UnityEngine_RenderTexture__GetTemporary_71567348(2048, 2048, 0, 0, 0);
-  if ( !Temporary_71567348 )
-    sub_1C6BC60(0, v4);
-  v5 = Temporary_71567348;
-  InstanceID = UnityEngine_Object__GetInstanceID(Temporary_71567348, 0);
+  Temporary_71632280 = (UnityEngine_Object_o *)UnityEngine_RenderTexture__GetTemporary_71632280(2048, 2048, 0, 0, 0);
+  if ( !Temporary_71632280 )
+    sub_1C71608(0, v4);
+  v5 = Temporary_71632280;
+  InstanceID = UnityEngine_Object__GetInstanceID(Temporary_71632280, 0);
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &InstanceID);
-  v7 = System_String__Format_64008100((System_String_o *)StringLiteral_25218/*"{0} ({1})"*/, (Il2CppObject *)nameToSet, v6, 0);
+  v7 = System_String__Format_64073032((System_String_o *)StringLiteral_25238/*"{0} ({1})"*/, (Il2CppObject *)nameToSet, v6, 0);
   UnityEngine_Object__set_name(v5, v7, 0);
   return (UnityEngine_RenderTexture_o *)v5;
 }
@@ -832,16 +896,20 @@ void StandFigureCamera__OnPostRender(StandFigureCamera_o *this, const MethodInfo
   bool v9; // w23
   UnityEngine_Camera_o *v10; // x22
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  const MethodInfo *v17; // x2
 
-  if ( (byte_4CB54F3 & 1) == 0 )
+  if ( (byte_4CC6613 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_13680/*"TempStandFigureRenderTexture"*/);
-    sub_1C6BA08(&StringLiteral_11316/*"RenderTexture"*/);
-    byte_4CB54F3 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_13686/*"TempStandFigureRenderTexture"*/);
+    sub_1C713B0(&StringLiteral_11322/*"RenderTexture"*/);
+    byte_4CC6613 = 1;
   }
   if ( this->fields.state == 2 )
   {
@@ -853,7 +921,7 @@ void StandFigureCamera__OnPostRender(StandFigureCamera_o *this, const MethodInfo
     }
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( Component_object )
     {
       Component_object = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(Component_object, 0);
@@ -875,7 +943,7 @@ void StandFigureCamera__OnPostRender(StandFigureCamera_o *this, const MethodInfo
           v9 = UnityEngine_Object__op_Inequality(recycleTexture, 0, 0);
           Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                        (UnityEngine_Component_o *)this,
-                                                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
           v10 = Component_object;
           if ( v9 )
           {
@@ -883,11 +951,11 @@ void StandFigureCamera__OnPostRender(StandFigureCamera_o *this, const MethodInfo
               goto LABEL_22;
             UnityEngine_Camera__set_targetTexture(Component_object, *p_recycleTexture, 0);
             *p_recycleTexture = 0;
-            sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.recycleTexture, 0, v11, v12);
+            sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.recycleTexture, 0, v11, v12, v13, v14, v15, v16);
           }
           else
           {
-            Component_object = (UnityEngine_Camera_o *)UnityEngine_RenderTexture__GetTemporary_71567348(
+            Component_object = (UnityEngine_Camera_o *)UnityEngine_RenderTexture__GetTemporary_71632280(
                                                          2048,
                                                          2048,
                                                          0,
@@ -899,7 +967,7 @@ void StandFigureCamera__OnPostRender(StandFigureCamera_o *this, const MethodInfo
           }
           Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                        (UnityEngine_Component_o *)this,
-                                                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
           if ( Component_object )
           {
             Component_object = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(Component_object, 0);
@@ -907,16 +975,16 @@ void StandFigureCamera__OnPostRender(StandFigureCamera_o *this, const MethodInfo
             {
               UnityEngine_Object__set_name(
                 (UnityEngine_Object_o *)Component_object,
-                (System_String_o *)StringLiteral_11316/*"RenderTexture"*/,
+                (System_String_o *)StringLiteral_11322/*"RenderTexture"*/,
                 0);
-              UnityEngine_Object__set_name(v6, (System_String_o *)StringLiteral_13680/*"TempStandFigureRenderTexture"*/, 0);
+              UnityEngine_Object__set_name(v6, (System_String_o *)StringLiteral_13686/*"TempStandFigureRenderTexture"*/, 0);
               Component_object = (UnityEngine_Camera_o *)this->fields.manager;
               if ( Component_object )
               {
                 StandFigureManager__OnRenderEnd(
                   (StandFigureManager_o *)Component_object,
                   (UnityEngine_RenderTexture_o *)v6,
-                  v13);
+                  v17);
                 this->fields.state = 0;
                 return;
               }
@@ -926,7 +994,7 @@ void StandFigureCamera__OnPostRender(StandFigureCamera_o *this, const MethodInfo
       }
     }
 LABEL_22:
-    sub_1C6BC60(Component_object, v5);
+    sub_1C71608(Component_object, v5);
   }
 }
 
@@ -942,12 +1010,16 @@ void StandFigureCamera__ReleaseRenderTexture(UnityEngine_RenderTexture_o **rende
 {
   UnityEngine_Object_o *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CB54EA & 1) == 0 )
+  if ( (byte_4CC660A & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB54EA = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC660A = 1;
   }
   v3 = (UnityEngine_Object_o *)*renderTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -956,7 +1028,7 @@ void StandFigureCamera__ReleaseRenderTexture(UnityEngine_RenderTexture_o **rende
   {
     UnityEngine_RenderTexture__ReleaseTemporary(*renderTexture, 0);
     *renderTexture = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)renderTexture, 0, v4, v5);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)renderTexture, 0, v4, v5, v6, v7, v8, v9);
   }
 }
 
@@ -968,13 +1040,13 @@ void StandFigureCamera__ReleaseRenderTextures(
   __int128 v3; // [xsp+0h] [xbp-40h] BYREF
   UnityEngine_RenderTexture_o *temp[2]; // [xsp+10h] [xbp-30h]
 
-  if ( (byte_4CB54E9 & 1) == 0 )
+  if ( (byte_4CC6609 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___GetEnumerator__);
-    byte_4CB54E9 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___GetEnumerator__);
+    byte_4CC6609 = 1;
   }
   v3 = 0u;
   *(_OWORD *)temp = 0u;
@@ -983,14 +1055,14 @@ void StandFigureCamera__ReleaseRenderTextures(
     System_Collections_Generic_List_ValueTuple_bool__object____GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v3,
       (System_Collections_Generic_List_T__o *)renderTextureEffects,
-      (const MethodInfo_37A64D0 *)Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___GetEnumerator__);
+      (const MethodInfo_37B6274 *)Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture___GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_ValueTuple_bool__object____MoveNext(
               (System_Collections_Generic_List_Enumerator_T__o *)&v3,
-              (const MethodInfo_357CB5C *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___MoveNext__) )
+              (const MethodInfo_358C900 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___MoveNext__) )
       UnityEngine_RenderTexture__ReleaseTemporary(temp[1], 0);
     System_Collections_Generic_List_Enumerator_ValueTuple_bool__object____Dispose(
       (System_Collections_Generic_List_Enumerator_T__o *)&v3,
-      (const MethodInfo_357CB58 *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___Dispose__);
+      (const MethodInfo_358C8FC *)Method_System_Collections_Generic_List_Enumerator_ValueTuple_bool__RenderTexture___Dispose__);
   }
 }
 
@@ -1000,10 +1072,10 @@ void StandFigureCamera__ReleaseRenderTexturesForEffects(const MethodInfo *method
   const MethodInfo *v1; // x1
   StandFigureCamera_c *v2; // x0
 
-  if ( (byte_4CB54ED & 1) == 0 )
+  if ( (byte_4CC660D & 1) == 0 )
   {
-    sub_1C6BA08(&StandFigureCamera_TypeInfo);
-    byte_4CB54ED = 1;
+    sub_1C713B0(&StandFigureCamera_TypeInfo);
+    byte_4CC660D = 1;
   }
   v2 = StandFigureCamera_TypeInfo;
   if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
@@ -1155,78 +1227,78 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   UnityEngine_Color_o v143; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v144; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB54F9 & 1) == 0 )
+  if ( (byte_4CC6619 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Rendering_CommandBuffer_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
-    sub_1C6BA08(&UnityEngine_Graphics_TypeInfo);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Material_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StandFigureCamera_TypeInfo);
-    sub_1C6BA08(&StringLiteral_7310/*"Hidden/NGUIGlow"*/);
-    sub_1C6BA08(&StringLiteral_16233/*"_GradientOffset"*/);
-    sub_1C6BA08(&StringLiteral_16136/*"_BlurSize"*/);
-    sub_1C6BA08(&StringLiteral_16166/*"_Color"*/);
-    sub_1C6BA08(&StringLiteral_16242/*"_Intensity"*/);
-    sub_1C6BA08(&StringLiteral_16232/*"_GradientColor"*/);
-    sub_1C6BA08(&StringLiteral_6974/*"GRAND"*/);
-    sub_1C6BA08(&StringLiteral_7149/*"GrandServant ServantSelection Cmd"*/);
-    sub_1C6BA08(&StringLiteral_7299/*"Hidden/GrandServantServantSelectionOutlineGlowApplicatorShader"*/);
-    byte_4CB54F9 = 1;
+    sub_1C713B0(&UnityEngine_Rendering_CommandBuffer_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+    sub_1C713B0(&UnityEngine_Graphics_TypeInfo);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&UnityEngine_Material_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StandFigureCamera_TypeInfo);
+    sub_1C713B0(&StringLiteral_7314/*"Hidden/NGUIGlow"*/);
+    sub_1C713B0(&StringLiteral_16240/*"_GradientOffset"*/);
+    sub_1C713B0(&StringLiteral_16143/*"_BlurSize"*/);
+    sub_1C713B0(&StringLiteral_16173/*"_Color"*/);
+    sub_1C713B0(&StringLiteral_16249/*"_Intensity"*/);
+    sub_1C713B0(&StringLiteral_16239/*"_GradientColor"*/);
+    sub_1C713B0(&StringLiteral_6976/*"GRAND"*/);
+    sub_1C713B0(&StringLiteral_7153/*"GrandServant ServantSelection Cmd"*/);
+    sub_1C713B0(&StringLiteral_7303/*"Hidden/GrandServantServantSelectionOutlineGlowApplicatorShader"*/);
+    byte_4CC6619 = 1;
   }
-  v14 = (UnityEngine_Rendering_CommandBuffer_o *)sub_1C6BC54(UnityEngine_Rendering_CommandBuffer_TypeInfo);
+  v14 = (UnityEngine_Rendering_CommandBuffer_o *)sub_1C715FC(UnityEngine_Rendering_CommandBuffer_TypeInfo);
   UnityEngine_Rendering_CommandBuffer___ctor(v14, 0);
   if ( !v14 )
-    sub_1C6BC60(v15, v16);
-  UnityEngine_Rendering_CommandBuffer__set_name(v14, (System_String_o *)StringLiteral_7149/*"GrandServant ServantSelection Cmd"*/, 0);
+    sub_1C71608(v15, v16);
+  UnityEngine_Rendering_CommandBuffer__set_name(v14, (System_String_o *)StringLiteral_7153/*"GrandServant ServantSelection Cmd"*/, 0);
   if ( !standFigure )
-    sub_1C6BC60(v17, v18);
+    sub_1C71608(v17, v18);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)standFigure, 0);
   if ( !transform )
-    sub_1C6BC60(0, v20);
+    sub_1C71608(0, v20);
   Child = (UnityEngine_Component_o *)UnityEngine_Transform__GetChild(transform, 0, 0);
   v109 = standFigure;
   if ( !Child )
-    sub_1C6BC60(0, v22);
+    sub_1C71608(0, v22);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        Child,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
   if ( !standFigure0 )
-    sub_1C6BC60(Component_object, v24);
+    sub_1C71608(Component_object, v24);
   v25 = (UnityEngine_Component_o *)Component_object;
   v26 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)standFigure0, 0);
   if ( !v26 )
-    sub_1C6BC60(0, v27);
+    sub_1C71608(0, v27);
   v28 = (UnityEngine_Component_o *)UnityEngine_Transform__GetChild(v26, 0, 0);
   if ( !v28 )
-    sub_1C6BC60(0, v29);
+    sub_1C71608(0, v29);
   v30 = UnityEngine_Component__GetComponent_object_(
           v28,
-          (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+          (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
   v32 = (UnityEngine_Component_o *)v30;
   if ( !v30 )
-    sub_1C6BC60(0, v31);
+    sub_1C71608(0, v31);
   v33 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v30, 0);
   if ( !v33 )
-    sub_1C6BC60(0, v34);
+    sub_1C71608(0, v34);
   v35 = UnityEngine_Transform__GetChild(v33, 0, 0);
   if ( !v25 )
-    sub_1C6BC60(v35, v36);
+    sub_1C71608(v35, v36);
   v37 = (UnityEngine_Component_o *)v35;
   v38 = UnityEngine_Component__get_transform(v25, 0);
   if ( !v38 )
-    sub_1C6BC60(0, v39);
+    sub_1C71608(0, v39);
   v40 = UnityEngine_Transform__GetChild(v38, 1, 0);
   v41 = UnityEngine_Component__get_transform(v32, 0);
   if ( !v41 )
-    sub_1C6BC60(0, v42);
+    sub_1C71608(0, v42);
   v43 = UnityEngine_Transform__GetChild(v41, 2, 0);
   v44 = UnityEngine_Component__get_transform(v32, 0);
   if ( !v44 )
-    sub_1C6BC60(0, v45);
+    sub_1C71608(0, v45);
   v46 = (UnityEngine_Component_o *)UnityEngine_Transform__GetChild(v44, 3, 0);
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726208(&v135, (UnityEngine_Texture_o *)mainTexture, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791140(&v135, (UnityEngine_Texture_o *)mainTexture, 0);
   v136 = v135;
   v134 = v135;
   UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v14, &v134, 0);
@@ -1234,10 +1306,10 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   v140.fields.g = 0.0;
   v140.fields.b = 0.0;
   v140.fields.a = 0.0;
-  UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71730508(v14, 1, 1, v140, 0);
+  UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71795440(v14, 1, 1, v140, 0);
   if ( renderBack )
   {
-    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726208(&v135, (UnityEngine_Texture_o *)rtBack, 0);
+    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791140(&v135, (UnityEngine_Texture_o *)rtBack, 0);
     v136 = v135;
     v133 = v135;
     UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v14, &v133, 0);
@@ -1245,22 +1317,22 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     v141.fields.g = 0.0;
     v141.fields.b = 0.0;
     v141.fields.a = 0.0;
-    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71730508(v14, 1, 1, v141, 0);
+    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71795440(v14, 1, 1, v141, 0);
     if ( !v46 )
-      sub_1C6BC60(v47, v48);
+      sub_1C71608(v47, v48);
     gameObject = UnityEngine_Component__get_gameObject(v46, 0);
     StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v14, gameObject, v50);
     if ( !v37 )
-      sub_1C6BC60(v51, v52);
+      sub_1C71608(v51, v52);
     v53 = UnityEngine_Component__get_gameObject(v37, 0);
     StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v14, v53, v54);
-    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726208(&v132, (UnityEngine_Texture_o *)mainTexture, 0);
+    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791140(&v132, (UnityEngine_Texture_o *)mainTexture, 0);
     v135 = v132;
     v131 = v132;
     UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v14, &v131, 0);
   }
-  UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_71729420(v14, 1, 512, 512, 0, 1, 16, 0);
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v135, 1, 0);
+  UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_71794352(v14, 1, 512, 512, 0, 1, 16, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v135, 1, 0);
   v136 = v135;
   v130 = v135;
   UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v14, &v130, 0);
@@ -1268,13 +1340,13 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   v142.fields.g = 0.0;
   v142.fields.b = 0.0;
   v142.fields.a = 0.0;
-  UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71730508(v14, 1, 1, v142, 0);
+  UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71795440(v14, 1, 1, v142, 0);
   sharedMaterials = UnityEngine_Renderer__get_sharedMaterials((UnityEngine_Renderer_o *)v25, 0);
   v57 = sharedMaterials;
   v105 = (UnityEngine_Component_o *)v43;
   v137 = mainTexture;
   if ( !sharedMaterials )
-    sub_1C6BC60(0, v56);
+    sub_1C71608(0, v56);
   max_length = sharedMaterials->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -1282,13 +1354,13 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     do
     {
       if ( v59 >= (unsigned int)max_length )
-        sub_1C6BC68(sharedMaterials);
+        sub_1C71610(sharedMaterials);
       v60 = (UnityEngine_Object_o *)v57->m_Items[v59];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       sharedMaterials = (UnityEngine_Material_array *)UnityEngine_Object__op_Equality(v60, 0, 0);
       if ( ((unsigned __int8)sharedMaterials & 1) == 0 )
-        UnityEngine_Rendering_CommandBuffer__DrawRenderer_71732708(
+        UnityEngine_Rendering_CommandBuffer__DrawRenderer_71797640(
           v14,
           (UnityEngine_Renderer_o *)v25,
           (UnityEngine_Material_o *)v60,
@@ -1298,21 +1370,21 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     }
     while ( (__int64)v59 < (int)max_length );
   }
-  v61 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_7310/*"Hidden/NGUIGlow"*/, 0);
-  v62 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_7299/*"Hidden/GrandServantServantSelectionOutlineGlowApplicatorShader"*/, 0);
-  v63 = (UnityEngine_Material_o *)sub_1C6BC54(UnityEngine_Material_TypeInfo);
+  v61 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_7314/*"Hidden/NGUIGlow"*/, 0);
+  v62 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_7303/*"Hidden/GrandServantServantSelectionOutlineGlowApplicatorShader"*/, 0);
+  v63 = (UnityEngine_Material_o *)sub_1C715FC(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v63, v61, 0);
-  v64 = (UnityEngine_Material_o *)sub_1C6BC54(UnityEngine_Material_TypeInfo);
+  v64 = (UnityEngine_Material_o *)sub_1C715FC(UnityEngine_Material_TypeInfo);
   v65 = (UnityEngine_Texture_o *)v137;
   v66 = v64;
   UnityEngine_Material___ctor(v64, v62, 0);
-  UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_71729420(v14, 2, 512, 512, 0, 1, 16, 0);
-  UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_71729420(v14, 3, 512, 512, 0, 1, 16, 0);
-  UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_71729420(v14, 4, 512, 512, 0, 1, 16, 0);
+  UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_71794352(v14, 2, 512, 512, 0, 1, 16, 0);
+  UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_71794352(v14, 3, 512, 512, 0, 1, 16, 0);
+  UnityEngine_Rendering_CommandBuffer__GetTemporaryRT_71794352(v14, 4, 512, 512, 0, 1, 16, 0);
   GRAND_GlowIntensity = this->fields.GRAND_GlowIntensity;
   time = UnityEngine_Time__get_time(0);
   if ( !v63 )
-    sub_1C6BC60(v68, v69);
+    sub_1C71608(v68, v69);
   v71 = (float)(time * 0.1) - (float)(floorf((float)(time * 0.1) / 0.3) * 0.3);
   v72 = -0.15;
   v73 = fminf(v71, 0.3) + -0.15;
@@ -1320,112 +1392,112 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     v72 = v73;
   UnityEngine_Material__SetFloat(
     v63,
-    (System_String_o *)StringLiteral_16242/*"_Intensity"*/,
+    (System_String_o *)StringLiteral_16249/*"_Intensity"*/,
     GRAND_GlowIntensity + (float)(0.15 - fabsf(v72)),
     0);
-  UnityEngine_Material__SetFloat(v63, (System_String_o *)StringLiteral_16136/*"_BlurSize"*/, this->fields.GRAND_GlowSize, 0);
+  UnityEngine_Material__SetFloat(v63, (System_String_o *)StringLiteral_16143/*"_BlurSize"*/, this->fields.GRAND_GlowSize, 0);
   v143.fields.r = 1.0;
   v143.fields.g = 1.0;
   v143.fields.b = 1.0;
   v143.fields.a = 1.0;
-  UnityEngine_Material__SetColor(v63, (System_String_o *)StringLiteral_16166/*"_Color"*/, v143, 0);
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v135, 1, 0);
+  UnityEngine_Material__SetColor(v63, (System_String_o *)StringLiteral_16173/*"_Color"*/, v143, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v135, 1, 0);
   v136 = v135;
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v132, 3, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v132, 3, 0);
   v135 = v132;
   v129 = v136;
   v128 = v132;
-  UnityEngine_Rendering_CommandBuffer__Blit_71733144(v14, &v129, &v128, v63, 0, 0);
+  UnityEngine_Rendering_CommandBuffer__Blit_71798076(v14, &v129, &v128, v63, 0, 0);
   if ( this->fields.GRAND_GlowIterations - 1 >= 1 )
   {
     v74 = 0;
     do
     {
-      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v135, 3, 0);
+      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v135, 3, 0);
       v136 = v135;
-      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v132, 4, 0);
+      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v132, 4, 0);
       v135 = v132;
       v127 = v136;
       v126 = v132;
-      UnityEngine_Rendering_CommandBuffer__Blit_71733144(v14, &v127, &v126, v63, 1, 0);
-      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v125, 4, 0);
+      UnityEngine_Rendering_CommandBuffer__Blit_71798076(v14, &v127, &v126, v63, 1, 0);
+      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v125, 4, 0);
       v132 = v125;
-      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v124, 3, 0);
+      UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v124, 3, 0);
       v125 = v124;
       v123 = v132;
       v122 = v124;
-      UnityEngine_Rendering_CommandBuffer__Blit_71733144(v14, &v123, &v122, v63, 0, 0);
+      UnityEngine_Rendering_CommandBuffer__Blit_71798076(v14, &v123, &v122, v63, 0, 0);
       ++v74;
     }
     while ( v74 < this->fields.GRAND_GlowIterations - 1 );
   }
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v135, 3, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v135, 3, 0);
   v136 = v135;
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v132, 2, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v132, 2, 0);
   v135 = v132;
   v121 = v136;
   v120 = v132;
-  UnityEngine_Rendering_CommandBuffer__Blit_71733144(v14, &v121, &v120, v63, 1, 0);
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v125, 2, 0);
+  UnityEngine_Rendering_CommandBuffer__Blit_71798076(v14, &v121, &v120, v63, 1, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v125, 2, 0);
   v132 = v125;
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v124, 1, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v124, 1, 0);
   v125 = v124;
   v119 = v132;
   v118 = v124;
-  UnityEngine_Rendering_CommandBuffer__Blit_71732860(v14, &v119, &v118, 0);
+  UnityEngine_Rendering_CommandBuffer__Blit_71797792(v14, &v119, &v118, 0);
   UnityEngine_Rendering_CommandBuffer__ReleaseTemporaryRT(v14, 3, 0);
   UnityEngine_Rendering_CommandBuffer__ReleaseTemporaryRT(v14, 4, 0);
   UnityEngine_Rendering_CommandBuffer__ReleaseTemporaryRT(v14, 2, 0);
   if ( !v66 )
-    sub_1C6BC60(v75, v76);
+    sub_1C71608(v75, v76);
   UnityEngine_Material__SetFloat(
     v66,
-    (System_String_o *)StringLiteral_16242/*"_Intensity"*/,
+    (System_String_o *)StringLiteral_16249/*"_Intensity"*/,
     this->fields.GRAND_GlowApplicatorIntensity,
     0);
-  UnityEngine_Rendering_CommandBuffer__SetGlobalColor_71733396(
+  UnityEngine_Rendering_CommandBuffer__SetGlobalColor_71798328(
     v14,
-    (System_String_o *)StringLiteral_16166/*"_Color"*/,
+    (System_String_o *)StringLiteral_16173/*"_Color"*/,
     this->fields.GRAND_GlowColor,
     0);
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726180(&v117, 1, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791112(&v117, 1, 0);
   v124 = v117;
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726208(&v116, v65, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791140(&v116, v65, 0);
   v117 = v116;
   v115 = v124;
   v114 = v116;
-  UnityEngine_Rendering_CommandBuffer__Blit_71733000(v14, &v115, &v114, v66, 0);
+  UnityEngine_Rendering_CommandBuffer__Blit_71797932(v14, &v115, &v114, v66, 0);
   UnityEngine_Rendering_CommandBuffer__ReleaseTemporaryRT(v14, 1, 0);
-  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726208(&v113, v65, 0);
+  UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791140(&v113, v65, 0);
   v116 = v113;
   v112 = v113;
   UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v14, &v112, 0);
-  UnityEngine_Rendering_CommandBuffer__EnableShaderKeyword(v14, (System_String_o *)StringLiteral_6974/*"GRAND"*/, 0);
+  UnityEngine_Rendering_CommandBuffer__EnableShaderKeyword(v14, (System_String_o *)StringLiteral_6976/*"GRAND"*/, 0);
   v77 = StandFigureCamera_TypeInfo;
   if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
     v77 = StandFigureCamera_TypeInfo;
   }
-  UnityEngine_Rendering_CommandBuffer__SetGlobalColor_71733396(
+  UnityEngine_Rendering_CommandBuffer__SetGlobalColor_71798328(
     v14,
-    (System_String_o *)StringLiteral_16232/*"_GradientColor"*/,
+    (System_String_o *)StringLiteral_16239/*"_GradientColor"*/,
     v77->static_fields->figureRenderGradientColor,
     0);
   if ( v109->fields.isHigh )
     GRAND_HighTextureGradientOffset = this->fields.GRAND_HighTextureGradientOffset;
   else
     GRAND_HighTextureGradientOffset = 0.0;
-  UnityEngine_Rendering_CommandBuffer__SetGlobalFloat_71733300(
+  UnityEngine_Rendering_CommandBuffer__SetGlobalFloat_71798232(
     v14,
-    (System_String_o *)StringLiteral_16233/*"_GradientOffset"*/,
+    (System_String_o *)StringLiteral_16240/*"_GradientOffset"*/,
     GRAND_HighTextureGradientOffset,
     0);
   v79 = (UnityEngine_Object_o *)v66;
   v80 = UnityEngine_Renderer__get_sharedMaterials((UnityEngine_Renderer_o *)v25, 0);
   v82 = v80;
   if ( !v80 )
-    sub_1C6BC60(0, v81);
+    sub_1C71608(0, v81);
   v83 = v80->max_length;
   v84 = v40;
   if ( (int)v83 >= 1 )
@@ -1434,13 +1506,13 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     do
     {
       if ( v85 >= (unsigned int)v83 )
-        sub_1C6BC68(v80);
+        sub_1C71610(v80);
       v86 = (UnityEngine_Object_o *)v82->m_Items[v85];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v80 = (UnityEngine_Material_array *)UnityEngine_Object__op_Equality(v86, 0, 0);
       if ( ((unsigned __int8)v80 & 1) == 0 )
-        UnityEngine_Rendering_CommandBuffer__DrawRenderer_71732708(
+        UnityEngine_Rendering_CommandBuffer__DrawRenderer_71797640(
           v14,
           (UnityEngine_Renderer_o *)v25,
           (UnityEngine_Material_o *)v86,
@@ -1450,10 +1522,10 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     }
     while ( (__int64)v85 < (int)v83 );
   }
-  UnityEngine_Rendering_CommandBuffer__DisableShaderKeyword(v14, (System_String_o *)StringLiteral_6974/*"GRAND"*/, 0);
+  UnityEngine_Rendering_CommandBuffer__DisableShaderKeyword(v14, (System_String_o *)StringLiteral_6976/*"GRAND"*/, 0);
   v89 = (UnityEngine_Texture_o *)v137;
   if ( !v84 )
-    sub_1C6BC60(v87, v88);
+    sub_1C71608(v87, v88);
   localPosition = UnityEngine_Transform__get_localPosition(v84, 0);
   x = localPosition.fields.x;
   y = localPosition.fields.y;
@@ -1466,7 +1538,7 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   {
     v94 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v84, 0);
     StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v14, v94, v95);
-    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726208(&v135, (UnityEngine_Texture_o *)rtFront, 0);
+    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791140(&v135, (UnityEngine_Texture_o *)rtFront, 0);
     v136 = v135;
     v111 = v135;
     UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v14, &v111, 0);
@@ -1474,12 +1546,12 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
     v144.fields.g = 0.0;
     v144.fields.b = 0.0;
     v144.fields.a = 0.0;
-    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71730508(v14, 1, 1, v144, 0);
+    UnityEngine_Rendering_CommandBuffer__ClearRenderTarget_71795440(v14, 1, 1, v144, 0);
     if ( !v105 )
-      sub_1C6BC60(0, v96);
+      sub_1C71608(0, v96);
     v97 = UnityEngine_Component__get_gameObject(v105, 0);
     StandFigureCamera__DrawGameObjectWithCommandBufferRecursive(this, v14, v97, v98);
-    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71726208(&v132, v89, 0);
+    UnityEngine_Rendering_RenderTargetIdentifier__op_Implicit_71791140(&v132, v89, 0);
     v135 = v132;
     v110 = v132;
     UnityEngine_Rendering_CommandBuffer__SetRenderTarget(v14, &v110, 0);
@@ -1498,8 +1570,8 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   UnityEngine_Transform__set_localPosition(v84, v139, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676((UnityEngine_Object_o *)v63, 0);
-  UnityEngine_Object__Destroy_71659676(v79, 0);
+  UnityEngine_Object__Destroy_71724608((UnityEngine_Object_o *)v63, 0);
+  UnityEngine_Object__Destroy_71724608(v79, 0);
   klass = v14->klass;
   v102 = *(unsigned __int16 *)&v14->klass->_2.rank;
   if ( *(_WORD *)&v14->klass->_2.rank )
@@ -1517,7 +1589,7 @@ void StandFigureCamera__RenderManuallyUsingCommandBuffer(
   else
   {
 LABEL_66:
-    v104 = sub_1C41D90(v14, System_IDisposable_TypeInfo, 0);
+    v104 = sub_1C47738(v14, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(UnityEngine_Rendering_CommandBuffer_o *, _QWORD))v104)(v14, *(_QWORD *)(v104 + 8));
 }
@@ -1526,7 +1598,7 @@ LABEL_66:
 void StandFigureCamera__RenderServantWithEffects(StandFigureCamera_o *this, const MethodInfo *method)
 {
   StandFigureCamera_c *v2; // x0
-  il2cpp_array_size_t ComponentsInChildren_object__51587040; // x0
+  il2cpp_array_size_t ComponentsInChildren_object__51651972; // x0
   __int64 v4; // x1
   il2cpp_array_size_t v5; // x20
   unsigned __int64 v6; // x26
@@ -1537,7 +1609,7 @@ void StandFigureCamera__RenderServantWithEffects(StandFigureCamera_o *this, cons
   StandFigureCamera_c *v11; // x0
   UnityEngine_Object_o *v12; // x22
   StandFigureCamera_c *v13; // x0
-  Il2CppObject *ComponentInChildren_object__51584412; // x23
+  Il2CppObject *ComponentInChildren_object__51649344; // x23
   UIStandFigureRender_o *v15; // x21
   UIStandFigureRender_o *v16; // x22
   __int64 v17; // x0
@@ -1549,17 +1621,17 @@ void StandFigureCamera__RenderServantWithEffects(StandFigureCamera_o *this, cons
   const MethodInfo *v23; // [xsp+0h] [xbp-80h]
   Il2CppObject **v24; // [xsp+10h] [xbp-70h]
 
-  if ( (byte_4CB54F6 & 1) == 0 )
+  if ( (byte_4CC6616 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BasicHelper_IsValidIndex_StandFigureCollect___);
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentInChildren_UITexture___);
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentsInChildren_UIStandFigureRender___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UnityEngine_RenderTexture_TypeInfo);
-    sub_1C6BA08(&StandFigureCamera_TypeInfo);
-    byte_4CB54F6 = 1;
+    sub_1C713B0(&Method_BasicHelper_IsValidIndex_StandFigureCollect___);
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponentInChildren_UITexture___);
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponentsInChildren_UIStandFigureRender___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UnityEngine_RenderTexture_TypeInfo);
+    sub_1C713B0(&StandFigureCamera_TypeInfo);
+    byte_4CC6616 = 1;
   }
   v2 = StandFigureCamera_TypeInfo;
   if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
@@ -1569,15 +1641,15 @@ void StandFigureCamera__RenderServantWithEffects(StandFigureCamera_o *this, cons
   }
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)v2->static_fields->collectList, 0) )
   {
-    ComponentsInChildren_object__51587040 = (il2cpp_array_size_t)UnityEngine_Component__GetComponentsInChildren_object__51587040(
+    ComponentsInChildren_object__51651972 = (il2cpp_array_size_t)UnityEngine_Component__GetComponentsInChildren_object__51651972(
                                                                    (UnityEngine_Component_o *)this,
-                                                                   (const MethodInfo_31327E0 *)Method_UnityEngine_Component_GetComponentsInChildren_UIStandFigureRender___);
-    if ( !ComponentsInChildren_object__51587040 )
+                                                                   (const MethodInfo_3142584 *)Method_UnityEngine_Component_GetComponentsInChildren_UIStandFigureRender___);
+    if ( !ComponentsInChildren_object__51651972 )
       goto LABEL_54;
-    v5 = ComponentsInChildren_object__51587040;
-    if ( *(int *)(ComponentsInChildren_object__51587040 + 24) >= 1 )
+    v5 = ComponentsInChildren_object__51651972;
+    if ( *(int *)(ComponentsInChildren_object__51651972 + 24) >= 1 )
     {
-      v24 = (Il2CppObject **)(ComponentsInChildren_object__51587040 + 32);
+      v24 = (Il2CppObject **)(ComponentsInChildren_object__51651972 + 32);
       v6 = 0;
       for ( i = -1; ; --i )
       {
@@ -1587,14 +1659,14 @@ void StandFigureCamera__RenderServantWithEffects(StandFigureCamera_o *this, cons
           j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
           v8 = StandFigureCamera_TypeInfo;
         }
-        ComponentsInChildren_object__51587040 = (il2cpp_array_size_t)v8->static_fields->collectList;
-        if ( !ComponentsInChildren_object__51587040 )
+        ComponentsInChildren_object__51651972 = (il2cpp_array_size_t)v8->static_fields->collectList;
+        if ( !ComponentsInChildren_object__51651972 )
           break;
-        v9 = i + *(_DWORD *)(ComponentsInChildren_object__51587040 + 24);
+        v9 = i + *(_DWORD *)(ComponentsInChildren_object__51651972 + 24);
         if ( BasicHelper__IsValidIndex_object_(
-               (System_Collections_Generic_List_T__o *)ComponentsInChildren_object__51587040,
+               (System_Collections_Generic_List_T__o *)ComponentsInChildren_object__51651972,
                v9,
-               (const MethodInfo_312999C *)Method_BasicHelper_IsValidIndex_StandFigureCollect___) )
+               (const MethodInfo_3139740 *)Method_BasicHelper_IsValidIndex_StandFigureCollect___) )
         {
           v10 = StandFigureCamera_TypeInfo;
           if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
@@ -1602,13 +1674,13 @@ void StandFigureCamera__RenderServantWithEffects(StandFigureCamera_o *this, cons
             j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
             v10 = StandFigureCamera_TypeInfo;
           }
-          ComponentsInChildren_object__51587040 = (il2cpp_array_size_t)v10->static_fields->collectList;
-          if ( !ComponentsInChildren_object__51587040 )
+          ComponentsInChildren_object__51651972 = (il2cpp_array_size_t)v10->static_fields->collectList;
+          if ( !ComponentsInChildren_object__51651972 )
             break;
           if ( System_Collections_Generic_List_object___get_Item(
-                 (System_Collections_Generic_List_object__o *)ComponentsInChildren_object__51587040,
+                 (System_Collections_Generic_List_object__o *)ComponentsInChildren_object__51651972,
                  v9,
-                 (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__) )
+                 (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__) )
           {
             v11 = StandFigureCamera_TypeInfo;
             if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
@@ -1616,16 +1688,16 @@ void StandFigureCamera__RenderServantWithEffects(StandFigureCamera_o *this, cons
               j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
               v11 = StandFigureCamera_TypeInfo;
             }
-            ComponentsInChildren_object__51587040 = (il2cpp_array_size_t)v11->static_fields->collectList;
-            if ( !ComponentsInChildren_object__51587040 )
+            ComponentsInChildren_object__51651972 = (il2cpp_array_size_t)v11->static_fields->collectList;
+            if ( !ComponentsInChildren_object__51651972 )
               break;
-            ComponentsInChildren_object__51587040 = (il2cpp_array_size_t)System_Collections_Generic_List_object___get_Item(
-                                                                           (System_Collections_Generic_List_object__o *)ComponentsInChildren_object__51587040,
+            ComponentsInChildren_object__51651972 = (il2cpp_array_size_t)System_Collections_Generic_List_object___get_Item(
+                                                                           (System_Collections_Generic_List_object__o *)ComponentsInChildren_object__51651972,
                                                                            v9,
-                                                                           (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-            if ( !ComponentsInChildren_object__51587040 )
+                                                                           (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+            if ( !ComponentsInChildren_object__51651972 )
               break;
-            v12 = *(UnityEngine_Object_o **)(ComponentsInChildren_object__51587040 + 24);
+            v12 = *(UnityEngine_Object_o **)(ComponentsInChildren_object__51651972 + 24);
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             if ( !UnityEngine_Object__op_Equality(v12, 0, 0) )
@@ -1636,38 +1708,38 @@ void StandFigureCamera__RenderServantWithEffects(StandFigureCamera_o *this, cons
                 j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
                 v13 = StandFigureCamera_TypeInfo;
               }
-              ComponentsInChildren_object__51587040 = (il2cpp_array_size_t)v13->static_fields->collectList;
-              if ( !ComponentsInChildren_object__51587040 )
+              ComponentsInChildren_object__51651972 = (il2cpp_array_size_t)v13->static_fields->collectList;
+              if ( !ComponentsInChildren_object__51651972 )
                 break;
-              ComponentsInChildren_object__51587040 = (il2cpp_array_size_t)System_Collections_Generic_List_object___get_Item(
-                                                                             (System_Collections_Generic_List_object__o *)ComponentsInChildren_object__51587040,
+              ComponentsInChildren_object__51651972 = (il2cpp_array_size_t)System_Collections_Generic_List_object___get_Item(
+                                                                             (System_Collections_Generic_List_object__o *)ComponentsInChildren_object__51651972,
                                                                              v9,
-                                                                             (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
-              if ( !ComponentsInChildren_object__51587040 )
+                                                                             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StandFigureCollect__get_Item__);
+              if ( !ComponentsInChildren_object__51651972 )
                 break;
-              ComponentsInChildren_object__51587040 = *(_QWORD *)(ComponentsInChildren_object__51587040 + 24);
-              if ( !ComponentsInChildren_object__51587040 )
+              ComponentsInChildren_object__51651972 = *(_QWORD *)(ComponentsInChildren_object__51651972 + 24);
+              if ( !ComponentsInChildren_object__51651972 )
                 break;
-              ComponentInChildren_object__51584412 = UnityEngine_Component__GetComponentInChildren_object__51584412(
-                                                       (UnityEngine_Component_o *)ComponentsInChildren_object__51587040,
-                                                       (const MethodInfo_3131D9C *)Method_UnityEngine_Component_GetComponentInChildren_UITexture___);
+              ComponentInChildren_object__51649344 = UnityEngine_Component__GetComponentInChildren_object__51649344(
+                                                       (UnityEngine_Component_o *)ComponentsInChildren_object__51651972,
+                                                       (const MethodInfo_3141B40 *)Method_UnityEngine_Component_GetComponentInChildren_UITexture___);
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-              ComponentsInChildren_object__51587040 = UnityEngine_Object__op_Equality(
-                                                        (UnityEngine_Object_o *)ComponentInChildren_object__51584412,
+              ComponentsInChildren_object__51651972 = UnityEngine_Object__op_Equality(
+                                                        (UnityEngine_Object_o *)ComponentInChildren_object__51649344,
                                                         0,
                                                         0);
-              if ( (ComponentsInChildren_object__51587040 & 1) == 0 )
+              if ( (ComponentsInChildren_object__51651972 & 1) == 0 )
               {
                 if ( v6 >= *(unsigned int *)(v5 + 24) )
-                  sub_1C6BC68(ComponentsInChildren_object__51587040);
-                if ( !ComponentInChildren_object__51584412 )
+                  sub_1C71610(ComponentsInChildren_object__51651972);
+                if ( !ComponentInChildren_object__51649344 )
                   break;
                 v15 = *(UIStandFigureRender_o **)(v5 + 32);
                 v16 = (UIStandFigureRender_o *)v24[v6];
-                v17 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))ComponentInChildren_object__51584412->klass->vtable[26].methodPtr)(
-                        ComponentInChildren_object__51584412,
-                        ComponentInChildren_object__51584412->klass->vtable[26].method);
+                v17 = ((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))ComponentInChildren_object__51649344->klass->vtable[26].methodPtr)(
+                        ComponentInChildren_object__51649344,
+                        ComponentInChildren_object__51649344->klass->vtable[26].method);
                 v18 = (UnityEngine_Object_o *)v17;
                 if ( v17
                   && (naturalAligment = UnityEngine_RenderTexture_TypeInfo->_2.naturalAligment,
@@ -1722,7 +1794,7 @@ void StandFigureCamera__RenderServantWithEffects(StandFigureCamera_o *this, cons
           return;
       }
 LABEL_54:
-      sub_1C6BC60(ComponentsInChildren_object__51587040, v4);
+      sub_1C71608(ComponentsInChildren_object__51651972, v4);
     }
   }
 }
@@ -1739,21 +1811,33 @@ bool StandFigureCamera__Request(
   struct UnityEngine_RenderTexture_o *targetTexture; // x0
   UnityEngine_RenderTexture_o **p_recycleTexture; // x20
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  UnityEngine_Object_o *v12; // x22
-  Il2CppObject *v13; // x22
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  UnityEngine_Object_o *v16; // x22
+  Il2CppObject *v17; // x22
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
 
-  if ( (byte_4CB54F0 & 1) == 0 )
+  if ( (byte_4CC6610 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11316/*"RenderTexture"*/);
-    sub_1C6BA08(&StringLiteral_11243/*"RecycleRenderTexture"*/);
-    byte_4CB54F0 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_11322/*"RenderTexture"*/);
+    sub_1C713B0(&StringLiteral_11249/*"RecycleRenderTexture"*/);
+    byte_4CC6610 = 1;
   }
   state = this->fields.state;
   if ( !state )
@@ -1761,17 +1845,25 @@ bool StandFigureCamera__Request(
     this->fields.state = 1;
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_24;
     targetTexture = UnityEngine_Camera__get_targetTexture(Component_object, 0);
     this->fields.recycleTexture = targetTexture;
     p_recycleTexture = &this->fields.recycleTexture;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.recycleTexture, (int32_t)targetTexture, v10, v11);
-    v12 = (UnityEngine_Object_o *)this->fields.recycleTexture;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.recycleTexture,
+      (int32_t)targetTexture,
+      v10,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15);
+    v16 = (UnityEngine_Object_o *)this->fields.recycleTexture;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(v12, 0, 0) )
+    if ( UnityEngine_Object__op_Inequality(v16, 0, 0) )
       UnityEngine_RenderTexture__ReleaseTemporary(*p_recycleTexture, 0);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !Component_object )
@@ -1779,32 +1871,32 @@ bool StandFigureCamera__Request(
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, 1, 0);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_24;
     UnityEngine_Camera__set_aspect(Component_object, 1.0, 0);
-    v13 = UnityEngine_Component__GetComponent_object_(
+    v17 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
-    Component_object = (UnityEngine_Camera_o *)UnityEngine_RenderTexture__GetTemporary_71567348(2048, 2048, 0, 0, 0);
-    if ( !v13 )
+            (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
+    Component_object = (UnityEngine_Camera_o *)UnityEngine_RenderTexture__GetTemporary_71632280(2048, 2048, 0, 0, 0);
+    if ( !v17 )
       goto LABEL_24;
     UnityEngine_Camera__set_targetTexture(
-      (UnityEngine_Camera_o *)v13,
+      (UnityEngine_Camera_o *)v17,
       (UnityEngine_RenderTexture_o *)Component_object,
       0);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_24;
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(Component_object, 0);
     if ( !Component_object )
       goto LABEL_24;
-    UnityEngine_Object__set_name((UnityEngine_Object_o *)Component_object, (System_String_o *)StringLiteral_11316/*"RenderTexture"*/, 0);
+    UnityEngine_Object__set_name((UnityEngine_Object_o *)Component_object, (System_String_o *)StringLiteral_11322/*"RenderTexture"*/, 0);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_24;
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(Component_object, 0);
@@ -1820,20 +1912,28 @@ bool StandFigureCamera__Request(
     if ( ((unsigned __int8)Component_object & 1) == 0 )
     {
       *p_recycleTexture = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.recycleTexture, 0, v14, v15);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.recycleTexture, 0, v18, v19, v20, v21, v22, v23);
       return state == 0;
     }
     if ( !recycleTexture
       || (UnityEngine_Object__set_name(
             (UnityEngine_Object_o *)recycleTexture,
-            (System_String_o *)StringLiteral_11243/*"RecycleRenderTexture"*/,
+            (System_String_o *)StringLiteral_11249/*"RecycleRenderTexture"*/,
             0),
           *p_recycleTexture = recycleTexture,
-          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.recycleTexture, (int32_t)recycleTexture, v16, v17),
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&this->fields.recycleTexture,
+            (int32_t)recycleTexture,
+            v24,
+            v25,
+            v26,
+            v27,
+            v28,
+            v29),
           (Component_object = (UnityEngine_Camera_o *)*p_recycleTexture) == 0) )
     {
 LABEL_24:
-      sub_1C6BC60(Component_object, v7);
+      sub_1C71608(Component_object, v7);
     }
     UnityEngine_Texture__set_filterMode((UnityEngine_Texture_o *)Component_object, 1, 0);
   }
@@ -1852,21 +1952,33 @@ bool StandFigureCamera__RequestTypePoint(
   struct UnityEngine_RenderTexture_o *targetTexture; // x0
   UnityEngine_RenderTexture_o **p_recycleTexture; // x20
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  UnityEngine_Object_o *v12; // x22
-  Il2CppObject *v13; // x22
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  UnityEngine_Object_o *v16; // x22
+  Il2CppObject *v17; // x22
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
 
-  if ( (byte_4CB54F2 & 1) == 0 )
+  if ( (byte_4CC6612 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11316/*"RenderTexture"*/);
-    sub_1C6BA08(&StringLiteral_11243/*"RecycleRenderTexture"*/);
-    byte_4CB54F2 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_11322/*"RenderTexture"*/);
+    sub_1C713B0(&StringLiteral_11249/*"RecycleRenderTexture"*/);
+    byte_4CC6612 = 1;
   }
   state = this->fields.state;
   if ( !state )
@@ -1874,17 +1986,25 @@ bool StandFigureCamera__RequestTypePoint(
     this->fields.state = 1;
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_24;
     targetTexture = UnityEngine_Camera__get_targetTexture(Component_object, 0);
     this->fields.recycleTexture = targetTexture;
     p_recycleTexture = &this->fields.recycleTexture;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.recycleTexture, (int32_t)targetTexture, v10, v11);
-    v12 = (UnityEngine_Object_o *)this->fields.recycleTexture;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.recycleTexture,
+      (int32_t)targetTexture,
+      v10,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15);
+    v16 = (UnityEngine_Object_o *)this->fields.recycleTexture;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(v12, 0, 0) )
+    if ( UnityEngine_Object__op_Inequality(v16, 0, 0) )
       UnityEngine_RenderTexture__ReleaseTemporary(*p_recycleTexture, 0);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !Component_object )
@@ -1892,32 +2012,32 @@ bool StandFigureCamera__RequestTypePoint(
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, 1, 0);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_24;
     UnityEngine_Camera__set_aspect(Component_object, 1.0, 0);
-    v13 = UnityEngine_Component__GetComponent_object_(
+    v17 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
-    Component_object = (UnityEngine_Camera_o *)UnityEngine_RenderTexture__GetTemporary_71567348(2048, 2048, 0, 0, 0);
-    if ( !v13 )
+            (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
+    Component_object = (UnityEngine_Camera_o *)UnityEngine_RenderTexture__GetTemporary_71632280(2048, 2048, 0, 0, 0);
+    if ( !v17 )
       goto LABEL_24;
     UnityEngine_Camera__set_targetTexture(
-      (UnityEngine_Camera_o *)v13,
+      (UnityEngine_Camera_o *)v17,
       (UnityEngine_RenderTexture_o *)Component_object,
       0);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_24;
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(Component_object, 0);
     if ( !Component_object )
       goto LABEL_24;
-    UnityEngine_Object__set_name((UnityEngine_Object_o *)Component_object, (System_String_o *)StringLiteral_11316/*"RenderTexture"*/, 0);
+    UnityEngine_Object__set_name((UnityEngine_Object_o *)Component_object, (System_String_o *)StringLiteral_11322/*"RenderTexture"*/, 0);
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_24;
     Component_object = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(Component_object, 0);
@@ -1933,20 +2053,28 @@ bool StandFigureCamera__RequestTypePoint(
     if ( ((unsigned __int8)Component_object & 1) == 0 )
     {
       *p_recycleTexture = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.recycleTexture, 0, v14, v15);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.recycleTexture, 0, v18, v19, v20, v21, v22, v23);
       return state == 0;
     }
     if ( !recycleTexture
       || (UnityEngine_Object__set_name(
             (UnityEngine_Object_o *)recycleTexture,
-            (System_String_o *)StringLiteral_11243/*"RecycleRenderTexture"*/,
+            (System_String_o *)StringLiteral_11249/*"RecycleRenderTexture"*/,
             0),
           *p_recycleTexture = recycleTexture,
-          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.recycleTexture, (int32_t)recycleTexture, v16, v17),
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&this->fields.recycleTexture,
+            (int32_t)recycleTexture,
+            v24,
+            v25,
+            v26,
+            v27,
+            v28,
+            v29),
           (Component_object = (UnityEngine_Camera_o *)*p_recycleTexture) == 0) )
     {
 LABEL_24:
-      sub_1C6BC60(Component_object, v7);
+      sub_1C71608(Component_object, v7);
     }
     UnityEngine_Texture__set_filterMode((UnityEngine_Texture_o *)Component_object, 0, 0);
   }
@@ -1964,20 +2092,20 @@ bool StandFigureCamera__RequestWithEffect(
   UnityEngine_Camera_o *v6; // x20
   UnityEngine_Object_o *targetTexture; // x21
   UnityEngine_RenderTexture_o *v8; // x0
-  UnityEngine_RenderTexture_o *Temporary_71567348; // x0
+  UnityEngine_RenderTexture_o *Temporary_71632280; // x0
 
-  if ( (byte_4CB54F1 & 1) == 0 )
+  if ( (byte_4CC6611 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5379/*"Dummy"*/);
-    byte_4CB54F1 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_5382/*"Dummy"*/);
+    byte_4CC6611 = 1;
   }
   this->fields.withEffect = 1;
   this->fields.entranceDuration = 1.0;
   Component_object = (UnityEngine_Camera_o *)UnityEngine_Component__GetComponent_object_(
                                                (UnityEngine_Component_o *)this,
-                                               (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                               (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
   if ( !Component_object )
     goto LABEL_12;
   v6 = Component_object;
@@ -1989,11 +2117,11 @@ bool StandFigureCamera__RequestWithEffect(
     v8 = UnityEngine_Camera__get_targetTexture(v6, 0);
     UnityEngine_RenderTexture__ReleaseTemporary(v8, 0);
   }
-  Temporary_71567348 = UnityEngine_RenderTexture__GetTemporary_71567348(2, 2, 0, 0, 0);
-  UnityEngine_Camera__set_targetTexture(v6, Temporary_71567348, 0);
+  Temporary_71632280 = UnityEngine_RenderTexture__GetTemporary_71632280(2, 2, 0, 0, 0);
+  UnityEngine_Camera__set_targetTexture(v6, Temporary_71632280, 0);
   Component_object = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(v6, 0);
   if ( !Component_object
-    || (UnityEngine_Object__set_name((UnityEngine_Object_o *)Component_object, (System_String_o *)StringLiteral_5379/*"Dummy"*/, 0),
+    || (UnityEngine_Object__set_name((UnityEngine_Object_o *)Component_object, (System_String_o *)StringLiteral_5382/*"Dummy"*/, 0),
         (Component_object = (UnityEngine_Camera_o *)UnityEngine_Camera__get_targetTexture(v6, 0)) == 0)
     || (UnityEngine_Texture__set_filterMode((UnityEngine_Texture_o *)Component_object, 0, 0),
         this->fields.state = 1,
@@ -2002,7 +2130,7 @@ bool StandFigureCamera__RequestWithEffect(
                                                       0)) == 0) )
   {
 LABEL_12:
-    sub_1C6BC60(Component_object, v5);
+    sub_1C71608(Component_object, v5);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Component_object, 1, 0);
   return 1;
@@ -2019,34 +2147,50 @@ void StandFigureCamera__ResetCameraRenderState(StandFigureCamera_o *this, const 
   const MethodInfo *v8; // x3
   struct StandFigureCamera_StaticFields *static_fields; // x0
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  UnityEngine_Camera_o *v12; // x19
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  UnityEngine_Camera_o *v16; // x19
   UnityEngine_Object_o *targetTexture; // x20
-  UnityEngine_RenderTexture_o *v14; // x20
-  StandFigureCamera_c *v15; // x0
+  UnityEngine_RenderTexture_o *v18; // x20
+  StandFigureCamera_c *v19; // x0
   UnityEngine_Object_o *front; // x19
-  StandFigureCamera_c *v17; // x0
-  UnityEngine_Object_o *v18; // x19
-  struct StandFigureCamera_StaticFields *v19; // x0
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  StandFigureCamera_c *v22; // x0
-  UnityEngine_Object_o *back; // x19
+  StandFigureCamera_c *v21; // x0
+  UnityEngine_Object_o *v22; // x19
+  struct StandFigureCamera_StaticFields *v23; // x0
   int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  StandFigureCamera_c *v26; // x0
-  UnityEngine_Object_o *v27; // x19
-  struct StandFigureCamera_StaticFields *v28; // x0
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  StandFigureCamera_c *v31; // x0
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
+  StandFigureCamera_c *v30; // x0
+  UnityEngine_Object_o *back; // x19
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  int32_t v35; // w5
+  int64_t v36; // x6
+  System_String_o *v37; // x7
+  StandFigureCamera_c *v38; // x0
+  UnityEngine_Object_o *v39; // x19
+  struct StandFigureCamera_StaticFields *v40; // x0
+  int32_t v41; // w2
+  int32_t v42; // w3
+  System_String_o *v43; // x4
+  int32_t v44; // w5
+  int64_t v45; // x6
+  System_String_o *v46; // x7
+  StandFigureCamera_c *v47; // x0
 
-  if ( (byte_4CB54FB & 1) == 0 )
+  if ( (byte_4CC661B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Camera___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StandFigureCamera_TypeInfo);
-    byte_4CB54FB = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Camera___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StandFigureCamera_TypeInfo);
+    byte_4CC661B = 1;
   }
   this->fields.state = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -2074,95 +2218,95 @@ void StandFigureCamera__ResetCameraRenderState(StandFigureCamera_o *this, const 
     v8);
   static_fields = StandFigureCamera_TypeInfo->static_fields;
   static_fields->renderTextureEffects = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->renderTextureEffects, 0, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->renderTextureEffects, 0, v10, v11, v12, v13, v14, v15);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                              (UnityEngine_Component_o *)this,
-                                             (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                                             (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
   if ( !gameObject )
     goto LABEL_37;
-  v12 = (UnityEngine_Camera_o *)gameObject;
+  v16 = (UnityEngine_Camera_o *)gameObject;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
   if ( !gameObject )
     goto LABEL_37;
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
-  targetTexture = (UnityEngine_Object_o *)UnityEngine_Camera__get_targetTexture(v12, 0);
+  targetTexture = (UnityEngine_Object_o *)UnityEngine_Camera__get_targetTexture(v16, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(targetTexture, 0, 0) )
   {
-    v14 = UnityEngine_Camera__get_targetTexture(v12, 0);
-    UnityEngine_Camera__set_targetTexture(v12, 0, 0);
-    UnityEngine_RenderTexture__ReleaseTemporary(v14, 0);
+    v18 = UnityEngine_Camera__get_targetTexture(v16, 0);
+    UnityEngine_Camera__set_targetTexture(v16, 0, 0);
+    UnityEngine_RenderTexture__ReleaseTemporary(v18, 0);
   }
-  v15 = StandFigureCamera_TypeInfo;
+  v19 = StandFigureCamera_TypeInfo;
   if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
-    v15 = StandFigureCamera_TypeInfo;
+    v19 = StandFigureCamera_TypeInfo;
   }
-  front = (UnityEngine_Object_o *)v15->static_fields->front;
+  front = (UnityEngine_Object_o *)v19->static_fields->front;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(front, 0, 0) )
   {
-    v17 = StandFigureCamera_TypeInfo;
+    v21 = StandFigureCamera_TypeInfo;
     if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
-      v17 = StandFigureCamera_TypeInfo;
+      v21 = StandFigureCamera_TypeInfo;
     }
-    gameObject = (UnityEngine_GameObject_o *)v17->static_fields->front;
+    gameObject = (UnityEngine_GameObject_o *)v21->static_fields->front;
     if ( !gameObject )
       goto LABEL_37;
-    v18 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+    v22 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(v18, 0);
-    v19 = StandFigureCamera_TypeInfo->static_fields;
-    v19->front = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v19->front, 0, v20, v21);
+    UnityEngine_Object__Destroy_71724608(v22, 0);
+    v23 = StandFigureCamera_TypeInfo->static_fields;
+    v23->front = 0;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v23->front, 0, v24, v25, v26, v27, v28, v29);
   }
-  v22 = StandFigureCamera_TypeInfo;
+  v30 = StandFigureCamera_TypeInfo;
   if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
-    v22 = StandFigureCamera_TypeInfo;
+    v30 = StandFigureCamera_TypeInfo;
   }
-  back = (UnityEngine_Object_o *)v22->static_fields->back;
+  back = (UnityEngine_Object_o *)v30->static_fields->back;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(back, 0, 0) )
   {
-    v26 = StandFigureCamera_TypeInfo;
+    v38 = StandFigureCamera_TypeInfo;
     if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
-      v26 = StandFigureCamera_TypeInfo;
+      v38 = StandFigureCamera_TypeInfo;
     }
-    gameObject = (UnityEngine_GameObject_o *)v26->static_fields->back;
+    gameObject = (UnityEngine_GameObject_o *)v38->static_fields->back;
     if ( gameObject )
     {
-      v27 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
+      v39 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71659676(v27, 0);
-      v28 = StandFigureCamera_TypeInfo->static_fields;
-      v28->back = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v28->back, 0, v29, v30);
+      UnityEngine_Object__Destroy_71724608(v39, 0);
+      v40 = StandFigureCamera_TypeInfo->static_fields;
+      v40->back = 0;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&v40->back, 0, v41, v42, v43, v44, v45, v46);
       goto LABEL_34;
     }
 LABEL_37:
-    sub_1C6BC60(gameObject, v4);
+    sub_1C71608(gameObject, v4);
   }
 LABEL_34:
-  v31 = StandFigureCamera_TypeInfo;
+  v47 = StandFigureCamera_TypeInfo;
   if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
-    v31 = StandFigureCamera_TypeInfo;
+    v47 = StandFigureCamera_TypeInfo;
   }
-  v31->static_fields->collectList = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)StandFigureCamera_TypeInfo->static_fields, 0, v24, v25);
+  v47->static_fields->collectList = 0;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)StandFigureCamera_TypeInfo->static_fields, 0, v32, v33, v34, v35, v36, v37);
 }
 
 
@@ -2171,42 +2315,66 @@ void StandFigureCamera__SetupEffects(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  StandFigureCamera_c *v5; // x0
-  System_Collections_Generic_List_T__o *v6; // x20
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  StandFigureCamera_c *v9; // x0
+  System_Collections_Generic_List_T__o *v10; // x20
   struct StandFigureCamera_StaticFields *static_fields; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  const MethodInfo *v18; // x3
 
-  if ( (byte_4CB54EE & 1) == 0 )
+  if ( (byte_4CC660E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture____ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_ValueTuple_bool__RenderTexture___TypeInfo);
-    sub_1C6BA08(&StandFigureCamera_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11328/*"RenderTextureMain"*/);
-    byte_4CB54EE = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture____ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_ValueTuple_bool__RenderTexture___TypeInfo);
+    sub_1C713B0(&StandFigureCamera_TypeInfo);
+    sub_1C713B0(&StringLiteral_11334/*"RenderTextureMain"*/);
+    byte_4CC660E = 1;
   }
-  v5 = StandFigureCamera_TypeInfo;
+  v9 = StandFigureCamera_TypeInfo;
   if ( !StandFigureCamera_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(StandFigureCamera_TypeInfo);
-    v5 = StandFigureCamera_TypeInfo;
+    v9 = StandFigureCamera_TypeInfo;
   }
-  v5->static_fields->collectList = collectList;
-  sub_1C6B9AC((CGThumbnailListItem_o *)StandFigureCamera_TypeInfo->static_fields, (int32_t)collectList, v2, v3);
-  v6 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_ValueTuple_bool__RenderTexture___TypeInfo);
-  System_Collections_Generic_List_ValueTuple_bool__object_____ctor(
+  v9->static_fields->collectList = collectList;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)StandFigureCamera_TypeInfo->static_fields,
+    (int32_t)collectList,
+    v2,
+    v3,
+    v4,
+    v5,
     v6,
-    (const MethodInfo_37A50F8 *)Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture____ctor__);
+    v7);
+  v10 = (System_Collections_Generic_List_T__o *)sub_1C715FC(System_Collections_Generic_List_ValueTuple_bool__RenderTexture___TypeInfo);
+  System_Collections_Generic_List_ValueTuple_bool__object_____ctor(
+    v10,
+    (const MethodInfo_37B4E9C *)Method_System_Collections_Generic_List_ValueTuple_bool__RenderTexture____ctor__);
   static_fields = StandFigureCamera_TypeInfo->static_fields;
-  static_fields->renderTextureEffects = (struct System_Collections_Generic_List_ValueTuple_bool__RenderTexture___o *)v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->renderTextureEffects, (int32_t)v6, v8, v9);
+  static_fields->renderTextureEffects = (struct System_Collections_Generic_List_ValueTuple_bool__RenderTexture___o *)v10;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&static_fields->renderTextureEffects,
+    (int32_t)v10,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   StandFigureCamera__InitRenderTextures(
     collectList,
     StandFigureCamera_TypeInfo->static_fields->renderTextureEffects,
-    (System_String_o *)StringLiteral_11328/*"RenderTextureMain"*/,
-    v10);
+    (System_String_o *)StringLiteral_11334/*"RenderTextureMain"*/,
+    v18);
 }
 
 
@@ -2253,10 +2421,10 @@ void StandFigureCamera__SetupNguiTexture(
   UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v12, 0);
   this = (StandFigureCamera_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)uitex, 0);
   v11 = this;
-  if ( !byte_4CAFC0E )
+  if ( !byte_4CC0D0E )
   {
-    this = (StandFigureCamera_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC0E = 1;
+    this = (StandFigureCamera_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D0E = 1;
   }
   if ( !v11 )
     goto LABEL_13;
@@ -2277,7 +2445,7 @@ void StandFigureCamera__SetupNguiTexture(
   this = (StandFigureCamera_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)uitex, 0);
   if ( !this )
 LABEL_13:
-    sub_1C6BC60(this, parent);
+    sub_1C71608(this, parent);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
 }
 
@@ -2297,20 +2465,20 @@ void StandFigureCamera__UpdateWithEffect(StandFigureCamera_o *this, const Method
   Il2CppObject *Component_object; // x20
   UnityEngine_Object_o *sharedMaterial; // x21
 
-  if ( (byte_4CB54FA & 1) == 0 )
+  if ( (byte_4CC661A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponentsInChildren_UIStandFigureRender____78590944);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16373/*"_TimeValue"*/);
-    byte_4CB54FA = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponentsInChildren_UIStandFigureRender____78659800);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_16380/*"_TimeValue"*/);
+    byte_4CC661A = 1;
   }
   if ( this->fields.withEffect )
   {
     ComponentsInChildren_object = UnityEngine_Component__GetComponentsInChildren_object_(
                                     (UnityEngine_Component_o *)this,
                                     1,
-                                    (const MethodInfo_313285C *)Method_UnityEngine_Component_GetComponentsInChildren_UIStandFigureRender____78590944);
+                                    (const MethodInfo_3142600 *)Method_UnityEngine_Component_GetComponentsInChildren_UIStandFigureRender____78659800);
     if ( ComponentsInChildren_object )
     {
       entranceDuration = this->fields.entranceDuration;
@@ -2329,13 +2497,13 @@ void StandFigureCamera__UpdateWithEffect(StandFigureCamera_o *this, const Method
         do
         {
           if ( (unsigned int)v10 >= max_length )
-            sub_1C6BC68(ComponentsInChildren_object);
+            sub_1C71610(ComponentsInChildren_object);
           transform = (UnityEngine_Component_o *)v6->m_Items[v10];
           if ( !transform
             || (transform = (UnityEngine_Component_o *)UnityEngine_Component__get_transform(transform, 0)) == 0 )
           {
 LABEL_26:
-            sub_1C6BC60(transform, v4);
+            sub_1C71608(transform, v4);
           }
           Child = (UnityEngine_Object_o *)UnityEngine_Transform__GetChild((UnityEngine_Transform_o *)transform, 0, 0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -2347,7 +2515,7 @@ LABEL_26:
             goto LABEL_26;
           Component_object = UnityEngine_Component__GetComponent_object_(
                                (UnityEngine_Component_o *)Child,
-                               (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                               (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
           transform = (UnityEngine_Component_o *)UnityEngine_Object__op_Equality(
@@ -2372,7 +2540,7 @@ LABEL_26:
             goto LABEL_26;
           UnityEngine_Material__SetFloat(
             (UnityEngine_Material_o *)transform,
-            (System_String_o *)StringLiteral_16373/*"_TimeValue"*/,
+            (System_String_o *)StringLiteral_16380/*"_TimeValue"*/,
             v7,
             0);
           max_length = v6->max_length;
@@ -2399,15 +2567,15 @@ UITexture_o *StandFigureCamera___InitializeEffectNguiTextures_g__FindHighest_36_
   __int64 v9; // x9
 
   v2 = a1;
-  if ( (byte_4CB54FE & 1) == 0 )
+  if ( (byte_4CC661E & 1) == 0 )
   {
-    a1 = (StandFigureCamera___c__DisplayClass36_0_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB54FE = 1;
+    a1 = (StandFigureCamera___c__DisplayClass36_0_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC661E = 1;
   }
   uitextures = v2->fields.uitextures;
   if ( !v2->fields.uitextures )
 LABEL_24:
-    sub_1C6BC60(a1, method);
+    sub_1C71608(a1, method);
   v4 = 0;
   v5 = 4;
   while ( 1 )
@@ -2449,7 +2617,7 @@ LABEL_21:
         goto LABEL_24;
       if ( v7 >= LODWORD(uitextures->max_length) )
 LABEL_26:
-        sub_1C6BC68(a1);
+        sub_1C71610(a1);
       v9 = *((_QWORD *)&uitextures->obj.klass + v5);
       if ( !v9 || !v4 )
         goto LABEL_24;
@@ -2478,15 +2646,15 @@ UITexture_o *StandFigureCamera___InitializeEffectNguiTextures_g__FindLowest_36_1
   __int64 v9; // x9
 
   v2 = a1;
-  if ( (byte_4CB54FD & 1) == 0 )
+  if ( (byte_4CC661D & 1) == 0 )
   {
-    a1 = (StandFigureCamera___c__DisplayClass36_0_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB54FD = 1;
+    a1 = (StandFigureCamera___c__DisplayClass36_0_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC661D = 1;
   }
   uitextures = v2->fields.uitextures;
   if ( !v2->fields.uitextures )
 LABEL_24:
-    sub_1C6BC60(a1, method);
+    sub_1C71608(a1, method);
   v4 = 0;
   v5 = 4;
   while ( 1 )
@@ -2528,7 +2696,7 @@ LABEL_21:
         goto LABEL_24;
       if ( v7 >= LODWORD(uitextures->max_length) )
 LABEL_26:
-        sub_1C6BC68(a1);
+        sub_1C71610(a1);
       v9 = *((_QWORD *)&uitextures->obj.klass + v5);
       if ( !v9 || !v4 )
         goto LABEL_24;
@@ -2547,17 +2715,29 @@ void StandFigureCamera___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB54FF & 1) == 0 )
+  if ( (byte_4CC661F & 1) == 0 )
   {
-    sub_1C6BA08(&StandFigureCamera___c_TypeInfo);
-    byte_4CB54FF = 1;
+    sub_1C713B0(&StandFigureCamera___c_TypeInfo);
+    byte_4CC661F = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(StandFigureCamera___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(StandFigureCamera___c_TypeInfo);
   System_Object___ctor(v1, 0);
   StandFigureCamera___c_TypeInfo->static_fields->__9 = (struct StandFigureCamera___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)StandFigureCamera___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)StandFigureCamera___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

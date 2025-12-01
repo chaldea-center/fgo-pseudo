@@ -7,21 +7,25 @@ void DisplayEffectInheritData___ctor(
   bool v7; // w22
   System_Collections_Generic_Dictionary_int__float__o *v8; // x20
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
-  if ( (byte_4CB8C87 & 1) == 0 )
+  if ( (byte_4CC9DC2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__float___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_int__float__TypeInfo);
-    byte_4CB8C87 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__float___ctor__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_int__float__TypeInfo);
+    byte_4CC9DC2 = 1;
   }
   v7 = isSetNextPossibleTime;
-  v8 = (System_Collections_Generic_Dictionary_int__float__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__float__TypeInfo);
+  v8 = (System_Collections_Generic_Dictionary_int__float__o *)sub_1C715FC(System_Collections_Generic_Dictionary_int__float__TypeInfo);
   System_Collections_Generic_Dictionary_int__float____ctor(
     v8,
-    (const MethodInfo_347052C *)Method_System_Collections_Generic_Dictionary_int__float___ctor__);
+    (const MethodInfo_34802D0 *)Method_System_Collections_Generic_Dictionary_int__float___ctor__);
   this->fields.popTiming = v8;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v8, v9, v10);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v8, v9, v10, v11, v12, v13, v14);
   this->fields.isSetNextPossibleTime = 1;
   this->fields._SideEffectTotalTime_k__BackingField = 1.25;
   System_Object___ctor((Il2CppObject *)this, 0);
@@ -51,7 +55,7 @@ void DisplayEffectInheritData__ChangeIntervalMatchCond(
     {
       v7 = this->fields.changeIntervalProc;
       if ( !v7 )
-        sub_1C6BC60(v5, v6);
+        sub_1C71608(v5, v6);
       this->fields._EffectInterval_k__BackingField = v7->fields._Interval_k__BackingField;
     }
   }
@@ -63,29 +67,29 @@ float DisplayEffectInheritData__GetMaxInterval(DisplayEffectInheritData_o *this,
   System_Collections_Generic_Dictionary_int__float__o *popTiming; // x0
   System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *Values; // x0
 
-  if ( (byte_4CB8C89 & 1) == 0 )
+  if ( (byte_4CC9DC4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__float__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__float__get_Values__);
-    byte_4CB8C89 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__float__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__float__get_Values__);
+    byte_4CC9DC4 = 1;
   }
   popTiming = this->fields.popTiming;
   if ( !popTiming )
     goto LABEL_8;
   if ( System_Collections_Generic_Dictionary_int__float___get_Count(
          popTiming,
-         (const MethodInfo_3470BAC *)Method_System_Collections_Generic_Dictionary_int__float__get_Count__) >= 1 )
+         (const MethodInfo_3480950 *)Method_System_Collections_Generic_Dictionary_int__float__get_Count__) >= 1 )
   {
     popTiming = this->fields.popTiming;
     if ( popTiming )
     {
       Values = System_Collections_Generic_Dictionary_int__float___get_Values(
                  popTiming,
-                 (const MethodInfo_3470D0C *)Method_System_Collections_Generic_Dictionary_int__float__get_Values__);
-      return System_Linq_Enumerable__Max_66968184((System_Collections_Generic_IEnumerable_float__o *)Values, 0);
+                 (const MethodInfo_3480AB0 *)Method_System_Collections_Generic_Dictionary_int__float__get_Values__);
+      return System_Linq_Enumerable__Max_67033116((System_Collections_Generic_IEnumerable_float__o *)Values, 0);
     }
 LABEL_8:
-    sub_1C6BC60(popTiming, method);
+    sub_1C71608(popTiming, method);
   }
   return 0.0;
 }
@@ -108,12 +112,12 @@ float DisplayEffectInheritData__GetNextEffectDelay(
   float time; // s0
   float value; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CB8C88 & 1) == 0 )
+  if ( (byte_4CC9DC3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__float__TryGetValue__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
-    byte_4CB8C88 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__float__TryGetValue__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
+    byte_4CC9DC3 = 1;
   }
   value = 0.0;
   popTiming = this->fields.popTiming;
@@ -123,7 +127,7 @@ float DisplayEffectInheritData__GetNextEffectDelay(
           popTiming,
           targetId,
           &value,
-          (const MethodInfo_34725A4 *)Method_System_Collections_Generic_Dictionary_int__float__TryGetValue__);
+          (const MethodInfo_3482348 *)Method_System_Collections_Generic_Dictionary_int__float__TryGetValue__);
   if ( svtData )
   {
     if ( !v14 )
@@ -147,7 +151,7 @@ float DisplayEffectInheritData__GetNextEffectDelay(
     popTiming,
     targetId,
     EffectInterval_k__BackingField + value,
-    (const MethodInfo_3470EE4 *)Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
+    (const MethodInfo_3480C88 *)Method_System_Collections_Generic_Dictionary_int__float__set_Item__);
   if ( svtData && isSetNextTime && this->fields.isSetNextPossibleTime )
   {
     time = UnityEngine_Time__get_time(0);
@@ -158,11 +162,11 @@ float DisplayEffectInheritData__GetNextEffectDelay(
                                                 + System_Collections_Generic_Dictionary_int__float___get_Item(
                                                     popTiming,
                                                     targetId,
-                                                    (const MethodInfo_3470E5C *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
+                                                    (const MethodInfo_3480C00 *)Method_System_Collections_Generic_Dictionary_int__float__get_Item__);
       return value;
     }
 LABEL_17:
-    sub_1C6BC60(popTiming, *(_QWORD *)&targetId);
+    sub_1C71608(popTiming, *(_QWORD *)&targetId);
   }
   return value;
 }
@@ -173,10 +177,22 @@ void DisplayEffectInheritData__SetChangeEffectIntervalProcess(
         ChangeEffectIntervalProcess_o *changeProc,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.changeIntervalProc = changeProc;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.changeIntervalProc, (int32_t)changeProc, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.changeIntervalProc,
+    (int32_t)changeProc,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

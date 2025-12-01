@@ -20,7 +20,7 @@ void ScriptActionAdvPrefabActorGoNextState__OnStateEnter(
 
   owner = this->fields.owner;
   if ( !owner )
-    sub_1C6BC60(this, animator);
+    sub_1C71608(this, animator);
   owner->fields._IsGoNext_k__BackingField = 1;
   v7 = *(_OWORD *)&stateInfo->fields.m_Name;
   v6 = *(_OWORD *)&stateInfo->fields.m_Length;
@@ -41,8 +41,12 @@ void ScriptActionAdvPrefabActorGoNextState__SetOwner(
         ScriptActionAdvPrefabActorController_o *owner,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.owner = owner;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.owner, (int32_t)owner, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.owner, (int32_t)owner, (int32_t)method, v3, v4, v5, v6, v7);
 }

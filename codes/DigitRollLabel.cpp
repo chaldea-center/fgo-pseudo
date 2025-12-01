@@ -1,17 +1,21 @@
 void DigitRollLabel___ctor(DigitRollLabel_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  int32_t v5; // w1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v9; // w1
 
-  if ( (byte_4CB79F3 & 1) == 0 )
+  if ( (byte_4CC8B1C & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB79F3 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC8B1C = 1;
   }
-  v5 = StringLiteral_1/*""*/;
+  v9 = StringLiteral_1/*""*/;
   this->fields.nexttext = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.nexttext, v5, v2, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.nexttext, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -19,16 +23,20 @@ void DigitRollLabel___ctor(DigitRollLabel_o *this, const MethodInfo *method)
 void DigitRollLabel__Awake(DigitRollLabel_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct UILabel_o *nextlabel; // x8
   struct System_String_o *mText; // x1
 
   nextlabel = this->fields.nextlabel;
   if ( !nextlabel )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   mText = nextlabel->fields.mText;
   this->fields.nexttext = mText;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.nexttext, (int32_t)mText, v2, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.nexttext, (int32_t)mText, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -50,7 +58,7 @@ void DigitRollLabel__ChangeColor(DigitRollLabel_o *this, UnityEngine_Color_o col
         UIWidget__set_color(nowlabel, color, 0),
         (nowlabel = (UIWidget_o *)this->fields.nextlabel) == 0) )
   {
-    sub_1C6BC60(nowlabel, method);
+    sub_1C71608(nowlabel, method);
   }
   v9.fields.a = nowlabel->fields.mColor.fields.a;
   v9.fields.g = g;
@@ -112,31 +120,31 @@ void DigitRollLabel__changeSpeed(DigitRollLabel_o *this, int32_t speed, const Me
   int *v52; // x10
   __int64 v53; // x0
 
-  if ( (byte_4CB79F0 & 1) == 0 )
+  if ( (byte_4CC8B19 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_AnimationState_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
-    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&SimpleAnimation_State_TypeInfo);
-    byte_4CB79F0 = 1;
+    sub_1C713B0(&UnityEngine_AnimationState_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo);
+    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&SimpleAnimation_State_TypeInfo);
+    byte_4CC8B19 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_78;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_78;
   v9 = UnityEngine_GameObject__GetComponent_object_(
          gameObject,
-         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -168,11 +176,11 @@ void DigitRollLabel__changeSpeed(DigitRollLabel_o *this, int32_t speed, const Me
         else
         {
 LABEL_14:
-          v14 = sub_1C41D90(gameObject, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
+          v14 = sub_1C47738(gameObject, System_Collections_Generic_IEnumerable_SimpleAnimation_State__TypeInfo, 0);
         }
         v16 = (*(__int64 (__fastcall **)(UnityEngine_GameObject_o *, _QWORD))v14)(v11, *(_QWORD *)(v14 + 8));
         if ( !v16 )
-          sub_1C6BC60(0, v15);
+          sub_1C71608(0, v15);
         while ( 1 )
         {
           v17 = *(_QWORD *)v16;
@@ -192,7 +200,7 @@ LABEL_14:
           else
           {
 LABEL_21:
-            v20 = sub_1C41D90(v16, System_Collections_IEnumerator_TypeInfo, 0);
+            v20 = sub_1C47738(v16, System_Collections_IEnumerator_TypeInfo, 0);
           }
           if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v20)(v16, *(_QWORD *)(v20 + 8)) & 1) == 0 )
             break;
@@ -213,12 +221,12 @@ LABEL_21:
           else
           {
 LABEL_28:
-            v24 = sub_1C41D90(v16, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
+            v24 = sub_1C47738(v16, System_Collections_Generic_IEnumerator_SimpleAnimation_State__TypeInfo, 0);
           }
           v25 = (*(__int64 (__fastcall **)(__int64, _QWORD))v24)(v16, *(_QWORD *)(v24 + 8));
           v27 = v25;
           if ( !v25 )
-            sub_1C6BC60(0, v26);
+            sub_1C71608(0, v26);
           v28 = *(_QWORD *)v25;
           v29 = *(unsigned __int16 *)(*(_QWORD *)v25 + 302LL);
           if ( *(_WORD *)(*(_QWORD *)v25 + 302LL) )
@@ -236,7 +244,7 @@ LABEL_28:
           else
           {
 LABEL_35:
-            v31 = sub_1C41D90(v25, SimpleAnimation_State_TypeInfo, 8);
+            v31 = sub_1C47738(v25, SimpleAnimation_State_TypeInfo, 8);
           }
           *(float *)&v3 = (float)speed * 1.9;
           (*(void (__fastcall **)(__int64, _QWORD, long double))v31)(v27, *(_QWORD *)(v31 + 8), v3);
@@ -258,14 +266,14 @@ LABEL_35:
         else
         {
 LABEL_42:
-          v35 = sub_1C41D90(v16, System_IDisposable_TypeInfo, 0);
+          v35 = sub_1C47738(v16, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v35)(v16, *(_QWORD *)(v35 + 8));
         return;
       }
     }
 LABEL_78:
-    sub_1C6BC60(gameObject, v7);
+    sub_1C71608(gameObject, v7);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -276,7 +284,7 @@ LABEL_78:
     goto LABEL_78;
   Enumerator = UnityEngine_Animation__GetEnumerator((UnityEngine_Animation_o *)v9, 0);
   if ( !Enumerator )
-    sub_1C6BC60(0, v36);
+    sub_1C71608(0, v36);
   while ( 1 )
   {
     v38 = Enumerator->klass;
@@ -296,7 +304,7 @@ LABEL_78:
     else
     {
 LABEL_54:
-      v41 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v41 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v41)(Enumerator, *(_QWORD *)(v41 + 8))
         & 1) == 0 )
@@ -318,7 +326,7 @@ LABEL_54:
     else
     {
 LABEL_61:
-      v45 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+      v45 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
     }
     v46 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v45)(
                                             Enumerator,
@@ -327,13 +335,13 @@ LABEL_61:
       goto LABEL_77;
     if ( v46->klass != UnityEngine_AnimationState_TypeInfo )
     {
-      sub_1C6BFFC(v46);
+      sub_1C719A4(v46);
 LABEL_77:
-      sub_1C6BC60(v46, v47);
+      sub_1C71608(v46, v47);
     }
     UnityEngine_AnimationState__set_speed(v46, (float)speed * 1.9, 0);
   }
-  v48 = sub_1C6BB44(Enumerator, System_IDisposable_TypeInfo);
+  v48 = sub_1C714EC(Enumerator, System_IDisposable_TypeInfo);
   if ( v48 )
   {
     v49 = *(_QWORD *)v48;
@@ -354,7 +362,7 @@ LABEL_77:
     else
     {
 LABEL_71:
-      v53 = sub_1C41D90(v48, System_IDisposable_TypeInfo, 0);
+      v53 = sub_1C47738(v48, System_IDisposable_TypeInfo, 0);
     }
     (*(void (__fastcall **)(__int64, _QWORD))v53)(v50, *(_QWORD *)(v53 + 8));
   }
@@ -365,14 +373,18 @@ void DigitRollLabel__changeText(DigitRollLabel_o *this, System_String_o *text, c
 {
   UILabel_o *nowlabel; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
   nowlabel = this->fields.nowlabel;
   if ( !nowlabel || (UILabel__set_text(nowlabel, text, 0), (nowlabel = this->fields.nextlabel) == 0) )
-    sub_1C6BC60(nowlabel, text);
+    sub_1C71608(nowlabel, text);
   UILabel__set_text(nowlabel, text, 0);
   this->fields.nexttext = text;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.nexttext, (int32_t)text, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.nexttext, (int32_t)text, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -381,24 +393,28 @@ void DigitRollLabel__endChange(DigitRollLabel_o *this, System_String_o *text, co
   DigitRollLabel_o *v4; // x20
   struct UILabel_o *nextlabel; // x8
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
   Il2CppObject *Component_object; // x19
-  Il2CppObject *v9; // x20
+  Il2CppObject *v13; // x20
   DigitRollLabel_c *klass; // x8
-  DigitRollLabel_o *v11; // x20
-  __int64 v12; // x9
+  DigitRollLabel_o *v15; // x20
+  __int64 v16; // x9
   int32_t *p_offset; // x10
-  __int64 v14; // x0
+  __int64 v18; // x0
 
   v4 = this;
-  if ( (byte_4CB79F2 & 1) == 0 )
+  if ( (byte_4CC8B1B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&SimpleAnimation_State_TypeInfo);
-    this = (DigitRollLabel_o *)sub_1C6BA08(&StringLiteral_18346/*"cpcount"*/);
-    byte_4CB79F2 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&SimpleAnimation_State_TypeInfo);
+    this = (DigitRollLabel_o *)sub_1C713B0(&StringLiteral_18356/*"cpcount"*/);
+    byte_4CC8B1B = 1;
   }
   nextlabel = v4->fields.nextlabel;
   if ( !nextlabel )
@@ -412,19 +428,19 @@ void DigitRollLabel__endChange(DigitRollLabel_o *this, System_String_o *text, co
     goto LABEL_27;
   UILabel__set_text((UILabel_o *)this, text, 0);
   v4->fields.nexttext = text;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.nexttext, (int32_t)text, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.nexttext, (int32_t)text, v6, v7, v8, v9, v10, v11);
   this = (DigitRollLabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0);
   if ( !this )
     goto LABEL_27;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)this,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   this = (DigitRollLabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v4, 0);
   if ( !this )
     goto LABEL_27;
-  v9 = UnityEngine_GameObject__GetComponent_object_(
-         (UnityEngine_GameObject_o *)this,
-         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+  v13 = UnityEngine_GameObject__GetComponent_object_(
+          (UnityEngine_GameObject_o *)this,
+          (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (DigitRollLabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -432,26 +448,26 @@ void DigitRollLabel__endChange(DigitRollLabel_o *this, System_String_o *text, co
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    this = (DigitRollLabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v9, 0, 0);
+    this = (DigitRollLabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v13, 0, 0);
     if ( ((unsigned __int8)this & 1) == 0 )
       return;
-    if ( v9 )
+    if ( v13 )
     {
-      UnityEngine_Animation__Stop((UnityEngine_Animation_o *)v9, 0);
-      UnityEngine_Animation__Play((UnityEngine_Animation_o *)v9, 0);
+      UnityEngine_Animation__Stop((UnityEngine_Animation_o *)v13, 0);
+      UnityEngine_Animation__Play((UnityEngine_Animation_o *)v13, 0);
       this = (DigitRollLabel_o *)UnityEngine_Animation__get_Item(
-                                   (UnityEngine_Animation_o *)v9,
-                                   (System_String_o *)StringLiteral_18346/*"cpcount"*/,
+                                   (UnityEngine_Animation_o *)v13,
+                                   (System_String_o *)StringLiteral_18356/*"cpcount"*/,
                                    0);
       if ( this )
       {
         UnityEngine_AnimationState__set_time((UnityEngine_AnimationState_o *)this, 1.0, 0);
-        UnityEngine_Animation__Sample((UnityEngine_Animation_o *)v9, 0);
+        UnityEngine_Animation__Sample((UnityEngine_Animation_o *)v13, 0);
         return;
       }
     }
 LABEL_27:
-    sub_1C6BC60(this, text);
+    sub_1C71608(this, text);
   }
   if ( !Component_object )
     goto LABEL_27;
@@ -459,31 +475,31 @@ LABEL_27:
   SimpleAnimation__Play((SimpleAnimation_o *)Component_object, 0);
   this = (DigitRollLabel_o *)SimpleAnimation__get_Item(
                                (SimpleAnimation_o *)Component_object,
-                               (System_String_o *)StringLiteral_18346/*"cpcount"*/,
+                               (System_String_o *)StringLiteral_18356/*"cpcount"*/,
                                0);
   if ( !this )
     goto LABEL_27;
   klass = this->klass;
-  v11 = this;
-  v12 = *(unsigned __int16 *)&this->klass->_2.rank;
+  v15 = this;
+  v16 = *(unsigned __int16 *)&this->klass->_2.rank;
   if ( *(_WORD *)&this->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((SimpleAnimation_State_c **)p_offset - 1) != SimpleAnimation_State_TypeInfo )
     {
-      --v12;
+      --v16;
       p_offset += 4;
-      if ( !v12 )
+      if ( !v16 )
         goto LABEL_17;
     }
-    v14 = (__int64)&klass[1] + 16 * *p_offset;
+    v18 = (__int64)&klass[1] + 16 * *p_offset;
   }
   else
   {
 LABEL_17:
-    v14 = sub_1C41D90(this, SimpleAnimation_State_TypeInfo, 4);
+    v18 = sub_1C47738(this, SimpleAnimation_State_TypeInfo, 4);
   }
-  (*(void (__fastcall **)(DigitRollLabel_o *, _QWORD, float))v14)(v11, *(_QWORD *)(v14 + 8), 1.0);
+  (*(void (__fastcall **)(DigitRollLabel_o *, _QWORD, float))v18)(v15, *(_QWORD *)(v18 + 8), 1.0);
   SimpleAnimation__Sample((SimpleAnimation_o *)Component_object, 0);
 }
 
@@ -496,29 +512,33 @@ void DigitRollLabel__startChange(DigitRollLabel_o *this, System_String_o *text, 
   Il2CppObject *v8; // x22
   struct UILabel_o *nextlabel; // x8
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   struct System_String_o **p_nexttext; // x0
-  struct UILabel_o *v13; // x8
+  struct UILabel_o *v17; // x8
 
-  if ( (byte_4CB79F1 & 1) == 0 )
+  if ( (byte_4CC8B1A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB79F1 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC8B1A = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_29;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        gameObject,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SimpleAnimation___);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_29;
   v8 = UnityEngine_GameObject__GetComponent_object_(
          gameObject,
-         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -534,7 +554,7 @@ void DigitRollLabel__startChange(DigitRollLabel_o *this, System_String_o *text, 
     {
       if ( !text )
         goto LABEL_29;
-      gameObject = (UnityEngine_GameObject_o *)System_String__Equals_64002112(text, this->fields.nexttext, 0);
+      gameObject = (UnityEngine_GameObject_o *)System_String__Equals_64067044(text, this->fields.nexttext, 0);
       if ( ((unsigned __int8)gameObject & 1) == 0 )
       {
         nextlabel = this->fields.nextlabel;
@@ -553,7 +573,7 @@ void DigitRollLabel__startChange(DigitRollLabel_o *this, System_String_o *text, 
               p_nexttext = &this->fields.nexttext;
               this->fields.nexttext = text;
 LABEL_28:
-              sub_1C6B9AC((CGThumbnailListItem_o *)p_nexttext, (int32_t)text, v10, v11);
+              sub_1C71354((GrandQuestFolderBoardItem_o *)p_nexttext, (int32_t)text, v10, v11, v12, v13, v14, v15);
               return;
             }
           }
@@ -576,16 +596,16 @@ LABEL_28:
       {
         if ( !text )
           goto LABEL_29;
-        gameObject = (UnityEngine_GameObject_o *)System_String__Equals_64002112(text, this->fields.nexttext, 0);
+        gameObject = (UnityEngine_GameObject_o *)System_String__Equals_64067044(text, this->fields.nexttext, 0);
         if ( ((unsigned __int8)gameObject & 1) == 0 )
         {
-          v13 = this->fields.nextlabel;
-          if ( v13 )
+          v17 = this->fields.nextlabel;
+          if ( v17 )
           {
             gameObject = (UnityEngine_GameObject_o *)this->fields.nowlabel;
             if ( gameObject )
             {
-              UILabel__set_text((UILabel_o *)gameObject, v13->fields.mText, 0);
+              UILabel__set_text((UILabel_o *)gameObject, v17->fields.mText, 0);
               gameObject = (UnityEngine_GameObject_o *)this->fields.nextlabel;
               if ( gameObject )
               {
@@ -599,7 +619,7 @@ LABEL_28:
             }
           }
 LABEL_29:
-          sub_1C6BC60(gameObject, v6);
+          sub_1C71608(gameObject, v6);
         }
       }
     }

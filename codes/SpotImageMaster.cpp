@@ -1,14 +1,14 @@
 void SpotImageMaster___ctor(SpotImageMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6EE5 & 1) == 0 )
+  if ( (byte_4CC800D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string___ctor__);
-    byte_4CB6EE5 = 1;
+    sub_1C713B0(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string___ctor__);
+    byte_4CC800D = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     21,
-    (const MethodInfo_33FB870 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string___ctor__);
+    (const MethodInfo_340B614 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ SpotImageEntity_o *SpotImageMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CB6EE3 & 1) == 0 )
+  if ( (byte_4CC800B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__GetEntity__);
-    byte_4CB6EE3 = 1;
+    sub_1C713B0(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__GetEntity__);
+    byte_4CC800B = 1;
   }
   PK = (Il2CppObject *)SpotImageEntity__CreatePK(spotId, priority, *(const MethodInfo **)&priority);
   return (SpotImageEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                 PK,
-                                (const MethodInfo_33FDB94 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__GetEntity__);
+                                (const MethodInfo_340D938 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__GetEntity__);
 }
 
 
@@ -44,42 +44,50 @@ SpotImageEntity_array *SpotImageMaster__GetImageList(
   void *list; // x0
   int32_t v8; // w22
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v12; // x9
+  _QWORD *v16; // x9
   __int64 size; // x10
-  Il2CppClass **v14; // x0
-  System_Comparison_T__o *v15; // x20
-  Il2CppObject *v16; // x21
+  Il2CppClass **v18; // x0
+  System_Comparison_T__o *v19; // x20
+  Il2CppObject *v20; // x21
   struct SpotImageMaster___c_StaticFields *static_fields; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
 
-  if ( (byte_4CB6EE6 & 1) == 0 )
+  if ( (byte_4CC800E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_SpotImageEntity__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_SpotImageEntity__get_Item__);
-    sub_1C6BA08(&System_Comparison_SpotImageEntity__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotImageEntity__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotImageEntity__Sort__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotImageEntity__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SpotImageEntity___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SpotImageEntity__TypeInfo);
-    sub_1C6BA08(&Method_SpotImageMaster___c__GetImageList_b__3_0__);
-    sub_1C6BA08(&SpotImageMaster___c_TypeInfo);
-    byte_4CB6EE6 = 1;
+    sub_1C713B0(&Method_System_Collections_ObjectModel_Collection_SpotImageEntity__get_Count__);
+    sub_1C713B0(&Method_System_Collections_ObjectModel_Collection_SpotImageEntity__get_Item__);
+    sub_1C713B0(&System_Comparison_SpotImageEntity__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotImageEntity__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotImageEntity__Sort__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotImageEntity__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SpotImageEntity___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SpotImageEntity__TypeInfo);
+    sub_1C713B0(&Method_SpotImageMaster___c__GetImageList_b__3_0__);
+    sub_1C713B0(&SpotImageMaster___c_TypeInfo);
+    byte_4CC800E = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SpotImageEntity__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SpotImageEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SpotImageEntity___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SpotImageEntity___ctor__);
   list = this->fields.list;
   if ( !list )
     goto LABEL_24;
   v8 = 0;
   while ( v8 < System_Collections_ObjectModel_Collection_object___get_Count(
                  (System_Collections_ObjectModel_Collection_T__o *)list,
-                 (const MethodInfo_3391E64 *)Method_System_Collections_ObjectModel_Collection_SpotImageEntity__get_Count__) )
+                 (const MethodInfo_33A1C08 *)Method_System_Collections_ObjectModel_Collection_SpotImageEntity__get_Count__) )
   {
     list = this->fields.list;
     if ( !list )
@@ -87,7 +95,7 @@ SpotImageEntity_array *SpotImageMaster__GetImageList(
     list = System_Collections_ObjectModel_Collection_object___get_Item(
              (System_Collections_ObjectModel_Collection_T__o *)list,
              v8,
-             (const MethodInfo_3391EF4 *)Method_System_Collections_ObjectModel_Collection_SpotImageEntity__get_Item__);
+             (const MethodInfo_33A1C98 *)Method_System_Collections_ObjectModel_Collection_SpotImageEntity__get_Item__);
     if ( list )
     {
       v6 = (Il2CppClass *)list;
@@ -96,7 +104,7 @@ SpotImageEntity_array *SpotImageMaster__GetImageList(
         if ( !v5 )
           goto LABEL_24;
         items = v5->fields._items;
-        v12 = Method_System_Collections_Generic_List_SpotImageEntity__Add__;
+        v16 = Method_System_Collections_Generic_List_SpotImageEntity__Add__;
         ++v5->fields._version;
         if ( !items )
           goto LABEL_24;
@@ -106,14 +114,14 @@ SpotImageEntity_array *SpotImageMaster__GetImageList(
           System_Collections_Generic_List_object___AddWithResize(
             v5,
             (Il2CppObject *)list,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
         }
         else
         {
-          v14 = &items->obj.klass + size;
+          v18 = &items->obj.klass + size;
           v5->fields._size = size + 1;
-          v14[4] = v6;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)v6, v9, v10);
+          v18[4] = v6;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v18 + 4), (int32_t)v6, v9, v10, v11, v12, v13, v14);
         }
       }
     }
@@ -128,31 +136,31 @@ SpotImageEntity_array *SpotImageMaster__GetImageList(
     j_il2cpp_runtime_class_init_0(SpotImageMaster___c_TypeInfo);
     list = SpotImageMaster___c_TypeInfo;
   }
-  v15 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
-  if ( !v15 )
+  v19 = *(System_Comparison_T__o **)(*((_QWORD *)list + 23) + 8LL);
+  if ( !v19 )
   {
     if ( !*((_DWORD *)list + 56) )
     {
       j_il2cpp_runtime_class_init_0(list);
       list = SpotImageMaster___c_TypeInfo;
     }
-    v16 = (Il2CppObject *)**((_QWORD **)list + 23);
-    v15 = (System_Comparison_T__o *)sub_1C6BC54(System_Comparison_SpotImageEntity__TypeInfo);
-    System_Comparison_object____ctor(v15, v16, Method_SpotImageMaster___c__GetImageList_b__3_0__, 0);
+    v20 = (Il2CppObject *)**((_QWORD **)list + 23);
+    v19 = (System_Comparison_T__o *)sub_1C715FC(System_Comparison_SpotImageEntity__TypeInfo);
+    System_Comparison_object____ctor(v19, v20, Method_SpotImageMaster___c__GetImageList_b__3_0__, 0);
     static_fields = SpotImageMaster___c_TypeInfo->static_fields;
-    static_fields->__9__3_0 = (struct System_Comparison_SpotImageEntity__o *)v15;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)v15, v18, v19);
+    static_fields->__9__3_0 = (struct System_Comparison_SpotImageEntity__o *)v19;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__3_0, (int32_t)v19, v22, v23, v24, v25, v26, v27);
   }
   if ( !v5 )
 LABEL_24:
-    sub_1C6BC60(list, v6);
-  System_Collections_Generic_List_object___Sort_58729528(
+    sub_1C71608(list, v6);
+  System_Collections_Generic_List_object___Sort_58794460(
     v5,
-    v15,
-    (const MethodInfo_3802438 *)Method_System_Collections_Generic_List_SpotImageEntity__Sort__);
+    v19,
+    (const MethodInfo_38121DC *)Method_System_Collections_Generic_List_SpotImageEntity__Sort__);
   return (SpotImageEntity_array *)System_Collections_Generic_List_object___ToArray(
                                     v5,
-                                    (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_SpotImageEntity__ToArray__);
+                                    (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_SpotImageEntity__ToArray__);
 }
 
 
@@ -166,17 +174,17 @@ bool SpotImageMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CB6EE4 & 1) == 0 )
+  if ( (byte_4CC800C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__TryGetEntity__);
-    byte_4CB6EE4 = 1;
+    sub_1C713B0(&Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__TryGetEntity__);
+    byte_4CC800C = 1;
   }
   PK = (Il2CppObject *)SpotImageEntity__CreatePK(spotId, priority, *(const MethodInfo **)&spotId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33FDBE0 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__TryGetEntity__);
+           (const MethodInfo_340D984 *)Method_DataMasterBase_SpotImageMaster__SpotImageEntity__string__TryGetEntity__);
 }
 
 
@@ -184,17 +192,29 @@ void SpotImageMaster___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB6EE7 & 1) == 0 )
+  if ( (byte_4CC800F & 1) == 0 )
   {
-    sub_1C6BA08(&SpotImageMaster___c_TypeInfo);
-    byte_4CB6EE7 = 1;
+    sub_1C713B0(&SpotImageMaster___c_TypeInfo);
+    byte_4CC800F = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(SpotImageMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(SpotImageMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SpotImageMaster___c_TypeInfo->static_fields->__9 = (struct SpotImageMaster___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)SpotImageMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)SpotImageMaster___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -211,6 +231,6 @@ int32_t SpotImageMaster___c___GetImageList_b__3_0(
         const MethodInfo *method)
 {
   if ( !b || !a )
-    sub_1C6BC60(this, a);
+    sub_1C71608(this, a);
   return b->fields.priority - a->fields.priority;
 }

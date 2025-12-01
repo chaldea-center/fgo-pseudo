@@ -1,9 +1,9 @@
 void CoinConfirmDialog___ctor(CoinConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB9FC5 & 1) == 0 )
+  if ( (byte_4CCB11B & 1) == 0 )
   {
-    sub_1C6BA08(&BaseDialog_TypeInfo);
-    byte_4CB9FC5 = 1;
+    sub_1C713B0(&BaseDialog_TypeInfo);
+    byte_4CCB11B = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,27 +15,39 @@ void CoinConfirmDialog__Close(CoinConfirmDialog_o *this, const MethodInfo *metho
 {
   const MethodInfo *v2; // x2
 
-  CoinConfirmDialog__Close_48464248(this, 0, v2);
+  CoinConfirmDialog__Close_48528768(this, 0, v2);
 }
 
 
-void CoinConfirmDialog__Close_48464248(CoinConfirmDialog_o *this, System_Action_o *callback, const MethodInfo *method)
+void CoinConfirmDialog__Close_48528768(CoinConfirmDialog_o *this, System_Action_o *callback, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  System_Action_o *v6; // x20
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  System_Action_o *v10; // x20
 
-  if ( (byte_4CB9FC0 & 1) == 0 )
+  if ( (byte_4CCB116 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_CoinConfirmDialog_EndClose__);
-    byte_4CB9FC0 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_CoinConfirmDialog_EndClose__);
+    byte_4CCB116 = 1;
   }
   this->fields.onClose = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onClose, (int32_t)callback, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.onClose,
+    (int32_t)callback,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields.state = 2;
-  v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_CoinConfirmDialog_EndClose__, 0);
-  BaseDialog__Close((BaseDialog_o *)this, v6, 0);
+  v10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_CoinConfirmDialog_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
 
 
@@ -45,10 +57,10 @@ void CoinConfirmDialog__DestroyList(CoinConfirmDialog_o *this, const MethodInfo 
   const MethodInfo *v4; // x1
   CoinRoomCoinListViewManager_o *v5; // x0
 
-  if ( (byte_4CB9FC3 & 1) == 0 )
+  if ( (byte_4CCB119 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9FC3 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCB119 = 1;
   }
   viewManager = (UnityEngine_Object_o *)this->fields.viewManager;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -57,7 +69,7 @@ void CoinConfirmDialog__DestroyList(CoinConfirmDialog_o *this, const MethodInfo 
   {
     v5 = this->fields.viewManager;
     if ( !v5 )
-      sub_1C6BC60(0, v4);
+      sub_1C71608(0, v4);
     CoinRoomCoinListViewManager__DestroyList(v5, v4);
   }
 }
@@ -66,21 +78,25 @@ void CoinConfirmDialog__DestroyList(CoinConfirmDialog_o *this, const MethodInfo 
 void CoinConfirmDialog__EndClose(CoinConfirmDialog_o *this, const MethodInfo *method)
 {
   int32_t v3; // w2
-  const MethodInfo *v4; // x3
-  CGThumbnailListItem_o *p_onClose; // x19
-  struct System_Action_o *v6; // x20
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
+  GrandQuestFolderBoardItem_o *p_onClose; // x19
+  struct System_Action_o *v10; // x20
   struct System_Action_o *onClose; // t1
 
   this->fields.state = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
   onClose = this->fields.onClose;
-  p_onClose = (CGThumbnailListItem_o *)&this->fields.onClose;
-  v6 = onClose;
+  p_onClose = (GrandQuestFolderBoardItem_o *)&this->fields.onClose;
+  v10 = onClose;
   if ( onClose )
   {
     p_onClose->klass = 0;
-    sub_1C6B9AC(p_onClose, 0, v3, v4);
-    ((void (__fastcall *)(intptr_t, intptr_t))v6->fields.invoke_impl)(v6->fields.method_code, v6->fields.method);
+    sub_1C71354(p_onClose, 0, v3, v4, v5, v6, v7, v8);
+    ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
 
@@ -98,56 +114,60 @@ void CoinConfirmDialog__OnClickCancel(CoinConfirmDialog_o *this, const MethodInf
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CB9FC2 & 1) == 0 )
+  if ( (byte_4CCB118 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_CoinConfirmDialog_OnClickCancel__);
-    byte_4CB9FC2 = 1;
+    sub_1C713B0(&Method_CoinConfirmDialog_OnClickCancel__);
+    byte_4CCB118 = 1;
   }
   if ( this->fields.state == 1 )
   {
     v3 = Method_CoinConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_CoinConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C6BA20(Method_CoinConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C713C8(Method_CoinConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    CoinConfirmDialog__Close_48464248(this, 0, v5);
+    CoinConfirmDialog__Close_48528768(this, 0, v5);
   }
 }
 
 
 void CoinConfirmDialog__OnClickDecide(CoinConfirmDialog_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_onDecide; // x19
+  GrandQuestFolderBoardItem_o *p_onDecide; // x19
   struct System_Action_o *onDecide; // t1
   _QWORD *v5; // x0
   System_Reflection_MethodBase_o *v6; // x0
-  CGThumbnailListItem_c *klass; // x20
+  GrandQuestFolderBoardItem_c *klass; // x20
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  __int64 v10; // x0
-  __int64 v11; // x1
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  __int64 v14; // x0
+  __int64 v15; // x1
 
-  if ( (byte_4CB9FC1 & 1) == 0 )
+  if ( (byte_4CCB117 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_CoinConfirmDialog_OnClickDecide__);
-    byte_4CB9FC1 = 1;
+    sub_1C713B0(&Method_CoinConfirmDialog_OnClickDecide__);
+    byte_4CCB117 = 1;
   }
   if ( this->fields.state == 1 )
   {
     onDecide = this->fields.onDecide;
-    p_onDecide = (CGThumbnailListItem_o *)&this->fields.onDecide;
+    p_onDecide = (GrandQuestFolderBoardItem_o *)&this->fields.onDecide;
     if ( onDecide )
     {
       v5 = Method_CoinConfirmDialog_OnClickDecide__;
       if ( (*((_BYTE *)Method_CoinConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1C6BA20(Method_CoinConfirmDialog_OnClickDecide__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v5, v5[4]);
+        v5 = (_QWORD *)sub_1C713C8(Method_CoinConfirmDialog_OnClickDecide__);
+      v6 = (System_Reflection_MethodBase_o *)sub_1C71394(v5, v5[4]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 8, 0, 0);
       klass = p_onDecide->klass;
       p_onDecide->klass = 0;
-      sub_1C6B9AC(p_onDecide, 0, v8, v9);
+      sub_1C71354(p_onDecide, 0, v8, v9, v10, v11, v12, v13);
       if ( !klass )
-        sub_1C6BC60(v10, v11);
+        sub_1C71608(v14, v15);
       ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
         klass->_1.element_class,
         *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -160,13 +180,13 @@ void CoinConfirmDialog__OnEnable(CoinConfirmDialog_o *this, const MethodInfo *me
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4CB9FC4 & 1) == 0 )
+  if ( (byte_4CCB11A & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_15647/*"Window/Objects/CancelButton"*/);
-    byte_4CB9FC4 = 1;
+    sub_1C713B0(&StringLiteral_15654/*"Window/Objects/CancelButton"*/);
+    byte_4CCB11A = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45210584(transform, (System_String_o *)StringLiteral_15647/*"Window/Objects/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45260884(transform, (System_String_o *)StringLiteral_15654/*"Window/Objects/CancelButton"*/, 0);
 }
 
 
@@ -179,23 +199,27 @@ void CoinConfirmDialog__Open(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v8; // x1
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   UILabel_o *titleLabel; // x21
-  System_String_o *v12; // x21
-  int32_t v13; // w0
+  System_String_o *v16; // x21
+  int32_t v17; // w0
   UILabel_o *detailLabel; // x22
-  Il2CppObject *v15; // x0
-  const MethodInfo *v16; // x5
-  int32_t v17; // [xsp+Ch] [xbp-24h] BYREF
+  Il2CppObject *v19; // x0
+  const MethodInfo *v20; // x5
+  int32_t v21; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CB9FBF & 1) == 0 )
+  if ( (byte_4CCB115 & 1) == 0 )
   {
-    sub_1C6BA08(&CoinRoomUtility_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_3535/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/);
-    sub_1C6BA08(&StringLiteral_3536/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/);
-    byte_4CB9FBF = 1;
+    sub_1C713B0(&CoinRoomUtility_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_3538/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/);
+    sub_1C713B0(&StringLiteral_3539/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/);
+    byte_4CCB115 = 1;
   }
   if ( !this->fields.state )
   {
@@ -204,28 +228,28 @@ void CoinConfirmDialog__Open(
       goto LABEL_14;
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
     this->fields.onDecide = onDecide;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onDecide, (int32_t)onDecide, v9, v10);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.onDecide, (int32_t)onDecide, v9, v10, v11, v12, v13, v14);
     titleLabel = this->fields.titleLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3536/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/, 0);
+    gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3539/*"COIN_ROOM_CONFIRM_DIALOG_TITLE"*/, 0);
     if ( !titleLabel )
       goto LABEL_14;
     UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
-    v12 = LocalizationManager__Get((System_String_o *)StringLiteral_3535/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/, 0);
+    v16 = LocalizationManager__Get((System_String_o *)StringLiteral_3538/*"COIN_ROOM_CONFIRM_DIALOG_DETAIL"*/, 0);
     if ( !CoinRoomUtility_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CoinRoomUtility_TypeInfo);
-    v13 = CoinRoomUtility__MaxPoint(0);
+    v17 = CoinRoomUtility__MaxPoint(0);
     detailLabel = this->fields.detailLabel;
-    v17 = v13;
-    v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
-    gameObject = (UnityEngine_GameObject_o *)System_String__Format(v12, v15, 0);
+    v21 = v17;
+    v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v21);
+    gameObject = (UnityEngine_GameObject_o *)System_String__Format(v16, v19, 0);
     if ( !detailLabel
       || (UILabel__set_text(detailLabel, (System_String_o *)gameObject, 0),
           (gameObject = (UnityEngine_GameObject_o *)this->fields.viewManager) == 0) )
     {
 LABEL_14:
-      sub_1C6BC60(gameObject, v8);
+      sub_1C71608(gameObject, v8);
     }
     CoinRoomCoinListViewManager__CreateConfirmList(
       (CoinRoomCoinListViewManager_o *)gameObject,
@@ -233,7 +257,7 @@ LABEL_14:
       1,
       0,
       1,
-      v16);
+      v20);
     this->fields.state = 1;
     BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
   }

@@ -1,9 +1,9 @@
 void StonePurchaseListViewObject___ctor(StonePurchaseListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB418C & 1) == 0 )
+  if ( (byte_4CC52A4 & 1) == 0 )
   {
-    sub_1C6BA08(&ListViewObject_TypeInfo);
-    byte_4CB418C = 1;
+    sub_1C713B0(&ListViewObject_TypeInfo);
+    byte_4CC52A4 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -17,22 +17,34 @@ void StonePurchaseListViewObject__Awake(StonePurchaseListViewObject_o *this, con
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB417A & 1) == 0 )
+  if ( (byte_4CC5292 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewItemDraw___);
-    byte_4CB417A = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewItemDraw___);
+    byte_4CC5292 = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewItemDraw___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewItemDraw___);
   this->fields.itemDraw = (struct StonePurchaseListViewItemDraw_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
+    (int32_t)Component_object,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
 }
 
 
@@ -45,21 +57,21 @@ UnityEngine_GameObject_o *StonePurchaseListViewObject__CreateDragObject(
   UnityEngine_GameObject_o *v5; // x19
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CB417E & 1) == 0 )
+  if ( (byte_4CC5296 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
-    byte_4CB417E = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
+    byte_4CC5296 = 1;
   }
   DragObject = ListViewObject__CreateDragObject((ListViewObject_o *)this, 0);
   if ( !DragObject
     || (v5 = DragObject,
         (DragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                     DragObject,
-                                                    (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___)) == 0) )
+                                                    (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___)) == 0) )
   {
-    sub_1C6BC60(DragObject, v4);
+    sub_1C71608(DragObject, v4);
   }
-  StonePurchaseListViewObject__Init_38739224((StonePurchaseListViewObject_o *)DragObject, 2, v6);
+  StonePurchaseListViewObject__Init_38778308((StonePurchaseListViewObject_o *)DragObject, 2, v6);
   return v5;
 }
 
@@ -74,17 +86,25 @@ void StonePurchaseListViewObject__EventEnterMove(StonePurchaseListViewObject_o *
   UnityEngine_GameObject_o *v7; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  int32_t v15; // w1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v15; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4CB4186 & 1) == 0 )
+  if ( (byte_4CC529E & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_6202/*"EventEnterMove2"*/);
-    byte_4CB4186 = 1;
+    sub_1C713B0(&StringLiteral_6204/*"EventEnterMove2"*/);
+    byte_4CC529E = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -96,28 +116,28 @@ void StonePurchaseListViewObject__EventEnterMove(StonePurchaseListViewObject_o *
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !dragObject
     || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0), !parent)
-    || (v15 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
-        v5 = v15.fields.y + 1000.0,
-        v6 = v15.fields.z + 0.0,
-        v15.fields.y = v15.fields.x + 0.0,
-        v15.fields.z = v5,
+    || (v23 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
+        v5 = v23.fields.y + 1000.0,
+        v6 = v23.fields.z + 0.0,
+        v23.fields.y = v23.fields.x + 0.0,
+        v23.fields.z = v5,
         (dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(
                                                     this->fields.dragObject,
                                                     1.0,
-                                                    *(UnityEngine_Vector3_o *)&v15.fields.y,
+                                                    *(UnityEngine_Vector3_o *)&v23.fields.y,
                                                     0)) == 0) )
   {
 LABEL_9:
-    sub_1C6BC60(dragObject, method);
+    sub_1C71608(dragObject, method);
   }
   v7 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v7[3].monitor = gameObject;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v7[3].monitor, (int32_t)gameObject, v9, v10);
-  v11 = StringLiteral_6202/*"EventEnterMove2"*/;
-  v7[3].fields.m_CachedPtr = StringLiteral_6202/*"EventEnterMove2"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v7[3].fields, v11, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v7[3].monitor, (int32_t)gameObject, v9, v10, v11, v12, v13, v14);
+  v15 = StringLiteral_6204/*"EventEnterMove2"*/;
+  v7[3].fields.m_CachedPtr = StringLiteral_6204/*"EventEnterMove2"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v7[3].fields, v15, v16, v17, v18, v19, v20, v21);
 }
 
 
@@ -125,21 +145,25 @@ void StonePurchaseListViewObject__EventEnterMove2(StonePurchaseListViewObject_o 
 {
   UnityEngine_Object_o *dragObject; // x21
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  const MethodInfo *v6; // x1
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  const MethodInfo *v10; // x1
 
-  if ( (byte_4CB4187 & 1) == 0 )
+  if ( (byte_4CC529F & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    byte_4CB4187 = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    byte_4CC529F = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v4, v5);
-  StonePurchaseListViewObject__EventMoveEnd(this, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, 0, v4, v5, v6, v7, v8, v9);
+  StonePurchaseListViewObject__EventMoveEnd(this, v10);
 }
 
 
@@ -150,16 +174,20 @@ void StonePurchaseListViewObject__EventEnterStart(
 {
   struct UnityEngine_GameObject_o *v5; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  __int64 v8; // x1
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  __int64 v12; // x1
   UnityEngine_GameObject_o *dragObject; // x0
-  const MethodInfo *v10; // x2
+  const MethodInfo *v14; // x2
 
-  if ( (byte_4CB4185 & 1) == 0 )
+  if ( (byte_4CC529D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
-    sub_1C6BA08(&StringLiteral_6201/*"EventEnterMove"*/);
-    byte_4CB4185 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
+    sub_1C713B0(&StringLiteral_6203/*"EventEnterMove"*/);
+    byte_4CC529D = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -169,19 +197,19 @@ void StonePurchaseListViewObject__EventEnterStart(
                                             this,
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v5, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___)) == 0 )
+                                                   (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___)) == 0 )
   {
-    sub_1C6BC60(dragObject, v8);
+    sub_1C71608(dragObject, v12);
   }
-  StonePurchaseListViewObject__Init_38739224((StonePurchaseListViewObject_o *)dragObject, 2, v10);
+  StonePurchaseListViewObject__Init_38778308((StonePurchaseListViewObject_o *)dragObject, 2, v14);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6201/*"EventEnterMove"*/,
+    (System_String_o *)StringLiteral_6203/*"EventEnterMove"*/,
     delay,
     0);
 }
@@ -199,18 +227,26 @@ void StonePurchaseListViewObject__EventExitMove(StonePurchaseListViewObject_o *t
   UnityEngine_GameObject_o *v9; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  int32_t v17; // w1
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v25; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4CB4189 & 1) == 0 )
+  if ( (byte_4CC52A1 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6207/*"EventExitMove2"*/);
-    byte_4CB4189 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_6209/*"EventExitMove2"*/);
+    byte_4CC52A1 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -231,28 +267,28 @@ void StonePurchaseListViewObject__EventExitMove(StonePurchaseListViewObject_o *t
     transform = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !transform
       || (position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0), !parent)
-      || (v17 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
-          v7 = v17.fields.y + 0.0,
-          v8 = v17.fields.z + 0.0,
-          v17.fields.y = v17.fields.x + 1000.0,
-          v17.fields.z = v7,
+      || (v25 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
+          v7 = v25.fields.y + 0.0,
+          v8 = v25.fields.z + 0.0,
+          v25.fields.y = v25.fields.x + 1000.0,
+          v25.fields.z = v7,
           (transform = (UnityEngine_GameObject_o *)TweenPosition__Begin(
                                                      this->fields.dragObject,
                                                      1.0,
-                                                     *(UnityEngine_Vector3_o *)&v17.fields.y,
+                                                     *(UnityEngine_Vector3_o *)&v25.fields.y,
                                                      0)) == 0) )
     {
 LABEL_13:
-      sub_1C6BC60(transform, v4);
+      sub_1C71608(transform, v4);
     }
     v9 = transform;
     LODWORD(transform[1].monitor) = 3;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     v9[3].monitor = gameObject;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v9[3].monitor, (int32_t)gameObject, v11, v12);
-    v13 = StringLiteral_6207/*"EventExitMove2"*/;
-    v9[3].fields.m_CachedPtr = StringLiteral_6207/*"EventExitMove2"*/;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v9[3].fields, v13, v14, v15);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v9[3].monitor, (int32_t)gameObject, v11, v12, v13, v14, v15, v16);
+    v17 = StringLiteral_6209/*"EventExitMove2"*/;
+    v9[3].fields.m_CachedPtr = StringLiteral_6209/*"EventExitMove2"*/;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v9[3].fields, v17, v18, v19, v20, v21, v22, v23);
   }
 }
 
@@ -261,21 +297,25 @@ void StonePurchaseListViewObject__EventExitMove2(StonePurchaseListViewObject_o *
 {
   UnityEngine_Object_o *dragObject; // x21
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  const MethodInfo *v6; // x1
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  const MethodInfo *v10; // x1
 
-  if ( (byte_4CB418A & 1) == 0 )
+  if ( (byte_4CC52A2 & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    byte_4CB418A = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    byte_4CC52A2 = 1;
   }
   dragObject = (UnityEngine_Object_o *)this->fields.dragObject;
   if ( !NGUITools_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v4, v5);
-  StonePurchaseListViewObject__EventMoveEnd(this, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, 0, v4, v5, v6, v7, v8, v9);
+  StonePurchaseListViewObject__EventMoveEnd(this, v10);
 }
 
 
@@ -286,18 +326,22 @@ void StonePurchaseListViewObject__EventExitStart(
 {
   struct UnityEngine_GameObject_o *v5; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  const MethodInfo *v12; // x1
   UnityEngine_GameObject_o *dragObject; // x0
   Il2CppObject *Component_object; // x20
-  const MethodInfo *v11; // x2
+  const MethodInfo *v15; // x2
 
-  if ( (byte_4CB4188 & 1) == 0 )
+  if ( (byte_4CC52A0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6206/*"EventExitMove"*/);
-    byte_4CB4188 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_6208/*"EventExitMove"*/);
+    byte_4CC52A0 = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -307,13 +351,13 @@ void StonePurchaseListViewObject__EventExitStart(
                                             this,
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v5, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   dragObject = this->fields.dragObject;
   if ( !dragObject )
     goto LABEL_10;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dragObject,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   dragObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(
@@ -322,16 +366,16 @@ void StonePurchaseListViewObject__EventExitStart(
                                              0);
   if ( ((unsigned __int8)dragObject & 1) != 0 )
   {
-    StonePurchaseListViewObject__EventMoveEnd(this, v8);
+    StonePurchaseListViewObject__EventMoveEnd(this, v12);
     return;
   }
   if ( !Component_object )
 LABEL_10:
-    sub_1C6BC60(dragObject, v8);
-  StonePurchaseListViewObject__Init_38739224((StonePurchaseListViewObject_o *)Component_object, 2, v11);
+    sub_1C71608(dragObject, v12);
+  StonePurchaseListViewObject__Init_38778308((StonePurchaseListViewObject_o *)Component_object, 2, v15);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6206/*"EventExitMove"*/,
+    (System_String_o *)StringLiteral_6208/*"EventExitMove"*/,
     delay,
     0);
 }
@@ -348,17 +392,25 @@ void StonePurchaseListViewObject__EventIntoMove(StonePurchaseListViewObject_o *t
   UnityEngine_GameObject_o *v8; // x20
   UnityEngine_GameObject_o *gameObject; // x0
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w1
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w1
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4CB4183 & 1) == 0 )
+  if ( (byte_4CC529B & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_6218/*"EventIntoMove2"*/);
-    byte_4CB4183 = 1;
+    sub_1C713B0(&StringLiteral_6220/*"EventIntoMove2"*/);
+    byte_4CC529B = 1;
   }
   dragObject = this->fields.dragObject;
   if ( !dragObject )
@@ -372,29 +424,29 @@ void StonePurchaseListViewObject__EventIntoMove(StonePurchaseListViewObject_o *t
     goto LABEL_9;
   position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)dragObject, 0);
   if ( !parent
-    || (v16 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
-        y = v16.fields.y,
-        z = v16.fields.z,
-        v16.fields.y = v16.fields.x,
-        v16.fields.z = y,
+    || (v24 = UnityEngine_Transform__InverseTransformPoint(parent, position, 0),
+        y = v24.fields.y,
+        z = v24.fields.z,
+        v24.fields.y = v24.fields.x,
+        v24.fields.z = y,
         v7 = z,
         (dragObject = (UnityEngine_GameObject_o *)TweenPosition__Begin(
                                                     this->fields.dragObject,
                                                     1.5,
-                                                    *(UnityEngine_Vector3_o *)&v16.fields.y,
+                                                    *(UnityEngine_Vector3_o *)&v24.fields.y,
                                                     0)) == 0) )
   {
 LABEL_9:
-    sub_1C6BC60(dragObject, method);
+    sub_1C71608(dragObject, method);
   }
   v8 = dragObject;
   LODWORD(dragObject[1].monitor) = 3;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v8[3].monitor = gameObject;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v8[3].monitor, (int32_t)gameObject, v10, v11);
-  v12 = StringLiteral_6218/*"EventIntoMove2"*/;
-  v8[3].fields.m_CachedPtr = StringLiteral_6218/*"EventIntoMove2"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v8[3].fields, v12, v13, v14);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v8[3].monitor, (int32_t)gameObject, v10, v11, v12, v13, v14, v15);
+  v16 = StringLiteral_6220/*"EventIntoMove2"*/;
+  v8[3].fields.m_CachedPtr = StringLiteral_6220/*"EventIntoMove2"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v8[3].fields, v16, v17, v18, v19, v20, v21, v22);
 }
 
 
@@ -403,13 +455,17 @@ void StonePurchaseListViewObject__EventIntoMove2(StonePurchaseListViewObject_o *
   const MethodInfo *v3; // x1
   UnityEngine_Object_o *dragObject; // x21
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  const MethodInfo *v7; // x1
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  const MethodInfo *v11; // x1
 
-  if ( (byte_4CB4184 & 1) == 0 )
+  if ( (byte_4CC529C & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    byte_4CB4184 = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    byte_4CC529C = 1;
   }
   ListViewObject__SetVisible((ListViewObject_o *)this, 1, 0);
   this->fields.dispMode = 2;
@@ -419,8 +475,8 @@ void StonePurchaseListViewObject__EventIntoMove2(StonePurchaseListViewObject_o *
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   NGUITools__Destroy(dragObject, 0);
   this->fields.dragObject = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.dragObject, 0, v5, v6);
-  StonePurchaseListViewObject__EventMoveEnd(this, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, 0, v5, v6, v7, v8, v9, v10);
+  StonePurchaseListViewObject__EventMoveEnd(this, v11);
 }
 
 
@@ -432,18 +488,22 @@ void StonePurchaseListViewObject__EventIntoStart(
   struct UnityEngine_GameObject_o *v5; // x0
   struct UnityEngine_GameObject_o **p_dragObject; // x20
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  __int64 v9; // x1
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  __int64 v13; // x1
   UnityEngine_GameObject_o *dragObject; // x0
-  const MethodInfo *v11; // x2
+  const MethodInfo *v15; // x2
   UnityEngine_Transform_o *transform; // x20
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB4182 & 1) == 0 )
+  if ( (byte_4CC529A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
-    sub_1C6BA08(&StringLiteral_6217/*"EventIntoMove"*/);
-    byte_4CB4182 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___);
+    sub_1C713B0(&StringLiteral_6219/*"EventIntoMove"*/);
+    byte_4CC529A = 1;
   }
   this->fields.isBusy = 1;
   this->fields.dispMode = 0;
@@ -454,27 +514,27 @@ void StonePurchaseListViewObject__EventIntoStart(
                                             this->klass->vtable._8_CreateDragObject.method);
   this->fields.dragObject = v5;
   p_dragObject = &this->fields.dragObject;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.dragObject, (int32_t)v5, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.dragObject, (int32_t)v5, v7, v8, v9, v10, v11, v12);
   dragObject = this->fields.dragObject;
   if ( !dragObject
     || (dragObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                    dragObject,
-                                                   (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___)) == 0
-    || (StonePurchaseListViewObject__Init_38739224((StonePurchaseListViewObject_o *)dragObject, 2, v11),
+                                                   (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_StonePurchaseListViewObject___)) == 0
+    || (StonePurchaseListViewObject__Init_38778308((StonePurchaseListViewObject_o *)dragObject, 2, v15),
         (dragObject = *p_dragObject) == 0)
     || (transform = UnityEngine_GameObject__get_transform(dragObject, 0),
         (dragObject = (UnityEngine_GameObject_o *)UnityEngine_Component__get_transform(
                                                     (UnityEngine_Component_o *)this,
                                                     0)) == 0)
-    || (v13 = UnityEngine_Transform__TransformPoint_71686456((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
+    || (v17 = UnityEngine_Transform__TransformPoint_71751388((UnityEngine_Transform_o *)dragObject, 1000.0, 0.0, 0.0, 0),
         !transform) )
   {
-    sub_1C6BC60(dragObject, v9);
+    sub_1C71608(dragObject, v13);
   }
-  UnityEngine_Transform__set_position(transform, v13, 0);
+  UnityEngine_Transform__set_position(transform, v17, 0);
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    (System_String_o *)StringLiteral_6217/*"EventIntoMove"*/,
+    (System_String_o *)StringLiteral_6219/*"EventIntoMove"*/,
     delay,
     0);
 }
@@ -483,21 +543,25 @@ void StonePurchaseListViewObject__EventIntoStart(
 void StonePurchaseListViewObject__EventMoveEnd(StonePurchaseListViewObject_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_callbackFunc; // x0
-  struct System_Action_o *v5; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GrandQuestFolderBoardItem_o *p_callbackFunc; // x0
+  struct System_Action_o *v9; // x19
   struct System_Action_o *callbackFunc; // t1
 
   callbackFunc = this->fields.callbackFunc;
-  p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  v5 = callbackFunc;
-  LOBYTE(p_callbackFunc[-1].fields._ThumbnailSpritePath_k__BackingField) = 0;
-  HIDWORD(p_callbackFunc[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+  p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
+  v9 = callbackFunc;
+  LOBYTE(p_callbackFunc[-1].fields._ClosedMessage_k__BackingField) = 0;
+  HIDWORD(p_callbackFunc[-1].fields._ClosedMessage_k__BackingField) = 1;
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C6B9AC(p_callbackFunc, 0, v2, v3);
-    ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
+    sub_1C71354(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
 
@@ -509,10 +573,10 @@ StonePurchaseListViewItem_o *StonePurchaseListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4CB417C & 1) == 0 )
+  if ( (byte_4CC5294 & 1) == 0 )
   {
-    sub_1C6BA08(&StonePurchaseListViewItem_TypeInfo);
-    byte_4CB417C = 1;
+    sub_1C713B0(&StonePurchaseListViewItem_TypeInfo);
+    byte_4CC5294 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -541,19 +605,27 @@ void StonePurchaseListViewObject__Init(
   int32_t state; // w24
   UnityEngine_Transform_o *transform; // x0
   __int64 v15; // x1
-  CGThumbnailListItem_o *p_callbackFunc; // x21
+  GrandQuestFolderBoardItem_o *p_callbackFunc; // x21
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  const MethodInfo *v19; // x1
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  int32_t v22; // w9
-  CGThumbnailListItem_c *klass; // x19
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  const MethodInfo *v23; // x1
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
+  int32_t v30; // w9
+  GrandQuestFolderBoardItem_c *klass; // x19
 
-  if ( (byte_4CB417F & 1) == 0 )
+  if ( (byte_4CC5297 & 1) == 0 )
   {
-    sub_1C6BA08(&StonePurchaseListViewItem_TypeInfo);
-    byte_4CB417F = 1;
+    sub_1C713B0(&StonePurchaseListViewItem_TypeInfo);
+    byte_4CC5297 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -581,25 +653,33 @@ void StonePurchaseListViewObject__Init(
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C6BC60(transform, v15);
+    sub_1C71608(transform, v15);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   this->fields.callbackFunc = callbackFunc;
-  p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)callbackFunc, v17, v18);
+  p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
+    (int32_t)callbackFunc,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22);
   if ( (unsigned int)v11 <= 3 )
   {
-    v22 = dword_CEB9B0[v11];
-    this->fields.dispMode = *((_DWORD *)&xmmword_CEC6A0 + v11);
-    this->fields.state = v22;
+    v30 = dword_CEE5F0[v11];
+    this->fields.dispMode = *((_DWORD *)&xmmword_CEF2E0 + v11);
+    this->fields.state = v30;
   }
   if ( !state || dispMode != this->fields.dispMode )
-    StonePurchaseListViewObject__SetupDisp(this, v19);
+    StonePurchaseListViewObject__SetupDisp(this, v23);
   klass = p_callbackFunc->klass;
   if ( p_callbackFunc->klass )
   {
     p_callbackFunc->klass = 0;
-    sub_1C6B9AC(p_callbackFunc, 0, v20, v21);
+    sub_1C71354(p_callbackFunc, 0, v24, v25, v26, v27, v28, v29);
     ((void (__fastcall *)(Il2CppClass *, _QWORD))klass->_1.namespaze)(
       klass->_1.element_class,
       *(_QWORD *)&klass->_1.byval_arg.bits);
@@ -608,7 +688,7 @@ void StonePurchaseListViewObject__Init(
 
 
 // local variable allocation has failed, the output may be wrong!
-void StonePurchaseListViewObject__Init_38739224(
+void StonePurchaseListViewObject__Init_38778308(
         StonePurchaseListViewObject_o *this,
         int32_t initMode,
         const MethodInfo *method)
@@ -617,17 +697,17 @@ void StonePurchaseListViewObject__Init_38739224(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   StonePurchaseListViewObject__Init(this, initMode, 0, v4, *(UnityEngine_Vector3_o *)&v5, v3);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void StonePurchaseListViewObject__Init_38740520(
+void StonePurchaseListViewObject__Init_38779604(
         StonePurchaseListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -636,17 +716,17 @@ void StonePurchaseListViewObject__Init_38740520(
 {
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   StonePurchaseListViewObject__Init(this, initMode, callbackFunc, delay, *(UnityEngine_Vector3_o *)&v5, method);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void StonePurchaseListViewObject__Init_38740604(
+void StonePurchaseListViewObject__Init_38779688(
         StonePurchaseListViewObject_o *this,
         int32_t initMode,
         System_Action_o *callbackFunc,
@@ -655,10 +735,10 @@ void StonePurchaseListViewObject__Init_38740604(
   float v4; // s0
   int v5; // s1 OVERLAPPED
 
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   StonePurchaseListViewObject__Init(this, initMode, callbackFunc, v4, *(UnityEngine_Vector3_o *)&v5, method);
 }
@@ -680,22 +760,26 @@ void StonePurchaseListViewObject__OnClickDetailBtn(StonePurchaseListViewObject_o
   Il2CppObject *v14; // x22
   struct StonePurchaseListViewObject___c_StaticFields *static_fields; // x0
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
 
-  if ( (byte_4CB4181 & 1) == 0 )
+  if ( (byte_4CC5299 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&StonePurchaseListViewItem_TypeInfo);
-    sub_1C6BA08(&Method_StonePurchaseListViewObject_OnClickDetailBtn__);
-    sub_1C6BA08(&Method_StonePurchaseListViewObject___c__OnClickDetailBtn_b__20_0__);
-    sub_1C6BA08(&StonePurchaseListViewObject___c_TypeInfo);
-    byte_4CB4181 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&StonePurchaseListViewItem_TypeInfo);
+    sub_1C713B0(&Method_StonePurchaseListViewObject_OnClickDetailBtn__);
+    sub_1C713B0(&Method_StonePurchaseListViewObject___c__OnClickDetailBtn_b__20_0__);
+    sub_1C713B0(&StonePurchaseListViewObject___c_TypeInfo);
+    byte_4CC5299 = 1;
   }
   v3 = Method_StonePurchaseListViewObject_OnClickDetailBtn__;
   if ( (*((_BYTE *)Method_StonePurchaseListViewObject_OnClickDetailBtn__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C6BA20(Method_StonePurchaseListViewObject_OnClickDetailBtn__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C713C8(Method_StonePurchaseListViewObject_OnClickDetailBtn__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -707,7 +791,7 @@ void StonePurchaseListViewObject__OnClickDetailBtn(StonePurchaseListViewObject_o
       v8 = v7 == StonePurchaseListViewItem_TypeInfo ? this->fields.linkItem : 0LL;
       if ( v7 == StonePurchaseListViewItem_TypeInfo )
       {
-        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( !v8 )
           goto LABEL_21;
         v11 = (CommonUI_o *)Instance;
@@ -727,15 +811,23 @@ void StonePurchaseListViewObject__OnClickDetailBtn(StonePurchaseListViewObject_o
             Instance = StonePurchaseListViewObject___c_TypeInfo;
           }
           v14 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-          v13 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+          v13 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
           System_Action___ctor(v13, v14, Method_StonePurchaseListViewObject___c__OnClickDetailBtn_b__20_0__, 0);
           static_fields = StonePurchaseListViewObject___c_TypeInfo->static_fields;
           static_fields->__9__20_0 = v13;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__20_0, (int32_t)v13, v16, v17);
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&static_fields->__9__20_0,
+            (int32_t)v13,
+            v16,
+            v17,
+            v18,
+            v19,
+            v20,
+            v21);
         }
         if ( !v11 )
 LABEL_21:
-          sub_1C6BC60(Instance, v10);
+          sub_1C71608(Instance, v10);
         CommonUI__OpenStoneShopDetailDialog(v11, klass, v13, 0);
       }
     }
@@ -745,21 +837,25 @@ LABEL_21:
 
 void StonePurchaseListViewObject__OnDestroy(StonePurchaseListViewObject_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_dragObject; // x19
+  GrandQuestFolderBoardItem_o *p_dragObject; // x19
   UnityEngine_Object_o *v4; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *klass; // x20
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
-  if ( (byte_4CB417B & 1) == 0 )
+  if ( (byte_4CC5293 & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB417B = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC5293 = 1;
   }
   dragObject = this->fields.dragObject;
-  p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
+  p_dragObject = (GrandQuestFolderBoardItem_o *)&this->fields.dragObject;
   v4 = (UnityEngine_Object_o *)dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -770,7 +866,7 @@ void StonePurchaseListViewObject__OnDestroy(StonePurchaseListViewObject_o *this,
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1C6B9AC(p_dragObject, 0, v7, v8);
+    sub_1C71354(p_dragObject, 0, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -782,11 +878,11 @@ void StonePurchaseListViewObject__SetInput(StonePurchaseListViewObject_o *this, 
   const MethodInfo *v7; // x3
   StonePurchaseListViewItemDraw_o *v8; // x0
 
-  if ( (byte_4CB417D & 1) == 0 )
+  if ( (byte_4CC5295 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StonePurchaseListViewItem_TypeInfo);
-    byte_4CB417D = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StonePurchaseListViewItem_TypeInfo);
+    byte_4CC5295 = 1;
   }
   ListViewObject__SetInput((ListViewObject_o *)this, isInput, 0);
   itemDraw = (UnityEngine_Object_o *)this->fields.itemDraw;
@@ -796,7 +892,7 @@ void StonePurchaseListViewObject__SetInput(StonePurchaseListViewObject_o *this, 
   {
     v8 = this->fields.itemDraw;
     if ( !v8 )
-      sub_1C6BC60(0, v6);
+      sub_1C71608(0, v6);
     StonePurchaseListViewItemDraw__SetInput(v8, v6, isInput, v7);
   }
 }
@@ -809,7 +905,7 @@ void StonePurchaseListViewObject__SetItem(
         const MethodInfo *method)
 {
   this->fields.state = 0;
-  ListViewObject__SetItem_44077592((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_44123920((ListViewObject_o *)this, item, seed, 0);
 }
 
 
@@ -823,11 +919,11 @@ void StonePurchaseListViewObject__SetupDisp(StonePurchaseListViewObject_o *this,
   const MethodInfo *v8; // x3
   StonePurchaseListViewItemDraw_o *v9; // x0
 
-  if ( (byte_4CB4180 & 1) == 0 )
+  if ( (byte_4CC5298 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StonePurchaseListViewItem_TypeInfo);
-    byte_4CB4180 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StonePurchaseListViewItem_TypeInfo);
+    byte_4CC5298 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -851,7 +947,7 @@ LABEL_8:
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C6BC60(0, v7);
+      sub_1C71608(0, v7);
     StonePurchaseListViewItemDraw__SetItem(v9, (StonePurchaseListViewItem_o *)linkItem, this->fields.dispMode, v8);
   }
 }
@@ -868,11 +964,11 @@ System_String_o *StonePurchaseListViewObject__ToString(StonePurchaseListViewObje
   __int64 v10; // [xsp+20h] [xbp-40h] BYREF
   float v11; // [xsp+28h] [xbp-38h]
 
-  if ( (byte_4CB418B & 1) == 0 )
+  if ( (byte_4CC52A3 & 1) == 0 )
   {
-    sub_1C6BA08(&StonePurchaseListViewItemDraw_DispMode_TypeInfo);
-    sub_1C6BA08(&StringLiteral_113/*" "*/);
-    byte_4CB418B = 1;
+    sub_1C713B0(&StonePurchaseListViewItemDraw_DispMode_TypeInfo);
+    sub_1C713B0(&StringLiteral_113/*" "*/);
+    byte_4CC52A3 = 1;
   }
   v11 = 0.0;
   v10 = 0;
@@ -884,8 +980,8 @@ System_String_o *StonePurchaseListViewObject__ToString(StonePurchaseListViewObje
   v5 = v3;
   v10 = *(_QWORD *)&this->fields.basePosition.fields.x;
   v11 = z;
-  v6 = (System_String_o *)sub_1E29128(&v10, 0, 0, 0);
-  return System_String__Concat_64005056(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
+  v6 = (System_String_o *)sub_1E2ED10(&v10, 0, 0, 0);
+  return System_String__Concat_64069988(v5, (System_String_o *)StringLiteral_113/*" "*/, v6, 0);
 }
 
 
@@ -904,10 +1000,10 @@ void StonePurchaseListViewObject__add_callbackFunc(
   System_Action_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CB4178 & 1) == 0 )
+  if ( (byte_4CC5290 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    byte_4CB4178 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    byte_4CC5290 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -920,13 +1016,13 @@ void StonePurchaseListViewObject__add_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
+    v9 = sub_1CCD184(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C6BFFC(v8);
+  sub_1C719A4(v8);
   StonePurchaseListViewObject__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -945,10 +1041,10 @@ void StonePurchaseListViewObject__remove_callbackFunc(
   StonePurchaseListViewObject_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4CB4179 & 1) == 0 )
+  if ( (byte_4CC5291 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    byte_4CB4179 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    byte_4CC5291 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -961,13 +1057,13 @@ void StonePurchaseListViewObject__remove_callbackFunc(
       if ( (System_Action_c *)v8->klass != System_Action_TypeInfo )
         break;
     }
-    v9 = sub_1CC77DC(p_callbackFunc, v8, v6);
+    v9 = sub_1CCD184(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  sub_1C6BFFC(v8);
+  sub_1C719A4(v8);
   StonePurchaseListViewObject__Awake(v11, v12);
 }
 
@@ -976,17 +1072,29 @@ void StonePurchaseListViewObject___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB418D & 1) == 0 )
+  if ( (byte_4CC52A5 & 1) == 0 )
   {
-    sub_1C6BA08(&StonePurchaseListViewObject___c_TypeInfo);
-    byte_4CB418D = 1;
+    sub_1C713B0(&StonePurchaseListViewObject___c_TypeInfo);
+    byte_4CC52A5 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(StonePurchaseListViewObject___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(StonePurchaseListViewObject___c_TypeInfo);
   System_Object___ctor(v1, 0);
   StonePurchaseListViewObject___c_TypeInfo->static_fields->__9 = (struct StonePurchaseListViewObject___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)StonePurchaseListViewObject___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)StonePurchaseListViewObject___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -1003,13 +1111,13 @@ void StonePurchaseListViewObject___c___OnClickDetailBtn_b__20_0(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CB418E & 1) == 0 )
+  if ( (byte_4CC52A6 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB418E = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC52A6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   CommonUI__CloseStoneShopDetailDialog((CommonUI_o *)Instance, 0, 0);
 }

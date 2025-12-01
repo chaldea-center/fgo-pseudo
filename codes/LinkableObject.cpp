@@ -14,21 +14,21 @@ void LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo *method)
   System_Reflection_MethodBase_o *v8; // x0
   System_String_o *linkUrl; // x19
 
-  if ( (byte_4CB8BB7 & 1) == 0 )
+  if ( (byte_4CC9CF2 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
-    sub_1C6BA08(&Method_LinkableObject_OnClick__);
-    sub_1C6BA08(&WebViewManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB8BB7 = 1;
+    sub_1C713B0(&UnityEngine_Application_TypeInfo);
+    sub_1C713B0(&Method_LinkableObject_OnClick__);
+    sub_1C713B0(&WebViewManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC9CF2 = 1;
   }
   linkType = this->fields.linkType;
   if ( linkType == 2 )
   {
     v7 = Method_LinkableObject_OnClick__;
     if ( (*((_BYTE *)Method_LinkableObject_OnClick__ + 83) & 2) != 0 )
-      v7 = (_QWORD *)sub_1C6BA20(Method_LinkableObject_OnClick__);
-    v8 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v7, v7[4]);
+      v7 = (_QWORD *)sub_1C713C8(Method_LinkableObject_OnClick__);
+    v8 = (System_Reflection_MethodBase_o *)sub_1C71394(v7, v7[4]);
     OverwriteAssetSoundName__PlaySystemSe(v8, 0, 0, 0);
     linkUrl = this->fields.linkUrl;
     if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
@@ -39,8 +39,8 @@ void LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo *method)
   {
     v4 = Method_LinkableObject_OnClick__;
     if ( (*((_BYTE *)Method_LinkableObject_OnClick__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C6BA20(Method_LinkableObject_OnClick__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C713C8(Method_LinkableObject_OnClick__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C71394(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
     v6 = this->fields.linkUrl;
     if ( !WebViewManager_TypeInfo->_2.cctor_finished )
@@ -52,10 +52,22 @@ void LinkableObject__OnClick(LinkableObject_o *this, const MethodInfo *method)
 
 void LinkableObject__SetUp(LinkableObject_o *this, int32_t lnkType, System_String_o *lnkUrl, const MethodInfo *method)
 {
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct System_String_o **p_linkUrl; // x0
 
   this->fields.linkUrl = lnkUrl;
   p_linkUrl = &this->fields.linkUrl;
   *((_DWORD *)p_linkUrl - 2) = lnkType;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_linkUrl, (int32_t)lnkUrl, (int32_t)lnkUrl, method);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)p_linkUrl,
+    (int32_t)lnkUrl,
+    (int32_t)lnkUrl,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
 }

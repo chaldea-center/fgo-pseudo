@@ -1,6 +1,6 @@
 void ExUIMeshRenderer___ctor(ExUIMeshRenderer_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.uvSize.fields.x = xmmword_CEBC80;
+  *(_OWORD *)&this->fields.uvSize.fields.x = xmmword_CEE8C0;
   this->fields.isFirst = 1;
   UITweenRenderer___ctor((UITweenRenderer_o *)this, 0);
 }
@@ -13,19 +13,31 @@ void ExUIMeshRenderer__ClearImage(ExUIMeshRenderer_o *this, const MethodInfo *me
   __int64 v5; // x1
   AssetData_o *assetData; // x20
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
   System_String_o *loadAssetName; // x20
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   struct System_Action_o *callbackFunc; // x20
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
 
-  if ( (byte_4CB569C & 1) == 0 )
+  if ( (byte_4CC67BC & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB569C = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC67BC = 1;
   }
   material = (UnityEngine_Object_o *)ExUIMeshRenderer__get_material(this, method);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -34,7 +46,7 @@ void ExUIMeshRenderer__ClearImage(ExUIMeshRenderer_o *this, const MethodInfo *me
   if ( v4 )
   {
     if ( !material )
-      sub_1C6BC60(v4, v5);
+      sub_1C71608(v4, v5);
     UnityEngine_Material__set_mainTexture((UnityEngine_Material_o *)material, 0, 0);
   }
   assetData = this->fields.assetData;
@@ -42,9 +54,9 @@ void ExUIMeshRenderer__ClearImage(ExUIMeshRenderer_o *this, const MethodInfo *me
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40765532(assetData, 0);
+    AssetManager__releaseAsset_40808072(assetData, 0);
     this->fields.assetData = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetData, 0, v7, v8);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.assetData, 0, v7, v8, v9, v10, v11, v12);
   }
   loadAssetName = this->fields.loadAssetName;
   if ( loadAssetName )
@@ -53,10 +65,10 @@ void ExUIMeshRenderer__ClearImage(ExUIMeshRenderer_o *this, const MethodInfo *me
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(loadAssetName, 0);
     this->fields.loadAssetName = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadAssetName, 0, v10, v11);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName, 0, v14, v15, v16, v17, v18, v19);
     callbackFunc = this->fields.callbackFunc;
     this->fields.callbackFunc = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v13, v14);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v21, v22, v23, v24, v25, v26);
     if ( callbackFunc )
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,
@@ -69,19 +81,27 @@ void ExUIMeshRenderer__EndLoad(ExUIMeshRenderer_o *this, AssetData_o *data, cons
 {
   System_String_o *loadAssetName; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
   AssetData_o *assetData; // x21
-  Il2CppObject *Object_object__51495936; // x0
-  const MethodInfo *v10; // x2
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  Il2CppObject *Object_object__51560868; // x0
+  const MethodInfo *v14; // x2
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
   struct System_Action_o *callbackFunc; // x20
 
-  if ( (byte_4CB569F & 1) == 0 )
+  if ( (byte_4CC67BF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_AssetData_GetObject_Texture2D____78568232);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    byte_4CB569F = 1;
+    sub_1C713B0(&Method_AssetData_GetObject_Texture2D____78637000);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    byte_4CC67BF = 1;
   }
   if ( data )
   {
@@ -90,25 +110,25 @@ void ExUIMeshRenderer__EndLoad(ExUIMeshRenderer_o *this, AssetData_o *data, cons
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      if ( AssetManager__compAssetStorage_40763204(data, loadAssetName, 0) )
+      if ( AssetManager__compAssetStorage_40805744(data, loadAssetName, 0) )
       {
         assetData = this->fields.assetData;
         this->fields.assetData = data;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetData, (int32_t)data, v6, v7);
-        Object_object__51495936 = AssetData__GetObject_object__51495936(
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.assetData, (int32_t)data, v6, v7, v8, v9, v10, v11);
+        Object_object__51560868 = AssetData__GetObject_object__51560868(
                                     data,
                                     this->fields.assetLabel,
-                                    (const MethodInfo_311C400 *)Method_AssetData_GetObject_Texture2D____78568232);
-        ExUIMeshRenderer__SetTexture(this, (UnityEngine_Texture_o *)Object_object__51495936, v10);
+                                    (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_Texture2D____78637000);
+        ExUIMeshRenderer__SetTexture(this, (UnityEngine_Texture_o *)Object_object__51560868, v14);
         if ( assetData )
         {
           if ( !AssetManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-          AssetManager__releaseAsset_40765532(assetData, 0);
+          AssetManager__releaseAsset_40808072(assetData, 0);
         }
         callbackFunc = this->fields.callbackFunc;
         this->fields.callbackFunc = 0;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v11, v12);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v15, v16, v17, v18, v19, v20);
         if ( callbackFunc )
           ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
             callbackFunc->fields.method_code,
@@ -124,15 +144,19 @@ void ExUIMeshRenderer__OnStart(ExUIMeshRenderer_o *this, const MethodInfo *metho
   UnityEngine_Object_o *meshRenderer; // x20
   Il2CppObject *Component_object; // x0
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   UnityEngine_Object_o *defaultTexture; // x20
-  const MethodInfo *v8; // x2
+  const MethodInfo *v12; // x2
 
-  if ( (byte_4CB5699 & 1) == 0 )
+  if ( (byte_4CC67B9 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB5699 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC67B9 = 1;
   }
   UIWidget__OnStart((UIWidget_o *)this, 0);
   meshRenderer = (UnityEngine_Object_o *)this->fields.meshRenderer;
@@ -142,15 +166,23 @@ void ExUIMeshRenderer__OnStart(ExUIMeshRenderer_o *this, const MethodInfo *metho
   {
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)this,
-                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
+                         (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_MeshRenderer___);
     this->fields.meshRenderer = (struct UnityEngine_MeshRenderer_o *)Component_object;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.meshRenderer, (int32_t)Component_object, v5, v6);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.meshRenderer,
+      (int32_t)Component_object,
+      v5,
+      v6,
+      v7,
+      v8,
+      v9,
+      v10);
   }
   defaultTexture = (UnityEngine_Object_o *)this->fields.defaultTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(defaultTexture, 0, 0) )
-    ExUIMeshRenderer__SetImage(this, this->fields.defaultTexture, v8);
+    ExUIMeshRenderer__SetImage(this, this->fields.defaultTexture, v12);
   ((void (__fastcall *)(ExUIMeshRenderer_o *, const MethodInfo *))this->klass->vtable._43_ReScale.methodPtr)(
     this,
     this->klass->vtable._43_ReScale.method);
@@ -186,12 +218,12 @@ void ExUIMeshRenderer__ReScale(ExUIMeshRenderer_o *this, const MethodInfo *metho
   float y; // s2
   float v28; // s0
 
-  if ( (byte_4CB56A1 & 1) == 0 )
+  if ( (byte_4CC67C1 & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Vector2___TypeInfo);
-    sub_1C6BA08(&UnityEngine_Vector3___TypeInfo);
-    byte_4CB56A1 = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    sub_1C713B0(&UnityEngine_Vector2___TypeInfo);
+    sub_1C713B0(&UnityEngine_Vector3___TypeInfo);
+    byte_4CC67C1 = 1;
   }
   if ( this->fields.isFirst )
   {
@@ -238,7 +270,7 @@ void ExUIMeshRenderer__ReScale(ExUIMeshRenderer_o *this, const MethodInfo *metho
     if ( meshFilter )
     {
       mesh = UnityEngine_MeshFilter__get_mesh(meshFilter, 0);
-      v17 = sub_1C6BAB0(UnityEngine_Vector3___TypeInfo, 4);
+      v17 = sub_1C71458(UnityEngine_Vector3___TypeInfo, 4);
       LODWORD(v18) = *(_QWORD *)&UIWidget__get_pivotOffset((UIWidget_o *)this, 0);
       pivotOffset = UIWidget__get_pivotOffset((UIWidget_o *)this, 0);
       if ( v17 )
@@ -272,7 +304,7 @@ void ExUIMeshRenderer__ReScale(ExUIMeshRenderer_o *this, const MethodInfo *metho
         if ( !mesh )
           goto LABEL_36;
         UnityEngine_Mesh__set_vertices(mesh, (UnityEngine_Vector3_array *)v17, 0);
-        meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C6BAB0(UnityEngine_Vector2___TypeInfo, 4);
+        meshFilter = (struct UnityEngine_MeshFilter_o *)sub_1C71458(UnityEngine_Vector2___TypeInfo, 4);
         if ( !meshFilter )
           goto LABEL_36;
         klass = (unsigned int)meshFilter[1].klass;
@@ -289,7 +321,7 @@ void ExUIMeshRenderer__ReScale(ExUIMeshRenderer_o *this, const MethodInfo *metho
               klass == 3) )
         {
 LABEL_35:
-          sub_1C6BC68(meshFilter);
+          sub_1C71610(meshFilter);
         }
         meshFilter[2].monitor = (void *)vadd_f32((float32x2_t)this->fields.uvOffset, (float32x2_t)this->fields.uvSize).n64_u64[0];
         UnityEngine_Mesh__set_uv(mesh, (UnityEngine_Vector2_array *)meshFilter, 0);
@@ -304,7 +336,7 @@ LABEL_35:
       }
     }
 LABEL_36:
-    sub_1C6BC60(meshFilter, v14);
+    sub_1C71608(meshFilter, v14);
   }
 }
 
@@ -317,58 +349,77 @@ void ExUIMeshRenderer__SetAssetImage(
 {
   const MethodInfo *v4; // x4
 
-  ExUIMeshRenderer__SetAssetImage_41120592(this, assetName, 0, callback, v4);
+  ExUIMeshRenderer__SetAssetImage_41163232(this, assetName, 0, callback, v4);
 }
 
 
-void ExUIMeshRenderer__SetAssetImage_41120592(
+void ExUIMeshRenderer__SetAssetImage_41163232(
         ExUIMeshRenderer_o *this,
         System_String_o *assetName,
         System_String_o *assetLabel,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
   System_String_o *loadAssetName; // x24
   struct System_String_o **p_loadAssetName; // x23
   System_Delegate_o *callbackFunc; // x0
-  System_Delegate_o *v14; // x1
-  CGThumbnailListItem_o *p_callbackFunc; // x19
-  System_Delegate_o *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  System_Delegate_o *v19; // x8
-  System_Action_c *v20; // x1
+  System_Delegate_o *v21; // x1
+  GrandQuestFolderBoardItem_o *p_callbackFunc; // x19
+  System_Delegate_o *v23; // x0
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
+  System_Delegate_o *v30; // x8
+  System_Action_c *v31; // x1
   AssetData_o *assetData; // x24
-  __int64 v22; // x1
-  AssetData_o *v23; // x0
-  Il2CppObject *Object_object__51495936; // x0
-  const MethodInfo *v25; // x2
-  struct System_Action_o *v26; // x8
-  System_String_o *v27; // x22
-  struct System_Action_o **v28; // x22
-  System_Delegate_o *v29; // x0
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
-  System_Action_c *v32; // x1
-  AssetLoader_LoadEndDataHandler_o *v33; // x21
+  __int64 v33; // x1
+  AssetData_o *v34; // x0
+  Il2CppObject *Object_object__51560868; // x0
+  const MethodInfo *v36; // x2
+  struct System_Action_o *v37; // x8
+  System_String_o *v38; // x22
+  struct System_Action_o **v39; // x22
+  System_Delegate_o *v40; // x0
+  int32_t v41; // w2
+  int32_t v42; // w3
+  System_String_o *v43; // x4
+  int32_t v44; // w5
+  int64_t v45; // x6
+  System_String_o *v46; // x7
+  System_Action_c *v47; // x1
+  AssetLoader_LoadEndDataHandler_o *v48; // x21
 
-  if ( (byte_4CB569E & 1) == 0 )
+  if ( (byte_4CC67BE & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_AssetData_GetObject_Texture2D____78568232);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&Method_ExUIMeshRenderer_EndLoad__);
-    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    byte_4CB569E = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_AssetData_GetObject_Texture2D____78637000);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&Method_ExUIMeshRenderer_EndLoad__);
+    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    byte_4CC67BE = 1;
   }
   this->fields.assetLabel = assetLabel;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.assetLabel,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.assetLabel,
     (int32_t)assetLabel,
     (int32_t)assetLabel,
-    (const MethodInfo *)callback);
+    (int32_t)callback,
+    (System_String_o *)method,
+    v5,
+    v6,
+    v7);
   loadAssetName = this->fields.loadAssetName;
   p_loadAssetName = &this->fields.loadAssetName;
   if ( loadAssetName )
@@ -380,18 +431,18 @@ void ExUIMeshRenderer__SetAssetImage_41120592(
       callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
       if ( !callbackFunc )
         return;
-      v14 = (System_Delegate_o *)this->fields.callbackFunc;
-      p_callbackFunc = (CGThumbnailListItem_o *)&this->fields.callbackFunc;
-      v16 = System_Delegate__Combine(callbackFunc, v14, 0);
-      v19 = v16;
-      if ( v16 )
+      v21 = (System_Delegate_o *)this->fields.callbackFunc;
+      p_callbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc;
+      v23 = System_Delegate__Combine(callbackFunc, v21, 0);
+      v30 = v23;
+      if ( v23 )
       {
-        v20 = System_Action_TypeInfo;
-        if ( (System_Action_c *)v16->klass != System_Action_TypeInfo
-          || (p_callbackFunc->klass = (CGThumbnailListItem_c *)v16, (System_Action_c *)v16->klass != v20) )
+        v31 = System_Action_TypeInfo;
+        if ( (System_Action_c *)v23->klass != System_Action_TypeInfo
+          || (p_callbackFunc->klass = (GrandQuestFolderBoardItem_c *)v23, (System_Action_c *)v23->klass != v31) )
         {
 LABEL_26:
-          sub_1C6BFFC(v19);
+          sub_1C719A4(v30);
           return;
         }
       }
@@ -399,13 +450,13 @@ LABEL_26:
       {
         p_callbackFunc->klass = 0;
       }
-      sub_1C6B9AC(p_callbackFunc, (int32_t)v16, v17, v18);
+      sub_1C71354(p_callbackFunc, (int32_t)v23, v24, v25, v26, v27, v28, v29);
       return;
     }
-    v27 = *p_loadAssetName;
+    v38 = *p_loadAssetName;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAssetStorage(v27, 0);
+    AssetManager__releaseAssetStorage(v38, 0);
   }
   else
   {
@@ -414,52 +465,60 @@ LABEL_26:
     {
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      if ( AssetManager__compAssetStorage_40763204(assetData, assetName, 0) )
+      if ( AssetManager__compAssetStorage_40805744(assetData, assetName, 0) )
       {
-        v23 = this->fields.assetData;
-        if ( !v23 )
-          sub_1C6BC60(0, v22);
-        Object_object__51495936 = AssetData__GetObject_object__51495936(
-                                    v23,
+        v34 = this->fields.assetData;
+        if ( !v34 )
+          sub_1C71608(0, v33);
+        Object_object__51560868 = AssetData__GetObject_object__51560868(
+                                    v34,
                                     assetLabel,
-                                    (const MethodInfo_311C400 *)Method_AssetData_GetObject_Texture2D____78568232);
-        ExUIMeshRenderer__SetTexture(this, (UnityEngine_Texture_o *)Object_object__51495936, v25);
-        v26 = this->fields.callbackFunc;
-        if ( v26 )
-          ((void (__fastcall *)(intptr_t, intptr_t))v26->fields.invoke_impl)(
-            v26->fields.method_code,
-            v26->fields.method);
+                                    (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_Texture2D____78637000);
+        ExUIMeshRenderer__SetTexture(this, (UnityEngine_Texture_o *)Object_object__51560868, v36);
+        v37 = this->fields.callbackFunc;
+        if ( v37 )
+          ((void (__fastcall *)(intptr_t, intptr_t))v37->fields.invoke_impl)(
+            v37->fields.method_code,
+            v37->fields.method);
         return;
       }
     }
   }
   *p_loadAssetName = assetName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadAssetName, (int32_t)assetName, v9, v10);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName,
+    (int32_t)assetName,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   if ( callback )
   {
-    v28 = &this->fields.callbackFunc;
-    v29 = System_Delegate__Combine((System_Delegate_o *)this->fields.callbackFunc, (System_Delegate_o *)callback, 0);
-    v19 = v29;
-    if ( v29 )
+    v39 = &this->fields.callbackFunc;
+    v40 = System_Delegate__Combine((System_Delegate_o *)this->fields.callbackFunc, (System_Delegate_o *)callback, 0);
+    v30 = v40;
+    if ( v40 )
     {
-      v32 = System_Action_TypeInfo;
-      if ( (System_Action_c *)v29->klass != System_Action_TypeInfo )
+      v47 = System_Action_TypeInfo;
+      if ( (System_Action_c *)v40->klass != System_Action_TypeInfo )
         goto LABEL_26;
-      *v28 = (struct System_Action_o *)v29;
-      if ( (System_Action_c *)v29->klass != v32 )
+      *v39 = (struct System_Action_o *)v40;
+      if ( (System_Action_c *)v40->klass != v47 )
         goto LABEL_26;
     }
     else
     {
-      *v28 = 0;
+      *v39 = 0;
     }
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, (int32_t)v29, v30, v31);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)v40, v41, v42, v43, v44, v45, v46);
   }
-  v33 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
-  AssetLoader_LoadEndDataHandler___ctor(v33, (Il2CppObject *)this, Method_ExUIMeshRenderer_EndLoad__, 0);
+  v48 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  AssetLoader_LoadEndDataHandler___ctor(v48, (Il2CppObject *)this, Method_ExUIMeshRenderer_EndLoad__, 0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(assetName, v33, 1, 0);
+  AssetManager__loadAssetStorage(assetName, v48, 1, 0);
 }
 
 
@@ -481,18 +540,30 @@ void ExUIMeshRenderer__SetImage(ExUIMeshRenderer_o *this, UnityEngine_Texture_o 
 {
   AssetData_o *assetData; // x20
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
   System_String_o *loadAssetName; // x20
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
   struct System_Action_o *callbackFunc; // x20
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
 
-  if ( (byte_4CB569D & 1) == 0 )
+  if ( (byte_4CC67BD & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    byte_4CB569D = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    byte_4CC67BD = 1;
   }
   ExUIMeshRenderer__SetTexture(this, tex, method);
   assetData = this->fields.assetData;
@@ -500,9 +571,9 @@ void ExUIMeshRenderer__SetImage(ExUIMeshRenderer_o *this, UnityEngine_Texture_o 
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40765532(assetData, 0);
+    AssetManager__releaseAsset_40808072(assetData, 0);
     this->fields.assetData = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.assetData, 0, v6, v7);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.assetData, 0, v6, v7, v8, v9, v10, v11);
   }
   loadAssetName = this->fields.loadAssetName;
   if ( loadAssetName )
@@ -511,10 +582,10 @@ void ExUIMeshRenderer__SetImage(ExUIMeshRenderer_o *this, UnityEngine_Texture_o 
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
     AssetManager__releaseAssetStorage(loadAssetName, 0);
     this->fields.loadAssetName = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.loadAssetName, 0, v9, v10);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.loadAssetName, 0, v13, v14, v15, v16, v17, v18);
     callbackFunc = this->fields.callbackFunc;
     this->fields.callbackFunc = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.callbackFunc, 0, v12, v13);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v20, v21, v22, v23, v24, v25);
     if ( callbackFunc )
       ((void (__fastcall *)(intptr_t, intptr_t))callbackFunc->fields.invoke_impl)(
         callbackFunc->fields.method_code,
@@ -529,10 +600,10 @@ void ExUIMeshRenderer__SetTexture(ExUIMeshRenderer_o *this, UnityEngine_Texture_
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CB56A0 & 1) == 0 )
+  if ( (byte_4CC67C0 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB56A0 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC67C0 = 1;
   }
   material = (UnityEngine_Object_o *)ExUIMeshRenderer__get_material(this, (const MethodInfo *)tex);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -541,7 +612,7 @@ void ExUIMeshRenderer__SetTexture(ExUIMeshRenderer_o *this, UnityEngine_Texture_
   if ( v6 )
   {
     if ( !material )
-      sub_1C6BC60(v6, v7);
+      sub_1C71608(v6, v7);
     UnityEngine_Material__set_mainTexture((UnityEngine_Material_o *)material, tex, 0);
   }
   ((void (__fastcall *)(ExUIMeshRenderer_o *, const MethodInfo *))this->klass->vtable._43_ReScale.methodPtr)(
@@ -567,11 +638,11 @@ void ExUIMeshRenderer__SetTweenColor(ExUIMeshRenderer_o *this, UnityEngine_Color
   b = c.fields.b;
   g = c.fields.g;
   r = c.fields.r;
-  if ( (byte_4CB569A & 1) == 0 )
+  if ( (byte_4CC67BA & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16166/*"_Color"*/);
-    byte_4CB569A = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_16173/*"_Color"*/);
+    byte_4CC67BA = 1;
   }
   v12.fields.r = r;
   v12.fields.g = g;
@@ -586,22 +657,22 @@ void ExUIMeshRenderer__SetTweenColor(ExUIMeshRenderer_o *this, UnityEngine_Color
   {
     if ( !material )
       goto LABEL_11;
-    if ( UnityEngine_Material__HasProperty_71525148(
+    if ( UnityEngine_Material__HasProperty_71590080(
            (UnityEngine_Material_o *)material,
-           (System_String_o *)StringLiteral_16166/*"_Color"*/,
+           (System_String_o *)StringLiteral_16173/*"_Color"*/,
            0) )
     {
       v13.fields.r = r;
       v13.fields.g = g;
       v13.fields.b = b;
       v13.fields.a = a;
-      UnityEngine_Material__SetColor((UnityEngine_Material_o *)material, (System_String_o *)StringLiteral_16166/*"_Color"*/, v13, 0);
+      UnityEngine_Material__SetColor((UnityEngine_Material_o *)material, (System_String_o *)StringLiteral_16173/*"_Color"*/, v13, 0);
     }
   }
   meshRenderer = this->fields.meshRenderer;
   if ( !meshRenderer )
 LABEL_11:
-    sub_1C6BC60(meshRenderer, v11);
+    sub_1C71608(meshRenderer, v11);
   UnityEngine_Renderer__set_enabled((UnityEngine_Renderer_o *)meshRenderer, a > 0.0, 0);
 }
 
@@ -612,11 +683,11 @@ void ExUIMeshRenderer__SetTweenVolume(ExUIMeshRenderer_o *this, float v, const M
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CB569B & 1) == 0 )
+  if ( (byte_4CC67BB & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_16403/*"_Volume"*/);
-    byte_4CB569B = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_16410/*"_Volume"*/);
+    byte_4CC67BB = 1;
   }
   this->fields.volume = v;
   material = (UnityEngine_Object_o *)ExUIMeshRenderer__get_material(this, method);
@@ -626,13 +697,13 @@ void ExUIMeshRenderer__SetTweenVolume(ExUIMeshRenderer_o *this, float v, const M
   if ( v6 )
   {
     if ( !material )
-      sub_1C6BC60(v6, v7);
-    if ( UnityEngine_Material__HasProperty_71525148(
+      sub_1C71608(v6, v7);
+    if ( UnityEngine_Material__HasProperty_71590080(
            (UnityEngine_Material_o *)material,
-           (System_String_o *)StringLiteral_16403/*"_Volume"*/,
+           (System_String_o *)StringLiteral_16410/*"_Volume"*/,
            0) )
     {
-      UnityEngine_Material__SetFloat((UnityEngine_Material_o *)material, (System_String_o *)StringLiteral_16403/*"_Volume"*/, v, 0);
+      UnityEngine_Material__SetFloat((UnityEngine_Material_o *)material, (System_String_o *)StringLiteral_16410/*"_Volume"*/, v, 0);
     }
   }
 }
@@ -644,10 +715,10 @@ UnityEngine_Material_o *ExUIMeshRenderer__get_material(ExUIMeshRenderer_o *this,
   __int64 v4; // x1
   UnityEngine_Renderer_o *v5; // x0
 
-  if ( (byte_4CB5698 & 1) == 0 )
+  if ( (byte_4CC67B8 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB5698 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC67B8 = 1;
   }
   meshRenderer = (UnityEngine_Object_o *)this->fields.meshRenderer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -656,7 +727,7 @@ UnityEngine_Material_o *ExUIMeshRenderer__get_material(ExUIMeshRenderer_o *this,
     return 0;
   v5 = (UnityEngine_Renderer_o *)this->fields.meshRenderer;
   if ( !v5 )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   return UnityEngine_Renderer__get_material(v5, 0);
 }
 
@@ -667,6 +738,6 @@ void ExUIMeshRenderer__set_material(ExUIMeshRenderer_o *this, UnityEngine_Materi
 
   meshRenderer = (UnityEngine_Renderer_o *)this->fields.meshRenderer;
   if ( !meshRenderer )
-    sub_1C6BC60(0, value);
+    sub_1C71608(0, value);
   UnityEngine_Renderer__set_material(meshRenderer, value, 0);
 }

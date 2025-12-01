@@ -1,13 +1,13 @@
 void LoginQuestEntity___ctor(LoginQuestEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6773 & 1) == 0 )
+  if ( (byte_4CC7896 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_int___ctor__);
-    byte_4CB6773 = 1;
+    sub_1C713B0(&Method_DataEntityBase_int___ctor__);
+    byte_4CC7896 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_33F6BF8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_340699C *)Method_DataEntityBase_int___ctor__);
 }
 
 

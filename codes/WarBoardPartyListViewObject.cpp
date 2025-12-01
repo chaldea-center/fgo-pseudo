@@ -1,9 +1,9 @@
 void WarBoardPartyListViewObject___ctor(WarBoardPartyListViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB3EED & 1) == 0 )
+  if ( (byte_4CC5005 & 1) == 0 )
   {
-    sub_1C6BA08(&ListViewObject_TypeInfo);
-    byte_4CB3EED = 1;
+    sub_1C713B0(&ListViewObject_TypeInfo);
+    byte_4CC5005 = 1;
   }
   *(_QWORD *)&this->fields.dispDuration = 0xF3E99999ALL;
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
@@ -24,22 +24,26 @@ WarBoardPartyOrganizationListViewObject_o *WarBoardPartyListViewObject__CreateMe
   UnityEngine_Component_o *grid; // x8
   UnityEngine_Transform_o *v10; // x21
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  WarBoardPartyOrganizationListViewObject_o *v13; // x20
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  WarBoardPartyOrganizationListViewObject_o *v17; // x20
 
-  if ( (byte_4CB3EE9 & 1) == 0 )
+  if ( (byte_4CC5001 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_WarBoardPartyOrganizationListViewObject___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB3EE9 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_WarBoardPartyOrganizationListViewObject___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC5001 = 1;
   }
   srcMemberObj = (Il2CppObject *)this->fields.srcMemberObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   transform = (char *)UnityEngine_Object__Instantiate_object_(
                         srcMemberObj,
-                        (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                        (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !transform )
     goto LABEL_14;
   v8 = (UnityEngine_GameObject_o *)transform;
@@ -51,29 +55,29 @@ WarBoardPartyOrganizationListViewObject_o *WarBoardPartyListViewObject__CreateMe
   transform = (char *)UnityEngine_Component__get_transform(grid, 0);
   if ( !v10 )
     goto LABEL_14;
-  UnityEngine_Transform__SetParent_71683116(v10, (UnityEngine_Transform_o *)transform, 0, 0);
-  if ( !byte_4CAFC09 )
+  UnityEngine_Transform__SetParent_71748048(v10, (UnityEngine_Transform_o *)transform, 0, 0);
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   GameObjectExtensions__SetLocalPosition(v8, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
-  if ( !byte_4CAFC0E )
+  if ( !byte_4CC0D0E )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC0E = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D0E = 1;
   }
   GameObjectExtensions__SetLocalScale(v8, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   transform = (char *)UnityEngine_GameObject__GetComponent_object_(
                         v8,
-                        (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_WarBoardPartyOrganizationListViewObject___);
+                        (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_WarBoardPartyOrganizationListViewObject___);
   if ( !transform )
 LABEL_14:
-    sub_1C6BC60(transform, v7);
-  v13 = (WarBoardPartyOrganizationListViewObject_o *)transform;
+    sub_1C71608(transform, v7);
+  v17 = (WarBoardPartyOrganizationListViewObject_o *)transform;
   *((_QWORD *)transform + 5) = item;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(transform + 40), (int32_t)item, v11, v12);
-  return v13;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(transform + 40), (int32_t)item, v11, v12, v13, v14, v15, v16);
+  return v17;
 }
 
 
@@ -87,63 +91,79 @@ void WarBoardPartyListViewObject__CreateMemberObjects(
   Il2CppObject *MemberObj; // x0
   __int64 v8; // x1
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v12; // x9
+  _QWORD *v16; // x9
   __int64 size; // x10
-  Il2CppObject *v14; // x1
-  Il2CppClass **v15; // x0
-  System_Object_array *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  Il2CppObject *v18; // x1
+  Il2CppClass **v19; // x0
+  System_Object_array *v20; // x0
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
 
-  if ( (byte_4CB3EE5 & 1) == 0 )
+  if ( (byte_4CC4FFD & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__TypeInfo);
-    byte_4CB3EE5 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__TypeInfo);
+    byte_4CC4FFD = 1;
   }
   if ( partyItem && !this->fields.memberObjectList )
   {
-    v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__TypeInfo);
+    v5 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v5,
-      (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject___ctor__);
+      (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject___ctor__);
     MemberObj = (Il2CppObject *)WarBoardPartyListViewObject__CreateMemberObj(
                                   this,
                                   partyItem->fields.focusMemberItem,
                                   v6);
     if ( !v5
       || (items = v5->fields._items,
-          v12 = Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__Add__,
+          v16 = Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__Add__,
           ++v5->fields._version,
           !items) )
     {
-      sub_1C6BC60(MemberObj, v8);
+      sub_1C71608(MemberObj, v8);
     }
     size = v5->fields._size;
-    v14 = MemberObj;
+    v18 = MemberObj;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v5,
         MemberObj,
-        *(const MethodInfo_3800974 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+        *(const MethodInfo_3810718 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
     }
     else
     {
-      v15 = &items->obj.klass + size;
+      v19 = &items->obj.klass + size;
       v5->fields._size = size + 1;
-      v15[4] = (Il2CppClass *)v14;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v14, v9, v10);
+      v19[4] = (Il2CppClass *)v18;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)v18, v9, v10, v11, v12, v13, v14);
     }
-    v16 = System_Collections_Generic_List_object___ToArray(
+    v20 = System_Collections_Generic_List_object___ToArray(
             v5,
-            (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__ToArray__);
-    this->fields.memberObjectList = (struct WarBoardPartyOrganizationListViewObject_array *)v16;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.memberObjectList, (int32_t)v16, v17, v18);
+            (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_WarBoardPartyOrganizationListViewObject__ToArray__);
+    this->fields.memberObjectList = (struct WarBoardPartyOrganizationListViewObject_array *)v20;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.memberObjectList,
+      (int32_t)v20,
+      v21,
+      v22,
+      v23,
+      v24,
+      v25,
+      v26);
   }
 }
 
@@ -156,71 +176,79 @@ void WarBoardPartyListViewObject__Display(WarBoardPartyListViewObject_o *this, c
   __int64 naturalAligment; // x11
   __int64 v5; // x25
   System_Collections_IEnumerator_o *dispCoroutine; // x1
-  CGThumbnailListItem_o *p_dispCoroutine; // x20
+  GrandQuestFolderBoardItem_o *p_dispCoroutine; // x20
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   UnityEngine_Object_o *backSprite; // x21
-  bool v11; // w0
-  const MethodInfo *v12; // x2
+  bool v15; // w0
+  const MethodInfo *v16; // x2
   void (__fastcall *methodPtr)(WarBoardPartyListViewObject_o *, __int64, const MethodInfo *); // x3
   UnityEngine_GameObject_o *gameObject; // x22
-  UnityEngine_GameObject_o *v15; // x22
-  long double v16; // q0
-  __int64 v17; // x0
+  UnityEngine_GameObject_o *v19; // x22
+  long double v20; // q0
+  __int64 v21; // x0
   void *image; // x8
-  WarBoardData_o *v19; // x22
+  WarBoardData_o *v23; // x22
   float x; // s8
   float y; // s9
   float z; // s10
-  __int64 v23; // x0
-  _QWORD *v24; // x8
-  __int64 v25; // x8
-  float v26; // s8
-  float v27; // s9
-  float v28; // s10
-  __int64 v29; // x0
-  void *v30; // x8
-  float v31; // s8
-  float v32; // s9
-  float v33; // s10
-  float v34; // s8
-  float v35; // s9
-  float v36; // s10
+  __int64 v27; // x0
+  _QWORD *v28; // x8
+  __int64 v29; // x8
+  float v30; // s8
+  float v31; // s9
+  float v32; // s10
+  __int64 v33; // x0
+  void *v34; // x8
+  float v35; // s8
+  float v36; // s9
+  float v37; // s10
+  float v38; // s8
+  float v39; // s9
+  float v40; // s10
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  float v38; // s12
-  float v39; // s13
-  float v40; // s11
+  float v42; // s12
+  float v43; // s13
+  float v44; // s11
   __int64 duration; // x23
   unsigned int dispEasingType; // w21
-  System_Action_o *v43; // x0
-  float v44; // w22
-  int32_t v45; // w3
-  System_Action_o *v46; // x4
-  const MethodInfo *v47; // x5
-  System_Collections_IEnumerator_o *v48; // x0
-  int32_t v49; // w2
-  const MethodInfo *v50; // x3
+  System_Action_o *v47; // x0
+  float v48; // w22
+  int32_t v49; // w3
+  System_Action_o *v50; // x4
+  const MethodInfo *v51; // x5
+  System_Collections_IEnumerator_o *v52; // x0
+  int32_t v53; // w2
+  int32_t v54; // w3
+  System_String_o *v55; // x4
+  int32_t v56; // w5
+  int64_t v57; // x6
+  System_String_o *v58; // x7
   UnityEngine_Vector3_o fromScale; // [xsp+0h] [xbp-C0h]
-  UnityEngine_Vector3_o v52; // 0:x1.12
+  UnityEngine_Vector3_o v60; // 0:x1.12
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
-  UnityEngine_Vector3_o v54; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
-  UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v57; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v59; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v60; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v61; // 0:s3.4,4:s4.4,8:s5.4
+  UnityEngine_Vector3_o v62; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v63; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
+  UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v67; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v68; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v69; // 0:s3.4,4:s4.4,8:s5.4
 
   v2 = this;
-  if ( (byte_4CB3EE7 & 1) == 0 )
+  if ( (byte_4CC4FFF & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
-    sub_1C6BA08(&WarBoardPartyListViewItem_TypeInfo);
-    this = (WarBoardPartyListViewObject_o *)sub_1C6BA08(&Method_WarBoardPartyListViewObject_OnFinishedDisplayAnim__);
-    byte_4CB3EE7 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_WarBoardManager__getInstance__);
+    sub_1C713B0(&WarBoardPartyListViewItem_TypeInfo);
+    this = (WarBoardPartyListViewObject_o *)sub_1C713B0(&Method_WarBoardPartyListViewObject_OnFinishedDisplayAnim__);
+    byte_4CC4FFF = 1;
   }
   linkItem = v2->fields.linkItem;
   if ( !linkItem )
@@ -232,59 +260,59 @@ void WarBoardPartyListViewObject__Display(WarBoardPartyListViewObject_o *this, c
     goto LABEL_50;
   }
   v5 = *(_QWORD *)&linkItem[1].fields.selectNum;
-  p_dispCoroutine = (CGThumbnailListItem_o *)&v2->fields.dispCoroutine;
+  p_dispCoroutine = (GrandQuestFolderBoardItem_o *)&v2->fields.dispCoroutine;
   dispCoroutine = v2->fields.dispCoroutine;
   if ( dispCoroutine )
   {
     UnityEngine_MonoBehaviour__StopCoroutine((UnityEngine_MonoBehaviour_o *)v2, dispCoroutine, 0);
     v2->fields.dispCoroutine = 0;
-    sub_1C6B9AC(p_dispCoroutine, 0, v8, v9);
+    sub_1C71354(p_dispCoroutine, 0, v8, v9, v10, v11, v12, v13);
   }
   backSprite = (UnityEngine_Object_o *)v2->fields.backSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v11 = UnityEngine_Object__op_Equality(backSprite, 0, 0);
+  v15 = UnityEngine_Object__op_Equality(backSprite, 0, 0);
   methodPtr = (void (__fastcall *)(WarBoardPartyListViewObject_o *, __int64, const MethodInfo *))v2->klass->vtable._9_SetInput.methodPtr;
-  v12 = v2->klass->vtable._9_SetInput.method;
-  if ( v11 )
+  v16 = v2->klass->vtable._9_SetInput.method;
+  if ( v15 )
   {
-    methodPtr(v2, 1, v12);
+    methodPtr(v2, 1, v16);
     return;
   }
-  methodPtr(v2, 0, v12);
+  methodPtr(v2, 0, v16);
   this = (WarBoardPartyListViewObject_o *)v2->fields.backSprite;
   if ( !this )
     goto LABEL_50;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   GameObjectExtensions__SetLocalPosition(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   this = (WarBoardPartyListViewObject_o *)v2->fields.backSprite;
   if ( !this )
     goto LABEL_50;
-  v15 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !byte_4CAFC0E )
+  v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  if ( !byte_4CC0D0E )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC0E = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D0E = 1;
   }
-  GameObjectExtensions__SetLocalScale(v15, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
-  v17 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v17 + 309) & 1) == 0 )
-    v17 = sub_1C41A9C(v16);
-  this = *(WarBoardPartyListViewObject_o **)(*(_QWORD *)(v17 + 192) + 16LL);
+  GameObjectExtensions__SetLocalScale(v19, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
+  v21 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v21 + 309) & 1) == 0 )
+    v21 = sub_1C47444(v20);
+  this = *(WarBoardPartyListViewObject_o **)(*(_QWORD *)(v21 + 192) + 16LL);
   if ( (BYTE5(this[1].fields.srcMemberObj) & 1) == 0 )
-    this = (WarBoardPartyListViewObject_o *)sub_1C41A9C(v16);
+    this = (WarBoardPartyListViewObject_o *)sub_1C47444(v20);
   image = this[1].klass->_1.image;
   if ( !image )
     goto LABEL_50;
   if ( !v5 )
     goto LABEL_50;
-  v19 = (WarBoardData_o *)*((_QWORD *)image + 55);
-  if ( !v19 )
+  v23 = (WarBoardData_o *)*((_QWORD *)image + 55);
+  if ( !v23 )
     goto LABEL_50;
   this = (WarBoardPartyListViewObject_o *)WarBoardData__GetPiece(
                                             *((WarBoardData_o **)image + 55),
@@ -295,7 +323,7 @@ void WarBoardPartyListViewObject__Display(WarBoardPartyListViewObject_o *this, c
                                             0);
   if ( !this )
     goto LABEL_50;
-  this = (WarBoardPartyListViewObject_o *)WarBoardData__GetSquare(v19, (int32_t)this->fields.mCollider, 0);
+  this = (WarBoardPartyListViewObject_o *)WarBoardData__GetSquare(v23, (int32_t)this->fields.mCollider, 0);
   if ( !this )
     goto LABEL_50;
   this = (WarBoardPartyListViewObject_o *)this->fields.dragObjectPrefab;
@@ -311,97 +339,97 @@ void WarBoardPartyListViewObject__Display(WarBoardPartyListViewObject_o *this, c
   x = position.fields.x;
   y = position.fields.y;
   z = position.fields.z;
-  v23 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v23 + 309) & 1) == 0 )
-    v23 = sub_1C41A9C(*(long double *)&position.fields.x);
-  this = *(WarBoardPartyListViewObject_o **)(*(_QWORD *)(v23 + 192) + 16LL);
+  v27 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v27 + 309) & 1) == 0 )
+    v27 = sub_1C47444(*(long double *)&position.fields.x);
+  this = *(WarBoardPartyListViewObject_o **)(*(_QWORD *)(v27 + 192) + 16LL);
   if ( (BYTE5(this[1].fields.srcMemberObj) & 1) == 0 )
-    this = (WarBoardPartyListViewObject_o *)sub_1C41A9C(*(long double *)&position.fields.x);
-  v24 = this[1].klass->_1.image;
-  if ( !v24 )
+    this = (WarBoardPartyListViewObject_o *)sub_1C47444(*(long double *)&position.fields.x);
+  v28 = this[1].klass->_1.image;
+  if ( !v28 )
     goto LABEL_50;
-  v25 = v24[6];
-  if ( !v25 )
+  v29 = v28[6];
+  if ( !v29 )
     goto LABEL_50;
-  this = *(WarBoardPartyListViewObject_o **)(v25 + 32);
+  this = *(WarBoardPartyListViewObject_o **)(v29 + 32);
   if ( !this )
     goto LABEL_50;
-  v54.fields.x = x;
-  v54.fields.y = y;
-  v54.fields.z = z;
-  v55 = UnityEngine_Camera__WorldToScreenPoint_71464248((UnityEngine_Camera_o *)this, v54, 0);
-  v26 = v55.fields.x;
-  v27 = v55.fields.y;
-  v28 = v55.fields.z;
-  v29 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
-  if ( (*(_BYTE *)(v29 + 309) & 1) == 0 )
-    v29 = sub_1C41A9C(*(long double *)&v55.fields.x);
-  this = *(WarBoardPartyListViewObject_o **)(*(_QWORD *)(v29 + 192) + 16LL);
+  v62.fields.x = x;
+  v62.fields.y = y;
+  v62.fields.z = z;
+  v63 = UnityEngine_Camera__WorldToScreenPoint_71529180((UnityEngine_Camera_o *)this, v62, 0);
+  v30 = v63.fields.x;
+  v31 = v63.fields.y;
+  v32 = v63.fields.z;
+  v33 = *((_QWORD *)Method_SingletonMonoBehaviour_WarBoardManager__getInstance__ + 4);
+  if ( (*(_BYTE *)(v33 + 309) & 1) == 0 )
+    v33 = sub_1C47444(*(long double *)&v63.fields.x);
+  this = *(WarBoardPartyListViewObject_o **)(*(_QWORD *)(v33 + 192) + 16LL);
   if ( (BYTE5(this[1].fields.srcMemberObj) & 1) == 0 )
-    this = (WarBoardPartyListViewObject_o *)sub_1C41A9C(*(long double *)&v55.fields.x);
-  v30 = this[1].klass->_1.image;
-  if ( !v30 )
+    this = (WarBoardPartyListViewObject_o *)sub_1C47444(*(long double *)&v63.fields.x);
+  v34 = this[1].klass->_1.image;
+  if ( !v34 )
     goto LABEL_50;
-  this = (WarBoardPartyListViewObject_o *)*((_QWORD *)v30 + 7);
+  this = (WarBoardPartyListViewObject_o *)*((_QWORD *)v34 + 7);
   if ( !this )
     goto LABEL_50;
-  v56.fields.x = v26;
-  v56.fields.y = v27;
-  v56.fields.z = v28;
-  v57 = UnityEngine_Camera__ScreenToWorldPoint_71464272((UnityEngine_Camera_o *)this, v56, 0);
+  v64.fields.x = v30;
+  v64.fields.y = v31;
+  v64.fields.z = v32;
+  v65 = UnityEngine_Camera__ScreenToWorldPoint_71529204((UnityEngine_Camera_o *)this, v64, 0);
   this = (WarBoardPartyListViewObject_o *)v2->fields.backSprite;
   if ( !this
-    || (v31 = v57.fields.x,
-        v32 = v57.fields.y,
-        v33 = v57.fields.z,
+    || (v35 = v65.fields.x,
+        v36 = v65.fields.y,
+        v37 = v65.fields.z,
         (this = (WarBoardPartyListViewObject_o *)UnityEngine_Component__get_transform(
                                                    (UnityEngine_Component_o *)this,
                                                    0)) == 0) )
   {
 LABEL_50:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  v58.fields.x = v31;
-  v58.fields.y = v32;
-  v58.fields.z = v33;
-  v59 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v58, 0);
-  v34 = v59.fields.x;
-  v35 = v59.fields.y;
-  v36 = v59.fields.z;
-  if ( !byte_4CAFC09 )
+  v66.fields.x = v35;
+  v66.fields.y = v36;
+  v66.fields.z = v37;
+  v67 = UnityEngine_Transform__InverseTransformPoint((UnityEngine_Transform_o *)this, v66, 0);
+  v38 = v67.fields.x;
+  v39 = v67.fields.y;
+  v40 = v67.fields.z;
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v39 = static_fields->zeroVector.fields.x;
-  v38 = static_fields->zeroVector.fields.y;
-  v40 = static_fields->zeroVector.fields.z;
-  if ( !byte_4CAFC0E )
+  v43 = static_fields->zeroVector.fields.x;
+  v42 = static_fields->zeroVector.fields.y;
+  v44 = static_fields->zeroVector.fields.z;
+  if ( !byte_4CC0D0E )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC0E = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D0E = 1;
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   }
   duration = *(_QWORD *)&static_fields->oneVector.fields.x;
   dispEasingType = v2->fields.dispEasingType;
-  v43 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  v44 = *(float *)&v43;
-  System_Action___ctor(v43, (Il2CppObject *)v2, Method_WarBoardPartyListViewObject_OnFinishedDisplayAnim__, 0);
-  v60.fields.x = v34;
-  v60.fields.y = v35;
-  v60.fields.z = v36;
-  v61.fields.x = v39;
-  v61.fields.y = v38;
-  v61.fields.z = v40;
-  *(_QWORD *)&v52.fields.x = dispEasingType;
-  v52.fields.z = v44;
-  *(_QWORD *)&fromScale.fields.y = __PAIR64__(LODWORD(v40), LODWORD(v38));
-  fromScale.fields.x = v39;
-  v48 = WarBoardPartyListViewObject__DsiplayAnim(v2, v60, v61, fromScale, v52, *(float *)&duration, v45, v46, v47);
-  v2->fields.dispCoroutine = v48;
-  sub_1C6B9AC(p_dispCoroutine, (int32_t)v48, v49, v50);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)v2, v2->fields.dispCoroutine, 0);
+  v47 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v48 = *(float *)&v47;
+  System_Action___ctor(v47, (Il2CppObject *)v2, Method_WarBoardPartyListViewObject_OnFinishedDisplayAnim__, 0);
+  v68.fields.x = v38;
+  v68.fields.y = v39;
+  v68.fields.z = v40;
+  v69.fields.x = v43;
+  v69.fields.y = v42;
+  v69.fields.z = v44;
+  *(_QWORD *)&v60.fields.x = dispEasingType;
+  v60.fields.z = v48;
+  *(_QWORD *)&fromScale.fields.y = __PAIR64__(LODWORD(v44), LODWORD(v42));
+  fromScale.fields.x = v43;
+  v52 = WarBoardPartyListViewObject__DsiplayAnim(v2, v68, v69, fromScale, v60, *(float *)&duration, v49, v50, v51);
+  v2->fields.dispCoroutine = v52;
+  sub_1C71354(p_dispCoroutine, (int32_t)v52, v53, v54, v55, v56, v57, v58);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)v2, v2->fields.dispCoroutine, 0);
 }
 
 
@@ -424,14 +452,22 @@ System_Collections_IEnumerator_o *WarBoardPartyListViewObject__DsiplayAnim(
   float v13; // s13
   __int64 v15; // x22
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
   float y; // [xsp+10h] [xbp-80h]
   float z; // [xsp+18h] [xbp-78h]
   float x; // [xsp+1Ch] [xbp-74h]
-  int v24; // [xsp+A8h] [xbp+18h]
-  int v25; // [xsp+B0h] [xbp+20h]
+  int v32; // [xsp+A8h] [xbp+18h]
+  int v33; // [xsp+B0h] [xbp+20h]
 
   z = toPos.fields.z;
   x = fromPos.fields.x;
@@ -441,16 +477,16 @@ System_Collections_IEnumerator_o *WarBoardPartyListViewObject__DsiplayAnim(
   v11 = toPos.fields.x;
   v12 = fromPos.fields.z;
   v13 = fromPos.fields.y;
-  if ( (byte_4CB3EE8 & 1) == 0 )
+  if ( (byte_4CC5000 & 1) == 0 )
   {
-    sub_1C6BA08(&WarBoardPartyListViewObject__DsiplayAnim_d__17_TypeInfo);
-    byte_4CB3EE8 = 1;
+    sub_1C713B0(&WarBoardPartyListViewObject__DsiplayAnim_d__17_TypeInfo);
+    byte_4CC5000 = 1;
   }
-  v15 = sub_1C6BC54(WarBoardPartyListViewObject__DsiplayAnim_d__17_TypeInfo);
+  v15 = sub_1C715FC(WarBoardPartyListViewObject__DsiplayAnim_d__17_TypeInfo);
   System_Object___ctor((Il2CppObject *)v15, 0);
   *(_DWORD *)(v15 + 16) = 0;
   *(_QWORD *)(v15 + 88) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 88), (int32_t)this, v16, v17);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v15 + 88), (int32_t)this, v16, v17, v18, v19, v20, v21);
   *(float *)(v15 + 40) = v13;
   *(float *)(v15 + 44) = v12;
   *(float *)(v15 + 48) = v11;
@@ -460,11 +496,11 @@ System_Collections_IEnumerator_o *WarBoardPartyListViewObject__DsiplayAnim(
   *(float *)(v15 + 60) = v10;
   *(float *)(v15 + 56) = z;
   *(float *)(v15 + 80) = *(&duration + 1);
-  *(_DWORD *)(v15 + 84) = v24;
-  *(_DWORD *)(v15 + 32) = v25;
+  *(_DWORD *)(v15 + 84) = v32;
+  *(_DWORD *)(v15 + 32) = v33;
   *(float *)(v15 + 36) = x;
   *(_QWORD *)(v15 + 96) = v9;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 96), v9, v18, v19);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v15 + 96), v9, v22, v23, v24, v25, v26, v27);
   return (System_Collections_IEnumerator_o *)v15;
 }
 
@@ -483,10 +519,10 @@ WarBoardPartyOrganizationListViewObject_o *WarBoardPartyListViewObject__FindMemb
   intptr_t m_CachedPtr; // x8
 
   v4 = this;
-  if ( (byte_4CB3EEA & 1) == 0 )
+  if ( (byte_4CC5002 & 1) == 0 )
   {
-    this = (WarBoardPartyListViewObject_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB3EEA = 1;
+    this = (WarBoardPartyListViewObject_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC5002 = 1;
   }
   memberObjectList = v4->fields.memberObjectList;
   if ( !memberObjectList )
@@ -499,7 +535,7 @@ WarBoardPartyOrganizationListViewObject_o *WarBoardPartyListViewObject__FindMemb
     while ( 1 )
     {
       if ( v8 >= (unsigned int)max_length )
-        sub_1C6BC68(this);
+        sub_1C71610(this);
       v7 = (UnityEngine_Object_o *)memberObjectList->m_Items[v8];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -507,7 +543,7 @@ WarBoardPartyOrganizationListViewObject_o *WarBoardPartyListViewObject__FindMemb
       if ( ((unsigned __int8)this & 1) != 0 )
       {
         if ( !v7 || (m_CachedPtr = v7[1].fields.m_CachedPtr) == 0 || !item )
-          sub_1C6BC60(this, v9);
+          sub_1C71608(this, v9);
         if ( *(_DWORD *)(m_CachedPtr + 384) == item->fields.warBoardPieceIndex )
           break;
       }
@@ -527,10 +563,10 @@ WarBoardPartyListViewItem_o *WarBoardPartyListViewObject__GetItem(
   struct ListViewItem_o *linkItem; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4CB3EEB & 1) == 0 )
+  if ( (byte_4CC5003 & 1) == 0 )
   {
-    sub_1C6BA08(&WarBoardPartyListViewItem_TypeInfo);
-    byte_4CB3EEB = 1;
+    sub_1C713B0(&WarBoardPartyListViewItem_TypeInfo);
+    byte_4CC5003 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( !linkItem )
@@ -559,10 +595,10 @@ void WarBoardPartyListViewObject__Init(
   int32_t v13; // w8
   const MethodInfo *v14; // x1
 
-  if ( (byte_4CB3EE4 & 1) == 0 )
+  if ( (byte_4CC4FFC & 1) == 0 )
   {
-    sub_1C6BA08(&WarBoardPartyListViewItem_TypeInfo);
-    byte_4CB3EE4 = 1;
+    sub_1C713B0(&WarBoardPartyListViewItem_TypeInfo);
+    byte_4CC4FFC = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem )
@@ -627,7 +663,7 @@ void WarBoardPartyListViewObject__OnEnable(WarBoardPartyListViewObject_o *this, 
 
   dispCoroutine = this->fields.dispCoroutine;
   if ( dispCoroutine )
-    UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, dispCoroutine, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, dispCoroutine, 0);
 }
 
 
@@ -654,10 +690,10 @@ void WarBoardPartyListViewObject__SetInput(
   __int64 v10; // x1
 
   v4 = this;
-  if ( (byte_4CB3EEC & 1) == 0 )
+  if ( (byte_4CC5004 & 1) == 0 )
   {
-    this = (WarBoardPartyListViewObject_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB3EEC = 1;
+    this = (WarBoardPartyListViewObject_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC5004 = 1;
   }
   memberObjectList = v4->fields.memberObjectList;
   if ( memberObjectList )
@@ -670,7 +706,7 @@ void WarBoardPartyListViewObject__SetInput(
       do
       {
         if ( v7 >= (unsigned int)max_length )
-          sub_1C6BC68(this);
+          sub_1C71610(this);
         v9 = memberObjectList->m_Items[v7];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -678,7 +714,7 @@ void WarBoardPartyListViewObject__SetInput(
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           if ( !v9 )
-            sub_1C6BC60(this, v10);
+            sub_1C71608(this, v10);
           v9->fields.isEnableTouch = v8;
         }
         LODWORD(max_length) = memberObjectList->max_length;
@@ -696,12 +732,12 @@ void WarBoardPartyListViewObject__SetItem(
         ListViewItemSeed_o *seed,
         const MethodInfo *method)
 {
-  ListViewObject__SetItem_44077592((ListViewObject_o *)this, item, seed, 0);
+  ListViewObject__SetItem_44123920((ListViewObject_o *)this, item, seed, 0);
   this->fields.state = 0;
 }
 
 
-void WarBoardPartyListViewObject__SetItem_38464404(
+void WarBoardPartyListViewObject__SetItem_38503488(
         WarBoardPartyListViewObject_o *this,
         ListViewItem_o *item,
         const MethodInfo *method)
@@ -722,19 +758,27 @@ void WarBoardPartyListViewObject__SetupMemberObjects(
   UnityEngine_Object_o *Memberobj; // x21
   struct WarBoardPartyOrganizationListViewObject_array *memberObjectList; // x8
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  CGThumbnailListItem_o *p_focusObj; // x20
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  struct ListViewManager_o *v14; // x1
-  const MethodInfo *v15; // x2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  GrandQuestFolderBoardItem_o *p_focusObj; // x20
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  struct ListViewManager_o *v22; // x1
+  const MethodInfo *v23; // x2
 
   v4 = this;
-  if ( (byte_4CB3EE6 & 1) == 0 )
+  if ( (byte_4CC4FFE & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (WarBoardPartyListViewObject_o *)sub_1C6BA08(&WarBoardPartyListViewItem_TypeInfo);
-    byte_4CB3EE6 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (WarBoardPartyListViewObject_o *)sub_1C713B0(&WarBoardPartyListViewItem_TypeInfo);
+    byte_4CC4FFE = 1;
   }
   linkItem = (PartyOrganizationListViewItem_o **)v4->fields.linkItem;
   if ( !linkItem )
@@ -755,7 +799,7 @@ void WarBoardPartyListViewObject__SetupMemberObjects(
     if ( !memberObjectList )
       goto LABEL_19;
     if ( !LODWORD(memberObjectList->max_length) )
-      sub_1C6BC68(this);
+      sub_1C71610(this);
     Memberobj = (UnityEngine_Object_o *)memberObjectList->m_Items[0];
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -763,26 +807,26 @@ void WarBoardPartyListViewObject__SetupMemberObjects(
   if ( UnityEngine_Object__op_Inequality(Memberobj, 0, 0) )
   {
     v4->fields.focusObj = (struct WarBoardPartyOrganizationListViewObject_o *)Memberobj;
-    p_focusObj = (CGThumbnailListItem_o *)&v4->fields.focusObj;
-    sub_1C6B9AC(p_focusObj, (int32_t)Memberobj, v9, v10);
+    p_focusObj = (GrandQuestFolderBoardItem_o *)&v4->fields.focusObj;
+    sub_1C71354(p_focusObj, (int32_t)Memberobj, v9, v10, v11, v12, v13, v14);
     this = (WarBoardPartyListViewObject_o *)p_focusObj->klass;
     if ( p_focusObj->klass )
     {
-      v14 = (struct ListViewManager_o *)linkItem[17];
-      this->fields.manager = v14;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)v14, v12, v13);
+      v22 = (struct ListViewManager_o *)linkItem[17];
+      this->fields.manager = v22;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.manager, (int32_t)v22, v16, v17, v18, v19, v20, v21);
       this = (WarBoardPartyListViewObject_o *)p_focusObj->klass;
       if ( p_focusObj->klass )
       {
         WarBoardPartyOrganizationListViewObject__Init(
           (WarBoardPartyOrganizationListViewObject_o *)this,
           onTapMember,
-          v15);
+          v23);
         return;
       }
     }
 LABEL_19:
-    sub_1C6BC60(this, onTapMember);
+    sub_1C71608(this, onTapMember);
   }
 }
 
@@ -825,22 +869,26 @@ bool WarBoardPartyListViewObject__DsiplayAnim_d__17__MoveNext(
   float v22; // s10
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v24; // x0
-  CGThumbnailListItem_o *p__2__current; // x19
+  GrandQuestFolderBoardItem_o *p__2__current; // x19
   int32_t v26; // w2
-  const MethodInfo *v27; // x3
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
   bool result; // w0
   Il2CppObject *Component_object; // x20
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4CB3EEE & 1) == 0 )
+  if ( (byte_4CC5006 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    this = (WarBoardPartyListViewObject__DsiplayAnim_d__17_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB3EEE = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    this = (WarBoardPartyListViewObject__DsiplayAnim_d__17_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC5006 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -874,43 +922,43 @@ bool WarBoardPartyListViewObject__DsiplayAnim_d__17__MoveNext(
     else
       v16 = v15;
     v14 = v2->fields.toPos.fields.z;
-    v30 = Easing__Func(*(UnityEngine_Vector3_o *)&x, *(UnityEngine_Vector3_o *)&v11, v16, v2->fields.easingType, 0);
-    v17 = v30.fields.x;
-    v18 = v30.fields.y;
-    v19 = v30.fields.z;
-    v31 = Easing__Func(v2->fields.fromScale, v2->fields.toScale, v16, v2->fields.easingType, 0);
+    v34 = Easing__Func(*(UnityEngine_Vector3_o *)&x, *(UnityEngine_Vector3_o *)&v11, v16, v2->fields.easingType, 0);
+    v17 = v34.fields.x;
+    v18 = v34.fields.y;
+    v19 = v34.fields.z;
+    v35 = Easing__Func(v2->fields.fromScale, v2->fields.toScale, v16, v2->fields.easingType, 0);
     if ( _4__this )
     {
       this = (WarBoardPartyListViewObject__DsiplayAnim_d__17_o *)_4__this->fields.backSprite;
       if ( this )
       {
-        v20 = v31.fields.x;
-        v21 = v31.fields.y;
-        v22 = v31.fields.z;
+        v20 = v35.fields.x;
+        v21 = v35.fields.y;
+        v22 = v35.fields.z;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-        v32.fields.x = v17;
-        v32.fields.y = v18;
-        v32.fields.z = v19;
-        GameObjectExtensions__SetLocalPosition(gameObject, v32, 0);
+        v36.fields.x = v17;
+        v36.fields.y = v18;
+        v36.fields.z = v19;
+        GameObjectExtensions__SetLocalPosition(gameObject, v36, 0);
         this = (WarBoardPartyListViewObject__DsiplayAnim_d__17_o *)_4__this->fields.backSprite;
         if ( this )
         {
           v24 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-          v33.fields.x = v20;
-          v33.fields.y = v21;
-          v33.fields.z = v22;
-          GameObjectExtensions__SetLocalScale(v24, v33, 0);
+          v37.fields.x = v20;
+          v37.fields.y = v21;
+          v37.fields.z = v22;
+          GameObjectExtensions__SetLocalScale(v24, v37, 0);
           v2->fields.__2__current = 0;
-          p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-          sub_1C6B9AC(p__2__current, 0, v26, v27);
+          p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
+          sub_1C71354(p__2__current, 0, v26, v27, v28, v29, v30, v31);
           result = 1;
-          LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+          LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
           return result;
         }
       }
     }
 LABEL_24:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   if ( !_4__this )
     goto LABEL_24;
@@ -919,7 +967,7 @@ LABEL_24:
     goto LABEL_24;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (WarBoardPartyListViewObject__DsiplayAnim_d__17_o *)UnityEngine_Object__op_Inequality(
@@ -954,11 +1002,11 @@ void __noreturn WarBoardPartyListViewObject__DsiplayAnim_d__17__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_WarBoardPartyListViewObject__DsiplayAnim_d__17_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_WarBoardPartyListViewObject__DsiplayAnim_d__17_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 

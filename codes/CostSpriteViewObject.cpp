@@ -1,9 +1,9 @@
 void CostSpriteViewObject___ctor(CostSpriteViewObject_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB373A & 1) == 0 )
+  if ( (byte_4CC4852 & 1) == 0 )
   {
-    sub_1C6BA08(&ListViewObject_TypeInfo);
-    byte_4CB373A = 1;
+    sub_1C713B0(&ListViewObject_TypeInfo);
+    byte_4CC4852 = 1;
   }
   if ( !ListViewObject_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ListViewObject_TypeInfo);
@@ -17,22 +17,34 @@ void CostSpriteViewObject__Awake(CostSpriteViewObject_o *this, const MethodInfo 
   UnityEngine_GameObject_o *dispObject; // x0
   Il2CppObject *Component_object; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB3737 & 1) == 0 )
+  if ( (byte_4CC484F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
-    byte_4CB3737 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
+    byte_4CC484F = 1;
   }
   ListViewObject__Awake((ListViewObject_o *)this, 0);
   dispObject = this->fields.dispObject;
   if ( !dispObject )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        dispObject,
-                       (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
+                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_CostSpriteViewItemDraw___);
   this->fields.itemDraw = (struct CostSpriteViewItemDraw_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.itemDraw, (int32_t)Component_object, v6, v7);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.itemDraw,
+    (int32_t)Component_object,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
 }
 
 
@@ -47,7 +59,7 @@ void CostSpriteViewObject__Init(CostSpriteViewObject_o *this, const MethodInfo *
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.basePosition, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C6BC60(transform, v4);
+    sub_1C71608(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.baseScale, 0);
   CostSpriteViewObject__SetupDisp(this, v5);
@@ -60,28 +72,32 @@ bool CostSpriteViewObject__IsCostSpriteEnabled(CostSpriteViewObject_o *this, con
 
   itemDraw = this->fields.itemDraw;
   if ( !itemDraw || (this = (CostSpriteViewObject_o *)itemDraw->fields.costSprite) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0);
 }
 
 
 void CostSpriteViewObject__OnDestroy(CostSpriteViewObject_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_dragObject; // x19
+  GrandQuestFolderBoardItem_o *p_dragObject; // x19
   UnityEngine_Object_o *v4; // x20
   struct UnityEngine_GameObject_o *dragObject; // t1
   UnityEngine_Object_o *klass; // x20
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
-  if ( (byte_4CB3738 & 1) == 0 )
+  if ( (byte_4CC4850 & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB3738 = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC4850 = 1;
   }
   dragObject = this->fields.dragObject;
-  p_dragObject = (CGThumbnailListItem_o *)&this->fields.dragObject;
+  p_dragObject = (GrandQuestFolderBoardItem_o *)&this->fields.dragObject;
   v4 = (UnityEngine_Object_o *)dragObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -92,7 +108,7 @@ void CostSpriteViewObject__OnDestroy(CostSpriteViewObject_o *this, const MethodI
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     NGUITools__Destroy(klass, 0);
     p_dragObject->klass = 0;
-    sub_1C6B9AC(p_dragObject, 0, v7, v8);
+    sub_1C71354(p_dragObject, 0, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -107,11 +123,11 @@ void CostSpriteViewObject__SetupDisp(CostSpriteViewObject_o *this, const MethodI
   const MethodInfo *v8; // x2
   CostSpriteViewItemDraw_o *v9; // x0
 
-  if ( (byte_4CB3739 & 1) == 0 )
+  if ( (byte_4CC4851 & 1) == 0 )
   {
-    sub_1C6BA08(&CostSpriteViewItem_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB3739 = 1;
+    sub_1C713B0(&CostSpriteViewItem_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC4851 = 1;
   }
   linkItem = this->fields.linkItem;
   if ( linkItem
@@ -135,7 +151,7 @@ void CostSpriteViewObject__SetupDisp(CostSpriteViewObject_o *this, const MethodI
   {
     v9 = this->fields.itemDraw;
     if ( !v9 )
-      sub_1C6BC60(0, v7);
+      sub_1C71608(0, v7);
     CostSpriteViewItemDraw__SetItem(v9, (CostSpriteViewItem_o *)v5, v8);
   }
 }

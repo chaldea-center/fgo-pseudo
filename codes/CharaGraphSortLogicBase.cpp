@@ -2,18 +2,42 @@ void CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const Metho
 {
   struct IconLabelInfo_o *v3; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  const MethodInfo *v6; // x0
-  struct IconLabelInfo_o *v7; // x0
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  const MethodInfo *v10; // x0
+  struct IconLabelInfo_o *v11; // x0
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)v3, v4, v5);
-  v7 = CharaGraphSortLogicBase__ClearedIcon(v6);
-  this->fields._IconInfo2_k__BackingField = v7;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)v7, v8, v9);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
+    (int32_t)v3,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
+  v11 = CharaGraphSortLogicBase__ClearedIcon(v10);
+  this->fields._IconInfo2_k__BackingField = v11;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
+    (int32_t)v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -24,15 +48,15 @@ IconLabelInfo_o *CharaGraphSortLogicBase__ClearedIcon(const MethodInfo *method)
   __int64 v2; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CB5604 & 1) == 0 )
+  if ( (byte_4CC6724 & 1) == 0 )
   {
-    sub_1C6BA08(&IconLabelInfo_TypeInfo);
-    byte_4CB5604 = 1;
+    sub_1C713B0(&IconLabelInfo_TypeInfo);
+    byte_4CC6724 = 1;
   }
-  v1 = (IconLabelInfo_o *)sub_1C6BC54(IconLabelInfo_TypeInfo);
+  v1 = (IconLabelInfo_o *)sub_1C715FC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v1, 0);
   if ( !v1 )
-    sub_1C6BC60(v2, v3);
+    sub_1C71608(v2, v3);
   IconLabelInfo__Clear(v1, 0);
   return v1;
 }
@@ -52,7 +76,7 @@ void CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o *this, con
     || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0),
         (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0) )
   {
-    sub_1C6BC60(IconInfo1_k__BackingField, method);
+    sub_1C71608(IconInfo1_k__BackingField, method);
   }
   IconLabelInfo__Clear(IconInfo1_k__BackingField, 0);
 }
@@ -63,10 +87,22 @@ void CharaGraphSortLogicBase__SetListViewItem(
         CharaGraphListViewItemBase_o *inputItem,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.item = inputItem;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.item, (int32_t)inputItem, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.item,
+    (int32_t)inputItem,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -75,10 +111,14 @@ void CharaGraphSortLogicBase__SetListViewSort(
         ListViewSort_o *inputSort,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.sort = inputSort;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -104,7 +144,7 @@ void CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBase_o *this,
   sort = this->fields.sort;
   if ( !sort )
 LABEL_7:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   if ( sort->fields.isChoiceSort )
     this->fields._SortValue0_k__BackingField = 10;
 }
@@ -184,10 +224,22 @@ void CharaGraphSortLogicBase__set_IconInfo1(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconInfo1_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -196,10 +248,22 @@ void CharaGraphSortLogicBase__set_IconInfo2(
         IconLabelInfo_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._IconInfo2_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

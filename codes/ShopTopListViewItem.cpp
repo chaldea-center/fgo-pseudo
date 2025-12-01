@@ -8,24 +8,48 @@ void ShopTopListViewItem___ctor(
         const MethodInfo *method)
 {
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
 
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   this->fields.info = info;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.info, (int32_t)info, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.info, (int32_t)info, v12, v13, v14, v15, v16, v17);
   this->fields._IsUse_k__BackingField = isUse;
   this->fields.shopListNotice = shopListNotice;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.shopListNotice, (int32_t)shopListNotice, v14, v15);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.shopListNotice,
+    (int32_t)shopListNotice,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22,
+    v23);
   this->fields._ShopNoticeTween_k__BackingField = shopNoticeTween;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._ShopNoticeTween_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ShopNoticeTween_k__BackingField,
     (int32_t)shopNoticeTween,
-    v16,
-    v17);
+    v24,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29);
 }
 
 
@@ -34,10 +58,22 @@ void ShopTopListViewItem__SetShopListNotice(
         ShopListNotice_o *shopListNotice,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.shopListNotice = shopListNotice;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.shopListNotice, (int32_t)shopListNotice, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.shopListNotice,
+    (int32_t)shopListNotice,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -71,7 +107,7 @@ System_String_o *ShopTopListViewItem__get_ImageName(ShopTopListViewItem_o *this,
 
   info = this->fields.info;
   if ( !info )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return info->fields._ImageName_k__BackingField;
 }
 
@@ -83,14 +119,14 @@ System_String_o *ShopTopListViewItem__get_InfoText(ShopTopListViewItem_o *this, 
   System_String_o *TextCode_k__BackingField; // x19
 
   v2 = this;
-  if ( (byte_4CB266C & 1) == 0 )
+  if ( (byte_4CC377D & 1) == 0 )
   {
-    this = (ShopTopListViewItem_o *)sub_1C6BA08(&LocalizationManager_TypeInfo);
-    byte_4CB266C = 1;
+    this = (ShopTopListViewItem_o *)sub_1C713B0(&LocalizationManager_TypeInfo);
+    byte_4CC377D = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   TextCode_k__BackingField = info->fields._TextCode_k__BackingField;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -104,7 +140,7 @@ bool ShopTopListViewItem__get_IsBlank(ShopTopListViewItem_o *this, const MethodI
 
   info = this->fields.info;
   if ( !info )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return info->fields._Kind_k__BackingField == 24;
 }
 
@@ -124,28 +160,28 @@ bool ShopTopListViewItem__get_IsPeriod(ShopTopListViewItem_o *this, const Method
   struct ShopTopItemInfo_o *info; // x8
 
   v2 = this;
-  if ( (byte_4CB266D & 1) == 0 )
+  if ( (byte_4CC377E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMaster___);
-    this = (ShopTopListViewItem_o *)sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB266D = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventMaster___);
+    this = (ShopTopListViewItem_o *)sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC377E = 1;
   }
   info = v2->fields.info;
   if ( !info )
     goto LABEL_9;
   if ( info->fields._Kind_k__BackingField == 5 )
   {
-    this = (ShopTopListViewItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    this = (ShopTopListViewItem_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( this )
     {
       this = (ShopTopListViewItem_o *)DataManager__GetMasterData_object_(
                                         (DataManager_o *)this,
-                                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMaster___);
+                                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventMaster___);
       if ( this )
         return EventMaster__IsEnableEventShop((EventMaster_o *)this, 0);
     }
 LABEL_9:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   return 0;
 }
@@ -225,7 +261,7 @@ int32_t ShopTopListViewItem__get_ShopType(ShopTopListViewItem_o *this, const Met
 
   info = this->fields.info;
   if ( !info )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return info->fields._ShopType_k__BackingField;
 }
 
@@ -236,7 +272,7 @@ int32_t ShopTopListViewItem__get_State(ShopTopListViewItem_o *this, const Method
 
   info = this->fields.info;
   if ( !info )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return info->fields._State_k__BackingField;
 }
 
@@ -252,12 +288,20 @@ void ShopTopListViewItem__set_ShopNoticeTween(
         ShopNoticeTween_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._ShopNoticeTween_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._ShopNoticeTween_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ShopNoticeTween_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

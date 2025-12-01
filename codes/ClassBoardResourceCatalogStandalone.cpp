@@ -2,18 +2,22 @@ void ClassBoardResourceCatalogStandalone___ctor(ClassBoardResourceCatalogStandal
 {
   Il2CppObject *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CB9F17 & 1) == 0 )
+  if ( (byte_4CCB06A & 1) == 0 )
   {
-    sub_1C6BA08(&ClassBoardResourceContents_TypeInfo);
-    byte_4CB9F17 = 1;
+    sub_1C713B0(&ClassBoardResourceContents_TypeInfo);
+    byte_4CCB06A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
-  v3 = (Il2CppObject *)sub_1C6BC54(ClassBoardResourceContents_TypeInfo);
+  v3 = (Il2CppObject *)sub_1C715FC(ClassBoardResourceContents_TypeInfo);
   System_Object___ctor(v3, 0);
   this->fields._Contents_k__BackingField = (struct ClassBoardResourceContents_o *)v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v3, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -28,20 +32,20 @@ ClassBoardBlank_o *ClassBoardResourceCatalogStandalone__GetUniqueBlankObject(
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = assetId;
-  if ( (byte_4CB9F1A & 1) == 0 )
+  if ( (byte_4CCB06D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardBlank___);
-    byte_4CB9F1A = 1;
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+    byte_4CCB06D = 1;
   }
   v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._17_get_BLANK_PATH.methodPtr)(
                             this,
                             this->klass->vtable._17_get_BLANK_PATH.method,
                             method);
   v5 = System_Int32__ToString((int32_t)&v8, 0);
-  v6 = System_String__Concat_63966792(v4, v5, 0);
+  v6 = System_String__Concat_64031724(v4, v5, 0);
   return (ClassBoardBlank_o *)UnityEngine_Resources__Load_object_(
                                 v6,
-                                (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+                                (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
 }
 
 
@@ -56,20 +60,20 @@ ClassBoardBlank_o *ClassBoardResourceCatalogStandalone__GetUniqueGrandBlankObjec
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = assetId;
-  if ( (byte_4CB9F1D & 1) == 0 )
+  if ( (byte_4CCB070 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardBlank___);
-    byte_4CB9F1D = 1;
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+    byte_4CCB070 = 1;
   }
   v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._22_get_GRAND_BLANK_PATH.methodPtr)(
                             this,
                             this->klass->vtable._22_get_GRAND_BLANK_PATH.method,
                             method);
   v5 = System_Int32__ToString((int32_t)&v8, 0);
-  v6 = System_String__Concat_63966792(v4, v5, 0);
+  v6 = System_String__Concat_64031724(v4, v5, 0);
   return (ClassBoardBlank_o *)UnityEngine_Resources__Load_object_(
                                 v6,
-                                (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+                                (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
 }
 
 
@@ -84,20 +88,20 @@ ClassBoardLock_o *ClassBoardResourceCatalogStandalone__GetUniqueGrandLockObject(
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = assetId;
-  if ( (byte_4CB9F1E & 1) == 0 )
+  if ( (byte_4CCB071 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardLock___);
-    byte_4CB9F1E = 1;
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardLock___);
+    byte_4CCB071 = 1;
   }
   v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._21_get_GRAND_LOCK_PATH.methodPtr)(
                             this,
                             this->klass->vtable._21_get_GRAND_LOCK_PATH.method,
                             method);
   v5 = System_Int32__ToString((int32_t)&v8, 0);
-  v6 = System_String__Concat_63966792(v4, v5, 0);
+  v6 = System_String__Concat_64031724(v4, v5, 0);
   return (ClassBoardLock_o *)UnityEngine_Resources__Load_object_(
                                v6,
-                               (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
+                               (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
 }
 
 
@@ -112,20 +116,20 @@ ClassBoardSquare_o *ClassBoardResourceCatalogStandalone__GetUniqueGrandSquareObj
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = assetId;
-  if ( (byte_4CB9F1C & 1) == 0 )
+  if ( (byte_4CCB06F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardSquare___);
-    byte_4CB9F1C = 1;
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+    byte_4CCB06F = 1;
   }
   v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._20_get_GRAND_SQUARE_PATH.methodPtr)(
                             this,
                             this->klass->vtable._20_get_GRAND_SQUARE_PATH.method,
                             method);
   v5 = System_Int32__ToString((int32_t)&v8, 0);
-  v6 = System_String__Concat_63966792(v4, v5, 0);
+  v6 = System_String__Concat_64031724(v4, v5, 0);
   return (ClassBoardSquare_o *)UnityEngine_Resources__Load_object_(
                                  v6,
-                                 (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+                                 (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
 }
 
 
@@ -140,20 +144,20 @@ ClassBoardLock_o *ClassBoardResourceCatalogStandalone__GetUniqueLockObject(
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = assetId;
-  if ( (byte_4CB9F1B & 1) == 0 )
+  if ( (byte_4CCB06E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardLock___);
-    byte_4CB9F1B = 1;
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardLock___);
+    byte_4CCB06E = 1;
   }
   v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._16_get_LOCK_PATH.methodPtr)(
                             this,
                             this->klass->vtable._16_get_LOCK_PATH.method,
                             method);
   v5 = System_Int32__ToString((int32_t)&v8, 0);
-  v6 = System_String__Concat_63966792(v4, v5, 0);
+  v6 = System_String__Concat_64031724(v4, v5, 0);
   return (ClassBoardLock_o *)UnityEngine_Resources__Load_object_(
                                v6,
-                               (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
+                               (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
 }
 
 
@@ -168,20 +172,20 @@ ClassBoardSquare_o *ClassBoardResourceCatalogStandalone__GetUniqueSquareObject(
   int32_t v8; // [xsp+Ch] [xbp-24h] BYREF
 
   v8 = assetId;
-  if ( (byte_4CB9F19 & 1) == 0 )
+  if ( (byte_4CCB06C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardSquare___);
-    byte_4CB9F19 = 1;
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+    byte_4CCB06C = 1;
   }
   v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._15_get_SQUARE_PATH.methodPtr)(
                             this,
                             this->klass->vtable._15_get_SQUARE_PATH.method,
                             method);
   v5 = System_Int32__ToString((int32_t)&v8, 0);
-  v6 = System_String__Concat_63966792(v4, v5, 0);
+  v6 = System_String__Concat_64031724(v4, v5, 0);
   return (ClassBoardSquare_o *)UnityEngine_Resources__Load_object_(
                                  v6,
-                                 (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+                                 (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
 }
 
 
@@ -230,47 +234,67 @@ void ClassBoardResourceCatalogStandalone__LoadSystemAsset(
   AtlasManagerUnit_o *v41; // x28
   const MethodInfo *v42; // x5
   int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  int32_t v45; // w2
-  const MethodInfo *v46; // x3
-  int32_t v47; // w2
-  const MethodInfo *v48; // x3
-  struct ClassBoardResourceContents_o *v49; // x19
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
-  int32_t v52; // w2
-  const MethodInfo *v53; // x3
+  int32_t v44; // w3
+  System_String_o *v45; // x4
+  int32_t v46; // w5
+  int64_t v47; // x6
+  System_String_o *v48; // x7
+  int32_t v49; // w2
+  int32_t v50; // w3
+  System_String_o *v51; // x4
+  int32_t v52; // w5
+  int64_t v53; // x6
+  System_String_o *v54; // x7
+  int32_t v55; // w2
+  int32_t v56; // w3
+  System_String_o *v57; // x4
+  int32_t v58; // w5
+  int64_t v59; // x6
+  System_String_o *v60; // x7
+  struct ClassBoardResourceContents_o *v61; // x19
+  int32_t v62; // w2
+  int32_t v63; // w3
+  System_String_o *v64; // x4
+  int32_t v65; // w5
+  int64_t v66; // x6
+  System_String_o *v67; // x7
+  int32_t v68; // w2
+  int32_t v69; // w3
+  System_String_o *v70; // x4
+  int32_t v71; // w5
+  int64_t v72; // x6
+  System_String_o *v73; // x7
   ClassBoardUIController_o *uiController; // [xsp+8h] [xbp-A8h]
   ClassBoardDisableOpenDialog_o *classBoardDisableOpenDialog; // [xsp+10h] [xbp-A0h]
   ClassBoardLock_o *lockAsset; // [xsp+18h] [xbp-98h]
-  Il2CppObject *v58; // [xsp+20h] [xbp-90h]
-  Il2CppObject *v59; // [xsp+28h] [xbp-88h]
-  Il2CppObject *v60; // [xsp+30h] [xbp-80h]
-  Il2CppObject *v61; // [xsp+38h] [xbp-78h]
-  Il2CppObject *v62; // [xsp+40h] [xbp-70h]
+  Il2CppObject *v78; // [xsp+20h] [xbp-90h]
+  Il2CppObject *v79; // [xsp+28h] [xbp-88h]
+  Il2CppObject *v80; // [xsp+30h] [xbp-80h]
+  Il2CppObject *v81; // [xsp+38h] [xbp-78h]
+  Il2CppObject *v82; // [xsp+40h] [xbp-70h]
   Il2CppObject *object; // [xsp+48h] [xbp-68h]
 
-  if ( (byte_4CB9F18 & 1) == 0 )
+  if ( (byte_4CCB06B & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManagerUnit_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardBackground___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardBlank___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardDisableOpenDialog___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardFigureController___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardFullReleaseEffectComponent___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardLine___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardLockOpenConfirmDialog___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardLockReleaseConditionDialog___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardLock___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardQuestOpenConfirmDialog___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardSquareDetailDialog___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardSquareOpenConfirmDialog___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardSquare___);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_ClassBoardUIController___);
-    sub_1C6BA08(&StringLiteral_4445/*"ClassBoard/FullReleaseEffectGrandScore"*/);
-    sub_1C6BA08(&StringLiteral_4444/*"ClassBoard/FullReleaseEffectClassScore"*/);
-    sub_1C6BA08(&StringLiteral_4439/*"ClassBoard/ClassBoardQuestOpenConfirmDialog"*/);
-    byte_4CB9F18 = 1;
+    sub_1C713B0(&AtlasManagerUnit_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardBackground___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardDisableOpenDialog___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardFigureController___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardFullReleaseEffectComponent___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardLine___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardLockOpenConfirmDialog___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardLockReleaseConditionDialog___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardLock___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardQuestOpenConfirmDialog___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardSquareDetailDialog___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardSquareOpenConfirmDialog___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_ClassBoardUIController___);
+    sub_1C713B0(&StringLiteral_4448/*"ClassBoard/FullReleaseEffectGrandScore"*/);
+    sub_1C713B0(&StringLiteral_4447/*"ClassBoard/FullReleaseEffectClassScore"*/);
+    sub_1C713B0(&StringLiteral_4442/*"ClassBoard/ClassBoardQuestOpenConfirmDialog"*/);
+    byte_4CCB06B = 1;
   }
   v4 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._15_get_SQUARE_PATH.methodPtr)(
                             this,
@@ -278,123 +302,123 @@ void ClassBoardResourceCatalogStandalone__LoadSystemAsset(
                             method);
   object = UnityEngine_Resources__Load_object_(
              v4,
-             (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+             (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
   v5 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._14_get_LINE_PATH.methodPtr)(
                             this,
                             this->klass->vtable._14_get_LINE_PATH.method);
-  v62 = UnityEngine_Resources__Load_object_(
+  v82 = UnityEngine_Resources__Load_object_(
           v5,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardLine___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardLine___);
   v6 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._16_get_LOCK_PATH.methodPtr)(
                             this,
                             this->klass->vtable._16_get_LOCK_PATH.method);
-  v61 = UnityEngine_Resources__Load_object_(
+  v81 = UnityEngine_Resources__Load_object_(
           v6,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
   v7 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._17_get_BLANK_PATH.methodPtr)(
                             this,
                             this->klass->vtable._17_get_BLANK_PATH.method);
-  v60 = UnityEngine_Resources__Load_object_(
+  v80 = UnityEngine_Resources__Load_object_(
           v7,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
   v8 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._20_get_GRAND_SQUARE_PATH.methodPtr)(
                             this,
                             this->klass->vtable._20_get_GRAND_SQUARE_PATH.method);
-  v59 = UnityEngine_Resources__Load_object_(
+  v79 = UnityEngine_Resources__Load_object_(
           v8,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardSquare___);
   v9 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._19_get_GRAND_LINE_PATH.methodPtr)(
                             this,
                             this->klass->vtable._19_get_GRAND_LINE_PATH.method);
-  v58 = UnityEngine_Resources__Load_object_(
+  v78 = UnityEngine_Resources__Load_object_(
           v9,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardLine___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardLine___);
   v10 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._21_get_GRAND_LOCK_PATH.methodPtr)(
                              this,
                              this->klass->vtable._21_get_GRAND_LOCK_PATH.method);
   lockAsset = (ClassBoardLock_o *)UnityEngine_Resources__Load_object_(
                                     v10,
-                                    (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
+                                    (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardLock___);
   v11 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._22_get_GRAND_BLANK_PATH.methodPtr)(
                              this,
                              this->klass->vtable._22_get_GRAND_BLANK_PATH.method);
   v12 = UnityEngine_Resources__Load_object_(
           v11,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardBlank___);
   v13 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._23_get_DISABLE_OPEN_DIALOG_PATH.methodPtr)(
                              this,
                              this->klass->vtable._23_get_DISABLE_OPEN_DIALOG_PATH.method);
   classBoardDisableOpenDialog = (ClassBoardDisableOpenDialog_o *)UnityEngine_Resources__Load_object_(
                                                                    v13,
-                                                                   (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardDisableOpenDialog___);
+                                                                   (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardDisableOpenDialog___);
   v14 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._24_get_SQUARE_OPEN_CONFIRM_DIALOG_PATH.methodPtr)(
                              this,
                              this->klass->vtable._24_get_SQUARE_OPEN_CONFIRM_DIALOG_PATH.method);
   v15 = UnityEngine_Resources__Load_object_(
           v14,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardSquareOpenConfirmDialog___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardSquareOpenConfirmDialog___);
   v16 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._25_get_LOCK_OPEN_CONFIRM_DIALOG_PATH.methodPtr)(
                              this,
                              this->klass->vtable._25_get_LOCK_OPEN_CONFIRM_DIALOG_PATH.method);
   v17 = UnityEngine_Resources__Load_object_(
           v16,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardLockOpenConfirmDialog___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardLockOpenConfirmDialog___);
   v18 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._26_get_LOCK_RELEASE_CONDITION_DIALOG_PATH.methodPtr)(
                              this,
                              this->klass->vtable._26_get_LOCK_RELEASE_CONDITION_DIALOG_PATH.method);
   v19 = UnityEngine_Resources__Load_object_(
           v18,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardLockReleaseConditionDialog___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardLockReleaseConditionDialog___);
   v20 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._27_get_SQUARE_DETAIL_DIALOG_PATH.methodPtr)(
                              this,
                              this->klass->vtable._27_get_SQUARE_DETAIL_DIALOG_PATH.method);
   v21 = UnityEngine_Resources__Load_object_(
           v20,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardSquareDetailDialog___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardSquareDetailDialog___);
   v22 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._28_get_BOARD_UI_PATH.methodPtr)(
                              this,
                              this->klass->vtable._28_get_BOARD_UI_PATH.method);
   uiController = (ClassBoardUIController_o *)UnityEngine_Resources__Load_object_(
                                                v22,
-                                               (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardUIController___);
+                                               (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardUIController___);
   v23 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._30_get_BOARD_BG_MODEL_PATH.methodPtr)(
                              this,
                              this->klass->vtable._30_get_BOARD_BG_MODEL_PATH.method);
   v24 = UnityEngine_Resources__Load_object_(
           v23,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardBackground___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardBackground___);
   v25 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._18_get_BOARD_FIGURE_PATH.methodPtr)(
                              this,
                              this->klass->vtable._18_get_BOARD_FIGURE_PATH.method);
   v26 = UnityEngine_Resources__Load_object_(
           v25,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardFigureController___);
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardFigureController___);
   v27 = UnityEngine_Resources__Load_object_(
-          (System_String_o *)StringLiteral_4439/*"ClassBoard/ClassBoardQuestOpenConfirmDialog"*/,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardQuestOpenConfirmDialog___);
+          (System_String_o *)StringLiteral_4442/*"ClassBoard/ClassBoardQuestOpenConfirmDialog"*/,
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardQuestOpenConfirmDialog___);
   v28 = UnityEngine_Resources__Load_object_(
-          (System_String_o *)StringLiteral_4444/*"ClassBoard/FullReleaseEffectClassScore"*/,
-          (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardFullReleaseEffectComponent___);
+          (System_String_o *)StringLiteral_4447/*"ClassBoard/FullReleaseEffectClassScore"*/,
+          (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardFullReleaseEffectComponent___);
   Contents_k__BackingField = (char *)UnityEngine_Resources__Load_object_(
-                                       (System_String_o *)StringLiteral_4445/*"ClassBoard/FullReleaseEffectGrandScore"*/,
-                                       (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_ClassBoardFullReleaseEffectComponent___);
+                                       (System_String_o *)StringLiteral_4448/*"ClassBoard/FullReleaseEffectGrandScore"*/,
+                                       (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_ClassBoardFullReleaseEffectComponent___);
   if ( !this->fields._Contents_k__BackingField )
     goto LABEL_13;
   v32 = (struct ClassBoardFullReleaseEffectComponent_o *)Contents_k__BackingField;
   ClassBoardResourceContents__SetContents(
     this->fields._Contents_k__BackingField,
     (ClassBoardSquare_o *)object,
-    (ClassBoardLine_o *)v62,
-    (ClassBoardLock_o *)v61,
-    (ClassBoardBlank_o *)v60,
+    (ClassBoardLine_o *)v82,
+    (ClassBoardLock_o *)v81,
+    (ClassBoardBlank_o *)v80,
     v31);
   Contents_k__BackingField = (char *)this->fields._Contents_k__BackingField;
   if ( !Contents_k__BackingField )
     goto LABEL_13;
   ClassBoardResourceContents__SetGrandContents(
     (ClassBoardResourceContents_o *)Contents_k__BackingField,
-    (ClassBoardSquare_o *)v59,
-    (ClassBoardLine_o *)v58,
+    (ClassBoardSquare_o *)v79,
+    (ClassBoardLine_o *)v78,
     lockAsset,
     (ClassBoardBlank_o *)v12,
     v33);
@@ -413,17 +437,17 @@ void ClassBoardResourceCatalogStandalone__LoadSystemAsset(
   v36 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._31_get_UI_ATLAS_PATH.methodPtr)(
                              this,
                              this->klass->vtable._31_get_UI_ATLAS_PATH.method);
-  v37 = (AtlasManagerUnit_o *)sub_1C6BC54(AtlasManagerUnit_TypeInfo);
+  v37 = (AtlasManagerUnit_o *)sub_1C715FC(AtlasManagerUnit_TypeInfo);
   AtlasManagerUnit___ctor(v37, v36, 0, 0);
   v38 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._29_get_ICON_ATLAS_PATH.methodPtr)(
                              this,
                              this->klass->vtable._29_get_ICON_ATLAS_PATH.method);
-  v39 = (AtlasManagerUnit_o *)sub_1C6BC54(AtlasManagerUnit_TypeInfo);
+  v39 = (AtlasManagerUnit_o *)sub_1C715FC(AtlasManagerUnit_TypeInfo);
   AtlasManagerUnit___ctor(v39, v38, 0, 0);
   v40 = (System_String_o *)((__int64 (__fastcall *)(ClassBoardResourceCatalogStandalone_o *, const MethodInfo *))this->klass->vtable._32_get_CLASS_UI_ATLAS_PATH.methodPtr)(
                              this,
                              this->klass->vtable._32_get_CLASS_UI_ATLAS_PATH.method);
-  v41 = (AtlasManagerUnit_o *)sub_1C6BC54(AtlasManagerUnit_TypeInfo);
+  v41 = (AtlasManagerUnit_o *)sub_1C715FC(AtlasManagerUnit_TypeInfo);
   AtlasManagerUnit___ctor(v41, v40, 0, 0);
   if ( !v35 )
     goto LABEL_13;
@@ -432,33 +456,57 @@ void ClassBoardResourceCatalogStandalone__LoadSystemAsset(
   if ( !Contents_k__BackingField )
     goto LABEL_13;
   *((_QWORD *)Contents_k__BackingField + 20) = v24;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(Contents_k__BackingField + 160), (int32_t)v24, v43, v44);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)Contents_k__BackingField + 1, (int32_t)v24, v43, v44, v45, v46, v47, v48);
   Contents_k__BackingField = (char *)this->fields._Contents_k__BackingField;
   if ( !Contents_k__BackingField )
     goto LABEL_13;
   *((_QWORD *)Contents_k__BackingField + 16) = v26;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(Contents_k__BackingField + 128), (int32_t)v26, v45, v46);
-  v49 = this->fields._Contents_k__BackingField;
-  if ( !v49
-    || (v49->fields._FullReleaseEffectComponent_k__BackingField = (struct ClassBoardFullReleaseEffectComponent_o *)v28,
-        sub_1C6B9AC(
-          (CGThumbnailListItem_o *)&v49->fields._FullReleaseEffectComponent_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)(Contents_k__BackingField + 128),
+    (int32_t)v26,
+    v49,
+    v50,
+    v51,
+    v52,
+    v53,
+    v54);
+  v61 = this->fields._Contents_k__BackingField;
+  if ( !v61
+    || (v61->fields._FullReleaseEffectComponent_k__BackingField = (struct ClassBoardFullReleaseEffectComponent_o *)v28,
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&v61->fields._FullReleaseEffectComponent_k__BackingField,
           (int32_t)v28,
-          v47,
-          v48),
-        v49->fields._GrandFullReleaseEffectComponent_k__BackingField = v32,
-        sub_1C6B9AC(
-          (CGThumbnailListItem_o *)&v49->fields._GrandFullReleaseEffectComponent_k__BackingField,
+          v55,
+          v56,
+          v57,
+          v58,
+          v59,
+          v60),
+        v61->fields._GrandFullReleaseEffectComponent_k__BackingField = v32,
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&v61->fields._GrandFullReleaseEffectComponent_k__BackingField,
           (int32_t)v32,
-          v50,
-          v51),
+          v62,
+          v63,
+          v64,
+          v65,
+          v66,
+          v67),
         (Contents_k__BackingField = (char *)this->fields._Contents_k__BackingField) == 0)
     || (*((_QWORD *)Contents_k__BackingField + 17) = v27,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(Contents_k__BackingField + 136), (int32_t)v27, v52, v53),
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)(Contents_k__BackingField + 136),
+          (int32_t)v27,
+          v68,
+          v69,
+          v70,
+          v71,
+          v72,
+          v73),
         !callback) )
   {
 LABEL_13:
-    sub_1C6BC60(Contents_k__BackingField, v30);
+    sub_1C71608(Contents_k__BackingField, v30);
   }
   ((void (__fastcall *)(intptr_t, intptr_t))callback->fields.invoke_impl)(
     callback->fields.method_code,
@@ -488,12 +536,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_BLANK_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F07 & 1) == 0 )
+  if ( (byte_4CCB05A & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4432/*"ClassBoard/ClassBoardBlank"*/);
-    byte_4CB9F07 = 1;
+    sub_1C713B0(&StringLiteral_4435/*"ClassBoard/ClassBoardBlank"*/);
+    byte_4CCB05A = 1;
   }
-  return (System_String_o *)StringLiteral_4432/*"ClassBoard/ClassBoardBlank"*/;
+  return (System_String_o *)StringLiteral_4435/*"ClassBoard/ClassBoardBlank"*/;
 }
 
 
@@ -501,12 +549,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_BOARD_BG_MODEL_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F14 & 1) == 0 )
+  if ( (byte_4CCB067 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4431/*"ClassBoard/Bg/ClassBoardBg"*/);
-    byte_4CB9F14 = 1;
+    sub_1C713B0(&StringLiteral_4434/*"ClassBoard/Bg/ClassBoardBg"*/);
+    byte_4CCB067 = 1;
   }
-  return (System_String_o *)StringLiteral_4431/*"ClassBoard/Bg/ClassBoardBg"*/;
+  return (System_String_o *)StringLiteral_4434/*"ClassBoard/Bg/ClassBoardBg"*/;
 }
 
 
@@ -514,12 +562,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_BOARD_FIGURE_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F08 & 1) == 0 )
+  if ( (byte_4CCB05B & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4434/*"ClassBoard/ClassBoardFigure"*/);
-    byte_4CB9F08 = 1;
+    sub_1C713B0(&StringLiteral_4437/*"ClassBoard/ClassBoardFigure"*/);
+    byte_4CCB05B = 1;
   }
-  return (System_String_o *)StringLiteral_4434/*"ClassBoard/ClassBoardFigure"*/;
+  return (System_String_o *)StringLiteral_4437/*"ClassBoard/ClassBoardFigure"*/;
 }
 
 
@@ -527,12 +575,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_BOARD_UI_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F12 & 1) == 0 )
+  if ( (byte_4CCB065 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4443/*"ClassBoard/ClassBoardUI"*/);
-    byte_4CB9F12 = 1;
+    sub_1C713B0(&StringLiteral_4446/*"ClassBoard/ClassBoardUI"*/);
+    byte_4CCB065 = 1;
   }
-  return (System_String_o *)StringLiteral_4443/*"ClassBoard/ClassBoardUI"*/;
+  return (System_String_o *)StringLiteral_4446/*"ClassBoard/ClassBoardUI"*/;
 }
 
 
@@ -540,12 +588,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_CLASS_UI_ATLAS_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F16 & 1) == 0 )
+  if ( (byte_4CCB069 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4453/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/);
-    byte_4CB9F16 = 1;
+    sub_1C713B0(&StringLiteral_4456/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/);
+    byte_4CCB069 = 1;
   }
-  return (System_String_o *)StringLiteral_4453/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/;
+  return (System_String_o *)StringLiteral_4456/*"ClassBoard/UI/DownloadClassBoardClassUIAtlas"*/;
 }
 
 
@@ -561,12 +609,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_DISABLE_OPEN_DIALOG_PA
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F0D & 1) == 0 )
+  if ( (byte_4CCB060 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4433/*"ClassBoard/ClassBoardDisableOpenDialog"*/);
-    byte_4CB9F0D = 1;
+    sub_1C713B0(&StringLiteral_4436/*"ClassBoard/ClassBoardDisableOpenDialog"*/);
+    byte_4CCB060 = 1;
   }
-  return (System_String_o *)StringLiteral_4433/*"ClassBoard/ClassBoardDisableOpenDialog"*/;
+  return (System_String_o *)StringLiteral_4436/*"ClassBoard/ClassBoardDisableOpenDialog"*/;
 }
 
 
@@ -574,12 +622,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_GRAND_BLANK_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F0C & 1) == 0 )
+  if ( (byte_4CCB05F & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4446/*"ClassBoard/GrandClassBoardBlank"*/);
-    byte_4CB9F0C = 1;
+    sub_1C713B0(&StringLiteral_4449/*"ClassBoard/GrandClassBoardBlank"*/);
+    byte_4CCB05F = 1;
   }
-  return (System_String_o *)StringLiteral_4446/*"ClassBoard/GrandClassBoardBlank"*/;
+  return (System_String_o *)StringLiteral_4449/*"ClassBoard/GrandClassBoardBlank"*/;
 }
 
 
@@ -587,12 +635,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_GRAND_LINE_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F09 & 1) == 0 )
+  if ( (byte_4CCB05C & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4447/*"ClassBoard/GrandClassBoardLine"*/);
-    byte_4CB9F09 = 1;
+    sub_1C713B0(&StringLiteral_4450/*"ClassBoard/GrandClassBoardLine"*/);
+    byte_4CCB05C = 1;
   }
-  return (System_String_o *)StringLiteral_4447/*"ClassBoard/GrandClassBoardLine"*/;
+  return (System_String_o *)StringLiteral_4450/*"ClassBoard/GrandClassBoardLine"*/;
 }
 
 
@@ -600,12 +648,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_GRAND_LOCK_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F0B & 1) == 0 )
+  if ( (byte_4CCB05E & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4448/*"ClassBoard/GrandClassBoardLock"*/);
-    byte_4CB9F0B = 1;
+    sub_1C713B0(&StringLiteral_4451/*"ClassBoard/GrandClassBoardLock"*/);
+    byte_4CCB05E = 1;
   }
-  return (System_String_o *)StringLiteral_4448/*"ClassBoard/GrandClassBoardLock"*/;
+  return (System_String_o *)StringLiteral_4451/*"ClassBoard/GrandClassBoardLock"*/;
 }
 
 
@@ -613,12 +661,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_GRAND_SQUARE_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F0A & 1) == 0 )
+  if ( (byte_4CCB05D & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4449/*"ClassBoard/GrandClassBoardSquare"*/);
-    byte_4CB9F0A = 1;
+    sub_1C713B0(&StringLiteral_4452/*"ClassBoard/GrandClassBoardSquare"*/);
+    byte_4CCB05D = 1;
   }
-  return (System_String_o *)StringLiteral_4449/*"ClassBoard/GrandClassBoardSquare"*/;
+  return (System_String_o *)StringLiteral_4452/*"ClassBoard/GrandClassBoardSquare"*/;
 }
 
 
@@ -626,12 +674,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_ICON_ATLAS_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F13 & 1) == 0 )
+  if ( (byte_4CCB066 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4450/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/);
-    byte_4CB9F13 = 1;
+    sub_1C713B0(&StringLiteral_4453/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/);
+    byte_4CCB066 = 1;
   }
-  return (System_String_o *)StringLiteral_4450/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/;
+  return (System_String_o *)StringLiteral_4453/*"ClassBoard/Icon/DownloadClassBoardIconAtlas"*/;
 }
 
 
@@ -639,12 +687,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_LINE_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F04 & 1) == 0 )
+  if ( (byte_4CCB057 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4435/*"ClassBoard/ClassBoardLine"*/);
-    byte_4CB9F04 = 1;
+    sub_1C713B0(&StringLiteral_4438/*"ClassBoard/ClassBoardLine"*/);
+    byte_4CCB057 = 1;
   }
-  return (System_String_o *)StringLiteral_4435/*"ClassBoard/ClassBoardLine"*/;
+  return (System_String_o *)StringLiteral_4438/*"ClassBoard/ClassBoardLine"*/;
 }
 
 
@@ -652,12 +700,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_LOCK_OPEN_CONFIRM_DIAL
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F0F & 1) == 0 )
+  if ( (byte_4CCB062 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4437/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/);
-    byte_4CB9F0F = 1;
+    sub_1C713B0(&StringLiteral_4440/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/);
+    byte_4CCB062 = 1;
   }
-  return (System_String_o *)StringLiteral_4437/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/;
+  return (System_String_o *)StringLiteral_4440/*"ClassBoard/ClassBoardLockOpenConfirmDialog"*/;
 }
 
 
@@ -665,12 +713,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_LOCK_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F06 & 1) == 0 )
+  if ( (byte_4CCB059 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4436/*"ClassBoard/ClassBoardLock"*/);
-    byte_4CB9F06 = 1;
+    sub_1C713B0(&StringLiteral_4439/*"ClassBoard/ClassBoardLock"*/);
+    byte_4CCB059 = 1;
   }
-  return (System_String_o *)StringLiteral_4436/*"ClassBoard/ClassBoardLock"*/;
+  return (System_String_o *)StringLiteral_4439/*"ClassBoard/ClassBoardLock"*/;
 }
 
 
@@ -678,12 +726,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_LOCK_RELEASE_CONDITION
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F10 & 1) == 0 )
+  if ( (byte_4CCB063 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4438/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/);
-    byte_4CB9F10 = 1;
+    sub_1C713B0(&StringLiteral_4441/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/);
+    byte_4CCB063 = 1;
   }
-  return (System_String_o *)StringLiteral_4438/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/;
+  return (System_String_o *)StringLiteral_4441/*"ClassBoard/ClassBoardLockReleaseConditionDialog"*/;
 }
 
 
@@ -691,12 +739,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_SQUARE_DETAIL_DIALOG_P
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F11 & 1) == 0 )
+  if ( (byte_4CCB064 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4441/*"ClassBoard/ClassBoardSquareDetailDialog"*/);
-    byte_4CB9F11 = 1;
+    sub_1C713B0(&StringLiteral_4444/*"ClassBoard/ClassBoardSquareDetailDialog"*/);
+    byte_4CCB064 = 1;
   }
-  return (System_String_o *)StringLiteral_4441/*"ClassBoard/ClassBoardSquareDetailDialog"*/;
+  return (System_String_o *)StringLiteral_4444/*"ClassBoard/ClassBoardSquareDetailDialog"*/;
 }
 
 
@@ -704,12 +752,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_SQUARE_OPEN_CONFIRM_DI
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F0E & 1) == 0 )
+  if ( (byte_4CCB061 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4442/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/);
-    byte_4CB9F0E = 1;
+    sub_1C713B0(&StringLiteral_4445/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/);
+    byte_4CCB061 = 1;
   }
-  return (System_String_o *)StringLiteral_4442/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/;
+  return (System_String_o *)StringLiteral_4445/*"ClassBoard/ClassBoardSquareOpenConfirmDialog"*/;
 }
 
 
@@ -717,12 +765,12 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_SQUARE_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F05 & 1) == 0 )
+  if ( (byte_4CCB058 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4440/*"ClassBoard/ClassBoardSquare"*/);
-    byte_4CB9F05 = 1;
+    sub_1C713B0(&StringLiteral_4443/*"ClassBoard/ClassBoardSquare"*/);
+    byte_4CCB058 = 1;
   }
-  return (System_String_o *)StringLiteral_4440/*"ClassBoard/ClassBoardSquare"*/;
+  return (System_String_o *)StringLiteral_4443/*"ClassBoard/ClassBoardSquare"*/;
 }
 
 
@@ -730,10 +778,10 @@ System_String_o *ClassBoardResourceCatalogStandalone__get_UI_ATLAS_PATH(
         ClassBoardResourceCatalogStandalone_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9F15 & 1) == 0 )
+  if ( (byte_4CCB068 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4454/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/);
-    byte_4CB9F15 = 1;
+    sub_1C713B0(&StringLiteral_4457/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/);
+    byte_4CCB068 = 1;
   }
-  return (System_String_o *)StringLiteral_4454/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/;
+  return (System_String_o *)StringLiteral_4457/*"ClassBoard/UI/DownloadClassBoardUIAtlas"*/;
 }

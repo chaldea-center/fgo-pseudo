@@ -1,14 +1,14 @@
 void GalleryResourceMaster___ctor(GalleryResourceMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB65E8 & 1) == 0 )
+  if ( (byte_4CC7710 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string___ctor__);
-    byte_4CB65E8 = 1;
+    sub_1C713B0(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string___ctor__);
+    byte_4CC7710 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     543,
-    (const MethodInfo_33FB870 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string___ctor__);
+    (const MethodInfo_340B614 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string___ctor__);
 }
 
 
@@ -24,22 +24,22 @@ System_Collections_Generic_List_GalleryResourceEntity__o *GalleryResourceMaster_
   System_Func_object__bool__o *v9; // x20
   System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
 
-  if ( (byte_4CB65E7 & 1) == 0 )
+  if ( (byte_4CC770F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
-    sub_1C6BA08(&System_Func_GalleryResourceEntity__bool__TypeInfo);
-    sub_1C6BA08(&Method_GalleryResourceMaster___c__DisplayClass0_0__GetEnableGalleryResourceEntityListByGalleryId_b__0__);
-    sub_1C6BA08(&GalleryResourceMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4CB65E7 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
+    sub_1C713B0(&System_Func_GalleryResourceEntity__bool__TypeInfo);
+    sub_1C713B0(&Method_GalleryResourceMaster___c__DisplayClass0_0__GetEnableGalleryResourceEntityListByGalleryId_b__0__);
+    sub_1C713B0(&GalleryResourceMaster___c__DisplayClass0_0_TypeInfo);
+    byte_4CC770F = 1;
   }
-  v5 = sub_1C6BC54(GalleryResourceMaster___c__DisplayClass0_0_TypeInfo);
+  v5 = sub_1C715FC(GalleryResourceMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_DWORD *)(v5 + 16) = galleryId;
   list = this->fields.list;
-  v9 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_GalleryResourceEntity__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_GalleryResourceEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -48,10 +48,10 @@ System_Collections_Generic_List_GalleryResourceEntity__o *GalleryResourceMaster_
   v10 = System_Linq_Enumerable__Where_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)list,
           (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
+          (const MethodInfo_3192108 *)Method_System_Linq_Enumerable_Where_GalleryResourceEntity___);
   return (System_Collections_Generic_List_GalleryResourceEntity__o *)System_Linq_Enumerable__ToList_object_(
                                                                        v10,
-                                                                       (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
+                                                                       (const MethodInfo_318FC88 *)Method_System_Linq_Enumerable_ToList_GalleryResourceEntity___);
 }
 
 
@@ -64,16 +64,16 @@ GalleryResourceEntity_o *GalleryResourceMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CB65E9 & 1) == 0 )
+  if ( (byte_4CC7711 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__GetEntity__);
-    byte_4CB65E9 = 1;
+    sub_1C713B0(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__GetEntity__);
+    byte_4CC7711 = 1;
   }
   PK = (Il2CppObject *)GalleryResourceEntity__CreatePK(galleryId, idx, *(const MethodInfo **)&idx);
   return (GalleryResourceEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                       (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                       PK,
-                                      (const MethodInfo_33FDB94 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__GetEntity__);
+                                      (const MethodInfo_340D938 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__GetEntity__);
 }
 
 
@@ -87,17 +87,17 @@ bool GalleryResourceMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CB65EA & 1) == 0 )
+  if ( (byte_4CC7712 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__TryGetEntity__);
-    byte_4CB65EA = 1;
+    sub_1C713B0(&Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__TryGetEntity__);
+    byte_4CC7712 = 1;
   }
   PK = (Il2CppObject *)GalleryResourceEntity__CreatePK(galleryId, idx, *(const MethodInfo **)&galleryId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33FDBE0 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__TryGetEntity__);
+           (const MethodInfo_340D984 *)Method_DataMasterBase_GalleryResourceMaster__GalleryResourceEntity__string__TryGetEntity__);
 }
 
 
@@ -120,13 +120,13 @@ bool GalleryResourceMaster___c__DisplayClass0_0___GetEnableGalleryResourceEntity
   int64_t condNum; // x19
 
   v4 = this;
-  if ( (byte_4CB65EB & 1) == 0 )
+  if ( (byte_4CC7713 & 1) == 0 )
   {
-    this = (GalleryResourceMaster___c__DisplayClass0_0_o *)sub_1C6BA08(&CondType_TypeInfo);
-    byte_4CB65EB = 1;
+    this = (GalleryResourceMaster___c__DisplayClass0_0_o *)sub_1C713B0(&CondType_TypeInfo);
+    byte_4CC7713 = 1;
   }
   if ( !entity )
-    sub_1C6BC60(this, entity);
+    sub_1C71608(this, entity);
   if ( entity->fields.galleryId != v4->fields.galleryId )
     return 0;
   condType = entity->fields.condType;

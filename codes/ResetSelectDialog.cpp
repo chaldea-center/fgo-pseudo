@@ -1,42 +1,58 @@
 void ResetSelectDialog___cctor(const MethodInfo *method)
 {
   int32_t v1; // w2
-  const MethodInfo *v2; // x3
-  int32_t v3; // w1
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  int32_t v4; // w5
+  int64_t v5; // x6
+  System_String_o *v6; // x7
+  int32_t v7; // w1
   struct ResetSelectDialog_StaticFields *static_fields; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v9; // w2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
-  if ( (byte_4CB57E2 & 1) == 0 )
+  if ( (byte_4CC6903 & 1) == 0 )
   {
-    sub_1C6BA08(&ResetSelectDialog_TypeInfo);
-    sub_1C6BA08(&StringLiteral_17450/*"btn_bg_01"*/);
-    sub_1C6BA08(&StringLiteral_17453/*"btn_bg_03"*/);
-    byte_4CB57E2 = 1;
+    sub_1C713B0(&ResetSelectDialog_TypeInfo);
+    sub_1C713B0(&StringLiteral_17457/*"btn_bg_01"*/);
+    sub_1C713B0(&StringLiteral_17460/*"btn_bg_03"*/);
+    byte_4CC6903 = 1;
   }
-  ResetSelectDialog_TypeInfo->static_fields->BTN_NAME_01 = (struct System_String_o *)StringLiteral_17450/*"btn_bg_01"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)ResetSelectDialog_TypeInfo->static_fields, StringLiteral_17450/*"btn_bg_01"*/, v1, v2);
-  v3 = StringLiteral_17453/*"btn_bg_03"*/;
+  ResetSelectDialog_TypeInfo->static_fields->BTN_NAME_01 = (struct System_String_o *)StringLiteral_17457/*"btn_bg_01"*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)ResetSelectDialog_TypeInfo->static_fields,
+    StringLiteral_17457/*"btn_bg_01"*/,
+    v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6);
+  v7 = StringLiteral_17460/*"btn_bg_03"*/;
   static_fields = ResetSelectDialog_TypeInfo->static_fields;
-  static_fields->BTN_NAME_03 = (struct System_String_o *)StringLiteral_17453/*"btn_bg_03"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->BTN_NAME_03, v3, v5, v6);
-  *(_OWORD *)&ResetSelectDialog_TypeInfo->static_fields->BTN_01_WIDTH = xmmword_CECB90;
+  static_fields->BTN_NAME_03 = (struct System_String_o *)StringLiteral_17460/*"btn_bg_03"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->BTN_NAME_03, v7, v9, v10, v11, v12, v13, v14);
+  *(_OWORD *)&ResetSelectDialog_TypeInfo->static_fields->BTN_01_WIDTH = xmmword_CEF7D0;
 }
 
 
 void ResetSelectDialog___ctor(ResetSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB57E1 & 1) == 0 )
+  if ( (byte_4CC6902 & 1) == 0 )
   {
-    sub_1C6BA08(&BaseDialog_TypeInfo);
-    byte_4CB57E1 = 1;
+    sub_1C713B0(&BaseDialog_TypeInfo);
+    byte_4CC6902 = 1;
   }
   this->fields.threeButtonRightY = -111.0;
-  *(_OWORD *)&this->fields.twoButtonLeftX = xmmword_CEB8C0;
-  *(_OWORD *)&this->fields.threeButtonCenterX = xmmword_CECE60;
-  *(_OWORD *)&this->fields.twoButtonFontSize = xmmword_CEBC90;
+  *(_OWORD *)&this->fields.twoButtonLeftX = xmmword_CEE500;
+  *(_OWORD *)&this->fields.threeButtonCenterX = xmmword_CEFAA0;
+  *(_OWORD *)&this->fields.twoButtonFontSize = xmmword_CEE8D0;
   this->fields.oneButtonCenterY = -162.5;
-  *(_OWORD *)&this->fields.threeButtonCancelFontSize = xmmword_CED010;
+  *(_OWORD *)&this->fields.threeButtonCancelFontSize = xmmword_CEFC50;
   *(_QWORD *)&this->fields.threeButtonNoCancelMessageSize = 0x1E0000001ALL;
   this->fields.oneButtonMessageSize = 25;
   this->fields.rightButtonNo = 2;
@@ -56,26 +72,38 @@ void ResetSelectDialog__Close(ResetSelectDialog_o *this, const MethodInfo *metho
 {
   const MethodInfo *v2; // x2
 
-  ResetSelectDialog__Close_41276968(this, 0, v2);
+  ResetSelectDialog__Close_41319984(this, 0, v2);
 }
 
 
-void ResetSelectDialog__Close_41276968(ResetSelectDialog_o *this, System_Action_o *callback, const MethodInfo *method)
+void ResetSelectDialog__Close_41319984(ResetSelectDialog_o *this, System_Action_o *callback, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  System_Action_o *v6; // x20
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  System_Action_o *v10; // x20
 
-  if ( (byte_4CB57DC & 1) == 0 )
+  if ( (byte_4CC68FD & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_ResetSelectDialog_EndClose__);
-    byte_4CB57DC = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_ResetSelectDialog_EndClose__);
+    byte_4CC68FD = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
-  v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_ResetSelectDialog_EndClose__, 0);
-  BaseDialog__Close((BaseDialog_o *)this, v6, 0);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
+    (int32_t)callback,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+  v10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_ResetSelectDialog_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
 
 
@@ -84,19 +112,23 @@ void ResetSelectDialog__EndClose(ResetSelectDialog_o *this, const MethodInfo *me
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   struct System_Action_o *closeCallbackFunc; // x20
 
   ResetSelectDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     this->fields.closeCallbackFunc = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, 0, v5, v6);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(intptr_t, intptr_t))closeCallbackFunc->fields.invoke_impl)(
       closeCallbackFunc->fields.method_code,
       closeCallbackFunc->fields.method);
@@ -114,10 +146,10 @@ void ResetSelectDialog__Init(ResetSelectDialog_o *this, const MethodInfo *method
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4CB57D9 & 1) == 0 )
+  if ( (byte_4CC68FA & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB57D9 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC68FA = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel )
@@ -137,7 +169,7 @@ void ResetSelectDialog__Init(ResetSelectDialog_o *this, const MethodInfo *method
         (titleLabel = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_10:
-    sub_1C6BC60(titleLabel, method);
+    sub_1C71608(titleLabel, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleLabel, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -151,10 +183,10 @@ void ResetSelectDialog__OnClickCenter(ResetSelectDialog_o *this, const MethodInf
   System_Reflection_MethodBase_o *v5; // x0
   struct ResetSelectDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4CB57DE & 1) == 0 )
+  if ( (byte_4CC68FF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ResetSelectDialog_OnClickCenter__);
-    byte_4CB57DE = 1;
+    sub_1C713B0(&Method_ResetSelectDialog_OnClickCenter__);
+    byte_4CC68FF = 1;
   }
   if ( !this->fields.isEnd )
   {
@@ -162,8 +194,8 @@ void ResetSelectDialog__OnClickCenter(ResetSelectDialog_o *this, const MethodInf
     isCenterDecide = this->fields.isCenterDecide;
     v4 = Method_ResetSelectDialog_OnClickCenter__;
     if ( (*((_BYTE *)Method_ResetSelectDialog_OnClickCenter__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C6BA20(Method_ResetSelectDialog_OnClickCenter__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C713C8(Method_ResetSelectDialog_OnClickCenter__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C71394(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 8 * isCenterDecide, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -181,18 +213,18 @@ void ResetSelectDialog__OnClickLeft(ResetSelectDialog_o *this, const MethodInfo 
   System_Reflection_MethodBase_o *v4; // x0
   struct ResetSelectDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4CB57DD & 1) == 0 )
+  if ( (byte_4CC68FE & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ResetSelectDialog_OnClickLeft__);
-    byte_4CB57DD = 1;
+    sub_1C713B0(&Method_ResetSelectDialog_OnClickLeft__);
+    byte_4CC68FE = 1;
   }
   if ( !this->fields.isNoCancel && !this->fields.isEnd )
   {
     this->fields.isEnd = 1;
     v3 = Method_ResetSelectDialog_OnClickLeft__;
     if ( (*((_BYTE *)Method_ResetSelectDialog_OnClickLeft__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C6BA20(Method_ResetSelectDialog_OnClickLeft__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C713C8(Method_ResetSelectDialog_OnClickLeft__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -210,18 +242,18 @@ void ResetSelectDialog__OnClickRight(ResetSelectDialog_o *this, const MethodInfo
   System_Reflection_MethodBase_o *v4; // x0
   struct ResetSelectDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4CB57DF & 1) == 0 )
+  if ( (byte_4CC6900 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ResetSelectDialog_OnClickRight__);
-    byte_4CB57DF = 1;
+    sub_1C713B0(&Method_ResetSelectDialog_OnClickRight__);
+    byte_4CC6900 = 1;
   }
   if ( !this->fields.isEnd )
   {
     this->fields.isEnd = 1;
     v3 = Method_ResetSelectDialog_OnClickRight__;
     if ( (*((_BYTE *)Method_ResetSelectDialog_OnClickRight__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C6BA20(Method_ResetSelectDialog_OnClickRight__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C713C8(Method_ResetSelectDialog_OnClickRight__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -237,13 +269,13 @@ void ResetSelectDialog__OnEnable(ResetSelectDialog_o *this, const MethodInfo *me
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4CB57E0 & 1) == 0 )
+  if ( (byte_4CC6901 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_15644/*"Window/LeftButton"*/);
-    byte_4CB57E0 = 1;
+    sub_1C713B0(&StringLiteral_15651/*"Window/LeftButton"*/);
+    byte_4CC6901 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45210584(transform, (System_String_o *)StringLiteral_15644/*"Window/LeftButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45260884(transform, (System_String_o *)StringLiteral_15651/*"Window/LeftButton"*/, 0);
 }
 
 
@@ -268,29 +300,33 @@ void ResetSelectDialog__Open(
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v24; // x0
   int32_t v25; // w2
-  const MethodInfo *v26; // x3
-  System_Action_o *v27; // x20
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
+  System_Action_o *v31; // x20
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v35; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v36; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB57DA & 1) == 0 )
+  if ( (byte_4CC68FB & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_ResetSelectDialog_EndOpen__);
-    sub_1C6BA08(&ResetSelectDialog_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5584/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_CANCEL"*/);
-    byte_4CB57DA = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_ResetSelectDialog_EndOpen__);
+    sub_1C713B0(&ResetSelectDialog_TypeInfo);
+    sub_1C713B0(&StringLiteral_5587/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_CANCEL"*/);
+    byte_4CC68FB = 1;
   }
   leftButtonLabel = this->fields.leftButtonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_5584/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_CANCEL"*/, 0);
+  IsNullOrEmpty = LocalizationManager__Get((System_String_o *)StringLiteral_5587/*"EVENT_DATA_LOST_BATTLE_RESET_SELECT_CANCEL"*/, 0);
   if ( !leftButtonLabel )
     goto LABEL_56;
   UILabel__set_text(leftButtonLabel, IsNullOrEmpty, 0);
@@ -312,14 +348,14 @@ void ResetSelectDialog__Open(
     if ( !IsNullOrEmpty )
       goto LABEL_56;
     UILabel__set_text((UILabel_o *)IsNullOrEmpty, rightText, 0);
-    v28.fields.x = this->fields.twoButtonLeftX;
-    v28.fields.y = this->fields.twoButtonLeftY;
-    v28.fields.z = 0.0;
-    GameObjectExtensions__SetLocalPosition(this->fields.leftButton, v28, 0);
-    v29.fields.x = this->fields.twoButtonRightX;
-    v29.fields.y = this->fields.twoButtonRightY;
-    v29.fields.z = 0.0;
-    GameObjectExtensions__SetLocalPosition(this->fields.rightButton, v29, 0);
+    v32.fields.x = this->fields.twoButtonLeftX;
+    v32.fields.y = this->fields.twoButtonLeftY;
+    v32.fields.z = 0.0;
+    GameObjectExtensions__SetLocalPosition(this->fields.leftButton, v32, 0);
+    v33.fields.x = this->fields.twoButtonRightX;
+    v33.fields.y = this->fields.twoButtonRightY;
+    v33.fields.z = 0.0;
+    GameObjectExtensions__SetLocalPosition(this->fields.rightButton, v33, 0);
     leftButtonSprite = this->fields.leftButtonSprite;
     IsNullOrEmpty = (System_String_o *)ResetSelectDialog_TypeInfo;
     if ( !ResetSelectDialog_TypeInfo->_2.cctor_finished )
@@ -380,18 +416,18 @@ void ResetSelectDialog__Open(
     if ( !IsNullOrEmpty )
       goto LABEL_56;
     UILabel__set_text((UILabel_o *)IsNullOrEmpty, rightText, 0);
-    v30.fields.x = this->fields.threeButtonLeftX;
-    v30.fields.y = this->fields.threeButtonLeftY;
-    v30.fields.z = 0.0;
-    GameObjectExtensions__SetLocalPosition(this->fields.leftButton, v30, 0);
-    v31.fields.x = this->fields.threeButtonCenterX;
-    v31.fields.y = this->fields.threeButtonCenterY;
-    v31.fields.z = 0.0;
-    GameObjectExtensions__SetLocalPosition(this->fields.centerButton, v31, 0);
-    v32.fields.x = this->fields.threeButtonRightX;
-    v32.fields.y = this->fields.threeButtonRightY;
-    v32.fields.z = 0.0;
-    GameObjectExtensions__SetLocalPosition(this->fields.rightButton, v32, 0);
+    v34.fields.x = this->fields.threeButtonLeftX;
+    v34.fields.y = this->fields.threeButtonLeftY;
+    v34.fields.z = 0.0;
+    GameObjectExtensions__SetLocalPosition(this->fields.leftButton, v34, 0);
+    v35.fields.x = this->fields.threeButtonCenterX;
+    v35.fields.y = this->fields.threeButtonCenterY;
+    v35.fields.z = 0.0;
+    GameObjectExtensions__SetLocalPosition(this->fields.centerButton, v35, 0);
+    v36.fields.x = this->fields.threeButtonRightX;
+    v36.fields.y = this->fields.threeButtonRightY;
+    v36.fields.z = 0.0;
+    GameObjectExtensions__SetLocalPosition(this->fields.rightButton, v36, 0);
     v21 = this->fields.leftButtonSprite;
     IsNullOrEmpty = (System_String_o *)ResetSelectDialog_TypeInfo;
     if ( !ResetSelectDialog_TypeInfo->_2.cctor_finished )
@@ -433,14 +469,14 @@ void ResetSelectDialog__Open(
     UIWidget__set_height((UIWidget_o *)IsNullOrEmpty, ResetSelectDialog_TypeInfo->static_fields->BTN_03_HEIGHT, 0);
     if ( isNoCancel )
     {
-      v33.fields.x = this->fields.twoButtonLeftX;
-      v33.fields.y = this->fields.twoButtonLeftY;
-      v33.fields.z = 0.0;
-      GameObjectExtensions__SetLocalPosition(this->fields.centerButton, v33, 0);
-      v34.fields.x = this->fields.twoButtonRightX;
-      v34.fields.y = this->fields.twoButtonRightY;
-      v34.fields.z = 0.0;
-      GameObjectExtensions__SetLocalPosition(this->fields.rightButton, v34, 0);
+      v37.fields.x = this->fields.twoButtonLeftX;
+      v37.fields.y = this->fields.twoButtonLeftY;
+      v37.fields.z = 0.0;
+      GameObjectExtensions__SetLocalPosition(this->fields.centerButton, v37, 0);
+      v38.fields.x = this->fields.twoButtonRightX;
+      v38.fields.y = this->fields.twoButtonRightY;
+      v38.fields.z = 0.0;
+      GameObjectExtensions__SetLocalPosition(this->fields.rightButton, v38, 0);
       IsNullOrEmpty = (System_String_o *)this->fields.messageLabel;
       if ( !IsNullOrEmpty )
         goto LABEL_56;
@@ -500,15 +536,15 @@ void ResetSelectDialog__Open(
         (IsNullOrEmpty = (System_String_o *)this->fields.messageLabel) == 0) )
   {
 LABEL_56:
-    sub_1C6BC60(IsNullOrEmpty, v17);
+    sub_1C71608(IsNullOrEmpty, v17);
   }
   WrapControlText__fontSizeAdjust((UILabel_o *)IsNullOrEmpty, message, IsNullOrEmpty[17].fields._stringLength, 0);
   this->fields.clickFunc = func;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)func, v25, v26);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v25, v26, v27, v28, v29, v30);
   this->fields.isEnd = 0;
-  v27 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v27, (Il2CppObject *)this, Method_ResetSelectDialog_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v27, 0, 0, 0);
+  v31 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v31, (Il2CppObject *)this, Method_ResetSelectDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v31, 0, 0, 0);
 }
 
 
@@ -523,16 +559,20 @@ void ResetSelectDialog__OpenSingleButton(
   void *centerButton; // x0
   UISprite_o *centerButtonSprite; // x24
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  System_Action_o *v15; // x20
-  UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  System_Action_o *v19; // x20
+  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB57DB & 1) == 0 )
+  if ( (byte_4CC68FC & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_ResetSelectDialog_EndOpen__);
-    sub_1C6BA08(&ResetSelectDialog_TypeInfo);
-    byte_4CB57DB = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_ResetSelectDialog_EndOpen__);
+    sub_1C713B0(&ResetSelectDialog_TypeInfo);
+    byte_4CC68FC = 1;
   }
   centerButton = this->fields.centerButton;
   if ( !centerButton )
@@ -561,10 +601,10 @@ void ResetSelectDialog__OpenSingleButton(
   if ( !centerButton )
     goto LABEL_17;
   UILabel__set_fontSize((UILabel_o *)centerButton, this->fields.oneButtonFontSize, 0);
-  v16.fields.x = this->fields.oneButtonCenterX;
-  v16.fields.y = this->fields.oneButtonCenterY;
-  v16.fields.z = 0.0;
-  GameObjectExtensions__SetLocalPosition(this->fields.centerButton, v16, 0);
+  v20.fields.x = this->fields.oneButtonCenterX;
+  v20.fields.y = this->fields.oneButtonCenterY;
+  v20.fields.z = 0.0;
+  GameObjectExtensions__SetLocalPosition(this->fields.centerButton, v20, 0);
   centerButton = this->fields.centerButtonSprite;
   if ( !centerButton )
     goto LABEL_17;
@@ -580,15 +620,15 @@ void ResetSelectDialog__OpenSingleButton(
     || (UILabel__set_text((UILabel_o *)centerButton, title, 0), (centerButton = this->fields.messageLabel) == 0) )
   {
 LABEL_17:
-    sub_1C6BC60(centerButton, title);
+    sub_1C71608(centerButton, title);
   }
   WrapControlText__fontSizeAdjust((UILabel_o *)centerButton, message, *((_DWORD *)centerButton + 106), 0);
   this->fields.clickFunc = func;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.clickFunc, (int32_t)func, v13, v14);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v13, v14, v15, v16, v17, v18);
   this->fields.isEnd = 0;
-  v15 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v15, (Il2CppObject *)this, Method_ResetSelectDialog_EndOpen__, 0);
-  BaseDialog__Open((BaseDialog_o *)this, v15, 0, 0, 0);
+  v19 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v19, (Il2CppObject *)this, Method_ResetSelectDialog_EndOpen__, 0);
+  BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0, 0);
 }
 
 
@@ -598,28 +638,40 @@ void ResetSelectDialog_ClickDelegate___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  intptr_t v8; // x8
+  int v12; // w22
   Il2CppObject *m_target; // x9
-  __int64 v10; // x0
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C6BAC8(method) & 1) == 0 )
+  if ( (sub_1C71470(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C6BB30(v10, 0);
+      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C714D8(v14, 0);
     }
     goto LABEL_5;
   }
-  if ( v8 != 1 )
+  if ( v12 != 1 )
   {
 LABEL_5:
     m_target = this->fields.m_target;
@@ -627,9 +679,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA1D10;
+  this->fields.invoke_impl = (intptr_t)sub_1AA7218;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA1CC8;
+  this->fields.extra_arg = (intptr_t)sub_1AA71D0;
 }
 
 
@@ -644,14 +696,14 @@ System_IAsyncResult_o *ResetSelectDialog_ClickDelegate__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = selectNo;
-  if ( (byte_4CB57E3 & 1) == 0 )
+  if ( (byte_4CC6904 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    byte_4CB57E3 = 1;
+    sub_1C713B0(&int_TypeInfo);
+    byte_4CC6904 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C6B9BC(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C71364(this, v9, callback, object);
 }
 
 
@@ -660,7 +712,7 @@ void ResetSelectDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C6B9C0(result, 0, method);
+  sub_1C71368(result, 0, method);
 }
 
 

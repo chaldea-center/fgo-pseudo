@@ -1,20 +1,28 @@
 void WarBoardUiData___ctor(WarBoardUiData_o *this, const MethodInfo *method)
 {
   int32_t v3; // w2
-  const MethodInfo *v4; // x3
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
+  int32_t v9; // w2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v3, v4, v5, v6, v7, v8);
   this->fields._keys_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, 0, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField, 0, v9, v10, v11, v12, v13, v14);
 }
 
 
-void WarBoardUiData___ctor_38392124(
+void WarBoardUiData___ctor_38431196(
         WarBoardUiData_o *this,
         WarBoardUiData_SaveData_o *saveData,
         const MethodInfo *method)
@@ -22,71 +30,147 @@ void WarBoardUiData___ctor_38392124(
   __int64 v5; // x0
   __int64 v6; // x1
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
   struct System_Int32_array *pieceIndex; // x1
   struct System_String_array *keys; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !saveData )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   this->fields._squareIndex_k__BackingField = saveData->fields.squareIndex;
   pieceIndex = saveData->fields.pieceIndex;
   this->fields._pieceIndex_k__BackingField = pieceIndex;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)pieceIndex, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField,
+    (int32_t)pieceIndex,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   keys = saveData->fields.keys;
   this->fields._keys_k__BackingField = keys;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)keys, v11, v12);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
+    (int32_t)keys,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
 }
 
 
-void WarBoardUiData___ctor_38392204(
+void WarBoardUiData___ctor_38431276(
         WarBoardUiData_o *this,
         int32_t index,
         System_String_array *setKeys,
         const MethodInfo *method)
 {
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._squareIndex_k__BackingField = index;
   this->fields._pieceIndex_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField, 0, v7, v8, v9, v10, v11, v12);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
+    (int32_t)setKeys,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
 }
 
 
-void WarBoardUiData___ctor_38392276(
+void WarBoardUiData___ctor_38431348(
         WarBoardUiData_o *this,
         System_Int32_array *indexes,
         System_String_array *setKeys,
         const MethodInfo *method)
 {
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._squareIndex_k__BackingField = -1;
   this->fields._pieceIndex_k__BackingField = indexes;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)indexes, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField,
+    (int32_t)indexes,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, v9, v10);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
+    (int32_t)setKeys,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
 }
 
 
 void WarBoardUiData__SetKeys(WarBoardUiData_o *this, System_String_array *setKeys, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._keys_k__BackingField = setKeys;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)setKeys, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
+    (int32_t)setKeys,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -110,19 +194,43 @@ int32_t WarBoardUiData__get_squareIndex(WarBoardUiData_o *this, const MethodInfo
 
 void WarBoardUiData__set_keys(WarBoardUiData_o *this, System_String_array *value, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._keys_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._keys_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._keys_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
 void WarBoardUiData__set_pieceIndex(WarBoardUiData_o *this, System_Int32_array *value, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._pieceIndex_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._pieceIndex_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._pieceIndex_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -135,20 +243,28 @@ void WarBoardUiData__set_squareIndex(WarBoardUiData_o *this, int32_t value, cons
 void WarBoardUiData_SaveData___ctor(WarBoardUiData_SaveData_o *this, const MethodInfo *method)
 {
   int32_t v3; // w2
-  const MethodInfo *v4; // x3
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
+  int32_t v9; // w2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.squareIndex = -1;
   this->fields.pieceIndex = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.pieceIndex, 0, v3, v4);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.pieceIndex, 0, v3, v4, v5, v6, v7, v8);
   this->fields.keys = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.keys, 0, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.keys, 0, v9, v10, v11, v12, v13, v14);
 }
 
 
-void WarBoardUiData_SaveData___ctor_38349168(
+void WarBoardUiData_SaveData___ctor_38388240(
         WarBoardUiData_SaveData_o *this,
         WarBoardUiData_o *uiData,
         const MethodInfo *method)
@@ -156,20 +272,44 @@ void WarBoardUiData_SaveData___ctor_38349168(
   __int64 v5; // x0
   __int64 v6; // x1
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
   struct System_Int32_array *pieceIndex_k__BackingField; // x1
   struct System_String_array *keys_k__BackingField; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !uiData )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   this->fields.squareIndex = uiData->fields._squareIndex_k__BackingField;
   pieceIndex_k__BackingField = uiData->fields._pieceIndex_k__BackingField;
   this->fields.pieceIndex = pieceIndex_k__BackingField;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.pieceIndex, (int32_t)pieceIndex_k__BackingField, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.pieceIndex,
+    (int32_t)pieceIndex_k__BackingField,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   keys_k__BackingField = uiData->fields._keys_k__BackingField;
   this->fields.keys = keys_k__BackingField;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.keys, (int32_t)keys_k__BackingField, v11, v12);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.keys,
+    (int32_t)keys_k__BackingField,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
 }

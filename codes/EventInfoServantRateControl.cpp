@@ -1,18 +1,22 @@
 void EventInfoServantRateControl___ctor(EventInfoServantRateControl_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  int32_t v5; // w1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v9; // w1
 
-  if ( (byte_4CB7891 & 1) == 0 )
+  if ( (byte_4CC89C3 & 1) == 0 )
   {
-    sub_1C6BA08(&EventInfoUIProgressControl_TypeInfo);
-    sub_1C6BA08(&StringLiteral_19238/*"event_evaluation_txt_01"*/);
-    byte_4CB7891 = 1;
+    sub_1C713B0(&EventInfoUIProgressControl_TypeInfo);
+    sub_1C713B0(&StringLiteral_19249/*"event_evaluation_txt_01"*/);
+    byte_4CC89C3 = 1;
   }
-  v5 = StringLiteral_19238/*"event_evaluation_txt_01"*/;
-  this->fields.rateSpriteName = (struct System_String_o *)StringLiteral_19238/*"event_evaluation_txt_01"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.rateSpriteName, v5, v2, v3);
+  v9 = StringLiteral_19249/*"event_evaluation_txt_01"*/;
+  this->fields.rateSpriteName = (struct System_String_o *)StringLiteral_19249/*"event_evaluation_txt_01"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.rateSpriteName, v9, v2, v3, v4, v5, v6, v7);
   this->fields.isEnabledCondensedScale = 1;
   this->fields.userServantRate = 1;
   if ( !EventInfoUIProgressControl_TypeInfo->_2.cctor_finished )
@@ -37,20 +41,20 @@ int32_t EventInfoServantRateControl__GetCurrentServantRate(
   int v12; // w8
   struct EventProgressValueEntity_o *v13; // x8
 
-  if ( (byte_4CB7890 & 1) == 0 )
+  if ( (byte_4CC89C2 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB7890 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC89C2 = 1;
   }
   if ( this->fields.currentEventProgressValueEntity )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4CB01CE )
+    if ( !byte_4CC12CE )
     {
-      sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-      byte_4CB01CE = 1;
+      sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+      byte_4CC12CE = 1;
     }
     v3 = TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -71,10 +75,10 @@ int32_t EventInfoServantRateControl__GetCurrentServantRate(
     }
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4CB01CE )
+    if ( !byte_4CC12CE )
     {
-      sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-      byte_4CB01CE = 1;
+      sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+      byte_4CC12CE = 1;
     }
     v9 = TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -85,7 +89,7 @@ int32_t EventInfoServantRateControl__GetCurrentServantRate(
     v5 = v9->static_fields->mInstance;
     if ( !v5 )
 LABEL_37:
-      sub_1C6BC60(v5, v6);
+      sub_1C71608(v5, v6);
     if ( !TerminalSceneComponent__IsMapActive(v5, 0) )
     {
       currentEventProgressValueEntity = this->fields.currentEventProgressValueEntity;
@@ -149,10 +153,10 @@ int64_t EventInfoServantRateControl__GetUserEventPoint(EventInfoServantRateContr
   struct EventUiEntity_o *eventUiEntity; // x8
 
   v2 = this;
-  if ( (byte_4CB788F & 1) == 0 )
+  if ( (byte_4CC89C1 & 1) == 0 )
   {
-    this = (EventInfoServantRateControl_o *)sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB788F = 1;
+    this = (EventInfoServantRateControl_o *)sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC89C1 = 1;
   }
   eventUiValueEntityList = v2->fields.eventUiValueEntityList;
   if ( !eventUiValueEntityList )
@@ -165,7 +169,7 @@ int64_t EventInfoServantRateControl__GetUserEventPoint(EventInfoServantRateContr
     while ( 1 )
     {
       if ( v5 >= max_length )
-        sub_1C6BC68(this);
+        sub_1C71610(this);
       v7 = eventUiValueEntityList->m_Items[v5];
       if ( !v7 )
         break;
@@ -176,10 +180,10 @@ int64_t EventInfoServantRateControl__GetUserEventPoint(EventInfoServantRateContr
         v10 = v8;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4CB002A )
+        if ( !byte_4CC112A )
         {
-          sub_1C6BA08(&NetworkManager_TypeInfo);
-          byte_4CB002A = 1;
+          sub_1C713B0(&NetworkManager_TypeInfo);
+          byte_4CC112A = 1;
         }
         this = (EventInfoServantRateControl_o *)NetworkManager_TypeInfo;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -203,7 +207,7 @@ int64_t EventInfoServantRateControl__GetUserEventPoint(EventInfoServantRateContr
         return v6;
     }
 LABEL_22:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   return 0;
 }
@@ -218,26 +222,38 @@ void EventInfoServantRateControl__Initialization(
   System_Action_o *v6; // x21
   Il2CppObject *Master_object; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
-  if ( (byte_4CB788C & 1) == 0 )
+  if ( (byte_4CC89BE & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserEventPointMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_EventInfoServantRateControl__Initialization_b__12_0__);
-    byte_4CB788C = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMaster_UserEventPointMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_EventInfoServantRateControl__Initialization_b__12_0__);
+    byte_4CC89BE = 1;
   }
   EventInfoUIProgressControl__Initialization((EventInfoUIProgressControl_o *)this, entity, 0);
   eventUiEntity = this->fields.eventUiEntity;
-  v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v6 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_EventInfoServantRateControl__Initialization_b__12_0__, 0);
   EventInfoUIBase__LoadEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity, v6, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserEventPointMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserEventPointMaster___);
   this->fields.userEventPointMaster = (struct UserEventPointMaster_o *)Master_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.userEventPointMaster, (int32_t)Master_object, v8, v9);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.userEventPointMaster,
+    (int32_t)Master_object,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13);
 }
 
 
@@ -247,7 +263,7 @@ void EventInfoServantRateControl__OnDestroy(EventInfoServantRateControl_o *this,
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   EventInfoUIBase__ReleaseEventUIAssetData((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0);
   EventInfoUIBase__ReleaseLocalAtlas((EventInfoUIBase_o *)this, 0);
 }
@@ -260,7 +276,7 @@ void EventInfoServantRateControl__Redisplay(EventInfoServantRateControl_o *this,
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -280,15 +296,15 @@ void EventInfoServantRateControl__SetPointLabel(
   __int64 v12; // x1
   int64_t v13; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CB788D & 1) == 0 )
+  if ( (byte_4CC89BF & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&long_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&System_Math_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5629/*"EVENT_POINT_COMMON_FORMAT"*/);
-    byte_4CB788D = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&long_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&System_Math_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_5632/*"EVENT_POINT_COMMON_FORMAT"*/);
+    byte_4CC89BF = 1;
   }
   drawNumLabel = (UnityEngine_Object_o *)this->fields.drawNumLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -298,7 +314,7 @@ void EventInfoServantRateControl__SetPointLabel(
     v6 = this->fields.drawNumLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5629/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
+    v7 = LocalizationManager__Get((System_String_o *)StringLiteral_5632/*"EVENT_POINT_COMMON_FORMAT"*/, 0);
     v8 = BalanceConfig_TypeInfo;
     if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     {
@@ -308,7 +324,7 @@ void EventInfoServantRateControl__SetPointLabel(
     UserPointEventMax = v8->static_fields->UserPointEventMax;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v13 = System_Math__Min_65488952(point, UserPointEventMax, 0);
+    v13 = System_Math__Min_65553884(point, UserPointEventMax, 0);
     v10 = (Il2CppObject *)j_il2cpp_value_box_0(long_TypeInfo, &v13);
     v11 = System_String__Format(v7, v10, 0);
     if ( !v6 )
@@ -319,7 +335,7 @@ void EventInfoServantRateControl__SetPointLabel(
     v11 = (System_String_o *)this->fields.drawNumLabel;
     if ( !v11 )
 LABEL_17:
-      sub_1C6BC60(v11, v12);
+      sub_1C71608(v11, v12);
     UILabel__SetCondensedScale((UILabel_o *)v11, this->fields.pointLabelWidth, 0, 0);
   }
 }
@@ -334,18 +350,22 @@ void EventInfoServantRateControl__SetServantRateSprite(
   Il2CppObject *v6; // x0
   struct System_String_o *v7; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  __int64 v10; // x1
-  UISprite_o *v11; // x0
-  int32_t v12; // [xsp+Ch] [xbp-24h] BYREF
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  __int64 v14; // x1
+  UISprite_o *v15; // x0
+  int32_t v16; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CB788E & 1) == 0 )
+  if ( (byte_4CC89C0 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_19239/*"event_evaluation_txt_{0:D2}"*/);
-    sub_1C6BA08(&StringLiteral_19238/*"event_evaluation_txt_01"*/);
-    byte_4CB788E = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_19250/*"event_evaluation_txt_{0:D2}"*/);
+    sub_1C713B0(&StringLiteral_19249/*"event_evaluation_txt_01"*/);
+    byte_4CC89C0 = 1;
   }
   EventInfoUIProgressControl__SaveEventProgressValueSaveData((EventInfoUIProgressControl_o *)this, userRate, 0);
   servantRateSprite = (UnityEngine_Object_o *)this->fields.servantRateSprite;
@@ -353,32 +373,32 @@ void EventInfoServantRateControl__SetServantRateSprite(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(servantRateSprite, 0, 0) )
   {
-    v12 = userRate;
-    v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v12);
-    v7 = System_String__Format((System_String_o *)StringLiteral_19239/*"event_evaluation_txt_{0:D2}"*/, v6, 0);
+    v16 = userRate;
+    v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
+    v7 = System_String__Format((System_String_o *)StringLiteral_19250/*"event_evaluation_txt_{0:D2}"*/, v6, 0);
     this->fields.rateSpriteName = v7;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.rateSpriteName, (int32_t)v7, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.rateSpriteName, (int32_t)v7, v8, v9, v10, v11, v12, v13);
     if ( !EventInfoUIBase__SetSpriteByLocalAtlas(
             (EventInfoUIBase_o *)this,
             this->fields.servantRateSprite,
             this->fields.rateSpriteName,
             0) )
     {
-      v11 = this->fields.servantRateSprite;
-      if ( !v11 )
+      v15 = this->fields.servantRateSprite;
+      if ( !v15 )
         goto LABEL_12;
-      UISprite__set_spriteName(v11, (System_String_o *)StringLiteral_19238/*"event_evaluation_txt_01"*/, 0);
+      UISprite__set_spriteName(v15, (System_String_o *)StringLiteral_19249/*"event_evaluation_txt_01"*/, 0);
     }
-    v11 = this->fields.servantRateSprite;
-    if ( v11 )
+    v15 = this->fields.servantRateSprite;
+    if ( v15 )
     {
-      ((void (__fastcall *)(UISprite_o *, const MethodInfo *))v11->klass->vtable._33_MakePixelPerfect.methodPtr)(
-        v11,
-        v11->klass->vtable._33_MakePixelPerfect.method);
+      ((void (__fastcall *)(UISprite_o *, const MethodInfo *))v15->klass->vtable._33_MakePixelPerfect.methodPtr)(
+        v15,
+        v15->klass->vtable._33_MakePixelPerfect.method);
       return;
     }
 LABEL_12:
-    sub_1C6BC60(v11, v10);
+    sub_1C71608(v15, v14);
   }
 }
 
@@ -389,22 +409,34 @@ void EventInfoServantRateControl__Setup(
         const MethodInfo *method)
 {
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  const MethodInfo *v7; // x1
-  const MethodInfo *v8; // x1
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  const MethodInfo *v11; // x1
+  const MethodInfo *v12; // x1
   int64_t UserEventPoint; // x20
-  const MethodInfo *v10; // x2
-  const MethodInfo *v11; // x2
+  const MethodInfo *v14; // x2
+  const MethodInfo *v15; // x2
 
   if ( entitys )
   {
     EventInfoUIProgressControl__Setup((EventInfoUIProgressControl_o *)this, entitys, 0);
     this->fields.eventUiValueEntityList = entitys;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventUiValueEntityList, (int32_t)entitys, v5, v6);
-    this->fields.userServantRate = EventInfoServantRateControl__GetCurrentServantRate(this, v7);
-    UserEventPoint = EventInfoServantRateControl__GetUserEventPoint(this, v8);
-    EventInfoServantRateControl__SetServantRateSprite(this, this->fields.userServantRate, v10);
-    EventInfoServantRateControl__SetPointLabel(this, UserEventPoint, v11);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.eventUiValueEntityList,
+      (int32_t)entitys,
+      v5,
+      v6,
+      v7,
+      v8,
+      v9,
+      v10);
+    this->fields.userServantRate = EventInfoServantRateControl__GetCurrentServantRate(this, v11);
+    UserEventPoint = EventInfoServantRateControl__GetUserEventPoint(this, v12);
+    EventInfoServantRateControl__SetServantRateSprite(this, this->fields.userServantRate, v14);
+    EventInfoServantRateControl__SetPointLabel(this, UserEventPoint, v15);
   }
 }
 
@@ -417,7 +449,7 @@ void EventInfoServantRateControl___Initialization_b__12_0(
 
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   EventInfoUIBase__LoadLocalAtlas((EventInfoUIBase_o *)this, eventUiEntity->fields.eventId, 0);
 }
 

@@ -1,9 +1,9 @@
 void SoundPlayerOpenEffectComponent___ctor(SoundPlayerOpenEffectComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB19F3 & 1) == 0 )
+  if ( (byte_4CC2B00 & 1) == 0 )
   {
-    sub_1C6BA08(&CommonEffectComponent_TypeInfo);
-    byte_4CB19F3 = 1;
+    sub_1C713B0(&CommonEffectComponent_TypeInfo);
+    byte_4CC2B00 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -46,10 +46,22 @@ void SoundPlayerOpenEffectComponent__setAnimEndCallback(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.animEndCallback = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.animEndCallback,
+    (int32_t)callback,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -58,10 +70,22 @@ void SoundPlayerOpenEffectComponent__setChangeUiCallback(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.changeUiCallback = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.changeUiCallback,
+    (int32_t)callback,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -70,8 +94,20 @@ void SoundPlayerOpenEffectComponent__setPlayIconAnimCallBack(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.playIconAnimCallback = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.playIconAnimCallback, (int32_t)callback, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.playIconAnimCallback,
+    (int32_t)callback,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

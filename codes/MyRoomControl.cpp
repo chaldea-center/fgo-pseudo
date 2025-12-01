@@ -1,35 +1,51 @@
 void MyRoomControl___cctor(const MethodInfo *method)
 {
   int32_t v1; // w2
-  const MethodInfo *v2; // x3
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  int32_t v4; // w5
+  int64_t v5; // x6
+  System_String_o *v6; // x7
   struct MyRoomControl_StaticFields *static_fields; // x8
-  System_Collections_Generic_List_int__o *v4; // x19
-  struct MyRoomControl_StaticFields *v5; // x0
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  System_Collections_Generic_List_int__o *v8; // x19
+  struct MyRoomControl_StaticFields *v9; // x0
+  int32_t v10; // w2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
 
-  if ( (byte_4CB16C9 & 1) == 0 )
+  if ( (byte_4CC27D6 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&StringLiteral_2911/*"BGM_MYROOM_1"*/);
-    byte_4CB16C9 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&StringLiteral_2913/*"BGM_MYROOM_1"*/);
+    byte_4CC27D6 = 1;
   }
-  MyRoomControl_TypeInfo->static_fields->DEFAULT_BGM_NAME = (struct System_String_o *)StringLiteral_2911/*"BGM_MYROOM_1"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)MyRoomControl_TypeInfo->static_fields, StringLiteral_2911/*"BGM_MYROOM_1"*/, v1, v2);
+  MyRoomControl_TypeInfo->static_fields->DEFAULT_BGM_NAME = (struct System_String_o *)StringLiteral_2913/*"BGM_MYROOM_1"*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)MyRoomControl_TypeInfo->static_fields,
+    StringLiteral_2913/*"BGM_MYROOM_1"*/,
+    v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6);
   static_fields = MyRoomControl_TypeInfo->static_fields;
-  *(_OWORD *)&static_fields->BUTTON_VOICE_PLAY = xmmword_CEC7D0;
+  *(_OWORD *)&static_fields->BUTTON_VOICE_PLAY = xmmword_CEF410;
   *(_QWORD *)&static_fields->BUTTON_MULTIPLE_VIEW = 0x2000000010LL;
   *(_QWORD *)&static_fields->BUTTON_CHANGE_BG = 0xC448000000000040LL;
   *(_QWORD *)&static_fields->MULTIPLE_VIEW_SELECTED_MAX = 2;
-  v4 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+  v8 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v4,
-    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
-  v5 = MyRoomControl_TypeInfo->static_fields;
-  v5->enableBgGroupIdList = v4;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v5->enableBgGroupIdList, (int32_t)v4, v6, v7);
+    v8,
+    (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
+  v9 = MyRoomControl_TypeInfo->static_fields;
+  v9->enableBgGroupIdList = v8;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v9->enableBgGroupIdList, (int32_t)v8, v10, v11, v12, v13, v14, v15);
 }
 
 
@@ -37,114 +53,222 @@ void MyRoomControl___ctor(MyRoomControl_o *this, const MethodInfo *method)
 {
   struct PhotoStandFigureComponent_array *v3; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  MyRoomStateMaterial_o *v6; // x20
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  System_Collections_Generic_List_int__o *v9; // x20
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  System_Collections_Generic_List_int__o *v12; // x20
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  __int64 v15; // x0
-  __int64 v16; // x1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int v19; // w8
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  MyRoomStateMaterial_o *v10; // x20
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  System_Collections_Generic_List_int__o *v17; // x20
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  System_Collections_Generic_List_int__o *v24; // x20
+  int32_t v25; // w2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
+  __int64 v31; // x0
+  __int64 v32; // x1
+  int32_t v33; // w2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  int32_t v36; // w5
+  int64_t v37; // x6
+  System_String_o *v38; // x7
+  int v39; // w8
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
-  struct System_Int64_array *v22; // x0
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  struct System_Int32_array *v25; // x0
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  struct System_Int32_array *v28; // x0
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  struct System_Int64_array *v31; // x0
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  struct System_Int32_array *v34; // x0
-  int32_t v35; // w2
-  const MethodInfo *v36; // x3
-  struct System_Int32_array *v37; // x0
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
+  struct System_Int64_array *v42; // x0
+  int32_t v43; // w2
+  int32_t v44; // w3
+  System_String_o *v45; // x4
+  int32_t v46; // w5
+  int64_t v47; // x6
+  System_String_o *v48; // x7
+  struct System_Int32_array *v49; // x0
+  int32_t v50; // w2
+  int32_t v51; // w3
+  System_String_o *v52; // x4
+  int32_t v53; // w5
+  int64_t v54; // x6
+  System_String_o *v55; // x7
+  struct System_Int32_array *v56; // x0
+  int32_t v57; // w2
+  int32_t v58; // w3
+  System_String_o *v59; // x4
+  int32_t v60; // w5
+  int64_t v61; // x6
+  System_String_o *v62; // x7
+  struct System_Int64_array *v63; // x0
+  int32_t v64; // w2
+  int32_t v65; // w3
+  System_String_o *v66; // x4
+  int32_t v67; // w5
+  int64_t v68; // x6
+  System_String_o *v69; // x7
+  struct System_Int32_array *v70; // x0
+  int32_t v71; // w2
+  int32_t v72; // w3
+  System_String_o *v73; // x4
+  int32_t v74; // w5
+  int64_t v75; // x6
+  System_String_o *v76; // x7
+  struct System_Int32_array *v77; // x0
+  int32_t v78; // w2
+  int32_t v79; // w3
+  System_String_o *v80; // x4
+  int32_t v81; // w5
+  int64_t v82; // x6
+  System_String_o *v83; // x7
 
-  if ( (byte_4CB16C8 & 1) == 0 )
+  if ( (byte_4CC27D5 & 1) == 0 )
   {
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&long___TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C6BA08(&MyRoomStateMaterial_TypeInfo);
-    sub_1C6BA08(&PhotoStandFigureComponent___TypeInfo);
-    sub_1C6BA08(&UnityEngine_Vector3___TypeInfo);
-    byte_4CB16C8 = 1;
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&long___TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C713B0(&MyRoomStateMaterial_TypeInfo);
+    sub_1C713B0(&PhotoStandFigureComponent___TypeInfo);
+    sub_1C713B0(&UnityEngine_Vector3___TypeInfo);
+    byte_4CC27D5 = 1;
   }
-  v3 = (struct PhotoStandFigureComponent_array *)sub_1C6BAB0(PhotoStandFigureComponent___TypeInfo, 2);
+  v3 = (struct PhotoStandFigureComponent_array *)sub_1C71458(PhotoStandFigureComponent___TypeInfo, 2);
   this->fields.photoStandFigures = v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoStandFigures, (int32_t)v3, v4, v5);
-  v6 = (MyRoomStateMaterial_o *)sub_1C6BC54(MyRoomStateMaterial_TypeInfo);
-  MyRoomStateMaterial___ctor(v6, 0);
-  this->fields.mStateMaterial = v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mStateMaterial, (int32_t)v6, v7, v8);
-  v9 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoStandFigures, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (MyRoomStateMaterial_o *)sub_1C715FC(MyRoomStateMaterial_TypeInfo);
+  MyRoomStateMaterial___ctor(v10, 0);
+  this->fields.mStateMaterial = v10;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mStateMaterial, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  v17 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v9,
-    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.imageIdList = v9;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.imageIdList, (int32_t)v9, v10, v11);
-  v12 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+    v17,
+    (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.imageIdList = v17;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.imageIdList, (int32_t)v17, v18, v19, v20, v21, v22, v23);
+  v24 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
-    v12,
-    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
-  this->fields.materialImageIdList = v12;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.materialImageIdList, (int32_t)v12, v13, v14);
-  v15 = sub_1C6BAB0(UnityEngine_Vector3___TypeInfo, 2);
-  if ( !v15 )
-    sub_1C6BC60(0, v16);
-  v19 = *(_DWORD *)(v15 + 24);
-  if ( !v19 || (*(_DWORD *)(v15 + 40) = 0, *(_QWORD *)(v15 + 32) = 0x43900000C4000000LL, v19 == 1) )
-    sub_1C6BC68(v15);
-  *(_DWORD *)(v15 + 52) = 0;
-  *(_QWORD *)(v15 + 44) = 0x4390000000000000LL;
-  this->fields.defaultMultipleServantPoses = (struct UnityEngine_Vector3_array *)v15;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultMultipleServantPoses, v15, v17, v18);
-  if ( !byte_4CAFC09 )
+    v24,
+    (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
+  this->fields.materialImageIdList = v24;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.materialImageIdList,
+    (int32_t)v24,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29,
+    v30);
+  v31 = sub_1C71458(UnityEngine_Vector3___TypeInfo, 2);
+  if ( !v31 )
+    sub_1C71608(0, v32);
+  v39 = *(_DWORD *)(v31 + 24);
+  if ( !v39 || (*(_DWORD *)(v31 + 40) = 0, *(_QWORD *)(v31 + 32) = 0x43900000C4000000LL, v39 == 1) )
+    sub_1C71610(v31);
+  *(_DWORD *)(v31 + 52) = 0;
+  *(_QWORD *)(v31 + 44) = 0x4390000000000000LL;
+  this->fields.defaultMultipleServantPoses = (struct UnityEngine_Vector3_array *)v31;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.defaultMultipleServantPoses,
+    v31,
+    v33,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38);
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.voicePlayButtonDefaultPos.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
   this->fields.voicePlayButtonDefaultPos.fields.z = z;
   this->fields.multipleViewFinishedTime = -1;
-  v22 = (struct System_Int64_array *)sub_1C6BAB0(long___TypeInfo, 2);
-  this->fields.multipleServantUsrIds = v22;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.multipleServantUsrIds, (int32_t)v22, v23, v24);
-  v25 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 2);
-  this->fields.multipleLimitCounts = v25;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.multipleLimitCounts, (int32_t)v25, v26, v27);
-  v28 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 2);
-  this->fields.photoTargetFaceListIndex = v28;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoTargetFaceListIndex, (int32_t)v28, v29, v30);
+  v42 = (struct System_Int64_array *)sub_1C71458(long___TypeInfo, 2);
+  this->fields.multipleServantUsrIds = v42;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.multipleServantUsrIds,
+    (int32_t)v42,
+    v43,
+    v44,
+    v45,
+    v46,
+    v47,
+    v48);
+  v49 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, 2);
+  this->fields.multipleLimitCounts = v49;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.multipleLimitCounts,
+    (int32_t)v49,
+    v50,
+    v51,
+    v52,
+    v53,
+    v54,
+    v55);
+  v56 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, 2);
+  this->fields.photoTargetFaceListIndex = v56;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.photoTargetFaceListIndex,
+    (int32_t)v56,
+    v57,
+    v58,
+    v59,
+    v60,
+    v61,
+    v62);
   this->fields.photoCampaignFinishedTime = -1;
   *(_QWORD *)&this->fields.defaultPhotoServantPos.fields.x = 0x4390000000000000LL;
   this->fields.defaultPhotoServantPos.fields.z = 0.0;
   this->fields.isOneShot = 1;
-  v31 = (struct System_Int64_array *)sub_1C6BAB0(long___TypeInfo, 2);
-  this->fields.temporaryPhotoUserSvtId = v31;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.temporaryPhotoUserSvtId, (int32_t)v31, v32, v33);
-  v34 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 2);
-  this->fields.temporaryPhotoSvtLimitCount = v34;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.temporaryPhotoSvtLimitCount, (int32_t)v34, v35, v36);
-  v37 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 2);
-  this->fields.temporaryStaffImageId = v37;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.temporaryStaffImageId, (int32_t)v37, v38, v39);
+  v63 = (struct System_Int64_array *)sub_1C71458(long___TypeInfo, 2);
+  this->fields.temporaryPhotoUserSvtId = v63;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.temporaryPhotoUserSvtId,
+    (int32_t)v63,
+    v64,
+    v65,
+    v66,
+    v67,
+    v68,
+    v69);
+  v70 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, 2);
+  this->fields.temporaryPhotoSvtLimitCount = v70;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.temporaryPhotoSvtLimitCount,
+    (int32_t)v70,
+    v71,
+    v72,
+    v73,
+    v74,
+    v75,
+    v76);
+  v77 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, 2);
+  this->fields.temporaryStaffImageId = v77;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.temporaryStaffImageId,
+    (int32_t)v77,
+    v78,
+    v79,
+    v80,
+    v81,
+    v82,
+    v83);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -155,7 +279,7 @@ void MyRoomControl__AccountLinkageServerStatusCheck(MyRoomControl_o *this, const
 
   accountLinkageComp = this->fields.accountLinkageComp;
   if ( !accountLinkageComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   AccountLinkageComponent__LinkageStatusCheck(accountLinkageComp, 0);
 }
 
@@ -166,15 +290,15 @@ void MyRoomControl__AccountLinkageStatusCheck(MyRoomControl_o *this, const Metho
   Il2CppObject *Request_object; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CB1667 & 1) == 0 )
+  if ( (byte_4CC2774 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_LinkageStatusCheckCallback__);
-    sub_1C6BA08(&Method_NetworkManager_getRequest_AccountLinkageInfoRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    byte_4CB1667 = 1;
+    sub_1C713B0(&Method_MyRoomControl_LinkageStatusCheckCallback__);
+    sub_1C713B0(&Method_NetworkManager_getRequest_AccountLinkageInfoRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    byte_4CC2774 = 1;
   }
-  v3 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v3 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v3,
     (Il2CppObject *)this,
@@ -184,9 +308,9 @@ void MyRoomControl__AccountLinkageStatusCheck(MyRoomControl_o *this, const Metho
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v3,
-                     (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_AccountLinkageInfoRequest___);
+                     (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_AccountLinkageInfoRequest___);
   if ( !Request_object )
-    sub_1C6BC60(0, v5);
+    sub_1C71608(0, v5);
   AccountLinkageInfoRequest__beginRequest((AccountLinkageInfoRequest_o *)Request_object, 0);
 }
 
@@ -218,62 +342,66 @@ void MyRoomControl__AddSpecialImageLimitCount(
   _QWORD *v24; // x9
   __int64 v25; // x10
   int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  System_Collections_Generic_List_Enumerator_int__o v28; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v29; // [xsp+20h] [xbp-80h] BYREF
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  System_Collections_Generic_List_Enumerator_int__o v32; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v33; // [xsp+20h] [xbp-80h] BYREF
 
-  if ( (byte_4CB16BF & 1) == 0 )
+  if ( (byte_4CC27CC & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C6BA08(&ImageLimitCount_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4CB16BF = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C713B0(&ImageLimitCount_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4CC27CC = 1;
   }
-  memset(&v29, 0, sizeof(v29));
-  v6 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+  memset(&v33, 0, sizeof(v33));
+  v6 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v6,
-    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
+    (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
   if ( !*imageLimitCountList )
-    sub_1C6BC60(Master_object, v8);
+    sub_1C71608(Master_object, v8);
   v9 = (MyroomServantSpecialImageMaster_o *)Master_object;
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v28,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v32,
     *imageLimitCountList,
-    (const MethodInfo_37E4424 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v29 = v28;
+    (const MethodInfo_37F41C8 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v33 = v32;
   while ( 1 )
   {
     v10 = System_Collections_Generic_List_Enumerator_int___MoveNext(
-            &v29,
-            (const MethodInfo_358270C *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+            &v33,
+            (const MethodInfo_35924B0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
     if ( !v10 )
       break;
     if ( !v6 )
-      sub_1C6BC60(v10, v11);
-    current = v29.fields._current;
+      sub_1C71608(v10, v11);
+    current = v33.fields._current;
     items = v6->fields._items;
     v14 = Method_System_Collections_Generic_List_int__Add__;
     ++v6->fields._version;
     if ( !items )
-      sub_1C6BC60(v10, v11);
+      sub_1C71608(v10, v11);
     size = v6->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_int___AddWithResize(
         v6,
         current,
-        *(const MethodInfo_37E3950 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+        *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
     }
     else
     {
@@ -281,21 +409,21 @@ void MyRoomControl__AddSpecialImageLimitCount(
       items->m_Items[size] = current;
     }
     if ( !v9 )
-      sub_1C6BC60(v10, v11);
+      sub_1C71608(v10, v11);
     EntitiesByBaseLimitCount = MyroomServantSpecialImageMaster__GetEntitiesByBaseLimitCount(v9, svtId, current, 0);
     v18 = EntitiesByBaseLimitCount;
     if ( !EntitiesByBaseLimitCount )
-      sub_1C6BC60(0, v17);
+      sub_1C71608(0, v17);
     max_length = EntitiesByBaseLimitCount->max_length;
     if ( max_length >= 1 )
     {
       for ( i = 0; i < max_length; ++i )
       {
         if ( i >= (unsigned int)max_length )
-          sub_1C6BC68(EntitiesByBaseLimitCount);
+          sub_1C71610(EntitiesByBaseLimitCount);
         v21 = v18->m_Items[i];
         if ( !v21 )
-          sub_1C6BC60(EntitiesByBaseLimitCount, v17);
+          sub_1C71608(EntitiesByBaseLimitCount, v17);
         num = v21->fields.num;
         if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
@@ -307,14 +435,14 @@ void MyRoomControl__AddSpecialImageLimitCount(
         v24 = Method_System_Collections_Generic_List_int__Add__;
         ++v6->fields._version;
         if ( !v23 )
-          sub_1C6BC60(EntitiesByBaseLimitCount, (unsigned int)EntitiesByBaseLimitCount);
+          sub_1C71608(EntitiesByBaseLimitCount, (unsigned int)EntitiesByBaseLimitCount);
         v25 = v6->fields._size;
         if ( (unsigned int)v25 >= LODWORD(v23->max_length) )
         {
           System_Collections_Generic_List_int___AddWithResize(
             v6,
             (int32_t)EntitiesByBaseLimitCount,
-            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+            *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
         }
         else
         {
@@ -326,10 +454,10 @@ void MyRoomControl__AddSpecialImageLimitCount(
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    &v29,
-    (const MethodInfo_3582708 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    &v33,
+    (const MethodInfo_35924AC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
   *imageLimitCountList = v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)imageLimitCountList, (int32_t)v6, v26, v27);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)imageLimitCountList, (int32_t)v6, v26, v27, v28, v29, v30, v31);
 }
 
 
@@ -347,17 +475,17 @@ void MyRoomControl__AutoDelinkAccountLinkage(MyRoomControl_o *this, const Method
   const MethodInfo *v12; // x1
   System_Nullable_int__o msgFontSize; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CB166A & 1) == 0 )
+  if ( (byte_4CC2777 & 1) == 0 )
   {
-    sub_1C6BA08(&AccountLinkageComponent_TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__AutoDelinkAccountLinkage_b__320_0__);
-    sub_1C6BA08(&Method_System_Nullable_int___ctor__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&StringLiteral_1864/*"ACCOUNT_LINKAGE_DELINK_CONFIRM_COMPLETE"*/);
-    sub_1C6BA08(&StringLiteral_3280/*"CAN_CONTINUE_DEVICE"*/);
-    byte_4CB166A = 1;
+    sub_1C713B0(&AccountLinkageComponent_TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__AutoDelinkAccountLinkage_b__320_0__);
+    sub_1C713B0(&Method_System_Nullable_int___ctor__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&StringLiteral_1866/*"ACCOUNT_LINKAGE_DELINK_CONFIRM_COMPLETE"*/);
+    sub_1C713B0(&StringLiteral_3283/*"CAN_CONTINUE_DEVICE"*/);
+    byte_4CC2777 = 1;
   }
   v3 = AccountLinkageComponent_TypeInfo;
   msgFontSize = 0;
@@ -369,21 +497,21 @@ void MyRoomControl__AutoDelinkAccountLinkage(MyRoomControl_o *this, const Method
   v3->static_fields->isLinked = 0;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_1864/*"ACCOUNT_LINKAGE_DELINK_CONFIRM_COMPLETE"*/, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_1866/*"ACCOUNT_LINKAGE_DELINK_CONFIRM_COMPLETE"*/, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_MyRoomControl__AutoDelinkAccountLinkage_b__320_0__, 0);
   p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
-  System_Nullable_int____ctor(p_msgFontSize, 26, (const MethodInfo_3928F98 *)Method_System_Nullable_int___ctor__);
+  System_Nullable_int____ctor(p_msgFontSize, 26, (const MethodInfo_3938D3C *)Method_System_Nullable_int___ctor__);
   if ( !Instance
     || (v10 = msgFontSize,
         v11 = 0,
         CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v4, v6, v11, v10, 0, 0),
         (myRoomFsm = this->fields.myRoomFsm) == 0) )
   {
-    sub_1C6BC60(myRoomFsm, v9);
+    sub_1C71608(myRoomFsm, v9);
   }
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3280/*"CAN_CONTINUE_DEVICE"*/, 0);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3283/*"CAN_CONTINUE_DEVICE"*/, 0);
   MyRoomControl__HideContinueDeviceMenu(this, v12);
 }
 
@@ -404,12 +532,12 @@ void MyRoomControl__BlockTouch(MyRoomControl_o *this, const MethodInfo *method)
   UnityEngine_Color_o v14; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v15; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB1679 & 1) == 0 )
+  if ( (byte_4CC2786 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB1679 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CC2786 = 1;
   }
   v3 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -460,7 +588,7 @@ void MyRoomControl__BlockTouch(MyRoomControl_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v11.fields.currentCryptoKey = v8;
   *(_QWORD *)&v11.fields.fakeValue = v7;
-  changeBGBtnImg = (UIWidget_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v11, 0);
+  changeBGBtnImg = (UIWidget_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v11, 0);
   if ( this->fields.isServantMaterial )
   {
     materialImageIdList = this->fields.materialImageIdList;
@@ -492,7 +620,7 @@ void MyRoomControl__BlockTouch(MyRoomControl_o *this, const MethodInfo *method)
         (changeBGBtnImg = (UIWidget_o *)this->fields.maskBoxCollider) == 0) )
   {
 LABEL_26:
-    sub_1C6BC60(changeBGBtnImg, v5);
+    sub_1C71608(changeBGBtnImg, v5);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)changeBGBtnImg, 1, 0);
   if ( this->fields.type == 10 )
@@ -519,10 +647,10 @@ float MyRoomControl__CalcGameScreenAspectRatio(MyRoomControl_o *this, const Meth
   float v8; // s0
   float v9; // s1
 
-  if ( (byte_4CB16AF & 1) == 0 )
+  if ( (byte_4CC27BC & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    byte_4CB16AF = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    byte_4CC27BC = 1;
   }
   v2 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -557,19 +685,23 @@ System_Collections_IEnumerator_o *MyRoomControl__CaptureServant(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
 
-  if ( (byte_4CB16AA & 1) == 0 )
+  if ( (byte_4CC27B7 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl__CaptureServant_d__418_TypeInfo);
-    byte_4CB16AA = 1;
+    sub_1C713B0(&MyRoomControl__CaptureServant_d__418_TypeInfo);
+    byte_4CC27B7 = 1;
   }
-  v7 = sub_1C6BC54(MyRoomControl__CaptureServant_d__418_TypeInfo);
+  v7 = sub_1C715FC(MyRoomControl__CaptureServant_d__418_TypeInfo);
   MyRoomControl__CaptureServant_d__418___ctor((MyRoomControl__CaptureServant_d__418_o *)v7, 0, 0);
   if ( !v7 )
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   *(_QWORD *)(v7 + 40) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_DWORD *)(v7 + 32) = width;
   *(_DWORD *)(v7 + 48) = height;
   return (System_Collections_IEnumerator_o *)v7;
@@ -642,15 +774,15 @@ void MyRoomControl__ChangeDisp(MyRoomControl_o *this, bool isSePlay, const Metho
   UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB1676 & 1) == 0 )
+  if ( (byte_4CC2783 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_ChangeDisp__);
-    sub_1C6BA08(&Method_MyRoomControl__ChangeDisp_b__342_0__);
-    sub_1C6BA08(&Method_MyRoomControl__ChangeDisp_b__342_1__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11293/*"ReleaseTouch"*/);
-    byte_4CB1676 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_ChangeDisp__);
+    sub_1C713B0(&Method_MyRoomControl__ChangeDisp_b__342_0__);
+    sub_1C713B0(&Method_MyRoomControl__ChangeDisp_b__342_1__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&StringLiteral_11299/*"ReleaseTouch"*/);
+    byte_4CC2783 = 1;
   }
   if ( !this->fields.isServantMaterial && this->fields.isHeroine && this->fields.isHeroineReave )
     goto LABEL_29;
@@ -666,8 +798,8 @@ void MyRoomControl__ChangeDisp(MyRoomControl_o *this, bool isSePlay, const Metho
 LABEL_29:
     v27 = Method_MyRoomControl_ChangeDisp__;
     if ( (*((_BYTE *)Method_MyRoomControl_ChangeDisp__ + 83) & 2) != 0 )
-      v27 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_ChangeDisp__);
-    v28 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v27, v27[4]);
+      v27 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_ChangeDisp__);
+    v28 = (System_Reflection_MethodBase_o *)sub_1C71394(v27, v27[4]);
     OverwriteAssetSoundName__PlaySystemSe(v28, 2, 0, 0);
   }
   else if ( MyRoomControl__IsScrollviewInShowPosition(this, (const MethodInfo *)isSePlay) )
@@ -677,8 +809,8 @@ LABEL_29:
     {
       v8 = Method_MyRoomControl_ChangeDisp__;
       if ( (*((_BYTE *)Method_MyRoomControl_ChangeDisp__ + 83) & 2) != 0 )
-        v8 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_ChangeDisp__);
-      v9 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v8, v8[4]);
+        v8 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_ChangeDisp__);
+      v9 = (System_Reflection_MethodBase_o *)sub_1C71394(v8, v8[4]);
       OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
     }
     mShowPos = this->fields.mShowPos;
@@ -743,7 +875,7 @@ LABEL_14:
                                                               0)) == 0) )
         {
 LABEL_53:
-          sub_1C6BC60(soundPlayerComp, v12);
+          sub_1C71608(soundPlayerComp, v12);
         }
         v58 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)soundPlayerComp, 0);
         switch ( this->fields.mState )
@@ -771,7 +903,7 @@ LABEL_53:
             v59.fields.x = v23;
             v59.fields.y = y;
             v59.fields.z = z;
-            MyRoomControl__moveControl(this, this->fields.svtObj, v59, (System_String_o *)StringLiteral_11293/*"ReleaseTouch"*/, v25);
+            MyRoomControl__moveControl(this, this->fields.svtObj, v59, (System_String_o *)StringLiteral_11299/*"ReleaseTouch"*/, v25);
             v26 = 1;
             break;
           case 1:
@@ -807,7 +939,7 @@ LABEL_53:
             v64.fields.y = this->fields.moveBtnObjInitPos.fields.y;
             v64.fields.z = this->fields.moveBtnObjInitPos.fields.z;
             v64.fields.x = MyRoomControl_TypeInfo->static_fields->BUTTON_OUT_X;
-            MyRoomControl__moveControl(this, this->fields.moveBtnObj, v64, (System_String_o *)StringLiteral_11293/*"ReleaseTouch"*/, v35);
+            MyRoomControl__moveControl(this, this->fields.moveBtnObj, v64, (System_String_o *)StringLiteral_11299/*"ReleaseTouch"*/, v35);
             v65.fields.y = this->fields.helpBtnInitPos.fields.y;
             v65.fields.z = this->fields.helpBtnInitPos.fields.z;
             v65.fields.x = MyRoomControl_TypeInfo->static_fields->BUTTON_OUT_X;
@@ -825,7 +957,7 @@ LABEL_53:
           case 2:
             MyRoomControl__stopSvtVoice(this, v12);
             standFigureBack = this->fields.standFigureBack;
-            v39 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+            v39 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
             System_Action___ctor(v39, (Il2CppObject *)this, Method_MyRoomControl__ChangeDisp_b__342_0__, 0);
             if ( !standFigureBack )
               goto LABEL_53;
@@ -841,7 +973,7 @@ LABEL_53:
               this->fields.sortWindowMoveShowPos,
               v41);
             v42 = this->fields.standFigureBack;
-            v43 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+            v43 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
             System_Action___ctor(v43, (Il2CppObject *)this, Method_MyRoomControl__ChangeDisp_b__342_1__, 0);
             if ( !v42 )
               goto LABEL_53;
@@ -899,41 +1031,45 @@ void MyRoomControl__ChangePhotoCampaignServantFace(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   struct PhotoStandFigureComponent_array *photoStandFigures; // x8
-  PhotoStandFigureComponent_o *v11; // x19
-  System_Action_o *v12; // x20
+  PhotoStandFigureComponent_o *v15; // x19
+  System_Action_o *v16; // x20
 
-  if ( (byte_4CB16A9 & 1) == 0 )
+  if ( (byte_4CC27B6 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass416_0__ChangePhotoCampaignServantFace_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass416_0_TypeInfo);
-    byte_4CB16A9 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass416_0__ChangePhotoCampaignServantFace_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass416_0_TypeInfo);
+    byte_4CC27B6 = 1;
   }
-  v5 = sub_1C6BC54(MyRoomControl___c__DisplayClass416_0_TypeInfo);
+  v5 = sub_1C715FC(MyRoomControl___c__DisplayClass416_0_TypeInfo);
   MyRoomControl___c__DisplayClass416_0___ctor((MyRoomControl___c__DisplayClass416_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_8;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v5 + 24) = figureIndex;
   photoStandFigures = this->fields.photoStandFigures;
   if ( !photoStandFigures )
     goto LABEL_8;
   if ( LODWORD(photoStandFigures->max_length) <= figureIndex )
-    sub_1C6BC68(v6);
-  v11 = photoStandFigures->m_Items[figureIndex];
-  v12 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    sub_1C71610(v6);
+  v15 = photoStandFigures->m_Items[figureIndex];
+  v16 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v12,
+    v16,
     (Il2CppObject *)v5,
     Method_MyRoomControl___c__DisplayClass416_0__ChangePhotoCampaignServantFace_b__0__,
     0);
-  if ( !v11 )
+  if ( !v15 )
 LABEL_8:
-    sub_1C6BC60(v6, v7);
-  PhotoStandFigureComponent__SetFacePhotoServant(v11, 1, v12, -1, 0);
+    sub_1C71608(v6, v7);
+  PhotoStandFigureComponent__SetFacePhotoServant(v15, 1, v16, -1, 0);
 }
 
 
@@ -961,10 +1097,10 @@ void MyRoomControl__ChangeSetBtnsTouch(MyRoomControl_o *this, bool isSet, const 
   UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v24; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB167D & 1) == 0 )
+  if ( (byte_4CC278A & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB167D = 1;
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC278A = 1;
   }
   playBtnImg = (UIWidget_o *)this->fields.playBtnImg;
   if ( isSet )
@@ -1017,7 +1153,7 @@ void MyRoomControl__ChangeSetBtnsTouch(MyRoomControl_o *this, bool isSet, const 
   this->fields.buttonFlag = v16;
   if ( !playBtnImg )
 LABEL_22:
-    sub_1C6BC60(playBtnImg, isSet);
+    sub_1C71608(playBtnImg, isSet);
   v24.fields.a = 1.0;
   v24.fields.r = v6;
   v24.fields.g = v6;
@@ -1045,10 +1181,10 @@ void MyRoomControl__ChangeSetStandFigureObj(MyRoomControl_o *this, bool isSet, b
   StandFigureBack_o *standFigureBack; // x0
   UnityEngine_Object_o *SvtStandFigure; // x22
 
-  if ( (byte_4CB167C & 1) == 0 )
+  if ( (byte_4CC2789 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB167C = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC2789 = 1;
   }
   standFigureBack = this->fields.standFigureBack;
   if ( !standFigureBack )
@@ -1071,7 +1207,7 @@ void MyRoomControl__ChangeSetStandFigureObj(MyRoomControl_o *this, bool isSet, b
       }
     }
 LABEL_12:
-    sub_1C6BC60(standFigureBack, isSet);
+    sub_1C71608(standFigureBack, isSet);
   }
 LABEL_10:
   standFigureBack = (StandFigureBack_o *)this->fields.svtClickCollider;
@@ -1098,26 +1234,30 @@ void MyRoomControl__CheckCsUnlink(MyRoomControl_o *this, const MethodInfo *metho
   Il2CppObject *v15; // x23
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
   System_Nullable_int__o p_msgFontSize; // x0
-  System_Nullable_int__o v20; // x4
-  System_Nullable_float__o v21; // x3
+  System_Nullable_int__o v24; // x4
+  System_Nullable_float__o v25; // x3
   System_Nullable_int__o msgFontSize; // [xsp+8h] [xbp-48h] BYREF
   UserAccountLinkageEntity_o *entity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4CB166B & 1) == 0 )
+  if ( (byte_4CC2778 & 1) == 0 )
   {
-    sub_1C6BA08(&AccountLinkageComponent_TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Nullable_int___ctor__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__CheckCsUnlink_b__321_0__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    sub_1C6BA08(&StringLiteral_3277/*"CANNOT_CONTINUE_DEVICE"*/);
-    sub_1C6BA08(&StringLiteral_1873/*"ACCOUNT_LINKAGE_NOTICE_CANNOT_GET_CONTINUE_NUMBER"*/);
-    sub_1C6BA08(&StringLiteral_3280/*"CAN_CONTINUE_DEVICE"*/);
-    byte_4CB166B = 1;
+    sub_1C713B0(&AccountLinkageComponent_TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_System_Nullable_int___ctor__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__CheckCsUnlink_b__321_0__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    sub_1C713B0(&StringLiteral_3280/*"CANNOT_CONTINUE_DEVICE"*/);
+    sub_1C713B0(&StringLiteral_1875/*"ACCOUNT_LINKAGE_NOTICE_CANNOT_GET_CONTINUE_NUMBER"*/);
+    sub_1C713B0(&StringLiteral_3283/*"CAN_CONTINUE_DEVICE"*/);
+    byte_4CC2778 = 1;
   }
   entity = 0;
   msgFontSize = 0;
@@ -1138,8 +1278,8 @@ void MyRoomControl__CheckCsUnlink(MyRoomControl_o *this, const MethodInfo *metho
       v10->static_fields->isLinked = 1;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_1873/*"ACCOUNT_LINKAGE_NOTICE_CANNOT_GET_CONTINUE_NUMBER"*/, 0);
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v11 = LocalizationManager__Get((System_String_o *)StringLiteral_1875/*"ACCOUNT_LINKAGE_NOTICE_CANNOT_GET_CONTINUE_NUMBER"*/, 0);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       v13 = MyRoomControl___c_TypeInfo;
       if ( !MyRoomControl___c_TypeInfo->_2.cctor_finished )
       {
@@ -1155,28 +1295,36 @@ void MyRoomControl__CheckCsUnlink(MyRoomControl_o *this, const MethodInfo *metho
           v13 = MyRoomControl___c_TypeInfo;
         }
         v15 = (Il2CppObject *)v13->static_fields->__9;
-        _9__321_0 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+        _9__321_0 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
         System_Action___ctor(_9__321_0, v15, Method_MyRoomControl___c__CheckCsUnlink_b__321_0__, 0);
         static_fields = MyRoomControl___c_TypeInfo->static_fields;
         static_fields->__9__321_0 = _9__321_0;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__321_0, (int32_t)_9__321_0, v17, v18);
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&static_fields->__9__321_0,
+          (int32_t)_9__321_0,
+          v17,
+          v18,
+          v19,
+          v20,
+          v21,
+          v22);
       }
       p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
-      System_Nullable_int____ctor(p_msgFontSize, 26, (const MethodInfo_3928F98 *)Method_System_Nullable_int___ctor__);
+      System_Nullable_int____ctor(p_msgFontSize, 26, (const MethodInfo_3938D3C *)Method_System_Nullable_int___ctor__);
       if ( Instance )
       {
-        v20 = msgFontSize;
-        v21 = 0;
-        CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v11, _9__321_0, v21, v20, 0, 0);
+        v24 = msgFontSize;
+        v25 = 0;
+        CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v11, _9__321_0, v25, v24, 0, 0);
         SelfUserAccountLinkage = this->fields.myRoomFsm;
         if ( SelfUserAccountLinkage )
         {
-          v9 = &StringLiteral_3277/*"CANNOT_CONTINUE_DEVICE"*/;
+          v9 = &StringLiteral_3280/*"CANNOT_CONTINUE_DEVICE"*/;
           goto LABEL_18;
         }
       }
 LABEL_32:
-      sub_1C6BC60(SelfUserAccountLinkage, v4);
+      sub_1C71608(SelfUserAccountLinkage, v4);
     }
     if ( !v5 )
     {
@@ -1212,7 +1360,7 @@ LABEL_16:
   SelfUserAccountLinkage = this->fields.myRoomFsm;
   if ( !SelfUserAccountLinkage )
     goto LABEL_32;
-  v9 = &StringLiteral_3280/*"CAN_CONTINUE_DEVICE"*/;
+  v9 = &StringLiteral_3283/*"CAN_CONTINUE_DEVICE"*/;
 LABEL_18:
   PlayMakerFSM__SendEvent(SelfUserAccountLinkage, (System_String_o *)*v9, 0);
 }
@@ -1228,12 +1376,12 @@ void MyRoomControl__CheckSceneJumpInfo(MyRoomControl_o *this, const MethodInfo *
   __int64 *v7; // x9
 
   v2 = this;
-  if ( (byte_4CB1682 & 1) == 0 )
+  if ( (byte_4CC278F & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomRootComponent_TypeInfo);
-    sub_1C6BA08(&StringLiteral_3458/*"CLICK_MATERIAL"*/);
-    this = (MyRoomControl_o *)sub_1C6BA08(&StringLiteral_6972/*"GO_NEXT"*/);
-    byte_4CB1682 = 1;
+    sub_1C713B0(&MyRoomRootComponent_TypeInfo);
+    sub_1C713B0(&StringLiteral_3461/*"CLICK_MATERIAL"*/);
+    this = (MyRoomControl_o *)sub_1C713B0(&StringLiteral_6974/*"GO_NEXT"*/);
+    byte_4CC278F = 1;
   }
   sceneJumpInfo = v2->fields.sceneJumpInfo;
   if ( !sceneJumpInfo )
@@ -1241,11 +1389,11 @@ void MyRoomControl__CheckSceneJumpInfo(MyRoomControl_o *this, const MethodInfo *
     myRoomFsm = v2->fields.myRoomFsm;
     if ( myRoomFsm )
     {
-      v7 = &StringLiteral_6972/*"GO_NEXT"*/;
+      v7 = &StringLiteral_6974/*"GO_NEXT"*/;
       goto LABEL_12;
     }
 LABEL_13:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   name = sceneJumpInfo->fields.name;
   v5 = MyRoomRootComponent_TypeInfo;
@@ -1258,9 +1406,9 @@ LABEL_13:
   myRoomFsm = v2->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_13;
-  v7 = &StringLiteral_6972/*"GO_NEXT"*/;
+  v7 = &StringLiteral_6974/*"GO_NEXT"*/;
   if ( ((unsigned __int8)this & 1) != 0 )
-    v7 = &StringLiteral_3458/*"CLICK_MATERIAL"*/;
+    v7 = &StringLiteral_3461/*"CLICK_MATERIAL"*/;
 LABEL_12:
   PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)*v7, 0);
 }
@@ -1274,11 +1422,11 @@ void MyRoomControl__ClearBackGroundData(const MethodInfo *method)
   struct System_Collections_Generic_List_int__o *enableBgGroupIdList; // x9
   int v5; // w10
 
-  if ( (byte_4CB16C3 & 1) == 0 )
+  if ( (byte_4CC27D0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB16C3 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC27D0 = 1;
   }
   v2 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -1289,7 +1437,7 @@ void MyRoomControl__ClearBackGroundData(const MethodInfo *method)
   static_fields = v2->static_fields;
   enableBgGroupIdList = static_fields->enableBgGroupIdList;
   if ( !enableBgGroupIdList )
-    sub_1C6BC60(v2, v1);
+    sub_1C71608(v2, v1);
   v5 = enableBgGroupIdList->fields._version + 1;
   enableBgGroupIdList->fields._size = 0;
   enableBgGroupIdList->fields._version = v5;
@@ -1303,7 +1451,7 @@ void MyRoomControl__CloseAccountLinkage(MyRoomControl_o *this, const MethodInfo 
 
   accountLinkageComp = this->fields.accountLinkageComp;
   if ( !accountLinkageComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   AccountLinkageComponent__CloseMenu(accountLinkageComp, 0);
 }
 
@@ -1314,7 +1462,7 @@ void MyRoomControl__CloseExchangeSvtCoin(MyRoomControl_o *this, const MethodInfo
 
   exchangeSvtCoinComp = this->fields.exchangeSvtCoinComp;
   if ( !exchangeSvtCoinComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ExchangeSvtCoinComponent__CloseMenu(exchangeSvtCoinComp, 0);
 }
 
@@ -1325,17 +1473,17 @@ void MyRoomControl__CloseMultipleView(MyRoomControl_o *this, const MethodInfo *m
   System_Action_o *v4; // x20
   const MethodInfo *v5; // x3
 
-  if ( (byte_4CB168F & 1) == 0 )
+  if ( (byte_4CC279C & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__CloseMultipleView_b__387_0__);
-    byte_4CB168F = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__CloseMultipleView_b__387_0__);
+    byte_4CC279C = 1;
   }
   mBlocker = this->fields.mBlocker;
   if ( !mBlocker )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UnityEngine_GameObject__SetActive(mBlocker, 1, 0);
-  v4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_MyRoomControl__CloseMultipleView_b__387_0__, 0);
   MyRoomControl__SetFavoriteSvt(this, v4, 0, v5);
 }
@@ -1361,10 +1509,10 @@ void MyRoomControl__CloseMutlipleServant(MyRoomControl_o *this, const MethodInfo
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB168D & 1) == 0 )
+  if ( (byte_4CC279A & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_6732/*"FinishedCloseMultiServant"*/);
-    byte_4CB168D = 1;
+    sub_1C713B0(&StringLiteral_6734/*"FinishedCloseMultiServant"*/);
+    byte_4CC279A = 1;
   }
   mBlocker = this->fields.mBlocker;
   if ( !mBlocker
@@ -1373,7 +1521,7 @@ void MyRoomControl__CloseMutlipleServant(MyRoomControl_o *this, const MethodInfo
         (multipleStandFigureBacks = this->fields.multipleStandFigureBacks) == 0) )
   {
 LABEL_20:
-    sub_1C6BC60(mBlocker, method);
+    sub_1C71608(mBlocker, method);
   }
   v6 = 0;
   v7 = 4;
@@ -1388,7 +1536,7 @@ LABEL_20:
       goto LABEL_20;
     if ( v9 >= LODWORD(defaultMultipleServantPoses->max_length) || v9 >= max_length )
 LABEL_22:
-      sub_1C6BC68(mBlocker);
+      sub_1C71610(mBlocker);
     mBlocker = (UnityEngine_GameObject_o *)*((_QWORD *)&multipleStandFigureBacks->obj.klass + v7);
     if ( mBlocker )
     {
@@ -1413,9 +1561,9 @@ LABEL_22:
             v16 = this->fields.multipleStandFigureBacks;
             if ( v16 )
             {
-              v17 = v9 == LODWORD(v16->max_length) - 1 ? (System_String_o *)StringLiteral_6732/*"FinishedCloseMultiServant"*/ : 0LL;
+              v17 = v9 == LODWORD(v16->max_length) - 1 ? (System_String_o *)StringLiteral_6734/*"FinishedCloseMultiServant"*/ : 0LL;
               v19.fields.y = y;
-              v19.fields.x = flt_CEB6C8[(_DWORD)v7 == 4] + x;
+              v19.fields.x = flt_CEE308[(_DWORD)v7 == 4] + x;
               v19.fields.z = z + 0.0;
               MyRoomControl__moveControl(this, mBlocker, v19, v17, v15);
               multipleStandFigureBacks = this->fields.multipleStandFigureBacks;
@@ -1442,26 +1590,34 @@ System_Collections_IEnumerator_o *MyRoomControl__CoWaitForConstructingRecordWith
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
 
-  if ( (byte_4CB1665 & 1) == 0 )
+  if ( (byte_4CC2772 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl__CoWaitForConstructingRecordWithServant_d__292_TypeInfo);
-    byte_4CB1665 = 1;
+    sub_1C713B0(&MyRoomControl__CoWaitForConstructingRecordWithServant_d__292_TypeInfo);
+    byte_4CC2772 = 1;
   }
-  v5 = sub_1C6BC54(MyRoomControl__CoWaitForConstructingRecordWithServant_d__292_TypeInfo);
+  v5 = sub_1C715FC(MyRoomControl__CoWaitForConstructingRecordWithServant_d__292_TypeInfo);
   MyRoomControl__CoWaitForConstructingRecordWithServant_d__292___ctor(
     (MyRoomControl__CoWaitForConstructingRecordWithServant_d__292_o *)v5,
     0,
     0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 40) = setEndAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)setEndAction, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)setEndAction, v14, v15, v16, v17, v18, v19);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -1481,17 +1637,21 @@ void MyRoomControl__CompletedTargetSetting(MyRoomControl_o *this, const MethodIn
   System_Collections_Generic_IEnumerable_TSource__o *temporaryPhotoTargetList; // x0
   System_Collections_Generic_List_TSource__o *v13; // x0
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x3
-  struct System_Collections_Generic_List_PhotoUtility_TargetType__o *v17; // x8
-  int v18; // w9
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  const MethodInfo *v20; // x3
+  struct System_Collections_Generic_List_PhotoUtility_TargetType__o *v21; // x8
+  int v22; // w9
 
   v2 = this;
-  if ( (byte_4CB169E & 1) == 0 )
+  if ( (byte_4CC27AB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_PhotoUtility_TargetType___);
-    this = (MyRoomControl_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Clear__);
-    byte_4CB169E = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToList_PhotoUtility_TargetType___);
+    this = (MyRoomControl_o *)sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Clear__);
+    byte_4CC27AB = 1;
   }
   photoStandFigures = v2->fields.photoStandFigures;
   if ( !photoStandFigures )
@@ -1509,7 +1669,7 @@ void MyRoomControl__CompletedTargetSetting(MyRoomControl_o *this, const MethodIn
       goto LABEL_17;
     if ( v5 >= LODWORD(temporaryPhotoUserSvtId->max_length) )
 LABEL_16:
-      sub_1C6BC68(this);
+      sub_1C71610(this);
     v9 = photoStandFigures->m_Items[v5];
     if ( !v9 )
       goto LABEL_17;
@@ -1534,17 +1694,17 @@ LABEL_16:
   *(_QWORD *)&v2->fields.photoMasterEquipId = *(_QWORD *)&v2->fields.temporaryMasterEquipId;
   v13 = System_Linq_Enumerable__ToList_Int32Enum_(
           temporaryPhotoTargetList,
-          (const MethodInfo_317FCF4 *)Method_System_Linq_Enumerable_ToList_PhotoUtility_TargetType___);
+          (const MethodInfo_318FA98 *)Method_System_Linq_Enumerable_ToList_PhotoUtility_TargetType___);
   v2->fields.photoTargetList = (struct System_Collections_Generic_List_PhotoUtility_TargetType__o *)v13;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.photoTargetList, (int32_t)v13, v14, v15);
-  v17 = v2->fields.temporaryPhotoTargetList;
-  if ( !v17 )
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.photoTargetList, (int32_t)v13, v14, v15, v16, v17, v18, v19);
+  v21 = v2->fields.temporaryPhotoTargetList;
+  if ( !v21 )
 LABEL_17:
-    sub_1C6BC60(this, method);
-  v18 = v17->fields._version + 1;
-  v17->fields._size = 0;
-  v17->fields._version = v18;
-  MyRoomControl__DispPhotoCampaign(v2, 1, 1, v16);
+    sub_1C71608(this, method);
+  v22 = v21->fields._version + 1;
+  v21->fields._size = 0;
+  v21->fields._version = v22;
+  MyRoomControl__DispPhotoCampaign(v2, 1, 1, v20);
 }
 
 
@@ -1554,45 +1714,49 @@ void MyRoomControl__ConfirmTargetSelectState(MyRoomControl_o *this, bool isChang
   System_Collections_Generic_List_T__o *temporaryPhotoTargetList; // x0
   const MethodInfo *v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   int32_t size; // w8
-  char v11; // w21
-  System_Action_o *v12; // x22
-  const MethodInfo *v13; // x5
-  int32_t v14; // w1
-  int32_t v15; // w3
-  MyRoomControl_o *v16; // x0
-  bool v17; // w2
-  System_Action_o *v18; // x4
+  char v15; // w21
+  System_Action_o *v16; // x22
+  const MethodInfo *v17; // x5
+  int32_t v18; // w1
+  int32_t v19; // w3
+  MyRoomControl_o *v20; // x0
+  bool v21; // w2
+  System_Action_o *v22; // x4
   int32_t Item; // w0
-  char v20; // w21
-  int32_t v21; // w22
-  System_Action_o *v22; // x23
-  System_Action_o *v23; // x21
-  System_Action_o *v24; // x22
-  const MethodInfo *v25; // x3
+  char v24; // w21
+  int32_t v25; // w22
+  System_Action_o *v26; // x23
+  System_Action_o *v27; // x21
+  System_Action_o *v28; // x22
+  const MethodInfo *v29; // x3
 
-  if ( (byte_4CB169D & 1) == 0 )
+  if ( (byte_4CC27AA & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-    sub_1C6BA08(&Method_MyRoomControl_CompletedTargetSetting__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__2__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass404_0_TypeInfo);
-    byte_4CB169D = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+    sub_1C713B0(&Method_MyRoomControl_CompletedTargetSetting__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__2__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass404_0_TypeInfo);
+    byte_4CC27AA = 1;
   }
-  v5 = sub_1C6BC54(MyRoomControl___c__DisplayClass404_0_TypeInfo);
+  v5 = sub_1C715FC(MyRoomControl___c__DisplayClass404_0_TypeInfo);
   MyRoomControl___c__DisplayClass404_0___ctor((MyRoomControl___c__DisplayClass404_0_o *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 24) = this,
         *(_BYTE *)(v5 + 16) = isChangeTarget,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)this, v8, v9),
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13),
         (temporaryPhotoTargetList = (System_Collections_Generic_List_T__o *)this->fields.temporaryPhotoTargetList) == 0) )
   {
-    sub_1C6BC60(temporaryPhotoTargetList, v7);
+    sub_1C71608(temporaryPhotoTargetList, v7);
   }
   size = temporaryPhotoTargetList->fields._size;
   if ( size == 2 )
@@ -1603,15 +1767,15 @@ void MyRoomControl__ConfirmTargetSelectState(MyRoomControl_o *this, bool isChang
     }
     else
     {
-      v23 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-      System_Action___ctor(v23, (Il2CppObject *)this, Method_MyRoomControl_CompletedTargetSetting__, 0);
-      v24 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+      v27 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      System_Action___ctor(v27, (Il2CppObject *)this, Method_MyRoomControl_CompletedTargetSetting__, 0);
+      v28 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
       System_Action___ctor(
-        v24,
+        v28,
         (Il2CppObject *)v5,
         Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__1__,
         0);
-      MyRoomControl__OpenPhotoFrameSelectDialog(this, v23, v24, v25);
+      MyRoomControl__OpenPhotoFrameSelectDialog(this, v27, v28, v29);
     }
   }
   else
@@ -1621,37 +1785,37 @@ void MyRoomControl__ConfirmTargetSelectState(MyRoomControl_o *this, bool isChang
       Item = System_Collections_Generic_List_Int32Enum___get_Item(
                temporaryPhotoTargetList,
                0,
-               (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-      v20 = *(_BYTE *)(v5 + 16);
-      v21 = Item;
-      v22 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+               (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+      v24 = *(_BYTE *)(v5 + 16);
+      v25 = Item;
+      v26 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
       System_Action___ctor(
-        v22,
+        v26,
         (Il2CppObject *)v5,
         Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__2__,
         0);
-      v15 = 2;
-      v16 = this;
-      v14 = v21;
-      v17 = v20;
-      v18 = v22;
+      v19 = 2;
+      v20 = this;
+      v18 = v25;
+      v21 = v24;
+      v22 = v26;
     }
     else
     {
-      v11 = *(_BYTE *)(v5 + 16);
-      v12 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+      v15 = *(_BYTE *)(v5 + 16);
+      v16 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
       System_Action___ctor(
-        v12,
+        v16,
         (Il2CppObject *)v5,
         Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__0__,
         0);
-      v14 = 3;
-      v15 = 1;
-      v16 = this;
-      v17 = v11;
-      v18 = v12;
+      v18 = 3;
+      v19 = 1;
+      v20 = this;
+      v21 = v15;
+      v22 = v16;
     }
-    MyRoomControl__OpenTargetSelectDialog(v16, v14, v17, v15, v18, v13);
+    MyRoomControl__OpenTargetSelectDialog(v20, v18, v21, v19, v22, v17);
   }
 }
 
@@ -1662,28 +1826,28 @@ CRIMoviePlayer_o *MyRoomControl__CreateCriMoviePlayerObject(MyRoomControl_o *thi
   Il2CppObject *v3; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CB167F & 1) == 0 )
+  if ( (byte_4CC278C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Resources_Load_GameObject___);
-    sub_1C6BA08(&StringLiteral_3912/*"CRIMovie/CRIMoviePlayerWithPanel"*/);
-    byte_4CB167F = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Resources_Load_GameObject___);
+    sub_1C713B0(&StringLiteral_3915/*"CRIMovie/CRIMoviePlayerWithPanel"*/);
+    byte_4CC278C = 1;
   }
   object = UnityEngine_Resources__Load_object_(
-             (System_String_o *)StringLiteral_3912/*"CRIMovie/CRIMoviePlayerWithPanel"*/,
-             (const MethodInfo_31D81C4 *)Method_UnityEngine_Resources_Load_GameObject___);
+             (System_String_o *)StringLiteral_3915/*"CRIMovie/CRIMoviePlayerWithPanel"*/,
+             (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v3 = UnityEngine_Object__Instantiate_object_(
          object,
-         (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+         (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !v3 )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   return (CRIMoviePlayer_o *)UnityEngine_GameObject__GetComponent_object_(
                                (UnityEngine_GameObject_o *)v3,
-                               (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
+                               (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
 }
 
 
@@ -1697,72 +1861,92 @@ void MyRoomControl__CreatePhotoMasterFigure(
   UnityEngine_Component_o *Parent; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   struct PhotoStandFigureComponent_array *photoStandFigures; // x8
   UnityEngine_GameObject_o *gameObject; // x0
-  UnityEngine_GameObject_o *v16; // x0
+  UnityEngine_GameObject_o *v24; // x0
   int32_t photoMasterGenderType; // w21
   int32_t photoMasterEquipId; // w22
-  UnityEngine_GameObject_o *v19; // x23
-  System_Action_o *v20; // x24
-  struct UIMasterFigureTextureOld_o *Prefab_40903272; // x1
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  UnityEngine_GameObject_o *v27; // x23
+  System_Action_o *v28; // x24
+  struct UIMasterFigureTextureOld_o *Prefab_40945812; // x1
+  int32_t v30; // w2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  int32_t v33; // w5
+  int64_t v34; // x6
+  System_String_o *v35; // x7
 
-  if ( (byte_4CB16A4 & 1) == 0 )
+  if ( (byte_4CC27B1 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass411_0__CreatePhotoMasterFigure_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass411_0_TypeInfo);
-    byte_4CB16A4 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass411_0__CreatePhotoMasterFigure_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass411_0_TypeInfo);
+    byte_4CC27B1 = 1;
   }
-  v7 = sub_1C6BC54(MyRoomControl___c__DisplayClass411_0_TypeInfo);
+  v7 = sub_1C715FC(MyRoomControl___c__DisplayClass411_0_TypeInfo);
   MyRoomControl___c__DisplayClass411_0___ctor((MyRoomControl___c__DisplayClass411_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_9;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 32) = func;
   *(_DWORD *)(v7 + 24) = targetIndex;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)func, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)func, v16, v17, v18, v19, v20, v21);
   photoStandFigures = this->fields.photoStandFigures;
   if ( !photoStandFigures )
     goto LABEL_9;
   if ( !LODWORD(photoStandFigures->max_length) )
-    sub_1C6BC68(Parent);
+    sub_1C71610(Parent);
   Parent = (UnityEngine_Component_o *)photoStandFigures->m_Items[0];
   if ( !Parent
     || (gameObject = UnityEngine_Component__get_gameObject(Parent, 0),
         (Parent = (UnityEngine_Component_o *)GameObjectExtensions__GetParent(gameObject, 0)) == 0) )
   {
 LABEL_9:
-    sub_1C6BC60(Parent, v9);
+    sub_1C71608(Parent, v9);
   }
-  v16 = UnityEngine_Component__get_gameObject(Parent, 0);
+  v24 = UnityEngine_Component__get_gameObject(Parent, 0);
   photoMasterGenderType = this->fields.photoMasterGenderType;
   photoMasterEquipId = this->fields.photoMasterEquipId;
-  v19 = v16;
-  v20 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v27 = v24;
+  v28 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v20,
+    v28,
     (Il2CppObject *)v7,
     Method_MyRoomControl___c__DisplayClass411_0__CreatePhotoMasterFigure_b__0__,
     0);
-  Prefab_40903272 = MasterFigureManagerOld__CreatePrefab_40903272(
-                      v19,
+  Prefab_40945812 = MasterFigureManagerOld__CreatePrefab_40945812(
+                      v27,
                       2,
                       photoMasterGenderType,
                       photoMasterEquipId,
                       1,
-                      v20,
+                      v28,
                       0,
                       (System_Nullable_Vector3__o)0,
                       0,
                       0);
-  this->fields.photoMasterTexture = Prefab_40903272;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoMasterTexture, (int32_t)Prefab_40903272, v22, v23);
+  this->fields.photoMasterTexture = Prefab_40945812;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.photoMasterTexture,
+    (int32_t)Prefab_40945812,
+    v30,
+    v31,
+    v32,
+    v33,
+    v34,
+    v35);
 }
 
 
@@ -1775,7 +1959,7 @@ void MyRoomControl__DestroyExchangeSvtCoin(MyRoomControl_o *this, const MethodIn
     || (MyRoomListControl__DestroyExchangeSvtCoinMenuBoard(myRoomListCtr, 0),
         (myRoomListCtr = (MyRoomListControl_o *)this->fields.exchangeSvtCoinComp) == 0) )
   {
-    sub_1C6BC60(myRoomListCtr, method);
+    sub_1C71608(myRoomListCtr, method);
   }
   ExchangeSvtCoinComponent__ExitMenu((ExchangeSvtCoinComponent_o *)myRoomListCtr, 0);
 }
@@ -1793,68 +1977,76 @@ void MyRoomControl__DispDefaultMyRoom(
   MyRoomFrontObjectManager_o *frontObjectManager; // x0
   _BOOL8 v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  const MethodInfo *v16; // x1
-  const MethodInfo *v17; // x1
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  const MethodInfo *v24; // x1
+  const MethodInfo *v25; // x1
   StandFigureBack_o *standFigureBack; // x21
-  System_Action_o *v19; // x23
-  StandFigureBack_o *v20; // x21
-  System_Action_o *v21; // x23
-  _BOOL4 v22; // w8
-  _BOOL4 v23; // w8
+  System_Action_o *v27; // x23
+  StandFigureBack_o *v28; // x21
+  System_Action_o *v29; // x23
+  _BOOL4 v30; // w8
+  _BOOL4 v31; // w8
   UnityEngine_GameObject_o *mShowPos; // x0
   UnityEngine_GameObject_o *mMainObj; // x21
-  const MethodInfo *v26; // x2
-  const MethodInfo *v27; // x4
+  const MethodInfo *v34; // x2
+  const MethodInfo *v35; // x4
   UnityEngine_Vector3_o *p_moveShowPos; // x10
   float *p_z; // x8
   float x; // s0 OVERLAPPED
   float *p_y; // x10
-  int v32; // s1
-  int v33; // s2
+  int v40; // s1
+  int v41; // s2
   UnityEngine_Vector3_o LocalPosition; // [xsp+0h] [xbp-60h] BYREF
   UnityEngine_Vector3_o moveShowPos; // [xsp+10h] [xbp-50h] BYREF
   UnityEngine_GameObject_o *moveTarget; // [xsp+28h] [xbp-38h] BYREF
 
-  if ( (byte_4CB168E & 1) == 0 )
+  if ( (byte_4CC279B & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass385_0__DispDefaultMyRoom_b__0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass385_0__DispDefaultMyRoom_b__1__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass385_0_TypeInfo);
-    byte_4CB168E = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass385_0__DispDefaultMyRoom_b__0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass385_0__DispDefaultMyRoom_b__1__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass385_0_TypeInfo);
+    byte_4CC279B = 1;
   }
   moveTarget = 0;
   moveShowPos.fields.z = 0.0;
   *(_QWORD *)&moveShowPos.fields.x = 0;
   LocalPosition.fields.z = 0.0;
   *(_QWORD *)&LocalPosition.fields.x = 0;
-  v9 = sub_1C6BC54(MyRoomControl___c__DisplayClass385_0_TypeInfo);
+  v9 = sub_1C715FC(MyRoomControl___c__DisplayClass385_0_TypeInfo);
   MyRoomControl___c__DisplayClass385_0___ctor((MyRoomControl___c__DisplayClass385_0_o *)v9, 0);
   if ( !v9 )
     goto LABEL_43;
   *(_QWORD *)(v9 + 16) = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)callback, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)callback, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)this, v14, v15);
-  MyRoomControl__stopSvtVoice(this, v16);
-  MyRoomControl__BlockTouch(this, v17);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)this, v18, v19, v20, v21, v22, v23);
+  MyRoomControl__stopSvtVoice(this, v24);
+  MyRoomControl__BlockTouch(this, v25);
   if ( isDispDefault )
   {
     if ( isFadein )
     {
       standFigureBack = this->fields.standFigureBack;
-      v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+      v27 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
       System_Action___ctor(
-        v19,
+        v27,
         (Il2CppObject *)v9,
         Method_MyRoomControl___c__DisplayClass385_0__DispDefaultMyRoom_b__0__,
         0);
       if ( !standFigureBack )
         goto LABEL_43;
-      StandFigureBack__Fadein(standFigureBack, v19, 0);
+      StandFigureBack__Fadein(standFigureBack, v27, 0);
     }
     frontObjectManager = this->fields.frontObjectManager;
     if ( frontObjectManager )
@@ -1863,18 +2055,18 @@ void MyRoomControl__DispDefaultMyRoom(
       goto LABEL_13;
     }
 LABEL_43:
-    sub_1C6BC60(frontObjectManager, v11);
+    sub_1C71608(frontObjectManager, v11);
   }
-  v20 = this->fields.standFigureBack;
-  v21 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v28 = this->fields.standFigureBack;
+  v29 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v21,
+    v29,
     (Il2CppObject *)v9,
     Method_MyRoomControl___c__DisplayClass385_0__DispDefaultMyRoom_b__1__,
     0);
-  if ( !v20 )
+  if ( !v28 )
     goto LABEL_43;
-  StandFigureBack__Fadeout(v20, v21, 0);
+  StandFigureBack__Fadeout(v28, v29, 0);
   frontObjectManager = this->fields.frontObjectManager;
   if ( !frontObjectManager )
     goto LABEL_43;
@@ -1898,15 +2090,15 @@ LABEL_13:
     goto LABEL_43;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frontObjectManager, isDispDefault, 0);
   frontObjectManager = (MyRoomFrontObjectManager_o *)this->fields.multipleViewButton;
-  v22 = isDispDefault && this->fields.isEnableMultipleView;
+  v30 = isDispDefault && this->fields.isEnableMultipleView;
   if ( !frontObjectManager )
     goto LABEL_43;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frontObjectManager, v22, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frontObjectManager, v30, 0);
   frontObjectManager = (MyRoomFrontObjectManager_o *)this->fields.photoCampaignButton;
-  v23 = isDispDefault && this->fields.isEnablePhotoCampaign;
+  v31 = isDispDefault && this->fields.isEnablePhotoCampaign;
   if ( !frontObjectManager )
     goto LABEL_43;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frontObjectManager, v23, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)frontObjectManager, v31, 0);
   frontObjectManager = (MyRoomFrontObjectManager_o *)this->fields.changeBgButton;
   v11 = isDispDefault && (unsigned __int64)this->fields.isEnableChangeBg;
   if ( !frontObjectManager )
@@ -1925,7 +2117,7 @@ LABEL_13:
     case 0xE:
     case 0xF:
     case 0x10:
-      MyRoomControl__setupMaterialUIMoveData(this, &moveTarget, &moveShowPos, &LocalPosition, v27);
+      MyRoomControl__setupMaterialUIMoveData(this, &moveTarget, &moveShowPos, &LocalPosition, v35);
       mMainObj = moveTarget;
       goto LABEL_31;
     case 6:
@@ -1951,9 +2143,9 @@ LABEL_31:
         p_y = &LocalPosition.fields.y;
       if ( isDispDefault )
         p_z = &moveShowPos.fields.z;
-      v32 = *(_DWORD *)p_y;
-      v33 = *(_DWORD *)p_z;
-      MyRoomControl__MyRoomlUIAnimationStart(this, mMainObj, *(UnityEngine_Vector3_o *)&x, v26);
+      v40 = *(_DWORD *)p_y;
+      v41 = *(_DWORD *)p_z;
+      MyRoomControl__MyRoomlUIAnimationStart(this, mMainObj, *(UnityEngine_Vector3_o *)&x, v34);
       return;
     default:
       goto LABEL_31;
@@ -1977,13 +2169,13 @@ void MyRoomControl__DispPhotoCampaign(
   int32_t *m_Items; // x11
   System_Collections_IEnumerator_o *PhotoTarget; // x1
 
-  if ( (byte_4CB16A1 & 1) == 0 )
+  if ( (byte_4CC27AE & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Contains__);
-    sub_1C6BA08(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_4CB16A1 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Contains__);
+    sub_1C713B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4CC27AE = 1;
   }
-  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   MissionNotifyManager__StartPause(Instance, 0);
@@ -1993,7 +2185,7 @@ void MyRoomControl__DispPhotoCampaign(
   Instance = (MissionNotifyManager_o *)System_Collections_Generic_List_Int32Enum___Contains(
                                          (System_Collections_Generic_List_T__o *)Instance,
                                          3,
-                                         (const MethodInfo_37E64F4 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__Contains__);
+                                         (const MethodInfo_37F6298 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__Contains__);
   photoFrameSprite = (UnityEngine_Component_o *)this->fields.photoFrameSprite;
   this->fields.isOneShot = (unsigned __int8)Instance & 1;
   if ( !photoFrameSprite )
@@ -2015,7 +2207,7 @@ void MyRoomControl__DispPhotoCampaign(
   this->fields.isChangePhotoPosition = 0;
   if ( !photoTargetFaceListIndex )
 LABEL_17:
-    sub_1C6BC60(Instance, v8);
+    sub_1C71608(Instance, v8);
   max_length_low = LODWORD(photoTargetFaceListIndex->max_length);
   if ( (__int64)(max_length_low << 32) >= 1 )
   {
@@ -2024,14 +2216,14 @@ LABEL_17:
     do
     {
       if ( v13 >= max_length_low )
-        sub_1C6BC68(Instance);
+        sub_1C71610(Instance);
       m_Items[v13++] = -1;
     }
     while ( (__int64)v13 < (int)max_length_low );
   }
 LABEL_15:
   PhotoTarget = MyRoomControl__LoadPhotoTarget(this, isTargetUpdate, v10);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, PhotoTarget, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, PhotoTarget, 0);
 }
 
 
@@ -2044,12 +2236,12 @@ int32_t MyRoomControl__DisplayGroupId(const MethodInfo *method)
   struct MyRoomControl_StaticFields *static_fields; // x8
   System_Collections_Generic_List_int__o *enableBgGroupIdList; // x0
 
-  if ( (byte_4CB16C4 & 1) == 0 )
+  if ( (byte_4CC27D1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_int___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB16C4 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_Any_int___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC27D1 = 1;
   }
   v1 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -2059,7 +2251,7 @@ int32_t MyRoomControl__DisplayGroupId(const MethodInfo *method)
   }
   if ( !System_Linq_Enumerable__Any_int_(
           (System_Collections_Generic_IEnumerable_TSource__o *)v1->static_fields->enableBgGroupIdList,
-          (const MethodInfo_31469B0 *)Method_System_Linq_Enumerable_Any_int___) )
+          (const MethodInfo_3156754 *)Method_System_Linq_Enumerable_Any_int___) )
   {
     v3 = MyRoomControl_TypeInfo;
     if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -2075,11 +2267,11 @@ int32_t MyRoomControl__DisplayGroupId(const MethodInfo *method)
   static_fields = v4->static_fields;
   enableBgGroupIdList = static_fields->enableBgGroupIdList;
   if ( !enableBgGroupIdList )
-    sub_1C6BC60(0, v2);
+    sub_1C71608(0, v2);
   return System_Collections_Generic_List_int___get_Item(
            enableBgGroupIdList,
            static_fields->displayBgGroupIndex,
-           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+           (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
 }
 
 
@@ -2097,18 +2289,22 @@ void MyRoomControl__EndLoad(MyRoomControl_o *this, const MethodInfo *method)
   Il2CppObject *v12; // x22
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
 
-  if ( (byte_4CB1649 & 1) == 0 )
+  if ( (byte_4CC2756 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__EndLoad_b__239_0__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8289/*"LOAD_END"*/);
-    byte_4CB1649 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__EndLoad_b__239_0__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    sub_1C713B0(&StringLiteral_8293/*"LOAD_END"*/);
+    byte_4CC2756 = 1;
   }
   svtCtr = this->fields.svtCtr;
   if ( !svtCtr )
@@ -2125,14 +2321,14 @@ void MyRoomControl__EndLoad(MyRoomControl_o *this, const MethodInfo *method)
     svtCtr = (void *)System_Collections_Generic_List_int___get_Item(
                        (System_Collections_Generic_List_int__o *)svtCtr,
                        this->fields.figureSvtDispIdx,
-                       (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+                       (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
     if ( !v7 )
       goto LABEL_21;
     MyRoomSvtControl__initFirstPlayVoiceList(v7, v6, (int32_t)svtCtr, 0);
   }
   if ( this->fields.sceneJumpInfo )
     goto LABEL_19;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v9 = AvalonSceneManager_TypeInfo;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
   {
@@ -2155,21 +2351,21 @@ void MyRoomControl__EndLoad(MyRoomControl_o *this, const MethodInfo *method)
       svtCtr = MyRoomControl___c_TypeInfo;
     }
     v12 = (Il2CppObject *)**((_QWORD **)svtCtr + 23);
-    v11 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v11 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v11, v12, Method_MyRoomControl___c__EndLoad_b__239_0__, 0);
     static_fields = MyRoomControl___c_TypeInfo->static_fields;
     static_fields->__9__239_0 = v11;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__239_0, (int32_t)v11, v14, v15);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__239_0, (int32_t)v11, v14, v15, v16, v17, v18, v19);
   }
   if ( !Instance )
 LABEL_21:
-    sub_1C6BC60(svtCtr, method);
+    sub_1C71608(svtCtr, method);
   CommonUI__maskFadein((CommonUI_o *)Instance, DEFAULT_FADE_TIME, v11, 0);
 LABEL_19:
   svtCtr = this->fields.myRoomFsm;
   if ( !svtCtr )
     goto LABEL_21;
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)svtCtr, (System_String_o *)StringLiteral_8289/*"LOAD_END"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)svtCtr, (System_String_o *)StringLiteral_8293/*"LOAD_END"*/, 0);
 }
 
 
@@ -2181,26 +2377,30 @@ void MyRoomControl__EndLoadPhotoAsset(MyRoomControl_o *this, const MethodInfo *m
   Il2CppObject *v6; // x22
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   Il2CppObject *Instance; // x0
-  AvalonSceneManager_c *v11; // x8
-  CommonUI_o *v12; // x20
+  AvalonSceneManager_c *v15; // x8
+  CommonUI_o *v16; // x20
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v14; // x21
-  __int64 v15; // x0
-  __int64 v16; // x1
+  System_Action_o *v18; // x21
+  __int64 v19; // x0
+  __int64 v20; // x1
 
-  if ( (byte_4CB169A & 1) == 0 )
+  if ( (byte_4CC27A7 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_PhotoStandFigureComponent__TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
-    sub_1C6BA08(&Method_MyRoomControl__EndLoadPhotoAsset_b__401_1__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__EndLoadPhotoAsset_b__401_0__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    byte_4CB169A = 1;
+    sub_1C713B0(&System_Action_PhotoStandFigureComponent__TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
+    sub_1C713B0(&Method_MyRoomControl__EndLoadPhotoAsset_b__401_1__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__EndLoadPhotoAsset_b__401_0__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    byte_4CC27A7 = 1;
   }
   v3 = MyRoomControl___c_TypeInfo;
   photoStandFigures = (System_Collections_Generic_IEnumerable_T__o *)this->fields.photoStandFigures;
@@ -2218,30 +2418,38 @@ void MyRoomControl__EndLoadPhotoAsset(MyRoomControl_o *this, const MethodInfo *m
       v3 = MyRoomControl___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__401_0 = (System_Action_object__o *)sub_1C6BC54(System_Action_PhotoStandFigureComponent__TypeInfo);
+    _9__401_0 = (System_Action_object__o *)sub_1C715FC(System_Action_PhotoStandFigureComponent__TypeInfo);
     System_Action_object____ctor(_9__401_0, v6, Method_MyRoomControl___c__EndLoadPhotoAsset_b__401_0__, 0);
     static_fields = MyRoomControl___c_TypeInfo->static_fields;
     static_fields->__9__401_0 = (struct System_Action_PhotoStandFigureComponent__o *)_9__401_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__401_0, (int32_t)_9__401_0, v8, v9);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__401_0,
+      (int32_t)_9__401_0,
+      v8,
+      v9,
+      v10,
+      v11,
+      v12,
+      v13);
   }
   BasicHelper__ForEach_object_(
     photoStandFigures,
     (System_Action_T__o *)_9__401_0,
-    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v11 = AvalonSceneManager_TypeInfo;
-  v12 = (CommonUI_o *)Instance;
+    (const MethodInfo_3136DF4 *)Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v15 = AvalonSceneManager_TypeInfo;
+  v16 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-    v11 = AvalonSceneManager_TypeInfo;
+    v15 = AvalonSceneManager_TypeInfo;
   }
-  DEFAULT_FADE_TIME = v11->static_fields->DEFAULT_FADE_TIME;
-  v14 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v14, (Il2CppObject *)this, Method_MyRoomControl__EndLoadPhotoAsset_b__401_1__, 0);
-  if ( !v12 )
-    sub_1C6BC60(v15, v16);
-  CommonUI__maskFadeout(v12, 1, DEFAULT_FADE_TIME, v14, 0);
+  DEFAULT_FADE_TIME = v15->static_fields->DEFAULT_FADE_TIME;
+  v18 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v18, (Il2CppObject *)this, Method_MyRoomControl__EndLoadPhotoAsset_b__401_1__, 0);
+  if ( !v16 )
+    sub_1C71608(v19, v20);
+  CommonUI__maskFadeout(v16, 1, DEFAULT_FADE_TIME, v18, 0);
 }
 
 
@@ -2254,28 +2462,32 @@ void MyRoomControl__EndMaterialEventBack(MyRoomControl_o *this, const MethodInfo
 void MyRoomControl__EndSceneJump(MyRoomControl_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   Il2CppObject *Instance; // x0
-  __int64 v6; // x1
-  CommonUI_o *v7; // x19
+  __int64 v10; // x1
+  CommonUI_o *v11; // x19
 
-  if ( (byte_4CB1683 & 1) == 0 )
+  if ( (byte_4CC2790 & 1) == 0 )
   {
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB1683 = 1;
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC2790 = 1;
   }
   if ( this->fields.sceneJumpInfo )
   {
     this->fields.sceneJumpInfo = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.sceneJumpInfo, 0, v2, v3);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    v7 = (CommonUI_o *)Instance;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.sceneJumpInfo, 0, v2, v3, v4, v5, v6, v7);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v11 = (CommonUI_o *)Instance;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-    if ( !v7 )
-      sub_1C6BC60(Instance, v6);
-    CommonUI__maskFadein(v7, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
+    if ( !v11 )
+      sub_1C71608(Instance, v10);
+    CommonUI__maskFadein(v11, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
   }
 }
 
@@ -2286,7 +2498,7 @@ void MyRoomControl__EndTurorialRequest(MyRoomControl_o *this, System_String_o *r
 
   helpListViewManager = this->fields.helpListViewManager;
   if ( !helpListViewManager )
-    sub_1C6BC60(0, result);
+    sub_1C71608(0, result);
   MyRoomHelpListViewManager__DestroyList(helpListViewManager, 0);
 }
 
@@ -2301,16 +2513,16 @@ void MyRoomControl__ExchangePosition(MyRoomControl_o *this, const MethodInfo *me
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4CB16BA & 1) == 0 )
+  if ( (byte_4CC27C7 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__ExchangePosition_b__436_0__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16BA = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__ExchangePosition_b__436_0__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27C7 = 1;
   }
   this->fields.isChangePhotoPosition ^= 1u;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   v5 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -2319,10 +2531,10 @@ void MyRoomControl__ExchangePosition(MyRoomControl_o *this, const MethodInfo *me
     v4 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v4->static_fields->DEFAULT_FADE_TIME;
-  v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_MyRoomControl__ExchangePosition_b__436_0__, 0);
   if ( !v5 )
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   CommonUI__maskFadeout(v5, 1, DEFAULT_FADE_TIME, v7, 0);
 }
 
@@ -2364,10 +2576,10 @@ void MyRoomControl__FadeInPhotoTarget(
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
   v6 = this;
-  if ( (byte_4CB16A3 & 1) == 0 )
+  if ( (byte_4CC27B0 & 1) == 0 )
   {
-    this = (MyRoomControl_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-    byte_4CB16A3 = 1;
+    this = (MyRoomControl_o *)sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+    byte_4CC27B0 = 1;
   }
   position.fields.z = 0.0;
   scale = 0;
@@ -2379,16 +2591,16 @@ void MyRoomControl__FadeInPhotoTarget(
     if ( !photoStandFigures )
       goto LABEL_33;
     if ( i >= LODWORD(photoStandFigures->max_length) )
-      sub_1C6BC68(this);
+      sub_1C71610(this);
     this = (MyRoomControl_o *)v6->fields.photoTargetList;
     if ( !this )
 LABEL_33:
-      sub_1C6BC60(this, finishedFadeCallback);
+      sub_1C71608(this, finishedFadeCallback);
     v9 = photoStandFigures->m_Items[i];
     this = (MyRoomControl_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                 (System_Collections_Generic_List_T__o *)this,
                                 i,
-                                (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+                                (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
     if ( (_DWORD)this == 2 )
     {
       if ( isFadeOut )
@@ -2397,10 +2609,10 @@ LABEL_33:
       if ( !v9 )
         goto LABEL_33;
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0);
-      if ( !byte_4CAFC0E )
+      if ( !byte_4CC0D0E )
       {
-        sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-        byte_4CAFC0E = 1;
+        sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+        byte_4CC0D0E = 1;
       }
       GameObjectExtensions__SetLocalScale(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
       v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0);
@@ -2429,7 +2641,7 @@ LABEL_33:
         goto LABEL_33;
       z = LocalPosition.fields.z + 0.0;
       y = LocalPosition.fields.y + 0.0;
-      x = LocalPosition.fields.x + flt_CEAFE8[v6->fields.isChangePhotoPosition == (i == 1)];
+      x = LocalPosition.fields.x + flt_CEDC28[v6->fields.isChangePhotoPosition == (i == 1)];
       v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     }
     else
@@ -2453,14 +2665,14 @@ LABEL_14:
         v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0);
         z = v21 + 0.0;
         y = v20 + 0.0;
-        x = v19 + flt_CEAFE8[v22];
+        x = v19 + flt_CEDC28[v22];
         goto LABEL_27;
       }
       MyRoomControl__GetPhotoCampaignServantPositionAndScale(v6, v9, i, &position, (float *)&scale + 1, v11);
       if ( !v9 )
         goto LABEL_33;
       v12 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0);
-      GameObjectExtensions__SetLocalScale_36358148(v12, *((float *)&scale + 1), 0);
+      GameObjectExtensions__SetLocalScale_36391984(v12, *((float *)&scale + 1), 0);
       v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0);
       y = position.fields.y;
       z = position.fields.z;
@@ -2488,14 +2700,14 @@ void MyRoomControl__FingerGestures_OnGestureEvent(MyRoomControl_o *this, Gesture
   __int64 naturalAligment; // x10
 
   v4 = this;
-  if ( (byte_4CB1681 & 1) == 0 )
+  if ( (byte_4CC278E & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (MyRoomControl_o *)sub_1C6BA08(&SwipeGesture_TypeInfo);
-    byte_4CB1681 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (MyRoomControl_o *)sub_1C713B0(&SwipeGesture_TypeInfo);
+    byte_4CC278E = 1;
   }
   if ( !gesture )
-    sub_1C6BC60(this, gesture);
+    sub_1C71608(this, gesture);
   startSelection = (UnityEngine_Object_o *)gesture->fields.startSelection;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2533,10 +2745,10 @@ void MyRoomControl__FinishedCloseFullScreenPhotoCampaign(MyRoomControl_o *this, 
   UnityEngine_Object_o *v4; // x20
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CB16B0 & 1) == 0 )
+  if ( (byte_4CC27BD & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB16B0 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC27BD = 1;
   }
   photoCampaignProduction = this->fields.photoCampaignProduction;
   this->fields.photoState = 2;
@@ -2579,11 +2791,11 @@ void MyRoomControl__FinishedCloseFullScreenPhotoCampaign(MyRoomControl_o *this, 
                                  photoCampaignProduction->klass[1].vtable._3_ToString.methodPtr);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676(v4, 0);
+  UnityEngine_Object__Destroy_71724608(v4, 0);
   photoCampaignProduction = (UnityEngine_GameObject_o *)this->fields.photoCampaignScreenshot;
   if ( !photoCampaignProduction )
 LABEL_15:
-    sub_1C6BC60(photoCampaignProduction, method);
+    sub_1C71608(photoCampaignProduction, method);
   ((void (__fastcall *)(UnityEngine_GameObject_o *, _QWORD, void *))photoCampaignProduction->klass[1].vtable._3_ToString.method)(
     photoCampaignProduction,
     0,
@@ -2616,7 +2828,7 @@ void MyRoomControl__FinishedCloseMultiServant(MyRoomControl_o *this, const Metho
     if ( (int)v6 >= max_length )
       break;
     if ( (unsigned int)v6 >= max_length )
-      sub_1C6BC68(multipleViewCloseButton);
+      sub_1C71610(multipleViewCloseButton);
     multipleViewCloseButton = (UnityEngine_GameObject_o *)multipleStandFigureBacks->m_Items[v6];
     if ( multipleViewCloseButton )
     {
@@ -2640,7 +2852,7 @@ void MyRoomControl__FinishedCloseMultiServant(MyRoomControl_o *this, const Metho
         (multipleViewCloseButton = this->fields.mBlocker) == 0) )
   {
 LABEL_8:
-    sub_1C6BC60(multipleViewCloseButton, method);
+    sub_1C71608(multipleViewCloseButton, method);
   }
   UnityEngine_GameObject__SetActive(multipleViewCloseButton, 0, 0);
 }
@@ -2656,7 +2868,7 @@ void MyRoomControl__FinishedFadeInPhotoTarget(MyRoomControl_o *this, const Metho
   MyRoomControl__SetPhotoCampaignUi(this, 1, v2);
   photoSettingButtonComponent = this->fields.photoSettingButtonComponent;
   if ( !photoSettingButtonComponent )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   PhotoSettingButtonComponent__DispSettingButton(
     photoSettingButtonComponent,
     this->fields.photoTargetList,
@@ -2678,7 +2890,7 @@ void MyRoomControl__FinishedFadeMultipleServant(MyRoomControl_o *this, const Met
   MyRoomControl__SetBackButtonIgnore(this, 0, v2);
   mBlocker = this->fields.mBlocker;
   if ( !mBlocker )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   UnityEngine_GameObject__SetActive(mBlocker, 0, 0);
   MyRoomControl__SetEnableMultipleViewUi(this, 1, v6);
 }
@@ -2691,11 +2903,11 @@ void MyRoomControl__FormChangeCheck(MyRoomControl_o *this, const MethodInfo *met
   PlayMakerFSM_o *myRoomFsm; // x8
   System_String_o **v6; // x9
 
-  if ( (byte_4CB1655 & 1) == 0 )
+  if ( (byte_4CC2762 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_9288/*"NORMAL_FORM"*/);
-    sub_1C6BA08(&StringLiteral_3313/*"CHANGE_FORM"*/);
-    byte_4CB1655 = 1;
+    sub_1C713B0(&StringLiteral_9292/*"NORMAL_FORM"*/);
+    sub_1C713B0(&StringLiteral_3316/*"CHANGE_FORM"*/);
+    byte_4CC2762 = 1;
   }
   svtCtr = this->fields.svtCtr;
   this->fields.isServantFormKeep = 0;
@@ -2714,11 +2926,11 @@ LABEL_13:
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
-      v6 = (System_String_o **)&StringLiteral_9288/*"NORMAL_FORM"*/;
+      v6 = (System_String_o **)&StringLiteral_9292/*"NORMAL_FORM"*/;
       goto LABEL_15;
     }
 LABEL_16:
-    sub_1C6BC60(svtCtr, method);
+    sub_1C71608(svtCtr, method);
   }
   svtCtr = this->fields.svtCtr;
   this->fields.isServantFormKeep = 1;
@@ -2729,9 +2941,9 @@ LABEL_16:
   if ( !myRoomFsm )
     goto LABEL_16;
   if ( LODWORD(v4->fields.asstName) == (_DWORD)svtCtr )
-    v6 = (System_String_o **)&StringLiteral_9288/*"NORMAL_FORM"*/;
+    v6 = (System_String_o **)&StringLiteral_9292/*"NORMAL_FORM"*/;
   else
-    v6 = (System_String_o **)&StringLiteral_3313/*"CHANGE_FORM"*/;
+    v6 = (System_String_o **)&StringLiteral_3316/*"CHANGE_FORM"*/;
 LABEL_15:
   PlayMakerFSM__SendEvent(myRoomFsm, *v6, 0);
 }
@@ -2744,27 +2956,27 @@ System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__o *MyRoomContr
   System_Collections_Generic_List_object__o *v2; // x19
   System_Collections_Generic_IEnumerable_TSource__o *v4; // x0
 
-  if ( (byte_4CB16C5 & 1) == 0 )
+  if ( (byte_4CC27D2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_MyRoomControl_BackGroundSaveData___);
-    sub_1C6BA08(&Method_JsonManager_DeserializeArray_MyRoomControl_BackGroundSaveData___);
-    sub_1C6BA08(&JsonManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
-    sub_1C6BA08(&StringLiteral_5289/*"DisplayedOverWriteIds"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB16C5 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToList_MyRoomControl_BackGroundSaveData___);
+    sub_1C713B0(&Method_JsonManager_DeserializeArray_MyRoomControl_BackGroundSaveData___);
+    sub_1C713B0(&JsonManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
+    sub_1C713B0(&StringLiteral_5292/*"DisplayedOverWriteIds"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC27D2 = 1;
   }
   String = (Il2CppObject *)UnityEngine_PlayerPrefs__GetString(
-                             (System_String_o *)StringLiteral_5289/*"DisplayedOverWriteIds"*/,
+                             (System_String_o *)StringLiteral_5292/*"DisplayedOverWriteIds"*/,
                              (System_String_o *)StringLiteral_1/*""*/,
                              0);
   if ( System_String__IsNullOrEmpty((System_String_o *)String, 0) )
   {
-    v2 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
+    v2 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v2,
-      (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
+      (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
     return (System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__o *)v2;
   }
   else
@@ -2773,10 +2985,10 @@ System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__o *MyRoomContr
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
     v4 = (System_Collections_Generic_IEnumerable_TSource__o *)JsonManager__DeserializeArray_object_(
                                                                 String,
-                                                                (const MethodInfo_31AB018 *)Method_JsonManager_DeserializeArray_MyRoomControl_BackGroundSaveData___);
+                                                                (const MethodInfo_31BADBC *)Method_JsonManager_DeserializeArray_MyRoomControl_BackGroundSaveData___);
     return (System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__o *)System_Linq_Enumerable__ToList_object_(
                                                                                     v4,
-                                                                                    (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_MyRoomControl_BackGroundSaveData___);
+                                                                                    (const MethodInfo_318FC88 *)Method_System_Linq_Enumerable_ToList_MyRoomControl_BackGroundSaveData___);
   }
 }
 
@@ -2810,56 +3022,60 @@ int32_t MyRoomControl__GetDisplayBgGroupIndex(const MethodInfo *method)
   System_Collections_Generic_List_int__o *v19; // x26
   __int64 v20; // x27
   int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  System_Func_object__bool__o *v23; // x28
-  System_Collections_Generic_IEnumerable_TSource__o *v24; // x26
-  int32_t v25; // w27
-  MyRoomParamsManager_c *v26; // x0
-  void *monitor; // x8
-  unsigned __int64 v28; // x28
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  System_Func_object__bool__o *v27; // x28
+  System_Collections_Generic_IEnumerable_TSource__o *v28; // x26
   int32_t v29; // w27
+  MyRoomParamsManager_c *v30; // x0
+  void *monitor; // x8
+  unsigned __int64 v32; // x28
+  int32_t v33; // w27
   int32_t displayGroupId; // w19
-  MyRoomParamsManager_c *v31; // x0
-  bool v32; // w0
-  int32_t v34; // w21
   MyRoomParamsManager_c *v35; // x0
+  bool v36; // w0
+  int32_t v38; // w21
+  MyRoomParamsManager_c *v39; // x0
   int32_t item; // [xsp+8h] [xbp-A8h]
-  int32_t v37; // [xsp+Ch] [xbp-A4h]
+  int32_t v41; // [xsp+Ch] [xbp-A4h]
   System_Collections_Generic_IEnumerable_TSource__o *source; // [xsp+10h] [xbp-A0h]
-  System_Collections_Generic_List_Enumerator_int__o v39; // [xsp+18h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_int__o v40; // [xsp+30h] [xbp-80h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v43; // [xsp+18h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_int__o v44; // [xsp+30h] [xbp-80h] BYREF
 
-  if ( (byte_4CB16C6 & 1) == 0 )
+  if ( (byte_4CC27D3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_MyRoomAddMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Contains_int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_MyRoomControl_BackGroundSaveData___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_SingleOrDefault_MyRoomControl_BackGroundSaveData___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C6BA08(&System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__IndexOf__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass455_0__GetDisplayBgGroupIndex_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass455_0_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass455_1__GetDisplayBgGroupIndex_b__1__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass455_1_TypeInfo);
-    byte_4CB16C6 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_MyRoomAddMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Contains_int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_MyRoomControl_BackGroundSaveData___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_SingleOrDefault_MyRoomControl_BackGroundSaveData___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C713B0(&System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__IndexOf__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass455_0__GetDisplayBgGroupIndex_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass455_0_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass455_1__GetDisplayBgGroupIndex_b__1__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass455_1_TypeInfo);
+    byte_4CC27D3 = 1;
   }
-  memset(&v40, 0, sizeof(v40));
+  memset(&v44, 0, sizeof(v44));
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-  if ( !byte_4CB16DE )
+  if ( !byte_4CC27EB )
   {
-    sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-    byte_4CB16DE = 1;
+    sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+    byte_4CC27EB = 1;
   }
   v2 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -2868,11 +3084,11 @@ int32_t MyRoomControl__GetDisplayBgGroupIndex(const MethodInfo *method)
     v2 = MyRoomParamsManager_TypeInfo;
   }
   DisplayMyRoomBgGroupIdByLastClearQuest_k__BackingField = v2->static_fields->_DisplayMyRoomBgGroupIdByLastClearQuest_k__BackingField;
-  if ( !byte_4CB16DF )
+  if ( !byte_4CC27EC )
   {
-    sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
+    sub_1C713B0(&MyRoomParamsManager_TypeInfo);
     v2 = MyRoomParamsManager_TypeInfo;
-    byte_4CB16DF = 1;
+    byte_4CC27EC = 1;
   }
   if ( !v2->_2.cctor_finished )
   {
@@ -2894,14 +3110,14 @@ int32_t MyRoomControl__GetDisplayBgGroupIndex(const MethodInfo *method)
     if ( System_Collections_Generic_List_int___Contains(
            enableBgGroupIdList,
            DisplayMyRoomBgGroupIdByLastClearQuest_k__BackingField,
-           (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__) )
+           (const MethodInfo_37F3A6C *)Method_System_Collections_Generic_List_int__Contains__) )
     {
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-      if ( !byte_4CB16DD )
+      if ( !byte_4CC27EA )
       {
-        sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-        byte_4CB16DD = 1;
+        sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+        byte_4CC27EA = 1;
       }
       v6 = MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -2923,7 +3139,7 @@ int32_t MyRoomControl__GetDisplayBgGroupIndex(const MethodInfo *method)
         return System_Collections_Generic_List_int___IndexOf(
                  enableBgGroupIdList,
                  v8,
-                 (const MethodInfo_37E45CC *)Method_System_Collections_Generic_List_int__IndexOf__);
+                 (const MethodInfo_37F4370 *)Method_System_Collections_Generic_List_int__IndexOf__);
       }
       goto LABEL_107;
     }
@@ -2934,10 +3150,10 @@ int32_t MyRoomControl__GetDisplayBgGroupIndex(const MethodInfo *method)
   source = (System_Collections_Generic_IEnumerable_TSource__o *)MyRoomControl__GetBgSaveData((const MethodInfo *)v10);
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-  if ( !byte_4CB16E0 )
+  if ( !byte_4CC27ED )
   {
-    sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-    byte_4CB16E0 = 1;
+    sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+    byte_4CC27ED = 1;
   }
   v11 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -2948,8 +3164,8 @@ int32_t MyRoomControl__GetDisplayBgGroupIndex(const MethodInfo *method)
   item = v11->static_fields->_DisplayMyRoomBgGroupId_k__BackingField;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_MyRoomAddMaster___);
-  for ( i = 0; ; i = v37 + 1 )
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_MyRoomAddMaster___);
+  for ( i = 0; ; i = v41 + 1 )
   {
     v14 = MyRoomControl_TypeInfo;
     if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -2962,7 +3178,7 @@ int32_t MyRoomControl__GetDisplayBgGroupIndex(const MethodInfo *method)
       goto LABEL_107;
     if ( i >= enableBgGroupIdList->fields._size )
       break;
-    v15 = (MyRoomControl___c__DisplayClass455_0_o *)sub_1C6BC54(MyRoomControl___c__DisplayClass455_0_TypeInfo);
+    v15 = (MyRoomControl___c__DisplayClass455_0_o *)sub_1C715FC(MyRoomControl___c__DisplayClass455_0_TypeInfo);
     MyRoomControl___c__DisplayClass455_0___ctor(v15, 0);
     v16 = MyRoomControl_TypeInfo;
     if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -2976,45 +3192,45 @@ int32_t MyRoomControl__GetDisplayBgGroupIndex(const MethodInfo *method)
     enableBgGroupIdList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___get_Item(
                                                                       enableBgGroupIdList,
                                                                       i,
-                                                                      (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                                                      (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
     if ( !v15 )
       goto LABEL_107;
     v1 = (unsigned int)enableBgGroupIdList;
-    v37 = i;
+    v41 = i;
     v15->fields.displayGroupId = (int)enableBgGroupIdList;
     if ( !Master_object )
       goto LABEL_107;
     v17 = MyRoomAddMaster__GetDisplayOverWriteIds((MyRoomAddMaster_o *)Master_object, (int32_t)enableBgGroupIdList, 0);
-    v18 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
+    v18 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v18,
       (Il2CppObject *)v15,
       Method_MyRoomControl___c__DisplayClass455_0__GetDisplayBgGroupIndex_b__0__,
       0);
-    enableBgGroupIdList = (System_Collections_Generic_List_int__o *)System_Linq_Enumerable__FirstOrDefault_object__51793644(
+    enableBgGroupIdList = (System_Collections_Generic_List_int__o *)System_Linq_Enumerable__FirstOrDefault_object__51858576(
                                                                       source,
                                                                       (System_Func_TSource__bool__o *)v18,
-                                                                      (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_MyRoomControl_BackGroundSaveData___);
+                                                                      (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_MyRoomControl_BackGroundSaveData___);
     v19 = enableBgGroupIdList;
     if ( !v15->fields.displayGroupId )
     {
-      v20 = sub_1C6BC54(MyRoomControl___c__DisplayClass455_1_TypeInfo);
+      v20 = sub_1C715FC(MyRoomControl___c__DisplayClass455_1_TypeInfo);
       MyRoomControl___c__DisplayClass455_1___ctor((MyRoomControl___c__DisplayClass455_1_o *)v20, 0);
       if ( !v20 )
         goto LABEL_107;
       *(_QWORD *)(v20 + 24) = v15;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v20 + 24), (int32_t)v15, v21, v22);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v20 + 24), (int32_t)v15, v21, v22, v23, v24, v25, v26);
       *(_DWORD *)(v20 + 16) = MyRoomAddMaster__GetMainGroupWarId((MyRoomAddMaster_o *)Master_object, 0);
-      v23 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
+      v27 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
       System_Func_object__bool____ctor(
-        v23,
+        v27,
         (Il2CppObject *)v20,
         Method_MyRoomControl___c__DisplayClass455_1__GetDisplayBgGroupIndex_b__1__,
         0);
-      enableBgGroupIdList = (System_Collections_Generic_List_int__o *)System_Linq_Enumerable__SingleOrDefault_object__51874636(
+      enableBgGroupIdList = (System_Collections_Generic_List_int__o *)System_Linq_Enumerable__SingleOrDefault_object__51939568(
                                                                         source,
-                                                                        (System_Func_TSource__bool__o *)v23,
-                                                                        (const MethodInfo_3178B4C *)Method_System_Linq_Enumerable_SingleOrDefault_MyRoomControl_BackGroundSaveData___);
+                                                                        (System_Func_TSource__bool__o *)v27,
+                                                                        (const MethodInfo_31888F0 *)Method_System_Linq_Enumerable_SingleOrDefault_MyRoomControl_BackGroundSaveData___);
       if ( enableBgGroupIdList )
         v19 = enableBgGroupIdList;
     }
@@ -3023,108 +3239,108 @@ int32_t MyRoomControl__GetDisplayBgGroupIndex(const MethodInfo *method)
       displayGroupId = v15->fields.displayGroupId;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-      v9 = v37;
-      if ( !byte_4CB16DD )
+      v9 = v41;
+      if ( !byte_4CC27EA )
       {
-        sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-        byte_4CB16DD = 1;
+        sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+        byte_4CC27EA = 1;
       }
-      v31 = MyRoomParamsManager_TypeInfo;
+      v35 = MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
         goto LABEL_94;
       goto LABEL_95;
     }
     if ( !v17 )
       goto LABEL_107;
-    v24 = *(System_Collections_Generic_IEnumerable_TSource__o **)&v19->fields._size;
+    v28 = *(System_Collections_Generic_IEnumerable_TSource__o **)&v19->fields._size;
     System_Collections_Generic_List_int___GetEnumerator(
-      (System_Collections_Generic_List_Enumerator_T__o *)&v39,
+      (System_Collections_Generic_List_Enumerator_T__o *)&v43,
       v17,
-      (const MethodInfo_37E4424 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-    v40 = v39;
+      (const MethodInfo_37F41C8 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    v44 = v43;
     while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-              &v40,
-              (const MethodInfo_358270C *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+              &v44,
+              (const MethodInfo_35924B0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
     {
       if ( !System_Linq_Enumerable__Contains_int_(
-              v24,
-              v40.fields._current,
-              (const MethodInfo_31583F4 *)Method_System_Linq_Enumerable_Contains_int___) )
+              v28,
+              v44.fields._current,
+              (const MethodInfo_3168198 *)Method_System_Linq_Enumerable_Contains_int___) )
       {
-        v25 = v15->fields.displayGroupId;
-        if ( v25 != item )
+        v29 = v15->fields.displayGroupId;
+        if ( v29 != item )
         {
           if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-          if ( !byte_4CB16DD )
+          if ( !byte_4CC27EA )
           {
-            sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-            byte_4CB16DD = 1;
+            sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+            byte_4CC27EA = 1;
           }
-          v26 = MyRoomParamsManager_TypeInfo;
+          v30 = MyRoomParamsManager_TypeInfo;
           if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-            v26 = MyRoomParamsManager_TypeInfo;
+            v30 = MyRoomParamsManager_TypeInfo;
           }
-          v26->static_fields->_DisplayMyRoomBgGroupId_k__BackingField = v25;
+          v30->static_fields->_DisplayMyRoomBgGroupId_k__BackingField = v29;
         }
         System_Collections_Generic_List_Enumerator_int___Dispose(
-          &v40,
-          (const MethodInfo_3582708 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-        return v37;
+          &v44,
+          (const MethodInfo_35924AC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+        return v41;
       }
     }
     System_Collections_Generic_List_Enumerator_int___Dispose(
-      &v40,
-      (const MethodInfo_3582708 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    if ( !v24 )
+      &v44,
+      (const MethodInfo_35924AC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    if ( !v28 )
       goto LABEL_107;
-    monitor = v24[1].monitor;
+    monitor = v28[1].monitor;
     if ( (int)monitor >= 1 )
     {
-      v28 = 0;
+      v32 = 0;
       while ( 1 )
       {
-        if ( v28 >= (unsigned int)monitor )
-          sub_1C6BC68(enableBgGroupIdList);
-        v29 = *((_DWORD *)&v24[2].klass + v28);
+        if ( v32 >= (unsigned int)monitor )
+          sub_1C71610(enableBgGroupIdList);
+        v33 = *((_DWORD *)&v28[2].klass + v32);
         enableBgGroupIdList = (System_Collections_Generic_List_int__o *)System_Collections_Generic_List_int___Contains(
                                                                           v17,
-                                                                          v29,
-                                                                          (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__);
+                                                                          v33,
+                                                                          (const MethodInfo_37F3A6C *)Method_System_Collections_Generic_List_int__Contains__);
         if ( ((unsigned __int8)enableBgGroupIdList & 1) == 0 )
         {
           enableBgGroupIdList = (System_Collections_Generic_List_int__o *)MyRoomAddMaster__IsExistOverWriteIdInGroup(
                                                                             (MyRoomAddMaster_o *)Master_object,
-                                                                            v29,
+                                                                            v33,
                                                                             v15->fields.displayGroupId,
                                                                             0);
           if ( ((unsigned __int8)enableBgGroupIdList & 1) != 0 )
             break;
         }
-        LODWORD(monitor) = v24[1].monitor;
-        if ( (__int64)++v28 >= (int)monitor )
+        LODWORD(monitor) = v28[1].monitor;
+        if ( (__int64)++v32 >= (int)monitor )
           goto LABEL_72;
       }
       displayGroupId = v15->fields.displayGroupId;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-      v9 = v37;
-      if ( !byte_4CB16DD )
+      v9 = v41;
+      if ( !byte_4CC27EA )
       {
-        sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-        byte_4CB16DD = 1;
+        sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+        byte_4CC27EA = 1;
       }
-      v31 = MyRoomParamsManager_TypeInfo;
+      v35 = MyRoomParamsManager_TypeInfo;
       if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
       {
 LABEL_94:
-        j_il2cpp_runtime_class_init_0(v31);
-        v31 = MyRoomParamsManager_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v35);
+        v35 = MyRoomParamsManager_TypeInfo;
       }
 LABEL_95:
-      v31->static_fields->_DisplayMyRoomBgGroupId_k__BackingField = displayGroupId;
+      v35->static_fields->_DisplayMyRoomBgGroupId_k__BackingField = displayGroupId;
       return v9;
     }
 LABEL_72:
@@ -3139,12 +3355,12 @@ LABEL_72:
       if ( !enableBgGroupIdList )
         goto LABEL_107;
     }
-    v32 = System_Collections_Generic_List_int___Contains(
+    v36 = System_Collections_Generic_List_int___Contains(
             enableBgGroupIdList,
             item,
-            (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__);
+            (const MethodInfo_37F3A6C *)Method_System_Collections_Generic_List_int__Contains__);
     v14 = MyRoomControl_TypeInfo;
-    if ( v32 )
+    if ( v36 )
     {
       if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
       {
@@ -3158,10 +3374,10 @@ LABEL_72:
         return System_Collections_Generic_List_int___IndexOf(
                  enableBgGroupIdList,
                  v8,
-                 (const MethodInfo_37E45CC *)Method_System_Collections_Generic_List_int__IndexOf__);
+                 (const MethodInfo_37F4370 *)Method_System_Collections_Generic_List_int__IndexOf__);
       }
 LABEL_107:
-      sub_1C6BC60(enableBgGroupIdList, v1);
+      sub_1C71608(enableBgGroupIdList, v1);
     }
   }
   if ( !v14->_2.cctor_finished )
@@ -3172,25 +3388,25 @@ LABEL_107:
   enableBgGroupIdList = v14->static_fields->enableBgGroupIdList;
   if ( !enableBgGroupIdList )
     goto LABEL_107;
-  v34 = System_Collections_Generic_List_int___get_Item(
+  v38 = System_Collections_Generic_List_int___get_Item(
           enableBgGroupIdList,
           0,
-          (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+          (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-  if ( !byte_4CB16DD )
+  if ( !byte_4CC27EA )
   {
-    sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-    byte_4CB16DD = 1;
+    sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+    byte_4CC27EA = 1;
   }
-  v35 = MyRoomParamsManager_TypeInfo;
+  v39 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    v35 = MyRoomParamsManager_TypeInfo;
+    v39 = MyRoomParamsManager_TypeInfo;
   }
   v9 = 0;
-  v35->static_fields->_DisplayMyRoomBgGroupId_k__BackingField = v34;
+  v39->static_fields->_DisplayMyRoomBgGroupId_k__BackingField = v38;
   return v9;
 }
 
@@ -3206,19 +3422,19 @@ int32_t MyRoomControl__GetImageLimitCount(
   __int64 v8; // x1
   MyroomServantSpecialImageEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB16C0 & 1) == 0 )
+  if ( (byte_4CC27CD & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&ImageLimitCount_TypeInfo);
-    byte_4CB16C0 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&ImageLimitCount_TypeInfo);
+    byte_4CC27CD = 1;
   }
   entity = 0;
   if ( imageLimitCount >= 201 )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
     if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
     v7 = ImageLimitCount__SpecialImageLimitCountToSpecialNum(imageLimitCount, 0);
@@ -3235,7 +3451,7 @@ int32_t MyRoomControl__GetImageLimitCount(
       if ( entity )
         return entity->fields.baseLimitCount;
 LABEL_13:
-      sub_1C6BC60(v7, v8);
+      sub_1C71608(v7, v8);
     }
   }
   return imageLimitCount;
@@ -3297,10 +3513,10 @@ void MyRoomControl__GetMaximTransformValues(
   float v16; // s0
 
   v6 = this;
-  if ( (byte_4CB16AE & 1) == 0 )
+  if ( (byte_4CC27BB & 1) == 0 )
   {
-    this = (MyRoomControl_o *)sub_1C6BA08(&ManagerConfig_TypeInfo);
-    byte_4CB16AE = 1;
+    this = (MyRoomControl_o *)sub_1C713B0(&ManagerConfig_TypeInfo);
+    byte_4CC27BB = 1;
   }
   v9 = MyRoomControl__CalcGameScreenAspectRatio(this, (const MethodInfo *)localScale);
   takingPhotoFrameSprite = v6->fields.takingPhotoFrameSprite;
@@ -3325,7 +3541,7 @@ void MyRoomControl__GetMaximTransformValues(
       goto LABEL_11;
     }
 LABEL_12:
-    sub_1C6BC60(v7, v8);
+    sub_1C71608(v7, v8);
   }
   if ( !takingPhotoFrameSprite )
     goto LABEL_12;
@@ -3345,18 +3561,18 @@ int32_t MyRoomControl__GetNowImageLimitCount(MyRoomControl_o *this, const Method
 {
   System_Collections_Generic_List_int__o *materialImageIdList; // x0
 
-  if ( (byte_4CB1680 & 1) == 0 )
+  if ( (byte_4CC278D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    byte_4CB1680 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_4CC278D = 1;
   }
   materialImageIdList = this->fields.materialImageIdList;
   if ( !materialImageIdList )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return System_Collections_Generic_List_int___get_Item(
            materialImageIdList,
            this->fields.materialFigureSvtDispIdx,
-           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+           (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
 }
 
 
@@ -3382,16 +3598,16 @@ UnityEngine_Vector3_o MyRoomControl__GetPhotoCampaignMasterPosition(
   MasterPhotoEntity_o *entity; // [xsp+18h] [xbp-28h] BYREF
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB16A8 & 1) == 0 )
+  if ( (byte_4CC27B5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_MasterPhotoMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    byte_4CB16A8 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_MasterPhotoMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    byte_4CC27B5 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (MasterPhotoMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_MasterPhotoMaster___);
+  Master_object = (MasterPhotoMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_MasterPhotoMaster___);
   if ( this->fields.isOneShot )
     v7 = 0;
   else
@@ -3440,7 +3656,7 @@ UnityEngine_Vector3_o MyRoomControl__GetPhotoCampaignMasterPosition(
   Master_object = (MasterPhotoMaster_o *)this->fields.photoMasterTexture;
   if ( !Master_object )
 LABEL_28:
-    sub_1C6BC60(Master_object, v6);
+    sub_1C71608(Master_object, v6);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Master_object, 0);
   LocalPositionZ = GameObjectExtensions__GetLocalPositionZ(gameObject, 0);
   v17 = offsetX;
@@ -3484,12 +3700,12 @@ void MyRoomControl__GetPhotoCampaignServantPositionAndScale(
   ServantScriptEntity_o *entity; // [xsp+8h] [xbp-58h] BYREF
 
   v10 = this;
-  if ( (byte_4CB16A6 & 1) == 0 )
+  if ( (byte_4CC27B3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantScriptMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    this = (MyRoomControl_o *)sub_1C6BA08(&int___TypeInfo);
-    byte_4CB16A6 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantScriptMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    this = (MyRoomControl_o *)sub_1C713B0(&int___TypeInfo);
+    byte_4CC27B3 = 1;
   }
   entity = 0;
   if ( !photoStandFigure )
@@ -3517,7 +3733,7 @@ void MyRoomControl__GetPhotoCampaignServantPositionAndScale(
     myRoomData_low = v14 - LocalPositionX;
   }
   y = v10->fields.defaultPhotoServantPos.fields.y;
-  this = (MyRoomControl_o *)sub_1C6BAB0(int___TypeInfo, 2);
+  this = (MyRoomControl_o *)sub_1C71458(int___TypeInfo, 2);
   if ( !this )
     goto LABEL_48;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
@@ -3537,7 +3753,7 @@ void MyRoomControl__GetPhotoCampaignServantPositionAndScale(
   HIDWORD(this->fields.myRoomData) = v19;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (MyRoomControl_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantScriptMaster___);
+  this = (MyRoomControl_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantScriptMaster___);
   *scale = 1.0;
   FaceList_k__BackingField = photoStandFigure->fields._FaceList_k__BackingField;
   if ( !FaceList_k__BackingField )
@@ -3584,7 +3800,7 @@ void MyRoomControl__GetPhotoCampaignServantPositionAndScale(
       }
     }
 LABEL_48:
-    sub_1C6BC60(this, photoStandFigure);
+    sub_1C71608(this, photoStandFigure);
   }
   this = (MyRoomControl_o *)entity;
   if ( !entity )
@@ -3608,7 +3824,7 @@ LABEL_44:
     goto LABEL_48;
   if ( !LODWORD(photoStandFigures->max_length) )
 LABEL_49:
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   this = (MyRoomControl_o *)photoStandFigures->m_Items[0];
   if ( !this )
     goto LABEL_48;
@@ -3643,17 +3859,17 @@ void MyRoomControl__GetPhotoStaffPosition(
   float LocalPositionZ; // s0
   StaffPhotoCostumeEntity_o *costumeEntity; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4CB16A7 & 1) == 0 )
+  if ( (byte_4CC27B4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_StaffPhotoCostumeMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&int___TypeInfo);
-    byte_4CB16A7 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_StaffPhotoCostumeMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&int___TypeInfo);
+    byte_4CC27B4 = 1;
   }
   costumeEntity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (StaffPhotoCostumeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_StaffPhotoCostumeMaster___);
+  Master_object = (StaffPhotoCostumeMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_StaffPhotoCostumeMaster___);
   if ( !photoStandFigure )
     goto LABEL_35;
   v11 = Master_object;
@@ -3683,7 +3899,7 @@ void MyRoomControl__GetPhotoStaffPosition(
     revision = v15 - LocalPositionX;
   }
   y = this->fields.defaultPhotoServantPos.fields.y;
-  Master_object = (StaffPhotoCostumeMaster_o *)sub_1C6BAB0(int___TypeInfo, 2);
+  Master_object = (StaffPhotoCostumeMaster_o *)sub_1C71458(int___TypeInfo, 2);
   if ( !Master_object )
     goto LABEL_35;
   MasterName_k__BackingField = (int)Master_object->fields._MasterName_k__BackingField;
@@ -3740,10 +3956,10 @@ void MyRoomControl__GetPhotoStaffPosition(
         goto LABEL_34;
       }
 LABEL_36:
-      sub_1C6BC68(Master_object);
+      sub_1C71610(Master_object);
     }
 LABEL_35:
-    sub_1C6BC60(Master_object, v10);
+    sub_1C71608(Master_object, v10);
   }
 LABEL_34:
   v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)photoStandFigure, 0);
@@ -3776,26 +3992,26 @@ System_Int32_array *MyRoomControl__GetSortedCostumeIds(
   _QWORD *v12; // x9
   __int64 size; // x10
 
-  if ( (byte_4CB1684 & 1) == 0 )
+  if ( (byte_4CC2791 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB1684 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC2791 = 1;
   }
-  v4 = (System_Collections_Generic_List_int__o *)sub_1C6BC54(System_Collections_Generic_List_int__TypeInfo);
+  v4 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
   System_Collections_Generic_List_int____ctor(
     v4,
-    (const MethodInfo_37E30FC *)Method_System_Collections_Generic_List_int___ctor__);
-  Instance = (ServantCostumeEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
+  Instance = (ServantCostumeEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = (ServantCostumeEntity_array *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)Instance,
-                                             (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                                             (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
   if ( !Instance )
     goto LABEL_18;
   Instance = ServantCostumeMaster__releasedCostumeEntityList((ServantCostumeMaster_o *)Instance, servantId, 1, 0);
@@ -3809,7 +4025,7 @@ System_Int32_array *MyRoomControl__GetSortedCostumeIds(
     while ( 1 )
     {
       if ( v9 >= max_length )
-        sub_1C6BC68(Instance);
+        sub_1C71610(Instance);
       v10 = v8->m_Items[v9];
       if ( !v10 )
         break;
@@ -3827,7 +4043,7 @@ System_Int32_array *MyRoomControl__GetSortedCostumeIds(
         System_Collections_Generic_List_int___AddWithResize(
           v4,
           id,
-          *(const MethodInfo_37E3950 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
       }
       else
       {
@@ -3839,14 +4055,14 @@ System_Int32_array *MyRoomControl__GetSortedCostumeIds(
         goto LABEL_16;
     }
 LABEL_18:
-    sub_1C6BC60(Instance, id);
+    sub_1C71608(Instance, id);
   }
 LABEL_16:
   if ( !v4 )
     goto LABEL_18;
   return System_Collections_Generic_List_int___ToArray(
            v4,
-           (const MethodInfo_37E5408 *)Method_System_Collections_Generic_List_int__ToArray__);
+           (const MethodInfo_37F51AC *)Method_System_Collections_Generic_List_int__ToArray__);
 }
 
 
@@ -3856,14 +4072,14 @@ int32_t MyRoomControl__GetState(MyRoomControl_o *this, const MethodInfo *method)
   struct CStateManager_MyRoomControl__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4CB1642 & 1) == 0 )
+  if ( (byte_4CC274F & 1) == 0 )
   {
-    this = (MyRoomControl_o *)sub_1C6BA08(&Method_CStateManager_MyRoomControl__getState__);
-    byte_4CB1642 = 1;
+    this = (MyRoomControl_o *)sub_1C713B0(&Method_CStateManager_MyRoomControl__getState__);
+    byte_4CC274F = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return mFSM->fields.m_state;
 }
 
@@ -3887,7 +4103,7 @@ System_Collections_Generic_List_ServantVoiceData____o *MyRoomControl__GetVoiceLi
 
   v6 = MyRoomControl__GetImageLimitCount(this, svtId, imageLimitCount, *(const MethodInfo **)&imageLimitCount);
   if ( !svtVoiceEnt )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   return ServantVoiceEntity__getMyRoomVoiceList(svtVoiceEnt, v6, 0);
 }
 
@@ -3903,36 +4119,36 @@ void MyRoomControl__GoToTitle(MyRoomControl_o *this, const MethodInfo *method)
   __int64 v9; // x1
   BalanceConfig_c *v10; // x0
 
-  if ( (byte_4CB1670 & 1) == 0 )
+  if ( (byte_4CC277D & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&CommonConfirmDialog_ClickDelegate_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_GoToTitle__);
-    sub_1C6BA08(&Method_MyRoomControl__GoToTitle_b__332_0__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&StringLiteral_8859/*"MYROOM_TITLE_CONFIRM"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB1670 = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&CommonConfirmDialog_ClickDelegate_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_GoToTitle__);
+    sub_1C713B0(&Method_MyRoomControl__GoToTitle_b__332_0__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&StringLiteral_8863/*"MYROOM_TITLE_CONFIRM"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC277D = 1;
   }
   MyRoomControl__stopSvtVoice(this, method);
   v3 = Method_MyRoomControl_GoToTitle__;
   if ( (*((_BYTE *)Method_MyRoomControl_GoToTitle__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_GoToTitle__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_GoToTitle__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   v5 = (System_String_o *)StringLiteral_1/*""*/;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8859/*"MYROOM_TITLE_CONFIRM"*/, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v8 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C6BC54(CommonConfirmDialog_ClickDelegate_TypeInfo);
+  v6 = LocalizationManager__Get((System_String_o *)StringLiteral_8863/*"MYROOM_TITLE_CONFIRM"*/, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v8 = (CommonConfirmDialog_ClickDelegate_o *)sub_1C715FC(CommonConfirmDialog_ClickDelegate_TypeInfo);
   CommonConfirmDialog_ClickDelegate___ctor(v8, (Il2CppObject *)this, Method_MyRoomControl__GoToTitle_b__332_0__, 0);
   v10 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
   if ( !Instance )
-    sub_1C6BC60(v10, v9);
+    sub_1C71608(v10, v9);
   CommonUI__OpenConfirmDialog(
     (CommonUI_o *)Instance,
     v5,
@@ -3953,7 +4169,7 @@ void MyRoomControl__HideContinueDeviceMenu(MyRoomControl_o *this, const MethodIn
   if ( !continueDeviceComp
     || (continueDeviceComp = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(continueDeviceComp, 0)) == 0 )
   {
-    sub_1C6BC60(continueDeviceComp, method);
+    sub_1C71608(continueDeviceComp, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)continueDeviceComp, 0, 0);
 }
@@ -3965,7 +4181,7 @@ void MyRoomControl__HideExchangeSvtCoinMenu(MyRoomControl_o *this, const MethodI
 
   exchangeSvtCoinComp = this->fields.exchangeSvtCoinComp;
   if ( !exchangeSvtCoinComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ExchangeSvtCoinComponent__HideMenu(exchangeSvtCoinComp, 0);
 }
 
@@ -3978,16 +4194,20 @@ void MyRoomControl__HidePhotoUi(MyRoomControl_o *this, const MethodInfo *method)
   Il2CppObject *v6; // x22
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  const MethodInfo *v14; // x2
 
-  if ( (byte_4CB16BB & 1) == 0 )
+  if ( (byte_4CC27C8 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_PhotoLayerChangeComponent__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
-    sub_1C6BA08(&Method_MyRoomControl___c__HidePhotoUi_b__437_0__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    byte_4CB16BB = 1;
+    sub_1C713B0(&System_Action_PhotoLayerChangeComponent__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
+    sub_1C713B0(&Method_MyRoomControl___c__HidePhotoUi_b__437_0__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    byte_4CC27C8 = 1;
   }
   this->fields.photoState = 3;
   photoCampaignDispUiMask = MyRoomControl___c_TypeInfo;
@@ -4006,23 +4226,23 @@ void MyRoomControl__HidePhotoUi(MyRoomControl_o *this, const MethodInfo *method)
       photoCampaignDispUiMask = MyRoomControl___c_TypeInfo;
     }
     v6 = (Il2CppObject *)**((_QWORD **)photoCampaignDispUiMask + 23);
-    v5 = (System_Action_object__o *)sub_1C6BC54(System_Action_PhotoLayerChangeComponent__TypeInfo);
+    v5 = (System_Action_object__o *)sub_1C715FC(System_Action_PhotoLayerChangeComponent__TypeInfo);
     System_Action_object____ctor(v5, v6, Method_MyRoomControl___c__HidePhotoUi_b__437_0__, 0);
     static_fields = MyRoomControl___c_TypeInfo->static_fields;
     static_fields->__9__437_0 = (struct System_Action_PhotoLayerChangeComponent__o *)v5;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__437_0, (int32_t)v5, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__437_0, (int32_t)v5, v8, v9, v10, v11, v12, v13);
   }
   if ( !instantiateLayerChangeObjList
     || (System_Collections_Generic_List_object___ForEach(
           instantiateLayerChangeObjList,
           (System_Action_T__o *)v5,
-          (const MethodInfo_38013B4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__),
+          (const MethodInfo_3811158 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__),
         (photoCampaignDispUiMask = this->fields.photoCampaignDispUiMask) == 0) )
   {
-    sub_1C6BC60(photoCampaignDispUiMask, method);
+    sub_1C71608(photoCampaignDispUiMask, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)photoCampaignDispUiMask, 1, 0);
-  MyRoomControl__SetPhotoCampaignUi(this, 0, v10);
+  MyRoomControl__SetPhotoCampaignUi(this, 0, v14);
 }
 
 
@@ -4034,19 +4254,23 @@ System_Collections_IEnumerator_o *MyRoomControl__InitMaterialOnBackground(
   __int64 v4; // x0
   __int64 v5; // x1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB1662 & 1) == 0 )
+  if ( (byte_4CC276F & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl__InitMaterialOnBackground_d__286_TypeInfo);
-    byte_4CB1662 = 1;
+    sub_1C713B0(&MyRoomControl__InitMaterialOnBackground_d__286_TypeInfo);
+    byte_4CC276F = 1;
   }
-  v3 = sub_1C6BC54(MyRoomControl__InitMaterialOnBackground_d__286_TypeInfo);
+  v3 = sub_1C715FC(MyRoomControl__InitMaterialOnBackground_d__286_TypeInfo);
   MyRoomControl__InitMaterialOnBackground_d__286___ctor((MyRoomControl__InitMaterialOnBackground_d__286_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C6BC60(v4, v5);
+    sub_1C71608(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -4057,19 +4281,23 @@ System_Collections_IEnumerator_o *MyRoomControl__InitServantMenu(MyRoomControl_o
   __int64 v4; // x0
   __int64 v5; // x1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB1664 & 1) == 0 )
+  if ( (byte_4CC2771 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl__InitServantMenu_d__289_TypeInfo);
-    byte_4CB1664 = 1;
+    sub_1C713B0(&MyRoomControl__InitServantMenu_d__289_TypeInfo);
+    byte_4CC2771 = 1;
   }
-  v3 = sub_1C6BC54(MyRoomControl__InitServantMenu_d__289_TypeInfo);
+  v3 = sub_1C715FC(MyRoomControl__InitServantMenu_d__289_TypeInfo);
   MyRoomControl__InitServantMenu_d__289___ctor((MyRoomControl__InitServantMenu_d__289_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C6BC60(v4, v5);
+    sub_1C71608(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -4086,10 +4314,10 @@ bool MyRoomControl__IsEnableMultipleViewButton(MyRoomControl_o *this, const Meth
 {
   MyRoomControl_c *v3; // x0
 
-  if ( (byte_4CB1691 & 1) == 0 )
+  if ( (byte_4CC279E & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB1691 = 1;
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC279E = 1;
   }
   if ( !this->fields.isEnoughServantMultipleView )
     return 0;
@@ -4110,10 +4338,10 @@ bool MyRoomControl__IsEnablePhotoCampaignButton(MyRoomControl_o *this, const Met
 {
   MyRoomControl_c *v3; // x0
 
-  if ( (byte_4CB16B2 & 1) == 0 )
+  if ( (byte_4CC27BF & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB16B2 = 1;
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC27BF = 1;
   }
   v3 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -4135,24 +4363,24 @@ bool MyRoomControl__IsFrontMultipleServant(MyRoomControl_o *this, int32_t index,
   struct StandFigureBack_array *multipleStandFigureBacks; // x8
 
   v4 = this;
-  if ( (byte_4CB168A & 1) == 0 )
+  if ( (byte_4CC2797 & 1) == 0 )
   {
-    this = (MyRoomControl_o *)sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4CB168A = 1;
+    this = (MyRoomControl_o *)sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4CC2797 = 1;
   }
   multipleStandFigureBacks = v4->fields.multipleStandFigureBacks;
   if ( !multipleStandFigureBacks )
     goto LABEL_8;
   if ( LODWORD(multipleStandFigureBacks->max_length) <= index )
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   this = (MyRoomControl_o *)multipleStandFigureBacks->m_Items[index];
   if ( !this
     || (this = (MyRoomControl_o *)UnityEngine_Component__GetComponent_object_(
                                     (UnityEngine_Component_o *)this,
-                                    (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___)) == 0 )
+                                    (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIPanel___)) == 0 )
   {
 LABEL_8:
-    sub_1C6BC60(this, *(_QWORD *)&index);
+    sub_1C71608(this, *(_QWORD *)&index);
   }
   return SLODWORD(this->fields.changeLimitBtnInitPos.fields.y) > 15;
 }
@@ -4182,23 +4410,23 @@ bool MyRoomControl__IsScrollviewInShowPosition(MyRoomControl_o *this, const Meth
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB1651 & 1) == 0 )
+  if ( (byte_4CC275E & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_15564/*"Wait_Action"*/);
-    sub_1C6BA08(&StringLiteral_7294/*"Help"*/);
-    byte_4CB1651 = 1;
+    sub_1C713B0(&StringLiteral_15571/*"Wait_Action"*/);
+    sub_1C713B0(&StringLiteral_7298/*"Help"*/);
+    byte_4CC275E = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_16;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0);
-  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15564/*"Wait_Action"*/, 0) )
+  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15571/*"Wait_Action"*/, 0) )
   {
     myRoomFsm = this->fields.myRoomFsm;
     if ( !myRoomFsm )
       goto LABEL_16;
     v5 = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0);
-    if ( System_String__op_Inequality(v5, (System_String_o *)StringLiteral_7294/*"Help"*/, 0) )
+    if ( System_String__op_Inequality(v5, (System_String_o *)StringLiteral_7298/*"Help"*/, 0) )
       return 0;
   }
   myRoomFsm = (PlayMakerFSM_o *)this->fields.myRoomListCtr;
@@ -4225,7 +4453,7 @@ bool MyRoomControl__IsScrollviewInShowPosition(MyRoomControl_o *this, const Meth
   mMaterialEventLogListViewManager = this->fields.mMaterialEventLogListViewManager;
   if ( !mMaterialEventLogListViewManager )
 LABEL_16:
-    sub_1C6BC60(myRoomFsm, method);
+    sub_1C71608(myRoomFsm, method);
   return !mMaterialEventLogListViewManager->fields.mIsDoing_Slide;
 }
 
@@ -4244,13 +4472,13 @@ void MyRoomControl__LinkageStatusCheckCallback(
   const MethodInfo *v5; // x1
   int32_t notificationType; // w8
 
-  if ( (byte_4CB1668 & 1) == 0 )
+  if ( (byte_4CC2775 & 1) == 0 )
   {
-    sub_1C6BA08(&AccountLinkageParams_TypeInfo);
-    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
-    byte_4CB1668 = 1;
+    sub_1C713B0(&AccountLinkageParams_TypeInfo);
+    sub_1C713B0(&StringLiteral_22486/*"ok"*/);
+    byte_4CC2775 = 1;
   }
-  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22471/*"ok"*/, 0) )
+  if ( System_String__op_Equality(result, (System_String_o *)StringLiteral_22486/*"ok"*/, 0) )
   {
     notificationType = AccountLinkageParams_TypeInfo->static_fields->notificationType;
     if ( notificationType == 2 )
@@ -4286,58 +4514,62 @@ void MyRoomControl__LoadMasterEquip(MyRoomControl_o *this, const MethodInfo *met
   UserEquipEntity_o *v14; // x28
   __int64 v15; // x22
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  __int64 v18; // x24
-  __int64 v19; // x25
-  __int64 v20; // x23
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c **v21; // x21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c *v22; // x0
-  UserEquipEntity_array *v23; // x29
-  const MethodInfo_34524F0 **v24; // x20
-  __int64 v25; // x25
-  __int64 v26; // x26
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  __int64 v22; // x24
+  __int64 v23; // x25
+  __int64 v24; // x23
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c **v25; // x21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c *v26; // x0
+  UserEquipEntity_array *v27; // x29
+  const MethodInfo_3462294 **v28; // x20
+  __int64 v29; // x25
+  __int64 v30; // x26
   struct System_Collections_Generic_Dictionary_int__Texture2D__o *masterFemaleEquipTexture; // x24
   struct System_Collections_Generic_Dictionary_int__Texture2D__o *masterMaleEquipTexture; // x24
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c *v29; // x0
-  Il2CppObject *v30; // x0
-  System_String_o *v31; // x24
-  AssetLoader_LoadEndDataHandler_o *v32; // x25
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c *v33; // x0
   Il2CppObject *v34; // x0
-  System_String_o *v35; // x23
-  AssetLoader_LoadEndDataHandler_o *v36; // x24
-  __int128 v38; // [xsp+10h] [xbp-80h] BYREF
-  __int128 v39; // [xsp+20h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v41; // 0:x0.16
+  System_String_o *v35; // x24
+  AssetLoader_LoadEndDataHandler_o *v36; // x25
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_c *v37; // x0
+  Il2CppObject *v38; // x0
+  System_String_o *v39; // x23
+  AssetLoader_LoadEndDataHandler_o *v40; // x24
+  __int128 v42; // [xsp+10h] [xbp-80h] BYREF
+  __int128 v43; // [xsp+20h] [xbp-70h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v44; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v45; // 0:x0.16
 
-  if ( (byte_4CB1697 & 1) == 0 )
+  if ( (byte_4CC27A4 & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EquipMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserEquipMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__Texture2D__Add__);
-    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass397_0__LoadMasterEquip_b__0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass397_0__LoadMasterEquip_b__1__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass397_0_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8940/*"MasterFace/equip{0:D5}"*/);
-    byte_4CB1697 = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_EquipMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_UserEquipMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__Texture2D__Add__);
+    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__getInstance__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass397_0__LoadMasterEquip_b__0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass397_0__LoadMasterEquip_b__1__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass397_0_TypeInfo);
+    sub_1C713B0(&StringLiteral_8944/*"MasterFace/equip{0:D5}"*/);
+    byte_4CC27A4 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserEquipMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserEquipMaster___);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4CB002A )
+  if ( !byte_4CC112A )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB002A = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC112A = 1;
   }
   MasterData_object = (DataManager_o *)NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -4353,16 +4585,16 @@ void MyRoomControl__LoadMasterEquip(MyRoomControl_o *this, const MethodInfo *met
            0);
   v7 = *((_QWORD *)Method_SingletonMonoBehaviour_DataManager__getInstance__ + 4);
   if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-    v7 = sub_1C41A9C(v6);
+    v7 = sub_1C47444(v6);
   v8 = *(_QWORD *)(*(_QWORD *)(v7 + 192) + 16LL);
   if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C41A9C(v6);
+    v8 = sub_1C47444(v6);
   MasterData_object = **(DataManager_o ***)(v8 + 184);
   if ( !MasterData_object )
     goto LABEL_37;
   MasterData_object = (DataManager_o *)DataManager__GetMasterData_object_(
                                          MasterData_object,
-                                         (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EquipMaster___);
+                                         (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EquipMaster___);
   if ( !List )
     goto LABEL_37;
   max_length = List->max_length;
@@ -4375,54 +4607,54 @@ void MyRoomControl__LoadMasterEquip(MyRoomControl_o *this, const MethodInfo *met
     while ( 1 )
     {
       if ( v13 >= max_length )
-        sub_1C6BC68(MasterData_object);
+        sub_1C71610(MasterData_object);
       v14 = List->m_Items[v13];
-      v15 = sub_1C6BC54(MyRoomControl___c__DisplayClass397_0_TypeInfo);
+      v15 = sub_1C715FC(MyRoomControl___c__DisplayClass397_0_TypeInfo);
       MyRoomControl___c__DisplayClass397_0___ctor((MyRoomControl___c__DisplayClass397_0_o *)v15, 0);
       if ( !v15 )
         break;
       *(_QWORD *)(v15 + 24) = this;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 24), (int32_t)this, v16, v17);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v15 + 24), (int32_t)this, v16, v17, v18, v19, v20, v21);
       if ( !v14 )
         break;
-      v19 = *(_QWORD *)&v14->fields.equipId.fields.currentCryptoKey;
-      v18 = *(_QWORD *)&v14->fields.equipId.fields.fakeValue;
+      v23 = *(_QWORD *)&v14->fields.equipId.fields.currentCryptoKey;
+      v22 = *(_QWORD *)&v14->fields.equipId.fields.fakeValue;
       if ( !(*v10)->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(*v10);
-      *(_QWORD *)&v40.fields.currentCryptoKey = v19;
-      *(_QWORD *)&v40.fields.fakeValue = v18;
-      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v40, 0);
+      *(_QWORD *)&v44.fields.currentCryptoKey = v23;
+      *(_QWORD *)&v44.fields.fakeValue = v22;
+      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v44, 0);
       if ( !v12 )
         break;
-      v20 = v15 + 16;
+      v24 = v15 + 16;
       if ( !DataMasterBase_object__object__int___TryGetEntity(
               v12,
               (Il2CppObject **)(v15 + 16),
               (int32_t)MasterData_object,
-              (const MethodInfo_33F9128 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__) )
+              (const MethodInfo_3408ECC *)Method_DataMasterBase_EquipMaster__EquipEntity__int__TryGetEntity__) )
         return;
-      v21 = v10;
-      v22 = *v10;
-      v23 = List;
-      v24 = (const MethodInfo_34524F0 **)v11;
-      v26 = *(_QWORD *)&v14->fields.equipId.fields.currentCryptoKey;
-      v25 = *(_QWORD *)&v14->fields.equipId.fields.fakeValue;
+      v25 = v10;
+      v26 = *v10;
+      v27 = List;
+      v28 = (const MethodInfo_3462294 **)v11;
+      v30 = *(_QWORD *)&v14->fields.equipId.fields.currentCryptoKey;
+      v29 = *(_QWORD *)&v14->fields.equipId.fields.fakeValue;
       masterFemaleEquipTexture = this->fields.masterFemaleEquipTexture;
-      if ( !v22->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v22);
-      *(_QWORD *)&v41.fields.currentCryptoKey = v26;
-      *(_QWORD *)&v41.fields.fakeValue = v25;
-      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v41, 0);
+      if ( !v26->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v26);
+      *(_QWORD *)&v45.fields.currentCryptoKey = v30;
+      *(_QWORD *)&v45.fields.fakeValue = v29;
+      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v45, 0);
       if ( !masterFemaleEquipTexture )
         break;
-      v11 = (__int64 *)v24;
+      v11 = (__int64 *)v28;
       System_Collections_Generic_Dictionary_int__object___Add(
         (System_Collections_Generic_Dictionary_int__object__o *)masterFemaleEquipTexture,
         (int32_t)MasterData_object,
         0,
-        *v24);
+        *v28);
       masterMaleEquipTexture = this->fields.masterMaleEquipTexture;
-      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
+      MasterData_object = (DataManager_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(
                                              v14->fields.equipId,
                                              0);
       if ( !masterMaleEquipTexture )
@@ -4431,43 +4663,43 @@ void MyRoomControl__LoadMasterEquip(MyRoomControl_o *this, const MethodInfo *met
         (System_Collections_Generic_Dictionary_int__object__o *)masterMaleEquipTexture,
         (int32_t)MasterData_object,
         0,
-        *v24);
-      if ( !*(_QWORD *)v20 )
+        *v28);
+      if ( !*(_QWORD *)v24 )
         break;
-      v29 = *v21;
-      List = v23;
-      v10 = v21;
-      v39 = *(_OWORD *)(*(_QWORD *)v20 + 64LL);
-      v30 = (Il2CppObject *)j_il2cpp_value_box_0(v29, &v39);
-      v31 = System_String__Format((System_String_o *)StringLiteral_8940/*"MasterFace/equip{0:D5}"*/, v30, 0);
-      v32 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
+      v33 = *v25;
+      List = v27;
+      v10 = v25;
+      v43 = *(_OWORD *)(*(_QWORD *)v24 + 64LL);
+      v34 = (Il2CppObject *)j_il2cpp_value_box_0(v33, &v43);
+      v35 = System_String__Format((System_String_o *)StringLiteral_8944/*"MasterFace/equip{0:D5}"*/, v34, 0);
+      v36 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
       AssetLoader_LoadEndDataHandler___ctor(
-        v32,
+        v36,
         (Il2CppObject *)v15,
         Method_MyRoomControl___c__DisplayClass397_0__LoadMasterEquip_b__0__,
         0);
       if ( !AssetManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-      MasterData_object = (DataManager_o *)AssetManager__loadAssetStorage(v31, v32, 10, 0);
-      if ( !*(_QWORD *)v20 )
+      MasterData_object = (DataManager_o *)AssetManager__loadAssetStorage(v35, v36, 10, 0);
+      if ( !*(_QWORD *)v24 )
         break;
-      v33 = *v21;
-      v38 = *(_OWORD *)(*(_QWORD *)v20 + 80LL);
-      v34 = (Il2CppObject *)j_il2cpp_value_box_0(v33, &v38);
-      v35 = System_String__Format((System_String_o *)StringLiteral_8940/*"MasterFace/equip{0:D5}"*/, v34, 0);
-      v36 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
+      v37 = *v25;
+      v42 = *(_OWORD *)(*(_QWORD *)v24 + 80LL);
+      v38 = (Il2CppObject *)j_il2cpp_value_box_0(v37, &v42);
+      v39 = System_String__Format((System_String_o *)StringLiteral_8944/*"MasterFace/equip{0:D5}"*/, v38, 0);
+      v40 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
       AssetLoader_LoadEndDataHandler___ctor(
-        v36,
+        v40,
         (Il2CppObject *)v15,
         Method_MyRoomControl___c__DisplayClass397_0__LoadMasterEquip_b__1__,
         0);
-      MasterData_object = (DataManager_o *)AssetManager__loadAssetStorage(v35, v36, 10, 0);
+      MasterData_object = (DataManager_o *)AssetManager__loadAssetStorage(v39, v40, 10, 0);
       max_length = List->max_length;
       if ( (int)++v13 >= max_length )
         return;
     }
 LABEL_37:
-    sub_1C6BC60(MasterData_object, v2);
+    sub_1C71608(MasterData_object, v2);
   }
 }
 
@@ -4478,19 +4710,23 @@ System_Collections_IEnumerator_o *MyRoomControl__LoadMultipleServant(MyRoomContr
   __int64 v4; // x0
   __int64 v5; // x1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB168C & 1) == 0 )
+  if ( (byte_4CC2799 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl__LoadMultipleServant_d__381_TypeInfo);
-    byte_4CB168C = 1;
+    sub_1C713B0(&MyRoomControl__LoadMultipleServant_d__381_TypeInfo);
+    byte_4CC2799 = 1;
   }
-  v3 = sub_1C6BC54(MyRoomControl__LoadMultipleServant_d__381_TypeInfo);
+  v3 = sub_1C715FC(MyRoomControl__LoadMultipleServant_d__381_TypeInfo);
   MyRoomControl__LoadMultipleServant_d__381___ctor((MyRoomControl__LoadMultipleServant_d__381_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C6BC60(v4, v5);
+    sub_1C71608(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -4501,56 +4737,64 @@ void MyRoomControl__LoadPhotoCampaignAssets(MyRoomControl_o *this, System_Action
   Il2CppObject *Instance; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  AssetLoader_LoadEndDataHandler_o *v12; // x19
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  AssetLoader_LoadEndDataHandler_o *v20; // x19
 
-  if ( (byte_4CB1696 & 1) == 0 )
+  if ( (byte_4CC27A3 & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass396_0__LoadPhotoCampaignAssets_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass396_0_TypeInfo);
-    sub_1C6BA08(&StringLiteral_9219/*"MyRoom/PhotoCampaign"*/);
-    byte_4CB1696 = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass396_0__LoadPhotoCampaignAssets_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass396_0_TypeInfo);
+    sub_1C713B0(&StringLiteral_9223/*"MyRoom/PhotoCampaign"*/);
+    byte_4CC27A3 = 1;
   }
-  v5 = sub_1C6BC54(MyRoomControl___c__DisplayClass396_0_TypeInfo);
+  v5 = sub_1C715FC(MyRoomControl___c__DisplayClass396_0_TypeInfo);
   MyRoomControl___c__DisplayClass396_0___ctor((MyRoomControl___c__DisplayClass396_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_12;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callBack;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)callBack, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)callBack, v14, v15, v16, v17, v18, v19);
   if ( this->fields.photoCampaignAssetData )
   {
     ActionExtensions__Call(*(System_Action_o **)(v5 + 24), 0);
     return;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_12;
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0);
-  v12 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v20 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v12,
+    v20,
     (Il2CppObject *)v5,
     Method_MyRoomControl___c__DisplayClass396_0__LoadPhotoCampaignAssets_b__0__,
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_9219/*"MyRoom/PhotoCampaign"*/, v12, 1, 0) )
+  if ( !AssetManager__loadAssetStorage((System_String_o *)StringLiteral_9223/*"MyRoom/PhotoCampaign"*/, v20, 1, 0) )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
     {
       CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0);
       return;
     }
 LABEL_12:
-    sub_1C6BC60(Instance, v7);
+    sub_1C71608(Instance, v7);
   }
 }
 
@@ -4564,19 +4808,23 @@ System_Collections_IEnumerator_o *MyRoomControl__LoadPhotoTarget(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
-  if ( (byte_4CB16A2 & 1) == 0 )
+  if ( (byte_4CC27AF & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl__LoadPhotoTarget_d__409_TypeInfo);
-    byte_4CB16A2 = 1;
+    sub_1C713B0(&MyRoomControl__LoadPhotoTarget_d__409_TypeInfo);
+    byte_4CC27AF = 1;
   }
-  v5 = sub_1C6BC54(MyRoomControl__LoadPhotoTarget_d__409_TypeInfo);
+  v5 = sub_1C715FC(MyRoomControl__LoadPhotoTarget_d__409_TypeInfo);
   MyRoomControl__LoadPhotoTarget_d__409___ctor((MyRoomControl__LoadPhotoTarget_d__409_o *)v5, 0, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_BYTE *)(v5 + 40) = isUpdate;
   return (System_Collections_IEnumerator_o *)v5;
 }
@@ -4586,15 +4834,15 @@ void MyRoomControl__LoadScriptFileListAssetData(MyRoomControl_o *this, const Met
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4CB163D & 1) == 0 )
+  if ( (byte_4CC274A & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_6972/*"GO_NEXT"*/);
-    byte_4CB163D = 1;
+    sub_1C713B0(&StringLiteral_6974/*"GO_NEXT"*/);
+    byte_4CC274A = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C6BC60(0, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6972/*"GO_NEXT"*/, 0);
+    sub_1C71608(0, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6974/*"GO_NEXT"*/, 0);
 }
 
 
@@ -4605,17 +4853,17 @@ void MyRoomControl__LoadServantForm(MyRoomControl_o *this, const MethodInfo *met
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CB1659 & 1) == 0 )
+  if ( (byte_4CC2766 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__LoadServantForm_b__266_0__);
-    byte_4CB1659 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__LoadServantForm_b__266_0__);
+    byte_4CC2766 = 1;
   }
   svtCtr = this->fields.svtCtr;
-  v4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_MyRoomControl__LoadServantForm_b__266_0__, 0);
   if ( !svtCtr )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   MyRoomSvtControl__PreloadFormAssets(svtCtr, v4, 0);
 }
 
@@ -4627,11 +4875,11 @@ void MyRoomControl__LoadServantFormEnd(MyRoomControl_o *this, const MethodInfo *
   MyRoomControl_c *v5; // x0
   UnityEngine_Color_o v6; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB165A & 1) == 0 )
+  if ( (byte_4CC2767 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8289/*"LOAD_END"*/);
-    byte_4CB165A = 1;
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&StringLiteral_8293/*"LOAD_END"*/);
+    byte_4CC2767 = 1;
   }
   playBtnImg = (UIWidget_o *)this->fields.playBtnImg;
   if ( !playBtnImg )
@@ -4652,8 +4900,8 @@ void MyRoomControl__LoadServantFormEnd(MyRoomControl_o *this, const MethodInfo *
   playBtnImg = (UIWidget_o *)this->fields.myRoomFsm;
   if ( !playBtnImg )
 LABEL_8:
-    sub_1C6BC60(playBtnImg, method);
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)playBtnImg, (System_String_o *)StringLiteral_8289/*"LOAD_END"*/, 0);
+    sub_1C71608(playBtnImg, method);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)playBtnImg, (System_String_o *)StringLiteral_8293/*"LOAD_END"*/, 0);
 }
 
 
@@ -4699,16 +4947,16 @@ void MyRoomControl__MyRoomlUIAnimationStart(
   z = movePos.fields.z;
   y = movePos.fields.y;
   x = movePos.fields.x;
-  if ( (byte_4CB1678 & 1) == 0 )
+  if ( (byte_4CC2785 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_9227/*"MyRoomUIAnimationEnd"*/);
-    byte_4CB1678 = 1;
+    sub_1C713B0(&StringLiteral_9231/*"MyRoomUIAnimationEnd"*/);
+    byte_4CC2785 = 1;
   }
   this->fields.isMyRoomUIAnimation = 1;
   v10.fields.y = y;
   v10.fields.z = z;
   v10.fields.x = x;
-  MyRoomControl__moveControl(this, target, v10, (System_String_o *)StringLiteral_9227/*"MyRoomUIAnimationEnd"*/, v4);
+  MyRoomControl__moveControl(this, target, v10, (System_String_o *)StringLiteral_9231/*"MyRoomUIAnimationEnd"*/, v4);
 }
 
 
@@ -4758,37 +5006,37 @@ void MyRoomControl__OnClickBack(MyRoomControl_o *this, const MethodInfo *method)
   UnityEngine_Color_o v43; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4CB1675 & 1) == 0 )
+  if ( (byte_4CC2782 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
-    sub_1C6BA08(&Method_MyRoomControl_OnClickBack__);
-    sub_1C6BA08(&Method_MyRoomControl__OnClickBack_b__339_0__);
-    sub_1C6BA08(&Method_MyRoomControl__OnClickBack_b__339_1__);
-    sub_1C6BA08(&Method_MyRoomControl__OnClickBack_b__339_2__);
-    sub_1C6BA08(&Method_MyRoomControl__OnClickBack_b__339_3__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&StringLiteral_3490/*"CLOSE_ACCOUNT_LINKAGE"*/);
-    sub_1C6BA08(&StringLiteral_3498/*"CLOSE_EXCHANGE_SVT_COIN"*/);
-    sub_1C6BA08(&StringLiteral_3504/*"CLOSE_MATERIAL_COLLECTION"*/);
-    sub_1C6BA08(&StringLiteral_3503/*"CLOSE_MATERIAL"*/);
-    sub_1C6BA08(&StringLiteral_3516/*"CLOSE_USER_SERVANT_COIN"*/);
-    sub_1C6BA08(&StringLiteral_3429/*"CLICK_BACK"*/);
-    sub_1C6BA08(&StringLiteral_3507/*"CLOSE_NOTICE"*/);
-    sub_1C6BA08(&StringLiteral_3501/*"CLOSE_GAMEOPTION"*/);
-    sub_1C6BA08(&StringLiteral_3502/*"CLOSE_ITEMLIST"*/);
-    sub_1C6BA08(&StringLiteral_3505/*"CLOSE_MATERIAL_COSTUME"*/);
-    sub_1C6BA08(&StringLiteral_3496/*"CLOSE_CONTINUE_DEVICE"*/);
-    sub_1C6BA08(&StringLiteral_3491/*"CLOSE_BLACKLIST"*/);
-    sub_1C6BA08(&StringLiteral_13073/*"State 5"*/);
-    sub_1C6BA08(&StringLiteral_3510/*"CLOSE_SERIAL_CODE"*/);
-    sub_1C6BA08(&StringLiteral_3493/*"CLOSE_CHANGE_PROFILE"*/);
-    sub_1C6BA08(&StringLiteral_3499/*"CLOSE_EXCHANGE_SVT_COIN_LIST"*/);
-    sub_1C6BA08(&StringLiteral_3511/*"CLOSE_SOUND_PLAYER"*/);
-    this = (MyRoomControl_o *)sub_1C6BA08(&StringLiteral_3500/*"CLOSE_FAVORITE_CHANGE"*/);
-    byte_4CB1675 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
+    sub_1C713B0(&Method_MyRoomControl_OnClickBack__);
+    sub_1C713B0(&Method_MyRoomControl__OnClickBack_b__339_0__);
+    sub_1C713B0(&Method_MyRoomControl__OnClickBack_b__339_1__);
+    sub_1C713B0(&Method_MyRoomControl__OnClickBack_b__339_2__);
+    sub_1C713B0(&Method_MyRoomControl__OnClickBack_b__339_3__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&StringLiteral_3493/*"CLOSE_ACCOUNT_LINKAGE"*/);
+    sub_1C713B0(&StringLiteral_3501/*"CLOSE_EXCHANGE_SVT_COIN"*/);
+    sub_1C713B0(&StringLiteral_3507/*"CLOSE_MATERIAL_COLLECTION"*/);
+    sub_1C713B0(&StringLiteral_3506/*"CLOSE_MATERIAL"*/);
+    sub_1C713B0(&StringLiteral_3519/*"CLOSE_USER_SERVANT_COIN"*/);
+    sub_1C713B0(&StringLiteral_3432/*"CLICK_BACK"*/);
+    sub_1C713B0(&StringLiteral_3510/*"CLOSE_NOTICE"*/);
+    sub_1C713B0(&StringLiteral_3504/*"CLOSE_GAMEOPTION"*/);
+    sub_1C713B0(&StringLiteral_3505/*"CLOSE_ITEMLIST"*/);
+    sub_1C713B0(&StringLiteral_3508/*"CLOSE_MATERIAL_COSTUME"*/);
+    sub_1C713B0(&StringLiteral_3499/*"CLOSE_CONTINUE_DEVICE"*/);
+    sub_1C713B0(&StringLiteral_3494/*"CLOSE_BLACKLIST"*/);
+    sub_1C713B0(&StringLiteral_13079/*"State 5"*/);
+    sub_1C713B0(&StringLiteral_3513/*"CLOSE_SERIAL_CODE"*/);
+    sub_1C713B0(&StringLiteral_3496/*"CLOSE_CHANGE_PROFILE"*/);
+    sub_1C713B0(&StringLiteral_3502/*"CLOSE_EXCHANGE_SVT_COIN_LIST"*/);
+    sub_1C713B0(&StringLiteral_3514/*"CLOSE_SOUND_PLAYER"*/);
+    this = (MyRoomControl_o *)sub_1C713B0(&StringLiteral_3503/*"CLOSE_FAVORITE_CHANGE"*/);
+    byte_4CC2782 = 1;
   }
   mMaterialEventLogListViewManager = v2->fields.mMaterialEventLogListViewManager;
   if ( !mMaterialEventLogListViewManager )
@@ -4809,8 +5057,8 @@ void MyRoomControl__OnClickBack(MyRoomControl_o *this, const MethodInfo *method)
         {
           v16 = Method_MyRoomControl_OnClickBack__;
           if ( (*((_BYTE *)Method_MyRoomControl_OnClickBack__ + 83) & 2) != 0 )
-            v16 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickBack__);
-          v17 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v16, v16[4]);
+            v16 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickBack__);
+          v17 = (System_Reflection_MethodBase_o *)sub_1C71394(v16, v16[4]);
           OverwriteAssetSoundName__PlaySystemSe(v17, 1, 0, 0);
           v2->fields.multipleViewState = 1;
           MyRoomControl__CloseMutlipleServant(v2, v18);
@@ -4819,8 +5067,8 @@ void MyRoomControl__OnClickBack(MyRoomControl_o *this, const MethodInfo *method)
         {
           v6 = Method_MyRoomControl_OnClickBack__;
           if ( (*((_BYTE *)Method_MyRoomControl_OnClickBack__ + 83) & 2) != 0 )
-            v6 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickBack__);
-          v7 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v6, v6[4]);
+            v6 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickBack__);
+          v7 = (System_Reflection_MethodBase_o *)sub_1C71394(v6, v6[4]);
           OverwriteAssetSoundName__PlaySystemSe(v7, 1, 0, 0);
           v2->fields.multipleViewState = 0;
           MyRoomControl__CloseMultipleView(v2, v8);
@@ -4831,8 +5079,8 @@ void MyRoomControl__OnClickBack(MyRoomControl_o *this, const MethodInfo *method)
       {
         v9 = Method_MyRoomControl_OnClickBack__;
         if ( (*((_BYTE *)Method_MyRoomControl_OnClickBack__ + 83) & 2) != 0 )
-          v9 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickBack__);
-        v10 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v9, v9[4]);
+          v9 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickBack__);
+        v10 = (System_Reflection_MethodBase_o *)sub_1C71394(v9, v9[4]);
         OverwriteAssetSoundName__PlaySystemSe(v10, 1, 0, 0);
         photoState = v2->fields.photoState;
         if ( photoState > 2 )
@@ -4842,7 +5090,7 @@ void MyRoomControl__OnClickBack(MyRoomControl_o *this, const MethodInfo *method)
             if ( photoState != 8 )
               return;
             photoServantSelectMenu = v2->fields.photoServantSelectMenu;
-            v14 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+            v14 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
             v15 = &Method_MyRoomControl__OnClickBack_b__339_3__;
 LABEL_43:
             v25 = v14;
@@ -4864,7 +5112,7 @@ LABEL_43:
               return;
             v2->fields.photoState = 2;
             photoServantSelectMenu = v2->fields.photoServantSelectMenu;
-            v14 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+            v14 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
             v15 = &Method_MyRoomControl__OnClickBack_b__339_2__;
             goto LABEL_43;
           }
@@ -4890,7 +5138,7 @@ LABEL_56:
               return;
             v2->fields.photoState = 0;
             photoServantSelectMenu = v2->fields.photoServantSelectMenu;
-            v14 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+            v14 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
             v15 = &Method_MyRoomControl__OnClickBack_b__339_1__;
             goto LABEL_43;
           }
@@ -4918,7 +5166,7 @@ LABEL_56:
             {
               CGThumbnailDialog__UnloadListViewAsset((CGThumbnailDialog_o *)this, 0);
               cgThumbnailDialog = (BaseDialog_o *)v2->fields.cgThumbnailDialog;
-              v27 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+              v27 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
               System_Action___ctor(v27, (Il2CppObject *)v2, Method_MyRoomControl__OnClickBack_b__339_0__, 0);
               if ( cgThumbnailDialog )
               {
@@ -4936,22 +5184,22 @@ LABEL_56:
             return;
           type = v2->fields.type;
         }
-        method = (const MethodInfo *)StringLiteral_3429/*"CLICK_BACK"*/;
+        method = (const MethodInfo *)StringLiteral_3432/*"CLICK_BACK"*/;
         v28 = type - 1;
         v29 = 0;
         switch ( v28 )
         {
           case 0:
-            v30 = &StringLiteral_3503/*"CLOSE_MATERIAL"*/;
+            v30 = &StringLiteral_3506/*"CLOSE_MATERIAL"*/;
             goto LABEL_66;
           case 1:
-            v33 = (__int64 *)&StringLiteral_3504/*"CLOSE_MATERIAL_COLLECTION"*/;
+            v33 = (__int64 *)&StringLiteral_3507/*"CLOSE_MATERIAL_COLLECTION"*/;
             goto LABEL_79;
           case 2:
-            v33 = (__int64 *)&StringLiteral_3502/*"CLOSE_ITEMLIST"*/;
+            v33 = (__int64 *)&StringLiteral_3505/*"CLOSE_ITEMLIST"*/;
             goto LABEL_79;
           case 3:
-            v33 = (__int64 *)&StringLiteral_3493/*"CLOSE_CHANGE_PROFILE"*/;
+            v33 = (__int64 *)&StringLiteral_3496/*"CLOSE_CHANGE_PROFILE"*/;
             goto LABEL_79;
           case 4:
             optionComp = v2->fields.optionComp;
@@ -4962,11 +5210,11 @@ LABEL_56:
             {
               v29 = 0;
               if ( optionSceneType_k__BackingField == 1 )
-                method = (const MethodInfo *)StringLiteral_3491/*"CLOSE_BLACKLIST"*/;
+                method = (const MethodInfo *)StringLiteral_3494/*"CLOSE_BLACKLIST"*/;
             }
             else
             {
-              v33 = (__int64 *)&StringLiteral_3501/*"CLOSE_GAMEOPTION"*/;
+              v33 = (__int64 *)&StringLiteral_3504/*"CLOSE_GAMEOPTION"*/;
 LABEL_79:
               method = (const MethodInfo *)*v33;
               v29 = 0;
@@ -4987,7 +5235,7 @@ LABEL_80:
             if ( this )
             {
               ActiveStateName = PlayMakerFSM__get_ActiveStateName((PlayMakerFSM_o *)this, 0);
-              if ( !System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_13073/*"State 5"*/, 0) )
+              if ( !System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_13079/*"State 5"*/, 0) )
                 return;
               this = (MyRoomControl_o *)v2->fields.myRoomData;
               if ( this )
@@ -5005,7 +5253,7 @@ LABEL_80:
                   }
                   *(_QWORD *)&v42.fields.currentCryptoKey = noticeComp;
                   *(_QWORD *)&v42.fields.fakeValue = materialCollectionComp;
-                  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v42, 0) < 1
+                  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v42, 0) < 1
                     || v2->fields.isHeroine && v2->fields.isHeroineReave )
                   {
                     return;
@@ -5032,47 +5280,47 @@ LABEL_80:
             }
             break;
           case 5:
-            v30 = &StringLiteral_3507/*"CLOSE_NOTICE"*/;
+            v30 = &StringLiteral_3510/*"CLOSE_NOTICE"*/;
 LABEL_66:
             method = (const MethodInfo *)*v30;
             v29 = 1;
             goto LABEL_80;
           case 6:
-            v33 = &StringLiteral_3510/*"CLOSE_SERIAL_CODE"*/;
+            v33 = &StringLiteral_3513/*"CLOSE_SERIAL_CODE"*/;
             goto LABEL_79;
           case 7:
-            v33 = &StringLiteral_3496/*"CLOSE_CONTINUE_DEVICE"*/;
+            v33 = &StringLiteral_3499/*"CLOSE_CONTINUE_DEVICE"*/;
             goto LABEL_79;
           case 8:
-            v33 = (__int64 *)&StringLiteral_3500/*"CLOSE_FAVORITE_CHANGE"*/;
+            v33 = (__int64 *)&StringLiteral_3503/*"CLOSE_FAVORITE_CHANGE"*/;
             goto LABEL_79;
           case 9:
-            v33 = &StringLiteral_3511/*"CLOSE_SOUND_PLAYER"*/;
+            v33 = &StringLiteral_3514/*"CLOSE_SOUND_PLAYER"*/;
             goto LABEL_79;
           case 10:
-            v33 = (__int64 *)&StringLiteral_3505/*"CLOSE_MATERIAL_COSTUME"*/;
+            v33 = (__int64 *)&StringLiteral_3508/*"CLOSE_MATERIAL_COSTUME"*/;
             goto LABEL_79;
           case 16:
-            v33 = &StringLiteral_3516/*"CLOSE_USER_SERVANT_COIN"*/;
+            v33 = &StringLiteral_3519/*"CLOSE_USER_SERVANT_COIN"*/;
             goto LABEL_79;
           case 17:
-            v33 = &StringLiteral_3490/*"CLOSE_ACCOUNT_LINKAGE"*/;
+            v33 = &StringLiteral_3493/*"CLOSE_ACCOUNT_LINKAGE"*/;
             goto LABEL_79;
           case 18:
             this = (MyRoomControl_o *)v2->fields.exchangeSvtCoinComp;
             if ( !this )
               break;
             IsOpenFolder = ExchangeSvtCoinComponent__IsOpenFolder((ExchangeSvtCoinComponent_o *)this, 0);
-            v33 = (__int64 *)&StringLiteral_3499/*"CLOSE_EXCHANGE_SVT_COIN_LIST"*/;
+            v33 = (__int64 *)&StringLiteral_3502/*"CLOSE_EXCHANGE_SVT_COIN_LIST"*/;
             if ( !IsOpenFolder )
-              v33 = (__int64 *)&StringLiteral_3498/*"CLOSE_EXCHANGE_SVT_COIN"*/;
+              v33 = (__int64 *)&StringLiteral_3501/*"CLOSE_EXCHANGE_SVT_COIN"*/;
             goto LABEL_79;
           default:
             goto LABEL_80;
         }
       }
 LABEL_97:
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     }
   }
 }
@@ -5098,18 +5346,18 @@ void MyRoomControl__OnClickChangeBg(MyRoomControl_o *this, const MethodInfo *met
   _QWORD *v18; // x0
   System_Reflection_MethodBase_o *v19; // x0
 
-  if ( (byte_4CB16C1 & 1) == 0 )
+  if ( (byte_4CC27CE & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&Method_MyRoomControl_OnClickChangeBg__);
-    sub_1C6BA08(&Method_MyRoomControl__OnClickChangeBg_b__450_0__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16C1 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&Method_MyRoomControl_OnClickChangeBg__);
+    sub_1C713B0(&Method_MyRoomControl__OnClickChangeBg_b__450_0__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27CE = 1;
   }
   v4 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -5123,8 +5371,8 @@ void MyRoomControl__OnClickChangeBg(MyRoomControl_o *this, const MethodInfo *met
   {
     v18 = Method_MyRoomControl_OnClickChangeBg__;
     if ( (*((_BYTE *)Method_MyRoomControl_OnClickChangeBg__ + 83) & 2) != 0 )
-      v18 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickChangeBg__);
-    v19 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v18, v18[4]);
+      v18 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickChangeBg__);
+    v19 = (System_Reflection_MethodBase_o *)sub_1C71394(v18, v18[4]);
     OverwriteAssetSoundName__PlaySystemSe(v19, 2, 0, 0);
   }
   else
@@ -5162,13 +5410,13 @@ void MyRoomControl__OnClickChangeBg(MyRoomControl_o *this, const MethodInfo *met
     Item = System_Collections_Generic_List_int___get_Item(
              (System_Collections_Generic_List_int__o *)v4,
              v8->displayBgGroupIndex,
-             (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+             (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    if ( !byte_4CB16DD )
+    if ( !byte_4CC27EA )
     {
-      sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-      byte_4CB16DD = 1;
+      sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+      byte_4CC27EA = 1;
     }
     v10 = MyRoomParamsManager_TypeInfo;
     if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
@@ -5179,10 +5427,10 @@ void MyRoomControl__OnClickChangeBg(MyRoomControl_o *this, const MethodInfo *met
     v10->static_fields->_DisplayMyRoomBgGroupId_k__BackingField = Item;
     v11 = Method_MyRoomControl_OnClickChangeBg__;
     if ( (*((_BYTE *)Method_MyRoomControl_OnClickChangeBg__ + 83) & 2) != 0 )
-      v11 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickChangeBg__);
-    v12 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v11, v11[4]);
+      v11 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickChangeBg__);
+    v12 = (System_Reflection_MethodBase_o *)sub_1C71394(v11, v11[4]);
     OverwriteAssetSoundName__PlaySystemSe(v12, 0, 0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v14 = AvalonSceneManager_TypeInfo;
     v15 = (CommonUI_o *)Instance;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -5191,11 +5439,11 @@ void MyRoomControl__OnClickChangeBg(MyRoomControl_o *this, const MethodInfo *met
       v14 = AvalonSceneManager_TypeInfo;
     }
     DEFAULT_FADE_TIME = v14->static_fields->DEFAULT_FADE_TIME;
-    v17 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v17 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v17, (Il2CppObject *)this, Method_MyRoomControl__OnClickChangeBg_b__450_0__, 0);
     if ( !v15 )
 LABEL_31:
-      sub_1C6BC60(v4, method);
+      sub_1C71608(v4, method);
     CommonUI__maskFadeout(v15, 1, DEFAULT_FADE_TIME, v17, 0);
   }
 }
@@ -5227,20 +5475,20 @@ void MyRoomControl__OnClickChangeLimit(MyRoomControl_o *this, const MethodInfo *
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v25; // 0:x0.16
 
-  if ( (byte_4CB1650 & 1) == 0 )
+  if ( (byte_4CC275D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&Method_MyRoomControl_OnClickChangeLimit__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&StringLiteral_15564/*"Wait_Action"*/);
-    sub_1C6BA08(&StringLiteral_3318/*"CHANGE_LIMIT"*/);
-    sub_1C6BA08(&StringLiteral_7294/*"Help"*/);
-    byte_4CB1650 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C713B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&Method_MyRoomControl_OnClickChangeLimit__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&StringLiteral_15571/*"Wait_Action"*/);
+    sub_1C713B0(&StringLiteral_3321/*"CHANGE_LIMIT"*/);
+    sub_1C713B0(&StringLiteral_7298/*"Help"*/);
+    byte_4CC275D = 1;
   }
   v4 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -5257,13 +5505,13 @@ void MyRoomControl__OnClickChangeLimit(MyRoomControl_o *this, const MethodInfo *
   if ( !myRoomFsm )
     goto LABEL_45;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0);
-  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15564/*"Wait_Action"*/, 0) )
+  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15571/*"Wait_Action"*/, 0) )
   {
     myRoomFsm = this->fields.myRoomFsm;
     if ( !myRoomFsm )
       goto LABEL_45;
     v7 = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0);
-    if ( System_String__op_Inequality(v7, (System_String_o *)StringLiteral_7294/*"Help"*/, 0) )
+    if ( System_String__op_Inequality(v7, (System_String_o *)StringLiteral_7298/*"Help"*/, 0) )
       return;
   }
   if ( !this->fields.isServantMaterial )
@@ -5284,24 +5532,24 @@ void MyRoomControl__OnClickChangeLimit(MyRoomControl_o *this, const MethodInfo *
         j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
       *(_QWORD *)&v25.fields.currentCryptoKey = fsm;
       *(_QWORD *)&v25.fields.fakeValue = fsmTemplate;
-      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v25, 0) > 0 || this->fields.isHeroine )
+      if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v25, 0) > 0 || this->fields.isHeroine )
         goto LABEL_40;
       return;
     }
 LABEL_30:
     v18 = Method_MyRoomControl_OnClickChangeLimit__;
     if ( (*((_BYTE *)Method_MyRoomControl_OnClickChangeLimit__ + 83) & 2) != 0 )
-      v18 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickChangeLimit__);
-    v19 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v18, v18[4]);
+      v18 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickChangeLimit__);
+    v19 = (System_Reflection_MethodBase_o *)sub_1C71394(v18, v18[4]);
     OverwriteAssetSoundName__PlaySystemSe(v19, 2, 0, 0);
     return;
   }
-  myRoomFsm = (PlayMakerFSM_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  myRoomFsm = (PlayMakerFSM_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !myRoomFsm )
     goto LABEL_45;
   myRoomFsm = (PlayMakerFSM_o *)DataManager__GetMasterData_object_(
                                   (DataManager_o *)myRoomFsm,
-                                  (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                                  (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   usrData = this->fields.usrData;
   if ( !usrData )
     goto LABEL_45;
@@ -5312,12 +5560,12 @@ LABEL_30:
                        usrData->fields.userId,
                        this->fields.materialServantId,
                        0);
-  myRoomFsm = (PlayMakerFSM_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  myRoomFsm = (PlayMakerFSM_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !myRoomFsm )
     goto LABEL_45;
   myRoomFsm = (PlayMakerFSM_o *)DataManager__GetMasterData_object_(
                                   (DataManager_o *)myRoomFsm,
-                                  (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                  (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantMaster___);
   if ( !EntityDefinitely )
     goto LABEL_45;
   v10 = (DataMasterBase_TMaster__TEntity__PKType__o *)myRoomFsm;
@@ -5327,13 +5575,13 @@ LABEL_30:
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v24.fields.currentCryptoKey = v12;
   *(_QWORD *)&v24.fields.fakeValue = v11;
-  myRoomFsm = (PlayMakerFSM_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v24, 0);
+  myRoomFsm = (PlayMakerFSM_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v24, 0);
   if ( !v10 )
     goto LABEL_45;
   Entity = DataMasterBase_object__object__int___GetEntity(
              v10,
              (int32_t)myRoomFsm,
-             (const MethodInfo_33F90DC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+             (const MethodInfo_3408E80 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
   myRoomFsm = (PlayMakerFSM_o *)MyRoomControl__IsScrollviewInShowPosition(this, v14);
   if ( ((unsigned __int8)myRoomFsm & 1) != 0 )
   {
@@ -5359,17 +5607,17 @@ LABEL_40:
       this->fields.isSvtLoading = 1;
       v22 = Method_MyRoomControl_OnClickChangeLimit__;
       if ( (*((_BYTE *)Method_MyRoomControl_OnClickChangeLimit__ + 83) & 2) != 0 )
-        v22 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickChangeLimit__);
-      v23 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v22, v22[4]);
+        v22 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickChangeLimit__);
+      v23 = (System_Reflection_MethodBase_o *)sub_1C71394(v22, v22[4]);
       OverwriteAssetSoundName__PlaySystemSe(v23, 0, 0, 0);
       myRoomFsm = this->fields.myRoomFsm;
       if ( myRoomFsm )
       {
-        PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3318/*"CHANGE_LIMIT"*/, 0);
+        PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3321/*"CHANGE_LIMIT"*/, 0);
         return;
       }
 LABEL_45:
-      sub_1C6BC60(myRoomFsm, method);
+      sub_1C71608(myRoomFsm, method);
     }
   }
 }
@@ -5381,15 +5629,15 @@ void MyRoomControl__OnClickCloseMultipleView(MyRoomControl_o *this, const Method
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CB1687 & 1) == 0 )
+  if ( (byte_4CC2794 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_OnClickCloseMultipleView__);
-    byte_4CB1687 = 1;
+    sub_1C713B0(&Method_MyRoomControl_OnClickCloseMultipleView__);
+    byte_4CC2794 = 1;
   }
   v3 = Method_MyRoomControl_OnClickCloseMultipleView__;
   if ( (*((_BYTE *)Method_MyRoomControl_OnClickCloseMultipleView__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickCloseMultipleView__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickCloseMultipleView__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   this->fields.multipleViewState = 2;
   MyRoomControl__SetEnableMultipleViewUi(this, 1, v5);
@@ -5407,22 +5655,26 @@ void MyRoomControl__OnClickDispPhotoUi(MyRoomControl_o *this, const MethodInfo *
   Il2CppObject *v9; // x22
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  const MethodInfo *v13; // x2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  const MethodInfo *v17; // x2
 
-  if ( (byte_4CB16BC & 1) == 0 )
+  if ( (byte_4CC27C9 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_PhotoLayerChangeComponent__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
-    sub_1C6BA08(&Method_MyRoomControl_OnClickDispPhotoUi__);
-    sub_1C6BA08(&Method_MyRoomControl___c__OnClickDispPhotoUi_b__438_0__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    byte_4CB16BC = 1;
+    sub_1C713B0(&System_Action_PhotoLayerChangeComponent__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
+    sub_1C713B0(&Method_MyRoomControl_OnClickDispPhotoUi__);
+    sub_1C713B0(&Method_MyRoomControl___c__OnClickDispPhotoUi_b__438_0__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    byte_4CC27C9 = 1;
   }
   v3 = Method_MyRoomControl_OnClickDispPhotoUi__;
   if ( (*((_BYTE *)Method_MyRoomControl_OnClickDispPhotoUi__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickDispPhotoUi__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickDispPhotoUi__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   this->fields.photoState = 2;
   photoCampaignDispUiMask = MyRoomControl___c_TypeInfo;
@@ -5441,23 +5693,23 @@ void MyRoomControl__OnClickDispPhotoUi(MyRoomControl_o *this, const MethodInfo *
       photoCampaignDispUiMask = MyRoomControl___c_TypeInfo;
     }
     v9 = (Il2CppObject *)**((_QWORD **)photoCampaignDispUiMask + 23);
-    v8 = (System_Action_object__o *)sub_1C6BC54(System_Action_PhotoLayerChangeComponent__TypeInfo);
+    v8 = (System_Action_object__o *)sub_1C715FC(System_Action_PhotoLayerChangeComponent__TypeInfo);
     System_Action_object____ctor(v8, v9, Method_MyRoomControl___c__OnClickDispPhotoUi_b__438_0__, 0);
     static_fields = MyRoomControl___c_TypeInfo->static_fields;
     static_fields->__9__438_0 = (struct System_Action_PhotoLayerChangeComponent__o *)v8;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__438_0, (int32_t)v8, v11, v12);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__438_0, (int32_t)v8, v11, v12, v13, v14, v15, v16);
   }
   if ( !instantiateLayerChangeObjList
     || (System_Collections_Generic_List_object___ForEach(
           instantiateLayerChangeObjList,
           (System_Action_T__o *)v8,
-          (const MethodInfo_38013B4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__),
+          (const MethodInfo_3811158 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__),
         (photoCampaignDispUiMask = this->fields.photoCampaignDispUiMask) == 0) )
   {
-    sub_1C6BC60(photoCampaignDispUiMask, v5);
+    sub_1C71608(photoCampaignDispUiMask, v5);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)photoCampaignDispUiMask, 0, 0);
-  MyRoomControl__SetPhotoCampaignUi(this, 1, v13);
+  MyRoomControl__SetPhotoCampaignUi(this, 1, v17);
 }
 
 
@@ -5468,15 +5720,15 @@ void MyRoomControl__OnClickEventLogSortKind(MyRoomControl_o *this, const MethodI
   __int64 v5; // x1
   MaterialCollectionServantListViewManager_o *materialCollectionServantListViewManager; // x0
 
-  if ( (byte_4CB1695 & 1) == 0 )
+  if ( (byte_4CC27A2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_OnClickEventLogSortKind__);
-    byte_4CB1695 = 1;
+    sub_1C713B0(&Method_MyRoomControl_OnClickEventLogSortKind__);
+    byte_4CC27A2 = 1;
   }
   v3 = Method_MyRoomControl_OnClickEventLogSortKind__;
   if ( (*((_BYTE *)Method_MyRoomControl_OnClickEventLogSortKind__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickEventLogSortKind__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickEventLogSortKind__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   if ( this->fields.IsListActive )
   {
@@ -5490,7 +5742,7 @@ void MyRoomControl__OnClickEventLogSortKind(MyRoomControl_o *this, const MethodI
       return;
     }
 LABEL_10:
-    sub_1C6BC60(materialCollectionServantListViewManager, v5);
+    sub_1C71608(materialCollectionServantListViewManager, v5);
   }
   materialCollectionServantListViewManager = (MaterialCollectionServantListViewManager_o *)this->fields.mMaterialEventLogListViewManager;
   if ( !materialCollectionServantListViewManager )
@@ -5509,17 +5761,17 @@ void MyRoomControl__OnClickLeftServant(MyRoomControl_o *this, const MethodInfo *
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CB1688 & 1) == 0 )
+  if ( (byte_4CC2795 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_OnClickLeftServant__);
-    byte_4CB1688 = 1;
+    sub_1C713B0(&Method_MyRoomControl_OnClickLeftServant__);
+    byte_4CC2795 = 1;
   }
   if ( !MyRoomControl__IsFrontMultipleServant(this, 0, v2) )
   {
     v4 = Method_MyRoomControl_OnClickLeftServant__;
     if ( (*((_BYTE *)Method_MyRoomControl_OnClickLeftServant__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickLeftServant__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickLeftServant__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C71394(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
     MyRoomControl__SetLayerMultipleServant(this, 0, v6);
   }
@@ -5583,36 +5835,44 @@ void MyRoomControl__OnClickPhotoCampaignBackGround(MyRoomControl_o *this, const 
   UnityEngine_GameObject_o *v46; // x0
   TweenAlpha_o *v47; // x20
   int32_t v48; // w2
-  const MethodInfo *v49; // x3
-  int32_t v50; // w1
-  int32_t v51; // w2
-  const MethodInfo *v52; // x3
-  UnityEngine_Vector3_o v53; // [xsp+0h] [xbp-80h] BYREF
+  int32_t v49; // w3
+  System_String_o *v50; // x4
+  int32_t v51; // w5
+  int64_t v52; // x6
+  System_String_o *v53; // x7
+  int32_t v54; // w1
+  int32_t v55; // w2
+  int32_t v56; // w3
+  System_String_o *v57; // x4
+  int32_t v58; // w5
+  int64_t v59; // x6
+  System_String_o *v60; // x7
+  UnityEngine_Vector3_o v61; // [xsp+0h] [xbp-80h] BYREF
   UnityEngine_Vector3_o localScale; // [xsp+10h] [xbp-70h] BYREF
-  UnityEngine_Vector3_o v55; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v57; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v58; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v59; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Vector3_o v60; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Vector3_o v61; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Vector3_o v62; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Vector3_o v63; // 0:s1.4,4:s2.4,8:s3.4
-  UnityEngine_Quaternion_o v64; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
-  UnityEngine_Quaternion_o v65; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
-  UnityEngine_Quaternion_o v66; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
-  UnityEngine_Quaternion_o v67; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Vector3_o v63; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v64; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v65; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v66; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v67; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v68; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v69; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v70; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Vector3_o v71; // 0:s1.4,4:s2.4,8:s3.4
+  UnityEngine_Quaternion_o v72; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Quaternion_o v73; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Quaternion_o v74; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
+  UnityEngine_Quaternion_o v75; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
-  if ( (byte_4CB16AD & 1) == 0 )
+  if ( (byte_4CC27BA & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_OnClickPhotoCampaignBackGround__);
-    sub_1C6BA08(&StringLiteral_6731/*"FinishedCloseFullScreenPhotoCampaign"*/);
-    byte_4CB16AD = 1;
+    sub_1C713B0(&Method_MyRoomControl_OnClickPhotoCampaignBackGround__);
+    sub_1C713B0(&StringLiteral_6733/*"FinishedCloseFullScreenPhotoCampaign"*/);
+    byte_4CC27BA = 1;
   }
   localScale.fields.z = 0.0;
   *(_QWORD *)&localScale.fields.x = 0;
-  v53.fields.z = 0.0;
-  *(_QWORD *)&v53.fields.x = 0;
+  v61.fields.z = 0.0;
+  *(_QWORD *)&v61.fields.x = 0;
   maskBoxCollider = (UnityEngine_Collider_o *)this->fields.maskBoxCollider;
   if ( !maskBoxCollider )
     goto LABEL_37;
@@ -5623,8 +5883,8 @@ void MyRoomControl__OnClickPhotoCampaignBackGround(MyRoomControl_o *this, const 
     case 6:
       v28 = Method_MyRoomControl_OnClickPhotoCampaignBackGround__;
       if ( (*((_BYTE *)Method_MyRoomControl_OnClickPhotoCampaignBackGround__ + 83) & 2) != 0 )
-        v28 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickPhotoCampaignBackGround__);
-      v29 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v28, v28[4]);
+        v28 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickPhotoCampaignBackGround__);
+      v29 = (System_Reflection_MethodBase_o *)sub_1C71394(v28, v28[4]);
       OverwriteAssetSoundName__PlaySystemSe(v29, 1, 0, 0);
       maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoCampaignBackGroundSprite;
       if ( !maskBoxCollider )
@@ -5633,73 +5893,73 @@ void MyRoomControl__OnClickPhotoCampaignBackGround(MyRoomControl_o *this, const 
     case 5:
       v30 = Method_MyRoomControl_OnClickPhotoCampaignBackGround__;
       if ( (*((_BYTE *)Method_MyRoomControl_OnClickPhotoCampaignBackGround__ + 83) & 2) != 0 )
-        v30 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickPhotoCampaignBackGround__);
-      v31 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v30, v30[4]);
+        v30 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickPhotoCampaignBackGround__);
+      v31 = (System_Reflection_MethodBase_o *)sub_1C71394(v30, v30[4]);
       OverwriteAssetSoundName__PlaySystemSe(v31, 1, 0, 0);
       maskBoxCollider = (UnityEngine_Collider_o *)this->fields.takingPhotoFrameSprite;
       if ( !maskBoxCollider )
         goto LABEL_37;
       gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-      v57.fields.x = 0.0;
-      v57.fields.y = 0.0;
-      v57.fields.z = 0.0;
-      v66 = UnityEngine_Quaternion__Internal_FromEulerRad(v57, 0);
-      y = v66.fields.y;
-      z = v66.fields.z;
-      w = v66.fields.w;
-      v66.fields.y = v66.fields.x;
-      v66.fields.z = y;
-      v66.fields.w = z;
+      v65.fields.x = 0.0;
+      v65.fields.y = 0.0;
+      v65.fields.z = 0.0;
+      v74 = UnityEngine_Quaternion__Internal_FromEulerRad(v65, 0);
+      y = v74.fields.y;
+      z = v74.fields.z;
+      w = v74.fields.w;
+      v74.fields.y = v74.fields.x;
+      v74.fields.z = y;
+      v74.fields.w = z;
       v36 = w;
-      TweenRotation__Begin(gameObject, 0.2, *(UnityEngine_Quaternion_o *)&v66.fields.y, 0);
+      TweenRotation__Begin(gameObject, 0.2, *(UnityEngine_Quaternion_o *)&v74.fields.y, 0);
       maskBoxCollider = (UnityEngine_Collider_o *)this->fields.takingPhotoFrameSprite;
       if ( !maskBoxCollider )
         goto LABEL_37;
       v37 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-      v60.fields.x = 1.0;
-      v60.fields.y = 1.0;
-      v60.fields.z = 1.0;
-      TweenScale__Begin(v37, 0.2, v60, 0);
+      v68.fields.x = 1.0;
+      v68.fields.y = 1.0;
+      v68.fields.z = 1.0;
+      TweenScale__Begin(v37, 0.2, v68, 0);
       maskBoxCollider = (UnityEngine_Collider_o *)this->fields.takingPhotoFrameSprite;
       if ( !maskBoxCollider )
         goto LABEL_37;
       v38 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-      v61.fields.x = 0.0;
-      v61.fields.y = 11.0;
-      v61.fields.z = 0.0;
-      TweenPosition__Begin(v38, 0.2, v61, 0);
+      v69.fields.x = 0.0;
+      v69.fields.y = 11.0;
+      v69.fields.z = 0.0;
+      TweenPosition__Begin(v38, 0.2, v69, 0);
       maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoCampaignScreenshot;
       if ( !maskBoxCollider )
         goto LABEL_37;
       v39 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-      v58.fields.x = 0.0;
-      v58.fields.y = 0.0;
-      v58.fields.z = 0.0;
-      v67 = UnityEngine_Quaternion__Internal_FromEulerRad(v58, 0);
-      v40 = v67.fields.y;
-      v41 = v67.fields.z;
-      v42 = v67.fields.w;
-      v67.fields.y = v67.fields.x;
-      v67.fields.z = v40;
-      v67.fields.w = v41;
+      v66.fields.x = 0.0;
+      v66.fields.y = 0.0;
+      v66.fields.z = 0.0;
+      v75 = UnityEngine_Quaternion__Internal_FromEulerRad(v66, 0);
+      v40 = v75.fields.y;
+      v41 = v75.fields.z;
+      v42 = v75.fields.w;
+      v75.fields.y = v75.fields.x;
+      v75.fields.z = v40;
+      v75.fields.w = v41;
       v43 = v42;
-      TweenRotation__Begin(v39, 0.2, *(UnityEngine_Quaternion_o *)&v67.fields.y, 0);
+      TweenRotation__Begin(v39, 0.2, *(UnityEngine_Quaternion_o *)&v75.fields.y, 0);
       maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoCampaignScreenshot;
       if ( !maskBoxCollider )
         goto LABEL_37;
       v44 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-      v62.fields.x = 1.0;
-      v62.fields.y = 1.0;
-      v62.fields.z = 1.0;
-      TweenScale__Begin(v44, 0.2, v62, 0);
+      v70.fields.x = 1.0;
+      v70.fields.y = 1.0;
+      v70.fields.z = 1.0;
+      TweenScale__Begin(v44, 0.2, v70, 0);
       maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoCampaignScreenshot;
       if ( !maskBoxCollider )
         goto LABEL_37;
       v45 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-      v63.fields.x = 0.0;
-      v63.fields.y = 11.0;
-      v63.fields.z = 0.0;
-      TweenPosition__Begin(v45, 0.2, v63, 0);
+      v71.fields.x = 0.0;
+      v71.fields.y = 11.0;
+      v71.fields.z = 0.0;
+      TweenPosition__Begin(v45, 0.2, v71, 0);
       maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoCampaignBackGroundSprite;
       if ( !maskBoxCollider )
         goto LABEL_37;
@@ -5712,38 +5972,46 @@ LABEL_34:
       if ( !v47 )
         goto LABEL_37;
       v47->fields.eventReceiver = (struct UnityEngine_GameObject_o *)maskBoxCollider;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v47->fields.eventReceiver, (int32_t)maskBoxCollider, v48, v49);
-      v50 = StringLiteral_6731/*"FinishedCloseFullScreenPhotoCampaign"*/;
-      v47->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6731/*"FinishedCloseFullScreenPhotoCampaign"*/;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v47->fields.callWhenFinished, v50, v51, v52);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&v47->fields.eventReceiver,
+        (int32_t)maskBoxCollider,
+        v48,
+        v49,
+        v50,
+        v51,
+        v52,
+        v53);
+      v54 = StringLiteral_6733/*"FinishedCloseFullScreenPhotoCampaign"*/;
+      v47->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6733/*"FinishedCloseFullScreenPhotoCampaign"*/;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&v47->fields.callWhenFinished, v54, v55, v56, v57, v58, v59, v60);
       return;
     case 4:
       v5 = Method_MyRoomControl_OnClickPhotoCampaignBackGround__;
       if ( (*((_BYTE *)Method_MyRoomControl_OnClickPhotoCampaignBackGround__ + 83) & 2) != 0 )
-        v5 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickPhotoCampaignBackGround__);
-      v6 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v5, v5[4]);
+        v5 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickPhotoCampaignBackGround__);
+      v6 = (System_Reflection_MethodBase_o *)sub_1C71394(v5, v5[4]);
       OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
       this->fields.photoState = 5;
-      MyRoomControl__GetMaximTransformValues(this, &localScale, &v53, v7);
+      MyRoomControl__GetMaximTransformValues(this, &localScale, &v61, v7);
       maskBoxCollider = (UnityEngine_Collider_o *)this->fields.takingPhotoFrameSprite;
       if ( maskBoxCollider )
       {
         v8 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-        v9 = v53.fields.x * 0.017453;
-        v10 = v53.fields.y * 0.017453;
-        v11 = v53.fields.z * 0.017453;
-        v55.fields.x = v53.fields.x * 0.017453;
-        v55.fields.y = v53.fields.y * 0.017453;
-        v55.fields.z = v53.fields.z * 0.017453;
-        v64 = UnityEngine_Quaternion__Internal_FromEulerRad(v55, 0);
-        v12 = v64.fields.y;
-        v13 = v64.fields.z;
-        v14 = v64.fields.w;
-        v64.fields.y = v64.fields.x;
-        v64.fields.z = v12;
-        v64.fields.w = v13;
+        v9 = v61.fields.x * 0.017453;
+        v10 = v61.fields.y * 0.017453;
+        v11 = v61.fields.z * 0.017453;
+        v63.fields.x = v61.fields.x * 0.017453;
+        v63.fields.y = v61.fields.y * 0.017453;
+        v63.fields.z = v61.fields.z * 0.017453;
+        v72 = UnityEngine_Quaternion__Internal_FromEulerRad(v63, 0);
+        v12 = v72.fields.y;
+        v13 = v72.fields.z;
+        v14 = v72.fields.w;
+        v72.fields.y = v72.fields.x;
+        v72.fields.z = v12;
+        v72.fields.w = v13;
         v15 = v14;
-        TweenRotation__Begin(v8, 0.2, *(UnityEngine_Quaternion_o *)&v64.fields.y, 0);
+        TweenRotation__Begin(v8, 0.2, *(UnityEngine_Quaternion_o *)&v72.fields.y, 0);
         maskBoxCollider = (UnityEngine_Collider_o *)this->fields.takingPhotoFrameSprite;
         if ( maskBoxCollider )
         {
@@ -5756,44 +6024,44 @@ LABEL_34:
           if ( maskBoxCollider )
           {
             v20 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-            if ( !byte_4CAFC09 )
+            if ( !byte_4CC0D09 )
             {
-              sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-              byte_4CAFC09 = 1;
+              sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+              byte_4CC0D09 = 1;
             }
             TweenPosition__Begin(v20, 0.2, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
             maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoCampaignScreenshot;
             if ( maskBoxCollider )
             {
               v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-              v56.fields.x = v9;
-              v56.fields.y = v10;
-              v56.fields.z = v11;
-              v65 = UnityEngine_Quaternion__Internal_FromEulerRad(v56, 0);
-              v22 = v65.fields.y;
-              v23 = v65.fields.z;
-              v24 = v65.fields.w;
-              v65.fields.y = v65.fields.x;
-              v65.fields.z = v22;
-              v65.fields.w = v23;
+              v64.fields.x = v9;
+              v64.fields.y = v10;
+              v64.fields.z = v11;
+              v73 = UnityEngine_Quaternion__Internal_FromEulerRad(v64, 0);
+              v22 = v73.fields.y;
+              v23 = v73.fields.z;
+              v24 = v73.fields.w;
+              v73.fields.y = v73.fields.x;
+              v73.fields.z = v22;
+              v73.fields.w = v23;
               v25 = v24;
-              TweenRotation__Begin(v21, 0.2, *(UnityEngine_Quaternion_o *)&v65.fields.y, 0);
+              TweenRotation__Begin(v21, 0.2, *(UnityEngine_Quaternion_o *)&v73.fields.y, 0);
               maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoCampaignScreenshot;
               if ( maskBoxCollider )
               {
                 v26 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-                v59.fields.x = x;
-                v59.fields.y = v18;
-                v59.fields.z = v19;
-                TweenScale__Begin(v26, 0.2, v59, 0);
+                v67.fields.x = x;
+                v67.fields.y = v18;
+                v67.fields.z = v19;
+                TweenScale__Begin(v26, 0.2, v67, 0);
                 maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoCampaignScreenshot;
                 if ( maskBoxCollider )
                 {
                   v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskBoxCollider, 0);
-                  if ( !byte_4CAFC09 )
+                  if ( !byte_4CC0D09 )
                   {
-                    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-                    byte_4CAFC09 = 1;
+                    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+                    byte_4CC0D09 = 1;
                   }
                   TweenPosition__Begin(v27, 0.2, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
                   maskBoxCollider = (UnityEngine_Collider_o *)this->fields.maskBoxCollider;
@@ -5809,7 +6077,7 @@ LABEL_34:
         }
       }
 LABEL_37:
-      sub_1C6BC60(maskBoxCollider, method);
+      sub_1C71608(maskBoxCollider, method);
   }
 }
 
@@ -5827,17 +6095,17 @@ void MyRoomControl__OnClickPhotoCampaignCameraButton(MyRoomControl_o *this, cons
   __int64 v11; // x1
   System_Collections_IEnumerator_o *v12; // x1
 
-  if ( (byte_4CB16AB & 1) == 0 )
+  if ( (byte_4CC27B8 & 1) == 0 )
   {
-    sub_1C6BA08(&TouchEffectManager_TypeInfo);
-    byte_4CB16AB = 1;
+    sub_1C713B0(&TouchEffectManager_TypeInfo);
+    byte_4CC27B8 = 1;
   }
   if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
   TouchEffectManager__SetBlock(1, 0);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo || (backBtn = titleInfo->fields.backBtn) == 0 )
-    sub_1C6BC60(backBtn, v4);
+    sub_1C71608(backBtn, v4);
   UnityEngine_GameObject__SetActive(backBtn, 0, 0);
   MyRoomControl__SetPhotoCampaignUi(this, 0, v6);
   MyRoomControl__SetBackButtonIgnore(this, 1, v7);
@@ -5857,7 +6125,7 @@ void MyRoomControl__OnClickPhotoCampaignCameraButton(MyRoomControl_o *this, cons
                                               v11,
                                               552,
                                               klass->vtable._4_CaptureServant.method);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v12, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v12, 0);
 }
 
 
@@ -5868,17 +6136,17 @@ void MyRoomControl__OnClickRightServant(MyRoomControl_o *this, const MethodInfo 
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CB1689 & 1) == 0 )
+  if ( (byte_4CC2796 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_OnClickRightServant__);
-    byte_4CB1689 = 1;
+    sub_1C713B0(&Method_MyRoomControl_OnClickRightServant__);
+    byte_4CC2796 = 1;
   }
   if ( !MyRoomControl__IsFrontMultipleServant(this, 1, v2) )
   {
     v4 = Method_MyRoomControl_OnClickRightServant__;
     if ( (*((_BYTE *)Method_MyRoomControl_OnClickRightServant__ + 83) & 2) != 0 )
-      v4 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickRightServant__);
-    v5 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v4, v4[4]);
+      v4 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickRightServant__);
+    v5 = (System_Reflection_MethodBase_o *)sub_1C71394(v4, v4[4]);
     OverwriteAssetSoundName__PlaySystemSe(v5, 0, 0, 0);
     MyRoomControl__SetLayerMultipleServant(this, 1, v6);
   }
@@ -5899,43 +6167,51 @@ void MyRoomControl__OnClickSelectMultipleServant(MyRoomControl_o *this, const Me
   int max_length; // w9
   struct System_Int64_array *v13; // x0
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  struct System_Int32_array *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  System_Action_o *v19; // x20
-  const MethodInfo *v20; // x4
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  struct System_Int32_array *v20; // x0
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  System_Action_o *v27; // x20
+  const MethodInfo *v28; // x4
 
-  if ( (byte_4CB1685 & 1) == 0 )
+  if ( (byte_4CC2792 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&long___TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_OnClickSelectMultipleServant__);
-    sub_1C6BA08(&Method_MyRoomControl__OnClickSelectMultipleServant_b__373_0__);
-    sub_1C6BA08(&StringLiteral_15564/*"Wait_Action"*/);
-    sub_1C6BA08(&StringLiteral_7294/*"Help"*/);
-    byte_4CB1685 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&long___TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_OnClickSelectMultipleServant__);
+    sub_1C713B0(&Method_MyRoomControl__OnClickSelectMultipleServant_b__373_0__);
+    sub_1C713B0(&StringLiteral_15571/*"Wait_Action"*/);
+    sub_1C713B0(&StringLiteral_7298/*"Help"*/);
+    byte_4CC2792 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_16;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0);
-  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15564/*"Wait_Action"*/, 0) )
+  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15571/*"Wait_Action"*/, 0) )
   {
     myRoomFsm = this->fields.myRoomFsm;
     if ( !myRoomFsm )
       goto LABEL_16;
     v5 = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0);
-    if ( System_String__op_Inequality(v5, (System_String_o *)StringLiteral_7294/*"Help"*/, 0) )
+    if ( System_String__op_Inequality(v5, (System_String_o *)StringLiteral_7298/*"Help"*/, 0) )
       return;
   }
   IsEnableMultipleViewButton = MyRoomControl__IsEnableMultipleViewButton(this, method);
   v7 = Method_MyRoomControl_OnClickSelectMultipleServant__;
   v8 = IsEnableMultipleViewButton;
   if ( (*((_BYTE *)Method_MyRoomControl_OnClickSelectMultipleServant__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickSelectMultipleServant__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v7, v7[4]);
+    v7 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickSelectMultipleServant__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1C71394(v7, v7[4]);
   if ( !v8 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v9, 2, 0, 0);
@@ -5945,7 +6221,7 @@ void MyRoomControl__OnClickSelectMultipleServant(MyRoomControl_o *this, const Me
   multipleStandFigureBacks = this->fields.multipleStandFigureBacks;
   if ( !multipleStandFigureBacks )
 LABEL_16:
-    sub_1C6BC60(myRoomFsm, method);
+    sub_1C71608(myRoomFsm, method);
   v11 = 0;
   while ( 1 )
   {
@@ -5953,7 +6229,7 @@ LABEL_16:
     if ( (int)v11 >= max_length )
       break;
     if ( (unsigned int)v11 >= max_length )
-      sub_1C6BC68(myRoomFsm);
+      sub_1C71610(myRoomFsm);
     myRoomFsm = (PlayMakerFSM_o *)multipleStandFigureBacks->m_Items[v11];
     if ( myRoomFsm )
     {
@@ -5965,15 +6241,31 @@ LABEL_16:
     }
     goto LABEL_16;
   }
-  v13 = (struct System_Int64_array *)sub_1C6BAB0(long___TypeInfo, 2);
+  v13 = (struct System_Int64_array *)sub_1C71458(long___TypeInfo, 2);
   this->fields.multipleServantUsrIds = v13;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.multipleServantUsrIds, (int32_t)v13, v14, v15);
-  v16 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 2);
-  this->fields.multipleLimitCounts = v16;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.multipleLimitCounts, (int32_t)v16, v17, v18);
-  v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v19, (Il2CppObject *)this, Method_MyRoomControl__OnClickSelectMultipleServant_b__373_0__, 0);
-  MyRoomControl__DispDefaultMyRoom(this, 0, v19, 1, v20);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.multipleServantUsrIds,
+    (int32_t)v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
+  v20 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, 2);
+  this->fields.multipleLimitCounts = v20;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.multipleLimitCounts,
+    (int32_t)v20,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
+  v27 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v27, (Il2CppObject *)this, Method_MyRoomControl__OnClickSelectMultipleServant_b__373_0__, 0);
+  MyRoomControl__DispDefaultMyRoom(this, 0, v27, 1, v28);
 }
 
 
@@ -5990,43 +6282,43 @@ void MyRoomControl__OnClickSelectPhotoCampaign(MyRoomControl_o *this, const Meth
   const MethodInfo *v11; // x2
   const MethodInfo *v12; // x1
 
-  if ( (byte_4CB1699 & 1) == 0 )
+  if ( (byte_4CC27A6 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_EndLoadPhotoAsset__);
-    sub_1C6BA08(&Method_MyRoomControl_OnClickSelectPhotoCampaign__);
-    sub_1C6BA08(&StringLiteral_15564/*"Wait_Action"*/);
-    sub_1C6BA08(&StringLiteral_7294/*"Help"*/);
-    byte_4CB1699 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_EndLoadPhotoAsset__);
+    sub_1C713B0(&Method_MyRoomControl_OnClickSelectPhotoCampaign__);
+    sub_1C713B0(&StringLiteral_15571/*"Wait_Action"*/);
+    sub_1C713B0(&StringLiteral_7298/*"Help"*/);
+    byte_4CC27A6 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
     goto LABEL_14;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0);
-  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15564/*"Wait_Action"*/, 0) )
+  if ( System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_15571/*"Wait_Action"*/, 0) )
   {
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
       v5 = PlayMakerFSM__get_ActiveStateName(myRoomFsm, 0);
-      if ( System_String__op_Inequality(v5, (System_String_o *)StringLiteral_7294/*"Help"*/, 0) )
+      if ( System_String__op_Inequality(v5, (System_String_o *)StringLiteral_7298/*"Help"*/, 0) )
         return;
       goto LABEL_7;
     }
 LABEL_14:
-    sub_1C6BC60(myRoomFsm, method);
+    sub_1C71608(myRoomFsm, method);
   }
 LABEL_7:
   IsEnablePhotoCampaignButton = MyRoomControl__IsEnablePhotoCampaignButton(this, method);
   v7 = Method_MyRoomControl_OnClickSelectPhotoCampaign__;
   v8 = IsEnablePhotoCampaignButton;
   if ( (*((_BYTE *)Method_MyRoomControl_OnClickSelectPhotoCampaign__ + 83) & 2) != 0 )
-    v7 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickSelectPhotoCampaign__);
-  v9 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v7, v7[4]);
+    v7 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickSelectPhotoCampaign__);
+  v9 = (System_Reflection_MethodBase_o *)sub_1C71394(v7, v7[4]);
   if ( v8 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
-    v10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v10, (Il2CppObject *)this, Method_MyRoomControl_EndLoadPhotoAsset__, 0);
     MyRoomControl__LoadPhotoCampaignAssets(this, v10, v11);
     if ( !this->fields.isLoadMasterEquip )
@@ -6049,13 +6341,13 @@ void MyRoomControl__OnClickSrotValentineList(MyRoomControl_o *this, const Method
   struct System_Collections_Generic_List_ListViewDropObject__o *dropObjectList; // x8
   __int64 naturalAligment; // x11
 
-  if ( (byte_4CB1694 & 1) == 0 )
+  if ( (byte_4CC27A1 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomRootComponent_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CB1694 = 1;
+    sub_1C713B0(&MyRoomRootComponent_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4CC27A1 = 1;
   }
-  Instance = (MaterialCollectionServantListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (MaterialCollectionServantListViewManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   dropObjectList = Instance->fields.dropObjectList;
@@ -6077,7 +6369,7 @@ void MyRoomControl__OnClickSrotValentineList(MyRoomControl_o *this, const Method
       return;
     }
 LABEL_13:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   Instance = (MaterialCollectionServantListViewManager_o *)this->fields.mMaterialEventLogListViewManager;
   if ( !Instance )
@@ -6096,12 +6388,12 @@ void MyRoomControl__OnClickSvt(MyRoomControl_o *this, const MethodInfo *method)
   MyRoomSvtControl_o *svtCtr; // x0
   const MethodInfo *v9; // x2
 
-  if ( (byte_4CB1654 & 1) == 0 )
+  if ( (byte_4CC2761 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_OnClickSvt__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&StringLiteral_10395/*"PLAY_VOICE"*/);
-    byte_4CB1654 = 1;
+    sub_1C713B0(&Method_MyRoomControl_OnClickSvt__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&StringLiteral_10401/*"PLAY_VOICE"*/);
+    byte_4CC2761 = 1;
   }
   if ( !this->fields.isServantMaterial && this->fields.isHeroine && this->fields.isHeroineReave )
     goto LABEL_12;
@@ -6117,8 +6409,8 @@ void MyRoomControl__OnClickSvt(MyRoomControl_o *this, const MethodInfo *method)
 LABEL_12:
     v6 = Method_MyRoomControl_OnClickSvt__;
     if ( (*((_BYTE *)Method_MyRoomControl_OnClickSvt__ + 83) & 2) != 0 )
-      v6 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickSvt__);
-    v7 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v6, v6[4]);
+      v6 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickSvt__);
+    v7 = (System_Reflection_MethodBase_o *)sub_1C71394(v6, v6[4]);
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0);
   }
   else if ( MyRoomControl__IsScrollviewInShowPosition(this, method) && !this->fields.isVoiceLoading )
@@ -6130,7 +6422,7 @@ LABEL_12:
       if ( svtCtr )
       {
         MyRoomSvtControl__stopVoice(svtCtr, 0);
-        MyRoomControl__setNormalFace_33724456(this, 1, v9);
+        MyRoomControl__setNormalFace_33752008(this, 1, v9);
         return;
       }
     }
@@ -6140,11 +6432,11 @@ LABEL_12:
       this->fields.isVoicePlaying = 1;
       if ( svtCtr )
       {
-        PlayMakerFSM__SendEvent((PlayMakerFSM_o *)svtCtr, (System_String_o *)StringLiteral_10395/*"PLAY_VOICE"*/, 0);
+        PlayMakerFSM__SendEvent((PlayMakerFSM_o *)svtCtr, (System_String_o *)StringLiteral_10401/*"PLAY_VOICE"*/, 0);
         return;
       }
     }
-    sub_1C6BC60(svtCtr, v5);
+    sub_1C71608(svtCtr, v5);
   }
 }
 
@@ -6155,15 +6447,15 @@ void MyRoomControl__OnClickUiDisableMultipleView(MyRoomControl_o *this, const Me
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CB1686 & 1) == 0 )
+  if ( (byte_4CC2793 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_OnClickUiDisableMultipleView__);
-    byte_4CB1686 = 1;
+    sub_1C713B0(&Method_MyRoomControl_OnClickUiDisableMultipleView__);
+    byte_4CC2793 = 1;
   }
   v3 = Method_MyRoomControl_OnClickUiDisableMultipleView__;
   if ( (*((_BYTE *)Method_MyRoomControl_OnClickUiDisableMultipleView__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickUiDisableMultipleView__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickUiDisableMultipleView__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   this->fields.multipleViewState = 3;
   MyRoomControl__SetEnableMultipleViewUi(this, 0, v5);
@@ -6184,15 +6476,15 @@ void MyRoomControl__OnClickValentineListChange(MyRoomControl_o *this, const Meth
   const MethodInfo *v12; // x2
   _BOOL4 v13; // w19
 
-  if ( (byte_4CB1693 & 1) == 0 )
+  if ( (byte_4CC27A0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_OnClickValentineListChange__);
-    sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-    sub_1C6BA08(&MyRoomRootComponent_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CB1693 = 1;
+    sub_1C713B0(&Method_MyRoomControl_OnClickValentineListChange__);
+    sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+    sub_1C713B0(&MyRoomRootComponent_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4CC27A0 = 1;
   }
-  Instance = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   monitor = Instance[1].monitor;
@@ -6209,8 +6501,8 @@ void MyRoomControl__OnClickValentineListChange(MyRoomControl_o *this, const Meth
   v8 = *(MyRoomStateMaterial_o **)(v7 + 920);
   v9 = Method_MyRoomControl_OnClickValentineListChange__;
   if ( (*((_BYTE *)Method_MyRoomControl_OnClickValentineListChange__ + 83) & 2) != 0 )
-    v9 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_OnClickValentineListChange__);
-  v10 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v9, v9[4]);
+    v9 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_OnClickValentineListChange__);
+  v10 = (System_Reflection_MethodBase_o *)sub_1C71394(v9, v9[4]);
   OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
   IsListActive = this->fields.IsListActive;
   this->fields.IsListActive = !IsListActive;
@@ -6221,7 +6513,7 @@ void MyRoomControl__OnClickValentineListChange(MyRoomControl_o *this, const Meth
         (Instance = this->fields.servantListLabelObject) == 0) )
   {
 LABEL_16:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   UnityEngine_GameObject__SetActive(Instance, !this->fields.IsListActive, 0);
   MyRoomControl__ValentineListChange(this, this->fields.IsListActive, v12);
@@ -6236,14 +6528,14 @@ void MyRoomControl__OnDestroy(MyRoomControl_o *this, const MethodInfo *method)
 {
   Gesture_EventHandler_o *v3; // x20
 
-  if ( (byte_4CB1640 & 1) == 0 )
+  if ( (byte_4CC274D & 1) == 0 )
   {
-    sub_1C6BA08(&Gesture_EventHandler_TypeInfo);
-    sub_1C6BA08(&FingerGestures_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_FingerGestures_OnGestureEvent__);
-    byte_4CB1640 = 1;
+    sub_1C713B0(&Gesture_EventHandler_TypeInfo);
+    sub_1C713B0(&FingerGestures_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_FingerGestures_OnGestureEvent__);
+    byte_4CC274D = 1;
   }
-  v3 = (Gesture_EventHandler_o *)sub_1C6BC54(Gesture_EventHandler_TypeInfo);
+  v3 = (Gesture_EventHandler_o *)sub_1C715FC(Gesture_EventHandler_TypeInfo);
   Gesture_EventHandler___ctor(v3, (Il2CppObject *)this, Method_MyRoomControl_FingerGestures_OnGestureEvent__, 0);
   if ( !FingerGestures_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FingerGestures_TypeInfo);
@@ -6257,7 +6549,7 @@ void MyRoomControl__OpenAccountLinkage(MyRoomControl_o *this, const MethodInfo *
 
   accountLinkageComp = this->fields.accountLinkageComp;
   if ( !accountLinkageComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   AccountLinkageComponent__OpenMenu(accountLinkageComp, 0);
 }
 
@@ -6273,95 +6565,103 @@ void MyRoomControl__OpenChangeTargetSelectDialog(
   __int64 v10; // x0
   __int64 v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  __int64 v16; // x8
-  int v17; // w12
-  __int64 v18; // x10
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  __int64 v24; // x8
+  int v25; // w12
+  __int64 v26; // x10
   struct System_Int32_array *photoTargetFaceListIndex; // x8
   unsigned int max_length; // w9
   int FaceListIndex_k__BackingField; // w11
-  __int64 v22; // x10
+  __int64 v30; // x10
   struct PhotoStandFigureComponent_array *photoStandFigures; // x11
-  PhotoStandFigureComponent_o *v24; // x11
+  PhotoStandFigureComponent_o *v32; // x11
   PhotoTargetSelectDialog_o *photoTargetSelectDialog; // x21
-  int32_t v26; // w22
-  System_Action_T__o *v27; // x23
-  System_Action_o *v28; // x20
-  System_Action_bool__o *v29; // x24
+  int32_t v34; // w22
+  System_Action_T__o *v35; // x23
+  System_Action_o *v36; // x20
+  System_Action_bool__o *v37; // x24
 
-  if ( (byte_4CB16B7 & 1) == 0 )
+  if ( (byte_4CC27C4 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_bool__TypeInfo);
-    sub_1C6BA08(&System_Action_PhotoUtility_TargetType__TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_SetMaskCollider__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass433_0_TypeInfo);
-    byte_4CB16B7 = 1;
+    sub_1C713B0(&System_Action_bool__TypeInfo);
+    sub_1C713B0(&System_Action_PhotoUtility_TargetType__TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_SetMaskCollider__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass433_0_TypeInfo);
+    byte_4CC27C4 = 1;
   }
-  v9 = sub_1C6BC54(MyRoomControl___c__DisplayClass433_0_TypeInfo);
+  v9 = sub_1C715FC(MyRoomControl___c__DisplayClass433_0_TypeInfo);
   MyRoomControl___c__DisplayClass433_0___ctor((MyRoomControl___c__DisplayClass433_0_o *)v9, 0);
   if ( !v9 )
     goto LABEL_14;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)this, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 48) = cancelCallback;
   *(_DWORD *)(v9 + 36) = anotherTargetType;
   *(_BYTE *)(v9 + 40) = isLeft;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 48), (int32_t)cancelCallback, v14, v15);
-  v16 = *(unsigned __int8 *)(v9 + 40);
-  v17 = *(_DWORD *)(v9 + 36);
-  v18 = v16 ^ 1;
-  *(_DWORD *)(v9 + 28) = v16;
-  *(_DWORD *)(v9 + 32) = v16 ^ 1;
-  *(_BYTE *)(v9 + 24) = v17 == 0;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 48), (int32_t)cancelCallback, v18, v19, v20, v21, v22, v23);
+  v24 = *(unsigned __int8 *)(v9 + 40);
+  v25 = *(_DWORD *)(v9 + 36);
+  v26 = v24 ^ 1;
+  *(_DWORD *)(v9 + 28) = v24;
+  *(_DWORD *)(v9 + 32) = v24 ^ 1;
+  *(_BYTE *)(v9 + 24) = v25 == 0;
   photoTargetFaceListIndex = this->fields.photoTargetFaceListIndex;
   if ( !photoTargetFaceListIndex )
 LABEL_14:
-    sub_1C6BC60(v10, v11);
+    sub_1C71608(v10, v11);
   max_length = photoTargetFaceListIndex->max_length;
-  if ( (unsigned int)v18 >= max_length )
+  if ( (unsigned int)v26 >= max_length )
     goto LABEL_15;
   FaceListIndex_k__BackingField = -1;
-  photoTargetFaceListIndex->m_Items[v18] = -1;
-  v22 = *(int *)(v9 + 28);
-  if ( v17 )
+  photoTargetFaceListIndex->m_Items[v26] = -1;
+  v30 = *(int *)(v9 + 28);
+  if ( v25 )
     goto LABEL_11;
   photoStandFigures = this->fields.photoStandFigures;
   if ( !photoStandFigures )
     goto LABEL_14;
-  if ( (unsigned int)v22 >= LODWORD(photoStandFigures->max_length) )
+  if ( (unsigned int)v30 >= LODWORD(photoStandFigures->max_length) )
 LABEL_15:
-    sub_1C6BC68(v10);
-  v24 = photoStandFigures->m_Items[v22];
-  if ( !v24 )
+    sub_1C71610(v10);
+  v32 = photoStandFigures->m_Items[v30];
+  if ( !v32 )
     goto LABEL_14;
-  FaceListIndex_k__BackingField = v24->fields._FaceListIndex_k__BackingField;
+  FaceListIndex_k__BackingField = v32->fields._FaceListIndex_k__BackingField;
 LABEL_11:
-  if ( (unsigned int)v22 >= max_length )
+  if ( (unsigned int)v30 >= max_length )
     goto LABEL_15;
-  photoTargetFaceListIndex->m_Items[v22] = FaceListIndex_k__BackingField;
+  photoTargetFaceListIndex->m_Items[v30] = FaceListIndex_k__BackingField;
   photoTargetSelectDialog = this->fields.photoTargetSelectDialog;
-  v26 = *(_DWORD *)(v9 + 36);
-  v27 = (System_Action_T__o *)sub_1C6BC54(System_Action_PhotoUtility_TargetType__TypeInfo);
+  v34 = *(_DWORD *)(v9 + 36);
+  v35 = (System_Action_T__o *)sub_1C715FC(System_Action_PhotoUtility_TargetType__TypeInfo);
   System_Action_Int32Enum____ctor(
-    v27,
+    v35,
     (Il2CppObject *)v9,
     Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__0__,
     0);
-  v28 = *(System_Action_o **)(v9 + 48);
-  v29 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
-  System_Action_bool____ctor(v29, (Il2CppObject *)this, Method_MyRoomControl_SetMaskCollider__, 0);
+  v36 = *(System_Action_o **)(v9 + 48);
+  v37 = (System_Action_bool__o *)sub_1C715FC(System_Action_bool__TypeInfo);
+  System_Action_bool____ctor(v37, (Il2CppObject *)this, Method_MyRoomControl_SetMaskCollider__, 0);
   if ( !photoTargetSelectDialog )
     goto LABEL_14;
   PhotoTargetSelectDialog__Open(
     photoTargetSelectDialog,
-    v26,
+    v34,
     0,
-    (System_Action_PhotoUtility_TargetType__o *)v27,
-    v28,
-    v29,
+    (System_Action_PhotoUtility_TargetType__o *)v35,
+    v36,
+    v37,
     0);
 }
 
@@ -6372,7 +6672,7 @@ void MyRoomControl__OpenExchangeSvtCoin(MyRoomControl_o *this, const MethodInfo 
 
   exchangeSvtCoinComp = this->fields.exchangeSvtCoinComp;
   if ( !exchangeSvtCoinComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ExchangeSvtCoinComponent__OpenMenu(exchangeSvtCoinComp, 0);
 }
 
@@ -6390,19 +6690,19 @@ void MyRoomControl__OpenMasterEquipSettingDialog(
   __int64 v11; // x0
   __int64 v12; // x1
 
-  if ( (byte_4CB169F & 1) == 0 )
+  if ( (byte_4CC27AC & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_bool__TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_SetMaskCollider__);
-    byte_4CB169F = 1;
+    sub_1C713B0(&System_Action_bool__TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_SetMaskCollider__);
+    byte_4CC27AC = 1;
   }
   masterEquipSettingDialog = this->fields.masterEquipSettingDialog;
   masterMaleEquipTexture = this->fields.masterMaleEquipTexture;
   masterFemaleEquipTexture = this->fields.masterFemaleEquipTexture;
-  v10 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
+  v10 = (System_Action_bool__o *)sub_1C715FC(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(v10, (Il2CppObject *)this, Method_MyRoomControl_SetMaskCollider__, 0);
   if ( !masterEquipSettingDialog )
-    sub_1C6BC60(v11, v12);
+    sub_1C71608(v11, v12);
   MasterEquipSettingDialog__Open(
     masterEquipSettingDialog,
     masterMaleEquipTexture,
@@ -6420,21 +6720,41 @@ void MyRoomControl__OpenMultipleView(
         System_Int32_array *imageLimitCounts,
         const MethodInfo *method)
 {
-  int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  const MethodInfo *v8; // x1
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v10; // w2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  const MethodInfo *v16; // x1
   System_Collections_IEnumerator_o *MultipleServant; // x1
 
   this->fields.multipleServantUsrIds = usrSvtIds;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.multipleServantUsrIds,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.multipleServantUsrIds,
     (int32_t)usrSvtIds,
     (int32_t)imageLimitCounts,
-    method);
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields.multipleLimitCounts = imageLimitCounts;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.multipleLimitCounts, (int32_t)imageLimitCounts, v6, v7);
-  MultipleServant = MyRoomControl__LoadMultipleServant(this, v8);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, MultipleServant, 0);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.multipleLimitCounts,
+    (int32_t)imageLimitCounts,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15);
+  MultipleServant = MyRoomControl__LoadMultipleServant(this, v16);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, MultipleServant, 0);
 }
 
 
@@ -6448,43 +6768,51 @@ void MyRoomControl__OpenPhotoFrameSelectDialog(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   PhotoFrameSelectDialog_o *photoFrameSelectDialog; // x21
-  PhotoFrameSelectDialog_DecideDelegate_o *v15; // x23
-  System_Action_bool__o *v16; // x22
+  PhotoFrameSelectDialog_DecideDelegate_o *v23; // x23
+  System_Action_bool__o *v24; // x22
 
-  if ( (byte_4CB16A0 & 1) == 0 )
+  if ( (byte_4CC27AD & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_bool__TypeInfo);
-    sub_1C6BA08(&PhotoFrameSelectDialog_DecideDelegate_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_SetMaskCollider__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass407_0__OpenPhotoFrameSelectDialog_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass407_0_TypeInfo);
-    byte_4CB16A0 = 1;
+    sub_1C713B0(&System_Action_bool__TypeInfo);
+    sub_1C713B0(&PhotoFrameSelectDialog_DecideDelegate_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_SetMaskCollider__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass407_0__OpenPhotoFrameSelectDialog_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass407_0_TypeInfo);
+    byte_4CC27AD = 1;
   }
-  v7 = sub_1C6BC54(MyRoomControl___c__DisplayClass407_0_TypeInfo);
+  v7 = sub_1C715FC(MyRoomControl___c__DisplayClass407_0_TypeInfo);
   MyRoomControl___c__DisplayClass407_0___ctor((MyRoomControl___c__DisplayClass407_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_6;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = decideCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)decideCallback, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)decideCallback, v16, v17, v18, v19, v20, v21);
   photoFrameSelectDialog = this->fields.photoFrameSelectDialog;
-  v15 = (PhotoFrameSelectDialog_DecideDelegate_o *)sub_1C6BC54(PhotoFrameSelectDialog_DecideDelegate_TypeInfo);
+  v23 = (PhotoFrameSelectDialog_DecideDelegate_o *)sub_1C715FC(PhotoFrameSelectDialog_DecideDelegate_TypeInfo);
   PhotoFrameSelectDialog_DecideDelegate___ctor(
-    v15,
+    v23,
     (Il2CppObject *)v7,
     Method_MyRoomControl___c__DisplayClass407_0__OpenPhotoFrameSelectDialog_b__0__,
     0);
-  v16 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
-  System_Action_bool____ctor(v16, (Il2CppObject *)this, Method_MyRoomControl_SetMaskCollider__, 0);
+  v24 = (System_Action_bool__o *)sub_1C715FC(System_Action_bool__TypeInfo);
+  System_Action_bool____ctor(v24, (Il2CppObject *)this, Method_MyRoomControl_SetMaskCollider__, 0);
   if ( !photoFrameSelectDialog )
 LABEL_6:
-    sub_1C6BC60(v8, v9);
-  PhotoFrameSelectDialog__Open(photoFrameSelectDialog, v15, cancelCallback, v16, 0);
+    sub_1C71608(v8, v9);
+  PhotoFrameSelectDialog__Open(photoFrameSelectDialog, v23, cancelCallback, v24, 0);
 }
 
 
@@ -6502,17 +6830,17 @@ void MyRoomControl__OpenSelectImageLimit(
   __int64 v14; // x1
   const MethodInfo *v15; // x6
 
-  if ( (byte_4CB1690 & 1) == 0 )
+  if ( (byte_4CC279D & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_bool__TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_SetMaskCollider__);
-    byte_4CB1690 = 1;
+    sub_1C713B0(&System_Action_bool__TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_SetMaskCollider__);
+    byte_4CC279D = 1;
   }
   selectImageLimitDialog = this->fields.selectImageLimitDialog;
-  v12 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
+  v12 = (System_Action_bool__o *)sub_1C715FC(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(v12, (Il2CppObject *)this, Method_MyRoomControl_SetMaskCollider__, 0);
   if ( !selectImageLimitDialog )
-    sub_1C6BC60(v13, v14);
+    sub_1C71608(v13, v14);
   SelectImageLimitDialog__OpenImageLimit(selectImageLimitDialog, type, usrSvtId, v12, callback, index, v15);
 }
 
@@ -6528,63 +6856,71 @@ void MyRoomControl__OpenStaffChangeDialog(
   struct System_Collections_Generic_List_PhotoUtility_TargetType__o *photoTargetList; // x0
   __int64 v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
   struct PhotoStandFigureComponent_array *photoStandFigures; // x9
-  __int64 v17; // x8
-  PhotoStandFigureComponent_o *v18; // x9
+  __int64 v25; // x8
+  PhotoStandFigureComponent_o *v26; // x9
   int32_t StandFigureImageId_k__BackingField; // w21
-  struct PhotoStandFigureComponent_array *v20; // x8
-  __int64 v21; // x9
-  PhotoStandFigureComponent_o *v22; // x8
-  int32_t v23; // w22
-  System_Action_o *v24; // x23
-  System_Action_int__o *v25; // x24
-  System_Action_o *v26; // x25
-  const MethodInfo *v27; // x6
+  struct PhotoStandFigureComponent_array *v28; // x8
+  __int64 v29; // x9
+  PhotoStandFigureComponent_o *v30; // x8
+  int32_t v31; // w22
+  System_Action_o *v32; // x23
+  System_Action_int__o *v33; // x24
+  System_Action_o *v34; // x25
+  const MethodInfo *v35; // x6
 
-  if ( (byte_4CB16B8 & 1) == 0 )
+  if ( (byte_4CC27C5 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_int__TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass434_0__OpenStaffChangeDialog_b__0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass434_0__OpenStaffChangeDialog_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass434_0__OpenStaffChangeDialog_b__2__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass434_0_TypeInfo);
-    byte_4CB16B8 = 1;
+    sub_1C713B0(&System_Action_int__TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass434_0__OpenStaffChangeDialog_b__0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass434_0__OpenStaffChangeDialog_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass434_0__OpenStaffChangeDialog_b__2__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass434_0_TypeInfo);
+    byte_4CC27C5 = 1;
   }
-  v9 = sub_1C6BC54(MyRoomControl___c__DisplayClass434_0_TypeInfo);
+  v9 = sub_1C715FC(MyRoomControl___c__DisplayClass434_0_TypeInfo);
   MyRoomControl___c__DisplayClass434_0___ctor((MyRoomControl___c__DisplayClass434_0_o *)v9, 0);
   if ( !v9 )
     goto LABEL_18;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)this, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 32) = cancelCallback;
   *(_DWORD *)(v9 + 24) = anotherTargetType;
   *(_BYTE *)(v9 + 28) = isLeft;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 32), (int32_t)cancelCallback, v14, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 32), (int32_t)cancelCallback, v18, v19, v20, v21, v22, v23);
   if ( *(_DWORD *)(v9 + 24) == 2 )
   {
     photoStandFigures = this->fields.photoStandFigures;
     if ( !photoStandFigures )
       goto LABEL_18;
-    v17 = *(unsigned __int8 *)(v9 + 28);
-    if ( (unsigned int)v17 >= LODWORD(photoStandFigures->max_length) )
+    v25 = *(unsigned __int8 *)(v9 + 28);
+    if ( (unsigned int)v25 >= LODWORD(photoStandFigures->max_length) )
 LABEL_19:
-      sub_1C6BC68(photoTargetList);
-    v18 = photoStandFigures->m_Items[v17];
-    if ( !v18 )
+      sub_1C71610(photoTargetList);
+    v26 = photoStandFigures->m_Items[v25];
+    if ( !v26 )
       goto LABEL_18;
-    StandFigureImageId_k__BackingField = v18->fields._StandFigureImageId_k__BackingField;
+    StandFigureImageId_k__BackingField = v26->fields._StandFigureImageId_k__BackingField;
   }
   else
   {
-    LODWORD(v17) = *(unsigned __int8 *)(v9 + 28);
+    LODWORD(v25) = *(unsigned __int8 *)(v9 + 28);
     StandFigureImageId_k__BackingField = -1;
   }
-  v11 = (unsigned int)v17 ^ 1;
+  v11 = (unsigned int)v25 ^ 1;
   *(_DWORD *)(v9 + 40) = v11;
   photoTargetList = this->fields.photoTargetList;
   if ( !photoTargetList )
@@ -6592,43 +6928,43 @@ LABEL_19:
   photoTargetList = (struct System_Collections_Generic_List_PhotoUtility_TargetType__o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                                                                            (System_Collections_Generic_List_T__o *)photoTargetList,
                                                                                            v11,
-                                                                                           (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+                                                                                           (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
   if ( (_DWORD)photoTargetList != 2 )
   {
-    v23 = -1;
+    v31 = -1;
     goto LABEL_17;
   }
-  v20 = this->fields.photoStandFigures;
-  if ( !v20 )
+  v28 = this->fields.photoStandFigures;
+  if ( !v28 )
 LABEL_18:
-    sub_1C6BC60(photoTargetList, v11);
-  v21 = *(int *)(v9 + 40);
-  if ( (unsigned int)v21 >= LODWORD(v20->max_length) )
+    sub_1C71608(photoTargetList, v11);
+  v29 = *(int *)(v9 + 40);
+  if ( (unsigned int)v29 >= LODWORD(v28->max_length) )
     goto LABEL_19;
-  v22 = v20->m_Items[v21];
-  if ( !v22 )
+  v30 = v28->m_Items[v29];
+  if ( !v30 )
     goto LABEL_18;
-  v23 = v22->fields._StandFigureImageId_k__BackingField;
+  v31 = v30->fields._StandFigureImageId_k__BackingField;
 LABEL_17:
-  v24 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v32 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v24,
+    v32,
     (Il2CppObject *)v9,
     Method_MyRoomControl___c__DisplayClass434_0__OpenStaffChangeDialog_b__0__,
     0);
-  v25 = (System_Action_int__o *)sub_1C6BC54(System_Action_int__TypeInfo);
+  v33 = (System_Action_int__o *)sub_1C715FC(System_Action_int__TypeInfo);
   System_Action_int____ctor(
-    v25,
+    v33,
     (Il2CppObject *)v9,
     Method_MyRoomControl___c__DisplayClass434_0__OpenStaffChangeDialog_b__1__,
     0);
-  v26 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v34 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v26,
+    v34,
     (Il2CppObject *)v9,
     Method_MyRoomControl___c__DisplayClass434_0__OpenStaffChangeDialog_b__2__,
     0);
-  MyRoomControl__OpenStaffDialog(this, v24, v25, v26, StandFigureImageId_k__BackingField, v23, v27);
+  MyRoomControl__OpenStaffDialog(this, v32, v33, v34, StandFigureImageId_k__BackingField, v31, v35);
 }
 
 
@@ -6645,49 +6981,81 @@ void MyRoomControl__OpenStaffDialog(
   __int64 v14; // x0
   __int64 v15; // x1
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
   PhotoCampaignStaffSelectDialog_o *photoStaffSelectDialog; // x20
-  System_Action_T1__T2__T3__o *v25; // x21
+  System_Action_T1__T2__T3__o *v41; // x21
 
-  if ( (byte_4CB16B9 & 1) == 0 )
+  if ( (byte_4CC27C6 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_bool__int__List_StaffPhotoCostumeEntity___TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass435_0__OpenStaffDialog_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass435_0_TypeInfo);
-    byte_4CB16B9 = 1;
+    sub_1C713B0(&System_Action_bool__int__List_StaffPhotoCostumeEntity___TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass435_0__OpenStaffDialog_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass435_0_TypeInfo);
+    byte_4CC27C6 = 1;
   }
-  v13 = sub_1C6BC54(MyRoomControl___c__DisplayClass435_0_TypeInfo);
+  v13 = sub_1C715FC(MyRoomControl___c__DisplayClass435_0_TypeInfo);
   MyRoomControl___c__DisplayClass435_0___ctor((MyRoomControl___c__DisplayClass435_0_o *)v13, 0);
   if ( !v13 )
     goto LABEL_6;
   *(_QWORD *)(v13 + 16) = staffCostumeSelectDecideAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 16), (int32_t)staffCostumeSelectDecideAction, v16, v17);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)(v13 + 16),
+    (int32_t)staffCostumeSelectDecideAction,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21);
   *(_DWORD *)(v13 + 24) = baseStaffImageId;
   *(_QWORD *)(v13 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 32), (int32_t)this, v18, v19);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v13 + 32), (int32_t)this, v22, v23, v24, v25, v26, v27);
   *(_QWORD *)(v13 + 40) = staffCostumeSelectCancelAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 40), (int32_t)staffCostumeSelectCancelAction, v20, v21);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)(v13 + 40),
+    (int32_t)staffCostumeSelectCancelAction,
+    v28,
+    v29,
+    v30,
+    v31,
+    v32,
+    v33);
   *(_QWORD *)(v13 + 48) = staffSelectCancelAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v13 + 48), (int32_t)staffSelectCancelAction, v22, v23);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v13 + 48), (int32_t)staffSelectCancelAction, v34, v35, v36, v37, v38, v39);
   photoStaffSelectDialog = this->fields.photoStaffSelectDialog;
-  v25 = (System_Action_T1__T2__T3__o *)sub_1C6BC54(System_Action_bool__int__List_StaffPhotoCostumeEntity___TypeInfo);
+  v41 = (System_Action_T1__T2__T3__o *)sub_1C715FC(System_Action_bool__int__List_StaffPhotoCostumeEntity___TypeInfo);
   System_Action_bool__int__object____ctor(
-    v25,
+    v41,
     (Il2CppObject *)v13,
     Method_MyRoomControl___c__DisplayClass435_0__OpenStaffDialog_b__0__,
     0);
   if ( !photoStaffSelectDialog )
 LABEL_6:
-    sub_1C6BC60(v14, v15);
+    sub_1C71608(v14, v15);
   PhotoCampaignStaffSelectDialog__Open(
     photoStaffSelectDialog,
-    (System_Action_bool__int__List_StaffPhotoCostumeEntity___o *)v25,
+    (System_Action_bool__int__List_StaffPhotoCostumeEntity___o *)v41,
     selectedStaffImageId,
     *(_DWORD *)(v13 + 24),
     0);
@@ -6704,38 +7072,42 @@ void MyRoomControl__OpenStaffSelectDialog(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   struct System_Int32_array *temporaryStaffImageId; // x8
-  int32_t v13; // w22
+  int32_t v17; // w22
   int32_t StandFigureImageId_k__BackingField; // w21
   struct PhotoStandFigureComponent_array *photoStandFigures; // x8
-  PhotoStandFigureComponent_o *v16; // x8
-  System_Action_o *v17; // x23
-  System_Action_int__o *v18; // x24
-  System_Action_o *v19; // x25
-  const MethodInfo *v20; // x6
+  PhotoStandFigureComponent_o *v20; // x8
+  System_Action_o *v21; // x23
+  System_Action_int__o *v22; // x24
+  System_Action_o *v23; // x25
+  const MethodInfo *v24; // x6
 
-  if ( (byte_4CB169C & 1) == 0 )
+  if ( (byte_4CC27A9 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_int__TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass403_0__OpenStaffSelectDialog_b__0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass403_0__OpenStaffSelectDialog_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass403_0__OpenStaffSelectDialog_b__2__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass403_0_TypeInfo);
-    byte_4CB169C = 1;
+    sub_1C713B0(&System_Action_int__TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass403_0__OpenStaffSelectDialog_b__0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass403_0__OpenStaffSelectDialog_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass403_0__OpenStaffSelectDialog_b__2__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass403_0_TypeInfo);
+    byte_4CC27A9 = 1;
   }
-  v7 = sub_1C6BC54(MyRoomControl___c__DisplayClass403_0_TypeInfo);
+  v7 = sub_1C715FC(MyRoomControl___c__DisplayClass403_0_TypeInfo);
   MyRoomControl___c__DisplayClass403_0___ctor((MyRoomControl___c__DisplayClass403_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_15;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_BYTE *)(v7 + 24) = isChangeTarget;
   *(_DWORD *)(v7 + 28) = anotherTargetType;
   if ( anotherTargetType != 2 )
   {
-    v13 = -1;
+    v17 = -1;
     if ( !isChangeTarget )
       goto LABEL_8;
     goto LABEL_10;
@@ -6745,7 +7117,7 @@ void MyRoomControl__OpenStaffSelectDialog(
     goto LABEL_15;
   if ( !LODWORD(temporaryStaffImageId->max_length) )
     goto LABEL_16;
-  v13 = temporaryStaffImageId->m_Items[0];
+  v17 = temporaryStaffImageId->m_Items[0];
   if ( isChangeTarget )
   {
 LABEL_10:
@@ -6754,40 +7126,40 @@ LABEL_10:
       goto LABEL_15;
     if ( LODWORD(photoStandFigures->max_length) )
     {
-      v16 = photoStandFigures->m_Items[0];
-      if ( v16 )
+      v20 = photoStandFigures->m_Items[0];
+      if ( v20 )
       {
-        StandFigureImageId_k__BackingField = v16->fields._StandFigureImageId_k__BackingField;
+        StandFigureImageId_k__BackingField = v20->fields._StandFigureImageId_k__BackingField;
         goto LABEL_14;
       }
 LABEL_15:
-      sub_1C6BC60(v8, v9);
+      sub_1C71608(v8, v9);
     }
 LABEL_16:
-    sub_1C6BC68(v8);
+    sub_1C71610(v8);
   }
 LABEL_8:
   StandFigureImageId_k__BackingField = -1;
 LABEL_14:
-  v17 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v21 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v17,
+    v21,
     (Il2CppObject *)v7,
     Method_MyRoomControl___c__DisplayClass403_0__OpenStaffSelectDialog_b__0__,
     0);
-  v18 = (System_Action_int__o *)sub_1C6BC54(System_Action_int__TypeInfo);
+  v22 = (System_Action_int__o *)sub_1C715FC(System_Action_int__TypeInfo);
   System_Action_int____ctor(
-    v18,
+    v22,
     (Il2CppObject *)v7,
     Method_MyRoomControl___c__DisplayClass403_0__OpenStaffSelectDialog_b__1__,
     0);
-  v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v23 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v19,
+    v23,
     (Il2CppObject *)v7,
     Method_MyRoomControl___c__DisplayClass403_0__OpenStaffSelectDialog_b__2__,
     0);
-  MyRoomControl__OpenStaffDialog(this, v17, v18, v19, v13, StandFigureImageId_k__BackingField, v20);
+  MyRoomControl__OpenStaffDialog(this, v21, v22, v23, v17, StandFigureImageId_k__BackingField, v24);
 }
 
 
@@ -6803,47 +7175,51 @@ void MyRoomControl__OpenTargetSelectDialog(
   __int64 v12; // x0
   __int64 v13; // x1
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   PhotoTargetSelectDialog_o *photoTargetSelectDialog; // x23
-  System_Action_T__o *v17; // x25
-  System_Action_bool__o *v18; // x24
+  System_Action_T__o *v21; // x25
+  System_Action_bool__o *v22; // x24
 
-  if ( (byte_4CB169B & 1) == 0 )
+  if ( (byte_4CC27A8 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_bool__TypeInfo);
-    sub_1C6BA08(&System_Action_PhotoUtility_TargetType__TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_SetMaskCollider__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass402_0_TypeInfo);
-    byte_4CB169B = 1;
+    sub_1C713B0(&System_Action_bool__TypeInfo);
+    sub_1C713B0(&System_Action_PhotoUtility_TargetType__TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_SetMaskCollider__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass402_0_TypeInfo);
+    byte_4CC27A8 = 1;
   }
-  v11 = sub_1C6BC54(MyRoomControl___c__DisplayClass402_0_TypeInfo);
+  v11 = sub_1C715FC(MyRoomControl___c__DisplayClass402_0_TypeInfo);
   MyRoomControl___c__DisplayClass402_0___ctor((MyRoomControl___c__DisplayClass402_0_o *)v11, 0);
   if ( !v11 )
     goto LABEL_6;
   *(_QWORD *)(v11 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 16), (int32_t)this, v14, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 16), (int32_t)this, v14, v15, v16, v17, v18, v19);
   *(_BYTE *)(v11 + 24) = isChangeTarget;
   *(_DWORD *)(v11 + 28) = anotherTargetType;
   photoTargetSelectDialog = this->fields.photoTargetSelectDialog;
-  v17 = (System_Action_T__o *)sub_1C6BC54(System_Action_PhotoUtility_TargetType__TypeInfo);
+  v21 = (System_Action_T__o *)sub_1C715FC(System_Action_PhotoUtility_TargetType__TypeInfo);
   System_Action_Int32Enum____ctor(
-    v17,
+    v21,
     (Il2CppObject *)v11,
     Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__0__,
     0);
-  v18 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
-  System_Action_bool____ctor(v18, (Il2CppObject *)this, Method_MyRoomControl_SetMaskCollider__, 0);
+  v22 = (System_Action_bool__o *)sub_1C715FC(System_Action_bool__TypeInfo);
+  System_Action_bool____ctor(v22, (Il2CppObject *)this, Method_MyRoomControl_SetMaskCollider__, 0);
   if ( !photoTargetSelectDialog )
 LABEL_6:
-    sub_1C6BC60(v12, v13);
+    sub_1C71608(v12, v13);
   PhotoTargetSelectDialog__Open(
     photoTargetSelectDialog,
     anotherTargetType,
     index,
-    (System_Action_PhotoUtility_TargetType__o *)v17,
+    (System_Action_PhotoUtility_TargetType__o *)v21,
     cancelCallback,
-    v18,
+    v22,
     0);
 }
 
@@ -6859,12 +7235,12 @@ void MyRoomControl__OpenTargetSelectDialogLeftOnPhotoMode(MyRoomControl_o *this,
   System_Action_o *v9; // x21
   const MethodInfo *v10; // x4
 
-  if ( (byte_4CB16B5 & 1) == 0 )
+  if ( (byte_4CC27C2 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-    sub_1C6BA08(&Method_MyRoomControl__OpenTargetSelectDialogLeftOnPhotoMode_b__431_0__);
-    byte_4CB16B5 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+    sub_1C713B0(&Method_MyRoomControl__OpenTargetSelectDialogLeftOnPhotoMode_b__431_0__);
+    byte_4CC27C2 = 1;
   }
   MyRoomControl__SetPhotoCampaignUi(this, 0, v2);
   maskBoxCollider = (UnityEngine_Collider_o *)this->fields.maskBoxCollider;
@@ -6872,15 +7248,15 @@ void MyRoomControl__OpenTargetSelectDialogLeftOnPhotoMode(MyRoomControl_o *this,
     || (UnityEngine_Collider__set_enabled(maskBoxCollider, 0, 0),
         (maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoTargetList) == 0) )
   {
-    sub_1C6BC60(maskBoxCollider, v4);
+    sub_1C71608(maskBoxCollider, v4);
   }
   Item = System_Collections_Generic_List_Int32Enum___get_Item(
            (System_Collections_Generic_List_T__o *)maskBoxCollider,
            !this->fields.isChangePhotoPosition,
-           (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+           (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
   isChangePhotoPosition = this->fields.isChangePhotoPosition;
   v8 = Item;
-  v9 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
     v9,
     (Il2CppObject *)this,
@@ -6900,7 +7276,7 @@ void MyRoomControl__OpenTargetSelectDialogOnPhotoMode(MyRoomControl_o *this, con
   MyRoomControl__SetPhotoCampaignUi(this, 0, v2);
   maskBoxCollider = (UnityEngine_Collider_o *)this->fields.maskBoxCollider;
   if ( !maskBoxCollider )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   UnityEngine_Collider__set_enabled(maskBoxCollider, 0, 0);
   MyRoomControl__ConfirmTargetSelectState(this, 1, v6);
 }
@@ -6917,12 +7293,12 @@ void MyRoomControl__OpenTargetSelectDialogRightOnPhotoMode(MyRoomControl_o *this
   System_Action_o *v9; // x22
   const MethodInfo *v10; // x4
 
-  if ( (byte_4CB16B6 & 1) == 0 )
+  if ( (byte_4CC27C3 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-    sub_1C6BA08(&Method_MyRoomControl__OpenTargetSelectDialogRightOnPhotoMode_b__432_0__);
-    byte_4CB16B6 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+    sub_1C713B0(&Method_MyRoomControl__OpenTargetSelectDialogRightOnPhotoMode_b__432_0__);
+    byte_4CC27C3 = 1;
   }
   MyRoomControl__SetPhotoCampaignUi(this, 0, v2);
   maskBoxCollider = (UnityEngine_Collider_o *)this->fields.maskBoxCollider;
@@ -6930,15 +7306,15 @@ void MyRoomControl__OpenTargetSelectDialogRightOnPhotoMode(MyRoomControl_o *this
     || (UnityEngine_Collider__set_enabled(maskBoxCollider, 0, 0),
         (maskBoxCollider = (UnityEngine_Collider_o *)this->fields.photoTargetList) == 0) )
   {
-    sub_1C6BC60(maskBoxCollider, v4);
+    sub_1C71608(maskBoxCollider, v4);
   }
   Item = System_Collections_Generic_List_Int32Enum___get_Item(
            (System_Collections_Generic_List_T__o *)maskBoxCollider,
            this->fields.isChangePhotoPosition,
-           (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+           (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
   isChangePhotoPosition = this->fields.isChangePhotoPosition;
   v8 = Item;
-  v9 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v9 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
     v9,
     (Il2CppObject *)this,
@@ -6962,17 +7338,17 @@ void MyRoomControl__OverrideAccountLinkage(MyRoomControl_o *this, const MethodIn
   const MethodInfo *v12; // x1
   System_Nullable_int__o msgFontSize; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CB1669 & 1) == 0 )
+  if ( (byte_4CC2776 & 1) == 0 )
   {
-    sub_1C6BA08(&AccountLinkageComponent_TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__OverrideAccountLinkage_b__319_0__);
-    sub_1C6BA08(&Method_System_Nullable_int___ctor__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&StringLiteral_1875/*"ACCOUNT_LINKAGE_OVERRIDE_DELINK_MESSAGE"*/);
-    sub_1C6BA08(&StringLiteral_3280/*"CAN_CONTINUE_DEVICE"*/);
-    byte_4CB1669 = 1;
+    sub_1C713B0(&AccountLinkageComponent_TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__OverrideAccountLinkage_b__319_0__);
+    sub_1C713B0(&Method_System_Nullable_int___ctor__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&StringLiteral_1877/*"ACCOUNT_LINKAGE_OVERRIDE_DELINK_MESSAGE"*/);
+    sub_1C713B0(&StringLiteral_3283/*"CAN_CONTINUE_DEVICE"*/);
+    byte_4CC2776 = 1;
   }
   v3 = AccountLinkageComponent_TypeInfo;
   msgFontSize = 0;
@@ -6984,21 +7360,21 @@ void MyRoomControl__OverrideAccountLinkage(MyRoomControl_o *this, const MethodIn
   v3->static_fields->isLinked = 0;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_1875/*"ACCOUNT_LINKAGE_OVERRIDE_DELINK_MESSAGE"*/, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_1877/*"ACCOUNT_LINKAGE_OVERRIDE_DELINK_MESSAGE"*/, 0);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v6 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v6, (Il2CppObject *)this, Method_MyRoomControl__OverrideAccountLinkage_b__319_0__, 0);
   p_msgFontSize = (System_Nullable_int__o)&msgFontSize;
-  System_Nullable_int____ctor(p_msgFontSize, 24, (const MethodInfo_3928F98 *)Method_System_Nullable_int___ctor__);
+  System_Nullable_int____ctor(p_msgFontSize, 24, (const MethodInfo_3938D3C *)Method_System_Nullable_int___ctor__);
   if ( !Instance
     || (v10 = msgFontSize,
         v11 = 0,
         CommonUI__OpenAccountLinkageNotificationDialog((CommonUI_o *)Instance, v4, v6, v11, v10, 0, 0),
         (myRoomFsm = this->fields.myRoomFsm) == 0) )
   {
-    sub_1C6BC60(myRoomFsm, v9);
+    sub_1C71608(myRoomFsm, v9);
   }
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3280/*"CAN_CONTINUE_DEVICE"*/, 0);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3283/*"CAN_CONTINUE_DEVICE"*/, 0);
   MyRoomControl__HideContinueDeviceMenu(this, v12);
 }
 
@@ -7016,52 +7392,56 @@ void MyRoomControl__PlayOpening(
   CRIMoviePlayer_o *CriMoviePlayerObject; // x0
   __int64 v12; // x1
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  CRIMoviePlayer_o **v15; // x22
-  CRIMoviePlayer_o *v16; // x23
-  BgmManager_c *v17; // x0
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  CRIMoviePlayer_o **v19; // x22
+  CRIMoviePlayer_o *v20; // x23
+  BgmManager_c *v21; // x0
   float masterVolume; // s8
-  System_Action_o *v19; // x25
+  System_Action_o *v23; // x25
 
-  if ( (byte_4CB167E & 1) == 0 )
+  if ( (byte_4CC278B & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&BgmManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass360_0__PlayOpening_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass360_0_TypeInfo);
-    byte_4CB167E = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&BgmManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass360_0__PlayOpening_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass360_0_TypeInfo);
+    byte_4CC278B = 1;
   }
-  v8 = sub_1C6BC54(MyRoomControl___c__DisplayClass360_0_TypeInfo);
+  v8 = sub_1C715FC(MyRoomControl___c__DisplayClass360_0_TypeInfo);
   MyRoomControl___c__DisplayClass360_0___ctor((MyRoomControl___c__DisplayClass360_0_o *)v8, 0);
   CriMoviePlayerObject = MyRoomControl__CreateCriMoviePlayerObject(v9, v10);
   if ( !v8 )
     goto LABEL_13;
   *(_QWORD *)(v8 + 16) = CriMoviePlayerObject;
-  v15 = (CRIMoviePlayer_o **)(v8 + 16);
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v8 + 16), (int32_t)CriMoviePlayerObject, v13, v14);
-  v16 = *(CRIMoviePlayer_o **)(v8 + 16);
+  v19 = (CRIMoviePlayer_o **)(v8 + 16);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v8 + 16), (int32_t)CriMoviePlayerObject, v13, v14, v15, v16, v17, v18);
+  v20 = *(CRIMoviePlayer_o **)(v8 + 16);
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-  if ( !byte_4CB10C7 )
+  if ( !byte_4CC21CB )
   {
-    sub_1C6BA08(&BgmManager_TypeInfo);
-    byte_4CB10C7 = 1;
+    sub_1C713B0(&BgmManager_TypeInfo);
+    byte_4CC21CB = 1;
   }
-  v17 = BgmManager_TypeInfo;
+  v21 = BgmManager_TypeInfo;
   if ( !BgmManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    v17 = BgmManager_TypeInfo;
+    v21 = BgmManager_TypeInfo;
   }
-  masterVolume = v17->static_fields->masterVolume;
-  v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v19, (Il2CppObject *)v8, Method_MyRoomControl___c__DisplayClass360_0__PlayOpening_b__0__, 0);
-  if ( !v16
-    || (CRIMoviePlayer__Initialize(v16, fileName, assetPath, masterVolume, isCanSkip, 0, v19, 1, 0, 0, 0, 1, 0, 0),
-        (CriMoviePlayerObject = *v15) == 0) )
+  masterVolume = v21->static_fields->masterVolume;
+  v23 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v23, (Il2CppObject *)v8, Method_MyRoomControl___c__DisplayClass360_0__PlayOpening_b__0__, 0);
+  if ( !v20
+    || (CRIMoviePlayer__Initialize(v20, fileName, assetPath, masterVolume, isCanSkip, 0, v23, 1, 0, 0, 0, 1, 0, 0),
+        (CriMoviePlayerObject = *v19) == 0) )
   {
 LABEL_13:
-    sub_1C6BC60(CriMoviePlayerObject, v12);
+    sub_1C71608(CriMoviePlayerObject, v12);
   }
   CRIMoviePlayer__MoviePlay(CriMoviePlayerObject, 1, 1, 1, 0, 0);
 }
@@ -7070,222 +7450,294 @@ LABEL_13:
 void MyRoomControl__ReleasePhotoAsset(MyRoomControl_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v9; // w2
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
   AssetData_o *photoCampaignAssetData; // x20
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
   UnityEngine_Object_o *photoTargetSelectDialog; // x20
-  __int64 v13; // x1
-  UnityEngine_Component_o *v14; // x0
+  __int64 v29; // x1
+  UnityEngine_Component_o *v30; // x0
   UnityEngine_Object_o *gameObject; // x21
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  UnityEngine_Object_o *photoSettingButtonComponent; // x20
-  UnityEngine_Object_o *v19; // x21
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  UnityEngine_Object_o *masterEquipSettingDialog; // x20
-  UnityEngine_Object_o *v23; // x21
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  UnityEngine_Object_o *photoStaffSelectDialog; // x20
-  UnityEngine_Object_o *v27; // x21
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  UnityEngine_Object_o *photoStaffCostumeSelectDialog; // x20
-  UnityEngine_Object_o *v31; // x21
   int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  UnityEngine_Object_o *cgThumbnailDialog; // x20
-  UnityEngine_Object_o *v35; // x21
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  struct System_Collections_Generic_List_AssetData__o *masterEquipAssetData; // x0
-  System_Object_array *v39; // x21
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  int32_t v35; // w5
+  int64_t v36; // x6
+  System_String_o *v37; // x7
+  UnityEngine_Object_o *photoSettingButtonComponent; // x20
+  UnityEngine_Object_o *v39; // x21
   int32_t v40; // w2
-  const MethodInfo *v41; // x3
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  int32_t v43; // w5
+  int64_t v44; // x6
+  System_String_o *v45; // x7
+  UnityEngine_Object_o *masterEquipSettingDialog; // x20
+  UnityEngine_Object_o *v47; // x21
+  int32_t v48; // w2
+  int32_t v49; // w3
+  System_String_o *v50; // x4
+  int32_t v51; // w5
+  int64_t v52; // x6
+  System_String_o *v53; // x7
+  UnityEngine_Object_o *photoStaffSelectDialog; // x20
+  UnityEngine_Object_o *v55; // x21
+  int32_t v56; // w2
+  int32_t v57; // w3
+  System_String_o *v58; // x4
+  int32_t v59; // w5
+  int64_t v60; // x6
+  System_String_o *v61; // x7
+  UnityEngine_Object_o *photoStaffCostumeSelectDialog; // x20
+  UnityEngine_Object_o *v63; // x21
+  int32_t v64; // w2
+  int32_t v65; // w3
+  System_String_o *v66; // x4
+  int32_t v67; // w5
+  int64_t v68; // x6
+  System_String_o *v69; // x7
+  UnityEngine_Object_o *cgThumbnailDialog; // x20
+  UnityEngine_Object_o *v71; // x21
+  int32_t v72; // w2
+  int32_t v73; // w3
+  System_String_o *v74; // x4
+  int32_t v75; // w5
+  int64_t v76; // x6
+  System_String_o *v77; // x7
+  struct System_Collections_Generic_List_AssetData__o *masterEquipAssetData; // x0
+  System_Object_array *v79; // x21
+  int32_t v80; // w2
+  int32_t v81; // w3
+  System_String_o *v82; // x4
+  int32_t v83; // w5
+  int64_t v84; // x6
+  System_String_o *v85; // x7
   UnityEngine_Object_o *photoFrameSelectDialog; // x20
-  UnityEngine_Object_o *v43; // x21
-  int32_t v44; // w2
-  const MethodInfo *v45; // x3
+  UnityEngine_Object_o *v87; // x21
+  int32_t v88; // w2
+  int32_t v89; // w3
+  System_String_o *v90; // x4
+  int32_t v91; // w5
+  int64_t v92; // x6
+  System_String_o *v93; // x7
   UnityEngine_Object_o *photoMasterTexture; // x20
-  int32_t v47; // w2
-  const MethodInfo *v48; // x3
+  int32_t v95; // w2
+  int32_t v96; // w3
+  System_String_o *v97; // x4
+  int32_t v98; // w5
+  int64_t v99; // x6
+  System_String_o *v100; // x7
   AssetData_o *combineAssetData; // x20
-  CGThumbnailListItem_o *p_combineAssetData; // x19
-  int32_t v51; // w2
-  const MethodInfo *v52; // x3
+  GrandQuestFolderBoardItem_o *p_combineAssetData; // x19
+  int32_t v103; // w2
+  int32_t v104; // w3
+  System_String_o *v105; // x4
+  int32_t v106; // w5
+  int64_t v107; // x6
+  System_String_o *v108; // x7
 
-  if ( (byte_4CB16BD & 1) == 0 )
+  if ( (byte_4CC27CA & 1) == 0 )
   {
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetData__ToArray__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB16BD = 1;
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AssetData__ToArray__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC27CA = 1;
   }
   this->fields.photoCampaignShutterEffect = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoCampaignShutterEffect, 0, v2, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoCampaignShutterEffect, 0, v2, v3, v4, v5, v6, v7);
   this->fields.photoCampaignCameraEffect = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoCampaignCameraEffect, 0, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoCampaignCameraEffect, 0, v9, v10, v11, v12, v13, v14);
   this->fields.photoLayerChangeObj = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoLayerChangeObj, 0, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoLayerChangeObj, 0, v15, v16, v17, v18, v19, v20);
   photoCampaignAssetData = this->fields.photoCampaignAssetData;
   if ( photoCampaignAssetData )
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40765532(photoCampaignAssetData, 0);
+    AssetManager__releaseAsset_40808072(photoCampaignAssetData, 0);
     this->fields.photoCampaignAssetData = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoCampaignAssetData, 0, v10, v11);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoCampaignAssetData, 0, v22, v23, v24, v25, v26, v27);
   }
   photoTargetSelectDialog = (UnityEngine_Object_o *)this->fields.photoTargetSelectDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(photoTargetSelectDialog, 0, 0) )
   {
-    v14 = (UnityEngine_Component_o *)this->fields.photoTargetSelectDialog;
-    if ( !v14 )
+    v30 = (UnityEngine_Component_o *)this->fields.photoTargetSelectDialog;
+    if ( !v30 )
       goto LABEL_70;
-    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v14, 0);
+    gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v30, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(gameObject, 0);
+    UnityEngine_Object__Destroy_71724608(gameObject, 0);
     this->fields.photoTargetSelectDialog = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoTargetSelectDialog, 0, v16, v17);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoTargetSelectDialog, 0, v32, v33, v34, v35, v36, v37);
   }
   photoSettingButtonComponent = (UnityEngine_Object_o *)this->fields.photoSettingButtonComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(photoSettingButtonComponent, 0, 0) )
   {
-    v14 = (UnityEngine_Component_o *)this->fields.photoSettingButtonComponent;
-    if ( !v14 )
+    v30 = (UnityEngine_Component_o *)this->fields.photoSettingButtonComponent;
+    if ( !v30 )
       goto LABEL_70;
-    v19 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v14, 0);
+    v39 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v30, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(v19, 0);
+    UnityEngine_Object__Destroy_71724608(v39, 0);
     this->fields.photoSettingButtonComponent = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoSettingButtonComponent, 0, v20, v21);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.photoSettingButtonComponent,
+      0,
+      v40,
+      v41,
+      v42,
+      v43,
+      v44,
+      v45);
   }
   masterEquipSettingDialog = (UnityEngine_Object_o *)this->fields.masterEquipSettingDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(masterEquipSettingDialog, 0, 0) )
   {
-    v14 = (UnityEngine_Component_o *)this->fields.masterEquipSettingDialog;
-    if ( !v14 )
+    v30 = (UnityEngine_Component_o *)this->fields.masterEquipSettingDialog;
+    if ( !v30 )
       goto LABEL_70;
-    v23 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v14, 0);
+    v47 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v30, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(v23, 0);
+    UnityEngine_Object__Destroy_71724608(v47, 0);
     this->fields.masterEquipSettingDialog = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.masterEquipSettingDialog, 0, v24, v25);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.masterEquipSettingDialog, 0, v48, v49, v50, v51, v52, v53);
   }
   photoStaffSelectDialog = (UnityEngine_Object_o *)this->fields.photoStaffSelectDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(photoStaffSelectDialog, 0, 0) )
   {
-    v14 = (UnityEngine_Component_o *)this->fields.photoStaffSelectDialog;
-    if ( !v14 )
+    v30 = (UnityEngine_Component_o *)this->fields.photoStaffSelectDialog;
+    if ( !v30 )
       goto LABEL_70;
-    v27 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v14, 0);
+    v55 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v30, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(v27, 0);
+    UnityEngine_Object__Destroy_71724608(v55, 0);
     this->fields.photoStaffSelectDialog = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoStaffSelectDialog, 0, v28, v29);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoStaffSelectDialog, 0, v56, v57, v58, v59, v60, v61);
   }
   photoStaffCostumeSelectDialog = (UnityEngine_Object_o *)this->fields.photoStaffCostumeSelectDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(photoStaffCostumeSelectDialog, 0, 0) )
   {
-    v14 = (UnityEngine_Component_o *)this->fields.photoStaffCostumeSelectDialog;
-    if ( !v14 )
+    v30 = (UnityEngine_Component_o *)this->fields.photoStaffCostumeSelectDialog;
+    if ( !v30 )
       goto LABEL_70;
-    v31 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v14, 0);
+    v63 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v30, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(v31, 0);
+    UnityEngine_Object__Destroy_71724608(v63, 0);
     this->fields.photoStaffCostumeSelectDialog = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoStaffCostumeSelectDialog, 0, v32, v33);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.photoStaffCostumeSelectDialog,
+      0,
+      v64,
+      v65,
+      v66,
+      v67,
+      v68,
+      v69);
   }
   cgThumbnailDialog = (UnityEngine_Object_o *)this->fields.cgThumbnailDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(cgThumbnailDialog, 0, 0) )
   {
-    v14 = (UnityEngine_Component_o *)this->fields.cgThumbnailDialog;
-    if ( !v14 )
+    v30 = (UnityEngine_Component_o *)this->fields.cgThumbnailDialog;
+    if ( !v30 )
       goto LABEL_70;
-    v35 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v14, 0);
+    v71 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v30, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(v35, 0);
+    UnityEngine_Object__Destroy_71724608(v71, 0);
     this->fields.cgThumbnailDialog = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.cgThumbnailDialog, 0, v36, v37);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.cgThumbnailDialog, 0, v72, v73, v74, v75, v76, v77);
   }
   masterEquipAssetData = this->fields.masterEquipAssetData;
   if ( masterEquipAssetData )
   {
-    v39 = System_Collections_Generic_List_object___ToArray(
+    v79 = System_Collections_Generic_List_object___ToArray(
             (System_Collections_Generic_List_object__o *)masterEquipAssetData,
-            (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_AssetData__ToArray__);
+            (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_AssetData__ToArray__);
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40765740((AssetData_array *)v39, 0);
+    AssetManager__releaseAsset_40808280((AssetData_array *)v79, 0);
     this->fields.isLoadMasterEquip = 0;
     this->fields.masterEquipAssetData = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.masterEquipAssetData, 0, v40, v41);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.masterEquipAssetData, 0, v80, v81, v82, v83, v84, v85);
   }
   photoFrameSelectDialog = (UnityEngine_Object_o *)this->fields.photoFrameSelectDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(photoFrameSelectDialog, 0, 0) )
   {
-    v14 = (UnityEngine_Component_o *)this->fields.photoFrameSelectDialog;
-    if ( !v14 )
+    v30 = (UnityEngine_Component_o *)this->fields.photoFrameSelectDialog;
+    if ( !v30 )
       goto LABEL_70;
-    v43 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v14, 0);
+    v87 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v30, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(v43, 0);
+    UnityEngine_Object__Destroy_71724608(v87, 0);
     this->fields.photoFrameSelectDialog = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoFrameSelectDialog, 0, v44, v45);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoFrameSelectDialog, 0, v88, v89, v90, v91, v92, v93);
   }
   photoMasterTexture = (UnityEngine_Object_o *)this->fields.photoMasterTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(photoMasterTexture, 0, 0) )
   {
-    v14 = (UnityEngine_Component_o *)this->fields.photoMasterTexture;
-    if ( v14 )
+    v30 = (UnityEngine_Component_o *)this->fields.photoMasterTexture;
+    if ( v30 )
     {
-      UIMasterFigureTextureOld__ReleaseCharacter((UIMasterFigureTextureOld_o *)v14, 0);
+      UIMasterFigureTextureOld__ReleaseCharacter((UIMasterFigureTextureOld_o *)v30, 0);
       this->fields.photoMasterTexture = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoMasterTexture, 0, v47, v48);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoMasterTexture, 0, v95, v96, v97, v98, v99, v100);
       goto LABEL_65;
     }
 LABEL_70:
-    sub_1C6BC60(v14, v13);
+    sub_1C71608(v30, v29);
   }
 LABEL_65:
   combineAssetData = this->fields.combineAssetData;
   if ( combineAssetData )
   {
-    p_combineAssetData = (CGThumbnailListItem_o *)&this->fields.combineAssetData;
+    p_combineAssetData = (GrandQuestFolderBoardItem_o *)&this->fields.combineAssetData;
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40765532(combineAssetData, 0);
+    AssetManager__releaseAsset_40808072(combineAssetData, 0);
     p_combineAssetData->klass = 0;
-    sub_1C6B9AC(p_combineAssetData, 0, v51, v52);
+    sub_1C71354(p_combineAssetData, 0, v103, v104, v105, v106, v107, v108);
   }
 }
 
@@ -7293,24 +7745,28 @@ LABEL_65:
 void MyRoomControl__ReleaseSvtVoiceData(MyRoomControl_o *this, const MethodInfo *method)
 {
   System_String_o *asstName; // x19
-  CGThumbnailListItem_o *p_asstName; // x20
+  GrandQuestFolderBoardItem_o *p_asstName; // x20
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
 
-  if ( (byte_4CB163E & 1) == 0 )
+  if ( (byte_4CC274B & 1) == 0 )
   {
-    sub_1C6BA08(&SoundManager_TypeInfo);
-    byte_4CB163E = 1;
+    sub_1C713B0(&SoundManager_TypeInfo);
+    byte_4CC274B = 1;
   }
   asstName = this->fields.asstName;
   if ( asstName )
   {
-    p_asstName = (CGThumbnailListItem_o *)&this->fields.asstName;
+    p_asstName = (GrandQuestFolderBoardItem_o *)&this->fields.asstName;
     if ( !SoundManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     SoundManager__releaseAudioAssetStorage(asstName, 0);
     p_asstName->klass = 0;
-    sub_1C6B9AC(p_asstName, 0, v5, v6);
+    sub_1C71354(p_asstName, 0, v5, v6, v7, v8, v9, v10);
   }
 }
 
@@ -7345,13 +7801,13 @@ void MyRoomControl__ReleaseTouch(MyRoomControl_o *this, const MethodInfo *method
   UnityEngine_Color_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v29; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB167A & 1) == 0 )
+  if ( (byte_4CC2787 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&StringLiteral_13073/*"State 5"*/);
-    byte_4CB167A = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&StringLiteral_13079/*"State 5"*/);
+    byte_4CC2787 = 1;
   }
   v3 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -7405,7 +7861,7 @@ void MyRoomControl__ReleaseTouch(MyRoomControl_o *this, const MethodInfo *method
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v24.fields.currentCryptoKey = v16;
   *(_QWORD *)&v24.fields.fakeValue = v15;
-  playBtnImg = (UIWidget_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v24, 0);
+  playBtnImg = (UIWidget_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v24, 0);
   if ( this->fields.isServantMaterial )
   {
     materialImageIdList = this->fields.materialImageIdList;
@@ -7421,7 +7877,7 @@ void MyRoomControl__ReleaseTouch(MyRoomControl_o *this, const MethodInfo *method
   if ( !playBtnImg )
     goto LABEL_36;
   ActiveStateName = PlayMakerFSM__get_ActiveStateName((PlayMakerFSM_o *)playBtnImg, 0);
-  v20 = System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_13073/*"State 5"*/, 0);
+  v20 = System_String__op_Inequality(ActiveStateName, (System_String_o *)StringLiteral_13079/*"State 5"*/, 0);
   if ( v18 >= 1 && v20 )
   {
     playBtnImg = (UIWidget_o *)this->fields.changeBtnImg;
@@ -7471,7 +7927,7 @@ void MyRoomControl__ReleaseTouch(MyRoomControl_o *this, const MethodInfo *method
         (playBtnImg = (UIWidget_o *)this->fields.maskBoxCollider) == 0) )
   {
 LABEL_36:
-    sub_1C6BC60(playBtnImg, v13);
+    sub_1C71608(playBtnImg, v13);
   }
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)playBtnImg, 0, 0);
   if ( this->fields.type == 10 )
@@ -7503,99 +7959,127 @@ void MyRoomControl__SaveDisplayOverWriteIds(const MethodInfo *method)
   __int64 v12; // x1
   System_Int32_array *v13; // x0
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  _BOOL8 v16; // x0
-  __int64 v17; // x1
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  _BOOL8 v20; // x0
+  __int64 v21; // x1
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v21; // x9
+  _QWORD *v29; // x9
   __int64 size; // x10
-  Il2CppClass **v23; // x0
-  MyRoomControl_c *v24; // x0
+  Il2CppClass **v31; // x0
+  MyRoomControl_c *v32; // x0
   System_Collections_ICollection_o *BgSaveData; // x23
-  System_Collections_Generic_List_object__o *v26; // x22
-  MyRoomControl___c_c *v27; // x0
+  System_Collections_Generic_List_object__o *v34; // x22
+  MyRoomControl___c_c *v35; // x0
   System_Func_object__bool__o *_9__456_0; // x22
-  Il2CppObject *v29; // x24
+  Il2CppObject *v37; // x24
   struct MyRoomControl___c_StaticFields *static_fields; // x0
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v33; // x0
-  System_Func_object__bool__o *v34; // x23
-  Il2CppObject *v35; // x0
-  Il2CppObject *v36; // x23
-  System_Int32_array *v37; // x0
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
-  __int64 v40; // x23
-  System_Int32_array *v41; // x0
-  int32_t v42; // w2
-  const MethodInfo *v43; // x3
-  int32_t v44; // w2
-  const MethodInfo *v45; // x3
-  struct System_Object_array *v46; // x8
-  _QWORD *v47; // x9
-  __int64 v48; // x10
-  Il2CppClass **v49; // x0
-  _BOOL8 v50; // x0
-  __int64 v51; // x1
-  int32_t v52; // w2
-  const MethodInfo *v53; // x3
-  Il2CppObject *v54; // x1
-  struct System_Object_array *v55; // x8
-  _QWORD *v56; // x9
-  __int64 v57; // x10
-  Il2CppClass **v58; // x0
-  System_Object_array *v59; // x19
-  System_String_o *v60; // x0
-  System_Collections_Generic_List_Enumerator_object__o v61; // [xsp+8h] [xbp-B8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v62; // [xsp+20h] [xbp-A0h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v63; // [xsp+40h] [xbp-80h] BYREF
+  int32_t v39; // w2
+  int32_t v40; // w3
+  System_String_o *v41; // x4
+  int32_t v42; // w5
+  int64_t v43; // x6
+  System_String_o *v44; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v45; // x0
+  System_Func_object__bool__o *v46; // x23
+  Il2CppObject *v47; // x0
+  Il2CppObject *v48; // x23
+  System_Int32_array *v49; // x0
+  int32_t v50; // w2
+  int32_t v51; // w3
+  System_String_o *v52; // x4
+  int32_t v53; // w5
+  int64_t v54; // x6
+  System_String_o *v55; // x7
+  __int64 v56; // x23
+  System_Int32_array *v57; // x0
+  int32_t v58; // w2
+  int32_t v59; // w3
+  System_String_o *v60; // x4
+  int32_t v61; // w5
+  int64_t v62; // x6
+  System_String_o *v63; // x7
+  int32_t v64; // w2
+  int32_t v65; // w3
+  System_String_o *v66; // x4
+  int32_t v67; // w5
+  int64_t v68; // x6
+  System_String_o *v69; // x7
+  struct System_Object_array *v70; // x8
+  _QWORD *v71; // x9
+  __int64 v72; // x10
+  Il2CppClass **v73; // x0
+  _BOOL8 v74; // x0
+  __int64 v75; // x1
+  int32_t v76; // w2
+  int32_t v77; // w3
+  System_String_o *v78; // x4
+  int32_t v79; // w5
+  int64_t v80; // x6
+  System_String_o *v81; // x7
+  Il2CppObject *v82; // x1
+  struct System_Object_array *v83; // x8
+  _QWORD *v84; // x9
+  __int64 v85; // x10
+  Il2CppClass **v86; // x0
+  System_Object_array *v87; // x19
+  System_String_o *v88; // x0
+  System_Collections_Generic_List_Enumerator_object__o v89; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v90; // [xsp+20h] [xbp-A0h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v91; // [xsp+40h] [xbp-80h] BYREF
 
-  if ( (byte_4CB16C7 & 1) == 0 )
+  if ( (byte_4CC27D4 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl_BackGroundSaveData_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMaster_MyRoomAddMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Any_int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_MyRoomControl_BackGroundSaveData___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_MyRoomControl_BackGroundSaveData___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_MyRoomControl_BackGroundSaveData___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C6BA08(&System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
-    sub_1C6BA08(&JsonManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__SaveDisplayOverWriteIds_b__456_0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass456_0__SaveDisplayOverWriteIds_b__1__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass456_0_TypeInfo);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5289/*"DisplayedOverWriteIds"*/);
-    byte_4CB16C7 = 1;
+    sub_1C713B0(&MyRoomControl_BackGroundSaveData_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMaster_MyRoomAddMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Any_int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_MyRoomControl_BackGroundSaveData___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToList_MyRoomControl_BackGroundSaveData___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Where_MyRoomControl_BackGroundSaveData___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C713B0(&System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
+    sub_1C713B0(&JsonManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__SaveDisplayOverWriteIds_b__456_0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass456_0__SaveDisplayOverWriteIds_b__1__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass456_0_TypeInfo);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    sub_1C713B0(&StringLiteral_5292/*"DisplayedOverWriteIds"*/);
+    byte_4CC27D4 = 1;
   }
-  memset(&v63, 0, sizeof(v63));
-  memset(&v62, 0, sizeof(v62));
-  v1 = (MyRoomControl___c__DisplayClass456_0_o *)sub_1C6BC54(MyRoomControl___c__DisplayClass456_0_TypeInfo);
+  memset(&v91, 0, sizeof(v91));
+  memset(&v90, 0, sizeof(v90));
+  v1 = (MyRoomControl___c__DisplayClass456_0_o *)sub_1C715FC(MyRoomControl___c__DisplayClass456_0_TypeInfo);
   MyRoomControl___c__DisplayClass456_0___ctor(v1, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_MyRoomAddMaster___);
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_MyRoomAddMaster___);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
   v5 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
   {
@@ -7606,106 +8090,114 @@ void MyRoomControl__SaveDisplayOverWriteIds(const MethodInfo *method)
   if ( !enableBgGroupIdList )
     goto LABEL_61;
   System_Collections_Generic_List_int___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v61,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v89,
     enableBgGroupIdList,
-    (const MethodInfo_37E4424 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
-  v63 = v61;
+    (const MethodInfo_37F41C8 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+  v91 = v89;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
-            (System_Collections_Generic_List_Enumerator_int__o *)&v63,
-            (const MethodInfo_358270C *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            (System_Collections_Generic_List_Enumerator_int__o *)&v91,
+            (const MethodInfo_35924B0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
-    current = (int32_t)v63.fields._current;
-    if ( LODWORD(v63.fields._current) )
+    current = (int32_t)v91.fields._current;
+    if ( LODWORD(v91.fields._current) )
     {
-      v8 = sub_1C6BC54(MyRoomControl_BackGroundSaveData_TypeInfo);
+      v8 = sub_1C715FC(MyRoomControl_BackGroundSaveData_TypeInfo);
       MyRoomControl_BackGroundSaveData___ctor((MyRoomControl_BackGroundSaveData_o *)v8, 0);
       if ( !v8 )
-        sub_1C6BC60(v9, v10);
+        sub_1C71608(v9, v10);
       *(_DWORD *)(v8 + 16) = current;
       *(_DWORD *)(v8 + 20) = 0;
       if ( !Master_object )
-        sub_1C6BC60(v9, v10);
+        sub_1C71608(v9, v10);
       v11 = MyRoomAddMaster__GetDisplayOverWriteIds((MyRoomAddMaster_o *)Master_object, current, 0);
       if ( !v11 )
-        sub_1C6BC60(0, v12);
+        sub_1C71608(0, v12);
       v13 = System_Collections_Generic_List_int___ToArray(
               v11,
-              (const MethodInfo_37E5408 *)Method_System_Collections_Generic_List_int__ToArray__);
+              (const MethodInfo_37F51AC *)Method_System_Collections_Generic_List_int__ToArray__);
       *(_QWORD *)(v8 + 24) = v13;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v8 + 24), (int32_t)v13, v14, v15);
-      v16 = System_Linq_Enumerable__Any_int_(
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v8 + 24), (int32_t)v13, v14, v15, v16, v17, v18, v19);
+      v20 = System_Linq_Enumerable__Any_int_(
               *(System_Collections_Generic_IEnumerable_TSource__o **)(v8 + 24),
-              (const MethodInfo_31469B0 *)Method_System_Linq_Enumerable_Any_int___);
-      if ( v16 )
+              (const MethodInfo_3156754 *)Method_System_Linq_Enumerable_Any_int___);
+      if ( v20 )
       {
         if ( !v3 )
-          sub_1C6BC60(v16, v17);
+          sub_1C71608(v20, v21);
         items = v3->fields._items;
-        v21 = Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__Add__;
+        v29 = Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__Add__;
         ++v3->fields._version;
         if ( !items )
-          sub_1C6BC60(v16, v17);
+          sub_1C71608(v20, v21);
         size = v3->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             (Il2CppObject *)v8,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
         }
         else
         {
-          v23 = &items->obj.klass + size;
+          v31 = &items->obj.klass + size;
           v3->fields._size = size + 1;
-          v23[4] = (Il2CppClass *)v8;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v23 + 4), v8, v18, v19);
+          v31[4] = (Il2CppClass *)v8;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v31 + 4), v8, v22, v23, v24, v25, v26, v27);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
-    (System_Collections_Generic_List_Enumerator_int__o *)&v63,
-    (const MethodInfo_3582708 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-  v24 = MyRoomControl_TypeInfo;
+    (System_Collections_Generic_List_Enumerator_int__o *)&v91,
+    (const MethodInfo_35924AC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+  v32 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
-  BgSaveData = (System_Collections_ICollection_o *)MyRoomControl__GetBgSaveData((const MethodInfo *)v24);
-  v26 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
+  BgSaveData = (System_Collections_ICollection_o *)MyRoomControl__GetBgSaveData((const MethodInfo *)v32);
+  v34 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v26,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
+    v34,
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData___ctor__);
   enableBgGroupIdList = (System_Collections_Generic_List_int__o *)BasicHelper__IsNullOrEmpty(BgSaveData, 0);
   if ( ((unsigned __int8)enableBgGroupIdList & 1) == 0 )
   {
-    v27 = MyRoomControl___c_TypeInfo;
+    v35 = MyRoomControl___c_TypeInfo;
     if ( !MyRoomControl___c_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(MyRoomControl___c_TypeInfo);
-      v27 = MyRoomControl___c_TypeInfo;
+      v35 = MyRoomControl___c_TypeInfo;
     }
-    _9__456_0 = (System_Func_object__bool__o *)v27->static_fields->__9__456_0;
+    _9__456_0 = (System_Func_object__bool__o *)v35->static_fields->__9__456_0;
     if ( !_9__456_0 )
     {
-      if ( !v27->_2.cctor_finished )
+      if ( !v35->_2.cctor_finished )
       {
-        j_il2cpp_runtime_class_init_0(v27);
-        v27 = MyRoomControl___c_TypeInfo;
+        j_il2cpp_runtime_class_init_0(v35);
+        v35 = MyRoomControl___c_TypeInfo;
       }
-      v29 = (Il2CppObject *)v27->static_fields->__9;
-      _9__456_0 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
-      System_Func_object__bool____ctor(_9__456_0, v29, Method_MyRoomControl___c__SaveDisplayOverWriteIds_b__456_0__, 0);
+      v37 = (Il2CppObject *)v35->static_fields->__9;
+      _9__456_0 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
+      System_Func_object__bool____ctor(_9__456_0, v37, Method_MyRoomControl___c__SaveDisplayOverWriteIds_b__456_0__, 0);
       static_fields = MyRoomControl___c_TypeInfo->static_fields;
       static_fields->__9__456_0 = (struct System_Func_MyRoomControl_BackGroundSaveData__bool__o *)_9__456_0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__456_0, (int32_t)_9__456_0, v31, v32);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&static_fields->__9__456_0,
+        (int32_t)_9__456_0,
+        v39,
+        v40,
+        v41,
+        v42,
+        v43,
+        v44);
     }
-    v33 = System_Linq_Enumerable__Where_object_(
+    v45 = System_Linq_Enumerable__Where_object_(
             (System_Collections_Generic_IEnumerable_TSource__o *)BgSaveData,
             (System_Func_TSource__bool__o *)_9__456_0,
-            (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_MyRoomControl_BackGroundSaveData___);
+            (const MethodInfo_3192108 *)Method_System_Linq_Enumerable_Where_MyRoomControl_BackGroundSaveData___);
     enableBgGroupIdList = (System_Collections_Generic_List_int__o *)System_Linq_Enumerable__ToList_object_(
-                                                                      v33,
-                                                                      (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_MyRoomControl_BackGroundSaveData___);
-    v26 = (System_Collections_Generic_List_object__o *)enableBgGroupIdList;
+                                                                      v45,
+                                                                      (const MethodInfo_318FC88 *)Method_System_Linq_Enumerable_ToList_MyRoomControl_BackGroundSaveData___);
+    v34 = (System_Collections_Generic_List_object__o *)enableBgGroupIdList;
   }
   if ( !Master_object )
     goto LABEL_61;
@@ -7715,118 +8207,118 @@ void MyRoomControl__SaveDisplayOverWriteIds(const MethodInfo *method)
   if ( !v1 )
     goto LABEL_61;
   v1->fields.mainGroupWarId = (int)enableBgGroupIdList;
-  v34 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
+  v46 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_MyRoomControl_BackGroundSaveData__bool__TypeInfo);
   System_Func_object__bool____ctor(
-    v34,
+    v46,
     (Il2CppObject *)v1,
     Method_MyRoomControl___c__DisplayClass456_0__SaveDisplayOverWriteIds_b__1__,
     0);
-  v35 = System_Linq_Enumerable__FirstOrDefault_object__51793644(
-          (System_Collections_Generic_IEnumerable_TSource__o *)v26,
-          (System_Func_TSource__bool__o *)v34,
-          (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_MyRoomControl_BackGroundSaveData___);
-  if ( v35 )
+  v47 = System_Linq_Enumerable__FirstOrDefault_object__51858576(
+          (System_Collections_Generic_IEnumerable_TSource__o *)v34,
+          (System_Func_TSource__bool__o *)v46,
+          (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_MyRoomControl_BackGroundSaveData___);
+  if ( v47 )
   {
-    v36 = v35;
+    v48 = v47;
     enableBgGroupIdList = MyRoomAddMaster__GetDisplayOverWriteIds((MyRoomAddMaster_o *)Master_object, 0, 0);
     if ( !enableBgGroupIdList )
       goto LABEL_61;
-    v37 = System_Collections_Generic_List_int___ToArray(
+    v49 = System_Collections_Generic_List_int___ToArray(
             enableBgGroupIdList,
-            (const MethodInfo_37E5408 *)Method_System_Collections_Generic_List_int__ToArray__);
-    v36[1].monitor = v37;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v36[1].monitor, (int32_t)v37, v38, v39);
-    if ( !v26 )
+            (const MethodInfo_37F51AC *)Method_System_Collections_Generic_List_int__ToArray__);
+    v48[1].monitor = v49;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v48[1].monitor, (int32_t)v49, v50, v51, v52, v53, v54, v55);
+    if ( !v34 )
       goto LABEL_61;
   }
   else
   {
-    v40 = sub_1C6BC54(MyRoomControl_BackGroundSaveData_TypeInfo);
-    MyRoomControl_BackGroundSaveData___ctor((MyRoomControl_BackGroundSaveData_o *)v40, 0);
-    if ( !v40 )
+    v56 = sub_1C715FC(MyRoomControl_BackGroundSaveData_TypeInfo);
+    MyRoomControl_BackGroundSaveData___ctor((MyRoomControl_BackGroundSaveData_o *)v56, 0);
+    if ( !v56 )
       goto LABEL_61;
-    *(_DWORD *)(v40 + 16) = 0;
-    *(_DWORD *)(v40 + 20) = v1->fields.mainGroupWarId;
+    *(_DWORD *)(v56 + 16) = 0;
+    *(_DWORD *)(v56 + 20) = v1->fields.mainGroupWarId;
     enableBgGroupIdList = MyRoomAddMaster__GetDisplayOverWriteIds((MyRoomAddMaster_o *)Master_object, 0, 0);
     if ( !enableBgGroupIdList )
       goto LABEL_61;
-    v41 = System_Collections_Generic_List_int___ToArray(
+    v57 = System_Collections_Generic_List_int___ToArray(
             enableBgGroupIdList,
-            (const MethodInfo_37E5408 *)Method_System_Collections_Generic_List_int__ToArray__);
-    *(_QWORD *)(v40 + 24) = v41;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v40 + 24), (int32_t)v41, v42, v43);
-    if ( !v26 )
+            (const MethodInfo_37F51AC *)Method_System_Collections_Generic_List_int__ToArray__);
+    *(_QWORD *)(v56 + 24) = v57;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v56 + 24), (int32_t)v57, v58, v59, v60, v61, v62, v63);
+    if ( !v34 )
       goto LABEL_61;
-    v46 = v26->fields._items;
-    v47 = Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__Add__;
-    ++v26->fields._version;
-    if ( !v46 )
+    v70 = v34->fields._items;
+    v71 = Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__Add__;
+    ++v34->fields._version;
+    if ( !v70 )
       goto LABEL_61;
-    v48 = v26->fields._size;
-    if ( (unsigned int)v48 >= LODWORD(v46->max_length) )
+    v72 = v34->fields._size;
+    if ( (unsigned int)v72 >= LODWORD(v70->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
-        v26,
-        (Il2CppObject *)v40,
-        *(const MethodInfo_3800974 **)(*(_QWORD *)(v47[4] + 192LL) + 112LL));
+        v34,
+        (Il2CppObject *)v56,
+        *(const MethodInfo_3810718 **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
     }
     else
     {
-      v49 = &v46->obj.klass + v48;
-      v26->fields._size = v48 + 1;
-      v49[4] = (Il2CppClass *)v40;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v49 + 4), v40, v44, v45);
+      v73 = &v70->obj.klass + v72;
+      v34->fields._size = v72 + 1;
+      v73[4] = (Il2CppClass *)v56;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v73 + 4), v56, v64, v65, v66, v67, v68, v69);
     }
   }
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v61,
-    v26,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__GetEnumerator__);
-  v62 = v61;
+    (System_Collections_Generic_List_Enumerator_T__o *)&v89,
+    v34,
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__GetEnumerator__);
+  v90 = v89;
   while ( 1 )
   {
-    v50 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v62,
-            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__MoveNext__);
-    if ( !v50 )
+    v74 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+            &v90,
+            (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__MoveNext__);
+    if ( !v74 )
       break;
     if ( !v3 )
-      sub_1C6BC60(v50, v51);
-    v54 = v62.fields._current;
-    v55 = v3->fields._items;
-    v56 = Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__Add__;
+      sub_1C71608(v74, v75);
+    v82 = v90.fields._current;
+    v83 = v3->fields._items;
+    v84 = Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__Add__;
     ++v3->fields._version;
-    if ( !v55 )
-      sub_1C6BC60(v50, v54);
-    v57 = v3->fields._size;
-    if ( (unsigned int)v57 >= LODWORD(v55->max_length) )
+    if ( !v83 )
+      sub_1C71608(v74, v82);
+    v85 = v3->fields._size;
+    if ( (unsigned int)v85 >= LODWORD(v83->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v3,
-        v54,
-        *(const MethodInfo_3800974 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
+        v82,
+        *(const MethodInfo_3810718 **)(*(_QWORD *)(v84[4] + 192LL) + 112LL));
     }
     else
     {
-      v58 = &v55->obj.klass + v57;
-      v3->fields._size = v57 + 1;
-      v58[4] = (Il2CppClass *)v54;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v58 + 4), (int32_t)v54, v52, v53);
+      v86 = &v83->obj.klass + v85;
+      v3->fields._size = v85 + 1;
+      v86[4] = (Il2CppClass *)v82;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v86 + 4), (int32_t)v82, v76, v77, v78, v79, v80, v81);
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v62,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__Dispose__);
+    &v90,
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_MyRoomControl_BackGroundSaveData__Dispose__);
   if ( !v3 )
 LABEL_61:
-    sub_1C6BC60(enableBgGroupIdList, v4);
-  v59 = System_Collections_Generic_List_object___ToArray(
+    sub_1C71608(enableBgGroupIdList, v4);
+  v87 = System_Collections_Generic_List_object___ToArray(
           v3,
-          (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__ToArray__);
+          (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_MyRoomControl_BackGroundSaveData__ToArray__);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v60 = JsonManager__toJson(&v59->obj, 0, 0, 0);
-  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_5289/*"DisplayedOverWriteIds"*/, v60, 0);
+  v88 = JsonManager__toJson(&v87->obj, 0, 0, 0);
+  UnityEngine_PlayerPrefs__SetString((System_String_o *)StringLiteral_5292/*"DisplayedOverWriteIds"*/, v88, 0);
   UnityEngine_PlayerPrefs__Save(0);
 }
 
@@ -7841,8 +8333,8 @@ void MyRoomControl__SetAccountLinkage(MyRoomControl_o *this, const MethodInfo *m
   titleInfo = this->fields.titleInfo;
   this->fields.type = 18;
   if ( !titleInfo )
-    sub_1C6BC60(0, v3);
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 92, 0, 0);
+    sub_1C71608(0, v3);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 92, 0, 0);
   MyRoomControl__setSvtFigureActive(this, this->fields.type, 1, v5);
 }
 
@@ -7856,7 +8348,7 @@ void MyRoomControl__SetBackButtonIgnore(MyRoomControl_o *this, bool flag, const 
   v5 = flag;
   this->fields.isBackBtnIgnore = v5;
   if ( !maskBoxCollider )
-    sub_1C6BC60(0, v5);
+    sub_1C71608(0, v5);
   UnityEngine_Collider__set_enabled(maskBoxCollider, v5, 0);
 }
 
@@ -7867,37 +8359,41 @@ void MyRoomControl__SetBackGroundData(const MethodInfo *method)
   __int64 v2; // x1
   System_Collections_Generic_List_int__o *v3; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  MyRoomControl_c *v6; // x8
-  System_Collections_Generic_List_int__o *v7; // x19
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  MyRoomControl_c *v10; // x8
+  System_Collections_Generic_List_int__o *v11; // x19
   struct MyRoomControl_StaticFields *static_fields; // x0
-  const MethodInfo *v9; // x0
+  const MethodInfo *v13; // x0
   const MethodInfo *DisplayBgGroupIndex; // x0
 
-  if ( (byte_4CB16C2 & 1) == 0 )
+  if ( (byte_4CC27CF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_MyRoomAddMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB16C2 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_MyRoomAddMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC27CF = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_MyRoomAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_MyRoomAddMaster___);
   if ( !Master_object )
-    sub_1C6BC60(0, v2);
+    sub_1C71608(0, v2);
   v3 = MyRoomAddMaster__DisplayBgGroupList((MyRoomAddMaster_o *)Master_object, 0);
-  v6 = MyRoomControl_TypeInfo;
-  v7 = v3;
+  v10 = MyRoomControl_TypeInfo;
+  v11 = v3;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
-    v6 = MyRoomControl_TypeInfo;
+    v10 = MyRoomControl_TypeInfo;
   }
-  static_fields = v6->static_fields;
-  static_fields->enableBgGroupIdList = v7;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->enableBgGroupIdList, (int32_t)v7, v4, v5);
-  DisplayBgGroupIndex = (const MethodInfo *)MyRoomControl__GetDisplayBgGroupIndex(v9);
+  static_fields = v10->static_fields;
+  static_fields->enableBgGroupIdList = v11;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->enableBgGroupIdList, (int32_t)v11, v4, v5, v6, v7, v8, v9);
+  DisplayBgGroupIndex = (const MethodInfo *)MyRoomControl__GetDisplayBgGroupIndex(v13);
   MyRoomControl_TypeInfo->static_fields->displayBgGroupIndex = (int)DisplayBgGroupIndex;
   MyRoomControl__SaveDisplayOverWriteIds(DisplayBgGroupIndex);
 }
@@ -7929,18 +8425,18 @@ void MyRoomControl__SetChangeBtn(MyRoomControl_o *this, const MethodInfo *method
   UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4CB164E & 1) == 0 )
+  if ( (byte_4CC275B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    this = (MyRoomControl_o *)sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB164E = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    this = (MyRoomControl_o *)sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC275B = 1;
   }
   if ( v2->fields.isServantMaterial )
   {
     materialImageIdList = v2->fields.materialImageIdList;
     if ( !materialImageIdList )
 LABEL_17:
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
   }
   else
   {
@@ -8006,7 +8502,7 @@ void MyRoomControl__SetEnableMultipleViewUi(MyRoomControl_o *this, bool isEnable
     if ( (int)v6 >= max_length )
       break;
     if ( (unsigned int)v6 >= max_length )
-      sub_1C6BC68(this);
+      sub_1C71610(this);
     this = (MyRoomControl_o *)multipleFaceChangeButtons->m_Items[v6];
     if ( this )
     {
@@ -8026,7 +8522,7 @@ void MyRoomControl__SetEnableMultipleViewUi(MyRoomControl_o *this, bool isEnable
         (this = (MyRoomControl_o *)v4->fields.titleInfo) == 0) )
   {
 LABEL_7:
-    sub_1C6BC60(this, isEnable);
+    sub_1C71608(this, isEnable);
   }
   if ( isEnable )
     TitleInfoControl__FrameIn((TitleInfoControl_o *)this, 0, 0);
@@ -8045,8 +8541,8 @@ void MyRoomControl__SetExchangeSvtCoin(MyRoomControl_o *this, const MethodInfo *
   titleInfo = this->fields.titleInfo;
   this->fields.type = 19;
   if ( !titleInfo )
-    sub_1C6BC60(0, v3);
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 95, 0, 0);
+    sub_1C71608(0, v3);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 95, 0, 0);
   MyRoomControl__setSvtFigureActive(this, this->fields.type, 1, v5);
 }
 
@@ -8061,110 +8557,150 @@ void MyRoomControl__SetFavoriteSvt(
   CommonUI_o *Instance; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x1
-  const MethodInfo *v15; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  const MethodInfo *v22; // x1
+  const MethodInfo *v23; // x2
   ServantVoiceEntity_o *SvtVoiceEnt; // x0
-  ServantVoiceEntity_o **v17; // x22
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  const MethodInfo *v20; // x1
-  int32_t figureSvtId; // w23
-  ServantVoiceEntity_o *v22; // x24
-  int32_t Item; // w0
-  const MethodInfo *v24; // x4
-  struct System_Collections_Generic_List_ServantVoiceData____o *VoiceList; // x0
+  ServantVoiceEntity_o **v25; // x22
   int32_t v26; // w2
-  const MethodInfo *v27; // x3
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  const MethodInfo *v32; // x1
+  int32_t figureSvtId; // w23
+  ServantVoiceEntity_o *v34; // x24
+  int32_t Item; // w0
+  const MethodInfo *v36; // x4
+  struct System_Collections_Generic_List_ServantVoiceData____o *VoiceList; // x0
+  int32_t v38; // w2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  int32_t v41; // w5
+  int64_t v42; // x6
+  System_String_o *v43; // x7
   struct System_String_o *VoiceAssetName; // x0
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
+  int32_t v45; // w2
+  int32_t v46; // w3
+  System_String_o *v47; // x4
+  int32_t v48; // w5
+  int64_t v49; // x6
+  System_String_o *v50; // x7
   System_String_o *asstName; // x22
-  System_Action_o *v32; // x23
-  const MethodInfo *v33; // x3
-  System_Action_o *v34; // x23
-  int32_t v35; // w2
-  const MethodInfo *v36; // x3
-  System_Action_o *v37; // x20
-  const MethodInfo *v38; // x2
+  System_Action_o *v52; // x23
+  const MethodInfo *v53; // x3
+  System_Action_o *v54; // x23
+  int32_t v55; // w2
+  int32_t v56; // w3
+  System_String_o *v57; // x4
+  int32_t v58; // w5
+  int64_t v59; // x6
+  System_String_o *v60; // x7
+  System_Action_o *v61; // x20
+  const MethodInfo *v62; // x2
 
-  if ( (byte_4CB166D & 1) == 0 )
+  if ( (byte_4CC277A & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__2__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass325_0_TypeInfo);
-    byte_4CB166D = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__2__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass325_0_TypeInfo);
+    byte_4CC277A = 1;
   }
-  v7 = sub_1C6BC54(MyRoomControl___c__DisplayClass325_0_TypeInfo);
+  v7 = sub_1C715FC(MyRoomControl___c__DisplayClass325_0_TypeInfo);
   MyRoomControl___c__DisplayClass325_0___ctor((MyRoomControl___c__DisplayClass325_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_13;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 32) = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)callback, v12, v13);
-  MyRoomControl__setupSvtImageIdList(this, v14);
-  SvtVoiceEnt = MyRoomControl__getSvtVoiceEnt(this, 0, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)callback, v16, v17, v18, v19, v20, v21);
+  MyRoomControl__setupSvtImageIdList(this, v22);
+  SvtVoiceEnt = MyRoomControl__getSvtVoiceEnt(this, 0, v23);
   *(_QWORD *)(v7 + 24) = SvtVoiceEnt;
-  v17 = (ServantVoiceEntity_o **)(v7 + 24);
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)SvtVoiceEnt, v18, v19);
+  v25 = (ServantVoiceEntity_o **)(v7 + 24);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)SvtVoiceEnt, v26, v27, v28, v29, v30, v31);
   if ( *(_QWORD *)(v7 + 24) )
   {
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
     {
       CommonUI__SetLoadMode(Instance, 1, 0);
-      MyRoomControl__ReleaseSvtVoiceData(this, v20);
+      MyRoomControl__ReleaseSvtVoiceData(this, v32);
       Instance = (CommonUI_o *)this->fields.imageIdList;
       if ( Instance )
       {
         figureSvtId = this->fields.figureSvtId;
-        v22 = *v17;
+        v34 = *v25;
         Item = System_Collections_Generic_List_int___get_Item(
                  (System_Collections_Generic_List_int__o *)Instance,
                  this->fields.figureSvtDispIdx,
-                 (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
-        VoiceList = MyRoomControl__GetVoiceList(this, v22, figureSvtId, Item, v24);
+                 (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
+        VoiceList = MyRoomControl__GetVoiceList(this, v34, figureSvtId, Item, v36);
         this->fields.voiceList = VoiceList;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.voiceList, (int32_t)VoiceList, v26, v27);
-        Instance = (CommonUI_o *)*v17;
-        if ( *v17 )
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&this->fields.voiceList,
+          (int32_t)VoiceList,
+          v38,
+          v39,
+          v40,
+          v41,
+          v42,
+          v43);
+        Instance = (CommonUI_o *)*v25;
+        if ( *v25 )
         {
           VoiceAssetName = ServantVoiceEntity__getVoiceAssetName((ServantVoiceEntity_o *)Instance, 0);
           this->fields.asstName = VoiceAssetName;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.asstName, (int32_t)VoiceAssetName, v29, v30);
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&this->fields.asstName,
+            (int32_t)VoiceAssetName,
+            v45,
+            v46,
+            v47,
+            v48,
+            v49,
+            v50);
           asstName = this->fields.asstName;
-          v32 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+          v52 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
           System_Action___ctor(
-            v32,
+            v52,
             (Il2CppObject *)v7,
             Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__0__,
             0);
-          MyRoomControl__voiceLoad(this, asstName, v32, v33);
+          MyRoomControl__voiceLoad(this, asstName, v52, v53);
           goto LABEL_10;
         }
       }
     }
 LABEL_13:
-    sub_1C6BC60(Instance, v9);
+    sub_1C71608(Instance, v9);
   }
   this->fields.isExistVoiceData = 0;
 LABEL_10:
-  v34 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v34, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__1__, 0);
-  *(_QWORD *)(v7 + 40) = v34;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 40), (int32_t)v34, v35, v36);
+  v54 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v54, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__1__, 0);
+  *(_QWORD *)(v7 + 40) = v54;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 40), (int32_t)v54, v55, v56, v57, v58, v59, v60);
   if ( IsActSetMyRoomStandFigre )
   {
-    v37 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v37, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__2__, 0);
-    MyRoomControl__SetMyRoomStandFigure(this, v37, v38);
+    v61 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v61, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass325_0__SetFavoriteSvt_b__2__, 0);
+    MyRoomControl__SetMyRoomStandFigure(this, v61, v62);
   }
   else
   {
@@ -8180,7 +8716,7 @@ void MyRoomControl__SetGallery(MyRoomControl_o *this, bool isPlayDecideSe, const
 }
 
 
-void MyRoomControl__SetGallery_33729924(
+void MyRoomControl__SetGallery_33757476(
         MyRoomControl_o *this,
         int32_t warId,
         System_Collections_Generic_List_GalleryEntity__o *galleryList,
@@ -8190,51 +8726,59 @@ void MyRoomControl__SetGallery_33729924(
   UnityEngine_Component_o *gameObject; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   UnityEngine_Object_o *cgThumbnailDialog; // x21
-  const MethodInfo *v15; // x1
-  AssetLoader_LoadEndDataHandler_o *v16; // x19
-  const MethodInfo *v17; // x3
-  CGThumbnailDialog_o *v18; // x21
-  System_Collections_Generic_List_GalleryEntity__o *v19; // x22
-  int32_t v20; // w23
-  System_Action_o *v21; // x24
-  System_Action_o *v22; // x25
-  System_Action_o *v23; // x26
+  const MethodInfo *v23; // x1
+  AssetLoader_LoadEndDataHandler_o *v24; // x19
+  const MethodInfo *v25; // x3
+  CGThumbnailDialog_o *v26; // x21
+  System_Collections_Generic_List_GalleryEntity__o *v27; // x22
+  int32_t v28; // w23
+  System_Action_o *v29; // x24
+  System_Action_o *v30; // x25
+  System_Action_o *v31; // x26
 
-  if ( (byte_4CB1666 & 1) == 0 )
+  if ( (byte_4CC2773 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_OnClickBack__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__2__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass305_0_TypeInfo);
-    sub_1C6BA08(&StringLiteral_9216/*"MyRoom/Gallery/Prefab"*/);
-    byte_4CB1666 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_OnClickBack__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__2__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass305_0_TypeInfo);
+    sub_1C713B0(&StringLiteral_9220/*"MyRoom/Gallery/Prefab"*/);
+    byte_4CC2773 = 1;
   }
-  v7 = sub_1C6BC54(MyRoomControl___c__DisplayClass305_0_TypeInfo);
+  v7 = sub_1C715FC(MyRoomControl___c__DisplayClass305_0_TypeInfo);
   MyRoomControl___c__DisplayClass305_0___ctor((MyRoomControl___c__DisplayClass305_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_14;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = galleryList;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)galleryList, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)galleryList, v16, v17, v18, v19, v20, v21);
   *(_DWORD *)(v7 + 32) = warId;
   cgThumbnailDialog = (UnityEngine_Object_o *)this->fields.cgThumbnailDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality(cgThumbnailDialog, 0, 0) )
   {
-    MyRoomControl__stopSvtVoice(this, v15);
+    MyRoomControl__stopSvtVoice(this, v23);
     this->fields.type = 20;
-    MyRoomControl__setSvtFigureActive(this, 20, 1, v17);
+    MyRoomControl__setSvtFigureActive(this, 20, 1, v25);
     gameObject = (UnityEngine_Component_o *)this->fields.cgThumbnailDialog;
     if ( gameObject )
     {
@@ -8242,35 +8786,35 @@ void MyRoomControl__SetGallery_33729924(
       if ( gameObject )
       {
         UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 1, 0);
-        v18 = this->fields.cgThumbnailDialog;
-        v19 = *(System_Collections_Generic_List_GalleryEntity__o **)(v7 + 24);
-        v20 = *(_DWORD *)(v7 + 32);
-        v21 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-        System_Action___ctor(v21, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__0__, 0);
-        v22 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-        System_Action___ctor(v22, (Il2CppObject *)this, (intptr_t)Method_MyRoomControl_OnClickBack__, 0);
-        v23 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-        System_Action___ctor(v23, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__1__, 0);
-        if ( v18 )
+        v26 = this->fields.cgThumbnailDialog;
+        v27 = *(System_Collections_Generic_List_GalleryEntity__o **)(v7 + 24);
+        v28 = *(_DWORD *)(v7 + 32);
+        v29 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+        System_Action___ctor(v29, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__0__, 0);
+        v30 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+        System_Action___ctor(v30, (Il2CppObject *)this, (intptr_t)Method_MyRoomControl_OnClickBack__, 0);
+        v31 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+        System_Action___ctor(v31, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__1__, 0);
+        if ( v26 )
         {
-          CGThumbnailDialog__Open(v18, v19, v20, v21, v22, v23, 0);
+          CGThumbnailDialog__Open(v26, v27, v28, v29, v30, v31, 0);
           BasicHelper__SetActiveSafely((UnityEngine_Component_o *)this->fields.titleInfo, 0, 0);
           return;
         }
       }
     }
 LABEL_14:
-    sub_1C6BC60(gameObject, v9);
+    sub_1C71608(gameObject, v9);
   }
-  v16 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v24 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v16,
+    v24,
     (Il2CppObject *)v7,
     Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__2__,
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_9216/*"MyRoom/Gallery/Prefab"*/, v16, 1, 0);
+  AssetManager__loadAssetStorage((System_String_o *)StringLiteral_9220/*"MyRoom/Gallery/Prefab"*/, v24, 1, 0);
 }
 
 
@@ -8289,13 +8833,13 @@ void MyRoomControl__SetImageIdAndFormId(
   int32_t form; // w0
   MyroomServantSpecialImageEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CB16BE & 1) == 0 )
+  if ( (byte_4CC27CB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&ImageLimitCount_TypeInfo);
-    sub_1C6BA08(&UIStandFigureRender_TypeInfo);
-    byte_4CB16BE = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&ImageLimitCount_TypeInfo);
+    sub_1C713B0(&UIStandFigureRender_TypeInfo);
+    byte_4CC27CB = 1;
   }
   entity = 0;
   Id = ServantScriptMaster__getId(svtId, imageLimitCount, 0);
@@ -8307,7 +8851,7 @@ void MyRoomControl__SetImageIdAndFormId(
     v11 = ImageLimitCount__SpecialImageLimitCountToSpecialNum(imageLimitCount, 0);
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
     if ( !Master_object )
       goto LABEL_17;
     Master_object = (Il2CppObject *)MyroomServantSpecialImageMaster__TryGetEntity(
@@ -8324,7 +8868,7 @@ void MyRoomControl__SetImageIdAndFormId(
         goto LABEL_16;
       }
 LABEL_17:
-      sub_1C6BC60(Master_object, v13);
+      sub_1C71608(Master_object, v13);
     }
     Id = *imageId;
   }
@@ -8344,52 +8888,72 @@ void MyRoomControl__SetLayerChangeObj(MyRoomControl_o *this, const MethodInfo *m
   Il2CppObject *v6; // x22
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  struct System_Collections_Generic_List_PhotoLayerChangeComponent__o *v10; // x8
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  struct System_Collections_Generic_List_PhotoLayerChangeComponent__o *v14; // x8
   int32_t size; // w2
-  int v12; // w9
-  unsigned __int64 v13; // x20
-  char v14; // w8
-  char v15; // w28
+  int v16; // w9
+  unsigned __int64 v17; // x20
+  char v18; // w8
+  char v19; // w28
   UnityEngine_Transform_o *transform; // x0
   struct PhotoStandFigureComponent_array *photoStandFigures; // x8
-  PhotoStandFigureComponent_o *v18; // x8
-  UnityEngine_Transform_o *v19; // x21
+  PhotoStandFigureComponent_o *v22; // x8
+  UnityEngine_Transform_o *v23; // x21
   Il2CppObject *photoLayerChangeObj; // x22
-  char *v21; // x21
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  struct PhotoStandFigureComponent_array *v24; // x8
-  PhotoStandFigureComponent_o *v25; // x8
+  char *v25; // x21
   int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  __int64 v28; // x8
-  _QWORD *v29; // x9
-  __int64 v30; // x10
-  __int64 v31; // x8
-  char *v32; // x20
-  int32_t v33; // w2
-  const MethodInfo *v34; // x3
-  __int64 v35; // x1
-  char *v36; // x20
-  int32_t v37; // w2
-  const MethodInfo *v38; // x3
-  __int64 v39; // x1
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  struct PhotoStandFigureComponent_array *v32; // x8
+  PhotoStandFigureComponent_o *v33; // x8
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
+  __int64 v40; // x8
+  _QWORD *v41; // x9
+  __int64 v42; // x10
+  __int64 v43; // x8
+  char *v44; // x20
+  int32_t v45; // w2
+  int32_t v46; // w3
+  System_String_o *v47; // x4
+  int32_t v48; // w5
+  int64_t v49; // x6
+  System_String_o *v50; // x7
+  __int64 v51; // x1
+  char *v52; // x20
+  int32_t v53; // w2
+  int32_t v54; // w3
+  System_String_o *v55; // x4
+  int32_t v56; // w5
+  int64_t v57; // x6
+  System_String_o *v58; // x7
+  __int64 v59; // x1
 
-  if ( (byte_4CB16A5 & 1) == 0 )
+  if ( (byte_4CC27B2 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_PhotoLayerChangeComponent__TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_PhotoLayerChangeComponent___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__SetLayerChangeObj_b__412_0__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    byte_4CB16A5 = 1;
+    sub_1C713B0(&System_Action_PhotoLayerChangeComponent__TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_PhotoLayerChangeComponent___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__SetLayerChangeObj_b__412_0__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    byte_4CC27B2 = 1;
   }
   photoTargetList = MyRoomControl___c_TypeInfo;
   instantiateLayerChangeObjList = (System_Collections_Generic_List_object__o *)this->fields.instantiateLayerChangeObjList;
@@ -8407,41 +8971,41 @@ void MyRoomControl__SetLayerChangeObj(MyRoomControl_o *this, const MethodInfo *m
       photoTargetList = MyRoomControl___c_TypeInfo;
     }
     v6 = (Il2CppObject *)**((_QWORD **)photoTargetList + 23);
-    v5 = (System_Action_object__o *)sub_1C6BC54(System_Action_PhotoLayerChangeComponent__TypeInfo);
+    v5 = (System_Action_object__o *)sub_1C715FC(System_Action_PhotoLayerChangeComponent__TypeInfo);
     System_Action_object____ctor(v5, v6, Method_MyRoomControl___c__SetLayerChangeObj_b__412_0__, 0);
     static_fields = MyRoomControl___c_TypeInfo->static_fields;
     static_fields->__9__412_0 = (struct System_Action_PhotoLayerChangeComponent__o *)v5;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__412_0, (int32_t)v5, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__412_0, (int32_t)v5, v8, v9, v10, v11, v12, v13);
   }
   if ( !instantiateLayerChangeObjList )
     goto LABEL_53;
   System_Collections_Generic_List_object___ForEach(
     instantiateLayerChangeObjList,
     (System_Action_T__o *)v5,
-    (const MethodInfo_38013B4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
-  v10 = this->fields.instantiateLayerChangeObjList;
-  if ( !v10 )
+    (const MethodInfo_3811158 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
+  v14 = this->fields.instantiateLayerChangeObjList;
+  if ( !v14 )
     goto LABEL_53;
-  size = v10->fields._size;
-  v12 = v10->fields._version + 1;
-  v10->fields._size = 0;
-  v10->fields._version = v12;
+  size = v14->fields._size;
+  v16 = v14->fields._version + 1;
+  v14->fields._size = 0;
+  v14->fields._version = v16;
   if ( size >= 1 )
-    System_Array__Clear((System_Array_o *)v10->fields._items, 0, size, 0);
+    System_Array__Clear((System_Array_o *)v14->fields._items, 0, size, 0);
   if ( !this->fields.isOneShot )
   {
-    v13 = 0;
-    v14 = 1;
+    v17 = 0;
+    v18 = 1;
     do
     {
       photoTargetList = this->fields.photoTargetList;
       if ( !photoTargetList )
         goto LABEL_53;
-      v15 = v14;
+      v19 = v18;
       photoTargetList = (void *)System_Collections_Generic_List_Int32Enum___get_Item(
                                   (System_Collections_Generic_List_T__o *)photoTargetList,
-                                  v13,
-                                  (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+                                  v17,
+                                  (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
       if ( (_DWORD)photoTargetList == 1 )
       {
         photoTargetList = this->fields.photoMasterTexture;
@@ -8457,134 +9021,134 @@ void MyRoomControl__SetLayerChangeObj(MyRoomControl_o *this, const MethodInfo *m
         photoStandFigures = this->fields.photoStandFigures;
         if ( !photoStandFigures )
           goto LABEL_53;
-        if ( v13 >= LODWORD(photoStandFigures->max_length) )
+        if ( v17 >= LODWORD(photoStandFigures->max_length) )
           goto LABEL_54;
-        v18 = photoStandFigures->m_Items[v13];
-        if ( !v18 )
+        v22 = photoStandFigures->m_Items[v17];
+        if ( !v22 )
           goto LABEL_53;
-        photoTargetList = v18->fields.photoStandFigureBack;
+        photoTargetList = v22->fields.photoStandFigureBack;
         if ( !photoTargetList )
           goto LABEL_53;
         transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)photoTargetList, 0);
       }
-      v19 = transform;
+      v23 = transform;
       photoLayerChangeObj = (Il2CppObject *)this->fields.photoLayerChangeObj;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      photoTargetList = UnityEngine_Object__Instantiate_object__52199488(
+      photoTargetList = UnityEngine_Object__Instantiate_object__52264420(
                           photoLayerChangeObj,
-                          v19,
-                          (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_PhotoLayerChangeComponent___);
+                          v23,
+                          (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_PhotoLayerChangeComponent___);
       if ( !this->fields.photoTargetList )
         goto LABEL_53;
-      v21 = (char *)photoTargetList;
+      v25 = (char *)photoTargetList;
       photoTargetList = (void *)System_Collections_Generic_List_Int32Enum___get_Item(
                                   (System_Collections_Generic_List_T__o *)this->fields.photoTargetList,
-                                  v13,
-                                  (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+                                  v17,
+                                  (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
       if ( (_DWORD)photoTargetList == 1 )
       {
         method = (const MethodInfo *)this->fields.photoMasterPanel;
       }
       else
       {
-        v24 = this->fields.photoStandFigures;
-        if ( !v24 )
+        v32 = this->fields.photoStandFigures;
+        if ( !v32 )
           goto LABEL_53;
-        if ( v13 >= LODWORD(v24->max_length) )
+        if ( v17 >= LODWORD(v32->max_length) )
 LABEL_54:
-          sub_1C6BC68(photoTargetList);
-        v25 = v24->m_Items[v13];
-        if ( !v25 )
+          sub_1C71610(photoTargetList);
+        v33 = v32->m_Items[v17];
+        if ( !v33 )
           goto LABEL_53;
-        photoTargetList = v25->fields.photoStandFigureBack;
+        photoTargetList = v33->fields.photoStandFigureBack;
         if ( !photoTargetList )
           goto LABEL_53;
         photoTargetList = UnityEngine_Component__GetComponent_object_(
                             (UnityEngine_Component_o *)photoTargetList,
-                            (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                            (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIPanel___);
         method = (const MethodInfo *)photoTargetList;
       }
-      if ( !v21 )
+      if ( !v25 )
         goto LABEL_53;
-      *((_QWORD *)v21 + 4) = method;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 32), (int32_t)method, v22, v23);
+      *((_QWORD *)v25 + 4) = method;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v25 + 32), (int32_t)method, v26, v27, v28, v29, v30, v31);
       photoTargetList = this->fields.instantiateLayerChangeObjList;
       if ( !photoTargetList )
         goto LABEL_53;
-      v28 = *((_QWORD *)photoTargetList + 2);
-      v29 = Method_System_Collections_Generic_List_PhotoLayerChangeComponent__Add__;
+      v40 = *((_QWORD *)photoTargetList + 2);
+      v41 = Method_System_Collections_Generic_List_PhotoLayerChangeComponent__Add__;
       ++*((_DWORD *)photoTargetList + 7);
-      if ( !v28 )
+      if ( !v40 )
         goto LABEL_53;
-      v30 = *((int *)photoTargetList + 6);
-      if ( (unsigned int)v30 >= *(_DWORD *)(v28 + 24) )
+      v42 = *((int *)photoTargetList + 6);
+      if ( (unsigned int)v42 >= *(_DWORD *)(v40 + 24) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)photoTargetList,
-          (Il2CppObject *)v21,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v29[4] + 192LL) + 112LL));
+          (Il2CppObject *)v25,
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
       }
       else
       {
-        v31 = v28 + 8 * v30;
-        *((_DWORD *)photoTargetList + 6) = v30 + 1;
-        *(_QWORD *)(v31 + 32) = v21;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v31 + 32), (int32_t)v21, v26, v27);
+        v43 = v40 + 8 * v42;
+        *((_DWORD *)photoTargetList + 6) = v42 + 1;
+        *(_QWORD *)(v43 + 32) = v25;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v43 + 32), (int32_t)v25, v34, v35, v36, v37, v38, v39);
       }
-      v14 = 0;
-      v13 = 1;
+      v18 = 0;
+      v17 = 1;
     }
-    while ( (v15 & 1) != 0 );
+    while ( (v19 & 1) != 0 );
     photoTargetList = this->fields.instantiateLayerChangeObjList;
     if ( photoTargetList )
     {
       photoTargetList = System_Collections_Generic_List_object___get_Item(
                           (System_Collections_Generic_List_object__o *)photoTargetList,
                           0,
-                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
+                          (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
       if ( this->fields.instantiateLayerChangeObjList )
       {
-        v32 = (char *)photoTargetList;
+        v44 = (char *)photoTargetList;
         photoTargetList = System_Collections_Generic_List_object___get_Item(
                             (System_Collections_Generic_List_object__o *)this->fields.instantiateLayerChangeObjList,
                             1,
-                            (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
+                            (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
         if ( photoTargetList )
         {
-          if ( v32 )
+          if ( v44 )
           {
-            v35 = *((_QWORD *)photoTargetList + 4);
-            *((_QWORD *)v32 + 5) = v35;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v32 + 40), v35, v33, v34);
+            v51 = *((_QWORD *)photoTargetList + 4);
+            *((_QWORD *)v44 + 5) = v51;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v44 + 40), v51, v45, v46, v47, v48, v49, v50);
             photoTargetList = this->fields.instantiateLayerChangeObjList;
             if ( photoTargetList )
             {
               photoTargetList = System_Collections_Generic_List_object___get_Item(
                                   (System_Collections_Generic_List_object__o *)photoTargetList,
                                   1,
-                                  (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
+                                  (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
               if ( this->fields.instantiateLayerChangeObjList )
               {
-                v36 = (char *)photoTargetList;
+                v52 = (char *)photoTargetList;
                 photoTargetList = System_Collections_Generic_List_object___get_Item(
                                     (System_Collections_Generic_List_object__o *)this->fields.instantiateLayerChangeObjList,
                                     0,
-                                    (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
+                                    (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
                 if ( photoTargetList )
                 {
-                  if ( v36 )
+                  if ( v52 )
                   {
-                    v39 = *((_QWORD *)photoTargetList + 4);
-                    *((_QWORD *)v36 + 5) = v39;
-                    sub_1C6B9AC((CGThumbnailListItem_o *)(v36 + 40), v39, v37, v38);
+                    v59 = *((_QWORD *)photoTargetList + 4);
+                    *((_QWORD *)v52 + 5) = v59;
+                    sub_1C71354((GrandQuestFolderBoardItem_o *)(v52 + 40), v59, v53, v54, v55, v56, v57, v58);
                     photoTargetList = this->fields.instantiateLayerChangeObjList;
                     if ( photoTargetList )
                     {
                       photoTargetList = System_Collections_Generic_List_object___get_Item(
                                           (System_Collections_Generic_List_object__o *)photoTargetList,
                                           this->fields.isChangePhotoPosition,
-                                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
+                                          (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__get_Item__);
                       if ( photoTargetList )
                       {
                         PhotoLayerChangeComponent__InitDepth((PhotoLayerChangeComponent_o *)photoTargetList, 0);
@@ -8600,7 +9164,7 @@ LABEL_54:
       }
     }
 LABEL_53:
-    sub_1C6BC60(photoTargetList, method);
+    sub_1C71608(photoTargetList, method);
   }
 }
 
@@ -8615,15 +9179,15 @@ void MyRoomControl__SetLayerMultipleServant(MyRoomControl_o *this, int32_t front
   int32_t v8; // w1
 
   v4 = this;
-  if ( (byte_4CB168B & 1) == 0 )
+  if ( (byte_4CC2798 & 1) == 0 )
   {
-    this = (MyRoomControl_o *)sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4CB168B = 1;
+    this = (MyRoomControl_o *)sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4CC2798 = 1;
   }
   multipleStandFigureBacks = v4->fields.multipleStandFigureBacks;
   if ( !multipleStandFigureBacks )
 LABEL_13:
-    sub_1C6BC60(this, *(_QWORD *)&frontIndex);
+    sub_1C71608(this, *(_QWORD *)&frontIndex);
   v6 = 0;
   while ( 1 )
   {
@@ -8631,13 +9195,13 @@ LABEL_13:
     if ( (int)v6 >= max_length )
       break;
     if ( (unsigned int)v6 >= max_length )
-      sub_1C6BC68(this);
+      sub_1C71610(this);
     this = (MyRoomControl_o *)multipleStandFigureBacks->m_Items[v6];
     if ( this )
     {
       this = (MyRoomControl_o *)UnityEngine_Component__GetComponent_object_(
                                   (UnityEngine_Component_o *)this,
-                                  (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                                  (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIPanel___);
       if ( this )
       {
         v8 = frontIndex == (_DWORD)v6 ? 16 : 15;
@@ -8659,7 +9223,7 @@ void MyRoomControl__SetMaskCollider(MyRoomControl_o *this, bool flag, const Meth
 
   maskBoxCollider = (UnityEngine_Collider_o *)this->fields.maskBoxCollider;
   if ( !maskBoxCollider )
-    sub_1C6BC60(0, flag);
+    sub_1C71608(0, flag);
   UnityEngine_Collider__set_enabled(maskBoxCollider, flag, 0);
 }
 
@@ -8674,57 +9238,65 @@ void MyRoomControl__SetMaterialSvtFigure(
   System_Collections_Generic_List_int__o *materialImageIdList; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  const MethodInfo *v22; // x2
   _BOOL4 isServantMaterial; // w8
-  const MethodInfo *v16; // x1
+  const MethodInfo *v24; // x1
   MyRoomStateMaterial_o *mStateMaterial; // x22
   int32_t Item; // w23
-  MyRoomControl_o *v19; // x0
-  int32_t v20; // w3
-  const MethodInfo *v21; // x5
+  MyRoomControl_o *v27; // x0
+  int32_t v28; // w3
+  const MethodInfo *v29; // x5
   StandFigureBack_o *standFigureBack; // x19
-  int32_t v23; // w21
-  int32_t v24; // w22
-  int32_t v25; // w23
-  System_Action_o *v26; // x24
-  CombineRootComponent_c *v27; // x0
+  int32_t v31; // w21
+  int32_t v32; // w22
+  int32_t v33; // w23
+  System_Action_o *v34; // x24
+  CombineRootComponent_c *v35; // x0
   System_String_o *COMBINE_ASSET_PATH; // x19
-  AssetLoader_LoadEndDataHandler_o *v29; // x21
+  AssetLoader_LoadEndDataHandler_o *v37; // x21
   int32_t imageId; // [xsp+1Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CB164D & 1) == 0 )
+  if ( (byte_4CC275A & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&CombineRootComponent_TypeInfo);
-    sub_1C6BA08(&ImageLimitCount_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_g__OnEnd_0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass243_0_TypeInfo);
-    byte_4CB164D = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&CombineRootComponent_TypeInfo);
+    sub_1C713B0(&ImageLimitCount_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_g__OnEnd_0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass243_0_TypeInfo);
+    byte_4CC275A = 1;
   }
   imageId = 0;
-  v7 = sub_1C6BC54(MyRoomControl___c__DisplayClass243_0_TypeInfo);
+  v7 = sub_1C715FC(MyRoomControl___c__DisplayClass243_0_TypeInfo);
   MyRoomControl___c__DisplayClass243_0___ctor((MyRoomControl___c__DisplayClass243_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_19;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = end_act;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)end_act, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)end_act, v16, v17, v18, v19, v20, v21);
   *(_DWORD *)(v7 + 32) = servantId;
   isServantMaterial = this->fields.isServantMaterial;
   this->fields.materialServantId = servantId;
   if ( !isServantMaterial )
   {
     this->fields.isServantMaterial = 1;
-    MyRoomControl__SetupMaterialSvtImageIdList(this, servantId, v14);
-    MyRoomControl__SetChangeBtn(this, v16);
+    MyRoomControl__SetupMaterialSvtImageIdList(this, servantId, v22);
+    MyRoomControl__SetChangeBtn(this, v24);
     servantId = *(_DWORD *)(v7 + 32);
   }
   materialImageIdList = this->fields.materialImageIdList;
@@ -8734,7 +9306,7 @@ void MyRoomControl__SetMaterialSvtFigure(
   Item = System_Collections_Generic_List_int___get_Item(
            materialImageIdList,
            this->fields.materialFigureSvtDispIdx,
-           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+           (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
   materialImageIdList = (System_Collections_Generic_List_int__o *)ImageLimitCount__GetLimitCountByImageLimitCostumeIn(
@@ -8747,49 +9319,49 @@ void MyRoomControl__SetMaterialSvtFigure(
   this->fields.isSvtLoading = 1;
   if ( !materialImageIdList )
     goto LABEL_19;
-  v19 = (MyRoomControl_o *)System_Collections_Generic_List_int___get_Item(
+  v27 = (MyRoomControl_o *)System_Collections_Generic_List_int___get_Item(
                              materialImageIdList,
                              this->fields.materialFigureSvtDispIdx,
-                             (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
-  v20 = *(_DWORD *)(v7 + 32);
-  *(_DWORD *)(v7 + 36) = (_DWORD)v19;
-  MyRoomControl__SetImageIdAndFormId(v19, &imageId, (int32_t *)(v7 + 40), v20, (int32_t)v19, v21);
+                             (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
+  v28 = *(_DWORD *)(v7 + 32);
+  *(_DWORD *)(v7 + 36) = (_DWORD)v27;
+  MyRoomControl__SetImageIdAndFormId(v27, &imageId, (int32_t *)(v7 + 40), v28, (int32_t)v27, v29);
   if ( this->fields.combineAssetData )
   {
     standFigureBack = this->fields.standFigureBack;
-    v23 = *(_DWORD *)(v7 + 32);
-    v24 = *(_DWORD *)(v7 + 36);
-    v25 = *(_DWORD *)(v7 + 40);
-    v26 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v31 = *(_DWORD *)(v7 + 32);
+    v32 = *(_DWORD *)(v7 + 36);
+    v33 = *(_DWORD *)(v7 + 40);
+    v34 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
-      v26,
+      v34,
       (Il2CppObject *)v7,
       Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_g__OnEnd_0__,
       0);
     if ( standFigureBack )
     {
-      StandFigureBack__SetMyRoomStandFigure(standFigureBack, v23, v24, 1, 0, v25, 10, v26, 0, 0);
+      StandFigureBack__SetMyRoomStandFigure(standFigureBack, v31, v32, 1, 0, v33, 10, v34, 0, 0);
       return;
     }
 LABEL_19:
-    sub_1C6BC60(materialImageIdList, v9);
+    sub_1C71608(materialImageIdList, v9);
   }
-  v27 = CombineRootComponent_TypeInfo;
+  v35 = CombineRootComponent_TypeInfo;
   if ( !CombineRootComponent_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CombineRootComponent_TypeInfo);
-    v27 = CombineRootComponent_TypeInfo;
+    v35 = CombineRootComponent_TypeInfo;
   }
-  COMBINE_ASSET_PATH = v27->static_fields->COMBINE_ASSET_PATH;
-  v29 = (AssetLoader_LoadEndDataHandler_o *)sub_1C6BC54(AssetLoader_LoadEndDataHandler_TypeInfo);
+  COMBINE_ASSET_PATH = v35->static_fields->COMBINE_ASSET_PATH;
+  v37 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
-    v29,
+    v37,
     (Il2CppObject *)v7,
     Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_b__1__,
     0);
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__loadAssetStorage(COMBINE_ASSET_PATH, v29, 1, 0);
+  AssetManager__loadAssetStorage(COMBINE_ASSET_PATH, v37, 1, 0);
 }
 
 
@@ -8816,7 +9388,7 @@ void MyRoomControl__SetMultipleViewButtonColor(MyRoomControl_o *this, const Meth
         UIWidget__set_color(multipleViewButtonSprite, v7, 0),
         (multipleViewButtonSprite = (UIWidget_o *)this->fields.multipleViewButtonLabel) == 0) )
   {
-    sub_1C6BC60(multipleViewButtonSprite, v3);
+    sub_1C71608(multipleViewButtonSprite, v3);
   }
   v8.fields.a = 1.0;
   v8.fields.r = v6;
@@ -8832,70 +9404,78 @@ void MyRoomControl__SetMyRoomStandFigure(MyRoomControl_o *this, System_Action_o 
   System_Collections_Generic_List_int__o *imageIdList; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x3
-  bool _40657328; // w8
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  const MethodInfo *v20; // x3
+  bool _40699620; // w8
   MyRoomControl_o *Item; // x0
-  int32_t v15; // w21
-  const MethodInfo *v16; // x5
+  int32_t v23; // w21
+  const MethodInfo *v24; // x5
   StandFigureBack_o *standFigureBack; // x22
   int32_t figureSvtId; // w23
-  int32_t v19; // w19
-  System_Action_o *v20; // x24
+  int32_t v27; // w19
+  System_Action_o *v28; // x24
   int32_t formId[2]; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4CB164B & 1) == 0 )
+  if ( (byte_4CC2758 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass241_0__SetMyRoomStandFigure_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass241_0_TypeInfo);
-    byte_4CB164B = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass241_0__SetMyRoomStandFigure_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass241_0_TypeInfo);
+    byte_4CC2758 = 1;
   }
   *(_QWORD *)formId = 0;
-  v5 = sub_1C6BC54(MyRoomControl___c__DisplayClass241_0_TypeInfo);
+  v5 = sub_1C715FC(MyRoomControl___c__DisplayClass241_0_TypeInfo);
   MyRoomControl___c__DisplayClass241_0___ctor((MyRoomControl___c__DisplayClass241_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_11;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = end_act;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)end_act, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)end_act, v14, v15, v16, v17, v18, v19);
   if ( this->fields.isServantMaterial )
   {
-    MyRoomControl__SetMaterialSvtFigure(this, this->fields.materialServantId, *(System_Action_o **)(v5 + 24), v12);
+    MyRoomControl__SetMaterialSvtFigure(this, this->fields.materialServantId, *(System_Action_o **)(v5 + 24), v20);
     return;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  _40657328 = TutorialFlag__Get_40657328(126, 0);
+  _40699620 = TutorialFlag__Get_40699620(126, 0);
   imageIdList = this->fields.imageIdList;
-  this->fields.isHeroineReave = _40657328;
+  this->fields.isHeroineReave = _40699620;
   this->fields.isSvtLoading = 1;
   if ( !imageIdList )
     goto LABEL_11;
   Item = (MyRoomControl_o *)System_Collections_Generic_List_int___get_Item(
                               imageIdList,
                               this->fields.figureSvtDispIdx,
-                              (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
-  v15 = (int)Item;
-  MyRoomControl__SetImageIdAndFormId(Item, formId, &formId[1], this->fields.figureSvtId, (int32_t)Item, v16);
+                              (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
+  v23 = (int)Item;
+  MyRoomControl__SetImageIdAndFormId(Item, formId, &formId[1], this->fields.figureSvtId, (int32_t)Item, v24);
   standFigureBack = this->fields.standFigureBack;
   figureSvtId = this->fields.figureSvtId;
-  v19 = formId[1];
-  v20 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v27 = formId[1];
+  v28 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v20,
+    v28,
     (Il2CppObject *)v5,
     Method_MyRoomControl___c__DisplayClass241_0__SetMyRoomStandFigure_b__0__,
     0);
   if ( !standFigureBack )
 LABEL_11:
-    sub_1C6BC60(imageIdList, v7);
-  StandFigureBack__SetMyRoomStandFigure(standFigureBack, figureSvtId, v15, 1, 0, v19, 10, v20, 0, 0);
+    sub_1C71608(imageIdList, v7);
+  StandFigureBack__SetMyRoomStandFigure(standFigureBack, figureSvtId, v23, 1, 0, v27, 10, v28, 0, 0);
 }
 
 
@@ -8905,51 +9485,59 @@ void MyRoomControl__SetMySvtFigure(MyRoomControl_o *this, System_Action_o *end_a
   System_Collections_Generic_List_int__o *materialImageIdList; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   int32_t materialServantId; // w21
   int32_t Item; // w22
-  const MethodInfo *v14; // x1
-  System_Action_o *v15; // x21
-  const MethodInfo *v16; // x2
+  const MethodInfo *v22; // x1
+  System_Action_o *v23; // x21
+  const MethodInfo *v24; // x2
 
-  if ( (byte_4CB164C & 1) == 0 )
+  if ( (byte_4CC2759 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&MaterialServantLimitCountManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass242_0__SetMySvtFigure_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass242_0_TypeInfo);
-    byte_4CB164C = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&MaterialServantLimitCountManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass242_0__SetMySvtFigure_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass242_0_TypeInfo);
+    byte_4CC2759 = 1;
   }
-  v5 = sub_1C6BC54(MyRoomControl___c__DisplayClass242_0_TypeInfo);
+  v5 = sub_1C715FC(MyRoomControl___c__DisplayClass242_0_TypeInfo);
   MyRoomControl___c__DisplayClass242_0___ctor((MyRoomControl___c__DisplayClass242_0_o *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 16) = this,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9),
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13),
         *(_QWORD *)(v5 + 24) = end_act,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)end_act, v10, v11),
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)end_act, v14, v15, v16, v17, v18, v19),
         materialImageIdList = this->fields.materialImageIdList,
         this->fields.isServantMaterial = 0,
         !materialImageIdList) )
   {
-    sub_1C6BC60(materialImageIdList, v7);
+    sub_1C71608(materialImageIdList, v7);
   }
   materialServantId = this->fields.materialServantId;
   Item = System_Collections_Generic_List_int___get_Item(
            materialImageIdList,
            this->fields.materialFigureSvtDispIdx,
-           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+           (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
   if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MaterialServantLimitCountManager_TypeInfo);
   MaterialServantLimitCountManager__SetLimitCount(materialServantId, Item, 0);
   MaterialServantLimitCountManager__WriteData(0);
   this->fields.materialServantId = -1;
-  MyRoomControl__SetChangeBtn(this, v14);
-  v15 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v15, (Il2CppObject *)v5, Method_MyRoomControl___c__DisplayClass242_0__SetMySvtFigure_b__0__, 0);
-  MyRoomControl__SetMyRoomStandFigure(this, v15, v16);
+  MyRoomControl__SetChangeBtn(this, v22);
+  v23 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v23, (Il2CppObject *)v5, Method_MyRoomControl___c__DisplayClass242_0__SetMySvtFigure_b__0__, 0);
+  MyRoomControl__SetMyRoomStandFigure(this, v23, v24);
 }
 
 
@@ -8976,7 +9564,7 @@ void MyRoomControl__SetPhotoCampaignButtonColor(MyRoomControl_o *this, const Met
         UIWidget__set_color(photoCampaignButtonSprite, v7, 0),
         (photoCampaignButtonSprite = (UIWidget_o *)this->fields.photoCampaignButtonLabel) == 0) )
   {
-    sub_1C6BC60(photoCampaignButtonSprite, v3);
+    sub_1C71608(photoCampaignButtonSprite, v3);
   }
   v8.fields.a = 1.0;
   v8.fields.r = v6;
@@ -9007,7 +9595,7 @@ void MyRoomControl__SetPhotoCampaignSprite(
       return;
     }
 LABEL_6:
-    sub_1C6BC60(photoCampaignAtlas, sprite);
+    sub_1C71608(photoCampaignAtlas, sprite);
   }
 }
 
@@ -9020,16 +9608,24 @@ void MyRoomControl__SetPhotoCampaignUi(MyRoomControl_o *this, bool isActive, con
   UnityEngine_Transform_o *transform; // x21
   Il2CppObject *v8; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   UnityEngine_Object_o *photoCampaignInstantiateCameraEffect; // x21
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
 
-  if ( (byte_4CB16B4 & 1) == 0 )
+  if ( (byte_4CC27C1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB16B4 = 1;
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC27C1 = 1;
   }
   photoCampaignCameraButton = this->fields.photoCampaignCameraButton;
   if ( !photoCampaignCameraButton )
@@ -9053,12 +9649,20 @@ void MyRoomControl__SetPhotoCampaignUi(MyRoomControl_o *this, bool isActive, con
       transform = UnityEngine_GameObject__get_transform(photoCampaignCameraButton, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v8 = UnityEngine_Object__Instantiate_object__52199488(
+      v8 = UnityEngine_Object__Instantiate_object__52264420(
              photoCampaignCameraEffect,
              transform,
-             (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+             (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
       this->fields.photoCampaignInstantiateCameraEffect = (struct UnityEngine_GameObject_o *)v8;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoCampaignInstantiateCameraEffect, (int32_t)v8, v9, v10);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&this->fields.photoCampaignInstantiateCameraEffect,
+        (int32_t)v8,
+        v9,
+        v10,
+        v11,
+        v12,
+        v13,
+        v14);
       photoCampaignCameraButton = (UnityEngine_GameObject_o *)this->fields.titleInfo;
       if ( photoCampaignCameraButton )
       {
@@ -9067,14 +9671,22 @@ void MyRoomControl__SetPhotoCampaignUi(MyRoomControl_o *this, bool isActive, con
       }
     }
 LABEL_16:
-    sub_1C6BC60(photoCampaignCameraButton, isActive);
+    sub_1C71608(photoCampaignCameraButton, isActive);
   }
   photoCampaignInstantiateCameraEffect = (UnityEngine_Object_o *)this->fields.photoCampaignInstantiateCameraEffect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676(photoCampaignInstantiateCameraEffect, 0);
+  UnityEngine_Object__Destroy_71724608(photoCampaignInstantiateCameraEffect, 0);
   this->fields.photoCampaignInstantiateCameraEffect = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoCampaignInstantiateCameraEffect, 0, v12, v13);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.photoCampaignInstantiateCameraEffect,
+    0,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21);
   photoCampaignCameraButton = (UnityEngine_GameObject_o *)this->fields.titleInfo;
   if ( !photoCampaignCameraButton )
     goto LABEL_16;
@@ -9092,10 +9704,10 @@ void MyRoomControl__SetPhotoFrameSprite(
   __int64 v8; // x1
   UIAtlas_o *v9; // x0
 
-  if ( (byte_4CB1698 & 1) == 0 )
+  if ( (byte_4CC27A5 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB1698 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC27A5 = 1;
   }
   photoFrameAtlas = (UnityEngine_Object_o *)this->fields.photoFrameAtlas;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -9115,7 +9727,7 @@ void MyRoomControl__SetPhotoFrameSprite(
         return;
       }
 LABEL_11:
-      sub_1C6BC60(v9, v8);
+      sub_1C71608(v9, v8);
     }
   }
 }
@@ -9131,13 +9743,13 @@ void MyRoomControl__SetPlayButtonAnimation(MyRoomControl_o *this, const MethodIn
   UITweener_o *v8; // x21
   struct System_Collections_Generic_List_ServantVoiceData____o *voiceList; // x8
 
-  if ( (byte_4CB1656 & 1) == 0 )
+  if ( (byte_4CC2763 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB1656 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_TweenAlpha___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_TweenScale___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC2763 = 1;
   }
   playBtnImg = (UnityEngine_Object_o *)this->fields.playBtnImg;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -9153,27 +9765,27 @@ void MyRoomControl__SetPlayButtonAnimation(MyRoomControl_o *this, const MethodIn
       goto LABEL_21;
     voicePlayEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(voicePlayEffect, 0);
     v6 = (UnityEngine_Transform_o *)voicePlayEffect;
-    if ( !byte_4CAFC0E )
+    if ( !byte_4CC0D0E )
     {
-      voicePlayEffect = (UnityEngine_GameObject_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC0E = 1;
+      voicePlayEffect = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D0E = 1;
     }
     if ( !v6
       || (UnityEngine_Transform__set_localScale(v6, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
           (voicePlayEffect = this->fields.voicePlayEffect) == 0)
       || (voicePlayEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                           voicePlayEffect,
-                                                          (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_TweenScale___),
+                                                          (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_TweenScale___),
           !this->fields.voicePlayEffect)
       || (v7 = (UITweener_o *)voicePlayEffect,
           voicePlayEffect = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                           this->fields.voicePlayEffect,
-                                                          (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___),
+                                                          (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_TweenAlpha___),
           !v7)
       || (v8 = (UITweener_o *)voicePlayEffect, UITweener__set_tweenFactor(v7, 0.0, 0), !v8) )
     {
 LABEL_21:
-      sub_1C6BC60(voicePlayEffect, v4);
+      sub_1C71608(voicePlayEffect, v4);
     }
     UITweener__set_tweenFactor(v8, 0.0, 0);
     voiceList = this->fields.voiceList;
@@ -9188,18 +9800,30 @@ LABEL_21:
       v8->fields.style = 0;
       this->fields.isVoicePlaying = 0;
     }
-    UITweener__Play_49754572(v7, 1, 0);
-    UITweener__Play_49754572(v8, 1, 0);
+    UITweener__Play_49819504(v7, 1, 0);
+    UITweener__Play_49819504(v8, 1, 0);
   }
 }
 
 
 void MyRoomControl__SetSceneJumpInfo(MyRoomControl_o *this, SceneJumpInfo_o *info, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.sceneJumpInfo = info;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.sceneJumpInfo, (int32_t)info, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.sceneJumpInfo,
+    (int32_t)info,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -9212,8 +9836,8 @@ void MyRoomControl__SetServantMenu(MyRoomControl_o *this, const MethodInfo *meth
   MyRoomControl__stopSvtVoice(this, method);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_1C6BC60(0, v3);
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 44, 0, 0);
+    sub_1C71608(0, v3);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 44, 0, 0);
   this->fields.type = 1;
   MyRoomControl__setSvtFigureActive(this, 1, 1, v5);
 }
@@ -9226,7 +9850,7 @@ void MyRoomControl__SetServantMenuTop(MyRoomControl_o *this, const MethodInfo *m
 
   mStateMaterial = this->fields.mStateMaterial;
   if ( !mStateMaterial )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   mStateMaterial->fields.isServantMenuTop = 1;
   MyRoomControl__SetState(this, 0, v2);
 }
@@ -9237,18 +9861,18 @@ void MyRoomControl__SetState(MyRoomControl_o *this, int32_t state, const MethodI
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4CB1643 & 1) == 0 )
+  if ( (byte_4CC2750 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_CStateManager_MyRoomControl__setState__);
-    byte_4CB1643 = 1;
+    sub_1C713B0(&Method_CStateManager_MyRoomControl__setState__);
+    byte_4CC2750 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( !mFSM )
-    sub_1C6BC60(0, *(_QWORD *)&state);
+    sub_1C71608(0, *(_QWORD *)&state);
   CStateManager_object___setState(
     mFSM,
     state,
-    (const MethodInfo_33849F8 *)Method_CStateManager_MyRoomControl__setState__);
+    (const MethodInfo_339479C *)Method_CStateManager_MyRoomControl__setState__);
 }
 
 
@@ -9261,19 +9885,19 @@ void MyRoomControl__SetupFrontObject(MyRoomControl_o *this, const MethodInfo *me
   int32_t v7; // w1
   MyRoomFrontObjectManager_o *frontObjectManager; // x0
 
-  if ( (byte_4CB1637 & 1) == 0 )
+  if ( (byte_4CC2744 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_MyRoomAddMaster___);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB1637 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_MyRoomAddMaster___);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC2744 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_MyRoomAddMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_MyRoomAddMaster___);
   v6 = (MyRoomAddMaster_o *)MasterData_object;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
@@ -9283,7 +9907,7 @@ void MyRoomControl__SetupFrontObject(MyRoomControl_o *this, const MethodInfo *me
         !this->fields.frontObjectManager) )
   {
 LABEL_11:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   v7 = (int)Instance;
   frontObjectManager = this->fields.frontObjectManager;
@@ -9323,21 +9947,21 @@ void MyRoomControl__SetupMaterialSvtImageIdList(MyRoomControl_o *this, int32_t s
 
   v3 = servantId;
   v4 = this;
-  if ( (byte_4CB1639 & 1) == 0 )
+  if ( (byte_4CC2746 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&ImageLimitCount_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&MaterialServantLimitCountManager_TypeInfo);
-    this = (MyRoomControl_o *)sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB1639 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&ImageLimitCount_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&MaterialServantLimitCountManager_TypeInfo);
+    this = (MyRoomControl_o *)sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC2746 = 1;
   }
   materialImageIdList = v4->fields.materialImageIdList;
   v4->fields.materialFigureSvtDispIdx = 0;
@@ -9346,12 +9970,12 @@ void MyRoomControl__SetupMaterialSvtImageIdList(MyRoomControl_o *this, int32_t s
   v6 = materialImageIdList->fields._version + 1;
   materialImageIdList->fields._size = 0;
   materialImageIdList->fields._version = v6;
-  this = (MyRoomControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (MyRoomControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_43;
   this = (MyRoomControl_o *)DataManager__GetMasterData_object_(
                               (DataManager_o *)this,
-                              (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                              (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   usrData = v4->fields.usrData;
   if ( !usrData )
     goto LABEL_43;
@@ -9373,12 +9997,12 @@ void MyRoomControl__SetupMaterialSvtImageIdList(MyRoomControl_o *this, int32_t s
       if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
       ImageLimitCount = ImageLimitCount__GetImageLimitCount(v3, v10, 0);
-      this = (MyRoomControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (MyRoomControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         break;
       this = (MyRoomControl_o *)DataManager__GetMasterData_object_(
                                   (DataManager_o *)this,
-                                  (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
+                                  (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantLimitImageMaster___);
       if ( !this )
         break;
       this = (MyRoomControl_o *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -9392,7 +10016,7 @@ void MyRoomControl__SetupMaterialSvtImageIdList(MyRoomControl_o *this, int32_t s
       this = (MyRoomControl_o *)System_Collections_Generic_List_int___Contains(
                                   v4->fields.materialImageIdList,
                                   (int32_t)this,
-                                  (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__);
+                                  (const MethodInfo_37F3A6C *)Method_System_Collections_Generic_List_int__Contains__);
       if ( ((unsigned __int8)this & 1) == 0 )
       {
         this = (MyRoomControl_o *)v4->fields.materialImageIdList;
@@ -9409,7 +10033,7 @@ void MyRoomControl__SetupMaterialSvtImageIdList(MyRoomControl_o *this, int32_t s
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)this,
             v12,
-            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+            *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
         }
         else
         {
@@ -9421,7 +10045,7 @@ void MyRoomControl__SetupMaterialSvtImageIdList(MyRoomControl_o *this, int32_t s
         goto LABEL_22;
     }
 LABEL_43:
-    sub_1C6BC60(this, *(_QWORD *)&servantId);
+    sub_1C71608(this, *(_QWORD *)&servantId);
   }
 LABEL_22:
   this = (MyRoomControl_o *)MyRoomControl__GetSortedCostumeIds(this, v3, v8);
@@ -9435,7 +10059,7 @@ LABEL_22:
     do
     {
       if ( v18 >= (unsigned int)m_CancellationTokenSource )
-        sub_1C6BC68(this);
+        sub_1C71610(this);
       *(_QWORD *)&servantId = *((unsigned int *)&v17->fields.myRoomData + v18);
       if ( servantId >= 1 )
       {
@@ -9453,7 +10077,7 @@ LABEL_22:
           System_Collections_Generic_List_int___AddWithResize(
             (System_Collections_Generic_List_int__o *)this,
             servantId,
-            *(const MethodInfo_37E3950 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+            *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
         }
         else
         {
@@ -9470,7 +10094,7 @@ LABEL_22:
   LimitCount = MaterialServantLimitCountManager__GetLimitCount(v3, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (MyRoomControl_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  this = (MyRoomControl_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   if ( !this )
     goto LABEL_43;
   this = (MyRoomControl_o *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -9488,7 +10112,7 @@ LABEL_22:
     this = (MyRoomControl_o *)System_Collections_Generic_List_int___get_Item(
                                 v23,
                                 v25,
-                                (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
     if ( (_DWORD)this == v24 )
     {
       v4->fields.materialFigureSvtDispIdx = v25;
@@ -9508,7 +10132,7 @@ void MyRoomControl__ShowContinueDeviceMenu(MyRoomControl_o *this, const MethodIn
 
   continueDeviceComp = this->fields.continueDeviceComp;
   if ( !continueDeviceComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ContinueDeviceComponent__openMenu(continueDeviceComp, 0);
 }
 
@@ -9517,14 +10141,14 @@ void MyRoomControl__Start(MyRoomControl_o *this, const MethodInfo *method)
 {
   Gesture_EventHandler_o *v3; // x20
 
-  if ( (byte_4CB163F & 1) == 0 )
+  if ( (byte_4CC274C & 1) == 0 )
   {
-    sub_1C6BA08(&Gesture_EventHandler_TypeInfo);
-    sub_1C6BA08(&FingerGestures_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_FingerGestures_OnGestureEvent__);
-    byte_4CB163F = 1;
+    sub_1C713B0(&Gesture_EventHandler_TypeInfo);
+    sub_1C713B0(&FingerGestures_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_FingerGestures_OnGestureEvent__);
+    byte_4CC274C = 1;
   }
-  v3 = (Gesture_EventHandler_o *)sub_1C6BC54(Gesture_EventHandler_TypeInfo);
+  v3 = (Gesture_EventHandler_o *)sub_1C715FC(Gesture_EventHandler_TypeInfo);
   Gesture_EventHandler___ctor(v3, (Il2CppObject *)this, Method_MyRoomControl_FingerGestures_OnGestureEvent__, 0);
   if ( !FingerGestures_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(FingerGestures_TypeInfo);
@@ -9538,19 +10162,23 @@ System_Collections_IEnumerator_o *MyRoomControl__StartCameraEffect(MyRoomControl
   __int64 v4; // x0
   __int64 v5; // x1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB16AC & 1) == 0 )
+  if ( (byte_4CC27B9 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl__StartCameraEffect_d__420_TypeInfo);
-    byte_4CB16AC = 1;
+    sub_1C713B0(&MyRoomControl__StartCameraEffect_d__420_TypeInfo);
+    byte_4CC27B9 = 1;
   }
-  v3 = sub_1C6BC54(MyRoomControl__StartCameraEffect_d__420_TypeInfo);
+  v3 = sub_1C715FC(MyRoomControl__StartCameraEffect_d__420_TypeInfo);
   MyRoomControl__StartCameraEffect_d__420___ctor((MyRoomControl__StartCameraEffect_d__420_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C6BC60(v4, v5);
+    sub_1C71608(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -9570,15 +10198,15 @@ void MyRoomControl__TransitionMyRoomTop(MyRoomControl_o *this, const MethodInfo 
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v14; // x21
 
-  if ( (byte_4CB16B1 & 1) == 0 )
+  if ( (byte_4CC27BE & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Clear__);
-    sub_1C6BA08(&Method_MyRoomControl__TransitionMyRoomTop_b__425_0__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_4CB16B1 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Clear__);
+    sub_1C713B0(&Method_MyRoomControl__TransitionMyRoomTop_b__425_0__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4CC27BE = 1;
   }
   MyRoomControl__SetBackButtonIgnore(this, 1, v2);
   photoTargetList = this->fields.photoTargetList;
@@ -9595,11 +10223,11 @@ void MyRoomControl__TransitionMyRoomTop(MyRoomControl_o *this, const MethodInfo 
   temporaryPhotoTargetList->fields._version = v9;
   this->fields.isChangePhotoPosition = 0;
   this->fields.photoState = 0;
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   MissionNotifyManager__EndPause((MissionNotifyManager_o *)Instance, 0);
-  v10 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v10 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v11 = AvalonSceneManager_TypeInfo;
   v12 = (CommonUI_o *)v10;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -9608,11 +10236,11 @@ void MyRoomControl__TransitionMyRoomTop(MyRoomControl_o *this, const MethodInfo 
     v11 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v11->static_fields->DEFAULT_FADE_TIME;
-  v14 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v14 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v14, (Il2CppObject *)this, Method_MyRoomControl__TransitionMyRoomTop_b__425_0__, 0);
   if ( !v12 )
 LABEL_10:
-    sub_1C6BC60(Instance, v5);
+    sub_1C71608(Instance, v5);
   CommonUI__maskFadeout(v12, 1, DEFAULT_FADE_TIME, v14, 0);
 }
 
@@ -9621,14 +10249,14 @@ void MyRoomControl__Update(MyRoomControl_o *this, const MethodInfo *method)
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4CB1641 & 1) == 0 )
+  if ( (byte_4CC274E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_CStateManager_MyRoomControl__update__);
-    byte_4CB1641 = 1;
+    sub_1C713B0(&Method_CStateManager_MyRoomControl__update__);
+    byte_4CC274E = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
-    CStateManager_object___update(mFSM, (const MethodInfo_33849D4 *)Method_CStateManager_MyRoomControl__update__);
+    CStateManager_object___update(mFSM, (const MethodInfo_3394778 *)Method_CStateManager_MyRoomControl__update__);
   if ( this->fields.isEnableMultipleView )
     MyRoomControl__UpdateMutipleViewRemainTime(this, method);
   if ( this->fields.isEnablePhotoCampaign )
@@ -9646,11 +10274,11 @@ void MyRoomControl__UpdateMutipleViewRemainTime(MyRoomControl_o *this, const Met
   __int64 v8; // x1
   const MethodInfo *v9; // x1
 
-  if ( (byte_4CB1692 & 1) == 0 )
+  if ( (byte_4CC279F & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB1692 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC279F = 1;
   }
   if ( (this->fields.multipleViewFinishedTime & 0x8000000000000000LL) == 0 )
   {
@@ -9664,7 +10292,7 @@ void MyRoomControl__UpdateMutipleViewRemainTime(MyRoomControl_o *this, const Met
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     RestTime6 = LocalizationManager__GetRestTime6(multipleViewFinishedTime, v6, 0);
     if ( !multipleViewButtonRemainTimeLabel )
-      sub_1C6BC60(RestTime6, v8);
+      sub_1C71608(RestTime6, v8);
     UILabel__set_text(multipleViewButtonRemainTimeLabel, RestTime6, 0);
     if ( v6 > this->fields.multipleViewFinishedTime )
     {
@@ -9685,11 +10313,11 @@ void MyRoomControl__UpdatePhotoCampaignRemainTime(MyRoomControl_o *this, const M
   __int64 v8; // x1
   const MethodInfo *v9; // x1
 
-  if ( (byte_4CB16B3 & 1) == 0 )
+  if ( (byte_4CC27C0 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB16B3 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC27C0 = 1;
   }
   if ( (this->fields.photoCampaignFinishedTime & 0x8000000000000000LL) == 0 )
   {
@@ -9703,7 +10331,7 @@ void MyRoomControl__UpdatePhotoCampaignRemainTime(MyRoomControl_o *this, const M
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
     RestTime6 = LocalizationManager__GetRestTime6(photoCampaignFinishedTime, v6, 0);
     if ( !photoCampaignButtonRemainTimeLabel )
-      sub_1C6BC60(RestTime6, v8);
+      sub_1C71608(RestTime6, v8);
     UILabel__set_text(photoCampaignButtonRemainTimeLabel, RestTime6, 0);
     if ( v6 > this->fields.photoCampaignFinishedTime )
     {
@@ -9753,7 +10381,7 @@ void MyRoomControl__ValentineListChange(MyRoomControl_o *this, bool isActive, co
         (MaterialEventLogItemListPanel = this->fields.servantListLabelObject) == 0) )
   {
 LABEL_11:
-    sub_1C6BC60(MaterialEventLogItemListPanel, isActive);
+    sub_1C71608(MaterialEventLogItemListPanel, isActive);
   }
   UnityEngine_GameObject__SetActive(MaterialEventLogItemListPanel, !this->fields.IsListActive, 0);
 }
@@ -9767,7 +10395,7 @@ void MyRoomControl__WaitForConstructingRecordWithServant(
   System_Collections_IEnumerator_o *v4; // x1
 
   v4 = MyRoomControl__CoWaitForConstructingRecordWithServant(this, setEndAction, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v4, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v4, 0);
 }
 
 
@@ -9776,17 +10404,17 @@ void MyRoomControl___AutoDelinkAccountLinkage_b__320_0(MyRoomControl_o *this, co
   CommonUI_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CB16CF & 1) == 0 )
+  if ( (byte_4CC27DC & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16CF = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27DC = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__CloseAccountLinkageNotificationDialog(Instance, 0, 0),
         (Instance = (CommonUI_o *)this->fields.continueDeviceComp) == 0) )
   {
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   ContinueDeviceComponent__openMenu((ContinueDeviceComponent_o *)Instance, 0);
 }
@@ -9800,17 +10428,17 @@ void MyRoomControl___CloseMultipleView_b__387_0(MyRoomControl_o *this, const Met
   __int64 v6; // x1
   const MethodInfo *v7; // x2
 
-  if ( (byte_4CB16D3 & 1) == 0 )
+  if ( (byte_4CC27E0 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__CloseMultipleView_b__387_1__);
-    byte_4CB16D3 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__CloseMultipleView_b__387_1__);
+    byte_4CC27E0 = 1;
   }
   multipleViewComponent = this->fields.multipleViewComponent;
-  v4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_MyRoomControl__CloseMultipleView_b__387_1__, 0);
   if ( !multipleViewComponent )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   MultipleViewComponent__CancelMultipleViewWindow(multipleViewComponent, v4, v7);
 }
 
@@ -9827,7 +10455,7 @@ void MyRoomControl___CloseMultipleView_b__387_1(MyRoomControl_o *this, const Met
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_10;
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 43, 0, 0);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 43, 0, 0);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_10;
@@ -9847,7 +10475,7 @@ void MyRoomControl___CloseMultipleView_b__387_1(MyRoomControl_o *this, const Met
     if ( (int)v6 >= max_length )
       break;
     if ( (unsigned int)v6 >= max_length )
-      sub_1C6BC68(titleInfo);
+      sub_1C71610(titleInfo);
     titleInfo = (TitleInfoControl_o *)multipleStandFigureBacks->m_Items[v6];
     if ( titleInfo )
     {
@@ -9862,7 +10490,7 @@ void MyRoomControl___CloseMultipleView_b__387_1(MyRoomControl_o *this, const Met
   titleInfo = (TitleInfoControl_o *)this->fields.mBlocker;
   if ( !titleInfo )
 LABEL_10:
-    sub_1C6BC60(titleInfo, method);
+    sub_1C71608(titleInfo, method);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)titleInfo, 0, 0);
   MyRoomControl__SetMyRoomStandFigure(this, 0, v8);
 }
@@ -9874,7 +10502,7 @@ bool MyRoomControl___CoWaitForConstructingRecordWithServant_b__292_0(MyRoomContr
 
   mStateMaterial = this->fields.mStateMaterial;
   if ( !mStateMaterial )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return mStateMaterial->fields._recordWithServantPageDataConstructionCompleted_k__BackingField;
 }
 
@@ -9884,13 +10512,13 @@ void MyRoomControl___EndLoadPhotoAsset_b__401_1(MyRoomControl_o *this, const Met
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x4
 
-  if ( (byte_4CB16D4 & 1) == 0 )
+  if ( (byte_4CC27E1 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__EndLoadPhotoAsset_b__401_2__);
-    byte_4CB16D4 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__EndLoadPhotoAsset_b__401_2__);
+    byte_4CC27E1 = 1;
   }
-  v3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_MyRoomControl__EndLoadPhotoAsset_b__401_2__, 0);
   MyRoomControl__DispDefaultMyRoom(this, 0, v3, 1, v4);
 }
@@ -9907,18 +10535,18 @@ void MyRoomControl___EndLoadPhotoAsset_b__401_2(MyRoomControl_o *this, const Met
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v10; // x21
 
-  if ( (byte_4CB16D5 & 1) == 0 )
+  if ( (byte_4CC27E2 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__EndLoadPhotoAsset_b__401_3__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16D5 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__EndLoadPhotoAsset_b__401_3__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27E2 = 1;
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_17;
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 0, 0, 0);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 0, 0, 0);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_17;
@@ -9951,7 +10579,7 @@ void MyRoomControl___EndLoadPhotoAsset_b__401_2(MyRoomControl_o *this, const Met
   if ( !titleInfo )
     goto LABEL_17;
   TitleInfoControl__setDispParticleObj(titleInfo, 0, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v7 = AvalonSceneManager_TypeInfo;
   v8 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -9960,11 +10588,11 @@ void MyRoomControl___EndLoadPhotoAsset_b__401_2(MyRoomControl_o *this, const Met
     v7 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v7->static_fields->DEFAULT_FADE_TIME;
-  v10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_MyRoomControl__EndLoadPhotoAsset_b__401_3__, 0);
   if ( !v8 )
 LABEL_17:
-    sub_1C6BC60(titleInfo, method);
+    sub_1C71608(titleInfo, method);
   CommonUI__maskFadein(v8, DEFAULT_FADE_TIME, v10, 0);
 }
 
@@ -10000,12 +10628,12 @@ void MyRoomControl___ExchangePosition_b__436_0(MyRoomControl_o *this, const Meth
   UnityEngine_Vector3_o PhotoCampaignMasterPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4CB16D9 & 1) == 0 )
+  if ( (byte_4CC27E6 & 1) == 0 )
   {
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-    this = (MyRoomControl_o *)sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16D9 = 1;
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+    this = (MyRoomControl_o *)sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27E6 = 1;
   }
   position.fields.z = 0.0;
   *(_QWORD *)&position.fields.x = 0;
@@ -10021,7 +10649,7 @@ void MyRoomControl___ExchangePosition_b__436_0(MyRoomControl_o *this, const Meth
       goto LABEL_28;
     v6 = v4;
     if ( v3 >= LODWORD(photoStandFigures->max_length) )
-      sub_1C6BC68(this);
+      sub_1C71610(this);
     this = (MyRoomControl_o *)v2->fields.photoTargetList;
     if ( !this )
       goto LABEL_28;
@@ -10029,7 +10657,7 @@ void MyRoomControl___ExchangePosition_b__436_0(MyRoomControl_o *this, const Meth
     this = (MyRoomControl_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                 (System_Collections_Generic_List_T__o *)this,
                                 v3,
-                                (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+                                (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
     switch ( (_DWORD)this )
     {
       case 2:
@@ -10045,10 +10673,10 @@ void MyRoomControl___ExchangePosition_b__436_0(MyRoomControl_o *this, const Meth
         if ( !this )
           goto LABEL_28;
         v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-        if ( !byte_4CAFC0E )
+        if ( !byte_4CC0D0E )
         {
-          sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-          byte_4CAFC0E = 1;
+          sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+          byte_4CC0D0E = 1;
         }
         GameObjectExtensions__SetLocalScale(v13, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
         break;
@@ -10073,7 +10701,7 @@ void MyRoomControl___ExchangePosition_b__436_0(MyRoomControl_o *this, const Meth
         if ( !this )
           goto LABEL_28;
         v11 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-        GameObjectExtensions__SetLocalScale_36358148(v11, scale, 0);
+        GameObjectExtensions__SetLocalScale_36391984(v11, scale, 0);
         break;
     }
     v4 = 0;
@@ -10090,13 +10718,13 @@ void MyRoomControl___ExchangePosition_b__436_0(MyRoomControl_o *this, const Meth
     v2->fields.isChangePhotoPosition,
     v2->fields.isOneShot,
     0);
-  this = (MyRoomControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (MyRoomControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v16 = (CommonUI_o *)this;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
   if ( !v16 )
 LABEL_28:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   CommonUI__maskFadein(v16, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
 }
 
@@ -10114,25 +10742,29 @@ void MyRoomControl___GoToTitle_b__332_0(MyRoomControl_o *this, bool isDecide, co
   Il2CppObject *v12; // x21
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
 
-  if ( (byte_4CB16D1 & 1) == 0 )
+  if ( (byte_4CC27DE & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__GoToTitle_b__332_1__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    byte_4CB16D1 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__GoToTitle_b__332_1__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    byte_4CC27DE = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_16;
   CommonUI__CloseConfirmDialog((CommonUI_o *)Instance, 0);
   if ( isDecide )
   {
     MyRoomControl__shutdown(v6, v7);
-    v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v8 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v9 = AvalonSceneManager_TypeInfo;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     {
@@ -10155,11 +10787,11 @@ void MyRoomControl___GoToTitle_b__332_0(MyRoomControl_o *this, bool isDecide, co
         Instance = MyRoomControl___c_TypeInfo;
       }
       v12 = (Il2CppObject *)**((_QWORD **)Instance + 23);
-      v11 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+      v11 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
       System_Action___ctor(v11, v12, Method_MyRoomControl___c__GoToTitle_b__332_1__, 0);
       static_fields = MyRoomControl___c_TypeInfo->static_fields;
       static_fields->__9__332_1 = v11;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__332_1, (int32_t)v11, v14, v15);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__332_1, (int32_t)v11, v14, v15, v16, v17, v18, v19);
     }
     if ( v8 )
     {
@@ -10167,7 +10799,7 @@ void MyRoomControl___GoToTitle_b__332_0(MyRoomControl_o *this, bool isDecide, co
       return;
     }
 LABEL_16:
-    sub_1C6BC60(Instance, v5);
+    sub_1C71608(Instance, v5);
   }
 }
 
@@ -10178,7 +10810,7 @@ bool MyRoomControl___InitServantMenu_b__289_0(MyRoomControl_o *this, const Metho
 
   mStateMaterial = this->fields.mStateMaterial;
   if ( !mStateMaterial )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return mStateMaterial->fields._materialPageDataConstructionCompleted_k__BackingField;
 }
 
@@ -10197,19 +10829,19 @@ void MyRoomControl___LoadServantForm_b__266_0(MyRoomControl_o *this, const Metho
   UnityEngine_Vector3_o v12; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB16CD & 1) == 0 )
+  if ( (byte_4CC27DA & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__LoadServantForm_b__266_1__);
-    sub_1C6BA08(&StringLiteral_8473/*"LoadServantFormEnd"*/);
-    byte_4CB16CD = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__LoadServantForm_b__266_1__);
+    sub_1C713B0(&StringLiteral_8477/*"LoadServantFormEnd"*/);
+    byte_4CC27DA = 1;
   }
   mState = this->fields.mState;
   if ( !mState )
   {
     MyRoomControl__ChangeSetStandFigureObj(this, 1, 1, v2);
     standFigureBack = this->fields.standFigureBack;
-    v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v6 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v6, (Il2CppObject *)this, Method_MyRoomControl__LoadServantForm_b__266_1__, 0);
     if ( standFigureBack )
     {
@@ -10217,7 +10849,7 @@ void MyRoomControl___LoadServantForm_b__266_0(MyRoomControl_o *this, const Metho
       return;
     }
 LABEL_18:
-    sub_1C6BC60(SvtStandFigure, method);
+    sub_1C71608(SvtStandFigure, method);
   }
   if ( (unsigned int)(mState - 1) > 1 )
   {
@@ -10265,7 +10897,7 @@ LABEL_18:
   v13 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)SvtStandFigure, 0);
   v13.fields.x = -v9;
   v13.fields.y = y;
-  MyRoomControl__moveControl(this, this->fields.svtObj, v13, (System_String_o *)StringLiteral_8473/*"LoadServantFormEnd"*/, v11);
+  MyRoomControl__moveControl(this, this->fields.svtObj, v13, (System_String_o *)StringLiteral_8477/*"LoadServantFormEnd"*/, v11);
 }
 
 
@@ -10278,7 +10910,7 @@ void MyRoomControl___OnClickBack_b__339_0(MyRoomControl_o *this, const MethodInf
   mStateMaterial = this->fields.mStateMaterial;
   this->fields.type = 1;
   if ( !mStateMaterial )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomStateMaterial__GalleryBack(mStateMaterial, 0, 0);
   MyRoomControl__setSvtFigureActive(this, 1, 1, v4);
   MyRoomControl__setDefSvtPos(this, v5);
@@ -10309,15 +10941,15 @@ void MyRoomControl___OnClickBack_b__339_3(MyRoomControl_o *this, const MethodInf
   System_Action_o *v5; // x22
   const MethodInfo *v6; // x4
 
-  if ( (byte_4CB16D2 & 1) == 0 )
+  if ( (byte_4CC27DF & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__OnClickBack_b__339_4__);
-    byte_4CB16D2 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__OnClickBack_b__339_4__);
+    byte_4CC27DF = 1;
   }
   targetChangeAnotherTargetType = this->fields.targetChangeAnotherTargetType;
   targetChangeIsLeft = this->fields.targetChangeIsLeft;
-  v5 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_MyRoomControl__OnClickBack_b__339_4__, 0);
   MyRoomControl__OpenChangeTargetSelectDialog(this, targetChangeAnotherTargetType, targetChangeIsLeft, v5, v6);
 }
@@ -10343,15 +10975,19 @@ void MyRoomControl___OnClickChangeBg_b__450_0(MyRoomControl_o *this, const Metho
   Il2CppObject *v10; // x21
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
 
-  if ( (byte_4CB16DA & 1) == 0 )
+  if ( (byte_4CC27E7 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&SoundManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__OnClickChangeBg_b__450_1__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    byte_4CB16DA = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&SoundManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__OnClickChangeBg_b__450_1__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    byte_4CC27E7 = 1;
   }
   MyRoomControl__stopSvtVoice(this, method);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
@@ -10380,15 +11016,15 @@ void MyRoomControl___OnClickChangeBg_b__450_0(MyRoomControl_o *this, const Metho
       soundPlayerComp = MyRoomControl___c_TypeInfo;
     }
     v10 = (Il2CppObject *)**((_QWORD **)soundPlayerComp + 23);
-    v9 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v9, v10, Method_MyRoomControl___c__OnClickChangeBg_b__450_1__, 0);
     static_fields = MyRoomControl___c_TypeInfo->static_fields;
     static_fields->__9__450_1 = v9;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__450_1, (int32_t)v9, v12, v13);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__450_1, (int32_t)v9, v12, v13, v14, v15, v16, v17);
   }
   if ( !backGroundManager )
 LABEL_14:
-    sub_1C6BC60(soundPlayerComp, v3);
+    sub_1C71608(soundPlayerComp, v3);
   MyRoomBackGroundManager__SetBackGround(backGroundManager, 3, v9, 0);
 }
 
@@ -10401,7 +11037,7 @@ void MyRoomControl___OnClickSelectMultipleServant_b__373_0(MyRoomControl_o *this
   multipleViewComponent = this->fields.multipleViewComponent;
   this->fields.multipleViewState = 1;
   if ( !multipleViewComponent )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MultipleViewComponent__Open(multipleViewComponent, 1, v2);
 }
 
@@ -10427,17 +11063,17 @@ void MyRoomControl___OverrideAccountLinkage_b__319_0(MyRoomControl_o *this, cons
   CommonUI_o *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CB16CE & 1) == 0 )
+  if ( (byte_4CC27DB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16CE = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27DB = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance
     || (CommonUI__CloseAccountLinkageNotificationDialog(Instance, 0, 0),
         (Instance = (CommonUI_o *)this->fields.continueDeviceComp) == 0) )
   {
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   ContinueDeviceComponent__openMenu((ContinueDeviceComponent_o *)Instance, 0);
 }
@@ -10454,43 +11090,55 @@ void MyRoomControl___TransitionMyRoomTop_b__425_0(MyRoomControl_o *this, const M
   Il2CppObject *v9; // x22
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
   UnityEngine_Object_o *photoMasterTexture; // x20
   struct UIMasterFigureTextureOld_o **p_photoMasterTexture; // x20
   UnityEngine_Object_o *gameObject; // x21
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
   System_Collections_Generic_List_object__o *instantiateLayerChangeObjList; // x20
-  System_Action_object__o *v19; // x21
-  Il2CppObject *v20; // x22
-  struct MyRoomControl___c_StaticFields *v21; // x0
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  struct System_Collections_Generic_List_PhotoLayerChangeComponent__o *v24; // x8
+  System_Action_object__o *v27; // x21
+  Il2CppObject *v28; // x22
+  struct MyRoomControl___c_StaticFields *v29; // x0
+  int32_t v30; // w2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  int32_t v33; // w5
+  int64_t v34; // x6
+  System_String_o *v35; // x7
+  struct System_Collections_Generic_List_PhotoLayerChangeComponent__o *v36; // x8
   int32_t size; // w2
-  int v26; // w9
-  System_Action_o *v27; // x20
-  const MethodInfo *v28; // x4
+  int32_t version; // w9
+  System_Action_o *v39; // x20
+  const MethodInfo *v40; // x4
 
-  if ( (byte_4CB16D6 & 1) == 0 )
+  if ( (byte_4CC27E3 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_PhotoLayerChangeComponent__TypeInfo);
-    sub_1C6BA08(&System_Action_PhotoStandFigureComponent__TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
-    sub_1C6BA08(&Method_MyRoomControl__TransitionMyRoomTop_b__425_3__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__TransitionMyRoomTop_b__425_1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__TransitionMyRoomTop_b__425_2__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    byte_4CB16D6 = 1;
+    sub_1C713B0(&System_Action_PhotoLayerChangeComponent__TypeInfo);
+    sub_1C713B0(&System_Action_PhotoStandFigureComponent__TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__);
+    sub_1C713B0(&Method_MyRoomControl__TransitionMyRoomTop_b__425_3__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__TransitionMyRoomTop_b__425_1__);
+    sub_1C713B0(&Method_MyRoomControl___c__TransitionMyRoomTop_b__425_2__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    byte_4CC27E3 = 1;
   }
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_34;
-  TitleInfoControl__changeTitleInfo_40073532((TitleInfoControl_o *)titleInfo, 1, 43, 0, 0);
+  TitleInfoControl__changeTitleInfo_40112904((TitleInfoControl_o *)titleInfo, 1, 43, 0, 0);
   v4 = this->fields.titleInfo;
   if ( !v4 )
     goto LABEL_34;
@@ -10526,16 +11174,24 @@ void MyRoomControl___TransitionMyRoomTop_b__425_0(MyRoomControl_o *this, const M
       v6 = MyRoomControl___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__425_1 = (System_Action_object__o *)sub_1C6BC54(System_Action_PhotoStandFigureComponent__TypeInfo);
+    _9__425_1 = (System_Action_object__o *)sub_1C715FC(System_Action_PhotoStandFigureComponent__TypeInfo);
     System_Action_object____ctor(_9__425_1, v9, Method_MyRoomControl___c__TransitionMyRoomTop_b__425_1__, 0);
     static_fields = MyRoomControl___c_TypeInfo->static_fields;
     static_fields->__9__425_1 = (struct System_Action_PhotoStandFigureComponent__o *)_9__425_1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__425_1, (int32_t)_9__425_1, v11, v12);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__425_1,
+      (int32_t)_9__425_1,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15,
+      v16);
   }
   BasicHelper__ForEach_object_(
     photoStandFigures,
     (System_Action_T__o *)_9__425_1,
-    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
+    (const MethodInfo_3136DF4 *)Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
   photoMasterTexture = (UnityEngine_Object_o *)this->fields.photoMasterTexture;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -10552,9 +11208,9 @@ void MyRoomControl___TransitionMyRoomTop_b__425_0(MyRoomControl_o *this, const M
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)titleInfo, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(gameObject, 0);
+    UnityEngine_Object__Destroy_71724608(gameObject, 0);
     *p_photoMasterTexture = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoMasterTexture, 0, v16, v17);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.photoMasterTexture, 0, v20, v21, v22, v23, v24, v25);
   }
   titleInfo = MyRoomControl___c_TypeInfo;
   instantiateLayerChangeObjList = (System_Collections_Generic_List_object__o *)this->fields.instantiateLayerChangeObjList;
@@ -10563,40 +11219,40 @@ void MyRoomControl___TransitionMyRoomTop_b__425_0(MyRoomControl_o *this, const M
     j_il2cpp_runtime_class_init_0(MyRoomControl___c_TypeInfo);
     titleInfo = MyRoomControl___c_TypeInfo;
   }
-  v19 = *(System_Action_object__o **)(*((_QWORD *)titleInfo + 23) + 80LL);
-  if ( !v19 )
+  v27 = *(System_Action_object__o **)(*((_QWORD *)titleInfo + 23) + 80LL);
+  if ( !v27 )
   {
     if ( !*((_DWORD *)titleInfo + 56) )
     {
       j_il2cpp_runtime_class_init_0(titleInfo);
       titleInfo = MyRoomControl___c_TypeInfo;
     }
-    v20 = (Il2CppObject *)**((_QWORD **)titleInfo + 23);
-    v19 = (System_Action_object__o *)sub_1C6BC54(System_Action_PhotoLayerChangeComponent__TypeInfo);
-    System_Action_object____ctor(v19, v20, Method_MyRoomControl___c__TransitionMyRoomTop_b__425_2__, 0);
-    v21 = MyRoomControl___c_TypeInfo->static_fields;
-    v21->__9__425_2 = (struct System_Action_PhotoLayerChangeComponent__o *)v19;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v21->__9__425_2, (int32_t)v19, v22, v23);
+    v28 = (Il2CppObject *)**((_QWORD **)titleInfo + 23);
+    v27 = (System_Action_object__o *)sub_1C715FC(System_Action_PhotoLayerChangeComponent__TypeInfo);
+    System_Action_object____ctor(v27, v28, Method_MyRoomControl___c__TransitionMyRoomTop_b__425_2__, 0);
+    v29 = MyRoomControl___c_TypeInfo->static_fields;
+    v29->__9__425_2 = (struct System_Action_PhotoLayerChangeComponent__o *)v27;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v29->__9__425_2, (int32_t)v27, v30, v31, v32, v33, v34, v35);
   }
   if ( !instantiateLayerChangeObjList
     || (System_Collections_Generic_List_object___ForEach(
           instantiateLayerChangeObjList,
-          (System_Action_T__o *)v19,
-          (const MethodInfo_38013B4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__),
-        (v24 = this->fields.instantiateLayerChangeObjList) == 0) )
+          (System_Action_T__o *)v27,
+          (const MethodInfo_3811158 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent__ForEach__),
+        (v36 = this->fields.instantiateLayerChangeObjList) == 0) )
   {
 LABEL_34:
-    sub_1C6BC60(titleInfo, method);
+    sub_1C71608(titleInfo, method);
   }
-  size = v24->fields._size;
-  v26 = v24->fields._version + 1;
-  v24->fields._size = 0;
-  v24->fields._version = v26;
+  size = v36->fields._size;
+  version = v36->fields._version;
+  v36->fields._size = 0;
+  v36->fields._version = version + 1;
   if ( size >= 1 )
-    System_Array__Clear((System_Array_o *)v24->fields._items, 0, size, 0);
-  v27 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v27, (Il2CppObject *)this, Method_MyRoomControl__TransitionMyRoomTop_b__425_3__, 0);
-  MyRoomControl__DispDefaultMyRoom(this, 1, v27, 1, v28);
+    System_Array__Clear((System_Array_o *)v36->fields._items, 0, size, 0);
+  v39 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v39, (Il2CppObject *)this, Method_MyRoomControl__TransitionMyRoomTop_b__425_3__, 0);
+  MyRoomControl__DispDefaultMyRoom(this, 1, v39, 1, v40);
 }
 
 
@@ -10605,13 +11261,13 @@ void MyRoomControl___TransitionMyRoomTop_b__425_3(MyRoomControl_o *this, const M
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x3
 
-  if ( (byte_4CB16D7 & 1) == 0 )
+  if ( (byte_4CC27E4 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__TransitionMyRoomTop_b__425_4__);
-    byte_4CB16D7 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__TransitionMyRoomTop_b__425_4__);
+    byte_4CC27E4 = 1;
   }
-  v3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_MyRoomControl__TransitionMyRoomTop_b__425_4__, 0);
   MyRoomControl__SetFavoriteSvt(this, v3, 1, v4);
 }
@@ -10627,15 +11283,15 @@ void MyRoomControl___TransitionMyRoomTop_b__425_4(MyRoomControl_o *this, const M
   __int64 v8; // x0
   __int64 v9; // x1
 
-  if ( (byte_4CB16D8 & 1) == 0 )
+  if ( (byte_4CC27E5 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__TransitionMyRoomTop_b__425_5__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16D8 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__TransitionMyRoomTop_b__425_5__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27E5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   v5 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -10644,10 +11300,10 @@ void MyRoomControl___TransitionMyRoomTop_b__425_4(MyRoomControl_o *this, const M
     v4 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v4->static_fields->DEFAULT_FADE_TIME;
-  v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_MyRoomControl__TransitionMyRoomTop_b__425_5__, 0);
   if ( !v5 )
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   CommonUI__maskFadein(v5, DEFAULT_FADE_TIME, v7, 0);
 }
 
@@ -10664,15 +11320,15 @@ void MyRoomControl___hideFavoriteSvt_b__324_0(MyRoomControl_o *this, const Metho
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4CB16D0 & 1) == 0 )
+  if ( (byte_4CC27DD & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_3506/*"CLOSE_MENU"*/);
-    byte_4CB16D0 = 1;
+    sub_1C713B0(&StringLiteral_3509/*"CLOSE_MENU"*/);
+    byte_4CC27DD = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C6BC60(0, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3506/*"CLOSE_MENU"*/, 0);
+    sub_1C71608(0, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3509/*"CLOSE_MENU"*/, 0);
 }
 
 
@@ -10680,15 +11336,15 @@ void MyRoomControl___hideSvtFigure_b__249_0(MyRoomControl_o *this, const MethodI
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4CB16CC & 1) == 0 )
+  if ( (byte_4CC27D9 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_7244/*"HIDE_END"*/);
-    byte_4CB16CC = 1;
+    sub_1C713B0(&StringLiteral_7248/*"HIDE_END"*/);
+    byte_4CC27D9 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C6BC60(0, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_7244/*"HIDE_END"*/, 0);
+    sub_1C71608(0, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_7248/*"HIDE_END"*/, 0);
 }
 
 
@@ -10698,7 +11354,7 @@ bool MyRoomControl___initMaterial_b__287_0(MyRoomControl_o *this, const MethodIn
 
   mStateMaterial = this->fields.mStateMaterial;
   if ( !mStateMaterial )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return mStateMaterial->fields._materialPageDataConstructionCompleted_k__BackingField;
 }
 
@@ -10708,19 +11364,19 @@ void MyRoomControl___setMySvtFigure_b__240_0(MyRoomControl_o *this, const Method
   PlayMakerFSM_o *myRoomFsm; // x0
   System_String_o **v4; // x8
 
-  if ( (byte_4CB16CB & 1) == 0 )
+  if ( (byte_4CC27D8 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_8289/*"LOAD_END"*/);
-    sub_1C6BA08(&StringLiteral_8290/*"LOAD_END_TO_HELP"*/);
-    byte_4CB16CB = 1;
+    sub_1C713B0(&StringLiteral_8293/*"LOAD_END"*/);
+    sub_1C713B0(&StringLiteral_8294/*"LOAD_END_TO_HELP"*/);
+    byte_4CC27D8 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   if ( this->fields.type == 6 )
-    v4 = (System_String_o **)&StringLiteral_8290/*"LOAD_END_TO_HELP"*/;
+    v4 = (System_String_o **)&StringLiteral_8294/*"LOAD_END_TO_HELP"*/;
   else
-    v4 = (System_String_o **)&StringLiteral_8289/*"LOAD_END"*/;
+    v4 = (System_String_o **)&StringLiteral_8293/*"LOAD_END"*/;
   PlayMakerFSM__SendEvent(myRoomFsm, *v4, 0);
 }
 
@@ -10729,15 +11385,15 @@ void MyRoomControl___setupSvtRand_b__222_0(MyRoomControl_o *this, System_String_
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4CB16CA & 1) == 0 )
+  if ( (byte_4CC27D7 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_6972/*"GO_NEXT"*/);
-    byte_4CB16CA = 1;
+    sub_1C713B0(&StringLiteral_6974/*"GO_NEXT"*/);
+    byte_4CC27D7 = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C6BC60(0, result);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6972/*"GO_NEXT"*/, 0);
+    sub_1C71608(0, result);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_6974/*"GO_NEXT"*/, 0);
 }
 
 
@@ -10747,16 +11403,16 @@ void MyRoomControl__callbackChangeName(MyRoomControl_o *this, System_String_o *r
   __int64 *v5; // x8
 
   v4 = (MyRoomControl_o **)this;
-  if ( (byte_4CB165F & 1) == 0 )
+  if ( (byte_4CC276C & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_11082/*"REQUEST_OK"*/);
-    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
-    this = (MyRoomControl_o *)sub_1C6BA08(&StringLiteral_11080/*"REQUEST_NG"*/);
-    byte_4CB165F = 1;
+    sub_1C713B0(&StringLiteral_11088/*"REQUEST_OK"*/);
+    sub_1C713B0(&StringLiteral_22486/*"ok"*/);
+    this = (MyRoomControl_o *)sub_1C713B0(&StringLiteral_11086/*"REQUEST_NG"*/);
+    byte_4CC276C = 1;
   }
   if ( !result )
     goto LABEL_12;
-  if ( !System_String__Equals_64002112(result, (System_String_o *)StringLiteral_22471/*"ok"*/, 0) )
+  if ( !System_String__Equals_64067044(result, (System_String_o *)StringLiteral_22486/*"ok"*/, 0) )
   {
     this = v4[9];
     if ( this )
@@ -10765,12 +11421,12 @@ void MyRoomControl__callbackChangeName(MyRoomControl_o *this, System_String_o *r
       this = v4[5];
       if ( this )
       {
-        v5 = &StringLiteral_11080/*"REQUEST_NG"*/;
+        v5 = &StringLiteral_11086/*"REQUEST_NG"*/;
         goto LABEL_11;
       }
     }
 LABEL_12:
-    sub_1C6BC60(this, result);
+    sub_1C71608(this, result);
   }
   this = v4[4];
   if ( !this )
@@ -10779,7 +11435,7 @@ LABEL_12:
   this = v4[5];
   if ( !this )
     goto LABEL_12;
-  v5 = &StringLiteral_11082/*"REQUEST_OK"*/;
+  v5 = &StringLiteral_11088/*"REQUEST_OK"*/;
 LABEL_11:
   PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)*v5, 0);
 }
@@ -10790,14 +11446,14 @@ void MyRoomControl__checklTutorialHelp(MyRoomControl_o *this, const MethodInfo *
   __int64 v3; // x1
   MyRoomHelpListViewManager_o *helpListViewManager; // x0
 
-  if ( (byte_4CB1671 & 1) == 0 )
+  if ( (byte_4CC277E & 1) == 0 )
   {
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    byte_4CB1671 = 1;
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    byte_4CC277E = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_40657328(128, 0) )
+  if ( TutorialFlag__Get_40699620(128, 0) )
   {
     EventTutorialMaster__CheckTutorial(0, 74, 0, 0, 0, 0, 0, 0);
   }
@@ -10805,7 +11461,7 @@ void MyRoomControl__checklTutorialHelp(MyRoomControl_o *this, const MethodInfo *
   {
     helpListViewManager = this->fields.helpListViewManager;
     if ( !helpListViewManager )
-      sub_1C6BC60(0, v3);
+      sub_1C71608(0, v3);
     MyRoomHelpListViewManager__CreateList(helpListViewManager, 0);
   }
 }
@@ -10821,7 +11477,7 @@ void MyRoomControl__closeMaterialTop(MyRoomControl_o *this, const MethodInfo *me
   MyRoomControl__SetState(this, 1, v2);
   maskBoxCollider = (UnityEngine_Collider_o *)this->fields.maskBoxCollider;
   if ( !maskBoxCollider )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   UnityEngine_Collider__set_enabled(maskBoxCollider, 0, 0);
 }
 
@@ -10832,7 +11488,7 @@ void MyRoomControl__createHelpList(MyRoomControl_o *this, const MethodInfo *meth
 
   helpListViewManager = this->fields.helpListViewManager;
   if ( !helpListViewManager )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomHelpListViewManager__CreateList(helpListViewManager, 0);
 }
 
@@ -10840,16 +11496,20 @@ void MyRoomControl__createHelpList(MyRoomControl_o *this, const MethodInfo *meth
 void MyRoomControl__destroySvtFigure(MyRoomControl_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   char *svtCtr; // x0
 
   svtCtr = (char *)this->fields.svtCtr;
   if ( !svtCtr
     || (*((_QWORD *)svtCtr + 11) = 0,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(svtCtr + 88), 0, v2, v3),
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(svtCtr + 88), 0, v2, v3, v4, v5, v6, v7),
         (svtCtr = (char *)this->fields.standFigureBack) == 0) )
   {
-    sub_1C6BC60(svtCtr, method);
+    sub_1C71608(svtCtr, method);
   }
   StandFigureBack__DestroyFigure((StandFigureBack_o *)svtCtr, 0);
 }
@@ -10859,15 +11519,15 @@ void MyRoomControl__endReflectionGameOption(MyRoomControl_o *this, const MethodI
 {
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4CB165D & 1) == 0 )
+  if ( (byte_4CC276A & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_11472/*"SAVE_END"*/);
-    byte_4CB165D = 1;
+    sub_1C713B0(&StringLiteral_11478/*"SAVE_END"*/);
+    byte_4CC276A = 1;
   }
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C6BC60(0, method);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_11472/*"SAVE_END"*/, 0);
+    sub_1C71608(0, method);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_11478/*"SAVE_END"*/, 0);
 }
 
 
@@ -10882,14 +11542,14 @@ System_String_o *MyRoomControl__getChangeMyRoomBgm(const MethodInfo *method)
   int32_t v7; // w20
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB163B & 1) == 0 )
+  if ( (byte_4CC2748 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_BgmMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_MyRoomAddMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB163B = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_BgmMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_MyRoomAddMaster___);
+    sub_1C713B0(&Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC2748 = 1;
   }
   v1 = MyRoomControl_TypeInfo;
   entity = 0;
@@ -10899,12 +11559,12 @@ System_String_o *MyRoomControl__getChangeMyRoomBgm(const MethodInfo *method)
     v1 = MyRoomControl_TypeInfo;
   }
   DEFAULT_BGM_NAME = v1->static_fields->DEFAULT_BGM_NAME;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)Instance,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_MyRoomAddMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_MyRoomAddMaster___);
   Instance = (Il2CppObject *)MyRoomControl__DisplayGroupId((const MethodInfo *)MasterData_object);
   if ( !MasterData_object )
     goto LABEL_14;
@@ -10912,25 +11572,25 @@ System_String_o *MyRoomControl__getChangeMyRoomBgm(const MethodInfo *method)
   if ( v6 )
   {
     v7 = v6;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
     if ( !Instance )
       goto LABEL_14;
     Instance = DataManager__GetMasterData_object_(
                  (DataManager_o *)Instance,
-                 (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_BgmMaster___);
+                 (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_BgmMaster___);
     if ( !Instance )
       goto LABEL_14;
     Instance = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                  (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                  &entity,
                                  v7,
-                                 (const MethodInfo_33F9128 *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
+                                 (const MethodInfo_3408ECC *)Method_DataMasterBase_BgmMaster__BgmEntity__int__TryGetEntity__);
     if ( ((unsigned __int8)Instance & 1) != 0 )
     {
       if ( entity )
         return (System_String_o *)entity[1].monitor;
 LABEL_14:
-      sub_1C6BC60(Instance, v4);
+      sub_1C71608(Instance, v4);
     }
   }
   return DEFAULT_BGM_NAME;
@@ -10946,10 +11606,10 @@ System_String_o *MyRoomControl__getMyRoomBgm(MyRoomControl_o *this, const Method
   System_String_o *v7; // x19
   System_String_o *PlaySoundName; // x20
 
-  if ( (byte_4CB163C & 1) == 0 )
+  if ( (byte_4CC2749 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB163C = 1;
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC2749 = 1;
   }
   v3 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -10957,7 +11617,7 @@ System_String_o *MyRoomControl__getMyRoomBgm(MyRoomControl_o *this, const Method
   v4 = MyRoomControl__getChangeMyRoomBgm((const MethodInfo *)v3);
   soundPlayerComp = this->fields.soundPlayerComp;
   if ( !soundPlayerComp )
-    sub_1C6BC60(v4, v5);
+    sub_1C71608(v4, v5);
   v7 = v4;
   PlaySoundName = SoundPlayerComponent__getPlaySoundName(soundPlayerComp, 0);
   if ( System_String__IsNullOrEmpty(PlaySoundName, 0) )
@@ -10973,7 +11633,7 @@ UIStandFigureR_o *MyRoomControl__getSvtStandFigure(MyRoomControl_o *this, const 
 
   standFigureBack = this->fields.standFigureBack;
   if ( !standFigureBack )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return StandFigureBack__GetSvtStandFigure(standFigureBack, 0, 0);
 }
 
@@ -10985,46 +11645,50 @@ ServantVoiceEntity_o *MyRoomControl__getSvtVoiceEnt(
 {
   struct UserGameEntity_o *SelfUserGame; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
   MyRoomData_o *myRoomData; // x0
   int64_t favoriteUserSvtId; // x1
   struct UserGameEntity_o *usrData; // x8
   struct System_Collections_Generic_List_int__o *imageIdList; // x8
   int32_t figureSvtDispIdx; // w9
-  int32_t v13; // w8
-  struct System_Collections_Generic_List_int__o *v15; // x8
-  MyRoomControl_c *v16; // x0
   int32_t v17; // w8
-  MyRoomControl_c *v18; // x0
-  int32_t v19; // w20
+  struct System_Collections_Generic_List_int__o *v19; // x8
+  MyRoomControl_c *v20; // x0
+  int32_t v21; // w8
+  MyRoomControl_c *v22; // x0
+  int32_t v23; // w20
   int32_t Item; // w0
-  StandFigureBack_c *v21; // x8
-  int32_t v22; // w22
+  StandFigureBack_c *v25; // x8
+  int32_t v26; // w22
   int32_t LimitCountByImageLimit; // w21
   Il2CppObject *Master_object; // x0
   int32_t figureSvtId; // w19
-  MyroomServantSpecialImageMaster_o *v26; // x23
+  MyroomServantSpecialImageMaster_o *v30; // x23
   MyroomServantSpecialImageEntity_o *entity; // [xsp+8h] [xbp-38h] BYREF
-  UnityEngine_Color_o v28; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v29; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v32; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v33; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB164F & 1) == 0 )
+  if ( (byte_4CC275C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&ImageLimitCount_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&StandFigureBack_TypeInfo);
-    byte_4CB164F = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&ImageLimitCount_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&StandFigureBack_TypeInfo);
+    byte_4CC275C = 1;
   }
   entity = 0;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.usrData = SelfUserGame;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.usrData, (int32_t)SelfUserGame, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.usrData, (int32_t)SelfUserGame, v6, v7, v8, v9, v10, v11);
   usrData = this->fields.usrData;
   if ( !usrData )
     goto LABEL_45;
@@ -11045,91 +11709,91 @@ ServantVoiceEntity_o *MyRoomControl__getSvtVoiceEnt(
         goto LABEL_45;
       figureSvtDispIdx = this->fields.figureSvtDispIdx;
       if ( figureSvtDispIdx + 1 < imageIdList->fields._size )
-        v13 = figureSvtDispIdx + 1;
+        v17 = figureSvtDispIdx + 1;
       else
-        v13 = 0;
-      this->fields.figureSvtDispIdx = v13;
+        v17 = 0;
+      this->fields.figureSvtDispIdx = v17;
     }
     else
     {
-      v15 = this->fields.imageIdList;
-      if ( !v15 )
+      v19 = this->fields.imageIdList;
+      if ( !v19 )
         goto LABEL_45;
       myRoomData = (MyRoomData_o *)this->fields.changeBtnImg;
-      if ( v15->fields._size <= 1 )
+      if ( v19->fields._size <= 1 )
       {
         if ( !myRoomData )
           goto LABEL_45;
-        v29.fields.r = 0.5;
-        v29.fields.g = 0.5;
-        v29.fields.b = 0.5;
-        v29.fields.a = 1.0;
-        UIWidget__set_color((UIWidget_o *)myRoomData, v29, 0);
-        v18 = MyRoomControl_TypeInfo;
+        v33.fields.r = 0.5;
+        v33.fields.g = 0.5;
+        v33.fields.b = 0.5;
+        v33.fields.a = 1.0;
+        UIWidget__set_color((UIWidget_o *)myRoomData, v33, 0);
+        v22 = MyRoomControl_TypeInfo;
         if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
-          v18 = MyRoomControl_TypeInfo;
+          v22 = MyRoomControl_TypeInfo;
         }
-        v17 = this->fields.buttonFlag & ~v18->static_fields->BUTTON_LIMIT_CHANGE;
+        v21 = this->fields.buttonFlag & ~v22->static_fields->BUTTON_LIMIT_CHANGE;
       }
       else
       {
         if ( !myRoomData )
           goto LABEL_45;
-        v28.fields.r = 1.0;
-        v28.fields.g = 1.0;
-        v28.fields.b = 1.0;
-        v28.fields.a = 1.0;
-        UIWidget__set_color((UIWidget_o *)myRoomData, v28, 0);
-        v16 = MyRoomControl_TypeInfo;
+        v32.fields.r = 1.0;
+        v32.fields.g = 1.0;
+        v32.fields.b = 1.0;
+        v32.fields.a = 1.0;
+        UIWidget__set_color((UIWidget_o *)myRoomData, v32, 0);
+        v20 = MyRoomControl_TypeInfo;
         if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
-          v16 = MyRoomControl_TypeInfo;
+          v20 = MyRoomControl_TypeInfo;
         }
-        v17 = this->fields.buttonFlag | v16->static_fields->BUTTON_LIMIT_CHANGE;
+        v21 = this->fields.buttonFlag | v20->static_fields->BUTTON_LIMIT_CHANGE;
       }
-      this->fields.buttonFlag = v17;
+      this->fields.buttonFlag = v21;
     }
   }
   myRoomData = (MyRoomData_o *)ServantVoiceMaster__getSvtVoiceId(this->fields.figureSvtId, 0);
   if ( !this->fields.imageIdList )
     goto LABEL_45;
-  v19 = (int)myRoomData;
+  v23 = (int)myRoomData;
   Item = System_Collections_Generic_List_int___get_Item(
            this->fields.imageIdList,
            this->fields.figureSvtDispIdx,
-           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
-  v21 = StandFigureBack_TypeInfo;
-  v22 = Item;
+           (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
+  v25 = StandFigureBack_TypeInfo;
+  v26 = Item;
   if ( !StandFigureBack_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(StandFigureBack_TypeInfo);
-    v21 = StandFigureBack_TypeInfo;
+    v25 = StandFigureBack_TypeInfo;
   }
-  LimitCountByImageLimit = v22;
-  if ( v22 < v21->static_fields->COSTUME_IMAGE_CNT_START )
+  LimitCountByImageLimit = v26;
+  if ( v26 < v25->static_fields->COSTUME_IMAGE_CNT_START )
   {
     if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
-    LimitCountByImageLimit = ImageLimitCount__GetLimitCountByImageLimit(v22, 0);
+    LimitCountByImageLimit = ImageLimitCount__GetLimitCountByImageLimit(v26, 0);
   }
-  if ( v22 < 201 )
+  if ( v26 < 201 )
     goto LABEL_41;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_MyroomServantSpecialImageMaster___);
   figureSvtId = this->fields.figureSvtId;
-  v26 = (MyroomServantSpecialImageMaster_o *)Master_object;
+  v30 = (MyroomServantSpecialImageMaster_o *)Master_object;
   if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ImageLimitCount_TypeInfo);
-  myRoomData = (MyRoomData_o *)ImageLimitCount__SpecialImageLimitCountToSpecialNum(v22, 0);
-  if ( !v26 )
+  myRoomData = (MyRoomData_o *)ImageLimitCount__SpecialImageLimitCountToSpecialNum(v26, 0);
+  if ( !v30 )
 LABEL_45:
-    sub_1C6BC60(myRoomData, favoriteUserSvtId);
+    sub_1C71608(myRoomData, favoriteUserSvtId);
   myRoomData = (MyRoomData_o *)MyroomServantSpecialImageMaster__TryGetEntity(
-                                 v26,
+                                 v30,
                                  &entity,
                                  figureSvtId,
                                  (int32_t)myRoomData,
@@ -11141,15 +11805,15 @@ LABEL_45:
     LimitCountByImageLimit = entity->fields.baseLimitCount;
   }
 LABEL_41:
-  myRoomData = (MyRoomData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  myRoomData = (MyRoomData_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !myRoomData )
     goto LABEL_45;
   myRoomData = (MyRoomData_o *)DataManager__GetMasterData_object_(
                                  (DataManager_o *)myRoomData,
-                                 (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
+                                 (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
   if ( !myRoomData )
     goto LABEL_45;
-  return ServantVoiceMaster__getEntity((ServantVoiceMaster_o *)myRoomData, 1, v19, LimitCountByImageLimit, 0);
+  return ServantVoiceMaster__getEntity((ServantVoiceMaster_o *)myRoomData, 1, v23, LimitCountByImageLimit, 0);
 }
 
 
@@ -11162,17 +11826,17 @@ int32_t MyRoomControl__getVoiceSvtId(MyRoomControl_o *this, const MethodInfo *me
   __int64 v7; // x20
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v9; // 0:x0.16
 
-  if ( (byte_4CB1658 & 1) == 0 )
+  if ( (byte_4CC2765 & 1) == 0 )
   {
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB1658 = 1;
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CC2765 = 1;
   }
   fvrUsrSvtId = this->fields.fvrUsrSvtId;
   if ( fvrUsrSvtId < 1 )
     return 0;
   myRoomData = this->fields.myRoomData;
   if ( !myRoomData )
-    sub_1C6BC60(0, fvrUsrSvtId);
+    sub_1C71608(0, fvrUsrSvtId);
   UsrSvtData = MyRoomData__getUsrSvtData(myRoomData, fvrUsrSvtId, 0);
   if ( !UsrSvtData )
     return 0;
@@ -11182,7 +11846,7 @@ int32_t MyRoomControl__getVoiceSvtId(MyRoomControl_o *this, const MethodInfo *me
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v9.fields.currentCryptoKey = v7;
   *(_QWORD *)&v9.fields.fakeValue = v6;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v9, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v9, 0);
 }
 
 
@@ -11198,19 +11862,19 @@ void MyRoomControl__helpClose(MyRoomControl_o *this, const MethodInfo *method)
   MyRoomHelpListViewManager_o *helpListViewManager; // x0
   NetworkManager_ResultCallbackFunc_o *v5; // x20
 
-  if ( (byte_4CB1674 & 1) == 0 )
+  if ( (byte_4CC2781 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_EndTurorialRequest__);
-    sub_1C6BA08(&Method_NetworkManager_getRequest_TutorialSetRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C6BA08(&TutorialFlag_TypeInfo);
-    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
-    byte_4CB1674 = 1;
+    sub_1C713B0(&Method_MyRoomControl_EndTurorialRequest__);
+    sub_1C713B0(&Method_NetworkManager_getRequest_TutorialSetRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C713B0(&TutorialFlag_TypeInfo);
+    sub_1C713B0(&StringLiteral_22486/*"ok"*/);
+    byte_4CC2781 = 1;
   }
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  if ( TutorialFlag__Get_40657328(128, 0) )
+  if ( TutorialFlag__Get_40699620(128, 0) )
   {
     helpListViewManager = this->fields.helpListViewManager;
     if ( helpListViewManager )
@@ -11219,15 +11883,15 @@ void MyRoomControl__helpClose(MyRoomControl_o *this, const MethodInfo *method)
       return;
     }
 LABEL_12:
-    sub_1C6BC60(helpListViewManager, v3);
+    sub_1C71608(helpListViewManager, v3);
   }
-  v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v5 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v5, (Il2CppObject *)this, Method_MyRoomControl_EndTurorialRequest__, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   helpListViewManager = (MyRoomHelpListViewManager_o *)NetworkManager__getRequest_object_(
                                                          v5,
-                                                         (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
+                                                         (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
   if ( !helpListViewManager )
     goto LABEL_12;
   TutorialSetRequest__beginRequest((TutorialSetRequest_o *)helpListViewManager, 128, 0);
@@ -11241,7 +11905,7 @@ void MyRoomControl__hideContinueDevice(MyRoomControl_o *this, const MethodInfo *
 
   continueDeviceComp = this->fields.continueDeviceComp;
   if ( !continueDeviceComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ContinueDeviceComponent__hideMenu(continueDeviceComp, 0);
 }
 
@@ -11251,13 +11915,13 @@ void MyRoomControl__hideFavoriteSvt(MyRoomControl_o *this, const MethodInfo *met
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x3
 
-  if ( (byte_4CB166C & 1) == 0 )
+  if ( (byte_4CC2779 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__hideFavoriteSvt_b__324_0__);
-    byte_4CB166C = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__hideFavoriteSvt_b__324_0__);
+    byte_4CC2779 = 1;
   }
-  v3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_MyRoomControl__hideFavoriteSvt_b__324_0__, 0);
   MyRoomControl__SetFavoriteSvt(this, v3, 1, v4);
 }
@@ -11269,7 +11933,7 @@ void MyRoomControl__hideMaterialCollection(MyRoomControl_o *this, const MethodIn
 
   materialCollectionComp = this->fields.materialCollectionComp;
   if ( !materialCollectionComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MaterialCollectionComponent__hideMenu(materialCollectionComp, 0);
 }
 
@@ -11280,7 +11944,7 @@ void MyRoomControl__hideMaterialCostume(MyRoomControl_o *this, const MethodInfo 
 
   materialCostumeComp = this->fields.materialCostumeComp;
   if ( !materialCostumeComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MaterialCostumeComponent__hideMenu(materialCostumeComp, 0);
 }
 
@@ -11291,7 +11955,7 @@ void MyRoomControl__hideOption(MyRoomControl_o *this, const MethodInfo *method)
 
   optionComp = this->fields.optionComp;
   if ( !optionComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   SetGameOptionComponent__hideGameOption(optionComp, 0);
 }
 
@@ -11305,7 +11969,7 @@ void MyRoomControl__hideProfile(MyRoomControl_o *this, const MethodInfo *method)
     || (MstProfileComponent__hideMstProfile(mstPfComp, 0),
         (mstPfComp = (MstProfileComponent_o *)this->fields.mstpfObj) == 0) )
   {
-    sub_1C6BC60(mstPfComp, method);
+    sub_1C71608(mstPfComp, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)mstPfComp, 0, 0);
 }
@@ -11317,7 +11981,7 @@ void MyRoomControl__hideSerialCode(MyRoomControl_o *this, const MethodInfo *meth
 
   serialCodeComp = this->fields.serialCodeComp;
   if ( !serialCodeComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   SerialCodeComponent__hideMenu(serialCodeComp, 0);
 }
 
@@ -11328,16 +11992,16 @@ void MyRoomControl__hideSoundPlayer(MyRoomControl_o *this, const MethodInfo *met
   __int64 v4; // x1
   PlayMakerFSM_o *myRoomFsm; // x0
 
-  if ( (byte_4CB166E & 1) == 0 )
+  if ( (byte_4CC277B & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_3506/*"CLOSE_MENU"*/);
-    byte_4CB166E = 1;
+    sub_1C713B0(&StringLiteral_3509/*"CLOSE_MENU"*/);
+    byte_4CC277B = 1;
   }
   MyRoomControl__SetBackButtonIgnore(this, 1, v2);
   myRoomFsm = this->fields.myRoomFsm;
   if ( !myRoomFsm )
-    sub_1C6BC60(0, v4);
-  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3506/*"CLOSE_MENU"*/, 0);
+    sub_1C71608(0, v4);
+  PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_3509/*"CLOSE_MENU"*/, 0);
 }
 
 
@@ -11348,16 +12012,16 @@ void MyRoomControl__hideSoundPlayerMenu(MyRoomControl_o *this, const MethodInfo 
   const MethodInfo *v5; // x1
   System_String_o *MyRoomBgm; // x19
 
-  if ( (byte_4CB166F & 1) == 0 )
+  if ( (byte_4CC277C & 1) == 0 )
   {
-    sub_1C6BA08(&SoundManager_TypeInfo);
-    byte_4CB166F = 1;
+    sub_1C713B0(&SoundManager_TypeInfo);
+    byte_4CC277C = 1;
   }
   soundPlayerComp = this->fields.soundPlayerComp;
   if ( !soundPlayerComp
     || (SoundPlayerComponent__hideMenu(soundPlayerComp, 0), (soundPlayerComp = this->fields.soundPlayerComp) == 0) )
   {
-    sub_1C6BC60(soundPlayerComp, method);
+    sub_1C71608(soundPlayerComp, method);
   }
   PlaySoundName = SoundPlayerComponent__getPlaySoundName(soundPlayerComp, 0);
   if ( System_String__IsNullOrEmpty(PlaySoundName, 0) )
@@ -11379,12 +12043,12 @@ void MyRoomControl__hideSvtFigure(MyRoomControl_o *this, const MethodInfo *metho
   System_Action_o *v7; // x21
   UnityEngine_Color_o v8; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB1652 & 1) == 0 )
+  if ( (byte_4CC275F & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__hideSvtFigure_b__249_0__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB1652 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__hideSvtFigure_b__249_0__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC275F = 1;
   }
   playBtnImg = (UIWidget_o *)this->fields.playBtnImg;
   if ( !playBtnImg )
@@ -11403,11 +12067,11 @@ void MyRoomControl__hideSvtFigure(MyRoomControl_o *this, const MethodInfo *metho
   this->fields.buttonFlag &= ~v5->static_fields->BUTTON_VOICE_PLAY;
   MyRoomControl__BlockTouch(this, v4);
   standFigureBack = this->fields.standFigureBack;
-  v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v7 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v7, (Il2CppObject *)this, Method_MyRoomControl__hideSvtFigure_b__249_0__, 0);
   if ( !standFigureBack )
 LABEL_8:
-    sub_1C6BC60(playBtnImg, method);
+    sub_1C71608(playBtnImg, method);
   StandFigureBack__Fadeout(standFigureBack, v7, 0);
 }
 
@@ -11418,7 +12082,7 @@ void MyRoomControl__hideUserServantCoinList(MyRoomControl_o *this, const MethodI
 
   userServantCoinComp = this->fields.userServantCoinComp;
   if ( !userServantCoinComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UserServantCoinComponent__hideMenu(userServantCoinComp, 0);
 }
 
@@ -11435,7 +12099,7 @@ void MyRoomControl__hideUsrItemList(MyRoomControl_o *this, const MethodInfo *met
                                                                 (UnityEngine_Component_o *)usrItemListViewManager,
                                                                 0)) == 0 )
   {
-    sub_1C6BC60(usrItemListViewManager, method);
+    sub_1C71608(usrItemListViewManager, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)usrItemListViewManager, 0, 0);
 }
@@ -11447,19 +12111,23 @@ System_Collections_IEnumerator_o *MyRoomControl__initMaterial(MyRoomControl_o *t
   __int64 v4; // x0
   __int64 v5; // x1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB1663 & 1) == 0 )
+  if ( (byte_4CC2770 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl__initMaterial_d__287_TypeInfo);
-    byte_4CB1663 = 1;
+    sub_1C713B0(&MyRoomControl__initMaterial_d__287_TypeInfo);
+    byte_4CC2770 = 1;
   }
-  v3 = sub_1C6BC54(MyRoomControl__initMaterial_d__287_TypeInfo);
+  v3 = sub_1C715FC(MyRoomControl__initMaterial_d__287_TypeInfo);
   MyRoomControl__initMaterial_d__287___ctor((MyRoomControl__initMaterial_d__287_o *)v3, 0, 0);
   if ( !v3 )
-    sub_1C6BC60(v4, v5);
+    sub_1C71608(v4, v5);
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 32), (int32_t)this, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -11470,133 +12138,177 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
   const MethodInfo *v4; // x2
   CStateManager_T__o *v5; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
   CStateManager_T__o *mFSM; // x20
-  MyRoomControl_StateEtc_o *v9; // x21
+  MyRoomControl_StateEtc_o *v13; // x21
   Il2CppObject *MasterData_object; // x0
   struct EventMaster_o **p_eventMaster; // x20
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  const MethodInfo *v14; // x1
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  const MethodInfo *v22; // x1
   UnityEngine_GameObject_o *mMainObj; // x21
   MaterialEventLogListViewManager_o *mMaterialEventLogListViewManager; // x21
-  System_Action_o *v17; // x22
-  Il2CppObject *v18; // x23
+  System_Action_o *v25; // x22
+  Il2CppObject *v26; // x23
   struct MyRoomControl___c_StaticFields *static_fields; // x0
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  _BOOL8 v22; // x0
-  const MethodInfo *v23; // x4
-  MyRoomControl_o *v24; // x0
-  const MethodInfo *v25; // x4
-  MyRoomParamsManager_c *v26; // x0
-  MyRoomControl_c *v27; // x0
-  const MethodInfo *v28; // x1
-  const MethodInfo *v29; // x1
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  _BOOL8 v34; // x0
+  const MethodInfo *v35; // x4
+  MyRoomControl_o *v36; // x0
+  const MethodInfo *v37; // x4
+  MyRoomParamsManager_c *v38; // x0
+  MyRoomControl_c *v39; // x0
+  const MethodInfo *v40; // x1
+  const MethodInfo *v41; // x1
   System_String_o *MyRoomBgm; // x21
   MyRoomBackGroundManager_o *backGroundManager; // x21
-  System_Action_o *v32; // x22
-  const MethodInfo *v33; // x1
+  System_Action_o *v44; // x22
+  const MethodInfo *v45; // x1
   UnityEngine_GameObject_o *changeLimitBtn; // x0
   UnityEngine_GameObject_o *moveBtnObj; // x0
   UnityEngine_GameObject_o *helpBtn; // x0
-  const MethodInfo *v37; // x1
+  const MethodInfo *v49; // x1
   System_Collections_IEnumerator_o *inited; // x0
   UISprite_o *changeServantListBtnSprite; // x21
-  __int64 v40; // x8
-  int v41; // w8
-  const MethodInfo *v42; // x2
+  __int64 v52; // x8
+  int v53; // w8
+  const MethodInfo *v54; // x2
   struct StandFigureBack_array *multipleStandFigureBacks; // x8
-  __int64 v44; // x21
+  __int64 v56; // x21
   int max_length; // w9
   int m_CancellationTokenSource; // w8
   _BOOL4 isEnableMultipleView; // w8
   UILabel_o *multipleViewButtonLabel; // x21
-  const MethodInfo *v49; // x1
-  const MethodInfo *v50; // x2
-  const MethodInfo *v51; // x1
-  MyRoomControl___c_c *v52; // x0
+  const MethodInfo *v61; // x1
+  const MethodInfo *v62; // x2
+  const MethodInfo *v63; // x1
+  MyRoomControl___c_c *v64; // x0
   System_Collections_Generic_IEnumerable_T__o *photoStandFigures; // x21
   System_Action_object__o *_9__217_1; // x22
-  Il2CppObject *v55; // x23
-  struct MyRoomControl___c_StaticFields *v56; // x0
-  int32_t v57; // w2
-  const MethodInfo *v58; // x3
+  Il2CppObject *v67; // x23
+  struct MyRoomControl___c_StaticFields *v68; // x0
+  int32_t v69; // w2
+  int32_t v70; // w3
+  System_String_o *v71; // x4
+  int32_t v72; // w5
+  int64_t v73; // x6
+  System_String_o *v74; // x7
   EventEntity_array *EnableEntityList; // x21
   UnityEngine_GameObject_o *photoCampaignButton; // x8
-  int32_t v61; // w2
-  const MethodInfo *v62; // x3
+  int32_t v77; // w2
+  int32_t v78; // w3
+  System_String_o *v79; // x4
+  int32_t v80; // w5
+  int64_t v81; // x6
+  System_String_o *v82; // x7
   _BOOL4 isEnablePhotoCampaign; // w8
-  struct EventEntity_o *v64; // x1
+  struct EventEntity_o *v84; // x1
   struct EventEntity_o **p_photoCampaignEntity; // x21
-  System_Collections_Generic_List_object__o *v66; // x22
-  int32_t v67; // w2
-  const MethodInfo *v68; // x3
-  System_Collections_Generic_Dictionary_int__object__o *v69; // x22
-  int32_t v70; // w2
-  const MethodInfo *v71; // x3
-  System_Collections_Generic_Dictionary_int__object__o *v72; // x22
-  int32_t v73; // w2
-  const MethodInfo *v74; // x3
+  System_Collections_Generic_List_object__o *v86; // x22
+  int32_t v87; // w2
+  int32_t v88; // w3
+  System_String_o *v89; // x4
+  int32_t v90; // w5
+  int64_t v91; // x6
+  System_String_o *v92; // x7
+  System_Collections_Generic_Dictionary_int__object__o *v93; // x22
+  int32_t v94; // w2
+  int32_t v95; // w3
+  System_String_o *v96; // x4
+  int32_t v97; // w5
+  int64_t v98; // x6
+  System_String_o *v99; // x7
+  System_Collections_Generic_Dictionary_int__object__o *v100; // x22
+  int32_t v101; // w2
+  int32_t v102; // w3
+  System_String_o *v103; // x4
+  int32_t v104; // w5
+  int64_t v105; // x6
+  System_String_o *v106; // x7
   UILabel_o *photoCampaignButtonLabel; // x22
-  const MethodInfo *v76; // x1
-  System_Collections_Generic_List_T__o *v77; // x20
-  int32_t v78; // w2
-  const MethodInfo *v79; // x3
-  System_Collections_Generic_List_T__o *v80; // x20
-  int32_t v81; // w2
-  const MethodInfo *v82; // x3
-  System_Collections_Generic_List_object__o *v83; // x20
-  int32_t v84; // w2
-  const MethodInfo *v85; // x3
-  const MethodInfo *v86; // x2
-  const MethodInfo *v87; // x1
-  UnityEngine_Vector3_o v88; // [xsp+0h] [xbp-80h] BYREF
+  const MethodInfo *v108; // x1
+  System_Collections_Generic_List_T__o *v109; // x20
+  int32_t v110; // w2
+  int32_t v111; // w3
+  System_String_o *v112; // x4
+  int32_t v113; // w5
+  int64_t v114; // x6
+  System_String_o *v115; // x7
+  System_Collections_Generic_List_T__o *v116; // x20
+  int32_t v117; // w2
+  int32_t v118; // w3
+  System_String_o *v119; // x4
+  int32_t v120; // w5
+  int64_t v121; // x6
+  System_String_o *v122; // x7
+  System_Collections_Generic_List_object__o *v123; // x20
+  int32_t v124; // w2
+  int32_t v125; // w3
+  System_String_o *v126; // x4
+  int32_t v127; // w5
+  int64_t v128; // x6
+  System_String_o *v129; // x7
+  const MethodInfo *v130; // x2
+  const MethodInfo *v131; // x1
+  UnityEngine_Vector3_o v132; // [xsp+0h] [xbp-80h] BYREF
   UnityEngine_Vector3_o v; // [xsp+10h] [xbp-70h] BYREF
   UnityEngine_Vector3_o moveHidePos; // [xsp+20h] [xbp-60h] BYREF
   UnityEngine_Vector3_o moveShowPos; // [xsp+30h] [xbp-50h] BYREF
   UnityEngine_Vector3_o LocalPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v93; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v94; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v95; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v137; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v138; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v139; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB1636 & 1) == 0 )
+  if ( (byte_4CC2743 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_PhotoStandFigureComponent__TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
-    sub_1C6BA08(&Method_CStateManager_MyRoomControl___ctor__);
-    sub_1C6BA08(&Method_CStateManager_MyRoomControl__add__);
-    sub_1C6BA08(&CStateManager_MyRoomControl__TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_EventMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__Texture2D___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_int__Texture2D__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetData___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&System_Collections_Generic_List_PhotoLayerChangeComponent__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_List_PhotoUtility_TargetType__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_List_AssetData__TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_LoadScriptFileListAssetData__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&SoundManager_TypeInfo);
-    sub_1C6BA08(&MyRoomControl_StateEtc_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__initMyRoom_b__217_0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__initMyRoom_b__217_1__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    sub_1C6BA08(&StringLiteral_10353/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/);
-    sub_1C6BA08(&StringLiteral_17459/*"btn_bg_12"*/);
-    sub_1C6BA08(&StringLiteral_6972/*"GO_NEXT"*/);
-    sub_1C6BA08(&StringLiteral_8819/*"MULTIPLE_VIEW_BUTTON_TEXT"*/);
-    byte_4CB1636 = 1;
+    sub_1C713B0(&System_Action_PhotoStandFigureComponent__TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
+    sub_1C713B0(&Method_CStateManager_MyRoomControl___ctor__);
+    sub_1C713B0(&Method_CStateManager_MyRoomControl__add__);
+    sub_1C713B0(&CStateManager_MyRoomControl__TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_EventMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__Texture2D___ctor__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_int__Texture2D__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AssetData___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoLayerChangeComponent___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&System_Collections_Generic_List_PhotoLayerChangeComponent__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_List_PhotoUtility_TargetType__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_List_AssetData__TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_LoadScriptFileListAssetData__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&SoundManager_TypeInfo);
+    sub_1C713B0(&MyRoomControl_StateEtc_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__initMyRoom_b__217_0__);
+    sub_1C713B0(&Method_MyRoomControl___c__initMyRoom_b__217_1__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    sub_1C713B0(&StringLiteral_10359/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/);
+    sub_1C713B0(&StringLiteral_17466/*"btn_bg_12"*/);
+    sub_1C713B0(&StringLiteral_6974/*"GO_NEXT"*/);
+    sub_1C713B0(&StringLiteral_8823/*"MULTIPLE_VIEW_BUTTON_TEXT"*/);
+    byte_4CC2743 = 1;
   }
   moveShowPos.fields.z = 0.0;
   *(_QWORD *)&moveShowPos.fields.x = 0;
@@ -11604,8 +12316,8 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
   *(_QWORD *)&moveHidePos.fields.x = 0;
   v.fields.z = 0.0;
   *(_QWORD *)&v.fields.x = 0;
-  v88.fields.z = 0.0;
-  *(_QWORD *)&v88.fields.x = 0;
+  v132.fields.z = 0.0;
+  *(_QWORD *)&v132.fields.x = 0;
   standFigureBack = this->fields.standFigureBack;
   if ( !standFigureBack )
     goto LABEL_60;
@@ -11615,21 +12327,21 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
     standFigureBack = (StandFigureBack_o *)this->fields.myRoomFsm;
     if ( standFigureBack )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)standFigureBack, (System_String_o *)StringLiteral_6972/*"GO_NEXT"*/, 0);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)standFigureBack, (System_String_o *)StringLiteral_6974/*"GO_NEXT"*/, 0);
       return;
     }
     goto LABEL_60;
   }
   if ( !this->fields.mFSM )
   {
-    v5 = (CStateManager_T__o *)sub_1C6BC54(CStateManager_MyRoomControl__TypeInfo);
+    v5 = (CStateManager_T__o *)sub_1C715FC(CStateManager_MyRoomControl__TypeInfo);
     CStateManager_object____ctor(
       v5,
       (Il2CppObject *)this,
       2,
-      (const MethodInfo_33848C4 *)Method_CStateManager_MyRoomControl___ctor__);
+      (const MethodInfo_3394668 *)Method_CStateManager_MyRoomControl___ctor__);
     this->fields.mFSM = (struct CStateManager_MyRoomControl__o *)v5;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mFSM, (int32_t)v5, v6, v7);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mFSM, (int32_t)v5, v6, v7, v8, v9, v10, v11);
     standFigureBack = (StandFigureBack_o *)this->fields.mFSM;
     if ( !standFigureBack )
       goto LABEL_60;
@@ -11637,17 +12349,17 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
       (CStateManager_T__o *)standFigureBack,
       0,
       (IState_T__o *)this->fields.mStateMaterial,
-      (const MethodInfo_338496C *)Method_CStateManager_MyRoomControl__add__);
+      (const MethodInfo_3394710 *)Method_CStateManager_MyRoomControl__add__);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v9 = (MyRoomControl_StateEtc_o *)sub_1C6BC54(MyRoomControl_StateEtc_TypeInfo);
-    MyRoomControl_StateEtc___ctor(v9, 0);
+    v13 = (MyRoomControl_StateEtc_o *)sub_1C715FC(MyRoomControl_StateEtc_TypeInfo);
+    MyRoomControl_StateEtc___ctor(v13, 0);
     if ( !mFSM )
       goto LABEL_60;
     CStateManager_object___add(
       mFSM,
       1,
-      (IState_T__o *)v9,
-      (const MethodInfo_338496C *)Method_CStateManager_MyRoomControl__add__);
+      (IState_T__o *)v13,
+      (const MethodInfo_3394710 *)Method_CStateManager_MyRoomControl__add__);
   }
   MyRoomControl__SetState(this, 1, v4);
   standFigureBack = (StandFigureBack_o *)this->fields.mStateMaterial;
@@ -11658,15 +12370,23 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
   if ( !standFigureBack )
     goto LABEL_60;
   MyRoomData__initMyRoomData((MyRoomData_o *)standFigureBack, 0);
-  standFigureBack = (StandFigureBack_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  standFigureBack = (StandFigureBack_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !standFigureBack )
     goto LABEL_60;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)standFigureBack,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventMaster___);
   p_eventMaster = &this->fields.eventMaster;
   this->fields.eventMaster = (struct EventMaster_o *)MasterData_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventMaster, (int32_t)MasterData_object, v12, v13);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.eventMaster,
+    (int32_t)MasterData_object,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21);
   standFigureBack = (StandFigureBack_o *)this->fields.titleInfo;
   if ( !standFigureBack )
     goto LABEL_60;
@@ -11693,7 +12413,7 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
   this->fields.isExistVoiceData = 1;
   this->fields.materialServantId = -1;
   this->fields._IsGallery_k__BackingField = 0;
-  MyRoomControl__setUserStInfoView(this, v14);
+  MyRoomControl__setUserStInfoView(this, v22);
   mMainObj = this->fields.mMainObj;
   LocalPosition = GameObjectExtensions__GetLocalPosition(this->fields.mShowPos, 0);
   GameObjectExtensions__SetLocalPosition(mMainObj, LocalPosition, 0);
@@ -11704,69 +12424,69 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(MyRoomControl___c_TypeInfo);
     standFigureBack = (StandFigureBack_o *)MyRoomControl___c_TypeInfo;
   }
-  v17 = *(System_Action_o **)(*(_QWORD *)&standFigureBack[1].fields.isFirstLoading + 8LL);
-  if ( !v17 )
+  v25 = *(System_Action_o **)(*(_QWORD *)&standFigureBack[1].fields.isFirstLoading + 8LL);
+  if ( !v25 )
   {
     if ( !LODWORD(standFigureBack[2].fields.m_CachedPtr) )
     {
       j_il2cpp_runtime_class_init_0(standFigureBack);
       standFigureBack = (StandFigureBack_o *)MyRoomControl___c_TypeInfo;
     }
-    v18 = **(Il2CppObject ***)&standFigureBack[1].fields.isFirstLoading;
-    v17 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v17, v18, Method_MyRoomControl___c__initMyRoom_b__217_0__, 0);
+    v26 = **(Il2CppObject ***)&standFigureBack[1].fields.isFirstLoading;
+    v25 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v25, v26, Method_MyRoomControl___c__initMyRoom_b__217_0__, 0);
     static_fields = MyRoomControl___c_TypeInfo->static_fields;
-    static_fields->__9__217_0 = v17;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__217_0, (int32_t)v17, v20, v21);
+    static_fields->__9__217_0 = v25;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__217_0, (int32_t)v25, v28, v29, v30, v31, v32, v33);
   }
   if ( !mMaterialEventLogListViewManager )
     goto LABEL_60;
-  v22 = MaterialEventLogListViewManager__SetMode(mMaterialEventLogListViewManager, 0, v17, 0);
+  v34 = MaterialEventLogListViewManager__SetMode(mMaterialEventLogListViewManager, 0, v25, 0);
   MyRoomControl__setupServantListUIMoveData(
-    (MyRoomControl_o *)v22,
+    (MyRoomControl_o *)v34,
     this->fields.servantListObj,
     &moveShowPos,
     &moveHidePos,
-    v23);
-  MyRoomControl__setupSortWindowUIMoveData(v24, this->fields.sortWindowObj, &v, &v88, v25);
+    v35);
+  MyRoomControl__setupSortWindowUIMoveData(v36, this->fields.sortWindowObj, &v, &v132, v37);
   GameObjectExtensions__SetLocalPosition(this->fields.servantListObj, moveShowPos, 0);
   GameObjectExtensions__SetLocalPosition(this->fields.sortWindowObj, v, 0);
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
   MyRoomParamsManager__Load_SaveData(0);
   MyRoomParamsManager__LoadIsListActive(0);
-  if ( !byte_4CB16DB )
+  if ( !byte_4CC27E8 )
   {
-    sub_1C6BA08(&MyRoomParamsManager_TypeInfo);
-    byte_4CB16DB = 1;
+    sub_1C713B0(&MyRoomParamsManager_TypeInfo);
+    byte_4CC27E8 = 1;
   }
-  v26 = MyRoomParamsManager_TypeInfo;
+  v38 = MyRoomParamsManager_TypeInfo;
   if ( !MyRoomParamsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MyRoomParamsManager_TypeInfo);
-    v26 = MyRoomParamsManager_TypeInfo;
+    v38 = MyRoomParamsManager_TypeInfo;
   }
-  this->fields.IsListActive = v26->static_fields->_IsListActive_k__BackingField;
-  v27 = MyRoomControl_TypeInfo;
+  this->fields.IsListActive = v38->static_fields->_IsListActive_k__BackingField;
+  v39 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
-  MyRoomControl__SetBackGroundData((const MethodInfo *)v27);
+  MyRoomControl__SetBackGroundData((const MethodInfo *)v39);
   standFigureBack = (StandFigureBack_o *)this->fields.soundPlayerComp;
   if ( !standFigureBack )
     goto LABEL_60;
   SoundPlayerComponent__initMenu((SoundPlayerComponent_o *)standFigureBack, 0);
-  MyRoomControl__SetupFrontObject(this, v28);
-  MyRoomBgm = MyRoomControl__getMyRoomBgm(this, v29);
+  MyRoomControl__SetupFrontObject(this, v40);
+  MyRoomBgm = MyRoomControl__getMyRoomBgm(this, v41);
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playBgm(MyRoomBgm, 0);
   backGroundManager = this->fields.backGroundManager;
-  v32 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v32, (Il2CppObject *)this, Method_MyRoomControl_LoadScriptFileListAssetData__, 0);
+  v44 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v44, (Il2CppObject *)this, Method_MyRoomControl_LoadScriptFileListAssetData__, 0);
   if ( !backGroundManager )
     goto LABEL_60;
-  MyRoomBackGroundManager__SetBackGround(backGroundManager, 3, v32, 0);
-  MyRoomControl__setupSvtImageIdList(this, v33);
+  MyRoomBackGroundManager__SetBackGround(backGroundManager, 3, v44, 0);
+  MyRoomControl__setupSvtImageIdList(this, v45);
   standFigureBack = (StandFigureBack_o *)this->fields.helpListViewManager;
   if ( !standFigureBack )
     goto LABEL_60;
@@ -11792,24 +12512,24 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
   changeLimitBtn = this->fields.changeLimitBtn;
   *(_QWORD *)&this->fields.voicePlayBtnInitPos.fields.x = *(_QWORD *)&this->fields.voicePlayButtonDefaultPos.fields.x;
   this->fields.voicePlayBtnInitPos.fields.z = this->fields.voicePlayButtonDefaultPos.fields.z;
-  v93 = GameObjectExtensions__GetLocalPosition(changeLimitBtn, 0);
+  v137 = GameObjectExtensions__GetLocalPosition(changeLimitBtn, 0);
   moveBtnObj = this->fields.moveBtnObj;
-  this->fields.changeLimitBtnInitPos = v93;
-  v94 = GameObjectExtensions__GetLocalPosition(moveBtnObj, 0);
+  this->fields.changeLimitBtnInitPos = v137;
+  v138 = GameObjectExtensions__GetLocalPosition(moveBtnObj, 0);
   helpBtn = this->fields.helpBtn;
-  this->fields.moveBtnObjInitPos = v94;
-  v95 = GameObjectExtensions__GetLocalPosition(helpBtn, 0);
+  this->fields.moveBtnObjInitPos = v138;
+  v139 = GameObjectExtensions__GetLocalPosition(helpBtn, 0);
   standFigureBack = (StandFigureBack_o *)this->fields.changeDispTouch;
-  this->fields.helpBtnInitPos = v95;
+  this->fields.helpBtnInitPos = v139;
   if ( !standFigureBack )
     goto LABEL_60;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)standFigureBack, 0, 0);
-  inited = MyRoomControl__InitMaterialOnBackground(this, v37);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, inited, 0);
+  inited = MyRoomControl__InitMaterialOnBackground(this, v49);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, inited, 0);
   changeServantListBtnSprite = this->fields.changeServantListBtnSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetEventSprite(changeServantListBtnSprite, (System_String_o *)StringLiteral_17459/*"btn_bg_12"*/, 0);
+  AtlasManager__SetEventSprite(changeServantListBtnSprite, (System_String_o *)StringLiteral_17466/*"btn_bg_12"*/, 0);
   standFigureBack = (StandFigureBack_o *)this->fields.changeServantListBtnSprite;
   if ( !standFigureBack )
     goto LABEL_60;
@@ -11823,37 +12543,37 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(MyRoomControl_TypeInfo);
     standFigureBack = (StandFigureBack_o *)MyRoomControl_TypeInfo;
   }
-  v40 = *(_QWORD *)(*(_QWORD *)&standFigureBack[1].fields.isFirstLoading + 48LL);
-  if ( !v40 )
+  v52 = *(_QWORD *)(*(_QWORD *)&standFigureBack[1].fields.isFirstLoading + 48LL);
+  if ( !v52 )
     goto LABEL_60;
-  v41 = *(_DWORD *)(v40 + 24);
+  v53 = *(_DWORD *)(v52 + 24);
   standFigureBack = (StandFigureBack_o *)this->fields.changeBgButton;
-  this->fields.isEnableChangeBg = v41 > 1;
+  this->fields.isEnableChangeBg = v53 > 1;
   if ( !standFigureBack )
     goto LABEL_60;
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)standFigureBack, v41 > 1, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)standFigureBack, v53 > 1, 0);
   if ( this->fields.isEnableChangeBg )
   {
-    MyRoomControl__MoveEventButtonDisplay(this, this->fields.changeBgButton, v42);
+    MyRoomControl__MoveEventButtonDisplay(this, this->fields.changeBgButton, v54);
     this->fields.changeBgButtonInitPos = GameObjectExtensions__GetLocalPosition(this->fields.changeBgButton, 0);
   }
   multipleStandFigureBacks = this->fields.multipleStandFigureBacks;
   if ( !multipleStandFigureBacks )
     goto LABEL_60;
-  v44 = 0;
+  v56 = 0;
   while ( 1 )
   {
     max_length = multipleStandFigureBacks->max_length;
-    if ( (int)v44 >= max_length )
+    if ( (int)v56 >= max_length )
       break;
-    if ( (unsigned int)v44 >= max_length )
+    if ( (unsigned int)v56 >= max_length )
       goto LABEL_97;
-    standFigureBack = multipleStandFigureBacks->m_Items[v44];
+    standFigureBack = multipleStandFigureBacks->m_Items[v56];
     if ( standFigureBack )
     {
       StandFigureBack__Init(standFigureBack, 0);
       multipleStandFigureBacks = this->fields.multipleStandFigureBacks;
-      ++v44;
+      ++v56;
       if ( multipleStandFigureBacks )
         continue;
     }
@@ -11873,7 +12593,7 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
   this->fields.isEnableMultipleView = EventMaster__IsEnableMyRoomMultipleView((EventMaster_o *)standFigureBack, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  standFigureBack = (StandFigureBack_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantMaster___);
+  standFigureBack = (StandFigureBack_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !standFigureBack
     || (standFigureBack = (StandFigureBack_o *)UserServantMaster__getOrganizationList(
                                                  (UserServantMaster_o *)standFigureBack,
@@ -11884,7 +12604,7 @@ void MyRoomControl__initMyRoom(MyRoomControl_o *this, const MethodInfo *method)
         !standFigureBack) )
   {
 LABEL_60:
-    sub_1C6BC60(standFigureBack, method);
+    sub_1C71608(standFigureBack, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)standFigureBack, this->fields.isEnableMultipleView, 0);
   isEnableMultipleView = this->fields.isEnableMultipleView;
@@ -11894,7 +12614,7 @@ LABEL_60:
     multipleViewButtonLabel = this->fields.multipleViewButtonLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    standFigureBack = (StandFigureBack_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8819/*"MULTIPLE_VIEW_BUTTON_TEXT"*/, 0);
+    standFigureBack = (StandFigureBack_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8823/*"MULTIPLE_VIEW_BUTTON_TEXT"*/, 0);
     if ( !multipleViewButtonLabel )
       goto LABEL_60;
     UILabel__set_text(multipleViewButtonLabel, (System_String_o *)standFigureBack, 0);
@@ -11904,37 +12624,37 @@ LABEL_60:
     this->fields.multipleViewFinishedTime = EventMaster__GetFinishedTimeMyRoomMultipleView(
                                               (EventMaster_o *)standFigureBack,
                                               0);
-    MyRoomControl__UpdateMutipleViewRemainTime(this, v49);
-    MyRoomControl__MoveEventButtonDisplay(this, this->fields.multipleViewButton, v50);
+    MyRoomControl__UpdateMutipleViewRemainTime(this, v61);
+    MyRoomControl__MoveEventButtonDisplay(this, this->fields.multipleViewButton, v62);
     this->fields.multipleViewButtonInitPos = GameObjectExtensions__GetLocalPosition(this->fields.multipleViewButton, 0);
-    MyRoomControl__SetMultipleViewButtonColor(this, v51);
+    MyRoomControl__SetMultipleViewButtonColor(this, v63);
   }
-  v52 = MyRoomControl___c_TypeInfo;
+  v64 = MyRoomControl___c_TypeInfo;
   photoStandFigures = (System_Collections_Generic_IEnumerable_T__o *)this->fields.photoStandFigures;
   if ( !MyRoomControl___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MyRoomControl___c_TypeInfo);
-    v52 = MyRoomControl___c_TypeInfo;
+    v64 = MyRoomControl___c_TypeInfo;
   }
-  _9__217_1 = (System_Action_object__o *)v52->static_fields->__9__217_1;
+  _9__217_1 = (System_Action_object__o *)v64->static_fields->__9__217_1;
   if ( !_9__217_1 )
   {
-    if ( !v52->_2.cctor_finished )
+    if ( !v64->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v52);
-      v52 = MyRoomControl___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v64);
+      v64 = MyRoomControl___c_TypeInfo;
     }
-    v55 = (Il2CppObject *)v52->static_fields->__9;
-    _9__217_1 = (System_Action_object__o *)sub_1C6BC54(System_Action_PhotoStandFigureComponent__TypeInfo);
-    System_Action_object____ctor(_9__217_1, v55, Method_MyRoomControl___c__initMyRoom_b__217_1__, 0);
-    v56 = MyRoomControl___c_TypeInfo->static_fields;
-    v56->__9__217_1 = (struct System_Action_PhotoStandFigureComponent__o *)_9__217_1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v56->__9__217_1, (int32_t)_9__217_1, v57, v58);
+    v67 = (Il2CppObject *)v64->static_fields->__9;
+    _9__217_1 = (System_Action_object__o *)sub_1C715FC(System_Action_PhotoStandFigureComponent__TypeInfo);
+    System_Action_object____ctor(_9__217_1, v67, Method_MyRoomControl___c__initMyRoom_b__217_1__, 0);
+    v68 = MyRoomControl___c_TypeInfo->static_fields;
+    v68->__9__217_1 = (struct System_Action_PhotoStandFigureComponent__o *)_9__217_1;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v68->__9__217_1, (int32_t)_9__217_1, v69, v70, v71, v72, v73, v74);
   }
   BasicHelper__ForEach_object_(
     photoStandFigures,
     (System_Action_T__o *)_9__217_1,
-    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
+    (const MethodInfo_3136DF4 *)Method_BasicHelper_ForEach_PhotoStandFigureComponent___);
   standFigureBack = (StandFigureBack_o *)this->fields.photoCampaignCameraButton;
   if ( !standFigureBack )
     goto LABEL_60;
@@ -11945,7 +12665,7 @@ LABEL_60:
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)standFigureBack, 0, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  standFigureBack = (StandFigureBack_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_EventMaster___);
+  standFigureBack = (StandFigureBack_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_EventMaster___);
   if ( !standFigureBack )
     goto LABEL_60;
   EnableEntityList = EventMaster__GetEnableEntityList((EventMaster_o *)standFigureBack, 26, 1, 0, 0);
@@ -11966,33 +12686,65 @@ LABEL_60:
       goto LABEL_60;
     if ( !LODWORD(EnableEntityList->max_length) )
 LABEL_97:
-      sub_1C6BC68(standFigureBack);
-    v64 = EnableEntityList->m_Items[0];
+      sub_1C71610(standFigureBack);
+    v84 = EnableEntityList->m_Items[0];
     p_photoCampaignEntity = &this->fields.photoCampaignEntity;
-    this->fields.photoCampaignEntity = v64;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoCampaignEntity, (int32_t)v64, v61, v62);
-    v66 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_AssetData__TypeInfo);
+    this->fields.photoCampaignEntity = v84;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.photoCampaignEntity,
+      (int32_t)v84,
+      v77,
+      v78,
+      v79,
+      v80,
+      v81,
+      v82);
+    v86 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_AssetData__TypeInfo);
     System_Collections_Generic_List_object____ctor(
-      v66,
-      (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_AssetData___ctor__);
-    this->fields.masterEquipAssetData = (struct System_Collections_Generic_List_AssetData__o *)v66;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.masterEquipAssetData, (int32_t)v66, v67, v68);
-    v69 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__Texture2D__TypeInfo);
+      v86,
+      (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_AssetData___ctor__);
+    this->fields.masterEquipAssetData = (struct System_Collections_Generic_List_AssetData__o *)v86;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.masterEquipAssetData,
+      (int32_t)v86,
+      v87,
+      v88,
+      v89,
+      v90,
+      v91,
+      v92);
+    v93 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_int__Texture2D__TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
-      v69,
-      (const MethodInfo_3451B1C *)Method_System_Collections_Generic_Dictionary_int__Texture2D___ctor__);
-    this->fields.masterMaleEquipTexture = (struct System_Collections_Generic_Dictionary_int__Texture2D__o *)v69;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.masterMaleEquipTexture, (int32_t)v69, v70, v71);
-    v72 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__Texture2D__TypeInfo);
+      v93,
+      (const MethodInfo_34618C0 *)Method_System_Collections_Generic_Dictionary_int__Texture2D___ctor__);
+    this->fields.masterMaleEquipTexture = (struct System_Collections_Generic_Dictionary_int__Texture2D__o *)v93;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.masterMaleEquipTexture,
+      (int32_t)v93,
+      v94,
+      v95,
+      v96,
+      v97,
+      v98,
+      v99);
+    v100 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_int__Texture2D__TypeInfo);
     System_Collections_Generic_Dictionary_int__object____ctor(
-      v72,
-      (const MethodInfo_3451B1C *)Method_System_Collections_Generic_Dictionary_int__Texture2D___ctor__);
-    this->fields.masterFemaleEquipTexture = (struct System_Collections_Generic_Dictionary_int__Texture2D__o *)v72;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.masterFemaleEquipTexture, (int32_t)v72, v73, v74);
+      v100,
+      (const MethodInfo_34618C0 *)Method_System_Collections_Generic_Dictionary_int__Texture2D___ctor__);
+    this->fields.masterFemaleEquipTexture = (struct System_Collections_Generic_Dictionary_int__Texture2D__o *)v100;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.masterFemaleEquipTexture,
+      (int32_t)v100,
+      v101,
+      v102,
+      v103,
+      v104,
+      v105,
+      v106);
     photoCampaignButtonLabel = this->fields.photoCampaignButtonLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    standFigureBack = (StandFigureBack_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10353/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/, 0);
+    standFigureBack = (StandFigureBack_o *)LocalizationManager__Get((System_String_o *)StringLiteral_10359/*"PHOTO_CAMPAIGN_BUTTON_TEXT"*/, 0);
     if ( !photoCampaignButtonLabel )
       goto LABEL_60;
     UILabel__set_text(photoCampaignButtonLabel, (System_String_o *)standFigureBack, 0);
@@ -12005,30 +12757,54 @@ LABEL_97:
                                                (EventMaster_o *)standFigureBack,
                                                (*p_photoCampaignEntity)->fields.id,
                                                0);
-    MyRoomControl__UpdatePhotoCampaignRemainTime(this, v76);
-    v77 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_PhotoUtility_TargetType__TypeInfo);
+    MyRoomControl__UpdatePhotoCampaignRemainTime(this, v108);
+    v109 = (System_Collections_Generic_List_T__o *)sub_1C715FC(System_Collections_Generic_List_PhotoUtility_TargetType__TypeInfo);
     System_Collections_Generic_List_Int32Enum____ctor(
-      v77,
-      (const MethodInfo_37E5928 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType___ctor__);
-    this->fields.photoTargetList = (struct System_Collections_Generic_List_PhotoUtility_TargetType__o *)v77;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.photoTargetList, (int32_t)v77, v78, v79);
-    v80 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_PhotoUtility_TargetType__TypeInfo);
+      v109,
+      (const MethodInfo_37F56CC *)Method_System_Collections_Generic_List_PhotoUtility_TargetType___ctor__);
+    this->fields.photoTargetList = (struct System_Collections_Generic_List_PhotoUtility_TargetType__o *)v109;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.photoTargetList,
+      (int32_t)v109,
+      v110,
+      v111,
+      v112,
+      v113,
+      v114,
+      v115);
+    v116 = (System_Collections_Generic_List_T__o *)sub_1C715FC(System_Collections_Generic_List_PhotoUtility_TargetType__TypeInfo);
     System_Collections_Generic_List_Int32Enum____ctor(
-      v80,
-      (const MethodInfo_37E5928 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType___ctor__);
-    this->fields.temporaryPhotoTargetList = (struct System_Collections_Generic_List_PhotoUtility_TargetType__o *)v80;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.temporaryPhotoTargetList, (int32_t)v80, v81, v82);
-    v83 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_PhotoLayerChangeComponent__TypeInfo);
+      v116,
+      (const MethodInfo_37F56CC *)Method_System_Collections_Generic_List_PhotoUtility_TargetType___ctor__);
+    this->fields.temporaryPhotoTargetList = (struct System_Collections_Generic_List_PhotoUtility_TargetType__o *)v116;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.temporaryPhotoTargetList,
+      (int32_t)v116,
+      v117,
+      v118,
+      v119,
+      v120,
+      v121,
+      v122);
+    v123 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_PhotoLayerChangeComponent__TypeInfo);
     System_Collections_Generic_List_object____ctor(
-      v83,
-      (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent___ctor__);
-    this->fields.instantiateLayerChangeObjList = (struct System_Collections_Generic_List_PhotoLayerChangeComponent__o *)v83;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.instantiateLayerChangeObjList, (int32_t)v83, v84, v85);
-    MyRoomControl__MoveEventButtonDisplay(this, this->fields.photoCampaignButton, v86);
+      v123,
+      (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_PhotoLayerChangeComponent___ctor__);
+    this->fields.instantiateLayerChangeObjList = (struct System_Collections_Generic_List_PhotoLayerChangeComponent__o *)v123;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.instantiateLayerChangeObjList,
+      (int32_t)v123,
+      v124,
+      v125,
+      v126,
+      v127,
+      v128,
+      v129);
+    MyRoomControl__MoveEventButtonDisplay(this, this->fields.photoCampaignButton, v130);
     this->fields.photoCampaignButtonInitPos = GameObjectExtensions__GetLocalPosition(
                                                 this->fields.photoCampaignButton,
                                                 0);
-    MyRoomControl__SetPhotoCampaignButtonColor(this, v87);
+    MyRoomControl__SetPhotoCampaignButtonColor(this, v131);
   }
 }
 
@@ -12047,7 +12823,7 @@ void MyRoomControl__materialSvtVoicePlay(
   System_Collections_IEnumerator_o *v4; // x1
 
   v4 = MyRoomControl__svtVoicePlayAct(this, item, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v4, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v4, 0);
 }
 
 
@@ -12062,20 +12838,44 @@ void MyRoomControl__moveControl(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
 
   v7 = TweenPosition__Begin(target, 0.2, movePos, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !v7 )
-    sub_1C6BC60(gameObject, v9);
+    sub_1C71608(gameObject, v9);
   v7->fields.eventReceiver = gameObject;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v7->fields.eventReceiver, (int32_t)gameObject, v10, v11);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v7->fields.eventReceiver,
+    (int32_t)gameObject,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15);
   if ( callwhenFinished )
   {
     v7->fields.callWhenFinished = callwhenFinished;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v7->fields.callWhenFinished, (int32_t)callwhenFinished, v12, v13);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&v7->fields.callWhenFinished,
+      (int32_t)callwhenFinished,
+      v16,
+      v17,
+      v18,
+      v19,
+      v20,
+      v21);
   }
   v7->fields.method = 3;
 }
@@ -12091,11 +12891,11 @@ void MyRoomControl__onClickHelp(MyRoomControl_o *this, const MethodInfo *method)
   __int64 v8; // x1
   MyRoomHelpListViewManager_o *helpListViewManager; // x0
 
-  if ( (byte_4CB1672 & 1) == 0 )
+  if ( (byte_4CC277F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_onClickHelp__);
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB1672 = 1;
+    sub_1C713B0(&Method_MyRoomControl_onClickHelp__);
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC277F = 1;
   }
   v3 = MyRoomControl_TypeInfo;
   if ( !MyRoomControl_TypeInfo->_2.cctor_finished )
@@ -12107,8 +12907,8 @@ void MyRoomControl__onClickHelp(MyRoomControl_o *this, const MethodInfo *method)
   v5 = Method_MyRoomControl_onClickHelp__;
   v6 = this->fields.buttonFlag & static_fields->BUTTON_HELP;
   if ( (*((_BYTE *)Method_MyRoomControl_onClickHelp__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_onClickHelp__);
-  v7 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_onClickHelp__);
+  v7 = (System_Reflection_MethodBase_o *)sub_1C71394(v5, v5[4]);
   if ( v6 <= 0 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0);
@@ -12124,7 +12924,7 @@ void MyRoomControl__onClickHelp(MyRoomControl_o *this, const MethodInfo *method)
     {
       helpListViewManager = this->fields.helpListViewManager;
       if ( !helpListViewManager )
-        sub_1C6BC60(0, v8);
+        sub_1C71608(0, v8);
       MyRoomHelpListViewManager__CreateList(helpListViewManager, 0);
     }
   }
@@ -12140,23 +12940,23 @@ void MyRoomControl__onClickHelpClose(MyRoomControl_o *this, const MethodInfo *me
   __int64 v7; // x0
   __int64 v8; // x1
 
-  if ( (byte_4CB1673 & 1) == 0 )
+  if ( (byte_4CC2780 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomHelpListViewManager_CallbackFunc2_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_helpClose__);
-    sub_1C6BA08(&Method_MyRoomControl_onClickHelpClose__);
-    byte_4CB1673 = 1;
+    sub_1C713B0(&MyRoomHelpListViewManager_CallbackFunc2_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_helpClose__);
+    sub_1C713B0(&Method_MyRoomControl_onClickHelpClose__);
+    byte_4CC2780 = 1;
   }
   v3 = Method_MyRoomControl_onClickHelpClose__;
   if ( (*((_BYTE *)Method_MyRoomControl_onClickHelpClose__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_onClickHelpClose__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_onClickHelpClose__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   helpListViewManager = this->fields.helpListViewManager;
-  v6 = (MyRoomHelpListViewManager_CallbackFunc2_o *)sub_1C6BC54(MyRoomHelpListViewManager_CallbackFunc2_TypeInfo);
+  v6 = (MyRoomHelpListViewManager_CallbackFunc2_o *)sub_1C715FC(MyRoomHelpListViewManager_CallbackFunc2_TypeInfo);
   MyRoomHelpListViewManager_CallbackFunc2___ctor(v6, (Il2CppObject *)this, Method_MyRoomControl_helpClose__, 0);
   if ( !helpListViewManager )
-    sub_1C6BC60(v7, v8);
+    sub_1C71608(v7, v8);
   MyRoomHelpListViewManager__CloseHelpDialog(helpListViewManager, v6, 0);
 }
 
@@ -12167,7 +12967,7 @@ void MyRoomControl__openFavoriteSvt(MyRoomControl_o *this, const MethodInfo *met
 
   favoriteChangeComp = this->fields.favoriteChangeComp;
   if ( !favoriteChangeComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   FavoriteChangeComponent__Open(favoriteChangeComp, 0);
 }
 
@@ -12178,7 +12978,7 @@ void MyRoomControl__openSoundPlayer(MyRoomControl_o *this, const MethodInfo *met
 
   soundPlayerComp = this->fields.soundPlayerComp;
   if ( !soundPlayerComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   SoundPlayerComponent__openMenu(soundPlayerComp, 0);
 }
 
@@ -12195,19 +12995,23 @@ void MyRoomControl__playSvtVoice(MyRoomControl_o *this, const MethodInfo *method
   Il2CppObject *Request_object; // x21
   __int64 v11; // x22
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
   int m_CancellationTokenSource; // w8
 
-  if ( (byte_4CB165B & 1) == 0 )
+  if ( (byte_4CC2768 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_VoiceMaster___);
-    sub_1C6BA08(&int_____TypeInfo);
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&Method_NetworkManager_getRequest_TopMyRoomRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB165B = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_VoiceMaster___);
+    sub_1C713B0(&int_____TypeInfo);
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&Method_NetworkManager_getRequest_TopMyRoomRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC2768 = 1;
   }
   VoiceSvtId = MyRoomControl__getVoiceSvtId(this, method);
   if ( VoiceSvtId >= 1 )
@@ -12219,20 +13023,20 @@ void MyRoomControl__playSvtVoice(MyRoomControl_o *this, const MethodInfo *method
     v7 = MyRoomSvtControl__playVoice(svtCtr, 0);
     if ( !System_String__IsNullOrEmpty(v7, 0) )
     {
-      svtCtr = (MyRoomSvtControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__);
+      svtCtr = (MyRoomSvtControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__);
       if ( !svtCtr )
         goto LABEL_21;
       ClientMissionManager__MyRoomPlayVoice((ClientMissionManager_o *)svtCtr, v5, 0);
-      svtCtr = (MyRoomSvtControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__);
+      svtCtr = (MyRoomSvtControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_ClientMissionManager__get_Instance__);
       if ( !svtCtr )
         goto LABEL_21;
       ClientMissionManager__SendRequest((ClientMissionManager_o *)svtCtr, 0, 0);
-      svtCtr = (MyRoomSvtControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      svtCtr = (MyRoomSvtControl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !svtCtr )
         goto LABEL_21;
       svtCtr = (MyRoomSvtControl_o *)DataManager__GetMasterData_object_(
                                        (DataManager_o *)svtCtr,
-                                       (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_VoiceMaster___);
+                                       (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_VoiceMaster___);
       if ( !svtCtr )
         goto LABEL_21;
       FlagRequestNumber = VoiceMaster__getFlagRequestNumber((VoiceMaster_o *)svtCtr, v5, v7, 1, 0);
@@ -12243,9 +13047,9 @@ void MyRoomControl__playSvtVoice(MyRoomControl_o *this, const MethodInfo *method
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
         Request_object = NetworkManager__getRequest_object_(
                            0,
-                           (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_TopMyRoomRequest___);
-        v11 = sub_1C6BAB0(int_____TypeInfo, 1);
-        svtCtr = (MyRoomSvtControl_o *)sub_1C6BAB0(int___TypeInfo, 2);
+                           (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_TopMyRoomRequest___);
+        v11 = sub_1C71458(int_____TypeInfo, 1);
+        svtCtr = (MyRoomSvtControl_o *)sub_1C71458(int___TypeInfo, 2);
         if ( svtCtr )
         {
           m_CancellationTokenSource = (int)svtCtr->fields.m_CancellationTokenSource;
@@ -12260,9 +13064,9 @@ void MyRoomControl__playSvtVoice(MyRoomControl_o *this, const MethodInfo *method
             goto LABEL_21;
           if ( !*(_DWORD *)(v11 + 24) )
 LABEL_22:
-            sub_1C6BC68(svtCtr);
+            sub_1C71610(svtCtr);
           *(_QWORD *)(v11 + 32) = svtCtr;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 32), (int32_t)svtCtr, v12, v13);
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 32), (int32_t)svtCtr, v12, v13, v14, v15, v16, v17);
           if ( Request_object )
           {
             TopMyRoomRequest__beginRequest((TopMyRoomRequest_o *)Request_object, (System_Int32_array_array *)v11, 0);
@@ -12270,7 +13074,7 @@ LABEL_22:
           }
         }
 LABEL_21:
-        sub_1C6BC60(svtCtr, v4);
+        sub_1C71608(svtCtr, v4);
       }
     }
   }
@@ -12289,11 +13093,11 @@ void MyRoomControl__quit(MyRoomControl_o *this, const MethodInfo *method)
   const MethodInfo *v9; // x1
 
   v2 = this;
-  if ( (byte_4CB1646 & 1) == 0 )
+  if ( (byte_4CC2753 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    this = (MyRoomControl_o *)sub_1C6BA08(&MaterialServantLimitCountManager_TypeInfo);
-    byte_4CB1646 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    this = (MyRoomControl_o *)sub_1C713B0(&MaterialServantLimitCountManager_TypeInfo);
+    byte_4CC2753 = 1;
   }
   MyRoomControl__shutdown(this, method);
   if ( v2->fields.isServantMaterial )
@@ -12306,7 +13110,7 @@ void MyRoomControl__quit(MyRoomControl_o *this, const MethodInfo *method)
     Item = System_Collections_Generic_List_int___get_Item(
              materialImageIdList,
              v2->fields.materialFigureSvtDispIdx,
-             (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+             (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
     if ( !MaterialServantLimitCountManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(MaterialServantLimitCountManager_TypeInfo);
     MaterialServantLimitCountManager__SetLimitCount(materialServantId, Item, 0);
@@ -12344,7 +13148,7 @@ void MyRoomControl__quit(MyRoomControl_o *this, const MethodInfo *method)
         (materialImageIdList = (System_Collections_Generic_List_int__o *)v2->fields.valentineListObj) == 0) )
   {
 LABEL_17:
-    sub_1C6BC60(materialImageIdList, v3);
+    sub_1C71608(materialImageIdList, v3);
   }
   ((void (__fastcall *)(System_Collections_Generic_List_int__o *, const MethodInfo *, float))materialImageIdList->klass->vtable._8_unknown.methodPtr)(
     materialImageIdList,
@@ -12360,17 +13164,17 @@ void MyRoomControl__reflectionGameOption(MyRoomControl_o *this, const MethodInfo
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CB165C & 1) == 0 )
+  if ( (byte_4CC2769 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl_endReflectionGameOption__);
-    byte_4CB165C = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl_endReflectionGameOption__);
+    byte_4CC2769 = 1;
   }
   optionComp = this->fields.optionComp;
-  v4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_MyRoomControl_endReflectionGameOption__, 0);
   if ( !optionComp )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   SetGameOptionComponent__reflectionGameOption(optionComp, v4, 0);
 }
 
@@ -12384,14 +13188,14 @@ void MyRoomControl__requestChangeName(MyRoomControl_o *this, const MethodInfo *m
   NetworkManager_ResultCallbackFunc_o *v7; // x22
   Il2CppObject *Request_object; // x19
 
-  if ( (byte_4CB165E & 1) == 0 )
+  if ( (byte_4CC276B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_callbackChangeName__);
-    sub_1C6BA08(&Method_NetworkManager_getRequest_UserNameChangeRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C6BA08(&StringLiteral_4357/*"ChangeUserName"*/);
-    byte_4CB165E = 1;
+    sub_1C713B0(&Method_MyRoomControl_callbackChangeName__);
+    sub_1C713B0(&Method_NetworkManager_getRequest_UserNameChangeRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C713B0(&StringLiteral_4360/*"ChangeUserName"*/);
+    byte_4CC276B = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
@@ -12407,22 +13211,22 @@ void MyRoomControl__requestChangeName(MyRoomControl_o *this, const MethodInfo *m
     goto LABEL_13;
   SelfUserGame = HutongGames_PlayMaker_FsmVariables__GetFsmString(
                    (HutongGames_PlayMaker_FsmVariables_o *)SelfUserGame,
-                   (System_String_o *)StringLiteral_4357/*"ChangeUserName"*/,
+                   (System_String_o *)StringLiteral_4360/*"ChangeUserName"*/,
                    0);
   if ( !SelfUserGame )
     goto LABEL_13;
   Value = HutongGames_PlayMaker_FsmString__get_Value((HutongGames_PlayMaker_FsmString_o *)SelfUserGame, 0);
-  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v7, (Il2CppObject *)this, Method_MyRoomControl_callbackChangeName__, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v7,
-                     (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_UserNameChangeRequest___);
+                     (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_UserNameChangeRequest___);
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame || !Request_object )
 LABEL_13:
-    sub_1C6BC60(SelfUserGame, v4);
+    sub_1C71608(SelfUserGame, v4);
   UserNameChangeRequest__beginRequest(
     (UserNameChangeRequest_o *)Request_object,
     Value,
@@ -12438,7 +13242,7 @@ void MyRoomControl__resetProfileInfo(MyRoomControl_o *this, const MethodInfo *me
 
   mstPfComp = this->fields.mstPfComp;
   if ( !mstPfComp )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MstProfileComponent__showMstProfile(mstPfComp, 0);
 }
 
@@ -12449,59 +13253,75 @@ void MyRoomControl__resetSvtVoiceData(MyRoomControl_o *this, bool isReset, const
   PlayMakerFSM_o *myRoomFsm; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  const MethodInfo *v10; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  const MethodInfo *v14; // x2
   ServantVoiceEntity_o *SvtVoiceEnt; // x0
-  PlayMakerFSM_o **v12; // x21
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  ServantVoiceEntity_o *v15; // x22
+  PlayMakerFSM_o **v16; // x21
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  ServantVoiceEntity_o *v23; // x22
   int32_t figureSvtId; // w23
   int32_t Item; // w0
-  const MethodInfo *v18; // x4
+  const MethodInfo *v26; // x4
   struct System_Collections_Generic_List_ServantVoiceData____o *VoiceList; // x0
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
   struct System_String_o *VoiceAssetName; // x0
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
+  int32_t v35; // w2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  int32_t v38; // w5
+  int64_t v39; // x6
+  System_String_o *v40; // x7
   System_String_o *asstName; // x21
-  System_Action_o *v26; // x22
-  const MethodInfo *v27; // x3
+  System_Action_o *v42; // x22
+  const MethodInfo *v43; // x3
 
-  if ( (byte_4CB1653 & 1) == 0 )
+  if ( (byte_4CC2760 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass250_0__resetSvtVoiceData_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass250_0_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8289/*"LOAD_END"*/);
-    byte_4CB1653 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass250_0__resetSvtVoiceData_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass250_0_TypeInfo);
+    sub_1C713B0(&StringLiteral_8293/*"LOAD_END"*/);
+    byte_4CC2760 = 1;
   }
-  v5 = sub_1C6BC54(MyRoomControl___c__DisplayClass250_0_TypeInfo);
+  v5 = sub_1C715FC(MyRoomControl___c__DisplayClass250_0_TypeInfo);
   MyRoomControl___c__DisplayClass250_0___ctor((MyRoomControl___c__DisplayClass250_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_13;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   if ( this->fields.mBattleSetupInfo || this->fields.isServantMaterial )
   {
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
 LABEL_7:
-      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8289/*"LOAD_END"*/, 0);
+      PlayMakerFSM__SendEvent(myRoomFsm, (System_String_o *)StringLiteral_8293/*"LOAD_END"*/, 0);
       return;
     }
 LABEL_13:
-    sub_1C6BC60(myRoomFsm, v7);
+    sub_1C71608(myRoomFsm, v7);
   }
-  SvtVoiceEnt = MyRoomControl__getSvtVoiceEnt(this, isReset, v10);
+  SvtVoiceEnt = MyRoomControl__getSvtVoiceEnt(this, isReset, v14);
   *(_QWORD *)(v5 + 24) = SvtVoiceEnt;
-  v12 = (PlayMakerFSM_o **)(v5 + 24);
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)SvtVoiceEnt, v13, v14);
-  v15 = *(ServantVoiceEntity_o **)(v5 + 24);
-  if ( !v15 )
+  v16 = (PlayMakerFSM_o **)(v5 + 24);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)SvtVoiceEnt, v17, v18, v19, v20, v21, v22);
+  v23 = *(ServantVoiceEntity_o **)(v5 + 24);
+  if ( !v23 )
   {
     myRoomFsm = this->fields.myRoomFsm;
     this->fields.isExistVoiceData = 0;
@@ -12516,24 +13336,32 @@ LABEL_13:
   Item = System_Collections_Generic_List_int___get_Item(
            (System_Collections_Generic_List_int__o *)myRoomFsm,
            this->fields.figureSvtDispIdx,
-           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
-  VoiceList = MyRoomControl__GetVoiceList(this, v15, figureSvtId, Item, v18);
+           (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
+  VoiceList = MyRoomControl__GetVoiceList(this, v23, figureSvtId, Item, v26);
   this->fields.voiceList = VoiceList;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.voiceList, (int32_t)VoiceList, v20, v21);
-  myRoomFsm = *v12;
-  if ( !*v12 )
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.voiceList, (int32_t)VoiceList, v28, v29, v30, v31, v32, v33);
+  myRoomFsm = *v16;
+  if ( !*v16 )
     goto LABEL_13;
   VoiceAssetName = ServantVoiceEntity__getVoiceAssetName((ServantVoiceEntity_o *)myRoomFsm, 0);
   this->fields.asstName = VoiceAssetName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.asstName, (int32_t)VoiceAssetName, v23, v24);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.asstName,
+    (int32_t)VoiceAssetName,
+    v35,
+    v36,
+    v37,
+    v38,
+    v39,
+    v40);
   asstName = this->fields.asstName;
-  v26 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v42 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v26,
+    v42,
     (Il2CppObject *)v5,
     Method_MyRoomControl___c__DisplayClass250_0__resetSvtVoiceData_b__0__,
     0);
-  MyRoomControl__voiceLoad(this, asstName, v26, v27);
+  MyRoomControl__voiceLoad(this, asstName, v42, v43);
 }
 
 
@@ -12547,11 +13375,11 @@ void MyRoomControl__setContinueDevice(MyRoomControl_o *this, const MethodInfo *m
   titleInfo = this->fields.titleInfo;
   this->fields.type = 8;
   if ( !titleInfo
-    || (TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 52, 0, 0),
+    || (TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 52, 0, 0),
         MyRoomControl__setSvtFigureActive(this, this->fields.type, 1, v5),
         (titleInfo = (TitleInfoControl_o *)this->fields.continueDeviceComp) == 0) )
   {
-    sub_1C6BC60(titleInfo, v3);
+    sub_1C71608(titleInfo, v3);
   }
   ContinueDeviceComponent__showMenu((ContinueDeviceComponent_o *)titleInfo, 0);
 }
@@ -12591,10 +13419,10 @@ void MyRoomControl__setDefSvtPos(MyRoomControl_o *this, const MethodInfo *method
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB167B & 1) == 0 )
+  if ( (byte_4CC2788 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_setDefSvtPos__);
-    byte_4CB167B = 1;
+    sub_1C713B0(&Method_MyRoomControl_setDefSvtPos__);
+    byte_4CC2788 = 1;
   }
   voicePlayBtn = this->fields.voicePlayBtn;
   if ( !voicePlayBtn )
@@ -12613,8 +13441,8 @@ void MyRoomControl__setDefSvtPos(MyRoomControl_o *this, const MethodInfo *method
     return;
   v5 = Method_MyRoomControl_setDefSvtPos__;
   if ( (*((_BYTE *)Method_MyRoomControl_setDefSvtPos__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_setDefSvtPos__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_setDefSvtPos__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C71394(v5, v5[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, 1, 0, 0);
   mMainObj = this->fields.mMainObj;
   LocalPosition = GameObjectExtensions__GetLocalPosition(this->fields.mShowPos, 0);
@@ -12720,7 +13548,7 @@ LABEL_20:
           }
         }
 LABEL_34:
-        sub_1C6BC60(voicePlayBtn, method);
+        sub_1C71608(voicePlayBtn, method);
       }
 LABEL_30:
       v33.fields.x = x;
@@ -12766,7 +13594,7 @@ void MyRoomControl__setDispMyRoomOptionBtn(MyRoomControl_o *this, bool isDisp, c
   *(_QWORD *)&isDisp = v6 && (unsigned __int64)this->fields.isEnableChangeBg;
   if ( !moveBtnObj )
 LABEL_9:
-    sub_1C6BC60(moveBtnObj, isDisp);
+    sub_1C71608(moveBtnObj, isDisp);
   UnityEngine_GameObject__SetActive(moveBtnObj, isDisp, 0);
 }
 
@@ -12791,7 +13619,7 @@ void MyRoomControl__setEnalbeTitleBtn(MyRoomControl_o *this, bool isEnabled, con
   titleBtnCollider = (UnityEngine_Collider_o *)this->fields.optionComp;
   if ( !titleBtnCollider )
 LABEL_8:
-    sub_1C6BC60(titleBtnCollider, isEnabled);
+    sub_1C71608(titleBtnCollider, isEnabled);
   if ( !LODWORD(titleBtnCollider[11].klass) )
     SetGameOptionComponent__SetMaskEnabled((SetGameOptionComponent_o *)titleBtnCollider, v6, 0);
 }
@@ -12824,11 +13652,11 @@ void MyRoomControl__setGameOption(MyRoomControl_o *this, const MethodInfo *metho
   titleInfo = this->fields.titleInfo;
   this->fields.type = 5;
   if ( !titleInfo
-    || (TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 49, 0, 0),
+    || (TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 49, 0, 0),
         MyRoomControl__setSvtFigureActive(this, this->fields.type, 1, v5),
         (titleInfo = (TitleInfoControl_o *)this->fields.optionComp) == 0) )
   {
-    sub_1C6BC60(titleInfo, v3);
+    sub_1C71608(titleInfo, v3);
   }
   SetGameOptionComponent__showGameOption((SetGameOptionComponent_o *)titleInfo, 0);
 }
@@ -12843,24 +13671,24 @@ void MyRoomControl__setMaterial(MyRoomControl_o *this, bool isPlayDecideSe, cons
   _QWORD *v8; // x0
   System_Reflection_MethodBase_o *v9; // x0
 
-  if ( (byte_4CB1661 & 1) == 0 )
+  if ( (byte_4CC276E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_MyRoomControl_setMaterial__);
-    byte_4CB1661 = 1;
+    sub_1C713B0(&Method_MyRoomControl_setMaterial__);
+    byte_4CC276E = 1;
   }
   MyRoomControl__stopSvtVoice(this, (const MethodInfo *)isPlayDecideSe);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_1C6BC60(0, v5);
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 44, 0, 0);
+    sub_1C71608(0, v5);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 44, 0, 0);
   this->fields.type = 1;
   MyRoomControl__setSvtFigureActive(this, 1, 1, v7);
   if ( isPlayDecideSe && !this->fields.sceneJumpInfo )
   {
     v8 = Method_MyRoomControl_setMaterial__;
     if ( (*((_BYTE *)Method_MyRoomControl_setMaterial__ + 83) & 2) != 0 )
-      v8 = (_QWORD *)sub_1C6BA20(Method_MyRoomControl_setMaterial__);
-    v9 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v8, v8[4]);
+      v8 = (_QWORD *)sub_1C713C8(Method_MyRoomControl_setMaterial__);
+    v9 = (System_Reflection_MethodBase_o *)sub_1C71394(v8, v8[4]);
     OverwriteAssetSoundName__PlaySystemSe(v9, 0, 0, 0);
   }
 }
@@ -12875,12 +13703,12 @@ void MyRoomControl__setMaterialCollection(MyRoomControl_o *this, const MethodInf
   MyRoomControl__stopSvtVoice(this, method);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo
-    || (TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 57, 0, 0),
+    || (TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 57, 0, 0),
         this->fields.type = 2,
         MyRoomControl__setSvtFigureActive(this, 2, 1, v5),
         (titleInfo = (TitleInfoControl_o *)this->fields.materialCollectionComp) == 0) )
   {
-    sub_1C6BC60(titleInfo, v3);
+    sub_1C71608(titleInfo, v3);
   }
   MaterialCollectionComponent__showMenu((MaterialCollectionComponent_o *)titleInfo, 0);
 }
@@ -12895,12 +13723,12 @@ void MyRoomControl__setMaterialCostume(MyRoomControl_o *this, const MethodInfo *
   MyRoomControl__stopSvtVoice(this, method);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo
-    || (TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 56, 0, 0),
+    || (TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 56, 0, 0),
         this->fields.type = 11,
         MyRoomControl__setSvtFigureActive(this, 11, 1, v5),
         (titleInfo = (TitleInfoControl_o *)this->fields.materialCostumeComp) == 0) )
   {
-    sub_1C6BC60(titleInfo, v3);
+    sub_1C71608(titleInfo, v3);
   }
   MaterialCostumeComponent__showMenu((MaterialCostumeComponent_o *)titleInfo, 0);
 }
@@ -12912,8 +13740,8 @@ void MyRoomControl__setMaterialEventQuest(MyRoomControl_o *this, const MethodInf
 
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_1C6BC60(0, method);
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 60, 0, 0);
+    sub_1C71608(0, method);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 60, 0, 0);
   this->fields.type = 14;
 }
 
@@ -12924,8 +13752,8 @@ void MyRoomControl__setMaterialMainInterlude(MyRoomControl_o *this, const Method
 
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_1C6BC60(0, method);
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 62, 0, 0);
+    sub_1C71608(0, method);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 62, 0, 0);
   this->fields.type = 16;
 }
 
@@ -12936,8 +13764,8 @@ void MyRoomControl__setMaterialMainQuest(MyRoomControl_o *this, const MethodInfo
 
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_1C6BC60(0, method);
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 58, 0, 0);
+    sub_1C71608(0, method);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 58, 0, 0);
   this->fields.type = 12;
 }
 
@@ -12948,8 +13776,8 @@ void MyRoomControl__setMaterialMainQuestPart(MyRoomControl_o *this, int32_t titl
 
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_1C6BC60(0, titleNameParam);
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 59, titleNameParam, 0);
+    sub_1C71608(0, titleNameParam);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 59, titleNameParam, 0);
   this->fields.type = 13;
 }
 
@@ -12960,8 +13788,8 @@ void MyRoomControl__setMaterialServant(MyRoomControl_o *this, const MethodInfo *
 
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
-    sub_1C6BC60(0, method);
-  TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 61, 0, 0);
+    sub_1C71608(0, method);
+  TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 61, 0, 0);
   this->fields.type = 15;
 }
 
@@ -12973,7 +13801,7 @@ void MyRoomControl__setMaterialTop(MyRoomControl_o *this, const MethodInfo *meth
 
   mStateMaterial = this->fields.mStateMaterial;
   if ( !mStateMaterial )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   mStateMaterial->fields.isServantMenuTop = 0;
   MyRoomControl__SetState(this, 0, v2);
 }
@@ -12996,7 +13824,7 @@ void MyRoomControl__setMaterialUIMove(MyRoomControl_o *this, bool isDisp, const 
   *(_QWORD *)&v10.fields.x = 0;
   MyRoomControl__setupMaterialUIMoveData(this, &moveTarget, &moveShowPos, &v10, v3);
   if ( !this )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   if ( isDisp )
     p_moveShowPos = &moveShowPos;
   else
@@ -13010,13 +13838,13 @@ void MyRoomControl__setMySvtFigure(MyRoomControl_o *this, const MethodInfo *meth
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4CB164A & 1) == 0 )
+  if ( (byte_4CC2757 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__setMySvtFigure_b__240_0__);
-    byte_4CB164A = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__setMySvtFigure_b__240_0__);
+    byte_4CC2757 = 1;
   }
-  v3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_MyRoomControl__setMySvtFigure_b__240_0__, 0);
   MyRoomControl__SetMyRoomStandFigure(this, v3, v4);
 }
@@ -13026,12 +13854,12 @@ void MyRoomControl__setNormalFace(MyRoomControl_o *this, const MethodInfo *metho
 {
   const MethodInfo *v2; // x2
 
-  MyRoomControl__setNormalFace_33724456(this, 1, v2);
+  MyRoomControl__setNormalFace_33752008(this, 1, v2);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void MyRoomControl__setNormalFace_33724456(MyRoomControl_o *this, bool isCurrent, const MethodInfo *method)
+void MyRoomControl__setNormalFace_33752008(MyRoomControl_o *this, bool isCurrent, const MethodInfo *method)
 {
   System_Collections_Generic_List_int__o *materialImageIdList; // x0
   int32_t materialFigureSvtDispIdx; // w1
@@ -13042,11 +13870,11 @@ void MyRoomControl__setNormalFace_33724456(MyRoomControl_o *this, bool isCurrent
   UnityEngine_Object_o *playBtnImg; // x20
   int32_t formId[2]; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB1657 & 1) == 0 )
+  if ( (byte_4CC2764 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB1657 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC2764 = 1;
   }
   *(_QWORD *)formId = 0;
   if ( this->fields.isServantMaterial )
@@ -13060,7 +13888,7 @@ LABEL_15:
     Item = (MyRoomControl_o *)System_Collections_Generic_List_int___get_Item(
                                 materialImageIdList,
                                 materialFigureSvtDispIdx,
-                                (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+                                (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
     MyRoomControl__SetImageIdAndFormId(Item, formId, &formId[1], materialServantId, (int32_t)Item, v10);
     goto LABEL_16;
   }
@@ -13101,7 +13929,7 @@ LABEL_16:
       return;
     }
 LABEL_23:
-    sub_1C6BC60(materialImageIdList, isCurrent);
+    sub_1C71608(materialImageIdList, isCurrent);
   }
 }
 
@@ -13116,11 +13944,11 @@ void MyRoomControl__setNoticeInfo(MyRoomControl_o *this, const MethodInfo *metho
   titleInfo = this->fields.titleInfo;
   this->fields.type = 6;
   if ( !titleInfo
-    || (TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 50, 0, 0),
+    || (TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 50, 0, 0),
         MyRoomControl__setSvtFigureActive(this, this->fields.type, 1, v5),
         (titleInfo = (TitleInfoControl_o *)this->fields.noticeComp) == 0) )
   {
-    sub_1C6BC60(titleInfo, v3);
+    sub_1C71608(titleInfo, v3);
   }
   NoticeInfoComponent__setNoticeInfo((NoticeInfoComponent_o *)titleInfo, 0);
 }
@@ -13139,11 +13967,11 @@ void MyRoomControl__setProfileInfo(MyRoomControl_o *this, const MethodInfo *meth
         mstpfObj = (UnityEngine_GameObject_o *)this->fields.titleInfo,
         this->fields.type = 4,
         !mstpfObj)
-    || (TitleInfoControl__changeTitleInfo_40073532((TitleInfoControl_o *)mstpfObj, 1, 48, 0, 0),
+    || (TitleInfoControl__changeTitleInfo_40112904((TitleInfoControl_o *)mstpfObj, 1, 48, 0, 0),
         MyRoomControl__setSvtFigureActive(this, this->fields.type, 1, v5),
         (mstpfObj = (UnityEngine_GameObject_o *)this->fields.mstPfComp) == 0) )
   {
-    sub_1C6BC60(mstpfObj, method);
+    sub_1C71608(mstpfObj, method);
   }
   MstProfileComponent__showMstProfile((MstProfileComponent_o *)mstpfObj, 0);
 }
@@ -13160,7 +13988,7 @@ void MyRoomControl__setSerialCode(MyRoomControl_o *this, const MethodInfo *metho
   MyRoomControl__setSvtFigureActive(this, 7, 1, v3);
   serialCodeComp = this->fields.serialCodeComp;
   if ( !serialCodeComp )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   SerialCodeComponent__showMenu(serialCodeComp, 0);
 }
 
@@ -13300,7 +14128,7 @@ LABEL_6:
         !standFigureBack) )
   {
 LABEL_39:
-    sub_1C6BC60(standFigureBack, isEnableMultipleView);
+    sub_1C71608(standFigureBack, isEnableMultipleView);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)standFigureBack, isEnableMultipleView, 0);
 }
@@ -13312,7 +14140,7 @@ int32_t MyRoomControl__setSvtFriendShipLv(MyRoomControl_o *this, int32_t hSvtId,
 
   myRoomData = this->fields.myRoomData;
   if ( !myRoomData )
-    sub_1C6BC60(0, hSvtId);
+    sub_1C71608(0, hSvtId);
   return MyRoomData__getSvtFriendshipLv(myRoomData, hSvtId, 0);
 }
 
@@ -13328,45 +14156,57 @@ void MyRoomControl__setSvtVoiceData(MyRoomControl_o *this, const MethodInfo *met
   const MethodInfo *v9; // x4
   struct System_Collections_Generic_List_ServantVoiceData____o *VoiceList; // x0
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
   struct System_String_o *VoiceAssetName; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
   System_String_o *asstName; // x20
-  System_Action_o *v17; // x21
-  const MethodInfo *v18; // x3
+  System_Action_o *v25; // x21
+  const MethodInfo *v26; // x3
   struct SceneJumpInfo_o *sceneJumpInfo; // x8
   Il2CppObject *Instance; // x20
-  AvalonSceneManager_c *v21; // x8
+  AvalonSceneManager_c *v29; // x8
   float DEFAULT_FADE_TIME; // s8
-  System_Action_o *v23; // x21
-  Il2CppObject *v24; // x22
+  System_Action_o *v31; // x21
+  Il2CppObject *v32; // x22
   struct MyRoomControl___c_StaticFields *static_fields; // x0
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
 
-  if ( (byte_4CB1648 & 1) == 0 )
+  if ( (byte_4CC2755 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&Method_MyRoomControl_EndLoad__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__setSvtVoiceData_b__238_0__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8289/*"LOAD_END"*/);
-    byte_4CB1648 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&Method_MyRoomControl_EndLoad__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__setSvtVoiceData_b__238_0__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    sub_1C713B0(&StringLiteral_8293/*"LOAD_END"*/);
+    byte_4CC2755 = 1;
   }
   if ( this->fields.mBattleSetupInfo )
   {
     myRoomFsm = this->fields.myRoomFsm;
     if ( myRoomFsm )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)myRoomFsm, (System_String_o *)StringLiteral_8289/*"LOAD_END"*/, 0);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)myRoomFsm, (System_String_o *)StringLiteral_8293/*"LOAD_END"*/, 0);
       return;
     }
 LABEL_22:
-    sub_1C6BC60(myRoomFsm, method);
+    sub_1C71608(myRoomFsm, method);
   }
   SvtVoiceEnt = MyRoomControl__getSvtVoiceEnt(this, 0, v2);
   if ( SvtVoiceEnt )
@@ -13379,17 +14219,33 @@ LABEL_22:
     Item = System_Collections_Generic_List_int___get_Item(
              (System_Collections_Generic_List_int__o *)myRoomFsm,
              this->fields.figureSvtDispIdx,
-             (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
+             (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
     VoiceList = MyRoomControl__GetVoiceList(this, v6, figureSvtId, Item, v9);
     this->fields.voiceList = VoiceList;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.voiceList, (int32_t)VoiceList, v11, v12);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.voiceList,
+      (int32_t)VoiceList,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15,
+      v16);
     VoiceAssetName = ServantVoiceEntity__getVoiceAssetName(v6, 0);
     this->fields.asstName = VoiceAssetName;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.asstName, (int32_t)VoiceAssetName, v14, v15);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.asstName,
+      (int32_t)VoiceAssetName,
+      v18,
+      v19,
+      v20,
+      v21,
+      v22,
+      v23);
     asstName = this->fields.asstName;
-    v17 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v17, (Il2CppObject *)this, Method_MyRoomControl_EndLoad__, 0);
-    MyRoomControl__voiceLoad(this, asstName, v17, v18);
+    v25 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v25, (Il2CppObject *)this, Method_MyRoomControl_EndLoad__, 0);
+    MyRoomControl__voiceLoad(this, asstName, v25, v26);
   }
   else
   {
@@ -13397,43 +14253,51 @@ LABEL_22:
     this->fields.isExistVoiceData = 0;
     if ( !sceneJumpInfo )
     {
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v21 = AvalonSceneManager_TypeInfo;
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v29 = AvalonSceneManager_TypeInfo;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-        v21 = AvalonSceneManager_TypeInfo;
+        v29 = AvalonSceneManager_TypeInfo;
       }
       myRoomFsm = MyRoomControl___c_TypeInfo;
-      DEFAULT_FADE_TIME = v21->static_fields->DEFAULT_FADE_TIME;
+      DEFAULT_FADE_TIME = v29->static_fields->DEFAULT_FADE_TIME;
       if ( !MyRoomControl___c_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(MyRoomControl___c_TypeInfo);
         myRoomFsm = MyRoomControl___c_TypeInfo;
       }
-      v23 = *(System_Action_o **)(*((_QWORD *)myRoomFsm + 23) + 24LL);
-      if ( !v23 )
+      v31 = *(System_Action_o **)(*((_QWORD *)myRoomFsm + 23) + 24LL);
+      if ( !v31 )
       {
         if ( !*((_DWORD *)myRoomFsm + 56) )
         {
           j_il2cpp_runtime_class_init_0(myRoomFsm);
           myRoomFsm = MyRoomControl___c_TypeInfo;
         }
-        v24 = (Il2CppObject *)**((_QWORD **)myRoomFsm + 23);
-        v23 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-        System_Action___ctor(v23, v24, Method_MyRoomControl___c__setSvtVoiceData_b__238_0__, 0);
+        v32 = (Il2CppObject *)**((_QWORD **)myRoomFsm + 23);
+        v31 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+        System_Action___ctor(v31, v32, Method_MyRoomControl___c__setSvtVoiceData_b__238_0__, 0);
         static_fields = MyRoomControl___c_TypeInfo->static_fields;
-        static_fields->__9__238_0 = v23;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__238_0, (int32_t)v23, v26, v27);
+        static_fields->__9__238_0 = v31;
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&static_fields->__9__238_0,
+          (int32_t)v31,
+          v34,
+          v35,
+          v36,
+          v37,
+          v38,
+          v39);
       }
       if ( !Instance )
         goto LABEL_22;
-      CommonUI__maskFadein((CommonUI_o *)Instance, DEFAULT_FADE_TIME, v23, 0);
+      CommonUI__maskFadein((CommonUI_o *)Instance, DEFAULT_FADE_TIME, v31, 0);
     }
     myRoomFsm = this->fields.myRoomFsm;
     if ( !myRoomFsm )
       goto LABEL_22;
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)myRoomFsm, (System_String_o *)StringLiteral_8289/*"LOAD_END"*/, 0);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)myRoomFsm, (System_String_o *)StringLiteral_8293/*"LOAD_END"*/, 0);
     this->fields.isVoicePlaying = 0;
   }
 }
@@ -13448,12 +14312,12 @@ void MyRoomControl__setUserServantCoinList(MyRoomControl_o *this, const MethodIn
   MyRoomControl__stopSvtVoice(this, method);
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo
-    || (TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 47, 0, 0),
+    || (TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 47, 0, 0),
         this->fields.type = 17,
         MyRoomControl__setSvtFigureActive(this, 17, 1, v5),
         (titleInfo = (TitleInfoControl_o *)this->fields.userServantCoinComp) == 0) )
   {
-    sub_1C6BC60(titleInfo, v3);
+    sub_1C71608(titleInfo, v3);
   }
   UserServantCoinComponent__showMenu((UserServantCoinComponent_o *)titleInfo, 0);
 }
@@ -13467,10 +14331,10 @@ void MyRoomControl__setUserStInfoView(MyRoomControl_o *this, const MethodInfo *m
   const MethodInfo *v6; // x1
   const MethodInfo *v7; // x3
 
-  if ( (byte_4CB1660 & 1) == 0 )
+  if ( (byte_4CC276D & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl_TypeInfo);
-    byte_4CB1660 = 1;
+    sub_1C713B0(&MyRoomControl_TypeInfo);
+    byte_4CC276D = 1;
   }
   multipleViewButton = this->fields.multipleViewButton;
   this->fields.type = 0;
@@ -13493,9 +14357,9 @@ void MyRoomControl__setUserStInfoView(MyRoomControl_o *this, const MethodInfo *m
         (multipleViewButton = (UnityEngine_GameObject_o *)this->fields.titleInfo) == 0) )
   {
 LABEL_9:
-    sub_1C6BC60(multipleViewButton, method);
+    sub_1C71608(multipleViewButton, method);
   }
-  TitleInfoControl__changeTitleInfo_40073532((TitleInfoControl_o *)multipleViewButton, 1, 43, 0, 0);
+  TitleInfoControl__changeTitleInfo_40112904((TitleInfoControl_o *)multipleViewButton, 1, 43, 0, 0);
   MyRoomControl__setSvtFigureActive(this, this->fields.type, 1, v7);
 }
 
@@ -13510,15 +14374,15 @@ void MyRoomControl__setUsrItemList(MyRoomControl_o *this, const MethodInfo *meth
   titleInfo = this->fields.titleInfo;
   this->fields.type = 3;
   if ( !titleInfo
-    || (TitleInfoControl__changeTitleInfo_40073532(titleInfo, 1, 46, 0, 0),
+    || (TitleInfoControl__changeTitleInfo_40112904(titleInfo, 1, 46, 0, 0),
         MyRoomControl__setSvtFigureActive(this, this->fields.type, 1, v5),
         (titleInfo = (TitleInfoControl_o *)this->fields.usrItemListViewManager) == 0)
     || (UserItemListViewManager__CreateList((UserItemListViewManager_o *)titleInfo, 0),
         (titleInfo = (TitleInfoControl_o *)this->fields.usrItemListViewManager) == 0) )
   {
-    sub_1C6BC60(titleInfo, v3);
+    sub_1C71608(titleInfo, v3);
   }
-  UserItemListViewManager__SetMode_33430484((UserItemListViewManager_o *)titleInfo, 1, 0);
+  UserItemListViewManager__SetMode_33458036((UserItemListViewManager_o *)titleInfo, 1, 0);
 }
 
 
@@ -13535,23 +14399,30 @@ void MyRoomControl__setupMaterialUIMoveData(
         UnityEngine_Vector3_o *moveHidePos,
         const MethodInfo *method)
 {
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   UnityEngine_GameObject_o *materialObj; // x8
-  __int64 v9; // x1
+  __int64 v12; // x1
   UnityEngine_GameObject_o *transform; // x0
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   materialObj = this->fields.materialObj;
   *moveTarget = materialObj;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)moveTarget,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)moveTarget,
     (int32_t)materialObj,
     (int32_t)moveShowPos,
-    (const MethodInfo *)moveHidePos);
+    (int32_t)moveHidePos,
+    (System_String_o *)method,
+    v5,
+    v6,
+    v7);
   transform = *moveTarget;
   if ( !*moveTarget
     || (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0 )
   {
-    sub_1C6BC60(transform, v9);
+    sub_1C71608(transform, v12);
   }
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)transform, 0);
   moveShowPos->fields.y = localPosition.fields.y;
@@ -13573,7 +14444,7 @@ void MyRoomControl__setupServantListUIMoveData(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !moveTarget || (this = (MyRoomControl_o *)UnityEngine_GameObject__get_transform(moveTarget, 0)) == 0 )
-    sub_1C6BC60(this, moveTarget);
+    sub_1C71608(this, moveTarget);
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   moveShowPos->fields.y = localPosition.fields.y;
   moveShowPos->fields.z = localPosition.fields.z;
@@ -13594,7 +14465,7 @@ void MyRoomControl__setupSortWindowUIMoveData(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !moveTarget || (this = (MyRoomControl_o *)UnityEngine_GameObject__get_transform(moveTarget, 0)) == 0 )
-    sub_1C6BC60(this, moveTarget);
+    sub_1C71608(this, moveTarget);
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
   moveShowPos->fields.x = 0.0;
   moveShowPos->fields.y = localPosition.fields.y;
@@ -13609,59 +14480,63 @@ void MyRoomControl__setupSvtImageIdList(MyRoomControl_o *this, const MethodInfo 
 {
   struct UserGameEntity_o *SelfUserGame; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
   MyRoomData_o *myRoomData; // x0
   struct UserGameEntity_o *usrData; // x8
   __int64 favoriteUserSvtId; // x1
   struct System_Collections_Generic_List_int__o *imageIdList; // x8
-  int v10; // w9
-  MyRoomData_o *v11; // x21
+  int v14; // w9
+  MyRoomData_o *v15; // x21
   struct System_Threading_CancellationTokenSource_o *m_CancellationTokenSource; // x20
   intptr_t m_CachedPtr; // x22
   struct System_Collections_Generic_List_int__o **p_imageIdList; // x20
   Il2CppObject *Master_object; // x22
   int32_t i; // w23
   struct UserDeckMaster_o *usrDeckMst; // x24
-  struct UserGameEntity_o *v18; // x25
+  struct UserGameEntity_o *v22; // x25
   int32_t figureSvtId; // w24
-  int32_t v20; // w24
-  intptr_t v21; // x8
-  _QWORD *v22; // x9
+  int32_t v24; // w24
+  intptr_t v25; // x8
+  _QWORD *v26; // x9
   __int64 m_CancellationTokenSource_low; // x10
-  const MethodInfo *v24; // x3
-  struct System_Threading_CancellationTokenSource_o *v25; // x23
-  intptr_t v26; // x24
-  MyRoomControl_o *v27; // x0
-  const MethodInfo *v28; // x2
-  struct System_Threading_CancellationTokenSource_o *v29; // x8
-  MyRoomData_o *v30; // x23
-  unsigned __int64 v31; // x24
-  intptr_t v32; // x8
-  _QWORD *v33; // x9
-  __int64 v34; // x10
-  struct System_Collections_Generic_List_int__o *v35; // x8
-  int v36; // w21
-  int32_t v37; // w22
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v38; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v39; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v40; // 0:x0.16
+  const MethodInfo *v28; // x3
+  struct System_Threading_CancellationTokenSource_o *v29; // x23
+  intptr_t v30; // x24
+  MyRoomControl_o *v31; // x0
+  const MethodInfo *v32; // x2
+  struct System_Threading_CancellationTokenSource_o *v33; // x8
+  MyRoomData_o *v34; // x23
+  unsigned __int64 v35; // x24
+  intptr_t v36; // x8
+  _QWORD *v37; // x9
+  __int64 v38; // x10
+  struct System_Collections_Generic_List_int__o *v39; // x8
+  int v40; // w21
+  int32_t v41; // w22
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v42; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v43; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v44; // 0:x0.16
 
-  if ( (byte_4CB1638 & 1) == 0 )
+  if ( (byte_4CC2745 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&ImageLimitCount_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB1638 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&ImageLimitCount_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CC2745 = 1;
   }
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   this->fields.usrData = SelfUserGame;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.usrData, (int32_t)SelfUserGame, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.usrData, (int32_t)SelfUserGame, v4, v5, v6, v7, v8, v9);
   usrData = this->fields.usrData;
   if ( !usrData )
     return;
@@ -13673,37 +14548,37 @@ void MyRoomControl__setupSvtImageIdList(MyRoomControl_o *this, const MethodInfo 
   imageIdList = this->fields.imageIdList;
   if ( !imageIdList )
     goto LABEL_48;
-  v10 = imageIdList->fields._version + 1;
+  v14 = imageIdList->fields._version + 1;
   imageIdList->fields._size = 0;
-  imageIdList->fields._version = v10;
+  imageIdList->fields._version = v14;
   myRoomData = this->fields.myRoomData;
   if ( !myRoomData )
     goto LABEL_48;
   myRoomData = (MyRoomData_o *)MyRoomData__getUsrSvtData(myRoomData, favoriteUserSvtId, 0);
   if ( !myRoomData )
     goto LABEL_48;
-  v11 = myRoomData;
+  v15 = myRoomData;
   m_CachedPtr = myRoomData[1].fields.m_CachedPtr;
   m_CancellationTokenSource = myRoomData[1].fields.m_CancellationTokenSource;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v38.fields.currentCryptoKey = m_CachedPtr;
-  *(_QWORD *)&v38.fields.fakeValue = m_CancellationTokenSource;
-  this->fields.figureSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v38, 0);
-  this->fields.isHeroine = UserServantEntity__IsHeroine((UserServantEntity_o *)v11, 0);
+  *(_QWORD *)&v42.fields.currentCryptoKey = m_CachedPtr;
+  *(_QWORD *)&v42.fields.fakeValue = m_CancellationTokenSource;
+  this->fields.figureSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v42, 0);
+  this->fields.isHeroine = UserServantEntity__IsHeroine((UserServantEntity_o *)v15, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
   p_imageIdList = &this->fields.imageIdList;
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
   for ( i = 0; ; ++i )
   {
-    v18 = v11[1].fields.usrData;
-    usrDeckMst = v11[1].fields.usrDeckMst;
+    v22 = v15[1].fields.usrData;
+    usrDeckMst = v15[1].fields.usrDeckMst;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v39.fields.currentCryptoKey = v18;
-    *(_QWORD *)&v39.fields.fakeValue = usrDeckMst;
-    if ( i > CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v39, 0) )
+    *(_QWORD *)&v43.fields.currentCryptoKey = v22;
+    *(_QWORD *)&v43.fields.fakeValue = usrDeckMst;
+    if ( i > CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v43, 0) )
       break;
     figureSvtId = this->fields.figureSvtId;
     if ( !ImageLimitCount_TypeInfo->_2.cctor_finished )
@@ -13718,100 +14593,100 @@ void MyRoomControl__setupSvtImageIdList(MyRoomControl_o *this, const MethodInfo 
                                    0);
     if ( !this->fields.imageIdList )
       goto LABEL_48;
-    v20 = (int)myRoomData;
+    v24 = (int)myRoomData;
     if ( !System_Collections_Generic_List_int___Contains(
             this->fields.imageIdList,
             (int32_t)myRoomData,
-            (const MethodInfo_37E3CC8 *)Method_System_Collections_Generic_List_int__Contains__) )
+            (const MethodInfo_37F3A6C *)Method_System_Collections_Generic_List_int__Contains__) )
     {
       myRoomData = (MyRoomData_o *)*p_imageIdList;
       if ( !*p_imageIdList )
         goto LABEL_48;
-      v21 = myRoomData->fields.m_CachedPtr;
-      v22 = Method_System_Collections_Generic_List_int__Add__;
+      v25 = myRoomData->fields.m_CachedPtr;
+      v26 = Method_System_Collections_Generic_List_int__Add__;
       ++HIDWORD(myRoomData->fields.m_CancellationTokenSource);
-      if ( !v21 )
+      if ( !v25 )
         goto LABEL_48;
       m_CancellationTokenSource_low = SLODWORD(myRoomData->fields.m_CancellationTokenSource);
-      if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v21 + 24) )
+      if ( (unsigned int)m_CancellationTokenSource_low >= *(_DWORD *)(v25 + 24) )
       {
         System_Collections_Generic_List_int___AddWithResize(
           (System_Collections_Generic_List_int__o *)myRoomData,
-          v20,
-          *(const MethodInfo_37E3950 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+          v24,
+          *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
         LODWORD(myRoomData->fields.m_CancellationTokenSource) = m_CancellationTokenSource_low + 1;
-        *(_DWORD *)(v21 + 4 * m_CancellationTokenSource_low + 32) = v20;
+        *(_DWORD *)(v25 + 4 * m_CancellationTokenSource_low + 32) = v24;
       }
     }
   }
-  if ( UserServantEntity__IsHeroine((UserServantEntity_o *)v11, 0)
-    || (myRoomData = (MyRoomData_o *)UserServantEntity__isLimitCountMax((UserServantEntity_o *)v11, 0),
+  if ( UserServantEntity__IsHeroine((UserServantEntity_o *)v15, 0)
+    || (myRoomData = (MyRoomData_o *)UserServantEntity__isLimitCountMax((UserServantEntity_o *)v15, 0),
         ((unsigned __int8)myRoomData & 1) != 0) )
   {
-    v26 = v11[1].fields.m_CachedPtr;
-    v25 = v11[1].fields.m_CancellationTokenSource;
+    v30 = v15[1].fields.m_CachedPtr;
+    v29 = v15[1].fields.m_CancellationTokenSource;
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    *(_QWORD *)&v40.fields.currentCryptoKey = v26;
-    *(_QWORD *)&v40.fields.fakeValue = v25;
-    v27 = (MyRoomControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v40, 0);
-    myRoomData = (MyRoomData_o *)MyRoomControl__GetSortedCostumeIds(v27, (int32_t)v27, v28);
+    *(_QWORD *)&v44.fields.currentCryptoKey = v30;
+    *(_QWORD *)&v44.fields.fakeValue = v29;
+    v31 = (MyRoomControl_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v44, 0);
+    myRoomData = (MyRoomData_o *)MyRoomControl__GetSortedCostumeIds(v31, (int32_t)v31, v32);
     if ( myRoomData )
     {
-      v29 = myRoomData->fields.m_CancellationTokenSource;
-      v30 = myRoomData;
-      if ( (int)v29 >= 1 )
+      v33 = myRoomData->fields.m_CancellationTokenSource;
+      v34 = myRoomData;
+      if ( (int)v33 >= 1 )
       {
-        v31 = 0;
+        v35 = 0;
         while ( 1 )
         {
-          if ( v31 >= (unsigned int)v29 )
-            sub_1C6BC68(myRoomData);
-          favoriteUserSvtId = *((unsigned int *)&v30->fields.usrData + v31);
+          if ( v35 >= (unsigned int)v33 )
+            sub_1C71610(myRoomData);
+          favoriteUserSvtId = *((unsigned int *)&v34->fields.usrData + v35);
           if ( (int)favoriteUserSvtId >= 1 )
           {
             myRoomData = (MyRoomData_o *)*p_imageIdList;
             if ( !*p_imageIdList )
               goto LABEL_48;
-            v32 = myRoomData->fields.m_CachedPtr;
-            v33 = Method_System_Collections_Generic_List_int__Add__;
+            v36 = myRoomData->fields.m_CachedPtr;
+            v37 = Method_System_Collections_Generic_List_int__Add__;
             ++HIDWORD(myRoomData->fields.m_CancellationTokenSource);
-            if ( !v32 )
+            if ( !v36 )
               goto LABEL_48;
-            v34 = SLODWORD(myRoomData->fields.m_CancellationTokenSource);
-            if ( (unsigned int)v34 >= *(_DWORD *)(v32 + 24) )
+            v38 = SLODWORD(myRoomData->fields.m_CancellationTokenSource);
+            if ( (unsigned int)v38 >= *(_DWORD *)(v36 + 24) )
             {
               System_Collections_Generic_List_int___AddWithResize(
                 (System_Collections_Generic_List_int__o *)myRoomData,
                 favoriteUserSvtId,
-                *(const MethodInfo_37E3950 **)(*(_QWORD *)(v33[4] + 192LL) + 112LL));
+                *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
             }
             else
             {
-              LODWORD(myRoomData->fields.m_CancellationTokenSource) = v34 + 1;
-              *(_DWORD *)(v32 + 4 * v34 + 32) = favoriteUserSvtId;
+              LODWORD(myRoomData->fields.m_CancellationTokenSource) = v38 + 1;
+              *(_DWORD *)(v36 + 4 * v38 + 32) = favoriteUserSvtId;
             }
           }
-          LODWORD(v29) = v30->fields.m_CancellationTokenSource;
-          if ( (__int64)++v31 >= (int)v29 )
+          LODWORD(v33) = v34->fields.m_CancellationTokenSource;
+          if ( (__int64)++v35 >= (int)v33 )
             goto LABEL_42;
         }
       }
       goto LABEL_42;
     }
 LABEL_48:
-    sub_1C6BC60(myRoomData, favoriteUserSvtId);
+    sub_1C71608(myRoomData, favoriteUserSvtId);
   }
 LABEL_42:
   MyRoomControl__AddSpecialImageLimitCount(
     (MyRoomControl_o *)myRoomData,
     &this->fields.imageIdList,
     this->fields.figureSvtId,
-    v24);
-  myRoomData = (MyRoomData_o *)UserServantEntity__getFigureImageLimitCount((UserServantEntity_o *)v11, 0, 0);
+    v28);
+  myRoomData = (MyRoomData_o *)UserServantEntity__getFigureImageLimitCount((UserServantEntity_o *)v15, 0, 0);
   if ( !Master_object )
     goto LABEL_48;
   myRoomData = (MyRoomData_o *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -13819,24 +14694,24 @@ LABEL_42:
                                  this->fields.figureSvtId,
                                  (int32_t)myRoomData,
                                  0);
-  v35 = this->fields.imageIdList;
-  if ( !v35 )
+  v39 = this->fields.imageIdList;
+  if ( !v39 )
     goto LABEL_48;
-  v36 = (int)myRoomData;
-  v37 = 0;
-  while ( v37 < v35->fields._size )
+  v40 = (int)myRoomData;
+  v41 = 0;
+  while ( v41 < v39->fields._size )
   {
     myRoomData = (MyRoomData_o *)System_Collections_Generic_List_int___get_Item(
-                                   v35,
-                                   v37,
-                                   (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
-    if ( (_DWORD)myRoomData == v36 )
+                                   v39,
+                                   v41,
+                                   (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
+    if ( (_DWORD)myRoomData == v40 )
     {
-      this->fields.figureSvtDispIdx = v37;
+      this->fields.figureSvtDispIdx = v41;
       return;
     }
-    v35 = *p_imageIdList;
-    ++v37;
+    v39 = *p_imageIdList;
+    ++v41;
     if ( !*p_imageIdList )
       goto LABEL_48;
   }
@@ -13859,53 +14734,57 @@ void MyRoomControl__setupSvtRand(MyRoomControl_o *this, const MethodInfo *method
   struct UserGameEntity_o *SelfUserGame; // x0
   struct UserGameEntity_o **p_usrData; // x22
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  UserServantCollectionMaster_o *v18; // x20
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  UserServantCollectionMaster_o *v22; // x20
   int64_t userId; // x21
-  __int64 v20; // x23
-  __int64 v21; // x24
-  __int128 v22; // q1
-  _DWORD *v23; // x26
-  int64_t pushUserSvtId; // x8
-  int64_t v25; // x0
+  __int64 v24; // x23
+  __int64 v25; // x24
   __int128 v26; // q1
-  int64_t v27; // x23
-  int32_t v28; // w24
-  int32_t v29; // w25
-  int32_t v30; // w27
-  int32_t v31; // w28
+  _DWORD *v27; // x26
+  int64_t pushUserSvtId; // x8
+  int64_t v29; // x0
+  __int128 v30; // q1
+  int64_t v31; // x23
+  int32_t v32; // w24
+  int32_t v33; // w25
+  int32_t v34; // w27
+  int32_t v35; // w28
   bool IsLock; // w29
-  char v33; // w20
+  char v37; // w20
   int32_t commonFlag; // w22
   int32_t battleVoice; // w26
   int32_t randomSettingOwn; // w21
-  int32_t v37; // w0
-  __int64 v38; // x8
+  int32_t v41; // w0
+  __int64 v42; // x8
   int32_t randomSettingSupport; // w19
   int32_t imageLimitCount; // [xsp+54h] [xbp-DCh]
-  int64_t v41; // [xsp+58h] [xbp-D8h]
-  int64_t v42; // [xsp+60h] [xbp-D0h]
+  int64_t v45; // [xsp+58h] [xbp-D8h]
+  int64_t v46; // [xsp+60h] [xbp-D0h]
   CardFavoriteRequest_o *Request_object; // [xsp+68h] [xbp-C8h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v44; // [xsp+70h] [xbp-C0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v45; // [xsp+90h] [xbp-A0h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v46; // [xsp+B0h] [xbp-80h]
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v47; // 0:x0.16
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v48; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v48; // [xsp+70h] [xbp-C0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v49; // [xsp+90h] [xbp-A0h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v50; // [xsp+B0h] [xbp-80h]
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v51; // 0:x0.16
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v52; // 0:x0.16
 
-  if ( (byte_4CB163A & 1) == 0 )
+  if ( (byte_4CC2747 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantMaster___);
-    sub_1C6BA08(&Method_MyRoomControl__setupSvtRand_b__222_0__);
-    sub_1C6BA08(&Method_NetworkManager_getRequest_CardFavoriteRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C6BA08(&OptionManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&StringLiteral_6972/*"GO_NEXT"*/);
-    byte_4CB163A = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantMaster___);
+    sub_1C713B0(&Method_MyRoomControl__setupSvtRand_b__222_0__);
+    sub_1C713B0(&Method_NetworkManager_getRequest_CardFavoriteRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C713B0(&OptionManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&StringLiteral_6974/*"GO_NEXT"*/);
+    byte_4CC2747 = 1;
   }
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(OptionManager_TypeInfo);
@@ -13914,18 +14793,18 @@ void MyRoomControl__setupSvtRand(MyRoomControl_o *this, const MethodInfo *method
     limitCountSupport = this->fields.myRoomFsm;
     if ( limitCountSupport )
     {
-      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)limitCountSupport, (System_String_o *)StringLiteral_6972/*"GO_NEXT"*/, 0);
+      PlayMakerFSM__SendEvent((PlayMakerFSM_o *)limitCountSupport, (System_String_o *)StringLiteral_6974/*"GO_NEXT"*/, 0);
       return;
     }
 LABEL_36:
-    sub_1C6BC60(limitCountSupport, v3);
+    sub_1C71608(limitCountSupport, v3);
   }
-  limitCountSupport = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  limitCountSupport = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !limitCountSupport )
     goto LABEL_36;
   limitCountSupport = DataManager__GetMasterData_object_(
                         (DataManager_o *)limitCountSupport,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantMaster___);
   if ( !limitCountSupport )
     goto LABEL_36;
   limitCountSupport = UserServantMaster__getOrganizationList((UserServantMaster_o *)limitCountSupport, 0);
@@ -13935,10 +14814,10 @@ LABEL_36:
   v6 = limitCountSupport;
   do
   {
-    IsLeave = UnityEngine_Random__Range_71619388(0, v5, 0);
+    IsLeave = UnityEngine_Random__Range_71684320(0, v5, 0);
     if ( (unsigned int)IsLeave >= v6[6] )
 LABEL_35:
-      sub_1C6BC68(IsLeave);
+      sub_1C71610(IsLeave);
     v8 = (char *)&v6[2 * (int)IsLeave];
     v9 = IsLeave;
     v11 = (void *)*((_QWORD *)v8 + 4);
@@ -13966,94 +14845,94 @@ LABEL_35:
     }
   }
   while ( !v12 );
-  v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v13 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(v13, (Il2CppObject *)this, Method_MyRoomControl__setupSvtRand_b__222_0__, 0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = (CardFavoriteRequest_o *)NetworkManager__getRequest_object_(
                                               v13,
-                                              (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
+                                              (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_CardFavoriteRequest___);
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   p_usrData = &this->fields.usrData;
   this->fields.usrData = SelfUserGame;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.usrData, (int32_t)SelfUserGame, v16, v17);
-  limitCountSupport = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.usrData, (int32_t)SelfUserGame, v16, v17, v18, v19, v20, v21);
+  limitCountSupport = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !limitCountSupport )
     goto LABEL_36;
   limitCountSupport = DataManager__GetMasterData_object_(
                         (DataManager_o *)limitCountSupport,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___);
   if ( !*p_usrData )
     goto LABEL_36;
-  v18 = (UserServantCollectionMaster_o *)limitCountSupport;
+  v22 = (UserServantCollectionMaster_o *)limitCountSupport;
   userId = (*p_usrData)->fields.userId;
-  v21 = *(_QWORD *)&v12->fields.svtId.fields.currentCryptoKey;
-  v20 = *(_QWORD *)&v12->fields.svtId.fields.fakeValue;
+  v25 = *(_QWORD *)&v12->fields.svtId.fields.currentCryptoKey;
+  v24 = *(_QWORD *)&v12->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-  *(_QWORD *)&v47.fields.currentCryptoKey = v21;
-  *(_QWORD *)&v47.fields.fakeValue = v20;
-  limitCountSupport = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v47, 0);
-  if ( !v18 )
+  *(_QWORD *)&v51.fields.currentCryptoKey = v25;
+  *(_QWORD *)&v51.fields.fakeValue = v24;
+  limitCountSupport = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v51, 0);
+  if ( !v22 )
     goto LABEL_36;
-  limitCountSupport = UserServantCollectionMaster__GetEntityDefinitely(v18, userId, (int32_t)limitCountSupport, 0);
+  limitCountSupport = UserServantCollectionMaster__GetEntityDefinitely(v22, userId, (int32_t)limitCountSupport, 0);
   if ( !*p_usrData )
     goto LABEL_36;
-  v22 = *(_OWORD *)&v12->fields.id.fields.fakeValue;
-  v23 = limitCountSupport;
+  v26 = *(_OWORD *)&v12->fields.id.fields.fakeValue;
+  v27 = limitCountSupport;
   pushUserSvtId = (*p_usrData)->fields.pushUserSvtId;
-  *(_OWORD *)&v46.fields.currentCryptoKey = *(_OWORD *)&v12->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v46.fields.fakeValue = v22;
-  v42 = pushUserSvtId;
+  *(_OWORD *)&v50.fields.currentCryptoKey = *(_OWORD *)&v12->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v50.fields.fakeValue = v26;
+  v46 = pushUserSvtId;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v45 = v46;
-  v25 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v45, 0);
-  v26 = *(_OWORD *)&v12->fields.id.fields.fakeValue;
-  v27 = v25;
-  *(_OWORD *)&v44.fields.currentCryptoKey = *(_OWORD *)&v12->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v44.fields.fakeValue = v26;
-  v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v44, 0);
-  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v12->fields.imageLimitCount, 0);
-  v28 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v12->fields.dispLimitCount, 0);
-  v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v12->fields.commandCardLimitCount, 0);
-  v30 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v12->fields.iconLimitCount, 0);
-  v31 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v12->fields.portraitLimitCount, 0);
+  v49 = v50;
+  v29 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v49, 0);
+  v30 = *(_OWORD *)&v12->fields.id.fields.fakeValue;
+  v31 = v29;
+  *(_OWORD *)&v48.fields.currentCryptoKey = *(_OWORD *)&v12->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v48.fields.fakeValue = v30;
+  v45 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v48, 0);
+  imageLimitCount = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v12->fields.imageLimitCount, 0);
+  v32 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v12->fields.dispLimitCount, 0);
+  v33 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v12->fields.commandCardLimitCount, 0);
+  v34 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v12->fields.iconLimitCount, 0);
+  v35 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v12->fields.portraitLimitCount, 0);
   IsLock = UserServantEntity__IsLock(v12, 0);
   limitCountSupport = (void *)UserServantEntity__IsChoice(v12, 0);
-  if ( !v23 )
+  if ( !v27 )
     goto LABEL_36;
-  v33 = (char)limitCountSupport;
-  commonFlag = v23[19];
-  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v12->fields.battleVoice, 0);
-  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
+  v37 = (char)limitCountSupport;
+  commonFlag = v27[19];
+  battleVoice = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v12->fields.battleVoice, 0);
+  randomSettingOwn = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(
                        v12->fields.randomLimitCount,
                        0);
-  v37 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v12->fields.randomLimitCountSupport, 0);
-  v38 = *(_QWORD *)&v12->fields.limitCountSupport.fields.currentCryptoKey;
-  *(_QWORD *)&v48.fields.fakeValue = *(_QWORD *)&v12->fields.limitCountSupport.fields.fakeValue;
-  randomSettingSupport = v37;
-  *(_QWORD *)&v48.fields.currentCryptoKey = v38;
-  limitCountSupport = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v48, 0);
+  v41 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v12->fields.randomLimitCountSupport, 0);
+  v42 = *(_QWORD *)&v12->fields.limitCountSupport.fields.currentCryptoKey;
+  *(_QWORD *)&v52.fields.fakeValue = *(_QWORD *)&v12->fields.limitCountSupport.fields.fakeValue;
+  randomSettingSupport = v41;
+  *(_QWORD *)&v52.fields.currentCryptoKey = v42;
+  limitCountSupport = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v52, 0);
   if ( !Request_object )
     goto LABEL_36;
   CardFavoriteRequest__beginRequest(
     Request_object,
-    v41,
+    v45,
     imageLimitCount,
-    v28,
-    v29,
-    v30,
-    v31,
+    v32,
+    v33,
+    v34,
+    v35,
     1,
     IsLock,
-    v33 & 1,
+    v37 & 1,
     commonFlag,
     battleVoice,
     randomSettingOwn,
     randomSettingSupport,
     (int32_t)limitCountSupport,
-    v42 == v27,
+    v46 == v31,
     0);
 }
 
@@ -14063,14 +14942,14 @@ void MyRoomControl__shutdown(MyRoomControl_o *this, const MethodInfo *method)
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CB1645 & 1) == 0 )
+  if ( (byte_4CC2752 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_4CB1645 = 1;
+    sub_1C713B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4CC2752 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   MissionNotifyManager__RemoveNoDisplayMissionCondType((MissionNotifyManager_o *)Instance, 39, 0);
 }
 
@@ -14080,14 +14959,14 @@ void MyRoomControl__startUp(MyRoomControl_o *this, const MethodInfo *method)
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CB1644 & 1) == 0 )
+  if ( (byte_4CC2751 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_4CB1644 = 1;
+    sub_1C713B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4CC2751 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   MissionNotifyManager__AddNoDisplayMissionCondType((MissionNotifyManager_o *)Instance, 39, 0);
 }
 
@@ -14099,9 +14978,9 @@ void MyRoomControl__stopSvtVoice(MyRoomControl_o *this, const MethodInfo *method
 
   svtCtr = this->fields.svtCtr;
   if ( !svtCtr )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomSvtControl__stopVoice(svtCtr, 0);
-  MyRoomControl__setNormalFace_33724456(this, 1, v4);
+  MyRoomControl__setNormalFace_33752008(this, 1, v4);
 }
 
 
@@ -14114,23 +14993,31 @@ System_Collections_IEnumerator_o *MyRoomControl__svtVoicePlayAct(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
 
-  if ( (byte_4CB1677 & 1) == 0 )
+  if ( (byte_4CC2784 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl__svtVoicePlayAct_d__344_TypeInfo);
-    byte_4CB1677 = 1;
+    sub_1C713B0(&MyRoomControl__svtVoicePlayAct_d__344_TypeInfo);
+    byte_4CC2784 = 1;
   }
-  v5 = sub_1C6BC54(MyRoomControl__svtVoicePlayAct_d__344_TypeInfo);
+  v5 = sub_1C715FC(MyRoomControl__svtVoicePlayAct_d__344_TypeInfo);
   MyRoomControl__svtVoicePlayAct_d__344___ctor((MyRoomControl__svtVoicePlayAct_d__344_o *)v5, 0, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 40) = item;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)item, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)item, v14, v15, v16, v17, v18, v19);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -14145,56 +15032,64 @@ void MyRoomControl__voiceLoad(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  NetworkManager_c *v14; // x0
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  NetworkManager_c *v22; // x0
   Il2CppObject *Instance; // x21
-  System_Action_o *v16; // x22
+  System_Action_o *v24; // x22
 
-  if ( (byte_4CB1647 & 1) == 0 )
+  if ( (byte_4CC2754 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass237_0__voiceLoad_b__0__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass237_0_TypeInfo);
-    byte_4CB1647 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass237_0__voiceLoad_b__0__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass237_0_TypeInfo);
+    byte_4CC2754 = 1;
   }
-  v7 = sub_1C6BC54(MyRoomControl___c__DisplayClass237_0_TypeInfo);
+  v7 = sub_1C715FC(MyRoomControl___c__DisplayClass237_0_TypeInfo);
   MyRoomControl___c__DisplayClass237_0___ctor((MyRoomControl___c__DisplayClass237_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_13;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = endCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)endCallback, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)endCallback, v16, v17, v18, v19, v20, v21);
   this->fields.isVoiceLoading = 1;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4CB16DC )
+  if ( !byte_4CC27E9 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB16DC = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC27E9 = 1;
   }
-  v14 = NetworkManager_TypeInfo;
+  v22 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-    v14 = NetworkManager_TypeInfo;
+    v22 = NetworkManager_TypeInfo;
   }
-  if ( !v14->static_fields->isRebootBlock )
+  if ( !v22->static_fields->isRebootBlock )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    v16 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-    System_Action___ctor(v16, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass237_0__voiceLoad_b__0__, 0);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    v24 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    System_Action___ctor(v24, (Il2CppObject *)v7, Method_MyRoomControl___c__DisplayClass237_0__voiceLoad_b__0__, 0);
     if ( Instance )
     {
-      SoundManager__LoadAudioAssetStorage((SoundManager_o *)Instance, assetName, v16, 1, 0);
+      SoundManager__LoadAudioAssetStorage((SoundManager_o *)Instance, assetName, v24, 1, 0);
       return;
     }
 LABEL_13:
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   }
 }
 
@@ -14246,57 +15141,61 @@ bool MyRoomControl__CaptureServant_d__418__MoveNext(
   int32_t _1__state; // w8
   UnityEngine_WaitForEndOfFrame_o *v4; // x20
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   bool result; // w0
   struct MyRoomControl_o *_4__this; // x20
-  UnityEngine_Texture2D_o *v9; // x0
+  UnityEngine_Texture2D_o *v13; // x0
   int32_t width; // w25
-  UnityEngine_Texture2D_o *v11; // x21
+  UnityEngine_Texture2D_o *v15; // x21
   UIRect_o *height; // x0
-  __int64 v13; // x1
-  int v14; // w22
+  __int64 v17; // x1
+  int v18; // w22
   int32_t activeHeight; // w0
-  int32_t v16; // w26
-  int32_t v17; // w23
-  int v18; // w24
-  int32_t v19; // w22
-  int32_t v20; // w23
-  int v21; // w8
-  int v22; // w25
-  int v23; // w0
+  int32_t v20; // w26
+  int32_t v21; // w23
+  int v22; // w24
+  int32_t v23; // w22
+  int32_t v24; // w23
+  int v25; // w8
+  int v26; // w25
+  int v27; // w0
   _BOOL4 isOneShot; // w26
-  int v25; // w27
-  int v26; // w24
-  int32_t v27; // w25
-  int v28; // w27
-  int32_t v29; // w0
-  int v30; // w8
-  UnityEngine_Color_array *Pixels_71546136; // x25
-  UnityEngine_Texture2D_o *v32; // x24
+  int v29; // w27
+  int v30; // w24
+  int32_t v31; // w25
+  int v32; // w27
+  int32_t v33; // w0
+  int v34; // w8
+  UnityEngine_Color_array *Pixels_71611068; // x25
+  UnityEngine_Texture2D_o *v36; // x24
   UnityEngine_GameObject_o *gameObject; // x0
-  float v34; // s0
+  float v38; // s0
   System_Collections_IEnumerator_o *started; // x0
 
-  if ( (byte_4CB1705 & 1) == 0 )
+  if ( (byte_4CC2812 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Texture2D_TypeInfo);
-    sub_1C6BA08(&TouchEffectManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_WaitForEndOfFrame_TypeInfo);
-    byte_4CB1705 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UnityEngine_Texture2D_TypeInfo);
+    sub_1C713B0(&TouchEffectManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_WaitForEndOfFrame_TypeInfo);
+    byte_4CC2812 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
     _4__this = this->fields.__4__this;
     this->fields.__1__state = -1;
-    v9 = UnityEngine_ScreenCapture__CaptureScreenshotAsTexture(0);
+    v13 = UnityEngine_ScreenCapture__CaptureScreenshotAsTexture(0);
     width = this->fields.width;
-    v11 = v9;
+    v15 = v13;
     height = (UIRect_o *)UnityEngine_Screen__get_height(0);
     if ( !_4__this )
       goto LABEL_35;
-    v14 = (int)height;
+    v18 = (int)height;
     height = (UIRect_o *)_4__this->fields.photoCampaignScreenshot;
     if ( !height )
       goto LABEL_35;
@@ -14304,84 +15203,84 @@ bool MyRoomControl__CaptureServant_d__418__MoveNext(
     if ( !height )
       goto LABEL_35;
     activeHeight = UIRoot__get_activeHeight((UIRoot_o *)height, 0);
-    v16 = this->fields.height;
-    v17 = activeHeight;
+    v20 = this->fields.height;
+    v21 = activeHeight;
     height = (UIRect_o *)UnityEngine_Screen__get_height(0);
     if ( !_4__this->fields.photoCampaignScreenshot )
       goto LABEL_35;
-    v18 = (int)height;
+    v22 = (int)height;
     height = (UIRect_o *)UIRect__get_root((UIRect_o *)_4__this->fields.photoCampaignScreenshot, 0);
     if ( !height )
       goto LABEL_35;
     height = (UIRect_o *)UIRoot__get_activeHeight((UIRoot_o *)height, 0);
-    if ( !v11 )
+    if ( !v15 )
       goto LABEL_35;
-    v19 = v14 * width / v17;
-    v20 = v18 * v16 / (int)height;
-    v21 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, const MethodInfo *))v11->klass->vtable._4_get_width.methodPtr)(
-            v11,
-            v11->klass->vtable._4_get_width.method)
-        - v19;
-    v22 = v21 >= 0 ? v21 : v21 + 1;
-    v23 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, const MethodInfo *))v11->klass->vtable._6_get_height.methodPtr)(
-            v11,
-            v11->klass->vtable._6_get_height.method);
+    v23 = v18 * width / v21;
+    v24 = v22 * v20 / (int)height;
+    v25 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, const MethodInfo *))v15->klass->vtable._4_get_width.methodPtr)(
+            v15,
+            v15->klass->vtable._4_get_width.method)
+        - v23;
+    v26 = v25 >= 0 ? v25 : v25 + 1;
+    v27 = ((__int64 (__fastcall *)(UnityEngine_Texture2D_o *, const MethodInfo *))v15->klass->vtable._6_get_height.methodPtr)(
+            v15,
+            v15->klass->vtable._6_get_height.method);
     isOneShot = _4__this->fields.isOneShot;
-    v25 = v23 - v20 >= 0 ? v23 - v20 : v23 - v20 + 1;
+    v29 = v27 - v24 >= 0 ? v27 - v24 : v27 - v24 + 1;
     height = (UIRect_o *)UnityEngine_Screen__get_height(0);
     if ( !_4__this->fields.photoCampaignScreenshot )
       goto LABEL_35;
-    v26 = (int)height;
+    v30 = (int)height;
     height = (UIRect_o *)UIRect__get_root((UIRect_o *)_4__this->fields.photoCampaignScreenshot, 0);
     if ( !height )
       goto LABEL_35;
-    v27 = v22 >> 1;
-    v28 = v25 >> 1;
-    v29 = UIRoot__get_activeHeight((UIRoot_o *)height, 0);
-    v30 = isOneShot ? 11 : 1;
-    Pixels_71546136 = UnityEngine_Texture2D__GetPixels_71546136(v11, v27, v30 * v26 / v29 + v28, v19, v20, 0);
-    v32 = (UnityEngine_Texture2D_o *)sub_1C6BC54(UnityEngine_Texture2D_TypeInfo);
-    UnityEngine_Texture2D___ctor_71547260(v32, v19, v20, 3, 0, 0);
-    if ( !v32 )
+    v31 = v26 >> 1;
+    v32 = v29 >> 1;
+    v33 = UIRoot__get_activeHeight((UIRoot_o *)height, 0);
+    v34 = isOneShot ? 11 : 1;
+    Pixels_71611068 = UnityEngine_Texture2D__GetPixels_71611068(v15, v31, v34 * v30 / v33 + v32, v23, v24, 0);
+    v36 = (UnityEngine_Texture2D_o *)sub_1C715FC(UnityEngine_Texture2D_TypeInfo);
+    UnityEngine_Texture2D___ctor_71612192(v36, v23, v24, 3, 0, 0);
+    if ( !v36 )
       goto LABEL_35;
-    UnityEngine_Texture2D__SetPixels_71548340(v32, Pixels_71546136, 0);
-    UnityEngine_Texture2D__Apply_71549112(v32, 0);
+    UnityEngine_Texture2D__SetPixels_71613272(v36, Pixels_71611068, 0);
+    UnityEngine_Texture2D__Apply_71614044(v36, 0);
     height = (UIRect_o *)_4__this->fields.photoCampaignScreenshot;
     if ( !height )
       goto LABEL_35;
     ((void (__fastcall *)(UIRect_o *, UnityEngine_Texture2D_o *, Il2CppClass *))height->klass[1]._1.declaringType)(
       height,
-      v32,
+      v36,
       height->klass[1]._1.parent);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676((UnityEngine_Object_o *)v11, 0);
+    UnityEngine_Object__Destroy_71724608((UnityEngine_Object_o *)v15, 0);
     height = (UIRect_o *)_4__this->fields.photoCampaignScreenshot;
     if ( !height )
       goto LABEL_35;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)height, 0);
-    v34 = 11.0;
+    v38 = 11.0;
     if ( !_4__this->fields.isOneShot )
-      v34 = 1.0;
-    GameObjectExtensions__SetLocalPositionY(gameObject, v34, 0);
+      v38 = 1.0;
+    GameObjectExtensions__SetLocalPositionY(gameObject, v38, 0);
     height = (UIRect_o *)_4__this->fields.photoCampaignScreenshot;
     if ( !height )
 LABEL_35:
-      sub_1C6BC60(height, v13);
+      sub_1C71608(height, v17);
     UIWidget__set_width((UIWidget_o *)height, this->fields.width, 0);
     if ( !TouchEffectManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TouchEffectManager_TypeInfo);
     TouchEffectManager__SetBlock(0, 0);
     started = MyRoomControl__StartCameraEffect(_4__this, 0);
-    UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)_4__this, started, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)_4__this, started, 0);
   }
   else if ( !_1__state )
   {
     this->fields.__1__state = -1;
-    v4 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C6BC54(UnityEngine_WaitForEndOfFrame_TypeInfo);
+    v4 = (UnityEngine_WaitForEndOfFrame_o *)sub_1C715FC(UnityEngine_WaitForEndOfFrame_TypeInfo);
     UnityEngine_WaitForEndOfFrame___ctor(v4, 0);
     this->fields.__2__current = (Il2CppObject *)v4;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v4, v5, v6);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v4, v5, v6, v7, v8, v9, v10);
     result = 1;
     this->fields.__1__state = 1;
     return result;
@@ -14406,11 +15305,11 @@ void __noreturn MyRoomControl__CaptureServant_d__418__System_Collections_IEnumer
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MyRoomControl__CaptureServant_d__418_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MyRoomControl__CaptureServant_d__418_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -14453,24 +15352,28 @@ bool MyRoomControl__CoWaitForConstructingRecordWithServant_d__292__MoveNext(
   UnityEngine_WaitUntil_o *v9; // x21
   Il2CppObject **p__2__current; // x19
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
-  if ( (byte_4CB1706 & 1) == 0 )
+  if ( (byte_4CC2813 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__CoWaitForConstructingRecordWithServant_b__292_0__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4CB1706 = 1;
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__CoWaitForConstructingRecordWithServant_b__292_0__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4CC2813 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
 LABEL_11:
-      sub_1C6BC60(Instance, v6);
+      sub_1C71608(Instance, v6);
     CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0);
     ActionExtensions__Call(this->fields.setEndAction, 0);
     return 0;
@@ -14479,18 +15382,18 @@ LABEL_11:
     return 0;
   this->fields.__1__state = -1;
   _4__this = (Il2CppObject *)this->fields.__4__this;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_11;
   v7 = 1;
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0);
-  v8 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+  v8 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(v8, _4__this, Method_MyRoomControl__CoWaitForConstructingRecordWithServant_b__292_0__, 0);
-  v9 = (UnityEngine_WaitUntil_o *)sub_1C6BC54(UnityEngine_WaitUntil_TypeInfo);
+  v9 = (UnityEngine_WaitUntil_o *)sub_1C715FC(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v9, v8, 0);
   this->fields.__2__current = (Il2CppObject *)v9;
   p__2__current = &this->fields.__2__current;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p__2__current, (int32_t)v9, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p__2__current, (int32_t)v9, v11, v12, v13, v14, v15, v16);
   *((_DWORD *)p__2__current - 2) = 1;
   return v7;
 }
@@ -14512,11 +15415,11 @@ void __noreturn MyRoomControl__CoWaitForConstructingRecordWithServant_d__292__Sy
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MyRoomControl__CoWaitForConstructingRecordWithServant_d__292_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MyRoomControl__CoWaitForConstructingRecordWithServant_d__292_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -14555,28 +15458,36 @@ bool MyRoomControl__InitMaterialOnBackground_d__286__MoveNext(
   int32_t _1__state; // w8
   struct MyRoomControl_o *_4__this; // x19
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  TerminalSceneComponent_c *v8; // x0
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  TerminalSceneComponent_c *v12; // x0
   struct TerminalSceneComponent_StaticFields *static_fields; // x8
   struct TerminalSceneComponent_o *mInstance; // x1
-  UnityEngine_Object_o *v11; // x21
-  System_Collections_IEnumerator_o *v12; // x0
-  CGThumbnailListItem_o *p__2__current; // x20
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  UnityEngine_Object_o *v15; // x21
+  System_Collections_IEnumerator_o *v16; // x0
+  GrandQuestFolderBoardItem_o *p__2__current; // x20
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
   bool result; // w0
   struct TerminalSceneComponent_o *terminal_5__2; // x8
-  BackTaskAmountAdjuster_o *v18; // x20
-  System_Collections_IEnumerator_o *v19; // x0
+  BackTaskAmountAdjuster_o *v26; // x20
+  System_Collections_IEnumerator_o *v27; // x0
 
   v3 = this;
-  if ( (byte_4CB1707 & 1) == 0 )
+  if ( (byte_4CC2814 & 1) == 0 )
   {
-    sub_1C6BA08(&BackTaskAmountAdjuster_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    this = (MyRoomControl__InitMaterialOnBackground_d__286_o *)sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB1707 = 1;
+    sub_1C713B0(&BackTaskAmountAdjuster_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    this = (MyRoomControl__InitMaterialOnBackground_d__286_o *)sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC2814 = 1;
   }
   _1__state = v3->fields.__1__state;
   _4__this = v3->fields.__4__this;
@@ -14604,43 +15515,43 @@ bool MyRoomControl__InitMaterialOnBackground_d__286__MoveNext(
     MyRoomStateMaterial__Init((MyRoomStateMaterial_o *)this, _4__this, v2);
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4CB01CE )
+    if ( !byte_4CC12CE )
     {
-      sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-      byte_4CB01CE = 1;
+      sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+      byte_4CC12CE = 1;
     }
-    v8 = TerminalSceneComponent_TypeInfo;
+    v12 = TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      v8 = TerminalSceneComponent_TypeInfo;
+      v12 = TerminalSceneComponent_TypeInfo;
     }
-    static_fields = v8->static_fields;
+    static_fields = v12->static_fields;
     mInstance = static_fields->mInstance;
     v3->fields._terminal_5__2 = static_fields->mInstance;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v3->fields._terminal_5__2, (int32_t)mInstance, v6, v7);
-    v11 = (UnityEngine_Object_o *)v3->fields._terminal_5__2;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->fields._terminal_5__2, (int32_t)mInstance, v6, v7, v8, v9, v10, v11);
+    v15 = (UnityEngine_Object_o *)v3->fields._terminal_5__2;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Inequality(v11, 0, 0) )
+    if ( UnityEngine_Object__op_Inequality(v15, 0, 0) )
     {
-      this = (MyRoomControl__InitMaterialOnBackground_d__286_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+      this = (MyRoomControl__InitMaterialOnBackground_d__286_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_QuestTree__get_Instance__);
       if ( this )
       {
-        v12 = QuestTree__Init((QuestTree_o *)this, 0, 0);
-        v3->fields.__2__current = (Il2CppObject *)v12;
-        p__2__current = (CGThumbnailListItem_o *)&v3->fields.__2__current;
-        sub_1C6B9AC(p__2__current, (int32_t)v12, v14, v15);
+        v16 = QuestTree__Init((QuestTree_o *)this, 0, 0);
+        v3->fields.__2__current = (Il2CppObject *)v16;
+        p__2__current = (GrandQuestFolderBoardItem_o *)&v3->fields.__2__current;
+        sub_1C71354(p__2__current, (int32_t)v16, v18, v19, v20, v21, v22, v23);
         result = 1;
-        LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+        LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
         return result;
       }
 LABEL_26:
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     }
   }
-  v18 = (BackTaskAmountAdjuster_o *)sub_1C6BC54(BackTaskAmountAdjuster_TypeInfo);
-  BackTaskAmountAdjuster___ctor(v18, 0);
+  v26 = (BackTaskAmountAdjuster_o *)sub_1C715FC(BackTaskAmountAdjuster_TypeInfo);
+  BackTaskAmountAdjuster___ctor(v26, 0);
   if ( !_4__this )
     goto LABEL_26;
   this = (MyRoomControl__InitMaterialOnBackground_d__286_o *)_4__this->fields.mStateMaterial;
@@ -14649,10 +15560,10 @@ LABEL_26:
   this = (MyRoomControl__InitMaterialOnBackground_d__286_o *)MyRoomStateMaterial__ConstructMaterialDataGradually(
                                                                (MyRoomStateMaterial_o *)this,
                                                                method);
-  if ( !v18 )
+  if ( !v26 )
     goto LABEL_26;
-  v19 = BackTaskAmountAdjuster__Execute(v18, (System_Collections_IEnumerator_o *)this, 0);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)_4__this, v19, 0);
+  v27 = BackTaskAmountAdjuster__Execute(v26, (System_Collections_IEnumerator_o *)this, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)_4__this, v27, 0);
   return 0;
 }
 
@@ -14673,11 +15584,11 @@ void __noreturn MyRoomControl__InitMaterialOnBackground_d__286__System_Collectio
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MyRoomControl__InitMaterialOnBackground_d__286_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MyRoomControl__InitMaterialOnBackground_d__286_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -14720,26 +15631,30 @@ bool MyRoomControl__InitServantMenu_d__289__MoveNext(
   UnityEngine_WaitUntil_o *v9; // x19
   Il2CppObject **p__2__current; // x20
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  BackTaskAmountAdjuster_o *v13; // x20
-  System_Collections_IEnumerator_o *v14; // x0
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  BackTaskAmountAdjuster_o *v17; // x20
+  System_Collections_IEnumerator_o *v18; // x0
 
-  if ( (byte_4CB1708 & 1) == 0 )
+  if ( (byte_4CC2815 & 1) == 0 )
   {
-    sub_1C6BA08(&BackTaskAmountAdjuster_TypeInfo);
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__InitServantMenu_b__289_0__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&UnityEngine_WaitUntil_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6972/*"GO_NEXT"*/);
-    byte_4CB1708 = 1;
+    sub_1C713B0(&BackTaskAmountAdjuster_TypeInfo);
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__InitServantMenu_b__289_0__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&UnityEngine_WaitUntil_TypeInfo);
+    sub_1C713B0(&StringLiteral_6974/*"GO_NEXT"*/);
+    byte_4CC2815 = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = this->fields.__4__this;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
-    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( Instance )
     {
       CommonUI__SetLoadMode(Instance, 0, 0);
@@ -14748,43 +15663,43 @@ bool MyRoomControl__InitServantMenu_d__289__MoveNext(
         if ( !_4__this->fields.isRecordWithServantInitialized )
         {
           _4__this->fields.isRecordWithServantInitialized = 1;
-          v13 = (BackTaskAmountAdjuster_o *)sub_1C6BC54(BackTaskAmountAdjuster_TypeInfo);
-          BackTaskAmountAdjuster___ctor(v13, 0);
+          v17 = (BackTaskAmountAdjuster_o *)sub_1C715FC(BackTaskAmountAdjuster_TypeInfo);
+          BackTaskAmountAdjuster___ctor(v17, 0);
           Instance = (CommonUI_o *)_4__this->fields.mStateMaterial;
           if ( !Instance )
             goto LABEL_17;
           Instance = (CommonUI_o *)MyRoomStateMaterial__InitRecordWithServant((MyRoomStateMaterial_o *)Instance, v6);
-          if ( !v13 )
+          if ( !v17 )
             goto LABEL_17;
-          v14 = BackTaskAmountAdjuster__Execute(v13, (System_Collections_IEnumerator_o *)Instance, 0);
-          UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)_4__this, v14, 0);
+          v18 = BackTaskAmountAdjuster__Execute(v17, (System_Collections_IEnumerator_o *)Instance, 0);
+          UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)_4__this, v18, 0);
         }
         Instance = (CommonUI_o *)_4__this->fields.myRoomFsm;
         if ( Instance )
         {
-          PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_6972/*"GO_NEXT"*/, 0);
+          PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_6974/*"GO_NEXT"*/, 0);
           return 0;
         }
       }
     }
 LABEL_17:
-    sub_1C6BC60(Instance, v6);
+    sub_1C71608(Instance, v6);
   }
   if ( _1__state )
     return 0;
   this->fields.__1__state = -1;
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_17;
   v7 = 1;
   CommonUI__SetLoadMode(Instance, 1, 0);
-  v8 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+  v8 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(v8, (Il2CppObject *)_4__this, Method_MyRoomControl__InitServantMenu_b__289_0__, 0);
-  v9 = (UnityEngine_WaitUntil_o *)sub_1C6BC54(UnityEngine_WaitUntil_TypeInfo);
+  v9 = (UnityEngine_WaitUntil_o *)sub_1C715FC(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v9, v8, 0);
   this->fields.__2__current = (Il2CppObject *)v9;
   p__2__current = &this->fields.__2__current;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p__2__current, (int32_t)v9, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p__2__current, (int32_t)v9, v11, v12, v13, v14, v15, v16);
   *((_DWORD *)p__2__current - 2) = 1;
   return v7;
 }
@@ -14806,11 +15721,11 @@ void __noreturn MyRoomControl__InitServantMenu_d__289__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MyRoomControl__InitServantMenu_d__289_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MyRoomControl__InitServantMenu_d__289_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -14850,149 +15765,185 @@ bool MyRoomControl__LoadMultipleServant_d__381__MoveNext(
   Il2CppObject *v5; // x22
   struct MyRoomControl___c__DisplayClass381_0_o **p__8__1; // x27
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  Il2CppObject *v11; // x1
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  Il2CppObject *v19; // x1
   struct StandFigureBack_array *multipleStandFigureBacks; // x8
-  __int64 v13; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  struct StandFigureBack_array *v16; // x8
-  __int64 v17; // x19
-  __int64 v18; // x22
-  __int64 v19; // x24
+  __int64 v21; // x0
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
+  struct StandFigureBack_array *v28; // x8
+  __int64 v29; // x19
+  __int64 v30; // x22
+  __int64 v31; // x24
   int max_length; // w9
   struct UnityEngine_Vector3_array *defaultMultipleServantPoses; // x8
-  float *v22; // x8
-  const MethodInfo *v23; // x2
+  float *v34; // x8
+  const MethodInfo *v35; // x2
   struct System_Int64_array *multipleServantUsrIds; // x8
   struct System_Int32_array *multipleLimitCounts; // x8
-  int32_t v26; // w20
-  int32_t v27; // w23
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  struct ServantScriptMultipleEntity_array *v30; // x26
-  ServantScriptMultipleEntity_o *v31; // x25
-  struct StandFigureBack_array *v32; // x8
-  __int64 v33; // x25
-  __int64 v34; // x19
-  struct MyRoomControl_o *v35; // x24
-  struct MyRoomControl___c__DisplayClass381_0_o *v36; // x28
-  struct MyRoomControl___c__DisplayClass381_0_o **v37; // x21
-  int32_t v38; // w5
-  StandFigureBack_o *v39; // x26
-  System_Action_o *_9__3; // x27
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  struct TitleInfoControl_o *titleInfo; // x8
-  struct StandFigureBack_array *v44; // x8
-  __int64 v45; // x19
-  int v46; // w9
-  unsigned int v47; // w25
+  int32_t v38; // w20
+  int32_t v39; // w23
+  int32_t v40; // w2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  int32_t v43; // w5
+  int64_t v44; // x6
+  System_String_o *v45; // x7
+  struct ServantScriptMultipleEntity_array *v46; // x26
+  ServantScriptMultipleEntity_o *v47; // x25
   struct StandFigureBack_array *v48; // x8
-  UnityEngine_Component_o *v49; // x8
-  UnityEngine_Component_o *v50; // x21
-  float y; // s8
-  float v52; // s10
-  float z; // s9
-  float v54; // s0
-  struct ServantScriptMultipleEntity_array *multipleEntities_5__2; // x8
-  __int64 v56; // x8
-  float v57; // s10
-  struct StandFigureBack_array *v58; // x9
-  int v59; // s14
-  int v60; // s15
-  struct StandFigureBack_array *v61; // x8
-  float x; // s11
-  float v63; // s12
+  __int64 v49; // x25
+  __int64 v50; // x19
+  struct MyRoomControl_o *v51; // x24
+  struct MyRoomControl___c__DisplayClass381_0_o *v52; // x28
+  struct MyRoomControl___c__DisplayClass381_0_o **v53; // x21
+  int32_t v54; // w5
+  StandFigureBack_o *v55; // x26
+  System_Action_o *_9__3; // x27
+  int32_t v57; // w2
+  int32_t v58; // w3
+  System_String_o *v59; // x4
+  int32_t v60; // w5
+  int64_t v61; // x6
+  System_String_o *v62; // x7
+  struct TitleInfoControl_o *titleInfo; // x8
   struct StandFigureBack_array *v64; // x8
-  struct StandFigureBack_array *v65; // x8
-  System_String_o *v66; // x2
+  __int64 v65; // x19
+  int v66; // w9
+  unsigned int v67; // w25
+  struct StandFigureBack_array *v68; // x8
+  UnityEngine_Component_o *v69; // x8
+  UnityEngine_Component_o *v70; // x21
+  float y; // s8
+  float v72; // s10
+  float z; // s9
+  float v74; // s0
+  struct ServantScriptMultipleEntity_array *multipleEntities_5__2; // x8
+  __int64 v76; // x8
+  float v77; // s10
+  struct StandFigureBack_array *v78; // x9
+  int v79; // s14
+  int v80; // s15
+  struct StandFigureBack_array *v81; // x8
+  float x; // s11
+  float v83; // s12
+  struct StandFigureBack_array *v84; // x8
+  struct StandFigureBack_array *v85; // x8
+  System_String_o *v86; // x2
   struct MyRoomControl___c__DisplayClass381_0_o *_8__1; // x21
   MultipleViewComponent_o *multipleViewComponent; // x20
-  System_Action_o *v69; // x22
-  Il2CppObject *v70; // x20
-  System_Func_bool__o *v71; // x21
-  UnityEngine_WaitWhile_o *v72; // x20
-  int32_t v73; // w2
-  const MethodInfo *v74; // x3
-  struct ServantScriptMultipleEntity_array *v75; // x8
-  unsigned int v76; // w9
-  ServantScriptMultipleEntity_o *v77; // x10
-  ServantScriptMultipleEntity_o *v78; // x8
-  Il2CppObject *v79; // x20
-  System_Func_bool__o *v80; // x21
-  UnityEngine_WaitWhile_o *v81; // x20
-  int32_t v82; // w2
-  const MethodInfo *v83; // x3
-  __int64 v84; // x0
+  System_Action_o *v89; // x22
+  Il2CppObject *v90; // x20
+  System_Func_bool__o *v91; // x21
+  UnityEngine_WaitWhile_o *v92; // x20
+  int32_t v93; // w2
+  int32_t v94; // w3
+  System_String_o *v95; // x4
+  int32_t v96; // w5
+  int64_t v97; // x6
+  System_String_o *v98; // x7
+  struct ServantScriptMultipleEntity_array *v99; // x8
+  unsigned int v100; // w9
+  ServantScriptMultipleEntity_o *v101; // x10
+  ServantScriptMultipleEntity_o *v102; // x8
+  Il2CppObject *v103; // x20
+  System_Func_bool__o *v104; // x21
+  UnityEngine_WaitWhile_o *v105; // x20
+  int32_t v106; // w2
+  int32_t v107; // w3
+  System_String_o *v108; // x4
+  int32_t v109; // w5
+  int64_t v110; // x6
+  System_String_o *v111; // x7
+  __int64 v112; // x0
   struct ServantScriptMultipleEntity_array **p_multipleEntities_5__2; // [xsp+18h] [xbp-C8h]
-  int32_t v86; // [xsp+24h] [xbp-BCh]
-  MyRoomControl__LoadMultipleServant_d__381_o *v87; // [xsp+28h] [xbp-B8h]
+  int32_t v114; // [xsp+24h] [xbp-BCh]
+  MyRoomControl__LoadMultipleServant_d__381_o *v115; // [xsp+28h] [xbp-B8h]
   ServantScriptMultipleEntity_o *entity; // [xsp+30h] [xbp-B0h] BYREF
   int32_t formId[2]; // [xsp+38h] [xbp-A8h] BYREF
-  UnityEngine_Vector3_o v90; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v118; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v92; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v93; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v94; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v120; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v121; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v122; // 0:s0.4,4:s1.4,8:s2.4
 
-  v87 = this;
-  if ( (byte_4CB1709 & 1) == 0 )
+  v115 = this;
+  if ( (byte_4CC2816 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantScriptMultipleMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&ServantScriptMultipleEntity___TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__2__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__3__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass381_0_TypeInfo);
-    sub_1C6BA08(&UnityEngine_WaitWhile_TypeInfo);
-    this = (MyRoomControl__LoadMultipleServant_d__381_o *)sub_1C6BA08(&StringLiteral_6734/*"FinishedFadeMultipleServant"*/);
-    byte_4CB1709 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantScriptMultipleMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&ServantScriptMultipleEntity___TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__2__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__3__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass381_0_TypeInfo);
+    sub_1C713B0(&UnityEngine_WaitWhile_TypeInfo);
+    this = (MyRoomControl__LoadMultipleServant_d__381_o *)sub_1C713B0(&StringLiteral_6736/*"FinishedFadeMultipleServant"*/);
+    byte_4CC2816 = 1;
   }
   entity = 0;
   *(_QWORD *)formId = 0;
-  _1__state = v87->fields.__1__state;
-  _4__this = v87->fields.__4__this;
+  _1__state = v115->fields.__1__state;
+  _4__this = v115->fields.__4__this;
   if ( _1__state != 2 )
   {
     if ( _1__state == 1 )
     {
-      _8__1 = v87->fields.__8__1;
-      v87->fields.__1__state = -1;
+      _8__1 = v115->fields.__8__1;
+      v115->fields.__1__state = -1;
       if ( _8__1 )
       {
         _8__1->fields.wait = 1;
         if ( _4__this )
         {
           multipleViewComponent = _4__this->fields.multipleViewComponent;
-          v69 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+          v89 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
           System_Action___ctor(
-            v69,
+            v89,
             (Il2CppObject *)_8__1,
             Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__1__,
             0);
           if ( multipleViewComponent )
           {
-            MultipleViewComponent__CancelMultipleViewWindow(multipleViewComponent, v69, 0);
-            v70 = (Il2CppObject *)v87->fields.__8__1;
-            v71 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+            MultipleViewComponent__CancelMultipleViewWindow(multipleViewComponent, v89, 0);
+            v90 = (Il2CppObject *)v115->fields.__8__1;
+            v91 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
             System_Func_bool____ctor(
-              v71,
-              v70,
+              v91,
+              v90,
               Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__2__,
               0);
-            v72 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
-            UnityEngine_WaitWhile___ctor(v72, v71, 0);
-            v87->fields.__2__current = (Il2CppObject *)v72;
-            sub_1C6B9AC((CGThumbnailListItem_o *)&v87->fields.__2__current, (int32_t)v72, v73, v74);
-            v87->fields.__1__state = 2;
+            v92 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
+            UnityEngine_WaitWhile___ctor(v92, v91, 0);
+            v115->fields.__2__current = (Il2CppObject *)v92;
+            sub_1C71354(
+              (GrandQuestFolderBoardItem_o *)&v115->fields.__2__current,
+              (int32_t)v92,
+              v93,
+              v94,
+              v95,
+              v96,
+              v97,
+              v98);
+            v115->fields.__1__state = 2;
             return 1;
           }
         }
@@ -15003,18 +15954,26 @@ bool MyRoomControl__LoadMultipleServant_d__381__MoveNext(
       result = 0;
       if ( _1__state )
         return result;
-      v87->fields.__1__state = -1;
-      v5 = (Il2CppObject *)sub_1C6BC54(MyRoomControl___c__DisplayClass381_0_TypeInfo);
+      v115->fields.__1__state = -1;
+      v5 = (Il2CppObject *)sub_1C715FC(MyRoomControl___c__DisplayClass381_0_TypeInfo);
       System_Object___ctor(v5, 0);
-      v87->fields.__8__1 = (struct MyRoomControl___c__DisplayClass381_0_o *)v5;
-      p__8__1 = &v87->fields.__8__1;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v87->fields.__8__1, (int32_t)v5, v7, v8);
-      this = (MyRoomControl__LoadMultipleServant_d__381_o *)v87->fields.__8__1;
+      v115->fields.__8__1 = (struct MyRoomControl___c__DisplayClass381_0_o *)v5;
+      p__8__1 = &v115->fields.__8__1;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&v115->fields.__8__1, (int32_t)v5, v7, v8, v9, v10, v11, v12);
+      this = (MyRoomControl__LoadMultipleServant_d__381_o *)v115->fields.__8__1;
       if ( this )
       {
-        v11 = (Il2CppObject *)v87->fields.__4__this;
-        this->fields.__2__current = v11;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__2__current, (int32_t)v11, v9, v10);
+        v19 = (Il2CppObject *)v115->fields.__4__this;
+        this->fields.__2__current = v19;
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&this->fields.__2__current,
+          (int32_t)v19,
+          v13,
+          v14,
+          v15,
+          v16,
+          v17,
+          v18);
         if ( _4__this )
         {
           this = (MyRoomControl__LoadMultipleServant_d__381_o *)_4__this->fields.mBlocker;
@@ -15028,24 +15987,32 @@ bool MyRoomControl__LoadMultipleServant_d__381__MoveNext(
               multipleStandFigureBacks = _4__this->fields.multipleStandFigureBacks;
               if ( multipleStandFigureBacks )
               {
-                v13 = sub_1C6BAB0(ServantScriptMultipleEntity___TypeInfo, LODWORD(multipleStandFigureBacks->max_length));
-                v87->fields._multipleEntities_5__2 = (struct ServantScriptMultipleEntity_array *)v13;
-                p_multipleEntities_5__2 = &v87->fields._multipleEntities_5__2;
-                sub_1C6B9AC((CGThumbnailListItem_o *)&v87->fields._multipleEntities_5__2, v13, v14, v15);
-                v16 = _4__this->fields.multipleStandFigureBacks;
-                if ( v16 )
+                v21 = sub_1C71458(ServantScriptMultipleEntity___TypeInfo, LODWORD(multipleStandFigureBacks->max_length));
+                v115->fields._multipleEntities_5__2 = (struct ServantScriptMultipleEntity_array *)v21;
+                p_multipleEntities_5__2 = &v115->fields._multipleEntities_5__2;
+                sub_1C71354(
+                  (GrandQuestFolderBoardItem_o *)&v115->fields._multipleEntities_5__2,
+                  v21,
+                  v22,
+                  v23,
+                  v24,
+                  v25,
+                  v26,
+                  v27);
+                v28 = _4__this->fields.multipleStandFigureBacks;
+                if ( v28 )
                 {
-                  v17 = 0;
-                  v18 = 0;
-                  v19 = 32;
+                  v29 = 0;
+                  v30 = 0;
+                  v31 = 32;
                   while ( 1 )
                   {
-                    max_length = v16->max_length;
-                    if ( (int)v18 >= max_length )
+                    max_length = v28->max_length;
+                    if ( (int)v30 >= max_length )
                       break;
-                    if ( (unsigned int)v18 >= max_length )
+                    if ( (unsigned int)v30 >= max_length )
                       goto LABEL_104;
-                    this = (MyRoomControl__LoadMultipleServant_d__381_o *)v16->m_Items[v18];
+                    this = (MyRoomControl__LoadMultipleServant_d__381_o *)v28->m_Items[v30];
                     if ( !this )
                       goto LABEL_83;
                     this = (MyRoomControl__LoadMultipleServant_d__381_o *)UnityEngine_Component__get_transform(
@@ -15054,26 +16021,26 @@ bool MyRoomControl__LoadMultipleServant_d__381__MoveNext(
                     defaultMultipleServantPoses = _4__this->fields.defaultMultipleServantPoses;
                     if ( !defaultMultipleServantPoses )
                       goto LABEL_83;
-                    if ( (unsigned int)v18 >= LODWORD(defaultMultipleServantPoses->max_length) )
+                    if ( (unsigned int)v30 >= LODWORD(defaultMultipleServantPoses->max_length) )
                       goto LABEL_104;
                     if ( !this )
                       goto LABEL_83;
-                    v22 = (float *)((char *)defaultMultipleServantPoses + v17);
-                    v90.fields.z = v22[10] + 0.0;
-                    v90.fields.y = v22[9] + 0.0;
-                    v90.fields.x = flt_CEB6C8[(_DWORD)v18 == 0] + v22[8];
-                    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v90, 0);
+                    v34 = (float *)((char *)defaultMultipleServantPoses + v29);
+                    v118.fields.z = v34[10] + 0.0;
+                    v118.fields.y = v34[9] + 0.0;
+                    v118.fields.x = flt_CEE308[(_DWORD)v30 == 0] + v34[8];
+                    UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v118, 0);
                     multipleServantUsrIds = _4__this->fields.multipleServantUsrIds;
                     if ( !multipleServantUsrIds )
                       goto LABEL_83;
-                    if ( (unsigned int)v18 >= LODWORD(multipleServantUsrIds->max_length) )
+                    if ( (unsigned int)v30 >= LODWORD(multipleServantUsrIds->max_length) )
                       goto LABEL_104;
                     if ( !_4__this->fields.myRoomData )
                       goto LABEL_83;
                     this = (MyRoomControl__LoadMultipleServant_d__381_o *)MyRoomData__getUsrSvtData(
                                                                             (MyRoomData_o *)this,
-                                                                            multipleServantUsrIds->m_Items[v18],
-                                                                            v23);
+                                                                            multipleServantUsrIds->m_Items[v30],
+                                                                            v35);
                     if ( !this )
                       goto LABEL_83;
                     this = (MyRoomControl__LoadMultipleServant_d__381_o *)UserServantEntity__getSvtId(
@@ -15082,14 +16049,14 @@ bool MyRoomControl__LoadMultipleServant_d__381__MoveNext(
                     multipleLimitCounts = _4__this->fields.multipleLimitCounts;
                     if ( !multipleLimitCounts )
                       goto LABEL_83;
-                    if ( (unsigned int)v18 >= LODWORD(multipleLimitCounts->max_length) )
+                    if ( (unsigned int)v30 >= LODWORD(multipleLimitCounts->max_length) )
                       goto LABEL_104;
-                    v26 = multipleLimitCounts->m_Items[v18];
-                    v27 = (int)this;
-                    MyRoomControl__SetImageIdAndFormId(_4__this, &formId[1], formId, (int32_t)this, v26, 0);
+                    v38 = multipleLimitCounts->m_Items[v30];
+                    v39 = (int)this;
+                    MyRoomControl__SetImageIdAndFormId(_4__this, &formId[1], formId, (int32_t)this, v38, 0);
                     if ( !DataManager_TypeInfo->_2.cctor_finished )
                       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                    this = (MyRoomControl__LoadMultipleServant_d__381_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantScriptMultipleMaster___);
+                    this = (MyRoomControl__LoadMultipleServant_d__381_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantScriptMultipleMaster___);
                     if ( !this )
                       goto LABEL_83;
                     this = (MyRoomControl__LoadMultipleServant_d__381_o *)ServantScriptMultipleMaster__TryGetEntity(
@@ -15097,99 +16064,115 @@ bool MyRoomControl__LoadMultipleServant_d__381__MoveNext(
                                                                             &entity,
                                                                             formId[1],
                                                                             formId[0],
-                                                                            v18 + 1,
+                                                                            v30 + 1,
                                                                             0);
                     if ( ((unsigned __int8)this & 1) != 0 )
                     {
-                      v30 = *p_multipleEntities_5__2;
+                      v46 = *p_multipleEntities_5__2;
                       if ( !*p_multipleEntities_5__2 )
                         goto LABEL_83;
-                      v31 = entity;
+                      v47 = entity;
                       if ( entity )
                       {
-                        this = (MyRoomControl__LoadMultipleServant_d__381_o *)sub_1C6BB44(
+                        this = (MyRoomControl__LoadMultipleServant_d__381_o *)sub_1C714EC(
                                                                                 entity,
-                                                                                v30->obj.klass->_1.element_class);
+                                                                                v46->obj.klass->_1.element_class);
                         if ( !this )
                         {
-                          v84 = sub_1C6BC84();
-                          sub_1C6BB30(v84, 0);
+                          v112 = sub_1C7162C();
+                          sub_1C714D8(v112, 0);
                         }
                       }
-                      if ( (unsigned int)v18 >= LODWORD(v30->max_length) )
+                      if ( (unsigned int)v30 >= LODWORD(v46->max_length) )
                         goto LABEL_104;
-                      v30->m_Items[v18] = v31;
-                      sub_1C6B9AC((CGThumbnailListItem_o *)((char *)v30 + v19), (int32_t)v31, v28, v29);
+                      v46->m_Items[v30] = v47;
+                      sub_1C71354(
+                        (GrandQuestFolderBoardItem_o *)((char *)v46 + v31),
+                        (int32_t)v47,
+                        v40,
+                        v41,
+                        v42,
+                        v43,
+                        v44,
+                        v45);
                     }
-                    v32 = _4__this->fields.multipleStandFigureBacks;
-                    if ( !v32 )
+                    v48 = _4__this->fields.multipleStandFigureBacks;
+                    if ( !v48 )
                       goto LABEL_83;
-                    if ( (unsigned int)v18 >= LODWORD(v32->max_length) )
+                    if ( (unsigned int)v30 >= LODWORD(v48->max_length) )
                       goto LABEL_104;
-                    v33 = v17;
-                    v34 = v19;
-                    v35 = _4__this;
-                    v36 = *p__8__1;
+                    v49 = v29;
+                    v50 = v31;
+                    v51 = _4__this;
+                    v52 = *p__8__1;
                     if ( *p__8__1 )
                     {
-                      v37 = p__8__1;
-                      v38 = formId[0];
-                      v39 = v32->m_Items[v18];
-                      _9__3 = v36->fields.__9__3;
+                      v53 = p__8__1;
+                      v54 = formId[0];
+                      v55 = v48->m_Items[v30];
+                      _9__3 = v52->fields.__9__3;
                       if ( !_9__3 )
                       {
-                        v86 = formId[0];
-                        _9__3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+                        v114 = formId[0];
+                        _9__3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
                         System_Action___ctor(
                           _9__3,
-                          (Il2CppObject *)v36,
+                          (Il2CppObject *)v52,
                           Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__3__,
                           0);
-                        v36->fields.__9__3 = _9__3;
-                        sub_1C6B9AC((CGThumbnailListItem_o *)&v36->fields.__9__3, (int32_t)_9__3, v41, v42);
-                        v38 = v86;
+                        v52->fields.__9__3 = _9__3;
+                        sub_1C71354(
+                          (GrandQuestFolderBoardItem_o *)&v52->fields.__9__3,
+                          (int32_t)_9__3,
+                          v57,
+                          v58,
+                          v59,
+                          v60,
+                          v61,
+                          v62);
+                        v54 = v114;
                       }
-                      if ( v39 )
+                      if ( v55 )
                       {
-                        StandFigureBack__SetMyRoomStandFigure(v39, v27, v26, 1, 0, v38, 10, _9__3, 0, 0);
-                        v16 = v35->fields.multipleStandFigureBacks;
-                        _4__this = v35;
-                        v19 = v34 + 8;
-                        ++v18;
-                        v17 = v33 + 12;
-                        p__8__1 = v37;
-                        if ( v16 )
+                        StandFigureBack__SetMyRoomStandFigure(v55, v39, v38, 1, 0, v54, 10, _9__3, 0, 0);
+                        v28 = v51->fields.multipleStandFigureBacks;
+                        _4__this = v51;
+                        v31 = v50 + 8;
+                        ++v30;
+                        v29 = v49 + 12;
+                        p__8__1 = v53;
+                        if ( v28 )
                           continue;
                       }
                     }
                     goto LABEL_83;
                   }
-                  this = (MyRoomControl__LoadMultipleServant_d__381_o *)sub_1C6BAB0(int___TypeInfo, 2);
-                  v75 = *p_multipleEntities_5__2;
+                  this = (MyRoomControl__LoadMultipleServant_d__381_o *)sub_1C71458(int___TypeInfo, 2);
+                  v99 = *p_multipleEntities_5__2;
                   if ( *p_multipleEntities_5__2 )
                   {
-                    v76 = v75->max_length;
-                    if ( !v76 )
+                    v100 = v99->max_length;
+                    if ( !v100 )
                       goto LABEL_104;
-                    v77 = v75->m_Items[0];
-                    if ( v77 )
+                    v101 = v99->m_Items[0];
+                    if ( v101 )
                     {
                       if ( !this )
                         goto LABEL_83;
                       if ( !LODWORD(this->fields.__2__current) )
                         goto LABEL_104;
-                      LODWORD(this->fields.__4__this) = v77->fields.depth;
+                      LODWORD(this->fields.__4__this) = v101->fields.depth;
                     }
-                    if ( v76 <= 1 )
+                    if ( v100 <= 1 )
                       goto LABEL_104;
-                    v78 = v75->m_Items[1];
-                    if ( v78 )
+                    v102 = v99->m_Items[1];
+                    if ( v102 )
                     {
                       if ( this )
                       {
                         if ( LODWORD(this->fields.__2__current) <= 1 )
                           goto LABEL_104;
-                        HIDWORD(this->fields.__4__this) = v78->fields.depth;
+                        HIDWORD(this->fields.__4__this) = v102->fields.depth;
 LABEL_101:
                         if ( LODWORD(this->fields.__2__current) >= 2 )
                         {
@@ -15197,23 +16180,31 @@ LABEL_101:
                             _4__this,
                             SLODWORD(this->fields.__4__this) < SHIDWORD(this->fields.__4__this),
                             0);
-                          v79 = (Il2CppObject *)v87->fields.__8__1;
-                          v80 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+                          v103 = (Il2CppObject *)v115->fields.__8__1;
+                          v104 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
                           System_Func_bool____ctor(
-                            v80,
-                            v79,
+                            v104,
+                            v103,
                             Method_MyRoomControl___c__DisplayClass381_0__LoadMultipleServant_b__0__,
                             0);
-                          v81 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
-                          UnityEngine_WaitWhile___ctor(v81, v80, 0);
-                          v87->fields.__2__current = (Il2CppObject *)v81;
-                          sub_1C6B9AC((CGThumbnailListItem_o *)&v87->fields.__2__current, (int32_t)v81, v82, v83);
+                          v105 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
+                          UnityEngine_WaitWhile___ctor(v105, v104, 0);
+                          v115->fields.__2__current = (Il2CppObject *)v105;
+                          sub_1C71354(
+                            (GrandQuestFolderBoardItem_o *)&v115->fields.__2__current,
+                            (int32_t)v105,
+                            v106,
+                            v107,
+                            v108,
+                            v109,
+                            v110,
+                            v111);
                           result = 1;
-                          v87->fields.__1__state = 1;
+                          v115->fields.__1__state = 1;
                           return result;
                         }
 LABEL_104:
-                        sub_1C6BC68(this);
+                        sub_1C71610(this);
                       }
                     }
                     else if ( this )
@@ -15229,15 +16220,15 @@ LABEL_104:
       }
     }
 LABEL_83:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  v87->fields.__1__state = -1;
+  v115->fields.__1__state = -1;
   if ( !_4__this )
     goto LABEL_83;
   this = (MyRoomControl__LoadMultipleServant_d__381_o *)_4__this->fields.titleInfo;
   if ( !this )
     goto LABEL_83;
-  TitleInfoControl__changeTitleInfo_40073532((TitleInfoControl_o *)this, 1, 0, 0, 0);
+  TitleInfoControl__changeTitleInfo_40112904((TitleInfoControl_o *)this, 1, 0, 0, 0);
   titleInfo = _4__this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_83;
@@ -15255,19 +16246,19 @@ LABEL_83:
   if ( !this )
     goto LABEL_83;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-  v44 = _4__this->fields.multipleStandFigureBacks;
-  if ( !v44 )
+  v64 = _4__this->fields.multipleStandFigureBacks;
+  if ( !v64 )
     goto LABEL_83;
-  v45 = 4;
+  v65 = 4;
   while ( 1 )
   {
-    v46 = v44->max_length;
-    v47 = v45 - 4;
-    if ( (int)v45 - 4 >= v46 )
+    v66 = v64->max_length;
+    v67 = v65 - 4;
+    if ( (int)v65 - 4 >= v66 )
       return 0;
-    if ( v47 >= v46 )
+    if ( v67 >= v66 )
       goto LABEL_104;
-    this = (MyRoomControl__LoadMultipleServant_d__381_o *)*((_QWORD *)&v44->obj.klass + v45);
+    this = (MyRoomControl__LoadMultipleServant_d__381_o *)*((_QWORD *)&v64->obj.klass + v65);
     if ( !this )
       goto LABEL_83;
     this = (MyRoomControl__LoadMultipleServant_d__381_o *)StandFigureBack__GetSvtStandFigure(
@@ -15276,98 +16267,98 @@ LABEL_83:
                                                             0);
     if ( !this )
       goto LABEL_83;
-    v48 = _4__this->fields.multipleStandFigureBacks;
-    if ( !v48 )
+    v68 = _4__this->fields.multipleStandFigureBacks;
+    if ( !v68 )
       goto LABEL_83;
-    if ( v47 >= LODWORD(v48->max_length) )
+    if ( v67 >= LODWORD(v68->max_length) )
       goto LABEL_104;
-    v49 = (UnityEngine_Component_o *)*((_QWORD *)&v48->obj.klass + v45);
-    if ( !v49 )
+    v69 = (UnityEngine_Component_o *)*((_QWORD *)&v68->obj.klass + v65);
+    if ( !v69 )
       goto LABEL_83;
-    v50 = (UnityEngine_Component_o *)this->fields.__4__this;
-    this = (MyRoomControl__LoadMultipleServant_d__381_o *)UnityEngine_Component__get_transform(v49, 0);
+    v70 = (UnityEngine_Component_o *)this->fields.__4__this;
+    this = (MyRoomControl__LoadMultipleServant_d__381_o *)UnityEngine_Component__get_transform(v69, 0);
     if ( !this )
       goto LABEL_83;
     localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
     y = localPosition.fields.y;
-    v52 = (_DWORD)v45 == 4 ? -256.0 : 256.0;
-    if ( !v50 )
+    v72 = (_DWORD)v65 == 4 ? -256.0 : 256.0;
+    if ( !v70 )
       goto LABEL_83;
     z = localPosition.fields.z;
-    this = (MyRoomControl__LoadMultipleServant_d__381_o *)UnityEngine_Component__get_transform(v50, 0);
+    this = (MyRoomControl__LoadMultipleServant_d__381_o *)UnityEngine_Component__get_transform(v70, 0);
     if ( !this )
       goto LABEL_83;
-    LODWORD(v54) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-    multipleEntities_5__2 = v87->fields._multipleEntities_5__2;
+    LODWORD(v74) = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+    multipleEntities_5__2 = v115->fields._multipleEntities_5__2;
     if ( !multipleEntities_5__2 )
       goto LABEL_83;
-    if ( v47 >= LODWORD(multipleEntities_5__2->max_length) )
+    if ( v67 >= LODWORD(multipleEntities_5__2->max_length) )
       goto LABEL_104;
-    v56 = *((_QWORD *)&multipleEntities_5__2->obj.klass + v45);
-    v57 = v52 - v54;
-    if ( v56 )
+    v76 = *((_QWORD *)&multipleEntities_5__2->obj.klass + v65);
+    v77 = v72 - v74;
+    if ( v76 )
     {
-      v58 = _4__this->fields.multipleStandFigureBacks;
-      if ( !v58 )
+      v78 = _4__this->fields.multipleStandFigureBacks;
+      if ( !v78 )
         goto LABEL_83;
-      if ( v47 >= LODWORD(v58->max_length) )
+      if ( v67 >= LODWORD(v78->max_length) )
         goto LABEL_104;
-      this = (MyRoomControl__LoadMultipleServant_d__381_o *)*((_QWORD *)&v58->obj.klass + v45);
+      this = (MyRoomControl__LoadMultipleServant_d__381_o *)*((_QWORD *)&v78->obj.klass + v65);
       if ( !this )
         goto LABEL_83;
-      v59 = *(_DWORD *)(v56 + 28);
-      v60 = *(_DWORD *)(v56 + 32);
+      v79 = *(_DWORD *)(v76 + 28);
+      v80 = *(_DWORD *)(v76 + 32);
       this = (MyRoomControl__LoadMultipleServant_d__381_o *)UnityEngine_Component__get_transform(
                                                               (UnityEngine_Component_o *)this,
                                                               0);
       if ( !this )
         goto LABEL_83;
-      v92 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-      v61 = _4__this->fields.multipleStandFigureBacks;
-      if ( !v61 )
+      v120 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+      v81 = _4__this->fields.multipleStandFigureBacks;
+      if ( !v81 )
         goto LABEL_83;
-      if ( v47 >= LODWORD(v61->max_length) )
+      if ( v67 >= LODWORD(v81->max_length) )
         goto LABEL_104;
-      this = (MyRoomControl__LoadMultipleServant_d__381_o *)*((_QWORD *)&v61->obj.klass + v45);
+      this = (MyRoomControl__LoadMultipleServant_d__381_o *)*((_QWORD *)&v81->obj.klass + v65);
       if ( !this )
         goto LABEL_83;
-      x = v92.fields.x;
-      v63 = v92.fields.z;
+      x = v120.fields.x;
+      v83 = v120.fields.z;
       this = (MyRoomControl__LoadMultipleServant_d__381_o *)UnityEngine_Component__get_transform(
                                                               (UnityEngine_Component_o *)this,
                                                               0);
       if ( !this )
         goto LABEL_83;
-      y = y + (float)v60;
-      v57 = v57 + (float)v59;
-      v93.fields.x = x;
-      v93.fields.y = y;
-      v93.fields.z = v63;
+      y = y + (float)v80;
+      v77 = v77 + (float)v79;
+      v121.fields.x = x;
+      v121.fields.y = y;
+      v121.fields.z = v83;
       z = z + 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v93, 0);
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, v121, 0);
     }
-    v64 = _4__this->fields.multipleStandFigureBacks;
-    if ( !v64 )
+    v84 = _4__this->fields.multipleStandFigureBacks;
+    if ( !v84 )
       goto LABEL_83;
-    if ( v47 >= LODWORD(v64->max_length) )
+    if ( v67 >= LODWORD(v84->max_length) )
       goto LABEL_104;
-    this = (MyRoomControl__LoadMultipleServant_d__381_o *)*((_QWORD *)&v64->obj.klass + v45);
+    this = (MyRoomControl__LoadMultipleServant_d__381_o *)*((_QWORD *)&v84->obj.klass + v65);
     if ( this )
     {
       this = (MyRoomControl__LoadMultipleServant_d__381_o *)UnityEngine_Component__get_gameObject(
                                                               (UnityEngine_Component_o *)this,
                                                               0);
-      v65 = _4__this->fields.multipleStandFigureBacks;
-      if ( v65 )
+      v85 = _4__this->fields.multipleStandFigureBacks;
+      if ( v85 )
       {
-        v66 = v47 == LODWORD(v65->max_length) - 1 ? (System_String_o *)StringLiteral_6734/*"FinishedFadeMultipleServant"*/ : 0LL;
-        v94.fields.x = v57;
-        v94.fields.y = y;
-        v94.fields.z = z;
-        MyRoomControl__moveControl(_4__this, (UnityEngine_GameObject_o *)this, v94, v66, 0);
-        v44 = _4__this->fields.multipleStandFigureBacks;
-        ++v45;
-        if ( v44 )
+        v86 = v67 == LODWORD(v85->max_length) - 1 ? (System_String_o *)StringLiteral_6736/*"FinishedFadeMultipleServant"*/ : 0LL;
+        v122.fields.x = v77;
+        v122.fields.y = y;
+        v122.fields.z = z;
+        MyRoomControl__moveControl(_4__this, (UnityEngine_GameObject_o *)this, v122, v86, 0);
+        v64 = _4__this->fields.multipleStandFigureBacks;
+        ++v65;
+        if ( v64 )
           continue;
       }
     }
@@ -15392,11 +16383,11 @@ void __noreturn MyRoomControl__LoadMultipleServant_d__381__System_Collections_IE
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MyRoomControl__LoadMultipleServant_d__381_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MyRoomControl__LoadMultipleServant_d__381_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -15431,177 +16422,261 @@ bool MyRoomControl__LoadPhotoTarget_d__409__MoveNext(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  MyRoomControl__LoadPhotoTarget_d__409_o *v4; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  MyRoomControl__LoadPhotoTarget_d__409_o *v8; // x19
   struct MyRoomControl_o *_4__this; // x20
-  Il2CppObject *v6; // x22
+  Il2CppObject *v10; // x22
   struct MyRoomControl___c__DisplayClass409_0_o **p__8__1; // x21
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
   UnityEngine_Object_o *photoMasterTexture; // x21
   MyRoomControl__LoadPhotoTarget_d__409_o **p_photoMasterTexture; // x20
   UnityEngine_Object_o *gameObject; // x21
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  UnityEngine_WaitForFixedUpdate_o *v15; // x20
-  CGThumbnailListItem_o *p__2__current; // x19
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  UnityEngine_WaitForFixedUpdate_o *v27; // x20
+  GrandQuestFolderBoardItem_o *p__2__current; // x19
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
   bool result; // w0
   struct PhotoStandFigureComponent_o *photoStandFigure_5__3; // x8
   float x; // s8
   float y; // s9
   float z; // s10
-  MyRoomControl__LoadPhotoTarget_d__409_o *v24; // x21
-  float v25; // s0
+  MyRoomControl__LoadPhotoTarget_d__409_o *v40; // x21
+  float v41; // s0
   struct MyRoomControl___c__DisplayClass409_0_o *_8__1; // x8
-  struct MyRoomControl___c__DisplayClass409_0_o *v27; // x21
-  PhotoStandFigureComponent_o *v28; // x20
+  struct MyRoomControl___c__DisplayClass409_0_o *v43; // x21
+  PhotoStandFigureComponent_o *v44; // x20
   System_Action_o *_9__4; // x22
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
-  struct MyRoomControl___c__DisplayClass409_0_o *v32; // x21
+  int32_t v46; // w2
+  int32_t v47; // w3
+  System_String_o *v48; // x4
+  int32_t v49; // w5
+  int64_t v50; // x6
+  System_String_o *v51; // x7
+  struct MyRoomControl___c__DisplayClass409_0_o *v52; // x21
   System_Func_bool__o *_9__5; // x20
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
-  UnityEngine_WaitWhile_o *v36; // x21
-  CGThumbnailListItem_o *v37; // x19
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
-  int v40; // w8
-  struct MyRoomControl___c__DisplayClass409_0_o *v41; // x23
+  int32_t v54; // w2
+  int32_t v55; // w3
+  System_String_o *v56; // x4
+  int32_t v57; // w5
+  int64_t v58; // x6
+  System_String_o *v59; // x7
+  UnityEngine_WaitWhile_o *v60; // x21
+  GrandQuestFolderBoardItem_o *v61; // x19
+  int32_t v62; // w2
+  int32_t v63; // w3
+  System_String_o *v64; // x4
+  int32_t v65; // w5
+  int64_t v66; // x6
+  System_String_o *v67; // x7
+  int v68; // w8
+  struct MyRoomControl___c__DisplayClass409_0_o *v69; // x23
   System_Action_o *_9__6; // x22
-  PhotoStandFigureComponent_o *v43; // x21
-  int32_t v44; // w2
-  const MethodInfo *v45; // x3
+  PhotoStandFigureComponent_o *v71; // x21
+  int32_t v72; // w2
+  int32_t v73; // w3
+  System_String_o *v74; // x4
+  int32_t v75; // w5
+  int64_t v76; // x6
+  System_String_o *v77; // x7
   struct System_Int32_array *photoTargetFaceListIndex; // x8
   __int64 i_5__2; // x9
-  struct MyRoomControl___c__DisplayClass409_0_o *v48; // x21
+  struct MyRoomControl___c__DisplayClass409_0_o *v80; // x21
   System_Func_bool__o *_9__7; // x20
-  int32_t v50; // w2
-  const MethodInfo *v51; // x3
-  UnityEngine_WaitWhile_o *v52; // x21
-  int32_t v53; // w2
-  const MethodInfo *v54; // x3
+  int32_t v82; // w2
+  int32_t v83; // w3
+  System_String_o *v84; // x4
+  int32_t v85; // w5
+  int64_t v86; // x6
+  System_String_o *v87; // x7
+  UnityEngine_WaitWhile_o *v88; // x21
+  int32_t v89; // w2
+  int32_t v90; // w3
+  System_String_o *v91; // x4
+  int32_t v92; // w5
+  int64_t v93; // x6
+  System_String_o *v94; // x7
   struct PhotoStandFigureComponent_o *photoStaffFigure_5__5; // x8
-  float v56; // s8
-  float v57; // s9
-  float v58; // s10
-  MyRoomControl__LoadPhotoTarget_d__409_o *v59; // x21
-  float v60; // s0
-  int32_t v61; // w2
-  const MethodInfo *v62; // x3
-  struct MyRoomControl___c__DisplayClass409_0_o *v63; // x21
+  float v96; // s8
+  float v97; // s9
+  float v98; // s10
+  MyRoomControl__LoadPhotoTarget_d__409_o *v99; // x21
+  float v100; // s0
+  int32_t v101; // w2
+  int32_t v102; // w3
+  System_String_o *v103; // x4
+  int32_t v104; // w5
+  int64_t v105; // x6
+  System_String_o *v106; // x7
+  struct MyRoomControl___c__DisplayClass409_0_o *v107; // x21
   PhotoServantSelectMenu_o *photoServantSelectMenu; // x20
-  System_Action_o *v65; // x22
-  Il2CppObject *v66; // x20
-  System_Func_bool__o *v67; // x21
-  UnityEngine_WaitWhile_o *v68; // x20
-  int32_t v69; // w2
-  const MethodInfo *v70; // x3
-  struct PhotoStandFigureComponent_array *v71; // x8
-  __int64 v72; // x9
-  struct PhotoStandFigureComponent_o *v73; // x1
+  System_Action_o *v109; // x22
+  Il2CppObject *v110; // x20
+  System_Func_bool__o *v111; // x21
+  UnityEngine_WaitWhile_o *v112; // x20
+  int32_t v113; // w2
+  int32_t v114; // w3
+  System_String_o *v115; // x4
+  int32_t v116; // w5
+  int64_t v117; // x6
+  System_String_o *v118; // x7
+  struct PhotoStandFigureComponent_array *v119; // x8
+  __int64 v120; // x9
+  struct PhotoStandFigureComponent_o *v121; // x1
   struct PhotoStandFigureComponent_o **p_photoStaffFigure_5__5; // x20
   int32_t faceId; // w21
-  struct MyRoomControl___c__DisplayClass409_0_o *v76; // x22
+  struct MyRoomControl___c__DisplayClass409_0_o *v124; // x22
   System_Action_o *_9__10; // x24
-  int32_t v78; // w21
-  int32_t v79; // w2
-  const MethodInfo *v80; // x3
-  struct MyRoomControl___c__DisplayClass409_0_o *v81; // x21
+  int32_t v126; // w21
+  int32_t v127; // w2
+  int32_t v128; // w3
+  System_String_o *v129; // x4
+  int32_t v130; // w5
+  int64_t v131; // x6
+  System_String_o *v132; // x7
+  struct MyRoomControl___c__DisplayClass409_0_o *v133; // x21
   System_Func_bool__o *_9__11; // x20
-  int32_t v83; // w2
-  const MethodInfo *v84; // x3
-  UnityEngine_WaitWhile_o *v85; // x21
-  int32_t v86; // w2
-  const MethodInfo *v87; // x3
+  int32_t v135; // w2
+  int32_t v136; // w3
+  System_String_o *v137; // x4
+  int32_t v138; // w5
+  int64_t v139; // x6
+  System_String_o *v140; // x7
+  UnityEngine_WaitWhile_o *v141; // x21
+  int32_t v142; // w2
+  int32_t v143; // w3
+  System_String_o *v144; // x4
+  int32_t v145; // w5
+  int64_t v146; // x6
+  System_String_o *v147; // x7
   struct PhotoStandFigureComponent_array *photoStandFigures; // x8
-  __int64 v89; // x9
-  struct PhotoStandFigureComponent_o *v90; // x1
+  __int64 v149; // x9
+  struct PhotoStandFigureComponent_o *v150; // x1
   struct PhotoStandFigureComponent_o **p_photoStandFigure_5__3; // x21
-  const MethodInfo *v92; // x2
+  const MethodInfo *v152; // x2
   int32_t ImageLimitCount_k__BackingField; // w22
-  int32_t v94; // w21
-  struct PhotoStandFigureComponent_o *v95; // x8
-  struct MyRoomControl___c__DisplayClass409_0_o *v96; // x26
+  int32_t v154; // w21
+  struct PhotoStandFigureComponent_o *v155; // x8
+  struct MyRoomControl___c__DisplayClass409_0_o *v156; // x26
   StandFigureBack_o *photoStandFigureBack; // x24
   int32_t formId_5__4; // w23
   System_Action_o *_9__2; // x25
-  int32_t v100; // w2
-  const MethodInfo *v101; // x3
-  struct MyRoomControl___c__DisplayClass409_0_o *v102; // x21
+  int32_t v160; // w2
+  int32_t v161; // w3
+  System_String_o *v162; // x4
+  int32_t v163; // w5
+  int64_t v164; // x6
+  System_String_o *v165; // x7
+  struct MyRoomControl___c__DisplayClass409_0_o *v166; // x21
   System_Func_bool__o *_9__3; // x20
-  int32_t v104; // w2
-  const MethodInfo *v105; // x3
-  UnityEngine_WaitWhile_o *v106; // x21
-  int32_t v107; // w2
-  const MethodInfo *v108; // x3
-  struct MyRoomControl___c__DisplayClass409_0_o *v109; // x23
-  struct PhotoStandFigureComponent_o *v110; // x8
-  StandFigureBack_o *v111; // x20
+  int32_t v168; // w2
+  int32_t v169; // w3
+  System_String_o *v170; // x4
+  int32_t v171; // w5
+  int64_t v172; // x6
+  System_String_o *v173; // x7
+  UnityEngine_WaitWhile_o *v174; // x21
+  int32_t v175; // w2
+  int32_t v176; // w3
+  System_String_o *v177; // x4
+  int32_t v178; // w5
+  int64_t v179; // x6
+  System_String_o *v180; // x7
+  struct MyRoomControl___c__DisplayClass409_0_o *v181; // x23
+  struct PhotoStandFigureComponent_o *v182; // x8
+  StandFigureBack_o *v183; // x20
   int32_t StandFigureImageId_k__BackingField; // w22
   System_Action_o *_9__8; // x24
-  int32_t v114; // w2
-  const MethodInfo *v115; // x3
-  struct MyRoomControl___c__DisplayClass409_0_o *v116; // x21
+  int32_t v186; // w2
+  int32_t v187; // w3
+  System_String_o *v188; // x4
+  int32_t v189; // w5
+  int64_t v190; // x6
+  System_String_o *v191; // x7
+  struct MyRoomControl___c__DisplayClass409_0_o *v192; // x21
   System_Func_bool__o *_9__9; // x20
-  int32_t v118; // w2
-  const MethodInfo *v119; // x3
-  UnityEngine_WaitWhile_o *v120; // x21
-  int32_t v121; // w2
-  const MethodInfo *v122; // x3
+  int32_t v194; // w2
+  int32_t v195; // w3
+  System_String_o *v196; // x4
+  int32_t v197; // w5
+  int64_t v198; // x6
+  System_String_o *v199; // x7
+  UnityEngine_WaitWhile_o *v200; // x21
+  int32_t v201; // w2
+  int32_t v202; // w3
+  System_String_o *v203; // x4
+  int32_t v204; // w5
+  int64_t v205; // x6
+  System_String_o *v206; // x7
   StaffPhotoCostumeEntity_o *costumeEntity; // [xsp+18h] [xbp-78h] BYREF
   int32_t imageId; // [xsp+2Ch] [xbp-64h] BYREF
-  UnityEngine_Vector3_o v125; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v126; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v209; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v210; // 0:s0.4,4:s1.4,8:s2.4
 
-  v4 = this;
-  if ( (byte_4CB170A & 1) == 0 )
+  v8 = this;
+  if ( (byte_4CC2817 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMaster_StaffPhotoCostumeMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__0__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__10__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__11__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__2__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__3__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__4__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__5__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__6__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__7__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__8__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__9__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass409_0_TypeInfo);
-    sub_1C6BA08(&UnityEngine_WaitForFixedUpdate_TypeInfo);
-    sub_1C6BA08(&UnityEngine_WaitWhile_TypeInfo);
-    this = (MyRoomControl__LoadPhotoTarget_d__409_o *)sub_1C6BA08(&StringLiteral_6733/*"FinishedFadeInPhotoTarget"*/);
-    byte_4CB170A = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMaster_StaffPhotoCostumeMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__0__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__10__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__11__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__2__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__3__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__4__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__5__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__6__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__7__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__8__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__9__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass409_0_TypeInfo);
+    sub_1C713B0(&UnityEngine_WaitForFixedUpdate_TypeInfo);
+    sub_1C713B0(&UnityEngine_WaitWhile_TypeInfo);
+    this = (MyRoomControl__LoadPhotoTarget_d__409_o *)sub_1C713B0(&StringLiteral_6735/*"FinishedFadeInPhotoTarget"*/);
+    byte_4CC2817 = 1;
   }
   imageId = 0;
   costumeEntity = 0;
-  _4__this = v4->fields.__4__this;
-  switch ( v4->fields.__1__state )
+  _4__this = v8->fields.__4__this;
+  switch ( v8->fields.__1__state )
   {
     case 0:
-      v4->fields.__1__state = -1;
-      v6 = (Il2CppObject *)sub_1C6BC54(MyRoomControl___c__DisplayClass409_0_TypeInfo);
-      System_Object___ctor(v6, 0);
-      v4->fields.__8__1 = (struct MyRoomControl___c__DisplayClass409_0_o *)v6;
-      p__8__1 = &v4->fields.__8__1;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__8__1, (int32_t)v6, v8, v9);
+      v8->fields.__1__state = -1;
+      v10 = (Il2CppObject *)sub_1C715FC(MyRoomControl___c__DisplayClass409_0_TypeInfo);
+      System_Object___ctor(v10, 0);
+      v8->fields.__8__1 = (struct MyRoomControl___c__DisplayClass409_0_o *)v10;
+      p__8__1 = &v8->fields.__8__1;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&v8->fields.__8__1, (int32_t)v10, v12, v13, v14, v15, v16, v17);
       if ( !_4__this )
         goto LABEL_113;
       MyRoomControl__SetBackButtonIgnore(_4__this, 1, 0);
       if ( !*p__8__1 )
         goto LABEL_113;
       (*p__8__1)->fields.flag = 1;
-      if ( !v4->fields.isUpdate )
+      if ( !v8->fields.isUpdate )
         goto LABEL_64;
       photoMasterTexture = (UnityEngine_Object_o *)_4__this->fields.photoMasterTexture;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -15619,26 +16694,26 @@ bool MyRoomControl__LoadPhotoTarget_d__409__MoveNext(
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71659676(gameObject, 0);
+      UnityEngine_Object__Destroy_71724608(gameObject, 0);
       *p_photoMasterTexture = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)p_photoMasterTexture, 0, v13, v14);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)p_photoMasterTexture, 0, v21, v22, v23, v24, v25, v26);
 LABEL_16:
-      v15 = (UnityEngine_WaitForFixedUpdate_o *)sub_1C6BC54(UnityEngine_WaitForFixedUpdate_TypeInfo);
-      UnityEngine_WaitForFixedUpdate___ctor(v15, 0);
-      v4->fields.__2__current = (Il2CppObject *)v15;
-      p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1C6B9AC(p__2__current, (int32_t)v15, v17, v18);
+      v27 = (UnityEngine_WaitForFixedUpdate_o *)sub_1C715FC(UnityEngine_WaitForFixedUpdate_TypeInfo);
+      UnityEngine_WaitForFixedUpdate___ctor(v27, 0);
+      v8->fields.__2__current = (Il2CppObject *)v27;
+      p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+      sub_1C71354(p__2__current, (int32_t)v27, v29, v30, v31, v32, v33, v34);
       result = 1;
-      LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+      LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
       return result;
     case 1:
       method = 0;
-      v4->fields.__1__state = -1;
-      v4->fields._i_5__2 = 0;
+      v8->fields.__1__state = -1;
+      v8->fields._i_5__2 = 0;
       goto LABEL_61;
     case 2:
-      photoStandFigure_5__3 = v4->fields._photoStandFigure_5__3;
-      v4->fields.__1__state = -1;
+      photoStandFigure_5__3 = v8->fields._photoStandFigure_5__3;
+      v8->fields.__1__state = -1;
       if ( !photoStandFigure_5__3 )
         goto LABEL_113;
       this = (MyRoomControl__LoadPhotoTarget_d__409_o *)photoStandFigure_5__3->fields.photoStandFigureBack;
@@ -15652,126 +16727,126 @@ LABEL_16:
       x = _4__this->fields.defaultPhotoServantPos.fields.x;
       y = _4__this->fields.defaultPhotoServantPos.fields.y;
       z = _4__this->fields.defaultPhotoServantPos.fields.z;
-      v24 = this;
+      v40 = this;
       this = (MyRoomControl__LoadPhotoTarget_d__409_o *)MyRoomControl__IsRightPosPhotoTarget(
                                                           _4__this,
-                                                          v4->fields._i_5__2,
+                                                          v8->fields._i_5__2,
                                                           0);
-      if ( !v24 )
+      if ( !v40 )
         goto LABEL_113;
-      v25 = ((unsigned __int8)this & 1) != 0 ? 1300.0 : -1812.0;
-      v125.fields.x = x + v25;
-      v125.fields.y = y + 0.0;
-      v125.fields.z = z + 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v24, v125, 0);
-      _8__1 = v4->fields.__8__1;
+      v41 = ((unsigned __int8)this & 1) != 0 ? 1300.0 : -1812.0;
+      v209.fields.x = x + v41;
+      v209.fields.y = y + 0.0;
+      v209.fields.z = z + 0.0;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v40, v209, 0);
+      _8__1 = v8->fields.__8__1;
       if ( !_8__1 )
         goto LABEL_113;
       _8__1->fields.flag = 1;
-      this = (MyRoomControl__LoadPhotoTarget_d__409_o *)v4->fields._photoStandFigure_5__3;
+      this = (MyRoomControl__LoadPhotoTarget_d__409_o *)v8->fields._photoStandFigure_5__3;
       if ( !this )
         goto LABEL_113;
-      PhotoStandFigureComponent__GetPhotoTargetFaceList((PhotoStandFigureComponent_o *)this, v4->fields._formId_5__4, 0);
-      v27 = v4->fields.__8__1;
-      if ( !v27 )
+      PhotoStandFigureComponent__GetPhotoTargetFaceList((PhotoStandFigureComponent_o *)this, v8->fields._formId_5__4, 0);
+      v43 = v8->fields.__8__1;
+      if ( !v43 )
         goto LABEL_113;
-      v28 = v4->fields._photoStandFigure_5__3;
-      _9__4 = v27->fields.__9__4;
+      v44 = v8->fields._photoStandFigure_5__3;
+      _9__4 = v43->fields.__9__4;
       if ( !_9__4 )
       {
-        _9__4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+        _9__4 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
         System_Action___ctor(
           _9__4,
-          (Il2CppObject *)v27,
+          (Il2CppObject *)v43,
           Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__4__,
           0);
-        v27->fields.__9__4 = _9__4;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v27->fields.__9__4, (int32_t)_9__4, v30, v31);
+        v43->fields.__9__4 = _9__4;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v43->fields.__9__4, (int32_t)_9__4, v46, v47, v48, v49, v50, v51);
       }
-      if ( !v28 )
+      if ( !v44 )
         goto LABEL_113;
-      PhotoStandFigureComponent__PreLoadFormAssets(v28, _9__4, 0);
-      v32 = v4->fields.__8__1;
-      if ( !v32 )
+      PhotoStandFigureComponent__PreLoadFormAssets(v44, _9__4, 0);
+      v52 = v8->fields.__8__1;
+      if ( !v52 )
         goto LABEL_113;
-      _9__5 = v32->fields.__9__5;
+      _9__5 = v52->fields.__9__5;
       if ( !_9__5 )
       {
-        _9__5 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+        _9__5 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
         System_Func_bool____ctor(
           _9__5,
-          (Il2CppObject *)v32,
+          (Il2CppObject *)v52,
           Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__5__,
           0);
-        v32->fields.__9__5 = _9__5;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v32->fields.__9__5, (int32_t)_9__5, v34, v35);
+        v52->fields.__9__5 = _9__5;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v52->fields.__9__5, (int32_t)_9__5, v54, v55, v56, v57, v58, v59);
       }
-      v36 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
-      UnityEngine_WaitWhile___ctor(v36, _9__5, 0);
-      v4->fields.__2__current = (Il2CppObject *)v36;
-      v37 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1C6B9AC(v37, (int32_t)v36, v38, v39);
-      v40 = 3;
+      v60 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
+      UnityEngine_WaitWhile___ctor(v60, _9__5, 0);
+      v8->fields.__2__current = (Il2CppObject *)v60;
+      v61 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+      sub_1C71354(v61, (int32_t)v60, v62, v63, v64, v65, v66, v67);
+      v68 = 3;
       goto LABEL_112;
     case 3:
-      v41 = v4->fields.__8__1;
-      v4->fields.__1__state = -1;
-      if ( !v41 )
+      v69 = v8->fields.__8__1;
+      v8->fields.__1__state = -1;
+      if ( !v69 )
         goto LABEL_113;
-      _9__6 = v41->fields.__9__6;
-      v41->fields.flag = 1;
-      v43 = v4->fields._photoStandFigure_5__3;
+      _9__6 = v69->fields.__9__6;
+      v69->fields.flag = 1;
+      v71 = v8->fields._photoStandFigure_5__3;
       if ( !_9__6 )
       {
-        _9__6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+        _9__6 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
         System_Action___ctor(
           _9__6,
-          (Il2CppObject *)v41,
+          (Il2CppObject *)v69,
           Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__6__,
           0);
-        v41->fields.__9__6 = _9__6;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v41->fields.__9__6, (int32_t)_9__6, v44, v45);
+        v69->fields.__9__6 = _9__6;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v69->fields.__9__6, (int32_t)_9__6, v72, v73, v74, v75, v76, v77);
       }
       if ( !_4__this )
         goto LABEL_113;
       photoTargetFaceListIndex = _4__this->fields.photoTargetFaceListIndex;
       if ( !photoTargetFaceListIndex )
         goto LABEL_113;
-      i_5__2 = v4->fields._i_5__2;
+      i_5__2 = v8->fields._i_5__2;
       if ( (unsigned int)i_5__2 >= LODWORD(photoTargetFaceListIndex->max_length) )
         goto LABEL_114;
-      if ( !v43 )
+      if ( !v71 )
         goto LABEL_113;
-      PhotoStandFigureComponent__SetFacePhotoServant(v43, 0, _9__6, photoTargetFaceListIndex->m_Items[i_5__2], 0);
-      v48 = v4->fields.__8__1;
-      if ( !v48 )
+      PhotoStandFigureComponent__SetFacePhotoServant(v71, 0, _9__6, photoTargetFaceListIndex->m_Items[i_5__2], 0);
+      v80 = v8->fields.__8__1;
+      if ( !v80 )
         goto LABEL_113;
-      _9__7 = v48->fields.__9__7;
+      _9__7 = v80->fields.__9__7;
       if ( !_9__7 )
       {
-        _9__7 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+        _9__7 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
         System_Func_bool____ctor(
           _9__7,
-          (Il2CppObject *)v48,
+          (Il2CppObject *)v80,
           Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__7__,
           0);
-        v48->fields.__9__7 = _9__7;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v48->fields.__9__7, (int32_t)_9__7, v50, v51);
+        v80->fields.__9__7 = _9__7;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v80->fields.__9__7, (int32_t)_9__7, v82, v83, v84, v85, v86, v87);
       }
-      v52 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
-      UnityEngine_WaitWhile___ctor(v52, _9__7, 0);
-      v4->fields.__2__current = (Il2CppObject *)v52;
-      v37 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1C6B9AC(v37, (int32_t)v52, v53, v54);
-      v40 = 4;
+      v88 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
+      UnityEngine_WaitWhile___ctor(v88, _9__7, 0);
+      v8->fields.__2__current = (Il2CppObject *)v88;
+      v61 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+      sub_1C71354(v61, (int32_t)v88, v89, v90, v91, v92, v93, v94);
+      v68 = 4;
       goto LABEL_112;
     case 4:
     case 6:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_60;
     case 5:
-      photoStaffFigure_5__5 = v4->fields._photoStaffFigure_5__5;
-      v4->fields.__1__state = -1;
+      photoStaffFigure_5__5 = v8->fields._photoStaffFigure_5__5;
+      v8->fields.__1__state = -1;
       if ( !photoStaffFigure_5__5 )
         goto LABEL_113;
       this = (MyRoomControl__LoadPhotoTarget_d__409_o *)photoStaffFigure_5__5->fields.photoStandFigureBack;
@@ -15782,27 +16857,27 @@ LABEL_16:
                                                           0);
       if ( !_4__this )
         goto LABEL_113;
-      v56 = _4__this->fields.defaultPhotoServantPos.fields.x;
-      v57 = _4__this->fields.defaultPhotoServantPos.fields.y;
-      v58 = _4__this->fields.defaultPhotoServantPos.fields.z;
-      v59 = this;
+      v96 = _4__this->fields.defaultPhotoServantPos.fields.x;
+      v97 = _4__this->fields.defaultPhotoServantPos.fields.y;
+      v98 = _4__this->fields.defaultPhotoServantPos.fields.z;
+      v99 = this;
       this = (MyRoomControl__LoadPhotoTarget_d__409_o *)MyRoomControl__IsRightPosPhotoTarget(
                                                           _4__this,
-                                                          v4->fields._i_5__2,
+                                                          v8->fields._i_5__2,
                                                           0);
-      if ( !v59 )
+      if ( !v99 )
         goto LABEL_113;
       if ( ((unsigned __int8)this & 1) != 0 )
-        v60 = 1300.0;
+        v100 = 1300.0;
       else
-        v60 = -1812.0;
-      v126.fields.x = v56 + v60;
-      v126.fields.y = v57 + 0.0;
-      v126.fields.z = v58 + 0.0;
-      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v59, v126, 0);
+        v100 = -1812.0;
+      v210.fields.x = v96 + v100;
+      v210.fields.y = v97 + 0.0;
+      v210.fields.z = v98 + 0.0;
+      UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v99, v210, 0);
       break;
     case 7:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_113;
       goto LABEL_69;
@@ -15812,12 +16887,20 @@ LABEL_16:
   while ( 1 )
   {
 LABEL_60:
-    v4->fields._photoStandFigure_5__3 = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._photoStandFigure_5__3, 0, v2, v3);
-    v4->fields._photoStaffFigure_5__5 = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._photoStaffFigure_5__5, 0, v61, v62);
-    method = (const MethodInfo *)(unsigned int)(v4->fields._i_5__2 + 1);
-    v4->fields._i_5__2 = (int)method;
+    v8->fields._photoStandFigure_5__3 = 0;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v8->fields._photoStandFigure_5__3, 0, v2, v3, v4, v5, v6, v7);
+    v8->fields._photoStaffFigure_5__5 = 0;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&v8->fields._photoStaffFigure_5__5,
+      0,
+      v101,
+      v102,
+      v103,
+      v104,
+      v105,
+      v106);
+    method = (const MethodInfo *)(unsigned int)(v8->fields._i_5__2 + 1);
+    v8->fields._i_5__2 = (int)method;
 LABEL_61:
     if ( !_4__this )
       goto LABEL_113;
@@ -15833,34 +16916,34 @@ LABEL_64:
                                                           0);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
-        v63 = v4->fields.__8__1;
-        if ( !v63 )
+        v107 = v8->fields.__8__1;
+        if ( !v107 )
           goto LABEL_113;
-        v63->fields.flag = 1;
+        v107->fields.flag = 1;
         photoServantSelectMenu = _4__this->fields.photoServantSelectMenu;
-        v65 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+        v109 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
         System_Action___ctor(
-          v65,
-          (Il2CppObject *)v63,
+          v109,
+          (Il2CppObject *)v107,
           Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__0__,
           0);
         if ( !photoServantSelectMenu )
           goto LABEL_113;
-        PhotoServantSelectMenu__Close(photoServantSelectMenu, v65, 0);
-        v66 = (Il2CppObject *)v4->fields.__8__1;
-        v67 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
-        System_Func_bool____ctor(v67, v66, Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__1__, 0);
-        v68 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
-        UnityEngine_WaitWhile___ctor(v68, v67, 0);
-        v4->fields.__2__current = (Il2CppObject *)v68;
-        v37 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C6B9AC(v37, (int32_t)v68, v69, v70);
-        v40 = 7;
+        PhotoServantSelectMenu__Close(photoServantSelectMenu, v109, 0);
+        v110 = (Il2CppObject *)v8->fields.__8__1;
+        v111 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
+        System_Func_bool____ctor(v111, v110, Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__1__, 0);
+        v112 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
+        UnityEngine_WaitWhile___ctor(v112, v111, 0);
+        v8->fields.__2__current = (Il2CppObject *)v112;
+        v61 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+        sub_1C71354(v61, (int32_t)v112, v113, v114, v115, v116, v117, v118);
+        v68 = 7;
         goto LABEL_112;
       }
 LABEL_69:
       _4__this->fields.photoState = 2;
-      MyRoomControl__FadeInPhotoTarget(_4__this, (System_String_o *)StringLiteral_6733/*"FinishedFadeInPhotoTarget"*/, 0, 0);
+      MyRoomControl__FadeInPhotoTarget(_4__this, (System_String_o *)StringLiteral_6735/*"FinishedFadeInPhotoTarget"*/, 0, 0);
       return 0;
     }
     this = (MyRoomControl__LoadPhotoTarget_d__409_o *)_4__this->fields.photoTargetList;
@@ -15869,50 +16952,66 @@ LABEL_69:
     this = (MyRoomControl__LoadPhotoTarget_d__409_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                                         (System_Collections_Generic_List_T__o *)this,
                                                         (int32_t)method,
-                                                        (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+                                                        (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
     if ( (_DWORD)this == 2 )
       break;
     if ( (_DWORD)this == 1 )
     {
-      v76 = v4->fields.__8__1;
-      if ( !v76 )
+      v124 = v8->fields.__8__1;
+      if ( !v124 )
         goto LABEL_113;
-      _9__10 = v76->fields.__9__10;
-      v76->fields.flag = 1;
-      v78 = v4->fields._i_5__2;
+      _9__10 = v124->fields.__9__10;
+      v124->fields.flag = 1;
+      v126 = v8->fields._i_5__2;
       if ( !_9__10 )
       {
-        _9__10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+        _9__10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
         System_Action___ctor(
           _9__10,
-          (Il2CppObject *)v76,
+          (Il2CppObject *)v124,
           Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__10__,
           0);
-        v76->fields.__9__10 = _9__10;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v76->fields.__9__10, (int32_t)_9__10, v79, v80);
+        v124->fields.__9__10 = _9__10;
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&v124->fields.__9__10,
+          (int32_t)_9__10,
+          v127,
+          v128,
+          v129,
+          v130,
+          v131,
+          v132);
       }
-      MyRoomControl__CreatePhotoMasterFigure(_4__this, v78, _9__10, 0);
-      v81 = v4->fields.__8__1;
-      if ( !v81 )
+      MyRoomControl__CreatePhotoMasterFigure(_4__this, v126, _9__10, 0);
+      v133 = v8->fields.__8__1;
+      if ( !v133 )
         goto LABEL_113;
-      _9__11 = v81->fields.__9__11;
+      _9__11 = v133->fields.__9__11;
       if ( !_9__11 )
       {
-        _9__11 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+        _9__11 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
         System_Func_bool____ctor(
           _9__11,
-          (Il2CppObject *)v81,
+          (Il2CppObject *)v133,
           Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__11__,
           0);
-        v81->fields.__9__11 = _9__11;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v81->fields.__9__11, (int32_t)_9__11, v83, v84);
+        v133->fields.__9__11 = _9__11;
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&v133->fields.__9__11,
+          (int32_t)_9__11,
+          v135,
+          v136,
+          v137,
+          v138,
+          v139,
+          v140);
       }
-      v85 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
-      UnityEngine_WaitWhile___ctor(v85, _9__11, 0);
-      v4->fields.__2__current = (Il2CppObject *)v85;
-      v37 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1C6B9AC(v37, (int32_t)v85, v86, v87);
-      v40 = 6;
+      v141 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
+      UnityEngine_WaitWhile___ctor(v141, _9__11, 0);
+      v8->fields.__2__current = (Il2CppObject *)v141;
+      v61 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+      sub_1C71354(v61, (int32_t)v141, v142, v143, v144, v145, v146, v147);
+      v68 = 6;
       goto LABEL_112;
     }
     if ( !(_DWORD)this )
@@ -15920,61 +17019,77 @@ LABEL_69:
       photoStandFigures = _4__this->fields.photoStandFigures;
       if ( !photoStandFigures )
         goto LABEL_113;
-      v89 = v4->fields._i_5__2;
-      if ( (unsigned int)v89 < LODWORD(photoStandFigures->max_length) )
+      v149 = v8->fields._i_5__2;
+      if ( (unsigned int)v149 < LODWORD(photoStandFigures->max_length) )
       {
-        v90 = photoStandFigures->m_Items[v89];
-        v4->fields._photoStandFigure_5__3 = v90;
-        p_photoStandFigure_5__3 = &v4->fields._photoStandFigure_5__3;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._photoStandFigure_5__3, (int32_t)v90, v2, v3);
-        if ( !v4->fields._photoStandFigure_5__3 )
+        v150 = photoStandFigures->m_Items[v149];
+        v8->fields._photoStandFigure_5__3 = v150;
+        p_photoStandFigure_5__3 = &v8->fields._photoStandFigure_5__3;
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&v8->fields._photoStandFigure_5__3,
+          (int32_t)v150,
+          v2,
+          v3,
+          v4,
+          v5,
+          v6,
+          v7);
+        if ( !v8->fields._photoStandFigure_5__3 )
           goto LABEL_113;
         if ( !_4__this->fields.myRoomData )
           goto LABEL_113;
         this = (MyRoomControl__LoadPhotoTarget_d__409_o *)MyRoomData__getUsrSvtData(
                                                             (MyRoomData_o *)this,
-                                                            v4->fields._photoStandFigure_5__3->fields._UserSvtId_k__BackingField,
-                                                            v92);
+                                                            v8->fields._photoStandFigure_5__3->fields._UserSvtId_k__BackingField,
+                                                            v152);
         if ( !this )
           goto LABEL_113;
         this = (MyRoomControl__LoadPhotoTarget_d__409_o *)UserServantEntity__getSvtId((UserServantEntity_o *)this, 0);
         if ( !*p_photoStandFigure_5__3 )
           goto LABEL_113;
         ImageLimitCount_k__BackingField = (*p_photoStandFigure_5__3)->fields._ImageLimitCount_k__BackingField;
-        v94 = (int)this;
+        v154 = (int)this;
         MyRoomControl__SetImageIdAndFormId(
           _4__this,
           &imageId,
-          &v4->fields._formId_5__4,
+          &v8->fields._formId_5__4,
           (int32_t)this,
           ImageLimitCount_k__BackingField,
           0);
-        v95 = v4->fields._photoStandFigure_5__3;
-        if ( !v95 )
+        v155 = v8->fields._photoStandFigure_5__3;
+        if ( !v155 )
           goto LABEL_113;
-        v95->fields._StandFigureImageId_k__BackingField = imageId;
-        v96 = v4->fields.__8__1;
-        if ( !v96 )
+        v155->fields._StandFigureImageId_k__BackingField = imageId;
+        v156 = v8->fields.__8__1;
+        if ( !v156 )
           goto LABEL_113;
-        photoStandFigureBack = v95->fields.photoStandFigureBack;
-        formId_5__4 = v4->fields._formId_5__4;
-        _9__2 = v96->fields.__9__2;
+        photoStandFigureBack = v155->fields.photoStandFigureBack;
+        formId_5__4 = v8->fields._formId_5__4;
+        _9__2 = v156->fields.__9__2;
         if ( !_9__2 )
         {
-          _9__2 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+          _9__2 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
           System_Action___ctor(
             _9__2,
-            (Il2CppObject *)v96,
+            (Il2CppObject *)v156,
             Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__2__,
             0);
-          v96->fields.__9__2 = _9__2;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&v96->fields.__9__2, (int32_t)_9__2, v100, v101);
+          v156->fields.__9__2 = _9__2;
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&v156->fields.__9__2,
+            (int32_t)_9__2,
+            v160,
+            v161,
+            v162,
+            v163,
+            v164,
+            v165);
         }
         if ( !photoStandFigureBack )
           goto LABEL_113;
         StandFigureBack__SetMyRoomStandFigure(
           photoStandFigureBack,
-          v94,
+          v154,
           ImageLimitCount_k__BackingField,
           1,
           0,
@@ -15983,46 +17098,54 @@ LABEL_69:
           _9__2,
           !_4__this->fields.isOneShot,
           0);
-        v102 = v4->fields.__8__1;
-        if ( !v102 )
+        v166 = v8->fields.__8__1;
+        if ( !v166 )
           goto LABEL_113;
-        _9__3 = v102->fields.__9__3;
+        _9__3 = v166->fields.__9__3;
         if ( !_9__3 )
         {
-          _9__3 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+          _9__3 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
           System_Func_bool____ctor(
             _9__3,
-            (Il2CppObject *)v102,
+            (Il2CppObject *)v166,
             Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__3__,
             0);
-          v102->fields.__9__3 = _9__3;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&v102->fields.__9__3, (int32_t)_9__3, v104, v105);
+          v166->fields.__9__3 = _9__3;
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&v166->fields.__9__3,
+            (int32_t)_9__3,
+            v168,
+            v169,
+            v170,
+            v171,
+            v172,
+            v173);
         }
-        v106 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
-        UnityEngine_WaitWhile___ctor(v106, _9__3, 0);
-        v4->fields.__2__current = (Il2CppObject *)v106;
-        v37 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C6B9AC(v37, (int32_t)v106, v107, v108);
-        v40 = 2;
+        v174 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
+        UnityEngine_WaitWhile___ctor(v174, _9__3, 0);
+        v8->fields.__2__current = (Il2CppObject *)v174;
+        v61 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+        sub_1C71354(v61, (int32_t)v174, v175, v176, v177, v178, v179, v180);
+        v68 = 2;
         goto LABEL_112;
       }
 LABEL_114:
-      sub_1C6BC68(this);
+      sub_1C71610(this);
     }
   }
-  v71 = _4__this->fields.photoStandFigures;
-  if ( !v71 )
+  v119 = _4__this->fields.photoStandFigures;
+  if ( !v119 )
     goto LABEL_113;
-  v72 = v4->fields._i_5__2;
-  if ( (unsigned int)v72 >= LODWORD(v71->max_length) )
+  v120 = v8->fields._i_5__2;
+  if ( (unsigned int)v120 >= LODWORD(v119->max_length) )
     goto LABEL_114;
-  v73 = v71->m_Items[v72];
-  v4->fields._photoStaffFigure_5__5 = v73;
-  p_photoStaffFigure_5__5 = &v4->fields._photoStaffFigure_5__5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._photoStaffFigure_5__5, (int32_t)v73, v2, v3);
+  v121 = v119->m_Items[v120];
+  v8->fields._photoStaffFigure_5__5 = v121;
+  p_photoStaffFigure_5__5 = &v8->fields._photoStaffFigure_5__5;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v8->fields._photoStaffFigure_5__5, (int32_t)v121, v2, v3, v4, v5, v6, v7);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  this = (MyRoomControl__LoadPhotoTarget_d__409_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_StaffPhotoCostumeMaster___);
+  this = (MyRoomControl__LoadPhotoTarget_d__409_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_StaffPhotoCostumeMaster___);
   if ( !*p_photoStaffFigure_5__5 || !this )
     goto LABEL_113;
   this = (MyRoomControl__LoadPhotoTarget_d__409_o *)StaffPhotoCostumeMaster__TryGetEntityByImageId(
@@ -16041,61 +17164,61 @@ LABEL_114:
   }
   faceId = 0;
 LABEL_103:
-  v109 = v4->fields.__8__1;
-  if ( !v109 )
+  v181 = v8->fields.__8__1;
+  if ( !v181 )
     goto LABEL_113;
-  v109->fields.flag = 1;
-  v110 = *p_photoStaffFigure_5__5;
+  v181->fields.flag = 1;
+  v182 = *p_photoStaffFigure_5__5;
   if ( !*p_photoStaffFigure_5__5 )
     goto LABEL_113;
-  v111 = v110->fields.photoStandFigureBack;
-  StandFigureImageId_k__BackingField = v110->fields._StandFigureImageId_k__BackingField;
-  _9__8 = v109->fields.__9__8;
+  v183 = v182->fields.photoStandFigureBack;
+  StandFigureImageId_k__BackingField = v182->fields._StandFigureImageId_k__BackingField;
+  _9__8 = v181->fields.__9__8;
   if ( !_9__8 )
   {
-    _9__8 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__8 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__8,
-      (Il2CppObject *)v109,
+      (Il2CppObject *)v181,
       Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__8__,
       0);
-    v109->fields.__9__8 = _9__8;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v109->fields.__9__8, (int32_t)_9__8, v114, v115);
+    v181->fields.__9__8 = _9__8;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v181->fields.__9__8, (int32_t)_9__8, v186, v187, v188, v189, v190, v191);
   }
-  if ( !v111
+  if ( !v183
     || (StandFigureBack__SetMyRoomStandFigureForImageId(
-          v111,
+          v183,
           StandFigureImageId_k__BackingField,
           1,
           faceId,
           10,
           _9__8,
           0),
-        (v116 = v4->fields.__8__1) == 0) )
+        (v192 = v8->fields.__8__1) == 0) )
   {
 LABEL_113:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  _9__9 = v116->fields.__9__9;
+  _9__9 = v192->fields.__9__9;
   if ( !_9__9 )
   {
-    _9__9 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+    _9__9 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
     System_Func_bool____ctor(
       _9__9,
-      (Il2CppObject *)v116,
+      (Il2CppObject *)v192,
       Method_MyRoomControl___c__DisplayClass409_0__LoadPhotoTarget_b__9__,
       0);
-    v116->fields.__9__9 = _9__9;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v116->fields.__9__9, (int32_t)_9__9, v118, v119);
+    v192->fields.__9__9 = _9__9;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v192->fields.__9__9, (int32_t)_9__9, v194, v195, v196, v197, v198, v199);
   }
-  v120 = (UnityEngine_WaitWhile_o *)sub_1C6BC54(UnityEngine_WaitWhile_TypeInfo);
-  UnityEngine_WaitWhile___ctor(v120, _9__9, 0);
-  v4->fields.__2__current = (Il2CppObject *)v120;
-  v37 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-  sub_1C6B9AC(v37, (int32_t)v120, v121, v122);
-  v40 = 5;
+  v200 = (UnityEngine_WaitWhile_o *)sub_1C715FC(UnityEngine_WaitWhile_TypeInfo);
+  UnityEngine_WaitWhile___ctor(v200, _9__9, 0);
+  v8->fields.__2__current = (Il2CppObject *)v200;
+  v61 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+  sub_1C71354(v61, (int32_t)v200, v201, v202, v203, v204, v205, v206);
+  v68 = 5;
 LABEL_112:
-  LODWORD(v37[-1].fields._ThumbnailSpritePath_k__BackingField) = v40;
+  LODWORD(v61[-1].fields._ClosedMessage_k__BackingField) = v68;
   return 1;
 }
 
@@ -16116,11 +17239,11 @@ void __noreturn MyRoomControl__LoadPhotoTarget_d__409__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MyRoomControl__LoadPhotoTarget_d__409_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MyRoomControl__LoadPhotoTarget_d__409_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -16155,40 +17278,48 @@ bool MyRoomControl__StartCameraEffect_d__420__MoveNext(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  MyRoomControl__StartCameraEffect_d__420_o *v4; // x20
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  MyRoomControl__StartCameraEffect_d__420_o *v8; // x20
   int32_t _1__state; // w8
   struct MyRoomControl_o *_4__this; // x19
   Il2CppObject *photoCampaignShutterEffect; // x21
   UnityEngine_Transform_o *transform; // x22
-  UnityEngine_GameObject_o *v9; // x0
-  UnityEngine_WaitForSeconds_o *v10; // x19
-  CGThumbnailListItem_o *p__2__current; // x20
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  UnityEngine_GameObject_o *v13; // x0
+  UnityEngine_WaitForSeconds_o *v14; // x19
+  GrandQuestFolderBoardItem_o *p__2__current; // x20
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   bool result; // w0
-  int32_t v15; // w1
+  int32_t v23; // w1
   UnityEngine_GameObject_o *gameObject; // x0
-  float v17; // s0
+  float v25; // s0
   UnityEngine_GameObject_o *photoCampaignProduction; // x20
-  UnityEngine_GameObject_o *v19; // x0
+  UnityEngine_GameObject_o *v27; // x0
   struct TitleInfoControl_o *titleInfo; // x8
-  CGThumbnailListItem_o *v21; // x20
+  GrandQuestFolderBoardItem_o *v29; // x20
 
-  v4 = this;
-  if ( (byte_4CB170B & 1) == 0 )
+  v8 = this;
+  if ( (byte_4CC2818 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (MyRoomControl__StartCameraEffect_d__420_o *)sub_1C6BA08(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4CB170B = 1;
+    sub_1C713B0(&Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (MyRoomControl__StartCameraEffect_d__420_o *)sub_1C713B0(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4CC2818 = 1;
   }
-  _1__state = v4->fields.__1__state;
-  _4__this = v4->fields.__4__this;
+  _1__state = v8->fields.__1__state;
+  _4__this = v8->fields.__4__this;
   if ( _1__state == 2 )
   {
-    v4->fields.__1__state = -1;
+    v8->fields.__1__state = -1;
     if ( !_4__this )
       goto LABEL_37;
     this = (MyRoomControl__StartCameraEffect_d__420_o *)_4__this->fields.takingPhotoFrameSprite;
@@ -16212,21 +17343,21 @@ bool MyRoomControl__StartCameraEffect_d__420__MoveNext(
     this = (MyRoomControl__StartCameraEffect_d__420_o *)_4__this->fields.photoCampaignFadeSprite;
     if ( !this )
       goto LABEL_37;
-    v15 = _4__this->fields.isOneShot ? 362 : 870;
-    UIWidget__set_width((UIWidget_o *)this, v15, 0);
+    v23 = _4__this->fields.isOneShot ? 362 : 870;
+    UIWidget__set_width((UIWidget_o *)this, v23, 0);
     this = (MyRoomControl__StartCameraEffect_d__420_o *)_4__this->fields.photoCampaignFadeSprite;
     if ( !this )
       goto LABEL_37;
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    v17 = 11.0;
+    v25 = 11.0;
     if ( !_4__this->fields.isOneShot )
-      v17 = 1.0;
-    GameObjectExtensions__SetLocalPositionY(gameObject, v17, 0);
+      v25 = 1.0;
+    GameObjectExtensions__SetLocalPositionY(gameObject, v25, 0);
     photoCampaignProduction = _4__this->fields.photoCampaignProduction;
-    if ( !byte_4CAFC09 )
+    if ( !byte_4CC0D09 )
     {
-      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC09 = 1;
+      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D09 = 1;
     }
     GameObjectExtensions__SetLocalPosition(
       photoCampaignProduction,
@@ -16235,8 +17366,8 @@ bool MyRoomControl__StartCameraEffect_d__420__MoveNext(
     this = (MyRoomControl__StartCameraEffect_d__420_o *)_4__this->fields.photoCampaignFadeSprite;
     if ( !this )
       goto LABEL_37;
-    v19 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    this = (MyRoomControl__StartCameraEffect_d__420_o *)TweenAlpha__Begin(v19, 0.4, 0.0, 0);
+    v27 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+    this = (MyRoomControl__StartCameraEffect_d__420_o *)TweenAlpha__Begin(v27, 0.4, 0.0, 0);
     titleInfo = _4__this->fields.titleInfo;
     if ( !titleInfo )
       goto LABEL_37;
@@ -16252,7 +17383,7 @@ bool MyRoomControl__StartCameraEffect_d__420__MoveNext(
   {
     if ( !_1__state )
     {
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( _4__this )
       {
         this = (MyRoomControl__StartCameraEffect_d__420_o *)_4__this->fields.shutterEffect;
@@ -16262,10 +17393,10 @@ bool MyRoomControl__StartCameraEffect_d__420__MoveNext(
           transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Instantiate_object__52199488(
+          UnityEngine_Object__Instantiate_object__52264420(
             photoCampaignShutterEffect,
             transform,
-            (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+            (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
           GameObjectExtensions__SetLocalPositionX(_4__this->fields.photoCampaignProduction, 1500.0, 0);
           this = (MyRoomControl__StartCameraEffect_d__420_o *)_4__this->fields.photoCampaignProduction;
           if ( this )
@@ -16292,17 +17423,17 @@ bool MyRoomControl__StartCameraEffect_d__420__MoveNext(
                     this = (MyRoomControl__StartCameraEffect_d__420_o *)_4__this->fields.photoCampaignFadeSprite;
                     if ( this )
                     {
-                      v9 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+                      v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
                       GameObjectExtensions__SafeGetComponent_object_(
-                        v9,
-                        (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
-                      v10 = (UnityEngine_WaitForSeconds_o *)sub_1C6BC54(UnityEngine_WaitForSeconds_TypeInfo);
-                      UnityEngine_WaitForSeconds___ctor(v10, 0.066, 0);
-                      v4->fields.__2__current = (Il2CppObject *)v10;
-                      p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-                      sub_1C6B9AC(p__2__current, (int32_t)v10, v12, v13);
+                        v13,
+                        (const MethodInfo_31A49B8 *)Method_GameObjectExtensions_SafeGetComponent_TweenAlpha___);
+                      v14 = (UnityEngine_WaitForSeconds_o *)sub_1C715FC(UnityEngine_WaitForSeconds_TypeInfo);
+                      UnityEngine_WaitForSeconds___ctor(v14, 0.066, 0);
+                      v8->fields.__2__current = (Il2CppObject *)v14;
+                      p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+                      sub_1C71354(p__2__current, (int32_t)v14, v16, v17, v18, v19, v20, v21);
                       result = 1;
-                      LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+                      LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
                       return result;
                     }
                   }
@@ -16313,15 +17444,15 @@ bool MyRoomControl__StartCameraEffect_d__420__MoveNext(
         }
       }
 LABEL_37:
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     }
     return 0;
   }
-  v4->fields.__2__current = 0;
-  v21 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-  LODWORD(v21[-1].fields._ThumbnailSpritePath_k__BackingField) = -1;
-  sub_1C6B9AC(v21, 0, v2, v3);
-  LODWORD(v21[-1].fields._ThumbnailSpritePath_k__BackingField) = 2;
+  v8->fields.__2__current = 0;
+  v29 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+  LODWORD(v29[-1].fields._ClosedMessage_k__BackingField) = -1;
+  sub_1C71354(v29, 0, v2, v3, v4, v5, v6, v7);
+  LODWORD(v29[-1].fields._ClosedMessage_k__BackingField) = 2;
   return 1;
 }
 
@@ -16342,11 +17473,11 @@ void __noreturn MyRoomControl__StartCameraEffect_d__420__System_Collections_IEnu
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MyRoomControl__StartCameraEffect_d__420_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MyRoomControl__StartCameraEffect_d__420_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -16370,17 +17501,29 @@ void MyRoomControl___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB16E1 & 1) == 0 )
+  if ( (byte_4CC27EE & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    byte_4CB16E1 = 1;
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    byte_4CC27EE = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(MyRoomControl___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(MyRoomControl___c_TypeInfo);
   System_Object___ctor(v1, 0);
   MyRoomControl___c_TypeInfo->static_fields->__9 = (struct MyRoomControl___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)MyRoomControl___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)MyRoomControl___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -16395,14 +17538,14 @@ void MyRoomControl___c___CheckCsUnlink_b__321_0(MyRoomControl___c_o *this, const
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CB16E4 & 1) == 0 )
+  if ( (byte_4CC27F1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16E4 = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27F1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   CommonUI__CloseAccountLinkageNotificationDialog((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -16413,7 +17556,7 @@ void MyRoomControl___c___EndLoadPhotoAsset_b__401_0(
         const MethodInfo *method)
 {
   if ( !x || (this = (MyRoomControl___c_o *)x->fields.photoStandFigureBack) == 0 )
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   StandFigureBack__Init((StandFigureBack_o *)this, 0);
 }
 
@@ -16423,14 +17566,14 @@ void MyRoomControl___c___EndLoad_b__239_0(MyRoomControl___c_o *this, const Metho
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CB16E3 & 1) == 0 )
+  if ( (byte_4CC27F0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16E3 = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27F0 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -16440,14 +17583,14 @@ void MyRoomControl___c___GoToTitle_b__332_1(MyRoomControl___c_o *this, const Met
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CB16E5 & 1) == 0 )
+  if ( (byte_4CC27F2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_4CB16E5 = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    byte_4CC27F2 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   ManagementManager__reboot((ManagementManager_o *)Instance, 0, 0, 0);
 }
 
@@ -16460,10 +17603,10 @@ void MyRoomControl___c___HidePhotoUi_b__437_0(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CB16E8 & 1) == 0 )
+  if ( (byte_4CC27F5 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB16E8 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC27F5 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -16471,7 +17614,7 @@ void MyRoomControl___c___HidePhotoUi_b__437_0(
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !x || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)x, 0)) == 0 )
-      sub_1C6BC60(gameObject, v5);
+      sub_1C71608(gameObject, v5);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   }
 }
@@ -16489,18 +17632,22 @@ void MyRoomControl___c___OnClickChangeBg_b__450_1(MyRoomControl___c_o *this, con
   Il2CppObject *v9; // x21
   struct MyRoomControl___c_StaticFields *static_fields; // x0
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
-  if ( (byte_4CB16EA & 1) == 0 )
+  if ( (byte_4CC27F7 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__OnClickChangeBg_b__450_2__);
-    sub_1C6BA08(&MyRoomControl___c_TypeInfo);
-    byte_4CB16EA = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__OnClickChangeBg_b__450_2__);
+    sub_1C713B0(&MyRoomControl___c_TypeInfo);
+    byte_4CC27F7 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   v5 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -16524,14 +17671,22 @@ void MyRoomControl___c___OnClickChangeBg_b__450_1(MyRoomControl___c_o *this, con
       v6 = MyRoomControl___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v6->static_fields->__9;
-    _9__450_2 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__450_2 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(_9__450_2, v9, Method_MyRoomControl___c__OnClickChangeBg_b__450_2__, 0);
     static_fields = MyRoomControl___c_TypeInfo->static_fields;
     static_fields->__9__450_2 = _9__450_2;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__450_2, (int32_t)_9__450_2, v11, v12);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__450_2,
+      (int32_t)_9__450_2,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15,
+      v16);
   }
   if ( !v5 )
-    sub_1C6BC60(v6, v3);
+    sub_1C71608(v6, v3);
   CommonUI__maskFadein(v5, DEFAULT_FADE_TIME, _9__450_2, 0);
 }
 
@@ -16541,14 +17696,14 @@ void MyRoomControl___c___OnClickChangeBg_b__450_2(MyRoomControl___c_o *this, con
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CB16EB & 1) == 0 )
+  if ( (byte_4CC27F8 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16EB = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27F8 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -16561,10 +17716,10 @@ void MyRoomControl___c___OnClickDispPhotoUi_b__438_0(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CB16E9 & 1) == 0 )
+  if ( (byte_4CC27F6 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB16E9 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC27F6 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -16572,7 +17727,7 @@ void MyRoomControl___c___OnClickDispPhotoUi_b__438_0(
   if ( ((unsigned __int8)gameObject & 1) != 0 )
   {
     if ( !x || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)x, 0)) == 0 )
-      sub_1C6BC60(gameObject, v5);
+      sub_1C71608(gameObject, v5);
     UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   }
 }
@@ -16584,7 +17739,7 @@ bool MyRoomControl___c___SaveDisplayOverWriteIds_b__456_0(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return saveData->fields.groupId == 0;
 }
 
@@ -16598,10 +17753,10 @@ void MyRoomControl___c___SetLayerChangeObj_b__412_0(
   __int64 v5; // x1
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4CB16E6 & 1) == 0 )
+  if ( (byte_4CC27F3 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB16E6 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC27F3 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -16609,11 +17764,11 @@ void MyRoomControl___c___SetLayerChangeObj_b__412_0(
   if ( v4 )
   {
     if ( !x )
-      sub_1C6BC60(v4, v5);
+      sub_1C71608(v4, v5);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)x, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(gameObject, 0);
+    UnityEngine_Object__Destroy_71724608(gameObject, 0);
   }
 }
 
@@ -16624,7 +17779,7 @@ void MyRoomControl___c___TransitionMyRoomTop_b__425_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   PhotoStandFigureComponent__Init(x, 0);
 }
 
@@ -16638,10 +17793,10 @@ void MyRoomControl___c___TransitionMyRoomTop_b__425_2(
   __int64 v5; // x1
   UnityEngine_Object_o *gameObject; // x19
 
-  if ( (byte_4CB16E7 & 1) == 0 )
+  if ( (byte_4CC27F4 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB16E7 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC27F4 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -16649,11 +17804,11 @@ void MyRoomControl___c___TransitionMyRoomTop_b__425_2(
   if ( v4 )
   {
     if ( !x )
-      sub_1C6BC60(v4, v5);
+      sub_1C71608(v4, v5);
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)x, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(gameObject, 0);
+    UnityEngine_Object__Destroy_71724608(gameObject, 0);
   }
 }
 
@@ -16670,7 +17825,7 @@ void MyRoomControl___c___initMyRoom_b__217_1(
         const MethodInfo *method)
 {
   if ( !x || (this = (MyRoomControl___c_o *)x->fields.photoStandFigureBack) == 0 )
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   StandFigureBack__Init((StandFigureBack_o *)this, 0);
 }
 
@@ -16680,14 +17835,14 @@ void MyRoomControl___c___setSvtVoiceData_b__238_0(MyRoomControl___c_o *this, con
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CB16E2 & 1) == 0 )
+  if ( (byte_4CC27EF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16E2 = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC27EF = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0);
 }
 
@@ -16708,7 +17863,7 @@ void MyRoomControl___c__DisplayClass237_0___voiceLoad_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   _4__this->fields.isVoiceLoading = 0;
   ActionExtensions__Call(this->fields.endCallback, 0);
 }
@@ -16727,27 +17882,35 @@ void MyRoomControl___c__DisplayClass241_0___SetMyRoomStandFigure_b__0(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  MyRoomControl___c__DisplayClass241_0_o *v4; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  MyRoomControl___c__DisplayClass241_0_o *v8; // x19
   struct MyRoomControl_o *_4__this; // x8
   struct StandFigureBack_o *standFigureBack; // x9
   struct System_Action_o *standFigureCollectList; // x1
-  struct MyRoomControl_o *v8; // x8
-  struct MyRoomControl_o *v9; // x8
-  struct MyRoomControl_o *v10; // x8
+  struct MyRoomControl_o *v12; // x8
+  struct MyRoomControl_o *v13; // x8
+  struct MyRoomControl_o *v14; // x8
   FavoriteChangeComponent_o *favoriteChangeComp; // x20
   System_Action_o *_9__1; // x22
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
 
-  v4 = this;
-  if ( (byte_4CB16EC & 1) == 0 )
+  v8 = this;
+  if ( (byte_4CC27F9 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    this = (MyRoomControl___c__DisplayClass241_0_o *)sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass241_0__SetMyRoomStandFigure_b__1__);
-    byte_4CB16EC = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    this = (MyRoomControl___c__DisplayClass241_0_o *)sub_1C713B0(&Method_MyRoomControl___c__DisplayClass241_0__SetMyRoomStandFigure_b__1__);
+    byte_4CC27F9 = 1;
   }
-  _4__this = v4->fields.__4__this;
+  _4__this = v8->fields.__4__this;
   if ( !_4__this )
     goto LABEL_20;
   standFigureBack = _4__this->fields.standFigureBack;
@@ -16758,51 +17921,59 @@ void MyRoomControl___c__DisplayClass241_0___SetMyRoomStandFigure_b__0(
     goto LABEL_20;
   standFigureCollectList = (struct System_Action_o *)standFigureBack->fields.standFigureCollectList;
   this[1].fields.__9__1 = standFigureCollectList;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this[1].fields.__9__1, (int32_t)standFigureCollectList, v2, v3);
-  this = (MyRoomControl___c__DisplayClass241_0_o *)v4->fields.__4__this;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this[1].fields.__9__1,
+    (int32_t)standFigureCollectList,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+  this = (MyRoomControl___c__DisplayClass241_0_o *)v8->fields.__4__this;
   if ( !this )
     goto LABEL_20;
   MyRoomControl__setSvtFigureActive((MyRoomControl_o *)this, (int32_t)this[20].monitor, 0, 0);
-  v8 = v4->fields.__4__this;
-  if ( !v8 )
+  v12 = v8->fields.__4__this;
+  if ( !v12 )
     goto LABEL_20;
-  this = (MyRoomControl___c__DisplayClass241_0_o *)v8->fields.svtClickCollider;
+  this = (MyRoomControl___c__DisplayClass241_0_o *)v12->fields.svtClickCollider;
   if ( !this )
     goto LABEL_20;
-  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, v8->fields.isExistVoiceData, 0);
-  v9 = v4->fields.__4__this;
-  if ( !v9 )
+  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, v12->fields.isExistVoiceData, 0);
+  v13 = v8->fields.__4__this;
+  if ( !v13 )
     goto LABEL_20;
-  this = (MyRoomControl___c__DisplayClass241_0_o *)v9->fields.voiceClickCollider;
+  this = (MyRoomControl___c__DisplayClass241_0_o *)v13->fields.voiceClickCollider;
   if ( !this )
     goto LABEL_20;
-  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, v9->fields.isExistVoiceData, 0);
-  this = (MyRoomControl___c__DisplayClass241_0_o *)v4->fields.__4__this;
+  UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, v13->fields.isExistVoiceData, 0);
+  this = (MyRoomControl___c__DisplayClass241_0_o *)v8->fields.__4__this;
   if ( !this )
     goto LABEL_20;
   if ( LOBYTE(this[19].fields.end_act) )
-    MyRoomControl__setNormalFace_33724456((MyRoomControl_o *)this, 0, 0);
+    MyRoomControl__setNormalFace_33752008((MyRoomControl_o *)this, 0, 0);
   else
     MyRoomControl__setFaceType((MyRoomControl_o *)this, 0);
-  v10 = v4->fields.__4__this;
-  if ( !v10 )
+  v14 = v8->fields.__4__this;
+  if ( !v14 )
     goto LABEL_20;
-  favoriteChangeComp = v10->fields.favoriteChangeComp;
-  _9__1 = v4->fields.__9__1;
+  favoriteChangeComp = v14->fields.favoriteChangeComp;
+  _9__1 = v8->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
-      (Il2CppObject *)v4,
+      (Il2CppObject *)v8,
       Method_MyRoomControl___c__DisplayClass241_0__SetMyRoomStandFigure_b__1__,
       0);
-    v4->fields.__9__1 = _9__1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v13, v14);
+    v8->fields.__9__1 = _9__1;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v8->fields.__9__1, (int32_t)_9__1, v17, v18, v19, v20, v21, v22);
   }
   if ( !favoriteChangeComp )
 LABEL_20:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   FavoriteChangeComponent__cancelFavoriteWindow(favoriteChangeComp, _9__1, 0);
 }
 
@@ -16817,25 +17988,29 @@ void MyRoomControl___c__DisplayClass241_0___SetMyRoomStandFigure_b__1(
   StandFigureBack_o *standFigureBack; // x20
   System_Action_o *_9__2; // x22
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  struct MyRoomControl_o *v10; // x8
-  unsigned int localPosition; // s0
-  struct MyRoomControl_o *v12; // x8
-  float v13; // s8
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   struct MyRoomControl_o *v14; // x8
-  float y; // s9
-  float v16; // s0
-  float v17; // s1
+  unsigned int localPosition; // s0
+  struct MyRoomControl_o *v16; // x8
+  float v17; // s8
   struct MyRoomControl_o *v18; // x8
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s9
+  float v20; // s0
+  float v21; // s1
+  struct MyRoomControl_o *v22; // x8
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB16ED & 1) == 0 )
+  if ( (byte_4CC27FA & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass241_0__SetMyRoomStandFigure_b__2__);
-    sub_1C6BA08(&StringLiteral_11293/*"ReleaseTouch"*/);
-    byte_4CB16ED = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass241_0__SetMyRoomStandFigure_b__2__);
+    sub_1C713B0(&StringLiteral_11299/*"ReleaseTouch"*/);
+    byte_4CC27FA = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -16847,10 +18022,10 @@ void MyRoomControl___c__DisplayClass241_0___SetMyRoomStandFigure_b__1(
     if ( !_4__this )
       goto LABEL_30;
     StandFigureBack__Fadein((StandFigureBack_o *)_4__this, 0, 0);
-    v10 = this->fields.__4__this;
-    if ( !v10 )
+    v14 = this->fields.__4__this;
+    if ( !v14 )
       goto LABEL_30;
-    _4__this = (MyRoomControl_o *)v10->fields.standFigureBack;
+    _4__this = (MyRoomControl_o *)v14->fields.standFigureBack;
     if ( !_4__this )
       goto LABEL_30;
     _4__this = (MyRoomControl_o *)StandFigureBack__GetSvtStandFigure((StandFigureBack_o *)_4__this, 0, 0);
@@ -16863,34 +18038,34 @@ void MyRoomControl___c__DisplayClass241_0___SetMyRoomStandFigure_b__1(
     if ( !_4__this )
       goto LABEL_30;
     localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)_4__this, 0);
-    v12 = this->fields.__4__this;
-    if ( !v12 )
+    v16 = this->fields.__4__this;
+    if ( !v16 )
       goto LABEL_30;
-    _4__this = (MyRoomControl_o *)v12->fields.svtObj;
+    _4__this = (MyRoomControl_o *)v16->fields.svtObj;
     if ( !_4__this )
       goto LABEL_30;
-    v13 = *(float *)&localPosition;
+    v17 = *(float *)&localPosition;
     _4__this = (MyRoomControl_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
     if ( !_4__this )
       goto LABEL_30;
-    v19 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)_4__this, 0);
-    v14 = this->fields.__4__this;
-    if ( !v14 )
+    v23 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)_4__this, 0);
+    v18 = this->fields.__4__this;
+    if ( !v18 )
       goto LABEL_30;
-    _4__this = (MyRoomControl_o *)v14->fields.svtObj;
+    _4__this = (MyRoomControl_o *)v18->fields.svtObj;
     if ( !_4__this )
       goto LABEL_30;
-    y = v19.fields.y;
+    y = v23.fields.y;
     _4__this = (MyRoomControl_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)_4__this, 0);
     if ( !_4__this )
       goto LABEL_30;
-    v20 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)_4__this, 0);
+    v24 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)_4__this, 0);
     _4__this = this->fields.__4__this;
     if ( !_4__this )
       goto LABEL_30;
-    v16 = -v13;
-    v17 = y;
-    MyRoomControl__moveControl(_4__this, _4__this->fields.svtObj, v20, (System_String_o *)StringLiteral_11293/*"ReleaseTouch"*/, 0);
+    v20 = -v17;
+    v21 = y;
+    MyRoomControl__moveControl(_4__this, _4__this->fields.svtObj, v24, (System_String_o *)StringLiteral_11299/*"ReleaseTouch"*/, 0);
   }
   else if ( !mState )
   {
@@ -16909,14 +18084,14 @@ void MyRoomControl___c__DisplayClass241_0___SetMyRoomStandFigure_b__1(
           _9__2 = this->fields.__9__2;
           if ( !_9__2 )
           {
-            _9__2 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+            _9__2 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
             System_Action___ctor(
               _9__2,
               (Il2CppObject *)this,
               Method_MyRoomControl___c__DisplayClass241_0__SetMyRoomStandFigure_b__2__,
               0);
             this->fields.__9__2 = _9__2;
-            sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__9__2, (int32_t)_9__2, v8, v9);
+            sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v8, v9, v10, v11, v12, v13);
           }
           if ( standFigureBack )
           {
@@ -16927,13 +18102,13 @@ void MyRoomControl___c__DisplayClass241_0___SetMyRoomStandFigure_b__1(
       }
     }
 LABEL_30:
-    sub_1C6BC60(_4__this, method);
+    sub_1C71608(_4__this, method);
   }
   ActionExtensions__Call(this->fields.end_act, 0);
-  v18 = this->fields.__4__this;
-  if ( !v18 )
+  v22 = this->fields.__4__this;
+  if ( !v22 )
     goto LABEL_30;
-  v18->fields.isSvtLoading = 0;
+  v22->fields.isSvtLoading = 0;
 }
 
 
@@ -16948,7 +18123,7 @@ void MyRoomControl___c__DisplayClass241_0___SetMyRoomStandFigure_b__2(
   ActionExtensions__Call(this->fields.end_act, 0);
   _4__this = this->fields.__4__this;
   if ( !_4__this || (MyRoomControl__ReleaseTouch(_4__this, 0), (_4__this = this->fields.__4__this) == 0) )
-    sub_1C6BC60(_4__this, v3);
+    sub_1C71608(_4__this, v3);
   isHeroine = _4__this->fields.isHeroine;
   _4__this->fields.isSvtLoading = 0;
   if ( isHeroine && _4__this->fields.isHeroineReave )
@@ -16981,7 +18156,7 @@ void MyRoomControl___c__DisplayClass242_0___SetMySvtFigure_b__0(
                                                            0),
         !voicePlayBtn) )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   UnityEngine_GameObject__SetActive(voicePlayBtn, (unsigned __int8)this & 1, 0);
   ActionExtensions__Call(v3->fields.end_act, 0);
@@ -17001,49 +18176,61 @@ void MyRoomControl___c__DisplayClass243_0___SetMaterialSvtFigure_b__1(
         AssetData_o *assetData,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  MyRoomControl___c__DisplayClass243_0_o *v5; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  MyRoomControl___c__DisplayClass243_0_o *v9; // x19
   struct MyRoomControl_o *_4__this; // x8
-  struct MyRoomControl_o *v7; // x8
+  struct MyRoomControl_o *v11; // x8
   StandFigureBack_o *standFigureBack; // x20
   int32_t servantId; // w21
   int32_t imageLimitCount; // w22
   int32_t formId; // w23
-  System_Action_o *v12; // x24
+  System_Action_o *v16; // x24
 
-  v5 = this;
-  if ( (byte_4CB16EF & 1) == 0 )
+  v9 = this;
+  if ( (byte_4CC27FC & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    this = (MyRoomControl___c__DisplayClass243_0_o *)sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_g__OnEnd_0__);
-    byte_4CB16EF = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    this = (MyRoomControl___c__DisplayClass243_0_o *)sub_1C713B0(&Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_g__OnEnd_0__);
+    byte_4CC27FC = 1;
   }
   if ( assetData )
   {
-    _4__this = v5->fields.__4__this;
+    _4__this = v9->fields.__4__this;
     if ( !_4__this )
       goto LABEL_9;
     _4__this->fields.combineAssetData = assetData;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.combineAssetData, (int32_t)assetData, (int32_t)method, v3);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&_4__this->fields.combineAssetData,
+      (int32_t)assetData,
+      (int32_t)method,
+      v3,
+      v4,
+      v5,
+      v6,
+      v7);
   }
-  v7 = v5->fields.__4__this;
-  if ( !v7
-    || (standFigureBack = v7->fields.standFigureBack,
-        servantId = v5->fields.servantId,
-        imageLimitCount = v5->fields.imageLimitCount,
-        formId = v5->fields.formId,
-        v12 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
+  v11 = v9->fields.__4__this;
+  if ( !v11
+    || (standFigureBack = v11->fields.standFigureBack,
+        servantId = v9->fields.servantId,
+        imageLimitCount = v9->fields.imageLimitCount,
+        formId = v9->fields.formId,
+        v16 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo),
         System_Action___ctor(
-          v12,
-          (Il2CppObject *)v5,
+          v16,
+          (Il2CppObject *)v9,
           Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_g__OnEnd_0__,
           0),
         !standFigureBack) )
   {
 LABEL_9:
-    sub_1C6BC60(this, assetData);
+    sub_1C71608(this, assetData);
   }
-  StandFigureBack__SetMyRoomStandFigure(standFigureBack, servantId, imageLimitCount, 1, 0, formId, 10, v12, 0, 0);
+  StandFigureBack__SetMyRoomStandFigure(standFigureBack, servantId, imageLimitCount, 1, 0, formId, 10, v16, 0, 0);
 }
 
 
@@ -17058,7 +18245,7 @@ void MyRoomControl___c__DisplayClass243_0___SetMaterialSvtFigure_b__2(
   ActionExtensions__Call(this->fields.end_act, 0);
   _4__this = this->fields.__4__this;
   if ( !_4__this || (MyRoomControl__ReleaseTouch(_4__this, 0), (v5 = this->fields.__4__this) == 0) )
-    sub_1C6BC60(_4__this, v3);
+    sub_1C71608(_4__this, v3);
   v5->fields.isSvtLoading = 0;
 }
 
@@ -17068,42 +18255,46 @@ void MyRoomControl___c__DisplayClass243_0___SetMaterialSvtFigure_g__OnEnd_0(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  MyRoomControl___c__DisplayClass243_0_o *v4; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  MyRoomControl___c__DisplayClass243_0_o *v8; // x19
   struct MyRoomControl_o *_4__this; // x8
   struct StandFigureBack_o *standFigureBack; // x9
   struct System_Collections_Generic_List_StandFigureCollect__o *standFigureCollectList; // x1
-  struct MyRoomControl_o *v8; // x8
-  struct MyRoomControl_o *v9; // x8
-  struct MyRoomControl_o *v10; // x8
-  struct MyRoomControl_o *v11; // x8
   struct MyRoomControl_o *v12; // x8
   struct MyRoomControl_o *v13; // x8
-  int32_t formId; // w8
+  struct MyRoomControl_o *v14; // x8
   struct MyRoomControl_o *v15; // x8
-  StandFigureBack_o *v16; // x20
-  System_Action_o *v17; // x21
-  struct MyRoomControl_o *v18; // x8
-  unsigned int localPosition; // s0
-  struct MyRoomControl_o *v20; // x8
-  float v21; // s8
+  struct MyRoomControl_o *v16; // x8
+  struct MyRoomControl_o *v17; // x8
+  int32_t formId; // w8
+  struct MyRoomControl_o *v19; // x8
+  StandFigureBack_o *v20; // x20
+  System_Action_o *v21; // x21
   struct MyRoomControl_o *v22; // x8
-  float y; // s9
-  float v24; // s0
-  float v25; // s1
+  unsigned int localPosition; // s0
+  struct MyRoomControl_o *v24; // x8
+  float v25; // s8
   struct MyRoomControl_o *v26; // x8
-  UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v28; // 0:s0.4,4:s1.4,8:s2.4
+  float y; // s9
+  float v28; // s0
+  float v29; // s1
+  struct MyRoomControl_o *v30; // x8
+  UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  v4 = this;
-  if ( (byte_4CB16EE & 1) == 0 )
+  v8 = this;
+  if ( (byte_4CC27FB & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_b__2__);
-    this = (MyRoomControl___c__DisplayClass243_0_o *)sub_1C6BA08(&StringLiteral_11293/*"ReleaseTouch"*/);
-    byte_4CB16EE = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_b__2__);
+    this = (MyRoomControl___c__DisplayClass243_0_o *)sub_1C713B0(&StringLiteral_11299/*"ReleaseTouch"*/);
+    byte_4CC27FB = 1;
   }
-  _4__this = v4->fields.__4__this;
+  _4__this = v8->fields.__4__this;
   if ( !_4__this )
     goto LABEL_44;
   standFigureBack = _4__this->fields.standFigureBack;
@@ -17114,58 +18305,66 @@ void MyRoomControl___c__DisplayClass243_0___SetMaterialSvtFigure_g__OnEnd_0(
     goto LABEL_44;
   standFigureCollectList = standFigureBack->fields.standFigureCollectList;
   *(_QWORD *)&this[1].fields.formId = standFigureCollectList;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this[1].fields.formId, (int32_t)standFigureCollectList, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this[1].fields.formId,
+    (int32_t)standFigureCollectList,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   MainMenuBar__setMenuActive(1, 0, 0);
-  v8 = v4->fields.__4__this;
-  if ( !v8 )
+  v12 = v8->fields.__4__this;
+  if ( !v12 )
     goto LABEL_44;
-  this = (MyRoomControl___c__DisplayClass243_0_o *)v8->fields.moveBtnObj;
+  this = (MyRoomControl___c__DisplayClass243_0_o *)v12->fields.moveBtnObj;
   if ( !this )
     goto LABEL_44;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  v9 = v4->fields.__4__this;
-  if ( !v9 )
+  v13 = v8->fields.__4__this;
+  if ( !v13 )
     goto LABEL_44;
-  this = (MyRoomControl___c__DisplayClass243_0_o *)v9->fields.changeLimitBtn;
+  this = (MyRoomControl___c__DisplayClass243_0_o *)v13->fields.changeLimitBtn;
   if ( !this )
     goto LABEL_44;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  v10 = v4->fields.__4__this;
-  if ( !v10 )
+  v14 = v8->fields.__4__this;
+  if ( !v14 )
     goto LABEL_44;
-  this = (MyRoomControl___c__DisplayClass243_0_o *)v10->fields.helpBtn;
+  this = (MyRoomControl___c__DisplayClass243_0_o *)v14->fields.helpBtn;
   if ( !this )
     goto LABEL_44;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  v11 = v4->fields.__4__this;
-  if ( !v11 )
+  v15 = v8->fields.__4__this;
+  if ( !v15 )
     goto LABEL_44;
-  this = (MyRoomControl___c__DisplayClass243_0_o *)v11->fields.voicePlayBtn;
+  this = (MyRoomControl___c__DisplayClass243_0_o *)v15->fields.voicePlayBtn;
   if ( !this )
     goto LABEL_44;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-  v12 = v4->fields.__4__this;
-  if ( !v12 )
+  v16 = v8->fields.__4__this;
+  if ( !v16 )
     goto LABEL_44;
-  this = (MyRoomControl___c__DisplayClass243_0_o *)v12->fields.svtClickCollider;
+  this = (MyRoomControl___c__DisplayClass243_0_o *)v16->fields.svtClickCollider;
   if ( !this )
     goto LABEL_44;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, 0, 0);
-  v13 = v4->fields.__4__this;
-  if ( !v13 )
+  v17 = v8->fields.__4__this;
+  if ( !v17 )
     goto LABEL_44;
-  this = (MyRoomControl___c__DisplayClass243_0_o *)v13->fields.voiceClickCollider;
+  this = (MyRoomControl___c__DisplayClass243_0_o *)v17->fields.voiceClickCollider;
   if ( !this )
     goto LABEL_44;
   UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)this, 0, 0);
-  this = (MyRoomControl___c__DisplayClass243_0_o *)v4->fields.__4__this;
+  this = (MyRoomControl___c__DisplayClass243_0_o *)v8->fields.__4__this;
   if ( !this )
     goto LABEL_44;
   if ( LOBYTE(this[19].fields.end_act) )
-    MyRoomControl__setNormalFace_33724456((MyRoomControl_o *)this, 0, 0);
+    MyRoomControl__setNormalFace_33752008((MyRoomControl_o *)this, 0, 0);
   else
     MyRoomControl__setFaceType((MyRoomControl_o *)this, 0);
-  this = (MyRoomControl___c__DisplayClass243_0_o *)v4->fields.__4__this;
+  this = (MyRoomControl___c__DisplayClass243_0_o *)v8->fields.__4__this;
   if ( !this )
     goto LABEL_44;
   formId = this[18].fields.formId;
@@ -17175,10 +18374,10 @@ void MyRoomControl___c__DisplayClass243_0___SetMaterialSvtFigure_g__OnEnd_0(
     if ( !this )
       goto LABEL_44;
     StandFigureBack__Fadein((StandFigureBack_o *)this, 0, 0);
-    v18 = v4->fields.__4__this;
-    if ( !v18 )
+    v22 = v8->fields.__4__this;
+    if ( !v22 )
       goto LABEL_44;
-    this = (MyRoomControl___c__DisplayClass243_0_o *)v18->fields.standFigureBack;
+    this = (MyRoomControl___c__DisplayClass243_0_o *)v22->fields.standFigureBack;
     if ( !this )
       goto LABEL_44;
     this = (MyRoomControl___c__DisplayClass243_0_o *)StandFigureBack__GetSvtStandFigure((StandFigureBack_o *)this, 0, 0);
@@ -17193,71 +18392,71 @@ void MyRoomControl___c__DisplayClass243_0___SetMaterialSvtFigure_g__OnEnd_0(
     if ( !this )
       goto LABEL_44;
     localPosition = (unsigned int)UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-    v20 = v4->fields.__4__this;
-    if ( !v20 )
+    v24 = v8->fields.__4__this;
+    if ( !v24 )
       goto LABEL_44;
-    this = (MyRoomControl___c__DisplayClass243_0_o *)v20->fields.svtObj;
+    this = (MyRoomControl___c__DisplayClass243_0_o *)v24->fields.svtObj;
     if ( !this )
       goto LABEL_44;
-    v21 = *(float *)&localPosition;
+    v25 = *(float *)&localPosition;
     this = (MyRoomControl___c__DisplayClass243_0_o *)UnityEngine_GameObject__get_transform(
                                                        (UnityEngine_GameObject_o *)this,
                                                        0);
     if ( !this )
       goto LABEL_44;
-    v27 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-    v22 = v4->fields.__4__this;
-    if ( !v22 )
+    v31 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+    v26 = v8->fields.__4__this;
+    if ( !v26 )
       goto LABEL_44;
-    this = (MyRoomControl___c__DisplayClass243_0_o *)v22->fields.svtObj;
+    this = (MyRoomControl___c__DisplayClass243_0_o *)v26->fields.svtObj;
     if ( !this )
       goto LABEL_44;
-    y = v27.fields.y;
+    y = v31.fields.y;
     this = (MyRoomControl___c__DisplayClass243_0_o *)UnityEngine_GameObject__get_transform(
                                                        (UnityEngine_GameObject_o *)this,
                                                        0);
     if ( !this )
       goto LABEL_44;
-    v28 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-    this = (MyRoomControl___c__DisplayClass243_0_o *)v4->fields.__4__this;
+    v32 = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
+    this = (MyRoomControl___c__DisplayClass243_0_o *)v8->fields.__4__this;
     if ( !this )
       goto LABEL_44;
-    v24 = -v21;
-    v25 = y;
+    v28 = -v25;
+    v29 = y;
     MyRoomControl__moveControl(
       (MyRoomControl_o *)this,
       (UnityEngine_GameObject_o *)this[4].monitor,
-      v28,
-      (System_String_o *)StringLiteral_11293/*"ReleaseTouch"*/,
+      v32,
+      (System_String_o *)StringLiteral_11299/*"ReleaseTouch"*/,
       0);
   }
   else if ( !formId )
   {
     MyRoomControl__ChangeSetStandFigureObj((MyRoomControl_o *)this, 1, 0, 0);
-    v15 = v4->fields.__4__this;
-    if ( v15 )
+    v19 = v8->fields.__4__this;
+    if ( v19 )
     {
-      v16 = v15->fields.standFigureBack;
-      v17 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+      v20 = v19->fields.standFigureBack;
+      v21 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
       System_Action___ctor(
-        v17,
-        (Il2CppObject *)v4,
+        v21,
+        (Il2CppObject *)v8,
         Method_MyRoomControl___c__DisplayClass243_0__SetMaterialSvtFigure_b__2__,
         0);
-      if ( v16 )
+      if ( v20 )
       {
-        StandFigureBack__Fadein(v16, v17, 0);
+        StandFigureBack__Fadein(v20, v21, 0);
         return;
       }
     }
 LABEL_44:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  ActionExtensions__Call(v4->fields.end_act, 0);
-  v26 = v4->fields.__4__this;
-  if ( !v26 )
+  ActionExtensions__Call(v8->fields.end_act, 0);
+  v30 = v8->fields.__4__this;
+  if ( !v30 )
     goto LABEL_44;
-  v26->fields.isSvtLoading = 0;
+  v30->fields.isSvtLoading = 0;
 }
 
 
@@ -17281,11 +18480,11 @@ void MyRoomControl___c__DisplayClass250_0___resetSvtVoiceData_b__0(
   struct MyRoomControl_o *v7; // x8
 
   v2 = this;
-  if ( (byte_4CB16F0 & 1) == 0 )
+  if ( (byte_4CC27FD & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    this = (MyRoomControl___c__DisplayClass250_0_o *)sub_1C6BA08(&StringLiteral_8289/*"LOAD_END"*/);
-    byte_4CB16F0 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    this = (MyRoomControl___c__DisplayClass250_0_o *)sub_1C713B0(&StringLiteral_8293/*"LOAD_END"*/);
+    byte_4CC27FD = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -17302,15 +18501,15 @@ void MyRoomControl___c__DisplayClass250_0___resetSvtVoiceData_b__0(
         this = (MyRoomControl___c__DisplayClass250_0_o *)System_Collections_Generic_List_int___get_Item(
                                                            (System_Collections_Generic_List_int__o *)this,
                                                            v4->fields.figureSvtDispIdx,
-                                                           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__),
+                                                           (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__),
         !svtCtr)
     || (MyRoomSvtControl__initFirstPlayVoiceList(svtCtr, svtVoiceEnt, (int32_t)this, 0), (v7 = v2->fields.__4__this) == 0)
     || (this = (MyRoomControl___c__DisplayClass250_0_o *)v7->fields.myRoomFsm) == 0 )
   {
 LABEL_11:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_8289/*"LOAD_END"*/, 0);
+  PlayMakerFSM__SendEvent((PlayMakerFSM_o *)this, (System_String_o *)StringLiteral_8293/*"LOAD_END"*/, 0);
 }
 
 
@@ -17330,7 +18529,7 @@ void MyRoomControl___c__DisplayClass305_0___SetGallery_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__SetMaskCollider(_4__this, 0, 0);
 }
 
@@ -17349,7 +18548,7 @@ void MyRoomControl___c__DisplayClass305_0___SetGallery_b__1(
     || (v4 = this, (this = (MyRoomControl___c__DisplayClass305_0_o *)_4__this->fields.mStateMaterial) == 0)
     || (MyRoomStateMaterial__GalleryBack((MyRoomStateMaterial_o *)this, 1, v2), (v5 = v4->fields.__4__this) == 0) )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v5->fields.titleInfo, 1, 0);
 }
@@ -17366,42 +18565,54 @@ void MyRoomControl___c__DisplayClass305_0___SetGallery_b__2(
   Il2CppObject *v7; // x20
   UnityEngine_Transform_o *transform; // x21
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  struct MyRoomControl_o *v11; // x8
-  Il2CppObject *v12; // x25
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  struct MyRoomControl_o *v15; // x8
+  Il2CppObject *v16; // x25
   CGThumbnailDialog_o *klass; // x20
   System_Action_o *_9__3; // x23
   System_Collections_Generic_List_GalleryEntity__o *galleryList; // x21
   int32_t warId; // w22
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  System_Action_o *v19; // x24
-  System_Action_o *_9__4; // x25
   int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  struct MyRoomControl_o *v23; // x8
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  System_Action_o *v27; // x24
+  System_Action_o *_9__4; // x25
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
+  struct MyRoomControl_o *v35; // x8
 
   v4 = this;
-  if ( (byte_4CB16F1 & 1) == 0 )
+  if ( (byte_4CC27FE & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_CGThumbnailDialog___);
-    sub_1C6BA08(&Method_MyRoomControl_OnClickBack__);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__3__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__4__);
-    this = (MyRoomControl___c__DisplayClass305_0_o *)sub_1C6BA08(&StringLiteral_3307/*"CGThumbnailDialog"*/);
-    byte_4CB16F1 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_AssetData_GetObject_GameObject____78636968);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_CGThumbnailDialog___);
+    sub_1C713B0(&Method_MyRoomControl_OnClickBack__);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__3__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__4__);
+    this = (MyRoomControl___c__DisplayClass305_0_o *)sub_1C713B0(&StringLiteral_3310/*"CGThumbnailDialog"*/);
+    byte_4CC27FE = 1;
   }
   if ( !assetData )
     goto LABEL_23;
   _4__this = v4->fields.__4__this;
-  this = (MyRoomControl___c__DisplayClass305_0_o *)AssetData__GetObject_object__51495936(
+  this = (MyRoomControl___c__DisplayClass305_0_o *)AssetData__GetObject_object__51560868(
                                                      assetData,
-                                                     (System_String_o *)StringLiteral_3307/*"CGThumbnailDialog"*/,
-                                                     (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+                                                     (System_String_o *)StringLiteral_3310/*"CGThumbnailDialog"*/,
+                                                     (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
   v6 = v4->fields.__4__this;
   if ( !v6 )
     goto LABEL_23;
@@ -17412,19 +18623,27 @@ void MyRoomControl___c__DisplayClass305_0___SetGallery_b__2(
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (MyRoomControl___c__DisplayClass305_0_o *)UnityEngine_Object__Instantiate_object__52199488(
+  this = (MyRoomControl___c__DisplayClass305_0_o *)UnityEngine_Object__Instantiate_object__52264420(
                                                      v7,
                                                      transform,
-                                                     (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+                                                     (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
   if ( !this )
     goto LABEL_23;
   this = (MyRoomControl___c__DisplayClass305_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_CGThumbnailDialog___);
+                                                     (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_CGThumbnailDialog___);
   if ( !_4__this )
     goto LABEL_23;
   _4__this->fields.cgThumbnailDialog = (struct CGThumbnailDialog_o *)this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.cgThumbnailDialog, (int32_t)this, v9, v10);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&_4__this->fields.cgThumbnailDialog,
+    (int32_t)this,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14);
   this = (MyRoomControl___c__DisplayClass305_0_o *)v4->fields.__4__this;
   if ( !this )
     goto LABEL_23;
@@ -17434,10 +18653,10 @@ void MyRoomControl___c__DisplayClass305_0___SetGallery_b__2(
     goto LABEL_23;
   LODWORD(this[17].fields.__4__this) = 20;
   MyRoomControl__setSvtFigureActive((MyRoomControl_o *)this, 20, 1, 0);
-  v11 = v4->fields.__4__this;
-  if ( !v11 )
+  v15 = v4->fields.__4__this;
+  if ( !v15 )
     goto LABEL_23;
-  this = (MyRoomControl___c__DisplayClass305_0_o *)v11->fields.cgThumbnailDialog;
+  this = (MyRoomControl___c__DisplayClass305_0_o *)v15->fields.cgThumbnailDialog;
   if ( !this )
     goto LABEL_23;
   this = (MyRoomControl___c__DisplayClass305_0_o *)UnityEngine_Component__get_gameObject(
@@ -17446,38 +18665,38 @@ void MyRoomControl___c__DisplayClass305_0___SetGallery_b__2(
   if ( !this )
     goto LABEL_23;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-  v12 = (Il2CppObject *)v4->fields.__4__this;
-  if ( !v12 )
+  v16 = (Il2CppObject *)v4->fields.__4__this;
+  if ( !v16 )
     goto LABEL_23;
-  klass = (CGThumbnailDialog_o *)v12[58].klass;
+  klass = (CGThumbnailDialog_o *)v16[58].klass;
   _9__3 = v4->fields.__9__3;
   galleryList = v4->fields.galleryList;
   warId = v4->fields.warId;
   if ( !_9__3 )
   {
-    _9__3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(_9__3, (Il2CppObject *)v4, Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__3__, 0);
     v4->fields.__9__3 = _9__3;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__3, (int32_t)_9__3, v17, v18);
-    v12 = (Il2CppObject *)v4->fields.__4__this;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__3, (int32_t)_9__3, v21, v22, v23, v24, v25, v26);
+    v16 = (Il2CppObject *)v4->fields.__4__this;
   }
-  v19 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v19, v12, (intptr_t)Method_MyRoomControl_OnClickBack__, 0);
+  v27 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v27, v16, (intptr_t)Method_MyRoomControl_OnClickBack__, 0);
   _9__4 = v4->fields.__9__4;
   if ( !_9__4 )
   {
-    _9__4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__4 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(_9__4, (Il2CppObject *)v4, Method_MyRoomControl___c__DisplayClass305_0__SetGallery_b__4__, 0);
     v4->fields.__9__4 = _9__4;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__4, (int32_t)_9__4, v21, v22);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__4, (int32_t)_9__4, v29, v30, v31, v32, v33, v34);
   }
   if ( !klass
-    || (CGThumbnailDialog__Open(klass, galleryList, warId, _9__3, v19, _9__4, 0), (v23 = v4->fields.__4__this) == 0) )
+    || (CGThumbnailDialog__Open(klass, galleryList, warId, _9__3, v27, _9__4, 0), (v35 = v4->fields.__4__this) == 0) )
   {
 LABEL_23:
-    sub_1C6BC60(this, assetData);
+    sub_1C71608(this, assetData);
   }
-  BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v23->fields.titleInfo, 0, 0);
+  BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v35->fields.titleInfo, 0, 0);
 }
 
 
@@ -17489,7 +18708,7 @@ void MyRoomControl___c__DisplayClass305_0___SetGallery_b__3(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__SetMaskCollider(_4__this, 0, 0);
 }
 
@@ -17508,7 +18727,7 @@ void MyRoomControl___c__DisplayClass305_0___SetGallery_b__4(
     || (v4 = this, (this = (MyRoomControl___c__DisplayClass305_0_o *)_4__this->fields.mStateMaterial) == 0)
     || (MyRoomStateMaterial__GalleryBack((MyRoomStateMaterial_o *)this, 1, v2), (v5 = v4->fields.__4__this) == 0) )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   BasicHelper__SetActiveSafely((UnityEngine_Component_o *)v5->fields.titleInfo, 1, 0);
 }
@@ -17534,10 +18753,10 @@ void MyRoomControl___c__DisplayClass325_0___SetFavoriteSvt_b__0(
   struct MyRoomControl_o *v7; // x8
 
   v2 = this;
-  if ( (byte_4CB16F2 & 1) == 0 )
+  if ( (byte_4CC27FF & 1) == 0 )
   {
-    this = (MyRoomControl___c__DisplayClass325_0_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    byte_4CB16F2 = 1;
+    this = (MyRoomControl___c__DisplayClass325_0_o *)sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    byte_4CC27FF = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -17554,12 +18773,12 @@ void MyRoomControl___c__DisplayClass325_0___SetFavoriteSvt_b__0(
         this = (MyRoomControl___c__DisplayClass325_0_o *)System_Collections_Generic_List_int___get_Item(
                                                            (System_Collections_Generic_List_int__o *)this,
                                                            v4->fields.figureSvtDispIdx,
-                                                           (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__),
+                                                           (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__),
         !svtCtr)
     || (MyRoomSvtControl__initFirstPlayVoiceList(svtCtr, svtVoiceEnt, (int32_t)this, 0), (v7 = v2->fields.__4__this) == 0) )
   {
 LABEL_10:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   v7->fields.isExistVoiceData = 1;
 }
@@ -17573,14 +18792,14 @@ void MyRoomControl___c__DisplayClass325_0___SetFavoriteSvt_b__1(
   __int64 v4; // x1
   struct System_Action_o *callback; // x8
 
-  if ( (byte_4CB16F3 & 1) == 0 )
+  if ( (byte_4CC2800 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB16F3 = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC2800 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0);
   callback = this->fields.callback;
   if ( callback )
@@ -17611,17 +18830,21 @@ void MyRoomControl___c__DisplayClass344_0___svtVoicePlayAct_b__0(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct MyRoomControl_o *_4__this; // x9
   struct StandFigureBack_o *bondsStandFigureBack; // x8
-  MyRoomControl___c__DisplayClass344_0_o *v6; // x19
+  MyRoomControl___c__DisplayClass344_0_o *v10; // x19
   struct System_Collections_Generic_List_StandFigureCollect__o *standFigureCollectList; // x1
-  struct MyRoomControl_o *v8; // x8
+  struct MyRoomControl_o *v12; // x8
   float y; // s8
   float z; // s9
-  struct MyRoomControl_o *v11; // x8
+  struct MyRoomControl_o *v15; // x8
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v13; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v17; // 0:s0.4,4:s1.4,8:s2.4
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -17629,14 +18852,14 @@ void MyRoomControl___c__DisplayClass344_0___svtVoicePlayAct_b__0(
   bondsStandFigureBack = _4__this->fields.bondsStandFigureBack;
   if ( !bondsStandFigureBack )
     goto LABEL_14;
-  v6 = this;
+  v10 = this;
   this = (MyRoomControl___c__DisplayClass344_0_o *)_4__this->fields.bondsSvtCtr;
   if ( !this )
     goto LABEL_14;
   standFigureCollectList = bondsStandFigureBack->fields.standFigureCollectList;
   this[2].monitor = standFigureCollectList;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this[2].monitor, (int32_t)standFigureCollectList, v2, v3);
-  this = (MyRoomControl___c__DisplayClass344_0_o *)v6->fields.bondsSvtObj;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this[2].monitor, (int32_t)standFigureCollectList, v2, v3, v4, v5, v6, v7);
+  this = (MyRoomControl___c__DisplayClass344_0_o *)v10->fields.bondsSvtObj;
   if ( !this )
     goto LABEL_14;
   this = (MyRoomControl___c__DisplayClass344_0_o *)UnityEngine_GameObject__get_transform(
@@ -17645,18 +18868,18 @@ void MyRoomControl___c__DisplayClass344_0___svtVoicePlayAct_b__0(
   if ( !this )
     goto LABEL_14;
   localPosition = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0);
-  v8 = v6->fields.__4__this;
-  if ( !v8 )
+  v12 = v10->fields.__4__this;
+  if ( !v12 )
     goto LABEL_14;
-  this = (MyRoomControl___c__DisplayClass344_0_o *)v8->fields.bondsStandFigureBack;
+  this = (MyRoomControl___c__DisplayClass344_0_o *)v12->fields.bondsStandFigureBack;
   if ( !this )
     goto LABEL_14;
   y = localPosition.fields.y;
   z = localPosition.fields.z;
   StandFigureBack__Fadein((StandFigureBack_o *)this, 0, 0);
-  v11 = v6->fields.__4__this;
-  if ( !v11
-    || (this = (MyRoomControl___c__DisplayClass344_0_o *)v11->fields.bondsStandFigureBack) == 0
+  v15 = v10->fields.__4__this;
+  if ( !v15
+    || (this = (MyRoomControl___c__DisplayClass344_0_o *)v15->fields.bondsStandFigureBack) == 0
     || (this = (MyRoomControl___c__DisplayClass344_0_o *)StandFigureBack__GetSvtStandFigure(
                                                            (StandFigureBack_o *)this,
                                                            0,
@@ -17667,13 +18890,13 @@ void MyRoomControl___c__DisplayClass344_0___svtVoicePlayAct_b__0(
                                                            0)) == 0 )
   {
 LABEL_14:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  v13.fields.x = -COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0));
-  v13.fields.y = y;
-  v13.fields.z = z;
-  GameObjectExtensions__SetLocalPosition(v6->fields.bondsSvtObj, v13, 0);
-  v6->fields.createStandEnd = 1;
+  v17.fields.x = -COERCE_FLOAT(UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)this, 0));
+  v17.fields.y = y;
+  v17.fields.z = z;
+  GameObjectExtensions__SetLocalPosition(v10->fields.bondsSvtObj, v17, 0);
+  v10->fields.createStandEnd = 1;
 }
 
 
@@ -17693,7 +18916,7 @@ void MyRoomControl___c__DisplayClass360_0___PlayOpening_b__0(
 
   player = this->fields.player;
   if ( !player )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   CRIMoviePlayer__Dispose(player, 0);
 }
 
@@ -17715,7 +18938,7 @@ bool MyRoomControl___c__DisplayClass381_0___LoadMultipleServant_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this || (multipleStandFigureBacks = _4__this->fields.multipleStandFigureBacks) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return this->fields.loadedCount < SLODWORD(multipleStandFigureBacks->max_length);
 }
 
@@ -17766,7 +18989,7 @@ void MyRoomControl___c__DisplayClass385_0___DispDefaultMyRoom_b__0(
       callback->fields.method);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__ReleaseTouch(_4__this, 0);
 }
 
@@ -17785,7 +19008,7 @@ void MyRoomControl___c__DisplayClass385_0___DispDefaultMyRoom_b__1(
       callback->fields.method);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__ReleaseTouch(_4__this, 0);
 }
 
@@ -17803,118 +19026,174 @@ void MyRoomControl___c__DisplayClass396_0___LoadPhotoCampaignAssets_b__0(
         AssetData_o *assetData,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  AssetData_o *v4; // x20
-  MyRoomControl___c__DisplayClass396_0_o *v5; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  AssetData_o *v8; // x20
+  MyRoomControl___c__DisplayClass396_0_o *v9; // x19
   struct MyRoomControl_o *_4__this; // x8
   MyRoomControl___c__DisplayClass396_0_o **p_fields; // x23
-  Il2CppObject *Object_object__51495936; // x21
+  Il2CppObject *Object_object__51560868; // x21
   Il2CppObject *Component_object; // x21
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v12; // x8
-  Il2CppObject *v13; // x21
-  Il2CppObject *v14; // x21
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v17; // x8
-  MyRoomControl___c__DisplayClass396_0_o *v18; // x21
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v21; // x21
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v24; // x26
-  Il2CppObject *v25; // x21
-  UnityEngine_Transform_o *transform; // x22
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v29; // x22
-  Il2CppObject *v30; // x21
-  UnityEngine_Transform_o *v31; // x0
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v34; // x8
-  MyRoomControl___c__DisplayClass396_0_o *v35; // x22
-  Il2CppObject *v36; // x21
-  UnityEngine_Transform_o *v37; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v20; // x8
+  Il2CppObject *v21; // x21
+  Il2CppObject *v22; // x21
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v29; // x8
+  MyRoomControl___c__DisplayClass396_0_o *v30; // x21
+  int32_t v31; // w2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  int32_t v34; // w5
+  int64_t v35; // x6
+  System_String_o *v36; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v37; // x21
   int32_t v38; // w2
-  const MethodInfo *v39; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v40; // x8
-  MyRoomControl___c__DisplayClass396_0_o *v41; // x21
-  int32_t v42; // w2
-  const MethodInfo *v43; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v44; // x22
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  int32_t v41; // w5
+  int64_t v42; // x6
+  System_String_o *v43; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v44; // x26
   Il2CppObject *v45; // x21
-  UnityEngine_Transform_o *v46; // x0
+  UnityEngine_Transform_o *transform; // x22
   int32_t v47; // w2
-  const MethodInfo *v48; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v49; // x22
-  Il2CppObject *v50; // x21
-  UnityEngine_Transform_o *v51; // x0
-  int32_t v52; // w2
-  const MethodInfo *v53; // x3
-  MyRoomControl___c__DisplayClass396_0_o *v54; // x8
-  MyRoomControl___c__DisplayClass396_0_o *v55; // x21
+  int32_t v48; // w3
+  System_String_o *v49; // x4
+  int32_t v50; // w5
+  int64_t v51; // x6
+  System_String_o *v52; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v53; // x22
+  Il2CppObject *v54; // x21
+  UnityEngine_Transform_o *v55; // x0
   int32_t v56; // w2
-  const MethodInfo *v57; // x3
+  int32_t v57; // w3
+  System_String_o *v58; // x4
+  int32_t v59; // w5
+  int64_t v60; // x6
+  System_String_o *v61; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v62; // x8
+  MyRoomControl___c__DisplayClass396_0_o *v63; // x22
+  Il2CppObject *v64; // x21
+  UnityEngine_Transform_o *v65; // x0
+  int32_t v66; // w2
+  int32_t v67; // w3
+  System_String_o *v68; // x4
+  int32_t v69; // w5
+  int64_t v70; // x6
+  System_String_o *v71; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v72; // x8
+  MyRoomControl___c__DisplayClass396_0_o *v73; // x21
+  int32_t v74; // w2
+  int32_t v75; // w3
+  System_String_o *v76; // x4
+  int32_t v77; // w5
+  int64_t v78; // x6
+  System_String_o *v79; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v80; // x22
+  Il2CppObject *v81; // x21
+  UnityEngine_Transform_o *v82; // x0
+  int32_t v83; // w2
+  int32_t v84; // w3
+  System_String_o *v85; // x4
+  int32_t v86; // w5
+  int64_t v87; // x6
+  System_String_o *v88; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v89; // x22
+  Il2CppObject *v90; // x21
+  UnityEngine_Transform_o *v91; // x0
+  int32_t v92; // w2
+  int32_t v93; // w3
+  System_String_o *v94; // x4
+  int32_t v95; // w5
+  int64_t v96; // x6
+  System_String_o *v97; // x7
+  MyRoomControl___c__DisplayClass396_0_o *v98; // x8
+  MyRoomControl___c__DisplayClass396_0_o *v99; // x21
+  int32_t v100; // w2
+  int32_t v101; // w3
+  System_String_o *v102; // x4
+  int32_t v103; // w5
+  int64_t v104; // x6
+  System_String_o *v105; // x7
 
-  v4 = assetData;
-  v5 = this;
-  if ( (byte_4CB16F4 & 1) == 0 )
+  v8 = assetData;
+  v9 = this;
+  if ( (byte_4CC2801 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_AssetData_GetObject_GameObject____78568200);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MasterEquipSettingDialog___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_PhotoCampaignStaffCostumeSelectDialog___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_PhotoCampaignStaffSelectDialog___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_PhotoFrameSelectDialog___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_PhotoLayerChangeComponent___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_PhotoSettingButtonComponent___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_PhotoTargetSelectDialog___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&StringLiteral_20396/*"img_bg_shutter"*/);
-    sub_1C6BA08(&StringLiteral_8378/*"LayerChangeButton"*/);
-    sub_1C6BA08(&StringLiteral_10622/*"PhotoSettingButton"*/);
-    sub_1C6BA08(&StringLiteral_8939/*"MasterEquipSettingDialog"*/);
-    sub_1C6BA08(&StringLiteral_5346/*"DownloadPhotoCampaignAtlas"*/);
-    sub_1C6BA08(&StringLiteral_17196/*"bit_camera_shutter"*/);
-    sub_1C6BA08(&StringLiteral_10617/*"PhotoCampaignStaffCostumeSelectDialog"*/);
-    sub_1C6BA08(&StringLiteral_10619/*"PhotoFrameSelectDialog"*/);
-    sub_1C6BA08(&StringLiteral_17195/*"bit_camera_iconblink"*/);
-    sub_1C6BA08(&StringLiteral_10689/*"Polaroid_btn_shutter"*/);
-    sub_1C6BA08(&StringLiteral_10618/*"PhotoCampaignStaffSelectDialog"*/);
-    sub_1C6BA08(&StringLiteral_5347/*"DownloadPhotoFrameAtlas"*/);
-    this = (MyRoomControl___c__DisplayClass396_0_o *)sub_1C6BA08(&StringLiteral_10624/*"PhotoTargetSelectDialog"*/);
-    byte_4CB16F4 = 1;
+    sub_1C713B0(&Method_AssetData_GetObject_GameObject____78636968);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MasterEquipSettingDialog___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_PhotoCampaignStaffCostumeSelectDialog___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_PhotoCampaignStaffSelectDialog___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_PhotoFrameSelectDialog___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_PhotoLayerChangeComponent___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_PhotoSettingButtonComponent___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_PhotoTargetSelectDialog___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&StringLiteral_20409/*"img_bg_shutter"*/);
+    sub_1C713B0(&StringLiteral_8382/*"LayerChangeButton"*/);
+    sub_1C713B0(&StringLiteral_10628/*"PhotoSettingButton"*/);
+    sub_1C713B0(&StringLiteral_8943/*"MasterEquipSettingDialog"*/);
+    sub_1C713B0(&StringLiteral_5349/*"DownloadPhotoCampaignAtlas"*/);
+    sub_1C713B0(&StringLiteral_17203/*"bit_camera_shutter"*/);
+    sub_1C713B0(&StringLiteral_10623/*"PhotoCampaignStaffCostumeSelectDialog"*/);
+    sub_1C713B0(&StringLiteral_10625/*"PhotoFrameSelectDialog"*/);
+    sub_1C713B0(&StringLiteral_17202/*"bit_camera_iconblink"*/);
+    sub_1C713B0(&StringLiteral_10695/*"Polaroid_btn_shutter"*/);
+    sub_1C713B0(&StringLiteral_10624/*"PhotoCampaignStaffSelectDialog"*/);
+    sub_1C713B0(&StringLiteral_5350/*"DownloadPhotoFrameAtlas"*/);
+    this = (MyRoomControl___c__DisplayClass396_0_o *)sub_1C713B0(&StringLiteral_10630/*"PhotoTargetSelectDialog"*/);
+    byte_4CC2801 = 1;
   }
-  p_fields = (MyRoomControl___c__DisplayClass396_0_o **)&v5->fields;
-  _4__this = v5->fields.__4__this;
+  p_fields = (MyRoomControl___c__DisplayClass396_0_o **)&v9->fields;
+  _4__this = v9->fields.__4__this;
   if ( !_4__this )
     goto LABEL_68;
-  _4__this->fields.photoCampaignAssetData = v4;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.photoCampaignAssetData, (int32_t)v4, (int32_t)method, v3);
-  if ( !v4 )
+  _4__this->fields.photoCampaignAssetData = v8;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&_4__this->fields.photoCampaignAssetData,
+    (int32_t)v8,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+  if ( !v8 )
     goto LABEL_68;
-  Object_object__51495936 = AssetData__GetObject_object__51495936(
-                              v4,
-                              (System_String_o *)StringLiteral_5346/*"DownloadPhotoCampaignAtlas"*/,
-                              (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+  Object_object__51560868 = AssetData__GetObject_object__51560868(
+                              v8,
+                              (System_String_o *)StringLiteral_5349/*"DownloadPhotoCampaignAtlas"*/,
+                              (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__op_Inequality(
-                                                     (UnityEngine_Object_o *)Object_object__51495936,
+                                                     (UnityEngine_Object_o *)Object_object__51560868,
                                                      0,
                                                      0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( !Object_object__51495936 )
+    if ( !Object_object__51560868 )
       goto LABEL_68;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
-                         (UnityEngine_GameObject_o *)Object_object__51495936,
-                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+                         (UnityEngine_GameObject_o *)Object_object__51560868,
+                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__op_Inequality(
@@ -17923,11 +19202,19 @@ void MyRoomControl___c__DisplayClass396_0___LoadPhotoCampaignAssets_b__0(
                                                        0);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
-      v12 = *p_fields;
+      v20 = *p_fields;
       if ( !*p_fields )
         goto LABEL_68;
-      v12[44].monitor = Component_object;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v12[44].monitor, (int32_t)Component_object, v10, v11);
+      v20[44].monitor = Component_object;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&v20[44].monitor,
+        (int32_t)Component_object,
+        v14,
+        v15,
+        v16,
+        v17,
+        v18,
+        v19);
     }
   }
   this = *p_fields;
@@ -17936,7 +19223,7 @@ void MyRoomControl___c__DisplayClass396_0___LoadPhotoCampaignAssets_b__0(
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)this,
     (UISprite_o *)this[24].fields.callBack,
-    (System_String_o *)StringLiteral_10689/*"Polaroid_btn_shutter"*/,
+    (System_String_o *)StringLiteral_10695/*"Polaroid_btn_shutter"*/,
     0);
   this = *p_fields;
   if ( !*p_fields )
@@ -17944,175 +19231,175 @@ void MyRoomControl___c__DisplayClass396_0___LoadPhotoCampaignAssets_b__0(
   MyRoomControl__SetPhotoCampaignSprite(
     (MyRoomControl_o *)this,
     (UISprite_o *)this[25].klass,
-    (System_String_o *)StringLiteral_20396/*"img_bg_shutter"*/,
+    (System_String_o *)StringLiteral_20409/*"img_bg_shutter"*/,
     0);
-  v13 = AssetData__GetObject_object__51495936(
-          v4,
-          (System_String_o *)StringLiteral_5347/*"DownloadPhotoFrameAtlas"*/,
-          (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+  v21 = AssetData__GetObject_object__51560868(
+          v8,
+          (System_String_o *)StringLiteral_5350/*"DownloadPhotoFrameAtlas"*/,
+          (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v13, 0, 0);
+  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v21, 0, 0);
   if ( ((unsigned __int8)this & 1) != 0 )
   {
-    if ( !v13 )
+    if ( !v21 )
       goto LABEL_68;
-    v14 = UnityEngine_GameObject__GetComponent_object_(
-            (UnityEngine_GameObject_o *)v13,
-            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
+    v22 = UnityEngine_GameObject__GetComponent_object_(
+            (UnityEngine_GameObject_o *)v21,
+            (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UIAtlas___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__op_Inequality(
-                                                       (UnityEngine_Object_o *)v14,
+                                                       (UnityEngine_Object_o *)v22,
                                                        0,
                                                        0);
     if ( ((unsigned __int8)this & 1) != 0 )
     {
-      v17 = *p_fields;
+      v29 = *p_fields;
       if ( !*p_fields )
         goto LABEL_68;
-      v17[44].fields.__4__this = (struct MyRoomControl_o *)v14;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v17[44].fields, (int32_t)v14, v15, v16);
+      v29[44].fields.__4__this = (struct MyRoomControl_o *)v22;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&v29[44].fields, (int32_t)v22, v23, v24, v25, v26, v27, v28);
     }
   }
-  v18 = *p_fields;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51495936(
-                                                     v4,
-                                                     (System_String_o *)StringLiteral_17195/*"bit_camera_iconblink"*/,
-                                                     (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
-  if ( !v18 )
+  v30 = *p_fields;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51560868(
+                                                     v8,
+                                                     (System_String_o *)StringLiteral_17202/*"bit_camera_iconblink"*/,
+                                                     (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
+  if ( !v30 )
     goto LABEL_68;
-  v18[38].fields.callBack = (struct System_Action_o *)this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v18[38].fields.callBack, (int32_t)this, v19, v20);
-  v21 = *p_fields;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51495936(
-                                                     v4,
-                                                     (System_String_o *)StringLiteral_17196/*"bit_camera_shutter"*/,
-                                                     (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
-  if ( !v21 )
+  v30[38].fields.callBack = (struct System_Action_o *)this;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v30[38].fields.callBack, (int32_t)this, v31, v32, v33, v34, v35, v36);
+  v37 = *p_fields;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51560868(
+                                                     v8,
+                                                     (System_String_o *)StringLiteral_17203/*"bit_camera_shutter"*/,
+                                                     (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
+  if ( !v37 )
     goto LABEL_68;
-  v21[39].monitor = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v21[39].monitor, (int32_t)this, v22, v23);
-  v24 = *p_fields;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51495936(
-                                                     v4,
-                                                     (System_String_o *)StringLiteral_10624/*"PhotoTargetSelectDialog"*/,
-                                                     (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+  v37[39].monitor = this;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v37[39].monitor, (int32_t)this, v38, v39, v40, v41, v42, v43);
+  v44 = *p_fields;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51560868(
+                                                     v8,
+                                                     (System_String_o *)StringLiteral_10630/*"PhotoTargetSelectDialog"*/,
+                                                     (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
   if ( !*p_fields )
     goto LABEL_68;
-  v25 = (Il2CppObject *)this;
+  v45 = (Il2CppObject *)this;
   this = (MyRoomControl___c__DisplayClass396_0_o *)(*p_fields)[13].monitor;
   if ( !this )
     goto LABEL_68;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52199488(
-                                                     v25,
+  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52264420(
+                                                     v45,
                                                      transform,
-                                                     (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+                                                     (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
   if ( !this )
     goto LABEL_68;
   this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_PhotoTargetSelectDialog___);
-  if ( !v24 )
+                                                     (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_PhotoTargetSelectDialog___);
+  if ( !v44 )
     goto LABEL_68;
-  v24[41].klass = (MyRoomControl___c__DisplayClass396_0_c *)this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v24[41], (int32_t)this, v27, v28);
+  v44[41].klass = (MyRoomControl___c__DisplayClass396_0_c *)this;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v44[41], (int32_t)this, v47, v48, v49, v50, v51, v52);
   if ( !*p_fields )
     goto LABEL_68;
   this = (MyRoomControl___c__DisplayClass396_0_o *)(*p_fields)[41].klass;
   if ( !this )
     goto LABEL_68;
   PhotoTargetSelectDialog__Init((PhotoTargetSelectDialog_o *)this, 0);
-  v29 = *p_fields;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51495936(
-                                                     v4,
-                                                     (System_String_o *)StringLiteral_10618/*"PhotoCampaignStaffSelectDialog"*/,
-                                                     (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+  v53 = *p_fields;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51560868(
+                                                     v8,
+                                                     (System_String_o *)StringLiteral_10624/*"PhotoCampaignStaffSelectDialog"*/,
+                                                     (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
   if ( !*p_fields )
     goto LABEL_68;
-  v30 = (Il2CppObject *)this;
+  v54 = (Il2CppObject *)this;
   this = (MyRoomControl___c__DisplayClass396_0_o *)(*p_fields)[13].monitor;
   if ( !this )
     goto LABEL_68;
-  v31 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52199488(
-                                                     v30,
-                                                     v31,
-                                                     (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+  v55 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52264420(
+                                                     v54,
+                                                     v55,
+                                                     (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
   if ( !this )
     goto LABEL_68;
   this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_PhotoCampaignStaffSelectDialog___);
-  if ( !v29 )
+                                                     (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_PhotoCampaignStaffSelectDialog___);
+  if ( !v53 )
     goto LABEL_68;
-  v29[41].monitor = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v29[41].monitor, (int32_t)this, v32, v33);
-  v34 = *p_fields;
+  v53[41].monitor = this;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v53[41].monitor, (int32_t)this, v56, v57, v58, v59, v60, v61);
+  v62 = *p_fields;
   if ( !*p_fields )
     goto LABEL_68;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)v34[41].monitor;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)v62[41].monitor;
   if ( !this )
     goto LABEL_68;
-  PhotoCampaignStaffSelectDialog__Init((PhotoCampaignStaffSelectDialog_o *)this, (UIAtlas_o *)v34[44].monitor, 0);
-  v35 = *p_fields;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51495936(
-                                                     v4,
-                                                     (System_String_o *)StringLiteral_10617/*"PhotoCampaignStaffCostumeSelectDialog"*/,
-                                                     (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+  PhotoCampaignStaffSelectDialog__Init((PhotoCampaignStaffSelectDialog_o *)this, (UIAtlas_o *)v62[44].monitor, 0);
+  v63 = *p_fields;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51560868(
+                                                     v8,
+                                                     (System_String_o *)StringLiteral_10623/*"PhotoCampaignStaffCostumeSelectDialog"*/,
+                                                     (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
   if ( !*p_fields )
     goto LABEL_68;
-  v36 = (Il2CppObject *)this;
+  v64 = (Il2CppObject *)this;
   this = (MyRoomControl___c__DisplayClass396_0_o *)(*p_fields)[13].monitor;
   if ( !this )
     goto LABEL_68;
-  v37 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52199488(
-                                                     v36,
-                                                     v37,
-                                                     (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+  v65 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52264420(
+                                                     v64,
+                                                     v65,
+                                                     (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
   if ( !this )
     goto LABEL_68;
   this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_PhotoCampaignStaffCostumeSelectDialog___);
-  if ( !v35 )
+                                                     (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_PhotoCampaignStaffCostumeSelectDialog___);
+  if ( !v63 )
     goto LABEL_68;
-  v35[41].fields.__4__this = (struct MyRoomControl_o *)this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v35[41].fields, (int32_t)this, v38, v39);
-  v40 = *p_fields;
+  v63[41].fields.__4__this = (struct MyRoomControl_o *)this;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v63[41].fields, (int32_t)this, v66, v67, v68, v69, v70, v71);
+  v72 = *p_fields;
   if ( !*p_fields )
     goto LABEL_68;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)v40[41].fields.__4__this;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)v72[41].fields.__4__this;
   if ( !this )
     goto LABEL_68;
   PhotoCampaignStaffCostumeSelectDialog__Init(
     (PhotoCampaignStaffCostumeSelectDialog_o *)this,
-    (UIAtlas_o *)v40[44].monitor,
+    (UIAtlas_o *)v72[44].monitor,
     0);
-  v41 = *p_fields;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51495936(
-                                                     v4,
-                                                     (System_String_o *)StringLiteral_10622/*"PhotoSettingButton"*/,
-                                                     (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+  v73 = *p_fields;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51560868(
+                                                     v8,
+                                                     (System_String_o *)StringLiteral_10628/*"PhotoSettingButton"*/,
+                                                     (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
   if ( !*p_fields )
     goto LABEL_68;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52199488(
+  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52264420(
                                                      (Il2CppObject *)this,
                                                      (UnityEngine_Transform_o *)(*p_fields)[19].fields.__4__this,
-                                                     (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+                                                     (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
   if ( !this )
     goto LABEL_68;
   this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_PhotoSettingButtonComponent___);
-  if ( !v41 )
+                                                     (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_PhotoSettingButtonComponent___);
+  if ( !v73 )
     goto LABEL_68;
-  v41[41].fields.callBack = (struct System_Action_o *)this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v41[41].fields.callBack, (int32_t)this, v42, v43);
+  v73[41].fields.callBack = (struct System_Action_o *)this;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v73[41].fields.callBack, (int32_t)this, v74, v75, v76, v77, v78, v79);
   assetData = (AssetData_o *)*p_fields;
   if ( !*p_fields )
     goto LABEL_68;
@@ -18120,86 +19407,94 @@ void MyRoomControl___c__DisplayClass396_0___LoadPhotoCampaignAssets_b__0(
   if ( !this )
     goto LABEL_68;
   PhotoSettingButtonComponent__Init((PhotoSettingButtonComponent_o *)this, (MyRoomControl_o *)assetData, 0);
-  v44 = *p_fields;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51495936(
-                                                     v4,
-                                                     (System_String_o *)StringLiteral_8939/*"MasterEquipSettingDialog"*/,
-                                                     (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+  v80 = *p_fields;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51560868(
+                                                     v8,
+                                                     (System_String_o *)StringLiteral_8943/*"MasterEquipSettingDialog"*/,
+                                                     (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
   if ( !*p_fields )
     goto LABEL_68;
-  v45 = (Il2CppObject *)this;
+  v81 = (Il2CppObject *)this;
   this = (MyRoomControl___c__DisplayClass396_0_o *)(*p_fields)[13].monitor;
   if ( !this )
     goto LABEL_68;
-  v46 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52199488(
-                                                     v45,
-                                                     v46,
-                                                     (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+  v82 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52264420(
+                                                     v81,
+                                                     v82,
+                                                     (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
   if ( !this )
     goto LABEL_68;
   this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MasterEquipSettingDialog___);
-  if ( !v44 )
+                                                     (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MasterEquipSettingDialog___);
+  if ( !v80 )
     goto LABEL_68;
-  v44[42].klass = (MyRoomControl___c__DisplayClass396_0_c *)this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v44[42], (int32_t)this, v47, v48);
+  v80[42].klass = (MyRoomControl___c__DisplayClass396_0_c *)this;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v80[42], (int32_t)this, v83, v84, v85, v86, v87, v88);
   if ( !*p_fields )
     goto LABEL_68;
   this = (MyRoomControl___c__DisplayClass396_0_o *)(*p_fields)[42].klass;
   if ( !this )
     goto LABEL_68;
   MasterEquipSettingDialog__Init((MasterEquipSettingDialog_o *)this, 0);
-  v49 = *p_fields;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51495936(
-                                                     v4,
-                                                     (System_String_o *)StringLiteral_10619/*"PhotoFrameSelectDialog"*/,
-                                                     (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200);
+  v89 = *p_fields;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51560868(
+                                                     v8,
+                                                     (System_String_o *)StringLiteral_10625/*"PhotoFrameSelectDialog"*/,
+                                                     (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
   if ( !*p_fields )
     goto LABEL_68;
-  v50 = (Il2CppObject *)this;
+  v90 = (Il2CppObject *)this;
   this = (MyRoomControl___c__DisplayClass396_0_o *)(*p_fields)[13].monitor;
   if ( !this )
     goto LABEL_68;
-  v51 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52199488(
-                                                     v50,
-                                                     v51,
-                                                     (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+  v91 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+  this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_Object__Instantiate_object__52264420(
+                                                     v90,
+                                                     v91,
+                                                     (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
   if ( !this )
     goto LABEL_68;
   this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                      (UnityEngine_GameObject_o *)this,
-                                                     (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_PhotoFrameSelectDialog___);
-  if ( !v49 )
+                                                     (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_PhotoFrameSelectDialog___);
+  if ( !v89 )
     goto LABEL_68;
-  v49[42].monitor = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v49[42].monitor, (int32_t)this, v52, v53);
-  v54 = *p_fields;
+  v89[42].monitor = this;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v89[42].monitor, (int32_t)this, v92, v93, v94, v95, v96, v97);
+  v98 = *p_fields;
   if ( !*p_fields )
     goto LABEL_68;
-  this = (MyRoomControl___c__DisplayClass396_0_o *)v54[42].monitor;
+  this = (MyRoomControl___c__DisplayClass396_0_o *)v98[42].monitor;
   if ( !this
-    || (PhotoFrameSelectDialog__Init((PhotoFrameSelectDialog_o *)this, (UIAtlas_o *)v54[44].fields.__4__this, 0),
-        v55 = *p_fields,
-        (this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51495936(
-                                                            v4,
-                                                            (System_String_o *)StringLiteral_8378/*"LayerChangeButton"*/,
-                                                            (const MethodInfo_311C400 *)Method_AssetData_GetObject_GameObject____78568200)) == 0)
+    || (PhotoFrameSelectDialog__Init((PhotoFrameSelectDialog_o *)this, (UIAtlas_o *)v98[44].fields.__4__this, 0),
+        v99 = *p_fields,
+        (this = (MyRoomControl___c__DisplayClass396_0_o *)AssetData__GetObject_object__51560868(
+                                                            v8,
+                                                            (System_String_o *)StringLiteral_8382/*"LayerChangeButton"*/,
+                                                            (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968)) == 0)
     || (this = (MyRoomControl___c__DisplayClass396_0_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            (UnityEngine_GameObject_o *)this,
-                                                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_PhotoLayerChangeComponent___),
-        !v55)
-    || (v55[44].fields.callBack = (struct System_Action_o *)this,
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v55[44].fields.callBack, (int32_t)this, v56, v57),
-        (this = (MyRoomControl___c__DisplayClass396_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
+                                                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_PhotoLayerChangeComponent___),
+        !v99)
+    || (v99[44].fields.callBack = (struct System_Action_o *)this,
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&v99[44].fields.callBack,
+          (int32_t)this,
+          v100,
+          v101,
+          v102,
+          v103,
+          v104,
+          v105),
+        (this = (MyRoomControl___c__DisplayClass396_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__)) == 0) )
   {
 LABEL_68:
-    sub_1C6BC60(this, assetData);
+    sub_1C71608(this, assetData);
   }
   CommonUI__SetLoadMode((CommonUI_o *)this, 0, 0);
-  ActionExtensions__Call(v5->fields.callBack, 0);
+  ActionExtensions__Call(v9->fields.callBack, 0);
 }
 
 
@@ -18216,32 +19511,36 @@ void MyRoomControl___c__DisplayClass397_0___LoadMasterEquip_b__0(
         AssetData_o *assetData,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  MyRoomControl___c__DisplayClass397_0_o *v5; // x20
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  MyRoomControl___c__DisplayClass397_0_o *v9; // x20
   struct MyRoomControl_o *_4__this; // x8
   struct EquipEntity_o *equipEnt; // x8
-  _QWORD *v8; // x9
+  _QWORD *v12; // x9
   __int64 _4__this_low; // x10
-  EquipEntity_c **v10; // x8
-  struct MyRoomControl_o *v11; // x8
-  struct EquipEntity_o *v12; // x9
+  EquipEntity_c **v14; // x8
+  struct MyRoomControl_o *v15; // x8
+  struct EquipEntity_o *v16; // x9
   System_Collections_Generic_Dictionary_int__object__o *masterMaleEquipTexture; // x20
-  __int64 v14; // x21
-  __int64 v15; // x22
-  int32_t v16; // w21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
+  __int64 v18; // x21
+  __int64 v19; // x22
+  int32_t v20; // w21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
 
-  v5 = this;
-  if ( (byte_4CB16F5 & 1) == 0 )
+  v9 = this;
+  if ( (byte_4CC2802 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_AssetData_GetObject_Texture2D___);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__Texture2D__set_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetData__Add__);
-    this = (MyRoomControl___c__DisplayClass397_0_o *)sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB16F5 = 1;
+    sub_1C713B0(&Method_AssetData_GetObject_Texture2D___);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__Texture2D__set_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AssetData__Add__);
+    this = (MyRoomControl___c__DisplayClass397_0_o *)sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CC2802 = 1;
   }
-  _4__this = v5->fields.__4__this;
+  _4__this = v9->fields.__4__this;
   if ( !_4__this )
     goto LABEL_20;
   if ( _4__this->fields.isLoadMasterEquip )
@@ -18250,7 +19549,7 @@ void MyRoomControl___c__DisplayClass397_0___LoadMasterEquip_b__0(
     if ( this )
     {
       equipEnt = this->fields.equipEnt;
-      v8 = Method_System_Collections_Generic_List_AssetData__Add__;
+      v12 = Method_System_Collections_Generic_List_AssetData__Add__;
       ++HIDWORD(this->fields.__4__this);
       if ( equipEnt )
       {
@@ -18260,44 +19559,44 @@ void MyRoomControl___c__DisplayClass397_0___LoadMasterEquip_b__0(
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             (Il2CppObject *)assetData,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
         }
         else
         {
-          v10 = &equipEnt->klass + _4__this_low;
+          v14 = &equipEnt->klass + _4__this_low;
           LODWORD(this->fields.__4__this) = _4__this_low + 1;
-          v10[4] = (EquipEntity_c *)assetData;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v10 + 4), (int32_t)assetData, (int32_t)method, v3);
+          v14[4] = (EquipEntity_c *)assetData;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v14 + 4), (int32_t)assetData, (int32_t)method, v3, v4, v5, v6, v7);
         }
-        v11 = v5->fields.__4__this;
-        if ( v11 )
+        v15 = v9->fields.__4__this;
+        if ( v15 )
         {
-          v12 = v5->fields.equipEnt;
-          if ( v12 )
+          v16 = v9->fields.equipEnt;
+          if ( v16 )
           {
-            masterMaleEquipTexture = (System_Collections_Generic_Dictionary_int__object__o *)v11->fields.masterMaleEquipTexture;
-            v15 = *(_QWORD *)&v12->fields.id.fields.currentCryptoKey;
-            v14 = *(_QWORD *)&v12->fields.id.fields.fakeValue;
+            masterMaleEquipTexture = (System_Collections_Generic_Dictionary_int__object__o *)v15->fields.masterMaleEquipTexture;
+            v19 = *(_QWORD *)&v16->fields.id.fields.currentCryptoKey;
+            v18 = *(_QWORD *)&v16->fields.id.fields.fakeValue;
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-            *(_QWORD *)&v17.fields.currentCryptoKey = v15;
-            *(_QWORD *)&v17.fields.fakeValue = v14;
-            this = (MyRoomControl___c__DisplayClass397_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
-                                                               v17,
+            *(_QWORD *)&v21.fields.currentCryptoKey = v19;
+            *(_QWORD *)&v21.fields.fakeValue = v18;
+            this = (MyRoomControl___c__DisplayClass397_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(
+                                                               v21,
                                                                0);
             if ( assetData )
             {
-              v16 = (int)this;
+              v20 = (int)this;
               this = (MyRoomControl___c__DisplayClass397_0_o *)AssetData__GetObject_object_(
                                                                  assetData,
-                                                                 (const MethodInfo_311C2F8 *)Method_AssetData_GetObject_Texture2D___);
+                                                                 (const MethodInfo_312C09C *)Method_AssetData_GetObject_Texture2D___);
               if ( masterMaleEquipTexture )
               {
                 System_Collections_Generic_Dictionary_int__object___set_Item(
                   masterMaleEquipTexture,
-                  v16,
+                  v20,
                   (Il2CppObject *)this,
-                  (const MethodInfo_34524DC *)Method_System_Collections_Generic_Dictionary_int__Texture2D__set_Item__);
+                  (const MethodInfo_3462280 *)Method_System_Collections_Generic_Dictionary_int__Texture2D__set_Item__);
                 return;
               }
             }
@@ -18306,11 +19605,11 @@ void MyRoomControl___c__DisplayClass397_0___LoadMasterEquip_b__0(
       }
     }
 LABEL_20:
-    sub_1C6BC60(this, assetData);
+    sub_1C71608(this, assetData);
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAsset_40765532(assetData, 0);
+  AssetManager__releaseAsset_40808072(assetData, 0);
 }
 
 
@@ -18319,32 +19618,36 @@ void MyRoomControl___c__DisplayClass397_0___LoadMasterEquip_b__1(
         AssetData_o *assetData,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  MyRoomControl___c__DisplayClass397_0_o *v5; // x20
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  MyRoomControl___c__DisplayClass397_0_o *v9; // x20
   struct MyRoomControl_o *_4__this; // x8
   struct EquipEntity_o *equipEnt; // x8
-  _QWORD *v8; // x9
+  _QWORD *v12; // x9
   __int64 _4__this_low; // x10
-  EquipEntity_c **v10; // x8
-  struct MyRoomControl_o *v11; // x8
-  struct EquipEntity_o *v12; // x9
+  EquipEntity_c **v14; // x8
+  struct MyRoomControl_o *v15; // x8
+  struct EquipEntity_o *v16; // x9
   System_Collections_Generic_Dictionary_int__object__o *masterFemaleEquipTexture; // x20
-  __int64 v14; // x21
-  __int64 v15; // x22
-  int32_t v16; // w21
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v17; // 0:x0.16
+  __int64 v18; // x21
+  __int64 v19; // x22
+  int32_t v20; // w21
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v21; // 0:x0.16
 
-  v5 = this;
-  if ( (byte_4CB16F6 & 1) == 0 )
+  v9 = this;
+  if ( (byte_4CC2803 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_AssetData_GetObject_Texture2D___);
-    sub_1C6BA08(&AssetManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__Texture2D__set_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_AssetData__Add__);
-    this = (MyRoomControl___c__DisplayClass397_0_o *)sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB16F6 = 1;
+    sub_1C713B0(&Method_AssetData_GetObject_Texture2D___);
+    sub_1C713B0(&AssetManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__Texture2D__set_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_AssetData__Add__);
+    this = (MyRoomControl___c__DisplayClass397_0_o *)sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CC2803 = 1;
   }
-  _4__this = v5->fields.__4__this;
+  _4__this = v9->fields.__4__this;
   if ( !_4__this )
     goto LABEL_20;
   if ( _4__this->fields.isLoadMasterEquip )
@@ -18353,7 +19656,7 @@ void MyRoomControl___c__DisplayClass397_0___LoadMasterEquip_b__1(
     if ( this )
     {
       equipEnt = this->fields.equipEnt;
-      v8 = Method_System_Collections_Generic_List_AssetData__Add__;
+      v12 = Method_System_Collections_Generic_List_AssetData__Add__;
       ++HIDWORD(this->fields.__4__this);
       if ( equipEnt )
       {
@@ -18363,44 +19666,44 @@ void MyRoomControl___c__DisplayClass397_0___LoadMasterEquip_b__1(
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)this,
             (Il2CppObject *)assetData,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
         }
         else
         {
-          v10 = &equipEnt->klass + _4__this_low;
+          v14 = &equipEnt->klass + _4__this_low;
           LODWORD(this->fields.__4__this) = _4__this_low + 1;
-          v10[4] = (EquipEntity_c *)assetData;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v10 + 4), (int32_t)assetData, (int32_t)method, v3);
+          v14[4] = (EquipEntity_c *)assetData;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v14 + 4), (int32_t)assetData, (int32_t)method, v3, v4, v5, v6, v7);
         }
-        v11 = v5->fields.__4__this;
-        if ( v11 )
+        v15 = v9->fields.__4__this;
+        if ( v15 )
         {
-          v12 = v5->fields.equipEnt;
-          if ( v12 )
+          v16 = v9->fields.equipEnt;
+          if ( v16 )
           {
-            masterFemaleEquipTexture = (System_Collections_Generic_Dictionary_int__object__o *)v11->fields.masterFemaleEquipTexture;
-            v15 = *(_QWORD *)&v12->fields.id.fields.currentCryptoKey;
-            v14 = *(_QWORD *)&v12->fields.id.fields.fakeValue;
+            masterFemaleEquipTexture = (System_Collections_Generic_Dictionary_int__object__o *)v15->fields.masterFemaleEquipTexture;
+            v19 = *(_QWORD *)&v16->fields.id.fields.currentCryptoKey;
+            v18 = *(_QWORD *)&v16->fields.id.fields.fakeValue;
             if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-            *(_QWORD *)&v17.fields.currentCryptoKey = v15;
-            *(_QWORD *)&v17.fields.fakeValue = v14;
-            this = (MyRoomControl___c__DisplayClass397_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
-                                                               v17,
+            *(_QWORD *)&v21.fields.currentCryptoKey = v19;
+            *(_QWORD *)&v21.fields.fakeValue = v18;
+            this = (MyRoomControl___c__DisplayClass397_0_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(
+                                                               v21,
                                                                0);
             if ( assetData )
             {
-              v16 = (int)this;
+              v20 = (int)this;
               this = (MyRoomControl___c__DisplayClass397_0_o *)AssetData__GetObject_object_(
                                                                  assetData,
-                                                                 (const MethodInfo_311C2F8 *)Method_AssetData_GetObject_Texture2D___);
+                                                                 (const MethodInfo_312C09C *)Method_AssetData_GetObject_Texture2D___);
               if ( masterFemaleEquipTexture )
               {
                 System_Collections_Generic_Dictionary_int__object___set_Item(
                   masterFemaleEquipTexture,
-                  v16,
+                  v20,
                   (Il2CppObject *)this,
-                  (const MethodInfo_34524DC *)Method_System_Collections_Generic_Dictionary_int__Texture2D__set_Item__);
+                  (const MethodInfo_3462280 *)Method_System_Collections_Generic_Dictionary_int__Texture2D__set_Item__);
                 return;
               }
             }
@@ -18409,11 +19712,11 @@ void MyRoomControl___c__DisplayClass397_0___LoadMasterEquip_b__1(
       }
     }
 LABEL_20:
-    sub_1C6BC60(this, assetData);
+    sub_1C71608(this, assetData);
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-  AssetManager__releaseAsset_40765532(assetData, 0);
+  AssetManager__releaseAsset_40808072(assetData, 0);
 }
 
 
@@ -18443,32 +19746,44 @@ void MyRoomControl___c__DisplayClass402_0___OpenTargetSelectDialog_b__0(
   System_Action_int__int__o *_9__2; // x21
   MyRoomControl_o *v14; // x20
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
   System_Action_o *_9__3; // x22
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  System_Collections_Generic_List_T__o *v20; // x8
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
+  System_Collections_Generic_List_T__o *v28; // x8
   struct System_Object_array *items; // x9
-  _QWORD *v22; // x10
+  _QWORD *v30; // x10
   __int64 size; // x11
   struct System_Int64_array *temporaryPhotoUserSvtId; // x10
   struct System_Int32_array *temporaryPhotoSvtLimitCount; // x11
   PhotoServantSelectMenu_o *photoServantSelectMenu; // x23
   System_Action_long__int__o *_9__1; // x25
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
 
   v4 = this;
-  if ( (byte_4CB16F7 & 1) == 0 )
+  if ( (byte_4CC2804 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_long__int__TypeInfo);
-    sub_1C6BA08(&System_Action_int__int__TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__2__);
-    this = (MyRoomControl___c__DisplayClass402_0_o *)sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__3__);
-    byte_4CB16F7 = 1;
+    sub_1C713B0(&System_Action_long__int__TypeInfo);
+    sub_1C713B0(&System_Action_int__int__TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__2__);
+    this = (MyRoomControl___c__DisplayClass402_0_o *)sub_1C713B0(&Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__3__);
+    byte_4CC2804 = 1;
   }
   switch ( targetType )
   {
@@ -18502,7 +19817,7 @@ LABEL_34:
         goto LABEL_39;
       if ( !LODWORD(temporaryPhotoSvtLimitCount->max_length) )
 LABEL_40:
-        sub_1C6BC68(this);
+        sub_1C71610(this);
       v9 = temporaryPhotoUserSvtId->m_Items[0];
       v8 = temporaryPhotoSvtLimitCount->m_Items[0];
       if ( !isChangeTarget )
@@ -18522,18 +19837,18 @@ LABEL_35:
       _9__1 = v4->fields.__9__1;
       if ( !_9__1 )
       {
-        _9__1 = (System_Action_long__int__o *)sub_1C6BC54(System_Action_long__int__TypeInfo);
+        _9__1 = (System_Action_long__int__o *)sub_1C715FC(System_Action_long__int__TypeInfo);
         System_Action_long__int____ctor(
           _9__1,
           (Il2CppObject *)v4,
           Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__1__,
           0);
         v4->fields.__9__1 = _9__1;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v28, v29);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v36, v37, v38, v39, v40, v41);
       }
       if ( !photoServantSelectMenu )
 LABEL_39:
-        sub_1C6BC60(this, *(_QWORD *)&targetType);
+        sub_1C71608(this, *(_QWORD *)&targetType);
       PhotoServantSelectMenu__Open(photoServantSelectMenu, _9__1, v9, v8, UserSvtId_k__BackingField, 0);
       return;
     case 1:
@@ -18541,26 +19856,26 @@ LABEL_39:
       v14 = v4->fields.__4__this;
       if ( !_9__2 )
       {
-        _9__2 = (System_Action_int__int__o *)sub_1C6BC54(System_Action_int__int__TypeInfo);
+        _9__2 = (System_Action_int__int__o *)sub_1C715FC(System_Action_int__int__TypeInfo);
         System_Action_int__int____ctor(
           _9__2,
           (Il2CppObject *)v4,
           Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__2__,
           0);
         v4->fields.__9__2 = _9__2;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__2, (int32_t)_9__2, v15, v16);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__2, (int32_t)_9__2, v15, v16, v17, v18, v19, v20);
       }
       _9__3 = v4->fields.__9__3;
       if ( !_9__3 )
       {
-        _9__3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+        _9__3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
         System_Action___ctor(
           _9__3,
           (Il2CppObject *)v4,
           Method_MyRoomControl___c__DisplayClass402_0__OpenTargetSelectDialog_b__3__,
           0);
         v4->fields.__9__3 = _9__3;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__3, (int32_t)_9__3, v18, v19);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__3, (int32_t)_9__3, v22, v23, v24, v25, v26, v27);
       }
       if ( !v14 )
         goto LABEL_39;
@@ -18580,28 +19895,28 @@ LABEL_39:
       this = (MyRoomControl___c__DisplayClass402_0_o *)v4->fields.__4__this;
       if ( !this )
         goto LABEL_39;
-      v20 = (System_Collections_Generic_List_T__o *)this[21].fields.__4__this;
-      if ( !v20 )
+      v28 = (System_Collections_Generic_List_T__o *)this[21].fields.__4__this;
+      if ( !v28 )
         goto LABEL_39;
-      items = v20->fields._items;
-      v22 = Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__;
-      ++v20->fields._version;
+      items = v28->fields._items;
+      v30 = Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__;
+      ++v28->fields._version;
       if ( !items )
         goto LABEL_39;
-      size = v20->fields._size;
+      size = v28->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_Int32Enum___AddWithResize(
-          v20,
+          v28,
           3,
-          *(const MethodInfo_37E617C **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F5F20 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
         this = (MyRoomControl___c__DisplayClass402_0_o *)v4->fields.__4__this;
         if ( !this )
           goto LABEL_39;
       }
       else
       {
-        v20->fields._size = size + 1;
+        v28->fields._size = size + 1;
         *((_DWORD *)items->m_Items + size) = 3;
       }
       MyRoomControl__ConfirmTargetSelectState((MyRoomControl_o *)this, v4->fields.isChangeTarget, 0);
@@ -18628,11 +19943,11 @@ void MyRoomControl___c__DisplayClass402_0___OpenTargetSelectDialog_b__1(
   int v14; // w9
   struct System_Int32_array *temporaryPhotoSvtLimitCount; // x8
 
-  if ( (byte_4CB16F8 & 1) == 0 )
+  if ( (byte_4CC2805 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
-    byte_4CB16F8 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
+    byte_4CC2805 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -18651,7 +19966,7 @@ void MyRoomControl___c__DisplayClass402_0___OpenTargetSelectDialog_b__1(
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       temporaryPhotoTargetList,
       0,
-      *(const MethodInfo_37E617C **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_37F5F20 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
     _4__this = this->fields.__4__this;
     if ( !_4__this )
       goto LABEL_15;
@@ -18674,10 +19989,10 @@ void MyRoomControl___c__DisplayClass402_0___OpenTargetSelectDialog_b__1(
   temporaryPhotoSvtLimitCount = _4__this->fields.temporaryPhotoSvtLimitCount;
   if ( !temporaryPhotoSvtLimitCount )
 LABEL_15:
-    sub_1C6BC60(_4__this, userSvtId);
+    sub_1C71608(_4__this, userSvtId);
   if ( (unsigned int)v14 >= LODWORD(temporaryPhotoSvtLimitCount->max_length) )
 LABEL_16:
-    sub_1C6BC68(_4__this);
+    sub_1C71610(_4__this);
   temporaryPhotoSvtLimitCount->m_Items[v14] = limitCount;
   MyRoomControl__ConfirmTargetSelectState(_4__this, this->fields.isChangeTarget, 0);
 }
@@ -18696,10 +20011,10 @@ void MyRoomControl___c__DisplayClass402_0___OpenTargetSelectDialog_b__2(
   _QWORD *v10; // x10
   __int64 size; // x11
 
-  if ( (byte_4CB16F9 & 1) == 0 )
+  if ( (byte_4CC2806 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__);
-    byte_4CB16F9 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__);
+    byte_4CC2806 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -18718,12 +20033,12 @@ void MyRoomControl___c__DisplayClass402_0___OpenTargetSelectDialog_b__2(
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       temporaryPhotoTargetList,
       1,
-      *(const MethodInfo_37E617C **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
+      *(const MethodInfo_37F5F20 **)(*(_QWORD *)(v10[4] + 192LL) + 112LL));
     _4__this = this->fields.__4__this;
     if ( _4__this )
       goto LABEL_9;
 LABEL_10:
-    sub_1C6BC60(_4__this, *(_QWORD *)&equipId);
+    sub_1C71608(_4__this, *(_QWORD *)&equipId);
   }
   temporaryPhotoTargetList->fields._size = size + 1;
   *((_DWORD *)items->m_Items + size) = 1;
@@ -18742,7 +20057,7 @@ void MyRoomControl___c__DisplayClass402_0___OpenTargetSelectDialog_b__3(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__ConfirmTargetSelectState(_4__this, this->fields.isChangeTarget, 0);
 }
 
@@ -18763,7 +20078,7 @@ void MyRoomControl___c__DisplayClass403_0___OpenStaffSelectDialog_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__ConfirmTargetSelectState(_4__this, this->fields.isChangeTarget, 0);
 }
 
@@ -18783,11 +20098,11 @@ void MyRoomControl___c__DisplayClass403_0___OpenStaffSelectDialog_b__1(
   struct System_Int32_array *temporaryStaffImageId; // x8
   int v12; // w9
 
-  if ( (byte_4CB16FA & 1) == 0 )
+  if ( (byte_4CC2807 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
-    byte_4CB16FA = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
+    byte_4CC2807 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -18806,7 +20121,7 @@ void MyRoomControl___c__DisplayClass403_0___OpenStaffSelectDialog_b__1(
     System_Collections_Generic_List_Int32Enum___AddWithResize(
       temporaryPhotoTargetList,
       2,
-      *(const MethodInfo_37E617C **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_37F5F20 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
     _4__this = this->fields.__4__this;
     if ( !_4__this )
       goto LABEL_13;
@@ -18819,10 +20134,10 @@ void MyRoomControl___c__DisplayClass403_0___OpenStaffSelectDialog_b__1(
   v10 = _4__this->fields.temporaryPhotoTargetList;
   if ( !v10 || (temporaryStaffImageId = _4__this->fields.temporaryStaffImageId) == 0 )
 LABEL_13:
-    sub_1C6BC60(_4__this, *(_QWORD *)&imageId);
+    sub_1C71608(_4__this, *(_QWORD *)&imageId);
   v12 = v10->fields._size - 1;
   if ( (unsigned int)v12 >= LODWORD(temporaryStaffImageId->max_length) )
-    sub_1C6BC68(_4__this);
+    sub_1C71610(_4__this);
   temporaryStaffImageId->m_Items[v12] = imageId;
   MyRoomControl__ConfirmTargetSelectState(_4__this, this->fields.isChangeTarget, 0);
 }
@@ -18836,7 +20151,7 @@ void MyRoomControl___c__DisplayClass403_0___OpenStaffSelectDialog_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__OpenStaffSelectDialog(_4__this, this->fields.anotherTargetType, this->fields.isChangeTarget, 0);
 }
 
@@ -18857,7 +20172,7 @@ void MyRoomControl___c__DisplayClass404_0___ConfirmTargetSelectState_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   if ( this->fields.isChangeTarget )
   {
     _4__this->fields.photoState = 2;
@@ -18878,11 +20193,11 @@ void MyRoomControl___c__DisplayClass404_0___ConfirmTargetSelectState_b__1(
   struct MyRoomControl_o *_4__this; // x8
 
   v2 = this;
-  if ( (byte_4CB16FB & 1) == 0 )
+  if ( (byte_4CC2808 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__RemoveAt__);
-    this = (MyRoomControl___c__DisplayClass404_0_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
-    byte_4CB16FB = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__RemoveAt__);
+    this = (MyRoomControl___c__DisplayClass404_0_o *)sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
+    byte_4CC2808 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this
@@ -18890,10 +20205,10 @@ void MyRoomControl___c__DisplayClass404_0___ConfirmTargetSelectState_b__1(
     || (System_Collections_Generic_List_Int32Enum___RemoveAt(
           (System_Collections_Generic_List_T__o *)this,
           LODWORD(this->fields.__4__this) - 1,
-          (const MethodInfo_37E78FC *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__RemoveAt__),
+          (const MethodInfo_37F76A0 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__RemoveAt__),
         (this = (MyRoomControl___c__DisplayClass404_0_o *)v2->fields.__4__this) == 0) )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   MyRoomControl__ConfirmTargetSelectState((MyRoomControl_o *)this, 0, 0);
 }
@@ -18910,16 +20225,20 @@ void MyRoomControl___c__DisplayClass404_0___ConfirmTargetSelectState_b__2(
   PhotoServantSelectMenu_o *photoServantSelectMenu; // x20
   System_Action_o *_9__3; // x22
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
   v2 = this;
-  if ( (byte_4CB16FC & 1) == 0 )
+  if ( (byte_4CC2809 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__RemoveAt__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
-    this = (MyRoomControl___c__DisplayClass404_0_o *)sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__3__);
-    byte_4CB16FC = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__RemoveAt__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Count__);
+    this = (MyRoomControl___c__DisplayClass404_0_o *)sub_1C713B0(&Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__3__);
+    byte_4CC2809 = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -18930,7 +20249,7 @@ void MyRoomControl___c__DisplayClass404_0___ConfirmTargetSelectState_b__2(
   System_Collections_Generic_List_Int32Enum___RemoveAt(
     (System_Collections_Generic_List_T__o *)this,
     LODWORD(this->fields.__4__this) - 1,
-    (const MethodInfo_37E78FC *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__RemoveAt__);
+    (const MethodInfo_37F76A0 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__RemoveAt__);
   v4 = v2->fields.__4__this;
   if ( !v4 )
     goto LABEL_15;
@@ -18949,14 +20268,14 @@ void MyRoomControl___c__DisplayClass404_0___ConfirmTargetSelectState_b__2(
       _9__3 = v2->fields.__9__3;
       if ( !_9__3 )
       {
-        _9__3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+        _9__3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
         System_Action___ctor(
           _9__3,
           (Il2CppObject *)v2,
           Method_MyRoomControl___c__DisplayClass404_0__ConfirmTargetSelectState_b__3__,
           0);
         v2->fields.__9__3 = _9__3;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.__9__3, (int32_t)_9__3, v8, v9);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.__9__3, (int32_t)_9__3, v8, v9, v10, v11, v12, v13);
       }
       if ( photoServantSelectMenu )
       {
@@ -18965,7 +20284,7 @@ void MyRoomControl___c__DisplayClass404_0___ConfirmTargetSelectState_b__2(
       }
     }
 LABEL_15:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   if ( !v5 )
     goto LABEL_15;
@@ -18981,7 +20300,7 @@ void MyRoomControl___c__DisplayClass404_0___ConfirmTargetSelectState_b__3(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__ConfirmTargetSelectState(_4__this, this->fields.isChangeTarget, 0);
 }
 
@@ -19014,36 +20333,36 @@ void MyRoomControl___c__DisplayClass407_0___OpenPhotoFrameSelectDialog_b__0(
   System_String_o *v16; // x0
 
   v4 = this;
-  if ( (byte_4CB16FD & 1) == 0 )
+  if ( (byte_4CC280A & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16539/*"_duo"*/);
-    this = (MyRoomControl___c__DisplayClass407_0_o *)sub_1C6BA08(&StringLiteral_16575/*"_solo"*/);
-    byte_4CB16FD = 1;
+    sub_1C713B0(&StringLiteral_16546/*"_duo"*/);
+    this = (MyRoomControl___c__DisplayClass407_0_o *)sub_1C713B0(&StringLiteral_16582/*"_solo"*/);
+    byte_4CC280A = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
     goto LABEL_8;
   takingPhotoFrameSprite = _4__this->fields.takingPhotoFrameSprite;
-  v7 = System_String__Concat_63966792(spriteName, (System_String_o *)StringLiteral_16575/*"_solo"*/, 0);
+  v7 = System_String__Concat_64031724(spriteName, (System_String_o *)StringLiteral_16582/*"_solo"*/, 0);
   MyRoomControl__SetPhotoFrameSprite(_4__this, takingPhotoFrameSprite, v7, 0);
   v8 = v4->fields.__4__this;
   if ( !v8 )
     goto LABEL_8;
   takingPhotoFrameWideSprite = v8->fields.takingPhotoFrameWideSprite;
-  v10 = System_String__Concat_63966792(spriteName, (System_String_o *)StringLiteral_16539/*"_duo"*/, 0);
+  v10 = System_String__Concat_64031724(spriteName, (System_String_o *)StringLiteral_16546/*"_duo"*/, 0);
   MyRoomControl__SetPhotoFrameSprite(v8, takingPhotoFrameWideSprite, v10, 0);
   v11 = v4->fields.__4__this;
   if ( !v11
     || (photoFrameSprite = v11->fields.photoFrameSprite,
-        v13 = System_String__Concat_63966792(spriteName, (System_String_o *)StringLiteral_16575/*"_solo"*/, 0),
+        v13 = System_String__Concat_64031724(spriteName, (System_String_o *)StringLiteral_16582/*"_solo"*/, 0),
         MyRoomControl__SetPhotoFrameSprite(v11, photoFrameSprite, v13, 0),
         (v14 = v4->fields.__4__this) == 0) )
   {
 LABEL_8:
-    sub_1C6BC60(this, spriteName);
+    sub_1C71608(this, spriteName);
   }
   photoFrameWideSprite = v14->fields.photoFrameWideSprite;
-  v16 = System_String__Concat_63966792(spriteName, (System_String_o *)StringLiteral_16539/*"_duo"*/, 0);
+  v16 = System_String__Concat_64031724(spriteName, (System_String_o *)StringLiteral_16546/*"_duo"*/, 0);
   MyRoomControl__SetPhotoFrameSprite(v14, photoFrameWideSprite, v16, 0);
   ActionExtensions__Call(v4->fields.decideCallback, 0);
 }
@@ -19177,17 +20496,21 @@ void MyRoomControl___c__DisplayClass411_0___CreatePhotoMasterFigure_b__0(
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x0
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  struct MyRoomControl_o *v15; // x8
-  struct MyRoomControl_o *v16; // x8
-  UnityEngine_GameObject_o *v17; // x0
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  struct MyRoomControl_o *v19; // x8
+  struct MyRoomControl_o *v20; // x8
+  UnityEngine_GameObject_o *v21; // x0
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4CB16FE & 1) == 0 )
+  if ( (byte_4CC280B & 1) == 0 )
   {
-    this = (MyRoomControl___c__DisplayClass411_0_o *)sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_UIPanel___);
-    byte_4CB16FE = 1;
+    this = (MyRoomControl___c__DisplayClass411_0_o *)sub_1C713B0(&Method_GameObjectExtensions_SafeGetComponent_UIPanel___);
+    byte_4CC280B = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -19212,10 +20535,10 @@ void MyRoomControl___c__DisplayClass411_0___CreatePhotoMasterFigure_b__0(
   if ( !v8 )
     goto LABEL_17;
   v9 = ((unsigned __int8)this & 1) != 0 ? 1300.0 : -1812.0;
-  v18.fields.x = v5 + v9;
-  v18.fields.y = v6 + 0.0;
-  v18.fields.z = v7 + 0.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v8, v18, 0);
+  v22.fields.x = v5 + v9;
+  v22.fields.y = v6 + 0.0;
+  v22.fields.z = v7 + 0.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)v8, v22, 0);
   v10 = v2->fields.__4__this;
   if ( !v10 )
     goto LABEL_17;
@@ -19225,20 +20548,28 @@ void MyRoomControl___c__DisplayClass411_0___CreatePhotoMasterFigure_b__0(
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_UIPanel___);
+                       (const MethodInfo_31A49B8 *)Method_GameObjectExtensions_SafeGetComponent_UIPanel___);
   v10->fields.photoMasterPanel = (struct UIPanel_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v10->fields.photoMasterPanel, (int32_t)Component_object, v13, v14);
-  v15 = v2->fields.__4__this;
-  if ( !v15
-    || (this = (MyRoomControl___c__DisplayClass411_0_o *)v15->fields.photoMasterPanel) == 0
-    || (UIPanel__set_depth((UIPanel_o *)this, 15, 0), (v16 = v2->fields.__4__this) == 0)
-    || (this = (MyRoomControl___c__DisplayClass411_0_o *)v16->fields.photoMasterTexture) == 0 )
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v10->fields.photoMasterPanel,
+    (int32_t)Component_object,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
+  v19 = v2->fields.__4__this;
+  if ( !v19
+    || (this = (MyRoomControl___c__DisplayClass411_0_o *)v19->fields.photoMasterPanel) == 0
+    || (UIPanel__set_depth((UIPanel_o *)this, 15, 0), (v20 = v2->fields.__4__this) == 0)
+    || (this = (MyRoomControl___c__DisplayClass411_0_o *)v20->fields.photoMasterTexture) == 0 )
   {
 LABEL_17:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  v17 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  GameObjectExtensions__SetLocalScale_36358148(v17, 0.9, 0);
+  v21 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  GameObjectExtensions__SetLocalScale_36391984(v21, 0.9, 0);
   ActionExtensions__Call(v2->fields.func, 0);
 }
 
@@ -19305,17 +20636,17 @@ void MyRoomControl___c__DisplayClass416_0___ChangePhotoCampaignServantFace_b__0(
     || (v11 = v10->fields.photoStandFigures) == 0 )
   {
 LABEL_13:
-    sub_1C6BC60(_4__this, method);
+    sub_1C71608(_4__this, method);
   }
   v12 = this->fields.figureIndex;
   if ( (unsigned int)v12 >= LODWORD(v11->max_length) )
 LABEL_14:
-    sub_1C6BC68(_4__this);
+    sub_1C71610(_4__this);
   _4__this = (struct MyRoomControl_o *)v11->m_Items[v12];
   if ( !_4__this )
     goto LABEL_13;
   v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)_4__this, 0);
-  GameObjectExtensions__SetLocalScale_36358148(v13, scale, 0);
+  GameObjectExtensions__SetLocalScale_36391984(v13, scale, 0);
 }
 
 
@@ -19343,39 +20674,51 @@ void MyRoomControl___c__DisplayClass433_0___OpenChangeTargetSelectDialog_b__0(
   System_Action_int__int__o *_9__2; // x21
   MyRoomControl_o *v12; // x20
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
   System_Action_o *_9__3; // x22
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  struct MyRoomControl_o *v18; // x8
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  struct MyRoomControl_o *v26; // x8
   System_Collections_Generic_List_T__o *photoTargetList; // x20
   int32_t Item; // w0
-  struct MyRoomControl_o *v21; // x8
-  __int64 v22; // x8
-  __int64 v23; // x9
-  __int64 v24; // x8
-  struct MyRoomControl_o *v25; // x8
-  int64_t v26; // x22
-  struct PhotoStandFigureComponent_array *v27; // x9
+  struct MyRoomControl_o *v29; // x8
+  __int64 v30; // x8
+  __int64 v31; // x9
+  __int64 v32; // x8
+  struct MyRoomControl_o *v33; // x8
+  int64_t v34; // x22
+  struct PhotoStandFigureComponent_array *v35; // x9
   __int64 targetIndex; // x10
-  PhotoStandFigureComponent_o *v29; // x9
+  PhotoStandFigureComponent_o *v37; // x9
   PhotoServantSelectMenu_o *photoServantSelectMenu; // x23
   System_Action_long__int__o *_9__1; // x25
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
+  int32_t v40; // w2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  int32_t v43; // w5
+  int64_t v44; // x6
+  System_String_o *v45; // x7
 
   v4 = this;
-  if ( (byte_4CB16FF & 1) == 0 )
+  if ( (byte_4CC280C & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_long__int__TypeInfo);
-    sub_1C6BA08(&System_Action_int__int__TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__2__);
-    this = (MyRoomControl___c__DisplayClass433_0_o *)sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__3__);
-    byte_4CB16FF = 1;
+    sub_1C713B0(&System_Action_long__int__TypeInfo);
+    sub_1C713B0(&System_Action_int__int__TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__2__);
+    this = (MyRoomControl___c__DisplayClass433_0_o *)sub_1C713B0(&Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__3__);
+    byte_4CC280C = 1;
   }
   switch ( targetType )
   {
@@ -19409,52 +20752,52 @@ void MyRoomControl___c__DisplayClass433_0___OpenChangeTargetSelectDialog_b__0(
       this = (MyRoomControl___c__DisplayClass433_0_o *)System_Collections_Generic_List_Int32Enum___get_Item(
                                                          (System_Collections_Generic_List_T__o *)this,
                                                          v4->fields.targetIndex,
-                                                         (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
-      v25 = v4->fields.__4__this;
+                                                         (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+      v33 = v4->fields.__4__this;
       if ( (_DWORD)this )
       {
-        if ( !v25 )
+        if ( !v33 )
           goto LABEL_46;
-        v26 = -1;
+        v34 = -1;
         goto LABEL_42;
       }
-      if ( !v25 )
+      if ( !v33 )
         goto LABEL_46;
-      v27 = v25->fields.photoStandFigures;
-      if ( !v27 )
+      v35 = v33->fields.photoStandFigures;
+      if ( !v35 )
         goto LABEL_46;
       targetIndex = v4->fields.targetIndex;
-      if ( (unsigned int)targetIndex >= LODWORD(v27->max_length) )
+      if ( (unsigned int)targetIndex >= LODWORD(v35->max_length) )
         goto LABEL_47;
-      v29 = v27->m_Items[targetIndex];
-      if ( !v29 )
+      v37 = v35->m_Items[targetIndex];
+      if ( !v37 )
         goto LABEL_46;
-      v26 = v29->fields._UserSvtId_k__BackingField;
+      v34 = v37->fields._UserSvtId_k__BackingField;
 LABEL_42:
-      photoServantSelectMenu = v25->fields.photoServantSelectMenu;
-      v25->fields.targetChangeAnotherTargetType = v4->fields.anotherTargetType;
-      v25->fields.targetChangeIsLeft = v4->fields.isLeft;
+      photoServantSelectMenu = v33->fields.photoServantSelectMenu;
+      v33->fields.targetChangeAnotherTargetType = v4->fields.anotherTargetType;
+      v33->fields.targetChangeIsLeft = v4->fields.isLeft;
       _9__1 = v4->fields.__9__1;
       if ( !_9__1 )
       {
-        _9__1 = (System_Action_long__int__o *)sub_1C6BC54(System_Action_long__int__TypeInfo);
+        _9__1 = (System_Action_long__int__o *)sub_1C715FC(System_Action_long__int__TypeInfo);
         System_Action_long__int____ctor(
           _9__1,
           (Il2CppObject *)v4,
           Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__1__,
           0);
         v4->fields.__9__1 = _9__1;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v32, v33);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__1, (int32_t)_9__1, v40, v41, v42, v43, v44, v45);
       }
       if ( !photoServantSelectMenu )
 LABEL_46:
-        sub_1C6BC60(this, *(_QWORD *)&targetType);
+        sub_1C71608(this, *(_QWORD *)&targetType);
       PhotoServantSelectMenu__Open(
         photoServantSelectMenu,
         _9__1,
         UserSvtId_k__BackingField,
         ImageLimitCount_k__BackingField,
-        v26,
+        v34,
         0);
       return;
     case 1:
@@ -19462,26 +20805,26 @@ LABEL_46:
       v12 = v4->fields.__4__this;
       if ( !_9__2 )
       {
-        _9__2 = (System_Action_int__int__o *)sub_1C6BC54(System_Action_int__int__TypeInfo);
+        _9__2 = (System_Action_int__int__o *)sub_1C715FC(System_Action_int__int__TypeInfo);
         System_Action_int__int____ctor(
           _9__2,
           (Il2CppObject *)v4,
           Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__2__,
           0);
         v4->fields.__9__2 = _9__2;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__2, (int32_t)_9__2, v13, v14);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__2, (int32_t)_9__2, v13, v14, v15, v16, v17, v18);
       }
       _9__3 = v4->fields.__9__3;
       if ( !_9__3 )
       {
-        _9__3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+        _9__3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
         System_Action___ctor(
           _9__3,
           (Il2CppObject *)v4,
           Method_MyRoomControl___c__DisplayClass433_0__OpenChangeTargetSelectDialog_b__3__,
           0);
         v4->fields.__9__3 = _9__3;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__9__3, (int32_t)_9__3, v16, v17);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__9__3, (int32_t)_9__3, v20, v21, v22, v23, v24, v25);
       }
       if ( !v12 )
         goto LABEL_46;
@@ -19499,10 +20842,10 @@ LABEL_46:
         0);
       return;
     case 3:
-      v18 = v4->fields.__4__this;
-      if ( !v18 )
+      v26 = v4->fields.__4__this;
+      if ( !v26 )
         goto LABEL_46;
-      photoTargetList = (System_Collections_Generic_List_T__o *)v18->fields.photoTargetList;
+      photoTargetList = (System_Collections_Generic_List_T__o *)v26->fields.photoTargetList;
       if ( v4->fields.isLeft )
       {
         if ( !photoTargetList )
@@ -19510,40 +20853,40 @@ LABEL_46:
         Item = System_Collections_Generic_List_Int32Enum___get_Item(
                  photoTargetList,
                  1,
-                 (const MethodInfo_37E5E8C *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
+                 (const MethodInfo_37F5C30 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__get_Item__);
         System_Collections_Generic_List_Int32Enum___set_Item(
           photoTargetList,
           0,
           Item,
-          (const MethodInfo_37E5EE0 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
-        v21 = v4->fields.__4__this;
-        if ( !v21 )
+          (const MethodInfo_37F5C84 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
+        v29 = v4->fields.__4__this;
+        if ( !v29 )
           goto LABEL_46;
-        this = (MyRoomControl___c__DisplayClass433_0_o *)v21->fields.photoTargetList;
+        this = (MyRoomControl___c__DisplayClass433_0_o *)v29->fields.photoTargetList;
         if ( !this )
           goto LABEL_46;
         System_Collections_Generic_List_Int32Enum___set_Item(
           (System_Collections_Generic_List_T__o *)this,
           1,
           3,
-          (const MethodInfo_37E5EE0 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
+          (const MethodInfo_37F5C84 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
         this = (MyRoomControl___c__DisplayClass433_0_o *)v4->fields.__4__this;
         if ( !this )
           goto LABEL_46;
-        v22 = *(_QWORD *)&this[9].fields.isSelectedAnotherSvt;
-        if ( !v22 )
+        v30 = *(_QWORD *)&this[9].fields.isSelectedAnotherSvt;
+        if ( !v30 )
           goto LABEL_46;
-        if ( *(_DWORD *)(v22 + 24) < 2u )
+        if ( *(_DWORD *)(v30 + 24) < 2u )
 LABEL_47:
-          sub_1C6BC68(this);
-        v23 = *(_QWORD *)(v22 + 40);
-        if ( !v23 )
+          sub_1C71610(this);
+        v31 = *(_QWORD *)(v30 + 40);
+        if ( !v31 )
           goto LABEL_46;
-        v24 = *(_QWORD *)(v22 + 32);
-        if ( !v24 )
+        v32 = *(_QWORD *)(v30 + 32);
+        if ( !v32 )
           goto LABEL_46;
-        *(_QWORD *)(v24 + 40) = *(_QWORD *)(v23 + 40);
-        *(_QWORD *)(v24 + 48) = *(_QWORD *)(v23 + 48);
+        *(_QWORD *)(v32 + 40) = *(_QWORD *)(v31 + 40);
+        *(_QWORD *)(v32 + 48) = *(_QWORD *)(v31 + 48);
       }
       else
       {
@@ -19553,7 +20896,7 @@ LABEL_47:
           photoTargetList,
           1,
           3,
-          (const MethodInfo_37E5EE0 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
+          (const MethodInfo_37F5C84 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
         this = (MyRoomControl___c__DisplayClass433_0_o *)v4->fields.__4__this;
         if ( !this )
           goto LABEL_46;
@@ -19579,10 +20922,10 @@ void MyRoomControl___c__DisplayClass433_0___OpenChangeTargetSelectDialog_b__1(
   __int64 v10; // x8
 
   v6 = this;
-  if ( (byte_4CB1700 & 1) == 0 )
+  if ( (byte_4CC280D & 1) == 0 )
   {
-    this = (MyRoomControl___c__DisplayClass433_0_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
-    byte_4CB1700 = 1;
+    this = (MyRoomControl___c__DisplayClass433_0_o *)sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
+    byte_4CC280D = 1;
   }
   _4__this = v6->fields.__4__this;
   if ( !_4__this )
@@ -19594,7 +20937,7 @@ void MyRoomControl___c__DisplayClass433_0___OpenChangeTargetSelectDialog_b__1(
     (System_Collections_Generic_List_T__o *)this,
     v6->fields.targetIndex,
     0,
-    (const MethodInfo_37E5EE0 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
+    (const MethodInfo_37F5C84 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
   this = (MyRoomControl___c__DisplayClass433_0_o *)v6->fields.__4__this;
   if ( !this )
     goto LABEL_10;
@@ -19603,11 +20946,11 @@ void MyRoomControl___c__DisplayClass433_0___OpenChangeTargetSelectDialog_b__1(
     goto LABEL_10;
   targetIndex = v6->fields.targetIndex;
   if ( (unsigned int)targetIndex >= *(_DWORD *)(v8 + 24) )
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   v10 = *(_QWORD *)(v8 + 8 * targetIndex + 32);
   if ( !v10 )
 LABEL_10:
-    sub_1C6BC60(this, userSvtId);
+    sub_1C71608(this, userSvtId);
   *(_QWORD *)(v10 + 40) = userSvtId;
   *(_DWORD *)(v10 + 48) = limitCount;
   MyRoomControl__DispPhotoCampaign((MyRoomControl_o *)this, 1, 0, 0);
@@ -19625,10 +20968,10 @@ void MyRoomControl___c__DisplayClass433_0___OpenChangeTargetSelectDialog_b__2(
   struct MyRoomControl_o *_4__this; // x8
 
   v6 = this;
-  if ( (byte_4CB1701 & 1) == 0 )
+  if ( (byte_4CC280E & 1) == 0 )
   {
-    this = (MyRoomControl___c__DisplayClass433_0_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
-    byte_4CB1701 = 1;
+    this = (MyRoomControl___c__DisplayClass433_0_o *)sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
+    byte_4CC280E = 1;
   }
   _4__this = v6->fields.__4__this;
   if ( !_4__this
@@ -19637,10 +20980,10 @@ void MyRoomControl___c__DisplayClass433_0___OpenChangeTargetSelectDialog_b__2(
           (System_Collections_Generic_List_T__o *)this,
           v6->fields.targetIndex,
           1,
-          (const MethodInfo_37E5EE0 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__),
+          (const MethodInfo_37F5C84 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__),
         (this = (MyRoomControl___c__DisplayClass433_0_o *)v6->fields.__4__this) == 0) )
   {
-    sub_1C6BC60(this, *(_QWORD *)&equipId);
+    sub_1C71608(this, *(_QWORD *)&equipId);
   }
   LODWORD(this[17].fields.cancelCallback) = equipId;
   HIDWORD(this[17].fields.cancelCallback) = genderType;
@@ -19656,7 +20999,7 @@ void MyRoomControl___c__DisplayClass433_0___OpenChangeTargetSelectDialog_b__3(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__OpenChangeTargetSelectDialog(
     _4__this,
     this->fields.anotherTargetType,
@@ -19682,7 +21025,7 @@ void MyRoomControl___c__DisplayClass434_0___OpenStaffChangeDialog_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__OpenChangeTargetSelectDialog(
     _4__this,
     this->fields.anotherTargetType,
@@ -19705,10 +21048,10 @@ void MyRoomControl___c__DisplayClass434_0___OpenStaffChangeDialog_b__1(
   __int64 v8; // x8
 
   v4 = this;
-  if ( (byte_4CB1702 & 1) == 0 )
+  if ( (byte_4CC280F & 1) == 0 )
   {
-    this = (MyRoomControl___c__DisplayClass434_0_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
-    byte_4CB1702 = 1;
+    this = (MyRoomControl___c__DisplayClass434_0_o *)sub_1C713B0(&Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
+    byte_4CC280F = 1;
   }
   _4__this = v4->fields.__4__this;
   if ( !_4__this )
@@ -19720,7 +21063,7 @@ void MyRoomControl___c__DisplayClass434_0___OpenStaffChangeDialog_b__1(
     (System_Collections_Generic_List_T__o *)this,
     v4->fields.targetIndex,
     2,
-    (const MethodInfo_37E5EE0 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
+    (const MethodInfo_37F5C84 *)Method_System_Collections_Generic_List_PhotoUtility_TargetType__set_Item__);
   this = (MyRoomControl___c__DisplayClass434_0_o *)v4->fields.__4__this;
   if ( !this )
     goto LABEL_10;
@@ -19729,11 +21072,11 @@ void MyRoomControl___c__DisplayClass434_0___OpenStaffChangeDialog_b__1(
     goto LABEL_10;
   targetIndex = v4->fields.targetIndex;
   if ( (unsigned int)targetIndex >= *(_DWORD *)(v6 + 24) )
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   v8 = *(_QWORD *)(v6 + 8 * targetIndex + 32);
   if ( !v8 )
 LABEL_10:
-    sub_1C6BC60(this, *(_QWORD *)&imageId);
+    sub_1C71608(this, *(_QWORD *)&imageId);
   *(_DWORD *)(v8 + 52) = imageId;
   MyRoomControl__DispPhotoCampaign((MyRoomControl_o *)this, 1, 0, 0);
 }
@@ -19747,7 +21090,7 @@ void MyRoomControl___c__DisplayClass434_0___OpenStaffChangeDialog_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   MyRoomControl__OpenStaffChangeDialog(
     _4__this,
     this->fields.anotherTargetType,
@@ -19776,81 +21119,101 @@ void MyRoomControl___c__DisplayClass435_0___OpenStaffDialog_b__0(
   Il2CppObject *Item; // x0
   __int64 v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  System_Collections_Generic_List_object__o **v14; // x22
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  System_Collections_Generic_List_object__o *v17; // x23
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  System_Collections_Generic_List_object__o **v18; // x22
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
+  System_Collections_Generic_List_object__o *v25; // x23
   System_Action_T__o *staffCostumeSelectDecideAction; // x19
   struct System_Func_StaffPhotoCostumeEntity__bool__o *_9__1; // x25
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
   int32_t klass_high; // w23
   struct MyRoomControl_o *_4__this; // x8
   PhotoCampaignStaffCostumeSelectDialog_o *photoStaffCostumeSelectDialog; // x20
-  System_Action_bool__int__o *v25; // x24
+  System_Action_bool__int__o *v37; // x24
 
-  if ( (byte_4CB1703 & 1) == 0 )
+  if ( (byte_4CC2810 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ActionExtensions_Call_int___);
-    sub_1C6BA08(&System_Action_bool__int__TypeInfo);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_StaffPhotoCostumeEntity___);
-    sub_1C6BA08(&System_Func_StaffPhotoCostumeEntity__bool__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Item__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass435_0__OpenStaffDialog_b__1__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass435_1__OpenStaffDialog_b__2__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass435_1_TypeInfo);
-    byte_4CB1703 = 1;
+    sub_1C713B0(&Method_ActionExtensions_Call_int___);
+    sub_1C713B0(&System_Action_bool__int__TypeInfo);
+    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_StaffPhotoCostumeEntity___);
+    sub_1C713B0(&System_Func_StaffPhotoCostumeEntity__bool__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Item__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass435_0__OpenStaffDialog_b__1__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass435_1__OpenStaffDialog_b__2__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass435_1_TypeInfo);
+    byte_4CC2810 = 1;
   }
-  v9 = sub_1C6BC54(MyRoomControl___c__DisplayClass435_1_TypeInfo);
+  v9 = sub_1C715FC(MyRoomControl___c__DisplayClass435_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_18;
   *(_QWORD *)(v9 + 24) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)this, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 16) = staffPhotoCostumeEntityList;
-  v14 = (System_Collections_Generic_List_object__o **)(v9 + 16);
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)staffPhotoCostumeEntityList, v15, v16);
+  v18 = (System_Collections_Generic_List_object__o **)(v9 + 16);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)(v9 + 16),
+    (int32_t)staffPhotoCostumeEntityList,
+    v19,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24);
   if ( isDecide )
   {
-    v17 = *v14;
-    if ( !*v14 )
+    v25 = *v18;
+    if ( !*v18 )
       goto LABEL_18;
-    if ( v17->fields._size == 1 )
+    if ( v25->fields._size == 1 )
     {
       staffCostumeSelectDecideAction = (System_Action_T__o *)this->fields.staffCostumeSelectDecideAction;
       Item = System_Collections_Generic_List_object___get_Item(
-               *v14,
+               *v18,
                0,
-               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Item__);
+               (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_StaffPhotoCostumeEntity__get_Item__);
       if ( Item )
       {
         ActionExtensions__Call_int_(
           staffCostumeSelectDecideAction,
           (int32_t)Item[2].monitor,
-          (const MethodInfo_3085EC4 *)Method_ActionExtensions_Call_int___);
+          (const MethodInfo_3095C68 *)Method_ActionExtensions_Call_int___);
         return;
       }
 LABEL_18:
-      sub_1C6BC60(Item, v11);
+      sub_1C71608(Item, v11);
     }
     _9__1 = this->fields.__9__1;
     if ( !_9__1 )
     {
-      _9__1 = (struct System_Func_StaffPhotoCostumeEntity__bool__o *)sub_1C6BC54(System_Func_StaffPhotoCostumeEntity__bool__TypeInfo);
+      _9__1 = (struct System_Func_StaffPhotoCostumeEntity__bool__o *)sub_1C715FC(System_Func_StaffPhotoCostumeEntity__bool__TypeInfo);
       System_Func_object__bool____ctor(
         (System_Func_object__bool__o *)_9__1,
         (Il2CppObject *)this,
         Method_MyRoomControl___c__DisplayClass435_0__OpenStaffDialog_b__1__,
         0);
       this->fields.__9__1 = _9__1;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v20, v21);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v28, v29, v30, v31, v32, v33);
     }
-    Item = System_Linq_Enumerable__FirstOrDefault_object__51793644(
-             (System_Collections_Generic_IEnumerable_TSource__o *)v17,
+    Item = System_Linq_Enumerable__FirstOrDefault_object__51858576(
+             (System_Collections_Generic_IEnumerable_TSource__o *)v25,
              (System_Func_TSource__bool__o *)_9__1,
-             (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_StaffPhotoCostumeEntity___);
+             (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_StaffPhotoCostumeEntity___);
     if ( Item )
       klass_high = HIDWORD(Item[1].klass);
     else
@@ -19859,9 +21222,9 @@ LABEL_18:
     if ( !_4__this )
       goto LABEL_18;
     photoStaffCostumeSelectDialog = _4__this->fields.photoStaffCostumeSelectDialog;
-    v25 = (System_Action_bool__int__o *)sub_1C6BC54(System_Action_bool__int__TypeInfo);
+    v37 = (System_Action_bool__int__o *)sub_1C715FC(System_Action_bool__int__TypeInfo);
     System_Action_bool__int____ctor(
-      v25,
+      v37,
       (Il2CppObject *)v9,
       Method_MyRoomControl___c__DisplayClass435_1__OpenStaffDialog_b__2__,
       0);
@@ -19869,10 +21232,10 @@ LABEL_18:
       goto LABEL_18;
     PhotoCampaignStaffCostumeSelectDialog__Open(
       photoStaffCostumeSelectDialog,
-      v25,
+      v37,
       staffId,
       klass_high,
-      (System_Collections_Generic_List_StaffPhotoCostumeEntity__o *)*v14,
+      (System_Collections_Generic_List_StaffPhotoCostumeEntity__o *)*v18,
       0);
   }
   else
@@ -19888,7 +21251,7 @@ bool MyRoomControl___c__DisplayClass435_0___OpenStaffDialog_b__1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields.imageId == this->fields.baseStaffImageId;
 }
 
@@ -19908,23 +21271,23 @@ void MyRoomControl___c__DisplayClass435_1___OpenStaffDialog_b__2(
         const MethodInfo *method)
 {
   __int64 v7; // x22
-  Il2CppObject *object__51783296; // x0
+  Il2CppObject *object__51848228; // x0
   __int64 v9; // x1
   struct MyRoomControl___c__DisplayClass435_0_o *CS___8__locals1; // x8
   System_Action_T__o *staffCostumeSelectDecideAction; // x20
   struct System_Collections_Generic_List_StaffPhotoCostumeEntity__o *staffPhotoCostumeEntityList; // x19
   System_Func_object__bool__o *v13; // x21
 
-  if ( (byte_4CB1704 & 1) == 0 )
+  if ( (byte_4CC2811 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ActionExtensions_Call_int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_First_StaffPhotoCostumeEntity____78609880);
-    sub_1C6BA08(&System_Func_StaffPhotoCostumeEntity__bool__TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass435_2__OpenStaffDialog_b__3__);
-    sub_1C6BA08(&MyRoomControl___c__DisplayClass435_2_TypeInfo);
-    byte_4CB1704 = 1;
+    sub_1C713B0(&Method_ActionExtensions_Call_int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_First_StaffPhotoCostumeEntity____78678736);
+    sub_1C713B0(&System_Func_StaffPhotoCostumeEntity__bool__TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass435_2__OpenStaffDialog_b__3__);
+    sub_1C713B0(&MyRoomControl___c__DisplayClass435_2_TypeInfo);
+    byte_4CC2811 = 1;
   }
-  v7 = sub_1C6BC54(MyRoomControl___c__DisplayClass435_2_TypeInfo);
+  v7 = sub_1C715FC(MyRoomControl___c__DisplayClass435_2_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_9;
@@ -19936,26 +21299,26 @@ void MyRoomControl___c__DisplayClass435_1___OpenStaffDialog_b__2(
   {
     staffCostumeSelectDecideAction = (System_Action_T__o *)CS___8__locals1->fields.staffCostumeSelectDecideAction;
     staffPhotoCostumeEntityList = this->fields.staffPhotoCostumeEntityList;
-    v13 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_StaffPhotoCostumeEntity__bool__TypeInfo);
+    v13 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_StaffPhotoCostumeEntity__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v13,
       (Il2CppObject *)v7,
       Method_MyRoomControl___c__DisplayClass435_2__OpenStaffDialog_b__3__,
       0);
-    object__51783296 = System_Linq_Enumerable__First_object__51783296(
+    object__51848228 = System_Linq_Enumerable__First_object__51848228(
                          (System_Collections_Generic_IEnumerable_TSource__o *)staffPhotoCostumeEntityList,
                          (System_Func_TSource__bool__o *)v13,
-                         (const MethodInfo_3162680 *)Method_System_Linq_Enumerable_First_StaffPhotoCostumeEntity____78609880);
-    if ( object__51783296 )
+                         (const MethodInfo_3172424 *)Method_System_Linq_Enumerable_First_StaffPhotoCostumeEntity____78678736);
+    if ( object__51848228 )
     {
       ActionExtensions__Call_int_(
         staffCostumeSelectDecideAction,
-        (int32_t)object__51783296[2].monitor,
-        (const MethodInfo_3085EC4 *)Method_ActionExtensions_Call_int___);
+        (int32_t)object__51848228[2].monitor,
+        (const MethodInfo_3095C68 *)Method_ActionExtensions_Call_int___);
       return;
     }
 LABEL_9:
-    sub_1C6BC60(object__51783296, v9);
+    sub_1C71608(object__51848228, v9);
   }
   ActionExtensions__Call(CS___8__locals1->fields.staffCostumeSelectCancelAction, 0);
 }
@@ -19975,7 +21338,7 @@ bool MyRoomControl___c__DisplayClass435_2___OpenStaffDialog_b__3(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields.idx == this->fields.idx;
 }
 
@@ -19994,7 +21357,7 @@ bool MyRoomControl___c__DisplayClass455_0___GetDisplayBgGroupIndex_b__0(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return saveData->fields.groupId == this->fields.displayGroupId;
 }
 
@@ -20015,7 +21378,7 @@ bool MyRoomControl___c__DisplayClass455_1___GetDisplayBgGroupIndex_b__1(
   struct MyRoomControl___c__DisplayClass455_0_o *CS___8__locals1; // x8
 
   if ( !data || (CS___8__locals1 = this->fields.CS___8__locals1) == 0 )
-    sub_1C6BC60(this, data);
+    sub_1C71608(this, data);
   return data->fields.groupId == CS___8__locals1->fields.displayGroupId && data->fields.warId == this->fields.warId;
 }
 
@@ -20034,7 +21397,7 @@ bool MyRoomControl___c__DisplayClass456_0___SaveDisplayOverWriteIds_b__1(
         const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return saveData->fields.warId == this->fields.mainGroupWarId;
 }
 
@@ -20060,48 +21423,52 @@ bool MyRoomControl__initMaterial_d__287__MoveNext(MyRoomControl__initMaterial_d_
   UnityEngine_WaitUntil_o *v9; // x20
   Il2CppObject **p__2__current; // x19
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
-  if ( (byte_4CB170C & 1) == 0 )
+  if ( (byte_4CC2819 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&Method_MyRoomControl__initMaterial_b__287_0__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&UnityEngine_WaitUntil_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6972/*"GO_NEXT"*/);
-    byte_4CB170C = 1;
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&Method_MyRoomControl__initMaterial_b__287_0__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&UnityEngine_WaitUntil_TypeInfo);
+    sub_1C713B0(&StringLiteral_6974/*"GO_NEXT"*/);
+    byte_4CC2819 = 1;
   }
   _1__state = this->fields.__1__state;
   _4__this = (Il2CppObject *)this->fields.__4__this;
   if ( _1__state == 1 )
   {
     this->fields.__1__state = -1;
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance
       || (CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0), !_4__this)
       || (Instance = (Il2CppObject *)_4__this[2].monitor) == 0 )
     {
 LABEL_13:
-      sub_1C6BC60(Instance, v6);
+      sub_1C71608(Instance, v6);
     }
-    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_6972/*"GO_NEXT"*/, 0);
+    PlayMakerFSM__SendEvent((PlayMakerFSM_o *)Instance, (System_String_o *)StringLiteral_6974/*"GO_NEXT"*/, 0);
     return 0;
   }
   if ( _1__state )
     return 0;
   this->fields.__1__state = -1;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_13;
   v7 = 1;
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0);
-  v8 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+  v8 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(v8, _4__this, Method_MyRoomControl__initMaterial_b__287_0__, 0);
-  v9 = (UnityEngine_WaitUntil_o *)sub_1C6BC54(UnityEngine_WaitUntil_TypeInfo);
+  v9 = (UnityEngine_WaitUntil_o *)sub_1C715FC(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v9, v8, 0);
   this->fields.__2__current = (Il2CppObject *)v9;
   p__2__current = &this->fields.__2__current;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p__2__current, (int32_t)v9, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p__2__current, (int32_t)v9, v11, v12, v13, v14, v15, v16);
   *((_DWORD *)p__2__current - 2) = 1;
   return v7;
 }
@@ -20123,11 +21490,11 @@ void __noreturn MyRoomControl__initMaterial_d__287__System_Collections_IEnumerat
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MyRoomControl__initMaterial_d__287_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MyRoomControl__initMaterial_d__287_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -20162,134 +21529,186 @@ bool MyRoomControl__svtVoicePlayAct_d__344__MoveNext(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  MyRoomControl__svtVoicePlayAct_d__344_o *v4; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  MyRoomControl__svtVoicePlayAct_d__344_o *v8; // x19
   struct MyRoomControl_o *_4__this; // x20
-  Il2CppObject *v6; // x22
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  struct MyRoomControl_o *v11; // x1
-  CommonUI_o *v12; // x21
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  CGThumbnailListItem_o *p__2__current; // x19
+  Il2CppObject *v10; // x22
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  struct MyRoomControl_o *v23; // x1
+  CommonUI_o *v24; // x21
+  int32_t v25; // w2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
+  GrandQuestFolderBoardItem_o *p__2__current; // x19
   bool result; // w0
-  System_Collections_Generic_List_T__o *v17; // x21
+  System_Collections_Generic_List_T__o *v33; // x21
   struct System_Object_array *items; // x8
-  _QWORD *v19; // x9
+  _QWORD *v35; // x9
   __int64 size; // x10
   int32_t *item; // x8
-  ServantVoiceEntity_o *v22; // x22
+  ServantVoiceEntity_o *v38; // x22
   System_String_o *VoiceAssetName; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  Il2CppObject *v26; // x23
-  struct MaterialEventLogListViewItem_Info_o *v27; // x8
-  System_String_o *v28; // x0
-  int32_t v29; // w2
-  const MethodInfo *v30; // x3
-  struct MaterialEventLogListViewItem_Info_o *v31; // x8
-  System_Collections_Generic_List_ServantVoiceData____o *VoiceList_43041808; // x0
+  int32_t v40; // w2
+  int32_t v41; // w3
+  System_String_o *v42; // x4
+  int32_t v43; // w5
+  int64_t v44; // x6
+  System_String_o *v45; // x7
+  Il2CppObject *v46; // x23
+  struct MaterialEventLogListViewItem_Info_o *v47; // x8
+  System_String_o *v48; // x0
+  int32_t v49; // w2
+  int32_t v50; // w3
+  System_String_o *v51; // x4
+  int32_t v52; // w5
+  int64_t v53; // x6
+  System_String_o *v54; // x7
+  struct MaterialEventLogListViewItem_Info_o *v55; // x8
+  System_Collections_Generic_List_ServantVoiceData____o *VoiceList_43085872; // x0
   System_Collections_Generic_List_object__o **p_svtVoiceDataList_5__4; // x21
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
-  struct MaterialEventLogListViewItem_Info_o *v36; // x8
-  System_Collections_Generic_List_ServantVoiceData____o *VoiceList_43041092; // x0
-  int32_t v38; // w2
-  const MethodInfo *v39; // x3
+  int32_t v58; // w2
+  int32_t v59; // w3
+  System_String_o *v60; // x4
+  int32_t v61; // w5
+  int64_t v62; // x6
+  System_String_o *v63; // x7
+  struct MaterialEventLogListViewItem_Info_o *v64; // x8
+  System_Collections_Generic_List_ServantVoiceData____o *VoiceList_43085156; // x0
+  int32_t v66; // w2
+  int32_t v67; // w3
+  System_String_o *v68; // x4
+  int32_t v69; // w5
+  int64_t v70; // x6
+  System_String_o *v71; // x7
   struct MyRoomControl___c__DisplayClass344_0_o *_8__1; // x22
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  struct MyRoomControl___c__DisplayClass344_0_o *v43; // x8
-  struct MyRoomControl___c__DisplayClass344_0_o *v44; // x8
-  struct MaterialEventLogListViewItem_Info_o *v45; // x8
-  int32_t v46; // w22
-  struct MyRoomControl_o *v47; // x8
-  struct MyRoomControl_o *v48; // x8
-  struct MaterialEventLogListViewItem_Info_o *v49; // x8
+  int32_t v73; // w2
+  int32_t v74; // w3
+  System_String_o *v75; // x4
+  int32_t v76; // w5
+  int64_t v77; // x6
+  System_String_o *v78; // x7
+  struct MyRoomControl___c__DisplayClass344_0_o *v79; // x8
+  struct MyRoomControl___c__DisplayClass344_0_o *v80; // x8
+  struct MaterialEventLogListViewItem_Info_o *v81; // x8
+  int32_t v82; // w22
+  struct MyRoomControl_o *v83; // x8
+  struct MyRoomControl_o *v84; // x8
+  struct MaterialEventLogListViewItem_Info_o *v85; // x8
   int32_t svt_id; // w24
   StandFigureBack_o *bondsStandFigureBack; // x21
-  int32_t v52; // w23
-  Il2CppObject *v53; // x26
-  System_Action_o *v54; // x25
-  struct MyRoomControl___c__DisplayClass344_0_o *v55; // x8
-  CGThumbnailListItem_o *v56; // x19
-  int v57; // w8
-  int32_t v58; // w21
-  MyRoomControl__svtVoicePlayAct_d__344_o *v59; // x22
-  struct MyRoomControl_o *v60; // x8
-  CommonUI_o *v61; // x21
-  int32_t v62; // w2
-  const MethodInfo *v63; // x3
-  int32_t v64; // w2
-  const MethodInfo *v65; // x3
-  CommonUI_o *v66; // x21
-  int32_t v67; // w2
-  const MethodInfo *v68; // x3
-  struct MyRoomControl___c__DisplayClass344_0_o *v69; // x8
-  CommonUI_o *v70; // x20
-  int32_t v71; // w2
-  const MethodInfo *v72; // x3
-  __int16 v73; // [xsp+1Ch] [xbp-54h] BYREF
+  int32_t v88; // w23
+  Il2CppObject *v89; // x26
+  System_Action_o *v90; // x25
+  struct MyRoomControl___c__DisplayClass344_0_o *v91; // x8
+  GrandQuestFolderBoardItem_o *v92; // x19
+  int v93; // w8
+  int32_t v94; // w21
+  MyRoomControl__svtVoicePlayAct_d__344_o *v95; // x22
+  struct MyRoomControl_o *v96; // x8
+  CommonUI_o *v97; // x21
+  int32_t v98; // w2
+  int32_t v99; // w3
+  System_String_o *v100; // x4
+  int32_t v101; // w5
+  int64_t v102; // x6
+  System_String_o *v103; // x7
+  int32_t v104; // w2
+  int32_t v105; // w3
+  System_String_o *v106; // x4
+  int32_t v107; // w5
+  int64_t v108; // x6
+  System_String_o *v109; // x7
+  CommonUI_o *v110; // x21
+  int32_t v111; // w2
+  int32_t v112; // w3
+  System_String_o *v113; // x4
+  int32_t v114; // w5
+  int64_t v115; // x6
+  System_String_o *v116; // x7
+  struct MyRoomControl___c__DisplayClass344_0_o *v117; // x8
+  CommonUI_o *v118; // x20
+  int32_t v119; // w2
+  int32_t v120; // w3
+  System_String_o *v121; // x4
+  int32_t v122; // w5
+  int64_t v123; // x6
+  System_String_o *v124; // x7
+  __int16 v125; // [xsp+1Ch] [xbp-54h] BYREF
   int32_t formId[2]; // [xsp+28h] [xbp-48h] BYREF
 
-  v4 = this;
-  if ( (byte_4CB170D & 1) == 0 )
+  v8 = this;
+  if ( (byte_4CC281A & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AvalonSceneManager_TypeInfo);
-    sub_1C6BA08(&char_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_CondType_Kind__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_CondType_Kind___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__get_Item__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
-    sub_1C6BA08(&System_Collections_Generic_List_CondType_Kind__TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C6BA08(&Method_MyRoomControl___c__DisplayClass344_0__svtVoicePlayAct_b__0__);
-    this = (MyRoomControl__svtVoicePlayAct_d__344_o *)sub_1C6BA08(&MyRoomControl___c__DisplayClass344_0_TypeInfo);
-    byte_4CB170D = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AvalonSceneManager_TypeInfo);
+    sub_1C713B0(&char_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_ServantVoiceMaster___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_CondType_Kind__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_CondType_Kind___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ServantVoiceData____get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__get_Item__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+    sub_1C713B0(&System_Collections_Generic_List_CondType_Kind__TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C713B0(&Method_MyRoomControl___c__DisplayClass344_0__svtVoicePlayAct_b__0__);
+    this = (MyRoomControl__svtVoicePlayAct_d__344_o *)sub_1C713B0(&MyRoomControl___c__DisplayClass344_0_TypeInfo);
+    byte_4CC281A = 1;
   }
   *(_QWORD *)formId = 0;
-  _4__this = v4->fields.__4__this;
-  switch ( v4->fields.__1__state )
+  _4__this = v8->fields.__4__this;
+  switch ( v8->fields.__1__state )
   {
     case 0:
-      v4->fields.__1__state = -1;
-      v6 = (Il2CppObject *)sub_1C6BC54(MyRoomControl___c__DisplayClass344_0_TypeInfo);
-      System_Object___ctor(v6, 0);
-      v4->fields.__8__1 = (struct MyRoomControl___c__DisplayClass344_0_o *)v6;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__8__1, (int32_t)v6, v7, v8);
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)v4->fields.__8__1;
+      v8->fields.__1__state = -1;
+      v10 = (Il2CppObject *)sub_1C715FC(MyRoomControl___c__DisplayClass344_0_TypeInfo);
+      System_Object___ctor(v10, 0);
+      v8->fields.__8__1 = (struct MyRoomControl___c__DisplayClass344_0_o *)v10;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&v8->fields.__8__1, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)v8->fields.__8__1;
       if ( !this )
         goto LABEL_126;
-      v11 = v4->fields.__4__this;
-      *(_QWORD *)&this->fields.__1__state = v11;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v11, v9, v10);
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v12 = (CommonUI_o *)this;
+      v23 = v8->fields.__4__this;
+      *(_QWORD *)&this->fields.__1__state = v23;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v23, v17, v18, v19, v20, v21, v22);
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v24 = (CommonUI_o *)this;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-      if ( !v12 )
+      if ( !v24 )
         goto LABEL_126;
-      CommonUI__maskFadeout(v12, 2, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
+      CommonUI__maskFadeout(v24, 2, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
 LABEL_10:
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_126;
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)CommonUI__maskFadeIsBusy((CommonUI_o *)this, 0);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
-        v4->fields.__2__current = 0;
-        p__2__current = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C6B9AC(p__2__current, 0, v13, v14);
+        v8->fields.__2__current = 0;
+        p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+        sub_1C71354(p__2__current, 0, v25, v26, v27, v28, v29, v30);
         result = 1;
-        LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+        LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
         return result;
       }
       if ( !_4__this )
@@ -20322,37 +21741,37 @@ LABEL_10:
       if ( !this )
         goto LABEL_126;
       TitleInfoControl__setDispHeader((TitleInfoControl_o *)this, 0, 0);
-      v17 = (System_Collections_Generic_List_T__o *)sub_1C6BC54(System_Collections_Generic_List_CondType_Kind__TypeInfo);
+      v33 = (System_Collections_Generic_List_T__o *)sub_1C715FC(System_Collections_Generic_List_CondType_Kind__TypeInfo);
       System_Collections_Generic_List_Int32Enum____ctor(
-        v17,
-        (const MethodInfo_37E5928 *)Method_System_Collections_Generic_List_CondType_Kind___ctor__);
-      if ( !v17 )
+        v33,
+        (const MethodInfo_37F56CC *)Method_System_Collections_Generic_List_CondType_Kind___ctor__);
+      if ( !v33 )
         goto LABEL_126;
-      items = v17->fields._items;
-      v19 = Method_System_Collections_Generic_List_CondType_Kind__Add__;
-      ++v17->fields._version;
+      items = v33->fields._items;
+      v35 = Method_System_Collections_Generic_List_CondType_Kind__Add__;
+      ++v33->fields._version;
       if ( !items )
         goto LABEL_126;
-      size = v17->fields._size;
+      size = v33->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_Int32Enum___AddWithResize(
-          v17,
+          v33,
           81,
-          *(const MethodInfo_37E617C **)(*(_QWORD *)(v19[4] + 192LL) + 112LL));
+          *(const MethodInfo_37F5F20 **)(*(_QWORD *)(v35[4] + 192LL) + 112LL));
       }
       else
       {
-        v17->fields._size = size + 1;
+        v33->fields._size = size + 1;
         *((_DWORD *)items->m_Items + size) = 81;
       }
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !this )
         goto LABEL_126;
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)DataManager__GetMasterData_object_(
                                                           (DataManager_o *)this,
-                                                          (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
-      item = (int32_t *)v4->fields.item;
+                                                          (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantVoiceMaster___);
+      item = (int32_t *)v8->fields.item;
       if ( !item )
         goto LABEL_126;
       if ( !this )
@@ -20365,96 +21784,136 @@ LABEL_10:
                                                           0);
       if ( !this )
         goto LABEL_126;
-      v22 = (ServantVoiceEntity_o *)this;
+      v38 = (ServantVoiceEntity_o *)this;
       VoiceAssetName = ServantVoiceEntity__getVoiceAssetName((ServantVoiceEntity_o *)this, 0);
-      v4->fields._voiceAssetName_5__2 = VoiceAssetName;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._voiceAssetName_5__2, (int32_t)VoiceAssetName, v24, v25);
-      v26 = (Il2CppObject *)System_Int32__ToString((int)v22 + 20, 0);
-      v73 = 95;
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)j_il2cpp_value_box_0(char_TypeInfo, &v73);
-      v27 = v4->fields.item;
-      if ( !v27 )
+      v8->fields._voiceAssetName_5__2 = VoiceAssetName;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&v8->fields._voiceAssetName_5__2,
+        (int32_t)VoiceAssetName,
+        v40,
+        v41,
+        v42,
+        v43,
+        v44,
+        v45);
+      v46 = (Il2CppObject *)System_Int32__ToString((int)v38 + 20, 0);
+      v125 = 95;
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)j_il2cpp_value_box_0(char_TypeInfo, &v125);
+      v47 = v8->fields.item;
+      if ( !v47 )
         goto LABEL_126;
-      v28 = System_String__Concat_64004808(v26, (Il2CppObject *)this, (Il2CppObject *)v27->fields.voiceId, 0);
-      v4->fields._playSvtVoiceId_5__3 = v28;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._playSvtVoiceId_5__3, (int32_t)v28, v29, v30);
-      v31 = v4->fields.item;
-      if ( !v31 )
+      v48 = System_String__Concat_64069740(v46, (Il2CppObject *)this, (Il2CppObject *)v47->fields.voiceId, 0);
+      v8->fields._playSvtVoiceId_5__3 = v48;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&v8->fields._playSvtVoiceId_5__3,
+        (int32_t)v48,
+        v49,
+        v50,
+        v51,
+        v52,
+        v53,
+        v54);
+      v55 = v8->fields.item;
+      if ( !v55 )
         goto LABEL_126;
-      VoiceList_43041808 = ServantVoiceEntity__getVoiceList_43041808(
-                             v22,
-                             v31->fields.svtVoiceType,
-                             v4->fields._playSvtVoiceId_5__3,
-                             (System_Collections_Generic_List_CondType_Kind__o *)v17,
+      VoiceList_43085872 = ServantVoiceEntity__getVoiceList_43085872(
+                             v38,
+                             v55->fields.svtVoiceType,
+                             v8->fields._playSvtVoiceId_5__3,
+                             (System_Collections_Generic_List_CondType_Kind__o *)v33,
                              0,
                              0);
-      v4->fields._svtVoiceDataList_5__4 = VoiceList_43041808;
-      p_svtVoiceDataList_5__4 = (System_Collections_Generic_List_object__o **)&v4->fields._svtVoiceDataList_5__4;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._svtVoiceDataList_5__4, (int32_t)VoiceList_43041808, v34, v35);
-      if ( v4->fields._svtVoiceDataList_5__4 && (*p_svtVoiceDataList_5__4)->fields._size )
+      v8->fields._svtVoiceDataList_5__4 = VoiceList_43085872;
+      p_svtVoiceDataList_5__4 = (System_Collections_Generic_List_object__o **)&v8->fields._svtVoiceDataList_5__4;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&v8->fields._svtVoiceDataList_5__4,
+        (int32_t)VoiceList_43085872,
+        v58,
+        v59,
+        v60,
+        v61,
+        v62,
+        v63);
+      if ( v8->fields._svtVoiceDataList_5__4 && (*p_svtVoiceDataList_5__4)->fields._size )
         goto LABEL_42;
-      v36 = v4->fields.item;
-      if ( !v36 )
+      v64 = v8->fields.item;
+      if ( !v64 )
         goto LABEL_126;
-      VoiceList_43041092 = ServantVoiceEntity__getVoiceList_43041092(
-                             v22,
-                             v36->fields.svtVoiceType,
+      VoiceList_43085156 = ServantVoiceEntity__getVoiceList_43085156(
+                             v38,
+                             v64->fields.svtVoiceType,
                              3,
-                             v36->fields.voiceCondValue,
+                             v64->fields.voiceCondValue,
                              0,
                              -1,
                              0);
-      *p_svtVoiceDataList_5__4 = (System_Collections_Generic_List_object__o *)VoiceList_43041092;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields._svtVoiceDataList_5__4, (int32_t)VoiceList_43041092, v38, v39);
+      *p_svtVoiceDataList_5__4 = (System_Collections_Generic_List_object__o *)VoiceList_43085156;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&v8->fields._svtVoiceDataList_5__4,
+        (int32_t)VoiceList_43085156,
+        v66,
+        v67,
+        v68,
+        v69,
+        v70,
+        v71);
 LABEL_42:
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)_4__this->fields.bondsStandFigureBack;
       if ( !this )
         goto LABEL_126;
-      _8__1 = v4->fields.__8__1;
+      _8__1 = v8->fields.__8__1;
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)UnityEngine_Component__get_gameObject(
                                                           (UnityEngine_Component_o *)this,
                                                           0);
       if ( !_8__1 )
         goto LABEL_126;
       _8__1->fields.bondsSvtObj = (struct UnityEngine_GameObject_o *)this;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&_8__1->fields.bondsSvtObj, (int32_t)this, v41, v42);
-      v43 = v4->fields.__8__1;
-      if ( !v43 )
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&_8__1->fields.bondsSvtObj,
+        (int32_t)this,
+        v73,
+        v74,
+        v75,
+        v76,
+        v77,
+        v78);
+      v79 = v8->fields.__8__1;
+      if ( !v79 )
         goto LABEL_126;
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)v43->fields.bondsSvtObj;
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)v79->fields.bondsSvtObj;
       if ( !this )
         goto LABEL_126;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
-      v44 = v4->fields.__8__1;
-      if ( !v44 )
+      v80 = v8->fields.__8__1;
+      if ( !v80 )
         goto LABEL_126;
-      v44->fields.createStandEnd = 0;
+      v80->fields.createStandEnd = 0;
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)_4__this->fields.materialImageIdList;
       if ( !this )
         goto LABEL_126;
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)System_Collections_Generic_List_int___get_Item(
                                                           (System_Collections_Generic_List_int__o *)this,
                                                           _4__this->fields.materialFigureSvtDispIdx,
-                                                          (const MethodInfo_37E3660 *)Method_System_Collections_Generic_List_int__get_Item__);
-      v45 = v4->fields.item;
-      if ( !v45 )
+                                                          (const MethodInfo_37F3404 *)Method_System_Collections_Generic_List_int__get_Item__);
+      v81 = v8->fields.item;
+      if ( !v81 )
         goto LABEL_126;
-      v46 = (int)this;
-      MyRoomControl__SetImageIdAndFormId(_4__this, formId, &formId[1], v45->fields.svt_id, (int32_t)this, 0);
+      v82 = (int)this;
+      MyRoomControl__SetImageIdAndFormId(_4__this, formId, &formId[1], v81->fields.svt_id, (int32_t)this, 0);
       if ( !*p_svtVoiceDataList_5__4 )
         goto LABEL_59;
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)System_Collections_Generic_List_object___get_Item(
                                                           *p_svtVoiceDataList_5__4,
                                                           0,
-                                                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                          (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
       if ( !this )
         goto LABEL_126;
       if ( !LODWORD(this->fields.__2__current) )
         goto LABEL_127;
-      v47 = this->fields.__4__this;
-      if ( !v47 )
+      v83 = this->fields.__4__this;
+      if ( !v83 )
         goto LABEL_126;
-      if ( !HIDWORD(v47->fields.myRoomListCtr) )
+      if ( !HIDWORD(v83->fields.myRoomListCtr) )
         goto LABEL_59;
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)*p_svtVoiceDataList_5__4;
       if ( !*p_svtVoiceDataList_5__4 )
@@ -20462,96 +21921,96 @@ LABEL_42:
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)System_Collections_Generic_List_object___get_Item(
                                                           (System_Collections_Generic_List_object__o *)this,
                                                           0,
-                                                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                          (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
       if ( !this )
         goto LABEL_126;
       if ( !LODWORD(this->fields.__2__current) )
 LABEL_127:
-        sub_1C6BC68(this);
-      v48 = this->fields.__4__this;
-      if ( !v48 )
+        sub_1C71610(this);
+      v84 = this->fields.__4__this;
+      if ( !v84 )
         goto LABEL_126;
-      formId[1] = (int32_t)v48->fields.myRoomListCtr;
+      formId[1] = (int32_t)v84->fields.myRoomListCtr;
 LABEL_59:
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)_4__this->fields.bondsStandFigureBack;
       if ( !this )
         goto LABEL_126;
       StandFigureBack__Init((StandFigureBack_o *)this, 0);
-      v49 = v4->fields.item;
-      if ( !v49 )
+      v85 = v8->fields.item;
+      if ( !v85 )
         goto LABEL_126;
-      svt_id = v49->fields.svt_id;
+      svt_id = v85->fields.svt_id;
       bondsStandFigureBack = _4__this->fields.bondsStandFigureBack;
-      v52 = formId[1];
-      v53 = (Il2CppObject *)v4->fields.__8__1;
-      v54 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-      System_Action___ctor(v54, v53, Method_MyRoomControl___c__DisplayClass344_0__svtVoicePlayAct_b__0__, 0);
+      v88 = formId[1];
+      v89 = (Il2CppObject *)v8->fields.__8__1;
+      v90 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      System_Action___ctor(v90, v89, Method_MyRoomControl___c__DisplayClass344_0__svtVoicePlayAct_b__0__, 0);
       if ( !bondsStandFigureBack )
         goto LABEL_126;
-      StandFigureBack__SetMyRoomStandFigure(bondsStandFigureBack, svt_id, v46, 1, 0, v52, 10, v54, 0, 0);
+      StandFigureBack__SetMyRoomStandFigure(bondsStandFigureBack, svt_id, v82, 1, 0, v88, 10, v90, 0, 0);
 LABEL_63:
-      v55 = v4->fields.__8__1;
-      if ( !v55 )
+      v91 = v8->fields.__8__1;
+      if ( !v91 )
         goto LABEL_126;
-      if ( !v55->fields.createStandEnd )
+      if ( !v91->fields.createStandEnd )
       {
-        v4->fields.__2__current = 0;
-        v56 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C6B9AC(v56, 0, v2, v3);
-        v57 = 2;
+        v8->fields.__2__current = 0;
+        v92 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+        sub_1C71354(v92, 0, v2, v3, v4, v5, v6, v7);
+        v93 = 2;
         goto LABEL_125;
       }
       if ( !_4__this )
         goto LABEL_126;
-      MyRoomControl__voiceLoad(_4__this, v4->fields._voiceAssetName_5__2, 0, 0);
+      MyRoomControl__voiceLoad(_4__this, v8->fields._voiceAssetName_5__2, 0, 0);
 LABEL_67:
       if ( _4__this->fields.isVoiceLoading )
       {
-        v4->fields.__2__current = 0;
-        v56 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C6B9AC(v56, 0, v2, v3);
-        v57 = 3;
+        v8->fields.__2__current = 0;
+        v92 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+        sub_1C71354(v92, 0, v2, v3, v4, v5, v6, v7);
+        v93 = 3;
         goto LABEL_125;
       }
-      method = (const MethodInfo *)v4->fields._svtVoiceDataList_5__4;
+      method = (const MethodInfo *)v8->fields._svtVoiceDataList_5__4;
       if ( !method )
         goto LABEL_126;
       if ( SLODWORD(method->name) >= 2 )
       {
-        v58 = 0;
+        v94 = 0;
         while ( 1 )
         {
           this = (MyRoomControl__svtVoicePlayAct_d__344_o *)System_Collections_Generic_List_object___get_Item(
                                                               (System_Collections_Generic_List_object__o *)method,
-                                                              v58,
-                                                              (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
+                                                              v94,
+                                                              (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_ServantVoiceData____get_Item__);
           if ( !this )
             goto LABEL_126;
-          v59 = this;
+          v95 = this;
           if ( !LODWORD(this->fields.__2__current) )
             goto LABEL_127;
-          v60 = this->fields.__4__this;
-          if ( !v60 )
+          v96 = this->fields.__4__this;
+          if ( !v96 )
             goto LABEL_126;
           this = (MyRoomControl__svtVoicePlayAct_d__344_o *)System_String__op_Equality(
-                                                              (System_String_o *)v60->fields.m_CachedPtr,
-                                                              v4->fields._playSvtVoiceId_5__3,
+                                                              (System_String_o *)v96->fields.m_CachedPtr,
+                                                              v8->fields._playSvtVoiceId_5__3,
                                                               0);
           if ( ((unsigned __int8)this & 1) != 0 )
             break;
-          method = (const MethodInfo *)v4->fields._svtVoiceDataList_5__4;
+          method = (const MethodInfo *)v8->fields._svtVoiceDataList_5__4;
           if ( !method )
             goto LABEL_126;
-          if ( ++v58 >= SLODWORD(method->name) )
+          if ( ++v94 >= SLODWORD(method->name) )
             goto LABEL_84;
         }
         this = (MyRoomControl__svtVoicePlayAct_d__344_o *)_4__this->fields.bondsSvtCtr;
         if ( !this )
           goto LABEL_126;
-        MyRoomSvtControl__setSvtVoice_33978568(
+        MyRoomSvtControl__setSvtVoice_34006120(
           (MyRoomSvtControl_o *)this,
-          (ServantVoiceData_array *)v59,
-          v4->fields._voiceAssetName_5__2,
+          (ServantVoiceData_array *)v95,
+          v8->fields._voiceAssetName_5__2,
           0);
       }
       else
@@ -20562,7 +22021,7 @@ LABEL_67:
         MyRoomSvtControl__setSvtVoice(
           (MyRoomSvtControl_o *)this,
           (System_Collections_Generic_List_ServantVoiceData____o *)method,
-          v4->fields._voiceAssetName_5__2,
+          v8->fields._voiceAssetName_5__2,
           0);
       }
 LABEL_84:
@@ -20574,24 +22033,24 @@ LABEL_84:
       if ( !this )
         goto LABEL_126;
       MyRoomSvtControl__playVoice((MyRoomSvtControl_o *)this, 0);
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v61 = (CommonUI_o *)this;
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v97 = (CommonUI_o *)this;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-      if ( !v61 )
+      if ( !v97 )
         goto LABEL_126;
-      CommonUI__maskFadein(v61, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
+      CommonUI__maskFadein(v97, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
 LABEL_90:
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_126;
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)CommonUI__maskFadeIsBusy((CommonUI_o *)this, 0);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
-        v4->fields.__2__current = 0;
-        v56 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C6B9AC(v56, 0, v62, v63);
-        v57 = 4;
+        v8->fields.__2__current = 0;
+        v92 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+        sub_1C71354(v92, 0, v98, v99, v100, v101, v102, v103);
+        v93 = 4;
         goto LABEL_125;
       }
 LABEL_93:
@@ -20602,30 +22061,30 @@ LABEL_93:
         goto LABEL_126;
       if ( MyRoomSvtControl__isPlay((MyRoomSvtControl_o *)this, 0) && UnityEngine_Input__get_touchCount(0) <= 0 )
       {
-        v4->fields.__2__current = 0;
-        v56 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C6B9AC(v56, 0, v64, v65);
-        v57 = 5;
+        v8->fields.__2__current = 0;
+        v92 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+        sub_1C71354(v92, 0, v104, v105, v106, v107, v108, v109);
+        v93 = 5;
         goto LABEL_125;
       }
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v66 = (CommonUI_o *)this;
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v110 = (CommonUI_o *)this;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-      if ( !v66 )
+      if ( !v110 )
         goto LABEL_126;
-      CommonUI__maskFadeout(v66, 2, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
+      CommonUI__maskFadeout(v110, 2, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
 LABEL_101:
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
         goto LABEL_126;
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)CommonUI__maskFadeIsBusy((CommonUI_o *)this, 0);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
-        v4->fields.__2__current = 0;
-        v56 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-        sub_1C6B9AC(v56, 0, v67, v68);
-        v57 = 6;
+        v8->fields.__2__current = 0;
+        v92 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+        sub_1C71354(v92, 0, v111, v112, v113, v114, v115, v116);
+        v93 = 6;
         goto LABEL_125;
       }
       if ( !_4__this )
@@ -20634,18 +22093,18 @@ LABEL_101:
       if ( !this )
         goto LABEL_126;
       MyRoomSvtControl__stopVoice((MyRoomSvtControl_o *)this, 0);
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
       if ( !this )
         goto LABEL_126;
-      SoundManager__ReleaseAudioAssetStorage((SoundManager_o *)this, v4->fields._voiceAssetName_5__2, 0);
+      SoundManager__ReleaseAudioAssetStorage((SoundManager_o *)this, v8->fields._voiceAssetName_5__2, 0);
       this = (MyRoomControl__svtVoicePlayAct_d__344_o *)_4__this->fields.bondsStandFigureBack;
       if ( !this )
         goto LABEL_126;
       StandFigureBack__Init((StandFigureBack_o *)this, 0);
-      v69 = v4->fields.__8__1;
-      if ( !v69 )
+      v117 = v8->fields.__8__1;
+      if ( !v117 )
         goto LABEL_126;
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)v69->fields.bondsSvtObj;
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)v117->fields.bondsSvtObj;
       if ( !this )
         goto LABEL_126;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
@@ -20678,49 +22137,49 @@ LABEL_101:
       if ( !this )
         goto LABEL_126;
       TitleInfoControl__setDispHeader((TitleInfoControl_o *)this, 1, 0);
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-      v70 = (CommonUI_o *)this;
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      v118 = (CommonUI_o *)this;
       if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AvalonSceneManager_TypeInfo);
-      if ( !v70 )
+      if ( !v118 )
         goto LABEL_126;
-      CommonUI__maskFadein(v70, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
+      CommonUI__maskFadein(v118, AvalonSceneManager_TypeInfo->static_fields->DEFAULT_FADE_TIME, 0, 0);
 LABEL_120:
-      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      this = (MyRoomControl__svtVoicePlayAct_d__344_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !this )
 LABEL_126:
-        sub_1C6BC60(this, method);
+        sub_1C71608(this, method);
       if ( !CommonUI__maskFadeIsBusy((CommonUI_o *)this, 0) )
         return 0;
-      v4->fields.__2__current = 0;
-      v56 = (CGThumbnailListItem_o *)&v4->fields.__2__current;
-      sub_1C6B9AC(v56, 0, v71, v72);
-      v57 = 7;
+      v8->fields.__2__current = 0;
+      v92 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
+      sub_1C71354(v92, 0, v119, v120, v121, v122, v123, v124);
+      v93 = 7;
 LABEL_125:
-      LODWORD(v56[-1].fields._ThumbnailSpritePath_k__BackingField) = v57;
+      LODWORD(v92[-1].fields._ClosedMessage_k__BackingField) = v93;
       return 1;
     case 1:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_10;
     case 2:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_63;
     case 3:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       if ( !_4__this )
         goto LABEL_126;
       goto LABEL_67;
     case 4:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_90;
     case 5:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_93;
     case 6:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_101;
     case 7:
-      v4->fields.__1__state = -1;
+      v8->fields.__1__state = -1;
       goto LABEL_120;
     default:
       return 0;
@@ -20744,11 +22203,11 @@ void __noreturn MyRoomControl__svtVoicePlayAct_d__344__System_Collections_IEnume
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_MyRoomControl__svtVoicePlayAct_d__344_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_MyRoomControl__svtVoicePlayAct_d__344_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 

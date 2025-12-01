@@ -1,15 +1,19 @@
-void BitValue_Int32Enum____ctor(BitValue_T__o *this, System_Func_T__int__o *func, const MethodInfo_3378EF0 *method)
+void BitValue_Int32Enum____ctor(BitValue_T__o *this, System_Func_T__int__o *func, const MethodInfo_3388C94 *method)
 {
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.convertFunc = func;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.convertFunc, (int32_t)func, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.convertFunc, (int32_t)func, v5, v6, v7, v8, v9, v10);
 }
 
 
-bool BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodInfo_3378FA0 *method)
+bool BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodInfo_3388D44 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w19
@@ -18,7 +22,7 @@ bool BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodIn
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_1C6BC60(this, val);
+    sub_1C71608(this, val);
   value = this->fields.value;
   v5 = ((__int64 (__fastcall *)(intptr_t, int32_t, intptr_t))convertFunc->fields.invoke_impl)(
          convertFunc->fields.method_code,
@@ -28,9 +32,9 @@ bool BitValue_Int32Enum___Check(BitValue_T__o *this, int32_t val, const MethodIn
 }
 
 
-bool BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_3378FD4 *method)
+bool BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const MethodInfo_3388D78 *method)
 {
-  const MethodInfo_3378FD4 *v3; // x19
+  const MethodInfo_3388D78 *v3; // x19
   bool v6; // w0
   BitValue_T__c *klass; // x8
 
@@ -38,22 +42,22 @@ bool BitValue_Int32Enum___CheckAndOff(BitValue_T__o *this, int32_t val, const Me
   v6 = BitValue_Int32Enum___Check(
          this,
          val,
-         (const MethodInfo_3378FA0 *)method->klass->rgctx_data->_4_BitValue_T__Check);
+         (const MethodInfo_3388D44 *)method->klass->rgctx_data->_4_BitValue_T__Check);
   klass = v3->klass;
   LOBYTE(v3) = v6;
-  BitValue_Int32Enum___Off(this, val, (const MethodInfo_3378F60 *)klass->rgctx_data->_5_BitValue_T__Off);
+  BitValue_Int32Enum___Off(this, val, (const MethodInfo_3388D04 *)klass->rgctx_data->_5_BitValue_T__Off);
   return (unsigned __int8)v3 & 1;
 }
 
 
-void BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_3378F60 *method)
+void BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo_3388D04 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_1C6BC60(this, val);
+    sub_1C71608(this, val);
   value = this->fields.value;
   this->fields.value = value
                      & ~((unsigned int (__fastcall *)(intptr_t, int32_t, intptr_t))convertFunc->fields.invoke_impl)(
@@ -63,14 +67,14 @@ void BitValue_Int32Enum___Off(BitValue_T__o *this, int32_t val, const MethodInfo
 }
 
 
-void BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const MethodInfo_3378F20 *method)
+void BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const MethodInfo_3388CC4 *method)
 {
   struct System_Func_T__int__o *convertFunc; // x8
   int32_t value; // w20
 
   convertFunc = this->fields.convertFunc;
   if ( !convertFunc )
-    sub_1C6BC60(this, val);
+    sub_1C71608(this, val);
   value = this->fields.value;
   this->fields.value = ((__int64 (__fastcall *)(intptr_t, int32_t, intptr_t))convertFunc->fields.invoke_impl)(
                          convertFunc->fields.method_code,
@@ -80,7 +84,7 @@ void BitValue_Int32Enum___On(BitValue_T__o *this, int32_t val, const MethodInfo_
 }
 
 
-void BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_3379024 *method)
+void BitValue_Int32Enum___Reset(BitValue_T__o *this, const MethodInfo_3388DC8 *method)
 {
   this->fields.value = 0;
 }

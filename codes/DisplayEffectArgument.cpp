@@ -1,3 +1,4 @@
+// local variable allocation has failed, the output may be wrong!
 void DisplayEffectArgument___ctor(
         DisplayEffectArgument_o *this,
         UnityEngine_GameObject_o *actObj,
@@ -18,29 +19,53 @@ void DisplayEffectArgument___ctor(
   float v23; // s1
   struct System_Int32_array *v24; // x0
   int32_t v25; // w2
-  const MethodInfo *v26; // x3
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  char v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
+  int32_t v31; // w2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  char v34; // w5
+  int64_t v35; // x6
+  System_String_o *v36; // x7
   struct BattleActionData_o **p_actData; // x20
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
+  int32_t v38; // w2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  char v41; // w5
+  int64_t v42; // x6
+  System_String_o *v43; // x7
+  int32_t v44; // w2
+  int32_t v45; // w3
+  System_String_o *v46; // x4
+  char v47; // w5
+  int64_t v48; // x6
+  System_String_o *v49; // x7
 
-  if ( (byte_4CB8C8B & 1) == 0 )
+  if ( (byte_4CC9DC6 & 1) == 0 )
   {
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB8C8B = 1;
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC9DC6 = 1;
   }
   v17 = StringLiteral_1/*""*/;
   this->fields.attachNodeName = (struct System_String_o *)StringLiteral_1/*""*/;
   p_attachNodeName = &this->fields.attachNodeName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.attachNodeName, v17, funcIndex, (const MethodInfo *)actData);
-  if ( !byte_4CAFC09 )
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.attachNodeName,
+    v17,
+    funcIndex,
+    (int32_t)actData,
+    (System_String_o *)isCommandAfter,
+    isTreasureDevice,
+    (int64_t)attachNodeName,
+    (System_String_o *)ispopAdjustment);
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   v19 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -51,20 +76,20 @@ void DisplayEffectArgument___ctor(
   v23 = v22->zeroVector.fields.z;
   *(_QWORD *)&this->fields.popupOffset.fields.x = *(_QWORD *)&v22->zeroVector.fields.x;
   this->fields.popupOffset.fields.z = v23;
-  v24 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 0);
+  v24 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, 0);
   this->fields.fieldIndiv = v24;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.fieldIndiv, (int32_t)v24, v25, v26);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.fieldIndiv, (int32_t)v24, v25, v26, v27, v28, v29, v30);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.actObj = actObj;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)actObj, v27, v28);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)actObj, v31, v32, v33, v34, v35, v36);
   this->fields.actData = actData;
   p_actData = &this->fields.actData;
   *((_DWORD *)p_actData - 2) = funcIndex;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_actData, (int32_t)actData, v30, v31);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p_actData, (int32_t)actData, v38, v39, v40, v41, v42, v43);
   *((_BYTE *)p_actData + 8) = isCommandAfter;
   *((_BYTE *)p_actData + 9) = isTreasureDevice;
   p_actData[2] = (struct BattleActionData_o *)attachNodeName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_attachNodeName, (int32_t)attachNodeName, v32, v33);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p_attachNodeName, (int32_t)attachNodeName, v44, v45, v46, v47, v48, v49);
   *((_BYTE *)p_actData + 24) = ispopAdjustment;
 }
 
@@ -78,10 +103,10 @@ bool DisplayEffectArgument__IsDisplayablePopupEachActType(
   __int64 v6; // x1
   struct BattleActionData_o *actData; // x8
 
-  if ( (byte_4CB8C8D & 1) == 0 )
+  if ( (byte_4CC9DC8 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB8C8D = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC9DC8 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -96,7 +121,7 @@ bool DisplayEffectArgument__IsDisplayablePopupEachActType(
     if ( targetObj )
       return UnityEngine_GameObject__get_activeSelf(targetObj, 0);
 LABEL_13:
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   }
   return 1;
 }
@@ -110,43 +135,55 @@ DisplayEffectArgument_o *DisplayEffectArgument__SetBuffParam(
         System_Int32_array *fieldIndiv,
         const MethodInfo *method)
 {
-  struct System_Int32_array *v6; // x19
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  struct System_Int32_array *v10; // x19
   float z; // s8
   float y; // s9
   float x; // s10
-  float v11; // s11
-  float v12; // s12
-  float v13; // s13
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  float v15; // s11
+  float v16; // s12
+  float v17; // s13
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
 
-  v6 = fieldIndiv;
+  v10 = fieldIndiv;
   z = popupOffset.fields.z;
   y = popupOffset.fields.y;
   x = popupOffset.fields.x;
-  v11 = buffOffset.fields.z;
-  v12 = buffOffset.fields.y;
-  v13 = buffOffset.fields.x;
-  if ( (byte_4CB8C8C & 1) == 0 )
+  v15 = buffOffset.fields.z;
+  v16 = buffOffset.fields.y;
+  v17 = buffOffset.fields.x;
+  if ( (byte_4CC9DC7 & 1) == 0 )
   {
-    sub_1C6BA08(&int___TypeInfo);
-    byte_4CB8C8C = 1;
+    sub_1C713B0(&int___TypeInfo);
+    byte_4CC9DC7 = 1;
   }
   this->fields.overwriteEffectIds = overwriteEffectIds;
-  this->fields.buffOffset.fields.x = v13;
-  this->fields.buffOffset.fields.y = v12;
-  this->fields.buffOffset.fields.z = v11;
+  this->fields.buffOffset.fields.x = v17;
+  this->fields.buffOffset.fields.y = v16;
+  this->fields.buffOffset.fields.z = v15;
   this->fields.popupOffset.fields.x = x;
   this->fields.popupOffset.fields.y = y;
   this->fields.popupOffset.fields.z = z;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.overwriteEffectIds,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.overwriteEffectIds,
     (int32_t)overwriteEffectIds,
     (int32_t)fieldIndiv,
-    method);
-  if ( !v6 )
-    v6 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 0);
-  this->fields.fieldIndiv = v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.fieldIndiv, (int32_t)v6, v15, v16);
+    (int32_t)method,
+    v6,
+    v7,
+    v8,
+    v9);
+  if ( !v10 )
+    v10 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, 0);
+  this->fields.fieldIndiv = v10;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.fieldIndiv, (int32_t)v10, v19, v20, v21, v22, v23, v24);
   return this;
 }

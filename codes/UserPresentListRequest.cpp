@@ -1,14 +1,14 @@
 System_String_o *UserPresentListRequest__getMockData(UserPresentListRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB7F41 & 1) == 0 )
+  if ( (byte_4CC906A & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_9140/*"MockUserPresentListResponse"*/);
-    byte_4CB7F41 = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_9144/*"MockUserPresentListResponse"*/);
+    byte_4CC906A = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9140/*"MockUserPresentListResponse"*/, 0);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9144/*"MockUserPresentListResponse"*/, 0);
 }
 
 
@@ -16,14 +16,14 @@ System_String_o *UserPresentListRequest__getURL(UserPresentListRequest_o *this, 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CB7F40 & 1) == 0 )
+  if ( (byte_4CC9069 & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_22851/*"present/list"*/);
-    byte_4CB7F40 = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_22869/*"present/list"*/);
+    byte_4CC9069 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_22851/*"present/list"*/, 0);
+  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_22869/*"present/list"*/, 0);
 }

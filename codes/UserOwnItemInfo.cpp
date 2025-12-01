@@ -4,19 +4,31 @@ void UserOwnItemInfo___ctor(UserOwnItemInfo_o *this, const MethodInfo *method)
 }
 
 
-void UserOwnItemInfo___ctor_43798180(
+void UserOwnItemInfo___ctor_43845852(
         UserOwnItemInfo_o *this,
         ItemEntity_o *itemEntity,
         UserItemEntity_o *userItemEntity,
         const MethodInfo *method)
 {
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
   int64_t num; // x8
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)itemEntity, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
+    (int32_t)itemEntity,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   if ( userItemEntity )
     num = userItemEntity->fields.num;
   else
@@ -33,12 +45,12 @@ bool UserOwnItemInfo__IsExpired(UserOwnItemInfo_o *this, System_Nullable_long__o
 
   value = time.fields.value;
   hasValue = time.fields.hasValue;
-  if ( (byte_4CB7790 & 1) == 0 )
+  if ( (byte_4CC88BD & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Nullable_long__GetValueOrDefault__);
-    sub_1C6BA08(&Method_System_Nullable_long__get_HasValue__);
-    byte_4CB7790 = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_1C713B0(&Method_System_Nullable_long__get_HasValue__);
+    byte_4CC88BD = 1;
   }
   if ( !hasValue )
   {
@@ -48,8 +60,8 @@ bool UserOwnItemInfo__IsExpired(UserOwnItemInfo_o *this, System_Nullable_long__o
   }
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C6BC60(0, *(_QWORD *)&time.fields.hasValue);
-  return !ItemEntity__IsEnable_42600356(ItemEntity_k__BackingField, value, 0);
+    sub_1C71608(0, *(_QWORD *)&time.fields.hasValue);
+  return !ItemEntity__IsEnable_42643172(ItemEntity_k__BackingField, value, 0);
 }
 
 
@@ -59,7 +71,7 @@ int32_t UserOwnItemInfo__get_ImageId(UserOwnItemInfo_o *this, const MethodInfo *
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return ItemEntity_k__BackingField->fields.imageId;
 }
 
@@ -76,7 +88,7 @@ int32_t UserOwnItemInfo__get_ItemId(UserOwnItemInfo_o *this, const MethodInfo *m
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return ItemEntity_k__BackingField->fields.id;
 }
 
@@ -93,17 +105,29 @@ int32_t UserOwnItemInfo__get_Type(UserOwnItemInfo_o *this, const MethodInfo *met
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return ItemEntity_k__BackingField->fields.type;
 }
 
 
 void UserOwnItemInfo__set_ItemEntity(UserOwnItemInfo_o *this, ItemEntity_o *value, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._ItemEntity_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._ItemEntity_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

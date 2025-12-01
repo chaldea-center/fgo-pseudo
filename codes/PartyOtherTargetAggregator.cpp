@@ -12,26 +12,26 @@ System_Int32_array *PartyOtherTargetAggregator__GetCandidate(
   System_Func_int__bool__o *v4; // x21
   System_Collections_Generic_IEnumerable_TSource__o *v5; // x0
 
-  if ( (byte_4CB9704 & 1) == 0 )
+  if ( (byte_4CCA854 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_int___);
-    sub_1C6BA08(&System_Func_int__bool__TypeInfo);
-    sub_1C6BA08(&Method_PartyOtherTargetAggregator__GetCandidate_b__0_0__);
-    byte_4CB9704 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Where_int___);
+    sub_1C713B0(&System_Func_int__bool__TypeInfo);
+    sub_1C713B0(&Method_PartyOtherTargetAggregator__GetCandidate_b__0_0__);
+    byte_4CCA854 = 1;
   }
   Candidate = (System_Collections_Generic_IEnumerable_TSource__o *)PartyAllFieldTargetAggregator__GetCandidate(
                                                                      (PartyAllFieldTargetAggregator_o *)this,
                                                                      method);
-  v4 = (System_Func_int__bool__o *)sub_1C6BC54(System_Func_int__bool__TypeInfo);
+  v4 = (System_Func_int__bool__o *)sub_1C715FC(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(v4, (Il2CppObject *)this, Method_PartyOtherTargetAggregator__GetCandidate_b__0_0__, 0);
   v5 = System_Linq_Enumerable__Where_int_(
          Candidate,
          (System_Func_TSource__bool__o *)v4,
-         (const MethodInfo_3181DBC *)Method_System_Linq_Enumerable_Where_int___);
+         (const MethodInfo_3191B60 *)Method_System_Linq_Enumerable_Where_int___);
   return System_Linq_Enumerable__ToArray_int_(
            v5,
-           (const MethodInfo_317B0B0 *)Method_System_Linq_Enumerable_ToArray_int___);
+           (const MethodInfo_318AE54 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 

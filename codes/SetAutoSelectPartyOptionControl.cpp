@@ -12,25 +12,25 @@ void SetAutoSelectPartyOptionControl__Init(SetAutoSelectPartyOptionControl_o *th
   UILabel_o *infoLabel; // x20
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CB12B2 & 1) == 0 )
+  if ( (byte_4CC23BF & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&OptionManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_9657/*"OPTION_AUTO_SELECT_PARTY_INFO"*/);
-    sub_1C6BA08(&StringLiteral_9656/*"OPTION_AUTO_SELECT_PARTY"*/);
-    byte_4CB12B2 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&OptionManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_9662/*"OPTION_AUTO_SELECT_PARTY_INFO"*/);
+    sub_1C713B0(&StringLiteral_9661/*"OPTION_AUTO_SELECT_PARTY"*/);
+    byte_4CC23BF = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9656/*"OPTION_AUTO_SELECT_PARTY"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9661/*"OPTION_AUTO_SELECT_PARTY"*/, 0);
   if ( !titleLabel
     || (UILabel__set_text(titleLabel, v4, 0),
         infoLabel = this->fields.infoLabel,
-        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9657/*"OPTION_AUTO_SELECT_PARTY_INFO"*/, 0),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9662/*"OPTION_AUTO_SELECT_PARTY_INFO"*/, 0),
         !infoLabel) )
   {
-    sub_1C6BC60(v4, v5);
+    sub_1C71608(v4, v5);
   }
   UILabel__set_text(infoLabel, v4, 0);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -48,10 +48,10 @@ void SetAutoSelectPartyOptionControl__OnClickButton(SetAutoSelectPartyOptionCont
   System_Reflection_MethodBase_o *v6; // x0
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CB12B4 & 1) == 0 )
+  if ( (byte_4CC23C1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SetAutoSelectPartyOptionControl_OnClickButton__);
-    byte_4CB12B4 = 1;
+    sub_1C713B0(&Method_SetAutoSelectPartyOptionControl_OnClickButton__);
+    byte_4CC23C1 = 1;
   }
   klass = this->klass;
   this->fields.flag ^= 1u;
@@ -61,8 +61,8 @@ void SetAutoSelectPartyOptionControl__OnClickButton(SetAutoSelectPartyOptionCont
   v4 = Method_SetAutoSelectPartyOptionControl_OnClickButton__;
   flag = this->fields.flag;
   if ( (*((_BYTE *)Method_SetAutoSelectPartyOptionControl_OnClickButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C6BA20(Method_SetAutoSelectPartyOptionControl_OnClickButton__);
-  v6 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C713C8(Method_SetAutoSelectPartyOptionControl_OnClickButton__);
+  v6 = (System_Reflection_MethodBase_o *)sub_1C71394(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v6, !flag, 0, 0);
   SetAutoSelectPartyOptionControl__RefreshDisplay(this, v7);
 }
@@ -72,10 +72,10 @@ void SetAutoSelectPartyOptionControl__Reflection(SetAutoSelectPartyOptionControl
 {
   _BOOL4 flag; // w19
 
-  if ( (byte_4CB12B5 & 1) == 0 )
+  if ( (byte_4CC23C2 & 1) == 0 )
   {
-    sub_1C6BA08(&OptionManager_TypeInfo);
-    byte_4CB12B5 = 1;
+    sub_1C713B0(&OptionManager_TypeInfo);
+    byte_4CC23C2 = 1;
   }
   flag = this->fields.flag;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -89,18 +89,18 @@ void SetAutoSelectPartyOptionControl__RefreshDisplay(SetAutoSelectPartyOptionCon
   UIButton_o *switchButton; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4CB12B3 & 1) == 0 )
+  if ( (byte_4CC23C0 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
-    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
-    byte_4CB12B3 = 1;
+    sub_1C713B0(&StringLiteral_17529/*"btn_on"*/);
+    sub_1C713B0(&StringLiteral_17528/*"btn_off"*/);
+    byte_4CC23C0 = 1;
   }
   switchButton = this->fields.switchButton;
   if ( !switchButton )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   if ( this->fields.flag )
-    v4 = &StringLiteral_17522/*"btn_on"*/;
+    v4 = &StringLiteral_17529/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17521/*"btn_off"*/;
+    v4 = &StringLiteral_17528/*"btn_off"*/;
   UIButton__set_normalSprite(switchButton, (System_String_o *)*v4, 0);
 }

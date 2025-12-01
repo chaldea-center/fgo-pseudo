@@ -1,9 +1,9 @@
 void ScriptObjectListViewItem___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CB389C & 1) == 0 )
+  if ( (byte_4CC49B4 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptObjectListViewItem_TypeInfo);
-    byte_4CB389C = 1;
+    sub_1C713B0(&ScriptObjectListViewItem_TypeInfo);
+    byte_4CC49B4 = 1;
   }
   *ScriptObjectListViewItem_TypeInfo->static_fields = (struct ScriptObjectListViewItem_StaticFields)257;
 }
@@ -16,11 +16,15 @@ void ScriptObjectListViewItem___ctor(
         const MethodInfo *method)
 {
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   this->fields.path = path;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.path, (int32_t)path, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.path, (int32_t)path, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -40,10 +44,10 @@ bool ScriptObjectListViewItem__SetSortValue(
   const MethodInfo *v7; // x1
   const MethodInfo *v8; // x1
 
-  if ( (byte_4CB389B & 1) == 0 )
+  if ( (byte_4CC49B3 & 1) == 0 )
   {
-    sub_1C6BA08(&ScriptObjectListViewItem_TypeInfo);
-    byte_4CB389B = 1;
+    sub_1C713B0(&ScriptObjectListViewItem_TypeInfo);
+    byte_4CC49B3 = 1;
   }
   ListViewItem__SetSortValue((ListViewItem_o *)this, sort, 0);
   v6 = ScriptObjectListViewItem_TypeInfo;
@@ -78,15 +82,15 @@ ScriptEncryptEntity_o *ScriptObjectListViewItem__get_EncryptEntity(
   System_String_o *Name; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CB3899 & 1) == 0 )
+  if ( (byte_4CC49B1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
-    byte_4CB3899 = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+    byte_4CC49B1 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_ScriptManager__get_Instance__);
   Name = ScriptObjectListViewItem__get_Name(this, v4);
   if ( !Instance )
-    sub_1C6BC60(Name, v6);
+    sub_1C71608(Name, v6);
   return ScriptManager__GetEncryptEntity((ScriptManager_o *)Instance, Name, 0);
 }
 
@@ -105,16 +109,16 @@ bool ScriptObjectListViewItem__get_IsExistKey(ScriptObjectListViewItem_o *this, 
   System_String_o *keyType; // x19
   System_String_o *AssetbundleKey; // x0
 
-  if ( (byte_4CB389A & 1) == 0 )
+  if ( (byte_4CC49B2 & 1) == 0 )
   {
-    sub_1C6BA08(&CatAndMouseGame_TypeInfo);
-    byte_4CB389A = 1;
+    sub_1C713B0(&CatAndMouseGame_TypeInfo);
+    byte_4CC49B2 = 1;
   }
   if ( ScriptObjectListViewItem__get_EncryptEntity(this, method) )
   {
     EncryptEntity = ScriptObjectListViewItem__get_EncryptEntity(this, v3);
     if ( !EncryptEntity )
-      sub_1C6BC60(0, v5);
+      sub_1C71608(0, v5);
     keyType = EncryptEntity->fields.keyType;
     if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
@@ -141,7 +145,7 @@ System_String_o *ScriptObjectListViewItem__get_Name(ScriptObjectListViewItem_o *
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0);
 LABEL_6:
-    sub_1C6BC60(path, method);
+    sub_1C71608(path, method);
   }
   return this->fields.path;
 }
@@ -163,23 +167,23 @@ System_String_o *ScriptObjectListViewItem__get_TitleText(ScriptObjectListViewIte
   const MethodInfo *v8; // x1
   Il2CppObject **v9; // x9
 
-  if ( (byte_4CB3898 & 1) == 0 )
+  if ( (byte_4CC49B0 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_25245/*"{0} {1} {2}"*/);
-    sub_1C6BA08(&StringLiteral_25377/*"×"*/);
-    sub_1C6BA08(&StringLiteral_25484/*"〇"*/);
-    byte_4CB3898 = 1;
+    sub_1C713B0(&StringLiteral_25265/*"{0} {1} {2}"*/);
+    sub_1C713B0(&StringLiteral_25397/*"×"*/);
+    sub_1C713B0(&StringLiteral_25504/*"〇"*/);
+    byte_4CC49B0 = 1;
   }
   if ( !ScriptObjectListViewItem__get_EncryptEntity(this, method) )
     return ScriptObjectListViewItem__get_Name(this, v3);
   EncryptEntity = ScriptObjectListViewItem__get_EncryptEntity(this, v3);
   if ( !EncryptEntity )
-    sub_1C6BC60(0, v5);
+    sub_1C71608(0, v5);
   keyType = (Il2CppObject *)EncryptEntity->fields.keyType;
   Name = (Il2CppObject *)ScriptObjectListViewItem__get_Name(this, v5);
   if ( ScriptObjectListViewItem__get_IsExistKey(this, v8) )
-    v9 = (Il2CppObject **)&StringLiteral_25484/*"〇"*/;
+    v9 = (Il2CppObject **)&StringLiteral_25504/*"〇"*/;
   else
-    v9 = (Il2CppObject **)&StringLiteral_25377/*"×"*/;
-  return System_String__Format_64008168((System_String_o *)StringLiteral_25245/*"{0} {1} {2}"*/, Name, keyType, *v9, 0);
+    v9 = (Il2CppObject **)&StringLiteral_25397/*"×"*/;
+  return System_String__Format_64073100((System_String_o *)StringLiteral_25265/*"{0} {1} {2}"*/, Name, keyType, *v9, 0);
 }

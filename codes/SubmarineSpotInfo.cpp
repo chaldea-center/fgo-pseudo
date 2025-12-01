@@ -7,17 +7,25 @@ void SubmarineSpotInfo___ctor(
 {
   SubmarineSpotInfo_o *v8; // x22
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
 
   v8 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v8->fields._SpotEntity_k__BackingField = spot;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->fields, (int32_t)spot, v9, v10);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v8->fields, (int32_t)spot, v9, v10, v11, v12, v13, v14);
   v8->fields._EventPanelSpotEntity_k__BackingField = eventPanelSpotEntity;
   v8 = (SubmarineSpotInfo_o *)((char *)v8 + 24);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v8, (int32_t)eventPanelSpotEntity, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v8, (int32_t)eventPanelSpotEntity, v15, v16, v17, v18, v19, v20);
   LODWORD(v8->monitor) = panelId;
 }
 
@@ -53,14 +61,22 @@ void SubmarineSpotInfo__set_EventPanelSpotEntity(
         EventPanelSpotEntity_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._EventPanelSpotEntity_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._EventPanelSpotEntity_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._EventPanelSpotEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -72,8 +88,12 @@ void SubmarineSpotInfo__set_PanelId(SubmarineSpotInfo_o *this, int32_t value, co
 
 void SubmarineSpotInfo__set_SpotEntity(SubmarineSpotInfo_o *this, SpotEntity_o *value, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._SpotEntity_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }

@@ -1,14 +1,14 @@
 void ClassRelationOverwriteMaster___ctor(ClassRelationOverwriteMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6051 & 1) == 0 )
+  if ( (byte_4CC7176 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
-    byte_4CB6051 = 1;
+    sub_1C713B0(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    byte_4CC7176 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     298,
-    (const MethodInfo_33FB870 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
+    (const MethodInfo_340B614 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string___ctor__);
 }
 
 
@@ -23,10 +23,10 @@ ClassRelationOverwriteEntity_o *ClassRelationOverwriteMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CB604F & 1) == 0 )
+  if ( (byte_4CC7174 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
-    byte_4CB604F = 1;
+    sub_1C713B0(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+    byte_4CC7174 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -37,7 +37,7 @@ ClassRelationOverwriteEntity_o *ClassRelationOverwriteMaster__GetEntity(
   return (ClassRelationOverwriteEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                              (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                              PK,
-                                             (const MethodInfo_33FDB94 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
+                                             (const MethodInfo_340D938 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__GetEntity__);
 }
 
 
@@ -53,10 +53,10 @@ bool ClassRelationOverwriteMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CB6050 & 1) == 0 )
+  if ( (byte_4CC7175 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
-    byte_4CB6050 = 1;
+    sub_1C713B0(&Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+    byte_4CC7175 = 1;
   }
   PK = (Il2CppObject *)ClassRelationOverwriteEntity__CreatePK(
                          id,
@@ -68,7 +68,7 @@ bool ClassRelationOverwriteMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33FDBE0 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
+           (const MethodInfo_340D984 *)Method_DataMasterBase_ClassRelationOverwriteMaster__ClassRelationOverwriteEntity__string__TryGetEntity__);
 }
 
 
@@ -82,81 +82,90 @@ bool ClassRelationOverwriteMaster__getEntity(
         int32_t defClass,
         const MethodInfo *method)
 {
+  System_String_o *v7; // x7
   __int64 Entity; // x0
-  __int64 v14; // x1
-  const MethodInfo *v15; // x6
-  unsigned int v16; // w8
-  _DWORD *v17; // x22
-  const MethodInfo *v18; // x6
-  unsigned int v19; // w8
-  int32_t v20; // w2
-  int32_t v21; // w3
-  const MethodInfo *v22; // x6
-  unsigned int v23; // w8
-  int32_t v24; // w2
-  int32_t v25; // w3
-  const MethodInfo *v26; // x6
-  unsigned int v28; // w8
-  int32_t v29; // w2
-  int32_t v30; // w3
+  __int64 v15; // x1
+  const MethodInfo *v16; // x6
+  unsigned int v17; // w8
+  _DWORD *v18; // x22
+  const MethodInfo *v19; // x6
+  unsigned int v20; // w8
+  int32_t v21; // w2
+  int32_t v22; // w3
+  const MethodInfo *v23; // x6
+  unsigned int v24; // w8
+  int32_t v25; // w2
+  int32_t v26; // w3
+  const MethodInfo *v27; // x6
+  unsigned int v29; // w8
+  int32_t v30; // w2
+  int32_t v31; // w3
 
-  if ( (byte_4CB6052 & 1) == 0 )
+  if ( (byte_4CC7177 & 1) == 0 )
   {
-    sub_1C6BA08(&int___TypeInfo);
-    byte_4CB6052 = 1;
+    sub_1C713B0(&int___TypeInfo);
+    byte_4CC7177 = 1;
   }
   *outEnt = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)outEnt, 0, relationId, (const MethodInfo *)isAtkSide);
-  Entity = sub_1C6BAB0(int___TypeInfo, 4);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)outEnt,
+    0,
+    relationId,
+    isAtkSide,
+    *(System_String_o **)&atkClass,
+    defClass,
+    (int64_t)method,
+    v7);
+  Entity = sub_1C71458(int___TypeInfo, 4);
   if ( !Entity )
-    sub_1C6BC60(0, v14);
-  v16 = *(_DWORD *)(Entity + 24);
-  v17 = (_DWORD *)Entity;
-  if ( !v16 )
+    sub_1C71608(0, v15);
+  v17 = *(_DWORD *)(Entity + 24);
+  v18 = (_DWORD *)Entity;
+  if ( !v17 )
     goto LABEL_19;
   *(_DWORD *)(Entity + 32) = relationId;
-  if ( v16 == 1 )
+  if ( v17 == 1 )
     goto LABEL_19;
   *(_DWORD *)(Entity + 36) = isAtkSide;
-  if ( v16 <= 2 )
+  if ( v17 <= 2 )
     goto LABEL_19;
   *(_DWORD *)(Entity + 40) = atkClass;
-  if ( v16 == 3 )
+  if ( v17 == 3 )
     goto LABEL_19;
   *(_DWORD *)(Entity + 44) = defClass;
-  Entity = ClassRelationOverwriteMaster__TryGetEntity(this, outEnt, relationId, isAtkSide, atkClass, defClass, v15);
+  Entity = ClassRelationOverwriteMaster__TryGetEntity(this, outEnt, relationId, isAtkSide, atkClass, defClass, v16);
   if ( (Entity & 1) != 0 )
     return 1;
-  v19 = v17[6];
-  if ( v19 <= 2 )
+  v20 = v18[6];
+  if ( v20 <= 2 )
     goto LABEL_19;
-  v17[10] = atkClass;
-  if ( v19 == 3 )
+  v18[10] = atkClass;
+  if ( v20 == 3 )
     goto LABEL_19;
-  v20 = v17[8];
-  v21 = v17[9];
-  v17[11] = 0;
-  Entity = ClassRelationOverwriteMaster__TryGetEntity(this, outEnt, v20, v21, atkClass, 0, v18);
+  v21 = v18[8];
+  v22 = v18[9];
+  v18[11] = 0;
+  Entity = ClassRelationOverwriteMaster__TryGetEntity(this, outEnt, v21, v22, atkClass, 0, v19);
   if ( (Entity & 1) != 0 )
     return 1;
-  v23 = v17[6];
-  if ( v23 <= 2 )
+  v24 = v18[6];
+  if ( v24 <= 2 )
     goto LABEL_19;
-  v17[10] = 0;
-  if ( v23 == 3 )
+  v18[10] = 0;
+  if ( v24 == 3 )
     goto LABEL_19;
-  v24 = v17[8];
-  v25 = v17[9];
-  v17[11] = defClass;
-  Entity = ClassRelationOverwriteMaster__TryGetEntity(this, outEnt, v24, v25, 0, defClass, v22);
+  v25 = v18[8];
+  v26 = v18[9];
+  v18[11] = defClass;
+  Entity = ClassRelationOverwriteMaster__TryGetEntity(this, outEnt, v25, v26, 0, defClass, v23);
   if ( (Entity & 1) != 0 )
     return 1;
-  v28 = v17[6];
-  if ( v28 <= 2 || (v17[10] = 0, v28 == 3) )
+  v29 = v18[6];
+  if ( v29 <= 2 || (v18[10] = 0, v29 == 3) )
 LABEL_19:
-    sub_1C6BC68(Entity);
-  v29 = v17[8];
-  v30 = v17[9];
-  v17[11] = 0;
-  return ClassRelationOverwriteMaster__TryGetEntity(this, outEnt, v29, v30, 0, 0, v26);
+    sub_1C71610(Entity);
+  v30 = v18[8];
+  v31 = v18[9];
+  v18[11] = 0;
+  return ClassRelationOverwriteMaster__TryGetEntity(this, outEnt, v30, v31, 0, 0, v27);
 }

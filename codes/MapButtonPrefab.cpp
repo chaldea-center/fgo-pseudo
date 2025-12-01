@@ -1,44 +1,76 @@
 void MapButtonPrefab___cctor(const MethodInfo *method)
 {
   int32_t v1; // w2
-  const MethodInfo *v2; // x3
-  int32_t v3; // w1
-  struct MapButtonPrefab_StaticFields *static_fields; // x0
-  int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  int32_t v4; // w5
+  int64_t v5; // x6
+  System_String_o *v6; // x7
   int32_t v7; // w1
-  struct MapButtonPrefab_StaticFields *v8; // x0
+  struct MapButtonPrefab_StaticFields *static_fields; // x0
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  struct MapButtonPrefab_StaticFields *v11; // x0
-  int32_t v12; // w1
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  int32_t v15; // w1
+  struct MapButtonPrefab_StaticFields *v16; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  struct MapButtonPrefab_StaticFields *v23; // x0
+  int32_t v24; // w1
+  int32_t v25; // w2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
 
-  if ( (byte_4CB2D6A & 1) == 0 )
+  if ( (byte_4CC3E7D & 1) == 0 )
   {
-    sub_1C6BA08(&MapButtonPrefab_TypeInfo);
-    sub_1C6BA08(&StringLiteral_17460/*"btn_bg_16"*/);
-    sub_1C6BA08(&StringLiteral_21507/*"map_button_{0}_c"*/);
-    sub_1C6BA08(&StringLiteral_6075/*"EntryAnim"*/);
-    sub_1C6BA08(&StringLiteral_21506/*"map_button_{0}"*/);
-    byte_4CB2D6A = 1;
+    sub_1C713B0(&MapButtonPrefab_TypeInfo);
+    sub_1C713B0(&StringLiteral_17467/*"btn_bg_16"*/);
+    sub_1C713B0(&StringLiteral_21522/*"map_button_{0}_c"*/);
+    sub_1C713B0(&StringLiteral_6077/*"EntryAnim"*/);
+    sub_1C713B0(&StringLiteral_21521/*"map_button_{0}"*/);
+    byte_4CC3E7D = 1;
   }
-  MapButtonPrefab_TypeInfo->static_fields->MAP_BUTTON_SP_NAME = (struct System_String_o *)StringLiteral_21506/*"map_button_{0}"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)MapButtonPrefab_TypeInfo->static_fields, StringLiteral_21506/*"map_button_{0}"*/, v1, v2);
-  v3 = StringLiteral_21507/*"map_button_{0}_c"*/;
+  MapButtonPrefab_TypeInfo->static_fields->MAP_BUTTON_SP_NAME = (struct System_String_o *)StringLiteral_21521/*"map_button_{0}"*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)MapButtonPrefab_TypeInfo->static_fields,
+    StringLiteral_21521/*"map_button_{0}"*/,
+    v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6);
+  v7 = StringLiteral_21522/*"map_button_{0}_c"*/;
   static_fields = MapButtonPrefab_TypeInfo->static_fields;
-  static_fields->MAP_CURRENT_BUTTON_SP_NAME = (struct System_String_o *)StringLiteral_21507/*"map_button_{0}_c"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->MAP_CURRENT_BUTTON_SP_NAME, v3, v5, v6);
-  v7 = StringLiteral_17460/*"btn_bg_16"*/;
-  v8 = MapButtonPrefab_TypeInfo->static_fields;
-  v8->DEFAULT_BUTTON_SP = (struct System_String_o *)StringLiteral_17460/*"btn_bg_16"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v8->DEFAULT_BUTTON_SP, v7, v9, v10);
-  v11 = MapButtonPrefab_TypeInfo->static_fields;
-  *(_QWORD *)&v11->FRAME_IN_ANIM_DURATION = 0x3DCCCCCD3E4CCCCDLL;
-  v12 = StringLiteral_6075/*"EntryAnim"*/;
-  v11->FUNC_ENTRY_ANIM = (struct System_String_o *)StringLiteral_6075/*"EntryAnim"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v11->FUNC_ENTRY_ANIM, v12, v13, v14);
+  static_fields->MAP_CURRENT_BUTTON_SP_NAME = (struct System_String_o *)StringLiteral_21522/*"map_button_{0}_c"*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&static_fields->MAP_CURRENT_BUTTON_SP_NAME,
+    v7,
+    v9,
+    v10,
+    v11,
+    v12,
+    v13,
+    v14);
+  v15 = StringLiteral_17467/*"btn_bg_16"*/;
+  v16 = MapButtonPrefab_TypeInfo->static_fields;
+  v16->DEFAULT_BUTTON_SP = (struct System_String_o *)StringLiteral_17467/*"btn_bg_16"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v16->DEFAULT_BUTTON_SP, v15, v17, v18, v19, v20, v21, v22);
+  v23 = MapButtonPrefab_TypeInfo->static_fields;
+  *(_QWORD *)&v23->FRAME_IN_ANIM_DURATION = 0x3DCCCCCD3E4CCCCDLL;
+  v24 = StringLiteral_6077/*"EntryAnim"*/;
+  v23->FUNC_ENTRY_ANIM = (struct System_String_o *)StringLiteral_6077/*"EntryAnim"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v23->FUNC_ENTRY_ANIM, v24, v25, v26, v27, v28, v29, v30);
   MapButtonPrefab_TypeInfo->static_fields->MAP_BUTTON_GRID_HEIGHT = 57.0;
 }
 
@@ -47,10 +79,10 @@ void MapButtonPrefab___ctor(MapButtonPrefab_o *this, const MethodInfo *method)
 {
   MapButtonPrefab_c *v3; // x0
 
-  if ( (byte_4CB2D69 & 1) == 0 )
+  if ( (byte_4CC3E7C & 1) == 0 )
   {
-    sub_1C6BA08(&MapButtonPrefab_TypeInfo);
-    byte_4CB2D69 = 1;
+    sub_1C713B0(&MapButtonPrefab_TypeInfo);
+    byte_4CC3E7C = 1;
   }
   v3 = MapButtonPrefab_TypeInfo;
   if ( !MapButtonPrefab_TypeInfo->_2.cctor_finished )
@@ -73,14 +105,18 @@ void MapButtonPrefab__EntryAnim(MapButtonPrefab_o *this, const MethodInfo *metho
 void MapButtonPrefab__ExecAnimEndAction(MapButtonPrefab_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_animEndAction; // x0
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GrandQuestFolderBoardItem_o *p_animEndAction; // x0
   System_Action_o *animEndAction; // t1
 
   animEndAction = this->fields.animEndAction;
-  p_animEndAction = (CGThumbnailListItem_o *)&this->fields.animEndAction;
+  p_animEndAction = (GrandQuestFolderBoardItem_o *)&this->fields.animEndAction;
   p_animEndAction->klass = 0;
-  sub_1C6B9AC(p_animEndAction, 0, v2, v3);
+  sub_1C71354(p_animEndAction, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(animEndAction, 0);
 }
 
@@ -98,13 +134,13 @@ void MapButtonPrefab__FrameIn(MapButtonPrefab_o *this, const MethodInfo *method)
   EventDelegate_Callback_o *v11; // x21
   __int64 v12; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_4CB2D66 & 1) == 0 )
+  if ( (byte_4CC3E79 & 1) == 0 )
   {
-    sub_1C6BA08(&EventDelegate_Callback_TypeInfo);
-    sub_1C6BA08(&Method_MapButtonPrefab__FrameIn_b__31_0__);
-    sub_1C6BA08(&MapButtonPrefab_TypeInfo);
-    sub_1C6BA08(&Method_UITweener_Begin_TweenPosition___);
-    byte_4CB2D66 = 1;
+    sub_1C713B0(&EventDelegate_Callback_TypeInfo);
+    sub_1C713B0(&Method_MapButtonPrefab__FrameIn_b__31_0__);
+    sub_1C713B0(&MapButtonPrefab_TypeInfo);
+    sub_1C713B0(&Method_UITweener_Begin_TweenPosition___);
+    byte_4CC3E79 = 1;
   }
   gameObject = (char *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -121,11 +157,11 @@ void MapButtonPrefab__FrameIn(MapButtonPrefab_o *this, const MethodInfo *method)
   gameObject = (char *)UITweener__Begin_object_(
                          v7,
                          v6->static_fields->FRAME_IN_ANIM_DURATION,
-                         (const MethodInfo_3210C14 *)Method_UITweener_Begin_TweenPosition___);
+                         (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenPosition___);
   v12 = *(_QWORD *)&this->fields.outPos.fields.x;
   if ( !gameObject )
 LABEL_8:
-    sub_1C6BC60(gameObject, v4);
+    sub_1C71608(gameObject, v4);
   *((_DWORD *)gameObject + 34) = LODWORD(this->fields.outPos.fields.z);
   *((_QWORD *)gameObject + 16) = v12;
   z = this->fields.inPos.fields.z;
@@ -134,7 +170,7 @@ LABEL_8:
   *((float *)gameObject + 37) = z;
   *(_QWORD *)(gameObject + 140) = v9;
   v10 = (UITweener_o *)gameObject;
-  v11 = (EventDelegate_Callback_o *)sub_1C6BC54(EventDelegate_Callback_TypeInfo);
+  v11 = (EventDelegate_Callback_o *)sub_1C715FC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v11, (Il2CppObject *)this, Method_MapButtonPrefab__FrameIn_b__31_0__, 0);
   UITweener__SetOnFinished(v10, v11, 0);
 }
@@ -152,13 +188,13 @@ void MapButtonPrefab__FrameOut(MapButtonPrefab_o *this, const MethodInfo *method
   EventDelegate_Callback_o *v10; // x21
   Il2CppClass *v11; // [xsp+0h] [xbp-30h]
 
-  if ( (byte_4CB2D67 & 1) == 0 )
+  if ( (byte_4CC3E7A & 1) == 0 )
   {
-    sub_1C6BA08(&EventDelegate_Callback_TypeInfo);
-    sub_1C6BA08(&Method_MapButtonPrefab__FrameOut_b__32_0__);
-    sub_1C6BA08(&MapButtonPrefab_TypeInfo);
-    sub_1C6BA08(&Method_UITweener_Begin_TweenPosition___);
-    byte_4CB2D67 = 1;
+    sub_1C713B0(&EventDelegate_Callback_TypeInfo);
+    sub_1C713B0(&Method_MapButtonPrefab__FrameOut_b__32_0__);
+    sub_1C713B0(&MapButtonPrefab_TypeInfo);
+    sub_1C713B0(&Method_UITweener_Begin_TweenPosition___);
+    byte_4CC3E7A = 1;
   }
   v3 = MapButtonPrefab_TypeInfo;
   if ( !MapButtonPrefab_TypeInfo->_2.cctor_finished )
@@ -166,7 +202,7 @@ void MapButtonPrefab__FrameOut(MapButtonPrefab_o *this, const MethodInfo *method
     j_il2cpp_runtime_class_init_0(MapButtonPrefab_TypeInfo);
     v3 = MapButtonPrefab_TypeInfo;
   }
-  UnityEngine_MonoBehaviour__CancelInvoke_71644176(
+  UnityEngine_MonoBehaviour__CancelInvoke_71709108(
     (UnityEngine_MonoBehaviour_o *)this,
     v3->static_fields->FUNC_ENTRY_ANIM,
     0);
@@ -174,10 +210,10 @@ void MapButtonPrefab__FrameOut(MapButtonPrefab_o *this, const MethodInfo *method
   v5 = UITweener__Begin_object_(
          gameObject,
          MapButtonPrefab_TypeInfo->static_fields->FRAME_OUT_ANIM_DURATION,
-         (const MethodInfo_3210C14 *)Method_UITweener_Begin_TweenPosition___);
+         (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenPosition___);
   v11 = *(Il2CppClass **)&this->fields.inPos.fields.x;
   if ( !v5 )
-    sub_1C6BC60(0, v6);
+    sub_1C71608(0, v6);
   *(float *)&v5[8].monitor = this->fields.inPos.fields.z;
   v5[8].klass = v11;
   z = this->fields.outPos.fields.z;
@@ -186,7 +222,7 @@ void MapButtonPrefab__FrameOut(MapButtonPrefab_o *this, const MethodInfo *method
   *((float *)&v5[9].klass + 1) = z;
   *(void **)((char *)&v5[8].monitor + 4) = v8;
   v9 = (UITweener_o *)v5;
-  v10 = (EventDelegate_Callback_o *)sub_1C6BC54(EventDelegate_Callback_TypeInfo);
+  v10 = (EventDelegate_Callback_o *)sub_1C715FC(EventDelegate_Callback_TypeInfo);
   EventDelegate_Callback___ctor(v10, (Il2CppObject *)this, Method_MapButtonPrefab__FrameOut_b__32_0__, 0);
   UITweener__SetOnFinished(v9, v10, 0);
 }
@@ -197,10 +233,10 @@ float MapButtonPrefab__GetGridCellHeight(MapButtonPrefab_o *this, const MethodIn
   float result; // s0
   MapButtonPrefab_c *v4; // x0
 
-  if ( (byte_4CB2D68 & 1) == 0 )
+  if ( (byte_4CC3E7B & 1) == 0 )
   {
-    sub_1C6BA08(&MapButtonPrefab_TypeInfo);
-    byte_4CB2D68 = 1;
+    sub_1C713B0(&MapButtonPrefab_TypeInfo);
+    byte_4CC3E7B = 1;
   }
   result = this->fields.cellHeight;
   if ( result <= 0.0 )
@@ -223,7 +259,7 @@ void MapButtonPrefab__OnClickButton(MapButtonPrefab_o *this, const MethodInfo *m
 
   mapButtonEntity = this->fields.mapButtonEntity;
   if ( !mapButtonEntity || (this = (MapButtonPrefab_o *)this->fields.terminalMap) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   ScrTerminalMap__RequestMapChange((ScrTerminalMap_o *)this, mapButtonEntity->fields.targetMapId, -1, -1, 0);
 }
 
@@ -234,7 +270,7 @@ void MapButtonPrefab__OnClickMapSlideButton(MapButtonPrefab_o *this, const Metho
 
   mapButtonEntity = this->fields.mapButtonEntity;
   if ( !mapButtonEntity || (this = (MapButtonPrefab_o *)this->fields.terminalMap) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   ScrTerminalMap__RequestMapMove((ScrTerminalMap_o *)this, mapButtonEntity->fields.layer, 0);
 }
 
@@ -254,13 +290,17 @@ void MapButtonPrefab__SetBadge(MapButtonPrefab_o *this, int32_t num, const Metho
   UnityEngine_GameObject_o *mNoticeNumberObj; // x0
   Il2CppObject *Component_object; // x0
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
-  if ( (byte_4CB2D63 & 1) == 0 )
+  if ( (byte_4CC3E76 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2D63 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3E76 = 1;
   }
   p_mNoticeNumber = &this->fields.mNoticeNumber;
   mNoticeNumber = (UnityEngine_Object_o *)this->fields.mNoticeNumber;
@@ -273,14 +313,22 @@ void MapButtonPrefab__SetBadge(MapButtonPrefab_o *this, int32_t num, const Metho
       goto LABEL_10;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          mNoticeNumberObj,
-                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
+                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_NoticeNumberComponent___);
     *p_mNoticeNumber = (struct NoticeNumberComponent_o *)Component_object;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mNoticeNumber, (int32_t)Component_object, v11, v12);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.mNoticeNumber,
+      (int32_t)Component_object,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15,
+      v16);
   }
   mNoticeNumberObj = (UnityEngine_GameObject_o *)*p_mNoticeNumber;
   if ( !*p_mNoticeNumber )
 LABEL_10:
-    sub_1C6BC60(mNoticeNumberObj, v7);
+    sub_1C71608(mNoticeNumberObj, v7);
   NoticeNumberComponent__SetNumber((NoticeNumberComponent_o *)mNoticeNumberObj, num, v8);
 }
 
@@ -305,12 +353,12 @@ void MapButtonPrefab__SetButtonSprite(
   MapButtonPrefab_c *v19; // x0
   int32_t imageId; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CB2D62 & 1) == 0 )
+  if ( (byte_4CC3E75 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&MapButtonPrefab_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2D62 = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&MapButtonPrefab_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3E75 = 1;
   }
   buttonSprite = MapButtonPrefab_TypeInfo;
   if ( !MapButtonPrefab_TypeInfo->_2.cctor_finished )
@@ -375,7 +423,7 @@ LABEL_15:
         (buttonSprite = this->fields.buttonSprite) == 0) )
   {
 LABEL_26:
-    sub_1C6BC60(buttonSprite, isMapModel);
+    sub_1C71608(buttonSprite, isMapModel);
   }
   (*(void (__fastcall **)(void *, _QWORD))(*(_QWORD *)buttonSprite + 840LL))(
     buttonSprite,
@@ -385,20 +433,32 @@ LABEL_26:
 
 void MapButtonPrefab__SetEntryAnim(MapButtonPrefab_o *this, System_Action_o *endAction, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   UnityEngine_Transform_o *transform; // x0
-  __int64 v7; // x1
+  __int64 v11; // x1
   struct UISprite_o *buttonSprite; // x8
-  MapButtonPrefab_c *v9; // x0
+  MapButtonPrefab_c *v13; // x0
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB2D65 & 1) == 0 )
+  if ( (byte_4CC3E78 & 1) == 0 )
   {
-    sub_1C6BA08(&MapButtonPrefab_TypeInfo);
-    byte_4CB2D65 = 1;
+    sub_1C713B0(&MapButtonPrefab_TypeInfo);
+    byte_4CC3E78 = 1;
   }
   this->fields.animEndAction = endAction;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.animEndAction, (int32_t)endAction, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.animEndAction,
+    (int32_t)endAction,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_9;
@@ -414,18 +474,18 @@ void MapButtonPrefab__SetEntryAnim(MapButtonPrefab_o *this, System_Action_o *end
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_9:
-    sub_1C6BC60(transform, v7);
+    sub_1C71608(transform, v11);
   }
   UnityEngine_Transform__set_localPosition(transform, this->fields.outPos, 0);
-  v9 = MapButtonPrefab_TypeInfo;
+  v13 = MapButtonPrefab_TypeInfo;
   if ( !MapButtonPrefab_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(MapButtonPrefab_TypeInfo);
-    v9 = MapButtonPrefab_TypeInfo;
+    v13 = MapButtonPrefab_TypeInfo;
   }
   UnityEngine_MonoBehaviour__Invoke(
     (UnityEngine_MonoBehaviour_o *)this,
-    v9->static_fields->FUNC_ENTRY_ANIM,
+    v13->static_fields->FUNC_ENTRY_ANIM,
     this->fields.inPos.fields.y / 500.0,
     0);
 }
@@ -437,10 +497,10 @@ void MapButtonPrefab__SetNext(MapButtonPrefab_o *this, bool isDisp, const Method
   __int64 v6; // x1
   UnityEngine_GameObject_o *v7; // x0
 
-  if ( (byte_4CB2D64 & 1) == 0 )
+  if ( (byte_4CC3E77 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2D64 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3E77 = 1;
   }
   mNextObj = (UnityEngine_Object_o *)this->fields.mNextObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -459,12 +519,13 @@ void MapButtonPrefab__SetNext(MapButtonPrefab_o *this, bool isDisp, const Method
         return;
       }
 LABEL_11:
-      sub_1C6BC60(v7, v6);
+      sub_1C71608(v7, v6);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void MapButtonPrefab__SetupButton(
         MapButtonPrefab_o *this,
         System_Collections_Generic_List_UIAtlas__o *mapAtlases,
@@ -477,80 +538,124 @@ void MapButtonPrefab__SetupButton(
 {
   bool v14; // w27
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  char v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  char v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  char v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
   UnityEngine_GameObject_o *gameObject; // x0
   Il2CppObject *Component_object; // x21
-  UnityEngine_GameObject_o *v23; // x0
-  Il2CppObject *v24; // x0
+  UnityEngine_GameObject_o *v35; // x0
+  Il2CppObject *v36; // x0
   struct UISprite_o **p_buttonSprite; // x19
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  __int64 v28; // x1
-  UIWidget_o *v29; // x0
-  float v30; // s8
+  int32_t v38; // w2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  char v41; // w5
+  int64_t v42; // x6
+  System_String_o *v43; // x7
+  __int64 v44; // x1
+  UIWidget_o *v45; // x0
+  float v46; // s8
   float y; // s9
   UnityEngine_Vector3_o center; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v49; // 0:s0.4,4:s1.4,8:s2.4
 
   v14 = isNew;
-  if ( (byte_4CB2D61 & 1) == 0 )
+  if ( (byte_4CC3E74 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_BoxCollider___);
-    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_UISprite___);
-    byte_4CB2D61 = 1;
+    sub_1C713B0(&Method_GameObjectExtensions_SafeGetComponent_BoxCollider___);
+    sub_1C713B0(&Method_GameObjectExtensions_SafeGetComponent_UISprite___);
+    byte_4CC3E74 = 1;
   }
   this->fields.terminalMap = terminalMap;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.terminalMap,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.terminalMap,
     (int32_t)terminalMap,
     (int32_t)commonUiAtlas,
-    (const MethodInfo *)terminalMap);
+    (int32_t)terminalMap,
+    (System_String_o *)mapButtonEntity,
+    isMapButtonTop,
+    isNew,
+    (System_String_o *)method);
   this->fields.mapButtonEntity = mapButtonEntity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mapButtonEntity, (int32_t)mapButtonEntity, v15, v16);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.mapButtonEntity,
+    (int32_t)mapButtonEntity,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
   this->fields.mapAtlases = mapAtlases;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mapAtlases, (int32_t)mapAtlases, v17, v18);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.mapAtlases,
+    (int32_t)mapAtlases,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
   this->fields.commonUiAtlas = commonUiAtlas;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.commonUiAtlas, (int32_t)commonUiAtlas, v19, v20);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.commonUiAtlas,
+    (int32_t)commonUiAtlas,
+    v27,
+    v28,
+    v29,
+    v30,
+    v31,
+    v32);
   this->fields.isNew = v14;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   Component_object = GameObjectExtensions__SafeGetComponent_object_(
                        gameObject,
-                       (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_BoxCollider___);
-  v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v24 = GameObjectExtensions__SafeGetComponent_object_(
-          v23,
-          (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_UISprite___);
-  this->fields.buttonSprite = (struct UISprite_o *)v24;
+                       (const MethodInfo_31A49B8 *)Method_GameObjectExtensions_SafeGetComponent_BoxCollider___);
+  v35 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
+  v36 = GameObjectExtensions__SafeGetComponent_object_(
+          v35,
+          (const MethodInfo_31A49B8 *)Method_GameObjectExtensions_SafeGetComponent_UISprite___);
+  this->fields.buttonSprite = (struct UISprite_o *)v36;
   p_buttonSprite = &this->fields.buttonSprite;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_buttonSprite, (int32_t)v24, v26, v27);
-  v29 = (UIWidget_o *)*p_buttonSprite;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p_buttonSprite, (int32_t)v36, v38, v39, v40, v41, v42, v43);
+  v45 = (UIWidget_o *)*p_buttonSprite;
   if ( !*p_buttonSprite )
     goto LABEL_9;
-  UIWidget__set_pivot(v29, 8, 0);
+  UIWidget__set_pivot(v45, 8, 0);
   if ( isMapButtonTop )
   {
     if ( Component_object )
     {
-      LODWORD(v30) = (unsigned int)UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
+      LODWORD(v46) = (unsigned int)UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
       center = UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
       y = center.fields.y;
-      v33 = UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
-      v33.fields.y = -y;
-      v33.fields.x = v30;
-      UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)Component_object, v33, 0);
-      v29 = (UIWidget_o *)*p_buttonSprite;
+      v49 = UnityEngine_BoxCollider__get_center((UnityEngine_BoxCollider_o *)Component_object, 0);
+      v49.fields.y = -y;
+      v49.fields.x = v46;
+      UnityEngine_BoxCollider__set_center((UnityEngine_BoxCollider_o *)Component_object, v49, 0);
+      v45 = (UIWidget_o *)*p_buttonSprite;
       if ( *p_buttonSprite )
       {
-        UIWidget__set_pivot(v29, 2, 0);
+        UIWidget__set_pivot(v45, 2, 0);
         return;
       }
     }
 LABEL_9:
-    sub_1C6BC60(v29, v28);
+    sub_1C71608(v45, v44);
   }
 }
 
@@ -558,14 +663,18 @@ LABEL_9:
 void MapButtonPrefab___FrameIn_b__31_0(MapButtonPrefab_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_animEndAction; // x0
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GrandQuestFolderBoardItem_o *p_animEndAction; // x0
   System_Action_o *animEndAction; // t1
 
   animEndAction = this->fields.animEndAction;
-  p_animEndAction = (CGThumbnailListItem_o *)&this->fields.animEndAction;
+  p_animEndAction = (GrandQuestFolderBoardItem_o *)&this->fields.animEndAction;
   p_animEndAction->klass = 0;
-  sub_1C6B9AC(p_animEndAction, 0, v2, v3);
+  sub_1C71354(p_animEndAction, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(animEndAction, 0);
 }
 
@@ -573,14 +682,18 @@ void MapButtonPrefab___FrameIn_b__31_0(MapButtonPrefab_o *this, const MethodInfo
 void MapButtonPrefab___FrameOut_b__32_0(MapButtonPrefab_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_animEndAction; // x0
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GrandQuestFolderBoardItem_o *p_animEndAction; // x0
   System_Action_o *animEndAction; // t1
 
   animEndAction = this->fields.animEndAction;
-  p_animEndAction = (CGThumbnailListItem_o *)&this->fields.animEndAction;
+  p_animEndAction = (GrandQuestFolderBoardItem_o *)&this->fields.animEndAction;
   p_animEndAction->klass = 0;
-  sub_1C6B9AC(p_animEndAction, 0, v2, v3);
+  sub_1C71354(p_animEndAction, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(animEndAction, 0);
 }
 

@@ -3,39 +3,43 @@ void BattleAdjustPopupPosInScreenComponent___ctor(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   long double inited; // q0
-  _QWORD *v6; // x20
-  __int64 v7; // x8
-  __int64 v8; // x0
-  __int64 v9; // x0
-  struct BattleAdjustPopupPosInScreenComponent_AdjustPosData_array **v10; // x8
-  struct BattleAdjustPopupPosInScreenComponent_AdjustPosData_array *v11; // x1
+  _QWORD *v10; // x20
+  __int64 v11; // x8
+  __int64 v12; // x0
+  __int64 v13; // x0
+  struct BattleAdjustPopupPosInScreenComponent_AdjustPosData_array **v14; // x8
+  struct BattleAdjustPopupPosInScreenComponent_AdjustPosData_array *v15; // x1
 
-  if ( (byte_4CB9789 & 1) == 0 )
+  if ( (byte_4CCA8DB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Array_Empty_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
-    byte_4CB9789 = 1;
+    sub_1C713B0(&Method_System_Array_Empty_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
+    byte_4CCA8DB = 1;
   }
-  v6 = Method_System_Array_Empty_BattleAdjustPopupPosInScreenComponent_AdjustPosData___;
-  v7 = *((_QWORD *)Method_System_Array_Empty_BattleAdjustPopupPosInScreenComponent_AdjustPosData___ + 7);
-  if ( !v7 )
+  v10 = Method_System_Array_Empty_BattleAdjustPopupPosInScreenComponent_AdjustPosData___;
+  v11 = *((_QWORD *)Method_System_Array_Empty_BattleAdjustPopupPosInScreenComponent_AdjustPosData___ + 7);
+  if ( !v11 )
   {
-    sub_1C41AF8(Method_System_Array_Empty_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
-    v7 = v6[7];
+    sub_1C474A0(Method_System_Array_Empty_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
+    v11 = v10[7];
   }
-  v8 = *(_QWORD *)(v7 + 16);
-  if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-    v8 = sub_1C41A9C(inited);
-  if ( !*(_DWORD *)(v8 + 224) )
-    inited = j_il2cpp_runtime_class_init_0(v8);
-  v9 = *(_QWORD *)(v6[7] + 16LL);
-  if ( (*(_BYTE *)(v9 + 309) & 1) == 0 )
-    v9 = sub_1C41A9C(inited);
-  v10 = *(struct BattleAdjustPopupPosInScreenComponent_AdjustPosData_array ***)(v9 + 184);
-  v11 = *v10;
-  this->fields.AdjustPosDataArray = *v10;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.AdjustPosDataArray, (int32_t)v11, v2, v3);
+  v12 = *(_QWORD *)(v11 + 16);
+  if ( (*(_BYTE *)(v12 + 309) & 1) == 0 )
+    v12 = sub_1C47444(inited);
+  if ( !*(_DWORD *)(v12 + 224) )
+    inited = j_il2cpp_runtime_class_init_0(v12);
+  v13 = *(_QWORD *)(v10[7] + 16LL);
+  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+    v13 = sub_1C47444(inited);
+  v14 = *(struct BattleAdjustPopupPosInScreenComponent_AdjustPosData_array ***)(v13 + 184);
+  v15 = *v14;
+  this->fields.AdjustPosDataArray = *v14;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.AdjustPosDataArray, (int32_t)v15, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -46,7 +50,7 @@ int32_t BattleAdjustPopupPosInScreenComponent__ConvertPhaseToApplyScene(
         const MethodInfo *method)
 {
   if ( !phaseNotify )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   if ( phaseNotify->fields._DetailPhase_k__BackingField == 4 )
     return 2;
   else
@@ -66,50 +70,54 @@ UnityEngine_Vector3_o BattleAdjustPopupPosInScreenComponent__GetAdjustedWorldPos
   System_Collections_Generic_IEnumerable_TSource__o *AdjustPosDataArray; // x20
   System_Func_object__bool__o *v10; // x23
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
   UnityEngine_Camera_c *klass; // x8
-  UnityEngine_Camera_o *v14; // x20
-  __int64 v15; // x9
+  UnityEngine_Camera_o *v18; // x20
+  __int64 v19; // x9
   int32_t *p_offset; // x10
-  __int64 v17; // x0
-  __int64 v18; // x1
-  __int64 v19; // x20
-  __int64 v20; // x8
-  __int64 v21; // x9
-  int *v22; // x10
-  __int64 v23; // x0
+  __int64 v21; // x0
+  __int64 v22; // x1
+  __int64 v23; // x20
   __int64 v24; // x8
   __int64 v25; // x9
   int *v26; // x10
   __int64 v27; // x0
-  BattleAdjustPopupPosInScreenComponent_AdjustPosData_o *v28; // x0
-  __int64 v29; // x1
-  const MethodInfo *v30; // x2
-  __int64 v31; // x8
-  __int64 v32; // x9
-  int *v33; // x10
-  __int64 v34; // x0
-  float v35; // s0
-  float v36; // s1
-  float v37; // s2
+  __int64 v28; // x8
+  __int64 v29; // x9
+  int *v30; // x10
+  __int64 v31; // x0
+  BattleAdjustPopupPosInScreenComponent_AdjustPosData_o *v32; // x0
+  __int64 v33; // x1
+  const MethodInfo *v34; // x2
+  __int64 v35; // x8
+  __int64 v36; // x9
+  int *v37; // x10
+  __int64 v38; // x0
+  float v39; // s0
+  float v40; // s1
+  float v41; // s2
   UnityEngine_Vector3_o position; // [xsp+0h] [xbp-50h] BYREF
   UnityEngine_Vector3_o ViewPos; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v40; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v44; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB9788 & 1) == 0 )
+  if ( (byte_4CCA8DA & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
-    sub_1C6BA08(&System_Func_BattleAdjustPopupPosInScreenComponent_AdjustPosData__bool__TypeInfo);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerable_BattleAdjustPopupPosInScreenComponent_AdjustPosData__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerator_BattleAdjustPopupPosInScreenComponent_AdjustPosData__TypeInfo);
-    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C6BA08(&Method_BattleAdjustPopupPosInScreenComponent___c__DisplayClass8_0__GetAdjustedWorldPos_b__0__);
-    sub_1C6BA08(&BattleAdjustPopupPosInScreenComponent___c__DisplayClass8_0_TypeInfo);
-    byte_4CB9788 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_Where_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
+    sub_1C713B0(&System_Func_BattleAdjustPopupPosInScreenComponent_AdjustPosData__bool__TypeInfo);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerable_BattleAdjustPopupPosInScreenComponent_AdjustPosData__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerator_BattleAdjustPopupPosInScreenComponent_AdjustPosData__TypeInfo);
+    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C713B0(&Method_BattleAdjustPopupPosInScreenComponent___c__DisplayClass8_0__GetAdjustedWorldPos_b__0__);
+    sub_1C713B0(&BattleAdjustPopupPosInScreenComponent___c__DisplayClass8_0_TypeInfo);
+    byte_4CCA8DA = 1;
   }
-  v5 = sub_1C6BC54(BattleAdjustPopupPosInScreenComponent___c__DisplayClass8_0_TypeInfo);
+  v5 = sub_1C715FC(BattleAdjustPopupPosInScreenComponent___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !arg )
     goto LABEL_39;
@@ -124,131 +132,131 @@ UnityEngine_Vector3_o BattleAdjustPopupPosInScreenComponent__GetAdjustedWorldPos
   v10 = *(System_Func_object__bool__o **)(v5 + 32);
   if ( !v10 )
   {
-    v10 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_BattleAdjustPopupPosInScreenComponent_AdjustPosData__bool__TypeInfo);
+    v10 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_BattleAdjustPopupPosInScreenComponent_AdjustPosData__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v10,
       (Il2CppObject *)v5,
       Method_BattleAdjustPopupPosInScreenComponent___c__DisplayClass8_0__GetAdjustedWorldPos_b__0__,
       0);
     *(_QWORD *)(v5 + 32) = v10;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)v10, v11, v12);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)v10, v11, v12, v13, v14, v15, v16);
   }
   Camera_k__BackingField = (UnityEngine_Camera_o *)System_Linq_Enumerable__Where_object_(
                                                      AdjustPosDataArray,
                                                      (System_Func_TSource__bool__o *)v10,
-                                                     (const MethodInfo_3182364 *)Method_System_Linq_Enumerable_Where_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
+                                                     (const MethodInfo_3192108 *)Method_System_Linq_Enumerable_Where_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
   if ( !Camera_k__BackingField )
     goto LABEL_39;
   klass = Camera_k__BackingField->klass;
-  v14 = Camera_k__BackingField;
-  v15 = *(unsigned __int16 *)&Camera_k__BackingField->klass->_2.rank;
+  v18 = Camera_k__BackingField;
+  v19 = *(unsigned __int16 *)&Camera_k__BackingField->klass->_2.rank;
   if ( *(_WORD *)&Camera_k__BackingField->klass->_2.rank )
   {
     p_offset = &klass->_1.interfaceOffsets->offset;
     while ( *((System_Collections_Generic_IEnumerable_BattleAdjustPopupPosInScreenComponent_AdjustPosData__c **)p_offset
             - 1) != System_Collections_Generic_IEnumerable_BattleAdjustPopupPosInScreenComponent_AdjustPosData__TypeInfo )
     {
-      --v15;
+      --v19;
       p_offset += 4;
-      if ( !v15 )
+      if ( !v19 )
         goto LABEL_12;
     }
-    v17 = (__int64)&klass->vtable + 16 * *p_offset;
+    v21 = (__int64)&klass->vtable + 16 * *p_offset;
   }
   else
   {
 LABEL_12:
-    v17 = sub_1C41D90(
+    v21 = sub_1C47738(
             Camera_k__BackingField,
             System_Collections_Generic_IEnumerable_BattleAdjustPopupPosInScreenComponent_AdjustPosData__TypeInfo,
             0);
   }
-  v19 = (*(__int64 (__fastcall **)(UnityEngine_Camera_o *, _QWORD))v17)(v14, *(_QWORD *)(v17 + 8));
-  if ( !v19 )
-    sub_1C6BC60(0, v18);
+  v23 = (*(__int64 (__fastcall **)(UnityEngine_Camera_o *, _QWORD))v21)(v18, *(_QWORD *)(v21 + 8));
+  if ( !v23 )
+    sub_1C71608(0, v22);
   while ( 1 )
   {
-    v20 = *(_QWORD *)v19;
-    v21 = *(unsigned __int16 *)(*(_QWORD *)v19 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v19 + 302LL) )
-    {
-      v22 = (int *)(*(_QWORD *)(v20 + 176) + 8LL);
-      while ( *((System_Collections_IEnumerator_c **)v22 - 1) != System_Collections_IEnumerator_TypeInfo )
-      {
-        --v21;
-        v22 += 4;
-        if ( !v21 )
-          goto LABEL_19;
-      }
-      v23 = v20 + 16LL * *v22 + 312;
-    }
-    else
-    {
-LABEL_19:
-      v23 = sub_1C41D90(v19, System_Collections_IEnumerator_TypeInfo, 0);
-    }
-    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v19, *(_QWORD *)(v23 + 8)) & 1) == 0 )
-      break;
-    v24 = *(_QWORD *)v19;
-    v25 = *(unsigned __int16 *)(*(_QWORD *)v19 + 302LL);
-    if ( *(_WORD *)(*(_QWORD *)v19 + 302LL) )
+    v24 = *(_QWORD *)v23;
+    v25 = *(unsigned __int16 *)(*(_QWORD *)v23 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v23 + 302LL) )
     {
       v26 = (int *)(*(_QWORD *)(v24 + 176) + 8LL);
-      while ( *((System_Collections_Generic_IEnumerator_BattleAdjustPopupPosInScreenComponent_AdjustPosData__c **)v26 - 1) != System_Collections_Generic_IEnumerator_BattleAdjustPopupPosInScreenComponent_AdjustPosData__TypeInfo )
+      while ( *((System_Collections_IEnumerator_c **)v26 - 1) != System_Collections_IEnumerator_TypeInfo )
       {
         --v25;
         v26 += 4;
         if ( !v25 )
-          goto LABEL_26;
+          goto LABEL_19;
       }
       v27 = v24 + 16LL * *v26 + 312;
     }
     else
     {
+LABEL_19:
+      v27 = sub_1C47738(v23, System_Collections_IEnumerator_TypeInfo, 0);
+    }
+    if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v27)(v23, *(_QWORD *)(v27 + 8)) & 1) == 0 )
+      break;
+    v28 = *(_QWORD *)v23;
+    v29 = *(unsigned __int16 *)(*(_QWORD *)v23 + 302LL);
+    if ( *(_WORD *)(*(_QWORD *)v23 + 302LL) )
+    {
+      v30 = (int *)(*(_QWORD *)(v28 + 176) + 8LL);
+      while ( *((System_Collections_Generic_IEnumerator_BattleAdjustPopupPosInScreenComponent_AdjustPosData__c **)v30 - 1) != System_Collections_Generic_IEnumerator_BattleAdjustPopupPosInScreenComponent_AdjustPosData__TypeInfo )
+      {
+        --v29;
+        v30 += 4;
+        if ( !v29 )
+          goto LABEL_26;
+      }
+      v31 = v28 + 16LL * *v30 + 312;
+    }
+    else
+    {
 LABEL_26:
-      v27 = sub_1C41D90(
-              v19,
+      v31 = sub_1C47738(
+              v23,
               System_Collections_Generic_IEnumerator_BattleAdjustPopupPosInScreenComponent_AdjustPosData__TypeInfo,
               0);
     }
-    v28 = (BattleAdjustPopupPosInScreenComponent_AdjustPosData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v27)(
-                                                                     v19,
-                                                                     *(_QWORD *)(v27 + 8));
-    if ( !v28 )
-      sub_1C6BC60(0, v29);
-    BattleAdjustPopupPosInScreenComponent_AdjustPosData__RoundingOverPos(v28, &position, v30);
+    v32 = (BattleAdjustPopupPosInScreenComponent_AdjustPosData_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v31)(
+                                                                     v23,
+                                                                     *(_QWORD *)(v31 + 8));
+    if ( !v32 )
+      sub_1C71608(0, v33);
+    BattleAdjustPopupPosInScreenComponent_AdjustPosData__RoundingOverPos(v32, &position, v34);
   }
-  v31 = *(_QWORD *)v19;
-  v32 = *(unsigned __int16 *)(*(_QWORD *)v19 + 302LL);
-  if ( *(_WORD *)(*(_QWORD *)v19 + 302LL) )
+  v35 = *(_QWORD *)v23;
+  v36 = *(unsigned __int16 *)(*(_QWORD *)v23 + 302LL);
+  if ( *(_WORD *)(*(_QWORD *)v23 + 302LL) )
   {
-    v33 = (int *)(*(_QWORD *)(v31 + 176) + 8LL);
-    while ( *((System_IDisposable_c **)v33 - 1) != System_IDisposable_TypeInfo )
+    v37 = (int *)(*(_QWORD *)(v35 + 176) + 8LL);
+    while ( *((System_IDisposable_c **)v37 - 1) != System_IDisposable_TypeInfo )
     {
-      --v32;
-      v33 += 4;
-      if ( !v32 )
+      --v36;
+      v37 += 4;
+      if ( !v36 )
         goto LABEL_34;
     }
-    v34 = v31 + 16LL * *v33 + 312;
+    v38 = v35 + 16LL * *v37 + 312;
   }
   else
   {
 LABEL_34:
-    v34 = sub_1C41D90(v19, System_IDisposable_TypeInfo, 0);
+    v38 = sub_1C47738(v23, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(__int64, _QWORD))v34)(v19, *(_QWORD *)(v34 + 8));
+  (*(void (__fastcall **)(__int64, _QWORD))v38)(v23, *(_QWORD *)(v38 + 8));
   Camera_k__BackingField = arg->fields._Camera_k__BackingField;
   if ( !Camera_k__BackingField )
 LABEL_39:
-    sub_1C6BC60(Camera_k__BackingField, v7);
-  v40 = UnityEngine_Camera__ViewportToWorldPoint_71464264(Camera_k__BackingField, position, 0);
-  v35 = v40.fields.x + arg->fields._AdjustAfterOffset_k__BackingField.fields.x;
-  v36 = v40.fields.y + arg->fields._AdjustAfterOffset_k__BackingField.fields.y;
-  v37 = v40.fields.z + arg->fields._AdjustAfterOffset_k__BackingField.fields.z;
-  result.fields.z = v37;
-  result.fields.y = v36;
-  result.fields.x = v35;
+    sub_1C71608(Camera_k__BackingField, v7);
+  v44 = UnityEngine_Camera__ViewportToWorldPoint_71529196(Camera_k__BackingField, position, 0);
+  v39 = v44.fields.x + arg->fields._AdjustAfterOffset_k__BackingField.fields.x;
+  v40 = v44.fields.y + arg->fields._AdjustAfterOffset_k__BackingField.fields.y;
+  v41 = v44.fields.z + arg->fields._AdjustAfterOffset_k__BackingField.fields.z;
+  result.fields.z = v41;
+  result.fields.y = v40;
+  result.fields.x = v39;
   return result;
 }
 
@@ -266,7 +274,7 @@ bool BattleAdjustPopupPosInScreenComponent__IsMatchCond(
   if ( !ApplyScene )
     return 1;
   if ( !data || (changePhaseNotify = data->fields.changePhaseNotify) == 0 )
-    sub_1C6BC60(this, data);
+    sub_1C71608(this, data);
   if ( changePhaseNotify->fields._DetailPhase_k__BackingField == 4 )
     v5 = 2;
   else
@@ -292,32 +300,32 @@ bool BattleAdjustPopupPosInScreenComponent__IsOffScreen(
   z = viewPos.fields.z;
   y = viewPos.fields.y;
   x = viewPos.fields.x;
-  if ( (byte_4CB9787 & 1) == 0 )
+  if ( (byte_4CCA8D9 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BasicHelper_Any_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
-    sub_1C6BA08(&System_Func_BattleAdjustPopupPosInScreenComponent_AdjustPosData__bool__TypeInfo);
-    sub_1C6BA08(&Method_BattleAdjustPopupPosInScreenComponent___c__DisplayClass6_0__IsOffScreen_b__0__);
-    sub_1C6BA08(&BattleAdjustPopupPosInScreenComponent___c__DisplayClass6_0_TypeInfo);
-    byte_4CB9787 = 1;
+    sub_1C713B0(&Method_BasicHelper_Any_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
+    sub_1C713B0(&System_Func_BattleAdjustPopupPosInScreenComponent_AdjustPosData__bool__TypeInfo);
+    sub_1C713B0(&Method_BattleAdjustPopupPosInScreenComponent___c__DisplayClass6_0__IsOffScreen_b__0__);
+    sub_1C713B0(&BattleAdjustPopupPosInScreenComponent___c__DisplayClass6_0_TypeInfo);
+    byte_4CCA8D9 = 1;
   }
-  v7 = sub_1C6BC54(BattleAdjustPopupPosInScreenComponent___c__DisplayClass6_0_TypeInfo);
+  v7 = sub_1C715FC(BattleAdjustPopupPosInScreenComponent___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   *(float *)(v7 + 16) = x;
   *(float *)(v7 + 20) = y;
   *(float *)(v7 + 24) = z;
   AdjustPosDataArray = (System_Object_array *)this->fields.AdjustPosDataArray;
-  v11 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_BattleAdjustPopupPosInScreenComponent_AdjustPosData__bool__TypeInfo);
+  v11 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_BattleAdjustPopupPosInScreenComponent_AdjustPosData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v11,
     (Il2CppObject *)v7,
     Method_BattleAdjustPopupPosInScreenComponent___c__DisplayClass6_0__IsOffScreen_b__0__,
     0);
-  return BasicHelper__Any_object__51528924(
+  return BasicHelper__Any_object__51593856(
            AdjustPosDataArray,
            (System_Func_T__bool__o *)v11,
-           (const MethodInfo_31244DC *)Method_BasicHelper_Any_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
+           (const MethodInfo_3134280 *)Method_BasicHelper_Any_BattleAdjustPopupPosInScreenComponent_AdjustPosData___);
 }
 
 
@@ -337,10 +345,10 @@ float BattleAdjustPopupPosInScreenComponent_AdjustPosData__GetThresholdY(
   ManagerConfig_c *v5; // x0
   int32_t ScreenOffset; // w19
 
-  if ( (byte_4CB978A & 1) == 0 )
+  if ( (byte_4CCA8DC & 1) == 0 )
   {
-    sub_1C6BA08(&ManagerConfig_TypeInfo);
-    byte_4CB978A = 1;
+    sub_1C713B0(&ManagerConfig_TypeInfo);
+    byte_4CCA8DC = 1;
   }
   v5 = ManagerConfig_TypeInfo;
   ScreenOffset = this->fields.ScreenOffset;
@@ -421,7 +429,7 @@ bool BattleAdjustPopupPosInScreenComponent___c__DisplayClass6_0___IsOffScreen_b_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return BattleAdjustPopupPosInScreenComponent_AdjustPosData__IsOffScreen(
            x,
            this->fields.viewPos,
@@ -443,7 +451,7 @@ bool BattleAdjustPopupPosInScreenComponent___c__DisplayClass8_0___GetAdjustedWor
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return BattleAdjustPopupPosInScreenComponent_AdjustPosData__IsOffScreen(
            x,
            this->fields.originalViewPos,

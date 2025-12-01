@@ -1,9 +1,9 @@
 void TitleInfoEventOpenHeaderEffect___ctor(TitleInfoEventOpenHeaderEffect_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB4228 & 1) == 0 )
+  if ( (byte_4CC5340 & 1) == 0 )
   {
-    sub_1C6BA08(&CommonEffectComponent_TypeInfo);
-    byte_4CB4228 = 1;
+    sub_1C713B0(&CommonEffectComponent_TypeInfo);
+    byte_4CC5340 = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -41,30 +41,58 @@ void TitleInfoEventOpenHeaderEffect__setup(
   System_String_o *v8; // x0
   struct System_String_o *v9; // x0
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  int32_t v16; // [xsp+Ch] [xbp-34h] BYREF
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
+  int32_t v28; // [xsp+Ch] [xbp-34h] BYREF
 
-  v16 = eventId;
-  if ( (byte_4CB4227 & 1) == 0 )
+  v28 = eventId;
+  if ( (byte_4CC533F & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16530/*"_anim"*/);
-    sub_1C6BA08(&StringLiteral_18882/*"ef_mapnamechange_"*/);
-    byte_4CB4227 = 1;
+    sub_1C713B0(&StringLiteral_16537/*"_anim"*/);
+    sub_1C713B0(&StringLiteral_18892/*"ef_mapnamechange_"*/);
+    byte_4CC533F = 1;
   }
-  v8 = System_Int32__ToString((int32_t)&v16, 0);
-  v9 = System_String__Concat_64005056(
-         (System_String_o *)StringLiteral_18882/*"ef_mapnamechange_"*/,
+  v8 = System_Int32__ToString((int32_t)&v28, 0);
+  v9 = System_String__Concat_64069988(
+         (System_String_o *)StringLiteral_18892/*"ef_mapnamechange_"*/,
          v8,
-         (System_String_o *)StringLiteral_16530/*"_anim"*/,
+         (System_String_o *)StringLiteral_16537/*"_anim"*/,
          0);
   this->fields.baseName = v9;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.baseName, (int32_t)v9, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.baseName, (int32_t)v9, v10, v11, v12, v13, v14, v15);
   this->fields.changeUiCallback = changeUiCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.changeUiCallback, (int32_t)changeUiCallback, v12, v13);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.changeUiCallback,
+    (int32_t)changeUiCallback,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21);
   this->fields.animEndCallback = endCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.animEndCallback, (int32_t)endCallback, v14, v15);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.animEndCallback,
+    (int32_t)endCallback,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27);
 }

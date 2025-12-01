@@ -1,14 +1,14 @@
 void UserExpMaster___ctor(UserExpMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB7162 & 1) == 0 )
+  if ( (byte_4CC828B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int___ctor__);
-    byte_4CB7162 = 1;
+    sub_1C713B0(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int___ctor__);
+    byte_4CC828B = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     65,
-    (const MethodInfo_33F6DB8 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int___ctor__);
+    (const MethodInfo_3406B5C *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int___ctor__);
 }
 
 
@@ -32,53 +32,61 @@ System_Collections_Generic_List_UserExpEntity__o *UserExpMaster__GetCondExpEntit
   __int64 v16; // x0
   __int64 v17; // x1
   int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  __int64 v20; // x8
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
+  __int64 v24; // x8
   struct System_Object_array *items; // x9
-  _QWORD *v22; // x10
+  _QWORD *v26; // x10
   __int64 size; // x11
-  Il2CppClass **v24; // x0
-  System_Collections_Generic_IEnumerator_T__c *v25; // x8
-  __int64 v26; // x9
-  int32_t *v27; // x10
-  __int64 v28; // x0
-  UserExpMaster___c_c *v29; // x8
+  Il2CppClass **v28; // x0
+  System_Collections_Generic_IEnumerator_T__c *v29; // x8
+  __int64 v30; // x9
+  int32_t *v31; // x10
+  __int64 v32; // x0
+  UserExpMaster___c_c *v33; // x8
   System_Func_object__int__o *_9__3_0; // x20
-  Il2CppObject *v31; // x21
+  Il2CppObject *v35; // x21
   struct UserExpMaster___c_StaticFields *static_fields; // x0
-  int32_t v33; // w2
-  const MethodInfo *v34; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v35; // x0
+  int32_t v37; // w2
+  int32_t v38; // w3
+  System_String_o *v39; // x4
+  int32_t v40; // w5
+  int64_t v41; // x6
+  System_String_o *v42; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v43; // x0
 
-  if ( (byte_4CB7161 & 1) == 0 )
+  if ( (byte_4CC828A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_UserExpEntity__GetEnumerator__);
-    sub_1C6BA08(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__getEntityList__);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_OrderBy_UserExpEntity__int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToList_UserExpEntity___);
-    sub_1C6BA08(&System_Func_UserExpEntity__int__TypeInfo);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerator_UserExpEntity__TypeInfo);
-    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_UserExpEntity__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_UserExpEntity___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_UserExpEntity__TypeInfo);
-    sub_1C6BA08(&Method_UserExpMaster___c__GetCondExpEntityList_b__3_0__);
-    sub_1C6BA08(&UserExpMaster___c_TypeInfo);
-    byte_4CB7161 = 1;
+    sub_1C713B0(&Method_System_Collections_ObjectModel_Collection_UserExpEntity__GetEnumerator__);
+    sub_1C713B0(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__getEntityList__);
+    sub_1C713B0(&Method_System_Linq_Enumerable_OrderBy_UserExpEntity__int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToList_UserExpEntity___);
+    sub_1C713B0(&System_Func_UserExpEntity__int__TypeInfo);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerator_UserExpEntity__TypeInfo);
+    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_UserExpEntity__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_UserExpEntity___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_UserExpEntity__TypeInfo);
+    sub_1C713B0(&Method_UserExpMaster___c__GetCondExpEntityList_b__3_0__);
+    sub_1C713B0(&UserExpMaster___c_TypeInfo);
+    byte_4CC828A = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_UserExpEntity__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_UserExpEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_UserExpEntity___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_UserExpEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_339243C *)Method_System_Collections_ObjectModel_Collection_UserExpEntity__GetEnumerator__);
+                 (const MethodInfo_33A21E0 *)Method_System_Collections_ObjectModel_Collection_UserExpEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C6BC60(0, v6);
+    sub_1C71608(0, v6);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -98,7 +106,7 @@ System_Collections_Generic_List_UserExpEntity__o *UserExpMaster__GetCondExpEntit
     else
     {
 LABEL_9:
-      v11 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v11 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v11)(
             Enumerator,
@@ -122,88 +130,88 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v15 = sub_1C41D90(Enumerator, System_Collections_Generic_IEnumerator_UserExpEntity__TypeInfo, 0);
+      v15 = sub_1C47738(Enumerator, System_Collections_Generic_IEnumerator_UserExpEntity__TypeInfo, 0);
     }
     v16 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v15)(
             Enumerator,
             *(_QWORD *)(v15 + 8));
-    v20 = v16;
+    v24 = v16;
     if ( !v16 )
-      sub_1C6BC60(0, v17);
+      sub_1C71608(0, v17);
     if ( *(_DWORD *)(v16 + 56) )
     {
       if ( !v3 )
-        sub_1C6BC60(v16, v17);
+        sub_1C71608(v16, v17);
       items = v3->fields._items;
-      v22 = Method_System_Collections_Generic_List_UserExpEntity__Add__;
+      v26 = Method_System_Collections_Generic_List_UserExpEntity__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C6BC60(v16, v17);
+        sub_1C71608(v16, v17);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           (Il2CppObject *)v16,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
       }
       else
       {
-        v24 = &items->obj.klass + size;
+        v28 = &items->obj.klass + size;
         v3->fields._size = size + 1;
-        v24[4] = (Il2CppClass *)v20;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v24 + 4), v20, v18, v19);
+        v28[4] = (Il2CppClass *)v24;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v28 + 4), v24, v18, v19, v20, v21, v22, v23);
       }
     }
   }
-  v25 = Enumerator->klass;
-  v26 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+  v29 = Enumerator->klass;
+  v30 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
   if ( *(_WORD *)&Enumerator->klass->_2.rank )
   {
-    v27 = &v25->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v27 - 1) != System_IDisposable_TypeInfo )
+    v31 = &v29->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v31 - 1) != System_IDisposable_TypeInfo )
     {
-      --v26;
-      v27 += 4;
-      if ( !v26 )
+      --v30;
+      v31 += 4;
+      if ( !v30 )
         goto LABEL_29;
     }
-    v28 = (__int64)&v25->vtable[*v27];
+    v32 = (__int64)&v29->vtable[*v31];
   }
   else
   {
 LABEL_29:
-    v28 = sub_1C41D90(Enumerator, System_IDisposable_TypeInfo, 0);
+    v32 = sub_1C47738(Enumerator, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v28)(Enumerator, *(_QWORD *)(v28 + 8));
-  v29 = UserExpMaster___c_TypeInfo;
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(Enumerator, *(_QWORD *)(v32 + 8));
+  v33 = UserExpMaster___c_TypeInfo;
   if ( !UserExpMaster___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(UserExpMaster___c_TypeInfo);
-    v29 = UserExpMaster___c_TypeInfo;
+    v33 = UserExpMaster___c_TypeInfo;
   }
-  _9__3_0 = (System_Func_object__int__o *)v29->static_fields->__9__3_0;
+  _9__3_0 = (System_Func_object__int__o *)v33->static_fields->__9__3_0;
   if ( !_9__3_0 )
   {
-    if ( !v29->_2.cctor_finished )
+    if ( !v33->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v29);
-      v29 = UserExpMaster___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v33);
+      v33 = UserExpMaster___c_TypeInfo;
     }
-    v31 = (Il2CppObject *)v29->static_fields->__9;
-    _9__3_0 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_UserExpEntity__int__TypeInfo);
-    System_Func_object__int____ctor(_9__3_0, v31, Method_UserExpMaster___c__GetCondExpEntityList_b__3_0__, 0);
+    v35 = (Il2CppObject *)v33->static_fields->__9;
+    _9__3_0 = (System_Func_object__int__o *)sub_1C715FC(System_Func_UserExpEntity__int__TypeInfo);
+    System_Func_object__int____ctor(_9__3_0, v35, Method_UserExpMaster___c__GetCondExpEntityList_b__3_0__, 0);
     static_fields = UserExpMaster___c_TypeInfo->static_fields;
     static_fields->__9__3_0 = (struct System_Func_UserExpEntity__int__o *)_9__3_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v33, v34);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__3_0, (int32_t)_9__3_0, v37, v38, v39, v40, v41, v42);
   }
-  v35 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
+  v43 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderBy_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v3,
                                                                (System_Func_TSource__TKey__o *)_9__3_0,
-                                                               (const MethodInfo_316AB98 *)Method_System_Linq_Enumerable_OrderBy_UserExpEntity__int___);
+                                                               (const MethodInfo_317A93C *)Method_System_Linq_Enumerable_OrderBy_UserExpEntity__int___);
   return (System_Collections_Generic_List_UserExpEntity__o *)System_Linq_Enumerable__ToList_object_(
-                                                               v35,
-                                                               (const MethodInfo_317FEE4 *)Method_System_Linq_Enumerable_ToList_UserExpEntity___);
+                                                               v43,
+                                                               (const MethodInfo_318FC88 *)Method_System_Linq_Enumerable_ToList_UserExpEntity___);
 }
 
 
@@ -227,15 +235,15 @@ int32_t UserExpMaster__GetLevelMax(UserExpMaster_o *this, const MethodInfo *meth
   System_Collections_Generic_List_Enumerator_object__o v18; // [xsp+20h] [xbp-60h] BYREF
 
   v2 = this;
-  if ( (byte_4CB715F & 1) == 0 )
+  if ( (byte_4CC8288 & 1) == 0 )
   {
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&CondType_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_UserExpEntity__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_UserExpEntity__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_UserExpEntity__get_Current__);
-    this = (UserExpMaster_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_UserExpEntity__GetEnumerator__);
-    byte_4CB715F = 1;
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&CondType_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_UserExpEntity__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_UserExpEntity__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_UserExpEntity__get_Current__);
+    this = (UserExpMaster_o *)sub_1C713B0(&Method_System_Collections_Generic_List_UserExpEntity__GetEnumerator__);
+    byte_4CC8288 = 1;
   }
   memset(&v18, 0, sizeof(v18));
   SelfUserGame = UserGameMaster__getSelfUserGame((const MethodInfo *)this);
@@ -244,22 +252,22 @@ int32_t UserExpMaster__GetLevelMax(UserExpMaster_o *this, const MethodInfo *meth
     lv = SelfUserGame->fields.lv;
     CondExpEntityList = (System_Collections_Generic_List_object__o *)UserExpMaster__GetCondExpEntityList(v2, v4);
     if ( !CondExpEntityList )
-      sub_1C6BC60(0, v7);
+      sub_1C71608(0, v7);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v17,
       CondExpEntityList,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_UserExpEntity__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_UserExpEntity__GetEnumerator__);
     v18 = v17;
     while ( 1 )
     {
       v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v18,
-             (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_UserExpEntity__MoveNext__);
+             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_UserExpEntity__MoveNext__);
       if ( !v8 )
         break;
       current = v18.fields._current;
       if ( !v18.fields._current )
-        sub_1C6BC60(v8, v9);
+        sub_1C71608(v8, v9);
       if ( SLODWORD(v18.fields._current[1].klass) >= lv )
       {
         monitor = (int32_t)v18.fields._current[3].monitor;
@@ -272,14 +280,14 @@ int32_t UserExpMaster__GetLevelMax(UserExpMaster_o *this, const MethodInfo *meth
           v14 = LODWORD(current[1].klass) - 1;
           System_Collections_Generic_List_Enumerator_object___Dispose(
             &v18,
-            (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_UserExpEntity__Dispose__);
+            (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_UserExpEntity__Dispose__);
           return v14;
         }
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v18,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_UserExpEntity__Dispose__);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_UserExpEntity__Dispose__);
   }
   v15 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -293,15 +301,15 @@ int32_t UserExpMaster__GetLevelMax(UserExpMaster_o *this, const MethodInfo *meth
 
 UserExpEntity_o *UserExpMaster__getEntityFromLevel(UserExpMaster_o *this, int32_t lv, const MethodInfo *method)
 {
-  if ( (byte_4CB715E & 1) == 0 )
+  if ( (byte_4CC8287 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
-    byte_4CB715E = 1;
+    sub_1C713B0(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+    byte_4CC8287 = 1;
   }
   return (UserExpEntity_o *)DataMasterBase_object__object__int___GetEntity(
                               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                               lv,
-                              (const MethodInfo_33F90DC *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+                              (const MethodInfo_3408E80 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
 }
 
 
@@ -312,10 +320,10 @@ int32_t UserExpMaster__getLevel(UserExpMaster_o *this, int64_t exp, int32_t star
   Il2CppObject *Entity; // x0
   int32_t v10; // w23
 
-  if ( (byte_4CB7160 & 1) == 0 )
+  if ( (byte_4CC8289 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
-    byte_4CB7160 = 1;
+    sub_1C713B0(&Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+    byte_4CC8289 = 1;
   }
   LevelMax = UserExpMaster__GetLevelMax(this, (const MethodInfo *)exp);
   if ( LevelMax >= start_lv )
@@ -324,7 +332,7 @@ int32_t UserExpMaster__getLevel(UserExpMaster_o *this, int64_t exp, int32_t star
     Entity = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                start_lv,
-               (const MethodInfo_33F90DC *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+               (const MethodInfo_3408E80 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
     if ( Entity )
     {
       v10 = start_lv + 1;
@@ -338,7 +346,7 @@ int32_t UserExpMaster__getLevel(UserExpMaster_o *this, int64_t exp, int32_t star
         Entity = DataMasterBase_object__object__int___GetEntity(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                    v10++,
-                   (const MethodInfo_33F90DC *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
+                   (const MethodInfo_3408E80 *)Method_DataMasterBase_UserExpMaster__UserExpEntity__int__GetEntity__);
       }
       while ( Entity );
     }
@@ -351,17 +359,29 @@ void UserExpMaster___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB7163 & 1) == 0 )
+  if ( (byte_4CC828C & 1) == 0 )
   {
-    sub_1C6BA08(&UserExpMaster___c_TypeInfo);
-    byte_4CB7163 = 1;
+    sub_1C713B0(&UserExpMaster___c_TypeInfo);
+    byte_4CC828C = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(UserExpMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(UserExpMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   UserExpMaster___c_TypeInfo->static_fields->__9 = (struct UserExpMaster___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)UserExpMaster___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)UserExpMaster___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -377,6 +397,6 @@ int32_t UserExpMaster___c___GetCondExpEntityList_b__3_0(
         const MethodInfo *method)
 {
   if ( !a )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return a->fields.lv;
 }

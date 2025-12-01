@@ -4,7 +4,7 @@ void QuestBoardListViewItem___ctor(QuestBoardListViewItem_o *this, const MethodI
 }
 
 
-void QuestBoardListViewItem___ctor_36704696(
+void QuestBoardListViewItem___ctor_36740020(
         QuestBoardListViewItem_o *this,
         int32_t index,
         int32_t ikind,
@@ -17,26 +17,50 @@ void QuestBoardListViewItem___ctor_36704696(
 {
   QuestBoardListViewItem_o *v15; // x25
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
 
   v15 = this;
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   v15->fields._info_kind_k__BackingField = ikind;
   v15->fields._quest_info_k__BackingField = qinf;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v15->fields._quest_info_k__BackingField, (int32_t)qinf, v16, v17);
-  v15->fields._black_mark_prefab_k__BackingField = blackMarkPrefab;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&v15->fields._black_mark_prefab_k__BackingField,
-    (int32_t)blackMarkPrefab,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v15->fields._quest_info_k__BackingField,
+    (int32_t)qinf,
+    v16,
+    v17,
     v18,
-    v19);
+    v19,
+    v20,
+    v21);
+  v15->fields._black_mark_prefab_k__BackingField = blackMarkPrefab;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v15->fields._black_mark_prefab_k__BackingField,
+    (int32_t)blackMarkPrefab,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27);
   v15->fields._white_mark_prefab_k__BackingField = whiteMarkPrefab;
   v15 = (QuestBoardListViewItem_o *)((char *)v15 + 144);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v15, (int32_t)whiteMarkPrefab, v20, v21);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v15, (int32_t)whiteMarkPrefab, v28, v29, v30, v31, v32, v33);
   LODWORD(v15->monitor) = overwriteBannerId;
   HIDWORD(v15->monitor) = recollectionWarId;
 }
@@ -50,12 +74,12 @@ bool QuestBoardListViewItem__IsDisplayableRoadmapButton(QuestBoardListViewItem_o
   __int64 v7; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4CB2F43 & 1) == 0 )
+  if ( (byte_4CC4058 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_WarMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
-    byte_4CB2F43 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_WarMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__);
+    byte_4CC4058 = 1;
   }
   entity = 0;
   if ( !this->fields._info_kind_k__BackingField )
@@ -71,15 +95,15 @@ bool QuestBoardListViewItem__IsDisplayableRoadmapButton(QuestBoardListViewItem_o
         return (unsigned __int8)quest_info_k__BackingField & 1;
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_WarMaster___);
+      Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_WarMaster___);
       if ( !Master_object )
 LABEL_19:
-        sub_1C6BC60(Master_object, v7);
+        sub_1C71608(Master_object, v7);
       if ( DataMasterBase_object__object__int___TryGetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              &entity,
              AreaBoardInfo_k__BackingField->fields.warId,
-             (const MethodInfo_33F9128 *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
+             (const MethodInfo_3408ECC *)Method_DataMasterBase_WarMaster__WarEntity__int__TryGetEntity__) )
       {
         Master_object = entity;
         if ( !entity )
@@ -173,14 +197,22 @@ void QuestBoardListViewItem__set_black_mark_prefab(
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._black_mark_prefab_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._black_mark_prefab_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._black_mark_prefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -195,10 +227,22 @@ void QuestBoardListViewItem__set_quest_info(
         MapControl_QuestInfo_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._quest_info_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._quest_info_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._quest_info_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -207,12 +251,20 @@ void QuestBoardListViewItem__set_white_mark_prefab(
         UnityEngine_GameObject_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._white_mark_prefab_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._white_mark_prefab_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._white_mark_prefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

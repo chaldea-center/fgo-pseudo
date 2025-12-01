@@ -38,18 +38,18 @@ void EventServantFatigueListViewItemDraw__SetFatigueMask(
   UILabel_o *v31; // x20
   System_String_o *v32; // x1
 
-  if ( (byte_4CB0BF0 & 1) == 0 )
+  if ( (byte_4CC1CF4 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11671/*"SERVANT_RECOVER_CAN_NOT_SELECT"*/);
-    sub_1C6BA08(&StringLiteral_11673/*"SERVANT_SELECT_NO_SORTIE_FATIGURE"*/);
-    sub_1C6BA08(&StringLiteral_11674/*"SERVANT_SELECT_NO_SORTIE_FATIGURE_RECOVER"*/);
-    sub_1C6BA08(&StringLiteral_11520/*"SELECT_CANNOT"*/);
-    sub_1C6BA08(&StringLiteral_11547/*"SELECT_NO_SORTIE_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_11571/*"SERVANT_ALREADY_RECOVER_NOT_SELECT"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB0BF0 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_11677/*"SERVANT_RECOVER_CAN_NOT_SELECT"*/);
+    sub_1C713B0(&StringLiteral_11679/*"SERVANT_SELECT_NO_SORTIE_FATIGURE"*/);
+    sub_1C713B0(&StringLiteral_11680/*"SERVANT_SELECT_NO_SORTIE_FATIGURE_RECOVER"*/);
+    sub_1C713B0(&StringLiteral_11526/*"SELECT_CANNOT"*/);
+    sub_1C713B0(&StringLiteral_11553/*"SELECT_NO_SORTIE_TITLE"*/);
+    sub_1C713B0(&StringLiteral_11577/*"SERVANT_ALREADY_RECOVER_NOT_SELECT"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC1CF4 = 1;
   }
   if ( item )
   {
@@ -72,7 +72,7 @@ void EventServantFatigueListViewItemDraw__SetFatigueMask(
       v8 = this->fields.statusLabel;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v9 = &StringLiteral_11520/*"SELECT_CANNOT"*/;
+      v9 = &StringLiteral_11526/*"SELECT_CANNOT"*/;
 LABEL_22:
       statusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)*v9, 0);
       if ( v8 )
@@ -92,7 +92,7 @@ LABEL_22:
         }
       }
 LABEL_67:
-      sub_1C6BC60(statusLabel, item);
+      sub_1C71608(statusLabel, item);
     }
     statusLabel = (UnityEngine_Component_o *)this->fields.statusLabelTime;
     if ( !statusLabel )
@@ -122,7 +122,7 @@ LABEL_67:
         v8 = this->fields.statusLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v9 = &StringLiteral_11671/*"SERVANT_RECOVER_CAN_NOT_SELECT"*/;
+        v9 = &StringLiteral_11677/*"SERVANT_RECOVER_CAN_NOT_SELECT"*/;
         goto LABEL_22;
       }
       fatigueTime = item->fields.fatigueTime;
@@ -154,7 +154,7 @@ LABEL_54:
         {
           if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-          statusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11671/*"SERVANT_RECOVER_CAN_NOT_SELECT"*/, 0);
+          statusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11677/*"SERVANT_RECOVER_CAN_NOT_SELECT"*/, 0);
           if ( !v31 )
             goto LABEL_67;
           v32 = (System_String_o *)statusLabel;
@@ -163,7 +163,7 @@ LABEL_54:
         statusLabelTime = this->fields.statusLabelTime;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        statusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11571/*"SERVANT_ALREADY_RECOVER_NOT_SELECT"*/, 0);
+        statusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11577/*"SERVANT_ALREADY_RECOVER_NOT_SELECT"*/, 0);
         if ( !statusLabelTime )
           goto LABEL_67;
         goto LABEL_66;
@@ -183,12 +183,12 @@ LABEL_54:
       RestTime4 = LocalizationManager__GetRestTime4(v24, -1, 0);
       v26 = this->fields.statusLabel;
       v19 = (Il2CppObject *)RestTime4;
-      statusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11547/*"SELECT_NO_SORTIE_TITLE"*/, 0);
+      statusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11553/*"SELECT_NO_SORTIE_TITLE"*/, 0);
       if ( !v26 )
         goto LABEL_67;
       UILabel__set_text(v26, (System_String_o *)statusLabel, 0);
       statusLabelTime = this->fields.statusLabelTime;
-      v21 = &StringLiteral_11674/*"SERVANT_SELECT_NO_SORTIE_FATIGURE_RECOVER"*/;
+      v21 = &StringLiteral_11680/*"SERVANT_SELECT_NO_SORTIE_FATIGURE_RECOVER"*/;
 LABEL_49:
       v27 = LocalizationManager__Get((System_String_o *)*v21, 0);
       statusLabel = (UnityEngine_Component_o *)System_String__Format(v27, v19, 0);
@@ -229,12 +229,12 @@ LABEL_66:
         v17 = LocalizationManager__GetRestTime4(v16, -1, 0);
         v18 = this->fields.statusLabel;
         v19 = (Il2CppObject *)v17;
-        statusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11547/*"SELECT_NO_SORTIE_TITLE"*/, 0);
+        statusLabel = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11553/*"SELECT_NO_SORTIE_TITLE"*/, 0);
         if ( !v18 )
           goto LABEL_67;
         UILabel__set_text(v18, (System_String_o *)statusLabel, 0);
         statusLabelTime = this->fields.statusLabelTime;
-        v21 = &StringLiteral_11673/*"SERVANT_SELECT_NO_SORTIE_FATIGURE"*/;
+        v21 = &StringLiteral_11679/*"SERVANT_SELECT_NO_SORTIE_FATIGURE"*/;
         goto LABEL_49;
       }
     }
@@ -276,13 +276,13 @@ void EventServantFatigueListViewItemDraw__SetItem(
   const MethodInfo *v23; // x2
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v24; // 0:x0.16
 
-  if ( (byte_4CB0BEF & 1) == 0 )
+  if ( (byte_4CC1CF3 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11668/*"SERVANT_RECOVERY_FATIGUE_LIST_INDIVIDUALITY"*/);
-    byte_4CB0BEF = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C713B0(&StringLiteral_11674/*"SERVANT_RECOVERY_FATIGUE_LIST_INDIVIDUALITY"*/);
+    byte_4CC1CF3 = 1;
   }
   if ( item && mode )
   {
@@ -314,7 +314,7 @@ void EventServantFatigueListViewItemDraw__SetItem(
                 individualityText = this->fields.individualityText;
                 if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                lockImg = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11668/*"SERVANT_RECOVERY_FATIGUE_LIST_INDIVIDUALITY"*/, 0);
+                lockImg = (UnityEngine_Component_o *)LocalizationManager__Get((System_String_o *)StringLiteral_11674/*"SERVANT_RECOVERY_FATIGUE_LIST_INDIVIDUALITY"*/, 0);
                 if ( individualityText )
                 {
                   UILabel__set_text(individualityText, (System_String_o *)lockImg, 0);
@@ -335,7 +335,7 @@ void EventServantFatigueListViewItemDraw__SetItem(
                         lockImg = (UnityEngine_Component_o *)this->fields.servantIcon;
                         if ( lockImg )
                         {
-                          ServantFaceIconComponent__Set_41239152(
+                          ServantFaceIconComponent__Set_41281864(
                             (ServantFaceIconComponent_o *)lockImg,
                             item->fields.userServantEntity,
                             item->fields.iconLabelInfo1,
@@ -351,7 +351,7 @@ void EventServantFatigueListViewItemDraw__SetItem(
                               j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
                             *(_QWORD *)&v24.fields.currentCryptoKey = v17;
                             *(_QWORD *)&v24.fields.fakeValue = v16;
-                            lockImg = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(
+                            lockImg = (UnityEngine_Component_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(
                                                                    v24,
                                                                    0);
                             if ( item->fields.userServantEntity )
@@ -369,7 +369,7 @@ void EventServantFatigueListViewItemDraw__SetItem(
                                   lockImg = (UnityEngine_Component_o *)this->fields.subIconLabel;
                                   if ( lockImg )
                                   {
-                                    UIIconLabel__Set_41344128(
+                                    UIIconLabel__Set_41387288(
                                       (UIIconLabel_o *)lockImg,
                                       36,
                                       item->fields.rarity,
@@ -439,7 +439,7 @@ LABEL_44:
         }
       }
     }
-    sub_1C6BC60(lockImg, item);
+    sub_1C71608(lockImg, item);
   }
 }
 
@@ -459,7 +459,7 @@ void EventServantFatigueListViewItemDraw__SetStatusLabel(
         (statusLabel = (UnityEngine_Component_o *)this->fields.statusLabelTime) == 0)
     || (statusLabel = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(statusLabel, 0)) == 0 )
   {
-    sub_1C6BC60(statusLabel, enable);
+    sub_1C71608(statusLabel, enable);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)statusLabel, enable, 0);
 }

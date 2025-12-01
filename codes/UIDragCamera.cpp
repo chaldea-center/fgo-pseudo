@@ -6,21 +6,25 @@ void UIDragCamera___ctor(UIDragCamera_o *this, const MethodInfo *method)
 
 void UIDragCamera__Awake(UIDragCamera_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_draggableCamera; // x20
+  GrandQuestFolderBoardItem_o *p_draggableCamera; // x20
   UnityEngine_Object_o *draggableCamera; // x21
   UnityEngine_GameObject_o *gameObject; // x19
   Il2CppObject *v6; // x0
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
-  if ( (byte_4CBA945 & 1) == 0 )
+  if ( (byte_4CCBA9E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_NGUITools_FindInParents_UIDraggableCamera___);
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA945 = 1;
+    sub_1C713B0(&Method_NGUITools_FindInParents_UIDraggableCamera___);
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA9E = 1;
   }
-  p_draggableCamera = (CGThumbnailListItem_o *)&this->fields.draggableCamera;
+  p_draggableCamera = (GrandQuestFolderBoardItem_o *)&this->fields.draggableCamera;
   draggableCamera = (UnityEngine_Object_o *)this->fields.draggableCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -31,9 +35,9 @@ void UIDragCamera__Awake(UIDragCamera_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
     v6 = NGUITools__FindInParents_object_(
            gameObject,
-           (const MethodInfo_31C5E70 *)Method_NGUITools_FindInParents_UIDraggableCamera___);
-    p_draggableCamera->klass = (CGThumbnailListItem_c *)v6;
-    sub_1C6B9AC(p_draggableCamera, (int32_t)v6, v7, v8);
+           (const MethodInfo_31D5C14 *)Method_NGUITools_FindInParents_UIDraggableCamera___);
+    p_draggableCamera->klass = (GrandQuestFolderBoardItem_c *)v6;
+    sub_1C71354(p_draggableCamera, (int32_t)v6, v7, v8, v9, v10, v11, v12);
   }
 }
 
@@ -50,18 +54,18 @@ void UIDragCamera__OnDrag(UIDragCamera_o *this, UnityEngine_Vector2_o delta, con
 
   y = delta.fields.y;
   x = delta.fields.x;
-  if ( (byte_4CBA947 & 1) == 0 )
+  if ( (byte_4CCBAA0 & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA947 = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBAA0 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49647220(gameObject, 0) )
+    if ( NGUITools__GetActive_49712152(gameObject, 0) )
     {
       draggableCamera = (UnityEngine_Object_o *)this->fields.draggableCamera;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -70,7 +74,7 @@ void UIDragCamera__OnDrag(UIDragCamera_o *this, UnityEngine_Vector2_o delta, con
       {
         v9 = this->fields.draggableCamera;
         if ( !v9 )
-          sub_1C6BC60(0, v8);
+          sub_1C71608(0, v8);
         v10.fields.x = x;
         v10.fields.y = y;
         UIDraggableCamera__Drag(v9, v10, v8);
@@ -88,18 +92,18 @@ void UIDragCamera__OnPress(UIDragCamera_o *this, bool isPressed, const MethodInf
   const MethodInfo *v8; // x2
   UIDraggableCamera_o *v9; // x0
 
-  if ( (byte_4CBA946 & 1) == 0 )
+  if ( (byte_4CCBA9F & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA946 = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA9F = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49647220(gameObject, 0) )
+    if ( NGUITools__GetActive_49712152(gameObject, 0) )
     {
       draggableCamera = (UnityEngine_Object_o *)this->fields.draggableCamera;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -108,7 +112,7 @@ void UIDragCamera__OnPress(UIDragCamera_o *this, bool isPressed, const MethodInf
       {
         v9 = this->fields.draggableCamera;
         if ( !v9 )
-          sub_1C6BC60(0, v7);
+          sub_1C71608(0, v7);
         UIDraggableCamera__Press(v9, isPressed, v8);
       }
     }
@@ -123,18 +127,18 @@ void UIDragCamera__OnScroll(UIDragCamera_o *this, float delta, const MethodInfo 
   const MethodInfo *v7; // x1
   UIDraggableCamera_o *v8; // x0
 
-  if ( (byte_4CBA948 & 1) == 0 )
+  if ( (byte_4CCBAA1 & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA948 = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBAA1 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49647220(gameObject, 0) )
+    if ( NGUITools__GetActive_49712152(gameObject, 0) )
     {
       draggableCamera = (UnityEngine_Object_o *)this->fields.draggableCamera;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -143,7 +147,7 @@ void UIDragCamera__OnScroll(UIDragCamera_o *this, float delta, const MethodInfo 
       {
         v8 = this->fields.draggableCamera;
         if ( !v8 )
-          sub_1C6BC60(0, v7);
+          sub_1C71608(0, v7);
         UIDraggableCamera__Scroll(v8, delta, v7);
       }
     }

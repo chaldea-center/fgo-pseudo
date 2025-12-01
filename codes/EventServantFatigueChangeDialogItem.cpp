@@ -19,13 +19,13 @@ void EventServantFatigueChangeDialogItem__Set(
   int32_t v12; // w21
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v13; // 0:x0.16
 
-  if ( (byte_4CB0BE4 & 1) == 0 )
+  if ( (byte_4CC1CE8 & 1) == 0 )
   {
-    sub_1C6BA08(&IconLabelInfo_TypeInfo);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB0BE4 = 1;
+    sub_1C713B0(&IconLabelInfo_TypeInfo);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CC1CE8 = 1;
   }
-  v5 = (IconLabelInfo_o *)sub_1C6BC54(IconLabelInfo_TypeInfo);
+  v5 = (IconLabelInfo_o *)sub_1C715FC(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v5, 0);
   if ( !userServantEntity )
     goto LABEL_11;
@@ -33,11 +33,11 @@ void EventServantFatigueChangeDialogItem__Set(
   LevelMax = (ServantFaceIconComponent_o *)UserServantEntity__getLevelMax(userServantEntity, 0);
   if ( !v5 )
     goto LABEL_11;
-  IconLabelInfo__Set_41149608(v5, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_41192248(v5, 2, lv, (int32_t)LevelMax, 0, 0, 0, 0, 0, 0);
   LevelMax = this->fields.servantFaceIconComponent;
   if ( !LevelMax )
     goto LABEL_11;
-  ServantFaceIconComponent__Set_41239152(LevelMax, userServantEntity, v5, 0, 0);
+  ServantFaceIconComponent__Set_41281864(LevelMax, userServantEntity, v5, 0, 0);
   LevelMax = (ServantFaceIconComponent_o *)this->fields.limitCountIconComponent;
   if ( !LevelMax )
     goto LABEL_11;
@@ -49,10 +49,10 @@ void EventServantFatigueChangeDialogItem__Set(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v13.fields.currentCryptoKey = v11;
   *(_QWORD *)&v13.fields.fakeValue = v10;
-  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v13, 0);
+  v12 = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v13, 0);
   LevelMax = (ServantFaceIconComponent_o *)UserServantEntity__getLimitCntMax(userServantEntity, 0);
   if ( !limitCountIconComponent )
 LABEL_11:
-    sub_1C6BC60(LevelMax, v7);
+    sub_1C71608(LevelMax, v7);
   LimitCountIconComponent__Set(limitCountIconComponent, v12, (int32_t)LevelMax, 0);
 }

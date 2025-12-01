@@ -1,9 +1,9 @@
 void GrandBondEquipSkillSelectDialog___ctor(GrandBondEquipSkillSelectDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB8B5A & 1) == 0 )
+  if ( (byte_4CC9C94 & 1) == 0 )
   {
-    sub_1C6BA08(&BaseDialog_TypeInfo);
-    byte_4CB8B5A = 1;
+    sub_1C713B0(&BaseDialog_TypeInfo);
+    byte_4CC9C94 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -26,22 +26,22 @@ void GrandBondEquipSkillSelectDialog__OnClickAnotherSKillBtn(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CB8B57 & 1) == 0 )
+  if ( (byte_4CC9C91 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_GrandBondEquipSkillSelectDialog_OnClickAnotherSKillBtn__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB8B57 = 1;
+    sub_1C713B0(&Method_GrandBondEquipSkillSelectDialog_OnClickAnotherSKillBtn__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC9C91 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_GrandBondEquipSkillSelectDialog_OnClickAnotherSKillBtn__;
     if ( (*((_BYTE *)Method_GrandBondEquipSkillSelectDialog_OnClickAnotherSKillBtn__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C6BA20(Method_GrandBondEquipSkillSelectDialog_OnClickAnotherSKillBtn__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C713C8(Method_GrandBondEquipSkillSelectDialog_OnClickAnotherSKillBtn__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1C6BC60(0, v6);
+      sub_1C71608(0, v6);
     CommonUI__CloseGrandBondEquipSkillSelectDialog((CommonUI_o *)Instance, 1, 1, 0);
   }
 }
@@ -56,22 +56,22 @@ void GrandBondEquipSkillSelectDialog__OnClickCancelBtn(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CB8B58 & 1) == 0 )
+  if ( (byte_4CC9C92 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_GrandBondEquipSkillSelectDialog_OnClickCancelBtn__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB8B58 = 1;
+    sub_1C713B0(&Method_GrandBondEquipSkillSelectDialog_OnClickCancelBtn__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC9C92 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_GrandBondEquipSkillSelectDialog_OnClickCancelBtn__;
     if ( (*((_BYTE *)Method_GrandBondEquipSkillSelectDialog_OnClickCancelBtn__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C6BA20(Method_GrandBondEquipSkillSelectDialog_OnClickCancelBtn__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C713C8(Method_GrandBondEquipSkillSelectDialog_OnClickCancelBtn__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1C6BC60(0, v6);
+      sub_1C71608(0, v6);
     CommonUI__CloseGrandBondEquipSkillSelectDialog((CommonUI_o *)Instance, 0, 0, 0);
   }
 }
@@ -86,22 +86,22 @@ void GrandBondEquipSkillSelectDialog__OnClickNormalSKillBtn(
   Il2CppObject *Instance; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CB8B56 & 1) == 0 )
+  if ( (byte_4CC9C90 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_GrandBondEquipSkillSelectDialog_OnClickNormalSKillBtn__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB8B56 = 1;
+    sub_1C713B0(&Method_GrandBondEquipSkillSelectDialog_OnClickNormalSKillBtn__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC9C90 = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_GrandBondEquipSkillSelectDialog_OnClickNormalSKillBtn__;
     if ( (*((_BYTE *)Method_GrandBondEquipSkillSelectDialog_OnClickNormalSKillBtn__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C6BA20(Method_GrandBondEquipSkillSelectDialog_OnClickNormalSKillBtn__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C713C8(Method_GrandBondEquipSkillSelectDialog_OnClickNormalSKillBtn__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 8, 0, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
-      sub_1C6BC60(0, v6);
+      sub_1C71608(0, v6);
     CommonUI__CloseGrandBondEquipSkillSelectDialog((CommonUI_o *)Instance, 1, 0, 0);
   }
 }
@@ -111,13 +111,13 @@ void GrandBondEquipSkillSelectDialog__OnEnable(GrandBondEquipSkillSelectDialog_o
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4CB8B59 & 1) == 0 )
+  if ( (byte_4CC9C93 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_15635/*"Window/Buttons/CancelButton"*/);
-    byte_4CB8B59 = 1;
+    sub_1C713B0(&StringLiteral_15642/*"Window/Buttons/CancelButton"*/);
+    byte_4CC9C93 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45210584(transform, (System_String_o *)StringLiteral_15635/*"Window/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45260884(transform, (System_String_o *)StringLiteral_15642/*"Window/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -138,54 +138,54 @@ void GrandBondEquipSkillSelectDialog__Open(
   UILabel_o *cancelBtnLabel; // x22
   const MethodInfo *v16; // x3
 
-  if ( (byte_4CB8B54 & 1) == 0 )
+  if ( (byte_4CC9C8E & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6981/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_6980/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_NORMAL_SKILL_HEADER"*/);
-    sub_1C6BA08(&StringLiteral_6978/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_MESSAGE"*/);
-    sub_1C6BA08(&StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/);
-    sub_1C6BA08(&StringLiteral_6976/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_ANOTHER_SKILL_BUTTON"*/);
-    sub_1C6BA08(&StringLiteral_6977/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_ANOTHER_SKILL_HEADER"*/);
-    sub_1C6BA08(&StringLiteral_6979/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_NORMAL_SKILL_BUTTON"*/);
-    byte_4CB8B54 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_6983/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_TITLE"*/);
+    sub_1C713B0(&StringLiteral_6982/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_NORMAL_SKILL_HEADER"*/);
+    sub_1C713B0(&StringLiteral_6980/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_MESSAGE"*/);
+    sub_1C713B0(&StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/);
+    sub_1C713B0(&StringLiteral_6978/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_ANOTHER_SKILL_BUTTON"*/);
+    sub_1C713B0(&StringLiteral_6979/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_ANOTHER_SKILL_HEADER"*/);
+    sub_1C713B0(&StringLiteral_6981/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_NORMAL_SKILL_BUTTON"*/);
+    byte_4CC9C8E = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6981/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_TITLE"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6983/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_13;
   UILabel__set_text(titleLabel, v8, 0);
   messageLabel = this->fields.messageLabel;
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6978/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_MESSAGE"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6980/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_MESSAGE"*/, 0);
   if ( !messageLabel )
     goto LABEL_13;
   UILabel__set_text(messageLabel, v8, 0);
   normalSkillHeader = this->fields.normalSkillHeader;
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6980/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_NORMAL_SKILL_HEADER"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6982/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_NORMAL_SKILL_HEADER"*/, 0);
   if ( !normalSkillHeader )
     goto LABEL_13;
   UILabel__set_text(normalSkillHeader, v8, 0);
   anotherSkillHeader = this->fields.anotherSkillHeader;
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6977/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_ANOTHER_SKILL_HEADER"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6979/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_ANOTHER_SKILL_HEADER"*/, 0);
   if ( !anotherSkillHeader )
     goto LABEL_13;
   UILabel__set_text(anotherSkillHeader, v8, 0);
   normalSkillBtnLabel = this->fields.normalSkillBtnLabel;
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6979/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_NORMAL_SKILL_BUTTON"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6981/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_NORMAL_SKILL_BUTTON"*/, 0);
   if ( !normalSkillBtnLabel
     || (UILabel__set_text(normalSkillBtnLabel, v8, 0),
         anotherSkillBtnLabel = this->fields.anotherSkillBtnLabel,
-        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6976/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_ANOTHER_SKILL_BUTTON"*/, 0),
+        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_6978/*"GRAND_BOND_EQUIP_FUNC_SELECT_DIALOG_ANOTHER_SKILL_BUTTON"*/, 0),
         !anotherSkillBtnLabel)
     || (UILabel__set_text(anotherSkillBtnLabel, v8, 0),
         cancelBtnLabel = this->fields.cancelBtnLabel,
-        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3676/*"COMMON_CONFIRM_CANCEL"*/, 0),
+        v8 = LocalizationManager__Get((System_String_o *)StringLiteral_3679/*"COMMON_CONFIRM_CANCEL"*/, 0),
         !cancelBtnLabel) )
   {
 LABEL_13:
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   }
   UILabel__set_text(cancelBtnLabel, v8, 0);
   GrandBondEquipSkillSelectDialog__SetSkillUi(this, equipUserSvtId, anotherSkillId, v16);
@@ -214,39 +214,39 @@ void GrandBondEquipSkillSelectDialog__SetSkillUi(
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v20; // 0:x0.16
 
-  if ( (byte_4CB8B55 & 1) == 0 )
+  if ( (byte_4CC9C8F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantSkillMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C6BA08(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB8B55 = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantSkillMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+    sub_1C713B0(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C713B0(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CC9C8F = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_SkillMaster___);
-  EffectTitle = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_SkillMaster___);
+  EffectTitle = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !EffectTitle )
     goto LABEL_24;
   EffectTitle = DataMasterBase_object__object__long___GetEntity(
                   (DataMasterBase_TMaster__TEntity__PKType__o *)EffectTitle,
                   equipUserSvtId,
-                  (const MethodInfo_33FB638 *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+                  (const MethodInfo_340B3DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   if ( !EffectTitle )
     goto LABEL_24;
   v10 = *((_QWORD *)EffectTitle + 10);
   v11 = *((_QWORD *)EffectTitle + 11);
-  v12 = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantSkillMaster___);
+  v12 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantSkillMaster___);
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v20.fields.currentCryptoKey = v10;
   *(_QWORD *)&v20.fields.fakeValue = v11;
-  EffectTitle = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v20, 0);
+  EffectTitle = (void *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v20, 0);
   if ( !v12 )
     goto LABEL_24;
   EffectTitle = ServantSkillMaster__GetEntity((ServantSkillMaster_o *)v12, (int32_t)EffectTitle, 1, 1, 0);
@@ -258,7 +258,7 @@ void GrandBondEquipSkillSelectDialog__SetSkillUi(
   EffectTitle = DataMasterBase_object__object__int___GetEntity(
                   (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                   v13,
-                  (const MethodInfo_33F90DC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
+                  (const MethodInfo_3408E80 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__GetEntity__);
   if ( !this->fields.normalSkillIcon )
     goto LABEL_24;
   v14 = (SkillEntity_o *)EffectTitle;
@@ -279,7 +279,7 @@ void GrandBondEquipSkillSelectDialog__SetSkillUi(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
           &entity,
           anotherSkillId,
-          (const MethodInfo_33F9128 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
+          (const MethodInfo_3408ECC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
     return;
   EffectTitle = this->fields.anotherSkillIcon;
   if ( !EffectTitle )
@@ -296,7 +296,7 @@ void GrandBondEquipSkillSelectDialog__SetSkillUi(
         !anotherSkillDetail) )
   {
 LABEL_24:
-    sub_1C6BC60(EffectTitle, v9);
+    sub_1C71608(EffectTitle, v9);
   }
   UILabel__set_text(anotherSkillDetail, (System_String_o *)EffectTitle, 0);
 }

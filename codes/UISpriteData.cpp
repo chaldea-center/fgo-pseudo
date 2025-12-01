@@ -1,17 +1,21 @@
 void UISpriteData___ctor(UISpriteData_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  int32_t v5; // w1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v9; // w1
 
-  if ( (byte_4CBAC66 & 1) == 0 )
+  if ( (byte_4CCBDBF & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_13011/*"Sprite"*/);
-    byte_4CBAC66 = 1;
+    sub_1C713B0(&StringLiteral_13017/*"Sprite"*/);
+    byte_4CCBDBF = 1;
   }
-  v5 = StringLiteral_13011/*"Sprite"*/;
-  this->fields.name = (struct System_String_o *)StringLiteral_13011/*"Sprite"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, v5, v2, v3);
+  v9 = StringLiteral_13017/*"Sprite"*/;
+  this->fields.name = (struct System_String_o *)StringLiteral_13017/*"Sprite"*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -19,23 +23,27 @@ void UISpriteData___ctor(UISpriteData_o *this, const MethodInfo *method)
 void UISpriteData__CopyBorderFrom(UISpriteData_o *this, UISpriteData_o *sd, const MethodInfo *method)
 {
   if ( !sd )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   *(_OWORD *)&this->fields.borderLeft = *(_OWORD *)&sd->fields.borderLeft;
 }
 
 
 void UISpriteData__CopyFrom(UISpriteData_o *this, UISpriteData_o *sd, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct System_String_o *name; // x1
   UISpriteData_Fields *p_fields; // x20
 
   if ( !sd )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   name = sd->fields.name;
   this->fields.name = name;
   p_fields = &this->fields;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)name, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, (int32_t)method, v3, v4, v5, v6, v7);
   *(_OWORD *)&p_fields->x = *(_OWORD *)&sd->fields.x;
   *(_OWORD *)&p_fields->borderLeft = *(_OWORD *)&sd->fields.borderLeft;
   *(_OWORD *)&p_fields->paddingLeft = *(_OWORD *)&sd->fields.paddingLeft;

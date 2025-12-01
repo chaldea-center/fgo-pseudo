@@ -9,18 +9,34 @@ void MasterEquipSettingListViewItem___ctor(
 {
   MasterEquipSettingListViewItem_o *v11; // x23
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
 
   v11 = this;
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   v11->fields._EquipId_k__BackingField = equipId;
   v11->fields._EquipTexture_k__BackingField = equipTexture;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v11->fields._EquipTexture_k__BackingField, (int32_t)equipTexture, v12, v13);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v11->fields._EquipTexture_k__BackingField,
+    (int32_t)equipTexture,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17);
   v11->fields._ShortName_k__BackingField = shortName;
   v11 = (MasterEquipSettingListViewItem_o *)((char *)v11 + 136);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v11, (int32_t)shortName, v14, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v11, (int32_t)shortName, v18, v19, v20, v21, v22, v23);
   LOBYTE(v11->monitor) = equipId == selectedImageId;
 }
 
@@ -39,14 +55,22 @@ void MasterEquipSettingListViewItem__ModifyItemTexture(
         UnityEngine_Texture2D_o *texture,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._EquipTexture_k__BackingField = texture;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._EquipTexture_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._EquipTexture_k__BackingField,
     (int32_t)texture,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -98,10 +122,22 @@ void MasterEquipSettingListViewItem__set_EquipTexture(
         UnityEngine_Texture2D_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._EquipTexture_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._EquipTexture_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._EquipTexture_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

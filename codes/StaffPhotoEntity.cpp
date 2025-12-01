@@ -1,13 +1,13 @@
 void StaffPhotoEntity___ctor(StaffPhotoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6F08 & 1) == 0 )
+  if ( (byte_4CC8030 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_int___ctor__);
-    byte_4CB6F08 = 1;
+    sub_1C713B0(&Method_DataEntityBase_int___ctor__);
+    byte_4CC8030 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_33F6BF8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_340699C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,10 +19,10 @@ int32_t StaffPhotoEntity__CreatePrimaryKey(StaffPhotoEntity_o *this, const Metho
 
 bool StaffPhotoEntity__IsEnableSameSet(StaffPhotoEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6F07 & 1) == 0 )
+  if ( (byte_4CC802F & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_19045/*"enableSameSet"*/);
-    byte_4CB6F07 = 1;
+    sub_1C713B0(&StringLiteral_19055/*"enableSameSet"*/);
+    byte_4CC802F = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.extendData, (System_String_o *)StringLiteral_19045/*"enableSameSet"*/, 0, 0) == 1;
+  return EntityScriptUtil__GetIntValue(this->fields.extendData, (System_String_o *)StringLiteral_19055/*"enableSameSet"*/, 0, 0) == 1;
 }

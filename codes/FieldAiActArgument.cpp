@@ -10,7 +10,11 @@ void FieldAiActArgument___ctor(
 {
   FieldAiActArgument_o *v9; // x21
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
 
   v9 = this;
   BaseAiActArgument___ctor(
@@ -21,7 +25,7 @@ void FieldAiActArgument___ctor(
     (const MethodInfo *)isForcedSpeedOne);
   v9->fields._FieldData_k__BackingField = fieldData;
   v9 = (FieldAiActArgument_o *)((char *)v9 + 40);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v9, (int32_t)fieldData, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v9, (int32_t)fieldData, v10, v11, v12, v13, v14, v15);
   LOBYTE(v9->monitor) = isForcedSpeedOne;
 }
 
@@ -31,7 +35,11 @@ void FieldAiActArgument__InitCommonTask(
         BaseAiActBattleLogicTask_o *task,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct AiBaseEntity_o *AiEnt_k__BackingField; // x8
   struct System_String_o *infoText; // x8
 
@@ -39,11 +47,19 @@ void FieldAiActArgument__InitCommonTask(
     || (task->fields.isForcedSpeedOne = this->fields._IsForcedSpeedOne_k__BackingField,
         (AiEnt_k__BackingField = this->fields._AiEnt_k__BackingField) == 0) )
   {
-    sub_1C6BC60(this, task);
+    sub_1C71608(this, task);
   }
   infoText = AiEnt_k__BackingField->fields.infoText;
   task->fields.motionMessage = infoText;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&task->fields.motionMessage, (int32_t)infoText, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&task->fields.motionMessage,
+    (int32_t)infoText,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -65,17 +81,29 @@ int32_t FieldAiActArgument__get_UniqueId(FieldAiActArgument_o *this, const Metho
 
   FieldData_k__BackingField = this->fields._FieldData_k__BackingField;
   if ( !FieldData_k__BackingField )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return FieldData_k__BackingField->fields.uniqueId;
 }
 
 
 void FieldAiActArgument__set_FieldData(FieldAiActArgument_o *this, BattleFieldData_o *value, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._FieldData_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._FieldData_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._FieldData_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

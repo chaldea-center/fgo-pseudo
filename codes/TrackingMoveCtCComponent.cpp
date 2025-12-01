@@ -3,10 +3,10 @@ void TrackingMoveCtCComponent___ctor(TrackingMoveCtCComponent_o *this, const Met
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -41,10 +41,10 @@ UnityEngine_Vector3_o TrackingMoveCtCComponent__GetAdjustedPosInScreen(
   z = currentTargetPos.fields.z;
   y = currentTargetPos.fields.y;
   x = currentTargetPos.fields.x;
-  if ( (byte_4CB9B2A & 1) == 0 )
+  if ( (byte_4CCAC7C & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9B2A = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCAC7C = 1;
   }
   adjustPosInScreenComp = (UnityEngine_Object_o *)this->fields.adjustPosInScreenComp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -97,7 +97,7 @@ UnityEngine_Vector3_o TrackingMoveCtCComponent__GetAdjustedPosInScreen(
           }
         }
       }
-      sub_1C6BC60(IsOffScreen, v9);
+      sub_1C71608(IsOffScreen, v9);
     }
   }
 LABEL_14:
@@ -118,6 +118,7 @@ void TrackingMoveCtCComponent__LateUpdate(TrackingMoveCtCComponent_o *this, cons
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void TrackingMoveCtCComponent__Set(
         TrackingMoveCtCComponent_o *this,
         UnityEngine_Camera_o *a,
@@ -127,51 +128,77 @@ void TrackingMoveCtCComponent__Set(
         bool isLate,
         const MethodInfo *method)
 {
+  int64_t v7; // x6
+  System_String_o *v8; // x7
   float z; // s8
   float y; // s9
   float x; // s10
-  bool v13; // w22
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  bool v15; // w22
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
-  __int64 v21; // d0
-  float v22; // s1
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
+  __int64 v35; // d0
+  float v36; // s1
+  int32_t v37; // w2
+  int32_t v38; // w3
+  System_String_o *v39; // x4
+  int32_t v40; // w5
+  int64_t v41; // x6
+  System_String_o *v42; // x7
 
   this->fields.before = a;
   z = d.fields.z;
   y = d.fields.y;
   x = d.fields.x;
-  v13 = isLate;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.before, (int32_t)a, (int32_t)b, (const MethodInfo *)c);
+  v15 = isLate;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.before,
+    (int32_t)a,
+    (int32_t)b,
+    (int32_t)c,
+    (System_String_o *)isLate,
+    (int32_t)method,
+    v7,
+    v8);
   this->fields.after = b;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.after, (int32_t)b, v14, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.after, (int32_t)b, v16, v17, v18, v19, v20, v21);
   this->fields.targetObject = c;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.targetObject, (int32_t)c, v16, v17);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.targetObject, (int32_t)c, v22, v23, v24, v25, v26, v27);
   this->fields.addpos.fields.x = x;
   this->fields.addpos.fields.y = y;
   this->fields.addpos.fields.z = z;
-  this->fields.isLateUpdate = v13;
-  if ( !byte_4CAFC09 )
+  this->fields.isLateUpdate = v15;
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
-  v21 = *(_QWORD *)&static_fields->zeroVector.fields.x;
-  v22 = static_fields->zeroVector.fields.z;
+  v35 = *(_QWORD *)&static_fields->zeroVector.fields.x;
+  v36 = static_fields->zeroVector.fields.z;
   *(_QWORD *)&this->fields.offset2D.fields.condition = 0;
-  *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v21;
-  this->fields.offset2D.fields.offset.fields.z = v22;
+  *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v35;
+  this->fields.offset2D.fields.offset.fields.z = v36;
   this->fields.adjustPosInScreenComp = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenComp, 0, v18, v19);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenComp, 0, v28, v29, v30, v31, v32, v33);
   this->fields.adjustPosInScreenArg = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenArg, 0, v23, v24);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenArg, 0, v37, v38, v39, v40, v41, v42);
 }
 
 
@@ -181,27 +208,39 @@ void TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
         AdjustPopupPosInScreenArgument_o *adjustArg,
         const MethodInfo *method)
 {
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   UnityEngine_Object_o *targetObject; // x21
   UnityEngine_Object_o *before; // x21
-  __int64 v9; // x1
+  __int64 v13; // x1
   UnityEngine_GameObject_o *transform; // x0
-  UnityEngine_Camera_o *v11; // x21
-  struct AdjustPopupPosInScreenArgument_o *v12; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  UnityEngine_Camera_o *v15; // x21
+  struct AdjustPopupPosInScreenArgument_o *v16; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB9B28 & 1) == 0 )
+  if ( (byte_4CCAC7A & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9B28 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCAC7A = 1;
   }
   this->fields.adjustPosInScreenComp = adjustComp;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.adjustPosInScreenComp,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenComp,
     (int32_t)adjustComp,
     (int32_t)adjustArg,
-    method);
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
   if ( adjustArg )
   {
     targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
@@ -216,18 +255,26 @@ void TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
       {
         transform = this->fields.targetObject;
         if ( !transform
-          || (v11 = this->fields.before,
+          || (v15 = this->fields.before,
               (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0) )
         {
-          sub_1C6BC60(transform, v9);
+          sub_1C71608(transform, v13);
         }
         position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
         position.fields.x = position.fields.x + this->fields.addpos.fields.x;
         position.fields.y = position.fields.y + this->fields.addpos.fields.y;
         position.fields.z = position.fields.z + this->fields.addpos.fields.z;
-        v12 = AdjustPopupPosInScreenArgument__Init(adjustArg, v11, position, 0);
-        this->fields.adjustPosInScreenArg = v12;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.adjustPosInScreenArg, (int32_t)v12, v13, v14);
+        v16 = AdjustPopupPosInScreenArgument__Init(adjustArg, v15, position, 0);
+        this->fields.adjustPosInScreenArg = v16;
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenArg,
+          (int32_t)v16,
+          v17,
+          v18,
+          v19,
+          v20,
+          v21,
+          v22);
       }
     }
   }
@@ -285,10 +332,10 @@ void TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *this, const
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB9B29 & 1) == 0 )
+  if ( (byte_4CCAC7B & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9B29 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCAC7B = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -309,7 +356,7 @@ void TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *this, const
     AdjustedPosInScreen = TrackingMoveCtCComponent__GetAdjustedPosInScreen(this, position, v7);
     if ( !before )
       goto LABEL_24;
-    v25 = UnityEngine_Camera__WorldToViewportPoint_71464256(before, AdjustedPosInScreen, 0);
+    v25 = UnityEngine_Camera__WorldToViewportPoint_71529188(before, AdjustedPosInScreen, 0);
     transform = (UnityEngine_GameObject_o *)this->fields.before;
     if ( !transform )
       goto LABEL_24;
@@ -363,7 +410,7 @@ LABEL_14:
         v26.fields.x = x;
         v26.fields.y = v15;
         v26.fields.z = z;
-        v27 = UnityEngine_Camera__ViewportToWorldPoint_71464264((UnityEngine_Camera_o *)transform, v26, 0);
+        v27 = UnityEngine_Camera__ViewportToWorldPoint_71529196((UnityEngine_Camera_o *)transform, v26, 0);
         v16 = v27.fields.x;
         v17 = v27.fields.y;
         v18 = v27.fields.z;
@@ -378,7 +425,7 @@ LABEL_14:
         }
       }
 LABEL_24:
-      sub_1C6BC60(transform, v4);
+      sub_1C71608(transform, v4);
     }
     x = x + this->fields.offset2D.fields.offset.fields.x;
     v15 = v15 + this->fields.offset2D.fields.offset.fields.y;

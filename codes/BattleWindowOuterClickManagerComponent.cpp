@@ -14,30 +14,46 @@ void BattleWindowOuterClickManagerComponent__setOuterClickCallBack(
   UnityEngine_Object_o *outerPanel; // x21
   __int64 v6; // x1
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  struct BattleWindowOuterClickComponent_o *v9; // x0
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  struct BattleWindowOuterClickComponent_o *v13; // x0
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
 
-  if ( (byte_4CB9AF4 & 1) == 0 )
+  if ( (byte_4CCAC46 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9AF4 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCAC46 = 1;
   }
   outerPanel = (UnityEngine_Object_o *)this->fields.outerPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(outerPanel, 0, 0) )
   {
-    v9 = this->fields.outerPanel;
-    if ( !v9
-      || (v9->fields.clickCallBack = callBack,
-          sub_1C6B9AC((CGThumbnailListItem_o *)&v9->fields.clickCallBack, (int32_t)callBack, v7, v8),
-          (v9 = this->fields.outerPanel) == 0) )
+    v13 = this->fields.outerPanel;
+    if ( !v13
+      || (v13->fields.clickCallBack = callBack,
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&v13->fields.clickCallBack,
+            (int32_t)callBack,
+            v7,
+            v8,
+            v9,
+            v10,
+            v11,
+            v12),
+          (v13 = this->fields.outerPanel) == 0) )
     {
-      sub_1C6BC60(v9, v6);
+      sub_1C71608(v13, v6);
     }
-    v9->fields.targetWindow = (struct BattleWindowComponent_o *)this;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v9->fields.targetWindow, (int32_t)this, v10, v11);
+    v13->fields.targetWindow = (struct BattleWindowComponent_o *)this;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v13->fields.targetWindow, (int32_t)this, v14, v15, v16, v17, v18, v19);
   }
 }

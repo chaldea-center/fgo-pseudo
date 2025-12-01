@@ -7,10 +7,10 @@ void AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgument_o *thi
   float v7; // s1
 
   this->fields.IsExec = 1;
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -25,7 +25,7 @@ void AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgument_o *thi
 }
 
 
-void AdjustPopupPosInScreenArgument___ctor_47548400(
+void AdjustPopupPosInScreenArgument___ctor_47610312(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Vector3_o adjustAfterOffset,
         const MethodInfo *method)
@@ -43,10 +43,10 @@ void AdjustPopupPosInScreenArgument___ctor_47548400(
   z = adjustAfterOffset.fields.z;
   y = adjustAfterOffset.fields.y;
   x = adjustAfterOffset.fields.x;
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   v7 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -70,7 +70,11 @@ AdjustPopupPosInScreenArgument_o *AdjustPopupPosInScreenArgument__Init(
         UnityEngine_Vector3_o worldPos,
         const MethodInfo *method)
 {
-  const MethodInfo *v4; // x3
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
   float z; // s8
   float y; // s9
   float x; // s10
@@ -79,7 +83,15 @@ AdjustPopupPosInScreenArgument_o *AdjustPopupPosInScreenArgument__Init(
   z = worldPos.fields.z;
   y = worldPos.fields.y;
   x = worldPos.fields.x;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)camera, (int32_t)method, v4);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._Camera_k__BackingField,
+    (int32_t)camera,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8);
   this->fields._WorldPos_k__BackingField.fields.x = x;
   this->fields._WorldPos_k__BackingField.fields.y = y;
   this->fields._WorldPos_k__BackingField.fields.z = z;
@@ -131,10 +143,10 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
   __int64 v4; // x1
   UnityEngine_Camera_o *v5; // x0
 
-  if ( (byte_4CB978B & 1) == 0 )
+  if ( (byte_4CCA8DD & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB978B = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCA8DD = 1;
   }
   Camera_k__BackingField = (UnityEngine_Object_o *)this->fields._Camera_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -143,15 +155,15 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
   {
     v5 = this->fields._Camera_k__BackingField;
     if ( !v5 )
-      sub_1C6BC60(0, v4);
-    return UnityEngine_Camera__WorldToViewportPoint_71464256(v5, this->fields._WorldPos_k__BackingField, 0);
+      sub_1C71608(0, v4);
+    return UnityEngine_Camera__WorldToViewportPoint_71529188(v5, this->fields._WorldPos_k__BackingField, 0);
   }
   else
   {
-    if ( !byte_4CAFC09 )
+    if ( !byte_4CC0D09 )
     {
-      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC09 = 1;
+      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D09 = 1;
     }
     return UnityEngine_Vector3_TypeInfo->static_fields->zeroVector;
   }
@@ -182,10 +194,22 @@ void AdjustPopupPosInScreenArgument__set_Camera(
         UnityEngine_Camera_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._Camera_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._Camera_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._Camera_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

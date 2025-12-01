@@ -1,13 +1,13 @@
 void OpeningMovieEntity___ctor(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6866 & 1) == 0 )
+  if ( (byte_4CC7989 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_int___ctor__);
-    byte_4CB6866 = 1;
+    sub_1C713B0(&Method_DataEntityBase_int___ctor__);
+    byte_4CC7989 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_33F6BF8 *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_340699C *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -25,23 +25,23 @@ int32_t OpeningMovieEntity__GetGrandPvEventTutorialFlag(OpeningMovieEntity_o *th
 
 int32_t OpeningMovieEntity__GetGrandPvParentId(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6865 & 1) == 0 )
+  if ( (byte_4CC7988 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_19960/*"grandPVparentId"*/);
-    byte_4CB6865 = 1;
+    sub_1C713B0(&StringLiteral_19971/*"grandPVparentId"*/);
+    byte_4CC7988 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19960/*"grandPVparentId"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19971/*"grandPVparentId"*/, 0, 0);
 }
 
 
 int32_t OpeningMovieEntity__GetGroupId(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB685F & 1) == 0 )
+  if ( (byte_4CC7982 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_19975/*"groupId"*/);
-    byte_4CB685F = 1;
+    sub_1C713B0(&StringLiteral_19987/*"groupId"*/);
+    byte_4CC7982 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19975/*"groupId"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_19987/*"groupId"*/, 0, 0);
 }
 
 
@@ -60,20 +60,20 @@ System_String_o *OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEntity_o *this
   int32_t Seconds; // [xsp+4h] [xbp-2Ch] BYREF
   __int64 v15; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB6860 & 1) == 0 )
+  if ( (byte_4CC7983 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&System_TimeSpan_TypeInfo);
-    sub_1C6BA08(&StringLiteral_25327/*"{0}分{1}秒"*/);
-    sub_1C6BA08(&StringLiteral_25329/*"{0}秒"*/);
-    byte_4CB6860 = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&System_TimeSpan_TypeInfo);
+    sub_1C713B0(&StringLiteral_25347/*"{0}分{1}秒"*/);
+    sub_1C713B0(&StringLiteral_25349/*"{0}秒"*/);
+    byte_4CC7983 = 1;
   }
   v15 = 0;
   moviePlayTime = this->fields.moviePlayTime;
   if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_TimeSpan_TypeInfo);
   v4.fields._ticks = (int64_t)&v15;
-  System_TimeSpan___ctor_65577108(v4, 0, 0, moviePlayTime, 0);
+  System_TimeSpan___ctor_65642040(v4, 0, 0, moviePlayTime, 0);
   v5.fields._ticks = (int64_t)&v15;
   Minutes = System_TimeSpan__get_Minutes(v5, 0);
   if ( !System_TimeSpan_TypeInfo->_2.cctor_finished )
@@ -83,7 +83,7 @@ System_String_o *OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEntity_o *this
   {
     Seconds = System_TimeSpan__get_Seconds(v7, 0);
     v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &Seconds);
-    return System_String__Format((System_String_o *)StringLiteral_25329/*"{0}秒"*/, v12, 0);
+    return System_String__Format((System_String_o *)StringLiteral_25349/*"{0}秒"*/, v12, 0);
   }
   else
   {
@@ -92,41 +92,41 @@ System_String_o *OpeningMovieEntity__GetMoviePlayTime(OpeningMovieEntity_o *this
     v9.fields._ticks = (int64_t)&v15;
     v13 = System_TimeSpan__get_Seconds(v9, 0);
     v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-    return System_String__Format_64008100((System_String_o *)StringLiteral_25327/*"{0}分{1}秒"*/, v8, v10, 0);
+    return System_String__Format_64073032((System_String_o *)StringLiteral_25347/*"{0}分{1}秒"*/, v8, v10, 0);
   }
 }
 
 
 int32_t OpeningMovieEntity__GetTargetTiming(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6861 & 1) == 0 )
+  if ( (byte_4CC7984 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_24191/*"timing"*/);
-    byte_4CB6861 = 1;
+    sub_1C713B0(&StringLiteral_24211/*"timing"*/);
+    byte_4CC7984 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24191/*"timing"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24211/*"timing"*/, 0, 0);
 }
 
 
 int32_t OpeningMovieEntity__GetTargetWarId(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6864 & 1) == 0 )
+  if ( (byte_4CC7987 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_24864/*"warId"*/);
-    byte_4CB6864 = 1;
+    sub_1C713B0(&StringLiteral_24884/*"warId"*/);
+    byte_4CC7987 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24864/*"warId"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_24884/*"warId"*/, 0, 0);
 }
 
 
 System_String_o *OpeningMovieEntity__GetTransitionParam(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6862 & 1) == 0 )
+  if ( (byte_4CC7985 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_16727/*"afterTransitionParam"*/);
-    byte_4CB6862 = 1;
+    sub_1C713B0(&StringLiteral_16734/*"afterTransitionParam"*/);
+    byte_4CC7985 = 1;
   }
-  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_16727/*"afterTransitionParam"*/, 0, 0);
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_16734/*"afterTransitionParam"*/, 0, 0);
 }
 
 
@@ -149,12 +149,12 @@ bool OpeningMovieEntity__IsEnable(
   __int64 v10; // x1
   bool IsOpen; // w0
 
-  if ( (byte_4CB685C & 1) == 0 )
+  if ( (byte_4CC797F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB685C = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC797F = 1;
   }
   if ( !nowTime )
   {
@@ -172,13 +172,13 @@ bool OpeningMovieEntity__IsEnable(
       return nowTime >= this->fields.startedAt;
     goto LABEL_19;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0 )
+                     (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_CommonReleaseMaster___)) == 0 )
   {
-    sub_1C6BC60(Instance, v10);
+    sub_1C71608(Instance, v10);
   }
   IsOpen = CommonReleaseMaster__IsOpen((CommonReleaseMaster_o *)Instance, v8, 0, 0, 0);
   if ( isMaterial )
@@ -209,12 +209,16 @@ bool OpeningMovieEntity__IsEnableTiming(OpeningMovieEntity_o *this, int32_t timi
 
 bool OpeningMovieEntity__IsGrand(OpeningMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6863 & 1) == 0 )
+  int32_t IntValue; // w20
+  const MethodInfo *v4; // x1
+
+  if ( (byte_4CC7986 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_20989/*"isGrand"*/);
-    byte_4CB6863 = 1;
+    sub_1C713B0(&StringLiteral_21003/*"isGrand"*/);
+    byte_4CC7986 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_20989/*"isGrand"*/, 0, 0) > 0;
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_21003/*"isGrand"*/, 0, 0);
+  return (IntValue > 0) | (OpeningMovieEntity__GetTargetTiming(this, v4) == 6);
 }
 
 
@@ -224,18 +228,18 @@ bool OpeningMovieEntity__IsRegisterMaterial(OpeningMovieEntity_o *this, const Me
   __int64 v4; // x1
   CommonReleaseEntity_o *v5; // x8
 
-  if ( (byte_4CB685E & 1) == 0 )
+  if ( (byte_4CC7981 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB685E = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_CommonReleaseMaster___);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC7981 = 1;
   }
-  Instance = (CommonReleaseEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (CommonReleaseEntity_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (CommonReleaseEntity_array *)DataManager__GetMasterData_object_(
                                             (DataManager_o *)Instance,
-                                            (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
+                                            (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_CommonReleaseMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = CommonReleaseMaster__getList((CommonReleaseMaster_o *)Instance, this->fields.materialCommonReleaseId, 0);
@@ -247,7 +251,7 @@ bool OpeningMovieEntity__IsRegisterMaterial(OpeningMovieEntity_o *this, const Me
     if ( v5 )
       return v5->fields.condType != 92;
 LABEL_10:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   return 1;
 }
@@ -255,10 +259,10 @@ LABEL_10:
 
 bool OpeningMovieEntity__IsValidPeriod(OpeningMovieEntity_o *this, int64_t nowTime, const MethodInfo *method)
 {
-  if ( (byte_4CB685D & 1) == 0 )
+  if ( (byte_4CC7980 & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CB685D = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CC7980 = 1;
   }
   if ( !nowTime )
   {

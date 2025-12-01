@@ -26,7 +26,7 @@ void BattleActorRotationComponent__RotationStop(BattleActorRotationComponent_o *
   v6.fields.x = 0.0;
   v7 = UnityEngine_Quaternion__Internal_FromEulerRad(v6, 0);
   if ( !transform )
-    sub_1C6BC60(v4, v5);
+    sub_1C71608(v4, v5);
   UnityEngine_Transform__set_localRotation(transform, v7, 0);
 }
 
@@ -41,7 +41,7 @@ void BattleActorRotationComponent__Start(BattleActorRotationComponent_o *this, c
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   localRotation = UnityEngine_Transform__get_localRotation(transform, 0);
   v5 = UnityEngine_Quaternion__Internal_ToEulerRad(localRotation, 0);
   v5.fields.x = v5.fields.x * 57.296;
@@ -78,7 +78,7 @@ void BattleActorRotationComponent__Update(BattleActorRotationComponent_o *this, 
     v10.fields.x = 0.0;
     v11 = UnityEngine_Quaternion__Internal_FromEulerRad(v10, 0);
     if ( !transform )
-      sub_1C6BC60(v8, v9);
+      sub_1C71608(v8, v9);
     UnityEngine_Transform__set_localRotation(transform, v11, 0);
   }
 }

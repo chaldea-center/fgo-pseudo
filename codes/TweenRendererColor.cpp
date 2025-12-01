@@ -25,17 +25,17 @@ TweenRendererColor_o *TweenRendererColor__Begin(
   b = color.fields.b;
   g = color.fields.g;
   r = color.fields.r;
-  if ( (byte_4CB7AC4 & 1) == 0 )
+  if ( (byte_4CC8BED & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UITweener_Begin_TweenRendererColor___);
-    byte_4CB7AC4 = 1;
+    sub_1C713B0(&Method_UITweener_Begin_TweenRendererColor___);
+    byte_4CC8BED = 1;
   }
   v10 = (TweenRendererColor_o *)UITweener__Begin_object_(
                                   go,
                                   duration,
-                                  (const MethodInfo_3210C14 *)Method_UITweener_Begin_TweenRendererColor___);
+                                  (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenRendererColor___);
   if ( !v10 )
-    sub_1C6BC60(0, v11);
+    sub_1C71608(0, v11);
   v12 = v10;
   v10->fields.from = TweenRendererColor__get_value(v10, v11);
   v12->fields.to.fields.r = r;
@@ -55,19 +55,31 @@ void TweenRendererColor__Cache(TweenRendererColor_o *this, const MethodInfo *met
 {
   Il2CppObject *Component_object; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CB7AC1 & 1) == 0 )
+  if ( (byte_4CC8BEA & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
-    byte_4CB7AC1 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
+    byte_4CC8BEA = 1;
   }
   this->fields.mCached = 1;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UITweenRenderer___);
   this->fields.mTweenRenderer = (struct UITweenRenderer_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTweenRenderer, (int32_t)Component_object, v4, v5);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.mTweenRenderer,
+    (int32_t)Component_object,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
 }
 
 
@@ -135,10 +147,10 @@ UnityEngine_Color_o TweenRendererColor__get_value(TweenRendererColor_o *this, co
   float v9; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB7AC2 & 1) == 0 )
+  if ( (byte_4CC8BEB & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB7AC2 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC8BEB = 1;
   }
   if ( !this->fields.mCached )
     TweenRendererColor__Cache(this, method);
@@ -149,7 +161,7 @@ UnityEngine_Color_o TweenRendererColor__get_value(TweenRendererColor_o *this, co
   {
     v5 = this->fields.mTweenRenderer;
     if ( !v5 )
-      sub_1C6BC60(0, v4);
+      sub_1C71608(0, v4);
     ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *))v5->klass->vtable._40_GetTweenColor.methodPtr)(
       v5,
       v5->klass->vtable._40_GetTweenColor.method);
@@ -189,10 +201,10 @@ void TweenRendererColor__set_value(TweenRendererColor_o *this, UnityEngine_Color
   v3 = *(long double *)&value.fields.a;
   v4 = *(long double *)&value.fields.b;
   v5 = *(long double *)&value.fields.g;
-  if ( (byte_4CB7AC3 & 1) == 0 )
+  if ( (byte_4CC8BEC & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB7AC3 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC8BEC = 1;
   }
   if ( !this->fields.mCached )
     TweenRendererColor__Cache(this, method);
@@ -203,7 +215,7 @@ void TweenRendererColor__set_value(TweenRendererColor_o *this, UnityEngine_Color
   {
     v10 = this->fields.mTweenRenderer;
     if ( !v10 )
-      sub_1C6BC60(0, v9);
+      sub_1C71608(0, v9);
     ((void (__fastcall *)(struct UITweenRenderer_o *, const MethodInfo *, long double, long double, long double, long double))v10->klass->vtable._39_SetTweenColor.methodPtr)(
       v10,
       v10->klass->vtable._39_SetTweenColor.method,

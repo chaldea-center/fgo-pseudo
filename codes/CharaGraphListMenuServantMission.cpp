@@ -14,29 +14,53 @@ CharaGraphListViewPatternBase_o *CharaGraphListMenuServantMission__CreateListVie
   CharaGraphSortOwnerBase_o *v7; // x0
   __int64 v8; // x1
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   struct CharaGraphSortOwnerBase_o *SortOwner_k__BackingField; // x1
   struct CharaGraphDefine_CharaGraphRootInfo_o *RootInfo_k__BackingField; // x1
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
 
-  if ( (byte_4CB22FA & 1) == 0 )
+  if ( (byte_4CC340B & 1) == 0 )
   {
-    sub_1C6BA08(&CharaGraphListViewPatternServantMission_TypeInfo);
-    byte_4CB22FA = 1;
+    sub_1C713B0(&CharaGraphListViewPatternServantMission_TypeInfo);
+    byte_4CC340B = 1;
   }
-  v6 = sub_1C6BC54(CharaGraphListViewPatternServantMission_TypeInfo);
+  v6 = sub_1C715FC(CharaGraphListViewPatternServantMission_TypeInfo);
   CharaGraphListViewPatternServantCollection___ctor((CharaGraphListViewPatternServantCollection_o *)v6, 0);
   if ( !v6
     || (SortOwner_k__BackingField = this->fields._SortOwner_k__BackingField,
         *(_QWORD *)(v6 + 16) = SortOwner_k__BackingField,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 16), (int32_t)SortOwner_k__BackingField, v9, v10),
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)(v6 + 16),
+          (int32_t)SortOwner_k__BackingField,
+          v9,
+          v10,
+          v11,
+          v12,
+          v13,
+          v14),
         RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField,
         *(_QWORD *)(v6 + 24) = RootInfo_k__BackingField,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v6 + 24), (int32_t)RootInfo_k__BackingField, v13, v14),
+        sub_1C71354(
+          (GrandQuestFolderBoardItem_o *)(v6 + 24),
+          (int32_t)RootInfo_k__BackingField,
+          v17,
+          v18,
+          v19,
+          v20,
+          v21,
+          v22),
         (v7 = this->fields._SortOwner_k__BackingField) == 0) )
   {
-    sub_1C6BC60(v7, v8);
+    sub_1C71608(v7, v8);
   }
   CharaGraphSortOwnerBase__SwitchCurrentViewSortUnit(v7, kind, 0);
   return (CharaGraphListViewPatternBase_o *)v6;

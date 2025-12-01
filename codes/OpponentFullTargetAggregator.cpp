@@ -26,7 +26,7 @@ System_Int32_array *OpponentFullTargetAggregator__GetCandidate(
     if ( actorId )
       return BattleData__getPlayerServantIDList(actorId, 1, 0, 0);
 LABEL_7:
-    sub_1C6BC60(actorId, v5);
+    sub_1C71608(actorId, v5);
   }
   actorId = (BattleData_o *)TargetAggregator__get_IsOpponentTargetOnly((TargetAggregator_o *)this, 0);
   if ( !v7 )

@@ -1,9 +1,9 @@
 void EventInfoDistanceDispComponent___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CB77E6 & 1) == 0 )
+  if ( (byte_4CC8918 & 1) == 0 )
   {
-    sub_1C6BA08(&EventInfoDistanceDispComponent_TypeInfo);
-    byte_4CB77E6 = 1;
+    sub_1C713B0(&EventInfoDistanceDispComponent_TypeInfo);
+    byte_4CC8918 = 1;
   }
   EventInfoDistanceDispComponent_TypeInfo->static_fields->DISTANCE_DISP_FRACTION = 1000;
 }
@@ -43,44 +43,44 @@ System_String_o *EventInfoDistanceDispComponent__GetRestDistance(
   System_Collections_Generic_List_Enumerator_object__o v20; // [xsp+8h] [xbp-68h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v21; // [xsp+20h] [xbp-50h] BYREF
 
-  if ( (byte_4CB77E5 & 1) == 0 )
+  if ( (byte_4CC8917 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__get_Current__);
-    sub_1C6BA08(&EventInfoDistanceDispComponent_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventInfoDistanceDispComponent_KeyPositionPairData__GetEnumerator__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&float_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB77E5 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__get_Current__);
+    sub_1C713B0(&EventInfoDistanceDispComponent_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventInfoDistanceDispComponent_KeyPositionPairData__GetEnumerator__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&float_TypeInfo);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC8917 = 1;
   }
   memset(&v21, 0, sizeof(v21));
   if ( BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.conditionDic, 0) )
     return (System_String_o *)StringLiteral_1/*""*/;
   conditionDic = this->fields.conditionDic;
   if ( !conditionDic )
-    sub_1C6BC60(0, v5);
+    sub_1C71608(0, v5);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v20,
     (System_Collections_Generic_List_object__o *)conditionDic,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_EventInfoDistanceDispComponent_KeyPositionPairData__GetEnumerator__);
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_EventInfoDistanceDispComponent_KeyPositionPairData__GetEnumerator__);
   v21 = v20;
   while ( 2 )
   {
     v7 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v21,
-           (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__MoveNext__);
+           (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__MoveNext__);
     if ( !v7 )
     {
       System_Collections_Generic_List_Enumerator_object___Dispose(
         &v21,
-        (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__Dispose__);
+        (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__Dispose__);
       return (System_String_o *)StringLiteral_1/*""*/;
     }
     current = v21.fields._current;
     if ( !v21.fields._current )
-      sub_1C6BC60(v7, v8);
+      sub_1C71608(v7, v8);
     switch ( LODWORD(v21.fields._current[1].klass) )
     {
       case 1:
@@ -166,7 +166,7 @@ System_String_o *EventInfoDistanceDispComponent__GetRestDistance(
   v13 = System_String__Format(v17, v18, 0);
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v21,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__Dispose__);
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_EventInfoDistanceDispComponent_KeyPositionPairData__Dispose__);
   return v13;
 }
 
@@ -176,29 +176,41 @@ void EventInfoDistanceDispComponent__Initialization(
         EventUiEntity_o *entity,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   System_String_o *IsNullOrEmpty; // x0
-  __int64 v7; // x1
+  __int64 v11; // x1
   UnityEngine_Object_o *bgSprite; // x20
   System_String_o *bgSpriteName; // x20
-  UISprite_o *v10; // x21
+  UISprite_o *v14; // x21
   struct EventUiEntity_o *eventUiEntity; // x8
   UILabel_o *titleText; // x20
-  System_String_o *v13; // x0
-  System_String_o *v14; // x21
-  const MethodInfo *v15; // x1
+  System_String_o *v17; // x0
+  System_String_o *v18; // x21
+  const MethodInfo *v19; // x1
 
-  if ( (byte_4CB77E3 & 1) == 0 )
+  if ( (byte_4CC8915 & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5607/*"EVENT_INFO_DISTANCE_TXT_"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB77E3 = 1;
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_5610/*"EVENT_INFO_DISTANCE_TXT_"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC8915 = 1;
   }
   this->fields.eventUiEntity = entity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventUiEntity, (int32_t)entity, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.eventUiEntity,
+    (int32_t)entity,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   IsNullOrEmpty = (System_String_o *)System_String__IsNullOrEmpty(this->fields.bgSpriteName, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
   {
@@ -209,31 +221,31 @@ void EventInfoDistanceDispComponent__Initialization(
     if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
     {
       bgSpriteName = this->fields.bgSpriteName;
-      v10 = this->fields.bgSprite;
+      v14 = this->fields.bgSprite;
       if ( !AtlasManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-      IsNullOrEmpty = (System_String_o *)AtlasManager__SetEventUI(v10, bgSpriteName, 0);
+      IsNullOrEmpty = (System_String_o *)AtlasManager__SetEventUI(v14, bgSpriteName, 0);
     }
   }
   eventUiEntity = this->fields.eventUiEntity;
   if ( !eventUiEntity )
     goto LABEL_16;
   titleText = this->fields.titleText;
-  v13 = System_Int32__ToString((int)eventUiEntity + 24, 0);
-  v14 = System_String__Concat_63966792((System_String_o *)StringLiteral_5607/*"EVENT_INFO_DISTANCE_TXT_"*/, v13, 0);
+  v17 = System_Int32__ToString((int)eventUiEntity + 24, 0);
+  v18 = System_String__Concat_64031724((System_String_o *)StringLiteral_5610/*"EVENT_INFO_DISTANCE_TXT_"*/, v17, 0);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  IsNullOrEmpty = LocalizationManager__Get(v14, 0);
+  IsNullOrEmpty = LocalizationManager__Get(v18, 0);
   if ( !titleText
     || (UILabel__set_text(titleText, IsNullOrEmpty, 0),
         (IsNullOrEmpty = (System_String_o *)this->fields.distanceText) == 0) )
   {
 LABEL_16:
-    sub_1C6BC60(IsNullOrEmpty, v7);
+    sub_1C71608(IsNullOrEmpty, v11);
   }
   UILabel__set_text((UILabel_o *)IsNullOrEmpty, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.isUpdate = 1;
-  EventInfoDistanceDispComponent__UpdateDisp(this, v15);
+  EventInfoDistanceDispComponent__UpdateDisp(this, v19);
 }
 
 
@@ -254,10 +266,10 @@ void EventInfoDistanceDispComponent__UpdateDisp(EventInfoDistanceDispComponent_o
   System_String_o *RestDistance; // x0
   __int64 v9; // x1
 
-  if ( (byte_4CB77E4 & 1) == 0 )
+  if ( (byte_4CC8916 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB77E4 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC8916 = 1;
   }
   if ( this->fields.isUpdate )
   {
@@ -274,7 +286,7 @@ void EventInfoDistanceDispComponent__UpdateDisp(EventInfoDistanceDispComponent_o
         || (UILabel__set_text(v5, RestDistance, 0),
             (RestDistance = (System_String_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
       {
-        sub_1C6BC60(RestDistance, v9);
+        sub_1C71608(RestDistance, v9);
       }
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)RestDistance, 1, 0);
       if ( v6 <= 0.0 )

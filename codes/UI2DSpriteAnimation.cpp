@@ -64,7 +64,7 @@ LABEL_16:
       goto LABEL_16;
     }
 LABEL_18:
-    sub_1C6BC60(enabled, v5);
+    sub_1C71608(enabled, v5);
   }
 }
 
@@ -78,7 +78,7 @@ void UI2DSpriteAnimation__ResetToBeginning(UI2DSpriteAnimation_o *this, const Me
   {
     frames = this->fields.frames;
     if ( !frames )
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     v2 = LODWORD(frames->max_length) - 1;
   }
   else
@@ -135,7 +135,7 @@ LABEL_13:
           return;
         }
 LABEL_19:
-        sub_1C6BC60(v10, v4);
+        sub_1C71608(v10, v4);
       }
       if ( (v10 & 0x80000000) == 0 )
       {
@@ -157,33 +157,45 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
   UnityEngine_Object_o *mNguiSprite; // x22
   Il2CppObject *Component_object; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  Il2CppObject *v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  UnityEngine_Object_o *v11; // x22
-  UnityEngine_Object_o *v12; // x21
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  Il2CppObject *v12; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  UnityEngine_Object_o *v19; // x22
+  UnityEngine_Object_o *v20; // x21
   float time; // s0
   int32_t framerate; // w8
-  UnityEngine_Object_o *v15; // x20
-  UnityEngine_SpriteRenderer_o *v16; // x0
-  __int64 v17; // x1
+  UnityEngine_Object_o *v23; // x20
+  UnityEngine_SpriteRenderer_o *v24; // x0
+  __int64 v25; // x1
   struct UnityEngine_Sprite_array *frames; // x8
   __int64 mIndex; // x9
-  UnityEngine_Object_o *v20; // x20
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  struct UnityEngine_Sprite_array *v23; // x8
-  __int64 v24; // x9
-  struct UI2DSprite_o *v25; // x10
-  struct UnityEngine_Sprite_o *v26; // x1
+  UnityEngine_Object_o *v28; // x20
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
+  struct UnityEngine_Sprite_array *v35; // x8
+  __int64 v36; // x9
+  struct UI2DSprite_o *v37; // x10
+  struct UnityEngine_Sprite_o *v38; // x1
 
-  if ( (byte_4CBABB7 & 1) == 0 )
+  if ( (byte_4CCBD10 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBABB7 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBD10 = 1;
   }
   mUnitySprite = (UnityEngine_Object_o *)this->fields.mUnitySprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -197,23 +209,31 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)this,
-                           (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+                           (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
       this->fields.mUnitySprite = (struct UnityEngine_SpriteRenderer_o *)Component_object;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mUnitySprite, (int32_t)Component_object, v6, v7);
-      v8 = UnityEngine_Component__GetComponent_object_(
-             (UnityEngine_Component_o *)this,
-             (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
-      this->fields.mNguiSprite = (struct UI2DSprite_o *)v8;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mNguiSprite, (int32_t)v8, v9, v10);
-      v11 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&this->fields.mUnitySprite,
+        (int32_t)Component_object,
+        v6,
+        v7,
+        v8,
+        v9,
+        v10,
+        v11);
+      v12 = UnityEngine_Component__GetComponent_object_(
+              (UnityEngine_Component_o *)this,
+              (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UI2DSprite___);
+      this->fields.mNguiSprite = (struct UI2DSprite_o *)v12;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mNguiSprite, (int32_t)v12, v13, v14, v15, v16, v17, v18);
+      v19 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      if ( UnityEngine_Object__op_Equality(v11, 0, 0) )
+      if ( UnityEngine_Object__op_Equality(v19, 0, 0) )
       {
-        v12 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
+        v20 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        if ( UnityEngine_Object__op_Equality(v12, 0, 0) )
+        if ( UnityEngine_Object__op_Equality(v20, 0, 0) )
         {
           UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, 0, 0);
           return;
@@ -228,11 +248,11 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
   framerate = this->fields.framerate;
   if ( framerate )
     this->fields.mUpdate = time + fabsf(1.0 / (float)framerate);
-  v15 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
+  v23 = (UnityEngine_Object_o *)this->fields.mUnitySprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v16 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v15, 0, 0);
-  if ( ((unsigned __int8)v16 & 1) != 0 )
+  v24 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v23, 0, 0);
+  if ( ((unsigned __int8)v24 & 1) != 0 )
   {
     frames = this->fields.frames;
     if ( !frames )
@@ -240,36 +260,36 @@ void UI2DSpriteAnimation__UpdateSprite(UI2DSpriteAnimation_o *this, const Method
     mIndex = this->fields.mIndex;
     if ( (unsigned int)mIndex < LODWORD(frames->max_length) )
     {
-      v16 = this->fields.mUnitySprite;
-      if ( v16 )
+      v24 = this->fields.mUnitySprite;
+      if ( v24 )
       {
-        UnityEngine_SpriteRenderer__set_sprite(v16, frames->m_Items[mIndex], 0);
+        UnityEngine_SpriteRenderer__set_sprite(v24, frames->m_Items[mIndex], 0);
         return;
       }
 LABEL_36:
-      sub_1C6BC60(v16, v17);
+      sub_1C71608(v24, v25);
     }
 LABEL_37:
-    sub_1C6BC68(v16);
+    sub_1C71610(v24);
   }
-  v20 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
+  v28 = (UnityEngine_Object_o *)this->fields.mNguiSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v16 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v20, 0, 0);
-  if ( ((unsigned __int8)v16 & 1) != 0 )
+  v24 = (UnityEngine_SpriteRenderer_o *)UnityEngine_Object__op_Inequality(v28, 0, 0);
+  if ( ((unsigned __int8)v24 & 1) != 0 )
   {
-    v23 = this->fields.frames;
-    if ( !v23 )
+    v35 = this->fields.frames;
+    if ( !v35 )
       goto LABEL_36;
-    v24 = this->fields.mIndex;
-    if ( (unsigned int)v24 >= LODWORD(v23->max_length) )
+    v36 = this->fields.mIndex;
+    if ( (unsigned int)v36 >= LODWORD(v35->max_length) )
       goto LABEL_37;
-    v25 = this->fields.mNguiSprite;
-    if ( !v25 )
+    v37 = this->fields.mNguiSprite;
+    if ( !v37 )
       goto LABEL_36;
-    v26 = v23->m_Items[v24];
-    v25->fields.nextSprite = v26;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v25->fields.nextSprite, (int32_t)v26, v21, v22);
+    v38 = v35->m_Items[v36];
+    v37->fields.nextSprite = v38;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v37->fields.nextSprite, (int32_t)v38, v29, v30, v31, v32, v33, v34);
   }
 }
 

@@ -1,16 +1,28 @@
 void MyRoomRootComponent___cctor(const MethodInfo *method)
 {
   int32_t v1; // w2
-  const MethodInfo *v2; // x3
+  int32_t v2; // w3
+  System_String_o *v3; // x4
+  int32_t v4; // w5
+  int64_t v5; // x6
+  System_String_o *v6; // x7
 
-  if ( (byte_4CB1743 & 1) == 0 )
+  if ( (byte_4CC2850 & 1) == 0 )
   {
-    sub_1C6BA08(&MyRoomRootComponent_TypeInfo);
-    sub_1C6BA08(&StringLiteral_8184/*"JumpNewMaterial"*/);
-    byte_4CB1743 = 1;
+    sub_1C713B0(&MyRoomRootComponent_TypeInfo);
+    sub_1C713B0(&StringLiteral_8188/*"JumpNewMaterial"*/);
+    byte_4CC2850 = 1;
   }
-  MyRoomRootComponent_TypeInfo->static_fields->MYROOM_STATE_NEW_MATERIAL = (struct System_String_o *)StringLiteral_8184/*"JumpNewMaterial"*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)MyRoomRootComponent_TypeInfo->static_fields, StringLiteral_8184/*"JumpNewMaterial"*/, v1, v2);
+  MyRoomRootComponent_TypeInfo->static_fields->MYROOM_STATE_NEW_MATERIAL = (struct System_String_o *)StringLiteral_8188/*"JumpNewMaterial"*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)MyRoomRootComponent_TypeInfo->static_fields,
+    StringLiteral_8188/*"JumpNewMaterial"*/,
+    v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6);
 }
 
 
@@ -27,11 +39,11 @@ void MyRoomRootComponent__beginFinish(MyRoomRootComponent_o *this, const MethodI
   __int64 v5; // x1
   MyRoomControl_o *v6; // x19
 
-  if ( (byte_4CB1742 & 1) == 0 )
+  if ( (byte_4CC284F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB1742 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC284F = 1;
   }
   myRoomControl = (UnityEngine_Object_o *)this->fields.myRoomControl;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -48,12 +60,12 @@ void MyRoomRootComponent__beginFinish(MyRoomRootComponent_o *this, const MethodI
       goto LABEL_11;
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                gameObject,
-                                               (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
+                                               (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MyRoomControl___);
     v6 = (MyRoomControl_o *)gameObject;
   }
   if ( !v6 )
 LABEL_11:
-    sub_1C6BC60(gameObject, v5);
+    sub_1C71608(gameObject, v5);
   MyRoomControl__quit(v6, 0);
   MyRoomControl__hideSerialCode(v6, 0);
   MyRoomControl__hideContinueDevice(v6, 0);
@@ -68,89 +80,93 @@ void MyRoomRootComponent__beginInitialize(MyRoomRootComponent_o *this, const Met
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CB173F & 1) == 0 )
+  if ( (byte_4CC284C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CB173F = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4CC284C = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
   SceneRootComponent__setMainMenuBar((SceneRootComponent_o *)this, 8, 35, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
 
 void MyRoomRootComponent__beginResume(MyRoomRootComponent_o *this, Il2CppObject *data, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  SceneRootComponent_o *v5; // x19
-  CGThumbnailListItem_o *klass; // x8
-  Il2CppClass *v7; // x9
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  SceneRootComponent_o *v9; // x19
+  SceneRootComponent_c *klass; // x8
+  Il2CppClass *v11; // x9
   __int64 naturalAligment; // x10
-  Il2CppObject *v9; // x11
-  int32_t v10; // w1
-  CGThumbnailListItem_o *v11; // x0
-  SceneRootComponent_c *v12; // x8
+  Il2CppObject *v13; // x11
+  int32_t v14; // w1
+  GrandQuestFolderBoardItem_o *p_field_count; // x0
+  SceneRootComponent_c *v16; // x8
   Il2CppClass *parent; // x8
 
-  v5 = (SceneRootComponent_o *)this;
-  if ( (byte_4CB1741 & 1) == 0 )
+  v9 = (SceneRootComponent_o *)this;
+  if ( (byte_4CC284E & 1) == 0 )
   {
-    sub_1C6BA08(&BattleSetupInfo_TypeInfo);
-    this = (MyRoomRootComponent_o *)sub_1C6BA08(&StringLiteral_11138/*"RETURN_BLACKLIST"*/);
-    byte_4CB1741 = 1;
+    sub_1C713B0(&BattleSetupInfo_TypeInfo);
+    this = (MyRoomRootComponent_o *)sub_1C713B0(&StringLiteral_11144/*"RETURN_BLACKLIST"*/);
+    byte_4CC284E = 1;
   }
-  klass = (CGThumbnailListItem_o *)v5[1].klass;
+  klass = v9[1].klass;
   if ( !klass )
     goto LABEL_24;
   if ( data )
   {
-    v7 = (Il2CppClass *)BattleSetupInfo_TypeInfo;
+    v11 = (Il2CppClass *)BattleSetupInfo_TypeInfo;
     naturalAligment = BattleSetupInfo_TypeInfo->_2.naturalAligment;
     if ( data->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
-      v9 = (BattleSetupInfo_c *)data->klass->_2.typeHierarchy[naturalAligment - 1] == BattleSetupInfo_TypeInfo
-         ? data
-         : 0LL;
+      v13 = (BattleSetupInfo_c *)data->klass->_2.typeHierarchy[naturalAligment - 1] == BattleSetupInfo_TypeInfo
+          ? data
+          : 0LL;
     else
-      v9 = 0;
-    klass[2].klass = (CGThumbnailListItem_c *)v9;
-    v11 = klass + 2;
+      v13 = 0;
+    *(_QWORD *)&klass->_2.field_count = v13;
+    p_field_count = (GrandQuestFolderBoardItem_o *)&klass->_2.field_count;
     if ( data->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
-      v10 = data->klass->_2.typeHierarchy[naturalAligment - 1] == v7 ? (int)data : 0;
+      v14 = data->klass->_2.typeHierarchy[naturalAligment - 1] == v11 ? (int)data : 0;
     else
-      v10 = 0;
+      v14 = 0;
   }
   else
   {
-    v10 = 0;
-    v11 = klass + 2;
-    klass[2].klass = 0;
+    v14 = 0;
+    p_field_count = (GrandQuestFolderBoardItem_o *)&klass->_2.field_count;
+    *(_QWORD *)&klass->_2.field_count = 0;
   }
-  sub_1C6B9AC(v11, v10, (int32_t)method, v3);
-  v12 = v5[1].klass;
-  if ( !v12 )
+  sub_1C71354(p_field_count, v14, (int32_t)method, v3, v4, v5, v6, v7);
+  v16 = v9[1].klass;
+  if ( !v16 )
     goto LABEL_24;
-  if ( *(_QWORD *)&v12->_2.field_count )
+  if ( *(_QWORD *)&v16->_2.field_count )
   {
-    SceneRootComponent__beginFinish(v5, 0);
-    SceneRootComponent__sendMessageStartUp(v5, 0);
+    SceneRootComponent__beginFinish(v9, 0);
+    SceneRootComponent__sendMessageStartUp(v9, 0);
 LABEL_22:
-    SceneRootComponent__resumeMainMenuBar(v5, 0);
+    SceneRootComponent__resumeMainMenuBar(v9, 0);
     return;
   }
-  parent = v12->_1.parent;
+  parent = v16->_1.parent;
   if ( !parent )
 LABEL_24:
-    sub_1C6BC60(this, data);
+    sub_1C71608(this, data);
   if ( parent->_2.static_fields_size == 1 )
   {
-    SceneRootComponent__beginFinish(v5, 0);
-    SceneRootComponent__sendMessage(v5, (System_String_o *)StringLiteral_11138/*"RETURN_BLACKLIST"*/, 0);
+    SceneRootComponent__beginFinish(v9, 0);
+    SceneRootComponent__sendMessage(v9, (System_String_o *)StringLiteral_11144/*"RETURN_BLACKLIST"*/, 0);
     goto LABEL_22;
   }
-  SceneRootComponent__beginResume_41715320(v5, 0);
+  SceneRootComponent__beginResume_41758480(v9, 0);
 }
 
 
@@ -161,14 +177,18 @@ void MyRoomRootComponent__beginStartUp(MyRoomRootComponent_o *this, Il2CppObject
   MyRoomControl_o *v7; // x0
   __int64 v8; // x1
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  struct MyRoomControl_o *v11; // x8
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  struct MyRoomControl_o *v15; // x8
 
-  if ( (byte_4CB1740 & 1) == 0 )
+  if ( (byte_4CC284D & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&SceneJumpInfo_TypeInfo);
-    byte_4CB1740 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&SceneJumpInfo_TypeInfo);
+    byte_4CC284D = 1;
   }
   MainMenuBar__setMenuActive(1, 0, 0);
   if ( data )
@@ -190,13 +210,21 @@ void MyRoomRootComponent__beginStartUp(MyRoomRootComponent_o *this, Il2CppObject
   v7 = (MyRoomControl_o *)UnityEngine_Object__op_Inequality(myRoomControl, 0, 0);
   if ( ((unsigned __int8)v7 & 1) != 0 )
   {
-    v11 = this->fields.myRoomControl;
-    if ( !v11
-      || (v11->fields.sceneJumpInfo = (struct SceneJumpInfo_o *)data,
-          sub_1C6B9AC((CGThumbnailListItem_o *)&v11->fields.sceneJumpInfo, (int32_t)data, v9, v10),
+    v15 = this->fields.myRoomControl;
+    if ( !v15
+      || (v15->fields.sceneJumpInfo = (struct SceneJumpInfo_o *)data,
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&v15->fields.sceneJumpInfo,
+            (int32_t)data,
+            v9,
+            v10,
+            v11,
+            v12,
+            v13,
+            v14),
           (v7 = this->fields.myRoomControl) == 0) )
     {
-      sub_1C6BC60(v7, v8);
+      sub_1C71608(v7, v8);
     }
     MyRoomControl__startUp(v7, 0);
   }

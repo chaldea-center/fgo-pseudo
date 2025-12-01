@@ -1,13 +1,13 @@
 void AutomatedAction___ctor(AutomatedAction_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CAFF8F & 1) == 0 )
+  if ( (byte_4CC108F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_AutomatedAction___ctor__);
-    byte_4CAFF8F = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_AutomatedAction___ctor__);
+    byte_4CC108F = 1;
   }
   SingletonMonoBehaviour_object____ctor(
     (SingletonMonoBehaviour_T__o *)this,
-    (const MethodInfo_3A4F89C *)Method_SingletonMonoBehaviour_AutomatedAction___ctor__);
+    (const MethodInfo_3A5F640 *)Method_SingletonMonoBehaviour_AutomatedAction___ctor__);
 }
 
 
@@ -22,21 +22,21 @@ void AutomatedAction__InstantiateMissionAction(AutomatedAction_o *this, const Me
   UnityEngine_Transform_o *v9; // x20
   UnityEngine_Transform_o *v10; // x19
 
-  if ( (byte_4CAFF8A & 1) == 0 )
+  if ( (byte_4CC108A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CAFF8A = 1;
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC108A = 1;
   }
   missionActionManagerPrefab = (Il2CppObject *)this->fields.missionActionManagerPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__Instantiate_object_(
          missionActionManagerPrefab,
-         (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+         (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   this->fields.missionActionObject = (struct UnityEngine_GameObject_o *)v4;
   p_missionActionObject = &this->fields.missionActionObject;
-  sub_1C6B9AC(&this->fields.missionActionObject, v4);
+  sub_1C71354(&this->fields.missionActionObject, v4);
   missionActionObject = this->fields.missionActionObject;
   if ( !missionActionObject )
     goto LABEL_16;
@@ -52,10 +52,10 @@ void AutomatedAction__InstantiateMissionAction(AutomatedAction_o *this, const Me
     goto LABEL_16;
   missionActionObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(missionActionObject, 0);
   v9 = (UnityEngine_Transform_o *)missionActionObject;
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    missionActionObject = (UnityEngine_GameObject_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    missionActionObject = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   if ( !v9 )
     goto LABEL_16;
@@ -65,14 +65,14 @@ void AutomatedAction__InstantiateMissionAction(AutomatedAction_o *this, const Me
     goto LABEL_16;
   missionActionObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(missionActionObject, 0);
   v10 = (UnityEngine_Transform_o *)missionActionObject;
-  if ( !byte_4CAFC0E )
+  if ( !byte_4CC0D0E )
   {
-    missionActionObject = (UnityEngine_GameObject_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC0E = 1;
+    missionActionObject = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D0E = 1;
   }
   if ( !v10 )
 LABEL_16:
-    sub_1C6BC60(missionActionObject, v6);
+    sub_1C71608(missionActionObject, v6);
   UnityEngine_Transform__set_localScale(v10, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
 }
 
@@ -83,11 +83,11 @@ bool AutomatedAction__IsShopVoiceWait(AutomatedAction_o *this, const MethodInfo 
   __int64 v4; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_4CAFF8E & 1) == 0 )
+  if ( (byte_4CC108E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ShopActionManager___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CAFF8E = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_ShopActionManager___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC108E = 1;
   }
   shopActionObject = (UnityEngine_Object_o *)this->fields.shopActionObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -98,9 +98,9 @@ bool AutomatedAction__IsShopVoiceWait(AutomatedAction_o *this, const MethodInfo 
   if ( !Component_object
     || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                          Component_object,
-                                                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ShopActionManager___)) == 0 )
+                                                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ShopActionManager___)) == 0 )
   {
-    sub_1C6BC60(Component_object, v4);
+    sub_1C71608(Component_object, v4);
   }
   return ShopActionManager__IsVoiceWait((ShopActionManager_o *)Component_object, 0);
 }
@@ -112,7 +112,7 @@ void AutomatedAction__SetBackGroundUntouchable(AutomatedAction_o *this, bool ono
 
   blocker = this->fields.blocker;
   if ( !blocker )
-    sub_1C6BC60(0, onoff);
+    sub_1C71608(0, onoff);
   UnityEngine_GameObject__SetActive(blocker, onoff, 0);
 }
 
@@ -126,11 +126,11 @@ void AutomatedAction__SetCallbackforMissionVoice(
   __int64 v6; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_4CAFF8B & 1) == 0 )
+  if ( (byte_4CC108B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MissionActionManager___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CAFF8B = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MissionActionManager___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC108B = 1;
   }
   missionActionObject = (UnityEngine_Object_o *)this->fields.missionActionObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -141,9 +141,9 @@ void AutomatedAction__SetCallbackforMissionVoice(
     if ( !Component_object
       || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MissionActionManager___)) == 0 )
+                                                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MissionActionManager___)) == 0 )
     {
-      sub_1C6BC60(Component_object, v6);
+      sub_1C71608(Component_object, v6);
     }
     MissionActionManager__SetCallbackAfterVoice((MissionActionManager_o *)Component_object, callback, 0);
   }
@@ -165,11 +165,11 @@ void AutomatedAction__SetMissionAction(
   UnityEngine_GameObject_o *blocker; // x0
   UnityEngine_Object_o *missionActionObject; // x23
 
-  if ( (byte_4CAFF88 & 1) == 0 )
+  if ( (byte_4CC1088 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MissionActionManager___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CAFF88 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MissionActionManager___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC1088 = 1;
   }
   blocker = this->fields.blocker;
   if ( !blocker )
@@ -184,10 +184,10 @@ void AutomatedAction__SetMissionAction(
   if ( !blocker
     || (blocker = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                 blocker,
-                                                (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MissionActionManager___)) == 0 )
+                                                (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MissionActionManager___)) == 0 )
   {
 LABEL_11:
-    sub_1C6BC60(blocker, *(_QWORD *)&missionID);
+    sub_1C71608(blocker, *(_QWORD *)&missionID);
   }
   MissionActionManager__setMissionAction((MissionActionManager_o *)blocker, missionID, progressType, restrictMode, 0);
 }
@@ -208,22 +208,22 @@ void AutomatedAction__SetShopAction(
   UnityEngine_Transform_o *v13; // x22
   UnityEngine_Transform_o *v14; // x22
 
-  if ( (byte_4CAFF8D & 1) == 0 )
+  if ( (byte_4CC108D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_ShopActionManager___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CAFF8D = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_ShopActionManager___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC108D = 1;
   }
   shopActionManagerPrefab = (Il2CppObject *)this->fields.shopActionManagerPrefab;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v8 = UnityEngine_Object__Instantiate_object_(
          shopActionManagerPrefab,
-         (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+         (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   this->fields.shopActionObject = (struct UnityEngine_GameObject_o *)v8;
   p_shopActionObject = &this->fields.shopActionObject;
-  sub_1C6B9AC(&this->fields.shopActionObject, v8);
+  sub_1C71354(&this->fields.shopActionObject, v8);
   shopActionObject = this->fields.shopActionObject;
   if ( !shopActionObject )
     goto LABEL_18;
@@ -239,10 +239,10 @@ void AutomatedAction__SetShopAction(
     goto LABEL_18;
   shopActionObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(shopActionObject, 0);
   v13 = (UnityEngine_Transform_o *)shopActionObject;
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    shopActionObject = (UnityEngine_GameObject_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    shopActionObject = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   if ( !v13 )
     goto LABEL_18;
@@ -252,20 +252,20 @@ void AutomatedAction__SetShopAction(
     goto LABEL_18;
   shopActionObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(shopActionObject, 0);
   v14 = (UnityEngine_Transform_o *)shopActionObject;
-  if ( !byte_4CAFC0E )
+  if ( !byte_4CC0D0E )
   {
-    shopActionObject = (UnityEngine_GameObject_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC0E = 1;
+    shopActionObject = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D0E = 1;
   }
   if ( !v14
     || (UnityEngine_Transform__set_localScale(v14, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0),
         (shopActionObject = *p_shopActionObject) == 0)
     || (shopActionObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                          shopActionObject,
-                                                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_ShopActionManager___)) == 0 )
+                                                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ShopActionManager___)) == 0 )
   {
 LABEL_18:
-    sub_1C6BC60(shopActionObject, v10);
+    sub_1C71608(shopActionObject, v10);
   }
   ShopActionManager__SetShopAction((ShopActionManager_o *)shopActionObject, shopActionList, callback, 0);
 }
@@ -282,11 +282,11 @@ void AutomatedAction__SetStatusMissionNotify(
   const MethodInfo *v10; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_4CAFF89 & 1) == 0 )
+  if ( (byte_4CC1089 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MissionActionManager___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CAFF89 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MissionActionManager___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC1089 = 1;
   }
   missionActionObject = (UnityEngine_Object_o *)this->fields.missionActionObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -297,9 +297,9 @@ void AutomatedAction__SetStatusMissionNotify(
   if ( !Component_object
     || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                          Component_object,
-                                                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MissionActionManager___)) == 0 )
+                                                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MissionActionManager___)) == 0 )
   {
-    sub_1C6BC60(Component_object, v10);
+    sub_1C71608(Component_object, v10);
   }
   MissionActionManager__setStatusMissionNotify(
     (MissionActionManager_o *)Component_object,
@@ -316,11 +316,11 @@ void AutomatedAction__TerminateMissionAction(AutomatedAction_o *this, const Meth
   __int64 v4; // x1
   UnityEngine_GameObject_o *Component_object; // x0
 
-  if ( (byte_4CAFF8C & 1) == 0 )
+  if ( (byte_4CC108C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MissionActionManager___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CAFF8C = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MissionActionManager___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC108C = 1;
   }
   missionActionObject = (UnityEngine_Object_o *)this->fields.missionActionObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -331,9 +331,9 @@ void AutomatedAction__TerminateMissionAction(AutomatedAction_o *this, const Meth
     if ( !Component_object
       || (Component_object = (UnityEngine_GameObject_o *)UnityEngine_GameObject__GetComponent_object_(
                                                            Component_object,
-                                                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MissionActionManager___)) == 0 )
+                                                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MissionActionManager___)) == 0 )
     {
-      sub_1C6BC60(Component_object, v4);
+      sub_1C71608(Component_object, v4);
     }
     MissionActionManager__TerminateMissionAction((MissionActionManager_o *)Component_object, 0);
   }

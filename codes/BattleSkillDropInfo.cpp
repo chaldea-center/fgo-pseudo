@@ -8,10 +8,10 @@ void BattleSkillDropInfo___ctor(
   __int64 v8; // x1
   struct BattleSkillDropInfo_JsonConvertData_o **p_data; // x20
 
-  if ( (byte_4CB9086 & 1) == 0 )
+  if ( (byte_4CCA1C3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
-    byte_4CB9086 = 1;
+    sub_1C713B0(&Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
+    byte_4CCA1C3 = 1;
   }
   DropInfo___ctor((DropInfo_o *)this, 0);
   this->fields.dropperUniqueId = uniqueId;
@@ -31,11 +31,11 @@ void BattleSkillDropInfo___ctor(
       this->fields.effectType = EnumUtility__CastToEnum_Int32Enum_(
                                   (*p_data)->fields.dropEffectType,
                                   0,
-                                  (const MethodInfo_314232C *)Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
+                                  (const MethodInfo_31520D0 *)Method_EnumUtility_CastToEnum_DropInfo_DropEffectType___);
       goto LABEL_8;
     }
 LABEL_9:
-    sub_1C6BC60(funcEnt, v8);
+    sub_1C71608(funcEnt, v8);
   }
 LABEL_8:
   this->fields.rarity = 1000;
@@ -48,14 +48,22 @@ void BattleSkillDropInfo__SetBattleMoveObject(
         BattleMoveObject_o *moveObject,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._BattleMoveObject_k__BackingField = moveObject;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._BattleMoveObject_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._BattleMoveObject_k__BackingField,
     (int32_t)moveObject,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -139,14 +147,22 @@ void BattleSkillDropInfo__set_BattleMoveObject(
         BattleMoveObject_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._BattleMoveObject_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._BattleMoveObject_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._BattleMoveObject_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

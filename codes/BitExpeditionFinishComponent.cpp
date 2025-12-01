@@ -6,35 +6,35 @@ void BitExpeditionFinishComponent___ctor(BitExpeditionFinishComponent_o *this, c
   __int64 v6; // x1
   System_Collections_Generic_Dictionary_int__object__o *v7; // x20
 
-  if ( (byte_4CB0540 & 1) == 0 )
+  if ( (byte_4CC1643 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__Animation___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_int__Animation__TypeInfo);
-    sub_1C6BA08(&StringLiteral_17213/*"bit_expedition_finish"*/);
-    sub_1C6BA08(&StringLiteral_17215/*"bit_expedition_finish_dog_{0}_end"*/);
-    sub_1C6BA08(&StringLiteral_17214/*"bit_expedition_finish_dog_{0}"*/);
-    sub_1C6BA08(&StringLiteral_17216/*"bit_expedition_finish_end"*/);
-    byte_4CB0540 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__Animation___ctor__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_int__Animation__TypeInfo);
+    sub_1C713B0(&StringLiteral_17220/*"bit_expedition_finish"*/);
+    sub_1C713B0(&StringLiteral_17222/*"bit_expedition_finish_dog_{0}_end"*/);
+    sub_1C713B0(&StringLiteral_17221/*"bit_expedition_finish_dog_{0}"*/);
+    sub_1C713B0(&StringLiteral_17223/*"bit_expedition_finish_end"*/);
+    byte_4CC1643 = 1;
   }
-  v3 = StringLiteral_17213/*"bit_expedition_finish"*/;
-  this->fields.FINISH_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_17213/*"bit_expedition_finish"*/;
-  sub_1C6B9AC(&this->fields.FINISH_ANIMATION_NAME_BASE, v3);
-  v4 = StringLiteral_17216/*"bit_expedition_finish_end"*/;
-  this->fields.FINISH_END_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_17216/*"bit_expedition_finish_end"*/;
-  sub_1C6B9AC(&this->fields.FINISH_END_ANIMATION_NAME_BASE, v4);
-  v5 = StringLiteral_17214/*"bit_expedition_finish_dog_{0}"*/;
-  this->fields.DOG_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_17214/*"bit_expedition_finish_dog_{0}"*/;
-  sub_1C6B9AC(&this->fields.DOG_ANIMATION_NAME_BASE, v5);
-  v6 = StringLiteral_17215/*"bit_expedition_finish_dog_{0}_end"*/;
-  this->fields.DOG_ANIMATION_NAME_BASE_END = (struct System_String_o *)StringLiteral_17215/*"bit_expedition_finish_dog_{0}_end"*/;
-  sub_1C6B9AC(&this->fields.DOG_ANIMATION_NAME_BASE_END, v6);
+  v3 = StringLiteral_17220/*"bit_expedition_finish"*/;
+  this->fields.FINISH_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_17220/*"bit_expedition_finish"*/;
+  sub_1C71354(&this->fields.FINISH_ANIMATION_NAME_BASE, v3);
+  v4 = StringLiteral_17223/*"bit_expedition_finish_end"*/;
+  this->fields.FINISH_END_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_17223/*"bit_expedition_finish_end"*/;
+  sub_1C71354(&this->fields.FINISH_END_ANIMATION_NAME_BASE, v4);
+  v5 = StringLiteral_17221/*"bit_expedition_finish_dog_{0}"*/;
+  this->fields.DOG_ANIMATION_NAME_BASE = (struct System_String_o *)StringLiteral_17221/*"bit_expedition_finish_dog_{0}"*/;
+  sub_1C71354(&this->fields.DOG_ANIMATION_NAME_BASE, v5);
+  v6 = StringLiteral_17222/*"bit_expedition_finish_dog_{0}_end"*/;
+  this->fields.DOG_ANIMATION_NAME_BASE_END = (struct System_String_o *)StringLiteral_17222/*"bit_expedition_finish_dog_{0}_end"*/;
+  sub_1C71354(&this->fields.DOG_ANIMATION_NAME_BASE_END, v6);
   this->fields.WAIT_TOUCH_SKIP_TIME = 1.6;
-  v7 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__Animation__TypeInfo);
+  v7 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_int__Animation__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
     v7,
-    (const MethodInfo_3451B1C *)Method_System_Collections_Generic_Dictionary_int__Animation___ctor__);
+    (const MethodInfo_34618C0 *)Method_System_Collections_Generic_Dictionary_int__Animation___ctor__);
   this->fields.dogDictionary = (struct System_Collections_Generic_Dictionary_int__Animation__o *)v7;
-  sub_1C6B9AC(&this->fields.dogDictionary, v7);
+  sub_1C71354(&this->fields.dogDictionary, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -47,20 +47,20 @@ System_Collections_IEnumerator_o *BitExpeditionFinishComponent__AnimationPlaying
 {
   __int64 v7; // x22
 
-  if ( (byte_4CB053E & 1) == 0 )
+  if ( (byte_4CC1641 & 1) == 0 )
   {
-    sub_1C6BA08(&BitExpeditionFinishComponent__AnimationPlaying_d__13_TypeInfo);
-    byte_4CB053E = 1;
+    sub_1C713B0(&BitExpeditionFinishComponent__AnimationPlaying_d__13_TypeInfo);
+    byte_4CC1641 = 1;
   }
-  v7 = sub_1C6BC54(BitExpeditionFinishComponent__AnimationPlaying_d__13_TypeInfo);
+  v7 = sub_1C715FC(BitExpeditionFinishComponent__AnimationPlaying_d__13_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   *(_DWORD *)(v7 + 16) = 0;
   *(_QWORD *)(v7 + 48) = this;
-  sub_1C6B9AC(v7 + 48, this);
+  sub_1C71354(v7 + 48, this);
   *(_QWORD *)(v7 + 32) = animation;
-  sub_1C6B9AC(v7 + 32, animation);
+  sub_1C71354(v7 + 32, animation);
   *(_QWORD *)(v7 + 40) = callBack;
-  sub_1C6B9AC(v7 + 40, callBack);
+  sub_1C71354(v7 + 40, callBack);
   return (System_Collections_IEnumerator_o *)v7;
 }
 
@@ -83,17 +83,17 @@ void BitExpeditionFinishComponent__EndSetUp(
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v15; // [xsp+8h] [xbp-A8h] BYREF
   System_Collections_Generic_Dictionary_Enumerator_TKey__TValue__o v16; // [xsp+30h] [xbp-80h] BYREF
 
-  if ( (byte_4CB053D & 1) == 0 )
+  if ( (byte_4CC1640 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__Animation__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__get_Current__);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_int__Animation__get_Key__);
-    sub_1C6BA08(&Method_System_Collections_Generic_KeyValuePair_int__Animation__get_Value__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB053D = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__Animation__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__get_Current__);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_KeyValuePair_int__Animation__get_Key__);
+    sub_1C713B0(&Method_System_Collections_Generic_KeyValuePair_int__Animation__get_Value__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC1640 = 1;
   }
   memset(&v16, 0, sizeof(v16));
   screenTouchInformation = (UnityEngine_Component_o *)this->fields.screenTouchInformation;
@@ -103,27 +103,27 @@ void BitExpeditionFinishComponent__EndSetUp(
                                                               0)) == 0
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)screenTouchInformation, 0, 0),
         (screenTouchInformation = (UnityEngine_Component_o *)this->fields.animation) == 0)
-    || (UnityEngine_Animation__Rewind_71402492(
+    || (UnityEngine_Animation__Rewind_71467424(
           (UnityEngine_Animation_o *)screenTouchInformation,
           this->fields.FINISH_END_ANIMATION_NAME_BASE,
           0),
         (screenTouchInformation = (UnityEngine_Component_o *)this->fields.animation) == 0)
-    || (UnityEngine_Animation__Play_71403152(
+    || (UnityEngine_Animation__Play_71468084(
           (UnityEngine_Animation_o *)screenTouchInformation,
           this->fields.FINISH_END_ANIMATION_NAME_BASE,
           0),
         (screenTouchInformation = (UnityEngine_Component_o *)this->fields.dogDictionary) == 0) )
   {
-    sub_1C6BC60(screenTouchInformation, callback);
+    sub_1C71608(screenTouchInformation, callback);
   }
   System_Collections_Generic_Dictionary_int__object___GetEnumerator(
     &v15,
     (System_Collections_Generic_Dictionary_int__object__o *)screenTouchInformation,
-    (const MethodInfo_3452928 *)Method_System_Collections_Generic_Dictionary_int__Animation__GetEnumerator__);
+    (const MethodInfo_34626CC *)Method_System_Collections_Generic_Dictionary_int__Animation__GetEnumerator__);
   v16 = v15;
   while ( System_Collections_Generic_Dictionary_Enumerator_int__object___MoveNext(
             &v16,
-            (const MethodInfo_35AA310 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__MoveNext__) )
+            (const MethodInfo_35BA0B4 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__MoveNext__) )
   {
     key = (int)v16.fields._current.fields.key;
     value = v16.fields._current.fields.value;
@@ -136,17 +136,17 @@ void BitExpeditionFinishComponent__EndSetUp(
       v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
       v10 = System_String__Format(DOG_ANIMATION_NAME_BASE_END, v9, 0);
       if ( !value )
-        sub_1C6BC60(v10, v11);
+        sub_1C71608(v10, v11);
       v12 = v10;
-      UnityEngine_Animation__Rewind_71402492((UnityEngine_Animation_o *)value, v10, 0);
-      UnityEngine_Animation__Play_71403152((UnityEngine_Animation_o *)value, v12, 0);
+      UnityEngine_Animation__Rewind_71467424((UnityEngine_Animation_o *)value, v10, 0);
+      UnityEngine_Animation__Play_71468084((UnityEngine_Animation_o *)value, v12, 0);
     }
   }
   System_Collections_Generic_Dictionary_Enumerator_int__object___Dispose(
     &v16,
-    (const MethodInfo_35AA434 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__Dispose__);
+    (const MethodInfo_35BA1D8 *)Method_System_Collections_Generic_Dictionary_Enumerator_int__Animation__Dispose__);
   v14 = BitExpeditionFinishComponent__AnimationPlaying(this, this->fields.animation, callback, v13);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v14, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v14, 0);
 }
 
 
@@ -160,14 +160,14 @@ void BitExpeditionFinishComponent__SerializeFieldNotNullCheck(
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4CB053F & 1) == 0 )
+  if ( (byte_4CC1642 & 1) == 0 )
   {
-    this = (BitExpeditionFinishComponent_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    byte_4CB053F = 1;
+    this = (BitExpeditionFinishComponent_o *)sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    byte_4CC1642 = 1;
   }
   dogList = v2->fields.dogList;
   if ( !dogList )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   size = dogList->fields._size;
   v5 = -1;
   do
@@ -214,23 +214,23 @@ void BitExpeditionFinishComponent__SetUp(
   System_Collections_Generic_List_Enumerator_int__o v37; // [xsp+18h] [xbp-98h] BYREF
   System_Collections_Generic_List_Enumerator_int__o v38; // [xsp+30h] [xbp-80h] BYREF
 
-  if ( (byte_4CB053B & 1) == 0 )
+  if ( (byte_4CC163E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__Animation__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__Animation__Clear__);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_GameObject___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C6BA08(&System_Func_GameObject__bool__TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Animation___);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_BitExpeditionFinishComponent___c__DisplayClass10_0__SetUp_b__0__);
-    sub_1C6BA08(&BitExpeditionFinishComponent___c__DisplayClass10_0_TypeInfo);
-    byte_4CB053B = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__Animation__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__Animation__Clear__);
+    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_GameObject___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C713B0(&System_Func_GameObject__bool__TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_Animation___);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_BitExpeditionFinishComponent___c__DisplayClass10_0__SetUp_b__0__);
+    sub_1C713B0(&BitExpeditionFinishComponent___c__DisplayClass10_0_TypeInfo);
+    byte_4CC163E = 1;
   }
   memset(&v38, 0, sizeof(v38));
   dogDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.dogDictionary;
@@ -238,7 +238,7 @@ void BitExpeditionFinishComponent__SetUp(
     goto LABEL_30;
   System_Collections_Generic_Dictionary_int__object___Clear(
     dogDictionary,
-    (const MethodInfo_3452678 *)Method_System_Collections_Generic_Dictionary_int__Animation__Clear__);
+    (const MethodInfo_346241C *)Method_System_Collections_Generic_Dictionary_int__Animation__Clear__);
   BitExpeditionFinishComponent__SerializeFieldNotNullCheck(this, v10);
   dogDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.dogRoot;
   if ( !dogDictionary )
@@ -259,94 +259,94 @@ void BitExpeditionFinishComponent__SetUp(
   System_Collections_Generic_List_int___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v37,
     pieceIdxList,
-    (const MethodInfo_37E4424 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    (const MethodInfo_37F41C8 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
   v38 = v37;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
             &v38,
-            (const MethodInfo_358270C *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            (const MethodInfo_35924B0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
     current = v38.fields._current;
-    v12 = (Il2CppObject *)sub_1C6BC54(BitExpeditionFinishComponent___c__DisplayClass10_0_TypeInfo);
+    v12 = (Il2CppObject *)sub_1C715FC(BitExpeditionFinishComponent___c__DisplayClass10_0_TypeInfo);
     System_Object___ctor(v12, 0);
     DOG_ANIMATION_NAME_BASE = this->fields.DOG_ANIMATION_NAME_BASE;
     LODWORD(v37.fields._list) = current;
     v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v37);
     v15 = System_String__Format(DOG_ANIMATION_NAME_BASE, v14, 0);
     if ( !v12 )
-      sub_1C6BC60(v15, v15);
+      sub_1C71608(v15, v15);
     v12[1].klass = (Il2CppClass *)v15;
-    sub_1C6B9AC(&v12[1], v15);
+    sub_1C71354(&v12[1], v15);
     dogList = this->fields.dogList;
-    v17 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_GameObject__bool__TypeInfo);
+    v17 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_GameObject__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v17,
       v12,
       Method_BitExpeditionFinishComponent___c__DisplayClass10_0__SetUp_b__0__,
       0);
-    v18 = System_Linq_Enumerable__FirstOrDefault_object__51793644(
+    v18 = System_Linq_Enumerable__FirstOrDefault_object__51858576(
             (System_Collections_Generic_IEnumerable_TSource__o *)dogList,
             (System_Func_TSource__bool__o *)v17,
-            (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_GameObject___);
+            (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_GameObject___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v19 = UnityEngine_Object__Instantiate_object_(
             v18,
-            (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+            (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     v21 = (UnityEngine_GameObject_o *)v19;
     if ( !v19 )
-      sub_1C6BC60(0, v20);
+      sub_1C71608(0, v20);
     transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)v19, 0);
     dogRoot = (UnityEngine_Component_o *)this->fields.dogRoot;
     if ( !dogRoot )
-      sub_1C6BC60(0, v22);
+      sub_1C71608(0, v22);
     v25 = UnityEngine_Component__get_transform(dogRoot, 0);
     if ( !transform )
-      sub_1C6BC60(v25, v25);
+      sub_1C71608(v25, v25);
     UnityEngine_Transform__SetParent(transform, v25, 0);
     v26 = (__int64)UnityEngine_GameObject__get_transform(v21, 0);
     v28 = (UnityEngine_Transform_o *)v26;
-    if ( !byte_4CAFC0E )
+    if ( !byte_4CC0D0E )
     {
-      v26 = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC0E = 1;
+      v26 = sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D0E = 1;
     }
     if ( !v28 )
-      sub_1C6BC60(v26, v27);
+      sub_1C71608(v26, v27);
     UnityEngine_Transform__set_localScale(v28, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
     v29 = this->fields.dogDictionary;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          v21,
-                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Animation___);
+                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_Animation___);
     if ( !v29 )
-      sub_1C6BC60(Component_object, v31);
+      sub_1C71608(Component_object, v31);
     System_Collections_Generic_Dictionary_int__object___Add(
       (System_Collections_Generic_Dictionary_int__object__o *)v29,
       current,
       Component_object,
-      (const MethodInfo_34524F0 *)Method_System_Collections_Generic_Dictionary_int__Animation__Add__);
+      (const MethodInfo_3462294 *)Method_System_Collections_Generic_Dictionary_int__Animation__Add__);
   }
   System_Collections_Generic_List_Enumerator_int___Dispose(
     &v38,
-    (const MethodInfo_3582708 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    (const MethodInfo_35924AC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
   dogDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.animation;
   if ( !dogDictionary
-    || (UnityEngine_Animation__Rewind_71402492(
+    || (UnityEngine_Animation__Rewind_71467424(
           (UnityEngine_Animation_o *)dogDictionary,
           this->fields.FINISH_ANIMATION_NAME_BASE,
           0),
         (dogDictionary = (System_Collections_Generic_Dictionary_int__object__o *)this->fields.animation) == 0) )
   {
 LABEL_30:
-    sub_1C6BC60(dogDictionary, pieceIdxList);
+    sub_1C71608(dogDictionary, pieceIdxList);
   }
-  UnityEngine_Animation__Play_71403152(
+  UnityEngine_Animation__Play_71468084(
     (UnityEngine_Animation_o *)dogDictionary,
     this->fields.FINISH_ANIMATION_NAME_BASE,
     0);
   v33 = BitExpeditionFinishComponent__AnimationPlaying(this, this->fields.animation, v36, v32);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v33, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v33, 0);
   v35 = BitExpeditionFinishComponent__WaitTouchSkip(this, setTouchPanelMethod, v34);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v35, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v35, 0);
 }
 
 
@@ -357,18 +357,18 @@ System_Collections_IEnumerator_o *BitExpeditionFinishComponent__WaitTouchSkip(
 {
   __int64 v5; // x21
 
-  if ( (byte_4CB053C & 1) == 0 )
+  if ( (byte_4CC163F & 1) == 0 )
   {
-    sub_1C6BA08(&BitExpeditionFinishComponent__WaitTouchSkip_d__11_TypeInfo);
-    byte_4CB053C = 1;
+    sub_1C713B0(&BitExpeditionFinishComponent__WaitTouchSkip_d__11_TypeInfo);
+    byte_4CC163F = 1;
   }
-  v5 = sub_1C6BC54(BitExpeditionFinishComponent__WaitTouchSkip_d__11_TypeInfo);
+  v5 = sub_1C715FC(BitExpeditionFinishComponent__WaitTouchSkip_d__11_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C6B9AC(v5 + 32, this);
+  sub_1C71354(v5 + 32, this);
   *(_QWORD *)(v5 + 40) = setTouchPanelMethod;
-  sub_1C6B9AC(v5 + 40, setTouchPanelMethod);
+  sub_1C71354(v5 + 40, setTouchPanelMethod);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -419,17 +419,17 @@ bool BitExpeditionFinishComponent__AnimationPlaying_d__13__MoveNext(
   int *v32; // x10
   __int64 v33; // x0
 
-  if ( (byte_4CB0541 & 1) == 0 )
+  if ( (byte_4CC1644 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Transform_TypeInfo);
-    sub_1C6BA08(&Method_BitExpeditionFinishComponent___c__DisplayClass13_0__AnimationPlaying_b__0__);
-    sub_1C6BA08(&BitExpeditionFinishComponent___c__DisplayClass13_0_TypeInfo);
-    sub_1C6BA08(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4CB0541 = 1;
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UnityEngine_Transform_TypeInfo);
+    sub_1C713B0(&Method_BitExpeditionFinishComponent___c__DisplayClass13_0__AnimationPlaying_b__0__);
+    sub_1C713B0(&BitExpeditionFinishComponent___c__DisplayClass13_0_TypeInfo);
+    sub_1C713B0(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4CC1644 = 1;
   }
   _1__state = this->fields.__1__state;
   if ( _1__state == 1 )
@@ -448,7 +448,7 @@ bool BitExpeditionFinishComponent__AnimationPlaying_d__13__MoveNext(
       goto LABEL_41;
     Enumerator = UnityEngine_Transform__GetEnumerator((UnityEngine_Transform_o *)dogRoot, 0);
     if ( !Enumerator )
-      sub_1C6BC60(0, v14);
+      sub_1C71608(0, v14);
     while ( 1 )
     {
       klass = Enumerator->klass;
@@ -468,7 +468,7 @@ bool BitExpeditionFinishComponent__AnimationPlaying_d__13__MoveNext(
       else
       {
 LABEL_15:
-        v19 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+        v19 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v19)(
               Enumerator,
@@ -492,7 +492,7 @@ LABEL_15:
       else
       {
 LABEL_22:
-        v23 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
+        v23 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 1);
       }
       v24 = (UnityEngine_Component_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v23)(
                                          Enumerator,
@@ -503,16 +503,16 @@ LABEL_22:
       if ( v24->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (UnityEngine_Transform_c *)v24->klass->_2.typeHierarchy[naturalAligment - 1] != UnityEngine_Transform_TypeInfo )
       {
-        v24 = (UnityEngine_Component_o *)sub_1C6BFFC(v24);
+        v24 = (UnityEngine_Component_o *)sub_1C719A4(v24);
 LABEL_40:
-        sub_1C6BC60(v24, v25);
+        sub_1C71608(v24, v25);
       }
       gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(v24, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71659676(gameObject, 0);
+      UnityEngine_Object__Destroy_71724608(gameObject, 0);
     }
-    v28 = sub_1C6BB44(Enumerator, System_IDisposable_TypeInfo);
+    v28 = sub_1C714EC(Enumerator, System_IDisposable_TypeInfo);
     if ( v28 )
     {
       v29 = *(_QWORD *)v28;
@@ -533,7 +533,7 @@ LABEL_40:
       else
       {
 LABEL_35:
-        v33 = sub_1C41D90(v28, System_IDisposable_TypeInfo, 0);
+        v33 = sub_1C47738(v28, System_IDisposable_TypeInfo, 0);
       }
       (*(void (__fastcall **)(__int64, _QWORD))v33)(v30, *(_QWORD *)(v33 + 8));
     }
@@ -541,30 +541,30 @@ LABEL_35:
   else if ( !_1__state )
   {
     this->fields.__1__state = -1;
-    v4 = (Il2CppObject *)sub_1C6BC54(BitExpeditionFinishComponent___c__DisplayClass13_0_TypeInfo);
+    v4 = (Il2CppObject *)sub_1C715FC(BitExpeditionFinishComponent___c__DisplayClass13_0_TypeInfo);
     System_Object___ctor(v4, 0);
     if ( v4 )
     {
       animation = this->fields.animation;
       v4[1].klass = (Il2CppClass *)animation;
-      sub_1C6B9AC(&v4[1], animation);
-      v8 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+      sub_1C71354(&v4[1], animation);
+      v8 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
       System_Func_bool____ctor(
         v8,
         v4,
         Method_BitExpeditionFinishComponent___c__DisplayClass13_0__AnimationPlaying_b__0__,
         0);
-      v9 = (UnityEngine_WaitUntil_o *)sub_1C6BC54(UnityEngine_WaitUntil_TypeInfo);
+      v9 = (UnityEngine_WaitUntil_o *)sub_1C715FC(UnityEngine_WaitUntil_TypeInfo);
       UnityEngine_WaitUntil___ctor(v9, v8, 0);
       this->fields.__2__current = (Il2CppObject *)v9;
       p__2__current = &this->fields.__2__current;
-      sub_1C6B9AC(p__2__current, v9);
+      sub_1C71354(p__2__current, v9);
       result = 1;
       *((_DWORD *)p__2__current - 2) = 1;
       return result;
     }
 LABEL_41:
-    sub_1C6BC60(dogRoot, v6);
+    sub_1C71608(dogRoot, v6);
   }
   return 0;
 }
@@ -586,11 +586,11 @@ void __noreturn BitExpeditionFinishComponent__AnimationPlaying_d__13__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_BitExpeditionFinishComponent__AnimationPlaying_d__13_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_BitExpeditionFinishComponent__AnimationPlaying_d__13_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -634,10 +634,10 @@ bool BitExpeditionFinishComponent__WaitTouchSkip_d__11__MoveNext(
   System_Action_o *setTouchPanelMethod; // x0
 
   v2 = this;
-  if ( (byte_4CB0542 & 1) == 0 )
+  if ( (byte_4CC1645 & 1) == 0 )
   {
-    this = (BitExpeditionFinishComponent__WaitTouchSkip_d__11_o *)sub_1C6BA08(&UnityEngine_WaitForSeconds_TypeInfo);
-    byte_4CB0542 = 1;
+    this = (BitExpeditionFinishComponent__WaitTouchSkip_d__11_o *)sub_1C713B0(&UnityEngine_WaitForSeconds_TypeInfo);
+    byte_4CC1645 = 1;
   }
   _1__state = v2->fields.__1__state;
   if ( _1__state == 1 )
@@ -652,13 +652,13 @@ bool BitExpeditionFinishComponent__WaitTouchSkip_d__11__MoveNext(
   _4__this = v2->fields.__4__this;
   v2->fields.__1__state = -1;
   if ( !_4__this )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   WAIT_TOUCH_SKIP_TIME = _4__this->fields.WAIT_TOUCH_SKIP_TIME;
-  v6 = (UnityEngine_WaitForSeconds_o *)sub_1C6BC54(UnityEngine_WaitForSeconds_TypeInfo);
+  v6 = (UnityEngine_WaitForSeconds_o *)sub_1C715FC(UnityEngine_WaitForSeconds_TypeInfo);
   UnityEngine_WaitForSeconds___ctor(v6, WAIT_TOUCH_SKIP_TIME, 0);
   v2->fields.__2__current = (Il2CppObject *)v6;
   p__2__current = &v2->fields.__2__current;
-  sub_1C6B9AC(p__2__current, v6);
+  sub_1C71354(p__2__current, v6);
   result = 1;
   *((_DWORD *)p__2__current - 2) = 1;
   return result;
@@ -681,11 +681,11 @@ void __noreturn BitExpeditionFinishComponent__WaitTouchSkip_d__11__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_BitExpeditionFinishComponent__WaitTouchSkip_d__11_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_BitExpeditionFinishComponent__WaitTouchSkip_d__11_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -721,7 +721,7 @@ bool BitExpeditionFinishComponent___c__DisplayClass10_0___SetUp_b__0(
   System_String_o *name; // x0
 
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)x, 0);
   return System_String__op_Equality(name, this->fields.name, 0);
 }
@@ -743,6 +743,6 @@ bool BitExpeditionFinishComponent___c__DisplayClass13_0___AnimationPlaying_b__0(
 
   animation = this->fields.animation;
   if ( !animation )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return !UnityEngine_Animation__get_isPlaying(animation, 0);
 }

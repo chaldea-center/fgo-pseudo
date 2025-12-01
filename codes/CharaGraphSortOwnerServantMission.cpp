@@ -2,21 +2,29 @@ void CharaGraphSortOwnerServantMission___ctor(CharaGraphSortOwnerServantMission_
 {
   CharaGraphSortManageUnitSvtCollection_o *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CB22FE & 1) == 0 )
+  if ( (byte_4CC340F & 1) == 0 )
   {
-    sub_1C6BA08(&CharaGraphSortManageUnitServantMission_TypeInfo);
-    byte_4CB22FE = 1;
+    sub_1C713B0(&CharaGraphSortManageUnitServantMission_TypeInfo);
+    byte_4CC340F = 1;
   }
-  v3 = (CharaGraphSortManageUnitSvtCollection_o *)sub_1C6BC54(CharaGraphSortManageUnitServantMission_TypeInfo);
+  v3 = (CharaGraphSortManageUnitSvtCollection_o *)sub_1C715FC(CharaGraphSortManageUnitServantMission_TypeInfo);
   CharaGraphSortManageUnitSvtCollection___ctor(v3, 0);
   this->fields._ServantCollectionSortManageUnit_k__BackingField = (struct CharaGraphSortManageUnitBase_o *)v3;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
     (int32_t)v3,
     v4,
-    v5);
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
   CharaGraphSortOwnerBase___ctor((CharaGraphSortOwnerBase_o *)this, 0);
 }
 
@@ -33,12 +41,12 @@ System_String_o *CharaGraphSortOwnerServantMission__get_SortSaveKeyPrefix(
         CharaGraphSortOwnerServantMission_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB22FD & 1) == 0 )
+  if ( (byte_4CC340E & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_4385/*"CharaGraphSort_SvtMission_"*/);
-    byte_4CB22FD = 1;
+    sub_1C713B0(&StringLiteral_4388/*"CharaGraphSort_SvtMission_"*/);
+    byte_4CC340E = 1;
   }
-  return (System_String_o *)StringLiteral_4385/*"CharaGraphSort_SvtMission_"*/;
+  return (System_String_o *)StringLiteral_4388/*"CharaGraphSort_SvtMission_"*/;
 }
 
 
@@ -47,12 +55,20 @@ void CharaGraphSortOwnerServantMission__set_ServantCollectionSortManageUnit(
         CharaGraphSortManageUnitBase_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._ServantCollectionSortManageUnit_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ServantCollectionSortManageUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

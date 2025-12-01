@@ -2,19 +2,23 @@ void BattleComboData___ctor(BattleComboData_o *this, const MethodInfo *method)
 {
   struct System_Boolean_array *v3; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CB90F6 & 1) == 0 )
+  if ( (byte_4CCA235 & 1) == 0 )
   {
-    sub_1C6BA08(&bool___TypeInfo);
-    byte_4CB90F6 = 1;
+    sub_1C713B0(&bool___TypeInfo);
+    byte_4CCA235 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.flash = 0;
   this->fields.samecount = 0;
-  v3 = (struct System_Boolean_array *)sub_1C6BAB0(bool___TypeInfo, 3);
+  v3 = (struct System_Boolean_array *)sub_1C71458(bool___TypeInfo, 3);
   this->fields.sameflg = v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.sameflg, (int32_t)v3, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.sameflg, (int32_t)v3, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -23,10 +27,10 @@ bool BattleComboData__AchieveAnyChain(BattleComboData_o *this, const MethodInfo 
   int32_t samecount; // w20
   BattleDataDefine_c *v4; // x0
 
-  if ( (byte_4CB90F7 & 1) == 0 )
+  if ( (byte_4CCA236 & 1) == 0 )
   {
-    sub_1C6BA08(&BattleDataDefine_TypeInfo);
-    byte_4CB90F7 = 1;
+    sub_1C713B0(&BattleDataDefine_TypeInfo);
+    byte_4CCA236 = 1;
   }
   if ( this->fields.flash )
     return 1;

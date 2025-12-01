@@ -4,21 +4,33 @@ void SelectTdCommandTypeController___cctor(const MethodInfo *method)
   System_RuntimeFieldHandle_o v2; // x1
   struct BattleCommand_TYPE_array *v3; // x19
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CB9C85 & 1) == 0 )
+  if ( (byte_4CCADD7 & 1) == 0 )
   {
-    sub_1C6BA08(&SelectTdCommandTypeController_TypeInfo);
-    sub_1C6BA08(&BattleCommand_TYPE___TypeInfo);
-    sub_1C6BA08(&Field__PrivateImplementationDetails__DEC2809E6E374A6F8998DEF7721D410CA4D634F5B842BD3989C5CC94ED785DDB);
-    byte_4CB9C85 = 1;
+    sub_1C713B0(&SelectTdCommandTypeController_TypeInfo);
+    sub_1C713B0(&BattleCommand_TYPE___TypeInfo);
+    sub_1C713B0(&Field__PrivateImplementationDetails__DEC2809E6E374A6F8998DEF7721D410CA4D634F5B842BD3989C5CC94ED785DDB);
+    byte_4CCADD7 = 1;
   }
-  v1 = (System_Array_o *)sub_1C6BAB0(BattleCommand_TYPE___TypeInfo, 3);
+  v1 = (System_Array_o *)sub_1C71458(BattleCommand_TYPE___TypeInfo, 3);
   v2.fields.value = Field__PrivateImplementationDetails__DEC2809E6E374A6F8998DEF7721D410CA4D634F5B842BD3989C5CC94ED785DDB;
   v3 = (struct BattleCommand_TYPE_array *)v1;
-  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64666016(v1, v2, 0);
+  System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v1, v2, 0);
   SelectTdCommandTypeController_TypeInfo->static_fields->CommandTypeOrder = v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)SelectTdCommandTypeController_TypeInfo->static_fields, (int32_t)v3, v4, v5);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)SelectTdCommandTypeController_TypeInfo->static_fields,
+    (int32_t)v3,
+    v4,
+    v5,
+    v6,
+    v7,
+    v8,
+    v9);
 }
 
 
@@ -31,16 +43,24 @@ void SelectTdCommandTypeController___ctor(
   const MethodInfo *v5; // x1
   struct SelectTreasureDeviceInfo_o *SelectTreasureDeviceInfo; // x0
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
   SelectTdCommandController___ctor((SelectTdCommandController_o *)this, inputSvtData, 0, v3);
   SelectTreasureDeviceInfo = SelectTdCommandTypeController__MakeSelectTreasureDeviceInfo(this, v5);
   this->fields._SelectTreasureDeviceInfo_k__BackingField = SelectTreasureDeviceInfo;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._SelectTreasureDeviceInfo_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._SelectTreasureDeviceInfo_k__BackingField,
     (int32_t)SelectTreasureDeviceInfo,
     v7,
-    v8);
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
 }
 
 
@@ -61,37 +81,45 @@ System_Int32_array *SelectTdCommandTypeController__GetCommandTypeArray(
   Il2CppObject *v13; // x23
   struct SelectTdCommandTypeController___c_StaticFields *static_fields; // x0
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  System_Collections_Generic_IEnumerable_TSource__o *v17; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v18; // x20
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  System_Collections_Generic_IEnumerable_TSource__o *v21; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v22; // x20
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
   long double inited; // q0
-  _QWORD *v22; // x21
-  __int64 v23; // x8
-  __int64 v24; // x0
-  System_Func_int__bool__o *v25; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v26; // x0
+  _QWORD *v30; // x21
+  __int64 v31; // x8
+  __int64 v32; // x0
+  System_Func_int__bool__o *v33; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v34; // x0
 
-  if ( (byte_4CB9C83 & 1) == 0 )
+  if ( (byte_4CCADD5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Array_Empty_int___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_TreasureDvcMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_BattleCommand_TYPE__int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Where_int___);
-    sub_1C6BA08(&System_Func_int__bool__TypeInfo);
-    sub_1C6BA08(&System_Func_BattleCommand_TYPE__int__TypeInfo);
-    sub_1C6BA08(&SelectTdCommandTypeController_TypeInfo);
-    sub_1C6BA08(&Method_SelectTdCommandTypeController___c__GetCommandTypeArray_b__7_0__);
-    sub_1C6BA08(&Method_SelectTdCommandTypeController___c__DisplayClass7_0__GetCommandTypeArray_b__1__);
-    sub_1C6BA08(&SelectTdCommandTypeController___c__DisplayClass7_0_TypeInfo);
-    sub_1C6BA08(&SelectTdCommandTypeController___c_TypeInfo);
-    byte_4CB9C83 = 1;
+    sub_1C713B0(&Method_System_Array_Empty_int___);
+    sub_1C713B0(&Method_DataManager_GetMaster_TreasureDvcMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Select_BattleCommand_TYPE__int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_Where_int___);
+    sub_1C713B0(&System_Func_int__bool__TypeInfo);
+    sub_1C713B0(&System_Func_BattleCommand_TYPE__int__TypeInfo);
+    sub_1C713B0(&SelectTdCommandTypeController_TypeInfo);
+    sub_1C713B0(&Method_SelectTdCommandTypeController___c__GetCommandTypeArray_b__7_0__);
+    sub_1C713B0(&Method_SelectTdCommandTypeController___c__DisplayClass7_0__GetCommandTypeArray_b__1__);
+    sub_1C713B0(&SelectTdCommandTypeController___c__DisplayClass7_0_TypeInfo);
+    sub_1C713B0(&SelectTdCommandTypeController___c_TypeInfo);
+    byte_4CCADD5 = 1;
   }
-  v3 = sub_1C6BC54(SelectTdCommandTypeController___c__DisplayClass7_0_TypeInfo);
+  v3 = sub_1C715FC(SelectTdCommandTypeController___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   svtData = this->fields.svtData;
   if ( !svtData )
@@ -99,13 +127,13 @@ System_Int32_array *SelectTdCommandTypeController__GetCommandTypeArray(
   TreasureDvcId = BattleServantData__getTreasureDvcId(svtData, 0, 0, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  svtData = (BattleServantData_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_TreasureDvcMaster___);
+  svtData = (BattleServantData_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_TreasureDvcMaster___);
   if ( !svtData )
     goto LABEL_28;
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)svtData,
              TreasureDvcId,
-             (const MethodInfo_33F90DC *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
+             (const MethodInfo_3408E80 *)Method_DataMasterBase_TreasureDvcMaster__TreasureDvcEntity__int__GetEntity__);
   v8 = SelectTdCommandTypeController_TypeInfo;
   v9 = (TreasureDvcEntity_o *)Entity;
   if ( !SelectTdCommandTypeController_TypeInfo->_2.cctor_finished )
@@ -129,7 +157,7 @@ System_Int32_array *SelectTdCommandTypeController__GetCommandTypeArray(
       v10 = SelectTdCommandTypeController___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__7_0 = (System_Func_T__TResult__o *)sub_1C6BC54(System_Func_BattleCommand_TYPE__int__TypeInfo);
+    _9__7_0 = (System_Func_T__TResult__o *)sub_1C715FC(System_Func_BattleCommand_TYPE__int__TypeInfo);
     System_Func_Int32Enum__int____ctor(
       _9__7_0,
       v13,
@@ -137,57 +165,57 @@ System_Int32_array *SelectTdCommandTypeController__GetCommandTypeArray(
       0);
     static_fields = SelectTdCommandTypeController___c_TypeInfo->static_fields;
     static_fields->__9__7_0 = (struct System_Func_BattleCommand_TYPE__int__o *)_9__7_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v15, v16);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__7_0, (int32_t)_9__7_0, v15, v16, v17, v18, v19, v20);
   }
-  v17 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_Int32Enum__int_(
+  v21 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_Int32Enum__int_(
                                                                CommandTypeOrder,
                                                                (System_Func_TSource__TResult__o *)_9__7_0,
-                                                               (const MethodInfo_316FA24 *)Method_System_Linq_Enumerable_Select_BattleCommand_TYPE__int___);
+                                                               (const MethodInfo_317F7C8 *)Method_System_Linq_Enumerable_Select_BattleCommand_TYPE__int___);
   svtData = (BattleServantData_o *)System_Linq_Enumerable__ToArray_int_(
-                                     v17,
-                                     (const MethodInfo_317B0B0 *)Method_System_Linq_Enumerable_ToArray_int___);
+                                     v21,
+                                     (const MethodInfo_318AE54 *)Method_System_Linq_Enumerable_ToArray_int___);
   if ( !v9 )
     goto LABEL_28;
-  v18 = (System_Collections_Generic_IEnumerable_TSource__o *)svtData;
+  v22 = (System_Collections_Generic_IEnumerable_TSource__o *)svtData;
   svtData = (BattleServantData_o *)TreasureDvcEntity__GetExcludeTdChangeTypes(v9, 0, 0);
   v4 = svtData;
   if ( !svtData )
   {
-    v22 = Method_System_Array_Empty_int___;
-    v23 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
-    if ( !v23 )
+    v30 = Method_System_Array_Empty_int___;
+    v31 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
+    if ( !v31 )
     {
-      sub_1C41AF8(Method_System_Array_Empty_int___);
-      v23 = v22[7];
+      sub_1C474A0(Method_System_Array_Empty_int___);
+      v31 = v30[7];
     }
-    v24 = *(_QWORD *)(v23 + 16);
-    if ( (*(_BYTE *)(v24 + 309) & 1) == 0 )
-      v24 = sub_1C41A9C(inited);
-    if ( !*(_DWORD *)(v24 + 224) )
-      inited = j_il2cpp_runtime_class_init_0(v24);
-    svtData = *(BattleServantData_o **)(v22[7] + 16LL);
+    v32 = *(_QWORD *)(v31 + 16);
+    if ( (*(_BYTE *)(v32 + 309) & 1) == 0 )
+      v32 = sub_1C47444(inited);
+    if ( !*(_DWORD *)(v32 + 224) )
+      inited = j_il2cpp_runtime_class_init_0(v32);
+    svtData = *(BattleServantData_o **)(v30[7] + 16LL);
     if ( (BYTE5(svtData->fields.svtlimitaddent) & 1) == 0 )
-      svtData = (BattleServantData_o *)sub_1C41A9C(inited);
+      svtData = (BattleServantData_o *)sub_1C47444(inited);
     v4 = **(BattleServantData_o ***)&svtData->fields._ExistIndividualityServant_k__BackingField;
   }
   if ( !v3 )
 LABEL_28:
-    sub_1C6BC60(svtData, v4);
+    sub_1C71608(svtData, v4);
   *(_QWORD *)(v3 + 16) = v4;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)v4, v19, v20);
-  v25 = (System_Func_int__bool__o *)sub_1C6BC54(System_Func_int__bool__TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)v4, v23, v24, v25, v26, v27, v28);
+  v33 = (System_Func_int__bool__o *)sub_1C715FC(System_Func_int__bool__TypeInfo);
   System_Func_int__bool____ctor(
-    v25,
+    v33,
     (Il2CppObject *)v3,
     Method_SelectTdCommandTypeController___c__DisplayClass7_0__GetCommandTypeArray_b__1__,
     0);
-  v26 = System_Linq_Enumerable__Where_int_(
-          v18,
-          (System_Func_TSource__bool__o *)v25,
-          (const MethodInfo_3181DBC *)Method_System_Linq_Enumerable_Where_int___);
+  v34 = System_Linq_Enumerable__Where_int_(
+          v22,
+          (System_Func_TSource__bool__o *)v33,
+          (const MethodInfo_3191B60 *)Method_System_Linq_Enumerable_Where_int___);
   return System_Linq_Enumerable__ToArray_int_(
-           v26,
-           (const MethodInfo_317B0B0 *)Method_System_Linq_Enumerable_ToArray_int___);
+           v34,
+           (const MethodInfo_318AE54 *)Method_System_Linq_Enumerable_ToArray_int___);
 }
 
 
@@ -195,15 +223,15 @@ System_String_o *SelectTdCommandTypeController__GetDefaultMessageOnSelected(
         SelectTdCommandTypeController_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9C81 & 1) == 0 )
+  if ( (byte_4CCADD3 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_2748/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/);
-    byte_4CB9C81 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_2750/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/);
+    byte_4CCADD3 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  return LocalizationManager__Get((System_String_o *)StringLiteral_2748/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/, 0);
+  return LocalizationManager__Get((System_String_o *)StringLiteral_2750/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE"*/, 0);
 }
 
 
@@ -217,18 +245,18 @@ System_String_o *SelectTdCommandTypeController__GetDefaultTitle(
   System_String_o *v6; // x19
   Il2CppObject *ServantShortName; // x1
 
-  if ( (byte_4CB9C80 & 1) == 0 )
+  if ( (byte_4CCADD2 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_2750/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/);
-    byte_4CB9C80 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_2752/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/);
+    byte_4CCADD2 = 1;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_2750/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/, 0);
+  v3 = LocalizationManager__Get((System_String_o *)StringLiteral_2752/*"BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE"*/, 0);
   svtData = this->fields.svtData;
   if ( !svtData )
-    sub_1C6BC60(v3, v4);
+    sub_1C71608(v3, v4);
   v6 = v3;
   ServantShortName = (Il2CppObject *)BattleServantData__getServantShortName(svtData, 0);
   return System_String__Format(v6, ServantShortName, 0);
@@ -248,10 +276,10 @@ int32_t SelectTdCommandTypeController__GetNowCommandTypeId(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v9; // 0:x0.16
 
   v2 = this;
-  if ( (byte_4CB9C84 & 1) == 0 )
+  if ( (byte_4CCADD6 & 1) == 0 )
   {
-    this = (SelectTdCommandTypeController_o *)sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CB9C84 = 1;
+    this = (SelectTdCommandTypeController_o *)sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4CCADD6 = 1;
   }
   svtData = v2->fields.svtData;
   if ( !svtData )
@@ -271,7 +299,7 @@ int32_t SelectTdCommandTypeController__GetNowCommandTypeId(
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
     *(_QWORD *)&v9.fields.currentCryptoKey = v6;
     *(_QWORD *)&v9.fields.fakeValue = v5;
-    this = (SelectTdCommandTypeController_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49233020(v9, 0);
+    this = (SelectTdCommandTypeController_o *)CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v9, 0);
     v7 = v2->fields.svtData;
     if ( v7 )
     {
@@ -286,7 +314,7 @@ int32_t SelectTdCommandTypeController__GetNowCommandTypeId(
       }
     }
 LABEL_16:
-    sub_1C6BC60(this, svtData);
+    sub_1C71608(this, svtData);
   }
   this = (SelectTdCommandTypeController_o *)svtData->fields.buffData;
   if ( !this )
@@ -316,40 +344,40 @@ int32_t SelectTdCommandTypeController__GetNowSelectingCommandIndex(
   System_Func_object__bool__o *v9; // x22
   struct SelectTreasureDeviceInfo_o *v10; // x8
 
-  if ( (byte_4CB9C7F & 1) == 0 )
+  if ( (byte_4CCADD1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Array_IndexOf_SelectTreasureDeviceInfo_TdChangeParam___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_SelectTreasureDeviceInfo_TdChangeParam___);
-    sub_1C6BA08(&System_Func_SelectTreasureDeviceInfo_TdChangeParam__bool__TypeInfo);
-    sub_1C6BA08(&Method_SelectTdCommandTypeController___c__DisplayClass2_0__GetNowSelectingCommandIndex_b__0__);
-    sub_1C6BA08(&SelectTdCommandTypeController___c__DisplayClass2_0_TypeInfo);
-    byte_4CB9C7F = 1;
+    sub_1C713B0(&Method_System_Array_IndexOf_SelectTreasureDeviceInfo_TdChangeParam___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_SelectTreasureDeviceInfo_TdChangeParam___);
+    sub_1C713B0(&System_Func_SelectTreasureDeviceInfo_TdChangeParam__bool__TypeInfo);
+    sub_1C713B0(&Method_SelectTdCommandTypeController___c__DisplayClass2_0__GetNowSelectingCommandIndex_b__0__);
+    sub_1C713B0(&SelectTdCommandTypeController___c__DisplayClass2_0_TypeInfo);
+    byte_4CCADD1 = 1;
   }
-  v3 = sub_1C6BC54(SelectTdCommandTypeController___c__DisplayClass2_0_TypeInfo);
+  v3 = sub_1C715FC(SelectTdCommandTypeController___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   NowCommandTypeId = (Il2CppObject *)SelectTdCommandTypeController__GetNowCommandTypeId(this, v4);
   if ( !v3
     || (*(_DWORD *)(v3 + 16) = (_DWORD)NowCommandTypeId,
         (SelectTreasureDeviceInfo_k__BackingField = this->fields._SelectTreasureDeviceInfo_k__BackingField) == 0)
     || (treasureDevices = (System_Collections_Generic_IEnumerable_TSource__o *)SelectTreasureDeviceInfo_k__BackingField->fields.treasureDevices,
-        v9 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_SelectTreasureDeviceInfo_TdChangeParam__bool__TypeInfo),
+        v9 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_SelectTreasureDeviceInfo_TdChangeParam__bool__TypeInfo),
         System_Func_object__bool____ctor(
           v9,
           (Il2CppObject *)v3,
           Method_SelectTdCommandTypeController___c__DisplayClass2_0__GetNowSelectingCommandIndex_b__0__,
           0),
-        NowCommandTypeId = System_Linq_Enumerable__FirstOrDefault_object__51793644(
+        NowCommandTypeId = System_Linq_Enumerable__FirstOrDefault_object__51858576(
                              treasureDevices,
                              (System_Func_TSource__bool__o *)v9,
-                             (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_SelectTreasureDeviceInfo_TdChangeParam___),
+                             (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_SelectTreasureDeviceInfo_TdChangeParam___),
         (v10 = this->fields._SelectTreasureDeviceInfo_k__BackingField) == 0) )
   {
-    sub_1C6BC60(NowCommandTypeId, v6);
+    sub_1C71608(NowCommandTypeId, v6);
   }
   return System_Array__IndexOf_object_(
            (System_Object_array *)v10->fields.treasureDevices,
            NowCommandTypeId,
-           (const MethodInfo_3243314 *)Method_System_Array_IndexOf_SelectTreasureDeviceInfo_TdChangeParam___);
+           (const MethodInfo_32530B8 *)Method_System_Array_IndexOf_SelectTreasureDeviceInfo_TdChangeParam___);
 }
 
 
@@ -363,10 +391,10 @@ UnityEngine_Vector3_o SelectTdCommandTypeController__GetNowTypeFrameOffset(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -392,26 +420,26 @@ SelectTreasureDeviceInfo_o *SelectTdCommandTypeController__MakeSelectTreasureDev
   System_Object_array *v9; // x19
   SelectTreasureDeviceInfo_o *v10; // x20
 
-  if ( (byte_4CB9C82 & 1) == 0 )
+  if ( (byte_4CCADD4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_int__SelectTreasureDeviceInfo_TdChangeParam___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_SelectTreasureDeviceInfo_TdChangeParam___);
-    sub_1C6BA08(&System_Func_int__SelectTreasureDeviceInfo_TdChangeParam__TypeInfo);
-    sub_1C6BA08(&SelectTreasureDeviceInfo_TypeInfo);
-    sub_1C6BA08(&Method_SelectTdCommandTypeController___c__DisplayClass6_0__MakeSelectTreasureDeviceInfo_b__0__);
-    sub_1C6BA08(&SelectTdCommandTypeController___c__DisplayClass6_0_TypeInfo);
-    byte_4CB9C82 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_Select_int__SelectTreasureDeviceInfo_TdChangeParam___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_SelectTreasureDeviceInfo_TdChangeParam___);
+    sub_1C713B0(&System_Func_int__SelectTreasureDeviceInfo_TdChangeParam__TypeInfo);
+    sub_1C713B0(&SelectTreasureDeviceInfo_TypeInfo);
+    sub_1C713B0(&Method_SelectTdCommandTypeController___c__DisplayClass6_0__MakeSelectTreasureDeviceInfo_b__0__);
+    sub_1C713B0(&SelectTdCommandTypeController___c__DisplayClass6_0_TypeInfo);
+    byte_4CCADD4 = 1;
   }
-  v3 = sub_1C6BC54(SelectTdCommandTypeController___c__DisplayClass6_0_TypeInfo);
+  v3 = sub_1C715FC(SelectTdCommandTypeController___c__DisplayClass6_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   svtData = this->fields.svtData;
   if ( !svtData || (svtData = (BattleServantData_o *)BattleServantData__getTreasureDvcId(svtData, 0, 0, 0), !v3) )
-    sub_1C6BC60(svtData, v4);
+    sub_1C71608(svtData, v4);
   *(_DWORD *)(v3 + 16) = (_DWORD)svtData;
   CommandTypeArray = (System_Collections_Generic_IEnumerable_TSource__o *)SelectTdCommandTypeController__GetCommandTypeArray(
                                                                             this,
                                                                             v4);
-  v7 = (System_Func_T__TResult__o *)sub_1C6BC54(System_Func_int__SelectTreasureDeviceInfo_TdChangeParam__TypeInfo);
+  v7 = (System_Func_T__TResult__o *)sub_1C715FC(System_Func_int__SelectTreasureDeviceInfo_TdChangeParam__TypeInfo);
   System_Func_int__object____ctor(
     v7,
     (Il2CppObject *)v3,
@@ -420,12 +448,12 @@ SelectTreasureDeviceInfo_o *SelectTdCommandTypeController__MakeSelectTreasureDev
   v8 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
                                                               CommandTypeArray,
                                                               (System_Func_TSource__TResult__o *)v7,
-                                                              (const MethodInfo_316EE54 *)Method_System_Linq_Enumerable_Select_int__SelectTreasureDeviceInfo_TdChangeParam___);
+                                                              (const MethodInfo_317EBF8 *)Method_System_Linq_Enumerable_Select_int__SelectTreasureDeviceInfo_TdChangeParam___);
   v9 = System_Linq_Enumerable__ToArray_object_(
          v8,
-         (const MethodInfo_317B248 *)Method_System_Linq_Enumerable_ToArray_SelectTreasureDeviceInfo_TdChangeParam___);
-  v10 = (SelectTreasureDeviceInfo_o *)sub_1C6BC54(SelectTreasureDeviceInfo_TypeInfo);
-  SelectTreasureDeviceInfo___ctor_41944688(v10, (SelectTreasureDeviceInfo_TdChangeParam_array *)v9, 0);
+         (const MethodInfo_318AFEC *)Method_System_Linq_Enumerable_ToArray_SelectTreasureDeviceInfo_TdChangeParam___);
+  v10 = (SelectTreasureDeviceInfo_o *)sub_1C715FC(SelectTreasureDeviceInfo_TypeInfo);
+  SelectTreasureDeviceInfo___ctor_41987876(v10, (SelectTreasureDeviceInfo_TdChangeParam_array *)v9, 0);
   return v10;
 }
 
@@ -434,17 +462,29 @@ void SelectTdCommandTypeController___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB9C86 & 1) == 0 )
+  if ( (byte_4CCADD8 & 1) == 0 )
   {
-    sub_1C6BA08(&SelectTdCommandTypeController___c_TypeInfo);
-    byte_4CB9C86 = 1;
+    sub_1C713B0(&SelectTdCommandTypeController___c_TypeInfo);
+    byte_4CCADD8 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(SelectTdCommandTypeController___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(SelectTdCommandTypeController___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SelectTdCommandTypeController___c_TypeInfo->static_fields->__9 = (struct SelectTdCommandTypeController___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)SelectTdCommandTypeController___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)SelectTdCommandTypeController___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -477,7 +517,7 @@ bool SelectTdCommandTypeController___c__DisplayClass2_0___GetNowSelectingCommand
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields.type == this->fields.nowCommandTypeId;
 }
 
@@ -498,14 +538,14 @@ SelectTreasureDeviceInfo_TdChangeParam_o *SelectTdCommandTypeController___c__Dis
   int32_t tdId; // w20
   SelectTreasureDeviceInfo_TdChangeParam_o *v6; // x21
 
-  if ( (byte_4CB9C87 & 1) == 0 )
+  if ( (byte_4CCADD9 & 1) == 0 )
   {
-    sub_1C6BA08(&SelectTreasureDeviceInfo_TdChangeParam_TypeInfo);
-    byte_4CB9C87 = 1;
+    sub_1C713B0(&SelectTreasureDeviceInfo_TdChangeParam_TypeInfo);
+    byte_4CCADD9 = 1;
   }
   tdId = this->fields.tdId;
-  v6 = (SelectTreasureDeviceInfo_TdChangeParam_o *)sub_1C6BC54(SelectTreasureDeviceInfo_TdChangeParam_TypeInfo);
-  SelectTreasureDeviceInfo_TdChangeParam___ctor_41945108(v6, tdId, x, x, 0, 0);
+  v6 = (SelectTreasureDeviceInfo_TdChangeParam_o *)sub_1C715FC(SelectTreasureDeviceInfo_TdChangeParam_TypeInfo);
+  SelectTreasureDeviceInfo_TdChangeParam___ctor_41988296(v6, tdId, x, x, 0, 0);
   return v6;
 }
 
@@ -523,13 +563,13 @@ bool SelectTdCommandTypeController___c__DisplayClass7_0___GetCommandTypeArray_b_
         int32_t x,
         const MethodInfo *method)
 {
-  if ( (byte_4CB9C88 & 1) == 0 )
+  if ( (byte_4CCADDA & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Contains_int___);
-    byte_4CB9C88 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_Contains_int___);
+    byte_4CCADDA = 1;
   }
   return !System_Linq_Enumerable__Contains_int_(
             (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.excludeCardTypes,
             x,
-            (const MethodInfo_31583F4 *)Method_System_Linq_Enumerable_Contains_int___);
+            (const MethodInfo_3168198 *)Method_System_Linq_Enumerable_Contains_int___);
 }

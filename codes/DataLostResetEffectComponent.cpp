@@ -1,18 +1,22 @@
 void DataLostResetEffectComponent___ctor(DataLostResetEffectComponent_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  int32_t v5; // w1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v9; // w1
 
-  if ( (byte_4CB57B9 & 1) == 0 )
+  if ( (byte_4CC68DA & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB57B9 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC68DA = 1;
   }
   this->fields.whiteOutTime = 1.5;
   *(_QWORD *)&this->fields.bgmFadeOutTime = 0x40D000003FC00000LL;
-  v5 = StringLiteral_1/*""*/;
+  v9 = StringLiteral_1/*""*/;
   this->fields.whiteOutSe = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.whiteOutSe, v5, v2, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.whiteOutSe, v9, v2, v3, v4, v5, v6, v7);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }

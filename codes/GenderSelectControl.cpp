@@ -23,7 +23,7 @@ void GenderSelectControl__setEnableGenderImg(GenderSelectControl_o *this, bool i
 
   genderImg = (UnityEngine_Component_o *)this->fields.genderImg;
   if ( !genderImg || (genderImg = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(genderImg, 0)) == 0 )
-    sub_1C6BC60(genderImg, isShow);
+    sub_1C71608(genderImg, isShow);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)genderImg, isShow, 0);
 }
 

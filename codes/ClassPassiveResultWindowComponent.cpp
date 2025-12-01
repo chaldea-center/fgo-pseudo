@@ -1,9 +1,9 @@
 void ClassPassiveResultWindowComponent___ctor(ClassPassiveResultWindowComponent_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CBA380 & 1) == 0 )
+  if ( (byte_4CCB4D8 & 1) == 0 )
   {
-    sub_1C6BA08(&BaseDialog_TypeInfo);
-    byte_4CBA380 = 1;
+    sub_1C713B0(&BaseDialog_TypeInfo);
+    byte_4CCB4D8 = 1;
   }
   this->fields.skillChangeInfoAftPosY = -70.0;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -21,29 +21,33 @@ void ClassPassiveResultWindowComponent__CloseToNext(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  System_Action_o *v10; // x20
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  System_Action_o *v14; // x20
 
-  if ( (byte_4CBA37C & 1) == 0 )
+  if ( (byte_4CCB4D4 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_ClassPassiveResultWindowComponent___c__DisplayClass14_0__CloseToNext_b__0__);
-    sub_1C6BA08(&ClassPassiveResultWindowComponent___c__DisplayClass14_0_TypeInfo);
-    byte_4CBA37C = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_ClassPassiveResultWindowComponent___c__DisplayClass14_0__CloseToNext_b__0__);
+    sub_1C713B0(&ClassPassiveResultWindowComponent___c__DisplayClass14_0_TypeInfo);
+    byte_4CCB4D4 = 1;
   }
-  v5 = sub_1C6BC54(ClassPassiveResultWindowComponent___c__DisplayClass14_0_TypeInfo);
+  v5 = sub_1C715FC(ClassPassiveResultWindowComponent___c__DisplayClass14_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_QWORD *)(v5 + 16) = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)callback, v8, v9);
-  v10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)callback, v8, v9, v10, v11, v12, v13);
+  v14 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v10,
+    v14,
     (Il2CppObject *)v5,
     Method_ClassPassiveResultWindowComponent___c__DisplayClass14_0__CloseToNext_b__0__,
     0);
-  BaseDialog__SafeClose((BaseDialog_o *)this, v10, 0);
+  BaseDialog__SafeClose((BaseDialog_o *)this, v14, 0);
 }
 
 
@@ -64,16 +68,16 @@ ServantPassiveSkillEntity_o *ClassPassiveResultWindowComponent__GetAddedSvtPassi
   int64_t v13; // x24
   int32_t LimitCount; // w25
 
-  if ( (byte_4CBA37F & 1) == 0 )
+  if ( (byte_4CCB4D7 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantPassiveSkillMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    byte_4CBA37F = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantPassiveSkillMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    byte_4CCB4D7 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserServantCollectionMaster_o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = (UserServantCollectionMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( !uesrSvtEnt )
     goto LABEL_10;
   v6 = Master_object;
@@ -89,7 +93,7 @@ ServantPassiveSkillEntity_o *ClassPassiveResultWindowComponent__GetAddedSvtPassi
   if ( !Master_object )
     goto LABEL_10;
   FriendShipRank = UserServantCollectionEntity__getFriendShipRank((UserServantCollectionEntity_o *)Master_object, 0);
-  v9 = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantPassiveSkillMaster___);
+  v9 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantPassiveSkillMaster___);
   SvtId = UserServantEntity__getSvtId(uesrSvtEnt, 0);
   v11 = UserServantEntity__getUserId(uesrSvtEnt, 0);
   lv = uesrSvtEnt->fields.lv;
@@ -98,7 +102,7 @@ ServantPassiveSkillEntity_o *ClassPassiveResultWindowComponent__GetAddedSvtPassi
   Master_object = (UserServantCollectionMaster_o *)UserServantEntity__getDispLimitCount(uesrSvtEnt, 0, 0);
   if ( !v9 )
 LABEL_10:
-    sub_1C6BC60(Master_object, v5);
+    sub_1C71608(Master_object, v5);
   return ServantPassiveSkillMaster__getUseEntity(
            (ServantPassiveSkillMaster_o *)v9,
            SvtId,
@@ -110,6 +114,7 @@ LABEL_10:
            FriendShipRank,
            -1,
            1,
+           0,
            0,
            0);
 }
@@ -129,19 +134,19 @@ System_Int32_array *ClassPassiveResultWindowComponent__GetClassPassiveIds(
   ServantLimitAddEntity_o *v11; // [xsp+8h] [xbp-38h] BYREF
   Il2CppObject *entity; // [xsp+18h] [xbp-28h] BYREF
 
-  if ( (byte_4CBA37E & 1) == 0 )
+  if ( (byte_4CCB4D6 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    byte_4CBA37E = 1;
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantLimitAddMaster___);
+    sub_1C713B0(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    byte_4CCB4D6 = 1;
   }
   entity = 0;
   v11 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !uesrSvtEnt )
     goto LABEL_19;
   v6 = Master_object;
@@ -152,7 +157,7 @@ System_Int32_array *ClassPassiveResultWindowComponent__GetClassPassiveIds(
                                                                   v6,
                                                                   &entity,
                                                                   (int32_t)Master_object,
-                                                                  (const MethodInfo_33F9128 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                                                                  (const MethodInfo_3408ECC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) == 0 )
     return 0;
   if ( !entity )
@@ -160,7 +165,7 @@ System_Int32_array *ClassPassiveResultWindowComponent__GetClassPassiveIds(
   monitor = (System_Int32_array *)entity[10].monitor;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  v8 = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
+  v8 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitAddMaster___);
   SvtId = UserServantEntity__getSvtId(uesrSvtEnt, 0);
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)UserServantEntity__getDispLimitCount(uesrSvtEnt, 0, 0);
   if ( !v8 )
@@ -176,7 +181,7 @@ System_Int32_array *ClassPassiveResultWindowComponent__GetClassPassiveIds(
       if ( v11 )
         return ServantLimitAddEntity__GetOverwriteClassPassive(v11, monitor, 0);
 LABEL_19:
-      sub_1C6BC60(Master_object, v5);
+      sub_1C71608(Master_object, v5);
     }
   }
   return monitor;
@@ -193,93 +198,113 @@ void ClassPassiveResultWindowComponent__GetPassiveSkillInfo(
   BalanceConfig_c *v8; // x0
   System_Int32_array *v9; // x0
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  System_String_array *v12; // x0
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  System_String_array *v16; // x0
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
   Il2CppObject *Master_object; // x22
-  const MethodInfo *v16; // x2
+  const MethodInfo *v24; // x2
   System_Collections_ICollection_o *ClassPassiveIds; // x23
   Il2CppClass *IsNullOrEmpty; // x0
-  __int64 v19; // x1
+  __int64 v27; // x1
   void *monitor; // x8
-  __int64 v21; // x28
-  __int64 v22; // x26
-  unsigned __int64 v23; // x29
-  int32_t v24; // w24
-  System_Int32_array *v25; // x8
-  System_String_array *v26; // x24
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  __int64 v29; // x9
+  __int64 v29; // x28
+  __int64 v30; // x26
+  unsigned __int64 v31; // x29
+  int32_t v32; // w24
+  System_Int32_array *v33; // x8
+  System_String_array *v34; // x24
+  int32_t v35; // w2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  int32_t v38; // w5
+  int64_t v39; // x6
+  System_String_o *v40; // x7
+  __int64 v41; // x9
   ClassPassiveResultWindowComponent_o *SvtId; // x0
-  const MethodInfo *v31; // x2
-  BalanceConfig_c *v32; // x8
-  int v33; // w23
+  const MethodInfo *v43; // x2
+  BalanceConfig_c *v44; // x8
+  int v45; // w23
   ServantPassiveSkillEntity_o *AddedSvtPassiveSkillEnt; // x0
-  ServantPassiveSkillEntity_o *v35; // x21
-  System_Int32_array *v36; // x23
-  ClassPassiveResultWindowComponent___c_c *v37; // x0
+  ServantPassiveSkillEntity_o *v47; // x21
+  System_Int32_array *v48; // x23
+  ClassPassiveResultWindowComponent___c_c *v49; // x0
   System_Predicate_int__o *_9__15_0; // x24
-  Il2CppObject *v39; // x25
+  Il2CppObject *v51; // x25
   struct ClassPassiveResultWindowComponent___c_StaticFields *static_fields; // x0
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  unsigned int v43; // w23
-  System_Int32_array *v44; // x8
-  System_String_array *v45; // x19
-  int32_t v46; // w2
-  const MethodInfo *v47; // x3
-  Il2CppClass *v48; // x1
-  Il2CppClass **v49; // x0
-  SkillEntity_o *v50; // [xsp+0h] [xbp-70h] BYREF
+  int32_t v53; // w2
+  int32_t v54; // w3
+  System_String_o *v55; // x4
+  int32_t v56; // w5
+  int64_t v57; // x6
+  System_String_o *v58; // x7
+  unsigned int v59; // w23
+  System_Int32_array *v60; // x8
+  System_String_array *v61; // x19
+  int32_t v62; // w2
+  int32_t v63; // w3
+  System_String_o *v64; // x4
+  int32_t v65; // w5
+  int64_t v66; // x6
+  System_String_o *v67; // x7
+  Il2CppClass *v68; // x1
+  Il2CppClass **v69; // x0
+  SkillEntity_o *v70; // [xsp+0h] [xbp-70h] BYREF
   Il2CppObject *entity; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4CBA37D & 1) == 0 )
+  if ( (byte_4CCB4D5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Array_Fill_int___);
-    sub_1C6BA08(&Method_System_Array_Fill_string___);
-    sub_1C6BA08(&Method_System_Array_FindIndex_int___);
-    sub_1C6BA08(&BalanceConfig_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMaster_SkillMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&System_Predicate_int__TypeInfo);
-    sub_1C6BA08(&string___TypeInfo);
-    sub_1C6BA08(&string_TypeInfo);
-    sub_1C6BA08(&Method_ClassPassiveResultWindowComponent___c__GetPassiveSkillInfo_b__15_0__);
-    sub_1C6BA08(&ClassPassiveResultWindowComponent___c_TypeInfo);
-    byte_4CBA37D = 1;
+    sub_1C713B0(&Method_System_Array_Fill_int___);
+    sub_1C713B0(&Method_System_Array_Fill_string___);
+    sub_1C713B0(&Method_System_Array_FindIndex_int___);
+    sub_1C713B0(&BalanceConfig_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMaster_SkillMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&System_Predicate_int__TypeInfo);
+    sub_1C713B0(&string___TypeInfo);
+    sub_1C713B0(&string_TypeInfo);
+    sub_1C713B0(&Method_ClassPassiveResultWindowComponent___c__GetPassiveSkillInfo_b__15_0__);
+    sub_1C713B0(&ClassPassiveResultWindowComponent___c_TypeInfo);
+    byte_4CCB4D5 = 1;
   }
   v8 = BalanceConfig_TypeInfo;
-  v50 = 0;
+  v70 = 0;
   entity = 0;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v8 = BalanceConfig_TypeInfo;
   }
-  v9 = (System_Int32_array *)sub_1C6BAB0(int___TypeInfo, (unsigned int)v8->static_fields->SvtPassiveSkillListMax);
+  v9 = (System_Int32_array *)sub_1C71458(int___TypeInfo, (unsigned int)v8->static_fields->SvtPassiveSkillListMax);
   *skillIds = v9;
-  sub_1C6B9AC((CGThumbnailListItem_o *)skillIds, (int32_t)v9, v10, v11);
-  v12 = (System_String_array *)sub_1C6BAB0(
+  sub_1C71354((GrandQuestFolderBoardItem_o *)skillIds, (int32_t)v9, v10, v11, v12, v13, v14, v15);
+  v16 = (System_String_array *)sub_1C71458(
                                  string___TypeInfo,
                                  (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtPassiveSkillListMax);
-  *skillNames = v12;
-  sub_1C6B9AC((CGThumbnailListItem_o *)skillNames, (int32_t)v12, v13, v14);
-  System_Array__Fill_int_(*skillIds, 0, (const MethodInfo_3240AA8 *)Method_System_Array_Fill_int___);
+  *skillNames = v16;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)skillNames, (int32_t)v16, v17, v18, v19, v20, v21, v22);
+  System_Array__Fill_int_(*skillIds, 0, (const MethodInfo_325084C *)Method_System_Array_Fill_int___);
   System_Array__Fill_object_(
     (System_Object_array *)*skillNames,
     (Il2CppObject *)string_TypeInfo->static_fields->Empty,
-    (const MethodInfo_3240B38 *)Method_System_Array_Fill_string___);
+    (const MethodInfo_32508DC *)Method_System_Array_Fill_string___);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_SkillMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_SkillMaster___);
   ClassPassiveIds = (System_Collections_ICollection_o *)ClassPassiveResultWindowComponent__GetClassPassiveIds(
                                                           (ClassPassiveResultWindowComponent_o *)Master_object,
                                                           uesrSvtEnt,
-                                                          v16);
+                                                          v24);
   IsNullOrEmpty = (Il2CppClass *)BasicHelper__IsNullOrEmpty(ClassPassiveIds, 0);
   if ( ((unsigned __int8)IsNullOrEmpty & 1) == 0 )
   {
@@ -288,130 +313,146 @@ void ClassPassiveResultWindowComponent__GetPassiveSkillInfo(
     monitor = ClassPassiveIds[1].monitor;
     if ( (int)monitor >= 1 )
     {
-      v21 = 8;
-      v22 = 32;
+      v29 = 8;
+      v30 = 32;
       while ( 1 )
       {
-        v23 = v21 - 8;
-        if ( v21 - 8 >= (unsigned __int64)(unsigned int)monitor )
+        v31 = v29 - 8;
+        if ( v29 - 8 >= (unsigned __int64)(unsigned int)monitor )
           break;
         if ( !Master_object )
           goto LABEL_42;
-        v24 = *((_DWORD *)&ClassPassiveIds->klass + v21);
+        v32 = *((_DWORD *)&ClassPassiveIds->klass + v29);
         IsNullOrEmpty = (Il2CppClass *)DataMasterBase_object__object__int___TryGetEntity(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                          &entity,
-                                         v24,
-                                         (const MethodInfo_33F9128 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
+                                         v32,
+                                         (const MethodInfo_3408ECC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__);
         if ( ((unsigned __int8)IsNullOrEmpty & 1) != 0 )
         {
-          v25 = *skillIds;
+          v33 = *skillIds;
           if ( !*skillIds )
             goto LABEL_42;
-          if ( v23 >= LODWORD(v25->max_length) )
+          if ( v31 >= LODWORD(v33->max_length) )
             break;
-          *((_DWORD *)&v25->obj.klass + v21) = v24;
+          *((_DWORD *)&v33->obj.klass + v29) = v32;
           IsNullOrEmpty = (Il2CppClass *)entity;
           if ( !entity )
             goto LABEL_42;
-          v26 = *skillNames;
+          v34 = *skillNames;
           IsNullOrEmpty = (Il2CppClass *)SkillEntity__getName((SkillEntity_o *)entity, 0);
-          if ( !v26 )
+          if ( !v34 )
             goto LABEL_42;
-          if ( v23 >= LODWORD(v26->max_length) )
+          if ( v31 >= LODWORD(v34->max_length) )
             break;
-          *(Il2CppClass **)((char *)&v26->obj.klass + v22) = IsNullOrEmpty;
-          sub_1C6B9AC((CGThumbnailListItem_o *)((char *)v26 + v22), (int32_t)IsNullOrEmpty, v27, v28);
+          *(Il2CppClass **)((char *)&v34->obj.klass + v30) = IsNullOrEmpty;
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)((char *)v34 + v30),
+            (int32_t)IsNullOrEmpty,
+            v35,
+            v36,
+            v37,
+            v38,
+            v39,
+            v40);
         }
         LODWORD(monitor) = ClassPassiveIds[1].monitor;
-        v29 = v21 - 7;
-        ++v21;
-        v22 += 8;
-        if ( v29 >= (int)monitor )
+        v41 = v29 - 7;
+        ++v29;
+        v30 += 8;
+        if ( v41 >= (int)monitor )
           goto LABEL_21;
       }
 LABEL_43:
-      sub_1C6BC68(IsNullOrEmpty);
+      sub_1C71610(IsNullOrEmpty);
     }
   }
 LABEL_21:
   if ( !uesrSvtEnt )
     goto LABEL_42;
   SvtId = (ClassPassiveResultWindowComponent_o *)UserServantEntity__getSvtId(uesrSvtEnt, 0);
-  v32 = BalanceConfig_TypeInfo;
-  v33 = (int)SvtId;
+  v44 = BalanceConfig_TypeInfo;
+  v45 = (int)SvtId;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
-    v32 = BalanceConfig_TypeInfo;
+    v44 = BalanceConfig_TypeInfo;
   }
-  if ( v33 != v32->static_fields->ServantIdMashu1 )
+  if ( v45 != v44->static_fields->ServantIdMashu1 )
     return;
-  AddedSvtPassiveSkillEnt = ClassPassiveResultWindowComponent__GetAddedSvtPassiveSkillEnt(SvtId, uesrSvtEnt, v31);
+  AddedSvtPassiveSkillEnt = ClassPassiveResultWindowComponent__GetAddedSvtPassiveSkillEnt(SvtId, uesrSvtEnt, v43);
   if ( !AddedSvtPassiveSkillEnt )
     return;
-  v35 = AddedSvtPassiveSkillEnt;
-  v36 = *skillIds;
-  v37 = ClassPassiveResultWindowComponent___c_TypeInfo;
+  v47 = AddedSvtPassiveSkillEnt;
+  v48 = *skillIds;
+  v49 = ClassPassiveResultWindowComponent___c_TypeInfo;
   if ( !ClassPassiveResultWindowComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ClassPassiveResultWindowComponent___c_TypeInfo);
-    v37 = ClassPassiveResultWindowComponent___c_TypeInfo;
+    v49 = ClassPassiveResultWindowComponent___c_TypeInfo;
   }
-  _9__15_0 = v37->static_fields->__9__15_0;
+  _9__15_0 = v49->static_fields->__9__15_0;
   if ( !_9__15_0 )
   {
-    if ( !v37->_2.cctor_finished )
+    if ( !v49->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v37);
-      v37 = ClassPassiveResultWindowComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v49);
+      v49 = ClassPassiveResultWindowComponent___c_TypeInfo;
     }
-    v39 = (Il2CppObject *)v37->static_fields->__9;
-    _9__15_0 = (System_Predicate_int__o *)sub_1C6BC54(System_Predicate_int__TypeInfo);
+    v51 = (Il2CppObject *)v49->static_fields->__9;
+    _9__15_0 = (System_Predicate_int__o *)sub_1C715FC(System_Predicate_int__TypeInfo);
     System_Predicate_int____ctor(
       _9__15_0,
-      v39,
+      v51,
       Method_ClassPassiveResultWindowComponent___c__GetPassiveSkillInfo_b__15_0__,
       0);
     static_fields = ClassPassiveResultWindowComponent___c_TypeInfo->static_fields;
     static_fields->__9__15_0 = _9__15_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__15_0, (int32_t)_9__15_0, v41, v42);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__15_0,
+      (int32_t)_9__15_0,
+      v53,
+      v54,
+      v55,
+      v56,
+      v57,
+      v58);
   }
   IsNullOrEmpty = (Il2CppClass *)System_Array__FindIndex_int_(
-                                   v36,
+                                   v48,
                                    (System_Predicate_T__o *)_9__15_0,
-                                   (const MethodInfo_3241CB8 *)Method_System_Array_FindIndex_int___);
+                                   (const MethodInfo_3251A5C *)Method_System_Array_FindIndex_int___);
   if ( ((unsigned int)IsNullOrEmpty & 0x80000000) != 0 )
     return;
   if ( !Master_object )
     goto LABEL_42;
-  v43 = (unsigned int)IsNullOrEmpty;
+  v59 = (unsigned int)IsNullOrEmpty;
   if ( !DataMasterBase_object__object__int___TryGetEntity(
           (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
-          (Il2CppObject **)&v50,
-          v35->fields.skillId,
-          (const MethodInfo_33F9128 *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
+          (Il2CppObject **)&v70,
+          v47->fields.skillId,
+          (const MethodInfo_3408ECC *)Method_DataMasterBase_SkillMaster__SkillEntity__int__TryGetEntity__) )
     return;
-  IsNullOrEmpty = (Il2CppClass *)v50;
-  if ( !v50 )
+  IsNullOrEmpty = (Il2CppClass *)v70;
+  if ( !v70 )
     goto LABEL_42;
-  v44 = *skillIds;
+  v60 = *skillIds;
   if ( !*skillIds )
     goto LABEL_42;
-  if ( v43 >= LODWORD(v44->max_length) )
+  if ( v59 >= LODWORD(v60->max_length) )
     goto LABEL_43;
-  v44->m_Items[v43] = v50->fields.id;
-  v45 = *skillNames;
+  v60->m_Items[v59] = v70->fields.id;
+  v61 = *skillNames;
   IsNullOrEmpty = (Il2CppClass *)SkillEntity__getName((SkillEntity_o *)IsNullOrEmpty, 0);
-  if ( !v45 )
+  if ( !v61 )
 LABEL_42:
-    sub_1C6BC60(IsNullOrEmpty, v19);
-  if ( v43 >= LODWORD(v45->max_length) )
+    sub_1C71608(IsNullOrEmpty, v27);
+  if ( v59 >= LODWORD(v61->max_length) )
     goto LABEL_43;
-  v48 = IsNullOrEmpty;
-  v49 = &v45->obj.klass + v43;
-  v49[4] = v48;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v49 + 4), (int32_t)v48, v46, v47);
+  v68 = IsNullOrEmpty;
+  v69 = &v61->obj.klass + v59;
+  v69[4] = v68;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v69 + 4), (int32_t)v68, v62, v63, v64, v65, v66, v67);
 }
 
 
@@ -451,18 +492,18 @@ void ClassPassiveResultWindowComponent__Open(
   System_String_array *skillNames; // [xsp+10h] [xbp-50h] BYREF
   System_Int32_array *skillIds; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4CBA37B & 1) == 0 )
+  if ( (byte_4CCB4D3 & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&Method_ClassPassiveResultWindowComponent_Open__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&string_TypeInfo);
-    sub_1C6BA08(&StringLiteral_20427/*"img_combine_arrow_sp"*/);
-    sub_1C6BA08(&StringLiteral_3828/*"COSTUME_CHANGE_CLASS_SKILL_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_20643/*"img_skillwindow_sp"*/);
-    sub_1C6BA08(&StringLiteral_2892/*"BEFORE_CHANGE_CLASS_SKILL_SUB_TITLE"*/);
-    sub_1C6BA08(&StringLiteral_1918/*"AFTER_CHANGE_CLASS_SKILL_SUB_TITLE"*/);
-    byte_4CBA37B = 1;
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&Method_ClassPassiveResultWindowComponent_Open__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&string_TypeInfo);
+    sub_1C713B0(&StringLiteral_20440/*"img_combine_arrow_sp"*/);
+    sub_1C713B0(&StringLiteral_3831/*"COSTUME_CHANGE_CLASS_SKILL_TITLE"*/);
+    sub_1C713B0(&StringLiteral_20656/*"img_skillwindow_sp"*/);
+    sub_1C713B0(&StringLiteral_2894/*"BEFORE_CHANGE_CLASS_SKILL_SUB_TITLE"*/);
+    sub_1C713B0(&StringLiteral_1920/*"AFTER_CHANGE_CLASS_SKILL_SUB_TITLE"*/);
+    byte_4CCB4D3 = 1;
   }
   skillNames = 0;
   skillIds = 0;
@@ -472,8 +513,8 @@ void ClassPassiveResultWindowComponent__Open(
     return;
   v11 = Method_ClassPassiveResultWindowComponent_Open__;
   if ( (*((_BYTE *)Method_ClassPassiveResultWindowComponent_Open__ + 83) & 2) != 0 )
-    v11 = (_QWORD *)sub_1C6BA20(Method_ClassPassiveResultWindowComponent_Open__);
-  v12 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v11, v11[4]);
+    v11 = (_QWORD *)sub_1C713C8(Method_ClassPassiveResultWindowComponent_Open__);
+  v12 = (System_Reflection_MethodBase_o *)sub_1C71394(v11, v11[4]);
   OverwriteAssetSoundName__PlaySystemSe(v12, 6, 0, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -482,14 +523,14 @@ void ClassPassiveResultWindowComponent__Open(
   windowBgSprite = this->fields.windowBgSprite;
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__SetDownloadCommonSprite(windowBgSprite, (System_String_o *)StringLiteral_20643/*"img_skillwindow_sp"*/, 0);
+  AtlasManager__SetDownloadCommonSprite(windowBgSprite, (System_String_o *)StringLiteral_20656/*"img_skillwindow_sp"*/, 0);
   AtlasManager__SetDownloadCommonSprite(
     this->fields.skillChangeInfoArrowSprite1,
-    (System_String_o *)StringLiteral_20427/*"img_combine_arrow_sp"*/,
+    (System_String_o *)StringLiteral_20440/*"img_combine_arrow_sp"*/,
     0);
   AtlasManager__SetDownloadCommonSprite(
     this->fields.skillChangeInfoArrowSprite2,
-    (System_String_o *)StringLiteral_20427/*"img_combine_arrow_sp"*/,
+    (System_String_o *)StringLiteral_20440/*"img_combine_arrow_sp"*/,
     0);
   gameObject = this->fields.skillChangeInfoBef;
   if ( !gameObject )
@@ -506,7 +547,7 @@ void ClassPassiveResultWindowComponent__Open(
     v17 = this->fields.skillChangeInfoTitle;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3828/*"COSTUME_CHANGE_CLASS_SKILL_TITLE"*/, 0);
+    v18 = LocalizationManager__Get((System_String_o *)StringLiteral_3831/*"COSTUME_CHANGE_CLASS_SKILL_TITLE"*/, 0);
     gameObject = (UnityEngine_GameObject_o *)System_String__Format(v18, (Il2CppObject *)svtCostumeEnt->fields.name, 0);
     if ( !v17 )
       goto LABEL_59;
@@ -525,7 +566,7 @@ void ClassPassiveResultWindowComponent__Open(
   skillChangeInfoSubTitleBef = this->fields.skillChangeInfoSubTitleBef;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2892/*"BEFORE_CHANGE_CLASS_SKILL_SUB_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_2894/*"BEFORE_CHANGE_CLASS_SKILL_SUB_TITLE"*/, 0);
   if ( !skillChangeInfoSubTitleBef )
     goto LABEL_59;
   UILabel__set_text(skillChangeInfoSubTitleBef, (System_String_o *)gameObject, 0);
@@ -573,14 +614,14 @@ void ClassPassiveResultWindowComponent__Open(
       goto LABEL_59;
     }
 LABEL_62:
-    sub_1C6BC68(gameObject);
+    sub_1C71610(gameObject);
   }
 LABEL_39:
   GameObjectExtensions__SetLocalPositionY(this->fields.skillChangeInfoAft, this->fields.skillChangeInfoAftPosY, 0);
   skillChangeInfoSubTitleAft = this->fields.skillChangeInfoSubTitleAft;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1918/*"AFTER_CHANGE_CLASS_SKILL_SUB_TITLE"*/, 0);
+  gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get((System_String_o *)StringLiteral_1920/*"AFTER_CHANGE_CLASS_SKILL_SUB_TITLE"*/, 0);
   if ( !skillChangeInfoSubTitleAft
     || (UILabel__set_text(skillChangeInfoSubTitleAft, (System_String_o *)gameObject, 0),
         ClassPassiveResultWindowComponent__GetPassiveSkillInfo(this, afterUesrSvtEnt, &v35, &v34, v28),
@@ -588,7 +629,7 @@ LABEL_39:
     || !v35 )
   {
 LABEL_59:
-    sub_1C6BC60(gameObject, v14);
+    sub_1C71608(gameObject, v14);
   }
   if ( SLODWORD(afterSkillDatas->max_length) >= SLODWORD(v35->max_length) )
     v30 = v35->max_length;
@@ -646,23 +687,31 @@ void ClassPassiveResultWindowComponent__ValidateSerializedField(
   Il2CppObject *v6; // x22
   struct ClassPassiveResultWindowComponent___c_StaticFields *static_fields; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  ClassPassiveResultWindowComponent___c_c *v10; // x0
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  ClassPassiveResultWindowComponent___c_c *v14; // x0
   System_Collections_Generic_IEnumerable_T__o *afterSkillDatas; // x19
   System_Action_object__o *_9__12_1; // x20
-  Il2CppObject *v13; // x21
-  struct ClassPassiveResultWindowComponent___c_StaticFields *v14; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  Il2CppObject *v17; // x21
+  struct ClassPassiveResultWindowComponent___c_StaticFields *v18; // x0
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
 
-  if ( (byte_4CBA37A & 1) == 0 )
+  if ( (byte_4CCB4D2 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_ClassPassiveResultWindowComponent_SkillData__TypeInfo);
-    sub_1C6BA08(&Method_BasicHelper_ForEach_ClassPassiveResultWindowComponent_SkillData___);
-    sub_1C6BA08(&Method_ClassPassiveResultWindowComponent___c__ValidateSerializedField_b__12_0__);
-    sub_1C6BA08(&Method_ClassPassiveResultWindowComponent___c__ValidateSerializedField_b__12_1__);
-    sub_1C6BA08(&ClassPassiveResultWindowComponent___c_TypeInfo);
-    byte_4CBA37A = 1;
+    sub_1C713B0(&System_Action_ClassPassiveResultWindowComponent_SkillData__TypeInfo);
+    sub_1C713B0(&Method_BasicHelper_ForEach_ClassPassiveResultWindowComponent_SkillData___);
+    sub_1C713B0(&Method_ClassPassiveResultWindowComponent___c__ValidateSerializedField_b__12_0__);
+    sub_1C713B0(&Method_ClassPassiveResultWindowComponent___c__ValidateSerializedField_b__12_1__);
+    sub_1C713B0(&ClassPassiveResultWindowComponent___c_TypeInfo);
+    byte_4CCB4D2 = 1;
   }
   v3 = ClassPassiveResultWindowComponent___c_TypeInfo;
   beforeSkillDatas = (System_Collections_Generic_IEnumerable_T__o *)this->fields.beforeSkillDatas;
@@ -680,7 +729,7 @@ void ClassPassiveResultWindowComponent__ValidateSerializedField(
       v3 = ClassPassiveResultWindowComponent___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__12_0 = (System_Action_object__o *)sub_1C6BC54(System_Action_ClassPassiveResultWindowComponent_SkillData__TypeInfo);
+    _9__12_0 = (System_Action_object__o *)sub_1C715FC(System_Action_ClassPassiveResultWindowComponent_SkillData__TypeInfo);
     System_Action_object____ctor(
       _9__12_0,
       v6,
@@ -688,42 +737,42 @@ void ClassPassiveResultWindowComponent__ValidateSerializedField(
       0);
     static_fields = ClassPassiveResultWindowComponent___c_TypeInfo->static_fields;
     static_fields->__9__12_0 = (struct System_Action_ClassPassiveResultWindowComponent_SkillData__o *)_9__12_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__12_0, (int32_t)_9__12_0, v8, v9, v10, v11, v12, v13);
   }
   BasicHelper__ForEach_object_(
     beforeSkillDatas,
     (System_Action_T__o *)_9__12_0,
-    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_ClassPassiveResultWindowComponent_SkillData___);
-  v10 = ClassPassiveResultWindowComponent___c_TypeInfo;
+    (const MethodInfo_3136DF4 *)Method_BasicHelper_ForEach_ClassPassiveResultWindowComponent_SkillData___);
+  v14 = ClassPassiveResultWindowComponent___c_TypeInfo;
   afterSkillDatas = (System_Collections_Generic_IEnumerable_T__o *)this->fields.afterSkillDatas;
   if ( !ClassPassiveResultWindowComponent___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(ClassPassiveResultWindowComponent___c_TypeInfo);
-    v10 = ClassPassiveResultWindowComponent___c_TypeInfo;
+    v14 = ClassPassiveResultWindowComponent___c_TypeInfo;
   }
-  _9__12_1 = (System_Action_object__o *)v10->static_fields->__9__12_1;
+  _9__12_1 = (System_Action_object__o *)v14->static_fields->__9__12_1;
   if ( !_9__12_1 )
   {
-    if ( !v10->_2.cctor_finished )
+    if ( !v14->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v10);
-      v10 = ClassPassiveResultWindowComponent___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v14);
+      v14 = ClassPassiveResultWindowComponent___c_TypeInfo;
     }
-    v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__12_1 = (System_Action_object__o *)sub_1C6BC54(System_Action_ClassPassiveResultWindowComponent_SkillData__TypeInfo);
+    v17 = (Il2CppObject *)v14->static_fields->__9;
+    _9__12_1 = (System_Action_object__o *)sub_1C715FC(System_Action_ClassPassiveResultWindowComponent_SkillData__TypeInfo);
     System_Action_object____ctor(
       _9__12_1,
-      v13,
+      v17,
       Method_ClassPassiveResultWindowComponent___c__ValidateSerializedField_b__12_1__,
       0);
-    v14 = ClassPassiveResultWindowComponent___c_TypeInfo->static_fields;
-    v14->__9__12_1 = (struct System_Action_ClassPassiveResultWindowComponent_SkillData__o *)_9__12_1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v14->__9__12_1, (int32_t)_9__12_1, v15, v16);
+    v18 = ClassPassiveResultWindowComponent___c_TypeInfo->static_fields;
+    v18->__9__12_1 = (struct System_Action_ClassPassiveResultWindowComponent_SkillData__o *)_9__12_1;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v18->__9__12_1, (int32_t)_9__12_1, v19, v20, v21, v22, v23, v24);
   }
   BasicHelper__ForEach_object_(
     afterSkillDatas,
     (System_Action_T__o *)_9__12_1,
-    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_ClassPassiveResultWindowComponent_SkillData___);
+    (const MethodInfo_3136DF4 *)Method_BasicHelper_ForEach_ClassPassiveResultWindowComponent_SkillData___);
 }
 
 
@@ -747,21 +796,29 @@ void ClassPassiveResultWindowComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CBA381 & 1) == 0 )
+  if ( (byte_4CCB4D9 & 1) == 0 )
   {
-    sub_1C6BA08(&ClassPassiveResultWindowComponent___c_TypeInfo);
-    byte_4CBA381 = 1;
+    sub_1C713B0(&ClassPassiveResultWindowComponent___c_TypeInfo);
+    byte_4CCB4D9 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(ClassPassiveResultWindowComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(ClassPassiveResultWindowComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ClassPassiveResultWindowComponent___c_TypeInfo->static_fields->__9 = (struct ClassPassiveResultWindowComponent___c_o *)v1;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)ClassPassiveResultWindowComponent___c_TypeInfo->static_fields,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)ClassPassiveResultWindowComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -788,7 +845,7 @@ void ClassPassiveResultWindowComponent___c___ValidateSerializedField_b__12_0(
         const MethodInfo *method)
 {
   if ( !d )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
 }
 
 
@@ -798,7 +855,7 @@ void ClassPassiveResultWindowComponent___c___ValidateSerializedField_b__12_1(
         const MethodInfo *method)
 {
   if ( !d )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
 }
 
 

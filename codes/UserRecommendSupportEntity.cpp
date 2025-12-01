@@ -2,85 +2,165 @@ void UserRecommendSupportEntity___ctor(UserRecommendSupportEntity_o *this, const
 {
   struct System_Int32_array *v3; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
-  ServantLeaderInfo_o *v6; // x20
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
+  ServantLeaderInfo_o *v10; // x20
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
 
-  if ( (byte_4CB722F & 1) == 0 )
+  if ( (byte_4CC8358 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&ServantLeaderInfo_TypeInfo);
-    byte_4CB722F = 1;
+    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&ServantLeaderInfo_TypeInfo);
+    byte_4CC8358 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.idx = 0;
   this->fields.questPhase = 0;
-  v3 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 0);
+  v3 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, 0);
   this->fields.adviceMessageIds = v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.adviceMessageIds, (int32_t)v3, v4, v5);
-  v6 = (ServantLeaderInfo_o *)sub_1C6BC54(ServantLeaderInfo_TypeInfo);
-  ServantLeaderInfo___ctor(v6, 0);
-  this->fields.userSvtLeaderInfo = v6;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.userSvtLeaderInfo, (int32_t)v6, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.adviceMessageIds, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (ServantLeaderInfo_o *)sub_1C715FC(ServantLeaderInfo_TypeInfo);
+  ServantLeaderInfo___ctor(v10, 0);
+  this->fields.userSvtLeaderInfo = v10;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.userSvtLeaderInfo,
+    (int32_t)v10,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
   this->fields._UserServantEntity_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField, 0, v9, v10);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
+    0,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField, 0, v11, v12);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
+    0,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27,
+    v28);
 }
 
 
-void UserRecommendSupportEntity___ctor_43367896(
+void UserRecommendSupportEntity___ctor_43412264(
         UserRecommendSupportEntity_o *this,
         int32_t index,
         const MethodInfo *method)
 {
   struct System_Int32_array *v5; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  ServantLeaderInfo_o *v8; // x20
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  ServantLeaderInfo_o *v12; // x20
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
+  int32_t v25; // w2
+  int32_t v26; // w3
+  System_String_o *v27; // x4
+  int32_t v28; // w5
+  int64_t v29; // x6
+  System_String_o *v30; // x7
 
-  if ( (byte_4CB7230 & 1) == 0 )
+  if ( (byte_4CC8359 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
-    sub_1C6BA08(&int___TypeInfo);
-    sub_1C6BA08(&ServantLeaderInfo_TypeInfo);
-    byte_4CB7230 = 1;
+    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
+    sub_1C713B0(&int___TypeInfo);
+    sub_1C713B0(&ServantLeaderInfo_TypeInfo);
+    byte_4CC8359 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
   this->fields.questId = 0;
   this->fields.questPhase = 0;
   this->fields.idx = index + 1;
-  v5 = (struct System_Int32_array *)sub_1C6BAB0(int___TypeInfo, 0);
+  v5 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, 0);
   this->fields.adviceMessageIds = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.adviceMessageIds, (int32_t)v5, v6, v7);
-  v8 = (ServantLeaderInfo_o *)sub_1C6BC54(ServantLeaderInfo_TypeInfo);
-  ServantLeaderInfo___ctor(v8, 0);
-  this->fields.userSvtLeaderInfo = v8;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.userSvtLeaderInfo, (int32_t)v8, v9, v10);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.adviceMessageIds, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  v12 = (ServantLeaderInfo_o *)sub_1C715FC(ServantLeaderInfo_TypeInfo);
+  ServantLeaderInfo___ctor(v12, 0);
+  this->fields.userSvtLeaderInfo = v12;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.userSvtLeaderInfo,
+    (int32_t)v12,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
   this->fields._UserServantEntity_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField, 0, v11, v12);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
+    0,
+    v19,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField, 0, v13, v14);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
+    0,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29,
+    v30);
 }
 
 
-void UserRecommendSupportEntity___ctor_43368136(
+void UserRecommendSupportEntity___ctor_43412504(
         UserRecommendSupportEntity_o *this,
         UserRecommendSupportEntity_o *src,
         const MethodInfo *method)
@@ -88,64 +168,104 @@ void UserRecommendSupportEntity___ctor_43368136(
   __int64 v5; // x0
   __int64 v6; // x1
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
   struct UserServantEntity_o *UserServantEntity_k__BackingField; // x1
   struct UserRecommendSupportInfo_o *UserRecommendSupportInfo_k__BackingField; // x1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
   struct System_Int32_array *adviceMessageIds; // x1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x1
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
 
-  if ( (byte_4CB7231 & 1) == 0 )
+  if ( (byte_4CC835A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_string___ctor__);
-    byte_4CB7231 = 1;
+    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
+    byte_4CC835A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_33F6C70 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
   if ( !src )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   UserServantEntity_k__BackingField = src->fields._UserServantEntity_k__BackingField;
   this->fields._UserServantEntity_k__BackingField = UserServantEntity_k__BackingField;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
     (int32_t)UserServantEntity_k__BackingField,
     v7,
-    v8);
-  UserRecommendSupportInfo_k__BackingField = src->fields._UserRecommendSupportInfo_k__BackingField;
-  this->fields._UserRecommendSupportInfo_k__BackingField = UserRecommendSupportInfo_k__BackingField;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
-    (int32_t)UserRecommendSupportInfo_k__BackingField,
+    v8,
+    v9,
+    v10,
     v11,
     v12);
+  UserRecommendSupportInfo_k__BackingField = src->fields._UserRecommendSupportInfo_k__BackingField;
+  this->fields._UserRecommendSupportInfo_k__BackingField = UserRecommendSupportInfo_k__BackingField;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
+    (int32_t)UserRecommendSupportInfo_k__BackingField,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
   *(_QWORD *)&this->fields.idx = *(_QWORD *)&src->fields.idx;
   this->fields.questPhase = src->fields.questPhase;
   adviceMessageIds = src->fields.adviceMessageIds;
   this->fields.adviceMessageIds = adviceMessageIds;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.adviceMessageIds, (int32_t)adviceMessageIds, v14, v15);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.adviceMessageIds,
+    (int32_t)adviceMessageIds,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26,
+    v27);
   userSvtLeaderInfo = src->fields.userSvtLeaderInfo;
   this->fields.userSvtLeaderInfo = userSvtLeaderInfo;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.userSvtLeaderInfo, (int32_t)userSvtLeaderInfo, v17, v18);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.userSvtLeaderInfo,
+    (int32_t)userSvtLeaderInfo,
+    v29,
+    v30,
+    v31,
+    v32,
+    v33,
+    v34);
 }
 
 
 System_String_o *UserRecommendSupportEntity__CreatePK(int64_t userId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4CB722E & 1) == 0 )
+  if ( (byte_4CC8357 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4CB722E = 1;
+    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4CC8357 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            idx,
-           (const MethodInfo_31395F8 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_314939C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -161,7 +281,7 @@ System_String_o *UserRecommendSupportEntity__CreatePrimaryKey(
 
 int64_t UserRecommendSupportEntity__GetEquipUserSvtId(UserRecommendSupportEntity_o *this, const MethodInfo *method)
 {
-  const MethodInfo_392A934 *v2; // x3
+  const MethodInfo_393A6D8 *v2; // x3
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x8
   struct EquipTargetInfo_o *equipTarget1; // x8
   __int128 v6; // q0
@@ -180,13 +300,13 @@ int64_t UserRecommendSupportEntity__GetEquipUserSvtId(UserRecommendSupportEntity
   System_Nullable_T__o v20; // 0:x0.16
 
   v19 = *(_QWORD *)(_ReadStatusReg(TPIDR_EL0) + 40);
-  if ( (byte_4CB7232 & 1) == 0 )
+  if ( (byte_4CC835B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Nullable_ObscuredLong__GetValueOrDefault__);
-    sub_1C6BA08(&Method_System_Nullable_ObscuredLong___ctor__);
-    sub_1C6BA08(&Method_System_Nullable_ObscuredLong__get_HasValue__);
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4CB7232 = 1;
+    sub_1C713B0(&Method_System_Nullable_ObscuredLong__GetValueOrDefault__);
+    sub_1C713B0(&Method_System_Nullable_ObscuredLong___ctor__);
+    sub_1C713B0(&Method_System_Nullable_ObscuredLong__get_HasValue__);
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4CC835B = 1;
   }
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
   if ( userSvtLeaderInfo && (equipTarget1 = userSvtLeaderInfo->fields.equipTarget1) != 0 )
@@ -233,7 +353,7 @@ LABEL_11:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v12 = v16;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v12, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v12, 0);
 }
 
 
@@ -263,12 +383,24 @@ void UserRecommendSupportEntity__SetAdviceMessage(
         System_Int32_array *ids,
         const MethodInfo *method)
 {
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct System_Int32_array **p_adviceMessageIds; // x0
 
   this->fields.adviceMessageIds = ids;
   p_adviceMessageIds = &this->fields.adviceMessageIds;
   *((_DWORD *)p_adviceMessageIds - 4) = index + 1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_adviceMessageIds, (int32_t)ids, (int32_t)ids, method);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)p_adviceMessageIds,
+    (int32_t)ids,
+    (int32_t)ids,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -291,50 +423,70 @@ void UserRecommendSupportEntity__SetUserServantEntity(
         UserServantEntity_o *entity,
         const MethodInfo *method)
 {
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int64_t v9; // x0
-  __int64 v10; // x1
-  __int128 v11; // q1
-  __int128 v12; // q0
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  int64_t v17; // x0
+  __int64 v18; // x1
+  __int128 v19; // q1
+  __int128 v20; // q0
   struct ServantLeaderInfo_o *userSvtLeaderInfo; // x21
-  struct ServantLeaderInfo_o *v14; // x8
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v15; // [xsp+10h] [xbp-90h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v16; // [xsp+30h] [xbp-70h] BYREF
-  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v17; // [xsp+50h] [xbp-50h]
+  struct ServantLeaderInfo_o *v22; // x8
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+10h] [xbp-90h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v24; // [xsp+30h] [xbp-70h] BYREF
+  CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v25; // [xsp+50h] [xbp-50h]
 
-  if ( (byte_4CB7233 & 1) == 0 )
+  if ( (byte_4CC835C & 1) == 0 )
   {
-    sub_1C6BA08(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4CB7233 = 1;
+    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4CC835C = 1;
   }
   this->fields._UserServantEntity_k__BackingField = entity;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
     (int32_t)entity,
     (int32_t)entity,
-    method);
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields._UserRecommendSupportInfo_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField, 0, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
+    0,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
   if ( !entity )
     goto LABEL_9;
-  v11 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
-  *(_OWORD *)&v17.fields.currentCryptoKey = *(_OWORD *)&entity->fields.userId.fields.currentCryptoKey;
-  *(_OWORD *)&v17.fields.fakeValue = v11;
+  v19 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
+  *(_OWORD *)&v25.fields.currentCryptoKey = *(_OWORD *)&entity->fields.userId.fields.currentCryptoKey;
+  *(_OWORD *)&v25.fields.fakeValue = v19;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-  v16 = v17;
-  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v16, 0);
+  v24 = v25;
+  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v24, 0);
   this->fields.idx = index + 1;
-  v12 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
+  v20 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
   userSvtLeaderInfo = this->fields.userSvtLeaderInfo;
-  *(_OWORD *)&v15.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
-  *(_OWORD *)&v15.fields.fakeValue = v12;
-  v9 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49236544(&v15, 0);
-  if ( !userSvtLeaderInfo || (userSvtLeaderInfo->fields.userSvtId = v9, (v14 = this->fields.userSvtLeaderInfo) == 0) )
+  *(_OWORD *)&v23.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
+  *(_OWORD *)&v23.fields.fakeValue = v20;
+  v17 = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v23, 0);
+  if ( !userSvtLeaderInfo || (userSvtLeaderInfo->fields.userSvtId = v17, (v22 = this->fields.userSvtLeaderInfo) == 0) )
 LABEL_9:
-    sub_1C6BC60(v9, v10);
-  v14->fields.svtId = entity->fields.svtId;
+    sub_1C71608(v17, v18);
+  v22->fields.svtId = entity->fields.svtId;
 }
 
 
@@ -359,14 +511,22 @@ void UserRecommendSupportEntity__set_UserRecommendSupportInfo(
         UserRecommendSupportInfo_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._UserRecommendSupportInfo_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserRecommendSupportInfo_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -375,12 +535,20 @@ void UserRecommendSupportEntity__set_UserServantEntity(
         UserServantEntity_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._UserServantEntity_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._UserServantEntity_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._UserServantEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

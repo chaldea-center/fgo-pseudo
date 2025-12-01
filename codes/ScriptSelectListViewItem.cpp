@@ -6,15 +6,23 @@ void ScriptSelectListViewItem___ctor(
         const MethodInfo *method)
 {
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
 
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   this->fields.message = message;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.message, (int32_t)message, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.message, (int32_t)message, v8, v9, v10, v11, v12, v13);
   this->fields.fontType = fontType;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.fontType, (int32_t)fontType, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.fontType, (int32_t)fontType, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -26,12 +34,12 @@ void ScriptSelectListViewItem__Finalize(ScriptSelectListViewItem_o *this, const 
 
 System_String_o *ScriptSelectListViewItem__ToString(ScriptSelectListViewItem_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB832B & 1) == 0 )
+  if ( (byte_4CC945E & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_21626/*"message "*/);
-    byte_4CB832B = 1;
+    sub_1C713B0(&StringLiteral_21641/*"message "*/);
+    byte_4CC945E = 1;
   }
-  return System_String__Concat_63966792((System_String_o *)StringLiteral_21626/*"message "*/, this->fields.message, 0);
+  return System_String__Concat_64031724((System_String_o *)StringLiteral_21641/*"message "*/, this->fields.message, 0);
 }
 
 

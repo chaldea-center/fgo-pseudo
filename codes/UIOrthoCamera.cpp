@@ -8,29 +8,37 @@ void UIOrthoCamera__Start(UIOrthoCamera_o *this, const MethodInfo *method)
 {
   Il2CppObject *Component_object; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
   struct UnityEngine_Transform_o *transform; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  __int64 v9; // x1
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  __int64 v17; // x1
   UnityEngine_Camera_o *mCam; // x0
 
-  if ( (byte_4CBAC4B & 1) == 0 )
+  if ( (byte_4CCBDA4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Camera___);
-    byte_4CBAC4B = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Camera___);
+    byte_4CCBDA4 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Camera___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
   this->fields.mCam = (struct UnityEngine_Camera_o *)Component_object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCam, (int32_t)Component_object, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mCam, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mTrans, (int32_t)transform, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12, v13, v14, v15, v16);
   mCam = this->fields.mCam;
   if ( !mCam )
-    sub_1C6BC60(0, v9);
+    sub_1C71608(0, v17);
   UnityEngine_Camera__set_orthographic(mCam, 1, 0);
 }
 
@@ -76,10 +84,10 @@ void UIOrthoCamera__Update(UIOrthoCamera_o *this, const MethodInfo *method)
   v9 = (float)((float)((float)((float)(m_Height + v6) * (float)v8) - (float)(m_YMin * (float)v5)) * 0.5)
      * lossyScale.fields.y;
   orthographicSize = UnityEngine_Camera__get_orthographicSize(mCam, 0);
-  if ( !byte_4CAFC0D )
+  if ( !byte_4CC0D0D )
   {
-    sub_1C6BA08(&UnityEngine_Mathf_TypeInfo);
-    byte_4CAFC0D = 1;
+    sub_1C713B0(&UnityEngine_Mathf_TypeInfo);
+    byte_4CC0D0D = 1;
   }
   v11 = fabsf(orthographicSize);
   v12 = fabsf(v9);
@@ -98,6 +106,6 @@ void UIOrthoCamera__Update(UIOrthoCamera_o *this, const MethodInfo *method)
       return;
     }
 LABEL_15:
-    sub_1C6BC60(mCam, method);
+    sub_1C71608(mCam, method);
   }
 }

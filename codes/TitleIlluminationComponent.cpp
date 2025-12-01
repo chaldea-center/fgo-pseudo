@@ -14,55 +14,65 @@ void TitleIlluminationComponent__Setup(
         TitleIlluminationManager_o *manager,
         const MethodInfo *method)
 {
-  int32_t v13; // w23
+  int64_t v7; // x6
+  System_String_o *v8; // x7
+  int32_t v15; // w23
   void *transform; // x0
-  __int64 v15; // x1
-  float v16; // s0 OVERLAPPED
-  float v17; // s1
-  int v18; // s2
-  UIWidget_o *v19; // x19
-  UnityEngine_Color_o v20; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  __int64 v17; // x1
+  float v18; // s0 OVERLAPPED
+  float v19; // s1
+  int v20; // s2
+  UIWidget_o *v21; // x19
+  UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB3AEB & 1) == 0 )
+  if ( (byte_4CC4C03 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    byte_4CB3AEB = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    byte_4CC4C03 = 1;
   }
   this->fields.IlluminationX = x;
   this->fields.IlluminationY = y;
   this->fields.lifetime = lifetime;
   this->fields.lifetimeMax = lifetime;
   this->fields.manager = manager;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.manager, (int32_t)manager, y, *(const MethodInfo **)&sz);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.manager,
+    (int32_t)manager,
+    y,
+    sz,
+    (System_String_o *)manager,
+    (int32_t)method,
+    v7,
+    v8);
   if ( sz >= 0 )
-    v13 = sz;
+    v15 = sz;
   else
-    v13 = sz + 1;
+    v15 = sz + 1;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
     goto LABEL_11;
-  v16 = (float)(sz * x);
+  v18 = (float)(sz * x);
   if ( (y & 1) == 0 )
-    v16 = v16 - (float)(v13 >> 1);
-  v17 = (float)((v13 >> 1) * y);
-  v18 = 0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&v16, 0);
+    v18 = v18 - (float)(v15 >> 1);
+  v19 = (float)((v15 >> 1) * y);
+  v20 = 0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, *(UnityEngine_Vector3_o *)&v18, 0);
   transform = UnityEngine_Component__GetComponent_object_(
                 (UnityEngine_Component_o *)this,
-                (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !transform )
 LABEL_11:
-    sub_1C6BC60(transform, v15);
-  v20.fields.r = *((float *)transform + 37);
-  v20.fields.g = *((float *)transform + 38);
-  v20.fields.b = *((float *)transform + 39);
-  v20.fields.a = 1.0;
-  v19 = (UIWidget_o *)transform;
-  UIWidget__set_color((UIWidget_o *)transform, v20, 0);
-  UIWidget__set_depth(v19, 1, 0);
-  ((void (__fastcall *)(UIWidget_o *, const MethodInfo *))v19->klass->vtable._30_MarkAsChanged.methodPtr)(
-    v19,
-    v19->klass->vtable._30_MarkAsChanged.method);
+    sub_1C71608(transform, v17);
+  v22.fields.r = *((float *)transform + 37);
+  v22.fields.g = *((float *)transform + 38);
+  v22.fields.b = *((float *)transform + 39);
+  v22.fields.a = 1.0;
+  v21 = (UIWidget_o *)transform;
+  UIWidget__set_color((UIWidget_o *)transform, v22, 0);
+  UIWidget__set_depth(v21, 1, 0);
+  ((void (__fastcall *)(UIWidget_o *, const MethodInfo *))v21->klass->vtable._30_MarkAsChanged.methodPtr)(
+    v21,
+    v21->klass->vtable._30_MarkAsChanged.method);
 }
 
 
@@ -82,17 +92,17 @@ void TitleIlluminationComponent__Update(TitleIlluminationComponent_o *this, cons
   long double v8; // q0
   long double v9; // q0
 
-  if ( (byte_4CB3AEC & 1) == 0 )
+  if ( (byte_4CC4C04 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UISprite___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB3AEC = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UISprite___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC4C04 = 1;
   }
   lifetime = this->fields.lifetime;
   this->fields.lifetime = lifetime - UnityEngine_Time__get_deltaTime(0);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UISprite___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UISprite___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   manager = (TitleIlluminationManager_o *)UnityEngine_Object__op_Equality(
@@ -132,6 +142,6 @@ LABEL_12:
         Component_object->klass->vtable[30].method);
       return;
     }
-    sub_1C6BC60(manager, v6);
+    sub_1C71608(manager, v6);
   }
 }

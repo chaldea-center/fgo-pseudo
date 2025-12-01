@@ -15,12 +15,20 @@ void CharaGraphListViewItemDraw__AssertionForSerializeField(
 void CharaGraphListViewItemDraw__Awake(CharaGraphListViewItemDraw_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct UISprite_o *maskSprite; // x8
   struct UIAtlas_o *mAtlas; // x1
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  struct UISprite_o *v9; // x8
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  struct UISprite_o *v17; // x8
   struct System_String_o *mSpriteName; // x1
 
   maskSprite = this->fields.maskSprite;
@@ -29,14 +37,30 @@ void CharaGraphListViewItemDraw__Awake(CharaGraphListViewItemDraw_o *this, const
   else
     mAtlas = 0;
   this->fields._DefaultMaskAtlas_k__BackingField = mAtlas;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField, (int32_t)mAtlas, v2, v3);
-  v9 = this->fields.maskSprite;
-  if ( v9 )
-    mSpriteName = v9->fields.mSpriteName;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField,
+    (int32_t)mAtlas,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+  v17 = this->fields.maskSprite;
+  if ( v17 )
+    mSpriteName = v17->fields.mSpriteName;
   else
     mSpriteName = 0;
   this->fields._DefaultMaskName_k__BackingField = mSpriteName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._DefaultMaskName_k__BackingField, (int32_t)mSpriteName, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._DefaultMaskName_k__BackingField,
+    (int32_t)mSpriteName,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
 }
 
 
@@ -223,14 +247,22 @@ void CharaGraphListViewItemDraw__set_DefaultMaskAtlas(
         UIAtlas_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._DefaultMaskAtlas_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._DefaultMaskAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -239,12 +271,20 @@ void CharaGraphListViewItemDraw__set_DefaultMaskName(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._DefaultMaskName_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._DefaultMaskName_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._DefaultMaskName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }

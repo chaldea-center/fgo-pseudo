@@ -10,13 +10,13 @@ void EventEquipSkillPartsAddPartsListViewItem___ctor(
   EventEquipSkillPartsAddPartsListViewItem_o *v11; // x23
 
   v11 = this;
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   v11->fields._SkillId_k__BackingField = skillId;
   v11->fields._Name_k__BackingField = name;
-  sub_1C6B9AC(&v11->fields._Name_k__BackingField, name);
+  sub_1C71354(&v11->fields._Name_k__BackingField, name);
   v11->fields._Detail_k__BackingField = detail;
   v11 = (EventEquipSkillPartsAddPartsListViewItem_o *)((char *)v11 + 136);
-  sub_1C6B9AC(v11, detail);
+  sub_1C71354(v11, detail);
   LOBYTE(v11->monitor) = isLast;
 }
 
@@ -59,7 +59,7 @@ void EventEquipSkillPartsAddPartsListViewItem__set_Detail(
         const MethodInfo *method)
 {
   this->fields._Detail_k__BackingField = value;
-  sub_1C6B9AC(&this->fields._Detail_k__BackingField, value);
+  sub_1C71354(&this->fields._Detail_k__BackingField, value);
 }
 
 
@@ -78,7 +78,7 @@ void EventEquipSkillPartsAddPartsListViewItem__set_Name(
         const MethodInfo *method)
 {
   this->fields._Name_k__BackingField = value;
-  sub_1C6B9AC(&this->fields._Name_k__BackingField, value);
+  sub_1C71354(&this->fields._Name_k__BackingField, value);
 }
 
 

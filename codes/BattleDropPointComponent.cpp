@@ -14,26 +14,47 @@ void BattleDropPointComponent__Initialize(
         bool isForceAppearance,
         const MethodInfo *method)
 {
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  System_String_o *v7; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  char v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   struct BattleDropPointAdjustSetting_o *Manager__LoadBattleDropPointAdjustSetting; // x0
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  const MethodInfo *v18; // x1
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  char v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  const MethodInfo *v27; // x1
 
-  if ( (byte_4CB8D46 & 1) == 0 )
+  if ( (byte_4CC9E81 & 1) == 0 )
   {
-    sub_1C6BA08(&ServantAssetLoadManager_TypeInfo);
-    byte_4CB8D46 = 1;
+    sub_1C713B0(&ServantAssetLoadManager_TypeInfo);
+    byte_4CC9E81 = 1;
   }
   this->fields.dropPointData = data;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.dropPointData,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.dropPointData,
     (int32_t)data,
     (int32_t)svtPosTr,
-    *(const MethodInfo **)&svtId);
+    svtId,
+    *(System_String_o **)&limitCount,
+    isForceAppearance,
+    (int64_t)method,
+    v7);
   this->fields.defaultPosTransform = svtPosTr;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultPosTransform, (int32_t)svtPosTr, v13, v14);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.defaultPosTransform,
+    (int32_t)svtPosTr,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18,
+    v19);
   if ( !ServantAssetLoadManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ServantAssetLoadManager_TypeInfo);
   Manager__LoadBattleDropPointAdjustSetting = ServantAssetLoadManager__LoadBattleDropPointAdjustSetting(
@@ -42,12 +63,16 @@ void BattleDropPointComponent__Initialize(
                                                 isForceAppearance,
                                                 0);
   this->fields.adjustSetting = Manager__LoadBattleDropPointAdjustSetting;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.adjustSetting,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.adjustSetting,
     (int32_t)Manager__LoadBattleDropPointAdjustSetting,
-    v16,
-    v17);
-  BattleDropPointComponent__ReAdjust(this, v18);
+    v21,
+    v22,
+    v23,
+    v24,
+    v25,
+    v26);
+  BattleDropPointComponent__ReAdjust(this, v27);
 }
 
 
@@ -66,10 +91,10 @@ void BattleDropPointComponent__ReAdjust(BattleDropPointComponent_o *this, const 
   struct BattleDropPointAdjustSetting_o *v13; // x10
   UnityEngine_Vector3_o v14; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB8D47 & 1) == 0 )
+  if ( (byte_4CC9E82 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB8D47 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC9E82 = 1;
   }
   adjustSetting = (UnityEngine_Object_o *)this->fields.adjustSetting;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -101,7 +126,7 @@ void BattleDropPointComponent__ReAdjust(BattleDropPointComponent_o *this, const 
         }
       }
 LABEL_20:
-      sub_1C6BC60(transform, v5);
+      sub_1C71608(transform, v5);
     }
   }
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
@@ -118,10 +143,10 @@ LABEL_20:
   UnityEngine_Transform__SetParent(v8, (UnityEngine_Transform_o *)transform, 0);
   transform = (__int64)UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   v9 = (UnityEngine_Transform_o *)transform;
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    transform = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    transform = sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   if ( !v9 )
     goto LABEL_20;

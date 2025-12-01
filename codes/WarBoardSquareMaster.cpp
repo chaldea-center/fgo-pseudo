@@ -1,14 +1,14 @@
 void WarBoardSquareMaster___ctor(WarBoardSquareMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB74E0 & 1) == 0 )
+  if ( (byte_4CC8609 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string___ctor__);
-    byte_4CB74E0 = 1;
+    sub_1C713B0(&Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string___ctor__);
+    byte_4CC8609 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     326,
-    (const MethodInfo_33FB870 *)Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string___ctor__);
+    (const MethodInfo_340B614 *)Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ WarBoardSquareEntity_o *WarBoardSquareMaster__GetEntity(
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CB74DE & 1) == 0 )
+  if ( (byte_4CC8607 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string__GetEntity__);
-    byte_4CB74DE = 1;
+    sub_1C713B0(&Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string__GetEntity__);
+    byte_4CC8607 = 1;
   }
   PK = (Il2CppObject *)WarBoardSquareEntity__CreatePK(warBoardId, squareIndex, *(const MethodInfo **)&squareIndex);
   return (WarBoardSquareEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                      (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                      PK,
-                                     (const MethodInfo_33FDB94 *)Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string__GetEntity__);
+                                     (const MethodInfo_340D938 *)Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string__GetEntity__);
 }
 
 
@@ -41,19 +41,23 @@ System_Collections_Generic_IEnumerable_WarBoardSquareEntity__o *WarBoardSquareMa
 {
   __int64 v5; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB74E1 & 1) == 0 )
+  if ( (byte_4CC860A & 1) == 0 )
   {
-    sub_1C6BA08(&WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_TypeInfo);
-    byte_4CB74E1 = 1;
+    sub_1C713B0(&WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_TypeInfo);
+    byte_4CC860A = 1;
   }
-  v5 = sub_1C6BC54(WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_TypeInfo);
+  v5 = sub_1C715FC(WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = -2;
   *(_DWORD *)(v5 + 32) = System_Environment__get_CurrentManagedThreadId(0);
   *(_QWORD *)(v5 + 40) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)this, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_DWORD *)(v5 + 52) = warBoardId;
   return (System_Collections_Generic_IEnumerable_WarBoardSquareEntity__o *)v5;
 }
@@ -69,17 +73,17 @@ bool WarBoardSquareMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CB74DF & 1) == 0 )
+  if ( (byte_4CC8608 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string__TryGetEntity__);
-    byte_4CB74DF = 1;
+    sub_1C713B0(&Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string__TryGetEntity__);
+    byte_4CC8608 = 1;
   }
   PK = (Il2CppObject *)WarBoardSquareEntity__CreatePK(warBoardId, squareIndex, *(const MethodInfo **)&warBoardId);
   return DataMasterBase_object__object__object___TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_33FDBE0 *)Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string__TryGetEntity__);
+           (const MethodInfo_340D984 *)Method_DataMasterBase_WarBoardSquareMaster__WarBoardSquareEntity__string__TryGetEntity__);
 }
 
 
@@ -103,16 +107,20 @@ bool WarBoardSquareMaster__GetWarBoardSquareEntities_d__3__MoveNext(
   struct WarBoardSquareMaster_o *_4__this; // x20
   Il2CppObject *Item; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
   bool result; // w0
-  CGThumbnailListItem_o *p__2__current; // x19
+  GrandQuestFolderBoardItem_o *p__2__current; // x19
 
   v2 = this;
-  if ( (byte_4CB74E2 & 1) == 0 )
+  if ( (byte_4CC860B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_WarBoardSquareEntity__get_Count__);
-    this = (WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_o *)sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_WarBoardSquareEntity__get_Item__);
-    byte_4CB74E2 = 1;
+    sub_1C713B0(&Method_System_Collections_ObjectModel_Collection_WarBoardSquareEntity__get_Count__);
+    this = (WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_o *)sub_1C713B0(&Method_System_Collections_ObjectModel_Collection_WarBoardSquareEntity__get_Item__);
+    byte_4CC860B = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
@@ -126,10 +134,10 @@ bool WarBoardSquareMaster__GetWarBoardSquareEntities_d__3__MoveNext(
     v2->fields.__1__state = -1;
     if ( !_4__this || (this = (WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_o *)_4__this->fields.list) == 0 )
 LABEL_17:
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     this = (WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_o *)System_Collections_ObjectModel_Collection_object___get_Count(
                                                                        (System_Collections_ObjectModel_Collection_T__o *)this,
-                                                                       (const MethodInfo_3391E64 *)Method_System_Collections_ObjectModel_Collection_WarBoardSquareEntity__get_Count__);
+                                                                       (const MethodInfo_33A1C08 *)Method_System_Collections_ObjectModel_Collection_WarBoardSquareEntity__get_Count__);
     method = 0;
     *(_QWORD *)&v2->fields._count_5__2 = (unsigned int)this;
     while ( (int)method < (int)this )
@@ -142,14 +150,14 @@ LABEL_17:
       Item = System_Collections_ObjectModel_Collection_object___get_Item(
                (System_Collections_ObjectModel_Collection_T__o *)this,
                (int32_t)method,
-               (const MethodInfo_3391EF4 *)Method_System_Collections_ObjectModel_Collection_WarBoardSquareEntity__get_Item__);
+               (const MethodInfo_33A1C98 *)Method_System_Collections_ObjectModel_Collection_WarBoardSquareEntity__get_Item__);
       if ( Item && LODWORD(Item[2].klass) == v2->fields.warBoardId )
       {
         v2->fields.__2__current = (struct WarBoardSquareEntity_o *)Item;
-        p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-        sub_1C6B9AC(p__2__current, (int32_t)Item, v6, v7);
+        p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
+        sub_1C71354(p__2__current, (int32_t)Item, v6, v7, v8, v9, v10, v11);
         result = 1;
-        LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+        LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
         return result;
       }
 LABEL_13:
@@ -170,13 +178,17 @@ System_Collections_Generic_IEnumerator_WarBoardSquareEntity__o *WarBoardSquareMa
   WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_o *v4; // x20
   struct WarBoardSquareMaster_o *_4__this; // x1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
   System_Collections_Generic_IEnumerator_WarBoardSquareEntity__o *result; // x0
 
-  if ( (byte_4CB74E3 & 1) == 0 )
+  if ( (byte_4CC860C & 1) == 0 )
   {
-    sub_1C6BA08(&WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_TypeInfo);
-    byte_4CB74E3 = 1;
+    sub_1C713B0(&WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_TypeInfo);
+    byte_4CC860C = 1;
   }
   if ( this->fields.__1__state == -2
     && (l__initialThreadId = this->fields.__l__initialThreadId,
@@ -187,13 +199,13 @@ System_Collections_Generic_IEnumerator_WarBoardSquareEntity__o *WarBoardSquareMa
   }
   else
   {
-    v4 = (WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_o *)sub_1C6BC54(WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_TypeInfo);
+    v4 = (WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_o *)sub_1C715FC(WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     v4->fields.__1__state = 0;
     v4->fields.__l__initialThreadId = System_Environment__get_CurrentManagedThreadId(0);
     _4__this = this->fields.__4__this;
     v4->fields.__4__this = _4__this;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v4->fields.__4__this, (int32_t)_4__this, v6, v7, v8, v9, v10, v11);
   }
   result = (System_Collections_Generic_IEnumerator_WarBoardSquareEntity__o *)v4;
   v4->fields.warBoardId = this->fields.__3__warBoardId;
@@ -217,11 +229,11 @@ void __noreturn WarBoardSquareMaster__GetWarBoardSquareEntities_d__3__System_Col
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_WarBoardSquareMaster__GetWarBoardSquareEntities_d__3_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 

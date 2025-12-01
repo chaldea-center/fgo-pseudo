@@ -2,20 +2,24 @@ void EventNoticeControl___ctor(EventNoticeControl_o *this, const MethodInfo *met
 {
   System_Collections_Generic_List_object__o *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CBA2D0 & 1) == 0 )
+  if ( (byte_4CCB427 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_EventNoticeControl_EventInfo__TypeInfo);
-    byte_4CBA2D0 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_EventNoticeControl_EventInfo__TypeInfo);
+    byte_4CCB427 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventNoticeControl_EventInfo__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_EventNoticeControl_EventInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo___ctor__);
   this->fields.eventInfoList = (struct System_Collections_Generic_List_EventNoticeControl_EventInfo__o *)v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventInfoList, (int32_t)v3, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.eventInfoList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -28,17 +32,17 @@ void EventNoticeControl__ChangeEventInfo(EventNoticeControl_o *this, const Metho
   struct System_Collections_Generic_List_EventNoticeControl_EventInfo__o *eventInfoList; // x8
   int32_t v7; // w1
 
-  if ( (byte_4CBA2CC & 1) == 0 )
+  if ( (byte_4CCB423 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
-    byte_4CBA2CC = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
+    byte_4CCB423 = 1;
   }
   IsMultiple = EventNoticeControl__get_IsMultiple(this, method);
   if ( IsMultiple )
   {
     eventInfoList = this->fields.eventInfoList;
     if ( !eventInfoList )
-      sub_1C6BC60(IsMultiple, v4);
+      sub_1C71608(IsMultiple, v4);
     v7 = (this->fields.eventInfoIndex + 1) % eventInfoList->fields._size;
     this->fields.eventInfoIndex = v7;
     EventNoticeControl__SetLabelAndSprite(this, v7, v5);
@@ -56,14 +60,14 @@ void EventNoticeControl__CheckCombineCampaignData(EventNoticeControl_o *this, co
   int32_t eventInfoIndex; // w1
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CBA2CF & 1) == 0 )
+  if ( (byte_4CCB426 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
-    byte_4CBA2CF = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
+    byte_4CCB426 = 1;
   }
   memset(&v9, 0, sizeof(v9));
   eventInfoList = (System_Collections_Generic_List_object__o *)this->fields.eventInfoList;
@@ -72,22 +76,22 @@ void EventNoticeControl__CheckCombineCampaignData(EventNoticeControl_o *this, co
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v9,
     eventInfoList,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__GetEnumerator__);
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v9,
-            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__MoveNext__) )
+            (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__MoveNext__) )
   {
     if ( !v9.fields._current )
-      sub_1C6BC60(0, v4);
+      sub_1C71608(0, v4);
     EventNoticeControl_EventInfo__CheckCombineCampaignData((EventNoticeControl_EventInfo_o *)v9.fields._current, v4);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v9,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__Dispose__);
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_EventNoticeControl_EventInfo__Dispose__);
   v6 = this->fields.eventInfoList;
   if ( !v6 )
 LABEL_16:
-    sub_1C6BC60(eventInfoList, method);
+    sub_1C71608(eventInfoList, method);
   size = v6->fields._size;
   if ( size == 1 )
   {
@@ -115,17 +119,17 @@ bool EventNoticeControl__GetIsNeedToInfoUpdate(
   int32_t v10; // w21
   EventNoticeControl_o *v11; // x8
 
-  if ( (byte_4CBA2CA & 1) == 0 )
+  if ( (byte_4CCB421 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
-    this = (EventNoticeControl_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
-    byte_4CBA2CA = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
+    this = (EventNoticeControl_o *)sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
+    byte_4CCB421 = 1;
   }
   if ( isNeedToUpdate )
     return 1;
   if ( !eventInfolist )
 LABEL_15:
-    sub_1C6BC60(this, eventInfolist);
+    sub_1C71608(this, eventInfolist);
   size = eventInfolist->fields._size;
   if ( size < 1 )
     return 0;
@@ -135,7 +139,7 @@ LABEL_15:
     this = (EventNoticeControl_o *)System_Collections_Generic_List_object___get_Item(
                                      (System_Collections_Generic_List_object__o *)eventInfolist,
                                      v10,
-                                     (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
+                                     (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
     if ( !this )
       goto LABEL_15;
     v11 = this;
@@ -162,10 +166,10 @@ void EventNoticeControl__InitLabelAndSprite(EventNoticeControl_o *this, const Me
   UILabel_o *eventDetailLabel; // x0
   UnityEngine_Color_o v4; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CBA2C9 & 1) == 0 )
+  if ( (byte_4CCB420 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CBA2C9 = 1;
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CCB420 = 1;
   }
   eventDetailLabel = this->fields.eventDetailLabel;
   if ( !eventDetailLabel )
@@ -185,7 +189,7 @@ void EventNoticeControl__InitLabelAndSprite(EventNoticeControl_o *this, const Me
         (eventDetailLabel = this->fields.eventRemainLabel) == 0) )
   {
 LABEL_8:
-    sub_1C6BC60(eventDetailLabel, method);
+    sub_1C71608(eventDetailLabel, method);
   }
   UILabel__set_text(eventDetailLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
 }
@@ -197,10 +201,10 @@ void EventNoticeControl__Initialize(EventNoticeControl_o *this, const MethodInfo
   int32_t size; // w2
   int v5; // w9
 
-  if ( (byte_4CBA2C6 & 1) == 0 )
+  if ( (byte_4CCB41D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Clear__);
-    byte_4CBA2C6 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Clear__);
+    byte_4CCB41D = 1;
   }
   eventInfoList = this->fields.eventInfoList;
   if ( eventInfoList )
@@ -239,7 +243,7 @@ void EventNoticeControl__SetAlpha(EventNoticeControl_o *this, float alpha, const
             v3),
           (eventDetailLabel = this->fields.eventRemainLabel) == 0) )
     {
-      sub_1C6BC60(eventDetailLabel, v5);
+      sub_1C71608(eventDetailLabel, v5);
     }
     (*(void (__fastcall **)(void *, _QWORD, long double))(*(_QWORD *)eventDetailLabel + 440LL))(
       eventDetailLabel,
@@ -260,28 +264,32 @@ void EventNoticeControl__SetCombineEventData(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v13; // x9
+  _QWORD *v17; // x9
   __int64 size; // x10
-  Il2CppClass **v15; // x0
+  Il2CppClass **v19; // x0
 
-  if ( (byte_4CBA2C7 & 1) == 0 )
+  if ( (byte_4CCB41E & 1) == 0 )
   {
-    sub_1C6BA08(&EventNoticeControl_EventInfo_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Add__);
-    byte_4CBA2C7 = 1;
+    sub_1C713B0(&EventNoticeControl_EventInfo_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Add__);
+    byte_4CCB41E = 1;
   }
   eventInfoList = (System_Collections_Generic_List_object__o *)this->fields.eventInfoList;
-  v6 = (EventNoticeControl_EventInfo_o *)sub_1C6BC54(EventNoticeControl_EventInfo_TypeInfo);
+  v6 = (EventNoticeControl_EventInfo_o *)sub_1C715FC(EventNoticeControl_EventInfo_TypeInfo);
   EventNoticeControl_EventInfo___ctor(v6, data, v7);
   if ( !eventInfoList
     || (items = eventInfoList->fields._items,
-        v13 = Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Add__,
+        v17 = Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__Add__,
         ++eventInfoList->fields._version,
         !items) )
   {
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   }
   size = eventInfoList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -289,14 +297,14 @@ void EventNoticeControl__SetCombineEventData(
     System_Collections_Generic_List_object___AddWithResize(
       eventInfoList,
       (Il2CppObject *)v6,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
-    v15 = &items->obj.klass + size;
+    v19 = &items->obj.klass + size;
     eventInfoList->fields._size = size + 1;
-    v15[4] = (Il2CppClass *)v6;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v6, v10, v11);
+    v19[4] = (Il2CppClass *)v6;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)v6, v10, v11, v12, v13, v14, v15);
   }
   this->fields.isNeedToUpdate = 1;
 }
@@ -325,15 +333,15 @@ void EventNoticeControl__SetLabelAndSprite(EventNoticeControl_o *this, int32_t i
   UnityEngine_Color_o v22; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CBA2CD & 1) == 0 )
+  if ( (byte_4CCB424 & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_25211/*"{0}"*/);
-    sub_1C6BA08(&StringLiteral_13421/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/);
-    byte_4CBA2CD = 1;
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_25231/*"{0}"*/);
+    sub_1C713B0(&StringLiteral_13427/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/);
+    byte_4CCB424 = 1;
   }
   eventInfoList = this->fields.eventInfoList;
   if ( !eventInfoList )
@@ -341,7 +349,7 @@ void EventNoticeControl__SetLabelAndSprite(EventNoticeControl_o *this, int32_t i
   eventInfoList = System_Collections_Generic_List_object___get_Item(
                     (System_Collections_Generic_List_object__o *)eventInfoList,
                     index,
-                    (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
+                    (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Item__);
   if ( !eventInfoList )
     goto LABEL_46;
   v6 = eventInfoList;
@@ -393,14 +401,14 @@ void EventNoticeControl__SetLabelAndSprite(EventNoticeControl_o *this, int32_t i
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    eventInfoList = LocalizationManager__Get((System_String_o *)StringLiteral_13421/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/, 0);
+    eventInfoList = LocalizationManager__Get((System_String_o *)StringLiteral_13427/*"TIME_REST_EVENT_BOARD_CAMPAIGN"*/, 0);
     eventDetailLabel = this->fields.eventDetailLabel;
     if ( eventDetailLabel )
     {
-      v11 = System_String__Format_64008100(
+      v11 = System_String__Format_64073032(
               (System_String_o *)eventInfoList,
               (Il2CppObject *)eventDetailLabel->fields.mText,
-              (Il2CppObject *)StringLiteral_25211/*"{0}"*/,
+              (Il2CppObject *)StringLiteral_25231/*"{0}"*/,
               0);
       v12 = this->fields.eventDetailLabel;
       v13 = v11;
@@ -454,7 +462,7 @@ void EventNoticeControl__SetLabelAndSprite(EventNoticeControl_o *this, int32_t i
       }
     }
 LABEL_46:
-    sub_1C6BC60(eventInfoList, *(_QWORD *)&index);
+    sub_1C71608(eventInfoList, *(_QWORD *)&index);
   }
   eventInfoList = this->fields.eventRemainLabel;
   if ( !eventInfoList )
@@ -519,19 +527,19 @@ void EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o *label, con
   UnityEngine_Color_o v19; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = remainTime;
-  if ( (byte_4CBA2CB & 1) == 0 )
+  if ( (byte_4CCB422 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_5588/*"EVENT_DAY_TXT"*/);
-    sub_1C6BA08(&StringLiteral_5722/*"EVENT_TIMEOVER_TXT"*/);
-    sub_1C6BA08(&StringLiteral_5723/*"EVENT_TIME_TXT"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    remainTime = sub_1C6BA08(&StringLiteral_5625/*"EVENT_MIN_TXT"*/);
-    byte_4CBA2CB = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_5591/*"EVENT_DAY_TXT"*/);
+    sub_1C713B0(&StringLiteral_5725/*"EVENT_TIMEOVER_TXT"*/);
+    sub_1C713B0(&StringLiteral_5726/*"EVENT_TIME_TXT"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    remainTime = sub_1C713B0(&StringLiteral_5628/*"EVENT_MIN_TXT"*/);
+    byte_4CCB422 = 1;
   }
   if ( !label )
-    sub_1C6BC60(remainTime, label);
+    sub_1C71608(remainTime, label);
   v18.fields.r = 0.0;
   v18.fields.g = 0.0;
   v18.fields.b = 0.0;
@@ -541,12 +549,12 @@ void EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o *label, con
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5722/*"EVENT_TIMEOVER_TXT"*/, 0);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5725/*"EVENT_TIMEOVER_TXT"*/, 0);
     goto LABEL_15;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_5588/*"EVENT_DAY_TXT"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_5591/*"EVENT_DAY_TXT"*/, 0);
   v17 = v4 / 0x15180;
   v6 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
   v7 = System_String__Format(v5, v6, 0);
@@ -554,7 +562,7 @@ void EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o *label, con
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5723/*"EVENT_TIME_TXT"*/, 0);
+    v8 = LocalizationManager__Get((System_String_o *)StringLiteral_5726/*"EVENT_TIME_TXT"*/, 0);
     v16 = v4 / 0xE10;
     v9 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v16);
     v7 = System_String__Format(v8, v9, 0);
@@ -563,7 +571,7 @@ void EventNoticeControl__SetRemainTime(int64_t remainTime, UILabel_o *label, con
       v12 = v4 / 0x3C;
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5625/*"EVENT_MIN_TXT"*/, 0);
+      v13 = LocalizationManager__Get((System_String_o *)StringLiteral_5628/*"EVENT_MIN_TXT"*/, 0);
       v15 = v12;
       v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v15);
       v11 = System_String__Format(v13, v14, 0);
@@ -593,11 +601,11 @@ void EventNoticeControl__UpdateEventNotice(EventNoticeControl_o *this, const Met
   struct System_Collections_Generic_List_EventNoticeControl_EventInfo__o *v8; // x8
   const MethodInfo *v9; // x2
 
-  if ( (byte_4CBA2C8 & 1) == 0 )
+  if ( (byte_4CCB41F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    byte_4CBA2C8 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    byte_4CCB41F = 1;
   }
   eventInfoList = this->fields.eventInfoList;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -614,7 +622,7 @@ void EventNoticeControl__UpdateEventNotice(EventNoticeControl_o *this, const Met
     v8 = this->fields.eventInfoList;
     this->fields.isNeedToUpdate = 0;
     if ( !v8 )
-      sub_1C6BC60(IsNeedToInfoUpdate, v7);
+      sub_1C71608(IsNeedToInfoUpdate, v7);
     if ( v8->fields._size )
     {
       if ( !EventNoticeControl__get_IsMultiple(this, v7) )
@@ -634,14 +642,14 @@ bool EventNoticeControl__get_IsMultiple(EventNoticeControl_o *this, const Method
   struct System_Collections_Generic_List_EventNoticeControl_EventInfo__o *eventInfoList; // x8
 
   v2 = this;
-  if ( (byte_4CBA2CE & 1) == 0 )
+  if ( (byte_4CCB425 & 1) == 0 )
   {
-    this = (EventNoticeControl_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
-    byte_4CBA2CE = 1;
+    this = (EventNoticeControl_o *)sub_1C713B0(&Method_System_Collections_Generic_List_EventNoticeControl_EventInfo__get_Count__);
+    byte_4CCB425 = 1;
   }
   eventInfoList = v2->fields.eventInfoList;
   if ( !eventInfoList )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return eventInfoList->fields._size > 1;
 }
 
@@ -651,93 +659,157 @@ void EventNoticeControl_EventInfo___ctor(
         EventInfoData_o *eventInfoData,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  int32_t v6; // w1
-  int32_t v7; // w1
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   int32_t v10; // w1
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w1
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v11; // w1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  int32_t v18; // w1
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
+  int32_t v25; // w1
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
   _BOOL8 IsNullOrEmpty; // x0
-  const MethodInfo *v17; // x1
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  const MethodInfo *v33; // x1
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
   struct System_String_o *name; // x25
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  int8x16_t v23; // q0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  int32_t v26; // w1
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  int32_t v29; // w1
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
+  int32_t v41; // w2
+  int32_t v42; // w3
+  System_String_o *v43; // x4
+  int32_t v44; // w5
+  int64_t v45; // x6
+  System_String_o *v46; // x7
+  int8x16_t v47; // q0
+  int32_t v48; // w2
+  int32_t v49; // w3
+  System_String_o *v50; // x4
+  int32_t v51; // w5
+  int64_t v52; // x6
+  System_String_o *v53; // x7
+  int32_t v54; // w1
+  int32_t v55; // w2
+  int32_t v56; // w3
+  System_String_o *v57; // x4
+  int32_t v58; // w5
+  int64_t v59; // x6
+  System_String_o *v60; // x7
+  int32_t v61; // w1
+  int32_t v62; // w2
+  int32_t v63; // w3
+  System_String_o *v64; // x4
+  int32_t v65; // w5
+  int64_t v66; // x6
+  System_String_o *v67; // x7
+  int32_t v68; // w2
+  int32_t v69; // w3
+  System_String_o *v70; // x4
+  int32_t v71; // w5
+  int64_t v72; // x6
+  System_String_o *v73; // x7
   struct EventEntity_o *eventEntity; // x8
   struct EventEntity_ScriptData_array *script; // x25
   il2cpp_array_size_t max_length; // x8
-  __int64 v37; // x26
-  System_String_o **v38; // x29
-  System_String_o *v39; // x24
-  struct System_String_o *v40; // x24
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  int32_t v43; // w2
-  const MethodInfo *v44; // x3
-  System_String_o *v45; // x24
-  struct System_String_o *v46; // x0
-  int32_t v47; // w2
-  const MethodInfo *v48; // x3
-  int32_t v49; // w2
-  const MethodInfo *v50; // x3
-  struct System_String_o *v51; // x1
-  int32_t v52; // w1
+  __int64 v77; // x26
+  System_String_o **v78; // x29
+  System_String_o *v79; // x24
+  struct System_String_o *v80; // x24
+  int32_t v81; // w2
+  int32_t v82; // w3
+  System_String_o *v83; // x4
+  int32_t v84; // w5
+  int64_t v85; // x6
+  System_String_o *v86; // x7
+  int32_t v87; // w2
+  int32_t v88; // w3
+  System_String_o *v89; // x4
+  int32_t v90; // w5
+  int64_t v91; // x6
+  System_String_o *v92; // x7
+  System_String_o *v93; // x24
+  struct System_String_o *v94; // x0
+  int32_t v95; // w2
+  int32_t v96; // w3
+  System_String_o *v97; // x4
+  int32_t v98; // w5
+  int64_t v99; // x6
+  System_String_o *v100; // x7
+  int32_t v101; // w2
+  int32_t v102; // w3
+  System_String_o *v103; // x4
+  int32_t v104; // w5
+  int64_t v105; // x6
+  System_String_o *v106; // x7
+  struct System_String_o *v107; // x1
+  int32_t v108; // w1
 
-  if ( (byte_4CBA2D1 & 1) == 0 )
+  if ( (byte_4CCB428 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_23999/*"synthesis_notice_"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CBA2D1 = 1;
+    sub_1C713B0(&StringLiteral_24019/*"synthesis_notice_"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CCB428 = 1;
   }
-  v6 = StringLiteral_1/*""*/;
-  this->fields.spriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.spriteName, v6, (int32_t)method, v3);
-  v7 = StringLiteral_1/*""*/;
-  this->fields.eventName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventName, v7, v8, v9);
   v10 = StringLiteral_1/*""*/;
+  this->fields.spriteName = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.spriteName, v10, (int32_t)method, v3, v4, v5, v6, v7);
+  v11 = StringLiteral_1/*""*/;
+  this->fields.eventName = (struct System_String_o *)StringLiteral_1/*""*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.eventName, v11, v12, v13, v14, v15, v16, v17);
+  v18 = StringLiteral_1/*""*/;
   this->fields.overwriteSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.overwriteSpriteName, v10, v11, v12);
-  v13 = StringLiteral_1/*""*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.overwriteSpriteName, v18, v19, v20, v21, v22, v23, v24);
+  v25 = StringLiteral_1/*""*/;
   this->fields.overwriteText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.overwriteText, v13, v14, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.overwriteText, v25, v26, v27, v28, v29, v30, v31);
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !eventInfoData )
     goto LABEL_21;
   name = eventInfoData->fields.name;
   this->fields.eventName = name;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.eventName, (int32_t)name, v18, v19);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.eventName, (int32_t)name, v34, v35, v36, v37, v38, v39);
   this->fields._EventName_k__BackingField = name;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)name, v21, v22);
-  v23 = *(int8x16_t *)&eventInfoData->fields.startAt;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, v41, v42, v43, v44, v45, v46);
+  v47 = *(int8x16_t *)&eventInfoData->fields.startAt;
   this->fields.infoData = eventInfoData;
   *(_WORD *)&this->fields._IsTimeOver_k__BackingField = 0;
-  *(int8x16_t *)&this->fields._EndAt_k__BackingField = vextq_s8(v23, v23, 8u);
+  *(int8x16_t *)&this->fields._EndAt_k__BackingField = vextq_s8(v47, v47, 8u);
   this->fields._IsCampaignOpen_k__BackingField = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.infoData, (int32_t)eventInfoData, v24, v25);
-  v26 = StringLiteral_1/*""*/;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.infoData,
+    (int32_t)eventInfoData,
+    v48,
+    v49,
+    v50,
+    v51,
+    v52,
+    v53);
+  v54 = StringLiteral_1/*""*/;
   this->fields.overwriteSpriteName = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.overwriteSpriteName, v26, v27, v28);
-  v29 = StringLiteral_1/*""*/;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.overwriteSpriteName, v54, v55, v56, v57, v58, v59, v60);
+  v61 = StringLiteral_1/*""*/;
   this->fields.overwriteText = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.overwriteText, v29, v30, v31);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.overwriteText, v61, v62, v63, v64, v65, v66, v67);
   eventEntity = eventInfoData->fields.eventEntity;
   if ( !eventEntity )
     goto LABEL_21;
@@ -746,55 +818,95 @@ void EventNoticeControl_EventInfo___ctor(
   {
     if ( (int)max_length >= 1 )
     {
-      v37 = 0;
+      v77 = 0;
       while ( 1 )
       {
-        if ( (unsigned int)v37 >= (unsigned int)max_length )
-          sub_1C6BC68(IsNullOrEmpty);
-        v38 = (System_String_o **)script->m_Items[v37];
-        if ( !v38 )
+        if ( (unsigned int)v77 >= (unsigned int)max_length )
+          sub_1C71610(IsNullOrEmpty);
+        v78 = (System_String_o **)script->m_Items[v77];
+        if ( !v78 )
           break;
-        v39 = v38[7];
-        if ( !System_String__IsNullOrEmpty(v39, 0) )
+        v79 = v78[7];
+        if ( !System_String__IsNullOrEmpty(v79, 0) )
         {
-          v40 = System_String__Concat_63966792((System_String_o *)StringLiteral_23999/*"synthesis_notice_"*/, v39, 0);
-          this->fields.spriteName = v40;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.spriteName, (int32_t)v40, v41, v42);
-          this->fields._SpriteName_k__BackingField = v40;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)v40, v43, v44);
+          v80 = System_String__Concat_64031724((System_String_o *)StringLiteral_24019/*"synthesis_notice_"*/, v79, 0);
+          this->fields.spriteName = v80;
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&this->fields.spriteName,
+            (int32_t)v80,
+            v81,
+            v82,
+            v83,
+            v84,
+            v85,
+            v86);
+          this->fields._SpriteName_k__BackingField = v80;
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&this->fields._SpriteName_k__BackingField,
+            (int32_t)v80,
+            v87,
+            v88,
+            v89,
+            v90,
+            v91,
+            v92);
           this->fields._IsSprite_k__BackingField = 1;
         }
-        v45 = v38[8];
-        if ( !System_String__IsNullOrEmpty(v45, 0) )
+        v93 = v78[8];
+        if ( !System_String__IsNullOrEmpty(v93, 0) )
         {
-          v46 = System_String__Concat_63966792((System_String_o *)StringLiteral_23999/*"synthesis_notice_"*/, v45, 0);
-          this->fields.overwriteSpriteName = v46;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.overwriteSpriteName, (int32_t)v46, v47, v48);
+          v94 = System_String__Concat_64031724((System_String_o *)StringLiteral_24019/*"synthesis_notice_"*/, v93, 0);
+          this->fields.overwriteSpriteName = v94;
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&this->fields.overwriteSpriteName,
+            (int32_t)v94,
+            v95,
+            v96,
+            v97,
+            v98,
+            v99,
+            v100);
         }
-        IsNullOrEmpty = System_String__IsNullOrEmpty(v38[9], 0);
+        IsNullOrEmpty = System_String__IsNullOrEmpty(v78[9], 0);
         if ( !IsNullOrEmpty )
         {
-          v51 = v38[9];
-          this->fields.overwriteText = v51;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.overwriteText, (int32_t)v51, v49, v50);
+          v107 = v78[9];
+          this->fields.overwriteText = v107;
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&this->fields.overwriteText,
+            (int32_t)v107,
+            v101,
+            v102,
+            v103,
+            v104,
+            v105,
+            v106);
         }
         LODWORD(max_length) = script->max_length;
-        if ( (int)++v37 >= (int)max_length )
+        if ( (int)++v77 >= (int)max_length )
           goto LABEL_20;
       }
 LABEL_21:
-      sub_1C6BC60(IsNullOrEmpty, v17);
+      sub_1C71608(IsNullOrEmpty, v33);
     }
   }
   else
   {
-    v52 = StringLiteral_1/*""*/;
+    v108 = StringLiteral_1/*""*/;
     this->fields._SpriteName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, v52, v32, v33);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields._SpriteName_k__BackingField,
+      v108,
+      v68,
+      v69,
+      v70,
+      v71,
+      v72,
+      v73);
     this->fields._IsSprite_k__BackingField = 0;
   }
 LABEL_20:
-  EventNoticeControl_EventInfo__CheckCombineCampaignData(this, v17);
+  EventNoticeControl_EventInfo__CheckCombineCampaignData(this, v33);
 }
 
 
@@ -809,16 +921,28 @@ void EventNoticeControl_EventInfo__CheckCombineCampaignData(
   struct EventInfoData_o *v6; // x8
   EventNoticeControl_EventInfo_o *v7; // x20
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   struct System_String_o *spriteName; // x1
-  struct EventInfoData_o *v11; // x8
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  char v14; // w8
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  char v17; // w8
-  struct System_String_o *v18; // x1
+  struct EventInfoData_o *v15; // x8
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  char v22; // w8
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
+  char v29; // w8
+  struct System_String_o *v30; // x1
   struct System_String_o *eventName; // x1
   EventNoticeControl_EventInfo_Fields *p_fields; // x19
   struct System_String_o *overwriteSpriteName; // x1
@@ -826,13 +950,13 @@ void EventNoticeControl_EventInfo__CheckCombineCampaignData(
   EventCampaignReleaseEntity_o *entity; // [xsp+8h] [xbp-28h] BYREF
 
   v2 = this;
-  if ( (byte_4CBA2D2 & 1) == 0 )
+  if ( (byte_4CCB429 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventCampaignMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventCampaignReleaseMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
-    this = (EventNoticeControl_EventInfo_o *)sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CBA2D2 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventCampaignMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventCampaignReleaseMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_UserServantCollectionMaster___);
+    this = (EventNoticeControl_EventInfo_o *)sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CCB429 = 1;
   }
   entity = 0;
   infoData = v2->fields.infoData;
@@ -843,18 +967,18 @@ void EventNoticeControl_EventInfo__CheckCombineCampaignData(
     goto LABEL_36;
   if ( eventEntity->fields.type != 5 )
     return;
-  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_36;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)this,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventCampaignReleaseMaster___);
-  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventCampaignReleaseMaster___);
+  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this )
     goto LABEL_36;
   this = (EventNoticeControl_EventInfo_o *)DataManager__GetMasterData_object_(
                                              (DataManager_o *)this,
-                                             (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventCampaignMaster___);
+                                             (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventCampaignMaster___);
   v6 = v2->fields.infoData;
   if ( !v6 || !this )
     goto LABEL_36;
@@ -892,7 +1016,7 @@ void EventNoticeControl_EventInfo__CheckCombineCampaignData(
       {
         spriteName = v7->fields.spriteName;
         v2->fields._EventName_k__BackingField = spriteName;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields, (int32_t)spriteName, v8, v9);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields, (int32_t)spriteName, v8, v9, v10, v11, v12, v13);
       }
     }
   }
@@ -901,60 +1025,72 @@ void EventNoticeControl_EventInfo__CheckCombineCampaignData(
   {
     return;
   }
-  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (EventNoticeControl_EventInfo_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (EventNoticeControl_EventInfo_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)this,
-                                                   (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_UserServantCollectionMaster___),
-        (v11 = v2->fields.infoData) == 0)
+                                                   (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_UserServantCollectionMaster___),
+        (v15 = v2->fields.infoData) == 0)
     || !this )
   {
 LABEL_36:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  if ( UserServantCollectionMaster__IsServantHaving((UserServantCollectionMaster_o *)this, v11->fields.targetIds, 0) )
+  if ( UserServantCollectionMaster__IsServantHaving((UserServantCollectionMaster_o *)this, v15->fields.targetIds, 0) )
   {
     if ( System_String__IsNullOrEmpty(v2->fields.spriteName, 0) )
     {
-      v14 = 0;
+      v22 = 0;
     }
     else
     {
-      v18 = v2->fields.spriteName;
-      v2->fields._SpriteName_k__BackingField = v18;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields._SpriteName_k__BackingField, (int32_t)v18, v12, v13);
-      v14 = 1;
+      v30 = v2->fields.spriteName;
+      v2->fields._SpriteName_k__BackingField = v30;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&v2->fields._SpriteName_k__BackingField,
+        (int32_t)v30,
+        v16,
+        v17,
+        v18,
+        v19,
+        v20,
+        v21);
+      v22 = 1;
     }
     eventName = v2->fields.eventName;
     v2->fields._EventName_k__BackingField = eventName;
     p_fields = &v2->fields;
-    p_fields->_IsSprite_k__BackingField = v14;
+    p_fields->_IsSprite_k__BackingField = v22;
     goto LABEL_34;
   }
   if ( System_String__IsNullOrEmpty(v2->fields.overwriteSpriteName, 0) )
   {
-    v17 = 0;
+    v29 = 0;
   }
   else
   {
     overwriteSpriteName = v2->fields.overwriteSpriteName;
     v2->fields._SpriteName_k__BackingField = overwriteSpriteName;
-    sub_1C6B9AC(
-      (CGThumbnailListItem_o *)&v2->fields._SpriteName_k__BackingField,
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&v2->fields._SpriteName_k__BackingField,
       (int32_t)overwriteSpriteName,
-      v15,
-      v16);
-    v17 = 1;
+      v23,
+      v24,
+      v25,
+      v26,
+      v27,
+      v28);
+    v29 = 1;
   }
   overwriteText = v2->fields.overwriteText;
-  v2->fields._IsSprite_k__BackingField = v17;
+  v2->fields._IsSprite_k__BackingField = v29;
   if ( !System_String__IsNullOrEmpty(overwriteText, 0) )
   {
     eventName = v2->fields.overwriteText;
     v2->fields._EventName_k__BackingField = eventName;
     p_fields = &v2->fields;
 LABEL_34:
-    sub_1C6B9AC((CGThumbnailListItem_o *)p_fields, (int32_t)eventName, v12, v13);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)p_fields, (int32_t)eventName, v16, v17, v18, v19, v20, v21);
   }
 }
 
@@ -1033,10 +1169,14 @@ void EventNoticeControl_EventInfo__set_EventName(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._EventName_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -1081,10 +1221,22 @@ void EventNoticeControl_EventInfo__set_SpriteName(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._SpriteName_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._SpriteName_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

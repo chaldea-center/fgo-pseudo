@@ -20,12 +20,12 @@ void EventInfoCooltimeNoticeButton__Initialization(
   UISprite_o *v10; // x20
   const MethodInfo *v11; // x1
 
-  if ( (byte_4CB77CB & 1) == 0 )
+  if ( (byte_4CC88FD & 1) == 0 )
   {
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1436/*"80341001"*/);
-    byte_4CB77CB = 1;
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_1437/*"80341001"*/);
+    byte_4CC88FD = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   GameObjectExtensions__SetLocalPosition(gameObject, this->fields.POSITION, 0);
@@ -37,10 +37,10 @@ void EventInfoCooltimeNoticeButton__Initialization(
     v6 = this->fields.bgSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v6, (System_String_o *)StringLiteral_1436/*"80341001"*/, 0);
+    AtlasManager__SetEventUI(v6, (System_String_o *)StringLiteral_1437/*"80341001"*/, 0);
     v8 = this->fields.bgSprite;
     if ( !v8 )
-      sub_1C6BC60(0, v7);
+      sub_1C71608(0, v7);
     ((void (__fastcall *)(struct UISprite_o *, const MethodInfo *))v8->klass->vtable._33_MakePixelPerfect.methodPtr)(
       v8,
       v8->klass->vtable._33_MakePixelPerfect.method);
@@ -67,17 +67,17 @@ void EventInfoCooltimeNoticeButton__OnClickButton(EventInfoCooltimeNoticeButton_
   System_Reflection_MethodBase_o *v5; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4CB77CD & 1) == 0 )
+  if ( (byte_4CC88FF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_EventInfoCooltimeNoticeButton_OnClickButton__);
-    byte_4CB77CD = 1;
+    sub_1C713B0(&Method_EventInfoCooltimeNoticeButton_OnClickButton__);
+    byte_4CC88FF = 1;
   }
   isButtonOn = this->fields.isButtonOn;
   this->fields.isButtonOn = isButtonOn ^ 1;
   v4 = Method_EventInfoCooltimeNoticeButton_OnClickButton__;
   if ( (*((_BYTE *)Method_EventInfoCooltimeNoticeButton_OnClickButton__ + 83) & 2) != 0 )
-    v4 = (_QWORD *)sub_1C6BA20(Method_EventInfoCooltimeNoticeButton_OnClickButton__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v4, v4[4]);
+    v4 = (_QWORD *)sub_1C713C8(Method_EventInfoCooltimeNoticeButton_OnClickButton__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C71394(v4, v4[4]);
   OverwriteAssetSoundName__PlaySystemSe(v5, isButtonOn, 0, 0);
   EventRewardSaveData__SetCooltimeNotification(this->fields.isButtonOn, 0);
   EventInfoCooltimeNoticeButton__UpdateButtonDisp(this, v6);
@@ -99,7 +99,7 @@ void EventInfoCooltimeNoticeButton__SetDispActive(
         (bgSprite = (UnityEngine_Component_o *)this->fields.noticeButton) == 0)
     || (bgSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(bgSprite, 0)) == 0 )
   {
-    sub_1C6BC60(bgSprite, isActive);
+    sub_1C71608(bgSprite, isActive);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)bgSprite, isActive, 0);
 }
@@ -110,18 +110,18 @@ void EventInfoCooltimeNoticeButton__UpdateButtonDisp(EventInfoCooltimeNoticeButt
   UIButton_o *noticeButton; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4CB77CC & 1) == 0 )
+  if ( (byte_4CC88FE & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_17522/*"btn_on"*/);
-    sub_1C6BA08(&StringLiteral_17521/*"btn_off"*/);
-    byte_4CB77CC = 1;
+    sub_1C713B0(&StringLiteral_17529/*"btn_on"*/);
+    sub_1C713B0(&StringLiteral_17528/*"btn_off"*/);
+    byte_4CC88FE = 1;
   }
   noticeButton = this->fields.noticeButton;
   if ( !noticeButton )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   if ( this->fields.isButtonOn )
-    v4 = &StringLiteral_17522/*"btn_on"*/;
+    v4 = &StringLiteral_17529/*"btn_on"*/;
   else
-    v4 = &StringLiteral_17521/*"btn_off"*/;
+    v4 = &StringLiteral_17528/*"btn_off"*/;
   UIButton__set_normalSprite(noticeButton, (System_String_o *)*v4, 0);
 }

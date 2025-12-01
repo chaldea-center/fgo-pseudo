@@ -5,43 +5,55 @@ void BattleLogicFunctionUtilities_FunctionProgressCache___ctor(
         const MethodInfo *method)
 {
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  System_Func_object__object__o *v9; // x21
-  System_Collections_Generic_IEnumerable_TSource__o *v10; // x0
-  System_Object_array *v11; // x0
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  System_Func_object__object__o *v13; // x21
+  System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
+  System_Object_array *v15; // x0
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
 
-  if ( (byte_4CB410F & 1) == 0 )
+  if ( (byte_4CC5227 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Select_BattleServantData__FunctionProgressCache_SvtCache___);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_ToArray_FunctionProgressCache_SvtCache___);
-    sub_1C6BA08(&System_Func_BattleServantData__FunctionProgressCache_SvtCache__TypeInfo);
-    sub_1C6BA08(&Method_BattleLogicFunctionUtilities_FunctionProgressCache___ctor_b__7_0__);
-    byte_4CB410F = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_Select_BattleServantData__FunctionProgressCache_SvtCache___);
+    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_FunctionProgressCache_SvtCache___);
+    sub_1C713B0(&System_Func_BattleServantData__FunctionProgressCache_SvtCache__TypeInfo);
+    sub_1C713B0(&Method_BattleLogicFunctionUtilities_FunctionProgressCache___ctor_b__7_0__);
+    byte_4CC5227 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._SvtSnapShotGenerator_k__BackingField = svtSnapShotGenerator;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._SvtSnapShotGenerator_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._SvtSnapShotGenerator_k__BackingField,
     (int32_t)svtSnapShotGenerator,
     v7,
-    v8);
-  v9 = (System_Func_object__object__o *)sub_1C6BC54(System_Func_BattleServantData__FunctionProgressCache_SvtCache__TypeInfo);
-  System_Func_object__object____ctor(
+    v8,
     v9,
+    v10,
+    v11,
+    v12);
+  v13 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleServantData__FunctionProgressCache_SvtCache__TypeInfo);
+  System_Func_object__object____ctor(
+    v13,
     (Il2CppObject *)this,
     Method_BattleLogicFunctionUtilities_FunctionProgressCache___ctor_b__7_0__,
     0);
-  v10 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
+  v14 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_object__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)targetSvtArray,
-                                                               (System_Func_TSource__TResult__o *)v9,
-                                                               (const MethodInfo_3171B10 *)Method_System_Linq_Enumerable_Select_BattleServantData__FunctionProgressCache_SvtCache___);
-  v11 = System_Linq_Enumerable__ToArray_object_(
-          v10,
-          (const MethodInfo_317B248 *)Method_System_Linq_Enumerable_ToArray_FunctionProgressCache_SvtCache___);
-  this->fields._SvtCacheArray_k__BackingField = (struct BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_array *)v11;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)v11, v12, v13);
+                                                               (System_Func_TSource__TResult__o *)v13,
+                                                               (const MethodInfo_31818B4 *)Method_System_Linq_Enumerable_Select_BattleServantData__FunctionProgressCache_SvtCache___);
+  v15 = System_Linq_Enumerable__ToArray_object_(
+          v14,
+          (const MethodInfo_318AFEC *)Method_System_Linq_Enumerable_ToArray_FunctionProgressCache_SvtCache___);
+  this->fields._SvtCacheArray_k__BackingField = (struct BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_array *)v15;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v15, v16, v17, v18, v19, v20, v21);
 }
 
 
@@ -56,30 +68,30 @@ BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_o *BattleLogicFuncti
   System_Collections_Generic_IEnumerable_TSource__o *SvtCacheArray_k__BackingField; // x19
   System_Func_object__bool__o *v9; // x20
 
-  if ( (byte_4CB4112 & 1) == 0 )
+  if ( (byte_4CC522A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_FunctionProgressCache_SvtCache___);
-    sub_1C6BA08(&System_Func_FunctionProgressCache_SvtCache__bool__TypeInfo);
-    sub_1C6BA08(&Method_BattleLogicFunctionUtilities_FunctionProgressCache___c__DisplayClass10_0__GetElemByUniqueId_b__0__);
-    sub_1C6BA08(&BattleLogicFunctionUtilities_FunctionProgressCache___c__DisplayClass10_0_TypeInfo);
-    byte_4CB4112 = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_FunctionProgressCache_SvtCache___);
+    sub_1C713B0(&System_Func_FunctionProgressCache_SvtCache__bool__TypeInfo);
+    sub_1C713B0(&Method_BattleLogicFunctionUtilities_FunctionProgressCache___c__DisplayClass10_0__GetElemByUniqueId_b__0__);
+    sub_1C713B0(&BattleLogicFunctionUtilities_FunctionProgressCache___c__DisplayClass10_0_TypeInfo);
+    byte_4CC522A = 1;
   }
-  v5 = sub_1C6BC54(BattleLogicFunctionUtilities_FunctionProgressCache___c__DisplayClass10_0_TypeInfo);
+  v5 = sub_1C715FC(BattleLogicFunctionUtilities_FunctionProgressCache___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_DWORD *)(v5 + 16) = svtUniqueId;
   SvtCacheArray_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._SvtCacheArray_k__BackingField;
-  v9 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_FunctionProgressCache_SvtCache__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_FunctionProgressCache_SvtCache__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
     Method_BattleLogicFunctionUtilities_FunctionProgressCache___c__DisplayClass10_0__GetElemByUniqueId_b__0__,
     0);
-  return (BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_o *)System_Linq_Enumerable__FirstOrDefault_object__51793644(
+  return (BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_o *)System_Linq_Enumerable__FirstOrDefault_object__51858576(
                                                                             SvtCacheArray_k__BackingField,
                                                                             (System_Func_TSource__bool__o *)v9,
-                                                                            (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_FunctionProgressCache_SvtCache___);
+                                                                            (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_FunctionProgressCache_SvtCache___);
 }
 
 
@@ -93,15 +105,19 @@ void BattleLogicFunctionUtilities_FunctionProgressCache__MakeAfterSvtCache(
   Il2CppObject *v6; // x21
   struct BattleLogicFunctionUtilities_FunctionProgressCache___c_StaticFields *static_fields; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
-  if ( (byte_4CB4111 & 1) == 0 )
+  if ( (byte_4CC5229 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_FunctionProgressCache_SvtCache__TypeInfo);
-    sub_1C6BA08(&Method_BasicHelper_ForEach_FunctionProgressCache_SvtCache___);
-    sub_1C6BA08(&Method_BattleLogicFunctionUtilities_FunctionProgressCache___c__MakeAfterSvtCache_b__9_0__);
-    sub_1C6BA08(&BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo);
-    byte_4CB4111 = 1;
+    sub_1C713B0(&System_Action_FunctionProgressCache_SvtCache__TypeInfo);
+    sub_1C713B0(&Method_BasicHelper_ForEach_FunctionProgressCache_SvtCache___);
+    sub_1C713B0(&Method_BattleLogicFunctionUtilities_FunctionProgressCache___c__MakeAfterSvtCache_b__9_0__);
+    sub_1C713B0(&BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo);
+    byte_4CC5229 = 1;
   }
   v3 = BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo;
   SvtCacheArray_k__BackingField = (System_Collections_Generic_IEnumerable_T__o *)this->fields._SvtCacheArray_k__BackingField;
@@ -119,7 +135,7 @@ void BattleLogicFunctionUtilities_FunctionProgressCache__MakeAfterSvtCache(
       v3 = BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__9_0 = (System_Action_object__o *)sub_1C6BC54(System_Action_FunctionProgressCache_SvtCache__TypeInfo);
+    _9__9_0 = (System_Action_object__o *)sub_1C715FC(System_Action_FunctionProgressCache_SvtCache__TypeInfo);
     System_Action_object____ctor(
       _9__9_0,
       v6,
@@ -127,12 +143,12 @@ void BattleLogicFunctionUtilities_FunctionProgressCache__MakeAfterSvtCache(
       0);
     static_fields = BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo->static_fields;
     static_fields->__9__9_0 = (struct System_Action_FunctionProgressCache_SvtCache__o *)_9__9_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v8, v9, v10, v11, v12, v13);
   }
   BasicHelper__ForEach_object_(
     SvtCacheArray_k__BackingField,
     (System_Action_T__o *)_9__9_0,
-    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_FunctionProgressCache_SvtCache___);
+    (const MethodInfo_3136DF4 *)Method_BasicHelper_ForEach_FunctionProgressCache_SvtCache___);
 }
 
 
@@ -146,15 +162,19 @@ void BattleLogicFunctionUtilities_FunctionProgressCache__MakeBeforeSvtCache(
   Il2CppObject *v6; // x21
   struct BattleLogicFunctionUtilities_FunctionProgressCache___c_StaticFields *static_fields; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
-  if ( (byte_4CB4110 & 1) == 0 )
+  if ( (byte_4CC5228 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_FunctionProgressCache_SvtCache__TypeInfo);
-    sub_1C6BA08(&Method_BasicHelper_ForEach_FunctionProgressCache_SvtCache___);
-    sub_1C6BA08(&Method_BattleLogicFunctionUtilities_FunctionProgressCache___c__MakeBeforeSvtCache_b__8_0__);
-    sub_1C6BA08(&BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo);
-    byte_4CB4110 = 1;
+    sub_1C713B0(&System_Action_FunctionProgressCache_SvtCache__TypeInfo);
+    sub_1C713B0(&Method_BasicHelper_ForEach_FunctionProgressCache_SvtCache___);
+    sub_1C713B0(&Method_BattleLogicFunctionUtilities_FunctionProgressCache___c__MakeBeforeSvtCache_b__8_0__);
+    sub_1C713B0(&BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo);
+    byte_4CC5228 = 1;
   }
   v3 = BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo;
   SvtCacheArray_k__BackingField = (System_Collections_Generic_IEnumerable_T__o *)this->fields._SvtCacheArray_k__BackingField;
@@ -172,7 +192,7 @@ void BattleLogicFunctionUtilities_FunctionProgressCache__MakeBeforeSvtCache(
       v3 = BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo;
     }
     v6 = (Il2CppObject *)v3->static_fields->__9;
-    _9__8_0 = (System_Action_object__o *)sub_1C6BC54(System_Action_FunctionProgressCache_SvtCache__TypeInfo);
+    _9__8_0 = (System_Action_object__o *)sub_1C715FC(System_Action_FunctionProgressCache_SvtCache__TypeInfo);
     System_Action_object____ctor(
       _9__8_0,
       v6,
@@ -180,12 +200,12 @@ void BattleLogicFunctionUtilities_FunctionProgressCache__MakeBeforeSvtCache(
       0);
     static_fields = BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo->static_fields;
     static_fields->__9__8_0 = (struct System_Action_FunctionProgressCache_SvtCache__o *)_9__8_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__8_0, (int32_t)_9__8_0, v8, v9, v10, v11, v12, v13);
   }
   BasicHelper__ForEach_object_(
     SvtCacheArray_k__BackingField,
     (System_Action_T__o *)_9__8_0,
-    (const MethodInfo_3127050 *)Method_BasicHelper_ForEach_FunctionProgressCache_SvtCache___);
+    (const MethodInfo_3136DF4 *)Method_BasicHelper_ForEach_FunctionProgressCache_SvtCache___);
 }
 
 
@@ -197,12 +217,12 @@ BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_o *BattleLogicFuncti
   BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_o *v5; // x21
   const MethodInfo *v6; // x3
 
-  if ( (byte_4CB4113 & 1) == 0 )
+  if ( (byte_4CC522B & 1) == 0 )
   {
-    sub_1C6BA08(&BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_TypeInfo);
-    byte_4CB4113 = 1;
+    sub_1C713B0(&BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_TypeInfo);
+    byte_4CC522B = 1;
   }
-  v5 = (BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_o *)sub_1C6BC54(BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_TypeInfo);
+  v5 = (BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_o *)sub_1C715FC(BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache_TypeInfo);
   BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache___ctor(v5, this, x, v6);
   return v5;
 }
@@ -231,15 +251,31 @@ void BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache___ctor(
         const MethodInfo *method)
 {
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.root = root;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)root, v7, v8);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)root, v7, v8, v9, v10, v11, v12);
   this->fields._SvtData_k__BackingField = svtData;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._SvtData_k__BackingField, (int32_t)svtData, v9, v10);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._SvtData_k__BackingField,
+    (int32_t)svtData,
+    v13,
+    v14,
+    v15,
+    v16,
+    v17,
+    v18);
 }
 
 
@@ -251,17 +287,29 @@ void BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache__MakeAfterCache
   struct System_Func_BattleServantData__BattleServantSnapShot__o *SvtSnapShotGenerator_k__BackingField; // x8
   struct BattleServantSnapShot_o *v5; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
   root = this->fields.root;
   if ( !root || (SvtSnapShotGenerator_k__BackingField = root->fields._SvtSnapShotGenerator_k__BackingField) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   v5 = (struct BattleServantSnapShot_o *)((__int64 (__fastcall *)(intptr_t, struct BattleServantData_o *, intptr_t))SvtSnapShotGenerator_k__BackingField->fields.invoke_impl)(
                                            SvtSnapShotGenerator_k__BackingField->fields.method_code,
                                            this->fields._SvtData_k__BackingField,
                                            SvtSnapShotGenerator_k__BackingField->fields.method);
   this->fields._After_k__BackingField = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._After_k__BackingField, (int32_t)v5, v6, v7);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._After_k__BackingField,
+    (int32_t)v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
 }
 
 
@@ -273,17 +321,29 @@ void BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache__MakeBeforeCach
   struct System_Func_BattleServantData__BattleServantSnapShot__o *SvtSnapShotGenerator_k__BackingField; // x8
   struct BattleServantSnapShot_o *v5; // x0
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
   root = this->fields.root;
   if ( !root || (SvtSnapShotGenerator_k__BackingField = root->fields._SvtSnapShotGenerator_k__BackingField) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   v5 = (struct BattleServantSnapShot_o *)((__int64 (__fastcall *)(intptr_t, struct BattleServantData_o *, intptr_t))SvtSnapShotGenerator_k__BackingField->fields.invoke_impl)(
                                            SvtSnapShotGenerator_k__BackingField->fields.method_code,
                                            this->fields._SvtData_k__BackingField,
                                            SvtSnapShotGenerator_k__BackingField->fields.method);
   this->fields._Before_k__BackingField = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._Before_k__BackingField, (int32_t)v5, v6, v7);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._Before_k__BackingField,
+    (int32_t)v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
 }
 
 
@@ -316,10 +376,22 @@ void BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache__set_After(
         BattleServantSnapShot_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._After_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._After_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._After_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -328,10 +400,22 @@ void BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache__set_Before(
         BattleServantSnapShot_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._Before_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._Before_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._Before_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -339,21 +423,29 @@ void BattleLogicFunctionUtilities_FunctionProgressCache___c___cctor(const Method
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB4114 & 1) == 0 )
+  if ( (byte_4CC522C & 1) == 0 )
   {
-    sub_1C6BA08(&BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo);
-    byte_4CB4114 = 1;
+    sub_1C713B0(&BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo);
+    byte_4CC522C = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo);
   System_Object___ctor(v1, 0);
   BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo->static_fields->__9 = (struct BattleLogicFunctionUtilities_FunctionProgressCache___c_o *)v1;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo->static_fields,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)BattleLogicFunctionUtilities_FunctionProgressCache___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -371,7 +463,7 @@ void BattleLogicFunctionUtilities_FunctionProgressCache___c___MakeAfterSvtCache_
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache__MakeAfterCache(x, (const MethodInfo *)x);
 }
 
@@ -382,7 +474,7 @@ void BattleLogicFunctionUtilities_FunctionProgressCache___c___MakeBeforeSvtCache
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   BattleLogicFunctionUtilities_FunctionProgressCache_SvtCache__MakeBeforeCache(x, (const MethodInfo *)x);
 }
 
@@ -403,6 +495,6 @@ bool BattleLogicFunctionUtilities_FunctionProgressCache___c__DisplayClass10_0___
   struct BattleServantData_o *SvtData_k__BackingField; // x8
 
   if ( !x || (SvtData_k__BackingField = x->fields._SvtData_k__BackingField) == 0 )
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   return SvtData_k__BackingField->fields.uniqueId == this->fields.svtUniqueId;
 }

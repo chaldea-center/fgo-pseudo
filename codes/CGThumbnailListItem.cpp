@@ -12,9 +12,9 @@ void CGThumbnailListItem___ctor(
   CGThumbnailListItem_o *v16; // x26
   int32_t v17; // w2
   int32_t v18; // w3
-  int32_t v19; // w4
-  bool v20; // w5
-  bool v21; // w6
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
   System_String_o *v22; // x7
 
   v16 = this;
@@ -27,7 +27,7 @@ void CGThumbnailListItem___ctor(
   LODWORD(v16[-1].fields._ThumbnailSpritePath_k__BackingField) = cgType;
   BYTE4(v16[-1].fields._ThumbnailSpritePath_k__BackingField) = haveDifferenceCg;
   BYTE5(v16[-1].fields._ThumbnailSpritePath_k__BackingField) = isOpened;
-  sub_1C6B9AC(v16, (int32_t)thumbnailPath, v17, v18, v19, v20, v21, v22, method);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v16, (int32_t)thumbnailPath, v17, v18, v19, v20, v21, v22);
 }
 
 
@@ -43,7 +43,7 @@ bool CGThumbnailListItem__SetSortValue(CGThumbnailListItem_o *this, ListViewSort
     return 0;
   this->fields.sortValue1 = this->fields._Priority_k__BackingField;
   if ( !sort )
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   Filter = ListViewSort__GetFilter(sort, 101, 0);
   v8 = ListViewSort__GetFilter(sort, 100, 0);
   if ( Filter == v8 || Filter && this->fields._Type_k__BackingField == 1 )
@@ -117,8 +117,22 @@ void CGThumbnailListItem__set_ThumbnailSpritePath(
         System_String_o *value,
         const MethodInfo *method)
 {
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+
   this->fields._ThumbnailSpritePath_k__BackingField = value;
-  sub_1C6B9AC(&this->fields._ThumbnailSpritePath_k__BackingField, value);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ThumbnailSpritePath_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

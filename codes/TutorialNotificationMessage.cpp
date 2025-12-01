@@ -1,9 +1,9 @@
 void TutorialNotificationMessage___ctor(TutorialNotificationMessage_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB4F29 & 1) == 0 )
+  if ( (byte_4CC6048 & 1) == 0 )
   {
-    sub_1C6BA08(&BaseDialog_TypeInfo);
-    byte_4CB4F29 = 1;
+    sub_1C713B0(&BaseDialog_TypeInfo);
+    byte_4CC6048 = 1;
   }
   this->fields.messageDefaultFontSize = -1;
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
@@ -16,30 +16,42 @@ void TutorialNotificationMessage__Close(TutorialNotificationMessage_o *this, con
 {
   const MethodInfo *v2; // x2
 
-  TutorialNotificationMessage__Close_40381564(this, 0, v2);
+  TutorialNotificationMessage__Close_40423728(this, 0, v2);
 }
 
 
-void TutorialNotificationMessage__Close_40381564(
+void TutorialNotificationMessage__Close_40423728(
         TutorialNotificationMessage_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  System_Action_o *v6; // x20
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  System_Action_o *v10; // x20
 
-  if ( (byte_4CB4F27 & 1) == 0 )
+  if ( (byte_4CC6046 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_TutorialNotificationMessage_EndClose__);
-    byte_4CB4F27 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_TutorialNotificationMessage_EndClose__);
+    byte_4CC6046 = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.closeCallbackFunc, (int32_t)callback, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
+    (int32_t)callback,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields.isButtonEnable = 0;
-  v6 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v6, (Il2CppObject *)this, Method_TutorialNotificationMessage_EndClose__, 0);
-  BaseDialog__Close((BaseDialog_o *)this, v6, 0);
+  v10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v10, (Il2CppObject *)this, Method_TutorialNotificationMessage_EndClose__, 0);
+  BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
 
 
@@ -48,24 +60,28 @@ void TutorialNotificationMessage__EndClose(TutorialNotificationMessage_o *this, 
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v4; // x1
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
-  CGThumbnailListItem_o *p_closeCallbackFunc; // x19
-  struct System_Action_o *v8; // x20
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
+  GrandQuestFolderBoardItem_o *p_closeCallbackFunc; // x19
+  struct System_Action_o *v12; // x20
   struct System_Action_o *closeCallbackFunc; // t1
 
   TutorialNotificationMessage__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   closeCallbackFunc = this->fields.closeCallbackFunc;
-  p_closeCallbackFunc = (CGThumbnailListItem_o *)&this->fields.closeCallbackFunc;
-  v8 = closeCallbackFunc;
+  p_closeCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc;
+  v12 = closeCallbackFunc;
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C6B9AC(p_closeCallbackFunc, 0, v5, v6);
-    ((void (__fastcall *)(intptr_t, intptr_t))v8->fields.invoke_impl)(v8->fields.method_code, v8->fields.method);
+    sub_1C71354(p_closeCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
+    ((void (__fastcall *)(intptr_t, intptr_t))v12->fields.invoke_impl)(v12->fields.method_code, v12->fields.method);
   }
 }
 
@@ -85,17 +101,21 @@ void TutorialNotificationMessage__EndOpen(TutorialNotificationMessage_o *this, c
   float v13; // s9
   float v14; // s10
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v19; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v20; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v23; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v24; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB4F26 & 1) == 0 )
+  if ( (byte_4CC6045 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB4F26 = 1;
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC6045 = 1;
   }
   touchObject = (UnityEngine_Object_o *)this->fields.touchObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -107,7 +127,7 @@ void TutorialNotificationMessage__EndOpen(TutorialNotificationMessage_o *this, c
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     touchBase = (UnityEngine_GameObject_o *)UnityEngine_Object__Instantiate_object_(
                                               touchPrefab,
-                                              (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                              (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !touchBase )
       goto LABEL_17;
     v7 = touchBase;
@@ -130,28 +150,28 @@ void TutorialNotificationMessage__EndOpen(TutorialNotificationMessage_o *this, c
           !transform) )
     {
 LABEL_17:
-      sub_1C6BC60(touchBase, v6);
+      sub_1C71608(touchBase, v6);
     }
     UnityEngine_Transform__set_parent(transform, (UnityEngine_Transform_o *)touchBase, 0);
-    v19.fields.x = x + this->fields.touchObjPos.fields.x;
-    v19.fields.y = y + this->fields.touchObjPos.fields.y;
-    v19.fields.z = z + this->fields.touchObjPos.fields.z;
-    UnityEngine_Transform__set_localPosition(transform, v19, 0);
-    if ( !byte_4CAFC0F )
+    v23.fields.x = x + this->fields.touchObjPos.fields.x;
+    v23.fields.y = y + this->fields.touchObjPos.fields.y;
+    v23.fields.z = z + this->fields.touchObjPos.fields.z;
+    UnityEngine_Transform__set_localPosition(transform, v23, 0);
+    if ( !byte_4CC0D0F )
     {
-      sub_1C6BA08(&UnityEngine_Quaternion_TypeInfo);
-      byte_4CAFC0F = 1;
+      sub_1C713B0(&UnityEngine_Quaternion_TypeInfo);
+      byte_4CC0D0F = 1;
     }
     UnityEngine_Transform__set_localRotation(
       transform,
       UnityEngine_Quaternion_TypeInfo->static_fields->identityQuaternion,
       0);
-    v20.fields.x = v12;
-    v20.fields.y = v13;
-    v20.fields.z = v14;
-    UnityEngine_Transform__set_localScale(transform, v20, 0);
+    v24.fields.x = v12;
+    v24.fields.y = v13;
+    v24.fields.z = v14;
+    UnityEngine_Transform__set_localScale(transform, v24, 0);
     this->fields.touchObject = v7;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.touchObject, (int32_t)v7, v15, v16);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.touchObject, (int32_t)v7, v15, v16, v17, v18, v19, v20);
   }
   this->fields.isButtonEnable = 1;
 }
@@ -162,19 +182,23 @@ void TutorialNotificationMessage__EndTurorialRequest(
         System_String_o *result,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_selectCallbackFunc; // x0
-  struct System_Action_o *v5; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GrandQuestFolderBoardItem_o *p_selectCallbackFunc; // x0
+  struct System_Action_o *v9; // x19
   struct System_Action_o *selectCallbackFunc; // t1
 
   selectCallbackFunc = this->fields.selectCallbackFunc;
-  p_selectCallbackFunc = (CGThumbnailListItem_o *)&this->fields.selectCallbackFunc;
-  v5 = selectCallbackFunc;
+  p_selectCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.selectCallbackFunc;
+  v9 = selectCallbackFunc;
   if ( selectCallbackFunc )
   {
     p_selectCallbackFunc->klass = 0;
-    sub_1C6B9AC(p_selectCallbackFunc, 0, (int32_t)method, v3);
-    ((void (__fastcall *)(intptr_t, intptr_t))v5->fields.invoke_impl)(v5->fields.method_code, v5->fields.method);
+    sub_1C71354(p_selectCallbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+    ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
 
@@ -188,15 +212,19 @@ void TutorialNotificationMessage__Init(TutorialNotificationMessage_o *this, cons
   UnityEngine_Object_o *touchObject; // x21
   UnityEngine_Object_o *v8; // x21
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( (byte_4CB4F22 & 1) == 0 )
+  if ( (byte_4CC6041 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB4F22 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC6041 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -217,13 +245,13 @@ void TutorialNotificationMessage__Init(TutorialNotificationMessage_o *this, cons
     v8 = (UnityEngine_Object_o *)*p_touchObject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(v8, 0);
+    UnityEngine_Object__Destroy_71724608(v8, 0);
     *p_touchObject = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.touchObject, 0, v9, v10);
-    if ( !byte_4CAFC09 )
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.touchObject, 0, v9, v10, v11, v12, v13, v14);
+    if ( !byte_4CC0D09 )
     {
-      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC09 = 1;
+      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D09 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     z = static_fields->zeroVector.fields.z;
@@ -240,7 +268,7 @@ void TutorialNotificationMessage__Init(TutorialNotificationMessage_o *this, cons
         (maskSprite = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0)) == 0) )
   {
 LABEL_19:
-    sub_1C6BC60(maskSprite, v4);
+    sub_1C71608(maskSprite, v4);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
@@ -254,36 +282,44 @@ void TutorialNotificationMessage__OnClickClose(TutorialNotificationMessage_o *th
   struct UnityEngine_GameObject_o **p_touchObject; // x20
   UnityEngine_Object_o *touchObject; // x21
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  UnityEngine_Object_o *v9; // x21
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  UnityEngine_Object_o *v13; // x21
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
-  NetworkManager_ResultCallbackFunc_o *v14; // x20
+  NetworkManager_ResultCallbackFunc_o *v22; // x20
   Il2CppObject *Request_object; // x0
-  __int64 v16; // x1
-  CGThumbnailListItem_o *p_selectCallbackFunc; // x19
-  struct System_Action_o *v18; // x20
+  __int64 v24; // x1
+  GrandQuestFolderBoardItem_o *p_selectCallbackFunc; // x19
+  struct System_Action_o *v26; // x20
   struct System_Action_o *selectCallbackFunc; // t1
 
-  if ( (byte_4CB4F28 & 1) == 0 )
+  if ( (byte_4CC6047 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_NetworkManager_getRequest_TutorialSetRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C6BA08(&Method_TutorialNotificationMessage_EndTurorialRequest__);
-    sub_1C6BA08(&Method_TutorialNotificationMessage_OnClickClose__);
-    sub_1C6BA08(&StringLiteral_22471/*"ok"*/);
-    byte_4CB4F28 = 1;
+    sub_1C713B0(&Method_NetworkManager_getRequest_TutorialSetRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C713B0(&Method_TutorialNotificationMessage_EndTurorialRequest__);
+    sub_1C713B0(&Method_TutorialNotificationMessage_OnClickClose__);
+    sub_1C713B0(&StringLiteral_22486/*"ok"*/);
+    byte_4CC6047 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_TutorialNotificationMessage_OnClickClose__;
     if ( (*((_BYTE *)Method_TutorialNotificationMessage_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C6BA20(Method_TutorialNotificationMessage_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C713C8(Method_TutorialNotificationMessage_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     p_touchObject = &this->fields.touchObject;
     touchObject = (UnityEngine_Object_o *)this->fields.touchObject;
@@ -292,16 +328,16 @@ void TutorialNotificationMessage__OnClickClose(TutorialNotificationMessage_o *th
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality(touchObject, 0, 0) )
     {
-      v9 = (UnityEngine_Object_o *)*p_touchObject;
+      v13 = (UnityEngine_Object_o *)*p_touchObject;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71659676(v9, 0);
+      UnityEngine_Object__Destroy_71724608(v13, 0);
       *p_touchObject = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.touchObject, 0, v10, v11);
-      if ( !byte_4CAFC09 )
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.touchObject, 0, v14, v15, v16, v17, v18, v19);
+      if ( !byte_4CC0D09 )
       {
-        sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-        byte_4CAFC09 = 1;
+        sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+        byte_4CC0D09 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       z = static_fields->zeroVector.fields.z;
@@ -311,36 +347,37 @@ void TutorialNotificationMessage__OnClickClose(TutorialNotificationMessage_o *th
     if ( this->fields.flagId == -1 )
     {
       selectCallbackFunc = this->fields.selectCallbackFunc;
-      p_selectCallbackFunc = (CGThumbnailListItem_o *)&this->fields.selectCallbackFunc;
-      v18 = selectCallbackFunc;
+      p_selectCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.selectCallbackFunc;
+      v26 = selectCallbackFunc;
       if ( selectCallbackFunc )
       {
         p_selectCallbackFunc->klass = 0;
-        sub_1C6B9AC(p_selectCallbackFunc, 0, v7, v8);
-        ((void (__fastcall *)(intptr_t, intptr_t))v18->fields.invoke_impl)(v18->fields.method_code, v18->fields.method);
+        sub_1C71354(p_selectCallbackFunc, 0, v7, v8, v9, v10, v11, v12);
+        ((void (__fastcall *)(intptr_t, intptr_t))v26->fields.invoke_impl)(v26->fields.method_code, v26->fields.method);
       }
     }
     else
     {
-      v14 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
+      v22 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
-        v14,
+        v22,
         (Il2CppObject *)this,
         Method_TutorialNotificationMessage_EndTurorialRequest__,
         0);
       if ( !NetworkManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
       Request_object = NetworkManager__getRequest_object_(
-                         v14,
-                         (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
+                         v22,
+                         (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_TutorialSetRequest___);
       if ( !Request_object )
-        sub_1C6BC60(0, v16);
+        sub_1C71608(0, v24);
       TutorialSetRequest__beginRequest((TutorialSetRequest_o *)Request_object, this->fields.flagId, 0);
     }
   }
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 void TutorialNotificationMessage__Open(
         TutorialNotificationMessage_o *this,
         System_String_o *message,
@@ -352,6 +389,7 @@ void TutorialNotificationMessage__Open(
         bool dispTouchSprite,
         const MethodInfo *method)
 {
+  int messageDefaultFontSize; // w22
   float y; // s8
   float x; // s9
   UnityEngine_Object_o *messageLabel; // x24
@@ -367,28 +405,33 @@ void TutorialNotificationMessage__Open(
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
 
+  messageDefaultFontSize = fontSize;
   y = messagePos.fields.y;
   x = messagePos.fields.x;
-  if ( (byte_4CB4F23 & 1) == 0 )
+  if ( (byte_4CC6042 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_TutorialNotificationMessage_EndOpen__);
-    sub_1C6BA08(&Method_TutorialNotificationMessage__Open_b__13_0__);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB4F23 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_TutorialNotificationMessage_EndOpen__);
+    sub_1C713B0(&Method_TutorialNotificationMessage__Open_b__13_0__);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC6042 = 1;
   }
   this->fields.selectCallbackFunc = selectCallback;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.selectCallbackFunc,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.selectCallbackFunc,
     (int32_t)selectCallback,
     flagId,
-    (const MethodInfo *)selectCallback);
+    (int32_t)selectCallback,
+    *(System_String_o **)&maskType,
+    fontSize,
+    dispTouchSprite,
+    (System_String_o *)method);
   this->fields.flagId = flagId;
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -425,17 +468,17 @@ void TutorialNotificationMessage__Open(
       v24 = (System_String_o *)StringLiteral_1/*""*/;
     UILabel__set_text((UILabel_o *)transform, v24, 0);
     transform = this->fields.messageLabel;
-    if ( fontSize < 1 )
+    if ( messageDefaultFontSize < 1 )
     {
       if ( !transform )
         goto LABEL_30;
-      fontSize = this->fields.messageDefaultFontSize;
+      messageDefaultFontSize = this->fields.messageDefaultFontSize;
     }
     else if ( !transform )
     {
       goto LABEL_30;
     }
-    UILabel__set_fontSize((UILabel_o *)transform, fontSize, 0);
+    UILabel__set_fontSize((UILabel_o *)transform, messageDefaultFontSize, 0);
     transform = this->fields.messageLabel;
     if ( transform )
     {
@@ -450,12 +493,12 @@ void TutorialNotificationMessage__Open(
       }
     }
 LABEL_30:
-    sub_1C6BC60(transform, v21);
+    sub_1C71608(transform, v21);
   }
 LABEL_26:
   TutorialNotificationMessage__setTutorialMaskActive(this, 1, v22);
   this->fields.isButtonEnable = 0;
-  v25 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v25 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   if ( dispTouchSprite )
     v26 = &Method_TutorialNotificationMessage_EndOpen__;
   else
@@ -473,35 +516,47 @@ void TutorialNotificationMessage__OpenWithArrow(
         int32_t fontSize,
         const MethodInfo *method)
 {
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
   int32_t messageDefaultFontSize; // w20
   float y; // s8
   float x; // s9
   UnityEngine_Object_o *messageLabel; // x22
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
-  __int64 v13; // x1
-  const MethodInfo *v14; // x2
+  __int64 v17; // x1
+  const MethodInfo *v18; // x2
   void *transform; // x0
-  System_String_o *v16; // x1
+  System_String_o *v20; // x1
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v18; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
 
   messageDefaultFontSize = fontSize;
   y = messagePos.fields.y;
   x = messagePos.fields.x;
-  if ( (byte_4CB4F25 & 1) == 0 )
+  if ( (byte_4CC6044 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB4F25 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC6044 = 1;
   }
   this->fields.selectCallbackFunc = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectCallbackFunc, 0, fontSize, method);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.selectCallbackFunc,
+    0,
+    fontSize,
+    (int32_t)method,
+    v5,
+    v6,
+    v7,
+    v8);
   this->fields.flagId = -1;
-  if ( !byte_4CAFC09 )
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -533,18 +588,18 @@ void TutorialNotificationMessage__OpenWithArrow(
     goto LABEL_27;
   }
   if ( message )
-    v16 = message;
+    v20 = message;
   else
-    v16 = (System_String_o *)StringLiteral_1/*""*/;
-  UILabel__set_text((UILabel_o *)transform, v16, 0);
+    v20 = (System_String_o *)StringLiteral_1/*""*/;
+  UILabel__set_text((UILabel_o *)transform, v20, 0);
   transform = this->fields.messageLabel;
   if ( !transform || (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0 )
 LABEL_27:
-    sub_1C6BC60(transform, v13);
-  v18.fields.y = y + this->fields.messageDefaultPosition.fields.y;
-  v18.fields.x = x + this->fields.messageDefaultPosition.fields.x;
-  v18.fields.z = 0.0;
-  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v18, 0);
+    sub_1C71608(transform, v17);
+  v22.fields.y = y + this->fields.messageDefaultPosition.fields.y;
+  v22.fields.x = x + this->fields.messageDefaultPosition.fields.x;
+  v22.fields.z = 0.0;
+  UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)transform, v22, 0);
   transform = this->fields.messageLabel;
   if ( messageDefaultFontSize < 0 )
   {
@@ -558,14 +613,14 @@ LABEL_27:
   }
   UILabel__set_fontSize((UILabel_o *)transform, messageDefaultFontSize, 0);
 LABEL_26:
-  TutorialNotificationMessage__setTutorialMaskActive(this, 0, v14);
+  TutorialNotificationMessage__setTutorialMaskActive(this, 0, v18);
   this->fields.isButtonEnable = 0;
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-void TutorialNotificationMessage__Open_40379516(
+void TutorialNotificationMessage__Open_40421680(
         TutorialNotificationMessage_o *this,
         System_String_o *message,
         UnityEngine_Vector2_o messagePos,
@@ -577,6 +632,7 @@ void TutorialNotificationMessage__Open_40379516(
         int32_t spacingY,
         const MethodInfo *method)
 {
+  int messageDefaultFontSize; // w22
   float z; // s10
   float y; // s11
   float x; // s12
@@ -601,28 +657,33 @@ void TutorialNotificationMessage__Open_40379516(
   UnityEngine_Color_o v38; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v39; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
+  messageDefaultFontSize = fontSize;
   z = touchObjPos.fields.z;
   y = touchObjPos.fields.y;
   x = touchObjPos.fields.x;
   v18 = messagePos.fields.y;
   v19 = messagePos.fields.x;
-  if ( (byte_4CB4F24 & 1) == 0 )
+  if ( (byte_4CC6043 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_TutorialNotificationMessage_EndOpen__);
-    sub_1C6BA08(&Method_TutorialNotificationMessage__Open_b__14_0__);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    sub_1C6BA08(&StringLiteral_3024/*"Back/back{0}"*/);
-    byte_4CB4F24 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_TutorialNotificationMessage_EndOpen__);
+    sub_1C713B0(&Method_TutorialNotificationMessage__Open_b__14_0__);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    sub_1C713B0(&StringLiteral_3026/*"Back/back{0}"*/);
+    byte_4CC6043 = 1;
   }
   this->fields.selectCallbackFunc = callback;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.selectCallbackFunc,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.selectCallbackFunc,
     (int32_t)callback,
     dlgBgId,
-    *(const MethodInfo **)&alignment);
+    alignment,
+    *(System_String_o **)&fontSize,
+    (int32_t)callback,
+    *(int64_t *)&spacingY,
+    (System_String_o *)method);
   this->fields.touchObjPos.fields.x = x;
   this->fields.touchObjPos.fields.y = y;
   this->fields.flagId = -1;
@@ -732,17 +793,17 @@ void TutorialNotificationMessage__Open_40379516(
     v27 = (System_String_o *)StringLiteral_1/*""*/;
   UILabel__set_text(transform, v27, 0);
   transform = this->fields.messageLabel;
-  if ( fontSize < 1 )
+  if ( messageDefaultFontSize < 1 )
   {
     if ( !transform )
       goto LABEL_50;
-    fontSize = this->fields.messageDefaultFontSize;
+    messageDefaultFontSize = this->fields.messageDefaultFontSize;
   }
   else if ( !transform )
   {
     goto LABEL_50;
   }
-  UILabel__set_fontSize(transform, fontSize, 0);
+  UILabel__set_fontSize(transform, messageDefaultFontSize, 0);
   if ( spacingY >= 1 )
   {
     transform = this->fields.messageLabel;
@@ -755,7 +816,7 @@ void TutorialNotificationMessage__Open_40379516(
     || (transform = (UILabel_o *)UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0 )
   {
 LABEL_50:
-    sub_1C6BC60(transform, v23);
+    sub_1C71608(transform, v23);
   }
   v36.fields.y = v18 + this->fields.messageDefaultPosition.fields.y;
   v36.fields.x = v19 + this->fields.messageDefaultPosition.fields.x;
@@ -776,8 +837,8 @@ LABEL_43:
   backTexture = this->fields.backTexture;
   v33 = dlgBgId;
   v29 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v33);
-  v30 = System_String__Format((System_String_o *)StringLiteral_3024/*"Back/back{0}"*/, v29, 0);
-  v31 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v30 = System_String__Format((System_String_o *)StringLiteral_3026/*"Back/back{0}"*/, v29, 0);
+  v31 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v31, (Il2CppObject *)this, Method_TutorialNotificationMessage__Open_b__14_0__, 0);
   if ( !backTexture )
     goto LABEL_50;
@@ -788,7 +849,7 @@ LABEL_47:
     if ( !transform )
       goto LABEL_50;
     ExUITexture__ClearImage((ExUITexture_o *)transform, 0);
-    v32 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v32 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v32, (Il2CppObject *)this, Method_TutorialNotificationMessage_EndOpen__, 0);
     BaseDialog__Open((BaseDialog_o *)this, v32, 1, 0, 0);
   }
@@ -805,13 +866,13 @@ void TutorialNotificationMessage___Open_b__14_0(TutorialNotificationMessage_o *t
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4CB4F2A & 1) == 0 )
+  if ( (byte_4CC6049 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_TutorialNotificationMessage_EndOpen__);
-    byte_4CB4F2A = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_TutorialNotificationMessage_EndOpen__);
+    byte_4CC6049 = 1;
   }
-  v3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_TutorialNotificationMessage_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v3, 1, 0, 0);
 }
@@ -829,7 +890,7 @@ void TutorialNotificationMessage__setTutorialMaskActive(
   if ( !maskSprite
     || (maskSprite = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(maskSprite, 0)) == 0 )
   {
-    sub_1C6BC60(maskSprite, active);
+    sub_1C71608(maskSprite, active);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, active, 0);
 }

@@ -7,79 +7,127 @@ void CompensateArgForShowAll___ctor(
         const MethodInfo *method)
 {
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  CompensateArgForShowAll___c_c *v15; // x0
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  CompensateArgForShowAll___c_c *v23; // x0
   System_Func_T__TResult__o *_9__13_0; // x22
-  Il2CppObject *v17; // x23
+  Il2CppObject *v25; // x23
   struct CompensateArgForShowAll___c_StaticFields *static_fields; // x0
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  BitValue_T__o *v21; // x23
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  System_Action_T__o *v24; // x22
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  BitValue_T__o *v33; // x23
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
+  System_Action_T__o *v40; // x22
+  int32_t v41; // w2
+  int32_t v42; // w3
+  System_String_o *v43; // x4
+  int32_t v44; // w5
+  int64_t v45; // x6
+  System_String_o *v46; // x7
 
-  if ( (byte_4CB87F8 & 1) == 0 )
+  if ( (byte_4CC992A & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
-    sub_1C6BA08(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
-    sub_1C6BA08(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
-    sub_1C6BA08(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
-    sub_1C6BA08(&Method_CompensateArgForShowAll___ctor_b__13_1__);
-    sub_1C6BA08(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
-    sub_1C6BA08(&Method_CompensateArgForShowAll___c___ctor_b__13_0__);
-    sub_1C6BA08(&CompensateArgForShowAll___c_TypeInfo);
-    byte_4CB87F8 = 1;
+    sub_1C713B0(&System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
+    sub_1C713B0(&Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
+    sub_1C713B0(&Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
+    sub_1C713B0(&BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
+    sub_1C713B0(&Method_CompensateArgForShowAll___ctor_b__13_1__);
+    sub_1C713B0(&System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
+    sub_1C713B0(&Method_CompensateArgForShowAll___c___ctor_b__13_0__);
+    sub_1C713B0(&CompensateArgForShowAll___c_TypeInfo);
+    byte_4CC992A = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._Perf_k__BackingField = perf;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)perf, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)perf, v11, v12, v13, v14, v15, v16);
   this->fields._ActObj_k__BackingField = actObj;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._ActObj_k__BackingField, (int32_t)actObj, v13, v14);
-  v15 = CompensateArgForShowAll___c_TypeInfo;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ActObj_k__BackingField,
+    (int32_t)actObj,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21,
+    v22);
+  v23 = CompensateArgForShowAll___c_TypeInfo;
   if ( !CompensateArgForShowAll___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(CompensateArgForShowAll___c_TypeInfo);
-    v15 = CompensateArgForShowAll___c_TypeInfo;
+    v23 = CompensateArgForShowAll___c_TypeInfo;
   }
-  _9__13_0 = (System_Func_T__TResult__o *)v15->static_fields->__9__13_0;
+  _9__13_0 = (System_Func_T__TResult__o *)v23->static_fields->__9__13_0;
   if ( !_9__13_0 )
   {
-    if ( !v15->_2.cctor_finished )
+    if ( !v23->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v15);
-      v15 = CompensateArgForShowAll___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v23);
+      v23 = CompensateArgForShowAll___c_TypeInfo;
     }
-    v17 = (Il2CppObject *)v15->static_fields->__9;
-    _9__13_0 = (System_Func_T__TResult__o *)sub_1C6BC54(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
-    System_Func_Int32Enum__int____ctor(_9__13_0, v17, Method_CompensateArgForShowAll___c___ctor_b__13_0__, 0);
+    v25 = (Il2CppObject *)v23->static_fields->__9;
+    _9__13_0 = (System_Func_T__TResult__o *)sub_1C715FC(System_Func_CompensateArgForShowAll_EffectType__int__TypeInfo);
+    System_Func_Int32Enum__int____ctor(_9__13_0, v25, Method_CompensateArgForShowAll___c___ctor_b__13_0__, 0);
     static_fields = CompensateArgForShowAll___c_TypeInfo->static_fields;
     static_fields->__9__13_0 = (struct System_Func_CompensateArgForShowAll_EffectType__int__o *)_9__13_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__13_0, (int32_t)_9__13_0, v19, v20);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__13_0,
+      (int32_t)_9__13_0,
+      v27,
+      v28,
+      v29,
+      v30,
+      v31,
+      v32);
   }
-  v21 = (BitValue_T__o *)sub_1C6BC54(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
+  v33 = (BitValue_T__o *)sub_1C715FC(BitValue_CompensateArgForShowAll_EffectType__TypeInfo);
   BitValue_Int32Enum____ctor(
-    v21,
+    v33,
     (System_Func_T__int__o *)_9__13_0,
-    (const MethodInfo_3378EF0 *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
-  this->fields._EffectTypeBit_k__BackingField = (struct BitValue_CompensateArgForShowAll_EffectType__o *)v21;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._EffectTypeBit_k__BackingField, (int32_t)v21, v22, v23);
-  v24 = (System_Action_T__o *)sub_1C6BC54(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
-  System_Action_Int32Enum____ctor(v24, (Il2CppObject *)this, Method_CompensateArgForShowAll___ctor_b__13_1__, 0);
+    (const MethodInfo_3388C94 *)Method_BitValue_CompensateArgForShowAll_EffectType___ctor__);
+  this->fields._EffectTypeBit_k__BackingField = (struct BitValue_CompensateArgForShowAll_EffectType__o *)v33;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._EffectTypeBit_k__BackingField,
+    (int32_t)v33,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38,
+    v39);
+  v40 = (System_Action_T__o *)sub_1C715FC(System_Action_CompensateArgForShowAll_EffectType__TypeInfo);
+  System_Action_Int32Enum____ctor(v40, (Il2CppObject *)this, Method_CompensateArgForShowAll___ctor_b__13_1__, 0);
   BasicHelper__ForEach_Int32Enum_(
     (System_Collections_Generic_IEnumerable_T__o *)effectTypes,
-    v24,
-    (const MethodInfo_3126A38 *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
+    v40,
+    (const MethodInfo_31367DC *)Method_BasicHelper_ForEach_CompensateArgForShowAll_EffectType___);
   this->fields._ExtraEffectIdArray_k__BackingField = extraEffectIdArray;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._ExtraEffectIdArray_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._ExtraEffectIdArray_k__BackingField,
     (int32_t)extraEffectIdArray,
-    v25,
-    v26);
+    v41,
+    v42,
+    v43,
+    v44,
+    v45,
+    v46);
 }
 
 
@@ -88,18 +136,18 @@ void CompensateArgForShowAll____ctor_b__13_1(CompensateArgForShowAll_o *this, in
 {
   BitValue_T__o *EffectTypeBit_k__BackingField; // x0
 
-  if ( (byte_4CB87F9 & 1) == 0 )
+  if ( (byte_4CC992B & 1) == 0 )
   {
-    sub_1C6BA08(&Method_BitValue_CompensateArgForShowAll_EffectType__On__);
-    byte_4CB87F9 = 1;
+    sub_1C713B0(&Method_BitValue_CompensateArgForShowAll_EffectType__On__);
+    byte_4CC992B = 1;
   }
   EffectTypeBit_k__BackingField = (BitValue_T__o *)this->fields._EffectTypeBit_k__BackingField;
   if ( !EffectTypeBit_k__BackingField )
-    sub_1C6BC60(0, *(_QWORD *)&x);
+    sub_1C71608(0, *(_QWORD *)&x);
   BitValue_Int32Enum___On(
     EffectTypeBit_k__BackingField,
     x,
-    (const MethodInfo_3378F20 *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
+    (const MethodInfo_3388CC4 *)Method_BitValue_CompensateArgForShowAll_EffectType__On__);
 }
 
 
@@ -137,17 +185,29 @@ void CompensateArgForShowAll___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB87FA & 1) == 0 )
+  if ( (byte_4CC992C & 1) == 0 )
   {
-    sub_1C6BA08(&CompensateArgForShowAll___c_TypeInfo);
-    byte_4CB87FA = 1;
+    sub_1C713B0(&CompensateArgForShowAll___c_TypeInfo);
+    byte_4CC992C = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(CompensateArgForShowAll___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(CompensateArgForShowAll___c_TypeInfo);
   System_Object___ctor(v1, 0);
   CompensateArgForShowAll___c_TypeInfo->static_fields->__9 = (struct CompensateArgForShowAll___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)CompensateArgForShowAll___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)CompensateArgForShowAll___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 

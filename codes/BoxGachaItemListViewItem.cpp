@@ -21,37 +21,37 @@ void BoxGachaItemListViewItem___ctor(
   struct System_String_o *v23; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CB066C & 1) == 0 )
+  if ( (byte_4CC176F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_BoxGachaHistoryMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_GiftAddMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_BoxGachaHistoryMaster__BoxGachaHistoryEntity__int__TryGetEntity__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB066C = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_BoxGachaHistoryMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_GiftAddMaster___);
+    sub_1C713B0(&Method_DataMasterBase_BoxGachaHistoryMaster__BoxGachaHistoryEntity__int__TryGetEntity__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC176F = 1;
   }
   entity = 0;
   ListViewItem___ctor((ListViewItem_o *)this, 0);
   this->fields.gachaBaseData = data;
-  Instance = (void *)sub_1C6B9AC(&this->fields.gachaBaseData, data);
+  Instance = (void *)sub_1C71354(&this->fields.gachaBaseData, data);
   this->fields.currentEventId = eventId;
   this->fields.currentBoxGachaId = boxGachaId;
   if ( !data )
     goto LABEL_22;
   this->fields.isRare = data->fields.isRare;
   this->fields.isDraw = isDraw;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_BoxGachaHistoryMaster___);
+               (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_BoxGachaHistoryMaster___);
   if ( !Instance )
     goto LABEL_22;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
          &entity,
          boxGachaId,
-         (const MethodInfo_33F9128 *)Method_DataMasterBase_BoxGachaHistoryMaster__BoxGachaHistoryEntity__int__TryGetEntity__) )
+         (const MethodInfo_3408ECC *)Method_DataMasterBase_BoxGachaHistoryMaster__BoxGachaHistoryEntity__int__TryGetEntity__) )
   {
     Instance = entity;
     if ( !entity )
@@ -67,26 +67,26 @@ void BoxGachaItemListViewItem___ctor(
   this->fields.maxNum = maxNum;
   detail = data->fields.detail;
   this->fields.detailTxt = detail;
-  sub_1C6B9AC(&this->fields.detailTxt, detail);
+  sub_1C71354(&this->fields.detailTxt, detail);
   type = data->fields.type;
   if ( type == 1 )
   {
     GiftData = BoxGachaBaseEntity__getGiftData(data, 0);
     this->fields.giftEnt = GiftData;
     p_giftEnt = &this->fields.giftEnt;
-    Instance = (void *)sub_1C6B9AC(&this->fields.giftEnt, GiftData);
+    Instance = (void *)sub_1C71354(&this->fields.giftEnt, GiftData);
     giftEnt = this->fields.giftEnt;
     if ( giftEnt )
     {
       if ( !giftEnt->fields._IsReplacedData_k__BackingField
-        || (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) != 0
+        || (Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__)) != 0
         && (Instance = DataManager__GetMasterData_object_(
                          (DataManager_o *)Instance,
-                         (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_GiftAddMaster___)) != 0
+                         (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_GiftAddMaster___)) != 0
         && (Instance = GiftAddMaster__GetValidPriorDataById((GiftAddMaster_o *)Instance, data->fields.targetId, 0)) != 0
         && (OverwriteDetailText = GiftAddEntity__GetOverwriteDetailText((GiftAddEntity_o *)Instance, 0),
             this->fields.detailTxt = OverwriteDetailText,
-            Instance = (void *)sub_1C6B9AC(&this->fields.detailTxt, OverwriteDetailText),
+            Instance = (void *)sub_1C71354(&this->fields.detailTxt, OverwriteDetailText),
             (giftEnt = *p_giftEnt) != 0) )
       {
         this->fields.giftType = giftEnt->fields.type;
@@ -95,7 +95,7 @@ void BoxGachaItemListViewItem___ctor(
       }
     }
 LABEL_22:
-    sub_1C6BC60(Instance, v12);
+    sub_1C71608(Instance, v12);
   }
   if ( (type & 0xFFFFFFFE) == 2 )
   {
@@ -105,11 +105,11 @@ LABEL_22:
     v21 = (struct System_String_o *)*((_QWORD *)Instance + 4);
     v22 = Instance;
     this->fields.nameTxt = v21;
-    sub_1C6B9AC(&this->fields.nameTxt, v21);
+    sub_1C71354(&this->fields.nameTxt, v21);
     this->fields.targetImgId = *((_DWORD *)v22 + 7);
     v23 = (struct System_String_o *)*((_QWORD *)v22 + 5);
     this->fields.extraDetailTxt = v23;
-    sub_1C6B9AC(&this->fields.extraDetailTxt, v23);
+    sub_1C71354(&this->fields.extraDetailTxt, v23);
   }
 }
 
@@ -134,7 +134,7 @@ bool BoxGachaItemListViewItem__SetSortValue(
   *(_WORD *)&this->fields.isTermination = 0;
   this->fields.sortValue0 = currenNum > 0;
   if ( !gachaBaseData )
-    sub_1C6BC60(this, sort);
+    sub_1C71608(this, sort);
   result = 1;
   this->fields.sortValue1 = -gachaBaseData->fields.priority;
   return result;
@@ -175,7 +175,7 @@ int32_t BoxGachaItemListViewItem__get_GachaBaseType(BoxGachaItemListViewItem_o *
 
   gachaBaseData = this->fields.gachaBaseData;
   if ( !gachaBaseData )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return gachaBaseData->fields.type;
 }
 
@@ -186,7 +186,7 @@ int32_t BoxGachaItemListViewItem__get_GetBannerId(BoxGachaItemListViewItem_o *th
 
   gachaBaseData = this->fields.gachaBaseData;
   if ( !gachaBaseData )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return gachaBaseData->fields.bannerId;
 }
 
@@ -217,7 +217,7 @@ int32_t BoxGachaItemListViewItem__get_GetIconId(BoxGachaItemListViewItem_o *this
 
   gachaBaseData = this->fields.gachaBaseData;
   if ( !gachaBaseData )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return gachaBaseData->fields.iconId;
 }
 
@@ -315,19 +315,19 @@ void BoxGachaItemListViewItem__setGiftData(BoxGachaItemListViewItem_o *this, con
   int32_t num; // w8
   System_String_o *countText; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB066D & 1) == 0 )
+  if ( (byte_4CC1770 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_CommandCodeMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&StringLiteral_22641/*"overwriteFirstTimeDispItemId"*/);
-    sub_1C6BA08(&StringLiteral_22632/*"overwriteDispItemId"*/);
-    sub_1C6BA08(&StringLiteral_22640/*"overwriteFirstTimeDispItemGet"*/);
-    byte_4CB066D = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_CommandCodeMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C713B0(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C713B0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C713B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C713B0(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&StringLiteral_22659/*"overwriteFirstTimeDispItemId"*/);
+    sub_1C713B0(&StringLiteral_22650/*"overwriteDispItemId"*/);
+    sub_1C713B0(&StringLiteral_22658/*"overwriteFirstTimeDispItemGet"*/);
+    byte_4CC1770 = 1;
   }
   countText = 0;
   giftEnt = this->fields.giftEnt;
@@ -339,18 +339,18 @@ void BoxGachaItemListViewItem__setGiftData(BoxGachaItemListViewItem_o *this, con
     {
       IntValue = EntityScriptUtil__GetIntValue(
                    gachaBaseData->fields.script,
-                   (System_String_o *)StringLiteral_22632/*"overwriteDispItemId"*/,
+                   (System_String_o *)StringLiteral_22650/*"overwriteDispItemId"*/,
                    0,
                    0);
       v7 = this->fields.gachaBaseData;
       if ( v7 )
       {
         v8 = IntValue;
-        IntValue = EntityScriptUtil__GetIntValue(v7->fields.script, (System_String_o *)StringLiteral_22641/*"overwriteFirstTimeDispItemId"*/, 0, 0);
+        IntValue = EntityScriptUtil__GetIntValue(v7->fields.script, (System_String_o *)StringLiteral_22659/*"overwriteFirstTimeDispItemId"*/, 0, 0);
         if ( (int)IntValue >= 1 )
         {
           v9 = IntValue;
-          IntValue = UnityEngine_PlayerPrefs__GetInt_71617412((System_String_o *)StringLiteral_22640/*"overwriteFirstTimeDispItemGet"*/, 0);
+          IntValue = UnityEngine_PlayerPrefs__GetInt_71682344((System_String_o *)StringLiteral_22658/*"overwriteFirstTimeDispItemGet"*/, 0);
           if ( !(_DWORD)IntValue )
             v8 = v9;
         }
@@ -362,29 +362,29 @@ void BoxGachaItemListViewItem__setGiftData(BoxGachaItemListViewItem_o *this, con
             case 1:
             case 6:
             case 7:
-              IntValue = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              IntValue = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( !IntValue )
                 break;
               IntValue = (__int64)DataManager__GetMasterData_object_(
                                     (DataManager_o *)IntValue,
-                                    (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ServantMaster___);
+                                    (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantMaster___);
               v11 = this->fields.giftEnt;
               if ( !v11 || !IntValue )
                 break;
               Entity = DataMasterBase_object__object__int___GetEntity(
                          (DataMasterBase_TMaster__TEntity__PKType__o *)IntValue,
                          v11->fields.objectId,
-                         (const MethodInfo_33F90DC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                         (const MethodInfo_3408E80 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
               this->fields.svtEnt = (struct ServantEntity_o *)Entity;
               p_svtEnt = &this->fields.svtEnt;
               goto LABEL_26;
             case 2:
-              IntValue = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              IntValue = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( !IntValue )
                 break;
               IntValue = (__int64)DataManager__GetMasterData_object_(
                                     (DataManager_o *)IntValue,
-                                    (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_ItemMaster___);
+                                    (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ItemMaster___);
               objectId = (unsigned int)v8;
               if ( v8 > 0 )
                 goto LABEL_19;
@@ -398,9 +398,9 @@ LABEL_19:
               v15 = DataMasterBase_object__object__int___GetEntity(
                       (DataMasterBase_TMaster__TEntity__PKType__o *)IntValue,
                       objectId,
-                      (const MethodInfo_33F90DC *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                      (const MethodInfo_3408E80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
               this->fields.itemEnt = (struct ItemEntity_o *)v15;
-              IntValue = sub_1C6B9AC(&this->fields.itemEnt, v15);
+              IntValue = sub_1C71354(&this->fields.itemEnt, v15);
               itemEnt = this->fields.itemEnt;
               if ( !itemEnt )
                 break;
@@ -408,7 +408,7 @@ LABEL_19:
               p_svtEnt = &this->fields.nameTxt;
               this->fields.nameTxt = (struct System_String_o *)Entity;
 LABEL_26:
-              IntValue = sub_1C6B9AC(p_svtEnt, Entity);
+              IntValue = sub_1C71354(p_svtEnt, Entity);
 LABEL_27:
               v18 = this->fields.giftEnt;
               if ( v8 < 1 )
@@ -434,19 +434,19 @@ LABEL_33:
               }
               break;
             case 0xB:
-              IntValue = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+              IntValue = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
               if ( !IntValue )
                 break;
               IntValue = (__int64)DataManager__GetMasterData_object_(
                                     (DataManager_o *)IntValue,
-                                    (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+                                    (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_CommandCodeMaster___);
               v17 = this->fields.giftEnt;
               if ( !v17 || !IntValue )
                 break;
               Entity = DataMasterBase_object__object__int___GetEntity(
                          (DataMasterBase_TMaster__TEntity__PKType__o *)IntValue,
                          v17->fields.objectId,
-                         (const MethodInfo_33F90DC *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+                         (const MethodInfo_3408E80 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
               this->fields.commandCodeEntity = (struct CommandCodeEntity_o *)Entity;
               p_svtEnt = &this->fields.commandCodeEntity;
               goto LABEL_26;
@@ -456,6 +456,6 @@ LABEL_33:
         }
       }
     }
-    sub_1C6BC60(IntValue, objectId);
+    sub_1C71608(IntValue, objectId);
   }
 }

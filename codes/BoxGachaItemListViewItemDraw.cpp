@@ -14,10 +14,10 @@ void BoxGachaItemListViewItemDraw__Awake(BoxGachaItemListViewItemDraw_o *this, c
   struct UISprite_o *v8; // x8
   struct System_String_o *mSpriteName; // x1
 
-  if ( (byte_4CB066E & 1) == 0 )
+  if ( (byte_4CC1771 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB066E = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC1771 = 1;
   }
   baseSprite = (UnityEngine_Object_o *)this->fields.baseSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -29,14 +29,14 @@ void BoxGachaItemListViewItemDraw__Awake(BoxGachaItemListViewItemDraw_o *this, c
     if ( !v6
       || (mAtlas = v6->fields.mAtlas,
           this->fields.baseAtlas = mAtlas,
-          v4 = sub_1C6B9AC(&this->fields.baseAtlas, mAtlas),
+          v4 = sub_1C71354(&this->fields.baseAtlas, mAtlas),
           (v8 = this->fields.baseSprite) == 0) )
     {
-      sub_1C6BC60(v4, v5);
+      sub_1C71608(v4, v5);
     }
     mSpriteName = v8->fields.mSpriteName;
     this->fields.baseSpriteName = mSpriteName;
-    sub_1C6B9AC(&this->fields.baseSpriteName, mSpriteName);
+    sub_1C71354(&this->fields.baseSpriteName, mSpriteName);
   }
 }
 
@@ -97,22 +97,22 @@ void BoxGachaItemListViewItemDraw__SetItem(
   int32_t currentBoxGachaId; // [xsp+Ch] [xbp-44h] BYREF
 
   v5 = item;
-  if ( (byte_4CB066F & 1) == 0 )
+  if ( (byte_4CC1772 & 1) == 0 )
   {
-    sub_1C6BA08(&EventRewardRootComponent_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_GameObject__TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&StringLiteral_19244/*"event_gachabanner_"*/);
-    sub_1C6BA08(&StringLiteral_2992/*"BOX_GACHA_REWARD_NORMAL_TXT"*/);
-    sub_1C6BA08(&StringLiteral_20257/*"icon_event_"*/);
-    sub_1C6BA08(&StringLiteral_2991/*"BOX_GACHA_REWARD_DRAW_TXT"*/);
-    sub_1C6BA08(&StringLiteral_19313/*"event_rewardgacha_"*/);
-    byte_4CB066F = 1;
+    sub_1C713B0(&EventRewardRootComponent_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_GameObject__TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&StringLiteral_19255/*"event_gachabanner_"*/);
+    sub_1C713B0(&StringLiteral_2994/*"BOX_GACHA_REWARD_NORMAL_TXT"*/);
+    sub_1C713B0(&StringLiteral_20269/*"icon_event_"*/);
+    sub_1C713B0(&StringLiteral_2993/*"BOX_GACHA_REWARD_DRAW_TXT"*/);
+    sub_1C713B0(&StringLiteral_19324/*"event_rewardgacha_"*/);
+    byte_4CC1772 = 1;
   }
   currentBoxGachaId = 0;
   if ( !v5 || !mode )
@@ -143,23 +143,23 @@ void BoxGachaItemListViewItemDraw__SetItem(
     {
       currentBoxGachaId = v5->fields.currentBoxGachaId;
       v12 = System_Int32__ToString((int32_t)&currentBoxGachaId, 0);
-      v13 = &StringLiteral_19313/*"event_rewardgacha_"*/;
+      v13 = &StringLiteral_19324/*"event_rewardgacha_"*/;
     }
     else
     {
       currentBoxGachaId = bannerId;
       v12 = System_Int32__ToString((int32_t)&currentBoxGachaId, 0);
-      v13 = &StringLiteral_19244/*"event_gachabanner_"*/;
+      v13 = &StringLiteral_19255/*"event_gachabanner_"*/;
     }
-    v14 = System_String__Concat_63966792((System_String_o *)*v13, v12, 0);
+    v14 = System_String__Concat_64031724((System_String_o *)*v13, v12, 0);
     if ( !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
     EventRewardRootComponent__setRewardInfoImg(v11, v14, 0);
   }
-  v15 = sub_1C6BC54(System_Collections_Generic_List_GameObject__TypeInfo);
+  v15 = sub_1C715FC(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     (System_Collections_Generic_List_object__o *)v15,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   if ( !v15 )
     goto LABEL_89;
   v16 = *(_DWORD *)(v15 + 24);
@@ -171,7 +171,7 @@ void BoxGachaItemListViewItemDraw__SetItem(
   v18 = v5->fields.gachaBaseData;
   if ( !v18 )
 LABEL_89:
-    sub_1C6BC60(rareDispImgObj, item);
+    sub_1C71608(rareDispImgObj, item);
   if ( v18->fields.type == 1 )
   {
     giftEnt = (unsigned int *)v5->fields.giftEnt;
@@ -188,7 +188,7 @@ LABEL_89:
       {
         if ( !rareDispImgObj )
           goto LABEL_89;
-        ItemIconComponent__SetGift_41153640(
+        ItemIconComponent__SetGift_41196280(
           (ItemIconComponent_o *)rareDispImgObj,
           (int32_t)item,
           targetObjectId,
@@ -200,7 +200,7 @@ LABEL_89:
       {
         if ( !rareDispImgObj )
           goto LABEL_89;
-        ItemIconComponent__SetGift_41153640(
+        ItemIconComponent__SetGift_41196280(
           (ItemIconComponent_o *)rareDispImgObj,
           (int32_t)item,
           targetObjectId,
@@ -234,14 +234,14 @@ LABEL_89:
             System_Collections_Generic_List_object___AddWithResize(
               (System_Collections_Generic_List_object__o *)v15,
               (Il2CppObject *)item,
-              *(const MethodInfo_3800974 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
+              *(const MethodInfo_3810718 **)(*(_QWORD *)(v43[4] + 192LL) + 112LL));
           }
           else
           {
             v45 = v42 + 8 * v44;
             *(_DWORD *)(v15 + 24) = v44 + 1;
             *(_QWORD *)(v45 + 32) = item;
-            rareDispImgObj = sub_1C6B9AC(v45 + 32, item);
+            rareDispImgObj = sub_1C71354(v45 + 32, item);
           }
           item = (BoxGachaItemListViewItem_o *)this->fields.countLbInfo;
           v46 = *(_DWORD *)(v15 + 28);
@@ -264,14 +264,14 @@ LABEL_89:
           System_Collections_Generic_List_object___AddWithResize(
             (System_Collections_Generic_List_object__o *)v15,
             (Il2CppObject *)item,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v48[4] + 192LL) + 112LL));
         }
         else
         {
           v50 = v47 + 8 * v49;
           *(_DWORD *)(v15 + 24) = v49 + 1;
           *(_QWORD *)(v50 + 32) = item;
-          rareDispImgObj = sub_1C6B9AC(v50 + 32, item);
+          rareDispImgObj = sub_1C71354(v50 + 32, item);
         }
       }
     }
@@ -283,7 +283,7 @@ LABEL_89:
       v20 = giftEnt[7];
       if ( v20 <= 1 )
         v20 = -1;
-      ItemIconComponent__SetItemImage_41156088((ItemIconComponent_o *)rareDispImgObj, (int32_t)item, v20, 0);
+      ItemIconComponent__SetItemImage_41198728((ItemIconComponent_o *)rareDispImgObj, (int32_t)item, v20, 0);
     }
   }
 LABEL_30:
@@ -319,7 +319,7 @@ LABEL_30:
   rewardNumLabel = this->fields.rewardNumLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2992/*"BOX_GACHA_REWARD_NORMAL_TXT"*/, 0);
+  v23 = LocalizationManager__Get((System_String_o *)StringLiteral_2994/*"BOX_GACHA_REWARD_NORMAL_TXT"*/, 0);
   currenNum = v5->fields.currenNum;
   v24 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &currenNum);
   rareDispImgObj = (__int64)System_String__Format(v23, v24, 0);
@@ -331,7 +331,7 @@ LABEL_30:
     v25 = this->fields.rewardNumLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2991/*"BOX_GACHA_REWARD_DRAW_TXT"*/, 0);
+    v26 = LocalizationManager__Get((System_String_o *)StringLiteral_2993/*"BOX_GACHA_REWARD_DRAW_TXT"*/, 0);
     v51 = v5->fields.currenNum;
     v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v51);
     rareDispImgObj = (__int64)System_String__Format(v26, v27, 0);
@@ -393,7 +393,7 @@ LABEL_30:
             rareDispSprite = this->fields.rareDispSprite;
             currentBoxGachaId = v32->fields.iconId;
             v34 = System_Int32__ToString((int32_t)&currentBoxGachaId, 0);
-            v35 = System_String__Concat_63966792((System_String_o *)StringLiteral_20257/*"icon_event_"*/, v34, 0);
+            v35 = System_String__Concat_64031724((System_String_o *)StringLiteral_20269/*"icon_event_"*/, v34, 0);
             if ( !EventRewardRootComponent_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(EventRewardRootComponent_TypeInfo);
             EventRewardRootComponent__setRewardInfoImg(rareDispSprite, v35, 0);

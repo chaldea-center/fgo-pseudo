@@ -21,18 +21,22 @@ void TitleInfoEventLeagueVsGaugeFlashEffect__endAnim(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  CGThumbnailListItem_o *p_endCallBack; // x0
-  System_Action_o *v5; // x19
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  GrandQuestFolderBoardItem_o *p_endCallBack; // x0
+  System_Action_o *v9; // x19
   struct System_Action_o *endCallBack; // t1
 
   endCallBack = this->fields.endCallBack;
-  p_endCallBack = (CGThumbnailListItem_o *)&this->fields.endCallBack;
-  v5 = endCallBack;
+  p_endCallBack = (GrandQuestFolderBoardItem_o *)&this->fields.endCallBack;
+  v9 = endCallBack;
   p_endCallBack->klass = 0;
-  sub_1C6B9AC(p_endCallBack, 0, v2, v3);
+  sub_1C71354(p_endCallBack, 0, v2, v3, v4, v5, v6, v7);
   if ( endCallBack )
-    ActionExtensions__Call(v5, 0);
+    ActionExtensions__Call(v9, 0);
 }
 
 
@@ -56,18 +60,22 @@ void TitleInfoEventLeagueVsGaugeFlashEffect__setup(
   UnityEngine_Object_o *gaugeSimpleAnim; // x22
   System_String_o *v19; // x21
   int32_t v20; // w2
-  const MethodInfo *v21; // x3
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
   UnityEngine_Object_o *gaugeAnim; // x22
   UnityEngine_Object_o *Clip; // x22
-  int32_t v24; // [xsp+Ch] [xbp-44h] BYREF
+  int32_t v28; // [xsp+Ch] [xbp-44h] BYREF
 
   v10 = this;
-  if ( (byte_4CB421E & 1) == 0 )
+  if ( (byte_4CC5336 & 1) == 0 )
   {
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_1C6BA08(&StringLiteral_17300/*"bit_vs_gauge_flash_"*/);
-    byte_4CB421E = 1;
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)sub_1C713B0(&StringLiteral_17307/*"bit_vs_gauge_flash_"*/);
+    byte_4CC5336 = 1;
   }
   v11 = 0.5;
   v12 = 0.5;
@@ -91,14 +99,14 @@ void TitleInfoEventLeagueVsGaugeFlashEffect__setup(
     goto LABEL_29;
   if ( LODWORD(v15->max_length) <= 1 )
 LABEL_30:
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v15->m_Items[1];
   if ( !this )
     goto LABEL_29;
   UIProgressBar__set_value((UIProgressBar_o *)this, v12, 0);
-  v24 = joinGroupId;
-  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v24);
-  v17 = System_String__Concat((Il2CppObject *)StringLiteral_17300/*"bit_vs_gauge_flash_"*/, v16, 0);
+  v28 = joinGroupId;
+  v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
+  v17 = System_String__Concat((Il2CppObject *)StringLiteral_17307/*"bit_vs_gauge_flash_"*/, v16, 0);
   gaugeSimpleAnim = (UnityEngine_Object_o *)v10->fields.gaugeSimpleAnim;
   v19 = v17;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -121,12 +129,12 @@ LABEL_30:
       this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeAnim;
       if ( this )
       {
-        UnityEngine_Animation__Play_71403152((UnityEngine_Animation_o *)this, v19, 0);
+        UnityEngine_Animation__Play_71468084((UnityEngine_Animation_o *)this, v19, 0);
         goto LABEL_28;
       }
     }
 LABEL_29:
-    sub_1C6BC60(this, *(_QWORD *)&joinGroupId);
+    sub_1C71608(this, *(_QWORD *)&joinGroupId);
   }
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
@@ -140,8 +148,8 @@ LABEL_25:
   this = (TitleInfoEventLeagueVsGaugeFlashEffect_o *)v10->fields.gaugeSimpleAnim;
   if ( !this )
     goto LABEL_29;
-  SimpleAnimation__Play_66911856((SimpleAnimation_o *)this, v19, 0);
+  SimpleAnimation__Play_66976788((SimpleAnimation_o *)this, v19, 0);
 LABEL_28:
   v10->fields.endCallBack = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v10->fields.endCallBack, (int32_t)callback, v20, v21);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v10->fields.endCallBack, (int32_t)callback, v20, v21, v22, v23, v24, v25);
 }

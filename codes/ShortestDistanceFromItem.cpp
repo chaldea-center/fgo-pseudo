@@ -17,69 +17,73 @@ float ShortestDistanceFromItem__GetRatingBase(
   __int64 evalValue; // x0
   __int64 v13; // x1
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
-  __int64 v16; // x23
-  int32_t v17; // w22
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  __int64 v20; // x23
+  int32_t v21; // w22
   WarBoardItemData_o *Item; // x0
-  WarBoardItemData_o *v19; // x22
-  System_Func_object__bool__o *v20; // x25
+  WarBoardItemData_o *v23; // x22
+  System_Func_object__bool__o *v24; // x25
   int32_t squareIndex_k__BackingField; // w20
-  int32_t v22; // w21
-  System_Int32_array *v23; // x0
+  int32_t v26; // w21
+  System_Int32_array *v27; // x0
   il2cpp_array_size_t max_length; // x20
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
-  if ( (byte_4CB3C0B & 1) == 0 )
+  if ( (byte_4CC4D23 & 1) == 0 )
   {
-    sub_1C6BA08(&AStarSearch_TypeInfo);
-    sub_1C6BA08(&Method_BasicHelper_Any_WarBoardAIRoute_RouteData___);
-    sub_1C6BA08(&System_Func_WarBoardAIRoute_RouteData__bool__TypeInfo);
-    sub_1C6BA08(&Method_ShortestDistanceFromItem___c__DisplayClass0_0__GetRatingBase_b__0__);
-    sub_1C6BA08(&ShortestDistanceFromItem___c__DisplayClass0_0_TypeInfo);
-    sub_1C6BA08(&WarBoardAIManager_TypeInfo);
-    byte_4CB3C0B = 1;
+    sub_1C713B0(&AStarSearch_TypeInfo);
+    sub_1C713B0(&Method_BasicHelper_Any_WarBoardAIRoute_RouteData___);
+    sub_1C713B0(&System_Func_WarBoardAIRoute_RouteData__bool__TypeInfo);
+    sub_1C713B0(&Method_ShortestDistanceFromItem___c__DisplayClass0_0__GetRatingBase_b__0__);
+    sub_1C713B0(&ShortestDistanceFromItem___c__DisplayClass0_0_TypeInfo);
+    sub_1C713B0(&WarBoardAIManager_TypeInfo);
+    byte_4CC4D23 = 1;
   }
-  v11 = sub_1C6BC54(ShortestDistanceFromItem___c__DisplayClass0_0_TypeInfo);
+  v11 = sub_1C715FC(ShortestDistanceFromItem___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_18;
   *(_QWORD *)(v11 + 16) = targetSquare;
-  v16 = v11 + 16;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v11 + 16), (int32_t)targetSquare, v14, v15);
+  v20 = v11 + 16;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 16), (int32_t)targetSquare, v14, v15, v16, v17, v18, v19);
   if ( !*(_QWORD *)(v11 + 16) )
     goto LABEL_18;
-  v17 = *(_DWORD *)(*(_QWORD *)(v11 + 16) + 16LL);
+  v21 = *(_DWORD *)(*(_QWORD *)(v11 + 16) + 16LL);
   if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
-  Item = WarBoardAIManager__GetItem(v17, 0);
+  Item = WarBoardAIManager__GetItem(v21, 0);
   if ( Item )
   {
-    v19 = Item;
+    v23 = Item;
     if ( !WarBoardItemData__get_Acquired(Item, 0) )
     {
-      v20 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_WarBoardAIRoute_RouteData__bool__TypeInfo);
+      v24 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_WarBoardAIRoute_RouteData__bool__TypeInfo);
       System_Func_object__bool____ctor(
-        v20,
+        v24,
         (Il2CppObject *)v11,
         Method_ShortestDistanceFromItem___c__DisplayClass0_0__GetRatingBase_b__0__,
         0);
       evalValue = BasicHelper__Any_object_(
                     (System_Collections_Generic_List_T__o *)routeDataList,
-                    (System_Func_T__bool__o *)v20,
-                    (const MethodInfo_3124430 *)Method_BasicHelper_Any_WarBoardAIRoute_RouteData___);
+                    (System_Func_T__bool__o *)v24,
+                    (const MethodInfo_31341D4 *)Method_BasicHelper_Any_WarBoardAIRoute_RouteData___);
       if ( (evalValue & 1) == 0 )
       {
-        if ( !calcSquare || !*(_QWORD *)v16 )
+        if ( !calcSquare || !*(_QWORD *)v20 )
           goto LABEL_18;
         squareIndex_k__BackingField = calcSquare->fields._squareIndex_k__BackingField;
-        v22 = *(_DWORD *)(*(_QWORD *)v16 + 16LL);
+        v26 = *(_DWORD *)(*(_QWORD *)v20 + 16LL);
         if ( !AStarSearch_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(AStarSearch_TypeInfo);
-        v23 = AStarSearch__RouteSearch(0, squareIndex_k__BackingField, v22, 0, 0, 0);
-        if ( v23 )
+        v27 = AStarSearch__RouteSearch(0, squareIndex_k__BackingField, v26, 0, 0, 0);
+        if ( v27 )
         {
-          max_length = v23->max_length;
-          evalValue = WarBoardItemData__get_evalValue(v19, 0);
+          max_length = v27->max_length;
+          evalValue = WarBoardItemData__get_evalValue(v23, 0);
           ratingBase = this->fields.ratingBase;
           if ( ratingBase )
             return fmaxf(
@@ -87,7 +91,7 @@ float ShortestDistanceFromItem__GetRatingBase(
                    * (float)(int)evalValue,
                      0.0);
 LABEL_18:
-          sub_1C6BC60(evalValue, v13);
+          sub_1C71608(evalValue, v13);
         }
       }
     }
@@ -113,7 +117,7 @@ bool ShortestDistanceFromItem___c__DisplayClass0_0___GetRatingBase_b__0(
   int32_t squareIndex_k__BackingField; // w9
 
   if ( !x || (targetSquare = this->fields.targetSquare) == 0 )
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   squareIndex_k__BackingField = targetSquare->fields._squareIndex_k__BackingField;
   return (x->fields.actionIndex == squareIndex_k__BackingField || x->fields.baseIndex == squareIndex_k__BackingField)
       && WarBoardAIRoute_RouteData__HasFlag(x, 0x8000000, 0);

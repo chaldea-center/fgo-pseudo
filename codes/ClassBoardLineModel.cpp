@@ -5,25 +5,33 @@ void ClassBoardLineModel___ctor(
 {
   System_Collections_Generic_List_object__o *v5; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
 
-  if ( (byte_4CB9F75 & 1) == 0 )
+  if ( (byte_4CCB0CB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
-    byte_4CB9F75 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+    byte_4CCB0CB = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_IClassBoardSquareModel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_IClassBoardSquareModel___ctor__);
   this->fields.squareList = (struct System_Collections_Generic_List_IClassBoardSquareModel__o *)v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.squareList, (int32_t)v5, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.squareList, (int32_t)v5, v6, v7, v8, v9, v10, v11);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.entity = lineEntity;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)lineEntity, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)lineEntity, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -32,26 +40,30 @@ void ClassBoardLineModel__AddSquare(
         IClassBoardSquareModel_o *square,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   System_Collections_Generic_List_object__o *squareList; // x0
   struct System_Object_array *items; // x8
-  _QWORD *v8; // x9
+  _QWORD *v12; // x9
   __int64 size; // x10
-  Il2CppClass **v10; // x8
+  Il2CppClass **v14; // x8
 
-  if ( (byte_4CB9F76 & 1) == 0 )
+  if ( (byte_4CCB0CC & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_IClassBoardSquareModel__Add__);
-    byte_4CB9F76 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_IClassBoardSquareModel__Add__);
+    byte_4CCB0CC = 1;
   }
   squareList = (System_Collections_Generic_List_object__o *)this->fields.squareList;
   if ( !squareList
     || (items = squareList->fields._items,
-        v8 = Method_System_Collections_Generic_List_IClassBoardSquareModel__Add__,
+        v12 = Method_System_Collections_Generic_List_IClassBoardSquareModel__Add__,
         ++squareList->fields._version,
         !items) )
   {
-    sub_1C6BC60(squareList, square);
+    sub_1C71608(squareList, square);
   }
   size = squareList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -59,14 +71,14 @@ void ClassBoardLineModel__AddSquare(
     System_Collections_Generic_List_object___AddWithResize(
       squareList,
       (Il2CppObject *)square,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v8[4] + 192LL) + 112LL));
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
-    v10 = &items->obj.klass + size;
+    v14 = &items->obj.klass + size;
     squareList->fields._size = size + 1;
-    v10[4] = (Il2CppClass *)square;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v10 + 4), (int32_t)square, (int32_t)method, v3);
+    v14[4] = (Il2CppClass *)square;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v14 + 4), (int32_t)square, (int32_t)method, v3, v4, v5, v6, v7);
   }
 }
 
@@ -84,10 +96,10 @@ bool ClassBoardLineModel___get_Next_b__6_0(
   struct ClassBoardLineEntity_o *entity; // x8
 
   v4 = this;
-  if ( (byte_4CB9F78 & 1) == 0 )
+  if ( (byte_4CCB0CE & 1) == 0 )
   {
-    this = (ClassBoardLineModel_o *)sub_1C6BA08(&IClassBoardSquareModel_TypeInfo);
-    byte_4CB9F78 = 1;
+    this = (ClassBoardLineModel_o *)sub_1C713B0(&IClassBoardSquareModel_TypeInfo);
+    byte_4CCB0CE = 1;
   }
   if ( !x )
     goto LABEL_12;
@@ -108,7 +120,7 @@ bool ClassBoardLineModel___get_Next_b__6_0(
   else
   {
 LABEL_8:
-    v8 = sub_1C41D90(x, IClassBoardSquareModel_TypeInfo, 0);
+    v8 = sub_1C47738(x, IClassBoardSquareModel_TypeInfo, 0);
   }
   this = (ClassBoardLineModel_o *)(*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v8)(
                                     x,
@@ -116,7 +128,7 @@ LABEL_8:
   entity = v4->fields.entity;
   if ( !entity )
 LABEL_12:
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   return (_DWORD)this == entity->fields.nextSquareId;
 }
 
@@ -134,10 +146,10 @@ bool ClassBoardLineModel___get_Prev_b__4_0(
   struct ClassBoardLineEntity_o *entity; // x8
 
   v4 = this;
-  if ( (byte_4CB9F77 & 1) == 0 )
+  if ( (byte_4CCB0CD & 1) == 0 )
   {
-    this = (ClassBoardLineModel_o *)sub_1C6BA08(&IClassBoardSquareModel_TypeInfo);
-    byte_4CB9F77 = 1;
+    this = (ClassBoardLineModel_o *)sub_1C713B0(&IClassBoardSquareModel_TypeInfo);
+    byte_4CCB0CD = 1;
   }
   if ( !x )
     goto LABEL_12;
@@ -158,7 +170,7 @@ bool ClassBoardLineModel___get_Prev_b__4_0(
   else
   {
 LABEL_8:
-    v8 = sub_1C41D90(x, IClassBoardSquareModel_TypeInfo, 0);
+    v8 = sub_1C47738(x, IClassBoardSquareModel_TypeInfo, 0);
   }
   this = (ClassBoardLineModel_o *)(*(__int64 (__fastcall **)(IClassBoardSquareModel_o *, _QWORD))v8)(
                                     x,
@@ -166,7 +178,7 @@ LABEL_8:
   entity = v4->fields.entity;
   if ( !entity )
 LABEL_12:
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   return (_DWORD)this == entity->fields.prevSquareId;
 }
 
@@ -176,20 +188,20 @@ IClassBoardSquareModel_o *ClassBoardLineModel__get_Next(ClassBoardLineModel_o *t
   struct System_Collections_Generic_List_IClassBoardSquareModel__o *squareList; // x20
   System_Func_object__bool__o *v4; // x21
 
-  if ( (byte_4CB9F74 & 1) == 0 )
+  if ( (byte_4CCB0CA & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ClassBoardLineModel__get_Next_b__6_0__);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
-    sub_1C6BA08(&System_Func_IClassBoardSquareModel__bool__TypeInfo);
-    byte_4CB9F74 = 1;
+    sub_1C713B0(&Method_ClassBoardLineModel__get_Next_b__6_0__);
+    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
+    sub_1C713B0(&System_Func_IClassBoardSquareModel__bool__TypeInfo);
+    byte_4CCB0CA = 1;
   }
   squareList = this->fields.squareList;
-  v4 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_IClassBoardSquareModel__bool__TypeInfo);
+  v4 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_IClassBoardSquareModel__bool__TypeInfo);
   System_Func_object__bool____ctor(v4, (Il2CppObject *)this, Method_ClassBoardLineModel__get_Next_b__6_0__, 0);
-  return (IClassBoardSquareModel_o *)System_Linq_Enumerable__FirstOrDefault_object__51793644(
+  return (IClassBoardSquareModel_o *)System_Linq_Enumerable__FirstOrDefault_object__51858576(
                                        (System_Collections_Generic_IEnumerable_TSource__o *)squareList,
                                        (System_Func_TSource__bool__o *)v4,
-                                       (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
+                                       (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
 }
 
 
@@ -198,20 +210,20 @@ IClassBoardSquareModel_o *ClassBoardLineModel__get_Prev(ClassBoardLineModel_o *t
   struct System_Collections_Generic_List_IClassBoardSquareModel__o *squareList; // x20
   System_Func_object__bool__o *v4; // x21
 
-  if ( (byte_4CB9F73 & 1) == 0 )
+  if ( (byte_4CCB0C9 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ClassBoardLineModel__get_Prev_b__4_0__);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
-    sub_1C6BA08(&System_Func_IClassBoardSquareModel__bool__TypeInfo);
-    byte_4CB9F73 = 1;
+    sub_1C713B0(&Method_ClassBoardLineModel__get_Prev_b__4_0__);
+    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
+    sub_1C713B0(&System_Func_IClassBoardSquareModel__bool__TypeInfo);
+    byte_4CCB0C9 = 1;
   }
   squareList = this->fields.squareList;
-  v4 = (System_Func_object__bool__o *)sub_1C6BC54(System_Func_IClassBoardSquareModel__bool__TypeInfo);
+  v4 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_IClassBoardSquareModel__bool__TypeInfo);
   System_Func_object__bool____ctor(v4, (Il2CppObject *)this, Method_ClassBoardLineModel__get_Prev_b__4_0__, 0);
-  return (IClassBoardSquareModel_o *)System_Linq_Enumerable__FirstOrDefault_object__51793644(
+  return (IClassBoardSquareModel_o *)System_Linq_Enumerable__FirstOrDefault_object__51858576(
                                        (System_Collections_Generic_IEnumerable_TSource__o *)squareList,
                                        (System_Func_TSource__bool__o *)v4,
-                                       (const MethodInfo_3164EEC *)Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
+                                       (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_IClassBoardSquareModel___);
 }
 
 
@@ -221,7 +233,7 @@ System_String_o *ClassBoardLineModel__get_PrimaryKey(ClassBoardLineModel_o *this
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   return (System_String_o *)((__int64 (__fastcall *)(struct ClassBoardLineEntity_o *, const MethodInfo *))entity->klass->vtable._4_get_PrimaryKey.methodPtr)(
                               entity,
                               entity->klass->vtable._4_get_PrimaryKey.method);

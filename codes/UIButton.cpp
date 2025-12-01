@@ -2,20 +2,24 @@ void UIButton___ctor(UIButton_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_object__o *v3; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
 
-  if ( (byte_4CBA91F & 1) == 0 )
+  if ( (byte_4CCBA78 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4CBA91F = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4CCBA78 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onClick = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.onClick, (int32_t)v3, v4, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.onClick, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   UIButtonColor___ctor((UIButtonColor_o *)this, 0);
 }
 
@@ -24,17 +28,25 @@ void UIButton__OnClick(UIButton_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *current; // x20
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
   System_Collections_Generic_List_EventDelegate__o *onClick; // x19
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
 
-  if ( (byte_4CBA91B & 1) == 0 )
+  if ( (byte_4CCBA74 & 1) == 0 )
   {
-    sub_1C6BA08(&EventDelegate_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UIButton_TypeInfo);
-    byte_4CBA91B = 1;
+    sub_1C713B0(&EventDelegate_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UIButton_TypeInfo);
+    byte_4CCBA74 = 1;
   }
   current = (UnityEngine_Object_o *)UIButton_TypeInfo->static_fields->current;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -46,13 +58,13 @@ void UIButton__OnClick(UIButton_o *this, const MethodInfo *method)
       & 1) != 0 )
   {
     UIButton_TypeInfo->static_fields->current = this;
-    sub_1C6B9AC((CGThumbnailListItem_o *)UIButton_TypeInfo->static_fields, (int32_t)this, v4, v5);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)UIButton_TypeInfo->static_fields, (int32_t)this, v4, v5, v6, v7, v8, v9);
     onClick = this->fields.onClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49522624(onClick, 0);
+    EventDelegate__Execute_49587556(onClick, 0);
     UIButton_TypeInfo->static_fields->current = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)UIButton_TypeInfo->static_fields, 0, v7, v8);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)UIButton_TypeInfo->static_fields, 0, v11, v12, v13, v14, v15, v16);
   }
 }
 
@@ -65,11 +77,11 @@ void UIButton__OnDragOut(UIButton_o *this, const MethodInfo *method)
   UnityEngine_Object_o *pressed; // x20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4CBA91A & 1) == 0 )
+  if ( (byte_4CCBA73 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UICamera_TypeInfo);
-    byte_4CBA91A = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UICamera_TypeInfo);
+    byte_4CCBA73 = 1;
   }
   if ( (((__int64 (__fastcall *)(UIButton_o *, const MethodInfo *))this->klass->vtable._4_get_isEnabled.methodPtr)(
           this,
@@ -86,7 +98,7 @@ void UIButton__OnDragOut(UIButton_o *this, const MethodInfo *method)
     }
     currentTouch = v4->static_fields->currentTouch;
     if ( !currentTouch )
-      sub_1C6BC60(v4, v3);
+      sub_1C71608(v4, v3);
     pressed = (UnityEngine_Object_o *)currentTouch->fields.pressed;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -106,11 +118,11 @@ void UIButton__OnDragOver(UIButton_o *this, const MethodInfo *method)
   UnityEngine_Object_o *pressed; // x20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4CBA919 & 1) == 0 )
+  if ( (byte_4CCBA72 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UICamera_TypeInfo);
-    byte_4CBA919 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UICamera_TypeInfo);
+    byte_4CCBA72 = 1;
   }
   if ( (((__int64 (__fastcall *)(UIButton_o *, const MethodInfo *))this->klass->vtable._4_get_isEnabled.methodPtr)(
           this,
@@ -127,7 +139,7 @@ void UIButton__OnDragOver(UIButton_o *this, const MethodInfo *method)
     }
     currentTouch = v4->static_fields->currentTouch;
     if ( !currentTouch )
-      sub_1C6BC60(v4, v3);
+      sub_1C71608(v4, v3);
     pressed = (UnityEngine_Object_o *)currentTouch->fields.pressed;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -152,11 +164,11 @@ void UIButton__OnEnable(UIButton_o *this, const MethodInfo *method)
   UnityEngine_Object_o *gameObject; // x21
   bool v12; // w0
 
-  if ( (byte_4CBA918 & 1) == 0 )
+  if ( (byte_4CCBA71 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UICamera_TypeInfo);
-    byte_4CBA918 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UICamera_TypeInfo);
+    byte_4CCBA71 = 1;
   }
   if ( (((__int64 (__fastcall *)(UIButton_o *, const MethodInfo *))this->klass->vtable._4_get_isEnabled.methodPtr)(
           this,
@@ -226,141 +238,173 @@ LABEL_19:
 void UIButton__OnInit(UIButton_o *this, const MethodInfo *method)
 {
   int32_t v3; // w2
-  const MethodInfo *v4; // x3
+  int32_t v4; // w3
+  System_String_o *v5; // x4
+  int32_t v6; // w5
+  int64_t v7; // x6
+  System_String_o *v8; // x7
   struct UIWidget_o *mWidget; // x8
-  UISprite_c *v6; // x9
+  UISprite_c *v10; // x9
   __int64 naturalAligment; // x10
-  struct UIWidget_o *v8; // x11
-  int32_t v9; // w1
+  struct UIWidget_o *v12; // x11
+  int32_t v13; // w1
   struct UISprite_o **p_mSprite; // x20
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  struct UIWidget_o *v13; // x8
-  UI2DSprite_c *v14; // x9
-  __int64 v15; // x10
-  struct UIWidget_o *v16; // x11
-  int32_t v17; // w1
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  struct UIWidget_o *v21; // x8
+  UI2DSprite_c *v22; // x9
+  __int64 v23; // x10
+  struct UIWidget_o *v24; // x11
+  int32_t v25; // w1
   struct UI2DSprite_o **p_mSprite2D; // x21
-  UnityEngine_Object_o *v19; // x22
-  _BOOL8 v20; // x0
-  __int64 v21; // x1
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  UnityEngine_Object_o *v27; // x22
+  _BOOL8 v28; // x0
+  __int64 v29; // x1
+  int32_t v30; // w2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  int32_t v33; // w5
+  int64_t v34; // x6
+  System_String_o *v35; // x7
   struct System_String_o *mSpriteName; // x1
-  UnityEngine_Object_o *v25; // x20
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
+  UnityEngine_Object_o *v37; // x20
+  int32_t v38; // w2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  int32_t v41; // w5
+  int64_t v42; // x6
+  System_String_o *v43; // x7
   struct UnityEngine_Sprite_o *mSprite; // x1
 
-  if ( (byte_4CBA917 & 1) == 0 )
+  if ( (byte_4CCBA70 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&UI2DSprite_TypeInfo);
-    sub_1C6BA08(&UISprite_TypeInfo);
-    byte_4CBA917 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&UI2DSprite_TypeInfo);
+    sub_1C713B0(&UISprite_TypeInfo);
+    byte_4CCBA70 = 1;
   }
   UIButtonColor__OnInit((UIButtonColor_o *)this, 0);
   mWidget = this->fields.mWidget;
   if ( mWidget )
   {
-    v6 = UISprite_TypeInfo;
+    v10 = UISprite_TypeInfo;
     naturalAligment = UISprite_TypeInfo->_2.naturalAligment;
     if ( mWidget->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
     {
       if ( (UISprite_c *)mWidget->klass->_2.typeHierarchy[naturalAligment - 1] == UISprite_TypeInfo )
-        v8 = this->fields.mWidget;
+        v12 = this->fields.mWidget;
       else
-        v8 = 0;
+        v12 = 0;
     }
     else
     {
-      v8 = 0;
+      v12 = 0;
     }
-    this->fields.mSprite = (struct UISprite_o *)v8;
+    this->fields.mSprite = (struct UISprite_o *)v12;
     p_mSprite = &this->fields.mSprite;
     if ( mWidget->klass->_2.naturalAligment >= (unsigned int)naturalAligment )
     {
-      if ( (UISprite_c *)mWidget->klass->_2.typeHierarchy[naturalAligment - 1] == v6 )
-        v9 = (int)mWidget;
+      if ( (UISprite_c *)mWidget->klass->_2.typeHierarchy[naturalAligment - 1] == v10 )
+        v13 = (int)mWidget;
       else
-        v9 = 0;
+        v13 = 0;
     }
     else
     {
-      v9 = 0;
+      v13 = 0;
     }
   }
   else
   {
-    v9 = 0;
+    v13 = 0;
     this->fields.mSprite = 0;
     p_mSprite = &this->fields.mSprite;
   }
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_mSprite, v9, v3, v4);
-  v13 = this->fields.mWidget;
-  if ( v13 )
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p_mSprite, v13, v3, v4, v5, v6, v7, v8);
+  v21 = this->fields.mWidget;
+  if ( v21 )
   {
-    v14 = UI2DSprite_TypeInfo;
-    v15 = UI2DSprite_TypeInfo->_2.naturalAligment;
-    if ( v13->klass->_2.naturalAligment >= (unsigned int)v15 )
+    v22 = UI2DSprite_TypeInfo;
+    v23 = UI2DSprite_TypeInfo->_2.naturalAligment;
+    if ( v21->klass->_2.naturalAligment >= (unsigned int)v23 )
     {
-      if ( (UI2DSprite_c *)v13->klass->_2.typeHierarchy[v15 - 1] == UI2DSprite_TypeInfo )
-        v16 = this->fields.mWidget;
+      if ( (UI2DSprite_c *)v21->klass->_2.typeHierarchy[v23 - 1] == UI2DSprite_TypeInfo )
+        v24 = this->fields.mWidget;
       else
-        v16 = 0;
+        v24 = 0;
     }
     else
     {
-      v16 = 0;
+      v24 = 0;
     }
-    this->fields.mSprite2D = (struct UI2DSprite_o *)v16;
+    this->fields.mSprite2D = (struct UI2DSprite_o *)v24;
     p_mSprite2D = &this->fields.mSprite2D;
-    if ( v13->klass->_2.naturalAligment >= (unsigned int)v15 )
+    if ( v21->klass->_2.naturalAligment >= (unsigned int)v23 )
     {
-      if ( (UI2DSprite_c *)v13->klass->_2.typeHierarchy[v15 - 1] == v14 )
-        v17 = (int)v13;
+      if ( (UI2DSprite_c *)v21->klass->_2.typeHierarchy[v23 - 1] == v22 )
+        v25 = (int)v21;
       else
-        v17 = 0;
+        v25 = 0;
     }
     else
     {
-      v17 = 0;
+      v25 = 0;
     }
   }
   else
   {
-    v17 = 0;
+    v25 = 0;
     this->fields.mSprite2D = 0;
     p_mSprite2D = &this->fields.mSprite2D;
   }
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_mSprite2D, v17, v11, v12);
-  v19 = (UnityEngine_Object_o *)*p_mSprite;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p_mSprite2D, v25, v15, v16, v17, v18, v19, v20);
+  v27 = (UnityEngine_Object_o *)*p_mSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v20 = UnityEngine_Object__op_Inequality(v19, 0, 0);
-  if ( v20 )
+  v28 = UnityEngine_Object__op_Inequality(v27, 0, 0);
+  if ( v28 )
   {
     if ( !*p_mSprite )
       goto LABEL_38;
     mSpriteName = (*p_mSprite)->fields.mSpriteName;
     this->fields.mNormalSprite = mSpriteName;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mNormalSprite, (int32_t)mSpriteName, v22, v23);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.mNormalSprite,
+      (int32_t)mSpriteName,
+      v30,
+      v31,
+      v32,
+      v33,
+      v34,
+      v35);
   }
-  v25 = (UnityEngine_Object_o *)*p_mSprite2D;
+  v37 = (UnityEngine_Object_o *)*p_mSprite2D;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v20 = UnityEngine_Object__op_Inequality(v25, 0, 0);
-  if ( v20 )
+  v28 = UnityEngine_Object__op_Inequality(v37, 0, 0);
+  if ( v28 )
   {
     if ( *p_mSprite2D )
     {
       mSprite = (*p_mSprite2D)->fields.mSprite;
       this->fields.mNormalSprite2D = mSprite;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mNormalSprite2D, (int32_t)mSprite, v26, v27);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)&this->fields.mNormalSprite2D,
+        (int32_t)mSprite,
+        v38,
+        v39,
+        v40,
+        v41,
+        v42,
+        v43);
       return;
     }
 LABEL_38:
-    sub_1C6BC60(v20, v21);
+    sub_1C71608(v28, v29);
   }
 }
 
@@ -372,10 +416,10 @@ void UIButton__SetSprite(UIButton_o *this, System_String_o *sp, const MethodInfo
   __int64 v7; // x1
   struct UISprite_o *v8; // x8
 
-  if ( (byte_4CBA91D & 1) == 0 )
+  if ( (byte_4CCBA76 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA91D = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA76 = 1;
   }
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -405,7 +449,7 @@ void UIButton__SetSprite(UIButton_o *this, System_String_o *sp, const MethodInfo
             return;
           }
 LABEL_14:
-          sub_1C6BC60(IsNullOrEmpty, v7);
+          sub_1C71608(IsNullOrEmpty, v7);
         }
       }
     }
@@ -413,7 +457,7 @@ LABEL_14:
 }
 
 
-void UIButton__SetSprite_49433748(UIButton_o *this, UnityEngine_Sprite_o *sp, const MethodInfo *method)
+void UIButton__SetSprite_49498680(UIButton_o *this, UnityEngine_Sprite_o *sp, const MethodInfo *method)
 {
   UnityEngine_Object_o *mSprite2D; // x21
   UI2DSprite_o *v6; // x0
@@ -421,10 +465,10 @@ void UIButton__SetSprite_49433748(UIButton_o *this, UnityEngine_Sprite_o *sp, co
   struct UI2DSprite_o *v8; // x8
   UnityEngine_Object_o *mSprite; // x21
 
-  if ( (byte_4CBA91E & 1) == 0 )
+  if ( (byte_4CCBA77 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA91E = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA77 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -459,7 +503,7 @@ void UIButton__SetSprite_49433748(UIButton_o *this, UnityEngine_Sprite_o *sp, co
             return;
           }
 LABEL_18:
-          sub_1C6BC60(v6, v7);
+          sub_1C71608(v6, v7);
         }
       }
     }
@@ -481,10 +525,10 @@ void UIButton__SetState(UIButton_o *this, int32_t state, bool immediate, const M
   bool v16; // w0
   __int64 v17; // x8
 
-  if ( (byte_4CBA91C & 1) == 0 )
+  if ( (byte_4CCBA75 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA91C = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA75 = 1;
   }
   UIButtonColor__SetState((UIButtonColor_o *)this, state, immediate, 0);
   mSprite = (UnityEngine_Object_o *)this->fields.mSprite;
@@ -544,7 +588,7 @@ LABEL_19:
         case 3:
           mNormalSprite2D = this->fields.disabledSprite2D;
 LABEL_27:
-          UIButton__SetSprite_49433748(this, mNormalSprite2D, v11);
+          UIButton__SetSprite_49498680(this, mNormalSprite2D, v11);
           break;
         default:
           return;
@@ -561,12 +605,12 @@ bool UIButton__get_isEnabled(UIButton_o *this, const MethodInfo *method)
   Il2CppObject *Component_object; // x20
   Il2CppObject *v7; // x19
 
-  if ( (byte_4CBA913 & 1) == 0 )
+  if ( (byte_4CCBA6C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider2D___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA913 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider2D___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA6C = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -575,7 +619,7 @@ bool UIButton__get_isEnabled(UIButton_o *this, const MethodInfo *method)
       goto LABEL_17;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          gameObject,
-                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Implicit(
@@ -590,7 +634,7 @@ bool UIButton__get_isEnabled(UIButton_o *this, const MethodInfo *method)
     }
     v7 = UnityEngine_Component__GetComponent_object_(
            (UnityEngine_Component_o *)this,
-           (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
+           (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider2D___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)v7, 0);
@@ -599,7 +643,7 @@ bool UIButton__get_isEnabled(UIButton_o *this, const MethodInfo *method)
       if ( v7 )
         return UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v7, 0);
 LABEL_17:
-      sub_1C6BC60(gameObject, v4);
+      sub_1C71608(gameObject, v4);
     }
   }
   return 0;
@@ -636,12 +680,12 @@ void UIButton__set_isEnabled(UIButton_o *this, bool value, const MethodInfo *met
   Il2CppObject *v10; // x21
   bool v11; // w1
 
-  if ( (byte_4CBA914 & 1) == 0 )
+  if ( (byte_4CCBA6D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider2D___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_Collider___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA914 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider2D___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_Collider___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA6D = 1;
   }
   if ( (((__int64 (__fastcall *)(UIButton_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._4_get_isEnabled.methodPtr)(
           this,
@@ -654,7 +698,7 @@ void UIButton__set_isEnabled(UIButton_o *this, bool value, const MethodInfo *met
       goto LABEL_24;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          gameObject,
-                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_Collider___);
+                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_Collider___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -683,7 +727,7 @@ LABEL_22:
     }
     v10 = UnityEngine_Component__GetComponent_object_(
             (UnityEngine_Component_o *)this,
-            (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
+            (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider2D___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     gameObject = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0, 0);
@@ -700,7 +744,7 @@ LABEL_22:
         goto LABEL_22;
       }
 LABEL_24:
-      sub_1C6BC60(gameObject, v6);
+      sub_1C71608(gameObject, v6);
     }
     UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)this, value, 0);
   }
@@ -711,19 +755,23 @@ void UIButton__set_normalSprite(UIButton_o *this, System_String_o *value, const 
 {
   UnityEngine_Object_o *mSprite; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
   _BOOL8 IsNullOrEmpty; // x0
-  __int64 v9; // x1
-  struct UISprite_o *v10; // x8
-  const MethodInfo *v11; // x2
-  UnityEngine_Object_o *v12; // x19
-  const MethodInfo *v13; // x2
+  __int64 v13; // x1
+  struct UISprite_o *v14; // x8
+  const MethodInfo *v15; // x2
+  UnityEngine_Object_o *v16; // x19
+  const MethodInfo *v17; // x2
 
-  if ( (byte_4CBA915 & 1) == 0 )
+  if ( (byte_4CCBA6E & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA915 = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA6E = 1;
   }
   if ( !this->fields.mInitDone )
     ((void (__fastcall *)(UIButton_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._6_OnInit.methodPtr)(
@@ -738,26 +786,26 @@ void UIButton__set_normalSprite(UIButton_o *this, System_String_o *value, const 
   IsNullOrEmpty = System_String__IsNullOrEmpty(this->fields.mNormalSprite, 0);
   if ( IsNullOrEmpty )
     goto LABEL_14;
-  v10 = this->fields.mSprite;
-  if ( !v10 )
-    sub_1C6BC60(IsNullOrEmpty, v9);
-  if ( System_String__op_Equality(this->fields.mNormalSprite, v10->fields.mSpriteName, 0) )
+  v14 = this->fields.mSprite;
+  if ( !v14 )
+    sub_1C71608(IsNullOrEmpty, v13);
+  if ( System_String__op_Equality(this->fields.mNormalSprite, v14->fields.mSpriteName, 0) )
   {
     this->fields.mNormalSprite = value;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mNormalSprite, (int32_t)value, v6, v7);
-    UIButton__SetSprite(this, value, v11);
-    v12 = (UnityEngine_Object_o *)this->fields.mSprite;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mNormalSprite, (int32_t)value, v6, v7, v8, v9, v10, v11);
+    UIButton__SetSprite(this, value, v15);
+    v16 = (UnityEngine_Object_o *)this->fields.mSprite;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__SetDirty(v12, 0);
+    NGUITools__SetDirty(v16, 0);
   }
   else
   {
 LABEL_14:
     this->fields.mNormalSprite = value;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mNormalSprite, (int32_t)value, v6, v7);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mNormalSprite, (int32_t)value, v6, v7, v8, v9, v10, v11);
     if ( !this->fields.mState )
-      UIButton__SetSprite(this, value, v13);
+      UIButton__SetSprite(this, value, v17);
   }
 }
 
@@ -768,19 +816,23 @@ void UIButton__set_normalSprite2D(UIButton_o *this, UnityEngine_Sprite_o *value,
   _BOOL8 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   UnityEngine_Object_o *mNormalSprite2D; // x22
-  struct UI2DSprite_o *v11; // x8
+  struct UI2DSprite_o *v15; // x8
   UnityEngine_Object_o *mSprite; // x23
-  const MethodInfo *v13; // x2
-  UnityEngine_Object_o *v14; // x19
-  const MethodInfo *v15; // x2
+  const MethodInfo *v17; // x2
+  UnityEngine_Object_o *v18; // x19
+  const MethodInfo *v19; // x2
 
-  if ( (byte_4CBA916 & 1) == 0 )
+  if ( (byte_4CCBA6F & 1) == 0 )
   {
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA916 = 1;
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBA6F = 1;
   }
   if ( !this->fields.mInitDone )
     ((void (__fastcall *)(UIButton_o *, const MethodInfo *, const MethodInfo *))this->klass->vtable._6_OnInit.methodPtr)(
@@ -794,28 +846,44 @@ void UIButton__set_normalSprite2D(UIButton_o *this, UnityEngine_Sprite_o *value,
   if ( !v6 )
     goto LABEL_15;
   mNormalSprite2D = (UnityEngine_Object_o *)this->fields.mNormalSprite2D;
-  v11 = this->fields.mSprite2D;
-  if ( !v11 )
-    sub_1C6BC60(v6, v7);
-  mSprite = (UnityEngine_Object_o *)v11->fields.mSprite;
+  v15 = this->fields.mSprite2D;
+  if ( !v15 )
+    sub_1C71608(v6, v7);
+  mSprite = (UnityEngine_Object_o *)v15->fields.mSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(mNormalSprite2D, mSprite, 0) )
   {
     this->fields.mNormalSprite2D = value;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mNormalSprite2D, (int32_t)value, v8, v9);
-    UIButton__SetSprite_49433748(this, value, v13);
-    v14 = (UnityEngine_Object_o *)this->fields.mSprite;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.mNormalSprite2D,
+      (int32_t)value,
+      v8,
+      v9,
+      v10,
+      v11,
+      v12,
+      v13);
+    UIButton__SetSprite_49498680(this, value, v17);
+    v18 = (UnityEngine_Object_o *)this->fields.mSprite;
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    NGUITools__SetDirty(v14, 0);
+    NGUITools__SetDirty(v18, 0);
   }
   else
   {
 LABEL_15:
     this->fields.mNormalSprite2D = value;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mNormalSprite2D, (int32_t)value, v8, v9);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.mNormalSprite2D,
+      (int32_t)value,
+      v8,
+      v9,
+      v10,
+      v11,
+      v12,
+      v13);
     if ( !this->fields.mState )
-      UIButton__SetSprite_49433748(this, value, v15);
+      UIButton__SetSprite_49498680(this, value, v19);
   }
 }

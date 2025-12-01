@@ -9,10 +9,22 @@ void CharaGraphSortManageUnitBase__SetSortSaveKeyPrefix(
         System_String_o *sortSaveKeyPrefix,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = sortSaveKeyPrefix;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)sortSaveKeyPrefix, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields,
+    (int32_t)sortSaveKeyPrefix,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -28,12 +40,16 @@ ListViewSort_o *CharaGraphSortManageUnitBase__get_SortInfo(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
 
-  if ( (byte_4CB55E8 & 1) == 0 )
+  if ( (byte_4CC6708 & 1) == 0 )
   {
-    sub_1C6BA08(&ListViewSort_TypeInfo);
-    byte_4CB55E8 = 1;
+    sub_1C713B0(&ListViewSort_TypeInfo);
+    byte_4CC6708 = 1;
   }
   sortInfo = this->fields.sortInfo;
   if ( !sortInfo )
@@ -42,20 +58,20 @@ ListViewSort_o *CharaGraphSortManageUnitBase__get_SortInfo(
     v5 = (System_String_o *)((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, void *))this->klass[1]._1.image)(
                               this,
                               this->klass[1]._1.gc_desc);
-    v6 = System_String__Concat_63966792(SortSaveKeyPrefix_k__BackingField, v5, 0);
+    v6 = System_String__Concat_64031724(SortSaveKeyPrefix_k__BackingField, v5, 0);
     v7 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, const char *))this->klass[1]._1.name)(
            this,
            this->klass[1]._1.namespaze);
-    sortInfo = (struct ListViewSort_o *)sub_1C6BC54(ListViewSort_TypeInfo);
-    ListViewSort___ctor_44084664(sortInfo, v6, v7, 0, 0);
+    sortInfo = (struct ListViewSort_o *)sub_1C715FC(ListViewSort_TypeInfo);
+    ListViewSort___ctor_44130992(sortInfo, v6, v7, 0, 0);
     v8 = ((__int64 (__fastcall *)(CharaGraphSortManageUnitBase_o *, _QWORD))this->klass[1]._1.byval_arg.data)(
            this,
            *(_QWORD *)&this->klass[1]._1.byval_arg.bits);
     if ( !sortInfo )
-      sub_1C6BC60(v8, v9);
+      sub_1C71608(v8, v9);
     sortInfo->fields.listViewKind = v8;
     this->fields.sortInfo = sortInfo;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.sortInfo, (int32_t)sortInfo, v10, v11);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.sortInfo, (int32_t)sortInfo, v10, v11, v12, v13, v14, v15);
   }
   return sortInfo;
 }
@@ -74,8 +90,12 @@ void CharaGraphSortManageUnitBase__set_SortSaveKeyPrefix(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._SortSaveKeyPrefix_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }

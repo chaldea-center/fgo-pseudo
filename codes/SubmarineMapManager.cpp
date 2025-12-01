@@ -22,16 +22,16 @@ void SubmarineMapManager__AdjustDepth(
   unsigned int v13; // w21
   int v14; // w19
 
-  if ( (byte_4CB2C85 & 1) == 0 )
+  if ( (byte_4CC3D98 & 1) == 0 )
   {
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
-    byte_4CB2C85 = 1;
+    this = (SubmarineMapManager_o *)sub_1C713B0(&Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+    byte_4CC3D98 = 1;
   }
   if ( !go )
     goto LABEL_23;
-  this = (SubmarineMapManager_o *)UnityEngine_GameObject__GetComponentsInChildren_object__51985744(
+  this = (SubmarineMapManager_o *)UnityEngine_GameObject__GetComponentsInChildren_object__52050676(
                                     go,
-                                    (const MethodInfo_3193D50 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+                                    (const MethodInfo_31A3AF4 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
   if ( !this )
     goto LABEL_23;
   m_CancellationTokenSource = (int)this->fields.m_CancellationTokenSource;
@@ -52,15 +52,15 @@ void SubmarineMapManager__AdjustDepth(
         goto LABEL_14;
     }
 LABEL_22:
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   }
   v8 = 0x7FFFFFFF;
 LABEL_14:
   if ( v8 != 0x7FFFFFFF )
   {
-    this = (SubmarineMapManager_o *)UnityEngine_GameObject__GetComponentsInChildren_object__51985744(
+    this = (SubmarineMapManager_o *)UnityEngine_GameObject__GetComponentsInChildren_object__52050676(
                                       go,
-                                      (const MethodInfo_3193D50 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
+                                      (const MethodInfo_31A3AF4 *)Method_UnityEngine_GameObject_GetComponentsInChildren_UIWidget___);
     if ( this )
     {
       v11 = (int)this->fields.m_CancellationTokenSource;
@@ -84,7 +84,7 @@ LABEL_14:
       return;
     }
 LABEL_23:
-    sub_1C6BC60(this, go);
+    sub_1C71608(this, go);
   }
 }
 
@@ -99,11 +99,11 @@ void SubmarineMapManager__AdjustEachSpotsPositions(SubmarineMapManager_o *this, 
   Il2CppObject *Component_object; // x21
   const MethodInfo *v9; // x2
 
-  if ( (byte_4CB2C82 & 1) == 0 )
+  if ( (byte_4CC3D95 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2C82 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3D95 = 1;
   }
   Children = GameObjectExtensions__GetChildren(this->fields.rootSpotP, 0, 0);
   if ( !Children )
@@ -116,13 +116,13 @@ void SubmarineMapManager__AdjustEachSpotsPositions(SubmarineMapManager_o *this, 
     while ( 1 )
     {
       if ( v7 >= max_length )
-        sub_1C6BC68(Children);
+        sub_1C71610(Children);
       Children = (UnityEngine_GameObject_array *)v6->m_Items[v7];
       if ( !Children )
         break;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)Children,
-                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Children = (UnityEngine_GameObject_array *)UnityEngine_Object__op_Equality(
@@ -136,7 +136,7 @@ void SubmarineMapManager__AdjustEachSpotsPositions(SubmarineMapManager_o *this, 
         return;
     }
 LABEL_15:
-    sub_1C6BC60(Children, v4);
+    sub_1C71608(Children, v4);
   }
 }
 
@@ -152,100 +152,108 @@ void SubmarineMapManager__AdjustSilhouetteGimmicks(SubmarineMapManager_o *this, 
   unsigned int v7; // w19
   Il2CppObject *Component_object; // x22
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v12; // x9
+  _QWORD *v16; // x9
   __int64 size; // x10
-  Il2CppClass **v14; // x0
-  System_Collections_Generic_Dictionary_int__object__o *v15; // x21
-  int v16; // w8
-  UnityEngine_GameObject_o *v17; // x22
-  unsigned int v18; // w19
-  UnityEngine_Object_o *v19; // x23
+  Il2CppClass **v18; // x0
+  System_Collections_Generic_Dictionary_int__object__o *v19; // x21
+  int v20; // w8
+  UnityEngine_GameObject_o *v21; // x22
+  unsigned int v22; // w19
+  UnityEngine_Object_o *v23; // x23
   intptr_t m_CachedPtr; // x8
   struct SubmarineMapDataManager_o *submarineData; // x8
-  __int64 v22; // x24
-  __int64 v23; // x0
-  __int64 v24; // x1
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
+  __int64 v26; // x24
+  __int64 v27; // x0
+  __int64 v28; // x1
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
   int32_t current; // w1
-  SubmarineSilhouetteData_o **v28; // x23
-  __int64 v29; // x0
-  __int64 v30; // x1
-  System_Predicate_object__o *v31; // x25
-  __int64 v32; // x0
-  __int64 v33; // x1
-  Il2CppObject *v34; // x24
-  _BOOL8 v35; // x0
-  __int64 v36; // x1
-  __int64 v37; // x1
-  const MethodInfo *v38; // x2
-  SubmarineMapDataManager_o *v39; // x0
-  System_Collections_Generic_IEnumerable_T__o *SilhouetteOccupiedPanels; // x25
-  System_Collections_Generic_List_object__o *v41; // x23
-  __int64 v42; // x0
-  __int64 v43; // x1
-  UnityEngine_Transform_o *transform; // x0
+  SubmarineSilhouetteData_o **v36; // x23
+  __int64 v37; // x0
+  __int64 v38; // x1
+  System_Predicate_object__o *v39; // x25
+  __int64 v40; // x0
+  __int64 v41; // x1
+  Il2CppObject *v42; // x24
+  _BOOL8 v43; // x0
+  __int64 v44; // x1
   __int64 v45; // x1
-  __int64 v46; // x0
-  __int64 v47; // x1
-  float32x2_t v48; // d9
-  __int128 v49; // q0
-  _BOOL8 v50; // x0
+  const MethodInfo *v46; // x2
+  SubmarineMapDataManager_o *v47; // x0
+  System_Collections_Generic_IEnumerable_T__o *SilhouetteOccupiedPanels; // x25
+  System_Collections_Generic_List_object__o *v49; // x23
+  __int64 v50; // x0
   __int64 v51; // x1
-  __int128 v52; // q1
-  int8x8_t v53; // d0
-  int8x8_t v54; // d2
+  UnityEngine_Transform_o *transform; // x0
+  __int64 v53; // x1
+  __int64 v54; // x0
   __int64 v55; // x1
-  UnityEngine_Transform_o *v56; // x0
-  __int64 v57; // x1
-  unsigned __int64 v58; // d0 OVERLAPPED
-  int v59; // s1
-  int v60; // s2
+  float32x2_t v56; // d9
+  __int128 v57; // q0
+  _BOOL8 v58; // x0
+  __int64 v59; // x1
+  __int128 v60; // q1
+  int8x8_t v61; // d0
+  int8x8_t v62; // d2
+  __int64 v63; // x1
+  UnityEngine_Transform_o *v64; // x0
+  __int64 v65; // x1
+  unsigned __int64 v66; // d0 OVERLAPPED
+  int v67; // s1
+  int v68; // s2
   float y; // [xsp+10h] [xbp-F0h]
-  __int128 v63; // [xsp+20h] [xbp-E0h]
-  System_Collections_Generic_List_Enumerator_object__o v64; // [xsp+38h] [xbp-C8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v65; // [xsp+50h] [xbp-B0h] BYREF
+  __int128 v71; // [xsp+20h] [xbp-E0h]
+  System_Collections_Generic_List_Enumerator_object__o v72; // [xsp+38h] [xbp-C8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v73; // [xsp+50h] [xbp-B0h] BYREF
   Il2CppObject *value; // [xsp+68h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v67; // [xsp+70h] [xbp-90h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v75; // [xsp+70h] [xbp-90h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4 OVERLAPPED
 
-  if ( (byte_4CB2C84 & 1) == 0 )
+  if ( (byte_4CC3D97 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent__TryGetValue__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent__set_Item__);
-    sub_1C6BA08(&System_Collections_Generic_Dictionary_int__MapGimmickComponent__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_MapGimmickComponent___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Find__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineSilhouetteData__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor___78531144);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SrcSpotBasePrefab___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_List_SrcSpotBasePrefab__TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&System_Predicate_SrcSpotBasePrefab__TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass59_0__AdjustSilhouetteGimmicks_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass59_0_TypeInfo);
-    byte_4CB2C84 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent__TryGetValue__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent__set_Item__);
+    sub_1C713B0(&System_Collections_Generic_Dictionary_int__MapGimmickComponent__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MapGimmickComponent___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SrcSpotBasePrefab__Find__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineSilhouetteData__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor___78599904);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SrcSpotBasePrefab___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_List_SrcSpotBasePrefab__TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&System_Predicate_SrcSpotBasePrefab__TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass59_0__AdjustSilhouetteGimmicks_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass59_0_TypeInfo);
+    byte_4CC3D97 = 1;
   }
-  memset(&v67, 0, sizeof(v67));
+  memset(&v75, 0, sizeof(v75));
   value = 0;
-  memset(&v65, 0, sizeof(v65));
-  v2 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SrcSpotBasePrefab__TypeInfo);
+  memset(&v73, 0, sizeof(v73));
+  v2 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SrcSpotBasePrefab__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v2,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab___ctor__);
   Children = (UnityEngine_GameObject_o *)GameObjectExtensions__GetChildren(this->fields.rootSpotP, 0, 0);
   if ( !Children )
     goto LABEL_59;
@@ -261,7 +269,7 @@ void SubmarineMapManager__AdjustSilhouetteGimmicks(SubmarineMapManager_o *this, 
         goto LABEL_59;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            Children,
-                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Children = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Inequality(
@@ -273,7 +281,7 @@ void SubmarineMapManager__AdjustSilhouetteGimmicks(SubmarineMapManager_o *this, 
         if ( !v2 )
           goto LABEL_59;
         items = v2->fields._items;
-        v12 = Method_System_Collections_Generic_List_SrcSpotBasePrefab__Add__;
+        v16 = Method_System_Collections_Generic_List_SrcSpotBasePrefab__Add__;
         ++v2->fields._version;
         if ( !items )
           goto LABEL_59;
@@ -283,14 +291,14 @@ void SubmarineMapManager__AdjustSilhouetteGimmicks(SubmarineMapManager_o *this, 
           System_Collections_Generic_List_object___AddWithResize(
             v2,
             Component_object,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
         }
         else
         {
-          v14 = &items->obj.klass + size;
+          v18 = &items->obj.klass + size;
           v2->fields._size = size + 1;
-          v14[4] = (Il2CppClass *)Component_object;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v14 + 4), (int32_t)Component_object, v9, v10);
+          v18[4] = (Il2CppClass *)Component_object;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v18 + 4), (int32_t)Component_object, v9, v10, v11, v12, v13, v14);
         }
       }
       klass = (int)v6[1].klass;
@@ -298,47 +306,47 @@ void SubmarineMapManager__AdjustSilhouetteGimmicks(SubmarineMapManager_o *this, 
         goto LABEL_17;
     }
 LABEL_60:
-    sub_1C6BC68(Children);
+    sub_1C71610(Children);
   }
 LABEL_17:
-  v15 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C6BC54(System_Collections_Generic_Dictionary_int__MapGimmickComponent__TypeInfo);
+  v19 = (System_Collections_Generic_Dictionary_int__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_int__MapGimmickComponent__TypeInfo);
   System_Collections_Generic_Dictionary_int__object____ctor(
-    v15,
-    (const MethodInfo_3451B1C *)Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent___ctor__);
+    v19,
+    (const MethodInfo_34618C0 *)Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent___ctor__);
   Children = (UnityEngine_GameObject_o *)GameObjectExtensions__GetChildren(this->fields.rootGimmickP, 0, 0);
   if ( !Children )
     goto LABEL_59;
-  v16 = (int)Children[1].klass;
-  v17 = Children;
-  if ( v16 >= 1 )
+  v20 = (int)Children[1].klass;
+  v21 = Children;
+  if ( v20 >= 1 )
   {
-    v18 = 0;
-    while ( v18 < v16 )
+    v22 = 0;
+    while ( v22 < v20 )
     {
-      Children = (UnityEngine_GameObject_o *)*((_QWORD *)&v17[1].monitor + (int)v18);
+      Children = (UnityEngine_GameObject_o *)*((_QWORD *)&v21[1].monitor + (int)v22);
       if ( !Children )
         goto LABEL_59;
-      v19 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
+      v23 = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponent_object_(
                                       Children,
-                                      (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_MapGimmickComponent___);
+                                      (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MapGimmickComponent___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      Children = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(v19, 0, 0);
+      Children = (UnityEngine_GameObject_o *)UnityEngine_Object__op_Equality(v23, 0, 0);
       if ( ((unsigned __int8)Children & 1) == 0 )
       {
-        if ( !v19 )
+        if ( !v23 )
           goto LABEL_59;
-        m_CachedPtr = v19[4].fields.m_CachedPtr;
-        if ( !m_CachedPtr || !v15 )
+        m_CachedPtr = v23[4].fields.m_CachedPtr;
+        if ( !m_CachedPtr || !v19 )
           goto LABEL_59;
         System_Collections_Generic_Dictionary_int__object___set_Item(
-          v15,
+          v19,
           *(_DWORD *)(m_CachedPtr + 20),
-          (Il2CppObject *)v19,
-          (const MethodInfo_34524DC *)Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent__set_Item__);
+          (Il2CppObject *)v23,
+          (const MethodInfo_3462280 *)Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent__set_Item__);
       }
-      v16 = (int)v17[1].klass;
-      if ( (int)++v18 >= v16 )
+      v20 = (int)v21[1].klass;
+      if ( (int)++v22 >= v20 )
         goto LABEL_30;
     }
     goto LABEL_60;
@@ -349,128 +357,128 @@ LABEL_30:
     || (Children = (UnityEngine_GameObject_o *)submarineData->fields._SilhouetteDataList_k__BackingField) == 0 )
   {
 LABEL_59:
-    sub_1C6BC60(Children, v4);
+    sub_1C71608(Children, v4);
   }
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v64,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v72,
     (System_Collections_Generic_List_object__o *)Children,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SubmarineSilhouetteData__GetEnumerator__);
-  v67 = v64;
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SubmarineSilhouetteData__GetEnumerator__);
+  v75 = v72;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v67,
-            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__MoveNext__) )
+            &v75,
+            (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__MoveNext__) )
   {
-    v22 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass59_0_TypeInfo);
-    SubmarineMapManager___c__DisplayClass59_0___ctor((SubmarineMapManager___c__DisplayClass59_0_o *)v22, 0);
-    if ( !v22 )
-      sub_1C6BC60(v23, v24);
-    current = (int32_t)v67.fields._current;
-    *(_QWORD *)(v22 + 16) = v67.fields._current;
-    v28 = (SubmarineSilhouetteData_o **)(v22 + 16);
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v22 + 16), current, v25, v26);
-    if ( !*(_QWORD *)(v22 + 16) )
-      sub_1C6BC60(v29, v30);
-    if ( *(int *)(*(_QWORD *)(v22 + 16) + 20LL) > 0 )
+    v26 = sub_1C715FC(SubmarineMapManager___c__DisplayClass59_0_TypeInfo);
+    SubmarineMapManager___c__DisplayClass59_0___ctor((SubmarineMapManager___c__DisplayClass59_0_o *)v26, 0);
+    if ( !v26 )
+      sub_1C71608(v27, v28);
+    current = (int32_t)v75.fields._current;
+    *(_QWORD *)(v26 + 16) = v75.fields._current;
+    v36 = (SubmarineSilhouetteData_o **)(v26 + 16);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v26 + 16), current, v29, v30, v31, v32, v33, v34);
+    if ( !*(_QWORD *)(v26 + 16) )
+      sub_1C71608(v37, v38);
+    if ( *(int *)(*(_QWORD *)(v26 + 16) + 20LL) > 0 )
     {
-      v31 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_SrcSpotBasePrefab__TypeInfo);
+      v39 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_SrcSpotBasePrefab__TypeInfo);
       System_Predicate_object____ctor(
-        v31,
-        (Il2CppObject *)v22,
+        v39,
+        (Il2CppObject *)v26,
         Method_SubmarineMapManager___c__DisplayClass59_0__AdjustSilhouetteGimmicks_b__0__,
         0);
       if ( !v2 )
-        sub_1C6BC60(v32, v33);
-      v34 = System_Collections_Generic_List_object___Find(
+        sub_1C71608(v40, v41);
+      v42 = System_Collections_Generic_List_object___Find(
               v2,
-              (System_Predicate_T__o *)v31,
-              (const MethodInfo_3800FDC *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__Find__);
+              (System_Predicate_T__o *)v39,
+              (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_SrcSpotBasePrefab__Find__);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v35 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v34, 0, 0);
-      if ( !v35 )
+      v43 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v42, 0, 0);
+      if ( !v43 )
       {
-        if ( !*v28 )
-          sub_1C6BC60(v35, v36);
-        if ( !v15 )
-          sub_1C6BC60(v35, v36);
+        if ( !*v36 )
+          sub_1C71608(v43, v44);
+        if ( !v19 )
+          sub_1C71608(v43, v44);
         if ( System_Collections_Generic_Dictionary_int__object___TryGetValue(
-               v15,
-               (*v28)->fields._ObjectId_k__BackingField,
+               v19,
+               (*v36)->fields._ObjectId_k__BackingField,
                &value,
-               (const MethodInfo_3453C7C *)Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent__TryGetValue__) )
+               (const MethodInfo_3463A20 *)Method_System_Collections_Generic_Dictionary_int__MapGimmickComponent__TryGetValue__) )
         {
-          v39 = this->fields.submarineData;
-          if ( !v39 )
-            sub_1C6BC60(0, v37);
+          v47 = this->fields.submarineData;
+          if ( !v47 )
+            sub_1C71608(0, v45);
           SilhouetteOccupiedPanels = (System_Collections_Generic_IEnumerable_T__o *)SubmarineMapDataManager__GetSilhouetteOccupiedPanels(
-                                                                                      v39,
-                                                                                      *v28,
-                                                                                      v38);
-          v41 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
-          System_Collections_Generic_List_object____ctor_58720872(
-            v41,
+                                                                                      v47,
+                                                                                      *v36,
+                                                                                      v46);
+          v49 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
+          System_Collections_Generic_List_object____ctor_58785804(
+            v49,
             SilhouetteOccupiedPanels,
-            (const MethodInfo_3800268 *)Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor___78531144);
-          if ( !v34 )
-            sub_1C6BC60(v42, v43);
-          transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v34, 0);
+            (const MethodInfo_381000C *)Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor___78599904);
+          if ( !v42 )
+            sub_1C71608(v50, v51);
+          transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)v42, 0);
           if ( !transform )
-            sub_1C6BC60(0, v45);
+            sub_1C71608(0, v53);
           localPosition = UnityEngine_Transform__get_localPosition(transform, 0);
-          *(_QWORD *)&v63 = *(_QWORD *)&localPosition.fields.x;
+          *(_QWORD *)&v71 = *(_QWORD *)&localPosition.fields.x;
           y = localPosition.fields.y;
-          if ( !byte_4CAFC09 )
+          if ( !byte_4CC0D09 )
           {
-            v46 = sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-            byte_4CAFC09 = 1;
+            v54 = sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+            byte_4CC0D09 = 1;
           }
-          if ( !v41 )
-            sub_1C6BC60(v46, v47);
-          v48.n64_u64[0] = *(unsigned __int64 *)&UnityEngine_Vector3_TypeInfo->static_fields->zeroVector.fields.x;
+          if ( !v49 )
+            sub_1C71608(v54, v55);
+          v56.n64_u64[0] = *(unsigned __int64 *)&UnityEngine_Vector3_TypeInfo->static_fields->zeroVector.fields.x;
           System_Collections_Generic_List_object___GetEnumerator(
-            (System_Collections_Generic_List_Enumerator_T__o *)&v64,
-            v41,
-            (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
-          v65 = v64;
-          v49 = v63;
-          *((float *)&v49 + 1) = y;
+            (System_Collections_Generic_List_Enumerator_T__o *)&v72,
+            v49,
+            (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+          v73 = v72;
+          v57 = v71;
+          *((float *)&v57 + 1) = y;
           while ( 1 )
           {
-            v63 = v49;
-            v50 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                    &v65,
-                    (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
-            if ( !v50 )
+            v71 = v57;
+            v58 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                    &v73,
+                    (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+            if ( !v58 )
               break;
-            if ( !v65.fields._current )
-              sub_1C6BC60(v50, v51);
-            v53.n64_u64[0] = *(unsigned __int64 *)((char *)&v65.fields._current[1].monitor + 4);
-            *(int8x8_t *)&v52 = vbsl_s8(vcgt_f32(v53, *(float32x2_t *)&v63), *(int8x8_t *)&v63, v53);
-            v54.n64_u64[0] = vadd_f32(
-                               *(float32x2_t *)&v52,
-                               vsub_f32(vadd_f32(v48, *(float32x2_t *)&v63), *(float32x2_t *)&v52)).n64_u64[0];
-            v48.n64_u64[0] = vsub_f32(vbsl_s8(vcgt_f32(v54, v53), v54, v53), *(float32x2_t *)&v52).n64_u64[0];
-            v49 = v52;
+            if ( !v73.fields._current )
+              sub_1C71608(v58, v59);
+            v61.n64_u64[0] = *(unsigned __int64 *)((char *)&v73.fields._current[1].monitor + 4);
+            *(int8x8_t *)&v60 = vbsl_s8(vcgt_f32(v61, *(float32x2_t *)&v71), *(int8x8_t *)&v71, v61);
+            v62.n64_u64[0] = vadd_f32(
+                               *(float32x2_t *)&v60,
+                               vsub_f32(vadd_f32(v56, *(float32x2_t *)&v71), *(float32x2_t *)&v60)).n64_u64[0];
+            v56.n64_u64[0] = vsub_f32(vbsl_s8(vcgt_f32(v62, v61), v62, v61), *(float32x2_t *)&v60).n64_u64[0];
+            v57 = v60;
           }
           System_Collections_Generic_List_Enumerator_object___Dispose(
-            &v65,
-            (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+            &v73,
+            (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
           if ( !value )
-            sub_1C6BC60(0, v55);
-          v56 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)value, 0);
-          if ( !v56 )
-            sub_1C6BC60(0, v57);
-          v58 = vadd_f32(vmul_f32(v48, (float32x2_t)0x3F0000003F000000LL), *(float32x2_t *)&v63).n64_u64[0];
-          v59 = HIDWORD(v58);
-          v60 = 0;
-          UnityEngine_Transform__set_localPosition(v56, *(UnityEngine_Vector3_o *)&v58, 0);
+            sub_1C71608(0, v63);
+          v64 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)value, 0);
+          if ( !v64 )
+            sub_1C71608(0, v65);
+          v66 = vadd_f32(vmul_f32(v56, (float32x2_t)0x3F0000003F000000LL), *(float32x2_t *)&v71).n64_u64[0];
+          v67 = HIDWORD(v66);
+          v68 = 0;
+          UnityEngine_Transform__set_localPosition(v64, *(UnityEngine_Vector3_o *)&v66, 0);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v67,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__Dispose__);
+    &v75,
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__Dispose__);
 }
 
 
@@ -482,7 +490,7 @@ void SubmarineMapManager__AdjustSpotCollider(
   SubmarineMapManager_o *v4; // x20
   struct SubmarineMapDataManager_o *submarineData; // x8
   struct SubmarineSettingsManager_o *Settings_k__BackingField; // x8
-  const MethodInfo_392DB5C *v7; // x2
+  const MethodInfo_393D900 *v7; // x2
   System_Nullable_Vector3__o centerPosition; // [xsp+0h] [xbp-40h] BYREF
   System_Nullable_Vector2__o v9; // [xsp+10h] [xbp-30h] BYREF
   System_Nullable_Vector2__o v10; // 0:x0.12
@@ -491,11 +499,11 @@ void SubmarineMapManager__AdjustSpotCollider(
   UnityEngine_Vector3_o zeroVector; // 0:s0.4,4:s1.4,8:s2.4
 
   v4 = this;
-  if ( (byte_4CB2C81 & 1) == 0 )
+  if ( (byte_4CC3D94 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Nullable_Vector2___ctor__);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&Method_System_Nullable_Vector3___ctor__);
-    byte_4CB2C81 = 1;
+    sub_1C713B0(&Method_System_Nullable_Vector2___ctor__);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&Method_System_Nullable_Vector3___ctor__);
+    byte_4CC3D94 = 1;
   }
   submarineData = v4->fields.submarineData;
   if ( !submarineData )
@@ -508,11 +516,11 @@ void SubmarineMapManager__AdjustSpotCollider(
   LODWORD(v10.fields.value.fields.y) = Method_System_Nullable_Vector2___ctor__;
   v9.fields.value.fields.y = 0.0;
   *(_QWORD *)&v9.fields.hasValue = 0;
-  System_Nullable_Vector2____ctor(v10, PanelUnitSize_k__BackingField, (const MethodInfo_392D2DC *)method);
-  if ( !byte_4CAFC09 )
+  System_Nullable_Vector2____ctor(v10, PanelUnitSize_k__BackingField, (const MethodInfo_393D080 *)method);
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   *(_QWORD *)&v11.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
   *(_QWORD *)&v11.fields.hasValue = &centerPosition;
@@ -522,7 +530,7 @@ void SubmarineMapManager__AdjustSpotCollider(
   System_Nullable_Vector3____ctor(v11, zeroVector, v7);
   if ( !spot )
 LABEL_9:
-    sub_1C6BC60(this, spot);
+    sub_1C71608(this, spot);
   SrcSpotBasePrefab__AdjustBtnColliderArea(spot, v9, centerPosition, 0);
 }
 
@@ -598,7 +606,7 @@ void SubmarineMapManager__AdjustSpotPosition(
       }
     }
 LABEL_15:
-    sub_1C6BC60(this, spot);
+    sub_1C71608(this, spot);
   }
   v6 = v5->fields.submarineData;
   if ( !v6 )
@@ -642,25 +650,29 @@ void SubmarineMapManager__CheckNewPlayableEventQuest(SubmarineMapManager_o *this
   Il2CppObject *v13; // x23
   struct SubmarineMapManager___c_StaticFields *static_fields; // x0
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
   System_Nullable_float__o p_messagePosY; // x0
-  System_Nullable_float__o v18; // x5
+  System_Nullable_float__o v22; // x5
   System_Nullable_float__o messagePosY; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CB2C7C & 1) == 0 )
+  if ( (byte_4CC3D8F & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMaster_QuestReleaseMaster___);
-    sub_1C6BA08(&DataManager_TypeInfo);
-    sub_1C6BA08(&Method_System_Nullable_float___ctor__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__CheckNewPlayableEventQuest_b__49_0__);
-    sub_1C6BA08(&SubmarineMapManager___c_TypeInfo);
-    sub_1C6BA08(&StringLiteral_6932/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE_PANEL_MAP"*/);
-    byte_4CB2C7C = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMaster_QuestReleaseMaster___);
+    sub_1C713B0(&DataManager_TypeInfo);
+    sub_1C713B0(&Method_System_Nullable_float___ctor__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    sub_1C713B0(&Method_SubmarineMapManager___c__CheckNewPlayableEventQuest_b__49_0__);
+    sub_1C713B0(&SubmarineMapManager___c_TypeInfo);
+    sub_1C713B0(&StringLiteral_6934/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE_PANEL_MAP"*/);
+    byte_4CC3D8F = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
   eventId = (System_Int32_array *)SubmarineMapManager__get_eventId(this, v4);
   if ( !Instance )
     goto LABEL_21;
@@ -672,17 +684,17 @@ void SubmarineMapManager__CheckNewPlayableEventQuest(SubmarineMapManager_o *this
     return;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  eventId = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_313B314 *)Method_DataManager_GetMaster_QuestReleaseMaster___);
+  eventId = (System_Int32_array *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_QuestReleaseMaster___);
   if ( !LODWORD(v7->max_length) )
     goto LABEL_22;
   if ( !eventId )
     goto LABEL_21;
   if ( !QuestReleaseMaster__IsContainCondType((QuestReleaseMaster_o *)eventId, v7->m_Items[0], 143, 0) )
     return;
-  eventId = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  eventId = (System_Int32_array *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !LODWORD(v7->max_length) )
 LABEL_22:
-    sub_1C6BC68(eventId);
+    sub_1C71610(eventId);
   v8 = (CommonUI_o *)eventId;
   v9 = v7->m_Items[0];
   v10 = SubmarineMapManager___c_TypeInfo;
@@ -692,7 +704,7 @@ LABEL_22:
     v10 = SubmarineMapManager___c_TypeInfo;
   }
   _9__49_0 = v10->static_fields->__9__49_0;
-  v12 = (System_String_o *)StringLiteral_6932/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE_PANEL_MAP"*/;
+  v12 = (System_String_o *)StringLiteral_6934/*"GET_EVENT_POINT_AFTER_DIALOG_MESSAGE_PANEL_MAP"*/;
   if ( !_9__49_0 )
   {
     if ( !v10->_2.cctor_finished )
@@ -701,20 +713,28 @@ LABEL_22:
       v10 = SubmarineMapManager___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v10->static_fields->__9;
-    _9__49_0 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__49_0 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(_9__49_0, v13, Method_SubmarineMapManager___c__CheckNewPlayableEventQuest_b__49_0__, 0);
     static_fields = SubmarineMapManager___c_TypeInfo->static_fields;
     static_fields->__9__49_0 = _9__49_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__49_0, (int32_t)_9__49_0, v15, v16);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__49_0,
+      (int32_t)_9__49_0,
+      v15,
+      v16,
+      v17,
+      v18,
+      v19,
+      v20);
   }
   p_messagePosY = (System_Nullable_float__o)&messagePosY;
   messagePosY = 0;
-  System_Nullable_float____ctor(p_messagePosY, 30.0, (const MethodInfo_392B698 *)Method_System_Nullable_float___ctor__);
+  System_Nullable_float____ctor(p_messagePosY, 30.0, (const MethodInfo_393B43C *)Method_System_Nullable_float___ctor__);
   if ( !v8 )
 LABEL_21:
-    sub_1C6BC60(eventId, v6);
-  v18 = messagePosY;
-  CommonUI__OpenQuestNewPlayableDialog(v8, v9, v12, _9__49_0, 0, v18, 0.0, 0);
+    sub_1C71608(eventId, v6);
+  v22 = messagePosY;
+  CommonUI__OpenQuestNewPlayableDialog(v8, v9, v12, _9__49_0, 0, v22, 0.0, 0);
 }
 
 
@@ -727,64 +747,80 @@ void SubmarineMapManager__ClickPanel(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  const MethodInfo *v12; // x2
-  SubmarineMapPanelData_o *v13; // x1
-  _QWORD *v14; // x0
-  System_Reflection_MethodBase_o *v15; // x0
-  _QWORD *v16; // x0
-  System_Reflection_MethodBase_o *v17; // x0
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  const MethodInfo *v20; // x2
+  SubmarineMapPanelData_o *v21; // x1
+  _QWORD *v22; // x0
+  System_Reflection_MethodBase_o *v23; // x0
+  _QWORD *v24; // x0
+  System_Reflection_MethodBase_o *v25; // x0
   struct SubmarineMapDataManager_o *submarineData; // x8
   struct SubmarineSettingsManager_o *Settings_k__BackingField; // x8
   float PanelSelectDelaySecond_k__BackingField; // s8
-  __int64 v21; // x21
-  System_Delegate_o **v22; // x22
-  System_Delegate_o *v23; // x23
-  SchedulerTaskBase_TaskCallback_o *v24; // x24
-  System_Delegate_o *v25; // x0
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  SchedulerTaskBase_TaskCallback_c *v28; // x1
+  __int64 v29; // x21
+  System_Delegate_o **v30; // x22
+  System_Delegate_o *v31; // x23
+  SchedulerTaskBase_TaskCallback_o *v32; // x24
+  System_Delegate_o *v33; // x0
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
+  SchedulerTaskBase_TaskCallback_c *v40; // x1
   TaskScheduler_o *taskScheduler; // x19
-  __int64 v30; // x20
-  __int64 v31; // x0
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  __int64 v34; // x0
+  __int64 v42; // x20
+  __int64 v43; // x0
+  int32_t v44; // w2
+  int32_t v45; // w3
+  System_String_o *v46; // x4
+  int32_t v47; // w5
+  int64_t v48; // x6
+  System_String_o *v49; // x7
+  __int64 v50; // x0
 
-  if ( (byte_4CB2C72 & 1) == 0 )
+  if ( (byte_4CC3D85 & 1) == 0 )
   {
-    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
-    sub_1C6BA08(&SchedulerTaskWaitTime_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager_ClickPanel__);
-    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass35_0__ClickPanel_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass35_0_TypeInfo);
-    byte_4CB2C72 = 1;
+    sub_1C713B0(&SchedulerTaskBase___TypeInfo);
+    sub_1C713B0(&SchedulerTaskWaitTime_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager_ClickPanel__);
+    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass35_0__ClickPanel_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass35_0_TypeInfo);
+    byte_4CC3D85 = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass35_0_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager___c__DisplayClass35_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass35_0___ctor((SubmarineMapManager___c__DisplayClass35_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_28;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = panelData;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)panelData, v10, v11);
-  v13 = *(SubmarineMapPanelData_o **)(v5 + 24);
-  if ( !v13 || !this->fields.isEnableClickPanel )
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)panelData, v14, v15, v16, v17, v18, v19);
+  v21 = *(SubmarineMapPanelData_o **)(v5 + 24);
+  if ( !v21 || !this->fields.isEnableClickPanel )
     return;
-  if ( !v13->fields._IsOpened_k__BackingField || !v13->fields._HasEnemyParts_k__BackingField )
+  if ( !v21->fields._IsOpened_k__BackingField || !v21->fields._HasEnemyParts_k__BackingField )
   {
-    if ( !v13->fields._IsScannable_k__BackingField )
+    if ( !v21->fields._IsScannable_k__BackingField )
       return;
-    SubmarineMapManager__ShowSelectedPanelEffect(this, v13, v12);
-    v16 = Method_SubmarineMapManager_ClickPanel__;
+    SubmarineMapManager__ShowSelectedPanelEffect(this, v21, v20);
+    v24 = Method_SubmarineMapManager_ClickPanel__;
     if ( (*((_BYTE *)Method_SubmarineMapManager_ClickPanel__ + 83) & 2) != 0 )
-      v16 = (_QWORD *)sub_1C6BA20(Method_SubmarineMapManager_ClickPanel__);
-    v17 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v16, v16[4]);
-    OverwriteAssetSoundName__PlaySystemSe(v17, 0, 0, 0);
+      v24 = (_QWORD *)sub_1C713C8(Method_SubmarineMapManager_ClickPanel__);
+    v25 = (System_Reflection_MethodBase_o *)sub_1C71394(v24, v24[4]);
+    OverwriteAssetSoundName__PlaySystemSe(v25, 0, 0, 0);
     submarineData = this->fields.submarineData;
     if ( submarineData )
     {
@@ -792,52 +828,52 @@ void SubmarineMapManager__ClickPanel(
       if ( Settings_k__BackingField )
       {
         PanelSelectDelaySecond_k__BackingField = Settings_k__BackingField->fields._PanelSelectDelaySecond_k__BackingField;
-        v21 = sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
-        SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)v21, PanelSelectDelaySecond_k__BackingField, 0);
-        if ( v21 )
+        v29 = sub_1C715FC(SchedulerTaskWaitTime_TypeInfo);
+        SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)v29, PanelSelectDelaySecond_k__BackingField, 0);
+        if ( v29 )
         {
-          v22 = (System_Delegate_o **)(v21 + 32);
-          v23 = *(System_Delegate_o **)(v21 + 32);
-          v24 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+          v30 = (System_Delegate_o **)(v29 + 32);
+          v31 = *(System_Delegate_o **)(v29 + 32);
+          v32 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
           SchedulerTaskBase_TaskCallback___ctor(
-            v24,
+            v32,
             (Il2CppObject *)v5,
             Method_SubmarineMapManager___c__DisplayClass35_0__ClickPanel_b__0__,
             0);
-          v25 = System_Delegate__Combine(v23, (System_Delegate_o *)v24, 0);
-          if ( v25 )
+          v33 = System_Delegate__Combine(v31, (System_Delegate_o *)v32, 0);
+          if ( v33 )
           {
-            v28 = SchedulerTaskBase_TaskCallback_TypeInfo;
-            if ( (SchedulerTaskBase_TaskCallback_c *)v25->klass != SchedulerTaskBase_TaskCallback_TypeInfo
-              || (*v22 = v25, (SchedulerTaskBase_TaskCallback_c *)v25->klass != v28) )
+            v40 = SchedulerTaskBase_TaskCallback_TypeInfo;
+            if ( (SchedulerTaskBase_TaskCallback_c *)v33->klass != SchedulerTaskBase_TaskCallback_TypeInfo
+              || (*v30 = v33, (SchedulerTaskBase_TaskCallback_c *)v33->klass != v40) )
             {
-              sub_1C6BFFC(v25);
+              sub_1C719A4(v33);
               return;
             }
           }
           else
           {
-            *v22 = 0;
+            *v30 = 0;
           }
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 32), (int32_t)v25, v26, v27);
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v29 + 32), (int32_t)v33, v34, v35, v36, v37, v38, v39);
           taskScheduler = this->fields.taskScheduler;
-          v6 = sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+          v6 = sub_1C71458(SchedulerTaskBase___TypeInfo, 1);
           if ( v6 )
           {
-            v30 = v6;
-            v31 = sub_1C6BB44(v21, *(_QWORD *)(*(_QWORD *)v6 + 64LL));
-            if ( !v31 )
+            v42 = v6;
+            v43 = sub_1C714EC(v29, *(_QWORD *)(*(_QWORD *)v6 + 64LL));
+            if ( !v43 )
             {
-              v34 = sub_1C6BC84();
-              sub_1C6BB30(v34, 0);
+              v50 = sub_1C7162C();
+              sub_1C714D8(v50, 0);
             }
-            if ( !*(_DWORD *)(v30 + 24) )
-              sub_1C6BC68(v31);
-            *(_QWORD *)(v30 + 32) = v21;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v30 + 32), v21, v32, v33);
+            if ( !*(_DWORD *)(v42 + 24) )
+              sub_1C71610(v43);
+            *(_QWORD *)(v42 + 32) = v29;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v42 + 32), v29, v44, v45, v46, v47, v48, v49);
             if ( taskScheduler )
             {
-              TaskScheduler__AddTask(taskScheduler, 0, (SchedulerTaskBase_array *)v30, 0);
+              TaskScheduler__AddTask(taskScheduler, 0, (SchedulerTaskBase_array *)v42, 0);
               return;
             }
           }
@@ -845,13 +881,13 @@ void SubmarineMapManager__ClickPanel(
       }
     }
 LABEL_28:
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   }
-  v14 = Method_SubmarineMapManager_ClickPanel__;
+  v22 = Method_SubmarineMapManager_ClickPanel__;
   if ( (*((_BYTE *)Method_SubmarineMapManager_ClickPanel__ + 83) & 2) != 0 )
-    v14 = (_QWORD *)sub_1C6BA20(Method_SubmarineMapManager_ClickPanel__);
-  v15 = (System_Reflection_MethodBase_o *)sub_1C6B9EC(v14, v14[4]);
-  OverwriteAssetSoundName__PlaySystemSe(v15, 2, 0, 0);
+    v22 = (_QWORD *)sub_1C713C8(Method_SubmarineMapManager_ClickPanel__);
+  v23 = (System_Reflection_MethodBase_o *)sub_1C71394(v22, v22[4]);
+  OverwriteAssetSoundName__PlaySystemSe(v23, 2, 0, 0);
 }
 
 
@@ -864,23 +900,31 @@ System_Collections_IEnumerator_o *SubmarineMapManager__CoInitRequest(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
 
-  if ( (byte_4CB2C69 & 1) == 0 )
+  if ( (byte_4CC3D7C & 1) == 0 )
   {
-    sub_1C6BA08(&SubmarineMapManager__CoInitRequest_d__20_TypeInfo);
-    byte_4CB2C69 = 1;
+    sub_1C713B0(&SubmarineMapManager__CoInitRequest_d__20_TypeInfo);
+    byte_4CC3D7C = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager__CoInitRequest_d__20_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager__CoInitRequest_d__20_TypeInfo);
   SubmarineMapManager__CoInitRequest_d__20___ctor((SubmarineMapManager__CoInitRequest_d__20_o *)v5, 0, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 40) = finishCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)finishCallback, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)finishCallback, v14, v15, v16, v17, v18, v19);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -894,23 +938,31 @@ System_Collections_IEnumerator_o *SubmarineMapManager__CoOnAfterSpotCreated(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
 
-  if ( (byte_4CB2C6A & 1) == 0 )
+  if ( (byte_4CC3D7D & 1) == 0 )
   {
-    sub_1C6BA08(&SubmarineMapManager__CoOnAfterSpotCreated_d__23_TypeInfo);
-    byte_4CB2C6A = 1;
+    sub_1C713B0(&SubmarineMapManager__CoOnAfterSpotCreated_d__23_TypeInfo);
+    byte_4CC3D7D = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager__CoOnAfterSpotCreated_d__23_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager__CoOnAfterSpotCreated_d__23_TypeInfo);
   SubmarineMapManager__CoOnAfterSpotCreated_d__23___ctor((SubmarineMapManager__CoOnAfterSpotCreated_d__23_o *)v5, 0, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 32), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 40) = finishCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 40), (int32_t)finishCallback, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)finishCallback, v14, v15, v16, v17, v18, v19);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -925,36 +977,48 @@ void SubmarineMapManager__ConstructOnPartOfDialog(SubmarineMapManager_o *this, c
   Il2CppObject *ScanConfirmDialogPrefab_k__BackingField; // x21
   Il2CppObject *Component_object; // x0
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  EventMapManagerBase_o *v12; // x0
-  const MethodInfo *v13; // x2
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  EventMapManagerBase_o *v16; // x0
+  const MethodInfo *v17; // x2
   BaseDialog_o **p_selectScannerDialog; // x20
   UnityEngine_Object_o *selectScannerDialog; // x21
-  struct SubmarineMapAssetManager_o *v16; // x8
+  struct SubmarineMapAssetManager_o *v20; // x8
   Il2CppObject *SelectScannerDialogPrefab_k__BackingField; // x21
-  Il2CppObject *v18; // x0
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  EventMapManagerBase_o *v21; // x0
-  const MethodInfo *v22; // x2
-  CGThumbnailListItem_o *p_newScannerDialog; // x20
+  Il2CppObject *v22; // x0
+  int32_t v23; // w2
+  int32_t v24; // w3
+  System_String_o *v25; // x4
+  int32_t v26; // w5
+  int64_t v27; // x6
+  System_String_o *v28; // x7
+  EventMapManagerBase_o *v29; // x0
+  const MethodInfo *v30; // x2
+  GrandQuestFolderBoardItem_o *p_newScannerDialog; // x20
   UnityEngine_Object_o *newScannerDialog; // x21
-  struct SubmarineMapAssetManager_o *v25; // x8
+  struct SubmarineMapAssetManager_o *v33; // x8
   Il2CppObject *NewScannerDialogPrefab_k__BackingField; // x19
-  Il2CppObject *v27; // x0
-  int32_t v28; // w2
-  const MethodInfo *v29; // x3
-  EventMapManagerBase_o *v30; // x0
-  const MethodInfo *v31; // x2
+  Il2CppObject *v35; // x0
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
+  EventMapManagerBase_o *v42; // x0
+  const MethodInfo *v43; // x2
 
-  if ( (byte_4CB2C86 & 1) == 0 )
+  if ( (byte_4CC3D99 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SubmarineNewScannerDialog___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SubmarineScanConfirmDialog___);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerDialog___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2C86 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SubmarineNewScannerDialog___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SubmarineScanConfirmDialog___);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerDialog___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3D99 = 1;
   }
   p_scanConfirmDialog = (BaseDialog_o **)&this->fields.scanConfirmDialog;
   scanConfirmDialog = (UnityEngine_Object_o *)this->fields.scanConfirmDialog;
@@ -971,15 +1035,23 @@ void SubmarineMapManager__ConstructOnPartOfDialog(SubmarineMapManager_o *this, c
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v5 = UnityEngine_Object__Instantiate_object_(
            ScanConfirmDialogPrefab_k__BackingField,
-           (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v5 )
       goto LABEL_28;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)v5,
-                         (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SubmarineScanConfirmDialog___);
+                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SubmarineScanConfirmDialog___);
     *p_scanConfirmDialog = (BaseDialog_o *)Component_object;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.scanConfirmDialog, (int32_t)Component_object, v10, v11);
-    EventMapManagerBase__LocateDialogToUiRoot(v12, *p_scanConfirmDialog, v13);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.scanConfirmDialog,
+      (int32_t)Component_object,
+      v10,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15);
+    EventMapManagerBase__LocateDialogToUiRoot(v16, *p_scanConfirmDialog, v17);
   }
   p_selectScannerDialog = (BaseDialog_o **)&this->fields.selectScannerDialog;
   selectScannerDialog = (UnityEngine_Object_o *)this->fields.selectScannerDialog;
@@ -988,83 +1060,95 @@ void SubmarineMapManager__ConstructOnPartOfDialog(SubmarineMapManager_o *this, c
   v5 = (Il2CppObject *)UnityEngine_Object__op_Equality(selectScannerDialog, 0, 0);
   if ( ((unsigned __int8)v5 & 1) != 0 )
   {
-    v16 = this->fields.assetManager;
-    if ( !v16 )
+    v20 = this->fields.assetManager;
+    if ( !v20 )
       goto LABEL_28;
-    SelectScannerDialogPrefab_k__BackingField = (Il2CppObject *)v16->fields._SelectScannerDialogPrefab_k__BackingField;
+    SelectScannerDialogPrefab_k__BackingField = (Il2CppObject *)v20->fields._SelectScannerDialogPrefab_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     v5 = UnityEngine_Object__Instantiate_object_(
            SelectScannerDialogPrefab_k__BackingField,
-           (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+           (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
     if ( !v5 )
       goto LABEL_28;
-    v18 = UnityEngine_GameObject__GetComponent_object_(
+    v22 = UnityEngine_GameObject__GetComponent_object_(
             (UnityEngine_GameObject_o *)v5,
-            (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerDialog___);
-    *p_selectScannerDialog = (BaseDialog_o *)v18;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectScannerDialog, (int32_t)v18, v19, v20);
-    EventMapManagerBase__LocateDialogToUiRoot(v21, *p_selectScannerDialog, v22);
+            (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SubmarineSelectScannerDialog___);
+    *p_selectScannerDialog = (BaseDialog_o *)v22;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.selectScannerDialog,
+      (int32_t)v22,
+      v23,
+      v24,
+      v25,
+      v26,
+      v27,
+      v28);
+    EventMapManagerBase__LocateDialogToUiRoot(v29, *p_selectScannerDialog, v30);
   }
-  p_newScannerDialog = (CGThumbnailListItem_o *)&this->fields.newScannerDialog;
+  p_newScannerDialog = (GrandQuestFolderBoardItem_o *)&this->fields.newScannerDialog;
   newScannerDialog = (UnityEngine_Object_o *)this->fields.newScannerDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = (Il2CppObject *)UnityEngine_Object__op_Equality(newScannerDialog, 0, 0);
   if ( ((unsigned __int8)v5 & 1) != 0 )
   {
-    v25 = this->fields.assetManager;
-    if ( v25 )
+    v33 = this->fields.assetManager;
+    if ( v33 )
     {
-      NewScannerDialogPrefab_k__BackingField = (Il2CppObject *)v25->fields._NewScannerDialogPrefab_k__BackingField;
+      NewScannerDialogPrefab_k__BackingField = (Il2CppObject *)v33->fields._NewScannerDialogPrefab_k__BackingField;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v5 = UnityEngine_Object__Instantiate_object_(
              NewScannerDialogPrefab_k__BackingField,
-             (const MethodInfo_31C7F14 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+             (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( v5 )
       {
-        v27 = UnityEngine_GameObject__GetComponent_object_(
+        v35 = UnityEngine_GameObject__GetComponent_object_(
                 (UnityEngine_GameObject_o *)v5,
-                (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SubmarineNewScannerDialog___);
-        p_newScannerDialog->klass = (CGThumbnailListItem_c *)v27;
-        sub_1C6B9AC(p_newScannerDialog, (int32_t)v27, v28, v29);
-        EventMapManagerBase__LocateDialogToUiRoot(v30, (BaseDialog_o *)p_newScannerDialog->klass, v31);
+                (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SubmarineNewScannerDialog___);
+        p_newScannerDialog->klass = (GrandQuestFolderBoardItem_c *)v35;
+        sub_1C71354(p_newScannerDialog, (int32_t)v35, v36, v37, v38, v39, v40, v41);
+        EventMapManagerBase__LocateDialogToUiRoot(v42, (BaseDialog_o *)p_newScannerDialog->klass, v43);
         return;
       }
     }
 LABEL_28:
-    sub_1C6BC60(v5, v6);
+    sub_1C71608(v5, v6);
   }
 }
 
 
 void SubmarineMapManager__CreateAssetManagerIfNotExists(SubmarineMapManager_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_assetManager; // x19
+  GrandQuestFolderBoardItem_o *p_assetManager; // x19
   struct SubmarineMapAssetManager_o *assetManager; // t1
   SubmarineMapAssetManager_o *v5; // x20
   const MethodInfo *v6; // x1
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  const MethodInfo *v13; // x1
 
-  if ( (byte_4CB2C6F & 1) == 0 )
+  if ( (byte_4CC3D82 & 1) == 0 )
   {
-    sub_1C6BA08(&SubmarineMapAssetManager_TypeInfo);
-    byte_4CB2C6F = 1;
+    sub_1C713B0(&SubmarineMapAssetManager_TypeInfo);
+    byte_4CC3D82 = 1;
   }
   assetManager = this->fields.assetManager;
-  p_assetManager = (CGThumbnailListItem_o *)&this->fields.assetManager;
+  p_assetManager = (GrandQuestFolderBoardItem_o *)&this->fields.assetManager;
   if ( !assetManager )
   {
-    v5 = (SubmarineMapAssetManager_o *)sub_1C6BC54(SubmarineMapAssetManager_TypeInfo);
+    v5 = (SubmarineMapAssetManager_o *)sub_1C715FC(SubmarineMapAssetManager_TypeInfo);
     SubmarineMapAssetManager___ctor(v5, v6);
-    p_assetManager->klass = (CGThumbnailListItem_c *)v5;
-    sub_1C6B9AC(p_assetManager, (int32_t)v5, v7, v8);
+    p_assetManager->klass = (GrandQuestFolderBoardItem_c *)v5;
+    sub_1C71354(p_assetManager, (int32_t)v5, v7, v8, v9, v10, v11, v12);
     if ( !p_assetManager->klass )
-      sub_1C6BC60(0, v9);
-    SubmarineMapAssetManager__Initialize((SubmarineMapAssetManager_o *)p_assetManager->klass, v9);
+      sub_1C71608(0, v13);
+    SubmarineMapAssetManager__Initialize((SubmarineMapAssetManager_o *)p_assetManager->klass, v13);
   }
 }
 
@@ -1078,28 +1162,40 @@ void SubmarineMapManager__CreateContainers(SubmarineMapManager_o *this, const Me
   UnityEngine_Transform_o *transform; // x21
   Il2CppObject *v7; // x0
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  struct SubmarineMapAssetManager_o *v10; // x8
-  struct ScrTerminalMap_o *v11; // x9
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  struct SubmarineMapAssetManager_o *v14; // x8
+  struct ScrTerminalMap_o *v15; // x9
   Il2CppObject *EffectContainerPrefab_k__BackingField; // x20
-  UnityEngine_Transform_o *v13; // x0
-  Il2CppObject *v14; // x0
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
-  struct SubmarineMapAssetManager_o *v17; // x8
-  struct ScrTerminalMap_o *v18; // x9
+  UnityEngine_Transform_o *v17; // x0
+  Il2CppObject *v18; // x0
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
+  struct SubmarineMapAssetManager_o *v25; // x8
+  struct ScrTerminalMap_o *v26; // x9
   Il2CppObject *GridLinePrefab_k__BackingField; // x20
-  UnityEngine_Transform_o *v20; // x0
-  Il2CppObject *v21; // x0
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
+  UnityEngine_Transform_o *v28; // x0
+  Il2CppObject *v29; // x0
+  int32_t v30; // w2
+  int32_t v31; // w3
+  System_String_o *v32; // x4
+  int32_t v33; // w5
+  int64_t v34; // x6
+  System_String_o *v35; // x7
 
   v2 = this;
-  if ( (byte_4CB2C7D & 1) == 0 )
+  if ( (byte_4CC3D90 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2C7D = 1;
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3D90 = 1;
   }
   assetManager = v2->fields.assetManager;
   if ( !assetManager )
@@ -1114,41 +1210,41 @@ void SubmarineMapManager__CreateContainers(SubmarineMapManager_o *this, const Me
   transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  v7 = UnityEngine_Object__Instantiate_object__52199488(
+  v7 = UnityEngine_Object__Instantiate_object__52264420(
          PanelContainerPrefab_k__BackingField,
          transform,
-         (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+         (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
   v2->fields.panelContainer = (struct UnityEngine_GameObject_o *)v7;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.panelContainer, (int32_t)v7, v8, v9);
-  v10 = v2->fields.assetManager;
-  if ( !v10 )
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.panelContainer, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+  v14 = v2->fields.assetManager;
+  if ( !v14 )
     goto LABEL_15;
-  v11 = v2->fields.terminalMap;
-  if ( !v11 )
+  v15 = v2->fields.terminalMap;
+  if ( !v15 )
     goto LABEL_15;
-  this = (SubmarineMapManager_o *)v11->fields.dispRoot;
+  this = (SubmarineMapManager_o *)v15->fields.dispRoot;
   if ( !this )
     goto LABEL_15;
-  EffectContainerPrefab_k__BackingField = (Il2CppObject *)v10->fields._EffectContainerPrefab_k__BackingField;
-  v13 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
-  v14 = UnityEngine_Object__Instantiate_object__52199488(
+  EffectContainerPrefab_k__BackingField = (Il2CppObject *)v14->fields._EffectContainerPrefab_k__BackingField;
+  v17 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
+  v18 = UnityEngine_Object__Instantiate_object__52264420(
           EffectContainerPrefab_k__BackingField,
-          v13,
-          (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-  v2->fields.effectContainer = (struct UnityEngine_GameObject_o *)v14;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.effectContainer, (int32_t)v14, v15, v16);
-  v17 = v2->fields.assetManager;
-  if ( !v17 || (v18 = v2->fields.terminalMap) == 0 || (this = (SubmarineMapManager_o *)v18->fields.dispRoot) == 0 )
+          v17,
+          (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+  v2->fields.effectContainer = (struct UnityEngine_GameObject_o *)v18;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.effectContainer, (int32_t)v18, v19, v20, v21, v22, v23, v24);
+  v25 = v2->fields.assetManager;
+  if ( !v25 || (v26 = v2->fields.terminalMap) == 0 || (this = (SubmarineMapManager_o *)v26->fields.dispRoot) == 0 )
 LABEL_15:
-    sub_1C6BC60(this, method);
-  GridLinePrefab_k__BackingField = (Il2CppObject *)v17->fields._GridLinePrefab_k__BackingField;
-  v20 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
-  v21 = UnityEngine_Object__Instantiate_object__52199488(
+    sub_1C71608(this, method);
+  GridLinePrefab_k__BackingField = (Il2CppObject *)v25->fields._GridLinePrefab_k__BackingField;
+  v28 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
+  v29 = UnityEngine_Object__Instantiate_object__52264420(
           GridLinePrefab_k__BackingField,
-          v20,
-          (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-  v2->fields.gridLine = (struct UnityEngine_GameObject_o *)v21;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.gridLine, (int32_t)v21, v22, v23);
+          v28,
+          (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+  v2->fields.gridLine = (struct UnityEngine_GameObject_o *)v29;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.gridLine, (int32_t)v29, v30, v31, v32, v33, v34, v35);
 }
 
 
@@ -1165,288 +1261,312 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
   __int64 v10; // x0
   __int64 v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
   int32_t current; // w1
-  SubmarineSilhouetteData_o **v15; // x22
-  __int64 v16; // x1
-  const MethodInfo *v17; // x2
-  SubmarineSilhouetteData_o *v18; // x0
-  _BOOL8 HasClearCondQuestId; // x0
+  SubmarineSilhouetteData_o **v19; // x22
   __int64 v20; // x1
-  const MethodInfo *v21; // x3
-  __int64 v22; // x1
-  const MethodInfo *v23; // x2
-  SubmarineMapDataManager_o *v24; // x0
+  const MethodInfo *v21; // x2
+  SubmarineSilhouetteData_o *v22; // x0
+  _BOOL8 HasClearCondQuestId; // x0
+  __int64 v24; // x1
+  const MethodInfo *v25; // x3
+  __int64 v26; // x1
+  const MethodInfo *v27; // x2
+  SubmarineMapDataManager_o *v28; // x0
   System_Collections_Generic_IEnumerable_T__o *SilhouetteOccupiedPanels; // x25
-  System_Collections_Generic_List_object__o *v26; // x24
-  __int64 v27; // x0
-  __int64 v28; // x1
-  SubmarineMapManager___c_c *v29; // x8
+  System_Collections_Generic_List_object__o *v30; // x24
+  __int64 v31; // x0
+  __int64 v32; // x1
+  SubmarineMapManager___c_c *v33; // x8
   System_Predicate_object__o *_9__101_0; // x25
-  Il2CppObject *v31; // x26
+  Il2CppObject *v35; // x26
   struct SubmarineMapManager___c_StaticFields *static_fields; // x0
-  int32_t v33; // w2
-  const MethodInfo *v34; // x3
+  int32_t v37; // w2
+  int32_t v38; // w3
+  System_String_o *v39; // x4
+  int32_t v40; // w5
+  int64_t v41; // x6
+  System_String_o *v42; // x7
   System_Collections_Generic_List_T__o *All; // x0
-  __int64 v36; // x1
-  System_Collections_Generic_List_object__o *v37; // x24
+  __int64 v44; // x1
+  System_Collections_Generic_List_object__o *v45; // x24
   MapControl_MapInfo_o *mapInfo; // x0
   System_Collections_Generic_List_object__o *SpotList; // x25
-  System_Predicate_object__o *v40; // x26
-  __int64 v41; // x0
-  __int64 v42; // x1
-  __int64 v43; // x1
+  System_Predicate_object__o *v48; // x26
+  __int64 v49; // x0
+  __int64 v50; // x1
+  __int64 v51; // x1
   UnityEngine_GameObject_o *rootSpotP; // x0
   UnityEngine_Transform_o *transform; // x0
-  __int64 v46; // x1
-  UnityEngine_Transform_o *v47; // x23
+  __int64 v54; // x1
+  UnityEngine_Transform_o *v55; // x23
   int32_t SpotId_k__BackingField; // w22
   System_String_o *GobjName; // x0
-  UnityEngine_Transform_o *v50; // x0
-  __int64 v51; // x1
-  __int64 v52; // x0
-  const MethodInfo *v53; // x1
-  struct SubmarineMapDataManager_o *v54; // x8
+  UnityEngine_Transform_o *v58; // x0
+  __int64 v59; // x1
+  __int64 v60; // x0
+  const MethodInfo *v61; // x1
+  struct SubmarineMapDataManager_o *v62; // x8
   struct SubmarineSettingsManager_o *Settings_k__BackingField; // x8
   Il2CppObject *MoveCameraToPositionTask; // x0
-  int32_t v57; // w2
-  const MethodInfo *v58; // x3
-  Il2CppObject *v59; // x1
+  int32_t v65; // w2
+  int32_t v66; // w3
+  System_String_o *v67; // x4
+  int32_t v68; // w5
+  int64_t v69; // x6
+  System_String_o *v70; // x7
+  Il2CppObject *v71; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v61; // x9
+  _QWORD *v73; // x9
   __int64 size; // x10
-  Il2CppClass **v63; // x0
-  System_Object_array *v64; // x1
-  const MethodInfo *v65; // x2
+  Il2CppClass **v75; // x0
+  System_Object_array *v76; // x1
+  const MethodInfo *v77; // x2
   Il2CppObject *OpenPanelsAndRevealSpotsTask; // x0
-  int32_t v67; // w2
-  const MethodInfo *v68; // x3
-  Il2CppObject *v69; // x1
-  struct System_Object_array *v70; // x8
-  _QWORD *v71; // x9
-  __int64 v72; // x10
-  Il2CppClass **v73; // x0
-  System_Collections_Generic_List_Enumerator_object__o v75; // [xsp+8h] [xbp-98h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v76; // [xsp+20h] [xbp-80h] BYREF
+  int32_t v79; // w2
+  int32_t v80; // w3
+  System_String_o *v81; // x4
+  int32_t v82; // w5
+  int64_t v83; // x6
+  System_String_o *v84; // x7
+  Il2CppObject *v85; // x1
+  struct System_Object_array *v86; // x8
+  _QWORD *v87; // x9
+  __int64 v88; // x10
+  Il2CppClass **v89; // x0
+  System_Collections_Generic_List_Enumerator_object__o v91; // [xsp+8h] [xbp-98h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v92; // [xsp+20h] [xbp-80h] BYREF
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB2C9F & 1) == 0 )
+  if ( (byte_4CC3DB2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__FindAll__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Find__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineSilhouetteData__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor___78531144);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__get_Count__);
-    sub_1C6BA08(&System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    sub_1C6BA08(&System_Predicate_SubmarineMapPanelData__TypeInfo);
-    sub_1C6BA08(&System_Predicate_MapControl_SpotInfo__TypeInfo);
-    sub_1C6BA08(&SrcSpotBasePrefab_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__CreateHideEnemyOccupiedPanelTasks_b__101_0__);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass101_0__CreateHideEnemyOccupiedPanelTasks_b__1__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass101_0_TypeInfo);
-    sub_1C6BA08(&SubmarineMapManager___c_TypeInfo);
-    byte_4CB2C9F = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__FindAll__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Find__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineSilhouetteData__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor___78599904);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__get_Count__);
+    sub_1C713B0(&System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    sub_1C713B0(&System_Predicate_SubmarineMapPanelData__TypeInfo);
+    sub_1C713B0(&System_Predicate_MapControl_SpotInfo__TypeInfo);
+    sub_1C713B0(&SrcSpotBasePrefab_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__CreateHideEnemyOccupiedPanelTasks_b__101_0__);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass101_0__CreateHideEnemyOccupiedPanelTasks_b__1__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass101_0_TypeInfo);
+    sub_1C713B0(&SubmarineMapManager___c_TypeInfo);
+    byte_4CC3DB2 = 1;
   }
-  memset(&v76, 0, sizeof(v76));
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  memset(&v92, 0, sizeof(v92));
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
   submarineData = this->fields.submarineData;
   if ( !submarineData
     || (SilhouetteDataList_k__BackingField = (System_Collections_Generic_List_object__o *)submarineData->fields._SilhouetteDataList_k__BackingField) == 0 )
   {
-    sub_1C6BC60(SilhouetteDataList_k__BackingField, v7);
+    sub_1C71608(SilhouetteDataList_k__BackingField, v7);
   }
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v75,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v91,
     SilhouetteDataList_k__BackingField,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SubmarineSilhouetteData__GetEnumerator__);
-  v76 = v75;
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SubmarineSilhouetteData__GetEnumerator__);
+  v92 = v91;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v76,
-            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__MoveNext__) )
+            &v92,
+            (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__MoveNext__) )
   {
-    v9 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass101_0_TypeInfo);
+    v9 = sub_1C715FC(SubmarineMapManager___c__DisplayClass101_0_TypeInfo);
     SubmarineMapManager___c__DisplayClass101_0___ctor((SubmarineMapManager___c__DisplayClass101_0_o *)v9, 0);
     if ( !v9 )
-      sub_1C6BC60(v10, v11);
-    current = (int32_t)v76.fields._current;
-    *(_QWORD *)(v9 + 16) = v76.fields._current;
-    v15 = (SubmarineSilhouetteData_o **)(v9 + 16);
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), current, v12, v13);
-    v18 = *(SubmarineSilhouetteData_o **)(v9 + 16);
-    if ( !v18 )
-      sub_1C6BC60(0, v16);
-    HasClearCondQuestId = SubmarineSilhouetteData__HasClearCondQuestId(v18, beforeClearQuestId, v17);
+      sub_1C71608(v10, v11);
+    current = (int32_t)v92.fields._current;
+    *(_QWORD *)(v9 + 16) = v92.fields._current;
+    v19 = (SubmarineSilhouetteData_o **)(v9 + 16);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 16), current, v12, v13, v14, v15, v16, v17);
+    v22 = *(SubmarineSilhouetteData_o **)(v9 + 16);
+    if ( !v22 )
+      sub_1C71608(0, v20);
+    HasClearCondQuestId = SubmarineSilhouetteData__HasClearCondQuestId(v22, beforeClearQuestId, v21);
     if ( HasClearCondQuestId )
     {
-      if ( !*v15 )
-        sub_1C6BC60(HasClearCondQuestId, v20);
-      if ( SubmarineMapDataManager__IsClearEachQuests((*v15)->fields._ObjectQuestIds_k__BackingField, -1, 0, v21) )
+      if ( !*v19 )
+        sub_1C71608(HasClearCondQuestId, v24);
+      if ( SubmarineMapDataManager__IsClearEachQuests((*v19)->fields._ObjectQuestIds_k__BackingField, -1, 0, v25) )
       {
-        v24 = this->fields.submarineData;
-        if ( !v24 )
-          sub_1C6BC60(0, v22);
+        v28 = this->fields.submarineData;
+        if ( !v28 )
+          sub_1C71608(0, v26);
         SilhouetteOccupiedPanels = (System_Collections_Generic_IEnumerable_T__o *)SubmarineMapDataManager__GetSilhouetteOccupiedPanels(
-                                                                                    v24,
-                                                                                    *v15,
-                                                                                    v23);
-        v26 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
-        System_Collections_Generic_List_object____ctor_58720872(
-          v26,
+                                                                                    v28,
+                                                                                    *v19,
+                                                                                    v27);
+        v30 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
+        System_Collections_Generic_List_object____ctor_58785804(
+          v30,
           SilhouetteOccupiedPanels,
-          (const MethodInfo_3800268 *)Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor___78531144);
-        v29 = SubmarineMapManager___c_TypeInfo;
+          (const MethodInfo_381000C *)Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor___78599904);
+        v33 = SubmarineMapManager___c_TypeInfo;
         if ( !SubmarineMapManager___c_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(SubmarineMapManager___c_TypeInfo);
-          v29 = SubmarineMapManager___c_TypeInfo;
+          v33 = SubmarineMapManager___c_TypeInfo;
         }
-        _9__101_0 = (System_Predicate_object__o *)v29->static_fields->__9__101_0;
+        _9__101_0 = (System_Predicate_object__o *)v33->static_fields->__9__101_0;
         if ( !_9__101_0 )
         {
-          if ( !v29->_2.cctor_finished )
+          if ( !v33->_2.cctor_finished )
           {
-            j_il2cpp_runtime_class_init_0(v29);
-            v29 = SubmarineMapManager___c_TypeInfo;
+            j_il2cpp_runtime_class_init_0(v33);
+            v33 = SubmarineMapManager___c_TypeInfo;
           }
-          v31 = (Il2CppObject *)v29->static_fields->__9;
-          _9__101_0 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_SubmarineMapPanelData__TypeInfo);
+          v35 = (Il2CppObject *)v33->static_fields->__9;
+          _9__101_0 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_SubmarineMapPanelData__TypeInfo);
           System_Predicate_object____ctor(
             _9__101_0,
-            v31,
+            v35,
             Method_SubmarineMapManager___c__CreateHideEnemyOccupiedPanelTasks_b__101_0__,
             0);
           static_fields = SubmarineMapManager___c_TypeInfo->static_fields;
           static_fields->__9__101_0 = (struct System_Predicate_SubmarineMapPanelData__o *)_9__101_0;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__101_0, (int32_t)_9__101_0, v33, v34);
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&static_fields->__9__101_0,
+            (int32_t)_9__101_0,
+            v37,
+            v38,
+            v39,
+            v40,
+            v41,
+            v42);
         }
-        if ( !v26 )
-          sub_1C6BC60(v27, v28);
+        if ( !v30 )
+          sub_1C71608(v31, v32);
         All = System_Collections_Generic_List_object___FindAll(
-                v26,
+                v30,
                 (System_Predicate_T__o *)_9__101_0,
-                (const MethodInfo_3801084 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__FindAll__);
-        v37 = (System_Collections_Generic_List_object__o *)All;
+                (const MethodInfo_3810E28 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__FindAll__);
+        v45 = (System_Collections_Generic_List_object__o *)All;
         if ( !All )
-          sub_1C6BC60(0, v36);
+          sub_1C71608(0, v44);
         if ( All->fields._size >= 1 )
         {
           mapInfo = this->fields.mapInfo;
           if ( !mapInfo )
-            sub_1C6BC60(0, v36);
+            sub_1C71608(0, v44);
           SpotList = (System_Collections_Generic_List_object__o *)MapControl_MapInfo__GetSpotList(mapInfo, 0);
-          v40 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_MapControl_SpotInfo__TypeInfo);
+          v48 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_MapControl_SpotInfo__TypeInfo);
           System_Predicate_object____ctor(
-            v40,
+            v48,
             (Il2CppObject *)v9,
             Method_SubmarineMapManager___c__DisplayClass101_0__CreateHideEnemyOccupiedPanelTasks_b__1__,
             0);
           if ( !SpotList )
-            sub_1C6BC60(v41, v42);
+            sub_1C71608(v49, v50);
           if ( System_Collections_Generic_List_object___Find(
                  SpotList,
-                 (System_Predicate_T__o *)v40,
-                 (const MethodInfo_3800FDC *)Method_System_Collections_Generic_List_MapControl_SpotInfo__Find__) )
+                 (System_Predicate_T__o *)v48,
+                 (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__Find__) )
           {
             rootSpotP = this->fields.rootSpotP;
             if ( !rootSpotP )
-              sub_1C6BC60(0, v43);
+              sub_1C71608(0, v51);
             transform = UnityEngine_GameObject__get_transform(rootSpotP, 0);
-            if ( !*v15 )
-              sub_1C6BC60(transform, v46);
-            v47 = transform;
-            SpotId_k__BackingField = (*v15)->fields._SpotId_k__BackingField;
+            if ( !*v19 )
+              sub_1C71608(transform, v54);
+            v55 = transform;
+            SpotId_k__BackingField = (*v19)->fields._SpotId_k__BackingField;
             if ( !SrcSpotBasePrefab_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(SrcSpotBasePrefab_TypeInfo);
             GobjName = SrcSpotBasePrefab__GetGobjName(SpotId_k__BackingField, 0);
-            if ( !v47 )
-              sub_1C6BC60(GobjName, GobjName);
-            v50 = UnityEngine_Transform__Find(v47, GobjName, 0);
-            if ( !v50 )
-              sub_1C6BC60(0, v51);
-            localPosition = UnityEngine_Transform__get_localPosition(v50, 0);
-            v54 = this->fields.submarineData;
-            if ( !v54 )
-              sub_1C6BC60(v52, v53);
-            Settings_k__BackingField = v54->fields._Settings_k__BackingField;
+            if ( !v55 )
+              sub_1C71608(GobjName, GobjName);
+            v58 = UnityEngine_Transform__Find(v55, GobjName, 0);
+            if ( !v58 )
+              sub_1C71608(0, v59);
+            localPosition = UnityEngine_Transform__get_localPosition(v58, 0);
+            v62 = this->fields.submarineData;
+            if ( !v62 )
+              sub_1C71608(v60, v61);
+            Settings_k__BackingField = v62->fields._Settings_k__BackingField;
             if ( !Settings_k__BackingField )
-              sub_1C6BC60(v52, v53);
+              sub_1C71608(v60, v61);
             MoveCameraToPositionTask = (Il2CppObject *)SubmarineMapManager__CreateMoveCameraToPositionTask(
                                                          this,
                                                          localPosition,
                                                          1.0,
                                                          Settings_k__BackingField->fields._OpenPanelCameraDuration_k__BackingField,
-                                                         v53);
-            v59 = MoveCameraToPositionTask;
+                                                         v61);
+            v71 = MoveCameraToPositionTask;
             if ( !v5 )
-              sub_1C6BC60(MoveCameraToPositionTask, MoveCameraToPositionTask);
+              sub_1C71608(MoveCameraToPositionTask, MoveCameraToPositionTask);
             items = v5->fields._items;
-            v61 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+            v73 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
             ++v5->fields._version;
             if ( !items )
-              sub_1C6BC60(MoveCameraToPositionTask, MoveCameraToPositionTask);
+              sub_1C71608(MoveCameraToPositionTask, MoveCameraToPositionTask);
             size = v5->fields._size;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
             {
               System_Collections_Generic_List_object___AddWithResize(
                 v5,
                 MoveCameraToPositionTask,
-                *(const MethodInfo_3800974 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
+                *(const MethodInfo_3810718 **)(*(_QWORD *)(v73[4] + 192LL) + 112LL));
             }
             else
             {
-              v63 = &items->obj.klass + size;
+              v75 = &items->obj.klass + size;
               v5->fields._size = size + 1;
-              v63[4] = (Il2CppClass *)v59;
-              sub_1C6B9AC((CGThumbnailListItem_o *)(v63 + 4), (int32_t)v59, v57, v58);
+              v75[4] = (Il2CppClass *)v71;
+              sub_1C71354((GrandQuestFolderBoardItem_o *)(v75 + 4), (int32_t)v71, v65, v66, v67, v68, v69, v70);
             }
           }
-          v64 = System_Collections_Generic_List_object___ToArray(
-                  v37,
-                  (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_SubmarineMapPanelData__ToArray__);
+          v76 = System_Collections_Generic_List_object___ToArray(
+                  v45,
+                  (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__ToArray__);
           OpenPanelsAndRevealSpotsTask = (Il2CppObject *)SubmarineMapManager__CreateOpenPanelsAndRevealSpotsTask(
                                                            this,
-                                                           (SubmarineMapPanelData_array *)v64,
-                                                           v65);
-          v69 = OpenPanelsAndRevealSpotsTask;
+                                                           (SubmarineMapPanelData_array *)v76,
+                                                           v77);
+          v85 = OpenPanelsAndRevealSpotsTask;
           if ( !v5 )
-            sub_1C6BC60(OpenPanelsAndRevealSpotsTask, OpenPanelsAndRevealSpotsTask);
-          v70 = v5->fields._items;
-          v71 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+            sub_1C71608(OpenPanelsAndRevealSpotsTask, OpenPanelsAndRevealSpotsTask);
+          v86 = v5->fields._items;
+          v87 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
           ++v5->fields._version;
-          if ( !v70 )
-            sub_1C6BC60(OpenPanelsAndRevealSpotsTask, OpenPanelsAndRevealSpotsTask);
-          v72 = v5->fields._size;
-          if ( (unsigned int)v72 >= LODWORD(v70->max_length) )
+          if ( !v86 )
+            sub_1C71608(OpenPanelsAndRevealSpotsTask, OpenPanelsAndRevealSpotsTask);
+          v88 = v5->fields._size;
+          if ( (unsigned int)v88 >= LODWORD(v86->max_length) )
           {
             System_Collections_Generic_List_object___AddWithResize(
               v5,
               OpenPanelsAndRevealSpotsTask,
-              *(const MethodInfo_3800974 **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
+              *(const MethodInfo_3810718 **)(*(_QWORD *)(v87[4] + 192LL) + 112LL));
           }
           else
           {
-            v73 = &v70->obj.klass + v72;
-            v5->fields._size = v72 + 1;
-            v73[4] = (Il2CppClass *)v69;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v73 + 4), (int32_t)v69, v67, v68);
+            v89 = &v86->obj.klass + v88;
+            v5->fields._size = v88 + 1;
+            v89[4] = (Il2CppClass *)v85;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v89 + 4), (int32_t)v85, v79, v80, v81, v82, v83, v84);
           }
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v76,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__Dispose__);
+    &v92,
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SubmarineSilhouetteData__Dispose__);
   return (System_Collections_Generic_List_SchedulerTaskBase__o *)v5;
 }
 
@@ -1459,12 +1579,12 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateHitObstractTask(
 {
   SchedulerTaskNone_o *v4; // x19
 
-  if ( (byte_4CB2C9C & 1) == 0 )
+  if ( (byte_4CC3DAF & 1) == 0 )
   {
-    sub_1C6BA08(&SchedulerTaskNone_TypeInfo);
-    byte_4CB2C9C = 1;
+    sub_1C713B0(&SchedulerTaskNone_TypeInfo);
+    byte_4CC3DAF = 1;
   }
-  v4 = (SchedulerTaskNone_o *)sub_1C6BC54(SchedulerTaskNone_TypeInfo);
+  v4 = (SchedulerTaskNone_o *)sub_1C715FC(SchedulerTaskNone_TypeInfo);
   SchedulerTaskNone___ctor(v4, 0, 0, 0);
   return (SchedulerTaskBase_o *)v4;
 }
@@ -1477,7 +1597,7 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateMoveCameraToPositionTask(
         float second,
         const MethodInfo *method)
 {
-  const MethodInfo_392D2DC *v5; // x2
+  const MethodInfo_393D080 *v5; // x2
   float y; // s10
   float x; // s11
   MapCamera_o *mapCamera; // x19
@@ -1492,12 +1612,12 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateMoveCameraToPositionTask(
 
   y = destPos.fields.y;
   x = destPos.fields.x;
-  if ( (byte_4CB2C95 & 1) == 0 )
+  if ( (byte_4CC3DA8 & 1) == 0 )
   {
-    sub_1C6BA08(&MapCameraPerformance_TypeInfo);
-    sub_1C6BA08(&Method_System_Nullable_Vector2___ctor__);
-    sub_1C6BA08(&Method_System_Nullable_float___ctor__);
-    byte_4CB2C95 = 1;
+    sub_1C713B0(&MapCameraPerformance_TypeInfo);
+    sub_1C713B0(&Method_System_Nullable_Vector2___ctor__);
+    sub_1C713B0(&Method_System_Nullable_float___ctor__);
+    byte_4CC3DA8 = 1;
   }
   LODWORD(v19.fields.value.fields.y) = Method_System_Nullable_Vector2___ctor__;
   mapCamera = this->fields.mapCamera;
@@ -1509,8 +1629,8 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateMoveCameraToPositionTask(
   System_Nullable_Vector2____ctor(v19, v20, v5);
   v12 = (System_Nullable_float__o)&v17;
   v17 = 0;
-  System_Nullable_float____ctor(v12, size, (const MethodInfo_392B698 *)Method_System_Nullable_float___ctor__);
-  v13 = (MapCameraPerformance_o *)sub_1C6BC54(MapCameraPerformance_TypeInfo);
+  System_Nullable_float____ctor(v12, size, (const MethodInfo_393B43C *)Method_System_Nullable_float___ctor__);
+  v13 = (MapCameraPerformance_o *)sub_1C715FC(MapCameraPerformance_TypeInfo);
   v14 = v17;
   v15 = (SchedulerTaskBase_o *)v13;
   MapCameraPerformance___ctor(v13, mapCamera, second, v18, v14, 15, 0);
@@ -1541,45 +1661,53 @@ void SubmarineMapManager__CreateNeverOpenSurrounds(SubmarineMapManager_o *this, 
   unsigned __int64 v19; // d0 OVERLAPPED
   int v20; // s1
   int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  SubmarineMapPanelComponent_o *v23; // x22
-  const MethodInfo *v24; // x2
-  const MethodInfo *v25; // x3
-  const MethodInfo *v26; // x2
-  const MethodInfo *v27; // x3
-  struct SubmarineMapDataManager_o *v28; // x8
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  SubmarineMapPanelComponent_o *v27; // x22
+  const MethodInfo *v28; // x2
+  const MethodInfo *v29; // x3
+  const MethodInfo *v30; // x2
+  const MethodInfo *v31; // x3
+  struct SubmarineMapDataManager_o *v32; // x8
   struct SubmarinePanelPositionCalculator_o *PositionCalculator_k__BackingField; // x9
-  SubmarineMapManager_o *v30; // x20
-  int32_t v31; // w21
-  int32_t v32; // w22
-  int v33; // w26
-  struct SubmarineMapDataManager_o *v34; // x8
-  unsigned __int64 v35; // d0 OVERLAPPED
-  int v36; // s1
-  int v37; // s2
-  struct SubmarineMapAssetManager_o *v38; // x8
-  SubmarineMapManager_o *v39; // x23
-  Il2CppObject *v40; // x24
-  UnityEngine_Transform_o *v41; // x25
-  SubmarineMapManager_o *v42; // x24
-  int v43; // s2 OVERLAPPED
-  unsigned __int64 v44; // d0 OVERLAPPED
-  int v45; // s1
-  int32_t v46; // w2
-  const MethodInfo *v47; // x3
-  SubmarineMapPanelComponent_o *v48; // x24
-  const MethodInfo *v49; // x2
-  const MethodInfo *v50; // x3
-  const MethodInfo *v51; // x2
+  SubmarineMapManager_o *v34; // x20
+  int32_t v35; // w21
+  int32_t v36; // w22
+  int v37; // w26
+  struct SubmarineMapDataManager_o *v38; // x8
+  unsigned __int64 v39; // d0 OVERLAPPED
+  int v40; // s1
+  int v41; // s2
+  struct SubmarineMapAssetManager_o *v42; // x8
+  SubmarineMapManager_o *v43; // x23
+  Il2CppObject *v44; // x24
+  UnityEngine_Transform_o *v45; // x25
+  SubmarineMapManager_o *v46; // x24
+  int v47; // s2 OVERLAPPED
+  unsigned __int64 v48; // d0 OVERLAPPED
+  int v49; // s1
+  int32_t v50; // w2
+  int32_t v51; // w3
+  System_String_o *v52; // x4
+  int32_t v53; // w5
+  int64_t v54; // x6
+  System_String_o *v55; // x7
+  SubmarineMapPanelComponent_o *v56; // x24
+  const MethodInfo *v57; // x2
+  const MethodInfo *v58; // x3
+  const MethodInfo *v59; // x2
 
   v2 = this;
-  if ( (byte_4CB2C7F & 1) == 0 )
+  if ( (byte_4CC3D92 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&PanelUniqueIDUtil_TypeInfo);
-    byte_4CB2C7F = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&PanelUniqueIDUtil_TypeInfo);
+    byte_4CC3D92 = 1;
   }
   assetManager = v2->fields.assetManager;
   if ( !assetManager )
@@ -1608,7 +1736,7 @@ void SubmarineMapManager__CreateNeverOpenSurrounds(SubmarineMapManager_o *this, 
                                           v7)) == 0 )
   {
 LABEL_54:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   m_CancellationTokenSource = this->fields.m_CancellationTokenSource;
   v10 = this;
@@ -1629,10 +1757,10 @@ LABEL_54:
       transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      this = (SubmarineMapManager_o *)UnityEngine_Object__Instantiate_object__52199488(
+      this = (SubmarineMapManager_o *)UnityEngine_Object__Instantiate_object__52264420(
                                         v15,
                                         transform,
-                                        (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+                                        (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
       if ( !this )
         goto LABEL_54;
       v17 = this;
@@ -1649,19 +1777,19 @@ LABEL_54:
       UnityEngine_Transform__set_localPosition((UnityEngine_Transform_o *)this, *(UnityEngine_Vector3_o *)(&v18 - 2), 0);
       this = (SubmarineMapManager_o *)UnityEngine_GameObject__GetComponent_object_(
                                         (UnityEngine_GameObject_o *)v17,
-                                        (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
+                                        (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
       if ( !this )
         goto LABEL_54;
-      v23 = (SubmarineMapPanelComponent_o *)this;
+      v27 = (SubmarineMapPanelComponent_o *)this;
       this->fields.mapCamera = 0;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mapCamera, 0, v21, v22);
-      SubmarineMapPanelComponent__SetSize(v23, (ObjectDomain_o *)v14, v24);
-      SubmarineMapPanelComponent__SetClosedPanelTexture(v23, (ObjectDomain_o *)v14, v2->fields.closedPanelTexture, v25);
-      SubmarineMapPanelComponent__SetClosedPanelVisible(v23, 1, v26);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mapCamera, 0, v21, v22, v23, v24, v25, v26);
+      SubmarineMapPanelComponent__SetSize(v27, (ObjectDomain_o *)v14, v28);
+      SubmarineMapPanelComponent__SetClosedPanelTexture(v27, (ObjectDomain_o *)v14, v2->fields.closedPanelTexture, v29);
+      SubmarineMapPanelComponent__SetClosedPanelVisible(v27, 1, v30);
       if ( v11 == v12 )
         break;
       if ( (unsigned int)++v12 >= LODWORD(v10->fields.m_CancellationTokenSource) )
-        sub_1C6BC68(this);
+        sub_1C71610(this);
     }
   }
   this = (SubmarineMapManager_o *)v2->fields.submarineData;
@@ -1670,108 +1798,108 @@ LABEL_54:
   this = (SubmarineMapManager_o *)SubmarineMapDataManager__GetEmptyPanelUniqueIds(
                                     (SubmarineMapDataManager_o *)this,
                                     method);
-  v28 = v2->fields.submarineData;
-  if ( !v28 )
+  v32 = v2->fields.submarineData;
+  if ( !v32 )
     goto LABEL_54;
-  PositionCalculator_k__BackingField = v28->fields._PositionCalculator_k__BackingField;
+  PositionCalculator_k__BackingField = v32->fields._PositionCalculator_k__BackingField;
   if ( !PositionCalculator_k__BackingField )
     goto LABEL_54;
-  v30 = this;
-  v31 = 0;
-  while ( v31 < PositionCalculator_k__BackingField->fields._HorizontalPanelNum_k__BackingField )
+  v34 = this;
+  v35 = 0;
+  while ( v35 < PositionCalculator_k__BackingField->fields._HorizontalPanelNum_k__BackingField )
   {
-    v32 = 0;
-    v33 = 1;
-    while ( v32 < PositionCalculator_k__BackingField->fields._VerticalPanelNum_k__BackingField )
+    v36 = 0;
+    v37 = 1;
+    while ( v36 < PositionCalculator_k__BackingField->fields._VerticalPanelNum_k__BackingField )
     {
       if ( !PanelUniqueIDUtil_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(PanelUniqueIDUtil_TypeInfo);
-      this = (SubmarineMapManager_o *)PanelUniqueIDUtil__HasID(v31, v32, (System_Int32_array *)v30, v27);
+      this = (SubmarineMapManager_o *)PanelUniqueIDUtil__HasID(v35, v36, (System_Int32_array *)v34, v31);
       if ( ((unsigned __int8)this & 1) != 0 )
       {
-        v34 = v2->fields.submarineData;
-        if ( !v34 )
+        v38 = v2->fields.submarineData;
+        if ( !v38 )
           goto LABEL_54;
-        this = (SubmarineMapManager_o *)v34->fields._PositionCalculator_k__BackingField;
+        this = (SubmarineMapManager_o *)v38->fields._PositionCalculator_k__BackingField;
         if ( !this )
           goto LABEL_54;
-        v35 = vadd_f32(
+        v39 = vadd_f32(
                 (float32x2_t)this->fields.mapInfo,
                 vmul_f32(
                   vmul_f32(
                     (float32x2_t)this->fields.m_CachedPtr,
                     vcvt_f32_s32(
                       vsub_s32(
-                        (int32x2_t)__PAIR64__(v33, (2 * v31) | 1u),
+                        (int32x2_t)__PAIR64__(v37, (2 * v35) | 1u),
                         (int32x2_t)this->fields.m_CancellationTokenSource))),
                   (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-        v36 = HIDWORD(v35);
-        v37 = 0;
+        v40 = HIDWORD(v39);
+        v41 = 0;
         this = (SubmarineMapManager_o *)ClosePanelTextureUtil__CreateClosedPanelDomain(
-                                          *(UnityEngine_Vector3_o *)&v35,
+                                          *(UnityEngine_Vector3_o *)&v39,
                                           (SubmarinePanelPositionCalculator_o *)this,
                                           method);
-        v38 = v2->fields.assetManager;
-        if ( !v38 )
+        v42 = v2->fields.assetManager;
+        if ( !v42 )
           goto LABEL_54;
-        v39 = this;
+        v43 = this;
         this = (SubmarineMapManager_o *)v2->fields.panelContainer;
         if ( !this )
           goto LABEL_54;
-        v40 = (Il2CppObject *)v38->fields._PanelPrefab_k__BackingField;
-        v41 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
+        v44 = (Il2CppObject *)v42->fields._PanelPrefab_k__BackingField;
+        v45 = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        this = (SubmarineMapManager_o *)UnityEngine_Object__Instantiate_object__52199488(
-                                          v40,
-                                          v41,
-                                          (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+        this = (SubmarineMapManager_o *)UnityEngine_Object__Instantiate_object__52264420(
+                                          v44,
+                                          v45,
+                                          (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
         if ( !this )
           goto LABEL_54;
-        v42 = this;
+        v46 = this;
         this = (SubmarineMapManager_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)this, 0);
-        if ( !v39 )
+        if ( !v43 )
           goto LABEL_54;
         if ( !this )
           goto LABEL_54;
-        v43 = 0;
-        v44 = vadd_f32(
-                (float32x2_t)v39->fields.m_CachedPtr,
-                vmul_f32((float32x2_t)v39->fields.m_CancellationTokenSource, (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-        v45 = HIDWORD(v44);
+        v47 = 0;
+        v48 = vadd_f32(
+                (float32x2_t)v43->fields.m_CachedPtr,
+                vmul_f32((float32x2_t)v43->fields.m_CancellationTokenSource, (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
+        v49 = HIDWORD(v48);
         UnityEngine_Transform__set_localPosition(
           (UnityEngine_Transform_o *)this,
-          *(UnityEngine_Vector3_o *)(&v43 - 2),
+          *(UnityEngine_Vector3_o *)(&v47 - 2),
           0);
         this = (SubmarineMapManager_o *)UnityEngine_GameObject__GetComponent_object_(
-                                          (UnityEngine_GameObject_o *)v42,
-                                          (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
+                                          (UnityEngine_GameObject_o *)v46,
+                                          (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
         if ( !this )
           goto LABEL_54;
-        v48 = (SubmarineMapPanelComponent_o *)this;
+        v56 = (SubmarineMapPanelComponent_o *)this;
         this->fields.mapCamera = 0;
-        sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mapCamera, 0, v46, v47);
-        SubmarineMapPanelComponent__SetSize(v48, (ObjectDomain_o *)v39, v49);
+        sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mapCamera, 0, v50, v51, v52, v53, v54, v55);
+        SubmarineMapPanelComponent__SetSize(v56, (ObjectDomain_o *)v43, v57);
         SubmarineMapPanelComponent__SetClosedPanelTexture(
-          v48,
-          (ObjectDomain_o *)v39,
+          v56,
+          (ObjectDomain_o *)v43,
           v2->fields.closedPanelTexture,
-          v50);
-        SubmarineMapPanelComponent__SetClosedPanelVisible(v48, 1, v51);
+          v58);
+        SubmarineMapPanelComponent__SetClosedPanelVisible(v56, 1, v59);
       }
-      v28 = v2->fields.submarineData;
-      if ( v28 )
+      v32 = v2->fields.submarineData;
+      if ( v32 )
       {
-        PositionCalculator_k__BackingField = v28->fields._PositionCalculator_k__BackingField;
-        ++v32;
-        v33 += 2;
+        PositionCalculator_k__BackingField = v32->fields._PositionCalculator_k__BackingField;
+        ++v36;
+        v37 += 2;
         if ( PositionCalculator_k__BackingField )
           continue;
       }
       goto LABEL_54;
     }
-    PositionCalculator_k__BackingField = v28->fields._PositionCalculator_k__BackingField;
-    ++v31;
+    PositionCalculator_k__BackingField = v32->fields._PositionCalculator_k__BackingField;
+    ++v35;
     if ( !PositionCalculator_k__BackingField )
       goto LABEL_54;
   }
@@ -1785,7 +1913,7 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateOpenPanelAndRevealSpotTask(
         const MethodInfo *method)
 {
   UnityEngine_GameObject_o *effectContainer; // x0
-  const MethodInfo_392DB5C *v8; // x2
+  const MethodInfo_393D900 *v8; // x2
   ComponentPool_CommonEffectComponent__o *effectScanedPanelObjPool; // x23
   UnityEngine_Transform_o *v10; // x22
   SchedulerTaskCommonEffect_o *v11; // x0
@@ -1795,57 +1923,81 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateOpenPanelAndRevealSpotTask(
   SchedulerTaskBase_TaskCallback_o *v15; // x24
   System_Delegate_o *v16; // x0
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  System_Delegate_o *v19; // x8
-  SchedulerTaskBase_TaskCallback_c *v20; // x1
-  SchedulerTaskBase_array *v21; // x22
-  SchedulerTaskWaitTime_o *v22; // x23
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
-  SchedulerTaskOrthostichy_o *v27; // x21
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  System_Delegate_o *v23; // x8
+  SchedulerTaskBase_TaskCallback_c *v24; // x1
+  SchedulerTaskBase_array *v25; // x22
+  SchedulerTaskWaitTime_o *v26; // x23
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  int32_t v33; // w2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  int32_t v36; // w5
+  int64_t v37; // x6
+  System_String_o *v38; // x7
+  SchedulerTaskOrthostichy_o *v39; // x21
   struct SubmarineMapDataManager_o *submarineData; // x8
   struct SubmarineSettingsManager_o *Settings_k__BackingField; // x8
-  float v30; // s8
-  System_Collections_Generic_List_object__o *v31; // x22
-  SchedulerTaskWaitTime_o *v32; // x23
-  int32_t v33; // w2
-  const MethodInfo *v34; // x3
-  struct System_Object_array *items; // x8
-  _QWORD *v36; // x9
-  __int64 size; // x10
-  Il2CppClass **v38; // x0
-  const MethodInfo *v39; // x2
-  System_Collections_Generic_IEnumerable_T__o *RevealSpotOnPanelTasks; // x0
-  SchedulerTaskOrthostichy_o *v41; // x19
-  int32_t v42; // w2
-  const MethodInfo *v43; // x3
-  SchedulerTaskBase_array *v44; // x20
+  float v42; // s8
+  System_Collections_Generic_List_object__o *v43; // x22
+  SchedulerTaskWaitTime_o *v44; // x23
   int32_t v45; // w2
-  const MethodInfo *v46; // x3
-  SchedulerTaskParallel_o *v47; // x19
-  __int64 v49; // x0
-  System_Nullable_Vector3__o v50; // [xsp+20h] [xbp-60h] BYREF
-  System_Nullable_Vector3__o v51; // 0:x0.16
-  System_Nullable_Vector3__o v52; // 0:x5.16
+  int32_t v46; // w3
+  System_String_o *v47; // x4
+  int32_t v48; // w5
+  int64_t v49; // x6
+  System_String_o *v50; // x7
+  struct System_Object_array *items; // x8
+  _QWORD *v52; // x9
+  __int64 size; // x10
+  Il2CppClass **v54; // x0
+  const MethodInfo *v55; // x2
+  System_Collections_Generic_IEnumerable_T__o *RevealSpotOnPanelTasks; // x0
+  SchedulerTaskOrthostichy_o *v57; // x19
+  int32_t v58; // w2
+  int32_t v59; // w3
+  System_String_o *v60; // x4
+  int32_t v61; // w5
+  int64_t v62; // x6
+  System_String_o *v63; // x7
+  SchedulerTaskBase_array *v64; // x20
+  int32_t v65; // w2
+  int32_t v66; // w3
+  System_String_o *v67; // x4
+  int32_t v68; // w5
+  int64_t v69; // x6
+  System_String_o *v70; // x7
+  SchedulerTaskParallel_o *v71; // x19
+  __int64 v73; // x0
+  System_Nullable_Vector3__o v74; // [xsp+20h] [xbp-60h] BYREF
+  System_Nullable_Vector3__o v75; // 0:x0.16
+  System_Nullable_Vector3__o v76; // 0:x5.16
   UnityEngine_Vector3_o LocalPosition_k__BackingField; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CB2C99 & 1) == 0 )
+  if ( (byte_4CC3DAC & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    sub_1C6BA08(&Method_System_Nullable_Vector3___ctor__);
-    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
-    sub_1C6BA08(&SchedulerTaskCommonEffect_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskOrthostichy_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskParallel_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskWaitTime_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapPanelData_OpenPanel__);
-    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    byte_4CB2C99 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    sub_1C713B0(&Method_System_Nullable_Vector3___ctor__);
+    sub_1C713B0(&SchedulerTaskBase___TypeInfo);
+    sub_1C713B0(&SchedulerTaskCommonEffect_TypeInfo);
+    sub_1C713B0(&SchedulerTaskOrthostichy_TypeInfo);
+    sub_1C713B0(&SchedulerTaskParallel_TypeInfo);
+    sub_1C713B0(&SchedulerTaskWaitTime_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapPanelData_OpenPanel__);
+    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    byte_4CC3DAC = 1;
   }
   effectContainer = this->fields.effectContainer;
   if ( !effectContainer )
@@ -1854,23 +2006,23 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateOpenPanelAndRevealSpotTask(
   if ( !panelData )
     goto LABEL_32;
   LocalPosition_k__BackingField = panelData->fields._LocalPosition_k__BackingField;
-  *(_QWORD *)&v51.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
+  *(_QWORD *)&v75.fields.value.fields.y = Method_System_Nullable_Vector3___ctor__;
   effectScanedPanelObjPool = this->fields.effectScanedPanelObjPool;
   v10 = (UnityEngine_Transform_o *)effectContainer;
-  *(_QWORD *)&v51.fields.hasValue = &v50;
-  *(_QWORD *)&v50.fields.hasValue = 0;
-  *(_QWORD *)&v50.fields.value.fields.y = 0;
-  System_Nullable_Vector3____ctor(v51, LocalPosition_k__BackingField, v8);
-  v11 = (SchedulerTaskCommonEffect_o *)sub_1C6BC54(SchedulerTaskCommonEffect_TypeInfo);
-  *(_QWORD *)&v52.fields.hasValue = 0;
-  *(_QWORD *)&v52.fields.value.fields.y = 0;
+  *(_QWORD *)&v75.fields.hasValue = &v74;
+  *(_QWORD *)&v74.fields.hasValue = 0;
+  *(_QWORD *)&v74.fields.value.fields.y = 0;
+  System_Nullable_Vector3____ctor(v75, LocalPosition_k__BackingField, v8);
+  v11 = (SchedulerTaskCommonEffect_o *)sub_1C715FC(SchedulerTaskCommonEffect_TypeInfo);
+  *(_QWORD *)&v76.fields.hasValue = 0;
+  *(_QWORD *)&v76.fields.value.fields.y = 0;
   v12 = v11;
-  SchedulerTaskCommonEffect___ctor_44553396(
+  SchedulerTaskCommonEffect___ctor_44599724(
     v11,
     v10,
     effectScanedPanelObjPool,
-    v50,
-    v52,
+    v74,
+    v76,
     (System_Nullable_Vector3__o)0,
     1,
     0);
@@ -1878,126 +2030,126 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateOpenPanelAndRevealSpotTask(
     goto LABEL_32;
   p_StartCallback = (System_Delegate_o **)&v12->fields.StartCallback;
   StartCallback = (System_Delegate_o *)v12->fields.StartCallback;
-  v15 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v15 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(v15, (Il2CppObject *)panelData, Method_SubmarineMapPanelData_OpenPanel__, 0);
   v16 = System_Delegate__Combine(StartCallback, (System_Delegate_o *)v15, 0);
-  v19 = v16;
+  v23 = v16;
   if ( v16 )
   {
-    v20 = SchedulerTaskBase_TaskCallback_TypeInfo;
+    v24 = SchedulerTaskBase_TaskCallback_TypeInfo;
     if ( (SchedulerTaskBase_TaskCallback_c *)v16->klass == SchedulerTaskBase_TaskCallback_TypeInfo )
     {
       *p_StartCallback = v16;
-      if ( (SchedulerTaskBase_TaskCallback_c *)v16->klass == v20 )
+      if ( (SchedulerTaskBase_TaskCallback_c *)v16->klass == v24 )
         goto LABEL_11;
     }
-    sub_1C6BFFC(v16);
+    sub_1C719A4(v16);
   }
-  *p_StartCallback = v19;
+  *p_StartCallback = v23;
 LABEL_11:
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->fields.StartCallback, (int32_t)v19, v17, v18);
-  v21 = (SchedulerTaskBase_array *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 2);
-  v22 = (SchedulerTaskWaitTime_o *)sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
-  SchedulerTaskWaitTime___ctor(v22, waitTime, 0);
-  if ( !v21 )
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v12->fields.StartCallback, (int32_t)v23, v17, v18, v19, v20, v21, v22);
+  v25 = (SchedulerTaskBase_array *)sub_1C71458(SchedulerTaskBase___TypeInfo, 2);
+  v26 = (SchedulerTaskWaitTime_o *)sub_1C715FC(SchedulerTaskWaitTime_TypeInfo);
+  SchedulerTaskWaitTime___ctor(v26, waitTime, 0);
+  if ( !v25 )
     goto LABEL_32;
-  if ( v22 )
+  if ( v26 )
   {
-    effectContainer = (UnityEngine_GameObject_o *)sub_1C6BB44(v22, v21->obj.klass->_1.element_class);
+    effectContainer = (UnityEngine_GameObject_o *)sub_1C714EC(v26, v25->obj.klass->_1.element_class);
     if ( !effectContainer )
       goto LABEL_34;
   }
-  if ( !LODWORD(v21->max_length) )
+  if ( !LODWORD(v25->max_length) )
     goto LABEL_33;
-  v21->m_Items[0] = (SchedulerTaskBase_o *)v22;
-  sub_1C6B9AC((CGThumbnailListItem_o *)v21->m_Items, (int32_t)v22, v23, v24);
-  effectContainer = (UnityEngine_GameObject_o *)sub_1C6BB44(v12, v21->obj.klass->_1.element_class);
+  v25->m_Items[0] = (SchedulerTaskBase_o *)v26;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v25->m_Items, (int32_t)v26, v27, v28, v29, v30, v31, v32);
+  effectContainer = (UnityEngine_GameObject_o *)sub_1C714EC(v12, v25->obj.klass->_1.element_class);
   if ( !effectContainer )
     goto LABEL_34;
-  if ( LODWORD(v21->max_length) <= 1 )
+  if ( LODWORD(v25->max_length) <= 1 )
     goto LABEL_33;
-  v21->m_Items[1] = (SchedulerTaskBase_o *)v12;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v21->m_Items[1], (int32_t)v12, v25, v26);
-  v27 = (SchedulerTaskOrthostichy_o *)sub_1C6BC54(SchedulerTaskOrthostichy_TypeInfo);
-  SchedulerTaskOrthostichy___ctor(v27, v21, 0);
+  v25->m_Items[1] = (SchedulerTaskBase_o *)v12;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[1], (int32_t)v12, v33, v34, v35, v36, v37, v38);
+  v39 = (SchedulerTaskOrthostichy_o *)sub_1C715FC(SchedulerTaskOrthostichy_TypeInfo);
+  SchedulerTaskOrthostichy___ctor(v39, v25, 0);
   submarineData = this->fields.submarineData;
   if ( !submarineData )
     goto LABEL_32;
   Settings_k__BackingField = submarineData->fields._Settings_k__BackingField;
   if ( !Settings_k__BackingField )
     goto LABEL_32;
-  v30 = Settings_k__BackingField->fields._SecondOfOpenPanelToRevealSpot_k__BackingField + waitTime;
-  v31 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  v42 = Settings_k__BackingField->fields._SecondOfOpenPanelToRevealSpot_k__BackingField + waitTime;
+  v43 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v31,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-  v32 = (SchedulerTaskWaitTime_o *)sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
-  SchedulerTaskWaitTime___ctor(v32, v30, 0);
-  if ( !v31 )
+    v43,
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+  v44 = (SchedulerTaskWaitTime_o *)sub_1C715FC(SchedulerTaskWaitTime_TypeInfo);
+  SchedulerTaskWaitTime___ctor(v44, v42, 0);
+  if ( !v43 )
     goto LABEL_32;
-  items = v31->fields._items;
-  v36 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-  ++v31->fields._version;
+  items = v43->fields._items;
+  v52 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+  ++v43->fields._version;
   if ( !items )
     goto LABEL_32;
-  size = v31->fields._size;
+  size = v43->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v31,
-      (Il2CppObject *)v32,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
+      v43,
+      (Il2CppObject *)v44,
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
   }
   else
   {
-    v38 = &items->obj.klass + size;
-    v31->fields._size = size + 1;
-    v38[4] = (Il2CppClass *)v32;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v38 + 4), (int32_t)v32, v33, v34);
+    v54 = &items->obj.klass + size;
+    v43->fields._size = size + 1;
+    v54[4] = (Il2CppClass *)v44;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v54 + 4), (int32_t)v44, v45, v46, v47, v48, v49, v50);
   }
   RevealSpotOnPanelTasks = (System_Collections_Generic_IEnumerable_T__o *)SubmarineMapManager__CreateRevealSpotOnPanelTasks(
                                                                             this,
                                                                             panelData,
-                                                                            v39);
+                                                                            v55);
   System_Collections_Generic_List_object___AddRange(
-    v31,
+    v43,
     RevealSpotOnPanelTasks,
-    (const MethodInfo_3800B80 *)Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
-  v41 = (SchedulerTaskOrthostichy_o *)sub_1C6BC54(SchedulerTaskOrthostichy_TypeInfo);
-  SchedulerTaskOrthostichy___ctor_44556572(v41, (System_Collections_Generic_List_SchedulerTaskBase__o *)v31, 0);
-  effectContainer = (UnityEngine_GameObject_o *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 2);
+    (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
+  v57 = (SchedulerTaskOrthostichy_o *)sub_1C715FC(SchedulerTaskOrthostichy_TypeInfo);
+  SchedulerTaskOrthostichy___ctor_44602900(v57, (System_Collections_Generic_List_SchedulerTaskBase__o *)v43, 0);
+  effectContainer = (UnityEngine_GameObject_o *)sub_1C71458(SchedulerTaskBase___TypeInfo, 2);
   if ( !effectContainer )
 LABEL_32:
-    sub_1C6BC60(effectContainer, panelData);
-  v44 = (SchedulerTaskBase_array *)effectContainer;
-  if ( v27 )
+    sub_1C71608(effectContainer, panelData);
+  v64 = (SchedulerTaskBase_array *)effectContainer;
+  if ( v39 )
   {
-    effectContainer = (UnityEngine_GameObject_o *)sub_1C6BB44(v27, effectContainer->klass->_1.element_class);
+    effectContainer = (UnityEngine_GameObject_o *)sub_1C714EC(v39, effectContainer->klass->_1.element_class);
     if ( !effectContainer )
       goto LABEL_34;
   }
-  if ( !LODWORD(v44->max_length) )
+  if ( !LODWORD(v64->max_length) )
     goto LABEL_33;
-  v44->m_Items[0] = (SchedulerTaskBase_o *)v27;
-  sub_1C6B9AC((CGThumbnailListItem_o *)v44->m_Items, (int32_t)v27, v42, v43);
-  if ( v41 )
+  v64->m_Items[0] = (SchedulerTaskBase_o *)v39;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v64->m_Items, (int32_t)v39, v58, v59, v60, v61, v62, v63);
+  if ( v57 )
   {
-    effectContainer = (UnityEngine_GameObject_o *)sub_1C6BB44(v41, v44->obj.klass->_1.element_class);
+    effectContainer = (UnityEngine_GameObject_o *)sub_1C714EC(v57, v64->obj.klass->_1.element_class);
     if ( !effectContainer )
     {
 LABEL_34:
-      v49 = sub_1C6BC84();
-      sub_1C6BB30(v49, 0);
+      v73 = sub_1C7162C();
+      sub_1C714D8(v73, 0);
     }
   }
-  if ( LODWORD(v44->max_length) <= 1 )
+  if ( LODWORD(v64->max_length) <= 1 )
 LABEL_33:
-    sub_1C6BC68(effectContainer);
-  v44->m_Items[1] = (SchedulerTaskBase_o *)v41;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v44->m_Items[1], (int32_t)v41, v45, v46);
-  v47 = (SchedulerTaskParallel_o *)sub_1C6BC54(SchedulerTaskParallel_TypeInfo);
-  SchedulerTaskParallel___ctor(v47, v44, 0);
-  return (SchedulerTaskBase_o *)v47;
+    sub_1C71610(effectContainer);
+  v64->m_Items[1] = (SchedulerTaskBase_o *)v57;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v64->m_Items[1], (int32_t)v57, v65, v66, v67, v68, v69, v70);
+  v71 = (SchedulerTaskParallel_o *)sub_1C715FC(SchedulerTaskParallel_TypeInfo);
+  SchedulerTaskParallel___ctor(v71, v64, 0);
+  return (SchedulerTaskBase_o *)v71;
 }
 
 
@@ -2013,26 +2165,30 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateOpenPanelsAndRevealSpotsTask(
   il2cpp_array_size_t max_length; // x8
   unsigned __int64 v10; // x22
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v14; // x9
+  _QWORD *v18; // x9
   __int64 size; // x10
-  Il2CppObject *v16; // x1
-  Il2CppClass **v17; // x0
-  SchedulerTaskParallel_o *v18; // x19
+  Il2CppObject *v20; // x1
+  Il2CppClass **v21; // x0
+  SchedulerTaskParallel_o *v22; // x19
 
-  if ( (byte_4CB2C9A & 1) == 0 )
+  if ( (byte_4CC3DAD & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    sub_1C6BA08(&SchedulerTaskParallel_TypeInfo);
-    byte_4CB2C9A = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    sub_1C713B0(&SchedulerTaskParallel_TypeInfo);
+    byte_4CC3DAD = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
   if ( !panelDataArray )
     goto LABEL_14;
   max_length = panelDataArray->max_length;
@@ -2042,7 +2198,7 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateOpenPanelsAndRevealSpotsTask(
     while ( 1 )
     {
       if ( v10 >= (unsigned int)max_length )
-        sub_1C6BC68(OpenPanelAndRevealSpotTask);
+        sub_1C71610(OpenPanelAndRevealSpotTask);
       OpenPanelAndRevealSpotTask = (Il2CppObject *)SubmarineMapManager__CreateOpenPanelAndRevealSpotTask(
                                                      this,
                                                      panelDataArray->m_Items[v10],
@@ -2051,37 +2207,37 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateOpenPanelsAndRevealSpotsTask(
       if ( !v5 )
         break;
       items = v5->fields._items;
-      v14 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+      v18 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
       ++v5->fields._version;
       if ( !items )
         break;
       size = v5->fields._size;
-      v16 = OpenPanelAndRevealSpotTask;
+      v20 = OpenPanelAndRevealSpotTask;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v5,
           OpenPanelAndRevealSpotTask,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
-        v17 = &items->obj.klass + size;
+        v21 = &items->obj.klass + size;
         v5->fields._size = size + 1;
-        v17[4] = (Il2CppClass *)v16;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v16, v11, v12);
+        v21[4] = (Il2CppClass *)v20;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v20, v11, v12, v13, v14, v15, v16);
       }
       LODWORD(max_length) = panelDataArray->max_length;
       if ( (__int64)++v10 >= (int)max_length )
         goto LABEL_13;
     }
 LABEL_14:
-    sub_1C6BC60(OpenPanelAndRevealSpotTask, v7);
+    sub_1C71608(OpenPanelAndRevealSpotTask, v7);
   }
 LABEL_13:
-  v18 = (SchedulerTaskParallel_o *)sub_1C6BC54(SchedulerTaskParallel_TypeInfo);
-  SchedulerTaskParallel___ctor_44557604(v18, (System_Collections_Generic_List_SchedulerTaskBase__o *)v5, 0);
-  return (SchedulerTaskBase_o *)v18;
+  v22 = (SchedulerTaskParallel_o *)sub_1C715FC(SchedulerTaskParallel_TypeInfo);
+  SchedulerTaskParallel___ctor_44603932(v22, (System_Collections_Generic_List_SchedulerTaskBase__o *)v5, 0);
+  return (SchedulerTaskBase_o *)v22;
 }
 
 
@@ -2113,34 +2269,42 @@ void SubmarineMapManager__CreatePanels(SubmarineMapManager_o *this, const Method
   ObjectDomain_o *ClosedPanelDomain; // x0
   __int64 v26; // x1
   int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  ObjectDomain_o *v29; // x23
-  const MethodInfo *v30; // x2
-  const MethodInfo *v31; // x3
-  int32_t v32; // w2
-  const MethodInfo *v33; // x3
-  System_Action_object__o *v34; // x21
-  const MethodInfo *v35; // x2
-  System_Collections_Generic_List_Enumerator_object__o v36; // [xsp+8h] [xbp-B8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v37; // [xsp+20h] [xbp-A0h] BYREF
-  UnityEngine_Vector3_o v38; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v39; // 0:s0.4,4:s1.4,8:s2.4
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  ObjectDomain_o *v33; // x23
+  const MethodInfo *v34; // x2
+  const MethodInfo *v35; // x3
+  int32_t v36; // w2
+  int32_t v37; // w3
+  System_String_o *v38; // x4
+  int32_t v39; // w5
+  int64_t v40; // x6
+  System_String_o *v41; // x7
+  System_Action_object__o *v42; // x21
+  const MethodInfo *v43; // x2
+  System_Collections_Generic_List_Enumerator_object__o v44; // [xsp+8h] [xbp-B8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v45; // [xsp+20h] [xbp-A0h] BYREF
+  UnityEngine_Vector3_o v46; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v47; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4CB2C7E & 1) == 0 )
+  if ( (byte_4CC3D91 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_SubmarineMapPanelData__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&Method_SubmarineMapManager_ClickPanel__);
-    byte_4CB2C7E = 1;
+    sub_1C713B0(&System_Action_SubmarineMapPanelData__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&Method_SubmarineMapManager_ClickPanel__);
+    byte_4CC3D91 = 1;
   }
-  memset(&v37, 0, sizeof(v37));
+  memset(&v45, 0, sizeof(v45));
   assetManager = v2->fields.assetManager;
   if ( !assetManager )
     goto LABEL_36;
@@ -2167,47 +2331,47 @@ void SubmarineMapManager__CreatePanels(SubmarineMapManager_o *this, const Method
           if ( this )
           {
             System_Collections_Generic_List_object___GetEnumerator(
-              (System_Collections_Generic_List_Enumerator_T__o *)&v36,
+              (System_Collections_Generic_List_Enumerator_T__o *)&v44,
               (System_Collections_Generic_List_object__o *)this,
-              (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
-            v37 = v36;
+              (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+            v45 = v44;
             while ( 1 )
             {
               v8 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                     &v37,
-                     (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+                     &v45,
+                     (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
               if ( !v8 )
                 break;
               v10 = v2->fields.assetManager;
               if ( !v10 )
-                sub_1C6BC60(v8, v9);
+                sub_1C71608(v8, v9);
               v11 = v2->fields.panelContainer;
               if ( !v11 )
-                sub_1C6BC60(0, v9);
-              current = v37.fields._current;
+                sub_1C71608(0, v9);
+              current = v45.fields._current;
               v13 = (Il2CppObject *)v10->fields._PanelPrefab_k__BackingField;
               transform = UnityEngine_GameObject__get_transform(v11, 0);
               if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-              v15 = UnityEngine_Object__Instantiate_object__52199488(
+              v15 = UnityEngine_Object__Instantiate_object__52264420(
                       v13,
                       transform,
-                      (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+                      (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
               v17 = (UnityEngine_GameObject_o *)v15;
               if ( !v15 )
-                sub_1C6BC60(0, v16);
+                sub_1C71608(0, v16);
               Component_object = UnityEngine_GameObject__GetComponent_object_(
                                    (UnityEngine_GameObject_o *)v15,
-                                   (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
+                                   (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SubmarineMapPanelComponent___);
               v20 = v2->fields.submarineData;
               if ( !v20 )
-                sub_1C6BC60(Component_object, v19);
+                sub_1C71608(Component_object, v19);
               if ( !current )
-                sub_1C6BC60(Component_object, v19);
+                sub_1C71608(Component_object, v19);
               v21 = Component_object;
               PositionCalculator_k__BackingField = v20->fields._PositionCalculator_k__BackingField;
               if ( !PositionCalculator_k__BackingField )
-                sub_1C6BC60(0, v19);
+                sub_1C71608(0, v19);
               v23 = PositionCalculator_k__BackingField->fields._OffsetX_k__BackingField
                   + (float)((float)(PositionCalculator_k__BackingField->fields._PanelUnitSize_k__BackingField.fields.x
                                   * (float)(((2 * LODWORD(current[1].klass)) | 1)
@@ -2218,49 +2382,49 @@ void SubmarineMapManager__CreatePanels(SubmarineMapManager_o *this, const Method
                                   * (float)(((2 * HIDWORD(current[1].klass)) | 1)
                                           - PositionCalculator_k__BackingField->fields._VerticalPanelNum_k__BackingField))
                           * 0.5);
-              v38.fields.z = 0.0;
-              v38.fields.x = v23;
-              v38.fields.y = v24;
+              v46.fields.z = 0.0;
+              v46.fields.x = v23;
+              v46.fields.y = v24;
               ClosedPanelDomain = ClosePanelTextureUtil__CreateClosedPanelDomain(
-                                    v38,
+                                    v46,
                                     PositionCalculator_k__BackingField,
                                     v19);
               if ( !v21 )
-                sub_1C6BC60(ClosedPanelDomain, v26);
-              v29 = ClosedPanelDomain;
+                sub_1C71608(ClosedPanelDomain, v26);
+              v33 = ClosedPanelDomain;
               v21[3].monitor = 0;
-              sub_1C6B9AC((CGThumbnailListItem_o *)&v21[3].monitor, 0, v27, v28);
-              v39.fields.z = 0.0;
-              v39.fields.x = v23;
-              v39.fields.y = v24;
-              GameObjectExtensions__SetLocalPosition(v17, v39, 0);
-              SubmarineMapPanelComponent__SetSize((SubmarineMapPanelComponent_o *)v21, v29, v30);
+              sub_1C71354((GrandQuestFolderBoardItem_o *)&v21[3].monitor, 0, v27, v28, v29, v30, v31, v32);
+              v47.fields.z = 0.0;
+              v47.fields.x = v23;
+              v47.fields.y = v24;
+              GameObjectExtensions__SetLocalPosition(v17, v47, 0);
+              SubmarineMapPanelComponent__SetSize((SubmarineMapPanelComponent_o *)v21, v33, v34);
               SubmarineMapPanelComponent__SetClosedPanelTexture(
                 (SubmarineMapPanelComponent_o *)v21,
-                v29,
+                v33,
                 v2->fields.closedPanelTexture,
-                v31);
+                v35);
               current[3].klass = (Il2CppClass *)v21;
-              sub_1C6B9AC((CGThumbnailListItem_o *)&current[3], (int32_t)v21, v32, v33);
-              v34 = (System_Action_object__o *)sub_1C6BC54(System_Action_SubmarineMapPanelData__TypeInfo);
+              sub_1C71354((GrandQuestFolderBoardItem_o *)&current[3], (int32_t)v21, v36, v37, v38, v39, v40, v41);
+              v42 = (System_Action_object__o *)sub_1C715FC(System_Action_SubmarineMapPanelData__TypeInfo);
               System_Action_object____ctor(
-                v34,
+                v42,
                 (Il2CppObject *)v2,
                 (intptr_t)Method_SubmarineMapManager_ClickPanel__,
                 0);
               SubmarineMapPanelData__SetPanelClickAction(
                 (SubmarineMapPanelData_o *)current,
-                (System_Action_SubmarineMapPanelData__o *)v34,
-                v35);
+                (System_Action_SubmarineMapPanelData__o *)v42,
+                v43);
             }
             System_Collections_Generic_List_Enumerator_object___Dispose(
-              &v37,
-              (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+              &v45,
+              (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
             return;
           }
         }
 LABEL_36:
-        sub_1C6BC60(this, method);
+        sub_1C71608(this, method);
       }
     }
   }
@@ -2280,19 +2444,19 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
   Il2CppObject *Component_object; // x22
   const MethodInfo *v10; // x2
 
-  if ( (byte_4CB2C9D & 1) == 0 )
+  if ( (byte_4CC3DB0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2C9D = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3DB0 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
   Children = GameObjectExtensions__GetChildren(this->fields.rootSpotP, 0, 0);
   if ( !Children )
     goto LABEL_15;
@@ -2304,13 +2468,13 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
     while ( 1 )
     {
       if ( v8 >= v6 )
-        sub_1C6BC68(Children);
+        sub_1C71610(Children);
       Children = (void *)*((_QWORD *)v7 + (int)v8 + 4);
       if ( !Children )
         break;
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)Children,
-                           (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       Children = (void *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -2322,14 +2486,14 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
         System_Collections_Generic_List_object___AddRange(
           v3,
           (System_Collections_Generic_IEnumerable_T__o *)Children,
-          (const MethodInfo_3800B80 *)Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
+          (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
       }
       v6 = *((_DWORD *)v7 + 6);
       if ( (int)++v8 >= v6 )
         return (System_Collections_Generic_List_SchedulerTaskBase__o *)v3;
     }
 LABEL_15:
-    sub_1C6BC60(Children, v5);
+    sub_1C71608(Children, v5);
   }
   return (System_Collections_Generic_List_SchedulerTaskBase__o *)v3;
 }
@@ -2344,84 +2508,92 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
   MapControl_MapInfo_o *mapInfo; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  __int64 v10; // x21
-  System_Collections_Generic_List_object__o *v11; // x20
-  SchedulerTaskNone_o *v12; // x23
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  __int64 v14; // x21
+  System_Collections_Generic_List_object__o *v15; // x20
+  SchedulerTaskNone_o *v16; // x23
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v18; // x0
+  Il2CppClass **v26; // x0
   System_Collections_Generic_List_object__o *SpotList; // x23
-  System_Predicate_object__o *v20; // x24
-  __int64 v21; // x8
-  UnityEngine_Transform_o *v22; // x21
-  int32_t v23; // w22
-  UnityEngine_Object_o *v24; // x21
+  System_Predicate_object__o *v28; // x24
+  __int64 v29; // x8
+  UnityEngine_Transform_o *v30; // x21
+  int32_t v31; // w22
+  UnityEngine_Object_o *v32; // x21
   Il2CppObject *Component_object; // x1
-  const MethodInfo *v27; // x2
+  const MethodInfo *v35; // x2
 
-  if ( (byte_4CB2C98 & 1) == 0 )
+  if ( (byte_4CC3DAB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_SrcSpotBasePrefab___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Find__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&System_Predicate_MapControl_SpotInfo__TypeInfo);
-    sub_1C6BA08(&SchedulerTaskNone_TypeInfo);
-    sub_1C6BA08(&SrcSpotBasePrefab_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass94_0__CreateRevealSpotOnPanelTasks_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass94_0_TypeInfo);
-    byte_4CB2C98 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_SrcSpotBasePrefab___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_MapControl_SpotInfo__Find__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&System_Predicate_MapControl_SpotInfo__TypeInfo);
+    sub_1C713B0(&SchedulerTaskNone_TypeInfo);
+    sub_1C713B0(&SrcSpotBasePrefab_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass94_0__CreateRevealSpotOnPanelTasks_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass94_0_TypeInfo);
+    byte_4CC3DAB = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass94_0_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager___c__DisplayClass94_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass94_0___ctor((SubmarineMapManager___c__DisplayClass94_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_25;
   *(_QWORD *)(v5 + 16) = panelData;
-  v10 = v5 + 16;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)panelData, v8, v9);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  v14 = v5 + 16;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)panelData, v8, v9, v10, v11, v12, v13);
+  v15 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v11,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-  v12 = (SchedulerTaskNone_o *)sub_1C6BC54(SchedulerTaskNone_TypeInfo);
-  SchedulerTaskNone___ctor(v12, 0, 0, 0);
-  if ( !v11 )
+    v15,
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+  v16 = (SchedulerTaskNone_o *)sub_1C715FC(SchedulerTaskNone_TypeInfo);
+  SchedulerTaskNone___ctor(v16, 0, 0, 0);
+  if ( !v15 )
     goto LABEL_25;
-  items = v11->fields._items;
-  v16 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-  ++v11->fields._version;
+  items = v15->fields._items;
+  v24 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+  ++v15->fields._version;
   if ( !items )
     goto LABEL_25;
-  size = v11->fields._size;
+  size = v15->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v11,
-      (Il2CppObject *)v12,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+      v15,
+      (Il2CppObject *)v16,
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
   }
   else
   {
-    v18 = &items->obj.klass + size;
-    v11->fields._size = size + 1;
-    v18[4] = (Il2CppClass *)v12;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v18 + 4), (int32_t)v12, v13, v14);
+    v26 = &items->obj.klass + size;
+    v15->fields._size = size + 1;
+    v26[4] = (Il2CppClass *)v16;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v26 + 4), (int32_t)v16, v17, v18, v19, v20, v21, v22);
   }
-  if ( !*(_QWORD *)v10 || *(int *)(*(_QWORD *)v10 + 40LL) < 1 )
-    return (System_Collections_Generic_List_SchedulerTaskBase__o *)v11;
+  if ( !*(_QWORD *)v14 || *(int *)(*(_QWORD *)v14 + 40LL) < 1 )
+    return (System_Collections_Generic_List_SchedulerTaskBase__o *)v15;
   mapInfo = this->fields.mapInfo;
   if ( !mapInfo )
     goto LABEL_25;
   SpotList = (System_Collections_Generic_List_object__o *)MapControl_MapInfo__GetSpotList(mapInfo, 0);
-  v20 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_MapControl_SpotInfo__TypeInfo);
+  v28 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_MapControl_SpotInfo__TypeInfo);
   System_Predicate_object____ctor(
-    v20,
+    v28,
     (Il2CppObject *)v5,
     Method_SubmarineMapManager___c__DisplayClass94_0__CreateRevealSpotOnPanelTasks_b__0__,
     0);
@@ -2429,36 +2601,36 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
     goto LABEL_25;
   if ( !System_Collections_Generic_List_object___Find(
           SpotList,
-          (System_Predicate_T__o *)v20,
-          (const MethodInfo_3800FDC *)Method_System_Collections_Generic_List_MapControl_SpotInfo__Find__) )
-    return (System_Collections_Generic_List_SchedulerTaskBase__o *)v11;
+          (System_Predicate_T__o *)v28,
+          (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_MapControl_SpotInfo__Find__) )
+    return (System_Collections_Generic_List_SchedulerTaskBase__o *)v15;
   mapInfo = (MapControl_MapInfo_o *)this->fields.rootSpotP;
   if ( !mapInfo )
     goto LABEL_25;
   mapInfo = (MapControl_MapInfo_o *)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)mapInfo, 0);
-  v21 = *(_QWORD *)v10;
-  if ( !*(_QWORD *)v10 )
+  v29 = *(_QWORD *)v14;
+  if ( !*(_QWORD *)v14 )
     goto LABEL_25;
-  v22 = (UnityEngine_Transform_o *)mapInfo;
-  v23 = *(_DWORD *)(v21 + 40);
+  v30 = (UnityEngine_Transform_o *)mapInfo;
+  v31 = *(_DWORD *)(v29 + 40);
   if ( !SrcSpotBasePrefab_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SrcSpotBasePrefab_TypeInfo);
-  mapInfo = (MapControl_MapInfo_o *)SrcSpotBasePrefab__GetGobjName(v23, 0);
-  if ( !v22 )
+  mapInfo = (MapControl_MapInfo_o *)SrcSpotBasePrefab__GetGobjName(v31, 0);
+  if ( !v30 )
     goto LABEL_25;
-  v24 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(v22, (System_String_o *)mapInfo, 0);
+  v32 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(v30, (System_String_o *)mapInfo, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  mapInfo = (MapControl_MapInfo_o *)UnityEngine_Object__op_Equality(v24, 0, 0);
+  mapInfo = (MapControl_MapInfo_o *)UnityEngine_Object__op_Equality(v32, 0, 0);
   if ( ((unsigned __int8)mapInfo & 1) != 0 )
-    return (System_Collections_Generic_List_SchedulerTaskBase__o *)v11;
-  if ( !v24 )
+    return (System_Collections_Generic_List_SchedulerTaskBase__o *)v15;
+  if ( !v32 )
 LABEL_25:
-    sub_1C6BC60(mapInfo, v7);
+    sub_1C71608(mapInfo, v7);
   Component_object = UnityEngine_Component__GetComponent_object_(
-                       (UnityEngine_Component_o *)v24,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_SrcSpotBasePrefab___);
-  return SubmarineMapManager__CreateRevealSpotTasks(this, (SrcSpotBasePrefab_o *)Component_object, v27);
+                       (UnityEngine_Component_o *)v32,
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_SrcSpotBasePrefab___);
+  return SubmarineMapManager__CreateRevealSpotTasks(this, (SrcSpotBasePrefab_o *)Component_object, v35);
 }
 
 
@@ -2474,37 +2646,53 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
   const MethodInfo *v9; // x2
   __int64 v10; // x22
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v16; // x9
+  _QWORD *v24; // x9
   __int64 size; // x10
-  Il2CppClass **v18; // x0
-  __int64 v19; // x21
-  int32_t v20; // w2
-  const MethodInfo *v21; // x3
-  int32_t v22; // w2
-  const MethodInfo *v23; // x3
-  struct System_Object_array *v24; // x8
-  _QWORD *v25; // x9
-  __int64 v26; // x10
-  Il2CppClass **v27; // x0
+  Il2CppClass **v26; // x0
+  __int64 v27; // x21
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  int32_t v34; // w2
+  int32_t v35; // w3
+  System_String_o *v36; // x4
+  int32_t v37; // w5
+  int64_t v38; // x6
+  System_String_o *v39; // x7
+  struct System_Object_array *v40; // x8
+  _QWORD *v41; // x9
+  __int64 v42; // x10
+  Il2CppClass **v43; // x0
 
-  if ( (byte_4CB2C9E & 1) == 0 )
+  if ( (byte_4CC3DB1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    sub_1C6BA08(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C6BA08(&SubmarineLightenSpotPerformance_TypeInfo);
-    sub_1C6BA08(&SubmarineRevealSpotPerformance_TypeInfo);
-    byte_4CB2C9E = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    sub_1C713B0(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C713B0(&SubmarineLightenSpotPerformance_TypeInfo);
+    sub_1C713B0(&SubmarineRevealSpotPerformance_TypeInfo);
+    byte_4CC3DB1 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
   if ( !spot )
     goto LABEL_20;
   mMapCtrl_SpotInfo = spot->fields.mMapCtrl_SpotInfo;
@@ -2513,20 +2701,20 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
   if ( mMapCtrl_SpotInfo->fields.dispType )
     return (System_Collections_Generic_List_SchedulerTaskBase__o *)v5;
   Mine = MapControl_SpotInfo__GetMine(mMapCtrl_SpotInfo, 0);
-  mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !mMapCtrl_SpotInfo )
     goto LABEL_20;
   if ( !QuestTree__IsSpotSatisfyingDisplayCond((QuestTree_o *)mMapCtrl_SpotInfo, Mine, 0, 0) )
     return (System_Collections_Generic_List_SchedulerTaskBase__o *)v5;
   SubmarineMapManager__AdjustSpotPosition(this, spot, v9);
-  v10 = sub_1C6BC54(SubmarineRevealSpotPerformance_TypeInfo);
+  v10 = sub_1C715FC(SubmarineRevealSpotPerformance_TypeInfo);
   SchedulerTaskBase___ctor((SchedulerTaskBase_o *)v10, 0);
   *(_QWORD *)(v10 + 48) = spot;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v10 + 48), (int32_t)spot, v11, v12);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v10 + 48), (int32_t)spot, v11, v12, v13, v14, v15, v16);
   if ( !v5 )
     goto LABEL_20;
   items = v5->fields._items;
-  v16 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+  v24 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
   ++v5->fields._version;
   if ( !items )
     goto LABEL_20;
@@ -2536,44 +2724,44 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
     System_Collections_Generic_List_object___AddWithResize(
       v5,
       (Il2CppObject *)v10,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v16[4] + 192LL) + 112LL));
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
   }
   else
   {
-    v18 = &items->obj.klass + size;
+    v26 = &items->obj.klass + size;
     v5->fields._size = size + 1;
-    v18[4] = (Il2CppClass *)v10;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v18 + 4), v10, v13, v14);
+    v26[4] = (Il2CppClass *)v10;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v26 + 4), v10, v17, v18, v19, v20, v21, v22);
   }
-  mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  mMapCtrl_SpotInfo = (MapControl_SpotInfo_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   if ( !mMapCtrl_SpotInfo )
     goto LABEL_20;
   if ( !QuestTree__IsSpotSatisfyingActiveCond((QuestTree_o *)mMapCtrl_SpotInfo, Mine, 0) )
     return (System_Collections_Generic_List_SchedulerTaskBase__o *)v5;
-  v19 = sub_1C6BC54(SubmarineLightenSpotPerformance_TypeInfo);
-  SchedulerTaskBase___ctor((SchedulerTaskBase_o *)v19, 0);
-  *(_QWORD *)(v19 + 48) = spot;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v19 + 48), (int32_t)spot, v20, v21);
-  v24 = v5->fields._items;
-  v25 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+  v27 = sub_1C715FC(SubmarineLightenSpotPerformance_TypeInfo);
+  SchedulerTaskBase___ctor((SchedulerTaskBase_o *)v27, 0);
+  *(_QWORD *)(v27 + 48) = spot;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v27 + 48), (int32_t)spot, v28, v29, v30, v31, v32, v33);
+  v40 = v5->fields._items;
+  v41 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
   ++v5->fields._version;
-  if ( !v24 )
+  if ( !v40 )
 LABEL_20:
-    sub_1C6BC60(mMapCtrl_SpotInfo, v7);
-  v26 = v5->fields._size;
-  if ( (unsigned int)v26 >= LODWORD(v24->max_length) )
+    sub_1C71608(mMapCtrl_SpotInfo, v7);
+  v42 = v5->fields._size;
+  if ( (unsigned int)v42 >= LODWORD(v40->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v5,
-      (Il2CppObject *)v19,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
+      (Il2CppObject *)v27,
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
   }
   else
   {
-    v27 = &v24->obj.klass + v26;
-    v5->fields._size = v26 + 1;
-    v27[4] = (Il2CppClass *)v19;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v27 + 4), v19, v22, v23);
+    v43 = &v40->obj.klass + v42;
+    v5->fields._size = v42 + 1;
+    v43[4] = (Il2CppClass *)v27;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v43 + 4), v27, v34, v35, v36, v37, v38, v39);
   }
   return (System_Collections_Generic_List_SchedulerTaskBase__o *)v5;
 }
@@ -2598,70 +2786,82 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateScanOpenPanelTask(
   Il2CppObject *v17; // x23
   struct SubmarineMapManager___c_StaticFields *static_fields; // x0
   int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
   System_Collections_Generic_List_T__o *All; // x0
-  SubmarineMapManager___c_c *v22; // x8
-  System_Collections_Generic_IEnumerable_TSource__o *v23; // x21
+  SubmarineMapManager___c_c *v26; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v27; // x21
   System_Func_object__int__o *_9__97_1; // x22
-  Il2CppObject *v25; // x23
-  struct SubmarineMapManager___c_StaticFields *v26; // x0
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  int32_t v29; // w23
-  SubmarineMapManager___c__DisplayClass97_0_o *v30; // x22
-  int v31; // w29
-  float v32; // s9
-  System_Predicate_object__o *v33; // x23
-  System_Collections_Generic_List_T__o *v34; // x23
-  System_Collections_Generic_List_object__o *v35; // x0
-  _BOOL8 v36; // x0
-  __int64 v37; // x1
-  const MethodInfo *v38; // x3
-  Il2CppObject *current; // x23
-  SubmarineMapDataManager_o *v40; // x0
-  SubmarineMapPanelData_o *PanelByIndices; // x0
-  const MethodInfo *v42; // x2
-  float v43; // s0
-  SchedulerTaskBase_o *HitObstractTask; // x0
-  int32_t v45; // w2
+  Il2CppObject *v29; // x23
+  struct SubmarineMapManager___c_StaticFields *v30; // x0
+  int32_t v31; // w2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  int32_t v34; // w5
+  int64_t v35; // x6
+  System_String_o *v36; // x7
+  int32_t v37; // w23
+  SubmarineMapManager___c__DisplayClass97_0_o *v38; // x22
+  int v39; // w29
+  float v40; // s9
+  System_Predicate_object__o *v41; // x23
+  System_Collections_Generic_List_T__o *v42; // x23
+  System_Collections_Generic_List_object__o *v43; // x0
+  _BOOL8 v44; // x0
+  __int64 v45; // x1
   const MethodInfo *v46; // x3
-  Il2CppObject *v47; // x1
+  Il2CppObject *current; // x23
+  SubmarineMapDataManager_o *v48; // x0
+  SubmarineMapPanelData_o *PanelByIndices; // x0
+  const MethodInfo *v50; // x2
+  float v51; // s0
+  SchedulerTaskBase_o *HitObstractTask; // x0
+  int32_t v53; // w2
+  int32_t v54; // w3
+  System_String_o *v55; // x4
+  int32_t v56; // w5
+  int64_t v57; // x6
+  System_String_o *v58; // x7
+  Il2CppObject *v59; // x1
   struct System_Object_array *items; // x8
-  _QWORD *v49; // x9
+  _QWORD *v61; // x9
   __int64 size; // x10
-  Il2CppClass **v51; // x0
+  Il2CppClass **v63; // x0
   SchedulerTaskBase_o *OpenPanelAndRevealSpotTask; // x0
-  int v53; // w8
-  SchedulerTaskParallel_o *v54; // x19
-  System_Collections_Generic_List_Enumerator_object__o v56; // [xsp+8h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v57; // [xsp+20h] [xbp-90h] BYREF
+  int v65; // w8
+  SchedulerTaskParallel_o *v66; // x19
+  System_Collections_Generic_List_Enumerator_object__o v68; // [xsp+8h] [xbp-A8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v69; // [xsp+20h] [xbp-90h] BYREF
 
-  if ( (byte_4CB2C9B & 1) == 0 )
+  if ( (byte_4CC3DAE & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Linq_Enumerable_Max_SubmarineScanEvent___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__get_Current__);
-    sub_1C6BA08(&System_Func_SubmarineScanEvent__int__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineScanEvent__FindAll__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineScanEvent__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    sub_1C6BA08(&System_Predicate_SubmarineScanEvent__TypeInfo);
-    sub_1C6BA08(&SchedulerTaskParallel_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__CreateScanOpenPanelTask_b__97_0__);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__CreateScanOpenPanelTask_b__97_1__);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass97_0__CreateScanOpenPanelTask_b__2__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass97_0_TypeInfo);
-    sub_1C6BA08(&SubmarineMapManager___c_TypeInfo);
-    byte_4CB2C9B = 1;
+    sub_1C713B0(&Method_System_Linq_Enumerable_Max_SubmarineScanEvent___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__get_Current__);
+    sub_1C713B0(&System_Func_SubmarineScanEvent__int__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineScanEvent__FindAll__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineScanEvent__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    sub_1C713B0(&System_Predicate_SubmarineScanEvent__TypeInfo);
+    sub_1C713B0(&SchedulerTaskParallel_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__CreateScanOpenPanelTask_b__97_0__);
+    sub_1C713B0(&Method_SubmarineMapManager___c__CreateScanOpenPanelTask_b__97_1__);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass97_0__CreateScanOpenPanelTask_b__2__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass97_0_TypeInfo);
+    sub_1C713B0(&SubmarineMapManager___c_TypeInfo);
+    byte_4CC3DAE = 1;
   }
-  memset(&v57, 0, sizeof(v57));
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  memset(&v69, 0, sizeof(v69));
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
   submarineData = this->fields.submarineData;
   if ( !submarineData )
     goto LABEL_48;
@@ -2690,97 +2890,105 @@ SchedulerTaskBase_o *SubmarineMapManager__CreateScanOpenPanelTask(
       v14 = SubmarineMapManager___c_TypeInfo;
     }
     v17 = (Il2CppObject *)v14->static_fields->__9;
-    _9__97_0 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_SubmarineScanEvent__TypeInfo);
+    _9__97_0 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_SubmarineScanEvent__TypeInfo);
     System_Predicate_object____ctor(_9__97_0, v17, Method_SubmarineMapManager___c__CreateScanOpenPanelTask_b__97_0__, 0);
     static_fields = SubmarineMapManager___c_TypeInfo->static_fields;
     static_fields->__9__97_0 = (struct System_Predicate_SubmarineScanEvent__o *)_9__97_0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&static_fields->__9__97_0, (int32_t)_9__97_0, v19, v20);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__97_0,
+      (int32_t)_9__97_0,
+      v19,
+      v20,
+      v21,
+      v22,
+      v23,
+      v24);
   }
   if ( !v15 )
     goto LABEL_48;
   All = System_Collections_Generic_List_object___FindAll(
           v15,
           (System_Predicate_T__o *)_9__97_0,
-          (const MethodInfo_3801084 *)Method_System_Collections_Generic_List_SubmarineScanEvent__FindAll__);
-  v22 = SubmarineMapManager___c_TypeInfo;
-  v23 = (System_Collections_Generic_IEnumerable_TSource__o *)All;
+          (const MethodInfo_3810E28 *)Method_System_Collections_Generic_List_SubmarineScanEvent__FindAll__);
+  v26 = SubmarineMapManager___c_TypeInfo;
+  v27 = (System_Collections_Generic_IEnumerable_TSource__o *)All;
   if ( !SubmarineMapManager___c_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(SubmarineMapManager___c_TypeInfo);
-    v22 = SubmarineMapManager___c_TypeInfo;
+    v26 = SubmarineMapManager___c_TypeInfo;
   }
-  _9__97_1 = (System_Func_object__int__o *)v22->static_fields->__9__97_1;
+  _9__97_1 = (System_Func_object__int__o *)v26->static_fields->__9__97_1;
   if ( !_9__97_1 )
   {
-    if ( !v22->_2.cctor_finished )
+    if ( !v26->_2.cctor_finished )
     {
-      j_il2cpp_runtime_class_init_0(v22);
-      v22 = SubmarineMapManager___c_TypeInfo;
+      j_il2cpp_runtime_class_init_0(v26);
+      v26 = SubmarineMapManager___c_TypeInfo;
     }
-    v25 = (Il2CppObject *)v22->static_fields->__9;
-    _9__97_1 = (System_Func_object__int__o *)sub_1C6BC54(System_Func_SubmarineScanEvent__int__TypeInfo);
-    System_Func_object__int____ctor(_9__97_1, v25, Method_SubmarineMapManager___c__CreateScanOpenPanelTask_b__97_1__, 0);
-    v26 = SubmarineMapManager___c_TypeInfo->static_fields;
-    v26->__9__97_1 = (struct System_Func_SubmarineScanEvent__int__o *)_9__97_1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&v26->__9__97_1, (int32_t)_9__97_1, v27, v28);
+    v29 = (Il2CppObject *)v26->static_fields->__9;
+    _9__97_1 = (System_Func_object__int__o *)sub_1C715FC(System_Func_SubmarineScanEvent__int__TypeInfo);
+    System_Func_object__int____ctor(_9__97_1, v29, Method_SubmarineMapManager___c__CreateScanOpenPanelTask_b__97_1__, 0);
+    v30 = SubmarineMapManager___c_TypeInfo->static_fields;
+    v30->__9__97_1 = (struct System_Func_SubmarineScanEvent__int__o *)_9__97_1;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&v30->__9__97_1, (int32_t)_9__97_1, v31, v32, v33, v34, v35, v36);
   }
-  v29 = System_Linq_Enumerable__Max_object_(
-          v23,
+  v37 = System_Linq_Enumerable__Max_object_(
+          v27,
           (System_Func_TSource__int__o *)_9__97_1,
-          (const MethodInfo_3169774 *)Method_System_Linq_Enumerable_Max_SubmarineScanEvent___);
-  v30 = (SubmarineMapManager___c__DisplayClass97_0_o *)sub_1C6BC54(SubmarineMapManager___c__DisplayClass97_0_TypeInfo);
-  SubmarineMapManager___c__DisplayClass97_0___ctor(v30, 0);
-  if ( !v30 )
+          (const MethodInfo_3179518 *)Method_System_Linq_Enumerable_Max_SubmarineScanEvent___);
+  v38 = (SubmarineMapManager___c__DisplayClass97_0_o *)sub_1C715FC(SubmarineMapManager___c__DisplayClass97_0_TypeInfo);
+  SubmarineMapManager___c__DisplayClass97_0___ctor(v38, 0);
+  if ( !v38 )
 LABEL_48:
-    sub_1C6BC60(Settings_k__BackingField, v9);
-  v31 = v29 + 1;
-  v30->fields.i = 0;
-  if ( v29 + 1 >= 1 )
+    sub_1C71608(Settings_k__BackingField, v9);
+  v39 = v37 + 1;
+  v38->fields.i = 0;
+  if ( v37 + 1 >= 1 )
   {
-    v32 = 0.0;
+    v40 = 0.0;
     do
     {
-      v33 = (System_Predicate_object__o *)sub_1C6BC54(System_Predicate_SubmarineScanEvent__TypeInfo);
+      v41 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_SubmarineScanEvent__TypeInfo);
       System_Predicate_object____ctor(
-        v33,
-        (Il2CppObject *)v30,
+        v41,
+        (Il2CppObject *)v38,
         Method_SubmarineMapManager___c__DisplayClass97_0__CreateScanOpenPanelTask_b__2__,
         0);
-      if ( !v23 )
+      if ( !v27 )
         goto LABEL_48;
-      v34 = System_Collections_Generic_List_object___FindAll(
-              (System_Collections_Generic_List_object__o *)v23,
-              (System_Predicate_T__o *)v33,
-              (const MethodInfo_3801084 *)Method_System_Collections_Generic_List_SubmarineScanEvent__FindAll__);
-      v35 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+      v42 = System_Collections_Generic_List_object___FindAll(
+              (System_Collections_Generic_List_object__o *)v27,
+              (System_Predicate_T__o *)v41,
+              (const MethodInfo_3810E28 *)Method_System_Collections_Generic_List_SubmarineScanEvent__FindAll__);
+      v43 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
       System_Collections_Generic_List_object____ctor(
-        v35,
-        (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-      if ( !v34 )
+        v43,
+        (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+      if ( !v42 )
         goto LABEL_48;
       System_Collections_Generic_List_object___GetEnumerator(
-        (System_Collections_Generic_List_Enumerator_T__o *)&v56,
-        (System_Collections_Generic_List_object__o *)v34,
-        (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SubmarineScanEvent__GetEnumerator__);
-      v57 = v56;
+        (System_Collections_Generic_List_Enumerator_T__o *)&v68,
+        (System_Collections_Generic_List_object__o *)v42,
+        (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SubmarineScanEvent__GetEnumerator__);
+      v69 = v68;
       while ( 1 )
       {
-        v36 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-                &v57,
-                (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__MoveNext__);
-        if ( !v36 )
+        v44 = System_Collections_Generic_List_Enumerator_object___MoveNext(
+                &v69,
+                (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__MoveNext__);
+        if ( !v44 )
           break;
-        current = v57.fields._current;
-        if ( !v57.fields._current )
-          sub_1C6BC60(v36, v37);
-        v40 = this->fields.submarineData;
-        if ( !v40 )
-          sub_1C6BC60(0, v37);
+        current = v69.fields._current;
+        if ( !v69.fields._current )
+          sub_1C71608(v44, v45);
+        v48 = this->fields.submarineData;
+        if ( !v48 )
+          sub_1C71608(0, v45);
         PanelByIndices = SubmarineMapDataManager__GetPanelByIndices(
-                           v40,
-                           (int32_t)v57.fields._current[1].klass,
-                           HIDWORD(v57.fields._current[1].klass),
-                           v38);
+                           v48,
+                           (int32_t)v69.fields._current[1].klass,
+                           HIDWORD(v69.fields._current[1].klass),
+                           v46);
         if ( PanelByIndices )
         {
           if ( BYTE5(current[2].klass) )
@@ -2788,63 +2996,63 @@ LABEL_48:
             HitObstractTask = SubmarineMapManager__CreateHitObstractTask(
                                 (SubmarineMapManager_o *)PanelByIndices,
                                 PanelByIndices,
-                                v43,
-                                v42);
-            v47 = (Il2CppObject *)HitObstractTask;
+                                v51,
+                                v50);
+            v59 = (Il2CppObject *)HitObstractTask;
             if ( !v7 )
-              sub_1C6BC60(HitObstractTask, HitObstractTask);
+              sub_1C71608(HitObstractTask, HitObstractTask);
             items = v7->fields._items;
-            v49 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+            v61 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
             ++v7->fields._version;
             if ( !items )
-              sub_1C6BC60(HitObstractTask, HitObstractTask);
+              sub_1C71608(HitObstractTask, HitObstractTask);
             size = v7->fields._size;
             if ( (unsigned int)size < LODWORD(items->max_length) )
               goto LABEL_32;
 LABEL_37:
             System_Collections_Generic_List_object___AddWithResize(
               v7,
-              v47,
-              *(const MethodInfo_3800974 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+              v59,
+              *(const MethodInfo_3810718 **)(*(_QWORD *)(v61[4] + 192LL) + 112LL));
           }
           else
           {
             OpenPanelAndRevealSpotTask = SubmarineMapManager__CreateOpenPanelAndRevealSpotTask(
                                            this,
                                            PanelByIndices,
-                                           v32,
-                                           v42);
-            v47 = (Il2CppObject *)OpenPanelAndRevealSpotTask;
+                                           v40,
+                                           v50);
+            v59 = (Il2CppObject *)OpenPanelAndRevealSpotTask;
             if ( !v7 )
-              sub_1C6BC60(OpenPanelAndRevealSpotTask, OpenPanelAndRevealSpotTask);
+              sub_1C71608(OpenPanelAndRevealSpotTask, OpenPanelAndRevealSpotTask);
             items = v7->fields._items;
-            v49 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+            v61 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
             ++v7->fields._version;
             if ( !items )
-              sub_1C6BC60(OpenPanelAndRevealSpotTask, OpenPanelAndRevealSpotTask);
+              sub_1C71608(OpenPanelAndRevealSpotTask, OpenPanelAndRevealSpotTask);
             size = v7->fields._size;
             if ( (unsigned int)size >= LODWORD(items->max_length) )
               goto LABEL_37;
 LABEL_32:
-            v51 = &items->obj.klass + size;
+            v63 = &items->obj.klass + size;
             v7->fields._size = size + 1;
-            v51[4] = (Il2CppClass *)v47;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v51 + 4), (int32_t)v47, v45, v46);
+            v63[4] = (Il2CppClass *)v59;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v63 + 4), (int32_t)v59, v53, v54, v55, v56, v57, v58);
           }
         }
       }
       System_Collections_Generic_List_Enumerator_object___Dispose(
-        &v57,
-        (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__Dispose__);
-      v32 = ScanOpenPanelInterval + v32;
-      v53 = v30->fields.i + 1;
-      v30->fields.i = v53;
+        &v69,
+        (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SubmarineScanEvent__Dispose__);
+      v40 = ScanOpenPanelInterval + v40;
+      v65 = v38->fields.i + 1;
+      v38->fields.i = v65;
     }
-    while ( v53 < v31 );
+    while ( v65 < v39 );
   }
-  v54 = (SchedulerTaskParallel_o *)sub_1C6BC54(SchedulerTaskParallel_TypeInfo);
-  SchedulerTaskParallel___ctor_44557604(v54, (System_Collections_Generic_List_SchedulerTaskBase__o *)v7, 0);
-  return (SchedulerTaskBase_o *)v54;
+  v66 = (SchedulerTaskParallel_o *)sub_1C715FC(SchedulerTaskParallel_TypeInfo);
+  SchedulerTaskParallel___ctor_44603932(v66, (System_Collections_Generic_List_SchedulerTaskBase__o *)v7, 0);
+  return (SchedulerTaskBase_o *)v66;
 }
 
 
@@ -2859,217 +3067,305 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
   __int64 MoveCameraToPositionTask; // x0
   const MethodInfo *v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
   struct SubmarineMapDataManager_o *submarineData; // x8
   struct SubmarinePanelPositionCalculator_o *PositionCalculator_k__BackingField; // x8
-  int32x2_t v14; // d11
-  float32x2_t v15; // d9
-  int32x2_t v16; // d10
-  float32x2_t v17; // d8
-  System_Collections_Generic_List_object__o *v18; // x19
-  struct SubmarineMapDataManager_o *v19; // x8
+  int32x2_t v18; // d11
+  float32x2_t v19; // d9
+  int32x2_t v20; // d10
+  float32x2_t v21; // d8
+  System_Collections_Generic_List_object__o *v22; // x19
+  struct SubmarineMapDataManager_o *v23; // x8
   struct SubmarineSettingsManager_o *Settings_k__BackingField; // x8
-  unsigned __int64 v21; // d0 OVERLAPPED
-  float v22; // s8
-  int v23; // s2
-  int v24; // s1
-  int32_t v25; // w2
-  const MethodInfo *v26; // x3
+  unsigned __int64 v25; // d0 OVERLAPPED
+  float v26; // s8
+  int v27; // s2
+  int v28; // s1
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v28; // x9
-  __int64 v29; // x10
-  __int64 v30; // x1
-  Il2CppClass **v31; // x0
-  const MethodInfo *v32; // x2
+  _QWORD *v36; // x9
+  __int64 v37; // x10
+  __int64 v38; // x1
+  Il2CppClass **v39; // x0
+  const MethodInfo *v40; // x2
   Il2CppObject *ScanAnimObjectPrefab; // x22
-  const MethodInfo *v34; // x1
+  const MethodInfo *v42; // x1
   UnityEngine_Object_o *HomeSpot; // x23
   float z; // s9
   UnityEngine_Transform_o *transform; // x23
-  Il2CppObject *v38; // x0
-  __int64 v39; // x24
-  int32_t v40; // w2
-  const MethodInfo *v41; // x3
+  Il2CppObject *v46; // x0
+  __int64 v47; // x24
+  int32_t v48; // w2
+  int32_t v49; // w3
+  System_String_o *v50; // x4
+  int32_t v51; // w5
+  int64_t v52; // x6
+  System_String_o *v53; // x7
   SubmarineScannerComponent_o *Component_object; // x22
-  float32x2_t v43; // d0
-  struct SubmarineMapDataManager_o *v44; // x8
-  struct SubmarineSettingsManager_o *v45; // x8
-  int32_t v46; // w2
-  const MethodInfo *v47; // x3
-  struct System_Object_array *v48; // x8
-  _QWORD *v49; // x9
-  __int64 v50; // x10
-  __int64 v51; // x1
-  Il2CppClass **v52; // x0
-  const MethodInfo *v53; // x1
+  float32x2_t v55; // d0
+  struct SubmarineMapDataManager_o *v56; // x8
+  struct SubmarineSettingsManager_o *v57; // x8
+  int32_t v58; // w2
+  int32_t v59; // w3
+  System_String_o *v60; // x4
+  int32_t v61; // w5
+  int64_t v62; // x6
+  System_String_o *v63; // x7
+  struct System_Object_array *v64; // x8
+  _QWORD *v65; // x9
+  __int64 v66; // x10
+  __int64 v67; // x1
+  Il2CppClass **v68; // x0
+  const MethodInfo *v69; // x1
   float JumpStartTime; // s10
-  SchedulerTaskWaitTime_o *v55; // x25
+  SchedulerTaskWaitTime_o *v71; // x25
   __int64 p_StartCallback; // x25
-  CGThumbnailListItem_o *v57; // x26
+  GrandQuestFolderBoardItem_o *v73; // x26
   System_Delegate_o *StartCallback; // t1
-  SchedulerTaskBase_TaskCallback_o *v59; // x27
-  System_Delegate_o *v60; // x0
-  int32_t v61; // w2
-  const MethodInfo *v62; // x3
-  System_Delegate_o *v63; // x8
-  SchedulerTaskBase_TaskCallback_c *v64; // x1
+  SchedulerTaskBase_TaskCallback_o *v75; // x27
+  System_Delegate_o *v76; // x0
+  int32_t v77; // w2
+  int32_t v78; // w3
+  System_String_o *v79; // x4
+  int32_t v80; // w5
+  int64_t v81; // x6
+  System_String_o *v82; // x7
+  System_Delegate_o *v83; // x8
+  SchedulerTaskBase_TaskCallback_c *v84; // x1
   struct SubmarineMapManager_PlayingScanVoiceData_o *playingScanVoiceData; // x8
-  struct SubmarineMapManager_PlayingScanVoiceData_o *v66; // x8
-  struct SubmarineMapManager_PlayingScanVoiceData_o *v67; // x8
+  struct SubmarineMapManager_PlayingScanVoiceData_o *v86; // x8
+  struct SubmarineMapManager_PlayingScanVoiceData_o *v87; // x8
   System_String_o *assetName; // x25
   System_String_o *vcName; // x26
-  Il2CppObject *v70; // x0
-  __int64 v71; // x25
-  int32_t v72; // w2
-  const MethodInfo *v73; // x3
-  System_String_o *v74; // x27
-  SchedulerTaskWaitLoadAsset_o *v75; // x26
-  int32_t v76; // w2
-  const MethodInfo *v77; // x3
-  struct System_Object_array *v78; // x8
-  _QWORD *v79; // x9
-  __int64 v80; // x10
-  Il2CppClass **v81; // x0
-  int32_t v82; // w2
-  const MethodInfo *v83; // x3
-  __int64 v84; // x1
-  int32_t v85; // w2
-  const MethodInfo *v86; // x3
-  __int64 v87; // x1
-  float v88; // s10
-  System_Delegate_o *v89; // x27
-  SchedulerTaskBase_TaskCallback_o *v90; // x28
-  System_Delegate_o *v91; // x0
+  Il2CppObject *v90; // x0
+  __int64 v91; // x25
   int32_t v92; // w2
-  const MethodInfo *v93; // x3
-  SchedulerTaskBase_TaskCallback_c *v94; // x1
-  int32_t v95; // w2
-  const MethodInfo *v96; // x3
-  struct System_Object_array *v97; // x8
-  _QWORD *v98; // x9
-  __int64 v99; // x10
-  Il2CppClass **v100; // x0
-  const MethodInfo *v101; // x1
+  int32_t v93; // w3
+  System_String_o *v94; // x4
+  int32_t v95; // w5
+  int64_t v96; // x6
+  System_String_o *v97; // x7
+  System_String_o *v98; // x27
+  SchedulerTaskWaitLoadAsset_o *v99; // x26
+  int32_t v100; // w2
+  int32_t v101; // w3
+  System_String_o *v102; // x4
+  int32_t v103; // w5
+  int64_t v104; // x6
+  System_String_o *v105; // x7
+  struct System_Object_array *v106; // x8
+  _QWORD *v107; // x9
+  __int64 v108; // x10
+  Il2CppClass **v109; // x0
+  int32_t v110; // w2
+  int32_t v111; // w3
+  System_String_o *v112; // x4
+  int32_t v113; // w5
+  int64_t v114; // x6
+  System_String_o *v115; // x7
+  __int64 v116; // x1
+  int32_t v117; // w2
+  int32_t v118; // w3
+  System_String_o *v119; // x4
+  int32_t v120; // w5
+  int64_t v121; // x6
+  System_String_o *v122; // x7
+  __int64 v123; // x1
+  float v124; // s10
+  System_Delegate_o *v125; // x27
+  SchedulerTaskBase_TaskCallback_o *v126; // x28
+  System_Delegate_o *v127; // x0
+  int32_t v128; // w2
+  int32_t v129; // w3
+  System_String_o *v130; // x4
+  int32_t v131; // w5
+  int64_t v132; // x6
+  System_String_o *v133; // x7
+  SchedulerTaskBase_TaskCallback_c *v134; // x1
+  int32_t v135; // w2
+  int32_t v136; // w3
+  System_String_o *v137; // x4
+  int32_t v138; // w5
+  int64_t v139; // x6
+  System_String_o *v140; // x7
+  struct System_Object_array *v141; // x8
+  _QWORD *v142; // x9
+  __int64 v143; // x10
+  Il2CppClass **v144; // x0
+  const MethodInfo *v145; // x1
   float SelectedPanelEffecFinishTime; // s10
-  System_Delegate_o *v103; // x27
-  SchedulerTaskBase_TaskCallback_o *v104; // x28
-  System_Delegate_o *v105; // x0
-  int32_t v106; // w2
-  const MethodInfo *v107; // x3
-  SchedulerTaskBase_TaskCallback_c *v108; // x1
-  const MethodInfo *v109; // x1
-  const MethodInfo_392D2DC *v110; // x2
+  System_Delegate_o *v147; // x27
+  SchedulerTaskBase_TaskCallback_o *v148; // x28
+  System_Delegate_o *v149; // x0
+  int32_t v150; // w2
+  int32_t v151; // w3
+  System_String_o *v152; // x4
+  int32_t v153; // w5
+  int64_t v154; // x6
+  System_String_o *v155; // x7
+  SchedulerTaskBase_TaskCallback_c *v156; // x1
+  const MethodInfo *v157; // x1
+  const MethodInfo_393D080 *v158; // x2
   float JumpDuration; // s10
-  unsigned __int32 v112; // s0 OVERLAPPED
-  float32x2_t v113; // d12
+  unsigned __int32 v160; // s0 OVERLAPPED
+  float32x2_t v161; // d12
   MapCamera_o *mapCamera; // x21
-  float v115; // s1
+  float v163; // s1
   System_Nullable_float__o p_size; // x0
-  MapCameraPerformance_o *v117; // x0
-  System_Nullable_float__o v118; // x4
-  SchedulerTaskBase_o *v119; // x26
-  UnityEngine_GameObject_o *v120; // x24
-  SchedulerTaskMovePerformance_o *v121; // x0
-  SchedulerTaskBase_o *v122; // x21
-  int32_t v123; // w2
-  const MethodInfo *v124; // x3
-  SchedulerTaskBase_array *v125; // x24
-  int32_t v126; // w2
-  const MethodInfo *v127; // x3
-  const MethodInfo *v128; // x1
+  MapCameraPerformance_o *v165; // x0
+  System_Nullable_float__o v166; // x4
+  SchedulerTaskBase_o *v167; // x26
+  UnityEngine_GameObject_o *v168; // x24
+  SchedulerTaskMovePerformance_o *v169; // x0
+  SchedulerTaskBase_o *v170; // x21
+  int32_t v171; // w2
+  int32_t v172; // w3
+  System_String_o *v173; // x4
+  int32_t v174; // w5
+  int64_t v175; // x6
+  System_String_o *v176; // x7
+  SchedulerTaskBase_array *v177; // x24
+  int32_t v178; // w2
+  int32_t v179; // w3
+  System_String_o *v180; // x4
+  int32_t v181; // w5
+  int64_t v182; // x6
+  System_String_o *v183; // x7
+  const MethodInfo *v184; // x1
   SimpleAnimation_o *AnimationComponent; // x26
   struct SimpleAnimation_EditorState_o *state; // x8
   System_String_o **p_name; // x8
-  System_String_o *v132; // x27
-  System_Delegate_o *v133; // x27
-  SchedulerTaskBase_TaskCallback_o *v134; // x28
-  System_Delegate_o *v135; // x0
-  int32_t v136; // w2
-  const MethodInfo *v137; // x3
-  SchedulerTaskBase_TaskCallback_c *v138; // x1
-  __int64 v139; // x20
-  int32_t v140; // w2
-  const MethodInfo *v141; // x3
-  __int64 v142; // x24
-  int32_t v143; // w2
-  const MethodInfo *v144; // x3
-  int32_t v145; // w2
-  const MethodInfo *v146; // x3
-  SchedulerTaskOrthostichy_o *v147; // x21
-  int32_t v148; // w2
-  const MethodInfo *v149; // x3
-  SchedulerTaskParallel_o *v150; // x21
+  System_String_o *v188; // x27
+  System_Delegate_o *v189; // x27
+  SchedulerTaskBase_TaskCallback_o *v190; // x28
+  System_Delegate_o *v191; // x0
+  int32_t v192; // w2
+  int32_t v193; // w3
+  System_String_o *v194; // x4
+  int32_t v195; // w5
+  int64_t v196; // x6
+  System_String_o *v197; // x7
+  SchedulerTaskBase_TaskCallback_c *v198; // x1
+  __int64 v199; // x20
+  int32_t v200; // w2
+  int32_t v201; // w3
+  System_String_o *v202; // x4
+  int32_t v203; // w5
+  int64_t v204; // x6
+  System_String_o *v205; // x7
+  __int64 v206; // x24
+  int32_t v207; // w2
+  int32_t v208; // w3
+  System_String_o *v209; // x4
+  int32_t v210; // w5
+  int64_t v211; // x6
+  System_String_o *v212; // x7
+  int32_t v213; // w2
+  int32_t v214; // w3
+  System_String_o *v215; // x4
+  int32_t v216; // w5
+  int64_t v217; // x6
+  System_String_o *v218; // x7
+  SchedulerTaskOrthostichy_o *v219; // x21
+  int32_t v220; // w2
+  int32_t v221; // w3
+  System_String_o *v222; // x4
+  int32_t v223; // w5
+  int64_t v224; // x6
+  System_String_o *v225; // x7
+  SchedulerTaskParallel_o *v226; // x21
   float TimeToStartOpenPanel; // s8
-  SchedulerTaskWaitTime_o *v152; // x20
-  int32_t v153; // w2
-  const MethodInfo *v154; // x3
-  struct System_Object_array *v155; // x8
-  _QWORD *v156; // x9
-  __int64 v157; // x10
-  Il2CppClass **v158; // x0
-  int32_t v159; // w2
-  const MethodInfo *v160; // x3
-  struct System_Object_array *v161; // x8
-  _QWORD *v162; // x9
-  __int64 v163; // x10
-  Il2CppClass **v164; // x0
-  int32_t v165; // w2
-  const MethodInfo *v166; // x3
-  struct System_Object_array *v167; // x8
-  _QWORD *v168; // x9
-  __int64 v169; // x10
-  Il2CppClass **v170; // x0
-  __int64 v172; // x0
-  SchedulerTaskWaitTime_o *v173; // [xsp+8h] [xbp-E8h]
+  SchedulerTaskWaitTime_o *v228; // x20
+  int32_t v229; // w2
+  int32_t v230; // w3
+  System_String_o *v231; // x4
+  int32_t v232; // w5
+  int64_t v233; // x6
+  System_String_o *v234; // x7
+  struct System_Object_array *v235; // x8
+  _QWORD *v236; // x9
+  __int64 v237; // x10
+  Il2CppClass **v238; // x0
+  int32_t v239; // w2
+  int32_t v240; // w3
+  System_String_o *v241; // x4
+  int32_t v242; // w5
+  int64_t v243; // x6
+  System_String_o *v244; // x7
+  struct System_Object_array *v245; // x8
+  _QWORD *v246; // x9
+  __int64 v247; // x10
+  Il2CppClass **v248; // x0
+  int32_t v249; // w2
+  int32_t v250; // w3
+  System_String_o *v251; // x4
+  int32_t v252; // w5
+  int64_t v253; // x6
+  System_String_o *v254; // x7
+  struct System_Object_array *v255; // x8
+  _QWORD *v256; // x9
+  __int64 v257; // x10
+  Il2CppClass **v258; // x0
+  __int64 v260; // x0
+  SchedulerTaskWaitTime_o *v261; // [xsp+8h] [xbp-E8h]
   float y; // [xsp+20h] [xbp-D0h]
   float x; // [xsp+30h] [xbp-C0h]
   float32x2_t value; // [xsp+40h] [xbp-B0h]
   System_Nullable_Vector2__o position; // [xsp+50h] [xbp-A0h] BYREF
   System_Nullable_float__o size; // [xsp+68h] [xbp-88h] BYREF
-  System_Nullable_Vector2__o v179; // 0:x0.12
+  System_Nullable_Vector2__o v267; // 0:x0.12
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v181; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v182; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v183; // 0:s0.4,4:s1.4,8:s2.4
-  UnityEngine_Vector3_o v184; // 0:s3.4,4:s4.4,8:s5.4
+  UnityEngine_Vector3_o v269; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v270; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v271; // 0:s0.4,4:s1.4,8:s2.4
+  UnityEngine_Vector3_o v272; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_4CB2C97 & 1) == 0 )
+  if ( (byte_4CC3DAA & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventPanelScanMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_SubmarineScanVoiceComponent___);
-    sub_1C6BA08(&Method_GameObjectExtensions_SafeGetComponent_SubmarineScannerComponent___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    sub_1C6BA08(&MapCameraPerformance_TypeInfo);
-    sub_1C6BA08(&Method_System_Nullable_Vector2___ctor__);
-    sub_1C6BA08(&Method_System_Nullable_float___ctor__);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
-    sub_1C6BA08(&SchedulerTaskMovePerformance_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskOrthostichy_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskParallel_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskSimpleAnimation_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskWaitLoadAsset_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskWaitTime_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&SoundManager_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__0__);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__1__);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__2__);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__3__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass93_0_TypeInfo);
-    byte_4CB2C97 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventPanelScanMaster___);
+    sub_1C713B0(&Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
+    sub_1C713B0(&Method_GameObjectExtensions_SafeGetComponent_SubmarineScanVoiceComponent___);
+    sub_1C713B0(&Method_GameObjectExtensions_SafeGetComponent_SubmarineScannerComponent___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    sub_1C713B0(&MapCameraPerformance_TypeInfo);
+    sub_1C713B0(&Method_System_Nullable_Vector2___ctor__);
+    sub_1C713B0(&Method_System_Nullable_float___ctor__);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&SchedulerTaskBase___TypeInfo);
+    sub_1C713B0(&SchedulerTaskMovePerformance_TypeInfo);
+    sub_1C713B0(&SchedulerTaskOrthostichy_TypeInfo);
+    sub_1C713B0(&SchedulerTaskParallel_TypeInfo);
+    sub_1C713B0(&SchedulerTaskSimpleAnimation_TypeInfo);
+    sub_1C713B0(&SchedulerTaskWaitLoadAsset_TypeInfo);
+    sub_1C713B0(&SchedulerTaskWaitTime_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&SoundManager_TypeInfo);
+    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__0__);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__1__);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__2__);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__3__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass93_0_TypeInfo);
+    byte_4CC3DAA = 1;
   }
-  v7 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass93_0_TypeInfo);
+  v7 = sub_1C715FC(SubmarineMapManager___c__DisplayClass93_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass93_0___ctor((SubmarineMapManager___c__DisplayClass93_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_131;
   *(_QWORD *)(v7 + 32) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)this, v10, v11, v12, v13, v14, v15);
   submarineData = this->fields.submarineData;
   if ( !submarineData )
     goto LABEL_131;
@@ -3078,83 +3374,83 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
   PositionCalculator_k__BackingField = submarineData->fields._PositionCalculator_k__BackingField;
   if ( !PositionCalculator_k__BackingField )
     goto LABEL_131;
-  v14.n64_u64[0] = *(unsigned __int64 *)&panelData->fields._HIndex_k__BackingField;
-  v15.n64_u64[0] = (unsigned __int64)PositionCalculator_k__BackingField->fields._PanelUnitSize_k__BackingField;
-  v16.n64_u64[0] = *(unsigned __int64 *)&PositionCalculator_k__BackingField->fields._HorizontalPanelNum_k__BackingField;
-  v17.n64_u64[0] = *(unsigned __int64 *)&PositionCalculator_k__BackingField->fields._OffsetX_k__BackingField;
-  v18 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  v18.n64_u64[0] = *(unsigned __int64 *)&panelData->fields._HIndex_k__BackingField;
+  v19.n64_u64[0] = (unsigned __int64)PositionCalculator_k__BackingField->fields._PanelUnitSize_k__BackingField;
+  v20.n64_u64[0] = *(unsigned __int64 *)&PositionCalculator_k__BackingField->fields._HorizontalPanelNum_k__BackingField;
+  v21.n64_u64[0] = *(unsigned __int64 *)&PositionCalculator_k__BackingField->fields._OffsetX_k__BackingField;
+  v22 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v18,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-  v19 = this->fields.submarineData;
-  if ( !v19 )
+    v22,
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+  v23 = this->fields.submarineData;
+  if ( !v23 )
     goto LABEL_131;
-  Settings_k__BackingField = v19->fields._Settings_k__BackingField;
+  Settings_k__BackingField = v23->fields._Settings_k__BackingField;
   if ( !Settings_k__BackingField )
     goto LABEL_131;
-  v21 = vadd_f32(
-          v17,
+  v25 = vadd_f32(
+          v21,
           vmul_f32(
-            vmul_f32(v15, vcvt_f32_s32(vsub_s32((int32x2_t)(vshl_n_s32(v14, 1u).n64_u64[0] | 0x100000001LL), v16))),
+            vmul_f32(v19, vcvt_f32_s32(vsub_s32((int32x2_t)(vshl_n_s32(v18, 1u).n64_u64[0] | 0x100000001LL), v20))),
             (float32x2_t)0x3F0000003F000000LL)).n64_u64[0];
-  v22 = *((float *)&v21 + 1);
-  v23 = 0;
-  v24 = HIDWORD(v21);
-  value.n64_u64[0] = v21;
+  v26 = *((float *)&v25 + 1);
+  v27 = 0;
+  v28 = HIDWORD(v25);
+  value.n64_u64[0] = v25;
   MoveCameraToPositionTask = (__int64)SubmarineMapManager__CreateMoveCameraToPositionTask(
                                         this,
-                                        *(UnityEngine_Vector3_o *)&v21,
+                                        *(UnityEngine_Vector3_o *)&v25,
                                         1.0,
                                         Settings_k__BackingField->fields._ScanRangeToHomeSpotCameraDuration_k__BackingField,
                                         v9);
-  if ( !v18 )
+  if ( !v22 )
     goto LABEL_131;
-  items = v18->fields._items;
-  v28 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-  ++v18->fields._version;
+  items = v22->fields._items;
+  v36 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+  ++v22->fields._version;
   if ( !items )
     goto LABEL_131;
-  v29 = v18->fields._size;
-  v30 = MoveCameraToPositionTask;
-  if ( (unsigned int)v29 >= LODWORD(items->max_length) )
+  v37 = v22->fields._size;
+  v38 = MoveCameraToPositionTask;
+  if ( (unsigned int)v37 >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v18,
+      v22,
       (Il2CppObject *)MoveCameraToPositionTask,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v28[4] + 192LL) + 112LL));
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v36[4] + 192LL) + 112LL));
   }
   else
   {
-    v31 = &items->obj.klass + v29;
-    v18->fields._size = v29 + 1;
-    v31[4] = (Il2CppClass *)v30;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v31 + 4), v30, v25, v26);
+    v39 = &items->obj.klass + v37;
+    v22->fields._size = v37 + 1;
+    v39[4] = (Il2CppClass *)v38;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v39 + 4), v38, v29, v30, v31, v32, v33, v34);
   }
-  MoveCameraToPositionTask = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  MoveCameraToPositionTask = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !MoveCameraToPositionTask )
     goto LABEL_131;
   MoveCameraToPositionTask = (__int64)DataManager__GetMasterData_object_(
                                         (DataManager_o *)MoveCameraToPositionTask,
-                                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
+                                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
   if ( !MoveCameraToPositionTask )
     goto LABEL_131;
   MoveCameraToPositionTask = (__int64)DataMasterBase_object__object__int___GetEntity(
                                         (DataMasterBase_TMaster__TEntity__PKType__o *)MoveCameraToPositionTask,
                                         scanId,
-                                        (const MethodInfo_33F90DC *)Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
+                                        (const MethodInfo_3408E80 *)Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
   if ( !MoveCameraToPositionTask )
-    return (System_Collections_Generic_List_SchedulerTaskBase__o *)v18;
+    return (System_Collections_Generic_List_SchedulerTaskBase__o *)v22;
   if ( !this->fields.assetManager )
     goto LABEL_131;
   ScanAnimObjectPrefab = (Il2CppObject *)SubmarineMapAssetManager__GetScanAnimObjectPrefab(
                                            this->fields.assetManager,
                                            *(_DWORD *)(MoveCameraToPositionTask + 56),
-                                           v32);
+                                           v40);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)ScanAnimObjectPrefab, 0, 0) )
   {
-    HomeSpot = (UnityEngine_Object_o *)SubmarineMapManager__GetHomeSpot(this, v34);
+    HomeSpot = (UnityEngine_Object_o *)SubmarineMapManager__GetHomeSpot(this, v42);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     MoveCameraToPositionTask = UnityEngine_Object__op_Equality(HomeSpot, 0, 0);
@@ -3175,474 +3471,546 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
       transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)MoveCameraToPositionTask, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v38 = UnityEngine_Object__Instantiate_object__52199488(
+      v46 = UnityEngine_Object__Instantiate_object__52264420(
               ScanAnimObjectPrefab,
               transform,
-              (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-      *(_QWORD *)(v7 + 16) = v38;
-      v39 = v7 + 16;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)v38, v40, v41);
-      v181.fields.y = y;
-      v181.fields.x = x;
-      v181.fields.z = z;
-      GameObjectExtensions__SetLocalPosition(*(UnityEngine_GameObject_o **)(v7 + 16), v181, 0);
+              (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+      *(_QWORD *)(v7 + 16) = v46;
+      v47 = v7 + 16;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)v46, v48, v49, v50, v51, v52, v53);
+      v269.fields.y = y;
+      v269.fields.x = x;
+      v269.fields.z = z;
+      GameObjectExtensions__SetLocalPosition(*(UnityEngine_GameObject_o **)(v7 + 16), v269, 0);
       MoveCameraToPositionTask = *(_QWORD *)(v7 + 16);
       if ( !MoveCameraToPositionTask )
         goto LABEL_131;
       UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)MoveCameraToPositionTask, 0, 0);
       Component_object = (SubmarineScannerComponent_o *)GameObjectExtensions__SafeGetComponent_object_(
-                                                          *(UnityEngine_GameObject_o **)v39,
-                                                          (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_SubmarineScannerComponent___);
-      if ( !byte_4CAFC0B )
+                                                          *(UnityEngine_GameObject_o **)v47,
+                                                          (const MethodInfo_31A49B8 *)Method_GameObjectExtensions_SafeGetComponent_SubmarineScannerComponent___);
+      if ( !byte_4CC0D0B )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC0B = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D0B = 1;
       }
       MoveCameraToPositionTask = (__int64)System_Math_TypeInfo;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
       if ( !Component_object )
         goto LABEL_131;
-      v43.n64_u64[0] = vsub_f32((float32x2_t)__PAIR64__(LODWORD(y), LODWORD(x)), value).n64_u64[0];
+      v55.n64_u64[0] = vsub_f32((float32x2_t)__PAIR64__(LODWORD(y), LODWORD(x)), value).n64_u64[0];
       SubmarineScannerComponent__PrepareAnimation(
         Component_object,
-        sqrtf((float)(z * z) + vaddv_f32(vmul_f32(v43, v43))),
+        sqrtf((float)(z * z) + vaddv_f32(vmul_f32(v55, v55))),
         v9);
       if ( !Component_object->fields.state )
-        return (System_Collections_Generic_List_SchedulerTaskBase__o *)v18;
-      v18 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+        return (System_Collections_Generic_List_SchedulerTaskBase__o *)v22;
+      v22 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
       System_Collections_Generic_List_object____ctor(
-        v18,
-        (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-      v44 = this->fields.submarineData;
-      if ( !v44 )
+        v22,
+        (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+      v56 = this->fields.submarineData;
+      if ( !v56 )
         goto LABEL_131;
-      v45 = v44->fields._Settings_k__BackingField;
-      if ( !v45 )
+      v57 = v56->fields._Settings_k__BackingField;
+      if ( !v57 )
         goto LABEL_131;
-      v182.fields.y = y;
-      v182.fields.x = x;
-      v182.fields.z = z;
+      v270.fields.y = y;
+      v270.fields.x = x;
+      v270.fields.z = z;
       MoveCameraToPositionTask = (__int64)SubmarineMapManager__CreateMoveCameraToPositionTask(
                                             this,
-                                            v182,
+                                            v270,
                                             1.0,
-                                            v45->fields._ScanRangeToHomeSpotCameraDuration_k__BackingField,
+                                            v57->fields._ScanRangeToHomeSpotCameraDuration_k__BackingField,
                                             v9);
-      if ( !v18 )
+      if ( !v22 )
         goto LABEL_131;
-      v48 = v18->fields._items;
-      v49 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-      ++v18->fields._version;
-      if ( !v48 )
+      v64 = v22->fields._items;
+      v65 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+      ++v22->fields._version;
+      if ( !v64 )
         goto LABEL_131;
-      v50 = v18->fields._size;
-      v51 = MoveCameraToPositionTask;
-      if ( (unsigned int)v50 >= LODWORD(v48->max_length) )
+      v66 = v22->fields._size;
+      v67 = MoveCameraToPositionTask;
+      if ( (unsigned int)v66 >= LODWORD(v64->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v18,
+          v22,
           (Il2CppObject *)MoveCameraToPositionTask,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v49[4] + 192LL) + 112LL));
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v65[4] + 192LL) + 112LL));
       }
       else
       {
-        v52 = &v48->obj.klass + v50;
-        v18->fields._size = v50 + 1;
-        v52[4] = (Il2CppClass *)v51;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v52 + 4), v51, v46, v47);
+        v68 = &v64->obj.klass + v66;
+        v22->fields._size = v66 + 1;
+        v68[4] = (Il2CppClass *)v67;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v68 + 4), v67, v58, v59, v60, v61, v62, v63);
       }
-      JumpStartTime = SubmarineScannerComponent__GetJumpStartTime(Component_object, v53);
-      v55 = (SchedulerTaskWaitTime_o *)sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
-      SchedulerTaskWaitTime___ctor(v55, JumpStartTime, 0);
-      if ( !v55 )
+      JumpStartTime = SubmarineScannerComponent__GetJumpStartTime(Component_object, v69);
+      v71 = (SchedulerTaskWaitTime_o *)sub_1C715FC(SchedulerTaskWaitTime_TypeInfo);
+      SchedulerTaskWaitTime___ctor(v71, JumpStartTime, 0);
+      if ( !v71 )
         goto LABEL_131;
-      v173 = v55;
-      StartCallback = (System_Delegate_o *)v55->fields.StartCallback;
-      p_StartCallback = (__int64)&v55->fields.StartCallback;
-      v57 = (CGThumbnailListItem_o *)StartCallback;
-      v59 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+      v261 = v71;
+      StartCallback = (System_Delegate_o *)v71->fields.StartCallback;
+      p_StartCallback = (__int64)&v71->fields.StartCallback;
+      v73 = (GrandQuestFolderBoardItem_o *)StartCallback;
+      v75 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
       SchedulerTaskBase_TaskCallback___ctor(
-        v59,
+        v75,
         (Il2CppObject *)v7,
         Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__0__,
         0);
-      v60 = System_Delegate__Combine(StartCallback, (System_Delegate_o *)v59, 0);
-      v63 = v60;
-      if ( v60 )
+      v76 = System_Delegate__Combine(StartCallback, (System_Delegate_o *)v75, 0);
+      v83 = v76;
+      if ( v76 )
       {
-        v64 = SchedulerTaskBase_TaskCallback_TypeInfo;
-        if ( (SchedulerTaskBase_TaskCallback_c *)v60->klass != SchedulerTaskBase_TaskCallback_TypeInfo )
+        v84 = SchedulerTaskBase_TaskCallback_TypeInfo;
+        if ( (SchedulerTaskBase_TaskCallback_c *)v76->klass != SchedulerTaskBase_TaskCallback_TypeInfo )
           goto LABEL_103;
-        *(_QWORD *)p_StartCallback = v60;
-        if ( (SchedulerTaskBase_TaskCallback_c *)v60->klass != v64 )
+        *(_QWORD *)p_StartCallback = v76;
+        if ( (SchedulerTaskBase_TaskCallback_c *)v76->klass != v84 )
           goto LABEL_103;
       }
       else
       {
         *(_QWORD *)p_StartCallback = 0;
       }
-      sub_1C6B9AC((CGThumbnailListItem_o *)p_StartCallback, (int32_t)v60, v61, v62);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)p_StartCallback, (int32_t)v76, v77, v78, v79, v80, v81, v82);
       playingScanVoiceData = this->fields.playingScanVoiceData;
       if ( !playingScanVoiceData )
         goto LABEL_131;
       MoveCameraToPositionTask = System_String__IsNullOrEmpty(playingScanVoiceData->fields.vcName, 0);
       if ( (MoveCameraToPositionTask & 1) == 0 )
       {
-        v66 = this->fields.playingScanVoiceData;
-        if ( !v66 )
+        v86 = this->fields.playingScanVoiceData;
+        if ( !v86 )
           goto LABEL_131;
-        MoveCameraToPositionTask = System_String__IsNullOrEmpty(v66->fields.assetName, 0);
+        MoveCameraToPositionTask = System_String__IsNullOrEmpty(v86->fields.assetName, 0);
         if ( (MoveCameraToPositionTask & 1) == 0 )
         {
-          v67 = this->fields.playingScanVoiceData;
-          if ( !v67 )
+          v87 = this->fields.playingScanVoiceData;
+          if ( !v87 )
             goto LABEL_131;
-          assetName = v67->fields.assetName;
-          vcName = v67->fields.vcName;
+          assetName = v87->fields.assetName;
+          vcName = v87->fields.vcName;
           if ( !SoundManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
           SoundManager__stopVoice(assetName, vcName, 0.0, 0);
         }
       }
-      v70 = GameObjectExtensions__SafeGetComponent_object_(
+      v90 = GameObjectExtensions__SafeGetComponent_object_(
               *(UnityEngine_GameObject_o **)(v7 + 16),
-              (const MethodInfo_3194C14 *)Method_GameObjectExtensions_SafeGetComponent_SubmarineScanVoiceComponent___);
-      *(_QWORD *)(v7 + 24) = v70;
-      v71 = v7 + 24;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 24), (int32_t)v70, v72, v73);
+              (const MethodInfo_31A49B8 *)Method_GameObjectExtensions_SafeGetComponent_SubmarineScanVoiceComponent___);
+      *(_QWORD *)(v7 + 24) = v90;
+      v91 = v7 + 24;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)v90, v92, v93, v94, v95, v96, v97);
       if ( !*(_QWORD *)(v7 + 24) )
         goto LABEL_131;
-      v74 = *(System_String_o **)(*(_QWORD *)(v7 + 24) + 56LL);
-      v75 = (SchedulerTaskWaitLoadAsset_o *)sub_1C6BC54(SchedulerTaskWaitLoadAsset_TypeInfo);
-      SchedulerTaskWaitLoadAsset___ctor(v75, v74, 0);
-      v78 = v18->fields._items;
-      v79 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-      ++v18->fields._version;
-      if ( !v78 )
+      v98 = *(System_String_o **)(*(_QWORD *)(v7 + 24) + 56LL);
+      v99 = (SchedulerTaskWaitLoadAsset_o *)sub_1C715FC(SchedulerTaskWaitLoadAsset_TypeInfo);
+      SchedulerTaskWaitLoadAsset___ctor(v99, v98, 0);
+      v106 = v22->fields._items;
+      v107 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+      ++v22->fields._version;
+      if ( !v106 )
         goto LABEL_131;
-      v80 = v18->fields._size;
-      if ( (unsigned int)v80 >= LODWORD(v78->max_length) )
+      v108 = v22->fields._size;
+      if ( (unsigned int)v108 >= LODWORD(v106->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v18,
-          (Il2CppObject *)v75,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v79[4] + 192LL) + 112LL));
+          v22,
+          (Il2CppObject *)v99,
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v107[4] + 192LL) + 112LL));
       }
       else
       {
-        v81 = &v78->obj.klass + v80;
-        v18->fields._size = v80 + 1;
-        v81[4] = (Il2CppClass *)v75;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v81 + 4), (int32_t)v75, v76, v77);
+        v109 = &v106->obj.klass + v108;
+        v22->fields._size = v108 + 1;
+        v109[4] = (Il2CppClass *)v99;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v109 + 4), (int32_t)v99, v100, v101, v102, v103, v104, v105);
       }
-      if ( !*(_QWORD *)v71 )
+      if ( !*(_QWORD *)v91 )
         goto LABEL_131;
       MoveCameraToPositionTask = (__int64)this->fields.playingScanVoiceData;
       if ( !MoveCameraToPositionTask )
         goto LABEL_131;
-      v84 = *(_QWORD *)(*(_QWORD *)v71 + 56LL);
-      *(_QWORD *)(MoveCameraToPositionTask + 16) = v84;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(MoveCameraToPositionTask + 16), v84, v82, v83);
-      if ( !*(_QWORD *)v71
+      v116 = *(_QWORD *)(*(_QWORD *)v91 + 56LL);
+      *(_QWORD *)(MoveCameraToPositionTask + 16) = v116;
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)(MoveCameraToPositionTask + 16),
+        v116,
+        v110,
+        v111,
+        v112,
+        v113,
+        v114,
+        v115);
+      if ( !*(_QWORD *)v91
         || (MoveCameraToPositionTask = (__int64)this->fields.playingScanVoiceData) == 0
-        || (v87 = *(_QWORD *)(*(_QWORD *)v71 + 48LL),
-            *(_QWORD *)(MoveCameraToPositionTask + 24) = v87,
-            sub_1C6B9AC((CGThumbnailListItem_o *)(MoveCameraToPositionTask + 24), v87, v85, v86),
-            !*(_QWORD *)v71)
-        || (v88 = *(float *)(*(_QWORD *)v71 + 32LL),
-            p_StartCallback = sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo),
-            SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)p_StartCallback, v88, 0),
+        || (v123 = *(_QWORD *)(*(_QWORD *)v91 + 48LL),
+            *(_QWORD *)(MoveCameraToPositionTask + 24) = v123,
+            sub_1C71354(
+              (GrandQuestFolderBoardItem_o *)(MoveCameraToPositionTask + 24),
+              v123,
+              v117,
+              v118,
+              v119,
+              v120,
+              v121,
+              v122),
+            !*(_QWORD *)v91)
+        || (v124 = *(float *)(*(_QWORD *)v91 + 32LL),
+            p_StartCallback = sub_1C715FC(SchedulerTaskWaitTime_TypeInfo),
+            SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)p_StartCallback, v124, 0),
             !p_StartCallback) )
       {
 LABEL_131:
-        sub_1C6BC60(MoveCameraToPositionTask, v9);
+        sub_1C71608(MoveCameraToPositionTask, v9);
       }
-      v57 = (CGThumbnailListItem_o *)(p_StartCallback + 24);
-      v89 = *(System_Delegate_o **)(p_StartCallback + 24);
-      v90 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+      v73 = (GrandQuestFolderBoardItem_o *)(p_StartCallback + 24);
+      v125 = *(System_Delegate_o **)(p_StartCallback + 24);
+      v126 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
       SchedulerTaskBase_TaskCallback___ctor(
-        v90,
+        v126,
         (Il2CppObject *)v7,
         Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__1__,
         0);
-      v91 = System_Delegate__Combine(v89, (System_Delegate_o *)v90, 0);
-      v63 = v91;
-      if ( v91 )
+      v127 = System_Delegate__Combine(v125, (System_Delegate_o *)v126, 0);
+      v83 = v127;
+      if ( v127 )
       {
-        v94 = SchedulerTaskBase_TaskCallback_TypeInfo;
-        if ( (SchedulerTaskBase_TaskCallback_c *)v91->klass != SchedulerTaskBase_TaskCallback_TypeInfo )
+        v134 = SchedulerTaskBase_TaskCallback_TypeInfo;
+        if ( (SchedulerTaskBase_TaskCallback_c *)v127->klass != SchedulerTaskBase_TaskCallback_TypeInfo )
           goto LABEL_103;
-        v57->klass = (CGThumbnailListItem_c *)v91;
-        if ( (SchedulerTaskBase_TaskCallback_c *)v91->klass != v94 )
+        v73->klass = (GrandQuestFolderBoardItem_c *)v127;
+        if ( (SchedulerTaskBase_TaskCallback_c *)v127->klass != v134 )
           goto LABEL_103;
       }
       else
       {
-        v57->klass = 0;
+        v73->klass = 0;
       }
-      sub_1C6B9AC((CGThumbnailListItem_o *)(p_StartCallback + 24), (int32_t)v91, v92, v93);
-      v97 = v18->fields._items;
-      v98 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-      ++v18->fields._version;
-      if ( !v97 )
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)(p_StartCallback + 24),
+        (int32_t)v127,
+        v128,
+        v129,
+        v130,
+        v131,
+        v132,
+        v133);
+      v141 = v22->fields._items;
+      v142 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+      ++v22->fields._version;
+      if ( !v141 )
         goto LABEL_131;
-      v99 = v18->fields._size;
-      if ( (unsigned int)v99 >= LODWORD(v97->max_length) )
+      v143 = v22->fields._size;
+      if ( (unsigned int)v143 >= LODWORD(v141->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
-          v18,
+          v22,
           (Il2CppObject *)p_StartCallback,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v98[4] + 192LL) + 112LL));
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v142[4] + 192LL) + 112LL));
       }
       else
       {
-        v100 = &v97->obj.klass + v99;
-        v18->fields._size = v99 + 1;
-        v100[4] = (Il2CppClass *)p_StartCallback;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v100 + 4), p_StartCallback, v95, v96);
+        v144 = &v141->obj.klass + v143;
+        v22->fields._size = v143 + 1;
+        v144[4] = (Il2CppClass *)p_StartCallback;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v144 + 4), p_StartCallback, v135, v136, v137, v138, v139, v140);
       }
-      SelectedPanelEffecFinishTime = SubmarineScannerComponent__GetSelectedPanelEffecFinishTime(Component_object, v101);
-      p_StartCallback = sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
+      SelectedPanelEffecFinishTime = SubmarineScannerComponent__GetSelectedPanelEffecFinishTime(Component_object, v145);
+      p_StartCallback = sub_1C715FC(SchedulerTaskWaitTime_TypeInfo);
       SchedulerTaskWaitTime___ctor((SchedulerTaskWaitTime_o *)p_StartCallback, SelectedPanelEffecFinishTime, 0);
       if ( !p_StartCallback )
         goto LABEL_131;
-      v57 = (CGThumbnailListItem_o *)(p_StartCallback + 32);
-      v103 = *(System_Delegate_o **)(p_StartCallback + 32);
-      v104 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+      v73 = (GrandQuestFolderBoardItem_o *)(p_StartCallback + 32);
+      v147 = *(System_Delegate_o **)(p_StartCallback + 32);
+      v148 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
       SchedulerTaskBase_TaskCallback___ctor(
-        v104,
+        v148,
         (Il2CppObject *)v7,
         Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__2__,
         0);
-      v105 = System_Delegate__Combine(v103, (System_Delegate_o *)v104, 0);
-      v63 = v105;
-      if ( v105 )
+      v149 = System_Delegate__Combine(v147, (System_Delegate_o *)v148, 0);
+      v83 = v149;
+      if ( v149 )
       {
-        v108 = SchedulerTaskBase_TaskCallback_TypeInfo;
-        if ( (SchedulerTaskBase_TaskCallback_c *)v105->klass != SchedulerTaskBase_TaskCallback_TypeInfo )
+        v156 = SchedulerTaskBase_TaskCallback_TypeInfo;
+        if ( (SchedulerTaskBase_TaskCallback_c *)v149->klass != SchedulerTaskBase_TaskCallback_TypeInfo )
           goto LABEL_103;
-        v57->klass = (CGThumbnailListItem_c *)v105;
-        if ( (SchedulerTaskBase_TaskCallback_c *)v105->klass != v108 )
+        v73->klass = (GrandQuestFolderBoardItem_c *)v149;
+        if ( (SchedulerTaskBase_TaskCallback_c *)v149->klass != v156 )
           goto LABEL_103;
       }
       else
       {
-        v57->klass = 0;
+        v73->klass = 0;
       }
-      sub_1C6B9AC((CGThumbnailListItem_o *)(p_StartCallback + 32), (int32_t)v105, v106, v107);
+      sub_1C71354(
+        (GrandQuestFolderBoardItem_o *)(p_StartCallback + 32),
+        (int32_t)v149,
+        v150,
+        v151,
+        v152,
+        v153,
+        v154,
+        v155);
       *(_BYTE *)(p_StartCallback + 16) = 1;
-      JumpDuration = SubmarineScannerComponent__GetJumpDuration(Component_object, v109);
-      if ( !byte_4CAFC0B )
+      JumpDuration = SubmarineScannerComponent__GetJumpDuration(Component_object, v157);
+      if ( !byte_4CC0D0B )
       {
-        sub_1C6BA08(&System_Math_TypeInfo);
-        byte_4CAFC0B = 1;
+        sub_1C713B0(&System_Math_TypeInfo);
+        byte_4CC0D0B = 1;
       }
-      v112 = value.n64_u32[0];
-      v113.n64_u64[0] = vsub_f32(value, (float32x2_t)__PAIR64__(LODWORD(y), LODWORD(x))).n64_u64[0];
+      v160 = value.n64_u32[0];
+      v161.n64_u64[0] = vsub_f32(value, (float32x2_t)__PAIR64__(LODWORD(y), LODWORD(x))).n64_u64[0];
       if ( !System_Math_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-        v112 = value.n64_u32[0];
+        v160 = value.n64_u32[0];
       }
       mapCamera = this->fields.mapCamera;
       position.fields.value.fields.y = 0.0;
-      LODWORD(v179.fields.value.fields.y) = Method_System_Nullable_Vector2___ctor__;
-      *(_QWORD *)&v179.fields.hasValue = &position;
-      v115 = v22;
+      LODWORD(v267.fields.value.fields.y) = Method_System_Nullable_Vector2___ctor__;
+      *(_QWORD *)&v267.fields.hasValue = &position;
+      v163 = v26;
       *(_QWORD *)&position.fields.hasValue = 0;
-      System_Nullable_Vector2____ctor(v179, *(UnityEngine_Vector2_o *)&v112, v110);
+      System_Nullable_Vector2____ctor(v267, *(UnityEngine_Vector2_o *)&v160, v158);
       p_size = (System_Nullable_float__o)&size;
       size = 0;
-      System_Nullable_float____ctor(p_size, 1.0, (const MethodInfo_392B698 *)Method_System_Nullable_float___ctor__);
-      v117 = (MapCameraPerformance_o *)sub_1C6BC54(MapCameraPerformance_TypeInfo);
-      v118 = size;
-      v119 = (SchedulerTaskBase_o *)v117;
-      MapCameraPerformance___ctor(v117, mapCamera, JumpDuration, position, v118, 0, 0);
-      v120 = *(UnityEngine_GameObject_o **)v39;
-      v121 = (SchedulerTaskMovePerformance_o *)sub_1C6BC54(SchedulerTaskMovePerformance_TypeInfo);
-      v184.fields.z = 0.0;
-      v183.fields.y = y;
-      v183.fields.x = x;
-      v183.fields.z = z;
-      LODWORD(v184.fields.x) = value.n64_u32[0];
-      v184.fields.y = v22;
-      v122 = (SchedulerTaskBase_o *)v121;
+      System_Nullable_float____ctor(p_size, 1.0, (const MethodInfo_393B43C *)Method_System_Nullable_float___ctor__);
+      v165 = (MapCameraPerformance_o *)sub_1C715FC(MapCameraPerformance_TypeInfo);
+      v166 = size;
+      v167 = (SchedulerTaskBase_o *)v165;
+      MapCameraPerformance___ctor(v165, mapCamera, JumpDuration, position, v166, 0, 0);
+      v168 = *(UnityEngine_GameObject_o **)v47;
+      v169 = (SchedulerTaskMovePerformance_o *)sub_1C715FC(SchedulerTaskMovePerformance_TypeInfo);
+      v272.fields.z = 0.0;
+      v271.fields.y = y;
+      v271.fields.x = x;
+      v271.fields.z = z;
+      LODWORD(v272.fields.x) = value.n64_u32[0];
+      v272.fields.y = v26;
+      v170 = (SchedulerTaskBase_o *)v169;
       SchedulerTaskMovePerformance___ctor(
-        v121,
-        v120,
-        v183,
-        v184,
-        sqrtf((float)((float)(0.0 - z) * (float)(0.0 - z)) + vaddv_f32(vmul_f32(v113, v113))) / JumpDuration,
+        v169,
+        v168,
+        v271,
+        v272,
+        sqrtf((float)((float)(0.0 - z) * (float)(0.0 - z)) + vaddv_f32(vmul_f32(v161, v161))) / JumpDuration,
         0,
         0);
-      MoveCameraToPositionTask = sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 2);
+      MoveCameraToPositionTask = sub_1C71458(SchedulerTaskBase___TypeInfo, 2);
       if ( !MoveCameraToPositionTask )
         goto LABEL_131;
-      v125 = (SchedulerTaskBase_array *)MoveCameraToPositionTask;
-      if ( v119 )
+      v177 = (SchedulerTaskBase_array *)MoveCameraToPositionTask;
+      if ( v167 )
       {
-        MoveCameraToPositionTask = sub_1C6BB44(v119, *(_QWORD *)(*(_QWORD *)MoveCameraToPositionTask + 64LL));
+        MoveCameraToPositionTask = sub_1C714EC(v167, *(_QWORD *)(*(_QWORD *)MoveCameraToPositionTask + 64LL));
         if ( !MoveCameraToPositionTask )
           goto LABEL_133;
       }
-      if ( !LODWORD(v125->max_length) )
+      if ( !LODWORD(v177->max_length) )
         goto LABEL_132;
-      v125->m_Items[0] = v119;
-      sub_1C6B9AC((CGThumbnailListItem_o *)v125->m_Items, (int32_t)v119, v123, v124);
-      if ( v122 )
+      v177->m_Items[0] = v167;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)v177->m_Items, (int32_t)v167, v171, v172, v173, v174, v175, v176);
+      if ( v170 )
       {
-        MoveCameraToPositionTask = sub_1C6BB44(v122, v125->obj.klass->_1.element_class);
+        MoveCameraToPositionTask = sub_1C714EC(v170, v177->obj.klass->_1.element_class);
         if ( !MoveCameraToPositionTask )
           goto LABEL_133;
       }
-      if ( LODWORD(v125->max_length) <= 1 )
+      if ( LODWORD(v177->max_length) <= 1 )
         goto LABEL_132;
-      v125->m_Items[1] = v122;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v125->m_Items[1], (int32_t)v122, v126, v127);
-      this = (SubmarineMapManager_o *)sub_1C6BC54(SchedulerTaskParallel_TypeInfo);
-      SchedulerTaskParallel___ctor((SchedulerTaskParallel_o *)this, v125, 0);
-      AnimationComponent = SubmarineScannerComponent__get_AnimationComponent(Component_object, v128);
-      if ( (byte_4CB2BDA & 1) == 0 )
+      v177->m_Items[1] = v170;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&v177->m_Items[1], (int32_t)v170, v178, v179, v180, v181, v182, v183);
+      this = (SubmarineMapManager_o *)sub_1C715FC(SchedulerTaskParallel_TypeInfo);
+      SchedulerTaskParallel___ctor((SchedulerTaskParallel_o *)this, v177, 0);
+      AnimationComponent = SubmarineScannerComponent__get_AnimationComponent(Component_object, v184);
+      if ( (byte_4CC3CED & 1) == 0 )
       {
-        sub_1C6BA08(&StringLiteral_1/*""*/);
-        byte_4CB2BDA = 1;
+        sub_1C713B0(&StringLiteral_1/*""*/);
+        byte_4CC3CED = 1;
       }
       state = Component_object->fields.state;
       if ( state )
         p_name = &state->fields.name;
       else
         p_name = (System_String_o **)&StringLiteral_1/*""*/;
-      v132 = *p_name;
-      v39 = sub_1C6BC54(SchedulerTaskSimpleAnimation_TypeInfo);
-      SchedulerTaskSimpleAnimation___ctor((SchedulerTaskSimpleAnimation_o *)v39, AnimationComponent, v132, 0);
-      if ( !v39 )
+      v188 = *p_name;
+      v47 = sub_1C715FC(SchedulerTaskSimpleAnimation_TypeInfo);
+      SchedulerTaskSimpleAnimation___ctor((SchedulerTaskSimpleAnimation_o *)v47, AnimationComponent, v188, 0);
+      if ( !v47 )
         goto LABEL_131;
-      v57 = (CGThumbnailListItem_o *)(v39 + 32);
-      v133 = *(System_Delegate_o **)(v39 + 32);
-      v134 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+      v73 = (GrandQuestFolderBoardItem_o *)(v47 + 32);
+      v189 = *(System_Delegate_o **)(v47 + 32);
+      v190 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
       SchedulerTaskBase_TaskCallback___ctor(
-        v134,
+        v190,
         (Il2CppObject *)v7,
         Method_SubmarineMapManager___c__DisplayClass93_0__CreateScanTask_b__3__,
         0);
-      v135 = System_Delegate__Combine(v133, (System_Delegate_o *)v134, 0);
-      v63 = v135;
-      if ( !v135 )
+      v191 = System_Delegate__Combine(v189, (System_Delegate_o *)v190, 0);
+      v83 = v191;
+      if ( !v191 )
         goto LABEL_104;
-      v138 = SchedulerTaskBase_TaskCallback_TypeInfo;
-      if ( (SchedulerTaskBase_TaskCallback_c *)v135->klass == SchedulerTaskBase_TaskCallback_TypeInfo )
+      v198 = SchedulerTaskBase_TaskCallback_TypeInfo;
+      if ( (SchedulerTaskBase_TaskCallback_c *)v191->klass == SchedulerTaskBase_TaskCallback_TypeInfo )
       {
-        v57->klass = (CGThumbnailListItem_c *)v135;
-        if ( (SchedulerTaskBase_TaskCallback_c *)v135->klass == v138 )
+        v73->klass = (GrandQuestFolderBoardItem_c *)v191;
+        if ( (SchedulerTaskBase_TaskCallback_c *)v191->klass == v198 )
         {
 LABEL_105:
-          sub_1C6B9AC(v57, (int32_t)v63, v136, v137);
-          MoveCameraToPositionTask = sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 2);
+          sub_1C71354(v73, (int32_t)v83, v192, v193, v194, v195, v196, v197);
+          MoveCameraToPositionTask = sub_1C71458(SchedulerTaskBase___TypeInfo, 2);
           if ( !MoveCameraToPositionTask )
             goto LABEL_131;
-          v139 = MoveCameraToPositionTask;
-          MoveCameraToPositionTask = sub_1C6BB44(v39, *(_QWORD *)(*(_QWORD *)MoveCameraToPositionTask + 64LL));
+          v199 = MoveCameraToPositionTask;
+          MoveCameraToPositionTask = sub_1C714EC(v47, *(_QWORD *)(*(_QWORD *)MoveCameraToPositionTask + 64LL));
           if ( MoveCameraToPositionTask )
           {
-            if ( !*(_DWORD *)(v139 + 24) )
+            if ( !*(_DWORD *)(v199 + 24) )
               goto LABEL_132;
-            *(_QWORD *)(v139 + 32) = v39;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v139 + 32), v39, v140, v141);
-            MoveCameraToPositionTask = sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 2);
+            *(_QWORD *)(v199 + 32) = v47;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v199 + 32), v47, v200, v201, v202, v203, v204, v205);
+            MoveCameraToPositionTask = sub_1C71458(SchedulerTaskBase___TypeInfo, 2);
             if ( !MoveCameraToPositionTask )
               goto LABEL_131;
-            v142 = MoveCameraToPositionTask;
-            MoveCameraToPositionTask = sub_1C6BB44(v173, *(_QWORD *)(*(_QWORD *)MoveCameraToPositionTask + 64LL));
+            v206 = MoveCameraToPositionTask;
+            MoveCameraToPositionTask = sub_1C714EC(v261, *(_QWORD *)(*(_QWORD *)MoveCameraToPositionTask + 64LL));
             if ( MoveCameraToPositionTask )
             {
-              if ( !*(_DWORD *)(v142 + 24) )
+              if ( !*(_DWORD *)(v206 + 24) )
                 goto LABEL_132;
-              *(_QWORD *)(v142 + 32) = v173;
-              sub_1C6B9AC((CGThumbnailListItem_o *)(v142 + 32), (int32_t)v173, v143, v144);
-              if ( !this || (MoveCameraToPositionTask = sub_1C6BB44(this, *(_QWORD *)(*(_QWORD *)v142 + 64LL))) != 0 )
+              *(_QWORD *)(v206 + 32) = v261;
+              sub_1C71354((GrandQuestFolderBoardItem_o *)(v206 + 32), (int32_t)v261, v207, v208, v209, v210, v211, v212);
+              if ( !this || (MoveCameraToPositionTask = sub_1C714EC(this, *(_QWORD *)(*(_QWORD *)v206 + 64LL))) != 0 )
               {
-                if ( *(_DWORD *)(v142 + 24) <= 1u )
+                if ( *(_DWORD *)(v206 + 24) <= 1u )
                   goto LABEL_132;
-                *(_QWORD *)(v142 + 40) = this;
-                sub_1C6B9AC((CGThumbnailListItem_o *)(v142 + 40), (int32_t)this, v145, v146);
-                v147 = (SchedulerTaskOrthostichy_o *)sub_1C6BC54(SchedulerTaskOrthostichy_TypeInfo);
-                SchedulerTaskOrthostichy___ctor(v147, (SchedulerTaskBase_array *)v142, 0);
-                if ( !v147 || (MoveCameraToPositionTask = sub_1C6BB44(v147, *(_QWORD *)(*(_QWORD *)v139 + 64LL))) != 0 )
+                *(_QWORD *)(v206 + 40) = this;
+                sub_1C71354(
+                  (GrandQuestFolderBoardItem_o *)(v206 + 40),
+                  (int32_t)this,
+                  v213,
+                  v214,
+                  v215,
+                  v216,
+                  v217,
+                  v218);
+                v219 = (SchedulerTaskOrthostichy_o *)sub_1C715FC(SchedulerTaskOrthostichy_TypeInfo);
+                SchedulerTaskOrthostichy___ctor(v219, (SchedulerTaskBase_array *)v206, 0);
+                if ( !v219 || (MoveCameraToPositionTask = sub_1C714EC(v219, *(_QWORD *)(*(_QWORD *)v199 + 64LL))) != 0 )
                 {
-                  if ( *(_DWORD *)(v139 + 24) > 1u )
+                  if ( *(_DWORD *)(v199 + 24) > 1u )
                   {
-                    *(_QWORD *)(v139 + 40) = v147;
-                    sub_1C6B9AC((CGThumbnailListItem_o *)(v139 + 40), (int32_t)v147, v148, v149);
-                    v150 = (SchedulerTaskParallel_o *)sub_1C6BC54(SchedulerTaskParallel_TypeInfo);
-                    SchedulerTaskParallel___ctor(v150, (SchedulerTaskBase_array *)v139, 0);
-                    if ( v150 )
+                    *(_QWORD *)(v199 + 40) = v219;
+                    sub_1C71354(
+                      (GrandQuestFolderBoardItem_o *)(v199 + 40),
+                      (int32_t)v219,
+                      v220,
+                      v221,
+                      v222,
+                      v223,
+                      v224,
+                      v225);
+                    v226 = (SchedulerTaskParallel_o *)sub_1C715FC(SchedulerTaskParallel_TypeInfo);
+                    SchedulerTaskParallel___ctor(v226, (SchedulerTaskBase_array *)v199, 0);
+                    if ( v226 )
                     {
-                      v150->fields.NonBlocking = 1;
+                      v226->fields.NonBlocking = 1;
                       TimeToStartOpenPanel = SubmarineScannerComponent__GetTimeToStartOpenPanel(Component_object, v9);
-                      v152 = (SchedulerTaskWaitTime_o *)sub_1C6BC54(SchedulerTaskWaitTime_TypeInfo);
-                      SchedulerTaskWaitTime___ctor(v152, TimeToStartOpenPanel, 0);
-                      v155 = v18->fields._items;
-                      v156 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-                      ++v18->fields._version;
-                      if ( v155 )
+                      v228 = (SchedulerTaskWaitTime_o *)sub_1C715FC(SchedulerTaskWaitTime_TypeInfo);
+                      SchedulerTaskWaitTime___ctor(v228, TimeToStartOpenPanel, 0);
+                      v235 = v22->fields._items;
+                      v236 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+                      ++v22->fields._version;
+                      if ( v235 )
                       {
-                        v157 = v18->fields._size;
-                        if ( (unsigned int)v157 >= LODWORD(v155->max_length) )
+                        v237 = v22->fields._size;
+                        if ( (unsigned int)v237 >= LODWORD(v235->max_length) )
                         {
                           System_Collections_Generic_List_object___AddWithResize(
-                            v18,
+                            v22,
                             (Il2CppObject *)p_StartCallback,
-                            *(const MethodInfo_3800974 **)(*(_QWORD *)(v156[4] + 192LL) + 112LL));
+                            *(const MethodInfo_3810718 **)(*(_QWORD *)(v236[4] + 192LL) + 112LL));
                         }
                         else
                         {
-                          v158 = &v155->obj.klass + v157;
-                          v18->fields._size = v157 + 1;
-                          v158[4] = (Il2CppClass *)p_StartCallback;
-                          sub_1C6B9AC((CGThumbnailListItem_o *)(v158 + 4), p_StartCallback, v153, v154);
+                          v238 = &v235->obj.klass + v237;
+                          v22->fields._size = v237 + 1;
+                          v238[4] = (Il2CppClass *)p_StartCallback;
+                          sub_1C71354(
+                            (GrandQuestFolderBoardItem_o *)(v238 + 4),
+                            p_StartCallback,
+                            v229,
+                            v230,
+                            v231,
+                            v232,
+                            v233,
+                            v234);
                         }
-                        v161 = v18->fields._items;
-                        v162 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-                        ++v18->fields._version;
-                        if ( v161 )
+                        v245 = v22->fields._items;
+                        v246 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+                        ++v22->fields._version;
+                        if ( v245 )
                         {
-                          v163 = v18->fields._size;
-                          if ( (unsigned int)v163 >= LODWORD(v161->max_length) )
+                          v247 = v22->fields._size;
+                          if ( (unsigned int)v247 >= LODWORD(v245->max_length) )
                           {
                             System_Collections_Generic_List_object___AddWithResize(
-                              v18,
-                              (Il2CppObject *)v150,
-                              *(const MethodInfo_3800974 **)(*(_QWORD *)(v162[4] + 192LL) + 112LL));
+                              v22,
+                              (Il2CppObject *)v226,
+                              *(const MethodInfo_3810718 **)(*(_QWORD *)(v246[4] + 192LL) + 112LL));
                           }
                           else
                           {
-                            v164 = &v161->obj.klass + v163;
-                            v18->fields._size = v163 + 1;
-                            v164[4] = (Il2CppClass *)v150;
-                            sub_1C6B9AC((CGThumbnailListItem_o *)(v164 + 4), (int32_t)v150, v159, v160);
+                            v248 = &v245->obj.klass + v247;
+                            v22->fields._size = v247 + 1;
+                            v248[4] = (Il2CppClass *)v226;
+                            sub_1C71354(
+                              (GrandQuestFolderBoardItem_o *)(v248 + 4),
+                              (int32_t)v226,
+                              v239,
+                              v240,
+                              v241,
+                              v242,
+                              v243,
+                              v244);
                           }
-                          v167 = v18->fields._items;
-                          v168 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-                          ++v18->fields._version;
-                          if ( v167 )
+                          v255 = v22->fields._items;
+                          v256 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+                          ++v22->fields._version;
+                          if ( v255 )
                           {
-                            v169 = v18->fields._size;
-                            if ( (unsigned int)v169 >= LODWORD(v167->max_length) )
+                            v257 = v22->fields._size;
+                            if ( (unsigned int)v257 >= LODWORD(v255->max_length) )
                             {
                               System_Collections_Generic_List_object___AddWithResize(
-                                v18,
-                                (Il2CppObject *)v152,
-                                *(const MethodInfo_3800974 **)(*(_QWORD *)(v168[4] + 192LL) + 112LL));
+                                v22,
+                                (Il2CppObject *)v228,
+                                *(const MethodInfo_3810718 **)(*(_QWORD *)(v256[4] + 192LL) + 112LL));
                             }
                             else
                             {
-                              v170 = &v167->obj.klass + v169;
-                              v18->fields._size = v169 + 1;
-                              v170[4] = (Il2CppClass *)v152;
-                              sub_1C6B9AC((CGThumbnailListItem_o *)(v170 + 4), (int32_t)v152, v165, v166);
+                              v258 = &v255->obj.klass + v257;
+                              v22->fields._size = v257 + 1;
+                              v258[4] = (Il2CppClass *)v228;
+                              sub_1C71354(
+                                (GrandQuestFolderBoardItem_o *)(v258 + 4),
+                                (int32_t)v228,
+                                v249,
+                                v250,
+                                v251,
+                                v252,
+                                v253,
+                                v254);
                             }
-                            return (System_Collections_Generic_List_SchedulerTaskBase__o *)v18;
+                            return (System_Collections_Generic_List_SchedulerTaskBase__o *)v22;
                           }
                         }
                       }
@@ -3650,24 +4018,24 @@ LABEL_105:
                     goto LABEL_131;
                   }
 LABEL_132:
-                  sub_1C6BC68(MoveCameraToPositionTask);
+                  sub_1C71610(MoveCameraToPositionTask);
                 }
               }
             }
           }
 LABEL_133:
-          v172 = sub_1C6BC84();
-          sub_1C6BB30(v172, 0);
+          v260 = sub_1C7162C();
+          sub_1C714D8(v260, 0);
         }
       }
 LABEL_103:
-      sub_1C6BFFC(v63);
+      sub_1C719A4(v83);
 LABEL_104:
-      v57->klass = (CGThumbnailListItem_c *)v63;
+      v73->klass = (GrandQuestFolderBoardItem_c *)v83;
       goto LABEL_105;
     }
   }
-  return (System_Collections_Generic_List_SchedulerTaskBase__o *)v18;
+  return (System_Collections_Generic_List_SchedulerTaskBase__o *)v22;
 }
 
 
@@ -3691,71 +4059,83 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
   _BOOL8 IsPanelSatisfyCommonReleaseCond; // x0
   __int64 v16; // x1
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  struct SubmarineMapDataManager_o *v19; // x8
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  struct SubmarineMapDataManager_o *v23; // x8
   float32x2_t *PositionCalculator_k__BackingField; // x8
   struct System_Object_array *items; // x8
-  _QWORD *v22; // x9
+  _QWORD *v26; // x9
   __int64 size; // x10
-  Il2CppClass **v24; // x0
-  System_Object_array *v25; // x0
-  const MethodInfo *v26; // x2
-  int32x2_t v27; // d1
-  struct SubmarineMapDataManager_o *v28; // x8
+  Il2CppClass **v28; // x0
+  System_Object_array *v29; // x0
+  const MethodInfo *v30; // x2
+  int32x2_t v31; // d1
+  struct SubmarineMapDataManager_o *v32; // x8
   struct SubmarineSettingsManager_o *Settings_k__BackingField; // x8
-  Il2CppObject *v30; // x22
-  unsigned __int64 v31; // d0 OVERLAPPED
-  float v32; // s2
-  int v33; // s1
-  int32_t v34; // w2
-  const MethodInfo *v35; // x3
-  struct System_Object_array *v36; // x8
-  _QWORD *v37; // x9
-  __int64 v38; // x10
-  SchedulerTaskBase_o *v39; // x1
-  Il2CppClass **v40; // x0
-  int32_t v41; // w2
-  const MethodInfo *v42; // x3
-  struct System_Object_array *v43; // x8
-  _QWORD *v44; // x9
-  __int64 v45; // x10
-  Il2CppClass **v46; // x0
-  System_Collections_Generic_List_Enumerator_object__o v48; // [xsp+8h] [xbp-A8h] BYREF
-  System_Collections_Generic_List_Enumerator_object__o v49; // [xsp+20h] [xbp-90h] BYREF
+  Il2CppObject *v34; // x22
+  unsigned __int64 v35; // d0 OVERLAPPED
+  float v36; // s2
+  int v37; // s1
+  int32_t v38; // w2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  int32_t v41; // w5
+  int64_t v42; // x6
+  System_String_o *v43; // x7
+  struct System_Object_array *v44; // x8
+  _QWORD *v45; // x9
+  __int64 v46; // x10
+  SchedulerTaskBase_o *v47; // x1
+  Il2CppClass **v48; // x0
+  int32_t v49; // w2
+  int32_t v50; // w3
+  System_String_o *v51; // x4
+  int32_t v52; // w5
+  int64_t v53; // x6
+  System_String_o *v54; // x7
+  struct System_Object_array *v55; // x8
+  _QWORD *v56; // x9
+  __int64 v57; // x10
+  Il2CppClass **v58; // x0
+  System_Collections_Generic_List_Enumerator_object__o v60; // [xsp+8h] [xbp-A8h] BYREF
+  System_Collections_Generic_List_Enumerator_object__o v61; // [xsp+20h] [xbp-90h] BYREF
 
-  if ( (byte_4CB2CA0 & 1) == 0 )
+  if ( (byte_4CC3DB3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__get_Count__);
-    sub_1C6BA08(&System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    byte_4CB2CA0 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__get_Count__);
+    sub_1C713B0(&System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    byte_4CC3DB3 = 1;
   }
-  memset(&v49, 0, sizeof(v49));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  memset(&v61, 0, sizeof(v61));
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-  if ( !byte_4CAFC09 )
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+  if ( !byte_4CC0D09 )
   {
-    sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC09 = 1;
+    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D09 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v5.n64_u64[0] = *(unsigned __int64 *)&static_fields->zeroVector.fields.x;
   z = static_fields->zeroVector.fields.z;
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SubmarineMapPanelData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SubmarineMapPanelData___ctor__);
   submarineData = this->fields.submarineData;
   if ( !submarineData )
     goto LABEL_34;
@@ -3763,34 +4143,34 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
   if ( !PanelDataList_k__BackingField )
     goto LABEL_34;
   System_Collections_Generic_List_object___GetEnumerator(
-    (System_Collections_Generic_List_Enumerator_T__o *)&v48,
+    (System_Collections_Generic_List_Enumerator_T__o *)&v60,
     (System_Collections_Generic_List_object__o *)PanelDataList_k__BackingField,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
-  v49 = v48;
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+  v61 = v60;
   while ( 1 )
   {
     v11 = System_Collections_Generic_List_Enumerator_object___MoveNext(
-            &v49,
-            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+            &v61,
+            (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
     if ( !v11 )
       break;
-    current = v49.fields._current;
-    if ( !v49.fields._current )
-      sub_1C6BC60(v11, v12);
-    if ( !LOBYTE(v49.fields._current[3].monitor) )
+    current = v61.fields._current;
+    if ( !v61.fields._current )
+      sub_1C71608(v11, v12);
+    if ( !LOBYTE(v61.fields._current[3].monitor) )
     {
       IsPanelSatisfyCommonReleaseCond = SubmarineMapDataManager__IsPanelSatisfyCommonReleaseCond(
-                                          (SubmarineMapPanelData_o *)v49.fields._current,
+                                          (SubmarineMapPanelData_o *)v61.fields._current,
                                           -1,
                                           v13);
       if ( IsPanelSatisfyCommonReleaseCond )
       {
-        v19 = this->fields.submarineData;
-        if ( !v19 )
-          sub_1C6BC60(IsPanelSatisfyCommonReleaseCond, v16);
-        PositionCalculator_k__BackingField = (float32x2_t *)v19->fields._PositionCalculator_k__BackingField;
+        v23 = this->fields.submarineData;
+        if ( !v23 )
+          sub_1C71608(IsPanelSatisfyCommonReleaseCond, v16);
+        PositionCalculator_k__BackingField = (float32x2_t *)v23->fields._PositionCalculator_k__BackingField;
         if ( !PositionCalculator_k__BackingField )
-          sub_1C6BC60(IsPanelSatisfyCommonReleaseCond, v16);
+          sub_1C71608(IsPanelSatisfyCommonReleaseCond, v16);
         z = z + 0.0;
         v5.n64_u64[0] = vadd_f32(
                           v5,
@@ -3805,104 +4185,104 @@ System_Collections_Generic_List_SchedulerTaskBase__o *SubmarineMapManager__Creat
                                     PositionCalculator_k__BackingField[3]))),
                               (float32x2_t)0x3F0000003F000000LL))).n64_u64[0];
         if ( !v7 )
-          sub_1C6BC60(IsPanelSatisfyCommonReleaseCond, v16);
+          sub_1C71608(IsPanelSatisfyCommonReleaseCond, v16);
         items = v7->fields._items;
-        v22 = Method_System_Collections_Generic_List_SubmarineMapPanelData__Add__;
+        v26 = Method_System_Collections_Generic_List_SubmarineMapPanelData__Add__;
         ++v7->fields._version;
         if ( !items )
-          sub_1C6BC60(IsPanelSatisfyCommonReleaseCond, v16);
+          sub_1C71608(IsPanelSatisfyCommonReleaseCond, v16);
         size = v7->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v7,
             current,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
         }
         else
         {
-          v24 = &items->obj.klass + size;
+          v28 = &items->obj.klass + size;
           v7->fields._size = size + 1;
-          v24[4] = (Il2CppClass *)current;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v24 + 4), (int32_t)current, v17, v18);
+          v28[4] = (Il2CppClass *)current;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v28 + 4), (int32_t)current, v17, v18, v19, v20, v21, v22);
         }
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
-    &v49,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+    &v61,
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
   if ( !v7 )
     goto LABEL_34;
   if ( v7->fields._size <= 0 )
     return (System_Collections_Generic_List_SchedulerTaskBase__o *)v3;
-  v25 = System_Collections_Generic_List_object___ToArray(
+  v29 = System_Collections_Generic_List_object___ToArray(
           v7,
-          (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_SubmarineMapPanelData__ToArray__);
+          (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__ToArray__);
   PanelDataList_k__BackingField = SubmarineMapManager__CreateOpenPanelsAndRevealSpotsTask(
                                     this,
-                                    (SubmarineMapPanelData_array *)v25,
-                                    v26);
-  v28 = this->fields.submarineData;
-  if ( !v28 )
+                                    (SubmarineMapPanelData_array *)v29,
+                                    v30);
+  v32 = this->fields.submarineData;
+  if ( !v32 )
     goto LABEL_34;
-  Settings_k__BackingField = v28->fields._Settings_k__BackingField;
+  Settings_k__BackingField = v32->fields._Settings_k__BackingField;
   if ( !Settings_k__BackingField )
     goto LABEL_34;
-  v30 = (Il2CppObject *)PanelDataList_k__BackingField;
-  v27.n64_f32[0] = (float)v7->fields._size;
-  v31 = vdiv_f32(v5, vdup_lane_s32(v27, 0)).n64_u64[0];
-  v32 = z / v27.n64_f32[0];
-  v33 = HIDWORD(v31);
+  v34 = (Il2CppObject *)PanelDataList_k__BackingField;
+  v31.n64_f32[0] = (float)v7->fields._size;
+  v35 = vdiv_f32(v5, vdup_lane_s32(v31, 0)).n64_u64[0];
+  v36 = z / v31.n64_f32[0];
+  v37 = HIDWORD(v35);
   PanelDataList_k__BackingField = SubmarineMapManager__CreateMoveCameraToPositionTask(
                                     this,
-                                    *(UnityEngine_Vector3_o *)&v31,
+                                    *(UnityEngine_Vector3_o *)&v35,
                                     1.0,
                                     Settings_k__BackingField->fields._OpenPanelCameraDuration_k__BackingField,
                                     v9);
   if ( !v3 )
     goto LABEL_34;
-  v36 = v3->fields._items;
-  v37 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+  v44 = v3->fields._items;
+  v45 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
   ++v3->fields._version;
-  if ( !v36 )
+  if ( !v44 )
     goto LABEL_34;
-  v38 = v3->fields._size;
-  v39 = PanelDataList_k__BackingField;
-  if ( (unsigned int)v38 >= LODWORD(v36->max_length) )
+  v46 = v3->fields._size;
+  v47 = PanelDataList_k__BackingField;
+  if ( (unsigned int)v46 >= LODWORD(v44->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v3,
       (Il2CppObject *)PanelDataList_k__BackingField,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v37[4] + 192LL) + 112LL));
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v45[4] + 192LL) + 112LL));
   }
   else
   {
-    v40 = &v36->obj.klass + v38;
-    v3->fields._size = v38 + 1;
-    v40[4] = (Il2CppClass *)v39;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v40 + 4), (int32_t)v39, v34, v35);
+    v48 = &v44->obj.klass + v46;
+    v3->fields._size = v46 + 1;
+    v48[4] = (Il2CppClass *)v47;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v48 + 4), (int32_t)v47, v38, v39, v40, v41, v42, v43);
   }
-  v43 = v3->fields._items;
-  v44 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+  v55 = v3->fields._items;
+  v56 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
   ++v3->fields._version;
-  if ( !v43 )
+  if ( !v55 )
 LABEL_34:
-    sub_1C6BC60(PanelDataList_k__BackingField, v9);
-  v45 = v3->fields._size;
-  if ( (unsigned int)v45 >= LODWORD(v43->max_length) )
+    sub_1C71608(PanelDataList_k__BackingField, v9);
+  v57 = v3->fields._size;
+  if ( (unsigned int)v57 >= LODWORD(v55->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       v3,
-      v30,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v44[4] + 192LL) + 112LL));
+      v34,
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v56[4] + 192LL) + 112LL));
   }
   else
   {
-    v46 = &v43->obj.klass + v45;
-    v3->fields._size = v45 + 1;
-    v46[4] = (Il2CppClass *)v30;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v46 + 4), (int32_t)v30, v41, v42);
+    v58 = &v55->obj.klass + v57;
+    v3->fields._size = v57 + 1;
+    v58[4] = (Il2CppClass *)v34;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v58 + 4), (int32_t)v34, v49, v50, v51, v52, v53, v54);
   }
   return (System_Collections_Generic_List_SchedulerTaskBase__o *)v3;
 }
@@ -3916,23 +4296,35 @@ void SubmarineMapManager__DestroyDialog(SubmarineMapManager_o *this, const Metho
   UnityEngine_Component_o *klass; // x0
   UnityEngine_Object_o *gameObject; // x21
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   struct SubmarineSelectScannerDialog_o **p_selectScannerDialog; // x20
   UnityEngine_Object_o *selectScannerDialog; // x21
-  UnityEngine_Object_o *v12; // x21
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  CGThumbnailListItem_o *p_newScannerDialog; // x19
-  UnityEngine_Object_o *v16; // x20
+  UnityEngine_Object_o *v16; // x21
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  GrandQuestFolderBoardItem_o *p_newScannerDialog; // x19
+  UnityEngine_Object_o *v24; // x20
   struct SubmarineNewScannerDialog_o *newScannerDialog; // t1
-  UnityEngine_Object_o *v18; // x20
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  UnityEngine_Object_o *v26; // x20
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
 
-  if ( (byte_4CB2C8A & 1) == 0 )
+  if ( (byte_4CC3D9D & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2C8A = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3D9D = 1;
   }
   p_scanConfirmDialog = &this->fields.scanConfirmDialog;
   scanConfirmDialog = (UnityEngine_Object_o *)this->fields.scanConfirmDialog;
@@ -3946,9 +4338,9 @@ void SubmarineMapManager__DestroyDialog(SubmarineMapManager_o *this, const Metho
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(klass, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(gameObject, 0);
+    UnityEngine_Object__Destroy_71724608(gameObject, 0);
     *p_scanConfirmDialog = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.scanConfirmDialog, 0, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.scanConfirmDialog, 0, v8, v9, v10, v11, v12, v13);
   }
   p_selectScannerDialog = &this->fields.selectScannerDialog;
   selectScannerDialog = (UnityEngine_Object_o *)this->fields.selectScannerDialog;
@@ -3959,33 +4351,33 @@ void SubmarineMapManager__DestroyDialog(SubmarineMapManager_o *this, const Metho
     klass = (UnityEngine_Component_o *)*p_selectScannerDialog;
     if ( !*p_selectScannerDialog )
       goto LABEL_25;
-    v12 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(klass, 0);
+    v16 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(klass, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(v12, 0);
+    UnityEngine_Object__Destroy_71724608(v16, 0);
     *p_selectScannerDialog = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.selectScannerDialog, 0, v13, v14);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.selectScannerDialog, 0, v17, v18, v19, v20, v21, v22);
   }
   newScannerDialog = this->fields.newScannerDialog;
-  p_newScannerDialog = (CGThumbnailListItem_o *)&this->fields.newScannerDialog;
-  v16 = (UnityEngine_Object_o *)newScannerDialog;
+  p_newScannerDialog = (GrandQuestFolderBoardItem_o *)&this->fields.newScannerDialog;
+  v24 = (UnityEngine_Object_o *)newScannerDialog;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  if ( UnityEngine_Object__op_Inequality(v16, 0, 0) )
+  if ( UnityEngine_Object__op_Inequality(v24, 0, 0) )
   {
     klass = (UnityEngine_Component_o *)p_newScannerDialog->klass;
     if ( p_newScannerDialog->klass )
     {
-      v18 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(klass, 0);
+      v26 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(klass, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71659676(v18, 0);
+      UnityEngine_Object__Destroy_71724608(v26, 0);
       p_newScannerDialog->klass = 0;
-      sub_1C6B9AC(p_newScannerDialog, 0, v19, v20);
+      sub_1C71354(p_newScannerDialog, 0, v27, v28, v29, v30, v31, v32);
       return;
     }
 LABEL_25:
-    sub_1C6BC60(klass, v5);
+    sub_1C71608(klass, v5);
   }
 }
 
@@ -3995,17 +4387,17 @@ void SubmarineMapManager__DestroyMapObjects(SubmarineMapManager_o *this, const M
   UnityEngine_Object_o *panelContainer; // x20
   const MethodInfo *v4; // x1
 
-  if ( (byte_4CB2C6D & 1) == 0 )
+  if ( (byte_4CC3D80 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2C6D = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3D80 = 1;
   }
   panelContainer = (UnityEngine_Object_o *)this->fields.panelContainer;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676(panelContainer, 0);
-  UnityEngine_Object__Destroy_71659676((UnityEngine_Object_o *)this->fields.gridLine, 0);
-  UnityEngine_Object__Destroy_71659676((UnityEngine_Object_o *)this->fields.effectContainer, 0);
+  UnityEngine_Object__Destroy_71724608(panelContainer, 0);
+  UnityEngine_Object__Destroy_71724608((UnityEngine_Object_o *)this->fields.gridLine, 0);
+  UnityEngine_Object__Destroy_71724608((UnityEngine_Object_o *)this->fields.effectContainer, 0);
   SubmarineMapManager__DestroyDialog(this, v4);
 }
 
@@ -4019,109 +4411,125 @@ void SubmarineMapManager__DoPerformancesByVariedCond(
   System_Collections_Generic_IEnumerable_T__o *HideEnemyOccupiedPanelTasks; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  System_Collections_Generic_List_object__o *v12; // x20
-  const MethodInfo *v13; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  System_Collections_Generic_List_object__o *v20; // x20
+  const MethodInfo *v21; // x2
   struct SubmarineMapDataManager_o *submarineData; // x8
   struct SubmarineQuestSaveInfo_o *BeforeQuestInfo_k__BackingField; // x8
-  int32_t v16; // w1
-  __int64 v17; // x22
-  SchedulerTaskBase_TaskCallback_o *v18; // x23
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
+  int32_t v24; // w1
+  __int64 v25; // x22
+  SchedulerTaskBase_TaskCallback_o *v26; // x23
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
+  int32_t v33; // w2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  int32_t v36; // w5
+  int64_t v37; // x6
+  System_String_o *v38; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v24; // x9
+  _QWORD *v40; // x9
   __int64 size; // x10
-  Il2CppClass **v26; // x0
+  Il2CppClass **v42; // x0
 
-  if ( (byte_4CB2C71 & 1) == 0 )
+  if ( (byte_4CC3D84 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
-    sub_1C6BA08(&SchedulerTaskNone_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass34_0__DoPerformancesByVariedCond_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass34_0_TypeInfo);
-    byte_4CB2C71 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+    sub_1C713B0(&SchedulerTaskNone_TypeInfo);
+    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass34_0__DoPerformancesByVariedCond_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass34_0_TypeInfo);
+    byte_4CC3D84 = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass34_0_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager___c__DisplayClass34_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass34_0___ctor((SubmarineMapManager___c__DisplayClass34_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_18;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = finishCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)finishCallback, v10, v11);
-  v12 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)finishCallback, v14, v15, v16, v17, v18, v19);
+  v20 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_SchedulerTaskBase__TypeInfo);
   System_Collections_Generic_List_object____ctor(
-    v12,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
+    v20,
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_SchedulerTaskBase___ctor__);
   submarineData = this->fields.submarineData;
   if ( !submarineData )
     goto LABEL_18;
   BeforeQuestInfo_k__BackingField = submarineData->fields._BeforeQuestInfo_k__BackingField;
   if ( !BeforeQuestInfo_k__BackingField )
     goto LABEL_18;
-  v16 = BeforeQuestInfo_k__BackingField->fields._IsQuestClear_k__BackingField
+  v24 = BeforeQuestInfo_k__BackingField->fields._IsQuestClear_k__BackingField
      || BeforeQuestInfo_k__BackingField->fields._IsQuestPhaseClear_k__BackingField
       ? BeforeQuestInfo_k__BackingField->fields._QuestId_k__BackingField
       : -1;
   HideEnemyOccupiedPanelTasks = (System_Collections_Generic_IEnumerable_T__o *)SubmarineMapManager__CreateHideEnemyOccupiedPanelTasks(
                                                                                  this,
-                                                                                 v16,
-                                                                                 v13);
-  if ( !v12 )
+                                                                                 v24,
+                                                                                 v21);
+  if ( !v20 )
     goto LABEL_18;
   System_Collections_Generic_List_object___AddRange(
-    v12,
+    v20,
     HideEnemyOccupiedPanelTasks,
-    (const MethodInfo_3800B80 *)Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
-  v17 = sub_1C6BC54(SchedulerTaskNone_TypeInfo);
-  SchedulerTaskNone___ctor((SchedulerTaskNone_o *)v17, 0, 0, 0);
-  v18 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+    (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
+  v25 = sub_1C715FC(SchedulerTaskNone_TypeInfo);
+  SchedulerTaskNone___ctor((SchedulerTaskNone_o *)v25, 0, 0, 0);
+  v26 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
-    v18,
+    v26,
     (Il2CppObject *)v5,
     Method_SubmarineMapManager___c__DisplayClass34_0__DoPerformancesByVariedCond_b__0__,
     0);
-  if ( !v17 )
+  if ( !v25 )
     goto LABEL_18;
-  *(_QWORD *)(v17 + 32) = v18;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 32), (int32_t)v18, v19, v20);
-  items = v12->fields._items;
-  v24 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
-  ++v12->fields._version;
+  *(_QWORD *)(v25 + 32) = v26;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v25 + 32), (int32_t)v26, v27, v28, v29, v30, v31, v32);
+  items = v20->fields._items;
+  v40 = Method_System_Collections_Generic_List_SchedulerTaskBase__Add__;
+  ++v20->fields._version;
   if ( !items )
     goto LABEL_18;
-  size = v12->fields._size;
+  size = v20->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
-      v12,
-      (Il2CppObject *)v17,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v24[4] + 192LL) + 112LL));
+      v20,
+      (Il2CppObject *)v25,
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
   }
   else
   {
-    v26 = &items->obj.klass + size;
-    v12->fields._size = size + 1;
-    v26[4] = (Il2CppClass *)v17;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v26 + 4), v17, v21, v22);
+    v42 = &items->obj.klass + size;
+    v20->fields._size = size + 1;
+    v42[4] = (Il2CppClass *)v25;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v42 + 4), v25, v33, v34, v35, v36, v37, v38);
   }
   HideEnemyOccupiedPanelTasks = (System_Collections_Generic_IEnumerable_T__o *)this->fields.taskScheduler;
   if ( !HideEnemyOccupiedPanelTasks )
 LABEL_18:
-    sub_1C6BC60(HideEnemyOccupiedPanelTasks, v7);
-  TaskScheduler__AddTask_44563340(
+    sub_1C71608(HideEnemyOccupiedPanelTasks, v7);
+  TaskScheduler__AddTask_44609668(
     (TaskScheduler_o *)HideEnemyOccupiedPanelTasks,
     0,
-    (System_Collections_Generic_List_SchedulerTaskBase__o *)v12,
+    (System_Collections_Generic_List_SchedulerTaskBase__o *)v20,
     0);
 }
 
@@ -4139,7 +4547,7 @@ void SubmarineMapManager__ExtractMapObjectFromAssetData(
   SubmarineMapManager__CreateAssetManagerIfNotExists(this, (const MethodInfo *)assetData);
   mapInfo = this->fields.mapInfo;
   if ( !mapInfo || (assetManager = this->fields.assetManager) == 0 )
-    sub_1C6BC60(assetManager, v6);
+    sub_1C71608(assetManager, v6);
   SubmarineMapAssetManager__LoadMapObject(assetManager, assetData, mapInfo->fields.mapId, v7);
 }
 
@@ -4147,12 +4555,16 @@ void SubmarineMapManager__ExtractMapObjectFromAssetData(
 void SubmarineMapManager__Finish(SubmarineMapManager_o *this, const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
-  const MethodInfo *v5; // x1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  const MethodInfo *v9; // x1
 
   this->fields.submarineData = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.submarineData, 0, v2, v3);
-  EventMapManagerBase__Finish((EventMapManagerBase_o *)this, v5);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.submarineData, 0, v2, v3, v4, v5, v6, v7);
+  EventMapManagerBase__Finish((EventMapManagerBase_o *)this, v9);
 }
 
 
@@ -4169,11 +4581,11 @@ SrcSpotBasePrefab_o *SubmarineMapManager__GetHomeSpot(SubmarineMapManager_o *thi
   unsigned int v11; // w23
   Il2CppObject *Component_object; // x21
 
-  if ( (byte_4CB2C83 & 1) == 0 )
+  if ( (byte_4CC3D96 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2C83 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3D96 = 1;
   }
   HasChild = (UnityEngine_GameObject_array *)GameObjectExtensions__HasChild(this->fields.rootSpotP, 0);
   v5 = 0;
@@ -4186,7 +4598,7 @@ SrcSpotBasePrefab_o *SubmarineMapManager__GetHomeSpot(SubmarineMapManager_o *thi
           (HasChild = GameObjectExtensions__GetChildren(this->fields.rootSpotP, 0, 0)) == 0) )
     {
 LABEL_27:
-      sub_1C6BC60(HasChild, v4);
+      sub_1C71608(HasChild, v4);
     }
     max_length = HasChild->max_length;
     v10 = HasChild;
@@ -4197,13 +4609,13 @@ LABEL_27:
       while ( 1 )
       {
         if ( v11 >= max_length )
-          sub_1C6BC68(HasChild);
+          sub_1C71610(HasChild);
         HasChild = (UnityEngine_GameObject_array *)v10->m_Items[v11];
         if ( !HasChild )
           goto LABEL_27;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)HasChild,
-                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
+                             (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_SrcSpotBasePrefab___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         HasChild = (UnityEngine_GameObject_array *)UnityEngine_Object__op_Equality(
@@ -4249,11 +4661,11 @@ bool SubmarineMapManager__HasSelfQuestAfterAction(SubmarineMapManager_o *this, c
   const MethodInfo *v8; // x1
 
   v3 = this;
-  if ( (byte_4CB2C70 & 1) == 0 )
+  if ( (byte_4CC3D83 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__get_Count__);
-    byte_4CB2C70 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__get_Count__);
+    byte_4CC3D83 = 1;
   }
   submarineData = v3->fields.submarineData;
   if ( !submarineData
@@ -4269,47 +4681,51 @@ bool SubmarineMapManager__HasSelfQuestAfterAction(SubmarineMapManager_o *this, c
         this = (SubmarineMapManager_o *)SubmarineMapManager__CreateSubsequentialOpenPanelTasks(v3, v8),
         !HideEnemyOccupiedPanelTasks) )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
   System_Collections_Generic_List_object___AddRange(
     HideEnemyOccupiedPanelTasks,
     (System_Collections_Generic_IEnumerable_T__o *)this,
-    (const MethodInfo_3800B80 *)Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
+    (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_SchedulerTaskBase__AddRange__);
   return HideEnemyOccupiedPanelTasks->fields._size > 0;
 }
 
 
 void SubmarineMapManager__HideScanObstacleEffect(SubmarineMapManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB2C90 & 1) == 0 )
+  if ( (byte_4CC3DA3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectScanObstaclePanelComponent___);
-    byte_4CB2C90 = 1;
+    sub_1C713B0(&Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectScanObstaclePanelComponent___);
+    byte_4CC3DA3 = 1;
   }
   SubmarineMapManager__ReturnEffectsToPool_object_(
     this,
     (ComponentPool_T__o *)this->fields.effectScanObstaclePanelObjPool,
-    (const MethodInfo_31EE818 *)Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectScanObstaclePanelComponent___);
+    (const MethodInfo_31FE5BC *)Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectScanObstaclePanelComponent___);
   this->fields.isShowScanObstacleEffect = 0;
 }
 
 
 void SubmarineMapManager__HideScanRange(SubmarineMapManager_o *this, const MethodInfo *method)
 {
-  CGThumbnailListItem_o *p_scanRangeNotificator; // x19
+  GrandQuestFolderBoardItem_o *p_scanRangeNotificator; // x19
   UnityEngine_Object_o *v4; // x20
   struct UnityEngine_GameObject_o *scanRangeNotificator; // t1
   UnityEngine_Object_o *klass; // x20
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
 
-  if ( (byte_4CB2C94 & 1) == 0 )
+  if ( (byte_4CC3DA7 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2C94 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3DA7 = 1;
   }
   scanRangeNotificator = this->fields.scanRangeNotificator;
-  p_scanRangeNotificator = (CGThumbnailListItem_o *)&this->fields.scanRangeNotificator;
+  p_scanRangeNotificator = (GrandQuestFolderBoardItem_o *)&this->fields.scanRangeNotificator;
   v4 = (UnityEngine_Object_o *)scanRangeNotificator;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -4318,39 +4734,39 @@ void SubmarineMapManager__HideScanRange(SubmarineMapManager_o *this, const Metho
     klass = (UnityEngine_Object_o *)p_scanRangeNotificator->klass;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71659676(klass, 0);
+    UnityEngine_Object__Destroy_71724608(klass, 0);
     p_scanRangeNotificator->klass = 0;
-    sub_1C6B9AC(p_scanRangeNotificator, 0, v7, v8);
+    sub_1C71354(p_scanRangeNotificator, 0, v7, v8, v9, v10, v11, v12);
   }
 }
 
 
 void SubmarineMapManager__HideScannableEffect(SubmarineMapManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB2C8E & 1) == 0 )
+  if ( (byte_4CC3DA1 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectScannablePanelComponent___);
-    byte_4CB2C8E = 1;
+    sub_1C713B0(&Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectScannablePanelComponent___);
+    byte_4CC3DA1 = 1;
   }
   SubmarineMapManager__ReturnEffectsToPool_object_(
     this,
     (ComponentPool_T__o *)this->fields.effectScannablePanelObjPool,
-    (const MethodInfo_31EE818 *)Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectScannablePanelComponent___);
+    (const MethodInfo_31FE5BC *)Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectScannablePanelComponent___);
   this->fields.isShowScannableEffect = 0;
 }
 
 
 void SubmarineMapManager__HideSelectedPanelEffect(SubmarineMapManager_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB2C92 & 1) == 0 )
+  if ( (byte_4CC3DA5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectSelectedPanelComponent___);
-    byte_4CB2C92 = 1;
+    sub_1C713B0(&Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectSelectedPanelComponent___);
+    byte_4CC3DA5 = 1;
   }
   SubmarineMapManager__ReturnEffectsToPool_object_(
     this,
     (ComponentPool_T__o *)this->fields.effectSelectedPanelObjPool,
-    (const MethodInfo_31EE818 *)Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectSelectedPanelComponent___);
+    (const MethodInfo_31FE5BC *)Method_SubmarineMapManager_ReturnEffectsToPool_SubmarineEffectSelectedPanelComponent___);
 }
 
 
@@ -4361,53 +4777,81 @@ void SubmarineMapManager__Initialize(SubmarineMapManager_o *this, const MethodIn
   SubmarineMapDataManager_o *v5; // x22
   const MethodInfo *v6; // x3
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  TaskScheduler_o *v9; // x20
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  TaskScheduler_o *v13; // x20
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   struct TaskScheduler_o *taskScheduler; // x20
-  System_Action_bool__o *v13; // x21
-  __int64 v14; // x0
-  __int64 v15; // x1
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  SubmarineMapManager_PlayingScanVoiceData_o *v18; // x20
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
+  System_Action_bool__o *v21; // x21
+  __int64 v22; // x0
+  __int64 v23; // x1
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
+  SubmarineMapManager_PlayingScanVoiceData_o *v30; // x20
+  int32_t v31; // w2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  int32_t v34; // w5
+  int64_t v35; // x6
+  System_String_o *v36; // x7
 
-  if ( (byte_4CB2C67 & 1) == 0 )
+  if ( (byte_4CC3D7A & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_bool__TypeInfo);
-    sub_1C6BA08(&SubmarineMapManager_PlayingScanVoiceData_TypeInfo);
-    sub_1C6BA08(&SubmarineMapDataManager_TypeInfo);
-    sub_1C6BA08(&TaskScheduler_TypeInfo);
-    byte_4CB2C67 = 1;
+    sub_1C713B0(&System_Action_bool__TypeInfo);
+    sub_1C713B0(&SubmarineMapManager_PlayingScanVoiceData_TypeInfo);
+    sub_1C713B0(&SubmarineMapDataManager_TypeInfo);
+    sub_1C713B0(&TaskScheduler_TypeInfo);
+    byte_4CC3D7A = 1;
   }
   mapInfo = this->fields.mapInfo;
   warInfo = this->fields.warInfo;
-  v5 = (SubmarineMapDataManager_o *)sub_1C6BC54(SubmarineMapDataManager_TypeInfo);
+  v5 = (SubmarineMapDataManager_o *)sub_1C715FC(SubmarineMapDataManager_TypeInfo);
   SubmarineMapDataManager___ctor(v5, mapInfo, warInfo, v6);
   this->fields.submarineData = v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.submarineData, (int32_t)v5, v7, v8);
-  v9 = (TaskScheduler_o *)sub_1C6BC54(TaskScheduler_TypeInfo);
-  TaskScheduler___ctor(v9, 0);
-  this->fields.taskScheduler = v9;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.taskScheduler, (int32_t)v9, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.submarineData, (int32_t)v5, v7, v8, v9, v10, v11, v12);
+  v13 = (TaskScheduler_o *)sub_1C715FC(TaskScheduler_TypeInfo);
+  TaskScheduler___ctor(v13, 0);
+  this->fields.taskScheduler = v13;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.taskScheduler, (int32_t)v13, v14, v15, v16, v17, v18, v19);
   taskScheduler = this->fields.taskScheduler;
-  v13 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
-  System_Action_bool____ctor(v13, (Il2CppObject *)this, (intptr_t)this->klass->vtable._30_SetAllTouchBlock.method, 0);
+  v21 = (System_Action_bool__o *)sub_1C715FC(System_Action_bool__TypeInfo);
+  System_Action_bool____ctor(v21, (Il2CppObject *)this, (intptr_t)this->klass->vtable._30_SetAllTouchBlock.method, 0);
   if ( !taskScheduler )
-    sub_1C6BC60(v14, v15);
-  taskScheduler->fields._AllTouchBlockMethod_k__BackingField = v13;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&taskScheduler->fields._AllTouchBlockMethod_k__BackingField,
-    (int32_t)v13,
-    v16,
-    v17);
-  v18 = (SubmarineMapManager_PlayingScanVoiceData_o *)sub_1C6BC54(SubmarineMapManager_PlayingScanVoiceData_TypeInfo);
-  SubmarineMapManager_PlayingScanVoiceData___ctor(v18, 0);
-  this->fields.playingScanVoiceData = v18;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.playingScanVoiceData, (int32_t)v18, v19, v20);
+    sub_1C71608(v22, v23);
+  taskScheduler->fields._AllTouchBlockMethod_k__BackingField = v21;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&taskScheduler->fields._AllTouchBlockMethod_k__BackingField,
+    (int32_t)v21,
+    v24,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29);
+  v30 = (SubmarineMapManager_PlayingScanVoiceData_o *)sub_1C715FC(SubmarineMapManager_PlayingScanVoiceData_TypeInfo);
+  SubmarineMapManager_PlayingScanVoiceData___ctor(v30, 0);
+  this->fields.playingScanVoiceData = v30;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.playingScanVoiceData,
+    (int32_t)v30,
+    v31,
+    v32,
+    v33,
+    v34,
+    v35,
+    v36);
 }
 
 
@@ -4426,32 +4870,40 @@ void SubmarineMapManager__LoadAssets(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  System_Action_o *v12; // x19
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  System_Action_o *v20; // x19
 
-  if ( (byte_4CB2C68 & 1) == 0 )
+  if ( (byte_4CC3D7B & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&AtlasManager_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass19_0__LoadAssets_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass19_0_TypeInfo);
-    byte_4CB2C68 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&AtlasManager_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass19_0__LoadAssets_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass19_0_TypeInfo);
+    byte_4CC3D7B = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass19_0_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager___c__DisplayClass19_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass19_0___ctor((SubmarineMapManager___c__DisplayClass19_0_o *)v5, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = finishCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)finishCallback, v10, v11);
-  v12 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v12, (Il2CppObject *)v5, Method_SubmarineMapManager___c__DisplayClass19_0__LoadAssets_b__0__, 0);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)finishCallback, v14, v15, v16, v17, v18, v19);
+  v20 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v20, (Il2CppObject *)v5, Method_SubmarineMapManager___c__DisplayClass19_0__LoadAssets_b__0__, 0);
   if ( !AtlasManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-  AtlasManager__LoadUISkin(v12, 5, 1, 0);
+  AtlasManager__LoadUISkin(v20, 5, 1, 0);
 }
 
 
@@ -4462,101 +4914,149 @@ void SubmarineMapManager__LoadPoolEffects(SubmarineMapManager_o *this, const Met
   UnityEngine_GameObject_o *EffectScannedPanelPrefab_k__BackingField; // x20
   ComponentPool_T__o *v5; // x21
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
-  struct SubmarineMapAssetManager_o *v8; // x8
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
+  struct SubmarineMapAssetManager_o *v12; // x8
   UnityEngine_GameObject_o *EffectScanObstaclePanelPrafab_k__BackingField; // x20
-  ComponentPool_T__o *v10; // x21
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  struct SubmarineMapAssetManager_o *v13; // x8
+  ComponentPool_T__o *v14; // x21
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  struct SubmarineMapAssetManager_o *v21; // x8
   UnityEngine_GameObject_o *EffectScannablePanelPrafab_k__BackingField; // x20
-  ComponentPool_T__o *v15; // x21
-  int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  struct SubmarineMapAssetManager_o *v18; // x8
+  ComponentPool_T__o *v23; // x21
+  int32_t v24; // w2
+  int32_t v25; // w3
+  System_String_o *v26; // x4
+  int32_t v27; // w5
+  int64_t v28; // x6
+  System_String_o *v29; // x7
+  struct SubmarineMapAssetManager_o *v30; // x8
   UnityEngine_GameObject_o *EffectSelectedPanelPrefab_k__BackingField; // x20
-  ComponentPool_T__o *v20; // x21
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
+  ComponentPool_T__o *v32; // x21
+  int32_t v33; // w2
+  int32_t v34; // w3
+  System_String_o *v35; // x4
+  int32_t v36; // w5
+  int64_t v37; // x6
+  System_String_o *v38; // x7
 
   v2 = this;
-  if ( (byte_4CB2C8B & 1) == 0 )
+  if ( (byte_4CC3D9E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ComponentPool_CommonEffectComponent__Preload__);
-    sub_1C6BA08(&Method_ComponentPool_SubmarineEffectScannablePanelComponent__Preload__);
-    sub_1C6BA08(&Method_ComponentPool_SubmarineEffectSelectedPanelComponent___ctor__);
-    sub_1C6BA08(&Method_ComponentPool_CommonEffectComponent___ctor__);
-    sub_1C6BA08(&Method_ComponentPool_SubmarineEffectScannablePanelComponent___ctor__);
-    sub_1C6BA08(&Method_ComponentPool_SubmarineEffectScanObstaclePanelComponent___ctor__);
-    sub_1C6BA08(&ComponentPool_SubmarineEffectScanObstaclePanelComponent__TypeInfo);
-    sub_1C6BA08(&ComponentPool_CommonEffectComponent__TypeInfo);
-    sub_1C6BA08(&ComponentPool_SubmarineEffectScannablePanelComponent__TypeInfo);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&ComponentPool_SubmarineEffectSelectedPanelComponent__TypeInfo);
-    byte_4CB2C8B = 1;
+    sub_1C713B0(&Method_ComponentPool_CommonEffectComponent__Preload__);
+    sub_1C713B0(&Method_ComponentPool_SubmarineEffectScannablePanelComponent__Preload__);
+    sub_1C713B0(&Method_ComponentPool_SubmarineEffectSelectedPanelComponent___ctor__);
+    sub_1C713B0(&Method_ComponentPool_CommonEffectComponent___ctor__);
+    sub_1C713B0(&Method_ComponentPool_SubmarineEffectScannablePanelComponent___ctor__);
+    sub_1C713B0(&Method_ComponentPool_SubmarineEffectScanObstaclePanelComponent___ctor__);
+    sub_1C713B0(&ComponentPool_SubmarineEffectScanObstaclePanelComponent__TypeInfo);
+    sub_1C713B0(&ComponentPool_CommonEffectComponent__TypeInfo);
+    sub_1C713B0(&ComponentPool_SubmarineEffectScannablePanelComponent__TypeInfo);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&ComponentPool_SubmarineEffectSelectedPanelComponent__TypeInfo);
+    byte_4CC3D9E = 1;
   }
   assetManager = v2->fields.assetManager;
   if ( !assetManager )
     goto LABEL_10;
   EffectScannedPanelPrefab_k__BackingField = assetManager->fields._EffectScannedPanelPrefab_k__BackingField;
-  v5 = (ComponentPool_T__o *)sub_1C6BC54(ComponentPool_CommonEffectComponent__TypeInfo);
+  v5 = (ComponentPool_T__o *)sub_1C715FC(ComponentPool_CommonEffectComponent__TypeInfo);
   ComponentPool_object____ctor(
     v5,
     EffectScannedPanelPrefab_k__BackingField,
     20,
-    (const MethodInfo_33D427C *)Method_ComponentPool_CommonEffectComponent___ctor__);
+    (const MethodInfo_33E4020 *)Method_ComponentPool_CommonEffectComponent___ctor__);
   v2->fields.effectScanedPanelObjPool = (struct ComponentPool_CommonEffectComponent__o *)v5;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.effectScanedPanelObjPool, (int32_t)v5, v6, v7);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v2->fields.effectScanedPanelObjPool,
+    (int32_t)v5,
+    v6,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11);
   this = (SubmarineMapManager_o *)v2->fields.effectScanedPanelObjPool;
   if ( !this )
     goto LABEL_10;
   ComponentPool_object___Preload(
     (ComponentPool_T__o *)this,
     9,
-    (const MethodInfo_33D4340 *)Method_ComponentPool_CommonEffectComponent__Preload__);
-  v8 = v2->fields.assetManager;
-  if ( !v8 )
+    (const MethodInfo_33E40E4 *)Method_ComponentPool_CommonEffectComponent__Preload__);
+  v12 = v2->fields.assetManager;
+  if ( !v12 )
     goto LABEL_10;
-  EffectScanObstaclePanelPrafab_k__BackingField = v8->fields._EffectScanObstaclePanelPrafab_k__BackingField;
-  v10 = (ComponentPool_T__o *)sub_1C6BC54(ComponentPool_SubmarineEffectScanObstaclePanelComponent__TypeInfo);
+  EffectScanObstaclePanelPrafab_k__BackingField = v12->fields._EffectScanObstaclePanelPrafab_k__BackingField;
+  v14 = (ComponentPool_T__o *)sub_1C715FC(ComponentPool_SubmarineEffectScanObstaclePanelComponent__TypeInfo);
   ComponentPool_object____ctor(
-    v10,
+    v14,
     EffectScanObstaclePanelPrafab_k__BackingField,
     20,
-    (const MethodInfo_33D427C *)Method_ComponentPool_SubmarineEffectScanObstaclePanelComponent___ctor__);
-  v2->fields.effectScanObstaclePanelObjPool = (struct ComponentPool_SubmarineEffectScanObstaclePanelComponent__o *)v10;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.effectScanObstaclePanelObjPool, (int32_t)v10, v11, v12);
-  v13 = v2->fields.assetManager;
-  if ( !v13 )
-    goto LABEL_10;
-  EffectScannablePanelPrafab_k__BackingField = v13->fields._EffectScannablePanelPrafab_k__BackingField;
-  v15 = (ComponentPool_T__o *)sub_1C6BC54(ComponentPool_SubmarineEffectScannablePanelComponent__TypeInfo);
-  ComponentPool_object____ctor(
+    (const MethodInfo_33E4020 *)Method_ComponentPool_SubmarineEffectScanObstaclePanelComponent___ctor__);
+  v2->fields.effectScanObstaclePanelObjPool = (struct ComponentPool_SubmarineEffectScanObstaclePanelComponent__o *)v14;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v2->fields.effectScanObstaclePanelObjPool,
+    (int32_t)v14,
     v15,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20);
+  v21 = v2->fields.assetManager;
+  if ( !v21 )
+    goto LABEL_10;
+  EffectScannablePanelPrafab_k__BackingField = v21->fields._EffectScannablePanelPrafab_k__BackingField;
+  v23 = (ComponentPool_T__o *)sub_1C715FC(ComponentPool_SubmarineEffectScannablePanelComponent__TypeInfo);
+  ComponentPool_object____ctor(
+    v23,
     EffectScannablePanelPrafab_k__BackingField,
     200,
-    (const MethodInfo_33D427C *)Method_ComponentPool_SubmarineEffectScannablePanelComponent___ctor__);
-  v2->fields.effectScannablePanelObjPool = (struct ComponentPool_SubmarineEffectScannablePanelComponent__o *)v15;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.effectScannablePanelObjPool, (int32_t)v15, v16, v17);
+    (const MethodInfo_33E4020 *)Method_ComponentPool_SubmarineEffectScannablePanelComponent___ctor__);
+  v2->fields.effectScannablePanelObjPool = (struct ComponentPool_SubmarineEffectScannablePanelComponent__o *)v23;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v2->fields.effectScannablePanelObjPool,
+    (int32_t)v23,
+    v24,
+    v25,
+    v26,
+    v27,
+    v28,
+    v29);
   this = (SubmarineMapManager_o *)v2->fields.effectScannablePanelObjPool;
   if ( !this
     || (ComponentPool_object___Preload(
           (ComponentPool_T__o *)this,
           50,
-          (const MethodInfo_33D4340 *)Method_ComponentPool_SubmarineEffectScannablePanelComponent__Preload__),
-        (v18 = v2->fields.assetManager) == 0) )
+          (const MethodInfo_33E40E4 *)Method_ComponentPool_SubmarineEffectScannablePanelComponent__Preload__),
+        (v30 = v2->fields.assetManager) == 0) )
   {
 LABEL_10:
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  EffectSelectedPanelPrefab_k__BackingField = v18->fields._EffectSelectedPanelPrefab_k__BackingField;
-  v20 = (ComponentPool_T__o *)sub_1C6BC54(ComponentPool_SubmarineEffectSelectedPanelComponent__TypeInfo);
+  EffectSelectedPanelPrefab_k__BackingField = v30->fields._EffectSelectedPanelPrefab_k__BackingField;
+  v32 = (ComponentPool_T__o *)sub_1C715FC(ComponentPool_SubmarineEffectSelectedPanelComponent__TypeInfo);
   ComponentPool_object____ctor(
-    v20,
+    v32,
     EffectSelectedPanelPrefab_k__BackingField,
     1,
-    (const MethodInfo_33D427C *)Method_ComponentPool_SubmarineEffectSelectedPanelComponent___ctor__);
-  v2->fields.effectSelectedPanelObjPool = (struct ComponentPool_SubmarineEffectSelectedPanelComponent__o *)v20;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v2->fields.effectSelectedPanelObjPool, (int32_t)v20, v21, v22);
+    (const MethodInfo_33E4020 *)Method_ComponentPool_SubmarineEffectSelectedPanelComponent___ctor__);
+  v2->fields.effectSelectedPanelObjPool = (struct ComponentPool_SubmarineEffectSelectedPanelComponent__o *)v32;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v2->fields.effectSelectedPanelObjPool,
+    (int32_t)v32,
+    v33,
+    v34,
+    v35,
+    v36,
+    v37,
+    v38);
 }
 
 
@@ -4578,7 +5078,7 @@ void SubmarineMapManager__OnAfterQuestAfterAction(
         SubmarineMapManager__ShowScanObstacleEffect(this, v8),
         (submarineData = this->fields.submarineData) == 0) )
   {
-    sub_1C6BC60(submarineData, finishCallback);
+    sub_1C71608(submarineData, finishCallback);
   }
   SubmarineMapDataManager__DeleteBeforeQuestInfo(submarineData, (const MethodInfo *)finishCallback);
   ActionExtensions__Call(finishCallback, 0);
@@ -4593,7 +5093,7 @@ void SubmarineMapManager__OnAfterSpotCreated(
   System_Collections_IEnumerator_o *v4; // x1
 
   v4 = SubmarineMapManager__CoOnAfterSpotCreated(this, finishCallback, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v4, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v4, 0);
 }
 
 
@@ -4606,34 +5106,42 @@ void SubmarineMapManager__OnBeforeQuestAfterAction(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  System_Action_o *v12; // x20
-  const MethodInfo *v13; // x2
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
+  System_Action_o *v20; // x20
+  const MethodInfo *v21; // x2
 
-  if ( (byte_4CB2C6B & 1) == 0 )
+  if ( (byte_4CC3D7E & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass25_0__OnBeforeQuestAfterAction_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass25_0_TypeInfo);
-    byte_4CB2C6B = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass25_0__OnBeforeQuestAfterAction_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass25_0_TypeInfo);
+    byte_4CC3D7E = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass25_0_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager___c__DisplayClass25_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass25_0___ctor((SubmarineMapManager___c__DisplayClass25_0_o *)v5, 0);
   if ( !v5 )
-    sub_1C6BC60(v6, v7);
+    sub_1C71608(v6, v7);
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = finishCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)finishCallback, v10, v11);
-  v12 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)finishCallback, v14, v15, v16, v17, v18, v19);
+  v20 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(
-    v12,
+    v20,
     (Il2CppObject *)v5,
     Method_SubmarineMapManager___c__DisplayClass25_0__OnBeforeQuestAfterAction_b__0__,
     0);
-  SubmarineMapManager__DoPerformancesByVariedCond(this, v12, v13);
+  SubmarineMapManager__DoPerformancesByVariedCond(this, v20, v21);
 }
 
 
@@ -4647,26 +5155,26 @@ void SubmarineMapManager__OnEndScan(SubmarineMapManager_o *this, const MethodInf
   System_Action_o *v8; // x22
   System_Collections_IEnumerator_o *v9; // x1
 
-  if ( (byte_4CB2C79 & 1) == 0 )
+  if ( (byte_4CC3D8C & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SingletonTemplate_QuestTree__get_Instance__);
-    sub_1C6BA08(&Method_SubmarineMapManager__OnEndScan_b__42_0__);
-    byte_4CB2C79 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SingletonTemplate_QuestTree__get_Instance__);
+    sub_1C713B0(&Method_SubmarineMapManager__OnEndScan_b__42_0__);
+    byte_4CC3D8C = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_QuestTree__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_QuestTree__get_Instance__);
   warInfo = this->fields.warInfo;
   if ( !warInfo
     || (v6 = (QuestTree_o *)Instance,
         warId = warInfo->fields.warId,
-        v8 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo),
+        v8 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo),
         System_Action___ctor(v8, (Il2CppObject *)this, Method_SubmarineMapManager__OnEndScan_b__42_0__, 0),
         !v6) )
   {
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   v9 = QuestTree__mfBaseTreeUpdateWithOpenCheck(v6, warId, v8, 0);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868((UnityEngine_MonoBehaviour_o *)this, v9, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v9, 0);
 }
 
 
@@ -4676,15 +5184,15 @@ void SubmarineMapManager__OnEveryActionEnd(SubmarineMapManager_o *this, const Me
   System_Action_o *v4; // x20
   const MethodInfo *v5; // x1
 
-  if ( (byte_4CB2C6C & 1) == 0 )
+  if ( (byte_4CC3D7F & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager__OnEveryActionEnd_b__27_0__);
-    byte_4CB2C6C = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager__OnEveryActionEnd_b__27_0__);
+    byte_4CC3D7F = 1;
   }
   if ( SubmarineMapManager__HasSelfQuestAfterAction(this, method) )
   {
-    v4 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v4 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v4, (Il2CppObject *)this, Method_SubmarineMapManager__OnEveryActionEnd_b__27_0__, 0);
     ((void (__fastcall *)(SubmarineMapManager_o *, System_Action_o *, const MethodInfo *))this->klass->vtable._23_OnBeforeQuestAfterAction.methodPtr)(
       this,
@@ -4709,69 +5217,77 @@ void SubmarineMapManager__OnScanDecided(
   __int64 eventId; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  __int64 v12; // x21
-  int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  const MethodInfo *v15; // x1
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  __int64 v16; // x21
+  int32_t v17; // w2
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
+  const MethodInfo *v23; // x1
   Il2CppObject *Instance; // x22
-  const MethodInfo *v17; // x1
-  NetworkManager_ResultCallbackFunc_o *v18; // x22
+  const MethodInfo *v25; // x1
+  NetworkManager_ResultCallbackFunc_o *v26; // x22
   Il2CppObject *Request_object; // x22
-  const MethodInfo *v20; // x1
+  const MethodInfo *v28; // x1
   struct MapControl_MapInfo_o *mapInfo; // x8
 
-  if ( (byte_4CB2C74 & 1) == 0 )
+  if ( (byte_4CC3D87 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_NetworkManager_getRequest_EventScanPanelMapRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C6BA08(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass37_0__OnScanDecided_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass37_0_TypeInfo);
-    byte_4CB2C74 = 1;
+    sub_1C713B0(&Method_NetworkManager_getRequest_EventScanPanelMapRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C713B0(&Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass37_0__OnScanDecided_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass37_0_TypeInfo);
+    byte_4CC3D87 = 1;
   }
-  v7 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass37_0_TypeInfo);
+  v7 = sub_1C715FC(SubmarineMapManager___c__DisplayClass37_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass37_0___ctor((SubmarineMapManager___c__DisplayClass37_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_11;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 32) = panelData;
-  v12 = v7 + 32;
+  v16 = v7 + 32;
   *(_DWORD *)(v7 + 24) = scanId;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)panelData, v13, v14);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)panelData, v17, v18, v19, v20, v21, v22);
   ((void (__fastcall *)(SubmarineMapManager_o *, __int64, const MethodInfo *))this->klass->vtable._30_SetAllTouchBlock.methodPtr)(
     this,
     1,
     this->klass->vtable._30_SetAllTouchBlock.method);
-  SubmarineMapManager__HideScannableEffect(this, v15);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
-  eventId = SubmarineMapManager__get_eventId(this, v17);
+  SubmarineMapManager__HideScannableEffect(this, v23);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_clsQuestCheck__get_Instance__);
+  eventId = SubmarineMapManager__get_eventId(this, v25);
   if ( !Instance )
     goto LABEL_11;
   clsQuestCheck__SaveEventQuestIdListPlayable((clsQuestCheck_o *)Instance, eventId, 0);
-  v18 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v26 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
-    v18,
+    v26,
     (Il2CppObject *)v7,
     Method_SubmarineMapManager___c__DisplayClass37_0__OnScanDecided_b__0__,
     0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
-                     v18,
-                     (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_EventScanPanelMapRequest___);
-  eventId = SubmarineMapManager__get_eventId(this, v20);
+                     v26,
+                     (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_EventScanPanelMapRequest___);
+  eventId = SubmarineMapManager__get_eventId(this, v28);
   mapInfo = this->fields.mapInfo;
-  if ( !mapInfo || !*(_QWORD *)v12 || !Request_object )
+  if ( !mapInfo || !*(_QWORD *)v16 || !Request_object )
 LABEL_11:
-    sub_1C6BC60(eventId, v9);
+    sub_1C71608(eventId, v9);
   EventScanPanelMapRequest__beginRequest(
     (EventScanPanelMapRequest_o *)Request_object,
     eventId,
     mapInfo->fields.mapId,
-    *(_DWORD *)(*(_QWORD *)v12 + 24LL),
+    *(_DWORD *)(*(_QWORD *)v16 + 24LL),
     *(_DWORD *)(v7 + 24),
     0);
 }
@@ -4790,228 +5306,244 @@ void SubmarineMapManager__OnScanPanelRequestFinished(
   EventSaveData_o *BeforeEventSubmarineSaveData_k__BackingField; // x0
   __int64 v13; // x1
   int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   struct System_String_o *value; // x8
-  EventSaveData_o *v17; // x19
+  EventSaveData_o *v21; // x19
   EventSaveData_c *klass; // x9
   const char *name; // x9
-  __int64 v20; // x10
-  __int64 v21; // x9
-  TerminalPramsManager_c *v22; // x0
-  EventSaveData_o *v23; // x20
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  __int64 v24; // x10
+  __int64 v25; // x9
   TerminalPramsManager_c *v26; // x0
-  CGThumbnailListItem_o *p_BeforeEventSubmarineSaveData_k__BackingField; // x0
-  TerminalPramsManager_c *v28; // x0
+  EventSaveData_o *v27; // x20
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  TerminalPramsManager_c *v34; // x0
+  GrandQuestFolderBoardItem_o *p_BeforeEventSubmarineSaveData_k__BackingField; // x0
+  TerminalPramsManager_c *v36; // x0
   System_String_array *ValueByArray; // x0
   int max_length; // w8
-  System_String_o **v31; // x9
-  System_String_o *v32; // x21
-  System_String_o **v33; // x9
-  System_String_o *v34; // x20
-  System_String_o **v35; // x8
-  System_String_o *v36; // x22
-  TerminalPramsManager_c *v37; // x0
-  struct EventSaveData_o *v38; // x23
-  System_String_o *v39; // x24
-  int32_t v40; // w2
-  const MethodInfo *v41; // x3
-  EventSaveData_c *v42; // x8
-  CGThumbnailListItem_c *namespaze; // x19
-  TerminalPramsManager_c *v44; // x0
-  CGThumbnailListItem_o *p_mResultEventPanelRewardInfos; // x0
-  System_String_c *v46; // x8
-  int v47; // [xsp+Ch] [xbp-34h] BYREF
+  System_String_o **v39; // x9
+  System_String_o *v40; // x21
+  System_String_o **v41; // x9
+  System_String_o *v42; // x20
+  System_String_o **v43; // x8
+  System_String_o *v44; // x22
+  TerminalPramsManager_c *v45; // x0
+  struct EventSaveData_o *v46; // x23
+  System_String_o *v47; // x24
+  int32_t v48; // w2
+  int32_t v49; // w3
+  System_String_o *v50; // x4
+  int32_t v51; // w5
+  int64_t v52; // x6
+  System_String_o *v53; // x7
+  EventSaveData_c *v54; // x8
+  GrandQuestFolderBoardItem_c *namespaze; // x19
+  TerminalPramsManager_c *v56; // x0
+  GrandQuestFolderBoardItem_o *p_mResultEventPanelRewardInfos; // x0
+  System_String_c *v58; // x8
+  int v59; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CB2C75 & 1) == 0 )
+  if ( (byte_4CC3D88 & 1) == 0 )
   {
-    sub_1C6BA08(&EventSaveData_TypeInfo);
-    sub_1C6BA08(&Method_JsonManager_DeserializeArray_EventScanPanelMapRequest_ResultData___);
-    sub_1C6BA08(&JsonManager_TypeInfo);
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    sub_1C6BA08(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
-    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
-    sub_1C6BA08(&StringLiteral_15801/*"["*/);
-    sub_1C6BA08(&StringLiteral_6633/*"False"*/);
-    sub_1C6BA08(&StringLiteral_16051/*"]"*/);
-    sub_1C6BA08(&StringLiteral_1115/*"0"*/);
-    byte_4CB2C75 = 1;
+    sub_1C713B0(&EventSaveData_TypeInfo);
+    sub_1C713B0(&Method_JsonManager_DeserializeArray_EventScanPanelMapRequest_ResultData___);
+    sub_1C713B0(&JsonManager_TypeInfo);
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    sub_1C713B0(&TitleInfoEventSubmarineStatusComponent_TypeInfo);
+    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
+    sub_1C713B0(&StringLiteral_15808/*"["*/);
+    sub_1C713B0(&StringLiteral_6635/*"False"*/);
+    sub_1C713B0(&StringLiteral_16058/*"]"*/);
+    sub_1C713B0(&StringLiteral_1115/*"0"*/);
+    byte_4CC3D88 = 1;
   }
-  v47 = 0;
-  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_22301/*"ng"*/, 0) )
+  v59 = 0;
+  if ( !System_String__op_Inequality(result, (System_String_o *)StringLiteral_22316/*"ng"*/, 0) )
   {
     SubmarineMapManager__OnEndScan(this, v9);
     return;
   }
   SubmarineMapManager__StartScanPerformance(this, scanId, panelData, v10);
-  v11 = (Il2CppObject *)System_String__Concat_64005056(
-                          (System_String_o *)StringLiteral_15801/*"["*/,
+  v11 = (Il2CppObject *)System_String__Concat_64069988(
+                          (System_String_o *)StringLiteral_15808/*"["*/,
                           result,
-                          (System_String_o *)StringLiteral_16051/*"]"*/,
+                          (System_String_o *)StringLiteral_16058/*"]"*/,
                           0);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
   BeforeEventSubmarineSaveData_k__BackingField = (EventSaveData_o *)JsonManager__DeserializeArray_object_(
                                                                       v11,
-                                                                      (const MethodInfo_31AB018 *)Method_JsonManager_DeserializeArray_EventScanPanelMapRequest_ResultData___);
+                                                                      (const MethodInfo_31BADBC *)Method_JsonManager_DeserializeArray_EventScanPanelMapRequest_ResultData___);
   if ( !BeforeEventSubmarineSaveData_k__BackingField )
     goto LABEL_70;
   value = BeforeEventSubmarineSaveData_k__BackingField->fields.value;
-  v17 = BeforeEventSubmarineSaveData_k__BackingField;
+  v21 = BeforeEventSubmarineSaveData_k__BackingField;
   if ( !value )
     return;
   if ( !(_DWORD)value )
 LABEL_71:
-    sub_1C6BC68(BeforeEventSubmarineSaveData_k__BackingField);
+    sub_1C71610(BeforeEventSubmarineSaveData_k__BackingField);
   klass = BeforeEventSubmarineSaveData_k__BackingField[1].klass;
   if ( !klass )
     goto LABEL_70;
   name = klass->_1.name;
   if ( name )
   {
-    v20 = *((_QWORD *)name + 3);
-    if ( v20 )
+    v24 = *((_QWORD *)name + 3);
+    if ( v24 )
     {
-      if ( !(_DWORD)v20 )
+      if ( !(_DWORD)v24 )
         goto LABEL_71;
-      v21 = *((_QWORD *)name + 4);
-      if ( v21 )
+      v25 = *((_QWORD *)name + 4);
+      if ( v25 )
       {
-        v47 = *(_QWORD *)(v21 + 32);
+        v59 = *(_QWORD *)(v25 + 32);
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        if ( !byte_4CB2CA8 )
+        if ( !byte_4CC3DBB )
         {
-          sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-          byte_4CB2CA8 = 1;
+          sub_1C713B0(&TerminalPramsManager_TypeInfo);
+          byte_4CC3DBB = 1;
         }
-        v22 = TerminalPramsManager_TypeInfo;
+        v26 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          v22 = TerminalPramsManager_TypeInfo;
-        }
-        if ( !v22->static_fields->_BeforeEventSubmarineSaveData_k__BackingField )
-        {
-          v23 = (EventSaveData_o *)sub_1C6BC54(EventSaveData_TypeInfo);
-          EventSaveData___ctor(v23, 0);
-          if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
-            j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_4CB2CA9 )
-          {
-            sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-            byte_4CB2CA9 = 1;
-          }
           v26 = TerminalPramsManager_TypeInfo;
+        }
+        if ( !v26->static_fields->_BeforeEventSubmarineSaveData_k__BackingField )
+        {
+          v27 = (EventSaveData_o *)sub_1C715FC(EventSaveData_TypeInfo);
+          EventSaveData___ctor(v27, 0);
+          if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
+            j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
+          if ( !byte_4CC3DBC )
+          {
+            sub_1C713B0(&TerminalPramsManager_TypeInfo);
+            byte_4CC3DBC = 1;
+          }
+          v34 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-            v26 = TerminalPramsManager_TypeInfo;
+            v34 = TerminalPramsManager_TypeInfo;
           }
-          p_BeforeEventSubmarineSaveData_k__BackingField = (CGThumbnailListItem_o *)&v26->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
-          p_BeforeEventSubmarineSaveData_k__BackingField->klass = (CGThumbnailListItem_c *)v23;
-          sub_1C6B9AC(p_BeforeEventSubmarineSaveData_k__BackingField, (int32_t)v23, v24, v25);
-          v22 = TerminalPramsManager_TypeInfo;
+          p_BeforeEventSubmarineSaveData_k__BackingField = (GrandQuestFolderBoardItem_o *)&v34->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
+          p_BeforeEventSubmarineSaveData_k__BackingField->klass = (GrandQuestFolderBoardItem_c *)v27;
+          sub_1C71354(p_BeforeEventSubmarineSaveData_k__BackingField, (int32_t)v27, v28, v29, v30, v31, v32, v33);
+          v26 = TerminalPramsManager_TypeInfo;
         }
-        if ( !v22->_2.cctor_finished )
-          j_il2cpp_runtime_class_init_0(v22);
-        if ( !byte_4CB2CA8 )
+        if ( !v26->_2.cctor_finished )
+          j_il2cpp_runtime_class_init_0(v26);
+        if ( !byte_4CC3DBB )
         {
-          sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-          byte_4CB2CA8 = 1;
+          sub_1C713B0(&TerminalPramsManager_TypeInfo);
+          byte_4CC3DBB = 1;
         }
-        v28 = TerminalPramsManager_TypeInfo;
+        v36 = TerminalPramsManager_TypeInfo;
         if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         {
           j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          v28 = TerminalPramsManager_TypeInfo;
+          v36 = TerminalPramsManager_TypeInfo;
         }
-        BeforeEventSubmarineSaveData_k__BackingField = v28->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
+        BeforeEventSubmarineSaveData_k__BackingField = v36->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
         if ( BeforeEventSubmarineSaveData_k__BackingField )
         {
           ValueByArray = EventSaveData__GetValueByArray(BeforeEventSubmarineSaveData_k__BackingField, 0x2Cu, 0);
           if ( ValueByArray )
           {
             max_length = ValueByArray->max_length;
-            v31 = &ValueByArray->m_Items[1];
+            v39 = &ValueByArray->m_Items[1];
             if ( max_length <= 1 )
-              v31 = (System_String_o **)&StringLiteral_1115/*"0"*/;
-            v32 = *v31;
-            v33 = max_length <= 2 ? (System_String_o **)&StringLiteral_1115/*"0"*/ : &ValueByArray->m_Items[2];
-            v34 = *v33;
-            v35 = max_length <= 3 ? (System_String_o **)&StringLiteral_6633/*"False"*/ : &ValueByArray->m_Items[3];
+              v39 = (System_String_o **)&StringLiteral_1115/*"0"*/;
+            v40 = *v39;
+            v41 = max_length <= 2 ? (System_String_o **)&StringLiteral_1115/*"0"*/ : &ValueByArray->m_Items[2];
+            v42 = *v41;
+            v43 = max_length <= 3 ? (System_String_o **)&StringLiteral_6635/*"False"*/ : &ValueByArray->m_Items[3];
           }
           else
           {
-            v34 = (System_String_o *)StringLiteral_1115/*"0"*/;
-            v35 = (System_String_o **)&StringLiteral_6633/*"False"*/;
-            v32 = (System_String_o *)StringLiteral_1115/*"0"*/;
+            v42 = (System_String_o *)StringLiteral_1115/*"0"*/;
+            v43 = (System_String_o **)&StringLiteral_6635/*"False"*/;
+            v40 = (System_String_o *)StringLiteral_1115/*"0"*/;
           }
-          v36 = *v35;
+          v44 = *v43;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-          if ( !byte_4CB2CA8 )
+          if ( !byte_4CC3DBB )
           {
-            sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-            byte_4CB2CA8 = 1;
+            sub_1C713B0(&TerminalPramsManager_TypeInfo);
+            byte_4CC3DBB = 1;
           }
-          v37 = TerminalPramsManager_TypeInfo;
+          v45 = TerminalPramsManager_TypeInfo;
           if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
           {
             j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-            v37 = TerminalPramsManager_TypeInfo;
+            v45 = TerminalPramsManager_TypeInfo;
           }
-          v38 = v37->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
-          v39 = System_Int32__ToString((int32_t)&v47, 0);
+          v46 = v45->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
+          v47 = System_Int32__ToString((int32_t)&v59, 0);
           if ( !TitleInfoEventSubmarineStatusComponent_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(TitleInfoEventSubmarineStatusComponent_TypeInfo);
-          BeforeEventSubmarineSaveData_k__BackingField = (EventSaveData_o *)TitleInfoEventSubmarineStatusComponent__CreateSaveData_40029204(
-                                                                              v39,
-                                                                              v32,
-                                                                              v34,
-                                                                              v36,
+          BeforeEventSubmarineSaveData_k__BackingField = (EventSaveData_o *)TitleInfoEventSubmarineStatusComponent__CreateSaveData_40068576(
+                                                                              v47,
+                                                                              v40,
+                                                                              v42,
+                                                                              v44,
                                                                               0);
-          if ( v38 )
+          if ( v46 )
           {
-            v38->fields.value = (struct System_String_o *)BeforeEventSubmarineSaveData_k__BackingField;
-            sub_1C6B9AC(
-              (CGThumbnailListItem_o *)&v38->fields.value,
+            v46->fields.value = (struct System_String_o *)BeforeEventSubmarineSaveData_k__BackingField;
+            sub_1C71354(
+              (GrandQuestFolderBoardItem_o *)&v46->fields.value,
               (int32_t)BeforeEventSubmarineSaveData_k__BackingField,
-              v40,
-              v41);
-            value = v17->fields.value;
+              v48,
+              v49,
+              v50,
+              v51,
+              v52,
+              v53);
+            value = v21->fields.value;
             goto LABEL_56;
           }
         }
 LABEL_70:
-        sub_1C6BC60(BeforeEventSubmarineSaveData_k__BackingField, v13);
+        sub_1C71608(BeforeEventSubmarineSaveData_k__BackingField, v13);
       }
     }
   }
 LABEL_56:
   if ( !(_DWORD)value )
     goto LABEL_71;
-  v42 = v17[1].klass;
-  if ( !v42 )
+  v54 = v21[1].klass;
+  if ( !v54 )
     goto LABEL_70;
-  namespaze = (CGThumbnailListItem_c *)v42->_1.namespaze;
-  v44 = TerminalPramsManager_TypeInfo;
+  namespaze = (GrandQuestFolderBoardItem_c *)v54->_1.namespaze;
+  v56 = TerminalPramsManager_TypeInfo;
   if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    v44 = TerminalPramsManager_TypeInfo;
+    v56 = TerminalPramsManager_TypeInfo;
   }
-  p_mResultEventPanelRewardInfos = (CGThumbnailListItem_o *)&v44->static_fields->mResultEventPanelRewardInfos;
+  p_mResultEventPanelRewardInfos = (GrandQuestFolderBoardItem_o *)&v56->static_fields->mResultEventPanelRewardInfos;
   p_mResultEventPanelRewardInfos->klass = namespaze;
-  sub_1C6B9AC(p_mResultEventPanelRewardInfos, (int32_t)namespaze, v14, v15);
+  sub_1C71354(p_mResultEventPanelRewardInfos, (int32_t)namespaze, v14, v15, v16, v17, v18, v19);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CB01CE )
+  if ( !byte_4CC12CE )
   {
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB01CE = 1;
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC12CE = 1;
   }
   BeforeEventSubmarineSaveData_k__BackingField = (EventSaveData_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -5019,10 +5551,10 @@ LABEL_56:
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
     BeforeEventSubmarineSaveData_k__BackingField = (EventSaveData_o *)TerminalSceneComponent_TypeInfo;
   }
-  v46 = BeforeEventSubmarineSaveData_k__BackingField[5].fields.value->klass;
-  if ( !v46 )
+  v58 = BeforeEventSubmarineSaveData_k__BackingField[5].fields.value->klass;
+  if ( !v58 )
     goto LABEL_70;
-  BeforeEventSubmarineSaveData_k__BackingField = (EventSaveData_o *)v46->_2.genericContainerHandle;
+  BeforeEventSubmarineSaveData_k__BackingField = (EventSaveData_o *)v58->_2.genericContainerHandle;
   if ( !BeforeEventSubmarineSaveData_k__BackingField )
     goto LABEL_70;
   TitleInfoControl__UpdateEventSubmarineItemDisp((TitleInfoControl_o *)BeforeEventSubmarineSaveData_k__BackingField, 0);
@@ -5039,42 +5571,58 @@ void SubmarineMapManager__OnScannerSelected(
   __int64 v8; // x0
   __int64 v9; // x1
   int32_t v10; // w2
-  const MethodInfo *v11; // x3
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v11; // w3
+  System_String_o *v12; // x4
+  int32_t v13; // w5
+  int64_t v14; // x6
+  System_String_o *v15; // x7
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
   SubmarineMapManager_c *klass; // x8
-  const MethodInfo *v15; // x4
-  SchedulerTaskBase_o *v16; // x21
-  SchedulerTaskBase_TaskCallback_o *v17; // x22
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  const MethodInfo *v23; // x4
+  SchedulerTaskBase_o *v24; // x21
+  SchedulerTaskBase_TaskCallback_o *v25; // x22
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
   TaskScheduler_o *taskScheduler; // x19
-  __int64 v21; // x20
-  __int64 v22; // x0
-  int32_t v23; // w2
-  const MethodInfo *v24; // x3
-  const MethodInfo *v25; // x1
-  const MethodInfo *v26; // x1
-  const MethodInfo *v27; // x1
-  __int64 v28; // x0
+  __int64 v33; // x20
+  __int64 v34; // x0
+  int32_t v35; // w2
+  int32_t v36; // w3
+  System_String_o *v37; // x4
+  int32_t v38; // w5
+  int64_t v39; // x6
+  System_String_o *v40; // x7
+  const MethodInfo *v41; // x1
+  const MethodInfo *v42; // x1
+  const MethodInfo *v43; // x1
+  __int64 v44; // x0
 
-  if ( (byte_4CB2C73 & 1) == 0 )
+  if ( (byte_4CC3D86 & 1) == 0 )
   {
-    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
-    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass36_0__OnScannerSelected_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass36_0_TypeInfo);
-    byte_4CB2C73 = 1;
+    sub_1C713B0(&SchedulerTaskBase___TypeInfo);
+    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass36_0__OnScannerSelected_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass36_0_TypeInfo);
+    byte_4CC3D86 = 1;
   }
-  v7 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass36_0_TypeInfo);
+  v7 = sub_1C715FC(SubmarineMapManager___c__DisplayClass36_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass36_0___ctor((SubmarineMapManager___c__DisplayClass36_0_o *)v7, 0);
   if ( !v7 )
     goto LABEL_12;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 16), (int32_t)this, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 32) = panelData;
   *(_DWORD *)(v7 + 24) = scanId;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v7 + 32), (int32_t)panelData, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)panelData, v16, v17, v18, v19, v20, v21);
   klass = this->klass;
   if ( *(int *)(v7 + 24) > 0 )
   {
@@ -5083,53 +5631,53 @@ void SubmarineMapManager__OnScannerSelected(
       1,
       klass->vtable._30_SetAllTouchBlock.method);
     *(_BYTE *)(v7 + 40) = 0;
-    v16 = SubmarineMapManager__ShowScanRangeTask(
+    v24 = SubmarineMapManager__ShowScanRangeTask(
             this,
             *(_DWORD *)(v7 + 24),
             *(SubmarineMapPanelData_o **)(v7 + 32),
             (bool *)(v7 + 40),
-            v15);
-    v17 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+            v23);
+    v25 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
     SchedulerTaskBase_TaskCallback___ctor(
-      v17,
+      v25,
       (Il2CppObject *)v7,
       Method_SubmarineMapManager___c__DisplayClass36_0__OnScannerSelected_b__0__,
       0);
-    if ( v16 )
+    if ( v24 )
     {
-      v16->fields.EndCallback = v17;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&v16->fields.EndCallback, (int32_t)v17, v18, v19);
+      v24->fields.EndCallback = v25;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&v24->fields.EndCallback, (int32_t)v25, v26, v27, v28, v29, v30, v31);
       taskScheduler = this->fields.taskScheduler;
-      v8 = sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+      v8 = sub_1C71458(SchedulerTaskBase___TypeInfo, 1);
       if ( v8 )
       {
-        v21 = v8;
-        v22 = sub_1C6BB44(v16, *(_QWORD *)(*(_QWORD *)v8 + 64LL));
-        if ( !v22 )
+        v33 = v8;
+        v34 = sub_1C714EC(v24, *(_QWORD *)(*(_QWORD *)v8 + 64LL));
+        if ( !v34 )
         {
-          v28 = sub_1C6BC84();
-          sub_1C6BB30(v28, 0);
+          v44 = sub_1C7162C();
+          sub_1C714D8(v44, 0);
         }
-        if ( !*(_DWORD *)(v21 + 24) )
-          sub_1C6BC68(v22);
-        *(_QWORD *)(v21 + 32) = v16;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v21 + 32), (int32_t)v16, v23, v24);
+        if ( !*(_DWORD *)(v33 + 24) )
+          sub_1C71610(v34);
+        *(_QWORD *)(v33 + 32) = v24;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v33 + 32), (int32_t)v24, v35, v36, v37, v38, v39, v40);
         if ( taskScheduler )
         {
-          TaskScheduler__AddTask(taskScheduler, 0, (SchedulerTaskBase_array *)v21, 0);
+          TaskScheduler__AddTask(taskScheduler, 0, (SchedulerTaskBase_array *)v33, 0);
           return;
         }
       }
     }
 LABEL_12:
-    sub_1C6BC60(v8, v9);
+    sub_1C71608(v8, v9);
   }
   ((void (__fastcall *)(SubmarineMapManager_o *, const MethodInfo *))klass->vtable._32_AllTouchBlockForceFalse.methodPtr)(
     this,
     klass->vtable._32_AllTouchBlockForceFalse.method);
-  SubmarineMapManager__HideScannableEffect(this, v25);
-  SubmarineMapManager__ShowScannableEffect(this, v26);
-  SubmarineMapManager__HideSelectedPanelEffect(this, v27);
+  SubmarineMapManager__HideScannableEffect(this, v41);
+  SubmarineMapManager__ShowScannableEffect(this, v42);
+  SubmarineMapManager__HideSelectedPanelEffect(this, v43);
 }
 
 
@@ -5144,43 +5692,51 @@ void SubmarineMapManager__OpenScanConfirmDialog(
   __int64 v10; // x0
   __int64 v11; // x1
   int32_t v12; // w2
-  const MethodInfo *v13; // x3
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
   SubmarineScanConfirmDialog_o *scanConfirmDialog; // x21
-  System_Action_bool__o *v17; // x22
-  const MethodInfo *v18; // x4
+  System_Action_bool__o *v25; // x22
+  const MethodInfo *v26; // x4
 
-  if ( (byte_4CB2C89 & 1) == 0 )
+  if ( (byte_4CC3D9C & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_bool__TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass68_0__OpenScanConfirmDialog_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass68_0_TypeInfo);
-    byte_4CB2C89 = 1;
+    sub_1C713B0(&System_Action_bool__TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass68_0__OpenScanConfirmDialog_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass68_0_TypeInfo);
+    byte_4CC3D9C = 1;
   }
-  v9 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass68_0_TypeInfo);
+  v9 = sub_1C715FC(SubmarineMapManager___c__DisplayClass68_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass68_0___ctor((SubmarineMapManager___c__DisplayClass68_0_o *)v9, 0);
   if ( !v9 )
     goto LABEL_6;
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 16), (int32_t)this, v12, v13);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v9 + 24), (int32_t)callback, v14, v15);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)callback, v18, v19, v20, v21, v22, v23);
   ((void (__fastcall *)(SubmarineMapManager_o *, __int64, const MethodInfo *))this->klass->vtable._31_SetCameraWorkBlock.methodPtr)(
     this,
     1,
     this->klass->vtable._31_SetCameraWorkBlock.method);
   scanConfirmDialog = this->fields.scanConfirmDialog;
-  v17 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
+  v25 = (System_Action_bool__o *)sub_1C715FC(System_Action_bool__TypeInfo);
   System_Action_bool____ctor(
-    v17,
+    v25,
     (Il2CppObject *)v9,
     Method_SubmarineMapManager___c__DisplayClass68_0__OpenScanConfirmDialog_b__0__,
     0);
   if ( !scanConfirmDialog )
 LABEL_6:
-    sub_1C6BC60(v10, v11);
-  SubmarineScanConfirmDialog__Open(scanConfirmDialog, scanId, isShowDialogUpper, v17, v18);
+    sub_1C71608(v10, v11);
+  SubmarineScanConfirmDialog__Open(scanConfirmDialog, scanId, isShowDialogUpper, v25, v26);
 }
 
 
@@ -5193,68 +5749,80 @@ void SubmarineMapManager__OpenSelectScannerDialog(
   __int64 v6; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  int32_t v10; // w2
-  const MethodInfo *v11; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  int32_t v14; // w2
+  int32_t v15; // w3
+  System_String_o *v16; // x4
+  int32_t v17; // w5
+  int64_t v18; // x6
+  System_String_o *v19; // x7
   SubmarineSelectScannerDialog_o *selectScannerDialog; // x20
-  const MethodInfo *v13; // x1
+  const MethodInfo *v21; // x1
   int32_t eventId; // w22
-  System_Action_int__o *v15; // x23
-  System_Action_o *v16; // x21
-  const MethodInfo *v17; // x4
+  System_Action_int__o *v23; // x23
+  System_Action_o *v24; // x21
+  const MethodInfo *v25; // x4
 
-  if ( (byte_4CB2C87 & 1) == 0 )
+  if ( (byte_4CC3D9A & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_int__TypeInfo);
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager_TryOpenNewScannerDialog__);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass66_0__OpenSelectScannerDialog_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass66_0_TypeInfo);
-    byte_4CB2C87 = 1;
+    sub_1C713B0(&System_Action_int__TypeInfo);
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager_TryOpenNewScannerDialog__);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass66_0__OpenSelectScannerDialog_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass66_0_TypeInfo);
+    byte_4CC3D9A = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass66_0_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager___c__DisplayClass66_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass66_0___ctor((SubmarineMapManager___c__DisplayClass66_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_6;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)this, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 24), (int32_t)callback, v10, v11);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)callback, v14, v15, v16, v17, v18, v19);
   ((void (__fastcall *)(SubmarineMapManager_o *, __int64, const MethodInfo *))this->klass->vtable._31_SetCameraWorkBlock.methodPtr)(
     this,
     1,
     this->klass->vtable._31_SetCameraWorkBlock.method);
   selectScannerDialog = this->fields.selectScannerDialog;
-  eventId = SubmarineMapManager__get_eventId(this, v13);
-  v15 = (System_Action_int__o *)sub_1C6BC54(System_Action_int__TypeInfo);
+  eventId = SubmarineMapManager__get_eventId(this, v21);
+  v23 = (System_Action_int__o *)sub_1C715FC(System_Action_int__TypeInfo);
   System_Action_int____ctor(
-    v15,
+    v23,
     (Il2CppObject *)v5,
     Method_SubmarineMapManager___c__DisplayClass66_0__OpenSelectScannerDialog_b__0__,
     0);
-  v16 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
-  System_Action___ctor(v16, (Il2CppObject *)this, Method_SubmarineMapManager_TryOpenNewScannerDialog__, 0);
+  v24 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  System_Action___ctor(v24, (Il2CppObject *)this, Method_SubmarineMapManager_TryOpenNewScannerDialog__, 0);
   if ( !selectScannerDialog )
 LABEL_6:
-    sub_1C6BC60(v6, v7);
-  SubmarineSelectScannerDialog__Open(selectScannerDialog, eventId, v15, v16, v17);
+    sub_1C71608(v6, v7);
+  SubmarineSelectScannerDialog__Open(selectScannerDialog, eventId, v23, v24, v25);
 }
 
 
 void SubmarineMapManager__ReleaseAssets(SubmarineMapManager_o *this, const MethodInfo *method)
 {
   SubmarineMapAssetManager_o *assetManager; // x0
-  CGThumbnailListItem_o *p_assetManager; // x20
+  GrandQuestFolderBoardItem_o *p_assetManager; // x20
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
 
-  p_assetManager = (CGThumbnailListItem_o *)&this->fields.assetManager;
+  p_assetManager = (GrandQuestFolderBoardItem_o *)&this->fields.assetManager;
   assetManager = this->fields.assetManager;
   if ( assetManager )
   {
     SubmarineMapAssetManager__Finish(assetManager, method);
     p_assetManager->klass = 0;
-    sub_1C6B9AC(p_assetManager, 0, v5, v6);
+    sub_1C71354(p_assetManager, 0, v5, v6, v7, v8, v9, v10);
   }
   SubmarineMapManager__ReleasePoolEffects(this, method);
 }
@@ -5264,51 +5832,71 @@ void SubmarineMapManager__ReleasePoolEffects(SubmarineMapManager_o *this, const 
 {
   ComponentPool_T__o *effectScanedPanelObjPool; // x0
   int32_t v4; // w2
-  const MethodInfo *v5; // x3
+  int32_t v5; // w3
+  System_String_o *v6; // x4
+  int32_t v7; // w5
+  int64_t v8; // x6
+  System_String_o *v9; // x7
   ComponentPool_T__o *effectScannablePanelObjPool; // x0
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  ComponentPool_T__o *v9; // x0
-  CGThumbnailListItem_o *p_effectScanObstaclePanelObjPool; // x19
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  ComponentPool_T__o *v17; // x0
+  GrandQuestFolderBoardItem_o *p_effectScanObstaclePanelObjPool; // x19
   struct ComponentPool_SubmarineEffectScanObstaclePanelComponent__o *effectScanObstaclePanelObjPool; // t1
-  int32_t v12; // w2
-  const MethodInfo *v13; // x3
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
 
-  if ( (byte_4CB2C8C & 1) == 0 )
+  if ( (byte_4CC3D9F & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ComponentPool_SubmarineEffectScanObstaclePanelComponent__Finish__);
-    sub_1C6BA08(&Method_ComponentPool_SubmarineEffectScannablePanelComponent__Finish__);
-    sub_1C6BA08(&Method_ComponentPool_CommonEffectComponent__Finish__);
-    byte_4CB2C8C = 1;
+    sub_1C713B0(&Method_ComponentPool_SubmarineEffectScanObstaclePanelComponent__Finish__);
+    sub_1C713B0(&Method_ComponentPool_SubmarineEffectScannablePanelComponent__Finish__);
+    sub_1C713B0(&Method_ComponentPool_CommonEffectComponent__Finish__);
+    byte_4CC3D9F = 1;
   }
   effectScanedPanelObjPool = (ComponentPool_T__o *)this->fields.effectScanedPanelObjPool;
   if ( effectScanedPanelObjPool )
   {
     ComponentPool_object___Finish(
       effectScanedPanelObjPool,
-      (const MethodInfo_33D4B1C *)Method_ComponentPool_CommonEffectComponent__Finish__);
+      (const MethodInfo_33E48C0 *)Method_ComponentPool_CommonEffectComponent__Finish__);
     this->fields.effectScanedPanelObjPool = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.effectScanedPanelObjPool, 0, v4, v5);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.effectScanedPanelObjPool, 0, v4, v5, v6, v7, v8, v9);
   }
   effectScannablePanelObjPool = (ComponentPool_T__o *)this->fields.effectScannablePanelObjPool;
   if ( effectScannablePanelObjPool )
   {
     ComponentPool_object___Finish(
       effectScannablePanelObjPool,
-      (const MethodInfo_33D4B1C *)Method_ComponentPool_SubmarineEffectScannablePanelComponent__Finish__);
+      (const MethodInfo_33E48C0 *)Method_ComponentPool_SubmarineEffectScannablePanelComponent__Finish__);
     this->fields.effectScannablePanelObjPool = 0;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.effectScannablePanelObjPool, 0, v7, v8);
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.effectScannablePanelObjPool,
+      0,
+      v11,
+      v12,
+      v13,
+      v14,
+      v15,
+      v16);
   }
   effectScanObstaclePanelObjPool = this->fields.effectScanObstaclePanelObjPool;
-  p_effectScanObstaclePanelObjPool = (CGThumbnailListItem_o *)&this->fields.effectScanObstaclePanelObjPool;
-  v9 = (ComponentPool_T__o *)effectScanObstaclePanelObjPool;
+  p_effectScanObstaclePanelObjPool = (GrandQuestFolderBoardItem_o *)&this->fields.effectScanObstaclePanelObjPool;
+  v17 = (ComponentPool_T__o *)effectScanObstaclePanelObjPool;
   if ( effectScanObstaclePanelObjPool )
   {
     ComponentPool_object___Finish(
-      v9,
-      (const MethodInfo_33D4B1C *)Method_ComponentPool_SubmarineEffectScanObstaclePanelComponent__Finish__);
+      v17,
+      (const MethodInfo_33E48C0 *)Method_ComponentPool_SubmarineEffectScanObstaclePanelComponent__Finish__);
     p_effectScanObstaclePanelObjPool->klass = 0;
-    sub_1C6B9AC(p_effectScanObstaclePanelObjPool, 0, v12, v13);
+    sub_1C71354(p_effectScanObstaclePanelObjPool, 0, v20, v21, v22, v23, v24, v25);
   }
 }
 
@@ -5319,7 +5907,7 @@ void SubmarineMapManager__RentAndPutEffectAbovePanel_object_(
         SubmarineMapPanelData_o *panelData,
         System_Nullable_Vector3__o offset,
         System_Nullable_Vector3__o scale,
-        const MethodInfo_31EE62C *method)
+        const MethodInfo_31FE3D0 *method)
 {
   bool hasValue; // w19
   bool v8; // w20
@@ -5327,11 +5915,11 @@ void SubmarineMapManager__RentAndPutEffectAbovePanel_object_(
   UnityEngine_Transform_o *transform; // x24
   UnityEngine_Component_o *v14; // x21
   UnityEngine_Transform_o *v15; // x22
-  const MethodInfo_392DB78 *v16; // x2
+  const MethodInfo_393D91C *v16; // x2
   float x; // s8
   float y; // s9
   float z; // s10
-  const MethodInfo_392DB78 *v20; // x2
+  const MethodInfo_393D91C *v20; // x2
   bool v21; // zf
   UnityEngine_Transform_o *v22; // x19
   System_Nullable_Vector3__o v23; // [xsp+0h] [xbp-80h] BYREF
@@ -5350,10 +5938,10 @@ void SubmarineMapManager__RentAndPutEffectAbovePanel_object_(
   v8 = offset.fields.hasValue;
   if ( !method->rgctx_data )
   {
-    sub_1C6BA08(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1C6BA08(&Method_System_Nullable_Vector3__get_Value__);
+    sub_1C713B0(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_1C713B0(&Method_System_Nullable_Vector3__get_Value__);
     if ( !method->rgctx_data )
-      sub_1C41AF8();
+      sub_1C474A0();
   }
   effectContainer = this->fields.effectContainer;
   if ( !effectContainer )
@@ -5371,11 +5959,11 @@ void SubmarineMapManager__RentAndPutEffectAbovePanel_object_(
                         0);
   if ( !pool )
     goto LABEL_21;
-  effectContainer = (UnityEngine_GameObject_o *)ComponentPool_object___Rent_54347340(
+  effectContainer = (UnityEngine_GameObject_o *)ComponentPool_object___Rent_54412272(
                                                   pool,
                                                   transform,
                                                   PositionByIndices,
-                                                  (const MethodInfo_33D464C *)method->rgctx_data->_1_ComponentPool_T__Rent);
+                                                  (const MethodInfo_33E43F0 *)method->rgctx_data->_1_ComponentPool_T__Rent);
   if ( !effectContainer )
     goto LABEL_21;
   v14 = (UnityEngine_Component_o *)effectContainer;
@@ -5398,10 +5986,10 @@ void SubmarineMapManager__RentAndPutEffectAbovePanel_object_(
   }
   else
   {
-    if ( !byte_4CAFC09 )
+    if ( !byte_4CC0D09 )
     {
-      sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-      byte_4CAFC09 = 1;
+      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+      byte_4CC0D09 = 1;
     }
     Value = UnityEngine_Vector3_TypeInfo->static_fields->zeroVector;
   }
@@ -5420,12 +6008,12 @@ void SubmarineMapManager__RentAndPutEffectAbovePanel_object_(
     if ( v22 )
       goto LABEL_17;
 LABEL_21:
-    sub_1C6BC60(effectContainer, pool);
+    sub_1C71608(effectContainer, pool);
   }
-  if ( !byte_4CAFC0E )
+  if ( !byte_4CC0D0E )
   {
-    effectContainer = (UnityEngine_GameObject_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-    byte_4CAFC0E = 1;
+    effectContainer = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    byte_4CC0D0E = 1;
   }
   oneVector = UnityEngine_Vector3_TypeInfo->static_fields->oneVector;
   if ( !v22 )
@@ -5444,7 +6032,7 @@ void SubmarineMapManager__ResetTimeAcceleration(SubmarineMapManager_o *this, con
 void SubmarineMapManager__ReturnEffectsToPool_object_(
         SubmarineMapManager_o *this,
         ComponentPool_T__o *pool,
-        const MethodInfo_31EE818 *method)
+        const MethodInfo_31FE5BC *method)
 {
   UnityEngine_GameObject_array *Children; // x0
   __int64 v7; // x1
@@ -5453,7 +6041,7 @@ void SubmarineMapManager__ReturnEffectsToPool_object_(
   unsigned int v10; // w22
 
   if ( !method->rgctx_data )
-    sub_1C41AF8();
+    sub_1C474A0();
   Children = GameObjectExtensions__GetChildren(this->fields.effectContainer, 0, 0);
   if ( !Children )
     goto LABEL_11;
@@ -5465,25 +6053,25 @@ void SubmarineMapManager__ReturnEffectsToPool_object_(
     while ( 1 )
     {
       if ( v10 >= max_length )
-        sub_1C6BC68(Children);
+        sub_1C71610(Children);
       Children = (UnityEngine_GameObject_array *)v9->m_Items[v10];
       if ( !Children )
         break;
       Children = (UnityEngine_GameObject_array *)UnityEngine_GameObject__GetComponent_object_(
                                                    (UnityEngine_GameObject_o *)Children,
-                                                   (const MethodInfo_319312C *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
+                                                   (const MethodInfo_31A2ED0 *)method->rgctx_data->_1_UnityEngine_GameObject_GetComponent_T_);
       if ( !pool )
         break;
       ComponentPool_object___Return(
         pool,
         &Children->obj,
-        (const MethodInfo_33D4724 *)method->rgctx_data->_3_ComponentPool_T__Return);
+        (const MethodInfo_33E44C8 *)method->rgctx_data->_3_ComponentPool_T__Return);
       max_length = v9->max_length;
       if ( (int)++v10 >= max_length )
         return;
     }
 LABEL_11:
-    sub_1C6BC60(Children, v7);
+    sub_1C71608(Children, v7);
   }
 }
 
@@ -5497,94 +6085,106 @@ void SubmarineMapManager__RevealAvailableSpots(
   System_Collections_Generic_List_SchedulerTaskBase__o *RevealEachSpotsTasks; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   TaskScheduler_o *taskScheduler; // x20
-  const MethodInfo *v11; // x1
-  __int64 v12; // x20
-  System_Delegate_o **v13; // x22
-  System_Delegate_o *v14; // x23
-  SchedulerTaskBase_TaskCallback_o *v15; // x24
-  System_Delegate_o *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  System_Delegate_o *v19; // x8
-  SchedulerTaskBase_TaskCallback_c *v20; // x1
-  TaskScheduler_o *v21; // x19
-  System_Collections_Generic_List_SchedulerTaskBase__o *v22; // x21
-  __int64 v23; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  __int64 v26; // x0
+  const MethodInfo *v15; // x1
+  __int64 v16; // x20
+  System_Delegate_o **v17; // x22
+  System_Delegate_o *v18; // x23
+  SchedulerTaskBase_TaskCallback_o *v19; // x24
+  System_Delegate_o *v20; // x0
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  System_Delegate_o *v27; // x8
+  SchedulerTaskBase_TaskCallback_c *v28; // x1
+  TaskScheduler_o *v29; // x19
+  System_Collections_Generic_List_SchedulerTaskBase__o *v30; // x21
+  __int64 v31; // x0
+  int32_t v32; // w2
+  int32_t v33; // w3
+  System_String_o *v34; // x4
+  int32_t v35; // w5
+  int64_t v36; // x6
+  System_String_o *v37; // x7
+  __int64 v38; // x0
 
-  if ( (byte_4CB2C78 & 1) == 0 )
+  if ( (byte_4CC3D8B & 1) == 0 )
   {
-    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
-    sub_1C6BA08(&SchedulerTaskNone_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass41_0__RevealAvailableSpots_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass41_0_TypeInfo);
-    byte_4CB2C78 = 1;
+    sub_1C713B0(&SchedulerTaskBase___TypeInfo);
+    sub_1C713B0(&SchedulerTaskNone_TypeInfo);
+    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass41_0__RevealAvailableSpots_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass41_0_TypeInfo);
+    byte_4CC3D8B = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass41_0_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager___c__DisplayClass41_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass41_0___ctor((SubmarineMapManager___c__DisplayClass41_0_o *)v5, 0);
   if ( !v5
     || (*(_QWORD *)(v5 + 16) = finishCallback,
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)finishCallback, v8, v9),
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)finishCallback, v8, v9, v10, v11, v12, v13),
         taskScheduler = this->fields.taskScheduler,
-        RevealEachSpotsTasks = SubmarineMapManager__CreateRevealEachSpotsTasks(this, v11),
+        RevealEachSpotsTasks = SubmarineMapManager__CreateRevealEachSpotsTasks(this, v15),
         !taskScheduler)
-    || (TaskScheduler__AddTask_44563340(taskScheduler, 0, RevealEachSpotsTasks, 0),
-        v12 = sub_1C6BC54(SchedulerTaskNone_TypeInfo),
-        SchedulerTaskNone___ctor((SchedulerTaskNone_o *)v12, 0, 0, 0),
-        !v12) )
+    || (TaskScheduler__AddTask_44609668(taskScheduler, 0, RevealEachSpotsTasks, 0),
+        v16 = sub_1C715FC(SchedulerTaskNone_TypeInfo),
+        SchedulerTaskNone___ctor((SchedulerTaskNone_o *)v16, 0, 0, 0),
+        !v16) )
   {
 LABEL_16:
-    sub_1C6BC60(RevealEachSpotsTasks, v7);
+    sub_1C71608(RevealEachSpotsTasks, v7);
   }
-  v13 = (System_Delegate_o **)(v12 + 32);
-  v14 = *(System_Delegate_o **)(v12 + 32);
-  v15 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v17 = (System_Delegate_o **)(v16 + 32);
+  v18 = *(System_Delegate_o **)(v16 + 32);
+  v19 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
-    v15,
+    v19,
     (Il2CppObject *)v5,
     Method_SubmarineMapManager___c__DisplayClass41_0__RevealAvailableSpots_b__0__,
     0);
-  v16 = System_Delegate__Combine(v14, (System_Delegate_o *)v15, 0);
-  v19 = v16;
-  if ( v16 )
+  v20 = System_Delegate__Combine(v18, (System_Delegate_o *)v19, 0);
+  v27 = v20;
+  if ( v20 )
   {
-    v20 = SchedulerTaskBase_TaskCallback_TypeInfo;
-    if ( (SchedulerTaskBase_TaskCallback_c *)v16->klass == SchedulerTaskBase_TaskCallback_TypeInfo )
+    v28 = SchedulerTaskBase_TaskCallback_TypeInfo;
+    if ( (SchedulerTaskBase_TaskCallback_c *)v20->klass == SchedulerTaskBase_TaskCallback_TypeInfo )
     {
-      *v13 = v16;
-      if ( (SchedulerTaskBase_TaskCallback_c *)v16->klass == v20 )
+      *v17 = v20;
+      if ( (SchedulerTaskBase_TaskCallback_c *)v20->klass == v28 )
         goto LABEL_11;
     }
-    sub_1C6BFFC(v16);
+    sub_1C719A4(v20);
   }
-  *v13 = v19;
+  *v17 = v27;
 LABEL_11:
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v12 + 32), (int32_t)v19, v17, v18);
-  v21 = this->fields.taskScheduler;
-  RevealEachSpotsTasks = (System_Collections_Generic_List_SchedulerTaskBase__o *)sub_1C6BAB0(
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v16 + 32), (int32_t)v27, v21, v22, v23, v24, v25, v26);
+  v29 = this->fields.taskScheduler;
+  RevealEachSpotsTasks = (System_Collections_Generic_List_SchedulerTaskBase__o *)sub_1C71458(
                                                                                    SchedulerTaskBase___TypeInfo,
                                                                                    1);
   if ( !RevealEachSpotsTasks )
     goto LABEL_16;
-  v22 = RevealEachSpotsTasks;
-  v23 = sub_1C6BB44(v12, RevealEachSpotsTasks->klass->_1.element_class);
-  if ( !v23 )
+  v30 = RevealEachSpotsTasks;
+  v31 = sub_1C714EC(v16, RevealEachSpotsTasks->klass->_1.element_class);
+  if ( !v31 )
   {
-    v26 = sub_1C6BC84();
-    sub_1C6BB30(v26, 0);
+    v38 = sub_1C7162C();
+    sub_1C714D8(v38, 0);
   }
-  if ( !v22->fields._size )
-    sub_1C6BC68(v23);
-  v22->fields._syncRoot = (Il2CppObject *)v12;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v22->fields._syncRoot, v12, v24, v25);
-  if ( !v21 )
+  if ( !v30->fields._size )
+    sub_1C71610(v31);
+  v30->fields._syncRoot = (Il2CppObject *)v16;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v30->fields._syncRoot, v16, v32, v33, v34, v35, v36, v37);
+  if ( !v29 )
     goto LABEL_16;
-  TaskScheduler__AddTask(v21, 0, (SchedulerTaskBase_array *)v22, 0);
+  TaskScheduler__AddTask(v29, 0, (SchedulerTaskBase_array *)v30, 0);
 }
 
 
@@ -5610,11 +6210,11 @@ void SubmarineMapManager__SetGridLine(SubmarineMapManager_o *this, const MethodI
   struct SubmarineMapDataManager_o *v14; // x8
   struct SubmarineSettingsManager_o *Settings_k__BackingField; // x8
 
-  if ( (byte_4CB2C80 & 1) == 0 )
+  if ( (byte_4CC3D93 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_GameObject_GetComponent_UITexture___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2C80 = 1;
+    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UITexture___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3D93 = 1;
   }
   gridLine = (UnityEngine_Object_o *)this->fields.gridLine;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -5650,7 +6250,7 @@ void SubmarineMapManager__SetGridLine(SubmarineMapManager_o *this, const MethodI
               v11 = submarineData;
               submarineData = (SubmarineMapDataManager_o *)UnityEngine_GameObject__GetComponent_object_(
                                                              this->fields.gridLine,
-                                                             (const MethodInfo_319312C *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
+                                                             (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
               if ( v11 )
               {
                 v12 = (UIWidget_o *)submarineData;
@@ -5698,7 +6298,7 @@ void SubmarineMapManager__SetGridLine(SubmarineMapManager_o *this, const MethodI
         }
       }
     }
-    sub_1C6BC60(submarineData, v5);
+    sub_1C71608(submarineData, v5);
   }
 }
 
@@ -5720,14 +6320,14 @@ void SubmarineMapManager__ShowScanObstacleEffect(SubmarineMapManager_o *this, co
   System_Nullable_Vector3__o v8; // 0:x5.16
 
   v2 = this;
-  if ( (byte_4CB2C8F & 1) == 0 )
+  if ( (byte_4CC3DA2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectScanObstaclePanelComponent___);
-    byte_4CB2C8F = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectScanObstaclePanelComponent___);
+    byte_4CC3DA2 = 1;
   }
   memset(&v6, 0, sizeof(v6));
   if ( !v2->fields.isShowScanObstacleEffect )
@@ -5735,20 +6335,20 @@ void SubmarineMapManager__ShowScanObstacleEffect(SubmarineMapManager_o *this, co
     submarineData = v2->fields.submarineData;
     v2->fields.isShowScanObstacleEffect = 1;
     if ( !submarineData || (this = (SubmarineMapManager_o *)submarineData->fields._PanelDataList_k__BackingField) == 0 )
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v6,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
     while ( 1 )
     {
       v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v6,
-             (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
       if ( !v4 )
         break;
       if ( !v6.fields._current )
-        sub_1C6BC60(v4, v5);
+        sub_1C71608(v4, v5);
       if ( *((_BYTE *)&v6.fields._current->klass + (unsigned __int64)&word_38 + 1) )
       {
         *(_QWORD *)&v7.fields.hasValue = 0;
@@ -5761,12 +6361,12 @@ void SubmarineMapManager__ShowScanObstacleEffect(SubmarineMapManager_o *this, co
           (SubmarineMapPanelData_o *)v6.fields._current,
           v7,
           v8,
-          (const MethodInfo_31EE62C *)Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectScanObstaclePanelComponent___);
+          (const MethodInfo_31FE3D0 *)Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectScanObstaclePanelComponent___);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v6,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
   }
 }
 
@@ -5786,34 +6386,38 @@ void SubmarineMapManager__ShowScanRange(
   Il2CppObject *v13; // x0
   struct UnityEngine_GameObject_o **p_scanRangeNotificator; // x20
   int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
 
-  if ( (byte_4CB2C93 & 1) == 0 )
+  if ( (byte_4CC3DA6 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventPanelScanMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
-    sub_1C6BA08(&Method_UnityEngine_Object_Instantiate_GameObject____78656176);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CB2C93 = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventPanelScanMaster___);
+    sub_1C713B0(&Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
+    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725064);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4CC3DA6 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = DataManager__GetMasterData_object_(
                (DataManager_o *)Instance,
-               (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
+               (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventPanelScanMaster___);
   if ( !Instance )
     goto LABEL_18;
   Instance = DataMasterBase_object__object__int___GetEntity(
                (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                scanId,
-               (const MethodInfo_33F90DC *)Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
+               (const MethodInfo_3408E80 *)Method_DataMasterBase_EventPanelScanMaster__EventPanelScanEntity__int__GetEntity__);
   if ( !Instance )
     return;
   if ( !this->fields.assetManager )
 LABEL_18:
-    sub_1C6BC60(Instance, v8);
+    sub_1C71608(Instance, v8);
   ScanRangeNotificatorPrefab = (Il2CppObject *)SubmarineMapAssetManager__GetScanRangeNotificatorPrefab(
                                                  this->fields.assetManager,
                                                  *((_DWORD *)Instance + 14),
@@ -5829,13 +6433,13 @@ LABEL_18:
       transform = UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)Instance, 0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v13 = UnityEngine_Object__Instantiate_object__52199488(
+      v13 = UnityEngine_Object__Instantiate_object__52264420(
               ScanRangeNotificatorPrefab,
               transform,
-              (const MethodInfo_31C8040 *)Method_UnityEngine_Object_Instantiate_GameObject____78656176);
+              (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_GameObject____78725064);
       this->fields.scanRangeNotificator = (struct UnityEngine_GameObject_o *)v13;
       p_scanRangeNotificator = &this->fields.scanRangeNotificator;
-      sub_1C6B9AC((CGThumbnailListItem_o *)p_scanRangeNotificator, (int32_t)v13, v15, v16);
+      sub_1C71354((GrandQuestFolderBoardItem_o *)p_scanRangeNotificator, (int32_t)v13, v15, v16, v17, v18, v19, v20);
       Instance = *p_scanRangeNotificator;
       if ( *p_scanRangeNotificator )
       {
@@ -5938,19 +6542,19 @@ SchedulerTaskBase_o *SubmarineMapManager__ShowScanRangeTask(
   UnityEngine_Rect_o v78; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v8 = this;
-  if ( (byte_4CB2C96 & 1) == 0 )
+  if ( (byte_4CC3DA9 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Rect__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Rect__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Rect___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_Rect__TypeInfo);
-    sub_1C6BA08(&MapCameraViewAdjusterUtil_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Rect___TypeInfo);
-    sub_1C6BA08(&float___TypeInfo);
-    sub_1C6BA08(&SubmarinScanDialogUpSideWeakLocationInfo_TypeInfo);
-    sub_1C6BA08(&Submarine2DUILocationInfo_TypeInfo);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&SubmarineScanDialogUpsideLocationInfo_TypeInfo);
-    byte_4CB2C96 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Rect__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Rect__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Rect___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_Rect__TypeInfo);
+    sub_1C713B0(&MapCameraViewAdjusterUtil_TypeInfo);
+    sub_1C713B0(&UnityEngine_Rect___TypeInfo);
+    sub_1C713B0(&float___TypeInfo);
+    sub_1C713B0(&SubmarinScanDialogUpSideWeakLocationInfo_TypeInfo);
+    sub_1C713B0(&Submarine2DUILocationInfo_TypeInfo);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&SubmarineScanDialogUpsideLocationInfo_TypeInfo);
+    byte_4CC3DA9 = 1;
   }
   failedReason = 0;
   submarineData = v8->fields.submarineData;
@@ -6011,7 +6615,7 @@ SchedulerTaskBase_o *SubmarineMapManager__ShowScanRangeTask(
         {
           v25 = v24->fields._PanelUnitSize_k__BackingField.fields.x;
           v26 = v24->fields._PanelUnitSize_k__BackingField.fields.y;
-          this = (SubmarineMapManager_o *)sub_1C6BAB0(UnityEngine_Rect___TypeInfo, 1);
+          this = (SubmarineMapManager_o *)sub_1C71458(UnityEngine_Rect___TypeInfo, 1);
           if ( this )
           {
             v27 = (UnityEngine_Rect_array *)this;
@@ -6033,12 +6637,12 @@ SchedulerTaskBase_o *SubmarineMapManager__ShowScanRangeTask(
       }
     }
 LABEL_73:
-    sub_1C6BC60(this, *(_QWORD *)&scanId);
+    sub_1C71608(this, *(_QWORD *)&scanId);
   }
-  v28 = (System_Collections_Generic_List_Rect__o *)sub_1C6BC54(System_Collections_Generic_List_Rect__TypeInfo);
+  v28 = (System_Collections_Generic_List_Rect__o *)sub_1C715FC(System_Collections_Generic_List_Rect__TypeInfo);
   System_Collections_Generic_List_Rect____ctor(
     v28,
-    (const MethodInfo_3816288 *)Method_System_Collections_Generic_List_Rect___ctor__);
+    (const MethodInfo_382602C *)Method_System_Collections_Generic_List_Rect___ctor__);
   this = (SubmarineMapManager_o *)SubmarineDataHelperScan__CreateScanEvents(
                                     scanId,
                                     panelData,
@@ -6060,10 +6664,10 @@ LABEL_73:
     while ( v33 < m_CancellationTokenSource )
     {
       v34 = *((_QWORD *)&v32->fields.mapInfo + (int)v33);
-      if ( !byte_4CAFC09 )
+      if ( !byte_4CC0D09 )
       {
-        this = (SubmarineMapManager_o *)sub_1C6BA08(&UnityEngine_Vector3_TypeInfo);
-        byte_4CAFC09 = 1;
+        this = (SubmarineMapManager_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+        byte_4CC0D09 = 1;
       }
       v35 = v8->fields.submarineData;
       if ( !v35 )
@@ -6091,7 +6695,7 @@ LABEL_73:
         System_Collections_Generic_List_Rect___AddWithResize(
           v28,
           *(UnityEngine_Rect_o *)(&v37 - 1),
-          *(const MethodInfo_3816B14 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+          *(const MethodInfo_38268B8 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
       }
       else
       {
@@ -6111,9 +6715,9 @@ LABEL_43:
     goto LABEL_73;
   v27 = System_Collections_Generic_List_Rect___ToArray(
           v28,
-          (const MethodInfo_38186A8 *)Method_System_Collections_Generic_List_Rect__ToArray__);
+          (const MethodInfo_382844C *)Method_System_Collections_Generic_List_Rect__ToArray__);
 LABEL_45:
-  v46 = (Submarine2DUILocationInfo_o *)sub_1C6BC54(Submarine2DUILocationInfo_TypeInfo);
+  v46 = (Submarine2DUILocationInfo_o *)sub_1C715FC(Submarine2DUILocationInfo_TypeInfo);
   Submarine2DUILocationInfo___ctor(v46, v47);
   if ( !v46 )
     goto LABEL_73;
@@ -6130,7 +6734,7 @@ LABEL_45:
   m_Height = v77.fields.m_Height;
   if ( failedReason == 1 )
   {
-    v55 = (Submarine2DUILocationInfo_o *)sub_1C6BC54(SubmarineScanDialogUpsideLocationInfo_TypeInfo);
+    v55 = (Submarine2DUILocationInfo_o *)sub_1C715FC(SubmarineScanDialogUpsideLocationInfo_TypeInfo);
     Submarine2DUILocationInfo___ctor(v55, v56);
     if ( !v55 )
       goto LABEL_73;
@@ -6146,7 +6750,7 @@ LABEL_45:
         goto LABEL_55;
       goto LABEL_54;
     }
-    v70 = (Submarine2DUILocationInfo_o *)sub_1C6BC54(SubmarinScanDialogUpSideWeakLocationInfo_TypeInfo);
+    v70 = (Submarine2DUILocationInfo_o *)sub_1C715FC(SubmarinScanDialogUpSideWeakLocationInfo_TypeInfo);
     Submarine2DUILocationInfo___ctor(v70, v71);
     if ( !v70 )
       goto LABEL_73;
@@ -6168,7 +6772,7 @@ LABEL_54:
   }
 LABEL_55:
   v60 = FSWindowUtil__GetSize(0);
-  this = (SubmarineMapManager_o *)sub_1C6BAB0(float___TypeInfo, 3);
+  this = (SubmarineMapManager_o *)sub_1C71458(float___TypeInfo, 3);
   if ( !this )
     goto LABEL_73;
   v61 = this->fields.m_CancellationTokenSource;
@@ -6177,7 +6781,7 @@ LABEL_55:
     || (*((float *)&this->fields.mapInfo + 1) = m_Width / v60.fields.x, (unsigned int)v61 <= 2) )
   {
 LABEL_74:
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   }
   v62 = 1.0;
   *(float *)&this->fields.warInfo = m_Height / v60.fields.y;
@@ -6229,14 +6833,14 @@ void SubmarineMapManager__ShowScannableEffect(SubmarineMapManager_o *this, const
   System_Nullable_Vector3__o v8; // 0:x5.16
 
   v2 = this;
-  if ( (byte_4CB2C8D & 1) == 0 )
+  if ( (byte_4CC3DA0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectScannablePanelComponent___);
-    byte_4CB2C8D = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectScannablePanelComponent___);
+    byte_4CC3DA0 = 1;
   }
   memset(&v6, 0, sizeof(v6));
   if ( !v2->fields.isShowScannableEffect )
@@ -6244,20 +6848,20 @@ void SubmarineMapManager__ShowScannableEffect(SubmarineMapManager_o *this, const
     submarineData = v2->fields.submarineData;
     v2->fields.isShowScannableEffect = 1;
     if ( !submarineData || (this = (SubmarineMapManager_o *)submarineData->fields._PanelDataList_k__BackingField) == 0 )
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v6,
       (System_Collections_Generic_List_object__o *)this,
-      (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
     while ( 1 )
     {
       v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v6,
-             (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
       if ( !v4 )
         break;
       if ( !v6.fields._current )
-        sub_1C6BC60(v4, v5);
+        sub_1C71608(v4, v5);
       if ( *((_BYTE *)&v6.fields._current->klass + (unsigned __int64)&word_3A) )
       {
         *(_QWORD *)&v7.fields.hasValue = 0;
@@ -6270,12 +6874,12 @@ void SubmarineMapManager__ShowScannableEffect(SubmarineMapManager_o *this, const
           (SubmarineMapPanelData_o *)v6.fields._current,
           v7,
           v8,
-          (const MethodInfo_31EE62C *)Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectScannablePanelComponent___);
+          (const MethodInfo_31FE3D0 *)Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectScannablePanelComponent___);
       }
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v6,
-      (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
   }
 }
 
@@ -6288,10 +6892,10 @@ void SubmarineMapManager__ShowSelectedPanelEffect(
   System_Nullable_Vector3__o v5; // 0:x3.16
   System_Nullable_Vector3__o v6; // 0:x5.16
 
-  if ( (byte_4CB2C91 & 1) == 0 )
+  if ( (byte_4CC3DA4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectSelectedPanelComponent___);
-    byte_4CB2C91 = 1;
+    sub_1C713B0(&Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectSelectedPanelComponent___);
+    byte_4CC3DA4 = 1;
   }
   *(_QWORD *)&v5.fields.hasValue = 0;
   *(_QWORD *)&v5.fields.value.fields.y = 0;
@@ -6303,7 +6907,7 @@ void SubmarineMapManager__ShowSelectedPanelEffect(
     panelData,
     v5,
     v6,
-    (const MethodInfo_31EE62C *)Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectSelectedPanelComponent___);
+    (const MethodInfo_31FE3D0 *)Method_SubmarineMapManager_RentAndPutEffectAbovePanel_SubmarineEffectSelectedPanelComponent___);
 }
 
 
@@ -6323,41 +6927,53 @@ void SubmarineMapManager__StartScanPerformance(
   SchedulerTaskBase_array *v14; // x23
   const MethodInfo *v15; // x3
   int32_t v16; // w2
-  const MethodInfo *v17; // x3
-  MissionNotifyManager_o *v18; // x20
-  __int64 v19; // x20
-  System_Delegate_o **v20; // x21
-  System_Delegate_o *v21; // x22
-  SchedulerTaskBase_TaskCallback_o *v22; // x23
-  System_Delegate_o *v23; // x0
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
-  System_Delegate_o *v26; // x8
-  SchedulerTaskBase_TaskCallback_c *v27; // x1
-  TaskScheduler_o *v28; // x19
-  MissionNotifyManager_o *v29; // x21
-  int32_t v30; // w2
-  const MethodInfo *v31; // x3
-  __int64 v32; // x0
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  MissionNotifyManager_o *v22; // x20
+  __int64 v23; // x20
+  System_Delegate_o **v24; // x21
+  System_Delegate_o *v25; // x22
+  SchedulerTaskBase_TaskCallback_o *v26; // x23
+  System_Delegate_o *v27; // x0
+  int32_t v28; // w2
+  int32_t v29; // w3
+  System_String_o *v30; // x4
+  int32_t v31; // w5
+  int64_t v32; // x6
+  System_String_o *v33; // x7
+  System_Delegate_o *v34; // x8
+  SchedulerTaskBase_TaskCallback_c *v35; // x1
+  TaskScheduler_o *v36; // x19
+  MissionNotifyManager_o *v37; // x21
+  int32_t v38; // w2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  int32_t v41; // w5
+  int64_t v42; // x6
+  System_String_o *v43; // x7
+  __int64 v44; // x0
 
-  if ( (byte_4CB2C76 & 1) == 0 )
+  if ( (byte_4CC3D89 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&SchedulerTaskBase___TypeInfo);
-    sub_1C6BA08(&SchedulerTaskNone_TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    sub_1C6BA08(&Method_SubmarineMapManager__StartScanPerformance_b__39_0__);
-    sub_1C6BA08(&Method_SubmarineMapManager__StartScanPerformance_b__39_1__);
-    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    byte_4CB2C76 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&SchedulerTaskBase___TypeInfo);
+    sub_1C713B0(&SchedulerTaskNone_TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_1C713B0(&Method_SubmarineMapManager__StartScanPerformance_b__39_0__);
+    sub_1C713B0(&Method_SubmarineMapManager__StartScanPerformance_b__39_1__);
+    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    byte_4CC3D89 = 1;
   }
-  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   MissionNotifyManager__StartPause(Instance, 0);
-  v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-  v10 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v9 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  v10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_SubmarineMapManager__StartScanPerformance_b__39_0__, 0);
   if ( !v9 )
     goto LABEL_22;
@@ -6366,73 +6982,73 @@ void SubmarineMapManager__StartScanPerformance(
   Instance = (MissionNotifyManager_o *)SubmarineMapManager__CreateScanTask(this, panelData, scanId, v12);
   if ( !taskScheduler )
     goto LABEL_22;
-  TaskScheduler__AddTask_44563340(taskScheduler, 0, (System_Collections_Generic_List_SchedulerTaskBase__o *)Instance, 0);
+  TaskScheduler__AddTask_44609668(taskScheduler, 0, (System_Collections_Generic_List_SchedulerTaskBase__o *)Instance, 0);
   v13 = this->fields.taskScheduler;
-  v14 = (SchedulerTaskBase_array *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+  v14 = (SchedulerTaskBase_array *)sub_1C71458(SchedulerTaskBase___TypeInfo, 1);
   Instance = (MissionNotifyManager_o *)SubmarineMapManager__CreateScanOpenPanelTask(this, scanId, panelData, v15);
   if ( !v14 )
     goto LABEL_22;
-  v18 = Instance;
+  v22 = Instance;
   if ( Instance )
   {
-    Instance = (MissionNotifyManager_o *)sub_1C6BB44(Instance, v14->obj.klass->_1.element_class);
+    Instance = (MissionNotifyManager_o *)sub_1C714EC(Instance, v14->obj.klass->_1.element_class);
     if ( !Instance )
       goto LABEL_24;
   }
   if ( !LODWORD(v14->max_length) )
     goto LABEL_23;
-  v14->m_Items[0] = (SchedulerTaskBase_o *)v18;
-  sub_1C6B9AC((CGThumbnailListItem_o *)v14->m_Items, (int32_t)v18, v16, v17);
+  v14->m_Items[0] = (SchedulerTaskBase_o *)v22;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v14->m_Items, (int32_t)v22, v16, v17, v18, v19, v20, v21);
   if ( !v13
     || (TaskScheduler__AddTask(v13, 0, v14, 0),
-        v19 = sub_1C6BC54(SchedulerTaskNone_TypeInfo),
-        SchedulerTaskNone___ctor((SchedulerTaskNone_o *)v19, 0, 0, 0),
-        !v19) )
+        v23 = sub_1C715FC(SchedulerTaskNone_TypeInfo),
+        SchedulerTaskNone___ctor((SchedulerTaskNone_o *)v23, 0, 0, 0),
+        !v23) )
   {
 LABEL_22:
-    sub_1C6BC60(Instance, v8);
+    sub_1C71608(Instance, v8);
   }
-  v20 = (System_Delegate_o **)(v19 + 32);
-  v21 = *(System_Delegate_o **)(v19 + 32);
-  v22 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v24 = (System_Delegate_o **)(v23 + 32);
+  v25 = *(System_Delegate_o **)(v23 + 32);
+  v26 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
-    v22,
+    v26,
     (Il2CppObject *)this,
     Method_SubmarineMapManager__StartScanPerformance_b__39_1__,
     0);
-  v23 = System_Delegate__Combine(v21, (System_Delegate_o *)v22, 0);
-  v26 = v23;
-  if ( !v23 )
+  v27 = System_Delegate__Combine(v25, (System_Delegate_o *)v26, 0);
+  v34 = v27;
+  if ( !v27 )
     goto LABEL_16;
-  v27 = SchedulerTaskBase_TaskCallback_TypeInfo;
-  if ( (SchedulerTaskBase_TaskCallback_c *)v23->klass != SchedulerTaskBase_TaskCallback_TypeInfo
-    || (*v20 = v23, (SchedulerTaskBase_TaskCallback_c *)v23->klass != v27) )
+  v35 = SchedulerTaskBase_TaskCallback_TypeInfo;
+  if ( (SchedulerTaskBase_TaskCallback_c *)v27->klass != SchedulerTaskBase_TaskCallback_TypeInfo
+    || (*v24 = v27, (SchedulerTaskBase_TaskCallback_c *)v27->klass != v35) )
   {
-    sub_1C6BFFC(v23);
+    sub_1C719A4(v27);
 LABEL_16:
-    *v20 = v26;
+    *v24 = v34;
   }
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v19 + 32), (int32_t)v26, v24, v25);
-  v28 = this->fields.taskScheduler;
-  Instance = (MissionNotifyManager_o *)sub_1C6BAB0(SchedulerTaskBase___TypeInfo, 1);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v23 + 32), (int32_t)v34, v28, v29, v30, v31, v32, v33);
+  v36 = this->fields.taskScheduler;
+  Instance = (MissionNotifyManager_o *)sub_1C71458(SchedulerTaskBase___TypeInfo, 1);
   if ( !Instance )
     goto LABEL_22;
-  v29 = Instance;
-  Instance = (MissionNotifyManager_o *)sub_1C6BB44(v19, Instance->klass->_1.element_class);
+  v37 = Instance;
+  Instance = (MissionNotifyManager_o *)sub_1C714EC(v23, Instance->klass->_1.element_class);
   if ( !Instance )
   {
 LABEL_24:
-    v32 = sub_1C6BC84();
-    sub_1C6BB30(v32, 0);
+    v44 = sub_1C7162C();
+    sub_1C714D8(v44, 0);
   }
-  if ( !LODWORD(v29->fields.mNoDispInfos) )
+  if ( !LODWORD(v37->fields.mNoDispInfos) )
 LABEL_23:
-    sub_1C6BC68(Instance);
-  v29->fields.mMissionNotifyComps = (struct System_Collections_Generic_List_MissionNotifyComponent__o *)v19;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v29->fields.mMissionNotifyComps, v19, v30, v31);
-  if ( !v28 )
+    sub_1C71610(Instance);
+  v37->fields.mMissionNotifyComps = (struct System_Collections_Generic_List_MissionNotifyComponent__o *)v23;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v37->fields.mMissionNotifyComps, v23, v38, v39, v40, v41, v42, v43);
+  if ( !v36 )
     goto LABEL_22;
-  TaskScheduler__AddTask(v28, 0, (SchedulerTaskBase_array *)v29, 0);
+  TaskScheduler__AddTask(v36, 0, (SchedulerTaskBase_array *)v37, 0);
 }
 
 
@@ -6445,41 +7061,49 @@ void SubmarineMapManager__SubsequentialOpenPanelTaskChain(
   System_Collections_Generic_List_object__o *SubsequentialOpenPanelTasks; // x0
   __int64 v7; // x1
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   System_Action_o **p_syncRoot; // x22
-  const MethodInfo *v11; // x1
+  const MethodInfo *v15; // x1
   int size; // w8
-  System_Collections_Generic_List_SchedulerTaskBase__o *v13; // x20
+  System_Collections_Generic_List_SchedulerTaskBase__o *v17; // x20
   System_Delegate_o *syncRoot; // x23
-  SchedulerTaskBase_TaskCallback_o *v15; // x24
-  System_Delegate_o *v16; // x0
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  SchedulerTaskBase_TaskCallback_c *v19; // x1
+  SchedulerTaskBase_TaskCallback_o *v19; // x24
+  System_Delegate_o *v20; // x0
+  int32_t v21; // w2
+  int32_t v22; // w3
+  System_String_o *v23; // x4
+  int32_t v24; // w5
+  int64_t v25; // x6
+  System_String_o *v26; // x7
+  SchedulerTaskBase_TaskCallback_c *v27; // x1
 
-  if ( (byte_4CB2C77 & 1) == 0 )
+  if ( (byte_4CC3D8A & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_SchedulerTaskBase__get_Item__);
-    sub_1C6BA08(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass40_0__SubsequentialOpenPanelTaskChain_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass40_0_TypeInfo);
-    byte_4CB2C77 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_SchedulerTaskBase__get_Item__);
+    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass40_0__SubsequentialOpenPanelTaskChain_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass40_0_TypeInfo);
+    byte_4CC3D8A = 1;
   }
-  v5 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass40_0_TypeInfo);
+  v5 = sub_1C715FC(SubmarineMapManager___c__DisplayClass40_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass40_0___ctor((SubmarineMapManager___c__DisplayClass40_0_o *)v5, 0);
   if ( !v5 )
     goto LABEL_15;
   *(_QWORD *)(v5 + 16) = finishCallback;
   p_syncRoot = (System_Action_o **)(v5 + 16);
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v5 + 16), (int32_t)finishCallback, v8, v9);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)finishCallback, v8, v9, v10, v11, v12, v13);
   SubsequentialOpenPanelTasks = (System_Collections_Generic_List_object__o *)SubmarineMapManager__CreateSubsequentialOpenPanelTasks(
                                                                                this,
-                                                                               v11);
+                                                                               v15);
   if ( !SubsequentialOpenPanelTasks )
     goto LABEL_15;
   size = SubsequentialOpenPanelTasks->fields._size;
-  v13 = (System_Collections_Generic_List_SchedulerTaskBase__o *)SubsequentialOpenPanelTasks;
+  v17 = (System_Collections_Generic_List_SchedulerTaskBase__o *)SubsequentialOpenPanelTasks;
   if ( size < 1 )
   {
 LABEL_11:
@@ -6489,25 +7113,25 @@ LABEL_11:
   SubsequentialOpenPanelTasks = (System_Collections_Generic_List_object__o *)System_Collections_Generic_List_object___get_Item(
                                                                                SubsequentialOpenPanelTasks,
                                                                                size - 1,
-                                                                               (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_SchedulerTaskBase__get_Item__);
+                                                                               (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_SchedulerTaskBase__get_Item__);
   if ( !SubsequentialOpenPanelTasks )
     goto LABEL_15;
   p_syncRoot = (System_Action_o **)&SubsequentialOpenPanelTasks->fields._syncRoot;
   syncRoot = (System_Delegate_o *)SubsequentialOpenPanelTasks->fields._syncRoot;
-  v15 = (SchedulerTaskBase_TaskCallback_o *)sub_1C6BC54(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v19 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
-    v15,
+    v19,
     (Il2CppObject *)v5,
     Method_SubmarineMapManager___c__DisplayClass40_0__SubsequentialOpenPanelTaskChain_b__0__,
     0);
-  v16 = System_Delegate__Combine(syncRoot, (System_Delegate_o *)v15, 0);
-  if ( v16 )
+  v20 = System_Delegate__Combine(syncRoot, (System_Delegate_o *)v19, 0);
+  if ( v20 )
   {
-    v19 = SchedulerTaskBase_TaskCallback_TypeInfo;
-    if ( (SchedulerTaskBase_TaskCallback_c *)v16->klass != SchedulerTaskBase_TaskCallback_TypeInfo
-      || (*p_syncRoot = (System_Action_o *)v16, (SchedulerTaskBase_TaskCallback_c *)v16->klass != v19) )
+    v27 = SchedulerTaskBase_TaskCallback_TypeInfo;
+    if ( (SchedulerTaskBase_TaskCallback_c *)v20->klass != SchedulerTaskBase_TaskCallback_TypeInfo
+      || (*p_syncRoot = (System_Action_o *)v20, (SchedulerTaskBase_TaskCallback_c *)v20->klass != v27) )
     {
-      sub_1C6BFFC(v16);
+      sub_1C719A4(v20);
       goto LABEL_11;
     }
   }
@@ -6515,12 +7139,12 @@ LABEL_11:
   {
     *p_syncRoot = 0;
   }
-  sub_1C6B9AC((CGThumbnailListItem_o *)p_syncRoot, (int32_t)v16, v17, v18);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)p_syncRoot, (int32_t)v20, v21, v22, v23, v24, v25, v26);
   SubsequentialOpenPanelTasks = (System_Collections_Generic_List_object__o *)this->fields.taskScheduler;
   if ( !SubsequentialOpenPanelTasks )
 LABEL_15:
-    sub_1C6BC60(SubsequentialOpenPanelTasks, v7);
-  TaskScheduler__AddTask_44563340((TaskScheduler_o *)SubsequentialOpenPanelTasks, 0, v13, 0);
+    sub_1C71608(SubsequentialOpenPanelTasks, v7);
+  TaskScheduler__AddTask_44609668((TaskScheduler_o *)SubsequentialOpenPanelTasks, 0, v17, 0);
 }
 
 
@@ -6535,13 +7159,13 @@ void SubmarineMapManager__TryInitRequest(SubmarineMapManager_o *this, const Meth
   const MethodInfo *v9; // x1
   struct MapControl_MapInfo_o *v10; // x8
 
-  if ( (byte_4CB2C6E & 1) == 0 )
+  if ( (byte_4CC3D81 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_NetworkManager_getRequest_EventScanPanelMapRequest___);
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager__TryInitRequest_b__31_0__);
-    byte_4CB2C6E = 1;
+    sub_1C713B0(&Method_NetworkManager_getRequest_EventScanPanelMapRequest___);
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager__TryInitRequest_b__31_0__);
+    byte_4CC3D81 = 1;
   }
   this->fields.initRequestFinished = 0;
   eventId = SubmarineMapManager__get_eventId(this, method);
@@ -6553,7 +7177,7 @@ void SubmarineMapManager__TryInitRequest(SubmarineMapManager_o *this, const Meth
     this->fields.initRequestFinished = 1;
     return;
   }
-  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1C6BC54(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v7 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v7,
     (Il2CppObject *)this,
@@ -6563,12 +7187,12 @@ void SubmarineMapManager__TryInitRequest(SubmarineMapManager_o *this, const Meth
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v7,
-                     (const MethodInfo_31C6C44 *)Method_NetworkManager_getRequest_EventScanPanelMapRequest___);
+                     (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_EventScanPanelMapRequest___);
   eventId = SubmarineMapManager__get_eventId(this, v9);
   v10 = this->fields.mapInfo;
   if ( !v10 || !Request_object )
 LABEL_11:
-    sub_1C6BC60(eventId, v4);
+    sub_1C71608(eventId, v4);
   EventScanPanelMapRequest__beginRequest(
     (EventScanPanelMapRequest_o *)Request_object,
     eventId,
@@ -6588,11 +7212,11 @@ void SubmarineMapManager__TryOpenNewScannerDialog(SubmarineMapManager_o *this, c
   System_Action_o *v7; // x22
   const MethodInfo *v8; // x3
 
-  if ( (byte_4CB2C88 & 1) == 0 )
+  if ( (byte_4CC3D9B & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager_TryOpenNewScannerDialog__);
-    byte_4CB2C88 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager_TryOpenNewScannerDialog__);
+    byte_4CC3D9B = 1;
   }
   submarineData = this->fields.submarineData;
   if ( !submarineData )
@@ -6602,7 +7226,7 @@ void SubmarineMapManager__TryOpenNewScannerDialog(SubmarineMapManager_o *this, c
   {
     v5 = NewReleasedScanId;
     newScannerDialog = this->fields.newScannerDialog;
-    v7 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    v7 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(v7, (Il2CppObject *)this, Method_SubmarineMapManager_TryOpenNewScannerDialog__, 0);
     if ( newScannerDialog )
     {
@@ -6610,7 +7234,7 @@ void SubmarineMapManager__TryOpenNewScannerDialog(SubmarineMapManager_o *this, c
       return;
     }
 LABEL_8:
-    sub_1C6BC60(submarineData, method);
+    sub_1C71608(submarineData, method);
   }
 }
 
@@ -6633,33 +7257,33 @@ void SubmarineMapManager__UpdateClosedPanelDisplay(SubmarineMapManager_o *this, 
   System_Collections_Generic_List_Enumerator_object__o v5; // [xsp+8h] [xbp-38h] BYREF
 
   v2 = this;
-  if ( (byte_4CB2C7A & 1) == 0 )
+  if ( (byte_4CC3D8D & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
-    this = (SubmarineMapManager_o *)sub_1C6BA08(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
-    byte_4CB2C7A = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__get_Current__);
+    this = (SubmarineMapManager_o *)sub_1C713B0(&Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+    byte_4CC3D8D = 1;
   }
   memset(&v5, 0, sizeof(v5));
   submarineData = v2->fields.submarineData;
   if ( !submarineData || (this = (SubmarineMapManager_o *)submarineData->fields._PanelDataList_k__BackingField) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v5,
     (System_Collections_Generic_List_object__o *)this,
-    (const MethodInfo_380146C *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
+    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_SubmarineMapPanelData__GetEnumerator__);
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v5,
-            (const MethodInfo_3586524 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__) )
+            (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__MoveNext__) )
   {
     if ( !v5.fields._current )
-      sub_1C6BC60(0, v4);
+      sub_1C71608(0, v4);
     SubmarineMapPanelData__UpdatePanelDisplay((SubmarineMapPanelData_o *)v5.fields._current, v4);
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v5,
-    (const MethodInfo_3586520 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
+    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_SubmarineMapPanelData__Dispose__);
 }
 
 
@@ -6672,7 +7296,7 @@ void SubmarineMapManager__UpdateParams(
 
   submarineData = this->fields.submarineData;
   if ( !submarineData )
-    sub_1C6BC60(0, beforeClearQuestId);
+    sub_1C71608(0, beforeClearQuestId);
   SubmarineMapDataManager__UpdateParams(submarineData, beforeClearQuestId, method);
 }
 
@@ -6701,39 +7325,43 @@ void SubmarineMapManager__UpdateTerminalInfo(SubmarineMapManager_o *this, const 
   ScrTerminalMap_o *terminalMap; // x0
   __int64 v5; // x1
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
   UnityEngine_GameObject_c *klass; // x8
   Il2CppObject *MasterData_object; // x21
-  const MethodInfo *v10; // x1
-  TerminalPramsManager_c *v11; // x0
-  TerminalPramsManager_c *v12; // x0
+  const MethodInfo *v14; // x1
+  TerminalPramsManager_c *v15; // x0
+  TerminalPramsManager_c *v16; // x0
   System_String_array *ValueByArray; // x0
   il2cpp_array_size_t max_length; // x8
-  UnityEngine_GameObject_c *v15; // x8
+  UnityEngine_GameObject_c *v19; // x8
   TitleInfoControl_o *genericContainerHandle; // x20
-  EventDetailEntity_o *v17; // x21
-  System_Action_o *v18; // x22
-  const MethodInfo *v19; // x1
-  const MethodInfo *v20; // x1
+  EventDetailEntity_o *v21; // x21
+  System_Action_o *v22; // x22
+  const MethodInfo *v23; // x1
+  const MethodInfo *v24; // x1
 
-  if ( (byte_4CB2C7B & 1) == 0 )
+  if ( (byte_4CC3D8E & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass48_0__UpdateTerminalInfo_b__0__);
-    sub_1C6BA08(&SubmarineMapManager___c__DisplayClass48_0_TypeInfo);
-    byte_4CB2C7B = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C713B0(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&TerminalPramsManager_TypeInfo);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass48_0__UpdateTerminalInfo_b__0__);
+    sub_1C713B0(&SubmarineMapManager___c__DisplayClass48_0_TypeInfo);
+    byte_4CC3D8E = 1;
   }
-  v3 = sub_1C6BC54(SubmarineMapManager___c__DisplayClass48_0_TypeInfo);
+  v3 = sub_1C715FC(SubmarineMapManager___c__DisplayClass48_0_TypeInfo);
   SubmarineMapManager___c__DisplayClass48_0___ctor((SubmarineMapManager___c__DisplayClass48_0_o *)v3, 0);
   if ( !v3 )
     goto LABEL_46;
   *(_QWORD *)(v3 + 16) = this;
-  sub_1C6B9AC((CGThumbnailListItem_o *)(v3 + 16), (int32_t)this, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)this, v6, v7, v8, v9, v10, v11);
   terminalMap = this->fields.terminalMap;
   if ( !terminalMap )
     goto LABEL_46;
@@ -6748,10 +7376,10 @@ void SubmarineMapManager__UpdateTerminalInfo(SubmarineMapManager_o *this, const 
   ScrTerminalMap__UpdateAreaBoardList(terminalMap, 0);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CB01CE )
+  if ( !byte_4CC12CE )
   {
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB01CE = 1;
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC12CE = 1;
   }
   terminalMap = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -6766,51 +7394,51 @@ void SubmarineMapManager__UpdateTerminalInfo(SubmarineMapManager_o *this, const 
   if ( !terminalMap )
     goto LABEL_46;
   TitleInfoControl__UpdateEventItemInfo((TitleInfoControl_o *)terminalMap, 0);
-  terminalMap = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  terminalMap = (ScrTerminalMap_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !terminalMap )
     goto LABEL_46;
   MasterData_object = DataManager__GetMasterData_object_(
                         (DataManager_o *)terminalMap,
-                        (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventDetailMaster___);
-  terminalMap = (ScrTerminalMap_o *)SubmarineMapManager__get_eventId(this, v10);
+                        (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventDetailMaster___);
+  terminalMap = (ScrTerminalMap_o *)SubmarineMapManager__get_eventId(this, v14);
   if ( !MasterData_object )
     goto LABEL_46;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)MasterData_object,
          (Il2CppObject **)(v3 + 24),
          (int32_t)terminalMap,
-         (const MethodInfo_33F9128 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_3408ECC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
   {
     *(_DWORD *)(v3 + 32) = 0;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4CB2CA8 )
+    if ( !byte_4CC3DBB )
     {
-      sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-      byte_4CB2CA8 = 1;
+      sub_1C713B0(&TerminalPramsManager_TypeInfo);
+      byte_4CC3DBB = 1;
     }
-    v11 = TerminalPramsManager_TypeInfo;
+    v15 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      v11 = TerminalPramsManager_TypeInfo;
+      v15 = TerminalPramsManager_TypeInfo;
     }
-    if ( v11->static_fields->_BeforeEventSubmarineSaveData_k__BackingField )
+    if ( v15->static_fields->_BeforeEventSubmarineSaveData_k__BackingField )
     {
-      if ( !v11->_2.cctor_finished )
-        j_il2cpp_runtime_class_init_0(v11);
-      if ( !byte_4CB2CA8 )
+      if ( !v15->_2.cctor_finished )
+        j_il2cpp_runtime_class_init_0(v15);
+      if ( !byte_4CC3DBB )
       {
-        sub_1C6BA08(&TerminalPramsManager_TypeInfo);
-        byte_4CB2CA8 = 1;
+        sub_1C713B0(&TerminalPramsManager_TypeInfo);
+        byte_4CC3DBB = 1;
       }
-      v12 = TerminalPramsManager_TypeInfo;
+      v16 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       {
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-        v12 = TerminalPramsManager_TypeInfo;
+        v16 = TerminalPramsManager_TypeInfo;
       }
-      terminalMap = (ScrTerminalMap_o *)v12->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
+      terminalMap = (ScrTerminalMap_o *)v16->static_fields->_BeforeEventSubmarineSaveData_k__BackingField;
       if ( !terminalMap )
         goto LABEL_46;
       ValueByArray = EventSaveData__GetValueByArray((EventSaveData_o *)terminalMap, 0x2Cu, 0);
@@ -6820,17 +7448,17 @@ void SubmarineMapManager__UpdateTerminalInfo(SubmarineMapManager_o *this, const 
         if ( max_length )
         {
           if ( !(_DWORD)max_length )
-            sub_1C6BC68(ValueByArray);
+            sub_1C71610(ValueByArray);
           *(_DWORD *)(v3 + 32) = System_Int32__Parse(ValueByArray->m_Items[0], 0);
         }
       }
     }
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4CB01CE )
+    if ( !byte_4CC12CE )
     {
-      sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-      byte_4CB01CE = 1;
+      sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+      byte_4CC12CE = 1;
     }
     terminalMap = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -6838,31 +7466,31 @@ void SubmarineMapManager__UpdateTerminalInfo(SubmarineMapManager_o *this, const 
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
       terminalMap = (ScrTerminalMap_o *)TerminalSceneComponent_TypeInfo;
     }
-    v15 = terminalMap->fields.subRootGimmickP->klass;
-    if ( v15 )
+    v19 = terminalMap->fields.subRootGimmickP->klass;
+    if ( v19 )
     {
-      genericContainerHandle = (TitleInfoControl_o *)v15->_2.genericContainerHandle;
-      v17 = *(EventDetailEntity_o **)(v3 + 24);
-      v18 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+      genericContainerHandle = (TitleInfoControl_o *)v19->_2.genericContainerHandle;
+      v21 = *(EventDetailEntity_o **)(v3 + 24);
+      v22 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
       System_Action___ctor(
-        v18,
+        v22,
         (Il2CppObject *)v3,
         Method_SubmarineMapManager___c__DisplayClass48_0__UpdateTerminalInfo_b__0__,
         0);
       if ( genericContainerHandle )
       {
-        TitleInfoControl__CheckEventSubmarineStatusAnim(genericContainerHandle, v17, v18, 0);
+        TitleInfoControl__CheckEventSubmarineStatusAnim(genericContainerHandle, v21, v22, 0);
         return;
       }
     }
 LABEL_46:
-    sub_1C6BC60(terminalMap, v5);
+    sub_1C71608(terminalMap, v5);
   }
   ((void (__fastcall *)(SubmarineMapManager_o *, const MethodInfo *))this->klass->vtable._32_AllTouchBlockForceFalse.methodPtr)(
     this,
     this->klass->vtable._32_AllTouchBlockForceFalse.method);
-  SubmarineMapManager__HideScannableEffect(this, v19);
-  SubmarineMapManager__ShowScannableEffect(this, v20);
+  SubmarineMapManager__HideScannableEffect(this, v23);
+  SubmarineMapManager__ShowScannableEffect(this, v24);
 }
 
 
@@ -6910,7 +7538,7 @@ void SubmarineMapManager___OnEndScan_b__42_0(SubmarineMapManager_o *this, const 
 
   submarineData = this->fields.submarineData;
   if ( !submarineData )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   SubmarineMapDataManager__UpdateParams(submarineData, -1, v2);
   SubmarineMapManager__UpdateClosedPanelDisplay(this, v5);
   SubmarineMapManager__HideSelectedPanelEffect(this, v6);
@@ -6922,13 +7550,13 @@ void SubmarineMapManager___OnEveryActionEnd_b__27_0(SubmarineMapManager_o *this,
 {
   System_Action_o *v3; // x20
 
-  if ( (byte_4CB2CA1 & 1) == 0 )
+  if ( (byte_4CC3DB4 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager__OnEveryActionEnd_b__27_1__);
-    byte_4CB2CA1 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager__OnEveryActionEnd_b__27_1__);
+    byte_4CC3DB4 = 1;
   }
-  v3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_SubmarineMapManager__OnEveryActionEnd_b__27_1__, 0);
   ((void (__fastcall *)(SubmarineMapManager_o *, System_Action_o *, const MethodInfo *))this->klass->vtable._24_OnAfterQuestAfterAction.methodPtr)(
     this,
@@ -6951,14 +7579,14 @@ void SubmarineMapManager___StartScanPerformance_b__39_0(SubmarineMapManager_o *t
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CB2CA2 & 1) == 0 )
+  if ( (byte_4CC3DB5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CB2CA2 = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4CC3DB5 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   CommonUI__SetSkipAnimation((CommonUI_o *)Instance, 1, 0);
   UnityEngine_Time__set_timeScale(this->fields.ACCELERATION_TIME_SCALE, 0);
 }
@@ -6969,13 +7597,13 @@ void SubmarineMapManager___StartScanPerformance_b__39_1(SubmarineMapManager_o *t
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4CB2CA3 & 1) == 0 )
+  if ( (byte_4CC3DB6 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager__StartScanPerformance_b__39_2__);
-    byte_4CB2CA3 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager__StartScanPerformance_b__39_2__);
+    byte_4CC3DB6 = 1;
   }
-  v3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_SubmarineMapManager__StartScanPerformance_b__39_2__, 0);
   SubmarineMapManager__SubsequentialOpenPanelTaskChain(this, v3, v4);
 }
@@ -6986,13 +7614,13 @@ void SubmarineMapManager___StartScanPerformance_b__39_2(SubmarineMapManager_o *t
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4CB2CA4 & 1) == 0 )
+  if ( (byte_4CC3DB7 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager__StartScanPerformance_b__39_3__);
-    byte_4CB2CA4 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager__StartScanPerformance_b__39_3__);
+    byte_4CC3DB7 = 1;
   }
-  v3 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_SubmarineMapManager__StartScanPerformance_b__39_3__, 0);
   SubmarineMapManager__RevealAvailableSpots(this, v3, v4);
 }
@@ -7004,14 +7632,14 @@ void SubmarineMapManager___StartScanPerformance_b__39_3(SubmarineMapManager_o *t
   __int64 v4; // x1
   const MethodInfo *v5; // x1
 
-  if ( (byte_4CB2CA5 & 1) == 0 )
+  if ( (byte_4CC3DB8 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_4CB2CA5 = 1;
+    sub_1C713B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4CC3DB8 = 1;
   }
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A4F8A4 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   MissionNotifyManager__EndPause((MissionNotifyManager_o *)Instance, 0);
   SubmarineMapManager__OnEndScan(this, v5);
 }
@@ -7032,7 +7660,7 @@ int32_t SubmarineMapManager__get_eventId(SubmarineMapManager_o *this, const Meth
 
   submarineData = this->fields.submarineData;
   if ( !submarineData || (this = (SubmarineMapManager_o *)submarineData->fields.WarInfo) == 0 )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return MapControl_WarInfo__GetEventId((MapControl_WarInfo_o *)this, 0);
 }
 
@@ -7045,7 +7673,7 @@ SubmarinePanelPositionCalculator_o *SubmarineMapManager__get_positionCalculator(
 
   submarineData = this->fields.submarineData;
   if ( !submarineData )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return submarineData->fields._PositionCalculator_k__BackingField;
 }
 
@@ -7056,7 +7684,7 @@ SubmarineSettingsManager_o *SubmarineMapManager__get_settings(SubmarineMapManage
 
   submarineData = this->fields.submarineData;
   if ( !submarineData )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   return submarineData->fields._Settings_k__BackingField;
 }
 
@@ -7089,31 +7717,35 @@ bool SubmarineMapManager__CoInitRequest_d__20__MoveNext(
   bool v5; // w21
   System_Func_bool__o *v6; // x22
   UnityEngine_WaitUntil_o *v7; // x20
-  CGThumbnailListItem_o *p__2__current; // x19
+  GrandQuestFolderBoardItem_o *p__2__current; // x19
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
   v2 = this;
-  if ( (byte_4CB2CB4 & 1) == 0 )
+  if ( (byte_4CC3DC7 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Func_bool__TypeInfo);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&Method_SubmarineMapManager__CoInitRequest_b__20_0__);
-    this = (SubmarineMapManager__CoInitRequest_d__20_o *)sub_1C6BA08(&UnityEngine_WaitUntil_TypeInfo);
-    byte_4CB2CB4 = 1;
+    sub_1C713B0(&System_Func_bool__TypeInfo);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&Method_SubmarineMapManager__CoInitRequest_b__20_0__);
+    this = (SubmarineMapManager__CoInitRequest_d__20_o *)sub_1C713B0(&UnityEngine_WaitUntil_TypeInfo);
+    byte_4CC3DC7 = 1;
   }
   _1__state = v2->fields.__1__state;
   _4__this = v2->fields.__4__this;
   if ( _1__state == 1 )
   {
     v2->fields.__1__state = -1;
-    this = (SubmarineMapManager__CoInitRequest_d__20_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (SubmarineMapManager__CoInitRequest_d__20_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !this
       || (CommonUI__SetConnect((CommonUI_o *)this, 0, 0), !_4__this)
       || (this = (SubmarineMapManager__CoInitRequest_d__20_o *)_4__this->fields.submarineData) == 0 )
     {
 LABEL_14:
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     }
     SubmarineMapDataManager__ConstructParams((SubmarineMapDataManager_o *)this, 0);
     ActionExtensions__Call(v2->fields.finishCallback, 0);
@@ -7125,19 +7757,19 @@ LABEL_14:
   if ( !_4__this )
     goto LABEL_14;
   SubmarineMapManager__TryInitRequest(_4__this, 0);
-  this = (SubmarineMapManager__CoInitRequest_d__20_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (SubmarineMapManager__CoInitRequest_d__20_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !this )
     goto LABEL_14;
   v5 = 1;
   CommonUI__SetConnect((CommonUI_o *)this, 1, 0);
-  v6 = (System_Func_bool__o *)sub_1C6BC54(System_Func_bool__TypeInfo);
+  v6 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(v6, (Il2CppObject *)_4__this, Method_SubmarineMapManager__CoInitRequest_b__20_0__, 0);
-  v7 = (UnityEngine_WaitUntil_o *)sub_1C6BC54(UnityEngine_WaitUntil_TypeInfo);
+  v7 = (UnityEngine_WaitUntil_o *)sub_1C715FC(UnityEngine_WaitUntil_TypeInfo);
   UnityEngine_WaitUntil___ctor(v7, v6, 0);
   v2->fields.__2__current = (Il2CppObject *)v7;
-  p__2__current = (CGThumbnailListItem_o *)&v2->fields.__2__current;
-  sub_1C6B9AC(p__2__current, (int32_t)v7, v9, v10);
-  LODWORD(p__2__current[-1].fields._ThumbnailSpritePath_k__BackingField) = 1;
+  p__2__current = (GrandQuestFolderBoardItem_o *)&v2->fields.__2__current;
+  sub_1C71354(p__2__current, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+  LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
   return v5;
 }
 
@@ -7158,11 +7790,11 @@ void __noreturn SubmarineMapManager__CoInitRequest_d__20__System_Collections_IEn
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_SubmarineMapManager__CoInitRequest_d__20_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_SubmarineMapManager__CoInitRequest_d__20_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -7204,21 +7836,29 @@ bool SubmarineMapManager__CoOnAfterSpotCreated_d__23__MoveNext(
   UnityEngine_Texture2D_o *ResizedTexture2D; // x0
   UnityEngine_Texture2D_o **p_closedPanelTexture; // x21
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
-  struct SubmarineMapAssetManager_o *v11; // x8
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
+  struct SubmarineMapAssetManager_o *v15; // x8
   UnityEngine_Object_o *ClosedPanelTexture_k__BackingField; // x22
   UnityEngine_Texture2D_o *DarkTexture2D; // x0
-  int32_t v14; // w2
-  const MethodInfo *v15; // x3
+  int32_t v18; // w2
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
   struct SubmarineMapDataManager_o *submarineData; // x8
-  int32_t v17; // w0
+  int32_t v25; // w0
 
   v2 = this;
-  if ( (byte_4CB2CB5 & 1) == 0 )
+  if ( (byte_4CC3DC8 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    this = (SubmarineMapManager__CoOnAfterSpotCreated_d__23_o *)sub_1C6BA08(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CB2CB5 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (SubmarineMapManager__CoOnAfterSpotCreated_d__23_o *)sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4CC3DC8 = 1;
   }
   if ( !v2->fields.__1__state )
   {
@@ -7259,22 +7899,34 @@ bool SubmarineMapManager__CoOnAfterSpotCreated_d__23__MoveNext(
                                0);
           _4__this->fields.closedPanelTexture = ResizedTexture2D;
           p_closedPanelTexture = &_4__this->fields.closedPanelTexture;
-          sub_1C6B9AC((CGThumbnailListItem_o *)&_4__this->fields.closedPanelTexture, (int32_t)ResizedTexture2D, v9, v10);
-          v11 = _4__this->fields.assetManager;
-          if ( v11 )
+          sub_1C71354(
+            (GrandQuestFolderBoardItem_o *)&_4__this->fields.closedPanelTexture,
+            (int32_t)ResizedTexture2D,
+            v9,
+            v10,
+            v11,
+            v12,
+            v13,
+            v14);
+          v15 = _4__this->fields.assetManager;
+          if ( v15 )
           {
-            ClosedPanelTexture_k__BackingField = (UnityEngine_Object_o *)v11->fields._ClosedPanelTexture_k__BackingField;
+            ClosedPanelTexture_k__BackingField = (UnityEngine_Object_o *)v15->fields._ClosedPanelTexture_k__BackingField;
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
             if ( UnityEngine_Object__op_Equality(ClosedPanelTexture_k__BackingField, 0, 0) )
             {
               DarkTexture2D = ClosePanelTextureUtil__CreateDarkTexture2D(*p_closedPanelTexture, 0.4, 0);
               *p_closedPanelTexture = DarkTexture2D;
-              sub_1C6B9AC(
-                (CGThumbnailListItem_o *)&_4__this->fields.closedPanelTexture,
+              sub_1C71354(
+                (GrandQuestFolderBoardItem_o *)&_4__this->fields.closedPanelTexture,
                 (int32_t)DarkTexture2D,
-                v14,
-                v15);
+                v18,
+                v19,
+                v20,
+                v21,
+                v22,
+                v23);
             }
             SubmarineMapManager__AdjustEachSpotsPositions(_4__this, 0);
             SubmarineMapManager__CreateContainers(_4__this, 0);
@@ -7289,8 +7941,8 @@ bool SubmarineMapManager__CoOnAfterSpotCreated_d__23__MoveNext(
               this = (SubmarineMapManager__CoOnAfterSpotCreated_d__23_o *)submarineData->fields._BeforeQuestInfo_k__BackingField;
               if ( this )
               {
-                v17 = SubmarineQuestSaveInfo__get_BeforeClearQuestId((SubmarineQuestSaveInfo_o *)this, 0);
-                SubmarineMapManager__UpdateParams(_4__this, v17, 0);
+                v25 = SubmarineQuestSaveInfo__get_BeforeClearQuestId((SubmarineQuestSaveInfo_o *)this, 0);
+                SubmarineMapManager__UpdateParams(_4__this, v25, 0);
                 SubmarineMapManager__UpdateClosedPanelDisplay(_4__this, 0);
                 SubmarineMapManager__UpdateScannObstacleEffects(_4__this, 0);
                 ActionExtensions__Call(v2->fields.finishCallback, 0);
@@ -7301,9 +7953,9 @@ bool SubmarineMapManager__CoOnAfterSpotCreated_d__23__MoveNext(
         }
       }
 LABEL_25:
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     }
-    this = (SubmarineMapManager__CoOnAfterSpotCreated_d__23_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    this = (SubmarineMapManager__CoOnAfterSpotCreated_d__23_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( !this )
       goto LABEL_25;
     AvalonSceneManager__transitionSceneRefresh((AvalonSceneManager_o *)this, 34, 1, 0, 0, 0);
@@ -7328,11 +7980,11 @@ void __noreturn SubmarineMapManager__CoOnAfterSpotCreated_d__23__System_Collecti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C6BA1C(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C6BC54(v2);
+  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C6BA1C(&Method_SubmarineMapManager__CoOnAfterSpotCreated_d__23_System_Collections_IEnumerator_Reset__);
-  sub_1C6BB30(v3, v4);
+  v4 = sub_1C713C4(&Method_SubmarineMapManager__CoOnAfterSpotCreated_d__23_System_Collections_IEnumerator_Reset__);
+  sub_1C714D8(v3, v4);
 }
 
 
@@ -7356,17 +8008,29 @@ void SubmarineMapManager___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB2CAA & 1) == 0 )
+  if ( (byte_4CC3DBD & 1) == 0 )
   {
-    sub_1C6BA08(&SubmarineMapManager___c_TypeInfo);
-    byte_4CB2CAA = 1;
+    sub_1C713B0(&SubmarineMapManager___c_TypeInfo);
+    byte_4CC3DBD = 1;
   }
-  v1 = (Il2CppObject *)sub_1C6BC54(SubmarineMapManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C715FC(SubmarineMapManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SubmarineMapManager___c_TypeInfo->static_fields->__9 = (struct SubmarineMapManager___c_o *)v1;
-  sub_1C6B9AC((CGThumbnailListItem_o *)SubmarineMapManager___c_TypeInfo->static_fields, (int32_t)v1, v2, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)SubmarineMapManager___c_TypeInfo->static_fields,
+    (int32_t)v1,
+    v2,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -7390,7 +8054,7 @@ bool SubmarineMapManager___c___CreateHideEnemyOccupiedPanelTasks_b__101_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return !x->fields._IsOpened_k__BackingField;
 }
 
@@ -7401,7 +8065,7 @@ bool SubmarineMapManager___c___CreateScanOpenPanelTask_b__97_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields._IsHitObstacle_k__BackingField || x->fields._IsOpened_k__BackingField;
 }
 
@@ -7412,7 +8076,7 @@ int32_t SubmarineMapManager___c___CreateScanOpenPanelTask_b__97_1(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields._Chain_k__BackingField;
 }
 
@@ -7433,7 +8097,7 @@ bool SubmarineMapManager___c__DisplayClass101_0___CreateHideEnemyOccupiedPanelTa
   struct SubmarineSilhouetteData_o *silhouetteData; // x8
 
   if ( !x || (silhouetteData = this->fields.silhouetteData) == 0 )
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   return x->fields.spotId == silhouetteData->fields._SpotId_k__BackingField;
 }
 
@@ -7456,14 +8120,18 @@ void SubmarineMapManager___c__DisplayClass19_0___LoadAssets_b__0(
   System_Action_o *_9__1; // x23
   int32_t v7; // w22
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
   System_Collections_IEnumerator_o *Assets; // x1
 
-  if ( (byte_4CB2CAB & 1) == 0 )
+  if ( (byte_4CC3DBE & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass19_0__LoadAssets_b__1__);
-    byte_4CB2CAB = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass19_0__LoadAssets_b__1__);
+    byte_4CC3DBE = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -7478,20 +8146,20 @@ void SubmarineMapManager___c__DisplayClass19_0___LoadAssets_b__0(
   v7 = (int)_4__this;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_SubmarineMapManager___c__DisplayClass19_0__LoadAssets_b__1__,
       0);
     this->fields.__9__1 = _9__1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v8, v9, v10, v11, v12, v13);
   }
   if ( !klass )
 LABEL_9:
-    sub_1C6BC60(_4__this, method);
+    sub_1C71608(_4__this, method);
   Assets = SubmarineMapAssetManager__CoLoadAssets(klass, v7, _9__1, 0);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868(v4, Assets, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800(v4, Assets, 0);
 }
 
 
@@ -7516,10 +8184,10 @@ void SubmarineMapManager___c__DisplayClass19_0___LoadAssets_b__1(
           0),
         (v6 = (UnityEngine_MonoBehaviour_o *)this->fields.__4__this) == 0) )
   {
-    sub_1C6BC60(_4__this, method);
+    sub_1C71608(_4__this, method);
   }
   inited = SubmarineMapManager__CoInitRequest(this->fields.__4__this, this->fields.finishCallback, 0);
-  UnityEngine_MonoBehaviour__StartCoroutine_71644868(v6, inited, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_71709800(v6, inited, 0);
 }
 
 
@@ -7541,21 +8209,21 @@ void SubmarineMapManager___c__DisplayClass25_0___OnBeforeQuestAfterAction_b__0(
   __int64 v6; // x8
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CB2CAC & 1) == 0 )
+  if ( (byte_4CC3DBF & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataManager_GetMasterData_EventDetailMaster___);
-    sub_1C6BA08(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB2CAC = 1;
+    sub_1C713B0(&Method_DataManager_GetMasterData_EventDetailMaster___);
+    sub_1C713B0(&Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__);
+    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC3DBF = 1;
   }
   entity = 0;
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_18;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_313B368 *)Method_DataManager_GetMasterData_EventDetailMaster___);
+                                (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventDetailMaster___);
   if ( !this->fields.__4__this )
     goto LABEL_18;
   v5 = (DataMasterBase_TMaster__TEntity__PKType__o *)Instance;
@@ -7566,14 +8234,14 @@ void SubmarineMapManager___c__DisplayClass25_0___OnBeforeQuestAfterAction_b__0(
          v5,
          &entity,
          (int32_t)Instance,
-         (const MethodInfo_33F9128 *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
+         (const MethodInfo_3408ECC *)Method_DataMasterBase_EventDetailMaster__EventDetailEntity__int__TryGetEntity__) )
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4CB01CE )
+    if ( !byte_4CC12CE )
     {
-      sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-      byte_4CB01CE = 1;
+      sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+      byte_4CC12CE = 1;
     }
     Instance = (DataManager_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -7597,7 +8265,7 @@ void SubmarineMapManager___c__DisplayClass25_0___OnBeforeQuestAfterAction_b__0(
       }
     }
 LABEL_18:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   ActionExtensions__Call(this->fields.finishCallback, 0);
 }
@@ -7619,7 +8287,7 @@ void SubmarineMapManager___c__DisplayClass34_0___DoPerformancesByVariedCond_b__0
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   SubmarineMapManager__SubsequentialOpenPanelTaskChain(_4__this, this->fields.finishCallback, 0);
 }
 
@@ -7640,13 +8308,17 @@ void SubmarineMapManager___c__DisplayClass35_0___ClickPanel_b__0(
   System_Action_int__o *_9__1; // x22
   SubmarineMapManager_o *v5; // x20
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  if ( (byte_4CB2CAD & 1) == 0 )
+  if ( (byte_4CC3DC0 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_int__TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass35_0__ClickPanel_b__1__);
-    byte_4CB2CAD = 1;
+    sub_1C713B0(&System_Action_int__TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass35_0__ClickPanel_b__1__);
+    byte_4CC3DC0 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -7656,18 +8328,18 @@ void SubmarineMapManager___c__DisplayClass35_0___ClickPanel_b__0(
   v5 = this->fields.__4__this;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_int__o *)sub_1C6BC54(System_Action_int__TypeInfo);
+    _9__1 = (System_Action_int__o *)sub_1C715FC(System_Action_int__TypeInfo);
     System_Action_int____ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_SubmarineMapManager___c__DisplayClass35_0__ClickPanel_b__1__,
       0);
     this->fields.__9__1 = _9__1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v6, v7);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v6, v7, v8, v9, v10, v11);
   }
   if ( !v5 )
 LABEL_8:
-    sub_1C6BC60(_4__this, method);
+    sub_1C71608(_4__this, method);
   SubmarineMapManager__OpenSelectScannerDialog(v5, _9__1, 0);
 }
 
@@ -7681,7 +8353,7 @@ void SubmarineMapManager___c__DisplayClass35_0___ClickPanel_b__1(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, scanId);
+    sub_1C71608(0, scanId);
   SubmarineMapManager__OnScannerSelected(_4__this, scanId, this->fields.panelData, 0);
 }
 
@@ -7704,13 +8376,17 @@ void SubmarineMapManager___c__DisplayClass36_0___OnScannerSelected_b__0(
   SubmarineMapManager_o *v6; // x21
   _BOOL4 isShowDialogUpper; // w24
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
-  if ( (byte_4CB2CAE & 1) == 0 )
+  if ( (byte_4CC3DC1 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_bool__TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass36_0__OnScannerSelected_b__1__);
-    byte_4CB2CAE = 1;
+    sub_1C713B0(&System_Action_bool__TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass36_0__OnScannerSelected_b__1__);
+    byte_4CC3DC1 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -7729,18 +8405,18 @@ void SubmarineMapManager___c__DisplayClass36_0___OnScannerSelected_b__0(
   isShowDialogUpper = this->fields.isShowDialogUpper;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_bool__o *)sub_1C6BC54(System_Action_bool__TypeInfo);
+    _9__1 = (System_Action_bool__o *)sub_1C715FC(System_Action_bool__TypeInfo);
     System_Action_bool____ctor(
       _9__1,
       (Il2CppObject *)this,
       Method_SubmarineMapManager___c__DisplayClass36_0__OnScannerSelected_b__1__,
       0);
     this->fields.__9__1 = _9__1;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__9__1, (int32_t)_9__1, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v8, v9, v10, v11, v12, v13);
   }
   if ( !v6 )
 LABEL_9:
-    sub_1C6BC60(_4__this, method);
+    sub_1C71608(_4__this, method);
   SubmarineMapManager__OpenScanConfirmDialog(v6, scanId, isShowDialogUpper, _9__1, 0);
 }
 
@@ -7755,13 +8431,17 @@ void SubmarineMapManager___c__DisplayClass36_0___OnScannerSelected_b__1(
   SubmarineMapManager_o *v6; // x20
   System_Action_int__o *_9__2; // x22
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
 
-  if ( (byte_4CB2CAF & 1) == 0 )
+  if ( (byte_4CC3DC2 & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_int__TypeInfo);
-    sub_1C6BA08(&Method_SubmarineMapManager___c__DisplayClass36_0__OnScannerSelected_b__2__);
-    byte_4CB2CAF = 1;
+    sub_1C713B0(&System_Action_int__TypeInfo);
+    sub_1C713B0(&Method_SubmarineMapManager___c__DisplayClass36_0__OnScannerSelected_b__2__);
+    byte_4CC3DC2 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
@@ -7776,19 +8456,19 @@ void SubmarineMapManager___c__DisplayClass36_0___OnScannerSelected_b__1(
       return;
     }
 LABEL_11:
-    sub_1C6BC60(_4__this, yes);
+    sub_1C71608(_4__this, yes);
   }
   _9__2 = this->fields.__9__2;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_int__o *)sub_1C6BC54(System_Action_int__TypeInfo);
+    _9__2 = (System_Action_int__o *)sub_1C715FC(System_Action_int__TypeInfo);
     System_Action_int____ctor(
       _9__2,
       (Il2CppObject *)this,
       Method_SubmarineMapManager___c__DisplayClass36_0__OnScannerSelected_b__2__,
       0);
     this->fields.__9__2 = _9__2;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.__9__2, (int32_t)_9__2, v8, v9);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__9__2, (int32_t)_9__2, v8, v9, v10, v11, v12, v13);
   }
   if ( !v6 )
     goto LABEL_11;
@@ -7805,7 +8485,7 @@ void SubmarineMapManager___c__DisplayClass36_0___OnScannerSelected_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, lscanId);
+    sub_1C71608(0, lscanId);
   SubmarineMapManager__OnScannerSelected(_4__this, lscanId, this->fields.panelData, 0);
 }
 
@@ -7827,7 +8507,7 @@ void SubmarineMapManager___c__DisplayClass37_0___OnScanDecided_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, result);
+    sub_1C71608(0, result);
   SubmarineMapManager__OnScanPanelRequestFinished(_4__this, result, this->fields.scanId, this->fields.panelData, 0);
 }
 
@@ -7881,13 +8561,13 @@ void SubmarineMapManager___c__DisplayClass48_0___UpdateTerminalInfo_b__0(
   ConnectMark_c *klass; // x8
   ConnectMark_c *v6; // x8
 
-  if ( (byte_4CB2CB0 & 1) == 0 )
+  if ( (byte_4CC3DC3 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB2CB0 = 1;
+    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC3DC3 = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A4F3B4 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_22;
   CommonUI__SetSkipAnimation(Instance, 0, 0);
@@ -7897,10 +8577,10 @@ void SubmarineMapManager___c__DisplayClass48_0___UpdateTerminalInfo_b__0(
   SubmarineMapManager__ResetTimeAcceleration((SubmarineMapManager_o *)Instance, 0);
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CB01CE )
+  if ( !byte_4CC12CE )
   {
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB01CE = 1;
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC12CE = 1;
   }
   Instance = (CommonUI_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -7920,10 +8600,10 @@ void SubmarineMapManager___c__DisplayClass48_0___UpdateTerminalInfo_b__0(
     0,
     this->fields.beforePoint,
     0);
-  if ( !byte_4CB01CE )
+  if ( !byte_4CC12CE )
   {
-    sub_1C6BA08(&TerminalSceneComponent_TypeInfo);
-    byte_4CB01CE = 1;
+    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
+    byte_4CC12CE = 1;
   }
   Instance = (CommonUI_o *)TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -7940,7 +8620,7 @@ void SubmarineMapManager___c__DisplayClass48_0___UpdateTerminalInfo_b__0(
         (Instance = (CommonUI_o *)this->fields.__4__this) == 0) )
   {
 LABEL_22:
-    sub_1C6BC60(Instance, v4);
+    sub_1C71608(Instance, v4);
   }
   SubmarineMapManager__UserControllable((SubmarineMapManager_o *)Instance, 1, 0);
 }
@@ -7966,7 +8646,7 @@ bool SubmarineMapManager___c__DisplayClass59_0___AdjustSilhouetteGimmicks_b__0(
     || (mMapCtrl_SpotInfo = x->fields.mMapCtrl_SpotInfo) == 0
     || (silhouetteData = this->fields.silhouetteData) == 0 )
   {
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   }
   return mMapCtrl_SpotInfo->fields.spotId == silhouetteData->fields._SpotId_k__BackingField;
 }
@@ -7988,14 +8668,14 @@ void SubmarineMapManager___c__DisplayClass66_0___OpenSelectScannerDialog_b__0(
 {
   struct SubmarineMapManager_o *_4__this; // x0
 
-  if ( (byte_4CB2CB1 & 1) == 0 )
+  if ( (byte_4CC3DC4 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ActionExtensions_Call_int___);
-    byte_4CB2CB1 = 1;
+    sub_1C713B0(&Method_ActionExtensions_Call_int___);
+    byte_4CC3DC4 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, *(_QWORD *)&scanId);
+    sub_1C71608(0, *(_QWORD *)&scanId);
   ((void (__fastcall *)(struct SubmarineMapManager_o *, _QWORD, const MethodInfo *))_4__this->klass->vtable._31_SetCameraWorkBlock.methodPtr)(
     _4__this,
     0,
@@ -8003,7 +8683,7 @@ void SubmarineMapManager___c__DisplayClass66_0___OpenSelectScannerDialog_b__0(
   ActionExtensions__Call_int_(
     (System_Action_T__o *)this->fields.callback,
     scanId,
-    (const MethodInfo_3085EC4 *)Method_ActionExtensions_Call_int___);
+    (const MethodInfo_3095C68 *)Method_ActionExtensions_Call_int___);
 }
 
 
@@ -8023,14 +8703,14 @@ void SubmarineMapManager___c__DisplayClass68_0___OpenScanConfirmDialog_b__0(
 {
   struct SubmarineMapManager_o *_4__this; // x0
 
-  if ( (byte_4CB2CB2 & 1) == 0 )
+  if ( (byte_4CC3DC5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_ActionExtensions_Call_bool___);
-    byte_4CB2CB2 = 1;
+    sub_1C713B0(&Method_ActionExtensions_Call_bool___);
+    byte_4CC3DC5 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, yes);
+    sub_1C71608(0, yes);
   ((void (__fastcall *)(struct SubmarineMapManager_o *, _QWORD, const MethodInfo *))_4__this->klass->vtable._31_SetCameraWorkBlock.methodPtr)(
     _4__this,
     0,
@@ -8038,7 +8718,7 @@ void SubmarineMapManager___c__DisplayClass68_0___OpenScanConfirmDialog_b__0(
   ActionExtensions__Call_bool_(
     (System_Action_T__o *)this->fields.callback,
     yes,
-    (const MethodInfo_3085E74 *)Method_ActionExtensions_Call_bool___);
+    (const MethodInfo_3095C18 *)Method_ActionExtensions_Call_bool___);
 }
 
 
@@ -8058,7 +8738,7 @@ void SubmarineMapManager___c__DisplayClass93_0___CreateScanTask_b__0(
 
   scanAnimObj = this->fields.scanAnimObj;
   if ( !scanAnimObj )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   UnityEngine_GameObject__SetActive(scanAnimObj, 1, 0);
 }
 
@@ -8071,7 +8751,7 @@ void SubmarineMapManager___c__DisplayClass93_0___CreateScanTask_b__1(
 
   svtScanVoice = this->fields.svtScanVoice;
   if ( !svtScanVoice )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   SubmarineScanVoiceComponent__PlayScanVoice(svtScanVoice, 0);
 }
 
@@ -8084,7 +8764,7 @@ void SubmarineMapManager___c__DisplayClass93_0___CreateScanTask_b__2(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   SubmarineMapManager__HideSelectedPanelEffect(_4__this, 0);
 }
 
@@ -8095,15 +8775,15 @@ void SubmarineMapManager___c__DisplayClass93_0___CreateScanTask_b__3(
 {
   UnityEngine_Object_o *scanAnimObj; // x19
 
-  if ( (byte_4CB2CB3 & 1) == 0 )
+  if ( (byte_4CC3DC6 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2CB3 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3DC6 = 1;
   }
   scanAnimObj = (UnityEngine_Object_o *)this->fields.scanAnimObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71659676(scanAnimObj, 0);
+  UnityEngine_Object__Destroy_71724608(scanAnimObj, 0);
 }
 
 
@@ -8123,7 +8803,7 @@ bool SubmarineMapManager___c__DisplayClass94_0___CreateRevealSpotOnPanelTasks_b_
   struct SubmarineMapPanelData_o *panelData; // x8
 
   if ( !x || (panelData = this->fields.panelData) == 0 )
-    sub_1C6BC60(this, x);
+    sub_1C71608(this, x);
   return x->fields.spotId == panelData->fields._SpotId_k__BackingField;
 }
 
@@ -8142,6 +8822,6 @@ bool SubmarineMapManager___c__DisplayClass97_0___CreateScanOpenPanelTask_b__2(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   return x->fields._Chain_k__BackingField == this->fields.i;
 }

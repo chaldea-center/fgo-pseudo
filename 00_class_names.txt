@@ -185,6 +185,7 @@ BattleAddSkillTaskBeforeCommandAttack
 BattleAddSkillTaskBeforeCounterTreasureDevice
 BattleAddSkillTaskBeforeTargetTask
 BattleAddSkillTaskBeforeTreasureDevice
+BattleAddSkillTaskPostAfterTreasureDevice
 BattleAddSkillTaskPreBeforeOtherTreasureDevice
 BattleAdjustPopupPosInScreenComponent
 BattleAttack
@@ -397,6 +398,7 @@ BattleSaveData
 BattleScenarioRequest
 BattleScriptAction
 BattleScriptActionData
+BattleScriptCameraTargetData
 BattleScriptEntity
 BattleScriptMaster
 BattleScriptRootComponent
@@ -1044,6 +1046,7 @@ CreateOtherTreasureDevicePreBeforeSkillTask
 CreateRecipeRequest
 CreateSkillTaskFromBuffAction
 CreateTreasureDeviceBeforeSkillTask
+CreateTreasureDevicePostAfterSkillTask
 CreateZStream
 CriAudioReadStream
 CriAudioWriteStream

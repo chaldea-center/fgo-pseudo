@@ -11,13 +11,17 @@ void SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodInfo *method)
   Il2CppObject *Component_object; // x0
   struct FSOffset_o **p_fsOffset; // x20
   int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  const MethodInfo *v9; // x1
+  int32_t v8; // w3
+  System_String_o *v9; // x4
+  int32_t v10; // w5
+  int64_t v11; // x6
+  System_String_o *v12; // x7
+  const MethodInfo *v13; // x1
 
-  if ( (byte_4CB2865 & 1) == 0 )
+  if ( (byte_4CC3977 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_FSOffset___);
-    byte_4CB2865 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_FSOffset___);
+    byte_4CC3977 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -29,10 +33,18 @@ void SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodInfo *method)
   this->fields.infoControlLayoutDefault.fields.Scale = UnityEngine_Transform__get_localScale(transform, 0);
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_FSOffset___);
+                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_FSOffset___);
   this->fields.fsOffset = (struct FSOffset_o *)Component_object;
   p_fsOffset = &this->fields.fsOffset;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.fsOffset, (int32_t)Component_object, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.fsOffset,
+    (int32_t)Component_object,
+    v7,
+    v8,
+    v9,
+    v10,
+    v11,
+    v12);
   transform = (UnityEngine_Transform_o *)this->fields.fsOffset;
   if ( !transform )
     goto LABEL_9;
@@ -41,9 +53,9 @@ void SummonInfoLayout__Awake(SummonInfoLayout_o *this, const MethodInfo *method)
   transform = (UnityEngine_Transform_o *)*p_fsOffset;
   if ( !*p_fsOffset )
 LABEL_9:
-    sub_1C6BC60(transform, v4);
+    sub_1C71608(transform, v4);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)transform, 1, 0);
-  SummonInfoLayout__UpdateOffset(this, v9);
+  SummonInfoLayout__UpdateOffset(this, v13);
 }
 
 
@@ -64,7 +76,7 @@ void SummonInfoLayout__UpdateCustom(SummonInfoLayout_o *this, const MethodInfo *
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.infoControlLayoutCustom.fields.Position, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C6BC60(transform, v4);
+    sub_1C71608(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.infoControlLayoutCustom.fields.Scale, 0);
   SummonInfoLayout__UpdateOffset(this, v5);
@@ -82,7 +94,7 @@ void SummonInfoLayout__UpdateDefault(SummonInfoLayout_o *this, const MethodInfo 
     || (UnityEngine_Transform__set_localPosition(transform, this->fields.infoControlLayoutDefault.fields.Position, 0),
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C6BC60(transform, v4);
+    sub_1C71608(transform, v4);
   }
   UnityEngine_Transform__set_localScale(transform, this->fields.infoControlLayoutDefault.fields.Scale, 0);
   SummonInfoLayout__UpdateOffset(this, v5);
@@ -95,10 +107,10 @@ void SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const MethodInfo *
   __int64 v4; // x1
   FSOffset_o *v5; // x0
 
-  if ( (byte_4CB2866 & 1) == 0 )
+  if ( (byte_4CC3978 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2866 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3978 = 1;
   }
   fsOffset = (UnityEngine_Object_o *)this->fields.fsOffset;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -107,7 +119,7 @@ void SummonInfoLayout__UpdateOffset(SummonInfoLayout_o *this, const MethodInfo *
   {
     v5 = this->fields.fsOffset;
     if ( !v5 )
-      sub_1C6BC60(0, v4);
+      sub_1C71608(0, v4);
     FSOffset__UpdateOffset(v5, 0);
   }
 }

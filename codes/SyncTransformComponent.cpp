@@ -16,13 +16,17 @@ void SyncTransformComponent__setChild(
         UnityEngine_Transform_o *trans,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  const MethodInfo *v5; // x1
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  const MethodInfo *v9; // x1
 
   this->fields.child = trans;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.child, (int32_t)trans, (int32_t)method, v3, v4, v5, v6, v7);
   this->fields.isEnable = 1;
-  SyncTransformComponent__sync(this, v5);
+  SyncTransformComponent__sync(this, v9);
 }
 
 
@@ -38,10 +42,10 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
   UnityEngine_Vector3_o localScale; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CB587A & 1) == 0 )
+  if ( (byte_4CC699B & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB587A = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC699B = 1;
   }
   child = (UnityEngine_Object_o *)this->fields.child;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -88,7 +92,7 @@ void SyncTransformComponent__sync(SyncTransformComponent_o *this, const MethodIn
       || (localScale = UnityEngine_Transform__get_localScale((UnityEngine_Transform_o *)gameObject, 0), !v8) )
     {
 LABEL_20:
-      sub_1C6BC60(gameObject, v4);
+      sub_1C71608(gameObject, v4);
     }
     UnityEngine_Transform__set_localScale(v8, localScale, 0);
   }

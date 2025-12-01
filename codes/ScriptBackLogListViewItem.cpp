@@ -5,11 +5,15 @@ void ScriptBackLogListViewItem___ctor(
         const MethodInfo *method)
 {
   int32_t v6; // w2
-  const MethodInfo *v7; // x3
+  int32_t v7; // w3
+  System_String_o *v8; // x4
+  int32_t v9; // w5
+  int64_t v10; // x6
+  System_String_o *v11; // x7
 
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
   this->fields.label = label;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.label, (int32_t)label, v6, v7);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.label, (int32_t)label, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -28,12 +32,12 @@ System_String_o *ScriptBackLogListViewItem__ToString(ScriptBackLogListViewItem_o
   __int64 v6; // x11
 
   v2 = this;
-  if ( (byte_4CB8233 & 1) == 0 )
+  if ( (byte_4CC9366 & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_21485/*"mainText "*/);
-    sub_1C6BA08(&StringLiteral_20357/*"imageText "*/);
-    this = (ScriptBackLogListViewItem_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB8233 = 1;
+    sub_1C713B0(&StringLiteral_21500/*"mainText "*/);
+    sub_1C713B0(&StringLiteral_20370/*"imageText "*/);
+    this = (ScriptBackLogListViewItem_o *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC9366 = 1;
   }
   label = v2->fields.label;
   if ( !label
@@ -43,15 +47,15 @@ System_String_o *ScriptBackLogListViewItem__ToString(ScriptBackLogListViewItem_o
                                                 0),
         (v4 = v2->fields.label) == 0) )
   {
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   }
-  v5 = (System_String_o **)&StringLiteral_20357/*"imageText "*/;
+  v5 = (System_String_o **)&StringLiteral_20370/*"imageText "*/;
   v6 = 120;
   if ( ((unsigned __int8)this & 1) != 0 )
     v6 = 136;
   else
-    v5 = (System_String_o **)&StringLiteral_21485/*"mainText "*/;
-  return System_String__Concat_63966792(*v5, *(System_String_o **)((char *)&v4->klass + v6), 0);
+    v5 = (System_String_o **)&StringLiteral_21500/*"mainText "*/;
+  return System_String__Concat_64031724(*v5, *(System_String_o **)((char *)&v4->klass + v6), 0);
 }
 
 

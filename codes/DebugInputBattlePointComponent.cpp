@@ -17,7 +17,7 @@ void DebugInputBattlePointComponent__Cancel(DebugInputBattlePointComponent_o *th
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_1C6BC60(debugMenuTran, method);
+    sub_1C71608(debugMenuTran, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -36,28 +36,32 @@ System_Collections_Generic_IEnumerable_BattleServantData__o *DebugInputBattlePoi
   struct System_Collections_Generic_List_EventDelegate__o *onChange; // x8
   int size; // w9
   int32_t v11; // w2
-  const MethodInfo *v12; // x3
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v14; // x9
-  __int64 v15; // x10
-  UIToggle_o *v16; // x1
-  Il2CppClass **v17; // x0
+  _QWORD *v18; // x9
+  __int64 v19; // x10
+  UIToggle_o *v20; // x1
+  Il2CppClass **v21; // x0
 
-  if ( (byte_4CB78B2 & 1) == 0 )
+  if ( (byte_4CC89DB & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleServantData__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_BattleServantData__TypeInfo);
-    byte_4CB78B2 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_BattleServantData__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_BattleServantData__TypeInfo);
+    byte_4CC89DB = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_BattleServantData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_BattleServantData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_BattleServantData___ctor__);
   targetPlayerToggleList = this->fields.targetPlayerToggleList;
   if ( !targetPlayerToggleList )
 LABEL_20:
-    sub_1C6BC60(value, v5);
+    sub_1C71608(value, v5);
   v7 = 0;
   while ( 1 )
   {
@@ -83,7 +87,7 @@ LABEL_20:
         return (System_Collections_Generic_IEnumerable_BattleServantData__o *)v3;
       if ( (unsigned int)v7 >= size )
 LABEL_22:
-        sub_1C6BC68(value);
+        sub_1C71610(value);
       value = (UIToggle_o *)BattleData__getPlayerServantData(
                               (BattleData_o *)value,
                               *((_DWORD *)&onChange->fields._syncRoot + v7),
@@ -93,25 +97,25 @@ LABEL_22:
         if ( !v3 )
           goto LABEL_20;
         items = v3->fields._items;
-        v14 = Method_System_Collections_Generic_List_BattleServantData__Add__;
+        v18 = Method_System_Collections_Generic_List_BattleServantData__Add__;
         ++v3->fields._version;
         if ( !items )
           goto LABEL_20;
-        v15 = v3->fields._size;
-        v16 = value;
-        if ( (unsigned int)v15 >= LODWORD(items->max_length) )
+        v19 = v3->fields._size;
+        v20 = value;
+        if ( (unsigned int)v19 >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             v3,
             (Il2CppObject *)value,
-            *(const MethodInfo_3800974 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+            *(const MethodInfo_3810718 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
         }
         else
         {
-          v17 = &items->obj.klass + v15;
-          v3->fields._size = v15 + 1;
-          v17[4] = (Il2CppClass *)v16;
-          sub_1C6B9AC((CGThumbnailListItem_o *)(v17 + 4), (int32_t)v16, v11, v12);
+          v21 = &items->obj.klass + v19;
+          v3->fields._size = v19 + 1;
+          v21[4] = (Il2CppClass *)v20;
+          sub_1C71354((GrandQuestFolderBoardItem_o *)(v21 + 4), (int32_t)v20, v11, v12, v13, v14, v15, v16);
         }
       }
     }
@@ -130,72 +134,103 @@ void DebugInputBattlePointComponent__Open(
         System_Action_o *onSubmitCallback,
         const MethodInfo *method)
 {
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct UIToggle_array *targetPlayerToggleList; // x8
   int max_length; // w8
-  DebugInputBattlePointComponent_o *v9; // x19
-  int v10; // w9
-  struct UIToggle_array *uiUpdateTypeToggleList; // x8
-  int v12; // w8
+  DebugInputBattlePointComponent_o *v12; // x19
   int v13; // w9
-  struct UIToggle_array *overwriteToggleList; // x8
+  struct UIToggle_array *uiUpdateTypeToggleList; // x8
   int v15; // w8
   int v16; // w9
-  int32_t v17; // w2
-  const MethodInfo *v18; // x3
-  int32_t v19; // w2
-  const MethodInfo *v20; // x3
-  struct UIToggle_array *v21; // x21
-  int v22; // w8
-  __int64 v23; // x22
-  char v24; // w9
-  UIToggle_o *v25; // x20
-  struct UIToggle_array *v26; // x21
-  int v27; // w8
-  __int64 v28; // x22
-  char v29; // w9
-  UIToggle_o *v30; // x20
+  struct UIToggle_array *overwriteToggleList; // x8
+  int v18; // w8
+  int v19; // w9
+  int32_t v20; // w2
+  int32_t v21; // w3
+  System_String_o *v22; // x4
+  int32_t v23; // w5
+  int64_t v24; // x6
+  System_String_o *v25; // x7
+  int32_t v26; // w2
+  int32_t v27; // w3
+  System_String_o *v28; // x4
+  int32_t v29; // w5
+  int64_t v30; // x6
+  System_String_o *v31; // x7
+  struct UIToggle_array *v32; // x21
+  int v33; // w8
+  __int64 v34; // x22
+  char v35; // w9
+  UIToggle_o *v36; // x20
+  struct UIToggle_array *v37; // x21
+  int v38; // w8
+  __int64 v39; // x22
+  char v40; // w9
+  UIToggle_o *v41; // x20
   UIInput_o *battlePointIdInput; // x20
   UIInput_o *battlePointValueInput; // x20
-  struct UIInput_o *v33; // x8
-  struct UIInput_o *v34; // x9
-  int v35; // [xsp+Ch] [xbp-34h] BYREF
+  struct UIInput_o *v44; // x8
+  struct UIInput_o *v45; // x9
+  int v46; // [xsp+Ch] [xbp-34h] BYREF
 
   targetPlayerToggleList = this->fields.targetPlayerToggleList;
   if ( !targetPlayerToggleList )
     goto LABEL_33;
   max_length = targetPlayerToggleList->max_length;
-  v9 = this;
-  v10 = -1;
-  do
-    ++v10;
-  while ( v10 < max_length );
-  uiUpdateTypeToggleList = this->fields.uiUpdateTypeToggleList;
-  if ( !uiUpdateTypeToggleList )
-    goto LABEL_33;
-  v12 = uiUpdateTypeToggleList->max_length;
+  v12 = this;
   v13 = -1;
   do
     ++v13;
-  while ( v13 < v12 );
-  overwriteToggleList = this->fields.overwriteToggleList;
-  if ( !overwriteToggleList )
+  while ( v13 < max_length );
+  uiUpdateTypeToggleList = this->fields.uiUpdateTypeToggleList;
+  if ( !uiUpdateTypeToggleList )
     goto LABEL_33;
-  v15 = overwriteToggleList->max_length;
+  v15 = uiUpdateTypeToggleList->max_length;
   v16 = -1;
   do
     ++v16;
   while ( v16 < v15 );
+  overwriteToggleList = this->fields.overwriteToggleList;
+  if ( !overwriteToggleList )
+    goto LABEL_33;
+  v18 = overwriteToggleList->max_length;
+  v19 = -1;
+  do
+    ++v19;
+  while ( v19 < v18 );
   this->fields.data = data;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields.data,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.data,
     (int32_t)data,
     (int32_t)debugMenuTran,
-    (const MethodInfo *)onSubmitCallback);
-  v9->fields.debugMenuTran = debugMenuTran;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v9->fields.debugMenuTran, (int32_t)debugMenuTran, v17, v18);
-  v9->fields.onSubmitCallback = onSubmitCallback;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v9->fields.onSubmitCallback, (int32_t)onSubmitCallback, v19, v20);
-  this = (DebugInputBattlePointComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v9, 0);
+    (int32_t)onSubmitCallback,
+    (System_String_o *)method,
+    v5,
+    v6,
+    v7);
+  v12->fields.debugMenuTran = debugMenuTran;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v12->fields.debugMenuTran,
+    (int32_t)debugMenuTran,
+    v20,
+    v21,
+    v22,
+    v23,
+    v24,
+    v25);
+  v12->fields.onSubmitCallback = onSubmitCallback;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v12->fields.onSubmitCallback,
+    (int32_t)onSubmitCallback,
+    v26,
+    v27,
+    v28,
+    v29,
+    v30,
+    v31);
+  this = (DebugInputBattlePointComponent_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v12, 0);
   if ( !this )
     goto LABEL_33;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 1, 0);
@@ -207,82 +242,82 @@ void DebugInputBattlePointComponent__Open(
   if ( !this )
     goto LABEL_33;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-  if ( !v9->fields.isFirstOpen )
+  if ( !v12->fields.isFirstOpen )
     return;
-  this = (DebugInputBattlePointComponent_o *)v9->fields.scrollView;
-  v9->fields.isFirstOpen = 0;
+  this = (DebugInputBattlePointComponent_o *)v12->fields.scrollView;
+  v12->fields.isFirstOpen = 0;
   if ( !this )
     goto LABEL_33;
   UIScrollView__ResetPosition((UIScrollView_o *)this, 0);
-  v21 = v9->fields.uiUpdateTypeToggleList;
-  if ( !v21 )
+  v32 = v12->fields.uiUpdateTypeToggleList;
+  if ( !v32 )
     goto LABEL_33;
-  v22 = v21->max_length;
-  if ( v22 >= 1 )
+  v33 = v32->max_length;
+  if ( v33 >= 1 )
   {
-    v23 = 0;
-    v24 = 1;
-    while ( (unsigned int)v23 < v22 )
+    v34 = 0;
+    v35 = 1;
+    while ( (unsigned int)v34 < v33 )
     {
-      v25 = v21->m_Items[v23];
-      if ( !v25 )
+      v36 = v32->m_Items[v34];
+      if ( !v36 )
         goto LABEL_33;
-      UIToggle__set_value(v21->m_Items[v23++], v24 & 1, 0);
-      v25->fields.group = 123;
-      v35 = v23;
-      v22 = v21->max_length;
-      v24 = 0;
-      if ( (int)v23 >= v22 )
+      UIToggle__set_value(v32->m_Items[v34++], v35 & 1, 0);
+      v36->fields.group = 123;
+      v46 = v34;
+      v33 = v32->max_length;
+      v35 = 0;
+      if ( (int)v34 >= v33 )
         goto LABEL_21;
     }
 LABEL_34:
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   }
 LABEL_21:
-  v26 = v9->fields.overwriteToggleList;
-  if ( !v26 )
+  v37 = v12->fields.overwriteToggleList;
+  if ( !v37 )
     goto LABEL_33;
-  v27 = v26->max_length;
-  if ( v27 >= 1 )
+  v38 = v37->max_length;
+  if ( v38 >= 1 )
   {
-    v28 = 0;
-    v29 = 1;
-    while ( (unsigned int)v28 < v27 )
+    v39 = 0;
+    v40 = 1;
+    while ( (unsigned int)v39 < v38 )
     {
-      v30 = v26->m_Items[v28];
-      if ( !v30 )
+      v41 = v37->m_Items[v39];
+      if ( !v41 )
         goto LABEL_33;
-      UIToggle__set_value(v26->m_Items[v28++], v29 & 1, 0);
-      v30->fields.group = 456;
-      v35 = v28;
-      v27 = v26->max_length;
-      v29 = 0;
-      if ( (int)v28 >= v27 )
+      UIToggle__set_value(v37->m_Items[v39++], v40 & 1, 0);
+      v41->fields.group = 456;
+      v46 = v39;
+      v38 = v37->max_length;
+      v40 = 0;
+      if ( (int)v39 >= v38 )
         goto LABEL_27;
     }
     goto LABEL_34;
   }
 LABEL_27:
-  battlePointIdInput = v9->fields.battlePointIdInput;
-  v35 = 1;
-  this = (DebugInputBattlePointComponent_o *)System_Int32__ToString((int32_t)&v35, 0);
+  battlePointIdInput = v12->fields.battlePointIdInput;
+  v46 = 1;
+  this = (DebugInputBattlePointComponent_o *)System_Int32__ToString((int32_t)&v46, 0);
   if ( !battlePointIdInput )
     goto LABEL_33;
   UIInput__set_value(battlePointIdInput, (System_String_o *)this, 0);
-  battlePointValueInput = v9->fields.battlePointValueInput;
-  v35 = 100;
-  this = (DebugInputBattlePointComponent_o *)System_Int32__ToString((int32_t)&v35, 0);
+  battlePointValueInput = v12->fields.battlePointValueInput;
+  v46 = 100;
+  this = (DebugInputBattlePointComponent_o *)System_Int32__ToString((int32_t)&v46, 0);
   if ( !battlePointValueInput
     || (UIInput__set_value(battlePointValueInput, (System_String_o *)this, 0),
-        (v33 = v9->fields.battlePointValueInput) == 0)
-    || (v34 = v9->fields.battlePointIdInput, v33->fields.validation = 1, !v34) )
+        (v44 = v12->fields.battlePointValueInput) == 0)
+    || (v45 = v12->fields.battlePointIdInput, v44->fields.validation = 1, !v45) )
   {
 LABEL_33:
-    sub_1C6BC60(this, data);
+    sub_1C71608(this, data);
   }
-  v34->fields.validation = 1;
-  v33->fields.keyboardType = 4;
-  v34->fields.keyboardType = 4;
+  v45->fields.validation = 1;
+  v44->fields.keyboardType = 4;
+  v45->fields.keyboardType = 4;
 }
 
 
@@ -312,7 +347,7 @@ void DebugInputBattlePointComponent__Submit(DebugInputBattlePointComponent_o *th
     goto LABEL_16;
   if ( !LODWORD(overwriteToggleList->max_length) )
 LABEL_17:
-    sub_1C6BC68(battlePointIdInput);
+    sub_1C71610(battlePointIdInput);
   battlePointIdInput = overwriteToggleList->m_Items[0];
   if ( !battlePointIdInput )
     goto LABEL_16;
@@ -342,7 +377,7 @@ LABEL_17:
           goto LABEL_15;
         }
 LABEL_16:
-        sub_1C6BC60(battlePointIdInput, method);
+        sub_1C71608(battlePointIdInput, method);
       }
       goto LABEL_17;
     }

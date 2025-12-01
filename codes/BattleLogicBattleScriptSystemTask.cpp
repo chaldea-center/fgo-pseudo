@@ -11,8 +11,21 @@ void BattleLogicBattleScriptSystemTask__Init(
         int32_t systemType,
         const MethodInfo *method)
 {
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+
   this->fields.battleScriptEntities = entities;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.battleScriptEntities, (int32_t)entities, systemType, method);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.battleScriptEntities,
+    (int32_t)entities,
+    systemType,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields.type = systemType;
 }
 
@@ -28,25 +41,25 @@ BattleActionData_o *BattleLogicBattleScriptSystemTask__MakeActionData(
   struct System_Int32_array *actorIdlist; // x8
   int v9; // w8
 
-  if ( (byte_4CB9622 & 1) == 0 )
+  if ( (byte_4CCA771 & 1) == 0 )
   {
-    sub_1C6BA08(&BattleScriptSystemActionData_TypeInfo);
-    byte_4CB9622 = 1;
+    sub_1C713B0(&BattleScriptSystemActionData_TypeInfo);
+    byte_4CCA771 = 1;
   }
   v5 = 0;
   if ( !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)this->fields.battleScriptEntities, 0) )
   {
-    v5 = (BattleScriptSystemActionData_o *)sub_1C6BC54(BattleScriptSystemActionData_TypeInfo);
+    v5 = (BattleScriptSystemActionData_o *)sub_1C715FC(BattleScriptSystemActionData_TypeInfo);
     BattleScriptSystemActionData___ctor(v5, 0);
     actorIdlist = this->fields.actorIdlist;
     if ( actorIdlist )
     {
       if ( !LODWORD(actorIdlist->max_length) )
-        sub_1C6BC68(v6);
+        sub_1C71610(v6);
       v9 = actorIdlist->m_Items[0];
       if ( !v5 )
 LABEL_12:
-        sub_1C6BC60(v6, v7);
+        sub_1C71608(v6, v7);
     }
     else
     {

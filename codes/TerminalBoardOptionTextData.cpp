@@ -10,17 +10,25 @@ void TerminalBoardOptionTextData___ctor(
 {
   TerminalBoardOptionTextData_o *v12; // x23
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  int32_t v15; // w2
-  const MethodInfo *v16; // x3
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  int32_t v19; // w2
+  int32_t v20; // w3
+  System_String_o *v21; // x4
+  int32_t v22; // w5
+  int64_t v23; // x6
+  System_String_o *v24; // x7
 
   v12 = this;
   System_Object___ctor((Il2CppObject *)this, 0);
   v12->fields._ForwardText_k__BackingField = forwardText;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v12->fields, (int32_t)forwardText, v13, v14);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v12->fields, (int32_t)forwardText, v13, v14, v15, v16, v17, v18);
   v12->fields._BehindTextFormat_k__BackingField = behindTextFormat;
   v12 = (TerminalBoardOptionTextData_o *)((char *)v12 + 32);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v12, (int32_t)behindTextFormat, v15, v16);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v12, (int32_t)behindTextFormat, v19, v20, v21, v22, v23, v24);
   LODWORD(v12->monitor) = itemImageId;
   HIDWORD(v12->monitor) = alignment;
 }
@@ -31,31 +39,51 @@ void TerminalBoardOptionTextData__SetParamsToBehindText(
         System_Object_array *args,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   il2cpp_array_size_t max_length; // x9
   struct System_String_o *BehindTextFormat_k__BackingField; // x1
-  struct System_String_o *v8; // x0
-  int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  struct System_String_o *v12; // x0
+  int32_t v13; // w2
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
 
   if ( !args )
-    sub_1C6BC60(this, 0);
+    sub_1C71608(this, 0);
   max_length = args->max_length;
   BehindTextFormat_k__BackingField = this->fields._BehindTextFormat_k__BackingField;
   if ( max_length )
   {
-    v8 = System_String__Format_64008236(this->fields._BehindTextFormat_k__BackingField, args, 0);
-    this->fields._BehindText_k__BackingField = v8;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)v8, v9, v10);
+    v12 = System_String__Format_64073168(this->fields._BehindTextFormat_k__BackingField, args, 0);
+    this->fields._BehindText_k__BackingField = v12;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields._BehindText_k__BackingField,
+      (int32_t)v12,
+      v13,
+      v14,
+      v15,
+      v16,
+      v17,
+      v18);
   }
   else
   {
     this->fields._BehindText_k__BackingField = BehindTextFormat_k__BackingField;
-    sub_1C6B9AC(
-      (CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField,
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields._BehindText_k__BackingField,
       (int32_t)BehindTextFormat_k__BackingField,
       (int32_t)method,
-      v3);
+      v3,
+      v4,
+      v5,
+      v6,
+      v7);
   }
 }
 
@@ -107,10 +135,22 @@ void TerminalBoardOptionTextData__set_BehindText(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._BehindText_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields._BehindText_k__BackingField, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._BehindText_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -119,14 +159,22 @@ void TerminalBoardOptionTextData__set_BehindTextFormat(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._BehindTextFormat_k__BackingField = value;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)&this->fields._BehindTextFormat_k__BackingField,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields._BehindTextFormat_k__BackingField,
     (int32_t)value,
     (int32_t)method,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -135,10 +183,14 @@ void TerminalBoardOptionTextData__set_ForwardText(
         System_String_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._ForwardText_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 

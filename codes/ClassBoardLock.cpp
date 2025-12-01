@@ -31,14 +31,14 @@ void ClassBoardLock__PlayClickedSe(ClassBoardLock_o *this, const MethodInfo *met
   __int64 v7; // x0
 
   v2 = (ClassBoardSquare_o *)this;
-  if ( (byte_4CB9EBA & 1) == 0 )
+  if ( (byte_4CCB00D & 1) == 0 )
   {
-    this = (ClassBoardLock_o *)sub_1C6BA08(&IClassBoardSquareModel_TypeInfo);
-    byte_4CB9EBA = 1;
+    this = (ClassBoardLock_o *)sub_1C713B0(&IClassBoardSquareModel_TypeInfo);
+    byte_4CCB00D = 1;
   }
   SquareModel_k__BackingField = v2->fields._SquareModel_k__BackingField;
   if ( !SquareModel_k__BackingField )
-    sub_1C6BC60(this, method);
+    sub_1C71608(this, method);
   klass = SquareModel_k__BackingField->klass;
   v5 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
   if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
@@ -56,7 +56,7 @@ void ClassBoardLock__PlayClickedSe(ClassBoardLock_o *this, const MethodInfo *met
   else
   {
 LABEL_8:
-    v7 = sub_1C41D90(v2->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
+    v7 = sub_1C47738(v2->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
   }
   if ( ((*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD, _QWORD))v7)(
           SquareModel_k__BackingField,
@@ -81,19 +81,19 @@ void ClassBoardLock__PlayReleaseEffect(ClassBoardLock_o *this, const MethodInfo 
   System_Action_o *v12; // x21
   int v13; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CB9EBB & 1) == 0 )
+  if ( (byte_4CCB00E & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_ClassBoardLock__PlayReleaseEffect_b__13_0__);
-    sub_1C6BA08(&IClassBoardSquareModel_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&StringLiteral_25318/*"{0}{1}"*/);
-    sub_1C6BA08(&StringLiteral_15133/*"Unlock"*/);
-    byte_4CB9EBB = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_ClassBoardLock__PlayReleaseEffect_b__13_0__);
+    sub_1C713B0(&IClassBoardSquareModel_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&StringLiteral_25338/*"{0}{1}"*/);
+    sub_1C713B0(&StringLiteral_15139/*"Unlock"*/);
+    byte_4CCB00E = 1;
   }
   LockModel = ClassBoardLock__get_LockModel(this, method);
   if ( !LockModel )
-    sub_1C6BC60(0, v4);
+    sub_1C71608(0, v4);
   klass = LockModel->klass;
   v6 = *(unsigned __int16 *)&LockModel->klass->_2.rank;
   v7 = LockModel;
@@ -112,16 +112,16 @@ void ClassBoardLock__PlayReleaseEffect(ClassBoardLock_o *this, const MethodInfo 
   else
   {
 LABEL_8:
-    v9 = sub_1C41D90(LockModel, IClassBoardSquareModel_TypeInfo, 2);
+    v9 = sub_1C47738(LockModel, IClassBoardSquareModel_TypeInfo, 2);
   }
   v13 = (*(__int64 (__fastcall **)(IClassBoardLockModel_o *, _QWORD))v9)(v7, *(_QWORD *)(v9 + 8));
   v10 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v13);
-  v11 = System_String__Format_64008100(
-          (System_String_o *)StringLiteral_25318/*"{0}{1}"*/,
-          (Il2CppObject *)StringLiteral_15133/*"Unlock"*/,
+  v11 = System_String__Format_64073032(
+          (System_String_o *)StringLiteral_25338/*"{0}{1}"*/,
+          (Il2CppObject *)StringLiteral_15139/*"Unlock"*/,
           v10,
           0);
-  v12 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v12 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v12, (Il2CppObject *)this, Method_ClassBoardLock__PlayReleaseEffect_b__13_0__, 0);
   ClassBoardSquare__PlaySimpleAnimation((ClassBoardSquare_o *)this, v11, 0, v12, 0);
 }
@@ -167,16 +167,16 @@ void ClassBoardLock__SetupIcon(ClassBoardLock_o *this, const MethodInfo *method)
   Il2CppObject *v38; // x0
   int v39; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4CB9EB8 & 1) == 0 )
+  if ( (byte_4CCB00B & 1) == 0 )
   {
-    sub_1C6BA08(&IClassBoardSquareModel_TypeInfo);
-    sub_1C6BA08(&int_TypeInfo);
-    sub_1C6BA08(&StringLiteral_21417/*"lock_light_{0}"*/);
-    sub_1C6BA08(&StringLiteral_21420/*"lock_stopper"*/);
-    sub_1C6BA08(&StringLiteral_21419/*"lock_on_{0}"*/);
-    sub_1C6BA08(&StringLiteral_21418/*"lock_off_{0}"*/);
-    sub_1C6BA08(&StringLiteral_21421/*"lock_{0}"*/);
-    byte_4CB9EB8 = 1;
+    sub_1C713B0(&IClassBoardSquareModel_TypeInfo);
+    sub_1C713B0(&int_TypeInfo);
+    sub_1C713B0(&StringLiteral_21432/*"lock_light_{0}"*/);
+    sub_1C713B0(&StringLiteral_21435/*"lock_stopper"*/);
+    sub_1C713B0(&StringLiteral_21434/*"lock_on_{0}"*/);
+    sub_1C713B0(&StringLiteral_21433/*"lock_off_{0}"*/);
+    sub_1C713B0(&StringLiteral_21436/*"lock_{0}"*/);
+    byte_4CCB00B = 1;
   }
   LockModel = (MethodInfo *)ClassBoardLock__get_LockModel(this, method);
   if ( !LockModel )
@@ -199,7 +199,7 @@ void ClassBoardLock__SetupIcon(ClassBoardLock_o *this, const MethodInfo *method)
   else
   {
 LABEL_8:
-    v9 = sub_1C41D90(LockModel, IClassBoardSquareModel_TypeInfo, 2);
+    v9 = sub_1C47738(LockModel, IClassBoardSquareModel_TypeInfo, 2);
   }
   LockModel = (MethodInfo *)(*(__int64 (__fastcall **)(MethodInfo *, _QWORD))v9)(v6, *(_QWORD *)(v9 + 8));
   iconSpritesNormal = this->fields.iconSpritesNormal;
@@ -216,7 +216,7 @@ LABEL_8:
       IconAtlasManagerUnit = ClassBoardGlobalObject__get_IconAtlasManagerUnit(LockModel);
       v39 = v12;
       v16 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39);
-      LockModel = (MethodInfo *)System_String__Format((System_String_o *)StringLiteral_21421/*"lock_{0}"*/, v16, 0);
+      LockModel = (MethodInfo *)System_String__Format((System_String_o *)StringLiteral_21436/*"lock_{0}"*/, v16, 0);
       if ( !IconAtlasManagerUnit )
         goto LABEL_42;
       LockModel = (MethodInfo *)AtlasManagerUnit__SetUI(IconAtlasManagerUnit, v14, (System_String_o *)LockModel, 0);
@@ -225,7 +225,7 @@ LABEL_8:
         goto LABEL_16;
     }
 LABEL_41:
-    sub_1C6BC68(LockModel);
+    sub_1C71610(LockModel);
   }
 LABEL_16:
   iconSpritesOn = this->fields.iconSpritesOn;
@@ -241,7 +241,7 @@ LABEL_16:
       v21 = ClassBoardGlobalObject__get_IconAtlasManagerUnit(LockModel);
       v39 = v12;
       v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39);
-      LockModel = (MethodInfo *)System_String__Format((System_String_o *)StringLiteral_21419/*"lock_on_{0}"*/, v22, 0);
+      LockModel = (MethodInfo *)System_String__Format((System_String_o *)StringLiteral_21434/*"lock_on_{0}"*/, v22, 0);
       if ( !v21 )
         goto LABEL_42;
       LockModel = (MethodInfo *)AtlasManagerUnit__SetUI(v21, v20, (System_String_o *)LockModel, 0);
@@ -265,7 +265,7 @@ LABEL_22:
       v27 = ClassBoardGlobalObject__get_IconAtlasManagerUnit(LockModel);
       v39 = v12;
       v28 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39);
-      LockModel = (MethodInfo *)System_String__Format((System_String_o *)StringLiteral_21418/*"lock_off_{0}"*/, v28, 0);
+      LockModel = (MethodInfo *)System_String__Format((System_String_o *)StringLiteral_21433/*"lock_off_{0}"*/, v28, 0);
       if ( !v27 )
         goto LABEL_42;
       LockModel = (MethodInfo *)AtlasManagerUnit__SetUI(v27, v26, (System_String_o *)LockModel, 0);
@@ -292,7 +292,7 @@ LABEL_28:
       LockModel = (MethodInfo *)AtlasManagerUnit__SetUI(
                                   (AtlasManagerUnit_o *)LockModel,
                                   v32,
-                                  (System_String_o *)StringLiteral_21420/*"lock_stopper"*/,
+                                  (System_String_o *)StringLiteral_21435/*"lock_stopper"*/,
                                   0);
       LODWORD(v30) = iconSpritesLock->max_length;
       if ( (__int64)++v31 >= (int)v30 )
@@ -304,7 +304,7 @@ LABEL_34:
   iconSpriteGlow = this->fields.iconSpriteGlow;
   if ( !iconSpriteGlow )
 LABEL_42:
-    sub_1C6BC60(LockModel, v4);
+    sub_1C71608(LockModel, v4);
   v34 = iconSpriteGlow->max_length;
   if ( (int)v34 >= 1 )
   {
@@ -315,7 +315,7 @@ LABEL_42:
       v37 = ClassBoardGlobalObject__get_IconAtlasManagerUnit(LockModel);
       v39 = v12;
       v38 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v39);
-      LockModel = (MethodInfo *)System_String__Format((System_String_o *)StringLiteral_21417/*"lock_light_{0}"*/, v38, 0);
+      LockModel = (MethodInfo *)System_String__Format((System_String_o *)StringLiteral_21432/*"lock_light_{0}"*/, v38, 0);
       if ( !v37 )
         goto LABEL_42;
       LockModel = (MethodInfo *)AtlasManagerUnit__SetUI(v37, v36, (System_String_o *)LockModel, 0);
@@ -349,25 +349,25 @@ void ClassBoardLock__UpdateDraw(
   hasValue = handoverFlag.fields.hasValue;
   v4 = this;
   v14 = handoverFlag;
-  if ( (byte_4CB9EB9 & 1) == 0 )
+  if ( (byte_4CCB00C & 1) == 0 )
   {
-    sub_1C6BA08(&IClassBoardSquareModel_TypeInfo);
-    sub_1C6BA08(&Method_System_Nullable_AcquireFlag__get_HasValue__);
-    this = (ClassBoardLock_o *)sub_1C6BA08(&Method_System_Nullable_AcquireFlag__get_Value__);
-    byte_4CB9EB9 = 1;
+    sub_1C713B0(&IClassBoardSquareModel_TypeInfo);
+    sub_1C713B0(&Method_System_Nullable_AcquireFlag__get_HasValue__);
+    this = (ClassBoardLock_o *)sub_1C713B0(&Method_System_Nullable_AcquireFlag__get_Value__);
+    byte_4CCB00C = 1;
   }
   if ( hasValue )
   {
     v5 = (System_Nullable_Int32Enum__o)&v14;
     Value = System_Nullable_Int32Enum___get_Value(
               v5,
-              (const MethodInfo_392936C *)Method_System_Nullable_AcquireFlag__get_Value__);
+              (const MethodInfo_3939110 *)Method_System_Nullable_AcquireFlag__get_Value__);
   }
   else
   {
     SquareModel_k__BackingField = v4->fields._SquareModel_k__BackingField;
     if ( !SquareModel_k__BackingField )
-      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C6BC60)(this, handoverFlag);
+      ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C71608)(this, handoverFlag);
     klass = SquareModel_k__BackingField->klass;
     v9 = *(unsigned __int16 *)&SquareModel_k__BackingField->klass->_2.rank;
     if ( *(_WORD *)&SquareModel_k__BackingField->klass->_2.rank )
@@ -385,7 +385,7 @@ void ClassBoardLock__UpdateDraw(
     else
     {
 LABEL_10:
-      v11 = sub_1C41D90(v4->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
+      v11 = sub_1C47738(v4->fields._SquareModel_k__BackingField, IClassBoardSquareModel_TypeInfo, 15);
     }
     Value = (*(__int64 (__fastcall **)(struct IClassBoardSquareModel_o *, _QWORD, _QWORD))v11)(
               SquareModel_k__BackingField,
@@ -428,17 +428,17 @@ void ClassBoardLock___PlayReleaseEffect_b__13_0(ClassBoardLock_o *this, const Me
   ClassBoardSquare__SetUpdateDraw((ClassBoardSquare_o *)this, 0);
   releaseEffectPlayer = this->fields.releaseEffectPlayer;
   if ( !releaseEffectPlayer )
-    sub_1C6BC60(0, v3);
+    sub_1C71608(0, v3);
   ClassBoardEffectPlayer__End(releaseEffectPlayer, v3);
 }
 
 
 IClassBoardLockModel_o *ClassBoardLock__get_LockModel(ClassBoardLock_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB9EB7 & 1) == 0 )
+  if ( (byte_4CCB00A & 1) == 0 )
   {
-    sub_1C6BA08(&IClassBoardLockModel_TypeInfo);
-    byte_4CB9EB7 = 1;
+    sub_1C713B0(&IClassBoardLockModel_TypeInfo);
+    byte_4CCB00A = 1;
   }
-  return (IClassBoardLockModel_o *)sub_1C6BB44(this->fields._SquareModel_k__BackingField, IClassBoardLockModel_TypeInfo);
+  return (IClassBoardLockModel_o *)sub_1C714EC(this->fields._SquareModel_k__BackingField, IClassBoardLockModel_TypeInfo);
 }

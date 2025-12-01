@@ -9,13 +9,13 @@ void CancelPurchaseByBankRequest__beginRequest(
         int32_t shopId,
         const MethodInfo *method)
 {
-  if ( (byte_4CB7D85 & 1) == 0 )
+  if ( (byte_4CC8EAE & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_17034/*"bankShopId"*/);
-    byte_4CB7D85 = 1;
+    sub_1C713B0(&StringLiteral_17041/*"bankShopId"*/);
+    byte_4CC8EAE = 1;
   }
   this->fields.cancelShopId = shopId;
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17034/*"bankShopId"*/, shopId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17041/*"bankShopId"*/, shopId, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -24,16 +24,16 @@ System_String_o *CancelPurchaseByBankRequest__getURL(CancelPurchaseByBankRequest
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CB7D84 & 1) == 0 )
+  if ( (byte_4CC8EAD & 1) == 0 )
   {
-    sub_1C6BA08(&NetworkManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_23525/*"shop/cancelPurchaseByBank"*/);
-    byte_4CB7D84 = 1;
+    sub_1C713B0(&NetworkManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_23545/*"shop/cancelPurchaseByBank"*/);
+    byte_4CC8EAD = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_63966792(BaseUrl, (System_String_o *)StringLiteral_23525/*"shop/cancelPurchaseByBank"*/, 0);
+  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_23545/*"shop/cancelPurchaseByBank"*/, 0);
 }
 
 
@@ -48,18 +48,18 @@ void CancelPurchaseByBankRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v9; // x1
 
-  if ( (byte_4CB7D86 & 1) == 0 )
+  if ( (byte_4CC8EAF & 1) == 0 )
   {
-    sub_1C6BA08(&JsonManager_TypeInfo);
-    sub_1C6BA08(&PurchaseBehaviour_TypeInfo);
-    sub_1C6BA08(&ResponseCommandKind_TypeInfo);
-    sub_1C6BA08(&StringLiteral_22301/*"ng"*/);
-    byte_4CB7D86 = 1;
+    sub_1C713B0(&JsonManager_TypeInfo);
+    sub_1C713B0(&PurchaseBehaviour_TypeInfo);
+    sub_1C713B0(&ResponseCommandKind_TypeInfo);
+    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
+    byte_4CC8EAF = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(132, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44468912(v5, 0)) && v6->fields.success )
+  if ( v5 && (v6 = v5, ResponseData__checkError_44515240(v5, 0)) && v6->fields.success )
   {
     cancelShopId = this->fields.cancelShopId;
     if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
@@ -72,7 +72,7 @@ void CancelPurchaseByBankRequest__requestCompleted(
   }
   else
   {
-    v9 = (System_String_o *)StringLiteral_22301/*"ng"*/;
+    v9 = (System_String_o *)StringLiteral_22316/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v9, 0);
 }

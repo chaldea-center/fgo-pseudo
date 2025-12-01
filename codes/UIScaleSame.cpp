@@ -6,10 +6,14 @@ void UIScaleSame___ctor(UIScaleSame_o *this, const MethodInfo *method)
 
 void UIScaleSame__SetCamera(UIScaleSame_o *this, UnityEngine_Camera_o *cam, const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields.mCamera = cam;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mCamera, (int32_t)cam, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mCamera, (int32_t)cam, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -22,10 +26,10 @@ void UIScaleSame__Update(UIScaleSame_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *gameObject; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4CB2D4E & 1) == 0 )
+  if ( (byte_4CC3E61 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2D4E = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3E61 = 1;
   }
   mCamera = (UnityEngine_Object_o *)this->fields.mCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -34,9 +38,9 @@ void UIScaleSame__Update(UIScaleSame_o *this, const MethodInfo *method)
   {
     v5 = this->fields.mCamera;
     if ( !v5 )
-      sub_1C6BC60(0, v4);
+      sub_1C71608(0, v4);
     orthographicSize = UnityEngine_Camera__get_orthographicSize(v5, 0);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    GameObjectExtensions__SetLocalScale_36358208(gameObject, orthographicSize, orthographicSize, v8);
+    GameObjectExtensions__SetLocalScale_36392044(gameObject, orthographicSize, orthographicSize, v8);
   }
 }

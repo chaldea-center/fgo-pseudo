@@ -2,25 +2,33 @@ void RecommendSupportServantSelectListViewItemDraw___cctor(const MethodInfo *met
 {
   System_Collections_Generic_List_object__o *v1; // x19
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
-  if ( (byte_4CB2233 & 1) == 0 )
+  if ( (byte_4CC3344 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__TypeInfo);
-    sub_1C6BA08(&RecommendSupportServantSelectListViewItemDraw_TypeInfo);
-    byte_4CB2233 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__TypeInfo);
+    sub_1C713B0(&RecommendSupportServantSelectListViewItemDraw_TypeInfo);
+    byte_4CC3344 = 1;
   }
-  v1 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__TypeInfo);
+  v1 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v1,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw___ctor__);
   RecommendSupportServantSelectListViewItemDraw_TypeInfo->static_fields->ItemList = (struct System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__o *)v1;
-  sub_1C6B9AC(
-    (CGThumbnailListItem_o *)RecommendSupportServantSelectListViewItemDraw_TypeInfo->static_fields,
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)RecommendSupportServantSelectListViewItemDraw_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
-    v3);
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -62,13 +70,13 @@ void RecommendSupportServantSelectListViewItemDraw__AdvanceWarningLabel(
   UnityEngine_Color_o v30; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v2 = this;
-  if ( (byte_4CB2232 & 1) == 0 )
+  if ( (byte_4CC3343 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
-    sub_1C6BA08(&RecommendSupportServantSelectListViewItemDraw_TypeInfo);
-    this = (RecommendSupportServantSelectListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB2232 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
+    sub_1C713B0(&RecommendSupportServantSelectListViewItemDraw_TypeInfo);
+    this = (RecommendSupportServantSelectListViewItemDraw_o *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC3343 = 1;
   }
   warningLabelTexts = v2->fields.warningLabelTexts;
   if ( warningLabelTexts )
@@ -79,7 +87,7 @@ void RecommendSupportServantSelectListViewItemDraw__AdvanceWarningLabel(
     else
       warningLabelTextSync2Pattern = v2->fields.warningLabelTextSync2Pattern;
     if ( (unsigned int)warningLabelTextSync2Pattern >= max_length )
-      sub_1C6BC68(this);
+      sub_1C71610(this);
     warningLabel = v2->fields.warningLabel;
     if ( !warningLabel )
       goto LABEL_45;
@@ -148,7 +156,7 @@ void RecommendSupportServantSelectListViewItemDraw__AdvanceWarningLabel(
         warningLabel = System_Collections_Generic_List_object___get_Item(
                          ItemList,
                          0,
-                         (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
+                         (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
         if ( !warningLabel || !v10 )
           goto LABEL_45;
         warningLabel = (void *)((__int64 (__fastcall *)(struct TweenColor_o *, _QWORD, const MethodInfo *))v10->klass->vtable._8_SynchronizeTween.methodPtr)(
@@ -159,7 +167,7 @@ void RecommendSupportServantSelectListViewItemDraw__AdvanceWarningLabel(
       v11 = v2->fields.warningTweenColor;
       if ( !v11 )
         goto LABEL_45;
-      v11->fields.to = (struct UnityEngine_Color_o)xmmword_CEC8F0;
+      v11->fields.to = (struct UnityEngine_Color_o)xmmword_CEF530;
       warningLabel = v2->fields.warningLabel;
       if ( !warningLabel )
         goto LABEL_45;
@@ -218,7 +226,7 @@ LABEL_39:
       return;
     }
 LABEL_45:
-    sub_1C6BC60(warningLabel, method);
+    sub_1C71608(warningLabel, method);
   }
 }
 
@@ -228,12 +236,20 @@ void RecommendSupportServantSelectListViewItemDraw__Awake(
         const MethodInfo *method)
 {
   int32_t v2; // w2
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct UISprite_o *maskSprite; // x8
   struct UIAtlas_o *mAtlas; // x1
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
-  struct UISprite_o *v9; // x8
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
+  struct UISprite_o *v17; // x8
   struct System_String_o *mSpriteName; // x1
 
   maskSprite = this->fields.maskSprite;
@@ -242,14 +258,22 @@ void RecommendSupportServantSelectListViewItemDraw__Awake(
   else
     mAtlas = 0;
   this->fields.defaultMaskAtlas = mAtlas;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultMaskAtlas, (int32_t)mAtlas, v2, v3);
-  v9 = this->fields.maskSprite;
-  if ( v9 )
-    mSpriteName = v9->fields.mSpriteName;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.defaultMaskAtlas, (int32_t)mAtlas, v2, v3, v4, v5, v6, v7);
+  v17 = this->fields.maskSprite;
+  if ( v17 )
+    mSpriteName = v17->fields.mSpriteName;
   else
     mSpriteName = 0;
   this->fields.defaultMaskName = mSpriteName;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.defaultMaskName, (int32_t)mSpriteName, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.defaultMaskName,
+    (int32_t)mSpriteName,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
 }
 
 
@@ -265,28 +289,28 @@ System_String_o *RecommendSupportServantSelectListViewItemDraw__GetWarningText(
   System_String_o *v10; // x19
   Il2CppObject *v11; // x1
 
-  if ( (byte_4CB2230 & 1) == 0 )
+  if ( (byte_4CC3341 & 1) == 0 )
   {
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11520/*"SELECT_CANNOT"*/);
-    sub_1C6BA08(&StringLiteral_10263/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/);
-    sub_1C6BA08(&StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/);
-    sub_1C6BA08(&StringLiteral_11539/*"SELECT_NO_SORTIE"*/);
-    sub_1C6BA08(&StringLiteral_12570/*"SUPPORT_SELECT_USE_SUPPORT"*/);
-    sub_1C6BA08(&StringLiteral_12520/*"SUPPORT_SELECT_ALREADY_SET"*/);
-    sub_1C6BA08(&StringLiteral_10312/*"PARTY_ORGANIZATION_SERVANT_REMOVE_LEADER"*/);
-    this = (RecommendSupportServantSelectListViewItemDraw_o *)sub_1C6BA08(&StringLiteral_10313/*"PARTY_ORGANIZATION_SERVANT_SAME_SERVANT"*/);
-    byte_4CB2230 = 1;
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&StringLiteral_11526/*"SELECT_CANNOT"*/);
+    sub_1C713B0(&StringLiteral_10268/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/);
+    sub_1C713B0(&StringLiteral_11558/*"SELECT_SERVANT_EVENT_JOIN"*/);
+    sub_1C713B0(&StringLiteral_11545/*"SELECT_NO_SORTIE"*/);
+    sub_1C713B0(&StringLiteral_12576/*"SUPPORT_SELECT_USE_SUPPORT"*/);
+    sub_1C713B0(&StringLiteral_12526/*"SUPPORT_SELECT_ALREADY_SET"*/);
+    sub_1C713B0(&StringLiteral_10317/*"PARTY_ORGANIZATION_SERVANT_REMOVE_LEADER"*/);
+    this = (RecommendSupportServantSelectListViewItemDraw_o *)sub_1C713B0(&StringLiteral_10318/*"PARTY_ORGANIZATION_SERVANT_SAME_SERVANT"*/);
+    byte_4CC3341 = 1;
   }
   if ( !item )
-    sub_1C6BC60(this, item);
+    sub_1C71608(this, item);
   if ( item->fields._IsPushMode_k__BackingField )
   {
     if ( RecommendSupportServantSelectListViewItem__get_IsCanNotSelectHeroine(item, 0) )
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_11520/*"SELECT_CANNOT"*/;
+      v6 = &StringLiteral_11526/*"SELECT_CANNOT"*/;
       return LocalizationManager__Get((System_String_o *)*v6, 0);
     }
     if ( item->fields._IsEventJoin_k__BackingField )
@@ -294,7 +318,7 @@ System_String_o *RecommendSupportServantSelectListViewItemDraw__GetWarningText(
 LABEL_14:
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_11552/*"SELECT_SERVANT_EVENT_JOIN"*/;
+      v6 = &StringLiteral_11558/*"SELECT_SERVANT_EVENT_JOIN"*/;
       return LocalizationManager__Get((System_String_o *)*v6, 0);
     }
     return 0;
@@ -305,7 +329,7 @@ LABEL_14:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_10312/*"PARTY_ORGANIZATION_SERVANT_REMOVE_LEADER"*/;
+      v6 = &StringLiteral_10317/*"PARTY_ORGANIZATION_SERVANT_REMOVE_LEADER"*/;
       return LocalizationManager__Get((System_String_o *)*v6, 0);
     }
     if ( !RecommendSupportServantSelectListViewItem__get_IsCanNotSelectHeroine(item, 0) )
@@ -313,7 +337,7 @@ LABEL_14:
 LABEL_18:
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = &StringLiteral_11539/*"SELECT_NO_SORTIE"*/;
+    v6 = &StringLiteral_11545/*"SELECT_NO_SORTIE"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0);
   }
   if ( RecommendSupportServantSelectListViewItem__get_IsCanNotSelectHeroine(item, 0) )
@@ -322,14 +346,14 @@ LABEL_18:
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = &StringLiteral_10313/*"PARTY_ORGANIZATION_SERVANT_SAME_SERVANT"*/;
+    v6 = &StringLiteral_10318/*"PARTY_ORGANIZATION_SERVANT_SAME_SERVANT"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0);
   }
   if ( RecommendSupportServantSelectListViewItem__get_IsUseServant(item, 0) )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v6 = &StringLiteral_12570/*"SUPPORT_SELECT_USE_SUPPORT"*/;
+    v6 = &StringLiteral_12576/*"SUPPORT_SELECT_USE_SUPPORT"*/;
     return LocalizationManager__Get((System_String_o *)*v6, 0);
   }
   if ( item->fields._IsEventJoin_k__BackingField )
@@ -340,14 +364,14 @@ LABEL_18:
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v6 = &StringLiteral_10263/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/;
+      v6 = &StringLiteral_10268/*"PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING"*/;
       return LocalizationManager__Get((System_String_o *)*v6, 0);
     }
     return 0;
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12520/*"SUPPORT_SELECT_ALREADY_SET"*/, 0);
+  v8 = LocalizationManager__Get((System_String_o *)StringLiteral_12526/*"SUPPORT_SELECT_ALREADY_SET"*/, 0);
   UseSet_k__BackingField = item->fields._UseSet_k__BackingField;
   v10 = v8;
   v11 = (Il2CppObject *)LocalizationManager__ConvertNumberToRomaNumber(UseSet_k__BackingField, 0);
@@ -362,11 +386,11 @@ void RecommendSupportServantSelectListViewItemDraw__OnDisable(
   RecommendSupportServantSelectListViewItemDraw_c *v3; // x0
   System_Collections_Generic_List_object__o *ItemList; // x0
 
-  if ( (byte_4CB222D & 1) == 0 )
+  if ( (byte_4CC333E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Remove__);
-    sub_1C6BA08(&RecommendSupportServantSelectListViewItemDraw_TypeInfo);
-    byte_4CB222D = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Remove__);
+    sub_1C713B0(&RecommendSupportServantSelectListViewItemDraw_TypeInfo);
+    byte_4CC333E = 1;
   }
   v3 = RecommendSupportServantSelectListViewItemDraw_TypeInfo;
   if ( !RecommendSupportServantSelectListViewItemDraw_TypeInfo->_2.cctor_finished )
@@ -376,11 +400,11 @@ void RecommendSupportServantSelectListViewItemDraw__OnDisable(
   }
   ItemList = (System_Collections_Generic_List_object__o *)v3->static_fields->ItemList;
   if ( !ItemList )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   System_Collections_Generic_List_object___Remove(
     ItemList,
     (Il2CppObject *)this,
-    (const MethodInfo_3801E9C *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Remove__);
+    (const MethodInfo_3811C40 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Remove__);
 }
 
 
@@ -413,11 +437,11 @@ void RecommendSupportServantSelectListViewItemDraw__SetInput(
   const MethodInfo *v16; // x2
   UnityEngine_Object_o *v17; // x21
 
-  if ( (byte_4CB2231 & 1) == 0 )
+  if ( (byte_4CC3342 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB2231 = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC3342 = 1;
   }
   if ( item )
   {
@@ -431,7 +455,7 @@ void RecommendSupportServantSelectListViewItemDraw__SetInput(
         goto LABEL_40;
       Component_object = (UnityEngine_Component_o *)UnityEngine_Component__GetComponent_object_(
                                                       Component_object,
-                                                      (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                      (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider___);
       if ( !Component_object )
         goto LABEL_40;
       UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, isInput, 0);
@@ -517,7 +541,7 @@ void RecommendSupportServantSelectListViewItemDraw__SetInput(
         return;
       }
 LABEL_40:
-      sub_1C6BC60(Component_object, v8);
+      sub_1C71608(Component_object, v8);
     }
   }
 }
@@ -543,10 +567,10 @@ void RecommendSupportServantSelectListViewItemDraw__SetItem(
   const MethodInfo *v18; // x2
   UnityEngine_Object_o *selectObject; // x21
 
-  if ( (byte_4CB222E & 1) == 0 )
+  if ( (byte_4CC333F & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB222E = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC333F = 1;
   }
   if ( item && mode )
   {
@@ -556,7 +580,7 @@ void RecommendSupportServantSelectListViewItemDraw__SetItem(
     EquipList = RecommendSupportServantSelectListViewItem__GetEquipList(item, 0);
     if ( !servantFaceIcon )
       goto LABEL_37;
-    ServantFaceIconComponent__Set_41239168(
+    ServantFaceIconComponent__Set_41281880(
       servantFaceIcon,
       UserServant_k__BackingField,
       EquipList,
@@ -642,7 +666,7 @@ void RecommendSupportServantSelectListViewItemDraw__SetItem(
         return;
       }
 LABEL_37:
-      sub_1C6BC60(EquipList, v11);
+      sub_1C71608(EquipList, v11);
     }
   }
 }
@@ -667,85 +691,109 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
   Il2CppObject *v16; // x22
   const MethodInfo *v17; // x3
   int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  int32_t v19; // w3
+  System_String_o *v20; // x4
+  int32_t v21; // w5
+  int64_t v22; // x6
+  System_String_o *v23; // x7
   struct System_Object_array *items; // x8
-  _QWORD *v21; // x9
+  _QWORD *v25; // x9
   __int64 size; // x10
-  Il2CppClass **v23; // x0
-  System_String_o *v24; // x23
-  RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *v25; // x22
-  const MethodInfo *v26; // x3
-  int32_t v27; // w2
-  const MethodInfo *v28; // x3
-  struct System_Object_array *v29; // x8
-  _QWORD *v30; // x9
-  __int64 v31; // x10
-  Il2CppClass **v32; // x0
+  Il2CppClass **v27; // x0
+  System_String_o *v28; // x23
+  RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *v29; // x22
+  const MethodInfo *v30; // x3
+  int32_t v31; // w2
+  int32_t v32; // w3
+  System_String_o *v33; // x4
+  int32_t v34; // w5
+  int64_t v35; // x6
+  System_String_o *v36; // x7
+  struct System_Object_array *v37; // x8
+  _QWORD *v38; // x9
+  __int64 v39; // x10
+  Il2CppClass **v40; // x0
   System_String_o *WarningText; // x23
-  bool v34; // w1
-  RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *v35; // x22
-  const MethodInfo *v36; // x3
-  int32_t v37; // w2
-  const MethodInfo *v38; // x3
-  struct System_Object_array *v39; // x8
-  _QWORD *v40; // x9
-  __int64 v41; // x10
-  Il2CppClass **v42; // x0
-  int32_t v43; // w2
+  bool v42; // w1
+  RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *v43; // x22
   const MethodInfo *v44; // x3
-  System_String_o *v45; // x22
-  RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *v46; // x21
-  const MethodInfo *v47; // x3
-  int32_t v48; // w2
-  const MethodInfo *v49; // x3
-  struct System_Object_array *v50; // x8
-  _QWORD *v51; // x9
-  __int64 v52; // x10
-  Il2CppClass **v53; // x0
-  System_Object_array *v54; // x1
-  RecommendSupportServantSelectListViewItemDraw_c *v55; // x0
-  const MethodInfo *v56; // x1
+  int32_t v45; // w2
+  int32_t v46; // w3
+  System_String_o *v47; // x4
+  int32_t v48; // w5
+  int64_t v49; // x6
+  System_String_o *v50; // x7
+  struct System_Object_array *v51; // x8
+  _QWORD *v52; // x9
+  __int64 v53; // x10
+  Il2CppClass **v54; // x0
+  int32_t v55; // w2
+  int32_t v56; // w3
+  System_String_o *v57; // x4
+  int32_t v58; // w5
+  int64_t v59; // x6
+  System_String_o *v60; // x7
+  System_String_o *v61; // x22
+  RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *v62; // x21
+  const MethodInfo *v63; // x3
+  int32_t v64; // w2
+  int32_t v65; // w3
+  System_String_o *v66; // x4
+  int32_t v67; // w5
+  int64_t v68; // x6
+  System_String_o *v69; // x7
+  struct System_Object_array *v70; // x8
+  _QWORD *v71; // x9
+  __int64 v72; // x10
+  Il2CppClass **v73; // x0
+  System_Object_array *v74; // x1
+  RecommendSupportServantSelectListViewItemDraw_c *v75; // x0
+  const MethodInfo *v76; // x1
   struct RecommendSupportServantSelectListViewItemDraw_WarningLabelText_array *warningLabelTexts; // x8
   il2cpp_array_size_t max_length; // x8
-  const MethodInfo *v59; // x1
+  const MethodInfo *v79; // x1
   System_Collections_Generic_List_object__o *ItemList; // x8
   struct TweenAlpha_o *warningTween; // x20
   struct TweenColor_o *warningTweenColor; // x20
-  int32_t v63; // w2
-  const MethodInfo *v64; // x3
-  RecommendSupportServantSelectListViewItemDraw_c *v65; // x0
-  __int64 v66; // x8
-  _QWORD *v67; // x9
-  __int64 v68; // x10
-  __int64 v69; // x8
-  float v70; // [xsp+1Ch] [xbp-54h] BYREF
-  UnityEngine_Color_o v71; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
-  UnityEngine_Color_o v72; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
+  int32_t v83; // w2
+  int32_t v84; // w3
+  System_String_o *v85; // x4
+  int32_t v86; // w5
+  int64_t v87; // x6
+  System_String_o *v88; // x7
+  RecommendSupportServantSelectListViewItemDraw_c *v89; // x0
+  __int64 v90; // x8
+  _QWORD *v91; // x9
+  __int64 v92; // x10
+  __int64 v93; // x8
+  float v94; // [xsp+1Ch] [xbp-54h] BYREF
+  UnityEngine_Color_o v95; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
+  UnityEngine_Color_o v96; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4CB222F & 1) == 0 )
+  if ( (byte_4CC3340 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Remove__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__ToArray__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
-    sub_1C6BA08(&System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__TypeInfo);
-    sub_1C6BA08(&LocalizationManager_TypeInfo);
-    sub_1C6BA08(&RecommendSupportServantSelectListViewItemDraw_TypeInfo);
-    sub_1C6BA08(&float_TypeInfo);
-    sub_1C6BA08(&RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
-    sub_1C6BA08(&StringLiteral_11529/*"SELECT_FP_NUM_UP"*/);
-    sub_1C6BA08(&StringLiteral_11519/*"SELECT_BONUS_SKILL_INVALID"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB222F = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Remove__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__ToArray__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
+    sub_1C713B0(&System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__TypeInfo);
+    sub_1C713B0(&LocalizationManager_TypeInfo);
+    sub_1C713B0(&RecommendSupportServantSelectListViewItemDraw_TypeInfo);
+    sub_1C713B0(&float_TypeInfo);
+    sub_1C713B0(&RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
+    sub_1C713B0(&StringLiteral_11535/*"SELECT_FP_NUM_UP"*/);
+    sub_1C713B0(&StringLiteral_11525/*"SELECT_BONUS_SKILL_INVALID"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC3340 = 1;
   }
-  v5 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__TypeInfo);
+  v5 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v5,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor__);
   if ( !item )
     goto LABEL_85;
   FriendPointBonus = (RecommendSupportServantSelectListViewItemDraw_o *)RecommendSupportServantSelectListViewItem__GetFriendPointBonus(
@@ -756,26 +804,26 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
     v10 = (int)FriendPointBonus;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11529/*"SELECT_FP_NUM_UP"*/, 0);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_11535/*"SELECT_FP_NUM_UP"*/, 0);
     v12 = (double)v10 / 1000.0;
-    v70 = v12;
-    v13 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v70);
+    v94 = v12;
+    v13 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &v94);
     v14 = System_String__Format(v11, v13, 0);
-    v15 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)sub_1C6BC54(RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
-    v72.fields.b = 0.8;
-    v71.fields.r = 1.0;
-    v71.fields.g = 1.0;
-    v71.fields.b = 0.0;
-    v71.fields.a = 1.0;
-    v72.fields.r = 1.0;
-    v72.fields.g = 1.0;
-    v72.fields.a = 1.0;
+    v15 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)sub_1C715FC(RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
+    v96.fields.b = 0.8;
+    v95.fields.r = 1.0;
+    v95.fields.g = 1.0;
+    v95.fields.b = 0.0;
+    v95.fields.a = 1.0;
+    v96.fields.r = 1.0;
+    v96.fields.g = 1.0;
+    v96.fields.a = 1.0;
     v16 = (Il2CppObject *)v15;
-    RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor_35135536(v15, v14, v71, v72, 1.0, 0, v17);
+    RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor_35168636(v15, v14, v95, v96, 1.0, 0, v17);
     if ( !v5 )
       goto LABEL_85;
     items = v5->fields._items;
-    v21 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__;
+    v25 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__;
     ++v5->fields._version;
     if ( !items )
       goto LABEL_85;
@@ -785,44 +833,44 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
       System_Collections_Generic_List_object___AddWithResize(
         v5,
         v16,
-        *(const MethodInfo_3800974 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+        *(const MethodInfo_3810718 **)(*(_QWORD *)(v25[4] + 192LL) + 112LL));
     }
     else
     {
-      v23 = &items->obj.klass + size;
+      v27 = &items->obj.klass + size;
       v5->fields._size = size + 1;
-      v23[4] = (Il2CppClass *)v16;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v23 + 4), (int32_t)v16, v18, v19);
+      v27[4] = (Il2CppClass *)v16;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v27 + 4), (int32_t)v16, v18, v19, v20, v21, v22, v23);
     }
   }
   if ( item->fields._IsInvalidRarity_k__BackingField )
   {
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v24 = LocalizationManager__Get((System_String_o *)StringLiteral_11519/*"SELECT_BONUS_SKILL_INVALID"*/, 0);
-    v25 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)sub_1C6BC54(RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
-    RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor(v25, v24, 0.8, 1, v26);
+    v28 = LocalizationManager__Get((System_String_o *)StringLiteral_11525/*"SELECT_BONUS_SKILL_INVALID"*/, 0);
+    v29 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)sub_1C715FC(RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
+    RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor(v29, v28, 0.8, 1, v30);
     if ( !v5 )
       goto LABEL_85;
-    v29 = v5->fields._items;
-    v30 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__;
+    v37 = v5->fields._items;
+    v38 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__;
     ++v5->fields._version;
-    if ( !v29 )
+    if ( !v37 )
       goto LABEL_85;
-    v31 = v5->fields._size;
-    if ( (unsigned int)v31 >= LODWORD(v29->max_length) )
+    v39 = v5->fields._size;
+    if ( (unsigned int)v39 >= LODWORD(v37->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v5,
-        (Il2CppObject *)v25,
-        *(const MethodInfo_3800974 **)(*(_QWORD *)(v30[4] + 192LL) + 112LL));
+        (Il2CppObject *)v29,
+        *(const MethodInfo_3810718 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
     }
     else
     {
-      v32 = &v29->obj.klass + v31;
-      v5->fields._size = v31 + 1;
-      v32[4] = (Il2CppClass *)v25;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v32 + 4), (int32_t)v25, v27, v28);
+      v40 = &v37->obj.klass + v39;
+      v5->fields._size = v39 + 1;
+      v40[4] = (Il2CppClass *)v29;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v40 + 4), (int32_t)v29, v31, v32, v33, v34, v35, v36);
     }
   }
   WarningText = RecommendSupportServantSelectListViewItemDraw__GetWarningText(
@@ -838,33 +886,33 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
     maskSprite = (int *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskSprite, 0);
     if ( !maskSprite )
       goto LABEL_85;
-    v34 = 0;
+    v42 = 0;
   }
   else
   {
-    v35 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)sub_1C6BC54(RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
-    RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor(v35, WarningText, 1.0, 0, v36);
+    v43 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)sub_1C715FC(RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
+    RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor(v43, WarningText, 1.0, 0, v44);
     if ( !v5 )
       goto LABEL_85;
-    v39 = v5->fields._items;
-    v40 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__;
+    v51 = v5->fields._items;
+    v52 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__;
     ++v5->fields._version;
-    if ( !v39 )
+    if ( !v51 )
       goto LABEL_85;
-    v41 = v5->fields._size;
-    if ( (unsigned int)v41 >= LODWORD(v39->max_length) )
+    v53 = v5->fields._size;
+    if ( (unsigned int)v53 >= LODWORD(v51->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         v5,
-        (Il2CppObject *)v35,
-        *(const MethodInfo_3800974 **)(*(_QWORD *)(v40[4] + 192LL) + 112LL));
+        (Il2CppObject *)v43,
+        *(const MethodInfo_3810718 **)(*(_QWORD *)(v52[4] + 192LL) + 112LL));
     }
     else
     {
-      v42 = &v39->obj.klass + v41;
-      v5->fields._size = v41 + 1;
-      v42[4] = (Il2CppClass *)v35;
-      sub_1C6B9AC((CGThumbnailListItem_o *)(v42 + 4), (int32_t)v35, v37, v38);
+      v54 = &v51->obj.klass + v53;
+      v5->fields._size = v53 + 1;
+      v54[4] = (Il2CppClass *)v43;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)(v54 + 4), (int32_t)v43, v45, v46, v47, v48, v49, v50);
     }
     maskSprite = (int *)this->fields.maskSprite;
     if ( !maskSprite )
@@ -872,9 +920,9 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
     maskSprite = (int *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)maskSprite, 0);
     if ( !maskSprite )
       goto LABEL_85;
-    v34 = 1;
+    v42 = 1;
   }
-  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, v34, 0);
+  UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)maskSprite, v42, 0);
   if ( item->fields._IsInvalidRarity_k__BackingField )
   {
     if ( !v5 )
@@ -883,28 +931,28 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
     {
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v45 = LocalizationManager__Get((System_String_o *)StringLiteral_11519/*"SELECT_BONUS_SKILL_INVALID"*/, 0);
-      v46 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)sub_1C6BC54(RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
-      RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor(v46, v45, 0.8, 1, v47);
-      v50 = v5->fields._items;
-      v51 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__;
+      v61 = LocalizationManager__Get((System_String_o *)StringLiteral_11525/*"SELECT_BONUS_SKILL_INVALID"*/, 0);
+      v62 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)sub_1C715FC(RecommendSupportServantSelectListViewItemDraw_WarningLabelText_TypeInfo);
+      RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor(v62, v61, 0.8, 1, v63);
+      v70 = v5->fields._items;
+      v71 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__Add__;
       ++v5->fields._version;
-      if ( !v50 )
+      if ( !v70 )
         goto LABEL_85;
-      v52 = v5->fields._size;
-      if ( (unsigned int)v52 >= LODWORD(v50->max_length) )
+      v72 = v5->fields._size;
+      if ( (unsigned int)v72 >= LODWORD(v70->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v5,
-          (Il2CppObject *)v46,
-          *(const MethodInfo_3800974 **)(*(_QWORD *)(v51[4] + 192LL) + 112LL));
+          (Il2CppObject *)v62,
+          *(const MethodInfo_3810718 **)(*(_QWORD *)(v71[4] + 192LL) + 112LL));
       }
       else
       {
-        v53 = &v50->obj.klass + v52;
-        v5->fields._size = v52 + 1;
-        v53[4] = (Il2CppClass *)v46;
-        sub_1C6B9AC((CGThumbnailListItem_o *)(v53 + 4), (int32_t)v46, v48, v49);
+        v73 = &v70->obj.klass + v72;
+        v5->fields._size = v72 + 1;
+        v73[4] = (Il2CppClass *)v62;
+        sub_1C71354((GrandQuestFolderBoardItem_o *)(v73 + 4), (int32_t)v62, v64, v65, v66, v67, v68, v69);
       }
     }
   }
@@ -913,30 +961,38 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
     goto LABEL_85;
   }
   if ( v5->fields._size < 1 )
-    v54 = 0;
+    v74 = 0;
   else
-    v54 = System_Collections_Generic_List_object___ToArray(
+    v74 = System_Collections_Generic_List_object___ToArray(
             v5,
-            (const MethodInfo_38024CC *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__ToArray__);
-  this->fields.warningLabelTexts = (struct RecommendSupportServantSelectListViewItemDraw_WarningLabelText_array *)v54;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.warningLabelTexts, (int32_t)v54, v43, v44);
-  v55 = RecommendSupportServantSelectListViewItemDraw_TypeInfo;
+            (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw_WarningLabelText__ToArray__);
+  this->fields.warningLabelTexts = (struct RecommendSupportServantSelectListViewItemDraw_WarningLabelText_array *)v74;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.warningLabelTexts,
+    (int32_t)v74,
+    v55,
+    v56,
+    v57,
+    v58,
+    v59,
+    v60);
+  v75 = RecommendSupportServantSelectListViewItemDraw_TypeInfo;
   if ( !RecommendSupportServantSelectListViewItemDraw_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(RecommendSupportServantSelectListViewItemDraw_TypeInfo);
-    v55 = RecommendSupportServantSelectListViewItemDraw_TypeInfo;
+    v75 = RecommendSupportServantSelectListViewItemDraw_TypeInfo;
   }
-  maskSprite = (int *)v55->static_fields->ItemList;
+  maskSprite = (int *)v75->static_fields->ItemList;
   if ( !maskSprite )
     goto LABEL_85;
   System_Collections_Generic_List_object___Remove(
     (System_Collections_Generic_List_object__o *)maskSprite,
     (Il2CppObject *)this,
-    (const MethodInfo_3801E9C *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Remove__);
+    (const MethodInfo_3811C40 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Remove__);
   warningLabelTexts = this->fields.warningLabelTexts;
   if ( !warningLabelTexts || (max_length = warningLabelTexts->max_length) == 0 )
   {
-    RecommendSupportServantSelectListViewItemDraw__WarningTweenStop(this, v56);
+    RecommendSupportServantSelectListViewItemDraw__WarningTweenStop(this, v76);
     maskSprite = (int *)this->fields.warningLabel;
     if ( maskSprite )
     {
@@ -956,10 +1012,10 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
   }
   if ( (int)max_length < 2 )
   {
-    RecommendSupportServantSelectListViewItemDraw__WarningTweenStop(this, v56);
+    RecommendSupportServantSelectListViewItemDraw__WarningTweenStop(this, v76);
     goto LABEL_82;
   }
-  RecommendSupportServantSelectListViewItemDraw__WarningTweenStart(this, v56);
+  RecommendSupportServantSelectListViewItemDraw__WarningTweenStart(this, v76);
   maskSprite = (int *)RecommendSupportServantSelectListViewItemDraw_TypeInfo;
   if ( !RecommendSupportServantSelectListViewItemDraw_TypeInfo->_2.cctor_finished )
   {
@@ -996,7 +1052,7 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
     maskSprite = (int *)System_Collections_Generic_List_object___get_Item(
                           ItemList,
                           0,
-                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
+                          (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
     if ( !maskSprite )
       goto LABEL_85;
     this->fields.warningLabelTextSync2Pattern = maskSprite[37];
@@ -1007,7 +1063,7 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
     maskSprite = (int *)System_Collections_Generic_List_object___get_Item(
                           (System_Collections_Generic_List_object__o *)maskSprite,
                           0,
-                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
+                          (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
     if ( !maskSprite )
       goto LABEL_85;
     if ( !warningTween )
@@ -1023,7 +1079,7 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
     maskSprite = (int *)System_Collections_Generic_List_object___get_Item(
                           (System_Collections_Generic_List_object__o *)maskSprite,
                           0,
-                          (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
+                          (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__get_Item__);
     if ( !maskSprite || !warningTweenColor )
       goto LABEL_85;
     ((void (__fastcall *)(struct TweenColor_o *, _QWORD, const MethodInfo *))warningTweenColor->klass->vtable._8_SynchronizeTween.methodPtr)(
@@ -1031,39 +1087,39 @@ void RecommendSupportServantSelectListViewItemDraw__SetWarning(
       *((_QWORD *)maskSprite + 14),
       warningTweenColor->klass->vtable._8_SynchronizeTween.method);
   }
-  v65 = RecommendSupportServantSelectListViewItemDraw_TypeInfo;
+  v89 = RecommendSupportServantSelectListViewItemDraw_TypeInfo;
   if ( !RecommendSupportServantSelectListViewItemDraw_TypeInfo->_2.cctor_finished )
   {
     j_il2cpp_runtime_class_init_0(RecommendSupportServantSelectListViewItemDraw_TypeInfo);
-    v65 = RecommendSupportServantSelectListViewItemDraw_TypeInfo;
+    v89 = RecommendSupportServantSelectListViewItemDraw_TypeInfo;
   }
-  maskSprite = (int *)v65->static_fields->ItemList;
+  maskSprite = (int *)v89->static_fields->ItemList;
   if ( !maskSprite
-    || (v66 = *((_QWORD *)maskSprite + 2),
-        v67 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Add__,
+    || (v90 = *((_QWORD *)maskSprite + 2),
+        v91 = Method_System_Collections_Generic_List_RecommendSupportServantSelectListViewItemDraw__Add__,
         ++maskSprite[7],
-        !v66) )
+        !v90) )
   {
 LABEL_85:
-    sub_1C6BC60(maskSprite, v7);
+    sub_1C71608(maskSprite, v7);
   }
-  v68 = maskSprite[6];
-  if ( (unsigned int)v68 >= *(_DWORD *)(v66 + 24) )
+  v92 = maskSprite[6];
+  if ( (unsigned int)v92 >= *(_DWORD *)(v90 + 24) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)maskSprite,
       (Il2CppObject *)this,
-      *(const MethodInfo_3800974 **)(*(_QWORD *)(v67[4] + 192LL) + 112LL));
+      *(const MethodInfo_3810718 **)(*(_QWORD *)(v91[4] + 192LL) + 112LL));
   }
   else
   {
-    v69 = v66 + 8 * v68;
-    maskSprite[6] = v68 + 1;
-    *(_QWORD *)(v69 + 32) = this;
-    sub_1C6B9AC((CGThumbnailListItem_o *)(v69 + 32), (int32_t)this, v63, v64);
+    v93 = v90 + 8 * v92;
+    maskSprite[6] = v92 + 1;
+    *(_QWORD *)(v93 + 32) = this;
+    sub_1C71354((GrandQuestFolderBoardItem_o *)(v93 + 32), (int32_t)this, v83, v84, v85, v86, v87, v88);
   }
 LABEL_82:
-  RecommendSupportServantSelectListViewItemDraw__AdvanceWarningLabel(this, v59);
+  RecommendSupportServantSelectListViewItemDraw__AdvanceWarningLabel(this, v79);
   maskSprite = (int *)this->fields.warningLabel;
   if ( !maskSprite )
     goto LABEL_85;
@@ -1090,7 +1146,7 @@ void RecommendSupportServantSelectListViewItemDraw__WarningTweenStart(
     || (UITweener__ResetToBeginning((UITweener_o *)warningTween, 0),
         (warningTween = (UnityEngine_Behaviour_o *)this->fields.warningLabel) == 0) )
   {
-    sub_1C6BC60(warningTween, method);
+    sub_1C71608(warningTween, method);
   }
   v4.fields.r = 0.0;
   v4.fields.g = 0.0;
@@ -1108,7 +1164,7 @@ void RecommendSupportServantSelectListViewItemDraw__WarningTweenStop(
 
   warningTween = this->fields.warningTween;
   if ( !warningTween )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   warningTween->fields.duration = 0.0;
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)warningTween, 0, 0);
 }
@@ -1124,14 +1180,18 @@ void RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor(
   RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *v7; // x20
   bool v8; // w21
   int32_t v9; // w2
-  const MethodInfo *v10; // x3
+  int32_t v10; // w3
+  System_String_o *v11; // x4
+  int32_t v12; // w5
+  int64_t v13; // x6
+  System_String_o *v14; // x7
 
   v7 = this;
   v8 = isInvalidSkill;
   System_Object___ctor((Il2CppObject *)this, 0);
   v7->fields.text = s;
   v7 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)((char *)v7 + 16);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v7, (int32_t)s, v9, v10);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v7, (int32_t)s, v9, v10, v11, v12, v13, v14);
   __asm { FMOV            V0.4S, #1.0 }
   LOWORD(v7->monitor) = 0;
   v7->fields.bottom.fields.r = scaleX;
@@ -1141,7 +1201,7 @@ void RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor(
 }
 
 
-void RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor_35135536(
+void RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor_35168636(
         RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *this,
         System_String_o *s,
         UnityEngine_Color_o t,
@@ -1160,7 +1220,11 @@ void RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor_35135
   RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *v15; // x20
   bool v16; // w21
   int32_t v17; // w2
-  const MethodInfo *v18; // x3
+  int32_t v18; // w3
+  System_String_o *v19; // x4
+  int32_t v20; // w5
+  int64_t v21; // x6
+  System_String_o *v22; // x7
   float a; // [xsp+Ch] [xbp-64h]
 
   a = b.fields.a;
@@ -1176,7 +1240,7 @@ void RecommendSupportServantSelectListViewItemDraw_WarningLabelText___ctor_35135
   System_Object___ctor((Il2CppObject *)this, 0);
   v15->fields.text = s;
   v15 = (RecommendSupportServantSelectListViewItemDraw_WarningLabelText_o *)((char *)v15 + 16);
-  sub_1C6B9AC((CGThumbnailListItem_o *)v15, (int32_t)s, v17, v18);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)v15, (int32_t)s, v17, v18, v19, v20, v21, v22);
   *((float *)&v15->monitor + 1) = v14;
   *(float *)&v15->fields.text = v13;
   *((float *)&v15->fields.text + 1) = v12;

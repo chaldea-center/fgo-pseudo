@@ -1,18 +1,17 @@
 void FuncDispMaster___ctor(FuncDispMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CB6536 & 1) == 0 )
+  if ( (byte_4CC765E & 1) == 0 )
   {
-    sub_1C6BA08(&Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__);
-    byte_4CB6536 = 1;
+    sub_1C713B0(&Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__);
+    byte_4CC765E = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     456,
-    (const MethodInfo_33F6DB8 *)Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__);
+    (const MethodInfo_3406B5C *)Method_DataMasterBase_FuncDispMaster__FuncDispEntity__int___ctor__);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 bool FuncDispMaster__IsContainFuncIds(
         FuncDispMaster_o *this,
         FuncDispEntity_o **entity,
@@ -20,149 +19,164 @@ bool FuncDispMaster__IsContainFuncIds(
         int32_t classBoardBaseId,
         const MethodInfo *method)
 {
-  __int64 v9; // x1
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  __int64 v12; // x1
   System_Collections_ObjectModel_Collection_T__o *list; // x0
-  __int64 v11; // x1
+  __int64 v14; // x1
   System_Collections_Generic_IEnumerator_T__o *Enumerator; // x19
   System_Collections_Generic_IEnumerator_T__c *klass; // x8
-  __int64 v14; // x9
+  __int64 v17; // x9
   int32_t *p_offset; // x10
-  __int64 v16; // x0
-  System_Collections_Generic_IEnumerator_T__c *v17; // x8
-  __int64 v18; // x9
-  int32_t *v19; // x10
-  __int64 v20; // x0
-  __int64 v21; // x0
-  __int64 v22; // x1
-  FuncDispEntity_o *v23; // x23
-  int32_t v24; // w2
-  const MethodInfo *v25; // x3
+  __int64 v19; // x0
+  System_Collections_Generic_IEnumerator_T__c *v20; // x8
+  __int64 v21; // x9
+  int32_t *v22; // x10
+  __int64 v23; // x0
+  __int64 v24; // x0
+  __int64 v25; // x1
+  FuncDispEntity_o *v26; // x23
+  int32_t v27; // w2
+  int32_t v28; // w3
+  System_String_o *v29; // x4
+  int32_t v30; // w5
+  int64_t v31; // x6
+  System_String_o *v32; // x7
   int32_t targetId; // w8
-  bool v27; // w22
-  int v28; // w23
-  System_Collections_Generic_IEnumerator_T__c *v29; // x8
-  __int64 v30; // x9
-  int32_t *v31; // x10
-  __int64 v32; // x0
+  bool v34; // w22
+  int v35; // w23
+  System_Collections_Generic_IEnumerator_T__c *v36; // x8
+  __int64 v37; // x9
+  int32_t *v38; // x10
+  __int64 v39; // x0
 
-  if ( (byte_4CB6534 & 1) == 0 )
+  if ( (byte_4CC765C & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__);
-    sub_1C6BA08(&Method_System_Linq_Enumerable_SequenceEqual_int___);
-    sub_1C6BA08(&System_IDisposable_TypeInfo);
-    sub_1C6BA08(&System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo);
-    sub_1C6BA08(&System_Collections_IEnumerator_TypeInfo);
-    byte_4CB6534 = 1;
+    sub_1C713B0(&Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__);
+    sub_1C713B0(&Method_System_Linq_Enumerable_SequenceEqual_int___);
+    sub_1C713B0(&System_IDisposable_TypeInfo);
+    sub_1C713B0(&System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo);
+    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
+    byte_4CC765C = 1;
   }
   *entity = 0;
-  sub_1C6B9AC((CGThumbnailListItem_o *)entity, 0, (int32_t)funcIds, *(const MethodInfo **)&classBoardBaseId);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)entity,
+    0,
+    (int32_t)funcIds,
+    classBoardBaseId,
+    (System_String_o *)method,
+    v5,
+    v6,
+    v7);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C6BC60(0, v9);
+    sub_1C71608(0, v12);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_339243C *)Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__);
+                 (const MethodInfo_33A21E0 *)Method_System_Collections_ObjectModel_Collection_FuncDispEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C6BC60(0, v11);
+    sub_1C71608(0, v14);
   while ( 1 )
   {
     do
     {
       klass = Enumerator->klass;
-      v14 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+      v17 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
       if ( *(_WORD *)&Enumerator->klass->_2.rank )
       {
         p_offset = &klass->_1.interfaceOffsets->offset;
         while ( *((System_Collections_IEnumerator_c **)p_offset - 1) != System_Collections_IEnumerator_TypeInfo )
         {
-          --v14;
+          --v17;
           p_offset += 4;
-          if ( !v14 )
+          if ( !v17 )
             goto LABEL_9;
         }
-        v16 = (__int64)&klass->vtable[*p_offset];
+        v19 = (__int64)&klass->vtable[*p_offset];
       }
       else
       {
 LABEL_9:
-        v16 = sub_1C41D90(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+        v19 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
       }
-      if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v16)(
+      if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
               Enumerator,
-              *(_QWORD *)(v16 + 8))
+              *(_QWORD *)(v19 + 8))
           & 1) == 0 )
       {
-        v27 = 0;
-        v28 = 6;
+        v34 = 0;
+        v35 = 6;
         goto LABEL_26;
       }
-      v17 = Enumerator->klass;
-      v18 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+      v20 = Enumerator->klass;
+      v21 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
       if ( *(_WORD *)&Enumerator->klass->_2.rank )
       {
-        v19 = &v17->_1.interfaceOffsets->offset;
-        while ( *((System_Collections_Generic_IEnumerator_FuncDispEntity__c **)v19 - 1) != System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo )
+        v22 = &v20->_1.interfaceOffsets->offset;
+        while ( *((System_Collections_Generic_IEnumerator_FuncDispEntity__c **)v22 - 1) != System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo )
         {
-          --v18;
-          v19 += 4;
-          if ( !v18 )
+          --v21;
+          v22 += 4;
+          if ( !v21 )
             goto LABEL_16;
         }
-        v20 = (__int64)&v17->vtable[*v19];
+        v23 = (__int64)&v20->vtable[*v22];
       }
       else
       {
 LABEL_16:
-        v20 = sub_1C41D90(Enumerator, System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, 0);
+        v23 = sub_1C47738(Enumerator, System_Collections_Generic_IEnumerator_FuncDispEntity__TypeInfo, 0);
       }
-      v21 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v20)(
+      v24 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v23)(
               Enumerator,
-              *(_QWORD *)(v20 + 8));
-      v23 = (FuncDispEntity_o *)v21;
-      if ( !v21 )
-        sub_1C6BC60(0, v22);
+              *(_QWORD *)(v23 + 8));
+      v26 = (FuncDispEntity_o *)v24;
+      if ( !v24 )
+        sub_1C71608(0, v25);
     }
     while ( !System_Linq_Enumerable__SequenceEqual_int_(
-               *(System_Collections_Generic_IEnumerable_TSource__o **)(v21 + 24),
+               *(System_Collections_Generic_IEnumerable_TSource__o **)(v24 + 24),
                (System_Collections_Generic_IEnumerable_TSource__o *)funcIds,
-               (const MethodInfo_317503C *)Method_System_Linq_Enumerable_SequenceEqual_int___) );
-    targetId = v23->fields.targetId;
+               (const MethodInfo_3184DE0 *)Method_System_Linq_Enumerable_SequenceEqual_int___) );
+    targetId = v26->fields.targetId;
     if ( targetId == classBoardBaseId )
       break;
     if ( !targetId && !*entity )
     {
-      *entity = v23;
-      sub_1C6B9AC((CGThumbnailListItem_o *)entity, (int32_t)v23, v24, v25);
+      *entity = v26;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)entity, (int32_t)v26, v27, v28, v29, v30, v31, v32);
     }
   }
-  *entity = v23;
-  sub_1C6B9AC((CGThumbnailListItem_o *)entity, (int32_t)v23, v24, v25);
-  v27 = 1;
-  v28 = 5;
+  *entity = v26;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)entity, (int32_t)v26, v27, v28, v29, v30, v31, v32);
+  v34 = 1;
+  v35 = 5;
 LABEL_26:
-  v29 = Enumerator->klass;
-  v30 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
+  v36 = Enumerator->klass;
+  v37 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
   if ( *(_WORD *)&Enumerator->klass->_2.rank )
   {
-    v31 = &v29->_1.interfaceOffsets->offset;
-    while ( *((System_IDisposable_c **)v31 - 1) != System_IDisposable_TypeInfo )
+    v38 = &v36->_1.interfaceOffsets->offset;
+    while ( *((System_IDisposable_c **)v38 - 1) != System_IDisposable_TypeInfo )
     {
-      --v30;
-      v31 += 4;
-      if ( !v30 )
+      --v37;
+      v38 += 4;
+      if ( !v37 )
         goto LABEL_30;
     }
-    v32 = (__int64)&v29->vtable[*v31];
+    v39 = (__int64)&v36->vtable[*v38];
   }
   else
   {
 LABEL_30:
-    v32 = sub_1C41D90(Enumerator, System_IDisposable_TypeInfo, 0);
+    v39 = sub_1C47738(Enumerator, System_IDisposable_TypeInfo, 0);
   }
-  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v32)(Enumerator, *(_QWORD *)(v32 + 8));
-  if ( v28 == 6 )
+  (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v39)(Enumerator, *(_QWORD *)(v39 + 8));
+  if ( v35 == 6 )
     return *entity != 0;
-  return v27;
+  return v34;
 }
 
 
@@ -202,19 +216,19 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
   System_String_o *v33; // x21
   MethodInfo methoda; // [xsp+8h] [xbp-78h] BYREF
 
-  if ( (byte_4CB6535 & 1) == 0 )
+  if ( (byte_4CC765D & 1) == 0 )
   {
-    sub_1C6BA08(&StringLiteral_25338/*"{x"*/);
-    sub_1C6BA08(&StringLiteral_25143/*"{"*/);
-    sub_1C6BA08(&StringLiteral_25074/*"xx}"*/);
-    sub_1C6BA08(&StringLiteral_25073/*"xxx}"*/);
-    sub_1C6BA08(&StringLiteral_25368/*"}"*/);
-    sub_1C6BA08(&StringLiteral_25341/*"{xxxx"*/);
-    sub_1C6BA08(&StringLiteral_25339/*"{xx"*/);
-    sub_1C6BA08(&StringLiteral_25072/*"xxxx}"*/);
-    sub_1C6BA08(&StringLiteral_25075/*"x}"*/);
-    sub_1C6BA08(&StringLiteral_25340/*"{xxx"*/);
-    byte_4CB6535 = 1;
+    sub_1C713B0(&StringLiteral_25358/*"{x"*/);
+    sub_1C713B0(&StringLiteral_25163/*"{"*/);
+    sub_1C713B0(&StringLiteral_25094/*"xx}"*/);
+    sub_1C713B0(&StringLiteral_25093/*"xxx}"*/);
+    sub_1C713B0(&StringLiteral_25388/*"}"*/);
+    sub_1C713B0(&StringLiteral_25361/*"{xxxx"*/);
+    sub_1C713B0(&StringLiteral_25359/*"{xx"*/);
+    sub_1C713B0(&StringLiteral_25092/*"xxxx}"*/);
+    sub_1C713B0(&StringLiteral_25095/*"x}"*/);
+    sub_1C713B0(&StringLiteral_25360/*"{xxx"*/);
+    byte_4CC765D = 1;
   }
   LODWORD(methoda.methodPointer) = 0;
   IsNullOrEmpty = (System_String_o *)BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)funcVals, 0);
@@ -228,58 +242,58 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
       while ( 1 )
       {
         v7 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0);
-        v8 = System_String__Concat_64005056(
-               (System_String_o *)StringLiteral_25143/*"{"*/,
+        v8 = System_String__Concat_64069988(
+               (System_String_o *)StringLiteral_25163/*"{"*/,
                v7,
-               (System_String_o *)StringLiteral_25072/*"xxxx}"*/,
+               (System_String_o *)StringLiteral_25092/*"xxxx}"*/,
                0);
         v9 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0);
-        v10 = System_String__Concat_64005056(
-                (System_String_o *)StringLiteral_25143/*"{"*/,
+        v10 = System_String__Concat_64069988(
+                (System_String_o *)StringLiteral_25163/*"{"*/,
                 v9,
-                (System_String_o *)StringLiteral_25073/*"xxx}"*/,
+                (System_String_o *)StringLiteral_25093/*"xxx}"*/,
                 0);
         v11 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0);
-        v12 = System_String__Concat_64005056(
-                (System_String_o *)StringLiteral_25143/*"{"*/,
+        v12 = System_String__Concat_64069988(
+                (System_String_o *)StringLiteral_25163/*"{"*/,
                 v11,
-                (System_String_o *)StringLiteral_25074/*"xx}"*/,
+                (System_String_o *)StringLiteral_25094/*"xx}"*/,
                 0);
         v13 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0);
-        v14 = System_String__Concat_64005056(
-                (System_String_o *)StringLiteral_25143/*"{"*/,
+        v14 = System_String__Concat_64069988(
+                (System_String_o *)StringLiteral_25163/*"{"*/,
                 v13,
-                (System_String_o *)StringLiteral_25075/*"x}"*/,
+                (System_String_o *)StringLiteral_25095/*"x}"*/,
                 0);
         v15 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0);
-        v16 = System_String__Concat_64005056(
-                (System_String_o *)StringLiteral_25143/*"{"*/,
+        v16 = System_String__Concat_64069988(
+                (System_String_o *)StringLiteral_25163/*"{"*/,
                 v15,
-                (System_String_o *)StringLiteral_25368/*"}"*/,
+                (System_String_o *)StringLiteral_25388/*"}"*/,
                 0);
         v17 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0);
-        v18 = System_String__Concat_64005056(
-                (System_String_o *)StringLiteral_25338/*"{x"*/,
+        v18 = System_String__Concat_64069988(
+                (System_String_o *)StringLiteral_25358/*"{x"*/,
                 v17,
-                (System_String_o *)StringLiteral_25368/*"}"*/,
+                (System_String_o *)StringLiteral_25388/*"}"*/,
                 0);
         v19 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0);
-        v20 = System_String__Concat_64005056(
-                (System_String_o *)StringLiteral_25339/*"{xx"*/,
+        v20 = System_String__Concat_64069988(
+                (System_String_o *)StringLiteral_25359/*"{xx"*/,
                 v19,
-                (System_String_o *)StringLiteral_25368/*"}"*/,
+                (System_String_o *)StringLiteral_25388/*"}"*/,
                 0);
         v21 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0);
-        v22 = System_String__Concat_64005056(
-                (System_String_o *)StringLiteral_25340/*"{xxx"*/,
+        v22 = System_String__Concat_64069988(
+                (System_String_o *)StringLiteral_25360/*"{xxx"*/,
                 v21,
-                (System_String_o *)StringLiteral_25368/*"}"*/,
+                (System_String_o *)StringLiteral_25388/*"}"*/,
                 0);
         v23 = System_Int32__ToString((int32_t)&methoda.methodPointer + 4, 0);
-        v24 = System_String__Concat_64005056(
-                (System_String_o *)StringLiteral_25341/*"{xxxx"*/,
+        v24 = System_String__Concat_64069988(
+                (System_String_o *)StringLiteral_25361/*"{xxxx"*/,
                 v23,
-                (System_String_o *)StringLiteral_25368/*"}"*/,
+                (System_String_o *)StringLiteral_25388/*"}"*/,
                 0);
         if ( HIDWORD(methoda.methodPointer) >= LODWORD(funcVals->max_length) )
           goto LABEL_26;
@@ -288,7 +302,7 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !text )
           break;
-        v24 = System_String__Replace_64013356(text, v8, IsNullOrEmpty, 0);
+        v24 = System_String__Replace_64078288(text, v8, IsNullOrEmpty, 0);
         if ( HIDWORD(methoda.methodPointer) >= LODWORD(funcVals->max_length) )
           goto LABEL_26;
         v26 = v24;
@@ -296,7 +310,7 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v26 )
           break;
-        v24 = System_String__Replace_64013356(v26, v10, IsNullOrEmpty, 0);
+        v24 = System_String__Replace_64078288(v26, v10, IsNullOrEmpty, 0);
         if ( HIDWORD(methoda.methodPointer) >= LODWORD(funcVals->max_length) )
           goto LABEL_26;
         v27 = v24;
@@ -304,7 +318,7 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v27 )
           break;
-        v24 = System_String__Replace_64013356(v27, v12, IsNullOrEmpty, 0);
+        v24 = System_String__Replace_64078288(v27, v12, IsNullOrEmpty, 0);
         if ( HIDWORD(methoda.methodPointer) >= LODWORD(funcVals->max_length) )
           goto LABEL_26;
         v28 = v24;
@@ -312,7 +326,7 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v28 )
           break;
-        v24 = System_String__Replace_64013356(v28, v14, IsNullOrEmpty, 0);
+        v24 = System_String__Replace_64078288(v28, v14, IsNullOrEmpty, 0);
         if ( HIDWORD(methoda.methodPointer) >= LODWORD(funcVals->max_length) )
           goto LABEL_26;
         v29 = v24;
@@ -320,7 +334,7 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v29 )
           break;
-        v24 = System_String__Replace_64013356(v29, v16, IsNullOrEmpty, 0);
+        v24 = System_String__Replace_64078288(v29, v16, IsNullOrEmpty, 0);
         if ( HIDWORD(methoda.methodPointer) >= LODWORD(funcVals->max_length) )
           goto LABEL_26;
         v30 = v24;
@@ -328,7 +342,7 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v30 )
           break;
-        v24 = System_String__Replace_64013356(v30, v18, IsNullOrEmpty, 0);
+        v24 = System_String__Replace_64078288(v30, v18, IsNullOrEmpty, 0);
         if ( HIDWORD(methoda.methodPointer) >= LODWORD(funcVals->max_length) )
           goto LABEL_26;
         v31 = v24;
@@ -336,7 +350,7 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v31 )
           break;
-        v24 = System_String__Replace_64013356(v31, v20, IsNullOrEmpty, 0);
+        v24 = System_String__Replace_64078288(v31, v20, IsNullOrEmpty, 0);
         if ( HIDWORD(methoda.methodPointer) >= LODWORD(funcVals->max_length) )
           goto LABEL_26;
         v32 = v24;
@@ -344,22 +358,22 @@ System_String_o *FuncDispMaster__ReplaceFractionFormat(
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v32 )
           break;
-        v24 = System_String__Replace_64013356(v32, v22, IsNullOrEmpty, 0);
+        v24 = System_String__Replace_64078288(v32, v22, IsNullOrEmpty, 0);
         if ( HIDWORD(methoda.methodPointer) >= LODWORD(funcVals->max_length) )
 LABEL_26:
-          sub_1C6BC68(v24);
+          sub_1C71610(v24);
         v33 = v24;
         *(float *)&methoda.methodPointer = (float)funcVals->m_Items[SHIDWORD(methoda.methodPointer)] / 10000.0;
         IsNullOrEmpty = System_Single__ToString(*(float *)&methoda.methodPointer, &methoda);
         if ( !v33 )
           break;
-        text = System_String__Replace_64013356(v33, v25, IsNullOrEmpty, 0);
+        text = System_String__Replace_64078288(v33, v25, IsNullOrEmpty, 0);
         ++HIDWORD(methoda.methodPointer);
         if ( SHIDWORD(methoda.methodPointer) >= SLODWORD(funcVals->max_length) )
           return text;
       }
 LABEL_27:
-      sub_1C6BC60(IsNullOrEmpty, v6);
+      sub_1C71608(IsNullOrEmpty, v6);
     }
   }
   return text;

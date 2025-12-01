@@ -6,7 +6,7 @@ void BattleEndNotRelatedSurvivalStatusInstantlyData__ExecAction(
   struct BattleData_o *data; // x8
 
   if ( !perf || (data = perf->fields.data) == 0 )
-    sub_1C6BC60(this, perf);
+    sub_1C71608(this, perf);
   data->fields.endbattleFlg = 1;
   data->fields.winBattleNotRelatedSurvivalStatus = 1;
   data->fields.IsEndBattleInstantly = 1;

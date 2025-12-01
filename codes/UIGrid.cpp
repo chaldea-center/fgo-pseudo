@@ -9,21 +9,21 @@ void UIGrid__AddChild(UIGrid_o *this, UnityEngine_Transform_o *trans, const Meth
 {
   const MethodInfo *v3; // x3
 
-  UIGrid__AddChild_49476400(this, trans, 0, v3);
+  UIGrid__AddChild_49541332(this, trans, 0, v3);
 }
 
 
-void UIGrid__AddChild_49476400(UIGrid_o *this, UnityEngine_Transform_o *trans, bool sort, const MethodInfo *method)
+void UIGrid__AddChild_49541332(UIGrid_o *this, UnityEngine_Transform_o *trans, bool sort, const MethodInfo *method)
 {
   UnityEngine_Transform_o *transform; // x0
   __int64 v7; // x1
   const MethodInfo *v8; // x1
   System_Collections_Generic_List_Transform__o *ChildList; // x0
 
-  if ( (byte_4CBA986 & 1) == 0 )
+  if ( (byte_4CCBADF & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA986 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBADF = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -31,7 +31,7 @@ void UIGrid__AddChild_49476400(UIGrid_o *this, UnityEngine_Transform_o *trans, b
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !trans )
-      sub_1C6BC60(transform, v7);
+      sub_1C71608(transform, v7);
     UnityEngine_Transform__set_parent(trans, transform, 0);
     ChildList = UIGrid__GetChildList(this, v8);
     ((void (__fastcall *)(UIGrid_o *, System_Collections_Generic_List_Transform__o *, const MethodInfo *))this->klass->vtable._9_ResetPosition.methodPtr)(
@@ -50,11 +50,11 @@ void UIGrid__ConstrainWithinPanel(UIGrid_o *this, const MethodInfo *method)
   __int64 v6; // x1
   Il2CppObject *Component_object; // x19
 
-  if ( (byte_4CBA98C & 1) == 0 )
+  if ( (byte_4CCBAE5 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA98C = 1;
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIScrollView___);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBAE5 = 1;
   }
   mPanel = (UnityEngine_Object_o *)this->fields.mPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -65,13 +65,13 @@ void UIGrid__ConstrainWithinPanel(UIGrid_o *this, const MethodInfo *method)
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     if ( !v4 )
       goto LABEL_14;
-    UIPanel__ConstrainTargetToBounds_49422064(v4, transform, 1, 0);
+    UIPanel__ConstrainTargetToBounds_49486996(v4, transform, 1, 0);
     transform = (UnityEngine_Transform_o *)this->fields.mPanel;
     if ( !transform )
       goto LABEL_14;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          (UnityEngine_Component_o *)transform,
-                         (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
+                         (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIScrollView___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     transform = (UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
@@ -89,7 +89,7 @@ void UIGrid__ConstrainWithinPanel(UIGrid_o *this, const MethodInfo *method)
         return;
       }
 LABEL_14:
-      sub_1C6BC60(transform, v6);
+      sub_1C71608(transform, v6);
     }
   }
 }
@@ -101,22 +101,22 @@ UnityEngine_Transform_o *UIGrid__GetChild(UIGrid_o *this, int32_t index, const M
   System_Collections_Generic_List_object__o *ChildList; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CBA984 & 1) == 0 )
+  if ( (byte_4CCBADD & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Transform__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Transform__get_Item__);
-    byte_4CBA984 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Transform__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Transform__get_Item__);
+    byte_4CCBADD = 1;
   }
   ChildList = (System_Collections_Generic_List_object__o *)UIGrid__GetChildList(this, *(const MethodInfo **)&index);
   if ( !ChildList )
-    sub_1C6BC60(0, v6);
+    sub_1C71608(0, v6);
   if ( ChildList->fields._size <= index )
     return 0;
   else
     return (UnityEngine_Transform_o *)System_Collections_Generic_List_object___get_Item(
                                         ChildList,
                                         index,
-                                        (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_Transform__get_Item__);
+                                        (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_Transform__get_Item__);
 }
 
 
@@ -128,38 +128,42 @@ System_Collections_Generic_List_Transform__o *UIGrid__GetChildList(UIGrid_o *thi
   System_Comparison_T__o *onCustomSort; // x1
   int32_t i; // w22
   int32_t v8; // w2
-  const MethodInfo *v9; // x3
-  UnityEngine_Object_o *v10; // x23
+  int32_t v9; // w3
+  System_String_o *v10; // x4
+  int32_t v11; // w5
+  int64_t v12; // x6
+  System_String_o *v13; // x7
+  UnityEngine_Object_o *v14; // x23
   UnityEngine_GameObject_o *gameObject; // x24
   struct System_Object_array *items; // x8
-  _QWORD *v13; // x9
+  _QWORD *v17; // x9
   __int64 size; // x10
-  Il2CppClass **v15; // x0
+  Il2CppClass **v19; // x0
   int32_t sorting; // w8
-  System_Comparison_T__o *v17; // x0
-  intptr_t *v18; // x8
-  System_Comparison_T__o *v19; // x20
-  System_Collections_Generic_List_object__o *v20; // x0
+  System_Comparison_T__o *v21; // x0
+  intptr_t *v22; // x8
+  System_Comparison_T__o *v23; // x20
+  System_Collections_Generic_List_object__o *v24; // x0
 
-  if ( (byte_4CBA983 & 1) == 0 )
+  if ( (byte_4CCBADC & 1) == 0 )
   {
-    sub_1C6BA08(&System_Comparison_Transform__TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Transform__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Transform__Sort__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Transform___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_Transform__TypeInfo);
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    sub_1C6BA08(&Method_UIGrid_SortByName__);
-    sub_1C6BA08(&Method_UIGrid_SortHorizontal__);
-    sub_1C6BA08(&Method_UIGrid_SortVertical__);
-    byte_4CBA983 = 1;
+    sub_1C713B0(&System_Comparison_Transform__TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Transform__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Transform__Sort__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Transform___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_Transform__TypeInfo);
+    sub_1C713B0(&NGUITools_TypeInfo);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    sub_1C713B0(&Method_UIGrid_SortByName__);
+    sub_1C713B0(&Method_UIGrid_SortHorizontal__);
+    sub_1C713B0(&Method_UIGrid_SortVertical__);
+    byte_4CCBADC = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  v4 = (System_Collections_Generic_List_object__o *)sub_1C6BC54(System_Collections_Generic_List_Transform__TypeInfo);
+  v4 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_Transform__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v4,
-    (const MethodInfo_3800140 *)Method_System_Collections_Generic_List_Transform___ctor__);
+    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_Transform___ctor__);
   if ( !transform )
     goto LABEL_36;
   childCount = (UnityEngine_Transform_o *)UnityEngine_Transform__get_childCount(transform, 0);
@@ -168,27 +172,27 @@ System_Collections_Generic_List_Transform__o *UIGrid__GetChildList(UIGrid_o *thi
     for ( i = 0; i < (int)childCount; ++i )
     {
       childCount = UnityEngine_Transform__GetChild(transform, i, 0);
-      v10 = (UnityEngine_Object_o *)childCount;
+      v14 = (UnityEngine_Object_o *)childCount;
       if ( !this->fields.hideInactive )
         goto LABEL_39;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      childCount = (UnityEngine_Transform_o *)UnityEngine_Object__op_Implicit(v10, 0);
+      childCount = (UnityEngine_Transform_o *)UnityEngine_Object__op_Implicit(v14, 0);
       if ( ((unsigned __int8)childCount & 1) != 0 )
       {
-        if ( !v10 )
+        if ( !v14 )
           goto LABEL_36;
-        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v10, 0);
+        gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v14, 0);
         if ( !NGUITools_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-        childCount = (UnityEngine_Transform_o *)NGUITools__GetActive_49647220(gameObject, 0);
+        childCount = (UnityEngine_Transform_o *)NGUITools__GetActive_49712152(gameObject, 0);
         if ( ((unsigned __int8)childCount & 1) != 0 )
         {
 LABEL_39:
           if ( !v4 )
             goto LABEL_36;
           items = v4->fields._items;
-          v13 = Method_System_Collections_Generic_List_Transform__Add__;
+          v17 = Method_System_Collections_Generic_List_Transform__Add__;
           ++v4->fields._version;
           if ( !items )
             goto LABEL_36;
@@ -197,15 +201,15 @@ LABEL_39:
           {
             System_Collections_Generic_List_object___AddWithResize(
               v4,
-              (Il2CppObject *)v10,
-              *(const MethodInfo_3800974 **)(*(_QWORD *)(v13[4] + 192LL) + 112LL));
+              (Il2CppObject *)v14,
+              *(const MethodInfo_3810718 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
           }
           else
           {
-            v15 = &items->obj.klass + size;
+            v19 = &items->obj.klass + size;
             v4->fields._size = size + 1;
-            v15[4] = (Il2CppClass *)v10;
-            sub_1C6B9AC((CGThumbnailListItem_o *)(v15 + 4), (int32_t)v10, v8, v9);
+            v19[4] = (Il2CppClass *)v14;
+            sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)v14, v8, v9, v10, v11, v12, v13);
           }
         }
       }
@@ -218,16 +222,16 @@ LABEL_39:
     switch ( sorting )
     {
       case 3:
-        v17 = (System_Comparison_T__o *)sub_1C6BC54(System_Comparison_Transform__TypeInfo);
-        v18 = &Method_UIGrid_SortVertical__;
+        v21 = (System_Comparison_T__o *)sub_1C715FC(System_Comparison_Transform__TypeInfo);
+        v22 = &Method_UIGrid_SortVertical__;
         break;
       case 2:
-        v17 = (System_Comparison_T__o *)sub_1C6BC54(System_Comparison_Transform__TypeInfo);
-        v18 = &Method_UIGrid_SortHorizontal__;
+        v21 = (System_Comparison_T__o *)sub_1C715FC(System_Comparison_Transform__TypeInfo);
+        v22 = &Method_UIGrid_SortHorizontal__;
         break;
       case 1:
-        v17 = (System_Comparison_T__o *)sub_1C6BC54(System_Comparison_Transform__TypeInfo);
-        v18 = &Method_UIGrid_SortByName__;
+        v21 = (System_Comparison_T__o *)sub_1C715FC(System_Comparison_Transform__TypeInfo);
+        v22 = &Method_UIGrid_SortByName__;
         break;
       default:
         onCustomSort = (System_Comparison_T__o *)this->fields.onCustomSort;
@@ -241,23 +245,23 @@ LABEL_39:
         }
         if ( v4 )
         {
-          v20 = v4;
+          v24 = v4;
           goto LABEL_30;
         }
 LABEL_36:
-        sub_1C6BC60(childCount, onCustomSort);
+        sub_1C71608(childCount, onCustomSort);
     }
-    v19 = v17;
-    System_Comparison_object____ctor(v17, 0, *v18, 0);
+    v23 = v21;
+    System_Comparison_object____ctor(v21, 0, *v22, 0);
     if ( v4 )
     {
-      v20 = v4;
-      onCustomSort = v19;
+      v24 = v4;
+      onCustomSort = v23;
 LABEL_30:
-      System_Collections_Generic_List_object___Sort_58729528(
-        v20,
+      System_Collections_Generic_List_object___Sort_58794460(
+        v24,
         onCustomSort,
-        (const MethodInfo_3802438 *)Method_System_Collections_Generic_List_Transform__Sort__);
+        (const MethodInfo_38121DC *)Method_System_Collections_Generic_List_Transform__Sort__);
       return (System_Collections_Generic_List_Transform__o *)v4;
     }
     goto LABEL_36;
@@ -271,18 +275,18 @@ int32_t UIGrid__GetIndex(UIGrid_o *this, UnityEngine_Transform_o *trans, const M
   System_Collections_Generic_List_Transform__o *ChildList; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CBA985 & 1) == 0 )
+  if ( (byte_4CCBADE & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Transform__IndexOf__);
-    byte_4CBA985 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Transform__IndexOf__);
+    byte_4CCBADE = 1;
   }
   ChildList = UIGrid__GetChildList(this, (const MethodInfo *)trans);
   if ( !ChildList )
-    sub_1C6BC60(0, v6);
+    sub_1C71608(0, v6);
   return System_Collections_Generic_List_object___IndexOf(
            (System_Collections_Generic_List_object__o *)ChildList,
            (Il2CppObject *)trans,
-           (const MethodInfo_3801614 *)Method_System_Collections_Generic_List_Transform__IndexOf__);
+           (const MethodInfo_38113B8 *)Method_System_Collections_Generic_List_Transform__IndexOf__);
 }
 
 
@@ -291,13 +295,17 @@ void UIGrid__Init(UIGrid_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *gameObject; // x20
   Il2CppObject *v4; // x0
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
 
-  if ( (byte_4CBA989 & 1) == 0 )
+  if ( (byte_4CCBAE2 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_NGUITools_FindInParents_UIPanel___);
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    byte_4CBA989 = 1;
+    sub_1C713B0(&Method_NGUITools_FindInParents_UIPanel___);
+    sub_1C713B0(&NGUITools_TypeInfo);
+    byte_4CCBAE2 = 1;
   }
   this->fields.mInitDone = 1;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -305,19 +313,19 @@ void UIGrid__Init(UIGrid_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
   v4 = NGUITools__FindInParents_object_(
          gameObject,
-         (const MethodInfo_31C5E70 *)Method_NGUITools_FindInParents_UIPanel___);
+         (const MethodInfo_31D5C14 *)Method_NGUITools_FindInParents_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)v4;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.mPanel, (int32_t)v4, v5, v6);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mPanel, (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }
 
 
 void UIGrid__OnValidate(UIGrid_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CBA98A & 1) == 0 )
+  if ( (byte_4CCBAE3 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    byte_4CBA98A = 1;
+    sub_1C713B0(&UnityEngine_Application_TypeInfo);
+    sub_1C713B0(&NGUITools_TypeInfo);
+    byte_4CCBAE3 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -340,10 +348,10 @@ void UIGrid__RemoveAllChild(UIGrid_o *this, const MethodInfo *method)
   int32_t v5; // w20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4CBA988 & 1) == 0 )
+  if ( (byte_4CCBAE1 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA988 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBAE1 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )
@@ -364,12 +372,12 @@ void UIGrid__RemoveAllChild(UIGrid_o *this, const MethodInfo *method)
                                              0);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      UnityEngine_Object__Destroy_71659676(gameObject, 0);
+      UnityEngine_Object__Destroy_71724608(gameObject, 0);
       if ( --v5 < 0 )
         return;
     }
 LABEL_11:
-    sub_1C6BC60(transform, v4);
+    sub_1C71608(transform, v4);
   }
 }
 
@@ -381,19 +389,19 @@ bool UIGrid__RemoveChild(UIGrid_o *this, UnityEngine_Transform_o *t, const Metho
   System_Collections_Generic_List_Transform__o *v7; // x21
   bool v8; // w20
 
-  if ( (byte_4CBA987 & 1) == 0 )
+  if ( (byte_4CCBAE0 & 1) == 0 )
   {
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Transform__Remove__);
-    byte_4CBA987 = 1;
+    sub_1C713B0(&Method_System_Collections_Generic_List_Transform__Remove__);
+    byte_4CCBAE0 = 1;
   }
   ChildList = UIGrid__GetChildList(this, (const MethodInfo *)t);
   if ( !ChildList )
-    sub_1C6BC60(0, v6);
+    sub_1C71608(0, v6);
   v7 = ChildList;
   v8 = System_Collections_Generic_List_object___Remove(
          (System_Collections_Generic_List_object__o *)ChildList,
          (Il2CppObject *)t,
-         (const MethodInfo_3801E9C *)Method_System_Collections_Generic_List_Transform__Remove__);
+         (const MethodInfo_3811C40 *)Method_System_Collections_Generic_List_Transform__Remove__);
   if ( v8 )
     ((void (__fastcall *)(UIGrid_o *, System_Collections_Generic_List_Transform__o *, const MethodInfo *))this->klass->vtable._9_ResetPosition.methodPtr)(
       this,
@@ -412,11 +420,11 @@ void UIGrid__Reposition(UIGrid_o *this, const MethodInfo *method)
   const MethodInfo *v7; // x1
   struct UIGrid_OnReposition_o *onReposition; // x8
 
-  if ( (byte_4CBA98B & 1) == 0 )
+  if ( (byte_4CCBAE4 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
-    sub_1C6BA08(&NGUITools_TypeInfo);
-    byte_4CBA98B = 1;
+    sub_1C713B0(&UnityEngine_Application_TypeInfo);
+    sub_1C713B0(&NGUITools_TypeInfo);
+    byte_4CCBAE4 = 1;
   }
   if ( !UnityEngine_Application_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Application_TypeInfo);
@@ -425,7 +433,7 @@ void UIGrid__Reposition(UIGrid_o *this, const MethodInfo *method)
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !NGUITools_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NGUITools_TypeInfo);
-    if ( NGUITools__GetActive_49647220(gameObject, 0) )
+    if ( NGUITools__GetActive_49712152(gameObject, 0) )
       ((void (__fastcall *)(UIGrid_o *, const MethodInfo *))this->klass->vtable._4_Init.methodPtr)(
         this,
         this->klass->vtable._4_Init.method);
@@ -514,14 +522,14 @@ void UIGrid__ResetPosition(
   UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v57; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CBA98D & 1) == 0 )
+  if ( (byte_4CCBAE6 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Application_TypeInfo);
-    sub_1C6BA08(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Transform__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_Transform__get_Item__);
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CBA98D = 1;
+    sub_1C713B0(&UnityEngine_Application_TypeInfo);
+    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_SpringPosition___);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Transform__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_Transform__get_Item__);
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCBAE6 = 1;
   }
   this->fields.mReposition = 0;
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
@@ -541,7 +549,7 @@ void UIGrid__ResetPosition(
       transform = System_Collections_Generic_List_object___get_Item(
                     (System_Collections_Generic_List_object__o *)list,
                     v13,
-                    (const MethodInfo_38006A4 *)Method_System_Collections_Generic_List_Transform__get_Item__);
+                    (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_Transform__get_Item__);
       if ( !transform )
         goto LABEL_78;
       v14 = (UnityEngine_Component_o *)transform;
@@ -715,7 +723,7 @@ LABEL_53:
         v50 = (UnityEngine_Transform_o *)transform;
         Component_object = UnityEngine_Component__GetComponent_object_(
                              (UnityEngine_Component_o *)transform,
-                             (const MethodInfo_3131B38 *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
+                             (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_SpringPosition___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         transform = (void *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -738,7 +746,7 @@ LABEL_53:
           return;
       }
 LABEL_78:
-      sub_1C6BC60(transform, v6);
+      sub_1C71608(transform, v6);
     }
   }
 }
@@ -756,7 +764,7 @@ int32_t UIGrid__SortByName(UnityEngine_Transform_o *a, UnityEngine_Transform_o *
   System_String_o *name; // x1
 
   if ( !a || (a = (UnityEngine_Transform_o *)UnityEngine_Object__get_name((UnityEngine_Object_o *)a, 0), !b) )
-    sub_1C6BC60(a, b);
+    sub_1C71608(a, b);
   v4 = (System_String_o *)a;
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)b, 0);
   return System_String__Compare(v4, name, 0);
@@ -769,9 +777,9 @@ int32_t UIGrid__SortHorizontal(UnityEngine_Transform_o *a, UnityEngine_Transform
   UnityEngine_Vector3_o v6; // 0:s0.4,4:s1.4,8:s2.4
 
   if ( !a || (localPosition = UnityEngine_Transform__get_localPosition(a, 0), !b) )
-    sub_1C6BC60(a, b);
+    sub_1C71608(a, b);
   v6 = UnityEngine_Transform__get_localPosition(b, 0);
-  return System_Single__CompareTo_65559812(v6.fields.x, v6.fields.y, (const MethodInfo *)&localPosition);
+  return System_Single__CompareTo_65624744(v6.fields.x, v6.fields.y, (const MethodInfo *)&localPosition);
 }
 
 
@@ -787,10 +795,10 @@ int32_t UIGrid__SortVertical(UnityEngine_Transform_o *a, UnityEngine_Transform_o
         v5[1] = LODWORD(localPosition.fields.z),
         !a) )
   {
-    sub_1C6BC60(a, b);
+    sub_1C71608(a, b);
   }
   v7 = UnityEngine_Transform__get_localPosition(a, 0);
-  return System_Single__CompareTo_65559812(v7.fields.y, v7.fields.y, (const MethodInfo *)v5);
+  return System_Single__CompareTo_65624744(v7.fields.y, v7.fields.y, (const MethodInfo *)v5);
 }
 
 
@@ -839,28 +847,40 @@ void UIGrid_OnReposition___ctor(
         intptr_t method,
         const MethodInfo *a4)
 {
-  intptr_t v4; // x8
-  int v8; // w22
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  intptr_t v8; // x8
+  int v12; // w22
   Il2CppObject *m_target; // x9
-  __int64 v10; // x0
+  __int64 v14; // x0
 
-  v4 = *(_QWORD *)(method + 8);
+  v8 = *(_QWORD *)(method + 8);
   this->fields.method = method;
-  this->fields.method_ptr = v4;
+  this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.m_target, (int32_t)object, method, a4);
-  v8 = *(unsigned __int8 *)(method + 82);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
+    (int32_t)object,
+    method,
+    (int32_t)a4,
+    v4,
+    v5,
+    v6,
+    v7);
+  v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C6BAC8(method) & 1) == 0 )
+  if ( (sub_1C71470(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C6BC7C(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C6BB30(v10, 0);
+      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C714D8(v14, 0);
     }
     goto LABEL_5;
   }
-  if ( v8 )
+  if ( v12 )
   {
 LABEL_5:
     m_target = this->fields.m_target;
@@ -868,9 +888,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA8C4C;
+  this->fields.invoke_impl = (intptr_t)sub_1AAE154;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA8C0C;
+  this->fields.extra_arg = (intptr_t)sub_1AAE114;
 }
 
 
@@ -883,7 +903,7 @@ System_IAsyncResult_o *UIGrid_OnReposition__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C6B9BC(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C71364(this, &v5, callback, object);
 }
 
 
@@ -892,7 +912,7 @@ void UIGrid_OnReposition__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C6B9C0(result, 0, method);
+  sub_1C71368(result, 0, method);
 }
 
 

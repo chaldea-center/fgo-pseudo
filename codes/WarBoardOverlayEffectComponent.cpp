@@ -10,153 +10,177 @@ bool WarBoardOverlayEffectComponent__CheckRubyText(
         System_String_o *message,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
-  WarBoardOverlayEffectComponent_o *v5; // x20
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+  WarBoardOverlayEffectComponent_o *v9; // x20
   int32_t stringLength; // w24
-  int32_t v7; // w1
-  CGThumbnailListItem_o *p_mainText; // x21
-  int32_t v9; // w1
-  CGThumbnailListItem_o *p_rubyText; // x20
-  int32_t v11; // w2
-  const MethodInfo *v12; // x3
-  bool v13; // w25
-  char v14; // w28
-  char v15; // w27
-  int32_t v16; // w22
+  int32_t v11; // w1
+  GrandQuestFolderBoardItem_o *p_mainText; // x21
+  int32_t v13; // w1
+  GrandQuestFolderBoardItem_o *p_rubyText; // x20
+  int32_t v15; // w2
+  int32_t v16; // w3
+  System_String_o *v17; // x4
+  int32_t v18; // w5
+  int64_t v19; // x6
+  System_String_o *v20; // x7
+  bool v21; // w25
+  char v22; // w28
+  char v23; // w27
+  int32_t v24; // w22
   uint16_t Chars; // w0
-  System_String_o *v18; // x23
-  System_String_o *v19; // x0
-  System_String_o *v20; // x0
-  int32_t v21; // w2
-  const MethodInfo *v22; // x3
-  System_String_o *v23; // x23
-  System_String_o *v24; // x0
-  System_String_o *v25; // x0
-  int32_t v26; // w2
-  const MethodInfo *v27; // x3
-  System_String_o *v28; // x23
-  System_String_o *v29; // x0
-  System_String_o *v30; // x0
-  int32_t v31; // w2
-  const MethodInfo *v32; // x3
+  System_String_o *v26; // x23
+  System_String_o *v27; // x0
+  System_String_o *v28; // x0
+  int32_t v29; // w2
+  int32_t v30; // w3
+  System_String_o *v31; // x4
+  int32_t v32; // w5
+  int64_t v33; // x6
+  System_String_o *v34; // x7
+  System_String_o *v35; // x23
+  System_String_o *v36; // x0
+  System_String_o *v37; // x0
+  int32_t v38; // w2
+  int32_t v39; // w3
+  System_String_o *v40; // x4
+  int32_t v41; // w5
+  int64_t v42; // x6
+  System_String_o *v43; // x7
+  System_String_o *v44; // x23
+  System_String_o *v45; // x0
+  System_String_o *v46; // x0
+  int32_t v47; // w2
+  int32_t v48; // w3
+  System_String_o *v49; // x4
+  int32_t v50; // w5
+  int64_t v51; // x6
+  System_String_o *v52; // x7
   System_String_o *klass; // x23
-  System_String_o *v34; // x0
-  System_String_o *v35; // x0
-  int32_t v36; // w2
-  const MethodInfo *v37; // x3
-  _WORD v39[2]; // [xsp+Ch] [xbp-54h] BYREF
+  System_String_o *v54; // x0
+  System_String_o *v55; // x0
+  int32_t v56; // w2
+  int32_t v57; // w3
+  System_String_o *v58; // x4
+  int32_t v59; // w5
+  int64_t v60; // x6
+  System_String_o *v61; // x7
+  _WORD v63[2]; // [xsp+Ch] [xbp-54h] BYREF
 
-  v5 = this;
-  if ( (byte_4CB3B53 & 1) == 0 )
+  v9 = this;
+  if ( (byte_4CC4C6B & 1) == 0 )
   {
-    sub_1C6BA08(&char_TypeInfo);
-    this = (WarBoardOverlayEffectComponent_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB3B53 = 1;
+    sub_1C713B0(&char_TypeInfo);
+    this = (WarBoardOverlayEffectComponent_o *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC4C6B = 1;
   }
-  v39[0] = 0;
+  v63[0] = 0;
   if ( !message )
-    sub_1C6BC60(this, message);
+    sub_1C71608(this, message);
   stringLength = message->fields._stringLength;
-  v7 = StringLiteral_1/*""*/;
-  v5->fields.mainText = (struct System_String_o *)StringLiteral_1/*""*/;
-  p_mainText = (CGThumbnailListItem_o *)&v5->fields.mainText;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&v5->fields.mainText, v7, (int32_t)method, v3);
-  v9 = StringLiteral_1/*""*/;
-  v5->fields.rubyText = (struct System_String_o *)StringLiteral_1/*""*/;
-  p_rubyText = (CGThumbnailListItem_o *)&v5->fields.rubyText;
-  sub_1C6B9AC(p_rubyText, v9, v11, v12);
+  v11 = StringLiteral_1/*""*/;
+  v9->fields.mainText = (struct System_String_o *)StringLiteral_1/*""*/;
+  p_mainText = (GrandQuestFolderBoardItem_o *)&v9->fields.mainText;
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&v9->fields.mainText, v11, (int32_t)method, v3, v4, v5, v6, v7);
+  v13 = StringLiteral_1/*""*/;
+  v9->fields.rubyText = (struct System_String_o *)StringLiteral_1/*""*/;
+  p_rubyText = (GrandQuestFolderBoardItem_o *)&v9->fields.rubyText;
+  sub_1C71354(p_rubyText, v13, v15, v16, v17, v18, v19, v20);
   if ( stringLength >= 1 )
   {
-    v13 = 0;
-    v14 = 0;
-    v15 = 0;
-    v16 = 0;
+    v21 = 0;
+    v22 = 0;
+    v23 = 0;
+    v24 = 0;
     while ( 1 )
     {
-      Chars = System_String__get_Chars(message, v16, 0);
-      v39[0] = Chars;
+      Chars = System_String__get_Chars(message, v24, 0);
+      v63[0] = Chars;
       if ( Chars > 0x5Au )
         break;
       if ( Chars == 35 )
       {
-        if ( (v14 & 1) == 0 )
+        if ( (v22 & 1) == 0 )
           goto LABEL_21;
       }
       else
       {
         if ( Chars != 58 )
           goto LABEL_15;
-        if ( (v14 & 1) == 0 )
+        if ( (v22 & 1) == 0 )
           goto LABEL_21;
-        v15 = 1;
+        v23 = 1;
       }
-      v14 = 1;
+      v22 = 1;
 LABEL_33:
-      if ( stringLength == ++v16 )
-        return v13;
+      if ( stringLength == ++v24 )
+        return v21;
     }
     if ( Chars == 91 )
     {
-      if ( System_String__get_Chars(message, v16 + 1, 0) == 35 )
+      if ( System_String__get_Chars(message, v24 + 1, 0) == 35 )
       {
-        v14 = 1;
-        v13 = 1;
+        v22 = 1;
+        v21 = 1;
       }
       else
       {
         klass = (System_String_o *)p_mainText->klass;
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
-        v34 = System_Char__ToString((uint16_t)v39, 0);
-        v35 = System_String__Concat_63966792(klass, v34, 0);
-        p_mainText->klass = (CGThumbnailListItem_c *)v35;
-        sub_1C6B9AC(p_mainText, (int32_t)v35, v36, v37);
+        v54 = System_Char__ToString((uint16_t)v63, 0);
+        v55 = System_String__Concat_64031724(klass, v54, 0);
+        p_mainText->klass = (GrandQuestFolderBoardItem_c *)v55;
+        sub_1C71354(p_mainText, (int32_t)v55, v56, v57, v58, v59, v60, v61);
       }
       goto LABEL_33;
     }
     if ( Chars != 93 )
     {
 LABEL_15:
-      if ( (v15 & 1) != 0 )
+      if ( (v23 & 1) != 0 )
       {
-        v18 = (System_String_o *)p_rubyText->klass;
+        v26 = (System_String_o *)p_rubyText->klass;
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
-        v19 = System_Char__ToString((uint16_t)v39, 0);
-        v20 = System_String__Concat_63966792(v18, v19, 0);
-        p_rubyText->klass = (CGThumbnailListItem_c *)v20;
-        sub_1C6B9AC(p_rubyText, (int32_t)v20, v21, v22);
-        v15 = 1;
+        v27 = System_Char__ToString((uint16_t)v63, 0);
+        v28 = System_String__Concat_64031724(v26, v27, 0);
+        p_rubyText->klass = (GrandQuestFolderBoardItem_c *)v28;
+        sub_1C71354(p_rubyText, (int32_t)v28, v29, v30, v31, v32, v33, v34);
+        v23 = 1;
       }
       else
       {
-        v28 = (System_String_o *)p_mainText->klass;
+        v44 = (System_String_o *)p_mainText->klass;
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
-        v29 = System_Char__ToString((uint16_t)v39, 0);
-        v30 = System_String__Concat_63966792(v28, v29, 0);
-        p_mainText->klass = (CGThumbnailListItem_c *)v30;
-        sub_1C6B9AC(p_mainText, (int32_t)v30, v31, v32);
-        v15 = 0;
+        v45 = System_Char__ToString((uint16_t)v63, 0);
+        v46 = System_String__Concat_64031724(v44, v45, 0);
+        p_mainText->klass = (GrandQuestFolderBoardItem_c *)v46;
+        sub_1C71354(p_mainText, (int32_t)v46, v47, v48, v49, v50, v51, v52);
+        v23 = 0;
       }
       goto LABEL_33;
     }
-    if ( (v14 & 1) != 0 )
+    if ( (v22 & 1) != 0 )
     {
-      v15 = 0;
+      v23 = 0;
     }
     else
     {
 LABEL_21:
-      v23 = (System_String_o *)p_mainText->klass;
+      v35 = (System_String_o *)p_mainText->klass;
       if ( !char_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(char_TypeInfo);
-      v24 = System_Char__ToString((uint16_t)v39, 0);
-      v25 = System_String__Concat_63966792(v23, v24, 0);
-      p_mainText->klass = (CGThumbnailListItem_c *)v25;
-      sub_1C6B9AC(p_mainText, (int32_t)v25, v26, v27);
+      v36 = System_Char__ToString((uint16_t)v63, 0);
+      v37 = System_String__Concat_64031724(v35, v36, 0);
+      p_mainText->klass = (GrandQuestFolderBoardItem_c *)v37;
+      sub_1C71354(p_mainText, (int32_t)v37, v38, v39, v40, v41, v42, v43);
     }
-    v14 = 0;
+    v22 = 0;
     goto LABEL_33;
   }
   return 0;
@@ -189,24 +213,24 @@ System_String_o *WarBoardOverlayEffectComponent__GetFormalText(
   WarBoardOverlayEffectComponent_o *v24; // [xsp+0h] [xbp-70h]
   _WORD v25[2]; // [xsp+Ch] [xbp-64h] BYREF
 
-  if ( (byte_4CB3B54 & 1) == 0 )
+  if ( (byte_4CC4C6C & 1) == 0 )
   {
-    sub_1C6BA08(&char_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_char__Add__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_char___ctor__);
-    sub_1C6BA08(&System_Collections_Generic_List_char__TypeInfo);
-    sub_1C6BA08(&StringLiteral_15813/*"[#"*/);
-    sub_1C6BA08(&StringLiteral_1449/*":"*/);
-    sub_1C6BA08(&StringLiteral_1/*""*/);
-    sub_1C6BA08(&StringLiteral_16051/*"]"*/);
-    byte_4CB3B54 = 1;
+    sub_1C713B0(&char_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_char__Add__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_char___ctor__);
+    sub_1C713B0(&System_Collections_Generic_List_char__TypeInfo);
+    sub_1C713B0(&StringLiteral_15820/*"[#"*/);
+    sub_1C713B0(&StringLiteral_1450/*":"*/);
+    sub_1C713B0(&StringLiteral_1/*""*/);
+    sub_1C713B0(&StringLiteral_16058/*"]"*/);
+    byte_4CC4C6C = 1;
   }
   v5 = (System_String_o *)StringLiteral_1/*""*/;
   v25[0] = 0;
-  v6 = (System_Collections_Generic_List_char__o *)sub_1C6BC54(System_Collections_Generic_List_char__TypeInfo);
+  v6 = (System_Collections_Generic_List_char__o *)sub_1C715FC(System_Collections_Generic_List_char__TypeInfo);
   System_Collections_Generic_List_char____ctor(
     v6,
-    (const MethodInfo_37BEDD8 *)Method_System_Collections_Generic_List_char___ctor__);
+    (const MethodInfo_37CEB7C *)Method_System_Collections_Generic_List_char___ctor__);
   if ( !labelText )
     goto LABEL_42;
   v24 = this;
@@ -223,14 +247,14 @@ System_String_o *WarBoardOverlayEffectComponent__GetFormalText(
       if ( !char_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(char_TypeInfo);
       v14 = System_Char__ToString((uint16_t)v25, 0);
-      v5 = System_String__Concat_63966792(v5, v14, 0);
+      v5 = System_String__Concat_64031724(v5, v14, 0);
       if ( (v11 & 1) != 0 )
       {
         v25[0] = System_String__get_Chars(labelText, v9, 0);
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
         v15 = System_Char__ToString((uint16_t)v25, 0);
-        v13 = System_String__Concat_63966792(v13, v15, 0);
+        v13 = System_String__Concat_64031724(v13, v15, 0);
       }
       Chars = (System_String_o *)System_String__get_Chars(labelText, v9, 0);
       if ( !v6 )
@@ -246,7 +270,7 @@ System_String_o *WarBoardOverlayEffectComponent__GetFormalText(
         System_Collections_Generic_List_char___AddWithResize(
           v6,
           (uint16_t)Chars,
-          *(const MethodInfo_37BF62C **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+          *(const MethodInfo_37CF3D0 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
       }
       else
       {
@@ -274,7 +298,7 @@ System_String_o *WarBoardOverlayEffectComponent__GetFormalText(
             {
               if ( (v11 & 1) != 0 )
               {
-                Chars = System_String__Concat_63966792((System_String_o *)StringLiteral_1449/*":"*/, v13, 0);
+                Chars = System_String__Concat_64031724((System_String_o *)StringLiteral_1450/*":"*/, v13, 0);
                 if ( !v5 )
                   goto LABEL_42;
                 v19 = Chars;
@@ -283,9 +307,9 @@ System_String_o *WarBoardOverlayEffectComponent__GetFormalText(
               {
                 if ( !v5 )
                   goto LABEL_42;
-                v19 = (System_String_o *)StringLiteral_16051/*"]"*/;
+                v19 = (System_String_o *)StringLiteral_16058/*"]"*/;
               }
-              v20 = System_String__Replace_64013356(v5, v19, (System_String_o *)StringLiteral_1/*""*/, 0);
+              v20 = System_String__Replace_64078288(v5, v19, (System_String_o *)StringLiteral_1/*""*/, 0);
               v13 = (System_String_o *)StringLiteral_1/*""*/;
               v5 = v20;
               v10 = 0;
@@ -296,9 +320,9 @@ System_String_o *WarBoardOverlayEffectComponent__GetFormalText(
         }
         if ( !v5 )
           goto LABEL_42;
-        v5 = System_String__Replace_64013356(
+        v5 = System_String__Replace_64078288(
                v5,
-               (System_String_o *)StringLiteral_15813/*"[#"*/,
+               (System_String_o *)StringLiteral_15820/*"[#"*/,
                (System_String_o *)StringLiteral_1/*""*/,
                0);
       }
@@ -320,7 +344,7 @@ LABEL_36:
     if ( mainLabel )
       return mainLabel->fields.mText;
 LABEL_42:
-    sub_1C6BC60(Chars, v8);
+    sub_1C71608(Chars, v8);
   }
   return WarBoardOverlayEffectComponent__TextFormalAdjust(v24, v6, v21);
 }
@@ -358,10 +382,10 @@ void WarBoardOverlayEffectComponent__Init(
   const MethodInfo *v11; // x2
   struct UILabel_o *v12; // x0
 
-  if ( (byte_4CB3B52 & 1) == 0 )
+  if ( (byte_4CC4C6A & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB3B52 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CC4C6A = 1;
   }
   mainLabel = (UnityEngine_Object_o *)this->fields.mainLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -382,7 +406,7 @@ void WarBoardOverlayEffectComponent__Init(
     {
       v12 = this->fields.mainLabel;
       if ( !v12 )
-        sub_1C6BC60(0, v8);
+        sub_1C71608(0, v8);
       WrapControlText__fontSizeAdjust(v12, text, v12->fields.mFontSize, 0);
     }
   }
@@ -422,11 +446,11 @@ void WarBoardOverlayEffectComponent__SetMainObject(WarBoardOverlayEffectComponen
     mainLabel = this->fields.rubyLabel;
     if ( mainLabel )
     {
-      UILabel__SetCondensedScale_49828120(mainLabel, v6, 0.0, 0);
+      UILabel__SetCondensedScale_49893052(mainLabel, v6, 0.0, 0);
       return;
     }
 LABEL_10:
-    sub_1C6BC60(mainLabel, method);
+    sub_1C71608(mainLabel, method);
   }
 }
 
@@ -462,18 +486,18 @@ System_String_o *WarBoardOverlayEffectComponent__TextFormalAdjust(
   _WORD v28[2]; // [xsp+Ch] [xbp-54h] BYREF
 
   v4 = this;
-  if ( (byte_4CB3B55 & 1) == 0 )
+  if ( (byte_4CC4C6D & 1) == 0 )
   {
-    sub_1C6BA08(&char_TypeInfo);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_char__get_Count__);
-    sub_1C6BA08(&Method_System_Collections_Generic_List_char__get_Item__);
-    this = (WarBoardOverlayEffectComponent_o *)sub_1C6BA08(&StringLiteral_1/*""*/);
-    byte_4CB3B55 = 1;
+    sub_1C713B0(&char_TypeInfo);
+    sub_1C713B0(&Method_System_Collections_Generic_List_char__get_Count__);
+    sub_1C713B0(&Method_System_Collections_Generic_List_char__get_Item__);
+    this = (WarBoardOverlayEffectComponent_o *)sub_1C713B0(&StringLiteral_1/*""*/);
+    byte_4CC4C6D = 1;
   }
   v28[0] = 0;
   if ( !localMainTextList )
 LABEL_52:
-    sub_1C6BC60(this, localMainTextList);
+    sub_1C71608(this, localMainTextList);
   v5 = (System_String_o *)StringLiteral_1/*""*/;
   if ( localMainTextList->fields._size >= 1 )
   {
@@ -484,7 +508,7 @@ LABEL_52:
       this = (WarBoardOverlayEffectComponent_o *)System_Collections_Generic_List_char___get_Item(
                                                    localMainTextList,
                                                    v6,
-                                                   (const MethodInfo_37BF33C *)Method_System_Collections_Generic_List_char__get_Item__);
+                                                   (const MethodInfo_37CF0E0 *)Method_System_Collections_Generic_List_char__get_Item__);
       mainLabel = v4->fields.mainLabel;
       if ( !mainLabel )
         goto LABEL_52;
@@ -496,14 +520,14 @@ LABEL_52:
       this = (WarBoardOverlayEffectComponent_o *)System_Collections_Generic_List_char___get_Item(
                                                    localMainTextList,
                                                    v6,
-                                                   (const MethodInfo_37BF33C *)Method_System_Collections_Generic_List_char__get_Item__);
+                                                   (const MethodInfo_37CF0E0 *)Method_System_Collections_Generic_List_char__get_Item__);
       if ( v9 == Chars )
       {
         v28[0] = (_WORD)this;
         if ( !char_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(char_TypeInfo);
         v11 = System_Char__ToString((uint16_t)v28, 0);
-        this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_63966792(v5, v11, 0);
+        this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_64031724(v5, v11, 0);
         v12 = v4->fields.mainLabel;
         if ( !v12 )
           goto LABEL_52;
@@ -521,11 +545,11 @@ LABEL_52:
           v28[0] = System_Collections_Generic_List_char___get_Item(
                      localMainTextList,
                      v6,
-                     (const MethodInfo_37BF33C *)Method_System_Collections_Generic_List_char__get_Item__);
+                     (const MethodInfo_37CF0E0 *)Method_System_Collections_Generic_List_char__get_Item__);
           if ( !char_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(char_TypeInfo);
           v21 = System_Char__ToString((uint16_t)v28, 0);
-          v5 = System_String__Concat_63966792(v5, v21, 0);
+          v5 = System_String__Concat_64031724(v5, v21, 0);
           goto LABEL_36;
         }
         v12 = v4->fields.mainLabel;
@@ -544,7 +568,7 @@ LABEL_52:
         this = (WarBoardOverlayEffectComponent_o *)System_Collections_Generic_List_char___get_Item(
                                                      localMainTextList,
                                                      v14,
-                                                     (const MethodInfo_37BF33C *)Method_System_Collections_Generic_List_char__get_Item__);
+                                                     (const MethodInfo_37CF0E0 *)Method_System_Collections_Generic_List_char__get_Item__);
         v15 = v4->fields.mainLabel;
         if ( !v15 )
           goto LABEL_52;
@@ -566,7 +590,7 @@ LABEL_24:
           if ( !char_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(char_TypeInfo);
           v18 = System_Char__ToString((uint16_t)v28, 0);
-          this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_63966792(v5, v18, 0);
+          this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_64031724(v5, v18, 0);
           v19 = v4->fields.mainLabel;
           if ( !v19 )
             goto LABEL_52;
@@ -582,7 +606,7 @@ LABEL_24:
           this = (WarBoardOverlayEffectComponent_o *)System_Collections_Generic_List_char___get_Item(
                                                        localMainTextList,
                                                        v14,
-                                                       (const MethodInfo_37BF33C *)Method_System_Collections_Generic_List_char__get_Item__);
+                                                       (const MethodInfo_37CF0E0 *)Method_System_Collections_Generic_List_char__get_Item__);
           if ( (unsigned __int16)this == 10 )
           {
             v22 = v4->fields.mainLabel;
@@ -595,7 +619,7 @@ LABEL_24:
             if ( !char_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(char_TypeInfo);
             v23 = System_Char__ToString((uint16_t)v28, 0);
-            this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_63966792(v5, v23, 0);
+            this = (WarBoardOverlayEffectComponent_o *)System_String__Concat_64031724(v5, v23, 0);
             v24 = v4->fields.mainLabel;
             if ( !v24 )
               goto LABEL_52;
@@ -611,11 +635,11 @@ LABEL_24:
             v28[0] = System_Collections_Generic_List_char___get_Item(
                        localMainTextList,
                        v14,
-                       (const MethodInfo_37BF33C *)Method_System_Collections_Generic_List_char__get_Item__);
+                       (const MethodInfo_37CF0E0 *)Method_System_Collections_Generic_List_char__get_Item__);
             if ( !char_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(char_TypeInfo);
             v26 = System_Char__ToString((uint16_t)v28, 0);
-            v5 = System_String__Concat_63966792(v5, v26, 0);
+            v5 = System_String__Concat_64031724(v5, v26, 0);
             ++v6;
           }
         }

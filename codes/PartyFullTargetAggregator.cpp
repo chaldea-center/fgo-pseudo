@@ -19,7 +19,7 @@ System_Int32_array *PartyFullTargetAggregator__GetCandidate(
     || (isEnemyID = BattleData__isEnemyID(battleData, (int32_t)actorId, 0),
         (actorId = TargetAggregator__get_battleData((TargetAggregator_o *)this, 0)) == 0) )
   {
-    sub_1C6BC60(actorId, v5);
+    sub_1C71608(actorId, v5);
   }
   if ( isEnemyID )
     return BattleData__getEnemyServantIDList(actorId, 1, 0, 0);

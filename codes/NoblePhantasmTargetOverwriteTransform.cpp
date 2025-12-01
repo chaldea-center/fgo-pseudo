@@ -20,17 +20,25 @@ void NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(
   int32_t LimitCount; // w0
   struct UnityEngine_Transform_o *NodeFromLvName; // x0
   int32_t v13; // w2
-  const MethodInfo *v14; // x3
-  UnityEngine_Object_o *v15; // x22
-  UnityEngine_Object_o *v16; // x21
-  struct UnityEngine_Transform_o *v17; // x0
-  int32_t v18; // w2
-  const MethodInfo *v19; // x3
+  int32_t v14; // w3
+  System_String_o *v15; // x4
+  int32_t v16; // w5
+  int64_t v17; // x6
+  System_String_o *v18; // x7
+  UnityEngine_Object_o *v19; // x22
+  UnityEngine_Object_o *v20; // x21
+  struct UnityEngine_Transform_o *v21; // x0
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
 
-  if ( (byte_4CB9724 & 1) == 0 )
+  if ( (byte_4CCA874 & 1) == 0 )
   {
-    sub_1C6BA08(&UnityEngine_Object_TypeInfo);
-    byte_4CB9724 = 1;
+    sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    byte_4CCA874 = 1;
   }
   targetNode = (UnityEngine_Object_o *)this->fields.targetNode;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -51,21 +59,29 @@ void NoblePhantasmTargetOverwriteTransform__CheckAndSetTargetNode(
     LimitCount = BattleActorControl__getLimitCount(targetActor, 0);
     NodeFromLvName = TransformHelper__getNodeFromLvName(v10, targetNodeName, LimitCount, 1, 0);
     this->fields.targetNode = NodeFromLvName;
-    sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.targetNode, (int32_t)NodeFromLvName, v13, v14);
-    v15 = (UnityEngine_Object_o *)this->fields.targetNode;
+    sub_1C71354(
+      (GrandQuestFolderBoardItem_o *)&this->fields.targetNode,
+      (int32_t)NodeFromLvName,
+      v13,
+      v14,
+      v15,
+      v16,
+      v17,
+      v18);
+    v19 = (UnityEngine_Object_o *)this->fields.targetNode;
     IsNullOrEmpty = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)targetActor, 0);
     if ( !IsNullOrEmpty )
 LABEL_15:
-      sub_1C6BC60(IsNullOrEmpty, v7);
-    v16 = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(IsNullOrEmpty, 0);
+      sub_1C71608(IsNullOrEmpty, v7);
+    v20 = (UnityEngine_Object_o *)UnityEngine_GameObject__get_transform(IsNullOrEmpty, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    if ( UnityEngine_Object__op_Equality(v15, v16, 0) )
+    if ( UnityEngine_Object__op_Equality(v19, v20, 0) )
     {
 LABEL_14:
-      v17 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-      this->fields.targetNode = v17;
-      sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.targetNode, (int32_t)v17, v18, v19);
+      v21 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
+      this->fields.targetNode = v21;
+      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.targetNode, (int32_t)v21, v22, v23, v24, v25, v26, v27);
     }
   }
 }
@@ -93,7 +109,7 @@ LABEL_4:
     if ( overwriteTransformInfo )
       return functionTargetTypeSet == overwriteTransformInfo->fields._FunctionTargetType_k__BackingField;
 LABEL_9:
-    sub_1C6BC60(this, overwriteTransformInfo);
+    sub_1C71608(this, overwriteTransformInfo);
   }
   return 1;
 }
@@ -123,7 +139,7 @@ void NoblePhantasmTargetOverwriteTransform__OverwriteTarget(
       || (UnityEngine_Transform__set_localPosition(targetNode, this->fields.overwritePosition, 0),
           (targetNode = this->fields.targetNode) == 0) )
     {
-      sub_1C6BC60(targetNode, v6);
+      sub_1C71608(targetNode, v6);
     }
     UnityEngine_Transform__set_localRotation(targetNode, this->fields.overwriteRotation, 0);
   }
@@ -154,7 +170,7 @@ void NoblePhantasmTargetOverwriteTransform__ResetTarget(
       || (UnityEngine_Transform__set_localPosition(targetNode, this->fields.originalPosition, 0),
           (targetNode = this->fields.targetNode) == 0) )
     {
-      sub_1C6BC60(targetNode, v6);
+      sub_1C71608(targetNode, v6);
     }
     UnityEngine_Transform__set_localRotation(targetNode, this->fields.originalRotation, 0);
   }
@@ -178,7 +194,7 @@ void NoblePhantasmTargetOverwriteTransform__SaveOriginal(
         this->fields.originalPosition = localPosition,
         !targetNode) )
   {
-    sub_1C6BC60(targetNode, v4);
+    sub_1C71608(targetNode, v4);
   }
   this->fields.originalRotation = UnityEngine_Transform__get_localRotation(targetNode, 0);
 }
@@ -239,8 +255,12 @@ void NoblePhantasmTargetOverwriteTransform_OverwriteTransformInfo__set_TargetAct
         BattleActorControl_o *value,
         const MethodInfo *method)
 {
-  const MethodInfo *v3; // x3
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
 
   this->fields._TargetActor_k__BackingField = value;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3);
+  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }

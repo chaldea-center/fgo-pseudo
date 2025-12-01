@@ -21,7 +21,7 @@ void DebugInputSkillAttackProbabilitySurvey__Cancel(
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_1C6BC60(debugMenuTran, method);
+    sub_1C71608(debugMenuTran, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -46,24 +46,48 @@ void DebugInputSkillAttackProbabilitySurvey__Open(
         UnityEngine_Transform_o *inputDebugMenuTran,
         const MethodInfo *method)
 {
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
   struct UnityEngine_Transform_o **p_debugMenuTran; // x19
-  int32_t v7; // w2
-  const MethodInfo *v8; // x3
+  int32_t v11; // w2
+  int32_t v12; // w3
+  System_String_o *v13; // x4
+  int32_t v14; // w5
+  int64_t v15; // x6
+  System_String_o *v16; // x7
   UnityEngine_GameObject_o *gameObject; // x0
-  __int64 v10; // x1
+  __int64 v18; // x1
 
   this->fields.data = inputData;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.data, (int32_t)inputData, (int32_t)inputDebugMenuTran, method);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.data,
+    (int32_t)inputData,
+    (int32_t)inputDebugMenuTran,
+    (int32_t)method,
+    v4,
+    v5,
+    v6,
+    v7);
   this->fields.debugMenuTran = inputDebugMenuTran;
   p_debugMenuTran = &this->fields.debugMenuTran;
-  sub_1C6B9AC((CGThumbnailListItem_o *)&this->fields.debugMenuTran, (int32_t)inputDebugMenuTran, v7, v8);
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&this->fields.debugMenuTran,
+    (int32_t)inputDebugMenuTran,
+    v11,
+    v12,
+    v13,
+    v14,
+    v15,
+    v16);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject
     || (UnityEngine_GameObject__SetActive(gameObject, 1, 0),
         (gameObject = (UnityEngine_GameObject_o *)*p_debugMenuTran) == 0)
     || (gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)gameObject, 0)) == 0 )
   {
-    sub_1C6BC60(gameObject, v10);
+    sub_1C71608(gameObject, v18);
   }
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
@@ -106,10 +130,10 @@ void DebugInputSkillAttackProbabilitySurvey__TurnLeft(
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4CB78C5 & 1) == 0 )
+  if ( (byte_4CC89EE & 1) == 0 )
   {
-    this = (DebugInputSkillAttackProbabilitySurvey_o *)sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB78C5 = 1;
+    this = (DebugInputSkillAttackProbabilitySurvey_o *)sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC89EE = 1;
   }
   result = 0;
   if ( !buttonName )
@@ -118,14 +142,14 @@ void DebugInputSkillAttackProbabilitySurvey__TurnLeft(
   if ( !this )
     goto LABEL_12;
   if ( LODWORD(this->fields.m_CancellationTokenSource) <= 1 )
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   if ( System_Int32__TryParse(*(System_String_o **)&this->fields.attackNum, &result, 0) )
   {
     v5 = v4->fields.attackNum - result;
     v4->fields.attackNum = v5;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v6 = System_Math__Max_65488612(v5, 1, 0);
+    v6 = System_Math__Max_65553544(v5, 1, 0);
     attackNumLabel = v4->fields.attackNumLabel;
     v4->fields.attackNum = v6;
     this = (DebugInputSkillAttackProbabilitySurvey_o *)System_Int32__ToString((int)v4 + 40, 0);
@@ -135,7 +159,7 @@ void DebugInputSkillAttackProbabilitySurvey__TurnLeft(
       return;
     }
 LABEL_12:
-    sub_1C6BC60(this, buttonName);
+    sub_1C71608(this, buttonName);
   }
 }
 
@@ -152,10 +176,10 @@ void DebugInputSkillAttackProbabilitySurvey__TurnRight(
   int32_t result; // [xsp+Ch] [xbp-24h] BYREF
 
   v4 = this;
-  if ( (byte_4CB78C4 & 1) == 0 )
+  if ( (byte_4CC89ED & 1) == 0 )
   {
-    this = (DebugInputSkillAttackProbabilitySurvey_o *)sub_1C6BA08(&System_Math_TypeInfo);
-    byte_4CB78C4 = 1;
+    this = (DebugInputSkillAttackProbabilitySurvey_o *)sub_1C713B0(&System_Math_TypeInfo);
+    byte_4CC89ED = 1;
   }
   result = 0;
   if ( !buttonName )
@@ -164,14 +188,14 @@ void DebugInputSkillAttackProbabilitySurvey__TurnRight(
   if ( !this )
     goto LABEL_12;
   if ( LODWORD(this->fields.m_CancellationTokenSource) <= 1 )
-    sub_1C6BC68(this);
+    sub_1C71610(this);
   if ( System_Int32__TryParse(*(System_String_o **)&this->fields.attackNum, &result, 0) )
   {
     v5 = result + v4->fields.attackNum;
     v4->fields.attackNum = v5;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
-    v6 = System_Math__Min_65488940(v5, 1000, 0);
+    v6 = System_Math__Min_65553872(v5, 1000, 0);
     attackNumLabel = v4->fields.attackNumLabel;
     v4->fields.attackNum = v6;
     this = (DebugInputSkillAttackProbabilitySurvey_o *)System_Int32__ToString((int)v4 + 40, 0);
@@ -181,6 +205,6 @@ void DebugInputSkillAttackProbabilitySurvey__TurnRight(
       return;
     }
 LABEL_12:
-    sub_1C6BC60(this, buttonName);
+    sub_1C71608(this, buttonName);
   }
 }

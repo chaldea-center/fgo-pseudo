@@ -4,7 +4,7 @@ void GrandQuestFolderBoardItem___ctor(GrandQuestFolderBoardItem_o *this, const M
 }
 
 
-void GrandQuestFolderBoardItem___ctor_33099524(
+void GrandQuestFolderBoardItem___ctor_33124076(
         GrandQuestFolderBoardItem_o *this,
         int32_t index,
         int32_t bannerId,
@@ -12,25 +12,56 @@ void GrandQuestFolderBoardItem___ctor_33099524(
         System_String_o *boardName,
         int32_t iconId,
         int64_t listCreatedTime,
+        System_String_o *closedMessage,
         const MethodInfo *method)
 {
-  GrandQuestFolderBoardItem_o *v13; // x24
+  GrandQuestFolderBoardItem_o *v15; // x25
+  int32_t v16; // w2
+  int32_t v17; // w3
+  System_String_o *v18; // x4
+  int32_t v19; // w5
+  int64_t v20; // x6
+  System_String_o *v21; // x7
+  int32_t v22; // w2
+  int32_t v23; // w3
+  System_String_o *v24; // x4
+  int32_t v25; // w5
+  int64_t v26; // x6
+  System_String_o *v27; // x7
 
-  v13 = this;
-  ListViewItem___ctor_44050768((ListViewItem_o *)this, index, 0);
-  v13->fields._Name_k__BackingField = boardName;
-  v13 = (GrandQuestFolderBoardItem_o *)((char *)v13 + 128);
-  LODWORD(v13[-1].fields._ListCreatedTime_k__BackingField) = bannerId;
-  HIDWORD(v13[-1].fields._ListCreatedTime_k__BackingField) = warId;
-  sub_1C6B9AC(v13, boardName);
-  LODWORD(v13->monitor) = iconId;
-  *(_QWORD *)&v13->fields.selectNum = listCreatedTime;
+  v15 = this;
+  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
+  v15->fields._BannerId_k__BackingField = bannerId;
+  v15->fields._WarId_k__BackingField = warId;
+  v15->fields._Name_k__BackingField = boardName;
+  sub_1C71354(
+    (GrandQuestFolderBoardItem_o *)&v15->fields._Name_k__BackingField,
+    (int32_t)boardName,
+    v16,
+    v17,
+    v18,
+    v19,
+    v20,
+    v21);
+  v15->fields._ClosedMessage_k__BackingField = closedMessage;
+  v15 = (GrandQuestFolderBoardItem_o *)((char *)v15 + 152);
+  LODWORD(v15[-1].fields._ListCreatedTime_k__BackingField) = iconId;
+  v15[-1].fields._ClosedMessage_k__BackingField = (struct System_String_o *)listCreatedTime;
+  sub_1C71354(v15, (int32_t)closedMessage, v22, v23, v24, v25, v26, v27);
 }
 
 
 int32_t GrandQuestFolderBoardItem__get_BannerId(GrandQuestFolderBoardItem_o *this, const MethodInfo *method)
 {
   return this->fields._BannerId_k__BackingField;
+}
+
+
+System_String_o *GrandQuestFolderBoardItem__get_ClosedMessage(
+        GrandQuestFolderBoardItem_o *this,
+        const MethodInfo *method)
+{
+  return this->fields._ClosedMessage_k__BackingField;
 }
 
 

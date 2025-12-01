@@ -10,11 +10,11 @@ void SampleEventListViewScene__Init(SampleEventListViewScene_o *this, const Meth
   SampleEventListViewManager_o *v4; // x20
   System_Action_o *v5; // x21
 
-  if ( (byte_4CB3A95 & 1) == 0 )
+  if ( (byte_4CC4BAD & 1) == 0 )
   {
-    sub_1C6BA08(&System_Action_TypeInfo);
-    sub_1C6BA08(&Method_SampleEventListViewScene_OnMoveEnd__);
-    byte_4CB3A95 = 1;
+    sub_1C713B0(&System_Action_TypeInfo);
+    sub_1C713B0(&Method_SampleEventListViewScene_OnMoveEnd__);
+    byte_4CC4BAD = 1;
   }
   if ( !this->fields.state )
   {
@@ -25,12 +25,12 @@ void SampleEventListViewScene__Init(SampleEventListViewScene_o *this, const Meth
   }
   this->fields.state = 1;
   v4 = this->fields.listViewManager;
-  v5 = (System_Action_o *)sub_1C6BC54(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_SampleEventListViewScene_OnMoveEnd__, 0);
   if ( !v4 )
 LABEL_8:
-    sub_1C6BC60(listViewManager, method);
-  SampleEventListViewManager__SetMode_37885016(v4, 1, v5, 0);
+    sub_1C71608(listViewManager, method);
+  SampleEventListViewManager__SetMode_37924088(v4, 1, v5, 0);
 }
 
 
@@ -43,7 +43,7 @@ void SampleEventListViewScene__OnMoveEnd(SampleEventListViewScene_o *this, const
     listViewManager = this->fields.listViewManager;
     this->fields.state = 2;
     if ( !listViewManager )
-      sub_1C6BC60(this, method);
+      sub_1C71608(this, method);
     SampleEventListViewManager__SetMode(listViewManager, 2, 0);
   }
 }
@@ -55,6 +55,6 @@ void SampleEventListViewScene__Start(SampleEventListViewScene_o *this, const Met
 
   listViewManager = (ListViewManager_o *)this->fields.listViewManager;
   if ( !listViewManager )
-    sub_1C6BC60(0, method);
+    sub_1C71608(0, method);
   ListViewManager__set_IsInput(listViewManager, 0, 0);
 }

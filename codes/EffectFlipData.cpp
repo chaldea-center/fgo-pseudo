@@ -13,13 +13,13 @@ void EffectFlipData__Flip(EffectFlipData_o *this, UnityEngine_Transform_o *trEff
   {
     if ( !trEffect )
       goto LABEL_13;
-    UnityEngine_Transform__Rotate_71684532(trEffect, 0.0, 180.0, 0.0, 0);
+    UnityEngine_Transform__Rotate_71749464(trEffect, 0.0, 180.0, 0.0, 0);
   }
   if ( this->fields.scaleX <= 0 && this->fields.scaleZ < 1 )
     return;
   if ( !trEffect )
 LABEL_13:
-    sub_1C6BC60(this, trEffect);
+    sub_1C71608(this, trEffect);
   localScale = UnityEngine_Transform__get_localScale(trEffect, 0);
   if ( this->fields.scaleX >= 1 )
     localScale.fields.x = -localScale.fields.x;
@@ -41,13 +41,17 @@ void EffectFlipData__OverwriteNodeName(
         const MethodInfo *method)
 {
   int32_t v5; // w2
-  const MethodInfo *v6; // x3
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   System_String_o *parentNodeName; // x1
 
   if ( !System_String__IsNullOrEmpty(this->fields.parentNodeName, 0) )
   {
     parentNodeName = this->fields.parentNodeName;
     *baseNodeName = parentNodeName;
-    sub_1C6B9AC((CGThumbnailListItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6);
+    sub_1C71354((GrandQuestFolderBoardItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6, v7, v8, v9, v10);
   }
 }
