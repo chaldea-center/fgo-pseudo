@@ -1,27 +1,27 @@
 void ServantBattlePointEntity___ctor(ServantBattlePointEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC86FC & 1) == 0 )
+  if ( (byte_4D2DB92 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC86FC = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2DB92 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantBattlePointEntity__CreatePK(int32_t svtId, int32_t battlePointId, const MethodInfo *method)
 {
-  if ( (byte_4CC86FB & 1) == 0 )
+  if ( (byte_4D2DB91 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CC86FB = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4D2DB91 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            svtId,
            battlePointId,
-           (const MethodInfo_3149294 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 

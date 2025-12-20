@@ -30,14 +30,14 @@ void SkillInfoObject___ctor(SkillInfoObject_o *this, const MethodInfo *method)
   int64_t v30; // x6
   System_String_o *v31; // x7
 
-  if ( (byte_4CC2657 & 1) == 0 )
+  if ( (byte_4D28899 & 1) == 0 )
   {
-    sub_1C713B0(&BalanceConfig_TypeInfo);
-    sub_1C713B0(&UnityEngine_GameObject___TypeInfo);
-    sub_1C713B0(&SkillIconComponent___TypeInfo);
-    sub_1C713B0(&UILabel___TypeInfo);
-    sub_1C713B0(&UIRangeLabel___TypeInfo);
-    byte_4CC2657 = 1;
+    sub_1C94098(&BalanceConfig_TypeInfo);
+    sub_1C94098(&UnityEngine_GameObject___TypeInfo);
+    sub_1C94098(&SkillIconComponent___TypeInfo);
+    sub_1C94098(&UILabel___TypeInfo);
+    sub_1C94098(&UIRangeLabel___TypeInfo);
+    byte_4D28899 = 1;
   }
   v3 = BalanceConfig_TypeInfo;
   if ( !BalanceConfig_TypeInfo->_2.cctor_finished )
@@ -45,16 +45,16 @@ void SkillInfoObject___ctor(SkillInfoObject_o *this, const MethodInfo *method)
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct UnityEngine_GameObject_array *)sub_1C71458(
+  v4 = (struct UnityEngine_GameObject_array *)sub_1C94140(
                                                 UnityEngine_GameObject___TypeInfo,
                                                 (unsigned int)v3->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillBaseList = v4;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v4, v5, v6, v7, v8, v9, v10);
-  v11 = (struct SkillIconComponent_array *)sub_1C71458(
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  v11 = (struct SkillIconComponent_array *)sub_1C94140(
                                              SkillIconComponent___TypeInfo,
                                              (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillIconList = v11;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.equipSkillIconList,
     (int32_t)v11,
     v12,
@@ -63,11 +63,11 @@ void SkillInfoObject___ctor(SkillInfoObject_o *this, const MethodInfo *method)
     v15,
     v16,
     v17);
-  v18 = (struct UIRangeLabel_array *)sub_1C71458(
+  v18 = (struct UIRangeLabel_array *)sub_1C94140(
                                        UIRangeLabel___TypeInfo,
                                        (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillTitleRangeLabelList = v18;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.equipSkillTitleRangeLabelList,
     (int32_t)v18,
     v19,
@@ -76,11 +76,11 @@ void SkillInfoObject___ctor(SkillInfoObject_o *this, const MethodInfo *method)
     v22,
     v23,
     v24);
-  v25 = (struct UILabel_array *)sub_1C71458(
+  v25 = (struct UILabel_array *)sub_1C94140(
                                   UILabel___TypeInfo,
                                   (unsigned int)BalanceConfig_TypeInfo->static_fields->SvtEquipSkillListMax);
   this->fields.equipSkillExplanationLabelList = v25;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.equipSkillExplanationLabelList,
     (int32_t)v25,
     v26,

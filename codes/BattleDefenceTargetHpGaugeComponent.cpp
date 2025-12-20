@@ -1,6 +1,6 @@
 void BattleDefenceTargetHpGaugeComponent___ctor(BattleDefenceTargetHpGaugeComponent_o *this, const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
+  BattleHpGaugeBarComponent___ctor((BattleHpGaugeBarComponent_o *)this, 0);
 }
 
 
@@ -18,7 +18,7 @@ void BattleDefenceTargetHpGaugeComponent__CompleteDefenceTargetDamageGauge(
     || (UIProgressBar__set_value(damageGauge, (float)nowval / (float)this->fields.maxval, 0),
         (damageGauge = this->fields.damageGauge) == 0) )
   {
-    sub_1C71608(damageGauge, method);
+    sub_1C942F0(damageGauge, method);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0);
 }
@@ -34,32 +34,29 @@ void BattleDefenceTargetHpGaugeComponent__SetHpGauge(
 
   this->fields.prevval = nowHp;
   this->fields.nowval = nowHp;
-  BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, method);
+  BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, 0);
   damageGauge = this->fields.damageGauge;
   if ( !damageGauge
     || (UIProgressBar__set_value(damageGauge, (float)this->fields.nowval / (float)this->fields.maxval, 0),
         (damageGauge = this->fields.damageGauge) == 0) )
   {
-    sub_1C71608(damageGauge, v4);
+    sub_1C942F0(damageGauge, v4);
   }
   UIProgressBar__set_alpha(damageGauge, 1.0, 0);
 }
 
 
-// local variable allocation has failed, the output may be wrong!
 void BattleDefenceTargetHpGaugeComponent__SetInitDefenceTargetValue(
         BattleDefenceTargetHpGaugeComponent_o *this,
         int32_t nowHp,
         int32_t maxHp,
         const MethodInfo *method)
 {
-  const MethodInfo *v6; // x1
-
   this->fields.prevval = nowHp;
   this->fields.nowval = nowHp;
   this->fields.maxval = maxHp;
-  BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, *(const MethodInfo **)&maxHp);
-  BattleHpGaugeBarComponent__updateDamageGauge((BattleHpGaugeBarComponent_o *)this, (float)nowHp, v6);
+  BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, 0);
+  BattleHpGaugeBarComponent__updateDamageGauge((BattleHpGaugeBarComponent_o *)this, (float)nowHp, 0);
 }
 
 
@@ -72,7 +69,7 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetDamageGauge(
 
   damageGauge = this->fields.damageGauge;
   if ( !damageGauge )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   UIProgressBar__set_alpha(damageGauge, 1.0 - per, 0);
 }
 
@@ -178,36 +175,36 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   __int64 v98; // [xsp+10h] [xbp-40h] BYREF
   __int64 v99; // [xsp+18h] [xbp-38h] BYREF
 
-  if ( (byte_4CCA8ED & 1) == 0 )
+  if ( (byte_4D2FDA1 & 1) == 0 )
   {
-    sub_1C713B0(&double_TypeInfo);
-    sub_1C713B0(&object___TypeInfo);
-    sub_1C713B0(&float_TypeInfo);
-    sub_1C713B0(&StringLiteral_19766/*"from"*/);
-    sub_1C713B0(&StringLiteral_24189/*"time"*/);
-    sub_1C713B0(&StringLiteral_22541/*"onupdate"*/);
-    sub_1C713B0(&StringLiteral_15189/*"UpdateDefenceTargetDamageGauge"*/);
-    sub_1C713B0(&StringLiteral_18592/*"delay"*/);
-    sub_1C713B0(&StringLiteral_24228/*"to"*/);
-    sub_1C713B0(&StringLiteral_4620/*"CompleteDefenceTargetDamageGauge"*/);
-    sub_1C713B0(&StringLiteral_22533/*"oncomplete"*/);
-    sub_1C713B0(&iTween_TypeInfo);
-    byte_4CCA8ED = 1;
+    sub_1C94098(&double_TypeInfo);
+    sub_1C94098(&object___TypeInfo);
+    sub_1C94098(&float_TypeInfo);
+    sub_1C94098(&StringLiteral_19853/*"from"*/);
+    sub_1C94098(&StringLiteral_24310/*"time"*/);
+    sub_1C94098(&StringLiteral_22649/*"onupdate"*/);
+    sub_1C94098(&StringLiteral_15242/*"UpdateDefenceTargetDamageGauge"*/);
+    sub_1C94098(&StringLiteral_18660/*"delay"*/);
+    sub_1C94098(&StringLiteral_24349/*"to"*/);
+    sub_1C94098(&StringLiteral_4630/*"CompleteDefenceTargetDamageGauge"*/);
+    sub_1C94098(&StringLiteral_22641/*"oncomplete"*/);
+    sub_1C94098(&iTween_TypeInfo);
+    byte_4D2FDA1 = 1;
   }
   this->fields.nowval = nowHp;
-  BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, method);
+  BattleHpGaugeBarComponent__updateNomalGauge((BattleHpGaugeBarComponent_o *)this, nowHp, 0);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v6 = sub_1C71458(object___TypeInfo, 12);
+  v6 = sub_1C94140(object___TypeInfo, 12);
   if ( !v6 )
-    sub_1C71608(0, v7);
+    sub_1C942F0(0, v7);
   v14 = (System_Object_array *)v6;
-  v15 = StringLiteral_19766/*"from"*/;
-  if ( StringLiteral_19766/*"from"*/ )
+  v15 = StringLiteral_19853/*"from"*/;
+  if ( StringLiteral_19853/*"from"*/ )
   {
-    v15 = sub_1C714EC(StringLiteral_19766/*"from"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(StringLiteral_19853/*"from"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v16 = StringLiteral_19766/*"from"*/;
+    v16 = StringLiteral_19853/*"from"*/;
   }
   else
   {
@@ -216,27 +213,27 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( !LODWORD(v14->max_length) )
     goto LABEL_59;
   v14->m_Items[0] = (Il2CppObject *)v16;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v14->m_Items, v16, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v14->m_Items, v16, v8, v9, v10, v11, v12, v13);
   v99 = 0;
   v15 = j_il2cpp_value_box_0(double_TypeInfo, &v99);
   v23 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C714EC(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
   }
   if ( LODWORD(v14->max_length) <= 1 )
     goto LABEL_59;
   v14->m_Items[1] = v23;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[1], (int32_t)v23, v17, v18, v19, v20, v21, v22);
-  v15 = StringLiteral_24228/*"to"*/;
-  if ( StringLiteral_24228/*"to"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[1], (int32_t)v23, v17, v18, v19, v20, v21, v22);
+  v15 = StringLiteral_24349/*"to"*/;
+  if ( StringLiteral_24349/*"to"*/ )
   {
-    v15 = sub_1C714EC(StringLiteral_24228/*"to"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(StringLiteral_24349/*"to"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v30 = StringLiteral_24228/*"to"*/;
+    v30 = StringLiteral_24349/*"to"*/;
   }
   else
   {
@@ -245,27 +242,27 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 2 )
     goto LABEL_59;
   v14->m_Items[2] = (Il2CppObject *)v30;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[2], v30, v24, v25, v26, v27, v28, v29);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[2], v30, v24, v25, v26, v27, v28, v29);
   v98 = 0x3FF0000000000000LL;
   v15 = j_il2cpp_value_box_0(double_TypeInfo, &v98);
   v37 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C714EC(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
   }
   if ( LODWORD(v14->max_length) <= 3 )
     goto LABEL_59;
   v14->m_Items[3] = v37;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[3], (int32_t)v37, v31, v32, v33, v34, v35, v36);
-  v15 = StringLiteral_22541/*"onupdate"*/;
-  if ( StringLiteral_22541/*"onupdate"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[3], (int32_t)v37, v31, v32, v33, v34, v35, v36);
+  v15 = StringLiteral_22649/*"onupdate"*/;
+  if ( StringLiteral_22649/*"onupdate"*/ )
   {
-    v15 = sub_1C714EC(StringLiteral_22541/*"onupdate"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(StringLiteral_22649/*"onupdate"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v44 = StringLiteral_22541/*"onupdate"*/;
+    v44 = StringLiteral_22649/*"onupdate"*/;
   }
   else
   {
@@ -274,14 +271,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 4 )
     goto LABEL_59;
   v14->m_Items[4] = (Il2CppObject *)v44;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[4], v44, v38, v39, v40, v41, v42, v43);
-  v15 = StringLiteral_15189/*"UpdateDefenceTargetDamageGauge"*/;
-  if ( StringLiteral_15189/*"UpdateDefenceTargetDamageGauge"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[4], v44, v38, v39, v40, v41, v42, v43);
+  v15 = StringLiteral_15242/*"UpdateDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_15242/*"UpdateDefenceTargetDamageGauge"*/ )
   {
-    v15 = sub_1C714EC(StringLiteral_15189/*"UpdateDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(StringLiteral_15242/*"UpdateDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v51 = StringLiteral_15189/*"UpdateDefenceTargetDamageGauge"*/;
+    v51 = StringLiteral_15242/*"UpdateDefenceTargetDamageGauge"*/;
   }
   else
   {
@@ -290,14 +287,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 5 )
     goto LABEL_59;
   v14->m_Items[5] = (Il2CppObject *)v51;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[5], v51, v45, v46, v47, v48, v49, v50);
-  v15 = StringLiteral_22533/*"oncomplete"*/;
-  if ( StringLiteral_22533/*"oncomplete"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[5], v51, v45, v46, v47, v48, v49, v50);
+  v15 = StringLiteral_22641/*"oncomplete"*/;
+  if ( StringLiteral_22641/*"oncomplete"*/ )
   {
-    v15 = sub_1C714EC(StringLiteral_22533/*"oncomplete"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(StringLiteral_22641/*"oncomplete"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v58 = StringLiteral_22533/*"oncomplete"*/;
+    v58 = StringLiteral_22641/*"oncomplete"*/;
   }
   else
   {
@@ -306,14 +303,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 6 )
     goto LABEL_59;
   v14->m_Items[6] = (Il2CppObject *)v58;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[6], v58, v52, v53, v54, v55, v56, v57);
-  v15 = StringLiteral_4620/*"CompleteDefenceTargetDamageGauge"*/;
-  if ( StringLiteral_4620/*"CompleteDefenceTargetDamageGauge"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[6], v58, v52, v53, v54, v55, v56, v57);
+  v15 = StringLiteral_4630/*"CompleteDefenceTargetDamageGauge"*/;
+  if ( StringLiteral_4630/*"CompleteDefenceTargetDamageGauge"*/ )
   {
-    v15 = sub_1C714EC(StringLiteral_4620/*"CompleteDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(StringLiteral_4630/*"CompleteDefenceTargetDamageGauge"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v65 = StringLiteral_4620/*"CompleteDefenceTargetDamageGauge"*/;
+    v65 = StringLiteral_4630/*"CompleteDefenceTargetDamageGauge"*/;
   }
   else
   {
@@ -322,14 +319,14 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 7 )
     goto LABEL_59;
   v14->m_Items[7] = (Il2CppObject *)v65;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[7], v65, v59, v60, v61, v62, v63, v64);
-  v15 = StringLiteral_18592/*"delay"*/;
-  if ( StringLiteral_18592/*"delay"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[7], v65, v59, v60, v61, v62, v63, v64);
+  v15 = StringLiteral_18660/*"delay"*/;
+  if ( StringLiteral_18660/*"delay"*/ )
   {
-    v15 = sub_1C714EC(StringLiteral_18592/*"delay"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(StringLiteral_18660/*"delay"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v72 = StringLiteral_18592/*"delay"*/;
+    v72 = StringLiteral_18660/*"delay"*/;
   }
   else
   {
@@ -338,27 +335,27 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 8 )
     goto LABEL_59;
   v14->m_Items[8] = (Il2CppObject *)v72;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[8], v72, v66, v67, v68, v69, v70, v71);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[8], v72, v66, v67, v68, v69, v70, v71);
   v97 = 1056964608;
   v15 = j_il2cpp_value_box_0(float_TypeInfo, &v97);
   v79 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C714EC(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
   }
   if ( LODWORD(v14->max_length) <= 9 )
     goto LABEL_59;
   v14->m_Items[9] = v79;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[9], (int32_t)v79, v73, v74, v75, v76, v77, v78);
-  v15 = StringLiteral_24189/*"time"*/;
-  if ( StringLiteral_24189/*"time"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[9], (int32_t)v79, v73, v74, v75, v76, v77, v78);
+  v15 = StringLiteral_24310/*"time"*/;
+  if ( StringLiteral_24310/*"time"*/ )
   {
-    v15 = sub_1C714EC(StringLiteral_24189/*"time"*/, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(StringLiteral_24310/*"time"*/, v14->obj.klass->_1.element_class);
     if ( !v15 )
       goto LABEL_60;
-    v86 = StringLiteral_24189/*"time"*/;
+    v86 = StringLiteral_24310/*"time"*/;
   }
   else
   {
@@ -367,25 +364,25 @@ void BattleDefenceTargetHpGaugeComponent__UpdateDefenceTargetValue(
   if ( LODWORD(v14->max_length) <= 0xA )
     goto LABEL_59;
   v14->m_Items[10] = (Il2CppObject *)v86;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[10], v86, v80, v81, v82, v83, v84, v85);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[10], v86, v80, v81, v82, v83, v84, v85);
   v96 = 1065353216;
   v15 = j_il2cpp_value_box_0(float_TypeInfo, &v96);
   v93 = (Il2CppObject *)v15;
   if ( v15 )
   {
-    v15 = sub_1C714EC(v15, v14->obj.klass->_1.element_class);
+    v15 = sub_1C941D4(v15, v14->obj.klass->_1.element_class);
     if ( !v15 )
     {
 LABEL_60:
-      v95 = sub_1C7162C(v15);
-      sub_1C714D8(v95, 0);
+      v95 = sub_1C94314(v15);
+      sub_1C941C0(v95, 0);
     }
   }
   if ( LODWORD(v14->max_length) <= 0xB )
 LABEL_59:
-    sub_1C71610(v15);
+    sub_1C942F8(v15);
   v14->m_Items[11] = v93;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v14->m_Items[11], (int32_t)v93, v87, v88, v89, v90, v91, v92);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v14->m_Items[11], (int32_t)v93, v87, v88, v89, v90, v91, v92);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v94 = iTween__Hash(v14, 0);

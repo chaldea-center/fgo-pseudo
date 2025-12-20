@@ -34,21 +34,21 @@ void CommandAssistListViewItemDraw__UpdateUi(
   int32_t lv; // [xsp+18h] [xbp-48h] BYREF
   int32_t IconImageId_k__BackingField; // [xsp+1Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CC1115 & 1) == 0 )
+  if ( (byte_4D26325 & 1) == 0 )
   {
-    sub_1C713B0(&AtlasManager_TypeInfo);
-    sub_1C713B0(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&int_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_8264/*"LEVEL_INFO"*/);
-    sub_1C713B0(&StringLiteral_5548/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/);
-    sub_1C713B0(&StringLiteral_5547/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/);
-    byte_4CC1115 = 1;
+    sub_1C94098(&AtlasManager_TypeInfo);
+    sub_1C94098(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&int_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&StringLiteral_8282/*"LEVEL_INFO"*/);
+    sub_1C94098(&StringLiteral_5559/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/);
+    sub_1C94098(&StringLiteral_5558/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/);
+    byte_4D26325 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+  Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
   if ( !item )
     goto LABEL_19;
   v7 = Master_object;
@@ -79,10 +79,10 @@ void CommandAssistListViewItemDraw__UpdateUi(
   UILabel__set_text((UILabel_o *)Master_object, item->fields._Name_k__BackingField, 0);
   if ( !CurrentEntity || !v11 )
     goto LABEL_19;
-  v13 = (System_String_o **)&StringLiteral_5548/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/;
+  v13 = (System_String_o **)&StringLiteral_5559/*"EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT"*/;
   levelLabel = this->fields.levelLabel;
   if ( CurrentEntity->fields.lv != v11->fields.lv )
-    v13 = (System_String_o **)&StringLiteral_5547/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/;
+    v13 = (System_String_o **)&StringLiteral_5558/*"EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT"*/;
   v15 = *v13;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -91,13 +91,13 @@ void CommandAssistListViewItemDraw__UpdateUi(
   v17 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
   v26 = v11->fields.lv;
   v18 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v26);
-  Master_object = (EventCommandAssistMaster_o *)System_String__Format_64073032(v16, v17, v18, 0);
+  Master_object = (EventCommandAssistMaster_o *)System_String__Format_64459052(v16, v17, v18, 0);
   if ( !levelLabel )
     goto LABEL_19;
   UILabel__set_text(levelLabel, (System_String_o *)Master_object, 0);
   detailLabel = this->fields.detailLabel;
   Detail_k__BackingField = item->fields._Detail_k__BackingField;
-  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_8264/*"LEVEL_INFO"*/, 0);
+  v21 = LocalizationManager__Get((System_String_o *)StringLiteral_8282/*"LEVEL_INFO"*/, 0);
   v25 = CurrentEntity->fields.lv;
   v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v25);
   v23 = (Il2CppObject *)System_String__Format(v21, v22, 0);
@@ -106,6 +106,6 @@ void CommandAssistListViewItemDraw__UpdateUi(
   Master_object = (EventCommandAssistMaster_o *)this->fields.line;
   if ( !Master_object )
 LABEL_19:
-    sub_1C71608(Master_object, v6);
+    sub_1C942F0(Master_object, v6);
   UnityEngine_Behaviour__set_enabled((UnityEngine_Behaviour_o *)Master_object, !item->fields._IsLast_k__BackingField, 0);
 }

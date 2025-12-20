@@ -17,10 +17,10 @@ void PhotoLayerChangeComponent__InitDepth(PhotoLayerChangeComponent_o *this, con
   UIPanel_o *v5; // x0
   UnityEngine_Object_o *anotherPanel; // x20
 
-  if ( (byte_4CC29FC & 1) == 0 )
+  if ( (byte_4D27D52 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC29FC = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D27D52 = 1;
   }
   selfPanel = (UnityEngine_Object_o *)this->fields.selfPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -44,7 +44,7 @@ void PhotoLayerChangeComponent__InitDepth(PhotoLayerChangeComponent_o *this, con
       return;
     }
 LABEL_14:
-    sub_1C71608(v5, v4);
+    sub_1C942F0(v5, v4);
   }
 }
 
@@ -61,11 +61,11 @@ void PhotoLayerChangeComponent__OnClick(PhotoLayerChangeComponent_o *this, const
   System_Reflection_MethodBase_o *v10; // x0
   int32_t v11; // w1
 
-  if ( (byte_4CC29FD & 1) == 0 )
+  if ( (byte_4D27D53 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_PhotoLayerChangeComponent_OnClick__);
-    byte_4CC29FD = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_PhotoLayerChangeComponent_OnClick__);
+    byte_4D27D53 = 1;
   }
   selfPanel = (UnityEngine_Object_o *)this->fields.selfPanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -88,8 +88,8 @@ void PhotoLayerChangeComponent__OnClick(PhotoLayerChangeComponent_o *this, const
             return;
           v9 = Method_PhotoLayerChangeComponent_OnClick__;
           if ( (*((_BYTE *)Method_PhotoLayerChangeComponent_OnClick__ + 83) & 2) != 0 )
-            v9 = (_QWORD *)sub_1C713C8(Method_PhotoLayerChangeComponent_OnClick__);
-          v10 = (System_Reflection_MethodBase_o *)sub_1C71394(v9, v9[4]);
+            v9 = (_QWORD *)sub_1C940B0(Method_PhotoLayerChangeComponent_OnClick__);
+          v10 = (System_Reflection_MethodBase_o *)sub_1C9407C(v9, v9[4]);
           OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
           v5 = this->fields.anotherPanel;
           if ( v5 )
@@ -110,7 +110,7 @@ LABEL_20:
           }
         }
       }
-      sub_1C71608(v5, v6);
+      sub_1C942F0(v5, v6);
     }
   }
 }
@@ -128,7 +128,7 @@ void PhotoLayerChangeComponent__SetAnotherPanel(
   System_String_o *v7; // x7
 
   this->fields.anotherPanel = another;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.anotherPanel,
     (int32_t)another,
     (int32_t)method,
@@ -152,7 +152,7 @@ void PhotoLayerChangeComponent__SetSelfPanel(
   System_String_o *v7; // x7
 
   this->fields.selfPanel = self;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.selfPanel,
     (int32_t)self,
     (int32_t)method,

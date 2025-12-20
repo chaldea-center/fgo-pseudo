@@ -17,7 +17,7 @@ void SubmarineUnreleasedScanSaveInfo___ctor(
   v6->fields._ScanIds_k__BackingField = scanIds;
   v6 = (SubmarineUnreleasedScanSaveInfo_o *)((char *)v6 + 24);
   LODWORD(v6[-1].fields._ScanIds_k__BackingField) = eventId;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v6, (int32_t)scanIds, v7, v8, v9, v10, v11, v12);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v6, (int32_t)scanIds, v7, v8, v9, v10, v11, v12);
 }
 
 
@@ -48,14 +48,14 @@ SubmarineUnreleasedScanSaveInfo_o *SubmarineUnreleasedScanSaveInfo__CreateBySave
   int64_t v23; // x6
   System_String_o *v24; // x7
 
-  if ( (byte_4CC3D37 & 1) == 0 )
+  if ( (byte_4D29081 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C713B0(&SubmarineUnreleasedScanSaveInfo_TypeInfo);
-    byte_4CC3D37 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C94098(&Method_System_Collections_Generic_List_int___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C94098(&SubmarineUnreleasedScanSaveInfo_TypeInfo);
+    byte_4D29081 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(value, 0);
   v5 = 0;
@@ -64,14 +64,14 @@ SubmarineUnreleasedScanSaveInfo_o *SubmarineUnreleasedScanSaveInfo__CreateBySave
     if ( value )
     {
       v6 = System_String__Split(value, 0x2Cu, 0, 0);
-      v7 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
+      v7 = (System_Collections_Generic_List_int__o *)sub_1C942E4(System_Collections_Generic_List_int__TypeInfo);
       System_Collections_Generic_List_int____ctor(
         v7,
-        (const MethodInfo_37F2EA0 *)Method_System_Collections_Generic_List_int___ctor__);
+        (const MethodInfo_384D5BC *)Method_System_Collections_Generic_List_int___ctor__);
       if ( !v6 )
-        sub_1C71608(v8, v9);
+        sub_1C942F0(v8, v9);
       if ( !LODWORD(v6->max_length) )
-        sub_1C71610(v8);
+        sub_1C942F8(v8);
       IsNullOrEmpty = System_Int32__Parse(v6->m_Items[0], 0);
       v10 = IsNullOrEmpty;
       if ( (int)v6->max_length >= 2 )
@@ -79,26 +79,26 @@ SubmarineUnreleasedScanSaveInfo_o *SubmarineUnreleasedScanSaveInfo__CreateBySave
         max_length = (unsigned int)v6->max_length;
         if ( (max_length & 0xFFFFFFFE) == 0 )
 LABEL_17:
-          sub_1C71610(IsNullOrEmpty);
+          sub_1C942F8(IsNullOrEmpty);
         v12 = 0;
         v13 = max_length - 2;
         while ( 1 )
         {
           IsNullOrEmpty = System_Int32__Parse(v6->m_Items[v12 + 1], 0);
           if ( !v7 )
-            sub_1C71608(IsNullOrEmpty, (unsigned int)IsNullOrEmpty);
+            sub_1C942F0(IsNullOrEmpty, (unsigned int)IsNullOrEmpty);
           items = v7->fields._items;
           v15 = Method_System_Collections_Generic_List_int__Add__;
           ++v7->fields._version;
           if ( !items )
-            sub_1C71608(IsNullOrEmpty, (unsigned int)IsNullOrEmpty);
+            sub_1C942F0(IsNullOrEmpty, (unsigned int)IsNullOrEmpty);
           size = v7->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_int___AddWithResize(
               v7,
               IsNullOrEmpty,
-              *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
+              *(const MethodInfo_384DE10 **)(*(_QWORD *)(v15[4] + 192LL) + 112LL));
           }
           else
           {
@@ -118,16 +118,16 @@ LABEL_17:
 LABEL_19:
         v18 = System_Collections_Generic_List_int___ToArray(
                 v7,
-                (const MethodInfo_37F51AC *)Method_System_Collections_Generic_List_int__ToArray__);
-        v5 = sub_1C715FC(SubmarineUnreleasedScanSaveInfo_TypeInfo);
+                (const MethodInfo_384F8C8 *)Method_System_Collections_Generic_List_int__ToArray__);
+        v5 = sub_1C942E4(SubmarineUnreleasedScanSaveInfo_TypeInfo);
         System_Object___ctor((Il2CppObject *)v5, 0);
         *(_DWORD *)(v5 + 16) = v10;
         *(_QWORD *)(v5 + 24) = v18;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)v18, v19, v20, v21, v22, v23, v24);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)v18, v19, v20, v21, v22, v23, v24);
         return (SubmarineUnreleasedScanSaveInfo_o *)v5;
       }
     }
-    sub_1C71608(IsNullOrEmpty, v4);
+    sub_1C942F0(IsNullOrEmpty, v4);
   }
   return (SubmarineUnreleasedScanSaveInfo_o *)v5;
 }
@@ -156,26 +156,26 @@ System_String_o *SubmarineUnreleasedScanSaveInfo__GetSaveValue(
   System_String_array *v19; // x0
   int32_t EventId_k__BackingField; // [xsp+Ch] [xbp-44h] BYREF
 
-  if ( (byte_4CC3D36 & 1) == 0 )
+  if ( (byte_4D29080 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Linq_Enumerable_Select_int__string___);
-    sub_1C713B0(&Method_System_Linq_Enumerable_ToList_string___);
-    sub_1C713B0(&System_Func_int__string__TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_string__Insert__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_string__ToArray__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor___78587544);
-    sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
-    sub_1C713B0(&Method_SubmarineUnreleasedScanSaveInfo___c__GetSaveValue_b__9_0__);
-    sub_1C713B0(&SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
-    sub_1C713B0(&StringLiteral_808/*","*/);
-    byte_4CC3D36 = 1;
+    sub_1C94098(&Method_System_Linq_Enumerable_Select_int__string___);
+    sub_1C94098(&Method_System_Linq_Enumerable_ToList_string___);
+    sub_1C94098(&System_Func_int__string__TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_string__Insert__);
+    sub_1C94098(&Method_System_Collections_Generic_List_string__ToArray__);
+    sub_1C94098(&Method_System_Collections_Generic_List_int___ctor___78995296);
+    sub_1C94098(&System_Collections_Generic_List_int__TypeInfo);
+    sub_1C94098(&Method_SubmarineUnreleasedScanSaveInfo___c__GetSaveValue_b__9_0__);
+    sub_1C94098(&SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
+    sub_1C94098(&StringLiteral_808/*","*/);
+    byte_4D29080 = 1;
   }
   ScanIds_k__BackingField = (System_Collections_Generic_IEnumerable_T__o *)this->fields._ScanIds_k__BackingField;
-  v4 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
-  System_Collections_Generic_List_int____ctor_58666952(
+  v4 = (System_Collections_Generic_List_int__o *)sub_1C942E4(System_Collections_Generic_List_int__TypeInfo);
+  System_Collections_Generic_List_int____ctor_59037412(
     v4,
     ScanIds_k__BackingField,
-    (const MethodInfo_37F2FC8 *)Method_System_Collections_Generic_List_int___ctor___78587544);
+    (const MethodInfo_384D6E4 *)Method_System_Collections_Generic_List_int___ctor___78995296);
   v5 = SubmarineUnreleasedScanSaveInfo___c_TypeInfo;
   if ( !SubmarineUnreleasedScanSaveInfo___c_TypeInfo->_2.cctor_finished )
   {
@@ -191,31 +191,31 @@ System_String_o *SubmarineUnreleasedScanSaveInfo__GetSaveValue(
       v5 = SubmarineUnreleasedScanSaveInfo___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__9_0 = (System_Func_T__TResult__o *)sub_1C715FC(System_Func_int__string__TypeInfo);
+    _9__9_0 = (System_Func_T__TResult__o *)sub_1C942E4(System_Func_int__string__TypeInfo);
     System_Func_int__object____ctor(_9__9_0, v7, Method_SubmarineUnreleasedScanSaveInfo___c__GetSaveValue_b__9_0__, 0);
     static_fields = SubmarineUnreleasedScanSaveInfo___c_TypeInfo->static_fields;
     static_fields->__9__9_0 = (struct System_Func_int__string__o *)_9__9_0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v9, v10, v11, v12, v13, v14);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v9, v10, v11, v12, v13, v14);
   }
   v15 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__Select_int__object_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)v4,
                                                                (System_Func_TSource__TResult__o *)_9__9_0,
-                                                               (const MethodInfo_317EBF8 *)Method_System_Linq_Enumerable_Select_int__string___);
+                                                               (const MethodInfo_31D03C0 *)Method_System_Linq_Enumerable_Select_int__string___);
   v16 = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToList_object_(
                                                        v15,
-                                                       (const MethodInfo_318FC88 *)Method_System_Linq_Enumerable_ToList_string___);
+                                                       (const MethodInfo_31E1548 *)Method_System_Linq_Enumerable_ToList_string___);
   EventId_k__BackingField = this->fields._EventId_k__BackingField;
   v17 = (Il2CppObject *)System_Int32__ToString((int32_t)&EventId_k__BackingField, 0);
   if ( !v16 )
-    sub_1C71608(v17, v18);
+    sub_1C942F0(v17, v18);
   System_Collections_Generic_List_object___Insert(
     v16,
     0,
     v17,
-    (const MethodInfo_38114C8 *)Method_System_Collections_Generic_List_string__Insert__);
+    (const MethodInfo_386BBE4 *)Method_System_Collections_Generic_List_string__Insert__);
   v19 = (System_String_array *)System_Collections_Generic_List_object___ToArray(
                                  v16,
-                                 (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_string__ToArray__);
+                                 (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_string__ToArray__);
   return System_String__Join((System_String_o *)StringLiteral_808/*","*/, v19, 0);
 }
 
@@ -255,7 +255,7 @@ void SubmarineUnreleasedScanSaveInfo__set_ScanIds(
   System_String_o *v7; // x7
 
   this->fields._ScanIds_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ScanIds_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -277,15 +277,15 @@ void SubmarineUnreleasedScanSaveInfo___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CC3D38 & 1) == 0 )
+  if ( (byte_4D29082 & 1) == 0 )
   {
-    sub_1C713B0(&SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
-    byte_4CC3D38 = 1;
+    sub_1C94098(&SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
+    byte_4D29082 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C715FC(SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C942E4(SubmarineUnreleasedScanSaveInfo___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SubmarineUnreleasedScanSaveInfo___c_TypeInfo->static_fields->__9 = (struct SubmarineUnreleasedScanSaveInfo___c_o *)v1;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)SubmarineUnreleasedScanSaveInfo___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,

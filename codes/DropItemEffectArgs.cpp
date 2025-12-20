@@ -39,7 +39,7 @@ BattleDropPositionRandom_FixedDropPositionRandom_o *DropItemEffectArgs__RandomGe
 
   dropPositionRandomData = this->fields.dropPositionRandomData;
   if ( !dropPositionRandomData )
-    sub_1C71608(0, giftId);
+    sub_1C942F0(0, giftId);
   return BattleDropPositionRandom__RandomGetPositionDataAndRemove(dropPositionRandomData, giftId, 0);
 }
 
@@ -60,24 +60,24 @@ void DropItemEffectArgs__SetDropPointRandomData(
   System_String_o *v14; // x7
   __int64 v15; // x1
 
-  if ( (byte_4CCA968 & 1) == 0 )
+  if ( (byte_4D2FE1C & 1) == 0 )
   {
-    sub_1C713B0(&BattleDropPositionRandom_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCA968 = 1;
+    sub_1C94098(&BattleDropPositionRandom_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2FE1C = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)scriptableObject, 0, 0)
     && !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)dropInfoArray, 0) )
   {
-    v7 = (BattleDropPositionRandom_o *)sub_1C715FC(BattleDropPositionRandom_TypeInfo);
+    v7 = (BattleDropPositionRandom_o *)sub_1C942E4(BattleDropPositionRandom_TypeInfo);
     BattleDropPositionRandom___ctor(v7, 0);
     this->fields.dropPositionRandomData = v7;
     p_dropPositionRandomData = &this->fields.dropPositionRandomData;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)p_dropPositionRandomData, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)p_dropPositionRandomData, (int32_t)v7, v9, v10, v11, v12, v13, v14);
     if ( !*p_dropPositionRandomData )
-      sub_1C71608(0, v15);
+      sub_1C942F0(0, v15);
     BattleDropPositionRandom__Initialize(*p_dropPositionRandomData, scriptableObject, dropInfoArray, 0);
   }
 }
@@ -99,24 +99,24 @@ void DropItemEffectArgs__SetDropTimingAdjustData(
   System_String_o *v14; // x7
   __int64 v15; // x1
 
-  if ( (byte_4CCA967 & 1) == 0 )
+  if ( (byte_4D2FE1B & 1) == 0 )
   {
-    sub_1C713B0(&BattleDropTimingAdjustment_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCA967 = 1;
+    sub_1C94098(&BattleDropTimingAdjustment_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2FE1B = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Equality((UnityEngine_Object_o *)scriptableObject, 0, 0)
     && !BasicHelper__IsNullOrEmpty((System_Collections_ICollection_o *)dropInfoArray, 0) )
   {
-    v7 = (BattleDropTimingAdjustment_o *)sub_1C715FC(BattleDropTimingAdjustment_TypeInfo);
+    v7 = (BattleDropTimingAdjustment_o *)sub_1C942E4(BattleDropTimingAdjustment_TypeInfo);
     BattleDropTimingAdjustment___ctor(v7, 0);
     this->fields.dropTimingAdjustmentData = v7;
     p_fields = &this->fields;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)p_fields, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)p_fields, (int32_t)v7, v9, v10, v11, v12, v13, v14);
     if ( !p_fields->dropTimingAdjustmentData )
-      sub_1C71608(0, v15);
+      sub_1C942F0(0, v15);
     BattleDropTimingAdjustment__Initialize(p_fields->dropTimingAdjustmentData, scriptableObject, dropInfoArray, 0);
   }
 }

@@ -13,7 +13,7 @@ void BaseBattleInfoPosData__Init(BaseBattleInfoPosData_o *this, BattlePerformanc
   System_String_o *v7; // x7
 
   this->fields._Perf_k__BackingField = perf;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)perf, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)perf, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -50,10 +50,10 @@ UnityEngine_Vector3_o BaseBattleInfoPosData__get_SkillSkipTrLocalPos(
   float z; // s2
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( !byte_4CC0D09 )
+  if ( !byte_4D25F19 )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D09 = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   x = static_fields->zeroVector.fields.x;
@@ -78,5 +78,5 @@ void BaseBattleInfoPosData__set_Perf(
   System_String_o *v7; // x7
 
   this->fields._Perf_k__BackingField = value;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }

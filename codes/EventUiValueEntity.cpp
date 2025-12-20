@@ -9,20 +9,20 @@ void EventUiValueEntity___ctor(EventUiValueEntity_o *this, const MethodInfo *met
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CC762A & 1) == 0 )
+  if ( (byte_4D2CB85 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC762A = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2CB85 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
   *(_QWORD *)&this->fields.id = 0;
   v3 = StringLiteral_1/*""*/;
   this->fields.value = (struct System_String_o *)StringLiteral_1/*""*/;
   p_value = &this->fields.value;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_value, v3, v5, v6, v7, v8, v9, v10);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_value, v3, v5, v6, v7, v8, v9, v10);
   *((_DWORD *)p_value + 2) = 0;
 }
 
@@ -33,16 +33,16 @@ System_String_o *EventUiValueEntity__CreatePK(
         System_String_o *value,
         const MethodInfo *method)
 {
-  if ( (byte_4CC762B & 1) == 0 )
+  if ( (byte_4D2CB86 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
-    byte_4CC762B = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+    byte_4D2CB86 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__long__object_(
            id,
            type,
            (Il2CppObject *)value,
-           (const MethodInfo_3149974 *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
+           (const MethodInfo_319A99C *)Method_DataEntityBase_CreateMultiplePK_long__long__string___);
 }
 
 

@@ -23,22 +23,22 @@ void UIOrthoCamera__Start(UIOrthoCamera_o *this, const MethodInfo *method)
   __int64 v17; // x1
   UnityEngine_Camera_o *mCam; // x0
 
-  if ( (byte_4CCBDA4 & 1) == 0 )
+  if ( (byte_4D31156 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Camera___);
-    byte_4CCBDA4 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Camera___);
+    byte_4D31156 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Camera___);
+                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Camera___);
   this->fields.mCam = (struct UnityEngine_Camera_o *)Component_object;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mCam, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mCam, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.mTrans = transform;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12, v13, v14, v15, v16);
   mCam = this->fields.mCam;
   if ( !mCam )
-    sub_1C71608(0, v17);
+    sub_1C942F0(0, v17);
   UnityEngine_Camera__set_orthographic(mCam, 1, 0);
 }
 
@@ -84,10 +84,10 @@ void UIOrthoCamera__Update(UIOrthoCamera_o *this, const MethodInfo *method)
   v9 = (float)((float)((float)((float)(m_Height + v6) * (float)v8) - (float)(m_YMin * (float)v5)) * 0.5)
      * lossyScale.fields.y;
   orthographicSize = UnityEngine_Camera__get_orthographicSize(mCam, 0);
-  if ( !byte_4CC0D0D )
+  if ( !byte_4D25F1D )
   {
-    sub_1C713B0(&UnityEngine_Mathf_TypeInfo);
-    byte_4CC0D0D = 1;
+    sub_1C94098(&UnityEngine_Mathf_TypeInfo);
+    byte_4D25F1D = 1;
   }
   v11 = fabsf(orthographicSize);
   v12 = fabsf(v9);
@@ -106,6 +106,6 @@ void UIOrthoCamera__Update(UIOrthoCamera_o *this, const MethodInfo *method)
       return;
     }
 LABEL_15:
-    sub_1C71608(mCam, method);
+    sub_1C942F0(mCam, method);
   }
 }

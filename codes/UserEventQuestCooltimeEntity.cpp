@@ -1,13 +1,13 @@
 void UserEventQuestCooltimeEntity___ctor(UserEventQuestCooltimeEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC8235 & 1) == 0 )
+  if ( (byte_4D2D6CA & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC8235 = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2D6CA = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -18,17 +18,17 @@ System_String_o *UserEventQuestCooltimeEntity__CreatePK(
         int32_t phase,
         const MethodInfo *method)
 {
-  if ( (byte_4CC8232 & 1) == 0 )
+  if ( (byte_4D2D6C7 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
-    byte_4CC8232 = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+    byte_4D2D6C7 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int__int_(
            userId,
            eventId,
            questId,
            phase,
-           (const MethodInfo_3149DB8 *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
+           (const MethodInfo_319ADE0 *)Method_DataEntityBase_CreateMultiplePK_long__int__int__int___);
 }
 
 
@@ -90,58 +90,58 @@ EventQuestCooltimeEntity_o *UserEventQuestCooltimeEntity__GetMasterEntity(
   System_String_o *v38; // x19
 
   v2 = (int)this;
-  if ( (byte_4CC8233 & 1) == 0 )
+  if ( (byte_4D2D6C8 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMasterData_EventQuestCooltimeMaster___);
-    sub_1C713B0(&Method_DataMasterBase_EventQuestCooltimeMaster__EventQuestCooltimeEntity__string__getEntityFromKey__);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C713B0(&string___TypeInfo);
-    sub_1C713B0(&StringLiteral_1450/*":"*/);
-    byte_4CC8233 = 1;
+    sub_1C94098(&Method_DataManager_GetMasterData_EventQuestCooltimeMaster___);
+    sub_1C94098(&Method_DataMasterBase_EventQuestCooltimeMaster__EventQuestCooltimeEntity__string__getEntityFromKey__);
+    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C94098(&string___TypeInfo);
+    sub_1C94098(&StringLiteral_1450/*":"*/);
+    byte_4D2D6C8 = 1;
   }
-  v3 = sub_1C71458(string___TypeInfo, 5);
+  v3 = sub_1C94140(string___TypeInfo, 5);
   Instance = (DataManager_o *)System_Int32__ToString(v2 + 24, 0);
   if ( !v3 )
     goto LABEL_13;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_12;
   *(_QWORD *)(v3 + 32) = Instance;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)Instance, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)Instance, v6, v7, v8, v9, v10, v11);
   if ( *(_DWORD *)(v3 + 24) <= 1u )
     goto LABEL_12;
   v18 = StringLiteral_1450/*":"*/;
   *(_QWORD *)(v3 + 40) = StringLiteral_1450/*":"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 40), v18, v12, v13, v14, v15, v16, v17);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 40), v18, v12, v13, v14, v15, v16, v17);
   Instance = (DataManager_o *)System_Int32__ToString(v2 + 28, 0);
   if ( *(_DWORD *)(v3 + 24) <= 2u
     || (*(_QWORD *)(v3 + 48) = Instance,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 48), (int32_t)Instance, v19, v20, v21, v22, v23, v24),
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 48), (int32_t)Instance, v19, v20, v21, v22, v23, v24),
         *(_DWORD *)(v3 + 24) <= 3u)
     || (v31 = StringLiteral_1450/*":"*/,
         *(_QWORD *)(v3 + 56) = StringLiteral_1450/*":"*/,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 56), v31, v25, v26, v27, v28, v29, v30),
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 56), v31, v25, v26, v27, v28, v29, v30),
         Instance = (DataManager_o *)System_Int32__ToString(v2 + 32, 0),
         *(_DWORD *)(v3 + 24) <= 4u) )
   {
 LABEL_12:
-    sub_1C71610(Instance);
+    sub_1C942F8(Instance);
   }
   *(_QWORD *)(v3 + 64) = Instance;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 64), (int32_t)Instance, v32, v33, v34, v35, v36, v37);
-  v38 = System_String__Concat_64072256((System_String_array *)v3, 0);
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 64), (int32_t)Instance, v32, v33, v34, v35, v36, v37);
+  v38 = System_String__Concat_64458276((System_String_array *)v3, 0);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                       Instance,
-                                      (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EventQuestCooltimeMaster___)) == 0 )
+                                      (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_EventQuestCooltimeMaster___)) == 0 )
   {
 LABEL_13:
-    sub_1C71608(Instance, v5);
+    sub_1C942F0(Instance, v5);
   }
   return (EventQuestCooltimeEntity_o *)DataMasterBase_object__object__object___getEntityFromKey(
                                          (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                          v38,
-                                         (const MethodInfo_340CCC0 *)Method_DataMasterBase_EventQuestCooltimeMaster__EventQuestCooltimeEntity__string__getEntityFromKey__);
+                                         (const MethodInfo_345F300 *)Method_DataMasterBase_EventQuestCooltimeMaster__EventQuestCooltimeEntity__string__getEntityFromKey__);
 }
 
 
@@ -152,19 +152,19 @@ QuestEntity_o *UserEventQuestCooltimeEntity__GetQuestEntity(
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CC8234 & 1) == 0 )
+  if ( (byte_4D2D6C9 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMasterData_QuestMaster___);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CC8234 = 1;
+    sub_1C94098(&Method_DataManager_GetMasterData_QuestMaster___);
+    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4D2D6C9 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance
     || (Instance = DataManager__GetMasterData_object_(
                      (DataManager_o *)Instance,
-                     (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_QuestMaster___)) == 0 )
+                     (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_QuestMaster___)) == 0 )
   {
-    sub_1C71608(Instance, v4);
+    sub_1C942F0(Instance, v4);
   }
   return QuestMaster__getQuestEntity((QuestMaster_o *)Instance, this->fields.questId, 0);
 }

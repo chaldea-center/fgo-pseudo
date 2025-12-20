@@ -42,25 +42,25 @@ void BattleBuffConfWindowComponent__setData(
   __int64 v6; // x1
   DataManager_o *v7; // x21
 
-  if ( (byte_4CCA8E0 & 1) == 0 )
+  if ( (byte_4D2FD94 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_1C713B0(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CCA8E0 = 1;
+    sub_1C94098(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_1C94098(&Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4D2FD94 = 1;
   }
-  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Instance = (DataManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataManager__GetMasterData_object_(
                                 Instance,
-                                (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_BuffMaster___);
+                                (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_BuffMaster___);
   if ( !Instance )
     goto LABEL_10;
   Instance = (DataManager_o *)DataMasterBase_object__object__int___GetEntity(
                                 (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                                 buffId,
-                                (const MethodInfo_3408E80 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
+                                (const MethodInfo_345B4C0 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__GetEntity__);
   this->fields.buffId = buffId;
   if ( !Instance
     || (v7 = Instance, (Instance = (DataManager_o *)this->fields.buffIcon) == 0)
@@ -70,7 +70,7 @@ void BattleBuffConfWindowComponent__setData(
         (Instance = (DataManager_o *)this->fields.detailLabel) == 0) )
   {
 LABEL_10:
-    sub_1C71608(Instance, v6);
+    sub_1C942F0(Instance, v6);
   }
   UILabel__set_text((UILabel_o *)Instance, *(System_String_o **)&v7->fields._DispLog, 0);
 }

@@ -1,13 +1,13 @@
 void EffectMovieEntity___ctor(EffectMovieEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC7254 & 1) == 0 )
+  if ( (byte_4D2C6C9 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_int___ctor__);
-    byte_4CC7254 = 1;
+    sub_1C94098(&Method_DataEntityBase_int___ctor__);
+    byte_4D2C6C9 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_340699C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3458FDC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -38,12 +38,12 @@ System_String_o *EffectMovieEntity__GetFilePath(
   int32_t v19; // [xsp+8h] [xbp-38h] BYREF
   int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CC7253 & 1) == 0 )
+  if ( (byte_4D2C6C8 & 1) == 0 )
   {
-    sub_1C713B0(&EffectMovieMaster_TypeInfo);
-    sub_1C713B0(&int_TypeInfo);
-    sub_1C713B0(&string_TypeInfo);
-    byte_4CC7253 = 1;
+    sub_1C94098(&EffectMovieMaster_TypeInfo);
+    sub_1C94098(&int_TypeInfo);
+    sub_1C94098(&string_TypeInfo);
+    byte_4D2C6C8 = 1;
   }
   switch ( this->fields.folderType )
   {
@@ -84,9 +84,9 @@ LABEL_17:
         v14 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v20);
         v19 = effectFolder;
         v15 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v19);
-        v16 = System_String__Format_64073032(WEAPON_SUB_PATH, v14, v15, 0);
+        v16 = System_String__Format_64459052(WEAPON_SUB_PATH, v14, v15, 0);
       }
-      result = System_String__Concat_64031724(v16, this->fields.name, 0);
+      result = System_String__Concat_64417744(v16, this->fields.name, 0);
       break;
     case 5:
       v17 = EffectMovieMaster_TypeInfo;
@@ -95,7 +95,7 @@ LABEL_17:
         j_il2cpp_runtime_class_init_0(EffectMovieMaster_TypeInfo);
         v17 = EffectMovieMaster_TypeInfo;
       }
-      result = System_String__Concat_64031724(v17->static_fields->BATTLECOMMON_PATH, this->fields.name, 0);
+      result = System_String__Concat_64417744(v17->static_fields->BATTLECOMMON_PATH, this->fields.name, 0);
       break;
     default:
       result = string_TypeInfo->static_fields->Empty;

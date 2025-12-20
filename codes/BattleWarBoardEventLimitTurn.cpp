@@ -9,20 +9,20 @@ void BattleWarBoardEventLimitTurn___ctor(BattleWarBoardEventLimitTurn_o *this, c
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CC9EEF & 1) == 0 )
+  if ( (byte_4D2F398 & 1) == 0 )
   {
-    sub_1C713B0(&int___TypeInfo);
-    byte_4CC9EEF = 1;
+    sub_1C94098(&int___TypeInfo);
+    byte_4D2F398 = 1;
   }
   *(_QWORD *)&this->fields.defLimitAct = 0x200000001LL;
-  v3 = sub_1C71458(int___TypeInfo, 1);
+  v3 = sub_1C94140(int___TypeInfo, 1);
   if ( !v3 )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   if ( !*(_DWORD *)(v3 + 24) )
-    sub_1C71610(v3);
+    sub_1C942F8(v3);
   *(_DWORD *)(v3 + 32) = 3;
   this->fields.defTurnEffect = (struct System_Int32_array *)v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.defTurnEffect, v3, v5, v6, v7, v8, v9, v10);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.defTurnEffect, v3, v5, v6, v7, v8, v9, v10);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -39,7 +39,7 @@ void BattleWarBoardEventLimitTurn__InitLimitInfo(
   int limitAct; // w9
   int32_t *v8; // x9
   int32_t *v9; // x9
-  System_Int32_array *TurnEffectArray_46941960; // x0
+  System_Int32_array *TurnEffectArray_47450332; // x0
   int32_t v11; // w2
   int32_t v12; // w3
   System_String_o *v13; // x4
@@ -47,7 +47,7 @@ void BattleWarBoardEventLimitTurn__InitLimitInfo(
   int64_t v15; // x6
   System_String_o *v16; // x7
   struct System_Int32_array *turnEffect; // x8
-  System_Int32_array *TurnEffectArray_46942244; // x0
+  System_Int32_array *TurnEffectArray_47450616; // x0
   int32_t v19; // w2
   int32_t v20; // w3
   System_String_o *v21; // x4
@@ -77,14 +77,14 @@ void BattleWarBoardEventLimitTurn__InitLimitInfo(
         Data_k__BackingField->fields.turnEffectType = *v9;
         if ( stage )
         {
-          TurnEffectArray_46941960 = BattleTurnLimitUtil__GetTurnEffectArray_46941960(
+          TurnEffectArray_47450332 = BattleTurnLimitUtil__GetTurnEffectArray_47450332(
                                        (int32_t)this,
                                        stage->fields.script,
                                        0);
-          Data_k__BackingField->fields.turnEffect = TurnEffectArray_46941960;
-          sub_1C71354(
+          Data_k__BackingField->fields.turnEffect = TurnEffectArray_47450332;
+          sub_1C9403C(
             (GrandQuestFolderBoardItem_o *)&Data_k__BackingField->fields.turnEffect,
-            (int32_t)TurnEffectArray_46941960,
+            (int32_t)TurnEffectArray_47450332,
             v11,
             v12,
             v13,
@@ -96,14 +96,14 @@ void BattleWarBoardEventLimitTurn__InitLimitInfo(
           {
             if ( !turnEffect->max_length )
             {
-              TurnEffectArray_46942244 = BattleTurnLimitUtil__GetTurnEffectArray_46942244(
+              TurnEffectArray_47450616 = BattleTurnLimitUtil__GetTurnEffectArray_47450616(
                                            Data_k__BackingField->fields.limitTurnCount,
                                            v5->fields.defTurnEffect,
                                            0);
-              Data_k__BackingField->fields.turnEffect = TurnEffectArray_46942244;
-              sub_1C71354(
+              Data_k__BackingField->fields.turnEffect = TurnEffectArray_47450616;
+              sub_1C9403C(
                 (GrandQuestFolderBoardItem_o *)&Data_k__BackingField->fields.turnEffect,
-                (int32_t)TurnEffectArray_46942244,
+                (int32_t)TurnEffectArray_47450616,
                 v19,
                 v20,
                 v21,
@@ -116,7 +116,7 @@ void BattleWarBoardEventLimitTurn__InitLimitInfo(
         }
       }
 LABEL_16:
-      sub_1C71608(this, battleEvent);
+      sub_1C942F0(this, battleEvent);
     }
   }
 }

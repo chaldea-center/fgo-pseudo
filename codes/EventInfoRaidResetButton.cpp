@@ -32,17 +32,17 @@ void EventInfoRaidResetButton__CallbackResetDataLostBattle(
   System_String_o *v16; // x7
 
   v3 = (UnityEngine_MonoBehaviour_o *)this;
-  if ( (byte_4CC8999 & 1) == 0 )
+  if ( (byte_4D2DD0E & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&DataLostResetManager_TypeInfo);
-    sub_1C713B0(&Method_EventInfoRaidResetButton___c__CallbackResetDataLostBattle_b__9_0__);
-    this = (EventInfoRaidResetButton_o *)sub_1C713B0(&EventInfoRaidResetButton___c_TypeInfo);
-    byte_4CC8999 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&DataLostResetManager_TypeInfo);
+    sub_1C94098(&Method_EventInfoRaidResetButton___c__CallbackResetDataLostBattle_b__9_0__);
+    this = (EventInfoRaidResetButton_o *)sub_1C94098(&EventInfoRaidResetButton___c_TypeInfo);
+    byte_4D2DD0E = 1;
   }
   m_CachedPtr = v3[3].fields.m_CachedPtr;
   if ( !m_CachedPtr )
-    sub_1C71608(this, result);
+    sub_1C942F0(this, result);
   v6 = *(_DWORD *)(m_CachedPtr + 24);
   v5 = *(_DWORD *)(m_CachedPtr + 28);
   v7 = EventInfoRaidResetButton___c_TypeInfo;
@@ -60,11 +60,11 @@ void EventInfoRaidResetButton__CallbackResetDataLostBattle(
       v7 = EventInfoRaidResetButton___c_TypeInfo;
     }
     v9 = (Il2CppObject *)v7->static_fields->__9;
-    _9__9_0 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    _9__9_0 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(_9__9_0, v9, Method_EventInfoRaidResetButton___c__CallbackResetDataLostBattle_b__9_0__, 0);
     static_fields = EventInfoRaidResetButton___c_TypeInfo->static_fields;
     static_fields->__9__9_0 = _9__9_0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v11, v12, v13, v14, v15, v16);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__9_0, (int32_t)_9__9_0, v11, v12, v13, v14, v15, v16);
   }
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);
@@ -88,17 +88,17 @@ void EventInfoRaidResetButton__Initialization(
   UnityEngine_Object_o *buttonSprite; // x20
   UISprite_o *v14; // x19
 
-  if ( (byte_4CC8997 & 1) == 0 )
+  if ( (byte_4D2DD0C & 1) == 0 )
   {
-    sub_1C713B0(&AtlasManager_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_5581/*"EVENT_DATA_LOST_BATTLE_RESET_BUTTON"*/);
-    sub_1C713B0(&StringLiteral_17525/*"btn_mission_bg"*/);
-    byte_4CC8997 = 1;
+    sub_1C94098(&AtlasManager_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_5592/*"EVENT_DATA_LOST_BATTLE_RESET_BUTTON"*/);
+    sub_1C94098(&StringLiteral_17589/*"btn_mission_bg"*/);
+    byte_4D2DD0C = 1;
   }
   this->fields.uiEntity = entity;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.uiEntity,
     (int32_t)entity,
     (int32_t)method,
@@ -110,11 +110,11 @@ void EventInfoRaidResetButton__Initialization(
   buttonLabel = this->fields.buttonLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5581/*"EVENT_DATA_LOST_BATTLE_RESET_BUTTON"*/, 0);
+  v11 = LocalizationManager__Get((System_String_o *)StringLiteral_5592/*"EVENT_DATA_LOST_BATTLE_RESET_BUTTON"*/, 0);
   if ( !buttonLabel
     || (UILabel__set_text(buttonLabel, v11, 0), (v11 = (System_String_o *)this->fields.buttonLabel) == 0) )
   {
-    sub_1C71608(v11, v12);
+    sub_1C942F0(v11, v12);
   }
   UILabel__SetCondensedScale((UILabel_o *)v11, this->fields.labelWidth, 0, 0);
   buttonSprite = (UnityEngine_Object_o *)this->fields.buttonSprite;
@@ -125,7 +125,7 @@ void EventInfoRaidResetButton__Initialization(
     v14 = this->fields.buttonSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI(v14, (System_String_o *)StringLiteral_17525/*"btn_mission_bg"*/, 0);
+    AtlasManager__SetEventUI(v14, (System_String_o *)StringLiteral_17589/*"btn_mission_bg"*/, 0);
   }
 }
 
@@ -141,25 +141,25 @@ void EventInfoRaidResetButton__OnClick(EventInfoRaidResetButton_o *this, const M
   int32_t warId; // w21
   DataLostResetManager_ClickDelegate_o *v10; // x22
 
-  if ( (byte_4CC8998 & 1) == 0 )
+  if ( (byte_4D2DD0D & 1) == 0 )
   {
-    sub_1C713B0(&DataLostResetManager_ClickDelegate_TypeInfo);
-    sub_1C713B0(&DataLostResetManager_TypeInfo);
-    sub_1C713B0(&Method_EventInfoRaidResetButton_OnClick__);
-    sub_1C713B0(&Method_EventInfoRaidResetButton__OnClick_b__8_0__);
-    byte_4CC8998 = 1;
+    sub_1C94098(&DataLostResetManager_ClickDelegate_TypeInfo);
+    sub_1C94098(&DataLostResetManager_TypeInfo);
+    sub_1C94098(&Method_EventInfoRaidResetButton_OnClick__);
+    sub_1C94098(&Method_EventInfoRaidResetButton__OnClick_b__8_0__);
+    byte_4D2DD0D = 1;
   }
   v3 = Method_EventInfoRaidResetButton_OnClick__;
   if ( (*((_BYTE *)Method_EventInfoRaidResetButton_OnClick__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C713C8(Method_EventInfoRaidResetButton_OnClick__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C940B0(Method_EventInfoRaidResetButton_OnClick__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   uiEntity = this->fields.uiEntity;
   if ( !uiEntity )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   eventId = uiEntity->fields.eventId;
   warId = uiEntity->fields.warId;
-  v10 = (DataLostResetManager_ClickDelegate_o *)sub_1C715FC(DataLostResetManager_ClickDelegate_TypeInfo);
+  v10 = (DataLostResetManager_ClickDelegate_o *)sub_1C942E4(DataLostResetManager_ClickDelegate_TypeInfo);
   DataLostResetManager_ClickDelegate___ctor(
     v10,
     (Il2CppObject *)this,
@@ -178,7 +178,7 @@ void EventInfoRaidResetButton__SwitchSpotState(EventInfoRaidResetButton_o *this,
 
   button = this->fields.button;
   if ( !button || (button = UnityEngine_GameObject__get_gameObject(button, 0)) == 0 )
-    sub_1C71608(button, isOpen);
+    sub_1C942F0(button, isOpen);
   UnityEngine_GameObject__SetActive(button, !isOpen, 0);
 }
 
@@ -195,27 +195,27 @@ void EventInfoRaidResetButton___OnClick_b__8_0(
   int32_t warId; // w22
   NetworkManager_ResultCallbackFunc_o *v10; // x23
 
-  if ( (byte_4CC899A & 1) == 0 )
+  if ( (byte_4D2DD0F & 1) == 0 )
   {
-    sub_1C713B0(&DataLostResetManager_TypeInfo);
-    sub_1C713B0(&Method_EventInfoRaidResetButton_CallbackResetDataLostBattle__);
-    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C713B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    sub_1C713B0(&TerminalPramsManager_TypeInfo);
-    byte_4CC899A = 1;
+    sub_1C94098(&DataLostResetManager_TypeInfo);
+    sub_1C94098(&Method_EventInfoRaidResetButton_CallbackResetDataLostBattle__);
+    sub_1C94098(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C94098(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_1C94098(&TerminalPramsManager_TypeInfo);
+    byte_4D2DD0F = 1;
   }
   if ( resetIdx != -1 )
   {
-    Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3ABAA64 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
     if ( !Instance )
       goto LABEL_16;
     MissionNotifyManager__StartPause(Instance, 0);
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4CC45BB )
+    if ( !byte_4D299A3 )
     {
-      sub_1C713B0(&TerminalPramsManager_TypeInfo);
-      byte_4CC45BB = 1;
+      sub_1C94098(&TerminalPramsManager_TypeInfo);
+      byte_4D299A3 = 1;
     }
     Instance = (MissionNotifyManager_o *)TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -227,10 +227,10 @@ void EventInfoRaidResetButton___OnClick_b__8_0(
     uiEntity = this->fields.uiEntity;
     if ( !uiEntity )
 LABEL_16:
-      sub_1C71608(Instance, v6);
+      sub_1C942F0(Instance, v6);
     eventId = uiEntity->fields.eventId;
     warId = uiEntity->fields.warId;
-    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
+    v10 = (NetworkManager_ResultCallbackFunc_o *)sub_1C942E4(NetworkManager_ResultCallbackFunc_TypeInfo);
     NetworkManager_ResultCallbackFunc___ctor(
       v10,
       (Il2CppObject *)this,
@@ -253,15 +253,15 @@ void EventInfoRaidResetButton___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CC899B & 1) == 0 )
+  if ( (byte_4D2DD10 & 1) == 0 )
   {
-    sub_1C713B0(&EventInfoRaidResetButton___c_TypeInfo);
-    byte_4CC899B = 1;
+    sub_1C94098(&EventInfoRaidResetButton___c_TypeInfo);
+    byte_4D2DD10 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C715FC(EventInfoRaidResetButton___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C942E4(EventInfoRaidResetButton___c_TypeInfo);
   System_Object___ctor(v1, 0);
   EventInfoRaidResetButton___c_TypeInfo->static_fields->__9 = (struct EventInfoRaidResetButton___c_o *)v1;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)EventInfoRaidResetButton___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -283,10 +283,10 @@ void EventInfoRaidResetButton___c___CallbackResetDataLostBattle_b__9_0(
         EventInfoRaidResetButton___c_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CC899C & 1) == 0 )
+  if ( (byte_4D2DD11 & 1) == 0 )
   {
-    sub_1C713B0(&DataLostResetManager_TypeInfo);
-    byte_4CC899C = 1;
+    sub_1C94098(&DataLostResetManager_TypeInfo);
+    byte_4D2DD11 = 1;
   }
   if ( !DataLostResetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataLostResetManager_TypeInfo);

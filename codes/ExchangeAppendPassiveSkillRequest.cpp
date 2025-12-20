@@ -1,10 +1,3 @@
-// attributes: thunk
-void ExchangeAppendPassiveSkillRequest___ctor(ExchangeAppendPassiveSkillRequest_o *this, const MethodInfo *method)
-{
-  RequestBase___ctor((RequestBase_o *)this, method);
-}
-
-
 // local variable allocation has failed, the output may be wrong!
 void ExchangeAppendPassiveSkillRequest__beginRequest(
         ExchangeAppendPassiveSkillRequest_o *this,
@@ -17,20 +10,20 @@ void ExchangeAppendPassiveSkillRequest__beginRequest(
   const MethodInfo *v10; // x3
   const MethodInfo *v11; // x1
 
-  if ( (byte_4CC8F4E & 1) == 0 )
+  if ( (byte_4D2E3EF & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_17069/*"baseUserSvtId"*/);
-    sub_1C713B0(&StringLiteral_17064/*"baseSkillNum"*/);
-    sub_1C713B0(&StringLiteral_24116/*"targetSkillNum"*/);
-    byte_4CC8F4E = 1;
+    sub_1C94098(&StringLiteral_17129/*"baseUserSvtId"*/);
+    sub_1C94098(&StringLiteral_17124/*"baseSkillNum"*/);
+    sub_1C94098(&StringLiteral_24237/*"targetSkillNum"*/);
+    byte_4D2E3EF = 1;
   }
-  RequestBase__addField_44514616(
+  RequestBase__addField_45013228(
     (RequestBase_o *)this,
-    (System_String_o *)StringLiteral_17069/*"baseUserSvtId"*/,
+    (System_String_o *)StringLiteral_17129/*"baseUserSvtId"*/,
     baseUsrSvtId,
     *(const MethodInfo **)&baseSkillNum);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24116/*"targetSkillNum"*/, targetSkillNum, v9);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17064/*"baseSkillNum"*/, baseSkillNum, v10);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24237/*"targetSkillNum"*/, targetSkillNum, v9);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17124/*"baseSkillNum"*/, baseSkillNum, v10);
   RequestBase__beginRequest((RequestBase_o *)this, v11);
 }
 
@@ -41,16 +34,16 @@ System_String_o *ExchangeAppendPassiveSkillRequest__getURL(
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CC8F4D & 1) == 0 )
+  if ( (byte_4D2E3EE & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_17777/*"card/exchangeAppendPassiveSkill"*/);
-    byte_4CC8F4D = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&StringLiteral_17843/*"card/exchangeAppendPassiveSkill"*/);
+    byte_4D2E3EE = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_17777/*"card/exchangeAppendPassiveSkill"*/, 0);
+  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_17843/*"card/exchangeAppendPassiveSkill"*/, 0);
 }
 
 
@@ -67,12 +60,12 @@ void ExchangeAppendPassiveSkillRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4CC8F4F & 1) == 0 )
+  if ( (byte_4D2E3F0 & 1) == 0 )
   {
-    sub_1C713B0(&JsonManager_TypeInfo);
-    sub_1C713B0(&ResponseCommandKind_TypeInfo);
-    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
-    byte_4CC8F4F = 1;
+    sub_1C94098(&JsonManager_TypeInfo);
+    sub_1C94098(&ResponseCommandKind_TypeInfo);
+    sub_1C94098(&StringLiteral_22424/*"ng"*/);
+    byte_4D2E3F0 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -96,7 +89,7 @@ void ExchangeAppendPassiveSkillRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22316/*"ng"*/,
+        StringLiteral_22424/*"ng"*/,
         v11->fields.method);
   }
 }

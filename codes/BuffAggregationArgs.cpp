@@ -24,26 +24,26 @@ void BuffAggregationArgs___cctor(const MethodInfo *method)
   int64_t v22; // x6
   System_String_o *v23; // x7
 
-  if ( (byte_4CC9DE2 & 1) == 0 )
+  if ( (byte_4D2F289 & 1) == 0 )
   {
-    sub_1C713B0(&BuffAggregationArgs_TypeInfo);
-    byte_4CC9DE2 = 1;
+    sub_1C94098(&BuffAggregationArgs_TypeInfo);
+    byte_4D2F289 = 1;
   }
-  v1 = sub_1C715FC(BuffAggregationArgs_TypeInfo);
+  v1 = sub_1C942E4(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v1 + 16) = 1;
   *(_WORD *)(v1 + 18) = 257;
   System_Object___ctor((Il2CppObject *)v1, 0);
   *(_WORD *)(v1 + 16) = 256;
   BuffAggregationArgs_TypeInfo->static_fields->DisplaySet = (struct BuffAggregationArgs_o *)v1;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)BuffAggregationArgs_TypeInfo->static_fields, v1, v2, v3, v4, v5, v6, v7);
-  v8 = sub_1C715FC(BuffAggregationArgs_TypeInfo);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)BuffAggregationArgs_TypeInfo->static_fields, v1, v2, v3, v4, v5, v6, v7);
+  v8 = sub_1C942E4(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v8 + 16) = 1;
   *(_WORD *)(v8 + 18) = 257;
   System_Object___ctor((Il2CppObject *)v8, 0);
   static_fields = BuffAggregationArgs_TypeInfo->static_fields;
   static_fields->LogicSet = (struct BuffAggregationArgs_o *)v8;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->LogicSet, v8, v10, v11, v12, v13, v14, v15);
-  v16 = sub_1C715FC(BuffAggregationArgs_TypeInfo);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->LogicSet, v8, v10, v11, v12, v13, v14, v15);
+  v16 = sub_1C942E4(BuffAggregationArgs_TypeInfo);
   *(_BYTE *)(v16 + 16) = 1;
   *(_WORD *)(v16 + 18) = 257;
   System_Object___ctor((Il2CppObject *)v16, 0);
@@ -51,7 +51,7 @@ void BuffAggregationArgs___cctor(const MethodInfo *method)
   *(_BYTE *)(v16 + 19) = 0;
   v17 = BuffAggregationArgs_TypeInfo->static_fields;
   v17->EndMotionDisplaySet = (struct BuffAggregationArgs_o *)v16;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v17->EndMotionDisplaySet, v16, v18, v19, v20, v21, v22, v23);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v17->EndMotionDisplaySet, v16, v18, v19, v20, v21, v22, v23);
 }
 
 

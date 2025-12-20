@@ -7,16 +7,16 @@ void TitleInfoEventFactoryUnit___cctor(const MethodInfo *method)
   int64_t v5; // x6
   System_String_o *v6; // x7
 
-  if ( (byte_4CC5326 & 1) == 0 )
+  if ( (byte_4D2B0D7 & 1) == 0 )
   {
-    sub_1C713B0(&TitleInfoEventFactoryUnit_TypeInfo);
-    sub_1C713B0(&StringLiteral_19456/*"factory_{0}_{1}"*/);
-    byte_4CC5326 = 1;
+    sub_1C94098(&TitleInfoEventFactoryUnit_TypeInfo);
+    sub_1C94098(&StringLiteral_19542/*"factory_{0}_{1}"*/);
+    byte_4D2B0D7 = 1;
   }
-  TitleInfoEventFactoryUnit_TypeInfo->static_fields->SPRITE_NAME_ICON = (struct System_String_o *)StringLiteral_19456/*"factory_{0}_{1}"*/;
-  sub_1C71354(
+  TitleInfoEventFactoryUnit_TypeInfo->static_fields->SPRITE_NAME_ICON = (struct System_String_o *)StringLiteral_19542/*"factory_{0}_{1}"*/;
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)TitleInfoEventFactoryUnit_TypeInfo->static_fields,
-    StringLiteral_19456/*"factory_{0}_{1}"*/,
+    StringLiteral_19542/*"factory_{0}_{1}"*/,
     v1,
     v2,
     v3,
@@ -66,14 +66,14 @@ void TitleInfoEventFactoryUnit__CreateIcon(
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v32; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CC5325 & 1) == 0 )
+  if ( (byte_4D2B0D6 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
-    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_UITweener_Begin_TweenAlpha___);
-    sub_1C713B0(&Method_UITweener_Begin_TweenPosition___);
-    byte_4CC5325 = 1;
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_UITweener_Begin_TweenAlpha___);
+    sub_1C94098(&Method_UITweener_Begin_TweenPosition___);
+    byte_4D2B0D6 = 1;
   }
   if ( count >= 1 )
   {
@@ -88,7 +88,7 @@ void TitleInfoEventFactoryUnit__CreateIcon(
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v10 = UnityEngine_Object__Instantiate_object_(
               gameObject,
-              (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+              (const MethodInfo_3229578 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       iconSprite = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v10, 0, 0);
       if ( ((unsigned __int8)iconSprite & 1) != 0 )
       {
@@ -96,7 +96,7 @@ void TitleInfoEventFactoryUnit__CreateIcon(
           break;
         Component_object = UnityEngine_GameObject__GetComponent_object_(
                              (UnityEngine_GameObject_o *)v10,
-                             (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
+                             (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_UIWidget___);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
         iconSprite = (UnityEngine_Component_o *)UnityEngine_Object__op_Inequality(
@@ -121,7 +121,7 @@ void TitleInfoEventFactoryUnit__CreateIcon(
           iconSprite = (UnityEngine_Component_o *)UITweener__Begin_object_(
                                                     (UnityEngine_GameObject_o *)v10,
                                                     this->fields.lvUpAnimetionTime,
-                                                    (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenAlpha___);
+                                                    (const MethodInfo_3272360 *)Method_UITweener_Begin_TweenAlpha___);
           if ( !iconSprite )
             break;
           iconSprite[5].monitor = (void *)0x3F80000000000000LL;
@@ -132,7 +132,7 @@ void TitleInfoEventFactoryUnit__CreateIcon(
         goto LABEL_19;
     }
 LABEL_40:
-    sub_1C71608(iconSprite, *(_QWORD *)&count);
+    sub_1C942F0(iconSprite, *(_QWORD *)&count);
   }
 LABEL_19:
   lvLabel = this->fields.lvLabel;
@@ -169,7 +169,7 @@ LABEL_19:
     iconSprite = (UnityEngine_Component_o *)UITweener__Begin_object_(
                                               v19,
                                               this->fields.lvUpAnimetionTime,
-                                              (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenPosition___);
+                                              (const MethodInfo_3272360 *)Method_UITweener_Begin_TweenPosition___);
     if ( !this->fields.lvLabel )
       goto LABEL_40;
     v20 = iconSprite;
@@ -210,7 +210,7 @@ LABEL_19:
     iconSprite = (UnityEngine_Component_o *)UITweener__Begin_object_(
                                               v27,
                                               this->fields.lvUpAnimetionTime,
-                                              (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenPosition___);
+                                              (const MethodInfo_3272360 *)Method_UITweener_Begin_TweenPosition___);
     if ( !this->fields.lvLeftLabel )
       goto LABEL_40;
     v28 = iconSprite;
@@ -258,7 +258,7 @@ UnityEngine_Vector3_o TitleInfoEventFactoryUnit__GetLvUpEffectOffset(
     || (result = UnityEngine_Transform__get_localPosition((UnityEngine_Transform_o *)grid, 0),
         (v4 = this->fields.grid) == 0) )
   {
-    sub_1C71608(grid, method);
+    sub_1C942F0(grid, method);
   }
   v5 = result.fields.x + (float)(v4->fields.cellWidth * (float)this->fields.lv);
   result.fields.x = v5;
@@ -293,12 +293,12 @@ void TitleInfoEventFactoryUnit__Open(
   int32_t v17; // [xsp+8h] [xbp-38h] BYREF
   int32_t v18; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CC5324 & 1) == 0 )
+  if ( (byte_4D2B0D5 & 1) == 0 )
   {
-    sub_1C713B0(&AtlasManager_TypeInfo);
-    sub_1C713B0(&int_TypeInfo);
-    sub_1C713B0(&TitleInfoEventFactoryUnit_TypeInfo);
-    byte_4CC5324 = 1;
+    sub_1C94098(&AtlasManager_TypeInfo);
+    sub_1C94098(&int_TypeInfo);
+    sub_1C94098(&TitleInfoEventFactoryUnit_TypeInfo);
+    byte_4D2B0D5 = 1;
   }
   if ( lv >= 1 && this->fields.lv <= 0 )
   {
@@ -314,7 +314,7 @@ void TitleInfoEventFactoryUnit__Open(
     v11 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v18);
     v17 = factoryId;
     v12 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v17);
-    v13 = System_String__Format_64073032(SPRITE_NAME_ICON, v11, v12, 0);
+    v13 = System_String__Format_64459052(SPRITE_NAME_ICON, v11, v12, 0);
     iconSprite = this->fields.iconSprite;
     v15 = v13;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )

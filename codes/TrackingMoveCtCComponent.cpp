@@ -3,10 +3,10 @@ void TrackingMoveCtCComponent___ctor(TrackingMoveCtCComponent_o *this, const Met
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( !byte_4CC0D09 )
+  if ( !byte_4D25F19 )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D09 = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->zeroVector.fields.z;
@@ -41,10 +41,10 @@ UnityEngine_Vector3_o TrackingMoveCtCComponent__GetAdjustedPosInScreen(
   z = currentTargetPos.fields.z;
   y = currentTargetPos.fields.y;
   x = currentTargetPos.fields.x;
-  if ( (byte_4CCAC7C & 1) == 0 )
+  if ( (byte_4D3014C & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC7C = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D3014C = 1;
   }
   adjustPosInScreenComp = (UnityEngine_Object_o *)this->fields.adjustPosInScreenComp;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -97,7 +97,7 @@ UnityEngine_Vector3_o TrackingMoveCtCComponent__GetAdjustedPosInScreen(
           }
         }
       }
-      sub_1C71608(IsOffScreen, v9);
+      sub_1C942F0(IsOffScreen, v9);
     }
   }
 LABEL_14:
@@ -167,7 +167,7 @@ void TrackingMoveCtCComponent__Set(
   y = d.fields.y;
   x = d.fields.x;
   v15 = isLate;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.before,
     (int32_t)a,
     (int32_t)b,
@@ -177,17 +177,17 @@ void TrackingMoveCtCComponent__Set(
     v7,
     v8);
   this->fields.after = b;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.after, (int32_t)b, v16, v17, v18, v19, v20, v21);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.after, (int32_t)b, v16, v17, v18, v19, v20, v21);
   this->fields.targetObject = c;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.targetObject, (int32_t)c, v22, v23, v24, v25, v26, v27);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.targetObject, (int32_t)c, v22, v23, v24, v25, v26, v27);
   this->fields.addpos.fields.x = x;
   this->fields.addpos.fields.y = y;
   this->fields.addpos.fields.z = z;
   this->fields.isLateUpdate = v15;
-  if ( !byte_4CC0D09 )
+  if ( !byte_4D25F19 )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D09 = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   v35 = *(_QWORD *)&static_fields->zeroVector.fields.x;
@@ -196,9 +196,9 @@ void TrackingMoveCtCComponent__Set(
   *(_QWORD *)&this->fields.offset2D.fields.offset.fields.x = v35;
   this->fields.offset2D.fields.offset.fields.z = v36;
   this->fields.adjustPosInScreenComp = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenComp, 0, v28, v29, v30, v31, v32, v33);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenComp, 0, v28, v29, v30, v31, v32, v33);
   this->fields.adjustPosInScreenArg = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenArg, 0, v37, v38, v39, v40, v41, v42);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenArg, 0, v37, v38, v39, v40, v41, v42);
 }
 
 
@@ -226,13 +226,13 @@ void TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
   System_String_o *v22; // x7
   UnityEngine_Vector3_o position; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CCAC7A & 1) == 0 )
+  if ( (byte_4D3014A & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC7A = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D3014A = 1;
   }
   this->fields.adjustPosInScreenComp = adjustComp;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenComp,
     (int32_t)adjustComp,
     (int32_t)adjustArg,
@@ -258,7 +258,7 @@ void TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
           || (v15 = this->fields.before,
               (transform = (UnityEngine_GameObject_o *)UnityEngine_GameObject__get_transform(transform, 0)) == 0) )
         {
-          sub_1C71608(transform, v13);
+          sub_1C942F0(transform, v13);
         }
         position = UnityEngine_Transform__get_position((UnityEngine_Transform_o *)transform, 0);
         position.fields.x = position.fields.x + this->fields.addpos.fields.x;
@@ -266,7 +266,7 @@ void TrackingMoveCtCComponent__SetAdjustPosInScreenInfo(
         position.fields.z = position.fields.z + this->fields.addpos.fields.z;
         v16 = AdjustPopupPosInScreenArgument__Init(adjustArg, v15, position, 0);
         this->fields.adjustPosInScreenArg = v16;
-        sub_1C71354(
+        sub_1C9403C(
           (GrandQuestFolderBoardItem_o *)&this->fields.adjustPosInScreenArg,
           (int32_t)v16,
           v17,
@@ -332,10 +332,10 @@ void TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *this, const
   UnityEngine_Vector3_o v29; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v30; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CCAC7B & 1) == 0 )
+  if ( (byte_4D3014B & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC7B = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D3014B = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -356,7 +356,7 @@ void TrackingMoveCtCComponent__upDatePos(TrackingMoveCtCComponent_o *this, const
     AdjustedPosInScreen = TrackingMoveCtCComponent__GetAdjustedPosInScreen(this, position, v7);
     if ( !before )
       goto LABEL_24;
-    v25 = UnityEngine_Camera__WorldToViewportPoint_71529188(before, AdjustedPosInScreen, 0);
+    v25 = UnityEngine_Camera__WorldToViewportPoint_71915552(before, AdjustedPosInScreen, 0);
     transform = (UnityEngine_GameObject_o *)this->fields.before;
     if ( !transform )
       goto LABEL_24;
@@ -410,7 +410,7 @@ LABEL_14:
         v26.fields.x = x;
         v26.fields.y = v15;
         v26.fields.z = z;
-        v27 = UnityEngine_Camera__ViewportToWorldPoint_71529196((UnityEngine_Camera_o *)transform, v26, 0);
+        v27 = UnityEngine_Camera__ViewportToWorldPoint_71915560((UnityEngine_Camera_o *)transform, v26, 0);
         v16 = v27.fields.x;
         v17 = v27.fields.y;
         v18 = v27.fields.z;
@@ -425,7 +425,7 @@ LABEL_14:
         }
       }
 LABEL_24:
-      sub_1C71608(transform, v4);
+      sub_1C942F0(transform, v4);
     }
     x = x + this->fields.offset2D.fields.offset.fields.x;
     v15 = v15 + this->fields.offset2D.fields.offset.fields.y;

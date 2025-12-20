@@ -8,18 +8,18 @@ void ScriptBackLog___ctor(ScriptBackLog_o *this, const MethodInfo *method)
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CC9365 & 1) == 0 )
+  if ( (byte_4D2E7FF & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
-    byte_4CC9365 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
+    byte_4D2E7FF = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_ScriptMessageLabel__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_ScriptMessageLabel___ctor__);
   this->fields.logData = (struct System_Collections_Generic_List_ScriptMessageLabel__o *)v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.logData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.logData, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -38,10 +38,10 @@ void ScriptBackLog__AddLog(ScriptBackLog_o *this, ScriptMessageLabel_o *label, c
   Il2CppClass **v14; // x8
   float LogRangeY; // s0
 
-  if ( (byte_4CC9362 & 1) == 0 )
+  if ( (byte_4D2E7FC & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_ScriptMessageLabel__Add__);
-    byte_4CC9362 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel__Add__);
+    byte_4D2E7FC = 1;
   }
   logData = (System_Collections_Generic_List_object__o *)this->fields.logData;
   if ( !logData )
@@ -57,18 +57,18 @@ void ScriptBackLog__AddLog(ScriptBackLog_o *this, ScriptMessageLabel_o *label, c
     System_Collections_Generic_List_object___AddWithResize(
       logData,
       (Il2CppObject *)label,
-      *(const MethodInfo_3810718 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = &items->obj.klass + size;
     logData->fields._size = size + 1;
     v14[4] = (Il2CppClass *)label;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)(v14 + 4), (int32_t)label, (int32_t)method, v3, v4, v5, v6, v7);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v14 + 4), (int32_t)label, (int32_t)method, v3, v4, v5, v6, v7);
   }
   if ( !label )
 LABEL_12:
-    sub_1C71608(logData, label);
+    sub_1C942F0(logData, label);
   LogRangeY = ScriptMessageLabel__GetLogRangeY(label, 0);
   if ( LogRangeY < this->fields.maxRangeY )
     this->fields.maxRangeY = LogRangeY;
@@ -83,14 +83,14 @@ void ScriptBackLog__ClearLog(ScriptBackLog_o *this, const MethodInfo *method)
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4CC9360 & 1) == 0 )
+  if ( (byte_4D2E7FA & 1) == 0 )
   {
-    this = (ScriptBackLog_o *)sub_1C713B0(&Method_System_Collections_Generic_List_ScriptMessageLabel__Clear__);
-    byte_4CC9360 = 1;
+    this = (ScriptBackLog_o *)sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel__Clear__);
+    byte_4D2E7FA = 1;
   }
   logData = v2->fields.logData;
   if ( !logData )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   size = logData->fields._size;
   v5 = logData->fields._version + 1;
   logData->fields._size = 0;
@@ -113,10 +113,10 @@ void ScriptBackLog__Close(ScriptBackLog_o *this, const MethodInfo *method)
   struct ScriptBackLogListViewManager_o *listViewManager; // x20
 
   v8 = this;
-  if ( (byte_4CC935E & 1) == 0 )
+  if ( (byte_4D2E7F8 & 1) == 0 )
   {
-    this = (ScriptBackLog_o *)sub_1C713B0(&SoundManager_TypeInfo);
-    byte_4CC935E = 1;
+    this = (ScriptBackLog_o *)sub_1C94098(&SoundManager_TypeInfo);
+    byte_4D2E7F8 = 1;
   }
   if ( v8->fields._IsReplayingVoice_k__BackingField )
   {
@@ -127,11 +127,11 @@ void ScriptBackLog__Close(ScriptBackLog_o *this, const MethodInfo *method)
   listViewManager = v8->fields.listViewManager;
   if ( !listViewManager
     || (listViewManager->fields.clickFunc = 0,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)&listViewManager->fields.clickFunc, 0, v2, v3, v4, v5, v6, v7),
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)&listViewManager->fields.clickFunc, 0, v2, v3, v4, v5, v6, v7),
         ListViewManager__DestroyList((ListViewManager_o *)listViewManager, 0),
         (this = (ScriptBackLog_o *)v8->fields.rootObject) == 0) )
   {
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -143,22 +143,22 @@ void ScriptBackLog__EraseLog(ScriptBackLog_o *this, int32_t startIndex, const Me
   System_Collections_Generic_List_object__o *logData; // x0
   int32_t size; // w8
 
-  if ( (byte_4CC9361 & 1) == 0 )
+  if ( (byte_4D2E7FB & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_ScriptMessageLabel__RemoveRange__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
-    byte_4CC9361 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel__RemoveRange__);
+    sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
+    byte_4D2E7FB = 1;
   }
   logData = (System_Collections_Generic_List_object__o *)this->fields.logData;
   if ( !logData )
-    sub_1C71608(0, *(_QWORD *)&startIndex);
+    sub_1C942F0(0, *(_QWORD *)&startIndex);
   size = logData->fields._size;
   if ( size >= startIndex )
     System_Collections_Generic_List_object___RemoveRange(
       logData,
       startIndex,
       size - startIndex,
-      (const MethodInfo_3811F84 *)Method_System_Collections_Generic_List_ScriptMessageLabel__RemoveRange__);
+      (const MethodInfo_386C6A0 *)Method_System_Collections_Generic_List_ScriptMessageLabel__RemoveRange__);
 }
 
 
@@ -168,14 +168,14 @@ int32_t ScriptBackLog__GetCount(ScriptBackLog_o *this, const MethodInfo *method)
   struct System_Collections_Generic_List_ScriptMessageLabel__o *logData; // x8
 
   v2 = this;
-  if ( (byte_4CC9364 & 1) == 0 )
+  if ( (byte_4D2E7FE & 1) == 0 )
   {
-    this = (ScriptBackLog_o *)sub_1C713B0(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
-    byte_4CC9364 = 1;
+    this = (ScriptBackLog_o *)sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
+    byte_4D2E7FE = 1;
   }
   logData = v2->fields.logData;
   if ( !logData )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return logData->fields._size;
 }
 
@@ -186,14 +186,14 @@ bool ScriptBackLog__IsEmptyLog(ScriptBackLog_o *this, const MethodInfo *method)
   struct System_Collections_Generic_List_ScriptMessageLabel__o *logData; // x8
 
   v2 = this;
-  if ( (byte_4CC935F & 1) == 0 )
+  if ( (byte_4D2E7F9 & 1) == 0 )
   {
-    this = (ScriptBackLog_o *)sub_1C713B0(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
-    byte_4CC935F = 1;
+    this = (ScriptBackLog_o *)sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel__get_Count__);
+    byte_4D2E7F9 = 1;
   }
   logData = v2->fields.logData;
   if ( !logData )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return logData->fields._size < 1;
 }
 
@@ -204,7 +204,7 @@ bool ScriptBackLog__IsOpen(ScriptBackLog_o *this, const MethodInfo *method)
 
   rootObject = this->fields.rootObject;
   if ( !rootObject )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   return UnityEngine_GameObject__get_activeSelf(rootObject, 0);
 }
 
@@ -252,22 +252,22 @@ void ScriptBackLog__Open(ScriptBackLog_o *this, ScriptBackLog_ClickDelegate_o *f
   const MethodInfo *v31; // x3
   const MethodInfo *v32; // x3
 
-  if ( (byte_4CC935D & 1) == 0 )
+  if ( (byte_4D2E7F7 & 1) == 0 )
   {
-    sub_1C713B0(&ScriptBackLogListViewManager_ClickDelegate_TypeInfo);
-    sub_1C713B0(&Method_ScriptBackLog_OnClickEnd__);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC935D = 1;
+    sub_1C94098(&ScriptBackLogListViewManager_ClickDelegate_TypeInfo);
+    sub_1C94098(&Method_ScriptBackLog_OnClickEnd__);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2E7F7 = 1;
   }
   rootObject = this->fields.rootObject;
   if ( !rootObject )
     goto LABEL_7;
   UnityEngine_GameObject__SetActive(rootObject, 1, 0);
   this->fields.clickFunc = func;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v6, v7, v8, v9, v10, v11);
   v12 = StringLiteral_1/*""*/;
   this->fields._ReplayingAssetName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ReplayingAssetName_k__BackingField,
     v12,
     v13,
@@ -278,7 +278,7 @@ void ScriptBackLog__Open(ScriptBackLog_o *this, ScriptBackLog_ClickDelegate_o *f
     v18);
   v19 = StringLiteral_1/*""*/;
   this->fields._ReplayingObjectName_k__BackingField = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ReplayingObjectName_k__BackingField,
     v19,
     v20,
@@ -291,20 +291,20 @@ void ScriptBackLog__Open(ScriptBackLog_o *this, ScriptBackLog_ClickDelegate_o *f
   listViewManager = this->fields.listViewManager;
   logData = this->fields.logData;
   maxRangeY = this->fields.maxRangeY;
-  v29 = (ScriptBackLogListViewManager_ClickDelegate_o *)sub_1C715FC(ScriptBackLogListViewManager_ClickDelegate_TypeInfo);
+  v29 = (ScriptBackLogListViewManager_ClickDelegate_o *)sub_1C942E4(ScriptBackLogListViewManager_ClickDelegate_TypeInfo);
   ScriptBackLogListViewManager_ClickDelegate___ctor(v29, (Il2CppObject *)this, Method_ScriptBackLog_OnClickEnd__, v30);
   if ( !listViewManager
     || (ScriptBackLogListViewManager__CreateList(listViewManager, logData, maxRangeY, v29, v31),
         (rootObject = (UnityEngine_GameObject_o *)this->fields.listViewManager) == 0) )
   {
 LABEL_7:
-    sub_1C71608(rootObject, func);
+    sub_1C942F0(rootObject, func);
   }
-  ScriptBackLogListViewManager__SetMode_45078228((ScriptBackLogListViewManager_o *)rootObject, 1, 0, v32);
+  ScriptBackLogListViewManager__SetMode_45577812((ScriptBackLogListViewManager_o *)rootObject, 1, 0, v32);
 }
 
 
-void ScriptBackLog__Open_45074996(ScriptBackLog_o *this, const MethodInfo *method)
+void ScriptBackLog__Open_45574580(ScriptBackLog_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -320,32 +320,32 @@ void ScriptBackLog__StopAllPlayVoiceAnimation(ScriptBackLog_o *this, const Metho
   Il2CppObject *current; // x20
   System_Collections_Generic_List_Enumerator_object__o v7; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CC9363 & 1) == 0 )
+  if ( (byte_4D2E7FD & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__get_Current__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
-    byte_4CC9363 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__get_Current__);
+    sub_1C94098(&Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
+    byte_4D2E7FD = 1;
   }
   memset(&v7, 0, sizeof(v7));
   logData = (System_Collections_Generic_List_object__o *)this->fields.logData;
   if ( !logData )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v7,
     logData,
-    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
+    (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_ScriptMessageLabel__GetEnumerator__);
   while ( 1 )
   {
     v4 = System_Collections_Generic_List_Enumerator_object___MoveNext(
            &v7,
-           (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
+           (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__MoveNext__);
     if ( !v4 )
       break;
     current = v7.fields._current;
     if ( !v7.fields._current )
-      sub_1C71608(v4, v5);
+      sub_1C942F0(v4, v5);
     if ( !System_String__op_Equality(
             *(System_String_o **)((char *)&v7.fields._current->klass + (unsigned __int64)&qword_90),
             this->fields._ReplayingAssetName_k__BackingField,
@@ -360,7 +360,7 @@ void ScriptBackLog__StopAllPlayVoiceAnimation(ScriptBackLog_o *this, const Metho
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v7,
-    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
+    (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_ScriptMessageLabel__Dispose__);
 }
 
 
@@ -397,7 +397,7 @@ void ScriptBackLog__set_ReplayingAssetName(ScriptBackLog_o *this, System_String_
   System_String_o *v7; // x7
 
   this->fields._ReplayingAssetName_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ReplayingAssetName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -418,7 +418,7 @@ void ScriptBackLog__set_ReplayingObjectName(ScriptBackLog_o *this, System_String
   System_String_o *v7; // x7
 
   this->fields._ReplayingObjectName_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ReplayingObjectName_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -449,7 +449,7 @@ void ScriptBackLog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -460,12 +460,12 @@ void ScriptBackLog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v14, 0);
+      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -477,9 +477,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA8B40;
+  this->fields.invoke_impl = (intptr_t)sub_1ACA024;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA8B00;
+  this->fields.extra_arg = (intptr_t)sub_1AC9FE4;
 }
 
 
@@ -492,7 +492,7 @@ System_IAsyncResult_o *ScriptBackLog_ClickDelegate__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C71364(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, &v5, callback, object);
 }
 
 
@@ -501,7 +501,7 @@ void ScriptBackLog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C71368(result, 0, method);
+  sub_1C94050(result, 0, method);
 }
 
 

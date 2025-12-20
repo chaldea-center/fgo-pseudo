@@ -1,14 +1,14 @@
 void SelectBonusBaseMaster___ctor(SelectBonusBaseMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC7C0D & 1) == 0 )
+  if ( (byte_4D2D099 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataMasterBase_SelectBonusBaseMaster__SelectBonusBaseEntity__int___ctor__);
-    byte_4CC7C0D = 1;
+    sub_1C94098(&Method_DataMasterBase_SelectBonusBaseMaster__SelectBonusBaseEntity__int___ctor__);
+    byte_4D2D099 = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     525,
-    (const MethodInfo_3406B5C *)Method_DataMasterBase_SelectBonusBaseMaster__SelectBonusBaseEntity__int___ctor__);
+    (const MethodInfo_345919C *)Method_DataMasterBase_SelectBonusBaseMaster__SelectBonusBaseEntity__int___ctor__);
 }
 
 
@@ -51,34 +51,34 @@ void SelectBonusBaseMaster__OpenSelectBonusConfirmDialog(
   CommonUI_o *v42; // x23
   SelectBonusConfirmDialog_CallbackFunc_o *v43; // x24
 
-  if ( (byte_4CC7C0B & 1) == 0 )
+  if ( (byte_4D2D097 & 1) == 0 )
   {
-    sub_1C713B0(&SelectBonusConfirmDialog_CallbackFunc_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&Method_SelectBonusBaseMaster___c__DisplayClass1_0__OpenSelectBonusConfirmDialog_b__0__);
-    sub_1C713B0(&SelectBonusBaseMaster___c__DisplayClass1_0_TypeInfo);
-    byte_4CC7C0B = 1;
+    sub_1C94098(&SelectBonusConfirmDialog_CallbackFunc_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&Method_SelectBonusBaseMaster___c__DisplayClass1_0__OpenSelectBonusConfirmDialog_b__0__);
+    sub_1C94098(&SelectBonusBaseMaster___c__DisplayClass1_0_TypeInfo);
+    byte_4D2D097 = 1;
   }
-  v17 = sub_1C715FC(SelectBonusBaseMaster___c__DisplayClass1_0_TypeInfo);
+  v17 = sub_1C942E4(SelectBonusBaseMaster___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   if ( !v17 )
     goto LABEL_6;
   *(_QWORD *)(v17 + 16) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 16), (int32_t)this, v20, v21, v22, v23, v24, v25);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v17 + 16), (int32_t)this, v20, v21, v22, v23, v24, v25);
   *(_DWORD *)(v17 + 24) = eventId;
   *(_QWORD *)(v17 + 32) = endCallback;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 32), (int32_t)endCallback, v26, v27, v28, v29, v30, v31);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v17 + 32), (int32_t)endCallback, v26, v27, v28, v29, v30, v31);
   *(_QWORD *)(v17 + 40) = bonusGetMessage;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 40), (int32_t)bonusGetMessage, v32, v33, v34, v35, v36, v37);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v17 + 40), (int32_t)bonusGetMessage, v32, v33, v34, v35, v36, v37);
   *(_DWORD *)(v17 + 48) = giftType;
   *(_DWORD *)(v17 + 52) = giftObjectId;
   *(_DWORD *)(v17 + 56) = resultIndex;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v40 = *(_DWORD *)(v17 + 52);
   v39 = *(_DWORD *)(v17 + 56);
   v41 = *(_DWORD *)(v17 + 48);
   v42 = (CommonUI_o *)Instance;
-  v43 = (SelectBonusConfirmDialog_CallbackFunc_o *)sub_1C715FC(SelectBonusConfirmDialog_CallbackFunc_TypeInfo);
+  v43 = (SelectBonusConfirmDialog_CallbackFunc_o *)sub_1C942E4(SelectBonusConfirmDialog_CallbackFunc_TypeInfo);
   SelectBonusConfirmDialog_CallbackFunc___ctor(
     v43,
     (Il2CppObject *)v17,
@@ -86,7 +86,7 @@ void SelectBonusBaseMaster__OpenSelectBonusConfirmDialog(
     0);
   if ( !v42 )
 LABEL_6:
-    sub_1C71608(v18, v19);
+    sub_1C942F0(v18, v19);
   CommonUI__OpenSelectBonusConfirmDialog(v42, dialogName, v39, v41, v40, v43, 0);
 }
 
@@ -133,43 +133,43 @@ void SelectBonusBaseMaster__OpenSelectBonusDialog(
   CommonUI_o *v40; // x20
   SelectBonusDialog_CallbackFunc_o *v41; // x22
 
-  if ( (byte_4CC7C0A & 1) == 0 )
+  if ( (byte_4D2D096 & 1) == 0 )
   {
-    sub_1C713B0(&SelectBonusDialog_CallbackFunc_TypeInfo);
-    sub_1C713B0(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_SelectBonusBaseMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_SelectBonusMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_DataMasterBase_SelectBonusBaseMaster__SelectBonusBaseEntity__int__TryGetEntity__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_SelectBonusEntity__get_Count__);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&Method_SelectBonusBaseMaster___c__DisplayClass0_0__OpenSelectBonusDialog_b__0__);
-    sub_1C713B0(&SelectBonusBaseMaster___c__DisplayClass0_0_TypeInfo);
-    byte_4CC7C0A = 1;
+    sub_1C94098(&SelectBonusDialog_CallbackFunc_TypeInfo);
+    sub_1C94098(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_SelectBonusBaseMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_SelectBonusMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_DataMasterBase_SelectBonusBaseMaster__SelectBonusBaseEntity__int__TryGetEntity__);
+    sub_1C94098(&Method_System_Collections_Generic_List_SelectBonusEntity__get_Count__);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&Method_SelectBonusBaseMaster___c__DisplayClass0_0__OpenSelectBonusDialog_b__0__);
+    sub_1C94098(&SelectBonusBaseMaster___c__DisplayClass0_0_TypeInfo);
+    byte_4D2D096 = 1;
   }
-  v7 = sub_1C715FC(SelectBonusBaseMaster___c__DisplayClass0_0_TypeInfo);
+  v7 = sub_1C942E4(SelectBonusBaseMaster___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_19;
   *(_QWORD *)(v7 + 24) = endCallback;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)endCallback, v10, v11, v12, v13, v14, v15);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)endCallback, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 48) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)this, v16, v17, v18, v19, v20, v21);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 48), (int32_t)this, v16, v17, v18, v19, v20, v21);
   *(_DWORD *)(v7 + 56) = eventId;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_SelectBonusBaseMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SelectBonusBaseMaster___);
   if ( !Master_object )
     goto LABEL_19;
   if ( DataMasterBase_object__object__int___TryGetEntity(
          (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
          (Il2CppObject **)(v7 + 40),
          *(_DWORD *)(v7 + 56),
-         (const MethodInfo_3408ECC *)Method_DataMasterBase_SelectBonusBaseMaster__SelectBonusBaseEntity__int__TryGetEntity__) )
+         (const MethodInfo_345B50C *)Method_DataMasterBase_SelectBonusBaseMaster__SelectBonusBaseEntity__int__TryGetEntity__) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_SelectBonusMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SelectBonusMaster___);
     if ( !Master_object )
       goto LABEL_19;
     SelectBonusEntitiesByEventId = SelectBonusMaster__GetSelectBonusEntitiesByEventId(
@@ -177,7 +177,7 @@ void SelectBonusBaseMaster__OpenSelectBonusDialog(
                                      *(_DWORD *)(v7 + 56),
                                      v22);
     *(_QWORD *)(v7 + 16) = SelectBonusEntitiesByEventId;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)(v7 + 16),
       (int32_t)SelectBonusEntitiesByEventId,
       v24,
@@ -193,16 +193,16 @@ void SelectBonusBaseMaster__OpenSelectBonusDialog(
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        v31 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_GiftMaster___);
+        v31 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_GiftMaster___);
         *(_QWORD *)(v7 + 32) = v31;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)v31, v32, v33, v34, v35, v36, v37);
-        Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 32), (int32_t)v31, v32, v33, v34, v35, v36, v37);
+        Master_object = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         v38 = *(_QWORD *)(v7 + 40);
         if ( v38 )
         {
           v39 = *(System_String_o **)(v38 + 24);
           v40 = (CommonUI_o *)Master_object;
-          v41 = (SelectBonusDialog_CallbackFunc_o *)sub_1C715FC(SelectBonusDialog_CallbackFunc_TypeInfo);
+          v41 = (SelectBonusDialog_CallbackFunc_o *)sub_1C942E4(SelectBonusDialog_CallbackFunc_TypeInfo);
           SelectBonusDialog_CallbackFunc___ctor(
             v41,
             (Il2CppObject *)v7,
@@ -215,7 +215,7 @@ void SelectBonusBaseMaster__OpenSelectBonusDialog(
           }
         }
 LABEL_19:
-        sub_1C71608(Master_object, v9);
+        sub_1C942F0(Master_object, v9);
       }
     }
   }
@@ -240,21 +240,21 @@ void SelectBonusBaseMaster__UpdateGiftBadgeNum(SelectBonusBaseMaster_o *this, co
   __int64 v14; // x11
   __int64 v15; // x11
 
-  if ( (byte_4CC7C0C & 1) == 0 )
+  if ( (byte_4D2D098 & 1) == 0 )
   {
-    sub_1C713B0(&CombineRootComponent_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&ShopRootComponent_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
-    byte_4CC7C0C = 1;
+    sub_1C94098(&CombineRootComponent_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&ShopRootComponent_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    sub_1C94098(&TerminalSceneComponent_TypeInfo);
+    byte_4D2D098 = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CC12CE )
+  if ( !byte_4D264E4 )
   {
-    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
-    byte_4CC12CE = 1;
+    sub_1C94098(&TerminalSceneComponent_TypeInfo);
+    byte_4D264E4 = 1;
   }
   v2 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -269,10 +269,10 @@ void SelectBonusBaseMaster__UpdateGiftBadgeNum(SelectBonusBaseMaster_o *this, co
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4CC12CE )
+    if ( !byte_4D264E4 )
     {
-      sub_1C713B0(&TerminalSceneComponent_TypeInfo);
-      byte_4CC12CE = 1;
+      sub_1C94098(&TerminalSceneComponent_TypeInfo);
+      byte_4D264E4 = 1;
     }
     Instance = (GiftButtonCtrl_o *)TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -293,10 +293,10 @@ void SelectBonusBaseMaster__UpdateGiftBadgeNum(SelectBonusBaseMaster_o *this, co
     {
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      if ( !byte_4CC12CE )
+      if ( !byte_4D264E4 )
       {
-        sub_1C713B0(&TerminalSceneComponent_TypeInfo);
-        byte_4CC12CE = 1;
+        sub_1C94098(&TerminalSceneComponent_TypeInfo);
+        byte_4D264E4 = 1;
       }
       Instance = (GiftButtonCtrl_o *)TerminalSceneComponent_TypeInfo;
       if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -319,11 +319,11 @@ void SelectBonusBaseMaster__UpdateGiftBadgeNum(SelectBonusBaseMaster_o *this, co
         }
       }
 LABEL_42:
-      sub_1C71608(Instance, v4);
+      sub_1C942F0(Instance, v4);
     }
   }
 LABEL_33:
-  Instance = (GiftButtonCtrl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = (GiftButtonCtrl_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
     goto LABEL_42;
   giftButton = (CombineRootComponent_o *)Instance->fields.giftButton;
@@ -360,15 +360,15 @@ void SelectBonusBaseMaster___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CC7C0E & 1) == 0 )
+  if ( (byte_4D2D09A & 1) == 0 )
   {
-    sub_1C713B0(&SelectBonusBaseMaster___c_TypeInfo);
-    byte_4CC7C0E = 1;
+    sub_1C94098(&SelectBonusBaseMaster___c_TypeInfo);
+    byte_4D2D09A = 1;
   }
-  v1 = (Il2CppObject *)sub_1C715FC(SelectBonusBaseMaster___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C942E4(SelectBonusBaseMaster___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SelectBonusBaseMaster___c_TypeInfo->static_fields->__9 = (struct SelectBonusBaseMaster___c_o *)v1;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)SelectBonusBaseMaster___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -393,14 +393,14 @@ void SelectBonusBaseMaster___c___OpenSelectBonusConfirmDialog_b__1_3(
   Il2CppObject *Instance; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CC7C0F & 1) == 0 )
+  if ( (byte_4D2D09B & 1) == 0 )
   {
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CC7C0F = 1;
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4D2D09B = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
-    sub_1C71608(0, v3);
+    sub_1C942F0(0, v3);
   CommonUI__ReleaseSelectBonusDialogAsset((CommonUI_o *)Instance, 0);
 }
 
@@ -429,32 +429,32 @@ void SelectBonusBaseMaster___c__DisplayClass0_0___OpenSelectBonusDialog_b__0(
   struct SelectBonusBaseEntity_o *selectBonusBaseEnt; // x8
   const MethodInfo *v14; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_4CC7C10 & 1) == 0 )
+  if ( (byte_4D2D09C & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_SelectBonusEntity___);
-    sub_1C713B0(&System_Func_SelectBonusEntity__bool__TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&Method_SelectBonusBaseMaster___c__DisplayClass0_1__OpenSelectBonusDialog_b__1__);
-    sub_1C713B0(&SelectBonusBaseMaster___c__DisplayClass0_1_TypeInfo);
-    byte_4CC7C10 = 1;
+    sub_1C94098(&Method_System_Linq_Enumerable_FirstOrDefault_SelectBonusEntity___);
+    sub_1C94098(&System_Func_SelectBonusEntity__bool__TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&Method_SelectBonusBaseMaster___c__DisplayClass0_1__OpenSelectBonusDialog_b__1__);
+    sub_1C94098(&SelectBonusBaseMaster___c__DisplayClass0_1_TypeInfo);
+    byte_4D2D09C = 1;
   }
-  v5 = sub_1C715FC(SelectBonusBaseMaster___c__DisplayClass0_1_TypeInfo);
+  v5 = sub_1C942E4(SelectBonusBaseMaster___c__DisplayClass0_1_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_14;
   *(_DWORD *)(v5 + 16) = resultIndex;
   selectBonusList = this->fields.selectBonusList;
-  v9 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_SelectBonusEntity__bool__TypeInfo);
+  v9 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_SelectBonusEntity__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v9,
     (Il2CppObject *)v5,
     Method_SelectBonusBaseMaster___c__DisplayClass0_1__OpenSelectBonusDialog_b__1__,
     0);
-  v10 = System_Linq_Enumerable__FirstOrDefault_object__51858576(
+  v10 = System_Linq_Enumerable__FirstOrDefault_object__52191056(
           (System_Collections_Generic_IEnumerable_TSource__o *)selectBonusList,
           (System_Func_TSource__bool__o *)v9,
-          (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_SelectBonusEntity___);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+          (const MethodInfo_31C5F50 *)Method_System_Linq_Enumerable_FirstOrDefault_SelectBonusEntity___);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_14;
   CommonUI__CloseSelectBonusDialog((CommonUI_o *)Instance, 0);
@@ -471,7 +471,7 @@ void SelectBonusBaseMaster___c__DisplayClass0_0___OpenSelectBonusDialog_b__0(
         (selectBonusBaseEnt = this->fields.selectBonusBaseEnt) == 0 || (Instance = this->fields.__4__this) == 0) )
   {
 LABEL_14:
-    sub_1C71608(Instance, v7);
+    sub_1C942F0(Instance, v7);
   }
   SelectBonusBaseMaster__OpenSelectBonusConfirmDialog(
     (SelectBonusBaseMaster_o *)Instance,
@@ -500,7 +500,7 @@ bool SelectBonusBaseMaster___c__DisplayClass0_1___OpenSelectBonusDialog_b__1(
         const MethodInfo *method)
 {
   if ( !e )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return e->fields.idx == this->fields.resultIndex;
 }
 
@@ -529,16 +529,16 @@ void SelectBonusBaseMaster___c__DisplayClass1_0___OpenSelectBonusConfirmDialog_b
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4CC7C11 & 1) == 0 )
+  if ( (byte_4D2D09D & 1) == 0 )
   {
-    sub_1C713B0(&Method_NetworkManager_getRequest_EventScriptFlagRequest___);
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&Method_SelectBonusBaseMaster___c__DisplayClass1_0__OpenSelectBonusConfirmDialog_b__1__);
-    byte_4CC7C11 = 1;
+    sub_1C94098(&Method_NetworkManager_getRequest_EventScriptFlagRequest___);
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&Method_SelectBonusBaseMaster___c__DisplayClass1_0__OpenSelectBonusConfirmDialog_b__1__);
+    byte_4D2D09D = 1;
   }
-  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (CommonUI_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   CommonUI__CloseSelectBonusConfirmDialog(Instance, 0);
@@ -547,20 +547,20 @@ void SelectBonusBaseMaster___c__DisplayClass1_0___OpenSelectBonusConfirmDialog_b
     _9__1 = this->fields.__9__1;
     if ( !_9__1 )
     {
-      _9__1 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
+      _9__1 = (NetworkManager_ResultCallbackFunc_o *)sub_1C942E4(NetworkManager_ResultCallbackFunc_TypeInfo);
       NetworkManager_ResultCallbackFunc___ctor(
         _9__1,
         (Il2CppObject *)this,
         Method_SelectBonusBaseMaster___c__DisplayClass1_0__OpenSelectBonusConfirmDialog_b__1__,
         0);
       this->fields.__9__1 = _9__1;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v9, v10, v11, v12, v13, v14);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.__9__1, (int32_t)_9__1, v9, v10, v11, v12, v13, v14);
     }
     if ( !NetworkManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
     Instance = (CommonUI_o *)NetworkManager__getRequest_object_(
                                _9__1,
-                               (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_EventScriptFlagRequest___);
+                               (const MethodInfo_32282A8 *)Method_NetworkManager_getRequest_EventScriptFlagRequest___);
     if ( !Instance )
       goto LABEL_15;
     EventScriptFlagRequest__beginRequest(
@@ -582,7 +582,7 @@ void SelectBonusBaseMaster___c__DisplayClass1_0___OpenSelectBonusConfirmDialog_b
       return;
     }
 LABEL_15:
-    sub_1C71608(Instance, v6);
+    sub_1C942F0(Instance, v6);
   }
 }
 
@@ -607,17 +607,17 @@ void SelectBonusBaseMaster___c__DisplayClass1_0___OpenSelectBonusConfirmDialog_b
   System_String_o *v15; // x7
 
   v3 = this;
-  if ( (byte_4CC7C12 & 1) == 0 )
+  if ( (byte_4D2D09E & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (SelectBonusBaseMaster___c__DisplayClass1_0_o *)sub_1C713B0(&Method_SelectBonusBaseMaster___c__DisplayClass1_0__OpenSelectBonusConfirmDialog_b__2__);
-    byte_4CC7C12 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (SelectBonusBaseMaster___c__DisplayClass1_0_o *)sub_1C94098(&Method_SelectBonusBaseMaster___c__DisplayClass1_0__OpenSelectBonusConfirmDialog_b__2__);
+    byte_4D2D09E = 1;
   }
   if ( !v3->fields.__4__this )
     goto LABEL_8;
   SelectBonusBaseMaster__UpdateGiftBadgeNum((SelectBonusBaseMaster_o *)this, (const MethodInfo *)result);
-  this = (SelectBonusBaseMaster___c__DisplayClass1_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (SelectBonusBaseMaster___c__DisplayClass1_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   _9__2 = v3->fields.__9__2;
   v5 = (CommonUI_o *)this;
   eventId = v3->fields.eventId;
@@ -626,18 +626,18 @@ void SelectBonusBaseMaster___c__DisplayClass1_0___OpenSelectBonusConfirmDialog_b
   giftObjectId = v3->fields.giftObjectId;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)v3,
       Method_SelectBonusBaseMaster___c__DisplayClass1_0__OpenSelectBonusConfirmDialog_b__2__,
       0);
     v3->fields.__9__2 = _9__2;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v10, v11, v12, v13, v14, v15);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v10, v11, v12, v13, v14, v15);
   }
   if ( !v5 )
 LABEL_8:
-    sub_1C71608(this, result);
+    sub_1C942F0(this, result);
   CommonUI__OpenSelectBonusGetDialog(v5, eventId, bonusGetMessage, giftType, giftObjectId, _9__2, 0);
 }
 
@@ -675,14 +675,14 @@ void SelectBonusBaseMaster___c__DisplayClass1_0___OpenSelectBonusConfirmDialog_b
   __int64 v29; // x0
   __int64 v30; // x1
 
-  if ( (byte_4CC7C13 & 1) == 0 )
+  if ( (byte_4D2D09F & 1) == 0 )
   {
-    sub_1C713B0(&Method_ActionExtensions_Call__);
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&Method_SelectBonusBaseMaster___c__OpenSelectBonusConfirmDialog_b__1_3__);
-    sub_1C713B0(&SelectBonusBaseMaster___c_TypeInfo);
-    byte_4CC7C13 = 1;
+    sub_1C94098(&Method_ActionExtensions_Call__);
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&Method_SelectBonusBaseMaster___c__OpenSelectBonusConfirmDialog_b__1_3__);
+    sub_1C94098(&SelectBonusBaseMaster___c_TypeInfo);
+    byte_4D2D09F = 1;
   }
   endCallback = this->fields.endCallback;
   p_endCallback = (GrandQuestFolderBoardItem_o *)&this->fields.endCallback;
@@ -702,11 +702,11 @@ void SelectBonusBaseMaster___c__DisplayClass1_0___OpenSelectBonusConfirmDialog_b
       v6 = SelectBonusBaseMaster___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v6->static_fields->__9;
-    _9__1_3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    _9__1_3 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(_9__1_3, v8, Method_SelectBonusBaseMaster___c__OpenSelectBonusConfirmDialog_b__1_3__, 0);
     static_fields = SelectBonusBaseMaster___c_TypeInfo->static_fields;
     static_fields->__9__1_3 = _9__1_3;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__1_3, (int32_t)_9__1_3, v10, v11, v12, v13, v14, v15);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__1_3, (int32_t)_9__1_3, v10, v11, v12, v13, v14, v15);
   }
   v16 = System_Delegate__Combine(v4, (System_Delegate_o *)_9__1_3, 0);
   v23 = v16;
@@ -716,17 +716,17 @@ void SelectBonusBaseMaster___c__DisplayClass1_0___OpenSelectBonusConfirmDialog_b
   if ( (System_Action_c *)v16->klass != System_Action_TypeInfo
     || (p_endCallback->klass = (GrandQuestFolderBoardItem_c *)v16, (System_Action_c *)v16->klass != v24) )
   {
-    sub_1C719A4(v16);
+    sub_1C9468C(v16);
 LABEL_13:
     p_endCallback->klass = (GrandQuestFolderBoardItem_c *)v23;
   }
-  sub_1C71354(p_endCallback, (int32_t)v23, v17, v18, v19, v20, v21, v22);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1C9403C(p_endCallback, (int32_t)v23, v17, v18, v19, v20, v21, v22);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   klass = (Il2CppObject *)p_endCallback->klass;
   v27 = (CommonUI_o *)Instance;
-  v28 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v28 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v28, klass, Method_ActionExtensions_Call__, 0);
   if ( !v27 )
-    sub_1C71608(v29, v30);
-  CommonUI__CloseSelectBonusGetDialog_31555464(v27, v28, 0);
+    sub_1C942F0(v29, v30);
+  CommonUI__CloseSelectBonusGetDialog_31698364(v27, v28, 0);
 }

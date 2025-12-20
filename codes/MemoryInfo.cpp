@@ -29,28 +29,28 @@ void MemoryInfo___cctor(const MethodInfo *method)
   int64_t v27; // x6
   System_String_o *v28; // x7
 
-  if ( (byte_4CC9512 & 1) == 0 )
+  if ( (byte_4D2E9B0 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_MemoryInfo_stackMemoryInfo___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_MemoryInfo_stackMemoryInfo__TypeInfo);
-    sub_1C713B0(&MemoryInfo_TypeInfo);
-    byte_4CC9512 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_MemoryInfo_stackMemoryInfo___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_MemoryInfo_stackMemoryInfo__TypeInfo);
+    sub_1C94098(&MemoryInfo_TypeInfo);
+    byte_4D2E9B0 = 1;
   }
-  v1 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_MemoryInfo_stackMemoryInfo__TypeInfo);
+  v1 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_MemoryInfo_stackMemoryInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v1,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_MemoryInfo_stackMemoryInfo___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_MemoryInfo_stackMemoryInfo___ctor__);
   MemoryInfo_TypeInfo->static_fields->stackMemoryInfoList = (struct System_Collections_Generic_List_MemoryInfo_stackMemoryInfo__o *)v1;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)MemoryInfo_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)MemoryInfo_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
   static_fields = MemoryInfo_TypeInfo->static_fields;
   static_fields->activityManager = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->activityManager, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->activityManager, 0, v9, v10, v11, v12, v13, v14);
   v15 = MemoryInfo_TypeInfo->static_fields;
   v15->pids = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v15->pids, 0, v16, v17, v18, v19, v20, v21);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v15->pids, 0, v16, v17, v18, v19, v20, v21);
   v22 = MemoryInfo_TypeInfo->static_fields;
   v22->systemService = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v22->systemService, 0, v23, v24, v25, v26, v27, v28);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v22->systemService, 0, v23, v24, v25, v26, v27, v28);
 }
 
 
@@ -82,34 +82,34 @@ UnityEngine_AndroidJavaObject_o *MemoryInfo__GetMemoryInfo(const MethodInfo *met
   __int64 v18; // x21
   __int64 v20; // x0
 
-  if ( (byte_4CC950C & 1) == 0 )
+  if ( (byte_4D2E9AA & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_AndroidJavaObject_TypeInfo);
-    sub_1C713B0(&Method_System_Array_Empty_object___);
-    sub_1C713B0(&MemoryInfo_TypeInfo);
-    sub_1C713B0(&object___TypeInfo);
-    sub_1C713B0(&StringLiteral_19882/*"getMemoryInfo"*/);
-    sub_1C713B0(&StringLiteral_16772/*"android.app.ActivityManager$MemoryInfo"*/);
-    byte_4CC950C = 1;
+    sub_1C94098(&UnityEngine_AndroidJavaObject_TypeInfo);
+    sub_1C94098(&Method_System_Array_Empty_object___);
+    sub_1C94098(&MemoryInfo_TypeInfo);
+    sub_1C94098(&object___TypeInfo);
+    sub_1C94098(&StringLiteral_19969/*"getMemoryInfo"*/);
+    sub_1C94098(&StringLiteral_16831/*"android.app.ActivityManager$MemoryInfo"*/);
+    byte_4D2E9AA = 1;
   }
   v2 = Method_System_Array_Empty_object___;
   v3 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
   if ( !v3 )
   {
-    sub_1C474A0(Method_System_Array_Empty_object___);
+    sub_1C6A188(Method_System_Array_Empty_object___);
     v3 = v2[7];
   }
   v4 = *(_QWORD *)(v3 + 16);
   if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-    v4 = sub_1C47444(inited);
+    v4 = sub_1C6A12C(inited);
   if ( !*(_DWORD *)(v4 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v4);
   v5 = *(_QWORD *)(v2[7] + 16LL);
   if ( (*(_BYTE *)(v5 + 309) & 1) == 0 )
-    v5 = sub_1C47444(inited);
+    v5 = sub_1C6A12C(inited);
   v6 = **(System_Object_array ***)(v5 + 184);
-  v7 = (UnityEngine_AndroidJavaObject_o *)sub_1C715FC(UnityEngine_AndroidJavaObject_TypeInfo);
-  UnityEngine_AndroidJavaObject___ctor_71451516(v7, (System_String_o *)StringLiteral_16772/*"android.app.ActivityManager$MemoryInfo"*/, v6, 0);
+  v7 = (UnityEngine_AndroidJavaObject_o *)sub_1C942E4(UnityEngine_AndroidJavaObject_TypeInfo);
+  UnityEngine_AndroidJavaObject___ctor_71837880(v7, (System_String_o *)StringLiteral_16831/*"android.app.ActivityManager$MemoryInfo"*/, v6, 0);
   v8 = MemoryInfo_TypeInfo;
   if ( !MemoryInfo_TypeInfo->_2.cctor_finished )
   {
@@ -117,29 +117,29 @@ UnityEngine_AndroidJavaObject_o *MemoryInfo__GetMemoryInfo(const MethodInfo *met
     v8 = MemoryInfo_TypeInfo;
   }
   systemService = v8->static_fields->systemService;
-  v10 = sub_1C71458(object___TypeInfo, 1);
+  v10 = sub_1C94140(object___TypeInfo, 1);
   if ( !v10 )
     goto LABEL_19;
   v18 = v10;
   if ( v7 )
   {
-    v10 = sub_1C714EC(v7, *(_QWORD *)(*(_QWORD *)v10 + 64LL));
+    v10 = sub_1C941D4(v7, *(_QWORD *)(*(_QWORD *)v10 + 64LL));
     if ( !v10 )
     {
-      v20 = sub_1C7162C(0);
-      sub_1C714D8(v20, 0);
+      v20 = sub_1C94314(0);
+      sub_1C941C0(v20, 0);
     }
   }
   if ( !*(_DWORD *)(v18 + 24) )
-    sub_1C71610(v10);
+    sub_1C942F8(v10);
   *(_QWORD *)(v18 + 32) = v7;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v18 + 32), (int32_t)v7, v12, v13, v14, v15, v16, v17);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v18 + 32), (int32_t)v7, v12, v13, v14, v15, v16, v17);
   if ( !systemService )
 LABEL_19:
-    sub_1C71608(v10, v11);
+    sub_1C942F0(v10, v11);
   UnityEngine_AndroidJavaObject__Call(
     systemService,
-    (System_String_o *)StringLiteral_19882/*"getMemoryInfo"*/,
+    (System_String_o *)StringLiteral_19969/*"getMemoryInfo"*/,
     (System_Object_array *)v18,
     0);
   return v7;
@@ -165,13 +165,13 @@ int64_t MemoryInfo__GetMemorySize_Available(const MethodInfo *method)
   int *p_offset; // x10
   __int64 v10; // x0
 
-  if ( (byte_4CC9510 & 1) == 0 )
+  if ( (byte_4D2E9AE & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_AndroidJavaObject_Get_long____78633712);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&MemoryInfo_TypeInfo);
-    sub_1C713B0(&StringLiteral_16979/*"availMem"*/);
-    byte_4CC9510 = 1;
+    sub_1C94098(&Method_UnityEngine_AndroidJavaObject_Get_long____79041560);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&MemoryInfo_TypeInfo);
+    sub_1C94098(&StringLiteral_17038/*"availMem"*/);
+    byte_4D2E9AE = 1;
   }
   v1 = MemoryInfo_TypeInfo;
   if ( !MemoryInfo_TypeInfo->_2.cctor_finished )
@@ -201,11 +201,11 @@ LABEL_25:
   MemoryInfo = MemoryInfo__GetMemoryInfo((const MethodInfo *)v1);
   v5 = MemoryInfo;
   if ( !MemoryInfo )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   v6 = UnityEngine_AndroidJavaObject__Get_long_(
          MemoryInfo,
-         (System_String_o *)StringLiteral_16979/*"availMem"*/,
-         (const MethodInfo_309B464 *)Method_UnityEngine_AndroidJavaObject_Get_long____78633712);
+         (System_String_o *)StringLiteral_17038/*"availMem"*/,
+         (const MethodInfo_30EB0D4 *)Method_UnityEngine_AndroidJavaObject_Get_long____79041560);
   klass = v5->klass;
   v8 = *(unsigned __int16 *)&v5->klass->_2.rank;
   if ( *(_WORD *)&v5->klass->_2.rank )
@@ -223,7 +223,7 @@ LABEL_25:
   else
   {
 LABEL_19:
-    v10 = sub_1C47738(v5, System_IDisposable_TypeInfo, 0);
+    v10 = sub_1C6A420(v5, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(UnityEngine_AndroidJavaObject_o *, _QWORD))v10)(v5, *(_QWORD *)(v10 + 8));
   return v6;
@@ -258,10 +258,10 @@ int64_t MemoryInfo__GetMemorySize_Resident(const MethodInfo *method)
 {
   MemoryInfo_c *v1; // x0
 
-  if ( (byte_4CC950F & 1) == 0 )
+  if ( (byte_4D2E9AD & 1) == 0 )
   {
-    sub_1C713B0(&MemoryInfo_TypeInfo);
-    byte_4CC950F = 1;
+    sub_1C94098(&MemoryInfo_TypeInfo);
+    byte_4D2E9AD = 1;
   }
   v1 = MemoryInfo_TypeInfo;
   if ( !MemoryInfo_TypeInfo->_2.cctor_finished )
@@ -296,12 +296,12 @@ void MemoryInfo__RegistCurrentMemory(System_String_o *name, const MethodInfo *me
   __int64 size; // x10
   Il2CppClass **v19; // x0
 
-  if ( (byte_4CC9511 & 1) == 0 )
+  if ( (byte_4D2E9AF & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_MemoryInfo_stackMemoryInfo__Add__);
-    sub_1C713B0(&MemoryInfo_TypeInfo);
-    sub_1C713B0(&MemoryInfo_stackMemoryInfo_TypeInfo);
-    byte_4CC9511 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_MemoryInfo_stackMemoryInfo__Add__);
+    sub_1C94098(&MemoryInfo_TypeInfo);
+    sub_1C94098(&MemoryInfo_stackMemoryInfo_TypeInfo);
+    byte_4D2E9AF = 1;
   }
   v3 = MemoryInfo_TypeInfo;
   if ( !MemoryInfo_TypeInfo->_2.cctor_finished )
@@ -311,7 +311,7 @@ void MemoryInfo__RegistCurrentMemory(System_String_o *name, const MethodInfo *me
   }
   stackMemoryInfoList = (System_Collections_Generic_List_object__o *)v3->static_fields->stackMemoryInfoList;
   UsedMemorySizeMB = MemoryInfo__getUsedMemorySizeMB((const MethodInfo *)v3);
-  v6 = (MemoryInfo_stackMemoryInfo_o *)sub_1C715FC(MemoryInfo_stackMemoryInfo_TypeInfo);
+  v6 = (MemoryInfo_stackMemoryInfo_o *)sub_1C942E4(MemoryInfo_stackMemoryInfo_TypeInfo);
   MemoryInfo_stackMemoryInfo___ctor(v6, name, UsedMemorySizeMB, v7);
   if ( !stackMemoryInfoList
     || (items = stackMemoryInfoList->fields._items,
@@ -319,7 +319,7 @@ void MemoryInfo__RegistCurrentMemory(System_String_o *name, const MethodInfo *me
         ++stackMemoryInfoList->fields._version,
         !items) )
   {
-    sub_1C71608(v8, v9);
+    sub_1C942F0(v8, v9);
   }
   size = stackMemoryInfoList->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -327,14 +327,14 @@ void MemoryInfo__RegistCurrentMemory(System_String_o *name, const MethodInfo *me
     System_Collections_Generic_List_object___AddWithResize(
       stackMemoryInfoList,
       (Il2CppObject *)v6,
-      *(const MethodInfo_3810718 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
+      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v17[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj.klass + size;
     stackMemoryInfoList->fields._size = size + 1;
     v19[4] = (Il2CppClass *)v6;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)v6, v10, v11, v12, v13, v14, v15);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)v6, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -366,16 +366,16 @@ int64_t MemoryInfo__getUsedMemorySize(const MethodInfo *method)
   __int64 v23; // x0
   __int64 v25; // x0
 
-  if ( (byte_4CC950D & 1) == 0 )
+  if ( (byte_4D2E9AB & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject_____);
-    sub_1C713B0(&Method_UnityEngine_AndroidJavaObject_Call_int____78633536);
-    sub_1C713B0(&Method_System_Array_Empty_object___);
-    sub_1C713B0(&MemoryInfo_TypeInfo);
-    sub_1C713B0(&object___TypeInfo);
-    sub_1C713B0(&StringLiteral_19927/*"getTotalPss"*/);
-    sub_1C713B0(&StringLiteral_19906/*"getProcessMemoryInfo"*/);
-    byte_4CC950D = 1;
+    sub_1C94098(&Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject_____);
+    sub_1C94098(&Method_UnityEngine_AndroidJavaObject_Call_int____79041384);
+    sub_1C94098(&Method_System_Array_Empty_object___);
+    sub_1C94098(&MemoryInfo_TypeInfo);
+    sub_1C94098(&object___TypeInfo);
+    sub_1C94098(&StringLiteral_20014/*"getTotalPss"*/);
+    sub_1C94098(&StringLiteral_19993/*"getProcessMemoryInfo"*/);
+    byte_4D2E9AB = 1;
   }
   v1 = MemoryInfo_TypeInfo;
   if ( !MemoryInfo_TypeInfo->_2.cctor_finished )
@@ -406,34 +406,34 @@ LABEL_40:
     v1 = MemoryInfo_TypeInfo;
   }
   activityManager = v1->static_fields->activityManager;
-  v4 = sub_1C71458(object___TypeInfo, 1);
+  v4 = sub_1C94140(object___TypeInfo, 1);
   if ( !v4 )
     goto LABEL_36;
   v12 = v4;
   pids = MemoryInfo_TypeInfo->static_fields->pids;
   if ( pids )
   {
-    v4 = sub_1C714EC(pids, *(_QWORD *)(*(_QWORD *)v4 + 64LL));
+    v4 = sub_1C941D4(pids, *(_QWORD *)(*(_QWORD *)v4 + 64LL));
     if ( !v4 )
     {
-      v25 = sub_1C7162C(0);
-      sub_1C714D8(v25, 0);
+      v25 = sub_1C94314(0);
+      sub_1C941C0(v25, 0);
     }
   }
   if ( !*(_DWORD *)(v12 + 24) )
 LABEL_33:
-    sub_1C71610(v4);
+    sub_1C942F8(v4);
   *(_QWORD *)(v12 + 32) = pids;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v12 + 32), (int32_t)pids, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v12 + 32), (int32_t)pids, v6, v7, v8, v9, v10, v11);
   if ( !activityManager
     || (v4 = (__int64)UnityEngine_AndroidJavaObject__Call_object_(
                         activityManager,
-                        (System_String_o *)StringLiteral_19906/*"getProcessMemoryInfo"*/,
+                        (System_String_o *)StringLiteral_19993/*"getProcessMemoryInfo"*/,
                         (System_Object_array *)v12,
-                        (const MethodInfo_30995EC *)Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject_____)) == 0 )
+                        (const MethodInfo_30E925C *)Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject_____)) == 0 )
   {
 LABEL_36:
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   }
   v15 = *(_QWORD *)(v4 + 24);
   v16 = v4;
@@ -449,24 +449,24 @@ LABEL_36:
       v22 = *((_QWORD *)Method_System_Array_Empty_object___ + 7);
       if ( !v22 )
       {
-        sub_1C474A0(Method_System_Array_Empty_object___);
+        sub_1C6A188(Method_System_Array_Empty_object___);
         v22 = v20[7];
       }
       v23 = *(_QWORD *)(v22 + 16);
       if ( (*(_BYTE *)(v23 + 309) & 1) == 0 )
-        v23 = sub_1C47444(inited);
+        v23 = sub_1C6A12C(inited);
       if ( !*(_DWORD *)(v23 + 224) )
         inited = j_il2cpp_runtime_class_init_0(v23);
       v4 = *(_QWORD *)(v20[7] + 16LL);
       if ( (*(_BYTE *)(v4 + 309) & 1) == 0 )
-        v4 = sub_1C47444(inited);
+        v4 = sub_1C6A12C(inited);
       if ( !v21 )
         goto LABEL_36;
       v4 = UnityEngine_AndroidJavaObject__Call_int_(
              v21,
-             (System_String_o *)StringLiteral_19927/*"getTotalPss"*/,
+             (System_String_o *)StringLiteral_20014/*"getTotalPss"*/,
              **(System_Object_array ***)(v4 + 184),
-             (const MethodInfo_30994AC *)Method_UnityEngine_AndroidJavaObject_Call_int____78633536);
+             (const MethodInfo_30E911C *)Method_UnityEngine_AndroidJavaObject_Call_int____79041384);
       v19 += (int)v4;
       if ( v17 == v18 )
         return v19;
@@ -482,10 +482,10 @@ float MemoryInfo__getUsedMemorySizeMB(const MethodInfo *method)
 {
   MemoryInfo_c *v1; // x0
 
-  if ( (byte_4CC950E & 1) == 0 )
+  if ( (byte_4D2E9AC & 1) == 0 )
   {
-    sub_1C713B0(&MemoryInfo_TypeInfo);
-    byte_4CC950E = 1;
+    sub_1C94098(&MemoryInfo_TypeInfo);
+    byte_4D2E9AC = 1;
   }
   v1 = MemoryInfo_TypeInfo;
   if ( !MemoryInfo_TypeInfo->_2.cctor_finished )
@@ -569,64 +569,64 @@ void MemoryInfo__setupNativeCall(const MethodInfo *method)
   __int64 v71; // x0
   __int64 v72; // x0
 
-  if ( (byte_4CC950B & 1) == 0 )
+  if ( (byte_4D2E9A9 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_AndroidJavaClass_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____78633480);
-    sub_1C713B0(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
-    sub_1C713B0(&Method_UnityEngine_AndroidJavaObject_GetStatic_string___);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&int___TypeInfo);
-    sub_1C713B0(&MemoryInfo_TypeInfo);
-    sub_1C713B0(&object___TypeInfo);
-    sub_1C713B0(&StringLiteral_1910/*"ACTIVITY_SERVICE"*/);
-    sub_1C713B0(&StringLiteral_18151/*"com.unity3d.player.UnityPlayer"*/);
-    sub_1C713B0(&StringLiteral_16776/*"android.content.Context"*/);
-    sub_1C713B0(&StringLiteral_16665/*"activity"*/);
-    sub_1C713B0(&StringLiteral_19923/*"getSystemService"*/);
-    sub_1C713B0(&StringLiteral_18445/*"currentActivity"*/);
-    byte_4CC950B = 1;
+    sub_1C94098(&UnityEngine_AndroidJavaClass_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____79041328);
+    sub_1C94098(&Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+    sub_1C94098(&Method_UnityEngine_AndroidJavaObject_GetStatic_string___);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&int___TypeInfo);
+    sub_1C94098(&MemoryInfo_TypeInfo);
+    sub_1C94098(&object___TypeInfo);
+    sub_1C94098(&StringLiteral_1910/*"ACTIVITY_SERVICE"*/);
+    sub_1C94098(&StringLiteral_18217/*"com.unity3d.player.UnityPlayer"*/);
+    sub_1C94098(&StringLiteral_16835/*"android.content.Context"*/);
+    sub_1C94098(&StringLiteral_16723/*"activity"*/);
+    sub_1C94098(&StringLiteral_20010/*"getSystemService"*/);
+    sub_1C94098(&StringLiteral_18513/*"currentActivity"*/);
+    byte_4D2E9A9 = 1;
   }
-  v1 = (UnityEngine_AndroidJavaClass_o *)sub_1C715FC(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v1, (System_String_o *)StringLiteral_18151/*"com.unity3d.player.UnityPlayer"*/, 0);
+  v1 = (UnityEngine_AndroidJavaClass_o *)sub_1C942E4(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v1, (System_String_o *)StringLiteral_18217/*"com.unity3d.player.UnityPlayer"*/, 0);
   if ( !v1 )
-    sub_1C71608(v2, v3);
+    sub_1C942F0(v2, v3);
   Static_object = UnityEngine_AndroidJavaObject__GetStatic_object_(
                     (UnityEngine_AndroidJavaObject_o *)v1,
-                    (System_String_o *)StringLiteral_18445/*"currentActivity"*/,
-                    (const MethodInfo_309B774 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
-  v5 = (UnityEngine_AndroidJavaClass_o *)sub_1C715FC(UnityEngine_AndroidJavaClass_TypeInfo);
-  UnityEngine_AndroidJavaClass___ctor(v5, (System_String_o *)StringLiteral_16776/*"android.content.Context"*/, 0);
+                    (System_String_o *)StringLiteral_18513/*"currentActivity"*/,
+                    (const MethodInfo_30EB3E4 *)Method_UnityEngine_AndroidJavaObject_GetStatic_AndroidJavaObject___);
+  v5 = (UnityEngine_AndroidJavaClass_o *)sub_1C942E4(UnityEngine_AndroidJavaClass_TypeInfo);
+  UnityEngine_AndroidJavaClass___ctor(v5, (System_String_o *)StringLiteral_16835/*"android.content.Context"*/, 0);
   if ( !v5 )
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   v8 = UnityEngine_AndroidJavaObject__GetStatic_object_(
          (UnityEngine_AndroidJavaObject_o *)v5,
          (System_String_o *)StringLiteral_1910/*"ACTIVITY_SERVICE"*/,
-         (const MethodInfo_309B774 *)Method_UnityEngine_AndroidJavaObject_GetStatic_string___);
-  v9 = sub_1C71458(object___TypeInfo, 1);
+         (const MethodInfo_30EB3E4 *)Method_UnityEngine_AndroidJavaObject_GetStatic_string___);
+  v9 = sub_1C94140(object___TypeInfo, 1);
   v17 = v9;
   if ( !v9 )
-    sub_1C71608(0, v10);
+    sub_1C942F0(0, v10);
   if ( v8 )
   {
-    v9 = sub_1C714EC(v8, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
+    v9 = sub_1C941D4(v8, *(_QWORD *)(*(_QWORD *)v9 + 64LL));
     if ( !v9 )
     {
-      v71 = sub_1C7162C(0);
-      sub_1C714D8(v71, 0);
+      v71 = sub_1C94314(0);
+      sub_1C941C0(v71, 0);
     }
   }
   if ( !*(_DWORD *)(v17 + 24) )
-    sub_1C71610(v9);
+    sub_1C942F8(v9);
   *(_QWORD *)(v17 + 32) = v8;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v17 + 32), (int32_t)v8, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v17 + 32), (int32_t)v8, v11, v12, v13, v14, v15, v16);
   if ( !Static_object )
-    sub_1C71608(v18, v19);
+    sub_1C942F0(v18, v19);
   v26 = UnityEngine_AndroidJavaObject__Call_object_(
           (UnityEngine_AndroidJavaObject_o *)Static_object,
-          (System_String_o *)StringLiteral_19923/*"getSystemService"*/,
+          (System_String_o *)StringLiteral_20010/*"getSystemService"*/,
           (System_Object_array *)v17,
-          (const MethodInfo_30995EC *)Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____78633480);
+          (const MethodInfo_30E925C *)Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____79041328);
   v27 = MemoryInfo_TypeInfo;
   if ( !MemoryInfo_TypeInfo->_2.cctor_finished )
   {
@@ -635,7 +635,7 @@ void MemoryInfo__setupNativeCall(const MethodInfo *method)
   }
   static_fields = v27->static_fields;
   static_fields->activityManager = (struct UnityEngine_AndroidJavaObject_o *)v26;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&static_fields->activityManager,
     (int32_t)v26,
     v20,
@@ -644,49 +644,49 @@ void MemoryInfo__setupNativeCall(const MethodInfo *method)
     v23,
     v24,
     v25);
-  v29 = sub_1C71458(int___TypeInfo, 1);
+  v29 = sub_1C94140(int___TypeInfo, 1);
   CurrentProcess = System_Diagnostics_Process__GetCurrentProcess(0);
   if ( !CurrentProcess )
-    sub_1C71608(0, v31);
+    sub_1C942F0(0, v31);
   Id = System_Diagnostics_Process__get_Id(CurrentProcess, 0);
   if ( !v29 )
-    sub_1C71608(Id, v33);
+    sub_1C942F0(Id, v33);
   if ( !*(_DWORD *)(v29 + 24) )
-    sub_1C71610(Id);
+    sub_1C942F8(Id);
   *(_DWORD *)(v29 + 32) = Id;
   v40 = MemoryInfo_TypeInfo->static_fields;
   v40->pids = (struct System_Int32_array *)v29;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v40->pids, v29, v34, v35, v36, v37, v38, v39);
-  v48 = (System_Object_array *)sub_1C71458(object___TypeInfo, 1);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v40->pids, v29, v34, v35, v36, v37, v38, v39);
+  v48 = (System_Object_array *)sub_1C94140(object___TypeInfo, 1);
   if ( !v48 )
-    sub_1C71608(0, v41);
-  v49 = StringLiteral_16665/*"activity"*/;
-  if ( StringLiteral_16665/*"activity"*/ )
+    sub_1C942F0(0, v41);
+  v49 = StringLiteral_16723/*"activity"*/;
+  if ( StringLiteral_16723/*"activity"*/ )
   {
-    v49 = sub_1C714EC(StringLiteral_16665/*"activity"*/, v48->obj.klass->_1.element_class);
+    v49 = sub_1C941D4(StringLiteral_16723/*"activity"*/, v48->obj.klass->_1.element_class);
     if ( !v49 )
     {
-      v72 = sub_1C7162C(0);
-      sub_1C714D8(v72, 0);
+      v72 = sub_1C94314(0);
+      sub_1C941C0(v72, 0);
     }
-    v50 = StringLiteral_16665/*"activity"*/;
+    v50 = StringLiteral_16723/*"activity"*/;
   }
   else
   {
     v50 = 0;
   }
   if ( !LODWORD(v48->max_length) )
-    sub_1C71610(v49);
+    sub_1C942F8(v49);
   v48->m_Items[0] = (Il2CppObject *)v50;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v48->m_Items, v50, v42, v43, v44, v45, v46, v47);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v48->m_Items, v50, v42, v43, v44, v45, v46, v47);
   v51 = UnityEngine_AndroidJavaObject__Call_object_(
           (UnityEngine_AndroidJavaObject_o *)Static_object,
-          (System_String_o *)StringLiteral_19923/*"getSystemService"*/,
+          (System_String_o *)StringLiteral_20010/*"getSystemService"*/,
           v48,
-          (const MethodInfo_30995EC *)Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____78633480);
+          (const MethodInfo_30E925C *)Method_UnityEngine_AndroidJavaObject_Call_AndroidJavaObject____79041328);
   v52 = MemoryInfo_TypeInfo->static_fields;
   v52->systemService = (struct UnityEngine_AndroidJavaObject_o *)v51;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v52->systemService, (int32_t)v51, v53, v54, v55, v56, v57, v58);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v52->systemService, (int32_t)v51, v53, v54, v55, v56, v57, v58);
   klass = v5->klass;
   v60 = *(unsigned __int16 *)&v5->klass->_2.rank;
   if ( *(_WORD *)&v5->klass->_2.rank )
@@ -704,7 +704,7 @@ void MemoryInfo__setupNativeCall(const MethodInfo *method)
   else
   {
 LABEL_25:
-    v62 = sub_1C47738(v5, System_IDisposable_TypeInfo, 0);
+    v62 = sub_1C6A420(v5, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(UnityEngine_AndroidJavaClass_o *, _QWORD))v62)(v5, *(_QWORD *)(v62 + 8));
   v63 = Static_object->klass;
@@ -724,7 +724,7 @@ LABEL_25:
   else
   {
 LABEL_31:
-    v66 = sub_1C47738(Static_object, System_IDisposable_TypeInfo, 0);
+    v66 = sub_1C6A420(Static_object, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(Il2CppObject *, _QWORD))v66)(Static_object, *(_QWORD *)(v66 + 8));
   v67 = v1->klass;
@@ -744,7 +744,7 @@ LABEL_31:
   else
   {
 LABEL_37:
-    v70 = sub_1C47738(v1, System_IDisposable_TypeInfo, 0);
+    v70 = sub_1C6A420(v1, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(UnityEngine_AndroidJavaClass_o *, _QWORD))v70)(v1, *(_QWORD *)(v70 + 8));
 }
@@ -770,18 +770,18 @@ void MemoryInfo_stackMemoryInfo___ctor(
   int64_t v18; // x6
   System_String_o *v19; // x7
 
-  if ( (byte_4CC9513 & 1) == 0 )
+  if ( (byte_4D2E9B1 & 1) == 0 )
   {
-    sub_1C713B0(&string_TypeInfo);
-    byte_4CC9513 = 1;
+    sub_1C94098(&string_TypeInfo);
+    byte_4D2E9B1 = 1;
   }
   static_fields = string_TypeInfo->static_fields;
   Empty = static_fields->Empty;
   this->fields.key = static_fields->Empty;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)Empty, (int32_t)method, v4, v5, v6, v7, v8);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)Empty, (int32_t)method, v4, v5, v6, v7, v8);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.key = k;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)k, v14, v15, v16, v17, v18, v19);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)k, v14, v15, v16, v17, v18, v19);
   this->fields.usedMemory = v;
 }
 
@@ -792,14 +792,14 @@ System_String_o *MemoryInfo_stackMemoryInfo__ToString(MemoryInfo_stackMemoryInfo
   Il2CppObject *v4; // x0
   float usedMemory; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CC9514 & 1) == 0 )
+  if ( (byte_4D2E9B2 & 1) == 0 )
   {
-    sub_1C713B0(&float_TypeInfo);
-    sub_1C713B0(&StringLiteral_25319/*"{0}={1}"*/);
-    byte_4CC9514 = 1;
+    sub_1C94098(&float_TypeInfo);
+    sub_1C94098(&StringLiteral_25442/*"{0}={1}"*/);
+    byte_4D2E9B2 = 1;
   }
   key = (Il2CppObject *)this->fields.key;
   usedMemory = this->fields.usedMemory;
   v4 = (Il2CppObject *)j_il2cpp_value_box_0(float_TypeInfo, &usedMemory);
-  return System_String__Format_64073032((System_String_o *)StringLiteral_25319/*"{0}={1}"*/, key, v4, 0);
+  return System_String__Format_64459052((System_String_o *)StringLiteral_25442/*"{0}={1}"*/, key, v4, 0);
 }

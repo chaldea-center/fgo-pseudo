@@ -7,7 +7,7 @@ void SpawnerEventHandler___ctor(SpawnerEventHandler_o *this, const MethodInfo *m
 
 void SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const MethodInfo *method)
 {
-  System_Object_array *ComponentsInChildren_object__51651972; // x0
+  System_Object_array *ComponentsInChildren_object__51983788; // x0
   struct UnityEngine_ParticleSystem_array **p_particleArray; // x19
   int32_t v5; // w2
   int32_t v6; // w3
@@ -16,19 +16,19 @@ void SpawnerEventHandler__Init(SpawnerEventHandler_o *this, const MethodInfo *me
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CCADED & 1) == 0 )
+  if ( (byte_4D30383 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-    byte_4CCADED = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+    byte_4D30383 = 1;
   }
-  ComponentsInChildren_object__51651972 = UnityEngine_Component__GetComponentsInChildren_object__51651972(
+  ComponentsInChildren_object__51983788 = UnityEngine_Component__GetComponentsInChildren_object__51983788(
                                             (UnityEngine_Component_o *)this,
-                                            (const MethodInfo_3142584 *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
-  this->fields.particleArray = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object__51651972;
+                                            (const MethodInfo_31935AC *)Method_UnityEngine_Component_GetComponentsInChildren_ParticleSystem___);
+  this->fields.particleArray = (struct UnityEngine_ParticleSystem_array *)ComponentsInChildren_object__51983788;
   p_particleArray = &this->fields.particleArray;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)p_particleArray,
-    (int32_t)ComponentsInChildren_object__51651972,
+    (int32_t)ComponentsInChildren_object__51983788,
     v5,
     v6,
     v7,
@@ -59,7 +59,7 @@ void SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, const MethodInf
       if ( (int)v4 >= max_length )
         break;
       if ( (unsigned int)v4 >= max_length )
-        sub_1C71610(this);
+        sub_1C942F8(this);
       this = (SpawnerEventHandler_o *)particleArray->m_Items[v4];
       if ( this )
       {
@@ -69,7 +69,7 @@ void SpawnerEventHandler__OnDespawn(SpawnerEventHandler_o *this, const MethodInf
         if ( particleArray )
           continue;
       }
-      sub_1C71608(this, method);
+      sub_1C942F0(this, method);
     }
   }
 }

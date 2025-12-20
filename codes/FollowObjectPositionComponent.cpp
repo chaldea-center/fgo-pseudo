@@ -20,7 +20,7 @@ void FollowObjectPositionComponent__SetObj(
   this->fields.TargetObj = obj;
   p_TargetObj = &this->fields.TargetObj;
   v9 = IsInversion;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.TargetObj,
     (int32_t)obj,
     IsInversion,
@@ -45,10 +45,10 @@ void FollowObjectPositionComponent__Update(FollowObjectPositionComponent_o *this
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v11; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CC67DF & 1) == 0 )
+  if ( (byte_4D2BC41 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC67DF = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2BC41 = 1;
   }
   TargetObj = (UnityEngine_Object_o *)this->fields.TargetObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -93,6 +93,6 @@ LABEL_14:
         }
       }
     }
-    sub_1C71608(transform, v6);
+    sub_1C942F0(transform, v6);
   }
 }

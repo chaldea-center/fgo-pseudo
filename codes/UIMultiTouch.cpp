@@ -15,24 +15,24 @@ void UIMultiTouch___ctor(UIMultiTouch_o *this, const MethodInfo *method)
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4CC8D11 & 1) == 0 )
+  if ( (byte_4D2E1AE & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4CC8D11 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4D2E1AE = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onDragUpdate = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.onDragUpdate, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.onDragUpdate, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v10,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onClick = (struct System_Collections_Generic_List_EventDelegate__o *)v10;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.onClick, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.onClick, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   this->fields.releaseRange = 10.0;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -48,17 +48,17 @@ void UIMultiTouch__OnClick(UIMultiTouch_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_List_EventDelegate__o *onClick; // x19
 
-  if ( (byte_4CC8D10 & 1) == 0 )
+  if ( (byte_4D2E1AD & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    byte_4CC8D10 = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    byte_4D2E1AD = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && !this->fields.isRangeOver )
   {
     onClick = this->fields.onClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49587556(onClick, 0);
+    EventDelegate__Execute_49911148(onClick, 0);
   }
 }
 
@@ -71,10 +71,10 @@ void UIMultiTouch__OnDrag(UIMultiTouch_o *this, UnityEngine_Vector2_o v, const M
   float v7; // s0
   float v8; // s2
 
-  if ( (byte_4CC8D0F & 1) == 0 )
+  if ( (byte_4D2E1AC & 1) == 0 )
   {
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CC8D0F = 1;
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D2E1AC = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) && !this->fields.isRangeOver )
   {
@@ -119,11 +119,11 @@ void UIMultiTouch__Update(UIMultiTouch_o *this, const MethodInfo *method)
   struct UnityEngine_Vector2_o lastTouchPosition; // x9
   System_Collections_Generic_List_EventDelegate__o *onDragUpdate; // x19
 
-  if ( (byte_4CC8D0E & 1) == 0 )
+  if ( (byte_4D2E1AB & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CC8D0E = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D2E1AB = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -140,7 +140,7 @@ LABEL_20:
         onDragUpdate = this->fields.onDragUpdate;
         if ( !EventDelegate_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-        EventDelegate__Execute_49587556(onDragUpdate, 0);
+        EventDelegate__Execute_49911148(onDragUpdate, 0);
         return;
       }
     }

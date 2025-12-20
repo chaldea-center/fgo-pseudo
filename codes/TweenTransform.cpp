@@ -6,11 +6,11 @@ TweenTransform_o *TweenTransform__Begin(
 {
   const MethodInfo *v4; // x3
 
-  return TweenTransform__Begin_49815084(go, duration, 0, to, v4);
+  return TweenTransform__Begin_50141764(go, duration, 0, to, v4);
 }
 
 
-TweenTransform_o *TweenTransform__Begin_49815084(
+TweenTransform_o *TweenTransform__Begin_50141764(
         UnityEngine_GameObject_o *go,
         float duration,
         UnityEngine_Transform_o *from,
@@ -34,19 +34,19 @@ TweenTransform_o *TweenTransform__Begin_49815084(
   System_String_o *v23; // x7
   const MethodInfo *v24; // x2
 
-  if ( (byte_4CCBCF6 & 1) == 0 )
+  if ( (byte_4D310A8 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UITweener_Begin_TweenTransform___);
-    byte_4CCBCF6 = 1;
+    sub_1C94098(&Method_UITweener_Begin_TweenTransform___);
+    byte_4D310A8 = 1;
   }
-  v9 = UITweener__Begin_object_(go, duration, (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenTransform___);
+  v9 = UITweener__Begin_object_(go, duration, (const MethodInfo_3272360 *)Method_UITweener_Begin_TweenTransform___);
   if ( !v9 )
-    sub_1C71608(0, v10);
+    sub_1C942F0(0, v10);
   v17 = v9;
   v9[8].klass = (Il2CppClass *)from;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v9[8], (int32_t)from, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v9[8], (int32_t)from, v11, v12, v13, v14, v15, v16);
   v17[8].monitor = to;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v17[8].monitor, (int32_t)to, v18, v19, v20, v21, v22, v23);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v17[8].monitor, (int32_t)to, v18, v19, v20, v21, v22, v23);
   if ( duration <= 0.0 )
   {
     UITweener__Sample((UITweener_o *)v17, 1.0, 1, v24);
@@ -117,10 +117,10 @@ void TweenTransform__OnUpdate(TweenTransform_o *this, float factor, bool isFinis
   UnityEngine_Quaternion_o v63; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
   UnityEngine_Quaternion_o v64; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4CCBCF5 & 1) == 0 )
+  if ( (byte_4D310A7 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBCF5 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D310A7 = 1;
   }
   to = (UnityEngine_Object_o *)this->fields.to;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -135,7 +135,7 @@ void TweenTransform__OnUpdate(TweenTransform_o *this, float factor, bool isFinis
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.mTrans = transform;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12, v13, v14, v15, v16);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mTrans, (int32_t)transform, v11, v12, v13, v14, v15, v16);
       v18 = this->fields.mTrans;
       if ( !v18 )
         goto LABEL_36;
@@ -270,7 +270,7 @@ void TweenTransform__OnUpdate(TweenTransform_o *this, float factor, bool isFinis
         return;
       }
 LABEL_36:
-      sub_1C71608(v18, v17);
+      sub_1C942F0(v18, v17);
     }
   }
 }

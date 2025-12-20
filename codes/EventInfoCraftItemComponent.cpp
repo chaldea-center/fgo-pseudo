@@ -29,26 +29,26 @@ void EventInfoCraftItemComponent___ctor(EventInfoCraftItemComponent_o *this, con
   int64_t v29; // x6
   System_String_o *v30; // x7
 
-  if ( (byte_4CC8903 & 1) == 0 )
+  if ( (byte_4D2DC6B & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_19239/*"event_craft_{0}01"*/);
-    sub_1C713B0(&StringLiteral_20460/*"img_craft_reward_bg_1"*/);
-    sub_1C713B0(&StringLiteral_20259/*"icon_craft_reward"*/);
-    sub_1C713B0(&StringLiteral_20462/*"img_craft_reward_frame_1"*/);
-    byte_4CC8903 = 1;
+    sub_1C94098(&StringLiteral_19324/*"event_craft_{0}01"*/);
+    sub_1C94098(&StringLiteral_20555/*"img_craft_reward_bg_1"*/);
+    sub_1C94098(&StringLiteral_20352/*"icon_craft_reward"*/);
+    sub_1C94098(&StringLiteral_20557/*"img_craft_reward_frame_1"*/);
+    byte_4D2DC6B = 1;
   }
-  v9 = StringLiteral_19239/*"event_craft_{0}01"*/;
-  this->fields.bgSpriteName = (struct System_String_o *)StringLiteral_19239/*"event_craft_{0}01"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.bgSpriteName, v9, v2, v3, v4, v5, v6, v7);
-  v10 = StringLiteral_20460/*"img_craft_reward_bg_1"*/;
-  this->fields.rewardBgSpriteName = (struct System_String_o *)StringLiteral_20460/*"img_craft_reward_bg_1"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.rewardBgSpriteName, v10, v11, v12, v13, v14, v15, v16);
-  v17 = StringLiteral_20462/*"img_craft_reward_frame_1"*/;
-  this->fields.rewardFrameSpriteName = (struct System_String_o *)StringLiteral_20462/*"img_craft_reward_frame_1"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.rewardFrameSpriteName, v17, v18, v19, v20, v21, v22, v23);
-  v24 = StringLiteral_20259/*"icon_craft_reward"*/;
-  this->fields.rewardHeaderSpriteName = (struct System_String_o *)StringLiteral_20259/*"icon_craft_reward"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.rewardHeaderSpriteName, v24, v25, v26, v27, v28, v29, v30);
+  v9 = StringLiteral_19324/*"event_craft_{0}01"*/;
+  this->fields.bgSpriteName = (struct System_String_o *)StringLiteral_19324/*"event_craft_{0}01"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.bgSpriteName, v9, v2, v3, v4, v5, v6, v7);
+  v10 = StringLiteral_20555/*"img_craft_reward_bg_1"*/;
+  this->fields.rewardBgSpriteName = (struct System_String_o *)StringLiteral_20555/*"img_craft_reward_bg_1"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.rewardBgSpriteName, v10, v11, v12, v13, v14, v15, v16);
+  v17 = StringLiteral_20557/*"img_craft_reward_frame_1"*/;
+  this->fields.rewardFrameSpriteName = (struct System_String_o *)StringLiteral_20557/*"img_craft_reward_frame_1"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.rewardFrameSpriteName, v17, v18, v19, v20, v21, v22, v23);
+  v24 = StringLiteral_20352/*"icon_craft_reward"*/;
+  this->fields.rewardHeaderSpriteName = (struct System_String_o *)StringLiteral_20352/*"icon_craft_reward"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.rewardHeaderSpriteName, v24, v25, v26, v27, v28, v29, v30);
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -72,14 +72,14 @@ void EventInfoCraftItemComponent__SetCraftInfo(
   UnityEngine_Object_o *v16; // x20
   UnityEngine_GameObject_o *gameObject; // x21
 
-  if ( (byte_4CC8900 & 1) == 0 )
+  if ( (byte_4D2DC68 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_CommonConsumeMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_13403/*"TIME_FORMAT_1"*/);
-    byte_4CC8900 = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_CommonConsumeMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_13449/*"TIME_FORMAT_1"*/);
+    byte_4D2DC68 = 1;
   }
   craftNameLabel = (UnityEngine_Object_o *)this->fields.craftNameLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -106,16 +106,16 @@ void EventInfoCraftItemComponent__SetCraftInfo(
     tradeTime = eventTradeGoodsEntity->fields.tradeTime;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_13403/*"TIME_FORMAT_1"*/, 0);
+    v11 = LocalizationManager__Get((System_String_o *)StringLiteral_13449/*"TIME_FORMAT_1"*/, 0);
     RestTimeInFormat = (UILabel_o *)LocalizationManager__GetRestTimeInFormat(tradeTime, 0, v11, 0);
     if ( !v9 )
 LABEL_34:
-      sub_1C71608(RestTimeInFormat, v7);
+      sub_1C942F0(RestTimeInFormat, v7);
     UILabel__set_text(v9, (System_String_o *)RestTimeInFormat, 0);
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  RestTimeInFormat = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
+  RestTimeInFormat = (UILabel_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_CommonConsumeMaster___);
   if ( !eventTradeGoodsEntity )
     goto LABEL_34;
   if ( !RestTimeInFormat )
@@ -134,7 +134,7 @@ LABEL_34:
     for ( i = 0; (__int64)i < (int)max_length; ++i )
     {
       if ( i >= (unsigned int)max_length )
-        sub_1C71610(RestTimeInFormat);
+        sub_1C942F8(RestTimeInFormat);
       v16 = (UnityEngine_Object_o *)priceInfos->m_Items[i];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -170,12 +170,12 @@ void EventInfoCraftItemComponent__SetEventSprite(
   System_String_o *v9; // x21
   int32_t v10; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CC8902 & 1) == 0 )
+  if ( (byte_4D2DC6A & 1) == 0 )
   {
-    sub_1C713B0(&AtlasManager_TypeInfo);
-    sub_1C713B0(&int_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC8902 = 1;
+    sub_1C94098(&AtlasManager_TypeInfo);
+    sub_1C94098(&int_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2DC6A = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -186,7 +186,7 @@ void EventInfoCraftItemComponent__SetEventSprite(
     v9 = System_String__Format(spriteName, v8, 0);
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetEventUI_40880344(eventId, sprite, v9, 0);
+    AtlasManager__SetEventUI_41357612(eventId, sprite, v9, 0);
   }
 }
 
@@ -203,17 +203,17 @@ void EventInfoCraftItemComponent__SetGiftInfo(
   GiftEntity_o *v9; // x8
   Il2CppObject *Entity; // x0
 
-  if ( (byte_4CC8901 & 1) == 0 )
+  if ( (byte_4D2DC69 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_GiftMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    byte_4CC8901 = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_GiftMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    byte_4D2DC69 = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (GiftMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_GiftMaster___);
+  Master_object = (GiftMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_GiftMaster___);
   if ( !Master_object )
     goto LABEL_17;
   GiftListById = GiftMaster__GetGiftListById(Master_object, giftId, 0);
@@ -224,27 +224,27 @@ void EventInfoCraftItemComponent__SetGiftInfo(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      Master_object = (GiftMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ItemMaster___);
+      Master_object = (GiftMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ItemMaster___);
       if ( !LODWORD(v8->max_length) )
-        sub_1C71610(Master_object);
+        sub_1C942F8(Master_object);
       v9 = v8->m_Items[0];
       if ( !v9 || !Master_object )
         goto LABEL_17;
       Entity = DataMasterBase_object__object__int___GetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                  v9->fields.objectId,
-                 (const MethodInfo_3408E80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+                 (const MethodInfo_345B4C0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       if ( Entity )
       {
         v6 = (ItemEntity_o *)Entity;
         Master_object = (GiftMaster_o *)this->fields.itemIconComponent;
         if ( Master_object )
         {
-          ItemIconComponent__SetItem_41192688((ItemIconComponent_o *)Master_object, v6, -1, 1, 0);
+          ItemIconComponent__SetItem_41670868((ItemIconComponent_o *)Master_object, v6, -1, 1, 0);
           return;
         }
 LABEL_17:
-        sub_1C71608(Master_object, v6);
+        sub_1C942F0(Master_object, v6);
       }
     }
   }

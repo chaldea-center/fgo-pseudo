@@ -12,7 +12,7 @@ void ChangeBgmBuffDeleteProcess__Exec(
 {
   BattleFieldEnvironmentData_o *FieldEnvData_k__BackingField; // x21
   BattleFieldEnvironmentData_o *v7; // x0
-  __int64 v8; // x1
+  const MethodInfo *v8; // x1
   int32_t v9; // w2
   int32_t v10; // w3
   System_String_o *v11; // x4
@@ -20,31 +20,32 @@ void ChangeBgmBuffDeleteProcess__Exec(
   int64_t v13; // x6
   System_String_o *v14; // x7
   BattleFieldEnvironmentData_o *v15; // x22
-  __int64 v16; // x0
+  const MethodInfo *v16; // x2
+  __int64 v17; // x0
 
-  if ( (byte_4CC9F7F & 1) == 0 )
+  if ( (byte_4D2F428 & 1) == 0 )
   {
-    sub_1C713B0(&BattleBuffData_BuffData___TypeInfo);
-    byte_4CC9F7F = 1;
+    sub_1C94098(&BattleBuffData_BuffData___TypeInfo);
+    byte_4D2F428 = 1;
   }
   FieldEnvData_k__BackingField = this->fields._FieldEnvData_k__BackingField;
-  v7 = (BattleFieldEnvironmentData_o *)sub_1C71458(BattleBuffData_BuffData___TypeInfo, 1);
+  v7 = (BattleFieldEnvironmentData_o *)sub_1C94140(BattleBuffData_BuffData___TypeInfo, 1);
   if ( !v7 )
     goto LABEL_10;
   v15 = v7;
   if ( buff )
   {
-    v7 = (BattleFieldEnvironmentData_o *)sub_1C714EC(buff, v7->klass->_1.element_class);
+    v7 = (BattleFieldEnvironmentData_o *)sub_1C941D4(buff, v7->klass->_1.element_class);
     if ( !v7 )
     {
-      v16 = sub_1C7162C(0);
-      sub_1C714D8(v16, 0);
+      v17 = sub_1C94314(0);
+      sub_1C941C0(v17, 0);
     }
   }
   if ( !LODWORD(v15->fields._Data_k__BackingField) )
-    sub_1C71610(v7);
+    sub_1C942F8(v7);
   v15->fields._Perf_k__BackingField = (struct BattlePerformance_o *)buff;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&v15->fields._Perf_k__BackingField,
     (int32_t)buff,
     v9,
@@ -57,11 +58,11 @@ void ChangeBgmBuffDeleteProcess__Exec(
     || (BattleFieldEnvironmentData__RemoveBgmRelateBuff(
           FieldEnvData_k__BackingField,
           (BattleBuffData_BuffData_array *)v15,
-          0),
+          v16),
         (v7 = this->fields._FieldEnvData_k__BackingField) == 0) )
   {
 LABEL_10:
-    sub_1C71608(v7, v8);
+    sub_1C942F0(v7, v8);
   }
-  BattleFieldEnvironmentData__AddUpdateBgmTask(v7, 0);
+  BattleFieldEnvironmentData__AddUpdateBgmTask(v7, v8);
 }

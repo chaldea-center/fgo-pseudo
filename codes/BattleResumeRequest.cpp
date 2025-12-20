@@ -12,34 +12,34 @@ void BattleResumeRequest__beginRequest(
         System_Int32_array *usedTurnArray,
         const MethodInfo *method)
 {
-  if ( (byte_4CC8E7B & 1) == 0 )
+  if ( (byte_4D2E319 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_22976/*"questPhase"*/);
-    sub_1C713B0(&StringLiteral_24619/*"usedTurnList"*/);
-    sub_1C713B0(&StringLiteral_22972/*"questId"*/);
-    sub_1C713B0(&StringLiteral_17097/*"battleId"*/);
-    byte_4CC8E7B = 1;
+    sub_1C94098(&StringLiteral_23090/*"questPhase"*/);
+    sub_1C94098(&StringLiteral_24741/*"usedTurnList"*/);
+    sub_1C94098(&StringLiteral_23086/*"questId"*/);
+    sub_1C94098(&StringLiteral_17158/*"battleId"*/);
+    byte_4D2E319 = 1;
   }
   this->fields.currentQuestId = questId;
-  RequestBase__addField_44514616((RequestBase_o *)this, (System_String_o *)StringLiteral_17097/*"battleId"*/, battleId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22972/*"questId"*/, questId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22976/*"questPhase"*/, questPhase, 0);
-  RequestBase__addField_44516316((RequestBase_o *)this, (System_String_o *)StringLiteral_24619/*"usedTurnList"*/, &usedTurnArray->obj, 0);
+  RequestBase__addField_45013228((RequestBase_o *)this, (System_String_o *)StringLiteral_17158/*"battleId"*/, battleId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23086/*"questId"*/, questId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23090/*"questPhase"*/, questPhase, 0);
+  RequestBase__addField_45014472((RequestBase_o *)this, (System_String_o *)StringLiteral_24741/*"usedTurnList"*/, &usedTurnArray->obj, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
 System_String_o *BattleResumeRequest__getMockData(BattleResumeRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC8E7A & 1) == 0 )
+  if ( (byte_4D2E318 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_9133/*"MockBattleResumeRequest"*/);
-    byte_4CC8E7A = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&StringLiteral_9152/*"MockBattleResumeRequest"*/);
+    byte_4D2E318 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9133/*"MockBattleResumeRequest"*/, 0);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9152/*"MockBattleResumeRequest"*/, 0);
 }
 
 
@@ -47,16 +47,16 @@ System_String_o *BattleResumeRequest__getURL(BattleResumeRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CC8E79 & 1) == 0 )
+  if ( (byte_4D2E317 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_17077/*"battle/resume"*/);
-    byte_4CC8E79 = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&StringLiteral_17137/*"battle/resume"*/);
+    byte_4D2E317 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_17077/*"battle/resume"*/, 0);
+  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_17137/*"battle/resume"*/, 0);
 }
 
 
@@ -74,18 +74,18 @@ void BattleResumeRequest__requestCompleted(
   int32_t SpotId; // w19
   TerminalPramsManager_c *v12; // x0
 
-  if ( (byte_4CC8E7C & 1) == 0 )
+  if ( (byte_4D2E31A & 1) == 0 )
   {
-    sub_1C713B0(&JsonManager_TypeInfo);
-    sub_1C713B0(&ResponseCommandKind_TypeInfo);
-    sub_1C713B0(&TerminalPramsManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
-    byte_4CC8E7C = 1;
+    sub_1C94098(&JsonManager_TypeInfo);
+    sub_1C94098(&ResponseCommandKind_TypeInfo);
+    sub_1C94098(&TerminalPramsManager_TypeInfo);
+    sub_1C94098(&StringLiteral_22424/*"ng"*/);
+    byte_4D2E31A = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(38, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44515240(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
+  if ( v5 && (v6 = v5, ResponseData__checkError_45012660(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -94,10 +94,10 @@ void BattleResumeRequest__requestCompleted(
     currentQuestId = this->fields.currentQuestId;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-    if ( !byte_4CC40AB )
+    if ( !byte_4D29445 )
     {
-      sub_1C713B0(&TerminalPramsManager_TypeInfo);
-      byte_4CC40AB = 1;
+      sub_1C94098(&TerminalPramsManager_TypeInfo);
+      byte_4D29445 = 1;
     }
     v10 = TerminalPramsManager_TypeInfo;
     if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -112,10 +112,10 @@ void BattleResumeRequest__requestCompleted(
       SpotId = QuestMaster__GetSpotId(this->fields.currentQuestId, 0);
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(TerminalPramsManager_TypeInfo);
-      if ( !byte_4CC40AC )
+      if ( !byte_4D29446 )
       {
-        sub_1C713B0(&TerminalPramsManager_TypeInfo);
-        byte_4CC40AC = 1;
+        sub_1C94098(&TerminalPramsManager_TypeInfo);
+        byte_4D29446 = 1;
       }
       v12 = TerminalPramsManager_TypeInfo;
       if ( !TerminalPramsManager_TypeInfo->_2.cctor_finished )
@@ -135,6 +135,6 @@ void BattleResumeRequest__requestCompleted(
   }
   else
   {
-    RequestBase__completed((RequestBase_o *)this, (System_String_o *)StringLiteral_22316/*"ng"*/, 0);
+    RequestBase__completed((RequestBase_o *)this, (System_String_o *)StringLiteral_22424/*"ng"*/, 0);
   }
 }

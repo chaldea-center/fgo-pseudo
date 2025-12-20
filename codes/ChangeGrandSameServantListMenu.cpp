@@ -44,19 +44,19 @@ CharaGraphListViewPatternBase_o *ChangeGrandSameServantListMenu__CreateListViewP
   int64_t v30; // x6
   System_String_o *v31; // x7
 
-  if ( (byte_4CC2107 & 1) == 0 )
+  if ( (byte_4D27454 & 1) == 0 )
   {
-    sub_1C713B0(&CharaGraphListViewPatternGrandSameServant_TypeInfo);
-    byte_4CC2107 = 1;
+    sub_1C94098(&CharaGraphListViewPatternGrandSameServant_TypeInfo);
+    byte_4D27454 = 1;
   }
   grandSvtData = this->fields.grandSvtData;
-  v8 = sub_1C715FC(CharaGraphListViewPatternGrandSameServant_TypeInfo);
+  v8 = sub_1C942E4(CharaGraphListViewPatternGrandSameServant_TypeInfo);
   CharaGraphListViewPatternGrandSameServant___ctor((CharaGraphListViewPatternGrandSameServant_o *)v8, grandSvtData, v9);
   if ( !v8 )
     goto LABEL_6;
   SortOwner_k__BackingField = this->fields._SortOwner_k__BackingField;
   *(_QWORD *)(v8 + 16) = SortOwner_k__BackingField;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)(v8 + 16),
     (int32_t)SortOwner_k__BackingField,
     v12,
@@ -67,13 +67,13 @@ CharaGraphListViewPatternBase_o *ChangeGrandSameServantListMenu__CreateListViewP
     v17);
   RootInfo_k__BackingField = this->fields._RootInfo_k__BackingField;
   *(_QWORD *)(v8 + 24) = RootInfo_k__BackingField;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v8 + 24), (int32_t)RootInfo_k__BackingField, v20, v21, v22, v23, v24, v25);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v8 + 24), (int32_t)RootInfo_k__BackingField, v20, v21, v22, v23, v24, v25);
   *(_QWORD *)(v8 + 32) = setupInfo;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v8 + 32), (int32_t)setupInfo, v26, v27, v28, v29, v30, v31);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v8 + 32), (int32_t)setupInfo, v26, v27, v28, v29, v30, v31);
   v10 = *(CharaGraphSortOwnerBase_o **)(v8 + 16);
   if ( !v10 )
 LABEL_6:
-    sub_1C71608(v10, v11);
+    sub_1C942F0(v10, v11);
   CharaGraphSortOwnerBase__SwitchCurrentViewSortUnit(v10, kind, 0);
   return (CharaGraphListViewPatternBase_o *)v8;
 }
@@ -110,30 +110,30 @@ void ChangeGrandSameServantListMenu__ExitMenu(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v28; // [xsp+0h] [xbp-70h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v29; // [xsp+20h] [xbp-50h]
 
-  if ( (byte_4CC2105 & 1) == 0 )
+  if ( (byte_4D27452 & 1) == 0 )
   {
-    sub_1C713B0(&Method_ChangeGrandSameServantListMenu_ExitMenu__);
-    sub_1C713B0(&Method_NetworkManager_getRequest_SetupGrandServantRequest___);
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    sub_1C713B0(&NetworkManager_ResultCallbackFunc_TypeInfo);
-    sub_1C713B0(&Method_ChangeGrandSameServantListMenu___c__DisplayClass8_0__ExitMenu_b__0__);
-    sub_1C713B0(&ChangeGrandSameServantListMenu___c__DisplayClass8_0_TypeInfo);
-    byte_4CC2105 = 1;
+    sub_1C94098(&Method_ChangeGrandSameServantListMenu_ExitMenu__);
+    sub_1C94098(&Method_NetworkManager_getRequest_SetupGrandServantRequest___);
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    sub_1C94098(&NetworkManager_ResultCallbackFunc_TypeInfo);
+    sub_1C94098(&Method_ChangeGrandSameServantListMenu___c__DisplayClass8_0__ExitMenu_b__0__);
+    sub_1C94098(&ChangeGrandSameServantListMenu___c__DisplayClass8_0_TypeInfo);
+    byte_4D27452 = 1;
   }
-  v5 = sub_1C715FC(ChangeGrandSameServantListMenu___c__DisplayClass8_0_TypeInfo);
+  v5 = sub_1C942E4(ChangeGrandSameServantListMenu___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_26;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v5 + 24) = result;
   if ( !result )
   {
     v21 = Method_ChangeGrandSameServantListMenu_ExitMenu__;
     if ( (*((_BYTE *)Method_ChangeGrandSameServantListMenu_ExitMenu__ + 83) & 2) != 0 )
-      v21 = (_QWORD *)sub_1C713C8(Method_ChangeGrandSameServantListMenu_ExitMenu__);
-    v22 = (System_Reflection_MethodBase_o *)sub_1C71394(v21, v21[4]);
+      v21 = (_QWORD *)sub_1C940B0(Method_ChangeGrandSameServantListMenu_ExitMenu__);
+    v22 = (System_Reflection_MethodBase_o *)sub_1C9407C(v21, v21[4]);
     OverwriteAssetSoundName__PlaySystemSe(v22, 1, 0, 0);
     v23 = *(_DWORD *)(v5 + 24);
     v24 = this;
@@ -153,8 +153,8 @@ LABEL_19:
     return;
   v15 = Method_ChangeGrandSameServantListMenu_ExitMenu__;
   if ( (*((_BYTE *)Method_ChangeGrandSameServantListMenu_ExitMenu__ + 83) & 2) != 0 )
-    v15 = (_QWORD *)sub_1C713C8(Method_ChangeGrandSameServantListMenu_ExitMenu__);
-  v16 = (System_Reflection_MethodBase_o *)sub_1C71394(v15, v15[4]);
+    v15 = (_QWORD *)sub_1C940B0(Method_ChangeGrandSameServantListMenu_ExitMenu__);
+  v16 = (System_Reflection_MethodBase_o *)sub_1C9407C(v15, v15[4]);
   OverwriteAssetSoundName__PlaySystemSe(v16, 8, 0, 0);
   grandSvtData = this->fields.grandSvtData;
   if ( !grandSvtData )
@@ -168,12 +168,12 @@ LABEL_19:
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v28 = v29;
-  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v28, 0) == this->fields.selectedUserServantId )
+  if ( CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49625068(&v28, 0) == this->fields.selectedUserServantId )
   {
     ChangeGrandSameServantListMenu__ExitMenuCallback(this, *(_DWORD *)(v5 + 24), 0, v20);
     return;
   }
-  v26 = (NetworkManager_ResultCallbackFunc_o *)sub_1C715FC(NetworkManager_ResultCallbackFunc_TypeInfo);
+  v26 = (NetworkManager_ResultCallbackFunc_o *)sub_1C942E4(NetworkManager_ResultCallbackFunc_TypeInfo);
   NetworkManager_ResultCallbackFunc___ctor(
     v26,
     (Il2CppObject *)v5,
@@ -183,11 +183,11 @@ LABEL_19:
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   Request_object = NetworkManager__getRequest_object_(
                      v26,
-                     (const MethodInfo_31D69E8 *)Method_NetworkManager_getRequest_SetupGrandServantRequest___);
+                     (const MethodInfo_32282A8 *)Method_NetworkManager_getRequest_SetupGrandServantRequest___);
   v27 = this->fields.grandSvtData;
   if ( !v27 || !Request_object )
 LABEL_26:
-    sub_1C71608(Request_object, v7);
+    sub_1C942F0(Request_object, v7);
   SetupGrandServantRequest__beginRequest(
     (SetupGrandServantRequest_o *)Request_object,
     v27->fields._GrandGraphId_k__BackingField,
@@ -210,15 +210,15 @@ void ChangeGrandSameServantListMenu__ExitMenuCallback(
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v13; // x1
 
-  if ( (byte_4CC2106 & 1) == 0 )
+  if ( (byte_4D27453 & 1) == 0 )
   {
-    sub_1C713B0(&Method_ActionExtensions_Call_bool___);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CC2106 = 1;
+    sub_1C94098(&Method_ActionExtensions_Call_bool___);
+    sub_1C94098(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4D27453 = 1;
   }
   exitMenuCallback = (System_Action_T__o *)this->fields.exitMenuCallback;
   this->fields.exitMenuCallback = 0;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.exitMenuCallback,
     0,
     isTransitionScene,
@@ -231,7 +231,7 @@ void ChangeGrandSameServantListMenu__ExitMenuCallback(
     ActionExtensions__Call_bool_(
       exitMenuCallback,
       result == 1,
-      (const MethodInfo_3095C18 *)Method_ActionExtensions_Call_bool___);
+      (const MethodInfo_30E5830 *)Method_ActionExtensions_Call_bool___);
   this->fields.selectedUserServantId = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -245,14 +245,14 @@ void ChangeGrandSameServantListMenu__ExitMenuCallback(
   CharaGraphListViewManager__SaveSortInfo((CharaGraphListViewManager_o *)gameObject, 0);
   if ( isTransitionScene )
   {
-    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
     if ( gameObject )
     {
       AvalonSceneManager__transitionScene((AvalonSceneManager_o *)gameObject, 34, 1, 0, 0);
       return;
     }
 LABEL_11:
-    sub_1C71608(gameObject, v13);
+    sub_1C942F0(gameObject, v13);
   }
 }
 
@@ -261,12 +261,12 @@ System_String_o *ChangeGrandSameServantListMenu__GetLocalizationKeyForModeKindMa
         ChangeGrandSameServantListMenu_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CC2103 & 1) == 0 )
+  if ( (byte_4D27450 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_3319/*"CHANGE_GRAND_SAME_SERVANT_SELECT_EXPLANATION_STATUS"*/);
-    byte_4CC2103 = 1;
+    sub_1C94098(&StringLiteral_3327/*"CHANGE_GRAND_SAME_SERVANT_SELECT_EXPLANATION_STATUS"*/);
+    byte_4D27450 = 1;
   }
-  return (System_String_o *)StringLiteral_3319/*"CHANGE_GRAND_SAME_SERVANT_SELECT_EXPLANATION_STATUS"*/;
+  return (System_String_o *)StringLiteral_3327/*"CHANGE_GRAND_SAME_SERVANT_SELECT_EXPLANATION_STATUS"*/;
 }
 
 
@@ -278,7 +278,7 @@ void ChangeGrandSameServantListMenu__OnSelectServant(
   const MethodInfo *v4; // x2
 
   if ( !selectItem )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   this->fields.selectedUserServantId = ((__int64 (__fastcall *)(CharaGraphListViewItemBase_o *, const MethodInfo *, const MethodInfo *))selectItem->klass->vtable._6_unknown.methodPtr)(
                                          selectItem,
                                          selectItem->klass->vtable._6_unknown.method,
@@ -325,15 +325,15 @@ void ChangeGrandSameServantListMenu__Open(
   System_String_o *v26; // x7
   CharaGraphListMenuBase_CallbackFunc_o *v27; // x20
 
-  if ( (byte_4CC2104 & 1) == 0 )
+  if ( (byte_4D27451 & 1) == 0 )
   {
-    sub_1C713B0(&CharaGraphListMenuBase_CallbackFunc_TypeInfo);
-    sub_1C713B0(&Method_ChangeGrandSameServantListMenu_ExitMenu__);
-    sub_1C713B0(&CharaGraphSortOwnerGrandSameServant_TypeInfo);
-    byte_4CC2104 = 1;
+    sub_1C94098(&CharaGraphListMenuBase_CallbackFunc_TypeInfo);
+    sub_1C94098(&Method_ChangeGrandSameServantListMenu_ExitMenu__);
+    sub_1C94098(&CharaGraphSortOwnerGrandSameServant_TypeInfo);
+    byte_4D27451 = 1;
   }
   this->fields.grandSvtData = grandSvtSlotData;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.grandSvtData,
     (int32_t)grandSvtSlotData,
     (int32_t)callback,
@@ -343,7 +343,7 @@ void ChangeGrandSameServantListMenu__Open(
     v6,
     v7);
   this->fields.exitMenuCallback = callback;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.exitMenuCallback,
     (int32_t)callback,
     v11,
@@ -359,11 +359,11 @@ void ChangeGrandSameServantListMenu__Open(
   titleInfo = this->fields.titleInfo;
   if ( !titleInfo )
     goto LABEL_8;
-  TitleInfoControl__setBackBtnSprite_40108768(titleInfo, 1, 0, 0, 0);
-  v19 = (CharaGraphSortOwnerGrandSameServant_o *)sub_1C715FC(CharaGraphSortOwnerGrandSameServant_TypeInfo);
+  TitleInfoControl__setBackBtnSprite_40657648(titleInfo, 1, 0, 0, 0);
+  v19 = (CharaGraphSortOwnerGrandSameServant_o *)sub_1C942E4(CharaGraphSortOwnerGrandSameServant_TypeInfo);
   CharaGraphSortOwnerGrandSameServant___ctor(v19, v20);
   this->fields._SortOwner_k__BackingField = (struct CharaGraphSortOwnerBase_o *)v19;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SortOwner_k__BackingField,
     (int32_t)v19,
     v21,
@@ -373,7 +373,7 @@ void ChangeGrandSameServantListMenu__Open(
     v25,
     v26);
   CharaGraphListMenuBase__set_ModeKind((CharaGraphListMenuBase_o *)this, 0, 0);
-  v27 = (CharaGraphListMenuBase_CallbackFunc_o *)sub_1C715FC(CharaGraphListMenuBase_CallbackFunc_TypeInfo);
+  v27 = (CharaGraphListMenuBase_CallbackFunc_o *)sub_1C942E4(CharaGraphListMenuBase_CallbackFunc_TypeInfo);
   CharaGraphListMenuBase_CallbackFunc___ctor(
     v27,
     (Il2CppObject *)this,
@@ -386,7 +386,7 @@ void ChangeGrandSameServantListMenu__Open(
         (titleInfo = (TitleInfoControl_o *)this->fields.charaGraphSortButtonGroup) == 0) )
   {
 LABEL_8:
-    sub_1C71608(titleInfo, v17);
+    sub_1C942F0(titleInfo, v17);
   }
   CharaGraphSortButtonGroup__SetFilterButtonState((CharaGraphSortButtonGroup_o *)titleInfo, 3, 1, 0);
 }
@@ -409,16 +409,16 @@ void ChangeGrandSameServantListMenu___c__DisplayClass8_0___ExitMenu_b__0(
   const MethodInfo *v6; // x3
   ChangeGrandSameServantListMenu_o *_4__this; // x0
 
-  if ( (byte_4CC2108 & 1) == 0 )
+  if ( (byte_4D27455 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
-    byte_4CC2108 = 1;
+    sub_1C94098(&StringLiteral_22424/*"ng"*/);
+    byte_4D27455 = 1;
   }
-  if ( System_String__op_Inequality(requestResult, (System_String_o *)StringLiteral_22316/*"ng"*/, 0) )
+  if ( System_String__op_Inequality(requestResult, (System_String_o *)StringLiteral_22424/*"ng"*/, 0) )
   {
     _4__this = this->fields.__4__this;
     if ( !_4__this )
-      sub_1C71608(0, v5);
+      sub_1C942F0(0, v5);
     ChangeGrandSameServantListMenu__ExitMenuCallback(_4__this, this->fields.result, 0, v6);
   }
 }

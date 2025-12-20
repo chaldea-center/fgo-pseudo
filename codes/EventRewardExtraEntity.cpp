@@ -1,27 +1,27 @@
 void EventRewardExtraEntity___ctor(EventRewardExtraEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC7502 & 1) == 0 )
+  if ( (byte_4D2C979 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC7502 = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2C979 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventRewardExtraEntity__CreatePK(int32_t eventId, int64_t point, const MethodInfo *method)
 {
-  if ( (byte_4CC7501 & 1) == 0 )
+  if ( (byte_4D2C978 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__long___);
-    byte_4CC7501 = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__long___);
+    byte_4D2C978 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__long_(
            eventId,
            point,
-           (const MethodInfo_3149318 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
+           (const MethodInfo_319A340 *)Method_DataEntityBase_CreateMultiplePK_int__long___);
 }
 
 

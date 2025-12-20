@@ -2,10 +2,10 @@ void BattleServantHpShiftDecagramEffectComponent___ctor(
         BattleServantHpShiftDecagramEffectComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CCAB5F & 1) == 0 )
+  if ( (byte_4D3002A & 1) == 0 )
   {
-    sub_1C713B0(&CommonEffectComponent_TypeInfo);
-    byte_4CCAB5F = 1;
+    sub_1C94098(&CommonEffectComponent_TypeInfo);
+    byte_4D3002A = 1;
   }
   if ( !CommonEffectComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CommonEffectComponent_TypeInfo);
@@ -23,10 +23,10 @@ void BattleServantHpShiftDecagramEffectComponent__UpdateIcon(
   const MethodInfo *v7; // x3
   BattleServantHpShiftComponent_o *v8; // x0
 
-  if ( (byte_4CCAB5D & 1) == 0 )
+  if ( (byte_4D30028 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAB5D = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30028 = 1;
   }
   Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -35,7 +35,7 @@ void BattleServantHpShiftDecagramEffectComponent__UpdateIcon(
   {
     v8 = this->fields._Parent_k__BackingField;
     if ( !v8 )
-      sub_1C71608(0, v6);
+      sub_1C942F0(0, v6);
     BattleServantHpShiftComponent__UpdateIconActive(v8, index, 1, v7);
   }
 }
@@ -51,10 +51,10 @@ void BattleServantHpShiftDecagramEffectComponent__UpdateIconInactive(
   const MethodInfo *v7; // x3
   BattleServantHpShiftComponent_o *v8; // x0
 
-  if ( (byte_4CCAB5E & 1) == 0 )
+  if ( (byte_4D30029 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAB5E = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30029 = 1;
   }
   Parent_k__BackingField = (UnityEngine_Object_o *)this->fields._Parent_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -63,7 +63,7 @@ void BattleServantHpShiftDecagramEffectComponent__UpdateIconInactive(
   {
     v8 = this->fields._Parent_k__BackingField;
     if ( !v8 )
-      sub_1C71608(0, v6);
+      sub_1C942F0(0, v6);
     BattleServantHpShiftComponent__UpdateIconActive(v8, index, 0, v7);
   }
 }
@@ -89,7 +89,7 @@ void BattleServantHpShiftDecagramEffectComponent__set_Parent(
   System_String_o *v7; // x7
 
   this->fields._Parent_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Parent_k__BackingField,
     (int32_t)value,
     (int32_t)method,

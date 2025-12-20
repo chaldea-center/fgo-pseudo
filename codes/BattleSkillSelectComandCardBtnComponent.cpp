@@ -2,7 +2,7 @@ void BattleSkillSelectComandCardBtnComponent___ctor(
         BattleSkillSelectComandCardBtnComponent_o *this,
         const MethodInfo *method)
 {
-  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
+  BattleSkillSelectBtnBaseComponent___ctor((BattleSkillSelectBtnBaseComponent_o *)this, 0);
 }
 
 
@@ -19,12 +19,12 @@ void BattleSkillSelectComandCardBtnComponent__SetBtnSprite(
   struct System_String_array *commandBtnSpriteNameList; // x8
   int32_t result; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CCAC11 & 1) == 0 )
+  if ( (byte_4D300E1 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
-    sub_1C713B0(&System_Enum_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC11 = 1;
+    sub_1C94098(&Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
+    sub_1C94098(&System_Enum_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D300E1 = 1;
   }
   result = 0;
   btnAtlas = (UnityEngine_Object_o *)this->fields.btnAtlas;
@@ -44,13 +44,13 @@ void BattleSkillSelectComandCardBtnComponent__SetBtnSprite(
     v8 = System_Enum__TryParse_Int32Enum_(
            Name_k__BackingField,
            &result,
-           (const MethodInfo_3151C50 *)Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
+           (const MethodInfo_31A2C78 *)Method_System_Enum_TryParse_BattleSkillSelectComandCardBtnComponent_CommandCardType___);
     commandBtnSpriteNameList = this->fields.commandBtnSpriteNameList;
     if ( !commandBtnSpriteNameList )
 LABEL_14:
-      sub_1C71608(v8, v9);
+      sub_1C942F0(v8, v9);
     if ( (unsigned int)result >= LODWORD(commandBtnSpriteNameList->max_length) )
-      sub_1C71610(v8);
+      sub_1C942F8(v8);
     UISprite__set_spriteName(btn, commandBtnSpriteNameList->m_Items[result], 0);
     ((void (__fastcall *)(UISprite_o *, const MethodInfo *))btn->klass->vtable._33_MakePixelPerfect.methodPtr)(
       btn,

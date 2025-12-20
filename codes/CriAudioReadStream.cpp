@@ -10,7 +10,7 @@ void CriAudioReadStream___ctor(
 }
 
 
-void CriAudioReadStream___ctor_31046296(
+void CriAudioReadStream___ctor_31188832(
         CriAudioReadStream_o *this,
         CriAudioReadStream_Delegate_o *callback,
         int32_t numChannels,
@@ -28,29 +28,29 @@ void CriAudioReadStream___ctor_31046296(
   const MethodInfo *v17; // x3
   Il2CppObject *internalDelegate; // x20
 
-  if ( (byte_4CC0790 & 1) == 0 )
+  if ( (byte_4D259A0 & 1) == 0 )
   {
-    sub_1C713B0(&CriAudioReadStream_InternalDelegate_TypeInfo);
-    sub_1C713B0(&Method_System_Runtime_InteropServices_Marshal_GetFunctionPointerForDelegate_CriAudioReadStream_InternalDelegate___);
-    sub_1C713B0(&System_Runtime_InteropServices_Marshal_TypeInfo);
-    sub_1C713B0(&float_____TypeInfo);
-    sub_1C713B0(&float___TypeInfo);
-    sub_1C713B0(&Method_CriAudioReadStream___c__DisplayClass12_0___ctor_b__0__);
-    sub_1C713B0(&CriAudioReadStream___c__DisplayClass12_0_TypeInfo);
-    byte_4CC0790 = 1;
+    sub_1C94098(&CriAudioReadStream_InternalDelegate_TypeInfo);
+    sub_1C94098(&Method_System_Runtime_InteropServices_Marshal_GetFunctionPointerForDelegate_CriAudioReadStream_InternalDelegate___);
+    sub_1C94098(&System_Runtime_InteropServices_Marshal_TypeInfo);
+    sub_1C94098(&float_____TypeInfo);
+    sub_1C94098(&float___TypeInfo);
+    sub_1C94098(&Method_CriAudioReadStream___c__DisplayClass12_0___ctor_b__0__);
+    sub_1C94098(&CriAudioReadStream___c__DisplayClass12_0_TypeInfo);
+    byte_4D259A0 = 1;
   }
-  v9 = sub_1C715FC(CriAudioReadStream___c__DisplayClass12_0_TypeInfo);
+  v9 = sub_1C942E4(CriAudioReadStream___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
     goto LABEL_12;
   *(_DWORD *)(v9 + 16) = bufferSize;
   *(_QWORD *)(v9 + 24) = callback;
-  sub_1C71354(v9 + 24, callback);
+  sub_1C9403C(v9 + 24, callback);
   *(_DWORD *)(v9 + 32) = numChannels;
   System_Object___ctor((Il2CppObject *)this, 0);
-  v12 = sub_1C71458(float_____TypeInfo, *(unsigned int *)(v9 + 32));
+  v12 = sub_1C94140(float_____TypeInfo, *(unsigned int *)(v9 + 32));
   *(_QWORD *)(v9 + 40) = v12;
-  sub_1C71354(v9 + 40, v12);
+  sub_1C9403C(v9 + 40, v12);
   if ( *(int *)(v9 + 32) >= 1 )
   {
     v13 = 0;
@@ -58,36 +58,36 @@ void CriAudioReadStream___ctor_31046296(
     while ( 1 )
     {
       v15 = *(_QWORD *)(v9 + 40);
-      v10 = sub_1C71458(float___TypeInfo, *(unsigned int *)(v9 + 16));
+      v10 = sub_1C94140(float___TypeInfo, *(unsigned int *)(v9 + 16));
       if ( !v15 )
         break;
       if ( v13 >= *(unsigned int *)(v15 + 24) )
-        sub_1C71610(v10);
+        sub_1C942F8(v10);
       *(_QWORD *)(v15 + v14) = v10;
-      sub_1C71354(v15 + v14, v10);
+      sub_1C9403C(v15 + v14, v10);
       ++v13;
       v14 += 8;
       if ( (__int64)v13 >= *(int *)(v9 + 32) )
         goto LABEL_9;
     }
 LABEL_12:
-    sub_1C71608(v10, v11);
+    sub_1C942F0(v10, v11);
   }
 LABEL_9:
-  v16 = (CriAudioReadStream_InternalDelegate_o *)sub_1C715FC(CriAudioReadStream_InternalDelegate_TypeInfo);
+  v16 = (CriAudioReadStream_InternalDelegate_o *)sub_1C942E4(CriAudioReadStream_InternalDelegate_TypeInfo);
   CriAudioReadStream_InternalDelegate___ctor(
     v16,
     (Il2CppObject *)v9,
     Method_CriAudioReadStream___c__DisplayClass12_0___ctor_b__0__,
     v17);
   this->fields.internalDelegate = v16;
-  sub_1C71354(&this->fields, v16);
+  sub_1C9403C(&this->fields, v16);
   internalDelegate = (Il2CppObject *)this->fields.internalDelegate;
   if ( !System_Runtime_InteropServices_Marshal_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Runtime_InteropServices_Marshal_TypeInfo);
   this->fields._callbackFunction_k__BackingField = System_Runtime_InteropServices_Marshal__GetFunctionPointerForDelegate_object_(
                                                      internalDelegate,
-                                                     (const MethodInfo_31CD478 *)Method_System_Runtime_InteropServices_Marshal_GetFunctionPointerForDelegate_CriAudioReadStream_InternalDelegate___);
+                                                     (const MethodInfo_321ED38 *)Method_System_Runtime_InteropServices_Marshal_GetFunctionPointerForDelegate_CriAudioReadStream_InternalDelegate___);
 }
 
 
@@ -131,20 +131,20 @@ void CriAudioReadStream_Delegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C71354(&this->fields.m_target, object);
+  sub_1C9403C(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( v8 == 1 )
     {
-      v9 = sub_1A9B2B4;
+      v9 = sub_1ABC9C4;
       goto LABEL_6;
     }
     if ( !object )
     {
-      v11 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v11, 0);
+      v11 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v11, 0);
     }
 LABEL_8:
     m_target = this->fields.m_target;
@@ -154,11 +154,11 @@ LABEL_8:
   }
   if ( v8 != 2 )
     goto LABEL_8;
-  v9 = sub_1A9B2D8;
+  v9 = sub_1ABC9E8;
 LABEL_6:
   this->fields.invoke_impl = (intptr_t)v9;
 LABEL_9:
-  this->fields.extra_arg = (intptr_t)sub_1A9B254;
+  this->fields.extra_arg = (intptr_t)sub_1ABC964;
 }
 
 
@@ -174,15 +174,15 @@ System_IAsyncResult_o *CriAudioReadStream_Delegate__BeginInvoke(
   uint32_t v12; // [xsp+2Ch] [xbp-34h] BYREF
 
   v12 = numSamples;
-  if ( (byte_4CC0792 & 1) == 0 )
+  if ( (byte_4D259A2 & 1) == 0 )
   {
-    sub_1C713B0(&uint_TypeInfo);
-    byte_4CC0792 = 1;
+    sub_1C94098(&uint_TypeInfo);
+    byte_4D259A2 = 1;
   }
   v11[2] = 0;
   v11[0] = buffer;
   v11[1] = j_il2cpp_value_box_0(uint_TypeInfo, &v12);
-  return (System_IAsyncResult_o *)sub_1C71364(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, v11, callback, object);
 }
 
 
@@ -193,8 +193,8 @@ uint32_t CriAudioReadStream_Delegate__EndInvoke(
 {
   __int64 v3; // x1
 
-  if ( !sub_1C71368(result, 0, method) )
-    sub_1C71608(0, v3);
+  if ( !sub_1C94050(result, 0, method) )
+    sub_1C942F0(0, v3);
   return *(_DWORD *)j_il2cpp_object_unbox_0();
 }
 
@@ -228,15 +228,15 @@ void CriAudioReadStream_InternalDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C71354(&this->fields.m_target, object);
+  sub_1C9403C(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v10, 0);
+      v10 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v10, 0);
     }
     goto LABEL_5;
   }
@@ -248,9 +248,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A9B228;
+  this->fields.invoke_impl = (intptr_t)sub_1ABC938;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A9B1C0;
+  this->fields.extra_arg = (intptr_t)sub_1ABC8D0;
 }
 
 
@@ -272,17 +272,17 @@ System_IAsyncResult_o *CriAudioReadStream_InternalDelegate__BeginInvoke(
   v15 = cbobj;
   v14 = data;
   v13 = numSamples;
-  if ( (byte_4CC0791 & 1) == 0 )
+  if ( (byte_4D259A1 & 1) == 0 )
   {
-    sub_1C713B0(&IntPtr_TypeInfo);
-    sub_1C713B0(&uint_TypeInfo);
-    byte_4CC0791 = 1;
+    sub_1C94098(&IntPtr_TypeInfo);
+    sub_1C94098(&uint_TypeInfo);
+    byte_4D259A1 = 1;
   }
   v12 = 0u;
   v11[0] = j_il2cpp_value_box_0(IntPtr_TypeInfo, &v15);
   v11[1] = j_il2cpp_value_box_0(IntPtr_TypeInfo, &v14);
   *(_QWORD *)&v12 = j_il2cpp_value_box_0(uint_TypeInfo, &v13);
-  return (System_IAsyncResult_o *)sub_1C71364(this, v11, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, v11, callback, object);
 }
 
 
@@ -293,8 +293,8 @@ uint32_t CriAudioReadStream_InternalDelegate__EndInvoke(
 {
   __int64 v3; // x1
 
-  if ( !sub_1C71368(result, 0, method) )
-    sub_1C71608(0, v3);
+  if ( !sub_1C94050(result, 0, method) )
+    sub_1C942F0(0, v3);
   return *(_DWORD *)j_il2cpp_object_unbox_0();
 }
 
@@ -342,10 +342,10 @@ uint32_t CriAudioReadStream___c__DisplayClass12_0____ctor_b__0(
   intptr_t IntPtr; // x0
 
   v7 = this;
-  if ( (byte_4CC0793 & 1) == 0 )
+  if ( (byte_4D259A3 & 1) == 0 )
   {
-    this = (CriAudioReadStream___c__DisplayClass12_0_o *)sub_1C713B0(&System_Runtime_InteropServices_Marshal_TypeInfo);
-    byte_4CC0793 = 1;
+    this = (CriAudioReadStream___c__DisplayClass12_0_o *)sub_1C94098(&System_Runtime_InteropServices_Marshal_TypeInfo);
+    byte_4D259A3 = 1;
   }
   callback = v7->fields.callback;
   if ( !callback )
@@ -371,18 +371,18 @@ uint32_t CriAudioReadStream___c__DisplayClass12_0____ctor_b__0(
       if ( !buffer )
         break;
       if ( v12 >= LODWORD(buffer->max_length) )
-        sub_1C71610(this);
+        sub_1C942F8(this);
       v14 = buffer->m_Items[v12];
       Size = System_IntPtr__get_Size(0);
       if ( !System_Runtime_InteropServices_Marshal_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Runtime_InteropServices_Marshal_TypeInfo);
       IntPtr = System_Runtime_InteropServices_Marshal__ReadIntPtr(data, Size * (int)v12, 0);
-      System_Runtime_InteropServices_Marshal__Copy_64712848(v14, 0, IntPtr, v11, 0);
+      System_Runtime_InteropServices_Marshal__Copy_65098868(v14, 0, IntPtr, v11, 0);
       if ( (__int64)++v12 >= v7->fields.numChannels )
         return v11;
     }
 LABEL_15:
-    sub_1C71608(this, cbobj);
+    sub_1C942F0(this, cbobj);
   }
   return v11;
 }

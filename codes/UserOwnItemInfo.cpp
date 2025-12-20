@@ -4,7 +4,7 @@ void UserOwnItemInfo___ctor(UserOwnItemInfo_o *this, const MethodInfo *method)
 }
 
 
-void UserOwnItemInfo___ctor_43845852(
+void UserOwnItemInfo___ctor_44425380(
         UserOwnItemInfo_o *this,
         ItemEntity_o *itemEntity,
         UserItemEntity_o *userItemEntity,
@@ -20,7 +20,7 @@ void UserOwnItemInfo___ctor_43845852(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._ItemEntity_k__BackingField = itemEntity;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)itemEntity,
     v7,
@@ -45,12 +45,12 @@ bool UserOwnItemInfo__IsExpired(UserOwnItemInfo_o *this, System_Nullable_long__o
 
   value = time.fields.value;
   hasValue = time.fields.hasValue;
-  if ( (byte_4CC88BD & 1) == 0 )
+  if ( (byte_4D2DE29 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&Method_System_Nullable_long__GetValueOrDefault__);
-    sub_1C713B0(&Method_System_Nullable_long__get_HasValue__);
-    byte_4CC88BD = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&Method_System_Nullable_long__GetValueOrDefault__);
+    sub_1C94098(&Method_System_Nullable_long__get_HasValue__);
+    byte_4D2DE29 = 1;
   }
   if ( !hasValue )
   {
@@ -60,8 +60,8 @@ bool UserOwnItemInfo__IsExpired(UserOwnItemInfo_o *this, System_Nullable_long__o
   }
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C71608(0, *(_QWORD *)&time.fields.hasValue);
-  return !ItemEntity__IsEnable_42643172(ItemEntity_k__BackingField, value, 0);
+    sub_1C942F0(0, *(_QWORD *)&time.fields.hasValue);
+  return !ItemEntity__IsEnable_43131440(ItemEntity_k__BackingField, value, 0);
 }
 
 
@@ -71,7 +71,7 @@ int32_t UserOwnItemInfo__get_ImageId(UserOwnItemInfo_o *this, const MethodInfo *
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return ItemEntity_k__BackingField->fields.imageId;
 }
 
@@ -88,7 +88,7 @@ int32_t UserOwnItemInfo__get_ItemId(UserOwnItemInfo_o *this, const MethodInfo *m
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return ItemEntity_k__BackingField->fields.id;
 }
 
@@ -105,7 +105,7 @@ int32_t UserOwnItemInfo__get_Type(UserOwnItemInfo_o *this, const MethodInfo *met
 
   ItemEntity_k__BackingField = this->fields._ItemEntity_k__BackingField;
   if ( !ItemEntity_k__BackingField )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return ItemEntity_k__BackingField->fields.type;
 }
 
@@ -119,7 +119,7 @@ void UserOwnItemInfo__set_ItemEntity(UserOwnItemInfo_o *this, ItemEntity_o *valu
   System_String_o *v7; // x7
 
   this->fields._ItemEntity_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ItemEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

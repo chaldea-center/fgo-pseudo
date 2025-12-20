@@ -27,32 +27,32 @@ SchedulerTaskBase_o *GrandQuestLevelSelectController__GetTaskOfRelease(
   int64_t v19; // x6
   System_String_o *v20; // x7
 
-  if ( (byte_4CC20B7 & 1) == 0 )
+  if ( (byte_4D27404 & 1) == 0 )
   {
-    sub_1C713B0(&System_Func_bool__TypeInfo);
-    sub_1C713B0(&SchedulerTaskWaitWhile_TypeInfo);
-    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C713B0(&Method_GrandQuestLevelSelectController___c__DisplayClass10_0__GetTaskOfRelease_b__0__);
-    sub_1C713B0(&Method_GrandQuestLevelSelectController___c__DisplayClass10_0__GetTaskOfRelease_b__1__);
-    sub_1C713B0(&GrandQuestLevelSelectController___c__DisplayClass10_0_TypeInfo);
-    byte_4CC20B7 = 1;
+    sub_1C94098(&System_Func_bool__TypeInfo);
+    sub_1C94098(&SchedulerTaskWaitWhile_TypeInfo);
+    sub_1C94098(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C94098(&Method_GrandQuestLevelSelectController___c__DisplayClass10_0__GetTaskOfRelease_b__0__);
+    sub_1C94098(&Method_GrandQuestLevelSelectController___c__DisplayClass10_0__GetTaskOfRelease_b__1__);
+    sub_1C94098(&GrandQuestLevelSelectController___c__DisplayClass10_0_TypeInfo);
+    byte_4D27404 = 1;
   }
-  v3 = sub_1C715FC(GrandQuestLevelSelectController___c__DisplayClass10_0_TypeInfo);
+  v3 = sub_1C942E4(GrandQuestLevelSelectController___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
     goto LABEL_6;
   *(_QWORD *)(v3 + 24) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 24), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 24), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_BYTE *)(v3 + 16) = 1;
-  v12 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
+  v12 = (System_Func_bool__o *)sub_1C942E4(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v12,
     (Il2CppObject *)v3,
     Method_GrandQuestLevelSelectController___c__DisplayClass10_0__GetTaskOfRelease_b__0__,
     0);
-  v13 = sub_1C715FC(SchedulerTaskWaitWhile_TypeInfo);
+  v13 = sub_1C942E4(SchedulerTaskWaitWhile_TypeInfo);
   SchedulerTaskWaitWhile___ctor((SchedulerTaskWaitWhile_o *)v13, v12, 0);
-  v14 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v14 = (SchedulerTaskBase_TaskCallback_o *)sub_1C942E4(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
     v14,
     (Il2CppObject *)v3,
@@ -60,9 +60,9 @@ SchedulerTaskBase_o *GrandQuestLevelSelectController__GetTaskOfRelease(
     0);
   if ( !v13 )
 LABEL_6:
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   *(_QWORD *)(v13 + 24) = v14;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v13 + 24), (int32_t)v14, v15, v16, v17, v18, v19, v20);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v13 + 24), (int32_t)v14, v15, v16, v17, v18, v19, v20);
   return (SchedulerTaskBase_o *)v13;
 }
 
@@ -91,33 +91,33 @@ SchedulerTaskBase_o *GrandQuestLevelSelectController__GetTaskOfSetupQuestList(
   int64_t v21; // x6
   System_String_o *v22; // x7
 
-  if ( (byte_4CC20B5 & 1) == 0 )
+  if ( (byte_4D27402 & 1) == 0 )
   {
-    sub_1C713B0(&System_Func_bool__TypeInfo);
-    sub_1C713B0(&SchedulerTaskWaitWhile_TypeInfo);
-    sub_1C713B0(&SchedulerTaskBase_TaskCallback_TypeInfo);
-    sub_1C713B0(&Method_GrandQuestLevelSelectController___c__DisplayClass7_0__GetTaskOfSetupQuestList_b__0__);
-    sub_1C713B0(&Method_GrandQuestLevelSelectController___c__DisplayClass7_0__GetTaskOfSetupQuestList_b__1__);
-    sub_1C713B0(&GrandQuestLevelSelectController___c__DisplayClass7_0_TypeInfo);
-    byte_4CC20B5 = 1;
+    sub_1C94098(&System_Func_bool__TypeInfo);
+    sub_1C94098(&SchedulerTaskWaitWhile_TypeInfo);
+    sub_1C94098(&SchedulerTaskBase_TaskCallback_TypeInfo);
+    sub_1C94098(&Method_GrandQuestLevelSelectController___c__DisplayClass7_0__GetTaskOfSetupQuestList_b__0__);
+    sub_1C94098(&Method_GrandQuestLevelSelectController___c__DisplayClass7_0__GetTaskOfSetupQuestList_b__1__);
+    sub_1C94098(&GrandQuestLevelSelectController___c__DisplayClass7_0_TypeInfo);
+    byte_4D27402 = 1;
   }
-  v5 = sub_1C715FC(GrandQuestLevelSelectController___c__DisplayClass7_0_TypeInfo);
+  v5 = sub_1C942E4(GrandQuestLevelSelectController___c__DisplayClass7_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_6;
   *(_QWORD *)(v5 + 24) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_DWORD *)(v5 + 32) = warId;
   *(_BYTE *)(v5 + 16) = 1;
-  v14 = (System_Func_bool__o *)sub_1C715FC(System_Func_bool__TypeInfo);
+  v14 = (System_Func_bool__o *)sub_1C942E4(System_Func_bool__TypeInfo);
   System_Func_bool____ctor(
     v14,
     (Il2CppObject *)v5,
     Method_GrandQuestLevelSelectController___c__DisplayClass7_0__GetTaskOfSetupQuestList_b__0__,
     0);
-  v15 = sub_1C715FC(SchedulerTaskWaitWhile_TypeInfo);
+  v15 = sub_1C942E4(SchedulerTaskWaitWhile_TypeInfo);
   SchedulerTaskWaitWhile___ctor((SchedulerTaskWaitWhile_o *)v15, v14, 0);
-  v16 = (SchedulerTaskBase_TaskCallback_o *)sub_1C715FC(SchedulerTaskBase_TaskCallback_TypeInfo);
+  v16 = (SchedulerTaskBase_TaskCallback_o *)sub_1C942E4(SchedulerTaskBase_TaskCallback_TypeInfo);
   SchedulerTaskBase_TaskCallback___ctor(
     v16,
     (Il2CppObject *)v5,
@@ -125,9 +125,9 @@ SchedulerTaskBase_o *GrandQuestLevelSelectController__GetTaskOfSetupQuestList(
     0);
   if ( !v15 )
 LABEL_6:
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   *(_QWORD *)(v15 + 24) = v16;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v15 + 24), (int32_t)v16, v17, v18, v19, v20, v21, v22);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v15 + 24), (int32_t)v16, v17, v18, v19, v20, v21, v22);
   return (SchedulerTaskBase_o *)v15;
 }
 
@@ -144,7 +144,7 @@ void GrandQuestLevelSelectController__Init(
   System_String_o *v7; // x7
 
   this->fields.rootComponent = releaseQuestRoot;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.rootComponent,
     (int32_t)releaseQuestRoot,
     (int32_t)method,
@@ -186,25 +186,25 @@ void GrandQuestLevelSelectController__Release(
   ScrTerminalListTop_o *mTerminalListTop; // x19
   System_Action_o *v22; // x20
 
-  if ( (byte_4CC20B8 & 1) == 0 )
+  if ( (byte_4D27405 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_GrandQuestLevelSelectController___c__DisplayClass11_0__Release_b__0__);
-    sub_1C713B0(&GrandQuestLevelSelectController___c__DisplayClass11_0_TypeInfo);
-    byte_4CC20B8 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_GrandQuestLevelSelectController___c__DisplayClass11_0__Release_b__0__);
+    sub_1C94098(&GrandQuestLevelSelectController___c__DisplayClass11_0_TypeInfo);
+    byte_4D27405 = 1;
   }
-  v5 = sub_1C715FC(GrandQuestLevelSelectController___c__DisplayClass11_0_TypeInfo);
+  v5 = sub_1C942E4(GrandQuestLevelSelectController___c__DisplayClass11_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_7;
   *(_QWORD *)(v5 + 16) = callback;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)callback, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)callback, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v14, v15, v16, v17, v18, v19);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)this, v14, v15, v16, v17, v18, v19);
   rootComponent = this->fields.rootComponent;
   if ( !rootComponent
     || (mTerminalListTop = rootComponent->fields.mTerminalListTop,
-        v22 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo),
+        v22 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo),
         System_Action___ctor(
           v22,
           (Il2CppObject *)v5,
@@ -213,7 +213,7 @@ void GrandQuestLevelSelectController__Release(
         !mTerminalListTop) )
   {
 LABEL_7:
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   }
   ScrTerminalListTop__ReleaseQuestListView(mTerminalListTop, v22, 0);
 }
@@ -230,7 +230,7 @@ void GrandQuestLevelSelectController__ResumeQuestList(
   rootComponent = this->fields.rootComponent;
   this->fields.currentState = 2;
   if ( !rootComponent || (this = (GrandQuestLevelSelectController_o *)rootComponent->fields.mTerminalListTop) == 0 )
-    sub_1C71608(this, warId);
+    sub_1C942F0(this, warId);
   ScrTerminalListTop__SetupListViewByWarId((ScrTerminalListTop_o *)this, warId, callback, 0);
 }
 
@@ -269,25 +269,25 @@ void GrandQuestLevelSelectController__SetupQuestList(
   ScrTerminalListTop_o *mTerminalListTop; // x20
   System_Action_o *v24; // x21
 
-  if ( (byte_4CC20B6 & 1) == 0 )
+  if ( (byte_4D27403 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_GrandQuestLevelSelectController___c__DisplayClass8_0__SetupQuestList_b__0__);
-    sub_1C713B0(&GrandQuestLevelSelectController___c__DisplayClass8_0_TypeInfo);
-    byte_4CC20B6 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_GrandQuestLevelSelectController___c__DisplayClass8_0__SetupQuestList_b__0__);
+    sub_1C94098(&GrandQuestLevelSelectController___c__DisplayClass8_0_TypeInfo);
+    byte_4D27403 = 1;
   }
-  v7 = sub_1C715FC(GrandQuestLevelSelectController___c__DisplayClass8_0_TypeInfo);
+  v7 = sub_1C942E4(GrandQuestLevelSelectController___c__DisplayClass8_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_7;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = callback;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)callback, v16, v17, v18, v19, v20, v21);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)callback, v16, v17, v18, v19, v20, v21);
   rootComponent = this->fields.rootComponent;
   if ( !rootComponent
     || (mTerminalListTop = rootComponent->fields.mTerminalListTop,
-        v24 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo),
+        v24 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo),
         System_Action___ctor(
           v24,
           (Il2CppObject *)v7,
@@ -296,7 +296,7 @@ void GrandQuestLevelSelectController__SetupQuestList(
         !mTerminalListTop) )
   {
 LABEL_7:
-    sub_1C71608(v8, v9);
+    sub_1C942F0(v8, v9);
   }
   ScrTerminalListTop__SetupListViewByWarId(mTerminalListTop, warId, v24, 0);
 }
@@ -342,27 +342,27 @@ void GrandQuestLevelSelectController___c__DisplayClass10_0___GetTaskOfRelease_b_
   System_String_o *v11; // x7
 
   v3 = this;
-  if ( (byte_4CC20B9 & 1) == 0 )
+  if ( (byte_4D27406 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    this = (GrandQuestLevelSelectController___c__DisplayClass10_0_o *)sub_1C713B0(&Method_GrandQuestLevelSelectController___c__DisplayClass10_0__GetTaskOfRelease_b__2__);
-    byte_4CC20B9 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    this = (GrandQuestLevelSelectController___c__DisplayClass10_0_o *)sub_1C94098(&Method_GrandQuestLevelSelectController___c__DisplayClass10_0__GetTaskOfRelease_b__2__);
+    byte_4D27406 = 1;
   }
   _9__2 = v3->fields.__9__2;
   _4__this = v3->fields.__4__this;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)v3,
       Method_GrandQuestLevelSelectController___c__DisplayClass10_0__GetTaskOfRelease_b__2__,
       0);
     v3->fields.__9__2 = _9__2;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v6, v7, v8, v9, v10, v11);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v6, v7, v8, v9, v10, v11);
   }
   if ( !_4__this )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   GrandQuestLevelSelectController__Release(_4__this, _9__2, v2);
 }
 
@@ -394,7 +394,7 @@ void GrandQuestLevelSelectController___c__DisplayClass11_0___Release_b__0(
   ActionExtensions__Call(this->fields.callback, 0);
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C71608(v3, v4);
+    sub_1C942F0(v3, v4);
   _4__this->fields.currentState = 1;
 }
 
@@ -432,28 +432,28 @@ void GrandQuestLevelSelectController___c__DisplayClass7_0___GetTaskOfSetupQuestL
   System_String_o *v12; // x7
 
   v3 = this;
-  if ( (byte_4CC20BA & 1) == 0 )
+  if ( (byte_4D27407 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    this = (GrandQuestLevelSelectController___c__DisplayClass7_0_o *)sub_1C713B0(&Method_GrandQuestLevelSelectController___c__DisplayClass7_0__GetTaskOfSetupQuestList_b__2__);
-    byte_4CC20BA = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    this = (GrandQuestLevelSelectController___c__DisplayClass7_0_o *)sub_1C94098(&Method_GrandQuestLevelSelectController___c__DisplayClass7_0__GetTaskOfSetupQuestList_b__2__);
+    byte_4D27407 = 1;
   }
   _9__2 = v3->fields.__9__2;
   _4__this = v3->fields.__4__this;
   warId = v3->fields.warId;
   if ( !_9__2 )
   {
-    _9__2 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    _9__2 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__2,
       (Il2CppObject *)v3,
       Method_GrandQuestLevelSelectController___c__DisplayClass7_0__GetTaskOfSetupQuestList_b__2__,
       0);
     v3->fields.__9__2 = _9__2;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v7, v8, v9, v10, v11, v12);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&v3->fields.__9__2, (int32_t)_9__2, v7, v8, v9, v10, v11, v12);
   }
   if ( !_4__this )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   GrandQuestLevelSelectController__SetupQuestList(_4__this, warId, _9__2, v2);
 }
 
@@ -482,7 +482,7 @@ void GrandQuestLevelSelectController___c__DisplayClass8_0___SetupQuestList_b__0(
 
   _4__this = this->fields.__4__this;
   if ( !_4__this )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   _4__this->fields.currentState = 2;
   ActionExtensions__Call(this->fields.callback, 0);
 }

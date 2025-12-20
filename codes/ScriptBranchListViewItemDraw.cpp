@@ -34,11 +34,11 @@ void ScriptBranchListViewItemDraw__SetItem(
   struct ScriptBranchListViewItem_o **p_drawItem; // x0
   int32_t v28; // w1
 
-  if ( (byte_4CC495E & 1) == 0 )
+  if ( (byte_4D29DAE & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC495E = 1;
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D29DAE = 1;
   }
   if ( !item || !mode )
   {
@@ -71,7 +71,7 @@ void ScriptBranchListViewItemDraw__SetItem(
     goto LABEL_29;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)titleTextLabel,
-                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
+                       (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_TweenColor___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   titleTextLabel = (UILabel_o *)UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -96,7 +96,7 @@ void ScriptBranchListViewItemDraw__SetItem(
   v23 = ((unsigned __int8)titleTextLabel & 1) != 0 ? 1.0 : 0.5;
   if ( !checkSprite )
 LABEL_29:
-    sub_1C71608(titleTextLabel, title);
+    sub_1C942F0(titleTextLabel, title);
   v24 = 1.0;
   v25 = v23;
   v26 = v23;
@@ -105,7 +105,7 @@ LABEL_29:
   p_drawItem = &this->fields.drawItem;
   v28 = (int)item;
 LABEL_28:
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_drawItem, v28, mode, (int32_t)method, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_drawItem, v28, mode, (int32_t)method, v4, v5, v6, v7);
 }
 
 
@@ -147,7 +147,7 @@ void ScriptBranchListViewItemDraw__Update(ScriptBranchListViewItemDraw_o *this, 
     v6 = 1.0;
   if ( !drawItem )
 LABEL_14:
-    sub_1C71608(drawItem, method);
+    sub_1C942F0(drawItem, method);
   v7 = 1.0;
   v8 = v6;
   v9 = v6;

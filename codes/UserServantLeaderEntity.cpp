@@ -20,29 +20,29 @@ void UserServantLeaderEntity___ctor(UserServantLeaderEntity_o *this, const Metho
   int64_t v20; // x6
   System_String_o *v21; // x7
 
-  if ( (byte_4CC8469 & 1) == 0 )
+  if ( (byte_4D2D8FD & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC8469 = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2D8FD = 1;
   }
   this->fields.supportDeckId = 1;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
   this->fields.userServantEntity = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, 0, v3, v4, v5, v6, v7, v8);
   this->fields.servantLeaderInfo = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.servantLeaderInfo, 0, v9, v10, v11, v12, v13, v14);
   this->fields.supportDeckId = 1;
   this->fields.equipTarget1 = 0;
   p_equipTarget1 = &this->fields.equipTarget1;
   *(struct EquipTargetInfo_o **)((char *)p_equipTarget1 + 28) = 0;
   *(struct EquipTargetInfo_o **)((char *)p_equipTarget1 + 20) = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_equipTarget1, 0, v16, v17, v18, v19, v20, v21);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_equipTarget1, 0, v16, v17, v18, v19, v20, v21);
 }
 
 
-void UserServantLeaderEntity___ctor_43503832(
+void UserServantLeaderEntity___ctor_43999328(
         UserServantLeaderEntity_o *this,
         int32_t classPos,
         int32_t supportDeckId,
@@ -68,30 +68,30 @@ void UserServantLeaderEntity___ctor_43503832(
   int64_t v24; // x6
   System_String_o *v25; // x7
 
-  if ( (byte_4CC846A & 1) == 0 )
+  if ( (byte_4D2D8FE & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC846A = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2D8FE = 1;
   }
   this->fields.supportDeckId = 1;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
   this->fields.userServantEntity = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, 0, v7, v8, v9, v10, v11, v12);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, 0, v7, v8, v9, v10, v11, v12);
   this->fields.servantLeaderInfo = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.servantLeaderInfo, 0, v13, v14, v15, v16, v17, v18);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.servantLeaderInfo, 0, v13, v14, v15, v16, v17, v18);
   this->fields.supportDeckId = supportDeckId;
   this->fields.equipTarget1 = 0;
   p_equipTarget1 = &this->fields.equipTarget1;
   *((_DWORD *)p_equipTarget1 + 8) = 0;
   p_equipTarget1[3] = 0;
   *((_DWORD *)p_equipTarget1 + 5) = classPos;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_equipTarget1, 0, v20, v21, v22, v23, v24, v25);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_equipTarget1, 0, v20, v21, v22, v23, v24, v25);
 }
 
 
-void UserServantLeaderEntity___ctor_43503992(
+void UserServantLeaderEntity___ctor_43999488(
         UserServantLeaderEntity_o *this,
         UserServantLeaderEntity_o *src,
         const MethodInfo *method)
@@ -114,23 +114,23 @@ void UserServantLeaderEntity___ctor_43503992(
   System_String_o *v20; // x7
   const MethodInfo *v21; // x2
 
-  if ( (byte_4CC846B & 1) == 0 )
+  if ( (byte_4D2D8FF & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC846B = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2D8FF = 1;
   }
   this->fields.supportDeckId = 1;
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
   if ( !src )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   userServantEntity = src->fields.userServantEntity;
   this->fields.userServantEntity = userServantEntity;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)userServantEntity, v7, v8, v9, v10, v11, v12);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)userServantEntity, v7, v8, v9, v10, v11, v12);
   servantLeaderInfo = src->fields.servantLeaderInfo;
   this->fields.servantLeaderInfo = servantLeaderInfo;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.servantLeaderInfo,
     (int32_t)servantLeaderInfo,
     v15,
@@ -152,16 +152,16 @@ System_String_o *UserServantLeaderEntity__CreatePK(
         int32_t supportDeckId,
         const MethodInfo *method)
 {
-  if ( (byte_4CC8468 & 1) == 0 )
+  if ( (byte_4D2D8FC & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
-    byte_4CC8468 = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+    byte_4D2D8FC = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int__int_(
            userId,
            classId,
            supportDeckId,
-           (const MethodInfo_31498E0 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
+           (const MethodInfo_319A908 *)Method_DataEntityBase_CreateMultiplePK_long__int__int___);
 }
 
 
@@ -188,10 +188,10 @@ int64_t UserServantLeaderEntity__getEquipUserSvtId(UserServantLeaderEntity_o *th
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v6; // [xsp+0h] [xbp-60h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v7; // [xsp+20h] [xbp-40h]
 
-  if ( (byte_4CC846C & 1) == 0 )
+  if ( (byte_4D2D900 & 1) == 0 )
   {
-    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4CC846C = 1;
+    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4D2D900 = 1;
   }
   equipTarget1 = this->fields.equipTarget1;
   if ( !equipTarget1 )
@@ -202,7 +202,7 @@ int64_t UserServantLeaderEntity__getEquipUserSvtId(UserServantLeaderEntity_o *th
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v6 = v7;
-  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v6, 0);
+  return CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49625068(&v6, 0);
 }
 
 
@@ -227,15 +227,15 @@ void UserServantLeaderEntity__setEquipTargetInfo(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CC846D & 1) == 0 )
+  if ( (byte_4D2D901 & 1) == 0 )
   {
-    sub_1C713B0(&EquipTargetInfo_TypeInfo);
-    byte_4CC846D = 1;
+    sub_1C94098(&EquipTargetInfo_TypeInfo);
+    byte_4D2D901 = 1;
   }
-  v5 = (EquipTargetInfo_o *)sub_1C715FC(EquipTargetInfo_TypeInfo);
-  EquipTargetInfo___ctor_41988452(v5, equipTargetInfo, 0);
+  v5 = (EquipTargetInfo_o *)sub_1C942E4(EquipTargetInfo_TypeInfo);
+  EquipTargetInfo___ctor_42474288(v5, equipTargetInfo, 0);
   this->fields.equipTarget1 = v5;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.equipTarget1, (int32_t)v5, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.equipTarget1, (int32_t)v5, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -266,14 +266,14 @@ void UserServantLeaderEntity__setUserServantEntity(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v26; // [xsp+40h] [xbp-50h]
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v27; // 0:x0.16
 
-  if ( (byte_4CC846E & 1) == 0 )
+  if ( (byte_4D2D902 & 1) == 0 )
   {
-    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4CC846E = 1;
+    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4D2D902 = 1;
   }
   this->fields.userServantEntity = entity;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields,
     (int32_t)entity,
     classPos,
@@ -283,33 +283,33 @@ void UserServantLeaderEntity__setUserServantEntity(
     v6,
     v7);
   this->fields.servantLeaderInfo = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.servantLeaderInfo, 0, v12, v13, v14, v15, v16, v17);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.servantLeaderInfo, 0, v12, v13, v14, v15, v16, v17);
   if ( !entity )
-    sub_1C71608(v18, v19);
+    sub_1C942F0(v18, v19);
   v20 = *(_OWORD *)&entity->fields.userId.fields.fakeValue;
   *(_OWORD *)&v26.fields.currentCryptoKey = *(_OWORD *)&entity->fields.userId.fields.currentCryptoKey;
   *(_OWORD *)&v26.fields.fakeValue = v20;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v25 = v26;
-  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v25, 0);
+  this->fields.userId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49625068(&v25, 0);
   this->fields.supportDeckId = supportDeckId;
   this->fields.classId = classPos;
   v21 = *(_OWORD *)&entity->fields.id.fields.fakeValue;
   *(_OWORD *)&v24.fields.currentCryptoKey = *(_OWORD *)&entity->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v24.fields.fakeValue = v21;
-  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v24, 0);
+  this->fields.userSvtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49625068(&v24, 0);
   v23 = *(_QWORD *)&entity->fields.svtId.fields.currentCryptoKey;
   v22 = *(_QWORD *)&entity->fields.svtId.fields.fakeValue;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v27.fields.currentCryptoKey = v23;
   *(_QWORD *)&v27.fields.fakeValue = v22;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v27, 0);
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v27, 0);
 }
 
 
-void UserServantLeaderEntity__setUserServantEntity_43504676(
+void UserServantLeaderEntity__setUserServantEntity_44000172(
         UserServantLeaderEntity_o *this,
         ServantLeaderInfo_o *info,
         const MethodInfo *method)
@@ -338,15 +338,15 @@ void UserServantLeaderEntity__setUserServantEntity_43504676(
   System_String_o *v26; // x7
   CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_o v27; // 0:x0.16
 
-  if ( (byte_4CC846F & 1) == 0 )
+  if ( (byte_4D2D903 & 1) == 0 )
   {
-    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
-    byte_4CC846F = 1;
+    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
+    byte_4D2D903 = 1;
   }
   this->fields.userServantEntity = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, 0, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, 0, (int32_t)method, v3, v4, v5, v6, v7);
   this->fields.servantLeaderInfo = info;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.servantLeaderInfo,
     (int32_t)info,
     v10,
@@ -356,7 +356,7 @@ void UserServantLeaderEntity__setUserServantEntity_43504676(
     v14,
     v15);
   if ( !info )
-    sub_1C71608(v16, v17);
+    sub_1C942F0(v16, v17);
   this->fields.userId = info->fields.userId;
   this->fields.supportDeckId = info->fields.supportDeckId;
   this->fields.classId = info->fields.classId;
@@ -367,11 +367,11 @@ void UserServantLeaderEntity__setUserServantEntity_43504676(
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredInt_TypeInfo);
   *(_QWORD *)&v27.fields.currentCryptoKey = v19;
   *(_QWORD *)&v27.fields.fakeValue = v18;
-  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49297952(v27, 0);
+  this->fields.svtId = CodeStage_AntiCheat_ObscuredTypes_ObscuredInt__op_Implicit_49621544(v27, 0);
   ServantLeaderInfo__SetEquipImagePartsGroupIdxs(info, 0);
   equipTarget1 = info->fields.equipTarget1;
   this->fields.equipTarget1 = equipTarget1;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.equipTarget1,
     (int32_t)equipTarget1,
     v21,

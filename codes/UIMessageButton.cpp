@@ -8,23 +8,23 @@ void UIMessageButton___ctor(UIMessageButton_o *this, const MethodInfo *method)
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CC8D07 & 1) == 0 )
+  if ( (byte_4D2E1A4 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_EventDelegate__TypeInfo);
-    byte_4CC8D07 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_EventDelegate__TypeInfo);
+    byte_4D2E1A4 = 1;
   }
-  this->fields.disabledColor = (struct UnityEngine_Color_o)xmmword_CEE9A0;
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_EventDelegate__TypeInfo);
+  this->fields.disabledColor = (struct UnityEngine_Color_o)xmmword_CFE620;
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_EventDelegate__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_EventDelegate___ctor__);
   this->fields.onClick = (struct System_Collections_Generic_List_EventDelegate__o *)v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.onClick, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.onClick, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   __asm { FMOV            V0.4S, #1.0 }
   this->fields.normalColor = _Q0;
-  this->fields.hover = (struct UnityEngine_Color_o)xmmword_CEF200;
-  this->fields.pressed = (struct UnityEngine_Color_o)xmmword_CEF690;
+  this->fields.hover = (struct UnityEngine_Color_o)xmmword_CFEE50;
+  this->fields.pressed = (struct UnityEngine_Color_o)xmmword_CFF300;
   this->fields.duration = 0.2;
   UIWidgetContainer___ctor((UIWidgetContainer_o *)this, 0);
 }
@@ -41,10 +41,10 @@ void UIMessageButton__Fadeout(UIMessageButton_o *this, float d, const MethodInfo
   int32_t v11; // w21
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4CC8D06 & 1) == 0 )
+  if ( (byte_4D2E1A3 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC8D06 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E1A3 = 1;
   }
   tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -79,7 +79,7 @@ void UIMessageButton__Fadeout(UIMessageButton_o *this, float d, const MethodInfo
           return;
       }
 LABEL_15:
-      sub_1C71608(transform, v6);
+      sub_1C942F0(transform, v6);
     }
   }
 }
@@ -101,11 +101,11 @@ void UIMessageButton__OnClick(UIMessageButton_o *this, const MethodInfo *method)
   int64_t v14; // x6
   System_String_o *v15; // x7
 
-  if ( (byte_4CC8D04 & 1) == 0 )
+  if ( (byte_4D2E1A1 & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&UIMessageButton_TypeInfo);
-    byte_4CC8D04 = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&UIMessageButton_TypeInfo);
+    byte_4D2E1A1 = 1;
   }
   if ( (((__int64 (__fastcall *)(UIMessageButton_o *, const MethodInfo *))this->klass->vtable._11_get_isEnabled.methodPtr)(
           this,
@@ -113,7 +113,7 @@ void UIMessageButton__OnClick(UIMessageButton_o *this, const MethodInfo *method)
       & 1) != 0 )
   {
     UIMessageButton_TypeInfo->static_fields->current = this;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)UIMessageButton_TypeInfo->static_fields,
       (int32_t)this,
       v3,
@@ -125,9 +125,9 @@ void UIMessageButton__OnClick(UIMessageButton_o *this, const MethodInfo *method)
     onClick = this->fields.onClick;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Execute_49587556(onClick, 0);
+    EventDelegate__Execute_49911148(onClick, 0);
     UIMessageButton_TypeInfo->static_fields->current = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)UIMessageButton_TypeInfo->static_fields, 0, v10, v11, v12, v13, v14, v15);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)UIMessageButton_TypeInfo->static_fields, 0, v10, v11, v12, v13, v14, v15);
   }
 }
 
@@ -140,11 +140,11 @@ void UIMessageButton__OnDragOut(UIMessageButton_o *this, const MethodInfo *metho
   UnityEngine_Object_o *pressed; // x20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4CC8D03 & 1) == 0 )
+  if ( (byte_4D2E1A0 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CC8D03 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D2E1A0 = 1;
   }
   if ( (((__int64 (__fastcall *)(UIMessageButton_o *, const MethodInfo *))this->klass->vtable._11_get_isEnabled.methodPtr)(
           this,
@@ -161,7 +161,7 @@ void UIMessageButton__OnDragOut(UIMessageButton_o *this, const MethodInfo *metho
     }
     currentTouch = v4->static_fields->currentTouch;
     if ( !currentTouch )
-      sub_1C71608(v4, v3);
+      sub_1C942F0(v4, v3);
     pressed = (UnityEngine_Object_o *)currentTouch->fields.pressed;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -181,11 +181,11 @@ void UIMessageButton__OnDragOver(UIMessageButton_o *this, const MethodInfo *meth
   UnityEngine_Object_o *pressed; // x20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4CC8D02 & 1) == 0 )
+  if ( (byte_4D2E19F & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CC8D02 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D2E19F = 1;
   }
   if ( (((__int64 (__fastcall *)(UIMessageButton_o *, const MethodInfo *))this->klass->vtable._11_get_isEnabled.methodPtr)(
           this,
@@ -202,7 +202,7 @@ void UIMessageButton__OnDragOver(UIMessageButton_o *this, const MethodInfo *meth
     }
     currentTouch = v4->static_fields->currentTouch;
     if ( !currentTouch )
-      sub_1C71608(v4, v3);
+      sub_1C942F0(v4, v3);
     pressed = (UnityEngine_Object_o *)currentTouch->fields.pressed;
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -226,11 +226,11 @@ void UIMessageButton__OnEnable(UIMessageButton_o *this, const MethodInfo *method
   UnityEngine_Object_o *gameObject; // x21
   bool v11; // w0
 
-  if ( (byte_4CC8D01 & 1) == 0 )
+  if ( (byte_4D2E19E & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CC8D01 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D2E19E = 1;
   }
   if ( (((__int64 (__fastcall *)(UIMessageButton_o *, const MethodInfo *))this->klass->vtable._11_get_isEnabled.methodPtr)(
           this,
@@ -352,10 +352,10 @@ void UIMessageButton__UpdateColor(
   UnityEngine_Color_o v21; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Color_o v22; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4CC8D05 & 1) == 0 )
+  if ( (byte_4D2E1A2 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC8D05 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E1A2 = 1;
   }
   tweenTarget = (UnityEngine_Object_o *)this->fields.tweenTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -428,7 +428,7 @@ LABEL_11:
         return;
     }
 LABEL_24:
-    sub_1C71608(transform, v8);
+    sub_1C942F0(transform, v8);
   }
 }
 
@@ -439,24 +439,24 @@ bool UIMessageButton__get_isEnabled(UIMessageButton_o *this, const MethodInfo *m
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CC8CFF & 1) == 0 )
+  if ( (byte_4D2E19C & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC8CFF = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E19C = 1;
   }
   if ( !UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
     return 0;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v4 = UnityEngine_Object__op_Implicit((UnityEngine_Object_o *)Component_object, 0);
   if ( !v4 )
     return 0;
   if ( !Component_object )
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   return UnityEngine_Collider__get_enabled((UnityEngine_Collider_o *)Component_object, 0);
 }
 
@@ -468,22 +468,22 @@ void UIMessageButton__set_isEnabled(UIMessageButton_o *this, bool value, const M
   __int64 v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4CC8D00 & 1) == 0 )
+  if ( (byte_4D2E19D & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC8D00 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E19D = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider___);
+                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v6 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0);
   if ( v6 )
   {
     if ( !Component_object )
-      sub_1C71608(v6, v7);
+      sub_1C942F0(v6, v7);
     UnityEngine_Collider__set_enabled((UnityEngine_Collider_o *)Component_object, value, 0);
   }
   else

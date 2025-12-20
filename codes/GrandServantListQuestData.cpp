@@ -19,9 +19,9 @@ void GrandServantListQuestData___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields._EventSetupInfo_k__BackingField = eventSetupInfo;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)eventSetupInfo, v7, v8, v9, v10, v11, v12);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)eventSetupInfo, v7, v8, v9, v10, v11, v12);
   this->fields._QuestRestriction_k__BackingField = questRestriction;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._QuestRestriction_k__BackingField,
     (int32_t)questRestriction,
     v13,
@@ -61,7 +61,7 @@ void GrandServantListQuestData__set_EventSetupInfo(
   System_String_o *v7; // x7
 
   this->fields._EventSetupInfo_k__BackingField = value;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -77,7 +77,7 @@ void GrandServantListQuestData__set_QuestRestriction(
   System_String_o *v7; // x7
 
   this->fields._QuestRestriction_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._QuestRestriction_k__BackingField,
     (int32_t)value,
     (int32_t)method,

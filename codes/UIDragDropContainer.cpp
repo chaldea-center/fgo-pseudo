@@ -15,10 +15,10 @@ void UIDragDropContainer__Start(UIDragDropContainer_o *this, const MethodInfo *m
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CCBAA2 & 1) == 0 )
+  if ( (byte_4D30E54 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBAA2 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30E54 = 1;
   }
   reparentTarget = (UnityEngine_Object_o *)this->fields.reparentTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -27,7 +27,7 @@ void UIDragDropContainer__Start(UIDragDropContainer_o *this, const MethodInfo *m
   {
     transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
     this->fields.reparentTarget = transform;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&this->fields.reparentTarget,
       (int32_t)transform,
       v5,

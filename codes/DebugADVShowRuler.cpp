@@ -10,19 +10,19 @@ void DebugADVShowRuler__Awake(DebugADVShowRuler_o *this, const MethodInfo *metho
   __int64 v4; // x1
   UnityEngine_Color_o v5; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CC51D7 & 1) == 0 )
+  if ( (byte_4D2A627 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____78659352);
-    byte_4CC51D7 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponentInChildren_UILabel____79067320);
+    byte_4D2A627 = 1;
   }
   if ( !UnityEngine_SystemInfo__get_supportsComputeShaders(0) )
   {
     ComponentInChildren_object = UnityEngine_Component__GetComponentInChildren_object_(
                                    (UnityEngine_Component_o *)this,
                                    1,
-                                   (const MethodInfo_3141D60 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____78659352);
+                                   (const MethodInfo_3192D88 *)Method_UnityEngine_Component_GetComponentInChildren_UILabel____79067320);
     if ( !ComponentInChildren_object )
-      sub_1C71608(0, v4);
+      sub_1C942F0(0, v4);
     v5.fields.r = 1.0;
     v5.fields.g = 0.0;
     v5.fields.b = 0.0;
@@ -49,26 +49,26 @@ void DebugADVShowRuler__OnClickShowRuler(DebugADVShowRuler_o *this, const Method
   System_String_o *v15; // x20
   System_Nullable_Vector2__o effectDistance; // [xsp+0h] [xbp-50h]
 
-  if ( (byte_4CC51D8 & 1) == 0 )
+  if ( (byte_4D2A628 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_GameObject_AddComponent_PostProcessorRuler___);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_Camera___);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_PostProcessorRuler___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&StringLiteral_25516/*"お使いの環境では、Compute Shaderがサポートされていないため、この機能を利用することができません。\r\nお手数ですが、以下のいずれかをご確認ください：\r\n\r\n１．お使いのデバイスやグラフィックカードがCompute Shaderに対応しているか\r\n２．最新のグラフィックドライバーがインストールされているか"*/);
-    sub_1C713B0(&StringLiteral_25627/*"機能がサポートされていません"*/);
-    sub_1C713B0(&StringLiteral_8891/*"Management/CommonUI/UI Root/CommonUICamera"*/);
-    byte_4CC51D8 = 1;
+    sub_1C94098(&Method_UnityEngine_GameObject_AddComponent_PostProcessorRuler___);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_Camera___);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_PostProcessorRuler___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&StringLiteral_25639/*"お使いの環境では、Compute Shaderがサポートされていないため、この機能を利用することができません。\r\nお手数ですが、以下のいずれかをご確認ください：\r\n\r\n１．お使いのデバイスやグラフィックカードがCompute Shaderに対応しているか\r\n２．最新のグラフィックドライバーがインストールされているか"*/);
+    sub_1C94098(&StringLiteral_25750/*"機能がサポートされていません"*/);
+    sub_1C94098(&StringLiteral_8910/*"Management/CommonUI/UI Root/CommonUICamera"*/);
+    byte_4D2A628 = 1;
   }
   if ( UnityEngine_SystemInfo__get_supportsComputeShaders(0) )
   {
-    Component_object = (char *)UnityEngine_GameObject__Find((System_String_o *)StringLiteral_8891/*"Management/CommonUI/UI Root/CommonUICamera"*/, 0);
+    Component_object = (char *)UnityEngine_GameObject__Find((System_String_o *)StringLiteral_8910/*"Management/CommonUI/UI Root/CommonUICamera"*/, 0);
     if ( !Component_object )
       goto LABEL_18;
     Component_object = (char *)UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)Component_object,
-                                 (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_Camera___);
+                                 (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_Camera___);
     if ( !Component_object )
       goto LABEL_18;
     v5 = (UnityEngine_Component_o *)Component_object;
@@ -77,7 +77,7 @@ void DebugADVShowRuler__OnClickShowRuler(DebugADVShowRuler_o *this, const Method
       goto LABEL_18;
     v6 = UnityEngine_GameObject__GetComponent_object_(
            (UnityEngine_GameObject_o *)Component_object,
-           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_PostProcessorRuler___);
+           (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_PostProcessorRuler___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v6, 0, 0) )
@@ -87,12 +87,12 @@ void DebugADVShowRuler__OnClickShowRuler(DebugADVShowRuler_o *this, const Method
       {
         Component_object = (char *)UnityEngine_GameObject__AddComponent_object_(
                                      (UnityEngine_GameObject_o *)Component_object,
-                                     (const MethodInfo_31A2DE8 *)Method_UnityEngine_GameObject_AddComponent_PostProcessorRuler___);
+                                     (const MethodInfo_31F46A8 *)Method_UnityEngine_GameObject_AddComponent_PostProcessorRuler___);
         if ( Component_object )
         {
           rulerComputeShader = this->fields.rulerComputeShader;
           *((_QWORD *)Component_object + 16) = rulerComputeShader;
-          sub_1C71354(
+          sub_1C9403C(
             (GrandQuestFolderBoardItem_o *)(Component_object + 128),
             (int32_t)rulerComputeShader,
             v7,
@@ -105,17 +105,17 @@ void DebugADVShowRuler__OnClickShowRuler(DebugADVShowRuler_o *this, const Method
         }
       }
 LABEL_18:
-      sub_1C71608(Component_object, v4);
+      sub_1C942F0(Component_object, v4);
     }
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71724608((UnityEngine_Object_o *)v6, 0);
+    UnityEngine_Object__Destroy_72110972((UnityEngine_Object_o *)v6, 0);
   }
   else
   {
-    v14 = (System_String_o *)StringLiteral_25627/*"機能がサポートされていません"*/;
-    v15 = (System_String_o *)StringLiteral_25516/*"お使いの環境では、Compute Shaderがサポートされていないため、この機能を利用することができません。\r\nお手数ですが、以下のいずれかをご確認ください：\r\n\r\n１．お使いのデバイスやグラフィックカードがCompute Shaderに対応しているか\r\n２．最新のグラフィックドライバーがインストールされているか"*/;
-    Component_object = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v14 = (System_String_o *)StringLiteral_25750/*"機能がサポートされていません"*/;
+    v15 = (System_String_o *)StringLiteral_25639/*"お使いの環境では、Compute Shaderがサポートされていないため、この機能を利用することができません。\r\nお手数ですが、以下のいずれかをご確認ください：\r\n\r\n１．お使いのデバイスやグラフィックカードがCompute Shaderに対応しているか\r\n２．最新のグラフィックドライバーがインストールされているか"*/;
+    Component_object = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Component_object )
       goto LABEL_18;
     *(_QWORD *)&effectDistance.fields.hasValue = 0;

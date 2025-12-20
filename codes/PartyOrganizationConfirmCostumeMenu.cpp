@@ -1,9 +1,9 @@
 void PartyOrganizationConfirmCostumeMenu___ctor(PartyOrganizationConfirmCostumeMenu_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC2D6D & 1) == 0 )
+  if ( (byte_4D280CD & 1) == 0 )
   {
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    byte_4CC2D6D = 1;
+    sub_1C94098(&BaseDialog_TypeInfo);
+    byte_4D280CD = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -31,7 +31,7 @@ void PartyOrganizationConfirmCostumeMenu__Callback(
   if ( callbackFunc )
   {
     p_callbackFunc->klass = 0;
-    sub_1C71354(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_1C9403C(p_callbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ((void (__fastcall *)(intptr_t, intptr_t))v9->fields.invoke_impl)(v9->fields.method_code, v9->fields.method);
   }
 }
@@ -41,11 +41,11 @@ void PartyOrganizationConfirmCostumeMenu__Close(PartyOrganizationConfirmCostumeM
 {
   const MethodInfo *v2; // x2
 
-  PartyOrganizationConfirmCostumeMenu__Close_34420632(this, 0, v2);
+  PartyOrganizationConfirmCostumeMenu__Close_34776236(this, 0, v2);
 }
 
 
-void PartyOrganizationConfirmCostumeMenu__Close_34420632(
+void PartyOrganizationConfirmCostumeMenu__Close_34776236(
         PartyOrganizationConfirmCostumeMenu_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -57,14 +57,14 @@ void PartyOrganizationConfirmCostumeMenu__Close_34420632(
   System_String_o *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4CC2D6B & 1) == 0 )
+  if ( (byte_4D280CB & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_PartyOrganizationConfirmCostumeMenu_EndClose__);
-    byte_4CC2D6B = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_PartyOrganizationConfirmCostumeMenu_EndClose__);
+    byte_4D280CB = 1;
   }
   this->fields.closeCallbackFunc = callback;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.closeCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
@@ -74,7 +74,7 @@ void PartyOrganizationConfirmCostumeMenu__Close_34420632(
     v6,
     v7);
   this->fields.state = 4;
-  v10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_PartyOrganizationConfirmCostumeMenu_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -101,7 +101,7 @@ void PartyOrganizationConfirmCostumeMenu__EndClose(
   if ( closeCallbackFunc )
   {
     p_closeCallbackFunc->klass = 0;
-    sub_1C71354(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_1C9403C(p_closeCallbackFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -119,10 +119,10 @@ void PartyOrganizationConfirmCostumeMenu__Init(PartyOrganizationConfirmCostumeMe
 {
   UILabel_o *titleLabel; // x0
 
-  if ( (byte_4CC2D69 & 1) == 0 )
+  if ( (byte_4D280C9 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC2D69 = 1;
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D280C9 = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !titleLabel
@@ -130,7 +130,7 @@ void PartyOrganizationConfirmCostumeMenu__Init(PartyOrganizationConfirmCostumeMe
         (titleLabel = this->fields.messageLabel) == 0)
     || (UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0), (titleLabel = this->fields.closeLabel) == 0) )
   {
-    sub_1C71608(titleLabel, method);
+    sub_1C942F0(titleLabel, method);
   }
   UILabel__set_text(titleLabel, (System_String_o *)StringLiteral_1/*""*/, 0);
   this->fields.state = 0;
@@ -146,18 +146,18 @@ void PartyOrganizationConfirmCostumeMenu__OnClickClose(
   System_Reflection_MethodBase_o *v4; // x0
   const MethodInfo *v5; // x1
 
-  if ( (byte_4CC2D6C & 1) == 0 )
+  if ( (byte_4D280CC & 1) == 0 )
   {
-    sub_1C713B0(&Method_PartyOrganizationConfirmCostumeMenu_OnClickClose__);
-    byte_4CC2D6C = 1;
+    sub_1C94098(&Method_PartyOrganizationConfirmCostumeMenu_OnClickClose__);
+    byte_4D280CC = 1;
   }
   if ( this->fields.state == 2 )
   {
     this->fields.state = 3;
     v3 = Method_PartyOrganizationConfirmCostumeMenu_OnClickClose__;
     if ( (*((_BYTE *)Method_PartyOrganizationConfirmCostumeMenu_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C713C8(Method_PartyOrganizationConfirmCostumeMenu_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C940B0(Method_PartyOrganizationConfirmCostumeMenu_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     PartyOrganizationConfirmCostumeMenu__Callback(this, v5);
   }
@@ -198,26 +198,26 @@ void PartyOrganizationConfirmCostumeMenu__Open(
   UILabel_o *closeLabel; // x20
   System_Action_o *v35; // x20
 
-  if ( (byte_4CC2D6A & 1) == 0 )
+  if ( (byte_4D280CA & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_DataManager_GetMasterData_NpcFollowerMaster___);
-    sub_1C713B0(&Method_System_Collections_Generic_List_PartyOrganizationListViewItem__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_PartyOrganizationListViewItem___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_PartyOrganizationListViewItem__TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&Method_PartyOrganizationConfirmCostumeMenu_EndOpen__);
-    sub_1C713B0(&PartyOrganizationConfirmItemDraw_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C713B0(&StringLiteral_10142/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_CLOSE"*/);
-    sub_1C713B0(&StringLiteral_10143/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_MESSAGE"*/);
-    sub_1C713B0(&StringLiteral_10144/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_TITLE"*/);
-    byte_4CC2D6A = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_DataManager_GetMasterData_NpcFollowerMaster___);
+    sub_1C94098(&Method_System_Collections_Generic_List_PartyOrganizationListViewItem__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_PartyOrganizationListViewItem___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_PartyOrganizationListViewItem__TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&Method_PartyOrganizationConfirmCostumeMenu_EndOpen__);
+    sub_1C94098(&PartyOrganizationConfirmItemDraw_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C94098(&StringLiteral_10168/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_CLOSE"*/);
+    sub_1C94098(&StringLiteral_10169/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_MESSAGE"*/);
+    sub_1C94098(&StringLiteral_10170/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_TITLE"*/);
+    byte_4D280CA = 1;
   }
   if ( (this->fields.state | 4) == 4 )
   {
     this->fields.callbackFunc = callback;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
       (int32_t)callback,
       (int32_t)item,
@@ -230,16 +230,16 @@ void PartyOrganizationConfirmCostumeMenu__Open(
     if ( gameObject )
     {
       UnityEngine_GameObject__SetActive(gameObject, 1, 0);
-      v15 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_PartyOrganizationListViewItem__TypeInfo);
+      v15 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_PartyOrganizationListViewItem__TypeInfo);
       System_Collections_Generic_List_object____ctor(
         v15,
-        (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_PartyOrganizationListViewItem___ctor__);
-      gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+        (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_PartyOrganizationListViewItem___ctor__);
+      gameObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( gameObject )
       {
         gameObject = (UnityEngine_GameObject_o *)DataManager__GetMasterData_object_(
                                                    (DataManager_o *)gameObject,
-                                                   (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_NpcFollowerMaster___);
+                                                   (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_NpcFollowerMaster___);
         if ( questRestrictionInfo )
         {
           if ( gameObject )
@@ -266,14 +266,14 @@ void PartyOrganizationConfirmCostumeMenu__Open(
                       System_Collections_Generic_List_object___AddWithResize(
                         v15,
                         (Il2CppObject *)item,
-                        *(const MethodInfo_3810718 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
+                        *(const MethodInfo_386AE34 **)(*(_QWORD *)(v23[4] + 192LL) + 112LL));
                     }
                     else
                     {
                       v25 = &items->obj.klass + size;
                       v15->fields._size = size + 1;
                       v25[4] = (Il2CppClass *)item;
-                      sub_1C71354((GrandQuestFolderBoardItem_o *)(v25 + 4), (int32_t)item, v16, v17, v18, v19, v20, v21);
+                      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v25 + 4), (int32_t)item, v16, v17, v18, v19, v20, v21);
                     }
                     supportMemberBase = this->fields.supportMemberBase;
                     memberObjectList = this->fields.memberObjectList;
@@ -298,7 +298,7 @@ void PartyOrganizationConfirmCostumeMenu__Open(
                       {
 LABEL_27:
                         this->fields.state = 1;
-                        v35 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+                        v35 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
                         System_Action___ctor(
                           v35,
                           (Il2CppObject *)this,
@@ -311,21 +311,21 @@ LABEL_27:
                       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
                       gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                 (System_String_o *)StringLiteral_10144/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_TITLE"*/,
+                                                                 (System_String_o *)StringLiteral_10170/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_TITLE"*/,
                                                                  0);
                       if ( titleLabel )
                       {
                         UILabel__set_text(titleLabel, (System_String_o *)gameObject, 0);
                         messageLabel = this->fields.messageLabel;
                         gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                   (System_String_o *)StringLiteral_10143/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_MESSAGE"*/,
+                                                                   (System_String_o *)StringLiteral_10169/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_MESSAGE"*/,
                                                                    0);
                         if ( item )
                         {
                           v31 = (System_String_o *)gameObject;
                           SvtNameText = (Il2CppObject *)PartyOrganizationListViewItem__get_SvtNameText(item, 0);
                           CostumeName = (Il2CppObject *)PartyOrganizationListViewItem__get_CostumeName(item, 0);
-                          gameObject = (UnityEngine_GameObject_o *)System_String__Format_64073032(
+                          gameObject = (UnityEngine_GameObject_o *)System_String__Format_64459052(
                                                                      v31,
                                                                      SvtNameText,
                                                                      CostumeName,
@@ -335,7 +335,7 @@ LABEL_27:
                             UILabel__set_text(messageLabel, (System_String_o *)gameObject, 0);
                             closeLabel = this->fields.closeLabel;
                             gameObject = (UnityEngine_GameObject_o *)LocalizationManager__Get(
-                                                                       (System_String_o *)StringLiteral_10142/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_CLOSE"*/,
+                                                                       (System_String_o *)StringLiteral_10168/*"PARTY_ORGANIZATION_CONFIRM_FIXED_COSTUME_CLOSE"*/,
                                                                        0);
                             if ( closeLabel )
                             {
@@ -354,7 +354,7 @@ LABEL_27:
         }
       }
     }
-    sub_1C71608(gameObject, v14);
+    sub_1C942F0(gameObject, v14);
   }
 }
 
@@ -374,10 +374,10 @@ void PartyOrganizationConfirmCostumeMenu__add_callbackFunc(
   PartyOrganizationConfirmCostumeMenu_CallbackFunc_o *v12; // x1
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CC2D67 & 1) == 0 )
+  if ( (byte_4D280C7 & 1) == 0 )
   {
-    sub_1C713B0(&PartyOrganizationConfirmCostumeMenu_CallbackFunc_TypeInfo);
-    byte_4CC2D67 = 1;
+    sub_1C94098(&PartyOrganizationConfirmCostumeMenu_CallbackFunc_TypeInfo);
+    byte_4D280C7 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -390,13 +390,13 @@ void PartyOrganizationConfirmCostumeMenu__add_callbackFunc(
       if ( (PartyOrganizationConfirmCostumeMenu_CallbackFunc_c *)v8->klass != PartyOrganizationConfirmCostumeMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CCD184(p_callbackFunc, v8, v6);
+    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationConfirmCostumeMenu_o *)sub_1C719A4(v8);
+  v11 = (PartyOrganizationConfirmCostumeMenu_o *)sub_1C9468C(v8);
   PartyOrganizationConfirmCostumeMenu__remove_callbackFunc(v11, v12, v13);
 }
 
@@ -415,10 +415,10 @@ void PartyOrganizationConfirmCostumeMenu__remove_callbackFunc(
   PartyOrganizationConfirmCostumeMenu_o *v11; // x0
   const MethodInfo *v12; // x1
 
-  if ( (byte_4CC2D68 & 1) == 0 )
+  if ( (byte_4D280C8 & 1) == 0 )
   {
-    sub_1C713B0(&PartyOrganizationConfirmCostumeMenu_CallbackFunc_TypeInfo);
-    byte_4CC2D68 = 1;
+    sub_1C94098(&PartyOrganizationConfirmCostumeMenu_CallbackFunc_TypeInfo);
+    byte_4D280C8 = 1;
   }
   callbackFunc = this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -431,13 +431,13 @@ void PartyOrganizationConfirmCostumeMenu__remove_callbackFunc(
       if ( (PartyOrganizationConfirmCostumeMenu_CallbackFunc_c *)v8->klass != PartyOrganizationConfirmCostumeMenu_CallbackFunc_TypeInfo )
         break;
     }
-    v9 = sub_1CCD184(p_callbackFunc, v8, v6);
+    v9 = sub_1CEFE6C(p_callbackFunc, v8, v6);
     v10 = v6 == (System_Delegate_o *)v9;
     v6 = (System_Delegate_o *)v9;
     if ( v10 )
       return;
   }
-  v11 = (PartyOrganizationConfirmCostumeMenu_o *)sub_1C719A4(v8);
+  v11 = (PartyOrganizationConfirmCostumeMenu_o *)sub_1C9468C(v8);
   PartyOrganizationConfirmCostumeMenu__Init(v11, v12);
 }
 
@@ -461,7 +461,7 @@ void PartyOrganizationConfirmCostumeMenu_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -472,12 +472,12 @@ void PartyOrganizationConfirmCostumeMenu_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v14, 0);
+      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -489,9 +489,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA11A4;
+  this->fields.invoke_impl = (intptr_t)sub_1AC296C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA1164;
+  this->fields.extra_arg = (intptr_t)sub_1AC292C;
 }
 
 
@@ -504,7 +504,7 @@ System_IAsyncResult_o *PartyOrganizationConfirmCostumeMenu_CallbackFunc__BeginIn
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C71364(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, &v5, callback, object);
 }
 
 
@@ -513,7 +513,7 @@ void PartyOrganizationConfirmCostumeMenu_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C71368(result, 0, method);
+  sub_1C94050(result, 0, method);
 }
 
 

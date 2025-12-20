@@ -7,16 +7,16 @@ void ClassBoardRootComponent___cctor(const MethodInfo *method)
   int64_t v5; // x6
   System_String_o *v6; // x7
 
-  if ( (byte_4CCB07B & 1) == 0 )
+  if ( (byte_4D30557 & 1) == 0 )
   {
-    sub_1C713B0(&ClassBoardRootComponent_TypeInfo);
-    sub_1C713B0(&StringLiteral_24105/*"talk_mov338"*/);
-    byte_4CCB07B = 1;
+    sub_1C94098(&ClassBoardRootComponent_TypeInfo);
+    sub_1C94098(&StringLiteral_24226/*"talk_mov338"*/);
+    byte_4D30557 = 1;
   }
-  ClassBoardRootComponent_TypeInfo->static_fields->U_MEDAL_CREATE_BG_MOVIE_NAME = (struct System_String_o *)StringLiteral_24105/*"talk_mov338"*/;
-  sub_1C71354(
+  ClassBoardRootComponent_TypeInfo->static_fields->U_MEDAL_CREATE_BG_MOVIE_NAME = (struct System_String_o *)StringLiteral_24226/*"talk_mov338"*/;
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)ClassBoardRootComponent_TypeInfo->static_fields,
-    StringLiteral_24105/*"talk_mov338"*/,
+    StringLiteral_24226/*"talk_mov338"*/,
     v1,
     v2,
     v3,
@@ -29,7 +29,7 @@ void ClassBoardRootComponent___cctor(const MethodInfo *method)
 
 void ClassBoardRootComponent___ctor(ClassBoardRootComponent_o *this, const MethodInfo *method)
 {
-  ClassBoardPageSwitcher_o *v3; // x20
+  Il2CppObject *v3; // x20
   int32_t v4; // w2
   int32_t v5; // w3
   System_String_o *v6; // x4
@@ -37,15 +37,15 @@ void ClassBoardRootComponent___ctor(ClassBoardRootComponent_o *this, const Metho
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CCB07A & 1) == 0 )
+  if ( (byte_4D30556 & 1) == 0 )
   {
-    sub_1C713B0(&ClassBoardPageSwitcher_TypeInfo);
-    byte_4CCB07A = 1;
+    sub_1C94098(&ClassBoardPageSwitcher_TypeInfo);
+    byte_4D30556 = 1;
   }
-  v3 = (ClassBoardPageSwitcher_o *)sub_1C715FC(ClassBoardPageSwitcher_TypeInfo);
-  ClassBoardPageSwitcher___ctor(v3, 0);
-  this->fields.pageSwitcher = v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.pageSwitcher, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v3 = (Il2CppObject *)sub_1C942E4(ClassBoardPageSwitcher_TypeInfo);
+  System_Object___ctor(v3, 0);
+  this->fields.pageSwitcher = (struct ClassBoardPageSwitcher_o *)v3;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.pageSwitcher, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   SceneRootComponent___ctor((SceneRootComponent_o *)this, 0);
 }
 
@@ -84,13 +84,13 @@ void ClassBoardRootComponent__CreateBackground(ClassBoardRootComponent_o *this, 
   System_String_o *v26; // x7
   UnityEngine_Vector3_o v27; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CCB072 & 1) == 0 )
+  if ( (byte_4D3054E & 1) == 0 )
   {
-    sub_1C713B0(&IClassBoardResourceCatalog_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_ClassBoardBackground___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_11425/*"Root"*/);
-    byte_4CCB072 = 1;
+    sub_1C94098(&IClassBoardResourceCatalog_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_Object_Instantiate_ClassBoardBackground___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_11466/*"Root"*/);
+    byte_4D3054E = 1;
   }
   p_classBoardBackground = (GrandQuestFolderBoardItem_o *)&this->fields.classBoardBackground;
   classBoardBackground = (UnityEngine_Object_o *)this->fields.classBoardBackground;
@@ -118,7 +118,7 @@ void ClassBoardRootComponent__CreateBackground(ClassBoardRootComponent_o *this, 
       else
       {
 LABEL_11:
-        v9 = sub_1C47738(this->fields.resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
+        v9 = sub_1C6A420(this->fields.resourceCatalog, IClassBoardResourceCatalog_TypeInfo, 0);
       }
       v10 = (*(__int64 (__fastcall **)(UnityEngine_Object_o *, _QWORD))v9)(resourceCatalog, *(_QWORD *)(v9 + 8));
       if ( v10 )
@@ -133,7 +133,7 @@ LABEL_11:
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       if ( !transform )
         goto LABEL_34;
-      transform = UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_11425/*"Root"*/, 0);
+      transform = UnityEngine_Transform__Find(transform, (System_String_o *)StringLiteral_11466/*"Root"*/, 0);
       v13 = this->fields.resourceCatalog;
       if ( !v13 )
         goto LABEL_34;
@@ -155,7 +155,7 @@ LABEL_11:
       else
       {
 LABEL_26:
-        v18 = sub_1C47738(v13, IClassBoardResourceCatalog_TypeInfo, 0);
+        v18 = sub_1C6A420(v13, IClassBoardResourceCatalog_TypeInfo, 0);
       }
       transform = (UnityEngine_Transform_o *)(*(__int64 (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))v18)(
                                                v13,
@@ -165,18 +165,18 @@ LABEL_26:
       m_CachedPtr = (Il2CppObject *)transform[6].fields.m_CachedPtr;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-      v20 = UnityEngine_Object__Instantiate_object__52264420(
+      v20 = UnityEngine_Object__Instantiate_object__52598436(
               m_CachedPtr,
               v15,
-              (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_ClassBoardBackground___);
+              (const MethodInfo_32296A4 *)Method_UnityEngine_Object_Instantiate_ClassBoardBackground___);
       p_classBoardBackground->klass = (GrandQuestFolderBoardItem_c *)v20;
-      sub_1C71354(p_classBoardBackground, (int32_t)v20, v21, v22, v23, v24, v25, v26);
+      sub_1C9403C(p_classBoardBackground, (int32_t)v20, v21, v22, v23, v24, v25, v26);
       transform = (UnityEngine_Transform_o *)p_classBoardBackground->klass;
       if ( !p_classBoardBackground->klass
         || (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)transform, 0)) == 0 )
       {
 LABEL_34:
-        sub_1C71608(transform, v12);
+        sub_1C942F0(transform, v12);
       }
       v27.fields.x = 288.0;
       v27.fields.y = 288.0;
@@ -196,21 +196,21 @@ UnityEngine_GameObject_o *ClassBoardRootComponent__CreateCriMoviePlayerObject(
   Il2CppObject *object; // x20
   Il2CppObject *v7; // x20
 
-  if ( (byte_4CCB076 & 1) == 0 )
+  if ( (byte_4D30552 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_Resources_Load_GameObject___);
-    byte_4CCB076 = 1;
+    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_Resources_Load_GameObject___);
+    byte_4D30552 = 1;
   }
   object = UnityEngine_Resources__Load_object_(
              moviePlayerObjectPath,
-             (const MethodInfo_31E7F68 *)Method_UnityEngine_Resources_Load_GameObject___);
+             (const MethodInfo_3239828 *)Method_UnityEngine_Resources_Load_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v7 = UnityEngine_Object__Instantiate_object_(
          object,
-         (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+         (const MethodInfo_3229578 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)parent, 0, 0) )
     GameObjectExtensions__SafeSetParent((UnityEngine_GameObject_o *)v7, parent, 0);
   return (UnityEngine_GameObject_o *)v7;
@@ -227,18 +227,19 @@ void ClassBoardRootComponent__InitResourceCatalog(ClassBoardRootComponent_o *thi
   IClassBoardResourceCatalog_c **p_offset; // x10
   __int64 v9; // x0
   ClassBoardResourceCatalogAssetBundle_o *v10; // x20
-  int32_t v11; // w2
-  int32_t v12; // w3
-  System_String_o *v13; // x4
-  int32_t v14; // w5
-  int64_t v15; // x6
-  System_String_o *v16; // x7
+  const MethodInfo *v11; // x1
+  int32_t v12; // w2
+  int32_t v13; // w3
+  System_String_o *v14; // x4
+  int32_t v15; // w5
+  int64_t v16; // x6
+  System_String_o *v17; // x7
 
-  if ( (byte_4CCB079 & 1) == 0 )
+  if ( (byte_4D30555 & 1) == 0 )
   {
-    sub_1C713B0(&ClassBoardResourceCatalogAssetBundle_TypeInfo);
-    sub_1C713B0(&IClassBoardResourceCatalog_TypeInfo);
-    byte_4CCB079 = 1;
+    sub_1C94098(&ClassBoardResourceCatalogAssetBundle_TypeInfo);
+    sub_1C94098(&IClassBoardResourceCatalog_TypeInfo);
+    byte_4D30555 = 1;
   }
   resourceCatalog = this->fields.resourceCatalog;
   p_resourceCatalog = (GrandQuestFolderBoardItem_o *)&this->fields.resourceCatalog;
@@ -262,14 +263,14 @@ void ClassBoardRootComponent__InitResourceCatalog(ClassBoardRootComponent_o *thi
     else
     {
 LABEL_8:
-      v9 = sub_1C47738(v4, IClassBoardResourceCatalog_TypeInfo, 2);
+      v9 = sub_1C6A420(v4, IClassBoardResourceCatalog_TypeInfo, 2);
     }
     (*(void (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))v9)(v4, *(_QWORD *)(v9 + 8));
   }
-  v10 = (ClassBoardResourceCatalogAssetBundle_o *)sub_1C715FC(ClassBoardResourceCatalogAssetBundle_TypeInfo);
-  ClassBoardResourceCatalogAssetBundle___ctor(v10, 0);
+  v10 = (ClassBoardResourceCatalogAssetBundle_o *)sub_1C942E4(ClassBoardResourceCatalogAssetBundle_TypeInfo);
+  ClassBoardResourceCatalogAssetBundle___ctor(v10, v11);
   p_resourceCatalog->klass = (GrandQuestFolderBoardItem_c *)v10;
-  sub_1C71354(p_resourceCatalog, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C(p_resourceCatalog, (int32_t)v10, v12, v13, v14, v15, v16, v17);
 }
 
 
@@ -299,24 +300,24 @@ void ClassBoardRootComponent__OnMovieEnd(
   float DEFAULT_FADE_TIME; // s8
   System_Action_o *v24; // x21
 
-  if ( (byte_4CCB078 & 1) == 0 )
+  if ( (byte_4D30554 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&AvalonSceneManager_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&Method_ClassBoardRootComponent___c__DisplayClass38_0__OnMovieEnd_b__0__);
-    sub_1C713B0(&ClassBoardRootComponent___c__DisplayClass38_0_TypeInfo);
-    byte_4CCB078 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&AvalonSceneManager_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&Method_ClassBoardRootComponent___c__DisplayClass38_0__OnMovieEnd_b__0__);
+    sub_1C94098(&ClassBoardRootComponent___c__DisplayClass38_0_TypeInfo);
+    byte_4D30554 = 1;
   }
-  v5 = sub_1C715FC(ClassBoardRootComponent___c__DisplayClass38_0_TypeInfo);
+  v5 = sub_1C942E4(ClassBoardRootComponent___c__DisplayClass38_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
     goto LABEL_8;
   *(_QWORD *)(v5 + 16) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)this, v8, v9, v10, v11, v12, v13);
   *(_QWORD *)(v5 + 24) = callBackAfter;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)callBackAfter, v14, v15, v16, v17, v18, v19);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)callBackAfter, v14, v15, v16, v17, v18, v19);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v21 = AvalonSceneManager_TypeInfo;
   v22 = (CommonUI_o *)Instance;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -325,7 +326,7 @@ void ClassBoardRootComponent__OnMovieEnd(
     v21 = AvalonSceneManager_TypeInfo;
   }
   DEFAULT_FADE_TIME = v21->static_fields->DEFAULT_FADE_TIME;
-  v24 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v24 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(
     v24,
     (Il2CppObject *)v5,
@@ -333,7 +334,7 @@ void ClassBoardRootComponent__OnMovieEnd(
     0);
   if ( !v22 )
 LABEL_8:
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   CommonUI__maskFadeout(v22, 1, DEFAULT_FADE_TIME, v24, 0);
 }
 
@@ -348,7 +349,7 @@ void ClassBoardRootComponent__PlayMovie(
   System_Collections_IEnumerator_o *v6; // x1
 
   v6 = ClassBoardRootComponent__PlayMovieCoroutine(this, movieName, isPlayWithDelay, callBackAfter, method);
-  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v6, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_72096164((UnityEngine_MonoBehaviour_o *)this, v6, 0);
 }
 
 
@@ -380,22 +381,22 @@ System_Collections_IEnumerator_o *ClassBoardRootComponent__PlayMovieCoroutine(
   int64_t v27; // x6
   System_String_o *v28; // x7
 
-  if ( (byte_4CCB077 & 1) == 0 )
+  if ( (byte_4D30553 & 1) == 0 )
   {
-    sub_1C713B0(&ClassBoardRootComponent__PlayMovieCoroutine_d__37_TypeInfo);
-    byte_4CCB077 = 1;
+    sub_1C94098(&ClassBoardRootComponent__PlayMovieCoroutine_d__37_TypeInfo);
+    byte_4D30553 = 1;
   }
   v9 = isPlayWithDelay;
-  v10 = sub_1C715FC(ClassBoardRootComponent__PlayMovieCoroutine_d__37_TypeInfo);
+  v10 = sub_1C942E4(ClassBoardRootComponent__PlayMovieCoroutine_d__37_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   *(_DWORD *)(v10 + 16) = 0;
   *(_QWORD *)(v10 + 32) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v10 + 32), (int32_t)this, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v10 + 32), (int32_t)this, v11, v12, v13, v14, v15, v16);
   *(_QWORD *)(v10 + 64) = movieName;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v10 + 64), (int32_t)movieName, v17, v18, v19, v20, v21, v22);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v10 + 64), (int32_t)movieName, v17, v18, v19, v20, v21, v22);
   *(_BYTE *)(v10 + 48) = v9;
   *(_QWORD *)(v10 + 40) = callBackAfter;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v10 + 40), (int32_t)callBackAfter, v23, v24, v25, v26, v27, v28);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v10 + 40), (int32_t)callBackAfter, v23, v24, v25, v26, v27, v28);
   return (System_Collections_IEnumerator_o *)v10;
 }
 
@@ -406,8 +407,8 @@ void ClassBoardRootComponent__Update(ClassBoardRootComponent_o *this, const Meth
 
   pageSwitcher = this->fields.pageSwitcher;
   if ( !pageSwitcher )
-    sub_1C71608(0, method);
-  ClassBoardPageSwitcher__Update(pageSwitcher, 0);
+    sub_1C942F0(0, method);
+  ClassBoardPageSwitcher__Update(pageSwitcher, method);
 }
 
 
@@ -416,14 +417,14 @@ void ClassBoardRootComponent___beginInitialize_b__32_0(ClassBoardRootComponent_o
   Il2CppObject *Instance; // x0
   __int64 v4; // x1
 
-  if ( (byte_4CCB07C & 1) == 0 )
+  if ( (byte_4D30558 & 1) == 0 )
   {
-    sub_1C713B0(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
-    byte_4CCB07C = 1;
+    sub_1C94098(&Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+    byte_4D30558 = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_AvalonSceneManager__get_Instance__);
   if ( !Instance )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   AvalonSceneManager__endInitialize((AvalonSceneManager_o *)Instance, (SceneRootComponent_o *)this, 0);
 }
 
@@ -454,18 +455,18 @@ void ClassBoardRootComponent__beginFinish(ClassBoardRootComponent_o *this, const
   IClassBoardResourceCatalog_c **p_offset; // x10
   __int64 v25; // x0
 
-  if ( (byte_4CCB075 & 1) == 0 )
+  if ( (byte_4D30551 & 1) == 0 )
   {
-    sub_1C713B0(&System_GC_TypeInfo);
-    sub_1C713B0(&IClassBoardResourceCatalog_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
-    byte_4CCB075 = 1;
+    sub_1C94098(&System_GC_TypeInfo);
+    sub_1C94098(&IClassBoardResourceCatalog_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+    byte_4D30551 = 1;
   }
   pageSwitcher = this->fields.pageSwitcher;
   if ( !pageSwitcher )
     goto LABEL_23;
-  ClassBoardPageSwitcher__Release(pageSwitcher, 0);
+  ClassBoardPageSwitcher__Release(pageSwitcher, method);
   p_classBoardBackground = &this->fields.classBoardBackground;
   classBoardBackground = (UnityEngine_Object_o *)this->fields.classBoardBackground;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -480,9 +481,9 @@ void ClassBoardRootComponent__beginFinish(ClassBoardRootComponent_o *this, const
                                            0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71724608(gameObject, 0);
+    UnityEngine_Object__Destroy_72110972(gameObject, 0);
     *p_classBoardBackground = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.classBoardBackground, 0, v13, v14, v15, v16, v17, v18);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.classBoardBackground, 0, v13, v14, v15, v16, v17, v18);
   }
   resourceCatalog = this->fields.resourceCatalog;
   p_resourceCatalog = (GrandQuestFolderBoardItem_o *)&this->fields.resourceCatalog;
@@ -506,16 +507,16 @@ void ClassBoardRootComponent__beginFinish(ClassBoardRootComponent_o *this, const
     else
     {
 LABEL_16:
-      v25 = sub_1C47738(v20, IClassBoardResourceCatalog_TypeInfo, 2);
+      v25 = sub_1C6A420(v20, IClassBoardResourceCatalog_TypeInfo, 2);
     }
     (*(void (__fastcall **)(struct IClassBoardResourceCatalog_o *, _QWORD))v25)(v20, *(_QWORD *)(v25 + 8));
   }
   p_resourceCatalog->klass = 0;
-  sub_1C71354(p_resourceCatalog, 0, v6, v7, v8, v9, v10, v11);
-  pageSwitcher = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
+  sub_1C9403C(p_resourceCatalog, 0, v6, v7, v8, v9, v10, v11);
+  pageSwitcher = (ClassBoardPageSwitcher_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_AssetManager__get_Instance__);
   if ( !pageSwitcher )
 LABEL_23:
-    sub_1C71608(pageSwitcher, method);
+    sub_1C942F0(pageSwitcher, method);
   AssetManager__RequestUnloadUnusedAssets((AssetManager_o *)pageSwitcher, 0, 0);
   if ( !System_GC_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_GC_TypeInfo);
@@ -526,50 +527,52 @@ LABEL_23:
 void ClassBoardRootComponent__beginInitialize(ClassBoardRootComponent_o *this, const MethodInfo *method)
 {
   ClassBoardResourceCatalogAssetBundle_o *v3; // x20
-  int32_t v4; // w2
-  int32_t v5; // w3
-  System_String_o *v6; // x4
-  int32_t v7; // w5
-  int64_t v8; // x6
-  System_String_o *v9; // x7
+  const MethodInfo *v4; // x1
+  int32_t v5; // w2
+  int32_t v6; // w3
+  System_String_o *v7; // x4
+  int32_t v8; // w5
+  int64_t v9; // x6
+  System_String_o *v10; // x7
   Il2CppObject *Instance; // x20
-  Il2CppObject *v11; // x0
-  __int64 v12; // x1
+  Il2CppObject *v12; // x0
+  __int64 v13; // x1
   ClassBoardPageSwitcher_o *pageSwitcher; // x20
-  System_Action_o *v14; // x21
+  System_Action_o *v15; // x21
+  const MethodInfo *v16; // x3
 
-  if ( (byte_4CCB073 & 1) == 0 )
+  if ( (byte_4D3054F & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&ClassBoardResourceCatalogAssetBundle_TypeInfo);
-    sub_1C713B0(&Method_ClassBoardRootComponent__beginInitialize_b__32_0__);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
-    byte_4CCB073 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&ClassBoardResourceCatalogAssetBundle_TypeInfo);
+    sub_1C94098(&Method_ClassBoardRootComponent__beginInitialize_b__32_0__);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    byte_4D3054F = 1;
   }
   SceneRootComponent__beginInitialize((SceneRootComponent_o *)this, 0);
-  v3 = (ClassBoardResourceCatalogAssetBundle_o *)sub_1C715FC(ClassBoardResourceCatalogAssetBundle_TypeInfo);
-  ClassBoardResourceCatalogAssetBundle___ctor(v3, 0);
+  v3 = (ClassBoardResourceCatalogAssetBundle_o *)sub_1C942E4(ClassBoardResourceCatalogAssetBundle_TypeInfo);
+  ClassBoardResourceCatalogAssetBundle___ctor(v3, v4);
   this->fields.resourceCatalog = (struct IClassBoardResourceCatalog_o *)v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.resourceCatalog, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.resourceCatalog, (int32_t)v3, v5, v6, v7, v8, v9, v10);
   SceneRootComponent__setMainMenuBar((SceneRootComponent_o *)this, 5, 20, 0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Instance, 0, 0) )
   {
-    v11 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
-    if ( !v11 )
+    v12 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_QuestAfterAction__get_Instance__);
+    if ( !v12 )
       goto LABEL_10;
-    BYTE2(v11[12].klass) = 0;
+    BYTE2(v12[12].monitor) = 0;
   }
   pageSwitcher = this->fields.pageSwitcher;
-  v14 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
-  System_Action___ctor(v14, (Il2CppObject *)this, Method_ClassBoardRootComponent__beginInitialize_b__32_0__, 0);
+  v15 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
+  System_Action___ctor(v15, (Il2CppObject *)this, Method_ClassBoardRootComponent__beginInitialize_b__32_0__, 0);
   if ( !pageSwitcher )
 LABEL_10:
-    sub_1C71608(v11, v12);
-  ClassBoardPageSwitcher__Init(pageSwitcher, this, v14, 0);
+    sub_1C942F0(v12, v13);
+  ClassBoardPageSwitcher__Init(pageSwitcher, this, v15, v16);
 }
 
 
@@ -579,13 +582,14 @@ void ClassBoardRootComponent__beginStartUp(
         const MethodInfo *method)
 {
   __int64 v5; // x1
+  const MethodInfo *v6; // x2
   __int64 naturalAligment; // x10
   ClassBoardPageSwitcher_o *pageSwitcher; // x0
 
-  if ( (byte_4CCB074 & 1) == 0 )
+  if ( (byte_4D30550 & 1) == 0 )
   {
-    sub_1C713B0(&SceneJumpInfo_TypeInfo);
-    byte_4CCB074 = 1;
+    sub_1C94098(&SceneJumpInfo_TypeInfo);
+    byte_4D30550 = 1;
   }
   ClassBoardRootComponent__CreateBackground(this, (const MethodInfo *)data);
   MainMenuBar__setMenuActive(1, 0, 0);
@@ -598,16 +602,16 @@ void ClassBoardRootComponent__beginStartUp(
     pageSwitcher = this->fields.pageSwitcher;
     if ( pageSwitcher )
     {
-      ClassBoardPageSwitcher__StartUp(pageSwitcher, data, 0);
+      ClassBoardPageSwitcher__StartUp(pageSwitcher, data, v6);
       return;
     }
 LABEL_11:
-    sub_1C71608(pageSwitcher, v5);
+    sub_1C942F0(pageSwitcher, v5);
   }
   pageSwitcher = this->fields.pageSwitcher;
   if ( !pageSwitcher )
     goto LABEL_11;
-  ClassBoardPageSwitcher__StartUpByTransitionInfo(pageSwitcher, data, 0);
+  ClassBoardPageSwitcher__StartUpByTransitionInfo(pageSwitcher, data, v6);
 }
 
 
@@ -796,23 +800,23 @@ bool ClassBoardRootComponent__PlayMovieCoroutine_d__37__MoveNext(
   GrandQuestFolderBoardItem_o *v108; // x19
 
   v8 = this;
-  if ( (byte_4CCB081 & 1) == 0 )
+  if ( (byte_4D3055D & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&AvalonSceneManager_TypeInfo);
-    sub_1C713B0(&BgmManager_TypeInfo);
-    sub_1C713B0(&CommonUI_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&Method_ClassBoardRootComponent___c__PlayMovieCoroutine_b__37_2__);
-    sub_1C713B0(&Method_ClassBoardRootComponent___c__DisplayClass37_0__PlayMovieCoroutine_b__0__);
-    sub_1C713B0(&Method_ClassBoardRootComponent___c__DisplayClass37_0__PlayMovieCoroutine_b__1__);
-    sub_1C713B0(&ClassBoardRootComponent___c__DisplayClass37_0_TypeInfo);
-    sub_1C713B0(&ClassBoardRootComponent___c_TypeInfo);
-    sub_1C713B0(&UnityEngine_WaitForSeconds_TypeInfo);
-    this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)sub_1C713B0(&StringLiteral_1368/*"2DUI"*/);
-    byte_4CCB081 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&AvalonSceneManager_TypeInfo);
+    sub_1C94098(&BgmManager_TypeInfo);
+    sub_1C94098(&CommonUI_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&Method_ClassBoardRootComponent___c__PlayMovieCoroutine_b__37_2__);
+    sub_1C94098(&Method_ClassBoardRootComponent___c__DisplayClass37_0__PlayMovieCoroutine_b__0__);
+    sub_1C94098(&Method_ClassBoardRootComponent___c__DisplayClass37_0__PlayMovieCoroutine_b__1__);
+    sub_1C94098(&ClassBoardRootComponent___c__DisplayClass37_0_TypeInfo);
+    sub_1C94098(&ClassBoardRootComponent___c_TypeInfo);
+    sub_1C94098(&UnityEngine_WaitForSeconds_TypeInfo);
+    this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)sub_1C94098(&StringLiteral_1367/*"2DUI"*/);
+    byte_4D3055D = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -831,16 +835,16 @@ bool ClassBoardRootComponent__PlayMovieCoroutine_d__37__MoveNext(
       if ( _1__state )
         return 0;
       v8->fields.__1__state = -1;
-      v11 = (Il2CppObject *)sub_1C715FC(ClassBoardRootComponent___c__DisplayClass37_0_TypeInfo);
+      v11 = (Il2CppObject *)sub_1C942E4(ClassBoardRootComponent___c__DisplayClass37_0_TypeInfo);
       System_Object___ctor(v11, 0);
       v8->fields.__8__1 = (struct ClassBoardRootComponent___c__DisplayClass37_0_o *)v11;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)&v8->fields.__8__1, (int32_t)v11, v12, v13, v14, v15, v16, v17);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)&v8->fields.__8__1, (int32_t)v11, v12, v13, v14, v15, v16, v17);
       this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)v8->fields.__8__1;
       if ( !this )
         goto LABEL_56;
       v24 = (struct System_Action_o *)v8->fields.__4__this;
       this->fields.callBackAfter = v24;
-      sub_1C71354(
+      sub_1C9403C(
         (GrandQuestFolderBoardItem_o *)&this->fields.callBackAfter,
         (int32_t)v24,
         v18,
@@ -854,7 +858,7 @@ bool ClassBoardRootComponent__PlayMovieCoroutine_d__37__MoveNext(
         goto LABEL_56;
       callBackAfter = v8->fields.callBackAfter;
       *(_QWORD *)&this->fields.isPlayWithDelay = callBackAfter;
-      sub_1C71354(
+      sub_1C9403C(
         (GrandQuestFolderBoardItem_o *)&this->fields.isPlayWithDelay,
         (int32_t)callBackAfter,
         v25,
@@ -871,18 +875,18 @@ bool ClassBoardRootComponent__PlayMovieCoroutine_d__37__MoveNext(
           if ( classBoardBackground )
           {
             grandScoreNoneDialogUMedalCreateEffectDelayTime = classBoardBackground->fields.grandScoreNoneDialogUMedalCreateEffectDelayTime;
-            v34 = (UnityEngine_WaitForSeconds_o *)sub_1C715FC(UnityEngine_WaitForSeconds_TypeInfo);
+            v34 = (UnityEngine_WaitForSeconds_o *)sub_1C942E4(UnityEngine_WaitForSeconds_TypeInfo);
             UnityEngine_WaitForSeconds___ctor(v34, grandScoreNoneDialogUMedalCreateEffectDelayTime, 0);
             v8->fields.__2__current = (Il2CppObject *)v34;
             p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-            sub_1C71354(p__2__current, (int32_t)v34, v36, v37, v38, v39, v40, v41);
+            sub_1C9403C(p__2__current, (int32_t)v34, v36, v37, v38, v39, v40, v41);
             result = 1;
             LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
             return result;
           }
         }
 LABEL_56:
-        sub_1C71608(this, method);
+        sub_1C942F0(this, method);
       }
     }
     _8__1 = v8->fields.__8__1;
@@ -894,17 +898,17 @@ LABEL_56:
       j_il2cpp_runtime_class_init_0(CommonUI_TypeInfo);
     MoviePath = CommonUI__CreateMoviePath(movieName, 0);
     _8__1->fields.movieFilePath = MoviePath;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&_8__1->fields, (int32_t)MoviePath, v46, v47, v48, v49, v50, v51);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&_8__1->fields, (int32_t)MoviePath, v46, v47, v48, v49, v50, v51);
     this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)v8->fields.__8__1;
     if ( !this )
       goto LABEL_56;
     this->fields.__2__current = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, 0, v52, v53, v54, v55, v56, v57);
-    this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, 0, v52, v53, v54, v55, v56, v57);
+    this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !this )
       goto LABEL_56;
     CommonUI__SetLoadMode((CommonUI_o *)this, 1, 0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v59 = AvalonSceneManager_TypeInfo;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     {
@@ -913,7 +917,7 @@ LABEL_56:
     }
     v60 = (Il2CppObject *)v8->fields.__8__1;
     DEFAULT_FADE_TIME = v59->static_fields->DEFAULT_FADE_TIME;
-    v62 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    v62 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(v62, v60, Method_ClassBoardRootComponent___c__DisplayClass37_0__PlayMovieCoroutine_b__0__, 0);
     if ( !Instance )
       goto LABEL_56;
@@ -941,7 +945,7 @@ LABEL_56:
                              v3);
     _4__this->fields.criMoviePlayerPanelObj = CriMoviePlayerObject;
     p_criMoviePlayerPanelObj = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o **)&_4__this->fields.criMoviePlayerPanelObj;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&_4__this->fields.criMoviePlayerPanelObj,
       (int32_t)CriMoviePlayerObject,
       v66,
@@ -952,7 +956,7 @@ LABEL_56:
       v71);
     criMoviePlayerPanelObj = _4__this->fields.criMoviePlayerPanelObj;
     this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)UnityEngine_LayerMask__NameToLayer(
-                                                                    (System_String_o *)StringLiteral_1368/*"2DUI"*/,
+                                                                    (System_String_o *)StringLiteral_1367/*"2DUI"*/,
                                                                     0);
     if ( !criMoviePlayerPanelObj )
       goto LABEL_56;
@@ -962,7 +966,7 @@ LABEL_56:
       goto LABEL_56;
     this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                     (UnityEngine_GameObject_o *)this,
-                                                                    (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
+                                                                    (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_UIPanel___);
     if ( !this )
       goto LABEL_56;
     UIPanel__set_depth((UIPanel_o *)this, 50, 0);
@@ -975,10 +979,10 @@ LABEL_56:
       goto LABEL_56;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          (UnityEngine_GameObject_o *)this,
-                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
+                         (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_CRIMoviePlayer___);
     _4__this->fields.moviePlayer = (struct CRIMoviePlayer_o *)Component_object;
     p_moviePlayer = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o **)&_4__this->fields.moviePlayer;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&_4__this->fields.moviePlayer,
       (int32_t)Component_object,
       v75,
@@ -998,10 +1002,10 @@ LABEL_56:
     Path = AssetData__get_Path((AssetData_o *)this, 0);
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(BgmManager_TypeInfo);
-    if ( !byte_4CC21CB )
+    if ( !byte_4D27518 )
     {
-      sub_1C713B0(&BgmManager_TypeInfo);
-      byte_4CC21CB = 1;
+      sub_1C94098(&BgmManager_TypeInfo);
+      byte_4D27518 = 1;
     }
     v85 = BgmManager_TypeInfo;
     if ( !BgmManager_TypeInfo->_2.cctor_finished )
@@ -1011,7 +1015,7 @@ LABEL_56:
     }
     v86 = (Il2CppObject *)v8->fields.__8__1;
     masterVolume = v85->static_fields->masterVolume;
-    v88 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    v88 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(v88, v86, Method_ClassBoardRootComponent___c__DisplayClass37_0__PlayMovieCoroutine_b__1__, 0);
     if ( !v82 )
       goto LABEL_56;
@@ -1029,6 +1033,7 @@ LABEL_56:
       0,
       1,
       0,
+      0,
       0);
     this = *p_criMoviePlayerPanelObj;
     if ( !*p_criMoviePlayerPanelObj )
@@ -1040,7 +1045,7 @@ LABEL_56:
     CRIMoviePlayer__MoviePlay((CRIMoviePlayer_o *)this, 0, 0, 0, 0, 0);
     BgmName = BgmManager__GetBgmName(0);
     _4__this->fields.bgmName = BgmName;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&_4__this->fields.bgmName,
       (int32_t)BgmName,
       v90,
@@ -1050,7 +1055,7 @@ LABEL_56:
       v94,
       v95);
     BgmManager__StopBgm(0, 0.0, 0, 0);
-    v96 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    v96 = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v97 = AvalonSceneManager_TypeInfo;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     {
@@ -1073,11 +1078,11 @@ LABEL_56:
         this = (ClassBoardRootComponent__PlayMovieCoroutine_d__37_o *)ClassBoardRootComponent___c_TypeInfo;
       }
       klass = (Il2CppObject *)this[2].fields.callBackAfter->klass;
-      monitor = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      monitor = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
       System_Action___ctor(monitor, klass, Method_ClassBoardRootComponent___c__PlayMovieCoroutine_b__37_2__, 0);
       static_fields = ClassBoardRootComponent___c_TypeInfo->static_fields;
       static_fields->__9__37_2 = monitor;
-      sub_1C71354(
+      sub_1C9403C(
         (GrandQuestFolderBoardItem_o *)&static_fields->__9__37_2,
         (int32_t)monitor,
         v102,
@@ -1094,7 +1099,7 @@ LABEL_56:
   }
   v8->fields.__2__current = 0;
   v108 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-  sub_1C71354(v108, 0, v2, (int32_t)v3, v4, v5, v6, v7);
+  sub_1C9403C(v108, 0, v2, (int32_t)v3, v4, v5, v6, v7);
   LODWORD(v108[-1].fields._ClosedMessage_k__BackingField) = 2;
   return 1;
 }
@@ -1116,11 +1121,11 @@ void __noreturn ClassBoardRootComponent__PlayMovieCoroutine_d__37__System_Collec
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
+  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C713C4(&Method_ClassBoardRootComponent__PlayMovieCoroutine_d__37_System_Collections_IEnumerator_Reset__);
-  sub_1C714D8(v3, v4);
+  v4 = sub_1C940AC(&Method_ClassBoardRootComponent__PlayMovieCoroutine_d__37_System_Collections_IEnumerator_Reset__);
+  sub_1C941C0(v3, v4);
 }
 
 
@@ -1150,15 +1155,15 @@ void ClassBoardRootComponent___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CCB07D & 1) == 0 )
+  if ( (byte_4D30559 & 1) == 0 )
   {
-    sub_1C713B0(&ClassBoardRootComponent___c_TypeInfo);
-    byte_4CCB07D = 1;
+    sub_1C94098(&ClassBoardRootComponent___c_TypeInfo);
+    byte_4D30559 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C715FC(ClassBoardRootComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C942E4(ClassBoardRootComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ClassBoardRootComponent___c_TypeInfo->static_fields->__9 = (struct ClassBoardRootComponent___c_o *)v1;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)ClassBoardRootComponent___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -1205,25 +1210,25 @@ void ClassBoardRootComponent___c__DisplayClass37_0___PlayMovieCoroutine_b__0(
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CCB07E & 1) == 0 )
+  if ( (byte_4D3055A & 1) == 0 )
   {
-    sub_1C713B0(&AssetManager_TypeInfo);
-    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C713B0(&Method_ClassBoardRootComponent___c__DisplayClass37_0__PlayMovieCoroutine_b__3__);
-    byte_4CCB07E = 1;
+    sub_1C94098(&AssetManager_TypeInfo);
+    sub_1C94098(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C94098(&Method_ClassBoardRootComponent___c__DisplayClass37_0__PlayMovieCoroutine_b__3__);
+    byte_4D3055A = 1;
   }
   _9__3 = this->fields.__9__3;
   movieFilePath = this->fields.movieFilePath;
   if ( !_9__3 )
   {
-    _9__3 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    _9__3 = (AssetLoader_LoadEndDataHandler_o *)sub_1C942E4(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       _9__3,
       (Il2CppObject *)this,
       Method_ClassBoardRootComponent___c__DisplayClass37_0__PlayMovieCoroutine_b__3__,
       0);
     this->fields.__9__3 = _9__3;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__9__3, (int32_t)_9__3, v5, v6, v7, v8, v9, v10);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.__9__3, (int32_t)_9__3, v5, v6, v7, v8, v9, v10);
   }
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
@@ -1238,7 +1243,7 @@ void ClassBoardRootComponent___c__DisplayClass37_0___PlayMovieCoroutine_b__1(
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   ClassBoardRootComponent__OnMovieEnd(this->fields.__4__this, this->fields.callBackAfter, v2);
 }
 
@@ -1257,7 +1262,7 @@ void ClassBoardRootComponent___c__DisplayClass37_0___PlayMovieCoroutine_b__3(
 
   this->fields.downloadedData = data;
   p_downloadedData = &this->fields.downloadedData;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.downloadedData,
     (int32_t)data,
     (int32_t)method,
@@ -1296,13 +1301,13 @@ void ClassBoardRootComponent___c__DisplayClass38_0___OnMovieEnd_b__0(
   System_String_o *v13; // x7
 
   v2 = this;
-  if ( (byte_4CCB07F & 1) == 0 )
+  if ( (byte_4D3055B & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&AvalonSceneManager_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    this = (ClassBoardRootComponent___c__DisplayClass38_0_o *)sub_1C713B0(&Method_ClassBoardRootComponent___c__DisplayClass38_0__OnMovieEnd_b__1__);
-    byte_4CCB07F = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&AvalonSceneManager_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    this = (ClassBoardRootComponent___c__DisplayClass38_0_o *)sub_1C94098(&Method_ClassBoardRootComponent___c__DisplayClass38_0__OnMovieEnd_b__1__);
+    byte_4D3055B = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -1311,7 +1316,7 @@ void ClassBoardRootComponent___c__DisplayClass38_0___OnMovieEnd_b__0(
   if ( !this )
     goto LABEL_11;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
-  this = (ClassBoardRootComponent___c__DisplayClass38_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  this = (ClassBoardRootComponent___c__DisplayClass38_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   v4 = AvalonSceneManager_TypeInfo;
   v5 = (CommonUI_o *)this;
   if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
@@ -1323,18 +1328,18 @@ void ClassBoardRootComponent___c__DisplayClass38_0___OnMovieEnd_b__0(
   _9__1 = v2->fields.__9__1;
   if ( !_9__1 )
   {
-    _9__1 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    _9__1 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(
       _9__1,
       (Il2CppObject *)v2,
       Method_ClassBoardRootComponent___c__DisplayClass38_0__OnMovieEnd_b__1__,
       0);
     v2->fields.__9__1 = _9__1;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.__9__1, (int32_t)_9__1, v8, v9, v10, v11, v12, v13);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&v2->fields.__9__1, (int32_t)_9__1, v8, v9, v10, v11, v12, v13);
   }
   if ( !v5 )
 LABEL_11:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   CommonUI__maskFadein(v5, DEFAULT_FADE_TIME, _9__1, 0);
 }
 
@@ -1363,14 +1368,14 @@ void ClassBoardRootComponent___c__DisplayClass38_0___OnMovieEnd_b__1(
   System_String_o *v20; // x7
   struct System_Action_o *callBackAfter; // x8
 
-  if ( (byte_4CCB080 & 1) == 0 )
+  if ( (byte_4D3055C & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&SoundManager_TypeInfo);
-    byte_4CCB080 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&SoundManager_TypeInfo);
+    byte_4D3055C = 1;
   }
-  Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = (char *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   CommonUI__SetLoadMode((CommonUI_o *)Instance, 0, 0);
@@ -1387,18 +1392,18 @@ void ClassBoardRootComponent___c__DisplayClass38_0___OnMovieEnd_b__1(
   criMoviePlayerPanelObj = (UnityEngine_Object_o *)v7->fields.criMoviePlayerPanelObj;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-  UnityEngine_Object__Destroy_71724608(criMoviePlayerPanelObj, 0);
+  UnityEngine_Object__Destroy_72110972(criMoviePlayerPanelObj, 0);
   Instance = (char *)this->fields.__4__this;
   if ( !Instance
     || (*((_QWORD *)Instance + 15) = 0,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(Instance + 120), 0, v9, v10, v11, v12, v13, v14),
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(Instance + 120), 0, v9, v10, v11, v12, v13, v14),
         (Instance = (char *)this->fields.__4__this) == 0) )
   {
 LABEL_15:
-    sub_1C71608(Instance, v4);
+    sub_1C942F0(Instance, v4);
   }
   *((_QWORD *)Instance + 14) = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(Instance + 112), 0, v15, v16, v17, v18, v19, v20);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(Instance + 112), 0, v15, v16, v17, v18, v19, v20);
   callBackAfter = this->fields.callBackAfter;
   if ( callBackAfter )
     ((void (__fastcall *)(intptr_t, intptr_t))callBackAfter->fields.invoke_impl)(

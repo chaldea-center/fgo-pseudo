@@ -22,13 +22,13 @@ bool MapScroll__BrakeMv(MapScroll_o *this, float spd_rate, const MethodInfo *met
 
   mMapCamera = this->fields.mMapCamera;
   if ( !mMapCamera )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   CameraRect = MapCamera__get_CameraRect(mMapCamera, 0);
-  return MapScroll__BrakeMv_36476268(this, CameraRect, spd_rate, v6);
+  return MapScroll__BrakeMv_36885104(this, CameraRect, spd_rate, v6);
 }
 
 
-bool MapScroll__BrakeMv_36476268(
+bool MapScroll__BrakeMv_36885104(
         MapScroll_o *this,
         UnityEngine_Rect_o cam_rect,
         float spd_rate,
@@ -48,7 +48,7 @@ bool MapScroll__BrakeMv_36476268(
 
   mMapCamera = this->fields.mMapCamera;
   if ( !mMapCamera )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   m_YMin = mMapCamera->fields.mMvBrakeRect.fields.m_YMin;
   m_Width = mMapCamera->fields.mMvBrakeRect.fields.m_Width;
   x = this->fields.mTgt.fields.x;
@@ -113,7 +113,7 @@ UnityEngine_Vector3_o MapScroll__GetScrlPosVec3(MapScroll_o *this, const MethodI
 
   mCamera = (UnityEngine_Component_o *)this->fields.mCamera;
   if ( !mCamera )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   gameObject = UnityEngine_Component__get_gameObject(mCamera, 0);
   return GameObjectExtensions__GetLocalPosition(gameObject, 0);
 }
@@ -164,10 +164,10 @@ void MapScroll__Init(MapScroll_o *this, MapCamera_o *mc, MapTouchDetector_o *tou
   int64_t v33; // x6
   System_String_o *v34; // x7
 
-  if ( (byte_4CC3F04 & 1) == 0 )
+  if ( (byte_4D292D8 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3F04 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D292D8 = 1;
   }
   mMapCamera = (UnityEngine_Object_o *)this->fields.mMapCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -175,19 +175,19 @@ void MapScroll__Init(MapScroll_o *this, MapCamera_o *mc, MapTouchDetector_o *tou
   if ( UnityEngine_Object__op_Inequality(mMapCamera, 0, 0) )
   {
     this->fields.mMapCamera = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, 0, v8, v9, v10, v11, v12, v13);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, 0, v8, v9, v10, v11, v12, v13);
     this->fields.touchDetector = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.touchDetector, 0, v14, v15, v16, v17, v18, v19);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.touchDetector, 0, v14, v15, v16, v17, v18, v19);
   }
   this->fields.mMapCamera = mc;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)mc, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)mc, v8, v9, v10, v11, v12, v13);
   if ( !mc )
-    sub_1C71608(v20, v21);
+    sub_1C942F0(v20, v21);
   mCamera = mc->fields.mCamera;
   this->fields.mCamera = mCamera;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mCamera, (int32_t)mCamera, v22, v23, v24, v25, v26, v27);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mCamera, (int32_t)mCamera, v22, v23, v24, v25, v26, v27);
   this->fields.touchDetector = touchDetector;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.touchDetector,
     (int32_t)touchDetector,
     v29,
@@ -205,10 +205,10 @@ bool MapScroll__IsStop(MapScroll_o *this, const MethodInfo *method)
   float32x2_t v3; // d0
 
   mSpd = this->fields.mSpd;
-  if ( !byte_4CC0BE9 )
+  if ( !byte_4D25DF9 )
   {
-    sub_1C713B0(&UnityEngine_Vector2_TypeInfo);
-    byte_4CC0BE9 = 1;
+    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
+    byte_4D25DF9 = 1;
   }
   v3.n64_u64[0] = vsub_f32((float32x2_t)mSpd, (float32x2_t)UnityEngine_Vector2_TypeInfo->static_fields->zeroVector).n64_u64[0];
   return vaddv_f32(vmul_f32(v3, v3)) < 1.0e-10;
@@ -243,7 +243,7 @@ void MapScroll__LimitMv(MapScroll_o *this, const MethodInfo *method)
         ScrlPosVec3 = MapScroll__GetScrlPosVec3(v3, v5),
         (this = (MapScroll_o *)v3->fields.mMapCamera) == 0) )
   {
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   x = ScrlPosVec3.fields.x;
   y = ScrlPosVec3.fields.y;
@@ -258,7 +258,7 @@ void MapScroll__LimitMv(MapScroll_o *this, const MethodInfo *method)
   CameraRect.fields.m_Height = m_YMin;
   v12 = m_Width;
   v13 = m_Height;
-  v16 = MapScroll__LimitMv_36476616(
+  v16 = MapScroll__LimitMv_36885452(
           v3,
           *(UnityEngine_Vector2_o *)&CameraRect.fields.m_XMin,
           *(UnityEngine_Rect_o *)&CameraRect.fields.m_Width,
@@ -268,7 +268,7 @@ void MapScroll__LimitMv(MapScroll_o *this, const MethodInfo *method)
 }
 
 
-UnityEngine_Vector2_o MapScroll__LimitMv_36476616(
+UnityEngine_Vector2_o MapScroll__LimitMv_36885452(
         MapScroll_o *this,
         UnityEngine_Vector2_o pos,
         UnityEngine_Rect_o cam_rect,
@@ -292,7 +292,7 @@ UnityEngine_Vector2_o MapScroll__LimitMv_36476616(
   mMapCamera = this->fields.mMapCamera;
   if ( !mMapCamera )
 LABEL_19:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   m_XMin = mMapCamera->fields.mMvLimitRect.fields.m_XMin;
   m_YMin = mMapCamera->fields.mMvLimitRect.fields.m_YMin;
   m_Height = mMapCamera->fields.mMvLimitRect.fields.m_Height;
@@ -361,7 +361,7 @@ void MapScroll__Process(MapScroll_o *this, const MethodInfo *method)
   float v9; // s5
   float v10; // s6
   const MethodInfo *v11; // x1
-  __int64 touchDetector; // x0
+  TouchDetectorBase_o *touchDetector; // x0
   float y; // s9
   int v14; // w20
   struct MapTouchDetector_o *v15; // x9
@@ -408,10 +408,10 @@ void MapScroll__Process(MapScroll_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v56; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v57; // 0:s3.4,4:s4.4,8:s5.4
 
-  if ( (byte_4CC3F05 & 1) == 0 )
+  if ( (byte_4D292D9 & 1) == 0 )
   {
-    sub_1C713B0(&System_Math_TypeInfo);
-    byte_4CC3F05 = 1;
+    sub_1C94098(&System_Math_TypeInfo);
+    byte_4D292D9 = 1;
   }
   ScrlPosVec3 = MapScroll__GetScrlPosVec3(this, method);
   x = ScrlPosVec3.fields.x;
@@ -443,18 +443,18 @@ void MapScroll__Process(MapScroll_o *this, const MethodInfo *method)
     }
     return;
   }
-  touchDetector = (__int64)this->fields.touchDetector;
+  touchDetector = (TouchDetectorBase_o *)this->fields.touchDetector;
   if ( !touchDetector )
     goto LABEL_68;
   y = ScrlPosVec3.fields.y;
-  touchDetector = TouchDetectorBase__get_CurrentTouchCount((TouchDetectorBase_o *)touchDetector, 0);
+  touchDetector = (TouchDetectorBase_o *)TouchDetectorBase__get_CurrentTouchCount(touchDetector, 0);
   if ( !(_DWORD)touchDetector )
   {
     this->fields.UserTotalScrollAmount = 0.0;
-    if ( !byte_4CC0D0A )
+    if ( !byte_4D25F1A )
     {
-      sub_1C713B0(&System_Math_TypeInfo);
-      byte_4CC0D0A = 1;
+      sub_1C94098(&System_Math_TypeInfo);
+      byte_4D25F1A = 1;
     }
     v29 = this->fields.mTchDif.fields.x;
     v28 = this->fields.mTchDif.fields.y;
@@ -462,10 +462,10 @@ void MapScroll__Process(MapScroll_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
     if ( sqrtf((float)(v29 * v29) + (float)(v28 * v28)) > 0.0 )
       goto LABEL_34;
-    if ( !byte_4CC0D0A )
+    if ( !byte_4D25F1A )
     {
-      sub_1C713B0(&System_Math_TypeInfo);
-      byte_4CC0D0A = 1;
+      sub_1C94098(&System_Math_TypeInfo);
+      byte_4D25F1A = 1;
     }
     v31 = this->fields.mTchDifOld.fields.x;
     v30 = this->fields.mTchDifOld.fields.y;
@@ -489,10 +489,10 @@ LABEL_34:
       this->fields.mInertiaSpd.fields.x = this->fields.mInertiaSpd.fields.x + v32;
       this->fields.mInertiaSpd.fields.y = v35 + v33;
       ActionExtensions__Call(mPlaySEAction_Flick, 0);
-      if ( !byte_4CC0BE9 )
+      if ( !byte_4D25DF9 )
       {
-        sub_1C713B0(&UnityEngine_Vector2_TypeInfo);
-        byte_4CC0BE9 = 1;
+        sub_1C94098(&UnityEngine_Vector2_TypeInfo);
+        byte_4D25DF9 = 1;
       }
       v36 = UnityEngine_Vector2_TypeInfo;
       this->fields.mTchDif = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
@@ -505,21 +505,21 @@ LABEL_34:
     v39 = vmuls_n_f32(v38, v50.n64_f32[0]);
     this->fields.mInertiaSpd.fields.x = v39;
     this->fields.mInertiaSpd.fields.y = vmuls_lane_f32(v38, v50, 1);
-    touchDetector = (__int64)System_Math_TypeInfo;
+    touchDetector = (TouchDetectorBase_o *)System_Math_TypeInfo;
     if ( !System_Math_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
     if ( fabsf(v39) < 0.01 )
     {
-      touchDetector = (__int64)System_Math_TypeInfo;
+      touchDetector = (TouchDetectorBase_o *)System_Math_TypeInfo;
       v40 = this->fields.mInertiaSpd.fields.y;
       if ( !System_Math_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_Math_TypeInfo);
       if ( fabsf(v40) < 0.01 )
       {
-        if ( !byte_4CC0BE9 )
+        if ( !byte_4D25DF9 )
         {
-          touchDetector = sub_1C713B0(&UnityEngine_Vector2_TypeInfo);
-          byte_4CC0BE9 = 1;
+          touchDetector = (TouchDetectorBase_o *)sub_1C94098(&UnityEngine_Vector2_TypeInfo);
+          byte_4D25DF9 = 1;
         }
         this->fields.mInertiaSpd = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
       }
@@ -538,11 +538,11 @@ LABEL_34:
     }
     goto LABEL_68;
   }
-  v14 = touchDetector;
-  if ( !byte_4CC0BE9 )
+  v14 = (int)touchDetector;
+  if ( !byte_4D25DF9 )
   {
-    touchDetector = sub_1C713B0(&UnityEngine_Vector2_TypeInfo);
-    byte_4CC0BE9 = 1;
+    touchDetector = (TouchDetectorBase_o *)sub_1C94098(&UnityEngine_Vector2_TypeInfo);
+    byte_4D25DF9 = 1;
   }
   v15 = this->fields.touchDetector;
   this->fields.mInertiaSpd = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
@@ -552,14 +552,14 @@ LABEL_34:
   if ( (unsigned int)(v14 - 1) <= 1 && v15->fields._PrevTouchInfo_k__BackingField )
   {
     this->fields.mTchDifOld = this->fields.mTchDif;
-    touchDetector = (__int64)v15->fields._PrevTouchInfo_k__BackingField;
+    touchDetector = (TouchDetectorBase_o *)v15->fields._PrevTouchInfo_k__BackingField;
     if ( touchDetector )
     {
       TouchCenter = TouchDetectorBase_TouchInfo__get_TouchCenter((TouchDetectorBase_TouchInfo_o *)touchDetector, 0);
       v18 = this->fields.touchDetector;
       if ( v18 )
       {
-        touchDetector = (__int64)v18->fields._CurrentTouchInfo_k__BackingField;
+        touchDetector = (TouchDetectorBase_o *)v18->fields._CurrentTouchInfo_k__BackingField;
         if ( touchDetector )
         {
           v19 = TouchDetectorBase_TouchInfo__get_TouchCenter((TouchDetectorBase_TouchInfo_o *)touchDetector, 0);
@@ -571,7 +571,7 @@ LABEL_34:
             v21 = v20->fields.mZoom;
             if ( v21 )
             {
-              touchDetector = (__int64)v21->fields.mCamera;
+              touchDetector = (TouchDetectorBase_o *)v21->fields.mCamera;
               if ( touchDetector )
               {
                 orthographicSize = UnityEngine_Camera__get_orthographicSize((UnityEngine_Camera_o *)touchDetector, 0);
@@ -586,14 +586,14 @@ LABEL_34:
                 }
                 UserTotalScrollAmount = this->fields.UserTotalScrollAmount;
                 this->fields.mTgt = (struct UnityEngine_Vector2_o)vadd_f32((float32x2_t)this->fields.mTgt, v25).n64_u64[0];
-                if ( byte_4CC0D0A )
+                if ( byte_4D25F1A )
                 {
                   v27 = v25.n64_f32[1];
                 }
                 else
                 {
-                  sub_1C713B0(&System_Math_TypeInfo);
-                  byte_4CC0D0A = 1;
+                  sub_1C94098(&System_Math_TypeInfo);
+                  byte_4D25F1A = 1;
                   v25.n64_u32[0] = LODWORD(this->fields.mTchDif.fields.x);
                   v27 = this->fields.mTchDif.fields.y;
                 }
@@ -614,7 +614,7 @@ LABEL_34:
       }
     }
 LABEL_68:
-    sub_1C71608(touchDetector, v3);
+    sub_1C942F0(touchDetector, v3);
   }
 LABEL_57:
   v43 = this->fields.mTgt.fields.x - x;
@@ -659,13 +659,13 @@ void MapScroll__SetScrlPos(MapScroll_o *this, UnityEngine_Vector2_o pos, const M
 
   mCamera = (UnityEngine_Component_o *)this->fields.mCamera;
   if ( !mCamera )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   y = pos.fields.y;
   x = pos.fields.x;
   gameObject = UnityEngine_Component__get_gameObject(mCamera, 0);
   v7.fields.x = x;
   v7.fields.y = y;
-  GameObjectExtensions__SetLocalPosition_36389872(gameObject, v7, 0);
+  GameObjectExtensions__SetLocalPosition_36798708(gameObject, v7, 0);
 }
 
 
@@ -698,10 +698,10 @@ void MapScroll__StartAutoMove(
 
   this->fields.mTgt.fields.x = screenPos.fields.x;
   this->fields.mTgt.fields.y = screenPos.fields.y;
-  if ( !byte_4CC0BE9 )
+  if ( !byte_4D25DF9 )
   {
-    sub_1C713B0(&UnityEngine_Vector2_TypeInfo);
-    byte_4CC0BE9 = 1;
+    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
+    byte_4D25DF9 = 1;
   }
   v10 = UnityEngine_Vector2_TypeInfo;
   this->fields.mTchDif = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
@@ -718,7 +718,7 @@ void MapScroll__StartAutoMove(
   *((_DWORD *)p_mAutoMvEndAct - 7) = LODWORD(ScrlPosVec3.fields.y);
   *((_DWORD *)p_mAutoMvEndAct - 2) = easeType;
   *(p_mAutoMvEndAct - 3) = v13;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_mAutoMvEndAct, (int32_t)endAct, v14, v15, v16, v17, v18, v19);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_mAutoMvEndAct, (int32_t)endAct, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -728,17 +728,17 @@ void MapScroll__Stop(MapScroll_o *this, bool is_force, const MethodInfo *method)
   if ( is_force )
   {
     MapScroll__SetScrlPos(this, this->fields.mTgt, (const MethodInfo *)is_force);
-    if ( !byte_4CC0BE9 )
+    if ( !byte_4D25DF9 )
     {
-      sub_1C713B0(&UnityEngine_Vector2_TypeInfo);
-      byte_4CC0BE9 = 1;
+      sub_1C94098(&UnityEngine_Vector2_TypeInfo);
+      byte_4D25DF9 = 1;
     }
     this->fields.mSpd = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
   }
-  else if ( !byte_4CC0BE9 )
+  else if ( !byte_4D25DF9 )
   {
-    sub_1C713B0(&UnityEngine_Vector2_TypeInfo);
-    byte_4CC0BE9 = 1;
+    sub_1C94098(&UnityEngine_Vector2_TypeInfo);
+    byte_4D25DF9 = 1;
   }
   this->fields.mInertiaSpd = UnityEngine_Vector2_TypeInfo->static_fields->zeroVector;
 }
@@ -760,7 +760,7 @@ void MapScroll__UnInit(MapScroll_o *this, const MethodInfo *method)
   System_String_o *v14; // x7
 
   this->fields.mMapCamera = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, 0, v2, v3, v4, v5, v6, v7);
   this->fields.touchDetector = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.touchDetector, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.touchDetector, 0, v9, v10, v11, v12, v13, v14);
 }

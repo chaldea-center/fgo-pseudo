@@ -34,7 +34,7 @@ LABEL_7:
         return (int)dropEffectId;
       }
     }
-    sub_1C71608(dropEffectId, dropAddMaster);
+    sub_1C942F0(dropEffectId, dropAddMaster);
   }
   return (int)dropEffectId;
 }
@@ -47,15 +47,15 @@ DropInfo_SaveData_o *DropInfo__GetSaveData(DropInfo_o *this, const MethodInfo *m
   __int64 v5; // x1
   DropInfo_SaveData_o *result; // x0
 
-  if ( (byte_4CC6EFB & 1) == 0 )
+  if ( (byte_4D2C369 & 1) == 0 )
   {
-    sub_1C713B0(&DropInfo_SaveData_TypeInfo);
-    byte_4CC6EFB = 1;
+    sub_1C94098(&DropInfo_SaveData_TypeInfo);
+    byte_4D2C369 = 1;
   }
-  v3 = sub_1C715FC(DropInfo_SaveData_TypeInfo);
+  v3 = sub_1C942E4(DropInfo_SaveData_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   if ( !v3 )
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   result = (DropInfo_SaveData_o *)v3;
   *(_OWORD *)(v3 + 16) = *(_OWORD *)&this->fields.type;
   *(_QWORD *)(v3 + 32) = *(_QWORD *)&this->fields.lv;
@@ -82,7 +82,7 @@ bool DropInfo__IsDropDefaultParticleDisable(
   this = (DropInfo_o *)entity;
   if ( !entity )
 LABEL_7:
-    sub_1C71608(this, dropAddMaster);
+    sub_1C942F0(this, dropAddMaster);
   return DropAddEntity__IsDropDefaultParticleDisable(entity, 0);
 }
 
@@ -90,7 +90,7 @@ LABEL_7:
 void DropInfo__SetDataFromSaveData(DropInfo_o *this, DropInfo_SaveData_o *saveData, const MethodInfo *method)
 {
   if ( !saveData )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   *(_OWORD *)&this->fields.type = *(_OWORD *)&saveData->fields.type;
   *(_QWORD *)&this->fields.lv = *(_QWORD *)&saveData->fields.lv;
   this->fields.isRateUp = saveData->fields.isRateUp;
@@ -107,13 +107,13 @@ int32_t DropInfo__get_DropEffectId(DropInfo_o *this, const MethodInfo *method)
 
 bool DropInfo__isItem(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsItem_40699044(this->fields.type, 0);
+  return Gift__IsItem_41175452(this->fields.type, 0);
 }
 
 
 bool DropInfo__isServant(DropInfo_o *this, const MethodInfo *method)
 {
-  return Gift__IsServant_40699096(this->fields.type, 0);
+  return Gift__IsServant_41175504(this->fields.type, 0);
 }
 
 

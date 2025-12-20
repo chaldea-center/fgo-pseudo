@@ -1,9 +1,9 @@
 void ClassBoardQuestOpenConfirmDialog___ctor(ClassBoardQuestOpenConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CCB047 & 1) == 0 )
+  if ( (byte_4D30523 & 1) == 0 )
   {
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    byte_4CCB047 = 1;
+    sub_1C94098(&BaseDialog_TypeInfo);
+    byte_4D30523 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -15,11 +15,11 @@ void ClassBoardQuestOpenConfirmDialog__Close(ClassBoardQuestOpenConfirmDialog_o 
 {
   const MethodInfo *v2; // x2
 
-  ClassBoardQuestOpenConfirmDialog__Close_48447768(this, 0, v2);
+  ClassBoardQuestOpenConfirmDialog__Close_48976880(this, 0, v2);
 }
 
 
-void ClassBoardQuestOpenConfirmDialog__Close_48447768(
+void ClassBoardQuestOpenConfirmDialog__Close_48976880(
         ClassBoardQuestOpenConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -31,14 +31,14 @@ void ClassBoardQuestOpenConfirmDialog__Close_48447768(
   System_String_o *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4CCB043 & 1) == 0 )
+  if ( (byte_4D3051F & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_ClassBoardQuestOpenConfirmDialog_EndClose__);
-    byte_4CCB043 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_ClassBoardQuestOpenConfirmDialog_EndClose__);
+    byte_4D3051F = 1;
   }
   this->fields.CloseCallbackFunc = callback;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.CloseCallbackFunc,
     (int32_t)callback,
     (int32_t)method,
@@ -48,7 +48,7 @@ void ClassBoardQuestOpenConfirmDialog__Close_48447768(
     v6,
     v7);
   this->fields.IsButtonEnable = 0;
-  v10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_ClassBoardQuestOpenConfirmDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -71,7 +71,7 @@ void ClassBoardQuestOpenConfirmDialog__EndClose(ClassBoardQuestOpenConfirmDialog
   ClassBoardQuestOpenConfirmDialog__Init(this, method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   CloseCallbackFunc = this->fields.CloseCallbackFunc;
   p_CloseCallbackFunc = (GrandQuestFolderBoardItem_o *)&this->fields.CloseCallbackFunc;
@@ -79,7 +79,7 @@ void ClassBoardQuestOpenConfirmDialog__EndClose(ClassBoardQuestOpenConfirmDialog
   if ( CloseCallbackFunc )
   {
     p_CloseCallbackFunc->klass = 0;
-    sub_1C71354(p_CloseCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
+    sub_1C9403C(p_CloseCallbackFunc, 0, v5, v6, v7, v8, v9, v10);
     ((void (__fastcall *)(intptr_t, intptr_t))v12->fields.invoke_impl)(v12->fields.method_code, v12->fields.method);
   }
 }
@@ -99,7 +99,7 @@ void ClassBoardQuestOpenConfirmDialog__Init(ClassBoardQuestOpenConfirmDialog_o *
   this->fields.IsButtonEnable = 0;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
 }
@@ -111,17 +111,17 @@ void ClassBoardQuestOpenConfirmDialog__OnClickClose(ClassBoardQuestOpenConfirmDi
   System_Reflection_MethodBase_o *v4; // x0
   struct ClassBoardQuestOpenConfirmDialog_ClickDelegate_o *ClickFunc; // x8
 
-  if ( (byte_4CCB045 & 1) == 0 )
+  if ( (byte_4D30521 & 1) == 0 )
   {
-    sub_1C713B0(&Method_ClassBoardQuestOpenConfirmDialog_OnClickClose__);
-    byte_4CCB045 = 1;
+    sub_1C94098(&Method_ClassBoardQuestOpenConfirmDialog_OnClickClose__);
+    byte_4D30521 = 1;
   }
   if ( this->fields.IsButtonEnable )
   {
     v3 = Method_ClassBoardQuestOpenConfirmDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_ClassBoardQuestOpenConfirmDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C713C8(Method_ClassBoardQuestOpenConfirmDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C940B0(Method_ClassBoardQuestOpenConfirmDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     ClickFunc = this->fields.ClickFunc;
     this->fields.IsButtonEnable = 0;
@@ -142,17 +142,17 @@ void ClassBoardQuestOpenConfirmDialog__OnClickDecide(
   System_Reflection_MethodBase_o *v4; // x0
   struct ClassBoardQuestOpenConfirmDialog_ClickDelegate_o *ClickFunc; // x8
 
-  if ( (byte_4CCB044 & 1) == 0 )
+  if ( (byte_4D30520 & 1) == 0 )
   {
-    sub_1C713B0(&Method_ClassBoardQuestOpenConfirmDialog_OnClickDecide__);
-    byte_4CCB044 = 1;
+    sub_1C94098(&Method_ClassBoardQuestOpenConfirmDialog_OnClickDecide__);
+    byte_4D30520 = 1;
   }
   if ( this->fields.IsButtonEnable )
   {
     v3 = Method_ClassBoardQuestOpenConfirmDialog_OnClickDecide__;
     if ( (*((_BYTE *)Method_ClassBoardQuestOpenConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C713C8(Method_ClassBoardQuestOpenConfirmDialog_OnClickDecide__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C940B0(Method_ClassBoardQuestOpenConfirmDialog_OnClickDecide__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
     ClickFunc = this->fields.ClickFunc;
     this->fields.IsButtonEnable = 0;
@@ -170,16 +170,16 @@ void ClassBoardQuestOpenConfirmDialog__OnEnable(ClassBoardQuestOpenConfirmDialog
   UnityEngine_Transform_o *transform; // x0
   UnityEngine_Transform_o *v4; // x0
 
-  if ( (byte_4CCB046 & 1) == 0 )
+  if ( (byte_4D30522 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_4641/*"ConfirmWindow/CancelButton"*/);
-    sub_1C713B0(&StringLiteral_15645/*"Window/CancelButton"*/);
-    byte_4CCB046 = 1;
+    sub_1C94098(&StringLiteral_4651/*"ConfirmWindow/CancelButton"*/);
+    sub_1C94098(&StringLiteral_15698/*"Window/CancelButton"*/);
+    byte_4D30522 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45260884(transform, (System_String_o *)StringLiteral_15645/*"Window/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45761432(transform, (System_String_o *)StringLiteral_15698/*"Window/CancelButton"*/, 0);
   v4 = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45260884(v4, (System_String_o *)StringLiteral_4641/*"ConfirmWindow/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45761432(v4, (System_String_o *)StringLiteral_4651/*"ConfirmWindow/CancelButton"*/, 0);
 }
 
 
@@ -206,19 +206,19 @@ void ClassBoardQuestOpenConfirmDialog__Open(
   int32_t v20; // [xsp+Ch] [xbp-34h] BYREF
 
   v20 = grandBaseId;
-  if ( (byte_4CCB042 & 1) == 0 )
+  if ( (byte_4D3051E & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_ClassBoardQuestOpenConfirmDialog_EndOpen__);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_3409/*"CLASS_BOARD_QUEST_OPEN_DIALOG_MOVE"*/);
-    sub_1C713B0(&StringLiteral_3410/*"CLASS_BOARD_QUEST_OPEN_DIALOG_MSG_"*/);
-    sub_1C713B0(&StringLiteral_3411/*"CLASS_BOARD_QUEST_OPEN_DIALOG_TITLE"*/);
-    sub_1C713B0(&StringLiteral_3408/*"CLASS_BOARD_QUEST_OPEN_DIALOG_DECIDE"*/);
-    byte_4CCB042 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_ClassBoardQuestOpenConfirmDialog_EndOpen__);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&StringLiteral_3418/*"CLASS_BOARD_QUEST_OPEN_DIALOG_MOVE"*/);
+    sub_1C94098(&StringLiteral_3419/*"CLASS_BOARD_QUEST_OPEN_DIALOG_MSG_"*/);
+    sub_1C94098(&StringLiteral_3420/*"CLASS_BOARD_QUEST_OPEN_DIALOG_TITLE"*/);
+    sub_1C94098(&StringLiteral_3417/*"CLASS_BOARD_QUEST_OPEN_DIALOG_DECIDE"*/);
+    byte_4D3051E = 1;
   }
   this->fields.ClickFunc = func;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.ClickFunc,
     (int32_t)func,
     (int32_t)func,
@@ -228,12 +228,12 @@ void ClassBoardQuestOpenConfirmDialog__Open(
     v6,
     v7);
   v10 = System_Int32__ToString((int32_t)&v20, 0);
-  v11 = System_String__Concat_64031724((System_String_o *)StringLiteral_3410/*"CLASS_BOARD_QUEST_OPEN_DIALOG_MSG_"*/, v10, 0);
+  v11 = System_String__Concat_64417744((System_String_o *)StringLiteral_3419/*"CLASS_BOARD_QUEST_OPEN_DIALOG_MSG_"*/, v10, 0);
   TitleLabel = this->fields.TitleLabel;
   v13 = v11;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3411/*"CLASS_BOARD_QUEST_OPEN_DIALOG_TITLE"*/, 0);
+  v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3420/*"CLASS_BOARD_QUEST_OPEN_DIALOG_TITLE"*/, 0);
   if ( !TitleLabel )
     goto LABEL_10;
   UILabel__set_text(TitleLabel, v14, 0);
@@ -242,18 +242,18 @@ void ClassBoardQuestOpenConfirmDialog__Open(
   if ( !MessageLabel
     || (UILabel__set_text(MessageLabel, v14, 0),
         ButtonDecideLabel = this->fields.ButtonDecideLabel,
-        v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3409/*"CLASS_BOARD_QUEST_OPEN_DIALOG_MOVE"*/, 0),
+        v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3418/*"CLASS_BOARD_QUEST_OPEN_DIALOG_MOVE"*/, 0),
         !ButtonDecideLabel)
     || (UILabel__set_text(ButtonDecideLabel, v14, 0),
         ButtonCancelLabel = this->fields.ButtonCancelLabel,
-        v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3408/*"CLASS_BOARD_QUEST_OPEN_DIALOG_DECIDE"*/, 0),
+        v14 = LocalizationManager__Get((System_String_o *)StringLiteral_3417/*"CLASS_BOARD_QUEST_OPEN_DIALOG_DECIDE"*/, 0),
         !ButtonCancelLabel) )
   {
 LABEL_10:
-    sub_1C71608(v14, v15);
+    sub_1C942F0(v14, v15);
   }
   UILabel__set_text(ButtonCancelLabel, v14, 0);
-  v19 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v19 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v19, (Il2CppObject *)this, Method_ClassBoardQuestOpenConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v19, 0, 0, 0);
 }
@@ -278,7 +278,7 @@ void ClassBoardQuestOpenConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -289,12 +289,12 @@ void ClassBoardQuestOpenConfirmDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v14, 0);
+      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -306,9 +306,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AAB8EC;
+  this->fields.invoke_impl = (intptr_t)sub_1ACD1A4;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AAB8A4;
+  this->fields.extra_arg = (intptr_t)sub_1ACD15C;
 }
 
 
@@ -323,14 +323,14 @@ System_IAsyncResult_o *ClassBoardQuestOpenConfirmDialog_ClickDelegate__BeginInvo
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4CCB048 & 1) == 0 )
+  if ( (byte_4D30524 & 1) == 0 )
   {
-    sub_1C713B0(&bool_TypeInfo);
-    byte_4CCB048 = 1;
+    sub_1C94098(&bool_TypeInfo);
+    byte_4D30524 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1C71364(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
 }
 
 
@@ -339,7 +339,7 @@ void ClassBoardQuestOpenConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C71368(result, 0, method);
+  sub_1C94050(result, 0, method);
 }
 
 

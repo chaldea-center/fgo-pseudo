@@ -42,9 +42,9 @@ void BlankEarthShortcutButtonListViewItem___ctor(
   int64_t v44; // x6
   System_String_o *v45; // x7
 
-  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = ent;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int32_t)ent,
     v12,
@@ -55,11 +55,11 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v17);
   blankEarthSpotNavimenuEntity_k__BackingField = this->fields._blankEarthSpotNavimenuEntity_k__BackingField;
   if ( !blankEarthSpotNavimenuEntity_k__BackingField )
-    sub_1C71608(v18, v19);
+    sub_1C942F0(v18, v19);
   this->fields._IconId_k__BackingField = blankEarthSpotNavimenuEntity_k__BackingField->fields.iconId;
   name = blankEarthSpotNavimenuEntity_k__BackingField->fields.name;
   this->fields._Name_k__BackingField = name;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)name,
     v20,
@@ -69,7 +69,7 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v24,
     v25);
   this->fields._CommonUiAtlas_k__BackingField = commonUiAtlas;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)commonUiAtlas,
     v28,
@@ -79,7 +79,7 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v32,
     v33);
   this->fields._IconAtlas_k__BackingField = iconAtlas;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconAtlas_k__BackingField,
     (int32_t)iconAtlas,
     v34,
@@ -89,7 +89,7 @@ void BlankEarthShortcutButtonListViewItem___ctor(
     v38,
     v39);
   this->fields._OnClickAction_k__BackingField = onClickAction;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._OnClickAction_k__BackingField,
     (int32_t)onClickAction,
     v40,
@@ -161,7 +161,7 @@ void BlankEarthShortcutButtonListViewItem__set_CommonUiAtlas(
   System_String_o *v7; // x7
 
   this->fields._CommonUiAtlas_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._CommonUiAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -185,7 +185,7 @@ void BlankEarthShortcutButtonListViewItem__set_IconAtlas(
   System_String_o *v7; // x7
 
   this->fields._IconAtlas_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconAtlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -218,7 +218,7 @@ void BlankEarthShortcutButtonListViewItem__set_Name(
   System_String_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -242,7 +242,7 @@ void BlankEarthShortcutButtonListViewItem__set_OnClickAction(
   System_String_o *v7; // x7
 
   this->fields._OnClickAction_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._OnClickAction_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -266,7 +266,7 @@ void BlankEarthShortcutButtonListViewItem__set_blankEarthSpotNavimenuEntity(
   System_String_o *v7; // x7
 
   this->fields._blankEarthSpotNavimenuEntity_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._blankEarthSpotNavimenuEntity_k__BackingField,
     (int32_t)value,
     (int32_t)method,

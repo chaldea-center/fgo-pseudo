@@ -2,18 +2,18 @@ void EventDelegate___cctor(const MethodInfo *method)
 {
   __int64 v1; // x1
 
-  if ( (byte_4CCBBB9 & 1) == 0 )
+  if ( (byte_4D30F6B & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&StringLiteral_6202/*"EventDelegate"*/);
-    byte_4CCBBB9 = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&StringLiteral_6215/*"EventDelegate"*/);
+    byte_4D30F6B = 1;
   }
-  if ( !StringLiteral_6202/*"EventDelegate"*/ )
-    sub_1C71608(0, v1);
-  EventDelegate_TypeInfo->static_fields->s_Hash = (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)StringLiteral_6202/*"EventDelegate"*/
+  if ( !StringLiteral_6215/*"EventDelegate"*/ )
+    sub_1C942F0(0, v1);
+  EventDelegate_TypeInfo->static_fields->s_Hash = (*(__int64 (__fastcall **)(void *, _QWORD))(*(_QWORD *)StringLiteral_6215/*"EventDelegate"*/
                                                                                             + 344LL))(
-                                                    StringLiteral_6202/*"EventDelegate"*/,
-                                                    *(_QWORD *)(*(_QWORD *)StringLiteral_6202/*"EventDelegate"*/ + 352LL));
+                                                    StringLiteral_6215/*"EventDelegate"*/,
+                                                    *(_QWORD *)(*(_QWORD *)StringLiteral_6215/*"EventDelegate"*/ + 352LL));
 }
 
 
@@ -23,7 +23,7 @@ void EventDelegate___ctor(EventDelegate_o *this, const MethodInfo *method)
 }
 
 
-void EventDelegate___ctor_49641004(EventDelegate_o *this, EventDelegate_Callback_o *call, const MethodInfo *method)
+void EventDelegate___ctor_49964596(EventDelegate_o *this, EventDelegate_Callback_o *call, const MethodInfo *method)
 {
   const MethodInfo *v5; // x2
 
@@ -32,7 +32,7 @@ void EventDelegate___ctor_49641004(EventDelegate_o *this, EventDelegate_Callback
 }
 
 
-void EventDelegate___ctor_49641492(
+void EventDelegate___ctor_49965084(
         EventDelegate_o *this,
         UnityEngine_MonoBehaviour_o *target,
         System_String_o *methodName,
@@ -41,7 +41,7 @@ void EventDelegate___ctor_49641492(
   const MethodInfo *v7; // x3
 
   System_Object___ctor((Il2CppObject *)this, 0);
-  EventDelegate__Set_49641544(this, target, methodName, v7);
+  EventDelegate__Set_49965136(this, target, methodName, v7);
 }
 
 
@@ -52,18 +52,18 @@ EventDelegate_o *EventDelegate__Add(
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4CCBBB3 & 1) == 0 )
+  if ( (byte_4D30F65 & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    byte_4CCBBB3 = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    byte_4D30F65 = 1;
   }
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  return EventDelegate__Add_49645664(list, callback, 0, v3);
+  return EventDelegate__Add_49969256(list, callback, 0, v3);
 }
 
 
-EventDelegate_o *EventDelegate__Add_49645664(
+EventDelegate_o *EventDelegate__Add_49969256(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_Callback_o *callback,
         bool oneShot,
@@ -87,15 +87,15 @@ EventDelegate_o *EventDelegate__Add_49645664(
   __int64 v22; // x10
   Il2CppClass **v23; // x0
 
-  if ( (byte_4CCBBB4 & 1) == 0 )
+  if ( (byte_4D30F66 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Debug_TypeInfo);
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    sub_1C713B0(&StringLiteral_2456/*"Attempting to add a callback to a list that's null"*/);
-    byte_4CCBBB4 = 1;
+    sub_1C94098(&UnityEngine_Debug_TypeInfo);
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    sub_1C94098(&StringLiteral_2458/*"Attempting to add a callback to a list that's null"*/);
+    byte_4D30F66 = 1;
   }
   if ( list )
   {
@@ -103,7 +103,7 @@ EventDelegate_o *EventDelegate__Add_49645664(
     if ( size < 1 )
     {
 LABEL_9:
-      v10 = sub_1C715FC(EventDelegate_TypeInfo);
+      v10 = sub_1C942E4(EventDelegate_TypeInfo);
       System_Object___ctor((Il2CppObject *)v10, 0);
       EventDelegate__Set((EventDelegate_o *)v10, callback, v11);
       if ( !v10
@@ -113,7 +113,7 @@ LABEL_9:
             ++list->fields._version,
             !items) )
       {
-        sub_1C71608(v12, v13);
+        sub_1C942F0(v12, v13);
       }
       v22 = list->fields._size;
       if ( (unsigned int)v22 >= LODWORD(items->max_length) )
@@ -121,14 +121,14 @@ LABEL_9:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)list,
           (Il2CppObject *)v10,
-          *(const MethodInfo_3810718 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
+          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v21[4] + 192LL) + 112LL));
       }
       else
       {
         v23 = &items->obj.klass + v22;
         list->fields._size = v22 + 1;
         v23[4] = (Il2CppClass *)v10;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v23 + 4), v10, v14, v15, v16, v17, v18, v19);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v23 + 4), v10, v14, v15, v16, v17, v18, v19);
       }
     }
     else
@@ -139,7 +139,7 @@ LABEL_9:
         Item = System_Collections_Generic_List_object___get_Item(
                  (System_Collections_Generic_List_object__o *)list,
                  v8,
-                 (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+                 (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
         if ( Item )
         {
           v10 = (__int64)Item;
@@ -159,14 +159,14 @@ LABEL_9:
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_2456/*"Attempting to add a callback to a list that's null"*/, 0);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_2458/*"Attempting to add a callback to a list that's null"*/, 0);
     return 0;
   }
   return (EventDelegate_o *)v10;
 }
 
 
-void EventDelegate__Add_49646100(
+void EventDelegate__Add_49969692(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *ev,
         const MethodInfo *method)
@@ -176,21 +176,21 @@ void EventDelegate__Add_49646100(
   _BOOL4 oneShot; // w21
 
   v5 = list;
-  if ( (byte_4CCBBB5 & 1) == 0 )
+  if ( (byte_4D30F67 & 1) == 0 )
   {
-    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C713B0(&EventDelegate_TypeInfo);
-    byte_4CCBBB5 = 1;
+    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C94098(&EventDelegate_TypeInfo);
+    byte_4D30F67 = 1;
   }
   if ( !ev )
-    sub_1C71608(list, ev);
+    sub_1C942F0(list, ev);
   oneShot = ev->fields.oneShot;
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-  EventDelegate__Add_49646212(v5, ev, oneShot, v3);
+  EventDelegate__Add_49969804(v5, ev, oneShot, v3);
 }
 
 
-void EventDelegate__Add_49646212(
+void EventDelegate__Add_49969804(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *ev,
         bool oneShot,
@@ -236,17 +236,17 @@ void EventDelegate__Add_49646212(
 
   v5 = ev;
   v6 = list;
-  if ( (byte_4CCBBB6 & 1) == 0 )
+  if ( (byte_4D30F68 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Debug_TypeInfo);
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&EventDelegate_Parameter___TypeInfo);
-    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C713B0(&StringLiteral_2456/*"Attempting to add a callback to a list that's null"*/);
-    byte_4CCBBB6 = 1;
+    sub_1C94098(&UnityEngine_Debug_TypeInfo);
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&EventDelegate_Parameter___TypeInfo);
+    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C94098(&StringLiteral_2458/*"Attempting to add a callback to a list that's null"*/);
+    byte_4D30F68 = 1;
   }
   if ( !v5 )
     goto LABEL_30;
@@ -261,14 +261,14 @@ LABEL_9:
     mCachedCallback = v5->fields.mCachedCallback;
     if ( !EventDelegate_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-    EventDelegate__Add_49645664(v6, mCachedCallback, oneShot, method);
+    EventDelegate__Add_49969256(v6, mCachedCallback, oneShot, method);
     return;
   }
   if ( !v6 )
   {
     if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_2456/*"Attempting to add a callback to a list that's null"*/, 0);
+    UnityEngine_Debug__LogWarning((Il2CppObject *)StringLiteral_2458/*"Attempting to add a callback to a list that's null"*/, 0);
     return;
   }
   size = v6->fields._size;
@@ -277,9 +277,9 @@ LABEL_9:
 LABEL_18:
     v12 = v5->fields.mTarget;
     mMethodName = v5->fields.mMethodName;
-    v14 = sub_1C715FC(EventDelegate_TypeInfo);
+    v14 = sub_1C942E4(EventDelegate_TypeInfo);
     System_Object___ctor((Il2CppObject *)v14, 0);
-    EventDelegate__Set_49641544((EventDelegate_o *)v14, v12, mMethodName, v15);
+    EventDelegate__Set_49965136((EventDelegate_o *)v14, v12, mMethodName, v15);
     if ( !v14 )
       goto LABEL_30;
     *(_BYTE *)(v14 + 40) = oneShot;
@@ -289,10 +289,10 @@ LABEL_18:
       ev = (EventDelegate_o *)mParameters->max_length;
       if ( ev )
       {
-        v23 = sub_1C71458(EventDelegate_Parameter___TypeInfo, ev);
+        v23 = sub_1C94140(EventDelegate_Parameter___TypeInfo, ev);
         *(_QWORD *)(v14 + 32) = v23;
         v24 = (unsigned int **)(v14 + 32);
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v14 + 32), v23, v25, v26, v27, v28, v29, v30);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v14 + 32), v23, v25, v26, v27, v28, v29, v30);
         v31 = v5->fields.mParameters;
         if ( !v31 )
           goto LABEL_30;
@@ -311,20 +311,20 @@ LABEL_18:
             v36 = v31->m_Items[v32];
             if ( v36 )
             {
-              list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C714EC(
+              list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C941D4(
                                                                            v36,
                                                                            *(_QWORD *)(*(_QWORD *)v35 + 64LL));
               if ( !list )
               {
-                v41 = sub_1C7162C(0);
-                sub_1C714D8(v41, 0);
+                v41 = sub_1C94314(0);
+                sub_1C941C0(v41, 0);
               }
             }
             if ( v32 >= v35[6] )
 LABEL_39:
-              sub_1C71610(list);
+              sub_1C942F8(list);
             *(_QWORD *)&v35[v33] = v36;
-            sub_1C71354((GrandQuestFolderBoardItem_o *)&v35[v33], (int32_t)v36, v16, v17, v18, v19, v20, v21);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)&v35[v33], (int32_t)v36, v16, v17, v18, v19, v20, v21);
             v31 = v5->fields.mParameters;
             ++v32;
             v33 += 2;
@@ -346,19 +346,19 @@ LABEL_39:
         System_Collections_Generic_List_object___AddWithResize(
           (System_Collections_Generic_List_object__o *)v6,
           (Il2CppObject *)v14,
-          *(const MethodInfo_3810718 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
+          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v38[4] + 192LL) + 112LL));
       }
       else
       {
         v40 = &items->obj.klass + v39;
         v6->fields._size = v39 + 1;
         v40[4] = (Il2CppClass *)v14;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v40 + 4), v14, v16, v17, v18, v19, v20, v21);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v40 + 4), v14, v16, v17, v18, v19, v20, v21);
       }
       return;
     }
 LABEL_30:
-    sub_1C71608(list, ev);
+    sub_1C942F0(list, ev);
   }
   v10 = 0;
   while ( 1 )
@@ -366,7 +366,7 @@ LABEL_30:
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)v6,
              v10,
-             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( (((__int64 (__fastcall *)(Il2CppObject *, EventDelegate_o *, const MethodInfo *))Item->klass->vtable[0].methodPtr)(
@@ -408,7 +408,7 @@ void EventDelegate__Cache(EventDelegate_o *this, const MethodInfo *method)
   System_String_o *v24; // x7
   _BOOL8 v25; // x0
   __int64 v26; // x1
-  System_Reflection_MethodInfo_o *Method_65657020; // x0
+  System_Reflection_MethodInfo_o *Method_66043040; // x0
   int32_t v28; // w2
   int32_t v29; // w3
   System_String_o *v30; // x4
@@ -449,7 +449,7 @@ void EventDelegate__Cache(EventDelegate_o *this, const MethodInfo *method)
   Il2CppObject *v65; // x20
   System_RuntimeTypeHandle_o v66; // x0
   System_Type_o *v67; // x0
-  System_Delegate_o *Delegate_65855788; // x0
+  System_Delegate_o *Delegate_66241808; // x0
   int32_t v69; // w2
   int32_t v70; // w3
   System_String_o *v71; // x4
@@ -500,23 +500,23 @@ void EventDelegate__Cache(EventDelegate_o *this, const MethodInfo *method)
   System_String_o *v116; // x7
   __int64 v117; // x0
 
-  if ( (byte_4CCBBAC & 1) == 0 )
+  if ( (byte_4D30F5E & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_Callback_var);
-    sub_1C713B0(&EventDelegate_Callback_TypeInfo);
-    sub_1C713B0(&UnityEngine_Debug_TypeInfo);
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&EventDelegate_Parameter___TypeInfo);
-    sub_1C713B0(&EventDelegate_Parameter_TypeInfo);
-    sub_1C713B0(&System_Type_TypeInfo);
-    sub_1C713B0(&void_var);
-    sub_1C713B0(&StringLiteral_550/*"' on "*/);
-    sub_1C713B0(&StringLiteral_279/*" must have a 'void' return type."*/);
-    sub_1C713B0(&StringLiteral_4782/*"Could not find method '"*/);
-    sub_1C713B0(&StringLiteral_981/*"."*/);
-    byte_4CCBBAC = 1;
+    sub_1C94098(&EventDelegate_Callback_var);
+    sub_1C94098(&EventDelegate_Callback_TypeInfo);
+    sub_1C94098(&UnityEngine_Debug_TypeInfo);
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&EventDelegate_Parameter___TypeInfo);
+    sub_1C94098(&EventDelegate_Parameter_TypeInfo);
+    sub_1C94098(&System_Type_TypeInfo);
+    sub_1C94098(&void_var);
+    sub_1C94098(&StringLiteral_550/*"' on "*/);
+    sub_1C94098(&StringLiteral_279/*" must have a 'void' return type."*/);
+    sub_1C94098(&StringLiteral_4792/*"Could not find method '"*/);
+    sub_1C94098(&StringLiteral_981/*"."*/);
+    byte_4D30F5E = 1;
   }
   mRawDelegate = this->fields.mRawDelegate;
   this->fields.mCached = 1;
@@ -572,7 +572,7 @@ LABEL_18:
     this->fields.mMethod = 0;
     p_mMethod = &this->fields.mMethod;
     v18 = Type;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mMethod, 0, v19, v20, v21, v22, v23, v24);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mMethod, 0, v19, v20, v21, v22, v23, v24);
     while ( 1 )
     {
       if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -581,12 +581,12 @@ LABEL_18:
       if ( !v25 )
         break;
       if ( !v18 )
-        sub_1C71608(v25, v26);
-      Method_65657020 = System_Type__GetMethod_65657020(v18, this->fields.mMethodName, 52, 0);
-      *p_mMethod = Method_65657020;
-      sub_1C71354(
+        sub_1C942F0(v25, v26);
+      Method_66043040 = System_Type__GetMethod_66043040(v18, this->fields.mMethodName, 52, 0);
+      *p_mMethod = Method_66043040;
+      sub_1C9403C(
         (GrandQuestFolderBoardItem_o *)&this->fields.mMethod,
-        (int32_t)Method_65657020,
+        (int32_t)Method_66043040,
         v28,
         v29,
         v30,
@@ -607,7 +607,7 @@ LABEL_18:
         mMethodName = this->fields.mMethodName;
         v35 = System_Object__GetType((Il2CppObject *)v15, 0);
         v36 = StringLiteral_550/*"' on "*/;
-        v37 = StringLiteral_4782/*"Could not find method '"*/;
+        v37 = StringLiteral_4792/*"Could not find method '"*/;
         if ( v35 )
           v38 = (System_String_o *)((__int64 (__fastcall *)(System_Type_o *, const MethodInfo *))v35->klass->vtable._3_ToString.methodPtr)(
                                      v35,
@@ -618,12 +618,12 @@ LABEL_18:
         v45 = mMethodName;
         v44 = (System_String_o *)v36;
 LABEL_53:
-        v63 = System_String__Concat_64071992(v43, v45, v44, v38, 0);
+        v63 = System_String__Concat_64458012(v43, v45, v44, v38, 0);
         v64 = (UnityEngine_Object_o *)this->fields.mTarget;
         v65 = (Il2CppObject *)v63;
         if ( !UnityEngine_Debug_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Debug_TypeInfo);
-        UnityEngine_Debug__LogError_71536300(v65, v64, 0);
+        UnityEngine_Debug__LogError_71922664(v65, v64, 0);
         return;
       }
       goto LABEL_82;
@@ -655,7 +655,7 @@ LABEL_53:
         goto LABEL_53;
       }
 LABEL_82:
-      sub_1C71608(v15, v14);
+      sub_1C942F0(v15, v14);
     }
     v15 = *p_mMethod;
     if ( !*p_mMethod )
@@ -665,7 +665,7 @@ LABEL_82:
                                                             v15->klass->vtable._16_unknown.method);
     this->fields.mParameterInfos = v46;
     p_mParameterInfos = (__int64 *)&this->fields.mParameterInfos;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&this->fields.mParameterInfos,
       (int32_t)v46,
       v48,
@@ -679,7 +679,7 @@ LABEL_82:
     if ( this->fields.mParameterInfos->max_length )
     {
       this->fields.mCachedCallback = 0;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback, 0, v54, v55, v56, v57, v58, v59);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback, 0, v54, v55, v56, v57, v58, v59);
       mParameters = this->fields.mParameters;
       this = (EventDelegate_o *)((char *)this + 32);
       klass = (EventDelegate_c *)mParameters;
@@ -715,7 +715,7 @@ LABEL_72:
                 if ( v98 )
                 {
                   *(_QWORD *)(v98 + 40) = v15;
-                  sub_1C71354(
+                  sub_1C9403C(
                     (GrandQuestFolderBoardItem_o *)(v98 + 40),
                     (int32_t)v15,
                     v99,
@@ -735,14 +735,14 @@ LABEL_72:
               goto LABEL_82;
             }
 LABEL_85:
-            sub_1C71610(v15);
+            sub_1C942F8(v15);
           }
           goto LABEL_82;
         }
 LABEL_63:
-        v76 = (EventDelegate_c *)sub_1C71458(EventDelegate_Parameter___TypeInfo, *(unsigned int *)(v62 + 24));
+        v76 = (EventDelegate_c *)sub_1C94140(EventDelegate_Parameter___TypeInfo, *(unsigned int *)(v62 + 24));
         this->klass = v76;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)this, (int32_t)v76, v77, v78, v79, v80, v81, v82);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)this, (int32_t)v76, v77, v78, v79, v80, v81, v82);
         klass = this->klass;
         if ( !this->klass )
           goto LABEL_82;
@@ -753,23 +753,23 @@ LABEL_63:
           v85 = 32;
           do
           {
-            v86 = (EventDelegate_Parameter_o *)sub_1C715FC(EventDelegate_Parameter_TypeInfo);
+            v86 = (EventDelegate_Parameter_o *)sub_1C942E4(EventDelegate_Parameter_TypeInfo);
             EventDelegate_Parameter___ctor(v86, v87);
             if ( !klass )
               goto LABEL_82;
             if ( v86 )
             {
-              v15 = (System_Reflection_MethodInfo_o *)sub_1C714EC(v86, *((_QWORD *)klass->_1.image + 8));
+              v15 = (System_Reflection_MethodInfo_o *)sub_1C941D4(v86, *((_QWORD *)klass->_1.image + 8));
               if ( !v15 )
               {
-                v117 = sub_1C7162C(0);
-                sub_1C714D8(v117, 0);
+                v117 = sub_1C94314(0);
+                sub_1C941C0(v117, 0);
               }
             }
             if ( v83 >= LODWORD(klass->_1.namespaze) )
               goto LABEL_85;
             *(void **)((char *)&klass->_1.image + v85) = v86;
-            sub_1C71354(
+            sub_1C9403C(
               (GrandQuestFolderBoardItem_o *)((char *)klass + v85),
               (int32_t)v86,
               v88,
@@ -798,19 +798,19 @@ LABEL_62:
       j_il2cpp_runtime_class_init_0(System_Type_TypeInfo);
     v66.fields.value = (intptr_t)p_mParameterInfos;
     v67 = System_Type__GetTypeFromHandle(v66, 0);
-    Delegate_65855788 = System_Delegate__CreateDelegate_65855788(
+    Delegate_66241808 = System_Delegate__CreateDelegate_66241808(
                           v67,
                           (Il2CppObject *)this->fields.mTarget,
                           this->fields.mMethodName,
                           0);
-    if ( Delegate_65855788 )
+    if ( Delegate_66241808 )
     {
       v75 = EventDelegate_Callback_TypeInfo;
-      if ( (EventDelegate_Callback_c *)Delegate_65855788->klass != EventDelegate_Callback_TypeInfo
-        || (*p_mCachedCallback = (struct EventDelegate_Callback_o *)Delegate_65855788,
-            (EventDelegate_Callback_c *)Delegate_65855788->klass != v75) )
+      if ( (EventDelegate_Callback_c *)Delegate_66241808->klass != EventDelegate_Callback_TypeInfo
+        || (*p_mCachedCallback = (struct EventDelegate_Callback_o *)Delegate_66241808,
+            (EventDelegate_Callback_c *)Delegate_66241808->klass != v75) )
       {
-        sub_1C719A4(Delegate_65855788);
+        sub_1C9468C(Delegate_66241808);
         goto LABEL_62;
       }
     }
@@ -818,9 +818,9 @@ LABEL_62:
     {
       *p_mCachedCallback = 0;
     }
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback,
-      (int32_t)Delegate_65855788,
+      (int32_t)Delegate_66241808,
       v69,
       v70,
       v71,
@@ -828,9 +828,9 @@ LABEL_62:
       v73,
       v74);
     this->fields.mArgs = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mArgs, 0, v105, v106, v107, v108, v109, v110);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mArgs, 0, v105, v106, v107, v108, v109, v110);
     this->fields.mParameters = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mParameters, 0, v111, v112, v113, v114, v115, v116);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mParameters, 0, v111, v112, v113, v114, v115, v116);
   }
 }
 
@@ -881,21 +881,21 @@ void EventDelegate__Clear(EventDelegate_o *this, const MethodInfo *method)
   System_String_o *v44; // x7
 
   this->fields.mTarget = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, 0, v2, v3, v4, v5, v6, v7);
   this->fields.mMethodName = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mMethodName, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mMethodName, 0, v9, v10, v11, v12, v13, v14);
   this->fields.mRawDelegate = 0;
   this->fields.mCachedCallback = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback, 0, v15, v16, v17, v18, v19, v20);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback, 0, v15, v16, v17, v18, v19, v20);
   this->fields.mParameters = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mParameters, 0, v21, v22, v23, v24, v25, v26);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mParameters, 0, v21, v22, v23, v24, v25, v26);
   this->fields.mCached = 0;
   this->fields.mMethod = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mMethod, 0, v27, v28, v29, v30, v31, v32);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mMethod, 0, v27, v28, v29, v30, v31, v32);
   this->fields.mParameterInfos = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mParameterInfos, 0, v33, v34, v35, v36, v37, v38);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mParameterInfos, 0, v33, v34, v35, v36, v37, v38);
   this->fields.mArgs = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mArgs, 0, v39, v40, v41, v42, v43, v44);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mArgs, 0, v39, v40, v41, v42, v43, v44);
 }
 
 
@@ -914,13 +914,13 @@ bool EventDelegate__Equals(EventDelegate_o *this, Il2CppObject *obj, const Metho
   const MethodInfo *v16; // x1
   struct System_String_o *v17; // x20
 
-  if ( (byte_4CCBBA9 & 1) == 0 )
+  if ( (byte_4D30F5B & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_Callback_TypeInfo);
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBBA9 = 1;
+    sub_1C94098(&EventDelegate_Callback_TypeInfo);
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30F5B = 1;
   }
   if ( obj )
   {
@@ -939,7 +939,7 @@ bool EventDelegate__Equals(EventDelegate_o *this, Il2CppObject *obj, const Metho
         {
           mMethodName = this->fields.mMethodName;
           monitor = (System_String_o *)obj[1].monitor;
-          return System_String__Equals_64067772(mMethodName, monitor, 0);
+          return System_String__Equals_64453792(mMethodName, monitor, 0);
         }
       }
       return 0;
@@ -974,7 +974,7 @@ bool EventDelegate__Equals(EventDelegate_o *this, Il2CppObject *obj, const Metho
           j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
         monitor = EventDelegate__GetMethodName((EventDelegate_Callback_o *)obj, v16);
         mMethodName = v17;
-        return System_String__Equals_64067772(mMethodName, monitor, 0);
+        return System_String__Equals_64453792(mMethodName, monitor, 0);
       }
       return 0;
     }
@@ -1032,10 +1032,10 @@ bool EventDelegate__Execute(EventDelegate_o *this, const MethodInfo *method)
   Il2CppClass **v44; // x0
   __int64 v45; // x0
 
-  if ( (byte_4CCBBAD & 1) == 0 )
+  if ( (byte_4D30F5F & 1) == 0 )
   {
-    sub_1C713B0(&object___TypeInfo);
-    byte_4CCBBAD = 1;
+    sub_1C94098(&object___TypeInfo);
+    byte_4D30F5F = 1;
   }
   if ( !this->fields.mCached )
     EventDelegate__Cache(this, method);
@@ -1056,9 +1056,9 @@ bool EventDelegate__Execute(EventDelegate_o *this, const MethodInfo *method)
       p_mArgs = &this->fields.mArgs;
       mArgs = this->fields.mArgs;
       if ( mArgs && LODWORD(mArgs->max_length) == (_DWORD)max_length_low
-        || (v10 = (struct System_Object_array *)sub_1C71458(object___TypeInfo, max_length_low),
+        || (v10 = (struct System_Object_array *)sub_1C94140(object___TypeInfo, max_length_low),
             this->fields.mArgs = v10,
-            sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mArgs, (int32_t)v10, v11, v12, v13, v14, v15, v16),
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mArgs, (int32_t)v10, v11, v12, v13, v14, v15, v16),
             (mParameters = this->fields.mParameters) != 0) )
       {
         max_length = mParameters->max_length;
@@ -1067,7 +1067,7 @@ bool EventDelegate__Execute(EventDelegate_o *this, const MethodInfo *method)
 LABEL_28:
           mMethod = (System_Reflection_MethodBase_o *)this->fields.mMethod;
           if ( !mMethod )
-            sub_1C71608(0, max_length_low);
+            sub_1C942F0(0, max_length_low);
           IsOut = (__int64)System_Reflection_MethodBase__Invoke(
                              mMethod,
                              (Il2CppObject *)this->fields.mTarget,
@@ -1119,7 +1119,7 @@ LABEL_40:
                   break;
                 v42 = v41->m_Items[v31];
                 *(_QWORD *)(IsOut + 32) = v42;
-                sub_1C71354((GrandQuestFolderBoardItem_o *)(IsOut + 32), (int32_t)v42, v33, v34, v35, v36, v37, v38);
+                sub_1C9403C((GrandQuestFolderBoardItem_o *)(IsOut + 32), (int32_t)v42, v33, v34, v35, v36, v37, v38);
               }
               v43 = *p_mArgs;
               if ( !*p_mArgs )
@@ -1128,7 +1128,7 @@ LABEL_40:
                 goto LABEL_52;
               v44 = &v43->obj.klass + (int)v31;
               v44[4] = 0;
-              sub_1C71354((GrandQuestFolderBoardItem_o *)(v44 + 4), 0, v33, v34, v35, v36, v37, v38);
+              sub_1C9403C((GrandQuestFolderBoardItem_o *)(v44 + 4), 0, v33, v34, v35, v36, v37, v38);
               if ( v30 == ++v31 )
                 return 1;
             }
@@ -1152,19 +1152,19 @@ LABEL_40:
             v27 = IsOut;
             if ( IsOut )
             {
-              IsOut = sub_1C714EC(IsOut, v20->obj.klass->_1.element_class);
+              IsOut = sub_1C941D4(IsOut, v20->obj.klass->_1.element_class);
               if ( !IsOut )
               {
-                v45 = sub_1C7162C(0);
-                sub_1C714D8(v45, 0);
+                v45 = sub_1C94314(0);
+                sub_1C941C0(v45, 0);
               }
             }
             if ( (unsigned int)v19 >= LODWORD(v20->max_length) )
 LABEL_52:
-              sub_1C71610(IsOut);
+              sub_1C942F8(IsOut);
             v28 = &v20->obj.klass + v19;
             v28[4] = (Il2CppClass *)v27;
-            sub_1C71354((GrandQuestFolderBoardItem_o *)(v28 + 4), v27, v21, v22, v23, v24, v25, v26);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v28 + 4), v27, v21, v22, v23, v24, v25, v26);
             v18 = v19 + 1;
             if ( max_length == (_DWORD)v19 + 1 )
               goto LABEL_28;
@@ -1187,13 +1187,13 @@ LABEL_52:
         return 1;
       }
     }
-    sub_1C71608(IsOut, max_length_low);
+    sub_1C942F0(IsOut, max_length_low);
   }
   return 0;
 }
 
 
-void EventDelegate__Execute_49587556(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
+void EventDelegate__Execute_49911148(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
 {
   int32_t v3; // w20
   Il2CppObject *Item; // x0
@@ -1201,12 +1201,12 @@ void EventDelegate__Execute_49587556(System_Collections_Generic_List_EventDelega
   Il2CppObject *v6; // x23
   int32_t size; // w8
 
-  if ( (byte_4CCBBAF & 1) == 0 )
+  if ( (byte_4D30F61 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_4CCBBAF = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_4D30F61 = 1;
   }
   if ( list && list->fields._size >= 1 )
   {
@@ -1216,7 +1216,7 @@ void EventDelegate__Execute_49587556(System_Collections_Generic_List_EventDelega
       Item = System_Collections_Generic_List_object___get_Item(
                (System_Collections_Generic_List_object__o *)list,
                v3,
-               (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+               (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
       if ( !Item )
         break;
       v6 = Item;
@@ -1226,14 +1226,14 @@ void EventDelegate__Execute_49587556(System_Collections_Generic_List_EventDelega
       if ( System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v3,
-             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__) == v6 )
+             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__) == v6 )
       {
         if ( !LOBYTE(v6[2].monitor) )
           break;
         System_Collections_Generic_List_object___RemoveAt(
           (System_Collections_Generic_List_object__o *)list,
           v3,
-          (const MethodInfo_3811EEC *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+          (const MethodInfo_386C608 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
       }
       size = list->fields._size;
 LABEL_12:
@@ -1251,10 +1251,10 @@ int32_t EventDelegate__GetHashCode(EventDelegate_o *this, const MethodInfo *meth
 {
   EventDelegate_c *v2; // x0
 
-  if ( (byte_4CCBBAA & 1) == 0 )
+  if ( (byte_4D30F5C & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    byte_4CCBBAA = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    byte_4D30F5C = 1;
   }
   v2 = EventDelegate_TypeInfo;
   if ( !EventDelegate_TypeInfo->_2.cctor_finished )
@@ -1271,7 +1271,7 @@ System_String_o *EventDelegate__GetMethodName(EventDelegate_Callback_o *callback
   if ( !callback
     || (callback = (EventDelegate_Callback_o *)System_Delegate__get_Method((System_Delegate_o *)callback, 0)) == 0 )
   {
-    sub_1C71608(callback, method);
+    sub_1C942F0(callback, method);
   }
   return (System_String_o *)((__int64 (__fastcall *)(EventDelegate_Callback_o *, const MethodInfo *))callback->klass->vtable._8_GetObjectData.methodPtr)(
                               callback,
@@ -1292,18 +1292,18 @@ bool EventDelegate__IsValid(EventDelegate_Callback_o *callback, const MethodInfo
 }
 
 
-bool EventDelegate__IsValid_49616128(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
+bool EventDelegate__IsValid_49939720(System_Collections_Generic_List_EventDelegate__o *list, const MethodInfo *method)
 {
   int32_t size; // w21
   int32_t v4; // w20
   Il2CppObject *Item; // x0
   const MethodInfo *v6; // x1
 
-  if ( (byte_4CCBBB0 & 1) == 0 )
+  if ( (byte_4D30F62 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_4CCBBB0 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_4D30F62 = 1;
   }
   if ( !list )
     return 0;
@@ -1316,7 +1316,7 @@ bool EventDelegate__IsValid_49616128(System_Collections_Generic_List_EventDelega
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v4,
-             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( EventDelegate__get_isValid((EventDelegate_o *)Item, v6) )
@@ -1338,12 +1338,12 @@ bool EventDelegate__Remove(
   int32_t v6; // w21
   Il2CppObject *Item; // x0
 
-  if ( (byte_4CCBBB7 & 1) == 0 )
+  if ( (byte_4D30F69 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_4CCBBB7 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_4D30F69 = 1;
   }
   if ( !list )
     return 0;
@@ -1356,7 +1356,7 @@ bool EventDelegate__Remove(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v6,
-             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( (((__int64 (__fastcall *)(Il2CppObject *, EventDelegate_Callback_o *, const MethodInfo *))Item->klass->vtable[0].methodPtr)(
@@ -1372,12 +1372,12 @@ bool EventDelegate__Remove(
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)list,
     v6,
-    (const MethodInfo_3811EEC *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    (const MethodInfo_386C608 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
   return 1;
 }
 
 
-bool EventDelegate__Remove_49647048(
+bool EventDelegate__Remove_49970640(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *ev,
         const MethodInfo *method)
@@ -1386,12 +1386,12 @@ bool EventDelegate__Remove_49647048(
   int32_t v6; // w21
   Il2CppObject *Item; // x0
 
-  if ( (byte_4CCBBB8 & 1) == 0 )
+  if ( (byte_4D30F6A & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
-    byte_4CCBBB8 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+    byte_4D30F6A = 1;
   }
   if ( !list )
     return 0;
@@ -1404,7 +1404,7 @@ bool EventDelegate__Remove_49647048(
     Item = System_Collections_Generic_List_object___get_Item(
              (System_Collections_Generic_List_object__o *)list,
              v6,
-             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
+             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_EventDelegate__get_Item__);
     if ( Item )
     {
       if ( (((__int64 (__fastcall *)(Il2CppObject *, EventDelegate_o *, const MethodInfo *))Item->klass->vtable[0].methodPtr)(
@@ -1420,7 +1420,7 @@ bool EventDelegate__Remove_49647048(
   System_Collections_Generic_List_object___RemoveAt(
     (System_Collections_Generic_List_object__o *)list,
     v6,
-    (const MethodInfo_3811EEC *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
+    (const MethodInfo_386C608 *)Method_System_Collections_Generic_List_EventDelegate__RemoveAt__);
   return 1;
 }
 
@@ -1463,12 +1463,12 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
   int64_t v38; // x6
   System_String_o *v39; // x7
 
-  if ( (byte_4CCBBAB & 1) == 0 )
+  if ( (byte_4D30F5D & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&UnityEngine_MonoBehaviour_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBBAB = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&UnityEngine_MonoBehaviour_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30F5D = 1;
   }
   EventDelegate__Clear(this, (const MethodInfo *)call);
   if ( call )
@@ -1514,7 +1514,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
         this->fields.mTarget = 0;
         p_fields = (GrandQuestFolderBoardItem_o *)&this->fields;
       }
-      sub_1C71354(p_fields, v16, v6, v7, v8, v9, v10, v11);
+      sub_1C9403C(p_fields, v16, v6, v7, v8, v9, v10, v11);
       klass = (UnityEngine_Object_o *)p_fields->klass;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1522,7 +1522,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
       {
         this->fields.mRawDelegate = 1;
         this->fields.mCachedCallback = call;
-        sub_1C71354(
+        sub_1C9403C(
           (GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback,
           (int32_t)call,
           v20,
@@ -1532,7 +1532,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
           v24,
           v25);
         this->fields.mMethodName = 0;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mMethodName, 0, v26, v27, v28, v29, v30, v31);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mMethodName, 0, v26, v27, v28, v29, v30, v31);
       }
       else
       {
@@ -1541,7 +1541,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
         MethodName = EventDelegate__GetMethodName(call, v19);
         this->fields.mMethodName = MethodName;
         p_mMethodName = &this->fields.mMethodName;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)p_mMethodName, (int32_t)MethodName, v34, v35, v36, v37, v38, v39);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)p_mMethodName, (int32_t)MethodName, v34, v35, v36, v37, v38, v39);
         *((_BYTE *)p_mMethodName + 32) = 0;
       }
     }
@@ -1549,7 +1549,7 @@ void EventDelegate__Set(EventDelegate_o *this, EventDelegate_Callback_o *call, c
 }
 
 
-EventDelegate_o *EventDelegate__Set_49625676(
+EventDelegate_o *EventDelegate__Set_49949268(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_Callback_o *callback,
         const MethodInfo *method)
@@ -1570,16 +1570,16 @@ EventDelegate_o *EventDelegate__Set_49625676(
   _QWORD *v18; // x11
   Il2CppClass **v19; // x0
 
-  if ( (byte_4CCBBB1 & 1) == 0 )
+  if ( (byte_4D30F63 & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    byte_4CCBBB1 = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    byte_4D30F63 = 1;
   }
   if ( !list )
     return 0;
-  v5 = (Il2CppObject *)sub_1C715FC(EventDelegate_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C942E4(EventDelegate_TypeInfo);
   System_Object___ctor(v5, 0);
   EventDelegate__Set((EventDelegate_o *)v5, callback, v6);
   size = list->fields._size;
@@ -1600,26 +1600,26 @@ EventDelegate_o *EventDelegate__Set_49625676(
   v18 = Method_System_Collections_Generic_List_EventDelegate__Add__;
   list->fields._version = version + 1;
   if ( !items )
-    sub_1C71608(v7, v8);
+    sub_1C942F0(v7, v8);
   if ( (unsigned int)v16 >= LODWORD(items->max_length) )
   {
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)list,
       v5,
-      *(const MethodInfo_3810718 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
   }
   else
   {
     v19 = &items->obj.klass + v16;
     list->fields._size = v16 + 1;
     v19[4] = (Il2CppClass *)v5;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)v5, size, v9, v10, v11, v12, v13);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v19 + 4), (int32_t)v5, size, v9, v10, v11, v12, v13);
   }
   return (EventDelegate_o *)v5;
 }
 
 
-void EventDelegate__Set_49641544(
+void EventDelegate__Set_49965136(
         EventDelegate_o *this,
         UnityEngine_MonoBehaviour_o *target,
         System_String_o *methodName,
@@ -1640,9 +1640,9 @@ void EventDelegate__Set_49641544(
 
   EventDelegate__Clear(this, (const MethodInfo *)target);
   this->fields.mTarget = target;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)target, v7, v8, v9, v10, v11, v12);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)target, v7, v8, v9, v10, v11, v12);
   this->fields.mMethodName = methodName;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.mMethodName,
     (int32_t)methodName,
     v13,
@@ -1654,7 +1654,7 @@ void EventDelegate__Set_49641544(
 }
 
 
-void EventDelegate__Set_49645432(
+void EventDelegate__Set_49969024(
         System_Collections_Generic_List_EventDelegate__o *list,
         EventDelegate_o *del,
         const MethodInfo *method)
@@ -1673,11 +1673,11 @@ void EventDelegate__Set_49645432(
   Il2CppClass **v15; // x0
 
   v9 = list;
-  if ( (byte_4CCBBB2 & 1) == 0 )
+  if ( (byte_4D30F64 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
-    byte_4CCBBB2 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    list = (System_Collections_Generic_List_EventDelegate__o *)sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Clear__);
+    byte_4D30F64 = 1;
   }
   if ( v9 )
   {
@@ -1699,20 +1699,20 @@ void EventDelegate__Set_49645432(
     v14 = Method_System_Collections_Generic_List_EventDelegate__Add__;
     v9->fields._version = version + 1;
     if ( !items )
-      sub_1C71608(list, del);
+      sub_1C942F0(list, del);
     if ( (unsigned int)v12 >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)v9,
         (Il2CppObject *)del,
-        *(const MethodInfo_3810718 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
+        *(const MethodInfo_386AE34 **)(*(_QWORD *)(v14[4] + 192LL) + 112LL));
     }
     else
     {
       v15 = &items->obj.klass + v12;
       v9->fields._size = v12 + 1;
       v15[4] = (Il2CppClass *)del;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(v15 + 4), (int32_t)del, size, v3, v4, v5, v6, v7);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v15 + 4), (int32_t)del, size, v3, v4, v5, v6, v7);
     }
   }
 }
@@ -1726,13 +1726,13 @@ System_String_o *EventDelegate__ToString(EventDelegate_o *this, const MethodInfo
   System_String_o *v6; // x20
   int32_t IndexOf; // w0
 
-  if ( (byte_4CCBBAE & 1) == 0 )
+  if ( (byte_4D30F60 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_15974/*"[delegate]"*/);
-    sub_1C713B0(&StringLiteral_1041/*"/"*/);
-    sub_1C713B0(&StringLiteral_1086/*"/[delegate]"*/);
-    byte_4CCBBAE = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_16028/*"[delegate]"*/);
+    sub_1C94098(&StringLiteral_1041/*"/"*/);
+    sub_1C94098(&StringLiteral_1086/*"/[delegate]"*/);
+    byte_4D30F60 = 1;
   }
   mTarget = (UnityEngine_Object_o *)this->fields.mTarget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1746,20 +1746,20 @@ System_String_o *EventDelegate__ToString(EventDelegate_o *this, const MethodInfo
                                    Type,
                                    Type->klass->vtable[3].method)) == 0 )
     {
-      sub_1C71608(Type, v4);
+      sub_1C942F0(Type, v4);
     }
     v6 = (System_String_o *)Type;
     IndexOf = System_String__LastIndexOf((System_String_o *)Type, 0x2Eu, 0);
     if ( IndexOf >= 1 )
       v6 = System_String__Substring(v6, IndexOf + 1, 0);
     if ( System_String__IsNullOrEmpty(this->fields.mMethodName, 0) )
-      return System_String__Concat_64031724(v6, (System_String_o *)StringLiteral_1086/*"/[delegate]"*/, 0);
+      return System_String__Concat_64417744(v6, (System_String_o *)StringLiteral_1086/*"/[delegate]"*/, 0);
     else
-      return System_String__Concat_64069988(v6, (System_String_o *)StringLiteral_1041/*"/"*/, this->fields.mMethodName, 0);
+      return System_String__Concat_64456008(v6, (System_String_o *)StringLiteral_1041/*"/"*/, this->fields.mMethodName, 0);
   }
   else if ( this->fields.mRawDelegate )
   {
-    return (System_String_o *)StringLiteral_15974/*"[delegate]"*/;
+    return (System_String_o *)StringLiteral_16028/*"[delegate]"*/;
   }
   else
   {
@@ -1775,10 +1775,10 @@ bool EventDelegate__get_isEnabled(EventDelegate_o *this, const MethodInfo *metho
   _BOOL8 v6; // x0
   __int64 v7; // x1
 
-  if ( (byte_4CCBBA8 & 1) == 0 )
+  if ( (byte_4D30F5A & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBBA8 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30F5A = 1;
   }
   if ( !this->fields.mCached )
     EventDelegate__Cache(this, method);
@@ -1796,7 +1796,7 @@ bool EventDelegate__get_isEnabled(EventDelegate_o *this, const MethodInfo *metho
   if ( v6 )
     return 1;
   if ( !v5 )
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   return UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)v5, 0);
 }
 
@@ -1805,10 +1805,10 @@ bool EventDelegate__get_isValid(EventDelegate_o *this, const MethodInfo *method)
 {
   UnityEngine_Object_o *mTarget; // x20
 
-  if ( (byte_4CCBBA7 & 1) == 0 )
+  if ( (byte_4D30F59 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBBA7 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30F59 = 1;
   }
   if ( !this->fields.mCached )
     EventDelegate__Cache(this, method);
@@ -1880,7 +1880,7 @@ void EventDelegate__set_methodName(EventDelegate_o *this, System_String_o *value
   System_String_o *v32; // x7
 
   this->fields.mMethodName = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.mMethodName,
     (int32_t)value,
     (int32_t)method,
@@ -1890,14 +1890,14 @@ void EventDelegate__set_methodName(EventDelegate_o *this, System_String_o *value
     v6,
     v7);
   this->fields.mCachedCallback = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback, 0, v9, v10, v11, v12, v13, v14);
   *(_WORD *)&this->fields.mRawDelegate = 0;
   this->fields.mMethod = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mMethod, 0, v15, v16, v17, v18, v19, v20);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mMethod, 0, v15, v16, v17, v18, v19, v20);
   this->fields.mParameterInfos = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mParameterInfos, 0, v21, v22, v23, v24, v25, v26);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mParameterInfos, 0, v21, v22, v23, v24, v25, v26);
   this->fields.mParameters = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mParameters, 0, v27, v28, v29, v30, v31, v32);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mParameters, 0, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -1934,16 +1934,16 @@ void EventDelegate__set_target(EventDelegate_o *this, UnityEngine_MonoBehaviour_
   System_String_o *v32; // x7
 
   this->fields.mTarget = value;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
   this->fields.mCachedCallback = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mCachedCallback, 0, v9, v10, v11, v12, v13, v14);
   *(_WORD *)&this->fields.mRawDelegate = 0;
   this->fields.mMethod = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mMethod, 0, v15, v16, v17, v18, v19, v20);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mMethod, 0, v15, v16, v17, v18, v19, v20);
   this->fields.mParameterInfos = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mParameterInfos, 0, v21, v22, v23, v24, v25, v26);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mParameterInfos, 0, v21, v22, v23, v24, v25, v26);
   this->fields.mParameters = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mParameters, 0, v27, v28, v29, v30, v31, v32);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mParameters, 0, v27, v28, v29, v30, v31, v32);
 }
 
 
@@ -1966,7 +1966,7 @@ void EventDelegate_Callback___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -1977,12 +1977,12 @@ void EventDelegate_Callback___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v14, 0);
+      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -1994,9 +1994,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AAE4C0;
+  this->fields.invoke_impl = (intptr_t)sub_1ACFCB0;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AAE480;
+  this->fields.extra_arg = (intptr_t)sub_1ACFC70;
 }
 
 
@@ -2009,7 +2009,7 @@ System_IAsyncResult_o *EventDelegate_Callback__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C71364(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, &v5, callback, object);
 }
 
 
@@ -2018,7 +2018,7 @@ void EventDelegate_Callback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C71368(result, 0, method);
+  sub_1C94050(result, 0, method);
 }
 
 
@@ -2040,11 +2040,11 @@ void EventDelegate_Parameter___ctor(EventDelegate_Parameter_o *this, const Metho
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CCBBBA & 1) == 0 )
+  if ( (byte_4D30F6C & 1) == 0 )
   {
-    sub_1C713B0(&System_Type_TypeInfo);
-    sub_1C713B0(&void_var);
-    byte_4CCBBBA = 1;
+    sub_1C94098(&System_Type_TypeInfo);
+    sub_1C94098(&void_var);
+    byte_4D30F6C = 1;
   }
   v3 = void_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -2052,7 +2052,7 @@ void EventDelegate_Parameter___ctor(EventDelegate_Parameter_o *this, const Metho
   v4.fields.value = (intptr_t)v3;
   TypeFromHandle = System_Type__GetTypeFromHandle(v4, 0);
   this->fields.expectedType = TypeFromHandle;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.expectedType,
     (int32_t)TypeFromHandle,
     v6,
@@ -2065,7 +2065,7 @@ void EventDelegate_Parameter___ctor(EventDelegate_Parameter_o *this, const Metho
 }
 
 
-void EventDelegate_Parameter___ctor_49647372(
+void EventDelegate_Parameter___ctor_49970964(
         EventDelegate_Parameter_o *this,
         UnityEngine_Object_o *obj,
         System_String_o *field,
@@ -2093,11 +2093,11 @@ void EventDelegate_Parameter___ctor_49647372(
   int64_t v26; // x6
   System_String_o *v27; // x7
 
-  if ( (byte_4CCBBBB & 1) == 0 )
+  if ( (byte_4D30F6D & 1) == 0 )
   {
-    sub_1C713B0(&System_Type_TypeInfo);
-    sub_1C713B0(&void_var);
-    byte_4CCBBBB = 1;
+    sub_1C94098(&System_Type_TypeInfo);
+    sub_1C94098(&void_var);
+    byte_4D30F6D = 1;
   }
   v7 = void_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -2105,7 +2105,7 @@ void EventDelegate_Parameter___ctor_49647372(
   v8.fields.value = (intptr_t)v7;
   TypeFromHandle = System_Type__GetTypeFromHandle(v8, 0);
   this->fields.expectedType = TypeFromHandle;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.expectedType,
     (int32_t)TypeFromHandle,
     v10,
@@ -2116,13 +2116,13 @@ void EventDelegate_Parameter___ctor_49647372(
     v15);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.obj = obj;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)obj, v16, v17, v18, v19, v20, v21);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)obj, v16, v17, v18, v19, v20, v21);
   this->fields.field = field;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.field, (int32_t)field, v22, v23, v24, v25, v26, v27);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.field, (int32_t)field, v22, v23, v24, v25, v26, v27);
 }
 
 
-void EventDelegate_Parameter___ctor_49647568(
+void EventDelegate_Parameter___ctor_49971160(
         EventDelegate_Parameter_o *this,
         Il2CppObject *val,
         const MethodInfo *method)
@@ -2143,11 +2143,11 @@ void EventDelegate_Parameter___ctor_49647568(
   int64_t v18; // x6
   System_String_o *v19; // x7
 
-  if ( (byte_4CCBBBC & 1) == 0 )
+  if ( (byte_4D30F6E & 1) == 0 )
   {
-    sub_1C713B0(&System_Type_TypeInfo);
-    sub_1C713B0(&void_var);
-    byte_4CCBBBC = 1;
+    sub_1C94098(&System_Type_TypeInfo);
+    sub_1C94098(&void_var);
+    byte_4D30F6E = 1;
   }
   v5 = void_var;
   if ( !System_Type_TypeInfo->_2.cctor_finished )
@@ -2155,7 +2155,7 @@ void EventDelegate_Parameter___ctor_49647568(
   v6.fields.value = (intptr_t)v5;
   TypeFromHandle = System_Type__GetTypeFromHandle(v6, 0);
   this->fields.expectedType = TypeFromHandle;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.expectedType,
     (int32_t)TypeFromHandle,
     v8,
@@ -2166,7 +2166,7 @@ void EventDelegate_Parameter___ctor_49647568(
     v13);
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.mValue = val;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mValue, (int32_t)val, v14, v15, v16, v17, v18, v19);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mValue, (int32_t)val, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -2178,12 +2178,12 @@ System_Type_o *EventDelegate_Parameter__get_type(EventDelegate_Parameter_o *this
   Il2CppType *v6; // x19
   System_RuntimeTypeHandle_o v7; // x0
 
-  if ( (byte_4CCBBBE & 1) == 0 )
+  if ( (byte_4D30F70 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&System_Type_TypeInfo);
-    sub_1C713B0(&void_var);
-    byte_4CCBBBE = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&System_Type_TypeInfo);
+    sub_1C94098(&void_var);
+    byte_4D30F70 = 1;
   }
   mValue = this->fields.mValue;
   if ( mValue )
@@ -2195,7 +2195,7 @@ System_Type_o *EventDelegate_Parameter__get_type(EventDelegate_Parameter_o *this
   {
     mValue = (Il2CppObject *)this->fields.obj;
     if ( !mValue )
-      sub_1C71608(0, v5);
+      sub_1C942F0(0, v5);
     return System_Object__GetType(mValue, 0);
   }
   v6 = void_var;
@@ -2244,12 +2244,12 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
   bool IsValueType; // w8
   System_Type_o *v37; // x19
 
-  if ( (byte_4CCBBBD & 1) == 0 )
+  if ( (byte_4D30F6F & 1) == 0 )
   {
-    sub_1C713B0(&System_Convert_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&System_Type_TypeInfo);
-    byte_4CCBBBD = 1;
+    sub_1C94098(&System_Convert_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&System_Type_TypeInfo);
+    byte_4D30F6F = 1;
   }
   result = this->fields.mValue;
   if ( !result )
@@ -2258,9 +2258,9 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
     {
       this->fields.cached = 1;
       this->fields.fieldInfo = 0;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.fieldInfo, 0, v2, v3, v4, v5, v6, v7);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.fieldInfo, 0, v2, v3, v4, v5, v6, v7);
       this->fields.propInfo = 0;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.propInfo, 0, v10, v11, v12, v13, v14, v15);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.propInfo, 0, v10, v11, v12, v13, v14, v15);
       obj = this->fields.obj;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2275,7 +2275,7 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
         v19 = (System_Type_o *)Type;
         Property = System_Type__GetProperty((System_Type_o *)Type, this->fields.field, 0);
         this->fields.propInfo = Property;
-        sub_1C71354(
+        sub_1C9403C(
           (GrandQuestFolderBoardItem_o *)&this->fields.propInfo,
           (int32_t)Property,
           v21,
@@ -2288,7 +2288,7 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
         {
           Field = System_Type__GetField(v19, this->fields.field, 0);
           this->fields.fieldInfo = Field;
-          sub_1C71354(
+          sub_1C9403C(
             (GrandQuestFolderBoardItem_o *)&this->fields.fieldInfo,
             (int32_t)Field,
             v28,
@@ -2335,7 +2335,7 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
         v37 = this->fields.expectedType;
         if ( !System_Convert_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-        return System_Convert__ChangeType_65105600(0, v37, 0);
+        return System_Convert__ChangeType_65491620(0, v37, 0);
       }
       Type = (Il2CppObject *)this->fields.fieldInfo;
       if ( Type )
@@ -2345,7 +2345,7 @@ Il2CppObject *EventDelegate_Parameter__get_value(EventDelegate_Parameter_o *this
                                  Type->klass->vtable[25].method);
     }
 LABEL_32:
-    sub_1C71608(Type, v17);
+    sub_1C942F0(Type, v17);
   }
   return result;
 }
@@ -2360,5 +2360,5 @@ void EventDelegate_Parameter__set_value(EventDelegate_Parameter_o *this, Il2CppO
   System_String_o *v7; // x7
 
   this->fields.mValue = value;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mValue, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mValue, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }

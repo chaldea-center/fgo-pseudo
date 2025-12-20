@@ -29,45 +29,45 @@ CreateSkillTaskFromBuffAction_array *BattleAddSkillTaskBeforeTreasureDevice__Get
   System_String_o *v18; // x7
   __int64 v20; // x0
 
-  if ( (byte_4CCA43A & 1) == 0 )
+  if ( (byte_4D2F8FC & 1) == 0 )
   {
-    sub_1C713B0(&CreateComboStartSkillTask_TypeInfo);
-    sub_1C713B0(&CreateSkillTaskFromBuffAction___TypeInfo);
-    sub_1C713B0(&CreateTreasureDeviceBeforeSkillTask_TypeInfo);
-    byte_4CCA43A = 1;
+    sub_1C94098(&CreateComboStartSkillTask_TypeInfo);
+    sub_1C94098(&CreateSkillTaskFromBuffAction___TypeInfo);
+    sub_1C94098(&CreateTreasureDeviceBeforeSkillTask_TypeInfo);
+    byte_4D2F8FC = 1;
   }
-  v2 = (CreateSkillTaskFromBuffAction_array *)sub_1C71458(CreateSkillTaskFromBuffAction___TypeInfo, 2);
-  v3 = (Il2CppObject *)sub_1C715FC(CreateComboStartSkillTask_TypeInfo);
+  v2 = (CreateSkillTaskFromBuffAction_array *)sub_1C94140(CreateSkillTaskFromBuffAction___TypeInfo, 2);
+  v3 = (Il2CppObject *)sub_1C942E4(CreateComboStartSkillTask_TypeInfo);
   System_Object___ctor(v3, 0);
   if ( !v2 )
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   if ( v3 )
   {
-    v4 = sub_1C714EC(v3, v2->obj.klass->_1.element_class);
+    v4 = sub_1C941D4(v3, v2->obj.klass->_1.element_class);
     if ( !v4 )
       goto LABEL_12;
   }
   if ( !LODWORD(v2->max_length) )
     goto LABEL_11;
   v2->m_Items[0] = (CreateSkillTaskFromBuffAction_o *)v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v2->m_Items, (int32_t)v3, v6, v7, v8, v9, v10, v11);
-  v12 = (Il2CppObject *)sub_1C715FC(CreateTreasureDeviceBeforeSkillTask_TypeInfo);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v2->m_Items, (int32_t)v3, v6, v7, v8, v9, v10, v11);
+  v12 = (Il2CppObject *)sub_1C942E4(CreateTreasureDeviceBeforeSkillTask_TypeInfo);
   System_Object___ctor(v12, 0);
   if ( v12 )
   {
-    v4 = sub_1C714EC(v12, v2->obj.klass->_1.element_class);
+    v4 = sub_1C941D4(v12, v2->obj.klass->_1.element_class);
     if ( !v4 )
     {
 LABEL_12:
-      v20 = sub_1C7162C(v4);
-      sub_1C714D8(v20, 0);
+      v20 = sub_1C94314(v4);
+      sub_1C941C0(v20, 0);
     }
   }
   if ( LODWORD(v2->max_length) <= 1 )
 LABEL_11:
-    sub_1C71610(v4);
+    sub_1C942F8(v4);
   v2->m_Items[1] = (CreateSkillTaskFromBuffAction_o *)v12;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->m_Items[1], (int32_t)v12, v13, v14, v15, v16, v17, v18);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v2->m_Items[1], (int32_t)v12, v13, v14, v15, v16, v17, v18);
   return v2;
 }
 

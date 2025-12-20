@@ -18,29 +18,29 @@ void SelectGrandServantEffectComponent__Awake(SelectGrandServantEffectComponent_
   Il2CppObject *v12; // x21
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CC204D & 1) == 0 )
+  if ( (byte_4D2739A & 1) == 0 )
   {
-    sub_1C713B0(&Method_CStateManager_SelectGrandServantEffectComponent___ctor__);
-    sub_1C713B0(&Method_CStateManager_SelectGrandServantEffectComponent__add__);
-    sub_1C713B0(&CStateManager_SelectGrandServantEffectComponent__TypeInfo);
-    sub_1C713B0(&SelectGrandServantEffectComponent_StateEnd_TypeInfo);
-    sub_1C713B0(&SelectGrandServantEffectComponent_StateNone_TypeInfo);
-    sub_1C713B0(&SelectGrandServantEffectComponent_StatePlay_TypeInfo);
-    byte_4CC204D = 1;
+    sub_1C94098(&Method_CStateManager_SelectGrandServantEffectComponent___ctor__);
+    sub_1C94098(&Method_CStateManager_SelectGrandServantEffectComponent__add__);
+    sub_1C94098(&CStateManager_SelectGrandServantEffectComponent__TypeInfo);
+    sub_1C94098(&SelectGrandServantEffectComponent_StateEnd_TypeInfo);
+    sub_1C94098(&SelectGrandServantEffectComponent_StateNone_TypeInfo);
+    sub_1C94098(&SelectGrandServantEffectComponent_StatePlay_TypeInfo);
+    byte_4D2739A = 1;
   }
   p_fsm = &this->fields.fsm;
   if ( !this->fields.fsm )
   {
-    v4 = (CStateManager_T__o *)sub_1C715FC(CStateManager_SelectGrandServantEffectComponent__TypeInfo);
+    v4 = (CStateManager_T__o *)sub_1C942E4(CStateManager_SelectGrandServantEffectComponent__TypeInfo);
     CStateManager_object____ctor(
       v4,
       (Il2CppObject *)this,
       3,
-      (const MethodInfo_3394668 *)Method_CStateManager_SelectGrandServantEffectComponent___ctor__);
+      (const MethodInfo_33E65C4 *)Method_CStateManager_SelectGrandServantEffectComponent___ctor__);
     this->fields.fsm = (struct CStateManager_SelectGrandServantEffectComponent__o *)v4;
-    sub_1C71354(&this->fields.fsm, v4);
+    sub_1C9403C(&this->fields.fsm, v4);
     fsm = (CStateManager_T__o *)this->fields.fsm;
-    v6 = (Il2CppObject *)sub_1C715FC(SelectGrandServantEffectComponent_StateNone_TypeInfo);
+    v6 = (Il2CppObject *)sub_1C942E4(SelectGrandServantEffectComponent_StateNone_TypeInfo);
     System_Object___ctor(v6, 0);
     if ( !fsm )
       goto LABEL_8;
@@ -48,29 +48,29 @@ void SelectGrandServantEffectComponent__Awake(SelectGrandServantEffectComponent_
       fsm,
       0,
       (IState_T__o *)v6,
-      (const MethodInfo_3394710 *)Method_CStateManager_SelectGrandServantEffectComponent__add__);
+      (const MethodInfo_33E666C *)Method_CStateManager_SelectGrandServantEffectComponent__add__);
     v9 = (CStateManager_T__o *)*p_fsm;
-    v10 = (Il2CppObject *)sub_1C715FC(SelectGrandServantEffectComponent_StatePlay_TypeInfo);
+    v10 = (Il2CppObject *)sub_1C942E4(SelectGrandServantEffectComponent_StatePlay_TypeInfo);
     System_Object___ctor(v10, 0);
     if ( !v9
       || (CStateManager_object___add(
             v9,
             1,
             (IState_T__o *)v10,
-            (const MethodInfo_3394710 *)Method_CStateManager_SelectGrandServantEffectComponent__add__),
+            (const MethodInfo_33E666C *)Method_CStateManager_SelectGrandServantEffectComponent__add__),
           v11 = (CStateManager_T__o *)*p_fsm,
-          v12 = (Il2CppObject *)sub_1C715FC(SelectGrandServantEffectComponent_StateEnd_TypeInfo),
+          v12 = (Il2CppObject *)sub_1C942E4(SelectGrandServantEffectComponent_StateEnd_TypeInfo),
           System_Object___ctor(v12, 0),
           !v11) )
     {
 LABEL_8:
-      sub_1C71608(v7, v8);
+      sub_1C942F0(v7, v8);
     }
     CStateManager_object___add(
       v11,
       2,
       (IState_T__o *)v12,
-      (const MethodInfo_3394710 *)Method_CStateManager_SelectGrandServantEffectComponent__add__);
+      (const MethodInfo_33E666C *)Method_CStateManager_SelectGrandServantEffectComponent__add__);
     SelectGrandServantEffectComponent__SetState(this, 0, v13);
   }
 }
@@ -90,15 +90,15 @@ void SelectGrandServantEffectComponent__End(SelectGrandServantEffectComponent_o 
   AssetData_o *afterDesignCardAssetData; // x0
   System_String_o *bgmName; // x20
 
-  if ( (byte_4CC2052 & 1) == 0 )
+  if ( (byte_4D2739F & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
-    sub_1C713B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    sub_1C713B0(&SoundManager_TypeInfo);
-    byte_4CC2052 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    sub_1C94098(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    sub_1C94098(&SoundManager_TypeInfo);
+    byte_4D2739F = 1;
   }
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   DesignCardManager__ReleaseDesignCard(
@@ -106,7 +106,7 @@ void SelectGrandServantEffectComponent__End(SelectGrandServantEffectComponent_o 
     this->fields.beforeClassCardId,
     this->fields.beforeRarity,
     0);
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
   if ( !Instance )
     goto LABEL_27;
   DesignCardManager__ReleaseDesignCard(
@@ -126,9 +126,9 @@ void SelectGrandServantEffectComponent__End(SelectGrandServantEffectComponent_o 
     gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71724608(gameObject, 0);
+    UnityEngine_Object__Destroy_72110972(gameObject, 0);
     *p_uiCharaGraphBeforeCard = 0;
-    sub_1C71354(&this->fields.uiCharaGraphBeforeCard, 0);
+    sub_1C9403C(&this->fields.uiCharaGraphBeforeCard, 0);
   }
   p_uiCharaGraphAfterCard = &this->fields.uiCharaGraphAfterCard;
   uiCharaGraphAfterCard = (UnityEngine_Object_o *)this->fields.uiCharaGraphAfterCard;
@@ -142,9 +142,9 @@ void SelectGrandServantEffectComponent__End(SelectGrandServantEffectComponent_o 
     v10 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)Instance, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71724608(v10, 0);
+    UnityEngine_Object__Destroy_72110972(v10, 0);
     *p_uiCharaGraphAfterCard = 0;
-    sub_1C71354(&this->fields.uiCharaGraphAfterCard, 0);
+    sub_1C9403C(&this->fields.uiCharaGraphAfterCard, 0);
   }
   beforeDesignCardAssetData = this->fields.beforeDesignCardAssetData;
   if ( beforeDesignCardAssetData )
@@ -156,10 +156,10 @@ void SelectGrandServantEffectComponent__End(SelectGrandServantEffectComponent_o 
   if ( !SoundManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
   SoundManager__playBgm(bgmName, 0);
-  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = SingletonTemplate_object___get_Instance((const MethodInfo_3ABAA64 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
 LABEL_27:
-    sub_1C71608(Instance, v4);
+    sub_1C942F0(Instance, v4);
   MissionNotifyManager__EndPause((MissionNotifyManager_o *)Instance, 0);
   ActionExtensions__Call(this->fields.endAct, 0);
 }
@@ -172,10 +172,10 @@ void SelectGrandServantEffectComponent__FinishLoad(SelectGrandServantEffectCompo
   UnityEngine_GameObject_o *v5; // x20
   UnityEngine_Object_o *animation; // x20
 
-  if ( (byte_4CC2051 & 1) == 0 )
+  if ( (byte_4D2739E & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC2051 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2739E = 1;
   }
   this->fields.isDoneLoad = 1;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -183,10 +183,10 @@ void SelectGrandServantEffectComponent__FinishLoad(SelectGrandServantEffectCompo
     goto LABEL_12;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
   v5 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  if ( !byte_4CC0D09 )
+  if ( !byte_4D25F19 )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D09 = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
   }
   GameObjectExtensions__SetLocalScale(v5, UnityEngine_Vector3_TypeInfo->static_fields->zeroVector, 0);
   animation = (UnityEngine_Object_o *)this->fields.animation;
@@ -201,7 +201,7 @@ void SelectGrandServantEffectComponent__FinishLoad(SelectGrandServantEffectCompo
       return;
     }
 LABEL_12:
-    sub_1C71608(gameObject, v4);
+    sub_1C942F0(gameObject, v4);
   }
 }
 
@@ -214,14 +214,14 @@ int32_t SelectGrandServantEffectComponent__GetState(
   struct CStateManager_SelectGrandServantEffectComponent__o *fsm; // x8
 
   v2 = this;
-  if ( (byte_4CC2054 & 1) == 0 )
+  if ( (byte_4D273A1 & 1) == 0 )
   {
-    this = (SelectGrandServantEffectComponent_o *)sub_1C713B0(&Method_CStateManager_SelectGrandServantEffectComponent__getState__);
-    byte_4CC2054 = 1;
+    this = (SelectGrandServantEffectComponent_o *)sub_1C94098(&Method_CStateManager_SelectGrandServantEffectComponent__getState__);
+    byte_4D273A1 = 1;
   }
   fsm = v2->fields.fsm;
   if ( !fsm )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return fsm->fields.m_state;
 }
 
@@ -231,9 +231,9 @@ void SelectGrandServantEffectComponent__LoadAfterCard(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  struct UICharaGraphTexture_o *TexturePrefab_40933228; // x0
+  struct UICharaGraphTexture_o *TexturePrefab_41410812; // x0
 
-  TexturePrefab_40933228 = CharaGraphManager__CreateTexturePrefab_40933228(
+  TexturePrefab_41410812 = CharaGraphManager__CreateTexturePrefab_41410812(
                              this->fields.afterCardParentObj,
                              this->fields.afterUserSvtEntity,
                              this->fields.limitCount,
@@ -244,8 +244,8 @@ void SelectGrandServantEffectComponent__LoadAfterCard(
                              0,
                              0,
                              0);
-  this->fields.uiCharaGraphBeforeCard = TexturePrefab_40933228;
-  sub_1C71354(&this->fields.uiCharaGraphBeforeCard, TexturePrefab_40933228);
+  this->fields.uiCharaGraphBeforeCard = TexturePrefab_41410812;
+  sub_1C9403C(&this->fields.uiCharaGraphBeforeCard, TexturePrefab_41410812);
 }
 
 
@@ -268,33 +268,33 @@ void SelectGrandServantEffectComponent__LoadAfterDesignCard(
   AssetLoader_LoadEndDataHandler_o *v16; // x19
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CC2050 & 1) == 0 )
+  if ( (byte_4D2739D & 1) == 0 )
   {
-    sub_1C713B0(&AssetManager_TypeInfo);
-    sub_1C713B0(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UITexture___);
-    sub_1C713B0(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
-    sub_1C713B0(&Method_SelectGrandServantEffectComponent___c__DisplayClass31_0__LoadAfterDesignCard_b__0__);
-    sub_1C713B0(&SelectGrandServantEffectComponent___c__DisplayClass31_0_TypeInfo);
-    byte_4CC2050 = 1;
+    sub_1C94098(&AssetManager_TypeInfo);
+    sub_1C94098(&Method_DataManager_GetMaster_ClassBoardClassMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_UITexture___);
+    sub_1C94098(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C94098(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    sub_1C94098(&Method_SelectGrandServantEffectComponent___c__DisplayClass31_0__LoadAfterDesignCard_b__0__);
+    sub_1C94098(&SelectGrandServantEffectComponent___c__DisplayClass31_0_TypeInfo);
+    byte_4D2739D = 1;
   }
   entity = 0;
-  v5 = (Il2CppObject *)sub_1C715FC(SelectGrandServantEffectComponent___c__DisplayClass31_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C942E4(SelectGrandServantEffectComponent___c__DisplayClass31_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_29;
   v5[1].klass = (Il2CppClass *)this;
-  sub_1C71354(&v5[1], this);
+  sub_1C9403C(&v5[1], this);
   v5[2].klass = (Il2CppClass *)callback;
-  sub_1C71354(&v5[2], callback);
+  sub_1C9403C(&v5[2], callback);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !this->fields.afterUserSvtEntity )
     goto LABEL_29;
   v8 = Master_object;
@@ -307,7 +307,7 @@ void SelectGrandServantEffectComponent__LoadAfterDesignCard(
           v8,
           &entity,
           (int32_t)Master_object,
-          (const MethodInfo_3408ECC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_345B50C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     return;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.afterUserSvtEntity;
   if ( !Master_object )
@@ -315,7 +315,7 @@ void SelectGrandServantEffectComponent__LoadAfterDesignCard(
   SvtClassId = UserServantEntity__getSvtClassId((UserServantEntity_o *)Master_object, 0, 1, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ClassBoardClassMaster___);
   if ( !Master_object )
     goto LABEL_29;
   this->fields.afterClassCardId = ClassBoardClassMaster__GetClassBoardBaseId(
@@ -323,7 +323,7 @@ void SelectGrandServantEffectComponent__LoadAfterDesignCard(
                                     SvtClassId,
                                     0);
   this->fields.afterRarity = 5;
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_29;
   GrandDesignCardPath = DesignCardManager__GetGrandDesignCardPath(
@@ -336,7 +336,7 @@ void SelectGrandServantEffectComponent__LoadAfterDesignCard(
   {
     this->fields.afterClassCardId = 1;
     this->fields.afterRarity = 3;
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
     if ( !Master_object )
       goto LABEL_29;
     GrandDesignCardPath = DesignCardManager__GetDesignCardPath(
@@ -359,25 +359,25 @@ void SelectGrandServantEffectComponent__LoadAfterDesignCard(
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)Master_object,
       (Il2CppObject *)GrandDesignCardPath,
-      *(const MethodInfo_3810718 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
+      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v12[4] + 192LL) + 112LL));
   }
   else
   {
     v14 = v11 + 8 * MasterName_k__BackingField_low;
     LODWORD(Master_object->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
     *(_QWORD *)(v14 + 32) = GrandDesignCardPath;
-    sub_1C71354(v14 + 32, GrandDesignCardPath);
+    sub_1C9403C(v14 + 32, GrandDesignCardPath);
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.afterDesignCardObj;
   if ( !Master_object )
 LABEL_29:
-    sub_1C71608(Master_object, v7);
+    sub_1C942F0(Master_object, v7);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)Master_object,
-                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
+                       (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
   v5[1].monitor = Component_object;
-  sub_1C71354(&v5[1].monitor, Component_object);
-  v16 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  sub_1C9403C(&v5[1].monitor, Component_object);
+  v16 = (AssetLoader_LoadEndDataHandler_o *)sub_1C942E4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v16,
     v5,
@@ -394,9 +394,9 @@ void SelectGrandServantEffectComponent__LoadBeforeCard(
         System_Action_o *callback,
         const MethodInfo *method)
 {
-  struct UICharaGraphTexture_o *TexturePrefab_40933228; // x0
+  struct UICharaGraphTexture_o *TexturePrefab_41410812; // x0
 
-  TexturePrefab_40933228 = CharaGraphManager__CreateTexturePrefab_40933228(
+  TexturePrefab_41410812 = CharaGraphManager__CreateTexturePrefab_41410812(
                              this->fields.beforeCardParentObj,
                              this->fields.beforeUserSvtEntity,
                              this->fields.limitCount,
@@ -407,8 +407,8 @@ void SelectGrandServantEffectComponent__LoadBeforeCard(
                              1,
                              0,
                              0);
-  this->fields.uiCharaGraphBeforeCard = TexturePrefab_40933228;
-  sub_1C71354(&this->fields.uiCharaGraphBeforeCard, TexturePrefab_40933228);
+  this->fields.uiCharaGraphBeforeCard = TexturePrefab_41410812;
+  sub_1C9403C(&this->fields.uiCharaGraphBeforeCard, TexturePrefab_41410812);
 }
 
 
@@ -440,35 +440,35 @@ void SelectGrandServantEffectComponent__LoadBeforeDesignCard(
   AssetLoader_LoadEndDataHandler_o *v25; // x21
   Il2CppObject *entity; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CC204F & 1) == 0 )
+  if ( (byte_4D2739C & 1) == 0 )
   {
-    sub_1C713B0(&AssetManager_TypeInfo);
-    sub_1C713B0(&Method_DataManager_GetMasterData_ServantClassMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
-    sub_1C713B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_UITexture___);
-    sub_1C713B0(&Method_System_Collections_Generic_List_string__Add__);
-    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
-    sub_1C713B0(&Method_SelectGrandServantEffectComponent___c__DisplayClass30_0__LoadBeforeDesignCard_b__0__);
-    sub_1C713B0(&SelectGrandServantEffectComponent___c__DisplayClass30_0_TypeInfo);
-    byte_4CC204F = 1;
+    sub_1C94098(&AssetManager_TypeInfo);
+    sub_1C94098(&Method_DataManager_GetMasterData_ServantClassMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+    sub_1C94098(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_UITexture___);
+    sub_1C94098(&Method_System_Collections_Generic_List_string__Add__);
+    sub_1C94098(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    sub_1C94098(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    sub_1C94098(&Method_SelectGrandServantEffectComponent___c__DisplayClass30_0__LoadBeforeDesignCard_b__0__);
+    sub_1C94098(&SelectGrandServantEffectComponent___c__DisplayClass30_0_TypeInfo);
+    byte_4D2739C = 1;
   }
   entity = 0;
-  v5 = (Il2CppObject *)sub_1C715FC(SelectGrandServantEffectComponent___c__DisplayClass30_0_TypeInfo);
+  v5 = (Il2CppObject *)sub_1C942E4(SelectGrandServantEffectComponent___c__DisplayClass30_0_TypeInfo);
   System_Object___ctor(v5, 0);
   if ( !v5 )
     goto LABEL_40;
   v5[1].klass = (Il2CppClass *)this;
-  sub_1C71354(&v5[1], this);
+  sub_1C9403C(&v5[1], this);
   v5[2].monitor = callback;
-  sub_1C71354(&v5[2].monitor, callback);
+  sub_1C9403C(&v5[2].monitor, callback);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !this->fields.beforeUserSvtEntity )
     goto LABEL_40;
   v8 = Master_object;
@@ -481,15 +481,15 @@ void SelectGrandServantEffectComponent__LoadBeforeDesignCard(
           v8,
           &entity,
           (int32_t)Master_object,
-          (const MethodInfo_3408ECC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
+          (const MethodInfo_345B50C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__) )
     return;
   this->fields.beforeClassCardId = 0;
-  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !Master_object )
     goto LABEL_40;
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMasterData_object_(
                                                                   (DataManager_o *)Master_object,
-                                                                  (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantClassMaster___);
+                                                                  (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ServantClassMaster___);
   if ( !this->fields.beforeUserSvtEntity )
     goto LABEL_40;
   v9 = Master_object;
@@ -503,7 +503,7 @@ void SelectGrandServantEffectComponent__LoadBeforeDesignCard(
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataMasterBase_object__object__int___GetEntity(
                                                                   v9,
                                                                   (int32_t)Master_object,
-                                                                  (const MethodInfo_3408E80 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
+                                                                  (const MethodInfo_345B4C0 *)Method_DataMasterBase_ServantClassMaster__ServantClassEntity__int__GetEntity__);
   if ( !entity )
     goto LABEL_40;
   v10 = Master_object;
@@ -530,7 +530,7 @@ void SelectGrandServantEffectComponent__LoadBeforeDesignCard(
     if ( !Master_object )
       goto LABEL_40;
     FrameCardPrefix = UserServantEntity__getFrameCardPrefix((UserServantEntity_o *)Master_object, 0);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
     if ( !Master_object )
       goto LABEL_40;
     ExceedFrameCardPath = DesignCardManager__GetExceedFrameCardPath(
@@ -541,7 +541,7 @@ void SelectGrandServantEffectComponent__LoadBeforeDesignCard(
   }
   else
   {
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
     if ( !this->fields.beforeUserSvtEntity )
       goto LABEL_40;
     beforeClassCardId = this->fields.beforeClassCardId;
@@ -556,14 +556,14 @@ void SelectGrandServantEffectComponent__LoadBeforeDesignCard(
   }
   v5[1].monitor = ExceedFrameCardPath;
   p_monitor = (Il2CppObject **)&v5[1].monitor;
-  sub_1C71354(&v5[1].monitor, ExceedFrameCardPath);
+  sub_1C9403C(&v5[1].monitor, ExceedFrameCardPath);
   monitor = (System_String_o *)v5[1].monitor;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
   if ( !AssetManager__isExistAssetStorage(monitor, 0) )
   {
     this->fields.beforeRarity = 3;
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
     if ( !Master_object )
       goto LABEL_40;
     DesignCardPath = DesignCardManager__GetDesignCardPath(
@@ -572,7 +572,7 @@ void SelectGrandServantEffectComponent__LoadBeforeDesignCard(
                        this->fields.beforeRarity,
                        0);
     *p_monitor = (Il2CppObject *)DesignCardPath;
-    sub_1C71354(&v5[1].monitor, DesignCardPath);
+    sub_1C9403C(&v5[1].monitor, DesignCardPath);
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.releaseAssetPathList;
   if ( !Master_object )
@@ -589,26 +589,26 @@ void SelectGrandServantEffectComponent__LoadBeforeDesignCard(
     System_Collections_Generic_List_object___AddWithResize(
       (System_Collections_Generic_List_object__o *)Master_object,
       v7,
-      *(const MethodInfo_3810718 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
+      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v20[4] + 192LL) + 112LL));
   }
   else
   {
     v22 = v19 + 8 * MasterName_k__BackingField_low;
     LODWORD(Master_object->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
     *(_QWORD *)(v22 + 32) = v7;
-    sub_1C71354(v22 + 32, v7);
+    sub_1C9403C(v22 + 32, v7);
   }
   Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.beforeDesignCardObj;
   if ( !Master_object )
 LABEL_40:
-    sub_1C71608(Master_object, v7);
+    sub_1C942F0(Master_object, v7);
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)Master_object,
-                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
+                       (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_UITexture___);
   v5[2].klass = (Il2CppClass *)Component_object;
-  sub_1C71354(&v5[2], Component_object);
+  sub_1C9403C(&v5[2], Component_object);
   v24 = (System_String_o *)v5[1].monitor;
-  v25 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
+  v25 = (AssetLoader_LoadEndDataHandler_o *)sub_1C942E4(AssetLoader_LoadEndDataHandler_TypeInfo);
   AssetLoader_LoadEndDataHandler___ctor(
     v25,
     v5,
@@ -630,7 +630,7 @@ void SelectGrandServantEffectComponent__Play(
   this->fields.endAct = end_act;
   p_endAct = &this->fields.endAct;
   *((_BYTE *)p_endAct - 8) = 1;
-  sub_1C71354(p_endAct, end_act);
+  sub_1C9403C(p_endAct, end_act);
 }
 
 
@@ -642,18 +642,18 @@ void SelectGrandServantEffectComponent__SetState(
 {
   CStateManager_T__o *fsm; // x0
 
-  if ( (byte_4CC2055 & 1) == 0 )
+  if ( (byte_4D273A2 & 1) == 0 )
   {
-    sub_1C713B0(&Method_CStateManager_SelectGrandServantEffectComponent__setState__);
-    byte_4CC2055 = 1;
+    sub_1C94098(&Method_CStateManager_SelectGrandServantEffectComponent__setState__);
+    byte_4D273A2 = 1;
   }
   fsm = (CStateManager_T__o *)this->fields.fsm;
   if ( !fsm )
-    sub_1C71608(0, *(_QWORD *)&state);
+    sub_1C942F0(0, *(_QWORD *)&state);
   CStateManager_object___setState(
     fsm,
     state,
-    (const MethodInfo_339479C *)Method_CStateManager_SelectGrandServantEffectComponent__setState__);
+    (const MethodInfo_33E66F8 *)Method_CStateManager_SelectGrandServantEffectComponent__setState__);
 }
 
 
@@ -686,43 +686,43 @@ void SelectGrandServantEffectComponent__Setup(
   System_Action_o *v27; // x22
   int32_t v28; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CC204E & 1) == 0 )
+  if ( (byte_4D2739B & 1) == 0 )
   {
-    sub_1C713B0(&System_Action___TypeInfo);
-    sub_1C713B0(&System_Action_Action____TypeInfo);
-    sub_1C713B0(&System_Action_Action__TypeInfo);
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&ChainableActionParallel_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Animation___);
-    sub_1C713B0(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&int_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_string___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_string__TypeInfo);
-    sub_1C713B0(&Method_SelectGrandServantEffectComponent_FinishLoad__);
-    sub_1C713B0(&Method_SelectGrandServantEffectComponent_LoadAfterCard__);
-    sub_1C713B0(&Method_SelectGrandServantEffectComponent_LoadAfterDesignCard__);
-    sub_1C713B0(&Method_SelectGrandServantEffectComponent_LoadBeforeCard__);
-    sub_1C713B0(&Method_SelectGrandServantEffectComponent_LoadBeforeDesignCard__);
-    sub_1C713B0(&StringLiteral_18024/*"class{0}"*/);
-    byte_4CC204E = 1;
+    sub_1C94098(&System_Action___TypeInfo);
+    sub_1C94098(&System_Action_Action____TypeInfo);
+    sub_1C94098(&System_Action_Action__TypeInfo);
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&ChainableActionParallel_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Animation___);
+    sub_1C94098(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&int_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_string___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_string__TypeInfo);
+    sub_1C94098(&Method_SelectGrandServantEffectComponent_FinishLoad__);
+    sub_1C94098(&Method_SelectGrandServantEffectComponent_LoadAfterCard__);
+    sub_1C94098(&Method_SelectGrandServantEffectComponent_LoadAfterDesignCard__);
+    sub_1C94098(&Method_SelectGrandServantEffectComponent_LoadBeforeCard__);
+    sub_1C94098(&Method_SelectGrandServantEffectComponent_LoadBeforeDesignCard__);
+    sub_1C94098(&StringLiteral_18090/*"class{0}"*/);
+    byte_4D2739B = 1;
   }
   if ( afterUserServantEntity
     && (!SelectGrandServantEffectComponent__GetState(this, (const MethodInfo *)beforeUserServantEntity)
      || SelectGrandServantEffectComponent__GetState(this, v7) == 2) )
   {
-    v8 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_string__TypeInfo);
+    v8 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_string__TypeInfo);
     System_Collections_Generic_List_object____ctor(
       v8,
-      (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_string___ctor__);
+      (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_string___ctor__);
     this->fields.releaseAssetPathList = (struct System_Collections_Generic_List_string__o *)v8;
-    sub_1C71354(&this->fields.releaseAssetPathList, v8);
+    sub_1C9403C(&this->fields.releaseAssetPathList, v8);
     *(_WORD *)&this->fields.isPlayReq = 0;
     this->fields.beforeUserSvtEntity = beforeUserServantEntity;
-    sub_1C71354(&this->fields.beforeUserSvtEntity, beforeUserServantEntity);
+    sub_1C9403C(&this->fields.beforeUserSvtEntity, beforeUserServantEntity);
     this->fields.afterUserSvtEntity = afterUserServantEntity;
     p_afterUserSvtEntity = &this->fields.afterUserSvtEntity;
-    sub_1C71354(&this->fields.afterUserSvtEntity, afterUserServantEntity);
+    sub_1C9403C(&this->fields.afterUserSvtEntity, afterUserServantEntity);
     afterUserSvtEntity = this->fields.afterUserSvtEntity;
     if ( afterUserSvtEntity )
     {
@@ -733,7 +733,7 @@ void SelectGrandServantEffectComponent__Setup(
         this->fields.limitCount = UserServantEntity__getCardImageLimitCount(*p_afterUserSvtEntity, 0, 0);
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        afterUserSvtEntity = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+        afterUserSvtEntity = (UserServantEntity_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
         if ( afterUserSvtEntity )
         {
           afterUserSvtEntity = (UserServantEntity_o *)ServantLimitImageMaster__GetServantImageLimitSealAfter(
@@ -747,13 +747,13 @@ void SelectGrandServantEffectComponent__Setup(
           {
             OverwriteStatus = UserServantEntity__GetOverwriteStatus(beforeUserSvtEntity, 0, 0);
             this->fields.beforeOverwriteStatus = OverwriteStatus;
-            sub_1C71354(&this->fields.beforeOverwriteStatus, OverwriteStatus);
+            sub_1C9403C(&this->fields.beforeOverwriteStatus, OverwriteStatus);
             afterUserSvtEntity = this->fields.afterUserSvtEntity;
             if ( afterUserSvtEntity )
             {
               v15 = UserServantEntity__GetOverwriteStatus(afterUserSvtEntity, 0, 0);
               this->fields.afterOverwriteStatus = v15;
-              sub_1C71354(&this->fields.afterOverwriteStatus, v15);
+              sub_1C9403C(&this->fields.afterOverwriteStatus, v15);
               afterUserSvtEntity = (UserServantEntity_o *)UnityEngine_Component__get_transform(
                                                             (UnityEngine_Component_o *)this,
                                                             0);
@@ -761,9 +761,9 @@ void SelectGrandServantEffectComponent__Setup(
               {
                 Component_object = UnityEngine_Component__GetComponent_object_(
                                      (UnityEngine_Component_o *)afterUserSvtEntity,
-                                     (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Animation___);
+                                     (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Animation___);
                 this->fields.animation = (struct UnityEngine_Animation_o *)Component_object;
-                sub_1C71354(&this->fields.animation, Component_object);
+                sub_1C9403C(&this->fields.animation, Component_object);
                 afterUserSvtEntity = (UserServantEntity_o *)UnityEngine_Component__get_gameObject(
                                                               (UnityEngine_Component_o *)this,
                                                               0);
@@ -778,7 +778,7 @@ void SelectGrandServantEffectComponent__Setup(
                     v28 = SvtClassId;
                     v19 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v28);
                     afterUserSvtEntity = (UserServantEntity_o *)System_String__Format(
-                                                                  (System_String_o *)StringLiteral_18024/*"class{0}"*/,
+                                                                  (System_String_o *)StringLiteral_18090/*"class{0}"*/,
                                                                   v19,
                                                                   0);
                     if ( grandClassSprite )
@@ -790,8 +790,8 @@ void SelectGrandServantEffectComponent__Setup(
                         ((void (__fastcall *)(UserServantEntity_o *, void *))afterUserSvtEntity->klass[1].vtable._6_getSkillLevelList.method)(
                           afterUserSvtEntity,
                           afterUserSvtEntity->klass[2]._1.image);
-                        v20 = sub_1C71458(System_Action_Action____TypeInfo, 4);
-                        v21 = (System_Action_object__o *)sub_1C715FC(System_Action_Action__TypeInfo);
+                        v20 = sub_1C94140(System_Action_Action____TypeInfo, 4);
+                        v21 = (System_Action_object__o *)sub_1C942E4(System_Action_Action__TypeInfo);
                         System_Action_object____ctor(
                           v21,
                           (Il2CppObject *)this,
@@ -802,8 +802,8 @@ void SelectGrandServantEffectComponent__Setup(
                           if ( !*(_DWORD *)(v20 + 24) )
                             goto LABEL_30;
                           *(_QWORD *)(v20 + 32) = v21;
-                          sub_1C71354(v20 + 32, v21);
-                          v22 = (System_Action_object__o *)sub_1C715FC(System_Action_Action__TypeInfo);
+                          sub_1C9403C(v20 + 32, v21);
+                          v22 = (System_Action_object__o *)sub_1C942E4(System_Action_Action__TypeInfo);
                           System_Action_object____ctor(
                             v22,
                             (Il2CppObject *)this,
@@ -812,8 +812,8 @@ void SelectGrandServantEffectComponent__Setup(
                           if ( *(_DWORD *)(v20 + 24) <= 1u )
                             goto LABEL_30;
                           *(_QWORD *)(v20 + 40) = v22;
-                          sub_1C71354(v20 + 40, v22);
-                          v23 = (System_Action_object__o *)sub_1C715FC(System_Action_Action__TypeInfo);
+                          sub_1C9403C(v20 + 40, v22);
+                          v23 = (System_Action_object__o *)sub_1C942E4(System_Action_Action__TypeInfo);
                           System_Action_object____ctor(
                             v23,
                             (Il2CppObject *)this,
@@ -822,8 +822,8 @@ void SelectGrandServantEffectComponent__Setup(
                           if ( *(_DWORD *)(v20 + 24) <= 2u )
                             goto LABEL_30;
                           *(_QWORD *)(v20 + 48) = v23;
-                          sub_1C71354(v20 + 48, v23);
-                          v24 = (System_Action_object__o *)sub_1C715FC(System_Action_Action__TypeInfo);
+                          sub_1C9403C(v20 + 48, v23);
+                          v24 = (System_Action_object__o *)sub_1C942E4(System_Action_Action__TypeInfo);
                           System_Action_object____ctor(
                             v24,
                             (Il2CppObject *)this,
@@ -832,11 +832,11 @@ void SelectGrandServantEffectComponent__Setup(
                           if ( *(_DWORD *)(v20 + 24) <= 3u )
                             goto LABEL_30;
                           *(_QWORD *)(v20 + 56) = v24;
-                          sub_1C71354(v20 + 56, v24);
-                          v25 = (ChainableActionParallel_o *)sub_1C715FC(ChainableActionParallel_TypeInfo);
-                          ChainableActionParallel___ctor_49409128(v25, (System_Action_Action__array *)v20, 0);
-                          v26 = sub_1C71458(System_Action___TypeInfo, 1);
-                          v27 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+                          sub_1C9403C(v20 + 56, v24);
+                          v25 = (ChainableActionParallel_o *)sub_1C942E4(ChainableActionParallel_TypeInfo);
+                          ChainableActionParallel___ctor_49732720(v25, (System_Action_Action__array *)v20, 0);
+                          v26 = sub_1C94140(System_Action___TypeInfo, 1);
+                          v27 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
                           System_Action___ctor(
                             v27,
                             (Il2CppObject *)this,
@@ -846,9 +846,9 @@ void SelectGrandServantEffectComponent__Setup(
                             goto LABEL_29;
                           if ( !*(_DWORD *)(v26 + 24) )
 LABEL_30:
-                            sub_1C71610(afterUserSvtEntity);
+                            sub_1C942F8(afterUserSvtEntity);
                           *(_QWORD *)(v26 + 32) = v27;
-                          afterUserSvtEntity = (UserServantEntity_o *)sub_1C71354(v26 + 32, v27);
+                          afterUserSvtEntity = (UserServantEntity_o *)sub_1C9403C(v26 + 32, v27);
                           if ( v25 )
                           {
                             afterUserSvtEntity = (UserServantEntity_o *)ChainableActionBase__Final(
@@ -873,7 +873,7 @@ LABEL_30:
       }
     }
 LABEL_29:
-    sub_1C71608(afterUserSvtEntity, v10);
+    sub_1C942F0(afterUserSvtEntity, v10);
   }
 }
 
@@ -892,17 +892,17 @@ void SelectGrandServantEffectComponent__Update(SelectGrandServantEffectComponent
   struct SelectGrandServantEffectComponent___c_StaticFields *static_fields; // x0
   const MethodInfo *v13; // x2
 
-  if ( (byte_4CC2053 & 1) == 0 )
+  if ( (byte_4D273A0 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&AvalonSceneManager_TypeInfo);
-    sub_1C713B0(&Method_CStateManager_SelectGrandServantEffectComponent__update__);
-    sub_1C713B0(&CTouch_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&SoundManager_TypeInfo);
-    sub_1C713B0(&Method_SelectGrandServantEffectComponent___c__Update_b__35_0__);
-    sub_1C713B0(&SelectGrandServantEffectComponent___c_TypeInfo);
-    byte_4CC2053 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&AvalonSceneManager_TypeInfo);
+    sub_1C94098(&Method_CStateManager_SelectGrandServantEffectComponent__update__);
+    sub_1C94098(&CTouch_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&SoundManager_TypeInfo);
+    sub_1C94098(&Method_SelectGrandServantEffectComponent___c__Update_b__35_0__);
+    sub_1C94098(&SelectGrandServantEffectComponent___c_TypeInfo);
+    byte_4D273A0 = 1;
   }
   if ( !CTouch_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CTouch_TypeInfo);
@@ -911,7 +911,7 @@ void SelectGrandServantEffectComponent__Update(SelectGrandServantEffectComponent
   if ( fsm )
     CStateManager_object___update(
       fsm,
-      (const MethodInfo_3394778 *)Method_CStateManager_SelectGrandServantEffectComponent__update__);
+      (const MethodInfo_33E66D4 *)Method_CStateManager_SelectGrandServantEffectComponent__update__);
   if ( this->fields.isPlayReq && this->fields.isDoneLoad )
   {
     this->fields.isPlayReq = 0;
@@ -919,9 +919,9 @@ void SelectGrandServantEffectComponent__Update(SelectGrandServantEffectComponent
       j_il2cpp_runtime_class_init_0(SoundManager_TypeInfo);
     BgmName = SoundManager__getBgmName(0);
     this->fields.bgmName = BgmName;
-    sub_1C71354(&this->fields.bgmName, BgmName);
+    sub_1C9403C(&this->fields.bgmName, BgmName);
     SoundManager__stopBgm(0);
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     v7 = AvalonSceneManager_TypeInfo;
     if ( !AvalonSceneManager_TypeInfo->_2.cctor_finished )
     {
@@ -944,14 +944,14 @@ void SelectGrandServantEffectComponent__Update(SelectGrandServantEffectComponent
         v8 = SelectGrandServantEffectComponent___c_TypeInfo;
       }
       v11 = (Il2CppObject *)v8->static_fields->__9;
-      _9__35_0 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      _9__35_0 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
       System_Action___ctor(_9__35_0, v11, Method_SelectGrandServantEffectComponent___c__Update_b__35_0__, 0);
       static_fields = SelectGrandServantEffectComponent___c_TypeInfo->static_fields;
       static_fields->__9__35_0 = _9__35_0;
-      v8 = (SelectGrandServantEffectComponent___c_c *)sub_1C71354(&static_fields->__9__35_0, _9__35_0);
+      v8 = (SelectGrandServantEffectComponent___c_c *)sub_1C9403C(&static_fields->__9__35_0, _9__35_0);
     }
     if ( !Instance )
-      sub_1C71608(v8, v5);
+      sub_1C942F0(v8, v5);
     CommonUI__maskFadein((CommonUI_o *)Instance, DEFAULT_FADE_TIME, _9__35_0, 0);
     SelectGrandServantEffectComponent__SetState(this, 1, v13);
   }
@@ -972,7 +972,7 @@ void SelectGrandServantEffectComponent_StateEnd__begin(
         const MethodInfo *method)
 {
   if ( !that )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   SelectGrandServantEffectComponent__End(that, (const MethodInfo *)that);
 }
 
@@ -992,7 +992,7 @@ void SelectGrandServantEffectComponent_StateEnd__update(
         const MethodInfo *method)
 {
   if ( !that )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   SelectGrandServantEffectComponent__SetState(that, 0, method);
 }
 
@@ -1053,22 +1053,22 @@ void SelectGrandServantEffectComponent_StatePlay__begin(
   UnityEngine_Animation_o *v9; // x19
   System_String_o *v10; // x0
 
-  if ( (byte_4CC2056 & 1) == 0 )
+  if ( (byte_4D273A3 & 1) == 0 )
   {
-    sub_1C713B0(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
-    byte_4CC2056 = 1;
+    sub_1C94098(&Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+    byte_4D273A3 = 1;
   }
-  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3A5F648 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
+  Instance = (MissionNotifyManager_o *)SingletonTemplate_object___get_Instance((const MethodInfo_3ABAA64 *)Method_SingletonTemplate_MissionNotifyManager__get_Instance__);
   if ( !Instance )
     goto LABEL_15;
   MissionNotifyManager__StartPause(Instance, 0);
   if ( !that )
     goto LABEL_15;
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)that, 0);
-  if ( !byte_4CC0D0E )
+  if ( !byte_4D25F1E )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D0E = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F1E = 1;
   }
   GameObjectExtensions__SetLocalScale(gameObject, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   Instance = (MissionNotifyManager_o *)that->fields.animation;
@@ -1089,7 +1089,7 @@ void SelectGrandServantEffectComponent_StatePlay__begin(
         (Instance = (MissionNotifyManager_o *)UnityEngine_Animation__get_Item(v9, v10, 0)) == 0) )
   {
 LABEL_15:
-    sub_1C71608(Instance, v5);
+    sub_1C942F0(Instance, v5);
   }
   UnityEngine_AnimationState__set_speed((UnityEngine_AnimationState_o *)Instance, 1.0, 0);
 }
@@ -1116,10 +1116,10 @@ void SelectGrandServantEffectComponent_StatePlay__update(
   UnityEngine_Animation_o *v8; // x20
   System_String_o *v9; // x0
 
-  if ( (byte_4CC2057 & 1) == 0 )
+  if ( (byte_4D273A4 & 1) == 0 )
   {
-    this = (SelectGrandServantEffectComponent_StatePlay_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC2057 = 1;
+    this = (SelectGrandServantEffectComponent_StatePlay_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D273A4 = 1;
   }
   if ( !that )
     goto LABEL_16;
@@ -1161,7 +1161,7 @@ LABEL_15:
       }
     }
 LABEL_16:
-    sub_1C71608(this, that);
+    sub_1C942F0(this, that);
   }
 }
 
@@ -1170,15 +1170,15 @@ void SelectGrandServantEffectComponent___c___cctor(const MethodInfo *method)
 {
   Il2CppObject *v1; // x19
 
-  if ( (byte_4CC2058 & 1) == 0 )
+  if ( (byte_4D273A5 & 1) == 0 )
   {
-    sub_1C713B0(&SelectGrandServantEffectComponent___c_TypeInfo);
-    byte_4CC2058 = 1;
+    sub_1C94098(&SelectGrandServantEffectComponent___c_TypeInfo);
+    byte_4D273A5 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C715FC(SelectGrandServantEffectComponent___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C942E4(SelectGrandServantEffectComponent___c_TypeInfo);
   System_Object___ctor(v1, 0);
   SelectGrandServantEffectComponent___c_TypeInfo->static_fields->__9 = (struct SelectGrandServantEffectComponent___c_o *)v1;
-  sub_1C71354(SelectGrandServantEffectComponent___c_TypeInfo->static_fields, v1);
+  sub_1C9403C(SelectGrandServantEffectComponent___c_TypeInfo->static_fields, v1);
 }
 
 
@@ -1214,22 +1214,22 @@ void SelectGrandServantEffectComponent___c__DisplayClass30_0___LoadBeforeDesignC
   DesignCardManager_o *_4__this; // x0
   struct SelectGrandServantEffectComponent_o *v6; // x8
 
-  if ( (byte_4CC2059 & 1) == 0 )
+  if ( (byte_4D273A6 & 1) == 0 )
   {
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
-    byte_4CC2059 = 1;
+    sub_1C94098(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    byte_4D273A6 = 1;
   }
   _4__this = (DesignCardManager_o *)this->fields.__4__this;
   if ( !_4__this
     || (_4__this[2].fields.m_CancellationTokenSource = (struct System_Threading_CancellationTokenSource_o *)d,
-        sub_1C71354(&_4__this[2].fields.m_CancellationTokenSource, d),
-        _4__this = (DesignCardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__),
+        sub_1C9403C(&_4__this[2].fields.m_CancellationTokenSource, d),
+        _4__this = (DesignCardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__),
         (v6 = this->fields.__4__this) == 0)
     || !_4__this )
   {
-    sub_1C71608(_4__this, d);
+    sub_1C942F0(_4__this, d);
   }
-  DesignCardManager__SetupDesignCard_41528384(
+  DesignCardManager__SetupDesignCard_42009580(
     _4__this,
     v6->fields.beforeClassCardId,
     this->fields.filePath,
@@ -1255,20 +1255,20 @@ void SelectGrandServantEffectComponent___c__DisplayClass31_0___LoadAfterDesignCa
   DesignCardManager_o *_4__this; // x0
   struct SelectGrandServantEffectComponent_o *v6; // x8
 
-  if ( (byte_4CC205A & 1) == 0 )
+  if ( (byte_4D273A7 & 1) == 0 )
   {
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
-    byte_4CC205A = 1;
+    sub_1C94098(&Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__);
+    byte_4D273A7 = 1;
   }
   _4__this = (DesignCardManager_o *)this->fields.__4__this;
   if ( !_4__this
     || (_4__this[2].fields.cardTextureSize = (struct System_Int32_array *)d,
-        sub_1C71354(&_4__this[2].fields.cardTextureSize, d),
-        _4__this = (DesignCardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__),
+        sub_1C9403C(&_4__this[2].fields.cardTextureSize, d),
+        _4__this = (DesignCardManager_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DesignCardManager__get_Instance__),
         (v6 = this->fields.__4__this) == 0)
     || !_4__this )
   {
-    sub_1C71608(_4__this, d);
+    sub_1C942F0(_4__this, d);
   }
   DesignCardManager__SetupDesignCard(
     _4__this,

@@ -10,10 +10,10 @@ void AndroidBackKeyTarget__OnEnable(AndroidBackKeyTarget_o *this, const MethodIn
   const MethodInfo *v4; // x1
   UnityEngine_GameObject_o *gameObject; // x0
 
-  if ( (byte_4CC9530 & 1) == 0 )
+  if ( (byte_4D2E9CE & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC9530 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E9CE = 1;
   }
   targetObject = (UnityEngine_Object_o *)this->fields.targetObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

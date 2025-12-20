@@ -1,9 +1,9 @@
 void FriendPointNoticeDlgSvtInfo___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CC9C84 & 1) == 0 )
+  if ( (byte_4D2EFF6 & 1) == 0 )
   {
-    sub_1C713B0(&FriendPointNoticeDlgSvtInfo_TypeInfo);
-    byte_4CC9C84 = 1;
+    sub_1C94098(&FriendPointNoticeDlgSvtInfo_TypeInfo);
+    byte_4D2EFF6 = 1;
   }
   LODWORD(FriendPointNoticeDlgSvtInfo_TypeInfo->static_fields->SERVANT_NAME_LABEL_MAX_WIDTH) = (struct FriendPointNoticeDlgSvtInfo_StaticFields)1140457472;
 }
@@ -24,7 +24,7 @@ UnityEngine_Vector3_o FriendPointNoticeDlgSvtInfo__GetServantNameCondensedScale(
 
   supportServantNameLabel = (UnityEngine_Component_o *)this->fields.supportServantNameLabel;
   if ( !supportServantNameLabel )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   gameObject = UnityEngine_Component__get_gameObject(supportServantNameLabel, 0);
   return GameObjectExtensions__GetLocalScale(gameObject, 0);
 }
@@ -67,35 +67,35 @@ bool FriendPointNoticeDlgSvtInfo__Set(
   int32_t data; // [xsp+74h] [xbp-6Ch] BYREF
   Il2CppObject *entity; // [xsp+78h] [xbp-68h] BYREF
 
-  if ( (byte_4CC9C82 & 1) == 0 )
+  if ( (byte_4D2EFF4 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_ServantExceedMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
-    sub_1C713B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
-    sub_1C713B0(&FriendPointNoticeDlgSvtInfo_TypeInfo);
-    sub_1C713B0(&IconLabelInfo_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_1372/*"3"*/);
-    sub_1C713B0(&StringLiteral_1310/*"2"*/);
-    sub_1C713B0(&StringLiteral_6949/*"GET_FRIEND_POINT_SERVANT_NAME_NORARE"*/);
-    sub_1C713B0(&StringLiteral_25711/*"４"*/);
-    sub_1C713B0(&StringLiteral_25710/*"３"*/);
-    sub_1C713B0(&StringLiteral_25708/*"１"*/);
-    sub_1C713B0(&StringLiteral_1397/*"4"*/);
-    sub_1C713B0(&StringLiteral_25712/*"５"*/);
-    sub_1C713B0(&StringLiteral_6948/*"GET_FRIEND_POINT_SERVANT_NAME"*/);
-    sub_1C713B0(&StringLiteral_25709/*"２"*/);
-    sub_1C713B0(&StringLiteral_1165/*"1"*/);
-    sub_1C713B0(&StringLiteral_1414/*"5"*/);
-    byte_4CC9C82 = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_ServantExceedMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_ServantLimitImageMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_UserServantCollectionMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+    sub_1C94098(&Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+    sub_1C94098(&FriendPointNoticeDlgSvtInfo_TypeInfo);
+    sub_1C94098(&IconLabelInfo_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_1371/*"3"*/);
+    sub_1C94098(&StringLiteral_1310/*"2"*/);
+    sub_1C94098(&StringLiteral_6964/*"GET_FRIEND_POINT_SERVANT_NAME_NORARE"*/);
+    sub_1C94098(&StringLiteral_25834/*"４"*/);
+    sub_1C94098(&StringLiteral_25833/*"３"*/);
+    sub_1C94098(&StringLiteral_25831/*"１"*/);
+    sub_1C94098(&StringLiteral_1397/*"4"*/);
+    sub_1C94098(&StringLiteral_25835/*"５"*/);
+    sub_1C94098(&StringLiteral_6963/*"GET_FRIEND_POINT_SERVANT_NAME"*/);
+    sub_1C94098(&StringLiteral_25832/*"２"*/);
+    sub_1C94098(&StringLiteral_1165/*"1"*/);
+    sub_1C94098(&StringLiteral_1414/*"5"*/);
+    byte_4D2EFF4 = 1;
   }
   entity = 0;
   data = 0;
@@ -103,12 +103,12 @@ bool FriendPointNoticeDlgSvtInfo__Set(
   v35 = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantMaster___);
-  v8 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserServantMaster___);
-  v9 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitMaster___);
-  v10 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantExceedMaster___);
-  v11 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
-  Name = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantMaster___);
+  v8 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserServantMaster___);
+  v9 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+  v10 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantExceedMaster___);
+  v11 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantLimitImageMaster___);
+  Name = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserServantCollectionMaster___);
   if ( svtId < 1 )
     goto LABEL_60;
   if ( !Master_object )
@@ -118,7 +118,7 @@ bool FriendPointNoticeDlgSvtInfo__Set(
                    (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                    &entity,
                    svtId,
-                   (const MethodInfo_3408ECC *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
+                   (const MethodInfo_345B50C *)Method_DataMasterBase_ServantMaster__ServantEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Name & 1) == 0 )
     goto LABEL_60;
   if ( !v8 )
@@ -126,7 +126,7 @@ bool FriendPointNoticeDlgSvtInfo__Set(
   Name = DataMasterBase_object__object__long___GetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)v8,
            usrSvtId,
-           (const MethodInfo_340B3DC *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
+           (const MethodInfo_345DA1C *)Method_DataMasterBase_UserServantMaster__UserServantEntity__long__GetEntity__);
   v15 = (UserServantEntity_o *)Name;
   v16 = usrSvtId < 1 || Name == 0;
   if ( usrSvtId < 1 || Name == 0 )
@@ -141,7 +141,7 @@ LABEL_33:
     supportServantNameLabel = this->fields.supportServantNameLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Name = LocalizationManager__Get((System_String_o *)StringLiteral_6949/*"GET_FRIEND_POINT_SERVANT_NAME_NORARE"*/, 0);
+    Name = LocalizationManager__Get((System_String_o *)StringLiteral_6964/*"GET_FRIEND_POINT_SERVANT_NAME_NORARE"*/, 0);
     if ( !entity )
       goto LABEL_67;
     v21 = (System_String_o *)Name;
@@ -150,7 +150,7 @@ LABEL_33:
       goto LABEL_67;
     v22 = (Il2CppObject *)Name;
     ClassName = (Il2CppObject *)ServantEntity__getClassName((ServantEntity_o *)entity, 0);
-    Name = System_String__Format_64073032(v21, v22, ClassName, 0);
+    Name = System_String__Format_64459052(v21, v22, ClassName, 0);
     if ( !supportServantNameLabel )
       goto LABEL_67;
     UILabel__set_text(supportServantNameLabel, (System_String_o *)Name, 0);
@@ -167,45 +167,45 @@ LABEL_12:
   Name = System_Int32__ToString((int32_t)&data, 0);
   if ( !Name )
     goto LABEL_67;
-  Name = System_String__Replace_64078288(
+  Name = System_String__Replace_64464308(
            (System_String_o *)Name,
            (System_String_o *)StringLiteral_1165/*"1"*/,
-           (System_String_o *)StringLiteral_25708/*"１"*/,
+           (System_String_o *)StringLiteral_25831/*"１"*/,
            0);
   if ( !Name )
     goto LABEL_67;
-  Name = System_String__Replace_64078288(
+  Name = System_String__Replace_64464308(
            (System_String_o *)Name,
            (System_String_o *)StringLiteral_1310/*"2"*/,
-           (System_String_o *)StringLiteral_25709/*"２"*/,
+           (System_String_o *)StringLiteral_25832/*"２"*/,
            0);
   if ( !Name )
     goto LABEL_67;
-  Name = System_String__Replace_64078288(
+  Name = System_String__Replace_64464308(
            (System_String_o *)Name,
-           (System_String_o *)StringLiteral_1372/*"3"*/,
-           (System_String_o *)StringLiteral_25710/*"３"*/,
+           (System_String_o *)StringLiteral_1371/*"3"*/,
+           (System_String_o *)StringLiteral_25833/*"３"*/,
            0);
   if ( !Name )
     goto LABEL_67;
-  Name = System_String__Replace_64078288(
+  Name = System_String__Replace_64464308(
            (System_String_o *)Name,
            (System_String_o *)StringLiteral_1397/*"4"*/,
-           (System_String_o *)StringLiteral_25711/*"４"*/,
+           (System_String_o *)StringLiteral_25834/*"４"*/,
            0);
   if ( !Name )
     goto LABEL_67;
-  v18 = (Il2CppObject *)System_String__Replace_64078288(
+  v18 = (Il2CppObject *)System_String__Replace_64464308(
                           (System_String_o *)Name,
                           (System_String_o *)StringLiteral_1414/*"5"*/,
-                          (System_String_o *)StringLiteral_25712/*"５"*/,
+                          (System_String_o *)StringLiteral_25835/*"５"*/,
                           0);
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4CC112A )
+  if ( !byte_4D2633A )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    byte_4CC112A = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    byte_4D2633A = 1;
   }
   Name = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -243,16 +243,16 @@ LABEL_12:
   v24 = this->fields.supportServantNameLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  Name = LocalizationManager__Get((System_String_o *)StringLiteral_6948/*"GET_FRIEND_POINT_SERVANT_NAME"*/, 0);
+  Name = LocalizationManager__Get((System_String_o *)StringLiteral_6963/*"GET_FRIEND_POINT_SERVANT_NAME"*/, 0);
   if ( !entity
     || (v25 = (System_String_o *)Name, Name = ServantEntity__getName((ServantEntity_o *)entity, v19, -1, 0, 0), !entity)
     || (v26 = (Il2CppObject *)Name,
         v27 = (Il2CppObject *)ServantEntity__getClassName((ServantEntity_o *)entity, 0),
-        Name = System_String__Format_64073100(v25, v18, v26, v27, 0),
+        Name = System_String__Format_64459120(v25, v18, v26, v27, 0),
         !v24) )
   {
 LABEL_67:
-    sub_1C71608(Name, v13);
+    sub_1C942F0(Name, v13);
   }
   UILabel__set_text(v24, (System_String_o *)Name, 0);
 LABEL_46:
@@ -262,7 +262,7 @@ LABEL_46:
     j_il2cpp_runtime_class_init_0(FriendPointNoticeDlgSvtInfo_TypeInfo);
   if ( !v28 )
     goto LABEL_67;
-  UILabel__SetCondensedScale_49893052(
+  UILabel__SetCondensedScale_50219732(
     v28,
     FriendPointNoticeDlgSvtInfo_TypeInfo->static_fields->SERVANT_NAME_LABEL_MAX_WIDTH,
     0.0,
@@ -272,7 +272,7 @@ LABEL_46:
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( !UnityEngine_Object__op_Inequality(supportServantFaceIcon, 0, 0) )
     goto LABEL_60;
-  v30 = (IconLabelInfo_o *)sub_1C715FC(IconLabelInfo_TypeInfo);
+  v30 = (IconLabelInfo_o *)sub_1C942E4(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v30, 0);
   if ( v16 )
   {
@@ -288,11 +288,11 @@ LABEL_46:
         {
           if ( v30 )
           {
-            IconLabelInfo__Set_41192248(v30, 2, 1, v34->fields.lvMax, 0, 0, 0, 0, 0, 0);
+            IconLabelInfo__Set_41670428(v30, 2, 1, v34->fields.lvMax, 0, 0, 0, 0, 0, 0);
             Name = this->fields.supportServantFaceIcon;
             if ( Name )
             {
-              ServantFaceIconComponent__Set_41283156(
+              ServantFaceIconComponent__Set_41846260(
                 (ServantFaceIconComponent_o *)Name,
                 svtId,
                 0,
@@ -326,16 +326,16 @@ LABEL_60:
   Name = (void *)UserServantEntity__getLevelMax(v15, 0);
   if ( !v30 )
     goto LABEL_67;
-  IconLabelInfo__Set_41192248(v30, 2, lv, (int32_t)Name, 0, 0, 0, 0, 0, 0);
+  IconLabelInfo__Set_41670428(v30, 2, lv, (int32_t)Name, 0, 0, 0, 0, 0, 0);
   Name = this->fields.supportServantFaceIcon;
   if ( !Name )
     goto LABEL_67;
-  ServantFaceIconComponent__Set_41281652((ServantFaceIconComponent_o *)Name, usrSvtId, v30, 0, 0);
+  ServantFaceIconComponent__Set_41844756((ServantFaceIconComponent_o *)Name, usrSvtId, v30, 0, 0);
 LABEL_65:
   Name = this->fields.supportServantSubLabel;
   if ( !Name )
     goto LABEL_67;
-  UIIconLabel__Set_41387288((UIIconLabel_o *)Name, 36, data, 0, 0, 0, 0, 0, 0, Rarity, 0);
+  UIIconLabel__Set_41867060((UIIconLabel_o *)Name, 36, data, 0, 0, 0, 0, 0, 0, Rarity, 0);
   LOBYTE(Name) = 1;
   return (char)Name;
 }
@@ -349,10 +349,10 @@ void FriendPointNoticeDlgSvtInfo__SetServantNameCondensedScale(
   FriendPointNoticeDlgSvtInfo_c *v5; // x0
   UILabel_o *supportServantNameLabel; // x0
 
-  if ( (byte_4CC9C83 & 1) == 0 )
+  if ( (byte_4D2EFF5 & 1) == 0 )
   {
-    sub_1C713B0(&FriendPointNoticeDlgSvtInfo_TypeInfo);
-    byte_4CC9C83 = 1;
+    sub_1C94098(&FriendPointNoticeDlgSvtInfo_TypeInfo);
+    byte_4D2EFF5 = 1;
   }
   if ( maxWidth <= 0.0 )
   {
@@ -366,6 +366,6 @@ void FriendPointNoticeDlgSvtInfo__SetServantNameCondensedScale(
   }
   supportServantNameLabel = this->fields.supportServantNameLabel;
   if ( !supportServantNameLabel )
-    sub_1C71608(0, method);
-  UILabel__SetCondensedScale_49893052(supportServantNameLabel, maxWidth, 0.0, 0);
+    sub_1C942F0(0, method);
+  UILabel__SetCondensedScale_50219732(supportServantNameLabel, maxWidth, 0.0, 0);
 }

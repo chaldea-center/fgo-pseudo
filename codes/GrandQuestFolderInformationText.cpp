@@ -9,16 +9,16 @@ void GrandQuestFolderInformationText___cctor(const MethodInfo *method)
   GrandQuestFolderInformationText_c *v7; // x8
   struct GrandQuestFolderInformationText_StaticFields *static_fields; // x9
 
-  if ( (byte_4CC20B4 & 1) == 0 )
+  if ( (byte_4D27401 & 1) == 0 )
   {
-    sub_1C713B0(&GrandQuestFolderInformationText_TypeInfo);
-    sub_1C713B0(&StringLiteral_19975/*"grand_btnmenu_notice_bg"*/);
-    byte_4CC20B4 = 1;
+    sub_1C94098(&GrandQuestFolderInformationText_TypeInfo);
+    sub_1C94098(&StringLiteral_20063/*"grand_btnmenu_notice_bg"*/);
+    byte_4D27401 = 1;
   }
-  GrandQuestFolderInformationText_TypeInfo->static_fields->BoardInfoFrameName = (struct System_String_o *)StringLiteral_19975/*"grand_btnmenu_notice_bg"*/;
-  sub_1C71354(
+  GrandQuestFolderInformationText_TypeInfo->static_fields->BoardInfoFrameName = (struct System_String_o *)StringLiteral_20063/*"grand_btnmenu_notice_bg"*/;
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)GrandQuestFolderInformationText_TypeInfo->static_fields,
-    StringLiteral_19975/*"grand_btnmenu_notice_bg"*/,
+    StringLiteral_20063/*"grand_btnmenu_notice_bg"*/,
     v1,
     v2,
     v3,
@@ -29,8 +29,8 @@ void GrandQuestFolderInformationText___cctor(const MethodInfo *method)
   static_fields = GrandQuestFolderInformationText_TypeInfo->static_fields;
   *(_QWORD *)&static_fields->InfoFrameCenterOffset.fields.x = 0xC180000000000000LL;
   static_fields->InfoFrameCenterOffset.fields.z = 0.0;
-  v7->static_fields->NormalTopColor = (struct UnityEngine_Color_o)xmmword_CEE9C0;
-  v7->static_fields->NormalBottomColor = (struct UnityEngine_Color_o)xmmword_CEECF0;
+  v7->static_fields->NormalTopColor = (struct UnityEngine_Color_o)xmmword_CFE600;
+  v7->static_fields->NormalBottomColor = (struct UnityEngine_Color_o)xmmword_CFE950;
 }
 
 
@@ -60,9 +60,9 @@ void GrandQuestFolderInformationText___ctor(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.boardMessageEnt = boardMessageEntity;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)boardMessageEntity, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)boardMessageEntity, v11, v12, v13, v14, v15, v16);
   this->fields.dispText = text;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.dispText, (int32_t)text, v17, v18, v19, v20, v21, v22);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.dispText, (int32_t)text, v17, v18, v19, v20, v21, v22);
   this->fields.dispTime = time;
   GrandQuestFolderInformationText__SetParamFromScript(this, checkTime, v23);
   if ( boardMessageEntity )
@@ -92,14 +92,14 @@ void GrandQuestFolderInformationText__ChangeBehindText(
   Il2CppObject *v15; // x21
   __int64 v16; // x0
 
-  if ( (byte_4CC20B0 & 1) == 0 )
+  if ( (byte_4D273FD & 1) == 0 )
   {
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&object___TypeInfo);
-    byte_4CC20B0 = 1;
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&object___TypeInfo);
+    byte_4D273FD = 1;
   }
   dispTextExtend = this->fields.dispTextExtend;
-  v4 = sub_1C71458(object___TypeInfo, 1);
+  v4 = sub_1C94140(object___TypeInfo, 1);
   dispTime = this->fields.dispTime;
   v6 = (System_Object_array *)v4;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -110,20 +110,20 @@ void GrandQuestFolderInformationText__ChangeBehindText(
   v15 = (Il2CppObject *)RestTime2;
   if ( RestTime2 )
   {
-    RestTime2 = (System_String_o *)sub_1C714EC(RestTime2, v6->obj.klass->_1.element_class);
+    RestTime2 = (System_String_o *)sub_1C941D4(RestTime2, v6->obj.klass->_1.element_class);
     if ( !RestTime2 )
     {
-      v16 = sub_1C7162C();
-      sub_1C714D8(v16, 0);
+      v16 = sub_1C94314();
+      sub_1C941C0(v16, 0);
     }
   }
   if ( !LODWORD(v6->max_length) )
-    sub_1C71610(RestTime2);
+    sub_1C942F8(RestTime2);
   v6->m_Items[0] = v15;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v6->m_Items, (int32_t)v15, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v6->m_Items, (int32_t)v15, v9, v10, v11, v12, v13, v14);
   if ( !dispTextExtend )
 LABEL_11:
-    sub_1C71608(RestTime2, v8);
+    sub_1C942F0(RestTime2, v8);
   TerminalBoardOptionTextData__SetParamsToBehindText(dispTextExtend, v6, 0);
 }
 
@@ -151,7 +151,7 @@ bool GrandQuestFolderInformationText__ChangeText(
                                        0),
         (BehindLabelText = *component) == 0) )
   {
-    sub_1C71608(BehindLabelText, v5);
+    sub_1C942F0(BehindLabelText, v5);
   }
   GrandQuestBoardOptionTextComponent__UpdateUI(BehindLabelText, this->fields.dispTextExtend, v8);
   return this->fields.isChangedText;
@@ -173,20 +173,20 @@ void GrandQuestFolderInformationText__CreateDispTextExtendIfNotExists(
   int64_t v12; // x6
   System_String_o *v13; // x7
 
-  if ( (byte_4CC20B1 & 1) == 0 )
+  if ( (byte_4D273FE & 1) == 0 )
   {
-    sub_1C713B0(&TerminalBoardOptionTextData_TypeInfo);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC20B1 = 1;
+    sub_1C94098(&TerminalBoardOptionTextData_TypeInfo);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D273FE = 1;
   }
   if ( !this->fields.dispTextExtend )
   {
     dispText = this->fields.dispText;
     itemIconId = this->fields.itemIconId;
-    v7 = (TerminalBoardOptionTextData_o *)sub_1C715FC(TerminalBoardOptionTextData_TypeInfo);
+    v7 = (TerminalBoardOptionTextData_o *)sub_1C942E4(TerminalBoardOptionTextData_TypeInfo);
     TerminalBoardOptionTextData___ctor(v7, (System_String_o *)StringLiteral_1/*""*/, dispText, itemIconId, 0, 0, alignment, 0);
     this->fields.dispTextExtend = v7;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.dispTextExtend, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.dispTextExtend, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -228,11 +228,11 @@ void GrandQuestFolderInformationText__SetFrameSprite(
   z = boardOffset.fields.z;
   y = boardOffset.fields.y;
   x = boardOffset.fields.x;
-  if ( (byte_4CC20B2 & 1) == 0 )
+  if ( (byte_4D273FF & 1) == 0 )
   {
-    sub_1C713B0(&AtlasManager_TypeInfo);
-    sub_1C713B0(&GrandQuestFolderInformationText_TypeInfo);
-    byte_4CC20B2 = 1;
+    sub_1C94098(&AtlasManager_TypeInfo);
+    sub_1C94098(&GrandQuestFolderInformationText_TypeInfo);
+    byte_4D273FF = 1;
   }
   if ( boardId < 0 )
     goto LABEL_6;
@@ -304,7 +304,7 @@ LABEL_6:
                                                                 0)) == 0 )
   {
 LABEL_23:
-    sub_1C71608(IsTextEmpty, component);
+    sub_1C942F0(IsTextEmpty, component);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)IsTextEmpty, this->fields.isDispFrameBg, 0);
 }
@@ -403,10 +403,10 @@ void GrandQuestFolderInformationText__SetTextColor(
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v4 = this;
-  if ( (byte_4CC20B3 & 1) == 0 )
+  if ( (byte_4D27400 & 1) == 0 )
   {
-    this = (GrandQuestFolderInformationText_o *)sub_1C713B0(&GrandQuestFolderInformationText_TypeInfo);
-    byte_4CC20B3 = 1;
+    this = (GrandQuestFolderInformationText_o *)sub_1C94098(&GrandQuestFolderInformationText_TypeInfo);
+    byte_4D27400 = 1;
   }
   v5 = *component;
   if ( v4->fields.existColorSetting )
@@ -443,7 +443,7 @@ void GrandQuestFolderInformationText__SetTextColor(
           (this = (GrandQuestFolderInformationText_o *)*component) == 0) )
     {
 LABEL_13:
-      sub_1C71608(this, component);
+      sub_1C942F0(this, component);
     }
     static_fields = GrandQuestFolderInformationText_TypeInfo->static_fields;
     p_a = &static_fields->NormalBottomColor.fields.a;
@@ -487,7 +487,7 @@ void GrandQuestFolderInformationText__SetTextOffset(
   dispTextExtend = v4->fields.dispTextExtend;
   if ( !dispTextExtend || (this = (GrandQuestFolderInformationText_o *)*component) == 0 )
 LABEL_11:
-    sub_1C71608(this, component);
+    sub_1C942F0(this, component);
   v8 = -x;
   v9 = INFINITY;
   if ( dispTextExtend->fields._Alignment_k__BackingField )
@@ -529,7 +529,7 @@ void GrandQuestFolderInformationText__SetTime(
 }
 
 
-void GrandQuestFolderInformationText__SetTime_33136732(
+void GrandQuestFolderInformationText__SetTime_33481312(
         GrandQuestFolderInformationText_o *this,
         GrandQuestBoardOptionTextComponent_o **component,
         UISprite_o **frameSprite,

@@ -58,34 +58,34 @@ void UserPresentListViewItem___ctor(
   struct ServantCostumeEntity_o *v58; // x0
   Il2CppObject *v59; // x0
 
-  if ( (byte_4CC6104 & 1) == 0 )
+  if ( (byte_4D2B564 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMasterData_CommandCodeMaster___);
-    sub_1C713B0(&Method_DataManager_GetMasterData_EquipMaster___);
-    sub_1C713B0(&Method_DataManager_GetMasterData_ItemMaster___);
-    sub_1C713B0(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
-    sub_1C713B0(&Method_DataManager_GetMasterData_ServantMaster___);
-    sub_1C713B0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    sub_1C713B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    sub_1C713B0(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
-    sub_1C713B0(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CC6104 = 1;
+    sub_1C94098(&Method_DataManager_GetMasterData_CommandCodeMaster___);
+    sub_1C94098(&Method_DataManager_GetMasterData_EquipMaster___);
+    sub_1C94098(&Method_DataManager_GetMasterData_ItemMaster___);
+    sub_1C94098(&Method_DataManager_GetMasterData_ServantCostumeMaster___);
+    sub_1C94098(&Method_DataManager_GetMasterData_ServantMaster___);
+    sub_1C94098(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    sub_1C94098(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    sub_1C94098(&Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
+    sub_1C94098(&Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+    sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4D2B564 = 1;
   }
-  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
   this->fields.svtEnt = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.svtEnt, 0, v7, v8, v9, v10, v11, v12);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.svtEnt, 0, v7, v8, v9, v10, v11, v12);
   this->fields.itemEnt = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.itemEnt, 0, v13, v14, v15, v16, v17, v18);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.itemEnt, 0, v13, v14, v15, v16, v17, v18);
   this->fields.equipEnt = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.equipEnt, 0, v19, v20, v21, v22, v23, v24);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.equipEnt, 0, v19, v20, v21, v22, v23, v24);
   this->fields.commandCodeEnt = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.commandCodeEnt, 0, v25, v26, v27, v28, v29, v30);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.commandCodeEnt, 0, v25, v26, v27, v28, v29, v30);
   this->fields.usrPresentEnt = presentData;
   this->fields.checkBoxed = 0;
   this->fields.checkCount = -1;
   this->fields.blocked = 0;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.usrPresentEnt,
     (int32_t)presentData,
     v31,
@@ -96,76 +96,76 @@ void UserPresentListViewItem___ctor(
     v36);
   if ( !presentData )
 LABEL_21:
-    sub_1C71608(Instance, v38);
+    sub_1C942F0(Instance, v38);
   UserPresentBoxEntity__GetInfo(presentData, &this->fields.presentName, &this->fields.presentNum, 0);
   this->fields.presentId = presentData->fields.presentId;
   this->fields.giftType = presentData->fields.giftType;
   message = presentData->fields.message;
   this->fields.presentMsg = message;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.presentMsg, (int32_t)message, v40, v41, v42, v43, v44, v45);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.presentMsg, (int32_t)message, v40, v41, v42, v43, v44, v45);
   switch ( this->fields.giftType )
   {
     case 1:
     case 6:
     case 7:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_21;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantMaster___);
+                   (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ServantMaster___);
       if ( !Instance )
         goto LABEL_21;
       Entity = DataMasterBase_object__object__int___GetEntity(
                  (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
                  presentData->fields.objectId,
-                 (const MethodInfo_3408E80 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+                 (const MethodInfo_345B4C0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
       v53 = (int)Entity;
       this->fields.svtEnt = (struct ServantEntity_o *)Entity;
       p_svtEnt = (GrandQuestFolderBoardItem_o *)&this->fields.svtEnt;
       break;
     case 2:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_21;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ItemMaster___);
+                   (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ItemMaster___);
       if ( !Instance )
         goto LABEL_21;
       v55 = DataMasterBase_object__object__int___GetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
               presentData->fields.objectId,
-              (const MethodInfo_3408E80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+              (const MethodInfo_345B4C0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
       v53 = (int)v55;
       this->fields.itemEnt = (struct ItemEntity_o *)v55;
       p_svtEnt = (GrandQuestFolderBoardItem_o *)&this->fields.itemEnt;
       break;
     case 5:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_21;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_EquipMaster___);
+                   (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_EquipMaster___);
       if ( !Instance )
         goto LABEL_21;
       v56 = DataMasterBase_object__object__int___GetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
               presentData->fields.objectId,
-              (const MethodInfo_3408E80 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
+              (const MethodInfo_345B4C0 *)Method_DataMasterBase_EquipMaster__EquipEntity__int__GetEntity__);
       v53 = (int)v56;
       this->fields.equipEnt = (struct EquipEntity_o *)v56;
       p_svtEnt = (GrandQuestFolderBoardItem_o *)&this->fields.equipEnt;
       break;
     case 9:
       objectId = presentData->fields.objectId;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_21;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
+                   (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_ServantCostumeMaster___);
       if ( !Instance )
         goto LABEL_21;
       v58 = ServantCostumeMaster__GetEntity((ServantCostumeMaster_o *)Instance, objectId / 100, objectId % 100, 0);
@@ -174,18 +174,18 @@ LABEL_21:
       p_svtEnt = (GrandQuestFolderBoardItem_o *)&this->fields.costumeEnt;
       break;
     case 0xB:
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
       if ( !Instance )
         goto LABEL_21;
       Instance = DataManager__GetMasterData_object_(
                    (DataManager_o *)Instance,
-                   (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_CommandCodeMaster___);
+                   (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_CommandCodeMaster___);
       if ( !Instance )
         goto LABEL_21;
       v59 = DataMasterBase_object__object__int___GetEntity(
               (DataMasterBase_TMaster__TEntity__PKType__o *)Instance,
               presentData->fields.objectId,
-              (const MethodInfo_3408E80 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
+              (const MethodInfo_345B4C0 *)Method_DataMasterBase_CommandCodeMaster__CommandCodeEntity__int__GetEntity__);
       v53 = (int)v59;
       this->fields.commandCodeEnt = (struct CommandCodeEntity_o *)v59;
       p_svtEnt = (GrandQuestFolderBoardItem_o *)&this->fields.commandCodeEnt;
@@ -193,7 +193,7 @@ LABEL_21:
     default:
       return;
   }
-  sub_1C71354(p_svtEnt, v53, v47, v48, v49, v50, v51, v52);
+  sub_1C9403C(p_svtEnt, v53, v47, v48, v49, v50, v51, v52);
 }
 
 
@@ -217,16 +217,16 @@ bool UserPresentListViewItem__SetSortValue(
   bool result; // w0
 
   v4 = this;
-  if ( (byte_4CC6105 & 1) == 0 )
+  if ( (byte_4D2B565 & 1) == 0 )
   {
-    sub_1C713B0(&BalanceConfig_TypeInfo);
-    this = (UserPresentListViewItem_o *)sub_1C713B0(&UserPresentBoxMaster_TypeInfo);
-    byte_4CC6105 = 1;
+    sub_1C94098(&BalanceConfig_TypeInfo);
+    this = (UserPresentListViewItem_o *)sub_1C94098(&UserPresentBoxMaster_TypeInfo);
+    byte_4D2B565 = 1;
   }
   v4->fields.sortValue0 = 0;
   if ( !sort )
     goto LABEL_22;
-  if ( ListViewSort__GetFilter_44158720(sort, 13, 0) )
+  if ( ListViewSort__GetFilter_44656012(sort, 13, 0) )
   {
     usrPresentEnt = v4->fields.usrPresentEnt;
     this = (UserPresentListViewItem_o *)UserPresentBoxMaster_TypeInfo;
@@ -264,7 +264,7 @@ LABEL_13:
       goto LABEL_20;
     }
 LABEL_22:
-    sub_1C71608(this, sort);
+    sub_1C942F0(this, sort);
   }
   v8 = 0;
 LABEL_20:
@@ -312,21 +312,21 @@ System_String_o *UserPresentListViewItem__get_NameText(UserPresentListViewItem_o
   struct CommandCodeEntity_o *commandCodeEnt; // x8
   struct ServantCostumeEntity_o *costumeEnt; // x8
 
-  if ( (byte_4CC6106 & 1) == 0 )
+  if ( (byte_4D2B566 & 1) == 0 )
   {
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    sub_1C713B0(&StringLiteral_8712/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/);
-    sub_1C713B0(&StringLiteral_19128/*"error"*/);
-    byte_4CC6106 = 1;
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
+    sub_1C94098(&StringLiteral_8731/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/);
+    sub_1C94098(&StringLiteral_19212/*"error"*/);
+    byte_4D2B566 = 1;
   }
-  if ( this->fields.svtEnt && Gift__IsServant_40699096(this->fields.giftType, 0) )
+  if ( this->fields.svtEnt && Gift__IsServant_41175504(this->fields.giftType, 0) )
   {
     svtEnt = this->fields.svtEnt;
     if ( svtEnt )
       return ServantEntity__getName(svtEnt, 0, -1, 0, 0);
 LABEL_26:
-    sub_1C71608(svtEnt, v3);
+    sub_1C942F0(svtEnt, v3);
   }
   itemEnt = this->fields.itemEnt;
   if ( itemEnt && this->fields.giftType == 2 )
@@ -338,7 +338,7 @@ LABEL_26:
 LABEL_16:
     if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredString_TypeInfo);
-    return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_49333796(name, 0);
+    return CodeStage_AntiCheat_ObscuredTypes_ObscuredString__op_Implicit_49657388(name, 0);
   }
   commandCodeEnt = this->fields.commandCodeEnt;
   if ( commandCodeEnt && this->fields.giftType == 11 )
@@ -347,10 +347,10 @@ LABEL_16:
     goto LABEL_16;
   }
   if ( !this->fields.costumeEnt || this->fields.giftType != 9 )
-    return (System_String_o *)StringLiteral_19128/*"error"*/;
+    return (System_String_o *)StringLiteral_19212/*"error"*/;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  svtEnt = (ServantEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8712/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, 0);
+  svtEnt = (ServantEntity_o *)LocalizationManager__Get((System_String_o *)StringLiteral_8731/*"MISSION_PEWARD_DETAIL_SVT_COSTUME"*/, 0);
   costumeEnt = this->fields.costumeEnt;
   if ( !costumeEnt )
     goto LABEL_26;
@@ -429,7 +429,7 @@ bool UserPresentListViewItem__isItemLimitedPeriod(UserPresentListViewItem_o *thi
     {
       itemEnt = this->fields.itemEnt;
       if ( !itemEnt )
-        sub_1C71608(usrPresentEnt, method);
+        sub_1C942F0(usrPresentEnt, method);
       endedAt = itemEnt->fields.endedAt;
       LOBYTE(usrPresentEnt) = endedAt < UserPresentBoxEntity__expireAt(usrPresentEnt, 0);
     }
@@ -452,11 +452,11 @@ void UserPresentListViewItem__setBlocked(UserPresentListViewItem_o *this, bool b
   __int64 naturalAligment; // x9
 
   v5 = blocked;
-  if ( (byte_4CC6108 & 1) == 0 )
+  if ( (byte_4D2B568 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&UserPresentListViewObject_TypeInfo);
-    byte_4CC6108 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&UserPresentListViewObject_TypeInfo);
+    byte_4D2B568 = 1;
   }
   this->fields.blocked = v5;
   viewObject = (UnityEngine_Object_o *)this->fields.viewObject;
@@ -474,9 +474,9 @@ void UserPresentListViewItem__setBlocked(UserPresentListViewItem_o *this, bool b
         UserPresentListViewObject__setBlocked((UserPresentListViewObject_o *)v9, blocked, v8);
         return;
       }
-      sub_1C719A4(v9);
+      sub_1C9468C(v9);
     }
-    sub_1C71608(v9, v7);
+    sub_1C942F0(v9, v7);
   }
 }
 
@@ -495,11 +495,11 @@ void UserPresentListViewItem__setCheckBoxed(
   __int64 naturalAligment; // x9
 
   v7 = checkBoxed;
-  if ( (byte_4CC6107 & 1) == 0 )
+  if ( (byte_4D2B567 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&UserPresentListViewObject_TypeInfo);
-    byte_4CC6107 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&UserPresentListViewObject_TypeInfo);
+    byte_4D2B567 = 1;
   }
   this->fields.checkBoxed = v7;
   this->fields.checkCount = count;
@@ -518,8 +518,8 @@ void UserPresentListViewItem__setCheckBoxed(
         UserPresentListViewObject__setCheckBoxed((UserPresentListViewObject_o *)v11, checkBoxed, count, v10);
         return;
       }
-      sub_1C719A4(v11);
+      sub_1C9468C(v11);
     }
-    sub_1C71608(v11, v9);
+    sub_1C942F0(v11, v9);
   }
 }

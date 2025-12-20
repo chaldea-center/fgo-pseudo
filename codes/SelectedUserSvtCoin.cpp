@@ -18,32 +18,32 @@ void SelectedUserSvtCoin___ctor(
   __int64 v18; // x0
   __int64 v19; // x1
 
-  if ( (byte_4CCB169 & 1) == 0 )
+  if ( (byte_4D30646 & 1) == 0 )
   {
-    sub_1C713B0(&CoinRoomCoinIconItem_TypeInfo);
-    byte_4CCB169 = 1;
+    sub_1C94098(&CoinRoomCoinIconItem_TypeInfo);
+    byte_4D30646 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !iconObject )
 LABEL_9:
-    sub_1C71608(v7, v8);
+    sub_1C942F0(v7, v8);
   linkItem = iconObject->fields.linkItem;
   if ( !linkItem )
   {
     this->fields.iconObject = iconObject;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)iconObject, v9, v10, v11, v12, v13, v14);
-    sub_1C71608(v18, v19);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)iconObject, v9, v10, v11, v12, v13, v14);
+    sub_1C942F0(v18, v19);
   }
   naturalAligment = CoinRoomCoinIconItem_TypeInfo->_2.naturalAligment;
   if ( linkItem->klass->_2.naturalAligment < (unsigned int)naturalAligment
     || (CoinRoomCoinIconItem_c *)linkItem->klass->_2.typeHierarchy[naturalAligment - 1] != CoinRoomCoinIconItem_TypeInfo )
   {
-    sub_1C719A4(iconObject->fields.linkItem);
+    sub_1C9468C(iconObject->fields.linkItem);
     goto LABEL_9;
   }
   this->fields.iconObject = iconObject;
   p_fields = &this->fields;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_fields, (int32_t)iconObject, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_fields, (int32_t)iconObject, v9, v10, v11, v12, v13, v14);
   p_fields->_itemId_k__BackingField = HIDWORD(linkItem[1].klass);
   p_fields->_num_k__BackingField = num;
 }

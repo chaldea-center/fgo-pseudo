@@ -13,7 +13,7 @@ void UIScaleSame__SetCamera(UIScaleSame_o *this, UnityEngine_Camera_o *cam, cons
   System_String_o *v7; // x7
 
   this->fields.mCamera = cam;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mCamera, (int32_t)cam, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mCamera, (int32_t)cam, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -26,10 +26,10 @@ void UIScaleSame__Update(UIScaleSame_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *gameObject; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4CC3E61 & 1) == 0 )
+  if ( (byte_4D29235 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3E61 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D29235 = 1;
   }
   mCamera = (UnityEngine_Object_o *)this->fields.mCamera;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -38,9 +38,9 @@ void UIScaleSame__Update(UIScaleSame_o *this, const MethodInfo *method)
   {
     v5 = this->fields.mCamera;
     if ( !v5 )
-      sub_1C71608(0, v4);
+      sub_1C942F0(0, v4);
     orthographicSize = UnityEngine_Camera__get_orthographicSize(v5, 0);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-    GameObjectExtensions__SetLocalScale_36392044(gameObject, orthographicSize, orthographicSize, v8);
+    GameObjectExtensions__SetLocalScale_36800880(gameObject, orthographicSize, orthographicSize, v8);
   }
 }

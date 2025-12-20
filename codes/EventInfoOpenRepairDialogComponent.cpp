@@ -32,40 +32,40 @@ void EventInfoOpenRepairDialogComponent__OpenEventInfoRepairDialog(
   System_Action_o *v26; // x22
   const MethodInfo *v27; // x3
 
-  if ( (byte_4CC8951 & 1) == 0 )
+  if ( (byte_4D2DCB9 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_GameObjectHelper_Instantiate_EventInfoRepairDialog___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&Method_EventInfoOpenRepairDialogComponent___c__DisplayClass1_0__OpenEventInfoRepairDialog_b__0__);
-    sub_1C713B0(&EventInfoOpenRepairDialogComponent___c__DisplayClass1_0_TypeInfo);
-    byte_4CC8951 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_GameObjectHelper_Instantiate_EventInfoRepairDialog___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&Method_EventInfoOpenRepairDialogComponent___c__DisplayClass1_0__OpenEventInfoRepairDialog_b__0__);
+    sub_1C94098(&EventInfoOpenRepairDialogComponent___c__DisplayClass1_0_TypeInfo);
+    byte_4D2DCB9 = 1;
   }
-  v7 = sub_1C715FC(EventInfoOpenRepairDialogComponent___c__DisplayClass1_0_TypeInfo);
+  v7 = sub_1C942E4(EventInfoOpenRepairDialogComponent___c__DisplayClass1_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_10;
   *(_QWORD *)(v7 + 16) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 16), (int32_t)this, v10, v11, v12, v13, v14, v15);
   *(_QWORD *)(v7 + 24) = onClosed;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)onClosed, v16, v17, v18, v19, v20, v21);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v7 + 24), (int32_t)onClosed, v16, v17, v18, v19, v20, v21);
   eventInfoRepairDialogPrefab = this->fields.eventInfoRepairDialogPrefab;
-  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !Instance )
     goto LABEL_10;
   v23 = GameObjectHelper__Instantiate_object_(
           eventInfoRepairDialogPrefab,
           (UnityEngine_Transform_o *)Instance[8].monitor,
           0,
-          (const MethodInfo_31A4AF4 *)Method_GameObjectHelper_Instantiate_EventInfoRepairDialog___);
+          (const MethodInfo_31F63B4 *)Method_GameObjectHelper_Instantiate_EventInfoRepairDialog___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v24 = UnityEngine_Object__op_Equality((UnityEngine_Object_o *)v23, 0, 0);
   if ( !v24 )
   {
     EventInfoOpenRepairDialogComponent__SetTerminalTouchEnable((EventInfoOpenRepairDialogComponent_o *)v24, 0, v25);
-    v26 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    v26 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(
       v26,
       (Il2CppObject *)v7,
@@ -77,7 +77,7 @@ void EventInfoOpenRepairDialogComponent__OpenEventInfoRepairDialog(
       return;
     }
 LABEL_10:
-    sub_1C71608(Instance, v9);
+    sub_1C942F0(Instance, v9);
   }
 }
 
@@ -90,21 +90,21 @@ void EventInfoOpenRepairDialogComponent__SetTerminalTouchEnable(
   TerminalSceneComponent_c *v4; // x0
   UnityEngine_Object_o *mInstance; // x20
   __int64 v6; // x1
-  TitleInfoControl_o *genericContainerHandle; // x0
-  UISprite_c *klass; // x8
+  TerminalSceneComponent_c *mTitleInfo; // x0
+  struct TerminalSceneComponent_o *v8; // x8
 
-  if ( (byte_4CC8952 & 1) == 0 )
+  if ( (byte_4D2DCBA & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
-    byte_4CC8952 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&TerminalSceneComponent_TypeInfo);
+    byte_4D2DCBA = 1;
   }
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-  if ( !byte_4CC12CE )
+  if ( !byte_4D264E4 )
   {
-    sub_1C713B0(&TerminalSceneComponent_TypeInfo);
-    byte_4CC12CE = 1;
+    sub_1C94098(&TerminalSceneComponent_TypeInfo);
+    byte_4D264E4 = 1;
   }
   v4 = TerminalSceneComponent_TypeInfo;
   if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
@@ -119,21 +119,21 @@ void EventInfoOpenRepairDialogComponent__SetTerminalTouchEnable(
   {
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-    if ( !byte_4CC12CE )
+    if ( !byte_4D264E4 )
     {
-      sub_1C713B0(&TerminalSceneComponent_TypeInfo);
-      byte_4CC12CE = 1;
+      sub_1C94098(&TerminalSceneComponent_TypeInfo);
+      byte_4D264E4 = 1;
     }
-    genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
+    mTitleInfo = TerminalSceneComponent_TypeInfo;
     if ( !TerminalSceneComponent_TypeInfo->_2.cctor_finished )
     {
       j_il2cpp_runtime_class_init_0(TerminalSceneComponent_TypeInfo);
-      genericContainerHandle = (TitleInfoControl_o *)TerminalSceneComponent_TypeInfo;
+      mTitleInfo = TerminalSceneComponent_TypeInfo;
     }
-    klass = genericContainerHandle->fields.mEventBgSp->klass;
-    if ( !klass || (genericContainerHandle = (TitleInfoControl_o *)klass->_2.genericContainerHandle) == 0 )
-      sub_1C71608(genericContainerHandle, v6);
-    TitleInfoControl__SetTouchEnable(genericContainerHandle, enable, 0);
+    v8 = mTitleInfo->static_fields->mInstance;
+    if ( !v8 || (mTitleInfo = (TerminalSceneComponent_c *)v8->fields.mTitleInfo) == 0 )
+      sub_1C942F0(mTitleInfo, v6);
+    TitleInfoControl__SetTouchEnable((TitleInfoControl_o *)mTitleInfo, enable, 0);
   }
 }
 
@@ -153,7 +153,7 @@ void EventInfoOpenRepairDialogComponent___c__DisplayClass1_0___OpenEventInfoRepa
   const MethodInfo *v2; // x2
 
   if ( !this->fields.__4__this )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   EventInfoOpenRepairDialogComponent__SetTerminalTouchEnable((EventInfoOpenRepairDialogComponent_o *)this, 1, v2);
   ActionExtensions__Call(this->fields.onClosed, 0);
 }

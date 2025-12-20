@@ -33,23 +33,23 @@ float ShortestDistanceFromItem__GetRatingBase(
   il2cpp_array_size_t max_length; // x20
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
-  if ( (byte_4CC4D23 & 1) == 0 )
+  if ( (byte_4D2A0D1 & 1) == 0 )
   {
-    sub_1C713B0(&AStarSearch_TypeInfo);
-    sub_1C713B0(&Method_BasicHelper_Any_WarBoardAIRoute_RouteData___);
-    sub_1C713B0(&System_Func_WarBoardAIRoute_RouteData__bool__TypeInfo);
-    sub_1C713B0(&Method_ShortestDistanceFromItem___c__DisplayClass0_0__GetRatingBase_b__0__);
-    sub_1C713B0(&ShortestDistanceFromItem___c__DisplayClass0_0_TypeInfo);
-    sub_1C713B0(&WarBoardAIManager_TypeInfo);
-    byte_4CC4D23 = 1;
+    sub_1C94098(&AStarSearch_TypeInfo);
+    sub_1C94098(&Method_BasicHelper_Any_WarBoardAIRoute_RouteData___);
+    sub_1C94098(&System_Func_WarBoardAIRoute_RouteData__bool__TypeInfo);
+    sub_1C94098(&Method_ShortestDistanceFromItem___c__DisplayClass0_0__GetRatingBase_b__0__);
+    sub_1C94098(&ShortestDistanceFromItem___c__DisplayClass0_0_TypeInfo);
+    sub_1C94098(&WarBoardAIManager_TypeInfo);
+    byte_4D2A0D1 = 1;
   }
-  v11 = sub_1C715FC(ShortestDistanceFromItem___c__DisplayClass0_0_TypeInfo);
+  v11 = sub_1C942E4(ShortestDistanceFromItem___c__DisplayClass0_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v11, 0);
   if ( !v11 )
     goto LABEL_18;
   *(_QWORD *)(v11 + 16) = targetSquare;
   v20 = v11 + 16;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 16), (int32_t)targetSquare, v14, v15, v16, v17, v18, v19);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 16), (int32_t)targetSquare, v14, v15, v16, v17, v18, v19);
   if ( !*(_QWORD *)(v11 + 16) )
     goto LABEL_18;
   v21 = *(_DWORD *)(*(_QWORD *)(v11 + 16) + 16LL);
@@ -61,7 +61,7 @@ float ShortestDistanceFromItem__GetRatingBase(
     v23 = Item;
     if ( !WarBoardItemData__get_Acquired(Item, 0) )
     {
-      v24 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_WarBoardAIRoute_RouteData__bool__TypeInfo);
+      v24 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_WarBoardAIRoute_RouteData__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v24,
         (Il2CppObject *)v11,
@@ -70,7 +70,7 @@ float ShortestDistanceFromItem__GetRatingBase(
       evalValue = BasicHelper__Any_object_(
                     (System_Collections_Generic_List_T__o *)routeDataList,
                     (System_Func_T__bool__o *)v24,
-                    (const MethodInfo_31341D4 *)Method_BasicHelper_Any_WarBoardAIRoute_RouteData___);
+                    (const MethodInfo_3185468 *)Method_BasicHelper_Any_WarBoardAIRoute_RouteData___);
       if ( (evalValue & 1) == 0 )
       {
         if ( !calcSquare || !*(_QWORD *)v20 )
@@ -91,7 +91,7 @@ float ShortestDistanceFromItem__GetRatingBase(
                    * (float)(int)evalValue,
                      0.0);
 LABEL_18:
-          sub_1C71608(evalValue, v13);
+          sub_1C942F0(evalValue, v13);
         }
       }
     }
@@ -117,7 +117,7 @@ bool ShortestDistanceFromItem___c__DisplayClass0_0___GetRatingBase_b__0(
   int32_t squareIndex_k__BackingField; // w9
 
   if ( !x || (targetSquare = this->fields.targetSquare) == 0 )
-    sub_1C71608(this, x);
+    sub_1C942F0(this, x);
   squareIndex_k__BackingField = targetSquare->fields._squareIndex_k__BackingField;
   return (x->fields.actionIndex == squareIndex_k__BackingField || x->fields.baseIndex == squareIndex_k__BackingField)
       && WarBoardAIRoute_RouteData__HasFlag(x, 0x8000000, 0);

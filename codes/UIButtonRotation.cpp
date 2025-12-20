@@ -6,10 +6,10 @@ void UIButtonRotation___ctor(UIButtonRotation_o *this, const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *v6; // x8
   float v7; // s1
 
-  if ( !byte_4CC0D09 )
+  if ( !byte_4D25F19 )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D09 = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -32,11 +32,11 @@ void UIButtonRotation__OnDisable(UIButtonRotation_o *this, const MethodInfo *met
   struct UnityEngine_Transform_o *v5; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4CCBA8F & 1) == 0 )
+  if ( (byte_4D30E41 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_TweenRotation___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBA8F = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_TweenRotation___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30E41 = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -50,7 +50,7 @@ void UIButtonRotation__OnDisable(UIButtonRotation_o *this, const MethodInfo *met
         goto LABEL_14;
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)v5,
-                           (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_TweenRotation___);
+                           (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_TweenRotation___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v5 = (struct UnityEngine_Transform_o *)UnityEngine_Object__op_Inequality(
@@ -66,7 +66,7 @@ void UIButtonRotation__OnDisable(UIButtonRotation_o *this, const MethodInfo *met
           return;
         }
 LABEL_14:
-        sub_1C71608(v5, v4);
+        sub_1C942F0(v5, v4);
       }
     }
   }
@@ -79,10 +79,10 @@ void UIButtonRotation__OnEnable(UIButtonRotation_o *this, const MethodInfo *meth
   bool IsHighlighted; // w1
   const MethodInfo *v5; // x2
 
-  if ( (byte_4CCBA8E & 1) == 0 )
+  if ( (byte_4D30E40 & 1) == 0 )
   {
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CCBA8E = 1;
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D30E40 = 1;
   }
   if ( this->fields.mStarted )
   {
@@ -159,7 +159,7 @@ void UIButtonRotation__OnHover(UIButtonRotation_o *this, bool isOver, const Meth
     tweenTarget = (UnityEngine_Component_o *)TweenRotation__Begin(v13, duration, v23, 0);
     if ( !tweenTarget )
 LABEL_10:
-      sub_1C71608(tweenTarget, v5);
+      sub_1C942F0(tweenTarget, v5);
     LODWORD(tweenTarget[1].monitor) = 3;
   }
 }
@@ -201,10 +201,10 @@ void UIButtonRotation__OnPress(UIButtonRotation_o *this, bool isPressed, const M
   UnityEngine_Quaternion_o v36; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v37; // 0:s1.4,4:s2.4,8:s3.4,12:s4.4
 
-  if ( (byte_4CCBA90 & 1) == 0 )
+  if ( (byte_4D30E42 & 1) == 0 )
   {
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CCBA90 = 1;
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D30E42 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -278,7 +278,7 @@ void UIButtonRotation__OnPress(UIButtonRotation_o *this, bool isPressed, const M
     tweenTarget = (UnityEngine_Component_o *)TweenRotation__Begin(v9, duration, v37, 0);
     if ( !tweenTarget )
 LABEL_16:
-      sub_1C71608(tweenTarget, v5);
+      sub_1C942F0(tweenTarget, v5);
     LODWORD(tweenTarget[1].monitor) = 3;
   }
 }
@@ -289,10 +289,10 @@ void UIButtonRotation__OnSelect(UIButtonRotation_o *this, bool isSelected, const
   const MethodInfo *v5; // x2
   UICamera_c *v6; // x0
 
-  if ( (byte_4CCBA91 & 1) == 0 )
+  if ( (byte_4D30E43 & 1) == 0 )
   {
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CCBA91 = 1;
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D30E43 = 1;
   }
   if ( UnityEngine_Behaviour__get_enabled((UnityEngine_Behaviour_o *)this, 0) )
   {
@@ -324,10 +324,10 @@ void UIButtonRotation__Start(UIButtonRotation_o *this, const MethodInfo *method)
   int64_t v11; // x6
   System_String_o *v12; // x7
 
-  if ( (byte_4CCBA8D & 1) == 0 )
+  if ( (byte_4D30E3F & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBA8D = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30E3F = 1;
   }
   if ( !this->fields.mStarted )
   {
@@ -340,7 +340,7 @@ void UIButtonRotation__Start(UIButtonRotation_o *this, const MethodInfo *method)
     {
       transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
       this->fields.tweenTarget = transform;
-      sub_1C71354(
+      sub_1C9403C(
         (GrandQuestFolderBoardItem_o *)&this->fields.tweenTarget,
         (int32_t)transform,
         v7,
@@ -351,7 +351,7 @@ void UIButtonRotation__Start(UIButtonRotation_o *this, const MethodInfo *method)
         v12);
     }
     if ( !*p_tweenTarget )
-      sub_1C71608(0, v5);
+      sub_1C942F0(0, v5);
     this->fields.mRot = UnityEngine_Transform__get_localRotation(*p_tweenTarget, 0);
   }
 }

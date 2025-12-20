@@ -1,22 +1,22 @@
 void AccountDeleteConfirmDialog___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CC1012 & 1) == 0 )
+  if ( (byte_4D26222 & 1) == 0 )
   {
-    sub_1C713B0(&AccountDeleteConfirmDialog_TypeInfo);
-    sub_1C713B0(&StringLiteral_407/*"#494949"*/);
-    byte_4CC1012 = 1;
+    sub_1C94098(&AccountDeleteConfirmDialog_TypeInfo);
+    sub_1C94098(&StringLiteral_407/*"#494949"*/);
+    byte_4D26222 = 1;
   }
   AccountDeleteConfirmDialog_TypeInfo->static_fields->PUSH_BUTTON_DISABLED_COLOR_CODE = (struct System_String_o *)StringLiteral_407/*"#494949"*/;
-  sub_1C71354(AccountDeleteConfirmDialog_TypeInfo->static_fields, StringLiteral_407/*"#494949"*/);
+  sub_1C9403C(AccountDeleteConfirmDialog_TypeInfo->static_fields, StringLiteral_407/*"#494949"*/);
 }
 
 
 void AccountDeleteConfirmDialog___ctor(AccountDeleteConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC1011 & 1) == 0 )
+  if ( (byte_4D26221 & 1) == 0 )
   {
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    byte_4CC1011 = 1;
+    sub_1C94098(&BaseDialog_TypeInfo);
+    byte_4D26221 = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -28,11 +28,11 @@ void AccountDeleteConfirmDialog__Close(AccountDeleteConfirmDialog_o *this, const
 {
   const MethodInfo *v2; // x2
 
-  AccountDeleteConfirmDialog__Close_31331204(this, 0, v2);
+  AccountDeleteConfirmDialog__Close_31473740(this, 0, v2);
 }
 
 
-void AccountDeleteConfirmDialog__Close_31331204(
+void AccountDeleteConfirmDialog__Close_31473740(
         AccountDeleteConfirmDialog_o *this,
         System_Action_o *callback,
         const MethodInfo *method)
@@ -40,15 +40,15 @@ void AccountDeleteConfirmDialog__Close_31331204(
   System_Action_o *v5; // x20
   const MethodInfo *v6; // x2
 
-  if ( (byte_4CC100D & 1) == 0 )
+  if ( (byte_4D2621D & 1) == 0 )
   {
-    sub_1C713B0(&Method_AccountDeleteConfirmDialog_EndClose__);
-    sub_1C713B0(&System_Action_TypeInfo);
-    byte_4CC100D = 1;
+    sub_1C94098(&Method_AccountDeleteConfirmDialog_EndClose__);
+    sub_1C94098(&System_Action_TypeInfo);
+    byte_4D2621D = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1C71354(&this->fields.closeEndFunc, callback);
-  v5 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  sub_1C9403C(&this->fields.closeEndFunc, callback);
+  v5 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_AccountDeleteConfirmDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, v6);
 }
@@ -67,7 +67,7 @@ void AccountDeleteConfirmDialog__EndClose(AccountDeleteConfirmDialog_o *this, co
   if ( closeEndFunc )
   {
     *p_closeEndFunc = 0;
-    sub_1C71354(p_closeEndFunc, 0);
+    sub_1C9403C(p_closeEndFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -84,11 +84,11 @@ void AccountDeleteConfirmDialog__Init(AccountDeleteConfirmDialog_o *this, const 
   UnityEngine_Object_o *buttonCancelLabel; // x20
   const MethodInfo *v10; // x1
 
-  if ( (byte_4CC100A & 1) == 0 )
+  if ( (byte_4D2621A & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC100A = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2621A = 1;
   }
   titleLabel = (UnityEngine_Object_o *)this->fields.titleLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -143,7 +143,7 @@ void AccountDeleteConfirmDialog__Init(AccountDeleteConfirmDialog_o *this, const 
   gameObject = (UILabel_o *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
 LABEL_30:
-    sub_1C71608(gameObject, v4);
+    sub_1C942F0(gameObject, v4);
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   BaseDialog__Init((BaseDialog_o *)this, v10);
 }
@@ -158,28 +158,28 @@ void AccountDeleteConfirmDialog__OnClickCancel(AccountDeleteConfirmDialog_o *thi
   __int64 v7; // x1
   struct AccountDeleteConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4CC100F & 1) == 0 )
+  if ( (byte_4D2621F & 1) == 0 )
   {
-    sub_1C713B0(&Method_AccountDeleteConfirmDialog_OnClickCancel__);
-    byte_4CC100F = 1;
+    sub_1C94098(&Method_AccountDeleteConfirmDialog_OnClickCancel__);
+    byte_4D2621F = 1;
   }
   v3 = Method_AccountDeleteConfirmDialog_OnClickCancel__;
   if ( (*((_BYTE *)Method_AccountDeleteConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C713C8();
-  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C940B0();
+  v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
   if ( this->fields.clickFunc )
   {
-    AccountDeleteConfirmDialog__Close_31331204(this, 0, v5);
+    AccountDeleteConfirmDialog__Close_31473740(this, 0, v5);
     clickFunc = this->fields.clickFunc;
     if ( !clickFunc )
-      sub_1C71608(v6, v7);
+      sub_1C942F0(v6, v7);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))clickFunc->fields.invoke_impl)(
       clickFunc->fields.method_code,
       0,
       clickFunc->fields.method);
     this->fields.clickFunc = 0;
-    sub_1C71354(&this->fields.clickFunc, 0);
+    sub_1C9403C(&this->fields.clickFunc, 0);
   }
 }
 
@@ -194,10 +194,10 @@ void AccountDeleteConfirmDialog__OnClickDecide(AccountDeleteConfirmDialog_o *thi
   const MethodInfo *v8; // x2
   struct AccountDeleteConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4CC100E & 1) == 0 )
+  if ( (byte_4D2621E & 1) == 0 )
   {
-    sub_1C713B0(&Method_AccountDeleteConfirmDialog_OnClickDecide__);
-    byte_4CC100E = 1;
+    sub_1C94098(&Method_AccountDeleteConfirmDialog_OnClickDecide__);
+    byte_4D2621E = 1;
   }
   checkSlider = (UIProgressBar_o *)this->fields.checkSlider;
   if ( !checkSlider )
@@ -206,8 +206,8 @@ void AccountDeleteConfirmDialog__OnClickDecide(AccountDeleteConfirmDialog_o *thi
   v5 = Method_AccountDeleteConfirmDialog_OnClickDecide__;
   v6 = value;
   if ( (*((_BYTE *)Method_AccountDeleteConfirmDialog_OnClickDecide__ + 83) & 2) != 0 )
-    v5 = (_QWORD *)sub_1C713C8();
-  v7 = (System_Reflection_MethodBase_o *)sub_1C71394(v5, v5[4]);
+    v5 = (_QWORD *)sub_1C940B0();
+  v7 = (System_Reflection_MethodBase_o *)sub_1C9407C(v5, v5[4]);
   if ( v6 < 1.0 )
   {
     OverwriteAssetSoundName__PlaySystemSe(v7, 2, 0, 0);
@@ -216,7 +216,7 @@ void AccountDeleteConfirmDialog__OnClickDecide(AccountDeleteConfirmDialog_o *thi
   OverwriteAssetSoundName__PlaySystemSe(v7, 8, 0, 0);
   if ( this->fields.clickFunc )
   {
-    AccountDeleteConfirmDialog__Close_31331204(this, 0, v8);
+    AccountDeleteConfirmDialog__Close_31473740(this, 0, v8);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
     {
@@ -225,11 +225,11 @@ void AccountDeleteConfirmDialog__OnClickDecide(AccountDeleteConfirmDialog_o *thi
         1,
         clickFunc->fields.method);
       this->fields.clickFunc = 0;
-      sub_1C71354(&this->fields.clickFunc, 0);
+      sub_1C9403C(&this->fields.clickFunc, 0);
       return;
     }
 LABEL_12:
-    sub_1C71608(checkSlider, method);
+    sub_1C942F0(checkSlider, method);
   }
 }
 
@@ -238,13 +238,13 @@ void AccountDeleteConfirmDialog__OnEnable(AccountDeleteConfirmDialog_o *this, co
 {
   UnityEngine_Transform_o *transform; // x0
 
-  if ( (byte_4CC1010 & 1) == 0 )
+  if ( (byte_4D26220 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_15653/*"Window/Objects/Buttons/CancelButton"*/);
-    byte_4CC1010 = 1;
+    sub_1C94098(&StringLiteral_15706/*"Window/Objects/Buttons/CancelButton"*/);
+    byte_4D26220 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackBtn_45260884(transform, (System_String_o *)StringLiteral_15653/*"Window/Objects/Buttons/CancelButton"*/, 0);
+  AndroidBackKeyManager__AddBackBtn_45761432(transform, (System_String_o *)StringLiteral_15706/*"Window/Objects/Buttons/CancelButton"*/, 0);
 }
 
 
@@ -262,7 +262,7 @@ void AccountDeleteConfirmDialog__OnSliderDragFinished(AccountDeleteConfirmDialog
     || (value = UIProgressBar__get_value(checkSlider, 0),
         (checkSlider = (UIProgressBar_o *)this->fields.checkSlider) == 0) )
   {
-    sub_1C71608(checkSlider, method);
+    sub_1C942F0(checkSlider, method);
   }
   v5 = value < 0.9;
   if ( value >= 0.9 )
@@ -292,17 +292,17 @@ void AccountDeleteConfirmDialog__Open(
   const MethodInfo *v14; // x2
   const MethodInfo *v15; // x4
 
-  if ( (byte_4CC100B & 1) == 0 )
+  if ( (byte_4D2621B & 1) == 0 )
   {
-    sub_1C713B0(&Method_AccountDeleteConfirmDialog_OnSliderDragFinished__);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&UIProgressBar_OnDragFinished_TypeInfo);
-    sub_1C713B0(&StringLiteral_1837/*"ACCOUNT_DELETE_CONFIRM_DECIDE"*/);
-    sub_1C713B0(&StringLiteral_1836/*"ACCOUNT_DELETE_CONFIRM_CANCEL"*/);
-    sub_1C713B0(&StringLiteral_1838/*"ACCOUNT_DELETE_CONFIRM_MESSAGE"*/);
-    sub_1C713B0(&StringLiteral_1840/*"ACCOUNT_DELETE_CONFIRM_WARNING"*/);
-    sub_1C713B0(&StringLiteral_1839/*"ACCOUNT_DELETE_CONFIRM_TITLE"*/);
-    byte_4CC100B = 1;
+    sub_1C94098(&Method_AccountDeleteConfirmDialog_OnSliderDragFinished__);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&UIProgressBar_OnDragFinished_TypeInfo);
+    sub_1C94098(&StringLiteral_1837/*"ACCOUNT_DELETE_CONFIRM_DECIDE"*/);
+    sub_1C94098(&StringLiteral_1836/*"ACCOUNT_DELETE_CONFIRM_CANCEL"*/);
+    sub_1C94098(&StringLiteral_1838/*"ACCOUNT_DELETE_CONFIRM_MESSAGE"*/);
+    sub_1C94098(&StringLiteral_1840/*"ACCOUNT_DELETE_CONFIRM_WARNING"*/);
+    sub_1C94098(&StringLiteral_1839/*"ACCOUNT_DELETE_CONFIRM_TITLE"*/);
+    byte_4D2621B = 1;
   }
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
@@ -332,12 +332,12 @@ void AccountDeleteConfirmDialog__Open(
     goto LABEL_13;
   UILabel__set_text(buttonDecideLabel, checkSlider, 0);
   this->fields.clickFunc = func;
-  sub_1C71354(&this->fields.clickFunc, func);
+  sub_1C9403C(&this->fields.clickFunc, func);
   checkSlider = (System_String_o *)this->fields.checkSlider;
   if ( !checkSlider
     || (UIProgressBar__set_value((UIProgressBar_o *)checkSlider, 0.0, 0),
         v12 = this->fields.checkSlider,
-        v13 = (UIProgressBar_OnDragFinished_o *)sub_1C715FC(UIProgressBar_OnDragFinished_TypeInfo),
+        v13 = (UIProgressBar_OnDragFinished_o *)sub_1C942E4(UIProgressBar_OnDragFinished_TypeInfo),
         UIProgressBar_OnDragFinished___ctor(
           v13,
           (Il2CppObject *)this,
@@ -346,10 +346,10 @@ void AccountDeleteConfirmDialog__Open(
         !v12) )
   {
 LABEL_13:
-    sub_1C71608(checkSlider, v7);
+    sub_1C942F0(checkSlider, v7);
   }
   v12->fields.onDragFinished = v13;
-  sub_1C71354(&v12->fields.onDragFinished, v13);
+  sub_1C9403C(&v12->fields.onDragFinished, v13);
   AccountDeleteConfirmDialog__SetSlider(this, 0, v14);
   BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, v15);
 }
@@ -365,21 +365,21 @@ void AccountDeleteConfirmDialog__SetSlider(AccountDeleteConfirmDialog_o *this, b
   UnityEngine_Color_o v9; // kr00_16
   UnityEngine_Color_o v10; // [xsp+0h] [xbp-30h] BYREF
 
-  if ( (byte_4CC100C & 1) == 0 )
+  if ( (byte_4D2621C & 1) == 0 )
   {
-    sub_1C713B0(&AccountDeleteConfirmDialog_TypeInfo);
-    sub_1C713B0(&StringLiteral_20660/*"img_slider_thumb_locked"*/);
-    sub_1C713B0(&StringLiteral_20659/*"img_slider_thumb"*/);
-    byte_4CC100C = 1;
+    sub_1C94098(&AccountDeleteConfirmDialog_TypeInfo);
+    sub_1C94098(&StringLiteral_20759/*"img_slider_thumb_locked"*/);
+    sub_1C94098(&StringLiteral_20758/*"img_slider_thumb"*/);
+    byte_4D2621C = 1;
   }
   *(_QWORD *)&v10.fields.r = 0;
   *(_QWORD *)&v10.fields.b = 0;
   sliderSprite = this->fields.sliderSprite;
   if ( !sliderSprite )
     goto LABEL_17;
-  v6 = (System_String_o **)&StringLiteral_20659/*"img_slider_thumb"*/;
+  v6 = (System_String_o **)&StringLiteral_20758/*"img_slider_thumb"*/;
   if ( !sliderOn )
-    v6 = (System_String_o **)&StringLiteral_20660/*"img_slider_thumb_locked"*/;
+    v6 = (System_String_o **)&StringLiteral_20759/*"img_slider_thumb_locked"*/;
   UISprite__set_spriteName(sliderSprite, *v6, 0);
   v7 = AccountDeleteConfirmDialog_TypeInfo;
   if ( !AccountDeleteConfirmDialog_TypeInfo->_2.cctor_finished )
@@ -407,7 +407,7 @@ void AccountDeleteConfirmDialog__SetSlider(AccountDeleteConfirmDialog_o *this, b
         (sliderSprite = (UISprite_o *)this->fields.decideButton) == 0) )
   {
 LABEL_17:
-    sub_1C71608(sliderSprite, sliderOn);
+    sub_1C942F0(sliderSprite, sliderOn);
   }
   ((void (__fastcall *)(UISprite_o *, bool, const MethodInfo *))sliderSprite->klass->vtable._5_get_isAnchoredVertically.methodPtr)(
     sliderSprite,
@@ -431,15 +431,15 @@ void AccountDeleteConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v4;
   this->fields.m_target = object;
-  sub_1C71354(&this->fields.m_target, object);
+  sub_1C9403C(&this->fields.m_target, object);
   v8 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v10 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v10, 0);
+      v10 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v10, 0);
     }
     goto LABEL_5;
   }
@@ -451,9 +451,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1A9D50C;
+  this->fields.invoke_impl = (intptr_t)sub_1ABEC1C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1A9D4C4;
+  this->fields.extra_arg = (intptr_t)sub_1ABEBD4;
 }
 
 
@@ -468,14 +468,14 @@ System_IAsyncResult_o *AccountDeleteConfirmDialog_ClickDelegate__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isDecide;
-  if ( (byte_4CC1013 & 1) == 0 )
+  if ( (byte_4D26223 & 1) == 0 )
   {
-    sub_1C713B0(&bool_TypeInfo);
-    byte_4CC1013 = 1;
+    sub_1C94098(&bool_TypeInfo);
+    byte_4D26223 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1C71364(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
 }
 
 
@@ -484,7 +484,7 @@ void AccountDeleteConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C71368(result, 0, method);
+  sub_1C94050(result, 0, method);
 }
 
 

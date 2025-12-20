@@ -26,25 +26,25 @@ float ShortestDistanceFromAllyMaster__GetRatingBase(
   struct WarBoardRatingBaseEntity_o *ratingBase; // x8
 
   v11 = this;
-  if ( (byte_4CC4D1F & 1) == 0 )
+  if ( (byte_4D2A0CD & 1) == 0 )
   {
-    sub_1C713B0(&AStarSearch_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
-    this = (ShortestDistanceFromAllyMaster_o *)sub_1C713B0(&WarBoardAIManager_TypeInfo);
-    byte_4CC4D1F = 1;
+    sub_1C94098(&AStarSearch_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+    this = (ShortestDistanceFromAllyMaster_o *)sub_1C94098(&WarBoardAIManager_TypeInfo);
+    byte_4D2A0CD = 1;
   }
   if ( !targetSquare || !dicPiecePlaceData )
     goto LABEL_20;
   if ( System_Collections_Generic_Dictionary_int__uint___ContainsKey(
          dicPiecePlaceData,
          targetSquare->fields._squareIndex_k__BackingField,
-         (const MethodInfo_3486BAC *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
+         (const MethodInfo_34D9378 *)Method_System_Collections_Generic_Dictionary_int__uint__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_int__uint___get_Item(
              dicPiecePlaceData,
              targetSquare->fields._squareIndex_k__BackingField,
-             (const MethodInfo_3486924 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
+             (const MethodInfo_34D90F0 *)Method_System_Collections_Generic_Dictionary_int__uint__get_Item__);
     if ( !WarBoardAIManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(WarBoardAIManager_TypeInfo);
     PieceUnique = WarBoardAIManager__GetPieceUnique(Item, 0);
@@ -77,7 +77,7 @@ float ShortestDistanceFromAllyMaster__GetRatingBase(
                              - ratingBase->fields.adjustmentValueA2 * ((int)max_length - 1)),
                        0.0);
 LABEL_20:
-            sub_1C71608(this, *(_QWORD *)&forceId);
+            sub_1C942F0(this, *(_QWORD *)&forceId);
           }
         }
       }

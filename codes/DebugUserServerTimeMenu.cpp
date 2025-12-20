@@ -15,16 +15,16 @@ void DebugUserServerTimeMenu__StartMenu(DebugUserServerTimeMenu_o *this, const M
   System_Action_o *v3; // x20
   const MethodInfo *v4; // x2
 
-  if ( (byte_4CC48C2 & 1) == 0 )
+  if ( (byte_4D29D12 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_DebugUserServerTimeMenu__StartMenu_b__7_0__);
-    byte_4CC48C2 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_DebugUserServerTimeMenu__StartMenu_b__7_0__);
+    byte_4D29D12 = 1;
   }
   TestScript_DebugTest_DebugItem_DebugItemMenuBase__StartMenu(
     (TestScript_DebugTest_DebugItem_DebugItemMenuBase_o *)this,
     0);
-  v3 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v3 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v3, (Il2CppObject *)this, Method_DebugUserServerTimeMenu__StartMenu_b__7_0__, 0);
   DebugUserServerTimeMenu__open(this, v3, v4);
 }
@@ -36,7 +36,7 @@ void DebugUserServerTimeMenu__close(DebugUserServerTimeMenu_o *this, const Metho
 
   rootObject = this->fields.rootObject;
   if ( !rootObject )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   UnityEngine_GameObject__SetActive(rootObject, 0, 0);
 }
 
@@ -59,7 +59,7 @@ void DebugUserServerTimeMenu__endCallback(DebugUserServerTimeMenu_o *this, const
   if ( endCallbackFunc )
   {
     p_endCallbackFunc->klass = 0;
-    sub_1C71354(p_endCallbackFunc, 0, v2, v3, v4, v5, v6, v7);
+    sub_1C9403C(p_endCallbackFunc, 0, v2, v3, v4, v5, v6, v7);
     ActionExtensions__Call(v9, 0);
   }
 }
@@ -105,27 +105,27 @@ void DebugUserServerTimeMenu__open(
   System_String_o *v24; // x7
   uint64_t dateData; // [xsp+38h] [xbp-38h] BYREF
 
-  if ( (byte_4CC48C3 & 1) == 0 )
+  if ( (byte_4D29D13 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C713B0(&System_DateTime_TypeInfo);
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&StringLiteral_21734/*"mm"*/);
-    sub_1C713B0(&StringLiteral_8722/*"MM"*/);
-    sub_1C713B0(&StringLiteral_7216/*"HH"*/);
-    sub_1C713B0(&StringLiteral_25566/*"ユーザーIDが存在しないため設定できません"*/);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    sub_1C713B0(&StringLiteral_25110/*"yyyy"*/);
-    sub_1C713B0(&StringLiteral_18537/*"dd"*/);
-    byte_4CC48C3 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C94098(&System_DateTime_TypeInfo);
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&StringLiteral_21839/*"mm"*/);
+    sub_1C94098(&StringLiteral_8741/*"MM"*/);
+    sub_1C94098(&StringLiteral_7232/*"HH"*/);
+    sub_1C94098(&StringLiteral_25689/*"ユーザーIDが存在しないため設定できません"*/);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    sub_1C94098(&StringLiteral_25232/*"yyyy"*/);
+    sub_1C94098(&StringLiteral_18605/*"dd"*/);
+    byte_4D29D13 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  if ( !byte_4CC112A )
+  if ( !byte_4D2633A )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    byte_4CC112A = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    byte_4D2633A = 1;
   }
   v5 = NetworkManager_TypeInfo;
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -143,13 +143,13 @@ void DebugUserServerTimeMenu__open(
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            inputYear,
-                           (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                           (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIInput___);
       if ( !System_DateTime_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(System_DateTime_TypeInfo);
       v9.fields._dateData = (uint64_t)&dateData;
-      inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65429908(
+      inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65815928(
                                                v9,
-                                               (System_String_o *)StringLiteral_25110/*"yyyy"*/,
+                                               (System_String_o *)StringLiteral_25232/*"yyyy"*/,
                                                0);
       if ( Component_object )
       {
@@ -159,11 +159,11 @@ void DebugUserServerTimeMenu__open(
         {
           v10 = UnityEngine_Component__GetComponent_object_(
                   inputYear,
-                  (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                  (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIInput___);
           v11.fields._dateData = (uint64_t)&dateData;
-          inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65429908(
+          inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65815928(
                                                    v11,
-                                                   (System_String_o *)StringLiteral_8722/*"MM"*/,
+                                                   (System_String_o *)StringLiteral_8741/*"MM"*/,
                                                    0);
           if ( v10 )
           {
@@ -173,11 +173,11 @@ void DebugUserServerTimeMenu__open(
             {
               v12 = UnityEngine_Component__GetComponent_object_(
                       inputYear,
-                      (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                      (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIInput___);
               v13.fields._dateData = (uint64_t)&dateData;
-              inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65429908(
+              inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65815928(
                                                        v13,
-                                                       (System_String_o *)StringLiteral_18537/*"dd"*/,
+                                                       (System_String_o *)StringLiteral_18605/*"dd"*/,
                                                        0);
               if ( v12 )
               {
@@ -187,11 +187,11 @@ void DebugUserServerTimeMenu__open(
                 {
                   v14 = UnityEngine_Component__GetComponent_object_(
                           inputYear,
-                          (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                          (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIInput___);
                   v15.fields._dateData = (uint64_t)&dateData;
-                  inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65429908(
+                  inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65815928(
                                                            v15,
-                                                           (System_String_o *)StringLiteral_7216/*"HH"*/,
+                                                           (System_String_o *)StringLiteral_7232/*"HH"*/,
                                                            0);
                   if ( v14 )
                   {
@@ -201,18 +201,18 @@ void DebugUserServerTimeMenu__open(
                     {
                       v16 = UnityEngine_Component__GetComponent_object_(
                               inputYear,
-                              (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                              (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIInput___);
                       v17.fields._dateData = (uint64_t)&dateData;
-                      inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65429908(
+                      inputYear = (UnityEngine_Component_o *)System_DateTime__ToString_65815928(
                                                                v17,
-                                                               (System_String_o *)StringLiteral_21734/*"mm"*/,
+                                                               (System_String_o *)StringLiteral_21839/*"mm"*/,
                                                                0);
                       if ( v16 )
                       {
                         UIInput__set_value((UIInput_o *)v16, (System_String_o *)inputYear, 0);
                         this->fields.endCallbackFunc = endCallback;
                         p_endCallbackFunc = &this->fields.endCallbackFunc;
-                        sub_1C71354(
+                        sub_1C9403C(
                           (GrandQuestFolderBoardItem_o *)p_endCallbackFunc,
                           (int32_t)endCallback,
                           v19,
@@ -238,15 +238,15 @@ void DebugUserServerTimeMenu__open(
       }
     }
 LABEL_29:
-    sub_1C71608(inputYear, v6.fields._dateData);
+    sub_1C942F0(inputYear, v6.fields._dateData);
   }
-  inputYear = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  inputYear = (UnityEngine_Component_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !inputYear )
     goto LABEL_29;
   CommonUI__OpenNotificationDialog(
     (CommonUI_o *)inputYear,
     (System_String_o *)StringLiteral_1/*""*/,
-    (System_String_o *)StringLiteral_25566/*"ユーザーIDが存在しないため設定できません"*/,
+    (System_String_o *)StringLiteral_25689/*"ユーザーIDが存在しないため設定できません"*/,
     endCallback,
     -1,
     0,

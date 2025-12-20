@@ -10,14 +10,14 @@ void CreateRecipeRequest__beginRequest(
         int32_t createNum,
         const MethodInfo *method)
 {
-  if ( (byte_4CC8F08 & 1) == 0 )
+  if ( (byte_4D2E3A9 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_22439/*"num"*/);
-    sub_1C713B0(&StringLiteral_23094/*"recipeId"*/);
-    byte_4CC8F08 = 1;
+    sub_1C94098(&StringLiteral_22547/*"num"*/);
+    sub_1C94098(&StringLiteral_23208/*"recipeId"*/);
+    byte_4D2E3A9 = 1;
   }
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23094/*"recipeId"*/, recipeId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22439/*"num"*/, createNum, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23208/*"recipeId"*/, recipeId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22547/*"num"*/, createNum, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
@@ -26,16 +26,16 @@ System_String_o *CreateRecipeRequest__getURL(CreateRecipeRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CC8F07 & 1) == 0 )
+  if ( (byte_4D2E3A8 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_19185/*"event/createRecipe"*/);
-    byte_4CC8F07 = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&StringLiteral_19270/*"event/createRecipe"*/);
+    byte_4D2E3A8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_19185/*"event/createRecipe"*/, 0);
+  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_19270/*"event/createRecipe"*/, 0);
 }
 
 
@@ -49,17 +49,17 @@ void CreateRecipeRequest__requestCompleted(
   Il2CppObject *success; // x20
   System_String_o *v8; // x1
 
-  if ( (byte_4CC8F09 & 1) == 0 )
+  if ( (byte_4D2E3AA & 1) == 0 )
   {
-    sub_1C713B0(&JsonManager_TypeInfo);
-    sub_1C713B0(&ResponseCommandKind_TypeInfo);
-    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
-    byte_4CC8F09 = 1;
+    sub_1C94098(&JsonManager_TypeInfo);
+    sub_1C94098(&ResponseCommandKind_TypeInfo);
+    sub_1C94098(&StringLiteral_22424/*"ng"*/);
+    byte_4D2E3AA = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(120, responseList, 0);
-  if ( v5 && (v6 = v5, ResponseData__checkError_44515240(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
+  if ( v5 && (v6 = v5, ResponseData__checkError_45012660(v5, 0)) && (success = (Il2CppObject *)v6->fields.success) != 0 )
   {
     if ( !JsonManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
@@ -67,7 +67,7 @@ void CreateRecipeRequest__requestCompleted(
   }
   else
   {
-    v8 = (System_String_o *)StringLiteral_22316/*"ng"*/;
+    v8 = (System_String_o *)StringLiteral_22424/*"ng"*/;
   }
   RequestBase__completed((RequestBase_o *)this, v8, 0);
 }

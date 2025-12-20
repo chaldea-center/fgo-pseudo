@@ -1,13 +1,13 @@
 void ServantSkillAddEntity___ctor(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC7E41 & 1) == 0 )
+  if ( (byte_4D2D2D0 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC7E41 = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2D2D0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -23,14 +23,14 @@ UnityEngine_Color_o ServantSkillAddEntity__ConvertColorFromString(
   float v8; // s3
   UnityEngine_Color_o result; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CC7E3F & 1) == 0 )
+  if ( (byte_4D2D2CE & 1) == 0 )
   {
-    sub_1C713B0(&System_Convert_TypeInfo);
-    byte_4CC7E3F = 1;
+    sub_1C94098(&System_Convert_TypeInfo);
+    byte_4D2D2CE = 1;
   }
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
-  v4 = System_Convert__ToInt32_65126912(colorCode, 16, 0);
+  v4 = System_Convert__ToInt32_65512932(colorCode, 16, 0);
   v5 = (float)BYTE2(v4) / 255.0;
   v6 = (float)BYTE1(v4) / 255.0;
   v7 = (float)(unsigned __int8)v4 / 255.0;
@@ -49,16 +49,16 @@ System_String_o *ServantSkillAddEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4CC7E40 & 1) == 0 )
+  if ( (byte_4D2D2CF & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4CC7E40 = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4D2D2CF = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            num,
            priority,
-           (const MethodInfo_3149724 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_319A74C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -82,19 +82,19 @@ int32_t ServantSkillAddEntity__GetBaseSkillId(ServantSkillAddEntity_o *this, con
   if ( !max_length )
     return 0;
   if ( !(_DWORD)max_length )
-    sub_1C71610(this);
+    sub_1C942F8(this);
   return skillIds->m_Items[0];
 }
 
 
 int32_t ServantSkillAddEntity__GetCondIgnoreSealedLimitCount(ServantSkillAddEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC7E3A & 1) == 0 )
+  if ( (byte_4D2D2C9 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_18237/*"condIgnoreSealedLimitCount"*/);
-    byte_4CC7E3A = 1;
+    sub_1C94098(&StringLiteral_18303/*"condIgnoreSealedLimitCount"*/);
+    byte_4D2D2C9 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18237/*"condIgnoreSealedLimitCount"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18303/*"condIgnoreSealedLimitCount"*/, 0, 0);
 }
 
 
@@ -121,12 +121,12 @@ UnityEngine_Color_o ServantSkillAddEntity__GetCondLabelColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4CC7E3D & 1) == 0 )
+  if ( (byte_4D2D2CC & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_18239/*"condLabelColor"*/);
-    byte_4CC7E3D = 1;
+    sub_1C94098(&StringLiteral_18305/*"condLabelColor"*/);
+    byte_4D2D2CC = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18239/*"condLabelColor"*/, 0, 0);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18305/*"condLabelColor"*/, 0, 0);
   IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( !IsNullOrEmpty )
   {
@@ -171,12 +171,12 @@ UnityEngine_Color_o ServantSkillAddEntity__GetCondSpriteColor(
   b = defaultColor.fields.b;
   g = defaultColor.fields.g;
   r = defaultColor.fields.r;
-  if ( (byte_4CC7E3E & 1) == 0 )
+  if ( (byte_4D2D2CD & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_18241/*"condSpriteColor"*/);
-    byte_4CC7E3E = 1;
+    sub_1C94098(&StringLiteral_18307/*"condSpriteColor"*/);
+    byte_4D2D2CD = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18241/*"condSpriteColor"*/, 0, 0);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_18307/*"condSpriteColor"*/, 0, 0);
   IsNullOrEmpty = System_String__IsNullOrEmpty(StringValue, 0);
   if ( !IsNullOrEmpty )
   {
@@ -202,12 +202,12 @@ System_Int32_array *ServantSkillAddEntity__GetEnableDispOnBattleConfirmDialog(
         ServantSkillAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CC7E3B & 1) == 0 )
+  if ( (byte_4D2D2CA & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_19043/*"enableDispOnBattleConfirmDialog"*/);
-    byte_4CC7E3B = 1;
+    sub_1C94098(&StringLiteral_19126/*"enableDispOnBattleConfirmDialog"*/);
+    byte_4D2D2CA = 1;
   }
-  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19043/*"enableDispOnBattleConfirmDialog"*/, 0, 0);
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_19126/*"enableDispOnBattleConfirmDialog"*/, 0, 0);
 }
 
 
@@ -227,12 +227,12 @@ bool ServantSkillAddEntity__HasKeyEnableDispOnBattleConfirmDialog(
         ServantSkillAddEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CC7E3C & 1) == 0 )
+  if ( (byte_4D2D2CB & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_19043/*"enableDispOnBattleConfirmDialog"*/);
-    byte_4CC7E3C = 1;
+    sub_1C94098(&StringLiteral_19126/*"enableDispOnBattleConfirmDialog"*/);
+    byte_4D2D2CB = 1;
   }
-  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_19043/*"enableDispOnBattleConfirmDialog"*/, 0);
+  return EntityScriptUtil__ScriptHasKey(this->fields.script, (System_String_o *)StringLiteral_19126/*"enableDispOnBattleConfirmDialog"*/, 0);
 }
 
 

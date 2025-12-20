@@ -1,10 +1,10 @@
 bool TopHomeRequest__IsExpirationDateUpdateEventMap(const MethodInfo *method)
 {
-  if ( (byte_4CC9035 & 1) == 0 )
+  if ( (byte_4D2E4D6 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&TopHomeRequest_TypeInfo);
-    byte_4CC9035 = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&TopHomeRequest_TypeInfo);
+    byte_4D2E4D6 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -20,12 +20,12 @@ void TopHomeRequest__UpdateAccessTime(const MethodInfo *method)
   struct BalanceConfig_StaticFields *static_fields; // x8
   struct TopHomeRequest_StaticFields *v5; // x9
 
-  if ( (byte_4CC9037 & 1) == 0 )
+  if ( (byte_4D2E4D8 & 1) == 0 )
   {
-    sub_1C713B0(&BalanceConfig_TypeInfo);
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&TopHomeRequest_TypeInfo);
-    byte_4CC9037 = 1;
+    sub_1C94098(&BalanceConfig_TypeInfo);
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&TopHomeRequest_TypeInfo);
+    byte_4D2E4D8 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -51,11 +51,11 @@ bool TopHomeRequest__checkExpirationDate(TopHomeRequest_o *this, const MethodInf
   int64_t nextRefreshTime; // x9
   bool result; // w0
 
-  if ( (byte_4CC9032 & 1) == 0 )
+  if ( (byte_4D2E4D3 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&TopHomeRequest_TypeInfo);
-    byte_4CC9032 = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&TopHomeRequest_TypeInfo);
+    byte_4D2E4D3 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -74,10 +74,10 @@ bool TopHomeRequest__checkExpirationDate(TopHomeRequest_o *this, const MethodInf
 
 void TopHomeRequest__clearExpirationDate(const MethodInfo *method)
 {
-  if ( (byte_4CC902F & 1) == 0 )
+  if ( (byte_4D2E4D0 & 1) == 0 )
   {
-    sub_1C713B0(&TopHomeRequest_TypeInfo);
-    byte_4CC902F = 1;
+    sub_1C94098(&TopHomeRequest_TypeInfo);
+    byte_4D2E4D0 = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->accessTime = 0;
 }
@@ -85,15 +85,15 @@ void TopHomeRequest__clearExpirationDate(const MethodInfo *method)
 
 System_String_o *TopHomeRequest__getMockData(TopHomeRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC9031 & 1) == 0 )
+  if ( (byte_4D2E4D2 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_9143/*"MockTopLoginRequest"*/);
-    byte_4CC9031 = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&StringLiteral_9162/*"MockTopLoginRequest"*/);
+    byte_4D2E4D2 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9143/*"MockTopLoginRequest"*/, 0);
+  return NetworkManager__getMockFile((System_String_o *)StringLiteral_9162/*"MockTopLoginRequest"*/, 0);
 }
 
 
@@ -101,25 +101,25 @@ System_String_o *TopHomeRequest__getURL(TopHomeRequest_o *this, const MethodInfo
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CC9030 & 1) == 0 )
+  if ( (byte_4D2E4D1 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_20069/*"home/top"*/);
-    byte_4CC9030 = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&StringLiteral_20159/*"home/top"*/);
+    byte_4D2E4D1 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_20069/*"home/top"*/, 0);
+  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_20159/*"home/top"*/, 0);
 }
 
 
 bool TopHomeRequest__isBackgroundRequest(TopHomeRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC9033 & 1) == 0 )
+  if ( (byte_4D2E4D4 & 1) == 0 )
   {
-    sub_1C713B0(&TopHomeRequest_TypeInfo);
-    byte_4CC9033 = 1;
+    sub_1C94098(&TopHomeRequest_TypeInfo);
+    byte_4D2E4D4 = 1;
   }
   return TopHomeRequest_TypeInfo->static_fields->isBackgroundRequestEnabled;
 }
@@ -134,23 +134,34 @@ void TopHomeRequest__requestCompleted(
   const MethodInfo *v6; // x2
   ResponseData_o *v7; // x20
   _BOOL8 v8; // x0
-  Il2CppObject *success; // x20
-  System_String_o *v10; // x0
+  System_Collections_Generic_Dictionary_object__object__o *success; // x21
+  Il2CppObject *Item; // x0
+  __int64 v11; // x1
+  System_String_o *v12; // x21
+  System_Byte_array *v13; // x21
+  Il2CppObject *v14; // x0
+  Il2CppObject *v15; // x20
+  System_String_o *v16; // x0
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
-  __int64 v12; // x1
+  __int64 v18; // x1
   void (__fastcall *invoke_impl)(intptr_t, __int64, intptr_t); // x3
   intptr_t method_code; // x0
   struct TopHomeRequest_StaticFields *static_fields; // x8
-  __int64 *v16; // x9
+  __int64 *v22; // x9
 
-  if ( (byte_4CC9038 & 1) == 0 )
+  if ( (byte_4D2E4D9 & 1) == 0 )
   {
-    sub_1C713B0(&JsonManager_TypeInfo);
-    sub_1C713B0(&ResponseCommandKind_TypeInfo);
-    sub_1C713B0(&TopHomeRequest_TypeInfo);
-    sub_1C713B0(&StringLiteral_22486/*"ok"*/);
-    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
-    byte_4CC9038 = 1;
+    sub_1C94098(&CatAndMouseGame_TypeInfo);
+    sub_1C94098(&System_Convert_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C94098(&JsonManager_TypeInfo);
+    sub_1C94098(&ResponseCommandKind_TypeInfo);
+    sub_1C94098(&TopHomeRequest_TypeInfo);
+    sub_1C94098(&StringLiteral_22594/*"ok"*/);
+    sub_1C94098(&StringLiteral_16994/*"assetbundleKey"*/);
+    sub_1C94098(&StringLiteral_22424/*"ng"*/);
+    byte_4D2E4D9 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -163,44 +174,67 @@ void TopHomeRequest__requestCompleted(
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v16 = &StringLiteral_22316/*"ng"*/;
-    goto LABEL_14;
+    v22 = &StringLiteral_22424/*"ng"*/;
+    goto LABEL_21;
   }
   TopHomeRequest__UpdateAccessTime((const MethodInfo *)v8);
-  success = (Il2CppObject *)v7->fields.success;
+  success = (System_Collections_Generic_Dictionary_object__object__o *)v7->fields.success;
   if ( !success )
   {
     CallBack = this->fields.CallBack;
     if ( !CallBack )
       return;
-    v16 = &StringLiteral_22486/*"ok"*/;
-LABEL_14:
+    v22 = &StringLiteral_22594/*"ok"*/;
+LABEL_21:
     invoke_impl = (void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl;
     method_code = CallBack->fields.method_code;
-    v12 = *v16;
-    goto LABEL_15;
+    v18 = *v22;
+    goto LABEL_22;
   }
+  if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
+         (System_Collections_Generic_Dictionary_object__object__o *)v7->fields.success,
+         (Il2CppObject *)StringLiteral_16994/*"assetbundleKey"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+  {
+    Item = System_Collections_Generic_Dictionary_object__object___get_Item(
+             success,
+             (Il2CppObject *)StringLiteral_16994/*"assetbundleKey"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    if ( !Item )
+      sub_1C942F0(0, v11);
+    v12 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
+                               Item,
+                               Item->klass->vtable[3].method);
+    if ( !System_Convert_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(System_Convert_TypeInfo);
+    v13 = System_Convert__FromBase64String(v12, 0);
+    if ( !CatAndMouseGame_TypeInfo->_2.cctor_finished )
+      j_il2cpp_runtime_class_init_0(CatAndMouseGame_TypeInfo);
+    v14 = CatAndMouseGame__MouseInfoMsgPack(v13, 0);
+    CatAndMouseGame__AddAssetbundleKeys(v14, 0);
+  }
+  v15 = (Il2CppObject *)v7->fields.success;
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(JsonManager_TypeInfo);
-  v10 = JsonManager__toJson(success, 0, 0, 0);
+  v16 = JsonManager__toJson(v15, 0, 0, 0);
   CallBack = this->fields.CallBack;
   if ( CallBack )
   {
-    v12 = (__int64)v10;
+    v18 = (__int64)v16;
     invoke_impl = (void (__fastcall *)(intptr_t, __int64, intptr_t))CallBack->fields.invoke_impl;
     method_code = CallBack->fields.method_code;
-LABEL_15:
-    invoke_impl(method_code, v12, CallBack->fields.method);
+LABEL_22:
+    invoke_impl(method_code, v18, CallBack->fields.method);
   }
 }
 
 
 void TopHomeRequest__setBackgroundRequest(TopHomeRequest_o *this, bool isEnabled, const MethodInfo *method)
 {
-  if ( (byte_4CC9034 & 1) == 0 )
+  if ( (byte_4D2E4D5 & 1) == 0 )
   {
-    sub_1C713B0(&TopHomeRequest_TypeInfo);
-    byte_4CC9034 = 1;
+    sub_1C94098(&TopHomeRequest_TypeInfo);
+    byte_4D2E4D5 = 1;
   }
   TopHomeRequest_TypeInfo->static_fields->isBackgroundRequestEnabled = isEnabled;
 }
@@ -211,11 +245,11 @@ void TopHomeRequest__setRecentRefreshTime(int64_t time, const MethodInfo *method
   int64_t v3; // x0
   struct TopHomeRequest_StaticFields *static_fields; // x8
 
-  if ( (byte_4CC9036 & 1) == 0 )
+  if ( (byte_4D2E4D7 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&TopHomeRequest_TypeInfo);
-    byte_4CC9036 = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&TopHomeRequest_TypeInfo);
+    byte_4D2E4D7 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);

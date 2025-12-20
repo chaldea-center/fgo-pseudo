@@ -11,26 +11,26 @@ void ClassBoardItemModel___ctor(ClassBoardItemModel_o *this, int32_t itemId, int
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4CCB0C8 & 1) == 0 )
+  if ( (byte_4D305A4 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_ItemMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
-    byte_4CCB0C8 = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_ItemMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+    byte_4D305A4 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ItemMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ItemMaster___);
   if ( !Master_object )
-    sub_1C71608(0, v8);
+    sub_1C942F0(0, v8);
   Entity = DataMasterBase_object__object__int___GetEntity(
              (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
              itemId,
-             (const MethodInfo_3408E80 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
+             (const MethodInfo_345B4C0 *)Method_DataMasterBase_ItemMaster__ItemEntity__int__GetEntity__);
   this->fields.entity = (struct ItemEntity_o *)Entity;
   p_fields = &this->fields;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_fields, (int32_t)Entity, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_fields, (int32_t)Entity, v11, v12, v13, v14, v15, v16);
   p_fields->_Num_k__BackingField = num;
 }
 
@@ -47,7 +47,7 @@ int32_t ClassBoardItemModel__get_Id(ClassBoardItemModel_o *this, const MethodInf
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return entity->fields.id;
 }
 
@@ -65,7 +65,7 @@ int64_t ClassBoardItemModel__get_UserNum(ClassBoardItemModel_o *this, const Meth
 
   entity = this->fields.entity;
   if ( !entity )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   result = (int64_t)UserOwnItemDetail__GetUserOwnInfoByItemId(entity->fields.id, 0);
   if ( result )
     return *(_QWORD *)(result + 16);

@@ -5,9 +5,9 @@ void SampleCardListViewItem___ctor(SampleCardListViewItem_o *this, const MethodI
 }
 
 
-void SampleCardListViewItem___ctor_37903444(SampleCardListViewItem_o *this, int32_t index, const MethodInfo *method)
+void SampleCardListViewItem___ctor_38290384(SampleCardListViewItem_o *this, int32_t index, const MethodInfo *method)
 {
-  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
   this->fields.cardId = 0;
 }
 
@@ -24,13 +24,13 @@ System_String_o *SampleCardListViewItem__ToString(SampleCardListViewItem_o *this
   System_String_o *v3; // x0
 
   v2 = (int)this;
-  if ( (byte_4CC4B59 & 1) == 0 )
+  if ( (byte_4D29F07 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_17786/*"cardId "*/);
-    byte_4CC4B59 = 1;
+    sub_1C94098(&StringLiteral_17852/*"cardId "*/);
+    byte_4D29F07 = 1;
   }
   v3 = System_Int32__ToString(v2 + 120, 0);
-  return System_String__Concat_64031724((System_String_o *)StringLiteral_17786/*"cardId "*/, v3, 0);
+  return System_String__Concat_64417744((System_String_o *)StringLiteral_17852/*"cardId "*/, v3, 0);
 }
 
 

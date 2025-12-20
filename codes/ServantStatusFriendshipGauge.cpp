@@ -1,9 +1,9 @@
 void ServantStatusFriendshipGauge___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CC3737 & 1) == 0 )
+  if ( (byte_4D2914B & 1) == 0 )
   {
-    sub_1C713B0(&ServantStatusFriendshipGauge_TypeInfo);
-    byte_4CC3737 = 1;
+    sub_1C94098(&ServantStatusFriendshipGauge_TypeInfo);
+    byte_4D2914B = 1;
   }
   *ServantStatusFriendshipGauge_TypeInfo->static_fields = (struct ServantStatusFriendshipGauge_StaticFields)0xC0000000C1A00000LL;
 }
@@ -26,17 +26,17 @@ void ServantStatusFriendshipGauge___ctor(ServantStatusFriendshipGauge_o *this, c
   int64_t v15; // x6
   System_String_o *v16; // x7
 
-  if ( (byte_4CC3736 & 1) == 0 )
+  if ( (byte_4D2914A & 1) == 0 )
   {
-    sub_1C713B0(&UISlider___TypeInfo);
-    byte_4CC3736 = 1;
+    sub_1C94098(&UISlider___TypeInfo);
+    byte_4D2914A = 1;
   }
-  v3 = (struct UISlider_array *)sub_1C71458(UISlider___TypeInfo, 10);
+  v3 = (struct UISlider_array *)sub_1C94140(UISlider___TypeInfo, 10);
   this->fields.gaugeSliderList = v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.gaugeSliderList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
-  v10 = (struct UISlider_array *)sub_1C71458(UISlider___TypeInfo, 10);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.gaugeSliderList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  v10 = (struct UISlider_array *)sub_1C94140(UISlider___TypeInfo, 10);
   this->fields.overLimitGaugeSliderList = v10;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.overLimitGaugeSliderList,
     (int32_t)v10,
     v11,
@@ -62,10 +62,10 @@ void ServantStatusFriendshipGauge__DisplayGauge(
   BalanceConfig_c *v10; // x0
   int DisableFriendshipExceed; // w22
 
-  if ( (byte_4CC3734 & 1) == 0 )
+  if ( (byte_4D29148 & 1) == 0 )
   {
-    sub_1C713B0(&BalanceConfig_TypeInfo);
-    byte_4CC3734 = 1;
+    sub_1C94098(&BalanceConfig_TypeInfo);
+    byte_4D29148 = 1;
   }
   if ( maxRank <= 10 )
   {
@@ -112,7 +112,7 @@ void ServantStatusFriendshipGauge__DisplayNomalGauge(
   gaugeSliderList = this->fields.gaugeSliderList;
   if ( !gaugeSliderList )
 LABEL_22:
-    sub_1C71608(this, *(_QWORD *)&currentRank);
+    sub_1C942F0(this, *(_QWORD *)&currentRank);
   v8 = this;
   v10 = 0;
   while ( 1 )
@@ -121,7 +121,7 @@ LABEL_22:
     if ( (int)v10 >= max_length )
       break;
     if ( (unsigned int)v10 >= max_length )
-      sub_1C71610(this);
+      sub_1C942F8(this);
     v13 = &gaugeSliderList->obj.klass + v10;
     v14 = (UnityEngine_Component_o *)v13[4];
     if ( !v14
@@ -130,7 +130,7 @@ LABEL_22:
                                                      0)) == 0 )
     {
 LABEL_24:
-      sub_1C71608(this, *(_QWORD *)&currentRank);
+      sub_1C942F0(this, *(_QWORD *)&currentRank);
     }
     if ( (int)v10 >= maxRank )
     {
@@ -199,15 +199,15 @@ void ServantStatusFriendshipGauge__DisplayOverLimitGauge(
 
   v7 = currentRank;
   v8 = this;
-  if ( (byte_4CC3735 & 1) == 0 )
+  if ( (byte_4D29149 & 1) == 0 )
   {
-    this = (ServantStatusFriendshipGauge_o *)sub_1C713B0(&ServantStatusFriendshipGauge_TypeInfo);
-    byte_4CC3735 = 1;
+    this = (ServantStatusFriendshipGauge_o *)sub_1C94098(&ServantStatusFriendshipGauge_TypeInfo);
+    byte_4D29149 = 1;
   }
   overLimitGaugeSliderList = v8->fields.overLimitGaugeSliderList;
   if ( !overLimitGaugeSliderList )
 LABEL_22:
-    sub_1C71608(this, *(_QWORD *)&currentRank);
+    sub_1C942F0(this, *(_QWORD *)&currentRank);
   v10 = 0;
   v11 = maxRank - 10;
   while ( 1 )
@@ -216,7 +216,7 @@ LABEL_22:
     if ( (int)v10 >= max_length )
       break;
     if ( (unsigned int)v10 >= max_length )
-      sub_1C71610(this);
+      sub_1C942F8(this);
     v13 = &overLimitGaugeSliderList->obj.klass + v10;
     v14 = (UIProgressBar_o *)v13[4];
     if ( v14 )
@@ -284,12 +284,12 @@ void ServantStatusFriendshipGauge__Initialize(ServantStatusFriendshipGauge_o *th
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4CC3732 & 1) == 0 )
+  if ( (byte_4D29146 & 1) == 0 )
   {
-    sub_1C713B0(&AtlasManager_TypeInfo);
-    sub_1C713B0(&BalanceConfig_TypeInfo);
-    this = (ServantStatusFriendshipGauge_o *)sub_1C713B0(&StringLiteral_20419/*"img_bondsgage_11"*/);
-    byte_4CC3732 = 1;
+    sub_1C94098(&AtlasManager_TypeInfo);
+    sub_1C94098(&BalanceConfig_TypeInfo);
+    this = (ServantStatusFriendshipGauge_o *)sub_1C94098(&StringLiteral_20514/*"img_bondsgage_11"*/);
+    byte_4D29146 = 1;
   }
   gaugeSliderList = v2->fields.gaugeSliderList;
   if ( !gaugeSliderList )
@@ -320,14 +320,14 @@ void ServantStatusFriendshipGauge__Initialize(ServantStatusFriendshipGauge_o *th
         !v9) )
   {
 LABEL_24:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   v10 = v9->max_length;
   if ( v10 < 5 )
     goto LABEL_18;
   if ( v10 == 5 )
 LABEL_25:
-    sub_1C71610(this);
+    sub_1C942F8(this);
   this = (ServantStatusFriendshipGauge_o *)v9->m_Items[5];
   if ( !this )
     goto LABEL_24;
@@ -348,7 +348,7 @@ LABEL_18:
     overLimitGaugeSprite = v2->fields.overLimitGaugeSprite;
     if ( !AtlasManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
-    AtlasManager__SetBondAtlasImage(overLimitGaugeSprite, (System_String_o *)StringLiteral_20419/*"img_bondsgage_11"*/, 0);
+    AtlasManager__SetBondAtlasImage(overLimitGaugeSprite, (System_String_o *)StringLiteral_20514/*"img_bondsgage_11"*/, 0);
   }
 }
 
@@ -374,13 +374,13 @@ void ServantStatusFriendshipGauge__Set(
 
   v18 = maxRank;
   v19 = currentRank;
-  if ( (byte_4CC3733 & 1) == 0 )
+  if ( (byte_4D29147 & 1) == 0 )
   {
-    sub_1C713B0(&BalanceConfig_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_14824/*"UNIT_REST_NONE"*/);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC3733 = 1;
+    sub_1C94098(&BalanceConfig_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&StringLiteral_14877/*"UNIT_REST_NONE"*/);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D29147 = 1;
   }
   if ( this->fields.isInit )
   {
@@ -422,11 +422,11 @@ void ServantStatusFriendshipGauge__Set(
     if ( latePointLabel )
       goto LABEL_17;
 LABEL_20:
-    sub_1C71608(NumberFormat, v14);
+    sub_1C942F0(NumberFormat, v14);
   }
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  NumberFormat = LocalizationManager__Get((System_String_o *)StringLiteral_14824/*"UNIT_REST_NONE"*/, 0);
+  NumberFormat = LocalizationManager__Get((System_String_o *)StringLiteral_14877/*"UNIT_REST_NONE"*/, 0);
 LABEL_16:
   v14 = NumberFormat;
   if ( !latePointLabel )
@@ -450,7 +450,7 @@ void ServantStatusFriendshipGauge__SetActiveContainer(
     || (UnityEngine_GameObject__SetActive(nomalGaugeContainer, !isOverLimit, 0),
         (nomalGaugeContainer = this->fields.overLimitGaugeContainer) == 0) )
   {
-    sub_1C71608(nomalGaugeContainer, isOverLimit);
+    sub_1C942F0(nomalGaugeContainer, isOverLimit);
   }
   UnityEngine_GameObject__SetActive(nomalGaugeContainer, isOverLimit, 0);
 }

@@ -8,14 +8,14 @@ void WarBoardTaskBase___ctor(WarBoardTaskBase_o *this, const MethodInfo *method)
   System_String_o *v7; // x7
   int32_t v9; // w1
 
-  if ( (byte_4CC5068 & 1) == 0 )
+  if ( (byte_4D2A416 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC5068 = 1;
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2A416 = 1;
   }
   v9 = StringLiteral_1/*""*/;
   this->fields.Key = (struct System_String_o *)StringLiteral_1/*""*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, v9, v2, v3, v4, v5, v6, v7);
   this->fields.IsEnabled = 1;
   System_Object___ctor((Il2CppObject *)this, 0);
 }
@@ -25,12 +25,12 @@ System_Collections_IEnumerator_o *WarBoardTaskBase__Execute(WarBoardTaskBase_o *
 {
   __int64 v2; // x19
 
-  if ( (byte_4CC5067 & 1) == 0 )
+  if ( (byte_4D2A415 & 1) == 0 )
   {
-    sub_1C713B0(&WarBoardTaskBase__Execute_d__15_TypeInfo);
-    byte_4CC5067 = 1;
+    sub_1C94098(&WarBoardTaskBase__Execute_d__15_TypeInfo);
+    byte_4D2A415 = 1;
   }
-  v2 = sub_1C715FC(WarBoardTaskBase__Execute_d__15_TypeInfo);
+  v2 = sub_1C942E4(WarBoardTaskBase__Execute_d__15_TypeInfo);
   System_Object___ctor((Il2CppObject *)v2, 0);
   *(_DWORD *)(v2 + 16) = 0;
   return (System_Collections_IEnumerator_o *)v2;
@@ -118,7 +118,7 @@ void WarBoardTaskBase_TaskCallback___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -129,12 +129,12 @@ void WarBoardTaskBase_TaskCallback___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v14, 0);
+      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -146,9 +146,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA52DC;
+  this->fields.invoke_impl = (intptr_t)sub_1AC6A20;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA529C;
+  this->fields.extra_arg = (intptr_t)sub_1AC69E0;
 }
 
 
@@ -161,7 +161,7 @@ System_IAsyncResult_o *WarBoardTaskBase_TaskCallback__BeginInvoke(
   __int64 v5; // [xsp+8h] [xbp-8h] BYREF
 
   v5 = 0;
-  return (System_IAsyncResult_o *)sub_1C71364(this, &v5, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, &v5, callback, object);
 }
 
 
@@ -170,7 +170,7 @@ void WarBoardTaskBase_TaskCallback__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C71368(result, 0, method);
+  sub_1C94050(result, 0, method);
 }
 
 
@@ -214,11 +214,11 @@ void __noreturn WarBoardTaskBase__Execute_d__15__System_Collections_IEnumerator_
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
+  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C713C4(&Method_WarBoardTaskBase__Execute_d__15_System_Collections_IEnumerator_Reset__);
-  sub_1C714D8(v3, v4);
+  v4 = sub_1C940AC(&Method_WarBoardTaskBase__Execute_d__15_System_Collections_IEnumerator_Reset__);
+  sub_1C941C0(v3, v4);
 }
 
 

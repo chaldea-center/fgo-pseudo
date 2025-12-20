@@ -7,7 +7,7 @@ void ActionExtensions__Call(System_Action_o *action, const MethodInfo *method)
 }
 
 
-void ActionExtensions__Call_Int32Enum_(System_Action_T__o *action, int32_t arg, const MethodInfo_3095CB8 *method)
+void ActionExtensions__Call_Int32Enum_(System_Action_T__o *action, int32_t arg, const MethodInfo_30E58D0 *method)
 {
   if ( method->rgctx_data )
   {
@@ -15,7 +15,7 @@ void ActionExtensions__Call_Int32Enum_(System_Action_T__o *action, int32_t arg, 
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))action->fields.invoke_impl)(
@@ -25,10 +25,33 @@ LABEL_3:
 }
 
 
+void ActionExtensions__Call_Int32Enum__object_(
+        System_Action_T1__T2__o *action,
+        int32_t arg1,
+        Il2CppObject *arg2,
+        const MethodInfo_30E5C64 *method)
+{
+  if ( method->rgctx_data )
+  {
+    if ( !action )
+      return;
+    goto LABEL_3;
+  }
+  sub_1C6A188(method);
+  if ( action )
+LABEL_3:
+    ((void (__fastcall *)(intptr_t, _QWORD, Il2CppObject *, intptr_t))action->fields.invoke_impl)(
+      action->fields.method_code,
+      (unsigned int)arg1,
+      arg2,
+      action->fields.method);
+}
+
+
 void ActionExtensions__Call_ShowAllEx_DamageFuncArgument_(
         System_Action_T__o *action,
         HutongGames_PlayMaker_Actions_ShowAllEx_DamageFuncArgument_o *arg,
-        const MethodInfo_3095E80 *method)
+        const MethodInfo_30E5A98 *method)
 {
   void (__fastcall *invoke_impl)(intptr_t, __int128 *, intptr_t); // x9
   intptr_t method_code; // x0
@@ -43,7 +66,7 @@ void ActionExtensions__Call_ShowAllEx_DamageFuncArgument_(
   }
   else
   {
-    sub_1C474A0(method);
+    sub_1C6A188(method);
     if ( !action )
       return;
   }
@@ -59,7 +82,7 @@ void ActionExtensions__Call_ShowAllEx_DamageFuncArgument_(
 void ActionExtensions__Call___Il2CppFullySharedGenericType_(
         System_Action_T__o *action,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg,
-        const MethodInfo_3095DA8 *method)
+        const MethodInfo_30E59C0 *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x21
   __int64 v5; // x23
@@ -81,7 +104,7 @@ void ActionExtensions__Call___Il2CppFullySharedGenericType_(
   if ( !v5 )
   {
     monitor = arg.monitor;
-    sub_1C474A0(arg.monitor);
+    sub_1C6A188(arg.monitor);
     v5 = monitor[7];
   }
   v7 = *(_QWORD *)(v5 + 8);
@@ -113,7 +136,7 @@ void ActionExtensions__Call___Il2CppFullySharedGenericType____Il2CppFullySharedG
         System_Action_T1__T2__o *action,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg1,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg2,
-        const MethodInfo_3096154 *method)
+        const MethodInfo_30E5DC4 *method)
 {
   void **monitor; // x22
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x23
@@ -142,7 +165,7 @@ void ActionExtensions__Call___Il2CppFullySharedGenericType____Il2CppFullySharedG
   if ( !v7 )
   {
     v8 = arg2.klass;
-    sub_1C474A0(arg2.klass);
+    sub_1C6A188(arg2.klass);
     v7 = *(_QWORD **)&v8->_1.this_arg.bits;
   }
   v9 = v7[1];
@@ -185,7 +208,7 @@ void ActionExtensions__Call___Il2CppFullySharedGenericType____Il2CppFullySharedG
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg1,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg2,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o arg3,
-        const MethodInfo_30963C8 *method)
+        const MethodInfo_30E6038 *method)
 {
   Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *klass; // x23
   void **monitor; // x24
@@ -224,7 +247,7 @@ void ActionExtensions__Call___Il2CppFullySharedGenericType____Il2CppFullySharedG
   {
     v9 = action;
     v10 = arg2.monitor;
-    sub_1C474A0(arg2.monitor);
+    sub_1C6A188(arg2.monitor);
     action = v9;
     v8 = (_QWORD *)v10[7];
   }
@@ -275,7 +298,7 @@ void ActionExtensions__Call___Il2CppFullySharedGenericType____Il2CppFullySharedG
 }
 
 
-void ActionExtensions__Call_bool_(System_Action_T__o *action, bool arg, const MethodInfo_3095C18 *method)
+void ActionExtensions__Call_bool_(System_Action_T__o *action, bool arg, const MethodInfo_30E5830 *method)
 {
   if ( method->rgctx_data )
   {
@@ -283,7 +306,7 @@ void ActionExtensions__Call_bool_(System_Action_T__o *action, bool arg, const Me
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, bool, intptr_t))action->fields.invoke_impl)(
@@ -297,7 +320,7 @@ void ActionExtensions__Call_bool__bool_(
         System_Action_T1__T2__o *action,
         bool arg1,
         bool arg2,
-        const MethodInfo_3095EEC *method)
+        const MethodInfo_30E5B04 *method)
 {
   if ( method->rgctx_data )
   {
@@ -305,7 +328,7 @@ void ActionExtensions__Call_bool__bool_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, bool, bool, intptr_t))action->fields.invoke_impl)(
@@ -320,7 +343,7 @@ void ActionExtensions__Call_bool__int_(
         System_Action_T1__T2__o *action,
         bool arg1,
         int32_t arg2,
-        const MethodInfo_3095F44 *method)
+        const MethodInfo_30E5B5C *method)
 {
   if ( method->rgctx_data )
   {
@@ -328,7 +351,7 @@ void ActionExtensions__Call_bool__int_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, bool, _QWORD, intptr_t))action->fields.invoke_impl)(
@@ -344,7 +367,7 @@ void ActionExtensions__Call_bool__int__object_(
         bool arg1,
         int32_t arg2,
         Il2CppObject *arg3,
-        const MethodInfo_3096284 *method)
+        const MethodInfo_30E5EF4 *method)
 {
   if ( method->rgctx_data )
   {
@@ -352,7 +375,7 @@ void ActionExtensions__Call_bool__int__object_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, bool, _QWORD, Il2CppObject *, intptr_t))action->fields.invoke_impl)(
@@ -365,7 +388,7 @@ LABEL_3:
 
 
 // local variable allocation has failed, the output may be wrong!
-void ActionExtensions__Call_float_(System_Action_T__o *action, float arg, const MethodInfo_3095D58 *method)
+void ActionExtensions__Call_float_(System_Action_T__o *action, float arg, const MethodInfo_30E5970 *method)
 {
   long double v3; // q8
 
@@ -376,7 +399,7 @@ void ActionExtensions__Call_float_(System_Action_T__o *action, float arg, const 
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, intptr_t, long double))action->fields.invoke_impl)(
@@ -386,7 +409,7 @@ LABEL_3:
 }
 
 
-void ActionExtensions__Call_int_(System_Action_T__o *action, int32_t arg, const MethodInfo_3095C68 *method)
+void ActionExtensions__Call_int_(System_Action_T__o *action, int32_t arg, const MethodInfo_30E5880 *method)
 {
   if ( method->rgctx_data )
   {
@@ -394,7 +417,7 @@ void ActionExtensions__Call_int_(System_Action_T__o *action, int32_t arg, const 
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))action->fields.invoke_impl)(
@@ -408,7 +431,7 @@ void ActionExtensions__Call_int__bool_(
         System_Action_T1__T2__o *action,
         int32_t arg1,
         bool arg2,
-        const MethodInfo_3095F9C *method)
+        const MethodInfo_30E5BB4 *method)
 {
   if ( method->rgctx_data )
   {
@@ -416,7 +439,7 @@ void ActionExtensions__Call_int__bool_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, _QWORD, bool, intptr_t))action->fields.invoke_impl)(
@@ -432,7 +455,7 @@ void ActionExtensions__Call_int__bool__bool_(
         int32_t arg1,
         bool arg2,
         bool arg3,
-        const MethodInfo_30962F0 *method)
+        const MethodInfo_30E5F60 *method)
 {
   if ( method->rgctx_data )
   {
@@ -440,7 +463,7 @@ void ActionExtensions__Call_int__bool__bool_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, _QWORD, bool, bool, intptr_t))action->fields.invoke_impl)(
@@ -456,7 +479,7 @@ void ActionExtensions__Call_int__int_(
         System_Action_T1__T2__o *action,
         int32_t arg1,
         int32_t arg2,
-        const MethodInfo_3095FF4 *method)
+        const MethodInfo_30E5C0C *method)
 {
   if ( method->rgctx_data )
   {
@@ -464,7 +487,7 @@ void ActionExtensions__Call_int__int_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, _QWORD, _QWORD, intptr_t))action->fields.invoke_impl)(
@@ -479,7 +502,7 @@ void ActionExtensions__Call_long__int_(
         System_Action_T1__T2__o *action,
         int64_t arg1,
         int32_t arg2,
-        const MethodInfo_309604C *method)
+        const MethodInfo_30E5CBC *method)
 {
   if ( method->rgctx_data )
   {
@@ -487,7 +510,7 @@ void ActionExtensions__Call_long__int_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, int64_t, _QWORD, intptr_t))action->fields.invoke_impl)(
@@ -498,7 +521,7 @@ LABEL_3:
 }
 
 
-void ActionExtensions__Call_object_(System_Action_T__o *action, Il2CppObject *arg, const MethodInfo_3095D08 *method)
+void ActionExtensions__Call_object_(System_Action_T__o *action, Il2CppObject *arg, const MethodInfo_30E5920 *method)
 {
   if ( method->rgctx_data )
   {
@@ -506,7 +529,7 @@ void ActionExtensions__Call_object_(System_Action_T__o *action, Il2CppObject *ar
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, Il2CppObject *, intptr_t))action->fields.invoke_impl)(
@@ -520,7 +543,7 @@ void ActionExtensions__Call_object__int_(
         System_Action_T1__T2__o *action,
         Il2CppObject *arg1,
         int32_t arg2,
-        const MethodInfo_30960A4 *method)
+        const MethodInfo_30E5D14 *method)
 {
   if ( method->rgctx_data )
   {
@@ -528,7 +551,7 @@ void ActionExtensions__Call_object__int_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, Il2CppObject *, _QWORD, intptr_t))action->fields.invoke_impl)(
@@ -544,7 +567,7 @@ void ActionExtensions__Call_object__int__bool_(
         Il2CppObject *arg1,
         int32_t arg2,
         bool arg3,
-        const MethodInfo_309635C *method)
+        const MethodInfo_30E5FCC *method)
 {
   if ( method->rgctx_data )
   {
@@ -552,7 +575,7 @@ void ActionExtensions__Call_object__int__bool_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, Il2CppObject *, _QWORD, bool, intptr_t))action->fields.invoke_impl)(
@@ -568,7 +591,7 @@ void ActionExtensions__Call_object__object_(
         System_Action_T1__T2__o *action,
         Il2CppObject *arg1,
         Il2CppObject *arg2,
-        const MethodInfo_30960FC *method)
+        const MethodInfo_30E5D6C *method)
 {
   if ( method->rgctx_data )
   {
@@ -576,7 +599,7 @@ void ActionExtensions__Call_object__object_(
       return;
     goto LABEL_3;
   }
-  sub_1C474A0(method);
+  sub_1C6A188(method);
   if ( action )
 LABEL_3:
     ((void (__fastcall *)(intptr_t, Il2CppObject *, Il2CppObject *, intptr_t))action->fields.invoke_impl)(

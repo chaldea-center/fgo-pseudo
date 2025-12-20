@@ -29,11 +29,11 @@ void WarBoardTapWaitEffectPerformance___ctor(
   int64_t v29; // x6
   System_String_o *v30; // x7
   UnityEngine_Transform_o *transform; // x21
-  const MethodInfo_393D91C *v32; // x2
+  const MethodInfo_3997FCC *v32; // x2
   UnityEngine_Transform_o *v33; // x21
-  const MethodInfo_393D91C *v34; // x2
+  const MethodInfo_3997FCC *v34; // x2
   UnityEngine_Transform_o *v35; // x21
-  const MethodInfo_393D91C *v36; // x2
+  const MethodInfo_3997FCC *v36; // x2
   CommonUI_o *v37; // x21
   Il2CppObject *v38; // x0
   struct ScreenTouchInformationComponent_o **p_screenTouchInfomationComponent; // x21
@@ -59,18 +59,18 @@ void WarBoardTapWaitEffectPerformance___ctor(
   v49 = angle;
   v48 = scale;
   hasValue = position.fields.hasValue;
-  if ( (byte_4CC505F & 1) == 0 )
+  if ( (byte_4D2A40D & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
-    sub_1C713B0(&Method_System_Nullable_Vector3__get_HasValue__);
-    sub_1C713B0(&Method_System_Nullable_Vector3__get_Value__);
-    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725200);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&Method_WarBoardTapWaitEffectPerformance___ctor_b__6_0__);
-    byte_4CC505F = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+    sub_1C94098(&Method_System_Nullable_Vector3__get_HasValue__);
+    sub_1C94098(&Method_System_Nullable_Vector3__get_Value__);
+    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject____79133432);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&Method_WarBoardTapWaitEffectPerformance___ctor_b__6_0__);
+    byte_4D2A40D = 1;
   }
   WarBoardTaskBase___ctor((WarBoardTaskBase_o *)this, (const MethodInfo *)parent);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -79,23 +79,23 @@ void WarBoardTapWaitEffectPerformance___ctor(
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v13 = UnityEngine_Object__Instantiate_object__52264532(
+    v13 = UnityEngine_Object__Instantiate_object__52598548(
             (Il2CppObject *)effetctPrefab,
             parent,
             0,
-            (const MethodInfo_31D7E54 *)Method_UnityEngine_Object_Instantiate_GameObject____78725200);
+            (const MethodInfo_3229714 *)Method_UnityEngine_Object_Instantiate_GameObject____79133432);
     this->fields.effectObject = (struct UnityEngine_GameObject_o *)v13;
     p_effectObject = &this->fields.effectObject;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.effectObject, (int32_t)v13, v15, v16, v17, v18, v19, v20);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.effectObject, (int32_t)v13, v15, v16, v17, v18, v19, v20);
     effectObject = this->fields.effectObject;
     if ( !effectObject )
       goto LABEL_36;
     Component_object = UnityEngine_GameObject__GetComponent_object_(
                          effectObject,
-                         (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
+                         (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_CommonEffectComponent___);
     this->fields.commonEffect = (struct CommonEffectComponent_o *)Component_object;
     p_commonEffect = &this->fields.commonEffect;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&this->fields.commonEffect,
       (int32_t)Component_object,
       v25,
@@ -140,7 +140,7 @@ void WarBoardTapWaitEffectPerformance___ctor(
       {
         UnityEngine_Transform__set_eulerAngles(v33, v55, 0);
 LABEL_27:
-        effectObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+        effectObject = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
         if ( *p_effectObject )
         {
           v37 = (CommonUI_o *)effectObject;
@@ -152,10 +152,10 @@ LABEL_27:
             {
               v38 = UnityEngine_GameObject__GetComponent_object_(
                       effectObject,
-                      (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
+                      (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_ScreenTouchInformationComponent___);
               this->fields.screenTouchInfomationComponent = (struct ScreenTouchInformationComponent_o *)v38;
               p_screenTouchInfomationComponent = &this->fields.screenTouchInfomationComponent;
-              sub_1C71354(
+              sub_1C9403C(
                 (GrandQuestFolderBoardItem_o *)&this->fields.screenTouchInfomationComponent,
                 (int32_t)v38,
                 v40,
@@ -166,7 +166,7 @@ LABEL_27:
                 v45);
               this->fields.isTouch = 0;
               screenTouchInfomationComponent = this->fields.screenTouchInfomationComponent;
-              v47 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+              v47 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
               System_Action___ctor(
                 v47,
                 (Il2CppObject *)this,
@@ -195,7 +195,7 @@ LABEL_27:
           }
         }
 LABEL_36:
-        sub_1C71608(effectObject, v21);
+        sub_1C942F0(effectObject, v21);
       }
       UnityEngine_Transform__set_localEulerAngles(v33, v55, 0);
     }
@@ -234,17 +234,17 @@ void WarBoardTapWaitEffectPerformance__AnimantionEndStartCallback(
   __int64 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CC5061 & 1) == 0 )
+  if ( (byte_4D2A40F & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_WarBoardTapWaitEffectPerformance_AnimantionEndCallback__);
-    byte_4CC5061 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_WarBoardTapWaitEffectPerformance_AnimantionEndCallback__);
+    byte_4D2A40F = 1;
   }
   commonEffect = this->fields.commonEffect;
-  v4 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v4 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v4, (Il2CppObject *)this, Method_WarBoardTapWaitEffectPerformance_AnimantionEndCallback__, 0);
   if ( !commonEffect )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   ((void (__fastcall *)(struct CommonEffectComponent_o *, _QWORD, System_Action_o *, const MethodInfo *))commonEffect->klass->vtable._8_Stop.methodPtr)(
     commonEffect,
     0,
@@ -283,14 +283,14 @@ bool WarBoardTapWaitEffectPerformance__CheckAnimationEnd(
   int *v28; // x10
   __int64 v29; // x0
 
-  if ( (byte_4CC5064 & 1) == 0 )
+  if ( (byte_4D2A412 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_AnimationState_TypeInfo);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC5064 = 1;
+    sub_1C94098(&UnityEngine_AnimationState_TypeInfo);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2A412 = 1;
   }
   if ( this->fields.animationPlay )
   {
@@ -305,7 +305,7 @@ bool WarBoardTapWaitEffectPerformance__CheckAnimationEnd(
       Enumerator = UnityEngine_Animation__GetEnumerator(animation, 0);
       v10 = Enumerator;
       if ( !Enumerator )
-        sub_1C71608(0, v9);
+        sub_1C942F0(0, v9);
       klass = Enumerator->klass;
       v12 = *(unsigned __int16 *)&Enumerator->klass->_2.rank;
       if ( *(_WORD *)&Enumerator->klass->_2.rank )
@@ -323,7 +323,7 @@ bool WarBoardTapWaitEffectPerformance__CheckAnimationEnd(
       else
       {
 LABEL_13:
-        v14 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+        v14 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
       }
       if ( ((*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v14)(v10, *(_QWORD *)(v14 + 8)) & 1) != 0 )
       {
@@ -344,13 +344,13 @@ LABEL_13:
         else
         {
 LABEL_21:
-          v19 = sub_1C47738(v10, System_Collections_IEnumerator_TypeInfo, 1);
+          v19 = sub_1C6A420(v10, System_Collections_IEnumerator_TypeInfo, 1);
         }
         v20 = (UnityEngine_AnimationState_o *)(*(__int64 (__fastcall **)(System_Collections_IEnumerator_o *, _QWORD))v19)(
                                                 v10,
                                                 *(_QWORD *)(v19 + 8));
         if ( !v20 )
-          sub_1C71608(0, v21);
+          sub_1C942F0(0, v21);
         if ( v20->klass == UnityEngine_AnimationState_TypeInfo )
         {
           clip = (UnityEngine_Object_o *)UnityEngine_AnimationState__get_clip(v20, 0);
@@ -362,12 +362,12 @@ LABEL_21:
         }
         else
         {
-          sub_1C719A4(v20);
+          sub_1C9468C(v20);
         }
-        sub_1C71608(clip, v23);
+        sub_1C942F0(clip, v23);
       }
 LABEL_28:
-      v24 = sub_1C714EC(v10, System_IDisposable_TypeInfo);
+      v24 = sub_1C941D4(v10, System_IDisposable_TypeInfo);
       if ( v24 )
       {
         v25 = *(_QWORD *)v24;
@@ -388,7 +388,7 @@ LABEL_28:
         else
         {
 LABEL_33:
-          v29 = sub_1C47738(v24, System_IDisposable_TypeInfo, 0);
+          v29 = sub_1C6A420(v24, System_IDisposable_TypeInfo, 0);
         }
         (*(void (__fastcall **)(__int64, _QWORD))v29)(v26, *(_QWORD *)(v29 + 8));
       }
@@ -396,7 +396,7 @@ LABEL_33:
       if ( Item )
         return UnityEngine_AnimationState__get_normalizedTime(Item, 0) >= 1.0;
 LABEL_39:
-      sub_1C71608(Item, v7);
+      sub_1C942F0(Item, v7);
     }
   }
   return 1;
@@ -415,16 +415,16 @@ System_Collections_IEnumerator_o *WarBoardTapWaitEffectPerformance__Execute(
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CC5062 & 1) == 0 )
+  if ( (byte_4D2A410 & 1) == 0 )
   {
-    sub_1C713B0(&WarBoardTapWaitEffectPerformance__Execute_d__10_TypeInfo);
-    byte_4CC5062 = 1;
+    sub_1C94098(&WarBoardTapWaitEffectPerformance__Execute_d__10_TypeInfo);
+    byte_4D2A410 = 1;
   }
-  v3 = sub_1C715FC(WarBoardTapWaitEffectPerformance__Execute_d__10_TypeInfo);
+  v3 = sub_1C942E4(WarBoardTapWaitEffectPerformance__Execute_d__10_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -442,10 +442,10 @@ void WarBoardTapWaitEffectPerformance__OnEnd(WarBoardTapWaitEffectPerformance_o 
   System_String_o *v11; // x7
   struct WarBoardTaskBase_TaskCallback_o *EndCallback; // x8
 
-  if ( (byte_4CC5063 & 1) == 0 )
+  if ( (byte_4D2A411 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC5063 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2A411 = 1;
   }
   p_effectObject = &this->fields.effectObject;
   effectObject = (UnityEngine_Object_o *)this->fields.effectObject;
@@ -456,9 +456,9 @@ void WarBoardTapWaitEffectPerformance__OnEnd(WarBoardTapWaitEffectPerformance_o 
     v5 = (UnityEngine_Object_o *)*p_effectObject;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71724608(v5, 0);
+    UnityEngine_Object__Destroy_72110972(v5, 0);
     *p_effectObject = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.effectObject, 0, v6, v7, v8, v9, v10, v11);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.effectObject, 0, v6, v7, v8, v9, v10, v11);
   }
   EndCallback = this->fields.EndCallback;
   this->fields._isPlaying_k__BackingField = 0;
@@ -479,12 +479,12 @@ void WarBoardTapWaitEffectPerformance__OnStart(WarBoardTapWaitEffectPerformance_
   struct CommonEffectComponent_o *v8; // x20
   System_Action_o *v9; // x21
 
-  if ( (byte_4CC5060 & 1) == 0 )
+  if ( (byte_4D2A40E & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_WarBoardTapWaitEffectPerformance_AnimantionEndStartCallback__);
-    byte_4CC5060 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_WarBoardTapWaitEffectPerformance_AnimantionEndStartCallback__);
+    byte_4D2A40E = 1;
   }
   StartCallback = this->fields.StartCallback;
   this->fields._isPlaying_k__BackingField = 1;
@@ -509,7 +509,7 @@ void WarBoardTapWaitEffectPerformance__OnStart(WarBoardTapWaitEffectPerformance_
   if ( UnityEngine_Object__op_Inequality(commonEffect, 0, 0) )
   {
     v8 = this->fields.commonEffect;
-    v9 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    v9 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(
       v9,
       (Il2CppObject *)this,
@@ -526,7 +526,7 @@ void WarBoardTapWaitEffectPerformance__OnStart(WarBoardTapWaitEffectPerformance_
       return;
     }
 LABEL_16:
-    sub_1C71608(v6, v5);
+    sub_1C942F0(v6, v5);
   }
 }
 
@@ -538,15 +538,15 @@ void WarBoardTapWaitEffectPerformance____ctor_b__6_0(
   _QWORD *v3; // x0
   System_Reflection_MethodBase_o *v4; // x0
 
-  if ( (byte_4CC5065 & 1) == 0 )
+  if ( (byte_4D2A413 & 1) == 0 )
   {
-    sub_1C713B0(&Method_WarBoardTapWaitEffectPerformance___ctor_b__6_0__);
-    byte_4CC5065 = 1;
+    sub_1C94098(&Method_WarBoardTapWaitEffectPerformance___ctor_b__6_0__);
+    byte_4D2A413 = 1;
   }
   v3 = Method_WarBoardTapWaitEffectPerformance___ctor_b__6_0__;
   if ( (*((_BYTE *)Method_WarBoardTapWaitEffectPerformance___ctor_b__6_0__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C713C8(Method_WarBoardTapWaitEffectPerformance___ctor_b__6_0__);
-  v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C940B0(Method_WarBoardTapWaitEffectPerformance___ctor_b__6_0__);
+  v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
   OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   this->fields.isTouch = 1;
 }
@@ -575,7 +575,7 @@ bool WarBoardTapWaitEffectPerformance__Execute_d__10__MoveNext(
   WarBoardTapWaitEffectPerformance__Execute_d__10_o *v8; // x19
   int32_t _1__state; // w8
   struct WarBoardTapWaitEffectPerformance_o *_4__this; // x20
-  Il2CppObject *ComponentInChildren_object__51649344; // x0
+  Il2CppObject *ComponentInChildren_object__51981160; // x0
   int32_t v12; // w2
   int32_t v13; // w3
   System_String_o *v14; // x4
@@ -594,11 +594,11 @@ bool WarBoardTapWaitEffectPerformance__Execute_d__10__MoveNext(
   GrandQuestFolderBoardItem_o *v27; // x19
 
   v8 = this;
-  if ( (byte_4CC5066 & 1) == 0 )
+  if ( (byte_4D2A414 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-    this = (WarBoardTapWaitEffectPerformance__Execute_d__10_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC5066 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+    this = (WarBoardTapWaitEffectPerformance__Execute_d__10_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2A414 = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -625,13 +625,13 @@ bool WarBoardTapWaitEffectPerformance__Execute_d__10__MoveNext(
                                                                     0);
       if ( !this )
         goto LABEL_24;
-      ComponentInChildren_object__51649344 = UnityEngine_Component__GetComponentInChildren_object__51649344(
+      ComponentInChildren_object__51981160 = UnityEngine_Component__GetComponentInChildren_object__51981160(
                                                (UnityEngine_Component_o *)this,
-                                               (const MethodInfo_3141B40 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
-      v8->fields._mAnimation_5__2 = (struct UnityEngine_Animation_o *)ComponentInChildren_object__51649344;
-      sub_1C71354(
+                                               (const MethodInfo_3192B68 *)Method_UnityEngine_Component_GetComponentInChildren_Animation___);
+      v8->fields._mAnimation_5__2 = (struct UnityEngine_Animation_o *)ComponentInChildren_object__51981160;
+      sub_1C9403C(
         (GrandQuestFolderBoardItem_o *)&v8->fields._mAnimation_5__2,
-        (int32_t)ComponentInChildren_object__51649344,
+        (int32_t)ComponentInChildren_object__51981160,
         v12,
         v13,
         v14,
@@ -648,7 +648,7 @@ bool WarBoardTapWaitEffectPerformance__Execute_d__10__MoveNext(
     {
       v8->fields.__2__current = 0;
       p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-      sub_1C71354(p__2__current, 0, v19, v20, v21, v22, v23, v24);
+      sub_1C9403C(p__2__current, 0, v19, v20, v21, v22, v23, v24);
       result = 1;
       LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
       return result;
@@ -666,7 +666,7 @@ bool WarBoardTapWaitEffectPerformance__Execute_d__10__MoveNext(
       }
     }
 LABEL_24:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   v8->fields.__1__state = -1;
   if ( !_4__this )
@@ -676,7 +676,7 @@ LABEL_20:
     return 0;
   v8->fields.__2__current = 0;
   v27 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-  sub_1C71354(v27, 0, (int32_t)v2, v3, v4, v5, v6, v7);
+  sub_1C9403C(v27, 0, (int32_t)v2, v3, v4, v5, v6, v7);
   LODWORD(v27[-1].fields._ClosedMessage_k__BackingField) = 2;
   return 1;
 }
@@ -698,11 +698,11 @@ void __noreturn WarBoardTapWaitEffectPerformance__Execute_d__10__System_Collecti
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
+  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C713C4(&Method_WarBoardTapWaitEffectPerformance__Execute_d__10_System_Collections_IEnumerator_Reset__);
-  sub_1C714D8(v3, v4);
+  v4 = sub_1C940AC(&Method_WarBoardTapWaitEffectPerformance__Execute_d__10_System_Collections_IEnumerator_Reset__);
+  sub_1C941C0(v3, v4);
 }
 
 

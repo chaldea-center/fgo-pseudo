@@ -12,7 +12,7 @@ void SummonHistoryDialog__Init(SummonHistoryDialog_o *this, const MethodInfo *me
   TextLabelScrollDialog__Init((TextLabelScrollDialog_o *)this, 0);
   summonHistoryListViewManager = (ListViewManager_o *)this->fields.summonHistoryListViewManager;
   if ( !summonHistoryListViewManager )
-    sub_1C71608(0, v3);
+    sub_1C942F0(0, v3);
   ListViewManager__DestroyList(summonHistoryListViewManager, 0);
 }
 
@@ -23,23 +23,23 @@ void SummonHistoryDialog__OnClickClose(SummonHistoryDialog_o *this, const Method
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4CC382F & 1) == 0 )
+  if ( (byte_4D28B68 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_SummonHistoryDialog_OnClickClose__);
-    sub_1C713B0(&Method_SummonHistoryDialog__OnClickClose_b__6_0__);
-    byte_4CC382F = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_SummonHistoryDialog_OnClickClose__);
+    sub_1C94098(&Method_SummonHistoryDialog__OnClickClose_b__6_0__);
+    byte_4D28B68 = 1;
   }
   if ( !this->fields.state )
   {
     v3 = Method_SummonHistoryDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_SummonHistoryDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C713C8(Method_SummonHistoryDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C940B0(Method_SummonHistoryDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
   }
   this->fields.state = 2;
-  v5 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v5 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v5, (Il2CppObject *)this, Method_SummonHistoryDialog__OnClickClose_b__6_0__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v5, 0);
 }
@@ -76,24 +76,24 @@ void SummonHistoryDialog__Open(SummonHistoryDialog_o *this, VaildGachaInfo_o *ga
   GachaPickupCollateralEntity_o *gachaPickupCollateralEntity; // [xsp+10h] [xbp-50h] BYREF
   GachaPickupCollateralGroupEntity_o *gachaPickupCollateralGroupEntity; // [xsp+18h] [xbp-48h] BYREF
 
-  if ( (byte_4CC382E & 1) == 0 )
+  if ( (byte_4D28B67 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_GachaPickupCollateralGroupMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_GachaPickupCollateralMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_UserGachaPickupCollateralMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&int_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&string_TypeInfo);
-    sub_1C713B0(&StringLiteral_43/*"\n"*/);
-    sub_1C713B0(&StringLiteral_6905/*"GACHA_HISTORY_UPPER_MESSAGE"*/);
-    sub_1C713B0(&StringLiteral_6898/*"GACHA_HISTORY_EMPTY"*/);
-    sub_1C713B0(&StringLiteral_6899/*"GACHA_HISTORY_GACHA_NUM"*/);
-    sub_1C713B0(&StringLiteral_6904/*"GACHA_HISTORY_TITLE"*/);
-    sub_1C713B0(&StringLiteral_3680/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC382E = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_GachaPickupCollateralGroupMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_GachaPickupCollateralMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_UserGachaPickupCollateralMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&int_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&string_TypeInfo);
+    sub_1C94098(&StringLiteral_43/*"\n"*/);
+    sub_1C94098(&StringLiteral_6920/*"GACHA_HISTORY_UPPER_MESSAGE"*/);
+    sub_1C94098(&StringLiteral_6913/*"GACHA_HISTORY_EMPTY"*/);
+    sub_1C94098(&StringLiteral_6914/*"GACHA_HISTORY_GACHA_NUM"*/);
+    sub_1C94098(&StringLiteral_6919/*"GACHA_HISTORY_TITLE"*/);
+    sub_1C94098(&StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D28B67 = 1;
   }
   gachaPickupCollateralEntity = 0;
   gachaPickupCollateralGroupEntity = 0;
@@ -104,7 +104,7 @@ void SummonHistoryDialog__Open(SummonHistoryDialog_o *this, VaildGachaInfo_o *ga
     method);
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_6904/*"GACHA_HISTORY_TITLE"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_6919/*"GACHA_HISTORY_TITLE"*/, 0);
   TextLabelScrollDialog__Open((TextLabelScrollDialog_o *)this, v5, string_TypeInfo->static_fields->Empty, 0, 0, 0);
   if ( !gachaInfo )
     goto LABEL_53;
@@ -112,7 +112,7 @@ void SummonHistoryDialog__Open(SummonHistoryDialog_o *this, VaildGachaInfo_o *ga
   if ( !name )
     goto LABEL_53;
   summonNameLabel = this->fields.summonNameLabel;
-  name = System_String__Replace_64078288(
+  name = System_String__Replace_64464308(
            name,
            (System_String_o *)StringLiteral_43/*"\n"*/,
            (System_String_o *)StringLiteral_1/*""*/,
@@ -121,14 +121,14 @@ void SummonHistoryDialog__Open(SummonHistoryDialog_o *this, VaildGachaInfo_o *ga
     goto LABEL_53;
   UILabel__set_text(summonNameLabel, name, 0);
   UpperMessageLabel = this->fields.UpperMessageLabel;
-  name = LocalizationManager__Get((System_String_o *)StringLiteral_6905/*"GACHA_HISTORY_UPPER_MESSAGE"*/, 0);
+  name = LocalizationManager__Get((System_String_o *)StringLiteral_6920/*"GACHA_HISTORY_UPPER_MESSAGE"*/, 0);
   if ( !UpperMessageLabel )
     goto LABEL_53;
   UILabel__set_text(UpperMessageLabel, name, 0);
   Empty = string_TypeInfo->static_fields->Empty;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  name = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_GachaPickupCollateralGroupMaster___);
+  name = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_GachaPickupCollateralGroupMaster___);
   if ( !name )
     goto LABEL_53;
   if ( GachaPickupCollateralGroupMaster__TryGetEntityFromGachaId(
@@ -139,7 +139,7 @@ void SummonHistoryDialog__Open(SummonHistoryDialog_o *this, VaildGachaInfo_o *ga
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    name = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_GachaPickupCollateralMaster___);
+    name = (System_String_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_GachaPickupCollateralMaster___);
     if ( !gachaPickupCollateralGroupEntity || !name )
       goto LABEL_53;
     name = (System_String_o *)GachaPickupCollateralMaster__TryGetEntityFromGroupId(
@@ -155,13 +155,13 @@ void SummonHistoryDialog__Open(SummonHistoryDialog_o *this, VaildGachaInfo_o *ga
       {
         if ( !DataManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-        Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserGachaPickupCollateralMaster___);
+        Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserGachaPickupCollateralMaster___);
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
-        if ( !byte_4CC112A )
+        if ( !byte_4D2633A )
         {
-          sub_1C713B0(&NetworkManager_TypeInfo);
-          byte_4CC112A = 1;
+          sub_1C94098(&NetworkManager_TypeInfo);
+          byte_4D2633A = 1;
         }
         name = (System_String_o *)NetworkManager_TypeInfo;
         if ( !NetworkManager_TypeInfo->_2.cctor_finished )
@@ -191,7 +191,7 @@ void SummonHistoryDialog__Open(SummonHistoryDialog_o *this, VaildGachaInfo_o *ga
         }
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        name = LocalizationManager__Get((System_String_o *)StringLiteral_6899/*"GACHA_HISTORY_GACHA_NUM"*/, 0);
+        name = LocalizationManager__Get((System_String_o *)StringLiteral_6914/*"GACHA_HISTORY_GACHA_NUM"*/, 0);
         if ( !gachaPickupCollateralEntity )
           goto LABEL_53;
         v13 = name;
@@ -224,7 +224,7 @@ void SummonHistoryDialog__Open(SummonHistoryDialog_o *this, VaildGachaInfo_o *ga
         messageLabel = this->fields.messageLabel;
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        name = LocalizationManager__Get((System_String_o *)StringLiteral_6898/*"GACHA_HISTORY_EMPTY"*/, 0);
+        name = LocalizationManager__Get((System_String_o *)StringLiteral_6913/*"GACHA_HISTORY_EMPTY"*/, 0);
         if ( messageLabel )
         {
           UILabel__set_text(messageLabel, name, 0);
@@ -233,7 +233,7 @@ void SummonHistoryDialog__Open(SummonHistoryDialog_o *this, VaildGachaInfo_o *ga
       }
     }
 LABEL_53:
-    sub_1C71608(name, v7);
+    sub_1C942F0(name, v7);
   }
 LABEL_48:
   name = (System_String_o *)this->fields.scrollView;
@@ -244,14 +244,14 @@ LABEL_48:
   closeLabel = this->fields.closeLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  name = LocalizationManager__Get((System_String_o *)StringLiteral_3680/*"COMMON_CONFIRM_CLOSE"*/, 0);
+  name = LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/, 0);
   if ( !closeLabel )
     goto LABEL_53;
   UILabel__set_text(closeLabel, name, 0);
   this->fields.closeAction = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.closeAction, 0, v17, v18, v19, v20, v21, v22);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.closeAction, 0, v17, v18, v19, v20, v21, v22);
   this->fields.decideAction = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.decideAction, 0, v23, v24, v25, v26, v27, v28);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.decideAction, 0, v23, v24, v25, v26, v27, v28);
 }
 
 

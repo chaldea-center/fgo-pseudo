@@ -13,25 +13,25 @@ void SetSpoilerProtectionControl__Init(SetSpoilerProtectionControl_o *this, cons
   UILabel_o *infoLabel; // x20
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CC2401 & 1) == 0 )
+  if ( (byte_4D2782B & 1) == 0 )
   {
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&OptionManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_9711/*"OPTION_SPOILER_PROTECTION_INFO"*/);
-    sub_1C713B0(&StringLiteral_9712/*"OPTION_SPOILER_PROTECTION_TITLE"*/);
-    byte_4CC2401 = 1;
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&OptionManager_TypeInfo);
+    sub_1C94098(&StringLiteral_9731/*"OPTION_SPOILER_PROTECTION_INFO"*/);
+    sub_1C94098(&StringLiteral_9732/*"OPTION_SPOILER_PROTECTION_TITLE"*/);
+    byte_4D2782B = 1;
   }
   btnTitle = this->fields.btnTitle;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9712/*"OPTION_SPOILER_PROTECTION_TITLE"*/, 0);
+  v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9732/*"OPTION_SPOILER_PROTECTION_TITLE"*/, 0);
   if ( !btnTitle
     || (UILabel__set_text(btnTitle, v4, 0),
         infoLabel = this->fields.infoLabel,
-        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9711/*"OPTION_SPOILER_PROTECTION_INFO"*/, 0),
+        v4 = LocalizationManager__Get((System_String_o *)StringLiteral_9731/*"OPTION_SPOILER_PROTECTION_INFO"*/, 0),
         !infoLabel) )
   {
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   }
   UILabel__set_text(infoLabel, v4, 0);
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -51,16 +51,16 @@ void SetSpoilerProtectionControl__OnClickSpoilerProtection(
   int v6; // w20
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CC2404 & 1) == 0 )
+  if ( (byte_4D2782E & 1) == 0 )
   {
-    sub_1C713B0(&Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__);
-    byte_4CC2404 = 1;
+    sub_1C94098(&Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__);
+    byte_4D2782E = 1;
   }
   v3 = Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__;
   isSpoilerSetting = this->fields.isSpoilerSetting;
   if ( (*((_BYTE *)Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__ + 83) & 2) != 0 )
-    v3 = (_QWORD *)sub_1C713C8(Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__);
-  v5 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+    v3 = (_QWORD *)sub_1C940B0(Method_SetSpoilerProtectionControl_OnClickSpoilerProtection__);
+  v5 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
   v6 = !isSpoilerSetting;
   OverwriteAssetSoundName__PlaySystemSe(v5, v6, 0, 0);
   this->fields.isSpoilerSetting = v6;
@@ -72,10 +72,10 @@ void SetSpoilerProtectionControl__Reflection(SetSpoilerProtectionControl_o *this
 {
   _BOOL4 isSpoilerSetting; // w19
 
-  if ( (byte_4CC2403 & 1) == 0 )
+  if ( (byte_4D2782D & 1) == 0 )
   {
-    sub_1C713B0(&OptionManager_TypeInfo);
-    byte_4CC2403 = 1;
+    sub_1C94098(&OptionManager_TypeInfo);
+    byte_4D2782D = 1;
   }
   isSpoilerSetting = this->fields.isSpoilerSetting;
   if ( !OptionManager_TypeInfo->_2.cctor_finished )
@@ -91,18 +91,18 @@ void SetSpoilerProtectionControl__SetSpoilerProtectionDispValue(
   UIButton_o *settingBtn; // x0
   __int64 *v4; // x8
 
-  if ( (byte_4CC2402 & 1) == 0 )
+  if ( (byte_4D2782C & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_17529/*"btn_on"*/);
-    sub_1C713B0(&StringLiteral_17528/*"btn_off"*/);
-    byte_4CC2402 = 1;
+    sub_1C94098(&StringLiteral_17593/*"btn_on"*/);
+    sub_1C94098(&StringLiteral_17592/*"btn_off"*/);
+    byte_4D2782C = 1;
   }
   settingBtn = this->fields.settingBtn;
   if ( !settingBtn )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   if ( this->fields.isSpoilerSetting )
-    v4 = &StringLiteral_17528/*"btn_off"*/;
+    v4 = &StringLiteral_17592/*"btn_off"*/;
   else
-    v4 = &StringLiteral_17529/*"btn_on"*/;
+    v4 = &StringLiteral_17593/*"btn_on"*/;
   UIButton__set_normalSprite(settingBtn, (System_String_o *)*v4, 0);
 }

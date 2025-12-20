@@ -13,7 +13,7 @@ void BattleLogicServantTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, *(const MethodInfo **)&actionType);
   this->fields.actiontype = actionType;
   if ( !svtData )
-    sub_1C71608(v7, v8);
+    sub_1C942F0(v7, v8);
   if ( svtData->fields.isEnemy )
     v10 = 3;
   else

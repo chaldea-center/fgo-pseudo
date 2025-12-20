@@ -66,80 +66,80 @@ void ServantExceedEntity___ctor(ServantExceedEntity_o *this, const MethodInfo *m
   int64_t v66; // x6
   System_String_o *v67; // x7
 
-  if ( (byte_4CC7D11 & 1) == 0 )
+  if ( (byte_4D2D1A0 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    sub_1C713B0(&string___TypeInfo);
-    sub_1C713B0(&StringLiteral_18017/*"class_b_"*/);
-    sub_1C713B0(&StringLiteral_18021/*"class_g_"*/);
-    sub_1C713B0(&StringLiteral_18022/*"class_n_"*/);
-    sub_1C713B0(&StringLiteral_18023/*"class_s_"*/);
-    byte_4CC7D11 = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    sub_1C94098(&string___TypeInfo);
+    sub_1C94098(&StringLiteral_18083/*"class_b_"*/);
+    sub_1C94098(&StringLiteral_18087/*"class_g_"*/);
+    sub_1C94098(&StringLiteral_18088/*"class_n_"*/);
+    sub_1C94098(&StringLiteral_18089/*"class_s_"*/);
+    byte_4D2D1A0 = 1;
   }
-  v3 = sub_1C71458(string___TypeInfo, 8);
+  v3 = sub_1C94140(string___TypeInfo, 8);
   if ( !v3 )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   v11 = v3;
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_13;
-  v12 = StringLiteral_18022/*"class_n_"*/;
-  *(_QWORD *)(v3 + 32) = StringLiteral_18022/*"class_n_"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
+  v12 = StringLiteral_18088/*"class_n_"*/;
+  *(_QWORD *)(v3 + 32) = StringLiteral_18088/*"class_n_"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), v12, v5, v6, v7, v8, v9, v10);
   if ( *(_DWORD *)(v11 + 24) <= 1u )
     goto LABEL_13;
-  v19 = StringLiteral_18017/*"class_b_"*/;
-  *(_QWORD *)(v11 + 40) = StringLiteral_18017/*"class_b_"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 40), v19, v13, v14, v15, v16, v17, v18);
+  v19 = StringLiteral_18083/*"class_b_"*/;
+  *(_QWORD *)(v11 + 40) = StringLiteral_18083/*"class_b_"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 40), v19, v13, v14, v15, v16, v17, v18);
   if ( *(_DWORD *)(v11 + 24) <= 2u )
     goto LABEL_13;
-  v26 = StringLiteral_18023/*"class_s_"*/;
-  *(_QWORD *)(v11 + 48) = StringLiteral_18023/*"class_s_"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 48), v26, v20, v21, v22, v23, v24, v25);
+  v26 = StringLiteral_18089/*"class_s_"*/;
+  *(_QWORD *)(v11 + 48) = StringLiteral_18089/*"class_s_"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 48), v26, v20, v21, v22, v23, v24, v25);
   if ( *(_DWORD *)(v11 + 24) <= 3u )
     goto LABEL_13;
-  v33 = StringLiteral_18021/*"class_g_"*/;
-  *(_QWORD *)(v11 + 56) = StringLiteral_18021/*"class_g_"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 56), v33, v27, v28, v29, v30, v31, v32);
+  v33 = StringLiteral_18087/*"class_g_"*/;
+  *(_QWORD *)(v11 + 56) = StringLiteral_18087/*"class_g_"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 56), v33, v27, v28, v29, v30, v31, v32);
   if ( *(_DWORD *)(v11 + 24) <= 4u )
     goto LABEL_13;
-  v40 = StringLiteral_18021/*"class_g_"*/;
-  *(_QWORD *)(v11 + 64) = StringLiteral_18021/*"class_g_"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 64), v40, v34, v35, v36, v37, v38, v39);
+  v40 = StringLiteral_18087/*"class_g_"*/;
+  *(_QWORD *)(v11 + 64) = StringLiteral_18087/*"class_g_"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 64), v40, v34, v35, v36, v37, v38, v39);
   if ( *(_DWORD *)(v11 + 24) <= 5u
-    || (v47 = StringLiteral_18021/*"class_g_"*/,
-        *(_QWORD *)(v11 + 72) = StringLiteral_18021/*"class_g_"*/,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 72), v47, v41, v42, v43, v44, v45, v46),
+    || (v47 = StringLiteral_18087/*"class_g_"*/,
+        *(_QWORD *)(v11 + 72) = StringLiteral_18087/*"class_g_"*/,
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 72), v47, v41, v42, v43, v44, v45, v46),
         *(_DWORD *)(v11 + 24) <= 6u)
-    || (v54 = StringLiteral_18022/*"class_n_"*/,
-        *(_QWORD *)(v11 + 80) = StringLiteral_18022/*"class_n_"*/,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 80), v54, v48, v49, v50, v51, v52, v53),
+    || (v54 = StringLiteral_18088/*"class_n_"*/,
+        *(_QWORD *)(v11 + 80) = StringLiteral_18088/*"class_n_"*/,
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 80), v54, v48, v49, v50, v51, v52, v53),
         *(_DWORD *)(v11 + 24) <= 7u) )
   {
 LABEL_13:
-    sub_1C71610(v3);
+    sub_1C942F8(v3);
   }
-  v61 = StringLiteral_18022/*"class_n_"*/;
-  *(_QWORD *)(v11 + 88) = StringLiteral_18022/*"class_n_"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v11 + 88), v61, v55, v56, v57, v58, v59, v60);
+  v61 = StringLiteral_18088/*"class_n_"*/;
+  *(_QWORD *)(v11 + 88) = StringLiteral_18088/*"class_n_"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v11 + 88), v61, v55, v56, v57, v58, v59, v60);
   this->fields.frameCardFileList = (struct System_String_array *)v11;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, v11, v62, v63, v64, v65, v66, v67);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, v11, v62, v63, v64, v65, v66, v67);
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ServantExceedEntity__CreatePK(int32_t rarity, int32_t exceedCount, const MethodInfo *method)
 {
-  if ( (byte_4CC7D10 & 1) == 0 )
+  if ( (byte_4D2D19F & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CC7D10 = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4D2D19F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            rarity,
            exceedCount,
-           (const MethodInfo_3149294 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -180,9 +180,9 @@ System_String_o *ServantExceedEntity__getFrameCardPrefix(ServantExceedEntity_o *
 
   frameCardFileList = this->fields.frameCardFileList;
   if ( !frameCardFileList )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   frameType = this->fields.frameType;
   if ( (unsigned int)frameType >= LODWORD(frameCardFileList->max_length) )
-    sub_1C71610(this);
+    sub_1C942F8(this);
   return frameCardFileList->m_Items[frameType];
 }

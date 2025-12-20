@@ -34,7 +34,7 @@ void TweenAnimationComponent__OnFinishAnimation(TweenAnimationComponent_o *this,
   p_onFinishAnimation = (GrandQuestFolderBoardItem_o *)&this->fields.onFinishAnimation;
   ActionExtensions__Call(this->fields.onFinishAnimation, 0);
   p_onFinishAnimation->klass = 0;
-  sub_1C71354(p_onFinishAnimation, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C9403C(p_onFinishAnimation, 0, v3, v4, v5, v6, v7, v8);
 }
 
 
@@ -69,11 +69,11 @@ void TweenAnimationComponent__Setup(
   int64_t v30; // x6
   System_String_o *v31; // x7
 
-  if ( (byte_4CC6055 & 1) == 0 )
+  if ( (byte_4D2B4B5 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_9908/*"OnFinishAnimation"*/);
-    byte_4CC6055 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_9929/*"OnFinishAnimation"*/);
+    byte_4D2B4B5 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -95,7 +95,7 @@ LABEL_8:
         tweener->fields.method = *p_closeEaseType;
         gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
         tweener->fields.eventReceiver = gameObject;
-        sub_1C71354(
+        sub_1C9403C(
           (GrandQuestFolderBoardItem_o *)&tweener->fields.eventReceiver,
           (int32_t)gameObject,
           v13,
@@ -104,11 +104,11 @@ LABEL_8:
           v16,
           v17,
           v18);
-        v19 = StringLiteral_9908/*"OnFinishAnimation"*/;
-        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9908/*"OnFinishAnimation"*/;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)&tweener->fields.callWhenFinished, v19, v20, v21, v22, v23, v24, v25);
+        v19 = StringLiteral_9929/*"OnFinishAnimation"*/;
+        tweener->fields.callWhenFinished = (struct System_String_o *)StringLiteral_9929/*"OnFinishAnimation"*/;
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)&tweener->fields.callWhenFinished, v19, v20, v21, v22, v23, v24, v25);
         this->fields.onFinishAnimation = onFinish;
-        sub_1C71354(
+        sub_1C9403C(
           (GrandQuestFolderBoardItem_o *)&this->fields.onFinishAnimation,
           (int32_t)onFinish,
           v26,
@@ -120,7 +120,7 @@ LABEL_8:
         return;
       }
     }
-    sub_1C71608(v9, v10);
+    sub_1C942F0(v9, v10);
   }
 }
 
@@ -137,10 +137,10 @@ UnityEngine_GameObject_o *TweenAnimationComponent__get_Target(
 {
   UnityEngine_Object_o *target; // x20
 
-  if ( (byte_4CC6054 & 1) == 0 )
+  if ( (byte_4D2B4B4 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC6054 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2B4B4 = 1;
   }
   target = (UnityEngine_Object_o *)this->fields.target;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

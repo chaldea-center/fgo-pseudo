@@ -20,10 +20,10 @@ void RankObjectSwitchEffectSubComponent__RecvParam(
   unsigned int v12; // w21
 
   v4 = this;
-  if ( (byte_4CC8B12 & 1) == 0 )
+  if ( (byte_4D2DFAF & 1) == 0 )
   {
-    this = (RankObjectSwitchEffectSubComponent_o *)sub_1C713B0(&RaceResultEffectParam_TypeInfo);
-    byte_4CC8B12 = 1;
+    this = (RankObjectSwitchEffectSubComponent_o *)sub_1C94098(&RaceResultEffectParam_TypeInfo);
+    byte_4D2DFAF = 1;
   }
   if ( param
     && (naturalAligment = RaceResultEffectParam_TypeInfo->_2.naturalAligment,
@@ -41,7 +41,7 @@ void RankObjectSwitchEffectSubComponent__RecvParam(
   switchObjectList = v4->fields.switchObjectList;
   if ( !switchObjectList )
 LABEL_27:
-    sub_1C71608(this, param);
+    sub_1C942F0(this, param);
   max_length = switchObjectList->max_length;
   if ( v6 && (monitor = v6[1].monitor) != 0 && *((int *)monitor + 6) >= 4 && (v10 = *((_QWORD *)monitor + 7), v10 >= 1) )
   {
@@ -80,6 +80,6 @@ LABEL_27:
         goto LABEL_27;
     }
 LABEL_29:
-    sub_1C71610(this);
+    sub_1C942F8(this);
   }
 }

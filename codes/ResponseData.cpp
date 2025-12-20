@@ -1,14 +1,14 @@
 void ResponseData___ctor(ResponseData_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC8FEE & 1) == 0 )
+  if ( (byte_4D2E48F & 1) == 0 )
   {
-    sub_1C713B0(&ResponseData___TypeInfo);
-    sub_1C713B0(&ResponseData_TypeInfo);
-    byte_4CC8FEE = 1;
+    sub_1C94098(&ResponseData___TypeInfo);
+    sub_1C94098(&ResponseData_TypeInfo);
+    byte_4D2E48F = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( ResponseData_TypeInfo->static_fields->_never )
-    sub_1C71458(ResponseData___TypeInfo, 1);
+    sub_1C94140(ResponseData___TypeInfo, 1);
 }
 
 
@@ -17,20 +17,20 @@ bool ResponseData__checkError(ResponseData_o *this, System_String_o *resCode, co
   uint32_t v4; // w0
   __int64 *v5; // x8
 
-  if ( (byte_4CC8FEF & 1) == 0 )
+  if ( (byte_4D2E490 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_1440/*"89"*/);
-    sub_1C713B0(&StringLiteral_1129/*"01"*/);
-    sub_1C713B0(&StringLiteral_1136/*"03"*/);
-    sub_1C713B0(&StringLiteral_1446/*"99"*/);
-    sub_1C713B0(&StringLiteral_1135/*"02"*/);
-    sub_1C713B0(&StringLiteral_1439/*"88"*/);
-    sub_1C713B0(&StringLiteral_1444/*"98"*/);
-    sub_1C713B0(&StringLiteral_1301/*"11"*/);
-    sub_1C713B0(&StringLiteral_1434/*"71"*/);
-    sub_1C713B0(&StringLiteral_1137/*"04"*/);
-    sub_1C713B0(&StringLiteral_1122/*"00"*/);
-    byte_4CC8FEF = 1;
+    sub_1C94098(&StringLiteral_1440/*"89"*/);
+    sub_1C94098(&StringLiteral_1129/*"01"*/);
+    sub_1C94098(&StringLiteral_1136/*"03"*/);
+    sub_1C94098(&StringLiteral_1446/*"99"*/);
+    sub_1C94098(&StringLiteral_1135/*"02"*/);
+    sub_1C94098(&StringLiteral_1439/*"88"*/);
+    sub_1C94098(&StringLiteral_1444/*"98"*/);
+    sub_1C94098(&StringLiteral_1301/*"11"*/);
+    sub_1C94098(&StringLiteral_1434/*"71"*/);
+    sub_1C94098(&StringLiteral_1137/*"04"*/);
+    sub_1C94098(&StringLiteral_1122/*"00"*/);
+    byte_4D2E490 = 1;
   }
   if ( !resCode )
     return 0;
@@ -101,7 +101,7 @@ LABEL_30:
 }
 
 
-bool ResponseData__checkError_44515240(ResponseData_o *this, const MethodInfo *method)
+bool ResponseData__checkError_45012660(ResponseData_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
@@ -121,31 +121,31 @@ System_String_o *ResponseData__getErrorMessage(ResponseData_o *this, const Metho
   System_Collections_Generic_Dictionary_object__object__o *fail; // x19
 
   v2 = this;
-  if ( (byte_4CC8FF0 & 1) == 0 )
+  if ( (byte_4D2E491 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    this = (ResponseData_o *)sub_1C713B0(&StringLiteral_18638/*"detail"*/);
-    byte_4CC8FF0 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    this = (ResponseData_o *)sub_1C94098(&StringLiteral_18706/*"detail"*/);
+    byte_4D2E491 = 1;
   }
   fail = (System_Collections_Generic_Dictionary_object__object__o *)v2->fields.fail;
   if ( !fail )
     goto LABEL_8;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          fail,
-         (Il2CppObject *)StringLiteral_18638/*"detail"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_18706/*"detail"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     this = (ResponseData_o *)System_Collections_Generic_Dictionary_object__object___get_Item(
                                fail,
-                               (Il2CppObject *)StringLiteral_18638/*"detail"*/,
-                               (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+                               (Il2CppObject *)StringLiteral_18706/*"detail"*/,
+                               (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( this )
       return (System_String_o *)((__int64 (__fastcall *)(ResponseData_o *, const MethodInfo *))this->klass->vtable._3_ToString.methodPtr)(
                                   this,
                                   this->klass->vtable._3_ToString.method);
 LABEL_8:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   return 0;
 }

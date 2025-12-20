@@ -25,6 +25,7 @@ ActionChain
 ActionChainBase_object_
 ActionExtensions
 ActiveAnimation
+ActiveGrandBoardConfirmDialog
 AdCheckPointEntity
 AdCheckPointMaster
 AdManager
@@ -170,6 +171,7 @@ BattleActionLogManager
 BattleActionLogManagerNOP
 BattleActionLogType
 BattleActionWaitCond
+BattleActorAnimationDuringAct
 BattleActorAnimationEffect
 BattleActorControl
 BattleActorEffectMesh
@@ -267,6 +269,7 @@ BattleEndNotRelatedSurvivalStatusInstantlyData
 BattleEndNotRelatedSurvivalStatusInstantlyTask
 BattleEntity
 BattleEventTutorial
+BattleExUiSkillInfoData
 BattleFBXComponent
 BattleFieldConfConponent
 BattleFieldData
@@ -287,6 +290,8 @@ BattleInterruptionRequest
 BattleItemData
 BattleItemIconComponent
 BattleItemListWindowComponent
+BattleLoadMovieActionData
+BattleLoadMovieTask
 BattleLogData
 BattleLogic
 BattleLogicBaseAi
@@ -337,6 +342,9 @@ BattleNextTDgaugeComponent
 BattleNoSynchroAnime
 BattleNpGaugeSystemComponent
 BattleObserver
+BattleOverwriteAddUniqueCameraTask
+BattleOverwriteFieldMotionActionData
+BattleOverwriteFieldMotionTask
 BattlePanelEvent
 BattleParamComponent
 BattlePerformance
@@ -352,6 +360,8 @@ BattlePerformancePlayer
 BattlePerformanceStatus
 BattlePerformanceTurnSituationComponent
 BattlePlayAnimationComponent
+BattlePlayMovieActionData
+BattlePlayMovieTask
 BattlePointData
 BattlePointEntity
 BattlePointGaugeCellTypeComponent
@@ -426,6 +436,7 @@ BattleServantFaceIconComponent
 BattleServantHeadUpComponent
 BattleServantHpShiftComponent
 BattleServantHpShiftDecagramEffectComponent
+BattleServantHpShiftPhaseEffectComponent
 BattleServantNPSpeedChangeComponent
 BattleServantParamComponent
 BattleServantParamSetting
@@ -448,6 +459,7 @@ BattleSkillSelectAddFuncBtnComponent
 BattleSkillSelectAddFuncConfComponent
 BattleSkillSelectBtnBaseComponent
 BattleSkillSelectComandCardBtnComponent
+BattleSkipRequest
 BattleSpeedButtonComponent
 BattleStartServantAiResetChecker
 BattleSubject
@@ -471,6 +483,8 @@ BattleValueButtonComponent
 BattleViewBufflistComponent
 BattleViewItemlistComponent
 BattleVoicePlayCondArgs
+BattleWaitFinishMovieActionData
+BattleWaitFinishMovieTask
 BattleWarBoardEventLimitTurn
 BattleWarBoardInfo
 BattleWaveInfoData
@@ -534,6 +548,7 @@ BlankEarthSpotAddEntity
 BlankEarthSpotAddMaster
 BlankEarthSpotAnimStateManager
 BlankEarthSpotEntity
+BlankEarthSpotLabelComponent
 BlankEarthSpotMaster
 BlankEarthSpotNavimenuEntity
 BlankEarthSpotNavimenuMaster
@@ -1446,10 +1461,12 @@ EventInfoPointRiverProgressControl
 EventInfoPossessionItemCounter
 EventInfoProductivityGrowthDialog
 EventInfoQPPointCounter
+EventInfoRaidRemainingCounter
 EventInfoRaidResetButton
 EventInfoRaidTimeComponent
 EventInfoReleaseCraftItemDialog
 EventInfoReleaseEventPointControl
+EventInfoRemainingRaidHpData
 EventInfoRepairComponent
 EventInfoRepairDialog
 EventInfoRiverProgressDrawComponent
@@ -2139,6 +2156,7 @@ LocalNotificationService
 LocalNotificationServiceAndroid
 Localization
 LocalizationManager
+LockDecideDialog
 LoginBonusWithTransitionDialog
 LoginQuestEntity
 LoginQuestMaster
@@ -2533,6 +2551,9 @@ PhotoStandFigureComponent
 PhotoTargetSelectDialog
 PickupUserFollowerEntity
 PickupUserFollowerMaster
+PlanetEarthQuestAfterAction
+PlanetMapBackground
+PlanetMapRootComponent
 PlayBackStepLogicTask
 PlayCurrentBgmActionData
 PlayCurrentBgmLogicTask
@@ -2694,6 +2715,7 @@ QuestScriptMaterialOverwriteEntity
 QuestScriptMaterialOverwriteMaster
 QuestScriptReleaseEntity
 QuestScriptReleaseMaster
+QuestSkipConfirmDialog
 QuestSpotReleaseEntity
 QuestSpotReleaseMaster
 QuestStart2EffectComponent
@@ -3905,6 +3927,7 @@ USFGOChrChangeShaderCompPreset
 USFGOChrTargetUtils
 UVScroll
 UVScrollAnimation
+UnscaledTimeSimpleAnimation
 UpHateData
 UpdateAllViewActionData
 UpdateAllViewBattleLogicTask

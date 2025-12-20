@@ -13,12 +13,12 @@ BattleActionData_o *UpdateAllViewBattleLogicTask__MakeActionData(
 {
   UpdateAllViewActionData_o *v3; // x19
 
-  if ( (byte_4CCA767 & 1) == 0 )
+  if ( (byte_4D2FC13 & 1) == 0 )
   {
-    sub_1C713B0(&UpdateAllViewActionData_TypeInfo);
-    byte_4CCA767 = 1;
+    sub_1C94098(&UpdateAllViewActionData_TypeInfo);
+    byte_4D2FC13 = 1;
   }
-  v3 = (UpdateAllViewActionData_o *)sub_1C715FC(UpdateAllViewActionData_TypeInfo);
+  v3 = (UpdateAllViewActionData_o *)sub_1C942E4(UpdateAllViewActionData_TypeInfo);
   UpdateAllViewActionData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

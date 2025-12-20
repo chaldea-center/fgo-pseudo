@@ -9,5 +9,5 @@ int32_t ItemTransitionType__GetSortPriority(int32_t type, const MethodInfo *meth
   if ( (unsigned int)(type - 1) > 0x12 )
     return 0x7FFFFFFF;
   else
-    return dword_D21B98[type - 1];
+    return dword_D318F0[type - 1];
 }

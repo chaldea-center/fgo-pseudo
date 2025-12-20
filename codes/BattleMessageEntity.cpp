@@ -1,28 +1,28 @@
 void BattleMessageEntity___ctor(BattleMessageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC7015 & 1) == 0 )
+  if ( (byte_4D2C488 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC7015 = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2C488 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *BattleMessageEntity__CreatePK(int32_t id, int32_t idx, int32_t priority, const MethodInfo *method)
 {
-  if ( (byte_4CC7012 & 1) == 0 )
+  if ( (byte_4D2C485 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4CC7012 = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4D2C485 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            id,
            idx,
            priority,
-           (const MethodInfo_3149724 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_319A74C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -44,10 +44,10 @@ float BattleMessageEntity__GetScriptFloat(
   BattleDataDefine_c *v8; // x8
   int v9; // w19
 
-  if ( (byte_4CC7013 & 1) == 0 )
+  if ( (byte_4D2C486 & 1) == 0 )
   {
-    sub_1C713B0(&BattleDataDefine_TypeInfo);
-    byte_4CC7013 = 1;
+    sub_1C94098(&BattleDataDefine_TypeInfo);
+    byte_4D2C486 = 1;
   }
   ScriptInt = BattleMessageEntity__GetScriptInt(this, key, def, method);
   v8 = BattleDataDefine_TypeInfo;
@@ -67,14 +67,14 @@ int32_t BattleMessageEntity__GetScriptInt(
         int64_t def,
         const MethodInfo *method)
 {
-  if ( (byte_4CC7014 & 1) == 0 )
+  if ( (byte_4D2C487 & 1) == 0 )
   {
-    sub_1C713B0(&Method_BasicHelper_GetValue_long___);
-    byte_4CC7014 = 1;
+    sub_1C94098(&Method_BasicHelper_GetValue_long___);
+    byte_4D2C487 = 1;
   }
   return BasicHelper__GetValue_long_(
            this->fields.script,
            key,
            def,
-           (const MethodInfo_31386BC *)Method_BasicHelper_GetValue_long___);
+           (const MethodInfo_3189950 *)Method_BasicHelper_GetValue_long___);
 }

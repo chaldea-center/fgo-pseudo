@@ -27,30 +27,30 @@ void BlankEarthGimmickComponent__Awake(BlankEarthGimmickComponent_o *this, const
   Il2CppObject *v20; // x21
   const MethodInfo *v21; // x3
 
-  if ( (byte_4CC3BE7 & 1) == 0 )
+  if ( (byte_4D28F30 & 1) == 0 )
   {
-    sub_1C713B0(&Method_CStateManager_BlankEarthGimmickComponent___ctor__);
-    sub_1C713B0(&Method_CStateManager_BlankEarthGimmickComponent__add__);
-    sub_1C713B0(&CStateManager_BlankEarthGimmickComponent__TypeInfo);
-    sub_1C713B0(&BlankEarthGimmickComponent_StateDispAnim_TypeInfo);
-    sub_1C713B0(&BlankEarthGimmickComponent_StateHideAnim_TypeInfo);
-    sub_1C713B0(&BlankEarthGimmickComponent_StateMapMain_TypeInfo);
-    sub_1C713B0(&BlankEarthGimmickComponent_StateNone_TypeInfo);
-    byte_4CC3BE7 = 1;
+    sub_1C94098(&Method_CStateManager_BlankEarthGimmickComponent___ctor__);
+    sub_1C94098(&Method_CStateManager_BlankEarthGimmickComponent__add__);
+    sub_1C94098(&CStateManager_BlankEarthGimmickComponent__TypeInfo);
+    sub_1C94098(&BlankEarthGimmickComponent_StateDispAnim_TypeInfo);
+    sub_1C94098(&BlankEarthGimmickComponent_StateHideAnim_TypeInfo);
+    sub_1C94098(&BlankEarthGimmickComponent_StateMapMain_TypeInfo);
+    sub_1C94098(&BlankEarthGimmickComponent_StateNone_TypeInfo);
+    byte_4D28F30 = 1;
   }
   p_mFSM = &this->fields.mFSM;
   if ( !this->fields.mFSM )
   {
-    v4 = (CStateManager_T__o *)sub_1C715FC(CStateManager_BlankEarthGimmickComponent__TypeInfo);
+    v4 = (CStateManager_T__o *)sub_1C942E4(CStateManager_BlankEarthGimmickComponent__TypeInfo);
     CStateManager_object____ctor(
       v4,
       (Il2CppObject *)this,
       4,
-      (const MethodInfo_3394668 *)Method_CStateManager_BlankEarthGimmickComponent___ctor__);
+      (const MethodInfo_33E65C4 *)Method_CStateManager_BlankEarthGimmickComponent___ctor__);
     this->fields.mFSM = (struct CStateManager_BlankEarthGimmickComponent__o *)v4;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mFSM, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mFSM, (int32_t)v4, v5, v6, v7, v8, v9, v10);
     mFSM = (CStateManager_T__o *)this->fields.mFSM;
-    v12 = (Il2CppObject *)sub_1C715FC(BlankEarthGimmickComponent_StateNone_TypeInfo);
+    v12 = (Il2CppObject *)sub_1C942E4(BlankEarthGimmickComponent_StateNone_TypeInfo);
     System_Object___ctor(v12, 0);
     if ( !mFSM )
       goto LABEL_9;
@@ -58,9 +58,9 @@ void BlankEarthGimmickComponent__Awake(BlankEarthGimmickComponent_o *this, const
       mFSM,
       0,
       (IState_T__o *)v12,
-      (const MethodInfo_3394710 *)Method_CStateManager_BlankEarthGimmickComponent__add__);
+      (const MethodInfo_33E666C *)Method_CStateManager_BlankEarthGimmickComponent__add__);
     v15 = (CStateManager_T__o *)*p_mFSM;
-    v16 = (Il2CppObject *)sub_1C715FC(BlankEarthGimmickComponent_StateMapMain_TypeInfo);
+    v16 = (Il2CppObject *)sub_1C942E4(BlankEarthGimmickComponent_StateMapMain_TypeInfo);
     System_Object___ctor(v16, 0);
     if ( !v15 )
       goto LABEL_9;
@@ -68,29 +68,29 @@ void BlankEarthGimmickComponent__Awake(BlankEarthGimmickComponent_o *this, const
       v15,
       1,
       (IState_T__o *)v16,
-      (const MethodInfo_3394710 *)Method_CStateManager_BlankEarthGimmickComponent__add__);
+      (const MethodInfo_33E666C *)Method_CStateManager_BlankEarthGimmickComponent__add__);
     v17 = (CStateManager_T__o *)*p_mFSM;
-    v18 = (Il2CppObject *)sub_1C715FC(BlankEarthGimmickComponent_StateHideAnim_TypeInfo);
+    v18 = (Il2CppObject *)sub_1C942E4(BlankEarthGimmickComponent_StateHideAnim_TypeInfo);
     System_Object___ctor(v18, 0);
     if ( !v17
       || (CStateManager_object___add(
             v17,
             2,
             (IState_T__o *)v18,
-            (const MethodInfo_3394710 *)Method_CStateManager_BlankEarthGimmickComponent__add__),
+            (const MethodInfo_33E666C *)Method_CStateManager_BlankEarthGimmickComponent__add__),
           v19 = (CStateManager_T__o *)*p_mFSM,
-          v20 = (Il2CppObject *)sub_1C715FC(BlankEarthGimmickComponent_StateDispAnim_TypeInfo),
+          v20 = (Il2CppObject *)sub_1C942E4(BlankEarthGimmickComponent_StateDispAnim_TypeInfo),
           System_Object___ctor(v20, 0),
           !v19) )
     {
 LABEL_9:
-      sub_1C71608(v13, v14);
+      sub_1C942F0(v13, v14);
     }
     CStateManager_object___add(
       v19,
       3,
       (IState_T__o *)v20,
-      (const MethodInfo_3394710 *)Method_CStateManager_BlankEarthGimmickComponent__add__);
+      (const MethodInfo_33E666C *)Method_CStateManager_BlankEarthGimmickComponent__add__);
     BlankEarthGimmickComponent__SetState(this, 1, 0, v21);
   }
 }
@@ -102,21 +102,21 @@ int32_t BlankEarthGimmickComponent__GetState(BlankEarthGimmickComponent_o *this,
   struct CStateManager_BlankEarthGimmickComponent__o *mFSM; // x8
 
   v2 = this;
-  if ( (byte_4CC3BEA & 1) == 0 )
+  if ( (byte_4D28F33 & 1) == 0 )
   {
-    this = (BlankEarthGimmickComponent_o *)sub_1C713B0(&Method_CStateManager_BlankEarthGimmickComponent__getState__);
-    byte_4CC3BEA = 1;
+    this = (BlankEarthGimmickComponent_o *)sub_1C94098(&Method_CStateManager_BlankEarthGimmickComponent__getState__);
+    byte_4D28F33 = 1;
   }
   mFSM = v2->fields.mFSM;
   if ( !mFSM )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return mFSM->fields.m_state;
 }
 
 
 void BlankEarthGimmickComponent__SetDispAnim(BlankEarthGimmickComponent_o *this, bool isDisp, const MethodInfo *method)
 {
-  BlankEarthGimmickComponent__SetDispAnim_36163264(this, isDisp, this->fields.animTime, method);
+  BlankEarthGimmickComponent__SetDispAnim_36486472(this, isDisp, this->fields.animTime, method);
 }
 
 
@@ -125,11 +125,11 @@ void BlankEarthGimmickComponent__SetDispAnimQuick(
         bool isDisp,
         const MethodInfo *method)
 {
-  BlankEarthGimmickComponent__SetDispAnim_36163264(this, isDisp, 0.0, method);
+  BlankEarthGimmickComponent__SetDispAnim_36486472(this, isDisp, 0.0, method);
 }
 
 
-void BlankEarthGimmickComponent__SetDispAnim_36163264(
+void BlankEarthGimmickComponent__SetDispAnim_36486472(
         BlankEarthGimmickComponent_o *this,
         bool isDisp,
         float time,
@@ -145,13 +145,13 @@ void BlankEarthGimmickComponent__SetDispAnim_36163264(
   System_Action_o *v14; // x21
   const MethodInfo *v15; // x1
 
-  if ( (byte_4CC3BEC & 1) == 0 )
+  if ( (byte_4D28F35 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_BlankEarthGimmickComponent_StateDispAnimEnd__);
-    sub_1C713B0(&Method_BlankEarthGimmickComponent_StateHideAnimEnd__);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3BEC = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_BlankEarthGimmickComponent_StateDispAnimEnd__);
+    sub_1C94098(&Method_BlankEarthGimmickComponent_StateHideAnimEnd__);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D28F35 = 1;
   }
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -180,7 +180,7 @@ void BlankEarthGimmickComponent__SetDispAnim_36163264(
           }
           else
           {
-            v11 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+            v11 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
             System_Action___ctor(v11, (Il2CppObject *)this, Method_BlankEarthGimmickComponent_StateDispAnimEnd__, 0);
             if ( v10 )
             {
@@ -198,7 +198,7 @@ LABEL_21:
         }
       }
 LABEL_23:
-      sub_1C71608(gameObject, v9);
+      sub_1C942F0(gameObject, v9);
     }
     v13 = this->fields.commonEffectComponent;
     if ( time <= 0.0 )
@@ -215,7 +215,7 @@ LABEL_23:
     }
     else
     {
-      v14 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      v14 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
       System_Action___ctor(v14, (Il2CppObject *)this, Method_BlankEarthGimmickComponent_StateHideAnimEnd__, 0);
       if ( !v13 )
         goto LABEL_23;
@@ -245,14 +245,14 @@ void BlankEarthGimmickComponent__SetState(
   __int64 v12; // x1
   CStateManager_T__o *v13; // x0
 
-  if ( (byte_4CC3BEB & 1) == 0 )
+  if ( (byte_4D28F34 & 1) == 0 )
   {
-    sub_1C713B0(&Method_CStateManager_BlankEarthGimmickComponent__setState__);
-    byte_4CC3BEB = 1;
+    sub_1C94098(&Method_CStateManager_BlankEarthGimmickComponent__setState__);
+    byte_4D28F34 = 1;
   }
   this->fields.mStateEndAct = endAct;
   p_mStateEndAct = &this->fields.mStateEndAct;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)p_mStateEndAct,
     (int32_t)endAct,
     (int32_t)endAct,
@@ -263,11 +263,11 @@ void BlankEarthGimmickComponent__SetState(
     v7);
   v13 = (CStateManager_T__o *)*(p_mStateEndAct - 2);
   if ( !v13 )
-    sub_1C71608(0, v12);
+    sub_1C942F0(0, v12);
   CStateManager_object___setState(
     v13,
     state,
-    (const MethodInfo_339479C *)Method_CStateManager_BlankEarthGimmickComponent__setState__);
+    (const MethodInfo_33E66F8 *)Method_CStateManager_BlankEarthGimmickComponent__setState__);
 }
 
 
@@ -288,14 +288,14 @@ void BlankEarthGimmickComponent__Setup(
   int32_t UseAnimFromScript; // w0
   char v15; // w20
 
-  if ( (byte_4CC3BE9 & 1) == 0 )
+  if ( (byte_4D28F32 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3BE9 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D28F32 = 1;
   }
   this->fields.blankEarthGimmickEntity = gimmickEntity;
   p_blankEarthGimmickEntity = &this->fields.blankEarthGimmickEntity;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.blankEarthGimmickEntity,
     (int32_t)gimmickEntity,
     (int32_t)method,
@@ -359,7 +359,7 @@ void BlankEarthGimmickComponent__Setup(
         }
       }
 LABEL_21:
-      sub_1C71608(IsOpen, v12);
+      sub_1C942F0(IsOpen, v12);
     }
   }
 }
@@ -381,10 +381,10 @@ void BlankEarthGimmickComponent__StateHideAnimEnd(BlankEarthGimmickComponent_o *
   const MethodInfo *v5; // x3
   UnityEngine_Component_o *gameObject; // x0
 
-  if ( (byte_4CC3BED & 1) == 0 )
+  if ( (byte_4D28F36 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3BED = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D28F36 = 1;
   }
   ActionExtensions__Call(this->fields.mStateEndAct, 0);
   commonEffectComponent = (UnityEngine_Object_o *)this->fields.commonEffectComponent;
@@ -396,7 +396,7 @@ void BlankEarthGimmickComponent__StateHideAnimEnd(BlankEarthGimmickComponent_o *
     if ( !gameObject
       || (gameObject = (UnityEngine_Component_o *)UnityEngine_Component__get_gameObject(gameObject, 0)) == 0 )
     {
-      sub_1C71608(gameObject, v4);
+      sub_1C942F0(gameObject, v4);
     }
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)gameObject, 0, 0);
   }
@@ -408,16 +408,16 @@ void BlankEarthGimmickComponent__Update(BlankEarthGimmickComponent_o *this, cons
 {
   CStateManager_T__o *mFSM; // x0
 
-  if ( (byte_4CC3BE8 & 1) == 0 )
+  if ( (byte_4D28F31 & 1) == 0 )
   {
-    sub_1C713B0(&Method_CStateManager_BlankEarthGimmickComponent__update__);
-    byte_4CC3BE8 = 1;
+    sub_1C94098(&Method_CStateManager_BlankEarthGimmickComponent__update__);
+    byte_4D28F31 = 1;
   }
   mFSM = (CStateManager_T__o *)this->fields.mFSM;
   if ( mFSM )
     CStateManager_object___update(
       mFSM,
-      (const MethodInfo_3394778 *)Method_CStateManager_BlankEarthGimmickComponent__update__);
+      (const MethodInfo_33E66D4 *)Method_CStateManager_BlankEarthGimmickComponent__update__);
 }
 
 
@@ -438,7 +438,7 @@ void BlankEarthGimmickComponent_StateDispAnim__begin(
   const MethodInfo *v5; // x3
 
   if ( !that )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   dispType = that->fields.dispType;
   if ( dispType == 1 )
   {
@@ -447,7 +447,7 @@ void BlankEarthGimmickComponent_StateDispAnim__begin(
   }
   else if ( !dispType )
   {
-    BlankEarthGimmickComponent__SetDispAnim_36163264(that, 1, that->fields.animTime, method);
+    BlankEarthGimmickComponent__SetDispAnim_36486472(that, 1, that->fields.animTime, method);
   }
 }
 
@@ -486,11 +486,11 @@ void BlankEarthGimmickComponent_StateHideAnim__begin(
   int32_t dispType; // w8
 
   if ( !that )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   dispType = that->fields.dispType;
   if ( dispType == 1 )
   {
-    BlankEarthGimmickComponent__SetDispAnim_36163264(that, 0, that->fields.animTime, method);
+    BlankEarthGimmickComponent__SetDispAnim_36486472(that, 0, that->fields.animTime, method);
   }
   else if ( !dispType )
   {

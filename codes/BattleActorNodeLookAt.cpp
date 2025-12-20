@@ -17,7 +17,7 @@ void BattleActorNodeLookAt__Awake(BattleActorNodeLookAt_o *this, const MethodInf
 
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   this->fields.selfTransform = transform;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.selfTransform, (int32_t)transform, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.selfTransform, (int32_t)transform, v4, v5, v6, v7, v8, v9);
 }
 
 
@@ -58,10 +58,10 @@ void BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this, const Meth
   UnityEngine_Quaternion_o rotation; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v36; // 0:s4.4,4:s5.4,8:s6.4,12:s7.4
 
-  if ( (byte_4CC9AF6 & 1) == 0 )
+  if ( (byte_4D2EEE8 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC9AF6 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2EEE8 = 1;
   }
   type = this->fields.type;
   if ( type == 1 )
@@ -85,10 +85,10 @@ void BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this, const Meth
       v15 = v31.fields.x;
       v16 = v31.fields.y;
       v17 = v31.fields.z;
-      if ( !byte_4CC0D0B )
+      if ( !byte_4D25F1B )
       {
-        sub_1C713B0(&System_Math_TypeInfo);
-        byte_4CC0D0B = 1;
+        sub_1C94098(&System_Math_TypeInfo);
+        byte_4D25F1B = 1;
       }
       v18 = x - v15;
       v19 = y - v16;
@@ -99,7 +99,7 @@ void BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this, const Meth
         v32.fields.x = v18;
         v32.fields.y = v19;
         v32.fields.z = z - v17;
-        v34 = UnityEngine_Quaternion__LookRotation_71662888(v32, 0);
+        v34 = UnityEngine_Quaternion__LookRotation_72049252(v32, 0);
         v20 = v34.fields.x;
         v21 = v34.fields.y;
         v22 = v34.fields.z;
@@ -124,7 +124,7 @@ void BattleActorNodeLookAt__LateUpdate(BattleActorNodeLookAt_o *this, const Meth
           goto LABEL_7;
         }
 LABEL_24:
-        sub_1C71608(selfTransform, v9);
+        sub_1C942F0(selfTransform, v9);
       }
     }
   }

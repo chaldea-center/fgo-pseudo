@@ -7,10 +7,10 @@ void AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgument_o *thi
   float v7; // s1
 
   this->fields.IsExec = 1;
-  if ( !byte_4CC0D09 )
+  if ( !byte_4D25F19 )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D09 = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
   }
   v3 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -25,7 +25,7 @@ void AdjustPopupPosInScreenArgument___ctor(AdjustPopupPosInScreenArgument_o *thi
 }
 
 
-void AdjustPopupPosInScreenArgument___ctor_47610312(
+void AdjustPopupPosInScreenArgument___ctor_48117576(
         AdjustPopupPosInScreenArgument_o *this,
         UnityEngine_Vector3_o adjustAfterOffset,
         const MethodInfo *method)
@@ -43,10 +43,10 @@ void AdjustPopupPosInScreenArgument___ctor_47610312(
   z = adjustAfterOffset.fields.z;
   y = adjustAfterOffset.fields.y;
   x = adjustAfterOffset.fields.x;
-  if ( !byte_4CC0D09 )
+  if ( !byte_4D25F19 )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D09 = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
   }
   v7 = UnityEngine_Vector3_TypeInfo;
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -83,7 +83,7 @@ AdjustPopupPosInScreenArgument_o *AdjustPopupPosInScreenArgument__Init(
   z = worldPos.fields.z;
   y = worldPos.fields.y;
   x = worldPos.fields.x;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Camera_k__BackingField,
     (int32_t)camera,
     (int32_t)method,
@@ -143,10 +143,10 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
   __int64 v4; // x1
   UnityEngine_Camera_o *v5; // x0
 
-  if ( (byte_4CCA8DD & 1) == 0 )
+  if ( (byte_4D2FD91 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCA8DD = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2FD91 = 1;
   }
   Camera_k__BackingField = (UnityEngine_Object_o *)this->fields._Camera_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -155,15 +155,15 @@ UnityEngine_Vector3_o AdjustPopupPosInScreenArgument__get_ViewPos(
   {
     v5 = this->fields._Camera_k__BackingField;
     if ( !v5 )
-      sub_1C71608(0, v4);
-    return UnityEngine_Camera__WorldToViewportPoint_71529188(v5, this->fields._WorldPos_k__BackingField, 0);
+      sub_1C942F0(0, v4);
+    return UnityEngine_Camera__WorldToViewportPoint_71915552(v5, this->fields._WorldPos_k__BackingField, 0);
   }
   else
   {
-    if ( !byte_4CC0D09 )
+    if ( !byte_4D25F19 )
     {
-      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-      byte_4CC0D09 = 1;
+      sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+      byte_4D25F19 = 1;
     }
     return UnityEngine_Vector3_TypeInfo->static_fields->zeroVector;
   }
@@ -201,7 +201,7 @@ void AdjustPopupPosInScreenArgument__set_Camera(
   System_String_o *v7; // x7
 
   this->fields._Camera_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Camera_k__BackingField,
     (int32_t)value,
     (int32_t)method,

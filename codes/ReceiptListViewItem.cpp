@@ -11,9 +11,9 @@ void ReceiptListViewItem___ctor(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
   this->fields.path = path;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.path, (int32_t)path, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.path, (int32_t)path, v6, v7, v8, v9, v10, v11);
 }
 
 
@@ -31,10 +31,10 @@ System_String_o *ReceiptListViewItem__get_Path(ReceiptListViewItem_o *this, cons
 
 System_String_o *ReceiptListViewItem__get_TimeText(ReceiptListViewItem_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC4909 & 1) == 0 )
+  if ( (byte_4D29D59 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC4909 = 1;
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D29D59 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -53,7 +53,7 @@ System_String_o *ReceiptListViewItem__get_TitleText(ReceiptListViewItem_o *this,
     if ( this->fields.path )
       return System_String__Substring(this->fields.path, (int)path + 1, 0);
 LABEL_6:
-    sub_1C71608(path, method);
+    sub_1C942F0(path, method);
   }
   return this->fields.path;
 }

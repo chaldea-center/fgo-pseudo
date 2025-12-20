@@ -29,13 +29,13 @@ void WarBoardPartyOrganizationListViewObject__Init(
   const MethodInfo *v12; // x3
   WarBoardPartyOrganizationListViewItemDraw_o *v13; // x0
 
-  if ( (byte_4CC5014 & 1) == 0 )
+  if ( (byte_4D2A3C2 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC5014 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2A3C2 = 1;
   }
   this->fields.onTapEvent = onTapEvent;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.onTapEvent,
     (int32_t)onTapEvent,
     (int32_t)method,
@@ -51,7 +51,7 @@ void WarBoardPartyOrganizationListViewObject__Init(
   {
     v13 = this->fields.itemDraw;
     if ( !v13 )
-      sub_1C71608(0, v11);
+      sub_1C942F0(0, v11);
     WarBoardPartyOrganizationListViewItemDraw__SetItem(v13, this->fields.listViewItem, 3, v12);
   }
 }
@@ -180,7 +180,7 @@ void WarBoardPartyOrganizationListViewObject__SetItem(
   System_String_o *v7; // x7
 
   this->fields.listViewItem = item;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.listViewItem,
     (int32_t)item,
     (int32_t)method,

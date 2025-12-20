@@ -31,40 +31,40 @@ SubmarineQuestSaveInfo_o *SubmarineQuestSaveInfo__CreateBySaveValue(System_Strin
   bool v16; // w20
   __int64 v17; // x23
 
-  if ( (byte_4CC3D28 & 1) == 0 )
+  if ( (byte_4D29072 & 1) == 0 )
   {
-    sub_1C713B0(&bool_TypeInfo);
-    sub_1C713B0(&SubmarineQuestSaveInfo_TypeInfo);
-    byte_4CC3D28 = 1;
+    sub_1C94098(&bool_TypeInfo);
+    sub_1C94098(&SubmarineQuestSaveInfo_TypeInfo);
+    byte_4D29072 = 1;
   }
   IsNullOrEmpty = System_String__IsNullOrEmpty(value, 0);
   if ( IsNullOrEmpty )
     return SubmarineQuestSaveInfo__CreateDefault((const MethodInfo *)IsNullOrEmpty);
   if ( !value )
-    sub_1C71608(IsNullOrEmpty, v4);
+    sub_1C942F0(IsNullOrEmpty, v4);
   v6 = System_String__Split(value, 0x2Cu, 0, 0);
   v8 = v6;
   if ( !v6 )
-    sub_1C71608(0, v7);
+    sub_1C942F0(0, v7);
   if ( !LODWORD(v6->max_length) )
-    sub_1C71610(v6);
+    sub_1C942F8(v6);
   v9 = System_Int32__Parse(v6->m_Items[0], 0);
   if ( LODWORD(v8->max_length) <= 1 )
-    sub_1C71610(v9);
+    sub_1C942F8(v9);
   v10 = v9;
   v11 = System_Int32__Parse(v8->m_Items[1], 0);
   if ( LODWORD(v8->max_length) <= 2 )
-    sub_1C71610(v11);
+    sub_1C942F8(v11);
   v12 = v11;
   v13 = v8->m_Items[2];
   if ( !bool_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(bool_TypeInfo);
   v14 = System_Boolean__Parse(v13, 0);
   if ( LODWORD(v8->max_length) <= 3 )
-    sub_1C71610(v14);
+    sub_1C942F8(v14);
   v15 = v14;
   v16 = System_Boolean__Parse(v8->m_Items[3], 0);
-  v17 = sub_1C715FC(SubmarineQuestSaveInfo_TypeInfo);
+  v17 = sub_1C942E4(SubmarineQuestSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v17, 0);
   *(_DWORD *)(v17 + 16) = v10;
   *(_DWORD *)(v17 + 20) = v12;
@@ -78,12 +78,12 @@ SubmarineQuestSaveInfo_o *SubmarineQuestSaveInfo__CreateDefault(const MethodInfo
 {
   __int64 v1; // x19
 
-  if ( (byte_4CC3D27 & 1) == 0 )
+  if ( (byte_4D29071 & 1) == 0 )
   {
-    sub_1C713B0(&SubmarineQuestSaveInfo_TypeInfo);
-    byte_4CC3D27 = 1;
+    sub_1C94098(&SubmarineQuestSaveInfo_TypeInfo);
+    byte_4D29071 = 1;
   }
-  v1 = sub_1C715FC(SubmarineQuestSaveInfo_TypeInfo);
+  v1 = sub_1C942E4(SubmarineQuestSaveInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v1, 0);
   *(_QWORD *)(v1 + 16) = -1;
   *(_WORD *)(v1 + 24) = 0;
@@ -151,39 +151,39 @@ System_String_o *SubmarineQuestSaveInfo__GetSaveValue(SubmarineQuestSaveInfo_o *
   _BYTE v59[4]; // [xsp+8h] [xbp-28h] BYREF
   int32_t QuestId_k__BackingField; // [xsp+Ch] [xbp-24h] BYREF
 
-  if ( (byte_4CC3D26 & 1) == 0 )
+  if ( (byte_4D29070 & 1) == 0 )
   {
-    sub_1C713B0(&bool_TypeInfo);
-    sub_1C713B0(&string___TypeInfo);
-    sub_1C713B0(&StringLiteral_808/*","*/);
-    byte_4CC3D26 = 1;
+    sub_1C94098(&bool_TypeInfo);
+    sub_1C94098(&string___TypeInfo);
+    sub_1C94098(&StringLiteral_808/*","*/);
+    byte_4D29070 = 1;
   }
   v59[0] = 0;
-  v3 = sub_1C71458(string___TypeInfo, 8);
+  v3 = sub_1C94140(string___TypeInfo, 8);
   QuestId_k__BackingField = this->fields._QuestId_k__BackingField;
   v4 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0);
   if ( !v3 )
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   if ( !*(_DWORD *)(v3 + 24) )
     goto LABEL_15;
   *(_QWORD *)(v3 + 32) = v4;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)v4, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)v4, v6, v7, v8, v9, v10, v11);
   if ( *(_DWORD *)(v3 + 24) <= 1u )
     goto LABEL_15;
   v18 = StringLiteral_808/*","*/;
   *(_QWORD *)(v3 + 40) = StringLiteral_808/*","*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 40), v18, v12, v13, v14, v15, v16, v17);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 40), v18, v12, v13, v14, v15, v16, v17);
   QuestId_k__BackingField = this->fields._PhaseCnt_k__BackingField;
   v4 = System_Int32__ToString((int32_t)&QuestId_k__BackingField, 0);
   if ( *(_DWORD *)(v3 + 24) <= 2u )
     goto LABEL_15;
   *(_QWORD *)(v3 + 48) = v4;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 48), (int32_t)v4, v19, v20, v21, v22, v23, v24);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 48), (int32_t)v4, v19, v20, v21, v22, v23, v24);
   if ( *(_DWORD *)(v3 + 24) <= 3u )
     goto LABEL_15;
   v31 = StringLiteral_808/*","*/;
   *(_QWORD *)(v3 + 56) = StringLiteral_808/*","*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 56), v31, v25, v26, v27, v28, v29, v30);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 56), v31, v25, v26, v27, v28, v29, v30);
   v59[0] = this->fields._IsQuestClear_k__BackingField;
   if ( !bool_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(bool_TypeInfo);
@@ -191,25 +191,25 @@ System_String_o *SubmarineQuestSaveInfo__GetSaveValue(SubmarineQuestSaveInfo_o *
   if ( *(_DWORD *)(v3 + 24) <= 4u )
     goto LABEL_15;
   *(_QWORD *)(v3 + 64) = v4;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 64), (int32_t)v4, v32, v33, v34, v35, v36, v37);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 64), (int32_t)v4, v32, v33, v34, v35, v36, v37);
   if ( *(_DWORD *)(v3 + 24) <= 5u
     || (v44 = StringLiteral_808/*","*/,
         *(_QWORD *)(v3 + 72) = StringLiteral_808/*","*/,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 72), v44, v38, v39, v40, v41, v42, v43),
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 72), v44, v38, v39, v40, v41, v42, v43),
         v59[0] = this->fields._IsQuestPhaseClear_k__BackingField,
         v4 = System_Boolean__ToString((bool)v59, 0),
         *(_DWORD *)(v3 + 24) <= 6u)
     || (*(_QWORD *)(v3 + 80) = v4,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 80), (int32_t)v4, v45, v46, v47, v48, v49, v50),
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 80), (int32_t)v4, v45, v46, v47, v48, v49, v50),
         *(_DWORD *)(v3 + 24) <= 7u) )
   {
 LABEL_15:
-    sub_1C71610(v4);
+    sub_1C942F8(v4);
   }
   v57 = StringLiteral_808/*","*/;
   *(_QWORD *)(v3 + 88) = StringLiteral_808/*","*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 88), v57, v51, v52, v53, v54, v55, v56);
-  return System_String__Concat_64072256((System_String_array *)v3, 0);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 88), v57, v51, v52, v53, v54, v55, v56);
+  return System_String__Concat_64458276((System_String_array *)v3, 0);
 }
 
 

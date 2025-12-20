@@ -18,7 +18,7 @@ void CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const Metho
 
   v3 = CharaGraphSortLogicBase__ClearedIcon((const MethodInfo *)this);
   this->fields._IconInfo1_k__BackingField = v3;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)v3,
     v4,
@@ -29,7 +29,7 @@ void CharaGraphSortLogicBase___ctor(CharaGraphSortLogicBase_o *this, const Metho
     v9);
   v11 = CharaGraphSortLogicBase__ClearedIcon(v10);
   this->fields._IconInfo2_k__BackingField = v11;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)v11,
     v12,
@@ -48,15 +48,15 @@ IconLabelInfo_o *CharaGraphSortLogicBase__ClearedIcon(const MethodInfo *method)
   __int64 v2; // x0
   __int64 v3; // x1
 
-  if ( (byte_4CC6724 & 1) == 0 )
+  if ( (byte_4D2BB86 & 1) == 0 )
   {
-    sub_1C713B0(&IconLabelInfo_TypeInfo);
-    byte_4CC6724 = 1;
+    sub_1C94098(&IconLabelInfo_TypeInfo);
+    byte_4D2BB86 = 1;
   }
-  v1 = (IconLabelInfo_o *)sub_1C715FC(IconLabelInfo_TypeInfo);
+  v1 = (IconLabelInfo_o *)sub_1C942E4(IconLabelInfo_TypeInfo);
   IconLabelInfo___ctor(v1, 0);
   if ( !v1 )
-    sub_1C71608(v2, v3);
+    sub_1C942F0(v2, v3);
   IconLabelInfo__Clear(v1, 0);
   return v1;
 }
@@ -76,7 +76,7 @@ void CharaGraphSortLogicBase__InitSortValue(CharaGraphSortLogicBase_o *this, con
     || (IconLabelInfo__Clear(IconInfo1_k__BackingField, 0),
         (IconInfo1_k__BackingField = this->fields._IconInfo2_k__BackingField) == 0) )
   {
-    sub_1C71608(IconInfo1_k__BackingField, method);
+    sub_1C942F0(IconInfo1_k__BackingField, method);
   }
   IconLabelInfo__Clear(IconInfo1_k__BackingField, 0);
 }
@@ -94,7 +94,7 @@ void CharaGraphSortLogicBase__SetListViewItem(
   System_String_o *v7; // x7
 
   this->fields.item = inputItem;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.item,
     (int32_t)inputItem,
     (int32_t)method,
@@ -118,7 +118,7 @@ void CharaGraphSortLogicBase__SetListViewSort(
   System_String_o *v7; // x7
 
   this->fields.sort = inputSort;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)inputSort, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -144,7 +144,7 @@ void CharaGraphSortLogicBase__SetSortValueLocal(CharaGraphSortLogicBase_o *this,
   sort = this->fields.sort;
   if ( !sort )
 LABEL_7:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   if ( sort->fields.isChoiceSort )
     this->fields._SortValue0_k__BackingField = 10;
 }
@@ -231,7 +231,7 @@ void CharaGraphSortLogicBase__set_IconInfo1(
   System_String_o *v7; // x7
 
   this->fields._IconInfo1_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo1_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -255,7 +255,7 @@ void CharaGraphSortLogicBase__set_IconInfo2(
   System_String_o *v7; // x7
 
   this->fields._IconInfo2_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconInfo2_k__BackingField,
     (int32_t)value,
     (int32_t)method,

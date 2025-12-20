@@ -263,172 +263,172 @@ void UIMeshSprite__Initialize(UIMeshSprite_o *this, const MethodInfo *method)
   struct UnityEngine_Vector2_array_array *sprMeshUv; // x8
   Il2CppClass **v257; // x0
 
-  if ( (byte_4CC8CFB & 1) == 0 )
+  if ( (byte_4D2E198 & 1) == 0 )
   {
-    sub_1C713B0(&double_____TypeInfo);
-    sub_1C713B0(&double___TypeInfo);
-    sub_1C713B0(&int_____TypeInfo);
-    sub_1C713B0(&int___TypeInfo);
-    sub_1C713B0(&Field__PrivateImplementationDetails__2EE364B28C2DF2751CBCB67FD5C712FDCCB16455384FE2153A7A1B9A39BF4E08);
-    sub_1C713B0(&Field__PrivateImplementationDetails__39B0CE9F8BB751D3CDA95DFF4CCBD2F76AA8BE076E08F92CD3A2CE32D7FD5D9E);
-    sub_1C713B0(&Field__PrivateImplementationDetails__760678574AC754570788C16023649BA2DD5F4E1DEFC8EECDAFDEFD9E455FB18D);
-    sub_1C713B0(&Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C);
-    sub_1C713B0(&Field__PrivateImplementationDetails__8B30583BA1D630C1FD8BC2C781FC5CFD0D44EE537275F60F4BCC1CB95F36790E);
-    sub_1C713B0(&Field__PrivateImplementationDetails__A7D34401E4A32665A44B3A0EDC41B741B897D63BD99AA951B9A422E659B956E4);
-    sub_1C713B0(&Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE);
-    sub_1C713B0(&Field__PrivateImplementationDetails__BFB6381577CD3F50A9C3EA1AA2779200B89E7FDCEDE42A7A76BBF94A108B4D48);
-    sub_1C713B0(&Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB);
-    sub_1C713B0(&Field__PrivateImplementationDetails__FA106D01A783872947C63534621698735FDDB45CF0224FF39E81FA1D5CFE503F);
-    sub_1C713B0(&UIMeshSprite_TypeInfo);
-    sub_1C713B0(&UnityEngine_Vector2_____TypeInfo);
-    sub_1C713B0(&UnityEngine_Vector2___TypeInfo);
-    sub_1C713B0(&UnityEngine_Vector3_____TypeInfo);
-    sub_1C713B0(&UnityEngine_Vector3___TypeInfo);
-    byte_4CC8CFB = 1;
+    sub_1C94098(&double_____TypeInfo);
+    sub_1C94098(&double___TypeInfo);
+    sub_1C94098(&int_____TypeInfo);
+    sub_1C94098(&int___TypeInfo);
+    sub_1C94098(&Field__PrivateImplementationDetails__2EE364B28C2DF2751CBCB67FD5C712FDCCB16455384FE2153A7A1B9A39BF4E08);
+    sub_1C94098(&Field__PrivateImplementationDetails__39B0CE9F8BB751D3CDA95DFF4CCBD2F76AA8BE076E08F92CD3A2CE32D7FD5D9E);
+    sub_1C94098(&Field__PrivateImplementationDetails__760678574AC754570788C16023649BA2DD5F4E1DEFC8EECDAFDEFD9E455FB18D);
+    sub_1C94098(&Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C);
+    sub_1C94098(&Field__PrivateImplementationDetails__8B30583BA1D630C1FD8BC2C781FC5CFD0D44EE537275F60F4BCC1CB95F36790E);
+    sub_1C94098(&Field__PrivateImplementationDetails__A7D34401E4A32665A44B3A0EDC41B741B897D63BD99AA951B9A422E659B956E4);
+    sub_1C94098(&Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE);
+    sub_1C94098(&Field__PrivateImplementationDetails__BFB6381577CD3F50A9C3EA1AA2779200B89E7FDCEDE42A7A76BBF94A108B4D48);
+    sub_1C94098(&Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB);
+    sub_1C94098(&Field__PrivateImplementationDetails__FA106D01A783872947C63534621698735FDDB45CF0224FF39E81FA1D5CFE503F);
+    sub_1C94098(&UIMeshSprite_TypeInfo);
+    sub_1C94098(&UnityEngine_Vector2_____TypeInfo);
+    sub_1C94098(&UnityEngine_Vector2___TypeInfo);
+    sub_1C94098(&UnityEngine_Vector3_____TypeInfo);
+    sub_1C94098(&UnityEngine_Vector3___TypeInfo);
+    byte_4D2E198 = 1;
   }
   if ( !UIMeshSprite_TypeInfo->static_fields->sprMeshVert )
   {
-    v3 = sub_1C71458(double_____TypeInfo, 4);
-    v4 = (System_Array_o *)sub_1C71458(double___TypeInfo, 12);
+    v3 = sub_1C94140(double_____TypeInfo, 4);
+    v4 = (System_Array_o *)sub_1C94140(double___TypeInfo, 12);
     v5.fields.value = Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB;
-    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v4, v5, 0);
+    System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v4, v5, 0);
     if ( v3 )
     {
       if ( !*(_DWORD *)(v3 + 24) )
         goto LABEL_93;
       *(_QWORD *)(v3 + 32) = v4;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)v4, v8, v9, v10, v11, v12, v13);
-      v14 = (System_Array_o *)sub_1C71458(double___TypeInfo, 18);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)v4, v8, v9, v10, v11, v12, v13);
+      v14 = (System_Array_o *)sub_1C94140(double___TypeInfo, 18);
       v15.fields.value = Field__PrivateImplementationDetails__760678574AC754570788C16023649BA2DD5F4E1DEFC8EECDAFDEFD9E455FB18D;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v14, v15, 0);
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v14, v15, 0);
       if ( *(_DWORD *)(v3 + 24) <= 1u )
         goto LABEL_93;
       *(_QWORD *)(v3 + 40) = v14;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 40), (int32_t)v14, v16, v17, v18, v19, v20, v21);
-      v22 = (System_Array_o *)sub_1C71458(double___TypeInfo, 12);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 40), (int32_t)v14, v16, v17, v18, v19, v20, v21);
+      v22 = (System_Array_o *)sub_1C94140(double___TypeInfo, 12);
       v23.fields.value = Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB;
       v24 = v22;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v22, v23, 0);
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v22, v23, 0);
       if ( *(_DWORD *)(v3 + 24) <= 2u )
         goto LABEL_93;
       *(_QWORD *)(v3 + 48) = v24;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 48), (int32_t)v24, v25, v26, v27, v28, v29, v30);
-      v31 = (System_Array_o *)sub_1C71458(double___TypeInfo, 12);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 48), (int32_t)v24, v25, v26, v27, v28, v29, v30);
+      v31 = (System_Array_o *)sub_1C94140(double___TypeInfo, 12);
       v32.fields.value = Field__PrivateImplementationDetails__DE20FBDC7AE005F294CB7F36726D94483663568309C8140669555C980F7950EB;
       v33 = v31;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v31, v32, 0);
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v31, v32, 0);
       if ( *(_DWORD *)(v3 + 24) <= 3u )
         goto LABEL_93;
       *(_QWORD *)(v3 + 56) = v33;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 56), (int32_t)v33, v34, v35, v36, v37, v38, v39);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 56), (int32_t)v33, v34, v35, v36, v37, v38, v39);
       UIMeshSprite_TypeInfo->static_fields->meshVertices = (struct System_Double_array_array *)v3;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)UIMeshSprite_TypeInfo->static_fields, v3, v40, v41, v42, v43, v44, v45);
-      v46 = sub_1C71458(int_____TypeInfo, 4);
-      v47 = (System_Array_o *)sub_1C71458(int___TypeInfo, 4);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)UIMeshSprite_TypeInfo->static_fields, v3, v40, v41, v42, v43, v44, v45);
+      v46 = sub_1C94140(int_____TypeInfo, 4);
+      v47 = (System_Array_o *)sub_1C94140(int___TypeInfo, 4);
       v48.fields.value = Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C;
-      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v47, v48, 0);
+      System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v47, v48, 0);
       if ( v46 )
       {
         if ( !*(_DWORD *)(v46 + 24) )
           goto LABEL_93;
         *(_QWORD *)(v46 + 32) = v47;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v46 + 32), (int32_t)v47, v49, v50, v51, v52, v53, v54);
-        v55 = (System_Array_o *)sub_1C71458(int___TypeInfo, 8);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v46 + 32), (int32_t)v47, v49, v50, v51, v52, v53, v54);
+        v55 = (System_Array_o *)sub_1C94140(int___TypeInfo, 8);
         v56.fields.value = Field__PrivateImplementationDetails__FA106D01A783872947C63534621698735FDDB45CF0224FF39E81FA1D5CFE503F;
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v55, v56, 0);
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v55, v56, 0);
         if ( *(_DWORD *)(v46 + 24) <= 1u )
           goto LABEL_93;
         *(_QWORD *)(v46 + 40) = v55;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v46 + 40), (int32_t)v55, v57, v58, v59, v60, v61, v62);
-        v63 = (System_Array_o *)sub_1C71458(int___TypeInfo, 4);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v46 + 40), (int32_t)v55, v57, v58, v59, v60, v61, v62);
+        v63 = (System_Array_o *)sub_1C94140(int___TypeInfo, 4);
         v64.fields.value = Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C;
         v65 = v63;
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v63, v64, 0);
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v63, v64, 0);
         if ( *(_DWORD *)(v46 + 24) <= 2u )
           goto LABEL_93;
         *(_QWORD *)(v46 + 48) = v65;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v46 + 48), (int32_t)v65, v66, v67, v68, v69, v70, v71);
-        v72 = (System_Array_o *)sub_1C71458(int___TypeInfo, 4);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v46 + 48), (int32_t)v65, v66, v67, v68, v69, v70, v71);
+        v72 = (System_Array_o *)sub_1C94140(int___TypeInfo, 4);
         v73.fields.value = Field__PrivateImplementationDetails__7697393717A78F974D3D99FBC523001D071C386C42DCBA44DF71CAE4C67AA21C;
         v74 = v72;
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v72, v73, 0);
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v72, v73, 0);
         if ( *(_DWORD *)(v46 + 24) <= 3u )
           goto LABEL_93;
         *(_QWORD *)(v46 + 56) = v74;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v46 + 56), (int32_t)v74, v75, v76, v77, v78, v79, v80);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v46 + 56), (int32_t)v74, v75, v76, v77, v78, v79, v80);
         static_fields = UIMeshSprite_TypeInfo->static_fields;
         static_fields->meshPolygons = (struct System_Int32_array_array *)v46;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->meshPolygons, v46, v82, v83, v84, v85, v86, v87);
-        v88 = sub_1C71458(double_____TypeInfo, 4);
-        v89 = (System_Array_o *)sub_1C71458(double___TypeInfo, 8);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->meshPolygons, v46, v82, v83, v84, v85, v86, v87);
+        v88 = sub_1C94140(double_____TypeInfo, 4);
+        v89 = (System_Array_o *)sub_1C94140(double___TypeInfo, 8);
         v90.fields.value = Field__PrivateImplementationDetails__A7D34401E4A32665A44B3A0EDC41B741B897D63BD99AA951B9A422E659B956E4;
-        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v89, v90, 0);
+        System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v89, v90, 0);
         if ( v88 )
         {
           if ( !*(_DWORD *)(v88 + 24) )
             goto LABEL_93;
           *(_QWORD *)(v88 + 32) = v89;
-          sub_1C71354((GrandQuestFolderBoardItem_o *)(v88 + 32), (int32_t)v89, v91, v92, v93, v94, v95, v96);
-          v97 = (System_Array_o *)sub_1C71458(double___TypeInfo, 12);
+          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v88 + 32), (int32_t)v89, v91, v92, v93, v94, v95, v96);
+          v97 = (System_Array_o *)sub_1C94140(double___TypeInfo, 12);
           v98.fields.value = Field__PrivateImplementationDetails__2EE364B28C2DF2751CBCB67FD5C712FDCCB16455384FE2153A7A1B9A39BF4E08;
-          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v97, v98, 0);
+          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v97, v98, 0);
           if ( *(_DWORD *)(v88 + 24) <= 1u )
             goto LABEL_93;
           *(_QWORD *)(v88 + 40) = v97;
-          sub_1C71354((GrandQuestFolderBoardItem_o *)(v88 + 40), (int32_t)v97, v99, v100, v101, v102, v103, v104);
-          v105 = (System_Array_o *)sub_1C71458(double___TypeInfo, 8);
+          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v88 + 40), (int32_t)v97, v99, v100, v101, v102, v103, v104);
+          v105 = (System_Array_o *)sub_1C94140(double___TypeInfo, 8);
           v106.fields.value = Field__PrivateImplementationDetails__BFB6381577CD3F50A9C3EA1AA2779200B89E7FDCEDE42A7A76BBF94A108B4D48;
-          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v105, v106, 0);
+          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v105, v106, 0);
           if ( *(_DWORD *)(v88 + 24) <= 2u )
             goto LABEL_93;
           *(_QWORD *)(v88 + 48) = v105;
-          sub_1C71354((GrandQuestFolderBoardItem_o *)(v88 + 48), (int32_t)v105, v107, v108, v109, v110, v111, v112);
-          v113 = (System_Array_o *)sub_1C71458(double___TypeInfo, 8);
+          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v88 + 48), (int32_t)v105, v107, v108, v109, v110, v111, v112);
+          v113 = (System_Array_o *)sub_1C94140(double___TypeInfo, 8);
           v114.fields.value = Field__PrivateImplementationDetails__39B0CE9F8BB751D3CDA95DFF4CCBD2F76AA8BE076E08F92CD3A2CE32D7FD5D9E;
-          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v113, v114, 0);
+          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v113, v114, 0);
           if ( *(_DWORD *)(v88 + 24) <= 3u )
             goto LABEL_93;
           *(_QWORD *)(v88 + 56) = v113;
-          sub_1C71354((GrandQuestFolderBoardItem_o *)(v88 + 56), (int32_t)v113, v115, v116, v117, v118, v119, v120);
+          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v88 + 56), (int32_t)v113, v115, v116, v117, v118, v119, v120);
           v121 = UIMeshSprite_TypeInfo->static_fields;
           v121->uvPos = (struct System_Double_array_array *)v88;
-          sub_1C71354((GrandQuestFolderBoardItem_o *)&v121->uvPos, v88, v122, v123, v124, v125, v126, v127);
-          v128 = sub_1C71458(int_____TypeInfo, 4);
-          v129 = (System_Array_o *)sub_1C71458(int___TypeInfo, 4);
+          sub_1C9403C((GrandQuestFolderBoardItem_o *)&v121->uvPos, v88, v122, v123, v124, v125, v126, v127);
+          v128 = sub_1C94140(int_____TypeInfo, 4);
+          v129 = (System_Array_o *)sub_1C94140(int___TypeInfo, 4);
           v130.fields.value = Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE;
-          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v129, v130, 0);
+          System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v129, v130, 0);
           if ( v128 )
           {
             if ( !*(_DWORD *)(v128 + 24) )
               goto LABEL_93;
             *(_QWORD *)(v128 + 32) = v129;
-            sub_1C71354((GrandQuestFolderBoardItem_o *)(v128 + 32), (int32_t)v129, v131, v132, v133, v134, v135, v136);
-            v137 = (System_Array_o *)sub_1C71458(int___TypeInfo, 8);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v128 + 32), (int32_t)v129, v131, v132, v133, v134, v135, v136);
+            v137 = (System_Array_o *)sub_1C94140(int___TypeInfo, 8);
             v138.fields.value = Field__PrivateImplementationDetails__8B30583BA1D630C1FD8BC2C781FC5CFD0D44EE537275F60F4BCC1CB95F36790E;
-            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v137, v138, 0);
+            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v137, v138, 0);
             if ( *(_DWORD *)(v128 + 24) <= 1u )
               goto LABEL_93;
             *(_QWORD *)(v128 + 40) = v137;
-            sub_1C71354((GrandQuestFolderBoardItem_o *)(v128 + 40), (int32_t)v137, v139, v140, v141, v142, v143, v144);
-            v145 = (System_Array_o *)sub_1C71458(int___TypeInfo, 4);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v128 + 40), (int32_t)v137, v139, v140, v141, v142, v143, v144);
+            v145 = (System_Array_o *)sub_1C94140(int___TypeInfo, 4);
             v146.fields.value = Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE;
             v147 = v145;
-            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v145, v146, 0);
+            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v145, v146, 0);
             if ( *(_DWORD *)(v128 + 24) <= 2u )
               goto LABEL_93;
             *(_QWORD *)(v128 + 48) = v147;
-            sub_1C71354((GrandQuestFolderBoardItem_o *)(v128 + 48), (int32_t)v147, v148, v149, v150, v151, v152, v153);
-            v154 = (System_Array_o *)sub_1C71458(int___TypeInfo, 4);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v128 + 48), (int32_t)v147, v148, v149, v150, v151, v152, v153);
+            v154 = (System_Array_o *)sub_1C94140(int___TypeInfo, 4);
             v155.fields.value = Field__PrivateImplementationDetails__BAED642339816AFFB3FE8719792D0E4CE82F12DB72B7373D244EAA65445800FE;
             v156 = v154;
-            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_64730948(v154, v155, 0);
+            System_Runtime_CompilerServices_RuntimeHelpers__InitializeArray_65116968(v154, v155, 0);
             if ( *(_DWORD *)(v128 + 24) <= 3u )
               goto LABEL_93;
             *(_QWORD *)(v128 + 56) = v156;
-            sub_1C71354((GrandQuestFolderBoardItem_o *)(v128 + 56), (int32_t)v156, v157, v158, v159, v160, v161, v162);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v128 + 56), (int32_t)v156, v157, v158, v159, v160, v161, v162);
             v163 = UIMeshSprite_TypeInfo->static_fields;
             v163->uvIndex = (struct System_Int32_array_array *)v128;
-            sub_1C71354((GrandQuestFolderBoardItem_o *)&v163->uvIndex, v128, v164, v165, v166, v167, v168, v169);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)&v163->uvIndex, v128, v164, v165, v166, v167, v168, v169);
             v170 = UIMeshSprite_TypeInfo->static_fields;
             meshPolygons = v170->meshPolygons;
             if ( meshPolygons )
@@ -499,10 +499,10 @@ void UIMeshSprite__Initialize(UIMeshSprite_o *this, const MethodInfo *method)
                 }
                 if ( ++v173 == 4 )
                 {
-                  v189 = sub_1C71458(UnityEngine_Vector3_____TypeInfo, 4);
+                  v189 = sub_1C94140(UnityEngine_Vector3_____TypeInfo, 4);
                   v190 = UIMeshSprite_TypeInfo->static_fields;
                   v190->sprMeshVert = (struct UnityEngine_Vector3_array_array *)v189;
-                  sub_1C71354(
+                  sub_1C9403C(
                     (GrandQuestFolderBoardItem_o *)&v190->sprMeshVert,
                     v189,
                     v191,
@@ -511,10 +511,10 @@ void UIMeshSprite__Initialize(UIMeshSprite_o *this, const MethodInfo *method)
                     v194,
                     v195,
                     v196);
-                  v197 = sub_1C71458(UnityEngine_Vector2_____TypeInfo, 4);
+                  v197 = sub_1C94140(UnityEngine_Vector2_____TypeInfo, 4);
                   v198 = UIMeshSprite_TypeInfo->static_fields;
                   v198->sprMeshUv = (struct UnityEngine_Vector2_array_array *)v197;
-                  sub_1C71354((GrandQuestFolderBoardItem_o *)&v198->sprMeshUv, v197, v199, v200, v201, v202, v203, v204);
+                  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v198->sprMeshUv, v197, v199, v200, v201, v202, v203, v204);
                   v205 = 0;
                   while ( 1 )
                   {
@@ -533,7 +533,7 @@ void UIMeshSprite__Initialize(UIMeshSprite_o *this, const MethodInfo *method)
                     if ( !v209 )
                       goto LABEL_94;
                     v210 = uvPos->m_Items[v205];
-                    v6 = sub_1C71458(UnityEngine_Vector3___TypeInfo, (unsigned int)(SLODWORD(v209->max_length) / 3));
+                    v6 = sub_1C94140(UnityEngine_Vector3___TypeInfo, (unsigned int)(SLODWORD(v209->max_length) / 3));
                     if ( !v6 )
                       goto LABEL_94;
                     v211 = v6;
@@ -542,7 +542,7 @@ void UIMeshSprite__Initialize(UIMeshSprite_o *this, const MethodInfo *method)
 LABEL_61:
                     if ( !v210 )
                       goto LABEL_94;
-                    v6 = sub_1C71458(UnityEngine_Vector2___TypeInfo, (unsigned int)(SLODWORD(v210->max_length) / 2));
+                    v6 = sub_1C94140(UnityEngine_Vector2___TypeInfo, (unsigned int)(SLODWORD(v210->max_length) / 2));
                     if ( !v6 )
                       goto LABEL_94;
                     v228 = v6;
@@ -632,7 +632,7 @@ LABEL_87:
                       goto LABEL_93;
                     v249 = &sprMeshVert->obj.klass + (int)v205;
                     v249[4] = (Il2CppClass *)v211;
-                    sub_1C71354((GrandQuestFolderBoardItem_o *)(v249 + 4), v211, v220, v221, v222, v223, v224, v225);
+                    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v249 + 4), v211, v220, v221, v222, v223, v224, v225);
                     sprMeshUv = UIMeshSprite_TypeInfo->static_fields->sprMeshUv;
                     if ( !sprMeshUv )
                       goto LABEL_94;
@@ -640,7 +640,7 @@ LABEL_87:
                       goto LABEL_93;
                     v257 = &sprMeshUv->obj.klass + (int)v205;
                     v257[4] = (Il2CppClass *)v228;
-                    sub_1C71354((GrandQuestFolderBoardItem_o *)(v257 + 4), v228, v250, v251, v252, v253, v254, v255);
+                    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v257 + 4), v228, v250, v251, v252, v253, v254, v255);
                     if ( ++v205 == 4 )
                       goto LABEL_92;
                   }
@@ -666,7 +666,7 @@ LABEL_87:
                       goto LABEL_61;
                   }
 LABEL_93:
-                  sub_1C71610(v6);
+                  sub_1C942F8(v6);
                 }
               }
             }
@@ -675,7 +675,7 @@ LABEL_93:
       }
     }
 LABEL_94:
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   }
 LABEL_92:
   this->fields.isEndInitialize = 1;
@@ -732,10 +732,10 @@ void UIMeshSprite__OnFill(
   UnityEngine_Rect_o v51; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Rect_o v52; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CC8CFD & 1) == 0 )
+  if ( (byte_4D2E19A & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC8CFD = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E19A = 1;
   }
   v9 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(UIMeshSprite_o *, const MethodInfo *, BetterList_Vector2__o *, BetterList_Color32__o *, const MethodInfo *))this->klass->vtable._26_get_mainTexture.methodPtr)(
                                  this,
@@ -756,7 +756,7 @@ void UIMeshSprite__OnFill(
         goto LABEL_14;
       Sprite = UIAtlas__GetSprite(mAtlas, this->fields.mSpriteName, 0);
       this->fields.mSprite = Sprite;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, (int32_t)Sprite, v14, v15, v16, v17, v18, v19);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mSprite, (int32_t)Sprite, v14, v15, v16, v17, v18, v19);
       mSprite = this->fields.mSprite;
       if ( !mSprite )
         return;
@@ -821,7 +821,7 @@ void UIMeshSprite__OnFill(
       }
     }
 LABEL_14:
-    sub_1C71608(mAtlas, v11);
+    sub_1C942F0(mAtlas, v11);
   }
 }
 
@@ -890,13 +890,13 @@ void UIMeshSprite__RotFill(
   m_Width = outer.fields.m_Width;
   m_YMin = outer.fields.m_YMin;
   m_XMin = outer.fields.m_XMin;
-  if ( (byte_4CC8CFE & 1) == 0 )
+  if ( (byte_4D2E19B & 1) == 0 )
   {
-    sub_1C713B0(&Method_BetterList_Vector3__Add__);
-    sub_1C713B0(&Method_BetterList_Color32__Add__);
-    sub_1C713B0(&Method_BetterList_Vector2__Add__);
-    sub_1C713B0(&UIMeshSprite_TypeInfo);
-    byte_4CC8CFE = 1;
+    sub_1C94098(&Method_BetterList_Vector3__Add__);
+    sub_1C94098(&Method_BetterList_Color32__Add__);
+    sub_1C94098(&Method_BetterList_Vector2__Add__);
+    sub_1C94098(&UIMeshSprite_TypeInfo);
+    byte_4D2E19B = 1;
   }
   klass = this->klass;
   this->fields.mOuterUV.fields.m_XMin = m_XMin;
@@ -952,11 +952,11 @@ void UIMeshSprite__RotFill(
     goto LABEL_30;
   if ( (unsigned int)meshType >= LODWORD(sprMeshUv->max_length) )
 LABEL_28:
-    ((void (__fastcall __noreturn *)(_QWORD))sub_1C71610)(drawingColor);
+    ((void (__fastcall __noreturn *)(_QWORD))sub_1C942F8)(drawingColor);
   v37 = meshPolygons->m_Items[meshType];
   if ( !v37 )
 LABEL_30:
-    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C71608)(drawingColor, v29);
+    ((void (__fastcall __noreturn *)(_QWORD, _QWORD))sub_1C942F0)(drawingColor, v29);
   max_length = v37->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -992,16 +992,16 @@ LABEL_30:
       v53 = *(float *)(v51 + 36);
       v59.fields.x = v57 + (float)(v44 * *(float *)(v50 + 32));
       v59.fields.z = 0.0;
-      BetterList_Vector3___Add(verts, v59, (const MethodInfo_338340C *)Method_BetterList_Vector3__Add__);
+      BetterList_Vector3___Add(verts, v59, (const MethodInfo_33D5368 *)Method_BetterList_Vector3__Add__);
       if ( !uvs )
         break;
       v58.fields.y = y + (float)(v45 * v53);
       v58.fields.x = x + (float)(v46 * v52);
-      BetterList_Vector2___Add(uvs, v58, (const MethodInfo_3382980 *)Method_BetterList_Vector2__Add__);
+      BetterList_Vector2___Add(uvs, v58, (const MethodInfo_33D48DC *)Method_BetterList_Vector2__Add__);
       if ( !cols )
         break;
       v54 = (UnityEngine_Color32_o)rgba;
-      BetterList_Color32___Add(cols, v54, (const MethodInfo_3380434 *)Method_BetterList_Color32__Add__);
+      BetterList_Color32___Add(cols, v54, (const MethodInfo_33D2390 *)Method_BetterList_Color32__Add__);
       if ( (_DWORD)max_length == v47 )
         return;
       v43 = v47;
@@ -1026,10 +1026,10 @@ UnityEngine_Color32_o UIMeshSprite__get_drawingColor(UIMeshSprite_o *this, const
   UnityEngine_Color_o v12; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   long double v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4 OVERLAPPED
 
-  if ( (byte_4CC8CFC & 1) == 0 )
+  if ( (byte_4D2E199 & 1) == 0 )
   {
-    sub_1C713B0(&NGUITools_TypeInfo);
-    byte_4CC8CFC = 1;
+    sub_1C94098(&NGUITools_TypeInfo);
+    byte_4D2E199 = 1;
   }
   *(float *)&v4 = this->fields.mColor.fields.g;
   *(float *)&v3 = this->fields.mColor.fields.b;
@@ -1061,7 +1061,7 @@ UnityEngine_Color32_o UIMeshSprite__get_drawingColor(UIMeshSprite_o *this, const
     *(float *)&v9 = powf(*(float *)&v3, 2.2);
     v3 = v9;
   }
-  return (UnityEngine_Color32_o)(unsigned int)sub_25672D0(0, v5, v4, v3, v2);
+  return (UnityEngine_Color32_o)(unsigned int)sub_25C4758(0, v5, v4, v3, v2);
 }
 
 

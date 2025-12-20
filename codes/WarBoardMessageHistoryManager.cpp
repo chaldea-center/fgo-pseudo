@@ -15,18 +15,18 @@ void WarBoardMessageHistoryManager___cctor(const MethodInfo *method)
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4CC88EA & 1) == 0 )
+  if ( (byte_4D2DE56 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
-    sub_1C713B0(&WarBoardMessageHistoryManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_6679/*"Fgo_20220427"*/);
-    byte_4CC88EA = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
+    sub_1C94098(&WarBoardMessageHistoryManager_TypeInfo);
+    sub_1C94098(&StringLiteral_6692/*"Fgo_20220427"*/);
+    byte_4D2DE56 = 1;
   }
-  WarBoardMessageHistoryManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6679/*"Fgo_20220427"*/;
-  sub_1C71354(
+  WarBoardMessageHistoryManager_TypeInfo->static_fields->SAVE_DATA_VERSION = (struct System_String_o *)StringLiteral_6692/*"Fgo_20220427"*/;
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)WarBoardMessageHistoryManager_TypeInfo->static_fields,
-    StringLiteral_6679/*"Fgo_20220427"*/,
+    StringLiteral_6692/*"Fgo_20220427"*/,
     v1,
     v2,
     v3,
@@ -34,13 +34,13 @@ void WarBoardMessageHistoryManager___cctor(const MethodInfo *method)
     v5,
     v6);
   *(_WORD *)&WarBoardMessageHistoryManager_TypeInfo->static_fields->isModfiy = 0;
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo___ctor__);
   static_fields = WarBoardMessageHistoryManager_TypeInfo->static_fields;
   static_fields->infoList = (struct System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__o *)v7;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->infoList, (int32_t)v7, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->infoList, (int32_t)v7, v9, v10, v11, v12, v13, v14);
 }
 
 
@@ -60,12 +60,12 @@ void WarBoardMessageHistoryManager__ClearSaveData(const MethodInfo *method)
   int v6; // w9
   WarBoardMessageHistoryManager_c *v7; // x0
 
-  if ( (byte_4CC88E5 & 1) == 0 )
+  if ( (byte_4D2DE51 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Linq_Enumerable_Any_WarBoardMessageHistoryManager_HistoryInfo___);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Clear__);
-    sub_1C713B0(&WarBoardMessageHistoryManager_TypeInfo);
-    byte_4CC88E5 = 1;
+    sub_1C94098(&Method_System_Linq_Enumerable_Any_WarBoardMessageHistoryManager_HistoryInfo___);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Clear__);
+    sub_1C94098(&WarBoardMessageHistoryManager_TypeInfo);
+    byte_4D2DE51 = 1;
   }
   v1 = WarBoardMessageHistoryManager_TypeInfo;
   if ( !WarBoardMessageHistoryManager_TypeInfo->_2.cctor_finished )
@@ -75,7 +75,7 @@ void WarBoardMessageHistoryManager__ClearSaveData(const MethodInfo *method)
   }
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)v1->static_fields->infoList,
-         (const MethodInfo_3156C84 *)Method_System_Linq_Enumerable_Any_WarBoardMessageHistoryManager_HistoryInfo___) )
+         (const MethodInfo_31A7F44 *)Method_System_Linq_Enumerable_Any_WarBoardMessageHistoryManager_HistoryInfo___) )
   {
     v3 = WarBoardMessageHistoryManager_TypeInfo;
     if ( !WarBoardMessageHistoryManager_TypeInfo->_2.cctor_finished )
@@ -85,7 +85,7 @@ void WarBoardMessageHistoryManager__ClearSaveData(const MethodInfo *method)
     }
     infoList = v3->static_fields->infoList;
     if ( !infoList )
-      sub_1C71608(v3, v2);
+      sub_1C942F0(v3, v2);
     size = infoList->fields._size;
     v6 = infoList->fields._version + 1;
     infoList->fields._size = 0;
@@ -108,10 +108,10 @@ void WarBoardMessageHistoryManager__DeleteSaveData(const MethodInfo *method)
   WarBoardMessageHistoryManager_c *v1; // x0
   System_String_o *FilePath; // x19
 
-  if ( (byte_4CC88E3 & 1) == 0 )
+  if ( (byte_4D2DE4F & 1) == 0 )
   {
-    sub_1C713B0(&WarBoardMessageHistoryManager_TypeInfo);
-    byte_4CC88E3 = 1;
+    sub_1C94098(&WarBoardMessageHistoryManager_TypeInfo);
+    byte_4D2DE4F = 1;
   }
   v1 = WarBoardMessageHistoryManager_TypeInfo;
   if ( !WarBoardMessageHistoryManager_TypeInfo->_2.cctor_finished )
@@ -127,12 +127,12 @@ System_String_o *WarBoardMessageHistoryManager__GetFilePath(const MethodInfo *me
   System_String_o *DatFileSavePath; // x19
   System_String_o *FileName; // x2
 
-  if ( (byte_4CC88E2 & 1) == 0 )
+  if ( (byte_4D2DE4E & 1) == 0 )
   {
-    sub_1C713B0(&AndroidUtil_TypeInfo);
-    sub_1C713B0(&DatFileName_TypeInfo);
-    sub_1C713B0(&StringLiteral_1041/*"/"*/);
-    byte_4CC88E2 = 1;
+    sub_1C94098(&AndroidUtil_TypeInfo);
+    sub_1C94098(&DatFileName_TypeInfo);
+    sub_1C94098(&StringLiteral_1041/*"/"*/);
+    byte_4D2DE4E = 1;
   }
   if ( !AndroidUtil_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(AndroidUtil_TypeInfo);
@@ -140,7 +140,7 @@ System_String_o *WarBoardMessageHistoryManager__GetFilePath(const MethodInfo *me
   if ( !DatFileName_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DatFileName_TypeInfo);
   FileName = DatFileName__getFileName(38, 0);
-  return System_String__Concat_64069988(DatFileSavePath, (System_String_o *)StringLiteral_1041/*"/"*/, FileName, 0);
+  return System_String__Concat_64456008(DatFileSavePath, (System_String_o *)StringLiteral_1041/*"/"*/, FileName, 0);
 }
 
 
@@ -148,10 +148,10 @@ void WarBoardMessageHistoryManager__Initialize(const MethodInfo *method)
 {
   WarBoardMessageHistoryManager_c *v1; // x0
 
-  if ( (byte_4CC88E4 & 1) == 0 )
+  if ( (byte_4D2DE50 & 1) == 0 )
   {
-    sub_1C713B0(&WarBoardMessageHistoryManager_TypeInfo);
-    byte_4CC88E4 = 1;
+    sub_1C94098(&WarBoardMessageHistoryManager_TypeInfo);
+    byte_4D2DE50 = 1;
   }
   v1 = WarBoardMessageHistoryManager_TypeInfo;
   if ( !WarBoardMessageHistoryManager_TypeInfo->_2.cctor_finished )
@@ -173,16 +173,16 @@ bool WarBoardMessageHistoryManager__IsHistory(
   System_Collections_Generic_List_object__o *infoList; // x19
   System_Predicate_object__o *v12; // x20
 
-  if ( (byte_4CC88E6 & 1) == 0 )
+  if ( (byte_4D2DE52 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Find__);
-    sub_1C713B0(&System_Predicate_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
-    sub_1C713B0(&Method_WarBoardMessageHistoryManager___c__DisplayClass9_0__IsHistory_b__0__);
-    sub_1C713B0(&WarBoardMessageHistoryManager___c__DisplayClass9_0_TypeInfo);
-    sub_1C713B0(&WarBoardMessageHistoryManager_TypeInfo);
-    byte_4CC88E6 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Find__);
+    sub_1C94098(&System_Predicate_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
+    sub_1C94098(&Method_WarBoardMessageHistoryManager___c__DisplayClass9_0__IsHistory_b__0__);
+    sub_1C94098(&WarBoardMessageHistoryManager___c__DisplayClass9_0_TypeInfo);
+    sub_1C94098(&WarBoardMessageHistoryManager_TypeInfo);
+    byte_4D2DE52 = 1;
   }
-  v7 = sub_1C715FC(WarBoardMessageHistoryManager___c__DisplayClass9_0_TypeInfo);
+  v7 = sub_1C942E4(WarBoardMessageHistoryManager___c__DisplayClass9_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_8;
@@ -196,7 +196,7 @@ bool WarBoardMessageHistoryManager__IsHistory(
     v10 = WarBoardMessageHistoryManager_TypeInfo;
   }
   infoList = (System_Collections_Generic_List_object__o *)v10->static_fields->infoList;
-  v12 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
+  v12 = (System_Predicate_object__o *)sub_1C942E4(System_Predicate_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
   System_Predicate_object____ctor(
     v12,
     (Il2CppObject *)v7,
@@ -204,11 +204,11 @@ bool WarBoardMessageHistoryManager__IsHistory(
     0);
   if ( !infoList )
 LABEL_8:
-    sub_1C71608(v8, v9);
+    sub_1C942F0(v8, v9);
   return System_Collections_Generic_List_object___Find(
            infoList,
            (System_Predicate_T__o *)v12,
-           (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Find__) != 0;
+           (const MethodInfo_386B49C *)Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Find__) != 0;
 }
 
 
@@ -251,15 +251,15 @@ bool WarBoardMessageHistoryManager__ReadData(const MethodInfo *method)
   int32_t *p_offset; // x10
   __int64 v37; // x0
 
-  if ( (byte_4CC88E8 & 1) == 0 )
+  if ( (byte_4D2DE54 & 1) == 0 )
   {
-    sub_1C713B0(&System_IO_BinaryReader_TypeInfo);
-    sub_1C713B0(&WarBoardMessageHistoryManager_HistoryInfo_TypeInfo);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Add__);
-    sub_1C713B0(&ManagerConfig_TypeInfo);
-    sub_1C713B0(&WarBoardMessageHistoryManager_TypeInfo);
-    byte_4CC88E8 = 1;
+    sub_1C94098(&System_IO_BinaryReader_TypeInfo);
+    sub_1C94098(&WarBoardMessageHistoryManager_HistoryInfo_TypeInfo);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Add__);
+    sub_1C94098(&ManagerConfig_TypeInfo);
+    sub_1C94098(&WarBoardMessageHistoryManager_TypeInfo);
+    byte_4D2DE54 = 1;
   }
   v1 = ManagerConfig_TypeInfo;
   if ( !ManagerConfig_TypeInfo->_2.cctor_finished )
@@ -281,10 +281,10 @@ bool WarBoardMessageHistoryManager__ReadData(const MethodInfo *method)
   WarBoardMessageHistoryManager__ClearSaveData((const MethodInfo *)v5);
   WarBoardMessageHistoryManager_TypeInfo->static_fields->isModfiy = 0;
   v6 = (System_IO_Stream_o *)System_IO_File__OpenRead(FilePath, 0);
-  v7 = (System_IO_BinaryReader_o *)sub_1C715FC(System_IO_BinaryReader_TypeInfo);
+  v7 = (System_IO_BinaryReader_o *)sub_1C942E4(System_IO_BinaryReader_TypeInfo);
   System_IO_BinaryReader___ctor(v7, v6, 0);
   if ( !v7 )
-    sub_1C71608(v8, v9);
+    sub_1C942F0(v8, v9);
   v10 = (System_String_o *)((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._22_ReadString.methodPtr)(
                              v7,
                              v7->klass->vtable._22_ReadString.method);
@@ -326,10 +326,10 @@ bool WarBoardMessageHistoryManager__ReadData(const MethodInfo *method)
         v18 = ((__int64 (__fastcall *)(System_IO_BinaryReader_o *, const MethodInfo *))v7->klass->vtable._15_ReadInt32.methodPtr)(
                 v7,
                 v7->klass->vtable._15_ReadInt32.method);
-        v19 = sub_1C715FC(WarBoardMessageHistoryManager_HistoryInfo_TypeInfo);
+        v19 = sub_1C942E4(WarBoardMessageHistoryManager_HistoryInfo_TypeInfo);
         System_Object___ctor((Il2CppObject *)v19, 0);
         if ( !v19 )
-          sub_1C71608(v20, v21);
+          sub_1C942F0(v20, v21);
         *(_DWORD *)(v19 + 16) = v16;
         *(_DWORD *)(v19 + 20) = v17;
         *(_DWORD *)(v19 + 24) = v18;
@@ -341,26 +341,26 @@ bool WarBoardMessageHistoryManager__ReadData(const MethodInfo *method)
         }
         infoList = (System_Collections_Generic_List_object__o *)v28->static_fields->infoList;
         if ( !infoList )
-          sub_1C71608(0, v21);
+          sub_1C942F0(0, v21);
         items = infoList->fields._items;
         v31 = Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Add__;
         ++infoList->fields._version;
         if ( !items )
-          sub_1C71608(infoList, v21);
+          sub_1C942F0(infoList, v21);
         size = infoList->fields._size;
         if ( (unsigned int)size >= LODWORD(items->max_length) )
         {
           System_Collections_Generic_List_object___AddWithResize(
             infoList,
             (Il2CppObject *)v19,
-            *(const MethodInfo_3810718 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
+            *(const MethodInfo_386AE34 **)(*(_QWORD *)(v31[4] + 192LL) + 112LL));
         }
         else
         {
           v33 = &items->obj.klass + size;
           infoList->fields._size = size + 1;
           v33[4] = (Il2CppClass *)v19;
-          sub_1C71354((GrandQuestFolderBoardItem_o *)(v33 + 4), v19, v22, v23, v24, v25, v26, v27);
+          sub_1C9403C((GrandQuestFolderBoardItem_o *)(v33 + 4), v19, v22, v23, v24, v25, v26, v27);
         }
         --v15;
       }
@@ -385,7 +385,7 @@ bool WarBoardMessageHistoryManager__ReadData(const MethodInfo *method)
   else
   {
 LABEL_34:
-    v37 = sub_1C47738(v7, System_IDisposable_TypeInfo, 0);
+    v37 = sub_1C6A420(v7, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_BinaryReader_o *, _QWORD))v37)(v7, *(_QWORD *)(v37 + 8));
   return (v12 | 8) == 8;
@@ -417,18 +417,18 @@ void WarBoardMessageHistoryManager__SaveHistory(
   __int64 size; // x10
   Il2CppClass **v24; // x8
 
-  if ( (byte_4CC88E7 & 1) == 0 )
+  if ( (byte_4D2DE53 & 1) == 0 )
   {
-    sub_1C713B0(&WarBoardMessageHistoryManager_HistoryInfo_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Find__);
-    sub_1C713B0(&System_Predicate_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
-    sub_1C713B0(&Method_WarBoardMessageHistoryManager___c__DisplayClass10_0__SaveHistory_b__0__);
-    sub_1C713B0(&WarBoardMessageHistoryManager___c__DisplayClass10_0_TypeInfo);
-    sub_1C713B0(&WarBoardMessageHistoryManager_TypeInfo);
-    byte_4CC88E7 = 1;
+    sub_1C94098(&WarBoardMessageHistoryManager_HistoryInfo_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Find__);
+    sub_1C94098(&System_Predicate_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
+    sub_1C94098(&Method_WarBoardMessageHistoryManager___c__DisplayClass10_0__SaveHistory_b__0__);
+    sub_1C94098(&WarBoardMessageHistoryManager___c__DisplayClass10_0_TypeInfo);
+    sub_1C94098(&WarBoardMessageHistoryManager_TypeInfo);
+    byte_4D2DE53 = 1;
   }
-  v7 = sub_1C715FC(WarBoardMessageHistoryManager___c__DisplayClass10_0_TypeInfo);
+  v7 = sub_1C942E4(WarBoardMessageHistoryManager___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_18;
@@ -442,7 +442,7 @@ void WarBoardMessageHistoryManager__SaveHistory(
     v10 = WarBoardMessageHistoryManager_TypeInfo;
   }
   infoList = (System_Collections_Generic_List_object__o *)v10->static_fields->infoList;
-  v12 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
+  v12 = (System_Predicate_object__o *)sub_1C942E4(System_Predicate_WarBoardMessageHistoryManager_HistoryInfo__TypeInfo);
   System_Predicate_object____ctor(
     v12,
     (Il2CppObject *)v7,
@@ -453,11 +453,11 @@ void WarBoardMessageHistoryManager__SaveHistory(
   if ( System_Collections_Generic_List_object___Find(
          infoList,
          (System_Predicate_T__o *)v12,
-         (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Find__) )
+         (const MethodInfo_386B49C *)Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__Find__) )
   {
     return;
   }
-  v13 = sub_1C715FC(WarBoardMessageHistoryManager_HistoryInfo_TypeInfo);
+  v13 = sub_1C942E4(WarBoardMessageHistoryManager_HistoryInfo_TypeInfo);
   System_Object___ctor((Il2CppObject *)v13, 0);
   if ( !v13 )
     goto LABEL_18;
@@ -477,7 +477,7 @@ void WarBoardMessageHistoryManager__SaveHistory(
         !items) )
   {
 LABEL_18:
-    sub_1C71608(v8, v9);
+    sub_1C942F0(v8, v9);
   }
   size = v8->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -485,14 +485,14 @@ LABEL_18:
     System_Collections_Generic_List_object___AddWithResize(
       v8,
       (Il2CppObject *)v13,
-      *(const MethodInfo_3810718 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
+      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v22[4] + 192LL) + 112LL));
   }
   else
   {
     v24 = &items->obj.klass + size;
     v8->fields._size = size + 1;
     v24[4] = (Il2CppClass *)v13;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)(v24 + 4), v13, v14, v15, v16, v17, v18, v19);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v24 + 4), v13, v14, v15, v16, v17, v18, v19);
   }
   WarBoardMessageHistoryManager_TypeInfo->static_fields->isModfiy = 1;
 }
@@ -523,15 +523,15 @@ bool WarBoardMessageHistoryManager__WriteData(const MethodInfo *method)
   int32_t *p_offset; // x10
   __int64 v23; // x0
 
-  if ( (byte_4CC88E9 & 1) == 0 )
+  if ( (byte_4D2DE55 & 1) == 0 )
   {
-    sub_1C713B0(&System_IO_BinaryWriter_TypeInfo);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__get_Item__);
-    sub_1C713B0(&ManagerConfig_TypeInfo);
-    sub_1C713B0(&WarBoardMessageHistoryManager_TypeInfo);
-    byte_4CC88E9 = 1;
+    sub_1C94098(&System_IO_BinaryWriter_TypeInfo);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__get_Item__);
+    sub_1C94098(&ManagerConfig_TypeInfo);
+    sub_1C94098(&WarBoardMessageHistoryManager_TypeInfo);
+    byte_4D2DE55 = 1;
   }
   v1 = WarBoardMessageHistoryManager_TypeInfo;
   if ( !WarBoardMessageHistoryManager_TypeInfo->_2.cctor_finished )
@@ -558,8 +558,8 @@ bool WarBoardMessageHistoryManager__WriteData(const MethodInfo *method)
   *((_BYTE *)v4[2].virtualMethodPointer + 8) = 0;
   FilePath = WarBoardMessageHistoryManager__GetFilePath(v4);
   v6 = (System_IO_Stream_o *)System_IO_File__OpenWrite(FilePath, 0);
-  v7 = (System_IO_BinaryWriter_o *)sub_1C715FC(System_IO_BinaryWriter_TypeInfo);
-  System_IO_BinaryWriter___ctor_64941052(v7, v6, 0);
+  v7 = (System_IO_BinaryWriter_o *)sub_1C942E4(System_IO_BinaryWriter_TypeInfo);
+  System_IO_BinaryWriter___ctor_65327072(v7, v6, 0);
   v9 = WarBoardMessageHistoryManager_TypeInfo;
   if ( !WarBoardMessageHistoryManager_TypeInfo->_2.cctor_finished )
   {
@@ -569,9 +569,9 @@ bool WarBoardMessageHistoryManager__WriteData(const MethodInfo *method)
   static_fields = v9->static_fields;
   infoList = static_fields->infoList;
   if ( !infoList )
-    sub_1C71608(v9, v8);
+    sub_1C942F0(v9, v8);
   if ( !v7 )
-    sub_1C71608(v9, v8);
+    sub_1C942F0(v9, v8);
   size = infoList->fields._size;
   ((void (__fastcall *)(System_IO_BinaryWriter_o *, struct System_String_o *, const MethodInfo *))v7->klass->vtable._22_Write.methodPtr)(
     v7,
@@ -597,14 +597,14 @@ bool WarBoardMessageHistoryManager__WriteData(const MethodInfo *method)
       }
       v16 = (System_Collections_Generic_List_object__o *)v15->static_fields->infoList;
       if ( !v16 )
-        sub_1C71608(0, v13);
+        sub_1C942F0(0, v13);
       Item = System_Collections_Generic_List_object___get_Item(
                v16,
                i,
-               (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__get_Item__);
+               (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_WarBoardMessageHistoryManager_HistoryInfo__get_Item__);
       v19 = Item;
       if ( !Item )
-        sub_1C71608(0, v18);
+        sub_1C942F0(0, v18);
       ((void (__fastcall *)(System_IO_BinaryWriter_o *, _QWORD, const MethodInfo *))v7->klass->vtable._17_Write.methodPtr)(
         v7,
         LODWORD(Item[1].klass),
@@ -636,7 +636,7 @@ bool WarBoardMessageHistoryManager__WriteData(const MethodInfo *method)
   else
   {
 LABEL_27:
-    v23 = sub_1C47738(v7, System_IDisposable_TypeInfo, 0);
+    v23 = sub_1C6A420(v7, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_IO_BinaryWriter_o *, _QWORD))v23)(v7, *(_QWORD *)(v23 + 8));
   return 1;
@@ -665,7 +665,7 @@ bool WarBoardMessageHistoryManager___c__DisplayClass10_0___SaveHistory_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return x->fields.stageId == this->fields.stageId
       && x->fields.sceneType == this->fields.sceneType
       && x->fields.idx == this->fields.idx;
@@ -686,7 +686,7 @@ bool WarBoardMessageHistoryManager___c__DisplayClass9_0___IsHistory_b__0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return x->fields.stageId == this->fields.stageId
       && x->fields.sceneType == this->fields.sceneType
       && x->fields.idx == this->fields.idx;

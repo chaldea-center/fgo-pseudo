@@ -2,7 +2,7 @@ void EventInfoAreaImprovementSlideComponent___ctor(
         EventInfoAreaImprovementSlideComponent_o *this,
         const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.slideInStartedPosition.fields.x = xmmword_CEF460;
+  *(_OWORD *)&this->fields.slideInStartedPosition.fields.x = xmmword_CFF0C0;
   *(_QWORD *)&this->fields.slideDownEndedPosition.fields.y = 3251109888LL;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -24,7 +24,7 @@ void EventInfoAreaImprovementSlideComponent__EndSlideDown(
   endCallbackAction = this->fields.endCallbackAction;
   p_endCallbackAction = (GrandQuestFolderBoardItem_o *)&this->fields.endCallbackAction;
   p_endCallbackAction->klass = 0;
-  sub_1C71354(p_endCallbackAction, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C9403C(p_endCallbackAction, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(endCallbackAction, 0);
 }
 
@@ -45,7 +45,7 @@ void EventInfoAreaImprovementSlideComponent__EndSlideIn(
   endCallbackAction = this->fields.endCallbackAction;
   p_endCallbackAction = (GrandQuestFolderBoardItem_o *)&this->fields.endCallbackAction;
   p_endCallbackAction->klass = 0;
-  sub_1C71354(p_endCallbackAction, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C9403C(p_endCallbackAction, 0, v2, v3, v4, v5, v6, v7);
   ActionExtensions__Call(endCallbackAction, 0);
 }
 
@@ -69,10 +69,10 @@ void EventInfoAreaImprovementSlideComponent__SetupDisp(
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_4CC777C & 1) == 0 )
+  if ( (byte_4D2CA67 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC777C = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2CA67 = 1;
   }
   infoObject = (UnityEngine_Object_o *)this->fields.infoObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -81,7 +81,7 @@ void EventInfoAreaImprovementSlideComponent__SetupDisp(
   {
     v5 = this->fields.infoObject;
     if ( !v5 )
-      sub_1C71608(0, v4);
+      sub_1C942F0(0, v4);
     UnityEngine_GameObject__SetActive(v5, 1, 0);
     GameObjectExtensions__ResetLocalPosition(this->fields.infoObject, 0);
   }
@@ -96,10 +96,10 @@ void EventInfoAreaImprovementSlideComponent__SetupHidden(
   __int64 v4; // x1
   UnityEngine_GameObject_o *v5; // x0
 
-  if ( (byte_4CC777D & 1) == 0 )
+  if ( (byte_4D2CA68 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC777D = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2CA68 = 1;
   }
   infoObject = (UnityEngine_Object_o *)this->fields.infoObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -108,7 +108,7 @@ void EventInfoAreaImprovementSlideComponent__SetupHidden(
   {
     v5 = this->fields.infoObject;
     if ( !v5 )
-      sub_1C71608(0, v4);
+      sub_1C942F0(0, v4);
     UnityEngine_GameObject__SetActive(v5, 0, 0);
     GameObjectExtensions__SetLocalPosition(this->fields.infoObject, this->fields.slideInStartedPosition, 0);
   }
@@ -156,16 +156,16 @@ void EventInfoAreaImprovementSlideComponent__SlideDown(
   __int64 size; // x10
   Il2CppClass **v28; // x0
 
-  if ( (byte_4CC777E & 1) == 0 )
+  if ( (byte_4D2CA69 & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C713B0(&StringLiteral_6023/*"EndSlideDown"*/);
-    byte_4CC777E = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C94098(&StringLiteral_6035/*"EndSlideDown"*/);
+    byte_4D2CA69 = 1;
   }
   this->fields.endCallbackAction = endCallbackAction;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.endCallbackAction,
     (int32_t)endCallbackAction,
     (int32_t)method,
@@ -179,12 +179,12 @@ void EventInfoAreaImprovementSlideComponent__SlideDown(
     goto LABEL_12;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                              gameObject,
-                                             (const MethodInfo_31A2DE8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+                                             (const MethodInfo_31F46A8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
   v12 = gameObject;
-  if ( !byte_4CC0D09 )
+  if ( !byte_4D25F19 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D09 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
   }
   if ( !v12 )
     goto LABEL_12;
@@ -199,8 +199,8 @@ void EventInfoAreaImprovementSlideComponent__SlideDown(
   *((float *)&v12[6].klass + 1) = v16;
   *(intptr_t *)((char *)&v12[5].fields.m_CachedPtr + 4) = v15;
   klass = (System_Collections_Generic_List_object__o *)v12[3].klass;
-  v18 = (EventDelegate_o *)sub_1C715FC(EventDelegate_TypeInfo);
-  EventDelegate___ctor_49641492(v18, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6023/*"EndSlideDown"*/, 0);
+  v18 = (EventDelegate_o *)sub_1C942E4(EventDelegate_TypeInfo);
+  EventDelegate___ctor_49965084(v18, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6035/*"EndSlideDown"*/, 0);
   if ( !klass
     || (items = klass->fields._items,
         v26 = Method_System_Collections_Generic_List_EventDelegate__Add__,
@@ -208,7 +208,7 @@ void EventInfoAreaImprovementSlideComponent__SlideDown(
         !items) )
   {
 LABEL_12:
-    sub_1C71608(gameObject, v11);
+    sub_1C942F0(gameObject, v11);
   }
   size = klass->fields._size;
   if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -216,14 +216,14 @@ LABEL_12:
     System_Collections_Generic_List_object___AddWithResize(
       klass,
       (Il2CppObject *)v18,
-      *(const MethodInfo_3810718 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
+      *(const MethodInfo_386AE34 **)(*(_QWORD *)(v26[4] + 192LL) + 112LL));
   }
   else
   {
     klass->fields._size = size + 1;
     v28 = &items->obj.klass + size;
     v28[4] = (Il2CppClass *)v18;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)(v28 + 4), (int32_t)v18, v19, v20, v21, v22, v23, v24);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v28 + 4), (int32_t)v18, v19, v20, v21, v22, v23, v24);
   }
 }
 
@@ -260,14 +260,14 @@ void EventInfoAreaImprovementSlideComponent__SlideIn(
   Il2CppClass **v29; // x0
   void *v30; // [xsp+0h] [xbp-40h]
 
-  if ( (byte_4CC777F & 1) == 0 )
+  if ( (byte_4D2CA6A & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EventDelegate__Add__);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_6024/*"EndSlideIn"*/);
-    byte_4CC777F = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+    sub_1C94098(&Method_System_Collections_Generic_List_EventDelegate__Add__);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_6036/*"EndSlideIn"*/);
+    byte_4D2CA6A = 1;
   }
   infoObject = (UnityEngine_Object_o *)this->fields.infoObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -279,7 +279,7 @@ void EventInfoAreaImprovementSlideComponent__SlideIn(
   else
   {
     this->fields.endCallbackAction = endCallbackAction;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&this->fields.endCallbackAction,
       (int32_t)endCallbackAction,
       v6,
@@ -297,17 +297,17 @@ void EventInfoAreaImprovementSlideComponent__SlideIn(
       goto LABEL_17;
     v13 = (UnityEngine_GameObject_o *)UnityEngine_GameObject__AddComponent_object_(
                                         v13,
-                                        (const MethodInfo_31A2DE8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
+                                        (const MethodInfo_31F46A8 *)Method_UnityEngine_GameObject_AddComponent_TweenPosition___);
     v30 = *(void **)&this->fields.slideInStartedPosition.fields.x;
     if ( !v13 )
       goto LABEL_17;
     v14 = v13;
     *(float *)&v13[5].fields.m_CachedPtr = this->fields.slideInStartedPosition.fields.z;
     v13[5].monitor = v30;
-    if ( !byte_4CC0D09 )
+    if ( !byte_4D25F19 )
     {
-      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-      byte_4CC0D09 = 1;
+      sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+      byte_4D25F19 = 1;
     }
     klass = (System_Collections_Generic_List_object__o *)v14[3].klass;
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -317,8 +317,8 @@ void EventInfoAreaImprovementSlideComponent__SlideIn(
     LODWORD(v14[1].monitor) = 2;
     *(intptr_t *)((char *)&v14[5].fields.m_CachedPtr + 4) = v17;
     *((float *)&v14[6].klass + 1) = z;
-    v19 = (EventDelegate_o *)sub_1C715FC(EventDelegate_TypeInfo);
-    EventDelegate___ctor_49641492(v19, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6024/*"EndSlideIn"*/, 0);
+    v19 = (EventDelegate_o *)sub_1C942E4(EventDelegate_TypeInfo);
+    EventDelegate___ctor_49965084(v19, (UnityEngine_MonoBehaviour_o *)this, (System_String_o *)StringLiteral_6036/*"EndSlideIn"*/, 0);
     if ( !klass
       || (items = klass->fields._items,
           v27 = Method_System_Collections_Generic_List_EventDelegate__Add__,
@@ -326,7 +326,7 @@ void EventInfoAreaImprovementSlideComponent__SlideIn(
           !items) )
     {
 LABEL_17:
-      sub_1C71608(v13, v12);
+      sub_1C942F0(v13, v12);
     }
     size = klass->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
@@ -334,14 +334,14 @@ LABEL_17:
       System_Collections_Generic_List_object___AddWithResize(
         klass,
         (Il2CppObject *)v19,
-        *(const MethodInfo_3810718 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
+        *(const MethodInfo_386AE34 **)(*(_QWORD *)(v27[4] + 192LL) + 112LL));
     }
     else
     {
       v29 = &items->obj.klass + size;
       klass->fields._size = size + 1;
       v29[4] = (Il2CppClass *)v19;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(v29 + 4), (int32_t)v19, v20, v21, v22, v23, v24, v25);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v29 + 4), (int32_t)v19, v20, v21, v22, v23, v24, v25);
     }
   }
 }

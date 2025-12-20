@@ -9,10 +9,10 @@ void LinkConfirmDialog___cctor(const MethodInfo *method)
   struct LinkConfirmDialog_StaticFields *v7; // x9
   struct LinkConfirmDialog_StaticFields *v8; // x8
 
-  if ( (byte_4CC9CFB & 1) == 0 )
+  if ( (byte_4D2F06D & 1) == 0 )
   {
-    sub_1C713B0(&LinkConfirmDialog_TypeInfo);
-    byte_4CC9CFB = 1;
+    sub_1C94098(&LinkConfirmDialog_TypeInfo);
+    byte_4D2F06D = 1;
   }
   static_fields = LinkConfirmDialog_TypeInfo->static_fields;
   static_fields->BANNER_RETRY_MAX = 3;
@@ -23,11 +23,11 @@ void LinkConfirmDialog___cctor(const MethodInfo *method)
   v3[2].n64_u64[0] = 0xF0000002E4LL;
   v3[3].n64_u64[0] = vdup_n_s32(0x3F70A3D7u).n64_u64[0];
   v3[4].n64_u32[0] = 1065353216;
-  if ( !byte_4CC0D0E )
+  if ( !byte_4D25F1E )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
     v2 = LinkConfirmDialog_TypeInfo;
-    byte_4CC0D0E = 1;
+    byte_4D25F1E = 1;
   }
   v4 = v2->static_fields;
   v5 = UnityEngine_Vector3_TypeInfo->static_fields;
@@ -45,10 +45,10 @@ void LinkConfirmDialog___cctor(const MethodInfo *method)
 
 void LinkConfirmDialog___ctor(LinkConfirmDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC9CFA & 1) == 0 )
+  if ( (byte_4D2F06C & 1) == 0 )
   {
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    byte_4CC9CFA = 1;
+    sub_1C94098(&BaseDialog_TypeInfo);
+    byte_4D2F06C = 1;
   }
   this->fields.MESSAGE_FONT_SIZE = 22;
   this->fields.isInitPanelDepth = 1;
@@ -62,11 +62,11 @@ void LinkConfirmDialog__Close(LinkConfirmDialog_o *this, const MethodInfo *metho
 {
   const MethodInfo *v2; // x2
 
-  LinkConfirmDialog__Close_46197852(this, 0, v2);
+  LinkConfirmDialog__Close_46548668(this, 0, v2);
 }
 
 
-void LinkConfirmDialog__Close_46197852(LinkConfirmDialog_o *this, System_Action_o *callback, const MethodInfo *method)
+void LinkConfirmDialog__Close_46548668(LinkConfirmDialog_o *this, System_Action_o *callback, const MethodInfo *method)
 {
   int32_t v3; // w3
   System_String_o *v4; // x4
@@ -75,14 +75,14 @@ void LinkConfirmDialog__Close_46197852(LinkConfirmDialog_o *this, System_Action_
   System_String_o *v7; // x7
   System_Action_o *v10; // x20
 
-  if ( (byte_4CC9CF5 & 1) == 0 )
+  if ( (byte_4D2F067 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_LinkConfirmDialog_EndClose__);
-    byte_4CC9CF5 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_LinkConfirmDialog_EndClose__);
+    byte_4D2F067 = 1;
   }
   this->fields.closeEndFunc = callback;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.closeEndFunc,
     (int32_t)callback,
     (int32_t)method,
@@ -92,7 +92,7 @@ void LinkConfirmDialog__Close_46197852(LinkConfirmDialog_o *this, System_Action_
     v6,
     v7);
   this->fields.isButtonEnable = 0;
-  v10 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v10 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v10, (Il2CppObject *)this, Method_LinkConfirmDialog_EndClose__, 0);
   BaseDialog__Close((BaseDialog_o *)this, v10, 0);
 }
@@ -115,7 +115,7 @@ void LinkConfirmDialog__DestroyBannerWWW(LinkConfirmDialog_o *this, const Method
   {
     UnityEngine_Networking_UnityWebRequest__Dispose(bannerWWW, 0);
     p_bannerWWW->klass = 0;
-    sub_1C71354(p_bannerWWW, 0, v4, v5, v6, v7, v8, v9);
+    sub_1C9403C(p_bannerWWW, 0, v4, v5, v6, v7, v8, v9);
   }
 }
 
@@ -139,7 +139,7 @@ void LinkConfirmDialog__EndClose(LinkConfirmDialog_o *this, const MethodInfo *me
   if ( closeEndFunc )
   {
     p_closeEndFunc->klass = 0;
-    sub_1C71354(p_closeEndFunc, 0, v3, v4, v5, v6, v7, v8);
+    sub_1C9403C(p_closeEndFunc, 0, v3, v4, v5, v6, v7, v8);
     ((void (__fastcall *)(intptr_t, intptr_t))v10->fields.invoke_impl)(v10->fields.method_code, v10->fields.method);
   }
 }
@@ -163,20 +163,20 @@ void LinkConfirmDialog__Init(LinkConfirmDialog_o *this, const MethodInfo *method
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v11; // x1
 
-  if ( (byte_4CC9CF3 & 1) == 0 )
+  if ( (byte_4D2F065 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC9CF3 = 1;
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2F065 = 1;
   }
   if ( !this->fields.refuseInit )
   {
     LinkConfirmDialog__Release(this, method);
     v3 = StringLiteral_1/*""*/;
     this->fields.linkUrl = (struct System_String_o *)StringLiteral_1/*""*/;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.linkUrl, v3, v4, v5, v6, v7, v8, v9);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.linkUrl, v3, v4, v5, v6, v7, v8, v9);
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
-      sub_1C71608(0, v11);
+      sub_1C942F0(0, v11);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0);
     BaseDialog__Init((BaseDialog_o *)this, 0);
   }
@@ -189,17 +189,17 @@ void LinkConfirmDialog__OnClickCancel(LinkConfirmDialog_o *this, const MethodInf
   System_Reflection_MethodBase_o *v4; // x0
   struct LinkConfirmDialog_ClickDelegate_o *clickFunc; // x8
 
-  if ( (byte_4CC9CF7 & 1) == 0 )
+  if ( (byte_4D2F069 & 1) == 0 )
   {
-    sub_1C713B0(&Method_LinkConfirmDialog_OnClickCancel__);
-    byte_4CC9CF7 = 1;
+    sub_1C94098(&Method_LinkConfirmDialog_OnClickCancel__);
+    byte_4D2F069 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
     v3 = Method_LinkConfirmDialog_OnClickCancel__;
     if ( (*((_BYTE *)Method_LinkConfirmDialog_OnClickCancel__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C713C8(Method_LinkConfirmDialog_OnClickCancel__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C940B0(Method_LinkConfirmDialog_OnClickCancel__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 1, 0, 0);
     clickFunc = this->fields.clickFunc;
     if ( clickFunc )
@@ -216,10 +216,10 @@ void LinkConfirmDialog__OnClickOk(LinkConfirmDialog_o *this, const MethodInfo *m
   struct LinkConfirmDialog_ClickDelegate_o *clickFunc; // x8
   System_String_o *linkUrl; // x19
 
-  if ( (byte_4CC9CF6 & 1) == 0 )
+  if ( (byte_4D2F068 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Application_TypeInfo);
-    byte_4CC9CF6 = 1;
+    sub_1C94098(&UnityEngine_Application_TypeInfo);
+    byte_4D2F068 = 1;
   }
   if ( this->fields.isButtonEnable )
   {
@@ -288,19 +288,19 @@ void LinkConfirmDialog__Open(
   UILabel_o *v51; // x22
   System_Action_o *v52; // x20
 
-  if ( (byte_4CC9CF4 & 1) == 0 )
+  if ( (byte_4D2F066 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_LinkConfirmDialog_EndOpen__);
-    sub_1C713B0(&Method_LinkConfirmDialog__Open_b__28_0__);
-    sub_1C713B0(&LinkConfirmDialog_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&StringLiteral_3680/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C713B0(&StringLiteral_3686/*"COMMON_CONFIRM_TO_WEBVIEW"*/);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC9CF4 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_LinkConfirmDialog_EndOpen__);
+    sub_1C94098(&Method_LinkConfirmDialog__Open_b__28_0__);
+    sub_1C94098(&LinkConfirmDialog_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C94098(&StringLiteral_3696/*"COMMON_CONFIRM_TO_WEBVIEW"*/);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2F066 = 1;
   }
   TargetPanel = BaseDialog__get_TargetPanel((BaseDialog_o *)this, 0);
   if ( this->fields.isInitPanelDepth )
@@ -317,7 +317,7 @@ void LinkConfirmDialog__Open(
     }
   }
   this->fields.clickFunc = func;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v17, v18, v19, v20, v21, v22);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.clickFunc, (int32_t)func, v17, v18, v19, v20, v21, v22);
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -370,7 +370,7 @@ void LinkConfirmDialog__Open(
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality(lnkTexture, 0, 0) && !System_String__IsNullOrEmpty(linkTexture, 0) )
   {
-    Instance = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    Instance = (UILabel_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
     if ( !Instance )
       goto LABEL_57;
     CommonUI__SetLoadMode((CommonUI_o *)Instance, 1, 0);
@@ -382,10 +382,10 @@ void LinkConfirmDialog__Open(
     if ( !Instance )
       goto LABEL_57;
     UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)Instance, 0, 0);
-    v39 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    v39 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(v39, (Il2CppObject *)this, Method_LinkConfirmDialog__Open_b__28_0__, 0);
     this->fields.afterLoadAction = v39;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&this->fields.afterLoadAction,
       (int32_t)v39,
       v40,
@@ -395,10 +395,10 @@ void LinkConfirmDialog__Open(
       v44,
       v45);
     started = LinkConfirmDialog__StartDownloadBanner(this, linkTexture, v46);
-    UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, started, 0);
+    UnityEngine_MonoBehaviour__StartCoroutine_72096164((UnityEngine_MonoBehaviour_o *)this, started, 0);
   }
   this->fields.linkUrl = linkUrl;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.linkUrl, (int32_t)linkUrl, v33, v34, v35, v36, v37, v38);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.linkUrl, (int32_t)linkUrl, v33, v34, v35, v36, v37, v38);
   okBtnLabel = (UnityEngine_Object_o *)this->fields.okBtnLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -407,7 +407,7 @@ void LinkConfirmDialog__Open(
     v49 = this->fields.okBtnLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3686/*"COMMON_CONFIRM_TO_WEBVIEW"*/, 0);
+    Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3696/*"COMMON_CONFIRM_TO_WEBVIEW"*/, 0);
     if ( !v49 )
       goto LABEL_57;
     UILabel__set_text(v49, (System_String_o *)Instance, 0);
@@ -420,7 +420,7 @@ void LinkConfirmDialog__Open(
     v51 = this->fields.cancelBtnLabel;
     if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-    Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3680/*"COMMON_CONFIRM_CLOSE"*/, 0);
+    Instance = (UILabel_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/, 0);
     if ( !v51 )
       goto LABEL_57;
     UILabel__set_text(v51, (System_String_o *)Instance, 0);
@@ -438,12 +438,12 @@ void LinkConfirmDialog__Open(
       goto LABEL_56;
     }
 LABEL_57:
-    sub_1C71608(Instance, v25);
+    sub_1C942F0(Instance, v25);
   }
 LABEL_56:
   this->fields.isButtonEnable = 0;
   BaseDialog__SetMaskTouchCloseEnabled((BaseDialog_o *)this, 1, 0);
-  v52 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v52 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v52, (Il2CppObject *)this, Method_LinkConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v52, 0, 0, 0);
 }
@@ -472,17 +472,17 @@ void LinkConfirmDialog__Release(LinkConfirmDialog_o *this, const MethodInfo *met
   int32_t v21; // w2
   int v22; // w8
 
-  if ( (byte_4CC9CF9 & 1) == 0 )
+  if ( (byte_4D2F06B & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_LinkableTexture__Clear__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_LinkableSprite__Clear__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_LinkableTexture__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_LinkableSprite__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_LinkableSprite__get_Item__);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC9CF9 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_LinkableTexture__Clear__);
+    sub_1C94098(&Method_System_Collections_Generic_List_LinkableSprite__Clear__);
+    sub_1C94098(&Method_System_Collections_Generic_List_LinkableTexture__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_LinkableSprite__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
+    sub_1C94098(&Method_System_Collections_Generic_List_LinkableSprite__get_Item__);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2F06B = 1;
   }
   messageLabel = (UnityEngine_Object_o *)this->fields.messageLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -532,7 +532,7 @@ void LinkConfirmDialog__Release(LinkConfirmDialog_o *this, const MethodInfo *met
                                         *(_QWORD *)(*(_QWORD *)mUiTexture + 736LL));
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_71724608(v10, 0);
+        UnityEngine_Object__Destroy_72110972(v10, 0);
         v11 = this->fields.lnkTexture;
         if ( v11 )
         {
@@ -549,7 +549,7 @@ void LinkConfirmDialog__Release(LinkConfirmDialog_o *this, const MethodInfo *met
       }
     }
 LABEL_48:
-    sub_1C71608(mUiTexture, v4);
+    sub_1C942F0(mUiTexture, v4);
   }
 LABEL_28:
   mUiTexture = this->fields.additionalSprites;
@@ -562,7 +562,7 @@ LABEL_28:
       mUiTexture = System_Collections_Generic_List_object___get_Item(
                      (System_Collections_Generic_List_object__o *)mUiTexture,
                      v12,
-                     (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_LinkableSprite__get_Item__);
+                     (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_LinkableSprite__get_Item__);
       if ( mUiTexture )
       {
         gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
@@ -570,7 +570,7 @@ LABEL_28:
                                                0);
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-        UnityEngine_Object__Destroy_71724608(gameObject, 0);
+        UnityEngine_Object__Destroy_72110972(gameObject, 0);
         mUiTexture = this->fields.additionalSprites;
         ++v12;
         if ( mUiTexture )
@@ -595,7 +595,7 @@ LABEL_28:
       mUiTexture = System_Collections_Generic_List_object___get_Item(
                      (System_Collections_Generic_List_object__o *)mUiTexture,
                      v17,
-                     (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
+                     (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
       if ( mUiTexture )
       {
         mUiTexture = (void *)*((_QWORD *)mUiTexture + 6);
@@ -606,20 +606,20 @@ LABEL_28:
                                           *(_QWORD *)(*(_QWORD *)mUiTexture + 736LL));
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_71724608(v19, 0);
+          UnityEngine_Object__Destroy_72110972(v19, 0);
           mUiTexture = this->fields.additionalTextures;
           if ( mUiTexture )
           {
             mUiTexture = System_Collections_Generic_List_object___get_Item(
                            (System_Collections_Generic_List_object__o *)mUiTexture,
                            v17,
-                           (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
+                           (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_LinkableTexture__get_Item__);
             if ( mUiTexture )
             {
               v20 = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(
                                               (UnityEngine_Component_o *)mUiTexture,
                                               0);
-              UnityEngine_Object__Destroy_71724608(v20, 0);
+              UnityEngine_Object__Destroy_72110972(v20, 0);
               mUiTexture = this->fields.additionalTextures;
               ++v17;
               if ( mUiTexture )
@@ -659,18 +659,18 @@ System_Collections_IEnumerator_o *LinkConfirmDialog__StartDownloadBanner(
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4CC9CF8 & 1) == 0 )
+  if ( (byte_4D2F06A & 1) == 0 )
   {
-    sub_1C713B0(&LinkConfirmDialog__StartDownloadBanner_d__35_TypeInfo);
-    byte_4CC9CF8 = 1;
+    sub_1C94098(&LinkConfirmDialog__StartDownloadBanner_d__35_TypeInfo);
+    byte_4D2F06A = 1;
   }
-  v5 = sub_1C715FC(LinkConfirmDialog__StartDownloadBanner_d__35_TypeInfo);
+  v5 = sub_1C942E4(LinkConfirmDialog__StartDownloadBanner_d__35_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   *(_DWORD *)(v5 + 16) = 0;
   *(_QWORD *)(v5 + 32) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 32), (int32_t)this, v6, v7, v8, v9, v10, v11);
   *(_QWORD *)(v5 + 40) = linkTexture;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)linkTexture, v12, v13, v14, v15, v16, v17);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 40), (int32_t)linkTexture, v12, v13, v14, v15, v16, v17);
   return (System_Collections_IEnumerator_o *)v5;
 }
 
@@ -687,15 +687,15 @@ void LinkConfirmDialog___Open_b__28_0(LinkConfirmDialog_o *this, const MethodInf
   UnityEngine_GameObject_o *v10; // x0
   System_Action_o *v11; // x20
 
-  if ( (byte_4CC9CFC & 1) == 0 )
+  if ( (byte_4D2F06E & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    sub_1C713B0(&Method_LinkConfirmDialog_EndOpen__);
-    sub_1C713B0(&LinkConfirmDialog_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    byte_4CC9CFC = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&BaseDialog_TypeInfo);
+    sub_1C94098(&Method_LinkConfirmDialog_EndOpen__);
+    sub_1C94098(&LinkConfirmDialog_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    byte_4D2F06E = 1;
   }
   baseWindow = this->fields.baseWindow;
   if ( !baseWindow )
@@ -755,14 +755,14 @@ void LinkConfirmDialog___Open_b__28_0(LinkConfirmDialog_o *this, const MethodInf
       }
     }
 LABEL_18:
-    sub_1C71608(baseWindow, method);
+    sub_1C942F0(baseWindow, method);
   }
 LABEL_16:
-  baseWindow = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+  baseWindow = (UnityEngine_GameObject_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
   if ( !baseWindow )
     goto LABEL_18;
   CommonUI__SetLoadMode((CommonUI_o *)baseWindow, 0, 0);
-  v11 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v11 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v11, (Il2CppObject *)this, Method_LinkConfirmDialog_EndOpen__, 0);
   BaseDialog__Open((BaseDialog_o *)this, v11, 0, 0, 0);
 }
@@ -787,7 +787,7 @@ void LinkConfirmDialog_ClickDelegate___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -798,12 +798,12 @@ void LinkConfirmDialog_ClickDelegate___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v14, 0);
+      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -815,9 +815,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA97D0;
+  this->fields.invoke_impl = (intptr_t)sub_1ACB10C;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA9788;
+  this->fields.extra_arg = (intptr_t)sub_1ACB0C4;
 }
 
 
@@ -832,14 +832,14 @@ System_IAsyncResult_o *LinkConfirmDialog_ClickDelegate__BeginInvoke(
   bool v10[4]; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10[0] = isOk;
-  if ( (byte_4CC9CFD & 1) == 0 )
+  if ( (byte_4D2F06F & 1) == 0 )
   {
-    sub_1C713B0(&bool_TypeInfo);
-    byte_4CC9CFD = 1;
+    sub_1C94098(&bool_TypeInfo);
+    byte_4D2F06F = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(bool_TypeInfo, v10);
-  return (System_IAsyncResult_o *)sub_1C71364(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
 }
 
 
@@ -848,7 +848,7 @@ void LinkConfirmDialog_ClickDelegate__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C71368(result, 0, method);
+  sub_1C94050(result, 0, method);
 }
 
 
@@ -959,21 +959,21 @@ bool LinkConfirmDialog__StartDownloadBanner_d__35__MoveNext(
   struct System_String_o *linkTexture; // x1
 
   v3 = this;
-  if ( (byte_4CC9CFF & 1) == 0 )
+  if ( (byte_4D2F071 & 1) == 0 )
   {
-    sub_1C713B0(&ErrorDialog_ClickDelegate_TypeInfo);
-    sub_1C713B0(&UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
-    sub_1C713B0(&LinkConfirmDialog_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
-    sub_1C713B0(&UnityEngine_Texture2D_TypeInfo);
-    sub_1C713B0(&Method_LinkConfirmDialog___c__DisplayClass35_0__StartDownloadBanner_b__0__);
-    sub_1C713B0(&LinkConfirmDialog___c__DisplayClass35_0_TypeInfo);
-    sub_1C713B0(&UnityEngine_Networking_UnityWebRequest_TypeInfo);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    this = (LinkConfirmDialog__StartDownloadBanner_d__35_o *)sub_1C713B0(&StringLiteral_9261/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/);
-    byte_4CC9CFF = 1;
+    sub_1C94098(&ErrorDialog_ClickDelegate_TypeInfo);
+    sub_1C94098(&UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
+    sub_1C94098(&LinkConfirmDialog_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+    sub_1C94098(&UnityEngine_Texture2D_TypeInfo);
+    sub_1C94098(&Method_LinkConfirmDialog___c__DisplayClass35_0__StartDownloadBanner_b__0__);
+    sub_1C94098(&LinkConfirmDialog___c__DisplayClass35_0_TypeInfo);
+    sub_1C94098(&UnityEngine_Networking_UnityWebRequest_TypeInfo);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    this = (LinkConfirmDialog__StartDownloadBanner_d__35_o *)sub_1C94098(&StringLiteral_9281/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/);
+    byte_4D2F071 = 1;
   }
   _1__state = v3->fields.__1__state;
   _4__this = v3->fields.__4__this;
@@ -1030,13 +1030,13 @@ bool LinkConfirmDialog__StartDownloadBanner_d__35__MoveNext(
       if ( !this )
         goto LABEL_53;
       format = UnityEngine_Texture2D__get_format((UnityEngine_Texture2D_o *)this, 0);
-      v58 = (UnityEngine_Texture2D_o *)sub_1C715FC(UnityEngine_Texture2D_TypeInfo);
-      UnityEngine_Texture2D___ctor_71612192(v58, v55, v56, format, 0, 0);
+      v58 = (UnityEngine_Texture2D_o *)sub_1C942E4(UnityEngine_Texture2D_TypeInfo);
+      UnityEngine_Texture2D___ctor_71998556(v58, v55, v56, format, 0, 0);
       this = (LinkConfirmDialog__StartDownloadBanner_d__35_o *)v3->fields._texDl_5__2;
       if ( !this )
         goto LABEL_53;
       data = UnityEngine_Networking_DownloadHandler__get_data((UnityEngine_Networking_DownloadHandler_o *)this, 0);
-      UnityEngine_ImageConversion__LoadImage_71833736(v58, data, 0);
+      UnityEngine_ImageConversion__LoadImage_72220100(v58, data, 0);
     }
     else
     {
@@ -1084,7 +1084,7 @@ LABEL_26:
               linkTexture = _8__1->fields.linkTexture;
               lnkTexture->fields.linkUrl = linkTexture;
               lnkTexture->fields.linkType = 0;
-              sub_1C71354(
+              sub_1C9403C(
                 (GrandQuestFolderBoardItem_o *)&lnkTexture->fields.linkUrl,
                 (int32_t)linkTexture,
                 v74,
@@ -1117,17 +1117,17 @@ LABEL_36:
         if ( !v70 )
           goto LABEL_53;
         started = LinkConfirmDialog__StartDownloadBanner(_4__this, v70->fields.linkTexture, v2);
-        UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)_4__this, started, 0);
+        UnityEngine_MonoBehaviour__StartCoroutine_72096164((UnityEngine_MonoBehaviour_o *)_4__this, started, 0);
         goto LABEL_45;
       }
       _4__this->fields.bannerRetryCount = 0;
-      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
+      Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_CommonUI__get_Instance__);
       if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-      v65 = LocalizationManager__Get((System_String_o *)StringLiteral_9261/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, 0);
+      v65 = LocalizationManager__Get((System_String_o *)StringLiteral_9281/*"NETWORK_ERROR_TIME_OVER_MESSAGE"*/, 0);
       v66 = (Il2CppObject *)v3->fields.__8__1;
       v67 = v65;
-      v68 = (ErrorDialog_ClickDelegate_o *)sub_1C715FC(ErrorDialog_ClickDelegate_TypeInfo);
+      v68 = (ErrorDialog_ClickDelegate_o *)sub_1C942E4(ErrorDialog_ClickDelegate_TypeInfo);
       ErrorDialog_ClickDelegate___ctor(
         v68,
         v66,
@@ -1143,41 +1143,41 @@ LABEL_45:
       }
     }
 LABEL_53:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   if ( _1__state )
     return 0;
   v3->fields.__1__state = -1;
-  v6 = (Il2CppObject *)sub_1C715FC(LinkConfirmDialog___c__DisplayClass35_0_TypeInfo);
+  v6 = (Il2CppObject *)sub_1C942E4(LinkConfirmDialog___c__DisplayClass35_0_TypeInfo);
   System_Object___ctor(v6, 0);
   v3->fields.__8__1 = (struct LinkConfirmDialog___c__DisplayClass35_0_o *)v6;
   p__8__1 = &v3->fields.__8__1;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->fields.__8__1, (int32_t)v6, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v3->fields.__8__1, (int32_t)v6, v8, v9, v10, v11, v12, v13);
   this = (LinkConfirmDialog__StartDownloadBanner_d__35_o *)v3->fields.__8__1;
   if ( !this )
     goto LABEL_53;
   v20 = v3->fields.__4__this;
   *(_QWORD *)&this->fields.__1__state = v20;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v20, v14, v15, v16, v17, v18, v19);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)v20, v14, v15, v16, v17, v18, v19);
   this = (LinkConfirmDialog__StartDownloadBanner_d__35_o *)v3->fields.__8__1;
   if ( !this )
     goto LABEL_53;
   v27 = (Il2CppObject *)v3->fields.linkTexture;
   this->fields.__2__current = v27;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v27, v21, v22, v23, v24, v25, v26);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.__2__current, (int32_t)v27, v21, v22, v23, v24, v25, v26);
   if ( !*p__8__1 )
     goto LABEL_53;
   v28 = (*p__8__1)->fields.linkTexture;
-  v29 = (UnityEngine_Networking_UnityWebRequest_o *)sub_1C715FC(UnityEngine_Networking_UnityWebRequest_TypeInfo);
-  UnityEngine_Networking_UnityWebRequest___ctor_74251236(v29, v28, 0);
+  v29 = (UnityEngine_Networking_UnityWebRequest_o *)sub_1C942E4(UnityEngine_Networking_UnityWebRequest_TypeInfo);
+  UnityEngine_Networking_UnityWebRequest___ctor_74637600(v29, v28, 0);
   if ( !_4__this )
     goto LABEL_53;
   _4__this->fields.bannerWWW = v29;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&_4__this->fields.bannerWWW, (int32_t)v29, v30, v31, v32, v33, v34, v35);
-  v36 = (UnityEngine_Networking_DownloadHandlerTexture_o *)sub_1C715FC(UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&_4__this->fields.bannerWWW, (int32_t)v29, v30, v31, v32, v33, v34, v35);
+  v36 = (UnityEngine_Networking_DownloadHandlerTexture_o *)sub_1C942E4(UnityEngine_Networking_DownloadHandlerTexture_TypeInfo);
   UnityEngine_Networking_DownloadHandlerTexture___ctor(v36, 0, 0);
   v3->fields._texDl_5__2 = v36;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v3->fields._texDl_5__2, (int32_t)v36, v37, v38, v39, v40, v41, v42);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v3->fields._texDl_5__2, (int32_t)v36, v37, v38, v39, v40, v41, v42);
   this = (LinkConfirmDialog__StartDownloadBanner_d__35_o *)_4__this->fields.bannerWWW;
   if ( !this )
     goto LABEL_53;
@@ -1193,7 +1193,7 @@ LABEL_53:
   v44 = UnityEngine_Networking_UnityWebRequest__SendWebRequest((UnityEngine_Networking_UnityWebRequest_o *)this, 0);
   v3->fields.__2__current = (Il2CppObject *)v44;
   p__2__current = (GrandQuestFolderBoardItem_o *)&v3->fields.__2__current;
-  sub_1C71354(p__2__current, (int32_t)v44, v46, v47, v48, v49, v50, v51);
+  sub_1C9403C(p__2__current, (int32_t)v44, v46, v47, v48, v49, v50, v51);
   LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
   return v43;
 }
@@ -1215,11 +1215,11 @@ void __noreturn LinkConfirmDialog__StartDownloadBanner_d__35__System_Collections
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
+  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C713C4(&Method_LinkConfirmDialog__StartDownloadBanner_d__35_System_Collections_IEnumerator_Reset__);
-  sub_1C714D8(v3, v4);
+  v4 = sub_1C940AC(&Method_LinkConfirmDialog__StartDownloadBanner_d__35_System_Collections_IEnumerator_Reset__);
+  sub_1C941C0(v3, v4);
 }
 
 
@@ -1258,10 +1258,10 @@ void LinkConfirmDialog___c__DisplayClass35_0___StartDownloadBanner_b__0(
   System_Collections_IEnumerator_o *started; // x1
 
   v4 = this;
-  if ( (byte_4CC9CFE & 1) == 0 )
+  if ( (byte_4D2F070 & 1) == 0 )
   {
-    this = (LinkConfirmDialog___c__DisplayClass35_0_o *)sub_1C713B0(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
-    byte_4CC9CFE = 1;
+    this = (LinkConfirmDialog___c__DisplayClass35_0_o *)sub_1C94098(&Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+    byte_4D2F070 = 1;
   }
   if ( isDecide )
   {
@@ -1269,13 +1269,13 @@ void LinkConfirmDialog___c__DisplayClass35_0___StartDownloadBanner_b__0(
     if ( _4__this )
     {
       started = LinkConfirmDialog__StartDownloadBanner(v4->fields.__4__this, v4->fields.linkTexture, method);
-      UnityEngine_MonoBehaviour__StartCoroutine_71709800(_4__this, started, 0);
+      UnityEngine_MonoBehaviour__StartCoroutine_72096164(_4__this, started, 0);
       return;
     }
 LABEL_8:
-    sub_1C71608(this, isDecide);
+    sub_1C942F0(this, isDecide);
   }
-  this = (LinkConfirmDialog___c__DisplayClass35_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
+  this = (LinkConfirmDialog___c__DisplayClass35_0_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_ManagementManager__get_Instance__);
   if ( !this )
     goto LABEL_8;
   ManagementManager__reboot((ManagementManager_o *)this, 0, 1, 0);

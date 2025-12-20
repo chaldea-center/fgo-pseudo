@@ -1,9 +1,9 @@
 void SetNoticeInfo___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CC8856 & 1) == 0 )
+  if ( (byte_4D2DDC2 & 1) == 0 )
   {
-    sub_1C713B0(&SetNoticeInfo_TypeInfo);
-    byte_4CC8856 = 1;
+    sub_1C94098(&SetNoticeInfo_TypeInfo);
+    byte_4D2DDC2 = 1;
   }
   *SetNoticeInfo_TypeInfo->static_fields = (struct SetNoticeInfo_StaticFields)257;
 }
@@ -19,10 +19,10 @@ bool SetNoticeInfo__GetisApRecover(const MethodInfo *method)
 {
   SetNoticeInfo_c *v1; // x0
 
-  if ( (byte_4CC8853 & 1) == 0 )
+  if ( (byte_4D2DDBF & 1) == 0 )
   {
-    sub_1C713B0(&SetNoticeInfo_TypeInfo);
-    byte_4CC8853 = 1;
+    sub_1C94098(&SetNoticeInfo_TypeInfo);
+    byte_4D2DDBF = 1;
   }
   v1 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
@@ -38,10 +38,10 @@ bool SetNoticeInfo__GetisGameNotice(const MethodInfo *method)
 {
   SetNoticeInfo_c *v1; // x0
 
-  if ( (byte_4CC8855 & 1) == 0 )
+  if ( (byte_4D2DDC1 & 1) == 0 )
   {
-    sub_1C713B0(&SetNoticeInfo_TypeInfo);
-    byte_4CC8855 = 1;
+    sub_1C94098(&SetNoticeInfo_TypeInfo);
+    byte_4D2DDC1 = 1;
   }
   v1 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
@@ -57,10 +57,10 @@ void SetNoticeInfo__SetisApRecover(bool isNotice, const MethodInfo *method)
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_4CC8852 & 1) == 0 )
+  if ( (byte_4D2DDBE & 1) == 0 )
   {
-    sub_1C713B0(&SetNoticeInfo_TypeInfo);
-    byte_4CC8852 = 1;
+    sub_1C94098(&SetNoticeInfo_TypeInfo);
+    byte_4D2DDBE = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )
@@ -76,10 +76,10 @@ void SetNoticeInfo__SetisGameNotice(bool isNotice, const MethodInfo *method)
 {
   SetNoticeInfo_c *v3; // x0
 
-  if ( (byte_4CC8854 & 1) == 0 )
+  if ( (byte_4D2DDC0 & 1) == 0 )
   {
-    sub_1C713B0(&SetNoticeInfo_TypeInfo);
-    byte_4CC8854 = 1;
+    sub_1C94098(&SetNoticeInfo_TypeInfo);
+    byte_4D2DDC0 = 1;
   }
   v3 = SetNoticeInfo_TypeInfo;
   if ( !SetNoticeInfo_TypeInfo->_2.cctor_finished )

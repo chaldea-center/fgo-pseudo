@@ -1,6 +1,6 @@
 void PartyLowsetHpRateTargetChoicer___ctor(PartyLowsetHpRateTargetChoicer_o *this, const MethodInfo *method)
 {
-  TargetAggregator___ctor((TargetAggregator_o *)this, 0);
+  System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
@@ -10,23 +10,29 @@ System_Int32_array *PartyLowsetHpRateTargetChoicer__GetCandidate(
 {
   System_Int32_array *Candidate; // x20
   Il2CppObject *v4; // x21
-  int32_t actorId; // w0
-  BattleServantData_o *MostMatchedServant; // x1
+  __int64 v5; // x0
+  __int64 v6; // x1
+  const MethodInfo *v7; // x4
+  struct TargetAggregator_Args_o *args; // x8
+  BattleServantData_o *MostMatchedServant; // x0
+  const MethodInfo *v10; // x2
 
-  if ( (byte_4CCA85A & 1) == 0 )
+  if ( (byte_4D2FD0B & 1) == 0 )
   {
-    sub_1C713B0(&TargetFilterLowestHpRate_TypeInfo);
-    byte_4CCA85A = 1;
+    sub_1C94098(&TargetFilterLowestHpRate_TypeInfo);
+    byte_4D2FD0B = 1;
   }
   Candidate = PartyAllFieldTargetAggregator__GetCandidate((PartyAllFieldTargetAggregator_o *)this, method);
-  v4 = (Il2CppObject *)sub_1C715FC(TargetFilterLowestHpRate_TypeInfo);
+  v4 = (Il2CppObject *)sub_1C942E4(TargetFilterLowestHpRate_TypeInfo);
   System_Object___ctor(v4, 0);
-  actorId = TargetAggregator__get_actorId((TargetAggregator_o *)this, 0);
+  args = this->fields.args;
+  if ( !args )
+    sub_1C942F0(v5, v6);
   MostMatchedServant = TargetAggregator__GetMostMatchedServant(
                          (TargetAggregator_o *)this,
                          Candidate,
                          (TargetFilterLogic_o *)v4,
-                         actorId,
-                         0);
-  return TargetAggregator__ToServantUniqueIdArray((TargetAggregator_o *)this, MostMatchedServant, 0);
+                         args->fields._actorId_k__BackingField,
+                         v7);
+  return TargetAggregator__ToServantUniqueIdArray((TargetAggregator_o *)MostMatchedServant, MostMatchedServant, v10);
 }

@@ -33,7 +33,7 @@ void PhotoFrameListViewItem___ctor(
   this->fields._Id_k__BackingField = id;
   this->fields._Priority_k__BackingField = priority;
   this->fields._SpriteName_k__BackingField = spriteName;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SpriteName_k__BackingField,
     (int32_t)spriteName,
     v17,
@@ -43,7 +43,7 @@ void PhotoFrameListViewItem___ctor(
     v21,
     v22);
   this->fields._Name_k__BackingField = name;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)name,
     v23,
@@ -53,7 +53,7 @@ void PhotoFrameListViewItem___ctor(
     v27,
     v28);
   this->fields._Atlas_k__BackingField = atlas;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)atlas,
     v29,
@@ -120,7 +120,7 @@ void PhotoFrameListViewItem__set_Atlas(PhotoFrameListViewItem_o *this, UIAtlas_o
   System_String_o *v7; // x7
 
   this->fields._Atlas_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Atlas_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -153,7 +153,7 @@ void PhotoFrameListViewItem__set_Name(PhotoFrameListViewItem_o *this, System_Str
   System_String_o *v7; // x7
 
   this->fields._Name_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Name_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -183,7 +183,7 @@ void PhotoFrameListViewItem__set_SpriteName(
   System_String_o *v7; // x7
 
   this->fields._SpriteName_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SpriteName_k__BackingField,
     (int32_t)value,
     (int32_t)method,

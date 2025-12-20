@@ -18,16 +18,16 @@ void AudioData___ctor(AudioData_o *this, UnityEngine_AudioClip_o *clip, const Me
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !clip )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   name = UnityEngine_Object__get_name((UnityEngine_Object_o *)clip, 0);
   this->fields.name = name;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, v8, v9, v10, v11, v12, v13);
   this->fields.data = clip;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)clip, v14, v15, v16, v17, v18, v19);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)clip, v14, v15, v16, v17, v18, v19);
 }
 
 
-void AudioData___ctor_40930568(
+void AudioData___ctor_41408152(
         AudioData_o *this,
         System_String_o *name,
         UnityEngine_AudioClip_o *clip,
@@ -48,13 +48,13 @@ void AudioData___ctor_40930568(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.name = name;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, v7, v8, v9, v10, v11, v12);
   this->fields.data = clip;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)clip, v13, v14, v15, v16, v17, v18);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.data, (int32_t)clip, v13, v14, v15, v16, v17, v18);
 }
 
 
-void AudioData___ctor_40930636(
+void AudioData___ctor_41408220(
         AudioData_o *this,
         System_String_o *name,
         System_Single_array *buf,
@@ -79,17 +79,17 @@ void AudioData___ctor_40930636(
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.name = name;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, v7, v8, v9, v10, v11, v12);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)name, v7, v8, v9, v10, v11, v12);
   if ( !buf
     || (v15 = UnityEngine_AudioClip__Create(name, buf->max_length, 1, 44100, 0, 0),
         this->fields.data = v15,
         p_data = &this->fields.data,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)p_data, (int32_t)v15, v17, v18, v19, v20, v21, v22),
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)p_data, (int32_t)v15, v17, v18, v19, v20, v21, v22),
         (v13 = *p_data) == 0) )
   {
-    sub_1C71608(v13, v14);
+    sub_1C942F0(v13, v14);
   }
-  UnityEngine_AudioClip__SetData_71498060(v13, buf, 0, 0);
+  UnityEngine_AudioClip__SetData_71884424(v13, buf, 0, 0);
 }
 
 
@@ -99,8 +99,8 @@ bool AudioData__IsSame(AudioData_o *this, System_String_o *name, const MethodInf
 
   v3 = this->fields.name;
   if ( !v3 )
-    sub_1C71608(0, name);
-  return System_String__Equals_64067044(v3, name, 0);
+    sub_1C942F0(0, name);
+  return System_String__Equals_64453064(v3, name, 0);
 }
 
 

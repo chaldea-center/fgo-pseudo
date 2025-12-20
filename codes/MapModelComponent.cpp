@@ -1,7 +1,7 @@
 void MapModelComponent___ctor(MapModelComponent_o *this, const MethodInfo *method)
 {
   this->fields.isMapCamera2DReset = 1;
-  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_CEEEE0;
+  *(_OWORD *)&this->fields.mapCamera2DResetPosition.fields.x = xmmword_CFEB30;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
@@ -39,7 +39,7 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
   v19 = layer;
   locationPrefix = this->fields.locationPrefix;
   v5 = System_Int32__ToString((int32_t)&v19, 0);
-  v6 = System_String__Concat_64031724(locationPrefix, v5, 0);
+  v6 = System_String__Concat_64417744(locationPrefix, v5, 0);
   cameraLocationObjectList = this->fields.cameraLocationObjectList;
   if ( !cameraLocationObjectList )
     goto LABEL_8;
@@ -51,10 +51,10 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
     v12 = v10 - 4;
     if ( (int)v10 - 4 >= max_length )
     {
-      if ( !byte_4CC0D09 )
+      if ( !byte_4D25F19 )
       {
-        sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-        byte_4CC0D09 = 1;
+        sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+        byte_4D25F19 = 1;
       }
       static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
       x = static_fields->zeroVector.fields.x;
@@ -79,10 +79,10 @@ UnityEngine_Vector3_o MapModelComponent__GetCameraLocationPosition(
   v18 = this->fields.cameraLocationObjectList;
   if ( !v18 )
 LABEL_8:
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   if ( v12 >= LODWORD(v18->max_length) )
 LABEL_15:
-    sub_1C71610(v6);
+    sub_1C942F8(v6);
   *(UnityEngine_Vector3_o *)&x = GameObjectExtensions__GetLocalPosition(
                                    (UnityEngine_GameObject_o *)*((_QWORD *)&v18->obj.klass + v10),
                                    0);
@@ -109,7 +109,7 @@ void MapModelComponent__PlayAnimation(
   effectAction = (char *)this->fields.effectAction;
   if ( !effectAction
     || (*((_QWORD *)effectAction + 5) = endAction,
-        sub_1C71354(
+        sub_1C9403C(
           (GrandQuestFolderBoardItem_o *)(effectAction + 40),
           (int32_t)endAction,
           (int32_t)endAction,
@@ -120,9 +120,9 @@ void MapModelComponent__PlayAnimation(
           v7),
         (effectAction = (char *)this->fields.animationComponent) == 0) )
   {
-    sub_1C71608(effectAction, animationName);
+    sub_1C942F0(effectAction, animationName);
   }
-  SimpleAnimation__Play_66976788((SimpleAnimation_o *)effectAction, animationName, 0);
+  SimpleAnimation__Play_67362784((SimpleAnimation_o *)effectAction, animationName, 0);
 }
 
 

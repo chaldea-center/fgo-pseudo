@@ -14,10 +14,10 @@ void ServantStatusCharaGraphListViewItem___ctor(
   System_String_o *v13; // x7
 
   v7 = this;
-  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
   v7->fields.mainInfo = mainInfo;
   v7 = (ServantStatusCharaGraphListViewItem_o *)((char *)v7 + 120);
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v7, (int32_t)mainInfo, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v7, (int32_t)mainInfo, v8, v9, v10, v11, v12, v13);
   LODWORD(v7->monitor) = imageLimitCount;
 }
 

@@ -39,18 +39,18 @@ bool NumSpriteComponent__TryGetSpriteByIndex(
   UISprite_o *v21; // x1
 
   *sprite = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)sprite, 0, index, (int32_t)method, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)sprite, 0, index, (int32_t)method, v4, v5, v6, v7);
   numberSp = this->fields.numberSp;
   if ( !numberSp )
-    sub_1C71608(v11, v12);
+    sub_1C942F0(v11, v12);
   max_length = numberSp->max_length;
   if ( max_length > index )
   {
     if ( max_length <= (unsigned int)index )
-      sub_1C71610(v11);
+      sub_1C942F8(v11);
     v21 = numberSp->m_Items[index];
     *sprite = v21;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)sprite, (int32_t)v21, v13, v14, v15, v16, v17, v18);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)sprite, (int32_t)v21, v13, v14, v15, v16, v17, v18);
   }
   return max_length > index;
 }

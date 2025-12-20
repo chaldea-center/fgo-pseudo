@@ -24,11 +24,11 @@ void VoiceInfo___ctor(VoiceInfo_o *this, const MethodInfo *method)
   System_Object___ctor((Il2CppObject *)this, 0);
   v2->fields.isCanPlay = 0;
   v2->fields.overwriteName = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.overwriteName, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v2->fields.overwriteName, 0, v3, v4, v5, v6, v7, v8);
   v2->fields.overwriteNameDefault = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v2->fields.overwriteNameDefault, 0, v9, v10, v11, v12, v13, v14);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v2->fields.overwriteNameDefault, 0, v9, v10, v11, v12, v13, v14);
   v2->fields.servantVoiceConds = 0;
   v2 = (VoiceInfo_o *)((char *)v2 + 56);
   v2[-1].fields.servantVoiceConds = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v2, 0, v15, v16, v17, v18, v19, v20);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v2, 0, v15, v16, v17, v18, v19, v20);
 }

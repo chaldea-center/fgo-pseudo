@@ -16,7 +16,7 @@ void ClassBoardResourceContents__SetBoardUIAtlas(
   System_String_o *v7; // x7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     (int32_t)method,
@@ -58,7 +58,7 @@ void ClassBoardResourceContents__SetContents(
   System_String_o *v29; // x7
 
   this->fields._Square_k__BackingField = square;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields,
     (int32_t)square,
     (int32_t)line,
@@ -68,7 +68,7 @@ void ClassBoardResourceContents__SetContents(
     v6,
     v7);
   this->fields._Line_k__BackingField = line;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Line_k__BackingField,
     (int32_t)line,
     v12,
@@ -78,7 +78,7 @@ void ClassBoardResourceContents__SetContents(
     v16,
     v17);
   this->fields._Lock_k__BackingField = lockAsset;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Lock_k__BackingField,
     (int32_t)lockAsset,
     v18,
@@ -88,7 +88,7 @@ void ClassBoardResourceContents__SetContents(
     v22,
     v23);
   this->fields._Blank_k__BackingField = blank;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Blank_k__BackingField,
     (int32_t)blank,
     v24,
@@ -112,7 +112,7 @@ void ClassBoardResourceContents__SetContentsBgModel(
   System_String_o *v7; // x7
 
   this->fields._BgModel_k__BackingField = bgModel;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BgModel_k__BackingField,
     (int32_t)bgModel,
     (int32_t)method,
@@ -136,7 +136,7 @@ void ClassBoardResourceContents__SetContentsBoardSelectView(
   System_String_o *v7; // x7
 
   this->fields._BoardSelectViewPrefab_k__BackingField = boardSelectViewPrefab;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)boardSelectViewPrefab,
     (int32_t)method,
@@ -184,7 +184,7 @@ void ClassBoardResourceContents__SetContentsDialog(
   System_String_o *v36; // x7
 
   this->fields._DisableOpenDialog_k__BackingField = classBoardDisableOpenDialog;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int32_t)classBoardDisableOpenDialog,
     (int32_t)classBoardSquareOpenConfirmDialog,
@@ -194,7 +194,7 @@ void ClassBoardResourceContents__SetContentsDialog(
     (int64_t)method,
     v7);
   this->fields._SquareOpenConfirmDialog_k__BackingField = classBoardSquareOpenConfirmDialog;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardSquareOpenConfirmDialog,
     v13,
@@ -204,7 +204,7 @@ void ClassBoardResourceContents__SetContentsDialog(
     v17,
     v18);
   this->fields._LockOpenConfirmDialog_k__BackingField = classBoardLockOpenConfirmDialog;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardLockOpenConfirmDialog,
     v19,
@@ -214,7 +214,7 @@ void ClassBoardResourceContents__SetContentsDialog(
     v23,
     v24);
   this->fields._LockReleaseConditionDialog_k__BackingField = classBoardLockReleaseConditionDialog;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)classBoardLockReleaseConditionDialog,
     v25,
@@ -224,7 +224,7 @@ void ClassBoardResourceContents__SetContentsDialog(
     v29,
     v30);
   this->fields._SquareDetailDialog_k__BackingField = classBoardSquareDetailDialog;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)classBoardSquareDetailDialog,
     v31,
@@ -248,7 +248,7 @@ void ClassBoardResourceContents__SetContentsFigure(
   System_String_o *v7; // x7
 
   this->fields._FigureController_k__BackingField = figureController;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._FigureController_k__BackingField,
     (int32_t)figureController,
     (int32_t)method,
@@ -272,7 +272,7 @@ void ClassBoardResourceContents__SetContentsForwardIconAnimObject(
   System_String_o *v7; // x7
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = prefab;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)prefab,
     (int32_t)method,
@@ -302,7 +302,7 @@ void ClassBoardResourceContents__SetContentsFullReleaseEffect(
   System_String_o *v15; // x7
 
   this->fields._FullReleaseEffectComponent_k__BackingField = fullReleaseEffectComponent;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._FullReleaseEffectComponent_k__BackingField,
     (int32_t)fullReleaseEffectComponent,
     (int32_t)grandFullReleaseEffectComponent,
@@ -312,7 +312,7 @@ void ClassBoardResourceContents__SetContentsFullReleaseEffect(
     v6,
     v7);
   this->fields._GrandFullReleaseEffectComponent_k__BackingField = grandFullReleaseEffectComponent;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandFullReleaseEffectComponent_k__BackingField,
     (int32_t)grandFullReleaseEffectComponent,
     v10,
@@ -336,7 +336,7 @@ void ClassBoardResourceContents__SetContentsGrandBgModel(
   System_String_o *v7; // x7
 
   this->fields._GrandBgModel_k__BackingField = grandBgModel;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandBgModel_k__BackingField,
     (int32_t)grandBgModel,
     (int32_t)method,
@@ -360,7 +360,7 @@ void ClassBoardResourceContents__SetContentsGrandBoardDialog(
   System_String_o *v7; // x7
 
   this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField = classBoardQuestOpenConfirmDialog;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField,
     (int32_t)classBoardQuestOpenConfirmDialog,
     (int32_t)method,
@@ -384,7 +384,7 @@ void ClassBoardResourceContents__SetContentsGrandGraph(
   System_String_o *v7; // x7
 
   this->fields._GrandGraphAtlasManagerUnit_k__BackingField = grandGraphAtlasManagerUnit;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandGraphAtlasManagerUnit_k__BackingField,
     (int32_t)grandGraphAtlasManagerUnit,
     (int32_t)method,
@@ -426,7 +426,7 @@ void ClassBoardResourceContents__SetContentsUI(
   System_String_o *v29; // x7
 
   this->fields._BoardUiController_k__BackingField = uiController;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BoardUiController_k__BackingField,
     (int32_t)uiController,
     (int32_t)boardUiAtlasManagerUnit,
@@ -436,7 +436,7 @@ void ClassBoardResourceContents__SetContentsUI(
     v6,
     v7);
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = boardUiAtlasManagerUnit;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)boardUiAtlasManagerUnit,
     v12,
@@ -446,7 +446,7 @@ void ClassBoardResourceContents__SetContentsUI(
     v16,
     v17);
   this->fields._IconAtlasManagerUnit_k__BackingField = iconAtlasManagerUnit;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)iconAtlasManagerUnit,
     v18,
@@ -456,7 +456,7 @@ void ClassBoardResourceContents__SetContentsUI(
     v22,
     v23);
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = classUiAtlasManagerUnit;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)classUiAtlasManagerUnit,
     v24,
@@ -498,7 +498,7 @@ void ClassBoardResourceContents__SetGrandContents(
   System_String_o *v29; // x7
 
   this->fields._GrandSquare_k__BackingField = square;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandSquare_k__BackingField,
     (int32_t)square,
     (int32_t)line,
@@ -508,7 +508,7 @@ void ClassBoardResourceContents__SetGrandContents(
     v6,
     v7);
   this->fields._GrandLine_k__BackingField = line;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandLine_k__BackingField,
     (int32_t)line,
     v12,
@@ -518,7 +518,7 @@ void ClassBoardResourceContents__SetGrandContents(
     v16,
     v17);
   this->fields._GrandLock_k__BackingField = lockAsset;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandLock_k__BackingField,
     (int32_t)lockAsset,
     v18,
@@ -528,7 +528,7 @@ void ClassBoardResourceContents__SetGrandContents(
     v22,
     v23);
   this->fields._GrandBlank_k__BackingField = blank;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandBlank_k__BackingField,
     (int32_t)blank,
     v24,
@@ -754,7 +754,7 @@ void ClassBoardResourceContents__set_BgModel(
   System_String_o *v7; // x7
 
   this->fields._BgModel_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BgModel_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -778,7 +778,7 @@ void ClassBoardResourceContents__set_Blank(
   System_String_o *v7; // x7
 
   this->fields._Blank_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Blank_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -802,7 +802,7 @@ void ClassBoardResourceContents__set_BoardSelectViewPrefab(
   System_String_o *v7; // x7
 
   this->fields._BoardSelectViewPrefab_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BoardSelectViewPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -826,7 +826,7 @@ void ClassBoardResourceContents__set_BoardUiAtlasManagerUnit(
   System_String_o *v7; // x7
 
   this->fields._BoardUiAtlasManagerUnit_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BoardUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -850,7 +850,7 @@ void ClassBoardResourceContents__set_BoardUiController(
   System_String_o *v7; // x7
 
   this->fields._BoardUiController_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._BoardUiController_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -874,7 +874,7 @@ void ClassBoardResourceContents__set_ClassBoardQuestOpenConfirmDialog(
   System_String_o *v7; // x7
 
   this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ClassBoardQuestOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -898,7 +898,7 @@ void ClassBoardResourceContents__set_ClassUiAtlasManagerUnit(
   System_String_o *v7; // x7
 
   this->fields._ClassUiAtlasManagerUnit_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ClassUiAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -922,7 +922,7 @@ void ClassBoardResourceContents__set_DisableOpenDialog(
   System_String_o *v7; // x7
 
   this->fields._DisableOpenDialog_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._DisableOpenDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -946,7 +946,7 @@ void ClassBoardResourceContents__set_FigureController(
   System_String_o *v7; // x7
 
   this->fields._FigureController_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._FigureController_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -970,7 +970,7 @@ void ClassBoardResourceContents__set_ForwardIconAnimObjectPrefab(
   System_String_o *v7; // x7
 
   this->fields._ForwardIconAnimObjectPrefab_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._ForwardIconAnimObjectPrefab_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -994,7 +994,7 @@ void ClassBoardResourceContents__set_FullReleaseEffectComponent(
   System_String_o *v7; // x7
 
   this->fields._FullReleaseEffectComponent_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._FullReleaseEffectComponent_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1018,7 +1018,7 @@ void ClassBoardResourceContents__set_GrandBgModel(
   System_String_o *v7; // x7
 
   this->fields._GrandBgModel_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandBgModel_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1042,7 +1042,7 @@ void ClassBoardResourceContents__set_GrandBlank(
   System_String_o *v7; // x7
 
   this->fields._GrandBlank_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandBlank_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1066,7 +1066,7 @@ void ClassBoardResourceContents__set_GrandFullReleaseEffectComponent(
   System_String_o *v7; // x7
 
   this->fields._GrandFullReleaseEffectComponent_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandFullReleaseEffectComponent_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1090,7 +1090,7 @@ void ClassBoardResourceContents__set_GrandGraphAtlasManagerUnit(
   System_String_o *v7; // x7
 
   this->fields._GrandGraphAtlasManagerUnit_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandGraphAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1114,7 +1114,7 @@ void ClassBoardResourceContents__set_GrandLine(
   System_String_o *v7; // x7
 
   this->fields._GrandLine_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandLine_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1138,7 +1138,7 @@ void ClassBoardResourceContents__set_GrandLock(
   System_String_o *v7; // x7
 
   this->fields._GrandLock_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandLock_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1162,7 +1162,7 @@ void ClassBoardResourceContents__set_GrandSquare(
   System_String_o *v7; // x7
 
   this->fields._GrandSquare_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._GrandSquare_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1186,7 +1186,7 @@ void ClassBoardResourceContents__set_IconAtlasManagerUnit(
   System_String_o *v7; // x7
 
   this->fields._IconAtlasManagerUnit_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._IconAtlasManagerUnit_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1210,7 +1210,7 @@ void ClassBoardResourceContents__set_Line(
   System_String_o *v7; // x7
 
   this->fields._Line_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Line_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1234,7 +1234,7 @@ void ClassBoardResourceContents__set_Lock(
   System_String_o *v7; // x7
 
   this->fields._Lock_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Lock_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1258,7 +1258,7 @@ void ClassBoardResourceContents__set_LockOpenConfirmDialog(
   System_String_o *v7; // x7
 
   this->fields._LockOpenConfirmDialog_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._LockOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1282,7 +1282,7 @@ void ClassBoardResourceContents__set_LockReleaseConditionDialog(
   System_String_o *v7; // x7
 
   this->fields._LockReleaseConditionDialog_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._LockReleaseConditionDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1306,7 +1306,7 @@ void ClassBoardResourceContents__set_Square(
   System_String_o *v7; // x7
 
   this->fields._Square_k__BackingField = value;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -1322,7 +1322,7 @@ void ClassBoardResourceContents__set_SquareDetailDialog(
   System_String_o *v7; // x7
 
   this->fields._SquareDetailDialog_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SquareDetailDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1346,7 +1346,7 @@ void ClassBoardResourceContents__set_SquareOpenConfirmDialog(
   System_String_o *v7; // x7
 
   this->fields._SquareOpenConfirmDialog_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SquareOpenConfirmDialog_k__BackingField,
     (int32_t)value,
     (int32_t)method,

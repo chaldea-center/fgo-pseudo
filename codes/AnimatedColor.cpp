@@ -9,7 +9,7 @@ void AnimatedColor___ctor(AnimatedColor_o *this, const MethodInfo *method)
 void AnimatedColor__LateUpdate(AnimatedColor_o *this, const MethodInfo *method)
 {
   if ( !this->fields.mWidget )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   UIWidget__set_color(this->fields.mWidget, this->fields.color, method);
 }
 
@@ -25,15 +25,15 @@ void AnimatedColor__OnEnable(AnimatedColor_o *this, const MethodInfo *method)
   System_String_o *v9; // x7
   const MethodInfo *v10; // x1
 
-  if ( (byte_4CCBCD5 & 1) == 0 )
+  if ( (byte_4D31087 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4CCBCD5 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_4D31087 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
   AnimatedColor__LateUpdate(this, v10);
 }

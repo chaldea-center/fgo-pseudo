@@ -1,14 +1,14 @@
 void CompleteMissionMaster___ctor(CompleteMissionMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC720A & 1) == 0 )
+  if ( (byte_4D2C67F & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
-    byte_4CC720A = 1;
+    sub_1C94098(&Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
+    byte_4D2C67F = 1;
   }
   DataMasterBase_object__object__int____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     145,
-    (const MethodInfo_3406B5C *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
+    (const MethodInfo_345919C *)Method_DataMasterBase_CompleteMissionMaster__CompleteMissionEntity__int___ctor__);
 }
 
 
@@ -50,22 +50,22 @@ bool CompleteMissionMaster__TryGetEntityFromObjectId(
   int64_t v36; // x6
   System_String_o *v37; // x7
 
-  if ( (byte_4CC720B & 1) == 0 )
+  if ( (byte_4D2C680 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo);
-    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
-    byte_4CC720B = 1;
+    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo);
+    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
+    byte_4D2C680 = 1;
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C71608(0, entity);
+    sub_1C942F0(0, entity);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_33A21E0 *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
+                 (const MethodInfo_33F413C *)Method_System_Collections_ObjectModel_Collection_CompleteMissionEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C71608(0, v8);
+    sub_1C942F0(0, v8);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -85,7 +85,7 @@ bool CompleteMissionMaster__TryGetEntityFromObjectId(
     else
     {
 LABEL_9:
-      v13 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v13 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v13)(
             Enumerator,
@@ -109,17 +109,17 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v17 = sub_1C47738(Enumerator, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0);
+      v17 = sub_1C6A420(Enumerator, System_Collections_Generic_IEnumerator_CompleteMissionEntity__TypeInfo, 0);
     }
     v18 = (CompleteMissionEntity_o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v17)(
                                        Enumerator,
                                        *(_QWORD *)(v17 + 8));
     if ( !v18 )
-      sub_1C71608(0, v19);
+      sub_1C942F0(0, v19);
     if ( v18->fields.objectId == objectId )
     {
       *entity = v18;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)entity, (int32_t)v18, v20, v21, v22, v23, v24, v25);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)entity, (int32_t)v18, v20, v21, v22, v23, v24, v25);
       v26 = 1;
       v27 = 4;
       goto LABEL_22;
@@ -145,13 +145,13 @@ LABEL_22:
   else
   {
 LABEL_26:
-    v31 = sub_1C47738(Enumerator, System_IDisposable_TypeInfo, 0);
+    v31 = sub_1C6A420(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v31)(Enumerator, *(_QWORD *)(v31 + 8));
   if ( v27 == 5 )
   {
     *entity = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)entity, 0, v32, v33, v34, v35, v36, v37);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)entity, 0, v32, v33, v34, v35, v36, v37);
     return 0;
   }
   return v26;

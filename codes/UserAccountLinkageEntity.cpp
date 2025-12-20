@@ -1,13 +1,13 @@
 void UserAccountLinkageEntity___ctor(UserAccountLinkageEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC8146 & 1) == 0 )
+  if ( (byte_4D2D5DB & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_long___ctor__);
-    byte_4CC8146 = 1;
+    sub_1C94098(&Method_DataEntityBase_long___ctor__);
+    byte_4D2D5DB = 1;
   }
   DataEntityBase_long____ctor(
     (DataEntityBase_long__o *)this,
-    (const MethodInfo_34069E4 *)Method_DataEntityBase_long___ctor__);
+    (const MethodInfo_3459024 *)Method_DataEntityBase_long___ctor__);
 }
 
 

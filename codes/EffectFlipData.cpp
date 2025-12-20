@@ -13,13 +13,13 @@ void EffectFlipData__Flip(EffectFlipData_o *this, UnityEngine_Transform_o *trEff
   {
     if ( !trEffect )
       goto LABEL_13;
-    UnityEngine_Transform__Rotate_71749464(trEffect, 0.0, 180.0, 0.0, 0);
+    UnityEngine_Transform__Rotate_72135828(trEffect, 0.0, 180.0, 0.0, 0);
   }
   if ( this->fields.scaleX <= 0 && this->fields.scaleZ < 1 )
     return;
   if ( !trEffect )
 LABEL_13:
-    sub_1C71608(this, trEffect);
+    sub_1C942F0(this, trEffect);
   localScale = UnityEngine_Transform__get_localScale(trEffect, 0);
   if ( this->fields.scaleX >= 1 )
     localScale.fields.x = -localScale.fields.x;
@@ -52,6 +52,6 @@ void EffectFlipData__OverwriteNodeName(
   {
     parentNodeName = this->fields.parentNodeName;
     *baseNodeName = parentNodeName;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6, v7, v8, v9, v10);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)baseNodeName, (int32_t)parentNodeName, v5, v6, v7, v8, v9, v10);
   }
 }

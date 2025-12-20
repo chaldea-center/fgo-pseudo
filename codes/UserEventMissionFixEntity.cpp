@@ -1,27 +1,27 @@
 void UserEventMissionFixEntity___ctor(UserEventMissionFixEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC821B & 1) == 0 )
+  if ( (byte_4D2D6B0 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC821B = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2D6B0 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserEventMissionFixEntity__CreatePK(int64_t userId, int32_t missionId, const MethodInfo *method)
 {
-  if ( (byte_4CC821A & 1) == 0 )
+  if ( (byte_4D2D6AF & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4CC821A = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4D2D6AF = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            missionId,
-           (const MethodInfo_314939C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_319A3C4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 

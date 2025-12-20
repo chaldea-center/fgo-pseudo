@@ -7,16 +7,16 @@ void EventInfoSkillGetDialog___cctor(const MethodInfo *method)
   int64_t v5; // x6
   System_String_o *v6; // x7
 
-  if ( (byte_4CC9238 & 1) == 0 )
+  if ( (byte_4D2E5BF & 1) == 0 )
   {
-    sub_1C713B0(&EventInfoSkillGetDialog_TypeInfo);
-    sub_1C713B0(&StringLiteral_5617/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/);
-    byte_4CC9238 = 1;
+    sub_1C94098(&EventInfoSkillGetDialog_TypeInfo);
+    sub_1C94098(&StringLiteral_5628/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/);
+    byte_4D2E5BF = 1;
   }
-  EventInfoSkillGetDialog_TypeInfo->static_fields->MessageLocalizationKey = (struct System_String_o *)StringLiteral_5617/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/;
-  sub_1C71354(
+  EventInfoSkillGetDialog_TypeInfo->static_fields->MessageLocalizationKey = (struct System_String_o *)StringLiteral_5628/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/;
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)EventInfoSkillGetDialog_TypeInfo->static_fields,
-    StringLiteral_5617/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/,
+    StringLiteral_5628/*"EVENT_INFO_SKILL_GET_DIALOG_TEXT_{0}"*/,
     v1,
     v2,
     v3,
@@ -28,10 +28,10 @@ void EventInfoSkillGetDialog___cctor(const MethodInfo *method)
 
 void EventInfoSkillGetDialog___ctor(EventInfoSkillGetDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC9237 & 1) == 0 )
+  if ( (byte_4D2E5BE & 1) == 0 )
   {
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    byte_4CC9237 = 1;
+    sub_1C94098(&BaseDialog_TypeInfo);
+    byte_4D2E5BE = 1;
   }
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
@@ -59,7 +59,7 @@ void EventInfoSkillGetDialog__Init(EventInfoSkillGetDialog_o *this, const Method
   BaseDialog__Init((BaseDialog_o *)this, 0);
   v2->fields.closeCallback = 0;
   v2 = (EventInfoSkillGetDialog_o *)((char *)v2 + 160);
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v2, 0, v3, v4, v5, v6, v7, v8);
   LOBYTE(v2->monitor) = 0;
 }
 
@@ -70,21 +70,21 @@ void EventInfoSkillGetDialog__OnClickCloseButton(EventInfoSkillGetDialog_o *this
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4CC9235 & 1) == 0 )
+  if ( (byte_4D2E5BC & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_EventInfoSkillGetDialog_OnClickCloseButton__);
-    sub_1C713B0(&Method_EventInfoSkillGetDialog__OnClickCloseButton_b__13_0__);
-    byte_4CC9235 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_EventInfoSkillGetDialog_OnClickCloseButton__);
+    sub_1C94098(&Method_EventInfoSkillGetDialog__OnClickCloseButton_b__13_0__);
+    byte_4D2E5BC = 1;
   }
   if ( !this->fields.isClose )
   {
     v3 = Method_EventInfoSkillGetDialog_OnClickCloseButton__;
     if ( (*((_BYTE *)Method_EventInfoSkillGetDialog_OnClickCloseButton__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C713C8(Method_EventInfoSkillGetDialog_OnClickCloseButton__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C940B0(Method_EventInfoSkillGetDialog_OnClickCloseButton__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_EventInfoSkillGetDialog__OnClickCloseButton_b__13_0__, 0);
     BaseDialog__Close((BaseDialog_o *)this, v5, 0);
     this->fields.isClose = 1;
@@ -132,29 +132,29 @@ void EventInfoSkillGetDialog__Open(
   int32_t condId; // [xsp+4h] [xbp-4Ch] BYREF
   SkillLvEntity_o *entity; // [xsp+8h] [xbp-48h] BYREF
 
-  if ( (byte_4CC9234 & 1) == 0 )
+  if ( (byte_4D2E5BB & 1) == 0 )
   {
-    sub_1C713B0(&AtlasManager_TypeInfo);
-    sub_1C713B0(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&EventInfoSkillGetDialog_TypeInfo);
-    sub_1C713B0(&int_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_3680/*"COMMON_CONFIRM_CLOSE"*/);
-    sub_1C713B0(&StringLiteral_5616/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/);
-    byte_4CC9234 = 1;
+    sub_1C94098(&AtlasManager_TypeInfo);
+    sub_1C94098(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&EventInfoSkillGetDialog_TypeInfo);
+    sub_1C94098(&int_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/);
+    sub_1C94098(&StringLiteral_5627/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/);
+    byte_4D2E5BB = 1;
   }
   entity = 0;
   BaseDialog__Init((BaseDialog_o *)this, 0);
   this->fields.closeCallback = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.closeCallback, 0, v7, v8, v9, v10, v11, v12);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.closeCallback, 0, v7, v8, v9, v10, v11, v12);
   this->fields.isClose = 0;
   if ( imagePartsGroupEntity )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_SkillLvMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillLvMaster___);
     SkillId = ImagePartsGroupEntity__GetSkillId(imagePartsGroupEntity, 0);
     SkillLv = (QuestMaster_o *)ImagePartsGroupEntity__GetSkillLv(imagePartsGroupEntity, 0);
     if ( !Master_object )
@@ -163,7 +163,7 @@ void EventInfoSkillGetDialog__Open(
     {
       if ( !DataManager_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-      SkillLv = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_QuestMaster___);
+      SkillLv = (QuestMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_QuestMaster___);
       if ( SkillLv )
       {
         SkillLv = (QuestMaster_o *)QuestMaster__getQuestEntity(SkillLv, imagePartsGroupEntity->fields.condId, 0);
@@ -196,7 +196,7 @@ void EventInfoSkillGetDialog__Open(
               j_il2cpp_runtime_class_init_0(AtlasManager_TypeInfo);
             AtlasManager__SetSkillIcon(skillIcon, v27, 0);
             skillExplanationTitle = this->fields.skillExplanationTitle;
-            SkillLv = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5616/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/, 0);
+            SkillLv = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_5627/*"EVENT_INFO_SKILL_GET_DIALOG_MESSAGE_SKILL_TITLE"*/, 0);
             if ( skillExplanationTitle )
             {
               UILabel__set_text(skillExplanationTitle, (System_String_o *)SkillLv, 0);
@@ -214,13 +214,13 @@ void EventInfoSkillGetDialog__Open(
                   {
                     UILabel__set_text(skillExplanationLabel, (System_String_o *)SkillLv, 0);
                     closeLabel = this->fields.closeLabel;
-                    SkillLv = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3680/*"COMMON_CONFIRM_CLOSE"*/, 0);
+                    SkillLv = (QuestMaster_o *)LocalizationManager__Get((System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/, 0);
                     if ( closeLabel )
                     {
                       UILabel__set_text(closeLabel, (System_String_o *)SkillLv, 0);
                       BaseDialog__Open((BaseDialog_o *)this, 0, 0, 0, 0);
                       this->fields.closeCallback = closeAction;
-                      sub_1C71354(
+                      sub_1C9403C(
                         (GrandQuestFolderBoardItem_o *)&this->fields.closeCallback,
                         (int32_t)closeAction,
                         v32,
@@ -239,7 +239,7 @@ void EventInfoSkillGetDialog__Open(
         }
       }
 LABEL_27:
-      sub_1C71608(SkillLv, v16);
+      sub_1C942F0(SkillLv, v16);
     }
   }
   ActionExtensions__Call(closeAction, 0);
@@ -260,7 +260,7 @@ void EventInfoSkillGetDialog___OnClickCloseButton_b__13_0(EventInfoSkillGetDialo
   ActionExtensions__Call(this->fields.closeCallback, 0);
   BaseDialog__Init((BaseDialog_o *)this, 0);
   p_closeCallback->klass = 0;
-  sub_1C71354(p_closeCallback, 0, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C(p_closeCallback, 0, v4, v5, v6, v7, v8, v9);
   this->fields.isClose = 0;
 }
 
@@ -273,10 +273,10 @@ UnityEngine_GameObject_o *EventInfoSkillGetDialog__get_closeBtnObject(
   __int64 v4; // x1
   UnityEngine_Component_o *v6; // x0
 
-  if ( (byte_4CC9236 & 1) == 0 )
+  if ( (byte_4D2E5BD & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC9236 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E5BD = 1;
   }
   closeButton = (UnityEngine_Object_o *)this->fields.closeButton;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -285,6 +285,6 @@ UnityEngine_GameObject_o *EventInfoSkillGetDialog__get_closeBtnObject(
     return 0;
   v6 = (UnityEngine_Component_o *)this->fields.closeButton;
   if ( !v6 )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   return UnityEngine_Component__get_gameObject(v6, 0);
 }

@@ -8,19 +8,19 @@ void PossessionInfoDialog___ctor(PossessionInfoDialog_o *this, const MethodInfo 
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CC3853 & 1) == 0 )
+  if ( (byte_4D28B8C & 1) == 0 )
   {
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_GameObject__TypeInfo);
-    byte_4CC3853 = 1;
+    sub_1C94098(&BaseDialog_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_GameObject___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_GameObject__TypeInfo);
+    byte_4D28B8C = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_GameObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_GameObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_GameObject___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_GameObject___ctor__);
   this->fields.objectList = (struct System_Collections_Generic_List_GameObject__o *)v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.objectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.objectList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   if ( !BaseDialog_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(BaseDialog_TypeInfo);
   BaseDialog___ctor((BaseDialog_o *)this, 0);
@@ -96,46 +96,46 @@ void PossessionInfoDialog__CreateObjList(PossessionInfoDialog_o *this, int32_t g
   int *v63; // x10
   __int64 v64; // x0
 
-  if ( (byte_4CC384F & 1) == 0 )
+  if ( (byte_4D28B88 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_ServantLimitMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_ServantMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_ViewGachaFeaturedServantMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_System_Linq_Enumerable_OrderByDescending_int__int___);
-    sub_1C713B0(&Method_System_Linq_Enumerable_ThenBy_int__int___);
-    sub_1C713B0(&System_Func_int__int__TypeInfo);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&System_Collections_Generic_IEnumerable_int__TypeInfo);
-    sub_1C713B0(&System_Collections_Generic_IEnumerator_int__TypeInfo);
-    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__Add__);
-    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_PossessionInfo___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_PossessionInfoDialog___c__DisplayClass12_0__CreateObjList_b__0__);
-    sub_1C713B0(&Method_PossessionInfoDialog___c__DisplayClass12_0__CreateObjList_b__1__);
-    sub_1C713B0(&PossessionInfoDialog___c__DisplayClass12_0_TypeInfo);
-    byte_4CC384F = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_ServantLimitMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_ServantMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_ViewGachaFeaturedServantMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_System_Linq_Enumerable_OrderByDescending_int__int___);
+    sub_1C94098(&Method_System_Linq_Enumerable_ThenBy_int__int___);
+    sub_1C94098(&System_Func_int__int__TypeInfo);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&System_Collections_Generic_IEnumerable_int__TypeInfo);
+    sub_1C94098(&System_Collections_Generic_IEnumerator_int__TypeInfo);
+    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__Add__);
+    sub_1C94098(&Method_UnityEngine_Object_Instantiate_PossessionInfo___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_PossessionInfoDialog___c__DisplayClass12_0__CreateObjList_b__0__);
+    sub_1C94098(&Method_PossessionInfoDialog___c__DisplayClass12_0__CreateObjList_b__1__);
+    sub_1C94098(&PossessionInfoDialog___c__DisplayClass12_0_TypeInfo);
+    byte_4D28B88 = 1;
   }
-  v5 = sub_1C715FC(PossessionInfoDialog___c__DisplayClass12_0_TypeInfo);
+  v5 = sub_1C942E4(PossessionInfoDialog___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (ViewGachaFeaturedServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantMaster___);
+  Master_object = (ViewGachaFeaturedServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantMaster___);
   if ( !v5 )
     goto LABEL_49;
   *(_QWORD *)(v5 + 24) = Master_object;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)Master_object, v8, v9, v10, v11, v12, v13);
-  v14 = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ServantLimitMaster___);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 24), (int32_t)Master_object, v8, v9, v10, v11, v12, v13);
+  v14 = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ServantLimitMaster___);
   *(_QWORD *)(v5 + 16) = v14;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)v14, v15, v16, v17, v18, v19, v20);
-  Master_object = (ViewGachaFeaturedServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_ViewGachaFeaturedServantMaster___);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)v14, v15, v16, v17, v18, v19, v20);
+  Master_object = (ViewGachaFeaturedServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_ViewGachaFeaturedServantMaster___);
   if ( !Master_object
     || (FeaturedServantIds = (System_Collections_Generic_IEnumerable_TSource__o *)ViewGachaFeaturedServantMaster__GetFeaturedServantIds(
                                                                                     Master_object,
                                                                                     gachaId,
                                                                                     0),
-        v22 = (System_Func_int__int__o *)sub_1C715FC(System_Func_int__int__TypeInfo),
+        v22 = (System_Func_int__int__o *)sub_1C942E4(System_Func_int__int__TypeInfo),
         System_Func_int__int____ctor(
           v22,
           (Il2CppObject *)v5,
@@ -144,8 +144,8 @@ void PossessionInfoDialog__CreateObjList(PossessionInfoDialog_o *this, int32_t g
         v23 = System_Linq_Enumerable__OrderByDescending_int__int_(
                 FeaturedServantIds,
                 (System_Func_TSource__TKey__o *)v22,
-                (const MethodInfo_317AD78 *)Method_System_Linq_Enumerable_OrderByDescending_int__int___),
-        v24 = (System_Func_int__int__o *)sub_1C715FC(System_Func_int__int__TypeInfo),
+                (const MethodInfo_31CC540 *)Method_System_Linq_Enumerable_OrderByDescending_int__int___),
+        v24 = (System_Func_int__int__o *)sub_1C942E4(System_Func_int__int__TypeInfo),
         System_Func_int__int____ctor(
           v24,
           (Il2CppObject *)v5,
@@ -154,10 +154,10 @@ void PossessionInfoDialog__CreateObjList(PossessionInfoDialog_o *this, int32_t g
         (Master_object = (ViewGachaFeaturedServantMaster_o *)System_Linq_Enumerable__ThenBy_int__int_(
                                                                v23,
                                                                (System_Func_TSource__TKey__o *)v24,
-                                                               (const MethodInfo_3189EEC *)Method_System_Linq_Enumerable_ThenBy_int__int___)) == 0) )
+                                                               (const MethodInfo_31DB7AC *)Method_System_Linq_Enumerable_ThenBy_int__int___)) == 0) )
   {
 LABEL_49:
-    sub_1C71608(Master_object, v7);
+    sub_1C942F0(Master_object, v7);
   }
   klass = Master_object->klass;
   v26 = Master_object;
@@ -177,11 +177,11 @@ LABEL_49:
   else
   {
 LABEL_12:
-    v29 = sub_1C47738(Master_object, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
+    v29 = sub_1C6A420(Master_object, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
   }
   v31 = (*(__int64 (__fastcall **)(ViewGachaFeaturedServantMaster_o *, _QWORD))v29)(v26, *(_QWORD *)(v29 + 8));
   if ( !v31 )
-    sub_1C71608(0, v30);
+    sub_1C942F0(0, v30);
   while ( 1 )
   {
     v32 = *(_QWORD *)v31;
@@ -201,7 +201,7 @@ LABEL_12:
     else
     {
 LABEL_19:
-      v35 = sub_1C47738(v31, System_Collections_IEnumerator_TypeInfo, 0);
+      v35 = sub_1C6A420(v31, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v35)(v31, *(_QWORD *)(v35 + 8)) & 1) == 0 )
       break;
@@ -222,47 +222,47 @@ LABEL_19:
     else
     {
 LABEL_26:
-      v39 = sub_1C47738(v31, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
+      v39 = sub_1C6A420(v31, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
     }
     v41 = (*(__int64 (__fastcall **)(__int64, _QWORD))v39)(v31, *(_QWORD *)(v39 + 8));
     listRoot = (UnityEngine_Component_o *)this->fields.listRoot;
     if ( !listRoot )
-      sub_1C71608(0, v40);
+      sub_1C942F0(0, v40);
     possessionInfoObject = (Il2CppObject *)this->fields.possessionInfoObject;
     transform = UnityEngine_Component__get_transform(listRoot, 0);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    v45 = UnityEngine_Object__Instantiate_object__52264420(
+    v45 = UnityEngine_Object__Instantiate_object__52598436(
             possessionInfoObject,
             transform,
-            (const MethodInfo_31D7DE4 *)Method_UnityEngine_Object_Instantiate_PossessionInfo___);
+            (const MethodInfo_32296A4 *)Method_UnityEngine_Object_Instantiate_PossessionInfo___);
     v47 = (PossessionInfo_o *)v45;
     if ( !v45 )
-      sub_1C71608(0, v46);
+      sub_1C942F0(0, v46);
     objectList = (System_Collections_Generic_List_object__o *)this->fields.objectList;
     gameObject = (Il2CppObject *)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)v45, 0);
     v56 = gameObject;
     if ( !objectList )
-      sub_1C71608(gameObject, gameObject);
+      sub_1C942F0(gameObject, gameObject);
     items = objectList->fields._items;
     v58 = Method_System_Collections_Generic_List_GameObject__Add__;
     ++objectList->fields._version;
     if ( !items )
-      sub_1C71608(gameObject, gameObject);
+      sub_1C942F0(gameObject, gameObject);
     size = objectList->fields._size;
     if ( (unsigned int)size >= LODWORD(items->max_length) )
     {
       System_Collections_Generic_List_object___AddWithResize(
         objectList,
         gameObject,
-        *(const MethodInfo_3810718 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
+        *(const MethodInfo_386AE34 **)(*(_QWORD *)(v58[4] + 192LL) + 112LL));
     }
     else
     {
       v60 = &items->obj.klass + size;
       objectList->fields._size = size + 1;
       v60[4] = (Il2CppClass *)v56;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(v60 + 4), (int32_t)v56, v50, v51, v52, v53, v54, v55);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v60 + 4), (int32_t)v56, v50, v51, v52, v53, v54, v55);
     }
     PossessionInfo__SetInfo(v47, v41, 0);
   }
@@ -283,7 +283,7 @@ LABEL_26:
   else
   {
 LABEL_42:
-    v64 = sub_1C47738(v31, System_IDisposable_TypeInfo, 0);
+    v64 = sub_1C6A420(v31, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v64)(v31, *(_QWORD *)(v64 + 8));
 }
@@ -310,30 +310,30 @@ void PossessionInfoDialog__Init(PossessionInfoDialog_o *this, const MethodInfo *
   int32_t size; // w2
   int v20; // w9
 
-  if ( (byte_4CC384E & 1) == 0 )
+  if ( (byte_4D28B87 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_GameObject__TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__Clear__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__ForEach__);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&Method_PossessionInfoDialog___c__Init_b__11_0__);
-    sub_1C713B0(&PossessionInfoDialog___c_TypeInfo);
-    sub_1C713B0(&StringLiteral_15647/*"Window/CloseButton"*/);
-    sub_1C713B0(&StringLiteral_10408/*"POSSESSION_DIALOG_TITLE"*/);
-    sub_1C713B0(&StringLiteral_10407/*"POSSESSION_DIALOG_MESSAGE"*/);
-    byte_4CC384E = 1;
+    sub_1C94098(&System_Action_GameObject__TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__Clear__);
+    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__ForEach__);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&Method_PossessionInfoDialog___c__Init_b__11_0__);
+    sub_1C94098(&PossessionInfoDialog___c_TypeInfo);
+    sub_1C94098(&StringLiteral_15700/*"Window/CloseButton"*/);
+    sub_1C94098(&StringLiteral_10438/*"POSSESSION_DIALOG_TITLE"*/);
+    sub_1C94098(&StringLiteral_10437/*"POSSESSION_DIALOG_MESSAGE"*/);
+    byte_4D28B87 = 1;
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
-  AndroidBackKeyManager__AddBackKeyTarget_45261920(transform, (System_String_o *)StringLiteral_15647/*"Window/CloseButton"*/, 0);
+  AndroidBackKeyManager__AddBackKeyTarget_45762468(transform, (System_String_o *)StringLiteral_15700/*"Window/CloseButton"*/, 0);
   titleLabel = this->fields.titleLabel;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10408/*"POSSESSION_DIALOG_TITLE"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10438/*"POSSESSION_DIALOG_TITLE"*/, 0);
   if ( !titleLabel )
     goto LABEL_18;
   UILabel__set_text(titleLabel, (System_String_o *)v5, 0);
   messageLabel = this->fields.messageLabel;
-  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10407/*"POSSESSION_DIALOG_MESSAGE"*/, 0);
+  v5 = LocalizationManager__Get((System_String_o *)StringLiteral_10437/*"POSSESSION_DIALOG_MESSAGE"*/, 0);
   if ( !messageLabel )
     goto LABEL_18;
   UILabel__set_text(messageLabel, (System_String_o *)v5, 0);
@@ -353,21 +353,21 @@ void PossessionInfoDialog__Init(PossessionInfoDialog_o *this, const MethodInfo *
       v5 = PossessionInfoDialog___c_TypeInfo;
     }
     v10 = (Il2CppObject *)**((_QWORD **)v5 + 23);
-    v9 = (System_Action_object__o *)sub_1C715FC(System_Action_GameObject__TypeInfo);
+    v9 = (System_Action_object__o *)sub_1C942E4(System_Action_GameObject__TypeInfo);
     System_Action_object____ctor(v9, v10, Method_PossessionInfoDialog___c__Init_b__11_0__, 0);
     static_fields = PossessionInfoDialog___c_TypeInfo->static_fields;
     static_fields->__9__11_0 = (struct System_Action_GameObject__o *)v9;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__11_0, (int32_t)v9, v12, v13, v14, v15, v16, v17);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__11_0, (int32_t)v9, v12, v13, v14, v15, v16, v17);
   }
   if ( !objectList
     || (System_Collections_Generic_List_object___ForEach(
           (System_Collections_Generic_List_object__o *)objectList,
           (System_Action_T__o *)v9,
-          (const MethodInfo_3811158 *)Method_System_Collections_Generic_List_GameObject__ForEach__),
+          (const MethodInfo_386B874 *)Method_System_Collections_Generic_List_GameObject__ForEach__),
         (v18 = this->fields.objectList) == 0) )
   {
 LABEL_18:
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   }
   size = v18->fields._size;
   v20 = v18->fields._version + 1;
@@ -385,21 +385,21 @@ void PossessionInfoDialog__OnClickClose(PossessionInfoDialog_o *this, const Meth
   System_Reflection_MethodBase_o *v4; // x0
   System_Action_o *v5; // x20
 
-  if ( (byte_4CC3852 & 1) == 0 )
+  if ( (byte_4D28B8B & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_PossessionInfoDialog_Init__);
-    sub_1C713B0(&Method_PossessionInfoDialog_OnClickClose__);
-    byte_4CC3852 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_PossessionInfoDialog_Init__);
+    sub_1C94098(&Method_PossessionInfoDialog_OnClickClose__);
+    byte_4D28B8B = 1;
   }
   if ( this->fields.baseState == 2 )
   {
     v3 = Method_PossessionInfoDialog_OnClickClose__;
     if ( (*((_BYTE *)Method_PossessionInfoDialog_OnClickClose__ + 83) & 2) != 0 )
-      v3 = (_QWORD *)sub_1C713C8(Method_PossessionInfoDialog_OnClickClose__);
-    v4 = (System_Reflection_MethodBase_o *)sub_1C71394(v3, v3[4]);
+      v3 = (_QWORD *)sub_1C940B0(Method_PossessionInfoDialog_OnClickClose__);
+    v4 = (System_Reflection_MethodBase_o *)sub_1C9407C(v3, v3[4]);
     OverwriteAssetSoundName__PlaySystemSe(v4, 0, 0, 0);
-    v5 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+    v5 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
     System_Action___ctor(v5, (Il2CppObject *)this, Method_PossessionInfoDialog_Init__, 0);
     BaseDialog__SafeClose((BaseDialog_o *)this, v5, 0);
   }
@@ -413,11 +413,11 @@ void PossessionInfoDialog__Open(PossessionInfoDialog_o *this, int32_t gachaId, c
   UnityEngine_Component_o *scrollBar; // x0
   System_Action_o *v8; // x20
 
-  if ( (byte_4CC3851 & 1) == 0 )
+  if ( (byte_4D28B8A & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_PossessionInfoDialog__Open_b__15_0__);
-    byte_4CC3851 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_PossessionInfoDialog__Open_b__15_0__);
+    byte_4D28B8A = 1;
   }
   PossessionInfoDialog__CreateObjList(this, gachaId, method);
   PossessionInfoDialog__Reposition(this, v5);
@@ -427,10 +427,10 @@ void PossessionInfoDialog__Open(PossessionInfoDialog_o *this, int32_t gachaId, c
     || (UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)scrollBar, 0, 0),
         (scrollBar = (UnityEngine_Component_o *)this->fields.scrollView) == 0) )
   {
-    sub_1C71608(scrollBar, v6);
+    sub_1C942F0(scrollBar, v6);
   }
   UIScrollView__UpdateScrollbars((UIScrollView_o *)scrollBar, 0);
-  v8 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+  v8 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
   System_Action___ctor(v8, (Il2CppObject *)this, Method_PossessionInfoDialog__Open_b__15_0__, 0);
   BaseDialog__SafeOpen((BaseDialog_o *)this, v8, 0, 0);
 }
@@ -470,12 +470,12 @@ void PossessionInfoDialog__Reposition(PossessionInfoDialog_o *this, const Method
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4CC3850 & 1) == 0 )
+  if ( (byte_4D28B89 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__GetRange__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    this = (PossessionInfoDialog_o *)sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__get_Item__);
-    byte_4CC3850 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__GetRange__);
+    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    this = (PossessionInfoDialog_o *)sub_1C94098(&Method_System_Collections_Generic_List_GameObject__get_Item__);
+    byte_4D28B89 = 1;
   }
   objectList = v2->fields.objectList;
   if ( !objectList )
@@ -485,10 +485,10 @@ void PossessionInfoDialog__Reposition(PossessionInfoDialog_o *this, const Method
     goto LABEL_35;
   size = (float)objectList->fields._size;
   maxPerLine = (float)listRoot->fields.maxPerLine;
-  if ( !byte_4CC13B2 )
+  if ( !byte_4D265B8 )
   {
-    sub_1C713B0(&System_Math_TypeInfo);
-    byte_4CC13B2 = 1;
+    sub_1C94098(&System_Math_TypeInfo);
+    byte_4D265B8 = 1;
   }
   v7 = size / maxPerLine;
   if ( !System_Math_TypeInfo->_2.cctor_finished )
@@ -530,7 +530,7 @@ void PossessionInfoDialog__Reposition(PossessionInfoDialog_o *this, const Method
                                            (System_Collections_Generic_List_object__o *)this,
                                            v18 * v15,
                                            v19,
-                                           (const MethodInfo_38112E8 *)Method_System_Collections_Generic_List_GameObject__GetRange__);
+                                           (const MethodInfo_386BA04 *)Method_System_Collections_Generic_List_GameObject__GetRange__);
         if ( !this )
           goto LABEL_35;
         v20 = v2->fields.listRoot;
@@ -553,7 +553,7 @@ LABEL_31:
         this = (PossessionInfoDialog_o *)System_Collections_Generic_List_object___get_Item(
                                            v22,
                                            v25,
-                                           (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
+                                           (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_GameObject__get_Item__);
         v27 = v2->fields.listRoot;
         if ( !v27 )
           break;
@@ -573,7 +573,7 @@ LABEL_31:
       }
     }
 LABEL_35:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   LODWORD(this->fields.baseWindow) = 1124597760;
   v30 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
@@ -603,14 +603,14 @@ void PossessionInfoDialog___Open_b__15_0(PossessionInfoDialog_o *this, const Met
   struct System_Collections_Generic_List_GameObject__o *v14; // x8
   struct UIGrid_o *listRoot; // x9
 
-  if ( (byte_4CC3854 & 1) == 0 )
+  if ( (byte_4D28B8D & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_GameObject__TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__ForEach__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__get_Count__);
-    sub_1C713B0(&Method_PossessionInfoDialog___c__Open_b__15_1__);
-    sub_1C713B0(&PossessionInfoDialog___c_TypeInfo);
-    byte_4CC3854 = 1;
+    sub_1C94098(&System_Action_GameObject__TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__ForEach__);
+    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__get_Count__);
+    sub_1C94098(&Method_PossessionInfoDialog___c__Open_b__15_1__);
+    sub_1C94098(&PossessionInfoDialog___c_TypeInfo);
+    byte_4D28B8D = 1;
   }
   scrollBar = PossessionInfoDialog___c_TypeInfo;
   objectList = this->fields.objectList;
@@ -628,17 +628,17 @@ void PossessionInfoDialog___Open_b__15_0(PossessionInfoDialog_o *this, const Met
       scrollBar = PossessionInfoDialog___c_TypeInfo;
     }
     v6 = (Il2CppObject *)**((_QWORD **)scrollBar + 23);
-    v5 = (System_Action_object__o *)sub_1C715FC(System_Action_GameObject__TypeInfo);
+    v5 = (System_Action_object__o *)sub_1C942E4(System_Action_GameObject__TypeInfo);
     System_Action_object____ctor(v5, v6, Method_PossessionInfoDialog___c__Open_b__15_1__, 0);
     static_fields = PossessionInfoDialog___c_TypeInfo->static_fields;
     static_fields->__9__15_1 = (struct System_Action_GameObject__o *)v5;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__15_1, (int32_t)v5, v8, v9, v10, v11, v12, v13);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__15_1, (int32_t)v5, v8, v9, v10, v11, v12, v13);
   }
   if ( !objectList
     || (System_Collections_Generic_List_object___ForEach(
           (System_Collections_Generic_List_object__o *)objectList,
           (System_Action_T__o *)v5,
-          (const MethodInfo_3811158 *)Method_System_Collections_Generic_List_GameObject__ForEach__),
+          (const MethodInfo_386B874 *)Method_System_Collections_Generic_List_GameObject__ForEach__),
         (scrollBar = this->fields.scrollBar) == 0)
     || (scrollBar = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)scrollBar, 0),
         (v14 = this->fields.objectList) == 0)
@@ -650,7 +650,7 @@ void PossessionInfoDialog___Open_b__15_0(PossessionInfoDialog_o *this, const Met
           0),
         (scrollBar = this->fields.scrollView) == 0) )
   {
-    sub_1C71608(scrollBar, method);
+    sub_1C942F0(scrollBar, method);
   }
   UIScrollView__ResetPosition((UIScrollView_o *)scrollBar, 0);
 }
@@ -666,15 +666,15 @@ void PossessionInfoDialog___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CC3855 & 1) == 0 )
+  if ( (byte_4D28B8E & 1) == 0 )
   {
-    sub_1C713B0(&PossessionInfoDialog___c_TypeInfo);
-    byte_4CC3855 = 1;
+    sub_1C94098(&PossessionInfoDialog___c_TypeInfo);
+    byte_4D28B8E = 1;
   }
-  v1 = (Il2CppObject *)sub_1C715FC(PossessionInfoDialog___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C942E4(PossessionInfoDialog___c_TypeInfo);
   System_Object___ctor(v1, 0);
   PossessionInfoDialog___c_TypeInfo->static_fields->__9 = (struct PossessionInfoDialog___c_o *)v1;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)PossessionInfoDialog___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -697,10 +697,10 @@ void PossessionInfoDialog___c___Init_b__11_0(
         UnityEngine_GameObject_o *obj,
         const MethodInfo *method)
 {
-  if ( (byte_4CC3856 & 1) == 0 )
+  if ( (byte_4D28B8F & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3856 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D28B8F = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -708,7 +708,7 @@ void PossessionInfoDialog___c___Init_b__11_0(
   {
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71724608((UnityEngine_Object_o *)obj, 0);
+    UnityEngine_Object__Destroy_72110972((UnityEngine_Object_o *)obj, 0);
   }
 }
 
@@ -721,10 +721,10 @@ void PossessionInfoDialog___c___Open_b__15_1(
   _BOOL8 v4; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CC3857 & 1) == 0 )
+  if ( (byte_4D28B90 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3857 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D28B90 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -732,7 +732,7 @@ void PossessionInfoDialog___c___Open_b__15_1(
   if ( v4 )
   {
     if ( !obj )
-      sub_1C71608(v4, v5);
+      sub_1C942F0(v4, v5);
     UnityEngine_GameObject__SetActive(obj, 1, 0);
   }
 }
@@ -758,7 +758,7 @@ int32_t PossessionInfoDialog___c__DisplayClass12_0___CreateObjList_b__0(
   if ( !servantLimitMaster
     || (servantLimitMaster = ServantLimitMaster__GetEntity((ServantLimitMaster_o *)servantLimitMaster, id, 0, 0)) == 0 )
   {
-    sub_1C71608(servantLimitMaster, *(_QWORD *)&id);
+    sub_1C942F0(servantLimitMaster, *(_QWORD *)&id);
   }
   return *((_DWORD *)servantLimitMaster + 6);
 }
@@ -772,19 +772,19 @@ int32_t PossessionInfoDialog___c__DisplayClass12_0___CreateObjList_b__1(
 {
   void *svtMaster; // x0
 
-  if ( (byte_4CC3858 & 1) == 0 )
+  if ( (byte_4D28B91 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
-    byte_4CC3858 = 1;
+    sub_1C94098(&Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__);
+    byte_4D28B91 = 1;
   }
   svtMaster = this->fields.svtMaster;
   if ( !svtMaster
     || (svtMaster = DataMasterBase_object__object__int___GetEntity(
                       (DataMasterBase_TMaster__TEntity__PKType__o *)svtMaster,
                       id,
-                      (const MethodInfo_3408E80 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0 )
+                      (const MethodInfo_345B4C0 *)Method_DataMasterBase_ServantMaster__ServantEntity__int__GetEntity__)) == 0 )
   {
-    sub_1C71608(svtMaster, *(_QWORD *)&id);
+    sub_1C942F0(svtMaster, *(_QWORD *)&id);
   }
   return *((_DWORD *)svtMaster + 52);
 }

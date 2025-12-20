@@ -25,7 +25,7 @@ void FieldAiActArgument___ctor(
     (const MethodInfo *)isForcedSpeedOne);
   v9->fields._FieldData_k__BackingField = fieldData;
   v9 = (FieldAiActArgument_o *)((char *)v9 + 40);
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v9, (int32_t)fieldData, v10, v11, v12, v13, v14, v15);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v9, (int32_t)fieldData, v10, v11, v12, v13, v14, v15);
   LOBYTE(v9->monitor) = isForcedSpeedOne;
 }
 
@@ -47,11 +47,11 @@ void FieldAiActArgument__InitCommonTask(
     || (task->fields.isForcedSpeedOne = this->fields._IsForcedSpeedOne_k__BackingField,
         (AiEnt_k__BackingField = this->fields._AiEnt_k__BackingField) == 0) )
   {
-    sub_1C71608(this, task);
+    sub_1C942F0(this, task);
   }
   infoText = AiEnt_k__BackingField->fields.infoText;
   task->fields.motionMessage = infoText;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&task->fields.motionMessage,
     (int32_t)infoText,
     (int32_t)method,
@@ -81,7 +81,7 @@ int32_t FieldAiActArgument__get_UniqueId(FieldAiActArgument_o *this, const Metho
 
   FieldData_k__BackingField = this->fields._FieldData_k__BackingField;
   if ( !FieldData_k__BackingField )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return FieldData_k__BackingField->fields.uniqueId;
 }
 
@@ -95,7 +95,7 @@ void FieldAiActArgument__set_FieldData(FieldAiActArgument_o *this, BattleFieldDa
   System_String_o *v7; // x7
 
   this->fields._FieldData_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._FieldData_k__BackingField,
     (int32_t)value,
     (int32_t)method,

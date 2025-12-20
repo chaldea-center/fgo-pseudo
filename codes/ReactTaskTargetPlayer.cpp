@@ -25,17 +25,17 @@ BattleServantData_array *ReactTaskTargetPlayer__TargetServants(
   System_String_o *v15; // x7
   System_Collections_Generic_IEnumerable_TSource__o *v16; // x0
 
-  if ( (byte_4CCA6FD & 1) == 0 )
+  if ( (byte_4D2FBA7 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
-    sub_1C713B0(&Method_System_Linq_Enumerable_Where_BattleServantData___);
-    sub_1C713B0(&System_Func_BattleServantData__bool__TypeInfo);
-    sub_1C713B0(&Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__);
-    this = (ReactTaskTargetPlayer_o *)sub_1C713B0(&ReactTaskTargetPlayer___c_TypeInfo);
-    byte_4CCA6FD = 1;
+    sub_1C94098(&Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+    sub_1C94098(&Method_System_Linq_Enumerable_Where_BattleServantData___);
+    sub_1C94098(&System_Func_BattleServantData__bool__TypeInfo);
+    sub_1C94098(&Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__);
+    this = (ReactTaskTargetPlayer_o *)sub_1C94098(&ReactTaskTargetPlayer___c_TypeInfo);
+    byte_4D2FBA7 = 1;
   }
   if ( !data )
-    sub_1C71608(this, data);
+    sub_1C942F0(this, data);
   FieldPlayerServantList = BattleData__getFieldPlayerServantList(data, 0);
   v5 = ReactTaskTargetPlayer___c_TypeInfo;
   v6 = (System_Collections_Generic_IEnumerable_TSource__o *)FieldPlayerServantList;
@@ -53,19 +53,19 @@ BattleServantData_array *ReactTaskTargetPlayer__TargetServants(
       v5 = ReactTaskTargetPlayer___c_TypeInfo;
     }
     v8 = (Il2CppObject *)v5->static_fields->__9;
-    _9__0_0 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_BattleServantData__bool__TypeInfo);
+    _9__0_0 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_BattleServantData__bool__TypeInfo);
     System_Func_object__bool____ctor(_9__0_0, v8, Method_ReactTaskTargetPlayer___c__TargetServants_b__0_0__, 0);
     static_fields = ReactTaskTargetPlayer___c_TypeInfo->static_fields;
     static_fields->__9__0_0 = (struct System_Func_BattleServantData__bool__o *)_9__0_0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v10, v11, v12, v13, v14, v15);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__0_0, (int32_t)_9__0_0, v10, v11, v12, v13, v14, v15);
   }
   v16 = System_Linq_Enumerable__Where_object_(
           v6,
           (System_Func_TSource__bool__o *)_9__0_0,
-          (const MethodInfo_3192108 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
+          (const MethodInfo_31E39C8 *)Method_System_Linq_Enumerable_Where_BattleServantData___);
   return (BattleServantData_array *)System_Linq_Enumerable__ToArray_object_(
                                       v16,
-                                      (const MethodInfo_318AFEC *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
+                                      (const MethodInfo_31DC8AC *)Method_System_Linq_Enumerable_ToArray_BattleServantData___);
 }
 
 
@@ -79,15 +79,15 @@ void ReactTaskTargetPlayer___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CCA6FE & 1) == 0 )
+  if ( (byte_4D2FBA8 & 1) == 0 )
   {
-    sub_1C713B0(&ReactTaskTargetPlayer___c_TypeInfo);
-    byte_4CCA6FE = 1;
+    sub_1C94098(&ReactTaskTargetPlayer___c_TypeInfo);
+    byte_4D2FBA8 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C715FC(ReactTaskTargetPlayer___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C942E4(ReactTaskTargetPlayer___c_TypeInfo);
   System_Object___ctor(v1, 0);
   ReactTaskTargetPlayer___c_TypeInfo->static_fields->__9 = (struct ReactTaskTargetPlayer___c_o *)v1;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)ReactTaskTargetPlayer___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -111,6 +111,6 @@ bool ReactTaskTargetPlayer___c___TargetServants_b__0_0(
         const MethodInfo *method)
 {
   if ( !svt || (this = (ReactTaskTargetPlayer___c_o *)BattleServantData__get_AiStateManager(svt, 0)) == 0 )
-    sub_1C71608(this, svt);
+    sub_1C942F0(this, svt);
   return (bool)this[3].monitor;
 }

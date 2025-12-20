@@ -20,7 +20,7 @@ void ScriptActionAdvPrefabActorGoNextState__OnStateEnter(
 
   owner = this->fields.owner;
   if ( !owner )
-    sub_1C71608(this, animator);
+    sub_1C942F0(this, animator);
   owner->fields._IsGoNext_k__BackingField = 1;
   v7 = *(_OWORD *)&stateInfo->fields.m_Name;
   v6 = *(_OWORD *)&stateInfo->fields.m_Length;
@@ -48,5 +48,5 @@ void ScriptActionAdvPrefabActorGoNextState__SetOwner(
   System_String_o *v7; // x7
 
   this->fields.owner = owner;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.owner, (int32_t)owner, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.owner, (int32_t)owner, (int32_t)method, v3, v4, v5, v6, v7);
 }

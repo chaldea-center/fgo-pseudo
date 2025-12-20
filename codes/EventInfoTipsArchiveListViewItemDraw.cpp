@@ -1,9 +1,9 @@
 void EventInfoTipsArchiveListViewItemDraw___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CC927D & 1) == 0 )
+  if ( (byte_4D2E604 & 1) == 0 )
   {
-    sub_1C713B0(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-    byte_4CC927D = 1;
+    sub_1C94098(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
+    byte_4D2E604 = 1;
   }
   EventInfoTipsArchiveListViewItemDraw_TypeInfo->static_fields->DEFAULT_FRAME_SIZE_HEIGHT = 200;
 }
@@ -36,10 +36,10 @@ UnityEngine_BoxCollider_o *EventInfoTipsArchiveListViewItemDraw__GetFrameCollide
   UnityEngine_BoxCollider_o *result; // x0
   struct EventInfoTipsArchiveListViewItemDrawSub_o *v7; // x8
 
-  if ( (byte_4CC927C & 1) == 0 )
+  if ( (byte_4D2E603 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC927C = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E603 = 1;
   }
   currentSubDrawObject = (UnityEngine_Object_o *)this->fields.currentSubDrawObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -50,7 +50,7 @@ UnityEngine_BoxCollider_o *EventInfoTipsArchiveListViewItemDraw__GetFrameCollide
   {
     v7 = this->fields.currentSubDrawObject;
     if ( !v7 )
-      sub_1C71608(0, v4);
+      sub_1C942F0(0, v4);
     return v7->fields.frameCollider;
   }
   return result;
@@ -66,11 +66,11 @@ int32_t EventInfoTipsArchiveListViewItemDraw__GetHeight(
   EventInfoTipsArchiveListViewItemDrawSub_o *v5; // x0
   EventInfoTipsArchiveListViewItemDraw_c *v7; // x0
 
-  if ( (byte_4CC927B & 1) == 0 )
+  if ( (byte_4D2E602 & 1) == 0 )
   {
-    sub_1C713B0(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC927B = 1;
+    sub_1C94098(&EventInfoTipsArchiveListViewItemDraw_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E602 = 1;
   }
   currentSubDrawObject = (UnityEngine_Object_o *)this->fields.currentSubDrawObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -79,7 +79,7 @@ int32_t EventInfoTipsArchiveListViewItemDraw__GetHeight(
   {
     v5 = this->fields.currentSubDrawObject;
     if ( !v5 )
-      sub_1C71608(0, v4);
+      sub_1C942F0(0, v4);
     return EventInfoTipsArchiveListViewItemDrawSub__GetHeight(v5, v4);
   }
   else
@@ -149,10 +149,10 @@ void EventInfoTipsArchiveListViewItemDraw__SetItem(
 
   v9 = id;
   v10 = this;
-  if ( (byte_4CC927A & 1) == 0 )
+  if ( (byte_4D2E601 & 1) == 0 )
   {
-    this = (EventInfoTipsArchiveListViewItemDraw_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC927A = 1;
+    this = (EventInfoTipsArchiveListViewItemDraw_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E601 = 1;
   }
   v10->fields.id = v9;
   v10->fields.dispMode = mode;
@@ -161,12 +161,12 @@ void EventInfoTipsArchiveListViewItemDraw__SetItem(
   StateData = EventInfoTipsArchiveListViewItem__GetStateData(item, v9, (const MethodInfo *)item);
   v10->fields.stateData = StateData;
   p_stateData = &v10->fields.stateData;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v10->fields.stateData, (int32_t)StateData, v13, v14, v15, v16, v17, v18);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v10->fields.stateData, (int32_t)StateData, v13, v14, v15, v16, v17, v18);
   *(_QWORD *)&id = v10->fields.stateData && v10->fields.stateData->fields.state & 1;
   this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.newIcon;
   if ( !this )
     goto LABEL_17;
-  ShiningIconComponent__Set_41298532((ShiningIconComponent_o *)this, id, 0);
+  ShiningIconComponent__Set_41861724((ShiningIconComponent_o *)this, id, 0);
   if ( !*p_stateData )
     goto LABEL_17;
   subDrawList = v10->fields.subDrawList;
@@ -227,10 +227,10 @@ void EventInfoTipsArchiveListViewItemDraw__SetItem(
     goto LABEL_17;
   if ( v22 >= LODWORD(v34->max_length) )
 LABEL_41:
-    sub_1C71610(this);
+    sub_1C942F8(this);
   v35 = (struct EventInfoTipsArchiveListViewItemDrawSub_o *)*((_QWORD *)&v34->obj.klass + v21);
   v10->fields.currentSubDrawObject = v35;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&v10->fields.currentSubDrawObject,
     (int32_t)v35,
     v28,
@@ -271,7 +271,7 @@ LABEL_28:
       }
     }
 LABEL_17:
-    sub_1C71608(this, *(_QWORD *)&id);
+    sub_1C942F0(this, *(_QWORD *)&id);
   }
 LABEL_36:
   this = (EventInfoTipsArchiveListViewItemDraw_o *)v10->fields.newIcon;

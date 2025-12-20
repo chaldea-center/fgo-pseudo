@@ -24,7 +24,7 @@ void NpcServantAiActArgument___ctor(
   v9 = this;
   BaseAiActArgument___ctor((BaseAiActArgument_o *)this, aiActEnt, aiEnt, fromProcState, (const MethodInfo *)npcAi);
   v9->fields._SvtData_k__BackingField = svtData;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&v9->fields._SvtData_k__BackingField,
     (int32_t)svtData,
     v10,
@@ -36,7 +36,7 @@ void NpcServantAiActArgument___ctor(
   v9->fields._NpcAi_k__BackingField = npcAi;
   v9 = (NpcServantAiActArgument_o *)((char *)v9 + 56);
   LOBYTE(v9[-1].fields._NpcAi_k__BackingField) = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v9, (int32_t)npcAi, v16, v17, v18, v19, v20, v21);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v9, (int32_t)npcAi, v16, v17, v18, v19, v20, v21);
 }
 
 
@@ -69,13 +69,13 @@ void NpcServantAiActArgument__InitCommonTask(
   BattleActionData_o *v26; // x21
   __int64 v27; // x0
 
-  if ( (byte_4CCA497 & 1) == 0 )
+  if ( (byte_4D2F95E & 1) == 0 )
   {
-    sub_1C713B0(&BattleActionData___TypeInfo);
-    byte_4CCA497 = 1;
+    sub_1C94098(&BattleActionData___TypeInfo);
+    byte_4D2F95E = 1;
   }
   ServantAiActArgument__InitCommonTask((ServantAiActArgument_o *)this, task, method);
-  v5 = sub_1C71458(BattleActionData___TypeInfo, 2);
+  v5 = sub_1C94140(BattleActionData___TypeInfo, 2);
   NpcAi_k__BackingField = this->fields._NpcAi_k__BackingField;
   v7 = (BattleActionData_array *)v5;
   LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
@@ -92,18 +92,18 @@ void NpcServantAiActArgument__InitCommonTask(
   v16 = (BattleActionData_o *)LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = sub_1C714EC(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1C941D4(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
     {
 LABEL_17:
-      v27 = sub_1C7162C(LoadNpcPreStepInAction);
-      sub_1C714D8(v27, 0);
+      v27 = sub_1C94314(LoadNpcPreStepInAction);
+      sub_1C941C0(v27, 0);
     }
   }
   if ( !LODWORD(v7->max_length) )
     goto LABEL_16;
   v7->m_Items[0] = v16;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v7->m_Items, (int32_t)v16, v10, v11, v12, v13, v14, v15);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v7->m_Items, (int32_t)v16, v10, v11, v12, v13, v14, v15);
   v17 = this->fields._NpcAi_k__BackingField;
   LoadNpcPreStepInAction = ((__int64 (__fastcall *)(NpcServantAiActArgument_o *, const MethodInfo *))this->klass->vtable._4_get_UniqueId.methodPtr)(
                              this,
@@ -115,21 +115,21 @@ LABEL_17:
         !v17) )
   {
 LABEL_15:
-    sub_1C71608(LoadNpcPreStepInAction, v9);
+    sub_1C942F0(LoadNpcPreStepInAction, v9);
   }
   LoadNpcPreStepInAction = (__int64)BattleLogicNpcAi__MakeStepInAction(v17, v19, LoadNpcPreStepInAction & 1, 0);
   v26 = (BattleActionData_o *)LoadNpcPreStepInAction;
   if ( LoadNpcPreStepInAction )
   {
-    LoadNpcPreStepInAction = sub_1C714EC(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
+    LoadNpcPreStepInAction = sub_1C941D4(LoadNpcPreStepInAction, v7->obj.klass->_1.element_class);
     if ( !LoadNpcPreStepInAction )
       goto LABEL_17;
   }
   if ( LODWORD(v7->max_length) <= 1 )
 LABEL_16:
-    sub_1C71610(LoadNpcPreStepInAction);
+    sub_1C942F8(LoadNpcPreStepInAction);
   v7->m_Items[1] = v26;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v7->m_Items[1], (int32_t)v26, v20, v21, v22, v23, v24, v25);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v7->m_Items[1], (int32_t)v26, v20, v21, v22, v23, v24, v25);
   if ( !task )
     goto LABEL_15;
   BattleLogicTask__SetInterruptAction((BattleLogicTask_o *)task, v7, 0);
@@ -154,7 +154,7 @@ void NpcServantAiActArgument__set_NpcAi(
   System_String_o *v7; // x7
 
   this->fields._NpcAi_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._NpcAi_k__BackingField,
     (int32_t)value,
     (int32_t)method,

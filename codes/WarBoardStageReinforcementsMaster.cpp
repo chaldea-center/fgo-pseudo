@@ -1,14 +1,14 @@
 void WarBoardStageReinforcementsMaster___ctor(WarBoardStageReinforcementsMaster_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC864A & 1) == 0 )
+  if ( (byte_4D2DAE0 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string___ctor__);
-    byte_4CC864A = 1;
+    sub_1C94098(&Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string___ctor__);
+    byte_4D2DAE0 = 1;
   }
   DataMasterBase_object__object__object____ctor(
     (DataMasterBase_TMaster__TEntity__PKType__o *)this,
     346,
-    (const MethodInfo_340B614 *)Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string___ctor__);
+    (const MethodInfo_345DC54 *)Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string___ctor__);
 }
 
 
@@ -21,16 +21,16 @@ WarBoardStageReinforcementsEntity_o *WarBoardStageReinforcementsMaster__GetEntit
 {
   Il2CppObject *PK; // x1
 
-  if ( (byte_4CC8648 & 1) == 0 )
+  if ( (byte_4D2DADE & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string__GetEntity__);
-    byte_4CC8648 = 1;
+    sub_1C94098(&Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string__GetEntity__);
+    byte_4D2DADE = 1;
   }
   PK = (Il2CppObject *)WarBoardStageReinforcementsEntity__CreatePK(warBoardStageId, id, *(const MethodInfo **)&id);
   return (WarBoardStageReinforcementsEntity_o *)DataMasterBase_object__object__object___GetEntity(
                                                   (DataMasterBase_TMaster__TEntity__PKType__o *)this,
                                                   PK,
-                                                  (const MethodInfo_340D938 *)Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string__GetEntity__);
+                                                  (const MethodInfo_345FF78 *)Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string__GetEntity__);
 }
 
 
@@ -44,10 +44,10 @@ bool WarBoardStageReinforcementsMaster__TryGetEntity(
 {
   Il2CppObject *PK; // x2
 
-  if ( (byte_4CC8649 & 1) == 0 )
+  if ( (byte_4D2DADF & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string__TryGetEntity__);
-    byte_4CC8649 = 1;
+    sub_1C94098(&Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string__TryGetEntity__);
+    byte_4D2DADF = 1;
   }
   PK = (Il2CppObject *)WarBoardStageReinforcementsEntity__CreatePK(
                          warBoardStageId,
@@ -57,7 +57,7 @@ bool WarBoardStageReinforcementsMaster__TryGetEntity(
            (DataMasterBase_TMaster__TEntity__PKType__o *)this,
            (Il2CppObject **)entity,
            PK,
-           (const MethodInfo_340D984 *)Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string__TryGetEntity__);
+           (const MethodInfo_345FFC4 *)Method_DataMasterBase_WarBoardStageReinforcementsMaster__WarBoardStageReinforcementsEntity__string__TryGetEntity__);
 }
 
 
@@ -109,33 +109,33 @@ bool WarBoardStageReinforcementsMaster__TryGetReleaseEntities(
   int64_t v46; // x6
   System_String_o *v47; // x7
 
-  if ( (byte_4CC864C & 1) == 0 )
+  if ( (byte_4D2DAE2 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_ObjectModel_Collection_WarBoardStageReinforcementsEntity__GetEnumerator__);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&System_Collections_Generic_IEnumerator_WarBoardStageReinforcementsEntity__TypeInfo);
-    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity__ToArray__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity___ctor__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity__get_Count__);
-    sub_1C713B0(&System_Collections_Generic_List_WarBoardStageReinforcementsEntity__TypeInfo);
-    byte_4CC864C = 1;
+    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_WarBoardStageReinforcementsEntity__GetEnumerator__);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&System_Collections_Generic_IEnumerator_WarBoardStageReinforcementsEntity__TypeInfo);
+    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity__ToArray__);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity___ctor__);
+    sub_1C94098(&Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity__get_Count__);
+    sub_1C94098(&System_Collections_Generic_List_WarBoardStageReinforcementsEntity__TypeInfo);
+    byte_4D2DAE2 = 1;
   }
   *reinforcementEntities = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)reinforcementEntities, 0, stageId, (int32_t)method, v4, v5, v6, v7);
-  v11 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_WarBoardStageReinforcementsEntity__TypeInfo);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)reinforcementEntities, 0, stageId, (int32_t)method, v4, v5, v6, v7);
+  v11 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_WarBoardStageReinforcementsEntity__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v11,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity___ctor__);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
     goto LABEL_36;
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_33A21E0 *)Method_System_Collections_ObjectModel_Collection_WarBoardStageReinforcementsEntity__GetEnumerator__);
+                 (const MethodInfo_33F413C *)Method_System_Collections_ObjectModel_Collection_WarBoardStageReinforcementsEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C71608(0, v14);
+    sub_1C942F0(0, v14);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -155,7 +155,7 @@ bool WarBoardStageReinforcementsMaster__TryGetReleaseEntities(
     else
     {
 LABEL_9:
-      v19 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v19 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
             Enumerator,
@@ -179,7 +179,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v23 = sub_1C47738(
+      v23 = sub_1C6A420(
               Enumerator,
               System_Collections_Generic_IEnumerator_WarBoardStageReinforcementsEntity__TypeInfo,
               0);
@@ -189,30 +189,30 @@ LABEL_16:
             *(_QWORD *)(v23 + 8));
     v32 = v24;
     if ( !v24 )
-      sub_1C71608(0, v25);
+      sub_1C942F0(0, v25);
     if ( *(_DWORD *)(v24 + 16) == stageId )
     {
       if ( !v11 )
-        sub_1C71608(v24, v25);
+        sub_1C942F0(v24, v25);
       items = v11->fields._items;
       v34 = Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity__Add__;
       ++v11->fields._version;
       if ( !items )
-        sub_1C71608(v24, v25);
+        sub_1C942F0(v24, v25);
       size = v11->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v11,
           (Il2CppObject *)v24,
-          *(const MethodInfo_3810718 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
+          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v34[4] + 192LL) + 112LL));
       }
       else
       {
         v36 = &items->obj.klass + size;
         v11->fields._size = size + 1;
         v36[4] = (Il2CppClass *)v32;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v36 + 4), v32, v26, v27, v28, v29, v30, v31);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v36 + 4), v32, v26, v27, v28, v29, v30, v31);
       }
     }
   }
@@ -233,19 +233,19 @@ LABEL_16:
   else
   {
 LABEL_29:
-    v40 = sub_1C47738(Enumerator, System_IDisposable_TypeInfo, 0);
+    v40 = sub_1C6A420(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   list = (System_Collections_ObjectModel_Collection_T__o *)(*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v40)(
                                                              Enumerator,
                                                              *(_QWORD *)(v40 + 8));
   if ( !v11 )
 LABEL_36:
-    sub_1C71608(list, v12);
+    sub_1C942F0(list, v12);
   v41 = System_Collections_Generic_List_object___ToArray(
           v11,
-          (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity__ToArray__);
+          (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_WarBoardStageReinforcementsEntity__ToArray__);
   *reinforcementEntities = (WarBoardStageReinforcementsEntity_array *)v41;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)reinforcementEntities, (int32_t)v41, v42, v43, v44, v45, v46, v47);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)reinforcementEntities, (int32_t)v41, v42, v43, v44, v45, v46, v47);
   return v11->fields._size > 0;
 }
 
@@ -285,24 +285,24 @@ bool WarBoardStageReinforcementsMaster__TryGetReleaseEntity(
   int32_t *v34; // x10
   __int64 v35; // x0
 
-  if ( (byte_4CC864B & 1) == 0 )
+  if ( (byte_4D2DAE1 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_ObjectModel_Collection_WarBoardStageReinforcementsEntity__GetEnumerator__);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&System_Collections_Generic_IEnumerator_WarBoardStageReinforcementsEntity__TypeInfo);
-    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
-    byte_4CC864B = 1;
+    sub_1C94098(&Method_System_Collections_ObjectModel_Collection_WarBoardStageReinforcementsEntity__GetEnumerator__);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&System_Collections_Generic_IEnumerator_WarBoardStageReinforcementsEntity__TypeInfo);
+    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
+    byte_4D2DAE1 = 1;
   }
   *reinforcementEntity = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)reinforcementEntity, 0, stageId, id, (System_String_o *)method, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)reinforcementEntity, 0, stageId, id, (System_String_o *)method, v5, v6, v7);
   list = (System_Collections_ObjectModel_Collection_T__o *)this->fields.list;
   if ( !list )
-    sub_1C71608(0, v12);
+    sub_1C942F0(0, v12);
   Enumerator = System_Collections_ObjectModel_Collection_object___GetEnumerator(
                  list,
-                 (const MethodInfo_33A21E0 *)Method_System_Collections_ObjectModel_Collection_WarBoardStageReinforcementsEntity__GetEnumerator__);
+                 (const MethodInfo_33F413C *)Method_System_Collections_ObjectModel_Collection_WarBoardStageReinforcementsEntity__GetEnumerator__);
   if ( !Enumerator )
-    sub_1C71608(0, v14);
+    sub_1C942F0(0, v14);
   while ( 1 )
   {
     klass = Enumerator->klass;
@@ -322,7 +322,7 @@ bool WarBoardStageReinforcementsMaster__TryGetReleaseEntity(
     else
     {
 LABEL_9:
-      v19 = sub_1C47738(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
+      v19 = sub_1C6A420(Enumerator, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v19)(
             Enumerator,
@@ -346,7 +346,7 @@ LABEL_9:
     else
     {
 LABEL_16:
-      v23 = sub_1C47738(
+      v23 = sub_1C6A420(
               Enumerator,
               System_Collections_Generic_IEnumerator_WarBoardStageReinforcementsEntity__TypeInfo,
               0);
@@ -355,11 +355,11 @@ LABEL_16:
                                                    Enumerator,
                                                    *(_QWORD *)(v23 + 8));
     if ( !v24 )
-      sub_1C71608(0, v25);
+      sub_1C942F0(0, v25);
     if ( v24->fields.warBoardStageId == stageId && v24->fields.id == id )
     {
       *reinforcementEntity = v24;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)reinforcementEntity, (int32_t)v24, v26, v27, v28, v29, v30, v31);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)reinforcementEntity, (int32_t)v24, v26, v27, v28, v29, v30, v31);
       break;
     }
   }
@@ -380,7 +380,7 @@ LABEL_16:
   else
   {
 LABEL_26:
-    v35 = sub_1C47738(Enumerator, System_IDisposable_TypeInfo, 0);
+    v35 = sub_1C6A420(Enumerator, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(System_Collections_Generic_IEnumerator_T__o *, _QWORD))v35)(Enumerator, *(_QWORD *)(v35 + 8));
   return *reinforcementEntity != 0;

@@ -21,15 +21,15 @@ void DebugBuffTypeSelectCellComponent__Set(
   System_Enum_o v15; // [xsp+8h] [xbp-48h] BYREF
   int v16; // [xsp+18h] [xbp-38h]
 
-  if ( (byte_4CC89CD & 1) == 0 )
+  if ( (byte_4D2DE6A & 1) == 0 )
   {
-    sub_1C713B0(&BuffList_TYPE_TypeInfo);
-    byte_4CC89CD = 1;
+    sub_1C94098(&BuffList_TYPE_TypeInfo);
+    byte_4D2DE6A = 1;
   }
   this->fields.callback = callback;
   p_callback = &this->fields.callback;
   *((_DWORD *)p_callback - 2) = buffType;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)p_callback,
     (int32_t)callback,
     (int32_t)callback,
@@ -44,7 +44,7 @@ void DebugBuffTypeSelectCellComponent__Set(
   v16 = *((_DWORD *)p_callback - 2);
   v13 = System_Enum__ToString(&v15, 0);
   if ( !v12 )
-    sub_1C71608(v13, v14);
+    sub_1C942F0(v13, v14);
   UILabel__set_text(v12, v13, 0);
 }
 

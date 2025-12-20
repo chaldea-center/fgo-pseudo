@@ -38,32 +38,32 @@ void FieldMotionManager___ctor(
   int64_t v38; // x6
   System_String_o *v39; // x7
 
-  if ( (byte_4CCAC69 & 1) == 0 )
+  if ( (byte_4D30139 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Array_Empty_int___);
-    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_BattleFieldMotionComponent___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC69 = 1;
+    sub_1C94098(&Method_System_Array_Empty_int___);
+    sub_1C94098(&Method_System_Linq_Enumerable_ToArray_BattleFieldMotionComponent___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30139 = 1;
   }
   v12 = Method_System_Array_Empty_int___;
   v13 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v13 )
   {
-    sub_1C474A0(Method_System_Array_Empty_int___);
+    sub_1C6A188(Method_System_Array_Empty_int___);
     v13 = v12[7];
   }
   v14 = *(_QWORD *)(v13 + 16);
   if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
-    v14 = sub_1C47444(inited);
+    v14 = sub_1C6A12C(inited);
   if ( !*(_DWORD *)(v14 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v14);
   v15 = *(_QWORD *)(v12[7] + 16LL);
   if ( (*(_BYTE *)(v15 + 309) & 1) == 0 )
-    v15 = sub_1C47444(inited);
+    v15 = sub_1C6A12C(inited);
   v16 = *(struct System_Int32_array ***)(v15 + 184);
   v17 = *v16;
   this->fields.baseMotionIds = *v16;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.baseMotionIds,
     (int32_t)v17,
     (int32_t)perf,
@@ -75,11 +75,11 @@ void FieldMotionManager___ctor(
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.fieldMotionArray = fieldMotions;
   p_fields = &this->fields;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)fieldMotions, v19, v20, v21, v22, v23, v24);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)fieldMotions, v19, v20, v21, v22, v23, v24);
   fieldMotionArray = this->fields.fieldMotionArray;
   if ( !fieldMotionArray )
 LABEL_23:
-    sub_1C71608(v25, v26);
+    sub_1C942F0(v25, v26);
   v28 = 4;
   while ( 1 )
   {
@@ -100,7 +100,7 @@ LABEL_23:
         goto LABEL_23;
       if ( v30 >= LODWORD(v32->max_length) )
 LABEL_25:
-        sub_1C71610(v25);
+        sub_1C942F8(v25);
       v25 = (BattleFieldMotionComponent_o *)*((_QWORD *)&v32->obj.klass + v28);
       if ( !v25 )
         goto LABEL_23;
@@ -113,9 +113,9 @@ LABEL_25:
   }
   v33 = System_Linq_Enumerable__ToArray_object_(
           (System_Collections_Generic_IEnumerable_TSource__o *)fieldMotions,
-          (const MethodInfo_318AFEC *)Method_System_Linq_Enumerable_ToArray_BattleFieldMotionComponent___);
+          (const MethodInfo_31DC8AC *)Method_System_Linq_Enumerable_ToArray_BattleFieldMotionComponent___);
   this->fields.retentionFieldMotionArray = (struct BattleFieldMotionComponent_array *)v33;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.retentionFieldMotionArray,
     (int32_t)v33,
     v34,
@@ -130,7 +130,7 @@ LABEL_25:
 Il2CppObject *FieldMotionManager__FindLastNotNullObject_object_(
         FieldMotionManager_o *this,
         System_Func_BattleFieldMotionComponent__T__o *getObjectFunc,
-        const MethodInfo_319FED8 *method)
+        const MethodInfo_31F1798 *method)
 {
   FieldMotionManager_o *v4; // x20
   struct BattleFieldMotionComponent_array *fieldMotionArray; // x8
@@ -143,14 +143,14 @@ Il2CppObject *FieldMotionManager__FindLastNotNullObject_object_(
   v4 = this;
   if ( !method->rgctx_data )
   {
-    this = (FieldMotionManager_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
+    this = (FieldMotionManager_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
     if ( !method->rgctx_data )
-      this = (FieldMotionManager_o *)sub_1C474A0();
+      this = (FieldMotionManager_o *)sub_1C6A188();
   }
   fieldMotionArray = v4->fields.fieldMotionArray;
   if ( !fieldMotionArray )
 LABEL_18:
-    sub_1C71608(this, getObjectFunc);
+    sub_1C942F0(this, getObjectFunc);
   v7 = LODWORD(fieldMotionArray->max_length) - 1;
   if ( (v7 & 0x80000000) != 0 )
     return 0;
@@ -158,7 +158,7 @@ LABEL_18:
   {
     if ( v7 >= LODWORD(fieldMotionArray->max_length) )
 LABEL_21:
-      sub_1C71610(this);
+      sub_1C942F8(this);
     v8 = v7;
     v9 = (UnityEngine_Object_o *)fieldMotionArray->m_Items[v7];
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -199,19 +199,18 @@ System_Int32_array *FieldMotionManager__GetEnableFieldMotionIds(
         BattleData_o *data,
         const MethodInfo *method)
 {
-  FieldMotionManager_o *v6; // x19
+  System_Collections_Generic_IEnumerable_TSource__o *OverwriteMotionIds_k__BackingField; // x0
+  System_Collections_Generic_IEnumerable_TSource__o *v8; // x0
   long double inited; // q0
-  _QWORD *v8; // x19
-  __int64 v9; // x8
-  __int64 v10; // x0
-  __int64 v11; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *WaveFieldMotionIds; // x0
-  System_Collections_Generic_IEnumerable_TSource__o *v14; // x0
+  _QWORD *v11; // x19
+  __int64 v12; // x8
+  __int64 v13; // x0
+  __int64 v14; // x0
   System_Collections_Generic_IEnumerable_T__o *v15; // x21
   System_Collections_Generic_List_int__o *v16; // x19
   System_Collections_Generic_IEnumerable_TSource__o *CurWaveEnemyDeckMotionIds; // x0
-  FieldMotionManager_c *klass; // x8
-  FieldMotionManager_o *v19; // x20
+  System_Collections_Generic_IEnumerable_TSource__c *klass; // x8
+  System_Collections_Generic_IEnumerable_TSource__o *v19; // x20
   __int64 v20; // x9
   int32_t *p_offset; // x10
   __int64 v22; // x0
@@ -238,63 +237,66 @@ System_Int32_array *FieldMotionManager__GetEnableFieldMotionIds(
   int *v43; // x10
   __int64 v44; // x0
 
-  v6 = this;
-  if ( (byte_4CCAC6B & 1) == 0 )
+  if ( (byte_4D3013B & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Array_Empty_int___);
-    sub_1C713B0(&Method_System_Linq_Enumerable_Reverse_int___);
-    sub_1C713B0(&Method_System_Linq_Enumerable_ToArray_int___);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&System_Collections_Generic_IEnumerable_int__TypeInfo);
-    sub_1C713B0(&System_Collections_Generic_IEnumerator_int__TypeInfo);
-    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_int__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_int__Contains__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_int__Remove__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_int__ToArray__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_int___ctor___78587544);
-    this = (FieldMotionManager_o *)sub_1C713B0(&System_Collections_Generic_List_int__TypeInfo);
-    byte_4CCAC6B = 1;
+    sub_1C94098(&Method_System_Array_Empty_int___);
+    sub_1C94098(&Method_System_Linq_Enumerable_Reverse_int___);
+    sub_1C94098(&Method_System_Linq_Enumerable_ToArray_int___);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&System_Collections_Generic_IEnumerable_int__TypeInfo);
+    sub_1C94098(&System_Collections_Generic_IEnumerator_int__TypeInfo);
+    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_int__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_int__Contains__);
+    sub_1C94098(&Method_System_Collections_Generic_List_int__Remove__);
+    sub_1C94098(&Method_System_Collections_Generic_List_int__ToArray__);
+    sub_1C94098(&Method_System_Collections_Generic_List_int___ctor___78995296);
+    sub_1C94098(&System_Collections_Generic_List_int__TypeInfo);
+    byte_4D3013B = 1;
   }
+  OverwriteMotionIds_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields._OverwriteMotionIds_k__BackingField;
+  if ( OverwriteMotionIds_k__BackingField )
+    goto LABEL_4;
   if ( !stageEnt )
-    goto LABEL_55;
+    goto LABEL_56;
   if ( !StageEntity__IsDisableFieldMotion(stageEnt, 0) )
   {
-    WaveFieldMotionIds = (System_Collections_Generic_IEnumerable_TSource__o *)StageEntity__GetWaveFieldMotionIds(
-                                                                                stageEnt,
-                                                                                0,
-                                                                                0);
-    if ( WaveFieldMotionIds )
+    OverwriteMotionIds_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)StageEntity__GetWaveFieldMotionIds(
+                                                                                                stageEnt,
+                                                                                                0,
+                                                                                                0);
+    if ( OverwriteMotionIds_k__BackingField )
     {
-      v14 = System_Linq_Enumerable__Reverse_int_(
-              WaveFieldMotionIds,
-              (const MethodInfo_317B9D0 *)Method_System_Linq_Enumerable_Reverse_int___);
+LABEL_4:
+      v8 = System_Linq_Enumerable__Reverse_int_(
+             OverwriteMotionIds_k__BackingField,
+             (const MethodInfo_31CD198 *)Method_System_Linq_Enumerable_Reverse_int___);
       return System_Linq_Enumerable__ToArray_int_(
-               v14,
-               (const MethodInfo_318AE54 *)Method_System_Linq_Enumerable_ToArray_int___);
+               v8,
+               (const MethodInfo_31DC714 *)Method_System_Linq_Enumerable_ToArray_int___);
     }
     v15 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Reverse_int_(
-                                                           (System_Collections_Generic_IEnumerable_TSource__o *)v6->fields.baseMotionIds,
-                                                           (const MethodInfo_317B9D0 *)Method_System_Linq_Enumerable_Reverse_int___);
-    v16 = (System_Collections_Generic_List_int__o *)sub_1C715FC(System_Collections_Generic_List_int__TypeInfo);
-    System_Collections_Generic_List_int____ctor_58666952(
+                                                           (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.baseMotionIds,
+                                                           (const MethodInfo_31CD198 *)Method_System_Linq_Enumerable_Reverse_int___);
+    v16 = (System_Collections_Generic_List_int__o *)sub_1C942E4(System_Collections_Generic_List_int__TypeInfo);
+    System_Collections_Generic_List_int____ctor_59037412(
       v16,
       v15,
-      (const MethodInfo_37F2FC8 *)Method_System_Collections_Generic_List_int___ctor___78587544);
+      (const MethodInfo_384D6E4 *)Method_System_Collections_Generic_List_int___ctor___78995296);
     if ( data )
     {
       CurWaveEnemyDeckMotionIds = (System_Collections_Generic_IEnumerable_TSource__o *)BattleData__GetCurWaveEnemyDeckMotionIds(
                                                                                          data,
                                                                                          0);
-      this = (FieldMotionManager_o *)System_Linq_Enumerable__Reverse_int_(
-                                       CurWaveEnemyDeckMotionIds,
-                                       (const MethodInfo_317B9D0 *)Method_System_Linq_Enumerable_Reverse_int___);
-      if ( this )
+      OverwriteMotionIds_k__BackingField = System_Linq_Enumerable__Reverse_int_(
+                                             CurWaveEnemyDeckMotionIds,
+                                             (const MethodInfo_31CD198 *)Method_System_Linq_Enumerable_Reverse_int___);
+      if ( OverwriteMotionIds_k__BackingField )
       {
-        klass = this->klass;
-        v19 = this;
-        v20 = *(unsigned __int16 *)&this->klass->_2.rank;
-        if ( *(_WORD *)&this->klass->_2.rank )
+        klass = OverwriteMotionIds_k__BackingField->klass;
+        v19 = OverwriteMotionIds_k__BackingField;
+        v20 = *(unsigned __int16 *)&OverwriteMotionIds_k__BackingField->klass->_2.rank;
+        if ( *(_WORD *)&OverwriteMotionIds_k__BackingField->klass->_2.rank )
         {
           p_offset = &klass->_1.interfaceOffsets->offset;
           while ( *((System_Collections_Generic_IEnumerable_int__c **)p_offset - 1) != System_Collections_Generic_IEnumerable_int__TypeInfo )
@@ -302,18 +304,20 @@ System_Int32_array *FieldMotionManager__GetEnableFieldMotionIds(
             --v20;
             p_offset += 4;
             if ( !v20 )
-              goto LABEL_22;
+              goto LABEL_23;
           }
-          v22 = (__int64)&klass->vtable + 16 * *p_offset;
+          v22 = (__int64)&klass->vtable[*p_offset];
         }
         else
         {
-LABEL_22:
-          v22 = sub_1C47738(this, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
+LABEL_23:
+          v22 = sub_1C6A420(OverwriteMotionIds_k__BackingField, System_Collections_Generic_IEnumerable_int__TypeInfo, 0);
         }
-        v24 = (*(__int64 (__fastcall **)(FieldMotionManager_o *, _QWORD))v22)(v19, *(_QWORD *)(v22 + 8));
+        v24 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TSource__o *, _QWORD))v22)(
+                v19,
+                *(_QWORD *)(v22 + 8));
         if ( !v24 )
-          sub_1C71608(0, v23);
+          sub_1C942F0(0, v23);
         while ( 1 )
         {
           v25 = *(_QWORD *)v24;
@@ -326,14 +330,14 @@ LABEL_22:
               --v26;
               v27 += 4;
               if ( !v26 )
-                goto LABEL_29;
+                goto LABEL_30;
             }
             v28 = v25 + 16LL * *v27 + 312;
           }
           else
           {
-LABEL_29:
-            v28 = sub_1C47738(v24, System_Collections_IEnumerator_TypeInfo, 0);
+LABEL_30:
+            v28 = sub_1C6A420(v24, System_Collections_IEnumerator_TypeInfo, 0);
           }
           if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v24, *(_QWORD *)(v28 + 8)) & 1) == 0 )
             break;
@@ -347,40 +351,40 @@ LABEL_29:
               --v30;
               v31 += 4;
               if ( !v30 )
-                goto LABEL_36;
+                goto LABEL_37;
             }
             v32 = v29 + 16LL * *v31 + 312;
           }
           else
           {
-LABEL_36:
-            v32 = sub_1C47738(v24, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
+LABEL_37:
+            v32 = sub_1C6A420(v24, System_Collections_Generic_IEnumerator_int__TypeInfo, 0);
           }
           v33 = (*(__int64 (__fastcall **)(__int64, _QWORD))v32)(v24, *(_QWORD *)(v32 + 8));
           if ( !v16 )
-            sub_1C71608(v33, v34);
+            sub_1C942F0(v33, v34);
           v35 = v33;
           v36 = System_Collections_Generic_List_int___Contains(
                   v16,
                   v33,
-                  (const MethodInfo_37F3A6C *)Method_System_Collections_Generic_List_int__Contains__);
+                  (const MethodInfo_384E188 *)Method_System_Collections_Generic_List_int__Contains__);
           if ( v36 )
             v36 = System_Collections_Generic_List_int___Remove(
                     v16,
                     v35,
-                    (const MethodInfo_37F4BF0 *)Method_System_Collections_Generic_List_int__Remove__);
+                    (const MethodInfo_384F30C *)Method_System_Collections_Generic_List_int__Remove__);
           items = v16->fields._items;
           v39 = Method_System_Collections_Generic_List_int__Add__;
           ++v16->fields._version;
           if ( !items )
-            sub_1C71608(v36, v37);
+            sub_1C942F0(v36, v37);
           size = v16->fields._size;
           if ( (unsigned int)size >= LODWORD(items->max_length) )
           {
             System_Collections_Generic_List_int___AddWithResize(
               v16,
               v35,
-              *(const MethodInfo_37F36F4 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
+              *(const MethodInfo_384DE10 **)(*(_QWORD *)(v39[4] + 192LL) + 112LL));
           }
           else
           {
@@ -398,48 +402,50 @@ LABEL_36:
             --v42;
             v43 += 4;
             if ( !v42 )
-              goto LABEL_49;
+              goto LABEL_50;
           }
           v44 = v41 + 16LL * *v43 + 312;
         }
         else
         {
-LABEL_49:
-          v44 = sub_1C47738(v24, System_IDisposable_TypeInfo, 0);
+LABEL_50:
+          v44 = sub_1C6A420(v24, System_IDisposable_TypeInfo, 0);
         }
-        this = (FieldMotionManager_o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v44)(v24, *(_QWORD *)(v44 + 8));
+        OverwriteMotionIds_k__BackingField = (System_Collections_Generic_IEnumerable_TSource__o *)(*(__int64 (__fastcall **)(__int64, _QWORD))v44)(
+                                                                                                    v24,
+                                                                                                    *(_QWORD *)(v44 + 8));
         if ( v16 )
           return System_Collections_Generic_List_int___ToArray(
                    v16,
-                   (const MethodInfo_37F51AC *)Method_System_Collections_Generic_List_int__ToArray__);
+                   (const MethodInfo_384F8C8 *)Method_System_Collections_Generic_List_int__ToArray__);
       }
     }
-LABEL_55:
-    sub_1C71608(this, stageEnt);
+LABEL_56:
+    sub_1C942F0(OverwriteMotionIds_k__BackingField, stageEnt);
   }
-  v8 = Method_System_Array_Empty_int___;
-  v9 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
-  if ( !v9 )
+  v11 = Method_System_Array_Empty_int___;
+  v12 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
+  if ( !v12 )
   {
-    sub_1C474A0(Method_System_Array_Empty_int___);
-    v9 = v8[7];
+    sub_1C6A188(Method_System_Array_Empty_int___);
+    v12 = v11[7];
   }
-  v10 = *(_QWORD *)(v9 + 16);
-  if ( (*(_BYTE *)(v10 + 309) & 1) == 0 )
-    v10 = sub_1C47444(inited);
-  if ( !*(_DWORD *)(v10 + 224) )
-    inited = j_il2cpp_runtime_class_init_0(v10);
-  v11 = *(_QWORD *)(v8[7] + 16LL);
-  if ( (*(_BYTE *)(v11 + 309) & 1) == 0 )
-    v11 = sub_1C47444(inited);
-  return **(System_Int32_array ***)(v11 + 184);
+  v13 = *(_QWORD *)(v12 + 16);
+  if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
+    v13 = sub_1C6A12C(inited);
+  if ( !*(_DWORD *)(v13 + 224) )
+    inited = j_il2cpp_runtime_class_init_0(v13);
+  v14 = *(_QWORD *)(v11[7] + 16LL);
+  if ( (*(_BYTE *)(v14 + 309) & 1) == 0 )
+    v14 = sub_1C6A12C(inited);
+  return **(System_Int32_array ***)(v14 + 184);
 }
 
 
 UnityEngine_GameObject_o *FieldMotionManager__GetEnemyStage(FieldMotionManager_o *this, const MethodInfo *method)
 {
   FieldMotionManager___c_c *v3; // x0
-  System_Func_object__object__o *_9__15_0; // x20
+  System_Func_object__object__o *_9__20_0; // x20
   Il2CppObject *v5; // x21
   struct FieldMotionManager___c_StaticFields *static_fields; // x0
   int32_t v7; // w2
@@ -450,14 +456,14 @@ UnityEngine_GameObject_o *FieldMotionManager__GetEnemyStage(FieldMotionManager_o
   System_String_o *v12; // x7
   Il2CppObject *LastNotNullObject_object; // x19
 
-  if ( (byte_4CCAC6F & 1) == 0 )
+  if ( (byte_4D3013F & 1) == 0 )
   {
-    sub_1C713B0(&Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
-    sub_1C713B0(&System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_FieldMotionManager___c__GetEnemyStage_b__15_0__);
-    sub_1C713B0(&FieldMotionManager___c_TypeInfo);
-    byte_4CCAC6F = 1;
+    sub_1C94098(&Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
+    sub_1C94098(&System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_FieldMotionManager___c__GetEnemyStage_b__20_0__);
+    sub_1C94098(&FieldMotionManager___c_TypeInfo);
+    byte_4D3013F = 1;
   }
   v3 = FieldMotionManager___c_TypeInfo;
   if ( !FieldMotionManager___c_TypeInfo->_2.cctor_finished )
@@ -465,8 +471,8 @@ UnityEngine_GameObject_o *FieldMotionManager__GetEnemyStage(FieldMotionManager_o
     j_il2cpp_runtime_class_init_0(FieldMotionManager___c_TypeInfo);
     v3 = FieldMotionManager___c_TypeInfo;
   }
-  _9__15_0 = (System_Func_object__object__o *)v3->static_fields->__9__15_0;
-  if ( !_9__15_0 )
+  _9__20_0 = (System_Func_object__object__o *)v3->static_fields->__9__20_0;
+  if ( !_9__20_0 )
   {
     if ( !v3->_2.cctor_finished )
     {
@@ -474,18 +480,18 @@ UnityEngine_GameObject_o *FieldMotionManager__GetEnemyStage(FieldMotionManager_o
       v3 = FieldMotionManager___c_TypeInfo;
     }
     v5 = (Il2CppObject *)v3->static_fields->__9;
-    _9__15_0 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
-    System_Func_object__object____ctor(_9__15_0, v5, Method_FieldMotionManager___c__GetEnemyStage_b__15_0__, 0);
+    _9__20_0 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
+    System_Func_object__object____ctor(_9__20_0, v5, Method_FieldMotionManager___c__GetEnemyStage_b__20_0__, 0);
     static_fields = FieldMotionManager___c_TypeInfo->static_fields;
-    static_fields->__9__15_0 = (struct System_Func_BattleFieldMotionComponent__GameObject__o *)_9__15_0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__15_0, (int32_t)_9__15_0, v7, v8, v9, v10, v11, v12);
+    static_fields->__9__20_0 = (struct System_Func_BattleFieldMotionComponent__GameObject__o *)_9__20_0;
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__20_0, (int32_t)_9__20_0, v7, v8, v9, v10, v11, v12);
   }
   if ( !this )
-    sub_1C71608(v3, method);
+    sub_1C942F0(v3, method);
   LastNotNullObject_object = FieldMotionManager__FindLastNotNullObject_object_(
                                this,
-                               (System_Func_BattleFieldMotionComponent__T__o *)_9__15_0,
-                               (const MethodInfo_319FED8 *)Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
+                               (System_Func_BattleFieldMotionComponent__T__o *)_9__20_0,
+                               (const MethodInfo_31F1798 *)Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)LastNotNullObject_object, 0, 0) )
@@ -520,31 +526,31 @@ UnityEngine_GameObject_o *FieldMotionManager__GetGameObject(
   System_Func_object__object__o *v14; // x20
   Il2CppObject *LastNotNullObject_object; // x19
 
-  if ( (byte_4CCAC70 & 1) == 0 )
+  if ( (byte_4D30140 & 1) == 0 )
   {
-    sub_1C713B0(&Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
-    sub_1C713B0(&System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_FieldMotionManager___c__DisplayClass16_0__GetGameObject_b__0__);
-    sub_1C713B0(&FieldMotionManager___c__DisplayClass16_0_TypeInfo);
-    byte_4CCAC70 = 1;
+    sub_1C94098(&Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
+    sub_1C94098(&System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_FieldMotionManager___c__DisplayClass21_0__GetGameObject_b__0__);
+    sub_1C94098(&FieldMotionManager___c__DisplayClass21_0_TypeInfo);
+    byte_4D30140 = 1;
   }
-  v5 = sub_1C715FC(FieldMotionManager___c__DisplayClass16_0_TypeInfo);
-  FieldMotionManager___c__DisplayClass16_0___ctor((FieldMotionManager___c__DisplayClass16_0_o *)v5, 0);
+  v5 = sub_1C942E4(FieldMotionManager___c__DisplayClass21_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   *(_QWORD *)(v5 + 16) = name;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)name, v8, v9, v10, v11, v12, v13);
-  v14 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v5 + 16), (int32_t)name, v8, v9, v10, v11, v12, v13);
+  v14 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
   System_Func_object__object____ctor(
     v14,
     (Il2CppObject *)v5,
-    Method_FieldMotionManager___c__DisplayClass16_0__GetGameObject_b__0__,
+    Method_FieldMotionManager___c__DisplayClass21_0__GetGameObject_b__0__,
     0);
   LastNotNullObject_object = FieldMotionManager__FindLastNotNullObject_object_(
                                this,
                                (System_Func_BattleFieldMotionComponent__T__o *)v14,
-                               (const MethodInfo_319FED8 *)Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
+                               (const MethodInfo_31F1798 *)Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)LastNotNullObject_object, 0, 0) )
@@ -557,7 +563,7 @@ UnityEngine_GameObject_o *FieldMotionManager__GetGameObject(
 UnityEngine_GameObject_o *FieldMotionManager__GetPlayerStage(FieldMotionManager_o *this, const MethodInfo *method)
 {
   FieldMotionManager___c_c *v3; // x0
-  System_Func_object__object__o *_9__14_0; // x20
+  System_Func_object__object__o *_9__19_0; // x20
   Il2CppObject *v5; // x21
   struct FieldMotionManager___c_StaticFields *static_fields; // x0
   int32_t v7; // w2
@@ -568,14 +574,14 @@ UnityEngine_GameObject_o *FieldMotionManager__GetPlayerStage(FieldMotionManager_
   System_String_o *v12; // x7
   Il2CppObject *LastNotNullObject_object; // x19
 
-  if ( (byte_4CCAC6E & 1) == 0 )
+  if ( (byte_4D3013E & 1) == 0 )
   {
-    sub_1C713B0(&Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
-    sub_1C713B0(&System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_FieldMotionManager___c__GetPlayerStage_b__14_0__);
-    sub_1C713B0(&FieldMotionManager___c_TypeInfo);
-    byte_4CCAC6E = 1;
+    sub_1C94098(&Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
+    sub_1C94098(&System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_FieldMotionManager___c__GetPlayerStage_b__19_0__);
+    sub_1C94098(&FieldMotionManager___c_TypeInfo);
+    byte_4D3013E = 1;
   }
   v3 = FieldMotionManager___c_TypeInfo;
   if ( !FieldMotionManager___c_TypeInfo->_2.cctor_finished )
@@ -583,8 +589,8 @@ UnityEngine_GameObject_o *FieldMotionManager__GetPlayerStage(FieldMotionManager_
     j_il2cpp_runtime_class_init_0(FieldMotionManager___c_TypeInfo);
     v3 = FieldMotionManager___c_TypeInfo;
   }
-  _9__14_0 = (System_Func_object__object__o *)v3->static_fields->__9__14_0;
-  if ( !_9__14_0 )
+  _9__19_0 = (System_Func_object__object__o *)v3->static_fields->__9__19_0;
+  if ( !_9__19_0 )
   {
     if ( !v3->_2.cctor_finished )
     {
@@ -592,18 +598,18 @@ UnityEngine_GameObject_o *FieldMotionManager__GetPlayerStage(FieldMotionManager_
       v3 = FieldMotionManager___c_TypeInfo;
     }
     v5 = (Il2CppObject *)v3->static_fields->__9;
-    _9__14_0 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
-    System_Func_object__object____ctor(_9__14_0, v5, Method_FieldMotionManager___c__GetPlayerStage_b__14_0__, 0);
+    _9__19_0 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
+    System_Func_object__object____ctor(_9__19_0, v5, Method_FieldMotionManager___c__GetPlayerStage_b__19_0__, 0);
     static_fields = FieldMotionManager___c_TypeInfo->static_fields;
-    static_fields->__9__14_0 = (struct System_Func_BattleFieldMotionComponent__GameObject__o *)_9__14_0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->__9__14_0, (int32_t)_9__14_0, v7, v8, v9, v10, v11, v12);
+    static_fields->__9__19_0 = (struct System_Func_BattleFieldMotionComponent__GameObject__o *)_9__19_0;
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->__9__19_0, (int32_t)_9__19_0, v7, v8, v9, v10, v11, v12);
   }
   if ( !this )
-    sub_1C71608(v3, method);
+    sub_1C942F0(v3, method);
   LastNotNullObject_object = FieldMotionManager__FindLastNotNullObject_object_(
                                this,
-                               (System_Func_BattleFieldMotionComponent__T__o *)_9__14_0,
-                               (const MethodInfo_319FED8 *)Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
+                               (System_Func_BattleFieldMotionComponent__T__o *)_9__19_0,
+                               (const MethodInfo_31F1798 *)Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)LastNotNullObject_object, 0, 0) )
@@ -619,37 +625,37 @@ UnityEngine_Transform_o *FieldMotionManager__GetTargetTransform(
         int32_t index,
         const MethodInfo *method)
 {
-  FieldMotionManager___c__DisplayClass18_0_o *v7; // x22
+  __int64 v7; // x22
   __int64 v8; // x0
   __int64 v9; // x1
   System_Func_object__object__o *v10; // x20
   Il2CppObject *LastNotNullObject_object; // x19
 
-  if ( (byte_4CCAC72 & 1) == 0 )
+  if ( (byte_4D30142 & 1) == 0 )
   {
-    sub_1C713B0(&Method_FieldMotionManager_FindLastNotNullObject_Transform___);
-    sub_1C713B0(&System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_FieldMotionManager___c__DisplayClass18_0__GetTargetTransform_b__0__);
-    sub_1C713B0(&FieldMotionManager___c__DisplayClass18_0_TypeInfo);
-    byte_4CCAC72 = 1;
+    sub_1C94098(&Method_FieldMotionManager_FindLastNotNullObject_Transform___);
+    sub_1C94098(&System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_FieldMotionManager___c__DisplayClass23_0__GetTargetTransform_b__0__);
+    sub_1C94098(&FieldMotionManager___c__DisplayClass23_0_TypeInfo);
+    byte_4D30142 = 1;
   }
-  v7 = (FieldMotionManager___c__DisplayClass18_0_o *)sub_1C715FC(FieldMotionManager___c__DisplayClass18_0_TypeInfo);
-  FieldMotionManager___c__DisplayClass18_0___ctor(v7, 0);
+  v7 = sub_1C942E4(FieldMotionManager___c__DisplayClass23_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
-    sub_1C71608(v8, v9);
-  v7->fields.type = type;
-  v7->fields.index = index;
-  v10 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
+    sub_1C942F0(v8, v9);
+  *(_DWORD *)(v7 + 16) = type;
+  *(_DWORD *)(v7 + 20) = index;
+  v10 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
   System_Func_object__object____ctor(
     v10,
     (Il2CppObject *)v7,
-    Method_FieldMotionManager___c__DisplayClass18_0__GetTargetTransform_b__0__,
+    Method_FieldMotionManager___c__DisplayClass23_0__GetTargetTransform_b__0__,
     0);
   LastNotNullObject_object = FieldMotionManager__FindLastNotNullObject_object_(
                                this,
                                (System_Func_BattleFieldMotionComponent__T__o *)v10,
-                               (const MethodInfo_319FED8 *)Method_FieldMotionManager_FindLastNotNullObject_Transform___);
+                               (const MethodInfo_31F1798 *)Method_FieldMotionManager_FindLastNotNullObject_Transform___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)LastNotNullObject_object, 0, 0) )
@@ -665,13 +671,13 @@ UnityEngine_Transform_o *FieldMotionManager__GetTransform(
         int32_t index,
         const MethodInfo *method)
 {
-  FieldMotionManager___c__DisplayClass17_0_o *v7; // x22
+  __int64 v7; // x22
   FieldMotionManager___c_c *v8; // x0
   __int64 v9; // x1
   System_Func_object__object__o *v10; // x0
   intptr_t *v11; // x8
   UnityEngine_Transform_o *result; // x0
-  System_Func_object__object__o *_9__17_1; // x20
+  System_Func_object__object__o *_9__22_1; // x20
   Il2CppObject *v14; // x21
   int32_t v15; // w2
   int32_t v16; // w3
@@ -681,35 +687,35 @@ UnityEngine_Transform_o *FieldMotionManager__GetTransform(
   System_String_o *v20; // x7
   int32_t v21; // w1
   struct FieldMotionManager___c_StaticFields *static_fields; // x0
-  GrandQuestFolderBoardItem_o *p__9__17_1; // x0
+  GrandQuestFolderBoardItem_o *p__9__22_1; // x0
   Il2CppObject *v24; // x21
   struct FieldMotionManager___c_StaticFields *v25; // x0
 
-  if ( (byte_4CCAC71 & 1) == 0 )
+  if ( (byte_4D30141 & 1) == 0 )
   {
-    sub_1C713B0(&Method_FieldMotionManager_FindLastNotNullObject_Transform___);
-    sub_1C713B0(&System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
-    sub_1C713B0(&Method_FieldMotionManager___c__GetTransform_b__17_1__);
-    sub_1C713B0(&Method_FieldMotionManager___c__GetTransform_b__17_3__);
-    sub_1C713B0(&Method_FieldMotionManager___c__DisplayClass17_0__GetTransform_b__0__);
-    sub_1C713B0(&Method_FieldMotionManager___c__DisplayClass17_0__GetTransform_b__2__);
-    sub_1C713B0(&Method_FieldMotionManager___c__DisplayClass17_0__GetTransform_b__4__);
-    sub_1C713B0(&Method_FieldMotionManager___c__DisplayClass17_0__GetTransform_b__5__);
-    sub_1C713B0(&FieldMotionManager___c__DisplayClass17_0_TypeInfo);
-    sub_1C713B0(&FieldMotionManager___c_TypeInfo);
-    byte_4CCAC71 = 1;
+    sub_1C94098(&Method_FieldMotionManager_FindLastNotNullObject_Transform___);
+    sub_1C94098(&System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
+    sub_1C94098(&Method_FieldMotionManager___c__GetTransform_b__22_1__);
+    sub_1C94098(&Method_FieldMotionManager___c__GetTransform_b__22_3__);
+    sub_1C94098(&Method_FieldMotionManager___c__DisplayClass22_0__GetTransform_b__0__);
+    sub_1C94098(&Method_FieldMotionManager___c__DisplayClass22_0__GetTransform_b__2__);
+    sub_1C94098(&Method_FieldMotionManager___c__DisplayClass22_0__GetTransform_b__4__);
+    sub_1C94098(&Method_FieldMotionManager___c__DisplayClass22_0__GetTransform_b__5__);
+    sub_1C94098(&FieldMotionManager___c__DisplayClass22_0_TypeInfo);
+    sub_1C94098(&FieldMotionManager___c_TypeInfo);
+    byte_4D30141 = 1;
   }
-  v7 = (FieldMotionManager___c__DisplayClass17_0_o *)sub_1C715FC(FieldMotionManager___c__DisplayClass17_0_TypeInfo);
-  FieldMotionManager___c__DisplayClass17_0___ctor(v7, 0);
+  v7 = sub_1C942E4(FieldMotionManager___c__DisplayClass22_0_TypeInfo);
+  System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
 LABEL_22:
-    sub_1C71608(v8, v9);
-  v7->fields.index = index;
+    sub_1C942F0(v8, v9);
+  *(_DWORD *)(v7 + 16) = index;
   switch ( type )
   {
     case 0:
-      v10 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
-      v11 = &Method_FieldMotionManager___c__DisplayClass17_0__GetTransform_b__0__;
+      v10 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
+      v11 = &Method_FieldMotionManager___c__DisplayClass22_0__GetTransform_b__0__;
       goto LABEL_25;
     case 1:
       v8 = FieldMotionManager___c_TypeInfo;
@@ -718,8 +724,8 @@ LABEL_22:
         j_il2cpp_runtime_class_init_0(FieldMotionManager___c_TypeInfo);
         v8 = FieldMotionManager___c_TypeInfo;
       }
-      _9__17_1 = (System_Func_object__object__o *)v8->static_fields->__9__17_1;
-      if ( _9__17_1 )
+      _9__22_1 = (System_Func_object__object__o *)v8->static_fields->__9__22_1;
+      if ( _9__22_1 )
         goto LABEL_21;
       if ( !v8->_2.cctor_finished )
       {
@@ -727,16 +733,16 @@ LABEL_22:
         v8 = FieldMotionManager___c_TypeInfo;
       }
       v14 = (Il2CppObject *)v8->static_fields->__9;
-      _9__17_1 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
-      System_Func_object__object____ctor(_9__17_1, v14, Method_FieldMotionManager___c__GetTransform_b__17_1__, 0);
-      v21 = (int)_9__17_1;
+      _9__22_1 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
+      System_Func_object__object____ctor(_9__22_1, v14, Method_FieldMotionManager___c__GetTransform_b__22_1__, 0);
+      v21 = (int)_9__22_1;
       static_fields = FieldMotionManager___c_TypeInfo->static_fields;
-      static_fields->__9__17_1 = (struct System_Func_BattleFieldMotionComponent__Transform__o *)_9__17_1;
-      p__9__17_1 = (GrandQuestFolderBoardItem_o *)&static_fields->__9__17_1;
+      static_fields->__9__22_1 = (struct System_Func_BattleFieldMotionComponent__Transform__o *)_9__22_1;
+      p__9__22_1 = (GrandQuestFolderBoardItem_o *)&static_fields->__9__22_1;
       goto LABEL_20;
     case 2:
-      v10 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
-      v11 = &Method_FieldMotionManager___c__DisplayClass17_0__GetTransform_b__2__;
+      v10 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
+      v11 = &Method_FieldMotionManager___c__DisplayClass22_0__GetTransform_b__2__;
       goto LABEL_25;
     case 3:
       v8 = FieldMotionManager___c_TypeInfo;
@@ -745,8 +751,8 @@ LABEL_22:
         j_il2cpp_runtime_class_init_0(FieldMotionManager___c_TypeInfo);
         v8 = FieldMotionManager___c_TypeInfo;
       }
-      _9__17_1 = (System_Func_object__object__o *)v8->static_fields->__9__17_3;
-      if ( _9__17_1 )
+      _9__22_1 = (System_Func_object__object__o *)v8->static_fields->__9__22_3;
+      if ( _9__22_1 )
         goto LABEL_21;
       if ( !v8->_2.cctor_finished )
       {
@@ -754,33 +760,33 @@ LABEL_22:
         v8 = FieldMotionManager___c_TypeInfo;
       }
       v24 = (Il2CppObject *)v8->static_fields->__9;
-      _9__17_1 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
-      System_Func_object__object____ctor(_9__17_1, v24, Method_FieldMotionManager___c__GetTransform_b__17_3__, 0);
-      v21 = (int)_9__17_1;
+      _9__22_1 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
+      System_Func_object__object____ctor(_9__22_1, v24, Method_FieldMotionManager___c__GetTransform_b__22_3__, 0);
+      v21 = (int)_9__22_1;
       v25 = FieldMotionManager___c_TypeInfo->static_fields;
-      v25->__9__17_3 = (struct System_Func_BattleFieldMotionComponent__Transform__o *)_9__17_1;
-      p__9__17_1 = (GrandQuestFolderBoardItem_o *)&v25->__9__17_3;
+      v25->__9__22_3 = (struct System_Func_BattleFieldMotionComponent__Transform__o *)_9__22_1;
+      p__9__22_1 = (GrandQuestFolderBoardItem_o *)&v25->__9__22_3;
 LABEL_20:
-      sub_1C71354(p__9__17_1, v21, v15, v16, v17, v18, v19, v20);
+      sub_1C9403C(p__9__22_1, v21, v15, v16, v17, v18, v19, v20);
 LABEL_21:
       if ( !this )
         goto LABEL_22;
       goto LABEL_26;
     case 4:
-      v10 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
-      v11 = &Method_FieldMotionManager___c__DisplayClass17_0__GetTransform_b__4__;
+      v10 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
+      v11 = &Method_FieldMotionManager___c__DisplayClass22_0__GetTransform_b__4__;
       goto LABEL_25;
     case 5:
-      v10 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
-      v11 = &Method_FieldMotionManager___c__DisplayClass17_0__GetTransform_b__5__;
+      v10 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__Transform__TypeInfo);
+      v11 = &Method_FieldMotionManager___c__DisplayClass22_0__GetTransform_b__5__;
 LABEL_25:
-      _9__17_1 = v10;
+      _9__22_1 = v10;
       System_Func_object__object____ctor(v10, (Il2CppObject *)v7, *v11, 0);
 LABEL_26:
       result = (UnityEngine_Transform_o *)FieldMotionManager__FindLastNotNullObject_object_(
                                             this,
-                                            (System_Func_BattleFieldMotionComponent__T__o *)_9__17_1,
-                                            (const MethodInfo_319FED8 *)Method_FieldMotionManager_FindLastNotNullObject_Transform___);
+                                            (System_Func_BattleFieldMotionComponent__T__o *)_9__22_1,
+                                            (const MethodInfo_31F1798 *)Method_FieldMotionManager_FindLastNotNullObject_Transform___);
       break;
     default:
       result = 0;
@@ -802,15 +808,15 @@ bool FieldMotionManager__IsStep(FieldMotionManager_o *this, const MethodInfo *me
   __int64 v9; // x9
 
   v2 = this;
-  if ( (byte_4CCAC6C & 1) == 0 )
+  if ( (byte_4D3013C & 1) == 0 )
   {
-    this = (FieldMotionManager_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC6C = 1;
+    this = (FieldMotionManager_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D3013C = 1;
   }
   fieldMotionArray = v2->fields.fieldMotionArray;
   if ( !fieldMotionArray )
 LABEL_15:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   v4 = 0;
   v5 = 4;
   while ( 1 )
@@ -832,7 +838,7 @@ LABEL_15:
         goto LABEL_15;
       if ( v7 >= LODWORD(fieldMotionArray->max_length) )
 LABEL_17:
-        sub_1C71610(this);
+        sub_1C942F8(this);
       v9 = *((_QWORD *)&fieldMotionArray->obj.klass + v5);
       if ( !v9 )
         goto LABEL_15;
@@ -866,10 +872,10 @@ void FieldMotionManager__PlayBattleAction(
   UnityEngine_UnityException_o *v18; // x20
   __int64 v19; // x0
 
-  if ( (byte_4CCAC73 & 1) == 0 )
+  if ( (byte_4D30143 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC73 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30143 = 1;
   }
   MotionName = (BattleFieldMotionComponent_o *)BattleFieldMotionComponent__GetMotionName(nowAction, 0);
   fieldMotionArray = this->fields.fieldMotionArray;
@@ -880,14 +886,14 @@ void FieldMotionManager__PlayBattleAction(
   if ( (v9 & 0x80000000) != 0 )
   {
 LABEL_21:
-    v14 = (System_String_o *)sub_1C713C4(&StringLiteral_284/*" not found "*/);
-    v15 = (System_String_o *)sub_1C713C4(&StringLiteral_257/*" in fieldFsm "*/);
-    v16 = System_String__Concat_64069988(v14, v8, v15, 0);
-    v17 = sub_1C713C4(&UnityEngine_UnityException_TypeInfo);
-    v18 = (UnityEngine_UnityException_o *)sub_1C715FC(v17);
-    UnityEngine_UnityException___ctor_71718252(v18, v16, 0);
-    v19 = sub_1C713C4(&Method_FieldMotionManager_PlayBattleAction__);
-    sub_1C714D8(v18, v19);
+    v14 = (System_String_o *)sub_1C940AC(&StringLiteral_284/*" not found "*/);
+    v15 = (System_String_o *)sub_1C940AC(&StringLiteral_257/*" in fieldFsm "*/);
+    v16 = System_String__Concat_64456008(v14, v8, v15, 0);
+    v17 = sub_1C940AC(&UnityEngine_UnityException_TypeInfo);
+    v18 = (UnityEngine_UnityException_o *)sub_1C942E4(v17);
+    UnityEngine_UnityException___ctor_72104616(v18, v16, 0);
+    v19 = sub_1C940AC(&Method_FieldMotionManager_PlayBattleAction__);
+    sub_1C941C0(v18, v19);
   }
   while ( 1 )
   {
@@ -924,11 +930,11 @@ LABEL_21:
     goto LABEL_15;
   if ( (unsigned int)v10 >= LODWORD(v13->max_length) )
 LABEL_20:
-    sub_1C71610(MotionName);
+    sub_1C942F8(MotionName);
   MotionName = v13->m_Items[v10];
   if ( !MotionName )
 LABEL_15:
-    sub_1C71608(MotionName, v6);
+    sub_1C942F0(MotionName, v6);
   BattleFieldMotionComponent__playBattleActionData(MotionName, nowAction, v8, 0);
 }
 
@@ -949,7 +955,7 @@ void FieldMotionManager__ResetFieldMotionArray(FieldMotionManager_o *this, const
   fieldMotionArray = this->fields.fieldMotionArray;
   if ( !fieldMotionArray )
 LABEL_6:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   v10 = 1;
   v11 = 40;
   while ( 1 )
@@ -958,9 +964,9 @@ LABEL_6:
     if ( v10 >= (int)max_length_low )
       break;
     if ( v10 >= max_length_low )
-      sub_1C71610(this);
+      sub_1C942F8(this);
     *(Il2CppClass **)((char *)&fieldMotionArray->obj.klass + v11) = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)((char *)fieldMotionArray + v11), 0, v2, v3, v4, v5, v6, v7);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)((char *)fieldMotionArray + v11), 0, v2, v3, v4, v5, v6, v7);
     fieldMotionArray = this->fields.fieldMotionArray;
     ++v10;
     v11 += 8;
@@ -987,11 +993,11 @@ bool FieldMotionManager__SendEvent(
   struct BattleFieldMotionComponent_array *v15; // x8
 
   v6 = this;
-  if ( (byte_4CCAC74 & 1) == 0 )
+  if ( (byte_4D30144 & 1) == 0 )
   {
-    sub_1C713B0(&Method_ActionExtensions_Call_PlayMakerFSM___);
-    this = (FieldMotionManager_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC74 = 1;
+    sub_1C94098(&Method_ActionExtensions_Call_PlayMakerFSM___);
+    this = (FieldMotionManager_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30144 = 1;
   }
   fieldMotionArray = v6->fields.fieldMotionArray;
   if ( !fieldMotionArray )
@@ -1043,15 +1049,15 @@ bool FieldMotionManager__SendEvent(
         ActionExtensions__Call_object_(
           (System_Action_T__o *)callbackBeforeSend,
           Fsm,
-          (const MethodInfo_3095D08 *)Method_ActionExtensions_Call_PlayMakerFSM___),
+          (const MethodInfo_30E5920 *)Method_ActionExtensions_Call_PlayMakerFSM___),
         (v15 = v6->fields.fieldMotionArray) == 0) )
   {
 LABEL_24:
-    sub_1C71608(this, str);
+    sub_1C942F0(this, str);
   }
   if ( (unsigned int)v9 >= LODWORD(v15->max_length) )
 LABEL_25:
-    sub_1C71610(this);
+    sub_1C942F8(this);
   this = (FieldMotionManager_o *)v15->m_Items[v9];
   if ( !this )
     goto LABEL_24;
@@ -1070,15 +1076,15 @@ void FieldMotionManager__SendEvent2ActiveFM(FieldMotionManager_o *this, System_S
   struct BattleFieldMotionComponent_array *v9; // x8
 
   v4 = this;
-  if ( (byte_4CCAC75 & 1) == 0 )
+  if ( (byte_4D30145 & 1) == 0 )
   {
-    this = (FieldMotionManager_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC75 = 1;
+    this = (FieldMotionManager_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30145 = 1;
   }
   fieldMotionArray = v4->fields.fieldMotionArray;
   if ( !fieldMotionArray )
 LABEL_15:
-    sub_1C71608(this, str);
+    sub_1C942F0(this, str);
   v6 = LODWORD(fieldMotionArray->max_length) - 1;
   if ( (v6 & 0x80000000) == 0 )
   {
@@ -1086,7 +1092,7 @@ LABEL_15:
     {
       if ( v6 >= LODWORD(fieldMotionArray->max_length) )
 LABEL_18:
-        sub_1C71610(this);
+        sub_1C942F8(this);
       v7 = v6;
       v8 = (UnityEngine_Object_o *)fieldMotionArray->m_Items[v6];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1102,7 +1108,7 @@ LABEL_18:
         this = (FieldMotionManager_o *)v9->m_Items[v7];
         if ( !this )
           goto LABEL_15;
-        if ( LOBYTE(this[4].fields.baseMotionIds) )
+        if ( LOBYTE(this[4].klass) )
           break;
       }
       v6 = v7 - 1;
@@ -1133,10 +1139,10 @@ void FieldMotionManager__SetActiveMotion(
   struct BattleFieldMotionComponent_array *v14; // x8
   struct BattleFieldMotionComponent_array *v15; // x8
 
-  if ( (byte_4CCAC76 & 1) == 0 )
+  if ( (byte_4D30146 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC76 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30146 = 1;
   }
   if ( nowAction )
   {
@@ -1183,7 +1189,7 @@ void FieldMotionManager__SetActiveMotion(
       {
         if ( (unsigned int)v12 >= LODWORD(v15->max_length) )
 LABEL_23:
-          sub_1C71610(MotionName);
+          sub_1C942F8(MotionName);
         MotionName = v15->m_Items[v12];
         if ( MotionName )
         {
@@ -1192,7 +1198,7 @@ LABEL_23:
         }
       }
 LABEL_17:
-      sub_1C71608(MotionName, v8);
+      sub_1C942F0(MotionName, v8);
     }
   }
 }
@@ -1217,47 +1223,71 @@ void FieldMotionManager__SetBaseFieldMotionIds(
 
   klass = motionIds;
   v10 = this;
-  if ( (byte_4CCAC68 & 1) != 0 )
+  if ( (byte_4D30138 & 1) != 0 )
   {
     if ( motionIds )
       goto LABEL_3;
   }
   else
   {
-    this = (FieldMotionManager_o *)sub_1C713B0(&Method_System_Array_Empty_int___);
-    byte_4CCAC68 = 1;
+    this = (FieldMotionManager_o *)sub_1C94098(&Method_System_Array_Empty_int___);
+    byte_4D30138 = 1;
     if ( klass )
     {
 LABEL_3:
       if ( v10 )
         goto LABEL_4;
 LABEL_15:
-      sub_1C71608(this, motionIds);
+      sub_1C942F0(this, motionIds);
     }
   }
   v11 = Method_System_Array_Empty_int___;
   v12 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
   if ( !v12 )
   {
-    sub_1C474A0(Method_System_Array_Empty_int___);
+    sub_1C6A188(Method_System_Array_Empty_int___);
     v12 = v11[7];
   }
   v13 = *(_QWORD *)(v12 + 16);
   if ( (*(_BYTE *)(v13 + 309) & 1) == 0 )
-    v13 = sub_1C47444(inited);
+    v13 = sub_1C6A12C(inited);
   if ( !*(_DWORD *)(v13 + 224) )
     inited = j_il2cpp_runtime_class_init_0(v13);
   this = *(FieldMotionManager_o **)(v11[7] + 16LL);
-  if ( (BYTE5(this[7].fields.retentionFieldMotionArray) & 1) == 0 )
-    this = (FieldMotionManager_o *)sub_1C47444(inited);
-  klass = (struct System_Int32_array *)this[4].fields.retentionFieldMotionArray->obj.klass;
+  if ( (BYTE5(this[6].fields.fieldMotionArray) & 1) == 0 )
+    this = (FieldMotionManager_o *)sub_1C6A12C(inited);
+  klass = (struct System_Int32_array *)this[3].fields._OverwriteMotionIds_k__BackingField->obj.klass;
   if ( !v10 )
     goto LABEL_15;
 LABEL_4:
   v10->fields.baseMotionIds = klass;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&v10->fields.baseMotionIds,
     (int32_t)klass,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
+}
+
+
+void FieldMotionManager__SetOverwriteMotionIds(
+        FieldMotionManager_o *this,
+        System_Int32_array *motionIds,
+        const MethodInfo *method)
+{
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+
+  this->fields._OverwriteMotionIds_k__BackingField = motionIds;
+  sub_1C9403C(
+    (GrandQuestFolderBoardItem_o *)&this->fields._OverwriteMotionIds_k__BackingField,
+    (int32_t)motionIds,
     (int32_t)method,
     v3,
     v4,
@@ -1271,7 +1301,7 @@ LABEL_4:
 void FieldMotionManager__SetTacticBg(FieldMotionManager_o *this, bool flg, const MethodInfo *method)
 {
   FieldMotionManager___c_c *v5; // x0
-  System_Func_object__object__o *_9__13_0; // x21
+  System_Func_object__object__o *_9__18_0; // x21
   Il2CppObject *v7; // x22
   struct FieldMotionManager___c_StaticFields *static_fields; // x0
   int32_t v9; // w2
@@ -1282,14 +1312,14 @@ void FieldMotionManager__SetTacticBg(FieldMotionManager_o *this, bool flg, const
   System_String_o *v14; // x7
   Il2CppObject *LastNotNullObject_object; // x20
 
-  if ( (byte_4CCAC6D & 1) == 0 )
+  if ( (byte_4D3013D & 1) == 0 )
   {
-    sub_1C713B0(&Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
-    sub_1C713B0(&System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_FieldMotionManager___c__SetTacticBg_b__13_0__);
-    sub_1C713B0(&FieldMotionManager___c_TypeInfo);
-    byte_4CCAC6D = 1;
+    sub_1C94098(&Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
+    sub_1C94098(&System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_FieldMotionManager___c__SetTacticBg_b__18_0__);
+    sub_1C94098(&FieldMotionManager___c_TypeInfo);
+    byte_4D3013D = 1;
   }
   v5 = FieldMotionManager___c_TypeInfo;
   if ( !FieldMotionManager___c_TypeInfo->_2.cctor_finished )
@@ -1297,8 +1327,8 @@ void FieldMotionManager__SetTacticBg(FieldMotionManager_o *this, bool flg, const
     j_il2cpp_runtime_class_init_0(FieldMotionManager___c_TypeInfo);
     v5 = FieldMotionManager___c_TypeInfo;
   }
-  _9__13_0 = (System_Func_object__object__o *)v5->static_fields->__9__13_0;
-  if ( !_9__13_0 )
+  _9__18_0 = (System_Func_object__object__o *)v5->static_fields->__9__18_0;
+  if ( !_9__18_0 )
   {
     if ( !v5->_2.cctor_finished )
     {
@@ -1306,13 +1336,13 @@ void FieldMotionManager__SetTacticBg(FieldMotionManager_o *this, bool flg, const
       v5 = FieldMotionManager___c_TypeInfo;
     }
     v7 = (Il2CppObject *)v5->static_fields->__9;
-    _9__13_0 = (System_Func_object__object__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
-    System_Func_object__object____ctor(_9__13_0, v7, Method_FieldMotionManager___c__SetTacticBg_b__13_0__, 0);
+    _9__18_0 = (System_Func_object__object__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__GameObject__TypeInfo);
+    System_Func_object__object____ctor(_9__18_0, v7, Method_FieldMotionManager___c__SetTacticBg_b__18_0__, 0);
     static_fields = FieldMotionManager___c_TypeInfo->static_fields;
-    static_fields->__9__13_0 = (struct System_Func_BattleFieldMotionComponent__GameObject__o *)_9__13_0;
-    sub_1C71354(
-      (GrandQuestFolderBoardItem_o *)&static_fields->__9__13_0,
-      (int32_t)_9__13_0,
+    static_fields->__9__18_0 = (struct System_Func_BattleFieldMotionComponent__GameObject__o *)_9__18_0;
+    sub_1C9403C(
+      (GrandQuestFolderBoardItem_o *)&static_fields->__9__18_0,
+      (int32_t)_9__18_0,
       v9,
       v10,
       v11,
@@ -1324,8 +1354,8 @@ void FieldMotionManager__SetTacticBg(FieldMotionManager_o *this, bool flg, const
     goto LABEL_16;
   LastNotNullObject_object = FieldMotionManager__FindLastNotNullObject_object_(
                                this,
-                               (System_Func_BattleFieldMotionComponent__T__o *)_9__13_0,
-                               (const MethodInfo_319FED8 *)Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
+                               (System_Func_BattleFieldMotionComponent__T__o *)_9__18_0,
+                               (const MethodInfo_31F1798 *)Method_FieldMotionManager_FindLastNotNullObject_GameObject___);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   v5 = (FieldMotionManager___c_c *)UnityEngine_Object__op_Inequality(
@@ -1340,7 +1370,7 @@ void FieldMotionManager__SetTacticBg(FieldMotionManager_o *this, bool flg, const
       return;
     }
 LABEL_16:
-    sub_1C71608(v5, flg);
+    sub_1C942F0(v5, flg);
   }
 }
 
@@ -1349,7 +1379,7 @@ void FieldMotionManager__SetVariables___Il2CppFullySharedGenericType_(
         FieldMotionManager_o *this,
         System_String_o *variableName,
         Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o value,
-        const MethodInfo_31A0EE0 *method)
+        const MethodInfo_31F27A0 *method)
 {
   long double v4; // q0
   unsigned __int64 StatusReg; // x21
@@ -1433,23 +1463,23 @@ void FieldMotionManager__SetVariables___Il2CppFullySharedGenericType_(
   v9 = *((_QWORD *)value.monitor + 7);
   if ( !v9 )
   {
-    sub_1C713B0(&bool_var);
-    sub_1C713B0(&bool_TypeInfo);
-    sub_1C713B0(&UnityEngine_GameObject_var);
-    sub_1C713B0(&UnityEngine_GameObject_TypeInfo);
-    sub_1C713B0(&int_var);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&string_var);
-    sub_1C713B0(&string_TypeInfo);
-    sub_1C713B0(&System_Type_TypeInfo);
+    sub_1C94098(&bool_var);
+    sub_1C94098(&bool_TypeInfo);
+    sub_1C94098(&UnityEngine_GameObject_var);
+    sub_1C94098(&UnityEngine_GameObject_TypeInfo);
+    sub_1C94098(&int_var);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&string_var);
+    sub_1C94098(&string_TypeInfo);
+    sub_1C94098(&System_Type_TypeInfo);
     v9 = *((_QWORD *)monitor + 7);
     if ( !v9 )
     {
-      sub_1C474A0();
+      sub_1C6A188();
       v9 = *((_QWORD *)monitor + 7);
     }
   }
@@ -1462,7 +1492,7 @@ void FieldMotionManager__SetVariables___Il2CppFullySharedGenericType_(
   }
   else
   {
-    v13 = sub_1C47444(v4);
+    v13 = sub_1C6A12C(v4);
     v10 = *(_QWORD *)(*((_QWORD *)monitor + 7) + 8LL);
     v14 = *(_DWORD *)(v13 + 252);
     v11 = *(_WORD *)(v10 + 309);
@@ -1470,25 +1500,25 @@ void FieldMotionManager__SetVariables___Il2CppFullySharedGenericType_(
   v74 = (char *)&v72 - (((unsigned int)(v14 + 16) + 15LL) & 0x1FFFFFFF0LL);
   v75 = StatusReg;
   if ( (v11 & 1) == 0 )
-    v10 = sub_1C47444(v4);
+    v10 = sub_1C6A12C(v4);
   v73 = (char *)&v72 - (((unsigned int)(*(_DWORD *)(v10 + 252) + 16) + 15LL) & 0x1FFFFFFF0LL);
   v15 = (char *)&v72 - ((v12 + 15) & 0x1FFFFFFF0LL);
-  v16 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
+  v16 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v16,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
   if ( !v16
     || (v76 = v12,
         System_Collections_Generic_List_object___AddRange(
           v16,
           (System_Collections_Generic_IEnumerable_T__o *)this->fields.retentionFieldMotionArray,
-          (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__),
+          (const MethodInfo_386B040 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__),
         (Fsm = (PlayMakerFSM_o *)System_Collections_Generic_List_object___ToArray(
                                    v16,
-                                   (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__)) == 0) )
+                                   (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__)) == 0) )
   {
 LABEL_85:
-    sub_1C71608(Fsm, v18);
+    sub_1C942F0(Fsm, v18);
   }
   m_CancellationTokenSource = Fsm->fields.m_CancellationTokenSource;
   v20 = Fsm;
@@ -1497,7 +1527,7 @@ LABEL_85:
     for ( i = 0; (__int64)i < (int)m_CancellationTokenSource; ++i )
     {
       if ( i >= (unsigned int)m_CancellationTokenSource )
-        sub_1C71610(Fsm);
+        sub_1C942F8(Fsm);
       v22 = (UnityEngine_Object_o *)*((_QWORD *)&v20->fields.fsm + i);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1551,7 +1581,7 @@ LABEL_85:
               v38 = 0;
             }
             v29->fields.addEventHandlers = (struct PlayMakerFSM_AddEventHandlerDelegate_o *)v38;
-            sub_1C71354(
+            sub_1C9403C(
               (GrandQuestFolderBoardItem_o *)&v29->fields.addEventHandlers,
               (int32_t)v38,
               v32,
@@ -1651,7 +1681,7 @@ LABEL_85:
                 }
                 else
                 {
-                  LODWORD(v58) = sub_1C47444(v54);
+                  LODWORD(v58) = sub_1C6A12C(v54);
                   v55 = *((_QWORD *)monitor + 7);
                   v57 = *(_QWORD *)(v55 + 8);
                 }
@@ -1659,7 +1689,7 @@ LABEL_85:
                   v69 = &klass;
                 else
                   v69 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
-                sub_1C71EEC(v58, *(_QWORD *)(v55 + 16), (int)v74, v69);
+                sub_1C94BD4(v58, *(_QWORD *)(v55 + 16), (int)v74, v69);
                 Fsm = (PlayMakerFSM_o *)System_Int32__Parse(v78, 0);
                 LODWORD(v56->fields.addEventHandlers) = (_DWORD)Fsm;
               }
@@ -1702,7 +1732,7 @@ LABEL_85:
                   }
                   else
                   {
-                    LODWORD(v68) = sub_1C47444(v64);
+                    LODWORD(v68) = sub_1C6A12C(v64);
                     v65 = *((_QWORD *)monitor + 7);
                     v67 = *(_QWORD *)(v65 + 8);
                   }
@@ -1710,7 +1740,7 @@ LABEL_85:
                     v70 = &klass;
                   else
                     v70 = (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c **)klass;
-                  sub_1C71EEC(v68, *(_QWORD *)(v65 + 16), (int)v73, v70);
+                  sub_1C94BD4(v68, *(_QWORD *)(v65 + 16), (int)v73, v70);
                   v71 = v78;
                   if ( !bool_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(bool_TypeInfo);
@@ -1732,7 +1762,7 @@ void FieldMotionManager__SetVariables_bool_(
         FieldMotionManager_o *this,
         System_String_o *variableName,
         bool value,
-        const MethodInfo_319FFF8 *method)
+        const MethodInfo_31F18B8 *method)
 {
   System_Collections_Generic_List_object__o *v7; // x22
   PlayMakerFSM_o *Fsm; // x0
@@ -1784,37 +1814,37 @@ void FieldMotionManager__SetVariables_bool_(
   v52[0] = value;
   if ( !method->rgctx_data )
   {
-    sub_1C713B0(&bool_var);
-    sub_1C713B0(&bool_TypeInfo);
-    sub_1C713B0(&UnityEngine_GameObject_var);
-    sub_1C713B0(&UnityEngine_GameObject_TypeInfo);
-    sub_1C713B0(&int_var);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&string_var);
-    sub_1C713B0(&string_TypeInfo);
-    sub_1C713B0(&System_Type_TypeInfo);
+    sub_1C94098(&bool_var);
+    sub_1C94098(&bool_TypeInfo);
+    sub_1C94098(&UnityEngine_GameObject_var);
+    sub_1C94098(&UnityEngine_GameObject_TypeInfo);
+    sub_1C94098(&int_var);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&string_var);
+    sub_1C94098(&string_TypeInfo);
+    sub_1C94098(&System_Type_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C474A0();
+      sub_1C6A188();
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
   if ( !v7
     || (System_Collections_Generic_List_object___AddRange(
           v7,
           (System_Collections_Generic_IEnumerable_T__o *)this->fields.retentionFieldMotionArray,
-          (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__),
+          (const MethodInfo_386B040 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__),
         (Fsm = (PlayMakerFSM_o *)System_Collections_Generic_List_object___ToArray(
                                    v7,
-                                   (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__)) == 0) )
+                                   (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__)) == 0) )
   {
 LABEL_64:
-    sub_1C71608(Fsm, v9);
+    sub_1C942F0(Fsm, v9);
   }
   m_CancellationTokenSource = Fsm->fields.m_CancellationTokenSource;
   v11 = Fsm;
@@ -1823,7 +1853,7 @@ LABEL_64:
     for ( i = 0; (__int64)i < (int)m_CancellationTokenSource; ++i )
     {
       if ( i >= (unsigned int)m_CancellationTokenSource )
-        sub_1C71610(Fsm);
+        sub_1C942F8(Fsm);
       v13 = (UnityEngine_Object_o *)*((_QWORD *)&v11->fields.fsm + i);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -1872,7 +1902,7 @@ LABEL_64:
               v27 = 0;
             }
             v19->fields.addEventHandlers = (struct PlayMakerFSM_AddEventHandlerDelegate_o *)v27;
-            sub_1C71354(
+            sub_1C9403C(
               (GrandQuestFolderBoardItem_o *)&v19->fields.addEventHandlers,
               (int32_t)v27,
               v21,
@@ -2017,7 +2047,7 @@ void FieldMotionManager__SetVariables_int_(
         FieldMotionManager_o *this,
         System_String_o *variableName,
         int32_t value,
-        const MethodInfo_31A0510 *method)
+        const MethodInfo_31F1DD0 *method)
 {
   System_Collections_Generic_List_object__o *v7; // x22
   PlayMakerFSM_o *Fsm; // x0
@@ -2069,37 +2099,37 @@ void FieldMotionManager__SetVariables_int_(
   v52 = value;
   if ( !method->rgctx_data )
   {
-    sub_1C713B0(&bool_var);
-    sub_1C713B0(&bool_TypeInfo);
-    sub_1C713B0(&UnityEngine_GameObject_var);
-    sub_1C713B0(&UnityEngine_GameObject_TypeInfo);
-    sub_1C713B0(&int_var);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&string_var);
-    sub_1C713B0(&string_TypeInfo);
-    sub_1C713B0(&System_Type_TypeInfo);
+    sub_1C94098(&bool_var);
+    sub_1C94098(&bool_TypeInfo);
+    sub_1C94098(&UnityEngine_GameObject_var);
+    sub_1C94098(&UnityEngine_GameObject_TypeInfo);
+    sub_1C94098(&int_var);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&string_var);
+    sub_1C94098(&string_TypeInfo);
+    sub_1C94098(&System_Type_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C474A0();
+      sub_1C6A188();
   }
-  v7 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
+  v7 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v7,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
   if ( !v7
     || (System_Collections_Generic_List_object___AddRange(
           v7,
           (System_Collections_Generic_IEnumerable_T__o *)this->fields.retentionFieldMotionArray,
-          (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__),
+          (const MethodInfo_386B040 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__),
         (Fsm = (PlayMakerFSM_o *)System_Collections_Generic_List_object___ToArray(
                                    v7,
-                                   (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__)) == 0) )
+                                   (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__)) == 0) )
   {
 LABEL_62:
-    sub_1C71608(Fsm, v9);
+    sub_1C942F0(Fsm, v9);
   }
   m_CancellationTokenSource = Fsm->fields.m_CancellationTokenSource;
   v11 = Fsm;
@@ -2108,7 +2138,7 @@ LABEL_62:
     for ( i = 0; (__int64)i < (int)m_CancellationTokenSource; ++i )
     {
       if ( i >= (unsigned int)m_CancellationTokenSource )
-        sub_1C71610(Fsm);
+        sub_1C942F8(Fsm);
       v13 = (UnityEngine_Object_o *)*((_QWORD *)&v11->fields.fsm + i);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2157,7 +2187,7 @@ LABEL_62:
               v27 = 0;
             }
             v19->fields.addEventHandlers = (struct PlayMakerFSM_AddEventHandlerDelegate_o *)v27;
-            sub_1C71354(
+            sub_1C9403C(
               (GrandQuestFolderBoardItem_o *)&v19->fields.addEventHandlers,
               (int32_t)v27,
               v21,
@@ -2300,7 +2330,7 @@ void FieldMotionManager__SetVariables_object_(
         FieldMotionManager_o *this,
         System_String_o *variableName,
         Il2CppObject *value,
-        const MethodInfo_31A0A18 *method)
+        const MethodInfo_31F22D8 *method)
 {
   System_Collections_Generic_List_object__o *v8; // x23
   void *Fsm; // x0
@@ -2344,37 +2374,37 @@ void FieldMotionManager__SetVariables_object_(
 
   if ( !method->rgctx_data )
   {
-    sub_1C713B0(&bool_var);
-    sub_1C713B0(&bool_TypeInfo);
-    sub_1C713B0(&UnityEngine_GameObject_var);
-    sub_1C713B0(&UnityEngine_GameObject_TypeInfo);
-    sub_1C713B0(&int_var);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&string_var);
-    sub_1C713B0(&string_TypeInfo);
-    sub_1C713B0(&System_Type_TypeInfo);
+    sub_1C94098(&bool_var);
+    sub_1C94098(&bool_TypeInfo);
+    sub_1C94098(&UnityEngine_GameObject_var);
+    sub_1C94098(&UnityEngine_GameObject_TypeInfo);
+    sub_1C94098(&int_var);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__);
+    sub_1C94098(&Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&string_var);
+    sub_1C94098(&string_TypeInfo);
+    sub_1C94098(&System_Type_TypeInfo);
     if ( !method->rgctx_data )
-      sub_1C474A0();
+      sub_1C6A188();
   }
-  v8 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
+  v8 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_BattleFieldMotionComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v8,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent___ctor__);
   if ( !v8
     || (System_Collections_Generic_List_object___AddRange(
           v8,
           (System_Collections_Generic_IEnumerable_T__o *)this->fields.retentionFieldMotionArray,
-          (const MethodInfo_3810924 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__),
+          (const MethodInfo_386B040 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__AddRange__),
         (Fsm = System_Collections_Generic_List_object___ToArray(
                  v8,
-                 (const MethodInfo_3812270 *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__)) == 0) )
+                 (const MethodInfo_386C98C *)Method_System_Collections_Generic_List_BattleFieldMotionComponent__ToArray__)) == 0) )
   {
 LABEL_64:
-    sub_1C71608(Fsm, v10);
+    sub_1C942F0(Fsm, v10);
   }
   v11 = *((_QWORD *)Fsm + 3);
   v12 = Fsm;
@@ -2383,7 +2413,7 @@ LABEL_64:
     for ( i = 0; (__int64)i < (int)v11; ++i )
     {
       if ( i >= (unsigned int)v11 )
-        sub_1C71610(Fsm);
+        sub_1C942F8(Fsm);
       v14 = (UnityEngine_Object_o *)v12[i + 4];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2429,7 +2459,7 @@ LABEL_64:
               v26 = 0;
             }
             *((_QWORD *)Fsm + 7) = v26;
-            sub_1C71354((GrandQuestFolderBoardItem_o *)((char *)Fsm + 56), (int32_t)v26, v20, v21, v22, v23, v24, v25);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)((char *)Fsm + 56), (int32_t)v26, v20, v21, v22, v23, v24, v25);
           }
         }
         else
@@ -2623,20 +2653,20 @@ void FieldMotionManager__SwitchUniqueFieldMotion(
   __int64 v53; // x0
   __int64 v54; // x0
 
-  if ( (byte_4CCAC6A & 1) == 0 )
+  if ( (byte_4D3013A & 1) == 0 )
   {
-    sub_1C713B0(&Method_BattleDataDefine_FieldMotionPath__);
-    sub_1C713B0(&Method_System_Linq_Enumerable_FirstOrDefault_BattleFieldMotionComponent___);
-    sub_1C713B0(&Method_System_Linq_Enumerable_Select_int__string___);
-    sub_1C713B0(&System_Func_int__string__TypeInfo);
-    sub_1C713B0(&System_Func_BattleFieldMotionComponent__bool__TypeInfo);
-    sub_1C713B0(&System_IDisposable_TypeInfo);
-    sub_1C713B0(&System_Collections_Generic_IEnumerable_string__TypeInfo);
-    sub_1C713B0(&System_Collections_Generic_IEnumerator_string__TypeInfo);
-    sub_1C713B0(&System_Collections_IEnumerator_TypeInfo);
-    sub_1C713B0(&Method_FieldMotionManager___c__DisplayClass8_0__SwitchUniqueFieldMotion_b__0__);
-    sub_1C713B0(&FieldMotionManager___c__DisplayClass8_0_TypeInfo);
-    byte_4CCAC6A = 1;
+    sub_1C94098(&Method_BattleDataDefine_FieldMotionPath__);
+    sub_1C94098(&Method_System_Linq_Enumerable_FirstOrDefault_BattleFieldMotionComponent___);
+    sub_1C94098(&Method_System_Linq_Enumerable_Select_int__string___);
+    sub_1C94098(&System_Func_int__string__TypeInfo);
+    sub_1C94098(&System_Func_BattleFieldMotionComponent__bool__TypeInfo);
+    sub_1C94098(&System_IDisposable_TypeInfo);
+    sub_1C94098(&System_Collections_Generic_IEnumerable_string__TypeInfo);
+    sub_1C94098(&System_Collections_Generic_IEnumerator_string__TypeInfo);
+    sub_1C94098(&System_Collections_IEnumerator_TypeInfo);
+    sub_1C94098(&Method_FieldMotionManager___c__DisplayClass13_0__SwitchUniqueFieldMotion_b__0__);
+    sub_1C94098(&FieldMotionManager___c__DisplayClass13_0_TypeInfo);
+    byte_4D3013A = 1;
   }
   FieldMotionManager__ResetFieldMotionArray(this, (const MethodInfo *)stageEnt);
   EnableFieldMotionIds = (System_Collections_Generic_IEnumerable_TSource__o *)FieldMotionManager__GetEnableFieldMotionIds(
@@ -2644,14 +2674,14 @@ void FieldMotionManager__SwitchUniqueFieldMotion(
                                                                                 stageEnt,
                                                                                 data,
                                                                                 v7);
-  v9 = (System_Func_T__TResult__o *)sub_1C715FC(System_Func_int__string__TypeInfo);
+  v9 = (System_Func_T__TResult__o *)sub_1C942E4(System_Func_int__string__TypeInfo);
   System_Func_int__object____ctor(v9, 0, Method_BattleDataDefine_FieldMotionPath__, 0);
   v10 = System_Linq_Enumerable__Select_int__object_(
           EnableFieldMotionIds,
           (System_Func_TSource__TResult__o *)v9,
-          (const MethodInfo_317EBF8 *)Method_System_Linq_Enumerable_Select_int__string___);
+          (const MethodInfo_31D03C0 *)Method_System_Linq_Enumerable_Select_int__string___);
   if ( !v10 )
-    sub_1C71608(0, v11);
+    sub_1C942F0(0, v11);
   klass = v10->klass;
   v13 = v10;
   v14 = *(unsigned __int16 *)&v10->klass->_2.rank;
@@ -2670,13 +2700,13 @@ void FieldMotionManager__SwitchUniqueFieldMotion(
   else
   {
 LABEL_8:
-    v16 = sub_1C47738(v10, System_Collections_Generic_IEnumerable_string__TypeInfo, 0);
+    v16 = sub_1C6A420(v10, System_Collections_Generic_IEnumerable_string__TypeInfo, 0);
   }
   v18 = (*(__int64 (__fastcall **)(System_Collections_Generic_IEnumerable_TResult__o *, _QWORD))v16)(
           v13,
           *(_QWORD *)(v16 + 8));
   if ( !v18 )
-    sub_1C71608(0, v17);
+    sub_1C942F0(0, v17);
   for ( i = 1; ; ++i )
   {
     v20 = *(_QWORD *)v18;
@@ -2696,12 +2726,12 @@ LABEL_8:
     else
     {
 LABEL_16:
-      v23 = sub_1C47738(v18, System_Collections_IEnumerator_TypeInfo, 0);
+      v23 = sub_1C6A420(v18, System_Collections_IEnumerator_TypeInfo, 0);
     }
     if ( ((*(__int64 (__fastcall **)(__int64, _QWORD))v23)(v18, *(_QWORD *)(v23 + 8)) & 1) == 0 )
       break;
-    v24 = sub_1C715FC(FieldMotionManager___c__DisplayClass8_0_TypeInfo);
-    FieldMotionManager___c__DisplayClass8_0___ctor((FieldMotionManager___c__DisplayClass8_0_o *)v24, 0);
+    v24 = sub_1C942E4(FieldMotionManager___c__DisplayClass13_0_TypeInfo);
+    System_Object___ctor((Il2CppObject *)v24, 0);
     v25 = *(_QWORD *)v18;
     v26 = *(unsigned __int16 *)(*(_QWORD *)v18 + 302LL);
     if ( *(_WORD *)(*(_QWORD *)v18 + 302LL) )
@@ -2719,44 +2749,44 @@ LABEL_16:
     else
     {
 LABEL_23:
-      v28 = sub_1C47738(v18, System_Collections_Generic_IEnumerator_string__TypeInfo, 0);
+      v28 = sub_1C6A420(v18, System_Collections_Generic_IEnumerator_string__TypeInfo, 0);
     }
     v29 = (*(__int64 (__fastcall **)(__int64, _QWORD))v28)(v18, *(_QWORD *)(v28 + 8));
     if ( !v24 )
-      sub_1C71608(v29, v29);
+      sub_1C942F0(v29, v29);
     *(_QWORD *)(v24 + 16) = v29;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)(v24 + 16), v29, v30, v31, v32, v33, v34, v35);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v24 + 16), v29, v30, v31, v32, v33, v34, v35);
     fieldMotionArray = (int *)this->fields.fieldMotionArray;
     if ( !fieldMotionArray )
-      sub_1C71608(v36, v37);
+      sub_1C942F0(v36, v37);
     if ( (__int64)i >= fieldMotionArray[6] )
       break;
     retentionFieldMotionArray = (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.retentionFieldMotionArray;
-    v40 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_BattleFieldMotionComponent__bool__TypeInfo);
+    v40 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_BattleFieldMotionComponent__bool__TypeInfo);
     System_Func_object__bool____ctor(
       v40,
       (Il2CppObject *)v24,
-      Method_FieldMotionManager___c__DisplayClass8_0__SwitchUniqueFieldMotion_b__0__,
+      Method_FieldMotionManager___c__DisplayClass13_0__SwitchUniqueFieldMotion_b__0__,
       0);
-    v41 = System_Linq_Enumerable__FirstOrDefault_object__51858576(
+    v41 = System_Linq_Enumerable__FirstOrDefault_object__52191056(
             retentionFieldMotionArray,
             (System_Func_TSource__bool__o *)v40,
-            (const MethodInfo_3174C90 *)Method_System_Linq_Enumerable_FirstOrDefault_BattleFieldMotionComponent___);
+            (const MethodInfo_31C5F50 *)Method_System_Linq_Enumerable_FirstOrDefault_BattleFieldMotionComponent___);
     v48 = v41;
     if ( v41 )
     {
-      v41 = (Il2CppObject *)sub_1C714EC(v41, *(_QWORD *)(*(_QWORD *)fieldMotionArray + 64LL));
+      v41 = (Il2CppObject *)sub_1C941D4(v41, *(_QWORD *)(*(_QWORD *)fieldMotionArray + 64LL));
       if ( !v41 )
       {
-        v54 = sub_1C7162C(0);
-        sub_1C714D8(v54, 0);
+        v54 = sub_1C94314(0);
+        sub_1C941C0(v54, 0);
       }
     }
     if ( i >= (unsigned int)fieldMotionArray[6] )
-      sub_1C71610(v41);
+      sub_1C942F8(v41);
     v49 = &fieldMotionArray[2 * i];
     *((_QWORD *)v49 + 4) = v48;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)(v49 + 8), (int32_t)v48, v42, v43, v44, v45, v46, v47);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v49 + 8), (int32_t)v48, v42, v43, v44, v45, v46, v47);
   }
   v50 = *(_QWORD *)v18;
   v51 = *(unsigned __int16 *)(*(_QWORD *)v18 + 302LL);
@@ -2775,9 +2805,39 @@ LABEL_23:
   else
   {
 LABEL_36:
-    v53 = sub_1C47738(v18, System_IDisposable_TypeInfo, 0);
+    v53 = sub_1C6A420(v18, System_IDisposable_TypeInfo, 0);
   }
   (*(void (__fastcall **)(__int64, _QWORD))v53)(v18, *(_QWORD *)(v53 + 8));
+}
+
+
+System_Int32_array *FieldMotionManager__get_OverwriteMotionIds(FieldMotionManager_o *this, const MethodInfo *method)
+{
+  return this->fields._OverwriteMotionIds_k__BackingField;
+}
+
+
+void FieldMotionManager__set_OverwriteMotionIds(
+        FieldMotionManager_o *this,
+        System_Int32_array *value,
+        const MethodInfo *method)
+{
+  int32_t v3; // w3
+  System_String_o *v4; // x4
+  int32_t v5; // w5
+  int64_t v6; // x6
+  System_String_o *v7; // x7
+
+  this->fields._OverwriteMotionIds_k__BackingField = value;
+  sub_1C9403C(
+    (GrandQuestFolderBoardItem_o *)&this->fields._OverwriteMotionIds_k__BackingField,
+    (int32_t)value,
+    (int32_t)method,
+    v3,
+    v4,
+    v5,
+    v6,
+    v7);
 }
 
 
@@ -2791,15 +2851,15 @@ void FieldMotionManager___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CCAC77 & 1) == 0 )
+  if ( (byte_4D30147 & 1) == 0 )
   {
-    sub_1C713B0(&FieldMotionManager___c_TypeInfo);
-    byte_4CCAC77 = 1;
+    sub_1C94098(&FieldMotionManager___c_TypeInfo);
+    byte_4D30147 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C715FC(FieldMotionManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C942E4(FieldMotionManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   FieldMotionManager___c_TypeInfo->static_fields->__9 = (struct FieldMotionManager___c_o *)v1;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)FieldMotionManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -2817,171 +2877,81 @@ void FieldMotionManager___c___ctor(FieldMotionManager___c_o *this, const MethodI
 }
 
 
-UnityEngine_GameObject_o *FieldMotionManager___c___GetEnemyStage_b__15_0(
+UnityEngine_GameObject_o *FieldMotionManager___c___GetEnemyStage_b__20_0(
         FieldMotionManager___c_o *this,
         BattleFieldMotionComponent_o *comp,
         const MethodInfo *method)
 {
   if ( !comp )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return comp->fields.enemyStage;
 }
 
 
-UnityEngine_GameObject_o *FieldMotionManager___c___GetPlayerStage_b__14_0(
+UnityEngine_GameObject_o *FieldMotionManager___c___GetPlayerStage_b__19_0(
         FieldMotionManager___c_o *this,
         BattleFieldMotionComponent_o *comp,
         const MethodInfo *method)
 {
   if ( !comp )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return comp->fields.playerStage;
 }
 
 
-UnityEngine_Transform_o *FieldMotionManager___c___GetTransform_b__17_1(
+UnityEngine_Transform_o *FieldMotionManager___c___GetTransform_b__22_1(
         FieldMotionManager___c_o *this,
         BattleFieldMotionComponent_o *comp,
         const MethodInfo *method)
 {
   if ( !comp )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return comp->fields.pop_enemyTr;
 }
 
 
-UnityEngine_Transform_o *FieldMotionManager___c___GetTransform_b__17_3(
+UnityEngine_Transform_o *FieldMotionManager___c___GetTransform_b__22_3(
         FieldMotionManager___c_o *this,
         BattleFieldMotionComponent_o *comp,
         const MethodInfo *method)
 {
   if ( !comp )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return comp->fields.pop_playerTr;
 }
 
 
-UnityEngine_GameObject_o *FieldMotionManager___c___SetTacticBg_b__13_0(
+UnityEngine_GameObject_o *FieldMotionManager___c___SetTacticBg_b__18_0(
         FieldMotionManager___c_o *this,
         BattleFieldMotionComponent_o *comp,
         const MethodInfo *method)
 {
   if ( !comp )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return comp->fields.tacticBg;
 }
 
 
-void FieldMotionManager___c__DisplayClass16_0___ctor(
-        FieldMotionManager___c__DisplayClass16_0_o *this,
+void FieldMotionManager___c__DisplayClass13_0___ctor(
+        FieldMotionManager___c__DisplayClass13_0_o *this,
         const MethodInfo *method)
 {
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
 
-UnityEngine_GameObject_o *FieldMotionManager___c__DisplayClass16_0___GetGameObject_b__0(
-        FieldMotionManager___c__DisplayClass16_0_o *this,
-        BattleFieldMotionComponent_o *comp,
-        const MethodInfo *method)
-{
-  if ( !comp )
-    sub_1C71608(this, 0);
-  return BattleFieldMotionComponent__getGameObject(comp, this->fields.name, 0);
-}
-
-
-void FieldMotionManager___c__DisplayClass17_0___ctor(
-        FieldMotionManager___c__DisplayClass17_0_o *this,
-        const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0);
-}
-
-
-UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass17_0___GetTransform_b__0(
-        FieldMotionManager___c__DisplayClass17_0_o *this,
-        BattleFieldMotionComponent_o *comp,
-        const MethodInfo *method)
-{
-  if ( !comp )
-    sub_1C71608(this, 0);
-  return BattleFieldMotionComponent__getEnemyPopPoint(comp, this->fields.index, 0);
-}
-
-
-UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass17_0___GetTransform_b__2(
-        FieldMotionManager___c__DisplayClass17_0_o *this,
-        BattleFieldMotionComponent_o *comp,
-        const MethodInfo *method)
-{
-  if ( !comp )
-    sub_1C71608(this, 0);
-  return BattleFieldMotionComponent__getPlayerPopTr(comp, this->fields.index, 0);
-}
-
-
-UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass17_0___GetTransform_b__4(
-        FieldMotionManager___c__DisplayClass17_0_o *this,
-        BattleFieldMotionComponent_o *comp,
-        const MethodInfo *method)
-{
-  if ( !comp )
-    sub_1C71608(this, 0);
-  return BattleFieldMotionComponent__getPlayerTacticalTr(comp, this->fields.index, 0);
-}
-
-
-UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass17_0___GetTransform_b__5(
-        FieldMotionManager___c__DisplayClass17_0_o *this,
-        BattleFieldMotionComponent_o *comp,
-        const MethodInfo *method)
-{
-  if ( !comp )
-    sub_1C71608(this, 0);
-  return BattleFieldMotionComponent__getEnemyTacticalTr(comp, this->fields.index, 0);
-}
-
-
-void FieldMotionManager___c__DisplayClass18_0___ctor(
-        FieldMotionManager___c__DisplayClass18_0_o *this,
-        const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0);
-}
-
-
-UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass18_0___GetTargetTransform_b__0(
-        FieldMotionManager___c__DisplayClass18_0_o *this,
-        BattleFieldMotionComponent_o *comp,
-        const MethodInfo *method)
-{
-  if ( !comp )
-    sub_1C71608(this, 0);
-  return BattleFieldMotionComponent__GetTargetTr(comp, this->fields.type, this->fields.index, 0);
-}
-
-
-void FieldMotionManager___c__DisplayClass8_0___ctor(
-        FieldMotionManager___c__DisplayClass8_0_o *this,
-        const MethodInfo *method)
-{
-  System_Object___ctor((Il2CppObject *)this, 0);
-}
-
-
-bool FieldMotionManager___c__DisplayClass8_0___SwitchUniqueFieldMotion_b__0(
-        FieldMotionManager___c__DisplayClass8_0_o *this,
+bool FieldMotionManager___c__DisplayClass13_0___SwitchUniqueFieldMotion_b__0(
+        FieldMotionManager___c__DisplayClass13_0_o *this,
         BattleFieldMotionComponent_o *x,
         const MethodInfo *method)
 {
   _BOOL8 v5; // x0
   __int64 v6; // x1
 
-  if ( (byte_4CCAC78 & 1) == 0 )
+  if ( (byte_4D30148 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCAC78 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30148 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -2989,6 +2959,96 @@ bool FieldMotionManager___c__DisplayClass8_0___SwitchUniqueFieldMotion_b__0(
   if ( !v5 )
     return 0;
   if ( !x )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   return BasicHelper__EqualExceptNullOrEmpty(x->fields._AssetName_k__BackingField, this->fields.targetName, 0);
+}
+
+
+void FieldMotionManager___c__DisplayClass21_0___ctor(
+        FieldMotionManager___c__DisplayClass21_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+}
+
+
+UnityEngine_GameObject_o *FieldMotionManager___c__DisplayClass21_0___GetGameObject_b__0(
+        FieldMotionManager___c__DisplayClass21_0_o *this,
+        BattleFieldMotionComponent_o *comp,
+        const MethodInfo *method)
+{
+  if ( !comp )
+    sub_1C942F0(this, 0);
+  return BattleFieldMotionComponent__getGameObject(comp, this->fields.name, 0);
+}
+
+
+void FieldMotionManager___c__DisplayClass22_0___ctor(
+        FieldMotionManager___c__DisplayClass22_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+}
+
+
+UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass22_0___GetTransform_b__0(
+        FieldMotionManager___c__DisplayClass22_0_o *this,
+        BattleFieldMotionComponent_o *comp,
+        const MethodInfo *method)
+{
+  if ( !comp )
+    sub_1C942F0(this, 0);
+  return BattleFieldMotionComponent__getEnemyPopPoint(comp, this->fields.index, 0);
+}
+
+
+UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass22_0___GetTransform_b__2(
+        FieldMotionManager___c__DisplayClass22_0_o *this,
+        BattleFieldMotionComponent_o *comp,
+        const MethodInfo *method)
+{
+  if ( !comp )
+    sub_1C942F0(this, 0);
+  return BattleFieldMotionComponent__getPlayerPopTr(comp, this->fields.index, 0);
+}
+
+
+UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass22_0___GetTransform_b__4(
+        FieldMotionManager___c__DisplayClass22_0_o *this,
+        BattleFieldMotionComponent_o *comp,
+        const MethodInfo *method)
+{
+  if ( !comp )
+    sub_1C942F0(this, 0);
+  return BattleFieldMotionComponent__getPlayerTacticalTr(comp, this->fields.index, 0);
+}
+
+
+UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass22_0___GetTransform_b__5(
+        FieldMotionManager___c__DisplayClass22_0_o *this,
+        BattleFieldMotionComponent_o *comp,
+        const MethodInfo *method)
+{
+  if ( !comp )
+    sub_1C942F0(this, 0);
+  return BattleFieldMotionComponent__getEnemyTacticalTr(comp, this->fields.index, 0);
+}
+
+
+void FieldMotionManager___c__DisplayClass23_0___ctor(
+        FieldMotionManager___c__DisplayClass23_0_o *this,
+        const MethodInfo *method)
+{
+  System_Object___ctor((Il2CppObject *)this, 0);
+}
+
+
+UnityEngine_Transform_o *FieldMotionManager___c__DisplayClass23_0___GetTargetTransform_b__0(
+        FieldMotionManager___c__DisplayClass23_0_o *this,
+        BattleFieldMotionComponent_o *comp,
+        const MethodInfo *method)
+{
+  if ( !comp )
+    sub_1C942F0(this, 0);
+  return BattleFieldMotionComponent__GetTargetTr(comp, this->fields.type, this->fields.index, 0);
 }

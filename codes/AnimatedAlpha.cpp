@@ -12,10 +12,10 @@ void AnimatedAlpha__LateUpdate(AnimatedAlpha_o *this, const MethodInfo *method)
   void *v5; // x0
   UnityEngine_Object_o *mPanel; // x20
 
-  if ( (byte_4CCBCD4 & 1) == 0 )
+  if ( (byte_4D31086 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBCD4 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D31086 = 1;
   }
   mWidget = (UnityEngine_Object_o *)this->fields.mWidget;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -45,7 +45,7 @@ void AnimatedAlpha__LateUpdate(AnimatedAlpha_o *this, const MethodInfo *method)
       return;
     }
 LABEL_14:
-    sub_1C71608(v5, v4);
+    sub_1C942F0(v5, v4);
   }
 }
 
@@ -68,21 +68,21 @@ void AnimatedAlpha__OnEnable(AnimatedAlpha_o *this, const MethodInfo *method)
   System_String_o *v16; // x7
   const MethodInfo *v17; // x1
 
-  if ( (byte_4CCBCD3 & 1) == 0 )
+  if ( (byte_4D31085 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIWidget___);
-    byte_4CCBCD3 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIWidget___);
+    byte_4D31085 = 1;
   }
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIWidget___);
+                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIWidget___);
   this->fields.mWidget = (struct UIWidget_o *)Component_object;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mWidget, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
   v10 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+          (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   this->fields.mPanel = (struct UIPanel_o *)v10;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mPanel, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mPanel, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   AnimatedAlpha__LateUpdate(this, v17);
 }

@@ -8,18 +8,18 @@ void EnableCondTypeComponent___ctor(EnableCondTypeComponent_o *this, const Metho
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CC6915 & 1) == 0 )
+  if ( (byte_4D2BCC2 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_EnableCondTypeComponent_CondData___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_EnableCondTypeComponent_CondData__TypeInfo);
-    byte_4CC6915 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_EnableCondTypeComponent_CondData___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_EnableCondTypeComponent_CondData__TypeInfo);
+    byte_4D2BCC2 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_EnableCondTypeComponent_CondData__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_EnableCondTypeComponent_CondData__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_EnableCondTypeComponent_CondData___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_EnableCondTypeComponent_CondData___ctor__);
   this->fields.condDataList = (struct System_Collections_Generic_List_EnableCondTypeComponent_CondData__o *)v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.condDataList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.condDataList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   this->fields.visibleIsOpen = 1;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -43,38 +43,38 @@ bool EnableCondTypeComponent__IsOpen(EnableCondTypeComponent_o *this, const Meth
   System_Collections_Generic_IEnumerable_T__o *v16; // x19
   System_Action_object__o *v17; // x21
 
-  if ( (byte_4CC6914 & 1) == 0 )
+  if ( (byte_4D2BCC1 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_EnableCondTypeComponent_CondData__TypeInfo);
-    sub_1C713B0(&Method_BasicHelper_ForEach_EnableCondTypeComponent_CondData___);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__bool__ContainsValue__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__bool___ctor__);
-    sub_1C713B0(&System_Collections_Generic_Dictionary_int__bool__TypeInfo);
-    sub_1C713B0(&Method_System_Linq_Enumerable_Where_EnableCondTypeComponent_CondData___);
-    sub_1C713B0(&System_Func_EnableCondTypeComponent_CondData__bool__TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_EnableCondTypeComponent_CondData__get_Count__);
-    sub_1C713B0(&Method_EnableCondTypeComponent___c__DisplayClass2_0__IsOpen_b__0__);
-    sub_1C713B0(&Method_EnableCondTypeComponent___c__DisplayClass2_0__IsOpen_b__1__);
-    sub_1C713B0(&EnableCondTypeComponent___c__DisplayClass2_0_TypeInfo);
-    byte_4CC6914 = 1;
+    sub_1C94098(&System_Action_EnableCondTypeComponent_CondData__TypeInfo);
+    sub_1C94098(&Method_BasicHelper_ForEach_EnableCondTypeComponent_CondData___);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__bool__ContainsValue__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__bool___ctor__);
+    sub_1C94098(&System_Collections_Generic_Dictionary_int__bool__TypeInfo);
+    sub_1C94098(&Method_System_Linq_Enumerable_Where_EnableCondTypeComponent_CondData___);
+    sub_1C94098(&System_Func_EnableCondTypeComponent_CondData__bool__TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_EnableCondTypeComponent_CondData__get_Count__);
+    sub_1C94098(&Method_EnableCondTypeComponent___c__DisplayClass2_0__IsOpen_b__0__);
+    sub_1C94098(&Method_EnableCondTypeComponent___c__DisplayClass2_0__IsOpen_b__1__);
+    sub_1C94098(&EnableCondTypeComponent___c__DisplayClass2_0_TypeInfo);
+    byte_4D2BCC1 = 1;
   }
-  v3 = sub_1C715FC(EnableCondTypeComponent___c__DisplayClass2_0_TypeInfo);
+  v3 = sub_1C942E4(EnableCondTypeComponent___c__DisplayClass2_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   condDataList = this->fields.condDataList;
   if ( !condDataList )
     goto LABEL_9;
   if ( condDataList->fields._size )
   {
-    v7 = (System_Collections_Generic_Dictionary_int__bool__o *)sub_1C715FC(System_Collections_Generic_Dictionary_int__bool__TypeInfo);
+    v7 = (System_Collections_Generic_Dictionary_int__bool__o *)sub_1C942E4(System_Collections_Generic_Dictionary_int__bool__TypeInfo);
     System_Collections_Generic_Dictionary_int__bool____ctor(
       v7,
-      (const MethodInfo_3453060 *)Method_System_Collections_Generic_Dictionary_int__bool___ctor__);
+      (const MethodInfo_34A56A0 *)Method_System_Collections_Generic_Dictionary_int__bool___ctor__);
     if ( v3 )
     {
       *(_QWORD *)(v3 + 16) = v7;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)v7, v8, v9, v10, v11, v12, v13);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 16), (int32_t)v7, v8, v9, v10, v11, v12, v13);
       v14 = this->fields.condDataList;
-      v15 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_EnableCondTypeComponent_CondData__bool__TypeInfo);
+      v15 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_EnableCondTypeComponent_CondData__bool__TypeInfo);
       System_Func_object__bool____ctor(
         v15,
         (Il2CppObject *)v3,
@@ -83,8 +83,8 @@ bool EnableCondTypeComponent__IsOpen(EnableCondTypeComponent_o *this, const Meth
       v16 = (System_Collections_Generic_IEnumerable_T__o *)System_Linq_Enumerable__Where_object_(
                                                              (System_Collections_Generic_IEnumerable_TSource__o *)v14,
                                                              (System_Func_TSource__bool__o *)v15,
-                                                             (const MethodInfo_3192108 *)Method_System_Linq_Enumerable_Where_EnableCondTypeComponent_CondData___);
-      v17 = (System_Action_object__o *)sub_1C715FC(System_Action_EnableCondTypeComponent_CondData__TypeInfo);
+                                                             (const MethodInfo_31E39C8 *)Method_System_Linq_Enumerable_Where_EnableCondTypeComponent_CondData___);
+      v17 = (System_Action_object__o *)sub_1C942E4(System_Action_EnableCondTypeComponent_CondData__TypeInfo);
       System_Action_object____ctor(
         v17,
         (Il2CppObject *)v3,
@@ -93,16 +93,16 @@ bool EnableCondTypeComponent__IsOpen(EnableCondTypeComponent_o *this, const Meth
       BasicHelper__ForEach_object_(
         v16,
         (System_Action_T__o *)v17,
-        (const MethodInfo_3136DF4 *)Method_BasicHelper_ForEach_EnableCondTypeComponent_CondData___);
+        (const MethodInfo_3188088 *)Method_BasicHelper_ForEach_EnableCondTypeComponent_CondData___);
       v4 = *(System_Collections_Generic_Dictionary_int__bool__o **)(v3 + 16);
       if ( v4 )
         return System_Collections_Generic_Dictionary_int__bool___ContainsValue(
                  v4,
                  1,
-                 (const MethodInfo_3453C58 *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsValue__);
+                 (const MethodInfo_34A6298 *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsValue__);
     }
 LABEL_9:
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   }
   return 1;
 }
@@ -130,11 +130,11 @@ bool EnableCondTypeComponent___c__DisplayClass2_0___IsOpen_b__0(
   EnableCondTypeComponent___c__DisplayClass2_0_o *v4; // x20
 
   v4 = this;
-  if ( (byte_4CC6916 & 1) == 0 )
+  if ( (byte_4D2BCC3 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__);
-    this = (EnableCondTypeComponent___c__DisplayClass2_0_o *)sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
-    byte_4CC6916 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__);
+    this = (EnableCondTypeComponent___c__DisplayClass2_0_o *)sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
+    byte_4D2BCC3 = 1;
   }
   if ( !x )
     goto LABEL_9;
@@ -144,16 +144,16 @@ bool EnableCondTypeComponent___c__DisplayClass2_0___IsOpen_b__0(
   if ( System_Collections_Generic_Dictionary_int__bool___ContainsKey(
          (System_Collections_Generic_Dictionary_int__bool__o *)this,
          x->fields.condGroup,
-         (const MethodInfo_3453C34 *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__) )
+         (const MethodInfo_34A6274 *)Method_System_Collections_Generic_Dictionary_int__bool__ContainsKey__) )
   {
     this = (EnableCondTypeComponent___c__DisplayClass2_0_o *)v4->fields.groupStatus;
     if ( this )
       return System_Collections_Generic_Dictionary_int__bool___get_Item(
                (System_Collections_Generic_Dictionary_int__bool__o *)this,
                x->fields.condGroup,
-               (const MethodInfo_3453990 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
+               (const MethodInfo_34A5FD0 *)Method_System_Collections_Generic_Dictionary_int__bool__get_Item__);
 LABEL_9:
-    sub_1C71608(this, x);
+    sub_1C942F0(this, x);
   }
   return 1;
 }
@@ -172,11 +172,11 @@ void EnableCondTypeComponent___c__DisplayClass2_0___IsOpen_b__1(
   int64_t condNum; // x19
 
   v4 = this;
-  if ( (byte_4CC6917 & 1) == 0 )
+  if ( (byte_4D2BCC4 & 1) == 0 )
   {
-    sub_1C713B0(&CondType_TypeInfo);
-    this = (EnableCondTypeComponent___c__DisplayClass2_0_o *)sub_1C713B0(&Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
-    byte_4CC6917 = 1;
+    sub_1C94098(&CondType_TypeInfo);
+    this = (EnableCondTypeComponent___c__DisplayClass2_0_o *)sub_1C94098(&Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
+    byte_4D2BCC4 = 1;
   }
   if ( !x )
     goto LABEL_8;
@@ -190,10 +190,10 @@ void EnableCondTypeComponent___c__DisplayClass2_0___IsOpen_b__1(
   this = (EnableCondTypeComponent___c__DisplayClass2_0_o *)CondType__IsOpen(condType, condId, condNum, 0, 0, 0);
   if ( !groupStatus )
 LABEL_8:
-    sub_1C71608(this, x);
+    sub_1C942F0(this, x);
   System_Collections_Generic_Dictionary_int__bool___set_Item(
     groupStatus,
     condGroup,
     (unsigned __int8)this & 1,
-    (const MethodInfo_3453A20 *)Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
+    (const MethodInfo_34A6060 *)Method_System_Collections_Generic_Dictionary_int__bool__set_Item__);
 }

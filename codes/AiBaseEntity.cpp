@@ -1,13 +1,13 @@
 void AiBaseEntity___ctor(AiBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC6F8C & 1) == 0 )
+  if ( (byte_4D2C3FF & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC6F8C = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2C3FF = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -15,26 +15,26 @@ int32_t AiBaseEntity__ChangeNpCountPlayer(AiBaseEntity_o *this, const MethodInfo
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4CC6F87 & 1) == 0 )
+  if ( (byte_4D2C3F7 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_4358/*"ChangeNpCountPlayer"*/);
-    byte_4CC6F87 = 1;
+    sub_1C94098(&StringLiteral_4368/*"ChangeNpCountPlayer"*/);
+    byte_4D2C3F7 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_4358/*"ChangeNpCountPlayer"*/, 0, v2);
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_4368/*"ChangeNpCountPlayer"*/, 0, v2);
 }
 
 
 System_String_o *AiBaseEntity__CreatePK(int32_t id, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4CC6F7E & 1) == 0 )
+  if ( (byte_4D2C3EE & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CC6F7E = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4D2C3EE = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            id,
            idx,
-           (const MethodInfo_3149294 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -50,12 +50,45 @@ int32_t AiBaseEntity__GetActSelectIndex(AiBaseEntity_o *this, int32_t defIndex, 
 {
   const MethodInfo *v3; // x3
 
-  if ( (byte_4CC6F88 & 1) == 0 )
+  if ( (byte_4D2C3F8 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_2112/*"ActSelectIndex"*/);
-    byte_4CC6F88 = 1;
+    sub_1C94098(&StringLiteral_2114/*"ActSelectIndex"*/);
+    byte_4D2C3F8 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_2112/*"ActSelectIndex"*/, defIndex, v3);
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_2114/*"ActSelectIndex"*/, defIndex, v3);
+}
+
+
+System_Int32_array *AiBaseEntity__GetCameraIds(AiBaseEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4D2C3FE & 1) == 0 )
+  {
+    sub_1C94098(&StringLiteral_17796/*"cameraIds"*/);
+    byte_4D2C3FE = 1;
+  }
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_17796/*"cameraIds"*/, 0, 0);
+}
+
+
+System_Int32_array *AiBaseEntity__GetMotionIds(AiBaseEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4D2C3FC & 1) == 0 )
+  {
+    sub_1C94098(&StringLiteral_21862/*"motionIds"*/);
+    byte_4D2C3FC = 1;
+  }
+  return EntityScriptUtil__GetIntArray(this->fields.script, (System_String_o *)StringLiteral_21862/*"motionIds"*/, 0, 0);
+}
+
+
+System_String_o *AiBaseEntity__GetMovieName(AiBaseEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4D2C3FD & 1) == 0 )
+  {
+    sub_1C94098(&StringLiteral_21879/*"movieName"*/);
+    byte_4D2C3FD = 1;
+  }
+  return EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21879/*"movieName"*/, 0, 0);
 }
 
 
@@ -65,12 +98,12 @@ bool AiBaseEntity__IsDeadToEnableUpHate(AiBaseEntity_o *this, bool def, const Me
   int32_t ScriptIntParam; // w0
   bool v7; // w8
 
-  if ( (byte_4CC6F89 & 1) == 0 )
+  if ( (byte_4D2C3F9 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_20989/*"isDeadToEnableUpHate"*/);
-    byte_4CC6F89 = 1;
+    sub_1C94098(&StringLiteral_21090/*"isDeadToEnableUpHate"*/);
+    byte_4D2C3F9 = 1;
   }
-  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20989/*"isDeadToEnableUpHate"*/, -1, v3);
+  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_21090/*"isDeadToEnableUpHate"*/, -1, v3);
   v7 = ScriptIntParam == 1;
   if ( ScriptIntParam == -1 )
     return def;
@@ -82,12 +115,12 @@ bool AiBaseEntity__IsForcedActionSpeedAnyTime(AiBaseEntity_o *this, const Method
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4CC6F84 & 1) == 0 )
+  if ( (byte_4D2C3F4 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_6813/*"ForcedActionSpeedAnyTime"*/);
-    byte_4CC6F84 = 1;
+    sub_1C94098(&StringLiteral_6826/*"ForcedActionSpeedAnyTime"*/);
+    byte_4D2C3F4 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_6813/*"ForcedActionSpeedAnyTime"*/, -1, v2) == 1;
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_6826/*"ForcedActionSpeedAnyTime"*/, -1, v2) == 1;
 }
 
 
@@ -95,12 +128,12 @@ bool AiBaseEntity__IsForcedStepInSpeedAnyTime(AiBaseEntity_o *this, const Method
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4CC6F85 & 1) == 0 )
+  if ( (byte_4D2C3F5 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_6816/*"ForcedStepInSpeedAnyTime"*/);
-    byte_4CC6F85 = 1;
+    sub_1C94098(&StringLiteral_6829/*"ForcedStepInSpeedAnyTime"*/);
+    byte_4D2C3F5 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_6816/*"ForcedStepInSpeedAnyTime"*/, -1, v2) > 0;
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_6829/*"ForcedStepInSpeedAnyTime"*/, -1, v2) > 0;
 }
 
 
@@ -108,12 +141,12 @@ bool AiBaseEntity__IsIncludeUnsubState(AiBaseEntity_o *this, const MethodInfo *m
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4CC6F83 & 1) == 0 )
+  if ( (byte_4D2C3F3 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_20826/*"includeUnsubState"*/);
-    byte_4CC6F83 = 1;
+    sub_1C94098(&StringLiteral_20925/*"includeUnsubState"*/);
+    byte_4D2C3F3 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20826/*"includeUnsubState"*/, -1, v2) != -1;
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_20925/*"includeUnsubState"*/, -1, v2) != -1;
 }
 
 
@@ -121,12 +154,12 @@ bool AiBaseEntity__IsResetNpCountPlayer(AiBaseEntity_o *this, const MethodInfo *
 {
   const MethodInfo *v2; // x3
 
-  if ( (byte_4CC6F86 & 1) == 0 )
+  if ( (byte_4D2C3F6 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_11371/*"ResetNpCountPlayer"*/);
-    byte_4CC6F86 = 1;
+    sub_1C94098(&StringLiteral_11412/*"ResetNpCountPlayer"*/);
+    byte_4D2C3F6 = 1;
   }
-  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_11371/*"ResetNpCountPlayer"*/, -1, v2) == 1;
+  return AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_11412/*"ResetNpCountPlayer"*/, -1, v2) == 1;
 }
 
 
@@ -138,12 +171,12 @@ bool AiBaseEntity__TryGetKeyBattleValue(AiBaseEntity_o *this, int32_t *key, cons
   *key = 0;
   vals = this->fields.vals;
   if ( !vals )
-    sub_1C71608(this, key);
+    sub_1C942F0(this, key);
   max_length = vals->max_length;
   if ( max_length )
   {
     if ( !(_DWORD)max_length )
-      sub_1C71610(this);
+      sub_1C942F8(this);
     *key = vals->m_Items[0];
   }
   return max_length != 0;
@@ -155,14 +188,14 @@ bool AiBaseEntity__TryGetMultiIndividuality(
         System_Int32_array_array **resValues,
         const MethodInfo *method)
 {
-  if ( (byte_4CC6F8A & 1) == 0 )
+  if ( (byte_4D2C3FA & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_7626/*"Individuality"*/);
-    byte_4CC6F8A = 1;
+    sub_1C94098(&StringLiteral_7642/*"Individuality"*/);
+    byte_4D2C3FA = 1;
   }
   return EntityScriptUtil__TryGet2DimensionalIntArray(
            this->fields.script,
-           (System_String_o *)StringLiteral_7626/*"Individuality"*/,
+           (System_String_o *)StringLiteral_7642/*"Individuality"*/,
            resValues,
            0);
 }
@@ -173,12 +206,12 @@ bool AiBaseEntity__TryGetOverwriteBaseAiId(AiBaseEntity_o *this, int32_t *baseAi
   const MethodInfo *v3; // x3
   int32_t ScriptIntParam; // w0
 
-  if ( (byte_4CC6F8B & 1) == 0 )
+  if ( (byte_4D2C3FB & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_17058/*"baseAiId"*/);
-    byte_4CC6F8B = 1;
+    sub_1C94098(&StringLiteral_17118/*"baseAiId"*/);
+    byte_4D2C3FB = 1;
   }
-  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_17058/*"baseAiId"*/, -1, v3);
+  ScriptIntParam = AiBaseEntity__getScriptIntParam(this, (System_String_o *)StringLiteral_17118/*"baseAiId"*/, -1, v3);
   *baseAiId = ScriptIntParam;
   return ScriptIntParam >= 0;
 }
@@ -200,14 +233,14 @@ System_Int32_array *AiBaseEntity__getAvals(AiBaseEntity_o *this, const MethodInf
 {
   System_Int32_array *result; // x0
 
-  if ( (byte_4CC6F80 & 1) == 0 )
+  if ( (byte_4D2C3F0 & 1) == 0 )
   {
-    sub_1C713B0(&int___TypeInfo);
-    byte_4CC6F80 = 1;
+    sub_1C94098(&int___TypeInfo);
+    byte_4D2C3F0 = 1;
   }
   result = this->fields.avals;
   if ( !result )
-    return (System_Int32_array *)sub_1C71458(int___TypeInfo, 0);
+    return (System_Int32_array *)sub_1C94140(int___TypeInfo, 0);
   return result;
 }
 
@@ -236,7 +269,7 @@ int32_t AiBaseEntity__getIndexAval(AiBaseEntity_o *this, int32_t index, const Me
   if ( max_length <= index )
     return 0;
   if ( max_length <= (unsigned int)index )
-    sub_1C71610(this);
+    sub_1C942F8(this);
   return avals->m_Items[index];
 }
 
@@ -257,17 +290,17 @@ int32_t AiBaseEntity__getScriptIntParam(
   const MethodInfo *v13; // x2
 
   v4 = defVal;
-  if ( (byte_4CC6F81 & 1) == 0 )
+  if ( (byte_4D2C3F1 & 1) == 0 )
   {
-    sub_1C713B0(&long_TypeInfo);
-    byte_4CC6F81 = 1;
+    sub_1C94098(&long_TypeInfo);
+    byte_4D2C3F1 = 1;
   }
   ScriptObj = AiBaseEntity__getScriptObj(this, key, *(const MethodInfo **)&defVal);
   if ( !ScriptObj )
     return v4;
   if ( ScriptObj->klass->_1.element_class == long_TypeInfo->_1.element_class )
     return *(_DWORD *)j_il2cpp_object_unbox_0(ScriptObj, long_TypeInfo, v8, v9);
-  sub_1C719A4(ScriptObj);
+  sub_1C9468C(ScriptObj);
   return (unsigned int)AiBaseEntity__getScriptObj(v11, v12, v13);
 }
 
@@ -277,10 +310,10 @@ Il2CppObject *AiBaseEntity__getScriptObj(AiBaseEntity_o *this, System_String_o *
   Il2CppObject *result; // x0
   Il2CppObject *value; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CC6F82 & 1) == 0 )
+  if ( (byte_4D2C3F2 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4CC6F82 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4D2C3F2 = 1;
   }
   result = (Il2CppObject *)this->fields.script;
   if ( result )
@@ -290,7 +323,7 @@ Il2CppObject *AiBaseEntity__getScriptObj(AiBaseEntity_o *this, System_String_o *
            (System_Collections_Generic_Dictionary_object__object__o *)result,
            (Il2CppObject *)key,
            &value,
-           (const MethodInfo_34CCEEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+           (const MethodInfo_3522400 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     {
       return value;
     }
@@ -323,14 +356,14 @@ System_Int64_array *AiBaseEntity__getVals(AiBaseEntity_o *this, const MethodInfo
 {
   System_Int64_array *result; // x0
 
-  if ( (byte_4CC6F7F & 1) == 0 )
+  if ( (byte_4D2C3EF & 1) == 0 )
   {
-    sub_1C713B0(&long___TypeInfo);
-    byte_4CC6F7F = 1;
+    sub_1C94098(&long___TypeInfo);
+    byte_4D2C3EF = 1;
   }
   result = this->fields.vals;
   if ( !result )
-    return (System_Int64_array *)sub_1C71458(long___TypeInfo, 0);
+    return (System_Int64_array *)sub_1C94140(long___TypeInfo, 0);
   return result;
 }
 

@@ -1,9 +1,9 @@
 void MapModelManager___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CC3F02 & 1) == 0 )
+  if ( (byte_4D292D6 & 1) == 0 )
   {
-    sub_1C713B0(&MapModelManager_TypeInfo);
-    byte_4CC3F02 = 1;
+    sub_1C94098(&MapModelManager_TypeInfo);
+    byte_4D292D6 = 1;
   }
   MapModelManager_TypeInfo->static_fields->LAYER_LOWER_ID = 1;
 }
@@ -19,18 +19,18 @@ void MapModelManager___ctor(MapModelManager_o *this, const MethodInfo *method)
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CC3F01 & 1) == 0 )
+  if ( (byte_4D292D5 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_ModelLineComponent___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_ModelLineComponent__TypeInfo);
-    byte_4CC3F01 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_ModelLineComponent___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_ModelLineComponent__TypeInfo);
+    byte_4D292D5 = 1;
   }
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_ModelLineComponent__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_ModelLineComponent__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_ModelLineComponent___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_ModelLineComponent___ctor__);
   this->fields.lineList = (struct System_Collections_Generic_List_ModelLineComponent__o *)v3;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.lineList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.lineList, (int32_t)v3, v4, v5, v6, v7, v8, v9);
   System_Object___ctor((Il2CppObject *)this, 0);
 }
 
@@ -74,16 +74,16 @@ void MapModelManager__CreateModelLineBySpotId(
   UnityEngine_Vector3_o v37; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Quaternion_o v38; // 0:s3.4,4:s4.4,8:s5.4,12:s6.4
 
-  if ( (byte_4CC3EF5 & 1) == 0 )
+  if ( (byte_4D292C9 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_SpotMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_ModelLineComponent___);
-    sub_1C713B0(&Method_System_Collections_Generic_List_ModelLineComponent__Add__);
-    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject____78725208);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3EF5 = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_SpotMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_ModelLineComponent___);
+    sub_1C94098(&Method_System_Collections_Generic_List_ModelLineComponent__Add__);
+    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject____79133440);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D292C9 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -91,7 +91,7 @@ void MapModelManager__CreateModelLineBySpotId(
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_SpotMaster___);
+    Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SpotMaster___);
     if ( spotRoadInfo )
     {
       v9 = Master_object;
@@ -105,24 +105,24 @@ void MapModelManager__CreateModelLineBySpotId(
           Entity = DataMasterBase_object__object__int___GetEntity(
                      v9,
                      (int32_t)Master_object->fields._MasterName_k__BackingField,
-                     (const MethodInfo_3408E80 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+                     (const MethodInfo_345B4C0 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
           v13 = DataMasterBase_object__object__int___GetEntity(
                   v9,
                   MasterName_k__BackingField_high,
-                  (const MethodInfo_3408E80 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
-          if ( !byte_4CC0D09 )
+                  (const MethodInfo_345B4C0 *)Method_DataMasterBase_SpotMaster__SpotEntity__int__GetEntity__);
+          if ( !byte_4D25F19 )
           {
-            sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-            byte_4CC0D09 = 1;
+            sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+            byte_4D25F19 = 1;
           }
           static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
           x = static_fields->zeroVector.fields.x;
           y = static_fields->zeroVector.fields.y;
           z = static_fields->zeroVector.fields.z;
-          if ( !byte_4CC0D0F )
+          if ( !byte_4D25F1F )
           {
-            sub_1C713B0(&UnityEngine_Quaternion_TypeInfo);
-            byte_4CC0D0F = 1;
+            sub_1C94098(&UnityEngine_Quaternion_TypeInfo);
+            byte_4D25F1F = 1;
           }
           v18 = UnityEngine_Quaternion_TypeInfo->static_fields;
           v20 = v18->identityQuaternion.fields.x;
@@ -138,24 +138,24 @@ void MapModelManager__CreateModelLineBySpotId(
           v38.fields.y = v19;
           v38.fields.z = v22;
           v38.fields.w = w;
-          v23 = UnityEngine_Object__Instantiate_object__52264724(
+          v23 = UnityEngine_Object__Instantiate_object__52598740(
                   (Il2CppObject *)linePrefab,
                   v37,
                   v38,
-                  (const MethodInfo_31D7F14 *)Method_UnityEngine_Object_Instantiate_GameObject____78725208);
+                  (const MethodInfo_32297D4 *)Method_UnityEngine_Object_Instantiate_GameObject____79133440);
           Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)srcLineSprite__GetGobjName(
                                                                           v11->fields._MasterKind_k__BackingField,
                                                                           0);
           if ( v23 )
           {
             UnityEngine_Object__set_name((UnityEngine_Object_o *)v23, (System_String_o *)Master_object, 0);
-            GameObjectExtensions__SafeSetParent_36395768(
+            GameObjectExtensions__SafeSetParent_36804604(
               (UnityEngine_GameObject_o *)v23,
               this->fields._RoadRoot_k__BackingField,
               0);
             Component_object = UnityEngine_GameObject__GetComponent_object_(
                                  (UnityEngine_GameObject_o *)v23,
-                                 (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_ModelLineComponent___);
+                                 (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_ModelLineComponent___);
             if ( UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0) )
               return;
             Master_object = (DataMasterBase_TMaster__TEntity__PKType__o *)this->fields.lineList;
@@ -172,14 +172,14 @@ void MapModelManager__CreateModelLineBySpotId(
                   System_Collections_Generic_List_object___AddWithResize(
                     (System_Collections_Generic_List_object__o *)Master_object,
                     Component_object,
-                    *(const MethodInfo_3810718 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
+                    *(const MethodInfo_386AE34 **)(*(_QWORD *)(v32[4] + 192LL) + 112LL));
                 }
                 else
                 {
                   v34 = v31 + 8 * MasterName_k__BackingField_low;
                   LODWORD(Master_object->fields._MasterName_k__BackingField) = MasterName_k__BackingField_low + 1;
                   *(_QWORD *)(v34 + 32) = Component_object;
-                  sub_1C71354(
+                  sub_1C9403C(
                     (GrandQuestFolderBoardItem_o *)(v34 + 32),
                     (int32_t)Component_object,
                     v25,
@@ -211,7 +211,7 @@ void MapModelManager__CreateModelLineBySpotId(
         }
       }
     }
-    sub_1C71608(Master_object, v8);
+    sub_1C942F0(Master_object, v8);
   }
 }
 
@@ -229,11 +229,11 @@ int32_t MapModelManager__GetLayerBySpotPrefab(
   int32_t v10; // w19
   int32_t LAYER_LOWER_ID; // w8
 
-  if ( (byte_4CC3EFC & 1) == 0 )
+  if ( (byte_4D292D0 & 1) == 0 )
   {
-    sub_1C713B0(&MapModelManager_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3EFC = 1;
+    sub_1C94098(&MapModelManager_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D292D0 = 1;
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -251,7 +251,7 @@ int32_t MapModelManager__GetLayerBySpotPrefab(
   else
   {
     if ( !spotPrefab || (mMapCtrl_SpotInfo = spotPrefab->fields.mMapCtrl_SpotInfo) == 0 )
-      sub_1C71608(mMapCtrl_SpotInfo, v5);
+      sub_1C942F0(mMapCtrl_SpotInfo, v5);
     Layer = MapControl_SpotInfo__GetLayer(mMapCtrl_SpotInfo, v5);
     v9 = MapModelManager_TypeInfo;
     v10 = Layer;
@@ -285,20 +285,20 @@ UnityEngine_Vector3_o MapModelManager__GetLocationPostion(
   MapModelComponent_o *v12; // x0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CC3EFB & 1) == 0 )
+  if ( (byte_4D292CF & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3EFB = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D292CF = 1;
   }
   mapModelComponent = (UnityEngine_Object_o *)this->fields.mapModelComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   if ( UnityEngine_Object__op_Equality(mapModelComponent, 0, 0) )
   {
-    if ( !byte_4CC0D09 )
+    if ( !byte_4D25F19 )
     {
-      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-      byte_4CC0D09 = 1;
+      sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+      byte_4D25F19 = 1;
     }
     static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
     x = static_fields->zeroVector.fields.x;
@@ -309,7 +309,7 @@ UnityEngine_Vector3_o MapModelManager__GetLocationPostion(
   {
     v12 = this->fields.mapModelComponent;
     if ( !v12 )
-      sub_1C71608(0, v6);
+      sub_1C942F0(0, v6);
     *(UnityEngine_Vector3_o *)&x = MapModelComponent__GetCameraLocationPosition(v12, layer, v7);
   }
   result.fields.z = z;
@@ -327,10 +327,10 @@ UnityEngine_GameObject_o *MapModelManager__GetMapGimmickRootObject(MapModelManag
   UnityEngine_GameObject_o *result; // x0
   struct MapModelComponent_o *v7; // x8
 
-  if ( (byte_4CC3EFD & 1) == 0 )
+  if ( (byte_4D292D1 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3EFD = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D292D1 = 1;
   }
   mapModelComponent = (UnityEngine_Object_o *)this->fields.mapModelComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -341,7 +341,7 @@ UnityEngine_GameObject_o *MapModelManager__GetMapGimmickRootObject(MapModelManag
   {
     v7 = this->fields.mapModelComponent;
     if ( !v7 )
-      sub_1C71608(0, v4);
+      sub_1C942F0(0, v4);
     return v7->fields.mapModelGimmickRoot;
   }
   return result;
@@ -383,32 +383,32 @@ void MapModelManager__LoadMapModel(
   int32_t v34; // [xsp+8h] [xbp-38h] BYREF
   int32_t v35; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CC3EF4 & 1) == 0 )
+  if ( (byte_4D292C8 & 1) == 0 )
   {
-    sub_1C713B0(&AssetManager_TypeInfo);
-    sub_1C713B0(&int_TypeInfo);
-    sub_1C713B0(&AssetLoader_LoadEndDataHandler_TypeInfo);
-    sub_1C713B0(&Method_MapModelManager___c__DisplayClass41_0__LoadMapModel_b__0__);
-    sub_1C713B0(&MapModelManager___c__DisplayClass41_0_TypeInfo);
-    sub_1C713B0(&StringLiteral_13699/*"Terminal/MapModels/{0:D4}_{1}"*/);
-    byte_4CC3EF4 = 1;
+    sub_1C94098(&AssetManager_TypeInfo);
+    sub_1C94098(&int_TypeInfo);
+    sub_1C94098(&AssetLoader_LoadEndDataHandler_TypeInfo);
+    sub_1C94098(&Method_MapModelManager___c__DisplayClass41_0__LoadMapModel_b__0__);
+    sub_1C94098(&MapModelManager___c__DisplayClass41_0_TypeInfo);
+    sub_1C94098(&StringLiteral_13746/*"Terminal/MapModels/{0:D4}_{1}"*/);
+    byte_4D292C8 = 1;
   }
-  v9 = sub_1C715FC(MapModelManager___c__DisplayClass41_0_TypeInfo);
+  v9 = sub_1C942E4(MapModelManager___c__DisplayClass41_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v9, 0);
   if ( !v9 )
-    sub_1C71608(v10, v11);
+    sub_1C942F0(v10, v11);
   *(_QWORD *)(v9 + 16) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 16), (int32_t)this, v12, v13, v14, v15, v16, v17);
   *(_QWORD *)(v9 + 24) = endFunc;
   v18 = (System_Action_o **)(v9 + 24);
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)endFunc, v19, v20, v21, v22, v23, v24);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v9 + 24), (int32_t)endFunc, v19, v20, v21, v22, v23, v24);
   if ( MapModelManager__get_IsMapModel(this, v25) )
   {
     v35 = assetId;
     v26 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v35);
     v34 = mapId;
     v27 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v34);
-    v28 = System_String__Format_64073032((System_String_o *)StringLiteral_13699/*"Terminal/MapModels/{0:D4}_{1}"*/, v26, v27, 0);
+    v28 = System_String__Format_64459052((System_String_o *)StringLiteral_13746/*"Terminal/MapModels/{0:D4}_{1}"*/, v26, v27, 0);
     MapModelAssetData_k__BackingField = this->fields._MapModelAssetData_k__BackingField;
     v31 = v28;
     if ( MapModelAssetData_k__BackingField
@@ -418,7 +418,7 @@ void MapModelManager__LoadMapModel(
     }
     MapModelManager__ReleaseMapModelObject(this, v29);
     MapModelManager__ReleaseLineList(this, v32);
-    v33 = (AssetLoader_LoadEndDataHandler_o *)sub_1C715FC(AssetLoader_LoadEndDataHandler_TypeInfo);
+    v33 = (AssetLoader_LoadEndDataHandler_o *)sub_1C942E4(AssetLoader_LoadEndDataHandler_TypeInfo);
     AssetLoader_LoadEndDataHandler___ctor(
       v33,
       (Il2CppObject *)v9,
@@ -479,21 +479,21 @@ void MapModelManager__MoveMapModelCamera(
   v14 = startedPos.fields.z;
   v15 = startedPos.fields.y;
   v16 = startedPos.fields.x;
-  if ( (byte_4CC3EF7 & 1) == 0 )
+  if ( (byte_4D292CB & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_MapModelManager___c__DisplayClass45_0__MoveMapModelCamera_b__0__);
-    sub_1C713B0(&MapModelManager___c__DisplayClass45_0_TypeInfo);
-    byte_4CC3EF7 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_GameObjectExtensions_SafeGetComponent_EasingObject___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_MapModelManager___c__DisplayClass45_0__MoveMapModelCamera_b__0__);
+    sub_1C94098(&MapModelManager___c__DisplayClass45_0_TypeInfo);
+    byte_4D292CB = 1;
   }
-  v18 = sub_1C715FC(MapModelManager___c__DisplayClass45_0_TypeInfo);
+  v18 = sub_1C942E4(MapModelManager___c__DisplayClass45_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v18, 0);
   if ( !v18 )
     goto LABEL_13;
   *(_QWORD *)(v18 + 16) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v18 + 16), (int32_t)this, v21, v22, v23, v24, v25, v26);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v18 + 16), (int32_t)this, v21, v22, v23, v24, v25, v26);
   *(float *)(v18 + 24) = v16;
   *(float *)(v18 + 28) = v15;
   *(float *)(v18 + 32) = v14;
@@ -520,10 +520,10 @@ LABEL_9:
     || (gameObject = UnityEngine_Component__get_gameObject(v19, 0),
         Component_object = GameObjectExtensions__SafeGetComponent_object_(
                              gameObject,
-                             (const MethodInfo_31A49B8 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___),
+                             (const MethodInfo_31F6278 *)Method_GameObjectExtensions_SafeGetComponent_EasingObject___),
         *(_QWORD *)(v18 + 48) = Component_object,
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v18 + 48), (int32_t)Component_object, v30, v31, v32, v33, v34, v35),
-        v36 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo),
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v18 + 48), (int32_t)Component_object, v30, v31, v32, v33, v34, v35),
+        v36 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo),
         System_Action___ctor(
           v36,
           (Il2CppObject *)v18,
@@ -532,7 +532,7 @@ LABEL_9:
         (v19 = *(UnityEngine_Component_o **)(v18 + 48)) == 0) )
   {
 LABEL_13:
-    sub_1C71608(v19, v20);
+    sub_1C942F0(v19, v20);
   }
   EasingObject__Play((EasingObject_o *)v19, duration, v36, endAction, 0.0, easingType, 0);
 }
@@ -548,7 +548,7 @@ void MapModelManager__PlayAnimation(
 
   mapModelComponent = this->fields.mapModelComponent;
   if ( !mapModelComponent )
-    sub_1C71608(0, animationName);
+    sub_1C942F0(0, animationName);
   MapModelComponent__PlayAnimation(mapModelComponent, animationName, endAction, method);
 }
 
@@ -565,10 +565,10 @@ void MapModelManager__ReleaseAsset(MapModelManager_o *this, const MethodInfo *me
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CC3EF8 & 1) == 0 )
+  if ( (byte_4D292CC & 1) == 0 )
   {
-    sub_1C713B0(&AssetManager_TypeInfo);
-    byte_4CC3EF8 = 1;
+    sub_1C94098(&AssetManager_TypeInfo);
+    byte_4D292CC = 1;
   }
   MapModelAssetData_k__BackingField = this->fields._MapModelAssetData_k__BackingField;
   p_MapModelAssetData_k__BackingField = (GrandQuestFolderBoardItem_o *)&this->fields._MapModelAssetData_k__BackingField;
@@ -577,9 +577,9 @@ void MapModelManager__ReleaseAsset(MapModelManager_o *this, const MethodInfo *me
   {
     if ( !AssetManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(AssetManager_TypeInfo);
-    AssetManager__releaseAsset_40808072(v4, 0);
+    AssetManager__releaseAsset_41285308(v4, 0);
     p_MapModelAssetData_k__BackingField->klass = 0;
-    sub_1C71354(p_MapModelAssetData_k__BackingField, 0, v6, v7, v8, v9, v10, v11);
+    sub_1C9403C(p_MapModelAssetData_k__BackingField, 0, v6, v7, v8, v9, v10, v11);
   }
 }
 
@@ -592,14 +592,14 @@ void MapModelManager__ReleaseLineList(MapModelManager_o *this, const MethodInfo 
   int v5; // w9
 
   v2 = this;
-  if ( (byte_4CC3EFA & 1) == 0 )
+  if ( (byte_4D292CE & 1) == 0 )
   {
-    this = (MapModelManager_o *)sub_1C713B0(&Method_System_Collections_Generic_List_ModelLineComponent__Clear__);
-    byte_4CC3EFA = 1;
+    this = (MapModelManager_o *)sub_1C94098(&Method_System_Collections_Generic_List_ModelLineComponent__Clear__);
+    byte_4D292CE = 1;
   }
   lineList = v2->fields.lineList;
   if ( !lineList )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   size = lineList->fields._size;
   v5 = lineList->fields._version + 1;
   lineList->fields._size = 0;
@@ -614,10 +614,10 @@ void MapModelManager__ReleaseMapModelObject(MapModelManager_o *this, const Metho
   UnityEngine_Object_o *MapModelObject_k__BackingField; // x20
   UnityEngine_Object_o *v4; // x19
 
-  if ( (byte_4CC3EF9 & 1) == 0 )
+  if ( (byte_4D292CD & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3EF9 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D292CD = 1;
   }
   MapModelObject_k__BackingField = (UnityEngine_Object_o *)this->fields._MapModelObject_k__BackingField;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -627,7 +627,7 @@ void MapModelManager__ReleaseMapModelObject(MapModelManager_o *this, const Metho
     v4 = (UnityEngine_Object_o *)this->fields._MapModelObject_k__BackingField;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-    UnityEngine_Object__Destroy_71724608(v4, 0);
+    UnityEngine_Object__Destroy_72110972(v4, 0);
   }
 }
 
@@ -644,7 +644,7 @@ void MapModelManager__SetMapModelCameraPositionByLayer(
 
   MapModelCamera_k__BackingField = (UnityEngine_Component_o *)this->fields._MapModelCamera_k__BackingField;
   if ( !MapModelCamera_k__BackingField )
-    sub_1C71608(0, layer);
+    sub_1C942F0(0, layer);
   gameObject = UnityEngine_Component__get_gameObject(MapModelCamera_k__BackingField, 0);
   LocationPostion = MapModelManager__GetLocationPostion(this, layer, v7);
   GameObjectExtensions__SetLocalPosition(gameObject, LocationPostion, 0);
@@ -661,39 +661,39 @@ void MapModelManager__UpdateLineDispAll(MapModelManager_o *this, const MethodInf
   struct ScrTerminalMap_o *TerminalMap_k__BackingField; // x8
   System_Collections_Generic_List_Enumerator_object__o v9; // [xsp+8h] [xbp-38h] BYREF
 
-  if ( (byte_4CC3EF6 & 1) == 0 )
+  if ( (byte_4D292CA & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Linq_Enumerable_Any_ModelLineComponent___);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__Dispose__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__MoveNext__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__get_Current__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_ModelLineComponent__GetEnumerator__);
-    byte_4CC3EF6 = 1;
+    sub_1C94098(&Method_System_Linq_Enumerable_Any_ModelLineComponent___);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__Dispose__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__MoveNext__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__get_Current__);
+    sub_1C94098(&Method_System_Collections_Generic_List_ModelLineComponent__GetEnumerator__);
+    byte_4D292CA = 1;
   }
   memset(&v9, 0, sizeof(v9));
   if ( System_Linq_Enumerable__Any_object_(
          (System_Collections_Generic_IEnumerable_TSource__o *)this->fields.lineList,
-         (const MethodInfo_3156C84 *)Method_System_Linq_Enumerable_Any_ModelLineComponent___) )
+         (const MethodInfo_31A7F44 *)Method_System_Linq_Enumerable_Any_ModelLineComponent___) )
   {
     lineList = (System_Collections_Generic_List_object__o *)this->fields.lineList;
     if ( !lineList )
-      sub_1C71608(0, v3);
+      sub_1C942F0(0, v3);
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v9,
       lineList,
-      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_ModelLineComponent__GetEnumerator__);
+      (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_ModelLineComponent__GetEnumerator__);
     while ( 1 )
     {
       v5 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v9,
-             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__MoveNext__);
+             (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__MoveNext__);
       if ( !v5 )
         break;
       TerminalMap_k__BackingField = this->fields._TerminalMap_k__BackingField;
       if ( !TerminalMap_k__BackingField )
-        sub_1C71608(v5, v6);
+        sub_1C942F0(v5, v6);
       if ( !v9.fields._current )
-        sub_1C71608(0, v6);
+        sub_1C942F0(0, v6);
       ModelLineComponent__UpdateDisp(
         (ModelLineComponent_o *)v9.fields._current,
         TerminalMap_k__BackingField->fields.currentMapLayerId,
@@ -701,7 +701,7 @@ void MapModelManager__UpdateLineDispAll(MapModelManager_o *this, const MethodInf
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v9,
-      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__Dispose__);
+      (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_ModelLineComponent__Dispose__);
   }
 }
 
@@ -719,10 +719,10 @@ bool MapModelManager__get_IsMapCamera2DReset(MapModelManager_o *this, const Meth
   __int64 v5; // x1
   struct MapModelComponent_o *v6; // x8
 
-  if ( (byte_4CC3EFE & 1) == 0 )
+  if ( (byte_4D292D2 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3EFE = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D292D2 = 1;
   }
   mapModelComponent = (UnityEngine_Object_o *)this->fields.mapModelComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -732,7 +732,7 @@ bool MapModelManager__get_IsMapCamera2DReset(MapModelManager_o *this, const Meth
     return 1;
   v6 = this->fields.mapModelComponent;
   if ( !v6 )
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   return v6->fields.isMapCamera2DReset;
 }
 
@@ -751,7 +751,7 @@ bool MapModelManager__get_IsMapModel(MapModelManager_o *this, const MethodInfo *
   this = (MapModelManager_o *)MapControl_MapInfo__GetMine(mMapInfo, method);
   if ( !this )
 LABEL_6:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   LOBYTE(mMapInfo) = MapEntity__IsMapModel((MapEntity_o *)this, 0);
   return (char)mMapInfo;
 }
@@ -771,10 +771,10 @@ UnityEngine_Vector3_o MapModelManager__get_MapCamera2DResetPosition(MapModelMana
   float x; // s0
   UnityEngine_Vector3_o result; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CC3EFF & 1) == 0 )
+  if ( (byte_4D292D3 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3EFF = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D292D3 = 1;
   }
   mapModelComponent = (UnityEngine_Object_o *)this->fields.mapModelComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -784,17 +784,17 @@ UnityEngine_Vector3_o MapModelManager__get_MapCamera2DResetPosition(MapModelMana
   {
     v6 = this->fields.mapModelComponent;
     if ( !v6 )
-      sub_1C71608(v4, v5);
+      sub_1C942F0(v4, v5);
     p_mapCamera2DResetPosition = (struct UnityEngine_Vector3_StaticFields *)&v6->fields.mapCamera2DResetPosition;
     p_y = &v6->fields.mapCamera2DResetPosition.fields.y;
     p_z = &v6->fields.mapCamera2DResetPosition.fields.z;
   }
   else
   {
-    if ( !byte_4CC0D09 )
+    if ( !byte_4D25F19 )
     {
-      sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-      byte_4CC0D09 = 1;
+      sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+      byte_4D25F19 = 1;
     }
     p_mapCamera2DResetPosition = UnityEngine_Vector3_TypeInfo->static_fields;
     p_y = &p_mapCamera2DResetPosition->zeroVector.fields.y;
@@ -818,10 +818,10 @@ float MapModelManager__get_MapCamera2DResetSize(MapModelManager_o *this, const M
   float result; // s0
   struct MapModelComponent_o *v7; // x8
 
-  if ( (byte_4CC3F00 & 1) == 0 )
+  if ( (byte_4D292D4 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC3F00 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D292D4 = 1;
   }
   mapModelComponent = (UnityEngine_Object_o *)this->fields.mapModelComponent;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -832,7 +832,7 @@ float MapModelManager__get_MapCamera2DResetSize(MapModelManager_o *this, const M
   {
     v7 = this->fields.mapModelComponent;
     if ( !v7 )
-      sub_1C71608(v4, v5);
+      sub_1C942F0(v4, v5);
     return v7->fields.mapCamera2DResetSize;
   }
   return result;
@@ -896,7 +896,7 @@ void MapModelManager__set_DispRoot(MapModelManager_o *this, UnityEngine_GameObje
   System_String_o *v7; // x7
 
   this->fields._DispRoot_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._DispRoot_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -917,7 +917,7 @@ void MapModelManager__set_MapModelAssetData(MapModelManager_o *this, AssetData_o
   System_String_o *v7; // x7
 
   this->fields._MapModelAssetData_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._MapModelAssetData_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -938,7 +938,7 @@ void MapModelManager__set_MapModelCamera(MapModelManager_o *this, MapModelCamera
   System_String_o *v7; // x7
 
   this->fields._MapModelCamera_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._MapModelCamera_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -962,7 +962,7 @@ void MapModelManager__set_MapModelObject(
   System_String_o *v7; // x7
 
   this->fields._MapModelObject_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._MapModelObject_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -986,7 +986,7 @@ void MapModelManager__set_MapModelScreen(
   System_String_o *v7; // x7
 
   this->fields._MapModelScreen_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._MapModelScreen_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1007,7 +1007,7 @@ void MapModelManager__set_RoadRoot(MapModelManager_o *this, UnityEngine_GameObje
   System_String_o *v7; // x7
 
   this->fields._RoadRoot_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._RoadRoot_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1028,7 +1028,7 @@ void MapModelManager__set_SpotModelCamera(MapModelManager_o *this, MapModelCamer
   System_String_o *v7; // x7
 
   this->fields._SpotModelCamera_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SpotModelCamera_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1052,7 +1052,7 @@ void MapModelManager__set_SpotModelScreen(
   System_String_o *v7; // x7
 
   this->fields._SpotModelScreen_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._SpotModelScreen_k__BackingField,
     (int32_t)value,
     (int32_t)method,
@@ -1073,7 +1073,7 @@ void MapModelManager__set_TerminalMap(MapModelManager_o *this, ScrTerminalMap_o 
   System_String_o *v7; // x7
 
   this->fields._TerminalMap_k__BackingField = value;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)value, (int32_t)method, v3, v4, v5, v6, v7);
 }
 
 
@@ -1097,7 +1097,7 @@ void MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
   System_String_o *v7; // x7
   void *_4__this; // x0
   struct MapModelManager_o *v11; // x8
-  Il2CppObject *Object_object__51560868; // x0
+  Il2CppObject *Object_object__51893132; // x0
   struct MapModelManager_o *v13; // x20
   Il2CppObject *v14; // x21
   int32_t v15; // w2
@@ -1148,23 +1148,23 @@ void MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
   struct MapModelManager_o *v60; // x8
   MapModelManager_o *v61; // x20
 
-  if ( (byte_4CC3F03 & 1) == 0 )
+  if ( (byte_4D292D7 & 1) == 0 )
   {
-    sub_1C713B0(&Method_AssetData_GetObject_GameObject____78636968);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_MapModelComponent___);
-    sub_1C713B0(&MapModelManager_TypeInfo);
-    sub_1C713B0(&NGUITools_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&ScrTerminalMap_TypeInfo);
-    sub_1C713B0(&StringLiteral_17164/*"bg_map"*/);
-    byte_4CC3F03 = 1;
+    sub_1C94098(&Method_AssetData_GetObject_GameObject____79044816);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_MapModelComponent___);
+    sub_1C94098(&MapModelManager_TypeInfo);
+    sub_1C94098(&NGUITools_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&ScrTerminalMap_TypeInfo);
+    sub_1C94098(&StringLiteral_17226/*"bg_map"*/);
+    byte_4D292D7 = 1;
   }
   _4__this = this->fields.__4__this;
   if ( !_4__this )
     goto LABEL_46;
   *((_QWORD *)_4__this + 3) = assetData;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)((char *)_4__this + 24),
     (int32_t)assetData,
     (int32_t)method,
@@ -1179,21 +1179,21 @@ void MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
   _4__this = v11->fields._MapModelAssetData_k__BackingField;
   if ( !_4__this )
     goto LABEL_46;
-  Object_object__51560868 = AssetData__GetObject_object__51560868(
+  Object_object__51893132 = AssetData__GetObject_object__51893132(
                               (AssetData_o *)_4__this,
-                              (System_String_o *)StringLiteral_17164/*"bg_map"*/,
-                              (const MethodInfo_312C1A4 *)Method_AssetData_GetObject_GameObject____78636968);
+                              (System_String_o *)StringLiteral_17226/*"bg_map"*/,
+                              (const MethodInfo_317D38C *)Method_AssetData_GetObject_GameObject____79044816);
   v13 = this->fields.__4__this;
-  v14 = Object_object__51560868;
+  v14 = Object_object__51893132;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
   _4__this = UnityEngine_Object__Instantiate_object_(
                v14,
-               (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+               (const MethodInfo_3229578 *)Method_UnityEngine_Object_Instantiate_GameObject___);
   if ( !v13 )
     goto LABEL_46;
   v13->fields._MapModelObject_k__BackingField = (struct UnityEngine_GameObject_o *)_4__this;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&v13->fields._MapModelObject_k__BackingField,
     (int32_t)_4__this,
     v15,
@@ -1205,7 +1205,7 @@ void MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
   v21 = this->fields.__4__this;
   if ( !v21 )
     goto LABEL_46;
-  GameObjectExtensions__SetParent_36395692(
+  GameObjectExtensions__SetParent_36804528(
     v21->fields._MapModelObject_k__BackingField,
     v21->fields._DispRoot_k__BackingField,
     0);
@@ -1235,9 +1235,9 @@ void MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
     goto LABEL_46;
   Component_object = UnityEngine_GameObject__GetComponent_object_(
                        (UnityEngine_GameObject_o *)_4__this,
-                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_MapModelComponent___);
+                       (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_MapModelComponent___);
   v27->fields.mapModelComponent = (struct MapModelComponent_o *)Component_object;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&v27->fields.mapModelComponent,
     (int32_t)Component_object,
     v29,
@@ -1259,7 +1259,7 @@ void MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
       {
         v43 = *(_QWORD *)(v42 + 32);
         *((_QWORD *)_4__this + 5) = v43;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)((char *)_4__this + 40), v43, v36, v37, v38, v39, v40, v41);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)((char *)_4__this + 40), v43, v36, v37, v38, v39, v40, v41);
         v44 = this->fields.__4__this;
         if ( v44 )
         {
@@ -1295,7 +1295,7 @@ void MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
             {
               v56 = *(_QWORD *)(v55 + 40);
               *((_QWORD *)_4__this + 6) = v56;
-              sub_1C71354((GrandQuestFolderBoardItem_o *)((char *)_4__this + 48), v56, v46, v47, v48, v49, v50, v51);
+              sub_1C9403C((GrandQuestFolderBoardItem_o *)((char *)_4__this + 48), v56, v46, v47, v48, v49, v50, v51);
               v57 = this->fields.__4__this;
               if ( v57 )
               {
@@ -1332,7 +1332,7 @@ void MapModelManager___c__DisplayClass41_0___LoadMapModel_b__0(
       }
     }
 LABEL_46:
-    sub_1C71608(_4__this, assetData);
+    sub_1C942F0(_4__this, assetData);
   }
 LABEL_45:
   ActionExtensions__Call(this->fields.endFunc, 0);
@@ -1366,7 +1366,7 @@ void MapModelManager___c__DisplayClass45_0___MoveMapModelCamera_b__0(
                                                             0),
         (easingObject = v3->fields.easingObject) == 0) )
   {
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   v5 = this;
   v6 = Easing__Func(v3->fields.startedPos, v3->fields.endedPos, easingObject->fields.mNow, 0, 0);

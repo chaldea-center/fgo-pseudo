@@ -8,17 +8,17 @@ void ByteReader___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CCBBA6 & 1) == 0 )
+  if ( (byte_4D30F58 & 1) == 0 )
   {
-    sub_1C713B0(&Method_BetterList_string___ctor__);
-    sub_1C713B0(&BetterList_string__TypeInfo);
-    sub_1C713B0(&ByteReader_TypeInfo);
-    byte_4CCBBA6 = 1;
+    sub_1C94098(&Method_BetterList_string___ctor__);
+    sub_1C94098(&BetterList_string__TypeInfo);
+    sub_1C94098(&ByteReader_TypeInfo);
+    byte_4D30F58 = 1;
   }
-  v1 = (BetterList_T__o *)sub_1C715FC(BetterList_string__TypeInfo);
-  BetterList_object____ctor(v1, (const MethodInfo_3381E0C *)Method_BetterList_string___ctor__);
+  v1 = (BetterList_T__o *)sub_1C942E4(BetterList_string__TypeInfo);
+  BetterList_object____ctor(v1, (const MethodInfo_33D3D68 *)Method_BetterList_string___ctor__);
   ByteReader_TypeInfo->static_fields->mTemp = (struct BetterList_string__o *)v1;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)ByteReader_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)ByteReader_TypeInfo->static_fields, (int32_t)v1, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -33,11 +33,11 @@ void ByteReader___ctor(ByteReader_o *this, System_Byte_array *bytes, const Metho
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.mBuffer = bytes;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)bytes, v5, v6, v7, v8, v9, v10);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)bytes, v5, v6, v7, v8, v9, v10);
 }
 
 
-void ByteReader___ctor_49636188(ByteReader_o *this, UnityEngine_TextAsset_o *asset, const MethodInfo *method)
+void ByteReader___ctor_49959780(ByteReader_o *this, UnityEngine_TextAsset_o *asset, const MethodInfo *method)
 {
   __int64 v5; // x0
   __int64 v6; // x1
@@ -51,10 +51,10 @@ void ByteReader___ctor_49636188(ByteReader_o *this, UnityEngine_TextAsset_o *ass
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !asset )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   bytes = UnityEngine_TextAsset__get_bytes(asset, 0);
   this->fields.mBuffer = bytes;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)bytes, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)bytes, v8, v9, v10, v11, v12, v13);
 }
 
 
@@ -73,12 +73,12 @@ ByteReader_o *ByteReader__Open(System_String_o *path, const MethodInfo *method)
   int64_t v13; // x6
   System_String_o *v14; // x7
 
-  if ( (byte_4CCBBA2 & 1) == 0 )
+  if ( (byte_4D30F54 & 1) == 0 )
   {
-    sub_1C713B0(&Method_ByteReader_Open__);
-    sub_1C713B0(&ByteReader_TypeInfo);
-    sub_1C713B0(&byte___TypeInfo);
-    byte_4CCBBA2 = 1;
+    sub_1C94098(&Method_ByteReader_Open__);
+    sub_1C94098(&ByteReader_TypeInfo);
+    sub_1C94098(&byte___TypeInfo);
+    byte_4D30F54 = 1;
   }
   v3 = System_IO_File__OpenRead(path, 0);
   v4 = (__int64)v3;
@@ -90,14 +90,14 @@ ByteReader_o *ByteReader__Open(System_String_o *path, const MethodInfo *method)
       2,
       v3->klass->vtable._29_Seek.method);
     v5 = (*(__int64 (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v4 + 504LL))(v4, *(_QWORD *)(*(_QWORD *)v4 + 512LL));
-    v6 = sub_1C71458(byte___TypeInfo, v5);
+    v6 = sub_1C94140(byte___TypeInfo, v5);
     v7 = (*(__int64 (__fastcall **)(__int64, _QWORD, _QWORD, _QWORD))(*(_QWORD *)v4 + 776LL))(
            v4,
            0,
            0,
            *(_QWORD *)(*(_QWORD *)v4 + 784LL));
     if ( !v6 )
-      sub_1C71608(v7, v8);
+      sub_1C942F0(v7, v8);
     (*(void (__fastcall **)(__int64, __int64, _QWORD, _QWORD, _QWORD))(*(_QWORD *)v4 + 808LL))(
       v4,
       v6,
@@ -105,10 +105,10 @@ ByteReader_o *ByteReader__Open(System_String_o *path, const MethodInfo *method)
       *(unsigned int *)(v6 + 24),
       *(_QWORD *)(*(_QWORD *)v4 + 816LL));
     (*(void (__fastcall **)(__int64, _QWORD))(*(_QWORD *)v4 + 600LL))(v4, *(_QWORD *)(*(_QWORD *)v4 + 608LL));
-    v4 = sub_1C715FC(ByteReader_TypeInfo);
+    v4 = sub_1C942E4(ByteReader_TypeInfo);
     System_Object___ctor((Il2CppObject *)v4, 0);
     *(_QWORD *)(v4 + 16) = v6;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)(v4 + 16), v6, v9, v10, v11, v12, v13, v14);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v4 + 16), v6, v9, v10, v11, v12, v13, v14);
   }
   return (ByteReader_o *)v4;
 }
@@ -143,17 +143,17 @@ BetterList_string__o *ByteReader__ReadCSV(ByteReader_o *this, const MethodInfo *
   ByteReader_c *v27; // x0
   BetterList_T__o *v28; // x19
 
-  if ( (byte_4CCBBA5 & 1) == 0 )
+  if ( (byte_4D30F57 & 1) == 0 )
   {
-    sub_1C713B0(&Method_BetterList_string__Add__);
-    sub_1C713B0(&Method_BetterList_string__Clear__);
-    sub_1C713B0(&ByteReader_TypeInfo);
-    sub_1C713B0(&StringLiteral_43/*"\n"*/);
-    sub_1C713B0(&StringLiteral_16044/*"\\n"*/);
-    sub_1C713B0(&StringLiteral_341/*"\""*/);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    sub_1C713B0(&StringLiteral_349/*"\"\""*/);
-    byte_4CCBBA5 = 1;
+    sub_1C94098(&Method_BetterList_string__Add__);
+    sub_1C94098(&Method_BetterList_string__Clear__);
+    sub_1C94098(&ByteReader_TypeInfo);
+    sub_1C94098(&StringLiteral_43/*"\n"*/);
+    sub_1C94098(&StringLiteral_16098/*"\\n"*/);
+    sub_1C94098(&StringLiteral_341/*"\""*/);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    sub_1C94098(&StringLiteral_349/*"\"\""*/);
+    byte_4D30F57 = 1;
   }
   v3 = ByteReader_TypeInfo;
   if ( !ByteReader_TypeInfo->_2.cctor_finished )
@@ -164,7 +164,7 @@ BetterList_string__o *ByteReader__ReadCSV(ByteReader_o *this, const MethodInfo *
   mTemp = (System_String_o *)v3->static_fields->mTemp;
   if ( !mTemp )
     goto LABEL_55;
-  BetterList_object___Clear((BetterList_T__o *)mTemp, (const MethodInfo_33816C8 *)Method_BetterList_string__Clear__);
+  BetterList_object___Clear((BetterList_T__o *)mTemp, (const MethodInfo_33D3624 *)Method_BetterList_string__Clear__);
   v6 = (System_String_o *)StringLiteral_1/*""*/;
   v7 = 0;
   v8 = 0;
@@ -175,25 +175,25 @@ BetterList_string__o *ByteReader__ReadCSV(ByteReader_o *this, const MethodInfo *
       return 0;
     if ( (v8 & 1) != 0 )
     {
-      result = (BetterList_string__o *)ByteReader__ReadLine_49636680(this, 0, v5);
+      result = (BetterList_string__o *)ByteReader__ReadLine_49960272(this, 0, v5);
       if ( !result )
         return result;
-      v11 = System_String__Replace_64078288(
+      v11 = System_String__Replace_64464308(
               (System_String_o *)result,
-              (System_String_o *)StringLiteral_16044/*"\\n"*/,
+              (System_String_o *)StringLiteral_16098/*"\\n"*/,
               (System_String_o *)StringLiteral_43/*"\n"*/,
               0);
-      mTemp = System_String__Concat_64069988(v6, (System_String_o *)StringLiteral_43/*"\n"*/, v11, 0);
+      mTemp = System_String__Concat_64456008(v6, (System_String_o *)StringLiteral_43/*"\n"*/, v11, 0);
       v6 = mTemp;
     }
     else
     {
-      result = (BetterList_string__o *)ByteReader__ReadLine_49636680(this, 1, v5);
+      result = (BetterList_string__o *)ByteReader__ReadLine_49960272(this, 1, v5);
       if ( !result )
         return result;
-      mTemp = System_String__Replace_64078288(
+      mTemp = System_String__Replace_64464308(
                 (System_String_o *)result,
-                (System_String_o *)StringLiteral_16044/*"\\n"*/,
+                (System_String_o *)StringLiteral_16098/*"\\n"*/,
                 (System_String_o *)StringLiteral_43/*"\n"*/,
                 0);
       v6 = mTemp;
@@ -222,10 +222,10 @@ BetterList_string__o *ByteReader__ReadCSV(ByteReader_o *this, const MethodInfo *
               v27 = ByteReader_TypeInfo;
             }
             v28 = (BetterList_T__o *)v27->static_fields->mTemp;
-            mTemp = System_String__Substring_64077664(v6, v7, v13 - v7, 0);
+            mTemp = System_String__Substring_64463684(v6, v7, v13 - v7, 0);
             if ( !mTemp )
               goto LABEL_55;
-            mTemp = System_String__Replace_64078288(
+            mTemp = System_String__Replace_64464308(
                       mTemp,
                       (System_String_o *)StringLiteral_349/*"\"\""*/,
                       (System_String_o *)StringLiteral_341/*"\""*/,
@@ -235,7 +235,7 @@ BetterList_string__o *ByteReader__ReadCSV(ByteReader_o *this, const MethodInfo *
             BetterList_object___Add(
               v28,
               (Il2CppObject *)mTemp,
-              (const MethodInfo_33816E0 *)Method_BetterList_string__Add__);
+              (const MethodInfo_33D363C *)Method_BetterList_string__Add__);
             static_fields = ByteReader_TypeInfo->static_fields;
             return static_fields->mTemp;
           }
@@ -253,10 +253,10 @@ BetterList_string__o *ByteReader__ReadCSV(ByteReader_o *this, const MethodInfo *
               v18 = ByteReader_TypeInfo;
             }
             v19 = (BetterList_T__o *)v18->static_fields->mTemp;
-            mTemp = System_String__Substring_64077664(v6, v7, v13 - v7, 0);
+            mTemp = System_String__Substring_64463684(v6, v7, v13 - v7, 0);
             if ( !mTemp )
               goto LABEL_55;
-            mTemp = System_String__Replace_64078288(
+            mTemp = System_String__Replace_64464308(
                       mTemp,
                       (System_String_o *)StringLiteral_349/*"\"\""*/,
                       (System_String_o *)StringLiteral_341/*"\""*/,
@@ -266,7 +266,7 @@ BetterList_string__o *ByteReader__ReadCSV(ByteReader_o *this, const MethodInfo *
             BetterList_object___Add(
               v19,
               (Il2CppObject *)mTemp,
-              (const MethodInfo_33816E0 *)Method_BetterList_string__Add__);
+              (const MethodInfo_33D363C *)Method_BetterList_string__Add__);
             v20 = System_String__get_Chars(v6, v15, 0);
             v21 = v13 + 2;
             v8 = 0;
@@ -298,13 +298,13 @@ BetterList_string__o *ByteReader__ReadCSV(ByteReader_o *this, const MethodInfo *
             v16 = ByteReader_TypeInfo;
           }
           v17 = (BetterList_T__o *)v16->static_fields->mTemp;
-          mTemp = System_String__Substring_64077664(v6, v7, v13 - v7, 0);
+          mTemp = System_String__Substring_64463684(v6, v7, v13 - v7, 0);
           if ( !v17 )
             goto LABEL_55;
           BetterList_object___Add(
             v17,
             (Il2CppObject *)mTemp,
-            (const MethodInfo_33816E0 *)Method_BetterList_string__Add__);
+            (const MethodInfo_33D363C *)Method_BetterList_string__Add__);
           v8 = 0;
           v7 = v13 + 1;
         }
@@ -338,14 +338,14 @@ LABEL_44:
         stringLength = v6->fields._stringLength;
       }
       v24 = (BetterList_T__o *)v23->static_fields->mTemp;
-      mTemp = System_String__Substring_64077664(v6, v7, stringLength - v7, 0);
+      mTemp = System_String__Substring_64463684(v6, v7, stringLength - v7, 0);
       if ( v24 )
       {
-        BetterList_object___Add(v24, (Il2CppObject *)mTemp, (const MethodInfo_33816E0 *)Method_BetterList_string__Add__);
+        BetterList_object___Add(v24, (Il2CppObject *)mTemp, (const MethodInfo_33D363C *)Method_BetterList_string__Add__);
         goto LABEL_44;
       }
 LABEL_55:
-      sub_1C71608(mTemp, method);
+      sub_1C942F0(mTemp, method);
     }
   }
 }
@@ -361,46 +361,46 @@ System_Collections_Generic_Dictionary_string__string__o *ByteReader__ReadDiction
   const MethodInfo *v6; // x2
   System_Char_array *v7; // x21
   struct System_Byte_array *i; // x8
-  System_String_o *Line_49636680; // x0
+  System_String_o *Line_49960272; // x0
   System_String_o *v10; // x22
   System_Char_array *v11; // x23
   Il2CppObject *p_obj; // x22
 
-  if ( (byte_4CCBBA4 & 1) == 0 )
+  if ( (byte_4D30F56 & 1) == 0 )
   {
-    sub_1C713B0(&char___TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
-    sub_1C713B0(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
-    sub_1C713B0(&StringLiteral_43/*"\n"*/);
-    sub_1C713B0(&StringLiteral_1044/*"//"*/);
-    sub_1C713B0(&StringLiteral_16044/*"\\n"*/);
-    byte_4CCBBA4 = 1;
+    sub_1C94098(&char___TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+    sub_1C94098(&System_Collections_Generic_Dictionary_string__string__TypeInfo);
+    sub_1C94098(&StringLiteral_43/*"\n"*/);
+    sub_1C94098(&StringLiteral_1044/*"//"*/);
+    sub_1C94098(&StringLiteral_16098/*"\\n"*/);
+    byte_4D30F56 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C715FC(System_Collections_Generic_Dictionary_string__string__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__object__o *)sub_1C942E4(System_Collections_Generic_Dictionary_string__string__TypeInfo);
   System_Collections_Generic_Dictionary_object__object____ctor(
     v3,
-    (const MethodInfo_34CAD30 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
-  v4 = (System_Char_array *)sub_1C71458(char___TypeInfo, 1);
+    (const MethodInfo_3520244 *)Method_System_Collections_Generic_Dictionary_string__string___ctor__);
+  v4 = (System_Char_array *)sub_1C94140(char___TypeInfo, 1);
   if ( !v4 )
 LABEL_19:
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   v7 = v4;
   if ( !LODWORD(v4->max_length) )
 LABEL_20:
-    sub_1C71610(v4);
+    sub_1C942F8(v4);
   v4->m_Items[0] = 61;
   for ( i = this->fields.mBuffer; i; i = this->fields.mBuffer )
   {
     if ( this->fields.mOffset >= SLODWORD(i->max_length) )
       break;
-    Line_49636680 = ByteReader__ReadLine_49636680(this, 1, v6);
-    if ( !Line_49636680 )
+    Line_49960272 = ByteReader__ReadLine_49960272(this, 1, v6);
+    if ( !Line_49960272 )
       break;
-    v10 = Line_49636680;
-    if ( !System_String__StartsWith(Line_49636680, (System_String_o *)StringLiteral_1044/*"//"*/, 0) )
+    v10 = Line_49960272;
+    if ( !System_String__StartsWith(Line_49960272, (System_String_o *)StringLiteral_1044/*"//"*/, 0) )
     {
-      v4 = (System_Char_array *)System_String__Split_64081052(v10, v7, 2, 1, 0);
+      v4 = (System_Char_array *)System_String__Split_64467072(v10, v7, 2, 1, 0);
       if ( !v4 )
         goto LABEL_19;
       v11 = v4;
@@ -419,9 +419,9 @@ LABEL_20:
         v4 = (System_Char_array *)System_String__Trim((System_String_o *)v4, 0);
         if ( !v4 )
           goto LABEL_19;
-        v4 = (System_Char_array *)System_String__Replace_64078288(
+        v4 = (System_Char_array *)System_String__Replace_64464308(
                                     (System_String_o *)v4,
-                                    (System_String_o *)StringLiteral_16044/*"\\n"*/,
+                                    (System_String_o *)StringLiteral_16098/*"\\n"*/,
                                     (System_String_o *)StringLiteral_43/*"\n"*/,
                                     0);
         if ( !v3 )
@@ -430,7 +430,7 @@ LABEL_20:
           v3,
           p_obj,
           &v4->obj,
-          (const MethodInfo_34CB6CC *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
+          (const MethodInfo_3520BE0 *)Method_System_Collections_Generic_Dictionary_string__string__set_Item__);
       }
     }
   }
@@ -449,7 +449,7 @@ System_String_o *ByteReader__ReadLine(
 
   UTF8 = System_Text_Encoding__get_UTF8(0);
   if ( !UTF8 )
-    sub_1C71608(0, v8);
+    sub_1C942F0(0, v8);
   return (System_String_o *)((__int64 (__fastcall *)(System_Text_Encoding_o *, System_Byte_array *, _QWORD, _QWORD, const MethodInfo *))UTF8->klass->vtable._36_GetString.methodPtr)(
                               UTF8,
                               buffer,
@@ -459,16 +459,16 @@ System_String_o *ByteReader__ReadLine(
 }
 
 
-System_String_o *ByteReader__ReadLine_49636672(ByteReader_o *this, const MethodInfo *method)
+System_String_o *ByteReader__ReadLine_49960264(ByteReader_o *this, const MethodInfo *method)
 {
   const MethodInfo *v2; // x2
 
-  return ByteReader__ReadLine_49636680(this, 1, v2);
+  return ByteReader__ReadLine_49960272(this, 1, v2);
 }
 
 
 // local variable allocation has failed, the output may be wrong!
-System_String_o *ByteReader__ReadLine_49636680(ByteReader_o *this, bool skipEmptyLines, const MethodInfo *method)
+System_String_o *ByteReader__ReadLine_49960272(ByteReader_o *this, bool skipEmptyLines, const MethodInfo *method)
 {
   const MethodInfo *v3; // x3
   ByteReader_o *v5; // x19
@@ -481,14 +481,14 @@ System_String_o *ByteReader__ReadLine_49636680(ByteReader_o *this, bool skipEmpt
   System_String_o *result; // x0
 
   v5 = this;
-  if ( (byte_4CCBBA3 & 1) == 0 )
+  if ( (byte_4D30F55 & 1) == 0 )
   {
-    this = (ByteReader_o *)sub_1C713B0(&ByteReader_TypeInfo);
-    byte_4CCBBA3 = 1;
+    this = (ByteReader_o *)sub_1C94098(&ByteReader_TypeInfo);
+    byte_4D30F55 = 1;
   }
   mBuffer = v5->fields.mBuffer;
   if ( !mBuffer )
-    sub_1C71608(this, skipEmptyLines);
+    sub_1C942F0(this, skipEmptyLines);
   max_length = mBuffer->max_length;
   mOffset = v5->fields.mOffset;
   if ( mOffset < (int)max_length && skipEmptyLines )
@@ -501,7 +501,7 @@ System_String_o *ByteReader__ReadLine_49636680(ByteReader_o *this, bool skipEmpt
     {
       if ( v9 == mOffset )
 LABEL_25:
-        sub_1C71610(this);
+        sub_1C942F8(this);
       if ( mBuffer->m_Items[mOffset] >= 0x20u )
         break;
       v5->fields.mOffset = ++mOffset;

@@ -6,12 +6,12 @@ void ResponseFailData___ctor(ResponseFailData_o *this, ResponseData_o *data, con
 
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !data )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   ResponseFailData__Init(this, data->fields.nid, data->fields.resCode, data->fields.fail, v7);
 }
 
 
-void ResponseFailData___ctor_44551880(
+void ResponseFailData___ctor_45050036(
         ResponseFailData_o *this,
         System_String_o *nid,
         System_String_o *resCode,
@@ -25,7 +25,7 @@ void ResponseFailData___ctor_44551880(
 }
 
 
-void ResponseFailData___ctor_44551948(
+void ResponseFailData___ctor_45050104(
         ResponseFailData_o *this,
         System_String_o *nid,
         System_String_o *resCode,
@@ -35,10 +35,10 @@ void ResponseFailData___ctor_44551948(
   System_Collections_Generic_Dictionary_string__object__o *Dictionary; // x3
   const MethodInfo *v10; // x4
 
-  if ( (byte_4CC8FF1 & 1) == 0 )
+  if ( (byte_4D2E492 & 1) == 0 )
   {
-    sub_1C713B0(&JsonManager_TypeInfo);
-    byte_4CC8FF1 = 1;
+    sub_1C94098(&JsonManager_TypeInfo);
+    byte_4D2E492 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   if ( !JsonManager_TypeInfo->_2.cctor_finished )
@@ -143,25 +143,25 @@ void ResponseFailData__Init(
   System_String_o *v94; // x0
   int32_t *p_errorType; // x19
 
-  if ( (byte_4CC8FF2 & 1) == 0 )
+  if ( (byte_4D2E493 & 1) == 0 )
   {
-    sub_1C713B0(&bool_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
-    sub_1C713B0(&StringLiteral_24582/*"url"*/);
-    sub_1C713B0(&StringLiteral_18421/*"csId"*/);
-    sub_1C713B0(&StringLiteral_23302/*"sandboxDomain"*/);
-    sub_1C713B0(&StringLiteral_23303/*"sandboxSeurity"*/);
-    sub_1C713B0(&StringLiteral_23301/*"sandboxAssetsDomain"*/);
-    sub_1C713B0(&StringLiteral_23304/*"sandboxWebviewDomain"*/);
-    sub_1C713B0(&StringLiteral_18638/*"detail"*/);
-    sub_1C713B0(&StringLiteral_19134/*"errorType"*/);
-    sub_1C713B0(&StringLiteral_24216/*"title"*/);
-    sub_1C713B0(&StringLiteral_16657/*"action"*/);
-    byte_4CC8FF2 = 1;
+    sub_1C94098(&bool_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+    sub_1C94098(&StringLiteral_24704/*"url"*/);
+    sub_1C94098(&StringLiteral_18489/*"csId"*/);
+    sub_1C94098(&StringLiteral_23416/*"sandboxDomain"*/);
+    sub_1C94098(&StringLiteral_23417/*"sandboxSeurity"*/);
+    sub_1C94098(&StringLiteral_23415/*"sandboxAssetsDomain"*/);
+    sub_1C94098(&StringLiteral_23418/*"sandboxWebviewDomain"*/);
+    sub_1C94098(&StringLiteral_18706/*"detail"*/);
+    sub_1C94098(&StringLiteral_19218/*"errorType"*/);
+    sub_1C94098(&StringLiteral_24337/*"title"*/);
+    sub_1C94098(&StringLiteral_16715/*"action"*/);
+    byte_4D2E493 = 1;
   }
   this->fields.nid = nid;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields,
     (int32_t)nid,
     (int32_t)resCode,
@@ -171,18 +171,18 @@ void ResponseFailData__Init(
     v6,
     v7);
   this->fields.resCode = resCode;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.resCode, (int32_t)resCode, v12, v13, v14, v15, v16, v17);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.resCode, (int32_t)resCode, v12, v13, v14, v15, v16, v17);
   if ( !failList )
     goto LABEL_48;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)failList,
-         (Il2CppObject *)StringLiteral_18421/*"csId"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_18489/*"csId"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)failList,
-             (Il2CppObject *)StringLiteral_18421/*"csId"*/,
-             (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_18489/*"csId"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_48;
     v26 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
@@ -198,16 +198,16 @@ void ResponseFailData__Init(
     p_csId = &this->fields.csId;
     v27 = 0;
   }
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_csId, v27, v20, v21, v22, v23, v24, v25);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_csId, v27, v20, v21, v22, v23, v24, v25);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)failList,
-         (Il2CppObject *)StringLiteral_16657/*"action"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_16715/*"action"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)failList,
-             (Il2CppObject *)StringLiteral_16657/*"action"*/,
-             (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_16715/*"action"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_48;
     v35 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
@@ -223,16 +223,16 @@ void ResponseFailData__Init(
     p_action = &this->fields.action;
     v36 = 0;
   }
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_action, v36, v29, v30, v31, v32, v33, v34);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_action, v36, v29, v30, v31, v32, v33, v34);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)failList,
-         (Il2CppObject *)StringLiteral_24216/*"title"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_24337/*"title"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)failList,
-             (Il2CppObject *)StringLiteral_24216/*"title"*/,
-             (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_24337/*"title"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_48;
     v44 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
@@ -248,16 +248,16 @@ void ResponseFailData__Init(
     p_title = &this->fields.title;
     v45 = 0;
   }
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_title, v45, v38, v39, v40, v41, v42, v43);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_title, v45, v38, v39, v40, v41, v42, v43);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)failList,
-         (Il2CppObject *)StringLiteral_18638/*"detail"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_18706/*"detail"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)failList,
-             (Il2CppObject *)StringLiteral_18638/*"detail"*/,
-             (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_18706/*"detail"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_48;
     v53 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
@@ -273,16 +273,16 @@ void ResponseFailData__Init(
     p_detail = &this->fields.detail;
     v54 = 0;
   }
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_detail, v54, v47, v48, v49, v50, v51, v52);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_detail, v54, v47, v48, v49, v50, v51, v52);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)failList,
-         (Il2CppObject *)StringLiteral_24582/*"url"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_24704/*"url"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)failList,
-             (Il2CppObject *)StringLiteral_24582/*"url"*/,
-             (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_24704/*"url"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_48;
     v62 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
@@ -298,16 +298,16 @@ void ResponseFailData__Init(
     p_url = &this->fields.url;
     v63 = 0;
   }
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_url, v63, v56, v57, v58, v59, v60, v61);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_url, v63, v56, v57, v58, v59, v60, v61);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)failList,
-         (Il2CppObject *)StringLiteral_23303/*"sandboxSeurity"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_23417/*"sandboxSeurity"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)failList,
-             (Il2CppObject *)StringLiteral_23303/*"sandboxSeurity"*/,
-             (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_23417/*"sandboxSeurity"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_48;
     v65 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
@@ -324,13 +324,13 @@ void ResponseFailData__Init(
   this->fields.sandboxSeurity = v66;
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)failList,
-         (Il2CppObject *)StringLiteral_23302/*"sandboxDomain"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_23416/*"sandboxDomain"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)failList,
-             (Il2CppObject *)StringLiteral_23302/*"sandboxDomain"*/,
-             (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_23416/*"sandboxDomain"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_48;
     v73 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
@@ -346,16 +346,16 @@ void ResponseFailData__Init(
     p_sandboxDomain = &this->fields.sandboxDomain;
     v74 = 0;
   }
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_sandboxDomain, v74, v67, v68, v69, v70, v71, v72);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_sandboxDomain, v74, v67, v68, v69, v70, v71, v72);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)failList,
-         (Il2CppObject *)StringLiteral_23301/*"sandboxAssetsDomain"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_23415/*"sandboxAssetsDomain"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)failList,
-             (Il2CppObject *)StringLiteral_23301/*"sandboxAssetsDomain"*/,
-             (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_23415/*"sandboxAssetsDomain"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_48;
     v82 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
@@ -371,16 +371,16 @@ void ResponseFailData__Init(
     p_sandboxAssetsDomain = &this->fields.sandboxAssetsDomain;
     v83 = 0;
   }
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_sandboxAssetsDomain, v83, v76, v77, v78, v79, v80, v81);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_sandboxAssetsDomain, v83, v76, v77, v78, v79, v80, v81);
   if ( System_Collections_Generic_Dictionary_object__object___ContainsKey(
          (System_Collections_Generic_Dictionary_object__object__o *)failList,
-         (Il2CppObject *)StringLiteral_23304/*"sandboxWebviewDomain"*/,
-         (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+         (Il2CppObject *)StringLiteral_23418/*"sandboxWebviewDomain"*/,
+         (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     Item = System_Collections_Generic_Dictionary_object__object___get_Item(
              (System_Collections_Generic_Dictionary_object__object__o *)failList,
-             (Il2CppObject *)StringLiteral_23304/*"sandboxWebviewDomain"*/,
-             (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+             (Il2CppObject *)StringLiteral_23418/*"sandboxWebviewDomain"*/,
+             (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
     if ( !Item )
       goto LABEL_48;
     v91 = (struct System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
@@ -396,22 +396,22 @@ void ResponseFailData__Init(
     p_sandboxWebviewDomain = &this->fields.sandboxWebviewDomain;
     v92 = 0;
   }
-  sub_1C71354((GrandQuestFolderBoardItem_o *)p_sandboxWebviewDomain, v92, v85, v86, v87, v88, v89, v90);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)p_sandboxWebviewDomain, v92, v85, v86, v87, v88, v89, v90);
   if ( !System_Collections_Generic_Dictionary_object__object___ContainsKey(
           (System_Collections_Generic_Dictionary_object__object__o *)failList,
-          (Il2CppObject *)StringLiteral_19134/*"errorType"*/,
-          (const MethodInfo_34CB8D4 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
+          (Il2CppObject *)StringLiteral_19218/*"errorType"*/,
+          (const MethodInfo_3520DE8 *)Method_System_Collections_Generic_Dictionary_string__object__ContainsKey__) )
   {
     p_errorType = &this->fields.errorType;
     goto LABEL_47;
   }
   Item = System_Collections_Generic_Dictionary_object__object___get_Item(
            (System_Collections_Generic_Dictionary_object__object__o *)failList,
-           (Il2CppObject *)StringLiteral_19134/*"errorType"*/,
-           (const MethodInfo_34CB660 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
+           (Il2CppObject *)StringLiteral_19218/*"errorType"*/,
+           (const MethodInfo_3520B74 *)Method_System_Collections_Generic_Dictionary_string__object__get_Item__);
   if ( !Item )
 LABEL_48:
-    sub_1C71608(Item, v19);
+    sub_1C942F0(Item, v19);
   v94 = (System_String_o *)((__int64 (__fastcall *)(Il2CppObject *, const MethodInfo *))Item->klass->vtable[3].methodPtr)(
                              Item,
                              Item->klass->vtable[3].method);

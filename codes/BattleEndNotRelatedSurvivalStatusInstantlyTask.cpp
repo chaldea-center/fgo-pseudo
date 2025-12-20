@@ -11,7 +11,7 @@ void BattleEndNotRelatedSurvivalStatusInstantlyTask___ctor(
   BattleLogicTask___ctor((BattleLogicTask_o *)this, (const MethodInfo *)arg);
   this->fields.actiontype = 72;
   if ( !arg )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   v7 = arg->fields._FromProcState_k__BackingField == 2
     && ((unsigned int (__fastcall *)(BaseAiActArgument_o *, const MethodInfo *))arg->klass->vtable._4_get_UniqueId.methodPtr)(
          arg,
@@ -48,12 +48,12 @@ BattleActionData_o *BattleEndNotRelatedSurvivalStatusInstantlyTask__MakeActionDa
 {
   BattleEndNotRelatedSurvivalStatusInstantlyData_o *v3; // x19
 
-  if ( (byte_4CCA76D & 1) == 0 )
+  if ( (byte_4D2FC19 & 1) == 0 )
   {
-    sub_1C713B0(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
-    byte_4CCA76D = 1;
+    sub_1C94098(&BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
+    byte_4D2FC19 = 1;
   }
-  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_1C715FC(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
+  v3 = (BattleEndNotRelatedSurvivalStatusInstantlyData_o *)sub_1C942E4(BattleEndNotRelatedSurvivalStatusInstantlyData_TypeInfo);
   BattleEndNotRelatedSurvivalStatusInstantlyData___ctor(v3, 0);
   return (BattleActionData_o *)v3;
 }

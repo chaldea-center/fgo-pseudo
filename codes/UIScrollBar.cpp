@@ -43,10 +43,10 @@ void UIScrollBar__ForceUpdate(UIScrollBar_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o v33; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o v34; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CCBB52 & 1) == 0 )
+  if ( (byte_4D30F04 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBB52 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30F04 = 1;
   }
   mFG = (UnityEngine_Object_o *)this->fields.mFG;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -133,7 +133,7 @@ void UIScrollBar__ForceUpdate(UIScrollBar_o *this, const MethodInfo *method)
       }
     }
 LABEL_31:
-    sub_1C71608(isInverted, v19);
+    sub_1C942F0(isInverted, v19);
   }
 }
 
@@ -169,10 +169,10 @@ float UIScrollBar__LocalToValue(UIScrollBar_o *this, UnityEngine_Vector2_o local
 
   y = localPos.fields.y;
   x = localPos.fields.x;
-  if ( (byte_4CCBB51 & 1) == 0 )
+  if ( (byte_4D30F03 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBB51 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D30F03 = 1;
   }
   mFG = (UnityEngine_Object_o *)this->fields.mFG;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -197,7 +197,7 @@ float UIScrollBar__LocalToValue(UIScrollBar_o *this, UnityEngine_Vector2_o local
         isHorizontal = (struct UIWidget_o *)UIProgressBar__get_isHorizontal((UIProgressBar_o *)this, 0),
         !v12) )
   {
-    sub_1C71608(isHorizontal, v7);
+    sub_1C942F0(isHorizontal, v7);
   }
   v13 = *(_DWORD *)(v12 + 24);
   if ( !v13 )
@@ -230,7 +230,7 @@ float UIScrollBar__LocalToValue(UIScrollBar_o *this, UnityEngine_Vector2_o local
       return UIProgressBar__get_value((UIProgressBar_o *)this, 0);
     }
 LABEL_38:
-    sub_1C71610(isHorizontal);
+    sub_1C942F8(isHorizontal);
   }
   if ( v13 <= 1 )
     goto LABEL_38;
@@ -269,10 +269,10 @@ void UIScrollBar__OnDragBackground(
   float alpha; // s0 OVERLAPPED
   float v9; // s1
 
-  if ( (byte_4CCBB54 & 1) == 0 )
+  if ( (byte_4D30F06 & 1) == 0 )
   {
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CCBB54 = 1;
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D30F06 = 1;
   }
   v5 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -303,10 +303,10 @@ void UIScrollBar__OnDragForeground(
   float alpha; // s0 OVERLAPPED
   float v9; // s1
 
-  if ( (byte_4CCBB56 & 1) == 0 )
+  if ( (byte_4D30F08 & 1) == 0 )
   {
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CCBB56 = 1;
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D30F08 = 1;
   }
   v5 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -334,10 +334,10 @@ void UIScrollBar__OnPressBackground(
   UnityEngine_GameObject_o *v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4CCBB53 & 1) == 0 )
+  if ( (byte_4D30F05 & 1) == 0 )
   {
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CCBB53 = 1;
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D30F05 = 1;
   }
   v6 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -360,10 +360,10 @@ void UIScrollBar__OnPressForeground(
   UnityEngine_GameObject_o *v7; // x1
   const MethodInfo *v8; // x3
 
-  if ( (byte_4CCBB55 & 1) == 0 )
+  if ( (byte_4D30F07 & 1) == 0 )
   {
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CCBB55 = 1;
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D30F07 = 1;
   }
   v6 = UICamera_TypeInfo;
   if ( !UICamera_TypeInfo->_2.cctor_finished )
@@ -436,18 +436,18 @@ void UIScrollBar__OnStart(UIScrollBar_o *this, const MethodInfo *method)
   UIEventListener_VectorDelegate_c *v58; // x1
   struct UIWidget_o *v59; // x8
 
-  if ( (byte_4CCBB50 & 1) == 0 )
+  if ( (byte_4D30F02 & 1) == 0 )
   {
-    sub_1C713B0(&UIEventListener_BoolDelegate_TypeInfo);
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider2D___);
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_UIScrollBar_OnDragBackground__);
-    sub_1C713B0(&Method_UIScrollBar_OnDragForeground__);
-    sub_1C713B0(&Method_UIScrollBar_OnPressBackground__);
-    sub_1C713B0(&Method_UIScrollBar_OnPressForeground__);
-    sub_1C713B0(&UIEventListener_VectorDelegate_TypeInfo);
-    byte_4CCBB50 = 1;
+    sub_1C94098(&UIEventListener_BoolDelegate_TypeInfo);
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Collider2D___);
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Collider___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_UIScrollBar_OnDragBackground__);
+    sub_1C94098(&Method_UIScrollBar_OnDragForeground__);
+    sub_1C94098(&Method_UIScrollBar_OnPressBackground__);
+    sub_1C94098(&Method_UIScrollBar_OnPressForeground__);
+    sub_1C94098(&UIEventListener_VectorDelegate_TypeInfo);
+    byte_4D30F02 = 1;
   }
   mBG = (UnityEngine_Object_o *)this->fields.mBG;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -459,7 +459,7 @@ void UIScrollBar__OnStart(UIScrollBar_o *this, const MethodInfo *method)
       goto LABEL_57;
     Component_object = UnityEngine_Component__GetComponent_object_(
                          v5,
-                         (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider___);
+                         (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Collider___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)Component_object, 0, 0) )
@@ -469,7 +469,7 @@ void UIScrollBar__OnStart(UIScrollBar_o *this, const MethodInfo *method)
       goto LABEL_57;
     v7 = UnityEngine_Component__GetComponent_object_(
            v5,
-           (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider2D___);
+           (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
     if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v7, 0, 0) )
@@ -485,7 +485,7 @@ LABEL_14:
       v9 = v5;
       v10 = (GrandQuestFolderBoardItem_o *)&v5[3];
       klass = (System_Delegate_o *)v5[3].klass;
-      v12 = (UIEventListener_BoolDelegate_o *)sub_1C715FC(UIEventListener_BoolDelegate_TypeInfo);
+      v12 = (UIEventListener_BoolDelegate_o *)sub_1C942E4(UIEventListener_BoolDelegate_TypeInfo);
       UIEventListener_BoolDelegate___ctor(v12, (Il2CppObject *)this, Method_UIScrollBar_OnPressBackground__, 0);
       v13 = System_Delegate__Combine(klass, (System_Delegate_o *)v12, 0);
       v20 = v13;
@@ -502,10 +502,10 @@ LABEL_14:
       {
         v10->klass = 0;
       }
-      sub_1C71354(v10, (int32_t)v13, v14, v15, v16, v17, v18, v19);
+      sub_1C9403C(v10, (int32_t)v13, v14, v15, v16, v17, v18, v19);
       monitor = (System_Delegate_o *)v9[4].monitor;
       v9 = (UnityEngine_Component_o *)((char *)v9 + 104);
-      v23 = (UIEventListener_VectorDelegate_o *)sub_1C715FC(UIEventListener_VectorDelegate_TypeInfo);
+      v23 = (UIEventListener_VectorDelegate_o *)sub_1C942E4(UIEventListener_VectorDelegate_TypeInfo);
       UIEventListener_VectorDelegate___ctor(v23, (Il2CppObject *)this, Method_UIScrollBar_OnDragBackground__, 0);
       v24 = System_Delegate__Combine(monitor, (System_Delegate_o *)v23, 0);
       v20 = v24;
@@ -522,7 +522,7 @@ LABEL_14:
       {
         v9->klass = 0;
       }
-      sub_1C71354((GrandQuestFolderBoardItem_o *)v9, (int32_t)v24, v25, v26, v27, v28, v29, v30);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)v9, (int32_t)v24, v25, v26, v27, v28, v29, v30);
     }
   }
   mFG = (UnityEngine_Object_o *)this->fields.mFG;
@@ -544,7 +544,7 @@ LABEL_14:
         goto LABEL_57;
       v35 = UnityEngine_Component__GetComponent_object_(
               v5,
-              (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider___);
+              (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Collider___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v35, 0, 0) )
@@ -554,7 +554,7 @@ LABEL_14:
         goto LABEL_57;
       v36 = UnityEngine_Component__GetComponent_object_(
               v5,
-              (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider2D___);
+              (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Collider2D___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v36, 0, 0) )
@@ -570,7 +570,7 @@ LABEL_42:
         v9 = v5;
         v38 = (GrandQuestFolderBoardItem_o *)&v5[3];
         v39 = (System_Delegate_o *)v5[3].klass;
-        v40 = (UIEventListener_BoolDelegate_o *)sub_1C715FC(UIEventListener_BoolDelegate_TypeInfo);
+        v40 = (UIEventListener_BoolDelegate_o *)sub_1C942E4(UIEventListener_BoolDelegate_TypeInfo);
         UIEventListener_BoolDelegate___ctor(v40, (Il2CppObject *)this, Method_UIScrollBar_OnPressForeground__, 0);
         v41 = System_Delegate__Combine(v39, (System_Delegate_o *)v40, 0);
         v20 = v41;
@@ -587,10 +587,10 @@ LABEL_42:
         {
           v38->klass = 0;
         }
-        sub_1C71354(v38, (int32_t)v41, v42, v43, v44, v45, v46, v47);
+        sub_1C9403C(v38, (int32_t)v41, v42, v43, v44, v45, v46, v47);
         v49 = (System_Delegate_o *)v9[4].monitor;
         v9 = (UnityEngine_Component_o *)((char *)v9 + 104);
-        v50 = (UIEventListener_VectorDelegate_o *)sub_1C715FC(UIEventListener_VectorDelegate_TypeInfo);
+        v50 = (UIEventListener_VectorDelegate_o *)sub_1C942E4(UIEventListener_VectorDelegate_TypeInfo);
         UIEventListener_VectorDelegate___ctor(v50, (Il2CppObject *)this, Method_UIScrollBar_OnDragForeground__, 0);
         v51 = System_Delegate__Combine(v49, (System_Delegate_o *)v50, 0);
         v20 = v51;
@@ -607,7 +607,7 @@ LABEL_53:
           if ( (UIEventListener_VectorDelegate_c *)v51->klass == v58 )
           {
 LABEL_54:
-            sub_1C71354((GrandQuestFolderBoardItem_o *)v9, (int32_t)v20, v52, v53, v54, v55, v56, v57);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)v9, (int32_t)v20, v52, v53, v54, v55, v56, v57);
             v59 = this->fields.mFG;
             if ( v59 )
             {
@@ -615,11 +615,11 @@ LABEL_54:
               return;
             }
 LABEL_57:
-            sub_1C71608(v5, v4);
+            sub_1C942F0(v5, v4);
           }
         }
 LABEL_52:
-        sub_1C719A4(v20);
+        sub_1C9468C(v20);
         goto LABEL_53;
       }
     }
@@ -686,13 +686,13 @@ void UIScrollBar__set_barSize(UIScrollBar_o *this, float value, const MethodInfo
   int64_t v19; // x6
   System_String_o *v20; // x7
 
-  if ( (byte_4CCBB4F & 1) == 0 )
+  if ( (byte_4D30F01 & 1) == 0 )
   {
-    sub_1C713B0(&EventDelegate_TypeInfo);
-    sub_1C713B0(&NGUITools_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&UIProgressBar_TypeInfo);
-    byte_4CCBB4F = 1;
+    sub_1C94098(&EventDelegate_TypeInfo);
+    sub_1C94098(&NGUITools_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&UIProgressBar_TypeInfo);
+    byte_4D30F01 = 1;
   }
   v5 = fminf(value, 1.0);
   if ( value < 0.0 )
@@ -711,7 +711,7 @@ void UIScrollBar__set_barSize(UIScrollBar_o *this, float value, const MethodInfo
       if ( UnityEngine_Object__op_Equality(current, 0, 0) && this->fields.onChange )
       {
         UIProgressBar_TypeInfo->static_fields->current = (struct UIProgressBar_o *)this;
-        sub_1C71354(
+        sub_1C9403C(
           (GrandQuestFolderBoardItem_o *)UIProgressBar_TypeInfo->static_fields,
           (int32_t)this,
           v7,
@@ -723,9 +723,9 @@ void UIScrollBar__set_barSize(UIScrollBar_o *this, float value, const MethodInfo
         onChange = this->fields.onChange;
         if ( !EventDelegate_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(EventDelegate_TypeInfo);
-        EventDelegate__Execute_49587556(onChange, v13);
+        EventDelegate__Execute_49911148(onChange, v13);
         UIProgressBar_TypeInfo->static_fields->current = 0;
-        sub_1C71354(
+        sub_1C9403C(
           (GrandQuestFolderBoardItem_o *)UIProgressBar_TypeInfo->static_fields,
           0,
           v15,

@@ -11,9 +11,9 @@ void MasterMissionReceiveConfirmListViewItem___ctor(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
   this->fields._Message_k__BackingField = message;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Message_k__BackingField,
     (int32_t)message,
     v6,
@@ -45,7 +45,7 @@ void MasterMissionReceiveConfirmListViewItem__set_Message(
   System_String_o *v7; // x7
 
   this->fields._Message_k__BackingField = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields._Message_k__BackingField,
     (int32_t)value,
     (int32_t)method,

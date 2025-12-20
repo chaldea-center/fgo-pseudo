@@ -44,3 +44,34 @@ void BlankEarthTransform___ctor(
   this->fields.earthRootLocalScale.fields.z = v18;
   this->fields.totalAngle = v19;
 }
+
+
+void BlankEarthTransform__Reset(BlankEarthTransform_o *this, const MethodInfo *method)
+{
+  UnityEngine_Vector3_c *v3; // x8
+  struct UnityEngine_Vector3_StaticFields *static_fields; // x9
+  float z; // s1
+  struct UnityEngine_Vector3_StaticFields *v6; // x8
+  float v7; // s1
+
+  if ( !byte_4D25F19 )
+  {
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
+  }
+  v3 = UnityEngine_Vector3_TypeInfo;
+  static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
+  z = static_fields->zeroVector.fields.z;
+  *(_QWORD *)&this->fields.earthRootLocalPosition.fields.x = *(_QWORD *)&static_fields->zeroVector.fields.x;
+  this->fields.earthRootLocalPosition.fields.z = z;
+  if ( !byte_4D25F1E )
+  {
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    v3 = UnityEngine_Vector3_TypeInfo;
+    byte_4D25F1E = 1;
+  }
+  v6 = v3->static_fields;
+  v7 = v6->oneVector.fields.z;
+  *(_QWORD *)&this->fields.earthRootLocalScale.fields.x = *(_QWORD *)&v6->oneVector.fields.x;
+  this->fields.earthRootLocalScale.fields.z = v7;
+}

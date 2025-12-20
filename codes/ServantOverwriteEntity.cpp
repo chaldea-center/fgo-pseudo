@@ -1,13 +1,13 @@
 void ServantOverwriteEntity___ctor(ServantOverwriteEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC7DD1 & 1) == 0 )
+  if ( (byte_4D2D260 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC7DD1 = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2D260 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
@@ -17,16 +17,16 @@ System_String_o *ServantOverwriteEntity__CreatePK(
         int32_t priority,
         const MethodInfo *method)
 {
-  if ( (byte_4CC7DD0 & 1) == 0 )
+  if ( (byte_4D2D25F & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
-    byte_4CC7DD0 = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+    byte_4D2D25F = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int__int_(
            svtId,
            type,
            priority,
-           (const MethodInfo_3149724 *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
+           (const MethodInfo_319A74C *)Method_DataEntityBase_CreateMultiplePK_int__int__int___);
 }
 
 
@@ -43,14 +43,14 @@ int32_t ServantOverwriteEntity__GetOverwriteTreasureDeviceId(
         int32_t defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4CC7DCF & 1) == 0 )
+  if ( (byte_4D2D25E & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_22697/*"overwriteTreasureDeviceId"*/);
-    byte_4CC7DCF = 1;
+    sub_1C94098(&StringLiteral_22808/*"overwriteTreasureDeviceId"*/);
+    byte_4D2D25E = 1;
   }
   return EntityScriptUtil__GetIntValue(
            this->fields.overwriteValue,
-           (System_String_o *)StringLiteral_22697/*"overwriteTreasureDeviceId"*/,
+           (System_String_o *)StringLiteral_22808/*"overwriteTreasureDeviceId"*/,
            defaultValue,
            0);
 }

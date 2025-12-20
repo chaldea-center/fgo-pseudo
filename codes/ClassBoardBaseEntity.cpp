@@ -1,13 +1,13 @@
 void ClassBoardBaseEntity___ctor(ClassBoardBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC7141 & 1) == 0 )
+  if ( (byte_4D2C5B5 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_int___ctor__);
-    byte_4CC7141 = 1;
+    sub_1C94098(&Method_DataEntityBase_int___ctor__);
+    byte_4D2C5B5 = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_340699C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3458FDC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -19,12 +19,12 @@ int32_t ClassBoardBaseEntity__CreatePrimaryKey(ClassBoardBaseEntity_o *this, con
 
 int32_t ClassBoardBaseEntity__GetQuestOpenDialogCondSignNum(ClassBoardBaseEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC713E & 1) == 0 )
+  if ( (byte_4D2C5B2 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_22974/*"questOpenDialogCondSignNum"*/);
-    byte_4CC713E = 1;
+    sub_1C94098(&StringLiteral_23088/*"questOpenDialogCondSignNum"*/);
+    byte_4D2C5B2 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22974/*"questOpenDialogCondSignNum"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23088/*"questOpenDialogCondSignNum"*/, 0, 0);
 }
 
 
@@ -32,12 +32,12 @@ int32_t ClassBoardBaseEntity__GetQuestOpenDialogTransitionQuestId(
         ClassBoardBaseEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CC713F & 1) == 0 )
+  if ( (byte_4D2C5B3 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_22975/*"questOpenDialogTransitionQuestId"*/);
-    byte_4CC713F = 1;
+    sub_1C94098(&StringLiteral_23089/*"questOpenDialogTransitionQuestId"*/);
+    byte_4D2C5B3 = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22975/*"questOpenDialogTransitionQuestId"*/, 0, 0);
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_23089/*"questOpenDialogTransitionQuestId"*/, 0, 0);
 }
 
 
@@ -46,13 +46,13 @@ bool ClassBoardBaseEntity__IsDispBeastText(ClassBoardBaseEntity_o *this, const M
   int32_t IntValue; // w0
   int32_t v4; // w19
 
-  if ( (byte_4CC7140 & 1) == 0 )
+  if ( (byte_4D2C5B4 & 1) == 0 )
   {
-    sub_1C713B0(&CondType_TypeInfo);
-    sub_1C713B0(&StringLiteral_22400/*"notDispBeastTextCondQuestId"*/);
-    byte_4CC7140 = 1;
+    sub_1C94098(&CondType_TypeInfo);
+    sub_1C94098(&StringLiteral_22508/*"notDispBeastTextCondQuestId"*/);
+    byte_4D2C5B4 = 1;
   }
-  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22400/*"notDispBeastTextCondQuestId"*/, 0, 0);
+  IntValue = EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_22508/*"notDispBeastTextCondQuestId"*/, 0, 0);
   if ( IntValue < 1 )
   {
     return 0;
@@ -62,7 +62,7 @@ bool ClassBoardBaseEntity__IsDispBeastText(ClassBoardBaseEntity_o *this, const M
     v4 = IntValue;
     if ( !CondType_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(CondType_TypeInfo);
-    return !CondType__IsQuestClear_40596552(v4, -1, 0, 0);
+    return !CondType__IsQuestClear_41072884(v4, -1, 0, 0);
   }
 }
 
@@ -79,10 +79,10 @@ bool ClassBoardBaseEntity__IsOpen(ClassBoardBaseEntity_o *this, const MethodInfo
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4CC713D & 1) == 0 )
+  if ( (byte_4D2C5B1 & 1) == 0 )
   {
-    sub_1C713B0(&CondType_TypeInfo);
-    byte_4CC713D = 1;
+    sub_1C94098(&CondType_TypeInfo);
+    byte_4D2C5B1 = 1;
   }
   condType = this->fields.condType;
   condTargetId = this->fields.condTargetId;

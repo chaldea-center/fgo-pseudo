@@ -1,27 +1,27 @@
 void GalleryResourceEntity___ctor(GalleryResourceEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC770E & 1) == 0 )
+  if ( (byte_4D2CC6A & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC770E = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2CC6A = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *GalleryResourceEntity__CreatePK(int32_t galleryId, int32_t idx, const MethodInfo *method)
 {
-  if ( (byte_4CC770D & 1) == 0 )
+  if ( (byte_4D2CC69 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CC770D = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4D2CC69 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            galleryId,
            idx,
-           (const MethodInfo_3149294 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -39,23 +39,39 @@ System_String_o *GalleryResourceEntity__GetAssetPath(GalleryResourceEntity_o *th
   UserGameEntity_o *SelfUserGame; // x0
   __int64 v5; // x1
   const MethodInfo *v6; // x2
+  const MethodInfo *v7; // x1
   System_String_o *path; // [xsp+8h] [xbp-18h] BYREF
 
-  if ( (byte_4CC770A & 1) == 0 )
+  if ( (byte_4D2CC65 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_1039/*".usm"*/);
-    byte_4CC770A = 1;
+    sub_1C94098(&StringLiteral_1039/*".usm"*/);
+    byte_4D2CC65 = 1;
   }
   path = 0;
   assetPath = this->fields.assetPath;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
-    sub_1C71608(0, v5);
+    sub_1C942F0(0, v5);
   if ( UserGameEntity__IsMale(SelfUserGame, 0) && GalleryResourceEntity__TryGetMaleAssetPath(this, &path, v6) )
     assetPath = path;
-  if ( GalleryType__IsMovie(this->fields.galleryType, 0) && !System_String__IsNullOrEmpty(assetPath, 0) )
-    return System_String__Concat_64031724(assetPath, (System_String_o *)StringLiteral_1039/*".usm"*/, 0);
+  if ( GalleryType__IsMovie(this->fields.galleryType, 0)
+    && !System_String__IsNullOrEmpty(assetPath, 0)
+    && GalleryResourceEntity__GetDownloadType(this, v7) != 1 )
+  {
+    return System_String__Concat_64417744(assetPath, (System_String_o *)StringLiteral_1039/*".usm"*/, 0);
+  }
   return assetPath;
+}
+
+
+int32_t GalleryResourceEntity__GetDownloadType(GalleryResourceEntity_o *this, const MethodInfo *method)
+{
+  if ( (byte_4D2CC68 & 1) == 0 )
+  {
+    sub_1C94098(&StringLiteral_18781/*"downloadType"*/);
+    byte_4D2CC68 = 1;
+  }
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_18781/*"downloadType"*/, 0, 0);
 }
 
 
@@ -71,7 +87,7 @@ System_String_o *GalleryResourceEntity__GetObjectName(GalleryResourceEntity_o *t
   objectName = this->fields.objectName;
   SelfUserGame = UserGameMaster__getSelfUserGame(0);
   if ( !SelfUserGame )
-    sub_1C71608(0, v5);
+    sub_1C942F0(0, v5);
   if ( UserGameEntity__IsMale(SelfUserGame, 0) && GalleryResourceEntity__TryGetMaleObjectName(this, &name, v6) )
     return name;
   return objectName;
@@ -90,29 +106,29 @@ System_String_o *GalleryResourceEntity__GetTitleName(GalleryResourceEntity_o *th
   System_String_o *v10; // x0
   System_String_o *titleName; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CC770B & 1) == 0 )
+  if ( (byte_4D2CC66 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_QuestMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_8588/*"MATERIAL_MAP_QUEST_TITLE"*/);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC770B = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_QuestMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&StringLiteral_8607/*"MATERIAL_MAP_QUEST_TITLE"*/);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2CC66 = 1;
   }
   titleName = (System_String_o *)StringLiteral_1/*""*/;
   if ( !GalleryResourceEntity__TryGetOverWriteTitleName(this, &titleName, v2) )
   {
     if ( !DataManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-    Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_QuestMaster___);
+    Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_QuestMaster___);
     if ( !Master_object
       || (Master_object = DataMasterBase_object__object__int___GetEntity(
                             (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                             this->fields.questId,
-                            (const MethodInfo_3408E80 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__)) == 0 )
+                            (const MethodInfo_345B4C0 *)Method_DataMasterBase_QuestMaster__QuestEntity__int__GetEntity__)) == 0 )
     {
-      sub_1C71608(Master_object, v5);
+      sub_1C942F0(Master_object, v5);
     }
     v6 = (QuestEntity_o *)Master_object;
     titleName = QuestEntity__getQuestName((QuestEntity_o *)Master_object, 0);
@@ -124,8 +140,8 @@ System_String_o *GalleryResourceEntity__GetTitleName(GalleryResourceEntity_o *th
       {
         if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-        v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8588/*"MATERIAL_MAP_QUEST_TITLE"*/, 0);
-        return System_String__Format_64073032(v10, ChapterSubStr, (Il2CppObject *)titleName, 0);
+        v10 = LocalizationManager__Get((System_String_o *)StringLiteral_8607/*"MATERIAL_MAP_QUEST_TITLE"*/, 0);
+        return System_String__Format_64459052(v10, ChapterSubStr, (Il2CppObject *)titleName, 0);
       }
     }
   }
@@ -139,30 +155,30 @@ int32_t GalleryResourceEntity__GetWarId(GalleryResourceEntity_o *this, const Met
   __int64 v4; // x1
   Il2CppObject *entity; // [xsp+8h] [xbp-28h] BYREF
 
-  if ( (byte_4CC770C & 1) == 0 )
+  if ( (byte_4D2CC67 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_GalleryMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_DataMasterBase_GalleryMaster__GalleryEntity__int__TryGetEntity__);
-    byte_4CC770C = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_GalleryMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_DataMasterBase_GalleryMaster__GalleryEntity__int__TryGetEntity__);
+    byte_4D2CC67 = 1;
   }
   entity = 0;
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_GalleryMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_GalleryMaster___);
   if ( !Master_object )
     goto LABEL_11;
   Master_object = (Il2CppObject *)DataMasterBase_object__object__int___TryGetEntity(
                                     (DataMasterBase_TMaster__TEntity__PKType__o *)Master_object,
                                     &entity,
                                     this->fields.galleryId,
-                                    (const MethodInfo_3408ECC *)Method_DataMasterBase_GalleryMaster__GalleryEntity__int__TryGetEntity__);
+                                    (const MethodInfo_345B50C *)Method_DataMasterBase_GalleryMaster__GalleryEntity__int__TryGetEntity__);
   if ( ((unsigned __int8)Master_object & 1) != 0 )
   {
     if ( entity )
       return (int32_t)entity[1].monitor;
 LABEL_11:
-    sub_1C71608(Master_object, v4);
+    sub_1C942F0(Master_object, v4);
   }
   return 0;
 }
@@ -173,12 +189,12 @@ float GalleryResourceEntity__GetZoomRateMax(
         float defaultValue,
         const MethodInfo *method)
 {
-  if ( (byte_4CC7706 & 1) == 0 )
+  if ( (byte_4D2CC61 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_25160/*"zoomRateMax"*/);
-    byte_4CC7706 = 1;
+    sub_1C94098(&StringLiteral_25282/*"zoomRateMax"*/);
+    byte_4D2CC61 = 1;
   }
-  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_25160/*"zoomRateMax"*/, defaultValue, 0)
+  return EntityScriptUtil__GetFloatValue(this->fields.script, (System_String_o *)StringLiteral_25282/*"zoomRateMax"*/, defaultValue, 0)
        / 1000.0;
 }
 
@@ -196,14 +212,14 @@ bool GalleryResourceEntity__TryGetMaleAssetPath(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CC7707 & 1) == 0 )
+  if ( (byte_4D2CC62 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_21508/*"maleAssetPath"*/);
-    byte_4CC7707 = 1;
+    sub_1C94098(&StringLiteral_21612/*"maleAssetPath"*/);
+    byte_4D2CC62 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21508/*"maleAssetPath"*/, 0, 0);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21612/*"maleAssetPath"*/, 0, 0);
   *path = StringValue;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)path, (int32_t)StringValue, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)path, (int32_t)StringValue, v6, v7, v8, v9, v10, v11);
   return *path != 0;
 }
 
@@ -221,14 +237,14 @@ bool GalleryResourceEntity__TryGetMaleObjectName(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CC7708 & 1) == 0 )
+  if ( (byte_4D2CC63 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_21510/*"maleObjectName"*/);
-    byte_4CC7708 = 1;
+    sub_1C94098(&StringLiteral_21615/*"maleObjectName"*/);
+    byte_4D2CC63 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21510/*"maleObjectName"*/, 0, 0);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_21615/*"maleObjectName"*/, 0, 0);
   *name = StringValue;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)name, (int32_t)StringValue, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)name, (int32_t)StringValue, v6, v7, v8, v9, v10, v11);
   return *name != 0;
 }
 
@@ -246,13 +262,13 @@ bool GalleryResourceEntity__TryGetOverWriteTitleName(
   int64_t v10; // x6
   System_String_o *v11; // x7
 
-  if ( (byte_4CC7709 & 1) == 0 )
+  if ( (byte_4D2CC64 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_22623/*"overWriteTitleName"*/);
-    byte_4CC7709 = 1;
+    sub_1C94098(&StringLiteral_22731/*"overWriteTitleName"*/);
+    byte_4D2CC64 = 1;
   }
-  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22623/*"overWriteTitleName"*/, 0, 0);
+  StringValue = EntityScriptUtil__GetStringValue(this->fields.script, (System_String_o *)StringLiteral_22731/*"overWriteTitleName"*/, 0, 0);
   *titleName = StringValue;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)titleName, (int32_t)StringValue, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)titleName, (int32_t)StringValue, v6, v7, v8, v9, v10, v11);
   return !System_String__IsNullOrEmpty(*titleName, 0);
 }

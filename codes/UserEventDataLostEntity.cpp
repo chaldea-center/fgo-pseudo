@@ -1,27 +1,27 @@
 void UserEventDataLostEntity___ctor(UserEventDataLostEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC81D3 & 1) == 0 )
+  if ( (byte_4D2D668 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC81D3 = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2D668 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *UserEventDataLostEntity__CreatePK(int64_t userId, int32_t dataLostBattleId, const MethodInfo *method)
 {
-  if ( (byte_4CC81D2 & 1) == 0 )
+  if ( (byte_4D2D667 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_long__int___);
-    byte_4CC81D2 = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_long__int___);
+    byte_4D2D667 = 1;
   }
   return DataEntityBase__CreateMultiplePK_long__int_(
            userId,
            dataLostBattleId,
-           (const MethodInfo_314939C *)Method_DataEntityBase_CreateMultiplePK_long__int___);
+           (const MethodInfo_319A3C4 *)Method_DataEntityBase_CreateMultiplePK_long__int___);
 }
 
 
@@ -46,22 +46,22 @@ int32_t UserEventDataLostEntity__GetTimesToRestart(
   int32_t v10; // [xsp+1Ch] [xbp-14h] BYREF
 
   v10 = svtId;
-  if ( (byte_4CC81D1 & 1) == 0 )
+  if ( (byte_4D2D666 & 1) == 0 )
   {
-    sub_1C713B0(&System_Convert_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4CC81D1 = 1;
+    sub_1C94098(&System_Convert_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4D2D666 = 1;
   }
   value = 0;
   restartSvtInfo = this->fields.restartSvtInfo;
   v5 = (Il2CppObject *)System_Int32__ToString((int32_t)&v10, 0);
   if ( !restartSvtInfo )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)restartSvtInfo,
           v5,
           &value,
-          (const MethodInfo_34CCEEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3522400 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     return 0;
   v7 = value;
   if ( !System_Convert_TypeInfo->_2.cctor_finished )
@@ -79,33 +79,33 @@ bool UserEventDataLostEntity__IsAllServantDataLost(UserEventDataLostEntity_o *th
   System_Collections_Generic_List_Enumerator_int__o v8; // [xsp+8h] [xbp-58h] BYREF
   System_Collections_Generic_List_Enumerator_int__o v9; // [xsp+20h] [xbp-40h] BYREF
 
-  if ( (byte_4CC81CF & 1) == 0 )
+  if ( (byte_4D2D664 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_UserServantMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_int__GetEnumerator__);
-    byte_4CC81CF = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_UserServantMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_int__MoveNext__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_int__get_Current__);
+    sub_1C94098(&Method_System_Collections_Generic_List_int__GetEnumerator__);
+    byte_4D2D664 = 1;
   }
   memset(&v9, 0, sizeof(v9));
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = (UserServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_UserServantMaster___);
+  Master_object = (UserServantMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_UserServantMaster___);
   if ( !Master_object
     || (Master_object = (UserServantMaster_o *)UserServantMaster__GetAllServantList(Master_object, 0)) == 0 )
   {
-    sub_1C71608(Master_object, v4);
+    sub_1C942F0(Master_object, v4);
   }
   System_Collections_Generic_List_int___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v8,
     (System_Collections_Generic_List_int__o *)Master_object,
-    (const MethodInfo_37F41C8 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
+    (const MethodInfo_384E8E4 *)Method_System_Collections_Generic_List_int__GetEnumerator__);
   v9 = v8;
   while ( System_Collections_Generic_List_Enumerator_int___MoveNext(
             &v9,
-            (const MethodInfo_35924B0 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
+            (const MethodInfo_35E83A8 *)Method_System_Collections_Generic_List_Enumerator_int__MoveNext__) )
   {
     if ( !UserEventDataLostEntity__IsDataLost(this, v9.fields._current, v5) )
     {
@@ -117,7 +117,7 @@ bool UserEventDataLostEntity__IsAllServantDataLost(UserEventDataLostEntity_o *th
 LABEL_12:
   System_Collections_Generic_List_Enumerator_int___Dispose(
     &v9,
-    (const MethodInfo_35924AC *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
+    (const MethodInfo_35E83A4 *)Method_System_Collections_Generic_List_Enumerator_int__Dispose__);
   return v6 != 4;
 }
 
@@ -134,20 +134,20 @@ bool UserEventDataLostEntity__IsDataLost(UserEventDataLostEntity_o *this, int32_
   System_Collections_Generic_List_Enumerator_object__o v12; // [xsp+20h] [xbp-A0h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+40h] [xbp-80h] BYREF
 
-  if ( (byte_4CC81CE & 1) == 0 )
+  if ( (byte_4D2D663 & 1) == 0 )
   {
-    sub_1C713B0(&System_Convert_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__object__get_Values__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__Dispose__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__MoveNext__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_object__MoveNext__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_object__get_Current__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__get_Current__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_object__GetEnumerator__);
-    sub_1C713B0(&System_Collections_Generic_List_object__TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__object__GetEnumerator__);
-    byte_4CC81CE = 1;
+    sub_1C94098(&System_Convert_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__get_Values__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__Dispose__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__MoveNext__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_object__MoveNext__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_object__get_Current__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__get_Current__);
+    sub_1C94098(&Method_System_Collections_Generic_List_object__GetEnumerator__);
+    sub_1C94098(&System_Collections_Generic_List_object__TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_ValueCollection_string__object__GetEnumerator__);
+    byte_4D2D663 = 1;
   }
   memset(&v13, 0, sizeof(v13));
   memset(&v12, 0, sizeof(v12));
@@ -155,19 +155,19 @@ bool UserEventDataLostEntity__IsDataLost(UserEventDataLostEntity_o *this, int32_
   if ( !dataLostSvtInfo
     || (dataLostSvtInfo = (System_Collections_Generic_Dictionary_object__object__o *)System_Collections_Generic_Dictionary_object__object___get_Values(
                                                                                        dataLostSvtInfo,
-                                                                                       (const MethodInfo_34CB510 *)Method_System_Collections_Generic_Dictionary_string__object__get_Values__)) == 0 )
+                                                                                       (const MethodInfo_3520A24 *)Method_System_Collections_Generic_Dictionary_string__object__get_Values__)) == 0 )
   {
-    sub_1C71608(dataLostSvtInfo, *(_QWORD *)&svtId);
+    sub_1C942F0(dataLostSvtInfo, *(_QWORD *)&svtId);
   }
   System_Collections_Generic_Dictionary_ValueCollection_object__object___GetEnumerator(
     (System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o *)&v11,
     (System_Collections_Generic_Dictionary_ValueCollection_TKey__TValue__o *)dataLostSvtInfo,
-    (const MethodInfo_3B57114 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__object__GetEnumerator__);
+    (const MethodInfo_3BB3594 *)Method_System_Collections_Generic_Dictionary_ValueCollection_string__object__GetEnumerator__);
   v6 = 0;
   v13 = v11;
   while ( System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___MoveNext(
             (System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o *)&v13,
-            (const MethodInfo_35C9AC0 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__MoveNext__) )
+            (const MethodInfo_3620234 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__MoveNext__) )
   {
     if ( v13.fields._current )
     {
@@ -178,11 +178,11 @@ bool UserEventDataLostEntity__IsDataLost(UserEventDataLostEntity_o *this, int32_
         System_Collections_Generic_List_object___GetEnumerator(
           (System_Collections_Generic_List_Enumerator_T__o *)&v11,
           (System_Collections_Generic_List_object__o *)v13.fields._current,
-          (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_object__GetEnumerator__);
+          (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_object__GetEnumerator__);
         v12 = v11;
         while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
                   &v12,
-                  (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_object__MoveNext__) )
+                  (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_object__MoveNext__) )
         {
           current = v12.fields._current;
           if ( !System_Convert_TypeInfo->_2.cctor_finished )
@@ -198,7 +198,7 @@ bool UserEventDataLostEntity__IsDataLost(UserEventDataLostEntity_o *this, int32_
 LABEL_17:
         System_Collections_Generic_List_Enumerator_object___Dispose(
           &v12,
-          (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
+          (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_object__Dispose__);
         if ( (v9 | 2) != 2 )
           goto LABEL_20;
       }
@@ -208,7 +208,7 @@ LABEL_17:
 LABEL_20:
   System_Collections_Generic_Dictionary_ValueCollection_Enumerator_object__object___Dispose(
     (System_Collections_Generic_Dictionary_ValueCollection_Enumerator_TKey__TValue__o *)&v13,
-    (const MethodInfo_35C9ABC *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__Dispose__);
+    (const MethodInfo_3620230 *)Method_System_Collections_Generic_Dictionary_ValueCollection_Enumerator_string__object__Dispose__);
   return v6 & (v9 == 6);
 }
 
@@ -223,22 +223,22 @@ bool UserEventDataLostEntity__IsRestart(UserEventDataLostEntity_o *this, int32_t
   int32_t v10; // [xsp+1Ch] [xbp-14h] BYREF
 
   v10 = svtId;
-  if ( (byte_4CC81D0 & 1) == 0 )
+  if ( (byte_4D2D665 & 1) == 0 )
   {
-    sub_1C713B0(&System_Convert_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
-    byte_4CC81D0 = 1;
+    sub_1C94098(&System_Convert_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__);
+    byte_4D2D665 = 1;
   }
   value = 0;
   restartSvtInfo = this->fields.restartSvtInfo;
   v5 = (Il2CppObject *)System_Int32__ToString((int32_t)&v10, 0);
   if ( !restartSvtInfo )
-    sub_1C71608(v5, v6);
+    sub_1C942F0(v5, v6);
   if ( !System_Collections_Generic_Dictionary_object__object___TryGetValue(
           (System_Collections_Generic_Dictionary_object__object__o *)restartSvtInfo,
           v5,
           &value,
-          (const MethodInfo_34CCEEC *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
+          (const MethodInfo_3522400 *)Method_System_Collections_Generic_Dictionary_string__object__TryGetValue__) )
     return 0;
   v7 = value;
   if ( !System_Convert_TypeInfo->_2.cctor_finished )

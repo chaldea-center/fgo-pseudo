@@ -42,18 +42,18 @@ void SePlayer___ctor(
   float PreDelayTime; // s0
   const MethodInfo *v49; // x3
 
-  if ( (byte_4CC6D90 & 1) == 0 )
+  if ( (byte_4D2C200 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4CC6D90 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4D2C200 = 1;
   }
   this->fields.volume = 1.0;
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.seType = type;
   this->fields.playNum = num;
   this->fields.objName = name;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.objName, (int32_t)name, v22, v23, v24, v25, v26, v27);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.objName, (int32_t)name, v22, v23, v24, v25, v26, v27);
   p_callbackFunc = &this->fields.callbackFunc;
   v29 = System_Delegate__Combine((System_Delegate_o *)this->fields.callbackFunc, (System_Delegate_o *)callbackFunc, 0);
   v36 = v29;
@@ -63,11 +63,11 @@ void SePlayer___ctor(
   if ( (System_Action_c *)v29->klass != System_Action_TypeInfo
     || (*p_callbackFunc = (struct System_Action_o *)v29, (System_Action_c *)v29->klass != v37) )
   {
-    sub_1C719A4(v29);
+    sub_1C9468C(v29);
 LABEL_7:
     *p_callbackFunc = (struct System_Action_o *)v36;
   }
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)v36, v30, v31, v32, v33, v34, v35);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, (int32_t)v36, v30, v31, v32, v33, v34, v35);
   BaseVolume = 0.0;
   this->fields.volume = volume;
   this->fields.fadeinTime = fadeinTime;
@@ -83,19 +83,19 @@ LABEL_7:
     goto LABEL_15;
   v41 = System_String__Replace(pathName, 0x2Fu, 0x5Fu, 0);
   this->fields.cueSheetName = v41;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.cueSheetName, (int32_t)v41, v42, v43, v44, v45, v46, v47);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.cueSheetName, (int32_t)v41, v42, v43, v44, v45, v46, v47);
   PreDelayTime = 0.0;
   this->fields.notOverwrite = notOverwrite;
   if ( !ignorePreDelay )
   {
-    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    Instance = SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
     if ( Instance )
     {
       PreDelayTime = SeManager__GetPreDelayTime((SeManager_o *)Instance, this->fields.cueSheetName, name, v49);
       goto LABEL_14;
     }
 LABEL_15:
-    sub_1C71608(Instance, v39);
+    sub_1C942F0(Instance, v39);
   }
 LABEL_14:
   this->fields.preDelayTime = PreDelayTime;
@@ -128,10 +128,10 @@ bool SePlayer__ChangeVolume(SePlayer_o *this, float volume, float fadeTime, cons
   CriAtomSource_o *v16; // x20
   float BaseVolume; // s0
 
-  if ( (byte_4CC6D94 & 1) == 0 )
+  if ( (byte_4D2C204 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC6D94 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2C204 = 1;
   }
   if ( this->fields.isStop || this->fields.fadeoutTime > 0.0 )
     return 0;
@@ -155,7 +155,7 @@ bool SePlayer__ChangeVolume(SePlayer_o *this, float volume, float fadeTime, cons
       return 1;
     }
 LABEL_19:
-    sub_1C71608(v9, v10);
+    sub_1C942F0(v9, v10);
   }
   this->fields.fadeinTime = fadeTime;
   v8 = (UnityEngine_Object_o *)this->fields.source;
@@ -194,13 +194,13 @@ void SePlayer__Destroy(SePlayer_o *this, const MethodInfo *method)
   int64_t v16; // x6
   System_String_o *v17; // x7
 
-  if ( (byte_4CC6D91 & 1) == 0 )
+  if ( (byte_4D2C201 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC6D91 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2C201 = 1;
   }
   this->fields.callbackFunc = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v2, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, v2, v3, v4, v5, v6, v7);
   p_source = &this->fields.source;
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -208,10 +208,10 @@ void SePlayer__Destroy(SePlayer_o *this, const MethodInfo *method)
   if ( UnityEngine_Object__op_Inequality(source, 0, 0) )
   {
     if ( !*p_source )
-      sub_1C71608(0, v11);
+      sub_1C942F0(0, v11);
     CriAtomSource__Stop(*p_source, 0);
     *p_source = 0;
-    sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.source, 0, v12, v13, v14, v15, v16, v17);
+    sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.source, 0, v12, v13, v14, v15, v16, v17);
   }
   *(_DWORD *)&this->fields.isStop = 1;
 }
@@ -227,17 +227,17 @@ float SePlayer__GetBaseVolume(SePlayer_o *this, const MethodInfo *method)
   float masterVoiceVolume; // s0
   SeManager_c *v9; // x0
 
-  if ( (byte_4CC6D8F & 1) == 0 )
+  if ( (byte_4D2C1FF & 1) == 0 )
   {
-    sub_1C713B0(&SeManager_TypeInfo);
-    byte_4CC6D8F = 1;
+    sub_1C94098(&SeManager_TypeInfo);
+    byte_4D2C1FF = 1;
   }
   if ( !SeManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-  if ( !byte_4CC6E1D )
+  if ( !byte_4D2C279 )
   {
-    sub_1C713B0(&SeManager_TypeInfo);
-    byte_4CC6E1D = 1;
+    sub_1C94098(&SeManager_TypeInfo);
+    byte_4D2C279 = 1;
   }
   v3 = SeManager_TypeInfo;
   if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -254,10 +254,10 @@ float SePlayer__GetBaseVolume(SePlayer_o *this, const MethodInfo *method)
       j_il2cpp_runtime_class_init_0(v3);
     if ( seType == 1 )
     {
-      if ( !byte_4CC6E1E )
+      if ( !byte_4D2C27A )
       {
-        sub_1C713B0(&SeManager_TypeInfo);
-        byte_4CC6E1E = 1;
+        sub_1C94098(&SeManager_TypeInfo);
+        byte_4D2C27A = 1;
       }
       v7 = SeManager_TypeInfo;
       if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -269,10 +269,10 @@ float SePlayer__GetBaseVolume(SePlayer_o *this, const MethodInfo *method)
     }
     else
     {
-      if ( !byte_4CC6E1F )
+      if ( !byte_4D298A6 )
       {
-        sub_1C713B0(&SeManager_TypeInfo);
-        byte_4CC6E1F = 1;
+        sub_1C94098(&SeManager_TypeInfo);
+        byte_4D298A6 = 1;
       }
       v9 = SeManager_TypeInfo;
       if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -297,10 +297,10 @@ void SePlayer__MuteSe(SePlayer_o *this, const MethodInfo *method)
   __int64 v7; // x1
   float BaseVolume; // s0
 
-  if ( (byte_4CC6D95 & 1) == 0 )
+  if ( (byte_4D2C205 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC6D95 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2C205 = 1;
   }
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -310,7 +310,7 @@ void SePlayer__MuteSe(SePlayer_o *this, const MethodInfo *method)
     v5 = this->fields.source;
     BaseVolume = SePlayer__GetBaseVolume(this, v4);
     if ( !v5 )
-      sub_1C71608(v6, v7);
+      sub_1C942F0(v6, v7);
     CriAtomSource__set_volume(v5, BaseVolume, 0);
   }
 }
@@ -329,10 +329,10 @@ void SePlayer__RemoveCallback(SePlayer_o *this, System_Action_o *callbackFunc, c
   System_String_o *v13; // x7
   System_Action_c *v14; // x1
 
-  if ( (byte_4CC6D92 & 1) == 0 )
+  if ( (byte_4D2C202 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    byte_4CC6D92 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    byte_4D2C202 = 1;
   }
   if ( callbackFunc )
   {
@@ -345,7 +345,7 @@ void SePlayer__RemoveCallback(SePlayer_o *this, System_Action_o *callbackFunc, c
       if ( (System_Action_c *)v7->klass != System_Action_TypeInfo
         || (p_callbackFunc->klass = (GrandQuestFolderBoardItem_c *)v7, (System_Action_c *)v7->klass != v14) )
       {
-        sub_1C719A4(v7);
+        sub_1C9468C(v7);
         return;
       }
     }
@@ -353,7 +353,7 @@ void SePlayer__RemoveCallback(SePlayer_o *this, System_Action_o *callbackFunc, c
     {
       p_callbackFunc->klass = 0;
     }
-    sub_1C71354(p_callbackFunc, (int32_t)v7, v8, v9, v10, v11, v12, v13);
+    sub_1C9403C(p_callbackFunc, (int32_t)v7, v8, v9, v10, v11, v12, v13);
   }
 }
 
@@ -364,10 +364,10 @@ void SePlayer__SetPause(SePlayer_o *this, bool isPause, const MethodInfo *method
   __int64 v6; // x1
   CriAtomSource_o *v7; // x0
 
-  if ( (byte_4CC6D8E & 1) == 0 )
+  if ( (byte_4D2C1FE & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC6D8E = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2C1FE = 1;
   }
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -376,7 +376,7 @@ void SePlayer__SetPause(SePlayer_o *this, bool isPause, const MethodInfo *method
   {
     v7 = this->fields.source;
     if ( !v7 )
-      sub_1C71608(0, v6);
+      sub_1C942F0(0, v6);
     CriAtomSource__Pause(v7, isPause, 0);
   }
 }
@@ -398,11 +398,11 @@ void SePlayer__StopSe(SePlayer_o *this, float fadeoutTime, const MethodInfo *met
   System_String_o *v16; // x7
   const MethodInfo *v17; // x2
 
-  if ( (byte_4CC6D93 & 1) == 0 )
+  if ( (byte_4D2C203 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    byte_4CC6D93 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    byte_4D2C203 = 1;
   }
   if ( !this->fields.isStop && (fadeoutTime <= 0.0 || this->fields.fadeoutTime <= 0.0) )
   {
@@ -422,9 +422,9 @@ void SePlayer__StopSe(SePlayer_o *this, float fadeoutTime, const MethodInfo *met
           goto LABEL_21;
         CriAtomSource__Stop(Instance, 0);
         *p_source = 0;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.source, 0, v11, v12, v13, v14, v15, v16);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.source, 0, v11, v12, v13, v14, v15, v16);
       }
-      Instance = (CriAtomSource_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+      Instance = (CriAtomSource_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
       if ( Instance )
       {
         SeManager__ReleaseAudioSource((SeManager_o *)Instance, this, v17);
@@ -451,7 +451,7 @@ LABEL_12:
       }
     }
 LABEL_21:
-    sub_1C71608(Instance, v7);
+    sub_1C942F0(Instance, v7);
   }
 }
 
@@ -464,7 +464,7 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
   const MethodInfo *v8; // x1
   __int64 Instance; // x0
   const MethodInfo *v10; // x5
-  struct CriAtomSource_o *AudioSource_41775940; // x0
+  struct CriAtomSource_o *AudioSource_42261628; // x0
   int32_t v12; // w2
   int32_t v13; // w3
   System_String_o *v14; // x4
@@ -560,17 +560,17 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
   float preDelayTime; // s0
   float volume; // [xsp+Ch] [xbp-34h] BYREF
 
-  if ( (byte_4CC6D96 & 1) == 0 )
+  if ( (byte_4D2C206 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&SeManager_TypeInfo);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
-    sub_1C713B0(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
-    sub_1C713B0(&string___TypeInfo);
-    sub_1C713B0(&StringLiteral_16075/*"] vol:"*/);
-    sub_1C713B0(&StringLiteral_16062/*"] : ["*/);
-    sub_1C713B0(&StringLiteral_11518/*"SE Play (not found) for debug : ["*/);
-    byte_4CC6D96 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&SeManager_TypeInfo);
+    sub_1C94098(&Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+    sub_1C94098(&Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+    sub_1C94098(&string___TypeInfo);
+    sub_1C94098(&StringLiteral_16129/*"] vol:"*/);
+    sub_1C94098(&StringLiteral_16116/*"] : ["*/);
+    sub_1C94098(&StringLiteral_11560/*"SE Play (not found) for debug : ["*/);
+    byte_4D2C206 = 1;
   }
   volume = 0.0;
   if ( this->fields.isLoading )
@@ -583,20 +583,20 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
   {
     if ( !this->fields.isStop && this->fields.isWaitSource && this->fields.cueSheetName && this->fields.objName )
     {
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_SeManager__get_Instance__);
       if ( !Instance )
         goto LABEL_97;
-      AudioSource_41775940 = SeManager__GetAudioSource_41775940(
+      AudioSource_42261628 = SeManager__GetAudioSource_42261628(
                                (SeManager_o *)Instance,
                                this,
                                this->fields.cueSheetName,
                                this->fields.objName,
                                this->fields.notOverwrite,
                                v10);
-      this->fields.source = AudioSource_41775940;
-      sub_1C71354(
+      this->fields.source = AudioSource_42261628;
+      sub_1C9403C(
         (GrandQuestFolderBoardItem_o *)&this->fields.source,
-        (int32_t)AudioSource_41775940,
+        (int32_t)AudioSource_42261628,
         v12,
         v13,
         v14,
@@ -614,13 +614,13 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
         goto LABEL_97;
       cueSheetName = this->fields.cueSheetName;
       *(_QWORD *)(Instance + 120) = cueSheetName;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(Instance + 120), (int32_t)cueSheetName, v19, v20, v21, v22, v23, v24);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(Instance + 120), (int32_t)cueSheetName, v19, v20, v21, v22, v23, v24);
       Instance = (__int64)this->fields.source;
       if ( !Instance )
         goto LABEL_97;
       objName = this->fields.objName;
       *(_QWORD *)(Instance + 112) = objName;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(Instance + 112), (int32_t)objName, v26, v27, v28, v29, v30, v31);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(Instance + 112), (int32_t)objName, v26, v27, v28, v29, v30, v31);
       if ( this->fields.fadeoutTime <= 0.0 )
       {
         v54 = this->fields.source;
@@ -664,7 +664,7 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
           goto LABEL_97;
         CriAtomSource__set_pitch((CriAtomSource_o *)Instance, 0.0, 0);
       }
-      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
+      Instance = (__int64)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_SoundManager__get_Instance__);
       if ( !Instance )
         goto LABEL_97;
       if ( !SoundManager__IsExistsSound(
@@ -673,35 +673,35 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
               this->fields.objName,
               v59) )
       {
-        Instance = sub_1C71458(string___TypeInfo, 6);
+        Instance = sub_1C94140(string___TypeInfo, 6);
         if ( !Instance )
           goto LABEL_97;
         v68 = Instance;
         if ( *(_DWORD *)(Instance + 24) )
         {
-          v69 = StringLiteral_11518/*"SE Play (not found) for debug : ["*/;
-          *(_QWORD *)(Instance + 32) = StringLiteral_11518/*"SE Play (not found) for debug : ["*/;
-          sub_1C71354((GrandQuestFolderBoardItem_o *)(Instance + 32), v69, v62, v63, v64, v65, v66, v67);
+          v69 = StringLiteral_11560/*"SE Play (not found) for debug : ["*/;
+          *(_QWORD *)(Instance + 32) = StringLiteral_11560/*"SE Play (not found) for debug : ["*/;
+          sub_1C9403C((GrandQuestFolderBoardItem_o *)(Instance + 32), v69, v62, v63, v64, v65, v66, v67);
           if ( *(_DWORD *)(v68 + 24) > 1u )
           {
             v76 = this->fields.cueSheetName;
             *(_QWORD *)(v68 + 40) = v76;
-            sub_1C71354((GrandQuestFolderBoardItem_o *)(v68 + 40), (int32_t)v76, v70, v71, v72, v73, v74, v75);
+            sub_1C9403C((GrandQuestFolderBoardItem_o *)(v68 + 40), (int32_t)v76, v70, v71, v72, v73, v74, v75);
             if ( *(_DWORD *)(v68 + 24) > 2u )
             {
-              v83 = StringLiteral_16062/*"] : ["*/;
-              *(_QWORD *)(v68 + 48) = StringLiteral_16062/*"] : ["*/;
-              sub_1C71354((GrandQuestFolderBoardItem_o *)(v68 + 48), v83, v77, v78, v79, v80, v81, v82);
+              v83 = StringLiteral_16116/*"] : ["*/;
+              *(_QWORD *)(v68 + 48) = StringLiteral_16116/*"] : ["*/;
+              sub_1C9403C((GrandQuestFolderBoardItem_o *)(v68 + 48), v83, v77, v78, v79, v80, v81, v82);
               if ( *(_DWORD *)(v68 + 24) > 3u )
               {
                 v90 = this->fields.objName;
                 *(_QWORD *)(v68 + 56) = v90;
-                sub_1C71354((GrandQuestFolderBoardItem_o *)(v68 + 56), (int32_t)v90, v84, v85, v86, v87, v88, v89);
+                sub_1C9403C((GrandQuestFolderBoardItem_o *)(v68 + 56), (int32_t)v90, v84, v85, v86, v87, v88, v89);
                 if ( *(_DWORD *)(v68 + 24) > 4u )
                 {
-                  v97 = StringLiteral_16075/*"] vol:"*/;
-                  *(_QWORD *)(v68 + 64) = StringLiteral_16075/*"] vol:"*/;
-                  sub_1C71354((GrandQuestFolderBoardItem_o *)(v68 + 64), v97, v91, v92, v93, v94, v95, v96);
+                  v97 = StringLiteral_16129/*"] vol:"*/;
+                  *(_QWORD *)(v68 + 64) = StringLiteral_16129/*"] vol:"*/;
+                  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v68 + 64), v97, v91, v92, v93, v94, v95, v96);
                   if ( !*p_source )
                     goto LABEL_97;
                   volume = (*p_source)->fields._volume;
@@ -709,8 +709,8 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
                   if ( *(_DWORD *)(v68 + 24) > 5u )
                   {
                     *(_QWORD *)(v68 + 72) = Instance;
-                    sub_1C71354((GrandQuestFolderBoardItem_o *)(v68 + 72), Instance, v98, v99, v100, v101, v102, v103);
-                    System_String__Concat_64072256((System_String_array *)v68, 0);
+                    sub_1C9403C((GrandQuestFolderBoardItem_o *)(v68 + 72), Instance, v98, v99, v100, v101, v102, v103);
+                    System_String__Concat_64458276((System_String_array *)v68, 0);
                     goto LABEL_4;
                   }
                 }
@@ -718,7 +718,7 @@ bool SePlayer__Update(SePlayer_o *this, float delta, const MethodInfo *method)
             }
           }
         }
-        sub_1C71610(Instance);
+        sub_1C942F8(Instance);
       }
       Instance = (__int64)*p_source;
       if ( !*p_source )
@@ -740,7 +740,7 @@ LABEL_90:
         v61 = 1;
       if ( !*p_source )
 LABEL_97:
-        sub_1C71608(Instance, v8);
+        sub_1C942F0(Instance, v8);
       Instance = (__int64)(*p_source)->fields._player_k__BackingField;
       if ( v61 )
       {
@@ -785,15 +785,15 @@ LABEL_61:
         goto LABEL_97;
       CriAtomSource__Stop((CriAtomSource_o *)Instance, 0);
       *p_source = 0;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.source, 0, v47, v48, v49, v50, v51, v52);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.source, 0, v47, v48, v49, v50, v51, v52);
       goto LABEL_61;
     }
     if ( !SeManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-    if ( !byte_4CC6E1D )
+    if ( !byte_4D2C279 )
     {
-      sub_1C713B0(&SeManager_TypeInfo);
-      byte_4CC6E1D = 1;
+      sub_1C94098(&SeManager_TypeInfo);
+      byte_4D2C279 = 1;
     }
     v38 = SeManager_TypeInfo;
     if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -840,10 +840,10 @@ LABEL_45:
     }
     if ( !SeManager_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(SeManager_TypeInfo);
-    if ( !byte_4CC6E1D )
+    if ( !byte_4D2C279 )
     {
-      sub_1C713B0(&SeManager_TypeInfo);
-      byte_4CC6E1D = 1;
+      sub_1C94098(&SeManager_TypeInfo);
+      byte_4D2C279 = 1;
     }
     v45 = SeManager_TypeInfo;
     if ( !SeManager_TypeInfo->_2.cctor_finished )
@@ -904,10 +904,10 @@ bool SePlayer__get_IsBusy(SePlayer_o *this, const MethodInfo *method)
   __int64 v5; // x1
   CriAtomSource_o *v6; // x0
 
-  if ( (byte_4CC6D8B & 1) == 0 )
+  if ( (byte_4D2C1FB & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC6D8B = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2C1FB = 1;
   }
   if ( this->fields.isLoading || this->fields.isWaitSource || this->fields.isLoop )
   {
@@ -933,7 +933,7 @@ bool SePlayer__get_IsBusy(SePlayer_o *this, const MethodInfo *method)
       v6 = this->fields.source;
       if ( !v6 )
 LABEL_16:
-        sub_1C71608(v6, v5);
+        sub_1C942F0(v6, v5);
       LOBYTE(status) = CriAtomSource__get_status(v6, 0) == 2;
     }
   }
@@ -948,10 +948,10 @@ bool SePlayer__get_IsLoop(SePlayer_o *this, const MethodInfo *method)
   __int64 v5; // x1
   struct CriAtomSource_o *v6; // x8
 
-  if ( (byte_4CC6D8C & 1) == 0 )
+  if ( (byte_4D2C1FC & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC6D8C = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2C1FC = 1;
   }
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -961,7 +961,7 @@ bool SePlayer__get_IsLoop(SePlayer_o *this, const MethodInfo *method)
     return 0;
   v6 = this->fields.source;
   if ( !v6 )
-    sub_1C71608(v4, v5);
+    sub_1C942F0(v4, v5);
   return v6->fields._loop;
 }
 
@@ -972,10 +972,10 @@ bool SePlayer__get_IsPause(SePlayer_o *this, const MethodInfo *method)
   __int64 v4; // x1
   CriAtomSource_o *v5; // x0
 
-  if ( (byte_4CC6D8D & 1) == 0 )
+  if ( (byte_4D2C1FD & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC6D8D = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2C1FD = 1;
   }
   source = (UnityEngine_Object_o *)this->fields.source;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -984,7 +984,7 @@ bool SePlayer__get_IsPause(SePlayer_o *this, const MethodInfo *method)
     return 0;
   v5 = this->fields.source;
   if ( !v5 )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   return CriAtomSource__IsPaused(v5, 0);
 }
 

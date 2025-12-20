@@ -8,14 +8,14 @@ void NguiTouchEffectManager__Drag(UnityEngine_Vector2_o v, const MethodInfo *met
 
   v3 = *(long double *)&v.fields.y;
   v4 = *(long double *)&v.fields.x;
-  if ( (byte_4CCBA2B & 1) == 0 )
+  if ( (byte_4D30DDD & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1C713B0(&NguiTouchEffectManager_TypeInfo);
-    byte_4CCBA2B = 1;
+    method = (const MethodInfo *)sub_1C94098(&NguiTouchEffectManager_TypeInfo);
+    byte_4D30DDD = 1;
   }
   dragAction = NguiTouchEffectManager_TypeInfo->static_fields->dragAction;
   if ( !dragAction )
-    sub_1C71608(method, v2);
+    sub_1C942F0(method, v2);
   ((void (__fastcall *)(intptr_t, intptr_t, long double, long double))dragAction->fields.invoke_impl)(
     dragAction->fields.method_code,
     dragAction->fields.method,
@@ -34,14 +34,14 @@ void NguiTouchEffectManager__Press(UnityEngine_Vector2_o p, const MethodInfo *me
 
   v3 = *(long double *)&p.fields.y;
   v4 = *(long double *)&p.fields.x;
-  if ( (byte_4CCBA29 & 1) == 0 )
+  if ( (byte_4D30DDB & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1C713B0(&NguiTouchEffectManager_TypeInfo);
-    byte_4CCBA29 = 1;
+    method = (const MethodInfo *)sub_1C94098(&NguiTouchEffectManager_TypeInfo);
+    byte_4D30DDB = 1;
   }
   pressAction = NguiTouchEffectManager_TypeInfo->static_fields->pressAction;
   if ( !pressAction )
-    sub_1C71608(method, v2);
+    sub_1C942F0(method, v2);
   ((void (__fastcall *)(intptr_t, intptr_t, long double, long double))pressAction->fields.invoke_impl)(
     pressAction->fields.method_code,
     pressAction->fields.method,
@@ -60,14 +60,14 @@ void NguiTouchEffectManager__RegisterDragFunc(System_Action_Vector2__o *dragActi
   System_String_o *v7; // x7
   struct NguiTouchEffectManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4CCBA28 & 1) == 0 )
+  if ( (byte_4D30DDA & 1) == 0 )
   {
-    sub_1C713B0(&NguiTouchEffectManager_TypeInfo);
-    byte_4CCBA28 = 1;
+    sub_1C94098(&NguiTouchEffectManager_TypeInfo);
+    byte_4D30DDA = 1;
   }
   static_fields = NguiTouchEffectManager_TypeInfo->static_fields;
   static_fields->dragAction = dragAction;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&static_fields->dragAction, (int32_t)dragAction, v2, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&static_fields->dragAction, (int32_t)dragAction, v2, v3, v4, v5, v6, v7);
 }
 
 
@@ -80,13 +80,13 @@ void NguiTouchEffectManager__RegisterPressFunc(System_Action_Vector2__o *pressAc
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CCBA26 & 1) == 0 )
+  if ( (byte_4D30DD8 & 1) == 0 )
   {
-    sub_1C713B0(&NguiTouchEffectManager_TypeInfo);
-    byte_4CCBA26 = 1;
+    sub_1C94098(&NguiTouchEffectManager_TypeInfo);
+    byte_4D30DD8 = 1;
   }
   NguiTouchEffectManager_TypeInfo->static_fields->pressAction = pressAction;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)NguiTouchEffectManager_TypeInfo->static_fields,
     (int32_t)pressAction,
     v2,
@@ -108,14 +108,14 @@ void NguiTouchEffectManager__RegisterUnPressFunc(System_Action_o *unPressAction,
   System_String_o *v7; // x7
   struct NguiTouchEffectManager_StaticFields *static_fields; // x0
 
-  if ( (byte_4CCBA27 & 1) == 0 )
+  if ( (byte_4D30DD9 & 1) == 0 )
   {
-    sub_1C713B0(&NguiTouchEffectManager_TypeInfo);
-    byte_4CCBA27 = 1;
+    sub_1C94098(&NguiTouchEffectManager_TypeInfo);
+    byte_4D30DD9 = 1;
   }
   static_fields = NguiTouchEffectManager_TypeInfo->static_fields;
   static_fields->unPressAction = unPressAction;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&static_fields->unPressAction,
     (int32_t)unPressAction,
     v2,
@@ -132,14 +132,14 @@ void NguiTouchEffectManager__UnPress(const MethodInfo *method)
   __int64 v1; // x1
   struct System_Action_o *unPressAction; // x8
 
-  if ( (byte_4CCBA2A & 1) == 0 )
+  if ( (byte_4D30DDC & 1) == 0 )
   {
-    method = (const MethodInfo *)sub_1C713B0(&NguiTouchEffectManager_TypeInfo);
-    byte_4CCBA2A = 1;
+    method = (const MethodInfo *)sub_1C94098(&NguiTouchEffectManager_TypeInfo);
+    byte_4D30DDC = 1;
   }
   unPressAction = NguiTouchEffectManager_TypeInfo->static_fields->unPressAction;
   if ( !unPressAction )
-    sub_1C71608(method, v1);
+    sub_1C942F0(method, v1);
   ((void (__fastcall *)(intptr_t, intptr_t))unPressAction->fields.invoke_impl)(
     unPressAction->fields.method_code,
     unPressAction->fields.method);

@@ -1,26 +1,26 @@
 void ExchangeSvtCoinGivenNumEntity___ctor(ExchangeSvtCoinGivenNumEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC7640 & 1) == 0 )
+  if ( (byte_4D2CB9B & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC7640 = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2CB9B = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *ExchangeSvtCoinGivenNumEntity__CreatePK(int32_t itemId, const MethodInfo *method)
 {
-  if ( (byte_4CC763F & 1) == 0 )
+  if ( (byte_4D2CB9A & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int___);
-    byte_4CC763F = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int___);
+    byte_4D2CB9A = 1;
   }
   return DataEntityBase__CreateMultiplePK_int_(
            itemId,
-           (const MethodInfo_3149128 *)Method_DataEntityBase_CreateMultiplePK_int___);
+           (const MethodInfo_319A150 *)Method_DataEntityBase_CreateMultiplePK_int___);
 }
 
 

@@ -53,25 +53,25 @@ void PhotoFrameListViewManager__CreatePhotoFrameList(
   const MethodInfo *v46; // [xsp+0h] [xbp-80h]
   int32_t selectedIda; // [xsp+1Ch] [xbp-64h]
 
-  if ( (byte_4CC29E5 & 1) == 0 )
+  if ( (byte_4D27D3B & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Linq_Enumerable_OrderByDescending_PhotoFrameEntity__int___);
-    sub_1C713B0(&Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
-    sub_1C713B0(&System_Func_PhotoFrameEntity__int__TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_ListViewItem__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoFrameEntity__Find__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Count__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&PhotoFrameListViewItem_TypeInfo);
-    sub_1C713B0(&System_Predicate_PhotoFrameEntity__TypeInfo);
-    sub_1C713B0(&Method_PhotoFrameListViewManager___c__CreatePhotoFrameList_b__10_0__);
-    sub_1C713B0(&Method_PhotoFrameListViewManager___c__DisplayClass10_0__CreatePhotoFrameList_b__1__);
-    sub_1C713B0(&PhotoFrameListViewManager___c__DisplayClass10_0_TypeInfo);
-    sub_1C713B0(&PhotoFrameListViewManager___c_TypeInfo);
-    byte_4CC29E5 = 1;
+    sub_1C94098(&Method_System_Linq_Enumerable_OrderByDescending_PhotoFrameEntity__int___);
+    sub_1C94098(&Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
+    sub_1C94098(&System_Func_PhotoFrameEntity__int__TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_ListViewItem__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_PhotoFrameEntity__Find__);
+    sub_1C94098(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Count__);
+    sub_1C94098(&Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&PhotoFrameListViewItem_TypeInfo);
+    sub_1C94098(&System_Predicate_PhotoFrameEntity__TypeInfo);
+    sub_1C94098(&Method_PhotoFrameListViewManager___c__CreatePhotoFrameList_b__10_0__);
+    sub_1C94098(&Method_PhotoFrameListViewManager___c__DisplayClass10_0__CreatePhotoFrameList_b__1__);
+    sub_1C94098(&PhotoFrameListViewManager___c__DisplayClass10_0_TypeInfo);
+    sub_1C94098(&PhotoFrameListViewManager___c_TypeInfo);
+    byte_4D27D3B = 1;
   }
-  v7 = sub_1C715FC(PhotoFrameListViewManager___c__DisplayClass10_0_TypeInfo);
+  v7 = sub_1C942E4(PhotoFrameListViewManager___c__DisplayClass10_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v7, 0);
   if ( !v7 )
     goto LABEL_37;
@@ -93,7 +93,7 @@ void PhotoFrameListViewManager__CreatePhotoFrameList(
       v11 = PhotoFrameListViewManager___c_TypeInfo;
     }
     v13 = (Il2CppObject *)v11->static_fields->__9;
-    _9__10_0 = (System_Func_object__int__o *)sub_1C715FC(System_Func_PhotoFrameEntity__int__TypeInfo);
+    _9__10_0 = (System_Func_object__int__o *)sub_1C942E4(System_Func_PhotoFrameEntity__int__TypeInfo);
     System_Func_object__int____ctor(
       _9__10_0,
       v13,
@@ -101,7 +101,7 @@ void PhotoFrameListViewManager__CreatePhotoFrameList(
       0);
     static_fields = PhotoFrameListViewManager___c_TypeInfo->static_fields;
     static_fields->__9__10_0 = (struct System_Func_PhotoFrameEntity__int__o *)_9__10_0;
-    sub_1C71354(
+    sub_1C9403C(
       (GrandQuestFolderBoardItem_o *)&static_fields->__9__10_0,
       (int32_t)_9__10_0,
       v15,
@@ -114,11 +114,11 @@ void PhotoFrameListViewManager__CreatePhotoFrameList(
   v21 = (System_Collections_Generic_IEnumerable_TSource__o *)System_Linq_Enumerable__OrderByDescending_object__int_(
                                                                (System_Collections_Generic_IEnumerable_TSource__o *)photoFrameList,
                                                                (System_Func_TSource__TKey__o *)_9__10_0,
-                                                               (const MethodInfo_317AEBC *)Method_System_Linq_Enumerable_OrderByDescending_PhotoFrameEntity__int___);
+                                                               (const MethodInfo_31CC684 *)Method_System_Linq_Enumerable_OrderByDescending_PhotoFrameEntity__int___);
   v22 = (System_Collections_Generic_List_object__o *)System_Linq_Enumerable__ToList_object_(
                                                        v21,
-                                                       (const MethodInfo_318FC88 *)Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
-  v23 = (System_Predicate_object__o *)sub_1C715FC(System_Predicate_PhotoFrameEntity__TypeInfo);
+                                                       (const MethodInfo_31E1548 *)Method_System_Linq_Enumerable_ToList_PhotoFrameEntity___);
+  v23 = (System_Predicate_object__o *)sub_1C942E4(System_Predicate_PhotoFrameEntity__TypeInfo);
   System_Predicate_object____ctor(
     v23,
     (Il2CppObject *)v7,
@@ -129,13 +129,13 @@ void PhotoFrameListViewManager__CreatePhotoFrameList(
   Item = System_Collections_Generic_List_object___Find(
            v22,
            (System_Predicate_T__o *)v23,
-           (const MethodInfo_3810D80 *)Method_System_Collections_Generic_List_PhotoFrameEntity__Find__);
+           (const MethodInfo_386B49C *)Method_System_Collections_Generic_List_PhotoFrameEntity__Find__);
   if ( !Item )
   {
     Item = System_Collections_Generic_List_object___get_Item(
              v22,
              0,
-             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
+             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
     if ( !Item )
       goto LABEL_37;
     v10 = (int32_t *)((char *)Item + 16);
@@ -151,7 +151,7 @@ void PhotoFrameListViewManager__CreatePhotoFrameList(
     Item = System_Collections_Generic_List_object___get_Item(
              v22,
              v25,
-             (const MethodInfo_3810448 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
+             (const MethodInfo_386AB64 *)Method_System_Collections_Generic_List_PhotoFrameEntity__get_Item__);
     if ( !Item )
       goto LABEL_37;
     v27 = *((_DWORD *)Item + 4);
@@ -160,7 +160,7 @@ void PhotoFrameListViewManager__CreatePhotoFrameList(
     v30 = (System_String_o *)*((_QWORD *)Item + 4);
     frameSampleAtlas = this->fields.frameSampleAtlas;
     v32 = Item;
-    v33 = (PhotoFrameListViewItem_o *)sub_1C715FC(PhotoFrameListViewItem_TypeInfo);
+    v33 = (PhotoFrameListViewItem_o *)sub_1C942E4(PhotoFrameListViewItem_TypeInfo);
     PhotoFrameListViewItem___ctor(v33, v25, v27, v28, v29, v30, frameSampleAtlas, selectedIda, v46);
     if ( !v33 )
       goto LABEL_37;
@@ -182,21 +182,21 @@ void PhotoFrameListViewManager__CreatePhotoFrameList(
       System_Collections_Generic_List_object___AddWithResize(
         (System_Collections_Generic_List_object__o *)Item,
         (Il2CppObject *)v33,
-        *(const MethodInfo_3810718 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
+        *(const MethodInfo_386AE34 **)(*(_QWORD *)(v41[4] + 192LL) + 112LL));
     }
     else
     {
       v43 = v40 + 8 * v42;
       *((_DWORD *)Item + 6) = v42 + 1;
       *(_QWORD *)(v43 + 32) = v33;
-      sub_1C71354((GrandQuestFolderBoardItem_o *)(v43 + 32), (int32_t)v33, v34, v35, v36, v37, v38, v39);
+      sub_1C9403C((GrandQuestFolderBoardItem_o *)(v43 + 32), (int32_t)v33, v34, v35, v36, v37, v38, v39);
     }
     ++v25;
   }
   while ( v25 < v26->fields._size );
   if ( !v24 )
 LABEL_37:
-    sub_1C71608(Item, v9);
+    sub_1C942F0(Item, v9);
   *firstSelectIndex = v24->fields.index;
   ListViewManager__SortItem((ListViewManager_o *)this, -1, 0, -1, 0);
   scrollBar = (UnityEngine_Object_o *)this->fields.scrollBar;
@@ -235,7 +235,7 @@ void PhotoFrameListViewManager__DestroyList(PhotoFrameListViewManager_o *this, c
   ListViewManager__DestroyList((ListViewManager_o *)this, 0);
   sort = this->fields.sort;
   if ( !sort )
-    sub_1C71608(0, v3);
+    sub_1C942F0(0, v3);
   ListViewSort__Save(sort, 0);
 }
 
@@ -256,15 +256,15 @@ void PhotoFrameListViewManager__ModifySelectingItem(
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v14; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4CC29E6 & 1) == 0 )
+  if ( (byte_4D27D3C & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&PhotoFrameListViewItem_TypeInfo);
-    byte_4CC29E6 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_ListViewItem__get_Current__);
+    sub_1C94098(&Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&PhotoFrameListViewItem_TypeInfo);
+    byte_4D27D3C = 1;
   }
   memset(&v14, 0, sizeof(v14));
   itemList = this->fields.itemList;
@@ -273,13 +273,13 @@ void PhotoFrameListViewManager__ModifySelectingItem(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       (System_Collections_Generic_List_object__o *)itemList,
-      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
+      (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_ListViewItem__GetEnumerator__);
     v14 = v13;
     while ( 1 )
     {
       v6 = System_Collections_Generic_List_Enumerator_object___MoveNext(
              &v14,
-             (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
+             (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__MoveNext__);
       if ( !v6 )
         break;
       current = v14.fields._current;
@@ -288,7 +288,7 @@ void PhotoFrameListViewManager__ModifySelectingItem(
             v14.fields._current->klass->_2.naturalAligment < (unsigned int)naturalAligment)
         || (PhotoFrameListViewItem_c *)v14.fields._current->klass->_2.typeHierarchy[naturalAligment - 1] != PhotoFrameListViewItem_TypeInfo )
       {
-        sub_1C71608(v6, v7);
+        sub_1C942F0(v6, v7);
       }
       klass = v14.fields._current[7].klass;
       LOBYTE(v14.fields._current[9].monitor) = LODWORD(v14.fields._current[7].monitor) == selectedItemId;
@@ -298,7 +298,7 @@ void PhotoFrameListViewManager__ModifySelectingItem(
       {
         v12 = current[7].klass;
         if ( !v12 )
-          sub_1C71608(0, v11);
+          sub_1C942F0(0, v11);
         (*((void (__fastcall **)(Il2CppClass *, Il2CppObject *, _QWORD))v12->_1.image + 49))(
           v12,
           current,
@@ -307,7 +307,7 @@ void PhotoFrameListViewManager__ModifySelectingItem(
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v14,
-      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
+      (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_ListViewItem__Dispose__);
   }
 }
 
@@ -329,11 +329,11 @@ void PhotoFrameListViewManager__OnClickListView(
 
   callbackFunc = this->fields.callbackFunc;
   this->fields.callbackFunc = 0;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc, 0, (int32_t)method, v3, v4, v5, v6, v7);
   if ( callbackFunc )
   {
     if ( !obj )
-      sub_1C71608(v10, v11);
+      sub_1C942F0(v10, v11);
     Index = ListViewObject__get_Index((ListViewObject_o *)obj, 0);
     ((void (__fastcall *)(intptr_t, _QWORD, intptr_t))callbackFunc->fields.invoke_impl)(
       callbackFunc->fields.method_code,
@@ -352,10 +352,10 @@ void PhotoFrameListViewManager__OnMoveEnd(PhotoFrameListViewManager_o *this, con
   __int64 v7; // x1
   struct UIScrollView_o *v8; // x0
 
-  if ( (byte_4CC29E9 & 1) == 0 )
+  if ( (byte_4D27D3F & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC29E9 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D27D3F = 1;
   }
   callbackCount = this->fields.callbackCount;
   v4 = __OFSUB__(callbackCount, 1);
@@ -372,7 +372,7 @@ void PhotoFrameListViewManager__OnMoveEnd(PhotoFrameListViewManager_o *this, con
       {
         v8 = this->fields.scrollView;
         if ( !v8 )
-          sub_1C71608(0, v7);
+          sub_1C942F0(0, v7);
         ((void (__fastcall *)(struct UIScrollView_o *, __int64, const MethodInfo *))v8->klass->vtable._8_UpdateScrollbars.methodPtr)(
           v8,
           1,
@@ -399,31 +399,31 @@ void PhotoFrameListViewManager__RequestListObject(
   const MethodInfo *v12; // x3
   System_Collections_Generic_List_Enumerator_object__o v13; // [xsp+8h] [xbp-68h] BYREF
 
-  if ( (byte_4CC29E8 & 1) == 0 )
+  if ( (byte_4D27D3E & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__Dispose__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__MoveNext__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__get_Current__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoFrameListViewObject__GetEnumerator__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoFrameListViewObject__get_Count__);
-    sub_1C713B0(&Method_PhotoFrameListViewManager_OnMoveEnd__);
-    sub_1C713B0(&StringLiteral_9943/*"OnMoveEnd"*/);
-    byte_4CC29E8 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__Dispose__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__MoveNext__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__get_Current__);
+    sub_1C94098(&Method_System_Collections_Generic_List_PhotoFrameListViewObject__GetEnumerator__);
+    sub_1C94098(&Method_System_Collections_Generic_List_PhotoFrameListViewObject__get_Count__);
+    sub_1C94098(&Method_PhotoFrameListViewManager_OnMoveEnd__);
+    sub_1C94098(&StringLiteral_9964/*"OnMoveEnd"*/);
+    byte_4D27D3E = 1;
   }
   memset(&v13, 0, sizeof(v13));
   ObjectList = (System_Collections_Generic_List_object__o *)PhotoFrameListViewManager__get_ObjectList(
                                                               this,
                                                               *(const MethodInfo **)&mode);
   if ( !ObjectList )
-    sub_1C71608(0, v6);
+    sub_1C942F0(0, v6);
   size = ObjectList->fields._size;
   if ( size < 1 )
   {
     this->fields.callbackCount = 1;
     UnityEngine_MonoBehaviour__Invoke(
       (UnityEngine_MonoBehaviour_o *)this,
-      (System_String_o *)StringLiteral_9943/*"OnMoveEnd"*/,
+      (System_String_o *)StringLiteral_9964/*"OnMoveEnd"*/,
       0.0,
       0);
   }
@@ -433,21 +433,21 @@ void PhotoFrameListViewManager__RequestListObject(
     System_Collections_Generic_List_object___GetEnumerator(
       (System_Collections_Generic_List_Enumerator_T__o *)&v13,
       ObjectList,
-      (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_PhotoFrameListViewObject__GetEnumerator__);
+      (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_PhotoFrameListViewObject__GetEnumerator__);
     while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
               &v13,
-              (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__MoveNext__) )
+              (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__MoveNext__) )
     {
       current = v13.fields._current;
-      v9 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+      v9 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
       System_Action___ctor(v9, (Il2CppObject *)this, Method_PhotoFrameListViewManager_OnMoveEnd__, 0);
       if ( !current )
-        sub_1C71608(v10, v11);
+        sub_1C942F0(v10, v11);
       PhotoFrameListViewObject__Init((PhotoFrameListViewObject_o *)current, mode, v9, v12);
     }
     System_Collections_Generic_List_Enumerator_object___Dispose(
       &v13,
-      (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__Dispose__);
+      (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_PhotoFrameListViewObject__Dispose__);
   }
 }
 
@@ -464,7 +464,7 @@ void PhotoFrameListViewManager__SetFrameSpriteAtlas(
   System_String_o *v7; // x7
 
   this->fields.frameSampleAtlas = atlas;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.frameSampleAtlas,
     (int32_t)atlas,
     (int32_t)method,
@@ -489,7 +489,7 @@ void PhotoFrameListViewManager__SetMode(
   const MethodInfo *v10; // x2
 
   this->fields.callbackFunc = callback;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.callbackFunc,
     (int32_t)callback,
     (int32_t)callback,
@@ -498,11 +498,11 @@ void PhotoFrameListViewManager__SetMode(
     v5,
     v6,
     v7);
-  PhotoFrameListViewManager__SetMode_34066216(this, mode, v10);
+  PhotoFrameListViewManager__SetMode_34421040(this, mode, v10);
 }
 
 
-void PhotoFrameListViewManager__SetMode_34066216(
+void PhotoFrameListViewManager__SetMode_34421040(
         PhotoFrameListViewManager_o *this,
         int32_t mode,
         const MethodInfo *method)
@@ -528,17 +528,17 @@ void PhotoFrameListViewManager__SetObjectItem(
   int32_t v7; // w1
 
   v5 = this;
-  if ( (byte_4CC29E7 & 1) == 0 )
+  if ( (byte_4D27D3D & 1) == 0 )
   {
-    this = (PhotoFrameListViewManager_o *)sub_1C713B0(&PhotoFrameListViewObject_TypeInfo);
-    byte_4CC29E7 = 1;
+    this = (PhotoFrameListViewManager_o *)sub_1C94098(&PhotoFrameListViewObject_TypeInfo);
+    byte_4D27D3D = 1;
   }
   if ( !obj
     || (naturalAligment = PhotoFrameListViewObject_TypeInfo->_2.naturalAligment,
         obj->klass->_2.naturalAligment < (unsigned int)naturalAligment)
     || (PhotoFrameListViewObject_c *)obj->klass->_2.typeHierarchy[naturalAligment - 1] != PhotoFrameListViewObject_TypeInfo )
   {
-    sub_1C71608(this, obj);
+    sub_1C942F0(this, obj);
   }
   if ( v5->fields.initMode == 2 )
     v7 = 2;
@@ -562,10 +562,10 @@ void PhotoFrameListViewManager__add_callbackFunc(
   PhotoFrameListViewManager_CallbackFunc_o *v11; // x1
   const MethodInfo *v12; // x2
 
-  if ( (byte_4CC29E2 & 1) == 0 )
+  if ( (byte_4D27D38 & 1) == 0 )
   {
-    sub_1C713B0(&PhotoFrameListViewManager_CallbackFunc_TypeInfo);
-    byte_4CC29E2 = 1;
+    sub_1C94098(&PhotoFrameListViewManager_CallbackFunc_TypeInfo);
+    byte_4D27D38 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -577,13 +577,13 @@ void PhotoFrameListViewManager__add_callbackFunc(
       if ( (PhotoFrameListViewManager_CallbackFunc_c *)v7->klass != PhotoFrameListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1CCD184(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1CEFE6C(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (PhotoFrameListViewManager_o *)sub_1C719A4(v7);
+  v10 = (PhotoFrameListViewManager_o *)sub_1C9468C(v7);
   PhotoFrameListViewManager__remove_callbackFunc(v10, v11, v12);
 }
 
@@ -613,35 +613,35 @@ System_Collections_Generic_List_PhotoFrameListViewObject__o *PhotoFrameListViewM
   System_Collections_Generic_List_Enumerator_object__o v22; // [xsp+8h] [xbp-78h] BYREF
   System_Collections_Generic_List_Enumerator_object__o v23; // [xsp+20h] [xbp-60h] BYREF
 
-  if ( (byte_4CC29E4 & 1) == 0 )
+  if ( (byte_4D27D3A & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_PhotoFrameListViewObject___);
-    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoFrameListViewObject__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
-    sub_1C713B0(&Method_System_Collections_Generic_List_PhotoFrameListViewObject___ctor__);
-    sub_1C713B0(&System_Collections_Generic_List_PhotoFrameListViewObject__TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC29E4 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__);
+    sub_1C94098(&Method_System_Collections_Generic_List_Enumerator_GameObject__get_Current__);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_PhotoFrameListViewObject___);
+    sub_1C94098(&Method_System_Collections_Generic_List_PhotoFrameListViewObject__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    sub_1C94098(&Method_System_Collections_Generic_List_PhotoFrameListViewObject___ctor__);
+    sub_1C94098(&System_Collections_Generic_List_PhotoFrameListViewObject__TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D27D3A = 1;
   }
   memset(&v23, 0, sizeof(v23));
-  v3 = (System_Collections_Generic_List_object__o *)sub_1C715FC(System_Collections_Generic_List_PhotoFrameListViewObject__TypeInfo);
+  v3 = (System_Collections_Generic_List_object__o *)sub_1C942E4(System_Collections_Generic_List_PhotoFrameListViewObject__TypeInfo);
   System_Collections_Generic_List_object____ctor(
     v3,
-    (const MethodInfo_380FEE4 *)Method_System_Collections_Generic_List_PhotoFrameListViewObject___ctor__);
+    (const MethodInfo_386A600 *)Method_System_Collections_Generic_List_PhotoFrameListViewObject___ctor__);
   objectList = this->fields.objectList;
   if ( !objectList )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   System_Collections_Generic_List_object___GetEnumerator(
     (System_Collections_Generic_List_Enumerator_T__o *)&v22,
     (System_Collections_Generic_List_object__o *)objectList,
-    (const MethodInfo_3811210 *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
+    (const MethodInfo_386B92C *)Method_System_Collections_Generic_List_GameObject__GetEnumerator__);
   v23 = v22;
   while ( System_Collections_Generic_List_Enumerator_object___MoveNext(
             &v23,
-            (const MethodInfo_35962C8 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
+            (const MethodInfo_35EC1C0 *)Method_System_Collections_Generic_List_Enumerator_GameObject__MoveNext__) )
   {
     current = v23.fields._current;
     if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -650,38 +650,38 @@ System_Collections_Generic_List_PhotoFrameListViewObject__o *PhotoFrameListViewM
     if ( v7 )
     {
       if ( !current )
-        sub_1C71608(v7, v8);
+        sub_1C942F0(v7, v8);
       Component_object = UnityEngine_GameObject__GetComponent_object_(
                            (UnityEngine_GameObject_o *)current,
-                           (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_PhotoFrameListViewObject___);
+                           (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_PhotoFrameListViewObject___);
       v16 = Component_object;
       if ( !v3 )
-        sub_1C71608(Component_object, Component_object);
+        sub_1C942F0(Component_object, Component_object);
       items = v3->fields._items;
       v18 = Method_System_Collections_Generic_List_PhotoFrameListViewObject__Add__;
       ++v3->fields._version;
       if ( !items )
-        sub_1C71608(Component_object, Component_object);
+        sub_1C942F0(Component_object, Component_object);
       size = v3->fields._size;
       if ( (unsigned int)size >= LODWORD(items->max_length) )
       {
         System_Collections_Generic_List_object___AddWithResize(
           v3,
           Component_object,
-          *(const MethodInfo_3810718 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
+          *(const MethodInfo_386AE34 **)(*(_QWORD *)(v18[4] + 192LL) + 112LL));
       }
       else
       {
         v20 = &items->obj.klass + size;
         v3->fields._size = size + 1;
         v20[4] = (Il2CppClass *)v16;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v16, v10, v11, v12, v13, v14, v15);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)(v20 + 4), (int32_t)v16, v10, v11, v12, v13, v14, v15);
       }
     }
   }
   System_Collections_Generic_List_Enumerator_object___Dispose(
     &v23,
-    (const MethodInfo_35962C4 *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
+    (const MethodInfo_35EC1BC *)Method_System_Collections_Generic_List_Enumerator_GameObject__Dispose__);
   return (System_Collections_Generic_List_PhotoFrameListViewObject__o *)v3;
 }
 
@@ -699,10 +699,10 @@ void PhotoFrameListViewManager__remove_callbackFunc(
   PhotoFrameListViewManager_o *v10; // x0
   const MethodInfo *v11; // x1
 
-  if ( (byte_4CC29E3 & 1) == 0 )
+  if ( (byte_4D27D39 & 1) == 0 )
   {
-    sub_1C713B0(&PhotoFrameListViewManager_CallbackFunc_TypeInfo);
-    byte_4CC29E3 = 1;
+    sub_1C94098(&PhotoFrameListViewManager_CallbackFunc_TypeInfo);
+    byte_4D27D39 = 1;
   }
   callbackFunc = (System_Delegate_o *)this->fields.callbackFunc;
   p_callbackFunc = &this->fields.callbackFunc;
@@ -714,13 +714,13 @@ void PhotoFrameListViewManager__remove_callbackFunc(
       if ( (PhotoFrameListViewManager_CallbackFunc_c *)v7->klass != PhotoFrameListViewManager_CallbackFunc_TypeInfo )
         break;
     }
-    v8 = sub_1CCD184(p_callbackFunc, v7, callbackFunc);
+    v8 = sub_1CEFE6C(p_callbackFunc, v7, callbackFunc);
     v9 = callbackFunc == (System_Delegate_o *)v8;
     callbackFunc = (System_Delegate_o *)v8;
     if ( v9 )
       return;
   }
-  v10 = (PhotoFrameListViewManager_o *)sub_1C719A4(v7);
+  v10 = (PhotoFrameListViewManager_o *)sub_1C9468C(v7);
   PhotoFrameListViewManager__get_ObjectList(v10, v11);
 }
 
@@ -744,7 +744,7 @@ void PhotoFrameListViewManager_CallbackFunc___ctor(
   this->fields.method = method;
   this->fields.method_ptr = v8;
   this->fields.m_target = object;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.m_target,
     (int32_t)object,
     method,
@@ -755,12 +755,12 @@ void PhotoFrameListViewManager_CallbackFunc___ctor(
     v7);
   v12 = *(unsigned __int8 *)(method + 82);
   this->fields.method_code = (intptr_t)this;
-  if ( (sub_1C71470(method) & 1) == 0 )
+  if ( (sub_1C94158(method) & 1) == 0 )
   {
     if ( !object )
     {
-      v14 = sub_1C71624(0, "Delegate to an instance method cannot have null 'this'.");
-      sub_1C714D8(v14, 0);
+      v14 = sub_1C9430C(0, "Delegate to an instance method cannot have null 'this'.");
+      sub_1C941C0(v14, 0);
     }
     goto LABEL_5;
   }
@@ -772,9 +772,9 @@ LABEL_5:
     this->fields.method_code = (intptr_t)m_target;
     goto LABEL_6;
   }
-  this->fields.invoke_impl = (intptr_t)sub_1AA04F4;
+  this->fields.invoke_impl = (intptr_t)sub_1AC1CBC;
 LABEL_6:
-  this->fields.extra_arg = (intptr_t)sub_1AA04AC;
+  this->fields.extra_arg = (intptr_t)sub_1AC1C74;
 }
 
 
@@ -789,14 +789,14 @@ System_IAsyncResult_o *PhotoFrameListViewManager_CallbackFunc__BeginInvoke(
   int32_t v10; // [xsp+1Ch] [xbp-34h] BYREF
 
   v10 = frameId;
-  if ( (byte_4CC29EA & 1) == 0 )
+  if ( (byte_4D27D40 & 1) == 0 )
   {
-    sub_1C713B0(&int_TypeInfo);
-    byte_4CC29EA = 1;
+    sub_1C94098(&int_TypeInfo);
+    byte_4D27D40 = 1;
   }
   v9[1] = 0;
   v9[0] = j_il2cpp_value_box_0(int_TypeInfo, &v10);
-  return (System_IAsyncResult_o *)sub_1C71364(this, v9, callback, object);
+  return (System_IAsyncResult_o *)sub_1C9404C(this, v9, callback, object);
 }
 
 
@@ -805,7 +805,7 @@ void PhotoFrameListViewManager_CallbackFunc__EndInvoke(
         System_IAsyncResult_o *result,
         const MethodInfo *method)
 {
-  sub_1C71368(result, 0, method);
+  sub_1C94050(result, 0, method);
 }
 
 
@@ -831,15 +831,15 @@ void PhotoFrameListViewManager___c___cctor(const MethodInfo *method)
   int64_t v6; // x6
   System_String_o *v7; // x7
 
-  if ( (byte_4CC29EB & 1) == 0 )
+  if ( (byte_4D27D41 & 1) == 0 )
   {
-    sub_1C713B0(&PhotoFrameListViewManager___c_TypeInfo);
-    byte_4CC29EB = 1;
+    sub_1C94098(&PhotoFrameListViewManager___c_TypeInfo);
+    byte_4D27D41 = 1;
   }
-  v1 = (Il2CppObject *)sub_1C715FC(PhotoFrameListViewManager___c_TypeInfo);
+  v1 = (Il2CppObject *)sub_1C942E4(PhotoFrameListViewManager___c_TypeInfo);
   System_Object___ctor(v1, 0);
   PhotoFrameListViewManager___c_TypeInfo->static_fields->__9 = (struct PhotoFrameListViewManager___c_o *)v1;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)PhotoFrameListViewManager___c_TypeInfo->static_fields,
     (int32_t)v1,
     v2,
@@ -863,7 +863,7 @@ int32_t PhotoFrameListViewManager___c___CreatePhotoFrameList_b__10_0(
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return x->fields.priority;
 }
 
@@ -882,6 +882,6 @@ bool PhotoFrameListViewManager___c__DisplayClass10_0___CreatePhotoFrameList_b__1
         const MethodInfo *method)
 {
   if ( !x )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return x->fields.id == this->fields.selectedId;
 }

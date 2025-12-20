@@ -10,10 +10,10 @@ void BattleHpGaugeBarComponent__completeDamageGauge(BattleHpGaugeBarComponent_o 
   __int64 v4; // x1
   UIProgressBar_o *v5; // x0
 
-  if ( (byte_4CCA905 & 1) == 0 )
+  if ( (byte_4D2FDB9 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCA905 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2FDB9 = 1;
   }
   this->fields.prevval = this->fields.nowval;
   damageGauge = (UnityEngine_Object_o *)this->fields.damageGauge;
@@ -23,7 +23,7 @@ void BattleHpGaugeBarComponent__completeDamageGauge(BattleHpGaugeBarComponent_o 
   {
     v5 = this->fields.damageGauge;
     if ( !v5 )
-      sub_1C71608(0, v4);
+      sub_1C942F0(0, v4);
     UIProgressBar__set_value(v5, (float)this->fields.nowval / (float)this->fields.maxval, 0);
   }
 }
@@ -44,7 +44,7 @@ void BattleHpGaugeBarComponent__setInitValue(
 }
 
 
-void BattleHpGaugeBarComponent__setInitValue_47632132(
+void BattleHpGaugeBarComponent__setInitValue_48138904(
         BattleHpGaugeBarComponent_o *this,
         int64_t now,
         int64_t max,
@@ -58,6 +58,7 @@ void BattleHpGaugeBarComponent__setInitValue_47632132(
 }
 
 
+// local variable allocation has failed, the output may be wrong!
 bool BattleHpGaugeBarComponent__setValue(
         BattleHpGaugeBarComponent_o *this,
         int32_t now,
@@ -65,17 +66,9 @@ bool BattleHpGaugeBarComponent__setValue(
         bool isUpdateDamageBarImmediately,
         const MethodInfo *method)
 {
-  return BattleHpGaugeBarComponent__setValue_47632224(this, now, max, isUpdateDamageBarImmediately, method);
-}
-
-
-bool BattleHpGaugeBarComponent__setValue_47632224(
-        BattleHpGaugeBarComponent_o *this,
-        int64_t now,
-        int64_t max,
-        bool isUpdateDamageBarImmediately,
-        const MethodInfo *method)
-{
+  bool v5; // w22
+  int64_t v6; // x19
+  int64_t v7; // x20
   int64_t maxval; // x25
   int64_t nowval; // x26
   UnityEngine_GameObject_o *gameObject; // x23
@@ -179,39 +172,43 @@ bool BattleHpGaugeBarComponent__setValue_47632224(
   __int64 v110; // [xsp+8h] [xbp-68h] BYREF
   __int64 v111; // [xsp+18h] [xbp-58h] BYREF
 
-  if ( (byte_4CCA902 & 1) == 0 )
+  *(_QWORD *)&max = max;
+  v5 = isUpdateDamageBarImmediately;
+  v6 = max;
+  v7 = now;
+  if ( (byte_4D2FDB6 & 1) == 0 )
   {
-    sub_1C713B0(&double_TypeInfo);
-    sub_1C713B0(&object___TypeInfo);
-    sub_1C713B0(&float_TypeInfo);
-    sub_1C713B0(&StringLiteral_19766/*"from"*/);
-    sub_1C713B0(&StringLiteral_24189/*"time"*/);
-    sub_1C713B0(&StringLiteral_22541/*"onupdate"*/);
-    sub_1C713B0(&StringLiteral_24558/*"updateDamageGauge"*/);
-    sub_1C713B0(&StringLiteral_18592/*"delay"*/);
-    sub_1C713B0(&StringLiteral_24228/*"to"*/);
-    sub_1C713B0(&StringLiteral_22533/*"oncomplete"*/);
-    sub_1C713B0(&StringLiteral_18218/*"completeDamageGauge"*/);
-    sub_1C713B0(&iTween_TypeInfo);
-    byte_4CCA902 = 1;
+    sub_1C94098(&double_TypeInfo);
+    sub_1C94098(&object___TypeInfo);
+    sub_1C94098(&float_TypeInfo);
+    sub_1C94098(&StringLiteral_19853/*"from"*/);
+    sub_1C94098(&StringLiteral_24310/*"time"*/);
+    sub_1C94098(&StringLiteral_22649/*"onupdate"*/);
+    sub_1C94098(&StringLiteral_24680/*"updateDamageGauge"*/);
+    sub_1C94098(&StringLiteral_18660/*"delay"*/);
+    sub_1C94098(&StringLiteral_24349/*"to"*/);
+    sub_1C94098(&StringLiteral_22641/*"oncomplete"*/);
+    sub_1C94098(&StringLiteral_18284/*"completeDamageGauge"*/);
+    sub_1C94098(&iTween_TypeInfo);
+    byte_4D2FDB6 = 1;
   }
   nowval = this->fields.nowval;
   maxval = this->fields.maxval;
-  this->fields.nowval = now;
-  this->fields.maxval = max;
-  BattleHpGaugeBarComponent__updateNomalGauge(this, now, (const MethodInfo *)max);
+  this->fields.nowval = v7;
+  this->fields.maxval = v6;
+  BattleHpGaugeBarComponent__updateNomalGauge(this, v7, *(const MethodInfo **)&max);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-  if ( iTween__Count_63777828(gameObject, 0) < 1 )
+  if ( iTween__Count_64163848(gameObject, 0) < 1 )
   {
     v14 = 0.5;
-    if ( isUpdateDamageBarImmediately )
+    if ( v5 )
     {
 LABEL_9:
       BattleHpGaugeBarComponent__updateDamageGauge(this, 1.0, v12);
       BattleHpGaugeBarComponent__completeDamageGauge(this, v15);
-      return nowval != now || maxval != max;
+      return nowval != v7 || maxval != v6;
     }
   }
   else
@@ -219,24 +216,24 @@ LABEL_9:
     v13 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !iTween_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
-    iTween__Stop_63779628(v13, 0);
+    iTween__Stop_64165648(v13, 0);
     v14 = 0.2;
     this->fields.prevval = this->fields.wkprevval;
-    if ( isUpdateDamageBarImmediately )
+    if ( v5 )
       goto LABEL_9;
   }
   v16 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
-  v17 = sub_1C71458(object___TypeInfo, 12);
+  v17 = sub_1C94140(object___TypeInfo, 12);
   if ( !v17 )
-    sub_1C71608(0, v18);
+    sub_1C942F0(0, v18);
   v25 = (System_Object_array *)v17;
-  v26 = StringLiteral_19766/*"from"*/;
-  if ( StringLiteral_19766/*"from"*/ )
+  v26 = StringLiteral_19853/*"from"*/;
+  if ( StringLiteral_19853/*"from"*/ )
   {
-    v26 = sub_1C714EC(StringLiteral_19766/*"from"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(StringLiteral_19853/*"from"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
-    v27 = StringLiteral_19766/*"from"*/;
+    v27 = StringLiteral_19853/*"from"*/;
   }
   else
   {
@@ -245,27 +242,27 @@ LABEL_9:
   if ( !LODWORD(v25->max_length) )
     goto LABEL_68;
   v25->m_Items[0] = (Il2CppObject *)v27;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v25->m_Items, v27, v19, v20, v21, v22, v23, v24);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v25->m_Items, v27, v19, v20, v21, v22, v23, v24);
   v111 = 0;
   v26 = j_il2cpp_value_box_0(double_TypeInfo, &v111);
   v34 = (Il2CppObject *)v26;
   if ( v26 )
   {
-    v26 = sub_1C714EC(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
   }
   if ( LODWORD(v25->max_length) <= 1 )
     goto LABEL_68;
   v25->m_Items[1] = v34;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[1], (int32_t)v34, v28, v29, v30, v31, v32, v33);
-  v26 = StringLiteral_24228/*"to"*/;
-  if ( StringLiteral_24228/*"to"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[1], (int32_t)v34, v28, v29, v30, v31, v32, v33);
+  v26 = StringLiteral_24349/*"to"*/;
+  if ( StringLiteral_24349/*"to"*/ )
   {
-    v26 = sub_1C714EC(StringLiteral_24228/*"to"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(StringLiteral_24349/*"to"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
-    v41 = StringLiteral_24228/*"to"*/;
+    v41 = StringLiteral_24349/*"to"*/;
   }
   else
   {
@@ -274,27 +271,27 @@ LABEL_9:
   if ( LODWORD(v25->max_length) <= 2 )
     goto LABEL_68;
   v25->m_Items[2] = (Il2CppObject *)v41;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[2], v41, v35, v36, v37, v38, v39, v40);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[2], v41, v35, v36, v37, v38, v39, v40);
   v110 = 0x3FF0000000000000LL;
   v26 = j_il2cpp_value_box_0(double_TypeInfo, &v110);
   v48 = (Il2CppObject *)v26;
   if ( v26 )
   {
-    v26 = sub_1C714EC(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
   }
   if ( LODWORD(v25->max_length) <= 3 )
     goto LABEL_68;
   v25->m_Items[3] = v48;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[3], (int32_t)v48, v42, v43, v44, v45, v46, v47);
-  v26 = StringLiteral_22541/*"onupdate"*/;
-  if ( StringLiteral_22541/*"onupdate"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[3], (int32_t)v48, v42, v43, v44, v45, v46, v47);
+  v26 = StringLiteral_22649/*"onupdate"*/;
+  if ( StringLiteral_22649/*"onupdate"*/ )
   {
-    v26 = sub_1C714EC(StringLiteral_22541/*"onupdate"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(StringLiteral_22649/*"onupdate"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
-    v55 = StringLiteral_22541/*"onupdate"*/;
+    v55 = StringLiteral_22649/*"onupdate"*/;
   }
   else
   {
@@ -303,14 +300,14 @@ LABEL_9:
   if ( LODWORD(v25->max_length) <= 4 )
     goto LABEL_68;
   v25->m_Items[4] = (Il2CppObject *)v55;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[4], v55, v49, v50, v51, v52, v53, v54);
-  v26 = StringLiteral_24558/*"updateDamageGauge"*/;
-  if ( StringLiteral_24558/*"updateDamageGauge"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[4], v55, v49, v50, v51, v52, v53, v54);
+  v26 = StringLiteral_24680/*"updateDamageGauge"*/;
+  if ( StringLiteral_24680/*"updateDamageGauge"*/ )
   {
-    v26 = sub_1C714EC(StringLiteral_24558/*"updateDamageGauge"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(StringLiteral_24680/*"updateDamageGauge"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
-    v62 = StringLiteral_24558/*"updateDamageGauge"*/;
+    v62 = StringLiteral_24680/*"updateDamageGauge"*/;
   }
   else
   {
@@ -319,14 +316,14 @@ LABEL_9:
   if ( LODWORD(v25->max_length) <= 5 )
     goto LABEL_68;
   v25->m_Items[5] = (Il2CppObject *)v62;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[5], v62, v56, v57, v58, v59, v60, v61);
-  v26 = StringLiteral_22533/*"oncomplete"*/;
-  if ( StringLiteral_22533/*"oncomplete"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[5], v62, v56, v57, v58, v59, v60, v61);
+  v26 = StringLiteral_22641/*"oncomplete"*/;
+  if ( StringLiteral_22641/*"oncomplete"*/ )
   {
-    v26 = sub_1C714EC(StringLiteral_22533/*"oncomplete"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(StringLiteral_22641/*"oncomplete"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
-    v69 = StringLiteral_22533/*"oncomplete"*/;
+    v69 = StringLiteral_22641/*"oncomplete"*/;
   }
   else
   {
@@ -335,14 +332,14 @@ LABEL_9:
   if ( LODWORD(v25->max_length) <= 6 )
     goto LABEL_68;
   v25->m_Items[6] = (Il2CppObject *)v69;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[6], v69, v63, v64, v65, v66, v67, v68);
-  v26 = StringLiteral_18218/*"completeDamageGauge"*/;
-  if ( StringLiteral_18218/*"completeDamageGauge"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[6], v69, v63, v64, v65, v66, v67, v68);
+  v26 = StringLiteral_18284/*"completeDamageGauge"*/;
+  if ( StringLiteral_18284/*"completeDamageGauge"*/ )
   {
-    v26 = sub_1C714EC(StringLiteral_18218/*"completeDamageGauge"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(StringLiteral_18284/*"completeDamageGauge"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
-    v76 = StringLiteral_18218/*"completeDamageGauge"*/;
+    v76 = StringLiteral_18284/*"completeDamageGauge"*/;
   }
   else
   {
@@ -351,14 +348,14 @@ LABEL_9:
   if ( LODWORD(v25->max_length) <= 7 )
     goto LABEL_68;
   v25->m_Items[7] = (Il2CppObject *)v76;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[7], v76, v70, v71, v72, v73, v74, v75);
-  v26 = StringLiteral_18592/*"delay"*/;
-  if ( StringLiteral_18592/*"delay"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[7], v76, v70, v71, v72, v73, v74, v75);
+  v26 = StringLiteral_18660/*"delay"*/;
+  if ( StringLiteral_18660/*"delay"*/ )
   {
-    v26 = sub_1C714EC(StringLiteral_18592/*"delay"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(StringLiteral_18660/*"delay"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
-    v83 = StringLiteral_18592/*"delay"*/;
+    v83 = StringLiteral_18660/*"delay"*/;
   }
   else
   {
@@ -367,27 +364,27 @@ LABEL_9:
   if ( LODWORD(v25->max_length) <= 8 )
     goto LABEL_68;
   v25->m_Items[8] = (Il2CppObject *)v83;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[8], v83, v77, v78, v79, v80, v81, v82);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[8], v83, v77, v78, v79, v80, v81, v82);
   v109 = v14;
   v26 = j_il2cpp_value_box_0(float_TypeInfo, &v109);
   v90 = (Il2CppObject *)v26;
   if ( v26 )
   {
-    v26 = sub_1C714EC(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
   }
   if ( LODWORD(v25->max_length) <= 9 )
     goto LABEL_68;
   v25->m_Items[9] = v90;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[9], (int32_t)v90, v84, v85, v86, v87, v88, v89);
-  v26 = StringLiteral_24189/*"time"*/;
-  if ( StringLiteral_24189/*"time"*/ )
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[9], (int32_t)v90, v84, v85, v86, v87, v88, v89);
+  v26 = StringLiteral_24310/*"time"*/;
+  if ( StringLiteral_24310/*"time"*/ )
   {
-    v26 = sub_1C714EC(StringLiteral_24189/*"time"*/, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(StringLiteral_24310/*"time"*/, v25->obj.klass->_1.element_class);
     if ( !v26 )
       goto LABEL_69;
-    v97 = StringLiteral_24189/*"time"*/;
+    v97 = StringLiteral_24310/*"time"*/;
   }
   else
   {
@@ -396,30 +393,30 @@ LABEL_9:
   if ( LODWORD(v25->max_length) <= 0xA )
     goto LABEL_68;
   v25->m_Items[10] = (Il2CppObject *)v97;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[10], v97, v91, v92, v93, v94, v95, v96);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[10], v97, v91, v92, v93, v94, v95, v96);
   v108 = 1050253722;
   v26 = j_il2cpp_value_box_0(float_TypeInfo, &v108);
   v104 = (Il2CppObject *)v26;
   if ( v26 )
   {
-    v26 = sub_1C714EC(v26, v25->obj.klass->_1.element_class);
+    v26 = sub_1C941D4(v26, v25->obj.klass->_1.element_class);
     if ( !v26 )
     {
 LABEL_69:
-      v107 = sub_1C7162C(v26);
-      sub_1C714D8(v107, 0);
+      v107 = sub_1C94314(v26);
+      sub_1C941C0(v107, 0);
     }
   }
   if ( LODWORD(v25->max_length) <= 0xB )
 LABEL_68:
-    sub_1C71610(v26);
+    sub_1C942F8(v26);
   v25->m_Items[11] = v104;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v25->m_Items[11], (int32_t)v104, v98, v99, v100, v101, v102, v103);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v25->m_Items[11], (int32_t)v104, v98, v99, v100, v101, v102, v103);
   if ( !iTween_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(iTween_TypeInfo);
   v105 = iTween__Hash(v25, 0);
   iTween__ValueTo(v16, v105, 0);
-  return nowval != now || maxval != max;
+  return nowval != v7 || maxval != v6;
 }
 
 
@@ -445,10 +442,10 @@ void BattleHpGaugeBarComponent__updateDamageGauge(
   UIProgressBar_o *v9; // x0
   int64_t v10; // x8
 
-  if ( (byte_4CCA904 & 1) == 0 )
+  if ( (byte_4D2FDB8 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCA904 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2FDB8 = 1;
   }
   v5 = BattleUtility__Lerp((float)this->fields.prevval, (float)this->fields.nowval, par, 0);
   damageGauge = (UnityEngine_Object_o *)this->fields.damageGauge;
@@ -459,7 +456,7 @@ void BattleHpGaugeBarComponent__updateDamageGauge(
   {
     v9 = this->fields.damageGauge;
     if ( !v9 )
-      sub_1C71608(0, v8);
+      sub_1C942F0(0, v8);
     UIProgressBar__set_value(v9, v7 / (float)this->fields.maxval, 0);
   }
   v10 = 0x8000000000000000LL;
@@ -482,12 +479,12 @@ void BattleHpGaugeBarComponent__updateNomalGauge(
   float value; // s0
   System_String_o **v11; // x8
 
-  if ( (byte_4CCA903 & 1) == 0 )
+  if ( (byte_4D2FDB7 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_22831/*"playerhp_3"*/);
-    sub_1C713B0(&StringLiteral_22830/*"playerhp_1"*/);
-    byte_4CCA903 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_22944/*"playerhp_3"*/);
+    sub_1C94098(&StringLiteral_22943/*"playerhp_1"*/);
+    byte_4D2FDB7 = 1;
   }
   frontGauge = (UnityEngine_Object_o *)this->fields.frontGauge;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -510,15 +507,15 @@ void BattleHpGaugeBarComponent__updateNomalGauge(
         value = UIProgressBar__get_value(v7, 0);
         if ( v9 )
         {
-          v11 = (System_String_o **)&StringLiteral_22830/*"playerhp_1"*/;
+          v11 = (System_String_o **)&StringLiteral_22943/*"playerhp_1"*/;
           if ( value <= 0.1 )
-            v11 = (System_String_o **)&StringLiteral_22831/*"playerhp_3"*/;
+            v11 = (System_String_o **)&StringLiteral_22944/*"playerhp_3"*/;
           UISprite__set_spriteName(v9, *v11, 0);
           return;
         }
       }
 LABEL_16:
-      sub_1C71608(v7, v6);
+      sub_1C942F0(v7, v6);
     }
   }
 }

@@ -11,7 +11,7 @@ void BattleSpeedButtonComponent__OnPress(BattleSpeedButtonComponent_o *this, boo
 
   perf = this->fields.perf;
   if ( !perf )
-    sub_1C71608(0, isPressed);
+    sub_1C942F0(0, isPressed);
   v4 = 1.0;
   if ( isPressed )
     v4 = 2.0;

@@ -9,11 +9,11 @@ void DeckWaveServantData___ctor(DeckWaveServantData_o *this, const MethodInfo *m
   int64_t v9; // x6
   System_String_o *v10; // x7
 
-  if ( (byte_4CC6EFA & 1) == 0 )
+  if ( (byte_4D2C368 & 1) == 0 )
   {
-    sub_1C713B0(&BalanceConfig_TypeInfo);
-    sub_1C713B0(&int___TypeInfo);
-    byte_4CC6EFA = 1;
+    sub_1C94098(&BalanceConfig_TypeInfo);
+    sub_1C94098(&int___TypeInfo);
+    byte_4D2C368 = 1;
   }
   System_Object___ctor((Il2CppObject *)this, 0);
   v3 = BalanceConfig_TypeInfo;
@@ -22,7 +22,7 @@ void DeckWaveServantData___ctor(DeckWaveServantData_o *this, const MethodInfo *m
     j_il2cpp_runtime_class_init_0(BalanceConfig_TypeInfo);
     v3 = BalanceConfig_TypeInfo;
   }
-  v4 = (struct System_Int32_array *)sub_1C71458(int___TypeInfo, (unsigned int)v3->static_fields->DeckMainMemberMax);
+  v4 = (struct System_Int32_array *)sub_1C94140(int___TypeInfo, (unsigned int)v3->static_fields->DeckMainMemberMax);
   this->fields.uniqueIds = v4;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.uniqueIds, (int32_t)v4, v5, v6, v7, v8, v9, v10);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.uniqueIds, (int32_t)v4, v5, v6, v7, v8, v9, v10);
 }

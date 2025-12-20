@@ -21,15 +21,15 @@ void DebugListViewItem___ctor(
   struct FsmEventData_o *v20; // x8
   struct System_String_o *title; // x1
 
-  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
   this->fields.eventData = eventData;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.eventData, (int32_t)eventData, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.eventData, (int32_t)eventData, v6, v7, v8, v9, v10, v11);
   v20 = this->fields.eventData;
   if ( !v20 )
-    sub_1C71608(v12, v13);
+    sub_1C942F0(v12, v13);
   title = v20->fields.title;
   this->fields.titleText = title;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.titleText, (int32_t)title, v14, v15, v16, v17, v18, v19);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.titleText, (int32_t)title, v14, v15, v16, v17, v18, v19);
 }
 
 
@@ -47,12 +47,12 @@ void DebugListViewItem__SetIndex(DebugListViewItem_o *this, int32_t value, const
 
 System_String_o *DebugListViewItem__ToString(DebugListViewItem_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC4854 & 1) == 0 )
+  if ( (byte_4D29CA4 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_19218/*"eventType "*/);
-    byte_4CC4854 = 1;
+    sub_1C94098(&StringLiteral_19303/*"eventType "*/);
+    byte_4D29CA4 = 1;
   }
-  return System_String__Concat_64031724((System_String_o *)StringLiteral_19218/*"eventType "*/, this->fields.titleText, 0);
+  return System_String__Concat_64417744((System_String_o *)StringLiteral_19303/*"eventType "*/, this->fields.titleText, 0);
 }
 
 
@@ -65,11 +65,11 @@ DebugListViewObject_o *DebugListViewItem__getDebugListViewObject(DebugListViewIt
   DebugListViewItem_o *v7; // x0
   const MethodInfo *v8; // x1
 
-  if ( (byte_4CC4853 & 1) == 0 )
+  if ( (byte_4D29CA3 & 1) == 0 )
   {
-    sub_1C713B0(&DebugListViewObject_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC4853 = 1;
+    sub_1C94098(&DebugListViewObject_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D29CA3 = 1;
   }
   viewObject = (UnityEngine_Object_o *)this->fields.viewObject;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -85,7 +85,7 @@ DebugListViewObject_o *DebugListViewItem__getDebugListViewObject(DebugListViewIt
       if ( result->klass->_2.naturalAligment < (unsigned int)naturalAligment
         || (DebugListViewObject_c *)result->klass->_2.typeHierarchy[naturalAligment - 1] != DebugListViewObject_TypeInfo )
       {
-        sub_1C719A4(result);
+        sub_1C9468C(result);
         return (DebugListViewObject_o *)DebugListViewItem__ToString(v7, v8);
       }
     }
@@ -100,7 +100,7 @@ System_String_o *DebugListViewItem__get_EventName(DebugListViewItem_o *this, con
 
   eventData = this->fields.eventData;
   if ( !eventData )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return eventData->fields.eventData;
 }
 
@@ -120,7 +120,7 @@ void DebugListViewItem__set_TitleText(DebugListViewItem_o *this, System_String_o
   System_String_o *v7; // x7
 
   this->fields.titleText = value;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.titleText,
     (int32_t)value,
     (int32_t)method,

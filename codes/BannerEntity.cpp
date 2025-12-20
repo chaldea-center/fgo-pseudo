@@ -1,13 +1,13 @@
 void BannerEntity___ctor(BannerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC6FEA & 1) == 0 )
+  if ( (byte_4D2C45D & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_int___ctor__);
-    byte_4CC6FEA = 1;
+    sub_1C94098(&Method_DataEntityBase_int___ctor__);
+    byte_4D2C45D = 1;
   }
   DataEntityBase_int____ctor(
     (DataEntityBase_int__o *)this,
-    (const MethodInfo_340699C *)Method_DataEntityBase_int___ctor__);
+    (const MethodInfo_3458FDC *)Method_DataEntityBase_int___ctor__);
 }
 
 
@@ -24,17 +24,17 @@ int32_t BannerEntity__GetBannerId(BannerEntity_o *this, const MethodInfo *method
   const MethodInfo *v5; // x3
   int32_t result; // w0
 
-  if ( (byte_4CC6FE7 & 1) == 0 )
+  if ( (byte_4D2C45A & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataManager_GetMaster_BannerAddMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    byte_4CC6FE7 = 1;
+    sub_1C94098(&Method_DataManager_GetMaster_BannerAddMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    byte_4D2C45A = 1;
   }
   if ( !DataManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-  Master_object = DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_BannerAddMaster___);
+  Master_object = DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_BannerAddMaster___);
   if ( !Master_object )
-    sub_1C71608(0, v4);
+    sub_1C942F0(0, v4);
   result = BannerAddMaster__getOverwriteBannerId((BannerAddMaster_o *)Master_object, this->fields.bannerId, 1, v5);
   if ( result == -1 )
     return this->fields.bannerId;
@@ -46,17 +46,17 @@ System_Collections_Generic_Dictionary_string__object__o *BannerEntity__GetDetail
         BannerEntity_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CC6FE8 & 1) == 0 )
+  if ( (byte_4D2C45B & 1) == 0 )
   {
-    sub_1C713B0(&Method_BasicHelper_GetValue_Dictionary_string__object____);
-    sub_1C713B0(&StringLiteral_5248/*"DetailScrollDialog"*/);
-    byte_4CC6FE8 = 1;
+    sub_1C94098(&Method_BasicHelper_GetValue_Dictionary_string__object____);
+    sub_1C94098(&StringLiteral_5258/*"DetailScrollDialog"*/);
+    byte_4D2C45B = 1;
   }
   return (System_Collections_Generic_Dictionary_string__object__o *)BasicHelper__GetValue_object_(
                                                                       this->fields.script,
-                                                                      (System_String_o *)StringLiteral_5248/*"DetailScrollDialog"*/,
+                                                                      (System_String_o *)StringLiteral_5258/*"DetailScrollDialog"*/,
                                                                       0,
-                                                                      (const MethodInfo_31387A8 *)Method_BasicHelper_GetValue_Dictionary_string__object____);
+                                                                      (const MethodInfo_3189A3C *)Method_BasicHelper_GetValue_Dictionary_string__object____);
 }
 
 
@@ -72,7 +72,7 @@ System_String_array *BannerEntity__GetLinkBody(BannerEntity_o *this, uint16_t se
 
   linkBody = this->fields.linkBody;
   if ( !linkBody )
-    sub_1C71608(0, separator);
+    sub_1C942F0(0, separator);
   return System_String__Split(linkBody, separator, 0, 0);
 }
 
@@ -84,11 +84,11 @@ bool BannerEntity__IsEnable(BannerEntity_o *this, const MethodInfo *method)
   int32_t condType; // w21
   int64_t condNum; // x19
 
-  if ( (byte_4CC6FE6 & 1) == 0 )
+  if ( (byte_4D2C459 & 1) == 0 )
   {
-    sub_1C713B0(&CondType_TypeInfo);
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    byte_4CC6FE6 = 1;
+    sub_1C94098(&CondType_TypeInfo);
+    sub_1C94098(&NetworkManager_TypeInfo);
+    byte_4D2C459 = 1;
   }
   if ( this->fields.bannerId < 1 || this->fields.terminalBannerPriority < 1 || this->fields.deviceType > 1u )
     return 0;
@@ -120,10 +120,10 @@ bool BannerEntity__IsEnableDevice(BannerEntity_o *this, const MethodInfo *method
 
 bool BannerEntity__IsExchangeSvtCoin(BannerEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC6FE9 & 1) == 0 )
+  if ( (byte_4D2C45C & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_6286/*"ExchangeSvtCoin"*/);
-    byte_4CC6FE9 = 1;
+    sub_1C94098(&StringLiteral_6299/*"ExchangeSvtCoin"*/);
+    byte_4D2C45C = 1;
   }
-  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_6286/*"ExchangeSvtCoin"*/, 0, 0) > 0;
+  return EntityScriptUtil__GetIntValue(this->fields.script, (System_String_o *)StringLiteral_6299/*"ExchangeSvtCoin"*/, 0, 0) > 0;
 }

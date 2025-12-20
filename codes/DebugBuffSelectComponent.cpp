@@ -11,7 +11,7 @@ void DebugBuffSelectComponent__Close(DebugBuffSelectComponent_o *this, const Met
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C71608(0, v3);
+    sub_1C942F0(0, v3);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -28,16 +28,16 @@ System_Collections_IEnumerator_o *DebugBuffSelectComponent__CreateListCoroutine(
   int64_t v8; // x6
   System_String_o *v9; // x7
 
-  if ( (byte_4CC89CA & 1) == 0 )
+  if ( (byte_4D2DE67 & 1) == 0 )
   {
-    sub_1C713B0(&DebugBuffSelectComponent__CreateListCoroutine_d__8_TypeInfo);
-    byte_4CC89CA = 1;
+    sub_1C94098(&DebugBuffSelectComponent__CreateListCoroutine_d__8_TypeInfo);
+    byte_4D2DE67 = 1;
   }
-  v3 = sub_1C715FC(DebugBuffSelectComponent__CreateListCoroutine_d__8_TypeInfo);
+  v3 = sub_1C942E4(DebugBuffSelectComponent__CreateListCoroutine_d__8_TypeInfo);
   System_Object___ctor((Il2CppObject *)v3, 0);
   *(_DWORD *)(v3 + 16) = 0;
   *(_QWORD *)(v3 + 32) = this;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)(v3 + 32), (int32_t)this, v4, v5, v6, v7, v8, v9);
   return (System_Collections_IEnumerator_o *)v3;
 }
 
@@ -63,10 +63,10 @@ void DebugBuffSelectComponent__Open(
   const MethodInfo *v20; // x1
   System_Collections_IEnumerator_o *ListCoroutine; // x1
 
-  if ( (byte_4CC89C9 & 1) == 0 )
+  if ( (byte_4D2DE66 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIPanel___);
-    byte_4CC89C9 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIPanel___);
+    byte_4D2DE66 = 1;
   }
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -77,7 +77,7 @@ void DebugBuffSelectComponent__Open(
     goto LABEL_15;
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   this->fields.callback = callback;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.callback, (int32_t)callback, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.callback, (int32_t)callback, v11, v12, v13, v14, v15, v16);
   isListCreate = this->fields.isListCreate;
   this->fields.isFilter = isFilter;
   this->fields.filterBuffType = filterBuffType;
@@ -91,10 +91,10 @@ void DebugBuffSelectComponent__Open(
                                              (UnityEngine_Component_o *)gameObject,
                                              0);
   v18 = (UnityEngine_Transform_o *)gameObject;
-  if ( !byte_4CC0D09 )
+  if ( !byte_4D25F19 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D09 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F19 = 1;
   }
   if ( !v18 )
     goto LABEL_15;
@@ -104,19 +104,19 @@ void DebugBuffSelectComponent__Open(
     goto LABEL_15;
   gameObject = (UnityEngine_GameObject_o *)UnityEngine_Component__GetComponent_object_(
                                              (UnityEngine_Component_o *)gameObject,
-                                             (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIPanel___);
+                                             (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIPanel___);
   v19 = (UIPanel_o *)gameObject;
-  if ( !byte_4CC0BE9 )
+  if ( !byte_4D25DF9 )
   {
-    gameObject = (UnityEngine_GameObject_o *)sub_1C713B0(&UnityEngine_Vector2_TypeInfo);
-    byte_4CC0BE9 = 1;
+    gameObject = (UnityEngine_GameObject_o *)sub_1C94098(&UnityEngine_Vector2_TypeInfo);
+    byte_4D25DF9 = 1;
   }
   if ( !v19 )
 LABEL_15:
-    sub_1C71608(gameObject, v10);
+    sub_1C942F0(gameObject, v10);
   UIPanel__set_clipOffset(v19, UnityEngine_Vector2_TypeInfo->static_fields->zeroVector, 0);
   ListCoroutine = DebugBuffSelectComponent__CreateListCoroutine(this, v20);
-  UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
+  UnityEngine_MonoBehaviour__StartCoroutine_72096164((UnityEngine_MonoBehaviour_o *)this, ListCoroutine, 0);
 }
 
 
@@ -126,15 +126,15 @@ void DebugBuffSelectComponent__RemoveList(DebugBuffSelectComponent_o *this, cons
   int32_t v4; // w20
   UnityEngine_Object_o *gameObject; // x21
 
-  if ( (byte_4CC89CB & 1) == 0 )
+  if ( (byte_4D2DE68 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC89CB = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2DE68 = 1;
   }
   grid = (UnityEngine_Component_o *)this->fields.grid;
   if ( !grid )
 LABEL_13:
-    sub_1C71608(grid, method);
+    sub_1C942F0(grid, method);
   v4 = 0;
   while ( 1 )
   {
@@ -155,7 +155,7 @@ LABEL_13:
           gameObject = (UnityEngine_Object_o *)UnityEngine_Component__get_gameObject(grid, 0);
           if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
-          UnityEngine_Object__Destroy_71724608(gameObject, 0);
+          UnityEngine_Object__Destroy_72110972(gameObject, 0);
           grid = (UnityEngine_Component_o *)this->fields.grid;
           ++v4;
           if ( grid )
@@ -192,7 +192,7 @@ void DebugBuffSelectComponent__TapBuffSelectCallback(
       callback->fields.method);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C71608(0, v9);
+    sub_1C942F0(0, v9);
   UnityEngine_GameObject__SetActive(gameObject, 0, 0);
 }
 
@@ -259,17 +259,17 @@ bool DebugBuffSelectComponent__CreateListCoroutine_d__8__MoveNext(
   System_String_o *v47; // x7
 
   v8 = this;
-  if ( (byte_4CC89CC & 1) == 0 )
+  if ( (byte_4D2DE69 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_int__string__string__int__TypeInfo);
-    sub_1C713B0(&Method_DataManager_GetMasterData_BuffMaster___);
-    sub_1C713B0(&Method_DataMasterBase_BuffMaster__BuffEntity__int__getEntitys__);
-    sub_1C713B0(&Method_DebugBuffSelectComponent_TapBuffSelectCallback__);
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponent_DebugBuffSelectCellComponent___);
-    sub_1C713B0(&Method_UnityEngine_Object_Instantiate_GameObject___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_1C713B0(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
-    byte_4CC89CC = 1;
+    sub_1C94098(&System_Action_int__string__string__int__TypeInfo);
+    sub_1C94098(&Method_DataManager_GetMasterData_BuffMaster___);
+    sub_1C94098(&Method_DataMasterBase_BuffMaster__BuffEntity__int__getEntitys__);
+    sub_1C94098(&Method_DebugBuffSelectComponent_TapBuffSelectCallback__);
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponent_DebugBuffSelectCellComponent___);
+    sub_1C94098(&Method_UnityEngine_Object_Instantiate_GameObject___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_1C94098(&Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+    byte_4D2DE69 = 1;
   }
   _1__state = v8->fields.__1__state;
   _4__this = v8->fields.__4__this;
@@ -285,7 +285,7 @@ bool DebugBuffSelectComponent__CreateListCoroutine_d__8__MoveNext(
       v8->fields.__2__current = 0;
       p__2__current = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
       LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = -1;
-      sub_1C71354(p__2__current, 0, v2, v3, v4, v5, v6, v7);
+      sub_1C9403C(p__2__current, 0, v2, v3, v4, v5, v6, v7);
       result = 1;
       LODWORD(p__2__current[-1].fields._ClosedMessage_k__BackingField) = 1;
       return result;
@@ -293,20 +293,20 @@ bool DebugBuffSelectComponent__CreateListCoroutine_d__8__MoveNext(
     return 0;
   }
   v8->fields.__1__state = -1;
-  this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3A5F158 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
+  this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)SingletonMonoBehaviour_object___get_Instance((const MethodInfo_3ABA574 *)Method_SingletonMonoBehaviour_DataManager__get_Instance__);
   if ( !this
     || (this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)DataManager__GetMasterData_object_(
                                                                          (DataManager_o *)this,
-                                                                         (const MethodInfo_314B10C *)Method_DataManager_GetMasterData_BuffMaster___)) == 0 )
+                                                                         (const MethodInfo_319C134 *)Method_DataManager_GetMasterData_BuffMaster___)) == 0 )
   {
 LABEL_40:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   Entitys = DataMasterBase_object__object__int___getEntitys(
               (DataMasterBase_TMaster__TEntity__PKType__o *)this,
-              (const MethodInfo_3408104 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__getEntitys__);
+              (const MethodInfo_345A744 *)Method_DataMasterBase_BuffMaster__BuffEntity__int__getEntitys__);
   v8->fields._entList_5__2 = (struct BuffEntity_array *)Entitys;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v8->fields._entList_5__2, (int32_t)Entitys, v14, v15, v16, v17, v18, v19);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v8->fields._entList_5__2, (int32_t)Entitys, v14, v15, v16, v17, v18, v19);
   v20 = 0;
   v8->fields._i_5__5 = 0;
   *(_QWORD *)&v8->fields._interval_5__3 = 10;
@@ -343,7 +343,7 @@ LABEL_44:
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)UnityEngine_Object__Instantiate_object_(
                                                                        BaseCell,
-                                                                       (const MethodInfo_31D7CB8 *)Method_UnityEngine_Object_Instantiate_GameObject___);
+                                                                       (const MethodInfo_3229578 *)Method_UnityEngine_Object_Instantiate_GameObject___);
       if ( !this )
         goto LABEL_40;
       v23 = this;
@@ -364,10 +364,10 @@ LABEL_44:
                                                                        (UnityEngine_GameObject_o *)v23,
                                                                        0);
       v25 = this;
-      if ( !byte_4CC0D09 )
+      if ( !byte_4D25F19 )
       {
-        this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-        byte_4CC0D09 = 1;
+        this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+        byte_4D25F19 = 1;
       }
       if ( !v25 )
         goto LABEL_40;
@@ -379,10 +379,10 @@ LABEL_44:
                                                                        (UnityEngine_GameObject_o *)v23,
                                                                        0);
       v26 = this;
-      if ( !byte_4CC0D0E )
+      if ( !byte_4D25F1E )
       {
-        this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-        byte_4CC0D0E = 1;
+        this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+        byte_4D25F1E = 1;
       }
       if ( !v26 )
         goto LABEL_40;
@@ -392,14 +392,14 @@ LABEL_44:
         0);
       this = (DebugBuffSelectComponent__CreateListCoroutine_d__8_o *)UnityEngine_GameObject__GetComponent_object_(
                                                                        (UnityEngine_GameObject_o *)v23,
-                                                                       (const MethodInfo_31A2ED0 *)Method_UnityEngine_GameObject_GetComponent_DebugBuffSelectCellComponent___);
+                                                                       (const MethodInfo_31F4790 *)Method_UnityEngine_GameObject_GetComponent_DebugBuffSelectCellComponent___);
       v27 = v8->fields._entList_5__2;
       if ( !v27 )
         goto LABEL_40;
       i_5__5 = v8->fields._i_5__5;
       if ( (unsigned int)i_5__5 >= LODWORD(v27->max_length) )
 LABEL_41:
-        sub_1C71610(this);
+        sub_1C942F8(this);
       v29 = v27->m_Items[i_5__5];
       if ( !v29 )
         goto LABEL_40;
@@ -408,7 +408,7 @@ LABEL_41:
       detail = v29->fields.detail;
       id = v29->fields.id;
       type = v29->fields.type;
-      v35 = (System_Action_T1__T2__T3__T4__o *)sub_1C715FC(System_Action_int__string__string__int__TypeInfo);
+      v35 = (System_Action_T1__T2__T3__T4__o *)sub_1C942E4(System_Action_int__string__string__int__TypeInfo);
       System_Action_int__object__object__int____ctor(
         v35,
         (Il2CppObject *)_4__this,
@@ -443,7 +443,7 @@ LABEL_31:
     this->klass->vtable._8_System_Collections_IEnumerator_Reset.method);
   v8->fields.__2__current = 0;
   v41 = (GrandQuestFolderBoardItem_o *)&v8->fields.__2__current;
-  sub_1C71354(v41, 0, v42, v43, v44, v45, v46, v47);
+  sub_1C9403C(v41, 0, v42, v43, v44, v45, v46, v47);
   LODWORD(v41[-1].fields._ClosedMessage_k__BackingField) = 2;
   return 1;
 }
@@ -465,11 +465,11 @@ void __noreturn DebugBuffSelectComponent__CreateListCoroutine_d__8__System_Colle
   System_NotSupportedException_o *v3; // x19
   __int64 v4; // x0
 
-  v2 = sub_1C713C4(&System_NotSupportedException_TypeInfo);
-  v3 = (System_NotSupportedException_o *)sub_1C715FC(v2);
+  v2 = sub_1C940AC(&System_NotSupportedException_TypeInfo);
+  v3 = (System_NotSupportedException_o *)sub_1C942E4(v2);
   System_NotSupportedException___ctor(v3, 0);
-  v4 = sub_1C713C4(&Method_DebugBuffSelectComponent__CreateListCoroutine_d__8_System_Collections_IEnumerator_Reset__);
-  sub_1C714D8(v3, v4);
+  v4 = sub_1C940AC(&Method_DebugBuffSelectComponent__CreateListCoroutine_d__8_System_Collections_IEnumerator_Reset__);
+  sub_1C941C0(v3, v4);
 }
 
 

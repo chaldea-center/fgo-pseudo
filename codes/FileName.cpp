@@ -34,78 +34,78 @@ void FileName___cctor(const MethodInfo *method)
   int64_t v32; // x6
   System_String_o *v33; // x7
 
-  if ( (byte_4CC62A5 & 1) == 0 )
+  if ( (byte_4D2B706 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
-    sub_1C713B0(&System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
-    sub_1C713B0(&FileName_TypeInfo);
-    sub_1C713B0(&StringLiteral_18890/*"ef_hit_slash01_M"*/);
-    sub_1C713B0(&StringLiteral_18870/*"ef_crit01"*/);
-    sub_1C713B0(&StringLiteral_20321/*"icon_support_02"*/);
-    sub_1C713B0(&StringLiteral_18889/*"ef_hit01_M"*/);
-    sub_1C713B0(&StringLiteral_20276/*"icon_eventjoin_02"*/);
-    sub_1C713B0(&StringLiteral_18891/*"ef_hit_slash02_M"*/);
-    byte_4CC62A5 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
+    sub_1C94098(&System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
+    sub_1C94098(&FileName_TypeInfo);
+    sub_1C94098(&StringLiteral_18970/*"ef_hit_slash01_M"*/);
+    sub_1C94098(&StringLiteral_18947/*"ef_crit01"*/);
+    sub_1C94098(&StringLiteral_20416/*"icon_support_02"*/);
+    sub_1C94098(&StringLiteral_18969/*"ef_hit01_M"*/);
+    sub_1C94098(&StringLiteral_20369/*"icon_eventjoin_02"*/);
+    sub_1C94098(&StringLiteral_18971/*"ef_hit_slash02_M"*/);
+    byte_4D2B706 = 1;
   }
-  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C715FC(System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
+  v1 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C942E4(System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v1,
-    (const MethodInfo_3494CFC *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
+    (const MethodInfo_34EA2E0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
   if ( !v1 )
     goto LABEL_6;
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     0,
     0,
-    (const MethodInfo_34956D0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     1,
-    (Il2CppObject *)StringLiteral_18890/*"ef_hit_slash01_M"*/,
-    (const MethodInfo_34956D0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (Il2CppObject *)StringLiteral_18970/*"ef_hit_slash01_M"*/,
+    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     2,
-    (Il2CppObject *)StringLiteral_18891/*"ef_hit_slash02_M"*/,
-    (const MethodInfo_34956D0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (Il2CppObject *)StringLiteral_18971/*"ef_hit_slash02_M"*/,
+    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v1,
     3,
-    (Il2CppObject *)StringLiteral_18889/*"ef_hit01_M"*/,
-    (const MethodInfo_34956D0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (Il2CppObject *)StringLiteral_18969/*"ef_hit01_M"*/,
+    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   FileName_TypeInfo->static_fields->hiteffectlist = (struct System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__o *)v1;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)FileName_TypeInfo->static_fields, (int32_t)v1, v4, v5, v6, v7, v8, v9);
-  v10 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C715FC(System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)FileName_TypeInfo->static_fields, (int32_t)v1, v4, v5, v6, v7, v8, v9);
+  v10 = (System_Collections_Generic_Dictionary_TKey__TValue__o *)sub_1C942E4(System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__TypeInfo);
   System_Collections_Generic_Dictionary_Int32Enum__object____ctor(
     v10,
-    (const MethodInfo_3494CFC *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
+    (const MethodInfo_34EA2E0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string___ctor__);
   if ( !v10 )
 LABEL_6:
-    sub_1C71608(v2, v3);
+    sub_1C942F0(v2, v3);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v10,
     0,
     0,
-    (const MethodInfo_34956D0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v10,
     1,
-    (Il2CppObject *)StringLiteral_18870/*"ef_crit01"*/,
-    (const MethodInfo_34956D0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (Il2CppObject *)StringLiteral_18947/*"ef_crit01"*/,
+    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v10,
     2,
-    (Il2CppObject *)StringLiteral_18870/*"ef_crit01"*/,
-    (const MethodInfo_34956D0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (Il2CppObject *)StringLiteral_18947/*"ef_crit01"*/,
+    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   System_Collections_Generic_Dictionary_Int32Enum__object___Add(
     v10,
     3,
-    (Il2CppObject *)StringLiteral_18870/*"ef_crit01"*/,
-    (const MethodInfo_34956D0 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
+    (Il2CppObject *)StringLiteral_18947/*"ef_crit01"*/,
+    (const MethodInfo_34EACB4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__Add__);
   static_fields = FileName_TypeInfo->static_fields;
   static_fields->criticaleffectlist = (struct System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__o *)v10;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&static_fields->criticaleffectlist,
     (int32_t)v10,
     v12,
@@ -114,14 +114,14 @@ LABEL_6:
     v15,
     v16,
     v17);
-  v18 = StringLiteral_20321/*"icon_support_02"*/;
+  v18 = StringLiteral_20416/*"icon_support_02"*/;
   v19 = FileName_TypeInfo->static_fields;
-  v19->friendIconName = (struct System_String_o *)StringLiteral_20321/*"icon_support_02"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v19->friendIconName, v18, v20, v21, v22, v23, v24, v25);
-  v26 = StringLiteral_20276/*"icon_eventjoin_02"*/;
+  v19->friendIconName = (struct System_String_o *)StringLiteral_20416/*"icon_support_02"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v19->friendIconName, v18, v20, v21, v22, v23, v24, v25);
+  v26 = StringLiteral_20369/*"icon_eventjoin_02"*/;
   v27 = FileName_TypeInfo->static_fields;
-  v27->eventJoinIconName = (struct System_String_o *)StringLiteral_20276/*"icon_eventjoin_02"*/;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&v27->eventJoinIconName, v26, v28, v29, v30, v31, v32, v33);
+  v27->eventJoinIconName = (struct System_String_o *)StringLiteral_20369/*"icon_eventjoin_02"*/;
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&v27->eventJoinIconName, v26, v28, v29, v30, v31, v32, v33);
 }
 
 
@@ -137,12 +137,12 @@ System_String_o *FileName__getCriticalEffectName(int32_t type, const MethodInfo 
   System_Collections_Generic_Dictionary_TKey__TValue__o *criticaleffectlist; // x0
   FileName_c *v5; // x0
 
-  if ( (byte_4CC62A4 & 1) == 0 )
+  if ( (byte_4D2B705 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
-    sub_1C713B0(&FileName_TypeInfo);
-    byte_4CC62A4 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
+    sub_1C94098(&FileName_TypeInfo);
+    byte_4D2B705 = 1;
   }
   v3 = FileName_TypeInfo;
   if ( !FileName_TypeInfo->_2.cctor_finished )
@@ -156,7 +156,7 @@ System_String_o *FileName__getCriticalEffectName(int32_t type, const MethodInfo 
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          criticaleffectlist,
          type,
-         (const MethodInfo_34958C4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__) )
+         (const MethodInfo_34EAEA8 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__) )
   {
     v5 = FileName_TypeInfo;
     if ( !FileName_TypeInfo->_2.cctor_finished )
@@ -169,9 +169,9 @@ System_String_o *FileName__getCriticalEffectName(int32_t type, const MethodInfo 
       return (System_String_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                   criticaleffectlist,
                                   type,
-                                  (const MethodInfo_3495630 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
+                                  (const MethodInfo_34EAC14 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
 LABEL_12:
-    sub_1C71608(criticaleffectlist, method);
+    sub_1C942F0(criticaleffectlist, method);
   }
   return 0;
 }
@@ -183,12 +183,12 @@ System_String_o *FileName__getEffectName(int32_t type, const MethodInfo *method)
   System_Collections_Generic_Dictionary_TKey__TValue__o *hiteffectlist; // x0
   FileName_c *v5; // x0
 
-  if ( (byte_4CC62A3 & 1) == 0 )
+  if ( (byte_4D2B704 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
-    sub_1C713B0(&FileName_TypeInfo);
-    byte_4CC62A3 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
+    sub_1C94098(&FileName_TypeInfo);
+    byte_4D2B704 = 1;
   }
   v3 = FileName_TypeInfo;
   if ( !FileName_TypeInfo->_2.cctor_finished )
@@ -202,7 +202,7 @@ System_String_o *FileName__getEffectName(int32_t type, const MethodInfo *method)
   if ( System_Collections_Generic_Dictionary_Int32Enum__object___ContainsKey(
          hiteffectlist,
          type,
-         (const MethodInfo_34958C4 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__) )
+         (const MethodInfo_34EAEA8 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__ContainsKey__) )
   {
     v5 = FileName_TypeInfo;
     if ( !FileName_TypeInfo->_2.cctor_finished )
@@ -215,9 +215,9 @@ System_String_o *FileName__getEffectName(int32_t type, const MethodInfo *method)
       return (System_String_o *)System_Collections_Generic_Dictionary_Int32Enum__object___get_Item(
                                   hiteffectlist,
                                   type,
-                                  (const MethodInfo_3495630 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
+                                  (const MethodInfo_34EAC14 *)Method_System_Collections_Generic_Dictionary_FileName_HIT_EFFECT__string__get_Item__);
 LABEL_12:
-    sub_1C71608(hiteffectlist, method);
+    sub_1C942F0(hiteffectlist, method);
   }
   return 0;
 }

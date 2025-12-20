@@ -3,10 +3,10 @@ void FSAutoScale___ctor(FSAutoScale_o *this, const MethodInfo *method)
   struct UnityEngine_Vector3_StaticFields *static_fields; // x8
   float z; // s1
 
-  if ( !byte_4CC0D0E )
+  if ( !byte_4D25F1E )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D0E = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F1E = 1;
   }
   static_fields = UnityEngine_Vector3_TypeInfo->static_fields;
   z = static_fields->oneVector.fields.z;
@@ -34,7 +34,7 @@ void FSAutoScale__Awake(FSAutoScale_o *this, const MethodInfo *method)
         y = localScale.fields.y,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C71608(transform, v4);
+    sub_1C942F0(transform, v4);
   }
   v9 = UnityEngine_Transform__get_localScale(transform, 0);
   this->fields.defaultScale.fields.x = v5;
@@ -68,7 +68,7 @@ void FSAutoScale__UpdateScale(FSAutoScale_o *this, const MethodInfo *method)
       goto LABEL_6;
     }
 LABEL_7:
-    sub_1C71608(transform, v6);
+    sub_1C942F0(transform, v6);
   }
   transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0);
   if ( !transform )

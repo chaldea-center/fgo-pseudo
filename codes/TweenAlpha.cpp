@@ -13,17 +13,17 @@ TweenAlpha_o *TweenAlpha__Begin(UnityEngine_GameObject_o *go, float duration, fl
   TweenAlpha_o *v9; // x19
   const MethodInfo *v10; // x2
 
-  if ( (byte_4CCBCDF & 1) == 0 )
+  if ( (byte_4D31091 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UITweener_Begin_TweenAlpha___);
-    byte_4CCBCDF = 1;
+    sub_1C94098(&Method_UITweener_Begin_TweenAlpha___);
+    byte_4D31091 = 1;
   }
   v7 = (TweenAlpha_o *)UITweener__Begin_object_(
                          go,
                          duration,
-                         (const MethodInfo_32209B8 *)Method_UITweener_Begin_TweenAlpha___);
+                         (const MethodInfo_3272360 *)Method_UITweener_Begin_TweenAlpha___);
   if ( !v7 )
-    sub_1C71608(0, v8);
+    sub_1C942F0(0, v8);
   v9 = v7;
   v7->fields.from = TweenAlpha__get_value(v7, v8);
   v9->fields.to = alpha;
@@ -65,7 +65,7 @@ void TweenAlpha__Cache(TweenAlpha_o *this, const MethodInfo *method)
   int64_t v27; // x6
   System_String_o *v28; // x7
   UnityEngine_Object_o *mMat; // x21
-  Il2CppObject *ComponentInChildren_object__51649344; // x0
+  Il2CppObject *ComponentInChildren_object__51981160; // x0
   int32_t v31; // w2
   int32_t v32; // w3
   System_String_o *v33; // x4
@@ -73,26 +73,26 @@ void TweenAlpha__Cache(TweenAlpha_o *this, const MethodInfo *method)
   int64_t v35; // x6
   System_String_o *v36; // x7
 
-  if ( (byte_4CCBCDC & 1) == 0 )
+  if ( (byte_4D3108E & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponentInChildren_UIRect___);
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Renderer___);
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIRect___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBCDC = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponentInChildren_UIRect___);
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Renderer___);
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIRect___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D3108E = 1;
   }
   this->fields.mCached = 1;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIRect___);
+                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIRect___);
   this->fields.mRect = (struct UIRect_o *)Component_object;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mRect, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mRect, (int32_t)Component_object, v4, v5, v6, v7, v8, v9);
   v10 = UnityEngine_Component__GetComponent_object_(
           (UnityEngine_Component_o *)this,
-          (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
+          (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_SpriteRenderer___);
   this->fields.mSr = (struct UnityEngine_SpriteRenderer_o *)v10;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mSr, (int32_t)v10, v11, v12, v13, v14, v15, v16);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mSr, (int32_t)v10, v11, v12, v13, v14, v15, v16);
   mRect = (UnityEngine_Object_o *)this->fields.mRect;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -105,30 +105,30 @@ void TweenAlpha__Cache(TweenAlpha_o *this, const MethodInfo *method)
     {
       v19 = UnityEngine_Component__GetComponent_object_(
               (UnityEngine_Component_o *)this,
-              (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Renderer___);
+              (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Renderer___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v20 = UnityEngine_Object__op_Inequality((UnityEngine_Object_o *)v19, 0, 0);
       if ( v20 )
       {
         if ( !v19 )
-          sub_1C71608(v20, v21);
+          sub_1C942F0(v20, v21);
         material = UnityEngine_Renderer__get_material((UnityEngine_Renderer_o *)v19, 0);
         this->fields.mMat = material;
-        sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mMat, (int32_t)material, v23, v24, v25, v26, v27, v28);
+        sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mMat, (int32_t)material, v23, v24, v25, v26, v27, v28);
       }
       mMat = (UnityEngine_Object_o *)this->fields.mMat;
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       if ( UnityEngine_Object__op_Equality(mMat, 0, 0) )
       {
-        ComponentInChildren_object__51649344 = UnityEngine_Component__GetComponentInChildren_object__51649344(
+        ComponentInChildren_object__51981160 = UnityEngine_Component__GetComponentInChildren_object__51981160(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_3141B40 *)Method_UnityEngine_Component_GetComponentInChildren_UIRect___);
-        this->fields.mRect = (struct UIRect_o *)ComponentInChildren_object__51649344;
-        sub_1C71354(
+                                                 (const MethodInfo_3192B68 *)Method_UnityEngine_Component_GetComponentInChildren_UIRect___);
+        this->fields.mRect = (struct UIRect_o *)ComponentInChildren_object__51981160;
+        sub_1C9403C(
           (GrandQuestFolderBoardItem_o *)&this->fields.mRect,
-          (int32_t)ComponentInChildren_object__51649344,
+          (int32_t)ComponentInChildren_object__51981160,
           v31,
           v32,
           v33,
@@ -190,10 +190,10 @@ float TweenAlpha__get_value(TweenAlpha_o *this, const MethodInfo *method)
   bool v9; // w0
   UnityEngine_Color_o color; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CCBCDD & 1) == 0 )
+  if ( (byte_4D3108F & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBCDD = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D3108F = 1;
   }
   if ( !this->fields.mCached )
     TweenAlpha__Cache(this, method);
@@ -211,7 +211,7 @@ float TweenAlpha__get_value(TweenAlpha_o *this, const MethodInfo *method)
       return result;
     }
 LABEL_22:
-    sub_1C71608(v5, v4);
+    sub_1C942F0(v5, v4);
   }
   mSr = (UnityEngine_Object_o *)this->fields.mSr;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -263,10 +263,10 @@ void TweenAlpha__set_value(TweenAlpha_o *this, float value, const MethodInfo *me
   UnityEngine_Color_o v13; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
   v3 = *(long double *)&value;
-  if ( (byte_4CCBCDE & 1) == 0 )
+  if ( (byte_4D31090 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CCBCDE = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D31090 = 1;
   }
   if ( !this->fields.mCached )
     TweenAlpha__Cache(this, method);
@@ -285,7 +285,7 @@ void TweenAlpha__set_value(TweenAlpha_o *this, float value, const MethodInfo *me
       return;
     }
 LABEL_23:
-    sub_1C71608(v7, v6);
+    sub_1C942F0(v7, v6);
   }
   mSr = (UnityEngine_Object_o *)this->fields.mSr;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )

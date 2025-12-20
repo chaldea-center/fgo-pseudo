@@ -11,12 +11,12 @@ void UISnapshotPoint__Start(UISnapshotPoint_o *this, const MethodInfo *method)
 {
   System_String_o *tag; // x0
 
-  if ( (byte_4CCBCB2 & 1) == 0 )
+  if ( (byte_4D31064 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_5837/*"EditorOnly"*/);
-    byte_4CCBCB2 = 1;
+    sub_1C94098(&StringLiteral_5849/*"EditorOnly"*/);
+    byte_4D31064 = 1;
   }
   tag = UnityEngine_Component__get_tag((UnityEngine_Component_o *)this, 0);
-  if ( System_String__op_Inequality(tag, (System_String_o *)StringLiteral_5837/*"EditorOnly"*/, 0) )
-    UnityEngine_Component__set_tag((UnityEngine_Component_o *)this, (System_String_o *)StringLiteral_5837/*"EditorOnly"*/, 0);
+  if ( System_String__op_Inequality(tag, (System_String_o *)StringLiteral_5849/*"EditorOnly"*/, 0) )
+    UnityEngine_Component__set_tag((UnityEngine_Component_o *)this, (System_String_o *)StringLiteral_5849/*"EditorOnly"*/, 0);
 }

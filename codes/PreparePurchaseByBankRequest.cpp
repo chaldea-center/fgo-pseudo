@@ -6,17 +6,17 @@ void PreparePurchaseByBankRequest__beginRequest(
   const MethodInfo *v5; // x3
   const MethodInfo *v6; // x1
 
-  if ( (byte_4CC8FAD & 1) == 0 )
+  if ( (byte_4D2E44E & 1) == 0 )
   {
-    sub_1C713B0(&PurchaseBehaviour_TypeInfo);
-    sub_1C713B0(&StringLiteral_17041/*"bankShopId"*/);
-    byte_4CC8FAD = 1;
+    sub_1C94098(&PurchaseBehaviour_TypeInfo);
+    sub_1C94098(&StringLiteral_17100/*"bankShopId"*/);
+    byte_4D2E44E = 1;
   }
   if ( !PurchaseBehaviour_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(PurchaseBehaviour_TypeInfo);
   PurchaseBehaviour__AddPreparePurchaseShopIdsToPlayerPrefs(shopId, 0);
   UnityEngine_PlayerPrefs__Save(0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17041/*"bankShopId"*/, shopId, v5);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17100/*"bankShopId"*/, shopId, v5);
   RequestBase__beginRequest((RequestBase_o *)this, v6);
 }
 
@@ -25,16 +25,16 @@ System_String_o *PreparePurchaseByBankRequest__getURL(PreparePurchaseByBankReque
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CC8FAC & 1) == 0 )
+  if ( (byte_4D2E44D & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_23548/*"shop/preparePurchaseByBank"*/);
-    byte_4CC8FAC = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&StringLiteral_23663/*"shop/preparePurchaseByBank"*/);
+    byte_4D2E44D = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_23548/*"shop/preparePurchaseByBank"*/, 0);
+  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_23663/*"shop/preparePurchaseByBank"*/, 0);
 }
 
 
@@ -51,12 +51,12 @@ void PreparePurchaseByBankRequest__requestCompleted(
   struct NetworkManager_ResultCallbackFunc_o *CallBack; // x8
   struct NetworkManager_ResultCallbackFunc_o *v11; // x8
 
-  if ( (byte_4CC8FAE & 1) == 0 )
+  if ( (byte_4D2E44F & 1) == 0 )
   {
-    sub_1C713B0(&JsonManager_TypeInfo);
-    sub_1C713B0(&ResponseCommandKind_TypeInfo);
-    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
-    byte_4CC8FAE = 1;
+    sub_1C94098(&JsonManager_TypeInfo);
+    sub_1C94098(&ResponseCommandKind_TypeInfo);
+    sub_1C94098(&StringLiteral_22424/*"ng"*/);
+    byte_4D2E44F = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
@@ -81,7 +81,7 @@ void PreparePurchaseByBankRequest__requestCompleted(
     if ( v11 )
       ((void (__fastcall *)(intptr_t, __int64, intptr_t))v11->fields.invoke_impl)(
         v11->fields.method_code,
-        StringLiteral_22316/*"ng"*/,
+        StringLiteral_22424/*"ng"*/,
         v11->fields.method);
   }
 }

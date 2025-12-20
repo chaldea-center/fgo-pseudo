@@ -1,27 +1,27 @@
 void EventRaceEntity___ctor(EventRaceEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC74AD & 1) == 0 )
+  if ( (byte_4D2C923 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC74AD = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2C923 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *EventRaceEntity__CreatePK(int32_t eventId, int32_t termId, const MethodInfo *method)
 {
-  if ( (byte_4CC74AB & 1) == 0 )
+  if ( (byte_4D2C921 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CC74AB = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4D2C921 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            eventId,
            termId,
-           (const MethodInfo_3149294 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -41,21 +41,21 @@ int32_t EventRaceEntity__GetGroupIdx(EventRaceEntity_o *this, int32_t groupId, c
   System_Int32_array *groupIds; // x19
   System_Predicate_int__o *v9; // x20
 
-  if ( (byte_4CC74AC & 1) == 0 )
+  if ( (byte_4D2C922 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Array_FindIndex_int___);
-    sub_1C713B0(&System_Predicate_int__TypeInfo);
-    sub_1C713B0(&Method_EventRaceEntity___c__DisplayClass12_0__GetGroupIdx_b__0__);
-    sub_1C713B0(&EventRaceEntity___c__DisplayClass12_0_TypeInfo);
-    byte_4CC74AC = 1;
+    sub_1C94098(&Method_System_Array_FindIndex_int___);
+    sub_1C94098(&System_Predicate_int__TypeInfo);
+    sub_1C94098(&Method_EventRaceEntity___c__DisplayClass12_0__GetGroupIdx_b__0__);
+    sub_1C94098(&EventRaceEntity___c__DisplayClass12_0_TypeInfo);
+    byte_4D2C922 = 1;
   }
-  v5 = sub_1C715FC(EventRaceEntity___c__DisplayClass12_0_TypeInfo);
+  v5 = sub_1C942E4(EventRaceEntity___c__DisplayClass12_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v5, 0);
   if ( !v5 )
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   *(_DWORD *)(v5 + 16) = groupId;
   groupIds = this->fields.groupIds;
-  v9 = (System_Predicate_int__o *)sub_1C715FC(System_Predicate_int__TypeInfo);
+  v9 = (System_Predicate_int__o *)sub_1C942E4(System_Predicate_int__TypeInfo);
   System_Predicate_int____ctor(
     v9,
     (Il2CppObject *)v5,
@@ -64,7 +64,7 @@ int32_t EventRaceEntity__GetGroupIdx(EventRaceEntity_o *this, int32_t groupId, c
   return System_Array__FindIndex_int_(
            groupIds,
            (System_Predicate_T__o *)v9,
-           (const MethodInfo_3251A5C *)Method_System_Array_FindIndex_int___);
+           (const MethodInfo_32A3624 *)Method_System_Array_FindIndex_int___);
 }
 
 

@@ -22,13 +22,13 @@ void DebugInputInfiniteGutsComponent__AddBuffGuts(
   System_String_o *v15; // x7
   int m_CancellationTokenSource; // w8
 
-  if ( (byte_4CC89EC & 1) == 0 )
+  if ( (byte_4D2DE89 & 1) == 0 )
   {
-    sub_1C713B0(&BattleBuffData_BuffData_TypeInfo);
-    sub_1C713B0(&int___TypeInfo);
-    byte_4CC89EC = 1;
+    sub_1C94098(&BattleBuffData_BuffData_TypeInfo);
+    sub_1C94098(&int___TypeInfo);
+    byte_4D2DE89 = 1;
   }
-  v6 = sub_1C715FC(BattleBuffData_BuffData_TypeInfo);
+  v6 = sub_1C942E4(BattleBuffData_BuffData_TypeInfo);
   BattleBuffData_BuffData___ctor((BattleBuffData_BuffData_o *)v6, 0);
   if ( !paramBuffEntity )
     goto LABEL_14;
@@ -38,15 +38,15 @@ void DebugInputInfiniteGutsComponent__AddBuffGuts(
   *(_QWORD *)(v6 + 20) = -1;
   *(_DWORD *)(v6 + 16) = id;
   *(_DWORD *)(v6 + 28) = 100;
-  addUnSubStateToggleOption = (struct UIToggle_o *)sub_1C71458(int___TypeInfo, 2);
+  addUnSubStateToggleOption = (struct UIToggle_o *)sub_1C94140(int___TypeInfo, 2);
   if ( !addUnSubStateToggleOption )
     goto LABEL_14;
   m_CancellationTokenSource = (int)addUnSubStateToggleOption->fields.m_CancellationTokenSource;
   if ( !m_CancellationTokenSource || (addUnSubStateToggleOption->fields.group = 1000, m_CancellationTokenSource == 1) )
-    sub_1C71610(addUnSubStateToggleOption);
+    sub_1C942F8(addUnSubStateToggleOption);
   *(&addUnSubStateToggleOption->fields.group + 1) = 1;
   *(_QWORD *)(v6 + 40) = addUnSubStateToggleOption;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)(v6 + 40),
     (int32_t)addUnSubStateToggleOption,
     v10,
@@ -61,7 +61,7 @@ void DebugInputInfiniteGutsComponent__AddBuffGuts(
   addUnSubStateToggleOption = this->fields.addUnSubStateToggleOption;
   if ( !addUnSubStateToggleOption )
 LABEL_14:
-    sub_1C71608(addUnSubStateToggleOption, v8);
+    sub_1C942F0(addUnSubStateToggleOption, v8);
   if ( UIToggle__get_value(addUnSubStateToggleOption, 0) )
     BattleBuffData_BuffData__onState((BattleBuffData_BuffData_o *)v6, 0x80000, 0);
   if ( BuffEntity__getAppearanceId(paramBuffEntity, 0) >= 1 )
@@ -81,7 +81,7 @@ void DebugInputInfiniteGutsComponent__Cancel(DebugInputInfiniteGutsComponent_o *
                                                       (UnityEngine_Component_o *)this,
                                                       0)) == 0) )
   {
-    sub_1C71608(debugMenuTran, method);
+    sub_1C942F0(debugMenuTran, method);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)debugMenuTran, 0, 0);
 }
@@ -97,26 +97,26 @@ bool DebugInputInfiniteGutsComponent__CheckHaveInfiniteGuts(
   System_Object_array *BuffList; // x20
   System_Func_object__bool__o *v8; // x21
 
-  if ( (byte_4CC89EB & 1) == 0 )
+  if ( (byte_4D2DE88 & 1) == 0 )
   {
-    sub_1C713B0(&Method_BasicHelper_Find_BattleBuffData_BuffData___);
-    sub_1C713B0(&Method_DebugInputInfiniteGutsComponent__CheckHaveInfiniteGuts_b__8_0__);
-    sub_1C713B0(&System_Func_BattleBuffData_BuffData__bool__TypeInfo);
-    sub_1C713B0(&BuffList_TYPE___TypeInfo);
-    byte_4CC89EB = 1;
+    sub_1C94098(&Method_BasicHelper_Find_BattleBuffData_BuffData___);
+    sub_1C94098(&Method_DebugInputInfiniteGutsComponent__CheckHaveInfiniteGuts_b__8_0__);
+    sub_1C94098(&System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+    sub_1C94098(&BuffList_TYPE___TypeInfo);
+    byte_4D2DE88 = 1;
   }
-  buffData = (struct BattleBuffData_o *)sub_1C71458(BuffList_TYPE___TypeInfo, 1);
+  buffData = (struct BattleBuffData_o *)sub_1C94140(BuffList_TYPE___TypeInfo, 1);
   if ( !buffData )
     goto LABEL_8;
   v6 = (BuffList_TYPE_array *)buffData;
   if ( !buffData->fields.resumptionHpFromLossMaxHp )
-    sub_1C71610(buffData);
+    sub_1C942F8(buffData);
   LODWORD(buffData->fields.passiveList) = 37;
   if ( !svtData || (buffData = svtData->fields.buffData) == 0 )
 LABEL_8:
-    sub_1C71608(buffData, v6);
+    sub_1C942F0(buffData, v6);
   BuffList = (System_Object_array *)BattleBuffData__GetBuffList(buffData, v6, 0, 1, 0);
-  v8 = (System_Func_object__bool__o *)sub_1C715FC(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
+  v8 = (System_Func_object__bool__o *)sub_1C942E4(System_Func_BattleBuffData_BuffData__bool__TypeInfo);
   System_Func_object__bool____ctor(
     v8,
     (Il2CppObject *)this,
@@ -125,7 +125,7 @@ LABEL_8:
   return BasicHelper__Find_object_(
            BuffList,
            (System_Func_T__bool__o *)v8,
-           (const MethodInfo_3134DA0 *)Method_BasicHelper_Find_BattleBuffData_BuffData___) != 0;
+           (const MethodInfo_3186034 *)Method_BasicHelper_Find_BattleBuffData_BuffData___) != 0;
 }
 
 
@@ -140,7 +140,7 @@ bool DebugInputInfiniteGutsComponent__MatchUnSubState(
   if ( !addUnSubStateToggleOption
     || (addUnSubStateToggleOption = (UIToggle_o *)UIToggle__get_value(addUnSubStateToggleOption, 0), !added) )
   {
-    sub_1C71608(addUnSubStateToggleOption, added);
+    sub_1C942F0(addUnSubStateToggleOption, added);
   }
   return ((unsigned __int8)addUnSubStateToggleOption ^ ~BattleBuffData_BuffData__checkState(added, 0x80000, 0)) & 1;
 }
@@ -189,7 +189,7 @@ void DebugInputInfiniteGutsComponent__Open(
     ++v15;
   while ( v15 < v14 );
   this->fields.data = inputData;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.data,
     (int32_t)inputData,
     (int32_t)inputDebugMenuTran,
@@ -200,7 +200,7 @@ void DebugInputInfiniteGutsComponent__Open(
     v7);
   v11->fields.debugMenuTran = inputDebugMenuTran;
   p_debugMenuTran = (DebugInputInfiniteGutsComponent_o **)&v11->fields.debugMenuTran;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&v11->fields.debugMenuTran,
     (int32_t)inputDebugMenuTran,
     v17,
@@ -217,7 +217,7 @@ void DebugInputInfiniteGutsComponent__Open(
                                                       0)) == 0 )
   {
 LABEL_11:
-    sub_1C71608(this, inputData);
+    sub_1C942F0(this, inputData);
   }
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)this, 0, 0);
 }
@@ -235,7 +235,7 @@ bool DebugInputInfiniteGutsComponent___CheckHaveInfiniteGuts_b__8_0(
         const MethodInfo *method)
 {
   if ( !n )
-    sub_1C71608(this, 0);
+    sub_1C942F0(this, 0);
   return n->fields.turn == -1
       && n->fields.count == -1
       && n->fields.param == 100

@@ -9,7 +9,7 @@ void SkillValueUpApplierBase___ctor(SkillValueUpApplierBase_o *this, BattleData_
 
   System_Object___ctor((Il2CppObject *)this, 0);
   this->fields.data = data;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)data, v5, v6, v7, v8, v9, v10);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields, (int32_t)data, v5, v6, v7, v8, v9, v10);
 }
 
 

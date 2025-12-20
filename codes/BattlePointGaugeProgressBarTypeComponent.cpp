@@ -2,7 +2,9 @@ void BattlePointGaugeProgressBarTypeComponent___ctor(
         BattlePointGaugeProgressBarTypeComponent_o *this,
         const MethodInfo *method)
 {
-  BattlePointGaugeComponent___ctor((BattlePointGaugeComponent_o *)this, 0);
+  *(_QWORD *)&this->fields.lastStepUpEffectIdInTween = -1;
+  this->fields.lastUpPhaseInTween = -1;
+  UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
 
 
@@ -23,7 +25,7 @@ void BattlePointGaugeProgressBarTypeComponent__UpdateProgressGauge(
                              method),
         !barFrontProgressBar) )
   {
-    sub_1C71608(this, entity);
+    sub_1C942F0(this, entity);
   }
   UIProgressBar__set_value(barFrontProgressBar, BarProgressValue, 0);
 }
@@ -33,5 +35,10 @@ void BattlePointGaugeProgressBarTypeComponent__ValidateSerializedField(
         BattlePointGaugeProgressBarTypeComponent_o *this,
         const MethodInfo *method)
 {
-  BattlePointGaugeComponent__ValidateSerializedField((BattlePointGaugeComponent_o *)this, 0);
+  BattlePointGaugeSetting_o *setting; // x0
+
+  setting = this->fields.setting;
+  if ( !setting )
+    sub_1C942F0(0, method);
+  BattlePointGaugeSetting__ValidateSerializedField(setting, method);
 }

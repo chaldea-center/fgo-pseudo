@@ -8,10 +8,10 @@ void ReleaseAssetStorageWhenDestroy__OnDestroy(ReleaseAssetStorageWhenDestroy_o 
 {
   System_String_o *assetName; // x19
 
-  if ( (byte_4CC1342 & 1) == 0 )
+  if ( (byte_4D26D86 & 1) == 0 )
   {
-    sub_1C713B0(&AssetManager_TypeInfo);
-    byte_4CC1342 = 1;
+    sub_1C94098(&AssetManager_TypeInfo);
+    byte_4D26D86 = 1;
   }
   assetName = this->fields.assetName;
   if ( !AssetManager_TypeInfo->_2.cctor_finished )
@@ -26,5 +26,5 @@ void ReleaseAssetStorageWhenDestroy__Setup(
         const MethodInfo *method)
 {
   this->fields.assetName = assetName;
-  sub_1C71354(&this->fields.assetName, assetName);
+  sub_1C9403C(&this->fields.assetName, assetName);
 }

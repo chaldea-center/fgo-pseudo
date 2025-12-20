@@ -1,6 +1,6 @@
 void UIDragResize___ctor(UIDragResize_o *this, const MethodInfo *method)
 {
-  *(_OWORD *)&this->fields.pivot = xmmword_CEFB00;
+  *(_OWORD *)&this->fields.pivot = xmmword_CFF770;
   this->fields.maxHeight = 100000;
   UnityEngine_MonoBehaviour___ctor((UnityEngine_MonoBehaviour_o *)this, 0);
 }
@@ -41,11 +41,11 @@ void UIDragResize__OnDrag(UIDragResize_o *this, UnityEngine_Vector2_o delta, con
   UnityEngine_Quaternion_o v34; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
   UnityEngine_Quaternion_o v35; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CCBAC1 & 1) == 0 )
+  if ( (byte_4D30E73 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CCBAC1 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D30E73 = 1;
   }
   memset(&v28, 0, sizeof(v28));
   if ( this->fields.mDragging )
@@ -67,10 +67,10 @@ void UIDragResize__OnDrag(UIDragResize_o *this, UnityEngine_Vector2_o delta, con
       v11 = *(_QWORD *)&v27.fields.m_Origin.fields.x;
       v12 = (float)(v27.fields.m_Direction.fields.z * v10)
           + (float)((float)(v27.fields.m_Direction.fields.x * x) + (float)(v27.fields.m_Direction.fields.y * y));
-      if ( !byte_4CC0D0D )
+      if ( !byte_4D25F1D )
       {
-        sub_1C713B0(&UnityEngine_Mathf_TypeInfo);
-        byte_4CC0D0D = 1;
+        sub_1C94098(&UnityEngine_Mathf_TypeInfo);
+        byte_4D25F1D = 1;
       }
       v13 = fmaxf(fabsf(v12), 0.0) * 0.000001;
       static_fields = UnityEngine_Mathf_TypeInfo->static_fields;
@@ -96,7 +96,7 @@ void UIDragResize__OnDrag(UIDragResize_o *this, UnityEngine_Vector2_o delta, con
             || (UIWidget__set_width((UIWidget_o *)cachedTransform, this->fields.mWidth, 0),
                 (cachedTransform = (UIRect_o *)this->fields.target) == 0) )
           {
-            sub_1C71608(cachedTransform, v5);
+            sub_1C942F0(cachedTransform, v5);
           }
           UIWidget__set_height((UIWidget_o *)cachedTransform, this->fields.mHeight, 0);
           Point = UnityEngine_Ray__GetPoint(&v28, v15, 0);
@@ -122,11 +122,11 @@ void UIDragResize__OnDrag(UIDragResize_o *this, UnityEngine_Vector2_o delta, con
           v35.fields.y = v22;
           v35.fields.z = v23;
           v35.fields.w = w;
-          v31 = UnityEngine_Quaternion__op_Multiply_71663344(v35, v32, 0);
+          v31 = UnityEngine_Quaternion__op_Multiply_72049708(v35, v32, 0);
           v25 = v31.fields.x;
           v26 = v31.fields.y;
           UnityEngine_Transform__set_localPosition(v17, this->fields.mLocalPos, 0);
-          NGUIMath__ResizeWidget_49671028(
+          NGUIMath__ResizeWidget_49994620(
             this->fields.target,
             this->fields.pivot,
             v25,
@@ -178,11 +178,11 @@ void UIDragResize__OnDragStart(UIDragResize_o *this, const MethodInfo *method)
   UnityEngine_Vector3_o Point; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Vector3_o localPosition; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CCBAC0 & 1) == 0 )
+  if ( (byte_4D30E72 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&UICamera_TypeInfo);
-    byte_4CCBAC0 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&UICamera_TypeInfo);
+    byte_4D30E72 = 1;
   }
   memset(&v26, 0, sizeof(v26));
   target = (UnityEngine_Object_o *)this->fields.target;
@@ -199,7 +199,7 @@ void UIDragResize__OnDragStart(UIDragResize_o *this, const MethodInfo *method)
     if ( !cachedTransform )
       goto LABEL_23;
     if ( LODWORD(cachedTransform->fields.m_CancellationTokenSource) < 4 )
-      sub_1C71610(cachedTransform);
+      sub_1C942F8(cachedTransform);
     v6 = *(float *)&cachedTransform->fields.leftAnchor;
     v7 = *((float *)&cachedTransform->fields.leftAnchor + 1);
     v8 = *(float *)&cachedTransform->fields.bottomAnchor;
@@ -207,7 +207,7 @@ void UIDragResize__OnDragStart(UIDragResize_o *this, const MethodInfo *method)
     v10 = *(float *)&cachedTransform->fields.rightAnchor;
     v11 = *((float *)&cachedTransform->fields.rightAnchor + 1);
     v25 = (struct UnityEngine_Plane_o)0LL;
-    sub_2F496F4(&v25, 0, v6, v7, v10, v11, v8, v9);
+    sub_2F986FC(&v25, 0, v6, v7, v10, v11, v8, v9);
     this->fields.mPlane = v25;
     if ( !UICamera_TypeInfo->_2.cctor_finished )
       j_il2cpp_runtime_class_init_0(UICamera_TypeInfo);
@@ -221,10 +221,10 @@ void UIDragResize__OnDragStart(UIDragResize_o *this, const MethodInfo *method)
     v17 = *(_QWORD *)&v24.fields.m_Origin.fields.x;
     v18 = (float)(v24.fields.m_Direction.fields.z * v16)
         + (float)((float)(v24.fields.m_Direction.fields.x * x) + (float)(v24.fields.m_Direction.fields.y * y));
-    if ( !byte_4CC0D0D )
+    if ( !byte_4D25F1D )
     {
-      sub_1C713B0(&UnityEngine_Mathf_TypeInfo);
-      byte_4CC0D0D = 1;
+      sub_1C94098(&UnityEngine_Mathf_TypeInfo);
+      byte_4D25F1D = 1;
     }
     v19 = fmaxf(fabsf(v18), 0.0) * 0.000001;
     static_fields = UnityEngine_Mathf_TypeInfo->static_fields;
@@ -259,7 +259,7 @@ void UIDragResize__OnDragStart(UIDragResize_o *this, const MethodInfo *method)
           }
         }
 LABEL_23:
-        sub_1C71608(cachedTransform, v4);
+        sub_1C942F0(cachedTransform, v4);
       }
     }
   }

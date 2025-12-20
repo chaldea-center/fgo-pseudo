@@ -23,70 +23,70 @@ void CardFavoriteRequest__beginRequest(
         bool isPush,
         const MethodInfo *method)
 {
-  _BOOL8 _40699620; // x0
+  _BOOL8 _41176064; // x0
   __int64 v25; // x1
 
-  if ( (byte_4CC8EB5 & 1) == 0 )
+  if ( (byte_4D2E356 & 1) == 0 )
   {
-    sub_1C713B0(&TutorialFlag_TypeInfo);
-    sub_1C713B0(&StringLiteral_21329/*"limitCountSupport"*/);
-    sub_1C713B0(&StringLiteral_20201/*"iconLimitCount"*/);
-    sub_1C713B0(&StringLiteral_23977/*"svtCommonFlag"*/);
-    sub_1C713B0(&StringLiteral_21027/*"isPush"*/);
-    sub_1C713B0(&StringLiteral_20366/*"imageLimitCount"*/);
-    sub_1C713B0(&StringLiteral_24710/*"userSvtId"*/);
-    sub_1C713B0(&StringLiteral_23064/*"randomLimitCount"*/);
-    sub_1C713B0(&StringLiteral_22843/*"portraitLimitCount"*/);
-    sub_1C713B0(&StringLiteral_18689/*"dispLimitCount"*/);
-    sub_1C713B0(&StringLiteral_17113/*"battleVoice"*/);
-    sub_1C713B0(&StringLiteral_21010/*"isLock"*/);
-    sub_1C713B0(&StringLiteral_20988/*"isChoice"*/);
-    sub_1C713B0(&StringLiteral_23065/*"randomLimitCountSupport"*/);
-    sub_1C713B0(&StringLiteral_18183/*"commandCardLimitCount"*/);
-    sub_1C713B0(&StringLiteral_21000/*"isFavorite"*/);
-    byte_4CC8EB5 = 1;
+    sub_1C94098(&TutorialFlag_TypeInfo);
+    sub_1C94098(&StringLiteral_21433/*"limitCountSupport"*/);
+    sub_1C94098(&StringLiteral_20294/*"iconLimitCount"*/);
+    sub_1C94098(&StringLiteral_24096/*"svtCommonFlag"*/);
+    sub_1C94098(&StringLiteral_21131/*"isPush"*/);
+    sub_1C94098(&StringLiteral_20461/*"imageLimitCount"*/);
+    sub_1C94098(&StringLiteral_24832/*"userSvtId"*/);
+    sub_1C94098(&StringLiteral_23178/*"randomLimitCount"*/);
+    sub_1C94098(&StringLiteral_22956/*"portraitLimitCount"*/);
+    sub_1C94098(&StringLiteral_18757/*"dispLimitCount"*/);
+    sub_1C94098(&StringLiteral_17174/*"battleVoice"*/);
+    sub_1C94098(&StringLiteral_21113/*"isLock"*/);
+    sub_1C94098(&StringLiteral_21088/*"isChoice"*/);
+    sub_1C94098(&StringLiteral_23179/*"randomLimitCountSupport"*/);
+    sub_1C94098(&StringLiteral_18249/*"commandCardLimitCount"*/);
+    sub_1C94098(&StringLiteral_21102/*"isFavorite"*/);
+    byte_4D2E356 = 1;
   }
-  RequestBase__addField_44514616((RequestBase_o *)this, (System_String_o *)StringLiteral_24710/*"userSvtId"*/, targetUsrSVtId, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20366/*"imageLimitCount"*/, imageLimitCount, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18689/*"dispLimitCount"*/, dispLimitCount, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18183/*"commandCardLimitCount"*/, commandCardLimitCount, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20201/*"iconLimitCount"*/, iconLimitCount, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22843/*"portraitLimitCount"*/, portraitLimitCount, 0);
+  RequestBase__addField_45013228((RequestBase_o *)this, (System_String_o *)StringLiteral_24832/*"userSvtId"*/, targetUsrSVtId, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20461/*"imageLimitCount"*/, imageLimitCount, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18757/*"dispLimitCount"*/, dispLimitCount, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_18249/*"commandCardLimitCount"*/, commandCardLimitCount, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20294/*"iconLimitCount"*/, iconLimitCount, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_22956/*"portraitLimitCount"*/, portraitLimitCount, 0);
   if ( !TutorialFlag_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(TutorialFlag_TypeInfo);
-  _40699620 = TutorialFlag__Get_40699620(106, 0);
-  v25 = StringLiteral_21000/*"isFavorite"*/;
-  if ( !_40699620 )
+  _41176064 = TutorialFlag__Get_41176064(106, 0);
+  v25 = StringLiteral_21102/*"isFavorite"*/;
+  if ( !_41176064 )
   {
-    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21000/*"isFavorite"*/, -1, 0);
+    RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21102/*"isFavorite"*/, -1, 0);
     if ( this )
       goto LABEL_9;
 LABEL_10:
-    sub_1C71608(_40699620, v25);
+    sub_1C942F0(_41176064, v25);
   }
   if ( !this )
     goto LABEL_10;
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21000/*"isFavorite"*/, isFavorite, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21102/*"isFavorite"*/, isFavorite, 0);
 LABEL_9:
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21010/*"isLock"*/, isLock, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_20988/*"isChoice"*/, isChoice, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23977/*"svtCommonFlag"*/, commonFlag, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17113/*"battleVoice"*/, battleVoice, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23064/*"randomLimitCount"*/, randomSettingOwn, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23065/*"randomLimitCountSupport"*/, randomSettingSupport, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21329/*"limitCountSupport"*/, limitCountSupport, 0);
-  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21027/*"isPush"*/, isPush, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21113/*"isLock"*/, isLock, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21088/*"isChoice"*/, isChoice, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_24096/*"svtCommonFlag"*/, commonFlag, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_17174/*"battleVoice"*/, battleVoice, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23178/*"randomLimitCount"*/, randomSettingOwn, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_23179/*"randomLimitCountSupport"*/, randomSettingSupport, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21433/*"limitCountSupport"*/, limitCountSupport, 0);
+  RequestBase__addField((RequestBase_o *)this, (System_String_o *)StringLiteral_21131/*"isPush"*/, isPush, 0);
   RequestBase__beginRequest((RequestBase_o *)this, 0);
 }
 
 
 System_String_o *CardFavoriteRequest__getMockData(CardFavoriteRequest_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC8EB4 & 1) == 0 )
+  if ( (byte_4D2E355 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC8EB4 = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2E355 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
@@ -98,16 +98,16 @@ System_String_o *CardFavoriteRequest__getURL(CardFavoriteRequest_o *this, const 
 {
   System_String_o *BaseUrl; // x0
 
-  if ( (byte_4CC8EB3 & 1) == 0 )
+  if ( (byte_4D2E354 & 1) == 0 )
   {
-    sub_1C713B0(&NetworkManager_TypeInfo);
-    sub_1C713B0(&StringLiteral_17778/*"card/favorite"*/);
-    byte_4CC8EB3 = 1;
+    sub_1C94098(&NetworkManager_TypeInfo);
+    sub_1C94098(&StringLiteral_17844/*"card/favorite"*/);
+    byte_4D2E354 = 1;
   }
   if ( !NetworkManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(NetworkManager_TypeInfo);
   BaseUrl = NetworkManager__getBaseUrl(1, 0);
-  return System_String__Concat_64031724(BaseUrl, (System_String_o *)StringLiteral_17778/*"card/favorite"*/, 0);
+  return System_String__Concat_64417744(BaseUrl, (System_String_o *)StringLiteral_17844/*"card/favorite"*/, 0);
 }
 
 
@@ -119,19 +119,19 @@ void CardFavoriteRequest__requestCompleted(
   ResponseData_o *v5; // x0
   __int64 *v6; // x8
 
-  if ( (byte_4CC8EB6 & 1) == 0 )
+  if ( (byte_4D2E357 & 1) == 0 )
   {
-    sub_1C713B0(&ResponseCommandKind_TypeInfo);
-    sub_1C713B0(&StringLiteral_22486/*"ok"*/);
-    sub_1C713B0(&StringLiteral_22316/*"ng"*/);
-    byte_4CC8EB6 = 1;
+    sub_1C94098(&ResponseCommandKind_TypeInfo);
+    sub_1C94098(&StringLiteral_22594/*"ok"*/);
+    sub_1C94098(&StringLiteral_22424/*"ng"*/);
+    byte_4D2E357 = 1;
   }
   if ( !ResponseCommandKind_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(ResponseCommandKind_TypeInfo);
   v5 = ResponseCommandKind__SearchData(34, responseList, 0);
-  if ( v5 && ResponseData__checkError_44515240(v5, 0) )
-    v6 = &StringLiteral_22486/*"ok"*/;
+  if ( v5 && ResponseData__checkError_45012660(v5, 0) )
+    v6 = &StringLiteral_22594/*"ok"*/;
   else
-    v6 = &StringLiteral_22316/*"ng"*/;
+    v6 = &StringLiteral_22424/*"ng"*/;
   RequestBase__completed((RequestBase_o *)this, (System_String_o *)*v6, 0);
 }

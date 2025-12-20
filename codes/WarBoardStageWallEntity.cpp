@@ -1,27 +1,27 @@
 void WarBoardStageWallEntity___ctor(WarBoardStageWallEntity_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC864F & 1) == 0 )
+  if ( (byte_4D2DAE5 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_string___ctor__);
-    byte_4CC864F = 1;
+    sub_1C94098(&Method_DataEntityBase_string___ctor__);
+    byte_4D2DAE5 = 1;
   }
   DataEntityBase_object____ctor(
     (DataEntityBase_PKType__o *)this,
-    (const MethodInfo_3406A14 *)Method_DataEntityBase_string___ctor__);
+    (const MethodInfo_3459054 *)Method_DataEntityBase_string___ctor__);
 }
 
 
 System_String_o *WarBoardStageWallEntity__CreatePK(int32_t stageId, int32_t id, const MethodInfo *method)
 {
-  if ( (byte_4CC864D & 1) == 0 )
+  if ( (byte_4D2DAE3 & 1) == 0 )
   {
-    sub_1C713B0(&Method_DataEntityBase_CreateMultiplePK_int__int___);
-    byte_4CC864D = 1;
+    sub_1C94098(&Method_DataEntityBase_CreateMultiplePK_int__int___);
+    byte_4D2DAE3 = 1;
   }
   return DataEntityBase__CreateMultiplePK_int__int_(
            stageId,
            id,
-           (const MethodInfo_3149294 *)Method_DataEntityBase_CreateMultiplePK_int__int___);
+           (const MethodInfo_319A2BC *)Method_DataEntityBase_CreateMultiplePK_int__int___);
 }
 
 
@@ -44,10 +44,10 @@ System_Int32_array *WarBoardStageWallEntity__GetCondAttackIndividuality(
   __int64 v7; // x0
   __int64 v8; // x0
 
-  if ( (byte_4CC864E & 1) == 0 )
+  if ( (byte_4D2DAE4 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Array_Empty_int___);
-    byte_4CC864E = 1;
+    sub_1C94098(&Method_System_Array_Empty_int___);
+    byte_4D2DAE4 = 1;
   }
   result = this->fields.condAttackIndividuality;
   if ( !result )
@@ -56,17 +56,17 @@ System_Int32_array *WarBoardStageWallEntity__GetCondAttackIndividuality(
     v6 = *((_QWORD *)Method_System_Array_Empty_int___ + 7);
     if ( !v6 )
     {
-      sub_1C474A0(Method_System_Array_Empty_int___);
+      sub_1C6A188(Method_System_Array_Empty_int___);
       v6 = v5[7];
     }
     v7 = *(_QWORD *)(v6 + 16);
     if ( (*(_BYTE *)(v7 + 309) & 1) == 0 )
-      v7 = sub_1C47444(inited);
+      v7 = sub_1C6A12C(inited);
     if ( !*(_DWORD *)(v7 + 224) )
       inited = j_il2cpp_runtime_class_init_0(v7);
     v8 = *(_QWORD *)(v5[7] + 16LL);
     if ( (*(_BYTE *)(v8 + 309) & 1) == 0 )
-      v8 = sub_1C47444(inited);
+      v8 = sub_1C6A12C(inited);
     return **(System_Int32_array ***)(v8 + 184);
   }
   return result;

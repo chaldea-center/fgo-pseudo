@@ -19,10 +19,10 @@ void CharaGraphGrandEquipListViewItem___ctor(
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v22; // [xsp+0h] [xbp-80h] BYREF
   CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_o v23; // [xsp+20h] [xbp-60h]
 
-  if ( (byte_4CC2135 & 1) == 0 )
+  if ( (byte_4D27482 & 1) == 0 )
   {
-    sub_1C713B0(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
-    byte_4CC2135 = 1;
+    sub_1C94098(&CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
+    byte_4D27482 = 1;
   }
   CharaGraphEquipListViewItem___ctor(
     (CharaGraphEquipListViewItem_o *)this,
@@ -32,7 +32,7 @@ void CharaGraphGrandEquipListViewItem___ctor(
     partyUserServantList,
     0);
   this->fields.grandServantData = grandSvtSlotData;
-  sub_1C71354(
+  sub_1C9403C(
     (GrandQuestFolderBoardItem_o *)&this->fields.grandServantData,
     (int32_t)grandSvtSlotData,
     v13,
@@ -42,12 +42,12 @@ void CharaGraphGrandEquipListViewItem___ctor(
     v17,
     v18);
   if ( !userSvtEntity )
-    sub_1C71608(v19, v20);
+    sub_1C942F0(v19, v20);
   v21 = *(_OWORD *)&userSvtEntity->fields.id.fields.fakeValue;
   *(_OWORD *)&v23.fields.currentCryptoKey = *(_OWORD *)&userSvtEntity->fields.id.fields.currentCryptoKey;
   *(_OWORD *)&v23.fields.fakeValue = v21;
   if ( !CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(CodeStage_AntiCheat_ObscuredTypes_ObscuredLong_TypeInfo);
   v22 = v23;
-  this->fields.equipUserServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49301476(&v22, 0);
+  this->fields.equipUserServantId = CodeStage_AntiCheat_ObscuredTypes_ObscuredLong__op_Implicit_49625068(&v22, 0);
 }

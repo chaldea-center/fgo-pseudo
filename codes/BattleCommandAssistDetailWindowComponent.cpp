@@ -36,18 +36,18 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
   int32_t v27; // [xsp+8h] [xbp-58h] BYREF
   int32_t lv; // [xsp+Ch] [xbp-54h] BYREF
 
-  if ( (byte_4CCA8E6 & 1) == 0 )
+  if ( (byte_4D2FD9A & 1) == 0 )
   {
-    sub_1C713B0(&BattleData_TypeInfo);
-    sub_1C713B0(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
-    sub_1C713B0(&Method_DataManager_GetMaster_SkillLvMaster___);
-    sub_1C713B0(&DataManager_TypeInfo);
-    sub_1C713B0(&int_TypeInfo);
-    sub_1C713B0(&LocalizationManager_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_3613/*"COMMAND_ASSIST_NAME"*/);
-    sub_1C713B0(&StringLiteral_3680/*"COMMON_CONFIRM_CLOSE"*/);
-    byte_4CCA8E6 = 1;
+    sub_1C94098(&BattleData_TypeInfo);
+    sub_1C94098(&Method_DataManager_GetMaster_EventCommandAssistMaster___);
+    sub_1C94098(&Method_DataManager_GetMaster_SkillLvMaster___);
+    sub_1C94098(&DataManager_TypeInfo);
+    sub_1C94098(&int_TypeInfo);
+    sub_1C94098(&LocalizationManager_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_3623/*"COMMAND_ASSIST_NAME"*/);
+    sub_1C94098(&StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/);
+    byte_4D2FD9A = 1;
   }
   commandAssistNameLabel = (UnityEngine_Object_o *)this->fields.commandAssistNameLabel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -74,7 +74,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
           EventId = BattleData__GetEventId(0);
           if ( !DataManager_TypeInfo->_2.cctor_finished )
             j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-          Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
+          Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_EventCommandAssistMaster___);
           if ( commandData )
           {
             v12 = Master_object;
@@ -98,14 +98,14 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                   v18 = this->fields.commandAssistNameLabel;
                   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
-                  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3613/*"COMMAND_ASSIST_NAME"*/, 0);
+                  v19 = LocalizationManager__Get((System_String_o *)StringLiteral_3623/*"COMMAND_ASSIST_NAME"*/, 0);
                   name = (Il2CppObject *)v15->fields.name;
                   v21 = v19;
                   lv = v15->fields.lv;
                   v22 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &lv);
                   v27 = v17->fields.lv;
                   v23 = (Il2CppObject *)j_il2cpp_value_box_0(int_TypeInfo, &v27);
-                  Master_object = (EventCommandAssistMaster_o *)System_String__Format_64073100(v21, name, v22, v23, 0);
+                  Master_object = (EventCommandAssistMaster_o *)System_String__Format_64459120(v21, name, v22, v23, 0);
                   if ( !v18 )
                     goto LABEL_45;
                   UILabel__set_text(v18, (System_String_o *)Master_object, 0);
@@ -119,7 +119,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
               {
                 if ( !DataManager_TypeInfo->_2.cctor_finished )
                   j_il2cpp_runtime_class_init_0(DataManager_TypeInfo);
-                Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_314B0B8 *)Method_DataManager_GetMaster_SkillLvMaster___);
+                Master_object = (EventCommandAssistMaster_o *)DataManager__GetMaster_object_((const MethodInfo_319C0E0 *)Method_DataManager_GetMaster_SkillLvMaster___);
                 if ( !Master_object )
                   goto LABEL_45;
                 Entity = SkillLvMaster__GetEntity(
@@ -130,7 +130,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
                 if ( Entity )
                 {
                   v25 = this->fields.detailLabel;
-                  Master_object = (EventCommandAssistMaster_o *)SkillLvEntity__getDetail_43166404(
+                  Master_object = (EventCommandAssistMaster_o *)SkillLvEntity__getDetail_43660652(
                                                                   Entity,
                                                                   v15->fields.skillLv,
                                                                   0,
@@ -148,7 +148,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
               if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
                 j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
               Master_object = (EventCommandAssistMaster_o *)LocalizationManager__Get(
-                                                              (System_String_o *)StringLiteral_3680/*"COMMON_CONFIRM_CLOSE"*/,
+                                                              (System_String_o *)StringLiteral_3690/*"COMMON_CONFIRM_CLOSE"*/,
                                                               0);
               if ( v26 )
               {
@@ -182,7 +182,7 @@ void BattleCommandAssistDetailWindowComponent__SetCommandAssistInfo(
             }
           }
 LABEL_45:
-          sub_1C71608(Master_object, v11);
+          sub_1C942F0(Master_object, v11);
         }
       }
     }
@@ -194,10 +194,10 @@ System_String_o *BattleCommandAssistDetailWindowComponent__get_closeBtnPath(
         BattleCommandAssistDetailWindowComponent_o *this,
         const MethodInfo *method)
 {
-  if ( (byte_4CCA8E7 & 1) == 0 )
+  if ( (byte_4D2FD9B & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_18046/*"closeBtn"*/);
-    byte_4CCA8E7 = 1;
+    sub_1C94098(&StringLiteral_18112/*"closeBtn"*/);
+    byte_4D2FD9B = 1;
   }
-  return (System_String_o *)StringLiteral_18046/*"closeBtn"*/;
+  return (System_String_o *)StringLiteral_18112/*"closeBtn"*/;
 }

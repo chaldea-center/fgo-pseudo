@@ -38,7 +38,7 @@ void GameOptionContentBase__SetPosY(GameOptionContentBase_o *this, float posY, c
         z = localPosition.fields.z,
         (transform = UnityEngine_Component__get_transform((UnityEngine_Component_o *)this, 0)) == 0) )
   {
-    sub_1C71608(transform, v6);
+    sub_1C942F0(transform, v6);
   }
   v10.fields.y = posY;
   v10.fields.z = z;
@@ -54,7 +54,7 @@ void GameOptionContentBase__Show(GameOptionContentBase_o *this, bool value, cons
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C71608(0, v5);
+    sub_1C942F0(0, v5);
   UnityEngine_GameObject__SetActive(gameObject, value, 0);
 }
 

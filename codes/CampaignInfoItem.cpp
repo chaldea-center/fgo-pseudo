@@ -1,9 +1,9 @@
 void CampaignInfoItem___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CC10EB & 1) == 0 )
+  if ( (byte_4D262FB & 1) == 0 )
   {
-    sub_1C713B0(&CampaignInfoItem_TypeInfo);
-    byte_4CC10EB = 1;
+    sub_1C94098(&CampaignInfoItem_TypeInfo);
+    byte_4D262FB = 1;
   }
   CampaignInfoItem_TypeInfo->static_fields->baseWidth = 900;
 }
@@ -30,13 +30,13 @@ void CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const MethodInfo *metho
   System_String_o *v12; // x19
 
   v2 = this;
-  if ( (byte_4CC10EA & 1) == 0 )
+  if ( (byte_4D262FA & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Application_TypeInfo);
-    sub_1C713B0(&Method_CampaignInfoItem_OnClick__);
-    sub_1C713B0(&WebViewManager_TypeInfo);
-    this = (CampaignInfoItem_o *)sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC10EA = 1;
+    sub_1C94098(&UnityEngine_Application_TypeInfo);
+    sub_1C94098(&Method_CampaignInfoItem_OnClick__);
+    sub_1C94098(&WebViewManager_TypeInfo);
+    this = (CampaignInfoItem_o *)sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D262FA = 1;
   }
   target = v2->fields.target;
   if ( !target )
@@ -48,8 +48,8 @@ void CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const MethodInfo *metho
       return;
     v5 = Method_CampaignInfoItem_OnClick__;
     if ( (*((_BYTE *)Method_CampaignInfoItem_OnClick__ + 83) & 2) != 0 )
-      v5 = (_QWORD *)sub_1C713C8();
-    v6 = (System_Reflection_MethodBase_o *)sub_1C71394(v5, v5[4]);
+      v5 = (_QWORD *)sub_1C940B0();
+    v6 = (System_Reflection_MethodBase_o *)sub_1C9407C(v5, v5[4]);
     OverwriteAssetSoundName__PlaySystemSe(v6, 0, 0, 0);
     v7 = v2->fields.target;
     if ( v7 )
@@ -61,12 +61,12 @@ void CampaignInfoItem__OnClick(CampaignInfoItem_o *this, const MethodInfo *metho
       return;
     }
 LABEL_19:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
   v9 = Method_CampaignInfoItem_OnClick__;
   if ( (*((_BYTE *)Method_CampaignInfoItem_OnClick__ + 83) & 2) != 0 )
-    v9 = (_QWORD *)sub_1C713C8();
-  v10 = (System_Reflection_MethodBase_o *)sub_1C71394(v9, v9[4]);
+    v9 = (_QWORD *)sub_1C940B0();
+  v10 = (System_Reflection_MethodBase_o *)sub_1C9407C(v9, v9[4]);
   OverwriteAssetSoundName__PlaySystemSe(v10, 0, 0, 0);
   v11 = v2->fields.target;
   if ( !v11 )
@@ -100,22 +100,22 @@ void CampaignInfoItem__SetCampaignInfo(
   UnityEngine_Vector3_o v22; // 0:s0.4,4:s1.4,8:s2.4
   UnityEngine_Rect_o v23; // 0:s0.4,4:s1.4,8:s2.4,12:s3.4
 
-  if ( (byte_4CC10E9 & 1) == 0 )
+  if ( (byte_4D262F9 & 1) == 0 )
   {
-    sub_1C713B0(&CampaignInfoItem_TypeInfo);
-    sub_1C713B0(&UnityEngine_Material_TypeInfo);
-    sub_1C713B0(&StringLiteral_4933/*"Custom/SpriteWithMask"*/);
-    sub_1C713B0(&StringLiteral_16270/*"_MaskTex"*/);
-    byte_4CC10E9 = 1;
+    sub_1C94098(&CampaignInfoItem_TypeInfo);
+    sub_1C94098(&UnityEngine_Material_TypeInfo);
+    sub_1C94098(&StringLiteral_4943/*"Custom/SpriteWithMask"*/);
+    sub_1C94098(&StringLiteral_16326/*"_MaskTex"*/);
+    byte_4D262F9 = 1;
   }
   this->fields.target = info;
-  sub_1C71354(&this->fields.target, info);
+  sub_1C9403C(&this->fields.target, info);
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
     goto LABEL_15;
   UnityEngine_GameObject__SetActive(gameObject, 1, 0);
-  v13 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4933/*"Custom/SpriteWithMask"*/, 0);
-  v14 = (UnityEngine_Material_o *)sub_1C715FC(UnityEngine_Material_TypeInfo);
+  v13 = UnityEngine_Shader__Find((System_String_o *)StringLiteral_4943/*"Custom/SpriteWithMask"*/, 0);
+  v14 = (UnityEngine_Material_o *)sub_1C942E4(UnityEngine_Material_TypeInfo);
   UnityEngine_Material___ctor(v14, v13, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.baseText;
   if ( !gameObject )
@@ -127,7 +127,7 @@ void CampaignInfoItem__SetCampaignInfo(
   if ( !v14 )
     goto LABEL_15;
   UnityEngine_Material__set_mainTexture(v14, (UnityEngine_Texture_o *)tex, 0);
-  UnityEngine_Material__SetTexture(v14, (System_String_o *)StringLiteral_16270/*"_MaskTex"*/, (UnityEngine_Texture_o *)maskTex, 0);
+  UnityEngine_Material__SetTexture(v14, (System_String_o *)StringLiteral_16326/*"_MaskTex"*/, (UnityEngine_Texture_o *)maskTex, 0);
   gameObject = (UnityEngine_GameObject_o *)this->fields.baseText;
   if ( !gameObject )
     goto LABEL_15;
@@ -171,7 +171,7 @@ void CampaignInfoItem__SetCampaignInfo(
         (gameObject = (UnityEngine_GameObject_o *)this->fields.collider) == 0) )
   {
 LABEL_15:
-    sub_1C71608(gameObject, v12);
+    sub_1C942F0(gameObject, v12);
   }
   v22.fields.x = 0.0;
   v22.fields.y = (float)-height * 0.5;

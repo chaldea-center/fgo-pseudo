@@ -1,11 +1,11 @@
 void BaseDialog___cctor(const MethodInfo *method)
 {
-  if ( (byte_4CC109A & 1) == 0 )
+  if ( (byte_4D262AA & 1) == 0 )
   {
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    byte_4CC109A = 1;
+    sub_1C94098(&BaseDialog_TypeInfo);
+    byte_4D262AA = 1;
   }
-  *BaseDialog_TypeInfo->static_fields = (struct BaseDialog_StaticFields)xmmword_CEFBD0;
+  *BaseDialog_TypeInfo->static_fields = (struct BaseDialog_StaticFields)xmmword_CFF840;
 }
 
 
@@ -13,18 +13,18 @@ void BaseDialog___ctor(BaseDialog_o *this, const MethodInfo *method)
 {
   System_Collections_Generic_Dictionary_object__int__o *v3; // x20
 
-  if ( (byte_4CC1099 & 1) == 0 )
+  if ( (byte_4D262A9 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_UIPanel__int___ctor__);
-    sub_1C713B0(&System_Collections_Generic_Dictionary_UIPanel__int__TypeInfo);
-    byte_4CC1099 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_UIPanel__int___ctor__);
+    sub_1C94098(&System_Collections_Generic_Dictionary_UIPanel__int__TypeInfo);
+    byte_4D262A9 = 1;
   }
-  v3 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C715FC(System_Collections_Generic_Dictionary_UIPanel__int__TypeInfo);
+  v3 = (System_Collections_Generic_Dictionary_object__int__o *)sub_1C942E4(System_Collections_Generic_Dictionary_UIPanel__int__TypeInfo);
   System_Collections_Generic_Dictionary_object__int____ctor(
     v3,
-    (const MethodInfo_34C1FFC *)Method_System_Collections_Generic_Dictionary_UIPanel__int___ctor__);
+    (const MethodInfo_3517510 *)Method_System_Collections_Generic_Dictionary_UIPanel__int___ctor__);
   this->fields.panelDepthList = (struct System_Collections_Generic_Dictionary_UIPanel__int__o *)v3;
-  sub_1C71354(&this->fields.panelDepthList, v3);
+  sub_1C9403C(&this->fields.panelDepthList, v3);
   BaseMonoBehaviour___ctor((BaseMonoBehaviour_o *)this, 0);
 }
 
@@ -37,12 +37,12 @@ void BaseDialog__Awake(BaseDialog_o *this, const MethodInfo *method)
   unsigned __int64 i; // x22
   UIPanel_o *v7; // x20
 
-  if ( (byte_4CC1091 & 1) == 0 )
+  if ( (byte_4D262A1 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_UIPanel__int__Add__);
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_UIPanel__int__Clear__);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC1091 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_UIPanel__int__Add__);
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_UIPanel__int__Clear__);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D262A1 = 1;
   }
   if ( this->fields.basePanelList )
   {
@@ -50,11 +50,11 @@ void BaseDialog__Awake(BaseDialog_o *this, const MethodInfo *method)
     if ( !panelDepthList
       || (System_Collections_Generic_Dictionary_object__int___Clear(
             (System_Collections_Generic_Dictionary_object__int__o *)panelDepthList,
-            (const MethodInfo_34C2B38 *)Method_System_Collections_Generic_Dictionary_UIPanel__int__Clear__),
+            (const MethodInfo_351804C *)Method_System_Collections_Generic_Dictionary_UIPanel__int__Clear__),
           (basePanelList = this->fields.basePanelList) == 0) )
     {
 LABEL_18:
-      sub_1C71608(panelDepthList, method);
+      sub_1C942F0(panelDepthList, method);
     }
     max_length = basePanelList->max_length;
     if ( (int)max_length >= 1 )
@@ -62,7 +62,7 @@ LABEL_18:
       for ( i = 0; (__int64)i < (int)max_length; ++i )
       {
         if ( i >= (unsigned int)max_length )
-          sub_1C71610(panelDepthList);
+          sub_1C942F8(panelDepthList);
         v7 = basePanelList->m_Items[i];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -81,7 +81,7 @@ LABEL_18:
             (System_Collections_Generic_Dictionary_object__int__o *)panelDepthList,
             (Il2CppObject *)v7,
             v7->fields.mDepth,
-            (const MethodInfo_34C29B0 *)Method_System_Collections_Generic_Dictionary_UIPanel__int__Add__);
+            (const MethodInfo_3517EC4 *)Method_System_Collections_Generic_Dictionary_UIPanel__int__Add__);
         }
         LODWORD(max_length) = basePanelList->max_length;
       }
@@ -116,15 +116,15 @@ void BaseDialog__Close(BaseDialog_o *this, System_Action_o *callback, const Meth
   UnityEngine_Transform_o *v26; // x20
   UnityEngine_Vector3_o v27; // 0:s1.4,4:s2.4,8:s3.4
 
-  if ( (byte_4CC1094 & 1) == 0 )
+  if ( (byte_4D262A4 & 1) == 0 )
   {
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_5978/*"EndCloseBaseDialog"*/);
-    byte_4CC1094 = 1;
+    sub_1C94098(&BaseDialog_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_5990/*"EndCloseBaseDialog"*/);
+    byte_4D262A4 = 1;
   }
   this->fields.baseCallbackFunc = callback;
-  sub_1C71354(&this->fields.baseCallbackFunc, callback);
+  sub_1C9403C(&this->fields.baseCallbackFunc, callback);
   baseWindow = (UnityEngine_Object_o *)this->fields.baseWindow;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -140,7 +140,7 @@ void BaseDialog__Close(BaseDialog_o *this, System_Action_o *callback, const Meth
       do
       {
         if ( v10 >= (unsigned int)max_length )
-          sub_1C71610(transform);
+          sub_1C942F8(transform);
         v11 = (UnityEngine_Object_o *)basePanelList->m_Items[v10];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -216,10 +216,10 @@ void BaseDialog__Close(BaseDialog_o *this, System_Action_o *callback, const Meth
     {
       transform = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)transform, 0);
       v26 = (UnityEngine_Transform_o *)transform;
-      if ( !byte_4CC0D09 )
+      if ( !byte_4D25F19 )
       {
-        transform = sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-        byte_4CC0D09 = 1;
+        transform = sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+        byte_4D25F19 = 1;
       }
       if ( v26 )
       {
@@ -227,24 +227,24 @@ void BaseDialog__Close(BaseDialog_o *this, System_Action_o *callback, const Meth
 LABEL_42:
         UnityEngine_MonoBehaviour__Invoke(
           (UnityEngine_MonoBehaviour_o *)this,
-          (System_String_o *)StringLiteral_5978/*"EndCloseBaseDialog"*/,
+          (System_String_o *)StringLiteral_5990/*"EndCloseBaseDialog"*/,
           0.1,
           0);
         goto LABEL_43;
       }
     }
 LABEL_44:
-    sub_1C71608(transform, v12);
+    sub_1C942F0(transform, v12);
   }
   if ( !v22 )
     goto LABEL_44;
   v22->fields.method = 6;
   v23 = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   v22->fields.eventReceiver = v23;
-  sub_1C71354(&v22->fields.eventReceiver, v23);
-  v24 = StringLiteral_5978/*"EndCloseBaseDialog"*/;
-  v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5978/*"EndCloseBaseDialog"*/;
-  sub_1C71354(&v22->fields.callWhenFinished, v24);
+  sub_1C9403C(&v22->fields.eventReceiver, v23);
+  v24 = StringLiteral_5990/*"EndCloseBaseDialog"*/;
+  v22->fields.callWhenFinished = (struct System_String_o *)StringLiteral_5990/*"EndCloseBaseDialog"*/;
+  sub_1C9403C(&v22->fields.callWhenFinished, v24);
 LABEL_43:
   BaseDialog__ResetPanelDepth(this, v25);
 }
@@ -263,7 +263,7 @@ void BaseDialog__EndCloseBaseDialog(BaseDialog_o *this, const MethodInfo *method
   if ( baseCallbackFunc )
   {
     *p_baseCallbackFunc = 0;
-    sub_1C71354(p_baseCallbackFunc, 0);
+    sub_1C9403C(p_baseCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v4->fields.invoke_impl)(v4->fields.method_code, v4->fields.method);
   }
 }
@@ -282,7 +282,7 @@ void BaseDialog__EndOpenBaseDialog(BaseDialog_o *this, const MethodInfo *method)
   if ( baseCallbackFunc )
   {
     *p_baseCallbackFunc = 0;
-    sub_1C71354(p_baseCallbackFunc, 0);
+    sub_1C9403C(p_baseCallbackFunc, 0);
     ((void (__fastcall *)(intptr_t, intptr_t))v3->fields.invoke_impl)(v3->fields.method_code, v3->fields.method);
   }
 }
@@ -300,7 +300,7 @@ void BaseDialog__Init(BaseDialog_o *this, const MethodInfo *method)
   {
     gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
     if ( !gameObject )
-      sub_1C71608(0, v4);
+      sub_1C942F0(0, v4);
     UnityEngine_GameObject__SetActive(gameObject, 0, 0);
   }
 }
@@ -317,10 +317,10 @@ void BaseDialog__OnEnable(BaseDialog_o *this, const MethodInfo *method)
   UnityEngine_GameObject_o *gameObject; // x0
   UnityEngine_GameObject_o *v10; // x0
 
-  if ( (byte_4CC1098 & 1) == 0 )
+  if ( (byte_4D262A8 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC1098 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D262A8 = 1;
   }
   v3 = (UnityEngine_Object_o *)((__int64 (__fastcall *)(BaseDialog_o *, const MethodInfo *))this->klass->vtable._4_get_closeBtnObject.methodPtr)(
                                  this,
@@ -340,7 +340,7 @@ void BaseDialog__OnEnable(BaseDialog_o *this, const MethodInfo *method)
                             this->klass->vtable._6_get_closeBtnPath.method);
   if ( !transform )
 LABEL_15:
-    sub_1C71608(v6, v7);
+    sub_1C942F0(v6, v7);
   v8 = (UnityEngine_Object_o *)UnityEngine_Transform__Find(transform, v6, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -397,24 +397,24 @@ void BaseDialog__Open(
   System_Collections_IEnumerator_o *v30; // x0
   UnityEngine_Vector3_o v31; // 0:s0.4,4:s1.4,8:s2.4
 
-  if ( (byte_4CC1093 & 1) == 0 )
+  if ( (byte_4D262A3 & 1) == 0 )
   {
-    sub_1C713B0(&System_Action_TypeInfo);
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&Method_BaseDialog___c__DisplayClass23_0__Open_g__TweenScaleWindow_0__);
-    sub_1C713B0(&BaseDialog___c__DisplayClass23_0_TypeInfo);
-    sub_1C713B0(&StringLiteral_21535/*"mask00"*/);
-    sub_1C713B0(&StringLiteral_17318/*"black00"*/);
-    sub_1C713B0(&StringLiteral_18026/*"clear00"*/);
-    byte_4CC1093 = 1;
+    sub_1C94098(&System_Action_TypeInfo);
+    sub_1C94098(&BaseDialog_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&Method_BaseDialog___c__DisplayClass23_0__Open_g__TweenScaleWindow_0__);
+    sub_1C94098(&BaseDialog___c__DisplayClass23_0_TypeInfo);
+    sub_1C94098(&StringLiteral_21640/*"mask00"*/);
+    sub_1C94098(&StringLiteral_17380/*"black00"*/);
+    sub_1C94098(&StringLiteral_18092/*"clear00"*/);
+    byte_4D262A3 = 1;
   }
-  v10 = sub_1C715FC(BaseDialog___c__DisplayClass23_0_TypeInfo);
+  v10 = sub_1C942E4(BaseDialog___c__DisplayClass23_0_TypeInfo);
   System_Object___ctor((Il2CppObject *)v10, 0);
   if ( !v10 )
     goto LABEL_60;
   *(_QWORD *)(v10 + 16) = this;
-  sub_1C71354(v10 + 16, this);
+  sub_1C9403C(v10 + 16, this);
   if ( isLateScale )
   {
     baseWindow = (UnityEngine_Object_o *)this->fields.baseWindow;
@@ -446,7 +446,7 @@ void BaseDialog__Open(
     goto LABEL_60;
   UnityEngine_GameObject__SetActive((UnityEngine_GameObject_o *)transform, 1, 0);
   this->fields.baseCallbackFunc = callback;
-  sub_1C71354(&this->fields.baseCallbackFunc, callback);
+  sub_1C9403C(&this->fields.baseCallbackFunc, callback);
   *(_BYTE *)(v10 + 24) = 1;
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -458,14 +458,14 @@ void BaseDialog__Open(
     transform = (__int64)this->fields.maskSprite;
     if ( !transform )
       goto LABEL_60;
-    v17 = &StringLiteral_17318/*"black00"*/;
+    v17 = &StringLiteral_17380/*"black00"*/;
   }
   else if ( type == 1 )
   {
     transform = (__int64)this->fields.maskSprite;
     if ( !transform )
       goto LABEL_60;
-    v17 = &StringLiteral_21535/*"mask00"*/;
+    v17 = &StringLiteral_21640/*"mask00"*/;
   }
   else
   {
@@ -474,7 +474,7 @@ void BaseDialog__Open(
     transform = (__int64)this->fields.maskSprite;
     if ( !transform )
       goto LABEL_60;
-    v17 = &StringLiteral_18026/*"clear00"*/;
+    v17 = &StringLiteral_18092/*"clear00"*/;
   }
   UISprite__set_spriteName((UISprite_o *)transform, (System_String_o *)*v17, 0);
 LABEL_27:
@@ -497,7 +497,7 @@ LABEL_27:
           do
           {
             if ( v21 >= (unsigned int)max_length )
-              sub_1C71610(transform);
+              sub_1C942F8(transform);
             v22 = (UnityEngine_Object_o *)basePanelList->m_Items[v21];
             if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
               j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -543,14 +543,14 @@ LABEL_27:
 LABEL_54:
       if ( isLateScale )
       {
-        v29 = (System_Action_o *)sub_1C715FC(System_Action_TypeInfo);
+        v29 = (System_Action_o *)sub_1C942E4(System_Action_TypeInfo);
         System_Action___ctor(
           v29,
           (Il2CppObject *)v10,
           Method_BaseDialog___c__DisplayClass23_0__Open_g__TweenScaleWindow_0__,
           0);
         v30 = BasicHelper__DelayCall(0.0, v29, 1, 0);
-        UnityEngine_MonoBehaviour__StartCoroutine_71709800((UnityEngine_MonoBehaviour_o *)this, v30, 0);
+        UnityEngine_MonoBehaviour__StartCoroutine_72096164((UnityEngine_MonoBehaviour_o *)this, v30, 0);
       }
       else
       {
@@ -579,7 +579,7 @@ LABEL_54:
       }
     }
 LABEL_60:
-    sub_1C71608(transform, v12);
+    sub_1C942F0(transform, v12);
   }
 LABEL_57:
   if ( *(_BYTE *)(v10 + 24) )
@@ -597,17 +597,17 @@ void BaseDialog__ResetPanelDepth(BaseDialog_o *this, const MethodInfo *method)
   int32_t value; // [xsp+Ch] [xbp-44h] BYREF
 
   v2 = this;
-  if ( (byte_4CC1096 & 1) == 0 )
+  if ( (byte_4D262A6 & 1) == 0 )
   {
-    sub_1C713B0(&Method_System_Collections_Generic_Dictionary_UIPanel__int__TryGetValue__);
-    this = (BaseDialog_o *)sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC1096 = 1;
+    sub_1C94098(&Method_System_Collections_Generic_Dictionary_UIPanel__int__TryGetValue__);
+    this = (BaseDialog_o *)sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D262A6 = 1;
   }
   value = 0;
   basePanelList = v2->fields.basePanelList;
   if ( !basePanelList )
 LABEL_17:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   max_length = basePanelList->max_length;
   if ( (int)max_length >= 1 )
   {
@@ -615,7 +615,7 @@ LABEL_17:
     do
     {
       if ( v5 >= (unsigned int)max_length )
-        sub_1C71610(this);
+        sub_1C942F8(this);
       v6 = (UnityEngine_Object_o *)basePanelList->m_Items[v5];
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -629,7 +629,7 @@ LABEL_17:
                                  (System_Collections_Generic_Dictionary_object__int__o *)this,
                                  (Il2CppObject *)v6,
                                  &value,
-                                 (const MethodInfo_34C416C *)Method_System_Collections_Generic_Dictionary_UIPanel__int__TryGetValue__);
+                                 (const MethodInfo_3519680 *)Method_System_Collections_Generic_Dictionary_UIPanel__int__TryGetValue__);
         if ( ((unsigned __int8)this & 1) != 0 )
         {
           if ( !v6 )
@@ -682,12 +682,12 @@ void BaseDialog__SetMask(BaseDialog_o *this, bool forceMaskClear, const MethodIn
   UnityEngine_Object_o *baseWindow; // x20
   UnityEngine_Transform_o *v16; // x19
 
-  if ( (byte_4CC1092 & 1) == 0 )
+  if ( (byte_4D262A2 & 1) == 0 )
   {
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    sub_1C713B0(&StringLiteral_21535/*"mask00"*/);
-    sub_1C713B0(&StringLiteral_18026/*"clear00"*/);
-    byte_4CC1092 = 1;
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    sub_1C94098(&StringLiteral_21640/*"mask00"*/);
+    sub_1C94098(&StringLiteral_18092/*"clear00"*/);
+    byte_4D262A2 = 1;
   }
   gameObject = (__int64)UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
@@ -702,9 +702,9 @@ void BaseDialog__SetMask(BaseDialog_o *this, bool forceMaskClear, const MethodIn
     gameObject = (__int64)this->fields.maskSprite;
     if ( !gameObject )
       goto LABEL_38;
-    v9 = &StringLiteral_18026/*"clear00"*/;
+    v9 = &StringLiteral_18092/*"clear00"*/;
     if ( !forceMaskClear )
-      v9 = &StringLiteral_21535/*"mask00"*/;
+      v9 = &StringLiteral_21640/*"mask00"*/;
     UISprite__set_spriteName((UISprite_o *)gameObject, (System_String_o *)*v9, 0);
   }
   basePanelList = this->fields.basePanelList;
@@ -717,7 +717,7 @@ void BaseDialog__SetMask(BaseDialog_o *this, bool forceMaskClear, const MethodIn
       while ( 1 )
       {
         if ( v12 >= (unsigned int)max_length )
-          sub_1C71610(gameObject);
+          sub_1C942F8(gameObject);
         v13 = (UnityEngine_Object_o *)basePanelList->m_Items[v12];
         if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
           j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -739,7 +739,7 @@ void BaseDialog__SetMask(BaseDialog_o *this, bool forceMaskClear, const MethodIn
           goto LABEL_29;
       }
 LABEL_38:
-      sub_1C71608(gameObject, v7);
+      sub_1C942F0(gameObject, v7);
     }
   }
   else
@@ -769,10 +769,10 @@ LABEL_29:
       goto LABEL_38;
     gameObject = (__int64)UnityEngine_GameObject__get_transform((UnityEngine_GameObject_o *)gameObject, 0);
     v16 = (UnityEngine_Transform_o *)gameObject;
-    if ( !byte_4CC0D09 )
+    if ( !byte_4D25F19 )
     {
-      gameObject = sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-      byte_4CC0D09 = 1;
+      gameObject = sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+      byte_4D25F19 = 1;
     }
     if ( !v16 )
       goto LABEL_38;
@@ -792,7 +792,7 @@ void BaseDialog__SetMaskSpritePosition(BaseDialog_o *this, UnityEngine_Vector3_o
 
   maskSprite = (UnityEngine_Component_o *)this->fields.maskSprite;
   if ( !maskSprite )
-    sub_1C71608(0, method);
+    sub_1C942F0(0, method);
   z = pos.fields.z;
   y = pos.fields.y;
   x = pos.fields.x;
@@ -811,11 +811,11 @@ void BaseDialog__SetMaskTouchCloseEnabled(BaseDialog_o *this, bool canClose, con
   struct UISprite_o *v7; // x0
   Il2CppObject *Component_object; // x20
 
-  if ( (byte_4CC1095 & 1) == 0 )
+  if ( (byte_4D262A5 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UITouchPress___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC1095 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UITouchPress___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D262A5 = 1;
   }
   maskSprite = (UnityEngine_Object_o *)this->fields.maskSprite;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -827,7 +827,7 @@ void BaseDialog__SetMaskTouchCloseEnabled(BaseDialog_o *this, bool canClose, con
     {
       Component_object = UnityEngine_Component__GetComponent_object_(
                            (UnityEngine_Component_o *)v7,
-                           (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UITouchPress___);
+                           (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UITouchPress___);
       if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
         j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
       v7 = (struct UISprite_o *)UnityEngine_Object__op_Equality((UnityEngine_Object_o *)Component_object, 0, 0);
@@ -839,7 +839,7 @@ void BaseDialog__SetMaskTouchCloseEnabled(BaseDialog_o *this, bool canClose, con
         return;
       }
     }
-    sub_1C71608(v7, v6);
+    sub_1C942F0(v7, v6);
   }
 }
 
@@ -861,7 +861,7 @@ void BaseDialog__SetPanelDepth(BaseDialog_o *this, int32_t depth, const MethodIn
     while ( 1 )
     {
       if ( v6 >= max_length )
-        sub_1C71610(this);
+        sub_1C942F8(this);
       this = (BaseDialog_o *)basePanelList->m_Items[v6];
       if ( !this )
         break;
@@ -871,7 +871,7 @@ void BaseDialog__SetPanelDepth(BaseDialog_o *this, int32_t depth, const MethodIn
         return;
     }
 LABEL_9:
-    sub_1C71608(this, *(_QWORD *)&depth);
+    sub_1C942F0(this, *(_QWORD *)&depth);
   }
 }
 
@@ -889,7 +889,7 @@ bool BaseDialog__get_IsBusy(BaseDialog_o *this, const MethodInfo *method)
 
   gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
   if ( !gameObject )
-    sub_1C71608(0, v3);
+    sub_1C942F0(0, v3);
   return UnityEngine_GameObject__get_activeSelf(gameObject, 0);
 }
 
@@ -900,11 +900,11 @@ UIPanel_o *BaseDialog__get_TargetPanel(BaseDialog_o *this, const MethodInfo *met
   UnityEngine_GameObject_o *gameObject; // x0
   __int64 v5; // x1
 
-  if ( (byte_4CC1090 & 1) == 0 )
+  if ( (byte_4D262A0 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_GameObject_GetComponentInChildren_UIPanel___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC1090 = 1;
+    sub_1C94098(&Method_UnityEngine_GameObject_GetComponentInChildren_UIPanel___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D262A0 = 1;
   }
   basePanel = (UnityEngine_Object_o *)this->fields.basePanel;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -916,7 +916,7 @@ UIPanel_o *BaseDialog__get_TargetPanel(BaseDialog_o *this, const MethodInfo *met
       goto LABEL_17;
     basePanel = (UnityEngine_Object_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
                                           gameObject,
-                                          (const MethodInfo_31A3134 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIPanel___);
+                                          (const MethodInfo_31F49F4 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIPanel___);
   }
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -937,12 +937,12 @@ UIPanel_o *BaseDialog__get_TargetPanel(BaseDialog_o *this, const MethodInfo *met
           if ( gameObject )
             return (UIPanel_o *)UnityEngine_GameObject__GetComponentInChildren_object_(
                                   gameObject,
-                                  (const MethodInfo_31A3134 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIPanel___);
+                                  (const MethodInfo_31F49F4 *)Method_UnityEngine_GameObject_GetComponentInChildren_UIPanel___);
         }
       }
     }
 LABEL_17:
-    sub_1C71608(gameObject, v5);
+    sub_1C942F0(gameObject, v5);
   }
   return (UIPanel_o *)basePanel;
 }
@@ -956,10 +956,10 @@ UnityEngine_GameObject_o *BaseDialog__get_closeBtnObject(BaseDialog_o *this, con
 
 System_String_o *BaseDialog__get_closeBtnPath(BaseDialog_o *this, const MethodInfo *method)
 {
-  if ( (byte_4CC1097 & 1) == 0 )
+  if ( (byte_4D262A7 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC1097 = 1;
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D262A7 = 1;
   }
   return (System_String_o *)StringLiteral_1/*""*/;
 }
@@ -968,7 +968,7 @@ System_String_o *BaseDialog__get_closeBtnPath(BaseDialog_o *this, const MethodIn
 void BaseDialog__set_closeBtnObject(BaseDialog_o *this, UnityEngine_GameObject_o *value, const MethodInfo *method)
 {
   this->fields._closeBtnObject = value;
-  sub_1C71354(&this->fields._closeBtnObject, value);
+  sub_1C9403C(&this->fields._closeBtnObject, value);
 }
 
 
@@ -999,12 +999,12 @@ void BaseDialog___c__DisplayClass23_0___Open_g__TweenScaleWindow_0(
   UnityEngine_Vector3_o v16; // 0:s0.4,4:s1.4,8:s2.4
 
   v2 = this;
-  if ( (byte_4CC109B & 1) == 0 )
+  if ( (byte_4D262AB & 1) == 0 )
   {
-    sub_1C713B0(&BaseDialog_TypeInfo);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    this = (BaseDialog___c__DisplayClass23_0_o *)sub_1C713B0(&StringLiteral_6010/*"EndOpenBaseDialog"*/);
-    byte_4CC109B = 1;
+    sub_1C94098(&BaseDialog_TypeInfo);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    this = (BaseDialog___c__DisplayClass23_0_o *)sub_1C94098(&StringLiteral_6022/*"EndOpenBaseDialog"*/);
+    byte_4D262AB = 1;
   }
   _4__this = v2->fields.__4__this;
   if ( !_4__this )
@@ -1033,10 +1033,10 @@ void BaseDialog___c__DisplayClass23_0___Open_g__TweenScaleWindow_0(
     goto LABEL_26;
   baseWindow = v6->fields.baseWindow;
   OPEN_TIME = BaseDialog_TypeInfo->static_fields->OPEN_TIME;
-  if ( !byte_4CC0D0E )
+  if ( !byte_4D25F1E )
   {
-    sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D0E = 1;
+    sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F1E = 1;
   }
   v9 = TweenScale__Begin(baseWindow, OPEN_TIME, UnityEngine_Vector3_TypeInfo->static_fields->oneVector, 0);
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
@@ -1075,22 +1075,22 @@ void BaseDialog___c__DisplayClass23_0___Open_g__TweenScaleWindow_0(
         {
           gameObject = UnityEngine_Component__get_gameObject((UnityEngine_Component_o *)this, 0);
           v9->fields.eventReceiver = gameObject;
-          sub_1C71354(&v9->fields.eventReceiver, gameObject);
-          v14 = StringLiteral_6010/*"EndOpenBaseDialog"*/;
-          v9->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6010/*"EndOpenBaseDialog"*/;
-          sub_1C71354(&v9->fields.callWhenFinished, v14);
+          sub_1C9403C(&v9->fields.eventReceiver, gameObject);
+          v14 = StringLiteral_6022/*"EndOpenBaseDialog"*/;
+          v9->fields.callWhenFinished = (struct System_String_o *)StringLiteral_6022/*"EndOpenBaseDialog"*/;
+          sub_1C9403C(&v9->fields.callWhenFinished, v14);
           v2->fields.isCallback = 0;
           return;
         }
       }
     }
 LABEL_26:
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   }
-  if ( !byte_4CC0D0E )
+  if ( !byte_4D25F1E )
   {
-    this = (BaseDialog___c__DisplayClass23_0_o *)sub_1C713B0(&UnityEngine_Vector3_TypeInfo);
-    byte_4CC0D0E = 1;
+    this = (BaseDialog___c__DisplayClass23_0_o *)sub_1C94098(&UnityEngine_Vector3_TypeInfo);
+    byte_4D25F1E = 1;
   }
   if ( !v12 )
     goto LABEL_26;

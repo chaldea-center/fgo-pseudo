@@ -10,16 +10,16 @@ System_String_o *UILineInput__GetText(UILineInput_o *this, const MethodInfo *met
   UIInput_o *mInput; // x0
   System_String_o *value; // x19
 
-  if ( (byte_4CC8CC5 & 1) == 0 )
+  if ( (byte_4D2E162 & 1) == 0 )
   {
-    sub_1C713B0(&StringLiteral_1/*""*/);
-    byte_4CC8CC5 = 1;
+    sub_1C94098(&StringLiteral_1/*""*/);
+    byte_4D2E162 = 1;
   }
   if ( !UILineInput__Init(this, method) )
     return (System_String_o *)StringLiteral_1/*""*/;
   mInput = this->fields.mInput;
   if ( !mInput )
-    sub_1C71608(0, v3);
+    sub_1C942F0(0, v3);
   value = UIInput__get_value(mInput, 0);
   if ( System_String__IsNullOrEmpty(value, 0) )
     return (System_String_o *)StringLiteral_1/*""*/;
@@ -44,11 +44,11 @@ bool UILineInput__Init(UILineInput_o *this, const MethodInfo *method)
   __int64 v14; // x1
   bool v15; // w19
 
-  if ( (byte_4CC8CC3 & 1) == 0 )
+  if ( (byte_4D2E160 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_UIInput___);
-    sub_1C713B0(&UnityEngine_Object_TypeInfo);
-    byte_4CC8CC3 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_UIInput___);
+    sub_1C94098(&UnityEngine_Object_TypeInfo);
+    byte_4D2E160 = 1;
   }
   p_mInput = &this->fields.mInput;
   mInput = (UnityEngine_Object_o *)this->fields.mInput;
@@ -58,9 +58,9 @@ bool UILineInput__Init(UILineInput_o *this, const MethodInfo *method)
     return 1;
   Component_object = UnityEngine_Component__GetComponent_object_(
                        (UnityEngine_Component_o *)this,
-                       (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_UIInput___);
+                       (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_UIInput___);
   this->fields.mInput = (struct UIInput_o *)Component_object;
-  sub_1C71354((GrandQuestFolderBoardItem_o *)&this->fields.mInput, (int32_t)Component_object, v6, v7, v8, v9, v10, v11);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)&this->fields.mInput, (int32_t)Component_object, v6, v7, v8, v9, v10, v11);
   v12 = (UnityEngine_Object_o *)this->fields.mInput;
   if ( !UnityEngine_Object_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(UnityEngine_Object_TypeInfo);
@@ -68,7 +68,7 @@ bool UILineInput__Init(UILineInput_o *this, const MethodInfo *method)
   if ( ((unsigned __int8)label & 1) == 0 )
     return 0;
   if ( !*p_mInput || (label = (*p_mInput)->fields.label) == 0 )
-    sub_1C71608(label, v14);
+    sub_1C942F0(label, v14);
   v15 = 1;
   UILabel__set_maxLineCount(label, 1, 0);
   return v15;
@@ -81,14 +81,14 @@ void UILineInput__SetInputEnable(UILineInput_o *this, bool flag, const MethodInf
   __int64 v6; // x1
   const MethodInfo *v7; // x1
 
-  if ( (byte_4CC8CC4 & 1) == 0 )
+  if ( (byte_4D2E161 & 1) == 0 )
   {
-    sub_1C713B0(&Method_UnityEngine_Component_GetComponent_Collider___);
-    byte_4CC8CC4 = 1;
+    sub_1C94098(&Method_UnityEngine_Component_GetComponent_Collider___);
+    byte_4D2E161 = 1;
   }
   Component_object = (UnityEngine_Collider_o *)UnityEngine_Component__GetComponent_object_(
                                                  (UnityEngine_Component_o *)this,
-                                                 (const MethodInfo_31418DC *)Method_UnityEngine_Component_GetComponent_Collider___);
+                                                 (const MethodInfo_3192904 *)Method_UnityEngine_Component_GetComponent_Collider___);
   if ( !Component_object )
     goto LABEL_8;
   UnityEngine_Collider__set_enabled(Component_object, flag, 0);
@@ -101,6 +101,6 @@ void UILineInput__SetInputEnable(UILineInput_o *this, bool flag, const MethodInf
       return;
     }
 LABEL_8:
-    sub_1C71608(Component_object, v6);
+    sub_1C942F0(Component_object, v6);
   }
 }

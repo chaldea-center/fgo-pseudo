@@ -16,10 +16,10 @@ void MyRoomHelpListViewItem___ctor(
 
   v6 = this;
   v7 = isUse;
-  ListViewItem___ctor_44097096((ListViewItem_o *)this, index, 0);
+  ListViewItem___ctor_44594388((ListViewItem_o *)this, index, 0);
   v6->fields.info = info;
   v6 = (MyRoomHelpListViewItem_o *)((char *)v6 + 120);
-  sub_1C71354((GrandQuestFolderBoardItem_o *)v6, (int32_t)info, v8, v9, v10, v11, v12, v13);
+  sub_1C9403C((GrandQuestFolderBoardItem_o *)v6, (int32_t)info, v8, v9, v10, v11, v12, v13);
   LOBYTE(v6->monitor) = v7;
 }
 
@@ -36,15 +36,15 @@ System_String_o *MyRoomHelpListViewItem__ToString(MyRoomHelpListViewItem_o *this
   struct MyRoomHelpListViewManager_MyRoomHelpItemInfo_o *info; // x8
 
   v2 = this;
-  if ( (byte_4CC2B06 & 1) == 0 )
+  if ( (byte_4D27E5C & 1) == 0 )
   {
-    this = (MyRoomHelpListViewItem_o *)sub_1C713B0(&StringLiteral_12860/*"ShopHelpItem "*/);
-    byte_4CC2B06 = 1;
+    this = (MyRoomHelpListViewItem_o *)sub_1C94098(&StringLiteral_12904/*"ShopHelpItem "*/);
+    byte_4D27E5C = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1C71608(this, method);
-  return System_String__Concat_64031724((System_String_o *)StringLiteral_12860/*"ShopHelpItem "*/, info->fields.textCode, 0);
+    sub_1C942F0(this, method);
+  return System_String__Concat_64417744((System_String_o *)StringLiteral_12904/*"ShopHelpItem "*/, info->fields.textCode, 0);
 }
 
 
@@ -54,7 +54,7 @@ System_String_o *MyRoomHelpListViewItem__get_ImageName(MyRoomHelpListViewItem_o 
 
   info = this->fields.info;
   if ( !info )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   return info->fields.imageName;
 }
 
@@ -74,14 +74,14 @@ System_String_o *MyRoomHelpListViewItem__get_InfoText(MyRoomHelpListViewItem_o *
   System_String_o *textCode; // x19
 
   v2 = this;
-  if ( (byte_4CC2B04 & 1) == 0 )
+  if ( (byte_4D27E5A & 1) == 0 )
   {
-    this = (MyRoomHelpListViewItem_o *)sub_1C713B0(&LocalizationManager_TypeInfo);
-    byte_4CC2B04 = 1;
+    this = (MyRoomHelpListViewItem_o *)sub_1C94098(&LocalizationManager_TypeInfo);
+    byte_4D27E5A = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   textCode = info->fields.textCode;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
@@ -102,14 +102,14 @@ System_String_o *MyRoomHelpListViewItem__get_ItemName(MyRoomHelpListViewItem_o *
   System_String_o *itemName; // x19
 
   v2 = this;
-  if ( (byte_4CC2B05 & 1) == 0 )
+  if ( (byte_4D27E5B & 1) == 0 )
   {
-    this = (MyRoomHelpListViewItem_o *)sub_1C713B0(&LocalizationManager_TypeInfo);
-    byte_4CC2B05 = 1;
+    this = (MyRoomHelpListViewItem_o *)sub_1C94098(&LocalizationManager_TypeInfo);
+    byte_4D27E5B = 1;
   }
   info = v2->fields.info;
   if ( !info )
-    sub_1C71608(this, method);
+    sub_1C942F0(this, method);
   itemName = info->fields.itemName;
   if ( !LocalizationManager_TypeInfo->_2.cctor_finished )
     j_il2cpp_runtime_class_init_0(LocalizationManager_TypeInfo);
